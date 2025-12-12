@@ -58,10 +58,10 @@ VAR saturationVar = 0
                     
                     - book_BGVariations ==  0:
                         ~ return "bookBGZero"
-                    
+
                     - else:
-                        errore
-                            ~ temp y = 1/0
+                        ~ return "bookBGFive"
+
                 } 
 
         }

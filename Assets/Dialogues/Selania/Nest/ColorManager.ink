@@ -52,7 +52,6 @@ LIST nest_colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
     	        
     	    
         - else: ERROR: sono in color_variation_management ma non trovo lx PNG indicatx
-            ~ temp ydd = 1/0
     }
 
 

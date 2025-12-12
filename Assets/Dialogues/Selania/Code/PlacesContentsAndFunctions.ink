@@ -56,7 +56,6 @@
         - else:
             DEBUG: error, cannot find {entity} anywhere!
             {contentsSafekeeping}
-            ~ temp y = 1/0
             ~ return Forest
     }
 
@@ -99,7 +98,7 @@
             
         - else:
             DEBUG: error, cannot understand location {CurrentLocation} while trying to move {entity} out.
-            ~ temp ycc = 1/0
+
     }
 
     {destination:
@@ -135,7 +134,7 @@
             
         - else:
             DEBUG: error, cannot understand location {destination} while trying to move {entity} in.
-            ~ temp yxr = 1/0
+
     }
 
     // se la PG si sposta da una stanza all'altra, rimuoviamo subito il TrainNoise.

@@ -2,7 +2,6 @@
 //Main è il punto da cui passiamo costantemente per caricare i thread di tutto ciò che genera testo in ogni area del gioco.
 {debug and (library_shortStories + library_averageStories + library_longStories) != library_unreadStories:
     Errore nella biblioteca!
-        ~ temp y = 1/0
     -> DONE
 }
 

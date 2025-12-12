@@ -1137,7 +1137,6 @@
                 
                 - else:
                     ERROR: non abbiamo un valore valido di kitchen_secondCharExtraIngredientReaction, che è uguale a {kitchen_secondCharExtraIngredientReaction}.
-                    ~ temp yww = 1/0
             }
         
         

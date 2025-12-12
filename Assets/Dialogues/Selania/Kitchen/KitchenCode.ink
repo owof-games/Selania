@@ -141,7 +141,6 @@
         
         - else:
             {debug_kitchen:ERROR: non ci sono ricette a disposizione per salvare l'informazione.}
-                ~ temp yre = 1/0
                 ->->
     
     }

@@ -91,6 +91,5 @@
 
     
     -else: ERROR: non riesco a trovare il luogo di provenienza; book_arrivingFromTracking = {book_arrivingFromTracking}
-        ~ temp y = 1/0
 }
 -> main
