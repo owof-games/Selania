@@ -127,15 +127,15 @@
                 {
                 
                     - kitchen_secondCharIsCooking:
-                        Uh, mi sa che la cucina è occupata da {charNameTwo}, sta cucinando qualcosa di strano.
+                        Uh, mi sa che la cucina è occupata da {charNameTwo}, sta cucinando qualcosa di strano.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                             ->main
 
                     - contentsKitchen has TheKitchenFrog:
-                        C'è già una certa ranocchia che sta aspettando di cucinare con te.    
+                        C'è già una certa ranocchia che sta aspettando di cucinare con te. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious 
                             ->main
                             
                     - kitchen_secondCharCookingTogetherInvite:
-                        Credo che {charNameTwo} ti stia già aspettando, sai?
+                        Credo che {charNameTwo} ti stia già aspettando, sai?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                             ->main
 
                     - kitchen_firstCharCookingTogetherNumberInvite > 0:
@@ -144,13 +144,13 @@
                             - Siamo a due volte che me lo chiedi e non ti presenti, sai?
                             - E mi darai buca una terza volta? Vabbè, ci vediamo lì.
                             - Oook, riproviamoci di nuovo. Mi diverto così tanto ad aspettarti in cucina!
-                        } #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral 
+                        } #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                             ~ kitchen_firstCharCookingTogetherInvite = true
                             ~ move_entity(FirstCharacter, Kitchen)
                                 ->main
                         
                     - else:
-                        Volentieri! Ci vediamo in cucina! #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral 
+                        Volentieri! Ci vediamo in cucina!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                             ~ kitchen_firstCharCookingTogetherInvite = true
                             ~ kitchen_firstCharCookingTogetherNumberInvite ++
                             ~ move_entity(FirstCharacter, Kitchen)

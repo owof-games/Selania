@@ -14,16 +14,16 @@
             = ink_outcome    
                 {
                     - firstChar_favouritesGifts:
-                        Quello che mi hai dato è qualcosa di più di un regalo: è un gesto di affinità.
+                        Quello che mi hai dato è qualcosa di più di un regalo: è un gesto di affinità.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                         Mi piace stare con te, {player_name}.
 
                     - firstChar_goodGifts:
-                        I regali mi mettono sempre in imbarazzo, sai?
-                        Ma il tuo dono mi ha fatto sentire ascoltata.
+                        I regali mi mettono sempre in imbarazzo, sai?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                        Ma il tuo dono mi ha fatto sentire ascoltata.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
 
                     - else:
-                        Non mi aspettavo un regalo.
-                        Per cui non dovrei nemmeno esserne delusa, giusto?
+                        Non mi aspettavo un regalo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                        Per cui non dovrei nemmeno esserne delusa, giusto?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
 
                 }
                 
