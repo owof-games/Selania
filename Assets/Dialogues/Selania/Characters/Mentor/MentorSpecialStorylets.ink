@@ -75,12 +75,14 @@
         E anche per questo ti chiedo di occupartene tu, così che i miei sentimenti non complichino la situazione.
         Trova un modo per allontanarlo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
         Velocemente, se riesci.
+        - (bookUpdate)
+
             ~ secondChar_pauseTalking = 0
             ~ mentor_pauseTalking = mentor_pauseDuration
             ~ mentor_tutorialPauses = true
             @animation:RewriterBook
                 - (nameSecond)
-                - (bookUpdate)
+                
                 -> main
     
     === addressing_violence
@@ -88,7 +90,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
-    {
+        {
         - mentor_riccioMentoreViciniColpo:
             Dopo la discussione di prima, ho riparlato con {charNameTwo}, <>#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
         
@@ -197,23 +199,23 @@
     
 === a_story_of_transformation
 
-    Sono un po' pensierosa {player_name}.
-    Prima mi sono concessa una pausa in biblioteca.
+    Sono un po' pensierosa {player_name}.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+    Prima mi sono concessa una pausa in biblioteca.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
     Una pausa piccolissima.
     E ho letto questo racconto, si chiama <b>Il cancello</b>.
-    E la protagonista...
-    Non so se ti capita mai di leggere una storia che non è la tua, eppure ti accende ricordi, ti accende modi diversi di guardare i tuoi ricordi.
+    E la protagonista...#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
+    Non so se ti capita mai di leggere una storia che non è la tua, eppure ti accende ricordi, ti accende modi diversi di guardare i tuoi ricordi.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
     Leggo poco perché a volte le storie mi entrano nella testa e non riesco a star bene fino a quando non sono concluse.
     E Liliana.
     Non so.
-    Liliana mi ricorda la persona che sono stata.
-    La persona che poteva anche arrabbiarsi.
-    E la sua stanchezza.
+    Liliana mi ricorda la persona che sono stata.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
+    La persona che poteva anche arrabbiarsi.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_bored
+    E la sua stanchezza.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
     Ti senti mai così {player_pronouns has him:stanco|{player_pronouns has her:stanca|stancə}} che vorresti sparire per un po' dal mondo, e basta?
 
         + [Non si può sparire, per cui è un pensiero abbastanza inutile.]
                 -> color_variation_management(Mentor, blueC)->
-            Un pensiero non è inutile.
+            Un pensiero non è inutile.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             Un pensiero è solo un pensiero.
             E a volte ti fa stare bene anche quando non può essere vero.
                 {
@@ -223,23 +225,23 @@
     
         + [Ma Liliana è stanca dell'ingiustizia, non del mondo. E ha reagito.]
                 -> color_variation_management(Mentor, redC)->
-            Ma una magari a volte ha voglia di non reagire e basta.
+            Ma una magari a volte ha voglia di non reagire e basta.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             E di agire.
             No?
             Di fare quello che vuole, e non solo rispondere a quello che ha attorno.
      
         + [Vorresti sparire dal mondo, o da te?]
                 -> color_variation_management(Mentor, purpleC)->
-            Cambierebbe poi così tanto?
+            Cambierebbe poi così tanto?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             No, è una cosa stupida da dire.
-            Ed è stato stupido dire di voler sparire.
+            Ed è stato stupido dire di voler sparire.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
             Lascia perdere.
     
         + [No, però mi capita di fare dei grandiosi pisolini.]
                 -> color_variation_management(Mentor, yellowC)->
-            Pensavo a qualcosa di più impegnativo.
+            Pensavo a qualcosa di più impegnativo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             Qualcosa che non si risolve dormendo.
-            Ma comunque tempo per dormire non l'ho mai.
+            Ma comunque tempo per dormire non l'ho mai.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
             {
                 - are_two_entities_together(SecondCharacter, PG): 
                     Lo dico sempre: i pisolini sono no-io-si!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
@@ -248,13 +250,13 @@
             
         + [A volte vorrei solo diventare invisibile.]
                 -> color_variation_management(Mentor, greenC)->
-            Esatto, {player_name}.
-            So che è una scelta egoista.
+            Esatto, {player_name}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+            So che è una scelta egoista.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
             Perché abbiamo una responsabilità verso il mondo.
-            Ma questo mondo a volte sa essere davvero <b>troppo</b>.
+            Ma questo mondo a volte sa essere davvero <b>troppo</b>.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         -    
-    Comunque alla fine Liliana con la sua rabbia trova un modo per cambiare.
-    E quando riesce a vedere la sua casa come uno spazio brillante, mi ha fatto pensare: questa è l'essenza stessa della riscrittura.
+    Comunque alla fine Liliana con la sua rabbia trova un modo per cambiare.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+    E quando riesce a vedere la sua casa come uno spazio brillante, mi ha fatto pensare: questa è l'essenza stessa della riscrittura.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
     - (bookUpdate)
         @animation:RewriterBook
         ~ firstChar_pauseTalking = firstChar_pauseDuration

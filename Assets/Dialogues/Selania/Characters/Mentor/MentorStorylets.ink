@@ -23,14 +23,12 @@
         Ma quella sensazione che con le tue mani puoi permettere a un altro corpo di crescere al meglio.
             {
                 - are_two_entities_together(SecondCharacter, PG): 
-                    Un po' come quando con le mie mani pasticcio con i fili elettrici!
-                    
+                    Un po' come quando con le mie mani pasticcio con i fili elettrici!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
             }
             {
                 - are_two_entities_together(FirstCharacter, PG): 
-                    A me succede quando posso suonare.
+                    A me succede quando posso suonare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                     E mente e corpo creano qualcosa di nuovo.
-                        
             } 
 
             + [Preferisco la stazione dei treni, è ordinata e precisa.]
@@ -53,7 +51,7 @@
                 Posso capirne il fascino, ma non è un luogo dove resto con piacere.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                     {
                         - firstChar_storyStatus == story_storyEnded or secondChar_storyStatus == story_storyEnded:
-                            Però per lo meno ora porta alla biblioteca, che sto imparando ad apprezzare.
+                            Però per lo meno ora porta alla biblioteca, che sto imparando ad apprezzare.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                             Anche se è estremamente incasinata.
                         
                         - else:
@@ -77,10 +75,11 @@
             -
         {
             - player_accessiblePlaces has Kitchen:
-                Ma ora vorrei pensare un attimo a come rendere più carino l'accesso alla cucina.
+                Ma ora vorrei pensare un attimo a come rendere più carino l'accesso alla cucina.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
             - else:
-                Ma a proposito di questo posto: mi conviene dare una pulita all'acqua dello stagno.
-        }#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                Ma a proposito di questo posto: mi conviene dare una pulita all'acqua dello stagno.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+        }
+
         Grazie per la chiacchierata, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         - (bookUpdate)
 
@@ -107,8 +106,8 @@
         E forse mi sono dimenticata di quanto possa essere facile perdere sé stesse quando si è giovani.
             {
                 - are_two_entities_together(FirstCharacter, PG): 
-                    Vuol dire che questa confusione prima o poi finisce?
-                    Perché la cosa mi rincuora mooolto.
+                    Vuol dire che questa confusione prima o poi finisce?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                    Perché la cosa mi rincuora mooolto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             }
         
             + [Numeri come l'età sono indicatori, non fatti assoluti.]
@@ -118,15 +117,15 @@
                    
             + [Quando un gioco ha tantissime regole non è più divertente.]
                     -> color_variation_management(Mentor, yellowC)->
-                Eppure non sono così tante regole.
-                Forse è solo una: non puoi avere tutto.
+                Eppure non sono così tante regole.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_bored
+                Forse è solo una: non puoi avere tutto.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Se vedi la vita come un gioco, ti aspetti di avere almeno un modo per vincere.
                 Ma non credo proprio che funzioni così.
-                Giochi, e il più delle volte perdi senza nemmeno sapere perché.    
+                Giochi, e il più delle volte perdi senza nemmeno sapere perché.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                 
             + [Nel dubbio si agisce. Fare male è meglio che non fare.]
                     -> color_variation_management(Mentor, redC)->
-                Ma con questo principio, non c'è una azione mirata, consapevole.
+                Ma con questo principio, non c'è una azione mirata, consapevole.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                 Poi succede che ci feriamo, o feriamo chi amiamo.
                 E a quel punto non siamo nemmeno pronte a capire il perché.
                 
@@ -151,9 +150,9 @@
         Ma ora è il momeno di svuotare lo stagno dalle sue cose più schifose.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
             {
                 - are_two_entities_together(SecondCharacter, PG): 
-                    Non togliere i girini però!   
+                    Non togliere i girini però!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             } 
-        Prega per me, {player_name}.
+        Prega per me, {player_name}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         - (bookUpdate)
 
              ~ mentor_pauseTalking = mentor_pauseDuration
@@ -215,12 +214,12 @@
             Devo inventarmi un modo per liberarmene!
                 {
                     - are_two_entities_together(SecondCharacter, PG):
-                            Chissà se {charNameOne} mi manderà una lettera!
+                            Chissà se {charNameOne} mi manderà una lettera!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                         
                 }
                 {
                     - are_two_entities_together(FirstCharacter, PG):
-                            Quindi {charNameTwo} mi manderà una lettera?
+                            Quindi {charNameTwo} mi manderà una lettera?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
                         
                 } 
                 ~ mentor_pauseTalking = mentor_pauseDuration
@@ -271,9 +270,9 @@
                 Nemmeno a vent'anni puoi sapere davvero cosa vuoi.
                     {
                         - are_two_entities_together(FirstCharacter, PG):
-                           Ehm, confermo.     
+                           Ehm, confermo.     #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                     } 
-                Cosa conta a questo mondo.
+                Cosa conta a questo mondo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Per questo i genitori ci sono.
                 Per proteggerti.
 
@@ -287,7 +286,7 @@
 
             + [Come si dice? Crescere unə figliə dovrebbe essere il lavoro di una comunità.]
                     -> color_variation_management(Mentor, purpleC)->
-                Dovrebbe.
+                Dovrebbe.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Ma non è.
                 E si dovrebbe ragionare con quello che si ha.
                 Due persone.
@@ -329,13 +328,13 @@
         Dove in un'altra vita ho ricevuto il mio primo bacio.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
             {
                 - are_two_entities_together(FirstCharacter, PG):
-                    Uuuuh, sono pronta per il thè, ama.
+                    Uuuuh, sono pronta per il thè, ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
             } 
             {
-                - are_two_entities_together(FirstCharacter, PG):
-                    Bleah!  
+                - are_two_entities_together(SecondCharacter, PG):
+                    Bleah!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
             }        
-        Dall'uomo che poi ho sposato.
+        Dall'uomo che poi ho sposato.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         E a cui ho dedicato il resto dei miei giorni.
         Fino a quando non sono arrivata qui.
         Già.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
@@ -344,15 +343,15 @@
 
             + [Logico: progettare assieme, costruire fondamenta, accrescersi.]
                     -> color_variation_management(Mentor, blueC)->
-                Creare qualcosa che regga alla fine del desiderio.
+                Creare qualcosa che regga alla fine del desiderio.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Quando il corpo perde il suo splendore.
-                E il letto è il luogo della stanchezza e della malattia.
+                E il letto è il luogo della stanchezza e della malattia.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                 Quando invece di chiamarci "amore".
                 Chiamiamo il nome dell'altro per sapere dove sono le chiavi della macchina.
                     
             + [Un rifugio di stupore e gioia in un mondo grigio.]
                     -> color_variation_management(Mentor, yellowC)->
-                Mi piace la tua ingenuità {player_name}.
+                Mi piace la tua ingenuità {player_name}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Con questa logica ho amato solo una cosa:
                 il mio giardino.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
                 Un posto sempre sorprendente, vivo.
@@ -361,7 +360,7 @@
                     
             + [Fondersi nella passione, a letto come in una protesta.]
                     -> color_variation_management(Mentor, redC)->
-                La passione si spegne, {player_name}.
+                La passione si spegne, {player_name}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 E a quel punto cosa rimane?
                 Noia?
                 Rancore?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
@@ -379,7 +378,7 @@
                     
             + [Raggiungersi l'anima a vicenda, ricercando il divino che è noi.]
                 -> color_variation_management(Mentor, purpleC)->
-                Una visione mistica.
+                Una visione mistica.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Forse blasfema.
                 Qualcosa che non ho mai conosciuto, se non nei romanzi.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                 O nell'amicizia.
