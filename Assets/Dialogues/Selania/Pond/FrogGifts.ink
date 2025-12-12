@@ -141,9 +141,9 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
         //- missionCharFive:
         - missionObjects:
             -> mission_objects
-        - else:
-            ERROR: il valore di frog_aboutGiftRequest è {frog_aboutGiftRequest} e non so a quale parte di dono passare.
-            -> END
+        // - else:
+        //     ERROR: il valore di frog_aboutGiftRequest è {frog_aboutGiftRequest} e non so a quale parte di dono passare.
+        //     -> END
     }
 
 //Doni generici
@@ -218,11 +218,10 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                             ~ greenhouse_frog_nextCultivableThree = CantoDelleCompagne
                             ~ frog_first_char_gift = "{ingredientTranslator(CantoDelleCompagne)}"
                                 -> closed_exchange
-                        - else:
-                            ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
-                            -> END
+                        // - else:
+                        //     ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
+                        //     -> END
                     }
-                        -> closed_exchange
                         
                 //Caso tre: hai trovato l'oggetto, non l'hai consumato, e Franco ti dà un indizio        
                 -  backpack_findedGifts has CantoDelleCompagne or backpack_findedGifts hasnt BaccaDellaAddolorata or backpack_findedGifts hasnt NonTiScordarDiTe:
@@ -276,9 +275,9 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                     @animation: Backpack
                         -> closed_exchange
                 
-                - else:
-                    Non ho niente da consigliarti girino, per ora
-                    -> END     
+                // - else:
+                //     Non ho niente da consigliarti girino, per ora
+                //     -> END     
             }
             
         + {!ending_cooking_with_first_char && frog_firstCharObtainedGifts hasnt charOneCooking} [C'è qualcosa che posso usare cucinando con {charNameOne}?]
@@ -338,9 +337,9 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                             ~ frog_first_char_ingredient = "{ingredientTranslator(BaccaDellaAddolorata)}"
                             -> closed_exchange
                         
-                        - else:
-                            ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
-                            -> END
+                        // - else:
+                        //     ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
+                        //     -> END
                     }
                         
                 -  backpack_findedGifts has CantoDelleCompagne or backpack_findedGifts has BaccaDellaAddolorata or backpack_findedGifts has NonTiScordarDiTe:
@@ -519,9 +518,9 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                             ~ frog_second_char_gift = "{ingredientTranslator(BastoneDellOzioso)}"
                                 -> closed_exchange
                             
-                        - else:
-                            ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
-                                -> END
+                        // - else:
+                        //     ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
+                        //         -> END
                         }
                         
                 - backpack_findedGifts has BastoneDellOzioso or backpack_findedGifts has BrinaDellImpossibile or backpack_findedGifts has LicheneDegliAbissi:
@@ -625,9 +624,9 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                                 ~ frog_second_char_ingredient = "{ingredientTranslator(BrinaDellImpossibile)}"
                                     -> closed_exchange
 
-                            - else:
-                                ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
-                               -> END    
+                            // - else:
+                            //     ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
+                            //    -> END    
                         }
                             -> closed_exchange
                     
