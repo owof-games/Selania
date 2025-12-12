@@ -12,11 +12,10 @@
 
     ~ book_arrivingFromTracking = Greenhouse
 
-{
-
+    {
         - player_name == "Senza nome":
             -> name_choice -> gender ->
-}                
+    }                
 
 
 {

@@ -127,7 +127,7 @@
 //Step due: attivazione o meno (parte solo se greenhouse_chosenCultivable è vuoto)
  {
         - greenhouse_frog_nextCultivableOne != () && greenhouse_chosenCultivable == ():
-            Sembra che la rana abbia messo qui le sue zampine.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            Sembra che Franco abbia messo qui le sue zampine.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             Ecco qualcosa che crescerà su sua richiesta.
                 ~ greenhouse_chosenCultivable = greenhouse_frog_nextCultivableOne
                 
@@ -150,9 +150,9 @@
 -> next_cultivable_management ->
 
 - (top)
-{~La serra ha qualcosa da svelarti.|I vasi hanno nuove domande.|La terra è fertile di risposte.|L'aria scompiglia ragnatele e capelli.|Sussurri serpeggiano tra i vasi, ponendoti domande.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+{~La serra ha qualcosa da svelare.|I vasi hanno nuove domande.|La terra è fertile di risposte.|L'aria scompiglia ragnatele e capelli.|Sussurri serpeggiano tra i vasi, ponendo domande.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     {
-        - contentsSafekeeping has Backpack: Hai trovato un dono: uno zainetto per raccogliere tutto ciò che coltiverai.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        - contentsSafekeeping has Backpack: {player_name} ha trovato un dono: uno zainetto per raccogliere tutto ciò che coltiverà.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 ~ move_entity(Backpack, Greenhouse)
     }
     -> test
@@ -182,11 +182,11 @@
             - greenhouse_backupCultivable != ():
                 ~ greenhouse_chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
                 {debug_cultivable: Erano presenti ancora coltivabili in greenhouse_backupCultivable e ho estratto {greenhouse_chosenCultivable}.}
-                -> list_to_crops
+                    -> list_to_crops
+            
             - else:
-            In questo momento non è possibile coltivare altro. #speaker:{witch_tag()}
-                -> main
-        
+                In questo momento non è possibile coltivare altro. #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                    -> main
       }
 
     - dice == 1 && greenhouse_relationshipCrops ^ greenhouse_backupCultivable != () && greenhouse_understandingCrops ^ greenhouse_backupCultivable != ():

@@ -445,9 +445,9 @@
             -> main
     
     = step_due
-        Il vaso è come fango al sole.
+        Il vaso è come fango al sole.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         Un ramo saggia l'aria.
-        Asciutto e timido verso {player_name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        Asciutto e timido verso {player_name}.
           -> main
           
     = step_tre
@@ -714,7 +714,7 @@
 === edera_delle_amanti
 
     = TW
-        <i>Attenzione: questa pianta allude a contenuti erotici.
+        <i>Attenzione: questa pianta allude a contenuti erotici.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         <i>{player_name} vuole farla crescere, o preferisce cambiare?
             + [<i>Voglio andare avanti.]
                 -> step_zero
@@ -762,7 +762,7 @@
             + (colto) [<i>Mi tuffo con loro.]
                 ~ growthEderaDelleAmanti = stepThree
                 
-                <i>Per un attimo {player_name} perde i suoi confini.
+                <i>Per un attimo {player_name} perde i suoi confini.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                 <i>Diventa un bacio nella notte, dita desiderate tra le cosce.
                 <i>Acqua sulle labbra, pelle nuda sulla terra umida.
                 <i>Pienezza che riempie, la forza dell'<b>Edera delle amanti</b>.
@@ -900,7 +900,7 @@
         + (colto)[<i>Ho imparato ad attendere.]
             ~ growthLanaNotturna = stepThree
             
-            <i>Un unico grande e morbido fiore, i petali soffici si spalancano nella serra.
+            <i>Un unico grande e morbido fiore, i petali soffici si spalancano nella serra.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             <i><b>Lana Notturna</b> è una coperta nella notte, una tisana nei giorni bui.
             <i>Sboccia nelle terre dimenticate, per ricordare che anche quando tutto sembra perduto, da qualche parte cresce il seme del cambiamento.
                 -> ending_cultivation
@@ -1028,7 +1028,7 @@
         + (colto)[<i>Mi sciolgo nel tempo.]
             ~ growthOlobino = stepThree
             
-            <i>C'è solo amore.
+            <i>C'è solo amore.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             <i>Per le persone care e per quelle mai conosciute, per quelle perse e quelle che verranno.
             <i>Per l'insetto nel giardino e l'uccello nel cielo.
             <i>Per l'acqua sulla fronte e la plastica sotto le dita.
