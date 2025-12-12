@@ -612,6 +612,8 @@ Funzione di traduzione da variabile a stringa
             - comingFrom == Kitchen:
                 {debug: passo dai valori di Kitchen.}
                 ~ kitchen_firstCharExtraIngredient = object
+                //Levo dalla lista di cose che può donarci la rana
+                ~ frog_firstCharObtainedGifts += charOneCooking
                 
                 {   
                     - object == universalIngredient:
@@ -636,6 +638,8 @@ Funzione di traduzione da variabile a stringa
             - comingFrom == Backpack:
                 {debug: passo dai valori dello zaino.}
                 ~ firstChar_giftedObject += object
+                //Levo dalla lista di cose che può donarci la rana
+                ~ frog_firstCharObtainedGifts += charOneCultivable
                 
                 {   
                     
@@ -666,6 +670,8 @@ Funzione di traduzione da variabile a stringa
             - comingFrom == Kitchen:
                 {debug: passo dai valori di Kitchen.}
                 ~ kitchen_secondCharExtraIngredient = object
+                //Levo dalla lista di cose che può donarci la rana
+                ~ frog_secondCharObtainedGifts += charTwoCooking
                 
                 {   
                     - object == universalIngredient:
@@ -690,6 +696,8 @@ Funzione di traduzione da variabile a stringa
             - comingFrom == Backpack:
                 {debug: passo dai valori dello zaino.}
                 ~ secondChar_giftedObject += object
+                //Levo dalla lista di cose che può donarci la rana
+                ~ frog_secondCharObtainedGifts += charTwoCultivable
                 
                 {   
                     

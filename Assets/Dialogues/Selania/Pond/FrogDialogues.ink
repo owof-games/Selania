@@ -97,13 +97,13 @@
                 {debug_frog: condizioni rispettate per poter offrire la seconda missione speciale.}
                     -> special_mission_two      
     
-            - firstChar_storyStatus == story_storyStarted && !ending_cooking_with_first_char && frog_firstCharObtainedGifts hasnt charOneCooking:
+            - firstChar_storyStatus == story_storyStarted && !ending_cooking_with_first_char && frog_firstCharObtainedGifts hasnt charOneCooking && player_accessiblePlaces has Kitchen:
                 {debug_frog: condizioni rispettate per poter offrire info sull'ingrediente per Chitarra.}
                     -> autonomy_mission_verify
                     
-            - firstChar_storyStatus == story_storyStarted && player_accessiblePlaces has Nest && frog_firstCharObtainedGifts hasnt charOneEmotionalWord:
-                {debug_frog: condizioni rispettate per poter offrire info su parola per Chitarra.}
-                    -> autonomy_mission_verify
+            // - firstChar_storyStatus == story_storyStarted && player_accessiblePlaces has Nest && frog_firstCharObtainedGifts hasnt charOneEmotionalWord:
+            //     {debug_frog: condizioni rispettate per poter offrire info su parola per Chitarra.}
+            //         -> autonomy_mission_verify
                     
             - firstChar_storyStatus == story_storyStarted && player_accessiblePlaces has Library && frog_firstCharObtainedGifts hasnt charOneLibrary:
                 {debug_frog: condizioni rispettate per poter offrire info su racconto per Chitarra.}
@@ -113,7 +113,7 @@
                 {debug_frog: condizioni rispettate per poter offrire info sul dono per Riccio.}
                     -> autonomy_mission_verify
                     
-            - secondChar_storyStatus == story_storyStarted && !ending_cooking_with_second_char && frog_secondCharObtainedGifts hasnt charTwoCooking:
+            - secondChar_storyStatus == story_storyStarted && !ending_cooking_with_second_char && frog_secondCharObtainedGifts hasnt charTwoCooking && player_accessiblePlaces has Kitchen:
                 {debug_frog: condizioni rispettate per poter offrire info su ingrediente per Chitarra.}
                     -> autonomy_mission_verify
                     
@@ -129,7 +129,9 @@
                 {debug_frog: condizioni rispettate per poter offrire info su racconto per Chitarra.}
                     -> autonomy_mission_verify
                     
-            - LIST_COUNT(frog_firstCharObtainedGifts) == 4 && LIST_COUNT(frog_secondCharObtainedGifts) == 4 && frog_availableSpecialMissions == ():
+            //Condizioni in cui la rana non offre nulla:
+
+            - LIST_COUNT(frog_firstCharObtainedGifts) >= 3 && LIST_COUNT(frog_secondCharObtainedGifts) >= 3 && frog_availableSpecialMissions == ():
                 Non ho più niente da offrirti {player_name}. Ora è tutto nelle tue mani#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     -> main
             

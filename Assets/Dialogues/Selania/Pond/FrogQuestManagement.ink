@@ -5,16 +5,15 @@
 {debug_frog: frog_secondCharObtainedGifts è uguale a {frog_secondCharObtainedGifts}.}
 
         //Aggiornare lo stato delle cose che posso donare o meno alla PG
+        //Nota: per come è strutturata ora la cosa, è un check extra, perché in teoria la variazione dovrebbe avvenire già durante il dono
         {
             //Ho già fatto il dono (ed è il primo check)
             - firstChar_giftedObject != () && frog_firstCharObtainedGifts hasnt charOneCultivable:
                     ~ frog_firstCharObtainedGifts += charOneCultivable
     
-            
             //Ho già cucinato (ed è il primo check). Traccio il nodo più vicino alla fine per prevenire problemi con eventuali crush del gioco
             - ending_cooking_with_first_char && frog_firstCharObtainedGifts hasnt charOneCooking:
                     ~ frog_firstCharObtainedGifts += charOneCooking
-        
         }
         
         
@@ -22,8 +21,7 @@
             //Ho già fatto il dono (ed è il primo check)
             - secondChar_giftedObject != () && frog_secondCharObtainedGifts hasnt charTwoCultivable:
                     ~ frog_secondCharObtainedGifts += charTwoCultivable
-    
-            
+                    
             //Ho già cucinato (ed è il primo check). Traccio il nodo più vicino alla fine per prevenire problemi con eventuali crush del gioco
             - ending_cooking_with_second_char && frog_secondCharObtainedGifts hasnt charTwoCooking:
                     ~ frog_secondCharObtainedGifts += charTwoCooking
