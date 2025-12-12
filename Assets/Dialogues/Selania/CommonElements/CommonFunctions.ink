@@ -154,7 +154,7 @@
     }
 
     {
-        - secondChar_storyStatus == story_storyStarted:
+        - secondChar_storyStatus == story_storyStarted && second_char_main_storylets.one:
         
         //Evitiamo che venga tolto dalla cucina se sta cucinando
         {
@@ -209,7 +209,7 @@
     
     {
 
-        - secondChar_storyStatus == story_storyEnded&& not second_char_story_ended.goodbye:  
+        - secondChar_storyStatus == story_storyEnded && not second_char_story_ended.goodbye:  
             ~  move_entity(SecondCharacter, Forest)
     }
     
@@ -304,7 +304,7 @@
             
         //Gestione tempi di cucina autonoma di Riccio.
         {debug: il valore di kitchen_secondCharCookingTime è {kitchen_secondCharCookingTime}}
-        {debug: il valore disecondtIsCooking è {kitchen_secondCharIsCooking}}
+        {debug: il valore di secondCharIsCooking è {kitchen_secondCharIsCooking}}
         {
             - kitchen_secondCharIsCooking == true:
             

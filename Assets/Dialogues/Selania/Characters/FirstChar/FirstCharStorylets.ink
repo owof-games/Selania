@@ -15,11 +15,12 @@
         Si chiama Talco.
         E sicuro che nel caso ti ha tirato le pezze contro le AI o qualcosa su Florence and the Machine.
         Sempre che non abbia cambiato fissa in questi mesi.
-        Insomma: l’hai vistə?
+        Insomma: l’hai vistə?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
         
             {
                 - not about_colors_choices:
                     -> about_colors_choices ->
+                Insomma: l’hai vistə?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
             }
         
             + (purple)[Ho sempre pensato che Florence fosse una strega.]

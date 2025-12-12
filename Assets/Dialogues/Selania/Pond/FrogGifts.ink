@@ -280,7 +280,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                 //     -> END     
             }
             
-        + {!ending_cooking_with_first_char && frog_firstCharObtainedGifts hasnt charOneCooking} [C'è qualcosa che posso usare cucinando con {charNameOne}?]
+        + {!ending_cooking_with_first_char && frog_firstCharObtainedGifts hasnt charOneCooking && player_accessiblePlaces has Kitchen} [C'è qualcosa che posso usare cucinando con {charNameOne}?]
             ~ frog_firstCharObtainedGifts += charOneCooking
             ~ temp firstNameIngredient = greenhouse_chosenCultivable 
         
@@ -572,7 +572,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                         -> closed_exchange
             }
             
-        + {!ending_cooking_with_second_char && frog_secondCharObtainedGifts hasnt charTwoCooking} [C'è qualcosa che posso usare cucinando con {charNameTwo}?]
+        + {!ending_cooking_with_second_char && frog_secondCharObtainedGifts hasnt charTwoCooking && player_accessiblePlaces has Kitchen} [C'è qualcosa che posso usare cucinando con {charNameTwo}?]
                 ~ frog_secondCharObtainedGifts += charTwoCooking
                 ~ temp SecondNameIngredient = greenhouse_chosenCultivable
 

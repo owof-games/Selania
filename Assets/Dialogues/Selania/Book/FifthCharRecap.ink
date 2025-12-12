@@ -9,7 +9,7 @@
     ~ temp mentorName = translator(mentor_ActualName)
         
 
-<b><i>Appunti dalle conversazioni.</b></i><><N>
+<b><i>Appunti dalle conversazioni.</b></i><N><>
 
 {
     - the_witch_and_the_mentor.bookUpdate:

@@ -287,7 +287,7 @@
         
         {frog_randomMissionDice:
         
-            - 1 && frog_availableCommonMissions has missionOne:
+            - 1 && frog_availableCommonMissions has missionOne && LIST_COUNT(greenhouse_backupCultivable) < 12:
                 -> mission_one
             - 2 && frog_availableCommonMissions has missionTwo:
                 -> mission_two
@@ -861,7 +861,7 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
 
 
 = notification
-<i>{player_name} ha soddisfatto la richiesta fatta dalla rana.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+<i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
         ~ frog_witch_notification = true
 -> main
 

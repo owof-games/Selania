@@ -40,9 +40,10 @@
     <i>Un viottolo di affetto e cura.
     <i>Una calle di saggezza e spiritualità.
     <i>Ogni scelta e ogni passo accumulano visioni del mondo.
+    @animation:RewriterBook
     <i>Raccontando la storia di chi cammina.
     - (bookUpdate)
-    @animation:RewriterBook
+    
 ->->
 
 
