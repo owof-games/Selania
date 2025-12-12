@@ -38,7 +38,7 @@
         Io voglio solo fare il bambino.
         Invece i grandi mi dicono che mi vogliono bene.
         Ma poi mi fanno male.
-        E io non mi fido più di voi.
+        E io non mi fido più di voi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
 
             @animation:RewriterBook
         
@@ -52,11 +52,11 @@
     = rewriting
     ~ temp charNameTwo = translator(secondChar_ActualName)
 
-            Va bene.
+            Va bene.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             Ma stavo pensando una cosa però prima.
             Abbiamo parlato tantissimo noi due.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
             Ma davvero TANTISSSSSSIMO!
-            E sai cosa penso di te?
+            E sai cosa penso di te?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
 
             //Avvio aggiornamento relazione + commento PNG + commento strega
                 -> secondAffinityCalc ->
@@ -405,10 +405,10 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-        Credo di aver compreso quale sia il tuo blocco, perché sei qui.
+        Credo di aver compreso quale sia il tuo blocco, perché sei qui.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
         E riguarda gli adulti.
         Perché se chi dovrebbe proteggerti ti ha ferito, come fai a fidarti delle persone?
-        E per questo ti dico {charNameTwo}:#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+        E per questo ti dico {charNameTwo}:
             
             {
                 - firstChar_storyStatus != story_storyEnded:
