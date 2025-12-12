@@ -2,7 +2,7 @@
 
 === cecilia_formicola
 
-<b>Fuochino</b> di Cecilia Formicola (she/her).
+<b>Fuochino</b> di Cecilia Formicola (she/her).#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has CeciliaFormicola:
@@ -80,7 +80,7 @@
             
             
 === kayleig
-<b>Volevo che mia madre fosse forte</b> di Kayleig (she/her).
+<b>Volevo che mia madre fosse forte</b> di Kayleig (she/her).#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 
         {
             - library_unreadStories has Kayleig:

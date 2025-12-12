@@ -1,7 +1,7 @@
 //Cognome/alias S - Z
 
 === salvo
-<b>Il cancello</b> di Salvo (he/him).<N>Instagram: @about_to_tore.
+<b>Il cancello</b> di Salvo (he/him).<N>Instagram: @about_to_tore.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
     //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
         {
             - library_unreadStories has Salvo:
@@ -175,7 +175,7 @@
                 ~ library_readStories += QueerginiaWolf
                  -> refresh_book_lists ->
         }
-<b>Giallo</b> di Queerginia Wolf/Marco Spelgatti (she/he/they).<N>Instagram: @queerginiawolf
+<b>Giallo</b> di Queerginia Wolf/Marco Spelgatti (she/he/they).<N>Instagram: @queerginiawolf#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         -> DarkLibraryModeOn ->
         ~ enableBigDialogue()
 

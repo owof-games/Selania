@@ -1,6 +1,6 @@
 //Cognome/alias L - R
 === lamia
-<b>Il sassolino</b> di Lamia (she/they).<N>Instagram: @mannaggiate_
+<b>Il sassolino</b> di Lamia (she/they).<N>Instagram: @mannaggiate_#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
     //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
         {
             - library_unreadStories has Lamia:
