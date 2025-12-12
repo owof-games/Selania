@@ -18,7 +18,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                 Tu sai tutto su {charNameOne}!
                 Prova a chiedermi qualcosa di diverso.
                 Ma niente con la matematica!
-                {debug: la quantità di doni di PNGUno è {LIST_COUNT(frog_firstCharObtainedGifts)},}
+                    {debug: la quantità di doni di PNGUno è {LIST_COUNT(frog_firstCharObtainedGifts)},}
                         -> top
 
             - else:
@@ -412,7 +412,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                         Ma mi dicevano i topi della biblioteca che prima hai letto <b>Luna vergine</b> di Aza.
                             {
                                 - a_story_of_revenge :
-                                    E che ne hai già parlato con {charNameOne}!
+                                    E che ne hai già parlato con {charNameOne}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                                     Perché non scegli un altro dono?
                                         ~ frog_aboutGiftRequest = ()
                                         ~ frog_first_novel = "<b>Luna vergine</b> di Aza"
@@ -566,7 +566,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                                     ~ frog_second_char_gift = "{ingredientTranslator(LicheneDegliAbissi)}"
                                     
                         }
-                    No dai, rimaniamo con Franco la rana, sennò poi ti confondi.
+                    No dai, rimaniamo con Franco la rana, sennò poi ti confondi.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Te l'ho messo nello zaino.
                     @animation: Backpack
                         -> closed_exchange
@@ -699,7 +699,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                         Prima Gliberia, una delle topoline della biblioteca, ha visto che stavi leggendo <b>Il sassolino</b>.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                             {
                                 - a_story_of_rebellion:
-                                    E che ne avete già parlato con {charNameTwo}.
+                                    E che ne avete già parlato con {charNameTwo}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                                     Perché non scegli un altro dono?
                                         ~ frog_aboutGiftRequest = ()
                                         ~ frog_second_novel = "<b>Il sassolino</b> di Lamia"
@@ -732,8 +732,8 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
             ~  frog_aboutGiftRequest = ()
             -> main
         + -> 
-        Ehm, che imbarazzo, girino.
-        Per ora non ho niente di utile per {charNameTwo}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        Ehm, che imbarazzo, girino.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        Per ora non ho niente di utile per {charNameTwo}.
                 ~  frog_aboutGiftRequest = ()
                 -> frog_about_who_questions
             

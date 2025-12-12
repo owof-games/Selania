@@ -86,7 +86,7 @@
         <i>{mentorName} ama dare consigli per far star bene le persone.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
         <i>{mentorName} crede di potere esistere solo quando si rende utile.
         Esatto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-        Quello.
+        Quella roba lì.
         Chiedile un consiglio.
         E poi torna pure qui.
         Ma quindi non è {charNameOne} che fa il nido sugli alberi?
@@ -327,7 +327,7 @@
 //     ~ temp mentorName = translator(mentor_ActualName)
     
 //     //* Missione tre: liberare uno slot parola
-// 	//    * Porta questa cosa a qualcuné 
+// 	//    * Porta questa cosa a qualcun
 
 
 //     missione speciale tre: le special creano storylets ad hoc anche con le altre personagge, magari con un blocco di scelte#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral

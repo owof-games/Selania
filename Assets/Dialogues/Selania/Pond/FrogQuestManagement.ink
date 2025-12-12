@@ -84,9 +84,9 @@
             - mindfulness && frog_availableCommonMissions has missionThree:
                 ~ frog_availableCommonMissions -= missionThree
 
-                Girino!
+                Girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Sei sempre un salto avanti!
-                L'altro giorno un'amica, quell'amica comune sai, quella che ci parla nella testa, quell'amica hai capito no.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                L'altro giorno un'amica, quell'amica comune sai, quella che ci parla nella testa, quell'amica hai capito no.
                 <i>A noi piace molto la compagnia della rana Franco.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Ecco, lei mi ha fatto notare che {mentorName} ha una fissa.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Una cosa più fissa in testa della passione di mio cugino Gracco per la pasta coi lombrichi.
@@ -257,7 +257,6 @@
                     -> frog_about_who_questions 
                 
             - else:
-            
                 -> missions_dispatcher
             
         }
@@ -405,7 +404,7 @@
             {
                 - mindfulness:
                     
-                    Girino!
+                    Girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Mi hanno detto che hai chiesto a {mentorName} di darti qualche consiglio di benessere.
                     Come lo so?
                     Perché ora li sta dando a tutte le persone che incontra.
@@ -417,8 +416,8 @@
                     E questo posto è un po' più felice.
                     E allora io ti rendo un po' più felice: dimmi come posso aiutarti.
                         ~ frog_currentMission = ()
-
                         -> frog_about_who_questions
+
                 - else:
                     Ma ecco di nuovo qui il mio girino preferito!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Hai poi chiesto a {mentorName} come stare bene?
@@ -454,8 +453,8 @@
                     Non sai quanto abbia bisogno quella donna di uscire dal suo guscio.
                     Per cui: vediamo come posso aiutarti!
                         ~ frog_currentMission = ()
-
                             -> frog_about_who_questions
+
                 - else:
                     {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Le mie spie mi hanno detto che ancora non hai raccontato stranezze a {mentorName}!
@@ -470,7 +469,6 @@
             {
                 //TODO: per questa come condizioni mettere anche le altre storie condivise
                 - first_second_chit_chat:
-
                     Avannotti!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Era "avannotti".
                     Non "ananassi."
@@ -492,8 +490,8 @@
                     Zio Gracco lo dice sempre: Franco!
                     Zio Gracco è un rospo di poche parole.
                         ~ frog_currentMission = ()
-
                             -> frog_about_who_questions
+
                 - else:
                     Girino, sapevi che se metto la zampa nell'acqua si spezza?speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Ma se poi la tiro fuori, è intera!
@@ -528,8 +526,8 @@
                     <i>La saggezza ha molte facce, e una porta il volto di Franco.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
                     E ora quindi è il mio momento di aiutarti.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         ~ frog_currentMission = ()
-
                             -> frog_about_who_questions
+
                 - else:
                     Parla con la nostra amica comune, girino.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Intanto resterò qui a scrivere una lettera di scuse a Tullio e Giulio.
@@ -566,8 +564,8 @@
                     E allora io ti aiuterò con il tuo lavoro.
                     Così magari Giulio capisce che sono un bravo girino, e ci prende il cane!
                         ~ frog_currentMission = ()
-
                             -> frog_about_who_questions
+
                 - else:
                     Girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Come diceva Gambusia de Filippi: c'è fitoplancton per te.
@@ -602,8 +600,8 @@
                     Gli umani dovrebbero imparare a lasciarci in pace.
                     E a proposito di pace: vediamo come posso aiutarti!
                         ~ frog_currentMission = ()
-
                             -> frog_about_who_questions
+                            
                 - else:
                     {player_name}, continuano ad arrivarmi lettere dai topi della biblioteca. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Non è che riesci a farci un salto e smuovere qualche racconto?
