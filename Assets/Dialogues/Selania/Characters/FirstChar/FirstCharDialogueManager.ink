@@ -122,8 +122,7 @@
         
         //Cucinare assieme    
             + {open_the_kitchen && not ending_cooking_with_first_char && kitchen_firstCharIsCooking==false}[Ti va di cucinare qualcosa assieme?]
-                ~ movements_changeLocationTimer = 0
-                
+            
                 {
                 
                     - kitchen_secondCharIsCooking:

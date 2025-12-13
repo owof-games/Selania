@@ -19,7 +19,7 @@
                                     - Bene, vediamo se è l'ultima volta. Vediamoci allo stagno {player_name}, così ti mostro quello che ho combinato!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
                                 }
                                     ~ move_entity(FirstCharacter, Pond)
-                                    ~ movements_changeLocationTimer = 0
+                                    ~ movements_randomizable_characters -= FirstCharacter
                                         -> main    
                         }
             

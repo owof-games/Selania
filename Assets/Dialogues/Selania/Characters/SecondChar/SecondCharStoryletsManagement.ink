@@ -18,7 +18,7 @@
                                     - Mi arrendo. Vediamoci alla foresta, ho una cosa da farti vedere.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                                 }
                             ~ move_entity(SecondCharacter, Forest)
-                            ~ movements_changeLocationTimer = 0
+                            ~ movements_randomizable_characters -= SecondCharacter
                                 -> main    
                } 
                

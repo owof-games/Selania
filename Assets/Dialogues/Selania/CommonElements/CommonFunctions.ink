@@ -99,13 +99,14 @@
 //Qui apriamo i luoghi cambiando gli assets di riferimento
 === opening_places
 {debug: passo da opening_places.}
-    {
-        - welcome.your_name && (entity_location(FromPondToGreenhouse) == Safekeeping) && not olobino.step_tre.colto:
-            ~ movements_randomablePlaces += Greenhouse
-            ~ player_accessiblePlaces += Greenhouse
-            ~ move_entity(FromPondToGreenhouseBlocked, Safekeeping)
-            ~ move_entity(FromPondToGreenhouse, Pond)
-    }
+    //Provo a togliere la serra dai luoghi random per vedere se le png si beccano più spesso.
+    // {
+    //     - welcome.your_name && (entity_location(FromPondToGreenhouse) == Safekeeping) && not olobino.step_tre.colto:
+    //         ~ movements_randomablePlaces += Greenhouse
+    //         ~ player_accessiblePlaces += Greenhouse
+    //         ~ move_entity(FromPondToGreenhouseBlocked, Safekeeping)
+    //         ~ move_entity(FromPondToGreenhouse, Pond)
+    // }
     
     {
         - open_the_kitchen && (entity_location(FromPondToKitchen) == Safekeeping):
@@ -147,7 +148,17 @@
 
     {
         - firstChar_storyStatus == story_storyStarted:
-            ~ movements_randomizable_characters += FirstCharacter
+        //Evitiamo che venga tolta dalla cucina se sta cucinando o se ci sta aspettando in cucina
+            {
+                - kitchen_firstCharIsCooking == true:
+                    ~ movements_randomizable_characters -= FirstCharacter
+
+                - kitchen_firstCharCookingTogetherInvite == true:
+                    ~ movements_randomizable_characters -= FirstCharacter
+                
+                - else:
+                    ~ movements_randomizable_characters += FirstCharacter
+            }
         
         - firstChar_storyStatus == story_storyEnded:  
             ~ movements_randomizable_characters -= FirstCharacter 
@@ -156,10 +167,14 @@
     {
         - secondChar_storyStatus == story_storyStarted && second_char_main_storylets.one:
         
-        //Evitiamo che venga tolto dalla cucina se sta cucinando
+        //Evitiamo che venga tolto dalla cucina se sta cucinando o se ci sta aspettando in cucina
         {
             - kitchen_secondCharIsCooking == true:
                 ~ movements_randomizable_characters -= SecondCharacter
+
+            - kitchen_secondCharCookingTogetherInvite == true:
+                    ~ movements_randomizable_characters -= SecondCharacter    
+                    
             - else:
                 ~ movements_randomizable_characters += SecondCharacter
                 
@@ -200,7 +215,7 @@
     }
     
     
-    //Se la storia della PNG è conclusa, la spostiamo nella foresta, così poi si può spostare in stazione e da lì sentiamo il treno partire.
+    //Se la storia della PNG è conclusa la spostiamo nella foresta, così poi si può spostare in stazione e da lì sentiamo il treno partire.
     {
 
         - firstChar_storyStatus == story_storyEnded && not first_char_story_ended.goodbye:  
@@ -234,7 +249,6 @@
             ->->
     }
     
-    //provare così, o vedere se invece è il caso di creare una variabile temporanea per le liste
             = top
             ~ movements_changeLocationTimer = 0
             //~ temp list_character = movements_randomizable_characters

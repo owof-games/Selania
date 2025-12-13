@@ -179,7 +179,6 @@
             
             //Cucinare assieme
             + {second_char_main_storylets.two && open_the_kitchen && not ending_cooking_with_second_char && kitchen_secondCharIsCooking==false}[Ti va di cucinare qualcosa assieme?]
-                    ~ movements_changeLocationTimer = 0
                     
                 {
                     - kitchen_firstCharIsCooking:

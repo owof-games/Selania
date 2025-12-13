@@ -112,6 +112,7 @@
 
         ~ firstChar_pauseTalking = firstChar_pauseDuration
         ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
+        ~ movements_randomizable_characters += FirstCharacter
         
         -> opening_places ->
         -> main

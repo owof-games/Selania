@@ -106,6 +106,7 @@
     - (bookUpdate)
 
         ~ secondChar_pauseTalking = secondChar_pauseDuration
+        ~ movements_randomizable_characters += SecondCharacter
         -> opening_places ->
         -> main
         
