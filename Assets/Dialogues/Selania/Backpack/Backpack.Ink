@@ -20,8 +20,10 @@ VAR gift_currentReceiver = ()
 
 
 === backpack_management ===
+~ enableNestDialogue()
+
     {debug: I doni trovati sono {list_with_commas(backpack_findedGifts)}.}
-    Dono...
+    Dono...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
     
 /* ---------------------------------
 
@@ -37,14 +39,12 @@ VAR gift_currentReceiver = ()
 
     {
         - gift_currentReceiver has FirstCharacter:
-            
             -> object_value_for_PNG(BaccaDellaAddolorata, Backpack, FirstCharacter)
         
         - gift_currentReceiver has SecondCharacter:
                 -> object_value_for_PNG(BaccaDellaAddolorata, Backpack, SecondCharacter)
-    
     }
-        -> main
+
 
 + {backpack_findedGifts has BarbaDellInciampo} [Una spina di Barba dell'Inciampo.]
     ~ backpack_findedGifts -= BarbaDellInciampo
@@ -56,12 +56,10 @@ VAR gift_currentReceiver = ()
         - gift_currentReceiver has FirstCharacter:
             -> object_value_for_PNG(BarbaDellInciampo, Backpack, FirstCharacter)
         
-        
         - gift_currentReceiver has SecondCharacter:
                 -> object_value_for_PNG(BarbaDellInciampo, Backpack, SecondCharacter)
-        
     }        
-    -> main    
+  
         
 + {backpack_findedGifts has BastoneDellOzioso} [Un nodo di Bastone dell'Ozioso.]
     ~ backpack_findedGifts -= BastoneDellOzioso
@@ -75,9 +73,8 @@ VAR gift_currentReceiver = ()
         
         - gift_currentReceiver has SecondCharacter:
                 -> object_value_for_PNG(BastoneDellOzioso, Backpack, SecondCharacter)
-        
     }
-        -> main        
+     
     
 + {backpack_findedGifts has BrinaDellImpossibile} [Un frammento di Brina dell'Impossibile.]
     ~ backpack_findedGifts -= BrinaDellImpossibile
@@ -92,9 +89,8 @@ VAR gift_currentReceiver = ()
     
         - gift_currentReceiver has SecondCharacter:
                 -> object_value_for_PNG(BrinaDellImpossibile, Backpack, SecondCharacter)
-
     }
-        -> main
+
 
 + {backpack_findedGifts has CantoDelleCompagne} [Una goccia di Canto delle Compagne.]
     ~ backpack_findedGifts -= CantoDelleCompagne
@@ -104,16 +100,13 @@ VAR gift_currentReceiver = ()
     } 
 
     {
-    - gift_currentReceiver has FirstCharacter:
-                -> object_value_for_PNG(CantoDelleCompagne, Backpack, FirstCharacter)
+        - gift_currentReceiver has FirstCharacter:
+                    -> object_value_for_PNG(CantoDelleCompagne, Backpack, FirstCharacter)
 
-
-
-    - gift_currentReceiver has SecondCharacter:
-                -> object_value_for_PNG(CantoDelleCompagne, Backpack, SecondCharacter)
-
+        - gift_currentReceiver has SecondCharacter:
+                    -> object_value_for_PNG(CantoDelleCompagne, Backpack, SecondCharacter)
     }
-        -> main
+
 
 + {backpack_findedGifts has CardoAspinato} [Un ciuffo di peli di Cardo Aspinato.]
     ~ backpack_findedGifts -= CardoAspinato
@@ -123,15 +116,13 @@ VAR gift_currentReceiver = ()
     } 
 
     {
-    - gift_currentReceiver has FirstCharacter:
-        -> object_value_for_PNG(CardoAspinato, Backpack, FirstCharacter)
+        - gift_currentReceiver has FirstCharacter:
+            -> object_value_for_PNG(CardoAspinato, Backpack, FirstCharacter)
 
-
-    - gift_currentReceiver has SecondCharacter:
-            -> object_value_for_PNG(CardoAspinato, Backpack, SecondCharacter)
-        
+        - gift_currentReceiver has SecondCharacter:
+                -> object_value_for_PNG(CardoAspinato, Backpack, SecondCharacter)  
     }
-        -> main   
+ 
         
 + {backpack_findedGifts has EderaDelleAmanti} [Una foglia di Edera delle amanti.]
     ~ backpack_findedGifts -= EderaDelleAmanti
@@ -143,12 +134,10 @@ VAR gift_currentReceiver = ()
         - gift_currentReceiver has FirstCharacter:
                 -> object_value_for_PNG(EderaDelleAmanti, Backpack, FirstCharacter)
         
-        
         - gift_currentReceiver has SecondCharacter:
                 -> object_value_for_PNG(EderaDelleAmanti, Backpack, SecondCharacter)
-        
     }
-        -> main   
+
         
 + {backpack_findedGifts has ErbaLiccia} [Un ricordo di Erba Liccia.]
         ~ backpack_findedGifts -= ErbaLiccia
@@ -162,7 +151,6 @@ VAR gift_currentReceiver = ()
         
         - gift_currentReceiver has SecondCharacter:
                     -> object_value_for_PNG(ErbaLiccia, Backpack, SecondCharacter)
-        
     }
     
  + {backpack_findedGifts has FalsaPalude} [Un petalo di Falsa Palude.]
@@ -175,10 +163,8 @@ VAR gift_currentReceiver = ()
         - gift_currentReceiver has FirstCharacter:
                 -> object_value_for_PNG(FalsaPalude, Backpack, FirstCharacter)
         
-        
         - gift_currentReceiver has SecondCharacter:
                 -> object_value_for_PNG(FalsaPalude, Backpack, SecondCharacter)
-        
     }
     
   + {backpack_findedGifts has LanaNotturna} [Il calore della Lana Notturna.]
@@ -196,7 +182,7 @@ VAR gift_currentReceiver = ()
         
     }       
     
-    -> main 
+
     
 + {backpack_findedGifts has LicheneDegliAbissi} [Una traccia dell'odore del Lichene degli Abissi.]
     ~ backpack_findedGifts -= LicheneDegliAbissi
@@ -206,15 +192,13 @@ VAR gift_currentReceiver = ()
     } 
 
     {
-    - gift_currentReceiver has FirstCharacter:
-            -> object_value_for_PNG(LicheneDegliAbissi, Backpack, FirstCharacter)
-    
+        - gift_currentReceiver has FirstCharacter:
+                -> object_value_for_PNG(LicheneDegliAbissi, Backpack, FirstCharacter)
 
-    - gift_currentReceiver has SecondCharacter:
-            -> object_value_for_PNG(LicheneDegliAbissi, Backpack, SecondCharacter)
-    
+        - gift_currentReceiver has SecondCharacter:
+                -> object_value_for_PNG(LicheneDegliAbissi, Backpack, SecondCharacter)
     }
-        -> main
+
 
 + {backpack_findedGifts has NonTiScordarDiTe} [L'impronta del Non Ti Scordar di Te.]
     ~ backpack_findedGifts -= NonTiScordarDiTe
@@ -224,15 +208,13 @@ VAR gift_currentReceiver = ()
     } 
 
     {
-    - gift_currentReceiver has FirstCharacter:
-            -> object_value_for_PNG(NonTiScordarDiTe, Backpack, FirstCharacter)
+        - gift_currentReceiver has FirstCharacter:
+                -> object_value_for_PNG(NonTiScordarDiTe, Backpack, FirstCharacter)
 
-
-    - gift_currentReceiver has SecondCharacter:
-                 -> object_value_for_PNG(NonTiScordarDiTe, Backpack, SecondCharacter)
-        
+        - gift_currentReceiver has SecondCharacter:
+                    -> object_value_for_PNG(NonTiScordarDiTe, Backpack, SecondCharacter)
     }
-        -> main        
+      
 
 + {backpack_findedGifts has Olobino} [Una cappello di Olobino.]
     ~ backpack_findedGifts -= Olobino
@@ -244,12 +226,10 @@ VAR gift_currentReceiver = ()
         - gift_currentReceiver has FirstCharacter:
                 -> object_value_for_PNG(Olobino, Backpack, FirstCharacter)
         
-        
         - gift_currentReceiver has SecondCharacter:
                 -> object_value_for_PNG(Olobino, Backpack, SecondCharacter)
-        
     }
-    -> main
+
     
 + {backpack_findedGifts has LaSpazzata} [Un rametto della Spezzata.]
     ~ backpack_findedGifts -= LaSpazzata
@@ -264,9 +244,8 @@ VAR gift_currentReceiver = ()
     
         - gift_currentReceiver has SecondCharacter:
                 -> object_value_for_PNG(LaSpazzata, Backpack, SecondCharacter)
-    
     }
-        -> main
+
 
 //Doni insoliti
 + {backpack_findedGifts has universalIngredient} [L'ingrediente universale della Rana.]
@@ -275,22 +254,25 @@ VAR gift_currentReceiver = ()
     {
         - gift_currentReceiver has FirstCharacter:
                 -> object_value_for_PNG(universalIngredient, Backpack, FirstCharacter)
-    
+
         - gift_currentReceiver has SecondCharacter:
                 -> object_value_for_PNG(universalIngredient, Backpack, SecondCharacter)
-    
     }
-        -> main
+ 
         
         
     //Se la lista è vuota
     + {backpack_findedGifts == ()} [Non ho nulla da donare.]
-        -> main
+        ~ disableNestDialogue()    
+            -> main
     
     + [Ho bisogno di ragionarci ancora un poco.]
         ~ gift_currentReceiver = ()
-        -> main
-            
+        ~ disableNestDialogue()    
+            -> main    
     + ->
     - 
+
+//Passo da qui a dono fatto
+    ~ disableNestDialogue()       
     -> main
