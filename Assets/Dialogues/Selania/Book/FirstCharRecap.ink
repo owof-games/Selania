@@ -226,8 +226,9 @@
     }
     {
         - first_second_chit_chat.bookUpdate:
-            {charNameOne} e {!that_little_liar_storylet.nameSecond: il bimbo|{charNameTwo}} si sono presentat3, discutendo di alieni e pisolini.
+            {charNameOne} e {that_little_liar_storylet.nameSecond:{charNameTwo}|il bimbo} si sono presentat3, discutendo di alieni e pisolini.
     }
+    
     {
         - first_mentor_chit_chat.bookUpdate:
             Durante una conversazione con {mentorName}, {charNameOne} si è infastidita perché {mentorName} ha definito la felicità "non un luogo da raggiungere, ma qualcosa che si ha dentro", ma {charNameOne} crede sia un privilegio di chi fa il lavoro che ama. E teme che questo significhi che la felicità "te la ritrovi se ti fai andare bene quello che hai".
