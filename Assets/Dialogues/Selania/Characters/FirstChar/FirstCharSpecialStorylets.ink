@@ -111,6 +111,8 @@
     - (bookUpdate)
 
         ~ firstChar_pauseTalking = firstChar_pauseDuration
+        ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
+        
         -> opening_places ->
         -> main
         

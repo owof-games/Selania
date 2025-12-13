@@ -294,7 +294,7 @@
     //Ho messo (entity_location(SecondCharacter) != Kitchen) perché così non parte mai la cucina autonoma se c'è qualcunx in cucina.
     
         {
-            - player_accessiblePlaces has Kitchen && (not second_char_cooking_tracker) && (entity_location(FirstCharacter) != Kitchen) && second_char_main_storylets.one && contentsKitchen hasnt TheKitchenFrog:
+            - player_accessiblePlaces has Kitchen && (not second_char_cooking_tracker) && (entity_location(FirstCharacter) != Kitchen)  && second_char_main_storylets.one && contentsKitchen hasnt TheKitchenFrog && (kitchen_cookingAloneCoolDown == 0):
             
                 ~ kitchen_secondCharIsCooking = true
                 ~ move_entity(SecondCharacter, Kitchen)
@@ -315,6 +315,8 @@
                 - else:
                     ~ kitchen_secondCharIsCooking = false
                     ~ move_entity(SecondCharacter, Pond)
+                    //Attivo il cooldown, così altre png non vanno subito a cucinare da sole
+                    ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
                     //E poi sposto gli elementi decorativi in cucina
                     ~ move_entity(BatHouseFront, Kitchen)
                     ~ move_entity(BatHouseRetro, Kitchen)
@@ -341,7 +343,7 @@
 
     //Chitarra
         {
-            - player_accessiblePlaces has Kitchen && (not first_char_cooking_tracker) && (entity_location(SecondCharacter) != Kitchen) && contentsKitchen hasnt TheKitchenFrog:
+            - player_accessiblePlaces has Kitchen && (not first_char_cooking_tracker) && (entity_location(SecondCharacter) != Kitchen) && contentsKitchen hasnt TheKitchenFrog && (kitchen_cookingAloneCoolDown == 0):
             
                     ~ kitchen_firstCharIsCooking = true
                     ~ move_entity(FirstCharacter, Kitchen)
@@ -362,6 +364,8 @@
                     - else:
                        ~ kitchen_firstCharIsCooking = false
                        ~ move_entity(FirstCharacter, Pond)
+                       //Attivo il cooldown, così altre png non vanno subito a cucinare da sole
+                        ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
                        //E poi sposto gli elementi decorativi in cucina
                        ~ move_entity(FirstCharCookingAloneOBJ, Kitchen)
                 }
@@ -383,6 +387,11 @@
             }
         }
         
+        //Diminuzione del cooldown 
+        {
+            - kitchen_cookingAloneCoolDown > 0:
+                ~ kitchen_cookingAloneCoolDown --
+        }
     
 //Gestione suoni
     {
@@ -404,6 +413,8 @@
             ~ mentor_tutorialPauses = false
         
     }
+  
+
     
 
 //Avvio dialoghi di chiusura

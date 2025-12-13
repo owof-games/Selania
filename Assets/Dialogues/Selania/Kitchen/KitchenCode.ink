@@ -21,7 +21,10 @@
     VAR kitchen_storageGreen = 0
     VAR kitchen_storageRed = 0
 
-
+//Variabile per evitare che le personagge cucinino una di fila all'altra
+    VAR kitchen_cookingAloneCoolDown = 0
+    VAR kitchen_cookingAloneCoolDownMAX = 2
+    
 //Reazioni possibili al quarto ingrediente
     //Nota: notReaction = non dato
     LIST kitchen_extraIngredientPossibleReactions = notReaction, badReaction, mehReaction, goodReaction
