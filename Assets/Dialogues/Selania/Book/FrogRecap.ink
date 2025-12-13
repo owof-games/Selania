@@ -19,8 +19,27 @@ Franco la rana vuole aiutare {player_name} nel suo percorso. <N><>
             Franco ha invitato {player_name} a leggere altre pagine di questo libro, e poi tornare da lui.
             
         - missionTwo:
-            Franco ha chiesto a {player_name} di coltivare almeno tre piante alla serra prima di tornare da lui. Ad ora {player_name} ne ha coltivate: {14 - LIST_COUNT(greenhouse_backupCultivable)}.
-  
+            Franco ha chiesto a {player_name} di coltivare almeno tre piante alla serra prima di tornare da lui. Ad ora {player_name}<> 
+                {
+                    - 14 - LIST_COUNT(greenhouse_backupCultivable) == 0 && greenhouse_chosenCultivable == (): 
+                            non ne hai coltivate nessuna.
+                    
+                    - 14 - LIST_COUNT(greenhouse_backupCultivable) == 0 && greenhouse_chosenCultivable != (): 
+                            ne sta coltivando una.     
+                    
+                    - 14 - LIST_COUNT(greenhouse_backupCultivable) == 1 && greenhouse_chosenCultivable == (): 
+                            ne ha coltivata una.
+                    
+                    - 14 - LIST_COUNT(greenhouse_backupCultivable) == 1 && greenhouse_chosenCultivable != (): 
+                            sta coltivando la seconda.        
+                    
+                    - 14 - LIST_COUNT(greenhouse_backupCultivable) == 3 && greenhouse_chosenCultivable == (): 
+                            ne ha coltivate due.
+                    
+                    - 14 - LIST_COUNT(greenhouse_backupCultivable) == 3 && greenhouse_chosenCultivable != (): 
+                            sta coltivando l'ultima!             
+                }  
+
         - missionThree:
             Franco ha chiesto a {player_name} di ricevere dei consigli a {mentorName} su come star bene, e poi tornare da lui.
             
