@@ -749,7 +749,8 @@
             -> main
           
     = step_due
-        <i>I rami si sfiorano desideranti, colmi, sinuosi. Si avviluppano giocosi.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>I rami si sfiorano desideranti, colmi, sinuosi. #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Si avviluppano giocosi.
         <i>Radici gentili saggiano il legno della serra, lo sfiorano, lo penetrano.
         <i>Foglie giovani maturano, nutrendosi di questo gioco.
             -> main

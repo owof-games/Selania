@@ -681,12 +681,16 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ change_entity_place(Mentor)
         ~ secondChar_storyletsForRewritingCount ++
 
 
         Prima, con {mentorName}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Mi ha fatto male perché mi ha fatto pensare a scuola.
+                {
+                        - are_two_entities_together(Mentor, PG):
+                               ~ change_entity_place(Mentor)
+    
+                } 
         E anche a scuola danno sempre la colpa a me. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
         Non mi piace mica tanto la scuola.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         I ragazzi più grandi mi fanno male.
@@ -780,7 +784,7 @@
                     Anche Franco scrive storie.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Storie in cui Franco sa nuotare!
             }
-        A me mi piacciono le storie.
+        A me mi piacciono le storie.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         C'è una cosa che non dico mai a nessuno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Mamma è felice perché vado a letto presto.
         Ma è perché mi piace stare al buio da solo.

@@ -21,7 +21,7 @@
 
         - not second_character_feedback:
             {
-                - secondChar_storyStatus == story_storyEnded && mentor_pauseTalking == 0:
+                - secondChar_storyStatus == story_storyEnded:
                     -> second_character_feedback
                 
                 - else:
@@ -44,7 +44,7 @@
         //Feedback
             - not first_character_feedback:
                 {
-                    - firstChar_storyStatus == story_storyEnded && mentor_pauseTalking == 0:
+                    - firstChar_storyStatus == story_storyEnded:
                         -> first_character_feedback
                     
                     - else:
@@ -124,7 +124,7 @@
 
      //Commenti a situazioni, eventi o altro.
         //Crescita strega.
-        - witch_feedback.first_story_ended_check && not growing_witch_storylet && mentor_pauseTalking == 0:
+        - witch_feedback.first_story_ended_check && not growing_witch_storylet:
             -> growing_witch_storylet
 
         //Commento sul cane    

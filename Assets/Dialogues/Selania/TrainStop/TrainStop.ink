@@ -36,7 +36,7 @@
 === starting_note ===
     + {are_two_entities_together(StartingNote, PG)}[StartingNote]
     
-    Ti scrivo perché volevo ringraziarti per quello che hai fatto. #speaker:Sconosciutə #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_unknown
+    Ti scrivo perché volevo ringraziarti per quello che hai fatto. #speaker:Sconosciutə #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_writer_unknown
         Che abbiamo fatto.
         A volte il quotidiano mi fa dimenticare tutto, e pensare che sia stata tutta una mia invenzione, roba nella testa.
         Ma poi la notte e i sogni mi ricordano che è stato tutto vero.
@@ -84,7 +84,7 @@
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-        Ciao {player_name}, come stai?#speaker:{firstChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:unknown
+        Ciao {player_name}, come stai?#speaker:{firstChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_unknown
         Qui, questi primi giorni qui sono stati strani.
         A quanto pare la mia assenza è stata solo per qualche ora.
         E nessunə mi ha fatto domande su nulla.
@@ -176,7 +176,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-    Ciao {player_name}, qui è sempre {charNameOne} che ti scrive.#speaker:{firstChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:unknown
+    Ciao {player_name}, qui è sempre {charNameOne} che ti scrive.#speaker:{firstChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_unknown
        
        {
             - firstChar_ActualName has Triangolo:
@@ -285,7 +285,7 @@
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
     
-    Ciao ama!#speaker:{firstChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:unknown
+    Ciao ama!#speaker:{firstChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_unknown
     
      {
             - firstChar_ActualName has Triangolo:
@@ -451,7 +451,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-        Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}.#speaker:{secondChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:unknown
+        Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}.#speaker:{secondChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_unknown
         Cioè a te.
         Anche se non ho mica capito come te la mando la lettera.
         Ma come sta la rana?
@@ -543,7 +543,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-        Che strano.#speaker:{secondChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:unknown
+        Che strano.#speaker:{secondChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_unknown
         Ho lasciato l'altra lettera sul comodino di notte.
         E poi è sparita.
         Non so mica se ti è arrivata.
@@ -639,7 +639,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-        Ciao {player_name}.#speaker:{secondChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:unknown
+        Ciao {player_name}.#speaker:{secondChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_unknown
                 
                 {
      

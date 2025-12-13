@@ -180,39 +180,40 @@
                     Immagino sia giusto lasciarvi la vostra privacy.#speaker:{mentor_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:mentor_neutral
                         ~ change_entity_place(Mentor)
         }
-            
+
+        Ecco... #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
     
         {
             - secondChar_InkLevel == ink_empty:
-                    Che secondo me mi tratti come un bambino.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
-                    Tutte le cose che dici cambiano, sono disordinate.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                    Che secondo me mi tratti come un bambino.#speaker:{secondChar_tag()} #portrait:riccio_angry
+                    Tutte le cose che dici cambiano, sono disordinate.#speaker:{secondChar_tag()} #portrait:riccio_neutral
                     Come i camaleonti che sono verdi sulle foglie e bianchi sul muro.
-                    Non mi piace mica come cosa.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+                    Non mi piace mica come cosa.#speaker:{secondChar_tag()} #portrait:riccio_melanchonic
                     Mi sa che mi hai ascoltato, ma non mi hai mica capito!
             
             
             - secondChar_InkLevel == ink_low:
-                    Che io non ho mica capito cosa pensi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+                    Che io non ho mica capito cosa pensi.#speaker:{secondChar_tag()} #portrait:riccio_melanchonic
                     Sei come quando guardo nel terrario e non capisco se c'è l'insetto stecco o sono solo rami.
                     Magari c'hai provato a capirmi ma boh, mica ci sei {player_pronouns has him:riuscito|{player_pronouns has her:riuscita|riuscitə}}.
             
             - secondChar_InkLevel == ink_normal:
-                    Che si vede che sei grande.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+                    Che si vede che sei grande.#speaker:{secondChar_tag()} #portrait:riccio_melanchonic
                     Che a volte non è male, a volte però mi agita.
                     Mi chiedo sei mi ascolti davvero.
                     Però per lo meno ti sei {player_pronouns has him:impegnato|{player_pronouns has her:impegnata|impegnatə}}.
             
             - secondChar_InkLevel == ink_medium:
-                    Che un po' mi fido#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                    Che un po' mi fido#speaker:{secondChar_tag()} #portrait:riccio_neutral
                     Secondo me non dici <i>sempre sempre sempre</i> le cose in modo preciso.
                     Sembri un po' un gatto.
                     Ma mi fido.
             
             - secondChar_InkLevel == ink_high:
-                    Che non sei mica male per essere grande.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
-                    Dici sempre le cose allo stesso modo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                    Che non sei mica male per essere grande.#speaker:{secondChar_tag()} #portrait:riccio_emotional
+                    Dici sempre le cose allo stesso modo.#speaker:{secondChar_tag()} #portrait:riccio_neutral
                     Come un cane che scodinzola se è felice ma abbaia se arrabbiato.
-                    E questo mi fa stare al sicuro.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
+                    E questo mi fa stare al sicuro.#speaker:{secondChar_tag()} #portrait:riccio_emotional
                     Mi dice che mi hai ascoltato, ed è una cosa bella.
         }
     

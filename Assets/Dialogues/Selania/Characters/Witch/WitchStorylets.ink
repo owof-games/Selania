@@ -162,13 +162,13 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(mentor_ActualName)
 
-        <i>{player_name} <> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        
             {
                 - first_character_recap.check && second_character_recap.check && greenhouse_recap.check:
-                    cerca spesso risposte tra le pagine del libro.
+                    <i>{player_name} cerca spesso risposte tra le pagine del libro.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 
                 - else:
-                    cerca di rado risposte tra le pagine del libro.
+                    <i>{player_name} cerca di rado risposte tra le pagine del libro.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
         <i>Un libro è ricordo condiviso.
         <i>Una magia che pronuncia sé stessa.
@@ -194,7 +194,7 @@
         + [Scelta verde.]
             -> color_variation_management(PG, greenC)->
             
-        + [SCelta rossa.]
+        + [Scelta rossa.]
             -> color_variation_management(PG, redC)->
             
         + [Scelta blu.]

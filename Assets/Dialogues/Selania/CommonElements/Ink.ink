@@ -132,155 +132,170 @@
 
     {ink_status:
         - ink_empty:
+            <i>E quindi.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             <i>Dopo le molte parole spese <>
             {
-                - FirstCharacter:
-                    con {translator(firstChar_ActualName)}<>
+                - Character == FirstCharacter:
+                    con {translator(firstChar_ActualName)} <>
                     {
-                        - firstChar_giftedObject != (): e il dono consegnato
+                        - firstChar_giftedObject != (): e il dono consegnato<>
                     }
-                - SecondCharacter:
-                    con {translator(secondChar_ActualName)}<>
+                - Character == SecondCharacter:
+                    con {translator(secondChar_ActualName)} <>
                     {
-                        - secondChar_giftedObject != (): e il dono consegnato
+                        - secondChar_giftedObject != (): e il dono consegnato<>
                     }
-                - ThirdCharacter:
-                    con {translator(thirdChar_ActualName)}<>
+                - Character == ThirdCharacter:
+                    con {translator(thirdChar_ActualName)} <>
                     {
-                        - thirdChar_giftedObject != (): e il dono consegnato
+                        - thirdChar_giftedObject != (): e il dono consegnato<>
                     }
-                - FourthCharacter:
-                   con {translator(fourthChar_ActualName)}<>
+                - Character == FourthCharacter:
+                   con {translator(fourthChar_ActualName)} <>
                     {
-                        - fourthChar_giftedObject != (): e il dono consegnato
+                        - fourthChar_giftedObject != (): e il dono consegnato<>
                     }
-                - FifthCharacter:
-                    con {translator(fifthChar_ActualName)}<>
+                - Character == FifthCharacter:
+                    con {translator(fifthChar_ActualName)} <>
                     {
-                        - fifthChar_giftedObject != (): e il dono consegnato
+                        - fifthChar_giftedObject != (): e il dono consegnato<>
                     }
             }
-            ,{player_name} si ritrova {player_pronouns has him:privo|{player_pronouns has her:priva|privə}} di inchiostro. Potrà solo usare il potere dell'epilogo.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            , {player_name} si ritrova {player_pronouns has him:privo|{player_pronouns has her:priva|privə}} di inchiostro. 
+            <i>Potrà solo usare il potere dell'epilogo.
+        
         - ink_low:
+            <i>E quindi.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             <i>Dopo le molte parole spese <>
             {
-                - FirstCharacter:
-                    con {translator(firstChar_ActualName)}<>
+                - Character == FirstCharacter:
+                    con {translator(firstChar_ActualName)} <>
                     {
-                        - firstChar_giftedObject != (): e il dono consegnato
+                        - firstChar_giftedObject != (): e il dono consegnato<>
                     }
-                - SecondCharacter:
-                    con {translator(secondChar_ActualName)}<>
+                - Character == SecondCharacter:
+                    con {translator(secondChar_ActualName)} <>
                     {
-                        - secondChar_giftedObject != (): e il dono consegnato
+                        - secondChar_giftedObject != (): e il dono consegnato<>
                     }
-                - ThirdCharacter:
-                    con {translator(thirdChar_ActualName)}<>
+                - Character == ThirdCharacter:
+                    con {translator(thirdChar_ActualName)} <>
                     {
-                        - thirdChar_giftedObject != (): e il dono consegnato
+                        - thirdChar_giftedObject != (): e il dono consegnato<>
                     }
-                - FourthCharacter:
-                   con {translator(fourthChar_ActualName)}<>
+                - Character == FourthCharacter:
+                   con {translator(fourthChar_ActualName)} <>
                     {
-                        - fourthChar_giftedObject != (): e il dono consegnato
+                        - fourthChar_giftedObject != (): e il dono consegnato<>
                     }
-                - FifthCharacter:
-                    con {translator(fifthChar_ActualName)}<>
+                - Character == FifthCharacter:
+                    con {translator(fifthChar_ActualName)} <>
                     {
-                        - fifthChar_giftedObject != (): e il dono consegnato
+                        - fifthChar_giftedObject != (): e il dono consegnato<>
                     }
             }
-            ,{player_name} ha a disposizione una goccia di inchiostro. Potrà compiere una riscrittura e usare il potere dell'epilogo.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            , {player_name} ha a disposizione una goccia di inchiostro. 
+            <i>Potrà compiere una riscrittura e usare il potere dell'epilogo.
+        
         - ink_normal:
+            <i>E quindi.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
            <i>Dopo le molte parole spese <>
             {
-                - FirstCharacter:
-                    con {translator(firstChar_ActualName)}<>
+                - Character == FirstCharacter:
+                    con {translator(firstChar_ActualName)} <>
                     {
-                        - firstChar_giftedObject != (): e il dono consegnato
+                        - firstChar_giftedObject != (): e il dono consegnato<>
                     }
-                - SecondCharacter:
-                    con {translator(secondChar_ActualName)}<>
+                - Character == SecondCharacter:
+                    con {translator(secondChar_ActualName)} <>
                     {
-                        - secondChar_giftedObject != (): e il dono consegnato
+                        - secondChar_giftedObject != (): e il dono consegnato<>
                     }
-                - ThirdCharacter:
-                    con {translator(thirdChar_ActualName)}<>
+                - Character == ThirdCharacter:
+                    con {translator(thirdChar_ActualName)} <>
                     {
-                        - thirdChar_giftedObject != (): e il dono consegnato
+                        - thirdChar_giftedObject != (): e il dono consegnato<>
                     }
-                - FourthCharacter:
-                   con {translator(fourthChar_ActualName)}<>
+                - Character == FourthCharacter:
+                   con {translator(fourthChar_ActualName)} <>
                     {
-                        - fourthChar_giftedObject != (): e il dono consegnato
+                        - fourthChar_giftedObject != (): e il dono consegnato<>
                     }
-                - FifthCharacter:
-                    con {translator(fifthChar_ActualName)}<>
+                - Character == FifthCharacter:
+                    con {translator(fifthChar_ActualName)} <>
                     {
-                        - fifthChar_giftedObject != (): e il dono consegnato
+                        - fifthChar_giftedObject != (): e il dono consegnato<>
                     }
             }
-            ,{player_name} ha a disposizione due gocce di inchiostro. Potrà compiere due riscritture e usare il potere dell'epilogo.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            , {player_name} ha a disposizione due gocce di inchiostro. 
+            <i>Potrà compiere due riscritture e usare il potere dell'epilogo.
+        
         - ink_medium:
+            <i>E quindi.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             <i>Dopo le molte parole spese <>
             {
-                - FirstCharacter:
-                    con {translator(firstChar_ActualName)}<>
+                - Character == FirstCharacter:
+                    con {translator(firstChar_ActualName) } <>
                     {
-                        - firstChar_giftedObject != (): e il dono consegnato
+                        - firstChar_giftedObject != (): e il dono consegnato<>
                     }
-                - SecondCharacter:
-                    con {translator(secondChar_ActualName)}<>
+                - Character == SecondCharacter:
+                    con {translator(secondChar_ActualName)} <>
                     {
-                        - secondChar_giftedObject != (): e il dono consegnato
+                        - secondChar_giftedObject != (): e il dono consegnato<>
                     }
-                - ThirdCharacter:
-                    con {translator(thirdChar_ActualName)}<>
+                - Character == ThirdCharacter:
+                    con {translator(thirdChar_ActualName)} <>
                     {
-                        - thirdChar_giftedObject != (): e il dono consegnato
+                        - thirdChar_giftedObject != (): e il dono consegnato<>
                     }
-                - FourthCharacter:
-                   con {translator(fourthChar_ActualName)}<>
+                - Character == FourthCharacter:
+                   con {translator(fourthChar_ActualName)} <>
                     {
-                        - fourthChar_giftedObject != (): e il dono consegnato
+                        - fourthChar_giftedObject != (): e il dono consegnato<>
                     }
-                - FifthCharacter:
-                    con {translator(fifthChar_ActualName)}<>
+                - Character == FifthCharacter:
+                    con {translator(fifthChar_ActualName)} <>
                     {
-                        - fifthChar_giftedObject != (): e il dono consegnato
+                        - fifthChar_giftedObject != (): e il dono consegnato<>
                     }
             }
-            ,{player_name} ha a disposizione tre gocce di inchiostro. Potrà compiere tre riscritture e usare il potere dell'epilogo.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}       
+            , {player_name} ha a disposizione tre gocce di inchiostro. 
+            <i>Potrà compiere tre riscritture e usare il potere dell'epilogo.
+
         - ink_high:
+            <i>E quindi.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             <i>Dopo le molte parole spese <>
             {
-                - FirstCharacter:
-                    con {translator(firstChar_ActualName)}<>
+                - Character == FirstCharacter:
+                    con {translator(firstChar_ActualName)} <>
                     {
-                        - firstChar_giftedObject != (): e il dono consegnato
+                        - firstChar_giftedObject != (): e il dono consegnato<>
                     }
-                - SecondCharacter:
-                    con {translator(secondChar_ActualName)}<>
+                - Character == SecondCharacter:
+                    con {translator(secondChar_ActualName)} <>
                     {
-                        - secondChar_giftedObject != (): e il dono consegnato
+                        - secondChar_giftedObject != (): e il dono consegnato<>
                     }
-                - ThirdCharacter:
-                    con {translator(thirdChar_ActualName)}<>
+                - Character == ThirdCharacter:
+                    con {translator(thirdChar_ActualName)} <>
                     {
-                        - thirdChar_giftedObject != (): e il dono consegnato
+                        - thirdChar_giftedObject != (): e il dono consegnato<>
                     }
-                - FourthCharacter:
-                   con {translator(fourthChar_ActualName)}<>
+                - Character == FourthCharacter:
+                   con {translator(fourthChar_ActualName)} <>
                     {
-                        - fourthChar_giftedObject != (): e il dono consegnato
+                        - fourthChar_giftedObject != (): e il dono consegnato<>
                     }
-                - FifthCharacter:
-                    con {translator(fifthChar_ActualName)}<>
+                - Character == FifthCharacter:
+                    con {translator(fifthChar_ActualName)} <>
                     {
-                        - fifthChar_giftedObject != (): e il dono consegnato
+                        - fifthChar_giftedObject != (): e il dono consegnato<>
                     }
             }
-            ,{player_name} ha a disposizione quattro gocce di inchiostro. Potrà compiere quattro riscritture e usare il potere dell'epilogo. E riceverà un'informazione importante.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            , {player_name} ha a disposizione quattro gocce di inchiostro. 
+            <i>Potrà compiere quattro riscritture e usare il potere dell'epilogo. E riceverà un'informazione importante.
+
                 {
                     - Character == FirstCharacter:
                         ~ firstChar_specialEvent = true
@@ -381,6 +396,7 @@
 
                 }
                 una informazione importante.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+
         - else:
             <i>Errore: non riesco a capire quante azioni {player_name} ha a disposizione.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             {debug: <i>Il livello di inchiostro per la prima personaggia è {firstChar_InkLevel}}

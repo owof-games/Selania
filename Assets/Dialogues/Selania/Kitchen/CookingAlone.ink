@@ -270,7 +270,7 @@
                 Ma ciao {player_name}!
                 Che piacere vederti cra!
 
-            + <i>[Mi offro un goccio dil distillato di curiosità.]
+            + [<i>Mi offro un goccio dil distillato di curiosità.]
                     ~ kitchen_recipePP = "e contorno di curiosità"
                 Euforbo è supercurioso.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 L'altro giorno mi ha detto: "Sarei curioso di capire come sei diventato adulto." 
@@ -300,9 +300,9 @@
         E il nostro piatto è pronto!
             -> recipe_name_creator ->
             -> recipe_name_storage(PG) ->
-        Pesciolini?
+        Pesciolini?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
         Ehi, pesciolini.
-        Eccovi qui un bel piatto di {piatto}.
+        Eccovi qui un bel piatto di {kitchen_PGCharRecipe}.
         Piano, piano.
         Ehi Marinio, come sta andando poi con quel corso da pilota?
         Sai {player_name}, Marinio ha sempre voluto volare.
@@ -334,7 +334,7 @@
         ~ frog_pauseSpecialMission = frog_pauseSpecialMissionMax
         //Rimetto a posto i vari assets
         ~ move_entity(TheKitchenFrog, Safekeeping)
-        ~ move_entity(TheFrog, Kitchen)
+        ~ move_entity(TheFrog, Pond)
 
 -> cooking_animations_off ->
 -> main

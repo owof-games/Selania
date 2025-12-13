@@ -38,10 +38,9 @@
         Io voglio solo fare il bambino.
         Invece i grandi mi dicono che mi vogliono bene.
         Ma poi mi fanno male.
+        @animation:RewriterBook
         E io non mi fido più di voi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
 
-            @animation:RewriterBook
-        
             + [Ti ho ascoltato, {charNameTwo}, e posso aiutarti a riscrivere la tua storia.]
                 -> rewriting
             

@@ -43,7 +43,7 @@ Franco la rana vuole aiutare {player_name} nel suo percorso. <N><>
             Franco ha detto a {player_name} che c'è della tensione tra {charNameTwo} e {mentorName}, e per questo deve vedere cosa sta accadendo, e poi tornare da lui.
             
         - specialMissionTwo:
-            Franco ha chiesto a {player_name} di cucinare qualcosa da {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}, e poi tornare da lui.
+            Franco ha chiesto a {player_name} di raggiungerlo in cucina.
             
         - else: 
             Franco per ora non ha proposto missioni a {player_name}.
