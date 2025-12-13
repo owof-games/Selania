@@ -92,13 +92,14 @@
 
         {
         - mentor_riccioMentoreViciniColpo:
-            Dopo la discussione di prima, ho riparlato con {charNameTwo}, <>#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+            Dopo la discussione di prima, ho riparlato con {charNameTwo}, e dice che gli hai dato uno strattone, {mentorName}. #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+            Che ti sei comportata da prepotente.
         
         - else:
-            Ho parlato con {charNameTwo}, <>#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
-        }
-            e dice che gli hai dato uno strattone, {mentorName}. #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+            Ho parlato con {charNameTwo},e dice che gli hai dato uno strattone, {mentorName}. #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             Che ti sei comportata da prepotente.
+        }
+            
         {
             - are_two_entities_together(PG, SecondCharacter):
                 E a {charNameTwo} non va di venir picchiato di nuovo, per cui se ne va.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic

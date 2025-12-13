@@ -205,6 +205,7 @@
                             - Mmm. Vado. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:riccio_angry
                         }
                             ~ kitchen_secondCharCookingTogetherInvite = true
+                            ~ kitchen_secondCharCookingTogetherNumberInvite ++
                             ~ move_entity(SecondCharacter, Kitchen)
                                 ->main
                     
@@ -212,6 +213,7 @@
                         Yeah! Ci vediamo in cucina! #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:riccio_emotional
                             ~ move_entity(SecondCharacter, Kitchen)
                             ~ kitchen_secondCharCookingTogetherInvite = true
+                            ~ kitchen_secondCharCookingTogetherNumberInvite ++
                                 ->main    
                 }
                     
