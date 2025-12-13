@@ -75,33 +75,26 @@ VAR saturationVar = 0
         - else:
             ~ move_entity(FromLibraryToNestBlockedNight, Library)
             ~ move_entity(FromLibraryToNestBlocked, Safekeeping)
-    
     }
-    
-    
-    
     
     ~ move_entity(MoonTrees, Library)
     
-{
-    - not witch_intro.nameWitch:
-       ~ move_entity(NewMoonAnim, Library)
-    
-    - else:
-       {
+    {
         - witch_moonState == NewMoon:
-           ~ move_entity(NewMoonAnim, Library)
+            ~ move_entity(NewMoonAnim, Library)
+
         - witch_moonState == FirstQuarter:
             ~ move_entity(FirstQuarterAnim, Library)
+
         - witch_moonState == FullMoon:
             ~ move_entity(FullMoonAnim, Library)
+
         - witch_moonState == ThirdQuarter:
             ~ move_entity(ThirdQuarterAnim, Library)
+            
         - witch_moonState == RedMoon:
             ~ move_entity(RedMoonAnim, Library)
-       
-       }
-}
+    }
     ->->
     
 === DarkLibraryModeOff    
@@ -116,19 +109,22 @@ VAR saturationVar = 0
     
     }
     
-    
     ~ move_entity(MoonTrees, Safekeeping)
     
     {
         - contentsLibrary has NewMoonAnim:
            ~ move_entity(NewMoonAnim, Safekeeping)
-        - contentsLibrary has FirstQuarter:
+        
+        - contentsLibrary has FirstQuarterAnim:
             ~ move_entity(FirstQuarterAnim, Safekeeping)
-        - contentsLibrary has FullMoon:
+        
+        - contentsLibrary has FullMoonAnim:
             ~ move_entity(FullMoonAnim, Safekeeping)
-        - contentsLibrary has ThirdQuarter:
+        
+        - contentsLibrary has ThirdQuarterAnim:
             ~ move_entity(ThirdQuarterAnim, Safekeeping)
-        - contentsLibrary has RedMoon:
+        
+        - contentsLibrary has RedMoonAnim:
             ~ move_entity(RedMoonAnim, Safekeeping)
           
     }    

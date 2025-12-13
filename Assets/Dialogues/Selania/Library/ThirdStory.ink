@@ -139,7 +139,7 @@
     
     Il principe si trovò nell’armeria del castello, dove erano custodite tutte le armi che gli erano destinate per diritto di nascita ma che, siccome era sbagliato, nessuno gli aveva mai permesso di toccare.<N>La sua attenzione venne catturata da una lunga spada dorata, brillante come il sole.<N>Il principe la prese, finalmente senza che nessuno potesse impedirgli di farlo, e quando la impugnò fu come se un fuoco gli si fosse acceso dentro.
     
-    Così,con la spada in pugno, il principe uscì dall'armeria e vide davanti a sé una scala che lo portò fuori dalle segrete poi sempre più su, <N>nelle cucine del castello dove il cuoco gli aveva detto di smettere di fare i capricci e mangiare senza fare tante storie,
+    Così, con la spada in pugno, il principe uscì dall'armeria e vide davanti a sé una scala che lo portò fuori dalle segrete poi sempre più su, <N>nelle cucine del castello dove il cuoco gli aveva detto di smettere di fare i capricci e mangiare senza fare tante storie,
     
     nella biblioteca dove i precettori gli dicevano che <N>pensava troppo e ubbidiva poco, fino alle stanze reali, dove aveva sentito il Re dire alla Regina che si vergognava di lui.<N>E con la spada in mano si riprese tutto ciò che gli apparteneva di diritto.
 

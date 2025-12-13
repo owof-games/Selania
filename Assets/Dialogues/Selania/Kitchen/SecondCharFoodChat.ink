@@ -1301,7 +1301,9 @@
 -> cooking_animations_on ->
 
 {kitchen_secondCharCookingTime:
-    
+        - 0:
+            {Se unisco aceto e bicarbonato la schiuma è buona?| Sto cucinando {player_name}!}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+
         - 1:
             {Se unisco aceto e bicarbonato la schiuma è buona?| Sto cucinando {player_name}!}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
             

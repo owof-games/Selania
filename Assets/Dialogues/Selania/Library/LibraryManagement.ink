@@ -16,7 +16,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
     VAR library_temporaryFireTW = ()
     VAR library_temporaryRebellionTW = ()
     
-//Raggrupamento per lunghezza
+//Raggruppamento per lunghezza
     LIST library_storiesDuration = Short, Average, Long
     VAR library_readingDuration = ()
     

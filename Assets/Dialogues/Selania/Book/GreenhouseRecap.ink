@@ -34,7 +34,7 @@
 
     {
         - brina_dell_impossibile.step_tre.colto:
-            Nessunə fiorista venderà mai della <b><i>Brina dell'Impossibile</i>. <N>Eppure ne avremmo tutt3 bisogno, perché poch3 di noi conoscono una vita priva di traumi. <N>La concezione comune è che sia un'infestante pericolosa dalle foglie taglienti. <N>Invece la <b><i>Brina</b></i> è una pianta che cura. <N>Non crea le ferite ma ci mostra quelle già esistenti, i traumi che prima non sapevamo vedere. 
+            Nessunə fiorista venderà mai della <b><i>Brina dell'Impossibile</i></b>. <N>Eppure ne avremmo tutt3 bisogno, perché poch3 di noi conoscono una vita priva di traumi. <N>La concezione comune è che sia un'infestante pericolosa dalle foglie taglienti. <N>Invece la <b><i>Brina</b></i> è una pianta che cura. <N>Non crea le ferite ma ci mostra quelle già esistenti, i traumi che prima non sapevamo vedere. 
             
             È vero: più la ferita è vecchia e più farà male. <N>Ma solo guardandola potremo iniziare a guarire, a ripartire. <N>E quando possibile, a fare pace col passato. <N>Forse anche per questo i suoi semi germogliano con estrema facilità. <N>(Nota: chiedere a K. perché questa pianta è così amata dai gruppi rivoluzionari).
     }
