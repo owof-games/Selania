@@ -31,7 +31,7 @@
     //Ripeto con le altre png
     
 
--> missions_dispatcher
+->->
 
 
 
@@ -375,7 +375,8 @@
             
         - missionTwo:
             {
-                - LIST_COUNT(greenhouse_backupCultivable) < 12:
+                - LIST_COUNT(greenhouse_backupCultivable) < 11:
+                {debug_frog: backupColtivabili = {LIST_COUNT(greenhouse_backupCultivable)}}
                     
                     Dove l'ho messo di nuovo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Ah eccolo!
@@ -397,7 +398,28 @@
                         {player_name}! #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         Come sta andando con le piante della serra?
                         Torna qui quando ce ne saranno abbastanza per le formiche!
-                        Se ho capito bene per ora ne hai coltivate {14 - LIST_COUNT(greenhouse_backupCultivable)}.
+                        Se ho capito bene per ora  <>
+                        {
+                            - 14 - LIST_COUNT(greenhouse_backupCultivable) == 0 && greenhouse_chosenCultivable == (): 
+                                    non ne hai coltivate nemmeno una!
+                            
+                            - 14 - LIST_COUNT(greenhouse_backupCultivable) == 0 && greenhouse_chosenCultivable != (): 
+                                    ne stai coltivando una!        
+                            
+                            - 14 - LIST_COUNT(greenhouse_backupCultivable) == 1 && greenhouse_chosenCultivable == (): 
+                                    ne hai coltivata una.
+                            
+                            - 14 - LIST_COUNT(greenhouse_backupCultivable) == 1 && greenhouse_chosenCultivable != (): 
+                                    stai coltivando la seconda.        
+                            
+                            - 14 - LIST_COUNT(greenhouse_backupCultivable) == 3 && greenhouse_chosenCultivable == (): 
+                                    te ne manca una girino!
+                            
+                            - 14 - LIST_COUNT(greenhouse_backupCultivable) == 3 && greenhouse_chosenCultivable != (): 
+                                    stai coltivando l'ultima, girino!      
+                                    
+                        }
+                        
                             -> main            
             }
             
@@ -658,7 +680,8 @@
             {
                 //Ma voglio evitare questa cosa per la prima missione.
                 - !missions_dispatcher:
-                    -> discovered_things_updater
+                    //andiamo a vedere se ci sono state missioni compiute in autonomia
+                        -> autonomy_mission_verify
                     
                 - else:
                     -> tired_frog 
@@ -671,7 +694,7 @@
  ~ temp dice = RANDOM(1,5)
  
 {
-    - frog_tiredValue != 0:
+    - frog_tiredValue > 0:
         -> top
         
     - dice == 5:
@@ -679,7 +702,8 @@
             -> top
     
     - else:
-        -> discovered_things_updater
+        //andiamo a vedere se ci sono state missioni compiute in autonomia
+        -> autonomy_mission_verify
               
 }
     
@@ -812,7 +836,7 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
                     
                 - frog_currentMission has missionTwo:
                     {
-                        - LIST_COUNT(greenhouse_backupCultivable) < 12:
+                        - LIST_COUNT(greenhouse_backupCultivable) < 11:
                             -> notification
                         
                         - else:

@@ -25,7 +25,7 @@
                 -> first_mentor_chit_chat
         
         //Chiacchiere tra Rana  e Mentore
-            - are_two_entities_together(Mentor, PG) && are_two_entities_together (TheFrog, PG) && actual_speaker == Mentor && not frog_and_mentor_chit_chat:
+            - are_two_entities_together(Mentor, PG) && welcome.your_name && are_two_entities_together (TheFrog, PG) && actual_speaker == Mentor && not frog_and_mentor_chit_chat:
                 -> frog_and_mentor_chit_chat
 
         //Feedback da parte di Mentore su pensieri strega se le abbiamo detto che abbiamo parlato con la pianta

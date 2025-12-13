@@ -100,13 +100,13 @@
 === opening_places
 {debug: passo da opening_places.}
     //Provo a togliere la serra dai luoghi random per vedere se le png si beccano più spesso.
-    // {
-    //     - welcome.your_name && (entity_location(FromPondToGreenhouse) == Safekeeping) && not olobino.step_tre.colto:
-    //         ~ movements_randomablePlaces += Greenhouse
-    //         ~ player_accessiblePlaces += Greenhouse
-    //         ~ move_entity(FromPondToGreenhouseBlocked, Safekeeping)
-    //         ~ move_entity(FromPondToGreenhouse, Pond)
-    // }
+    {
+        - welcome.your_name && (entity_location(FromPondToGreenhouse) == Safekeeping) && not olobino.step_tre.colto:
+            // ~ movements_randomablePlaces += Greenhouse
+            ~ player_accessiblePlaces += Greenhouse
+            ~ move_entity(FromPondToGreenhouseBlocked, Safekeeping)
+            ~ move_entity(FromPondToGreenhouse, Pond)
+    }
     
     {
         - open_the_kitchen && (entity_location(FromPondToKitchen) == Safekeeping):

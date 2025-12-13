@@ -8,7 +8,10 @@
     
 + {are_two_entities_together(TheFrog, PG) or (debug_testFrog == true)} [TheFrog]
     
-
+    //Aggiorniamo il discorso missioni
+    -> discovered_things_updater ->
+    
+- (top)   
     {
         - welcoming_frog.top == 1:
                 ~ player_somethingStrange ++
@@ -52,28 +55,34 @@
         - frog_suspended_gift == true:
             Ehi girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             Hai ancora quel dono di prima da prendere!
-                -> frog_about_who_questions    
+                -> frog_about_who_questions   
+        
+        //Condizione in cui possiamo attivare la missione speciale.
+            
+        - frog_pauseSpecialMission < 1 && (frog_availableSpecialMissions has specialMissionTwo) && (player_accessiblePlaces ? Kitchen) && frog_currentMission == ():
+                    {debug_frog: condizioni rispettate per poter offrire la seconda missione speciale.}
+                        -> special_mission_two 
+        
+        - else:
+            {shuffle:
+                - Ciao girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        
+                - Ma guarda chi c'è!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        
+                - Uh, zia Graaak non mi scrive da un bel po'!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        
+                - Devo assolutamente ricordarmi il compleanno dei gemelli. E preparare tutti i pacchettini.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        
+                - {player_name}: quando la carpa non c'è, le pulci d'acqua ballano. Anche se non sono molto brave.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        
+                - Magari se trattengo il fiato a lungo posso volare.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        
+                - Il mio nome completo è Franco Lelio Arpagone Romualdo Arcezio Nepomiceno Alcuino. Franco La Rana è più facile.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        
+                - "Gentile signor La Rana, le chiediamo di desistere dal chiederci altre cose assurde sulle lontre. Associazione Mondiale delle Dighe." #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+            }
     }
     
-- (top)   
-
-    {shuffle:
-        - Ciao girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-
-        - Ma guarda chi c'è!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-
-        - Uh, zia Graaak non mi scrive da un bel po'!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-
-        - Devo assolutamente ricordarmi il compleanno dei gemelli. E preparare tutti i pacchettini.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-
-        - {player_name}: quando la carpa non c'è, le pulci d'acqua ballano. Anche se non sono molto brave.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-
-        - Magari se trattengo il fiato a lungo posso volare.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-
-        - Il mio nome completo è Franco Lelio Arpagone Romualdo Arcezio Nepomiceno Alcuino. Franco La Rana è più facile.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-
-        - "Gentile signor La Rana, le chiediamo di desistere dal chiederci altre cose assurde sulle lontre. Associazione Mondiale delle Dighe." #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-    }
 
       + [Per ora me ne vado.]
             -> main
@@ -82,7 +91,10 @@
       {debug_frog: il valore di frog_availableSpecialMissions è {frog_availableSpecialMissions}.}
       {debug_frog: player_accessiblePlaces contiene {player_accessiblePlaces}.}
 
-        {
+
+        -> closed_mission_verify
+
+        //{
             //Provo a mettere le missioni speciali come prioritarie
                 //Special mission one offre la nota
                 // - frog_pauseSpecialMission < 1 && (frog_availableSpecialMissions has specialMissionOne) && (player_accessiblePlaces ? Nest) && second_char_main_storylets.four:
@@ -90,16 +102,8 @@
                 //         -> special_mission_one
                     
                 //Special mission two offre l'ingrediente universale
-                - frog_pauseSpecialMission < 1 && (frog_availableSpecialMissions has specialMissionTwo) && (player_accessiblePlaces ? Kitchen):
-                    {debug_frog: condizioni rispettate per poter offrire la seconda missione speciale.}
-                        -> special_mission_two 
-        }
-
-        //Poi faccio i check di autonomia
-            //Prima verifico se ci sono missioni attive e nel caso offro il reminder.
-            -> closed_mission_verify ->
-
-        //Poi propongo le missioni "normali"
+                
+        //}
         {    
 
             - firstChar_storyStatus == story_storyStarted && firstChar_giftedObject == () && frog_firstCharObtainedGifts hasnt charOneCultivable:
