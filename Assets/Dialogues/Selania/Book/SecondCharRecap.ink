@@ -197,6 +197,24 @@
             }
     }
     {
+    
+        - frog_second_char_gift != "":
+            {player_name} ha chiesto un consiglio a Franco la Rana su cosa donare a {charNameTwo}, e la risposta di Franco è stata: {frog_second_char_gift}.
+    }
+        
+    {
+    
+        - frog_second_char_ingredient != "":
+            {player_name} ha chiesto un consiglio a Franco la Rana su cosa inserire nel piatto da cucinare con {charNameTwo}, e la risposta di Franco è stata: {frog_second_char_ingredient}.
+    }
+    
+    {
+    
+        - frog_second_novel != "":
+            {player_name} ha chiesto un consiglio a Franco la Rana su un racconto di cui parlare con {charNameTwo}, e la risposta di Franco è stata: {frog_second_novel}.
+    }
+    
+    {
         - cooking_with_second_char.first_theme.bookUpdate:
             Durante l'incontro in cucina, {charNameTwo} e {player_name} hanno parlato di animali. {charNameTwo} ha raccontato che gli piace inventare animali unendo pezzi diversi, e poi si è lamentato perché gli adulti non si divertono davvero. E dopo aver chiesto a {player_name} come gli piaccia divertirsi, {player_pronouns has him:gli|{player_pronouns has her:le|lə}} ha detto che per capire meglio le persone, le associa agli animali. E ha chiesto a {player_name} che animale si sente, e se {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} capisce le persone. E poi, frustrato, ha detto che i grandi lo ritengono strano, ma lui li trova strani, e ha chiesto a {player_name} se {player_pronouns has him:gli|{player_pronouns has her:le|lə}} piace come le altre persone l{player_pronouns has him:o|{player_pronouns has her:a|ə}} trattano.
     }
@@ -233,24 +251,8 @@
             {charNameOne} e {that_little_liar_storylet.nameSecond:{charNameTwo}|il bimbo} si sono presentat3, discutendo di alieni e pisolini.
     }
     
-    {
-    
-        - frog_second_char_gift != "":
-            {player_name} ha chiesto un consiglio a Franco la Rana su cosa donare a {charNameTwo}, e la risposta di Franco è stata: {frog_second_char_gift}.
-    }
-    
-    {
-    
-        - frog_second_char_ingredient != "":
-            {player_name} ha chiesto un consiglio a Franco la Rana su cosa inserire nel piatto da cucinare con {charNameTwo}, e la risposta di Franco è stata: {frog_second_char_ingredient}.
-    }
-    
-    {
-    
-        - frog_second_novel != "":
-            {player_name} ha chiesto un consiglio a Franco la Rana su un racconto di cui parlare con {charNameTwo}, e la risposta di Franco è stata: {frog_second_novel}.
-    }
-    
+
+
     {
         - about_violence_and_peace.bookUpdate:
             {mentorName} e {charNameTwo} hanno provato a chiarirsi. {mentorName} con un po' di fatica ha ammesso che non avrebbe dovuto fare male a {charNameTwo}. E quando lui ha reagito senza entusiasmo, ci è rimasta male. A quel punto {charNameTwo} ha detto a {mentorName} che "I grandi chiedono sempre scusa per tutte le cose ma poi le rifanno. Poi piangono e chiedono scusa. E poi le rifanno.". Lei ha detto che ci crede davvero, ma {charNameTwo} se ne è andato.

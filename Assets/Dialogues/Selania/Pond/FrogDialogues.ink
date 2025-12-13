@@ -36,7 +36,7 @@
             Tu devi essere {player_name}!
             Io sono Franco La Rana!
                 ~ frog_nameDiscovered = true
-            {charNameTwo} mi ha parlato di te.
+            {charNameTwo} mi ha parlato di te.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             Ha una bella testolina quel girino!
                 {
                     - are_two_entities_together(SecondCharacter, PG):

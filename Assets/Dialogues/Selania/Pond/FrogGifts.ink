@@ -765,9 +765,10 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
 
     -> special_mission_pause_check ->
     //Svuoto il destinatario della missione attuale per sicurezza
+    @animation:RewriterBook
     ~ frog_aboutGiftRequest = ()
     ~ frog_currentMission = ()
     ~ frog_witch_notification = false
  
-     @animation:RewriterBook
+    
 -> main

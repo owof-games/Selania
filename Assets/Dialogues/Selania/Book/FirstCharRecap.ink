@@ -178,7 +178,24 @@
     {
         - first_char_main_storylets.one.bookUpdate: <b><i>Appunti dalle conversazioni.</b></i><N><>
     }
-
+    {
+    
+        - frog_first_char_gift != "":
+            {player_name} ha chiesto un consiglio a Franco la Rana su cosa donare a {charNameOne}, e la risposta di Franco è stata: {frog_first_char_gift}.
+    }
+    
+    {
+    
+        - frog_first_char_ingredient != "":
+            {player_name} ha chiesto un consiglio a Franco la Rana su cosa inserire nel piatto da cucinare con {charNameOne}, e la risposta di Franco è stata: {frog_first_char_ingredient}.
+    }
+    
+    {
+    
+        - frog_first_novel != "":
+            {player_name} ha chiesto un consiglio a Franco la Rana su un racconto di cui parlare con {charNameOne}, e la risposta di Franco è stata: {frog_first_novel}.
+    }
+    
     {
         - food_gift_first_char.bookUpdate:
             Dopo aver cucinato da sola, {charNameOne} ha parlato del rapporto che ha con sua madre, e di come lei non la capisca fino in fondo. Ma sa che è una donna che parla poco ma ci tiene tanto alle altre persone. Ha raccontato a {player_name} del cibo che ha preparato quando è salita a trovarla, del riordino della casa, del saper dire "Ti voglio bene" solo coi fornelli. E che da quando {charNameOne} questa cosa un po' l'ha portata con sé, cucinando cenoni con le ame.
@@ -234,24 +251,7 @@
             Durante una conversazione con {mentorName}, {charNameOne} si è infastidita perché {mentorName} ha definito la felicità "non un luogo da raggiungere, ma qualcosa che si ha dentro", ma {charNameOne} crede sia un privilegio di chi fa il lavoro che ama. E teme che questo significhi che la felicità "te la ritrovi se ti fai andare bene quello che hai".
     }
     
-    {
-    
-        - frog_first_char_gift != "":
-            {player_name} ha chiesto un consiglio a Franco la Rana su cosa donare a {charNameOne}, e la risposta di Franco è stata: {frog_first_char_gift}.
-    }
-    
-    {
-    
-        - frog_first_char_ingredient != "":
-            {player_name} ha chiesto un consiglio a Franco la Rana su cosa inserire nel piatto da cucinare con {charNameOne}, e la risposta di Franco è stata: {frog_first_char_ingredient}.
-    }
-    
-    {
-    
-        - frog_first_novel != "":
-            {player_name} ha chiesto un consiglio a Franco la Rana su un racconto di cui parlare con {charNameOne}, e la risposta di Franco è stata: {frog_first_novel}.
-    }
-    
+
     
     {
         - first_char_main_storylets.twelve.bookUpdate:
