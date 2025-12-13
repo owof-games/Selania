@@ -58,9 +58,16 @@
 
 //Per assegnare/cambiare player_pronouns di riferimento
 === gender ===
-    <i>Quali pronomi fanno sentire {player_name} la persona che è?</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    {
+        - gender == 1:
+            <i>Quali pronomi fanno sentire {player_name} la persona che è?</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+
+        - else:
+            E per quanto riguarda i miei pronomi:#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+    }
     
-    + {gender> 1} [Chiamami coi pronomi {player_pronouns has him:maschili|{player_pronouns has her:femminili|neutri}}.]
+    
+    + {gender > 1} [Chiamami coi pronomi {player_pronouns has him:maschili|{player_pronouns has her:femminili|neutri}}.]
         ->->
     + {gender > 1} [<i>Cambio i miei pronomi.]
         -> top

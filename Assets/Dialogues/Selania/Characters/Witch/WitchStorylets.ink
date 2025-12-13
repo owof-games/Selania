@@ -42,6 +42,7 @@
     <i>Ogni scelta e ogni passo accumulano visioni del mondo.
     @animation:RewriterBook
     <i>Raccontando la storia di chi cammina.
+        ~ move_entity(RulesRecap, BookPlace)
     - (bookUpdate)
     
 ->->

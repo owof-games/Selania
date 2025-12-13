@@ -135,14 +135,11 @@
         Ma partiamo da una cosa fondamentale!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
         Qui avrai a che fare con cose viventi piene di storie.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         E ogni storia ha le sue complessità.
-        Questo si traduce nel rischio che tu possa incontrare tematiche per te faticose.
+        Per questo potresti incontrare tematiche per te faticose.
         Ci saranno occasioni in cui potrai evitarle e non ti perderai nulla di questa esperienza.
         Ma quando si tratta delle persone, accogliere le loro ferite farà parte del tuo lavoro.
-        Perché se sono qui è per affrontare qualcosa che per loro è complesso.
-        Sono sicura che cercheranno di raccontarti le loro difficoltà nel modo più delicato possibile.
-        Ma ricorda: fermarsi o rinunciare non è un fallimento.
-        Non per me, ovviamente.
-        Ma se senti il bisogno di staccare, puoi tornare in camera, il posto da cui sei {player_pronouns has him:arrivato|{player_pronouns has her:arrivata|arrivatə}} e stenderti sul letto.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+        Sono sicura che parleranno di cose delicate nel modo migliore, ma ricorda: fermarsi o rinunciare non è un fallimento.
+        Se senti il bisogno di staccare puoi tornare in camera, il posto da cui sei {player_pronouns has him:arrivato|{player_pronouns has her:arrivata|arrivatə}} e stenderti sul letto.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         Al risveglio, troverai tutto come l'hai lasciato.
         E se non vorrai più tornare, ci saranno sicuramente altre persone pronte ad aiutare chi viene qui in cerca di risposte.
         E a proposito di risposte!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
@@ -150,14 +147,13 @@
                 -> opening_places ->
         La serra è un bel posto dove rilassarsi, e non solo.
         Ma evita assolutamente tutti gli altri posti bloccati, perché sono pericolosi!
-        Ma mi stavo dimenticando di dirti cosa devi fare.
+        E mi stavo dimenticando di dirti cosa devi fare.
         Perché se sei qui, è per uno scopo, uno scopo davvero importante, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
 
         - (bookUpdate)
 
                 ~ mentor_pauseTalking = mentor_pauseDuration
                 ~ move_entity(FifthRecap, BookPlace)
-                ~ move_entity(RulesRecap, BookPlace)
                 @animation:RewriterBook 
             
             {

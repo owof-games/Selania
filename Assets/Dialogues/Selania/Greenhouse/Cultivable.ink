@@ -436,35 +436,35 @@
     = step_zero
         -> remove_proposed_cultivable ->
             ~ growthBaccaDellaAddolorata = stepZero
-        L'aria attorno a {player_name} vibra di tensione.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>L'aria attorno a {player_name} vibra di tensione.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
     
     = step_uno
-        Odore elettrico e ceramica tesa.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Un vaso deformato resiste con fatica alla sua stessa pressione.
+        <i>Odore elettrico e ceramica tesa.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Un vaso deformato resiste con fatica alla sua stessa pressione.
             -> main
     
     = step_due
-        Il vaso è come fango al sole.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Un ramo saggia l'aria.
-        Asciutto e timido verso {player_name}.
+        <i>Il vaso è come fango al sole.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Un ramo saggia l'aria.
+        <i>Asciutto e timido verso {player_name}.
           -> main
           
     = step_tre
-        L'aria è attesa.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        La strada è chiara, manca solo il primo passo.
-        Qualcosa da ammettere.
+        <i>L'aria è attesa.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>La strada è chiara, manca solo il primo passo.
+        <i>Qualcosa da ammettere.
         
             + (colto) [<i>Confido le mie paure.]
                 ~ growthBaccaDellaAddolorata = stepThree
             
-            Rami verso il cielo sostengono un frutto.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            Semi rosati e foglie carnose.
-            Coraggiosa, la <b>Bacca dell'Addolorata</b> espone le sue ferite al mondo.
-            La pianta di chi finalmente ha trovato la sua strada ma non riesce ancora ad avanzare.
-            Tenace il frutto, e rilassate le spalle di {player_name}.
-            L'incertezza scivola via.
-            {player_name} ricorda come camminare.
+            <i>Rami verso il cielo sostengono un frutto.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>Semi rosati e foglie carnose.
+            <i>Coraggiosa, la <b>Bacca dell'Addolorata</b> espone le sue ferite al mondo.
+            <i>La pianta di chi finalmente ha trovato la sua strada ma non riesce ancora ad avanzare.
+            <i>Tenace il frutto, e rilassate le spalle di {player_name}.
+            <i>L'incertezza scivola via.
+            <i>{player_name} ricorda come camminare.
                     -> ending_cultivation
                     
             + [<i>Ho bisogno di tempo per riflettere.]
@@ -481,43 +481,43 @@
             -> remove_proposed_cultivable ->
             ~ growthBarbaDellInciampo = stepZero
         
-        L'errore è come una spina.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Una scheggia che brucia anche nel riposo.
-        Che rende bianche le notti di {player_name}.
+        <i>L'errore è come una spina.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Una scheggia che brucia anche nel riposo.
+        <i>Che rende bianche le notti di {player_name}.
                 -> main
     
     = step_uno
-        La spina infetta.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Infetta la lingua di colpa.
-        La lingua difende.
-        La lingua critica.
-        La lingua aggredisce.
-        La colpa attanaglia {player_name}.
+        <i>La spina infetta.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Infetta la lingua di colpa.
+        <i>La lingua difende.
+        <i>La lingua critica.
+        <i>La lingua aggredisce.
+        <i>La colpa attanaglia {player_name}.
                 -> main
     
     = step_due
-        La colpa si fa muro.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        L'errore nascosto, la spina protetta.
-        La colpa si fa muro.
-        La colpa cresce, cresce la paura di {player_name}.
+        <i>La colpa si fa muro.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>L'errore nascosto, la spina protetta.
+        <i>La colpa si fa muro.
+        <i>La colpa cresce, cresce la paura di {player_name}.
                 -> main
     
     = step_tre
-        Il muro vacilla.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Non ricorda più se protegge il fuori dal dentro, o il dentro dal fuori.
+        <i>Il muro vacilla.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Non ricorda più se protegge il fuori dal dentro, o il dentro dal fuori.
 
         + (colto)[<i>Abbasso le mie difese.]
             ~ growthBarbaDellInciampo = stepThree
             
-            Il muro si fa calice.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            Gli occhi di {player_name} vedono al di là da sé.
-            C'è pace in {player_name}.
-            Pace nella serra.
-            La barricata della <b>Barba dell'inciampo</b> ora è tana.
-            Separa colpa e responsabilità.
-            Punizione ed elaborazione.
-            La spina della <b>Barba dell'inciampo</b> ora è riparo.
-            E l'errore di {player_name} guida per cambiare.
+            <i>Il muro si fa calice.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>Gli occhi di {player_name} vedono al di là da sé.
+            <i>C'è pace in {player_name}.
+            <i>Pace nella serra.
+            <i>La barricata della <b>Barba dell'inciampo</b> ora è tana.
+            <i>Separa colpa e responsabilità.
+            <i>Punizione ed elaborazione.
+            <i>La spina della <b>Barba dell'inciampo</b> ora è riparo.
+            <i>E l'errore di {player_name} guida per cambiare.
                 ~ move_entity(Snail, Greenhouse)            
                 -> ending_cultivation
             
@@ -533,37 +533,37 @@
             -> remove_proposed_cultivable ->
         ~ growthBastoneDellOzioso = stepZero
 
-        {player_name} ha un prurito.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Un prurito che è gesto, nota, passo, salto.
-        Qualcosa di trattenuto, qualcosa di mai fatto.
+        <i>{player_name} ha un prurito.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Un prurito che è gesto, nota, passo, salto.
+        <i>Qualcosa di trattenuto, qualcosa di mai fatto.
                 -> main
     
     = step_uno
-        Il prurito riempie la testa.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        {player_name} si dice che non si fanno le cose che non si sanno fare.
-        Ma {player_name} si dice anche che a volte serve un solo passo per iniziare a ballare.
+        <i>Il prurito riempie la testa.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>{player_name} si dice che non si fanno le cose che non si sanno fare.
+        <i>Ma {player_name} si dice anche che a volte serve un solo passo per iniziare a ballare.
                 -> main
     
     = step_due
-        Il prurito si è fatto gioia, si è fatto movimento.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Le mani di {player_name} applaudono da sole quando arriva il momento.
-        E anche se non lo sa davvero fare, a chi importa?
-        Chi decide come è giusto camminare?
+        <i>Il prurito si è fatto gioia, si è fatto movimento.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Le mani di {player_name} applaudono da sole quando arriva il momento.
+        <i>E anche se non lo sa davvero fare, a chi importa?
+        <i>Chi decide come è giusto camminare?
                 -> main
     
     = step_tre
-        Il vento tra le canne vuote canta.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Il vento tra le canne vuote canta.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         + (colto)[<i>E io canto con lui.]
             ~ growthBastoneDellOzioso = stepThree
             
-            Rami come braccia come gambe come festa.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            Il prurito è una protesta.
-            I rami del <b>Bastone dell'Ozioso</b> vibrano di note stonate.
-            Le giunture si agitano sgraziate.
-            Ma non c'è gioia più grande del fare per il solo piacere di fare.
-            Senza luoghi dove andare.
-            Senza classifiche da scalare.
+            <i>Rami come braccia come gambe come festa.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>Il prurito è una protesta.
+            <i>I rami del <b>Bastone dell'Ozioso</b> vibrano di note stonate.
+            <i>Le giunture si agitano sgraziate.
+            <i>Ma non c'è gioia più grande del fare per il solo piacere di fare.
+            <i>Senza luoghi dove andare.
+            <i>Senza classifiche da scalare.
 
                 ~ move_entity(BastonSound, Greenhouse)
                     -> ending_cultivation
@@ -581,38 +581,38 @@
         -> remove_proposed_cultivable ->
             ~ growthBrinaDellImpossibile = stepZero
 
-            Una crepa.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            Un pezzo di mondo attraverso la finestra.
+            <i>Una crepa.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>Un pezzo di mondo attraverso la finestra.
             -> main
     
     = step_uno
-        Ferite nel vetro.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Odore di stagno.
-        Di cose che {player_name} non ha mai guardato.
-        La crepa si è estesa.
+        <i>Ferite nel vetro.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Odore di stagno.
+        <i>Di cose che {player_name} non ha mai guardato.
+        <i>La crepa si è estesa.
           -> main
           
     = step_due
-        Il mondo alle sue spalle.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Il vetro resiste.
-        Compie la sua trasparente missione, ignorando il proprio dolore.
+        <i>Il mondo alle sue spalle.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Il vetro resiste.
+        <i>Compie la sua trasparente missione, ignorando il proprio dolore.
           -> main
     
     = step_tre
-        Isole di vetro galleggiano nell'aria.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Sostengono il proprio ruolo.
-        Si reggono a vecchie ferite.
+        <i>Isole di vetro galleggiano nell'aria.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Sostengono il proprio ruolo.
+        <i>Si reggono a vecchie ferite.
         
         + (colto) [<i>E io osservo le mie.]
              ~ growthBrinaDellImpossibile = stepThree
 
-            Baccelli crescono tra le ferite, navi colme di semi.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            {player_name} nomina qualcosa del suo passato.
-            Qualcosa che è sempre stato lì ma non vedeva.
-            La <b>Brina dell'Impossibile</b> si raccoglie nel luogo di un trauma.
-            Riempie le ferite affinché siano visibili.
-            Risveglia il dolore, così che lo si possa nominare.
-            Conosce la fatica del percorso, e offre baccelli vivi di speranza.
+            <i>Baccelli crescono tra le ferite, navi colme di semi.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>{player_name} nomina qualcosa del suo passato.
+            <i>Qualcosa che è sempre stato lì ma non vedeva.
+            <i>La <b>Brina dell'Impossibile</b> si raccoglie nel luogo di un trauma.
+            <i>Riempie le ferite affinché siano visibili.
+            <i>Risveglia il dolore, così che lo si possa nominare.
+            <i>Conosce la fatica del percorso, e offre baccelli vivi di speranza.
                 
                 -> ending_cultivation
         
@@ -628,35 +628,35 @@
         -> remove_proposed_cultivable ->
         ~ growthCantoDelleCompagne = stepZero
 
-        Qualcosa vibra e sveglia le gambe di {player_name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Ha voglia di danzare.
+        <i>Qualcosa vibra e sveglia le gambe di {player_name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Ha voglia di danzare.
             -> main
         
     = step_uno
-        Il vaso è caldo al tocco.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        L'aria attorno rifiorisce di una nebbiolina rossastra.
+        <i>Il vaso è caldo al tocco.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>L'aria attorno rifiorisce di una nebbiolina rossastra.
           -> main
           
     = step_due
-        La nebbia si è fatta fiume, gocce che vibrano.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Che danzano.
-        E quando si scontrano, la serra riecheggia di una festosa risata.
+        <i>La nebbia si è fatta fiume, gocce che vibrano.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Che danzano.
+        <i>E quando si scontrano, la serra riecheggia di una festosa risata.
             -> main
           
     = step_tre
-        La serra si muove e si scuote, le travi cigolano nel voler danzare. #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        I piedi di {player_name} battono il ritmo.
+        <i>La serra si muove e si scuote, le travi cigolano nel voler danzare. #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>I piedi di {player_name} battono il ritmo.
         
         + (colto)[<i>Inizio a danzare.]
             ~ growthCantoDelleCompagne = stepThree
             
-            Ilare, <b>Canto delle compagne</b> turbina e balla riversandosi dal vaso.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            In un altro tempo questo cespuglio veniva chiamato "Canto delle streghe".
-            L'euforia riempie i polmoni di {player_name}, sente la gioia di sapere che non è mai stata davvero {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}.
-            I piedi spingono il suo corpo nella stanza.
-            La sua voce si alza e canta, chiama l3 compagn3.
-            Si uniscono in una festa, un sabba, rendendo il mondo intero il loro palcoscenico.
-            Ridendo feroci di chi l3 teme.
+            <i>Ilare, <b>Canto delle compagne</b> turbina e balla riversandosi dal vaso.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>In un altro tempo questo cespuglio veniva chiamato "Canto delle streghe".
+            <i>L'euforia riempie i polmoni di {player_name}, sente la gioia di sapere che non è mai stata davvero {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}.
+            <i>I piedi spingono il suo corpo nella stanza.
+            <i>La sua voce si alza e canta, chiama l3 compagn3.
+            <i>Si uniscono in una festa, un sabba, rendendo il mondo intero il loro palcoscenico.
+            <i>Ridendo feroci di chi l3 teme.
             
                 ~ backpack_findedGifts += CantoDelleCompagne
                 ~ move_entity(RedBee, Greenhouse)
