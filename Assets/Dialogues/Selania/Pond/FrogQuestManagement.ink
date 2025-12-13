@@ -1,5 +1,6 @@
 === discovered_things_updater ===
-//Questo nodo mi permette di aggiornare sempre come prima cosa lo stato delle missioni autonome, e di eliminare le eventuali quest fatte di già senza dover tracciare le condizioni mille volte.
+//Questo nodo mi permette di aggiornare sempre lo stato delle missioni autonome, e di eliminare le eventuali quest fatte di già senza dover tracciare le condizioni mille volte.
+//Ci arrivo sempre prima di andare al dispatcher delle missioni.
 {debug_frog: passo da discovered_things_updater.}
 {debug_frog: frog_firstCharObtainedGifts è uguale a {frog_firstCharObtainedGifts}.}
 {debug_frog: frog_secondCharObtainedGifts è uguale a {frog_secondCharObtainedGifts}.}
@@ -30,7 +31,7 @@
     //Ripeto con le altre png
     
 
--> welcoming_frog.top
+-> missions_dispatcher
 
 
 

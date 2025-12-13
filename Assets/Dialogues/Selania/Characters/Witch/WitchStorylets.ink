@@ -10,11 +10,11 @@
             -> about_the_book
             
         //Spiegazione del nido
-        - witch_intro&& about_nest && not trully_about_nest:
+        - witch_intro && about_nest && not trully_about_nest:
             -> trully_about_nest
         
         //Dialogo su Franco
-        - closed_mission_verify && not the_witch_and_the_frog:
+        - witch_intro && closed_mission_verify && not the_witch_and_the_frog:
             -> the_witch_and_the_frog
         
         - else:
