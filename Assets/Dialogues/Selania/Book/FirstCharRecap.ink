@@ -313,7 +313,5 @@
             C'è questa ragazza, si chiama {charNameOne}. Ha iniziato la conversazione chiedendo a {player_name} dove fosse lə suə migliore amə, Talco. Poi ha accennato al suo ragazzo, Ennio, e a un risotto allucinogeno coi funghi. E quando è {welcome: è arrivata {mentorName}|arrivato un fiore parlante} si è convinta che fosse un trip, e se ne è andata a cercare dell'acqua.
     }
     
-//Eventuale commento della rana.
-
 
 -> rewriter_book_with_flow

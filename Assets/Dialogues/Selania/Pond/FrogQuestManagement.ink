@@ -398,27 +398,27 @@
                         {player_name}! #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         Come sta andando con le piante della serra?
                         Torna qui quando ce ne saranno abbastanza per le formiche!
-                        Se ho capito bene per ora  <>
-                        {
-                            - 14 - LIST_COUNT(greenhouse_backupCultivable) == 0 && greenhouse_chosenCultivable == (): 
-                                    non ne hai coltivate nemmeno una!
+                        // Se ho capito bene per ora  <>
+                        // {
+                        //     - 14 - LIST_COUNT(greenhouse_backupCultivable) == 0 && greenhouse_chosenCultivable == (): 
+                        //             non ne hai coltivate nemmeno una!
                             
-                            - 14 - LIST_COUNT(greenhouse_backupCultivable) == 0 && greenhouse_chosenCultivable != (): 
-                                    ne stai coltivando una!        
+                        //     - 14 - LIST_COUNT(greenhouse_backupCultivable) == 0 && greenhouse_chosenCultivable != (): 
+                        //             ne stai coltivando una!        
                             
-                            - 14 - LIST_COUNT(greenhouse_backupCultivable) == 1 && greenhouse_chosenCultivable == (): 
-                                    ne hai coltivata una.
+                        //     - 14 - LIST_COUNT(greenhouse_backupCultivable) == 1 && greenhouse_chosenCultivable == (): 
+                        //             ne hai coltivata una.
                             
-                            - 14 - LIST_COUNT(greenhouse_backupCultivable) == 1 && greenhouse_chosenCultivable != (): 
-                                    stai coltivando la seconda.        
+                        //     - 14 - LIST_COUNT(greenhouse_backupCultivable) == 1 && greenhouse_chosenCultivable != (): 
+                        //             stai coltivando la seconda.        
                             
-                            - 14 - LIST_COUNT(greenhouse_backupCultivable) == 3 && greenhouse_chosenCultivable == (): 
-                                    te ne manca una girino!
+                        //     - 14 - LIST_COUNT(greenhouse_backupCultivable) == 3 && greenhouse_chosenCultivable == (): 
+                        //             te ne manca una girino!
                             
-                            - 14 - LIST_COUNT(greenhouse_backupCultivable) == 3 && greenhouse_chosenCultivable != (): 
-                                    stai coltivando l'ultima, girino!      
+                        //     - 14 - LIST_COUNT(greenhouse_backupCultivable) == 3 && greenhouse_chosenCultivable != (): 
+                        //             stai coltivando l'ultima, girino!      
                                     
-                        }
+                        // }
                         
                             -> main            
             }
