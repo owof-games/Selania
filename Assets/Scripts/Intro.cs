@@ -25,6 +25,11 @@ public class Intro : MonoBehaviour
 
     public void SkipIntro(InputAction.CallbackContext callbackContext)
     {
+        SkipIntro();
+    }
+    
+    public void SkipIntro()
+    {
         SceneManager.LoadScene(nextSceneName);
     }
 }
