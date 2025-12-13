@@ -30,6 +30,14 @@ VAR gift_currentReceiver = ()
             Lista delle cose che posso donare
 
  ----------------------------------*/
++ [Ho bisogno di ragionarci ancora un poco.]
+    ~ gift_currentReceiver = ()
+    ~ disableNestDialogue()
+
+// //Se la lista è vuota
+// + {backpack_findedGifts == ()} [Non ho nulla da donare.]
+//     ~ disableNestDialogue()    
+              
 + {backpack_findedGifts has BaccaDellaAddolorata} [Una bacca della Addolorata.]
     ~ backpack_findedGifts -= BaccaDellaAddolorata
     {
@@ -182,8 +190,6 @@ VAR gift_currentReceiver = ()
         
     }       
     
-
-    
 + {backpack_findedGifts has LicheneDegliAbissi} [Una traccia dell'odore del Lichene degli Abissi.]
     ~ backpack_findedGifts -= LicheneDegliAbissi
     {
@@ -258,21 +264,8 @@ VAR gift_currentReceiver = ()
         - gift_currentReceiver has SecondCharacter:
                 -> object_value_for_PNG(universalIngredient, Backpack, SecondCharacter)
     }
- 
-        
-        
-    //Se la lista è vuota
-    + {backpack_findedGifts == ()} [Non ho nulla da donare.]
-        ~ disableNestDialogue()    
-            -> main
-    
-    + [Ho bisogno di ragionarci ancora un poco.]
-        ~ gift_currentReceiver = ()
-        ~ disableNestDialogue()    
-            -> main    
-    + ->
-    - 
-
+       
+-
 //Passo da qui a dono fatto
     ~ disableNestDialogue()       
     -> main

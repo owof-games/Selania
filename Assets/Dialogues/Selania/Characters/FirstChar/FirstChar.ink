@@ -13,11 +13,11 @@
         
             = ink_outcome    
                 {
-                    - firstChar_favouritesGifts:
+                    - firstChar_favouritesGifts has firstChar_giftedObject:
                         Quello che mi hai dato è qualcosa di più di un regalo: è un gesto di affinità.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                         Mi piace stare con te, {player_name}.
 
-                    - firstChar_goodGifts:
+                    - firstChar_goodGifts has firstChar_giftedObject:
                         I regali mi mettono sempre in imbarazzo, sai?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                         Ma il tuo dono mi ha fatto sentire ascoltata.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
 

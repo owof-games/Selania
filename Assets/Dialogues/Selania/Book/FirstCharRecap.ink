@@ -130,7 +130,7 @@
         Alla prossima lettera.<N><b>{charNameOne}</b>
 }
 {
-    - first_story_gift.ink_outcome: <b><i>Appunti su dono e riscrittura</b></i><N><>
+    - first_story_gift.ink_outcome: <b><i>Appunti su dono e riscrittura.</b></i><N><>
 }
 {
     - first_character_feedback.bookUpdate: {mentorName} ha detto a {player_name} che <>
@@ -161,13 +161,13 @@
     - first_story_gift.ink_outcome:
         {
             - firstChar_favouritesGifts has firstChar_giftedObject:
-            {player_name} le ha donato <b><i>{firstChar_giftedObject}</b></i> ed era entusiasta! <>
+            {player_name} le ha donato <b><i>{firstChar_giftedObject}</b></i> ed era entusiasta!
             
             - firstChar_goodGifts has firstChar_giftedObject:
-            {player_name} le ha donato <b><i>{firstChar_giftedObject}</b></i> ed ha abbastanza apprezzato. <>
+            {player_name} le ha donato <b><i>{firstChar_giftedObject}</b></i> ed ha abbastanza apprezzato.
             
             - else:
-            {player_name} le ha donato <b><i>{firstChar_giftedObject}</b></i> e non ha apprezzato per nulla. <>
+            {player_name} le ha donato <b><i>{firstChar_giftedObject}</b></i> e non ha apprezzato per nulla.
         
         }
 }        

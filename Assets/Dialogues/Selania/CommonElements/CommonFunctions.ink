@@ -630,7 +630,7 @@ Funzione di traduzione da variabile a stringa
 
 === object_value_for_PNG(object, comingFrom, PNG)
 {debug: passo per object_value_for_PNG. Il valore di object è {object}, di comingFrom è {comingFrom}, di PNG {PNG}.}
-
+~ disableNestDialogue()
 {
     - PNG == FirstCharacter:
         {

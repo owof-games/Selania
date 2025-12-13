@@ -128,7 +128,7 @@
 //Appunto sul dono fatto
 
 {
-    - second_story_gift.ink_outcome: <b><i>Appunti su dono e riscrittura:</b></i><N><>
+    - second_story_gift.ink_outcome: <b><i>Appunti su dono e riscrittura.</b></i><N><>
 }
 
     {
@@ -162,13 +162,13 @@
         - second_story_gift.ink_outcome:
             {
                 - secondChar_favouritesGifts has secondChar_giftedObject:
-                {player_name} gli ha donato <b><i>{secondChar_giftedObject}</b></i> ed era entusiasta! <>
+                {player_name} gli ha donato <b><i>{secondChar_giftedObject}</b></i> ed era entusiasta!
                 
                 - secondChar_goodGifts has secondChar_giftedObject:
-                {player_name} gli ha donato <b><i>{secondChar_giftedObject}</b></i> ed ha abbastanza apprezzato. <>
+                {player_name} gli ha donato <b><i>{secondChar_giftedObject}</b></i> ed ha abbastanza apprezzato.
                 
                 - else:
-                {player_name} gli ha donato <b><i>{secondChar_giftedObject}</b></i> e non ha apprezzato per nulla. <>
+                {player_name} gli ha donato <b><i>{secondChar_giftedObject}</b></i> e non ha apprezzato per nulla.
             
             }
     }        

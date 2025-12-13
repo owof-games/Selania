@@ -52,6 +52,6 @@ dog
         {player_name} ha scoperto che non siamo solo un vecchio tronco, comunque. Attraverso il tronco può parlare con la voce che si sente in testa, che descrive i luoghi e altre cose di questo posto. E abbiamo detto a {player_name} che saremo la luna e un sorriso.
 }
 
-{take_this_book:Un vecchio tronco|Un vecchio tronco, sotto le cui radici è stato trovato questo diario.}
+{take_this_book:Un vecchio tronco.|Un vecchio tronco, sotto le cui radici è stato trovato questo diario.}
 
 -> rewriter_book_with_flow
