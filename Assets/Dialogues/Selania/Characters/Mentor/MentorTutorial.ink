@@ -301,7 +301,7 @@
                         Uffi. Sembra di stare a scuola.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                     
                 } 
-        Prima ho fatto cenno all'inchiostro.
+        Prima ho fatto cenno all'inchiostro.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         Arriverà un momento nel tuo rapporto con chi devi aiutare, in cui la persona sarà disponibile a riscrivere con te il suo passato.
         Tocca a te farle la proposta.
         Spesso a quel punto la persona avrà preso maggiore consapevolezza di sé, e ti confesserà come si legge, cosa la blocca qui.
