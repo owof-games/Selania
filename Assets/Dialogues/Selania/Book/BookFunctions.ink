@@ -20,6 +20,7 @@
                 ~ move_entity(Backpack, Forest)
         }
         ~ disableBigDialogue()
+
         @exit_from_rewriter_book
   
     
@@ -31,6 +32,7 @@
                 ~ move_entity(Backpack, Greenhouse)
         }
         ~ disableBigDialogue()
+
         @exit_from_rewriter_book
 
     
@@ -42,6 +44,7 @@
                 ~ move_entity(Backpack, Pond)
         }
         ~ disableBigDialogue()
+
         @exit_from_rewriter_book
     
     - book_arrivingFromTracking == Kitchen:
@@ -62,6 +65,7 @@
                 ~ move_entity(Backpack, Library)
         }
         ~ disableBigDialogue()
+
         @exit_from_rewriter_book
         
     - book_arrivingFromTracking == Nest:
@@ -72,6 +76,7 @@
                 ~ move_entity(Backpack, Nest)
         }    
         ~ disableBigDialogue()
+
         @exit_from_rewriter_book
         
     - book_arrivingFromTracking == TrainStop:
@@ -82,14 +87,17 @@
                 ~ move_entity(Backpack, TrainStop)
         }
         ~ disableBigDialogue()
+
         @exit_from_rewriter_book
 
     - book_arrivingFromTracking == Bedroom:
         ~ move_entity(PG, Bedroom)
         ~ disableBigDialogue()
+
         @exit_from_rewriter_book
 
-    
     -else: ERROR: non riesco a trovare il luogo di provenienza; book_arrivingFromTracking = {book_arrivingFromTracking}
 }
+
+@exit_from_rewriter_book
 -> main
