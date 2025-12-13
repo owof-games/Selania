@@ -6,7 +6,7 @@
     VAR debug_changeName = false
     VAR debug_kitchen = false
     VAR debug_nest = false
-    VAR debug_frog = true
+    VAR debug_frog = false
     
     //per testare i luoghi non subito aperti con calma
     VAR debug_testLibrary = false
