@@ -35,7 +35,7 @@ LIST nest_speakersForEwWordTag = Influenced, Other
 
 === function secondChar_tag
 {
-    - ! that_little_liar_storylet.nameSecond:
+    - ! second_char_main_storylets.one.nameSecond:
         ~ return "???"
         
     - secondChar_ActualName == Riccio:

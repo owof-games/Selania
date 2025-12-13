@@ -81,7 +81,6 @@
             ~ mentor_pauseTalking = mentor_pauseDuration
             ~ mentor_tutorialPauses = true
             @animation:RewriterBook
-                - (nameSecond)
                 
                 -> main
     
