@@ -15,11 +15,7 @@
                 -> frog_about_who_questions
      }           
                 
-                
-        //Prima verifico se ci sono missioni attive e nel caso offro il reminder.
-        -> closed_mission_verify ->
-        //Altrimenti aggiorno la lista delle cose fatte in autonomia e poi procedo.
-        -> discovered_things_updater ->
+
 
 
 - (top)
@@ -88,20 +84,32 @@
       {debug_frog: il valore di frog_availableSpecialMissions è {frog_availableSpecialMissions}.}
       {debug_frog: player_accessiblePlaces contiene {player_accessiblePlaces}.}
 
-        {    //Special mission one offre la nota
-            // - frog_pauseSpecialMission < 1 && (frog_availableSpecialMissions has specialMissionOne) && (player_accessiblePlaces ? Nest) && second_char_main_storylets.four:
-            //     {debug_frog: condizioni rispettate per poter offrire la prima missione speciale.}
-            //         -> special_mission_one
-                
+        {
+            //Provo a mettere le missioni speciali come prioritarie
+                //Special mission one offre la nota
+                // - frog_pauseSpecialMission < 1 && (frog_availableSpecialMissions has specialMissionOne) && (player_accessiblePlaces ? Nest) && second_char_main_storylets.four:
+                //     {debug_frog: condizioni rispettate per poter offrire la prima missione speciale.}
+                //         -> special_mission_one
+                    
+                //Special mission two offre l'ingrediente universale
+                - frog_pauseSpecialMission < 1 && (frog_availableSpecialMissions has specialMissionTwo) && (player_accessiblePlaces ? Kitchen):
+                    {debug_frog: condizioni rispettate per poter offrire la seconda missione speciale.}
+                        -> special_mission_two 
+        }
+
+        //Poi faccio i check di autonomia
+            //Prima verifico se ci sono missioni attive e nel caso offro il reminder.
+            -> closed_mission_verify ->
+            //Altrimenti aggiorno la lista delle cose fatte in autonomia e poi procedo.
+            -> discovered_things_updater ->
+            
+        //Poi propongo le missioni "normali"
+        {    
+
             - firstChar_storyStatus == story_storyStarted && firstChar_giftedObject == () && frog_firstCharObtainedGifts hasnt charOneCultivable:
                 {debug_frog: condizioni rispettate per poter offrire info sul dono per Chitarra.}
                     -> autonomy_mission_verify
             
-                //Special mission two offre l'ingrediente universale
-            - frog_pauseSpecialMission < 1 && (frog_availableSpecialMissions has specialMissionTwo) && (player_accessiblePlaces ? Kitchen):
-                {debug_frog: condizioni rispettate per poter offrire la seconda missione speciale.}
-                    -> special_mission_two      
-    
             - firstChar_storyStatus == story_storyStarted && !ending_cooking_with_first_char && frog_firstCharObtainedGifts hasnt charOneCooking && player_accessiblePlaces has Kitchen:
                 {debug_frog: condizioni rispettate per poter offrire info sull'ingrediente per Chitarra.}
                     -> autonomy_mission_verify
