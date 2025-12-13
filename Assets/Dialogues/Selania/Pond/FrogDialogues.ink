@@ -7,24 +7,16 @@
     ~ temp mentorName = translator(mentor_ActualName)
     
 + {are_two_entities_together(TheFrog, PG) or (debug_testFrog == true)} [TheFrog]
+    
 
-     {
-        - frog_suspended_gift == true:
-            Ehi girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-            Hai ancora quel dono di prima da prendere!
-                -> frog_about_who_questions
-     }           
-                
-
-- (top)
     {
         - welcoming_frog.top == 1:
-            ~ player_somethingStrange ++
-            ~ saturationVar ++
-            ~ book_BGVariations ++
-            ~ move_entity(bowl, Bedroom)
-            ~ move_entity(waterLily, Bedroom)
-            ~ move_entity(FrogRecap, BookPlace)
+                ~ player_somethingStrange ++
+                ~ saturationVar ++
+                ~ book_BGVariations ++
+                ~ move_entity(bowl, Bedroom)
+                ~ move_entity(waterLily, Bedroom)
+                ~ move_entity(FrogRecap, BookPlace)
 
             Ma dove avevo messo quel.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             Eccola cra!
@@ -56,27 +48,35 @@
             Al funerale erano tutti molto molto imbarazzati.
             Tranne la biscia: quella aveva ancora fame.
             Insomma: tu aiuti me, e io aiuto te.
-        
-        - else:
-            {shuffle:
-                - Ciao girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                - Ma guarda chi c'è!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                - Uh, zia Graaak non mi scrive da un bel po'!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                - Devo assolutamente ricordarmi il compleanno dei gemelli. E preparare tutti i pacchettini.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                - {player_name}: quando la carpa non c'è, le pulci d'acqua ballano. Anche se non sono molto brave.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                - Magari se trattengo il fiato a lungo posso volare.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                - Il mio nome completo è Franco Lelio Arpagone Romualdo Arcezio Nepomiceno Alcuino. Franco La Rana è più facile.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                - "Gentile signor La Rana, le chiediamo di desistere dal chiederci altre cose assurde sulle lontre. Associazione Mondiale delle Dighe." #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-            }
-            
+
+        - frog_suspended_gift == true:
+            Ehi girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+            Hai ancora quel dono di prima da prendere!
+                -> frog_about_who_questions    
     }
     
+- (top)   
 
-//Idea per il futuro: commenti diversi a seconda di chi è presente.
+    {shuffle:
+        - Ciao girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
 
-      
+        - Ma guarda chi c'è!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+
+        - Uh, zia Graaak non mi scrive da un bel po'!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+
+        - Devo assolutamente ricordarmi il compleanno dei gemelli. E preparare tutti i pacchettini.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+
+        - {player_name}: quando la carpa non c'è, le pulci d'acqua ballano. Anche se non sono molto brave.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+
+        - Magari se trattengo il fiato a lungo posso volare.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+
+        - Il mio nome completo è Franco Lelio Arpagone Romualdo Arcezio Nepomiceno Alcuino. Franco La Rana è più facile.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+
+        - "Gentile signor La Rana, le chiediamo di desistere dal chiederci altre cose assurde sulle lontre. Associazione Mondiale delle Dighe." #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    }
+
       + [Per ora me ne vado.]
-        -> main
+            -> main
         
       + [{Dimmi cosa devo fare.|Hai qualcosa da farmi fare?}]
       {debug_frog: il valore di frog_availableSpecialMissions è {frog_availableSpecialMissions}.}
