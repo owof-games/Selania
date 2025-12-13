@@ -11,7 +11,12 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
     
     + {firstChar_storyStatus == story_storyStarted} [Ho bisogno di una mano con {charNameOne}.]
         ~  frog_aboutGiftRequest = missionCharOne
-  
+        {
+            - are_two_entities_together(FirstCharacter, PG):
+                Se resto mi sembra di barare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                Anche se non ha senso, visto che lo stai facendo tu, {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                ~ move_entity(FirstCharacter, Forest)
+        }
         {
             - LIST_COUNT(frog_firstCharObtainedGifts) >= 3:
                 Girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -28,7 +33,8 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                                 -> frog_gift_dispatcher
 
                     - !ending_cooking_with_first_char && frog_firstCharObtainedGifts hasnt charOneCooking && player_accessiblePlaces has Kitchen:
-                            Uh, mi piace {charNameOne}, è sempre così gentile con me!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                            {charNameOne} ha una bella testolina.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                            Piena di girini che corrono alla svelta.
                                 -> frog_gift_dispatcher
 
                     // - player_accessiblePlaces has Nest && frog_firstCharObtainedGifts hasnt charOneEmotionalWord:
@@ -36,7 +42,8 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                     //             -> frog_gift_dispatcher
 
                     - player_accessiblePlaces has Library && frog_firstCharObtainedGifts hasnt charOneLibrary:
-                            Uh, mi piace {charNameOne}, è sempre così gentile con me!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                            {charNameOne} andrebbe molto d'accordo con Tullio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                            Anche lui è un artista.
                                 -> frog_gift_dispatcher
                     
                     - else:
@@ -56,6 +63,13 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
     + {secondChar_storyStatus == story_storyStarted} [Ho bisogno di una mano con {charNameTwo}.]
         ~  frog_aboutGiftRequest = missionCharTwo
         {
+            - are_two_entities_together(SecondCharacter, PG):
+                Uh, Franco sa tantissime cose di me!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                Sicuro che ti aiuta be-nis-si-mo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
+                Ma io vado a fare qualcos'altro.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                    ~ move_entity(SecondCharacter, Forest)
+        }
+        {
             - LIST_COUNT(frog_secondCharObtainedGifts) >= 3:
                 Girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Tu sai tutto su {charNameTwo}!
@@ -73,7 +87,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                             -> frog_gift_dispatcher
 
                     - !ending_cooking_with_second_char && frog_secondCharObtainedGifts hasnt charTwoCooking && player_accessiblePlaces has Kitchen:
-                        Mi piace {charNameTwo}! Mi ha insegnato tantissime cose!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                        Sì! Voglio chiedere a {charNameTwo} se facciamo lezioni di nuoto assieme!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                             -> frog_gift_dispatcher
 
                     // - player_accessiblePlaces has Nest && frog_secondCharObtainedGifts hasnt charTwoEmotionalWord:
@@ -81,7 +95,8 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                     //         -> frog_gift_dispatcher
 
                     - player_accessiblePlaces has Library && frog_secondCharObtainedGifts hasnt charTwoLibrary:
-                        Mi piace {charNameTwo}! Mi ha insegnato tantissime cose!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                        {charNameTwo} mi sta tanto simpatico.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                        Anche se non ho ancora capito quella cosa della elettricità.
                             -> frog_gift_dispatcher
                     
                     - else:
@@ -110,12 +125,14 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
         ~  frog_aboutGiftRequest = missionCharFive
             -> frog_gift_dispatcher
         
-    
     + {frog_recoverableCultivables != ()}[Ho bisogno di recuperare una pianta che ho utilizzato.]
         //Nota: per ora sono quattro massimi gli utilizzi di un coltivabile, per cui non serve un menu ad hoc. Poi capire come fare.
             -> cultivable_recovery
     
     + [Ho cambiato idea.]
+        Mi trovi qui girino.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        Voglio contare tutte le onde!
+            ~ frog_suspended_gift = true
         -> main
     -
 
@@ -446,6 +463,9 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
         
         + [Mi prendo del tempo e torno poi.]
             ~  frog_aboutGiftRequest = ()
+                Va bene girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                Intanto leggo le lettere arretrate!
+                    ~ frog_suspended_gift = true
             -> main
         + -> 
         Succede anche ai migliore. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -769,6 +789,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
     ~ frog_aboutGiftRequest = ()
     ~ frog_currentMission = ()
     ~ frog_witch_notification = false
+    ~ frog_suspended_gift = false
  
     
 -> main

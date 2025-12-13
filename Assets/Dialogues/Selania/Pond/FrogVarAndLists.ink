@@ -26,6 +26,9 @@
     VAR frog_pauseSpecialMission = 0
     VAR frog_pauseSpecialMissionMax = 1
 
+        //Dono in sospeso
+    VAR frog_suspended_gift = false
+        
     //Altro
     VAR frog_nameDiscovered = false
 

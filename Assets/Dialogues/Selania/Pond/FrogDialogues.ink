@@ -8,13 +8,18 @@
     
 + {are_two_entities_together(TheFrog, PG) or (debug_testFrog == true)} [TheFrog]
 
-    
+     {
+        - frog_suspended_gift == true:
+            Ehi girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+            Hai ancora quel dono di prima da prendere!
+                -> frog_about_who_questions
+     }           
                 
                 
-                //Prima verifico se ci sono missioni attive e nel caso offro il reminder.
-                -> closed_mission_verify ->
-                //Altrimenti aggiorno la lista delle cose fatte in autonomia e poi procedo.
-                -> discovered_things_updater ->
+        //Prima verifico se ci sono missioni attive e nel caso offro il reminder.
+        -> closed_mission_verify ->
+        //Altrimenti aggiorno la lista delle cose fatte in autonomia e poi procedo.
+        -> discovered_things_updater ->
 
 
 - (top)

@@ -248,7 +248,7 @@
 
     {
         - first_second_chit_chat.bookUpdate:
-            {charNameOne} e {that_little_liar_storylet.nameSecond:{charNameTwo}|il bimbo} si sono presentat3, discutendo di alieni e pisolini.
+            {charNameOne} e {second_char_main_storylets.one.nameSecond:{charNameTwo}|il bimbo} si sono presentat3, discutendo di alieni e pisolini.
     }
     
 
