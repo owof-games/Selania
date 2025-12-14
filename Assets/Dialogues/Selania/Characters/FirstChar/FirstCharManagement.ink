@@ -39,7 +39,8 @@
         VAR kitchen_firstCharRecipe = ""
         //Suggerimento rana
         VAR frog_first_char_ingredient = ""
-    
+        VAR frog_first_temp_growing_ingredient = false
+            
     //Valore quarto ingrediente
         VAR kitchen_firstCharExtraIngredient = ()
         VAR kitchen_firstCharExtraIngredientReaction = notReaction
@@ -49,6 +50,7 @@
     VAR firstChar_goodGifts = (ErbaLiccia, Olobino, BastoneDellOzioso, LanaNotturna)
     //Dono consigliato dalla rana
     VAR frog_first_char_gift = ""
+    VAR frog_first_temp_growing_gift = false
     
 //Tracciamento del dono
     VAR firstChar_giftedObject = ()

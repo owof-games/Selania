@@ -1115,6 +1115,27 @@
     
     <i>{~{player_name} ha raccolto|{player_name} ha ricevuto in dono|Tra le dita {player_name} si ritrova|Nello zaino {player_name} ora ha|{player_name} riceve in dono|Ecco per {player_name}} {ingredientTranslator(greenhouse_chosenCultivable)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
+    //Questo è un codice che aggiorna le informazioni dei doni date da Franco nel caso in cui al momento del dono l'oggetto fosse in crescita.
+    {
+        - frog_first_temp_growing_gift == true:
+		    ~ frog_first_char_gift = "{ingredientTranslator(greenhouse_chosenCultivable)}"
+            ~ frog_first_temp_growing_gift = false
+    }
+    {
+        - frog_first_temp_growing_ingredient == true:
+		    ~ frog_first_char_ingredient = "{ingredientTranslator(greenhouse_chosenCultivable)}"
+            ~ frog_first_temp_growing_ingredient = false
+    }
+    {
+        - frog_second_temp_growing_gift == true:
+		    ~ frog_second_char_gift = "{ingredientTranslator(greenhouse_chosenCultivable)}"
+            ~ frog_second_temp_growing_gift = false
+    }
+    {
+        - frog_second_temp_growing_ingredient == true:
+		    ~ frog_second_char_ingredient = "{ingredientTranslator(greenhouse_chosenCultivable)}"
+            ~ frog_second_temp_growing_ingredient = false
+    }
     
     ~ backpack_findedGifts += greenhouse_chosenCultivable
     ~ greenhouse_cultivableGrowing = 0
