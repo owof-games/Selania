@@ -92,8 +92,9 @@
         O forse mi sono di nuovo addormentata a lavoro e sto sognando.
         Merda, Luca mi farà il culo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
         Quindi, {player_name}, qual è il messaggio nascosto di questo trip o sogno o quel che è?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+            ~ move_entity(Mentor, TrainStop)
         Datti da fare con le stronzate da inconscio, così mi sveglio o ripiglio e vedo di non mandare a puttane lavoro e relazione.
-  
+        
             + [Sono una persona, non il tuo inconscio.]
                 -> color_variation_management(FirstCharacter, blueC)->
                 {
@@ -125,7 +126,7 @@
                 Quindi devo correre per i boschi nuda e cantare alla luna?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 Perché è un piano che mi piace molto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             
-            + [<i>La pizzico, così capisce che sono reale.]
+            + (pizzico) [<i>La pizzico, così capisce che sono reale.]
                 -> color_variation_management(FirstCharacter, redC)->
                 Ehi!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 {
@@ -151,7 +152,7 @@
                 Ma potrò prima o poi dire il mio nome.
             -
             
-        ~ move_entity(Mentor, TrainStop)
+        
         
             {
                 - not welcome:
@@ -198,6 +199,10 @@
         Ci sono le canzoncine della pubblicità ancorate nel mio cervello.
         Che sfigata.
         O magari è perché prima ho preso una botta assurda contro il vetro della serra e mi sono resettata il cervello?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                {
+                    - one.pizzico: 
+                        Botta comunque meno fastidiosa del tuo pizzico di prima, mannaggia a te.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                }
                 {
                     - are_two_entities_together(Mentor, PG):
                         Questo posto non è mai abbastanza sicuro. #speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sorry

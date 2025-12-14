@@ -276,7 +276,7 @@
         A dopo!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry    
             - (bookUpdate)
 
-            ~ move_entity(RulesRecap, BookPlace)      
+              
             ~ mentor_pauseTalking = mentor_pauseDuration
             //Con questa voce evito che "ink_and_rewriting" compaia subito dopo se le condizioni sono sensate.
             ~ mentor_tutorialPauses = true

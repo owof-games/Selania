@@ -186,6 +186,7 @@ LIST nest_speakersForEwWordTag = Influenced, Other
 {debug: passo per moon_state management. Prima di agire, il valore di witch_moonState è {witch_moonState}. Il valore di witch_moonTime è {witch_moonTime}.}
 
         ~ witch_moonTime ++
+
 //Non passando più per l'uscita, devo farlo crescere in altri modi, ma con lentezza. Il passaggio 1 spostamento = 1 giorno rischia di essere troppo veloce. Possiamo provare a fare 3 spostamenti = 1 giorno?
 {
 
