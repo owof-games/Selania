@@ -187,7 +187,7 @@
 
     {
         - ending_cooking_with_second_char.bookUpdate:
-            Cucinando assieme, {charNameTwo} e {player_name} hanno preparato un buon piatto di {kitchen_secondCharRecipe}.<>
+            Cucinando assieme, {charNameTwo} e {player_name} hanno preparato un buon piatto di {kitchen_secondCharRecipe}. <>
             {
                 - at_table_with_second_char.good_reaction:
                     Dopo aver cucinato assieme, {charNameTwo} ha detto a {player_name} che gli piacciono le persone coerenti.

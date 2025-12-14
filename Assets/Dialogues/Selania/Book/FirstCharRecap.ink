@@ -19,7 +19,7 @@
             - firstChar_ActualName has Triangolo:
                 Qui...<N>Uh.<N>Continua a piacermi questa cosa di essere {charNameOne}, ma non è facilissima.<N>Talco ha rimandato per due volte i nostri incontri, e credo sia una scusa.<N>E a lavoro sembra che non rinnoveranno i contratti a nessunə.<N>Hanno già fatto arrivare tre persone nuove, e Luca sta facendo di tutto per tenercele lontane.<N>Ho questa sensazione strana.
                 
-                Che sia facile dire "goditi le piccole cose" quando tutto va bene.<N>Ma ora è.<N>È difficile.<N>Però, nota positiva: con Ennio stiamo davvero bene.<N>È come se ci fossimo risintonizzat3.<N>E le sere assieme sono tranquillizzanti.<>
+                Che sia facile dire "goditi le piccole cose" quando tutto va bene.<N>Ma ora è.<N>È difficile.<N>Però, nota positiva: con Ennio stiamo davvero bene.<N>È come se ci fossimo risintonizzat3.<N>E le sere assieme sono tranquillizzanti. <>
 
             - firstChar_ActualName has RagazzaOrchestra:
                 Ti sto scrivendo da... Boston!<N>Ok no, questa battuta fa ridere solo una volta.<N>Ti sto scrivendo in realtà <i>dal</i> Boston.<N>Un pub dove Talco giura di aver beccato Björk più di una volta.<N>Un posticino adorabile a Reykjavík.<N>I primi giorni qui sono stati assurdi.<N>Thomas è adorabile ora che è nel suo ambiente naturale.<N>E Talco.<N>Madonna, non l'avrei pensato, ma spacca come genitore.
@@ -153,7 +153,7 @@
         Dopo la riscrittura, ha scelto un nuovo nome: <b><i>{translator(firstChar_ActualName)}.</b></i><N><>
     }
 {firstAffinityFeedback:
-    Il valore massimo di inchiostro che {player_name} ha raggiunto con {charNameOne} è stato: {fromInkToNumbers(FirstCharacter)}.<>
+    Il valore massimo di inchiostro che {player_name} ha raggiunto con {charNameOne} è stato: {fromInkToNumbers(FirstCharacter)}. <>
 }
 
 //Appunto sul dono fatto
@@ -203,7 +203,7 @@
 
     {
         - ending_cooking_with_first_char.bookUpdate:
-            Cucinando assieme, {charNameOne} e {player_name} hanno preparato un buon piatto di {kitchen_firstCharRecipe}.<>
+            Cucinando assieme, {charNameOne} e {player_name} hanno preparato un buon piatto di {kitchen_firstCharRecipe}. <>
             {
                 - at_table_with_first_char.good_reaction:
                     Dopo aver cucinato assieme, {charNameOne} ha detto a {player_name} che si trova più a suo agio con le cose emotive, che non con i dati freddi e distaccati.
