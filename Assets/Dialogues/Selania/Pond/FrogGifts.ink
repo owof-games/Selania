@@ -311,7 +311,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                     Franco ha i superpoteri!
                     Conferma le cose quando sono già accadute!
                             ~ frog_first_char_ingredient = "sta crescendo proprio ora in serra!"
-                            ~ frog_first_temp_growing_ingredient = false
+                            ~ frog_first_temp_growing_ingredient = true
                             -> closed_exchange
 
                 - ((growthBaccaDellaAddolorata != stepThree) && (growthBaccaDellaAddolorata != notStarted)):
@@ -320,7 +320,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                     Franco ha i superpoteri!
                     Conferma le cose quando sono già accadute!
                             ~ frog_first_char_ingredient = "sta crescendo proprio ora in serra!"
-                            ~ frog_first_temp_growing_ingredient = false
+                            ~ frog_first_temp_growing_ingredient = true
                             -> closed_exchange
 
                 - ((growthNonTiScordarDiTe != stepThree) && (growthNonTiScordarDiTe != notStarted)): 
@@ -329,7 +329,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                     Franco ha i superpoteri!
                     Conferma le cose quando sono già accadute!
                             ~ frog_first_char_ingredient = "sta crescendo proprio ora in serra!"
-                            ~ frog_first_temp_growing_ingredient = false
+                            ~ frog_first_temp_growing_ingredient = true
                             -> closed_exchange
 
                 - (backpack_findedGifts hasnt CantoDelleCompagne) && (backpack_findedGifts hasnt BaccaDellaAddolorata) && (backpack_findedGifts hasnt NonTiScordarDiTe) && (growthCantoDelleCompagne != stepThree or growthBaccaDellaAddolorata != stepThree or  growthNonTiScordarDiTe != stepThree):
@@ -612,7 +612,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                     Sento l'odore fino a qui.
                     O forse è solo zia Graaak che non si è ancora lavata.
                             ~ frog_second_char_ingredient = "sta crescendo proprio ora in serra!"
-                            ~ frog_second_temp_growing_ingredient = false
+                            ~ frog_second_temp_growing_ingredient = true
                         -> closed_exchange
 
                 - (growthBastoneDellOzioso!= stepThree) && (growthBastoneDellOzioso != notStarted):
@@ -621,7 +621,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                     Sento l'odore fino a qui.
                     O forse è solo zia Graaak che non si è ancora lavata.
                             ~ frog_second_char_ingredient = "sta crescendo proprio ora in serra!"
-                            ~ frog_second_temp_growing_ingredient = false
+                            ~ frog_second_temp_growing_ingredient = true
                         -> closed_exchange
 
                 - (growthLicheneDegliAbissi!= stepThree) && (growthLicheneDegliAbissi != notStarted): 
@@ -630,7 +630,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                     Sento l'odore fino a qui.
                     O forse è solo zia Graaak che non si è ancora lavata.
                             ~ frog_second_char_ingredient = "sta crescendo proprio ora in serra!"
-                            ~ frog_second_temp_growing_ingredient = false
+                            ~ frog_second_temp_growing_ingredient = true
                         -> closed_exchange
 
                 - (backpack_findedGifts hasnt BastoneDellOzioso) && (backpack_findedGifts hasnt BrinaDellImpossibile) && (backpack_findedGifts hasnt LicheneDegliAbissi) && (growthBastoneDellOzioso != stepThree or growthBrinaDellImpossibile != stepThree or LicheneDegliAbissi != stepThree):
