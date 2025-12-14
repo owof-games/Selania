@@ -891,7 +891,7 @@
         E forse ci sto prendendo gusto con questi pipponi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Mi ricordano quando arriva l’insonnia.
         Che forse mi piace solo perché è una cosa che mi accade di rado.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-        a volte si traduce in un rigirarsi nel letto guardando il cellulare, scorrendo video e articoli che ti dicono che il mondo è fottuto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+        A volte si traduce in un rigirarsi nel letto guardando il cellulare, scorrendo video e articoli che ti dicono che il mondo è fottuto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         E può essere stupido addormentarsi con queste cose, ma boh.
         Forse sapere che non puoi fare nulla è più rassicurante che sapere che puoi fare qualcosa ma non sai cosa.
         Ma queste conversazioni con te sono più come l’altra cosa che faccio quando mi viene l’insonnia.
@@ -899,7 +899,7 @@
         La cucina a casa è sempre piena di vita, abbiamo ospiti praticamente da pranzo a notte fonda.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
         Ma averla per me, sapendo che tutto dorme, mi offre una pace piena.
         E i brani migliori li ho scritti in quelle situazioni.
-        Caffeino e quaderno, mi piace un sacco comporre andando a sentimento prima ancora di mettermi sulla tastiera.
+        Caffettino e quaderno, mi piace un sacco comporre andando a sentimento prima ancora di mettermi sulla tastiera.
         Ci sono momenti in cui qualcosa clicca, e allora so che ho preso una buona idea.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
         E non ha a che fare col razionale, no no.
         Ma è tipo come ritrovarsi i piedi in un’acqua antica.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
@@ -1016,7 +1016,7 @@
         O che farò tardi perché siamo a una protesta.
         Sono mesi che non viene manco a vedere le cose che facciamo con la Rifugia.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
         Per dargli più tempo non posso di certo smollare il lavoro, no?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-        E quindi c'’è solo una cosa che posso togliere dalla mia vita.
+        E quindi c’è solo una cosa che posso togliere dalla mia vita.
         E a quel punto, ripartirà mai il treno dalla mia stazione?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
 
             + [E se Ennio fosse la tua stazione, il tuo arrivo?]

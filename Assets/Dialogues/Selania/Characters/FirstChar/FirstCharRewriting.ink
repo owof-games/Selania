@@ -26,7 +26,7 @@
         Mi aspettavo amicizie eterne e case in campagna ad aiutarci reciprocamente.
         Mi aspettavo un amore folle, di quelli su cui ci fanno i film.
         Mi aspettavo di fare qualcosa di buono, di salvare il mondo con le mie canzoni.
-        E non ho che non ho ottenuto questo.
+        E non ho ottenuto niente di questo.
         Sono soltanto mediocre.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
         Un concentrato di rinunce.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
         Faccio un lavoro di merda che mi ammazza le giornate.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
@@ -38,7 +38,7 @@
         è questo il massimo che posso aspettarmi dalla vita?
         Andrà sempre peggio?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
         Tra quanto dovrò fare due lavori di merda invece di uno e morire dentro?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-        O vedere La Rifugia trasformarsi in un altro airbnb vintage e dover tornare dai miei ad inacidirmi?
+        O vedere La Rifugia trasformarsi in un altro airbnb finto local?
         O perdere anche Ennio, e rimanere sola e infelice con gatto e vibratore?
         E non è vero che la chitarra fa schifo, Mark Bowen sposami, ma non è il mio strumento.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Non sono nel mio strumento.

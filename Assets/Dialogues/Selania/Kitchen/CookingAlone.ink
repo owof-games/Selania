@@ -181,7 +181,7 @@
                 Come nei thriller?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Quindi c'è un crimine?
                 E {mentorName} è sospettata?
-                Ora le chiediamo a sorpresa: "Dov''è il malloppo?"
+                Ora le chiediamo a sorpresa: "Dov'è il malloppo?"
                 E lei allora avrà la coda di carpa e si tradirà.
                 E magari del malloppo è del cibo.
                 A Franco piace sempre il cibo.
@@ -223,7 +223,7 @@
                 Si agita sempre troppo.
             -
         
-        Ma che dici se ci facciamo anche qualcosa da bere girino? #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
+        Ma che dici se ci facciamo anche qualcosa da bere, girino? #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
         Lo sapevi che noi rane beviamo dalla pelle?
         Ed è una cosa supercomoda.
         E le cose comode sono belle.

@@ -161,13 +161,13 @@
     - first_story_gift.ink_outcome:
         {
             - firstChar_favouritesGifts has firstChar_giftedObject:
-            {player_name} le ha donato <b><i>{firstChar_giftedObject}</b></i> ed era entusiasta!
+            {player_name} le ha donato <b><i>{ingredientTranslator(firstChar_giftedObject)}</b></i> ed era entusiasta!
             
             - firstChar_goodGifts has firstChar_giftedObject:
-            {player_name} le ha donato <b><i>{firstChar_giftedObject}</b></i> ed ha abbastanza apprezzato.
+            {player_name} le ha donato <b><i>{ingredientTranslator(firstChar_giftedObject)}</b></i> ed ha abbastanza apprezzato.
             
             - else:
-            {player_name} le ha donato <b><i>{firstChar_giftedObject}</b></i> e non ha apprezzato per nulla.
+            {player_name} le ha donato <b><i>{ingredientTranslator(firstChar_giftedObject)}</b></i> e non ha apprezzato per nulla.
         
         }
 }        
@@ -181,13 +181,13 @@
     {
     
         - frog_first_char_gift != "":
-            {player_name} ha chiesto un consiglio a Franco la Rana su cosa donare a {charNameOne}, e la risposta di Franco è stata: {frog_first_char_gift}.
+            {player_name} ha chiesto un consiglio a Franco la Rana su cosa donare a {charNameOne}, e la risposta di Franco è stata: {ingredientTranslator(frog_first_char_gift)}.
     }
     
     {
     
         - frog_first_char_ingredient != "":
-            {player_name} ha chiesto un consiglio a Franco la Rana su cosa inserire nel piatto da cucinare con {charNameOne}, e la risposta di Franco è stata: {frog_first_char_ingredient}.
+            {player_name} ha chiesto un consiglio a Franco la Rana su cosa inserire nel piatto da cucinare con {charNameOne}, e la risposta di Franco è stata: {ingredientTranslator(frog_first_char_ingredient)}.
     }
     
     {

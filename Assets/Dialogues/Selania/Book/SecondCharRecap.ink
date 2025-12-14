@@ -135,19 +135,19 @@
 
         - second_character_feedback.bookUpdate: Dopo aver aiutato {charNameTwo}, Mentor ha detto a {player_name} che <>
                 {
-                - secondChar_ActualName has Grizzly:
-                    "il nostro bambino" ha abbracciato il lato rabbioso, e l'ha fatto proprio. E lei non è una fan della rabbia.
-                
-                - secondChar_ActualName has Lupo: forse un giorno la nonna e il fratello di {charNameTwo} torneranno a vivere sotto il tetto dei genitori. E questo senso di famiglia così forte per lei sarebbe un finale davvero felice.
-                
-                - secondChar_ActualName has Delfino:
-                    è perplessa, perché {player_name} ha reso {charNameTwo} un giullare.
-                                
-                - secondChar_ActualName has Capibara:
-                    non sempre il mondo può essere come vuole lei, e che non è una grande fan dell'idea che l'unione faccia la forza.
-                
-                - secondChar_ActualName has Corvo:
-                    non avrei potuto ottenere un esito migliore. Che ce lo vede a studiare nuovi modi per curare le persone, o ridurre la fame nel mondo. O creare una begonia totalmente nera.
+                    - secondChar_ActualName has Grizzly:
+                        "il nostro bambino" ha abbracciato il lato rabbioso, e l'ha fatto proprio. E lei non è una fan della rabbia.
+                    
+                    - secondChar_ActualName has Lupo: forse un giorno la nonna e il fratello di {charNameTwo} torneranno a vivere sotto il tetto dei genitori. E questo senso di famiglia così forte per lei sarebbe un finale davvero felice.
+                    
+                    - secondChar_ActualName has Delfino:
+                        è perplessa, perché {player_name} ha reso {charNameTwo} un giullare.
+                                    
+                    - secondChar_ActualName has Capibara:
+                        non sempre il mondo può essere come vuole lei, e che non è una grande fan dell'idea che l'unione faccia la forza.
+                    
+                    - secondChar_ActualName has Corvo:
+                        non avrei potuto ottenere un esito migliore. Che ce lo vede a studiare nuovi modi per curare le persone, o ridurre la fame nel mondo. O creare una begonia totalmente nera.
             }
 
     }
@@ -162,13 +162,13 @@
         - second_story_gift.ink_outcome:
             {
                 - secondChar_favouritesGifts has secondChar_giftedObject:
-                {player_name} gli ha donato <b><i>{secondChar_giftedObject}</b></i> ed era entusiasta!
+                {player_name} gli ha donato <b><i>{ingredientTranslator(secondChar_giftedObject)}</b></i> ed era entusiasta!
                 
                 - secondChar_goodGifts has secondChar_giftedObject:
-                {player_name} gli ha donato <b><i>{secondChar_giftedObject}</b></i> ed ha abbastanza apprezzato.
+                {player_name} gli ha donato <b><i>{ingredientTranslator(secondChar_giftedObject)}</b></i> ed ha abbastanza apprezzato.
                 
                 - else:
-                {player_name} gli ha donato <b><i>{secondChar_giftedObject}</b></i> e non ha apprezzato per nulla.
+                {player_name} gli ha donato <b><i>{ingredientTranslator(secondChar_giftedObject)}</b></i> e non ha apprezzato per nulla.
             
             }
     }        
@@ -199,13 +199,13 @@
     {
     
         - frog_second_char_gift != "":
-            {player_name} ha chiesto un consiglio a Franco la Rana su cosa donare a {charNameTwo}, e la risposta di Franco è stata: {frog_second_char_gift}.
+            {player_name} ha chiesto un consiglio a Franco la Rana su cosa donare a {charNameTwo}, e la risposta di Franco è stata: {ingredientTranslator(frog_second_char_gift)}.
     }
         
     {
     
         - frog_second_char_ingredient != "":
-            {player_name} ha chiesto un consiglio a Franco la Rana su cosa inserire nel piatto da cucinare con {charNameTwo}, e la risposta di Franco è stata: {frog_second_char_ingredient}.
+            {player_name} ha chiesto un consiglio a Franco la Rana su cosa inserire nel piatto da cucinare con {charNameTwo}, e la risposta di Franco è stata: {ingredientTranslator(frog_second_char_ingredient)}.
     }
     
     {
