@@ -99,7 +99,7 @@
 //Qui apriamo i luoghi cambiando gli assets di riferimento
 === opening_places
 {debug: passo da opening_places.}
-    //Provo a togliere la serra dai luoghi random per vedere se le png si beccano più spesso.
+    //Provo a togliere la serra e la biblioteca dai luoghi random per vedere se le png si beccano più spesso.
     {
         - welcome.your_name && (entity_location(FromPondToGreenhouse) == Safekeeping) && not olobino.step_tre.colto:
             // ~ movements_randomablePlaces += Greenhouse
@@ -124,10 +124,9 @@
     
     {
         - open_the_library && (entity_location(FromForestToLibrary) == Safekeeping):
-        
             ~ move_entity(FromForestToLibraryBlocked, Safekeeping)
             ~ move_entity(FromForestToLibrary, Forest)
-            ~ movements_randomablePlaces += Library
+            // ~ movements_randomablePlaces += Library
             ~ player_accessiblePlaces += Library
     }
 
