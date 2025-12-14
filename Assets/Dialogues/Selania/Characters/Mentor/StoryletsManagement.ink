@@ -70,8 +70,8 @@
         - not you_are_a_rewriter && mentor_tutorialPauses == false:
             -> you_are_a_rewriter
         
-        //Sulla riscrittura    
-        - not ink_and_rewriting && mentor_tutorialPauses == false:
+        //Sulla riscrittura: la mettiamo dopo un po' che si è parlato assieme    
+        - not ink_and_rewriting && mentor_tutorialPauses == false && (first_char_main_storylets.five or second_char_main_storylets.five):
             -> ink_and_rewriting
 
         //Info sulla non obbligatorietà dei minigames
