@@ -6,8 +6,6 @@
     // Ho separato la versione blocca amico stocastico da una che non lo blocca perché così se devo testare elementi del libro non ci sono problemi
     + {are_two_entities_together(PG, RewriterBook) && !debug_stochastic}[RewriterBook]
             ~ move_entity(PG, BookPlace)
-            ~ disableNestDialogue()
-            ~ disableBigDialogue()
         -> main_book
     
     //Versione utile se devo testare anche il libro con amico stocastico
@@ -17,8 +15,6 @@
         
     + {are_two_entities_together(PG, miniBook) && !debug_stochastic} [miniBook]
             ~ move_entity(PG, BookPlace)
-            ~ disableNestDialogue()
-            ~ disableBigDialogue()
         -> main_book      
  
 //Streets to and into the Bedroom

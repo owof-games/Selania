@@ -469,6 +469,10 @@ public class DialogueManagerSingleInk : MonoBehaviour
         
         // ripristina anche il portrait
         rewriterBookPortraitName = lastPortraitName;
+
+        // forza il passaggio a big dialogue
+        story.variablesState[nestDialogueInkBoolVariable] = false;
+        story.variablesState[bigDialogueInkBoolVariable] = true;
         
         // passa a flow RewriterBook
         story.SwitchFlow(RewriterBookFlowName);
@@ -939,25 +943,34 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
     private void EnableDialoguePanel()
     {
+        var nest = IsNestDialogueMode();
+        var big = IsBigDialogueMode();
+
+        Debug.Assert(!(nest && big), $"Non deve essere attivo sia nest ({nestDialogueInkBoolVariable}) che big ({bigDialogueInkBoolVariable}) assieme!");
+
         //Marco: copiatura elementi gestione bigDialogueMode per nestDialogueMode
-        if (IsNestDialogueMode())
-        {
-            dialoguePanel.SetActive(false);
-            dialoguePanelBig.SetActive(false);
-            dialoguePanelNest.SetActive(true);
-        }
-        else if (IsBigDialogueMode())
-        {
-            dialoguePanel.SetActive(false);
-            dialoguePanelBig.SetActive(true);
-            dialoguePanelNest.SetActive(false);
-        }
-        else
-        {
-            dialoguePanel.SetActive(true);
-            dialoguePanelBig.SetActive(false);
-            dialoguePanelNest.SetActive(false);
-        }
+        // if (IsNestDialogueMode())
+        // {
+        //     dialoguePanel.SetActive(false);
+        //     dialoguePanelBig.SetActive(false);
+        //     dialoguePanelNest.SetActive(true);
+        // }
+        // else if (IsBigDialogueMode())
+        // {
+        //     dialoguePanel.SetActive(false);
+        //     dialoguePanelBig.SetActive(true);
+        //     dialoguePanelNest.SetActive(false);
+        // }
+        // else
+        // {
+        //     dialoguePanel.SetActive(true);
+        //     dialoguePanelBig.SetActive(false);
+        //     dialoguePanelNest.SetActive(false);
+        // }
+
+        dialoguePanel.SetActive(!nest && !big);
+        dialoguePanelBig.SetActive(big);
+        dialoguePanelNest.SetActive(nest);
     }
 
     private void DisableDialoguePanel()
