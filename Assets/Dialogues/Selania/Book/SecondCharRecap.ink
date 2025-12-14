@@ -243,7 +243,7 @@
     
     {
         - frog_and_second_char_chit_chat.bookUpdate:
-            {charNameTwo} e Franco la Rana hanno discusso sulla capacità o meno delle rane di nuotare. Franco ha forse convinto {charNameTwo} di non essere un bambino ma un riccio.
+            {charNameTwo} e Franco la Rana hanno discusso sulla capacità o meno delle rane di nuotare. Franco ha forse convinto {charNameTwo} di non essere un bambino ma una rana.
     }
 
     {

@@ -107,7 +107,7 @@
     {
     //Fine demo
         - not ending_demo && secondChar_storyStatus == story_storyEnded && firstChar_storyStatus == story_storyEnded:
-                -> ending_demo
+            -> ending_demo
             
     //Commenti sui luoghi aperti
         //Sulla funzione della serra

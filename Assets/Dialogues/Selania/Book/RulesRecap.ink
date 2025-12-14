@@ -9,7 +9,7 @@
 //Sempre dieci righe per blocchetto
     {
         - about_colors_choices.bookUpdate:
-            <b>Strade e conversazioni: spunti per un podcast di J.J.</b> <N>Questa la devo spiegare bene o il collettivo non mi accetterà mai.<N>La mai teoria è che ciò che decidiamo di dire o non dire quando parliamo racconta molto del modo in cui vediamo il mondo.<N>U.O.J è sempre stata nota per il suo sguardo empatico, e chi l'ha conosciuta l'ha descritta come propensa a parlare di emozioni e rapporti.
+            <b>Strade e conversazioni: spunti per un podcast di J.J.</b> <N>Questa la devo spiegare bene o il collettivo non mi accetterà mai.<N>La mia teoria è che ciò che decidiamo di dire o non dire quando parliamo racconta molto del modo in cui vediamo il mondo.<N>U.O.J è sempre stata nota per il suo sguardo empatico, e chi l'ha conosciuta l'ha descritta come propensa a parlare di emozioni e rapporti.
             
             A.S. è unə grandissimə pigna in testa, e il fatto che ti dica sempre che ci sono cose da fare, che bisogna agire, che bisogna cambiare qualcosa non nasconde niente della sua visione rivoluzionaria del mondo.<N>I discorsi di B.M sono pura logica e fattualità, quelli di M.M. puntano sempre alla ricerca della cosa grande, del grande cambiamento, di una saggezza quasi spirituale.
             
@@ -19,7 +19,7 @@
             
             <i>Commento del collettivo P.K.</i>: J.J., noi apprezziamo davvero il tuo impegno.<N>E ci spiace che le sfumature siano una rottura di balle, ma è lì che si trova il punto debole del tuo ragionamento.<N>Crediamo anche noi che ogni singola scelta di unə riscrittorə possa far riferimento a uno tra cinque modi di vedere il mondo. Ma le relazioni si creano scelta per scelta, azione per azione.<N>E le persone non sono mai una sola cosa.
             
-            Ad esempio questa tua nota è da persona con un po' di "cazzeggiamento" ma più razionalità di quanta B.M. non abbia mai inseguito in tutta la sua vita. Le persone non sono numeri, né regole di D&D.<N>Ma continua con la tua ricerca, facciamo il tifo per te!<N>P.S.: Sì, la disubbidienza ci piace. Ma magari la prossima volta perché non sistemi una proposta prima di girarcela?<N>P.P.S.: Ti saluta A.S.
+            Ad esempio questa tua nota è da persona con un po' di "cazzeggiamento" ma più razionalità di quanta B.M. non abbia mai inseguito in tutta la sua vita. Le persone non sono numeri, né regole di Dungeons & Dragons.<N>Ma continua con la tua ricerca, facciamo il tifo per te!<N>P.S.: Sì, la disubbidienza ci piace. Ma magari la prossima volta perché non sistemi una proposta prima di girarcela?<N>P.P.S.: Ti saluta A.S.
     }
 
 

@@ -127,8 +127,8 @@
 //Step due: attivazione o meno (parte solo se greenhouse_chosenCultivable è vuoto)
  {
         - greenhouse_frog_nextCultivableOne != () && greenhouse_chosenCultivable == ():
-            Sembra che Franco abbia messo qui le sue zampine.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-            Ecco qualcosa che crescerà su sua richiesta.
+            <i>Sembra che Franco abbia messo qui le sue zampine.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            <i>Ecco qualcosa che crescerà su sua richiesta.
                 ~ greenhouse_chosenCultivable = greenhouse_frog_nextCultivableOne
                 
             {debug or debug_frog: il valore di nextCultivable è {greenhouse_frog_nextCultivableOne} e per questo skippo le domande. Ora greenhouse_chosenCultivable è = a {greenhouse_chosenCultivable}.}

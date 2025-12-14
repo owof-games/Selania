@@ -42,7 +42,7 @@
 
 {
     - that_little_liar_storylet.bookUpdate: 
-        Dopo l'arrivo di {charNameTwo}, la prima cosa che {mentorName} ha chiesto a {player_name} è se è {player_pronouns has him:riuscito|{player_pronouns has her:riuscita|riuscitə}} a mandarlo a casa. Dice che qui non è sicuro per i bambini, che lui le ha tirato un calcio. Ma che le fa tenerezza, e per questo gli sembra un riccio.
+        Dopo l'arrivo di {charNameTwo}, la prima cosa che {mentorName} ha chiesto a {player_name} è se è {player_pronouns has him:riuscito|{player_pronouns has her:riuscita|riuscitə}} a mandarlo a casa. Dice che qui non è sicuro per i bambini, che lui le ha tirato un calcio. Ma che le fa tenerezza, e per questo le sembra un riccio.
 }
 
 {

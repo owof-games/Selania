@@ -12,41 +12,53 @@
     - player_accessiblePlaces has Kitchen && player_accessiblePlaces has Library:
         {shuffle once:
             - La neve sui monti dietro la stazione a volte mi ricorda casa.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
+
             - I cespugli della foresta credo nascondano qualche animaletto, ma per ora non ne ho preso nessuno.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
+
             - All'inizio l'idea di avere anche una biblioteca da mantenere mi innervosiva, ma ora ne sono felice.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
+
             - Lo stagno sta cambiando molto dal tuo arrivo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
             - La serra è così florida e viva ora.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
+
             - Dalla cucina arrivano sempre profumi insoliti. Ve la cavate tutt3 molto bene!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
         }
     
     - player_accessiblePlaces has Kitchen:
         {shuffle once:
             - Non sono mai stata una grande cuoca. Ma amo mangiare.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
+            
             - Il cibo è un momento di unione anche con l'essere che l'ha generato.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
+
             - La luce che si riflette sull'acqua della cucina è appagante.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
+
             - Gli alberi della cucina sono diversi da quelli della foresta, sono più ampi e muschiosi.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
-            }
+        }
       
     //- player_accessiblePlaces has Nest:
         {~ Da piccola amavo leggere, ma dove vivevo non c'erano biblioteche, e per molto tempo avevamo a malapena i soldi per mangiare.|A volte ho questo timore: posso davvero essere una buona mentore, anche se sono poco istruita?|Sono contenta di aver aperto la biblioteca, ma quella poltrona mi invita troppo a riposare, quando invece ci sono mille cose da fare.}#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
         
     - player_accessiblePlaces has Library:
          {shuffle once:
-         - Da piccola amavo leggere, ma dove vivevo non c'erano biblioteche, e per molto tempo avevamo a malapena i soldi per mangiare.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
-         - A volte ho questo timore: posso davvero essere una buona mentore, anche se sono poco istruita?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
-         - Sono contenta di aver aperto la biblioteca, ma quella poltrona mi invita troppo a riposare, quando invece ci sono mille cose da fare.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
-         }
+            - Da piccola amavo leggere, ma dove vivevo non c'erano biblioteche, e per molto tempo avevamo a malapena i soldi per mangiare.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
+
+            - A volte ho questo timore: posso davvero essere una buona mentore, anche se sono poco istruita?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
+
+            - Sono contenta di aver aperto la biblioteca, ma quella poltrona mi invita troppo a riposare, quando invece ci sono mille cose da fare.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
+        }
     
     //Opinioni presenti da inizio gioco    
     - else:
         {shuffle once:
-        - Sinceramente, non so che ne sarebbe di questo luogo senza tutta la manutenzione che devo fare.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
-        - Hai notato la bacheca alla stazione dei treni?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
-        - A volte vorrei che le cose in serra crescessero più velocemente, così da sapere subito se ho sbagliato qualcosa.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
-        - A ovest dello stagno c'è spesso un grande baccano, ma fiori e fieno sono troppo alti per poter vedere cosa ci sia da quelle parti.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
-         }
+            - Sinceramente, non so che ne sarebbe di questo luogo senza tutta la manutenzione che devo fare.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
+
+            - Hai notato la bacheca alla stazione dei treni?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
+            - A volte vorrei che le cose in serra crescessero più velocemente, così da sapere subito se ho sbagliato qualcosa.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
+
+            - A ovest dello stagno c'è spesso un grande baccano, ma fiori e fieno sono troppo alti per poter vedere cosa ci sia da quelle parti.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
+        }
 }
 
+- (top)
     Come posso esserti utile, {player_pronouns has him: amico mio|{player_pronouns has her: amica mia|amicə miə}}?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
     
         + [Avrei bisogno di una mano.]
@@ -82,7 +94,7 @@
             -> mindfulness -> support
     
         + [Vorrei parlare d'altro.]
-            -> helping_mentor
+            -> helping_mentor.top
         -
             -> top   
 
@@ -97,7 +109,7 @@
                     -> gender -> support
             
             + [A dire il vero sono a posto così.]
-                    -> helping_mentor
+                    -> helping_mentor.top
  
  
 
@@ -163,7 +175,7 @@
             -> second_top
     
     + [Voglio parlare d'altro.]
-        -> helping_mentor  
+        -> helping_mentor.top  
 
     
 - (second_top)    
@@ -195,10 +207,10 @@
             -> top
     
     + [Vorrei parlare di qualcosa di diverso.]
-        -> helping_mentor
+        -> helping_mentor.top
     -
 
-    -> helping_mentor
+    -> helping_mentor.top
 
 === to_do
 ~ temp mentorName = translator(mentor_ActualName)
@@ -212,7 +224,7 @@
         {about_kitchen: E se mangiate qualcosa assieme, magari riesci anche a capire se stai o meno conquistando la fiducia di quella persona.}
         {ink_and_rewriting: Così, a fine riscrittura, in base alle cose che avrai detto, la persona sceglierà il suo <b><i>nuovo nome</b></i>.}
         {ink_and_rewriting: E poi si ricomincia.}
-           -> helping_mentor
+           -> helping_mentor.top
 
 
 
@@ -235,7 +247,7 @@
             Un intuito latente che ora è più forte.##speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
             Meglio della stanchezza dell'essere mentore, fidati.##speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_hurry
                 ~ player_somethingStrange --
-                -> helping_mentor
+                -> helping_mentor.top
                 
         * (infoImpo){(firstChar_InkLevel has ink_high) or (secondChar_InkLevel has ink_high)} [Le personagge hanno informazioni importanti?]
             Dove l'hai sentita questa cosa, stellina?##speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
@@ -244,7 +256,7 @@
             Comunque ogni cosa qui è importante, {player_name}.##speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
             Soprattutto se ti aiuta a raggiungere il tuo obiettivo.
                 ~ player_somethingStrange --
-                -> helping_mentor
+                -> helping_mentor.top
         
         * (talkingWitch) {witch_intro} [Prima ho parlato con le radici nella foresta.]
             Sembra che vedano e sentano tutto quello che accade qui.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
@@ -255,7 +267,7 @@
             Il tuo aiuto.
             Se senti ancora una volte delle voci, prenditi un po' di riposo.
                 ~ player_somethingStrange --
-                -> helping_mentor
+                -> helping_mentor.top
         
         * (talkingFrog) {contentsPond has TheFrog} [C'è una rana blu parlante.]
             {
@@ -292,20 +304,26 @@
                     Immagino che una rana parlante non sia la cosa più assurda che potesse capitarci, vero?  
             }
                 ~ player_somethingStrange --
-            -> helping_mentor
+            -> helping_mentor.top
         
         * {foundLibro or take_this_book} [Ho trovato questo libro col mio nome.]
             E raccoglie informazioni su questo posto.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
-            E dove l'hai trovato?##speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
+            E dove l'hai trovato?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
             {foundLibro: Sotto quel vecchio tronco alla foresta.|Me l'ha dato {charNameOne}.}#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
-            Interessante.##speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
-            Forse è scappato dalla biblioteca?
+            Interessante.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
+                {
+                    - player_accessiblePlaces has Library:
+                        Forse verrà dalla biblioteca?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
+                    - else:
+                        Avevo sentito parlare in passato di una biblioteca.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
+                        Forse viene da lì?    
+                }
             Immagino sia comunque utile per il tuo lavoro.
             Spero solo non parli male di me!##speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_sad
-                -> helping_mentor
+                -> helping_mentor.top
         
         + [Ripensandoci, non ho nulla di nuovo da dire.]
-            -> helping_mentor
+            -> helping_mentor.top
    
 
 

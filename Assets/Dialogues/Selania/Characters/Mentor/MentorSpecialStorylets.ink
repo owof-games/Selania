@@ -95,7 +95,7 @@
             Che ti sei comportata da prepotente.
         
         - else:
-            Ho parlato con {charNameTwo},e dice che gli hai dato uno strattone, {mentorName}. #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+            Ho parlato con {charNameTwo}, e dice che gli hai dato uno strattone, {mentorName}. #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             Che ti sei comportata da prepotente.
         }
             
@@ -313,4 +313,4 @@ Mentore sbrocca
         Un gesto semplice che aiuta i giochi indie a essere più visibili.
         Grazie di cuore, e buona vita.
         A presto!
-        -> helping_mentor
+        -> main

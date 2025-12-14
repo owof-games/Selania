@@ -209,7 +209,7 @@
                     Dopo aver cucinato assieme, {charNameOne} ha detto a {player_name} che si trova più a suo agio con le cose emotive, che non con i dati freddi e distaccati.
 
                 - at_table_with_first_char.meh_reaction:
-                    Dopo aver cucinato assieme, {charNameOne} ha detto a {player_name} che ci sono cose che stanno nel mezzo per lei, tipo quando una persona dice che si risolve tutto faecndo cose, o che non prende mai le cose sul serio. Sono cose che non le dicono niente, ma non fanno nemmeno schifo.
+                    Dopo aver cucinato assieme, {charNameOne} ha detto a {player_name} che ci sono cose che stanno nel mezzo per lei, tipo quando una persona dice che si risolve tutto facendo cose, o che non prende mai le cose sul serio. Sono cose che non le dicono niente, ma non fanno nemmeno schifo.
             }
     }
     {

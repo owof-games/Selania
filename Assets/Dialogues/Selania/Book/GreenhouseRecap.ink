@@ -94,7 +94,7 @@
     
     {
         - la_spazzata.step_tre.colto:
-            <b><i>Spazzata.</b></i><N>Ci sono pensieri che feriscono. <N>Che alimentano sé stessi fino a diventare terremoti, valanghe, diluvi. <N>E quando qualcosa li fa tremare, travolgono tutto ciò che incontrano, senza distinzione. <b><i>Spazzata</b></i> è dolorosa, ma come ogni dolore ci invita a prestare attenzione. <N>A capire cosa liberare, prima che una piccola goccia non si trasformi in valanga. <N>(Appunto per la editor: specificare da qualche parte che La<b><i>Spazzata</b></i> non è l'insieme di foglie, ma il micelio che sgretola e distrugge rocce e muri. Le foglie sono solo organismi simbionti che prosperano sulla debolezza lasciata dal fungo.)
+            <b><i>Spazzata.</b></i><N>Ci sono pensieri che feriscono. <N>Che alimentano sé stessi fino a diventare terremoti, valanghe, diluvi. <N>E quando qualcosa li fa tremare, travolgono tutto ciò che incontrano, senza distinzione. <b><i>Spazzata</b></i> è dolorosa, ma come ogni dolore ci invita a prestare attenzione. <N>A capire cosa liberare, prima che una piccola goccia si trasformi in valanga. <N>(Appunto per la editor: specificare da qualche parte che La<b><i>Spazzata</b></i> non è l'insieme di foglie, ma il micelio che sgretola e distrugge rocce e muri. Le foglie sono solo organismi simbionti che prosperano sulla debolezza lasciata dal fungo.)
     }
 
 -> rewriter_book_with_flow
