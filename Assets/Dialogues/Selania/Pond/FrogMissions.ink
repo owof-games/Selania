@@ -72,9 +72,31 @@
         Ecco.
         Mi ha spiegato tante cose su {mentorName}.
         Sapevi ad esempio che può respirare fino a due minuti sott'acqua?
-        E che mangia solo pesce?
+            {
+                - are_two_entities_together(Mentor, PG):
+                    Eh?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+            }
+            {
+                - are_two_entities_together(FirstCharacter, PG):
+                    Questa me la voglio godere tutta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+            }
+        E che mangia solo pesce?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         E che le piace giocare?
-        E che ha una tasca sotto l'ascella dove conserva le pietre che usa per rompere i gusci?
+            {
+                - are_two_entities_together(SecondCharacter, PG):
+                    IM-POS-SI-BI-LE!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                    {
+                        - are_two_entities_together(Mentor, PG):
+                            Guarda che sono bravissima a burraco!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                            Ma è una roba da vecchi!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                    }
+            }
+        E che ha una tasca sotto l'ascella dove conserva le pietre che usa per rompere i gusci?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+            {
+                - are_two_entities_together(Mentor, PG):
+                    A dire il vero ne ho anche una in testa, dove raccolgo le sciocchezze dette dalle rane.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                    Ma le rana sono molto sagge, quindi non hai molto da raccogliere.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+            }
         E.
         Uh, una lettera di Euforbo.
         "Papà Franco, quella è la lontra, non {mentorName}."
@@ -89,8 +111,17 @@
         Quella roba lì.
         Chiedile un consiglio.
         E poi torna pure qui.
+            {
+                - are_two_entities_together(Mentor, PG):
+                    Uh, che cosa carina, Franco!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+            }
         Ma quindi non è {charNameOne} che fa il nido sugli alberi?
-
+            {
+                - are_two_entities_together(FirstCharacter, PG):
+                    Esatto!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                    E poi ululo alla luna!
+                    Devo subito avvisare Euforbo!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+            }
             ~ frog_currentMission += missionThree
             ~ frog_availableCommonMissions -= missionThree
             @animation:RewriterBook    
@@ -101,7 +132,8 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-    
+
+        ~ change_entity_place(Mentor)
         Quando ero ancora un girino, mamma Craazia mi diceva sempre:#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         "Tuo fratello Clodoveo ha preso la mia intelligenza."
         "Tua sorella Boemonda la bellezza di tuo padre."

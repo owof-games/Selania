@@ -44,7 +44,7 @@ dog
 
 {
     - witch_feedback.first_story_ended_check.bookUpdate:
-        Abbiamo detto a {player_name} che può studiare le persone come un libro, come vorrebbe {mentorName}, ma che può anche decidere secondo quello che è giusto per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}. Che a volte le persone hanno bisogno di venire contraddette, perché la frizzione genera fuoco e il fuoco brucia il vecchio, dando la possibilità al nuovo di crescere.
+        Abbiamo detto a {player_name} che può studiare le persone come un libro, come vorrebbe {mentorName}, ma che può anche decidere secondo quello che è giusto per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}. Che a volte le persone hanno bisogno di venire contraddette, perché la frizione genera fuoco e il fuoco brucia il vecchio, dando la possibilità al nuovo di crescere.
 }
 
 {
