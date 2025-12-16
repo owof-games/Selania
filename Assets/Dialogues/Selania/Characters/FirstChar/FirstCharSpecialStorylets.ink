@@ -108,6 +108,11 @@
     Ah: non ho trovato molta roba, scusa.
     Per cui credo abbia senso che tu ti faccia una cucinata soltanto con ognuna di noi.
     Scusa.
+        {
+            - are_two_entities_together(TheFrog, PG):
+                Zio Gracco sa fare una lasagna di pulci d'acqua che è la morte.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                Delle pulci d'acqua, per lo più.     
+        }
     - (bookUpdate)
 
         ~ firstChar_pauseTalking = firstChar_pauseDuration
@@ -188,6 +193,12 @@
     
     Comunque mi sa che più tardi mi faccio un altro giro tra i racconti.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
     Erano mesi che non mi mettevo a leggere qualcosa per più di dieci minuti.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+            {
+                - are_two_entities_together(TheFrog, PG):
+                    Certo che voi parlate tantissimo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Quasi quanto Tullio.  
+            }
+
     - (bookUpdate) 
         ~ firstChar_pauseTalking = firstChar_pauseDuration
 
@@ -216,5 +227,10 @@
     Non ho avuto il coraggio di muovermi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
     Si è accoccolata un poco, e poi si è messa a fare toeletta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
     La adoro.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+            {
+                - are_two_entities_together(TheFrog, PG):
+                    Appunto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Chiedere a Euforbo cosa significa toeletta.
+            }
 
 -> main

@@ -393,7 +393,6 @@
         ~ temp mentorName = translator(mentor_ActualName)
         ~ firstChar_storyletsForRewritingCount ++
         
-        
         Quando prima sono andata in panico parlando di lavoro, è perché da qualche mese servo in un ristorante.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Uno di quelli lussuosi, che si gasano tipo perché hanno la sede sia a Buco di Culo Lombardo che a Pechino.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
             {
@@ -678,6 +677,14 @@
             -    
         A volte mi chiedo se non abbia senso lasciare il lavoro, rischiare tutto, e dedicarmi solo alla musica.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Non più per fama e concerti, ma per fare del bene.
+            {
+                - are_two_entities_together(TheFrog, PG):
+                    Ma sei  concerti sono in compagnia, allora da solə sono i solcerti?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Soncerti?
+                    Sorcerti?
+                    Che cosa strana la lingua.
+                    Ma anche le dita sono strane.
+            }
         - (bookUpdate)
 
                 -> first_char_closing_storylet ->
