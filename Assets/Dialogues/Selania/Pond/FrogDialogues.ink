@@ -51,10 +51,20 @@
             Al funerale erano tutti molto molto imbarazzati.
             Tranne la biscia: quella aveva ancora fame.
             Insomma: tu aiuti me, e io aiuto te.
+                {
+                    - are_two_entities_together(FirstCharacter, PG):
+                        Livello di confusione: sì.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                }
 
         - frog_suspended_gift == true:
             Ehi girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-            Hai ancora quel dono di prima da prendere!
+            {shuffle:
+                - Hai ancora quel dono di prima da prendere!
+                - Devo ancora darti quel dono!
+                - Te lo ricordi che c'ho qui una cosa per te, vero?
+                - Franco La Rana ha qui qualcosa che è tuo!
+                - Ricordati che se ti serve c'ho qui il tuo dono!
+            }
                 -> frog_about_who_questions   
         
         //Condizione in cui possiamo attivare la missione speciale.

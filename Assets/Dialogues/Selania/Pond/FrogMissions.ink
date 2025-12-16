@@ -150,7 +150,12 @@
         Il mondo è un po' una grande rana.
         E allora stavo pensando: perché non racconti a {mentorName} qualcosa di strano che hai scoperto?
         Sono sicuro che così si diverte, e magari si rilassa un poco.
-        Io intanto vado a salutare bisnonno Ninfea.
+                {
+                    - are_two_entities_together(Mentor, PG):
+                        In effetti non sarebbe male rilassarmi un poco.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                }
+
+        Io intanto vado a salutare bisnonno Ninfea.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
 
             ~ frog_currentMission += missionFour
             ~ frog_availableCommonMissions -= missionFour
@@ -188,7 +193,17 @@
         Oggi i mariti sono un po' nervosetti.
         Pensavo comunque {player_name}: perché non provi a parlare a {charNameOne} e {charNameTwo} quando sono assieme?
         Sono abbastanza sicuro che succederà qualcosa di interessante.
-        Magari anche loro si mettono a nuotare!
+            {
+                - are_two_entities_together(SecondCharacter, PG):
+                    Noi due ci diciamo sempre cose grandi!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+            }
+
+            {
+                - are_two_entities_together(FirstCharacter, PG):
+                    Cose metafisiche proprio.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                        
+            }
+        Magari anche loro si mettono a nuotare!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
 
         ~ frog_currentMission += missionFive
         ~ frog_availableCommonMissions -= missionFive
@@ -221,7 +236,24 @@
         Però poteva andare peggio, per fortuna ci ha aiutato la nostra amica comune.
         E visto che alcune cose sono cambiate, perché non provi a parlarle direttamente?
         Vive nell'albero della foresta.
-        Credo.
+            {
+                - are_two_entities_together(SecondCharacter, PG):
+                    C'è qualcuno nell'albero!!!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
+                        
+            }
+
+            {
+                - are_two_entities_together(FirstCharacter, PG):
+                    C'è qualcuno nell'albero???#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                        
+            }
+
+            {
+                - are_two_entities_together(Mentor, PG):
+                    C'è qualcuno nell'albero?!?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_bored
+                        
+            }
+        Credo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         Come dice sempre zia Graaak: "Chi va piano non arriva lontano."
         O era qualcosa sulla minestra?
         A dopo girino!
@@ -343,7 +375,16 @@
         Ma nessuno ci è andato.
         Perché nessuna rana vuole davvero bollire.
         E perché poi le rane odiano gli imprenditori.
-        Ci vediamo in cucina!
+                {
+                    - are_two_entities_together(FirstCharacter, PG):
+                        Allora sono una rana.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+                        Ma sai nuotare?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                        No.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+                        Allora sei una rana, sicuro!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                        
+                }
+
+        Ci vediamo in cucina!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
 
         ~ move_entity(TheFrog, Safekeeping)
         ~ move_entity(TheKitchenFrog, Kitchen)

@@ -52,7 +52,12 @@
                 Ma sei un portento, girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Pensa che ero qui a dirmi "Servirebbe una persona con una bella testolina, più grande di quella di zia Torba."
                 "Una capace di leggere quasi quanto {charNameTwo}."
-                E cosa scopro?
+                    {
+                        - are_two_entities_together(SecondCharacter, PG):
+                                Quasi però!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                                Perché io sono il più megagrande lettore della scuola!
+                    }
+                E cosa scopro?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Che tu hai già letto tante ma tante delle pagine del libro che ti è stato donato!
                 E come dico sempre: la conoscenza è sapere!
                 E il sapere è sapore per cui: dimmi come posso aiutarti.
@@ -73,10 +78,10 @@
                 "Avevamo fame."
                 Mi sembra una buona motivazione.
                     {
-                        - are_two_entities_together(SecondCharacter, PG):
-                            Verooo!
+                        - are_two_entities_together(FirstCharacter, PG):
+                            Il cibo è sempre una motivazione.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                     }
-                E a proposito di cose buone: vediamo come posso aiutarti!
+                E a proposito di cose buone: vediamo come posso aiutarti!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     -> frog_about_who_questions
         }
         
@@ -88,15 +93,36 @@
                 Girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Sei sempre un salto avanti!
                 L'altro giorno un'amica, quell'amica comune sai, quella che ci parla nella testa, quell'amica hai capito no.
+                    {
+                        - are_two_entities_together(FirstCharacter, PG):
+                            Aspè: avete un'amica comune in testa?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                            No, non voglio sapere.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                    }
                 <i>A noi piace molto la compagnia della rana Franco.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Ecco, lei mi ha fatto notare che {mentorName} ha una fissa.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                Una cosa più fissa in testa della passione di mio cugino Gracco per la pasta coi lombrichi.
+                    {
+                        - are_two_entities_together(Mentor, PG):
+                            Franco, guarda che sono qui e ti sento.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                            E io sono cra!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    }
+                Una cosa più fissa in testa della passione di mio cugino Gracco per la pasta coi lombrichi.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Ama tanto cercare modi per stare bene.
                 Ma nessuno glieli chiede mai.
                 Nessuno, eccetto te, {player_name}!
                 E così ora {mentorName} è più felice.
                 E questo posto è un po' più felice.
-                E allora io ti rendo un po' più felice: dimmi come posso aiutarti.
+                    {
+                        - are_two_entities_together(Mentor, PG):
+                            Uh.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                            Ehm.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+                            Sono in imbarazzo.
+                            Ma sì, mi fa piacere aiutare.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                            Non è una cosa brutta, vero?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+                            No no.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                            Una cosa brutta è invitare un pescatore a un matrimonio tra carpe.
+                            Ma torniamo a {player_name}: tu hai fatto una cosa felice.
+                    }
+                E allora io ti rendo un po' più felice: dimmi come posso aiutarti.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     -> frog_about_who_questions                      
         }
         
@@ -109,17 +135,34 @@
                 Nemmeno questa.
                 {player_name}, tu non sai quanto sia bravo mio marito Tullio ad allungare lo stagno quando parla.
                 Non arriva mai al punto.
-                Nemmeno sui bigliettini.
+                    {
+                        - are_two_entities_together(FirstCharacter, PG):
+                            Perché tu arrivi sempre al punto, Franco.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                            Sì sì, sempre.#inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                            Preciso cone una mosca.
+                            Non credo che.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                            Ah, lascia perdere.
+                            Non perdo mai.#inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                            E Tullio non perde mai la parola.
+                    }
+
+                Nemmeno sui bigliettini.#inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Ah, ecco qui.
                 "Ricordati di recuperare i gemelli al nido."
                 No, non era questo.
-                "Ricordati <b>davvero</b> di recuperare i gemelli al nido. Non come quella volta che sono tornati con l'anatra delle otto da soli."
-                "A proposito di anatre: le sorelle Qualqui vengono per cena. Mi prendi due etti di termiti e qualche seme? Ti amo."
+                "Ricordati <b>davvero</b> di recuperare i gemelli al nido. Non come quella volta che sono tornati con la carpa delle otto da soli."
+                "A proposito di carpe: le sorelle Qualqui vengono per cena. Mi prendi due etti di termiti e qualche seme? Ti amo."
                 Dall'arrivo dei gemelli ha un tritone per capello.
                 Avere centosedici figli non è una passeggiata.
                 Sempre meglio di zia Graaak, che ormai va per il migliaio.
-                Non hai idea del casino del ricordare tutti i compleanni, {player_name}!
-                Ma io dovevo dirti qualcosa.
+                Non hai idea del casino del ricordare tutti i compleanni.
+                    {
+                        - are_two_entities_together(SecondCharacter, PG):
+                            Però non ti devi dimenticare il mio!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+                            Ehm sì certo.#inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                            Me lo sono segnato per il cratto di girinnaio.
+                    }
+                Ma io dovevo dirti qualcosa, {player_name}!#inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Cosa?
                 Ah sì: che il gossip è importante.
                 Per cui hai fatto benissimo a parlare con {mentorName} delle cose insolite che hai incontrato.
@@ -143,12 +186,22 @@
                 E, girino, quanto ero confuso!
                 Però a volte ho paura di sembrare tonto come una conchiglia, e quindi non chiedo nulla.
                 Invece sono contento che prima hai partecipato alla conversazione tra {charNameOne} e {charNameTwo}, girino.
-                Non hai avuto paura di dire una cosa e sembrare stupid{player_pronouns has him:o|{player_pronouns has her:a|ə}}!
-                Quindi: non essere come Franco. E se vedi due persone vicine, prova a chiacchierare con loro.
+                        {
+                            - are_two_entities_together(FirstCharacter, PG):
+                                Ci stavi spiando quindi?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                        }                        
+
+                Non hai avuto paura di dire una cosa e sembrare stupid{player_pronouns has him:o|{player_pronouns has her:a|ə}}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                        {
+                            - are_two_entities_together(SecondCharacter, PG):
+                                La nonna dice sempre che non ci sono domande stupide ma solo risposte sbagliate.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                        }
+
+                Quindi: non essere come Franco. E se vedi due persone vicine, prova a chiacchierare con loro.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Però una partita tra ananassi io me la guarderei.
                 Dopo lo dico a Giulio, magari ne esce qualcosa.
                 Come quella volta che abbiamo tirato su una band.
-                Ci chiamavamo Depeche pond.
+                Ci chiamavamo Depeche Pond.
                 Ma non è stata una bella idea quella di mettere gli amplificatori in acqua.
                 I ricci sono ancora arrabbiati con noi.
                 Ma devo aiutarti, mannaggia alla mia distrazione.
@@ -193,7 +246,13 @@
                 I gemelli stanno facendo lo sciopero del sonno.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 A fatica mi ricordo il mio nome.
                 E tutto perché Giulio non vuole prendergli un cane.
-                Colpa di Dora l'ape.
+                    {
+                        - are_two_entities_together(SecondCharacter, PG):
+                            Anche io voglio un caneeeeeeeeeeeeee!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                            Allora sciopera coi gemelli!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    }
+
+                Comunque è tutta colpa di Dora l'ape.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Quella passa il tempo a svolazzare in giro, e poi se ne sta lì sulla riva a bere acqua e raccontare cose.
                 E ha detto ai gemelli che c'è un cane alla fermata del treno.
                 Scusa, sono arrabbiato.
@@ -207,7 +266,12 @@
                 "E quindi sappiamo respirare fuori dall'acqua, papà Franco!"
                 E la sorpresa, {player_name}!
                 Non ci avevo mai pensato, ma respiro fuori dall'acqua!
-                E il mondo ora mi sembra così grande.
+                    {
+                        - are_two_entities_together(FirstCharacter, PG):
+                            Franco, ma tu come ci sei arrivato all'età adulta?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                            Un po' a piedi, un po' col treno.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    }
+                E il mondo ora mi sembra così grande.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 E pieno di possibilità.
                 Come quella di avere un cane.
                 Ora sto scioperando anche io coi gemelli.
@@ -243,7 +307,26 @@
                 Però la nostra amica comune a volte mi legge qualche storia.
                 La mia preferita è quella del principe ranocchio.
                 Quando lei lo bacia e le vengono tutte le verruche.
-                Gli umani dovrebbero imparare a lasciarci in pace.
+                    {
+                        - are_two_entities_together(FirstCharacter, PG):
+                            Onesto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                    }
+                Gli umani dovrebbero imparare a lasciarci in pace.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    {
+                        - are_two_entities_together(SecondCharacter, PG):
+                            Anche io?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+                            {
+                                - frog_and_second_char_chit_chat:
+                                    Ma abbiamo già detto che tu sei una rana, {charNameTwo}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                                - else:
+                                    Mmm.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                                    Io non sono sicuro che tu sei un umano.
+                                    Sei troppo basso.    
+                            }
+                            Ma quando sei qui mi diverto tanto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                            Quindi sono in pace.
+                        
+                    }
                 E a proposito di pace: vediamo come posso aiutarti!
                     -> frog_about_who_questions                        
         }
@@ -356,7 +439,12 @@
                         Ma sei un portento, girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         Pensa che ero qui a dirmi "Servirebbe una persona con una bella testolina, più grande di quella di zia Torba."
                         "Una capace di leggere quasi quanto {charNameTwo}."
-                        E tu hai già letto tante ma tante delle pagine del libro che ti è stato donato!
+                            {
+                                - are_two_entities_together(SecondCharacter, PG):
+                                    Quasi però!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                                    Perché io sono il più megagrande lettore della scuola!
+                            }
+                        E tu hai già letto tante ma tante delle pagine del libro che ti è stato donato!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         E come dico sempre: la conoscenza è sapere!
                         E il sapere è sapore per cui: dimmi come posso aiutarti.
                             ~ frog_currentMission = ()
@@ -384,13 +472,13 @@
                     Ed è una cosa grandiosa girino, e sai perché?
                     Io no.
                     Ah no, eccolo, me lo scrivono sempre le formiche.
-                    "Avevamo fame."
+                   "Avevamo fame."
                     Mi sembra una buona motivazione.
                         {
-                            - are_two_entities_together(SecondCharacter, PG):
-                                Verooo!
+                            - are_two_entities_together(FirstCharacter, PG):
+                                Il cibo è sempre una motivazione.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                         }
-                    E a proposito di cose buone: vediamo come posso aiutarti!
+                    E a proposito di cose buone: vediamo come posso aiutarti!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         ~ frog_currentMission = ()
 
                         -> frog_about_who_questions
@@ -398,28 +486,6 @@
                         {player_name}! #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         Come sta andando con le piante della serra?
                         Torna qui quando ce ne saranno abbastanza per le formiche!
-                        // Se ho capito bene per ora  <>
-                        // {
-                        //     - 14 - LIST_COUNT(greenhouse_backupCultivable) == 0 && greenhouse_chosenCultivable == (): 
-                        //             non ne hai coltivate nemmeno una!
-                            
-                        //     - 14 - LIST_COUNT(greenhouse_backupCultivable) == 0 && greenhouse_chosenCultivable != (): 
-                        //             ne stai coltivando una!        
-                            
-                        //     - 14 - LIST_COUNT(greenhouse_backupCultivable) == 1 && greenhouse_chosenCultivable == (): 
-                        //             ne hai coltivata una.
-                            
-                        //     - 14 - LIST_COUNT(greenhouse_backupCultivable) == 1 && greenhouse_chosenCultivable != (): 
-                        //             stai coltivando la seconda.        
-                            
-                        //     - 14 - LIST_COUNT(greenhouse_backupCultivable) == 3 && greenhouse_chosenCultivable == (): 
-                        //             te ne manca una girino!
-                            
-                        //     - 14 - LIST_COUNT(greenhouse_backupCultivable) == 3 && greenhouse_chosenCultivable != (): 
-                        //             stai coltivando l'ultima, girino!      
-                                    
-                        // }
-                        
                             -> main            
             }
             
@@ -431,7 +497,12 @@
                     Mi hanno detto che hai chiesto a {mentorName} di darti qualche consiglio di benessere.
                     Come lo so?
                     Perché ora li sta dando a tutte le persone che incontra.
-                    Tullio mi ha anche detto: "Franco, sei una brava persona, ma devi farti due domande prima di chiedere certe cose a {player_name}."
+                        {
+                            - are_two_entities_together(Mentor, PG):
+                                Non a tutte tutte.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                                Però poi Franco ho una dritta per quella tensione muscolare!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                        }
+                    Tullio mi ha anche detto: "Franco, sei una brava persona, ma devi farti due domande prima di chiedere certe cose a {player_name}."#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Gli ho chiesto quali fossero le due domande, e lui mi ha baciato sulla testa.
                     E poi mi ha detto "Per fortuna che sei simpatico."
                     Ci amiamo così tanto.
@@ -444,7 +515,17 @@
                 - else:
                     Ma ecco di nuovo qui il mio girino preferito!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Hai poi chiesto a {mentorName} come stare bene?
-                    Intanto sistemo la posta arretrata.
+                        {
+                            - are_two_entities_together(Mentor, PG):
+                                Ma grazie Franco!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                                Ho tantissimi consigli da dare a {player_name}!
+                                {
+                                    - are_two_entities_together(FirstCharacter, PG):
+                                        Non ne dubitavo {mentorName}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                                }
+                        
+                        }
+                    Intanto sistemo la posta arretrata.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Che poi se deve andare avanti, non dovrebbe essere "avanzata"?
                     Però non si muove.
                     Forse è quindi "posta fermata"?
@@ -459,7 +540,17 @@
                     Nemmeno questa.
                     {player_name}, tu non sai quanto sia bravo mio marito Tullio ad allungare lo stagno quando parla.
                     Non arriva mai al punto.
-                    Nemmeno sui bigliettini.
+                     {
+                        - are_two_entities_together(FirstCharacter, PG):
+                            Perché tu arrivi sempre al punto, Franco.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                            Sì sì, sempre.#inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                            Preciso cone una mosca.
+                            Non credo che.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                            Ah, lascia perdere.
+                            Non perdo mai.#inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                            E Tullio non perde mai la parola.
+                    }
+                    Nemmeno sui bigliettini.#inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Ah, ecco qui.
                     "Ricordati di recuperare i gemelli al nido."
                     No, non era questo.
@@ -481,7 +572,11 @@
                 - else:
                     {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Le mie spie mi hanno detto che ancora non hai raccontato stranezze a {mentorName}!
-                    Uh, non ho davvero delle spie.
+                        {
+                            - are_two_entities_together(Mentor, PG):
+                                Stranezze?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                        }
+                    Uh, non ho davvero delle spie.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Giusto qualche girino.
                     E Dora l'ape.
                     E la nostra amica che a volte mi aiuta a capire meglio le cose.
@@ -501,8 +596,17 @@
                     E, girino, quanto ero confuso!
                     Però a volte ho paura di sembrare tonto come una conchiglia, e quindi non chiedo nulla.
                     Invece sono contento che prima hai partecipato alla conversazione tra {charNameOne} e {charNameTwo}, girino.
-                    Non hai avuto paura di dire una cosa e sembrare stupid{player_pronouns has him:o|{player_pronouns has her:a|ə}}!
-                    Quindi: non essere come Franco. E se vedi due persone vicine, prova ancora a chiacchierare con loro.
+                         {
+                            - are_two_entities_together(FirstCharacter, PG):
+                                Ci stavi spiando quindi?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                        }                        
+
+                    Non hai avuto paura di dire una cosa e sembrare stupid{player_pronouns has him:o|{player_pronouns has her:a|ə}}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                        {
+                            - are_two_entities_together(SecondCharacter, PG):
+                                La nonna dice sempre che non ci sono domande stupide ma solo risposte sbagliate.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                        }
+                    Quindi: non essere come Franco. E se vedi due persone vicine, prova ancora a chiacchierare con loro.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Però una partita tra ananassi io me la guarderei.
                     Dopo lo dico a Giulio, magari ne esce qualcosa.
                     Come quella volta che abbiamo tirato su una band.
@@ -520,7 +624,14 @@
                     Ma se poi la tiro fuori, è intera!
                     Questa è magia!
                     Continuo a studiare questa cosa mentre tu provi a parlare assieme a {charNameOne} e {charNameTwo}.
-                    Se scopro come succede potrei cambiare il mondo!
+                        {
+                            - are_two_entities_together(FirstCharacter, PG):
+                                In che senso scusa?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                                In senso diagonale, vedi?#inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                                Ora la zampa è dritta.
+                                Ora è in acqua ed è spezzata!
+                        }
+                    Se scopro come succede potrei cambiare il mondo!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     E tutti un giorno parleranno di Franco la rana!
                         -> main  
             }         
@@ -564,7 +675,12 @@
                     I gemelli stanno facendo lo sciopero del sonno.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     A fatica mi ricordo il mio nome.
                     E tutto perché Giulio non vuole prendergli un cane.
-                    Colpa di Dora l'ape.
+                        {
+                            - are_two_entities_together(SecondCharacter, PG):
+                                Anche io voglio un caneeeeeeeeeeeeee!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                                Allora sciopera coi gemelli!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                        }
+                    Comunque è sempre colpa di Dora l'ape.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Quella passa il tempo a svolazzare in giro, e poi se ne sta lì sulla riva a bere acqua e raccontare cose.
                     E ha detto ai gemelli del cane alla fermata del treno.
                     Scusa, sono arrabbiato.
@@ -578,7 +694,12 @@
                     "E quindi sappiamo respirare fuori dall'acqua, papà Franco!"
                     E la sorpresa, {player_name}!
                     Non ci avevo mai pensato, ma respiro fuori dall'acqua!
-                    E il mondo ora mi sembra così grande.
+                        {
+                            - are_two_entities_together(FirstCharacter, PG):
+                                Franco, ma tu come ci sei arrivato all'età adulta?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                                Un po' a piedi, un po' col treno.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                        }
+                    E il mondo ora mi sembra così grande.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     E pieno di possibilità.
                     Come quella di avere un cane.
                     Ora sto scioperando anche io coi gemelli.
@@ -620,8 +741,26 @@
                     Però la nostra amica comune a volte mi legge qualche storia.
                     La mia preferita è quella del principe ranocchio.
                     Quando lei lo bacia e le vengono tutte le verruche.
-                    Gli umani dovrebbero imparare a lasciarci in pace.
-                    E a proposito di pace: vediamo come posso aiutarti!
+                        {
+                            - are_two_entities_together(FirstCharacter, PG):
+                                Onesto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                        }
+                    Gli umani dovrebbero imparare a lasciarci in pace.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                        {
+                            - are_two_entities_together(SecondCharacter, PG):
+                                Anche io?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+                                {
+                                    - frog_and_second_char_chit_chat:
+                                        Ma abbiamo già detto che tu sei una rana, {charNameTwo}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                                    - else:
+                                        Mmm.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                                        Io non sono sicuro che tu sei un umano.
+                                        Sei troppo basso.    
+                                }
+                                Ma quando sei qui mi diverto tanto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                                Quindi sono in pace.
+                    }
+                    E a proposito di pace: vediamo come posso aiutarti!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         ~ frog_currentMission = ()
                             -> frog_about_who_questions
                             
