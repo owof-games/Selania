@@ -777,7 +777,7 @@ QUESTIONS
     {debug_cultivable: Entro in greenhouse_seventhQuest. {greenhouse_seventhQuest: greenhouse_seventhQuest ora = true|greenhouse_seventhQuest = false}.}
     
         <i>La terra...#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            + [{~Avanza massaggiando le radici nodose delle quercie|Scivola, trascinando con sé i rospi|Asciutta, rotola a valle}.]
+            + [{~Avanza massaggiando le radici nodose delle querce|Scivola, trascinando con sé i rospi|Asciutta, rotola a valle}.]
                     ~ greenhouse_cropsType += shift
                     ~ greenhouse_firstAnswerTracker = greenhouse_shiftCrops 
                     {debug_cultivable: greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
@@ -829,7 +829,7 @@ QUESTIONS
     {debug_cultivable: Entro in greenhouse_tenthQuest. {greenhouse_tenthQuest: greenhouse_tenthQuest ora = true|greenhouse_tenthQuest = false}.}
     
         <i>Il sole... #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            + [{~Mostra il cammino|Offre coraggio alle lucertole|Solleva goccie dalla palude silente}. ]
+            + [{~Mostra il cammino|Offre coraggio alle lucertole|Solleva gocce dalla palude silente}. ]
                     ~ greenhouse_cropsType += imagination  
                     ~ greenhouse_firstAnswerTracker = greenhouse_understandingCrops 
                     {debug_cultivable: greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    

@@ -160,7 +160,7 @@
                         - are_two_entities_together(SecondCharacter, PG):
                             Però non ti devi dimenticare il mio!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
                             Ehm sì certo.#inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                            Me lo sono segnato per il cratto di girinnaio.
+                            Me lo sono segnato per il craaatto di girinnaio.
                     }
                 Ma io dovevo dirti qualcosa, {player_name}!#inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Cosa?

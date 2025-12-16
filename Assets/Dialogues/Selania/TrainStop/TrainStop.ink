@@ -27,6 +27,9 @@
             - waarf!#speaker:Doggo #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:doggo
             - bauuu!#speaker:Doggo #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:doggo
             - pant pant pant.#speaker:Doggo #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:doggo
+            - bau bau!#speaker:Doggo #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:doggo
+            - arf arf!#speaker:Doggo #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:doggo
+            - awoo! #speaker:Doggo #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:doggo
         }
     
     -> main

@@ -18,7 +18,7 @@
 {knowing_fourth_character.nine: nona informazione.}
 {knowing_fourth_character.ten: decima informazione.}
 {knowing_fourth_character.eleven: undicesima informazione.}
-{knowing_fourth_character.twelve: dodicesiam informazione.}
+{knowing_fourth_character.twelve: dodicesima informazione.}
 
 //Appunto sul dono fatto
 {
@@ -81,7 +81,7 @@
         Sono felice ama, davvero felice.
                     
     - fourthChar_possibleStates has Corvo:
-        sddd
+        cose
 }
 
 {fourth_character_notes.two: Nella sua seconda lettera {fourthChar_ActualName} mi ha scritto una lettera, dove mi ha raccontato che<>}
@@ -100,7 +100,7 @@
         Sono felice ama, davvero felice.
                     
     - fourthChar_possibleStates has Corvo:
-        sddd
+        cose
 }
 
 
@@ -120,7 +120,7 @@
         Sono felice ama, davvero felice.
                     
     - fourthChar_possibleStates has Corvo:
-        sddd
+        cose
 }
 
 -> rewriter_book_with_flow

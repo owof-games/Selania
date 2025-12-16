@@ -444,7 +444,17 @@
         Come faccio a capire cosa fanno?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
         Sapevi che gli uccelli vedono dieci colori?
         DIECI! Mica solo tre come noi!
-        E che l'acso, atso, axotolot si fa ricrescere le braccia?
+        E che l'acso, atso, axotolottoto.
+            {
+                - are_two_entities_together(TheFrog, PG):
+                    Botto!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Risotto!
+                    Cucciolotto!
+                    Franco!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                    Così mi distraggo ancora di più!
+            }
+
+        Sapevi che l'axolotl si fa ricrescere le braccia?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
 
             + [Perché hai dato un calcio a {mentorName}?]
                 -> top

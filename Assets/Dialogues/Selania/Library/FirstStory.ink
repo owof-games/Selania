@@ -71,7 +71,7 @@
     
     Era diventatə come sua madre, tutto doveva essere coordinato.<N>Sotto controllo,proprio come piaceva a lei.<N>Se avessi un minimo di ordine, non saresti un eterno scapolo!<N>Col tempo, sua madre era venuta a patti con la sua identità e aveva evitato i pronomi maschili.<N>Aveva persino accettato di vederlə con un uomo, ma le sue parole l’avevano feritə lo stesso.
 
-    Nonostante il lavoro, nonostante il tetto sulla sua testa e la prospettiva di una vita piuttosto normale, nulla era in ordine nel cervello di Shmi.<N>Ogni notte si svegliava di soprassalto, con il cuore in gola e le gambe tese, pronte a saltare dal letto e correre il più lontano possibile.<N>Sognava il suo docente di arte che lə urlava contro e lə diceva che non sarebbe mai diventatəunə artista.
+    Nonostante il lavoro, nonostante il tetto sulla sua testa e la prospettiva di una vita piuttosto normale, nulla era in ordine nel cervello di Shmi.<N>Ogni notte si svegliava di soprassalto, con il cuore in gola e le gambe tese, pronte a saltare dal letto e correre il più lontano possibile.<N>Sognava il suo docente di arte che lə urlava contro e lə diceva che non sarebbe mai diventatə unə artista.
     
     Vedeva la delusione negli occhi di sua madre, quando lə aveva detto di volersi laureare in pittura e arti visive.<N>Riviveva il funerale di nonna Olga, l’unica persona che credeva in ləi.<N>Ogni singola volta, Shmi desiderava prendere a pugni qualcuno, strappare i disegni che tappezzavano la parete della camera, un’accozzaglia di colori, bozze tracciate con il carboncino e piccoli quadri dipinti a olio.
     
