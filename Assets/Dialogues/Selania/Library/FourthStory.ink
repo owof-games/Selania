@@ -167,30 +167,30 @@
             
     
 
-=== queerginia_wolf
-        //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
-        {
-            - library_unreadStories has QueerginiaWolf:
-                ~ library_unreadStories -= QueerginiaWolf
-                ~ library_readStories += QueerginiaWolf
-                 -> refresh_book_lists ->
-        }
-<b>Giallo</b> di Queerginia Wolf/Marco Spelgatti (she/he/they).<N>Instagram: @queerginiawolf#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-        -> DarkLibraryModeOn ->
-        ~ enableBigDialogue()
+// === queerginia_wolf
+//         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
+//         {
+//             - library_unreadStories has QueerginiaWolf:
+//                 ~ library_unreadStories -= QueerginiaWolf
+//                 ~ library_readStories += QueerginiaWolf
+//                  -> refresh_book_lists ->
+//         }
+// <b>Giallo</b> di Queerginia Wolf/Marco Spelgatti (she/he/they).<N>Instagram: @queerginiawolf#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+//         -> DarkLibraryModeOn ->
+//         ~ enableBigDialogue()
 
-    Non hai fatto nulla di male.<N>Lanciavi i tuoi fiori nell'aria, il polline rendeva il sentiero giallo per settimane.<N>Accoglievi gli uccelli, offrivi i tuoi vecchi rami ai cani felici che correvano sopra le tue radici. <N>Tenevi ferma la terra, assorbivi l'acqua.<N>Trasformavi il sole in ombra, in aria.<N>Stamani sono passata e ti hanno tagliato.<N>Ci hanno messo tre ore e due minuti a cancellare i tuoi decenni.<N>A segare i tuoi rami fioriti, il tuo tronco su cui le formiche scendevano e salivano.
+//     Non hai fatto nulla di male.<N>Lanciavi i tuoi fiori nell'aria, il polline rendeva il sentiero giallo per settimane.<N>Accoglievi gli uccelli, offrivi i tuoi vecchi rami ai cani felici che correvano sopra le tue radici. <N>Tenevi ferma la terra, assorbivi l'acqua.<N>Trasformavi il sole in ombra, in aria.<N>Stamani sono passata e ti hanno tagliato.<N>Ci hanno messo tre ore e due minuti a cancellare i tuoi decenni.<N>A segare i tuoi rami fioriti, il tuo tronco su cui le formiche scendevano e salivano.
     
-    Nel parco è rimasto un vuoto più ampio dello spazio che hai mai occupato.<N>L'ho fatto senza pensarci: ho posato la mano a terra.<N>Ho pregato.<N>E tutto quello che vedevo ha bruciato.<N>Ma.<N>Stasera, tornando niente fuoco, niente fuliggine. <N>Ma vicino alla tua carcassa il cane e io abbiamo notato un pollone.<N>Tenace e piccolino teso verso l'alto, i rami ancora gemme, la corteccia morbida e rigata.
+//     Nel parco è rimasto un vuoto più ampio dello spazio che hai mai occupato.<N>L'ho fatto senza pensarci: ho posato la mano a terra.<N>Ho pregato.<N>E tutto quello che vedevo ha bruciato.<N>Ma.<N>Stasera, tornando niente fuoco, niente fuliggine. <N>Ma vicino alla tua carcassa il cane e io abbiamo notato un pollone.<N>Tenace e piccolino teso verso l'alto, i rami ancora gemme, la corteccia morbida e rigata.
     
-    Le macchine che ti hanno tagliato moriranno.<N>Spariranno gli uomini che le hanno comandate.<N>Ma tu, di notte in notte, riprenderai a lanciare i tuoi fiori nell'aria.<N>A rendere gialla la strada verso casa.
+//     Le macchine che ti hanno tagliato moriranno.<N>Spariranno gli uomini che le hanno comandate.<N>Ma tu, di notte in notte, riprenderai a lanciare i tuoi fiori nell'aria.<N>A rendere gialla la strada verso casa.
 
-        + [<i>Vorrei leggere ancora.]
-            ~ disableBigDialogue()
-           -> book_test_intro
-        + [<i>Me ne vado.]
-            ~ disableBigDialogue()
-            -> DarkLibraryModeOff ->
-            -> main
+//         + [<i>Vorrei leggere ancora.]
+//             ~ disableBigDialogue()
+//            -> book_test_intro
+//         + [<i>Me ne vado.]
+//             ~ disableBigDialogue()
+//             -> DarkLibraryModeOff ->
+//             -> main
     
     

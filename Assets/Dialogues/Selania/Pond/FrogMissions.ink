@@ -280,7 +280,7 @@
     
         Euforbo ha portato a casa una pulce d'acqua.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         La maestra vuole che imparino a prendersi cura di altre forme di vita.
-        Gli altri gemelli hanno già divorato i loro compagni, ma Euforbo ha un altro cuore.
+        Gli altri gemelli hanno già divorato le loro pulci, ma Euforbo ha un altro cuore.
         Che un po' è ovvio: non è che potrebbe condividere il cuore con un altro gemello.
         O con Tullio.
         O con Giulio.

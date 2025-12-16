@@ -1,8 +1,8 @@
 //Variabili per la gestione della biblioteca
-LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola, FrancescaToscaRaimondi, Lamia, LorisCasagrandi, Kayleig, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, Simo, QueerginiaWolf
+LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola, FrancescaToscaRaimondi, Lamia, LorisCasagrandi, Kayleig, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, Simo
 
 //Liste per distinguere storie lette e non
-    VAR library_unreadStories = (AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola, FrancescaToscaRaimondi, Lamia, LorisCasagrandi, Kayleig, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, Simo, QueerginiaWolf)
+    VAR library_unreadStories = (AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola, FrancescaToscaRaimondi, Lamia, LorisCasagrandi, Kayleig, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, Simo)
     VAR library_readStories = ()
     VAR library_temporaryTW = ()
     VAR library_temporaryReadTW = ()
@@ -20,7 +20,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
     LIST library_storiesDuration = Short, Average, Long
     VAR library_readingDuration = ()
     
-    VAR library_shortStories = (StenoArtico, B, LorisCasagrandi, Kayleig, ValFaustoLattanzio, Maura, QueerginiaWolf)
+    VAR library_shortStories = (StenoArtico, B, LorisCasagrandi, Kayleig, ValFaustoLattanzio, Maura)
     VAR library_averageStories = (AdriAllora, BeatriceYBottura, CeciliaFormicola, Lamia, Romi, Simo)
     VAR library_longStories = (Aza, AlexiasDAvino, Beatrice, FrancescaToscaRaimondi, Salvo, LetiziaVaccarella)
     
@@ -29,8 +29,8 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
     VAR library_aboutQuestions = (AdriAllora, AlexiasDAvino, Beatrice, FrancescaToscaRaimondi, ValFaustoLattanzio, StenoArtico, Romi, Simo)
     VAR library_aboutUnprepared = (StenoArtico, Beatrice, Lamia, Simo)
     VAR library_aboutMonsters = (AdriAllora, Aza, B, BeatriceYBottura, CeciliaFormicola, Simo)
-    VAR library_aboutFire= (Aza, CeciliaFormicola, Kayleig, BeatriceYBottura, Romi, Maura, LetiziaVaccarella, QueerginiaWolf)
-    VAR library_aboutRebellion = (BeatriceYBottura, Lamia, Maura, Salvo, QueerginiaWolf, LorisCasagrandi)
+    VAR library_aboutFire= (Aza, CeciliaFormicola, Kayleig, BeatriceYBottura, Romi, Maura, LetiziaVaccarella)
+    VAR library_aboutRebellion = (BeatriceYBottura, Lamia, Maura, Salvo, LorisCasagrandi)
 
     //Libro che verrà proposto
     VAR library_proposedBook = ()
@@ -454,8 +454,8 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
         -> simo    
     - LetiziaVaccarella:
         -> letizia_vaccarella
-    - QueerginiaWolf:
-        -> queerginia_wolf
+    // - QueerginiaWolf:
+    //     -> queerginia_wolf
 
     - else: <i>La biblioteca non riesce a trovare un racconto adatto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         -> book_test_intro
@@ -491,7 +491,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
     - {library_readStories has Maura: -> reread_maura| -> reread}
     - {library_readStories has Simo: -> reread_simo| -> reread}
     - {library_readStories has LetiziaVaccarella: -> reread_letizia_vaccarella| -> reread}
-    - {library_readStories has QueerginiaWolf: -> reread_queerginia_wolf| -> reread}
+    // - {library_readStories has QueerginiaWolf: -> reread_queerginia_wolf| -> reread}
 }
 
 
@@ -681,15 +681,15 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
         + [<i>Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro     
     
-    = reread_queerginia_wolf
-    <i>La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    // = reread_queerginia_wolf
+    // <i>La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
-        + [<i>Rileggo <b>Giallo</b> di Queerginia Wolf/Marco Spelgatti (she/he/they).]
-                -> queerginia_wolf
-        + {LIST_COUNT(library_readStories) > 1}[<i>Vorrei rileggere qualcosa di diverso.]
-                -> reread
-        + [<i>Ho cambiato idea, voglio una storia nuova.]
-                -> book_test_intro 
+    //     + [<i>Rileggo <b>Giallo</b> di Queerginia Wolf/Marco Spelgatti (she/he/they).]
+    //             -> queerginia_wolf
+    //     + {LIST_COUNT(library_readStories) > 1}[<i>Vorrei rileggere qualcosa di diverso.]
+    //             -> reread
+    //     + [<i>Ho cambiato idea, voglio una storia nuova.]
+    //             -> book_test_intro 
     
 
 
