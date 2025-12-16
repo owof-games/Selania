@@ -176,7 +176,7 @@
             ~ move_entity(FirstRecap, BookPlace)
             
             -> first_char_closing_storylet ->
-            -> options_first_character
+            -> main
         
 
     
