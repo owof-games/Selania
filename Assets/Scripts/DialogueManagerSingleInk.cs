@@ -124,6 +124,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [Header("Library Sounds")]
     [SerializeField]
     private AudioClip librarySounds;
+    [SerializeField]
+    private AudioClip nightLibrarySounds;
 
     [Header("Kitchen Sounds")]
     [SerializeField]
@@ -676,6 +678,9 @@ public class DialogueManagerSingleInk : MonoBehaviour
             case "librarySounds":
                 UpdateAmbientSounds(librarySounds);
                 break;
+            case "nightLibrarySounds":
+                UpdateAmbientSounds(nightLibrarySounds);
+                break;    
             //TAG MUSICA CUCINA
             case "kitchenSounds":
                 UpdateAmbientSounds(kitchenSounds);

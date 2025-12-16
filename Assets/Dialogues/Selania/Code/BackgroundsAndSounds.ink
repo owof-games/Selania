@@ -68,6 +68,7 @@ VAR saturationVar = 0
 
 === DarkLibraryModeOn
     #background: backNightLibrary
+    #ambientSounds: nightLibrarySounds
     {
         - player_accessiblePlaces has Nest:
             ~ move_entity(FromLibraryToNestNight, Library)
@@ -99,6 +100,7 @@ VAR saturationVar = 0
     
 === DarkLibraryModeOff    
     #background: backLibrary
+    #ambientSounds: librarySounds
     {
         - player_accessiblePlaces has Nest:
             ~ move_entity(FromLibraryToNestNight, Safekeeping)
