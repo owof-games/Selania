@@ -117,7 +117,6 @@
         <i>Un sorriso attento ai bisogni di {player_name}.
         <i>Se {player_name} osserva la luna, noi saremo con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.
         <i>Ecco, sì: oggi saremo la luna.
-        <i>E un sorriso.
             - (nameWitch)
         <i>Queste radici cercano di imparare le voci del terreno.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         <i>E il terreno ci racconta che {player_name} ha appena compiuto qualcosa di importante.
