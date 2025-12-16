@@ -153,7 +153,7 @@
         Dopo la riscrittura, ha scelto un nuovo nome: <b><i>{translator(firstChar_ActualName)}.</b></i><N><>
     }
 {firstAffinityFeedback:
-    Il valore massimo di inchiostro che {player_name} ha raggiunto con {charNameOne} è stato: {fromInkToNumbers(FirstCharacter)}. <>
+    Il valore massimo di inchiostro che {player_name} ha raggiunto con {charNameOne} è stato: <b>{fromInkToNumbers(FirstCharacter)}</b>. <>
 }
 
 //Appunto sul dono fatto
@@ -181,19 +181,19 @@
     {
     
         - frog_first_char_gift != "":
-            {player_name} ha chiesto un consiglio a Franco la Rana su cosa donare a {charNameOne}, e la risposta di Franco è stata: {ingredientTranslator(frog_first_char_gift)}.
+            {player_name} ha chiesto un consiglio a Franco la Rana su cosa donare a {charNameOne}, e la risposta di Franco è stata: <b>{ingredientTranslator(frog_first_char_gift)}</b>.
     }
     
     {
     
         - frog_first_char_ingredient != "":
-            {player_name} ha chiesto un consiglio a Franco la Rana su cosa inserire nel piatto da cucinare con {charNameOne}, e la risposta di Franco è stata: {ingredientTranslator(frog_first_char_ingredient)}.
+            {player_name} ha chiesto un consiglio a Franco la Rana su cosa inserire nel piatto da cucinare con {charNameOne}, e la risposta di Franco è stata: <b>{ingredientTranslator(frog_first_char_ingredient)}</b>.
     }
     
     {
     
         - frog_first_novel != "":
-            {player_name} ha chiesto un consiglio a Franco la Rana su un racconto di cui parlare con {charNameOne}, e la risposta di Franco è stata: {frog_first_novel}.
+            {player_name} ha chiesto un consiglio a Franco la Rana su un racconto di cui parlare con {charNameOne}, e la risposta di Franco è stata: <b>{frog_first_novel}</b>.
     }
     
     {
@@ -206,10 +206,10 @@
             Cucinando assieme, {charNameOne} e {player_name} hanno preparato un buon piatto di {kitchen_firstCharRecipe}. <>
             {
                 - at_table_with_first_char.good_reaction:
-                    Dopo aver cucinato assieme, {charNameOne} ha detto a {player_name} che si trova più a suo agio con le cose emotive, che non con i dati freddi e distaccati.
+                    Dopo aver cucinato assieme, {charNameOne} ha detto a {player_name} che <b>si trova più a suo agio con le cose emotive, che non con i dati freddi e distaccati</b>.
 
                 - at_table_with_first_char.meh_reaction:
-                    Dopo aver cucinato assieme, {charNameOne} ha detto a {player_name} che ci sono cose che stanno nel mezzo per lei, tipo quando una persona dice che si risolve tutto facendo cose, o che non prende mai le cose sul serio. Sono cose che non le dicono niente, ma non fanno nemmeno schifo.
+                    Dopo aver cucinato assieme, {charNameOne} ha detto a {player_name} che <b>ci sono cose che stanno nel mezzo per lei, tipo quando una persona dice che si risolve tutto facendo cose, o che non prende mai le cose sul serio</b>. Sono cose che non le dicono niente, ma non fanno nemmeno schifo.
             }
     }
     {

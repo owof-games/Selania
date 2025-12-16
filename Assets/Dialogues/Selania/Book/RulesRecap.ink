@@ -13,11 +13,11 @@
             
             A.S. è unə grandissimə pigna in testa, e il fatto che ti dica sempre che ci sono cose da fare, che bisogna agire, che bisogna cambiare qualcosa non nasconde niente della sua visione rivoluzionaria del mondo.<N>I discorsi di B.M sono pura logica e fattualità, quelli di M.M. puntano sempre alla ricerca della cosa grande, del grande cambiamento, di una saggezza quasi spirituale.
             
-            E se sono io a parlare sicuro che ti ritroverai con cazzeggiamenti infiniti, proposte assurde e tanta disubbidienza (cosa che spero possa piacere al collettivo).<N>Ogni episodio del podcast si concentrerà su uno di questi approcci, e non sono cinque a caso: credo che storicamente ogni persona, e quindi ogni riscrittorə, abbia un modo di vedere il mondo che possa essere racchiuso in una di queste cinque modalità di visione del mondo.
+            E se sono io a parlare sicuro che ti ritroverai con cazzeggiamenti infiniti, proposte assurde e tanta disubbidienza (cosa che spero possa piacere al collettivo).<N>Ogni episodio del podcast si concentrerà su uno di questi approcci, e non sono cinque a caso: credo che storicamente ogni persona, e quindi ogni riscrittorə, <b>abbia un modo di vedere il mondo che possa essere racchiuso in una di queste cinque modalità di visione del mondo</b>.
             
             E sì, sicuro devo concentrarmi anche sulle sfumature (che balle), e su come le cose si possono mescolare e cambiare nel tempo.<N>Ma ho la certezza che questo approccio sia rivoluzionario perché può aiutare ogni riscrittorə a fare meglio il suo lavoro.<N>Perché capire se si ha davanti un B.M. o un M.M., l'approccio necessario è diverso.
             
-            <i>Commento del collettivo P.K.</i>: J.J., noi apprezziamo davvero il tuo impegno.<N>E ci spiace che le sfumature siano una rottura di balle, ma è lì che si trova il punto debole del tuo ragionamento.<N>Crediamo anche noi che ogni singola scelta di unə riscrittorə possa far riferimento a uno tra cinque modi di vedere il mondo. Ma le relazioni si creano scelta per scelta, azione per azione.<N>E le persone non sono mai una sola cosa.
+            <i>Commento del collettivo P.K.</i>: J.J., noi apprezziamo davvero il tuo impegno.<N>E ci spiace che le sfumature siano una rottura di balle, ma è lì che si trova il punto debole del tuo ragionamento.<N>Crediamo anche noi che ogni singola scelta di unə riscrittorə possa far riferimento a uno tra cinque modi di vedere il mondo. Ma <b>le relazioni si creano scelta per scelta, azione per azione</b>.<N>E le persone non sono mai una sola cosa.
             
             Ad esempio questa tua nota è da persona con un po' di "cazzeggiamento" ma più razionalità di quanta B.M. non abbia mai inseguito in tutta la sua vita. Le persone non sono numeri, né regole di Dungeons & Dragons.<N>Ma continua con la tua ricerca, facciamo il tifo per te!<N>P.S.: Sì, la disubbidienza ci piace. Ma magari la prossima volta perché non sistemi una proposta prima di girarcela?<N>P.P.S.: Ti saluta A.S.
     }
@@ -31,7 +31,7 @@
     {
 
         - ink_and_rewriting.bookUpdate:
-            Misteriosa rimane poi l'origine dell'<b><i>inchiostro</b></i>. <N>L'unica cosa certa è che maggiore è il rapporto di fiducia tra persona e riscrittorə, maggiore è il suo valore. <N>E un alto valore di inchiostro può facilitare di molto la vita dellə riscrittorə.
+            Misteriosa rimane poi l'origine dell'<b><i>inchiostro</b></i>. <N>L'unica cosa certa è che maggiore è il rapporto di fiducia tra persona e riscrittorə, maggiore è il suo valore. <N>E <b>un alto valore di inchiostro può facilitare di molto la vita dellə riscrittorə</b>.
             
             Ma cosa intendiamo con <b><i>riscrittura</b></i>? <N>In realtà sarebbe più giusto usare il plurale: quando la fiducia sarà sufficiente, la persona potrà decidere di raccontare allə riscrittorə cosa l'ha condotta da ləi. <N>A quel punto lə riscrittorə potrà iniziare a compiere delle azioni di riscrittura della visione che la persona ha di sé. <N>Forse è più facile spiegarlo con degli esempi.
             
@@ -41,7 +41,7 @@
             
             Ma prescindere dall'inchiostro o meno, ogni riscrittorə ha in sé il dono dell'<b><i>epilogo</b></i>.<N>L'<b><i>epilogo</b></i> è una dichiarazione finale dellə riscrittorə che permette alla persona di mettere un punto sul presente, e iniziare a guardare al futuro in modo diverso. <N>E così lə riscrittorə può invitare Pasticcio ha vedere la sua creatività oppure ad amarsi per come è, mentre suggerirà a Temibile di esplorare il piacere della vulnerabilità, o di allacciare nuove relazioni.
             
-            Il risultato di ogni riscrittura è sempre uno: un nuovo nome per la persona che si è affidata allə riscrittorə. <N>E qui c'è forse l'incomprensione più grande attorno al ruolo dellə riscrittorə: lə riscrittorə non sceglie per l'altra persona.<N>Lə riscrittorə ascolta, guida, suggerisce. <N>Ma sta poi all'altra persone compiere una scelta. <N>Per questo a volte l'esito può essere diverso da quello sperato dallə riscrittorə, ma va bene così: il suo obiettivo non è rendere l'altra persona quello che vuole lə riscrittorə, ma aiutarla a uscire da uno stallo, e trovare un nuovo inizio, per riprendere in mano un po' della sua vita.
+            Il risultato di ogni riscrittura è sempre uno: <b>un nuovo nome</b> per la persona che si è affidata allə riscrittorə. <N>E qui c'è forse l'incomprensione più grande attorno al ruolo dellə riscrittorə: lə riscrittorə non sceglie per l'altra persona.<N>Lə riscrittorə ascolta, guida, suggerisce. <N>Ma sta poi all'altra persone compiere una scelta. <N>Per questo a volte l'esito può essere diverso da quello sperato dallə riscrittorə, ma va bene così: il suo obiettivo non è rendere l'altra persona quello che vuole lə riscrittorə, ma aiutarla a uscire da uno stallo, e trovare un nuovo inizio, per riprendere in mano un po' della sua vita.
             
             Quel nome, quel nuovo nome, è l'inizio di un percorso che la persona affronterà da sé.<N>Come è capitato a tutt3 noi del Collettivo P.K.
             
@@ -51,12 +51,12 @@
         - about_greenhouse.bookUpdate:
             Tra i consigli lasciati da U.O.J., forse il più famoso è: "il dono è la chiave del cuore". <N>Come Collettivo P.K. rifiutiamo gli assunti capitalistici alla base del ragionamento di U.O.J., e possiamo piuttosto dire: un dono è una manifestazione non verbale di un sentimento. <N>E se quella manifestazione è una dimostrazione di comprensione, allora lə riscrittorə può migliorare la relazione con la persona che ha bisogno di ləi.
             
-            Su cosa sia il dono, i pareri sono discordanti: durante il suo viaggio A.S. si ritrovò a disposizione un'officina dove creare piccoli marchingegni, mentre B.M. ha raccontato più volte il fastidio di dover montare giocattoli. <N>E ancora stiamo cercando di capire cosa intendesse W.R. con "serra concettuale". <N>A prescindere da tutto, sembra che a ogni riscrittorə venga chiesta una cosa: quella di sporcarsi le mani per creare il dono adatto.
+            Su cosa sia il dono, i pareri sono discordanti: durante il suo viaggio A.S. si ritrovò a disposizione un'officina dove creare piccoli marchingegni, mentre B.M. ha raccontato più volte il fastidio di dover montare giocattoli. <N>E ancora stiamo cercando di capire cosa intendesse W.R. con "serra concettuale". <N>A prescindere da tutto, sembra che a ogni riscrittorə venga chiesta una cosa: quella di <b>sporcarsi le mani per creare il dono adatto</b>.
     }
 
     {
         - about_kitchen.bookUpdate:
-            Se l'obiettivo di unə riscrittorə è quello di creare una relazione di fiducia con chi ha bisogno di ləi, un luogo dove avere uno scambio sullo stato della relazione diventa fondamentale. <N>Sappiamo con certezza che il rigido B.M. non ha mai trovato niente di simile durante il suo viaggio, mentre U.O.J. ha raccontato con imbarazzo la presenza di una sauna finlandese dove mettersi letteralmente a nudo. <N>W.B ci ha dato forse la spiegazione più esaustiva su una variante di questo luogo: un campo da calcetto.
+            Se l'obiettivo di unə riscrittorə è quello di creare una relazione di fiducia con chi ha bisogno di ləi, un luogo dove avere <b>uno scambio sullo stato della relazione diventa fondamentale</b>. <N>Sappiamo con certezza che il rigido B.M. non ha mai trovato niente di simile durante il suo viaggio, mentre U.O.J. ha raccontato con imbarazzo la presenza di una sauna finlandese dove mettersi letteralmente a nudo. <N>W.B ci ha dato forse la spiegazione più esaustiva su una variante di questo luogo: un campo da calcetto.
             
             Sostanzialmente W.B. invitava la persona a giocare con lui, e poi prima della partita proponeva di esplorare un tema emerso durante le loro chiacchierate. <N>Ogni scambio di pallone era uno scambio di confidenze, da entrambe le parti. <N>E a partita finita, la persona si sentiva abbastanza tranquilla da confidare a W.B. come si sentiva nel rapporto con lui (e a quanto pare W.B. non ha mai preso molto bene le critiche).
             

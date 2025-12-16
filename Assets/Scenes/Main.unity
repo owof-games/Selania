@@ -28630,7 +28630,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7e4dd8187cfb2fb42be4306ee06789fd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0faabba094d971b4a9946617a3b5cd4f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -32249,7 +32249,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2004076211}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -32264,8 +32264,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
@@ -32281,7 +32281,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2004076213}
   m_OnClick:
     m_PersistentCalls:
@@ -32318,7 +32318,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d227b6a3f5bc4804dbcada683feb33f2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 34b89200b85d8cb4ca7e89fc4a931304, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -32350,10 +32350,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1997135463}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.48775813, y: 0.31345588}
-  m_AnchorMax: {x: 0.5096164, y: 0.33518466}
-  m_AnchoredPosition: {x: 11, y: 39}
-  m_SizeDelta: {x: -1.8328, y: 19.309}
+  m_AnchorMin: {x: 0.48775807, y: 0.34809753}
+  m_AnchorMax: {x: 0.5115234, y: 0.39274088}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.00000047683716, y: -0.0000019073486}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2005502168
 GameObject:

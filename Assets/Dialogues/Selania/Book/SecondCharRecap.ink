@@ -155,7 +155,7 @@
     {rewriting_proposal_second_character.close.bookUpdate: Dopo la conversazione con {player_name}, {charNameTwo} ha scelto un nuovo nome: <b><i>{charNameTwo}.}
 
     {secondAffinityFeedback:
-        Il valore massimo di inchiostro che {player_name} ha raggiunto è stato: {fromInkToNumbers(SecondCharacter)}. <>
+        Il valore massimo di inchiostro che {player_name} ha raggiunto è stato: <b>{fromInkToNumbers(SecondCharacter)}</b>. <>
     }
 
     {
@@ -190,28 +190,28 @@
             Cucinando assieme, {charNameTwo} e {player_name} hanno preparato un buon piatto di {kitchen_secondCharRecipe}. <>
             {
                 - at_table_with_second_char.good_reaction:
-                    Dopo aver cucinato assieme, {charNameTwo} ha detto a {player_name} che gli piacciono le persone coerenti.
+                    Dopo aver cucinato assieme, {charNameTwo} ha detto a {player_name} che <b>gli piacciono le persone coerenti</b>.
 
                 - at_table_with_second_char.meh_reaction:
-                    Dopo aver cucinato assieme, {charNameTwo} ha detto a {player_name} che gli piacciono i cani, ma non gli piace quando fanno le cose a caso. Tipo correre a destra e sinistra e ovunque.Devi andare dove devi andare. Come quando si parla.
+                    Dopo aver cucinato assieme, {charNameTwo} ha detto a {player_name} che gli piacciono i cani, ma <b>non gli piace quando fanno le cose a caso</b>. Tipo correre a destra e sinistra e ovunque. Devi andare dove devi andare. Come quando si parla.
             }
     }
     {
     
         - frog_second_char_gift != "":
-            {player_name} ha chiesto un consiglio a Franco la Rana su cosa donare a {charNameTwo}, e la risposta di Franco è stata: {ingredientTranslator(frog_second_char_gift)}.
+            {player_name} ha chiesto un consiglio a Franco la Rana su cosa donare a {charNameTwo}, e la risposta di Franco è stata: <b>{ingredientTranslator(frog_second_char_gift)}</b>.
     }
         
     {
     
         - frog_second_char_ingredient != "":
-            {player_name} ha chiesto un consiglio a Franco la Rana su cosa inserire nel piatto da cucinare con {charNameTwo}, e la risposta di Franco è stata: {ingredientTranslator(frog_second_char_ingredient)}.
+            {player_name} ha chiesto un consiglio a Franco la Rana su cosa inserire nel piatto da cucinare con {charNameTwo}, e la risposta di Franco è stata: <b>{ingredientTranslator(frog_second_char_ingredient)}</b>.
     }
     
     {
     
         - frog_second_novel != "":
-            {player_name} ha chiesto un consiglio a Franco la Rana su un racconto di cui parlare con {charNameTwo}, e la risposta di Franco è stata: {frog_second_novel}.
+            {player_name} ha chiesto un consiglio a Franco la Rana su un racconto di cui parlare con {charNameTwo}, e la risposta di Franco è stata: <b>{frog_second_novel}</b>.
     }
     
     {
