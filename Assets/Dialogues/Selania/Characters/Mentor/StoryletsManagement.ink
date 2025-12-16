@@ -136,6 +136,13 @@
                 -> a_story_of_transformation      
     
     //Scene speciali
+        //Crescita olobino
+        - contentsPond has FromPondToGreenhouseBlooming && are_two_entities_together(Mentor, PG) && not about_olobino:
+            -> about_olobino
+
+        - about_olobino && are_two_entities_together(Mentor, PG) && not again_about_olobino:
+            -> again_about_olobino 
+
         //Mentore esplode
         - are_two_entities_together(Mentor, PG) && thirdChar_storyStatus == story_storyEnded and not mentor_rage:
                 -> mentor_rage
