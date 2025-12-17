@@ -98,12 +98,12 @@
     ~ mentor_storyletsForRewritingCount ++
 
         La storia di {charNameOne} mi ha colpita.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Così giovane.
+        Così giovane.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
         Così tante possibilità.
-        Eppure invece di vedere la cosa come un vantaggio, si è ritrovata bloccata.
-        Quando avevo la sua età...
-        No, queste sono frasi da vecchia.
-        E forse mi sono dimenticata di quanto possa essere facile perdere sé stesse quando si è giovani.
+        Eppure invece di vedere la cosa come un vantaggio, si è ritrovata bloccata.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
+        Quando avevo la sua età...#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+        No, queste sono frasi da vecchia.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+        E forse mi sono dimenticata di quanto possa essere facile perdere sé stesse quando si è giovani.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
             {
                 - are_two_entities_together(FirstCharacter, PG): 
                     Vuol dire che questa confusione prima o poi finisce?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
@@ -297,8 +297,8 @@
         
         Forse mi sono concentrata sulla cosa sbagliata.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         Il problema non è quello che è accaduto.
-        Il problema è che mi sono fatta coinvolgere.
-        Una mentore deve mantenere un certo distacco per guidarti.
+        Il problema è che mi sono fatta coinvolgere.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+        Una mentore deve mantenere un certo distacco per guidarti.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         Non può essere emotiva.
         Vado a riordinare in ordine di data i libri in biblioteca.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
         - (bookUpdate)

@@ -44,8 +44,8 @@
                 Ma forse intendi dire cos'è questo luogo in generale, vero?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Mmm.
                 Questo luogo non ha un nome, non che io sappia.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Per me è <b><i>Il giardino</b></i>, ma vedrai anche tu che è anche molte molte altre cose.
-                E probabilmente prenderai a chiamarlo con un nome tutto tuo.
+                Per me è <b><i>Il giardino</b></i>, ma vedrai anche tu che è anche molte molte altre cose.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                E probabilmente prenderai a chiamarlo con un nome tutto tuo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 La cosa che posso dirti con certezza è che faccio di tutto per renderlo un posto sicuro.
                 Un posto dove prenderti cura di te.
                 Non male, no?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
@@ -53,9 +53,9 @@
             + (chiSei) [Che cosa carina, che sei felice che sono qui!]
                     -> color_variation_management(Mentor, greenC)->
                 Sì!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Non mi fraintendere: non so di preciso tu chi sia.
-                Ma so <i>perché</i> sei qui.
-                E il mio di <i>perché</i> è legato alla tua presenza.
+                Non mi fraintendere: non so di preciso tu chi sia.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
+                Ma so <i>perché</i> sei qui.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                E il mio di <i>perché</i> è legato alla tua presenza.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Perché io sono la persona che tiene in piedi questo luogo, ma non solo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
                 Io sono <b><i>{translator(mentor_ActualName)}</b></i>.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral 
                 La tua {translator(mentor_ActualName)}.
@@ -64,16 +64,16 @@
             + [I binari collegano il nulla e una porta. Non ha senso.]
                     -> color_variation_management(Mentor, blueC)->
                 Uh, credo dipenda.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Nel senso.
-                Ehm.
+                Nel senso.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+                Ehm.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 I binari devono collegare cose, no?
-                E ora collegano la stazione alla foresta.
+                E ora collegano la stazione alla foresta.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
                     {
                         - firstChar_storyStatus == story_storyStarted:
-                            Ed è anche arrivata una persona prima, si è sentito il rumore del treno.
+                            Ed è anche arrivata una persona prima, si è sentito il rumore del treno.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
                             {
                                 - contentsTrainStop has PG: 
-                                    Ed è lì, di fianco a noi.
+                                    Ed è lì, di fianco a noi.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                                     {
                                         - are_two_entities_together(FirstCharacter, PG):
                                             Yup.
@@ -84,8 +84,8 @@
                             }
                     }
                 Le cose hanno.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_bored
-                Non mi devo agitare.
-                Ecco: le cose hanno il senso che gli diamo.    
+                Non mi devo agitare.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
+                Ecco: le cose hanno il senso che gli diamo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                     
             + [<i>Cerco un modo per tornare a casa.]
                     -> color_variation_management(Mentor, redC)->
@@ -99,6 +99,7 @@
                         - contentsTrainStop has PG:
                             Lì ad est troverai una porta, e ti ritroverai nella tua camera da letto.
                             Basta che ti stenderai a dormire, e tornerai nel mondo da cui vieni.
+                        
                         - else:
                             A est della stazione troverai un sentiero che ti riporterà a casa.
                     }
@@ -135,8 +136,8 @@
         Ma partiamo da una cosa fondamentale!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
         Qui avrai a che fare con cose viventi piene di storie.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         E ogni storia ha le sue complessità.
-        Per questo potresti incontrare tematiche per te faticose.
-        Ci saranno occasioni in cui potrai evitarle e non ti perderai nulla di questa esperienza.
+        Per questo potresti incontrare tematiche per te faticose.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+        Ci saranno occasioni in cui potrai evitarle e non ti perderai nulla di questa esperienza.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         Ma quando si tratta delle persone, accogliere le loro ferite farà parte del tuo lavoro.
         Sono sicura che parleranno di cose delicate nel modo migliore, ma ricorda: fermarsi o rinunciare non è un fallimento.
         Se senti il bisogno di staccare puoi tornare in camera, il posto da cui sei {player_pronouns has him:arrivato|{player_pronouns has her:arrivata|arrivatə}} e stenderti sul letto.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
@@ -145,9 +146,9 @@
         E a proposito di risposte!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
         Ti ho sbloccato la porta della serra, quell'edificio di vetro che dà sullo stagno.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
                 -> opening_places ->
-        La serra è un bel posto dove rilassarsi, e non solo.
-        Ma evita assolutamente tutti gli altri posti bloccati, perché sono pericolosi!
-        E mi stavo dimenticando di dirti cosa devi fare.
+        La serra è un bel posto dove rilassarsi, e non solo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+        Ma evita assolutamente tutti gli altri posti bloccati, perché sono pericolosi!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_bored
+        E mi stavo dimenticando di dirti cosa devi fare.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         Perché se sei qui, è per uno scopo, uno scopo davvero importante, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
 
         - (bookUpdate)
@@ -494,8 +495,8 @@
                 
         }   
     Ogni spazio aggiuntivo, inclusa la serra, è un'occasione in più per conoscere meglio le persone che stai aiutando.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-    E alcuni di questi possono anche offrirti qualche strumento che, sinceramente, nemmeno avevo calcolato.
-    Ma ricorda che non sono passaggi obbligatori.
+    E alcuni di questi possono anche offrirti qualche strumento che, sinceramente, nemmeno avevo calcolato.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+    Ma ricorda che non sono passaggi obbligatori.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
     Fai sempre e solo quello di cui senti il bisogno.
     - (bookUpdate)
     

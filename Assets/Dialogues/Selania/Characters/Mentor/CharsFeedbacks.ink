@@ -81,18 +81,18 @@
             - firstChar_ActualName ==  RagazzaOrchestra:
                 E ora {charNameOne} è pronta per cambiare città, provare qualcosa di nuovo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Con una persona a cui vuole bene.
-                Ammetto che un po' mi ha colpita questa scelta, ma perché {charNameOne} ha già vicine persone che le vogliono molto bene.
-                Ma immagino che a volte andarsene possa aiutare.
+                Ammetto che un po' mi ha colpita questa scelta, ma perché {charNameOne} ha già vicine persone che le vogliono molto bene.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
+                Ma immagino che a volte andarsene possa aiutare.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Anche se si dice che i problemi che abbiamo ci seguono quando ce ne andiamo, vero?#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                 
             - firstChar_ActualName ==  FlautoDolce:
                 E dopo il percorso fatto con te, {charNameOne} ha deciso di fare un passo enorme.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Mettere al centro della propria vita le altre persone, non è cosa da tutt3.
-                E la propria passione.
+                Mettere al centro della propria vita le altre persone, non è cosa da tutt3.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                E la propria passione.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 
             - firstChar_ActualName == Ocarina:
                 L'idea di tornare dalla sua famiglia di origine è qualcosa che mi ha fatto tremare il mio cuoricino.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                Un gesto bello.
+                Un gesto bello.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Che risponde al bisogno di ricominciare da un luogo che si conosce, anche per aiutare le altre persone.
                 E la parte più giocosa di {charNameOne} e infantile, ha trovato il suo scopo nel riabbracciare le proprie radici.
                 
@@ -105,9 +105,9 @@
         
         Non ti conosco ancora abbastanza, ma ci tengo a dirtelo: sentiti {player_pronouns has him:soddisfatto|{player_pronouns has her:soddisfatta|soddisfattə}}!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_hurry
         Questo è un lavoro complesso, ma vedrai che col tempo sarà tutto più facile.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
-        Comunque sia, direi che ti ho dato tutti gli strumenti per far sì che tu possa riscrivere storie in autonomia. 
+        Comunque sia, direi che ti ho dato tutti gli strumenti per far sì che tu possa riscrivere storie in autonomia. #speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
         Ma se avrai bisogno di aiuto per i luoghi del giardino, o un po' di supporto personale, sono qui.
-        O anche solo per due chiacchiere.
+        O anche solo per due chiacchiere.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         A dopo.
         - (bookUpdate)
 
@@ -210,17 +210,17 @@
             - secondChar_ActualName == Capibara:
                 A volte forse devo solo dirmi: non tutto il mondo può essere come vorrei.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sad
                 Il fatto che il nostro piccolo amico ora si senta un {charNameTwo} mi lascia perplessa.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
-                Non sono mai stata una grande fan de "l'unione fa la forza".
-                Ma forse tu hai visto qualcosa in quel bimbo che a me sfuggiva.
+                Non sono mai stata una grande fan de "l'unione fa la forza".#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+                Ma forse tu hai visto qualcosa in quel bimbo che a me sfuggiva.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 E un giorno diventerà un uomo responsabile.
                 Spero.
             
             - secondChar_ActualName == Corvo:
                 In cuor mio, non credo avresti potuto ottenere un esito migliore.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_hurry
                 La sua curiosità, la sua intelligenza indirizzate verso qualcosa di concreto, utile.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
-                Ce lo vedo a studiare nuovi modi per curare le persone.
+                Ce lo vedo a studiare nuovi modi per curare le persone.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
                 Per ridurre la fame nel mondo.
-                O anche solo per inventare una variante di begonia che sia completamente nera.
+                O anche solo per inventare una variante di begonia che sia completamente nera.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Ottimo lavoro, {player_name}!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_hurry
         }
         
