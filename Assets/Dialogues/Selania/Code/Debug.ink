@@ -17,9 +17,6 @@
 //Per disabilitare uscite e cose varie in caso di testing con il sistema stocastico    
     VAR debug_stochastic = false
 
-    
-    
-    
 {debug_seedRandom:
     ~ SEED_RANDOM(246)
 }
