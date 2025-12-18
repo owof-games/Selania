@@ -154,8 +154,9 @@
                 <i>Le foglie ridono quando il vento le sfiora.
                 <i>{player_name} forse ride quando non è {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}.
             -
-
-        <i>L'acqua ci ha portato le lacrime di {mentorName}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        <i>Un'amica ci disse in tempi inquieti che per trovare il sentiero della magia occorre osservare con attenzione il bimbo che gioca.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        <i>{charNameTwo} ha portato in questi spazi sentieri inaspettati.
+        <i>Così come l'acqua ci ha portato le lacrime di {mentorName}.
         <i>Questa storia per lei è stata faticosa.
         <i>Le sue radici sembrano solide, ma il tronco ondeggia a ogni accenno di burrasca.
         <i>Forse {player_name} può essere il suo sostegno.
