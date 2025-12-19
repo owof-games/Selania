@@ -198,7 +198,8 @@
 
 
 === dog_second_char
-    {player_name} {player_name} {player_name} {player_name} {player_name} <b>{player_name} </b>!!!
+    {player_name} {player_name} {player_name} {player_name} {player_name} <b>{player_name} </b>!!!speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+    In giro
     C'è#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
     In giro
     Un

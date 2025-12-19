@@ -44,6 +44,14 @@
     //                 ~ move_entity(teaKit, Bedroom)
     //             }
     // }
+        // {
+    //     - contentsBedroom hasnt teaKit:
+        
+    //         ~ move_entity(teaKit, Bedroom)
+    
+    //                 ~ saturationVar ++
+ 
+    // }
 
 ->->
 

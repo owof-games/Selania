@@ -60,7 +60,7 @@
 === gender ===
     {
         - gender == 1:
-            <i>Quali pronomi fanno sentire {player_name} la persona che è?</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            <i>Quali sono i pronomi di {player_name}?</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
 
         - else:
             E per quanto riguarda i miei pronomi:#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
