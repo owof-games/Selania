@@ -1,0 +1,381 @@
+fileFormatVersion: 2
+guid: 96a2af345dac0f94fab1e849393cccc0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5227486970328151433
+    second: Arbustini_0
+  - first:
+      213: -6468035250975468650
+    second: Arbustini_1
+  - first:
+      213: 1079345864598171847
+    second: Arbustini_2
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Arbustini_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 69
+        width: 54
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77a8b910c4c3477b0800000000000000
+      internalID: -5227486970328151433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arbustini_1
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 9
+        width: 432
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69317e6553cec36a0800000000000000
+      internalID: -6468035250975468650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arbustini_2
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 109
+        width: 58
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c03921685b9afe00800000000000000
+      internalID: 1079345864598171847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: 28.5, y: -60}
+      - {x: 86.5, y: -39}
+      - {x: 85.5, y: -35}
+      - {x: 77.5, y: -30}
+      - {x: 79.5, y: -20}
+      - {x: 42.5, y: -10}
+      - {x: 51.5, y: -6}
+      - {x: 99.5, y: -26}
+      - {x: 139.5, y: -27}
+      - {x: 140.5, y: -19}
+      - {x: 130.5, y: -11}
+      - {x: 131.5, y: -11}
+      - {x: 151.5, y: -15}
+      - {x: 204.5, y: 2}
+      - {x: 211.5, y: 21}
+      - {x: 217.5, y: 28}
+      - {x: 218.5, y: 53}
+      - {x: 193.5, y: 47}
+      - {x: 198.5, y: 78}
+      - {x: 161.5, y: 59}
+      - {x: 137.5, y: 82}
+      - {x: 39.5, y: 84}
+      - {x: -1.5, y: 78}
+      - {x: -30.5, y: 56}
+      - {x: -27.5, y: 50}
+      - {x: -38.5, y: 44}
+      - {x: -44.5, y: 32}
+      - {x: -37.5, y: 25}
+      - {x: -24.5, y: 24}
+      - {x: 8.5, y: 22}
+      - {x: 10.5, y: 24}
+      - {x: 10.5, y: 22}
+      - {x: 4.5, y: 20}
+      - {x: -13.5, y: 23}
+      - {x: -15.5, y: 21}
+      - {x: -40.5, y: 20}
+      - {x: -87.5, y: 39}
+      - {x: -109.5, y: 10}
+      - {x: -157.5, y: 19}
+      - {x: -174.5, y: 13}
+      - {x: -200.26738, y: 21.575546}
+      - {x: -219.5, y: 36}
+      - {x: -225.5, y: 36}
+      - {x: -225.5, y: 29}
+      - {x: -211.98102, y: 1.9620209}
+      - {x: -227.5, y: -19}
+      - {x: -219.5, y: -48}
+      - {x: -137.5, y: -82}
+      - {x: -84.5, y: -81}
+    - - {x: 78.5, y: 56}
+      - {x: 80.5, y: 58}
+      - {x: 80.5, y: 61}
+      - {x: 82.5, y: 59}
+      - {x: 84.5, y: 59}
+      - {x: 89.5, y: 61}
+      - {x: 89.5, y: 60}
+      - {x: 85.5, y: 59}
+      - {x: 83.5, y: 57}
+      - {x: 78.5, y: 54}
+    - - {x: 9.5, y: 45}
+      - {x: 1.5, y: 46}
+      - {x: 2.5, y: 49}
+      - {x: 12.5, y: 44}
+    - - {x: 101.5, y: 41}
+      - {x: 100.5, y: 45}
+      - {x: 102.5, y: 44}
+      - {x: 102.5, y: 41}
+    - - {x: 149.5, y: 18}
+      - {x: 149.5, y: 19}
+      - {x: 153.5, y: 19}
+      - {x: 152.5, y: 18}
+    - - {x: 35.5, y: 15}
+      - {x: 35.5, y: 16}
+      - {x: 36.5, y: 15}
+    - - {x: -12.5, y: 3}
+      - {x: -12.5, y: 2}
+      - {x: -15.125, y: 1.25}
+    - - {x: -19.5, y: 0}
+      - {x: -19.75, y: 0.25}
+      - {x: -17.5, y: 1}
+      - {x: -16, y: 1}
+    - - {x: -114.5, y: -13}
+      - {x: -116.5, y: -11}
+      - {x: -129.5, y: -5}
+      - {x: -133.5, y: -5}
+      - {x: -134.5, y: -2}
+      - {x: -136.5, y: 0}
+      - {x: -132.5, y: -2}
+      - {x: -127.5, y: -4}
+      - {x: -122.5, y: -5}
+      - {x: -114.5, y: -9}
+      - {x: -111.5, y: -9}
+      - {x: -109.5, y: -11}
+      - {x: -109.5, y: -12}
+      - {x: -108.5, y: -15}
+      - {x: -107.86842, y: -15.947372}
+    - - {x: -7.5, y: -3}
+      - {x: -7.5, y: -2}
+      - {x: -5.5, y: -3}
+    - - {x: 4.5, y: -4}
+      - {x: 5.5, y: -3}
+      - {x: 5.5, y: -4}
+    - - {x: -88.5, y: -5}
+      - {x: -88.83333, y: -5}
+      - {x: -88.16667, y: -4.5}
+      - {x: -86.5, y: -7}
+    - - {x: -94.5, y: -14}
+      - {x: -97.5, y: -12}
+      - {x: -99.5, y: -8}
+      - {x: -95.5, y: -8}
+      - {x: -94.5, y: -7}
+      - {x: -92.100006, y: -7}
+      - {x: -94.5, y: -10}
+    - - {x: -82.5, y: -9}
+      - {x: -83.5, y: -9}
+      - {x: -84.83333, y: -7.6666718}
+      - {x: -81.5, y: -9}
+      - {x: -76.5, y: -10}
+      - {x: -71.5, y: -12}
+      - {x: -73.5, y: -15}
+    - - {x: 8, y: -10.5}
+      - {x: 8.5, y: -11}
+      - {x: 8.5, y: -13}
+      - {x: 7.5, y: -14}
+    - - {x: -48.5, y: -26}
+      - {x: -48.5, y: -25}
+      - {x: -47.5, y: -26}
+    - - {x: -45.5, y: -27}
+      - {x: -44.5, y: -26}
+      - {x: -39.83333, y: -25.222229}
+      - {x: -42.5, y: -27}
+    - - {x: -157.5, y: -37}
+      - {x: -157.5, y: -36}
+      - {x: -155.5, y: -36}
+      - {x: -154.5, y: -35}
+      - {x: -150.5, y: -35}
+      - {x: -149.5, y: -34}
+      - {x: -147.5, y: -34}
+      - {x: -145.5, y: -37}
+    - - {x: 9.115387, y: -40.92308}
+      - {x: 10.5, y: -40}
+      - {x: 9.5, y: -41}
+    - - {x: -14.5, y: -48}
+      - {x: -12.5, y: -47}
+      - {x: -7.5, y: -43}
+      - {x: -3.5, y: -42}
+      - {x: -2.5, y: -41}
+      - {x: -3.5, y: -44}
+      - {x: -5.5, y: -44}
+      - {x: -14.5, y: -49}
+    - - {x: -70.5, y: -43}
+      - {x: -70.5, y: -42}
+      - {x: -68.5, y: -44}
+    - - {x: -133.5, y: -48}
+      - {x: -134.5, y: -46}
+      - {x: -133.5, y: -47}
+      - {x: -130.5, y: -47}
+      - {x: -129.5, y: -48}
+      - {x: -126.5, y: -48}
+      - {x: -125.5, y: -49}
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Arbustini_0: -5227486970328151433
+      Arbustini_1: -6468035250975468650
+      Arbustini_2: 1079345864598171847
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
