@@ -28,21 +28,23 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-    -> storage_colors(FirstCharacter)->
-    -> cooking_animations_on ->
-
+    
     Sai {charNameOne}, mentre cuciniamo potremmo parlare un po'.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
     
     - (top)
     In particolare, ripensando alle nostre conversazioni, mi farebbe piacere parlare di più...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
         
         + [Dei rapporti che hai con le persone che ti sono care.]
+                -> storage_colors(FirstCharacter)->
+                -> cooking_animations_on ->
                 -> first_theme
                 
 
         + [{first_char_main_storylets.six: Del bisogno di fare qualcosa che salvi il mondo.|<i>{player_name} deve parlare ancora con {charNameOne} per sbloccare questo tema.</i>}]
             {
                 - first_char_main_storylets.six:
+                    -> storage_colors(FirstCharacter)->
+                    -> cooking_animations_on ->
                     -> second_theme
                 
                 - else:
@@ -53,6 +55,8 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             {
             
                 - first_char_main_storylets.nine:
+                    -> storage_colors(FirstCharacter)->
+                    -> cooking_animations_on ->
                     -> third_theme
                 
                 - else:

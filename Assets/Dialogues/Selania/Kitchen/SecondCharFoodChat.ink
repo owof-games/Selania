@@ -32,8 +32,6 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-    -> storage_colors(SecondCharacter)->
-    -> cooking_animations_on ->
     
     Sai {charNameTwo}, mentre cuciniamo potremmo parlare un po'.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
         - (top)
@@ -46,6 +44,8 @@
             + [{second_char_main_storylets.six: Della scuola.|<i>{player_name} deve parlare ancora con {charNameTwo} per sbloccare questo tema.</i>}]
                 {
                     - second_char_main_storylets.six:
+                        -> storage_colors(SecondCharacter)->
+                        -> cooking_animations_on ->
                         -> second_theme
                     
                     - else:
@@ -56,6 +56,8 @@
                 {
                 
                     - second_char_main_storylets.eight:
+                        -> storage_colors(SecondCharacter)->
+                        -> cooking_animations_on ->
                         -> third_theme
                     
                     - else:
