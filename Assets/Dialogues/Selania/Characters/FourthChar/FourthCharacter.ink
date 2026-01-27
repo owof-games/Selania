@@ -786,7 +786,7 @@ Stai per donare qualcosa a {charNameThree}.
             ~ fourthChar_InkLevel = ink_empty
             ~ player_movementsCounter = 0
             ~ numberQuestion = 0
-            ~ PG_advance_management(FourthCharacter)
+            ~ state_ending_stories(FourthCharacter)
         -> main
     
     

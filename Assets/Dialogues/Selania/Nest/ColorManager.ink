@@ -12,8 +12,10 @@ LIST nest_colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
 //Contatore d'uso della parola    
     VAR temporaryWordUsageCounter = 0
 
+//Check se modificare o meno stato colore PG
+LIST nest_varpg_status = varPGYes, varPGNo
 
-=== color_variation_management(PNG, Color)
+=== color_variation_management(PNG, Color, VARPG)
 {debug_nest: passo per color_variation_management. Il valore di PNG è {PNG}, il valore di colore è {Color}. Lo stato della parola attiva è {nest_activeEmotionalWord}.}
 //Primo step: capiamo di chi si parla.
 
@@ -35,7 +37,7 @@ LIST nest_colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
     	        {Color:
                     -redC:
                         ~ player_red ++
-             
+                
                     -yellowC:
                         ~ player_yellow ++
                     
@@ -53,6 +55,69 @@ LIST nest_colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
     	    
         - else: ERROR: sono in color_variation_management ma non trovo lx PNG indicatx
     }
+
+//Secondo step: aggiorniamo colori PG se stato positivo
+//Nota: per ora sono tutti i varPGYes, da valutare lato design che farne
+{VARPG == varPGYes:
+    {debug_nest: cambio il colore della PG, perché è la prima volta per questa scelta.}
+    
+    {
+        - PNG == FirstCharacter:
+        	    {Color:
+                    -redC:
+                        ~ player_red_first_char ++
+                
+                    -yellowC:
+                        ~ player_yellow_first_char ++
+                    
+                    -blueC:
+                        ~ player_blue_first_char ++
+                    
+                    -greenC:
+                        ~ player_green_first_char ++   
+                    
+                    -purpleC:
+                        ~ player_purple_first_char ++
+                }
+        	 
+        - PNG == SecondCharacter:
+        	    {Color:
+                    -redC:
+                        ~ player_red_second_char ++
+                
+                    -yellowC:
+                        ~ player_yellow_second_char ++
+                    
+                    -blueC:
+                        ~ player_blue_second_char ++
+                    
+                    -greenC:
+                        ~ player_green_second_char ++   
+                    
+                    -purpleC:
+                        ~ player_purple_second_char ++
+                }
+        	 
+        - PNG == Mentor:
+        	  {Color:
+                    -redC:
+                        ~ player_red_mentor ++
+                
+                    -yellowC:
+                        ~ player_yellow_mentor ++
+                    
+                    -blueC:
+                        ~ player_blue_mentor ++
+                    
+                    -greenC:
+                        ~ player_green_mentor ++   
+                    
+                    -purpleC:
+                        ~ player_purple_mentor ++
+            }
+
+    }
+}    
 
 
 //Secondo step: se nest_activeEmotionalWord, andiamo a un nodo di verifica ad hoc per le parole magiche, altrimenti proseguiamo regolarmente.

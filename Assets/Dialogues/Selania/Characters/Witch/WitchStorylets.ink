@@ -66,7 +66,7 @@
         <i>{player_name} cosa si domanda?
         
             + [Posso sfiorarti?]
-                    -> color_variation_management(PG, greenC)->
+                    -> color_variation_management(PG, greenC, varPGYes)->
                 <i>{player_name} sente la voce del Canto delle Compagne.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>{player_name} realizza che è {player_pronouns has him:collegato|{player_pronouns has her:collegata|collegatə}} a {charNameOne}.
                <i>A {charNameTwo}.
@@ -76,7 +76,7 @@
                 <i>E quel ricordo, {player_name}, è il tuo sfiorarci.
                 
             + [Ehi tu, esci dalla mia testa! Subito!]
-                    -> color_variation_management(PG, redC)->
+                    -> color_variation_management(PG, redC, varPGYes)->
                 <i>Non siamo nella testa di {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Non più di quanto {player_name} sia nella sua stessa testa.
                 <i>Non meno di quanto {player_name} sia nella nostra.
@@ -84,7 +84,7 @@
                 <i>E questa è una cosa che non è e non sarà.
                 
             + [Le piante non possono parlare.]
-                    -> color_variation_management(PG, blueC)->
+                    -> color_variation_management(PG, blueC, varPGYes)->
                 <i>Le piante raccontano storie da notte a giorno. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>E noi non siamo una pianta.
                 <i>Ma siamo una pianta.
@@ -99,13 +99,13 @@
                 <i>Da te.
                 
             + [Ci piace la gioia!]
-                    -> color_variation_management(PG, yellowC)->
+                    -> color_variation_management(PG, yellowC, varPGYes)->
                 <i>E a noi piace {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>E tutte le emozioni che genera con le sue azioni.
                 <i>E tutti i tempi che {player_name} vive, ha vissuto e vivrà.
             
             + [La tua voce mi guida dal mio arrivo.]
-                    -> color_variation_management(PG, purpleC)->
+                    -> color_variation_management(PG, purpleC, varPGYes)->
                 <i>E la tua guida noi, {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>La separazione è una illusione.
                 <i>{player_name} è noi, noi siamo {charNameOne}.
@@ -191,19 +191,19 @@
         E ci spiega che la manipolazione è un intento, non qualcosa di inerente all'oggetto, o al nido.
         
         + [Scelta verde.]
-            -> color_variation_management(PG, greenC)->
+            -> color_variation_management(PG, greenC, varPGYes)->
             
         + [Scelta rossa.]
-            -> color_variation_management(PG, redC)->
+            -> color_variation_management(PG, redC, varPGYes)->
             
         + [Scelta blu.]
-            -> color_variation_management(PG, blueC)->
+            -> color_variation_management(PG, blueC, varPGYes)->
      
         + [Scelta gialla.]
-            -> color_variation_management(PG, yellowC)->
+            -> color_variation_management(PG, yellowC, varPGYes)->
  
         + [Scelta viola.]
-            -> color_variation_management(PG, purpleC)->
+            -> color_variation_management(PG, purpleC, varPGYes)->
         - (bookUpdate)       
             -> main  
 
@@ -220,19 +220,19 @@
     Compare lo sfondo stellato.
     
         + [Scelta verde.]
-            -> color_variation_management(PG, greenC)->
+            -> color_variation_management(PG, greenC, varPGYes)->
             
         + [SCelta rossa.]
-            -> color_variation_management(PG, redC)->
+            -> color_variation_management(PG, redC, varPGYes)->
             
         + [Scelta blu.]
-            -> color_variation_management(PG, blueC)->
+            -> color_variation_management(PG, blueC, varPGYes)->
      
         + [Scelta gialla.]
-            -> color_variation_management(PG, yellowC)->
+            -> color_variation_management(PG, yellowC, varPGYes)->
  
         + [Scelta viola.]
-            -> color_variation_management(PG, purpleC)->
+            -> color_variation_management(PG, purpleC, varPGYes)->
         -        
     Cose.
     ~ move_entity(vase, Bedroom)

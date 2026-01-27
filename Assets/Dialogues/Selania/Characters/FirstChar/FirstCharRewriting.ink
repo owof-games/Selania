@@ -93,7 +93,7 @@
         Tu dici che sei un <b>concentrato di rinunce</b>.
 
             + [Ma l'hai detto anche tu: razionalmente, non si può avere tutto. ]
-                -> color_variation_management(FirstCharacter, blueC)->
+                -> color_variation_management(FirstCharacter, blueC, varPGYes)->
                 Non è rinuncia quindi: è accogliere la vita adulta.
                 E imparare come compiere delle scelte, dove andare.
               {
@@ -103,20 +103,20 @@
                 }
 
             + [Però per la prima volta sei innamorata, innamorata davvero.]
-                -> color_variation_management(FirstCharacter, greenC)->
+                -> color_variation_management(FirstCharacter, greenC, varPGYes)->
                 Ti sei chiesta se Ennio non sia la tua casa, il tuo rifugio.
                 Non hai certo rinunciato all'amore.
                {first_char_main_storylets.ten: Un amore che hai detto essere come pane appena sfornato.}
             
             + [Però hai abbracciato la lotta, la voglia di cambiare le cose.]
-                -> color_variation_management(FirstCharacter, redC)->
+                -> color_variation_management(FirstCharacter, redC, varPGYes)->
                 Con le tue colleghe sul lavoro.
                 Con La Rifugia.
                 L'hai detto prima: è stato bello dire "no".
                 Alcune rinunce ti hanno resa potente.
                 
             + [Sorprendi te stessa e fai qualcosa di assurdo, vai da Talco!]
-                -> color_variation_management(FirstCharacter, yellowC)->
+                -> color_variation_management(FirstCharacter, yellowC, varPGYes)->
                 La cartolina è una porta aperta: Talco ti attende.
                {
                 - first_char_main_storylets.eleven: 
@@ -129,7 +129,7 @@
                 }
             
             + [Hai detto che quando rinunci a te creando, trovi tutto.]
-                -> color_variation_management(FirstCharacter, purpleC)->
+                -> color_variation_management(FirstCharacter, purpleC, varPGYes)->
                 E anche se ti incasina scrivere di politica, stai cercando nella musica un modo per cambiare le cose.
                 A volte forse rinunciare è utile per andare avanti.
             -
@@ -160,17 +160,17 @@
         Eppure...
        
             + [Talco e un'ondata di cambiamenti ti aspettano in Islanda.]
-                -> color_variation_management(FirstCharacter, redC)->
+                -> color_variation_management(FirstCharacter, redC, varPGYes)->
                 Pensavi Ennio fosse noioso, e te ne sei innamorata.
                 La vita ci sorprende sempre quando si tratta di relazioni.
                
             + [Hai di più: hai La Rifugia e le tue coinquiline.]
-                -> color_variation_management(FirstCharacter, purpleC)->
+                -> color_variation_management(FirstCharacter, purpleC, varPGYes)->
                 Le tue relazioni creano cose che rimangono, anche se le relazioni stesse dovessero finire.
                 Con le persone che ami sei trasformazione.
                 
             + [Hai un innamorato che ti ha chiesto di convivere.]
-                -> color_variation_management(FirstCharacter, greenC)->
+                -> color_variation_management(FirstCharacter, greenC, varPGYes)->
                 Un innamorato che ti fa sentire solida.
                 Con cui hai potuto svolazzare, conoscerti al meglio.
                 {first_char_main_storylets.ten: Con cui puoi stare piacevolmente in silenzio.}
@@ -181,7 +181,7 @@
                 }
                 
             + [Ma le aspettative non sono fatti.]
-                -> color_variation_management(FirstCharacter, blueC)->
+                -> color_variation_management(FirstCharacter, blueC, varPGYes)->
                 Ed essere adulti significa sopravvivere alle proprie aspettative.
                 Ma non è una sconfitta.
                {
@@ -191,7 +191,7 @@
                 }
             
             + [Ma chi ce l'ha un papà con cui suonare e ubriacarsi?!?]
-                -> color_variation_management(FirstCharacter, yellowC)->
+                -> color_variation_management(FirstCharacter, yellowC, varPGYes)->
                 I tuoi genitori hanno fatto enormi sacrifici per permetterti di studiare.
                 Palese che ti vogliono un bene immenso.
                {
@@ -223,7 +223,7 @@
         Ti aspettavi di fare qualcosa di buono, di salvare il mondo con le tue canzoni.
     
             + [Ma se il gioco è rotto, l'unica vittoria c'è rompendo le regole.]
-                    -> color_variation_management(FirstCharacter, yellowC)->
+                    -> color_variation_management(FirstCharacter, yellowC, varPGYes)->
                 Il mondo è duro da cambiare, ma l'esempio è una gran cosa.
                 Rompere le aspettative, l'ovvio, è rivoluzionario.
                 {
@@ -232,7 +232,7 @@
                 }
 
             + [È questione di numeri: nessunə salva il mondo da solə.]
-                    -> color_variation_management(FirstCharacter, blueC)->
+                    -> color_variation_management(FirstCharacter, blueC, varPGYes)->
                 È inevitabile, ma non è un fallimento.
                 {
                     - first_char_main_storylets.twelve:
@@ -241,7 +241,7 @@
                 }
             
             + [Con La Rifugia ti sei data uno scopo più grande.]
-                -> color_variation_management(FirstCharacter, purpleC)->
+                -> color_variation_management(FirstCharacter, purpleC, varPGYes)->
                E anche le tue amiche che sono tornate nei paesini, hanno fatto grandi cose.
                {
                     - cooking_with_first_char.second_theme:
@@ -253,14 +253,14 @@
                 }
 
             + [Con le tue colleghe stai portando la lotta grande in qualcosa di piccolo.]
-                -> color_variation_management(FirstCharacter, redC)->
+                -> color_variation_management(FirstCharacter, redC, varPGYes)->
                 Pensa a quello che avete fatto contro il dirigente venuto a pranzo.
                 Al tentativo di fare un sindacato.
                 Hai trovato un modo di lottare anche senza la musica.
                 
                     
             + [Ma potresti fare qualcosa di buono anche prendendoti cura dei tuoi genitori.]
-                -> color_variation_management(FirstCharacter, greenC)->
+                -> color_variation_management(FirstCharacter, greenC, varPGYes)->
                 {
                     -food_gift_first_char: 
                         Magari scoprendo come capire tua madre cucinando assieme.
@@ -296,12 +296,12 @@
             Ti senti mediocre, e hai paura di rischiare di fare un salto e perdere tutto, di fallire.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
     
             + [Come nei giochi, si può sbagliare e ricominciare.]
-                -> color_variation_management(FirstCharacter, yellowC)->
+                -> color_variation_management(FirstCharacter, yellowC, varPGYes)->
                 Lo dice Ennio quando gioca.
                 L'hai visto quando Talco ha mollato il Conservatorio, eppure si è fattə la sua vita.
                 
             + [Sei amata da molte persone: anche se cadi, non sarai sola.]
-                -> color_variation_management(FirstCharacter, greenC)->
+                -> color_variation_management(FirstCharacter, greenC, varPGYes)->
                 Le tue amiche, Ennio, Talco, la tua famiglia.
                 Se dovessi cadere, avrai una rete pronta ad aiutarti.
                 {
@@ -311,12 +311,12 @@
                 }
             
             + [La musica e ciò che ti permette di fare saranno sempre con te.]
-                -> color_variation_management(FirstCharacter, purpleC)->
+                -> color_variation_management(FirstCharacter, purpleC, varPGYes)->
                 Puoi raccontare storie mai sentite.
                 Continuare a provare a cambiare il mondo come vorresti.
                
             + [La mediocrità non è una colpa ma un risultato statistico.]
-                -> color_variation_management(FirstCharacter, blueC)->
+                -> color_variation_management(FirstCharacter, blueC, varPGYes)->
                 Ennio è felice nel suo non cercare di essere speciale.
                 La mediocrità non è una colpa, ma solo un risultato statistico.
                 {
@@ -326,7 +326,7 @@
                 }
             
             + [Talco ha rischiato, parlandoti della sua gravidanza.]
-                -> color_variation_management(FirstCharacter, redC)->
+                -> color_variation_management(FirstCharacter, redC, varPGYes)->
                E tu lo hai fatto con l'organizzazione sindacale.
                Con La Rifugia.
                 {
@@ -373,23 +373,23 @@
 
             + (red) [Rivoluziona la tua vita, raggiungi Talco in Islanda.]
             //me ne vado all’estero da Talco.
-                -> color_variation_management(FirstCharacter, redC)->
+                -> color_variation_management(FirstCharacter, redC, varPGYes)->
             
             + (purple) [La musica ti dà uno scopo più grande. Seguila.]
             // mollo il lavoro per la musica, per far qualcosa di buono per le altre persone.
-                 -> color_variation_management(FirstCharacter, purpleC)->         
+                 -> color_variation_management(FirstCharacter, purpleC, varPGYes)->         
             
             + (yellow) [Torna alla tua infanzia, dai tuoi e ricomincia da dove sei cresciuta.]
             //torno al sud, ricomincio al sicuro.
-                -> color_variation_management(FirstCharacter, yellowC)->
+                -> color_variation_management(FirstCharacter, yellowC, varPGYes)->
                 
             + (green) [L'amore e la stabilità di Ennio sono la base per poter cambiare.]
             //me ne vado a vivere col moroso.
-                -> color_variation_management(FirstCharacter, greenC)->
+                -> color_variation_management(FirstCharacter, greenC, varPGYes)->
                 
             + (blue) [Eppure hai oggettivamente una vita ricca. Goditela.]
             //trovare il bello in quello che si ha (per la gioia di Mentore).
-                -> color_variation_management(FirstCharacter, blueC)->   
+                -> color_variation_management(FirstCharacter, blueC, varPGYes)->   
             - 
 
         //Nota: la parte di accettazione del nome è prima dell'aggiornamento, così il nome nuovo compare solo quando viene dichiarato.    
@@ -570,7 +570,7 @@
             ~ story_endedStories += story_firstCharStoryEnded
             ~ firstChar_storyStatus = story_storyEnded
             ~ player_movementsCounter = 0
-            ~ PG_advance_management(FirstCharacter)
+            ~ state_ending_stories(FirstCharacter)
             
             Credo resterò ancora un po' in giro.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             Ma senza altri pipponi per te, promesso!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious

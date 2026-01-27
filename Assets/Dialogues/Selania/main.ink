@@ -3,7 +3,7 @@
 {debug and (library_shortStories + library_averageStories + library_longStories) != library_unreadStories:
     Errore nella biblioteca!
     -> DONE
-}
+} 
 
 {
 //disabilito missione rana con passaggio da libro riscrittora, così da non doverlo attivare durante testing stocastico

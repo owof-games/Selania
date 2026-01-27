@@ -13,18 +13,49 @@
     VAR kitchen_PGCharRecipe = ""   
 
 //Tracciamento colori giocatrice
+    //Colori con cui traccio le scelte che riguardano "solo" me
     VAR player_purple = 0.00
     VAR player_yellow = 0.00
     VAR player_blue = 0.00
     VAR player_green = 0.00
     VAR player_red = 0.00
-
+    
+    //Scelte prima pg
+    VAR player_purple_first_char = 0.00
+    VAR player_yellow_first_char = 0.00
+    VAR player_blue_first_char = 0.00
+    VAR player_green_first_char = 0.00
+    VAR player_red_first_char = 0.00
+    
+    //Scelte secondo pg
+    VAR player_purple_second_char = 0.00
+    VAR player_yellow_second_char = 0.00
+    VAR player_blue_second_char = 0.00
+    VAR player_green_second_char = 0.00
+    VAR player_red_second_char = 0.00
+    
+    //Scelte mentore
+    VAR player_purple_mentor = 0.00
+    VAR player_yellow_mentor = 0.00
+    VAR player_blue_mentor = 0.00
+    VAR player_green_mentor = 0.00
+    VAR player_red_mentor = 0.00
+    
+    //Scelte terzo pg
+    VAR player_purple_third_char = 0.00
+    VAR player_yellow_third_char = 0.00
+    VAR player_blue_third_char = 0.00
+    VAR player_green_third_char = 0.00
+    VAR player_red_third_char = 0.00
+    
+    
+    
 //Per funzione aggiornamento colore: tengono conto del valore di quel colore dellx PNG la cui storia è stata appena conclusa
-    VAR temp_endedPNGRed = 0.00
-    VAR temp_endedPNGGreen = 0.00
-    VAR temp_endedPNGBlue = 0.00
-    VAR temp_endedPNGYellow = 0.00
-    VAR temp_endedPNGPurple  = 0.00    
+    VAR temp_PGRed = 0.00
+    VAR temp_PGGreen = 0.00
+    VAR temp_PGBlue = 0.00
+    VAR temp_PGYellow = 0.00
+    VAR temp_PGPurple  = 0.00    
     
 
 // Lista che indica i possibli esiti delle varie sezioni dell'albero
@@ -116,19 +147,17 @@
         - 
             ->->
 
-=== function PG_advance_management(charES)
+
+
+
+
+=== function state_ending_stories(charES)
+{debug: <i>Passo per state_ending_stories. Il valore di charES è {charES}.}
 //Chiamo questa funzione a fine di una riscrittura, inserendo il valore della personaggia (es: player_firstStepClosed).
 //Controllo quante sono le storie concluse, in modo da poter inserire quella personaggia nell'ordine di conclusione delle storie previsto (es: se c'è già una storia chiusa in story_endedStories e ho chiuso player_firstStepClosed, allora metterò firstChar_storyEndingPosition come story_twoStoriesClosed.
-
-//resetto player_orderGrowingTreeUpdater 
-~ player_orderGrowingTreeUpdater = ()
-
-{debug: <i>Passo per PG_advance_management. Il valore di charES è {charES}.}
-
 {
 	- LIST_COUNT(story_endedStories) == 1:
 	   {debug: <i>L'elenco di oggetti nella lista endendStories è {story_endedStories}, pari a 1. Per questo vado ad assegnare il valore di prima storia finita a {charES}.}
-		~ player_orderGrowingTreeUpdater = player_firstStepClosed
 		{
 			- charES == FirstCharacter:
 				~ firstChar_storyEndingPosition = story_oneStoryClosed
@@ -144,7 +173,6 @@
 		}
 		
 	- LIST_COUNT(story_endedStories) == 2:
-		~ player_orderGrowingTreeUpdater = player_secondStepClosed
 		{
 			- charES == FirstCharacter:
 				~ firstChar_storyEndingPosition = story_twoStoriesClosed
@@ -161,7 +189,6 @@
 		
 		
 	 - LIST_COUNT(story_endedStories) == 3:
-		~ player_orderGrowingTreeUpdater = player_thirdStepClosed
 		{
 			- charES == FirstCharacter:
 				~ firstChar_storyEndingPosition = story_threeStoriesClosed
@@ -178,42 +205,65 @@
 }
 
 
-{debug: <i>Ho finito di assegnare l'ordine di conclusione delle storie, e passo ad aggiornare i colori.}
+=== function tree_advance_management(charES)
+//resetto player_orderGrowingTreeUpdater 
+{debug: <i>Passo per PG_advance_management. Il valore di charES è {charES}.}
 
+//Prima cosa: svuoto i valori temporanei
+    ~ player_orderGrowingTreeUpdater = ()
+	~ temp_PGGreen = ()
+	~ temp_PGBlue = ()
+	~ temp_PGRed = ()
+	~ temp_PGYellow = ()
+	~ temp_PGPurple = ()
+	
+//Seconda cosa: aggiorno lo step di 
     {
-        - charES == FirstCharacter:
-            ~ temp_endedPNGRed = firstChar_red
-            ~ temp_endedPNGGreen = firstChar_green
-            ~ temp_endedPNGBlue = firstChar_blue
-            ~ temp_endedPNGYellow = firstChar_yellow
-            ~ temp_endedPNGPurple = firstChar_purple
-            
-        - charES == SecondCharacter:
-            ~ temp_endedPNGRed = secondChar_red
-            ~ temp_endedPNGGreen = secondChar_green
-            ~ temp_endedPNGBlue = secondChar_blue
-            ~ temp_endedPNGYellow = secondChar_yellow
-            ~ temp_endedPNGPurple = secondChar_purple
-            
+    	- LIST_COUNT(story_endedStories) == 1:
+    	   {debug: <i>L'elenco di oggetti nella lista endendStories è {story_endedStories}, pari a 1. Per questo vado ad assegnare il valore di prima storia finita a {charES}.}
+    		~ player_orderGrowingTreeUpdater = player_firstStepClosed
+    
+    		
+    	- LIST_COUNT(story_endedStories) == 2:
+    		~ player_orderGrowingTreeUpdater = player_secondStepClosed
+    	
+    		
+    	 - LIST_COUNT(story_endedStories) == 3:
+    		~ player_orderGrowingTreeUpdater = player_thirdStepClosed
     
     }
 
-    //Qui aggiorno i valori delle scelte della player
-    ~ player_red = player_red + temp_endedPNGRed
-        {debug: Il valore di PlayerRed è {player_red}}
-    ~ player_purple = player_purple + temp_endedPNGPurple
-        {debug: Il valore di player_purple è {player_purple}}
-    ~ player_green = player_green + temp_endedPNGGreen
-        {debug: Il valore di player_green è {player_green}}
-    ~ player_yellow = player_yellow + temp_endedPNGYellow
-        {debug: Il valore di player_yellow è {player_yellow}}
-    ~ player_blue = player_blue + temp_endedPNGBlue
-        {debug: Il valore di player_blue è {player_blue}}
-
-
-    //E poi confronto quella che è la storia della personaggia, la progressione delle sue scelte: di fatto per ora basta che non ci siano pareggi tra colori per evitare il marrone. A quel punto emerge il colore dominante.
+//Terza cosa: a seconda della personaggia che se ne va, devo aggiornare i valori temporanei dei colori della PG
     {
-        - (player_green > player_blue) && (player_green > player_red) && (player_green > player_yellow) && (player_green > player_purple):
+		- charES == FirstCharacter:
+			~ temp_PGGreen = player_green_first_char
+			~ temp_PGBlue = player_blue_first_char
+			~ temp_PGRed = player_red_first_char
+			~ temp_PGYellow = player_yellow_first_char
+			~ temp_PGPurple = player_purple_first_char
+		
+		
+		- charES == SecondCharacter:
+			~ temp_PGGreen = player_green_second_char
+			~ temp_PGBlue = player_blue_second_char
+			~ temp_PGRed = player_red_second_char
+			~ temp_PGYellow = player_yellow_second_char
+			~ temp_PGPurple = player_purple_second_char
+		
+					
+		- charES == ThirdCharacter:
+			~ temp_PGGreen = player_green_third_char
+			~ temp_PGBlue = player_blue_third_char
+			~ temp_PGRed = player_red_third_char
+			~ temp_PGYellow = player_yellow_third_char
+			~ temp_PGPurple = player_purple_third_char
+			
+		}
+
+
+//E poi confronto quella che è la storia della personaggia, la progressione delle sue scelte: di fatto per ora basta che non ci siano pareggi tra colori per evitare il marrone. A quel punto emerge il colore dominante.
+    {
+        - (temp_PGGreen > temp_PGBlue) && (temp_PGGreen > temp_PGRed) && (temp_PGGreen > temp_PGYellow) && (temp_PGGreen > temp_PGPurple):
             
             {
                 - player_orderGrowingTreeUpdater == player_firstStepClosed:
@@ -235,7 +285,7 @@
                         ERRORE
             }
         
-        - (player_blue > player_green) && (player_blue > player_red) && (player_blue > player_yellow) && (player_blue > player_purple):
+        - (temp_PGBlue > temp_PGGreen) && (temp_PGBlue > temp_PGRed) && (temp_PGBlue > temp_PGYellow) && (temp_PGBlue > temp_PGPurple):
             {
                 - player_orderGrowingTreeUpdater == player_firstStepClosed:
                     ~ player_firstStepStatus = ()
@@ -257,7 +307,7 @@
                         ERRORE
             }        
         
-        - (player_red > player_green) && (player_red > player_blue) && (player_red > player_yellow) && (player_red > player_purple):
+        - (temp_PGRed > temp_PGGreen) && (temp_PGRed > temp_PGBlue) && (temp_PGRed > temp_PGYellow) && (temp_PGRed > temp_PGPurple):
             {
                 - player_orderGrowingTreeUpdater == player_firstStepClosed:
                     ~ player_firstStepStatus = ()
@@ -279,7 +329,7 @@
                         ERRORE
             }    
         
-        - (player_yellow > player_green) && (player_yellow > player_blue) && (player_yellow > player_red) && (player_yellow > player_purple):
+        - (temp_PGYellow > temp_PGGreen) && (temp_PGYellow > temp_PGBlue) && (temp_PGYellow > temp_PGRed) && (temp_PGYellow > temp_PGPurple):
             {
                 - player_orderGrowingTreeUpdater == player_firstStepClosed:
                     ~ player_firstStepStatus = ()
@@ -301,7 +351,7 @@
                         ERRORE
             }    
         
-        - (player_purple > player_green) && (player_purple > player_blue) && (player_purple > player_red) && (player_purple > player_yellow):
+        - (temp_PGPurple > temp_PGGreen) && (temp_PGPurple > temp_PGBlue) && (temp_PGPurple > temp_PGRed) && (temp_PGPurple > temp_PGYellow):
             {
                 - player_orderGrowingTreeUpdater == player_firstStepClosed:
                     ~ player_firstStepStatus = ()

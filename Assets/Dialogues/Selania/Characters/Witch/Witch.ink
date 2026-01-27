@@ -49,14 +49,14 @@
         <i>Osserviamo {player_name} e ci chiediamo cosa provi dopo aver aiutato {charNameOne}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
             + [Mi chiedo se sono all'altezza di tutto questo.]
-                    -> color_variation_management(PG, greenC)->
+                    -> color_variation_management(PG, greenC, varPGYes)->
                 <i>All'altezza per {charNameOne}?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>All'altezza per {player_name}?
                 <i>O all'altezza per soddisfare {mentorName}?
                 <i>La serra è tiepida, la stazione attende, e le nubi dicono che {player_name} è dove deve essere.
                 
             + [Sono felice per lei, ma il mondo non deve farle così paura.]
-                    -> color_variation_management(PG, redC)->
+                    -> color_variation_management(PG, redC, varPGYes)->
                 <i>Non è il mondo a farle paura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Il mondo gira e muta e muore e rinasce.
                 <i>Sono le regole degli uomini a generare la paura.
@@ -64,7 +64,7 @@
                 <i>Con l'aiuto di altre gocce.
                 
             + [Non ho apprezzato la sua mancanza di senso logico.]
-                   -> color_variation_management(PG, blueC)->
+                   -> color_variation_management(PG, blueC, varPGYes)->
                 <i>{charNameOne} possiede un forte senso logico.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Soltanto, è diverso da quello di {player_name}.
                 <i>O di {mentorName}.
@@ -73,7 +73,7 @@
                 <i>E {charNameOne} segue ora la sua nuova direzione.
                 
             + [Pensavo sarebbe stato più divertente.]
-                    -> color_variation_management(PG, yellowC)->
+                    -> color_variation_management(PG, yellowC, varPGYes)->
                 <i>Quando il leone salta su un altro leone, trova la rissa.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Ma quando un leoncino salta su un altro leoncino, trova ruzzoloni e corse.
                 <i>Il gioco non è nell'azione, ma nell'attitudine.
@@ -81,7 +81,7 @@
                 <i>Dove {player_name} trova il suo giocare?
             
             + [Spero che {charNameOne} sia capace di portare il suo cambiamento nel mondo.]
-                    -> color_variation_management(PG, purpleC)->
+                    -> color_variation_management(PG, purpleC, varPGYes)->
                 <i>La luna distante sposta oceani.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Il vento invisibile sradica alberi.
                 <i>{charNameOne} respira e il mondo ruota un po' più rapido.
@@ -121,14 +121,14 @@
         <i>E noi ci chiediamo: come sta {player_name} ora che {charNameTwo} è libero?
         
             + [Mi chiedo chi sarei ora, con una famiglia diversa alle spalle.]
-                    -> color_variation_management(PG, greenC)->
+                    -> color_variation_management(PG, greenC, varPGYes)->
                 <i>La gemma sul ramo ignora il tronco, eppure cresce.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Il girino nuota, non importa la dimensione dello stagno.
                 <i>{player_name} prova a riscrivere il passato.
                 <i>La sua voce può forse cercare nuovi modi di guardarlo?
      
             + [Secondo te serve uno scopo più grande per vivere davvero?]
-                    -> color_variation_management(PG, purpleC)->
+                    -> color_variation_management(PG, purpleC, varPGYes)->
                 <i>La rondine crea un nido di paglia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>E quando l'inverno arriva il nido cade sul terreno.
                 <i>I funghi lo trasformano in cibo per il terreno.
@@ -136,20 +136,20 @@
                 <i>La rondine crea un nido di paglia.
                             
             + [La rabbia è sottovalutata. Ha protetto questo bambino.]
-                    -> color_variation_management(PG, redC)->
+                    -> color_variation_management(PG, redC, varPGYes)->
                 <i>La lava scorre e brucia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Col tempo rende il terreno fertile.
                 <i>E dove prima cresceva solo erba, ora c'è un'intera foresta.
                 
             + [Avevo dimenticato quanto conforto possa dare il sapere.]
-                    -> color_variation_management(PG, blueC)->
+                    -> color_variation_management(PG, blueC, varPGYes)->
                 <i>Il sapere è una luce.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Il sapere è un rifugio.
                 <i>Una luce troppo forte confonde strada e burrone.
                 <i>Un rifugio col tempo può diventare prigione.
          
             + [Devo riprendere a giocare, a prendere le cose alla leggera.]
-                    -> color_variation_management(PG, yellowC)->
+                    -> color_variation_management(PG, yellowC, varPGYes)->
                 <i>Le radici ridono quando l'erba fa solletico.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Le foglie ridono quando il vento le sfiora.
                 <i>{player_name} forse ride quando non è {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}.
@@ -177,19 +177,19 @@
         ~ temp mentorName = translator(mentor_ActualName)
         
         + [Scelta verde.]
-            -> color_variation_management(PG, greenC)->
+            -> color_variation_management(PG, greenC, varPGYes)->
             
         + [SCelta rossa.]
-            -> color_variation_management(PG, redC)->
+            -> color_variation_management(PG, redC, varPGYes)->
             
         + [Scelta blu.]
-            -> color_variation_management(PG, blueC)->
+            -> color_variation_management(PG, blueC, varPGYes)->
      
         + [Scelta gialla.]
-            -> color_variation_management(PG, yellowC)->
+            -> color_variation_management(PG, yellowC, varPGYes)->
  
         + [Scelta viola.]
-            -> color_variation_management(PG, purpleC)->
+            -> color_variation_management(PG, purpleC, varPGYes)->
         -        
             -> main  
         
@@ -201,19 +201,19 @@
         ~ temp mentorName = translator(mentor_ActualName)
         
         + [Scelta verde.]
-            -> color_variation_management(PG, greenC)->
+            -> color_variation_management(PG, greenC, varPGYes)->
             
         + [SCelta rossa.]
-            -> color_variation_management(PG, redC)->
+            -> color_variation_management(PG, redC, varPGYes)->
             
         + [Scelta blu.]
-            -> color_variation_management(PG, blueC)->
+            -> color_variation_management(PG, blueC, varPGYes)->
      
         + [Scelta gialla.]
-            -> color_variation_management(PG, yellowC)->
+            -> color_variation_management(PG, yellowC, varPGYes)->
  
         + [Scelta viola.]
-            -> color_variation_management(PG, purpleC)->
+            -> color_variation_management(PG, purpleC, varPGYes)->
         -        
             -> main   
     
@@ -225,19 +225,19 @@
         ~ temp mentorName = translator(mentor_ActualName)
         
         + [Scelta verde.]
-            -> color_variation_management(PG, greenC)->
+            -> color_variation_management(PG, greenC, varPGYes)->
             
         + [SCelta rossa.]
-            -> color_variation_management(PG, redC)->
+            -> color_variation_management(PG, redC, varPGYes)->
             
         + [Scelta blu.]
-            -> color_variation_management(PG, blueC)->
+            -> color_variation_management(PG, blueC, varPGYes)->
      
         + [Scelta gialla.]
-            -> color_variation_management(PG, yellowC)->
+            -> color_variation_management(PG, yellowC, varPGYes)->
  
         + [Scelta viola.]
-            -> color_variation_management(PG, purpleC)->
+            -> color_variation_management(PG, purpleC, varPGYes)->
         -        
             -> main  
 

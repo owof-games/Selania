@@ -111,6 +111,7 @@
                 
                 ~ temp currentPlace = entity_location(PG)
                 ~ move_entity(FirstCharacter, Safekeeping)
+                ~ tree_advance_management(FirstCharacter)
                 
                 ~ move_entity(TrainNoiseGoingAway, currentPlace)
                 ~ firstChar_mailPause = firstChar_mailPauseDuration

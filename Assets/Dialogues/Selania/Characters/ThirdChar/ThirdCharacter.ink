@@ -789,7 +789,7 @@ Stai per donare qualcosa a {charNameThree}.
             ~ thirdChar_InkLevel = ink_empty
             ~ player_movementsCounter = 0
             ~ numberQuestion = 0
-            ~ PG_advance_management(ThirdCharacter)
+            ~ state_ending_stories(ThirdCharacter)
             -> main
     
 === third_char_story_ended
