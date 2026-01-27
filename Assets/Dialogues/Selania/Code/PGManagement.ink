@@ -120,6 +120,9 @@
 //Chiamo questa funzione a fine di una riscrittura, inserendo il valore della personaggia (es: player_firstStepClosed).
 //Controllo quante sono le storie concluse, in modo da poter inserire quella personaggia nell'ordine di conclusione delle storie previsto (es: se c'è già una storia chiusa in story_endedStories e ho chiuso player_firstStepClosed, allora metterò firstChar_storyEndingPosition come story_twoStoriesClosed.
 
+//resetto player_orderGrowingTreeUpdater 
+~ player_orderGrowingTreeUpdater = ()
+
 {debug: <i>Passo per PG_advance_management. Il valore di charES è {charES}.}
 
 {
@@ -158,7 +161,7 @@
 		
 		
 	 - LIST_COUNT(story_endedStories) == 3:
-		 ~player_orderGrowingTreeUpdater = player_thirdStepClosed
+		~ player_orderGrowingTreeUpdater = player_thirdStepClosed
 		{
 			- charES == FirstCharacter:
 				~ firstChar_storyEndingPosition = story_threeStoriesClosed
