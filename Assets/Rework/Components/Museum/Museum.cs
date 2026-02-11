@@ -101,6 +101,7 @@ namespace Selania.Rework.Components.Museum
         {
             // clean up the current section
             Destroy(_currentSection);
+            sectionDescriptionPanel.SetActive(false);
             _currentSectionDescription = null;
             // revert GUI to the one of the main hall
             buttonsGrid.SetActive(true);
