@@ -1,4 +1,5 @@
-﻿using LitMotion;
+﻿using Febucci.TextAnimatorForUnity;
+using LitMotion;
 using Microsoft.Extensions.Logging;
 using Selania.Rework.Interfaces;
 using TMPro;
@@ -16,6 +17,9 @@ namespace Selania.Rework.Components.DialogueBox
     {
         [SerializeField] [Tooltip("The text mesh pro object that contains the text")]
         private TextMeshProUGUI textMeshProUGUI = null!;
+
+        [SerializeField] [Tooltip("The typewriter component")]
+        private TypewriterComponent typewriterComponent = null!;
 
         private float _destinationPreferredHeight;
 
@@ -35,6 +39,7 @@ namespace Selania.Rework.Components.DialogueBox
         private void OnValidate()
         {
             textMeshProUGUI = GetComponentInChildren<TextMeshProUGUI>();
+            typewriterComponent = GetComponentInChildren<TypewriterComponent>();
         }
 #endif
 
@@ -78,7 +83,8 @@ namespace Selania.Rework.Components.DialogueBox
         /// <param name="text">The text of this line.</param>
         public void SetText(string text)
         {
-            textMeshProUGUI.SetText(text);
+            // textMeshProUGUI.SetText(text);
+            typewriterComponent.ShowText(text);
         }
     }
 }
