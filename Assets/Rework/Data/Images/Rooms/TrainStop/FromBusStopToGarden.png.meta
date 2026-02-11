@@ -1,0 +1,296 @@
+fileFormatVersion: 2
+guid: 8feb8fbb15659cd469af9eba315d0cbd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7232251204292417248
+    second: FromBusStopToGarden_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0.517
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FromBusStopToGarden_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 10
+        width: 510
+        height: 758
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02962c909d1e1ab90800000000000000
+      internalID: -7232251204292417248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape:
+    - - {x: 23, y: -85}
+      - {x: 23, y: -79}
+      - {x: 20, y: -72}
+      - {x: 23, y: -71}
+      - {x: 35, y: -73}
+      - {x: 38, y: -72}
+      - {x: 47, y: -70}
+      - {x: 50, y: -69}
+      - {x: 57, y: -65}
+      - {x: 65, y: -64}
+      - {x: 72, y: -61}
+      - {x: 78, y: -60}
+      - {x: 81, y: -59}
+      - {x: 90, y: -51}
+      - {x: 91, y: -45}
+      - {x: 104, y: -43}
+      - {x: 117, y: -35}
+      - {x: 118, y: -32}
+      - {x: 118, y: -29}
+      - {x: 115, y: -24}
+      - {x: 108, y: -22}
+      - {x: 92, y: -18}
+      - {x: 87, y: -17}
+      - {x: 141, y: 9}
+      - {x: 144, y: 13}
+      - {x: 144, y: 18}
+      - {x: 140, y: 22}
+      - {x: 131, y: 22}
+      - {x: 126, y: 21}
+      - {x: 120, y: 20}
+      - {x: 115, y: 19}
+      - {x: 104, y: 17}
+      - {x: 129, y: 66}
+      - {x: 129, y: 71}
+      - {x: 125, y: 75}
+      - {x: 120, y: 76}
+      - {x: 113, y: 71}
+      - {x: 103, y: 61}
+      - {x: 93, y: 52}
+      - {x: 71, y: 32}
+      - {x: 66, y: 19}
+      - {x: 63, y: 11}
+      - {x: 61, y: 8}
+      - {x: 58, y: 13}
+      - {x: 52, y: 13}
+      - {x: 64, y: 39}
+      - {x: 66, y: 43}
+      - {x: 62, y: 50}
+      - {x: 57, y: 50}
+      - {x: 54, y: 49}
+      - {x: 48, y: 44}
+      - {x: 39, y: 44}
+      - {x: 38, y: 46}
+      - {x: 41, y: 54}
+      - {x: 42, y: 61}
+      - {x: 46, y: 75}
+      - {x: 42, y: 80}
+      - {x: 37, y: 81}
+      - {x: 34, y: 80}
+      - {x: 17, y: 63}
+      - {x: 16, y: 63}
+      - {x: 9, y: 56}
+      - {x: 8, y: 53}
+      - {x: 6, y: 45}
+      - {x: 3, y: 43}
+      - {x: 0, y: 45}
+      - {x: 4, y: 59}
+      - {x: 7, y: 63}
+      - {x: 6, y: 69}
+      - {x: -2, y: 73}
+      - {x: -16, y: 65}
+      - {x: -19, y: 62}
+      - {x: -30, y: 73}
+      - {x: -34, y: 74}
+      - {x: -37, y: 73}
+      - {x: -41, y: 69}
+      - {x: -44, y: 57}
+      - {x: -50, y: 43}
+      - {x: -58, y: 42}
+      - {x: -58, y: 45}
+      - {x: -61, y: 50}
+      - {x: -64, y: 52}
+      - {x: -71, y: 51}
+      - {x: -80, y: 44}
+      - {x: -81, y: 42}
+      - {x: -92, y: 54}
+      - {x: -95, y: 55}
+      - {x: -98, y: 55}
+      - {x: -103, y: 52}
+      - {x: -104, y: 49}
+      - {x: -106, y: 33}
+      - {x: -106, y: 26}
+      - {x: -110, y: 24}
+      - {x: -123, y: 23}
+      - {x: -133, y: 21}
+      - {x: -137, y: 16}
+      - {x: -136, y: 13}
+      - {x: -132, y: 8}
+      - {x: -126, y: 4}
+      - {x: -134, y: 2}
+      - {x: -139, y: -1}
+      - {x: -140, y: -4}
+      - {x: -140, y: -7}
+      - {x: -144, y: -14}
+      - {x: -147, y: -18}
+      - {x: -147, y: -23}
+      - {x: -143, y: -27}
+      - {x: -140, y: -28}
+      - {x: -134, y: -29}
+      - {x: -118, y: -30}
+      - {x: -114, y: -30}
+      - {x: -107, y: -28}
+      - {x: -118, y: -39}
+      - {x: -120, y: -42}
+      - {x: -120, y: -47}
+      - {x: -116, y: -51}
+      - {x: -110, y: -51}
+      - {x: -102, y: -49}
+      - {x: -100, y: -53}
+      - {x: -96, y: -57}
+      - {x: -76, y: -62}
+      - {x: -72, y: -66}
+      - {x: -67, y: -67}
+      - {x: -60, y: -62}
+      - {x: -51, y: -53}
+      - {x: -51, y: -59}
+      - {x: -50, y: -63}
+      - {x: -47, y: -67}
+      - {x: -43, y: -73}
+      - {x: -38, y: -78}
+      - {x: -33, y: -80}
+      - {x: -25, y: -82}
+      - {x: -22, y: -85}
+      - {x: -18, y: -86}
+      - {x: -13, y: -84}
+      - {x: -4, y: -80}
+      - {x: -1, y: -85}
+      - {x: 2, y: -86}
+      - {x: 12, y: -89}
+      - {x: 19, y: -89}
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FromBusStopToGarden_0: -7232251204292417248
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -161,3 +161,7 @@ Packages/packages-lock.json linguist-generated
 
 # Exceptions for .asset files such as lightning pre-baking
 LightingData.asset     binary
+
+# EXTRA
+# NuGetForUnity brings in p7s signature files too
+*.p7s                   lfs
