@@ -1,5 +1,6 @@
 ﻿using LitMotion;
 using Microsoft.Extensions.Logging;
+using Selania.Rework.Interfaces;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,12 +9,13 @@ using ZLogger;
 
 namespace Selania.Rework.Components.DialogueBox
 {
+    /// <summary>
+    ///     A single text line (or multiline) of the dialogue box.
+    /// </summary>
     public class TextLine : MonoBehaviour, ILayoutElement
     {
         [SerializeField] [Tooltip("The text mesh pro object that contains the text")]
         private TextMeshProUGUI textMeshProUGUI = null!;
-
-        private readonly float _animationTime = 0.3f;
 
         private float _destinationPreferredHeight;
 
@@ -23,6 +25,11 @@ namespace Selania.Rework.Components.DialogueBox
         ///     The logger used by this component.
         /// </summary>
         [Inject] internal ILogger<TextLine> Logger = null!;
+
+        /// <summary>
+        ///     The dialogue box settings to read the text line speed from.
+        /// </summary>
+        [Inject] internal ISettingsDialogueBox SettingsDialogueBox = null!;
 
 #if UNITY_EDITOR
         private void OnValidate()
@@ -40,13 +47,13 @@ namespace Selania.Rework.Components.DialogueBox
         {
             textMeshProUGUI.CalculateLayoutInputVertical();
             if (Mathf.Approximately(_destinationPreferredHeight, textMeshProUGUI.preferredHeight)) return;
-            Logger.ZLogInformation(
+            Logger.ZLogTrace(
                 $"Animating height from {_destinationPreferredHeight} to {textMeshProUGUI.preferredHeight}");
             _destinationPreferredHeight = textMeshProUGUI.preferredHeight;
             if (_motionHandle != null && _motionHandle.Value.IsPlaying()) _motionHandle?.Cancel();
 
             _motionHandle = LMotion
-                .Create(preferredHeight, textMeshProUGUI.preferredHeight, _animationTime)
+                .Create(preferredHeight, textMeshProUGUI.preferredHeight, SettingsDialogueBox.textLineSlideDuration)
                 .WithEase(Ease.OutQuad)
                 .Bind(newPreferredHeight =>
                 {

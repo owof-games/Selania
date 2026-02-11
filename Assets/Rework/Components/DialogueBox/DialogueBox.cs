@@ -4,6 +4,10 @@ using VContainer.Unity;
 
 namespace Selania.Rework.Components.DialogueBox
 {
+    /// <summary>
+    ///     The view manager for the dialogue box. This script controls the behavior of the component, without handling any
+    ///     model connection.
+    /// </summary>
     public class DialogueBox : MonoBehaviour
     {
         [SerializeField] [Tooltip("The prefab that creates a text line once instantiated.")]
