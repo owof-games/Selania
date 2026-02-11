@@ -1,12 +1,13 @@
 using VContainer;
 using VContainer.Unity;
 
-namespace Selania.Rework.Components.Museum.Dialogue;
-
-public class DialogueMuseumSectionLifetimeScope : LifetimeScope
+namespace Selania.Rework.Components.Museum.Dialogue
 {
-    protected override void Configure(IContainerBuilder builder)
+    public class DialogueMuseumSectionLifetimeScope : LifetimeScope
     {
-        builder.RegisterLogger();
+        protected override void Configure(IContainerBuilder builder)
+        {
+            builder.RegisterLogger();
+        }
     }
 }
