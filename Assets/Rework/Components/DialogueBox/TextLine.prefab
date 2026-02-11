@@ -69,8 +69,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: A simple line of text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d9aaa664d0b91b04ab81e00e1538a93a, type: 2}
+  m_sharedMaterial: {fileID: -5638323002496042196, guid: d9aaa664d0b91b04ab81e00e1538a93a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -325,3 +325,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Selania::Selania.Rework.Components.DialogueBox.TextLine
   textMeshProUGUI: {fileID: 170051447512607194}
+  typewriterComponent: {fileID: 9101075235762662143}
