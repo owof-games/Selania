@@ -276,6 +276,7 @@ GameObject:
   - component: {fileID: 3475693077012647082}
   - component: {fileID: 1571574842052431433}
   - component: {fileID: 1008215920001470264}
+  - component: {fileID: 5267365149846038959}
   m_Layer: 5
   m_Name: TextLine
   m_TagString: Untagged
@@ -324,5 +325,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 057d813769004882aaa6ceb44d45b3b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Selania::Selania.Rework.Components.DialogueBox.TextLine
-  textMeshProUGUI: {fileID: 170051447512607194}
   typewriterComponent: {fileID: 9101075235762662143}
+--- !u!114 &5267365149846038959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8676878692826035047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec17549eadfa440d89417682cac4bf5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.DialogueBox.PreferredHeightSmoothElement
+  targetElement: {fileID: 170051447512607194}

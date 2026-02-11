@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: Settings
   m_EditorClassIdentifier: Selania::Selania.Rework.Components.Settings
   <textLineSlideDuration>k__BackingField: 0.3
+  <choiceIndentationPercentage>k__BackingField: 8
+  <defaultChoiceColor>k__BackingField: {r: 0.254539, g: 0.3228934, b: 0.9811321, a: 0}
+  <selectedChoiceColor>k__BackingField: {r: 0.41037738, g: 0.5451931, b: 1, a: 0}

@@ -328,7 +328,8 @@ MonoBehaviour:
   parentReference:
     TypeName: 
   autoRun: 1
-  autoInjectGameObjects: []
+  autoInjectGameObjects:
+  - {fileID: 0}
 --- !u!1 &2099130481064982267
 GameObject:
   m_ObjectHideFlags: 0
@@ -1350,4 +1351,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Selania::Selania.Rework.Components.DialogueBox.DialogueBox
   textLinePrefab: {fileID: 8676878692826035047, guid: def48626bc31ee84db9205cec23a6f5d, type: 3}
+  dialogueChoicesPrefab: {fileID: 4496996963847349191, guid: f5122665f6a42914f9b9aad7ac1b5268, type: 3}
   textLinesContainer: {fileID: 3084650314935825208}

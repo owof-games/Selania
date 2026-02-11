@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
@@ -12,6 +13,9 @@ namespace Selania.Rework.Components.DialogueBox
     {
         [SerializeField] [Tooltip("The prefab that creates a text line once instantiated.")]
         private GameObject textLinePrefab = null!;
+
+        [SerializeField] [Tooltip("The prefab that creates a set of choices once instantiated.")]
+        private GameObject dialogueChoicesPrefab = null!;
 
         [SerializeField] [Tooltip("The container where all the text lines are added to.")]
         private RectTransform textLinesContainer = null!;
@@ -32,6 +36,16 @@ namespace Selania.Rework.Components.DialogueBox
                 var textLineGameObject = Instantiate(textLinePrefab, textLinesContainer);
                 var textLine = textLineGameObject.GetComponent<TextLine>();
                 textLine.SetText(text);
+            }
+        }
+
+        public void AddChoices(IEnumerable<DialogueChoices.Choice> choices)
+        {
+            using (LifetimeScope.EnqueueParent(Scope))
+            {
+                var dialogueChoicesGameObject = Instantiate(dialogueChoicesPrefab, textLinesContainer);
+                var dialogueChoices = dialogueChoicesGameObject.GetComponent<DialogueChoices>();
+                dialogueChoices.SetChoices(choices);
             }
         }
     }

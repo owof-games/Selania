@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Selania.Rework.Components.DialogueBox;
+using UnityEngine;
 
 namespace Selania.Rework.Components.Museum.Dialogue
 {
@@ -18,6 +19,16 @@ namespace Selania.Rework.Components.Museum.Dialogue
         {
             var text = AvailableTextLines[Random.Range(0, AvailableTextLines.Length)];
             dialogueBox.AddTextLine(text);
+        }
+
+        public void AddDialogueChoices()
+        {
+            dialogueBox.AddChoices(new DialogueChoices.Choice[]
+            {
+                new(1, "Prima scelta, anche se il testo è tecnicamente troppo lungo per starci."),
+                new(2, "Seconda scelta."),
+                new(3, "Terza scelta, anche se il testo è tecnicamente troppo lungo per starci.")
+            });
         }
     }
 }
