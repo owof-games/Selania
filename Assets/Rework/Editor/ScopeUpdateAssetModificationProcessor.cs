@@ -8,7 +8,7 @@ namespace Selania.Rework.Editor
 {
     /// <summary>
     ///     An asset modification processor that adds components implementing the <see cref="IAutomaticEditorInject" />
-    ///     tagging interface to the <see cref="RoomScope" /> found in a prefab when the prefab is saved (by default: at
+    ///     tagging interface to the <see cref="ScopeWithAutoInjectSupport" /> found in a prefab when the prefab is saved (by default: at
     ///     every change).
     /// </summary>
     public class ScopeUpdateAssetModificationProcessor : AssetModificationProcessor
@@ -26,7 +26,10 @@ namespace Selania.Rework.Editor
             else
             {
                 // get the room scope out
-                var roomScope = stage.prefabContentsRoot.GetComponentInChildren<RoomScope>();
+                var roomScope = stage.prefabContentsRoot.GetComponentInChildren<ScopeWithAutoInjectSupport>();
+                if (roomScope == null)
+                    // no room scope to update
+                    return paths;
 
                 // clean the room scope of old/unused objects
                 roomScope.CleanUp();
@@ -48,7 +51,7 @@ namespace Selania.Rework.Editor
             return paths;
         }
 
-        private static void AddToRoomScope(RoomScope roomScope, GameObject gameObject)
+        private static void AddToRoomScope(ScopeWithAutoInjectSupport scopeWithAutoInjectSupport, GameObject gameObject)
         {
             // see https://discussions.unity.com/t/findobjectoftype-in-preview-scene/799531/2
             // thanks for saving us from the insanity of unity editor system
@@ -58,17 +61,18 @@ namespace Selania.Rework.Editor
                 return;
             }
 
-            if (roomScope == null)
+            if (scopeWithAutoInjectSupport == null)
                 // Debug.Log("No room scope found.", this);
                 return;
 
-            if (roomScope.ContainsObjectInAutoInject(gameObject)) return;
+            if (scopeWithAutoInjectSupport.ContainsObjectInAutoInject(gameObject)) return;
 
-            Debug.Log($"Adding to scope '{roomScope.name}'", gameObject);
+            Debug.Log($"Adding to scope '{scopeWithAutoInjectSupport.name}'", gameObject);
 
-            Undo.RecordObject(roomScope, $"Adding {gameObject.name} to auto-injected objects");
-            if (roomScope.AddObjectToAutoInject(gameObject))
-                Debug.Log($"Added {gameObject.name} to auto-injected objects in {roomScope.name}", gameObject);
+            Undo.RecordObject(scopeWithAutoInjectSupport, $"Adding {gameObject.name} to auto-injected objects");
+            if (scopeWithAutoInjectSupport.AddObjectToAutoInject(gameObject))
+                Debug.Log($"Added {gameObject.name} to auto-injected objects in {scopeWithAutoInjectSupport.name}",
+                    gameObject);
         }
     }
 }

@@ -4,7 +4,7 @@ using VContainer.Unity;
 
 namespace Selania.Rework.Components
 {
-    public class RoomScope : LifetimeScope
+    public class ScopeWithAutoInjectSupport : LifetimeScope
     {
         public bool ContainsObjectInAutoInject(GameObject o)
         {

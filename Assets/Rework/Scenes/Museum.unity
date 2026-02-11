@@ -716,6 +716,9 @@ MonoBehaviour:
       in un'altra stanza, se non c'\xE8, lo riporta qua).\nLo script ink \xE8 Components/Museum/MoveObjectsFromRoom/MoveObjectsFromRoom.ink\nLa
       scena usa degli oggetti interactable per i bottoni, e static per gli oggetti
       che appaiono/scompaiono."
+  - prefab: {fileID: 5900152936520379775, guid: 9f42571bb7bc54f47a089d0b34faeae6, type: 3}
+    title: Dialogue box
+    description: Questa scena mostra come si comporta il dialogue box.
 --- !u!4 &1073972271
 Transform:
   m_ObjectHideFlags: 0
@@ -943,11 +946,11 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!224 &1238785150
 RectTransform:

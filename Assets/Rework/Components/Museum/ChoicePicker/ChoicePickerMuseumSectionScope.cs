@@ -6,7 +6,7 @@ using VContainer;
 
 namespace Selania.Rework.Components.Museum.ChoicePicker
 {
-    public class ChoicePickerMuseumSectionScope : RoomScope
+    public class ChoicePickerMuseumSectionScope : ScopeWithAutoInjectSupport
     {
         [SerializeField] private UnityEvent<string> picked = new();
 
