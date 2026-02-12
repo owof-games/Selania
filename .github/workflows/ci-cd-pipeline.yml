@@ -85,7 +85,7 @@ jobs:
     name: Run Tests
     if: ${{ needs.unpack_inputs.outputs.skipTests != 'true' }}
     needs: unpack_inputs
-    uses: redglow/unity-ci-templates/.github/workflows/step-1-test.yml@main
+    uses: redglow/unity-ci-templates/.github/workflows/step-1-test.yml@lfs
     with:
       runnerMain: ${{ inputs.runnerMain }}
       unityVersion: ${{ needs.unpack_inputs.outputs.unityVersion }}
@@ -111,7 +111,7 @@ jobs:
       always() &&
       needs.unpack_inputs.outputs.testsOnly != 'true' &&
       (needs.run_tests.result == 'success' || needs.run_tests.result == 'skipped')
-    uses: redglow/unity-ci-templates/.github/workflows/step-2-build.yml@main
+    uses: redglow/unity-ci-templates/.github/workflows/step-2-build.yml@lfs
     with:
       # If the event is a push with a tag, force buildType to "release"; otherwise, use the input.
       runnerMain: ${{ inputs.runnerMain }}
@@ -124,6 +124,7 @@ jobs:
       combineArtifacts: ${{ needs.unpack_inputs.outputs.requiresCombined }}
       timeoutMinutes: ${{ fromJson(needs.unpack_inputs.outputs.timeoutMinutesBuild) }}
       retentionDays: ${{ fromJson(needs.unpack_inputs.outputs.retentionDays) }}
+      gitLfs: ${{ fromJson(needs.unpack_inputs.outputs.useGitLfs) }}
     secrets:
       UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
       UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
@@ -145,7 +146,7 @@ jobs:
         needs.unpack_inputs.outputs.buildType == 'release' || 
         needs.unpack_inputs.outputs.buildType == 'release_candidate'
       )
-    uses: redglow/unity-ci-templates/.github/workflows/step-3-release.yml@main
+    uses: redglow/unity-ci-templates/.github/workflows/step-3-release.yml@lfs
     with:
       runnerMain: ${{ inputs.runnerMain }}
       buildType: ${{ needs.unpack_inputs.outputs.buildType }}
@@ -169,7 +170,7 @@ jobs:
        needs.unpack_inputs.outputs.testsOnly != 'true' &&
        needs.release.result == 'success' &&
        inputs.validDeployTargets != '[]'
-    uses: redglow/unity-ci-templates/.github/workflows/step-4-deploy.yml@main
+    uses: redglow/unity-ci-templates/.github/workflows/step-4-deploy.yml@lfs
     with:
       runnerMain: ${{ inputs.runnerMain }}
       runnerMacos: ${{ inputs.runnerMacos }}
@@ -220,7 +221,7 @@ jobs:
         needs.unpack_inputs.outputs.buildType == 'release' || 
         needs.unpack_inputs.outputs.buildType == 'release_candidate'
       )
-    uses: redglow/unity-ci-templates/.github/workflows/step-5-notify.yml@main
+    uses: redglow/unity-ci-templates/.github/workflows/step-5-notify.yml@lfs
     with:
       runnerMain: ${{ inputs.runnerMain }}
       buildVersion: ${{ needs.unpack_inputs.outputs.buildVersion }}
