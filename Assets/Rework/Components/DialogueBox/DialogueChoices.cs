@@ -1,18 +1,21 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Extensions.Logging;
 using Selania.Rework.Interfaces;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using VContainer;
+using ZLogger;
 
 namespace Selania.Rework.Components.DialogueBox
 {
     /// <summary>
     ///     The component that handles dialogue choices
     /// </summary>
-    public class DialogueChoices : MonoBehaviour, IPointerMoveHandler
+    public class DialogueChoices : Selectable, IPointerMoveHandler
     {
         /// <summary>
         ///     The text mesh pro that handles the choices
@@ -30,12 +33,23 @@ namespace Selania.Rework.Components.DialogueBox
         private int _selectedIndex = -1;
 
         /// <summary>
+        ///     The logger for this object.
+        /// </summary>
+        [Inject] internal ILogger<DialogueChoices> Logger = null!;
+
+        /// <summary>
         ///     The settings used to read the parameters for the choices.
         /// </summary>
         [Inject] internal ISettingsDialogueBox SettingsDialogueBox = null!;
 
+        protected override void Start()
+        {
+            // when the dialogue choice is created, select it
+            EventSystem.current.SetSelectedGameObject(gameObject, null);
+        }
+
 #if UNITY_EDITOR
-        private void OnValidate()
+        protected override void OnValidate()
         {
             textMeshProUGUI = GetComponentInChildren<TextMeshProUGUI>();
         }
@@ -68,6 +82,7 @@ namespace Selania.Rework.Components.DialogueBox
         public void SetChoices(IEnumerable<Choice> choices)
         {
             _choices = choices.ToList();
+            _selectedIndex = _choices.Count > 0 ? _choices[0].index : -1;
             UpdateText();
         }
 
@@ -86,7 +101,8 @@ namespace Selania.Rework.Components.DialogueBox
             var i = 1;
             foreach (var choice in _choices)
             {
-                var color = choice.index == _selectedIndex
+                var color = choice.index == _selectedIndex &&
+                            EventSystem.current.currentSelectedGameObject == gameObject
                     ? SettingsDialogueBox.selectedChoiceColor
                     : SettingsDialogueBox.defaultChoiceColor;
                 sb.Append("<b><color=#");
@@ -103,6 +119,67 @@ namespace Selania.Rework.Components.DialogueBox
             }
 
             textMeshProUGUI.text = sb.ToString();
+        }
+
+        /// <inheritdoc />
+        public override void OnMove(AxisEventData eventData)
+        {
+            // if we have no choices, there's nothing to do
+            if (_choices == null)
+            {
+                Logger.ZLogTrace($"OnMove with no choices: demand to Selectable.OnMove");
+                base.OnMove(eventData);
+                return;
+            }
+
+            // update the selected index if required/possible
+            var update = false;
+            var choiceIndex = _choices.IndexOf(choice => choice.index == _selectedIndex);
+            // ReSharper disable once SwitchStatementMissingSomeEnumCasesNoDefault
+            switch (eventData.moveDir)
+            {
+                case MoveDirection.Down when choiceIndex < _choices.Count - 1:
+                    Logger.ZLogTrace($"OnMove can move down");
+                    choiceIndex++;
+                    update = true;
+                    break;
+                case MoveDirection.Up when choiceIndex > 0:
+                    Logger.ZLogTrace($"OnMove can move up");
+                    choiceIndex--;
+                    update = true;
+                    break;
+            }
+
+            // update text and mark event as used if the selected index changed
+            if (!update)
+            {
+                // out of bounds: delegate to selectable move
+                Logger.ZLogTrace($"OnMove could not move: demand to Selectable.OnMove");
+                base.OnMove(eventData);
+                return;
+            }
+
+            Logger.ZLogTrace($"OnMove handles the internal movement and doesn't demand to Selectable");
+            eventData.Use();
+            _selectedIndex = _choices[choiceIndex].index;
+            UpdateText();
+        }
+
+        /// <inheritdoc />
+        public override void OnSelect(BaseEventData eventData)
+        {
+            base.OnSelect(eventData);
+            // when this object gets selected, update the text so that the internally-selected entry gets highlighted
+            UpdateText();
+        }
+
+        /// <inheritdoc />
+        public override void OnDeselect(BaseEventData eventData)
+        {
+            base.OnDeselect(eventData);
+            // when this object gets deselected, update the text so that the internally-selected entry stops being
+            // highlighted
+            UpdateText();
         }
 
         /// <summary>
