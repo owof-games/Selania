@@ -68,7 +68,7 @@ jobs:
     steps:
       - name: Resolve runners
         id: resolve
-        uses: RedGlow/unity-ci-templates/.github/actions/resolve-runners@self-host
+        uses: avalin/unity-ci-templates/.github/actions/resolve-runners@main
         with:
           main: ${{ vars.MAIN_RUNNER }}
           macos: ${{ vars.MACOS_RUNNER }}
@@ -80,9 +80,6 @@ jobs:
     needs: 
       - resolve_runners
     runs-on: ${{ needs.resolve_runners.outputs.main }}
-    defaults:
-      run:
-        shell: bash
     outputs:
       should_run: ${{ steps.check.outputs.should_run }}
     steps:
@@ -133,10 +130,9 @@ jobs:
       - resolve_runners
       - validation
     if: ${{ needs.validation.outputs.should_run == 'true'}}
-    uses: RedGlow/unity-ci-templates/.github/workflows/prepare-metadata.yml@self-host
+    uses: avalin/unity-ci-templates/.github/workflows/prepare-metadata.yml@main
     with:
       runnerMain: ${{ needs.resolve_runners.outputs.main }}
-      runnerMacos: ${{ needs.resolve_runners.outputs.macos }}
       unityVersion: ${{ vars.UNITY_VERSION }}
       projectName: ${{ vars.PROJECT_NAME }}
       skipTests: ${{ inputs.skipTests }}
@@ -152,12 +148,12 @@ jobs:
       - resolve_runners
       - prepare_metadata
     if: ${{ needs.validation.outputs.should_run == 'true'}}
-    uses: RedGlow/unity-ci-templates/.github/workflows/build-version-tagger.yml@self-host
+    uses: avalin/unity-ci-templates/.github/workflows/build-version-tagger.yml@main
     with:
       runnerMain: ${{ needs.resolve_runners.outputs.main }}
       buildType: ${{ needs.prepare_metadata.outputs.buildType }}
       buildVersion: ${{ needs.prepare_metadata.outputs.buildVersion }}
-  
+
   trigger_ci:
     name: Trigger CI/CD Pipeline
     needs: 
@@ -167,9 +163,6 @@ jobs:
       - prepare_metadata
     if: ${{ needs.validation.outputs.should_run == 'true'}}
     runs-on: ${{ needs.resolve_runners.outputs.main }}
-    defaults:
-      run:
-        shell: bash
     steps:
       - name: Checkout Workflows Only
         uses: actions/checkout@v4
