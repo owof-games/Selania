@@ -1,4 +1,5 @@
 ﻿using Selania.Rework.Components.DialogueBox;
+using TMPro;
 using UnityEngine;
 
 namespace Selania.Rework.Components.Museum.Dialogue
@@ -14,6 +15,8 @@ namespace Selania.Rework.Components.Museum.Dialogue
         };
 
         [SerializeField] private DialogueBox.DialogueBox dialogueBox = null!;
+
+        [SerializeField] private TextMeshProUGUI choiceSelections = null!;
 
         public void AddLineOfTextNoSpeaker()
         {
@@ -40,7 +43,7 @@ namespace Selania.Rework.Components.Museum.Dialogue
                 new(1, "Prima scelta, anche se il testo è tecnicamente troppo lungo per starci."),
                 new(2, "Seconda scelta."),
                 new(3, "Terza scelta, anche se il testo è tecnicamente troppo lungo per starci.")
-            });
+            }, index => choiceSelections.text = $"{choiceSelections.text}\nSelected choice n. {index}.");
         }
     }
 }

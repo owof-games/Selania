@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using VContainer;
@@ -40,12 +41,13 @@ namespace Selania.Rework.Components.DialogueBox
             }
         }
 
-        public void AddChoices(IEnumerable<DialogueChoices.Choice> choices)
+        public void AddChoices(IEnumerable<DialogueChoices.Choice> choices, Action<int> onChoiceSelected)
         {
             using (LifetimeScope.EnqueueParent(Scope))
             {
                 var dialogueChoicesGameObject = Instantiate(dialogueChoicesPrefab, textLinesContainer);
                 var dialogueChoices = dialogueChoicesGameObject.GetComponent<DialogueChoices>();
+                dialogueChoices.choiceSelectedEvent.AddListener(index => onChoiceSelected(index));
                 dialogueChoices.SetChoices(choices);
             }
         }

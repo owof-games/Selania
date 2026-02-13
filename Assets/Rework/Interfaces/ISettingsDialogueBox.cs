@@ -19,14 +19,19 @@ namespace Selania.Rework.Interfaces
         int choiceIndentationPercentage { get; }
 
         /// <summary>
-        ///     Default color for choices, where it's not selected / hovered.
+        ///     Default color for choices, where it's not selected or hovered.
         /// </summary>
         Color defaultChoiceColor { get; }
 
         /// <summary>
-        ///     Color for when a choice is selected / hovered.
+        ///     Color for when a choice is selected.
         /// </summary>
         Color selectedChoiceColor { get; }
+
+        /// <summary>
+        ///     Color for when a choice has the cursor hovering on it.
+        /// </summary>
+        Color hoveredChoiceColor { get; }
 
         /// <summary>
         ///     Get the color to use to write the character tag on the dialogue.

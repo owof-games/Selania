@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using Selania.Rework.Interfaces;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using VContainer;
@@ -15,7 +16,7 @@ namespace Selania.Rework.Components.DialogueBox
     /// <summary>
     ///     The component that handles dialogue choices
     /// </summary>
-    public class DialogueChoices : Selectable, IPointerMoveHandler
+    public class DialogueChoices : Selectable, IPointerMoveHandler, IPointerClickHandler, ISubmitHandler
     {
         /// <summary>
         ///     The text mesh pro that handles the choices
@@ -23,9 +24,20 @@ namespace Selania.Rework.Components.DialogueBox
         [SerializeField] private TextMeshProUGUI textMeshProUGUI = null!;
 
         /// <summary>
+        ///     Event raised when a choice is picked.
+        /// </summary>
+        public UnityEvent<int> choiceSelectedEvent = new();
+
+        /// <summary>
         ///     The last set of choices given for the components (if any).
         /// </summary>
         private IList<Choice>? _choices;
+
+        /// <summary>
+        ///     The index over which the mouse is currently hovering, or <c>-1</c> if the mouse is not hovering over a
+        ///     choice or out of this component.
+        /// </summary>
+        private int _hoveredIndex = -1;
 
         /// <summary>
         ///     Flag used to know if we're selected. Can't directly query EventSystem.current.currentSelectedGameObject
@@ -61,6 +73,13 @@ namespace Selania.Rework.Components.DialogueBox
         }
 #endif
 
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            // if we click while hovering a choice, select the choice and destroy this object
+            if (_hoveredIndex == -1) return;
+            ChoiceSelected(_hoveredIndex);
+        }
+
         public void OnPointerMove(PointerEventData eventData)
         {
             // adapted from https://www.youtube.com/watch?v=LNwYgN47qqk
@@ -75,9 +94,24 @@ namespace Selania.Rework.Components.DialogueBox
                 newIndex = int.Parse(linkInfo.GetLinkID());
             }
 
-            if (_selectedIndex == newIndex) return;
+            if (_hoveredIndex == newIndex) return;
 
-            _selectedIndex = newIndex;
+            _hoveredIndex = newIndex;
+            UpdateText();
+        }
+
+        public void OnSubmit(BaseEventData eventData)
+        {
+            // if we are selected and there's a choice selected, pick that choice
+            if (!_isSelected || _selectedIndex == -1) return;
+            ChoiceSelected(_hoveredIndex);
+        }
+
+        public override void OnPointerExit(PointerEventData eventData)
+        {
+            // when the pointer exits, there's no longer a hovered choice
+            if (_hoveredIndex == -1) return;
+            _hoveredIndex = -1;
             UpdateText();
         }
 
@@ -103,15 +137,21 @@ namespace Selania.Rework.Components.DialogueBox
                 return;
             }
 
-            Logger.ZLogTrace($"Redrawing choices: isSelected={_isSelected}, selectedIndex={_selectedIndex}");
+            Logger.ZLogTrace(
+                $"Redrawing choices: isSelected={_isSelected}, selectedIndex={_selectedIndex}, hoveredIndex={_hoveredIndex}");
 
             var sb = new StringBuilder();
             var i = 1;
             foreach (var choice in _choices)
             {
-                var color = choice.index == _selectedIndex && _isSelected
-                    ? SettingsDialogueBox.selectedChoiceColor
-                    : SettingsDialogueBox.defaultChoiceColor;
+                Color color;
+                if (choice.index == _hoveredIndex)
+                    color = SettingsDialogueBox.hoveredChoiceColor;
+                else if (choice.index == _selectedIndex && _isSelected)
+                    color = SettingsDialogueBox.selectedChoiceColor;
+                else
+                    color = SettingsDialogueBox.defaultChoiceColor;
+
                 sb.Append("<b><color=#");
                 sb.Append(ColorUtility.ToHtmlStringRGB(color));
                 sb.Append("><link=\"");
@@ -189,6 +229,13 @@ namespace Selania.Rework.Components.DialogueBox
             // when this object gets deselected, update the text so that the internally-selected entry stops being
             // highlighted
             UpdateText();
+        }
+
+        private void ChoiceSelected(int index)
+        {
+            Logger.ZLogTrace($"Picked choice {index}");
+            choiceSelectedEvent.Invoke(index);
+            Destroy(gameObject);
         }
 
         /// <summary>

@@ -84,6 +84,11 @@ namespace Selania.Rework.Components
         public Color selectedChoiceColor { get; private set; } = Color.lightBlue;
 
         /// <inheritdoc />
+        [field: SerializeField]
+        [field: Tooltip("Color for when a choice is selected / hovered.")]
+        public Color hoveredChoiceColor { get; private set; } = Color.cadetBlue;
+
+        /// <inheritdoc />
         public Color GetCharacterTagColorByName(string characterName)
         {
             return characterDialogueLabelColors.TryGetValue(characterName, out var color)
