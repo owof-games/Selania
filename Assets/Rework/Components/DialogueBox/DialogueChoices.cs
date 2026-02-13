@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Extensions.Logging;
@@ -7,6 +8,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using VContainer;
 using ZLogger;
@@ -28,10 +30,19 @@ namespace Selania.Rework.Components.DialogueBox
         /// </summary>
         public UnityEvent<int> choiceSelectedEvent = new();
 
+        [SerializeField] private string choicesSelectionActionMapName = "ChoicesSelection";
+
+        /// <summary>
+        ///     List of actions to call to remove the event listeners from the action map for choices.
+        /// </summary>
+        private readonly List<Action> _deregisterChoicesSelectActionMap = new();
+
         /// <summary>
         ///     The last set of choices given for the components (if any).
         /// </summary>
         private IList<Choice>? _choices;
+
+        private InputActionMap? _choicesSelectActionMap;
 
         /// <summary>
         ///     The index over which the mouse is currently hovering, or <c>-1</c> if the mouse is not hovering over a
@@ -62,9 +73,19 @@ namespace Selania.Rework.Components.DialogueBox
 
         protected override void Start()
         {
+            // get the action map we use to select choices by number
+            _choicesSelectActionMap =
+                InputSystem.actions.actionMaps.Single(actionMap => actionMap.name == choicesSelectionActionMapName);
             // when the dialogue choice is created, select it
             if (EventSystem.current != null) // could be null in editor mode
                 EventSystem.current.SetSelectedGameObject(gameObject, null);
+        }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+            // make sure the choices are disabled now 
+            CleanupChoicesSelectActionMap();
         }
 
 #if UNITY_EDITOR
@@ -220,6 +241,16 @@ namespace Selania.Rework.Components.DialogueBox
             base.OnSelect(eventData);
             // when this object gets selected, update the text so that the internally-selected entry gets highlighted
             UpdateText();
+            // hook to the actions to receive the numbered actions
+            if (_choicesSelectActionMap == null) return;
+            _choicesSelectActionMap.Enable();
+            foreach (var action in _choicesSelectActionMap.actions)
+            {
+                if (!int.TryParse(action.name, out var index)) continue;
+                Action<InputAction.CallbackContext> callback = _ => { ChoiceSelected(index); };
+                action.performed += callback;
+                _deregisterChoicesSelectActionMap.Add(() => action.performed -= callback);
+            }
         }
 
         /// <inheritdoc />
@@ -230,6 +261,16 @@ namespace Selania.Rework.Components.DialogueBox
             // when this object gets deselected, update the text so that the internally-selected entry stops being
             // highlighted
             UpdateText();
+            // stop handling the numbered actions
+            CleanupChoicesSelectActionMap();
+        }
+
+        private void CleanupChoicesSelectActionMap()
+        {
+            _choicesSelectActionMap?.Disable();
+            foreach (var action in _deregisterChoicesSelectActionMap) action();
+
+            _deregisterChoicesSelectActionMap.Clear();
         }
 
         private void ChoiceSelected(int index)

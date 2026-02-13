@@ -93,6 +93,7 @@ MonoBehaviour:
   choiceSelectedEvent:
     m_PersistentCalls:
       m_Calls: []
+  choicesSelectionActionMapName: ChoicesSelection
 --- !u!114 &4169297251436821962
 MonoBehaviour:
   m_ObjectHideFlags: 0
