@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UI;
 using VContainer;
 using VContainer.Unity;
 
@@ -26,6 +28,9 @@ namespace Selania.Rework.Components.DialogueBox
 
         [SerializeField] [Tooltip("The ink container.")]
         private InkContainer inkContainer = null!;
+
+        [SerializeField] [Tooltip("The scroll view displaying the dialogue")]
+        private ScrollRect scrollView = null!;
 
         /// <summary>
         ///     The scope in which this object is created.
@@ -54,6 +59,8 @@ namespace Selania.Rework.Components.DialogueBox
                 var textLine = textLineGameObject.GetComponent<TextLine>();
                 textLine.SetText(speaker, text);
             }
+
+            ScrollToBottom().Forget();
         }
 
         public void AddChoices(IEnumerable<DialogueChoices.Choice> choices, Action<int> onChoiceSelected)
@@ -65,6 +72,18 @@ namespace Selania.Rework.Components.DialogueBox
                 dialogueChoices.choiceSelectedEvent.AddListener(index => onChoiceSelected(index));
                 dialogueChoices.SetChoices(choices);
             }
+
+            ScrollToBottom().Forget();
+        }
+
+        /// <summary>
+        /// Scroll to bottom.
+        /// </summary>
+        private async UniTaskVoid ScrollToBottom()
+        {
+            // wait a frame to allow for layout operations to be performed
+            await UniTask.NextFrame();
+            scrollView.verticalNormalizedPosition = 0;
         }
 
         /// <summary>

@@ -1535,6 +1535,8 @@ MonoBehaviour:
   dialogueChoicesPrefab: {fileID: 4496996963847349191, guid: f5122665f6a42914f9b9aad7ac1b5268, type: 3}
   textLinesContainer: {fileID: 3084650314935825208}
   portraitContainer: {fileID: 1330436366395310741}
+  inkContainer: {fileID: 2970664259661065082}
+  scrollView: {fileID: 3876195317699512835}
 --- !u!1001 &1855608590581130449
 PrefabInstance:
   m_ObjectHideFlags: 0
