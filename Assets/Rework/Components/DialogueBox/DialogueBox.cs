@@ -28,14 +28,15 @@ namespace Selania.Rework.Components.DialogueBox
         /// <summary>
         ///     Add a new text line to the dialogue box.
         /// </summary>
+        /// <param name="speaker">The character speaking; if null, the character name is not shown.</param>
         /// <param name="text">The text to add.</param>
-        public void AddTextLine(string text)
+        public void AddTextLine(string? speaker, string? text)
         {
             using (LifetimeScope.EnqueueParent(Scope))
             {
                 var textLineGameObject = Instantiate(textLinePrefab, textLinesContainer);
                 var textLine = textLineGameObject.GetComponent<TextLine>();
-                textLine.SetText(text);
+                textLine.SetText(speaker, text);
             }
         }
 

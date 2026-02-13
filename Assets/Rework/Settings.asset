@@ -16,3 +16,7 @@ MonoBehaviour:
   <choiceIndentationPercentage>k__BackingField: 8
   <defaultChoiceColor>k__BackingField: {r: 0.254539, g: 0.3228934, b: 0.9811321, a: 0}
   <selectedChoiceColor>k__BackingField: {r: 0.41037738, g: 0.5451931, b: 1, a: 0}
+  <defaultCharacterColor>k__BackingField: {r: 1, g: 0.39354917, b: 0, a: 1}
+  characterDialogueInfo:
+  - <name>k__BackingField: PG
+    <color>k__BackingField: {r: 0.29003027, g: 0.2783019, b: 1, a: 1}

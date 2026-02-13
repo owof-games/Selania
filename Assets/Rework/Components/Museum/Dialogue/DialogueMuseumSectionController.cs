@@ -15,10 +15,22 @@ namespace Selania.Rework.Components.Museum.Dialogue
 
         [SerializeField] private DialogueBox.DialogueBox dialogueBox = null!;
 
-        public void AddLineOfText()
+        public void AddLineOfTextNoSpeaker()
         {
             var text = AvailableTextLines[Random.Range(0, AvailableTextLines.Length)];
-            dialogueBox.AddTextLine(text);
+            dialogueBox.AddTextLine(null, text);
+        }
+
+        public void AddLineOfTextSpeakerPg()
+        {
+            var text = AvailableTextLines[Random.Range(0, AvailableTextLines.Length)];
+            dialogueBox.AddTextLine("PG", text);
+        }
+
+        public void AddLineOfTextSpeakerChitarra()
+        {
+            var text = AvailableTextLines[Random.Range(0, AvailableTextLines.Length)];
+            dialogueBox.AddTextLine("Chitarra", text);
         }
 
         public void AddDialogueChoices()

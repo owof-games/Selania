@@ -1,5 +1,7 @@
 ﻿using Febucci.TextAnimatorForUnity;
 using Microsoft.Extensions.Logging;
+using Selania.Rework.Interfaces;
+using TMPro;
 using UnityEngine;
 using VContainer;
 
@@ -13,10 +15,18 @@ namespace Selania.Rework.Components.DialogueBox
         [SerializeField] [Tooltip("The typewriter component")]
         private TypewriterComponent typewriterComponent = null!;
 
+        [SerializeField] [Tooltip("The speaker component")]
+        private TextMeshProUGUI speakerTextMeshPro = null!;
+
         /// <summary>
         ///     The logger used by this component.
         /// </summary>
         [Inject] internal ILogger<TextLine> Logger = null!;
+
+        /// <summary>
+        ///     Settings for the dialogue box.
+        /// </summary>
+        [Inject] internal ISettingsDialogueBox SettingsDialogueBox = null!;
 
 #if UNITY_EDITOR
         private void OnValidate()
@@ -28,9 +38,20 @@ namespace Selania.Rework.Components.DialogueBox
         /// <summary>
         ///     Set the text of this line.
         /// </summary>
+        /// <param name="speaker">The character speaking; if null, the character name is not shown.</param>
         /// <param name="text">The text of this line.</param>
-        public void SetText(string text)
+        public void SetText(string? speaker, string? text)
         {
+            if (speaker != null)
+            {
+                speakerTextMeshPro.text = speaker;
+                speakerTextMeshPro.color = SettingsDialogueBox.GetCharacterTagColorByName(speaker);
+            }
+            else
+            {
+                DestroyImmediate(speakerTextMeshPro.gameObject);
+            }
+
             typewriterComponent.ShowText(text);
         }
     }

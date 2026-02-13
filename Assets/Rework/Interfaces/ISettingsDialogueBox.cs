@@ -27,5 +27,12 @@ namespace Selania.Rework.Interfaces
         ///     Color for when a choice is selected / hovered.
         /// </summary>
         Color selectedChoiceColor { get; }
+
+        /// <summary>
+        ///     Get the color to use to write the character tag on the dialogue.
+        /// </summary>
+        /// <param name="characterName">Name of the character.</param>
+        /// <returns>Color to use.</returns>
+        Color GetCharacterTagColorByName(string characterName);
     }
 }
