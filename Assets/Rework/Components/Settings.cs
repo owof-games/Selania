@@ -2,20 +2,28 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.Extensions.Logging;
 using Selania.Rework.Interfaces;
 using UnityEngine;
 
 namespace Selania.Rework.Components
 {
     [CreateAssetMenu(fileName = "Settings", menuName = "Selania/Settings")]
-    public class Settings : ScriptableObject, ISettingsDialogueBox
+    public class Settings : ScriptableObject, ISettingsDialogueBox, ISettingsLogger
     {
+        [Header("Dialogue Box")]
         [field: SerializeField]
         [field: Tooltip("Default color for character tags in dialogue.")]
         public Color defaultCharacterColor { get; private set; } = Color.black;
 
         [field: SerializeField] [field: Tooltip("Info about every character who can have dialogue lines.")]
         private CharacterDialogueInfo[] characterDialogueInfo = Array.Empty<CharacterDialogueInfo>();
+
+        // ReSharper disable once InconsistentNaming
+        [SerializeField] private ProviderSettings _fileProviderSettings = new();
+
+        // ReSharper disable once InconsistentNaming
+        [SerializeField] private ProviderSettings _consoleProviderSettings = new();
 
         /// <summary>
         ///     The backing property for <see cref="characterDialogueLabelColors" />.
@@ -54,7 +62,6 @@ namespace Selania.Rework.Components
         }
 
         /// <inheritdoc />
-        [Header("Dialogue Box")]
         [field: SerializeField]
         [field: Tooltip("Duration (in seconds) to make the text line slide in.")]
         public float textLineSlideDuration { get; private set; } = 0.3f;
@@ -82,6 +89,42 @@ namespace Selania.Rework.Components
             return characterDialogueLabelColors.TryGetValue(characterName, out var color)
                 ? color
                 : defaultCharacterColor;
+        }
+
+        [Header("Logger")]
+        [field: SerializeField]
+        [field:
+            Tooltip(
+                "The minimum log level to use. Every message emitted under this log level won't ever be processed, independently of more specific filters.")]
+        public LogLevel minimumLogLevel { get; private set; } = LogLevel.Trace;
+
+        public ISettingsLogger.IProviderSettings fileProviderSettings => _fileProviderSettings;
+
+        public ISettingsLogger.IProviderSettings consoleProviderSettings => _consoleProviderSettings;
+
+        [Serializable]
+        public class CategorySettings : ISettingsLogger.ICategorySettings
+        {
+            [field: SerializeField]
+            [field: Tooltip("The prefix for the name of the categories affected by this setting.")]
+            public string categoryPrefix { get; private set; } = "";
+
+            [field: SerializeField]
+            [field: Tooltip("The minimum log level to use specifically for these categories.")]
+            public LogLevel minimumLogLevel { get; private set; } = LogLevel.Trace;
+        }
+
+        [Serializable]
+        public class ProviderSettings : ISettingsLogger.IProviderSettings
+        {
+            [SerializeField] [Tooltip("Specific settings for categories.")]
+            private CategorySettings[] categorySettingsArray = Array.Empty<CategorySettings>();
+
+            [field: SerializeField]
+            [field: Tooltip("The minimum log level to use specifically for these categories.")]
+            public LogLevel minimumLogLevel { get; private set; } = LogLevel.Trace;
+
+            public IEnumerable<ISettingsLogger.ICategorySettings> categorySettings => categorySettingsArray;
         }
     }
 }

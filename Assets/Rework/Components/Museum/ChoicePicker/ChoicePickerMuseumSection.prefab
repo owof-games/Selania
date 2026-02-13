@@ -286,6 +286,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  settings: {fileID: 11400000, guid: 8a2b787684fc7fa4e98d37b8b423934e, type: 2}
 --- !u!1 &1424244461745652399
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,7 +1120,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8544961059853198485}
   m_HandleRect: {fileID: 8326344941060089157}
   m_Direction: 2
-  m_Value: 0.22077923
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:

@@ -10,10 +10,13 @@ namespace Selania.Rework.Components.Museum.ChoicePicker
     {
         [SerializeField] private UnityEvent<string> picked = new();
 
+        [SerializeField] [Tooltip("Settings of the game.")]
+        private Settings settings = null!;
+
         protected override void Configure(IContainerBuilder builder)
         {
             base.Configure(builder);
-            builder.RegisterLogger();
+            builder.RegisterLogger(settings);
             builder.Register<StoryChoiceSelector>(Lifetime.Scoped).As<IStoryChoiceSelector>();
             builder.Register<StoryChangeRoomContentsNotifier>(Lifetime.Scoped).As<IStoryChangeRoomContentsNotifier>();
         }

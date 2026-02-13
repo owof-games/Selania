@@ -9,10 +9,13 @@ namespace Selania.Rework.Components.Museum.MoveBetweenRooms
         [SerializeField] [Tooltip("The ink bridge used for this section.")]
         private InkBridge inkBridge = null!;
 
+        [SerializeField] [Tooltip("Settings of the game.")]
+        private Settings settings = null!;
+
         protected override void Configure(IContainerBuilder builder)
         {
             builder.RegisterInkBridgeInstance(inkBridge);
-            builder.RegisterLogger();
+            builder.RegisterLogger(settings);
         }
     }
 }

@@ -604,6 +604,7 @@ MonoBehaviour:
   autoInjectGameObjects:
   - {fileID: 1252423478}
   inkBridge: {fileID: 11400000, guid: 1b1a12a213daa574c91cb17e99f4c739, type: 2}
+  settings: {fileID: 11400000, guid: 8a2b787684fc7fa4e98d37b8b423934e, type: 2}
 --- !u!4 &1211435269
 Transform:
   m_ObjectHideFlags: 0

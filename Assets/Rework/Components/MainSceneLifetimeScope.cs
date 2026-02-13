@@ -9,10 +9,13 @@ namespace Selania.Rework.Components
         [SerializeField] [Tooltip("The ink bridge used for the game.")]
         private InkBridge inkBridge = null!;
 
+        [SerializeField] [Tooltip("Settings of the game.")]
+        private Settings settings = null!;
+
         protected override void Configure(IContainerBuilder builder)
         {
             builder.RegisterInkBridgeInstance(inkBridge);
-            builder.RegisterLogger();
+            builder.RegisterLogger(settings);
         }
     }
 }

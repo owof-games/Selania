@@ -7,11 +7,12 @@ namespace Selania.Rework.Components.Museum.Dialogue
 {
     public class DialogueMuseumSectionLifetimeScope : LifetimeScope
     {
-        [SerializeField] private Settings settings = null!;
+        [SerializeField] [Tooltip("Settings of the game.")]
+        private Settings settings = null!;
 
         protected override void Configure(IContainerBuilder builder)
         {
-            builder.RegisterLogger();
+            builder.RegisterLogger(settings);
             builder.RegisterInstance(settings).As<ISettingsDialogueBox>();
         }
     }

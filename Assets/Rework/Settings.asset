@@ -12,11 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46dfe07ed4045134e9ef97f28427d491, type: 3}
   m_Name: Settings
   m_EditorClassIdentifier: Selania::Selania.Rework.Components.Settings
-  <textLineSlideDuration>k__BackingField: 0.3
-  <choiceIndentationPercentage>k__BackingField: 8
-  <defaultChoiceColor>k__BackingField: {r: 0.254539, g: 0.3228934, b: 0.9811321, a: 0}
-  <selectedChoiceColor>k__BackingField: {r: 0.41037738, g: 0.5451931, b: 1, a: 0}
   <defaultCharacterColor>k__BackingField: {r: 1, g: 0.39354917, b: 0, a: 1}
   characterDialogueInfo:
   - <name>k__BackingField: PG
     <color>k__BackingField: {r: 0.29003027, g: 0.2783019, b: 1, a: 1}
+  <textLineSlideDuration>k__BackingField: 0.3
+  <choiceIndentationPercentage>k__BackingField: 8
+  <defaultChoiceColor>k__BackingField: {r: 0.254539, g: 0.3228934, b: 0.9811321, a: 0}
+  <selectedChoiceColor>k__BackingField: {r: 0.41037738, g: 0.5451931, b: 1, a: 0}
+  <minimumLogLevel>k__BackingField: 0
+  _fileProviderSettings:
+    <minimumLogLevel>k__BackingField: 0
+    categorySettingsArray: []
+  _consoleProviderSettings:
+    <minimumLogLevel>k__BackingField: 2
+    categorySettingsArray:
+    - <categoryPrefix>k__BackingField: Selania.Rework.Components.DialogueBox.DialogueChoices
+      <minimumLogLevel>k__BackingField: 0

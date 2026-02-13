@@ -140,6 +140,7 @@ MonoBehaviour:
   autoRun: 1
   autoInjectGameObjects: []
   inkBridge: {fileID: 11400000, guid: cdf5c5e32b835d340b9d19902ff8928d, type: 2}
+  settings: {fileID: 11400000, guid: 8a2b787684fc7fa4e98d37b8b423934e, type: 2}
 --- !u!1 &2799744376609443282
 GameObject:
   m_ObjectHideFlags: 0
