@@ -34,13 +34,13 @@ namespace Selania.Rework.Components
         /// </summary>
         private readonly DerivedDictionaryProvider<string, Color, CharacterDialogueInfo>
             _characterDialogueLabelColorsProvider =
-                new(info => info.name, info => info.color);
+                new(info => info.name, info => info.color, CharacterDialogueInfo.DefaultComparer);
 
         /// <summary>
         ///     The provider which generates a dictionary from tag name to its sprite.
         /// </summary>
         private readonly DerivedDictionaryProvider<string, Sprite, CharacterTagInfo> _characterSpritesProvider =
-            new(info => info.tag, info => info.sprite, CharacterTagInfoEqualityComparer.Default);
+            new(info => info.tag, info => info.sprite, CharacterTagInfo.DefaultComparer);
 
         /// <inheritdoc />
         [field: SerializeField]
@@ -126,6 +126,9 @@ namespace Selania.Rework.Components
         [Serializable]
         public class CharacterTagInfo
         {
+            public static readonly EqualityComparer<CharacterTagInfo> DefaultComparer =
+                new CharacterTagInfoEqualityComparer();
+
             [field: SerializeField]
             [field: Tooltip("The tag this entry describes (e.g.: mentore_bored)")]
             public string tag { get; private set; } = "";
@@ -154,20 +157,19 @@ namespace Selania.Rework.Components
                 return HashCode.Combine(tag, sprite);
                 // ReSharper restore NonReadonlyMemberInGetHashCode
             }
-        }
 
-        private class CharacterTagInfoEqualityComparer : EqualityComparer<CharacterTagInfo>
-        {
-            public static readonly CharacterTagInfoEqualityComparer Default = new();
 
-            public override bool Equals(CharacterTagInfo x, CharacterTagInfo y)
+            private class CharacterTagInfoEqualityComparer : EqualityComparer<CharacterTagInfo>
             {
-                return x.Equals(y);
-            }
+                public override bool Equals(CharacterTagInfo x, CharacterTagInfo y)
+                {
+                    return x.Equals(y);
+                }
 
-            public override int GetHashCode(CharacterTagInfo obj)
-            {
-                return obj.GetHashCode();
+                public override int GetHashCode(CharacterTagInfo obj)
+                {
+                    return obj.GetHashCode();
+                }
             }
         }
     }

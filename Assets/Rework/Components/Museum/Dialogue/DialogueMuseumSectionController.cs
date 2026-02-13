@@ -55,5 +55,20 @@ namespace Selania.Rework.Components.Museum.Dialogue
         {
             dialogueBox.SetPortraitImage("mentore_hurry");
         }
+
+        public void SetNoInk()
+        {
+            dialogueBox.SetInkStatus(0, 0);
+        }
+
+        public void SetFourFull()
+        {
+            dialogueBox.SetInkStatus(4, 0);
+        }
+
+        public void SetTwoFullOneEmpty()
+        {
+            dialogueBox.SetInkStatus(2, 1);
+        }
     }
 }

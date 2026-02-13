@@ -14,10 +14,9 @@ namespace Selania.Rework.Components
     /// <typeparam name="TEntry"></typeparam>
     public class DerivedDictionaryProvider<TKey, TValue, TEntry>
     {
+        private readonly IEqualityComparer _comparer;
         private readonly Func<TEntry, TKey> _keyFunc;
         private readonly Func<TEntry, TValue> _valueFunc;
-
-        private readonly IEqualityComparer _comparer;
         private IDictionary<TKey, TValue>? _dictionary;
 #if UNITY_EDITOR
         private int _lastHash;
@@ -28,7 +27,7 @@ namespace Selania.Rework.Components
         {
             _keyFunc = keyFunc;
             _valueFunc = valueFunc;
-            _comparer = comparer ?? EqualityComparer<TValue>.Default;
+            _comparer = comparer ?? EqualityComparer<TEntry>.Default;
         }
 
         public IDictionary<TKey, TValue> Get(TEntry[] entries)

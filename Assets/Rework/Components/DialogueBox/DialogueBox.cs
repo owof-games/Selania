@@ -24,6 +24,9 @@ namespace Selania.Rework.Components.DialogueBox
         [SerializeField] [Tooltip("The portrait container.")]
         private PortraitContainer portraitContainer = null!;
 
+        [SerializeField] [Tooltip("The ink container.")]
+        private InkContainer inkContainer = null!;
+
         /// <summary>
         ///     The scope in which this object is created.
         /// </summary>
@@ -34,6 +37,7 @@ namespace Selania.Rework.Components.DialogueBox
         {
             // automatically fill portraitContainer
             portraitContainer = GetComponentInChildren<PortraitContainer>();
+            inkContainer = GetComponentInChildren<InkContainer>();
         }
 #endif
 
@@ -70,6 +74,16 @@ namespace Selania.Rework.Components.DialogueBox
         public void SetPortraitImage(string tagName)
         {
             portraitContainer.SetImage(tagName);
+        }
+
+        /// <summary>
+        ///     Set the ink status.
+        /// </summary>
+        /// <param name="numFull">Number of full ink bottles.</param>
+        /// <param name="numEmpty">Number of empty bottles.</param>
+        public void SetInkStatus(int numFull, int numEmpty)
+        {
+            inkContainer.SetInkStatus(numFull, numEmpty);
         }
     }
 }
