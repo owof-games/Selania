@@ -63,7 +63,8 @@ namespace Selania.Rework.Components.DialogueBox
         protected override void Start()
         {
             // when the dialogue choice is created, select it
-            EventSystem.current.SetSelectedGameObject(gameObject, null);
+            if (EventSystem.current != null) // could be null in editor mode
+                EventSystem.current.SetSelectedGameObject(gameObject, null);
         }
 
 #if UNITY_EDITOR
