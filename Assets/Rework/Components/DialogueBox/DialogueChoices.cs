@@ -42,8 +42,6 @@ namespace Selania.Rework.Components.DialogueBox
         /// </summary>
         private IList<Choice>? _choices;
 
-        private InputActionMap? _choicesSelectActionMap;
-
         /// <summary>
         ///     The index over which the mouse is currently hovering, or <c>-1</c> if the mouse is not hovering over a
         ///     choice or out of this component.
@@ -73,9 +71,6 @@ namespace Selania.Rework.Components.DialogueBox
 
         protected override void Start()
         {
-            // get the action map we use to select choices by number
-            _choicesSelectActionMap =
-                InputSystem.actions.actionMaps.Single(actionMap => actionMap.name == choicesSelectionActionMapName);
             // when the dialogue choice is created, select it
             if (EventSystem.current != null) // could be null in editor mode
                 EventSystem.current.SetSelectedGameObject(gameObject, null);
@@ -127,6 +122,15 @@ namespace Selania.Rework.Components.DialogueBox
             // if we are selected and there's a choice selected, pick that choice
             if (!_isSelected || _selectedIndex == -1) return;
             ChoiceSelected(_selectedIndex);
+        }
+
+        /// <summary>
+        ///     Get the action map used for the choice selection.
+        /// </summary>
+        /// <returns>The action map used for the choice selection.</returns>
+        private InputActionMap GetChoicesActionMap()
+        {
+            return InputSystem.actions.actionMaps.Single(actionMap => actionMap.name == choicesSelectionActionMapName);
         }
 
         public override void OnPointerExit(PointerEventData eventData)
@@ -242,12 +246,15 @@ namespace Selania.Rework.Components.DialogueBox
             // when this object gets selected, update the text so that the internally-selected entry gets highlighted
             UpdateText();
             // hook to the actions to receive the numbered actions
-            if (_choicesSelectActionMap == null) return;
-            _choicesSelectActionMap.Enable();
-            foreach (var action in _choicesSelectActionMap.actions)
+            var choicesSelectActionMap = GetChoicesActionMap();
+            choicesSelectActionMap.Enable();
+            foreach (var action in choicesSelectActionMap.actions)
             {
                 if (!int.TryParse(action.name, out var index)) continue;
-                Action<InputAction.CallbackContext> callback = _ => { ChoiceSelected(index); };
+                Action<InputAction.CallbackContext> callback = _ =>
+                {
+                    if (_choices != null && _choices.Any(choice => choice.index == index)) ChoiceSelected(index);
+                };
                 action.performed += callback;
                 _deregisterChoicesSelectActionMap.Add(() => action.performed -= callback);
             }
@@ -267,7 +274,8 @@ namespace Selania.Rework.Components.DialogueBox
 
         private void CleanupChoicesSelectActionMap()
         {
-            _choicesSelectActionMap?.Disable();
+            var choicesSelectActionMap = GetChoicesActionMap();
+            choicesSelectActionMap.Disable();
             foreach (var action in _deregisterChoicesSelectActionMap) action();
 
             _deregisterChoicesSelectActionMap.Clear();
