@@ -28,6 +28,12 @@ namespace Selania.Rework.Components.DialogueBox
         private IList<Choice>? _choices;
 
         /// <summary>
+        ///     Flag used to know if we're selected. Can't directly query EventSystem.current.currentSelectedGameObject
+        ///     because during the OnDeselect event the object is not yet deselected.
+        /// </summary>
+        private bool _isSelected;
+
+        /// <summary>
         ///     The last selected index (-1 = nothing selected).
         /// </summary>
         private int _selectedIndex = -1;
@@ -97,12 +103,13 @@ namespace Selania.Rework.Components.DialogueBox
                 return;
             }
 
+            Logger.ZLogTrace($"Redrawing choices: isSelected={_isSelected}, selectedIndex={_selectedIndex}");
+
             var sb = new StringBuilder();
             var i = 1;
             foreach (var choice in _choices)
             {
-                var color = choice.index == _selectedIndex &&
-                            EventSystem.current.currentSelectedGameObject == gameObject
+                var color = choice.index == _selectedIndex && _isSelected
                     ? SettingsDialogueBox.selectedChoiceColor
                     : SettingsDialogueBox.defaultChoiceColor;
                 sb.Append("<b><color=#");
@@ -168,6 +175,7 @@ namespace Selania.Rework.Components.DialogueBox
         /// <inheritdoc />
         public override void OnSelect(BaseEventData eventData)
         {
+            _isSelected = true;
             base.OnSelect(eventData);
             // when this object gets selected, update the text so that the internally-selected entry gets highlighted
             UpdateText();
@@ -176,6 +184,7 @@ namespace Selania.Rework.Components.DialogueBox
         /// <inheritdoc />
         public override void OnDeselect(BaseEventData eventData)
         {
+            _isSelected = false;
             base.OnDeselect(eventData);
             // when this object gets deselected, update the text so that the internally-selected entry stops being
             // highlighted
