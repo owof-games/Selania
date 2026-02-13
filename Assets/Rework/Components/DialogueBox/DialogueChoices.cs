@@ -104,7 +104,7 @@ namespace Selania.Rework.Components.DialogueBox
         {
             // if we are selected and there's a choice selected, pick that choice
             if (!_isSelected || _selectedIndex == -1) return;
-            ChoiceSelected(_hoveredIndex);
+            ChoiceSelected(_selectedIndex);
         }
 
         public override void OnPointerExit(PointerEventData eventData)
