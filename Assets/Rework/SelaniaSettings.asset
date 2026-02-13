@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46dfe07ed4045134e9ef97f28427d491, type: 3}
-  m_Name: Settings
+  m_Name: SelaniaSettings
   m_EditorClassIdentifier: Selania::Selania.Rework.Components.Settings
   <defaultCharacterColor>k__BackingField: {r: 1, g: 0.39354917, b: 0, a: 1}
   characterDialogueInfo:
@@ -20,12 +20,17 @@ MonoBehaviour:
   <choiceIndentationPercentage>k__BackingField: 8
   <defaultChoiceColor>k__BackingField: {r: 0.254539, g: 0.3228934, b: 0.9811321, a: 0}
   <selectedChoiceColor>k__BackingField: {r: 0.41037738, g: 0.5451931, b: 1, a: 0}
+  <hoveredChoiceColor>k__BackingField: {r: 0.372549, g: 0.6196079, b: 0.627451, a: 1}
+  defaultCharacterTagSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  characterTagInfo:
+  - <tag>k__BackingField: mentore_hurry
+    <sprite>k__BackingField: {fileID: 21300000, guid: a962fcdf445938947a61af58b91e46bf, type: 3}
+  - <tag>k__BackingField: chitarra_affectionate
+    <sprite>k__BackingField: {fileID: 21300000, guid: 2db91d165dd198c4391ba68eeed07c33, type: 3}
   <minimumLogLevel>k__BackingField: 0
   _fileProviderSettings:
-    <minimumLogLevel>k__BackingField: 0
     categorySettingsArray: []
+    <minimumLogLevel>k__BackingField: 0
   _consoleProviderSettings:
+    categorySettingsArray: []
     <minimumLogLevel>k__BackingField: 2
-    categorySettingsArray:
-    - <categoryPrefix>k__BackingField: Selania.Rework.Components.DialogueBox.DialogueChoices
-      <minimumLogLevel>k__BackingField: 0

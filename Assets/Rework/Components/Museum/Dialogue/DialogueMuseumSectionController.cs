@@ -45,5 +45,15 @@ namespace Selania.Rework.Components.Museum.Dialogue
                 new(3, "Terza scelta, anche se il testo è tecnicamente troppo lungo per starci.")
             }, index => choiceSelections.text = $"{choiceSelections.text}\nSelected choice n. {index}.");
         }
+
+        public void SetChitarraAffectionate()
+        {
+            dialogueBox.SetPortraitImage("chitarra_affectionate");
+        }
+
+        public void SetMentoreHurry()
+        {
+            dialogueBox.SetPortraitImage("mentore_hurry");
+        }
     }
 }

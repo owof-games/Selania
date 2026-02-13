@@ -11,7 +11,7 @@ namespace Selania.Rework.Components.Museum.ChoicePicker
         [SerializeField] private UnityEvent<string> picked = new();
 
         [SerializeField] [Tooltip("Settings of the game.")]
-        private Settings settings = null!;
+        private SelaniaSettings settings = null!;
 
         protected override void Configure(IContainerBuilder builder)
         {

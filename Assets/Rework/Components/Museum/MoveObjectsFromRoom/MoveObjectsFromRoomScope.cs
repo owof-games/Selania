@@ -10,7 +10,7 @@ namespace Selania.Rework.Components.Museum.MoveObjectsFromRoom
         private InkBridge inkBridge = null!;
 
         [SerializeField] [Tooltip("Settings of the game.")]
-        private Settings settings = null!;
+        private SelaniaSettings settings = null!;
 
         protected override void Configure(IContainerBuilder builder)
         {

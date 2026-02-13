@@ -1,7 +1,5 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using Microsoft.Extensions.Logging;
 using Selania.Rework.Interfaces;
 using UnityEngine;
@@ -9,15 +7,21 @@ using UnityEngine;
 namespace Selania.Rework.Components
 {
     [CreateAssetMenu(fileName = "Settings", menuName = "Selania/Settings")]
-    public class Settings : ScriptableObject, ISettingsDialogueBox, ISettingsLogger
+    public class SelaniaSettings : ScriptableObject, ISettingsDialogueBox, ISettingsLogger
     {
-        [Header("Dialogue Box")]
+        [field: Header("Dialogue Box")]
         [field: SerializeField]
         [field: Tooltip("Default color for character tags in dialogue.")]
         public Color defaultCharacterColor { get; private set; } = Color.black;
 
         [field: SerializeField] [field: Tooltip("Info about every character who can have dialogue lines.")]
         private CharacterDialogueInfo[] characterDialogueInfo = Array.Empty<CharacterDialogueInfo>();
+
+        [SerializeField] [Tooltip("The default sprite to use when a tag doesn't have a corresponding sprite")]
+        private Sprite defaultCharacterTagSprite = null!;
+
+        [SerializeField] [Tooltip("The sprites corresponding to the various expressions")]
+        private CharacterTagInfo[] characterTagInfo = Array.Empty<CharacterTagInfo>();
 
         // ReSharper disable once InconsistentNaming
         [SerializeField] private ProviderSettings _fileProviderSettings = new();
@@ -26,40 +30,17 @@ namespace Selania.Rework.Components
         [SerializeField] private ProviderSettings _consoleProviderSettings = new();
 
         /// <summary>
-        ///     The backing property for <see cref="characterDialogueLabelColors" />.
+        ///     The provider which generates a dictionary from character name to its color.
         /// </summary>
-        private IDictionary<string, Color>? _characterDialogueLabelColors;
+        private readonly DerivedDictionaryProvider<string, Color, CharacterDialogueInfo>
+            _characterDialogueLabelColorsProvider =
+                new(info => info.name, info => info.color);
 
         /// <summary>
-        ///     Hash of <see cref="characterDialogueInfo" /> from the last time we've transformed it into
-        ///     <see cref="characterDialogueLabelColors" />.
+        ///     The provider which generates a dictionary from tag name to its sprite.
         /// </summary>
-        private int _lastCharacterDialogueInfoHash;
-
-        /// <summary>
-        ///     A map between character names and their tag colors.
-        /// </summary>
-        private IDictionary<string, Color> characterDialogueLabelColors
-        {
-            get
-            {
-                // TODO: in play mode, it's not necessary to keep updating the dictionary
-
-                // check if we can re-use the dictionary.
-                var hash = ((IStructuralEquatable)characterDialogueInfo).GetHashCode(
-                    EqualityComparer<CharacterDialogueInfo>.Default);
-                if (_characterDialogueLabelColors != null && _lastCharacterDialogueInfoHash == hash)
-                    return _characterDialogueLabelColors;
-
-                // we need to re-build the dictionary
-                _characterDialogueLabelColors = characterDialogueInfo.ToDictionary(
-                    info => info.name,
-                    info => info.color);
-                _lastCharacterDialogueInfoHash = hash;
-
-                return _characterDialogueLabelColors;
-            }
-        }
+        private readonly DerivedDictionaryProvider<string, Sprite, CharacterTagInfo> _characterSpritesProvider =
+            new(info => info.tag, info => info.sprite, CharacterTagInfoEqualityComparer.Default);
 
         /// <inheritdoc />
         [field: SerializeField]
@@ -91,12 +72,22 @@ namespace Selania.Rework.Components
         /// <inheritdoc />
         public Color GetCharacterTagColorByName(string characterName)
         {
+            var characterDialogueLabelColors = _characterDialogueLabelColorsProvider.Get(characterDialogueInfo);
             return characterDialogueLabelColors.TryGetValue(characterName, out var color)
                 ? color
                 : defaultCharacterColor;
         }
 
-        [Header("Logger")]
+        /// <inheritdoc />
+        public Sprite GetCharacterSpriteByTag(string tag)
+        {
+            var characterSprites = _characterSpritesProvider.Get(characterTagInfo);
+            return characterSprites.TryGetValue(tag, out var sprite)
+                ? sprite
+                : defaultCharacterTagSprite;
+        }
+
+        [field: Header("Logger")]
         [field: SerializeField]
         [field:
             Tooltip(
@@ -130,6 +121,54 @@ namespace Selania.Rework.Components
             public LogLevel minimumLogLevel { get; private set; } = LogLevel.Trace;
 
             public IEnumerable<ISettingsLogger.ICategorySettings> categorySettings => categorySettingsArray;
+        }
+
+        [Serializable]
+        public class CharacterTagInfo
+        {
+            [field: SerializeField]
+            [field: Tooltip("The tag this entry describes (e.g.: mentore_bored)")]
+            public string tag { get; private set; } = "";
+
+            [field: SerializeField]
+            [field: Tooltip("The sprite for this tag")]
+            public Sprite sprite { get; private set; } = null!;
+
+            public bool Equals(CharacterTagInfo? other)
+            {
+                if (other is null) return false;
+                if (ReferenceEquals(this, other)) return true;
+                return tag == other.tag && sprite.Equals(other.sprite);
+            }
+
+            public override bool Equals(object? obj)
+            {
+                if (obj is null) return false;
+                if (ReferenceEquals(this, obj)) return true;
+                return obj.GetType() == GetType() && Equals((CharacterTagInfo)obj);
+            }
+
+            public override int GetHashCode()
+            {
+                // ReSharper disable NonReadonlyMemberInGetHashCode
+                return HashCode.Combine(tag, sprite);
+                // ReSharper restore NonReadonlyMemberInGetHashCode
+            }
+        }
+
+        private class CharacterTagInfoEqualityComparer : EqualityComparer<CharacterTagInfo>
+        {
+            public static readonly CharacterTagInfoEqualityComparer Default = new();
+
+            public override bool Equals(CharacterTagInfo x, CharacterTagInfo y)
+            {
+                return x.Equals(y);
+            }
+
+            public override int GetHashCode(CharacterTagInfo obj)
+            {
+                return obj.GetHashCode();
+            }
         }
     }
 }

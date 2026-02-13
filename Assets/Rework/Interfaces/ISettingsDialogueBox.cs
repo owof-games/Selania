@@ -39,5 +39,12 @@ namespace Selania.Rework.Interfaces
         /// <param name="characterName">Name of the character.</param>
         /// <returns>Color to use.</returns>
         Color GetCharacterTagColorByName(string characterName);
+
+        /// <summary>
+        ///     Get the character sprite by tag.
+        /// </summary>
+        /// <param name="tag">The tag (mentore_neutral, chitarra_bored, ...)</param>
+        /// <returns>The sprite for this tag.</returns>
+        Sprite GetCharacterSpriteByTag(string tag);
     }
 }

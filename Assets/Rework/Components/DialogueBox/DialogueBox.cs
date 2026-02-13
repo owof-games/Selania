@@ -21,10 +21,21 @@ namespace Selania.Rework.Components.DialogueBox
         [SerializeField] [Tooltip("The container where all the text lines are added to.")]
         private RectTransform textLinesContainer = null!;
 
+        [SerializeField] [Tooltip("The portrait container.")]
+        private PortraitContainer portraitContainer = null!;
+
         /// <summary>
         ///     The scope in which this object is created.
         /// </summary>
         [Inject] internal LifetimeScope Scope = null!;
+
+#if UNITY_EDITOR
+        private void OnValidate()
+        {
+            // automatically fill portraitContainer
+            portraitContainer = GetComponentInChildren<PortraitContainer>();
+        }
+#endif
 
         /// <summary>
         ///     Add a new text line to the dialogue box.
@@ -50,6 +61,15 @@ namespace Selania.Rework.Components.DialogueBox
                 dialogueChoices.choiceSelectedEvent.AddListener(index => onChoiceSelected(index));
                 dialogueChoices.SetChoices(choices);
             }
+        }
+
+        /// <summary>
+        ///     Set the image of the portrait according to the tag.
+        /// </summary>
+        /// <param name="tagName">The tag (e.g.: mentore_bored).</param>
+        public void SetPortraitImage(string tagName)
+        {
+            portraitContainer.SetImage(tagName);
         }
     }
 }

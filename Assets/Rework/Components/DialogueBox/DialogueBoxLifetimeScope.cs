@@ -1,8 +1,6 @@
-﻿using VContainer.Unity;
-
-namespace Selania.Rework.Components.DialogueBox
+﻿namespace Selania.Rework.Components.DialogueBox
 {
-    public class DialogueBoxLifetimeScope : LifetimeScope
+    public class DialogueBoxLifetimeScope : ScopeWithAutoInjectSupport
     {
     }
 }
