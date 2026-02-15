@@ -91,5 +91,10 @@ namespace Selania.Rework.Components.Museum.Dialogue
             dialogueBox.EnableRelationshipStatus();
             dialogueBox.SetRelationshipStatusLevel(halfWayPercentage);
         }
+
+        public void DisableHeart()
+        {
+            dialogueBox.DisableRelationshipStatus();
+        }
     }
 }

@@ -31,6 +31,12 @@ namespace Selania.Rework.Components.DialogueBox
         private Animator heartAnimator = null!;
 
         /// <summary>
+        ///     Whether this component has been just enabled. This flag is used by the animations, and reset to <c>false</c>
+        ///     after the first one.
+        /// </summary>
+        private bool _justEnabled;
+
+        /// <summary>
         ///     The logger for this component.
         /// </summary>
         [Inject] internal ILogger<RelationshipStatus> Logger = null!;
@@ -46,6 +52,11 @@ namespace Selania.Rework.Components.DialogueBox
             gameObject.SetActive(false);
         }
 
+        private void OnEnable()
+        {
+            _justEnabled = true;
+        }
+
         /// <summary>
         ///     Relationship status is invisible at first; by calling this method, it becomes visible.
         /// </summary>
@@ -55,11 +66,21 @@ namespace Selania.Rework.Components.DialogueBox
         }
 
         /// <summary>
+        ///     Make relationship status invisible (for characters with no relationship status).
+        /// </summary>
+        public void Disable()
+        {
+            gameObject.SetActive(false);
+        }
+
+        /// <summary>
         ///     Set the current heart level.
         /// </summary>
         /// <param name="level">The level, between 0 (worst) and 1 (best).</param>
         public void SetLevel(float level)
         {
+            if (_justEnabled) Logger.ZLogTrace($"SetLevel called for the first time after enabling");
+
             level = Mathf.Clamp(level, 0, 1);
             Logger.ZLogTrace($"Setting log level to {level}");
 
@@ -81,8 +102,11 @@ namespace Selania.Rework.Components.DialogueBox
                 Logger.ZLogTrace($"Setting color {barImage.color} for good relationship status");
             }
 
-            LMotion.Create(barImage.color, targetColor, SettingsDialogueBox.statusChangeDuration)
-                .BindToColor(barImage);
+            if (_justEnabled)
+                barImage.color = targetColor;
+            else
+                LMotion.Create(barImage.color, targetColor, SettingsDialogueBox.statusChangeDuration)
+                    .BindToColor(barImage);
 
 
             // set the heart status
@@ -94,13 +118,25 @@ namespace Selania.Rework.Components.DialogueBox
             Logger.ZLogTrace($"Setting heart status as glowing? {heartGlowing}");
 
             // set the heart position
-            LMotion.Create(baseHeartTransform.anchorMin.x, level, SettingsDialogueBox.statusChangeDuration)
-                .Bind(x =>
-                {
-                    baseHeartTransform.anchorMin = new Vector2(x, baseHeartTransform.anchorMin.y);
-                    baseHeartTransform.anchorMax = new Vector2(x, baseHeartTransform.anchorMax.y);
-                });
+            if (_justEnabled)
+            {
+                baseHeartTransform.anchorMin = new Vector2(level, baseHeartTransform.anchorMin.y);
+                baseHeartTransform.anchorMax = new Vector2(level, baseHeartTransform.anchorMax.y);
+            }
+            else
+            {
+                LMotion.Create(baseHeartTransform.anchorMin.x, level, SettingsDialogueBox.statusChangeDuration)
+                    .Bind(x =>
+                    {
+                        baseHeartTransform.anchorMin = new Vector2(x, baseHeartTransform.anchorMin.y);
+                        baseHeartTransform.anchorMax = new Vector2(x, baseHeartTransform.anchorMax.y);
+                    });
+            }
+
             Logger.ZLogTrace($"Heart position: {level}");
+
+            // mark the status as active, so future transitions will be complete
+            _justEnabled = false;
         }
     }
 }

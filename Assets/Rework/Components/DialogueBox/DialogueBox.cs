@@ -117,6 +117,14 @@ namespace Selania.Rework.Components.DialogueBox
         }
 
         /// <summary>
+        ///     Make relationship status invisible (for characters with no relationship status).
+        /// </summary>
+        public void DisableRelationshipStatus()
+        {
+            relationshipStatus.Disable();
+        }
+
+        /// <summary>
         ///     Set the current heart level.
         /// </summary>
         /// <param name="level">The level, between 0 (worst) and 1 (best).</param>
