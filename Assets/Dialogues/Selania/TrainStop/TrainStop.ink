@@ -4,7 +4,7 @@
 
     {debug: La lista degli oggetti nella stanza è: {contentsTrainStop}.}
 
-    {train_stop == 1: <i>La stazione profuma di aria nevosa e nuovi arrivi.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    // {train_stop == 1: <i>La stazione profuma di aria nevosa e nuovi arrivi.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
     {
         - contentsSafekeeping has RoomExit:

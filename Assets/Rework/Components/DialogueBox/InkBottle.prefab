@@ -126,5 +126,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Selania::Selania.Rework.Components.DialogueBox.InkBottle
   image: {fileID: 7222960523142119093}
   noBottle: {fileID: 21300000, guid: d5366e2339523e54bbcbcae8ec521c21, type: 3}
-  fullBottle: {fileID: 21300000, guid: 3602f4635bec9a24e98771b06d74deba, type: 3}
-  emptyBottle: {fileID: 21300000, guid: 46b5ba1a65ad6514583b671e984f204e, type: 3}
+  fullBottle: {fileID: 21300000, guid: 4d5d98958237aa6468ef151bae88b17b, type: 3}
+  emptyBottle: {fileID: 21300000, guid: 2ba1e5e6efb73194fb236bddbb043991, type: 3}

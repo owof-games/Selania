@@ -20,12 +20,6 @@ namespace Selania.Rework.Editor
 
             // default pixels per unit
             textureImporter.spritePixelsPerUnit = 1;
-
-            // physics shape and sprite mode (single)
-            var importerSettings = new TextureImporterSettings();
-            textureImporter.ReadTextureSettings(importerSettings);
-            importerSettings.spriteMode = (int)SpriteImportMode.Single;
-            textureImporter.SetTextureSettings(importerSettings);
         }
     }
 }

@@ -106,7 +106,15 @@ namespace Selania.Rework.Components
         private void Continue()
         {
             logger.ZLogTrace($"Continuing the story.");
-            GetStory().Continue();
+            var story = GetStory();
+            do
+            {
+                story.Continue();
+            } while (string.IsNullOrWhiteSpace(story.currentText));
+
+            logger.ZLogInformation($"Story text: {story.currentText.Trim()}");
+            foreach (var choice in story.currentChoices) logger.ZLogInformation($"Story choice: {choice.text.Trim()}");
+
             UpdateRoom();
         }
 
