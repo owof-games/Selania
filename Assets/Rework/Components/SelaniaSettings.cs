@@ -87,6 +87,43 @@ namespace Selania.Rework.Components
                 : defaultCharacterTagSprite;
         }
 
+        [field: Header("Dialogue Box - Relationship")]
+        [field: SerializeField]
+        [field: Tooltip("Color of the background bar when the relationship is considered bad.")]
+        public Color badRelationshipStatusBarColor { get; private set; }
+
+        [field: SerializeField]
+        [field: Tooltip("Color of the background bar when the relationship is considered normal.")]
+        public Color normalRelationshipStatusBarColor { get; private set; }
+
+        [field: SerializeField]
+        [field: Tooltip("Color of the background bar when the relationship is considered good.")]
+        public Color goodRelationshipStatusBarColor { get; private set; }
+
+        [field: SerializeField]
+        [field: Tooltip("How long it takes for the status bar to change color and the heart to more, in seconds.")]
+        public float statusChangeDuration { get; private set; }
+
+        [field: SerializeField]
+        [field: Tooltip("Percentage at which the relationship turns from bad to normal or viceversa.")]
+        [field: Range(0f, 1f)]
+        public float percentageBetweenBadAndNormalRelationshipStatusBar { get; private set; }
+
+        [field: SerializeField]
+        [field: Tooltip("Percentage at which the relationship turns from norma to good or viceversa.")]
+        [field: Range(0f, 1f)]
+        public float percentageBetweenNormalAndGoodRelationshipStatusBar { get; private set; }
+
+        [field: SerializeField]
+        [field: Tooltip("Percentage at which the heart turns from broken to normal or viceversa.")]
+        [field: Range(0f, 1f)]
+        public float percentageBetweenBrokenAndNormalHeart { get; private set; }
+
+        [field: SerializeField]
+        [field: Tooltip("Percentage at which the heart turns from normal to great or viceversa.")]
+        [field: Range(0f, 1f)]
+        public float percentageBetweenNormalAndGreatHeart { get; private set; }
+
         [field: Header("Logger")]
         [field: SerializeField]
         [field:

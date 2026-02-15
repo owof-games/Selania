@@ -16,21 +16,31 @@ MonoBehaviour:
   characterDialogueInfo:
   - <name>k__BackingField: PG
     <color>k__BackingField: {r: 0.29003027, g: 0.2783019, b: 1, a: 1}
-  <textLineSlideDuration>k__BackingField: 0.3
-  <choiceIndentationPercentage>k__BackingField: 8
-  <defaultChoiceColor>k__BackingField: {r: 0.254539, g: 0.3228934, b: 0.9811321, a: 0}
-  <selectedChoiceColor>k__BackingField: {r: 0.41037738, g: 0.5451931, b: 1, a: 0}
-  <hoveredChoiceColor>k__BackingField: {r: 0.372549, g: 0.6196079, b: 0.627451, a: 1}
   defaultCharacterTagSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   characterTagInfo:
   - <tag>k__BackingField: mentore_hurry
     <sprite>k__BackingField: {fileID: 21300000, guid: a962fcdf445938947a61af58b91e46bf, type: 3}
   - <tag>k__BackingField: chitarra_affectionate
     <sprite>k__BackingField: {fileID: 21300000, guid: 2db91d165dd198c4391ba68eeed07c33, type: 3}
+  <textLineSlideDuration>k__BackingField: 0.3
+  <choiceIndentationPercentage>k__BackingField: 8
+  <defaultChoiceColor>k__BackingField: {r: 0.254539, g: 0.3228934, b: 0.9811321, a: 1}
+  <selectedChoiceColor>k__BackingField: {r: 0.41037738, g: 0.5451931, b: 1, a: 1}
+  <hoveredChoiceColor>k__BackingField: {r: 0.372549, g: 0.6196079, b: 0.627451, a: 1}
+  <badRelationshipStatusBarColor>k__BackingField: {r: 0.25882354, g: 0.09803922, b: 0.8627451, a: 1}
+  <normalRelationshipStatusBarColor>k__BackingField: {r: 0.8627451, g: 0.74509805, b: 0.09803922, a: 1}
+  <goodRelationshipStatusBarColor>k__BackingField: {r: 0.96862745, g: 0.3764706, b: 0.60784316, a: 1}
+  <statusChangeDuration>k__BackingField: 0.3
+  <percentageBetweenBadAndNormalRelationshipStatusBar>k__BackingField: 0.3
+  <percentageBetweenNormalAndGoodRelationshipStatusBar>k__BackingField: 0.6
+  <percentageBetweenBrokenAndNormalHeart>k__BackingField: 0.2
+  <percentageBetweenNormalAndGreatHeart>k__BackingField: 0.8
   <minimumLogLevel>k__BackingField: 0
   _fileProviderSettings:
     categorySettingsArray: []
     <minimumLogLevel>k__BackingField: 0
   _consoleProviderSettings:
-    categorySettingsArray: []
+    categorySettingsArray:
+    - <categoryPrefix>k__BackingField: Selania.Rework.Components.DialogueBox.RelationshipStatus
+      <minimumLogLevel>k__BackingField: 0
     <minimumLogLevel>k__BackingField: 2

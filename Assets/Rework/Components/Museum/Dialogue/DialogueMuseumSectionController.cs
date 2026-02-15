@@ -1,6 +1,8 @@
-﻿using Selania.Rework.Components.DialogueBox;
+﻿using System;
+using Selania.Rework.Components.DialogueBox;
 using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Selania.Rework.Components.Museum.Dialogue
 {
@@ -17,6 +19,8 @@ namespace Selania.Rework.Components.Museum.Dialogue
         [SerializeField] private DialogueBox.DialogueBox dialogueBox = null!;
 
         [SerializeField] private TextMeshProUGUI choiceSelections = null!;
+
+        [SerializeField] private SelaniaSettings settings = null!;
 
         public void AddLineOfTextNoSpeaker()
         {
@@ -69,6 +73,23 @@ namespace Selania.Rework.Components.Museum.Dialogue
         public void SetTwoFullOneEmpty()
         {
             dialogueBox.SetInkStatus(2, 1);
+        }
+
+        public void SetHeartInterval(int index)
+        {
+            var percentages = new[]
+            {
+                0,
+                settings.percentageBetweenBadAndNormalRelationshipStatusBar,
+                settings.percentageBetweenNormalAndGoodRelationshipStatusBar,
+                settings.percentageBetweenBrokenAndNormalHeart,
+                settings.percentageBetweenNormalAndGreatHeart,
+                1
+            };
+            Array.Sort(percentages);
+            var halfWayPercentage = (percentages[index] + percentages[index + 1]) / 2;
+            dialogueBox.EnableRelationshipStatus();
+            dialogueBox.SetRelationshipStatusLevel(halfWayPercentage);
         }
     }
 }

@@ -29,6 +29,9 @@ namespace Selania.Rework.Components.DialogueBox
         [SerializeField] [Tooltip("The ink container.")]
         private InkContainer inkContainer = null!;
 
+        [SerializeField] [Tooltip("The relationship status component.")]
+        private RelationshipStatus relationshipStatus;
+
         [SerializeField] [Tooltip("The scroll view displaying the dialogue")]
         private ScrollRect scrollView = null!;
 
@@ -103,6 +106,23 @@ namespace Selania.Rework.Components.DialogueBox
         public void SetInkStatus(int numFull, int numEmpty)
         {
             inkContainer.SetInkStatus(numFull, numEmpty);
+        }
+
+        /// <summary>
+        ///     Relationship status is invisible at first; by calling this method, it becomes visible.
+        /// </summary>
+        public void EnableRelationshipStatus()
+        {
+            relationshipStatus.Enable();
+        }
+
+        /// <summary>
+        ///     Set the current heart level.
+        /// </summary>
+        /// <param name="level">The level, between 0 (worst) and 1 (best).</param>
+        public void SetRelationshipStatusLevel(float level)
+        {
+            relationshipStatus.SetLevel(level);
         }
     }
 }
