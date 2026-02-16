@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using Cysharp.Threading.Tasks;
+using Selania.Rework.Interfaces;
 using UnityEngine;
 using UnityEngine.UI;
 using VContainer;
@@ -30,7 +30,7 @@ namespace Selania.Rework.Components.DialogueBox
         private InkContainer inkContainer = null!;
 
         [SerializeField] [Tooltip("The relationship status component.")]
-        private RelationshipStatus relationshipStatus;
+        private RelationshipStatus relationshipStatus = null!;
 
         [SerializeField] [Tooltip("The scroll view displaying the dialogue")]
         private ScrollRect scrollView = null!;
@@ -39,6 +39,11 @@ namespace Selania.Rework.Components.DialogueBox
         ///     The scope in which this object is created.
         /// </summary>
         [Inject] internal LifetimeScope Scope = null!;
+
+        /// <summary>
+        ///     Settings for the dialogue box.
+        /// </summary>
+        [Inject] internal ISettingsDialogueBox Settings = null!;
 
 #if UNITY_EDITOR
         private void OnValidate()
@@ -63,7 +68,7 @@ namespace Selania.Rework.Components.DialogueBox
                 textLine.SetText(speaker, text);
             }
 
-            ScrollToBottom().Forget();
+            ScrollToBottom();
         }
 
         public void AddChoices(IEnumerable<DialogueChoices.Choice> choices, Action<int> onChoiceSelected)
@@ -76,16 +81,15 @@ namespace Selania.Rework.Components.DialogueBox
                 dialogueChoices.SetChoices(choices);
             }
 
-            ScrollToBottom().Forget();
+            ScrollToBottom();
         }
 
         /// <summary>
         /// Scroll to bottom.
         /// </summary>
-        private async UniTaskVoid ScrollToBottom()
+        private void ScrollToBottom()
         {
-            // wait a frame to allow for layout operations to be performed
-            await UniTask.NextFrame();
+            scrollView.CalculateLayoutInputVertical();
             scrollView.verticalNormalizedPosition = 0;
         }
 
