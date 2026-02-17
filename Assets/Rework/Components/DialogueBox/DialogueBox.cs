@@ -1,10 +1,13 @@
 using System;
 using System.Collections.Generic;
+using Microsoft.Extensions.Logging;
 using Selania.Rework.Interfaces;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using VContainer;
 using VContainer.Unity;
+using ZLogger;
 
 namespace Selania.Rework.Components.DialogueBox
 {
@@ -12,7 +15,7 @@ namespace Selania.Rework.Components.DialogueBox
     ///     The view manager for the dialogue box. This script controls the behavior of the component, without handling any
     ///     model connection.
     /// </summary>
-    public class DialogueBox : MonoBehaviour
+    public class DialogueBox : MonoBehaviour, InputActionsDialogueBox.IContinueMapActions
     {
         [SerializeField] [Tooltip("The prefab that creates a text line once instantiated.")]
         private GameObject textLinePrefab = null!;
@@ -36,6 +39,16 @@ namespace Selania.Rework.Components.DialogueBox
         private ScrollRect scrollView = null!;
 
         /// <summary>
+        ///     The input actions with specific handling for the dialogue box.
+        /// </summary>
+        private InputActionsDialogueBox? _inputActionsDialogueBox;
+
+        /// <summary>
+        ///     The logger used by this component.
+        /// </summary>
+        [Inject] internal ILogger<DialogueBox> Logger = null!;
+
+        /// <summary>
         ///     The scope in which this object is created.
         /// </summary>
         [Inject] internal LifetimeScope Scope = null!;
@@ -44,6 +57,30 @@ namespace Selania.Rework.Components.DialogueBox
         ///     Settings for the dialogue box.
         /// </summary>
         [Inject] internal ISettingsDialogueBox Settings = null!;
+
+        private void Awake()
+        {
+            _inputActionsDialogueBox = new InputActionsDialogueBox();
+            _inputActionsDialogueBox.ContinueMap.AddCallbacks(this);
+        }
+
+        private void OnEnable()
+        {
+            _inputActionsDialogueBox?.Enable();
+            _inputActionsDialogueBox?.ContinueMap.Disable();
+            _inputActionsDialogueBox?.ChoicesSelectionMap.Disable();
+        }
+
+        private void OnDisable()
+        {
+            _inputActionsDialogueBox?.Disable();
+        }
+
+        private void OnDestroy()
+        {
+            _inputActionsDialogueBox?.ContinueMap.RemoveCallbacks(this);
+            _inputActionsDialogueBox?.Dispose();
+        }
 
 #if UNITY_EDITOR
         private void OnValidate()
@@ -54,6 +91,13 @@ namespace Selania.Rework.Components.DialogueBox
         }
 #endif
 
+        public void OnContinue(InputAction.CallbackContext context)
+        {
+            if (!context.performed) return;
+            Logger.ZLogTrace($"Requested to continue.");
+            OnContinueRequested?.Invoke();
+        }
+
         /// <summary>
         ///     Add a new text line to the dialogue box.
         /// </summary>
@@ -63,6 +107,7 @@ namespace Selania.Rework.Components.DialogueBox
         {
             using (LifetimeScope.EnqueueParent(Scope))
             {
+                _inputActionsDialogueBox?.ContinueMap.Enable();
                 var textLineGameObject = Instantiate(textLinePrefab, textLinesContainer);
                 var textLine = textLineGameObject.GetComponent<TextLine>();
                 textLine.SetText(speaker, text);
@@ -75,10 +120,25 @@ namespace Selania.Rework.Components.DialogueBox
         {
             using (LifetimeScope.EnqueueParent(Scope))
             {
+                // create the dialogue choices and hook to input action events
                 var dialogueChoicesGameObject = Instantiate(dialogueChoicesPrefab, textLinesContainer);
                 var dialogueChoices = dialogueChoicesGameObject.GetComponent<DialogueChoices>();
-                dialogueChoices.choiceSelectedEvent.AddListener(index => onChoiceSelected(index));
+                _inputActionsDialogueBox?.ChoicesSelectionMap.AddCallbacks(dialogueChoices);
+                _inputActionsDialogueBox?.ChoicesSelectionMap.Enable();
+                _inputActionsDialogueBox?.ContinueMap.Disable();
+                dialogueChoices.ChoiceSelectedEvent += SelectChoice;
                 dialogueChoices.SetChoices(choices);
+
+                void SelectChoice(int index)
+                {
+                    // de-register everything and destroy the choices
+                    _inputActionsDialogueBox?.ChoicesSelectionMap.Disable();
+                    _inputActionsDialogueBox?.ContinueMap.Enable();
+                    _inputActionsDialogueBox?.ChoicesSelectionMap.RemoveCallbacks(dialogueChoices);
+                    dialogueChoices.ChoiceSelectedEvent -= SelectChoice;
+                    Destroy(dialogueChoicesGameObject);
+                    onChoiceSelected.Invoke(index);
+                }
             }
 
             ScrollToBottom();
@@ -136,5 +196,10 @@ namespace Selania.Rework.Components.DialogueBox
         {
             relationshipStatus.SetLevel(level);
         }
+
+        /// <summary>
+        ///     Invoked whenever the continue button is pressed.
+        /// </summary>
+        public event Action? OnContinueRequested;
     }
 }

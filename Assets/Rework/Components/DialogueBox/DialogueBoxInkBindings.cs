@@ -4,7 +4,6 @@ using System.Linq;
 using Microsoft.Extensions.Logging;
 using Selania.Rework.Interfaces;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using VContainer;
 using ZLogger;
 
@@ -12,12 +11,6 @@ namespace Selania.Rework.Components.DialogueBox
 {
     public class DialogueBoxInkBindings : MonoBehaviour, IAutomaticEditorInject
     {
-        [SerializeField] [Tooltip("Name of the continue action map in the default input system")]
-        private string continueActionMapName = "ContinueMap";
-
-        [SerializeField] [Tooltip("Name of the continue action in the default input system")]
-        private string continueActionName = "Continue";
-
         [SerializeField] [Tooltip("The dialogue box that gets controlled by these bindings.")]
         private DialogueBox dialogueBox = null!;
 
@@ -26,6 +19,9 @@ namespace Selania.Rework.Components.DialogueBox
         /// </summary>
         private readonly List<IDisposable> _disposables = new();
 
+        /// <summary>
+        ///     Who was the speaker of the last line (or <c>null</c> if there has been no line yet).
+        /// </summary>
         private string? _lastSpeaker;
 
         /// <summary>
@@ -45,12 +41,13 @@ namespace Selania.Rework.Components.DialogueBox
 
         private void Start()
         {
+            // register to events and save disposables to unregister
             _disposables.Add(StoryLinear.AddCurrentTextChangedListener(CurrentTextChanged));
+
             _disposables.Add(StoryChoicesSelector.AddChoicesChangedListener(ChoicesChanged));
 
-            var continueAction = GetContinueActionMap().actions.First(action => action.name == continueActionName);
-            continueAction.performed += ContinueActionOnPerformed;
-            _disposables.Add(Disposable.Create(() => continueAction.performed -= ContinueActionOnPerformed));
+            dialogueBox.OnContinueRequested += ContinueActionOnPerformed;
+            _disposables.Add(Disposable.Create(() => dialogueBox.OnContinueRequested -= ContinueActionOnPerformed));
         }
 
         private void OnDestroy()
@@ -59,7 +56,7 @@ namespace Selania.Rework.Components.DialogueBox
             foreach (var disposable in _disposables) disposable.Dispose();
         }
 
-        private void ContinueActionOnPerformed(InputAction.CallbackContext _)
+        private void ContinueActionOnPerformed()
         {
             Logger.ZLogTrace($"Continue");
             if (StoryLinear.canContinue) StoryLinear.Continue();
@@ -68,15 +65,6 @@ namespace Selania.Rework.Components.DialogueBox
         private static string? GetValue(ICollection<Tag> tags, string category)
         {
             return tags.FirstOrDefault(t => t.category == category)?.value;
-        }
-
-        /// <summary>
-        ///     Get the action map used for the continue action.
-        /// </summary>
-        /// <returns>The action map used for the continue action.</returns>
-        private InputActionMap GetContinueActionMap()
-        {
-            return InputSystem.actions.actionMaps.Single(actionMap => actionMap.name == continueActionMapName);
         }
 
         private void CurrentTextChanged(string currentText, ICollection<Tag> tags)
@@ -106,20 +94,16 @@ namespace Selania.Rework.Components.DialogueBox
             {
                 Logger.ZLogTrace($"No portrait to set");
             }
-
-            // set up the continue input
-            var continueActionMap = GetContinueActionMap();
-            continueActionMap.Enable();
         }
 
         private void ChoicesChanged(IEnumerable<IStoryChoicesSelector.Choice> choices)
         {
-            // disable the continue input
-            var continueActionMap = GetContinueActionMap();
-            continueActionMap.Enable();
-
-            // create the choice
-            dialogueBox.AddChoices(choices.Select(choice => new DialogueChoices.Choice(choice.index, choice.text)),
+            // create the choices
+            var dialogueBoxChoices = choices.Select(choice => new DialogueChoices.Choice(choice.index, choice.text))
+                .ToList();
+            if (dialogueBoxChoices.Count == 0) return;
+            // show the choices
+            dialogueBox.AddChoices(dialogueBoxChoices,
                 index =>
                 {
                     Logger.ZLogTrace($"Choice index {index}");

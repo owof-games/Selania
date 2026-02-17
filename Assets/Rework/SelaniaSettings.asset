@@ -29,6 +29,8 @@ MonoBehaviour:
     categorySettingsArray:
     - <categoryPrefix>k__BackingField: Selania.Rework.Components.DialogueBox.DialogueBoxInkBindings
       <minimumLogLevel>k__BackingField: 0
+    - <categoryPrefix>k__BackingField: Selania.Rework.Components.DialogueBox.DialogueBox
+      <minimumLogLevel>k__BackingField: 0
     <minimumLogLevel>k__BackingField: 2
   <textLineSlideDuration>k__BackingField: 0.3
   <choiceIndentationPercentage>k__BackingField: 8
