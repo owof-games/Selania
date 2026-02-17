@@ -22,6 +22,14 @@ MonoBehaviour:
     <sprite>k__BackingField: {fileID: 21300000, guid: a962fcdf445938947a61af58b91e46bf, type: 3}
   - <tag>k__BackingField: chitarra_affectionate
     <sprite>k__BackingField: {fileID: 21300000, guid: 2db91d165dd198c4391ba68eeed07c33, type: 3}
+  _fileProviderSettings:
+    categorySettingsArray: []
+    <minimumLogLevel>k__BackingField: 0
+  _consoleProviderSettings:
+    categorySettingsArray:
+    - <categoryPrefix>k__BackingField: Selania.Rework.Components.DialogueBox.DialogueBoxInkBindings
+      <minimumLogLevel>k__BackingField: 0
+    <minimumLogLevel>k__BackingField: 2
   <textLineSlideDuration>k__BackingField: 0.3
   <choiceIndentationPercentage>k__BackingField: 8
   <defaultChoiceColor>k__BackingField: {r: 0.254539, g: 0.3228934, b: 0.9811321, a: 1}
@@ -36,11 +44,3 @@ MonoBehaviour:
   <percentageBetweenBrokenAndNormalHeart>k__BackingField: 0.2
   <percentageBetweenNormalAndGreatHeart>k__BackingField: 0.8
   <minimumLogLevel>k__BackingField: 0
-  _fileProviderSettings:
-    categorySettingsArray: []
-    <minimumLogLevel>k__BackingField: 0
-  _consoleProviderSettings:
-    categorySettingsArray:
-    - <categoryPrefix>k__BackingField: Selania.Rework.Components.DialogueBox.RelationshipStatus
-      <minimumLogLevel>k__BackingField: 0
-    <minimumLogLevel>k__BackingField: 2

@@ -23,7 +23,7 @@ namespace Selania.Rework.Components
         /// <summary>
         ///     The object that allows this choice picker to pick a choice.
         /// </summary>
-        [Inject] internal IStoryChoiceSelector StoryChoiceSelector = null!;
+        [Inject] internal IStoryChoicesSelector StoryChoicesSelector = null!;
 
         private void Start()
         {
@@ -40,7 +40,7 @@ namespace Selania.Rework.Components
         {
             // the interactable has been interacted with: pick the choice!
             Logger.ZLogTrace($"Asking to pick choice '{choiceText}'.");
-            StoryChoiceSelector.PickChoiceWithText(choiceText!);
+            StoryChoicesSelector.PickChoiceWithText(choiceText!);
         }
     }
 }

@@ -719,6 +719,11 @@ MonoBehaviour:
   - prefab: {fileID: 5900152936520379775, guid: 9f42571bb7bc54f47a089d0b34faeae6, type: 3}
     title: Dialogue box
     description: Questa scena mostra come si comporta il dialogue box.
+  - prefab: {fileID: 5900152936520379775, guid: 3744e70784811f340ba3381783c3dfca, type: 3}
+    title: Story control
+    description: "In questo caso il dialogue box \xE8 comandato dalla storia ink.
+      Questo esempio fa vedere come ink controlla testo, portrait, inchiostro, rapporto,
+      scelte, e come reagisce il box all'apertura e chiusura."
 --- !u!4 &1073972271
 Transform:
   m_ObjectHideFlags: 0

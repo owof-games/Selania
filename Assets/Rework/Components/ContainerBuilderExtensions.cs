@@ -19,7 +19,8 @@ namespace Selania.Rework.Components
                     return inkBridge;
                 }, Lifetime.Singleton)
                 .As<IStoryChangeRoomNotifier>()
-                .As<IStoryChoiceSelector>()
+                .As<IStoryChoicesSelector>()
+                .As<IStoryLinear>()
                 .As<IStoryChangeRoomContentsNotifier>();
         }
     }

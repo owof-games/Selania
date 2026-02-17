@@ -20,7 +20,7 @@ namespace Selania.Rework.Components
         /// </summary>
         /// <param name="listener">The listener to add.</param>
         /// <returns>A disposable that will remove the listener when disposed.</returns>
-        public IDisposable AddListener(T listener)
+        public virtual IDisposable AddListener(T listener)
         {
             _listeners ??= new List<T>();
             _listeners.Add(listener);
@@ -81,16 +81,37 @@ namespace Selania.Rework.Components
     ///     A container of listeners that take a single argument.
     /// </summary>
     /// <typeparam name="TArg1">The type of the argument taken by the listeners.</typeparam>
-    public sealed class ListenersContainer<TArg1> : ListenersContainerBase<Action<TArg1>>
+    public class ListenersContainer<TArg1> : ListenersContainerBase<Action<TArg1>>
     {
         /// <summary>
         ///     Invoke all the listeners with the given argument. See <see cref="ListenersContainerBase{T}.ExecuteOnListeners" />
         ///     for the exception semantic.
         /// </summary>
         /// <param name="arg1">The argument passed to the listeners.</param>
-        public void Invoke(TArg1 arg1)
+        public virtual void Invoke(TArg1 arg1)
         {
             ExecuteOnListeners(listener => listener(arg1));
+        }
+    }
+
+    public class AutoNotifierListenersContainer<TArg> : ListenersContainer<TArg>
+    {
+        private TArg _arg = default!;
+        private bool _hasValue;
+
+        public override IDisposable AddListener(Action<TArg> listener)
+        {
+            var disposable = base.AddListener(listener);
+            if (_hasValue) listener(_arg);
+
+            return disposable;
+        }
+
+        public override void Invoke(TArg arg)
+        {
+            _arg = arg;
+            _hasValue = true;
+            base.Invoke(arg);
         }
     }
 
@@ -99,7 +120,7 @@ namespace Selania.Rework.Components
     /// </summary>
     /// <typeparam name="TArg1">The type of the first argument taken by the listeners.</typeparam>
     /// <typeparam name="TArg2">The type of the second argument taken by the listeners.</typeparam>
-    public sealed class ListenersContainer<TArg1, TArg2> : ListenersContainerBase<Action<TArg1, TArg2>>
+    public class ListenersContainer<TArg1, TArg2> : ListenersContainerBase<Action<TArg1, TArg2>>
     {
         /// <summary>
         ///     Invoke all the listeners with the given argument. See <see cref="ListenersContainerBase{T}.ExecuteOnListeners" />
@@ -107,9 +128,28 @@ namespace Selania.Rework.Components
         /// </summary>
         /// <param name="arg1">The first argument passed to the listeners.</param>
         /// <param name="arg2">The second argument passed to the listeners.</param>
-        public void Invoke(TArg1 arg1, TArg2 arg2)
+        public virtual void Invoke(TArg1 arg1, TArg2 arg2)
         {
             ExecuteOnListeners(listener => listener(arg1, arg2));
+        }
+    }
+
+    public sealed class AutoNotifierListenersContainer<TArg1, TArg2> : ListenersContainer<TArg1, TArg2>
+    {
+        private (TArg1, TArg2)? _args;
+
+        public override IDisposable AddListener(Action<TArg1, TArg2> listener)
+        {
+            var disposable = base.AddListener(listener);
+            if (_args.HasValue) listener(_args.Value.Item1, _args.Value.Item2);
+
+            return disposable;
+        }
+
+        public override void Invoke(TArg1 arg1, TArg2 arg2)
+        {
+            _args = (arg1, arg2);
+            base.Invoke(arg1, arg2);
         }
     }
 }

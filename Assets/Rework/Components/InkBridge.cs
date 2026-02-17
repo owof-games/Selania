@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using Selania.Rework.Interfaces;
 using UnityEngine;
 using ZLogger;
+using Tag = Selania.Rework.Interfaces.Tag;
 
 namespace Selania.Rework.Components
 {
@@ -13,7 +14,7 @@ namespace Selania.Rework.Components
     ///     The object that wraps the Ink story and interprets its contents for the rest of the application.
     /// </summary>
     [CreateAssetMenu(fileName = "InkBridge", menuName = "Selania/Create Ink Bridge", order = 0)]
-    public class InkBridge : ScriptableObject, IStoryChangeRoomNotifier, IStoryChoiceSelector,
+    public class InkBridge : ScriptableObject, IStoryChangeRoomNotifier, IStoryChoicesSelector, IStoryLinear,
         IStoryChangeRoomContentsNotifier
     {
         [Header("Ink Settings")] [SerializeField] [Tooltip("The JSON asset containing the story.")]
@@ -39,26 +40,6 @@ namespace Selania.Rework.Components
         private Story? _story;
 
         private ILogger<InkBridge> logger => _logger ?? throw new InvalidOperationException("Logger is not set");
-
-        public void PickChoiceWithText(string text)
-        {
-            // find the wanted choice
-            var story = GetStory();
-            var trimmedText = text.Trim();
-            var choice = story.currentChoices.SingleOrDefault(choice => choice.text.Trim() == trimmedText);
-            if (choice == null)
-            {
-                // could not find it
-                logger.ZLogError($"Could not find a choice with text {text}");
-            }
-            else
-            {
-                // found it: pick it!
-                logger.ZLogTrace($"Picking choice with text {text}");
-                story.ChooseChoiceIndex(choice.index);
-                Continue();
-            }
-        }
 
         public void StartStory(ILogger<InkBridge> newLogger)
         {
@@ -116,6 +97,8 @@ namespace Selania.Rework.Components
             foreach (var choice in story.currentChoices) logger.ZLogInformation($"Story choice: {choice.text.Trim()}");
 
             UpdateRoom();
+            UpdateCurrentText();
+            UpdateCurrentChoices();
         }
 
         /// <summary>
@@ -361,6 +344,108 @@ namespace Selania.Rework.Components
                 System.Diagnostics.Debug.Assert(_roomContents != null, nameof(_roomContents) + " != null");
                 _roomContentsListeners.Invoke(reason, _roomContents.AsReadOnly());
             }
+        }
+
+        #endregion
+
+        #region linear progression
+
+        /// <inheritdoc />
+        public IDisposable AddCurrentTextChangedListener(IStoryLinear.CurrentTextChanged listener)
+        {
+            return _currentTextListeners.AddListener((x, y) => listener(x, y));
+        }
+
+        /// <summary>
+        ///     All the listeners that are interested in new text lines.
+        /// </summary>
+        private readonly AutoNotifierListenersContainer<string, ICollection<Tag>> _currentTextListeners = new();
+
+        /// <summary>
+        ///     Update the listeners with the current text.
+        /// </summary>
+        private void UpdateCurrentText()
+        {
+            var story = GetStory();
+            var currentText = story.currentText;
+            if (currentText.StartsWith("@")) return; // these lines are not outputted
+            _currentTextListeners.Invoke(currentText, MakeTags(story.currentTags));
+        }
+
+        /// <inheritdoc />
+        public bool canContinue => GetStory().canContinue;
+
+        /// <summary>
+        ///     Create a collection of tags starting from the ink tags.
+        /// </summary>
+        /// <param name="currentTags">The ink tags.</param>
+        /// <returns>A collection of tags.</returns>
+        private static ICollection<Tag> MakeTags(List<string> currentTags)
+        {
+            return currentTags.Select(tag => new Tag(tag)).ToList();
+        }
+
+        /// <inheritdoc />
+        void IStoryLinear.Continue()
+        {
+            Continue();
+        }
+
+        #endregion
+
+        #region choices
+
+        /// <summary>
+        ///     All the listeners for story choices.
+        /// </summary>
+        private readonly AutoNotifierListenersContainer<IEnumerable<IStoryChoicesSelector.Choice>>
+            _currentChoicesListeners = new();
+
+        /// <inheritdoc />
+        public IDisposable AddChoicesChangedListener(IStoryChoicesSelector.ChoiceChanged listener)
+        {
+            return _currentChoicesListeners.AddListener(x => listener(x));
+        }
+
+        /// <summary>
+        ///     Update the listeners with the current list of choices.
+        /// </summary>
+        private void UpdateCurrentChoices()
+        {
+            var choices = (
+                from choice in GetStory().currentChoices
+                select new IStoryChoicesSelector.Choice(choice.text.Trim(), choice.index)
+            ).ToList();
+            _currentChoicesListeners.Invoke(choices);
+        }
+
+        /// <inheritdoc />
+        public void PickChoiceWithText(string text)
+        {
+            // find the wanted choice
+            var story = GetStory();
+            var trimmedText = text.Trim();
+            var choice = story.currentChoices.SingleOrDefault(choice => choice.text.Trim() == trimmedText);
+            if (choice == null)
+            {
+                // could not find it
+                logger.ZLogError($"Could not find a choice with text {text}");
+            }
+            else
+            {
+                // found it: pick it!
+                logger.ZLogTrace($"Picking choice with text {text}");
+                story.ChooseChoiceIndex(choice.index);
+                Continue();
+            }
+        }
+
+        /// <inheritdoc />
+        public void PickChoiceWithIndex(int index)
+        {
+            var story = GetStory();
+            story.ChooseChoiceIndex(index);
+            Continue();
         }
 
         #endregion

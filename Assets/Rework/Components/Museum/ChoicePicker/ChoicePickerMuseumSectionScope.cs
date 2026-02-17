@@ -17,23 +17,33 @@ namespace Selania.Rework.Components.Museum.ChoicePicker
         {
             base.Configure(builder);
             builder.RegisterLogger(settings);
-            builder.Register<StoryChoiceSelector>(Lifetime.Scoped).As<IStoryChoiceSelector>();
+            builder.Register<StoryChoicesSelector>(Lifetime.Scoped).As<IStoryChoicesSelector>();
             builder.Register<StoryChangeRoomContentsNotifier>(Lifetime.Scoped).As<IStoryChangeRoomContentsNotifier>();
         }
 
         // ReSharper disable once ClassNeverInstantiated.Local - instantiated via DI
-        private class StoryChoiceSelector : IStoryChoiceSelector
+        private class StoryChoicesSelector : IStoryChoicesSelector
         {
             private readonly ChoicePickerMuseumSectionScope _museumSectionScope;
 
-            public StoryChoiceSelector(ChoicePickerMuseumSectionScope museumSectionScope)
+            public StoryChoicesSelector(ChoicePickerMuseumSectionScope museumSectionScope)
             {
                 _museumSectionScope = museumSectionScope;
+            }
+
+            public IDisposable AddChoicesChangedListener(IStoryChoicesSelector.ChoiceChanged listener)
+            {
+                throw new NotImplementedException();
             }
 
             public void PickChoiceWithText(string text)
             {
                 _museumSectionScope.picked.Invoke(text);
+            }
+
+            public void PickChoiceWithIndex(int index)
+            {
+                throw new NotImplementedException();
             }
         }
 

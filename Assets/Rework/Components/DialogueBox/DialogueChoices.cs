@@ -30,7 +30,8 @@ namespace Selania.Rework.Components.DialogueBox
         /// </summary>
         public UnityEvent<int> choiceSelectedEvent = new();
 
-        [SerializeField] private string choicesSelectionActionMapName = "ChoicesSelection";
+        [SerializeField] [Tooltip("Name of the choices selection action map in the default input system")]
+        private string choicesSelectionActionMapName = "ChoicesSelection";
 
         /// <summary>
         ///     List of actions to call to remove the event listeners from the action map for choices.
