@@ -8,9 +8,9 @@ namespace Selania.Rework.Interfaces
     public interface ISettingsDialogueBox
     {
         /// <summary>
-        ///     Duration (in seconds) to make the text line slide in.
+        ///     Speed (in pixels / seconds) to make the text line slide in.
         /// </summary>
-        float textLineSlideDuration { get; }
+        float textLineSlideSpeed { get; }
 
         /// <summary>
         ///     Percentage of indentation (relative to the total horizontal text space) for the text of the choices.

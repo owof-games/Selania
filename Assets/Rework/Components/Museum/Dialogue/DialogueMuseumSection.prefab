@@ -4961,9 +4961,13 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2176786751732771739, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2304856138354658731, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
       propertyPath: m_Value
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2466895053862024071, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5104,6 +5108,14 @@ PrefabInstance:
     - target: {fileID: 2851089128662556023, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
       propertyPath: parentReference.TypeName
       value: Selania.Rework.Components.Museum.Dialogue.DialogueMuseumSectionLifetimeScope
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957372249460710378, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957372249460710378, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -780.23474
       objectReference: {fileID: 0}
     - target: {fileID: 3084650314935825208, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
       propertyPath: m_SizeDelta.y
@@ -5282,15 +5294,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6103879382667988594, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6103879382667988594, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6103879382667988594, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
-      propertyPath: m_SizeDelta.x
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6539142542695633936, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}

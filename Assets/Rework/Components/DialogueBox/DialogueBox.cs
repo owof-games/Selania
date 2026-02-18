@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Cysharp.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Selania.Rework.Interfaces;
 using UnityEngine;
@@ -42,6 +41,15 @@ namespace Selania.Rework.Components.DialogueBox
         [SerializeField] [Tooltip("the container where the text appears and that receives click events to progress")]
         private DialogueContainer dialogueContainer = null!;
 
+        [SerializeField] [Tooltip("The viewport of the scroll rect.")]
+        private RectTransform scrollRectViewport = null!;
+
+        /// <summary>
+        ///     An action that has a value if we're waiting to add choices to the box. Calling the action will actually
+        ///     add the choices.
+        /// </summary>
+        private Action? _actualAddChoices;
+
         /// <summary>
         ///     The input actions with specific handling for the dialogue box.
         /// </summary>
@@ -73,6 +81,12 @@ namespace Selania.Rework.Components.DialogueBox
             _inputActionsDialogueBox.ContinueMap.AddCallbacks(this);
         }
 
+        private void Start()
+        {
+            scrollRectViewport.anchorMin = new Vector2(0, 0);
+            scrollRectViewport.anchorMax = new Vector2(1, 1);
+        }
+
         private void OnEnable()
         {
             _inputActionsDialogueBox?.Enable();
@@ -100,6 +114,8 @@ namespace Selania.Rework.Components.DialogueBox
             portraitContainer = GetComponentInChildren<PortraitContainer>();
             inkContainer = GetComponentInChildren<InkContainer>();
             dialogueContainer = GetComponentInChildren<DialogueContainer>();
+            var scrollRect = GetComponentInChildren<ScrollRect>();
+            scrollRectViewport = scrollRect.viewport;
         }
 #endif
 
@@ -122,6 +138,12 @@ namespace Selania.Rework.Components.DialogueBox
             {
                 Logger.ZLogTrace($"Requested to continue, but the text was still appearing: show it all.");
                 _latestTextLine.ShowAllText();
+            }
+            else if (_actualAddChoices != null)
+            {
+                Logger.ZLogTrace($"Requested to continue, but was waiting to show choices.");
+                _actualAddChoices();
+                _actualAddChoices = null;
             }
             else
             {
@@ -151,17 +173,17 @@ namespace Selania.Rework.Components.DialogueBox
 
         public void AddChoices(IEnumerable<DialogueChoices.Choice> choices, Action<int> onChoiceSelected)
         {
-            ActualAddChoices(choices, onChoiceSelected).Forget();
+            if (_latestTextLine == null)
+                ActualAddChoices(choices, onChoiceSelected);
+            else
+                _actualAddChoices = () => ActualAddChoices(choices, onChoiceSelected);
         }
 
-        private async UniTaskVoid ActualAddChoices(IEnumerable<DialogueChoices.Choice> choices,
+        private void ActualAddChoices(IEnumerable<DialogueChoices.Choice> choices,
             Action<int> onChoiceSelected)
         {
             try
             {
-                // wait for the previous line to complete, if any
-                if (_latestTextLine != null) await _latestTextLine.GetCompletelyShownTextTask();
-
                 // show the choices
                 using (LifetimeScope.EnqueueParent(Scope))
                 {
