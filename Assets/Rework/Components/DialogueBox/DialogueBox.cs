@@ -38,10 +38,18 @@ namespace Selania.Rework.Components.DialogueBox
         [SerializeField] [Tooltip("The scroll view displaying the dialogue")]
         private ScrollRect scrollView = null!;
 
+        [SerializeField] [Tooltip("the container where the text appears and that receives click events to progress")]
+        private DialogueContainer dialogueContainer = null!;
+
         /// <summary>
         ///     The input actions with specific handling for the dialogue box.
         /// </summary>
         private InputActionsDialogueBox? _inputActionsDialogueBox;
+
+        /// <summary>
+        /// The latest text line created, if any. If a choice is created, the previous text line is forgotten about.
+        /// </summary>
+        private TextLine? _latestTextLine;
 
         /// <summary>
         ///     The logger used by this component.
@@ -69,10 +77,12 @@ namespace Selania.Rework.Components.DialogueBox
             _inputActionsDialogueBox?.Enable();
             _inputActionsDialogueBox?.ContinueMap.Disable();
             _inputActionsDialogueBox?.ChoicesSelectionMap.Disable();
+            dialogueContainer.OnClick += DialogueContainerOnOnClick;
         }
 
         private void OnDisable()
         {
+            dialogueContainer.OnClick -= DialogueContainerOnOnClick;
             _inputActionsDialogueBox?.Disable();
         }
 
@@ -88,14 +98,35 @@ namespace Selania.Rework.Components.DialogueBox
             // automatically fill portraitContainer
             portraitContainer = GetComponentInChildren<PortraitContainer>();
             inkContainer = GetComponentInChildren<InkContainer>();
+            dialogueContainer = GetComponentInChildren<DialogueContainer>();
         }
 #endif
 
         public void OnContinue(InputAction.CallbackContext context)
         {
             if (!context.performed) return;
-            Logger.ZLogTrace($"Requested to continue.");
-            OnContinueRequested?.Invoke();
+            ContinueRequested();
+        }
+
+        private void DialogueContainerOnOnClick()
+        {
+            // input map is used to check if we're actually accepting continue messages
+            if (_inputActionsDialogueBox?.ContinueMap.enabled != true) return;
+            ContinueRequested();
+        }
+
+        private void ContinueRequested()
+        {
+            if (_latestTextLine != null && !_latestTextLine.textCompletelyShown)
+            {
+                Logger.ZLogTrace($"Requested to continue, but the text was still appearing: show it all.");
+                _latestTextLine.ShowAllText();
+            }
+            else
+            {
+                Logger.ZLogTrace($"Requested to continue, and there was no text still appearing: continue.");
+                OnContinueRequested?.Invoke();
+            }
         }
 
         /// <summary>
@@ -111,6 +142,7 @@ namespace Selania.Rework.Components.DialogueBox
                 var textLineGameObject = Instantiate(textLinePrefab, textLinesContainer);
                 var textLine = textLineGameObject.GetComponent<TextLine>();
                 textLine.SetText(speaker, text);
+                _latestTextLine = textLine;
             }
 
             ScrollToBottom();
@@ -128,6 +160,7 @@ namespace Selania.Rework.Components.DialogueBox
                 _inputActionsDialogueBox?.ContinueMap.Disable();
                 dialogueChoices.ChoiceSelectedEvent += SelectChoice;
                 dialogueChoices.SetChoices(choices);
+                _latestTextLine = null;
 
                 void SelectChoice(int index)
                 {

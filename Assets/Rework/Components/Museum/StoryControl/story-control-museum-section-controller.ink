@@ -9,6 +9,7 @@ VAR contentsBedroom = (PG)
 Qui parla Chitarra. #portrait:chitarra_affectionate #speaker:Chitarra
 Qui continua a parlare Chitarra. #speaker:Chitarra
 Qua invece parla Mentore. #speaker:Mentore #portrait:mentore_hurry
+Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo. Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo. Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo. #speaker:Mentore
 E ora c'è una scelta #speaker:Mentore
 ~ temp index = 0
 + [Scelta 1]

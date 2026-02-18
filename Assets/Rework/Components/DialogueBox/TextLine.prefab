@@ -318,7 +318,7 @@ MonoBehaviour:
   actionsDatabase: {fileID: 0}
   localSettings:
     useTypeWriter: 1
-    startTypewriterMode: -1
+    startTypewriterMode: 2
     hideAppearancesOnSkip: 0
     hideDisappearancesOnSkip: 0
     triggerEventsOnSkip: 0

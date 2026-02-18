@@ -198,6 +198,7 @@ GameObject:
   - component: {fileID: 3064789204449365867}
   - component: {fileID: 8747044092871896541}
   - component: {fileID: 6783237521709164910}
+  - component: {fileID: 222672809863099350}
   m_Layer: 5
   m_Name: DialogueContainer
   m_TagString: Untagged
@@ -263,6 +264,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &222672809863099350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935320843399353997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7c0afa8b331bd3498bd4a281ca1bd57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &992065795920496561
 GameObject:
   m_ObjectHideFlags: 0
@@ -2059,6 +2072,7 @@ MonoBehaviour:
   inkContainer: {fileID: 2970664259661065082}
   relationshipStatus: {fileID: 6089284161766860916}
   scrollView: {fileID: 3876195317699512835}
+  dialogueContainer: {fileID: 222672809863099350}
 --- !u!1001 &1855608590581130449
 PrefabInstance:
   m_ObjectHideFlags: 0

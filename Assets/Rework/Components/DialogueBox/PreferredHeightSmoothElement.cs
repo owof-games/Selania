@@ -87,13 +87,14 @@ namespace Selania.Rework.Components.DialogueBox
                 .Create(preferredHeight, _actualTargetElement.preferredHeight,
                     SettingsDialogueBox.textLineSlideDuration)
                 .WithEase(Ease.OutQuad)
-                .Bind(newPreferredHeight =>
+                .Bind(this, (newPreferredHeight, element) =>
                 {
-                    preferredHeight = newPreferredHeight;
-                    if (!isActiveAndEnabled)
+                    if (!element!.isActiveAndEnabled)
                         return;
+                    element.preferredHeight = newPreferredHeight;
                     LayoutRebuilder.MarkLayoutForRebuild(transform as RectTransform);
-                });
+                })
+                .AddTo(this);
         }
 
         public float minWidth => _actualTargetElement?.minWidth ?? 0;

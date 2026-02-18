@@ -28,12 +28,25 @@ namespace Selania.Rework.Components.DialogueBox
         /// </summary>
         [Inject] internal ISettingsDialogueBox SettingsDialogueBox = null!;
 
+        /// <summary>
+        /// Whether the text has been already completely shown.
+        /// </summary>
+        public bool textCompletelyShown => !typewriterComponent.IsShowingText;
+
 #if UNITY_EDITOR
         private void OnValidate()
         {
             typewriterComponent = GetComponentInChildren<TypewriterComponent>();
         }
 #endif
+
+        /// <summary>
+        /// Immediately show all the text. If it's still appearing, it will completely show it.
+        /// </summary>
+        public void ShowAllText()
+        {
+            typewriterComponent.SkipTypewriter();
+        }
 
         /// <summary>
         ///     Set the text of this line.
