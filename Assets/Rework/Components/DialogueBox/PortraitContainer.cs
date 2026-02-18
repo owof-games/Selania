@@ -7,7 +7,8 @@ namespace Selania.Rework.Components.DialogueBox
 {
     public class PortraitContainer : MonoBehaviour, IAutomaticEditorInject
     {
-        [SerializeField] private Image portraitImage = null!;
+        [SerializeField] private Image portraitImage1 = null!;
+        [SerializeField] private Image portraitImage2 = null!;
 
         /// <summary>
         ///     The settings for the dialogue box.
@@ -18,10 +19,11 @@ namespace Selania.Rework.Components.DialogueBox
         ///     Set the image of the portrait according to the tag.
         /// </summary>
         /// <param name="tagName">The tag (e.g.: mentore_bored).</param>
-        public void SetImage(string tagName)
+        /// <param name="usePortrait1">Whether to use the portrait 1.</param>
+        public void SetImage(string tagName, bool usePortrait1)
         {
             var sprite = SettingsDialogueBox.GetCharacterSpriteByTag(tagName);
-            portraitImage.sprite = sprite;
+            (usePortrait1 ? portraitImage1 : portraitImage2).sprite = sprite;
         }
     }
 }

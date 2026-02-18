@@ -64,13 +64,6 @@ namespace Selania.Rework.Components.DialogueBox
                 EventSystem.current.SetSelectedGameObject(gameObject, null);
         }
 
-#if UNITY_EDITOR
-        protected override void OnValidate()
-        {
-            textMeshProUGUI = GetComponentInChildren<TextMeshProUGUI>();
-        }
-#endif
-
         public void On_1(InputAction.CallbackContext context)
         {
             if (!context.performed) return;

@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using LitMotion;
 using Microsoft.Extensions.Logging;
 using Selania.Rework.Interfaces;
 using UnityEngine;
@@ -18,6 +17,17 @@ namespace Selania.Rework.Components.DialogueBox
     /// </summary>
     public class DialogueBox : MonoBehaviour, InputActionsDialogueBox.IContinueMapActions
     {
+        private static readonly int ShowAnimationCompletedAnimatorHash =
+            Animator.StringToHash("ShowAnimationCompleted");
+
+        private static readonly int VisibleAnimatorHash = Animator.StringToHash("Visible");
+        private static readonly int VisibleSpeedAnimatorHash = Animator.StringToHash("VisibleSpeed");
+        private static readonly int InkVisibleAnimatorHash = Animator.StringToHash("InkVisible");
+        private static readonly int InkVisibleSpeedAnimatorHash = Animator.StringToHash("InkVisibleSpeed");
+        private static readonly int PortraitVisibleAnimatorHash = Animator.StringToHash("PortraitVisible");
+        private static readonly int PortraitVisibleSpeedAnimatorHash = Animator.StringToHash("PortraitVisibleSpeed");
+        private static readonly int ShowPortrait1AnimatorHash = Animator.StringToHash("ShowPortrait1");
+
         [SerializeField] [Tooltip("The prefab that creates a text line once instantiated.")]
         private GameObject textLinePrefab = null!;
 
@@ -27,7 +37,7 @@ namespace Selania.Rework.Components.DialogueBox
         [SerializeField] [Tooltip("The container where all the text lines are added to.")]
         private RectTransform textLinesContainer = null!;
 
-        [SerializeField] [Tooltip("The portrait container.")]
+        [SerializeField] [Tooltip("The first portrait container.")]
         private PortraitContainer portraitContainer = null!;
 
         [SerializeField] [Tooltip("The ink container.")]
@@ -45,16 +55,14 @@ namespace Selania.Rework.Components.DialogueBox
         [SerializeField] [Tooltip("The viewport of the scroll rect.")]
         private RectTransform scrollRectViewport = null!;
 
-        [SerializeField] [Tooltip("The sliding content")]
-        private RectTransform slidingContent = null!;
+        [SerializeField] [Tooltip("The animator that controls general dialogue box behaviors")]
+        private Animator animator = null!;
 
         /// <summary>
         ///     An action that has a value if we're waiting to add choices to the box. Calling the action will actually
         ///     add the choices.
         /// </summary>
         private Action? _actualAddChoices;
-
-        private bool _contentsAreVisible;
 
         /// <summary>
         ///     The input actions with specific handling for the dialogue box.
@@ -65,6 +73,11 @@ namespace Selania.Rework.Components.DialogueBox
         /// The latest text line created, if any. If a choice is created, the previous text line is forgotten about.
         /// </summary>
         private TextLine? _latestTextLine;
+
+        /// <summary>
+        ///     Whether the next portrait change will use portrait 1.
+        /// </summary>
+        private bool _willUsePortrait1 = true;
 
         /// <summary>
         ///     The logger used by this component.
@@ -114,18 +127,6 @@ namespace Selania.Rework.Components.DialogueBox
             _inputActionsDialogueBox?.ContinueMap.RemoveCallbacks(this);
             _inputActionsDialogueBox?.Dispose();
         }
-
-#if UNITY_EDITOR
-        private void OnValidate()
-        {
-            // automatically fill portraitContainer
-            portraitContainer = GetComponentInChildren<PortraitContainer>();
-            inkContainer = GetComponentInChildren<InkContainer>();
-            dialogueClickCapture = GetComponentInChildren<DialogueClickCapture>();
-            var scrollRect = GetComponentInChildren<ScrollRect>();
-            scrollRectViewport = scrollRect.viewport;
-        }
-#endif
 
         public void OnContinue(InputAction.CallbackContext context)
         {
@@ -243,17 +244,8 @@ namespace Selania.Rework.Components.DialogueBox
         /// </summary>
         private void SlideInIfNecessary()
         {
-            if (_contentsAreVisible) return;
-
-            LMotion.Create(0.0f, 1.0f, Settings.slideInDuration)
-                .Bind(slidingContent, (x, s) =>
-                {
-                    s.anchorMin = new Vector2(1 - x, 0);
-                    s.anchorMax = new Vector2(2 - x, 1);
-                    Debug.Log($"anchors are {s.anchorMin} - {s.anchorMax}");
-                })
-                .AddTo(this);
-            _contentsAreVisible = true;
+            animator.SetFloat(VisibleSpeedAnimatorHash, 1 / Settings.slideInDuration);
+            animator.SetBool(VisibleAnimatorHash, true);
         }
 
         /// <summary>
@@ -262,7 +254,11 @@ namespace Selania.Rework.Components.DialogueBox
         /// <param name="tagName">The tag (e.g.: mentore_bored).</param>
         public void SetPortraitImage(string tagName)
         {
-            portraitContainer.SetImage(tagName);
+            animator.SetFloat(PortraitVisibleSpeedAnimatorHash, 1 / Settings.slideInDuration);
+            animator.SetBool(PortraitVisibleAnimatorHash, true);
+            animator.SetBool(ShowPortrait1AnimatorHash, _willUsePortrait1);
+            portraitContainer.SetImage(tagName, _willUsePortrait1);
+            _willUsePortrait1 = !_willUsePortrait1;
         }
 
         /// <summary>
@@ -272,6 +268,8 @@ namespace Selania.Rework.Components.DialogueBox
         /// <param name="numEmpty">Number of empty bottles.</param>
         public void SetInkStatus(int numFull, int numEmpty)
         {
+            animator.SetFloat(InkVisibleSpeedAnimatorHash, 1 / Settings.slideInDuration);
+            animator.SetBool(InkVisibleAnimatorHash, numFull > 0 || numEmpty > 0);
             inkContainer.SetInkStatus(numFull, numEmpty);
         }
 
@@ -304,5 +302,11 @@ namespace Selania.Rework.Components.DialogueBox
         ///     Invoked whenever the continue button is pressed.
         /// </summary>
         public event Action? OnContinueRequested;
+
+
+        public void ShowAnimationCompleted()
+        {
+            animator.SetBool(ShowAnimationCompletedAnimatorHash, true);
+        }
     }
 }

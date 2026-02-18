@@ -23,7 +23,7 @@ namespace Selania.Rework.Components
 
         /// <inheritdoc />
         [field: SerializeField]
-        [field: Tooltip("Duration (in seconds) to make the text line slide in.")]
+        [field: Tooltip("Speed (in pixels / seconds) to make the text line slide in.")]
         public float textLineSlideSpeed { get; private set; } = 1000;
 
         [field: SerializeField]

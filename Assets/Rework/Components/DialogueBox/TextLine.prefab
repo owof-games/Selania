@@ -357,7 +357,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2340232368045347053}
-  - component: {fileID: 8021526092268067003}
+  - component: {fileID: 5220073982714238530}
   m_Layer: 5
   m_Name: Scope
   m_TagString: Untagged
@@ -384,7 +384,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &8021526092268067003
+--- !u!114 &5220073982714238530
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

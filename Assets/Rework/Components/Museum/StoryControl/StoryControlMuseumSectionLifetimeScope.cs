@@ -15,6 +15,7 @@ namespace Selania.Rework.Components.Museum.StoryControl
 
         protected override void Configure(IContainerBuilder builder)
         {
+            Debug.Log("ma seri?");
             builder.RegisterLogger(settings);
             builder.RegisterInkBridgeInstance(inkBridge);
             builder.RegisterInstance(settings).As<ISettingsDialogueBox>();

@@ -39,13 +39,6 @@ namespace Selania.Rework.Components.DialogueBox
         [SerializeField] [Tooltip("Image when there's an empty bottle")]
         private Sprite emptyBottle = null!;
 
-#if UNITY_EDITOR
-        private void OnValidate()
-        {
-            image = GetComponentInChildren<Image>();
-        }
-#endif
-
         /// <summary>
         ///     Set the status of this ink bottle.
         /// </summary>

@@ -35,13 +35,6 @@ namespace Selania.Rework.Components.DialogueBox
         /// </summary>
         public bool textCompletelyShown => !typewriterComponent.IsShowingText;
 
-#if UNITY_EDITOR
-        private void OnValidate()
-        {
-            typewriterComponent = GetComponentInChildren<TypewriterComponent>();
-        }
-#endif
-
         /// <summary>
         /// Immediately show all the text. If it's still appearing, it will completely show it.
         /// </summary>

@@ -264,27 +264,23 @@ namespace Selania.Rework.Components
         /// <summary>
         ///     The container for all the listeners to the room change.
         /// </summary>
-        private readonly ListenersContainer<string> _changeRoomListeners = new();
+        private readonly AutoNotifierListenersContainer<string> _changeRoomListeners = new();
 
         /// <inheritdoc />
         public IDisposable AddChangeRoomListener(IStoryChangeRoomNotifier.ChangeRoomListener changeRoomListener)
         {
-            var disposable = _changeRoomListeners.AddListener(x => changeRoomListener(x));
-            if (_currentRoomName != null) changeRoomListener(_currentRoomName);
-            return disposable;
+            return _changeRoomListeners.AddListener(x => changeRoomListener(x));
         }
 
         /// <summary>
         ///     The container for all the listeners to the list of room names.
         /// </summary>
-        private readonly ListenersContainer<IEnumerable<string>> _roomNamesListeners = new();
+        private readonly AutoNotifierListenersContainer<IEnumerable<string>> _roomNamesListeners = new();
 
         /// <inheritdoc />
         public IDisposable AddRoomNamesListener(IStoryChangeRoomNotifier.RoomNamesListener roomNamesListener)
         {
-            var disposable = _roomNamesListeners.AddListener(x => roomNamesListener(x));
-            if (_roomVariableNames != null) NotifyRoomNamesListener(roomNamesListener);
-            return disposable;
+            return _roomNamesListeners.AddListener(x => roomNamesListener(x));
         }
 
         /// <summary>
@@ -315,10 +311,10 @@ namespace Selania.Rework.Components
         public IDisposable AddChangeRoomContentsListener(
             IStoryChangeRoomContentsNotifier.ChangeRoomContentsListener roomContentsListener)
         {
-            var disposable = _roomContentsListeners.AddListener((x, y) => roomContentsListener(x, y));
             if (_roomContents != null)
                 NotifyRoomContentsListener(IStoryChangeRoomContentsNotifier.RoomContentsChangeReason.CharacterMoved,
                     roomContentsListener);
+            var disposable = _roomContentsListeners.AddListener((x, y) => roomContentsListener(x, y));
 
             return disposable;
         }
