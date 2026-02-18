@@ -13,6 +13,11 @@ namespace Selania.Rework.Interfaces
         float textLineSlideSpeed { get; }
 
         /// <summary>
+        ///     Time to make the dialogue window slide in (in seconds).
+        /// </summary>
+        float slideInDuration { get; }
+
+        /// <summary>
         ///     Percentage of indentation (relative to the total horizontal text space) for the text of the choices.
         ///     Used to keep the text of choices aligned, at the right of their number.
         /// </summary>

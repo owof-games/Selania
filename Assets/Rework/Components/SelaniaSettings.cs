@@ -26,6 +26,10 @@ namespace Selania.Rework.Components
         [field: Tooltip("Duration (in seconds) to make the text line slide in.")]
         public float textLineSlideSpeed { get; private set; } = 1000;
 
+        [field: SerializeField]
+        [field: Tooltip("Time to make the dialogue window slide in (in seconds).")]
+        public float slideInDuration { get; private set; } = 800;
+
         #endregion
 
         #region dialogue box - choices

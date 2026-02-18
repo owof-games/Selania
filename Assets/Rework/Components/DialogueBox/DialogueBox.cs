@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using LitMotion;
 using Microsoft.Extensions.Logging;
 using Selania.Rework.Interfaces;
 using UnityEngine;
@@ -44,11 +45,16 @@ namespace Selania.Rework.Components.DialogueBox
         [SerializeField] [Tooltip("The viewport of the scroll rect.")]
         private RectTransform scrollRectViewport = null!;
 
+        [SerializeField] [Tooltip("The sliding content")]
+        private RectTransform slidingContent = null!;
+
         /// <summary>
         ///     An action that has a value if we're waiting to add choices to the box. Calling the action will actually
         ///     add the choices.
         /// </summary>
         private Action? _actualAddChoices;
+
+        private bool _contentsAreVisible;
 
         /// <summary>
         ///     The input actions with specific handling for the dialogue box.
@@ -83,6 +89,8 @@ namespace Selania.Rework.Components.DialogueBox
 
         private void Start()
         {
+            // workaround for a bug (?) that resets the viewport at the lower left angle if the scrollbar is set as
+            // persistent (which is our case)
             scrollRectViewport.anchorMin = new Vector2(0, 0);
             scrollRectViewport.anchorMax = new Vector2(1, 1);
         }
@@ -159,6 +167,8 @@ namespace Selania.Rework.Components.DialogueBox
         /// <param name="text">The text to add.</param>
         public void AddTextLine(string? speaker, string? text)
         {
+            SlideInIfNecessary();
+
             using (LifetimeScope.EnqueueParent(Scope))
             {
                 _inputActionsDialogueBox?.ContinueMap.Enable();
@@ -184,6 +194,8 @@ namespace Selania.Rework.Components.DialogueBox
         {
             try
             {
+                SlideInIfNecessary();
+
                 // show the choices
                 using (LifetimeScope.EnqueueParent(Scope))
                 {
@@ -224,6 +236,24 @@ namespace Selania.Rework.Components.DialogueBox
         {
             scrollView.CalculateLayoutInputVertical();
             scrollView.verticalNormalizedPosition = 0;
+        }
+
+        /// <summary>
+        ///     Slide in the contents if they were not visible yet.
+        /// </summary>
+        private void SlideInIfNecessary()
+        {
+            if (_contentsAreVisible) return;
+
+            LMotion.Create(0.0f, 1.0f, Settings.slideInDuration)
+                .Bind(slidingContent, (x, s) =>
+                {
+                    s.anchorMin = new Vector2(1 - x, 0);
+                    s.anchorMax = new Vector2(2 - x, 1);
+                    Debug.Log($"anchors are {s.anchorMin} - {s.anchorMax}");
+                })
+                .AddTo(this);
+            _contentsAreVisible = true;
         }
 
         /// <summary>
