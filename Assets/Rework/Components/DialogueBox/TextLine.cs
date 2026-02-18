@@ -1,9 +1,11 @@
-﻿using Febucci.TextAnimatorForUnity;
+﻿using Cysharp.Threading.Tasks;
+using Febucci.TextAnimatorForUnity;
 using Microsoft.Extensions.Logging;
 using Selania.Rework.Interfaces;
 using TMPro;
 using UnityEngine;
 using VContainer;
+using ZLogger;
 
 namespace Selania.Rework.Components.DialogueBox
 {
@@ -66,6 +68,22 @@ namespace Selania.Rework.Components.DialogueBox
             }
 
             typewriterComponent.ShowText(text);
+        }
+
+        /// <summary>
+        ///     Get a task that is resolved when the text is completely shown.
+        /// </summary>
+        /// <returns>The task that gets resolved when the text is completely shown.</returns>
+        public UniTask GetCompletelyShownTextTask()
+        {
+            if (textCompletelyShown) return UniTask.CompletedTask;
+            var completionSource = new UniTaskCompletionSource();
+            typewriterComponent.onTextShowed.AddListener(() =>
+            {
+                var result = completionSource.TrySetResult();
+                if (!result) Logger.ZLogError($"Cannot complete the task for line completion");
+            });
+            return completionSource.Task;
         }
     }
 }

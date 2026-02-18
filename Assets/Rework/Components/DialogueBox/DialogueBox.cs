@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Selania.Rework.Interfaces;
 using UnityEngine;
@@ -150,31 +151,48 @@ namespace Selania.Rework.Components.DialogueBox
 
         public void AddChoices(IEnumerable<DialogueChoices.Choice> choices, Action<int> onChoiceSelected)
         {
-            using (LifetimeScope.EnqueueParent(Scope))
+            ActualAddChoices(choices, onChoiceSelected).Forget();
+        }
+
+        private async UniTaskVoid ActualAddChoices(IEnumerable<DialogueChoices.Choice> choices,
+            Action<int> onChoiceSelected)
+        {
+            try
             {
-                // create the dialogue choices and hook to input action events
-                var dialogueChoicesGameObject = Instantiate(dialogueChoicesPrefab, textLinesContainer);
-                var dialogueChoices = dialogueChoicesGameObject.GetComponent<DialogueChoices>();
-                _inputActionsDialogueBox?.ChoicesSelectionMap.AddCallbacks(dialogueChoices);
-                _inputActionsDialogueBox?.ChoicesSelectionMap.Enable();
-                _inputActionsDialogueBox?.ContinueMap.Disable();
-                dialogueChoices.ChoiceSelectedEvent += SelectChoice;
-                dialogueChoices.SetChoices(choices);
-                _latestTextLine = null;
+                // wait for the previous line to complete, if any
+                if (_latestTextLine != null) await _latestTextLine.GetCompletelyShownTextTask();
 
-                void SelectChoice(int index)
+                // show the choices
+                using (LifetimeScope.EnqueueParent(Scope))
                 {
-                    // de-register everything and destroy the choices
-                    _inputActionsDialogueBox?.ChoicesSelectionMap.Disable();
-                    _inputActionsDialogueBox?.ContinueMap.Enable();
-                    _inputActionsDialogueBox?.ChoicesSelectionMap.RemoveCallbacks(dialogueChoices);
-                    dialogueChoices.ChoiceSelectedEvent -= SelectChoice;
-                    Destroy(dialogueChoicesGameObject);
-                    onChoiceSelected.Invoke(index);
-                }
-            }
+                    // create the dialogue choices and hook to input action events
+                    var dialogueChoicesGameObject = Instantiate(dialogueChoicesPrefab, textLinesContainer);
+                    var dialogueChoices = dialogueChoicesGameObject.GetComponent<DialogueChoices>();
+                    _inputActionsDialogueBox?.ChoicesSelectionMap.AddCallbacks(dialogueChoices);
+                    _inputActionsDialogueBox?.ChoicesSelectionMap.Enable();
+                    _inputActionsDialogueBox?.ContinueMap.Disable();
+                    dialogueChoices.ChoiceSelectedEvent += SelectChoice;
+                    dialogueChoices.SetChoices(choices);
+                    _latestTextLine = null;
 
-            ScrollToBottom();
+                    void SelectChoice(int index)
+                    {
+                        // de-register everything and destroy the choices
+                        _inputActionsDialogueBox?.ChoicesSelectionMap.Disable();
+                        _inputActionsDialogueBox?.ContinueMap.Enable();
+                        _inputActionsDialogueBox?.ChoicesSelectionMap.RemoveCallbacks(dialogueChoices);
+                        dialogueChoices.ChoiceSelectedEvent -= SelectChoice;
+                        Destroy(dialogueChoicesGameObject);
+                        onChoiceSelected.Invoke(index);
+                    }
+                }
+
+                ScrollToBottom();
+            }
+            catch (Exception e)
+            {
+                Logger.ZLogError(e, $"Something went wrong while instantiating the choices");
+            }
         }
 
         /// <summary>
