@@ -39,7 +39,7 @@ namespace Selania.Rework.Components.DialogueBox
         private ScrollRect scrollView = null!;
 
         [SerializeField] [Tooltip("the container where the text appears and that receives click events to progress")]
-        private DialogueContainer dialogueContainer = null!;
+        private DialogueClickCapture dialogueClickCapture = null!;
 
         [SerializeField] [Tooltip("The viewport of the scroll rect.")]
         private RectTransform scrollRectViewport = null!;
@@ -92,12 +92,12 @@ namespace Selania.Rework.Components.DialogueBox
             _inputActionsDialogueBox?.Enable();
             _inputActionsDialogueBox?.ContinueMap.Disable();
             _inputActionsDialogueBox?.ChoicesSelectionMap.Disable();
-            dialogueContainer.OnClick += DialogueContainerOnOnClick;
+            dialogueClickCapture.OnClick += DialogueClickCaptureOnOnClick;
         }
 
         private void OnDisable()
         {
-            dialogueContainer.OnClick -= DialogueContainerOnOnClick;
+            dialogueClickCapture.OnClick -= DialogueClickCaptureOnOnClick;
             _inputActionsDialogueBox?.Disable();
         }
 
@@ -113,7 +113,7 @@ namespace Selania.Rework.Components.DialogueBox
             // automatically fill portraitContainer
             portraitContainer = GetComponentInChildren<PortraitContainer>();
             inkContainer = GetComponentInChildren<InkContainer>();
-            dialogueContainer = GetComponentInChildren<DialogueContainer>();
+            dialogueClickCapture = GetComponentInChildren<DialogueClickCapture>();
             var scrollRect = GetComponentInChildren<ScrollRect>();
             scrollRectViewport = scrollRect.viewport;
         }
@@ -125,7 +125,7 @@ namespace Selania.Rework.Components.DialogueBox
             ContinueRequested();
         }
 
-        private void DialogueContainerOnOnClick()
+        private void DialogueClickCaptureOnOnClick()
         {
             // input map is used to check if we're actually accepting continue messages
             if (_inputActionsDialogueBox?.ContinueMap.enabled != true) return;

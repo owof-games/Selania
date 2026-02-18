@@ -16,12 +16,17 @@ namespace Selania.Rework.Components.DialogueBox
 
         private MotionHandle? _currentMotion;
 
-        private float _preferredHeight;
+        private RectTransform? _myRectTransform;
+
         [Inject] internal ILogger<GrowingContainer>? Logger;
 
         [Inject] internal ISettingsDialogueBox? Settings;
 
-        public override float preferredHeight => _preferredHeight;
+        private RectTransform GetMyRectTransform()
+        {
+            _myRectTransform ??= (RectTransform)transform;
+            return _myRectTransform;
+        }
 
         public override void CalculateLayoutInputVertical()
         {
@@ -57,27 +62,31 @@ namespace Selania.Rework.Components.DialogueBox
 
         public override void SetLayoutVertical()
         {
-            float height = 0;
+            float targetHeight = 0;
 
-            if (GetChildComponent<ILayoutElement>(child, out var layoutElement)) height = layoutElement.preferredHeight;
+            if (GetChildComponent<ILayoutElement>(child, out var layoutElement))
+                targetHeight = layoutElement.preferredHeight;
 
-            if (!Mathf.Approximately(height, _preferredHeight) &&
-                (_currentMotion == null || !_currentMotion.Value.IsActive()))
-            {
-                var speed = Settings?.textLineSlideSpeed ?? 1;
-                var duration = Mathf.Abs(height - _preferredHeight) / speed;
-                Logger?.ZLogTrace($"Starting movement {_preferredHeight} => {height} for {duration}");
-                _currentMotion = LMotion.Create(_preferredHeight, height, duration)
-                    .Bind(child, (newHeight, c) => { _preferredHeight = newHeight; })
-                    .AddTo(this);
-                LogOnEnd(_currentMotion.Value).Forget();
-            }
+            var myRectTransform = GetMyRectTransform();
+            var myHeight = myRectTransform.sizeDelta.y;
+
+            if (Mathf.Approximately(targetHeight, myHeight) ||
+                (_currentMotion != null && _currentMotion.Value.IsActive())) return;
+
+            var speed = Settings?.textLineSlideSpeed ?? 1;
+            var duration = Mathf.Abs(targetHeight - myHeight) / speed;
+            Logger?.ZLogTrace($"Starting movement {myHeight} => {targetHeight} for {duration}");
+            _currentMotion = LMotion.Create(myHeight, targetHeight, duration)
+                .Bind(myRectTransform, (newHeight, r) => { r.sizeDelta = new Vector2(r.sizeDelta.x, newHeight); })
+                .AddTo(this);
+            LogOnEnd(_currentMotion.Value).Forget();
         }
 
         private async UniTaskVoid LogOnEnd(MotionHandle currentMotion)
         {
             await currentMotion.ToUniTask();
             Logger?.ZLogTrace($"Movement completed");
+            LayoutRebuilder.MarkLayoutForRebuild(rectTransform);
         }
     }
 }
