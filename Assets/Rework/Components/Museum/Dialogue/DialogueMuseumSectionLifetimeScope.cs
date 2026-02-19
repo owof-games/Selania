@@ -45,6 +45,11 @@ namespace Selania.Rework.Components.Museum.Dialogue
                 return new EmptyDisposable();
             }
 
+            public IDisposable AddConversationEndedListener(IStoryLinear.ConversationEnded listener)
+            {
+                return new EmptyDisposable();
+            }
+
             public bool canContinue => false;
 
             public void Continue()

@@ -9,6 +9,11 @@ namespace Selania.Rework.Interfaces
     public interface IStoryLinear
     {
         /// <summary>
+        ///     Type of functions invoked when a conversation has ended.
+        /// </summary>
+        delegate void ConversationEnded();
+
+        /// <summary>
         ///     Type of functions invoked when the current text changes.
         /// </summary>
         delegate void CurrentTextChanged(string currentText, ICollection<Tag> tags);
@@ -25,6 +30,13 @@ namespace Selania.Rework.Interfaces
         /// <param name="listener">The listener to invoke.</param>
         /// <returns>A disposable that removes the registration when disposed.</returns>
         IDisposable AddCurrentTextChangedListener(CurrentTextChanged listener);
+
+        /// <summary>
+        ///     Add a listener that is invoked when a conversation ends.
+        /// </summary>
+        /// <param name="listener">The listener to invoke.</param>
+        /// <returns>A disposable that removes the registration when disposed.</returns>
+        IDisposable AddConversationEndedListener(ConversationEnded listener);
 
         /// <summary>
         ///     Continue the current story.

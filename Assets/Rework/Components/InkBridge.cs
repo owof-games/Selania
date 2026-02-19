@@ -41,6 +41,12 @@ namespace Selania.Rework.Components
 
         private ILogger<InkBridge> logger => _logger ?? throw new InvalidOperationException("Logger is not set");
 
+        /// <inheritdoc />
+        public IDisposable AddConversationEndedListener(IStoryLinear.ConversationEnded listener)
+        {
+            return _currentConversationEndedListeners.AddListener(() => listener());
+        }
+
         public void StartStory(ILogger<InkBridge> newLogger)
         {
             _logger = newLogger;
@@ -358,14 +364,21 @@ namespace Selania.Rework.Components
         private readonly AutoNotifierListenersContainer<string, ICollection<Tag>> _currentTextListeners = new();
 
         /// <summary>
+        ///     All the listeners that are interested about the end of a conversation.
+        /// </summary>
+        private readonly ListenersContainer _currentConversationEndedListeners = new();
+
+        /// <summary>
         ///     Update the listeners with the current text.
         /// </summary>
         private void UpdateCurrentText()
         {
             var story = GetStory();
-            var currentText = story.currentText;
-            if (currentText.StartsWith("@")) return; // these lines are not outputted
-            _currentTextListeners.Invoke(currentText, MakeTags(story.currentTags));
+            var currentText = story.currentText.Trim();
+            if (currentText == "@interact")
+                _currentConversationEndedListeners.Invoke();
+            else if (!currentText.StartsWith('@'))
+                _currentTextListeners.Invoke(currentText, MakeTags(story.currentTags));
         }
 
         /// <inheritdoc />

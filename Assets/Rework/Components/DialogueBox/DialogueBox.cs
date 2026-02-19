@@ -26,6 +26,10 @@ namespace Selania.Rework.Components.DialogueBox
         private static readonly int InkVisibleSpeedAnimatorHash = Animator.StringToHash("InkVisibleSpeed");
         private static readonly int PortraitVisibleAnimatorHash = Animator.StringToHash("PortraitVisible");
         private static readonly int PortraitVisibleSpeedAnimatorHash = Animator.StringToHash("PortraitVisibleSpeed");
+
+        private static readonly int WordVisibleAnimatorHash = Animator.StringToHash("WordVisible");
+
+        // private static readonly int WordVisibleSpeedAnimatorHash = Animator.StringToHash("WordVisibleSpeed");
         private static readonly int ShowPortrait1AnimatorHash = Animator.StringToHash("ShowPortrait1");
         private static readonly int ShowPortraitSpeedAnimatorHash = Animator.StringToHash("ShowPortraitSpeed");
 
@@ -309,6 +313,29 @@ namespace Selania.Rework.Components.DialogueBox
         public void ShowAnimationCompleted()
         {
             animator.SetBool(ShowAnimationCompletedAnimatorHash, true);
+        }
+
+        /// <summary>
+        ///     Hide the dialogue box by sliding out the panel.
+        /// </summary>
+        public void Hide()
+        {
+            animator.SetBool(VisibleAnimatorHash, false);
+            animator.SetBool(InkVisibleAnimatorHash, false);
+            animator.SetBool(PortraitVisibleAnimatorHash, false);
+            animator.SetBool(WordVisibleAnimatorHash, false);
+            animator.SetBool(ShowAnimationCompletedAnimatorHash, false);
+        }
+
+        /// <summary>
+        ///     Invoked when the hide operation is completed, and we clear the actual contents.
+        /// </summary>
+        public void HideAnimationCompleted()
+        {
+            // clear all the contents: portrait, ink and text
+            portraitContainer.ClearImages();
+            SetInkStatus(0, 0);
+            foreach (Transform content in textLinesContainer.transform) Destroy(content.gameObject);
         }
     }
 }

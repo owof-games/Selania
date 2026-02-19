@@ -44,6 +44,8 @@ namespace Selania.Rework.Components.DialogueBox
             // register to events and save disposables to unregister
             _disposables.Add(StoryLinear.AddCurrentTextChangedListener(CurrentTextChanged));
 
+            _disposables.Add(StoryLinear.AddConversationEndedListener(ConversationEnded));
+
             _disposables.Add(StoryChoicesSelector.AddChoicesChangedListener(ChoicesChanged));
 
             dialogueBox.OnContinueRequested += ContinueActionOnPerformed;
@@ -54,6 +56,11 @@ namespace Selania.Rework.Components.DialogueBox
         {
             // free all disposables
             foreach (var disposable in _disposables) disposable.Dispose();
+        }
+
+        private void ConversationEnded()
+        {
+            dialogueBox.Hide();
         }
 
         private void ContinueActionOnPerformed()

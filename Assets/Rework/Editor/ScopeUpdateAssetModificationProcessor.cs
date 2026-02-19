@@ -44,6 +44,9 @@ namespace Selania.Rework.Editor
                         continue;
                     }
 
+                    // only take into consideration objects that belong to this prefab
+                    var gameObject = component.gameObject;
+                    if (PrefabUtility.GetNearestPrefabInstanceRoot(gameObject) != null) continue;
                     AddToRoomScope(roomScope, component.gameObject);
                 }
             }

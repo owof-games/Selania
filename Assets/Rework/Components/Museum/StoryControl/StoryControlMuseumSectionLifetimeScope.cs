@@ -1,11 +1,10 @@
 ﻿using Selania.Rework.Interfaces;
 using UnityEngine;
 using VContainer;
-using VContainer.Unity;
 
 namespace Selania.Rework.Components.Museum.StoryControl
 {
-    public class StoryControlMuseumSectionLifetimeScope : LifetimeScope
+    public class StoryControlMuseumSectionLifetimeScope : ScopeWithAutoInjectSupport
     {
         [SerializeField] [Tooltip("Settings of the game.")]
         private SelaniaSettings settings = null!;
@@ -15,7 +14,6 @@ namespace Selania.Rework.Components.Museum.StoryControl
 
         protected override void Configure(IContainerBuilder builder)
         {
-            Debug.Log("ma seri?");
             builder.RegisterLogger(settings);
             builder.RegisterInkBridgeInstance(inkBridge);
             builder.RegisterInstance(settings).As<ISettingsDialogueBox>();

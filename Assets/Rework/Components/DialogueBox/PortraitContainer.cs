@@ -25,5 +25,11 @@ namespace Selania.Rework.Components.DialogueBox
             var sprite = SettingsDialogueBox.GetCharacterSpriteByTag(tagName);
             (usePortrait1 ? portraitImage1 : portraitImage2).sprite = sprite;
         }
+
+        public void ClearImages()
+        {
+            portraitImage1.sprite = null;
+            portraitImage2.sprite = null;
+        }
     }
 }

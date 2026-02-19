@@ -78,6 +78,21 @@ namespace Selania.Rework.Components
     }
 
     /// <summary>
+    ///     A container of listeners that take no argument.
+    /// </summary>
+    public class ListenersContainer : ListenersContainerBase<Action>
+    {
+        /// <summary>
+        ///     Invoke all the listeners with the given argument. See <see cref="ListenersContainerBase{T}.ExecuteOnListeners" />
+        ///     for the exception semantic.
+        /// </summary>
+        public void Invoke()
+        {
+            ExecuteOnListeners(listener => listener());
+        }
+    }
+
+    /// <summary>
     ///     A container of listeners that take a single argument.
     /// </summary>
     /// <typeparam name="TArg1">The type of the argument taken by the listeners.</typeparam>

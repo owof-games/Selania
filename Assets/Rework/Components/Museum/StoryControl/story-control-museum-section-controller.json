@@ -18,6 +18,8 @@
     {
       "main": [
         [
+          "^@interact",
+          "\n",
           "^Qui parla Chitarra. ",
           "#",
           "^portrait:chitarra_affectionate ",
