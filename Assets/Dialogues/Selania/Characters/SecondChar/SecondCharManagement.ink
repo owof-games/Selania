@@ -62,7 +62,11 @@
     
     //Valore quarto ingrediente
         VAR kitchen_secondCharExtraIngredient = ()
-        VAR kitchen_secondCharExtraIngredientReaction = notReaction    
+        VAR kitchen_secondCharExtraIngredientReaction = notReaction   
+
+//Tracciamento apprezzamento glifi. Tutto ciò che è fuori da questa lista = reazione neutrale.
+    VAR secondChar_positiveGlyphs = ()
+    VAR secondChar_negativeGlyphs = ()
     
 //Tengo conto delle interazioni avute per aprire la possibilità della riscrittura
     VAR secondChar_storyletsForRewritingCount = 0.00

@@ -55,6 +55,10 @@
 //Tracciamento del dono
     VAR firstChar_giftedObject = ()
 
+//Tracciamento apprezzamento glifi. Tutto ciò che è fuori da questa lista = reazione neutrale.
+    VAR firstChar_positiveGlyphs = ()
+    VAR firstChar_negativeGlyphs = ()
+
 //Tracciamento del racconto
     VAR frog_first_novel = ""
 

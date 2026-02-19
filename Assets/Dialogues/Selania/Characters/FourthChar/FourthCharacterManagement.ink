@@ -38,7 +38,10 @@
    
 //Tracciamento del dono
     VAR fourthChar_giftedObject = ()
-    
+
+//Tracciamento apprezzamento glifi. Tutto ciò che è fuori da questa lista = reazione neutrale.
+    VAR fourthChar_positiveGlyphs = ()
+    VAR fourthChar_negativeGlyphs = ()    
     
 //Tengo conto delle interazioni avute per aprire la possibilità di avviare la riscrittura
     VAR fourthChar_storyletsForRewritingCount = 0
