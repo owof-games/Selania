@@ -1,3 +1,4 @@
+using Selania.Rework.Interfaces;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
@@ -15,6 +16,7 @@ namespace Selania.Rework.Components
         protected override void Configure(IContainerBuilder builder)
         {
             builder.RegisterInkBridgeInstance(inkBridge);
+            builder.RegisterInstance(settings).As<ISettingsDialogueBox>();
             builder.RegisterLogger(settings);
         }
     }

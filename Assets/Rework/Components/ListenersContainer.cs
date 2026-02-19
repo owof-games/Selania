@@ -116,8 +116,8 @@ namespace Selania.Rework.Components
 
         public override IDisposable AddListener(Action<TArg> listener)
         {
-            var disposable = base.AddListener(listener);
             if (_hasValue) listener(_arg);
+            var disposable = base.AddListener(listener);
 
             return disposable;
         }

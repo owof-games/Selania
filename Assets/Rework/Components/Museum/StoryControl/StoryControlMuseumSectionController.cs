@@ -12,6 +12,7 @@ namespace Selania.Rework.Components.Museum.StoryControl
 
         [Inject] internal IStoryLinear StoryLinear = null!;
 
+
         private void Start()
         {
             StoryLinear.AddConversationEndedListener(ConversationEnded).DisposeWith(gameObject);

@@ -421,8 +421,13 @@ namespace Selania.Rework.Components
         /// </summary>
         private void UpdateCurrentChoices()
         {
+            var story = GetStory();
+
+            // don't send choices for special instructions
+            if (story.currentText.Trim().StartsWith('@')) return;
+
             var choices = (
-                from choice in GetStory().currentChoices
+                from choice in story.currentChoices
                 select new IStoryChoicesSelector.Choice(choice.text.Trim(), choice.index)
             ).ToList();
             _currentChoicesListeners.Invoke(choices);

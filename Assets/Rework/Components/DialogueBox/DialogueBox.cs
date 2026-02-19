@@ -15,7 +15,7 @@ namespace Selania.Rework.Components.DialogueBox
     ///     The view manager for the dialogue box. This script controls the behavior of the component, without handling any
     ///     model connection.
     /// </summary>
-    public class DialogueBox : MonoBehaviour, InputActionsDialogueBox.IContinueMapActions
+    public class DialogueBox : MonoBehaviour, IAutomaticEditorInject, InputActionsDialogueBox.IContinueMapActions
     {
         private static readonly int ShowAnimationCompletedAnimatorHash =
             Animator.StringToHash("ShowAnimationCompleted");
@@ -88,6 +88,11 @@ namespace Selania.Rework.Components.DialogueBox
         ///     The logger used by this component.
         /// </summary>
         [Inject] internal ILogger<DialogueBox> Logger = null!;
+
+        // private void Update()
+        // {
+        //     Debug.Log($"Got it? {Logger != null}");
+        // }
 
         /// <summary>
         ///     The scope in which this object is created.
