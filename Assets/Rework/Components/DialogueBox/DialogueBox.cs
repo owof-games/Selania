@@ -27,6 +27,7 @@ namespace Selania.Rework.Components.DialogueBox
         private static readonly int PortraitVisibleAnimatorHash = Animator.StringToHash("PortraitVisible");
         private static readonly int PortraitVisibleSpeedAnimatorHash = Animator.StringToHash("PortraitVisibleSpeed");
         private static readonly int ShowPortrait1AnimatorHash = Animator.StringToHash("ShowPortrait1");
+        private static readonly int ShowPortraitSpeedAnimatorHash = Animator.StringToHash("ShowPortraitSpeed");
 
         [SerializeField] [Tooltip("The prefab that creates a text line once instantiated.")]
         private GameObject textLinePrefab = null!;
@@ -255,6 +256,7 @@ namespace Selania.Rework.Components.DialogueBox
         public void SetPortraitImage(string tagName)
         {
             animator.SetFloat(PortraitVisibleSpeedAnimatorHash, 1 / Settings.slideInDuration);
+            animator.SetFloat(ShowPortraitSpeedAnimatorHash, 1 / Settings.slideInDuration);
             animator.SetBool(PortraitVisibleAnimatorHash, true);
             animator.SetBool(ShowPortrait1AnimatorHash, _willUsePortrait1);
             portraitContainer.SetImage(tagName, _willUsePortrait1);
