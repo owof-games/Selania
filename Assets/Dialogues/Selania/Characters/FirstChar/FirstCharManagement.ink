@@ -85,8 +85,8 @@
 //Moltiplicatore del colore per il personaggio
     VAR firstChar_colorVariation = 3.0    
     
-//STATI UP: Viola e Giallo.
-//STATI DOWN: Blu.
+//STATI UP: water & aether.
+//STATI DOWN: Air.
     VAR firstChar_aether = 0.00
     VAR firstChar_earth = 0.00
     VAR firstChar_air = 0.00
