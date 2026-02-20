@@ -36,19 +36,19 @@ LIST nest_varpg_status = varPGYes, varPGNo
     	//Nel caso dellx PG, non attivo mai le parole magiche.
     	        {Color:
                     -redC:
-                        ~ player_red ++
+                        ~ player_fire ++
                 
                     -yellowC:
-                        ~ player_yellow ++
+                        ~ player_earth ++
                     
                     -blueC:
-                        ~ player_blue ++
+                        ~ player_air ++
                     
                     -greenC:
-                        ~ player_green ++   
+                        ~ player_water ++   
                     
                     -purpleC:
-                        ~ player_purple ++
+                        ~ player_aether ++
                 }
                 ->->
     	        
@@ -65,55 +65,55 @@ LIST nest_varpg_status = varPGYes, varPGNo
         - PNG == FirstCharacter:
         	    {Color:
                     -redC:
-                        ~ player_red_first_char ++
+                        ~ player_fire_first_char ++
                 
                     -yellowC:
-                        ~ player_yellow_first_char ++
+                        ~ player_earth_first_char ++
                     
                     -blueC:
-                        ~ player_blue_first_char ++
+                        ~ player_air_first_char ++
                     
                     -greenC:
-                        ~ player_green_first_char ++   
+                        ~ player_water_first_char ++   
                     
                     -purpleC:
-                        ~ player_purple_first_char ++
+                        ~ player_aether_first_char ++
                 }
         	 
         - PNG == SecondCharacter:
         	    {Color:
                     -redC:
-                        ~ player_red_second_char ++
+                        ~ player_fire_second_char ++
                 
                     -yellowC:
-                        ~ player_yellow_second_char ++
+                        ~ player_earth_second_char ++
                     
                     -blueC:
-                        ~ player_blue_second_char ++
+                        ~ player_air_second_char ++
                     
                     -greenC:
-                        ~ player_green_second_char ++   
+                        ~ player_water_second_char ++   
                     
                     -purpleC:
-                        ~ player_purple_second_char ++
+                        ~ player_aether_second_char ++
                 }
         	 
         - PNG == Mentor:
         	  {Color:
                     -redC:
-                        ~ player_red_mentor ++
+                        ~ player_fire_mentor ++
                 
                     -yellowC:
-                        ~ player_yellow_mentor ++
+                        ~ player_earth_mentor ++
                     
                     -blueC:
-                        ~ player_blue_mentor ++
+                        ~ player_air_mentor ++
                     
                     -greenC:
-                        ~ player_green_mentor ++   
+                        ~ player_water_mentor ++   
                     
                     -purpleC:
-                        ~ player_purple_mentor ++
+                        ~ player_aether_mentor ++
             }
 
     }
