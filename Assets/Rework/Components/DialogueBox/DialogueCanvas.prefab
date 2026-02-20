@@ -1882,6 +1882,7 @@ MonoBehaviour:
   dialogueClickCapture: {fileID: 4741549840916145002}
   scrollRectViewport: {fileID: 6103879382667988594}
   animator: {fileID: 4593173067443347034}
+  growingContainer: {fileID: 3186067136416770527}
 --- !u!95 &4593173067443347034
 Animator:
   serializedVersion: 7

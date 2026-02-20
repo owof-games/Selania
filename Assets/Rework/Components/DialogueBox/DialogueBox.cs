@@ -63,6 +63,9 @@ namespace Selania.Rework.Components.DialogueBox
         [SerializeField] [Tooltip("The animator that controls general dialogue box behaviors")]
         private Animator animator = null!;
 
+        [SerializeField] [Tooltip("The resizable container of the text parts")]
+        private GrowingContainer growingContainer = null!;
+
         /// <summary>
         ///     An action that has a value if we're waiting to add choices to the box. Calling the action will actually
         ///     add the choices.
@@ -256,6 +259,7 @@ namespace Selania.Rework.Components.DialogueBox
         {
             animator.SetFloat(VisibleSpeedAnimatorHash, 1 / Settings.slideInDuration);
             animator.SetBool(VisibleAnimatorHash, true);
+            growingContainer.immediatelyCompleteSizeAnimation = false;
         }
 
         /// <summary>
@@ -338,6 +342,7 @@ namespace Selania.Rework.Components.DialogueBox
         public void HideAnimationCompleted()
         {
             // clear all the contents: portrait, ink and text
+            growingContainer.immediatelyCompleteSizeAnimation = true;
             portraitContainer.ClearImages();
             SetInkStatus(0, 0);
             foreach (Transform content in textLinesContainer.transform) Destroy(content.gameObject);

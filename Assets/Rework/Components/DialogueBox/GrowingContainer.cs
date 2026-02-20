@@ -14,13 +14,19 @@ namespace Selania.Rework.Components.DialogueBox
     {
         [SerializeField] private GameObject child = null!;
 
-        private MotionHandle? _currentMotion;
+        private MotionHandle _currentMotion;
 
         private RectTransform? _myRectTransform;
 
         [Inject] internal ILogger<GrowingContainer>? Logger;
 
         [Inject] internal ISettingsDialogueBox? Settings;
+
+        /// <summary>
+        ///     Whether size animation should immediately complete. This is useful when the element is not visible, in order
+        ///     not to introduce unexplainable resizing animation for the user.
+        /// </summary>
+        public bool immediatelyCompleteSizeAnimation { get; set; }
 
         private RectTransform GetMyRectTransform()
         {
@@ -70,16 +76,23 @@ namespace Selania.Rework.Components.DialogueBox
             var myRectTransform = GetMyRectTransform();
             var myHeight = myRectTransform.sizeDelta.y;
 
-            if (Mathf.Approximately(targetHeight, myHeight) ||
-                (_currentMotion != null && _currentMotion.Value.IsActive())) return;
+            if (Mathf.Approximately(targetHeight, myHeight) || _currentMotion.IsActive()) return;
 
             var speed = Settings?.textLineSlideSpeed ?? 1;
             var duration = Mathf.Abs(targetHeight - myHeight) / speed;
             Logger?.ZLogTrace($"Starting movement {myHeight} => {targetHeight} for {duration}");
-            _currentMotion = LMotion.Create(myHeight, targetHeight, duration)
-                .Bind(myRectTransform, (newHeight, r) => { r.sizeDelta = new Vector2(r.sizeDelta.x, newHeight); })
-                .AddTo(this);
-            LogOnEnd(_currentMotion.Value).Forget();
+            if (immediatelyCompleteSizeAnimation)
+            {
+                myRectTransform.sizeDelta = new Vector2(myRectTransform.sizeDelta.x, targetHeight);
+                Logger?.ZLogTrace($"Movement immediately completed.");
+            }
+            else
+            {
+                _currentMotion = LMotion.Create(myHeight, targetHeight, duration)
+                    .Bind(myRectTransform, (newHeight, r) => { r.sizeDelta = new Vector2(r.sizeDelta.x, newHeight); })
+                    .AddTo(this);
+                LogOnEnd(_currentMotion).Forget();
+            }
         }
 
         private async UniTaskVoid LogOnEnd(MotionHandle currentMotion)
