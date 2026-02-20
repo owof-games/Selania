@@ -22,11 +22,11 @@
     VAR mentorChar_negativeGlyphs = ()
 
 //Variabili colore
-    VAR mentor_purple = 0.00
-    VAR mentor_yellow = 0.00
-    VAR mentor_blue = 0.00
-    VAR mentor_green = 0.00
-    VAR mentor_red = 0.00     
+    VAR mentor_aether = 0.00
+    VAR mentor_earth = 0.00
+    VAR mentor_air = 0.00
+    VAR mentor_water = 0.00
+    VAR mentor_fire = 0.00     
 
 
 //VARIABILI NARRATIVE

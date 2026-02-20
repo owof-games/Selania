@@ -6,27 +6,27 @@
         = first_key
         Suona la prima nota.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
-            + {are_two_entities_together(PG, redShell)}[redShell]
+            + {are_two_entities_together(PG, fireGlyph)}[fireGlyph]
             
                 @animation:RedShell
                 ~ nest_firstKeyColour = redKey
             
-            + {are_two_entities_together(PG, yellowShell)}[yellowShell]
+            + {are_two_entities_together(PG, earthGlyph)}[earthGlyph]
             
                 @animation:YellowShell
                 ~ nest_firstKeyColour = yellowKey
             
-            + {are_two_entities_together(PG, blueShell)}[blueShell]
+            + {are_two_entities_together(PG, airGlyph)}[airGlyph]
             
                 @animation:BlueShell
                 ~ nest_firstKeyColour = blueKey
             
-            + {are_two_entities_together(PG, greenShell)}[greenShell]
+            + {are_two_entities_together(PG, waterGlyph)}[waterGlyph]
             
                 @animation:GreenShell
                 ~ nest_firstKeyColour = greenKey
             
-            + {are_two_entities_together(PG, purpleShell)}[purpleShell]
+            + {are_two_entities_together(PG, aetherGlyph)}[aetherGlyph]
                 
                 @animation:PurpleShell
                 ~ nest_firstKeyColour = purpleKey
@@ -40,23 +40,23 @@
     
         = second_key
         Suona la seconda nota. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-            + {are_two_entities_together(PG, redShell)}[redShell]
+            + {are_two_entities_together(PG, fireGlyph)}[fireGlyph]
             
                 @animation:RedShell
                 ~ nest_secondKeyColour = redKey
-            + {are_two_entities_together(PG, yellowShell)}[yellowShell]
+            + {are_two_entities_together(PG, earthGlyph)}[earthGlyph]
             
                 @animation:YellowShell
                 ~ nest_secondKeyColour = yellowKey
-            + {are_two_entities_together(PG, blueShell)}[blueShell]
+            + {are_two_entities_together(PG, airGlyph)}[airGlyph]
             
                 @animation:BlueShell
                 ~ nest_secondKeyColour = blueKey
-            + {are_two_entities_together(PG, greenShell)}[greenShell]
+            + {are_two_entities_together(PG, waterGlyph)}[waterGlyph]
             
                 @animation:GreenShell
                 ~ nest_secondKeyColour = greenKey
-            + {are_two_entities_together(PG, purpleShell)}[purpleShell]
+            + {are_two_entities_together(PG, aetherGlyph)}[aetherGlyph]
             
                 @animation:PurpleShell
                 ~ nest_secondKeyColour = purpleKey
@@ -69,23 +69,23 @@
 
         = third_key
         Suona l'ultima nota.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-            + {are_two_entities_together(PG, redShell)}[redShell]
+            + {are_two_entities_together(PG, fireGlyph)}[fireGlyph]
             
                 @animation:RedShell
                 ~ nest_thirdKeyColour = redKey
-            + {are_two_entities_together(PG, yellowShell)}[yellowShell]
+            + {are_two_entities_together(PG, earthGlyph)}[earthGlyph]
             
                 @animation:YellowShell
                 ~ nest_thirdKeyColour = yellowKey
-            + {are_two_entities_together(PG, blueShell)}[blueShell]
+            + {are_two_entities_together(PG, airGlyph)}[airGlyph]
             
                 @animation:BlueShell
                 ~ nest_thirdKeyColour = blueKey
-            + {are_two_entities_together(PG, greenShell)}[greenShell]
+            + {are_two_entities_together(PG, waterGlyph)}[waterGlyph]
             
                 @animation:GreenShell
                 ~ nest_thirdKeyColour = greenKey
-            + {are_two_entities_together(PG, purpleShell)}[purpleShell]
+            + {are_two_entities_together(PG, aetherGlyph)}[aetherGlyph]
             
                 @animation:PurpleShell
                 ~ nest_thirdKeyColour = purpleKey

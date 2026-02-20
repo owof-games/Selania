@@ -81,20 +81,20 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
         Non è solo l'odore della terra, o l'umidità nell'aria nei giorni più caldi.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         Ma quella sensazione che con le tue mani puoi permettere a un altro corpo di crescere al meglio.
 
-            + (fiveBlue) [Preferisco la stazione dei treni, è ordinata, precisa.]
+            + (fiveAir) [Preferisco la stazione dei treni, è ordinata, precisa.]
                     -> color_variation_management(FifthCharacter, airC, varPGYes)->
                 Sì, ne capisco il fascino.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 A volte mi siedo lì e mi godo per qualche istante l'attesa.
                 Il nulla che accade.
                 Ma poi le mani fremono, mi supplicano di sistemare qualcosa fuori posto.
                 
-            + (fiveYellow) [Lo stagno è divertente, succede di tutto.]
+            + (fiveEarth) [Lo stagno è divertente, succede di tutto.]
                     -> color_variation_management(FifthCharacter, earthC, varPGYes) ->
                 Forse succede <i>di troppo</i>.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
                 Non sembra pensare a nulla.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 L'acqua è lì e lascia che tutto accada, senza pensare al domani.
                 
-            + (fiveRed) [La foresta domina: è lotta, è potenza!]
+            + (fiveFire) [La foresta domina: è lotta, è potenza!]
                     -> color_variation_management(FifthCharacter, fireC, varPGYes)->
                 E disordinata, sporca.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
                 Posso capirne il fascino, ma non è un luogo dove resto con piacere.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
@@ -102,13 +102,13 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
                 Una cosa davvero fastidiosa.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                     
                 
-            + (fiveGreen) [Un po' come prendersi cura delle persone, qui.]
+            + (fiveWater) [Un po' come prendersi cura delle persone, qui.]
                     -> color_variation_management(FifthCharacter, waterC, varPGYes)->
                 Sì, anche se con meno aspettative.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Le persone a volte fanno cose che non ci aspettiamo.
                 Un <i>Lichene degli abissi</i> con le giuste condizioni cresce sempre allo stesso modo.
   
-            + (fivePurple) [Invece sono felice che crescano a prescindere da me.]
+            + (fiveAether) [Invece sono felice che crescano a prescindere da me.]
                     -> color_variation_management(FifthCharacter, aetherC, varPGYes)->
                 Senza di te?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                 Dobbiamo bagnare il terreno, prepararlo, seminare.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry

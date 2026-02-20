@@ -20,4 +20,4 @@
     
     LIST listSounds = TrainNoiseComing, TrainNoiseGoingAway, BastonSound
     
-    LIST listColoredShells = redShell, yellowShell, blueShell, greenShell, purpleShell    
+    LIST listColoredGlyphs  = fireGlyph, earthGlyph, airGlyph, waterGlyph, aetherGlyph    

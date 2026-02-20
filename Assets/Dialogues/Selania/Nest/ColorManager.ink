@@ -1590,11 +1590,11 @@ LIST nest_varpg_status = varPGYes, varPGNo
             ~ secondChar_aether += nest_temporaryAether
         
         - nest_currentTalker == Mentor:
-            ~ mentor_red += nest_temporaryFire
-            ~ mentor_yellow += nest_temporaryEarth
-            ~ mentor_blue += nest_temporaryAir
-            ~ mentor_green += nest_temporaryWater
-            ~ mentor_purple += nest_temporaryAether
+            ~ mentor_fire += nest_temporaryFire
+            ~ mentor_earth += nest_temporaryEarth
+            ~ mentor_air += nest_temporaryAir
+            ~ mentor_water += nest_temporaryWater
+            ~ mentor_aether += nest_temporaryAether
     }
 
     //Poi azzeriamo i valori temporanei
