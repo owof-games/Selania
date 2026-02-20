@@ -19,11 +19,13 @@ namespace Selania.Rework.Components
         }
 
         /// <summary>
-        ///     Remove all null or missing game object from auto inject
+        ///     Remove all null or missing game object from auto-inject.
         /// </summary>
         public void CleanUp()
         {
             List<int>? toRemove = null;
+
+            if (autoInjectGameObjects == null) return;
 
             for (var i = autoInjectGameObjects.Count - 1; i >= 0; i--)
             {

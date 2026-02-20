@@ -1,19 +1,20 @@
 ﻿using System.Collections.Generic;
+using Alchemy.Inspector;
 using Microsoft.Extensions.Logging;
 using R3;
 using Selania.Rework.Interfaces;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using VContainer;
-using ZLogger;
 
 namespace Selania.Rework.Components
 {
     /// <summary>
-    ///     A component that makes a sprite interactable like a button.
+    ///     An <see cref="IInteractable"/> component that uses a click on a polygon collider as the trigger for interaction.
     /// </summary>
     [RequireComponent(typeof(SpriteRenderer))]
-    public class SpriteInteractable : MonoBehaviour, IInteractable, IPointerClickHandler, IPointerEnterHandler,
+    public class PolygonColliderInteractable : MonoBehaviour, IInteractable, IPointerClickHandler, IPointerEnterHandler,
         IPointerExitHandler, IAutomaticEditorInject
     {
         /// <summary>
@@ -26,12 +27,13 @@ namespace Selania.Rework.Components
         /// </summary>
         private Subject<IInteractable>? _interactionSubject;
 
+        // temporary
         private SpriteRenderer? _spriteRenderer;
 
         /// <summary>
         ///     The logger used for this object.
         /// </summary>
-        [Inject] internal ILogger<SpriteInteractable> Logger = null!;
+        [Inject] internal ILogger<PolygonColliderInteractable> Logger = null!;
 
         private void Start()
         {
@@ -39,8 +41,6 @@ namespace Selania.Rework.Components
             _spriteRenderer = GetComponent<SpriteRenderer>();
 
             _interactionSubject = new Subject<IInteractable>().AddTo(this);
-
-            CopySpritePhysicsShapeToPolygonCollider2DShape();
         }
 
         public Observable<IInteractable> interactionObservable => _interactionSubject!.AsObservable();
@@ -54,7 +54,7 @@ namespace Selania.Rework.Components
         {
             if (_spriteRenderer == null)
             {
-                Debug.LogWarning("Mouse entered an uninitialized SpriteInteractable", this);
+                Debug.LogWarning("Mouse entered an uninitialized PolygonColliderInteractable", this);
                 return;
             }
 
@@ -65,19 +65,23 @@ namespace Selania.Rework.Components
         {
             if (_spriteRenderer == null)
             {
-                Debug.LogWarning("Mouse entered an uninitialized SpriteInteractable", this);
+                Debug.LogWarning("Mouse entered an uninitialized PolygonColliderInteractable", this);
                 return;
             }
 
             _spriteRenderer.color = Color.white;
         }
 
-        private void CopySpritePhysicsShapeToPolygonCollider2DShape()
+        [Button]
+        [LabelText("Adapt collider shape to sprite shape")]
+        public void CopySpritePhysicsShapeToPolygonCollider2DShape()
         {
             // from https://discussions.unity.com/t/how-to-update-polygoncollider2d-at-runtime/1557909/2
             // Fetch the components.
-            var sprite = _spriteRenderer!.sprite;
+            var sprite = GetComponent<SpriteRenderer>().sprite;
             var polygonCollider = GetComponent<PolygonCollider2D>();
+
+            Undo.RecordObject(polygonCollider, "Adapt collider shape to sprite shape");
 
             // A sprite can have multiple physics shape paths (for holes etc...).
             var shapeCount = sprite.GetPhysicsShapeCount();
@@ -91,7 +95,7 @@ namespace Selania.Rework.Components
                 polygonCollider.SetPath(i, PhysicsShapePath);
             }
 
-            Logger.ZLogTrace(
+            Debug.Log(
                 $"Copied {shapeCount} shapes for a total of {numVertices} vertices to produce the polygon collider for the interactable '{name}'.");
         }
     }

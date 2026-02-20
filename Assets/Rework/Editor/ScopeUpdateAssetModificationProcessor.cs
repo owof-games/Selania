@@ -3,6 +3,7 @@ using Selania.Rework.Components;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using VContainer.Unity;
 
 namespace Selania.Rework.Editor
 {
@@ -46,7 +47,14 @@ namespace Selania.Rework.Editor
 
                     // only take into consideration objects that belong to this prefab
                     var gameObject = component.gameObject;
-                    if (PrefabUtility.GetNearestPrefabInstanceRoot(gameObject) != null) continue;
+                    var prefabRoot = PrefabUtility.GetNearestPrefabInstanceRoot(gameObject);
+                    if (prefabRoot != null)
+                        if (prefabRoot.GetComponentInChildren<LifetimeScope>() != null)
+                        {
+                            Debug.Log($"{gameObject.name} has its own lifetime scope");
+                            continue;
+                        }
+
                     AddToRoomScope(roomScope, component.gameObject);
                 }
             }

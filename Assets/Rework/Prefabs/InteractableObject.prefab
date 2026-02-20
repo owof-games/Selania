@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4151842594449095391}
   - component: {fileID: 7465546172250548277}
   - component: {fileID: 5344787421971937063}
+  - component: {fileID: 7215676493785075422}
+  - component: {fileID: 8009497623955396754}
   - component: {fileID: 1777230783030721685}
   - component: {fileID: 2889362861158594370}
   - component: {fileID: 8235661390823931172}
@@ -144,6 +146,42 @@ PolygonCollider2D:
       - {x: 90, y: -51}
       - {x: 105, y: -44}
   m_UseDelaunayMesh: 0
+--- !u!95 &7215676493785075422
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131149654844477419}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8009497623955396754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131149654844477419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b48024a7fe84a479b2683e64dcf6b13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.HoverAnimationController
+  animateWhenHovered: 1
+  animator: {fileID: 7215676493785075422}
 --- !u!114 &1777230783030721685
 MonoBehaviour:
   m_ObjectHideFlags: 0

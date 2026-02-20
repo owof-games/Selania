@@ -724,6 +724,10 @@ MonoBehaviour:
     description: "In questo caso il dialogue box \xE8 comandato dalla storia ink.
       Questo esempio fa vedere come ink controlla testo, portrait, inchiostro, rapporto,
       scelte, e come reagisce il box all'apertura e chiusura."
+  - prefab: {fileID: 5900152936520379775, guid: 768ac7306f930924fa7ae203f366f158, type: 3}
+    title: Hover Interactable
+    description: "I bottoni hanno un'animazione che viene visualizzata se il mouse
+      ci va sopra (per i normali oggetti) o se il mouse non c'\xE8 sopra (per i personaggi)."
 --- !u!4 &1073972271
 Transform:
   m_ObjectHideFlags: 0
