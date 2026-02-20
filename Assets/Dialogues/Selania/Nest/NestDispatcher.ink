@@ -5,24 +5,24 @@
 //Qui abbiamo il primo dispatcher, che ci manda a dei sottonodi di assegnazione, così da non avere dei blocconi giganteschi di roba
 {
     - nest_firstKeyColour == redKey:
-        -> redDispatcher
+        -> fireDispatcher
         
     - nest_firstKeyColour == yellowKey:
-        -> yellowDispatcher
+        -> earthDispatcher
         
     - nest_firstKeyColour == blueKey:
-        -> blueDispatcher
+        -> airDispatcher
         
     - nest_firstKeyColour == greenKey:
-        -> greenDispatcher
+        -> waterDispatcher
         
     - nest_firstKeyColour == purpleKey:
-        -> purpleDispatcher
+        -> aetherDispatcher
 }
 
 
-    = redDispatcher
-    {debug_nest: il primo colore è {nest_firstKeyColour} passo per emotional_words_generator.redDispatcher.}
+    = fireDispatcher
+    {debug_nest: il primo colore è {nest_firstKeyColour} passo per emotional_words_generator.fireDispatcher.}
     
         {
             - nest_secondKeyColour == redKey:
@@ -110,8 +110,8 @@
         }
             -> emotional_words_feedback
 
-    = yellowDispatcher
-    {debug_nest: il primo colore è {nest_firstKeyColour} passo per emotional_words_generator.yellowDispatcher.}
+    = earthDispatcher
+    {debug_nest: il primo colore è {nest_firstKeyColour} passo per emotional_words_generator.earthDispatcher.}
     
         {
             - nest_secondKeyColour == redKey:
@@ -199,8 +199,8 @@
         }
             -> emotional_words_feedback
     
-    = blueDispatcher
-    {debug_nest: il primo colore è {nest_firstKeyColour} passo per emotional_words_generator.blueDispatcher.}
+    = airDispatcher
+    {debug_nest: il primo colore è {nest_firstKeyColour} passo per emotional_words_generator.airDispatcher.}
     
               {
             - nest_secondKeyColour == redKey:
@@ -288,8 +288,8 @@
         }
             -> emotional_words_feedback
     
-    = greenDispatcher
-    {debug_nest: il primo colore è {nest_firstKeyColour} passo per emotional_words_generator.greenDispatcher.}
+    = waterDispatcher
+    {debug_nest: il primo colore è {nest_firstKeyColour} passo per emotional_words_generator.waterDispatcher.}
     
         {
             - nest_secondKeyColour == redKey:
@@ -377,8 +377,8 @@
         }
            -> emotional_words_feedback
     
-    = purpleDispatcher
-    {debug_nest: il primo colore è {nest_firstKeyColour} passo per emotional_words_generator.purpleDispatcher.}
+    = aetherDispatcher
+    {debug_nest: il primo colore è {nest_firstKeyColour} passo per emotional_words_generator.aetherDispatcher.}
     
         {
             - nest_secondKeyColour == redKey:

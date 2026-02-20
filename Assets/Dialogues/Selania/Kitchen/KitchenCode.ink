@@ -15,11 +15,11 @@
     VAR kitchen_tempRecipeName = ""
 
 //Storage temporaneo dei colori
-    VAR kitchen_storagePurple = 0
-    VAR kitchen_storageYellow = 0
-    VAR kitchen_storageBlue = 0
-    VAR kitchen_storageGreen = 0
-    VAR kitchen_storageRed = 0
+    VAR kitchen_storageAether = 0
+    VAR kitchen_storageEarth = 0
+    VAR kitchen_storageAir = 0
+    VAR kitchen_storageWater = 0
+    VAR kitchen_storageFire = 0
 
 //Variabile per evitare che le personagge cucinino una di fila all'altra
     VAR kitchen_cookingAloneCoolDown = 0
@@ -487,27 +487,27 @@
 
     {
         - cookingCompanion == FirstCharacter:
-            ~ kitchen_storagePurple = firstChar_aether
+            ~ kitchen_storageAether = firstChar_aether
                 ~ firstChar_aether = 0
-            ~ kitchen_storageYellow = firstChar_earth
+            ~ kitchen_storageEarth = firstChar_earth
                 ~ firstChar_earth = 0
-            ~ kitchen_storageBlue = firstChar_air
+            ~ kitchen_storageAir = firstChar_air
                 ~ firstChar_air = 0
-            ~ kitchen_storageGreen = firstChar_water
+            ~ kitchen_storageWater = firstChar_water
                 ~ firstChar_water = 0
-            ~ kitchen_storageRed = firstChar_fire
+            ~ kitchen_storageFire = firstChar_fire
                 ~ firstChar_fire= 0
     
         - cookingCompanion == SecondCharacter:
-            ~ kitchen_storagePurple = secondChar_aether
+            ~ kitchen_storageAether = secondChar_aether
                 ~ secondChar_aether = 0
-            ~ kitchen_storageYellow = secondChar_earth
+            ~ kitchen_storageEarth = secondChar_earth
                 ~ secondChar_earth = 0
-            ~ kitchen_storageBlue = secondChar_air
+            ~ kitchen_storageAir = secondChar_air
                 ~ secondChar_air = 0
-            ~ kitchen_storageGreen = secondChar_water
+            ~ kitchen_storageWater = secondChar_water
                 ~ secondChar_water = 0
-            ~ kitchen_storageRed = secondChar_fire
+            ~ kitchen_storageFire = secondChar_fire
                 ~ secondChar_fire = 0
     }
 ->->
@@ -515,31 +515,31 @@
 
 === update_colors(cookingCompanion)
 {debug_kitchen or debug: update_colors.}
-{debug_kitchen: prima di aggiornare i valori, il valore di kitchen_storagePurple è {kitchen_storagePurple}, di kitchen_storageYellow {kitchen_storageYellow}, kitchen_storageBlue è {kitchen_storageBlue}, di kitchen_storageGreen {kitchen_storageGreen}, di kitchen_storageRed {kitchen_storageRed}. cookingCompanion è {cookingCompanion}.}
+{debug_kitchen: prima di aggiornare i valori, il valore di kitchen_storageAether è {kitchen_storageAether}, di kitchen_storageEarth {kitchen_storageEarth}, kitchen_storageAir è {kitchen_storageAir}, di kitchen_storageWater {kitchen_storageWater}, di kitchen_storageFire {kitchen_storageFire}. cookingCompanion è {cookingCompanion}.}
     {
         - cookingCompanion == FirstCharacter:
-            ~ firstChar_aether = firstChar_aether + kitchen_storagePurple
-                ~ kitchen_storagePurple = 0
-            ~ firstChar_earth = firstChar_earth + kitchen_storageYellow
-                ~ kitchen_storageYellow = 0
-            ~ firstChar_air = firstChar_air + kitchen_storageBlue
-                ~ kitchen_storageBlue = 0
-            ~ firstChar_water = firstChar_water + kitchen_storageGreen
-                ~ kitchen_storageGreen = 0
-            ~ firstChar_fire= firstChar_fire+ kitchen_storageRed
-                ~ kitchen_storageRed = 0
+            ~ firstChar_aether = firstChar_aether + kitchen_storageAether
+                ~ kitchen_storageAether = 0
+            ~ firstChar_earth = firstChar_earth + kitchen_storageEarth
+                ~ kitchen_storageEarth = 0
+            ~ firstChar_air = firstChar_air + kitchen_storageAir
+                ~ kitchen_storageAir = 0
+            ~ firstChar_water = firstChar_water + kitchen_storageWater
+                ~ kitchen_storageWater = 0
+            ~ firstChar_fire= firstChar_fire+ kitchen_storageFire
+                ~ kitchen_storageFire = 0
     
     - cookingCompanion == SecondCharacter:
-            ~ secondChar_aether = secondChar_aether + kitchen_storagePurple
-                ~ kitchen_storagePurple = 0
-            ~ secondChar_earth = secondChar_earth + kitchen_storageYellow
-                ~ kitchen_storageYellow = 0
-            ~ secondChar_air = secondChar_air + kitchen_storageBlue
-                ~ kitchen_storageBlue = 0
-            ~ secondChar_water = secondChar_water + kitchen_storageGreen
-                ~ kitchen_storageGreen = 0
-            ~ secondChar_fire = secondChar_fire + kitchen_storageRed
-                ~ kitchen_storageRed = 0
+            ~ secondChar_aether = secondChar_aether + kitchen_storageAether
+                ~ kitchen_storageAether = 0
+            ~ secondChar_earth = secondChar_earth + kitchen_storageEarth
+                ~ kitchen_storageEarth = 0
+            ~ secondChar_air = secondChar_air + kitchen_storageAir
+                ~ kitchen_storageAir = 0
+            ~ secondChar_water = secondChar_water + kitchen_storageWater
+                ~ kitchen_storageWater = 0
+            ~ secondChar_fire = secondChar_fire + kitchen_storageFire
+                ~ kitchen_storageFire = 0
  
     
     }
@@ -553,6 +553,6 @@
     ~ kitchen_tempRecipeName = ""
 
 
-{debug_kitchen: dopo aver aggiornato i valori, il valore di kitchen_storagePurple è {kitchen_storagePurple}, di kitchen_storageYellow {kitchen_storageYellow}, kitchen_storageBlue è {kitchen_storageBlue}, di kitchen_storageGreen {kitchen_storageGreen}, di kitchen_storageRed {kitchen_storageRed}. cookingCompanion è {cookingCompanion}.} 
+{debug_kitchen: dopo aver aggiornato i valori, il valore di kitchen_storageAether è {kitchen_storageAether}, di kitchen_storageEarth {kitchen_storageEarth}, kitchen_storageAir è {kitchen_storageAir}, di kitchen_storageWater {kitchen_storageWater}, di kitchen_storageFire {kitchen_storageFire}. cookingCompanion è {cookingCompanion}.} 
 ->->
 

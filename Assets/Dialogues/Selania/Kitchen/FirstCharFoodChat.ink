@@ -574,31 +574,31 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 ~ kitchen_recipeAdjective = "consapevoli"
             -     
         {
-            - (kitchen_storagePurple >  kitchen_storageYellow) && (kitchen_storagePurple >  kitchen_storageRed) && (kitchen_storagePurple >  kitchen_storageGreen) && (kitchen_storagePurple >  kitchen_storageBlue):
+            - (kitchen_storageAether >  kitchen_storageEarth) && (kitchen_storageAether >  kitchen_storageFire) && (kitchen_storageAether >  kitchen_storageWater) && (kitchen_storageAether >  kitchen_storageAir):
                 Interessante.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
                 In queste conversazioni non so perché ma ti ho visto come una persona quasi spirituale.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Più attenta al grande insieme delle cose.
                 Mi dai l'idea di solidità, sai?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
 
-            - (kitchen_storageYellow >  kitchen_storagePurple) && (kitchen_storageYellow >  kitchen_storageRed) && (kitchen_storageYellow >  kitchen_storageGreen) && (kitchen_storageYellow >  kitchen_storageBlue):
+            - (kitchen_storageEarth >  kitchen_storageAether) && (kitchen_storageEarth >  kitchen_storageFire) && (kitchen_storageEarth >  kitchen_storageWater) && (kitchen_storageEarth >  kitchen_storageAir):
                 Interessante.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
                 In queste conversazioni non so perché ma ti ho visto come una persona giocosa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 Una che trova il piacere, il bello nel mondo, anche quando non è facile.
                 Credo ci voglia tanto equilibrio interiore per farlo.
 
-            - (kitchen_storageRed >  kitchen_storageYellow) && (kitchen_storageRed >  kitchen_storagePurple) && (kitchen_storageRed >  kitchen_storageGreen) && (kitchen_storageRed >  kitchen_storageBlue):
+            - (kitchen_storageFire >  kitchen_storageEarth) && (kitchen_storageFire >  kitchen_storageAether) && (kitchen_storageFire >  kitchen_storageWater) && (kitchen_storageFire >  kitchen_storageAir):
                 Interessante.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
                 In queste conversazioni non so perché ma ti ho visto come una persona molto attiva.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Più interessata alle cose da fare che non ai grandi ragionamenti.
                 Ammetto che associo questa cosa all'idea del chaddone tontolotto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 Ma è un mio pregiudizio, lo so.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
 
-            - (kitchen_storageGreen >  kitchen_storageYellow) && (kitchen_storageGreen >  kitchen_storageRed) && (kitchen_storageGreen >  kitchen_storagePurple) && (kitchen_storageGreen >  kitchen_storageBlue):
+            - (kitchen_storageWater >  kitchen_storageEarth) && (kitchen_storageWater >  kitchen_storageFire) && (kitchen_storageWater >  kitchen_storageAether) && (kitchen_storageWater >  kitchen_storageAir):
                 Interessante.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
                 In queste conversazioni non so perché ma ti ho visto come una persona molto legata alle emozioni.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 Ma a differenza mia, sembra che tu riesca a trovare la tua solidità in questo.
 
-            - (kitchen_storageBlue >  kitchen_storageYellow) && (kitchen_storageBlue >  kitchen_storageRed) && (kitchen_storageBlue >  kitchen_storageGreen) && (kitchen_storageBlue >  kitchen_storagePurple):
+            - (kitchen_storageAir >  kitchen_storageEarth) && (kitchen_storageAir >  kitchen_storageFire) && (kitchen_storageAir >  kitchen_storageWater) && (kitchen_storageAir >  kitchen_storageAether):
                 Interessante.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
                 In queste conversazioni non so perché ma ti ho visto come una persona molto razionale.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Con uno sguardo analitico sul mondo.
