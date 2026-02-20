@@ -1,4 +1,4 @@
-LIST nest_colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
+LIST nest_colorParametersChoice = fireC, earthC, airC, waterC, aetherC
 
 //Persona a cui stiamo parlando quando compiamo la scelta
     VAR nest_currentTalker = ()
@@ -35,19 +35,19 @@ LIST nest_varpg_status = varPGYes, varPGNo
     	- PNG == PG:
     	//Nel caso dellx PG, non attivo mai le parole magiche.
     	        {Color:
-                    -redC:
+                    -fireC:
                         ~ player_fire ++
                 
-                    -yellowC:
+                    -earthC:
                         ~ player_earth ++
                     
-                    -blueC:
+                    -airC:
                         ~ player_air ++
                     
-                    -greenC:
+                    -waterC:
                         ~ player_water ++   
                     
-                    -purpleC:
+                    -aetherC:
                         ~ player_aether ++
                 }
                 ->->
@@ -64,55 +64,55 @@ LIST nest_varpg_status = varPGYes, varPGNo
     {
         - PNG == FirstCharacter:
         	    {Color:
-                    -redC:
+                    -fireC:
                         ~ player_fire_first_char ++
                 
-                    -yellowC:
+                    -earthC:
                         ~ player_earth_first_char ++
                     
-                    -blueC:
+                    -airC:
                         ~ player_air_first_char ++
                     
-                    -greenC:
+                    -waterC:
                         ~ player_water_first_char ++   
                     
-                    -purpleC:
+                    -aetherC:
                         ~ player_aether_first_char ++
                 }
         	 
         - PNG == SecondCharacter:
         	    {Color:
-                    -redC:
+                    -fireC:
                         ~ player_fire_second_char ++
                 
-                    -yellowC:
+                    -earthC:
                         ~ player_earth_second_char ++
                     
-                    -blueC:
+                    -airC:
                         ~ player_air_second_char ++
                     
-                    -greenC:
+                    -waterC:
                         ~ player_water_second_char ++   
                     
-                    -purpleC:
+                    -aetherC:
                         ~ player_aether_second_char ++
                 }
         	 
         - PNG == Mentor:
         	  {Color:
-                    -redC:
+                    -fireC:
                         ~ player_fire_mentor ++
                 
-                    -yellowC:
+                    -earthC:
                         ~ player_earth_mentor ++
                     
-                    -blueC:
+                    -airC:
                         ~ player_air_mentor ++
                     
-                    -greenC:
+                    -waterC:
                         ~ player_water_mentor ++   
                     
-                    -purpleC:
+                    -aetherC:
                         ~ player_aether_mentor ++
             }
 
@@ -132,19 +132,19 @@ LIST nest_varpg_status = varPGYes, varPGNo
 
     - else:
         {Color:
-            -redC:
+            -fireC:
                 ~ nest_temporaryFire ++
      
-            -yellowC:
+            -earthC:
                 ~ nest_temporaryEarth ++
             
-            -blueC:
+            -airC:
                 ~ nest_temporaryAir++
             
-            -greenC:
+            -waterC:
                 ~ nest_temporaryWater++   
             
-            -purpleC:
+            -aetherC:
                 ~ nest_temporaryAether ++
         }
         {debug_nest: non è attiva alcuna parola magica, per cui mi aumento di uno i valori e basta.}
