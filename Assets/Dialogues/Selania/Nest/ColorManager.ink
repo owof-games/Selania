@@ -3,11 +3,11 @@ LIST nest_colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
 //Persona a cui stiamo parlando quando compiamo la scelta
     VAR nest_currentTalker = ()
 //Creazione di parametri generici per semplificarmi la vita legati ai colori che poi verranno riportati sullx PNG    
-    VAR nest_temporaryRed = 0.00
-    VAR nest_temporaryYellow = 0.00
-    VAR nest_temporaryBlue = 0.00
-    VAR nest_temporaryGreen = 0.00
-    VAR nest_temporaryPurple = 0.00
+    VAR nest_temporaryFire = 0.00
+    VAR nest_temporaryEarth = 0.00
+    VAR nest_temporaryAir= 0.00
+    VAR nest_temporaryWater= 0.00
+    VAR nest_temporaryAether = 0.00
 
 //Contatore d'uso della parola    
     VAR temporaryWordUsageCounter = 0
@@ -133,19 +133,19 @@ LIST nest_varpg_status = varPGYes, varPGNo
     - else:
         {Color:
             -redC:
-                ~ nest_temporaryRed ++
+                ~ nest_temporaryFire ++
      
             -yellowC:
-                ~ nest_temporaryYellow ++
+                ~ nest_temporaryEarth ++
             
             -blueC:
-                ~ nest_temporaryBlue ++
+                ~ nest_temporaryAir++
             
             -greenC:
-                ~ nest_temporaryGreen ++   
+                ~ nest_temporaryWater++   
             
             -purpleC:
-                ~ nest_temporaryPurple ++
+                ~ nest_temporaryAether ++
         }
         {debug_nest: non è attiva alcuna parola magica, per cui mi aumento di uno i valori e basta.}
           //E poi aggiorniamo i dettagli
@@ -162,294 +162,294 @@ LIST nest_varpg_status = varPGYes, varPGNo
     {nest_activeEmotionalWord:
         //Variazioni di un solo colore
             - Rosso:
-                ~ nest_temporaryRed ++
+                ~ nest_temporaryFire ++
             - RossoRosso:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
                 
             - RossoRossoRosso:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
             
             - Giallo:
-                ~ nest_temporaryYellow ++
+                ~ nest_temporaryEarth ++
             - GialloGiallo:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
             - GialloGialloGiallo:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
             
             - Blu:
-                ~ nest_temporaryBlue ++
+                ~ nest_temporaryAir++
             - BluBlu:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
             - BluBluBlu:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
             
             - Verde:
-                ~ nest_temporaryGreen ++
+                ~ nest_temporaryWater++
             - VerdeVerde:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
             - VerdeVerdeVerde:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
             
             - Viola:
-                ~ nest_temporaryPurple ++
+                ~ nest_temporaryAether ++
             - ViolaViola:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
             - ViolaViolaViola:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
                 
         //Variazioni di due colori
             - RossoRossoBlu:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
+                ~ nest_temporaryAir--
                 
             - RossoRossoVerde:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
+                ~ nest_temporaryWater--
                 
             - RossoRossoViola:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
+                ~ nest_temporaryAether --
                 
             - RossoRossoGiallo:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
+                ~ nest_temporaryEarth --
                 
             - RossoGiallo:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryEarth --
                 
             - RossoGialloRosso:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
             
             - RossoGialloGiallo:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
             
             - RossoBlu:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryAir--
                 
             - RossoBluBlu:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
             
             - RossoBluRosso:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryRed --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
+                ~ nest_temporaryFire --
             
             - RossoVerde: 
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryWater--
             
             - RossoVerdeVerde:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
             
             - RossoVerdeRosso:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryRed --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
+                ~ nest_temporaryFire --
             
             - RossoViola:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryAether --
                 
             - RossoViolaViola:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
             
             - RossoViolaRosso:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryRed --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
+                ~ nest_temporaryFire --
             
             
             
             
             
             - GialloVerde:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryWater--
         
             - GialloViola:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryAether --
             
             - GialloRosso:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryRed --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryFire --
             
             - GialloBlu:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryAir--
                 
                 
             - GialloRossoGiallo:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
+                ~ nest_temporaryEarth --
                 
             - GialloRossoRosso:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
                 
             - GialloGialloVerde:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryWater--
                 
             - GialloGialloViola:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryAether --
                 
             - GialloGialloBlu:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryAir--
                 
             - GialloGialloRosso:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryRed --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryFire --
                 
             
             - GialloBluBlu:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
                 
             - GialloBluGiallo:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
+                ~ nest_temporaryEarth --
                 
                 
             - GialloVerdeVerde:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
                 
             - GialloVerdeGiallo:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
+                ~ nest_temporaryEarth --
                 
             - GialloViolaViola:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
                 
             - GialloViolaGiallo:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
+                ~ nest_temporaryEarth --
                 
             
             
@@ -459,112 +459,112 @@ LIST nest_varpg_status = varPGYes, varPGNo
             
             
             - BluRosso:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryRed --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryFire --
                 
             - BluGiallo:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryEarth --
                 
             - BluVerde:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryWater--
                 
             - BluViola:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAether --
                 
             - BluRossoBlu:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
+                ~ nest_temporaryAir--
                 
             - BluRossoRosso:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
                 
             - BluGialloBlu:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryAir--
                 
             - BluGialloGiallo:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
                 
             - BluBluVerde:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
+                ~ nest_temporaryWater--
                 
             - BluBluViola:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAether --
                 
             - BluBluGiallo:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
+                ~ nest_temporaryEarth --
                 
             - BluBluRosso:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryRed --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
+                ~ nest_temporaryFire --
                 
             - BluVerdeVerde:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
                 
             - BluVerdeBlu:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
+                ~ nest_temporaryAir--
                 
             - BluViolaViola:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
                 
             
             
@@ -574,439 +574,439 @@ LIST nest_varpg_status = varPGYes, varPGNo
             
             
             - VerdeRosso:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryRed --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryFire --
                 
             - VerdeViola:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryAether --
                 
             - VerdeGiallo:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryEarth --
                 
             - VerdeBlu:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryAir--
                 
             - VerdeRossoVerde:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
+                ~ nest_temporaryWater--
                 
             - VerdeRossoRosso:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
                 
             - VerdeGialloVerde:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryWater--
                 
             - VerdeGialloGiallo:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
                 
             - VerdeBluVerde:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
+                ~ nest_temporaryWater--
                 
             - VerdeBluBlu:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
                 
             - VerdeVerdeViola:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
+                ~ nest_temporaryAether --
                 
             - VerdeVerdeBlu:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
+                ~ nest_temporaryAir--
                 
             - VerdeVerdeGiallo:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
+                ~ nest_temporaryEarth --
                 
             - VerdeVerdeRosso:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryRed --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
+                ~ nest_temporaryFire --
                 
             - VerdeViolaVerde:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
+                ~ nest_temporaryWater--
                 
             - VerdeViolaViola:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
                 
             
             
             
             
             - ViolaRosso:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryRed --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryFire --
                 
             - ViolaGiallo:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryEarth --
                 
             - ViolaBlu:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAir--
                 
             - ViolaVerde:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryWater--
                 
             - ViolaRossoViola:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
+                ~ nest_temporaryAether --
                 
             - ViolaRossoRosso:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
                 
             - ViolaGialloViola:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryAether --
                 
             - ViolaGialloGiallo:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
                 
             - ViolaBluViola:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAether --
                 
             - ViolaBluBlu:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
                 
             - ViolaVerdeVerde:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
                 
             - ViolaVerdeViola:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
+                ~ nest_temporaryAether --
                 
             - ViolaViolaVerde:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
+                ~ nest_temporaryWater--
                 
             - ViolaViolaBlu:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAir--
                 
             - ViolaViolaGiallo:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
+                ~ nest_temporaryEarth --
                 
             - ViolaViolaRosso:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryRed --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
+                ~ nest_temporaryFire --
                 
         
         
         //Varizioni di tre colori
             - RossoGialloBlu: 
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryAir--
             
             - RossoGialloVerde: 
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryWater--
             
             - RossoGialloViola: 
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryAether --
             
             - RossoBluVerde: 
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
+                ~ nest_temporaryWater--
             
             - RossoBluViola: 
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAether --
             
             - RossoBluGiallo: 
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
+                ~ nest_temporaryEarth --
             
             - RossoVerdeBlu: 
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
+                ~ nest_temporaryAir--
             
             - RossoVerdeViola: 
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
+                ~ nest_temporaryAether --
             
             - RossoVerdeGiallo: 
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
+                ~ nest_temporaryEarth --
             
             - RossoViolaGiallo:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
+                ~ nest_temporaryEarth --
                 
             - RossoViolaVerde:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
+                ~ nest_temporaryWater--
                 
             - RossoViolaBlu:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++ 
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++ 
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAir--
                 
         
         
         
         
             - GialloRossoVerde:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
+                ~ nest_temporaryWater--
                 
             - GialloRossoViola:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
+                ~ nest_temporaryAether --
                 
             - GialloRossoBlu:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
+                ~ nest_temporaryAir--
                 
             - GialloBluVerde:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
+                ~ nest_temporaryWater--
                 
             - GialloBluViola:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAether --
                 
             - GialloBluRosso:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryRed --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
+                ~ nest_temporaryFire --
                 
             - GialloVerdeViola:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
+                ~ nest_temporaryAether --
                 
             - GialloVerdeBlu:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
+                ~ nest_temporaryAir--
                 
             - GialloVerdeRosso:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryRed --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
+                ~ nest_temporaryFire --
                 
             - GialloViolaVerde:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
+                ~ nest_temporaryWater--
                 
             - GialloViolaBlu:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAir--
                 
             - GialloViolaRosso:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryRed --
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryEarth ++
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
+                ~ nest_temporaryFire --
                 
                 
                 
@@ -1014,204 +1014,204 @@ LIST nest_varpg_status = varPGYes, varPGNo
                 
             
             - BluRossoVerde:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryFire ++
+                ~ nest_temporaryFire ++
                 
             - BluRossoViola:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
+                ~ nest_temporaryAether --
                 
             - BluRossoGiallo:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
+                ~ nest_temporaryEarth --
                 
             - BluGialloVerde:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryWater--
                 
             - BluGialloViola:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryAether --
                 
             - BluGialloRosso:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryRed --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryFire --
                 
             - BluVerdeViola:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
+                ~ nest_temporaryAether --
                 
             - BluVerdeGiallo:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
+                ~ nest_temporaryEarth --
                 
             - BluVerdeRosso:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryRed --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
+                ~ nest_temporaryFire --
                 
             - BluViolaVerde:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
+                ~ nest_temporaryWater--
                 
             - BluViolaBlu:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAir--
                 
             - BluViolaGiallo:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
+                ~ nest_temporaryEarth --
                 
             - BluViolaRosso:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryRed --
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAir++
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
+                ~ nest_temporaryFire --
                 
             
             - VerdeRossoViola:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
+                ~ nest_temporaryAether --
                 
             - VerdeRossoBlu:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
+                ~ nest_temporaryAir--
                 
             - VerdeRossoGiallo:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
+                ~ nest_temporaryEarth --
                 
             - VerdeGialloViola:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryAether --
                 
             - VerdeGialloBlu:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryAir--
                 
             - VerdeBluViola:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryPurple --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAether --
                 
             - VerdeBluGiallo:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
+                ~ nest_temporaryEarth --
                 
             - VerdeBluRosso:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryRed --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
+                ~ nest_temporaryFire --
                 
             - VerdeGialloRosso:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryRed --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryFire --
                 
             - VerdeViolaBlu:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAir--
                 
             - VerdeViolaGiallo:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
+                ~ nest_temporaryEarth --
                 
             - VerdeViolaRosso:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryRed --
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryWater++
+                ~ nest_temporaryAether --
+                ~ nest_temporaryAether --
+                ~ nest_temporaryFire --
                 
             
             
@@ -1221,101 +1221,101 @@ LIST nest_varpg_status = varPGYes, varPGNo
             
             
             - ViolaRossoVerde:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
+                ~ nest_temporaryWater--
                 
             - ViolaRossoBlu:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
+                ~ nest_temporaryAir--
                 
             - ViolaRossoGiallo:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryFire --
+                ~ nest_temporaryFire --
+                ~ nest_temporaryEarth --
                 
             - ViolaGialloVerde:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryWater--
                 
             - ViolaGialloBlu:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryAir--
                 
             - ViolaGialloRosso:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryRed --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryEarth --
+                ~ nest_temporaryFire --
                 
             - ViolaBluVerde:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryGreen --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
+                ~ nest_temporaryWater--
                 
             - ViolaBluGiallo:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
+                ~ nest_temporaryEarth --
                 
             - ViolaBluRosso:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryRed --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAir--
+                ~ nest_temporaryAir--
+                ~ nest_temporaryFire --
                 
             
             - ViolaVerdeBlu:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryBlue --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
+                ~ nest_temporaryAir--
                 
             - ViolaVerdeGiallo:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryYellow --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
+                ~ nest_temporaryEarth --
                 
             - ViolaVerdeRosso:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryRed --
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryAether ++
+                ~ nest_temporaryWater--
+                ~ nest_temporaryWater--
+                ~ nest_temporaryFire --
                 
             
             -else: Valore colore parola {nest_activeEmotionalWord} non trovato!
@@ -1576,34 +1576,34 @@ LIST nest_varpg_status = varPGYes, varPGNo
     //Prima aggiorniamo i dati a seconda dei parlanti
     {
         - nest_currentTalker == FirstCharacter:
-            ~ firstChar_red += nest_temporaryRed
-            ~ firstChar_yellow += nest_temporaryYellow
-            ~ firstChar_blue += nest_temporaryBlue
-            ~ firstChar_green += nest_temporaryGreen
-            ~ firstChar_purple += nest_temporaryPurple
+            ~ firstChar_fire+= nest_temporaryFire
+            ~ firstChar_earth += nest_temporaryEarth
+            ~ firstChar_air += nest_temporaryAir
+            ~ firstChar_water += nest_temporaryWater
+            ~ firstChar_aether += nest_temporaryAether
         
         - nest_currentTalker == SecondCharacter:
-            ~ secondChar_red += nest_temporaryRed
-            ~ secondChar_yellow += nest_temporaryYellow
-            ~ secondChar_blue += nest_temporaryBlue
-            ~ secondChar_green += nest_temporaryGreen
-            ~ secondChar_purple += nest_temporaryPurple
+            ~ secondChar_fire += nest_temporaryFire
+            ~ secondChar_earth += nest_temporaryEarth
+            ~ secondChar_air += nest_temporaryAir
+            ~ secondChar_water += nest_temporaryWater
+            ~ secondChar_aether += nest_temporaryAether
         
         - nest_currentTalker == Mentor:
-            ~ mentor_red += nest_temporaryRed
-            ~ mentor_yellow += nest_temporaryYellow
-            ~ mentor_blue += nest_temporaryBlue
-            ~ mentor_green += nest_temporaryGreen
-            ~ mentor_purple += nest_temporaryPurple
+            ~ mentor_red += nest_temporaryFire
+            ~ mentor_yellow += nest_temporaryEarth
+            ~ mentor_blue += nest_temporaryAir
+            ~ mentor_green += nest_temporaryWater
+            ~ mentor_purple += nest_temporaryAether
     }
 
     //Poi azzeriamo i valori temporanei
         ~ nest_currentTalker = ()
-        ~ nest_temporaryRed = 0
-        ~ nest_temporaryYellow = 0
-        ~ nest_temporaryBlue = 0
-        ~ nest_temporaryGreen = 0
-        ~ nest_temporaryPurple = 0
+        ~ nest_temporaryFire = 0
+        ~ nest_temporaryEarth = 0
+        ~ nest_temporaryAir= 0
+        ~ nest_temporaryWater= 0
+        ~ nest_temporaryAether = 0
     {debug_nest: dopo l'operazione il parlante attuale {nest_currentTalker}.}
 
 ->->

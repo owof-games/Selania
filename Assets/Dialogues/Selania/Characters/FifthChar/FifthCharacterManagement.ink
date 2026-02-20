@@ -53,11 +53,11 @@
     
 //STATI UP: ???
 //STATI DOWN: ???
-    VAR fifthChar_purple = 0.00
-    VAR fifthChar_yellow = 0.00
-    VAR fifthChar_blue = 0.00
-    VAR fifthChar_green = 0.00
-    VAR fifthChar_red = 0.00                    
+    VAR fifthChar_aether = 0.00
+    VAR fifthChar_earth = 0.00
+    VAR fifthChar_air = 0.00
+    VAR fifthChar_water = 0.00
+    VAR fifthChar_fire = 0.00                    
                      
                      
 

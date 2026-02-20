@@ -68,11 +68,11 @@
     
 //UP: ???
 //DOWN: ???
-    VAR fourthChar_purple = 0.00
-    VAR fourthChar_yellow = 0.00
-    VAR fourthChar_blue = 0.00
-    VAR fourthChar_green = 0.00
-    VAR fourthChar_red = 0.00
+    VAR fourthChar_aether = 0.00
+    VAR fourthChar_earth = 0.00
+    VAR fourthChar_air = 0.00
+    VAR fourthChar_water = 0.00
+    VAR fourthChar_fire = 0.00
                     /* ---------------------------------
                     
                        Gestione relazione e nomi
@@ -82,11 +82,11 @@
 //Per la prima personaggia l'importante è che il blu sia bassissimo
 
     {
-        - fourthChar_purple && fourthChar_yellow > fourthChar_blue:
+        - fourthChar_aether && fourthChar_earth > fourthChar_air:
             ~ fourthChar_InkLevel ++
             ~ fourthChar_InkLevel ++
                 ->->
-        - fourthChar_purple or fourthChar_yellow > fourthChar_blue:
+        - fourthChar_aether or fourthChar_earth > fourthChar_air:
             ~ fourthChar_InkLevel ++
                 ->->
     }
@@ -97,23 +97,23 @@
 //Settaggio nome quando partiamo con la discussione
 === fourthNaming ===
     {
-        - (fourthChar_blue > fourthChar_green) && (fourthChar_blue > fourthChar_red) && (fourthChar_blue > fourthChar_yellow) && (fourthChar_blue > fourthChar_purple):
+        - (fourthChar_air > fourthChar_water) && (fourthChar_air > fourthChar_fire) && (fourthChar_air > fourthChar_earth) && (fourthChar_air > fourthChar_aether):
             ~ fourthChar_possibleStates += Triangolo
                 ->->
                 
-        - (fourthChar_red > fourthChar_green) && (fourthChar_red > fourthChar_blue) && (fourthChar_red > fourthChar_yellow) && (fourthChar_red > fourthChar_purple):
+        - (fourthChar_fire > fourthChar_water) && (fourthChar_fire > fourthChar_air) && (fourthChar_fire > fourthChar_earth) && (fourthChar_fire > fourthChar_aether):
             ~ fourthChar_possibleStates += RagazzaOrchestra
                 ->->
                 
-        - (fourthChar_green > fourthChar_blue) && (fourthChar_green > fourthChar_red) && (fourthChar_green > fourthChar_yellow) && (fourthChar_green > fourthChar_purple):
+        - (fourthChar_water > fourthChar_air) && (fourthChar_water > fourthChar_fire) && (fourthChar_water > fourthChar_earth) && (fourthChar_water > fourthChar_aether):
             ~ fourthChar_possibleStates += FlautoDolce    
                 ->->
                 
-        - (fourthChar_yellow > fourthChar_green) && (fourthChar_yellow > fourthChar_red) && (fourthChar_yellow > fourthChar_blue) && (fourthChar_yellow > fourthChar_purple):
+        - (fourthChar_earth > fourthChar_water) && (fourthChar_earth > fourthChar_fire) && (fourthChar_earth > fourthChar_air) && (fourthChar_earth > fourthChar_aether):
             ~ fourthChar_possibleStates += Ocarina   
                 ->->
                 
-        - (fourthChar_purple > fourthChar_green) && (fourthChar_purple > fourthChar_red) && (fourthChar_purple > fourthChar_yellow) && (fourthChar_purple > fourthChar_blue):
+        - (fourthChar_aether > fourthChar_water) && (fourthChar_aether > fourthChar_fire) && (fourthChar_aether > fourthChar_earth) && (fourthChar_aether > fourthChar_air):
             ~ fourthChar_possibleStates += Violino    
                 ->->
                 

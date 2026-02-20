@@ -487,28 +487,28 @@
 
     {
         - cookingCompanion == FirstCharacter:
-            ~ kitchen_storagePurple = firstChar_purple
-                ~ firstChar_purple = 0
-            ~ kitchen_storageYellow = firstChar_yellow
-                ~ firstChar_yellow = 0
-            ~ kitchen_storageBlue = firstChar_blue
-                ~ firstChar_blue = 0
-            ~ kitchen_storageGreen = firstChar_green
-                ~ firstChar_green = 0
-            ~ kitchen_storageRed = firstChar_red
-                ~ firstChar_red = 0
+            ~ kitchen_storagePurple = firstChar_aether
+                ~ firstChar_aether = 0
+            ~ kitchen_storageYellow = firstChar_earth
+                ~ firstChar_earth = 0
+            ~ kitchen_storageBlue = firstChar_air
+                ~ firstChar_air = 0
+            ~ kitchen_storageGreen = firstChar_water
+                ~ firstChar_water = 0
+            ~ kitchen_storageRed = firstChar_fire
+                ~ firstChar_fire= 0
     
         - cookingCompanion == SecondCharacter:
-            ~ kitchen_storagePurple = secondChar_purple
-                ~ secondChar_purple = 0
-            ~ kitchen_storageYellow = secondChar_yellow
-                ~ secondChar_yellow = 0
-            ~ kitchen_storageBlue = secondChar_blue
-                ~ secondChar_blue = 0
-            ~ kitchen_storageGreen = secondChar_green
-                ~ secondChar_green = 0
-            ~ kitchen_storageRed = secondChar_red
-                ~ secondChar_red = 0
+            ~ kitchen_storagePurple = secondChar_aether
+                ~ secondChar_aether = 0
+            ~ kitchen_storageYellow = secondChar_earth
+                ~ secondChar_earth = 0
+            ~ kitchen_storageBlue = secondChar_air
+                ~ secondChar_air = 0
+            ~ kitchen_storageGreen = secondChar_water
+                ~ secondChar_water = 0
+            ~ kitchen_storageRed = secondChar_fire
+                ~ secondChar_fire = 0
     }
 ->->
 
@@ -518,27 +518,27 @@
 {debug_kitchen: prima di aggiornare i valori, il valore di kitchen_storagePurple è {kitchen_storagePurple}, di kitchen_storageYellow {kitchen_storageYellow}, kitchen_storageBlue è {kitchen_storageBlue}, di kitchen_storageGreen {kitchen_storageGreen}, di kitchen_storageRed {kitchen_storageRed}. cookingCompanion è {cookingCompanion}.}
     {
         - cookingCompanion == FirstCharacter:
-            ~ firstChar_purple = firstChar_purple + kitchen_storagePurple
+            ~ firstChar_aether = firstChar_aether + kitchen_storagePurple
                 ~ kitchen_storagePurple = 0
-            ~ firstChar_yellow = firstChar_yellow + kitchen_storageYellow
+            ~ firstChar_earth = firstChar_earth + kitchen_storageYellow
                 ~ kitchen_storageYellow = 0
-            ~ firstChar_blue = firstChar_blue + kitchen_storageBlue
+            ~ firstChar_air = firstChar_air + kitchen_storageBlue
                 ~ kitchen_storageBlue = 0
-            ~ firstChar_green = firstChar_green + kitchen_storageGreen
+            ~ firstChar_water = firstChar_water + kitchen_storageGreen
                 ~ kitchen_storageGreen = 0
-            ~ firstChar_red = firstChar_red + kitchen_storageRed
+            ~ firstChar_fire= firstChar_fire+ kitchen_storageRed
                 ~ kitchen_storageRed = 0
     
     - cookingCompanion == SecondCharacter:
-            ~ secondChar_purple = secondChar_purple + kitchen_storagePurple
+            ~ secondChar_aether = secondChar_aether + kitchen_storagePurple
                 ~ kitchen_storagePurple = 0
-            ~ secondChar_yellow = secondChar_yellow + kitchen_storageYellow
+            ~ secondChar_earth = secondChar_earth + kitchen_storageYellow
                 ~ kitchen_storageYellow = 0
-            ~ secondChar_blue = secondChar_blue + kitchen_storageBlue
+            ~ secondChar_air = secondChar_air + kitchen_storageBlue
                 ~ kitchen_storageBlue = 0
-            ~ secondChar_green = secondChar_green + kitchen_storageGreen
+            ~ secondChar_water = secondChar_water + kitchen_storageGreen
                 ~ kitchen_storageGreen = 0
-            ~ secondChar_red = secondChar_red + kitchen_storageRed
+            ~ secondChar_fire = secondChar_fire + kitchen_storageRed
                 ~ kitchen_storageRed = 0
  
     

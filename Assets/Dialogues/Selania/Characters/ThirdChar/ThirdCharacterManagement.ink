@@ -62,11 +62,11 @@
     
 //UP: ???
 //DOWN: ???
-    VAR thirdChar_purple = 0.00
-    VAR thirdChar_yellow = 0.00
-    VAR thirdChar_blue = 0.00
-    VAR thirdChar_green = 0.00
-    VAR thirdChar_red = 0.00                   
+    VAR thirdChar_aether = 0.00
+    VAR thirdChar_earth = 0.00
+    VAR thirdChar_air = 0.00
+    VAR thirdChar_water = 0.00
+    VAR thirdChar_fire = 0.00                   
                      
                     /* ---------------------------------
                     

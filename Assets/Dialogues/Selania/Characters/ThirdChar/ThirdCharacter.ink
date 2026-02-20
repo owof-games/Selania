@@ -97,21 +97,21 @@
         
         ???: Non è che hai visto passare di qui una persona?
             + (threeBlue) [Dammi dettagli più concreti.]
-                    ~ thirdChar_blue ++
+                    ~ thirdChar_air ++
                 
             + (threeYellow) [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdChar_yellow ++
+                    ~ thirdChar_earth ++
                 
             + (threeRed) [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdChar_red ++
+                ~ thirdChar_fire ++
 
                 
             + (threeGreen) [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdChar_green ++
+                ~ thirdChar_water ++
   
                 
             + (threePurple) [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdChar_purple ++
+                ~ thirdChar_aether ++
  
             -
         ???: Ma che rinco che sono, non mi sono manco presentata: io sono {charNameThree}.
@@ -137,21 +137,21 @@
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdChar_blue ++
+                    ~ thirdChar_air ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdChar_yellow ++
+                    ~ thirdChar_earth ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdChar_red ++
+                ~ thirdChar_fire ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdChar_green ++
+                ~ thirdChar_water ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdChar_purple ++
+                ~ thirdChar_aether ++
  
             -
              ~ thirdChar_pauseTalking = thirdChar_pauseDuration
@@ -167,21 +167,21 @@
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdChar_blue ++
+                    ~ thirdChar_air ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdChar_yellow ++
+                    ~ thirdChar_earth ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdChar_red ++
+                ~ thirdChar_fire ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdChar_green ++
+                ~ thirdChar_water ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdChar_purple ++
+                ~ thirdChar_aether ++
  
             -
              ~ thirdChar_pauseTalking = thirdChar_pauseDuration
@@ -196,21 +196,21 @@
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdChar_blue ++
+                    ~ thirdChar_air ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdChar_yellow ++
+                    ~ thirdChar_earth ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdChar_red ++
+                ~ thirdChar_fire ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdChar_green ++
+                ~ thirdChar_water ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdChar_purple ++
+                ~ thirdChar_aether ++
  
             -
              ~ thirdChar_pauseTalking = thirdChar_pauseDuration
@@ -223,21 +223,21 @@
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdChar_blue ++
+                    ~ thirdChar_air ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdChar_yellow ++
+                    ~ thirdChar_earth ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdChar_red ++
+                ~ thirdChar_fire ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdChar_green ++
+                ~ thirdChar_water ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdChar_purple ++
+                ~ thirdChar_aether ++
  
             -
              ~ thirdChar_pauseTalking = thirdChar_pauseDuration
@@ -252,21 +252,21 @@
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdChar_blue ++
+                    ~ thirdChar_air ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdChar_yellow ++
+                    ~ thirdChar_earth ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdChar_red ++
+                ~ thirdChar_fire ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdChar_green ++
+                ~ thirdChar_water ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdChar_purple ++
+                ~ thirdChar_aether ++
  
             -
              ~ thirdChar_pauseTalking = thirdChar_pauseDuration
@@ -279,21 +279,21 @@
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdChar_blue ++
+                    ~ thirdChar_air ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdChar_yellow ++
+                    ~ thirdChar_earth ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdChar_red ++
+                ~ thirdChar_fire ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdChar_green ++
+                ~ thirdChar_water ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdChar_purple ++
+                ~ thirdChar_aether ++
  
             -
              ~ thirdChar_pauseTalking = thirdChar_pauseDuration
@@ -309,21 +309,21 @@
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdChar_blue ++
+                    ~ thirdChar_air ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdChar_yellow ++
+                    ~ thirdChar_earth ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdChar_red ++
+                ~ thirdChar_fire ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdChar_green ++
+                ~ thirdChar_water ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdChar_purple ++
+                ~ thirdChar_aether ++
  
             -
              ~ thirdChar_pauseTalking = thirdChar_pauseDuration
@@ -338,21 +338,21 @@
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdChar_blue ++
+                    ~ thirdChar_air ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdChar_yellow ++
+                    ~ thirdChar_earth ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdChar_red ++
+                ~ thirdChar_fire ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdChar_green ++
+                ~ thirdChar_water ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdChar_purple ++
+                ~ thirdChar_aether ++
  
             -
              ~ thirdChar_pauseTalking = thirdChar_pauseDuration
@@ -366,21 +366,21 @@
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdChar_blue ++
+                    ~ thirdChar_air ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdChar_yellow ++
+                    ~ thirdChar_earth ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdChar_red ++
+                ~ thirdChar_fire ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdChar_green ++
+                ~ thirdChar_water ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdChar_purple ++
+                ~ thirdChar_aether ++
  
             -
              ~ thirdChar_pauseTalking = thirdChar_pauseDuration
@@ -394,21 +394,21 @@
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdChar_blue ++
+                    ~ thirdChar_air ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdChar_yellow ++
+                    ~ thirdChar_earth ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdChar_red ++
+                ~ thirdChar_fire ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdChar_green ++
+                ~ thirdChar_water ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdChar_purple ++
+                ~ thirdChar_aether ++
  
             -
              ~ thirdChar_pauseTalking = thirdChar_pauseDuration
@@ -421,21 +421,21 @@
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdChar_blue ++
+                    ~ thirdChar_air ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdChar_yellow ++
+                    ~ thirdChar_earth ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdChar_red ++
+                ~ thirdChar_fire ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdChar_green ++
+                ~ thirdChar_water ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdChar_purple ++
+                ~ thirdChar_aether ++
  
             -
              ~ thirdChar_pauseTalking = thirdChar_pauseDuration
@@ -508,14 +508,14 @@ Stai per donare qualcosa a {charNameThree}.
         Ho realizzato una cosa, una cosa su noi due.
             -> thirdAffinityCalc ->
         {
-        - firstChar_purple && firstChar_yellow > firstChar_blue: Sento ancora la mancanza di Talco, ma con te mi sento come se fossimo parte da sempre della stessa band.
+        - firstChar_aether && firstChar_earth > firstChar_air: Sento ancora la mancanza di Talco, ma con te mi sento come se fossimo parte da sempre della stessa band.
         {charNameThree} vede {player_name} come una persona amica e fidata.
         
-        -firstChar_purple or firstChar_yellow > firstChar_blue:Ci sono momenti in cui cantiamo all'unisono, ed è bello. Mi sento ascoltata.
+        -firstChar_aether or firstChar_earth > firstChar_air:Ci sono momenti in cui cantiamo all'unisono, ed è bello. Mi sento ascoltata.
         
         {charNameThree} si trova bene con {player_name}.
         
-        - firstChar_purple && firstChar_yellow < firstChar_blue: Facciamo parte di due cori diversi, vero? Non credo tu abbia preso una sola delle mie note.
+        - firstChar_aether && firstChar_earth < firstChar_air: Facciamo parte di due cori diversi, vero? Non credo tu abbia preso una sola delle mie note.
         
         {charNameThree} non si è sentita capita da {player_name}.
         
@@ -535,7 +535,7 @@ Stai per donare qualcosa a {charNameThree}.
 
     = statement
     ~ temp charNameThree = translator(thirdChar_ActualName)
-        <i>A seguito del rapporto che {player_name} ha creato con {charNameThree} {firstChar_purple && firstChar_yellow > firstChar_blue: l'inchiostro è aumentato di due unità.|{firstChar_purple or firstChar_yellow > firstChar_blue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
+        <i>A seguito del rapporto che {player_name} ha creato con {charNameThree} {firstChar_aether && firstChar_earth > firstChar_air: l'inchiostro è aumentato di due unità.|{firstChar_aether or firstChar_earth > firstChar_air: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(thirdChar_InkLevel)
         + [Voglio cominciare la riscrittura.]
@@ -710,15 +710,15 @@ Stai per donare qualcosa a {charNameThree}.
     = ending
     ~ temp charNameThree = translator(thirdChar_ActualName)
      Per questo ti dico...
-        + {thirdChar_red > 0} [Prendi una strada e se non ti piace cambiala!]
+        + {thirdChar_fire > 0} [Prendi una strada e se non ti piace cambiala!]
         
-        + {thirdChar_purple > 0} [Dai alla tua vita uno scopo più grande.]
+        + {thirdChar_aether > 0} [Dai alla tua vita uno scopo più grande.]
         
-        + {thirdChar_yellow > 0} [Ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti.]
+        + {thirdChar_earth > 0} [Ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti.]
                 
-        + {thirdChar_green > 0} [Non deluderai i tuoi amici: loro saranno sempre con te.]
+        + {thirdChar_water > 0} [Non deluderai i tuoi amici: loro saranno sempre con te.]
                 
-        + {thirdChar_blue > 0} [Questa non è la tua strada. Succede. Ora puoi cambiare.]
+        + {thirdChar_air > 0} [Questa non è la tua strada. Succede. Ora puoi cambiare.]
                 
         
                 
