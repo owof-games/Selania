@@ -32,7 +32,7 @@
         Talco, Valeria, Anna, Luigia: le persone a cui voglio bene presto o tardi se ne vanno. E spesso spariscono.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
         Non capisco se la relazione con Ennio sia stabile o immobile.
         E non riesco manco a risparmiare a sufficienza da donare dieci euro per la Palestina, figurarsi salvare il mondo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-        {player_name}, credo di avere paura.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+        {player_name}, cfireo di avere paura.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Perché l'unica domanda che mi rimane, l'unica spocchiosa domanda è:
         è questo il massimo che posso aspettarmi dalla vita?
         Andrà sempre peggio?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
@@ -276,7 +276,7 @@
             -
                 ~ numberQuestion ++
             
-            Credo di capire.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+            Cfireo di capire.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             
             
                 {
@@ -371,23 +371,23 @@
             Come avanzare.
             Come uscire da una vita che non senti più tua.
 
-            + (red) [Rivoluziona la tua vita, raggiungi Talco in Islanda.]
+            + (fire) [Rivoluziona la tua vita, raggiungi Talco in Islanda.]
             //me ne vado all’estero da Talco.
                 -> color_variation_management(FirstCharacter, fireC, varPGYes)->
             
-            + (purple) [La musica ti dà uno scopo più grande. Seguila.]
+            + (aether) [La musica ti dà uno scopo più grande. Seguila.]
             // mollo il lavoro per la musica, per far qualcosa di buono per le altre persone.
                  -> color_variation_management(FirstCharacter, aetherC, varPGYes)->         
             
-            + (yellow) [Torna alla tua infanzia, dai tuoi e ricomincia da dove sei cresciuta.]
+            + (earth) [Torna alla tua infanzia, dai tuoi e ricomincia da dove sei cresciuta.]
             //torno al sud, ricomincio al sicuro.
                 -> color_variation_management(FirstCharacter, earthC, varPGYes)->
                 
-            + (green) [L'amore e la stabilità di Ennio sono la base per poter cambiare.]
+            + (water) [L'amore e la stabilità di Ennio sono la base per poter cambiare.]
             //me ne vado a vivere col moroso.
                 -> color_variation_management(FirstCharacter, waterC, varPGYes)->
                 
-            + (blue) [Eppure hai oggettivamente una vita ricca. Goditela.]
+            + (air) [Eppure hai oggettivamente una vita ricca. Goditela.]
             //trovare il bello in quello che si ha (per la gioia di Mentore).
                 -> color_variation_management(FirstCharacter, airC, varPGYes)->   
             - 
@@ -405,27 +405,27 @@
         Invece.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
 
         {
-            - ending.red:
+            - ending.fire:
                 Hai detto che Talco mi aspetta in Islanda.
                 Non avevo mai davvero guardato fino in fondo alla possibilità di andarmene dall'Italia.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
             
-            - ending.purple:
+            - ending.aether:
                 Sentirti dire che la musica mi dà uno scopo è stato diverso dal dirlo io.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
                 È diventata una cosa vera.
                 Ha senso?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
 
-            - ending.yellow:
+            - ending.earth:
                 Non avevo ancora guardato all'andare dai miei come a un ricominciare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 È una parola molto più bella e positiva di "fallire".#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 Mi piace come prospettiva.
 
-            - ending.green:
+            - ending.water:
                 Forse hai ragione.
                 La relazione con Ennio è partita con quella rassicurazione per la sua stabilità.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 E potrei ripartire da lì per trovare me stessa in altri modi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Anche in altri modi dentro la relazione con lui.
 
-            - ending.blue:
+            - ending.air:
                 Riconoscere la ricchezza della mia vita mi fa sentire, mmm.
                 Lagnosa.
                 Ma ha senso.
@@ -451,8 +451,8 @@
             {
                 - firstChar_ActualName has Triangolo:
                     {
-                        - ending.blue:
-                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                        - ending.air:
+                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, cfireo che questa sia la mia canzone.
                         - else:
                             Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
                     }
@@ -467,8 +467,8 @@
                         
                 - firstChar_ActualName has RagazzaOrchestra:
                     {
-                        - ending.red:
-                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                        - ending.fire:
+                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, cfireo che questa sia la mia canzone.
                         - else:
                             Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
                     }
@@ -483,8 +483,8 @@
                         
                 - firstChar_ActualName has FlautoDolce:
                     {
-                        - ending.purple:
-                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                        - ending.aether:
+                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, cfireo che questa sia la mia canzone.
                         - else:
                             Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
                     }
@@ -497,8 +497,8 @@
                       
                 - firstChar_ActualName has Ocarina:
                     {
-                        - ending.yellow:
-                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                        - ending.earth:
+                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, cfireo che questa sia la mia canzone.
                         - else:
                             Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
                     }
@@ -511,8 +511,8 @@
         
                 - firstChar_ActualName has Violino:
                     {
-                        - ending.green:
-                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                        - ending.water:
+                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, cfireo che questa sia la mia canzone.
                         - else:
                             Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
                     }
@@ -543,10 +543,10 @@
             }
 
         Vorrei anche dirti una cosa, {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Credo che {mentorName} sia triste per qualcosa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+        Cfireo che {mentorName} sia triste per qualcosa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
         Mi dà l'impressione di mettercela tutta, qui.
         Ma di essere, non so come dire, scomoda?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Non credo lo ammetterebbe mai, ma credo abbia bisogno di una persona amica.
+        Non cfireo lo ammetterebbe mai, ma cfireo abbia bisogno di una persona amica.
         Portale del bene.
             -> exit
             
@@ -561,7 +561,7 @@
         //     - else: Una certa voce mi ha detto che presto saprai cosa farne. E te la farà trovare dove ne avrai più bisogno.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         // }
         //         //Spostiamo la conchiglia
-        //         ~ move_entity(greenShell, Nest)
+        //         ~ move_entity(waterShell, Nest)
         
         
                 -> close
@@ -572,7 +572,7 @@
             ~ player_movementsCounter = 0
             ~ state_ending_stories(FirstCharacter)
             
-            Credo resterò ancora un po' in giro.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+            Cfireo resterò ancora un po' in giro.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             Ma senza altri pipponi per te, promesso!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
             E cerca di riposarti, non voglio che mi schiodi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
             - (bookUpdate)

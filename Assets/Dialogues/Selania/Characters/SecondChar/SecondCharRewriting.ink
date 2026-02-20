@@ -404,7 +404,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-        Credo di aver compreso quale sia il tuo blocco, perché sei qui.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+        Cfireo di aver compreso quale sia il tuo blocco, perché sei qui.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
         E riguarda gli adulti.
         Perché se chi dovrebbe proteggerti ti ha ferito, come fai a fidarti delle persone?
         E per questo ti dico {charNameTwo}:
@@ -416,14 +416,14 @@
                     <i>Quale <b><i>epilogo</b></i> proporrà {player_name}?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}   
             }     
      
-        + (red)[Diventa il più forte, il più coraggioso.]
+        + (fire)[Diventa il più forte, il più coraggioso.]
             -> color_variation_management(SecondCharacter, fireC, varPGYes)->
             Sei un testardo, bugiardo, dispettoso.
             Queste cose unite possono renderti indistruttibile.
             E di cosa avrà mai paura un ragazzo indistruttibile?
                     
     
-        + (purple)[Tutti abbiamo paura. Condividi questa paura con le altre persone.]
+        + (aether)[Tutti abbiamo paura. Condividi questa paura con le altre persone.]
             -> color_variation_management(SecondCharacter, aetherC, varPGYes)->
             Falle sentire meno sole.
             Meno sbagliate.
@@ -432,20 +432,20 @@
             Assieme.
                    
 
-        + (yellow)[L'opposto della paura è la curiosità.]
+        + (earth)[L'opposto della paura è la curiosità.]
             -> color_variation_management(SecondCharacter, earthC, varPGYes)->
             E tu sei il ritratto della curiosità.
             Guarda le cose che arriveranno chiedendoti "Chissà se..." o "E se invece..." o "Perché accade questo?".
             E a quel punto ogni paura diventerà solo un problema da risolvere.
                    
                 
-        + (green)[I tuoi genitori sono spaventati, aiutatevi a vicenda.]
+        + (water)[I tuoi genitori sono spaventati, aiutatevi a vicenda.]
             -> color_variation_management(SecondCharacter, waterC, varPGYes)->
             Nessuna persona può cambiare il mondo da sola.
             Ma possiamo partire dal cambiare le cose che ci circondano, un pezzo alla volta.
                    
       
-        + (blue)[Con la tua intelligenza puoi rendere il mondo migliore.]
+        + (air)[Con la tua intelligenza puoi rendere il mondo migliore.]
             -> color_variation_management(SecondCharacter, airC, varPGYes)->
             Puoi aiutare gli adulti a essere meno tristi.
             E gli animali a non morire.
@@ -459,21 +459,21 @@
     Boh.
 
             {
-                - ending.red:
+                - ending.fire:
                     Non ci avevo mai pensato, che il fatto che sono bugiardo e dispettoso può rendermi indistruttibile. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                 
-                - ending.purple:
+                - ending.aether:
                     Non è che vedo sempre che anche le altre persone hanno paura.
                     Questa cosa mi ha fatto sentire meno stupido.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
 
-                - ending.yellow:
+                - ending.earth:
                     Mi piace quella cosa che hai detto sulla curiosità perché è vera.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                     Curioso sempre, curioso forte!
 
-                - ending.green:
+                - ending.water:
                     Io non ci avevo mica pensato che anche i miei genitori hanno paura.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
 
-                - ending.blue:
+                - ending.air:
                     Hai detto che la mia intelligenza può fare felici le altre persone.
                     È una cosa bella, {player_name}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
                     
@@ -498,7 +498,7 @@
 
             - secondChar_ActualName has Grizzly:
                     {
-                        - ending.red:
+                        - ending.fire:
                             E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
@@ -508,7 +508,7 @@
             
             - secondChar_ActualName has Lupo:
                     {
-                        - ending.green:
+                        - ending.water:
                             E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
@@ -520,7 +520,7 @@
               
             - secondChar_ActualName has Delfino:
                     {
-                        - ending.yellow:
+                        - ending.earth:
                             E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
@@ -532,7 +532,7 @@
             
             - secondChar_ActualName has Capibara:
                     {
-                        - ending.purple:
+                        - ending.aether:
                             E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
@@ -544,7 +544,7 @@
                     
             - secondChar_ActualName has Corvo:
                     {
-                        - ending.blue:
+                        - ending.air:
                             E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
