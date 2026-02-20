@@ -1,4 +1,5 @@
 using System;
+using R3;
 using Selania.Rework.Interfaces;
 using UnityEngine;
 using VContainer;
@@ -27,10 +28,8 @@ namespace Selania.Rework.Components.Museum.Dialogue
 
         private class EmptyStory : IStoryLinear, IStoryChoicesSelector
         {
-            public IDisposable AddChoicesChangedListener(IStoryChoicesSelector.ChoiceChanged listener)
-            {
-                return new EmptyDisposable();
-            }
+            public Observable<IStoryChoicesSelector.ChoicesInfo> ChoicesObservable =>
+                Observable.Empty<IStoryChoicesSelector.ChoicesInfo>();
 
             public void PickChoiceWithText(string text)
             {
@@ -40,15 +39,11 @@ namespace Selania.Rework.Components.Museum.Dialogue
             {
             }
 
-            public IDisposable AddCurrentTextChangedListener(IStoryLinear.CurrentTextChanged listener)
-            {
-                return new EmptyDisposable();
-            }
+            public Observable<IStoryLinear.CurrentTextInfo> currentTextObservable =>
+                Observable.Empty<IStoryLinear.CurrentTextInfo>();
 
-            public IDisposable AddConversationEndedListener(IStoryLinear.ConversationEnded listener)
-            {
-                return new EmptyDisposable();
-            }
+            public Observable<bool> conversationInProgressObservable =>
+                Observable.Return(true);
 
             public bool canContinue => false;
 

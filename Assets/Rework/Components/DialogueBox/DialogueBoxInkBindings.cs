@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Extensions.Logging;
+using R3;
 using Selania.Rework.Interfaces;
 using UnityEngine;
 using VContainer;
@@ -13,11 +13,6 @@ namespace Selania.Rework.Components.DialogueBox
     {
         [SerializeField] [Tooltip("The dialogue box that gets controlled by these bindings.")]
         private DialogueBox dialogueBox = null!;
-
-        /// <summary>
-        ///     The list of all the disposables objects to free when this object gets removed.
-        /// </summary>
-        private readonly List<IDisposable> _disposables = new();
 
         /// <summary>
         ///     Who was the speaker of the last line (or <c>null</c> if there has been no line yet).
@@ -42,25 +37,22 @@ namespace Selania.Rework.Components.DialogueBox
         private void Start()
         {
             // register to events and save disposables to unregister
-            _disposables.Add(StoryLinear.AddCurrentTextChangedListener(CurrentTextChanged));
+            StoryLinear.currentTextObservable.Subscribe(CurrentTextChanged).AddTo(this);
 
-            _disposables.Add(StoryLinear.AddConversationEndedListener(ConversationEnded));
+            StoryLinear.conversationInProgressObservable.Subscribe(ConversationInProgress).AddTo(this);
 
-            _disposables.Add(StoryChoicesSelector.AddChoicesChangedListener(ChoicesChanged));
+            StoryChoicesSelector.ChoicesObservable.Subscribe(ChoicesChanged).AddTo(this);
 
             dialogueBox.OnContinueRequested += ContinueActionOnPerformed;
-            _disposables.Add(Disposable.Create(() => dialogueBox.OnContinueRequested -= ContinueActionOnPerformed));
+            Disposable.Create(() => dialogueBox.OnContinueRequested -= ContinueActionOnPerformed).AddTo(this);
         }
 
-        private void OnDestroy()
+        private void ConversationInProgress(bool isInProgress)
         {
-            // free all disposables
-            foreach (var disposable in _disposables) disposable.Dispose();
-        }
-
-        private void ConversationEnded()
-        {
-            dialogueBox.Hide();
+            if (!isInProgress)
+            {
+                dialogueBox.Hide();
+            }
         }
 
         private void ContinueActionOnPerformed()
@@ -74,8 +66,11 @@ namespace Selania.Rework.Components.DialogueBox
             return tags.FirstOrDefault(t => t.category == category)?.value;
         }
 
-        private void CurrentTextChanged(string currentText, ICollection<Tag> tags)
+        private void CurrentTextChanged(IStoryLinear.CurrentTextInfo currentTextInfo)
         {
+            var currentText = currentTextInfo.currentText;
+            var tags = currentTextInfo.tags;
+
             // add the current line with an optional speaker, if it changed
             var speaker = GetValue(tags, "speaker");
             if (speaker != _lastSpeaker && speaker != null)
@@ -103,12 +98,12 @@ namespace Selania.Rework.Components.DialogueBox
             }
         }
 
-        private void ChoicesChanged(IEnumerable<IStoryChoicesSelector.Choice> choices)
+        private void ChoicesChanged(IStoryChoicesSelector.ChoicesInfo choicesInfo)
         {
             // create the choices
-            var dialogueBoxChoices = choices.Select(choice => new DialogueChoices.Choice(choice.index, choice.text))
-                .ToList();
-            if (dialogueBoxChoices.Count == 0) return;
+            var dialogueBoxChoices = choicesInfo.choices
+                .Map(choice => new DialogueChoices.Choice(choice.index, choice.text));
+            if (dialogueBoxChoices.Length == 0) return;
             // show the choices
             dialogueBox.AddChoices(dialogueBoxChoices,
                 index =>

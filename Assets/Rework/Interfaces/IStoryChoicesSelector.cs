@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using R3;
 
 namespace Selania.Rework.Interfaces
 {
@@ -9,17 +9,10 @@ namespace Selania.Rework.Interfaces
     public interface IStoryChoicesSelector
     {
         /// <summary>
-        ///     Function that gets called when the choices change. The listener gets immediately called with the current
-        ///     choices if there are any (even the empty set) and whenever they change.
+        ///     An observable emitting info about the choices whenever they change. If the last event of the story
+        ///     has choices at the time of subscription, the choices will be immediately sent to the observer.
         /// </summary>
-        delegate void ChoiceChanged(IEnumerable<Choice> choices);
-
-        /// <summary>
-        ///     Add a listener for whenever the choices change.
-        /// </summary>
-        /// <param name="listener">The listener for the choice changed.</param>
-        /// <returns>A disposable that removes the registration when disposed.</returns>
-        IDisposable AddChoicesChangedListener(ChoiceChanged listener);
+        Observable<ChoicesInfo> ChoicesObservable { get; }
 
         /// <summary>
         ///     Pick a choice with the given text. Newlines and whitespaces are trimmed.
@@ -32,6 +25,12 @@ namespace Selania.Rework.Interfaces
         /// </summary>
         /// <param name="index">Index of the choice.</param>
         void PickChoiceWithIndex(int index);
+
+        /// <summary>
+        /// Information about the current choices.
+        /// </summary>
+        /// <param name="choices">the current choices.</param>
+        record struct ChoicesInfo(IList<Choice> choices);
 
         /// <summary>
         ///     A choice.

@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using Microsoft.Extensions.Logging;
+using R3;
 using Selania.Rework.Interfaces;
 using UnityEngine;
 using VContainer;
@@ -32,14 +32,14 @@ namespace Selania.Rework.Components
         {
             Debug.Assert(StoryChangeRoomContentsNotifier != null, nameof(StoryChangeRoomContentsNotifier) + " != null");
             StoryChangeRoomContentsNotifier
-                .AddChangeRoomContentsListener(OnChangeRoomContents)
-                .DisposeWith(gameObject);
+                .roomContentsObservable
+                .Subscribe(OnChangeRoomContents)
+                .AddTo(gameObject);
         }
 
-        private void OnChangeRoomContents(IStoryChangeRoomContentsNotifier.RoomContentsChangeReason reason,
-            IReadOnlyCollection<string> roomContents)
+        private void OnChangeRoomContents(IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo info)
         {
-            var isInRoom = roomContents.Contains(inkName);
+            var isInRoom = info.roomContents.Contains(inkName);
             if (gameObject.activeSelf == isInRoom) return;
             Logger.ZLogTrace($"Changed presence of object '{inkName}' to {isInRoom}");
             gameObject.SetActive(isInRoom);

@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using R3;
 
 namespace Selania.Rework.Interfaces
 {
@@ -9,38 +9,31 @@ namespace Selania.Rework.Interfaces
     public interface IStoryLinear
     {
         /// <summary>
-        ///     Type of functions invoked when a conversation has ended.
-        /// </summary>
-        delegate void ConversationEnded();
-
-        /// <summary>
-        ///     Type of functions invoked when the current text changes.
-        /// </summary>
-        delegate void CurrentTextChanged(string currentText, ICollection<Tag> tags);
-
-        /// <summary>
         ///     Whether the story can continue (there's no choice in front of it, and not the end of the story).
         /// </summary>
         public bool canContinue { get; }
 
         /// <summary>
-        ///     Add a listener that is invoked when the current text changes, and also immediately if there's already a
-        ///     current line of text.
+        /// An observable producing information about the current text. Observers will immediately receive the current
+        /// text information, if any.
         /// </summary>
-        /// <param name="listener">The listener to invoke.</param>
-        /// <returns>A disposable that removes the registration when disposed.</returns>
-        IDisposable AddCurrentTextChangedListener(CurrentTextChanged listener);
+        Observable<CurrentTextInfo> currentTextObservable { get; }
 
         /// <summary>
-        ///     Add a listener that is invoked when a conversation ends.
+        ///     An observable that emits whether there is a conversation going on or not.
         /// </summary>
-        /// <param name="listener">The listener to invoke.</param>
-        /// <returns>A disposable that removes the registration when disposed.</returns>
-        IDisposable AddConversationEndedListener(ConversationEnded listener);
+        Observable<bool> conversationInProgressObservable { get; }
 
         /// <summary>
         ///     Continue the current story.
         /// </summary>
         public void Continue();
+
+        /// <summary>
+        ///     Information about current text changes.
+        /// </summary>
+        /// <param name="currentText">The current text as a string.</param>
+        /// <param name="tags">The tags associated with this text.</param>
+        record struct CurrentTextInfo(string currentText, ICollection<Tag> tags);
     }
 }

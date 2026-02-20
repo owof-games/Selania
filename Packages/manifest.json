@@ -2,6 +2,7 @@
   "dependencies": {
     "com.annulusgames.lit-motion": "https://github.com/annulusgames/LitMotion.git?path=src/LitMotion/Assets/LitMotion",
     "com.cysharp.csprojmodifier": "https://github.com/Cysharp/CsprojModifier.git?path=src/CsprojModifier/Assets/CsprojModifier",
+    "com.cysharp.r3": "https://github.com/Cysharp/R3.git?path=src/R3.Unity/Assets/R3.Unity#1.3.0",
     "com.cysharp.unitask": "2.5.10",
     "com.cysharp.zlogger": "https://github.com/Cysharp/ZLogger.git?path=src/ZLogger.Unity/Assets/ZLogger.Unity",
     "com.github-glitchenzo.nugetforunity": "4.5.0",

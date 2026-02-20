@@ -162,24 +162,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 1211435269}
     m_Modifications:
     - target: {fileID: 434769278955968234, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 434769278955968234, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 434769278955968234, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 228.79993
-      objectReference: {fileID: 0}
-    - target: {fileID: 434769278955968234, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 134.39996
-      objectReference: {fileID: 0}
-    - target: {fileID: 434769278955968234, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -113.6399
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 444602665404166621, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
       propertyPath: m_AnchorMax.y
@@ -369,21 +353,17 @@ PrefabInstance:
       propertyPath: parentReference.TypeName
       value: Selania.Rework.Components.MainSceneLifetimeScope
       objectReference: {fileID: 0}
-    - target: {fileID: 3084650314935825208, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
-      propertyPath: m_SizeDelta.y
+    - target: {fileID: 2957372249460710378, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3084650314935825208, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.000030517578
-      objectReference: {fileID: 0}
-    - target: {fileID: 3084650314935825208, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
+    - target: {fileID: 2957372249460710378, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3164344377652283946, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
+    - target: {fileID: 3084650314935825208, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -10.704184
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3674413511378963308, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
       propertyPath: m_AnchorMax.y
@@ -585,10 +565,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6103879382667988594, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -17
-      objectReference: {fileID: 0}
     - target: {fileID: 6539142542695633936, guid: 922fda9ed6d995342805a26f8943ae05, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
@@ -754,55 +730,11 @@ Transform:
   - {fileID: 895258574}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1252423478
+--- !u!1 &1252423478 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 9104400726538181863, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+  m_PrefabInstance: {fileID: 6310700054849420499}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1252423480}
-  - component: {fileID: 1252423479}
-  m_Layer: 0
-  m_Name: RoomsLoadManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1252423479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1252423478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2d86eea6481498e888a882c9065bf38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Selania::Selania.Rework.Components.RoomsLoadManager.RoomsLoadManager
-  rooms:
-  - roomName: Bedroom
-    roomPrefab: {fileID: 7337977647418521128, guid: 5931d58a004c96142b75a5a93dfbedd1, type: 3}
-  - roomName: TrainStop
-    roomPrefab: {fileID: 7337977647418521128, guid: ebc5c4bcd63c4444ca225338e3fd02a2, type: 3}
---- !u!4 &1252423480
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1252423478}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 960, y: 540, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1998640718
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,11 +814,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &6310700054849420499
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5268271908254839927, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 960
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268271908254839927, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 540
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268271908254839927, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268271908254839927, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268271908254839927, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268271908254839927, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268271908254839927, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268271908254839927, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268271908254839927, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268271908254839927, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104400726538181863, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+      propertyPath: m_Name
+      value: RoomsLoadManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 452328610}
   - {fileID: 1211435269}
-  - {fileID: 1252423480}
+  - {fileID: 6310700054849420499}
   - {fileID: 1998640721}

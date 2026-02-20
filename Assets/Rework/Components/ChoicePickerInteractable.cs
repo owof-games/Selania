@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using R3;
 using Selania.Rework.Interfaces;
 using UnityEngine;
 using VContainer;
@@ -31,7 +32,7 @@ namespace Selania.Rework.Components
 
             // hook to the interactable's event
             var interactable = GetComponent<IInteractable>();
-            interactable.AddInteractionListener(OnInteraction).DisposeWith(gameObject);
+            interactable.interactionObservable.Subscribe(OnInteraction).AddTo(gameObject);
 
             Logger.ZLogTrace($"Created choice picker for choice '{choiceText}'.");
         }

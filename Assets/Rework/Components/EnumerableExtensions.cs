@@ -21,5 +21,25 @@ namespace Selania.Rework.Components
 
             return -1;
         }
+
+        /// <summary>
+        /// An optimized version of .Select(func).ToArray() for IList that allows static time allocation.
+        /// </summary>
+        /// <param name="source">The source list.</param>
+        /// <param name="func">The map function.</param>
+        /// <typeparam name="TSource">Type of the elements in the source list.</typeparam>
+        /// <typeparam name="TDest">Type of the elements in the destination array.</typeparam>
+        /// <returns>An array where each corresponding element of <paramref name="source"/> has been passed through <paramref name="func"/>.</returns>
+        public static TDest[] Map<TSource, TDest>(this IList<TSource> source, Func<TSource, TDest> func)
+        {
+            var sourceCount = source.Count;
+            var destArray = new TDest[sourceCount];
+            for (var i = 0; i < sourceCount; i++)
+            {
+                destArray[i] = func(source[i]);
+            }
+
+            return destArray;
+        }
     }
 }

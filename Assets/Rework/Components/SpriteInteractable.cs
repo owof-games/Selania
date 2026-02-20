@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
+using R3;
 using Selania.Rework.Interfaces;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -21,7 +21,10 @@ namespace Selania.Rework.Components
         /// </summary>
         private static readonly List<Vector2> PhysicsShapePath = new();
 
-        private readonly ListenersContainer<IInteractable> _interactionListeners = new();
+        /// <summary>
+        /// The subject used to implement <see cref="interactionObservable"/>.
+        /// </summary>
+        private Subject<IInteractable>? _interactionSubject;
 
         private SpriteRenderer? _spriteRenderer;
 
@@ -35,17 +38,16 @@ namespace Selania.Rework.Components
             // extract sprite renderer
             _spriteRenderer = GetComponent<SpriteRenderer>();
 
+            _interactionSubject = new Subject<IInteractable>().AddTo(this);
+
             CopySpritePhysicsShapeToPolygonCollider2DShape();
         }
 
-        public IDisposable AddInteractionListener(IInteractable.InteractionListener listener)
-        {
-            return _interactionListeners.AddListener(x => listener(x));
-        }
+        public Observable<IInteractable> interactionObservable => _interactionSubject!.AsObservable();
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            _interactionListeners.Invoke(this);
+            _interactionSubject!.OnNext(this);
         }
 
         public void OnPointerEnter(PointerEventData eventData)

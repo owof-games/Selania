@@ -1,4 +1,5 @@
 using System;
+using R3;
 using Selania.Rework.Interfaces;
 using UnityEngine;
 using UnityEngine.Events;
@@ -31,10 +32,8 @@ namespace Selania.Rework.Components.Museum.ChoicePicker
                 _museumSectionScope = museumSectionScope;
             }
 
-            public IDisposable AddChoicesChangedListener(IStoryChoicesSelector.ChoiceChanged listener)
-            {
-                throw new NotImplementedException();
-            }
+            public Observable<IStoryChoicesSelector.ChoicesInfo> ChoicesObservable =>
+                Observable.Empty<IStoryChoicesSelector.ChoicesInfo>();
 
             public void PickChoiceWithText(string text)
             {
@@ -49,11 +48,8 @@ namespace Selania.Rework.Components.Museum.ChoicePicker
 
         private class StoryChangeRoomContentsNotifier : IStoryChangeRoomContentsNotifier
         {
-            public IDisposable AddChangeRoomContentsListener(
-                IStoryChangeRoomContentsNotifier.ChangeRoomContentsListener roomContentsListener)
-            {
-                return new EmptyDisposable();
-            }
+            public Observable<IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo> roomContentsObservable =>
+                Observable.Empty<IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo>();
         }
 
         private class EmptyDisposable : IDisposable

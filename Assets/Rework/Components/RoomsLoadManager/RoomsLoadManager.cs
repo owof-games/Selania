@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
+using R3;
 using Selania.Rework.Interfaces;
 using UnityEngine;
 using VContainer;
@@ -55,17 +56,17 @@ namespace Selania.Rework.Components.RoomsLoadManager
             }
 
             // hook to events
-            StoryChangeRoomNotifier.AddChangeRoomListener(OnChangeRoom).DisposeWith(gameObject);
-            StoryChangeRoomNotifier.AddRoomNamesListener(OnRoomNames).DisposeWith(gameObject);
+            StoryChangeRoomNotifier.currentRoomObservable.Subscribe(OnChangeRoom).AddTo(gameObject);
+            StoryChangeRoomNotifier.roomNamesObservable.Subscribe(OnRoomNames).AddTo(gameObject);
         }
 
-        private void OnRoomNames(IEnumerable<string> roomNames)
+        private void OnRoomNames(IStoryChangeRoomNotifier.RoomNamesInfo roomNamesInfo)
         {
             // check that we have a prefab for each existing room
             System.Diagnostics.Debug.Assert(_roomNamesToRoomPrefabs != null,
                 nameof(_roomNamesToRoomPrefabs) + " != null");
             List<string>? missingRooms = null;
-            foreach (var roomName in roomNames)
+            foreach (var roomName in roomNamesInfo.roomNames)
             {
                 if (_roomNamesToRoomPrefabs.ContainsKey(roomName)) continue;
                 missingRooms ??= new List<string>();

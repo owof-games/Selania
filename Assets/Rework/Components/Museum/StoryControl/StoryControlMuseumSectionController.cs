@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using R3;
 using Selania.Rework.Interfaces;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,21 +12,14 @@ namespace Selania.Rework.Components.Museum.StoryControl
 
         [Inject] internal IStoryLinear StoryLinear = null!;
 
-
         private void Start()
         {
-            StoryLinear.AddConversationEndedListener(ConversationEnded).DisposeWith(gameObject);
-            StoryLinear.AddCurrentTextChangedListener(CurrentTextChanged).DisposeWith(gameObject);
+            StoryLinear.conversationInProgressObservable.Subscribe(ConversationInProgress).AddTo(this);
         }
 
-        private void CurrentTextChanged(string currentText, ICollection<Tag> tags)
+        private void ConversationInProgress(bool isInProgress)
         {
-            simulateInteraction.enabled = false;
-        }
-
-        private void ConversationEnded()
-        {
-            simulateInteraction.enabled = true;
+            simulateInteraction.enabled = !isInProgress;
         }
 
         public void OnSimulateInteraction()
