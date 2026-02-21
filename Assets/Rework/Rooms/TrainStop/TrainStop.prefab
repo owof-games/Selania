@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8961116478388513867}
   m_Layer: 0
-  m_Name: === Interactables
+  m_Name: === 3X - Interactables
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -244,7 +244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5663437583171429024}
   m_Layer: 0
-  m_Name: === Foreground Elements
+  m_Name: === 4X - Foreground Elements
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -396,7 +396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 703579187551934848}
   m_Layer: 0
-  m_Name: === DisappearingBackground
+  m_Name: === 0X - DisappearingBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -427,7 +427,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3561174418808277415}
   m_Layer: 0
-  m_Name: === NonDisappearingBackground
+  m_Name: === 2X - NonDisappearingBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
