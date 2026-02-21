@@ -1,11 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using Microsoft.Extensions.Logging;
+using R3;
 using Selania.Rework.Interfaces;
 using UnityEngine;
 using VContainer;
 using ZLogger;
-using Debug = System.Diagnostics.Debug;
 
 namespace Selania.Rework.Components
 {
@@ -26,20 +25,23 @@ namespace Selania.Rework.Components
         /// <summary>
         ///     The object that provides notifications for when an object appears or disappears from the scene.
         /// </summary>
-        [Inject] internal IStoryChangeRoomContentsNotifier? StoryChangeRoomContentsNotifier;
+        [Inject] internal IStoryChangeRoomContentsNotifier StoryChangeRoomContentsNotifier = null!;
 
         private void Start()
         {
-            Debug.Assert(StoryChangeRoomContentsNotifier != null, nameof(StoryChangeRoomContentsNotifier) + " != null");
             StoryChangeRoomContentsNotifier
-                .AddChangeRoomContentsListener(OnChangeRoomContents)
-                .DisposeWith(gameObject);
+                .roomContentsObservable
+                .Subscribe(OnChangeRoomContents)
+                .AddTo(gameObject);
         }
 
-        private void OnChangeRoomContents(IStoryChangeRoomContentsNotifier.RoomContentsChangeReason reason,
-            IReadOnlyCollection<string> roomContents)
+        /// <summary>
+        ///     Method invoked whenever the contents of the room change.
+        /// </summary>
+        /// <param name="info">Info regarding the room contents change.</param>
+        private void OnChangeRoomContents(IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo info)
         {
-            var isInRoom = roomContents.Contains(inkName);
+            var isInRoom = info.roomContents.Contains(inkName);
             if (gameObject.activeSelf == isInRoom) return;
             Logger.ZLogTrace($"Changed presence of object '{inkName}' to {isInRoom}");
             gameObject.SetActive(isInRoom);

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using R3;
 using Selania.Rework.Interfaces;
 using UnityEngine;
 using VContainer;
@@ -23,7 +24,7 @@ namespace Selania.Rework.Components
         /// <summary>
         ///     The object that allows this choice picker to pick a choice.
         /// </summary>
-        [Inject] internal IStoryChoiceSelector StoryChoiceSelector = null!;
+        [Inject] internal IStoryChoicesSelector StoryChoicesSelector = null!;
 
         private void Start()
         {
@@ -31,7 +32,7 @@ namespace Selania.Rework.Components
 
             // hook to the interactable's event
             var interactable = GetComponent<IInteractable>();
-            interactable.AddInteractionListener(OnInteraction).DisposeWith(gameObject);
+            interactable.interactionObservable.Subscribe(OnInteraction).AddTo(gameObject);
 
             Logger.ZLogTrace($"Created choice picker for choice '{choiceText}'.");
         }
@@ -40,7 +41,7 @@ namespace Selania.Rework.Components
         {
             // the interactable has been interacted with: pick the choice!
             Logger.ZLogTrace($"Asking to pick choice '{choiceText}'.");
-            StoryChoiceSelector.PickChoiceWithText(choiceText!);
+            StoryChoicesSelector.PickChoiceWithText(choiceText!);
         }
     }
 }

@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using R3;
 
 namespace Selania.Rework.Interfaces
 {
@@ -8,15 +8,6 @@ namespace Selania.Rework.Interfaces
     /// </summary>
     public interface IStoryChangeRoomContentsNotifier
     {
-        /// <summary>
-        ///     The type of function that is called to notify that the contents of the room the main character is in have
-        ///     changed.
-        /// </summary>
-        /// <param name="reason">The reason why the contents of the room have changed.</param>
-        /// <param name="roomContents">The current contents of the room.</param>
-        delegate void ChangeRoomContentsListener(RoomContentsChangeReason reason,
-            IReadOnlyCollection<string> roomContents);
-
         /// <summary>
         ///     Reasons why the contents of the current room could change.
         /// </summary>
@@ -34,11 +25,17 @@ namespace Selania.Rework.Interfaces
         }
 
         /// <summary>
-        ///     Add a listener to the contents of the current room. the listener gets immediately called with the
-        ///     contents of the current room if present, or as soon as the current room gets computed.
+        ///     An observable providing the contents of the room the PG is in. If the PG is already in a room when the
+        ///     observer subscribes, the room contents are immediately sent (with the latest
+        ///     <see cref="ChangeRoomContentsInfo.reason"/> emitted).
         /// </summary>
-        /// <param name="roomContentsListener">The listener to add.</param>
-        /// <returns>A disposable that unsubscribed the listener when disposed.</returns>
-        IDisposable AddChangeRoomContentsListener(ChangeRoomContentsListener roomContentsListener);
+        Observable<ChangeRoomContentsInfo> roomContentsObservable { get; }
+
+        /// <summary>
+        ///     Information about changes to the contents of the room the main character is in.
+        /// </summary>
+        /// <param name="reason">The reason why the contents of the room have changed.</param>
+        /// <param name="roomContents">The current contents of the room.</param>
+        record struct ChangeRoomContentsInfo(RoomContentsChangeReason reason, IReadOnlyCollection<string> roomContents);
     }
 }

@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
+using R3;
 using Selania.Rework.Interfaces;
 using UnityEngine;
 using VContainer;
@@ -9,11 +9,12 @@ using ZLogger;
 
 namespace Selania.Rework.Components.RoomsLoadManager
 {
+    /// <summary>
+    ///     A component that takes care of loading and unloading the rooms from prefabs according to the state of the ink
+    ///     story.
+    /// </summary>
     public class RoomsLoadManager : MonoBehaviour
     {
-        [SerializeField] [Tooltip("A map between room names and the prefabs to instantiate with their content")]
-        private RoomMap[] rooms = null!;
-
         /// <summary>
         ///     The currently instantiated room, or <c>null</c> if no room has been instantiated yet.
         /// </summary>
@@ -35,6 +36,11 @@ namespace Selania.Rework.Components.RoomsLoadManager
         [Inject] internal LifetimeScope Scope = null!;
 
         /// <summary>
+        ///     Settings regarding the rooms.
+        /// </summary>
+        [Inject] internal ISettingsRooms SettingsRoom = null!;
+
+        /// <summary>
         ///     The object used to know when the room changes.
         /// </summary>
         [Inject] internal IStoryChangeRoomNotifier StoryChangeRoomNotifier = null!;
@@ -43,29 +49,33 @@ namespace Selania.Rework.Components.RoomsLoadManager
         {
             // create the _roomNamesToRoomPrefabs from the list rooms 
             _roomNamesToRoomPrefabs = new Dictionary<string, GameObject>();
-            foreach (var roomMap in rooms)
+            foreach (var roomMap in SettingsRoom.rooms)
             {
-                if (_roomNamesToRoomPrefabs.ContainsKey(roomMap.roomName))
+                if (_roomNamesToRoomPrefabs.ContainsKey(roomMap.name))
                 {
-                    Debug.LogWarning("Duplicate room name: " + roomMap.roomName);
+                    Debug.LogWarning("Duplicate room name: " + roomMap.name);
                     continue;
                 }
 
-                _roomNamesToRoomPrefabs.Add(roomMap.roomName, roomMap.roomPrefab);
+                _roomNamesToRoomPrefabs.Add(roomMap.name, roomMap.prefab);
             }
 
             // hook to events
-            StoryChangeRoomNotifier.AddChangeRoomListener(OnChangeRoom).DisposeWith(gameObject);
-            StoryChangeRoomNotifier.AddRoomNamesListener(OnRoomNames).DisposeWith(gameObject);
+            StoryChangeRoomNotifier.currentRoomObservable.Subscribe(OnChangeRoom).AddTo(gameObject);
+            StoryChangeRoomNotifier.roomNamesObservable.Subscribe(OnRoomNames).AddTo(gameObject);
         }
 
-        private void OnRoomNames(IEnumerable<string> roomNames)
+        /// <summary>
+        ///     Method invoked with the current list of room names.
+        /// </summary>
+        /// <param name="roomNamesInfo">Information about the room names.</param>
+        private void OnRoomNames(IStoryChangeRoomNotifier.RoomNamesInfo roomNamesInfo)
         {
             // check that we have a prefab for each existing room
             System.Diagnostics.Debug.Assert(_roomNamesToRoomPrefabs != null,
                 nameof(_roomNamesToRoomPrefabs) + " != null");
             List<string>? missingRooms = null;
-            foreach (var roomName in roomNames)
+            foreach (var roomName in roomNamesInfo.roomNames)
             {
                 if (_roomNamesToRoomPrefabs.ContainsKey(roomName)) continue;
                 missingRooms ??= new List<string>();
@@ -75,6 +85,10 @@ namespace Selania.Rework.Components.RoomsLoadManager
             if (missingRooms != null) Logger.ZLogWarning($"Missing rooms: {missingRooms}");
         }
 
+        /// <summary>
+        ///     Method invoked when the PG changes room.
+        /// </summary>
+        /// <param name="newRoomName">Name of the new room.</param>
         private void OnChangeRoom(string newRoomName)
         {
             Logger.ZLogTrace($"Moving to {newRoomName}.");
@@ -91,30 +105,13 @@ namespace Selania.Rework.Components.RoomsLoadManager
                 return;
             }
 
-            // instantiate it as a child of this object, which this object's scope as it's scope parent
+            // instantiate it as a child of this object, with this object's scope as the parent of its scope
             using (LifetimeScope.EnqueueParent(Scope))
             {
                 _currentRoom = Instantiate(newRoomPrefab, transform);
             }
 
             Logger.ZLogInformation($"Moved to {newRoomName}.");
-        }
-
-        /// <summary>
-        ///     A map between a room name and its prefab.
-        /// </summary>
-        [Serializable]
-        public class RoomMap
-        {
-            /// <summary>
-            ///     Name of the room.
-            /// </summary>
-            public string roomName = null!;
-
-            /// <summary>
-            ///     Prefab to instantiate for the room.
-            /// </summary>
-            public GameObject roomPrefab = null!;
         }
     }
 }

@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using Ink.Runtime;
 using Microsoft.Extensions.Logging;
+using R3;
 using Selania.Rework.Interfaces;
 using UnityEngine;
 using ZLogger;
+using Tag = Selania.Rework.Interfaces.Tag;
 
 namespace Selania.Rework.Components
 {
@@ -13,8 +15,8 @@ namespace Selania.Rework.Components
     ///     The object that wraps the Ink story and interprets its contents for the rest of the application.
     /// </summary>
     [CreateAssetMenu(fileName = "InkBridge", menuName = "Selania/Create Ink Bridge", order = 0)]
-    public class InkBridge : ScriptableObject, IStoryChangeRoomNotifier, IStoryChoiceSelector,
-        IStoryChangeRoomContentsNotifier
+    public class InkBridge : ScriptableObjectSetupSupport, IStoryChangeRoomNotifier, IStoryChoicesSelector,
+        IStoryLinear, IStoryChangeRoomContentsNotifier
     {
         [Header("Ink Settings")] [SerializeField] [Tooltip("The JSON asset containing the story.")]
         private TextAsset? inkAssetJson;
@@ -22,7 +24,7 @@ namespace Selania.Rework.Components
         [Header("Variables Settings")] [SerializeField] [Tooltip("Debug variables to disable when the story starts.")]
         private string[]? debugWordsToDisable;
 
-        [SerializeField] [Tooltip("Name of the list that defined the character.")]
+        [SerializeField] [Tooltip("Name of the list that defines the character.")]
         private string pgListName = "listCharacters";
 
         [SerializeField] [Tooltip("Name of the list item that represents the character.")]
@@ -31,35 +33,30 @@ namespace Selania.Rework.Components
         [SerializeField] [Tooltip("Prefix of the list variables that contain the objects in the rooms")]
         private string roomListPrefix = "contents";
 
+        /// <summary>
+        ///     This object's logger, if <see cref="StartStory" /> has been called, or <c>null</c> otherwise.
+        /// </summary>
+        /// <seealso cref="StartStory" />
         private ILogger<InkBridge>? _logger;
 
         /// <summary>
         ///     The story object, if <see cref="StartStory" /> has been called, or <c>null</c> otherwise.
         /// </summary>
+        /// <seealso cref="StartStory"/>
         private Story? _story;
 
-        private ILogger<InkBridge> logger => _logger ?? throw new InvalidOperationException("Logger is not set");
+        /// <summary>
+        ///     Property used to access <see cref="_logger" />, checking that the story has been correctly set up.
+        /// </summary>
+        /// <exception cref="InvalidOperationException"></exception>
+        private ILogger<InkBridge> logger =>
+            _logger ?? throw new InvalidOperationException(
+                "Logger is not set, call StartStory before accessing the logger");
 
-        public void PickChoiceWithText(string text)
-        {
-            // find the wanted choice
-            var story = GetStory();
-            var trimmedText = text.Trim();
-            var choice = story.currentChoices.SingleOrDefault(choice => choice.text.Trim() == trimmedText);
-            if (choice == null)
-            {
-                // could not find it
-                logger.ZLogError($"Could not find a choice with text {text}");
-            }
-            else
-            {
-                // found it: pick it!
-                logger.ZLogTrace($"Picking choice with text {text}");
-                story.ChooseChoiceIndex(choice.index);
-                Continue();
-            }
-        }
-
+        /// <summary>
+        ///     Start the story. This sets up the internal state and runs the first <see cref="Continue" />.
+        /// </summary>
+        /// <param name="newLogger">The logger to use to log information about the story.</param>
         public void StartStory(ILogger<InkBridge> newLogger)
         {
             _logger = newLogger;
@@ -101,13 +98,24 @@ namespace Selania.Rework.Components
         }
 
         /// <summary>
-        ///     Continue the Ink story, possibly sending notifications to the listeners of the various events.
+        ///     Continue the Ink story.
         /// </summary>
         private void Continue()
         {
             logger.ZLogTrace($"Continuing the story.");
-            GetStory().Continue();
+            var story = GetStory();
+            do
+            {
+                story.Continue();
+            } while (string.IsNullOrWhiteSpace(story.currentText));
+
+            logger.ZLogInformation($"Story text: {story.currentText.Trim()}");
+            foreach (var choice in story.currentChoices) logger.ZLogInformation($"Story choice: {choice.text.Trim()}");
+
+            // allow the various subsystems to update their observables
             UpdateRoom();
+            UpdateCurrentText();
+            UpdateCurrentChoices();
         }
 
         /// <summary>
@@ -121,6 +129,23 @@ namespace Selania.Rework.Components
                 ? throw new InvalidOperationException("Trying to obtain the story before Start() has been called")
                 : _story;
         }
+
+        /// <inheritdoc />
+        protected override void GlobalSetup()
+        {
+            SetupRoomContents();
+            SetupLinearProgression();
+            SetupChoices();
+        }
+
+        /// <inheritdoc />
+        protected override void GlobalCleanup()
+        {
+            CleanupRoomContents();
+            CleanupLinearProgression();
+            CleanupChoices();
+        }
+
 
         #region room location / contents
 
@@ -174,7 +199,8 @@ namespace Selania.Rework.Components
             if (_roomVariableNames == null)
             {
                 _roomVariableNames = GetRoomVariableNames();
-                NotifyRoomNamesListener();
+                var roomNames = _roomVariableNames.Map(GetRoomNameFromRoomVariableName);
+                _roomNamesSubject!.OnNext(new IStoryChangeRoomNotifier.RoomNamesInfo(roomNames));
             }
 
             // check if the PG didn't move at all
@@ -197,7 +223,7 @@ namespace Selania.Rework.Components
                 roomName ?? throw new InvalidOperationException("Could not find the PG in any of the rooms");
 
             // notify the interested listeners that the current room has changed
-            _changeRoomListeners.Invoke(_currentRoomName);
+            _currentRoomSubject!.OnNext(_currentRoomName);
 
             // update the room contents
             var currentRoomVariableName = $"{roomListPrefix}{_currentRoomName}";
@@ -206,7 +232,7 @@ namespace Selania.Rework.Components
             // notify the interested listeners that the current room contents have changed
             NotifyRoomContentsListener(IStoryChangeRoomContentsNotifier.RoomContentsChangeReason.CharacterMoved);
 
-            // hook to the variable in order to be notified when it changes
+            // hook to the variable in order to be notified when the room contents change
             story.RemoveVariableObserver(RoomContentsVariableObserver);
             story.ObserveVariable(currentRoomVariableName, RoomContentsVariableObserver);
         }
@@ -214,6 +240,7 @@ namespace Selania.Rework.Components
         private void RoomContentsVariableObserver(string variableName, object newValue)
         {
             logger.ZLogTrace($"Room contents changed (from variable {variableName})");
+
             // update the room contents
             _roomContents = GetRoomContents(newValue);
 
@@ -270,89 +297,211 @@ namespace Selania.Rework.Components
             return roomVariableName[roomListPrefix.Length..];
         }
 
+        private void CleanupRoomContents()
+        {
+            _currentRoomSubject?.Dispose();
+            _currentRoomSubject = null;
+            _roomNamesSubject?.Dispose();
+            _roomNamesSubject = null;
+            _roomContentsSubject?.Dispose();
+            _roomContentsSubject = null;
+        }
+
+        private void SetupRoomContents()
+        {
+            _currentRoomSubject = new ReplaySubject<string>(1);
+            _roomNamesSubject = new ReplaySubject<IStoryChangeRoomNotifier.RoomNamesInfo>(1);
+            _roomContentsSubject = new ReplaySubject<IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo>(1);
+        }
+
         /// <summary>
-        ///     The container for all the listeners to the room change.
+        ///     The subject behind <see cref="currentRoomObservable" />.
         /// </summary>
-        private readonly ListenersContainer<string> _changeRoomListeners = new();
+        private ReplaySubject<string>? _currentRoomSubject;
 
         /// <inheritdoc />
-        public IDisposable AddChangeRoomListener(IStoryChangeRoomNotifier.ChangeRoomListener changeRoomListener)
-        {
-            var disposable = _changeRoomListeners.AddListener(x => changeRoomListener(x));
-            if (_currentRoomName != null) changeRoomListener(_currentRoomName);
-            return disposable;
-        }
+        public Observable<string> currentRoomObservable => _currentRoomSubject!.AsObservable();
 
         /// <summary>
-        ///     The container for all the listeners to the list of room names.
+        ///     The subject behind <see cref="roomNamesObservable" />.
         /// </summary>
-        private readonly ListenersContainer<IEnumerable<string>> _roomNamesListeners = new();
+        private ReplaySubject<IStoryChangeRoomNotifier.RoomNamesInfo>? _roomNamesSubject;
 
         /// <inheritdoc />
-        public IDisposable AddRoomNamesListener(IStoryChangeRoomNotifier.RoomNamesListener roomNamesListener)
-        {
-            var disposable = _roomNamesListeners.AddListener(x => roomNamesListener(x));
-            if (_roomVariableNames != null) NotifyRoomNamesListener(roomNamesListener);
-            return disposable;
-        }
+        public Observable<IStoryChangeRoomNotifier.RoomNamesInfo> roomNamesObservable =>
+            _roomNamesSubject!.AsObservable();
 
         /// <summary>
-        ///     Notify the listeners of room names of the room names.
+        ///     The backing subject for <see cref="roomContentsObservable" />.
         /// </summary>
-        /// <param name="listener">
-        ///     If <c>null</c>, all registered listeners are notified, otherwise only the passed
-        ///     listener is notified.
-        /// </param>
-        private void NotifyRoomNamesListener(IStoryChangeRoomNotifier.RoomNamesListener? listener = null)
-        {
-            System.Diagnostics.Debug.Assert(_roomVariableNames != null, nameof(_roomVariableNames) + " != null");
-            var roomNames = _roomVariableNames.Select(GetRoomNameFromRoomVariableName);
-            if (listener != null)
-                listener(roomNames);
-            else
-                _roomNamesListeners.Invoke(roomNames);
-        }
-
-        /// <summary>
-        ///     The container for all the listeners to the room contents.
-        /// </summary>
-        private readonly
-            ListenersContainer<IStoryChangeRoomContentsNotifier.RoomContentsChangeReason, IReadOnlyCollection<string>>
-            _roomContentsListeners = new();
+        private ReplaySubject<IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo>? _roomContentsSubject;
 
         /// <inheritdoc />
-        public IDisposable AddChangeRoomContentsListener(
-            IStoryChangeRoomContentsNotifier.ChangeRoomContentsListener roomContentsListener)
-        {
-            var disposable = _roomContentsListeners.AddListener((x, y) => roomContentsListener(x, y));
-            if (_roomContents != null)
-                NotifyRoomContentsListener(IStoryChangeRoomContentsNotifier.RoomContentsChangeReason.CharacterMoved,
-                    roomContentsListener);
-
-            return disposable;
-        }
+        public Observable<IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo> roomContentsObservable =>
+            _roomContentsSubject!.AsObservable();
 
         /// <summary>
         ///     Notify the listeners of a change in the room contents.
         /// </summary>
         /// <param name="reason">The reason why this notification is sent.</param>
-        /// <param name="listener">
-        ///     If <c>null</c>, all registered listeners are notified, otherwise only the passed
-        ///     listener is notified.
-        /// </param>
         private void NotifyRoomContentsListener(
-            IStoryChangeRoomContentsNotifier.RoomContentsChangeReason reason,
-            IStoryChangeRoomContentsNotifier.ChangeRoomContentsListener? listener = null)
+            IStoryChangeRoomContentsNotifier.RoomContentsChangeReason reason)
         {
-            if (listener != null && _roomContents != null)
+            System.Diagnostics.Debug.Assert(_roomContents != null, nameof(_roomContents) + " != null");
+            _roomContentsSubject!.OnNext(
+                new IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo(reason, _roomContents.AsReadOnly()));
+        }
+
+        #endregion
+
+        #region linear progression
+
+        /// <summary>
+        ///     The subject used to produce text.
+        /// </summary>
+        /// <seealso cref="currentTextObservable" />
+        private ReplaySubject<IStoryLinear.CurrentTextInfo>? _currentTextObservable;
+
+        /// <inheritdoc />
+        public Observable<IStoryLinear.CurrentTextInfo> currentTextObservable => _currentTextObservable!.AsObservable();
+
+        private void CleanupLinearProgression()
+        {
+            _currentTextObservable?.Dispose();
+            _currentTextObservable = null;
+            _conversationInProgressSubject?.Dispose();
+            _conversationInProgressSubject = null;
+        }
+
+        private void SetupLinearProgression()
+        {
+            _currentTextObservable = new ReplaySubject<IStoryLinear.CurrentTextInfo>(1);
+            _conversationInProgressSubject = new ReplaySubject<bool>(1);
+        }
+
+        private ReplaySubject<bool>? _conversationInProgressSubject;
+
+        public Observable<bool> conversationInProgressObservable =>
+            _conversationInProgressSubject!.DistinctUntilChanged();
+
+        /// <summary>
+        ///     Update the listeners with the current text.
+        /// </summary>
+        private void UpdateCurrentText()
+        {
+            var story = GetStory();
+            var currentText = story.currentText.Trim();
+            if (!currentText.StartsWith('@'))
             {
-                listener(reason, _roomContents);
+                _conversationInProgressSubject!.OnNext(true);
+                _currentTextObservable!.OnNext(
+                    new IStoryLinear.CurrentTextInfo(currentText, MakeTags(story.currentTags)));
             }
             else
             {
-                System.Diagnostics.Debug.Assert(_roomContents != null, nameof(_roomContents) + " != null");
-                _roomContentsListeners.Invoke(reason, _roomContents.AsReadOnly());
+                // e.g.: @interact
+                _conversationInProgressSubject!.OnNext(false);
             }
+        }
+
+        /// <inheritdoc />
+        public bool canContinue => GetStory().canContinue;
+
+        /// <summary>
+        ///     Create a collection of tags starting from the ink tags.
+        /// </summary>
+        /// <param name="currentTags">The ink tags.</param>
+        /// <returns>A collection of tags.</returns>
+        private static ICollection<Tag> MakeTags(List<string> currentTags)
+        {
+            return currentTags.Select(tag => new Tag(tag)).ToList();
+        }
+
+        /// <inheritdoc />
+        void IStoryLinear.Continue()
+        {
+            Continue();
+        }
+
+        #endregion
+
+        #region choices
+
+        /// <summary>
+        ///     This subject gets fed choices info when there are choices, and <c>null</c> when the line contains no
+        ///     choices. Since it always remembers the last value (see <see cref="SetupChoices" /> for the construction
+        ///     of this observable), it will emit choices info to the observers if the last line has choices, and
+        ///     <c>null</c> otherwise. By filtering only the non-<c>null</c> values (see <see cref="choicesObservable" />)
+        ///     we make sure that upon subscription choices info are immediately sent, but only if the last line has
+        ///     choices.
+        /// </summary>
+        private ReplaySubject<IStoryChoicesSelector.ChoicesInfo?>? _choicesSubject;
+
+        /// <inheritdoc />
+        public Observable<IStoryChoicesSelector.ChoicesInfo> choicesObservable => _choicesSubject!
+            .Where(choicesInfo => choicesInfo.HasValue)
+            .Select(choicesInfo => choicesInfo!.Value);
+
+        private void CleanupChoices()
+        {
+            _choicesSubject?.Dispose();
+            _choicesSubject = null;
+        }
+
+        private void SetupChoices()
+        {
+            _choicesSubject = new ReplaySubject<IStoryChoicesSelector.ChoicesInfo?>(1);
+        }
+
+        /// <summary>
+        ///     Update the listeners with the current list of choices.
+        /// </summary>
+        private void UpdateCurrentChoices()
+        {
+            var story = GetStory();
+
+            // send "no choices" upon special instructions and when, well, there are no choices
+            if (story.currentChoices.Count == 0 || story.currentText.Trim().StartsWith('@'))
+            {
+                _choicesSubject!.OnNext(null);
+                return;
+            }
+
+            // there are choices! send them
+            var choices = (
+                from choice in story.currentChoices
+                select new IStoryChoicesSelector.Choice(choice.text.Trim(), choice.index)
+            ).ToList();
+            _choicesSubject!.OnNext(new IStoryChoicesSelector.ChoicesInfo(choices));
+        }
+
+        /// <inheritdoc />
+        public void PickChoiceWithText(string text)
+        {
+            // find the wanted choice
+            var story = GetStory();
+            var trimmedText = text.Trim();
+            var choice = story.currentChoices.SingleOrDefault(choice => choice.text.Trim() == trimmedText);
+            if (choice == null)
+            {
+                // could not find it
+                logger.ZLogError($"Could not find a choice with text {text}");
+            }
+            else
+            {
+                // found it: pick it!
+                logger.ZLogTrace($"Picking choice with text {text}");
+                story.ChooseChoiceIndex(choice.index);
+                Continue();
+            }
+        }
+
+        /// <inheritdoc />
+        public void PickChoiceWithIndex(int index)
+        {
+            var story = GetStory();
+            story.ChooseChoiceIndex(index);
+            Continue();
         }
 
         #endregion

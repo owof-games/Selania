@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using R3;
 
 namespace Selania.Rework.Interfaces
 {
@@ -9,30 +9,21 @@ namespace Selania.Rework.Interfaces
     public interface IStoryChangeRoomNotifier
     {
         /// <summary>
-        ///     Type of function that gets called when the main character changes the room they're in.
+        ///     An observable that provides the current room. If there's already a room the PG is in, it gets immediately
+        ///     sent to the observers.
         /// </summary>
-        /// <param name="newRoomName">Name of the new room the character is moving to.</param>
-        delegate void ChangeRoomListener(string newRoomName);
+        Observable<string> currentRoomObservable { get; }
 
         /// <summary>
-        ///     Function that gets called with the list of the room names.
+        ///     An observable producing the list of all room names. The room names are immediately sent to an observer,
+        ///     or as soon as they are computed.
         /// </summary>
-        delegate void RoomNamesListener(IEnumerable<string> roomNames);
+        Observable<RoomNamesInfo> roomNamesObservable { get; }
 
         /// <summary>
-        ///     Add a listener notified when the room the main character is in changes. The listener gets immediately called
-        ///     with the current room the main character is in upon subscription, if any.
+        ///     Info about the room names.
         /// </summary>
-        /// <param name="changeRoomListener">The listener.</param>
-        /// <returns>A disposable that unsubscribes the listener when disposed.</returns>
-        IDisposable AddChangeRoomListener(ChangeRoomListener changeRoomListener);
-
-        /// <summary>
-        ///     Add a listener to the list of room names. the listener gets immediately called with the list of rooms if
-        ///     present, or as soon as the list of rooms gets computed.
-        /// </summary>
-        /// <param name="roomNamesListener">The listener to add.</param>
-        /// <returns>A disposable that unsubscribed the listener when disposed.</returns>
-        IDisposable AddRoomNamesListener(RoomNamesListener roomNamesListener);
+        /// <param name="roomNames">The names of all the available rooms.</param>
+        record struct RoomNamesInfo(ICollection<string> roomNames);
     }
 }

@@ -50,6 +50,12 @@ MonoBehaviour:
   autoInjectGameObjects:
   - {fileID: 3646548566998380032}
   inkBridge: {fileID: 11400000, guid: ed7c201bd4536e34b92cf3d5a84f20a5, type: 2}
+  settings: {fileID: 11400000, guid: 8a2b787684fc7fa4e98d37b8b423934e, type: 2}
+  rooms:
+  - name: Room1
+    prefab: {fileID: 7337977647418521128, guid: 6416ce26ca0f0954dada34ad7d97eed4, type: 3}
+  - name: Room2
+    prefab: {fileID: 7337977647418521128, guid: 0563ec893e5d8c14ebcdaf45e0f88548, type: 3}
 --- !u!1 &2799744376609443282
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,8 +133,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2d86eea6481498e888a882c9065bf38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Selania::Selania.Rework.Components.RoomsLoadManager.RoomsLoadManager
-  rooms:
-  - roomName: Room1
-    roomPrefab: {fileID: 7337977647418521128, guid: 6416ce26ca0f0954dada34ad7d97eed4, type: 3}
-  - roomName: Room2
-    roomPrefab: {fileID: 7337977647418521128, guid: 0563ec893e5d8c14ebcdaf45e0f88548, type: 3}
