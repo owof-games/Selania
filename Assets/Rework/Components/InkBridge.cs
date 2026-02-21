@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using Ink.Runtime;
 using Microsoft.Extensions.Logging;
@@ -7,6 +8,7 @@ using R3;
 using Selania.Rework.Interfaces;
 using UnityEngine;
 using ZLogger;
+using Path = System.IO.Path;
 using Tag = Selania.Rework.Interfaces.Tag;
 
 namespace Selania.Rework.Components
@@ -16,7 +18,7 @@ namespace Selania.Rework.Components
     /// </summary>
     [CreateAssetMenu(fileName = "InkBridge", menuName = "Selania/Create Ink Bridge", order = 0)]
     public class InkBridge : ScriptableObjectSetupSupport, IStoryChangeRoomNotifier, IStoryChoicesSelector,
-        IStoryLinear, IStoryChangeRoomContentsNotifier
+        IStoryLinear, IStoryChangeRoomContentsNotifier, IStoryStateSerializer
     {
         [Header("Ink Settings")] [SerializeField] [Tooltip("The JSON asset containing the story.")]
         private TextAsset? inkAssetJson;
@@ -34,15 +36,15 @@ namespace Selania.Rework.Components
         private string roomListPrefix = "contents";
 
         /// <summary>
-        ///     This object's logger, if <see cref="StartStory" /> has been called, or <c>null</c> otherwise.
+        ///     This object's logger, if <see cref="SetUp" /> has been called, or <c>null</c> otherwise.
         /// </summary>
-        /// <seealso cref="StartStory" />
+        /// <seealso cref="SetUp" />
         private ILogger<InkBridge>? _logger;
 
         /// <summary>
-        ///     The story object, if <see cref="StartStory" /> has been called, or <c>null</c> otherwise.
+        ///     The story object, if <see cref="SetUp" /> has been called, or <c>null</c> otherwise.
         /// </summary>
-        /// <seealso cref="StartStory"/>
+        /// <seealso cref="SetUp"/>
         private Story? _story;
 
         /// <summary>
@@ -51,13 +53,13 @@ namespace Selania.Rework.Components
         /// <exception cref="InvalidOperationException"></exception>
         private ILogger<InkBridge> logger =>
             _logger ?? throw new InvalidOperationException(
-                "Logger is not set, call StartStory before accessing the logger");
+                "Logger is not set, call SetUp before accessing the logger");
 
         /// <summary>
         ///     Start the story. This sets up the internal state and runs the first <see cref="Continue" />.
         /// </summary>
         /// <param name="newLogger">The logger to use to log information about the story.</param>
-        public void StartStory(ILogger<InkBridge> newLogger)
+        public void SetUp(ILogger<InkBridge> newLogger)
         {
             _logger = newLogger;
 
@@ -67,8 +69,6 @@ namespace Selania.Rework.Components
             _story = new Story(inkAssetJson.text);
 
             DisableDebugVariables();
-
-            Continue();
         }
 
         /// <summary>
@@ -150,25 +150,25 @@ namespace Selania.Rework.Components
         #region room location / contents
 
         /// <summary>
-        ///     The name of the room where the PG is, if <see cref="StartStory" /> and <see cref="Continue" /> have been called at
+        ///     The name of the room where the PG is, if <see cref="SetUp" /> and <see cref="Continue" /> have been called at
         ///     least once, or <c>null</c> otherwise.
         /// </summary>
         private string? _currentRoomName;
 
         /// <summary>
-        ///     The list item that represents the PG, if <see cref="StartStory" /> and <see cref="Continue" /> have been called at
+        ///     The list item that represents the PG, if <see cref="SetUp" /> and <see cref="Continue" /> have been called at
         ///     least once, or <c>null</c> otherwise.
         /// </summary>
         private InkListItem? _pgListItem;
 
         /// <summary>
-        ///     Name of all the list variables that hold the contents of a room, if <see cref="StartStory" /> and
+        ///     Name of all the list variables that hold the contents of a room, if <see cref="SetUp" /> and
         ///     <see cref="Continue" /> have been called at least once, or <c>null</c> otherwise.
         /// </summary>
         private List<string>? _roomVariableNames;
 
         /// <summary>
-        ///     Name of all the current room content items, if <see cref="StartStory" /> and <see cref="Continue" /> have been
+        ///     Name of all the current room content items, if <see cref="SetUp" /> and <see cref="Continue" /> have been
         ///     called at least once, or <c>null</c> otherwise.
         /// </summary>
         private List<string>? _roomContents;
@@ -502,6 +502,111 @@ namespace Selania.Rework.Components
             var story = GetStory();
             story.ChooseChoiceIndex(index);
             Continue();
+        }
+
+        #endregion
+
+        #region saves
+
+        /// <summary>
+        ///     Name of the JSON file inside the save directory.
+        /// </summary>
+        private const string JsonFileName = "savefile.json";
+
+        /// <summary>
+        ///     The class that gets serialized in the save file.
+        /// </summary>
+        [Serializable]
+        private class SaveData
+        {
+            /// <summary>
+            ///     The JSON serialized by Ink for its story state
+            /// </summary>
+            public required string inkStoryState;
+        }
+
+        private static string GetSlotDescriptor(int slot)
+        {
+            return $"save_dir_slot_{slot}";
+        }
+
+        private static string GetPathFromDescriptor(string descriptor)
+        {
+            return Path.Join(Application.persistentDataPath, descriptor);
+        }
+
+        private static string GetJsonFilePathFromDescriptor(string descriptor)
+        {
+            return Path.Join(Application.persistentDataPath, descriptor, JsonFileName);
+        }
+
+        /// <inheritdoc />
+        public void StartStory(string? descriptor)
+        {
+            var story = GetStory();
+            // load the save file only if one is provided
+            if (descriptor != null)
+            {
+                logger.ZLogInformation($"Loading save file {descriptor}.");
+                var jsonPath = GetJsonFilePathFromDescriptor(descriptor);
+                var json = File.ReadAllText(jsonPath);
+                var saveData = JsonUtility.FromJson<SaveData>(json);
+                story.state.LoadJson(saveData.inkStoryState);
+                logger.ZLogInformation($"Save file {descriptor} loaded!");
+            }
+            else
+            {
+                // otherwise, just reset and continue to trigger a new story
+                story.ResetState();
+                Continue();
+            }
+        }
+
+        /// <inheritdoc />
+        public IList<string> GetAutomaticSaves()
+        {
+            return Directory.GetDirectories(Application.persistentDataPath, "save_dir_auto_*",
+                SearchOption.TopDirectoryOnly);
+        }
+
+        /// <summary>
+        ///     Create or overwrite a save in the given directory inside the application persistent path.
+        /// </summary>
+        /// <param name="dirName">The name of the directory where to put the save.</param>
+        private void Save(string dirName)
+        {
+            logger.ZLogInformation($"Saving save file in directory {dirName}.");
+            var story = GetStory();
+            var inkStoryState = story.state.ToJson();
+            var saveData = new SaveData
+            {
+                inkStoryState = inkStoryState
+            };
+            var json = JsonUtility.ToJson(saveData);
+            Directory.CreateDirectory(GetPathFromDescriptor(dirName));
+            var path = GetJsonFilePathFromDescriptor(dirName);
+            File.WriteAllText(path, json);
+            logger.ZLogInformation($"Save completed.");
+        }
+
+        /// <inheritdoc />
+        public void Save(int slot)
+        {
+            Save(GetSlotDescriptor(slot));
+        }
+
+        /// <inheritdoc />
+        public string? GetExplicitSave(int slot)
+        {
+            var descriptor = GetSlotDescriptor(slot);
+            return Directory.Exists(GetPathFromDescriptor(descriptor)) ? descriptor : null;
+        }
+
+        /// <inheritdoc />
+        public void DeleteSave(int slot)
+        {
+            var path = GetPathFromDescriptor(GetSlotDescriptor(slot));
+            if (Directory.Exists(path)) Directory.Delete(path, true);
         }
 
         #endregion

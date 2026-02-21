@@ -26,9 +26,9 @@ namespace Selania.Rework.Components
                     // if the registration has already been resolved once, just return the ink bridge
                     if (loggerResolved) return inkBridge;
 
-                    // otherwise, set up the ink bridge and return it afterwards
+                    // otherwise, set up the ink bridge and return it afterward
                     var logger = resolver.Resolve<ILogger<InkBridge>>();
-                    inkBridge.StartStory(logger);
+                    inkBridge.SetUp(logger);
                     loggerResolved = true;
                     return inkBridge;
                 }, Lifetime.Singleton)
