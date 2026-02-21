@@ -41,7 +41,7 @@ jobs:
     steps:
       - name: Run Project Name Sanitizer
         id: sanitize
-        uses: RedGlow/unity-ci-templates/.github/actions/resolve-project-name@self-host
+        uses: redglow/unity-ci-templates/.github/actions/resolve-project-name@lfs
         with:
           projectNameInput: ${{ vars.PROJECT_NAME }}
 
@@ -108,7 +108,7 @@ jobs:
     needs: 
       - sanitize_project_name
       - validate_release
-    uses: RedGlow/unity-ci-templates/.github/workflows/step-4-deploy.yml@self-host
+    uses: redglow/unity-ci-templates/.github/workflows/step-4-deploy.yml@lfs
     with:
       buildType: release
       runnerMain: ${{ inputs.runnerMain }}
@@ -128,7 +128,7 @@ jobs:
     name: Notify
     needs: 
       - redeploy
-    uses: RedGlow/unity-ci-templates/.github/workflows/step-5-notify.yml@self-host
+    uses: redglow/unity-ci-templates/.github/workflows/step-5-notify.yml@lfs
     with:
       runnerMain: ${{ inputs.runnerMain }}
       buildVersion: ${{ inputs.buildVersion }}

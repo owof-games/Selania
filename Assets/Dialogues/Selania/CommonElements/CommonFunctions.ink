@@ -535,19 +535,19 @@
 
     {
         - partner == FirstCharacter:
-            ~ firstChar_purple = firstChar_purple * number
-            ~ firstChar_yellow = firstChar_yellow * number
-            ~ firstChar_blue = firstChar_blue * number
-            ~ firstChar_green = firstChar_green * number
-            ~ firstChar_red = firstChar_red * number
+            ~ firstChar_aether = firstChar_aether * number
+            ~ firstChar_earth = firstChar_earth * number
+            ~ firstChar_air = firstChar_air * number
+            ~ firstChar_water = firstChar_water * number
+            ~ firstChar_fire= firstChar_fire* number
             
     
         - partner == SecondCharacter:
-            ~ secondChar_purple = secondChar_purple * number
-            ~ secondChar_yellow = secondChar_yellow * number
-            ~ secondChar_blue = secondChar_blue * number
-            ~ secondChar_green = secondChar_green * number
-            ~ secondChar_red = secondChar_red * number
+            ~ secondChar_aether = secondChar_aether * number
+            ~ secondChar_earth = secondChar_earth * number
+            ~ secondChar_air = secondChar_air * number
+            ~ secondChar_water = secondChar_water * number
+            ~ secondChar_fire = secondChar_fire * number
 
     }
 ->->

@@ -62,7 +62,11 @@
     
     //Valore quarto ingrediente
         VAR kitchen_secondCharExtraIngredient = ()
-        VAR kitchen_secondCharExtraIngredientReaction = notReaction    
+        VAR kitchen_secondCharExtraIngredientReaction = notReaction   
+
+//Tracciamento apprezzamento glifi. Tutto ciò che è fuori da questa lista = reazione neutrale.
+    VAR secondChar_positiveGlyphs = ()
+    VAR secondChar_negativeGlyphs = ()
     
 //Tengo conto delle interazioni avute per aprire la possibilità della riscrittura
     VAR secondChar_storyletsForRewritingCount = 0.00
@@ -87,11 +91,11 @@
     
 //UP: coerenza.
 //DOWN: incoerenza, cose random
-    VAR secondChar_purple = 0.00
-    VAR secondChar_yellow = 0.00
-    VAR secondChar_blue = 0.00
-    VAR secondChar_green = 0.00
-    VAR secondChar_red = 0.00                   
+    VAR secondChar_aether = 0.00
+    VAR secondChar_earth = 0.00
+    VAR secondChar_air = 0.00
+    VAR secondChar_water = 0.00
+    VAR secondChar_fire = 0.00                   
                      
                     /* ---------------------------------
                     
@@ -108,26 +112,26 @@
     //L'obbiettivo è: beccare almeno il 66% delle risposte.
     //Invece di complicarmi la vita posso usare la matematica.
     
-    ~ temp allColorsValue = secondChar_red + secondChar_blue + secondChar_green + secondChar_yellow + secondChar_purple
+    ~ temp allColorsValue = secondChar_fire + secondChar_air + secondChar_water + secondChar_earth + secondChar_aether
     ~ temp minimumPercentValue = ((allColorsValue/100.00)*secondChar_relationshipGoodPercentage)
     
         {debug: La percentuale di risposte coerenti per una buona relazione è di {secondChar_relationshipGoodPercentage}. Il {secondChar_relationshipGoodPercentage}% di tutta la somma dei colori di Riccio (che è {allColorsValue}) è {minimumPercentValue}.}
-        {debug: Il valore di viola è: {FLOAT(secondChar_purple)}, di verde è: {FLOAT(secondChar_green)}, di rosso è: {FLOAT(secondChar_red)}, di blu è: {FLOAT(secondChar_blue)}, di giallo è: {FLOAT(secondChar_yellow)}}
+        {debug: Il valore di viola è: {FLOAT(secondChar_aether)}, di verde è: {FLOAT(secondChar_water)}, di rosso è: {FLOAT(secondChar_fire)}, di blu è: {FLOAT(secondChar_air)}, di giallo è: {FLOAT(secondChar_earth)}}
         
         {
-            - secondChar_purple > minimumPercentValue:
+            - secondChar_aether > minimumPercentValue:
                     ~ secondChar_relationshipStatus ++
 
-            - secondChar_green > minimumPercentValue:
+            - secondChar_water > minimumPercentValue:
                     ~ secondChar_relationshipStatus ++  
 
-            - secondChar_red > minimumPercentValue:
+            - secondChar_fire > minimumPercentValue:
                     ~ secondChar_relationshipStatus ++ 
 
-            - secondChar_blue > minimumPercentValue:
+            - secondChar_air > minimumPercentValue:
                     ~ secondChar_relationshipStatus ++
 
-            - secondChar_yellow > minimumPercentValue:
+            - secondChar_earth > minimumPercentValue:
                     ~ secondChar_relationshipStatus ++
 
             {debug: Una risposta supera il 66 per cento delle scelte e quindi aumento l'inchiostro del secondo personaggio di un livello. Ora è a {secondChar_relationshipStatus}}
@@ -238,36 +242,36 @@
 //Riutilizziamo la stessa logica prodotta dall'affinity calculator, ma con impatti diversi: > 90, >70, >60, > 40
 {debug: passo per secondNaming.}
 
-    ~ temp allColorsValue = secondChar_red + secondChar_blue + secondChar_green + secondChar_yellow + secondChar_purple
+    ~ temp allColorsValue = secondChar_fire + secondChar_air + secondChar_water + secondChar_earth + secondChar_aether
     ~ temp minimumPercentValue = (allColorsValue/100.00)
     ~ temp winnerColor = 0
 
-{debug: Il valore di secondChar_red è {secondChar_red} , di secondChar_blue è {secondChar_blue}, di secondChar_green è {secondChar_green}, di secondChar_yellow è {secondChar_yellow} e di secondChar_purple è {secondChar_purple}. La somma di tutti i colori è {allColorsValue}. Il valore di minimumPercentValue è {minimumPercentValue}.}
+{debug: Il valore di secondChar_fire è {secondChar_fire} , di secondChar_air è {secondChar_air}, di secondChar_water è {secondChar_water}, di secondChar_earth è {secondChar_earth} e di secondChar_aether è {secondChar_aether}. La somma di tutti i colori è {allColorsValue}. Il valore di minimumPercentValue è {minimumPercentValue}.}
 
 //Resetto il valore del nome di Riccio
     ~ secondChar_ActualName = ()
 
     //Verifico quale sia il valore "vincente"
     {
-        - (secondChar_purple > secondChar_green) && (secondChar_purple > secondChar_red) && (secondChar_purple > secondChar_blue) && (secondChar_purple > secondChar_yellow):
-                 ~ winnerColor = secondChar_purple
-                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_purple, che è {secondChar_purple}.}
+        - (secondChar_aether > secondChar_water) && (secondChar_aether > secondChar_fire) && (secondChar_aether > secondChar_air) && (secondChar_aether > secondChar_earth):
+                 ~ winnerColor = secondChar_aether
+                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_aether, che è {secondChar_aether}.}
     
-        - (secondChar_green > secondChar_purple) && (secondChar_green > secondChar_red) && (secondChar_green > secondChar_blue) && (secondChar_green > secondChar_yellow):
-                 ~ winnerColor = secondChar_green
-                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_green, che è {secondChar_green}.}
+        - (secondChar_water > secondChar_aether) && (secondChar_water > secondChar_fire) && (secondChar_water > secondChar_air) && (secondChar_water > secondChar_earth):
+                 ~ winnerColor = secondChar_water
+                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_water, che è {secondChar_water}.}
         
-        - (secondChar_red > secondChar_green) && (secondChar_red > secondChar_purple) && (secondChar_red > secondChar_blue) && (secondChar_red > secondChar_yellow):
-                 ~ winnerColor = secondChar_red
-                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_red, che è {secondChar_red}.}
+        - (secondChar_fire > secondChar_water) && (secondChar_fire > secondChar_aether) && (secondChar_fire > secondChar_air) && (secondChar_fire > secondChar_earth):
+                 ~ winnerColor = secondChar_fire
+                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_fire, che è {secondChar_fire}.}
         
-        - (secondChar_yellow > secondChar_green) && (secondChar_yellow > secondChar_purple) && (secondChar_yellow > secondChar_blue) && (secondChar_yellow > secondChar_red):
-                 ~ winnerColor = secondChar_yellow
-                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_yellow, che è {secondChar_yellow}.}
+        - (secondChar_earth > secondChar_water) && (secondChar_earth > secondChar_aether) && (secondChar_earth > secondChar_air) && (secondChar_earth > secondChar_fire):
+                 ~ winnerColor = secondChar_earth
+                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_earth, che è {secondChar_earth}.}
         
-        - (secondChar_blue > secondChar_green) && (secondChar_blue > secondChar_purple) && (secondChar_blue > secondChar_yellow) && (secondChar_blue > secondChar_red):
-                 ~ winnerColor = secondChar_blue
-                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_blue, che è {secondChar_blue}.}
+        - (secondChar_air > secondChar_water) && (secondChar_air > secondChar_aether) && (secondChar_air > secondChar_earth) && (secondChar_air > secondChar_fire):
+                 ~ winnerColor = secondChar_air
+                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_air, che è {secondChar_air}.}
     
     }
 

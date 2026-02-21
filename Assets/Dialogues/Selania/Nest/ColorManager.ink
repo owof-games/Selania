@@ -1,13 +1,13 @@
-LIST nest_colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
+LIST nest_colorParametersChoice = fireC, earthC, airC, waterC, aetherC
 
 //Persona a cui stiamo parlando quando compiamo la scelta
     VAR nest_currentTalker = ()
 //Creazione di parametri generici per semplificarmi la vita legati ai colori che poi verranno riportati sullx PNG    
-    VAR nest_temporaryRed = 0.00
-    VAR nest_temporaryYellow = 0.00
-    VAR nest_temporaryBlue = 0.00
-    VAR nest_temporaryGreen = 0.00
-    VAR nest_temporaryPurple = 0.00
+    VAR nest_temporaryFire = 0.00
+    VAR nest_temporaryEarth = 0.00
+    VAR nest_temporaryAir= 0.00
+    VAR nest_temporaryWater= 0.00
+    VAR nest_temporaryAether = 0.00
 
 //Contatore d'uso della parola    
     VAR temporaryWordUsageCounter = 0
@@ -35,20 +35,20 @@ LIST nest_varpg_status = varPGYes, varPGNo
     	- PNG == PG:
     	//Nel caso dellx PG, non attivo mai le parole magiche.
     	        {Color:
-                    -redC:
-                        ~ player_red ++
+                    -fireC:
+                        ~ player_fire ++
                 
-                    -yellowC:
-                        ~ player_yellow ++
+                    -earthC:
+                        ~ player_earth ++
                     
-                    -blueC:
-                        ~ player_blue ++
+                    -airC:
+                        ~ player_air ++
                     
-                    -greenC:
-                        ~ player_green ++   
+                    -waterC:
+                        ~ player_water ++   
                     
-                    -purpleC:
-                        ~ player_purple ++
+                    -aetherC:
+                        ~ player_aether ++
                 }
                 ->->
     	        
@@ -64,56 +64,56 @@ LIST nest_varpg_status = varPGYes, varPGNo
     {
         - PNG == FirstCharacter:
         	    {Color:
-                    -redC:
-                        ~ player_red_first_char ++
+                    -fireC:
+                        ~ player_fire_first_char ++
                 
-                    -yellowC:
-                        ~ player_yellow_first_char ++
+                    -earthC:
+                        ~ player_earth_first_char ++
                     
-                    -blueC:
-                        ~ player_blue_first_char ++
+                    -airC:
+                        ~ player_air_first_char ++
                     
-                    -greenC:
-                        ~ player_green_first_char ++   
+                    -waterC:
+                        ~ player_water_first_char ++   
                     
-                    -purpleC:
-                        ~ player_purple_first_char ++
+                    -aetherC:
+                        ~ player_aether_first_char ++
                 }
         	 
         - PNG == SecondCharacter:
         	    {Color:
-                    -redC:
-                        ~ player_red_second_char ++
+                    -fireC:
+                        ~ player_fire_second_char ++
                 
-                    -yellowC:
-                        ~ player_yellow_second_char ++
+                    -earthC:
+                        ~ player_earth_second_char ++
                     
-                    -blueC:
-                        ~ player_blue_second_char ++
+                    -airC:
+                        ~ player_air_second_char ++
                     
-                    -greenC:
-                        ~ player_green_second_char ++   
+                    -waterC:
+                        ~ player_water_second_char ++   
                     
-                    -purpleC:
-                        ~ player_purple_second_char ++
+                    -aetherC:
+                        ~ player_aether_second_char ++
                 }
         	 
         - PNG == Mentor:
         	  {Color:
-                    -redC:
-                        ~ player_red_mentor ++
+                    -fireC:
+                        ~ player_fire_mentor ++
                 
-                    -yellowC:
-                        ~ player_yellow_mentor ++
+                    -earthC:
+                        ~ player_earth_mentor ++
                     
-                    -blueC:
-                        ~ player_blue_mentor ++
+                    -airC:
+                        ~ player_air_mentor ++
                     
-                    -greenC:
-                        ~ player_green_mentor ++   
+                    -waterC:
+                        ~ player_water_mentor ++   
                     
-                    -purpleC:
-                        ~ player_purple_mentor ++
+                    -aetherC:
+                        ~ player_aether_mentor ++
             }
 
     }
@@ -132,20 +132,20 @@ LIST nest_varpg_status = varPGYes, varPGNo
 
     - else:
         {Color:
-            -redC:
-                ~ nest_temporaryRed ++
+            -fireC:
+                ~ nest_temporaryFire ++
      
-            -yellowC:
-                ~ nest_temporaryYellow ++
+            -earthC:
+                ~ nest_temporaryEarth ++
             
-            -blueC:
-                ~ nest_temporaryBlue ++
+            -airC:
+                ~ nest_temporaryAir++
             
-            -greenC:
-                ~ nest_temporaryGreen ++   
+            -waterC:
+                ~ nest_temporaryWater++   
             
-            -purpleC:
-                ~ nest_temporaryPurple ++
+            -aetherC:
+                ~ nest_temporaryAether ++
         }
         {debug_nest: non è attiva alcuna parola magica, per cui mi aumento di uno i valori e basta.}
           //E poi aggiorniamo i dettagli
@@ -154,417 +154,302 @@ LIST nest_varpg_status = varPGYes, varPGNo
 }
 
 
-
+TODO: sistemare questa roba a nest risistemato
 
 
 = emotional_words
-//Qui tracciamo gli effetti generici delle parole
-    {nest_activeEmotionalWord:
-        //Variazioni di un solo colore
-            - Rosso:
-                ~ nest_temporaryRed ++
-            - RossoRosso:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
+// //Qui tracciamo gli effetti generici delle parole
+//     {nest_activeEmotionalWord:
+//         //Variazioni di un solo colore
+//             - Rosso:
+//                 ~ nest_temporaryFire ++
+//             - RossoRosso:
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
                 
-            - RossoRossoRosso:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
+//             - RossoRossoRosso:
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
             
-            - Giallo:
-                ~ nest_temporaryYellow ++
-            - GialloGiallo:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-            - GialloGialloGiallo:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
+//             - Giallo:
+//                 ~ nest_temporaryEarth ++
+//             - GialloGiallo:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//             - GialloGialloGiallo:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
             
-            - Blu:
-                ~ nest_temporaryBlue ++
-            - BluBlu:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-            - BluBluBlu:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
+//             - Blu:
+//                 ~ nest_temporaryAir++
+//             - BluBlu:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//             - BluBluBlu:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
             
-            - Verde:
-                ~ nest_temporaryGreen ++
-            - VerdeVerde:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-            - VerdeVerdeVerde:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
+//             - Verde:
+//                 ~ nest_temporaryWater++
+//             - VerdeVerde:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//             - VerdeVerdeVerde:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
             
-            - Viola:
-                ~ nest_temporaryPurple ++
-            - ViolaViola:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-            - ViolaViolaViola:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
+//             - Viola:
+//                 ~ nest_temporaryAether ++
+//             - ViolaViola:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//             - ViolaViolaViola:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
                 
-        //Variazioni di due colori
-            - RossoRossoBlu:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryBlue --
+//         //Variazioni di due colori
+//             - RossoRossoBlu:
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryAir--
                 
-            - RossoRossoVerde:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryGreen --
+//             - RossoRossoVerde:
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryWater--
                 
-            - RossoRossoViola:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryPurple --
+//             - RossoRossoViola:
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryAether --
                 
-            - RossoRossoGiallo:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryYellow --
+//             - RossoRossoGiallo:
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryEarth --
                 
-            - RossoGiallo:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryYellow --
+//             - RossoGiallo:
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryEarth --
                 
-            - RossoGialloRosso:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
+//             - RossoGialloRosso:
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
             
-            - RossoGialloGiallo:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
+//             - RossoGialloGiallo:
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
             
-            - RossoBlu:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryBlue --
+//             - RossoBlu:
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryAir--
                 
-            - RossoBluBlu:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
+//             - RossoBluBlu:
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
             
-            - RossoBluRosso:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryRed --
+//             - RossoBluRosso:
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryFire --
             
-            - RossoVerde: 
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryGreen --
+//             - RossoVerde: 
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryWater--
             
-            - RossoVerdeVerde:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
+//             - RossoVerdeVerde:
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
             
-            - RossoVerdeRosso:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryRed --
+//             - RossoVerdeRosso:
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryFire --
             
-            - RossoViola:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryPurple --
+//             - RossoViola:
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryAether --
                 
-            - RossoViolaViola:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
+//             - RossoViolaViola:
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
             
-            - RossoViolaRosso:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryRed --
-            
-            
+//             - RossoViolaRosso:
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryFire --
             
             
             
-            - GialloVerde:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryGreen --
+            
+            
+//             - GialloVerde:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryWater--
         
-            - GialloViola:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryPurple --
+//             - GialloViola:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryAether --
             
-            - GialloRosso:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryRed --
+//             - GialloRosso:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryFire --
             
-            - GialloBlu:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryBlue --
+//             - GialloBlu:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryAir--
                 
                 
-            - GialloRossoGiallo:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryYellow --
+//             - GialloRossoGiallo:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryEarth --
                 
-            - GialloRossoRosso:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
+//             - GialloRossoRosso:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
                 
-            - GialloGialloVerde:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryGreen --
+//             - GialloGialloVerde:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryWater--
                 
-            - GialloGialloViola:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryPurple --
+//             - GialloGialloViola:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryAether --
                 
-            - GialloGialloBlu:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryBlue --
+//             - GialloGialloBlu:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryAir--
                 
-            - GialloGialloRosso:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryRed --
-                
-            
-            - GialloBluBlu:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                
-            - GialloBluGiallo:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryYellow --
-                
-                
-            - GialloVerdeVerde:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                
-            - GialloVerdeGiallo:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryYellow --
-                
-            - GialloViolaViola:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                
-            - GialloViolaGiallo:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryYellow --
+//             - GialloGialloRosso:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryFire --
                 
             
-            
-            
-            
-            
-            
-            
-            - BluRosso:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryRed --
+//             - GialloBluBlu:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
                 
-            - BluGiallo:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryYellow --
+//             - GialloBluGiallo:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryEarth --
                 
-            - BluVerde:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryGreen --
                 
-            - BluViola:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryPurple --
+//             - GialloVerdeVerde:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
                 
-            - BluRossoBlu:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryBlue --
+//             - GialloVerdeGiallo:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryEarth --
                 
-            - BluRossoRosso:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
+//             - GialloViolaViola:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
                 
-            - BluGialloBlu:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryBlue --
-                
-            - BluGialloGiallo:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                
-            - BluBluVerde:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryGreen --
-                
-            - BluBluViola:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryPurple --
-                
-            - BluBluGiallo:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryYellow --
-                
-            - BluBluRosso:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryRed --
-                
-            - BluVerdeVerde:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                
-            - BluVerdeBlu:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryBlue --
-                
-            - BluViolaViola:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
+//             - GialloViolaGiallo:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryEarth --
                 
             
             
@@ -573,982 +458,1097 @@ LIST nest_varpg_status = varPGYes, varPGNo
             
             
             
-            - VerdeRosso:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryRed --
+//             - BluRosso:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryFire --
                 
-            - VerdeViola:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryPurple --
+//             - BluGiallo:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryEarth --
                 
-            - VerdeGiallo:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryYellow --
+//             - BluVerde:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryWater--
                 
-            - VerdeBlu:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryBlue --
+//             - BluViola:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAether --
                 
-            - VerdeRossoVerde:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryGreen --
+//             - BluRossoBlu:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryAir--
                 
-            - VerdeRossoRosso:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
+//             - BluRossoRosso:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
                 
-            - VerdeGialloVerde:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryGreen --
+//             - BluGialloBlu:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryAir--
                 
-            - VerdeGialloGiallo:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
+//             - BluGialloGiallo:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
                 
-            - VerdeBluVerde:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryGreen --
+//             - BluBluVerde:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryWater--
                 
-            - VerdeBluBlu:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
+//             - BluBluViola:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAether --
                 
-            - VerdeVerdeViola:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryPurple --
+//             - BluBluGiallo:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryEarth --
                 
-            - VerdeVerdeBlu:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryBlue --
+//             - BluBluRosso:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryFire --
                 
-            - VerdeVerdeGiallo:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryYellow --
+//             - BluVerdeVerde:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
                 
-            - VerdeVerdeRosso:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryRed --
+//             - BluVerdeBlu:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryAir--
                 
-            - VerdeViolaVerde:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryGreen --
-                
-            - VerdeViolaViola:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
+//             - BluViolaViola:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
                 
             
             
             
             
-            - ViolaRosso:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryRed --
-                
-            - ViolaGiallo:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryYellow --
-                
-            - ViolaBlu:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryBlue --
-                
-            - ViolaVerde:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryGreen --
-                
-            - ViolaRossoViola:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryPurple --
-                
-            - ViolaRossoRosso:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                
-            - ViolaGialloViola:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryPurple --
-                
-            - ViolaGialloGiallo:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                
-            - ViolaBluViola:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryPurple --
-                
-            - ViolaBluBlu:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                
-            - ViolaVerdeVerde:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                
-            - ViolaVerdeViola:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryPurple --
-                
-            - ViolaViolaVerde:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryGreen --
-                
-            - ViolaViolaBlu:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryBlue --
-                
-            - ViolaViolaGiallo:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryYellow --
-                
-            - ViolaViolaRosso:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryRed --
-                
-        
-        
-        //Varizioni di tre colori
-            - RossoGialloBlu: 
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryBlue --
             
-            - RossoGialloVerde: 
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryGreen --
             
-            - RossoGialloViola: 
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryPurple --
             
-            - RossoBluVerde: 
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryGreen --
-            
-            - RossoBluViola: 
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryPurple --
-            
-            - RossoBluGiallo: 
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryYellow --
-            
-            - RossoVerdeBlu: 
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryBlue --
-            
-            - RossoVerdeViola: 
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryPurple --
-            
-            - RossoVerdeGiallo: 
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryYellow --
-            
-            - RossoViolaGiallo:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryYellow --
+//             - VerdeRosso:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryFire --
                 
-            - RossoViolaVerde:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryGreen --
+//             - VerdeViola:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryAether --
                 
-            - RossoViolaBlu:
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++ 
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryBlue --
+//             - VerdeGiallo:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryEarth --
+                
+//             - VerdeBlu:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryAir--
+                
+//             - VerdeRossoVerde:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryWater--
+                
+//             - VerdeRossoRosso:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+                
+//             - VerdeGialloVerde:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryWater--
+                
+//             - VerdeGialloGiallo:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+                
+//             - VerdeBluVerde:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryWater--
+                
+//             - VerdeBluBlu:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+                
+//             - VerdeVerdeViola:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryAether --
+                
+//             - VerdeVerdeBlu:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryAir--
+                
+//             - VerdeVerdeGiallo:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryEarth --
+                
+//             - VerdeVerdeRosso:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryFire --
+                
+//             - VerdeViolaVerde:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryWater--
+                
+//             - VerdeViolaViola:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+                
+            
+            
+            
+            
+//             - ViolaRosso:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryFire --
+                
+//             - ViolaGiallo:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryEarth --
+                
+//             - ViolaBlu:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAir--
+                
+//             - ViolaVerde:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryWater--
+                
+//             - ViolaRossoViola:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryAether --
+                
+//             - ViolaRossoRosso:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+                
+//             - ViolaGialloViola:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryAether --
+                
+//             - ViolaGialloGiallo:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+                
+//             - ViolaBluViola:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAether --
+                
+//             - ViolaBluBlu:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+                
+//             - ViolaVerdeVerde:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+                
+//             - ViolaVerdeViola:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryAether --
+                
+//             - ViolaViolaVerde:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryWater--
+                
+//             - ViolaViolaBlu:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAir--
+                
+//             - ViolaViolaGiallo:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryEarth --
+                
+//             - ViolaViolaRosso:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryFire --
                 
         
         
+//         //Varizioni di tre colori
+//             - RossoGialloBlu: 
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryAir--
+            
+//             - RossoGialloVerde: 
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryWater--
+            
+//             - RossoGialloViola: 
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryAether --
+            
+//             - RossoBluVerde: 
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryWater--
+            
+//             - RossoBluViola: 
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAether --
+            
+//             - RossoBluGiallo: 
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryEarth --
+            
+//             - RossoVerdeBlu: 
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryAir--
+            
+//             - RossoVerdeViola: 
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryAether --
+            
+//             - RossoVerdeGiallo: 
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryEarth --
+            
+//             - RossoViolaGiallo:
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryEarth --
+                
+//             - RossoViolaVerde:
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryWater--
+                
+//             - RossoViolaBlu:
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++ 
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAir--
+                
         
         
-            - GialloRossoVerde:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryGreen --
+        
+        
+//             - GialloRossoVerde:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryWater--
                 
-            - GialloRossoViola:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryPurple --
+//             - GialloRossoViola:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryAether --
                 
-            - GialloRossoBlu:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryBlue --
+//             - GialloRossoBlu:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryAir--
                 
-            - GialloBluVerde:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryGreen --
+//             - GialloBluVerde:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryWater--
                 
-            - GialloBluViola:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryPurple --
+//             - GialloBluViola:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAether --
                 
-            - GialloBluRosso:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryRed --
+//             - GialloBluRosso:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryFire --
                 
-            - GialloVerdeViola:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryPurple --
+//             - GialloVerdeViola:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryAether --
                 
-            - GialloVerdeBlu:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryBlue --
+//             - GialloVerdeBlu:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryAir--
                 
-            - GialloVerdeRosso:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryRed --
+//             - GialloVerdeRosso:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryFire --
                 
-            - GialloViolaVerde:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryGreen --
+//             - GialloViolaVerde:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryWater--
                 
-            - GialloViolaBlu:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryBlue --
+//             - GialloViolaBlu:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAir--
                 
-            - GialloViolaRosso:
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryYellow ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryRed --
-                
-                
+//             - GialloViolaRosso:
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryEarth ++
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryFire --
                 
                 
                 
-            
-            - BluRossoVerde:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryRed ++
-                ~ nest_temporaryRed ++
                 
-            - BluRossoViola:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryPurple --
-                
-            - BluRossoGiallo:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryYellow --
-                
-            - BluGialloVerde:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryGreen --
-                
-            - BluGialloViola:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryPurple --
-                
-            - BluGialloRosso:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryRed --
-                
-            - BluVerdeViola:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryPurple --
-                
-            - BluVerdeGiallo:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryYellow --
-                
-            - BluVerdeRosso:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryRed --
-                
-            - BluViolaVerde:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryGreen --
-                
-            - BluViolaBlu:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryBlue --
-                
-            - BluViolaGiallo:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryYellow --
-                
-            - BluViolaRosso:
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryBlue ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryRed --
                 
             
-            - VerdeRossoViola:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryPurple --
+//             - BluRossoVerde:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryFire ++
+//                 ~ nest_temporaryFire ++
                 
-            - VerdeRossoBlu:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryBlue --
+//             - BluRossoViola:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryAether --
                 
-            - VerdeRossoGiallo:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryYellow --
+//             - BluRossoGiallo:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryEarth --
                 
-            - VerdeGialloViola:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryPurple --
+//             - BluGialloVerde:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryWater--
                 
-            - VerdeGialloBlu:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryBlue --
+//             - BluGialloViola:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryAether --
                 
-            - VerdeBluViola:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryPurple --
+//             - BluGialloRosso:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryFire --
                 
-            - VerdeBluGiallo:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryYellow --
+//             - BluVerdeViola:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryAether --
                 
-            - VerdeBluRosso:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryRed --
+//             - BluVerdeGiallo:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryEarth --
                 
-            - VerdeGialloRosso:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryRed --
+//             - BluVerdeRosso:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryFire --
                 
-            - VerdeViolaBlu:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryBlue --
+//             - BluViolaVerde:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryWater--
                 
-            - VerdeViolaGiallo:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryYellow --
+//             - BluViolaBlu:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAir--
                 
-            - VerdeViolaRosso:
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryGreen ++
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryPurple --
-                ~ nest_temporaryRed --
+//             - BluViolaGiallo:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryEarth --
+                
+//             - BluViolaRosso:
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAir++
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryFire --
                 
             
-            
-            
-            
+//             - VerdeRossoViola:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryAether --
+                
+//             - VerdeRossoBlu:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryAir--
+                
+//             - VerdeRossoGiallo:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryEarth --
+                
+//             - VerdeGialloViola:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryAether --
+                
+//             - VerdeGialloBlu:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryAir--
+                
+//             - VerdeBluViola:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAether --
+                
+//             - VerdeBluGiallo:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryEarth --
+                
+//             - VerdeBluRosso:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryFire --
+                
+//             - VerdeGialloRosso:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryFire --
+                
+//             - VerdeViolaBlu:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAir--
+                
+//             - VerdeViolaGiallo:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryEarth --
+                
+//             - VerdeViolaRosso:
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryWater++
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryAether --
+//                 ~ nest_temporaryFire --
+                
             
             
             
-            - ViolaRossoVerde:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryGreen --
+            
+            
+            
+            
+//             - ViolaRossoVerde:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryWater--
                 
-            - ViolaRossoBlu:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryBlue --
+//             - ViolaRossoBlu:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryAir--
                 
-            - ViolaRossoGiallo:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryRed --
-                ~ nest_temporaryRed --
-                ~ nest_temporaryYellow --
+//             - ViolaRossoGiallo:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryFire --
+//                 ~ nest_temporaryEarth --
                 
-            - ViolaGialloVerde:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryGreen --
+//             - ViolaGialloVerde:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryWater--
                 
-            - ViolaGialloBlu:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryBlue --
+//             - ViolaGialloBlu:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryAir--
                 
-            - ViolaGialloRosso:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryYellow --
-                ~ nest_temporaryRed --
+//             - ViolaGialloRosso:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryEarth --
+//                 ~ nest_temporaryFire --
                 
-            - ViolaBluVerde:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryGreen --
+//             - ViolaBluVerde:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryWater--
                 
-            - ViolaBluGiallo:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryYellow --
+//             - ViolaBluGiallo:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryEarth --
                 
-            - ViolaBluRosso:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryBlue --
-                ~ nest_temporaryRed --
+//             - ViolaBluRosso:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryAir--
+//                 ~ nest_temporaryFire --
                 
             
-            - ViolaVerdeBlu:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryBlue --
+//             - ViolaVerdeBlu:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryAir--
                 
-            - ViolaVerdeGiallo:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryYellow --
+//             - ViolaVerdeGiallo:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryEarth --
                 
-            - ViolaVerdeRosso:
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryPurple ++
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryGreen --
-                ~ nest_temporaryRed --
+//             - ViolaVerdeRosso:
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryAether ++
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryWater--
+//                 ~ nest_temporaryFire --
                 
             
-            -else: Valore colore parola {nest_activeEmotionalWord} non trovato!
-    }
+//             -else: Valore colore parola {nest_activeEmotionalWord} non trovato!
+//     }
 
 
 
 
-//E poi andiamo alle reazioni
-    {
-        - nest_currentTalker == FirstCharacter:
-            -> firstCharEmotionalActions
+// //E poi andiamo alle reazioni
+//     {
+//         - nest_currentTalker == FirstCharacter:
+//             -> firstCharEmotionalActions
         
-        - nest_currentTalker == SecondCharacter:
-            -> secondCharEmotionalActions
+//         - nest_currentTalker == SecondCharacter:
+//             -> secondCharEmotionalActions
         
-        - nest_currentTalker == Mentor:
-            -> fifthCharEmotionalActions
+//         - nest_currentTalker == Mentor:
+//             -> fifthCharEmotionalActions
     
-    }
+//     }
 
-    //Le reazioni le creiamo e gestiamo per gruppi di parole, non per singola parola.
+//     //Le reazioni le creiamo e gestiamo per gruppi di parole, non per singola parola.
 
         
-        = firstCharEmotionalActions
-            {debug_nest: entro in firstCharEmotionalActions.}
+//         = firstCharEmotionalActions
+//             {debug_nest: entro in firstCharEmotionalActions.}
             
-            {
+//             {
  
-                //Varianti monocolore
-                    - nest_redWords has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-                    - nest_yellowWords has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-                    - nest_blueWords  has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-                    - nest_greenWords has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-                    - nest_purpleWords has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//                 //Varianti monocolore
+//                     - nest_redWords has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//                     - nest_yellowWords has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//                     - nest_blueWords  has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//                     - nest_greenWords has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//                     - nest_purpleWords has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 
-                //Varianti a dominante Rosso
-                    - nest_redYellowWords has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-                    - nest_redBlueWords has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-                    - nest_redGreenWords has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-                    - nest_redPurpleWords has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//                 //Varianti a dominante Rosso
+//                     - nest_redYellowWords has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//                     - nest_redBlueWords has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//                     - nest_redGreenWords has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//                     - nest_redPurpleWords has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 
-                //Varianti a dominante Giallo
-                    - nest_yellowRedWords has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-                    - nest_yellowBlueWords has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-                    - nest_yellowGreenWords has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-                    - nest_yellowPurpleWords has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//                 //Varianti a dominante Giallo
+//                     - nest_yellowRedWords has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//                     - nest_yellowBlueWords has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//                     - nest_yellowGreenWords has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//                     - nest_yellowPurpleWords has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 
-                //Varianti a dominate blu
-                    - nest_blueRedWords has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-                    - nest_blueYellowWords has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-                    - nest_blueGreenWords has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-                    - nest_bluePurpleWords has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//                 //Varianti a dominate blu
+//                     - nest_blueRedWords has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//                     - nest_blueYellowWords has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//                     - nest_blueGreenWords has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//                     - nest_bluePurpleWords has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 
-                //Varianti a dominante verde
-                    - nest_greenRedWords has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-                    - nest_greenYellowWords has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-                    - nest_greenBlueWords has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-                    - nest_greenPurpleWords has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//                 //Varianti a dominante verde
+//                     - nest_greenRedWords has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//                     - nest_greenYellowWords has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//                     - nest_greenBlueWords has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//                     - nest_greenPurpleWords has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 
-                //Varianti a dominante viola
-                    - nest_purpleRedWords has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-                    - nest_purpleYellowWords has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-                    - nest_purpleBlueWords has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-                    - nest_purpleGreenWords has nest_activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-            }
+//                 //Varianti a dominante viola
+//                     - nest_purpleRedWords has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//                     - nest_purpleYellowWords has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//                     - nest_purpleBlueWords has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//                     - nest_purpleGreenWords has nest_activeEmotionalWord:
+//                         Reazione Chitarra alla presenza di {nest_activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+//             }
         
         
-            -> word_state_manager
+//             -> word_state_manager
         
         
-        = secondCharEmotionalActions
-            {debug_nest: entro in secondCharEmotionalActions.}
-            {
+//         = secondCharEmotionalActions
+//             {debug_nest: entro in secondCharEmotionalActions.}
+//             {
  
-                //Varianti monocolore
-                    - nest_redWords has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                    - nest_yellowWords has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                    - nest_blueWords  has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                    - nest_greenWords has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                    - nest_purpleWords has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//                 //Varianti monocolore
+//                     - nest_redWords has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//                     - nest_yellowWords has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//                     - nest_blueWords  has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//                     - nest_greenWords has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//                     - nest_purpleWords has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 
-                //Varianti a dominante Rosso
-                    - nest_redYellowWords has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                    - nest_redBlueWords has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                    - nest_redGreenWords has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                    - nest_redPurpleWords has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//                 //Varianti a dominante Rosso
+//                     - nest_redYellowWords has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//                     - nest_redBlueWords has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//                     - nest_redGreenWords has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//                     - nest_redPurpleWords has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 
-                //Varianti a dominante Giallo
-                    - nest_yellowRedWords has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                    - nest_yellowBlueWords has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                    - nest_yellowGreenWords has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                    - nest_yellowPurpleWords has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//                 //Varianti a dominante Giallo
+//                     - nest_yellowRedWords has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//                     - nest_yellowBlueWords has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//                     - nest_yellowGreenWords has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//                     - nest_yellowPurpleWords has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 
-                //Varianti a dominate blu
-                    - nest_blueRedWords has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                    - nest_blueYellowWords has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                    - nest_blueGreenWords has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                    - nest_bluePurpleWords has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//                 //Varianti a dominate blu
+//                     - nest_blueRedWords has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//                     - nest_blueYellowWords has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//                     - nest_blueGreenWords has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//                     - nest_bluePurpleWords has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 
-                //Varianti a dominante verde
-                    - nest_greenRedWords has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                    - nest_greenYellowWords has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                    - nest_greenBlueWords has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                    - nest_greenPurpleWords has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//                 //Varianti a dominante verde
+//                     - nest_greenRedWords has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//                     - nest_greenYellowWords has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//                     - nest_greenBlueWords has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//                     - nest_greenPurpleWords has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 
-                //Varianti a dominante viola
-                    - nest_purpleRedWords has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                    - nest_purpleYellowWords has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                    - nest_purpleBlueWords has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                    - nest_purpleGreenWords has nest_activeEmotionalWord:
-                        Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-            }
+//                 //Varianti a dominante viola
+//                     - nest_purpleRedWords has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//                     - nest_purpleYellowWords has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//                     - nest_purpleBlueWords has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//                     - nest_purpleGreenWords has nest_activeEmotionalWord:
+//                         Reazione Riccio alla presenza di {nest_activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//             }
         
         
-            -> word_state_manager
+//             -> word_state_manager
         
         
-        = fifthCharEmotionalActions
-            {debug_nest: entro in fifthCharEmotionalActions.}
-            {
+//         = fifthCharEmotionalActions
+//             {debug_nest: entro in fifthCharEmotionalActions.}
+//             {
  
-                //Varianti monocolore
-                    - nest_redWords has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-                    - nest_yellowWords has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-                    - nest_blueWords  has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-                    - nest_greenWords has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-                    - nest_purpleWords has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//                 //Varianti monocolore
+//                     - nest_redWords has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//                     - nest_yellowWords has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//                     - nest_blueWords  has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//                     - nest_greenWords has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//                     - nest_purpleWords has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                 
-                //Varianti a dominante Rosso
-                    - nest_redYellowWords has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-                    - nest_redBlueWords has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-                    - nest_redGreenWords has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-                    - nest_redPurpleWords has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//                 //Varianti a dominante Rosso
+//                     - nest_redYellowWords has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//                     - nest_redBlueWords has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//                     - nest_redGreenWords has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//                     - nest_redPurpleWords has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                 
-                //Varianti a dominante Giallo
-                    - nest_yellowRedWords has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-                    - nest_yellowBlueWords has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-                    - nest_yellowGreenWords has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-                    - nest_yellowPurpleWords has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//                 //Varianti a dominante Giallo
+//                     - nest_yellowRedWords has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//                     - nest_yellowBlueWords has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//                     - nest_yellowGreenWords has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//                     - nest_yellowPurpleWords has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                 
-                //Varianti a dominate blu
-                    - nest_blueRedWords has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-                    - nest_blueYellowWords has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-                    - nest_blueGreenWords has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-                    - nest_bluePurpleWords has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//                 //Varianti a dominate blu
+//                     - nest_blueRedWords has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//                     - nest_blueYellowWords has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//                     - nest_blueGreenWords has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//                     - nest_bluePurpleWords has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                 
-                //Varianti a dominante verde
-                    - nest_greenRedWords has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-                    - nest_greenYellowWords has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-                    - nest_greenBlueWords has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-                    - nest_greenPurpleWords has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//                 //Varianti a dominante verde
+//                     - nest_greenRedWords has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//                     - nest_greenYellowWords has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//                     - nest_greenBlueWords has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//                     - nest_greenPurpleWords has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                 
-                //Varianti a dominante viola
-                    - nest_purpleRedWords has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-                    - nest_purpleYellowWords has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-                    - nest_purpleBlueWords has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-                    - nest_purpleGreenWords has nest_activeEmotionalWord:
-                        Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-            }
+//                 //Varianti a dominante viola
+//                     - nest_purpleRedWords has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//                     - nest_purpleYellowWords has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//                     - nest_purpleBlueWords has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//                     - nest_purpleGreenWords has nest_activeEmotionalWord:
+//                         Reazione Mentore alla presenza di {nest_activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+//             }
         
             
             -> word_state_manager
@@ -1576,34 +1576,34 @@ LIST nest_varpg_status = varPGYes, varPGNo
     //Prima aggiorniamo i dati a seconda dei parlanti
     {
         - nest_currentTalker == FirstCharacter:
-            ~ firstChar_red += nest_temporaryRed
-            ~ firstChar_yellow += nest_temporaryYellow
-            ~ firstChar_blue += nest_temporaryBlue
-            ~ firstChar_green += nest_temporaryGreen
-            ~ firstChar_purple += nest_temporaryPurple
+            ~ firstChar_fire+= nest_temporaryFire
+            ~ firstChar_earth += nest_temporaryEarth
+            ~ firstChar_air += nest_temporaryAir
+            ~ firstChar_water += nest_temporaryWater
+            ~ firstChar_aether += nest_temporaryAether
         
         - nest_currentTalker == SecondCharacter:
-            ~ secondChar_red += nest_temporaryRed
-            ~ secondChar_yellow += nest_temporaryYellow
-            ~ secondChar_blue += nest_temporaryBlue
-            ~ secondChar_green += nest_temporaryGreen
-            ~ secondChar_purple += nest_temporaryPurple
+            ~ secondChar_fire += nest_temporaryFire
+            ~ secondChar_earth += nest_temporaryEarth
+            ~ secondChar_air += nest_temporaryAir
+            ~ secondChar_water += nest_temporaryWater
+            ~ secondChar_aether += nest_temporaryAether
         
         - nest_currentTalker == Mentor:
-            ~ mentor_red += nest_temporaryRed
-            ~ mentor_yellow += nest_temporaryYellow
-            ~ mentor_blue += nest_temporaryBlue
-            ~ mentor_green += nest_temporaryGreen
-            ~ mentor_purple += nest_temporaryPurple
+            ~ mentor_fire += nest_temporaryFire
+            ~ mentor_earth += nest_temporaryEarth
+            ~ mentor_air += nest_temporaryAir
+            ~ mentor_water += nest_temporaryWater
+            ~ mentor_aether += nest_temporaryAether
     }
 
     //Poi azzeriamo i valori temporanei
         ~ nest_currentTalker = ()
-        ~ nest_temporaryRed = 0
-        ~ nest_temporaryYellow = 0
-        ~ nest_temporaryBlue = 0
-        ~ nest_temporaryGreen = 0
-        ~ nest_temporaryPurple = 0
+        ~ nest_temporaryFire = 0
+        ~ nest_temporaryEarth = 0
+        ~ nest_temporaryAir= 0
+        ~ nest_temporaryWater= 0
+        ~ nest_temporaryAether = 0
     {debug_nest: dopo l'operazione il parlante attuale {nest_currentTalker}.}
 
 ->->

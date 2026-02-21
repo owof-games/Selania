@@ -14,52 +14,52 @@
 
 //Tracciamento colori giocatrice
     //Colori con cui traccio le scelte che riguardano "solo" me
-    VAR player_purple = 0.00
-    VAR player_yellow = 0.00
-    VAR player_blue = 0.00
-    VAR player_green = 0.00
-    VAR player_red = 0.00
+    VAR player_aether = 0.00
+    VAR player_earth = 0.00
+    VAR player_air = 0.00
+    VAR player_water = 0.00
+    VAR player_fire = 0.00
     
     //Scelte prima pg
-    VAR player_purple_first_char = 0.00
-    VAR player_yellow_first_char = 0.00
-    VAR player_blue_first_char = 0.00
-    VAR player_green_first_char = 0.00
-    VAR player_red_first_char = 0.00
+    VAR player_aether_first_char = 0.00
+    VAR player_earth_first_char = 0.00
+    VAR player_air_first_char = 0.00
+    VAR player_water_first_char = 0.00
+    VAR player_fire_first_char = 0.00
     
     //Scelte secondo pg
-    VAR player_purple_second_char = 0.00
-    VAR player_yellow_second_char = 0.00
-    VAR player_blue_second_char = 0.00
-    VAR player_green_second_char = 0.00
-    VAR player_red_second_char = 0.00
+    VAR player_aether_second_char = 0.00
+    VAR player_earth_second_char = 0.00
+    VAR player_air_second_char = 0.00
+    VAR player_water_second_char = 0.00
+    VAR player_fire_second_char = 0.00
     
     //Scelte mentore
-    VAR player_purple_mentor = 0.00
-    VAR player_yellow_mentor = 0.00
-    VAR player_blue_mentor = 0.00
-    VAR player_green_mentor = 0.00
-    VAR player_red_mentor = 0.00
+    VAR player_aether_mentor = 0.00
+    VAR player_earth_mentor = 0.00
+    VAR player_air_mentor = 0.00
+    VAR player_water_mentor = 0.00
+    VAR player_fire_mentor = 0.00
     
     //Scelte terzo pg
-    VAR player_purple_third_char = 0.00
-    VAR player_yellow_third_char = 0.00
-    VAR player_blue_third_char = 0.00
-    VAR player_green_third_char = 0.00
-    VAR player_red_third_char = 0.00
+    VAR player_aether_third_char = 0.00
+    VAR player_earth_third_char = 0.00
+    VAR player_air_third_char = 0.00
+    VAR player_water_third_char = 0.00
+    VAR player_fire_third_char = 0.00
     
     
     
 //Per funzione aggiornamento colore: tengono conto del valore di quel colore dellx PNG la cui storia è stata appena conclusa
-    VAR temp_PGRed = 0.00
-    VAR temp_PGGreen = 0.00
-    VAR temp_PGBlue = 0.00
-    VAR temp_PGYellow = 0.00
-    VAR temp_PGPurple  = 0.00    
+    VAR temp_PGFire= 0.00
+    VAR temp_PGWater = 0.00
+    VAR temp_PGAir = 0.00
+    VAR temp_PGEarth = 0.00
+    VAR temp_PGAether  = 0.00    
     
 
 // Lista che indica i possibli esiti delle varie sezioni dell'albero
-    LIST player_possibleStepsStatus = emptyStatus, blueStatus, purpleStatus, greenStatus, yellowStatus, redStatus, mixedStatus
+    LIST player_possibleStepsStatus = emptyStatus, airStatus, aetherStatus, waterStatus, earthStatus, fireStatus
     
     //E tracciamento dei vari status delle singole storie
     VAR player_firstStepStatus = emptyStatus
@@ -72,7 +72,7 @@
 //Lista che indica in modo progressivo gli step di avanzamento della crescita dellx PG e, quindi, dell'albero nella foresta
     LIST player_advancingSteps = player_firstStepClosed, player_secondStepClosed, player_thirdStepClosed, player_fourthStepClosed, player_fifthStepClosed
 
-    //Questa è una variabile temporanea che utilizzo in function PG_advance_management(charES) per poter tracciare quante storie ho concluso prima di questa, in modo da aggiornare la sezione corretta dell'albero (prima, seconda etc) col giusto colore (es: yellowStatus)
+    //Questa è una variabile temporanea che utilizzo in function PG_advance_management(charES) per poter tracciare quante storie ho concluso prima di questa, in modo da aggiornare la sezione corretta dell'albero (prima, seconda etc) col giusto colore (es: earthStatus)
     VAR player_orderGrowingTreeUpdater = ()
 
 
@@ -211,11 +211,11 @@
 
 //Prima cosa: svuoto i valori temporanei
     ~ player_orderGrowingTreeUpdater = ()
-	~ temp_PGGreen = ()
-	~ temp_PGBlue = ()
-	~ temp_PGRed = ()
-	~ temp_PGYellow = ()
-	~ temp_PGPurple = ()
+	~ temp_PGWater = ()
+	~ temp_PGAir = ()
+	~ temp_PGFire= ()
+	~ temp_PGEarth = ()
+	~ temp_PGAether = ()
 	
 //Seconda cosa: aggiorno lo step di 
     {
@@ -236,164 +236,164 @@
 //Terza cosa: a seconda della personaggia che se ne va, devo aggiornare i valori temporanei dei colori della PG
     {
 		- charES == FirstCharacter:
-			~ temp_PGGreen = player_green_first_char
-			~ temp_PGBlue = player_blue_first_char
-			~ temp_PGRed = player_red_first_char
-			~ temp_PGYellow = player_yellow_first_char
-			~ temp_PGPurple = player_purple_first_char
+			~ temp_PGWater = player_water_first_char
+			~ temp_PGAir = player_air_first_char
+			~ temp_PGFire= player_fire_first_char
+			~ temp_PGEarth = player_earth_first_char
+			~ temp_PGAether = player_aether_first_char
 		
 		
 		- charES == SecondCharacter:
-			~ temp_PGGreen = player_green_second_char
-			~ temp_PGBlue = player_blue_second_char
-			~ temp_PGRed = player_red_second_char
-			~ temp_PGYellow = player_yellow_second_char
-			~ temp_PGPurple = player_purple_second_char
+			~ temp_PGWater = player_water_second_char
+			~ temp_PGAir = player_air_second_char
+			~ temp_PGFire= player_fire_second_char
+			~ temp_PGEarth = player_earth_second_char
+			~ temp_PGAether = player_aether_second_char
 		
 					
 		- charES == ThirdCharacter:
-			~ temp_PGGreen = player_green_third_char
-			~ temp_PGBlue = player_blue_third_char
-			~ temp_PGRed = player_red_third_char
-			~ temp_PGYellow = player_yellow_third_char
-			~ temp_PGPurple = player_purple_third_char
+			~ temp_PGWater = player_water_third_char
+			~ temp_PGAir = player_air_third_char
+			~ temp_PGFire= player_fire_third_char
+			~ temp_PGEarth = player_earth_third_char
+			~ temp_PGAether = player_aether_third_char
 			
 		}
 
 
 //E poi confronto quella che è la storia della personaggia, la progressione delle sue scelte: di fatto per ora basta che non ci siano pareggi tra colori per evitare il marrone. A quel punto emerge il colore dominante.
     {
-        - (temp_PGGreen > temp_PGBlue) && (temp_PGGreen > temp_PGRed) && (temp_PGGreen > temp_PGYellow) && (temp_PGGreen > temp_PGPurple):
+        - (temp_PGWater > temp_PGAir) && (temp_PGWater > temp_PGFire) && (temp_PGWater > temp_PGEarth) && (temp_PGWater > temp_PGAether):
             
             {
                 - player_orderGrowingTreeUpdater == player_firstStepClosed:
                     ~ player_firstStepStatus = ()
-                    ~ player_firstStepStatus += greenStatus
+                    ~ player_firstStepStatus += waterStatus
                    {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
                 
                 - player_orderGrowingTreeUpdater == player_secondStepClosed:
                     ~ player_secondStepStatus = ()
-                    ~ player_secondStepStatus += greenStatus
+                    ~ player_secondStepStatus += waterStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}    
                 // - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
-                //     ~ player_thirdStepStatus += greenStatus
+                //     ~ player_thirdStepStatus += waterStatus
                 // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
-                //     ~ player_fourthStepStatus += greenStatus
+                //     ~ player_fourthStepStatus += waterStatus
                 // - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
-                //     ~ player_fifthStepStatus += greenStatus
+                //     ~ player_fifthStepStatus += waterStatus
                       - else:
                         ERRORE
             }
         
-        - (temp_PGBlue > temp_PGGreen) && (temp_PGBlue > temp_PGRed) && (temp_PGBlue > temp_PGYellow) && (temp_PGBlue > temp_PGPurple):
+        - (temp_PGAir > temp_PGWater) && (temp_PGAir > temp_PGFire) && (temp_PGAir > temp_PGEarth) && (temp_PGAir > temp_PGAether):
             {
                 - player_orderGrowingTreeUpdater == player_firstStepClosed:
                     ~ player_firstStepStatus = ()
-                    ~ player_firstStepStatus += blueStatus
+                    ~ player_firstStepStatus += airStatus
                     {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
                 
                 - player_orderGrowingTreeUpdater == player_secondStepClosed:
                     ~ player_secondStepStatus = ()
-                    ~ player_secondStepStatus += blueStatus
+                    ~ player_secondStepStatus += airStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
                 
                 // - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
-                //     ~ player_thirdStepStatus += blueStatus
+                //     ~ player_thirdStepStatus += airStatus
                 // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
-                //     ~ player_fourthStepStatus += blueStatus
+                //     ~ player_fourthStepStatus += airStatus
                 // - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
-                //     ~ player_fifthStepStatus += blueStatus
+                //     ~ player_fifthStepStatus += airStatus
                       - else:
                         ERRORE
             }        
         
-        - (temp_PGRed > temp_PGGreen) && (temp_PGRed > temp_PGBlue) && (temp_PGRed > temp_PGYellow) && (temp_PGRed > temp_PGPurple):
+        - (temp_PGFire> temp_PGWater) && (temp_PGFire> temp_PGAir) && (temp_PGFire> temp_PGEarth) && (temp_PGFire> temp_PGAether):
             {
                 - player_orderGrowingTreeUpdater == player_firstStepClosed:
                     ~ player_firstStepStatus = ()
-                    ~ player_firstStepStatus += redStatus
+                    ~ player_firstStepStatus += fireStatus
                     {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
                 
                 - player_orderGrowingTreeUpdater == player_secondStepClosed:
                     ~ player_secondStepStatus = ()
-                    ~ player_secondStepStatus += redStatus
+                    ~ player_secondStepStatus += fireStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
                 
                 // - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
-                //     ~ player_thirdStepStatus += redStatus
+                //     ~ player_thirdStepStatus += fireStatus
                 // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
-                //     ~ player_fourthStepStatus += redStatus
+                //     ~ player_fourthStepStatus += fireStatus
                 // - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
-                //     ~ player_fifthStepStatus += redStatus
+                //     ~ player_fifthStepStatus += fireStatus
                      - else:
                         ERRORE
             }    
         
-        - (temp_PGYellow > temp_PGGreen) && (temp_PGYellow > temp_PGBlue) && (temp_PGYellow > temp_PGRed) && (temp_PGYellow > temp_PGPurple):
+        - (temp_PGEarth > temp_PGWater) && (temp_PGEarth > temp_PGAir) && (temp_PGEarth > temp_PGFire) && (temp_PGEarth > temp_PGAether):
             {
                 - player_orderGrowingTreeUpdater == player_firstStepClosed:
                     ~ player_firstStepStatus = ()
-                    ~ player_firstStepStatus += yellowStatus
+                    ~ player_firstStepStatus += earthStatus
                     {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
                 
                 - player_orderGrowingTreeUpdater == player_secondStepClosed:
                     ~ player_secondStepStatus = ()
-                    ~ player_secondStepStatus += yellowStatus
+                    ~ player_secondStepStatus += earthStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
                 
                 // - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
-                //     ~ player_thirdStepStatus += yellowStatus
+                //     ~ player_thirdStepStatus += earthStatus
                 // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
-                //     ~ player_fourthStepStatus += yellowStatus
+                //     ~ player_fourthStepStatus += earthStatus
                 // - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
-                //     ~ player_fifthStepStatus += yellowStatus
+                //     ~ player_fifthStepStatus += earthStatus
                      - else:
                         ERRORE
             }    
         
-        - (temp_PGPurple > temp_PGGreen) && (temp_PGPurple > temp_PGBlue) && (temp_PGPurple > temp_PGRed) && (temp_PGPurple > temp_PGYellow):
+        - (temp_PGAether > temp_PGWater) && (temp_PGAether > temp_PGAir) && (temp_PGAether > temp_PGFire) && (temp_PGAether > temp_PGEarth):
             {
                 - player_orderGrowingTreeUpdater == player_firstStepClosed:
                     ~ player_firstStepStatus = ()
-                    ~ player_firstStepStatus += purpleStatus
+                    ~ player_firstStepStatus += aetherStatus
                     {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
                 
                 - player_orderGrowingTreeUpdater == player_secondStepClosed:
                     ~ player_secondStepStatus = ()
-                    ~ player_secondStepStatus += purpleStatus
+                    ~ player_secondStepStatus += aetherStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
                 
                 // - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
-                //     ~ player_thirdStepStatus += purpleStatus
+                //     ~ player_thirdStepStatus += aetherStatus
                 // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
-                //     ~ player_fourthStepStatus += purpleStatus
+                //     ~ player_fourthStepStatus += aetherStatus
                 // - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
-                //     ~ player_fifthStepStatus += purpleStatus
+                //     ~ player_fifthStepStatus += aetherStatus
                      - else:
                         ERRORE
             }
         
-        - else:
-            {
-                - player_orderGrowingTreeUpdater == player_firstStepClosed:
-                    ~ player_firstStepStatus = ()
-                    ~ player_thirdStepStatus += mixedStatus
-                    {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
+        // - else:
+        //     {
+        //         - player_orderGrowingTreeUpdater == player_firstStepClosed:
+        //             ~ player_firstStepStatus = ()
+        //             ~ player_thirdStepStatus += mixedStatus
+        //             {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
                     
-                - player_orderGrowingTreeUpdater == player_secondStepClosed:
-                    ~ player_secondStepStatus = ()
-                    ~ player_thirdStepStatus += mixedStatus
-                    {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
+        //         - player_orderGrowingTreeUpdater == player_secondStepClosed:
+        //             ~ player_secondStepStatus = ()
+        //             ~ player_thirdStepStatus += mixedStatus
+        //             {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
                     
-                // - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
-                //     ~ player_thirdStepStatus += mixedStatus
-                // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
-                //     ~ player_fourthStepStatus += mixedStatus
-                // - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
-                //     ~ player_fifthStepStatus += mixedStatus
-                     - else:
-                        ERRORE
-            }    
+        //         // - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
+        //         //     ~ player_thirdStepStatus += mixedStatus
+        //         // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
+        //         //     ~ player_fourthStepStatus += mixedStatus
+        //         // - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
+        //         //     ~ player_fifthStepStatus += mixedStatus
+        //              - else:
+        //                 ERRORE
+        //     }    
     
     }
 

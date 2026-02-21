@@ -32,6 +32,9 @@
 //Tracciamento del dono
     VAR fifthChar_giftedObject = ()
 
+//Tracciamento apprezzamento glifi. Tutto ciò che è fuori da questa lista = reazione neutrale.
+    VAR fifthChar_positiveGlyphs = ()
+    VAR fifthChar_negativeGlyphs = ()
     
 //Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
     VAR fifthChar_storyletsForRewritingCount = 0
@@ -50,11 +53,11 @@
     
 //STATI UP: ???
 //STATI DOWN: ???
-    VAR fifthChar_purple = 0.00
-    VAR fifthChar_yellow = 0.00
-    VAR fifthChar_blue = 0.00
-    VAR fifthChar_green = 0.00
-    VAR fifthChar_red = 0.00                    
+    VAR fifthChar_aether = 0.00
+    VAR fifthChar_earth = 0.00
+    VAR fifthChar_air = 0.00
+    VAR fifthChar_water = 0.00
+    VAR fifthChar_fire = 0.00                    
                      
                      
 

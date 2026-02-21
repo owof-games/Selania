@@ -58,7 +58,7 @@
     Prova a immaginare qual è la cosa più bella che puoi trovare.
 
         + [Un laboratorio di chimica?]
-                -> color_variation_management(SecondCharacter, blueC, varPGYes)->
+                -> color_variation_management(SecondCharacter, airC, varPGYes)->
             Non ci avevo pensato cavolo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
             Magari!
             Va bene: ho trovato la <i>seconda</i> cosa più bella che puoi trovare!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -66,24 +66,24 @@
             Credo!
     
         + [Un campetto da calcio!]
-                -> color_variation_management(SecondCharacter, redC, varPGYes)->
+                -> color_variation_management(SecondCharacter, fireC, varPGYes)->
             Ma mi hai ascoltato quando ho parlato?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
             Ti sembro uno che gioca a calcio?!?
      
         + [Un luogo dove meditare?]
-                -> color_variation_management(SecondCharacter, purpleC, varPGYes)->
+                -> color_variation_management(SecondCharacter, aetherC, varPGYes)->
             ...#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             Davvero?
             La cosa più bella per te è un posto dove devi dormire seduto?    
     
         + [La stanza dei videogiochi!]
-                -> color_variation_management(SecondCharacter, yellowC, varPGYes)->
+                -> color_variation_management(SecondCharacter, earthC, varPGYes)->
             Circa.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             Non c'è un video.
             Ma con alcuni ci puoi giocare.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
             
         + [Una camera con tutti i tuoi amici?]
-                -> color_variation_management(SecondCharacter, greenC, varPGYes)->
+                -> color_variation_management(SecondCharacter, waterC, varPGYes)->
             Sarebbe vuota.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
             No.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
         -
@@ -137,7 +137,7 @@
         }
 
         + [Li incollo, come dice Giracollo: i sassi devono stare fermi.]
-             -> color_variation_management(SecondCharacter, blueC, varPGYes)->
+             -> color_variation_management(SecondCharacter, airC, varPGYes)->
             Non mi piace come idea.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
             No.
             Questa è una cosa crudele.
@@ -148,7 +148,7 @@
                 }
     
         + [Indicherei loro un paio di case da distruggere.]
-            -> color_variation_management(SecondCharacter, redC, varPGYes)->
+            -> color_variation_management(SecondCharacter, fireC, varPGYes)->
             Uuuh, questa è cattiva!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
             Ma mi piace.
             Anche io ne ho un po'!
@@ -158,13 +158,13 @@
                 }
      
         + [Cercherei di capire le loro intenzioni.]
-            -> color_variation_management(SecondCharacter, purpleC, varPGYes)->
+            -> color_variation_management(SecondCharacter, aetherC, varPGYes)->
             Me le sono chieste anche io, sai?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             Perché alla fine il primo è in prigione.
             E se ci pensi proprio bene tutti i sassi sono in prigione, perché non si muovono da soli!
     
         + [Inizierei a saltellare in giro con loro. E fare dispetti al sindaco.]
-            -> color_variation_management(SecondCharacter, yellowC, varPGYes)->
+            -> color_variation_management(SecondCharacter, earthC, varPGYes)->
             Ahah sarebbe divertente!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
             Così ci lanciamo contro le finestre poi!
                 {
@@ -173,7 +173,7 @@
                 }
             
         + [Mi sarei pres{player_pronouns has him:o|{player_pronouns has her:a|ə}} cura dell'aragosta.]
-            -> color_variation_management(SecondCharacter, greenC, varPGYes)->
+            -> color_variation_management(SecondCharacter, waterC, varPGYes)->
             Già.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
             Alla fine non ha mica fatto nulla lei.
             Non capisco perché la vogliono sgozzare.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry

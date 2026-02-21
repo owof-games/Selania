@@ -55,6 +55,10 @@
 //Tracciamento del dono
     VAR firstChar_giftedObject = ()
 
+//Tracciamento apprezzamento glifi. Tutto ciò che è fuori da questa lista = reazione neutrale.
+    VAR firstChar_positiveGlyphs = ()
+    VAR firstChar_negativeGlyphs = ()
+
 //Tracciamento del racconto
     VAR frog_first_novel = ""
 
@@ -81,13 +85,13 @@
 //Moltiplicatore del colore per il personaggio
     VAR firstChar_colorVariation = 3.0    
     
-//STATI UP: Viola e Giallo.
-//STATI DOWN: Blu.
-    VAR firstChar_purple = 0.00
-    VAR firstChar_yellow = 0.00
-    VAR firstChar_blue = 0.00
-    VAR firstChar_green = 0.00
-    VAR firstChar_red = 0.00
+//STATI UP: water & aether.
+//STATI DOWN: Air.
+    VAR firstChar_aether = 0.00
+    VAR firstChar_earth = 0.00
+    VAR firstChar_air = 0.00
+    VAR firstChar_water = 0.00
+    VAR firstChar_fire= 0.00
 
 
 
@@ -106,7 +110,7 @@
 
     //In questa prima fase di testing, punterò su una soluzione di difficoltà media: basta che o giallo o viola siano maggiori del blu.
     {
-        - firstChar_purple or firstChar_green > firstChar_blue:
+        - firstChar_aether or firstChar_water > firstChar_air:
             ~ firstChar_relationshipStatus ++
             {debug: aumento l'inchiostro della prima personaggia di un livello. Ora è a {~ firstChar_relationshipStatus}}
     }
@@ -140,7 +144,7 @@
     //La soluzione più tosta potrebbe essere questa invece.
     
     //{
-    //    - firstChar_purple && firstChar_yellow > firstChar_blue:
+    //    - firstChar_aether && firstChar_earth > firstChar_air:
     //        ~ firstChar_relationshipStatus ++
     //            ->->
     //}
@@ -226,51 +230,51 @@
  
     {
         //Blu colore più usato
-        - (firstChar_blue > firstChar_green) && (firstChar_blue > firstChar_red) && (firstChar_blue > firstChar_yellow) && (firstChar_blue > firstChar_purple):
+        - (firstChar_air > firstChar_water) && (firstChar_air > firstChar_fire) && (firstChar_air > firstChar_earth) && (firstChar_air > firstChar_aether):
             ~ firstChar_ActualName += Triangolo
             {debug: passo per Triangolo e il nome è : {firstChar_ActualName}.}
                 ->->
         
         //Rosso colore più usato        
-        - (firstChar_red > firstChar_green) && (firstChar_red > firstChar_blue) && (firstChar_red > firstChar_yellow) && (firstChar_red > firstChar_purple):
+        - (firstChar_fire> firstChar_water) && (firstChar_fire> firstChar_air) && (firstChar_fire> firstChar_earth) && (firstChar_fire> firstChar_aether):
             ~ firstChar_ActualName += RagazzaOrchestra
             {debug: passo per Orchestra e il nome è : {firstChar_ActualName}.}
                 ->->
         
         //Verde colore più usato        
-        - (firstChar_green > firstChar_blue) && (firstChar_green > firstChar_red) && (firstChar_green > firstChar_yellow) && (firstChar_green > firstChar_purple):
+        - (firstChar_water > firstChar_air) && (firstChar_water > firstChar_fire) && (firstChar_water > firstChar_earth) && (firstChar_water > firstChar_aether):
             ~ firstChar_ActualName += Violino
             {debug: passo per Violino e il nome è : {firstChar_ActualName}.}
                 ->->
         
         //Giallo colore più usato        
-        - (firstChar_yellow > firstChar_green) && (firstChar_yellow > firstChar_red) && (firstChar_yellow > firstChar_blue) && (firstChar_yellow > firstChar_purple):
+        - (firstChar_earth > firstChar_water) && (firstChar_earth > firstChar_fire) && (firstChar_earth > firstChar_air) && (firstChar_earth > firstChar_aether):
             ~ firstChar_ActualName += Ocarina
             {debug: passo per Ocarina e il nome è : {firstChar_ActualName}.}
                 ->->
         
         //Viola colore più usato        
-        - (firstChar_purple > firstChar_green) && (firstChar_purple > firstChar_red) && (firstChar_purple > firstChar_yellow) && (firstChar_purple > firstChar_blue):
+        - (firstChar_aether > firstChar_water) && (firstChar_aether > firstChar_fire) && (firstChar_aether > firstChar_earth) && (firstChar_aether > firstChar_air):
         {debug: passo per FlautoDolce e il nome è : {firstChar_ActualName}.}
             ~ firstChar_ActualName += FlautoDolce    
                 ->->
                 
         - else:
             {
-                - (firstChar_purple < firstChar_blue) && (firstChar_green < firstChar_blue):
+                - (firstChar_aether < firstChar_air) && (firstChar_water < firstChar_air):
                         ~ firstChar_ActualName += Triangolo
                         {debug: passo per Triangolo e il nome è : {firstChar_ActualName}.}
                         ->->
                 
-                - firstChar_purple && firstChar_green > firstChar_blue:
+                - firstChar_aether && firstChar_water > firstChar_air:
                         ~ firstChar_ActualName += FlautoDolce
                             {debug: passo per FlautoDolce e il nome è : {firstChar_ActualName}.}
                         ->->
-                - (firstChar_green > firstChar_blue) && (not firstChar_purple > firstChar_blue):
+                - (firstChar_water > firstChar_air) && (not firstChar_aether > firstChar_air):
                         ~ firstChar_ActualName += Violino
                         {debug: passo per Violino e il nome è : {firstChar_ActualName}.}
                             ->->
-                - (firstChar_purple > firstChar_blue) && (not firstChar_green > firstChar_blue):
+                - (firstChar_aether > firstChar_air) && (not firstChar_water > firstChar_air):
                     {debug: passo per Ocarina e il nome è : {firstChar_ActualName}.}
                         ~ firstChar_ActualName += Ocarina 
                             ->->
