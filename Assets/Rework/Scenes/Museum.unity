@@ -729,11 +729,18 @@ MonoBehaviour:
     description: "I bottoni hanno un'animazione che viene visualizzata se il mouse
       ci va sopra (per i normali oggetti) o se il mouse non c'\xE8 sopra (per i personaggi)."
   - prefab: {fileID: 5900152936520379775, guid: 64c3cb6d1895f28419139a59f9300d8e, type: 3}
-    title: Save/Load
+    title: Save/Load (gamer mode)
     description: "Questa \xE8 una storia che va in loop e salva in un set di directory
       separato da quelle della storia principale, per test. La storia va in loop
       infinito (step 1..5 con una scelta in mezzo). Sono previsti tre slot di salvataggio,
       come in gamer mode."
+  - prefab: {fileID: 5900152936520379775, guid: 24ace19218f42ee4a85fde5cd1dd4220, type: 3}
+    title: Save/Load (reader mode)
+    description: "La stanza contiene un oggetto \"letto\" (diamante) che salva la
+      storia come reader mode quando ci si clicca sopra. Il quadrato permette di
+      cambiare e leggere lo stato corrente, cos\xEC da verificare che lo stato sia
+      stato correttamente salvato. Il bottone per far partire una nuova storia simula
+      l'avvio di una nuova storia e la rimozione dello slot in reader mode precedente."
 --- !u!4 &1073972271
 Transform:
   m_ObjectHideFlags: 0

@@ -33,7 +33,7 @@ namespace Selania.Rework.Components.Museum.GamerSaveManagement
         {
             var slot = loadSlotSelectorDropDown.value;
             Logger.ZLogInformation($"Load story in slot {slot}");
-            var saveDescriptor = StoryStateSerializer.GetExplicitSave(slot);
+            var saveDescriptor = StoryStateSerializer.GetExplicitSaveDescriptor(slot);
             if (saveDescriptor == null)
                 Logger.ZLogWarning($"No save in slot {slot}");
             else

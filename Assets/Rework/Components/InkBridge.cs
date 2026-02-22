@@ -117,7 +117,9 @@ namespace Selania.Rework.Components
         /// <summary>
         ///     Log the current state of the story and notifies listeners of it.
         /// </summary>
-        private void LogAndNotifyCurrentState()
+        /// <param name="justLoaded">Whether this update is the result of loading a save file. This is used to correctly
+        /// interpret the "@save" line as the <em>previous</em> request for saving.</param>
+        private void LogAndNotifyCurrentState(bool justLoaded = false)
         {
             var story = GetStory();
             logger.ZLogInformation($"Story text: {story.currentText.Trim()}");
@@ -125,8 +127,9 @@ namespace Selania.Rework.Components
 
             // allow the various subsystems to update their observables
             UpdateRoom();
-            UpdateCurrentText();
             UpdateCurrentChoices();
+            // this must remain the last line, because it could cause a new Continue() in case of a @save line
+            UpdateCurrentText(justLoaded);
         }
 
         /// <summary>
@@ -395,10 +398,14 @@ namespace Selania.Rework.Components
         public Observable<bool> conversationInProgressObservable =>
             _conversationInProgressSubject!.DistinctUntilChanged();
 
+        private const string SaveSpecialLine = "@save";
+
         /// <summary>
         ///     Update the listeners with the current text.
         /// </summary>
-        private void UpdateCurrentText()
+        /// <param name="justLoaded">Whether this update is the result of loading a save file. This is used to correctly
+        /// interpret the "@save" line as the <em>previous</em> request for saving.</param>
+        private void UpdateCurrentText(bool justLoaded)
         {
             var story = GetStory();
             var currentText = story.currentText.Trim();
@@ -412,6 +419,15 @@ namespace Selania.Rework.Components
             {
                 // e.g.: @interact
                 _conversationInProgressSubject!.OnNext(false);
+                // special handling: @save requires the game to save on a special slot for the reader mode
+                if (currentText != SaveSpecialLine) return;
+                if (justLoaded)
+                    logger.ZLogInformation(
+                        $"Skipping the @save instruction that produced this save and progressing");
+                else
+                    SaveReaderMode();
+
+                Continue();
             }
         }
 
@@ -538,9 +554,16 @@ namespace Selania.Rework.Components
 
         private string _saveDirPrefix = "save_dir_";
 
-        private string GetSlotDescriptor(int slot)
+        private const string ReaderModeSlotName = "reader_mode";
+
+        private string GetSlotDescriptor(string slot)
         {
             return $"{_saveDirPrefix}slot_{slot}";
+        }
+
+        private string GetSlotDescriptor(int slot)
+        {
+            return GetSlotDescriptor(slot.ToString());
         }
 
         private static string GetPathFromDescriptor(string descriptor)
@@ -566,7 +589,7 @@ namespace Selania.Rework.Components
                 var saveData = JsonUtility.FromJson<SaveData>(json);
                 story.state.LoadJson(saveData.inkStoryState);
                 logger.ZLogInformation($"Save file {descriptor} loaded!");
-                LogAndNotifyCurrentState();
+                LogAndNotifyCurrentState(true);
             }
             else
             {
@@ -577,7 +600,7 @@ namespace Selania.Rework.Components
         }
 
         /// <inheritdoc />
-        public IList<string> GetAutomaticSaves()
+        public IList<string> GetAutomaticSaveDescriptors()
         {
             return Directory.GetDirectories(Application.persistentDataPath, $"${_saveDirPrefix}auto_*",
                 SearchOption.TopDirectoryOnly);
@@ -609,8 +632,13 @@ namespace Selania.Rework.Components
             Save(GetSlotDescriptor(slot));
         }
 
+        private void SaveReaderMode()
+        {
+            Save(GetSlotDescriptor(ReaderModeSlotName));
+        }
+
         /// <inheritdoc />
-        public string? GetExplicitSave(int slot)
+        public string? GetExplicitSaveDescriptor(int slot)
         {
             var descriptor = GetSlotDescriptor(slot);
             return Directory.Exists(GetPathFromDescriptor(descriptor)) ? descriptor : null;
@@ -620,6 +648,22 @@ namespace Selania.Rework.Components
         public void DeleteSave(int slot)
         {
             var path = GetPathFromDescriptor(GetSlotDescriptor(slot));
+            if (Directory.Exists(path)) Directory.Delete(path, true);
+        }
+
+        /// <inheritdoc />
+        public string? GetReaderModeDescriptor()
+        {
+            var readerModeDescriptor = GetSlotDescriptor(ReaderModeSlotName);
+            var path = GetPathFromDescriptor(readerModeDescriptor);
+            return Directory.Exists(path) ? readerModeDescriptor : null;
+        }
+
+        /// <inheritdoc />
+        public void DeleteReaderModeSlot()
+        {
+            var readerModeDescriptor = GetSlotDescriptor(ReaderModeSlotName);
+            var path = GetPathFromDescriptor(readerModeDescriptor);
             if (Directory.Exists(path)) Directory.Delete(path, true);
         }
 

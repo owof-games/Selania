@@ -1,0 +1,412 @@
+﻿{
+  "inkVersion": 21,
+  "root": [
+    [
+      {
+        "->": "main"
+      },
+      [
+        "done",
+        {
+          "#f": 5,
+          "#n": "g-0"
+        }
+      ],
+      null
+    ],
+    "done",
+    {
+      "main": [
+        [
+          "^@interact",
+          "\n",
+          "ev",
+          "str",
+          "^Bed",
+          "/str",
+          "/ev",
+          {
+            "*": ".^.c-0",
+            "flg": 4
+          },
+          "ev",
+          "str",
+          "^CheckStatus",
+          "/str",
+          "/ev",
+          {
+            "*": ".^.c-1",
+            "flg": 4
+          },
+          {
+            "c-0": [
+              "\n",
+              "^Ora verrà salvato il gioco. ",
+              "#",
+              "^speaker:... ",
+              "/#",
+              "#",
+              "^inkA:offState ",
+              "/#",
+              "#",
+              "^inkB:offState ",
+              "/#",
+              "#",
+              "^inkC:offState ",
+              "/#",
+              "#",
+              "^inkD:offState ",
+              "/#",
+              "#",
+              "^portrait:witch_first_quarter",
+              "/#",
+              "\n",
+              "^@save",
+              "\n",
+              "^Questa riga si trova subito dopo il comando di salvataggio. ",
+              "#",
+              "^speaker:... ",
+              "/#",
+              "#",
+              "^inkA:offState ",
+              "/#",
+              "#",
+              "^inkB:offState ",
+              "/#",
+              "#",
+              "^inkC:offState ",
+              "/#",
+              "#",
+              "^inkD:offState ",
+              "/#",
+              "#",
+              "^portrait:witch_first_quarter",
+              "/#",
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-1": [
+              "\n",
+              "^Lo status corrente è ",
+              "ev",
+              {
+                "VAR?": "status"
+              },
+              "out",
+              "/ev",
+              "^. ",
+              "#",
+              "^speaker:... ",
+              "/#",
+              "#",
+              "^inkA:offState ",
+              "/#",
+              "#",
+              "^inkB:offState ",
+              "/#",
+              "#",
+              "^inkC:offState ",
+              "/#",
+              "#",
+              "^inkD:offState ",
+              "/#",
+              "#",
+              "^portrait:witch_first_quarter",
+              "/#",
+              "\n",
+              "^Scegli uno status ",
+              "#",
+              "^speaker:... ",
+              "/#",
+              "#",
+              "^inkA:offState ",
+              "/#",
+              "#",
+              "^inkB:offState ",
+              "/#",
+              "#",
+              "^inkC:offState ",
+              "/#",
+              "#",
+              "^inkD:offState ",
+              "/#",
+              "#",
+              "^portrait:witch_first_quarter",
+              "/#",
+              "\n",
+              [
+                [
+                  "ev",
+                  {
+                    "^->": "main.0.c-1.46.0.$r1"
+                  },
+                  {
+                    "temp=": "$r"
+                  },
+                  "str",
+                  {
+                    "->": ".^.s"
+                  },
+                  [
+                    {
+                      "#n": "$r1"
+                    }
+                  ],
+                  "/str",
+                  "/ev",
+                  {
+                    "*": ".^.^.c-0",
+                    "flg": 2
+                  },
+                  {
+                    "s": [
+                      "^0",
+                      {
+                        "->": "$r",
+                        "var": true
+                      },
+                      null
+                    ]
+                  }
+                ],
+                [
+                  "ev",
+                  {
+                    "^->": "main.0.c-1.46.1.$r1"
+                  },
+                  {
+                    "temp=": "$r"
+                  },
+                  "str",
+                  {
+                    "->": ".^.s"
+                  },
+                  [
+                    {
+                      "#n": "$r1"
+                    }
+                  ],
+                  "/str",
+                  "/ev",
+                  {
+                    "*": ".^.^.c-1",
+                    "flg": 2
+                  },
+                  {
+                    "s": [
+                      "^1",
+                      {
+                        "->": "$r",
+                        "var": true
+                      },
+                      null
+                    ]
+                  }
+                ],
+                [
+                  "ev",
+                  {
+                    "^->": "main.0.c-1.46.2.$r1"
+                  },
+                  {
+                    "temp=": "$r"
+                  },
+                  "str",
+                  {
+                    "->": ".^.s"
+                  },
+                  [
+                    {
+                      "#n": "$r1"
+                    }
+                  ],
+                  "/str",
+                  "/ev",
+                  {
+                    "*": ".^.^.c-2",
+                    "flg": 2
+                  },
+                  {
+                    "s": [
+                      "^2",
+                      {
+                        "->": "$r",
+                        "var": true
+                      },
+                      null
+                    ]
+                  }
+                ],
+                {
+                  "c-0": [
+                    "ev",
+                    {
+                      "^->": "main.0.c-1.46.c-0.$r2"
+                    },
+                    "/ev",
+                    {
+                      "temp=": "$r"
+                    },
+                    {
+                      "->": ".^.^.0.s"
+                    },
+                    [
+                      {
+                        "#n": "$r2"
+                      }
+                    ],
+                    "\n",
+                    "ev",
+                    0,
+                    "/ev",
+                    {
+                      "VAR=": "status",
+                      "re": true
+                    },
+                    {
+                      "->": "main.0.g-0"
+                    },
+                    {
+                      "#f": 5
+                    }
+                  ],
+                  "c-1": [
+                    "ev",
+                    {
+                      "^->": "main.0.c-1.46.c-1.$r2"
+                    },
+                    "/ev",
+                    {
+                      "temp=": "$r"
+                    },
+                    {
+                      "->": ".^.^.1.s"
+                    },
+                    [
+                      {
+                        "#n": "$r2"
+                      }
+                    ],
+                    "\n",
+                    "ev",
+                    1,
+                    "/ev",
+                    {
+                      "VAR=": "status",
+                      "re": true
+                    },
+                    {
+                      "->": "main.0.g-0"
+                    },
+                    {
+                      "#f": 5
+                    }
+                  ],
+                  "c-2": [
+                    "ev",
+                    {
+                      "^->": "main.0.c-1.46.c-2.$r2"
+                    },
+                    "/ev",
+                    {
+                      "temp=": "$r"
+                    },
+                    {
+                      "->": ".^.^.2.s"
+                    },
+                    [
+                      {
+                        "#n": "$r2"
+                      }
+                    ],
+                    "\n",
+                    "ev",
+                    2,
+                    "/ev",
+                    {
+                      "VAR=": "status",
+                      "re": true
+                    },
+                    {
+                      "->": "main.0.g-0"
+                    },
+                    {
+                      "#f": 5
+                    }
+                  ]
+                }
+              ],
+              {
+                "#f": 5
+              }
+            ],
+            "g-0": [
+              {
+                "->": "main"
+              },
+              {
+                "#f": 5
+              }
+            ]
+          }
+        ],
+        {
+          "#f": 1
+        }
+      ],
+      "global decl": [
+        "ev",
+        {
+          "list": {},
+          "origins": [
+            "listCharacters"
+          ]
+        },
+        {
+          "VAR=": "listCharacters"
+        },
+        {
+          "list": {},
+          "origins": [
+            "Items"
+          ]
+        },
+        {
+          "VAR=": "Items"
+        },
+        {
+          "list": {
+            "listCharacters.PG": 1,
+            "Items.CheckStatus": 1,
+            "Items.Bed": 2
+          }
+        },
+        {
+          "VAR=": "contentsRoom"
+        },
+        0,
+        {
+          "VAR=": "status"
+        },
+        "/ev",
+        "end",
+        null
+      ],
+      "#f": 1
+    }
+  ],
+  "listDefs": {
+    "listCharacters": {
+      "PG": 1
+    },
+    "Items": {
+      "CheckStatus": 1,
+      "Bed": 2
+    }
+  }
+}

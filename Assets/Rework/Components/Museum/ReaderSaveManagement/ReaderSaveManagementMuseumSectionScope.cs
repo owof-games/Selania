@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using VContainer;
 
-namespace Selania.Rework.Components.Museum.GamerSaveManagement
+namespace Selania.Rework.Components.Museum.ReaderSaveManagement
 {
-    public class GamerSaveManagementMuseumSectionScope : ScopeWithAutoInjectSupport
+    public class ReaderSaveManagementMuseumSectionScope : ScopeWithAutoInjectSupport
     {
         [SerializeField] [Tooltip("Settings of the game.")]
         private SelaniaSettings settings = null!;
@@ -15,7 +15,7 @@ namespace Selania.Rework.Components.Museum.GamerSaveManagement
         {
             builder.RegisterSettings(settings);
             builder.RegisterLogger(settings);
-            builder.RegisterInkBridgeInstance(inkBridge, "museum_gamer_mode_save_dir_");
+            builder.RegisterInkBridgeInstance(inkBridge, "museum_reader_mode_save_dir_");
         }
     }
 }
