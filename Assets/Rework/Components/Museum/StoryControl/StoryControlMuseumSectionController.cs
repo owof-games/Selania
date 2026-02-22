@@ -11,10 +11,12 @@ namespace Selania.Rework.Components.Museum.StoryControl
         [SerializeField] private Button simulateInteraction = null!;
 
         [Inject] internal IStoryLinear StoryLinear = null!;
+        [Inject] internal IStoryStateSerializer StoryStateSerializer = null!;
 
         private void Start()
         {
             StoryLinear.conversationInProgressObservable.Subscribe(ConversationInProgress).AddTo(this);
+            StoryStateSerializer.StartStory(null);
         }
 
         private void ConversationInProgress(bool isInProgress)

@@ -1,10 +1,9 @@
 using UnityEngine;
 using VContainer;
-using VContainer.Unity;
 
 namespace Selania.Rework.Components.Museum.MoveObjectsFromRoom
 {
-    public class MoveObjectsFromRoomScope : LifetimeScope
+    public class MoveObjectsFromRoomScope : ScopeWithAutoInjectSupport
     {
         [SerializeField] [Tooltip("The ink bridge used for this section.")]
         private InkBridge inkBridge = null!;

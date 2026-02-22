@@ -2,11 +2,10 @@
 using Selania.Rework.Interfaces;
 using UnityEngine;
 using VContainer;
-using VContainer.Unity;
 
 namespace Selania.Rework.Components.Museum.MoveBetweenRooms
 {
-    public class MoveBetweenRoomsMuseumSceneScope : LifetimeScope
+    public class MoveBetweenRoomsMuseumSceneScope : ScopeWithAutoInjectSupport
     {
         [SerializeField] [Tooltip("The ink bridge used for this section.")]
         private InkBridge inkBridge = null!;

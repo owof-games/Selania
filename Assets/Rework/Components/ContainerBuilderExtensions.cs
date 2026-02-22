@@ -36,7 +36,8 @@ namespace Selania.Rework.Components
                 .As<IStoryChangeRoomNotifier>()
                 .As<IStoryChoicesSelector>()
                 .As<IStoryLinear>()
-                .As<IStoryChangeRoomContentsNotifier>();
+                .As<IStoryChangeRoomContentsNotifier>()
+                .As<IStoryStateSerializer>();
         }
 
         /// <summary>
