@@ -17,7 +17,9 @@ namespace Selania.Rework.Components
         /// </summary>
         /// <param name="containerBuilder">The container builder used to register this instance.</param>
         /// <param name="inkBridge">The ink bridge to register.</param>
-        public static void RegisterInkBridgeInstance(this IContainerBuilder containerBuilder, InkBridge inkBridge)
+        /// <param name="saveDirPrefix">Prefix used for the save directories ("save_dir_" by default, if <c>null</c> is provided).</param>
+        public static void RegisterInkBridgeInstance(this IContainerBuilder containerBuilder, InkBridge inkBridge,
+            string? saveDirPrefix = null)
         {
             // flag used to set up the ink bridge only once per registration.
             var loggerResolved = false;
@@ -28,7 +30,7 @@ namespace Selania.Rework.Components
 
                     // otherwise, set up the ink bridge and return it afterward
                     var logger = resolver.Resolve<ILogger<InkBridge>>();
-                    inkBridge.SetUp(logger);
+                    inkBridge.SetUp(logger, saveDirPrefix);
                     loggerResolved = true;
                     return inkBridge;
                 }, Lifetime.Singleton)
