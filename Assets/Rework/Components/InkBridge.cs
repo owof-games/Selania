@@ -111,6 +111,15 @@ namespace Selania.Rework.Components
                 story.Continue();
             } while (string.IsNullOrWhiteSpace(story.currentText));
 
+            LogAndNotifyCurrentState();
+        }
+
+        /// <summary>
+        ///     Log the current state of the story and notifies listeners of it.
+        /// </summary>
+        private void LogAndNotifyCurrentState()
+        {
+            var story = GetStory();
             logger.ZLogInformation($"Story text: {story.currentText.Trim()}");
             foreach (var choice in story.currentChoices) logger.ZLogInformation($"Story choice: {choice.text.Trim()}");
 
@@ -557,6 +566,7 @@ namespace Selania.Rework.Components
                 var saveData = JsonUtility.FromJson<SaveData>(json);
                 story.state.LoadJson(saveData.inkStoryState);
                 logger.ZLogInformation($"Save file {descriptor} loaded!");
+                LogAndNotifyCurrentState();
             }
             else
             {
@@ -579,7 +589,7 @@ namespace Selania.Rework.Components
         /// <param name="dirName">The name of the directory where to put the save.</param>
         private void Save(string dirName)
         {
-            logger.ZLogInformation($"Saving save file in directory {dirName}.");
+            logger.ZLogInformation($"Saving save file in directory {dirName} in {Application.persistentDataPath}.");
             var story = GetStory();
             var inkStoryState = story.state.ToJson();
             var saveData = new SaveData
