@@ -59,9 +59,11 @@ namespace Selania.Rework.Components
         ///     Start the story. This sets up the internal state and runs the first <see cref="Continue" />.
         /// </summary>
         /// <param name="newLogger">The logger to use to log information about the story.</param>
-        public void SetUp(ILogger<InkBridge> newLogger)
+        /// <param name="saveDirPrefix">Prefix used for the save directories ("save_dir_" by default, if <c>null</c> is provided).</param>
+        public void SetUp(ILogger<InkBridge> newLogger, string? saveDirPrefix = null)
         {
             _logger = newLogger;
+            if (saveDirPrefix != null) _saveDirPrefix = saveDirPrefix;
 
             OnStartRoomLocation();
 
@@ -525,9 +527,11 @@ namespace Selania.Rework.Components
             public required string inkStoryState;
         }
 
-        private static string GetSlotDescriptor(int slot)
+        private string _saveDirPrefix = "save_dir_";
+
+        private string GetSlotDescriptor(int slot)
         {
-            return $"save_dir_slot_{slot}";
+            return $"{_saveDirPrefix}slot_{slot}";
         }
 
         private static string GetPathFromDescriptor(string descriptor)
@@ -565,7 +569,7 @@ namespace Selania.Rework.Components
         /// <inheritdoc />
         public IList<string> GetAutomaticSaves()
         {
-            return Directory.GetDirectories(Application.persistentDataPath, "save_dir_auto_*",
+            return Directory.GetDirectories(Application.persistentDataPath, $"${_saveDirPrefix}auto_*",
                 SearchOption.TopDirectoryOnly);
         }
 
