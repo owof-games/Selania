@@ -126,7 +126,7 @@ namespace Selania.Rework.Components
         private Story GetStory()
         {
             return _story == null
-                ? throw new InvalidOperationException("Trying to obtain the story before Start() has been called")
+                ? throw new InvalidOperationException("Trying to obtain the story before SetUp() has been called")
                 : _story;
         }
 
