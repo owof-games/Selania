@@ -728,6 +728,12 @@ MonoBehaviour:
     title: Hover Interactable
     description: "I bottoni hanno un'animazione che viene visualizzata se il mouse
       ci va sopra (per i normali oggetti) o se il mouse non c'\xE8 sopra (per i personaggi)."
+  - prefab: {fileID: 5900152936520379775, guid: 64c3cb6d1895f28419139a59f9300d8e, type: 3}
+    title: Save/Load
+    description: "Questa \xE8 una storia che va in loop e salva in un set di directory
+      separato da quelle della storia principale, per test. La storia va in loop
+      infinito (step 1..5 con una scelta in mezzo). Sono previsti tre slot di salvataggio,
+      come in gamer mode."
 --- !u!4 &1073972271
 Transform:
   m_ObjectHideFlags: 0
