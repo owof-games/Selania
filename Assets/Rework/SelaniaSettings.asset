@@ -47,6 +47,16 @@ MonoBehaviour:
     prefab: {fileID: 7337977647418521128, guid: 2ff04299d9fbd334db05fc482b51fec7, type: 3}
   - name: Pond
     prefab: {fileID: 7337977647418521128, guid: df183be542c1e28449b631b78e3a7ee1, type: 3}
+  - name: Greenhouse
+    prefab: {fileID: 7337977647418521128, guid: 17cdc7fc5bf27bb48a9760e1f16cdc93, type: 3}
+  - name: Kitchen
+    prefab: {fileID: 7337977647418521128, guid: dc11acf14a0b03e42be481830429c6ce, type: 3}
+  - name: Library
+    prefab: {fileID: 7337977647418521128, guid: 3908dbf6b83571d4fbb831da35fb82de, type: 3}
+  - name: Dump
+    prefab: {fileID: 7337977647418521128, guid: 7f70b7e88659d2248a91359847f8297f, type: 3}
+  - name: Nest
+    prefab: {fileID: 7337977647418521128, guid: 43c1873565904504d8899a3e34c3e861, type: 3}
   <minimumLogLevel>k__BackingField: 0
   _fileProviderSettings:
     categorySettingsArray: []
