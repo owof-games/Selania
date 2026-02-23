@@ -83,7 +83,7 @@ namespace Selania.Rework.Components
                         categorySettings.minimumLogLevel);
             });
 
-            // set up the registrations to allow fo ILogger<T> to be automatically instantiated
+            // set up the registrations to allow ILogger<T> to be automatically instantiated
             // see: https://github.com/hadashiA/VContainer/issues/715#issuecomment-2443123941
             builder.RegisterInstance(loggerFactory).As<ILoggerFactory>();
             builder.Register(typeof(Logger<>), Lifetime.Singleton).As(typeof(ILogger<>));
@@ -96,7 +96,11 @@ namespace Selania.Rework.Components
         /// <param name="settings">The settings object to register.</param>
         public static void RegisterSettings(this IContainerBuilder containerBuilder, SelaniaSettings settings)
         {
-            containerBuilder.RegisterInstance(settings).As<ISettingsDialogueBox>().As<ISettingsRooms>();
+            containerBuilder
+                .RegisterInstance(settings)
+                .As<ISettingsDialogueBox>()
+                .As<ISettingsRooms>()
+                .As<ISettingsAudio>();
         }
     }
 }

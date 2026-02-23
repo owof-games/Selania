@@ -10,7 +10,8 @@ namespace Selania.Rework.Components
 {
     [CreateAssetMenu(fileName = "Settings", menuName = "Selania/Settings")]
     [NoReorder]
-    public class SelaniaSettings : ScriptableObject, ISettingsDialogueBox, ISettingsLogger, ISettingsRooms
+    public class SelaniaSettings : ScriptableObject, ISettingsDialogueBox, ISettingsLogger, ISettingsRooms,
+        ISettingsAudio
     {
         #region dialogue box - text
 
@@ -218,6 +219,98 @@ namespace Selania.Rework.Components
         private ISettingsRooms.RoomMap[] roomsList = null!;
 
         public ICollection<ISettingsRooms.RoomMap> rooms => roomsList;
+
+        #endregion
+
+        #region
+
+        /// <summary>
+        ///     An audio clip with a name.
+        /// </summary>
+        [Serializable]
+        public class NamedAudioClip
+        {
+            /// <summary>
+            ///     Name of the audio clip.
+            /// </summary>
+            public required string name;
+
+            /// <summary>
+            ///     The audio clip itself.
+            /// </summary>
+            public required AudioClip clip;
+        }
+
+        /// <summary>
+        ///     A comparer for <see cref="NamedAudioClip" />s.
+        /// </summary>
+        private class NamedAudioClipComparer : EqualityComparer<NamedAudioClip>
+        {
+            public static readonly NamedAudioClipComparer DefaultComparer = new();
+
+            public override bool Equals(NamedAudioClip x, NamedAudioClip y)
+            {
+                return x.name == y.name && x.clip == y.clip;
+            }
+
+            public override int GetHashCode(NamedAudioClip obj)
+            {
+                return HashCode.Combine(obj.name, obj.clip);
+            }
+        }
+
+        [field: Title("Audio")]
+        [field: SerializeField]
+        [field: Tooltip("Cross-fade duration for ambient sounds and soundtracks in seconds.")]
+        public float crossFadeDuration { get; private set; } = .5f;
+
+        [SerializeField] [Tooltip("All the audio clips for ambient sounds.")]
+        private NamedAudioClip[] ambientSounds = null!;
+
+        [SerializeField] [Tooltip("All the audio clips for soundtracks.")]
+        private NamedAudioClip[] soundtracks = null!;
+
+        [SerializeField] [Tooltip("All the audio clips for sound effects.")]
+        private NamedAudioClip[] soundEffects = null!;
+
+        /// <summary>
+        ///     An object to create and cache a dictionary from the list of ambient sound audio clips.
+        /// </summary>
+        private readonly DerivedDictionaryProvider<string, AudioClip, NamedAudioClip> _ambientSoundsProvider =
+            new(namedAudioClip => namedAudioClip.name, namedAudioClip => namedAudioClip.clip,
+                NamedAudioClipComparer.DefaultComparer);
+
+        /// <summary>
+        ///     An object to create and cache a dictionary from the list of soundtracks audio clips.
+        /// </summary>
+        private readonly DerivedDictionaryProvider<string, AudioClip, NamedAudioClip> _soundtracksProvider =
+            new(namedAudioClip => namedAudioClip.name, namedAudioClip => namedAudioClip.clip,
+                NamedAudioClipComparer.DefaultComparer);
+
+        /// <summary>
+        ///     An object to create and cache a dictionary from the list of sound effects audio clips.
+        /// </summary>
+        private readonly DerivedDictionaryProvider<string, AudioClip, NamedAudioClip> _soundEffectsProvider =
+            new(namedAudioClip => namedAudioClip.name, namedAudioClip => namedAudioClip.clip,
+                NamedAudioClipComparer.DefaultComparer);
+
+        /// <inheritdoc />
+        public AudioClip GetAmbientSoundClip(string clipName)
+        {
+            return _ambientSoundsProvider.Get(ambientSounds)[clipName];
+        }
+
+        /// <inheritdoc />
+        public AudioClip GetSoundtrackClip(string clipName)
+        {
+            return _soundtracksProvider.Get(soundtracks)[clipName];
+        }
+
+        /// <inheritdoc />
+        public AudioClip GetSoundEffectClip(string clipName)
+        {
+            return _soundEffectsProvider.Get(soundEffects)[clipName];
+        }
 
         #endregion
 

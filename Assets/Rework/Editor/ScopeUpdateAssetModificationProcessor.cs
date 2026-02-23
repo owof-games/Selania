@@ -41,7 +41,7 @@ namespace Selania.Rework.Editor
                 var automaticEditorInjects = stage.prefabContentsRoot.GetComponentsInChildren<IAutomaticEditorInject>();
                 foreach (var automaticEditorInject in automaticEditorInjects)
                 {
-                    if (automaticEditorInject is not Component component)
+                    if (automaticEditorInject is not Component component || component == null)
                     {
                         Debug.LogWarning(
                             $"Found an object that implements {nameof(IAutomaticEditorInject)} but is not a component");

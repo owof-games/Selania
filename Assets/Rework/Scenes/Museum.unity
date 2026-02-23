@@ -741,6 +741,10 @@ MonoBehaviour:
       cambiare e leggere lo stato corrente, cos\xEC da verificare che lo stato sia
       stato correttamente salvato. Il bottone per far partire una nuova storia simula
       l'avvio di una nuova storia e la rimozione dello slot in reader mode precedente."
+  - prefab: {fileID: 5900152936520379775, guid: d7d0698ca5a8b55438f654ada749c550, type: 3}
+    title: Audio System
+    description: I bottoni lanciano un cross-fade della colonna sonora, dei suoni
+      ambientali, o suonano un SFX.
 --- !u!4 &1073972271
 Transform:
   m_ObjectHideFlags: 0
