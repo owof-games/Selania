@@ -13,7 +13,7 @@
     //        ~ move_entity(PG, BookPlace)
     //    -> main_book    
         
-    + {are_two_entities_together(PG, miniBook) && !debug_stochastic} [miniBook]
+    + {are_two_entities_together(PG, miniGrimoire) && !debug_stochastic} [miniGrimoire]
             ~ move_entity(PG, BookPlace)
         -> main_book      
  
@@ -23,7 +23,7 @@
         -> on_movement_events ->
         -> bedroom
     
-    + {are_two_entities_together(PG, RoomExit) && (not debug_stochastic)} [RoomExit]
+    + {are_two_entities_together(PG, BedClosingGame) && (not debug_stochastic)} [BedClosingGame]
     
             <i>Un letto morbido attende {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()} 
             
@@ -36,7 +36,7 @@
                     -> main
     
     //Solo scelta per l'amico stocastico
-    + {are_two_entities_together(PG, RoomExit) && (debug_stochastic == true) && (firstChar_storyStatus == story_storyEnded) && (secondChar_storyStatus == story_storyEnded)} [RoomExit]
+    + {are_two_entities_together(PG, BedClosingGame) && (debug_stochastic == true) && (firstChar_storyStatus == story_storyEnded) && (secondChar_storyStatus == story_storyEnded)} [BedClosingGame]
             @quit
                 -> END
 

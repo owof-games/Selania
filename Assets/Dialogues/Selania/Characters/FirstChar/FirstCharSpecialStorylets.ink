@@ -12,7 +12,7 @@
     - (bookUpdate)
 
         ~ move_entity(WitchRecap, BookPlace)
-        ~ move_entity(miniBook, Bedroom)
+        ~ move_entity(miniGrimoire, Bedroom)
         ~ move_entity(nightTable, Bedroom)
         @animation:RewriterBook
         ~ player_somethingStrange ++

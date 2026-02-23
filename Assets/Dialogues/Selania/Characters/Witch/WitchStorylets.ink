@@ -148,7 +148,7 @@
 
         ~ move_entity(RewriterBook, Forest)
         ~ move_entity(WitchRecap, BookPlace)
-        ~ move_entity(miniBook, Bedroom)
+        ~ move_entity(miniGrimoire, Bedroom)
         ~ move_entity(nightTable, Bedroom)
         ~ player_somethingStrange ++
         -> main
