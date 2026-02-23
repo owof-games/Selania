@@ -6,6 +6,6 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mirror Animator Override Controller
-  m_Controller: {fileID: 9100000, guid: b0357925c576f2c4182b9e2c59e21dc2, type: 2}
+  m_Name: FromForestToLibrary Mouse Over Animator Controller
+  m_Controller: {fileID: 0}
   m_Clips: []
