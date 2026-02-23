@@ -4,7 +4,7 @@
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
     LIST listCharacters = Mentor, PG, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, TheFrog, FifthCharacter, TheKitchenFrog
 
-    LIST listTransitions = FromTrainStopToForest, FromForestToTrainStop, FromForestToPond, FromForestToLibraryBlocked, FromForestToLibrary, FromPondToForest, FromPondToGreenhouse, FromPondToGreenhouseBlooming, FromPondToNest, FromPondToKitchen, FromPondToKitchenBlocked, FromGreenhouseToPond, FromLibraryToForest, FromLibraryToNest, FromLibraryToNestBlocked, FromLibraryToNestNight, FromNestToLibrary, FromKitchenToPond, FromPondToGreenhouseBlocked, FromLibraryToNestBlockedNight
+    LIST listTransitions = FromTrainStopToForest, FromForestToTrainStop, FromForestToPond, FromForestToLibraryBlocked, FromForestToLibrary, FromPondToForest, FromPondToGreenhouse, FromPondToGreenhouseBlooming, FromPondToNest, FromPondToKitchen, FromPondToKitchenBlocked, FromGreenhouseToPond, FromLibraryToForest, FromLibraryToNest, FromLibraryToNestBlocked, FromLibraryToNestNight, FromNestToLibrary, FromKitchenToPond, FromPondToGreenhouseBlocked, FromLibraryToNestBlockedNight, FromForestToDumpBlocked, FromForestToDump
     
     LIST listStaticObjects = Bench, WateringCan, TheWitch, ReadingPlace, StartingNote, Arbustini, MoonTrees, ELManagement, DoggoNoNotes
     
