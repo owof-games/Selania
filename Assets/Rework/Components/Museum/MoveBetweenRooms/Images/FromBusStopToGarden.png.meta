@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FromBusStopToGarden_0: -7232251204292417248
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

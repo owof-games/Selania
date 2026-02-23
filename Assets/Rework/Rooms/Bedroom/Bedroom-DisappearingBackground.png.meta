@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bedroom-DisappearingBackground_0: 8330986033855489934
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -45,6 +45,8 @@ MonoBehaviour:
     prefab: {fileID: 7337977647418521128, guid: ebc5c4bcd63c4444ca225338e3fd02a2, type: 3}
   - name: Forest
     prefab: {fileID: 7337977647418521128, guid: 2ea6eece93300314aa0cfb07ba37a337, type: 3}
+  - name: Pond
+    prefab: {fileID: 7337977647418521128, guid: 34cc2b399f7338c4b91d479235087cf6, type: 3}
   <minimumLogLevel>k__BackingField: 0
   _fileProviderSettings:
     categorySettingsArray: []
