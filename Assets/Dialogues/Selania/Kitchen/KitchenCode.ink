@@ -41,13 +41,13 @@
     //             {
     //                 - kitchen == 1:
     //                 ~ saturationVar ++
-    //                 ~ move_entity(teaKit, Bedroom)
+    //                 ~ move_entity(kitchenOpened, Bedroom)
     //             }
     // }
         // {
-    //     - contentsBedroom hasnt teaKit:
+    //     - contentsBedroom hasnt kitchenOpened:
         
-    //         ~ move_entity(teaKit, Bedroom)
+    //         ~ move_entity(kitchenOpened, Bedroom)
     
     //                 ~ saturationVar ++
  

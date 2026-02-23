@@ -1100,7 +1100,7 @@
      {
        - ending_cultivation == 1:
            ~ saturationVar ++
-           ~ move_entity(cultivationKit, Bedroom)
+           ~ move_entity(greenhouseOpened, Bedroom)
      }
     
     {

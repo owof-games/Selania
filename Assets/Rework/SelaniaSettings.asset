@@ -40,7 +40,7 @@ MonoBehaviour:
   <percentageBetweenNormalAndGreatHeart>k__BackingField: 0.8
   roomsList:
   - name: Bedroom
-    prefab: {fileID: 7337977647418521128, guid: 5931d58a004c96142b75a5a93dfbedd1, type: 3}
+    prefab: {fileID: 7337977647418521128, guid: 38db6262b2eb22f439906594b130e223, type: 3}
   - name: TrainStop
     prefab: {fileID: 7337977647418521128, guid: 348c96e96c9c3994dab731f0daa56083, type: 3}
   - name: Forest

@@ -42,7 +42,7 @@
 
 
 //Streets to Bus Stop
-    + {are_two_entities_together(PG, RoomLoad)} [RoomLoad]
+    + {are_two_entities_together(PG, FromBedroomToTrainStop)} [FromBedroomToTrainStop]
         ~ move_entity(PG, TrainStop)
             -> train_stop
     

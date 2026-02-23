@@ -21,6 +21,6 @@
         {
             - click == 1:
             ~ saturationVar ++
-            ~ move_entity(littleLibrary, Bedroom)
+            ~ move_entity(libraryOpened, Bedroom)
         }
         -> book_test_intro
