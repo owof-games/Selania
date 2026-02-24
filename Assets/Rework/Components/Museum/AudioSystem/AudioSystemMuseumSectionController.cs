@@ -8,6 +8,13 @@ namespace Selania.Rework.Components.Museum.AudioSystem
     {
         [Inject] internal IAudioSystem AudioSystem = null!;
 
+        [Inject] internal IStoryLinear StoryLinear = null!;
+
+        public void AdvanceStory()
+        {
+            StoryLinear.Continue();
+        }
+
         public void PlaySoundtrackNormal()
         {
             AudioSystem.CrossFadeToSoundtrack("normal");

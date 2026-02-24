@@ -18,7 +18,7 @@ namespace Selania.Rework.Components
     /// </summary>
     [CreateAssetMenu(fileName = "InkBridge", menuName = "Selania/Create Ink Bridge", order = 0)]
     public class InkBridge : ScriptableObjectSetupSupport, IStoryChangeRoomNotifier, IStoryChoicesSelector,
-        IStoryLinear, IStoryChangeRoomContentsNotifier, IStoryStateSerializer
+        IStoryLinear, IStoryChangeRoomContentsNotifier, IStoryStateSerializer, IStoryAudioSupport
     {
         [Header("Ink Settings")] [SerializeField] [Tooltip("The JSON asset containing the story.")]
         private TextAsset? inkAssetJson;
@@ -125,11 +125,15 @@ namespace Selania.Rework.Components
             logger.ZLogInformation($"Story text: {story.currentText.Trim()}");
             foreach (var choice in story.currentChoices) logger.ZLogInformation($"Story choice: {choice.text.Trim()}");
 
+            // extract the tags
+            var tags = MakeTags(story.currentTags);
+
             // allow the various subsystems to update their observables
             UpdateRoom();
             UpdateCurrentChoices();
+            UpdateAudio(tags);
             // this must remain the last line, because it could cause a new Continue() in case of a @save line
-            UpdateCurrentText(justLoaded);
+            UpdateCurrentText(tags, justLoaded);
         }
 
         /// <summary>
@@ -150,6 +154,7 @@ namespace Selania.Rework.Components
             SetupRoomContents();
             SetupLinearProgression();
             SetupChoices();
+            SetupAudio();
         }
 
         /// <inheritdoc />
@@ -158,8 +163,8 @@ namespace Selania.Rework.Components
             CleanupRoomContents();
             CleanupLinearProgression();
             CleanupChoices();
+            CleanupAudio();
         }
-
 
         #region room location / contents
 
@@ -403,9 +408,10 @@ namespace Selania.Rework.Components
         /// <summary>
         ///     Update the listeners with the current text.
         /// </summary>
+        /// <param name="tags">The list of tags computed.</param>
         /// <param name="justLoaded">Whether this update is the result of loading a save file. This is used to correctly
         /// interpret the "@save" line as the <em>previous</em> request for saving.</param>
-        private void UpdateCurrentText(bool justLoaded)
+        private void UpdateCurrentText(ICollection<Tag> tags, bool justLoaded)
         {
             var story = GetStory();
             var currentText = story.currentText.Trim();
@@ -413,7 +419,7 @@ namespace Selania.Rework.Components
             {
                 _conversationInProgressSubject!.OnNext(true);
                 _currentTextObservable!.OnNext(
-                    new IStoryLinear.CurrentTextInfo(currentText, MakeTags(story.currentTags)));
+                    new IStoryLinear.CurrentTextInfo(currentText, tags));
             }
             else
             {
@@ -665,6 +671,42 @@ namespace Selania.Rework.Components
             var readerModeDescriptor = GetSlotDescriptor(ReaderModeSlotName);
             var path = GetPathFromDescriptor(readerModeDescriptor);
             if (Directory.Exists(path)) Directory.Delete(path, true);
+        }
+
+        #endregion
+
+        #region audio
+
+        private ReplaySubject<string> _soundtrackSubject = null!;
+
+        public Observable<string> soundtrackObservable => _soundtrackSubject.DistinctUntilChanged();
+
+        private ReplaySubject<string> _ambientSoundsSubject = null!;
+
+        public Observable<string> ambientSoundsObservable => _ambientSoundsSubject.DistinctUntilChanged();
+
+        private void SetupAudio()
+        {
+            _soundtrackSubject = new ReplaySubject<string>(1);
+            _ambientSoundsSubject = new ReplaySubject<string>(1);
+        }
+
+        private void CleanupAudio()
+        {
+            _soundtrackSubject.Dispose();
+            _ambientSoundsSubject.Dispose();
+        }
+
+        private void UpdateAudio(ICollection<Tag> tags)
+        {
+            EmitAudioSignal(tags, "ambientSounds", _ambientSoundsSubject);
+            EmitAudioSignal(tags, "soundtrack", _soundtrackSubject);
+        }
+
+        private static void EmitAudioSignal(ICollection<Tag> tags, string category, ReplaySubject<string> subject)
+        {
+            var tag = tags.FirstOrDefault(tag => tag.category == category);
+            if (tag is { value: not null }) subject.OnNext(tag.value);
         }
 
         #endregion
