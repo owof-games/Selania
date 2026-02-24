@@ -1,6 +1,7 @@
     VAR debug_seedRandom = false
     
 //Per abilitare o meno i debug
+    VAR debug_openAll = true
     VAR debug = false
     VAR debug_cultivable = false
     VAR debug_changeName = false
@@ -26,6 +27,19 @@
 
 
 === debug_places_open ===
+
+{
+    - debug_openAll == true:
+
+            ~ debug_testLibrary = true
+            ~ debug_testKitchen = true
+            ~ debug_testNest = true
+            ~ debug_testDump = true
+            ~ debug_testGreenhouse = true
+        
+}
+
+
 {
     - debug_testDump == true && (entity_location(FromForestToDump) == Safekeeping):
         ~ move_entity(FromForestToDumpBlocked, Safekeeping)
