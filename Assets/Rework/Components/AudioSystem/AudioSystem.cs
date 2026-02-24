@@ -86,6 +86,7 @@ namespace Selania.Rework.Components.AudioSystem
             {
                 firstFreeAudioSource.clip = audioClip;
                 firstFreeAudioSource.Play();
+                return;
             }
 
             // otherwise, stop the one which is nearest to complete and use it
