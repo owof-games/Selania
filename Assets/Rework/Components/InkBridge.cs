@@ -689,6 +689,7 @@ namespace Selania.Rework.Components
         {
             _soundtrackSubject = new ReplaySubject<string>(1);
             _ambientSoundsSubject = new ReplaySubject<string>(1);
+            _soundtrackSubject.OnNext("normal");
         }
 
         private void CleanupAudio()
