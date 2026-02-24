@@ -1,4 +1,3 @@
-using System;
 using R3;
 using Selania.Rework.Interfaces;
 using UnityEngine;
@@ -15,13 +14,23 @@ namespace Selania.Rework.Components.Museum.Dialogue
         protected override void Configure(IContainerBuilder builder)
         {
             builder.RegisterLogger(settings);
-            builder.RegisterInstance(new EmptyStory()).As<IStoryLinear>().As<IStoryChoicesSelector>();
+            builder.Register<EmptyStory>(Lifetime.Singleton).As<IStoryLinear>().As<IStoryChoicesSelector>();
+            builder.Register<EmptyAudioSystem>(Lifetime.Singleton).As<IAudioSystem>();
             builder.RegisterInstance(settings).As<ISettingsDialogueBox>();
         }
 
-        private class EmptyDisposable : IDisposable
+        // ReSharper disable once ClassNeverInstantiated.Local - used by DI
+        private class EmptyAudioSystem : IAudioSystem
         {
-            public void Dispose()
+            public void CrossFadeToSoundtrack(string soundtrackName)
+            {
+            }
+
+            public void CrossFadeToAmbientSounds(string ambientSoundsName)
+            {
+            }
+
+            public void PlaySoundEffect(string soundEffectName)
             {
             }
         }

@@ -17,6 +17,23 @@ namespace Selania.Rework.Components.Museum.StoryControl
             builder.RegisterLogger(settings);
             builder.RegisterInkBridgeInstance(inkBridge);
             builder.RegisterInstance(settings).As<ISettingsDialogueBox>();
+            builder.Register<EmptyAudioSystem>(Lifetime.Singleton).As<IAudioSystem>();
+        }
+
+        // ReSharper disable once ClassNeverInstantiated.Local - used by DI
+        private class EmptyAudioSystem : IAudioSystem
+        {
+            public void CrossFadeToSoundtrack(string soundtrackName)
+            {
+            }
+
+            public void CrossFadeToAmbientSounds(string ambientSoundsName)
+            {
+            }
+
+            public void PlaySoundEffect(string soundEffectName)
+            {
+            }
         }
     }
 }

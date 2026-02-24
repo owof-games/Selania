@@ -52,7 +52,8 @@ namespace Selania.Rework.Components.DialogueBox
         /// <param name="isInProgress"><c>true</c> if a conversation is in progress, <c>false</c> otherwise.</param>
         private void ConversationInProgress(bool isInProgress)
         {
-            if (!isInProgress) dialogueBox.Hide();
+            if (isInProgress) return;
+            dialogueBox.Hide();
             // no need to explicitly handle the show part: adding a line of text or a choice automatically shows the
             // dialogue panel
         }

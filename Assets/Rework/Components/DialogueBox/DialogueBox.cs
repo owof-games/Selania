@@ -78,6 +78,11 @@ namespace Selania.Rework.Components.DialogueBox
         private bool _willUsePortrait1 = true;
 
         /// <summary>
+        ///     The audio system used to play sound effects.
+        /// </summary>
+        [Inject] internal IAudioSystem AudioSystem = null!;
+
+        /// <summary>
         ///     The logger used by this component.
         /// </summary>
         [Inject] internal ILogger<DialogueBox> Logger = null!;
@@ -155,6 +160,7 @@ namespace Selania.Rework.Components.DialogueBox
             if (_latestTextLine != null && !_latestTextLine.textCompletelyShown)
             {
                 Logger.ZLogTrace($"Requested to continue, but the text was still appearing: show it all.");
+                AudioSystem.PlaySoundEffect("advanceDialogue");
                 _latestTextLine.ShowAllText();
             }
             else if (_actualAddChoices != null)
@@ -165,6 +171,7 @@ namespace Selania.Rework.Components.DialogueBox
             }
             else
             {
+                AudioSystem.PlaySoundEffect("advanceDialogue");
                 Logger.ZLogTrace(
                     $"Requested to continue, and there was no text still appearing neither choices waiting: actually continue.");
                 _continueRequestsSubject!.OnNext(Unit.Default);
@@ -311,7 +318,17 @@ namespace Selania.Rework.Components.DialogueBox
             relationshipStatus.SetLevel(level);
         }
 
+        /// <summary>
+        ///     Invoked when the show animation starts.
+        /// </summary>
+        public void ShowAnimationStarted()
+        {
+            AudioSystem.PlaySoundEffect("openDialogue");
+        }
 
+        /// <summary>
+        ///     Invoked when the show animation completes.
+        /// </summary>
         public void ShowAnimationCompleted()
         {
             animator.SetBool(ShowAnimationCompletedAnimatorHash, true);
@@ -327,6 +344,14 @@ namespace Selania.Rework.Components.DialogueBox
             animator.SetBool(PortraitVisibleAnimatorHash, false);
             animator.SetBool(WordVisibleAnimatorHash, false);
             animator.SetBool(ShowAnimationCompletedAnimatorHash, false);
+        }
+
+        /// <summary>
+        ///     Invoked when the hide animation starts.
+        /// </summary>
+        public void HideAnimationStarted()
+        {
+            AudioSystem.PlaySoundEffect("closeDialogue");
         }
 
         /// <summary>
