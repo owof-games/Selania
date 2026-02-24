@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ebe5e072a1d4ae09987d1fbf98f1188, type: 3}
   m_Name: AudioSystemMuseumSectionInkBridge
   m_EditorClassIdentifier: Selania::Selania.Rework.Components.InkBridge
-  inkAssetJson: {fileID: 0}
+  inkAssetJson: {fileID: 4900000, guid: 094f93caa8744ec4fa137e49ad0c0aed, type: 3}
   debugWordsToDisable: []
   pgListName: listCharacters
   pgListItemName: PG
