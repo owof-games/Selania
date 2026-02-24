@@ -1836,7 +1836,7 @@ PrefabInstance:
     - target: {fileID: 7215676493785075422, guid: 0f1a688640c53d74893c657fe4343781, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: ca076f59f2c6f7c4897ef26d440900e4, type: 2}
+      objectReference: {fileID: 9100000, guid: f4fb94f8993275b4fb37c47cf682574d, type: 2}
     - target: {fileID: 7465546172250548277, guid: 0f1a688640c53d74893c657fe4343781, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2259,7 +2259,7 @@ PrefabInstance:
     - target: {fileID: 7215676493785075422, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: 9ca80c050e7a9cf4b8fa9cb8bd9f5af8, type: 2}
+      objectReference: {fileID: 9100000, guid: 0ad4c10a90af6fe44818c5a8bfef613d, type: 2}
     - target: {fileID: 7465546172250548277, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3602,7 +3602,7 @@ PrefabInstance:
     - target: {fileID: 7215676493785075422, guid: 0f1a688640c53d74893c657fe4343781, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: 65f2e1129d1db1d40b5ee967f7b7572e, type: 2}
+      objectReference: {fileID: 9100000, guid: fa5a16a53b2d7b74f96b30acf38c557b, type: 2}
     - target: {fileID: 7465546172250548277, guid: 0f1a688640c53d74893c657fe4343781, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3753,7 +3753,7 @@ PrefabInstance:
     - target: {fileID: 7215676493785075422, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: 3d97369ba4d217446b7b68b8e5d8610e, type: 2}
+      objectReference: {fileID: 9100000, guid: 35dec85a0de55b54c9293b6cebd2d787, type: 2}
     - target: {fileID: 7465546172250548277, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4504,7 +4504,7 @@ PrefabInstance:
     - target: {fileID: 7215676493785075422, guid: 0f1a688640c53d74893c657fe4343781, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: e631f0f9630b2e14fa6d22142b8a0ebf, type: 2}
+      objectReference: {fileID: 9100000, guid: a1ed1ab3a55333b4ebc382d24d776bd5, type: 2}
     - target: {fileID: 7465546172250548277, guid: 0f1a688640c53d74893c657fe4343781, type: 3}
       propertyPath: m_Sprite
       value: 

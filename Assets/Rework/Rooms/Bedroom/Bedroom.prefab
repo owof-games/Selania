@@ -1201,7 +1201,7 @@ PrefabInstance:
     - target: {fileID: 7215676493785075422, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: 88a1e9d8e69847844ba947ca4695215e, type: 2}
+      objectReference: {fileID: 9100000, guid: 5e4af2d778261c447bf11cc8044b7dce, type: 2}
     - target: {fileID: 7465546172250548277, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1737,7 +1737,7 @@ PrefabInstance:
     - target: {fileID: 7215676493785075422, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: 2d6bbb89850a0c145909e3e94c5eb813, type: 2}
+      objectReference: {fileID: 9100000, guid: c202a5869788b684582ea5970d70f161, type: 2}
     - target: {fileID: 7465546172250548277, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2051,7 +2051,7 @@ PrefabInstance:
     - target: {fileID: 7215676493785075422, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: 5d54b342164dd7a4492a1b18c39fe42a, type: 2}
+      objectReference: {fileID: 9100000, guid: d3559c530c55c564196d32a16b6eaa23, type: 2}
     - target: {fileID: 7465546172250548277, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2436,7 +2436,7 @@ PrefabInstance:
     - target: {fileID: 7215676493785075422, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: 2beebd20773d83a40bd517b9ed7e2790, type: 2}
+      objectReference: {fileID: 9100000, guid: 464e1953608e4d343800e272ed0fe45f, type: 2}
     - target: {fileID: 7465546172250548277, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2471,6 +2471,10 @@ PrefabInstance:
     - target: {fileID: 1131149654844477419, guid: ac96ec503ae11934b9f760a0e0e8316b, type: 3}
       propertyPath: m_Name
       value: 21 - kitchenOpened
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131149654844477419, guid: ac96ec503ae11934b9f760a0e0e8316b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4151842594449095391, guid: ac96ec503ae11934b9f760a0e0e8316b, type: 3}
       propertyPath: m_LocalScale.x
