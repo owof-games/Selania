@@ -421,6 +421,11 @@ namespace Selania.Rework.Components
                 _currentTextObservable!.OnNext(
                     new IStoryLinear.CurrentTextInfo(currentText, tags));
             }
+            else if (currentText.StartsWith("@animation"))
+            {
+                // special handling: @animation are no longer used, skip them
+                Continue();
+            }
             else
             {
                 // e.g.: @interact
