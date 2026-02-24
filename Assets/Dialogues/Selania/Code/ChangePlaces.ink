@@ -13,7 +13,7 @@
     //        ~ move_entity(PG, BookPlace)
     //    -> main_book    
         
-    + {are_two_entities_together(PG, miniGrimoire) && !debug_stochastic} [miniGrimoire]
+    + {are_two_entities_together(PG, MiniGrimoire) && !debug_stochastic} [MiniGrimoire]
             ~ move_entity(PG, BookPlace)
         -> main_book      
  
@@ -41,7 +41,7 @@
                 -> END
 
 
-//Streets to Bus Stop
+//Streets to Train Stop
     + {are_two_entities_together(PG, FromBedroomToTrainStop)} [FromBedroomToTrainStop]
         ~ move_entity(PG, TrainStop)
             -> train_stop

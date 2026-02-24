@@ -56,7 +56,6 @@
         ~ temp mentorName = translator(mentor_ActualName)
         
         ~ saturationVar ++
-        //~ move_entity(vase, Bedroom)
         
         <i>Le nostre radici ci connettono a nuove voci, nuove storie.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
         <b>Ci.</b>
@@ -148,7 +147,7 @@
 
         ~ move_entity(RewriterBook, Forest)
         ~ move_entity(WitchRecap, BookPlace)
-        ~ move_entity(miniGrimoire, Bedroom)
+        ~ move_entity(MiniGrimoire, Bedroom)
         ~ move_entity(nightTable, Bedroom)
         ~ player_somethingStrange ++
         -> main
@@ -235,5 +234,4 @@
             -> color_variation_management(PG, aetherC, varPGYes)->
         -        
     Cose.
-    ~ move_entity(vase, Bedroom)
 -> main

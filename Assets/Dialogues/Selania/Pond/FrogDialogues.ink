@@ -17,7 +17,6 @@
                 ~ player_somethingStrange ++
                 ~ saturationVar ++
                 ~ book_BGVariations ++
-                ~ move_entity(bowl, Bedroom)
                 ~ move_entity(FrogRecap, BookPlace)
 
             Ma dove avevo messo quel.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
