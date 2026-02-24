@@ -129,6 +129,15 @@
             // ~ movements_randomablePlaces += Library
             ~ player_accessiblePlaces += Library
     }
+    //Questa è una soluzione temporanea, da decidere poi come gestire
+    {
+        - second_char_main_storylets.three && (entity_location(FromForestToDump) == Safekeeping) && (entity_location(PG) != Forest):
+            Crediamo sia giunto il momento ti parlare, {player_name}.
+            Ti aspettiamo ai margini della foresta.
+            Capirai come trovarci.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        ~ move_entity(FromForestToDumpBlocked, Safekeeping)
+        ~ move_entity(FromForestToDump, Forest)
+    }
 
 ->->   
 
@@ -287,7 +296,6 @@
 
 {debug: passo per on_movement_events}
 //Riduzioni di contatori legati al tempo:
-
     ~ thirdChar_mailPause --
     ~ fifthChar_mailPause --
     
@@ -427,8 +435,6 @@
         
     }
   
-
-    
 
 //Avvio dialoghi di chiusura
     {

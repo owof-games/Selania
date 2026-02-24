@@ -4,13 +4,30 @@
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
     LIST listCharacters = Mentor, PG, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, TheFrog, FifthCharacter, TheKitchenFrog
 
-    LIST listTransitions = FromTrainStopToForest, FromForestToTrainStop, FromForestToPond, FromForestToLibraryBlocked, FromForestToLibrary, FromPondToForest, FromPondToGreenhouse, FromPondToGreenhouseBlooming, FromPondToNest, FromPondToKitchen, FromPondToKitchenBlocked, FromGreenhouseToPond, FromLibraryToForest, FromLibraryToNest, FromLibraryToNestBlocked, FromLibraryToNestNight, FromNestToLibrary, FromKitchenToPond, FromPondToGreenhouseBlocked, FromLibraryToNestBlockedNight, FromForestToDumpBlocked, FromForestToDump, FromDumpToForest
+    LIST listTransitions = 
+    FromTrainStopToForest, 
+    FromForestToTrainStop, FromForestToPond, FromForestToLibraryBlocked, FromForestToLibrary, FromForestToDumpBlocked, FromForestToDump,
+    FromPondToForest, FromPondToGreenhouse, FromPondToGreenhouseBlooming, FromPondToNest, FromPondToKitchen, FromPondToKitchenBlocked, FromPondToGreenhouseBlocked,
+    FromGreenhouseToPond, 
+    FromLibraryToForest, FromLibraryToNest, FromLibraryToNestBlocked, FromLibraryToNestNight, FromLibraryToNestBlockedNight,
+    FromNestToLibrary, 
+    FromKitchenToPond,
+    FromDumpToForest
     
-    LIST listStaticObjects = Bench, WateringCan, TheWitch, ReadingPlace, StartingNote, Arbustini, MoonTrees, ELManagement, DoggoNoNotes
+    LIST listStaticObjects = TheWitch, ReadingPlace, StartingNote, Arbustini, MoonTrees,  DoggoNoNotes
     
-    LIST listConditionalObjects =  FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, CookingWithFirstCharOBJ, CookingWithSecondCharOBJ, FirstCharCookingAloneOBJ, BatHouseFront, BatHouseRetro, EatingWithSecondCharOBJ, EatingWithFirstCharOBJ
+    LIST listConditionalObjects =  
+    FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes,
+     CookingWithFirstCharOBJ, CookingWithSecondCharOBJ, FirstCharCookingAloneOBJ, BatHouseFront, BatHouseRetro, EatingWithSecondCharOBJ, EatingWithFirstCharOBJ
     
-    LIST listAnimations = Birds, CloudOne, CloudTwo, CloudThree, RedBee, GoldenBee, BrownBee, LeafOneSin, LeafTwoSin, LeafThreeSin, LeafFourSin, LeafFiveSin, LeafOneDx, LeafTwoDx, LeafThreeDx, Snail, NewMoonAnim, FirstQuarterAnim, FullMoonAnim, ThirdQuarterAnim, RedMoonAnim, waterLily, FirstRipple, SecondRipple, ThirdRipple, KitchenFire, KitchenSmokeOne, KitchenSmokeTwo, KitchenSmokeThree, Bat
+    LIST listAnimations = 
+    Birds,
+    LeafOneSin, LeafTwoSin, LeafThreeSin, LeafFourSin, LeafFiveSin, LeafOneDx, LeafTwoDx, LeafThreeDx, 
+    CloudOne, CloudTwo, CloudThree, 
+    RedBee, GoldenBee, BrownBee, Snail,
+    NewMoonAnim, FirstQuarterAnim, FullMoonAnim, ThirdQuarterAnim, RedMoonAnim, 
+    FirstRipple, SecondRipple, ThirdRipple, KitchenFire, KitchenSmokeOne, KitchenSmokeTwo, KitchenSmokeThree, Bat,
+    lighthouseAnimation
 
     LIST listButtons = MenuSave, MenuQuit,  Backpack, FromTrainStopToBedroom
     

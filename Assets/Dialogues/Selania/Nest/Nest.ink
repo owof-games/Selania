@@ -21,10 +21,7 @@
 
 
 
-=== nest_object
-{debug_nest: passo per emotional_backpack_management.}
-    + {are_two_entities_together(ELManagement, PG)}[ELManagement]
-    -> emotional_backpack_management
+
 
 
 

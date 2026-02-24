@@ -62,7 +62,7 @@
 <- reading_place
 
 //Elementi del nido
-<- nest_object
+// <- nest_object
 
 //Elementi del libro
 <- first_character_recap
