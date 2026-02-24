@@ -7,5 +7,7 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 30 - fromBedroomToTrainStop Mouse Over Animator Controller
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: b0357925c576f2c4182b9e2c59e21dc2, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 8f15c3d5ffac4454f82b1b665f4a18e6, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4390f2ec99d05344ba8741979bef0f25, type: 2}
