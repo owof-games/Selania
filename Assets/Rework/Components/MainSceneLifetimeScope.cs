@@ -1,3 +1,4 @@
+using Selania.Rework.Interfaces;
 using UnityEngine;
 using VContainer;
 
@@ -14,12 +15,16 @@ namespace Selania.Rework.Components
         [SerializeField] [Tooltip("Settings of the game.")]
         private SelaniaSettings settings = null!;
 
+        [SerializeField] [Tooltip("The audio system.")]
+        private AudioSystem.AudioSystem audioSystem = null!;
+
         /// <inheritdoc />
         protected override void Configure(IContainerBuilder builder)
         {
             builder.RegisterInkBridgeInstance(inkBridge);
             builder.RegisterSettings(settings);
             builder.RegisterLogger(settings);
+            builder.RegisterInstance(audioSystem).As<IAudioSystem>();
         }
     }
 }
