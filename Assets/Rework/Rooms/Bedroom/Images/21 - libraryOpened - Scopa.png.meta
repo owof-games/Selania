@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 3ada63c05ef2ba745b122d783a830d97
+guid: 3842808b0910eb84095c24266dd50867
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3149782862802981181
-    second: 21 - Serra sbloccata_0
-  - first:
-      213: -5264137071593044608
-    second: 21 - Serra sbloccata_1
+      213: -8549215877419056893
+    second: 21 - libraryOpened - Scopa_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,35 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 21 - Serra sbloccata_0
+      name: 21 - libraryOpened - Scopa_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 7
-        width: 157
-        height: 97
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d311cf053d646bb20800000000000000
-      internalID: 3149782862802981181
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 21 - Serra sbloccata_1
-      rect:
-        serializedVersion: 2
-        x: 155
         y: 0
-        width: 99
-        height: 208
+        width: 120
+        height: 348
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0854bb6593702f6b0800000000000000
-      internalID: -5264137071593044608
+      spriteID: 301ce4684751b5980800000000000000
+      internalID: -8549215877419056893
       vertices: []
       indices: 
       edges: []
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      21 - Serra sbloccata_0: 3149782862802981181
-      21 - Serra sbloccata_1: -5264137071593044608
+      21 - libraryOpened - Scopa_0: -8549215877419056893
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

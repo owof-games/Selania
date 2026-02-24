@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: d13471b0cc716cd498d628fc9294750e
+guid: d9227baff453a3f41aebe6431a809492
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2682209485217948315
-    second: 20 - Struttura_0
-  - first:
-      213: -554827156330792122
-    second: 20 - Struttura_1
-  - first:
-      213: 4943431074610193805
-    second: 20 - Struttura_2
-  - first:
-      213: -1773067976398901469
-    second: 20 - Struttura_3
+      213: 2337871926285591120
+    second: 23 - Radio_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,79 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 20 - Struttura_0
+      name: 23 - Radio_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
-        width: 262
-        height: 834
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b92699bd05f193520800000000000000
-      internalID: 2682209485217948315
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 20 - Struttura_1
-      rect:
-        serializedVersion: 2
-        x: 706
-        y: 23
-        width: 115
-        height: 479
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 64bb92314abdc48f0800000000000000
-      internalID: -554827156330792122
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 20 - Struttura_2
-      rect:
-        serializedVersion: 2
-        x: 985
-        y: 222
-        width: 421
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d85a4c5fe589a9440800000000000000
-      internalID: 4943431074610193805
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 20 - Struttura_3
-      rect:
-        serializedVersion: 2
-        x: 1028
         y: 0
-        width: 274
-        height: 173
+        width: 65
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 32f6f10d11cc467e0800000000000000
-      internalID: -1773067976398901469
+      spriteID: 0526c90612ac17020800000000000000
+      internalID: 2337871926285591120
       vertices: []
       indices: 
       edges: []
@@ -223,10 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      20 - Struttura_0: 2682209485217948315
-      20 - Struttura_1: -554827156330792122
-      20 - Struttura_2: 4943431074610193805
-      20 - Struttura_3: -1773067976398901469
+      23 - Radio_0: 2337871926285591120
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

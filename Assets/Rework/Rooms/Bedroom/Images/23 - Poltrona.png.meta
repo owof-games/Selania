@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4bf03848b8837d247be9daa14b93e5ce
+guid: 34415386ce751ce4f8b6f57b97d4ae60
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7564964861928078574
-    second: 22 - fifthCharPaint_0
+      213: 238031065284271123
+    second: 23 - Poltrona_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 22 - fifthCharPaint_0
+      name: 23 - Poltrona_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 253
-        height: 258
+        width: 265
+        height: 274
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eecf88506772cf860800000000000000
-      internalID: 7564964861928078574
+      spriteID: 31cd6c32ef7ad4300800000000000000
+      internalID: 238031065284271123
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      22 - fifthCharPaint_0: 7564964861928078574
+      23 - Poltrona_0: 238031065284271123
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
