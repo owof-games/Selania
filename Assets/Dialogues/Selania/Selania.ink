@@ -156,7 +156,8 @@
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibraryManagement.ink
 
-
+//Dump
+    INCLUDE Dump\Dump.ink
 
 
 

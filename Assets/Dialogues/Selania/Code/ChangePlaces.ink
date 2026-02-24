@@ -68,6 +68,11 @@
             -> on_movement_events ->
             -> empty_tempTW ->  
                 -> forest
+
+    + {are_two_entities_together(PG, FromDumpToForest)} [FromDumpToForest]
+            ~ move_entity(PG, Forest)
+            -> on_movement_events ->
+                -> forest            
     
     
  //Streets to Pond   
@@ -111,7 +116,8 @@
     + {are_two_entities_together(PG, FromPondToGreenhouseBlocked)} [FromPondToGreenhouseBlocked]
         <i>Una porta chiusa, un interno buio.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()} 
         -> main
-        
+
+    //Streets to Library    
 
     + {are_two_entities_together(PG, FromForestToLibraryBlocked)} [FromForestToLibraryBlocked]
     {
@@ -137,6 +143,7 @@
                 -> library
         
 
+    //Streets to Kitchen
     + {are_two_entities_together(PG, FromPondToKitchen)} [FromPondToKitchen]
             ~ move_entity(PG, Kitchen)
                 -> on_movement_events ->
@@ -158,6 +165,7 @@
     }        
 
 
+    //Streets to Nest
     + {are_two_entities_together(PG, FromLibraryToNest)} [FromLibraryToNest]
             ~ move_entity(PG, Nest)
                 -> on_movement_events ->
@@ -176,5 +184,9 @@
                 -> main
         }   
 
-
+    //Streets to Dump
+    + {are_two_entities_together(PG, FromForestToDump)} [FromForestToDump]
+            ~ move_entity(PG, Dump)
+                -> on_movement_events ->
+                -> dump
 

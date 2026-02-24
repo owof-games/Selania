@@ -44,8 +44,10 @@
 <- fifth_character_notes
 <- doggo_no_notes
 
-//Elementi della foresta
-<- bench
+// //Elementi della foresta
+// <- bench
+
+//Elementi della discarica
 <- the_witch
 
 //Elementi dello stagno

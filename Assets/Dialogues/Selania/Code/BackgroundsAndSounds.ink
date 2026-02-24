@@ -37,6 +37,9 @@ VAR saturationVar = 0
     
         - entity_location(PG) == Kitchen:
            ~ return "backKitchen"
+
+        - entity_location(PG) == Dump:
+           ~ return "backDump"   
            
         - entity_location(PG) == BookPlace:
         
@@ -163,7 +166,10 @@ VAR saturationVar = 0
            ~ return "kitchenSounds"
            
         - entity_location(PG) == BookPlace:
-            ~ return "bookSounds"           
+            ~ return "bookSounds"
+
+        - entity_location(PG) == Dump:
+            ~ return "dumpSounds"               
                                 
     }
     

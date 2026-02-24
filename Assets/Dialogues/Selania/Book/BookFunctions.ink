@@ -22,7 +22,17 @@
         ~ disableBigDialogue()
 
         @exit_from_rewriter_book
-  
+    
+    - book_arrivingFromTracking == Dump:
+        ~ move_entity(PG, Dump)
+        ~ move_entity(RewriterBook, Dump)
+        {
+            - you_are_a_rewriter.sbadata or cultivable_test:
+                ~ move_entity(Backpack, Dump)
+        }
+        ~ disableBigDialogue()
+
+        @exit_from_rewriter_book
     
     - book_arrivingFromTracking == Greenhouse:
         ~ move_entity(PG, Greenhouse)
