@@ -14,7 +14,7 @@
 
 //<i><b>firstChar_relationshipStatus è {firstChar_relationshipStatus}, secondChar_relationshipStatus è {secondChar_relationshipStatus}, firstChar_InkLevel è {firstChar_InkLevel}, firstChar_maximum_inkLevel è {firstChar_maximum_inkLevel}, secondChar_InkLevel è  {secondChar_InkLevel}, secondChar_maximum_inkLevel è {secondChar_maximum_inkLevel}, mentor_lastTimeTalking è {mentor_lastTimeTalking}.
 
--> open_dump ->
+-> debug_places_open ->
 
 ~ actual_speaker = ()
 ~ temp my_location = entity_location(PG)

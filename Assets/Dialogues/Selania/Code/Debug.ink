@@ -14,6 +14,7 @@
     VAR debug_testNest = false
     VAR debug_testFrog = false
     VAR debug_testDump = false
+    VAR debug_testGreenhouse = false
     
 //Per disabilitare uscite e cose varie in caso di testing con il sistema stocastico    
     VAR debug_stochastic = true
@@ -24,10 +25,34 @@
 }
 
 
-=== open_dump ===
+=== debug_places_open ===
 {
     - debug_testDump == true && (entity_location(FromForestToDump) == Safekeeping):
         ~ move_entity(FromForestToDumpBlocked, Safekeeping)
         ~ move_entity(FromForestToDump, Forest)
-}    
+} 
+{
+    - debug_testKitchen == true && (entity_location(FromPondToKitchen) == Safekeeping):
+        ~ move_entity(FromPondToKitchenBlocked, Safekeeping)
+        ~ move_entity(FromPondToKitchen, Pond)
+}
+{
+    - debug_testLibrary == true && (entity_location(FromForestToLibrary) == Safekeeping):
+        ~ move_entity(FromForestToLibraryBlocked, Safekeeping)
+        ~ move_entity(FromForestToLibrary, Forest)
+} 
+{
+    - debug_testNest == true && (entity_location(FromLibraryToNest) == Safekeeping):
+        ~ move_entity(FromLibraryToNestBlocked, Safekeeping)
+        ~ move_entity(FromLibraryToNest, Library)
+}
+{
+    - debug_testGreenhouse == true && (entity_location(FromPondToGreenhouse) == Safekeeping):
+        ~ move_entity(FromPondToGreenhouseBlocked, Safekeeping)
+        ~ move_entity(FromPondToGreenhouse, Pond)
+}
+{
+    - debug_testFrog == true && (entity_location(TheFrog) == Safekeeping):
+        ~ move_entity(TheFrog, Pond)
+}      
 ->->
