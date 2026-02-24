@@ -27,5 +27,20 @@ namespace Selania.Rework.Components.Museum.AudioSystem
         {
             AudioSystem.CrossFadeToAmbientSounds("kitchenSounds");
         }
+
+        public void PlaySoundEffectOpenDialogue()
+        {
+            AudioSystem.PlaySoundEffect("openDialogue");
+        }
+
+        public void PlaySoundEffectAdvanceDialogue()
+        {
+            AudioSystem.PlaySoundEffect("advanceDialogue");
+        }
+
+        public void PlaySoundEffectCloseDialogue()
+        {
+            AudioSystem.PlaySoundEffect("closeDialogue");
+        }
     }
 }
