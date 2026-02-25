@@ -158,8 +158,7 @@
 
 //Dump
     INCLUDE Dump\Dump.ink
-
-
+    INCLUDE Dump\Var&Functions.ink
 
 //Starting point
     -> main
