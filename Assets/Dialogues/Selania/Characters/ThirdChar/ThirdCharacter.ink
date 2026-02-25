@@ -465,8 +465,6 @@ Stai per donare qualcosa a {charNameThree}.
     
         = ink_outcome    
             Dopo il tuo dono {inkTranslator(ThirdCharacter)}.
-                
-                ~ mentor_tutorialPauses = false
                  -> talk_with_third_character
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 

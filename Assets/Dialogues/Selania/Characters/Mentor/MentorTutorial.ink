@@ -177,8 +177,6 @@
             
         Io devo raccogliere le foglie dalla foresta.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
 
-            //Pausa tutorial così che non parta subito quello successivo
-                ~ mentor_tutorialPauses = true
             -> mentor_closing_storylet ->
             -> main
                 
@@ -275,8 +273,6 @@
         A dopo!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry    
             - (bookUpdate)
 
-            //Pausa tutorial così che non parta subito quello successivo
-                ~ mentor_tutorialPauses = true
             -> mentor_closing_storylet ->
             -> main
              
@@ -359,10 +355,8 @@
             Quando te la senti, affronta questo ultimo passaggio e poi torna da me.
             - (bookUpdate)
 
-            //Pausa tutorial così che non parta subito quello successivo
-            ~ mentor_tutorialPauses = true
-        -> mentor_closing_storylet ->
-        -> main
+                -> mentor_closing_storylet ->
+                -> main
         
 
 //Minitutorial sui minigames
@@ -398,7 +392,6 @@
     Qualcosa di così forte non può certo essere usato senza coscienza. #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
     - (bookUpdate)
 
-            ~ mentor_tutorialPauses = true
         -> mentor_closing_storylet ->
         -> main
 
@@ -430,8 +423,7 @@
                     
             }
     - (bookUpdate)
-
-            ~ mentor_tutorialPauses = true
+    
         -> mentor_closing_storylet ->
         -> main
 
@@ -454,7 +446,6 @@
             } 
     - (bookUpdate)
 
-            ~ mentor_tutorialPauses = true
             -> mentor_closing_storylet ->
             -> main
 
@@ -490,7 +481,6 @@
     Fai sempre e solo quello di cui senti il bisogno.
     - (bookUpdate)
     
-            ~ mentor_tutorialPauses = true
         -> mentor_closing_storylet ->
         -> main
 

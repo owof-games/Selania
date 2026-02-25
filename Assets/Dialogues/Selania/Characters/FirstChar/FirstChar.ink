@@ -28,8 +28,6 @@
                 }
                 
                 <i>Dopo il dono di {player_name} {inkTranslator(FirstCharacter)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-                    ~ mentor_tutorialPauses = false
-                    
                         -> main
                 
 

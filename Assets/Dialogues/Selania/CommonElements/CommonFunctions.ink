@@ -127,14 +127,17 @@
             // ~ movements_randomablePlaces += Library
             ~ player_accessiblePlaces += Library
     }
+
+
     //Per ora mi appoggio a Riccio, ma poi sbloccherò con PNG3
     {
         - second_char_main_storylets.three && (entity_location(FromForestToDump) == Safekeeping) && (entity_location(PG) != Forest):
             Crediamo sia giunto il momento ti parlare, {player_name}.
             Ti aspettiamo ai margini della foresta.
             Capirai come trovarci.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-        ~ move_entity(FromForestToDumpBlocked, Safekeeping)
-        ~ move_entity(FromForestToDump, Forest)
+                ~ move_entity(FromForestToDumpBlocked, Safekeeping)
+                ~ move_entity(FromForestToDump, Forest)
+                ~ player_accessiblePlaces += Dump
     }
 
 ->->   
@@ -424,14 +427,6 @@
             ~ move_entity(TrainNoiseGoingAway, Safekeeping)
     }
                  
-
-//Pause speciali tra un dialogo e l'altro
-    {
-    
-        - mentor_tutorialPauses == true:
-            ~ mentor_tutorialPauses = false
-        
-    }
   
 
 //Avvio dialoghi di chiusura

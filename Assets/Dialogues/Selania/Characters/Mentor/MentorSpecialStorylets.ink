@@ -12,6 +12,7 @@
         Dopo provo a concimarla comunque, male non le farà.
         <i>Noi preferiamo crescere senza concime. Chiederemo alle formiche di forare il sacco.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait: {witch_state()}
         
+            -> mentor_closing_storylet ->
             -> main
     
     
@@ -106,12 +107,8 @@
             }
         - (bookUpdate)
 
-            ~ secondChar_pauseTalking = 0
-            ~ mentor_pauseTalking = mentor_pauseDuration
-            ~ mentor_tutorialPauses = true
-            @animation:RewriterBook
-                
-                -> main
+            -> mentor_closing_storylet ->
+            -> main
     
     === addressing_violence
         ~ temp charNameOne = translator(firstChar_ActualName)
@@ -224,10 +221,9 @@
     Grazie per l'ascolto, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
     Sono sicura che diventerai {player_pronouns has him:un ottimo riscrittore|{player_pronouns has her:un'ottima riscrittora| unə ottimə riscrittorə}}.
     - (bookUpdate)
-        @animation:RewriterBook
-        ~ change_entity_place(Mentor)
-        ~ mentor_pauseTalking = mentor_pauseDuration
-        ~ mentor_tutorialPauses = true
+
+            ~ change_entity_place(Mentor)
+        -> mentor_closing_storylet ->
         -> main
     
 === a_story_of_transformation
@@ -291,8 +287,8 @@
     Comunque alla fine Liliana con la sua rabbia trova un modo per cambiare.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
     E quando riesce a vedere la sua casa come uno spazio brillante, mi ha fatto pensare: questa è l'essenza stessa della riscrittura.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
     - (bookUpdate)
-        @animation:RewriterBook
-        ~ firstChar_pauseTalking = firstChar_pauseDuration
+
+        -> mentor_closing_storylet ->
         -> main   
 
 
@@ -322,7 +318,8 @@
             Ho provato a giocarci, ma si è allontanata.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_sad
     }
 
--> main
+    -> mentor_closing_storylet ->
+    -> main
 
 
 === about_olobino
@@ -349,8 +346,9 @@
                         Urlare non è già fare qualcosa?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         Zia Graaak lo dice sempre, che non è vero che non fa nulla, perché ci sgrida tutto il giorno.
                 }
-    ~ mentor_pauseTalking = mentor_pauseDuration
--> main
+    
+    -> mentor_closing_storylet ->
+    -> main
 
 === again_about_olobino
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -380,12 +378,14 @@
                     A parte quella volta che mamma Craazia ha iniziato a cantare in melanzanese.
             }
 
-    ~ mentor_pauseTalking = mentor_pauseDuration
--> main
+    
+    -> mentor_closing_storylet ->
+    -> main
 
 === mentor_rage
 Mentore sbrocca
-    ~ mentor_pauseTalking = mentor_pauseDuration
+
+    -> mentor_closing_storylet ->
     -> main
         
     

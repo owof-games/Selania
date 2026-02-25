@@ -6,9 +6,6 @@
     VAR mentorChar_storyStatus = story_storyNotStarted
     VAR mentor_storyletsForRewritingCount = 0
     
-//Questa variabile mi serve solo per evitare che Mentore mi dia subito lo storylet questions dopo gifts_and_inks
-    VAR mentor_tutorialPauses = false
-    
 //Variabili per mettere in pausa la conversazione. Plausibilmente per mentore sarà molto alta all'inizio.
     VAR mentor_pauseTalking = 0
     VAR mentor_pauseDuration = 1
