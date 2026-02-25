@@ -27,6 +27,7 @@
     INCLUDE CommonElements\Ink.ink
     INCLUDE CommonElements\CommonStoryletsManager.ink
     INCLUDE CommonElements\CommonStorylets.ink
+    INCLUDE CommonElements\SpecialStorylets.ink
 
                     /* ---------------------------------
                     

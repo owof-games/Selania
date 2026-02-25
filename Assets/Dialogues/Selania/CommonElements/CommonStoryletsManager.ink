@@ -38,6 +38,7 @@
                 -> frog_and_second_char_chit_chat
 
             - else:
-                ->->
+                //Andiamo a vedere se ci sono storylets speciali di un singolo personaggio
+                -> special_automatic_storylets
     }
 
