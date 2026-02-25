@@ -129,7 +129,7 @@
             // ~ movements_randomablePlaces += Library
             ~ player_accessiblePlaces += Library
     }
-    //Questa è una soluzione temporanea, da decidere poi come gestire
+    //Per ora mi appoggio a Riccio, ma poi sbloccherò con PNG3
     {
         - second_char_main_storylets.three && (entity_location(FromForestToDump) == Safekeeping) && (entity_location(PG) != Forest):
             Crediamo sia giunto il momento ti parlare, {player_name}.
