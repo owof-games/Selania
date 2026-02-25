@@ -27,10 +27,10 @@
     
     «Sindaco, l’unica opzione qui è incollarli a terra. Tutti. Ogni muretto, ogni sasso del viale, ogni minuscola briciola di calcestruzzo che esce dalle fughe delle piastrelle di ogni cucina.»<N>«Inutile incollare qualcosa di demoniaco! Qui, sindaco, propongo di torchiare quelle aragoste, capire come hanno fatto a mettere certe idee strane in mente a quel sasso! Via la testa, il corpo cade.»<N>Mentre discutevano sulle tipologie di colla vinilica in commercio, e vagliavano la possibilità di gambizzare qualcosa che non possiede arti, un rumore attirò la loro attenzione: toc, toc.<N>Dei sassolini avevano iniziato a colpire la finestra.
 
-        + [<i>Vorrei leggere ancora.]
+        + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
            -> book_test_intro
-        + [<i>Me ne vado.]
+        + <i>Me ne vado.
             ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      
@@ -40,7 +40,7 @@
 === loris_casagrandi
 <b>Volevo essere solo cervello</b>, di Loris Casagrandi (he/him - she/her).<N>Instagram: @lorisdesign4exp<N>Trigger warning: riferimento a gesti ti autolesionismo o violenza.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         
-        + [<i>Inizio la lettura.]
+        + <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has LorisCasagrandi:
@@ -48,9 +48,9 @@
                     ~ library_readStories += LorisCasagrandi
                      -> refresh_book_lists ->
             }  
-        + {library_unreadStories has LorisCasagrandi}[<i>Per ora non me la sento di affrontare questo tema.]
+        + {library_unreadStories has LorisCasagrandi}<i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        + {library_unreadStories has LorisCasagrandi}[<i>Non voglio più incontrare questa storia.]
+        + {library_unreadStories has LorisCasagrandi}<i>Non voglio più incontrare questa storia.
             ~ library_unreadStories -= LorisCasagrandi
                 -> refresh_book_lists -> book_test_intro
         -
@@ -63,10 +63,10 @@
     
     Con violenza l'ho urlato alla mia ansia e ai miei errori, l'ho urlato alla tua immagine, l'ho urlato alle tue idee che erano la mia  croce.<N>L'ho gridato in corteo e alle mie etichette, alla vita e alle politiche fasciste.<N>Ed è da allora che come un'accetta che taglia il legno mi faccio strada tra la vita e il sogno. Un colpo alla volta faccio di me il mio unico regno e non mi curo di cosa perdo per strada, ogni fronda tagliata, caduta e abbandonata sarà ricreata o ne rimarrò senza: in ogni caso sarà una nuova cicatrice da me scelta e non inflitta dalla tua cura scellerata.
     
-        + [<i>Vorrei leggere ancora.]
+        + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
            -> book_test_intro
-        + [<i>Me ne vado.]
+        + <i>Me ne vado.
             ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      
@@ -77,7 +77,7 @@
 === val_fausto_lattanzio
 <b>Home</b>, di Val Fausto Lattanzio (he/they).<N>Instagram: @_whimsival<N>Trigger warning: disforia, dismorfia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 
-        + [<i>Inizio la lettura.]
+        + <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has ValFaustoLattanzio:
@@ -85,9 +85,9 @@
                     ~ library_readStories += ValFaustoLattanzio
                      -> refresh_book_lists ->
             }  
-        + {library_unreadStories has ValFaustoLattanzio}[<i>Per ora non me la sento di affrontare questo tema.]
+        + {library_unreadStories has ValFaustoLattanzio}<i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        + {library_unreadStories has ValFaustoLattanzio}[<i>Non voglio più incontrare questa storia.]
+        + {library_unreadStories has ValFaustoLattanzio}<i>Non voglio più incontrare questa storia.
             ~ library_unreadStories -= ValFaustoLattanzio
                 -> refresh_book_lists -> book_test_intro
         -
@@ -100,10 +100,10 @@
     
     finally, <N>testosterone is secretly coursing through me, and I imagine myself on top, penetrating, claiming, doing what my body wants, and my rage erupts, and the dog’s chain snaps, and my body shiny with T-gel is the meltdown of the universe—the entire universe kicks and screams and thrashes with me.<N>And my house is quiet now.<N>Its walls are drenched in colors I have never seen before, flung in strokes.<N>My body is the home I have chosen for myself.
 
-        + [<i>Vorrei leggere ancora.]
+        + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
            -> book_test_intro
-        + [<i>Me ne vado.]
+        + <i>Me ne vado.
             ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      
@@ -111,7 +111,7 @@
 
 === romi
 <b>Il principe sbagliato</b> di Sofia Abatangelo alias Romi alias Romi Sofia Abatangelo(any).<N>Instagram: @romiabatangelo<N>Trigger warning: violenza psicologica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-        + [<i>Inizio la lettura.]
+        + <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has Romi:
@@ -119,9 +119,9 @@
                     ~ library_readStories += Romi
                      -> refresh_book_lists ->
             }  
-        + {library_unreadStories has Romi}[<i>Per ora non me la sento di affrontare questo tema.]
+        + {library_unreadStories has Romi}<i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        + {library_unreadStories has Romi}[<i>Non voglio più incontrare questa storia.]
+        + {library_unreadStories has Romi}<i>Non voglio più incontrare questa storia.
             ~ library_unreadStories -= Romi
                 -> refresh_book_lists -> book_test_intro
         -
@@ -143,10 +143,10 @@
     
     nella biblioteca dove i precettori gli dicevano che <N>pensava troppo e ubbidiva poco, fino alle stanze reali, dove aveva sentito il Re dire alla Regina che si vergognava di lui.<N>E con la spada in mano si riprese tutto ciò che gli apparteneva di diritto.
 
-        + [<i>Vorrei leggere ancora.]
+        + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
            -> book_test_intro
-        + [<i>Me ne vado.]
+        + <i>Me ne vado.
             ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      

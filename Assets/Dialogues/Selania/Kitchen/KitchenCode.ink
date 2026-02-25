@@ -174,12 +174,12 @@
  ----------------------------------*/
  //badReaction, mehReaction, goodReaction
         //Se la lista è vuota
-    + {backpack_findedGifts == ()} [<i>Non ho nulla da aggiungere.]
+    + {backpack_findedGifts == ()} <i>Non ho nulla da aggiungere.
     
-    + [<i>Ho cambiato idea.]
+    + <i>Ho cambiato idea.
         ~ kitchen_recipePP = "esitante"
         
-    + {backpack_findedGifts has BaccaDellaAddolorata} [<i>Una bacca della Addolorata.]
+    + {backpack_findedGifts has BaccaDellaAddolorata} <i>Una bacca della Addolorata.
         ~ backpack_findedGifts -= BaccaDellaAddolorata
         ~ kitchen_recipePP = "e distillato del primo passo"
          {
@@ -199,7 +199,7 @@
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }
     
-    + {backpack_findedGifts has BarbaDellInciampo} <i>[Una spina di Barba dell'Inciampo.]
+    + {backpack_findedGifts has BarbaDellInciampo} <i>Una spina di Barba dell'Inciampo.
         ~ backpack_findedGifts -= BarbaDellInciampo
         ~ kitchen_recipePP = "ed essenza della responsabilità"
          {
@@ -219,7 +219,7 @@
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }
             
-    + {backpack_findedGifts has BastoneDellOzioso} [<i>Un nodo di Bastone dell'Ozioso.]
+    + {backpack_findedGifts has BastoneDellOzioso} <i>Un nodo di Bastone dell'Ozioso.
         ~ backpack_findedGifts -= BastoneDellOzioso
          {
         - frog_recoveredCultivables hasnt BastoneDellOzioso:
@@ -239,7 +239,7 @@
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }
         
-    + {backpack_findedGifts has BrinaDellImpossibile} [<i>Un frammento di Brina dell'Impossibile.]
+    + {backpack_findedGifts has BrinaDellImpossibile} <i>Un frammento di Brina dell'Impossibile.
         ~ backpack_findedGifts -= BrinaDellImpossibile
          {
         - frog_recoveredCultivables hasnt BrinaDellImpossibile:
@@ -260,7 +260,7 @@
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
     
-    + {backpack_findedGifts has CantoDelleCompagne} [<i>Una goccia di Canto delle Compagne.]
+    + {backpack_findedGifts has CantoDelleCompagne} <i>Una goccia di Canto delle Compagne.
         ~ backpack_findedGifts -= CantoDelleCompagne
          {
         - frog_recoveredCultivables hasnt CantoDelleCompagne:
@@ -279,7 +279,7 @@
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
     
-    + {backpack_findedGifts has CardoAspinato} [<i>Un ciuffo di peli di Cardo Aspinato.]
+    + {backpack_findedGifts has CardoAspinato} <i>Un ciuffo di peli di Cardo Aspinato.
         ~ backpack_findedGifts -= CardoAspinato
          {
         - frog_recoveredCultivables hasnt CardoAspinato:
@@ -298,7 +298,7 @@
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
             
-    + {backpack_findedGifts has EderaDelleAmanti} [<i>Una foglia di Edera delle amanti.]
+    + {backpack_findedGifts has EderaDelleAmanti} <i>Una foglia di Edera delle amanti.
         ~ backpack_findedGifts -= EderaDelleAmanti
         {
         - frog_recoveredCultivables hasnt EderaDelleAmanti:
@@ -317,7 +317,7 @@
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
 
-    + {backpack_findedGifts has ErbaLiccia} [<i>Un ricordo di Erba Liccia.]
+    + {backpack_findedGifts has ErbaLiccia} <i>Un ricordo di Erba Liccia.
         ~ backpack_findedGifts -= ErbaLiccia
          {
         - frog_recoveredCultivables hasnt ErbaLiccia:
@@ -336,7 +336,7 @@
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
         
-     + {backpack_findedGifts has FalsaPalude} [<i>Un petalo di Falsa Palude.]
+     + {backpack_findedGifts has FalsaPalude} <i>Un petalo di Falsa Palude.
         ~ backpack_findedGifts -= FalsaPalude
          {
         - frog_recoveredCultivables hasnt FalsaPalude:
@@ -355,7 +355,7 @@
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
         
-      + {backpack_findedGifts has LanaNotturna} [<i>Il calore della Lana Notturna.]
+      + {backpack_findedGifts has LanaNotturna} <i>Il calore della Lana Notturna.
         ~ backpack_findedGifts -= LanaNotturna
          {
         - frog_recoveredCultivables hasnt LanaNotturna:
@@ -374,7 +374,7 @@
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
         
-    + {backpack_findedGifts has LicheneDegliAbissi} [<i>Una traccia dell'odore del Lichene degli Abissi.]
+    + {backpack_findedGifts has LicheneDegliAbissi} <i>Una traccia dell'odore del Lichene degli Abissi.
         ~ backpack_findedGifts -= LicheneDegliAbissi
          {
         - frog_recoveredCultivables hasnt LicheneDegliAbissi:
@@ -393,7 +393,7 @@
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
     
-    + {backpack_findedGifts has NonTiScordarDiTe} [<i>L'impronta del Non Ti Scordar di Te.]
+    + {backpack_findedGifts has NonTiScordarDiTe} <i>L'impronta del Non Ti Scordar di Te.
         ~ backpack_findedGifts -= NonTiScordarDiTe
          {
         - frog_recoveredCultivables hasnt NonTiScordarDiTe:
@@ -412,7 +412,7 @@
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
     
-    + {backpack_findedGifts has Olobino} [<i>Una cappello di Olobino.]
+    + {backpack_findedGifts has Olobino} <i>Una cappello di Olobino.
         ~ backpack_findedGifts -= Olobino
          {
         - frog_recoveredCultivables hasnt Olobino:
@@ -431,7 +431,7 @@
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
         
-    + {backpack_findedGifts has LaSpazzata} [<i>Un rametto della Spezzata.]
+    + {backpack_findedGifts has LaSpazzata} <i>Un rametto della Spezzata.
         ~ backpack_findedGifts -= LaSpazzata
          {
             - frog_recoveredCultivables hasnt LaSpazzata:
@@ -450,7 +450,7 @@
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
 //Doni insoliti
-    + {backpack_findedGifts has universalIngredient} [<i>L'ingrediente universale della Rana.]
+    + {backpack_findedGifts has universalIngredient} <i>L'ingrediente universale della Rana.
         ~ backpack_findedGifts -= universalIngredient
         ~ kitchen_recipePP = "e gratinatura goduriosa"
         

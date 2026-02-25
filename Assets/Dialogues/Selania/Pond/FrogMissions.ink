@@ -288,11 +288,11 @@
         Non dovrebbe essere "Signore Gufo" invece di "Signor Gufo"?
         Sennò è come se dicessi "Ciao, sono la Ran Franco", no?
         Mi devo fidare?
-            + [No!]
-            + [No?!?]
-            + [NO!]
-            + [NOOOOOOOO!]
-            + [Franco, per fortuna che sei divertente. Ma no.]
+            + No!
+            + No?!?
+            + NO!
+            + NOOOOOOO!
+            + Franco, per fortuna che sei divertente. Ma no.
             -
         Come dice il detto?
         "{player_pronouns has him:Il riscrittore|{player_pronouns has her:La riscrittora|Lə riscrittorə}} ha sempre ragione!"

@@ -33,12 +33,12 @@
     
     
     //Se ho almeno una parola
-    + {nest_ownedEmotionalWords != ()} [Cosa ho nell'inventario?]
+    + {nest_ownedEmotionalWords != ()} Cosa ho nell'inventario?
             Hai con te {generic_list_with_commas(nest_ownedEmotionalWords, -> emotional_words_translator)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             -> emotional_backpack_management
 
     //Se ho appena scoperto una nuova parola e voglio aggiungerla:
-    + {nest_newlyDiscoveredEmotionalWord != ()} [Aggiungo {nest_newlyDiscoveredEmotionalWord} all'inventario.]
+    + {nest_newlyDiscoveredEmotionalWord != ()} Aggiungo {nest_newlyDiscoveredEmotionalWord} all'inventario
         
         {
             - nest_takenEmotionalWords < nest_maximumEmotionalWordsForRun: 
@@ -61,27 +61,27 @@
     
 
     //Se ho appena scoperto una nuova parola ma voglio ignorarla:        
-    + {nest_newlyDiscoveredEmotionalWord != ()} [Non aggiungo questa parola all'inventario]
+    + {nest_newlyDiscoveredEmotionalWord != ()} Non aggiungo questa parola all'inventario.
         Ricordati che non potrai più aggiungerla!#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
-        + + [Sì, ignoriamola.]
+        + + Sì, ignoriamola
                 ~ nest_newlyDiscoveredEmotionalWord = ()
             {debug_nest: svuoto il valore di nest_discoveredEmotionalWords che ora è {nest_discoveredEmotionalWords}.} 
                 -> emotional_backpack_management
             
-        + + [Ci ho ripensato.]
+        + + Ci ho ripensato
             -> emotional_backpack_management
    
    
     //Se voglio rimuovere una parola dall'inventario (opzione sempre disponibile)
-    + {nest_ownedEmotionalWords != ()} [Rimuovo una parola dall'inventario.]
+    + {nest_ownedEmotionalWords != ()} Rimuovo una parola dall'inventario
             -> emotional_words_management(Delete) ->
    
     //Se non ho nuove parole da aggiornare o attive, posso attivarne
-    + {nest_ownedEmotionalWords != () && (nest_newlyDiscoveredEmotionalWord == ()) && (nest_activeEmotionalWord == ())} [Attivo una parola dell'inventario.]
+    + {nest_ownedEmotionalWords != () && (nest_newlyDiscoveredEmotionalWord == ()) && (nest_activeEmotionalWord == ())} Attivo una parola dell'inventario
             -> emotional_words_management(Activate) ->
     
-    + {nest_newlyDiscoveredEmotionalWord == ()} [Voglio scoprire una nuova parola.]
+    + {nest_newlyDiscoveredEmotionalWord == ()} Voglio scoprire una nuova parola
     
         {
             //Se una parola è già attiva
@@ -106,7 +106,7 @@
         
         }        
     
-    + {nest_newlyDiscoveredEmotionalWord == ()} [Mi guardo in giro.]
+    + {nest_newlyDiscoveredEmotionalWord == ()} Mi guardo in giro
         -> main
     
     -

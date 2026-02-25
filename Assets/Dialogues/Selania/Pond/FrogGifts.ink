@@ -9,7 +9,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
 
 - (top)
     
-    + {firstChar_storyStatus == story_storyStarted} [Ho bisogno di una mano con {charNameOne}.]
+    + {firstChar_storyStatus == story_storyStarted} Ho bisogno di una mano con {charNameOne}.
         ~  frog_aboutGiftRequest = missionCharOne
         {
             - are_two_entities_together(FirstCharacter, PG):
@@ -60,7 +60,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
             
         
     
-    + {secondChar_storyStatus == story_storyStarted} [Ho bisogno di una mano con {charNameTwo}.]
+    + {secondChar_storyStatus == story_storyStarted} Ho bisogno di una mano con {charNameTwo}.
         ~  frog_aboutGiftRequest = missionCharTwo
         {
             - are_two_entities_together(SecondCharacter, PG):
@@ -113,23 +113,23 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
         }
         
     
-    + {thirdChar_storyStatus == story_storyStarted} [PNG 3]
+    + {thirdChar_storyStatus == story_storyStarted} PNG 3.
         ~  frog_aboutGiftRequest = missionCharThree
             -> frog_gift_dispatcher
         
-    + {fourthChar_storyStatus == story_storyStarted} [PNG 4]
+    + {fourthChar_storyStatus == story_storyStarted} PNG 4.
         ~  frog_aboutGiftRequest = missionCharFour
             -> frog_gift_dispatcher
         
-    + {fifthChar_storyStatus == story_storyStarted} [PNG 5 (non come mentore)]
+    + {fifthChar_storyStatus == story_storyStarted} PNG 5 (non come mentore).
         ~  frog_aboutGiftRequest = missionCharFive
             -> frog_gift_dispatcher
         
-    + {frog_recoverableCultivables != ()}[Ho bisogno di recuperare una pianta che ho utilizzato.]
+    + {frog_recoverableCultivables != ()}Ho bisogno di recuperare una pianta che ho utilizzato.
         //Nota: per ora sono quattro massimi gli utilizzi di un coltivabile, per cui non serve un menu ad hoc. Poi capire come fare.
             -> cultivable_recovery
     
-    + [Ho cambiato idea.]
+    + Ho cambiato idea.
         Mi trovi qui girino.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         Voglio contare tutte le onde!
             ~ frog_suspended_gift = true
@@ -175,7 +175,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
         
        Quindi: come posso aiutarti con {charNameOne}?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
        
-        + {firstChar_giftedObject == () && frog_firstCharObtainedGifts hasnt charOneCultivable} [Vorrei sapere cosa donare a Chitarra.]
+        + {firstChar_giftedObject == () && frog_firstCharObtainedGifts hasnt charOneCultivable} Vorrei sapere cosa donare a Chitarra.
                 ~ frog_firstCharObtainedGifts += charOneCultivable
                 ~ temp FirstNameGift = greenhouse_chosenCultivable
         
@@ -300,7 +300,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                 //     -> END     
             }
             
-        + {!ending_cooking_with_first_char && frog_firstCharObtainedGifts hasnt charOneCooking && player_accessiblePlaces has Kitchen} [C'è qualcosa che posso usare cucinando con {charNameOne}?]
+        + {!ending_cooking_with_first_char && frog_firstCharObtainedGifts hasnt charOneCooking && player_accessiblePlaces has Kitchen} C'è qualcosa che posso usare cucinando con {charNameOne}?
             ~ frog_firstCharObtainedGifts += charOneCooking
             ~ temp firstNameIngredient = greenhouse_chosenCultivable 
         
@@ -418,7 +418,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                 
             }
             
-        // + {player_accessiblePlaces has Nest && frog_firstCharObtainedGifts hasnt charOneEmotionalWord} [Che tipo di parole colorate apprezza?]
+        // + {player_accessiblePlaces has Nest && frog_firstCharObtainedGifts hasnt charOneEmotionalWord} Che tipo di parole colorate apprezza?
         //         ~ frog_firstCharObtainedGifts += charOneEmotionalWord
         //         {charNameOne} è una persona con idee molto sicure su tante cose.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         //         Ma una cosa è certa: odia i discorsi troppo blu.
@@ -426,7 +426,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
         //         Perché in questo modo potresti già avere la soluzione.
         //         -> closed_exchange
         
-        + {player_accessiblePlaces has Library && frog_firstCharObtainedGifts hasnt charOneLibrary} [C'è un racconto della biblioteca che ha nel cuore?]
+        + {player_accessiblePlaces has Library && frog_firstCharObtainedGifts hasnt charOneLibrary} C'è un racconto della biblioteca che ha nel cuore?
             ~ frog_firstCharObtainedGifts += charOneLibrary
                 {
                     - library_readStories has Aza:
@@ -463,11 +463,11 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                             -> closed_exchange
 
                 }
-        + [No, preferisco qualcosa di diverso.]
+        + No, preferisco qualcosa di diverso.
             ~  frog_aboutGiftRequest = ()
             -> frog_about_who_questions
         
-        + [Mi prendo del tempo e torno poi.]
+        + Mi prendo del tempo e torno poi.
             ~  frog_aboutGiftRequest = ()
                 Va bene girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Intanto leggo le lettere arretrate!
@@ -493,7 +493,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
     
     Come posso aiutarti con {charNameTwo}?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     
-        + {secondChar_giftedObject == () && frog_secondCharObtainedGifts hasnt charTwoCultivable} [Vorrei sapere cosa donare a {charNameTwo}.]
+        + {secondChar_giftedObject == () && frog_secondCharObtainedGifts hasnt charTwoCultivable} Vorrei sapere cosa donare a {charNameTwo}
             ~ frog_secondCharObtainedGifts += charTwoCultivable
             ~ temp SecondNameGift = greenhouse_chosenCultivable 
         
@@ -601,7 +601,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                         -> closed_exchange
             }
             
-        + {!ending_cooking_with_second_char && frog_secondCharObtainedGifts hasnt charTwoCooking && player_accessiblePlaces has Kitchen} [C'è qualcosa che posso usare cucinando con {charNameTwo}?]
+        + {!ending_cooking_with_second_char && frog_secondCharObtainedGifts hasnt charTwoCooking && player_accessiblePlaces has Kitchen} C'è qualcosa che posso usare cucinando con {charNameTwo}?
                 ~ frog_secondCharObtainedGifts += charTwoCooking
                 ~ temp SecondNameIngredient = greenhouse_chosenCultivable
 
@@ -716,7 +716,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
             }
                     
                     
-        // + {player_accessiblePlaces has Nest && frog_secondCharObtainedGifts hasnt charTwoEmotionalWord} [Che tipo di parole colorate apprezza?]
+        // + {player_accessiblePlaces has Nest && frog_secondCharObtainedGifts hasnt charTwoEmotionalWord} Che tipo di parole colorate apprezza?
         //     ~ frog_secondCharObtainedGifts += charTwoEmotionalWord
         //         {charNameTwo} è una bella testolina.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         //         E quello che posso dirti con certezza, è che apprezza la coerenza.
@@ -724,7 +724,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
         //         Se hai capito come funziona l'alchimia del nido, sono sicuro che avrai già capito cosa fare.
         //                 -> closed_exchange
                 
-        + {player_accessiblePlaces has Library && frog_secondCharObtainedGifts hasnt charTwoLibrary} [C'è un racconto della biblioteca che ha nel cuore?] 
+        + {player_accessiblePlaces has Library && frog_secondCharObtainedGifts hasnt charTwoLibrary} C'è un racconto della biblioteca che ha nel cuore? 
             ~ frog_secondCharObtainedGifts += charTwoLibrary
         {
                     - library_readStories has Lamia:
@@ -757,10 +757,10 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                                 -> closed_exchange
                 }
             
-        + [No, preferisco qualcosa di diverso.]
+        + No, preferisco qualcosa di diverso.
             ~  frog_aboutGiftRequest = ()
             -> frog_about_who_questions
-        + [Mi prendo del tempo e torno poi.]
+        + Mi prendo del tempo e torno poi.
             ~  frog_aboutGiftRequest = ()
             -> main
         + -> 

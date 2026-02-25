@@ -40,7 +40,7 @@
         <i>{player_name} ci ha portato questa gioia.
         <i>{player_name} cosa si domanda?
         
-            + [Posso sfiorarti?]
+            + Posso sfiorarti?
                     -> color_variation_management(PG, waterC, varPGYes)->
                 <i>{player_name} sente la voce del Canto delle Compagne.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>{player_name} realizza che è {player_pronouns has him:collegato|{player_pronouns has her:collegata|collegatə}} a {charNameOne}.
@@ -50,7 +50,7 @@
                 <i>Il contatto ha risvegliato un ricordo.
                 <i>E quel ricordo, {player_name}, è il tuo sfiorarci.
                 
-            + [Ehi tu, esci dalla mia testa! Subito!]
+            + Ehi tu, esci dalla mia testa! Subito!
                     -> color_variation_management(PG, fireC, varPGYes)->
                 <i>Non siamo nella testa di {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Non più di quanto {player_name} sia nella sua stessa testa.
@@ -58,7 +58,7 @@
                 <i>È come se {player_name} ci chiedesse di non essere.
                 <i>E questa è una cosa che non è e non sarà.
                 
-            + [Le piante non possono parlare.]
+            + Le piante non possono parlare.
                     -> color_variation_management(PG, airC, varPGYes)->
                 <i>Le piante raccontano storie da notte a giorno. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>E noi non siamo una pianta.
@@ -73,13 +73,13 @@
                 <i>Per te.
                 <i>Da te.
                 
-            + [Ci piace la gioia!]
+            + Ci piace la gioia!
                     -> color_variation_management(PG, earthC, varPGYes)->
                 <i>E a noi piace {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>E tutte le emozioni che genera con le sue azioni.
                 <i>E tutti i tempi che {player_name} vive, ha vissuto e vivrà.
             
-            + [La tua voce mi guida dal mio arrivo.]
+            + La tua voce mi guida dal mio arrivo.
                     -> color_variation_management(PG, aetherC, varPGYes)->
                 <i>E la tua guida noi, {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>La separazione è una illusione.
@@ -146,19 +146,19 @@
         Dove ci viene detto a cosa serve il nido in modo sereno.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         E ci spiega che la manipolazione è un intento, non qualcosa di inerente all'oggetto, o al nido.
         
-        + [Scelta verde.]
+        + Scelta verde.
             -> color_variation_management(PG, waterC, varPGYes)->
             
-        + [Scelta rossa.]
+        + Scelta rossa.
             -> color_variation_management(PG, fireC, varPGYes)->
             
-        + [Scelta blu.]
+        + Scelta blu.
             -> color_variation_management(PG, airC, varPGYes)->
      
-        + [Scelta gialla.]
+        + Scelta gialla.
             -> color_variation_management(PG, earthC, varPGYes)->
  
-        + [Scelta viola.]
+        + Scelta viola.
             -> color_variation_management(PG, aetherC, varPGYes)->
         - (bookUpdate)       
             -> main  
@@ -175,19 +175,19 @@
     Hai donato la Selanìa, il gioco è finito.
     Compare lo sfondo stellato.
     
-        + [Scelta verde.]
+        + Scelta verde.
             -> color_variation_management(PG, waterC, varPGYes)->
             
-        + [SCelta rossa.]
+        + SCelta rossa.
             -> color_variation_management(PG, fireC, varPGYes)->
             
-        + [Scelta blu.]
+        + Scelta blu.
             -> color_variation_management(PG, airC, varPGYes)->
      
-        + [Scelta gialla.]
+        + Scelta gialla.
             -> color_variation_management(PG, earthC, varPGYes)->
  
-        + [Scelta viola.]
+        + Scelta viola.
             -> color_variation_management(PG, aetherC, varPGYes)->
         -        
     Cose.

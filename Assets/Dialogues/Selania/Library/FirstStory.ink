@@ -3,7 +3,7 @@
 === adri_allora
 <b>Il mio bellissimo gatto</b> di Adri Allora (ləi).<N>Trigger warning: violenza psicologica, abusi fisici.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 
-    + [<i>Inizio la lettura.]
+    + <i>Inizio la lettura.
     //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
         {
             - library_unreadStories has AdriAllora:
@@ -11,9 +11,9 @@
                 ~ library_readStories += AdriAllora
                  -> refresh_book_lists ->
         }  
-    + {library_unreadStories has AdriAllora}[<i>Per ora non me la sento di affrontare questi temi.]
+    + {library_unreadStories has AdriAllora}<i>Per ora non me la sento di affrontare questi temi.
         -> tempTW -> book_test_intro
-    + (rimuovi) {library_unreadStories has AdriAllora} [<i>Non voglio più incontrare questa storia.]
+    + (rimuovi) {library_unreadStories has AdriAllora} <i>Non voglio più incontrare questa storia.
         -> permanentTW -> refresh_book_lists -> book_test_intro
     -
 -> DarkLibraryModeOn ->
@@ -35,11 +35,11 @@
     
     Mi son presə il gatto sulle ginocchia.<N>Ho iniziato ad accarezzarlo.<N>Cos'è che vuoi da me, rabbia?<N>Mi ha rivolto uno sguardo dorato, ha fatto le fusa.<N>E niente: mi ha lasciato quattro buchi sulla coscia con i suoi artigli, 'sta scena m'ha ricordato Frankenstein Junior.
     
-        + [<i>Vorrei leggere ancora.]
+        + <i>Vorrei leggere ancora.
         ~ disableBigDialogue()
            -> book_test_intro
         
-        + [<i>Me ne vado.]
+        + <i>Me ne vado.
         ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
             -> main
@@ -47,7 +47,7 @@
 === alexias_d_avino
 <b>Il Riflesso</b> di Alexias D'Avino (lui/lei).<N>Instagram: @togetherweread29<N>Trigger warning: lutto, rifiuto da parte della figura genitoriale.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         
-        + [<i>Inizio la lettura.]
+        + <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has AlexiasDAvino:
@@ -55,9 +55,9 @@
                     ~ library_readStories += AlexiasDAvino
                      -> refresh_book_lists ->
             }  
-        + {library_unreadStories has AlexiasDAvino}[<i>Per ora non me la sento di affrontare questo tema.]
+        + {library_unreadStories has AlexiasDAvino}<i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        + (rimuovi) {library_unreadStories has AlexiasDAvino}[<i>Non voglio più incontrare questa storia.]
+        + (rimuovi) {library_unreadStories has AlexiasDAvino}<i>Non voglio più incontrare questa storia.
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
@@ -102,11 +102,11 @@
     
     Dallo sgabuzzino tirò fuori una tela bianca e il cavalletto.<N>Poi afferrò l’astuccio con le matite e i pennelli.<N>Un’infinità di realtà l’aspettava al di là di quella tela bianca.<N>Doveva solo disegnare la porta.<N>“Basta nascondersi.”<N>Il suo futuro cominciò con una pennellata di verde.
 
-        + [<i>Vorrei leggere ancora.]
+        + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
             -> book_test_intro
         
-        + [<i>Me ne vado.]
+        + <i>Me ne vado.
             ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
             -> main
@@ -115,7 +115,7 @@
 === aza
 <b>Luna vergine</b> di Aza (any).<N>Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         
-        + [<i>Inizio la lettura.]
+        + <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has Aza:
@@ -123,9 +123,9 @@
                     ~ library_readStories += Aza
                      -> refresh_book_lists ->
             }  
-        + {library_unreadStories has Aza}[<i>Per ora non me la sento di affrontare questo tema.]
+        + {library_unreadStories has Aza}<i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        + (rimuovi) {library_unreadStories has Aza}[<i>Non voglio più incontrare questa storia.]
+        + (rimuovi) {library_unreadStories has Aza}<i>Non voglio più incontrare questa storia.
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
@@ -152,10 +152,10 @@
     
     L'ultima cosa che ricordo è la sensazione di sabbia fredda fra le dita dei piedi, i botti dei fuochi d'artificio e il suo ansimare sofferente, non saprò mai se mi ha riconosciuta o meno.
     
-        + [<i>Vorrei leggere ancora.]
+        + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
            -> book_test_intro
-        + [<i>Me ne vado.]
+        + <i>Me ne vado.
             ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      
@@ -165,7 +165,7 @@
 === steno_artico
 <b>Questa rabbia, che mi è stata rubata</b> by StenoArtico (he/him, none).<N>Instagram: @stenoartico<N>Trigger warning: violenza psicologica, abusi fisici, depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         
-        + [<i>Inizio la lettura.]
+        + <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has StenoArtico:
@@ -174,9 +174,9 @@
                      -> refresh_book_lists ->
             }  
             -> refresh_book_lists ->
-        + {library_unreadStories has StenoArtico}[<i>Per ora non me la sento di affrontare questo tema.]
+        + {library_unreadStories has StenoArtico}<i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        + (rimuovi) {library_unreadStories has StenoArtico}[<i>Non voglio più incontrare questa storia.]
+        + (rimuovi) {library_unreadStories has StenoArtico}<i>Non voglio più incontrare questa storia.
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
@@ -193,10 +193,10 @@
     
     Verso dove, ancora non lo so.<N>E mi piace.
 
-        + [<i>Vorrei leggere ancora.]
+        + <i>Vorrei leggere ancora.
         ~ disableBigDialogue()
            -> book_test_intro
-        + [<i>Me ne vado.]
+        + <i>Me ne vado.
         ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      
@@ -206,7 +206,7 @@
 // <b>The touch of anger</b> di K.(she/her).
 <b>Il tocco della rabbia</b> di K.(she/her).<N>Trigger warning: violenza fisica, depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         
-        + [<i>Inizio la lettura.]
+        + <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has B:
@@ -214,9 +214,9 @@
                     ~ library_readStories += B
                      -> refresh_book_lists ->
             }  
-        + {library_unreadStories has B}[<i>Per ora non me la sento di affrontare questo tema.]
+        + {library_unreadStories has B}<i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        + (rimuovi) {library_unreadStories has B}[<i>Non voglio più incontrare questa storia.]
+        + (rimuovi) {library_unreadStories has B}<i>Non voglio più incontrare questa storia.
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
@@ -249,10 +249,10 @@
     // Learning to wield my anger for a good cause was one of the most rewarding achievements in my life as a person and as a woman.
     // And I hope that every person out there is also living their life to their fullest, knowing how precious each emotion we feel is… anger too.
 
-        + [<i>Vorrei leggere ancora.]
+        + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
            -> book_test_intro
-        + [<i>Me ne vado.]
+        + <i>Me ne vado.
             ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      
@@ -261,7 +261,7 @@
 === beatrice
 <b>La rete non esiste</b> di Beatrice (she/her).<N>Instagram: @vistadibea<N>Trigger warning: depressione, religione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         
-        + [<i>Inizio la lettura.]
+        + <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has Beatrice:
@@ -269,9 +269,9 @@
                     ~ library_readStories += Beatrice
                      -> refresh_book_lists ->
             }  
-        + {library_unreadStories has Beatrice}[<i>Per ora non me la sento di affrontare questo tema.]
+        + {library_unreadStories has Beatrice}<i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        + (rimuovi) {library_unreadStories has Beatrice}[<i>Non voglio più incontrare questa storia.]
+        + (rimuovi) {library_unreadStories has Beatrice}<i>Non voglio più incontrare questa storia.
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
@@ -320,10 +320,10 @@
     
     E lo sono anche grazie a voi che mi avete ascoltato.<N>Ma è ora che ce lo diciamo e che lo sappiamo: la rete come ce la raccontiamo non esiste.<N>Se senti che qualcuno ti dice “lì sarai al sicuro” o “questo modo di pensare è più inclusivo di quest’altro” metti di fianco a queste frasi un grande punto di domanda.<N>Se esiste una rete è quella il cui collante sei tu, fatta di singole persone che tu scegli e che ti scelgono.<N>E se qualcuno ti fa del male, semplicemente non ne fa parte.
 
-        + [<i>Vorrei leggere ancora.]
+        + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
            -> book_test_intro
-        + [<i>Me ne vado.]
+        + <i>Me ne vado.
             ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      
@@ -332,7 +332,7 @@
 === beatrice_y_bottura
 <b>Artigli Rosso Ruggine</b> di Beatrice Y. Bottura (she/it).<N>Trigger warning: violenza psicologica, abusi fisici.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         
-        + [<i>Inizio la lettura.]
+        + <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has BeatriceYBottura:
@@ -340,9 +340,9 @@
                     ~ library_readStories += BeatriceYBottura
                      -> refresh_book_lists ->
             }  
-        + {library_unreadStories has BeatriceYBottura}[<i>Per ora non me la sento di affrontare questo tema.]
+        + {library_unreadStories has BeatriceYBottura}<i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        + {library_unreadStories has BeatriceYBottura}[<i>Non voglio più incontrare questa storia.]
+        + {library_unreadStories has BeatriceYBottura}<i>Non voglio più incontrare questa storia.
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
@@ -358,10 +358,10 @@
     
     Ma la bestia trova solo il tocco della compagna di viaggio che è riuscita a tenerla in vita fino a quel momento:<N>Rabbia.<N>Rabbia dedita a riprendersi la vita che ha perso.<N>Rabbia che a breve scagionerà in un abbagliante performance di denti e artigli.<N>Rabbia che porterà fine all’umanità che l’ha imprigionata.<N>Un ululato affilato come un coltello attraversa il pozzo.<N>La paura smarrita dagli uomini torna in loro mentre vedono la gabbia che li teneva al sicuro distrutta dall'interno. Le urla riempiono la stanza e il loro prezioso intelletto umano viene tagliato come burro.
 
-        + [<i>Vorrei leggere ancora.]
+        + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
            -> book_test_intro
-        + [<i>Me ne vado.]
+        + <i>Me ne vado.
             ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      

@@ -25,10 +25,10 @@
     Mimosa abbracciò stretta Alchemilla, schioccandole un bacio sulla guancia. Il fuoco diventò tutto rosso dall’emozione. <N>Forsizia passò a tutte una ciotola fumante e infine le raggiunse, sedendosi anche lei ad ammirare il fuoco, soddisfatta.<N>"Che hai preparato oggi?" le chiese Alchemilla, ancora un po’ su di giri.<N>"Zuppa di patate" rispose Forsizia, prendendo un’abbondante cucchiaiata. <N>"La mia preferita!" sospirò felice Bergamotto, prendendo posto anche lei intorno al fuoco.
     
     "Ci ho messo un ingrediente segreto stavolta. Vediamo se indovinate."<N>"Mmm… cos’è, paprika dolce?" chiese Alchemilla, assaggiando.<N>"No, secondo me è berberè" disse Mimosa.<N>"Fuochino" rispose Forsizia, ridacchiando.<N>Il fuoco, che poco prima ruggiva alto e incandescente, ora lambiva dolcemente i ciocchi di legno, caldo e avvolgente, illuminando tutte di una dolce, incantevole luce dorata.
-        + [<i>Vorrei leggere ancora.]
+        + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
            -> book_test_intro
-        + [<i>Me ne vado.]
+        + <i>Me ne vado.
             ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      
@@ -37,7 +37,7 @@
 === francesca_tosca_raimondi
 <b>Trecentotrenta metri.</b> di Francesca Tosca Raimondi (she/her).<N>Trigger warning: rabbia domestica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         
-            + [<i>Inizio la lettura.]
+            + <i>Inizio la lettura.
             //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
                     {
                         - library_unreadStories has FrancescaToscaRaimondi:
@@ -45,9 +45,9 @@
                             ~ library_readStories += FrancescaToscaRaimondi
                              -> refresh_book_lists ->
                     }  
-                + {library_unreadStories has FrancescaToscaRaimondi}[<i>Per ora non me la sento di affrontare questo tema.]
+                + {library_unreadStories has FrancescaToscaRaimondi}<i>Per ora non me la sento di affrontare questo tema.
                         -> tempTW -> book_test_intro
-                + {library_unreadStories has FrancescaToscaRaimondi}[<i>Non voglio più incontrare questa storia.]
+                + {library_unreadStories has FrancescaToscaRaimondi}<i>Non voglio più incontrare questa storia.
                     ~ library_unreadStories -= FrancescaToscaRaimondi
                         -> refresh_book_lists -> book_test_intro
                 -
@@ -69,11 +69,11 @@
         
         Ma forse ho la magia della luce ora che l’ho vista così da vicino, quindi mi posso rialzare e posso provarci di nuovo, se succede.<N>Abbraccio forte la mia mamma anche se lei non mi guarda. <N>Non me lo dice mai con la voce ma è un po’ come se chiedesse aiuto quando fa così. <N>Forse a volte mi chiede anche scusa senza dirlo. Mi accarezza la testa. <N>Nessuno merita di stare da solo quando piange.
 
-        + [<i>Vorrei leggere ancora.]
+        + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
            -> book_test_intro
         
-        + [<i>Me ne vado.]
+        + <i>Me ne vado.
             ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
             -> main
@@ -105,11 +105,11 @@
     
     Non sono più quell’adolescente piena di rabbia.<N>Ho sempre pensato che quella rabbia mi rendesse forte, che fosse come un’armatura che mi avrebbe resa inscalfibile. Ora che non riesco più a ritrovarla, mi domando se non fosse ,forse solo, forse anche, un peso, un peso che mi ero abituata a portare ma senza il quale sono più leggera. Più fragile, ma più leggera.         
             
-        + [<i>Vorrei leggere ancora.]
+        + <i>Vorrei leggere ancora.
                 ~ disableBigDialogue()
            -> book_test_intro
         
-        + [<i>Me ne vado.]
+        + <i>Me ne vado.
                 ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
             -> main

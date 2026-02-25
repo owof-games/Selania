@@ -92,10 +92,10 @@
     }
     
 
-      + [Per ora me ne vado.]
+      + Per ora me ne vado.
             -> main
         
-      + [{Dimmi cosa devo fare.|Hai qualcosa da farmi fare?}]
+      + Franco, {dimmi cosa devo fare.|hai qualcosa da farmi fare?}
       {debug_frog: il valore di frog_availableSpecialMissions è {frog_availableSpecialMissions}.}
       {debug_frog: player_accessiblePlaces contiene {player_accessiblePlaces}.}
 

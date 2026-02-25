@@ -127,12 +127,12 @@
     = not_a_new_word
     {player_name} ha trovato {nest_newlyDiscoveredEmotionalWord}, che già conosceva. Cosa vorrebbe fare? #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
-        + [Voglio cercare una nuova parola.]
+        + Voglio cercare una nuova parola.
             ~ nest_newlyDiscoveredEmotionalWord = ()
                 {debug_nest: svuoto il valore di nest_newlyDiscoveredEmotionalWord che ora è {nest_newlyDiscoveredEmotionalWord}.}
             -> emotional_words_creator
             
-        + [Mi fermo.]
+        + Mi fermo.
             ~ nest_newlyDiscoveredEmotionalWord = ()
                 {debug_nest: svuoto il valore di nest_newlyDiscoveredEmotionalWord che ora è {nest_newlyDiscoveredEmotionalWord}.}
             -> main

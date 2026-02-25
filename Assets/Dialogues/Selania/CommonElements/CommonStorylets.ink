@@ -50,7 +50,7 @@
         
     Tu cosa fai se ci hanno rapito gli alieni?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
     
-            + [Dormiamo qualche giorno, siii!]
+            + Dormiamo qualche giorno, siii!
                  -> color_variation_management(FirstCharacter, earthC, varPGYes)->
                  -> color_variation_management(SecondCharacter, aetherC, varPGYes)->
 
@@ -58,21 +58,21 @@
                 Nemmeno la nonna pensa così tanto a dormire!
                 Perché tua nonna è in pensione e non deve pensare costantemente a PRODURRE!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
 
-            + [Anche io voglio studiarmi tutto!]
+            + Anche io voglio studiarmi tutto!
                 -> color_variation_management(FirstCharacter, aetherC, varPGYes)->
                 -> color_variation_management(SecondCharacter, airC, varPGYes)->
                  
                 Sìì! E il nostro team batte il team SIAMO NOIOSI E DORMIAMO SEMPRE DI {charNameOne}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 Sarò noiosa, ma tu arriverai ai quindici anni più ansioso di un pinscher, piccoletto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
 
-            + [Mi metterei a piangere {player_pronouns has him:terrorizzato|{player_pronouns has her:terrorizzata|terrorizzatə}} in un angolino.]
+            + Mi metterei a piangere {player_pronouns has him:terrorizzato|{player_pronouns has her:terrorizzata|terrorizzatə}} in un angolino.
                     -> color_variation_management(FirstCharacter, waterC, varPGYes)->
                     -> color_variation_management(SecondCharacter, waterC, varPGYes)->
                     
                 Come i bambini piccoli. No no no.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
                 Mi ci riconosco, totale.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
 
-            + [Mentre mi leggono la mente penso a cose assurdissime!]
+            + Mentre mi leggono la mente penso a cose assurdissime!
                 -> color_variation_management(FirstCharacter, airC, varPGYes)->
                 -> color_variation_management(SecondCharacter, earthC, varPGYes)->
                 
@@ -81,7 +81,7 @@
                 La mia mente è limpida e innocente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 Non come quella di un bambino, ascoltando le cose che dice il piccoletto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 
-            + [Magari conoscono il senso della vita.]
+            + Magari conoscono il senso della vita.
                 -> color_variation_management(FirstCharacter, aetherC, varPGYes)->
                 -> color_variation_management(SecondCharacter, fireC, varPGYes)->
                 
@@ -145,24 +145,24 @@
     Questa conversazione è generata dalla missione della rana. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     Mentore e Riccio stanno discutendo se è meglio Wicked  o Attack of Titan. Mentore tifa per il primo, Riccio per il secondo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
     
-        + (not_intervention)[Decidi di non intervenire]
+        + (not_intervention) Decidi di non intervenire
              -> color_variation_management(Mentor, airC, varPGYes)->
              -> color_variation_management(SecondCharacter, airC, varPGYes)->
     
-        + (pro_mentor) [Wicked!]
+        + (pro_mentor) Wicked!
             -> color_variation_management(Mentor, airC, varPGYes)->
             -> color_variation_management(SecondCharacter, fireC, varPGYes)->
      
-        + (pro_riccio) [Attack of Titan, ovvio!]
+        + (pro_riccio) Attack of Titan, ovvio!
                 -> color_variation_management(Mentor, earthC, varPGYes)->
                 -> color_variation_management(SecondCharacter, airC, varPGYes)->
     
-        + (disagree)[The Lady, mi spiace.]
+        + (disagree)The Lady, mi spiace.
             -> color_variation_management(Mentor, fireC, varPGYes)->
             -> color_variation_management(SecondCharacter, fireC, varPGYes)->
     
             
-        + (paracula)[Attack of the Wicked, che ne dite?]
+        + (paracula)Attack of the Wicked, che ne dite?
             -> color_variation_management(Mentor, waterC, varPGYes)->
             -> color_variation_management(SecondCharacter, waterC, varPGYes)->
                 -    
@@ -206,25 +206,25 @@
     O quello che dice {charNameOne}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
     Qualcosa che è sempre altrove e quindi irraggiungibile?#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
     
-        + [{mentorName}, tu parli di arrendersi.]
+        + {mentorName}, tu parli di arrendersi.
             -> color_variation_management(FirstCharacter, fireC, varPGYes)->
             -> color_variation_management(Mentor, fireC, varPGYes)->
             Non arrendersi, {player_name}, ma accogliere quello che si ha.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             E non vedo differenza, {mentorName}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
             
-        + [{mentorName}, razionalmente la felicità ha una natura temporanea.]
+        + {mentorName}, razionalmente la felicità ha una natura temporanea.
             -> color_variation_management(FirstCharacter, airC, varPGYes)->
             -> color_variation_management(Mentor, airC, varPGYes)->
             Oh, che bello sentire qualcun{player_pronouns has him:o|{player_pronouns has her:a|ə}} che matcha la mia gioia di vivere.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
             Il fatto che sia temporanea non nega la mia teoria.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         
-        + [La felicità ce l'hai se trovi il gioco e l'assurdo ovunque.]
+        + La felicità ce l'hai se trovi il gioco e l'assurdo ovunque.
             -> color_variation_management(FirstCharacter, earthC, varPGYes)->
             -> color_variation_management(Mentor, earthC, varPGYes)->
             Credo che quello si chiami "abuso di sostanze".#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
             Con un linguaggio meno colorito, direi comunque che sì, ha ragione {charNameOne}.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
 
-        + [Non credo nella felicità, ma credo nel piacere dato dalle persone vicine.]
+        + Non credo nella felicità, ma credo nel piacere dato dalle persone vicine.
             -> color_variation_management(FirstCharacter, waterC, varPGYes)->    
             -> color_variation_management(Mentor, waterC, varPGYes)->
             Questa è una lettura che potrei apprezzare.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
@@ -232,7 +232,7 @@
             Vuol dire che {player_name} ha trovato un punto di contatto tra noi in questa discussione?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
             Eh sì, mi sa proprio di sì.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
             
-        + [La felicità è qualcosa che cresce nelle pieghe del quotidiano.]
+        + La felicità è qualcosa che cresce nelle pieghe del quotidiano.
             -> color_variation_management(FirstCharacter, aetherC, varPGYes)->
             -> color_variation_management(Mentor, airC, varPGYes)->
             Sono contenta che la vediamo allo stesso modo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
@@ -322,14 +322,14 @@
     <i>Ma così come l'acqua non può essere incendio, così {mentorName} non può essere qualcosa che non è.
     <i>O portare nomi che non sa.
 
-        + [Metà delle cose che la voce dice sono illogiche.]
+        + Metà delle cose che la voce dice sono illogiche.
                 -> color_variation_management(Mentor, airC, varPGYes)->
             <i>{player_name} non vede, e quindi decide che qualcosa non esiste.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             <i>Ma quella cosa esiste anche se {player_name} non vede.
             Uh, peccato.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
             Ma ci sta: questo luogo è così insolito, immagino sia inevitabile non capirlo fino in fondo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             
-        + [Dice che stai facendo un buon lavoro.]
+        + Dice che stai facendo un buon lavoro.
                 -> color_variation_management(Mentor, waterC, varPGYes)->
             Oh, ma sicuramente esagera.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
             Prendi prima: ho scoperto che per via della mia incuria sta crescendo del muschio sotto la panchina.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
@@ -337,14 +337,14 @@
             Ringrazia la voce da parte mia.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             <i>Dire una mezza verità porta su una mezza strada.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
-        + [Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?]
+        + Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
                 -> color_variation_management(Mentor, earthC, varPGYes)->
             Non è che ho lasciato qualcosa di acceso in cucina?#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
             No dai, si vedrebbe il fumo da qui, sicuro.
             Magari è qualcosa di simbolico.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             Spero di non aver distrutto nulla.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
         
-        + [Non è più importante il tuo di giudizio sul tuo lavoro, {mentorName}?]
+        + Non è più importante il tuo di giudizio sul tuo lavoro, {mentorName}?
                 -> color_variation_management(Mentor, aetherC, varPGYes)->
             Credo di sì.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             Ma uno sguardo esterno ci può aiutare, immagino.
@@ -352,7 +352,7 @@
             Sì.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             Credo di star facendo un buon lavoro.
 
-        + [Ha detto tante cose ma la risposta è: no.]
+        + Ha detto tante cose ma la risposta è: no.
                 -> color_variation_management(Mentor, fireC, varPGYes)->
             <i>La frusta che cade senza motivo non porta alcun insegnamento.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             Oh.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
