@@ -1272,11 +1272,11 @@
     - (bookUpdate)
     
         -> cooking_animations_off ->
-        ~ move_entity(SecondCharacter, Pond)
-        ~ kitchen_secondCharCookingTogetherInvite = false
+            ~ move_entity(SecondCharacter, Pond)
+            ~ kitchen_secondCharCookingTogetherInvite = false
         -> update_colors(SecondCharacter) ->
         -> check_kitchen_recap ->
-
+        -> second_char_closing_storylet ->
         -> main
 
 
@@ -1377,8 +1377,5 @@
     Ma puoi farmi quella torta al cioccolato?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
 - (bookUpdate)
 
-    ~ secondChar_pauseTalking = secondChar_pauseDuration
-    ~ secondChar_justTalked = true
-
-
--> main
+   -> second_char_closing_storylet ->
+    -> main

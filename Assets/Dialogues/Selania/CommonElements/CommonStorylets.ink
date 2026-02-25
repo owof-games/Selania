@@ -94,8 +94,7 @@
     Tipo, dove schiacciarmi quel pisolino.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
     - (bookUpdate)
 
-            ~ secondChar_pauseTalking = secondChar_pauseDuration
-
+        -> second_char_closing_storylet ->
         -> first_char_closing_storylet ->
         -> main    
 
@@ -135,8 +134,8 @@
     - (bookUpdate)    
                 ~ change_entity_place(SecondCharacter)
                 ~ mentor_pauseTalking = mentor_pauseDuration
-                ~ secondChar_pauseTalking = secondChar_pauseDuration
-        @animation:RewriterBook
+        
+        -> second_char_closing_storylet ->
         -> main
 
 === special_mission_one_dialogue
@@ -170,9 +169,10 @@
     Finisce la scena. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     - (bookUpdate)
         @animation:RewriterBook
-        ~ secondChar_pauseTalking = secondChar_pauseDuration
+
         ~ mentor_pauseTalking = mentor_pauseDuration
-        ~ actual_speaker = ()
+
+        -> second_char_closing_storylet ->
         -> main
     
     
@@ -447,5 +447,6 @@
                 Comincio a sospettare che questa rana farà più danni di quanti ne potrò risolvere.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         }
     - (bookUpdate)
-    @animation:RewriterBook
+    
+        -> second_char_closing_storylet ->
         -> main

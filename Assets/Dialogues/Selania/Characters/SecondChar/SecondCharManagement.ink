@@ -299,8 +299,14 @@
 
 
 === second_char_closing_storylet ===
+        //Gestione crescita piante
         -> growing_check ->
-        @animation:RewriterBook
+        //Questo evita che venga proposto un altro storylet fino a quando la pausa non è finita
         ~ secondChar_pauseTalking = secondChar_pauseDuration
+        //Questo è per la gestione delle domande
         ~ secondChar_justTalked = true
+        //L'animazione per via dell'informazione nuova
+        @animation:RewriterBook
+
+
 ->->

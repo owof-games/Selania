@@ -7,7 +7,6 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
-        ~ secondChar_storyletsForRewritingCount ++
         
         Ma tu perché sei qui?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
             
@@ -131,9 +130,9 @@
             }
         - (bookUpdate)
         
-
             ~ move_entity(SecondRecap, BookPlace)
-                         
+            ~ secondChar_storyletsForRewritingCount ++   
+
         -> second_char_closing_storylet ->
         -> options_second_character
    
@@ -142,7 +141,6 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ secondChar_storyletsForRewritingCount ++
 
         Non sai che cosa fighissima!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
         Prima ho visto una rana allo stagno.
@@ -229,6 +227,7 @@
             Vai a vederla, ora!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
             - (bookUpdate)
 
+            ~ secondChar_storyletsForRewritingCount ++
             -> second_char_closing_storylet ->
             -> options_second_character
 
@@ -236,7 +235,6 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ secondChar_storyletsForRewritingCount ++
 
         Mica mi hai detto come ti chiami.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
         Cioè: io lo so perché me l'ha detto {charNameOne}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -424,8 +422,9 @@
 
         - (bookUpdate)
 
-        -> second_char_closing_storylet ->
-        -> options_second_character
+            ~ secondChar_storyletsForRewritingCount ++
+            -> second_char_closing_storylet ->
+            -> options_second_character
             
 
     
@@ -433,7 +432,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
-        ~ secondChar_storyletsForRewritingCount ++
+
         {
             - are_two_entities_together(Mentor, PG):
                ~ change_entity_place(Mentor)
@@ -566,8 +565,9 @@
                         Mi ero dimenticata quanto fosse schifoso essere bambini.
                 }
 
-        - (bookUpdate)  
+        - (bookUpdate)
 
+        ~ secondChar_storyletsForRewritingCount ++
         -> second_char_closing_storylet ->
         -> options_second_character
 
@@ -576,7 +576,6 @@
         ~ temp mentorName = translator(mentor_ActualName)
         ~ temp charNameOne = translator(firstChar_ActualName) 
         ~ change_entity_place(Mentor)
-        ~ secondChar_storyletsForRewritingCount ++
 
         {mentorName} si vuole comportare come la mia nonna.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
         Ma la mia nonna non mi tratta mai come un bambino.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
@@ -684,6 +683,7 @@
 
         - (bookUpdate)
 
+            ~ secondChar_storyletsForRewritingCount ++
             -> second_char_closing_storylet ->
             -> options_second_character
     
@@ -692,8 +692,6 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ secondChar_storyletsForRewritingCount ++
-
 
         Prima, con {mentorName}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Mi ha fatto male perché mi ha fatto pensare a scuola.
@@ -773,6 +771,7 @@
 
         Comunque qui non c'è la scuola e quindi è bello.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                     
+         ~ secondChar_storyletsForRewritingCount ++           
         -> second_char_closing_storylet ->            
         -> options_second_character
     
@@ -785,7 +784,6 @@
                 - not about_violence_and_peace:
                 ~ change_entity_place(Mentor)
             }     
-        ~ secondChar_storyletsForRewritingCount ++
         
         Franco prima mi ha detto che tu scrivi storie.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
             {
@@ -880,7 +878,9 @@
                         Franco, sai che sei appena diventato il mio migliore amico?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 }
 
-        - (bookUpdate)        
+        - (bookUpdate)
+
+        ~ secondChar_storyletsForRewritingCount ++    
         -> second_char_closing_storylet ->        
         -> options_second_character     
             
@@ -893,8 +893,6 @@
                 - not about_violence_and_peace:
                 ~ change_entity_place(Mentor)
             }     
-    
-    ~ secondChar_storyletsForRewritingCount ++
         
         Sai che mio fratello è campione di Karate?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
         E ha una macchina enorme gialla che fa arrabbiare papà.
@@ -980,8 +978,9 @@
             La rana sembra abbastanza forte da salvarmi nel caso.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             - (bookUpdate)
 
-        -> second_char_closing_storylet ->        
-        -> options_second_character 
+                ~ secondChar_storyletsForRewritingCount ++
+                -> second_char_closing_storylet ->        
+                -> options_second_character 
     
     
     = nine
@@ -992,7 +991,6 @@
                 - not about_violence_and_peace:
                 ~ change_entity_place(Mentor)
             }     
-        ~ secondChar_storyletsForRewritingCount ++
         
         Tu hai sempre voluto fare {player_pronouns has him: il riscrittore|{player_pronouns has her: la riscrittora|lə riscrittorə}} come lavoro?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
         
@@ -1162,6 +1160,7 @@
         Mi piacerebbe tanto fare il veterinario.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_energy
         - (bookUpdate)
 
+            ~ secondChar_storyletsForRewritingCount ++
             -> second_char_closing_storylet ->
             -> options_second_character
     
@@ -1173,8 +1172,6 @@
                 - not about_violence_and_peace:
                 ~ change_entity_place(Mentor)
             }     
-        
-        ~ secondChar_storyletsForRewritingCount ++
         
         Stavo ripensando a un bambino.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
         Uno di seconda.
@@ -1251,6 +1248,7 @@
         Però non è bello nemmeno essere bambini.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
         - (bookUpdate)
 
+            ~ secondChar_storyletsForRewritingCount ++
             -> second_char_closing_storylet ->
             -> options_second_character 
     
@@ -1262,8 +1260,6 @@
                 - not about_violence_and_peace:
                 ~ change_entity_place(Mentor)
             }     
-        
-        ~ secondChar_storyletsForRewritingCount ++
         
         Quando vado da mio fratello e non c'è il suo amico, mi lascia sperimentare con le sue cose.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
         Il suo amico fa il pasticciere.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -1353,7 +1349,8 @@
             }
         Tocca a me trovare le risposte!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
         - (bookUpdate)
-         
+                
+                ~ secondChar_storyletsForRewritingCount ++
                 -> second_char_closing_storylet ->
                 -> options_second_character 
     
@@ -1365,8 +1362,6 @@
                 - not about_violence_and_peace:
                 ~ change_entity_place(Mentor)
             }     
-        
-        ~ secondChar_storyletsForRewritingCount ++
         
         Mi piace molto passare il tempo in biblioteca.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
         Le biblioteche mi ricordano sempre la casa della nonna.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -1458,5 +1453,7 @@
                     }
             
         - (bookUpdate)
-        -> second_char_closing_storylet ->
-        -> options_second_character   
+
+            ~ secondChar_storyletsForRewritingCount ++
+            -> second_char_closing_storylet ->
+            -> options_second_character   
