@@ -1,23 +1,7 @@
 //con questa logica traccio chi è l'effettivo ricettore del dono, così da presentare la linea di dialogo corretta
-
 VAR gift_currentReceiver = ()
-
-
-=== backpack_contents ===
-+ {are_two_entities_together(Backpack, PG) && !debug_stochastic}[Backpack]
-    ~ enableBigDialogue()
-    {backpack_findedGifts != (): -> backpack ->|-> empty ->}
-    ~ disableBigDialogue()
-    -> main
-
-    = backpack
-        {player_name} ha con sè {list_with_commas(backpack_findedGifts)}.
-        ->->
-
-    = empty
-        Lo zainetto di {player_name} è vuoto.
-        ->->
-
+//Questa è una lista formale solo per far sì che il vecchio codice che prevedeva l'esistenza del backpack funzioni ancora senza impazzire.
+LIST list_giftElement = Backpack
 
 === backpack_management ===
 ~ enableNestDialogue()

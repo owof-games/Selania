@@ -451,11 +451,6 @@
         - contentsSafekeeping hasnt RewriterBook && currentPlace != Bedroom:
             ~ move_entity(RewriterBook, currentPlace)
     }
-    {
-        - contentsSafekeeping hasnt Backpack && currentPlace != Bedroom:
-           ~ move_entity(Backpack, currentPlace)
-    }
-
 
 
 //Altre funzioni:

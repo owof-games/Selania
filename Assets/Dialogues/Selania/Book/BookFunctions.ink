@@ -15,10 +15,6 @@
     - book_arrivingFromTracking == Forest:
         ~ move_entity(PG, Forest)
         ~ move_entity(RewriterBook, Forest)
-        {
-            - you_are_a_rewriter.sbadata or cultivable_test:
-                ~ move_entity(Backpack, Forest)
-        }
         ~ disableBigDialogue()
 
         @exit_from_rewriter_book
@@ -26,10 +22,6 @@
     - book_arrivingFromTracking == Dump:
         ~ move_entity(PG, Dump)
         ~ move_entity(RewriterBook, Dump)
-        {
-            - you_are_a_rewriter.sbadata or cultivable_test:
-                ~ move_entity(Backpack, Dump)
-        }
         ~ disableBigDialogue()
 
         @exit_from_rewriter_book
@@ -37,10 +29,6 @@
     - book_arrivingFromTracking == Greenhouse:
         ~ move_entity(PG, Greenhouse)
         ~ move_entity(RewriterBook, Greenhouse)
-        {
-            - you_are_a_rewriter.sbadata or cultivable_test:
-                ~ move_entity(Backpack, Greenhouse)
-        }
         ~ disableBigDialogue()
 
         @exit_from_rewriter_book
@@ -49,10 +37,6 @@
     - book_arrivingFromTracking == Pond:
         ~ move_entity(PG, Pond)
         ~ move_entity(RewriterBook, Pond)
-        {
-            - you_are_a_rewriter.sbadata or cultivable_test:
-                ~ move_entity(Backpack, Pond)
-        }
         ~ disableBigDialogue()
 
         @exit_from_rewriter_book
@@ -60,20 +44,12 @@
     - book_arrivingFromTracking == Kitchen:
         ~ move_entity(PG, Kitchen)
         ~ move_entity(RewriterBook, Kitchen)
-        {
-            - you_are_a_rewriter.sbadata or cultivable_test:
-                ~ move_entity(Backpack, Kitchen)
-        }
         ~ disableBigDialogue()
         @exit_from_rewriter_book
 
     - book_arrivingFromTracking == Library:
         ~ move_entity(PG, Library)
         ~ move_entity(RewriterBook, Library)
-        {
-            - you_are_a_rewriter.sbadata or cultivable_test:
-                ~ move_entity(Backpack, Library)
-        }
         ~ disableBigDialogue()
 
         @exit_from_rewriter_book
@@ -81,10 +57,6 @@
     - book_arrivingFromTracking == Nest:
         ~ move_entity(PG, Nest)
         ~ move_entity(RewriterBook, Nest)
-        {
-            - you_are_a_rewriter.sbadata or cultivable_test:
-                ~ move_entity(Backpack, Nest)
-        }    
         ~ disableBigDialogue()
 
         @exit_from_rewriter_book
@@ -92,10 +64,6 @@
     - book_arrivingFromTracking == TrainStop:
         ~ move_entity(PG, TrainStop)
         ~ move_entity(RewriterBook, TrainStop)
-        {
-            - you_are_a_rewriter.sbadata or cultivable_test:
-                ~ move_entity(Backpack, TrainStop)
-        }
         ~ disableBigDialogue()
 
         @exit_from_rewriter_book

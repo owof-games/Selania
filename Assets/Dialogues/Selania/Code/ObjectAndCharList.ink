@@ -30,7 +30,7 @@
     FirstRipple, SecondRipple, ThirdRipple, KitchenFire, KitchenSmokeOne, KitchenSmokeTwo, KitchenSmokeThree, Bat,
     lighthouseAnimation
 
-    LIST listButtons = MenuSave, MenuQuit,  Backpack, FromTrainStopToBedroom
+    LIST listButtons = MenuSave, MenuQuit, FromTrainStopToBedroom
     
     LIST listBookElements = RewriterBook, BookExit, FirstRecap, SecondRecap, ThirdRecap, FourthRecap, FifthRecap, FrogRecap, DogRecap, WitchRecap, GreenhouseRecap, KitchenRecap, NestRecap, RulesRecap, SettingsBookVersion
     
@@ -38,4 +38,4 @@
     
     LIST listSounds = TrainNoiseComing, TrainNoiseGoingAway, BastonSound
     
-    LIST listColoredGlyphs  = fireGlyph, earthGlyph, airGlyph, waterGlyph, aetherGlyph    
+    LIST listColoredGlyphs  = fireGlyph, earthGlyph, airGlyph, waterGlyph, aetherGlyph

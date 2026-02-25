@@ -27,9 +27,6 @@
 //Spostamenti
 <- move_between_rooms(my_location)
 
-//Inventario
-<- backpack_contents
-
 //Personagge
 <- mentor_character
 <- first_character
