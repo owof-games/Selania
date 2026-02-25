@@ -151,7 +151,7 @@
     No.
     Non me la sento.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
         
-        + [Che razionalmente sai che è sbagliato?]
+        + Che razionalmente sai che è sbagliato?
                 -> color_variation_management(Mentor, airC, varPGYes)->
             Mi sento potente.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             Forte.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
@@ -163,7 +163,7 @@
                         Vedere il problema è il passo più grande, {mentorName}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 }
 
-        + [Che è bello perdere il controllo, ribellarsi.]
+        + Che è bello perdere il controllo, ribellarsi.
                 -> color_variation_management(Mentor, fireC, varPGYes)->
             Peggio.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_sorry
             Il controllo non si perde, {player_name}.
@@ -178,7 +178,7 @@
                         Non la meglio cosa, non trovi?
                 }
             
-        + [Arrabbiarsi è umano, il problema è la violenza.]
+        + Arrabbiarsi è umano, il problema è la violenza.
                 -> color_variation_management(Mentor, waterC, varPGYes)->
             Arrabbiarsi è da deboli.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
             Lo fai quando non comprendi le tue emozioni.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
@@ -192,13 +192,13 @@
                         {mentorName}: cercati unə terapeuta, per favore.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 }
             
-        + [Sei stata crudele, e hai rovinato la festa per {charNameTwo}.]
+        + Sei stata crudele, e hai rovinato la festa per {charNameTwo}.
                 -> color_variation_management(Mentor, earthC, varPGYes)->
             Essere {player_pronouns has him:riscrittore|{player_pronouns has her:riscrittora|riscrittorə}} chiede empatia, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             Ma sì.
             Sono stata crudele, punto.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
             
-        + [<i>Resto in silenzio.</i>]
+        + <i>Resto in silenzio.</i>
                 -> color_variation_management(Mentor, aetherC, varPGYes)->
             La cosa peggiore è che non mi piace arrabbiarmi, ma mi fa sentire potente.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             Visibile.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
@@ -242,7 +242,7 @@
     E la sua stanchezza.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
     Ti senti mai così {player_pronouns has him:stanco|{player_pronouns has her:stanca|stancə}} che vorresti sparire per un po' dal mondo, e basta?
 
-        + [Non si può sparire, per cui è un pensiero abbastanza inutile.]
+        + Non si può sparire, per cui è un pensiero abbastanza inutile.
                 -> color_variation_management(Mentor, airC, varPGYes)->
             Un pensiero non è inutile.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             Un pensiero è solo un pensiero.
@@ -252,21 +252,21 @@
                         Potrei scrivere una canzone su questa cosa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 }
     
-        + [Ma Liliana è stanca dell'ingiustizia, non del mondo. E ha reagito.]
+        + Ma Liliana è stanca dell'ingiustizia, non del mondo. E ha reagito.
                 -> color_variation_management(Mentor, fireC, varPGYes)->
             Ma una magari a volte ha voglia di non reagire e basta.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             E di agire.
             No?
             Di fare quello che vuole, e non solo rispondere a quello che ha attorno.
      
-        + [Vorresti sparire dal mondo, o da te?]
+        + Vorresti sparire dal mondo, o da te?
                 -> color_variation_management(Mentor, aetherC, varPGYes)->
             Cambierebbe poi così tanto?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             No, è una cosa stupida da dire.
             Ed è stato stupido dire di voler sparire.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
             Lascia perdere.
     
-        + [No, però mi capita di fare dei grandiosi pisolini.]
+        + No, però mi capita di fare dei grandiosi pisolini.
                 -> color_variation_management(Mentor, earthC, varPGYes)->
             Pensavo a qualcosa di più impegnativo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             Qualcosa che non si risolve dormendo.
@@ -277,7 +277,7 @@
                     
             } 
             
-        + [A volte vorrei solo diventare invisibile.]
+        + A volte vorrei solo diventare invisibile.
                 -> color_variation_management(Mentor, waterC, varPGYes)->
             Esatto, {player_name}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
             So che è una scelta egoista.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad

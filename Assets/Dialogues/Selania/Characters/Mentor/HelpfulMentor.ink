@@ -60,13 +60,13 @@
 - (top)
     Come posso esserti utile, {player_pronouns has him: amico mio|{player_pronouns has her: amica mia|amicə miə}}?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
     
-        + [Avrei bisogno di una mano.]
+        + Avrei bisogno di una mano.
             -> support
         
-        + {player_somethingStrange > 0 or (firstChar_InkLevel has ink_high && not little_storylets.infoImpo) && you_are_a_rewriter} [Mi è successa una cosa strana.]
+        + {player_somethingStrange > 0 or (firstChar_InkLevel has ink_high && not little_storylets.infoImpo) && you_are_a_rewriter} Mi è successa una cosa strana.
             -> little_storylets
     
-        + [Ho cambiato idea.]
+        + Ho cambiato idea.
             -> main
 
 /* ---------------------------------
@@ -80,19 +80,19 @@
     - (top)
     Hai bisogno dei miei consigli?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_hurry
     
-        + {you_are_a_rewriter}[Mi ripeteresti cosa devo fare?]
+        + {you_are_a_rewriter}Mi ripeteresti cosa devo fare?
             -> to_do
         
-        + [Ho una domanda su un luogo.]
+        + Ho una domanda su un luogo.
             -> mentor_places_comments
         
-        + [C'è una cosa che mi riguarda.]
+        + C'è una cosa che mi riguarda.
             -> myself
         
-        + [Vorrei consigli su come stare meglio.]
+        + Vorrei consigli su come stare meglio.
             -> mindfulness -> support
     
-        + [Vorrei parlare d'altro.]
+        + Vorrei parlare d'altro.
             -> helping_mentor.top
         -
             -> top   
@@ -101,13 +101,13 @@
     ~ temp mentorName = translator(mentor_ActualName)
         Di cosa senti il bisogno?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
             
-            + [Vorrei cambiare il mio nome.]
+            + Vorrei cambiare il mio nome.
                     -> name_choice -> support
             
-            + [Vorrei cambiare i miei pronomi.]
+            + Vorrei cambiare i miei pronomi.
                     -> gender -> support
             
-            + [A dire il vero sono a posto così.]
+            + A dire il vero sono a posto così.
                     -> helping_mentor.top
  
  
@@ -131,7 +131,7 @@
 
 - (top)
 
-    + [Sulla stazione.]
+    + Sulla stazione.
             Intendi il luogo dove passo ore a spalare neve?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_hurry
             La stazione, ad est della foresta, è il posto dove approdano le nuove persone.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
             {contentsTrainStop has FirstCharacterNotes or contentsTrainStop has SecondCharacterNotes: E dove arriva la cagnolina postina.}
@@ -139,7 +139,7 @@
             O da cui andartene, quando vorrai.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_sad
                 -> top
 
-    + {greenhouse_entry_check}[Sulla serra.]
+    + {greenhouse_entry_check}Sulla serra.
             La serra è il mio posto preferito: ho sempre amato coltivare fiori e piante!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_hurry
             Anche se lì dentro cresce della roba molto strana.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
             La serra è un piccolo posto di meditazione.
@@ -148,7 +148,7 @@
             Tipo: come fa {mentorName} a tenere i vetri sempre così puliti?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_hurry
                 -> top
 
-    + {forest}[Sulla foresta.]
+    + {forest}Sulla foresta.
             La foresta è un po' il nostro posto di passaggio.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
             Non ho idea di chi abbia messo la panchina, sinceramente.
             E tenerla pulita tutti i giorni è una gran fatica.
@@ -156,7 +156,7 @@
             E questo mi lascia molto frustrata.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_bored
             -> top
     
-    + {pond}[Sullo stagno.]
+    + {pond}Sullo stagno.
             Lo stagno è un posto umido.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
             E a modo suo rilassante.
             Serve ad arrivare alla serra.
@@ -170,15 +170,15 @@
             }
             -> top    
             
-    + {(player_accessiblePlaces has Library) or (player_accessiblePlaces has Kitchen) or (player_accessiblePlaces has Nest)}[Sono altri i luoghi di cui vorrei parlare.]
+    + {(player_accessiblePlaces has Library) or (player_accessiblePlaces has Kitchen) or (player_accessiblePlaces has Nest)}Sono altri i luoghi di cui vorrei parlare.
             -> second_top
     
-    + [Voglio parlare d'altro.]
+    + Voglio parlare d'altro.
         -> helping_mentor.top  
 
     
 - (second_top)    
-    + {player_accessiblePlaces has Library}[Sulla biblioteca.]
+    + {player_accessiblePlaces has Library}Sulla biblioteca.
             La biblioteca è un posto... un posto.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
             Ci sono molti racconti, ma chi ha il tempo di leggerli?##speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_hurry
             Con tutta quella polvere che raccolgono, poi.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_sad
@@ -187,7 +187,7 @@
             Quasi.
                 -> second_top
             
-    + {player_accessiblePlaces has Kitchen}[Sulla cucina.]
+    + {player_accessiblePlaces has Kitchen}Sulla cucina.
             La cucina è un posto poco igienico.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_bored
             No, ricominciamo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_sorry
             La cucina è un posto dove condividere un po' di intimità con una persona.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
@@ -195,21 +195,21 @@
             E, magari, scoprire cosa stai sbagliando a dirle, e riuscire a conquistare prima la sua fiducia.
                 -> second_top
 
-    + {player_accessiblePlaces has Nest}[Sul nido.]
+    + {player_accessiblePlaces has Nest}Sul nido.
             Il nido non mi piace.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_bored
             Quello che accade lì è manipolazione, comunque tu la voglia mettere.
             E quindi è qualcosa di sbagliato.
             Non è un caso che sia l'unico luogo senza istruzioni, no?
                 -> second_top
     
-     + {player_accessiblePlaces has Dump}[Sulla discarica.]
+     + {player_accessiblePlaces has Dump}Sulla discarica.
             COMMENTO DA CREARE SULLA DISCARICA.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_bored
                 -> second_top
 
-    + [Vorrei parlare di un altro luogo.]
+    + Vorrei parlare di un altro luogo.
             -> top
     
-    + [Vorrei parlare di qualcosa di diverso.]
+    + Vorrei parlare di qualcosa di diverso.
         -> helping_mentor.top
     -
 
@@ -240,7 +240,7 @@
     
     Vorrei raccontarti una cosa strana.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
 
-        * (voices){growing_check}[C'è una voce che mi racconta cose.]
+        * (voices){growing_check}C'è una voce che mi racconta cose.
             Voce?##speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
             Sì.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             Ad esempio mi descrive le piante della serra.
@@ -252,7 +252,7 @@
                 ~ player_somethingStrange --
                 -> helping_mentor.top
                 
-        * (infoImpo){(firstChar_InkLevel has ink_high) or (secondChar_InkLevel has ink_high)} [Le personagge hanno informazioni importanti?]
+        * (infoImpo){(firstChar_InkLevel has ink_high) or (secondChar_InkLevel has ink_high)} Le personagge hanno informazioni importanti?
             Dove l'hai sentita questa cosa, stellina?##speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
             Quando stavo per fare le ultime domande a {charNameOne}, {voices:la|una} voce mi ha detto quanto inchiostro avevo e che avrei ricevuto una informazione importante.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             {not voices:Per la voce sarà la stanchezza, questo lavoro è faticoso.|Come ti dicevo, vedrai che è solo la tua empatia che parla.}##speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_sad
@@ -261,7 +261,7 @@
                 ~ player_somethingStrange --
                 -> helping_mentor.top
         
-        * (talkingWitch) {witch_intro} [Prima ho parlato con le radici nella foresta.]
+        * (talkingWitch) {witch_intro} Prima ho parlato con le radici nella foresta.
             Sembra che vedano e sentano tutto quello che accade qui.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             E mi hanno chiesto come stavo dopo aver concluso la prima riscrittura.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             {infoImpo or voices:Stellina, di nuovo con questa voce?|Senti le voci, stellina?}##speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_sad
@@ -272,7 +272,7 @@
                 ~ player_somethingStrange --
                 -> helping_mentor.top
         
-        * (talkingFrog) {contentsPond has TheFrog} [C'è una rana blu parlante.]
+        * (talkingFrog) {contentsPond has TheFrog} C'è una rana blu parlante.
             {
                 - are_entities_together_in(Mentor, PG, Pond):
                     Ho notato.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
@@ -309,7 +309,7 @@
                 ~ player_somethingStrange --
             -> helping_mentor.top
         
-        * {contentsSafekeeping hasnt RewriterBook} [Ho trovato questo libro col mio nome.]
+        * {contentsSafekeeping hasnt RewriterBook} Ho trovato questo libro col mio nome.
             E raccoglie informazioni su questo posto.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             E dove l'hai trovato?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
             {temp_grimoire: Sulla panchina.|Me l'ha dato {charNameOne}.}#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
@@ -325,7 +325,7 @@
             Spero solo non parli male di me!##speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_sad
                 -> helping_mentor.top
         
-        + [Ripensandoci, non ho nulla di nuovo da dire.]
+        + Ripensandoci, non ho nulla di nuovo da dire.
             -> helping_mentor.top
    
 

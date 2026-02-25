@@ -31,7 +31,7 @@
                     E mente e corpo creano qualcosa di nuovo.
             } 
 
-            + [Preferisco la stazione dei treni, è ordinata e precisa.]
+            + Preferisco la stazione dei treni, è ordinata e precisa.
                     -> color_variation_management(Mentor, airC, varPGYes)->
                 Sì, ne capisco il fascino.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 A volte mi siedo lì e mi godo per qualche istante l'attesa.
@@ -39,13 +39,13 @@
                 Ma poi le mani fremono, mi supplicano di sistemare qualcosa.
                 Fatico a stare tranquilla.
                 
-            + [Lo stagno è divertente, gli insetti fanno tantissime cose.]
+            + Lo stagno è divertente, gli insetti fanno tantissime cose.
                     -> color_variation_management(Mentor, earthC, varPGYes)->
                 Forse ne fanno troppe.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
                 Sembrano non pensare a nulla.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 E l'acqua è lì e lascia che tutto accada, senza pensare al domani.
                 
-            + [La foresta domina: è lotta, è potenza!]
+            + La foresta domina: è lotta, è potenza!
                     -> color_variation_management(Mentor, fireC, varPGYes)->
                 E disordinata, sporca.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
                 Posso capirne il fascino, ma non è un luogo dove resto con piacere.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
@@ -59,13 +59,13 @@
                             Una cosa davvero fastidiosa.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                     }
                 
-            + [Un po' come prendersi cura delle persone qui.]
+            + Un po' come prendersi cura delle persone qui.
                     -> color_variation_management(Mentor, waterC, varPGYes)->
                 Sì, anche se con meno pressioni.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Le persone a volte fanno cose che non ci aspettiamo.
                 Un <i>Lichene degli abissi</i> con le giuste condizioni invece cresce sempre allo stesso modo.
   
-            + [Fortunatamente invece crescono a prescindere da me.]
+            + Fortunatamente invece crescono a prescindere da me.
                     -> color_variation_management(Mentor, aetherC, varPGYes)->
                 Senza di te?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                 Dobbiamo bagnare il terreno, prepararlo, seminare.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
@@ -108,12 +108,12 @@
                     Perché la cosa mi rincuora mooolto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             }
         
-            + [Numeri come l'età sono indicatori, non fatti assoluti.]
+            + Numeri come l'età sono indicatori, non fatti assoluti.
                     -> color_variation_management(Mentor, airC, varPGYes)->
                 Su questo hai ragione, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Eppure posso assicurarti che i miei cinquanta e rotti anni si portano addosso anche un bel po' di fatti scricchiolanti e ricordi.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                    
-            + [Quando un gioco ha tantissime regole non è più divertente.]
+            + Quando un gioco ha tantissime regole non è più divertente.
                     -> color_variation_management(Mentor, earthC, varPGYes)->
                 Eppure non sono così tante regole.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_bored
                 Forse è solo una: non puoi avere tutto.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
@@ -121,13 +121,13 @@
                 Ma non credo proprio che funzioni così.
                 Giochi, e il più delle volte perdi senza nemmeno sapere perché.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                 
-            + [Nel dubbio si agisce. Fare male è meglio che non fare.]
+            + Nel dubbio si agisce. Fare male è meglio che non fare.
                     -> color_variation_management(Mentor, fireC, varPGYes)->
                 Ma con questo principio, non c'è una azione mirata, consapevole.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                 Poi succede che ci feriamo, o feriamo chi amiamo.
                 E a quel punto non siamo nemmeno pronte a capire il perché.
                 
-            + [E tu sei molto ricettiva verso le altre persone.]
+            + E tu sei molto ricettiva verso le altre persone.
                     -> color_variation_management(Mentor, waterC, varPGYes)->
                 Forse non <i>molto</i>.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                 Ma indubbiamente quello che hanno da dire e quello che provano, conta.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
@@ -135,7 +135,7 @@
                 Di cosa abbia bisogno.
                 Dove voglia andare.
                 
-            + [Per vedere le cose in modo ampio, è importante perdersi.]
+            + Per vedere le cose in modo ampio, è importante perdersi.
                     -> color_variation_management(Mentor, aetherC, varPGYes)->
                 E in questo luogo in fondo arrivano solo persone che si sono perse.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 E che se ne vanno più serene.
@@ -175,30 +175,30 @@
         Ma a volte vorresti una conferma esplicita, sapere che stai facendo tutto quello che puoi fare.
         Che nessuno ce l'ha con te.
 
-            + [Ogni lavoro ha la sua quota di sacrificio.]
+            + Ogni lavoro ha la sua quota di sacrificio.
                     -> color_variation_management(Mentor, airC, varPGYes)->
                 Vero.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Il valore di qualcosa viene da quanto ci è costata.
                 E la maggior parte delle volte non paghiamo in denaro.
                 
-            + [Forse le volpi si mangiano le lettere!]
+            + Forse le volpi si mangiano le lettere!
                     -> color_variation_management(Mentor, earthC, varPGYes)->
                 La fantasia è un modo piacevole di affrontare la realtà, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Ma alla lunga rende difficile capire cosa sia vero e cosa no.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                     
-            + [Fregatene: il mondo è pieno di ingrati.]
+            + Fregatene: il mondo è pieno di ingrati.
                     -> color_variation_management(Mentor, fireC, varPGYes)->
                 No.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                 Direi che il mondo è pieno di persone distratte.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Le cose da fare sono infinite, e finiamo per dimenticarci di chi non vediamo tutti i giorni.
                 Non è ingratitudine, è una vita che scorre troppo veloce.
                 
-            + [Ti prometto che ti scriverò ogni giorno.]
+            + Ti prometto che ti scriverò ogni giorno.
                     -> color_variation_management(Mentor, waterC, varPGYes)->
                 Oh, {player_pronouns has him: caro|{player_pronouns has her: cara|carə}}, è una bella promessa.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Una promessa che ho sentito decine di volte.
                     
-            + [Esiste un confine tra {mentorName} e questo luogo?]
+            + Esiste un confine tra {mentorName} e questo luogo?
                     -> color_variation_management(Mentor, aetherC, varPGYes)->
                 A volte mi sento <i>solo</i> questo luogo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Non mi chiedo spesso se andarmene o meno.
@@ -244,7 +244,7 @@
         Quella paura per il futuro e per l'ambiente.
         Non dovrebbe pensare al pallone, a giocare con gli amici, a studiare?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         
-            + [{charNameTwo} ama studiare, e qui ha trovato il suo posto.]
+            + {charNameTwo} ama studiare, e qui ha trovato il suo posto.
                     -> color_variation_management(Mentor, airC, varPGYes)->
                 No!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
                 Questo è un posto spirituale.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
@@ -252,14 +252,14 @@
                 Non un laboratorio.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
                 Non il piccolo chimico.
                     
-            + [Giocare è comunque un modo per capire il mondo, {mentorName}.]
+            + Giocare è comunque un modo per capire il mondo, {mentorName}.
                     -> color_variation_management(Mentor, earthC, varPGYes)->
                 Ma un modo controllato, adatto per i bambini.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Con meno violenza possibile.
                 Senza le cose terribili che ci circondano.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                 Se non voglio vederle io a cinquant'anni, perché deve vederle un bimbo?
                 
-            + [Alla sua età avevo anche io rabbia e paura. Si è bambini, non idioti.]
+            + Alla sua età avevo anche io rabbia e paura. Si è bambini, non idioti.
                     -> color_variation_management(Mentor, fireC, varPGYes)->
                 Non serve che usi quel linguaggio con me, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
                 E non sono d'accordo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
@@ -272,7 +272,7 @@
                 Per questo i genitori ci sono.
                 Per proteggerti.
 
-            + [Mi spiace che tu ti senta in colpa, {mentorName}.]
+            + Mi spiace che tu ti senta in colpa, {mentorName}.
                     -> color_variation_management(Mentor, waterC, varPGYes)->
                 Ma non hai detto che non ho sbagliato.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                 Scusa, non è quello il tuo ruolo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
@@ -280,7 +280,7 @@
                 Spero che almeno lui prima o poi mi perdoni.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                     
 
-            + [Come si dice? Crescere unə figliə dovrebbe essere il lavoro di una comunità.]
+            + Come si dice? Crescere unə figliə dovrebbe essere il lavoro di una comunità.
                     -> color_variation_management(Mentor, aetherC, varPGYes)->
                 Dovrebbe.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Ma non è.
@@ -336,7 +336,7 @@
         Fino a quando non sono arrivata qui.
         {player_name}: secondo te cosa vuol dire amare un'altra persona?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
 
-            + [Logico: progettare assieme, costruire fondamenta, accrescersi.]
+            + Logico: progettare assieme, costruire fondamenta, accrescersi.
                     -> color_variation_management(Mentor, airC, varPGYes)->
                 Creare qualcosa che regga alla fine del desiderio.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Quando il corpo perde il suo splendore.
@@ -344,7 +344,7 @@
                 Quando invece di chiamarci "amore".
                 Chiamiamo il nome dell'altro per sapere dove sono le chiavi della macchina.
                     
-            + [Un rifugio di stupore e gioia in un mondo grigio.]
+            + Un rifugio di stupore e gioia in un mondo grigio.
                     -> color_variation_management(Mentor, earthC, varPGYes)->
                 Mi piace la tua ingenuità {player_name}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Con questa logica ho amato solo una cosa:
@@ -353,7 +353,7 @@
                 Pieno di musica.
                 E forse è davvero così.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                     
-            + [Fondersi nella passione, a letto come in una protesta.]
+            + Fondersi nella passione, a letto come in una protesta.
                     -> color_variation_management(Mentor, fireC, varPGYes)->
                 La passione si spegne, {player_name}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 E a quel punto cosa rimane?
@@ -362,7 +362,7 @@
                 Odio?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
                 Passioni forti chiamano passioni ancora più forti.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 
-            + [Cura, ascolto, affetto.]
+            + Cura, ascolto, affetto.
                 -> color_variation_management(Mentor, waterC, varPGYes)->
                 Già, ho pensato la stessa cosa a lungo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Ma a volte la cura diventa un lavoro.
@@ -371,7 +371,7 @@
                 Eppure resti.
                 Vuol dire che è finito l'amore?
                     
-            + [Raggiungersi l'anima a vicenda, ricercando il divino che è noi.]
+            + Raggiungersi l'anima a vicenda, ricercando il divino che è noi.
                 -> color_variation_management(Mentor, aetherC, varPGYes)->
                 Una visione mistica.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Forse blasfema.
@@ -403,21 +403,21 @@
         ~ mentor_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
-            + [Dammi dettagli più concreti.]
+            + Dammi dettagli più concreti.
                     -> color_variation_management(Mentor, airC, varPGYes)->
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + Sicuro che il violino ha bisogno di un tamburo per tornare.
                     -> color_variation_management(Mentor, earthC, varPGYes)->
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + Seguiamo le sue tracce! Fiutiamo il suo odore.
                 -> color_variation_management(Mentor, fireC, varPGYes)->
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
+            + Se ti senti sola, sono qui ad ascoltarti.
                 -> color_variation_management(Mentor, waterC, varPGYes)->
   
         
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
+            + Tu sei sempre con ləi, ləi è sempre con te.
                 -> color_variation_management(Mentor, aetherC, varPGYes)->
  
             -
@@ -434,21 +434,21 @@
         ~ mentor_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
-            + [Dammi dettagli più concreti.]
+            + Dammi dettagli più concreti.
                     -> color_variation_management(Mentor, airC, varPGYes)->
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + Sicuro che il violino ha bisogno di un tamburo per tornare.
                     -> color_variation_management(Mentor, earthC, varPGYes)->
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + Seguiamo le sue tracce! Fiutiamo il suo odore.
                 -> color_variation_management(Mentor, fireC, varPGYes)->
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
+            + Se ti senti sola, sono qui ad ascoltarti.
                 -> color_variation_management(Mentor, waterC, varPGYes)->
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
+            + Tu sei sempre con ləi, ləi è sempre con te.
                 -> color_variation_management(Mentor, aetherC, varPGYes)->
  
             -
@@ -464,21 +464,21 @@
         ~ mentor_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
-            + [Dammi dettagli più concreti.]
+            + Dammi dettagli più concreti.
                     -> color_variation_management(Mentor, airC, varPGYes)->
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + Sicuro che il violino ha bisogno di un tamburo per tornare.
                     -> color_variation_management(Mentor, earthC, varPGYes)->
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + Seguiamo le sue tracce! Fiutiamo il suo odore.
                 -> color_variation_management(Mentor, fireC, varPGYes)->
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
+            + Se ti senti sola, sono qui ad ascoltarti.
                 -> color_variation_management(Mentor, waterC, varPGYes)->
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
+            + Tu sei sempre con ləi, ləi è sempre con te.
                 -> color_variation_management(Mentor, aetherC, varPGYes)->
  
             -
@@ -494,21 +494,21 @@
         ~ mentor_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
-            + [Dammi dettagli più concreti.]
+            + Dammi dettagli più concreti.
                     -> color_variation_management(Mentor, airC, varPGYes)->
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + Sicuro che il violino ha bisogno di un tamburo per tornare.
                     -> color_variation_management(Mentor, earthC, varPGYes)->
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + Seguiamo le sue tracce! Fiutiamo il suo odore.
                 -> color_variation_management(Mentor, fireC, varPGYes)->
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
+            + Se ti senti sola, sono qui ad ascoltarti.
                 -> color_variation_management(Mentor, waterC, varPGYes)->
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
+            + Tu sei sempre con ləi, ləi è sempre con te.
                 -> color_variation_management(Mentor, aetherC, varPGYes)->
  
             -
@@ -523,21 +523,21 @@
         ~ mentor_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
-            + [Dammi dettagli più concreti.]
+            + Dammi dettagli più concreti.
                     -> color_variation_management(Mentor, airC, varPGYes)->
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + Sicuro che il violino ha bisogno di un tamburo per tornare.
                     -> color_variation_management(Mentor, earthC, varPGYes)->
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + Seguiamo le sue tracce! Fiutiamo il suo odore.
                 -> color_variation_management(Mentor, fireC, varPGYes)->
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
+            + Se ti senti sola, sono qui ad ascoltarti.
                 -> color_variation_management(Mentor, waterC, varPGYes)->
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
+            + Tu sei sempre con ləi, ləi è sempre con te.
                 -> color_variation_management(Mentor, aetherC, varPGYes)->
  
             -
@@ -552,21 +552,21 @@
         ~ mentor_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
-            + [Dammi dettagli più concreti.]
+            + Dammi dettagli più concreti.
                     -> color_variation_management(Mentor, airC, varPGYes)->
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + Sicuro che il violino ha bisogno di un tamburo per tornare.
                     -> color_variation_management(Mentor, earthC, varPGYes)->
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + Seguiamo le sue tracce! Fiutiamo il suo odore.
                 -> color_variation_management(Mentor, fireC, varPGYes)->
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
+            + Se ti senti sola, sono qui ad ascoltarti.
                 -> color_variation_management(Mentor, waterC, varPGYes)->
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
+            + Tu sei sempre con ləi, ləi è sempre con te.
                 -> color_variation_management(Mentor, aetherC, varPGYes)->
  
             -
@@ -581,21 +581,21 @@
         ~ mentor_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
-            + [Dammi dettagli più concreti.]
+            + Dammi dettagli più concreti.
                     -> color_variation_management(Mentor, airC, varPGYes)->
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + Sicuro che il violino ha bisogno di un tamburo per tornare.
                     -> color_variation_management(Mentor, earthC, varPGYes)->
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + Seguiamo le sue tracce! Fiutiamo il suo odore.
                 -> color_variation_management(Mentor, fireC, varPGYes)->
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
+            + Se ti senti sola, sono qui ad ascoltarti.
                 -> color_variation_management(Mentor, waterC, varPGYes)->
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
+            + Tu sei sempre con ləi, ləi è sempre con te.
                 -> color_variation_management(Mentor, aetherC, varPGYes)->
  
             -
