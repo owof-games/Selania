@@ -203,14 +203,21 @@ namespace Selania.Rework.Components.DialogueBox
         {
             // either immediately show the choices, or enqueue them, to be display at the next continue operation
             if (_latestTextLine == null)
+            {
+                Logger.ZLogTrace($"Immediately adding a choice.");
                 ActualAddChoices(choices, onChoiceSelected);
+            }
             else
+            {
+                Logger.ZLogTrace($"Enqueuing addition of choices.");
                 _actualAddChoices = () => ActualAddChoices(choices, onChoiceSelected);
+            }
         }
 
         private void ActualAddChoices(IEnumerable<DialogueChoices.Choice> choices,
             Action<int> onChoiceSelected)
         {
+            Logger.ZLogTrace($"Actually adding choices");
             try
             {
                 SlideInIfNecessary();
