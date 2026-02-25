@@ -3,7 +3,7 @@
 
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
-        + {are_two_entities_together(SecondCharacter, PG) && secondChar_storyStatus == story_storyStarted}[SecondCharacter]
+        + {are_two_entities_together(SecondCharacter, PG) && secondChar_storyStatus == story_storyStarted} [SecondCharacter]
             -> talk_with_second_character
         
         //Chiacchiera a fine storia
@@ -158,7 +158,7 @@
     
         //Azioni legate alla riscrittura
             //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-                + {secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && not rewriting_proposal_second_character && not ink_and_rewriting} [{charNameTwo}, ti va di rileggere assieme le cose in modo diverso?]
+                + {secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && not rewriting_proposal_second_character && not ink_and_rewriting} {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
                         Mi sa che {mentorName} vuole dirti qualcosa prima.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
                             {
                                 - are_two_entities_together(Mentor,PG):
@@ -168,26 +168,26 @@
                                     -> main
             
             //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
-                + {secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && not rewriting_proposal_second_character && ink_and_rewriting} [{charNameTwo}, ti va di rileggere assieme le cose in modo diverso?]
+                + {secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && not rewriting_proposal_second_character && ink_and_rewriting} {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
                         //Incremento le variazioni del libro della Riscrittora           
                             ~ book_BGVariations ++
                                 -> rewriting_proposal_second_character
                                 
             //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo             
-                + {secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && rewriting_proposal_second_character}[Iniziamo la riscrittura?]
+                + {secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && rewriting_proposal_second_character}Iniziamo la riscrittura?
                         -> rewriting_proposal_second_character
         
         
         //Azioni legate alla costruzione della relazione
                 
             //Offrire un dono
-                + {not second_story_gift.ink_outcome && backpack_findedGifts != ()} [Ti voglio dare questa cosa.]
+                + {not second_story_gift.ink_outcome && backpack_findedGifts != ()} Ti voglio dare questa cosa.
                             -> second_story_gift
     
         
             
             //Cucinare assieme
-            + {second_char_main_storylets.two && open_the_kitchen && not ending_cooking_with_second_char && kitchen_secondCharIsCooking==false}[Ti va di cucinare qualcosa assieme?]
+            + {second_char_main_storylets.two && open_the_kitchen && not ending_cooking_with_second_char && kitchen_secondCharIsCooking==false}Ti va di cucinare qualcosa assieme?
                     
                 {
                     - kitchen_firstCharIsCooking:
@@ -226,7 +226,7 @@
                 }
                     
         //Uscita dalla conversazione        
-            + [<i>Lascio il dialogo.]
+            + <i>Lascio il dialogo.
                 -> main
             -
                 -> talk_with_second_character

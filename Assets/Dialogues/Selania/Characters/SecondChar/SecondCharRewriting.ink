@@ -41,10 +41,10 @@
         // Ma poi mi fanno male.
         // E io non mi fido più di voi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
 
-            + [Ti ho ascoltato, {charNameTwo}, e posso aiutarti a riscrivere la tua storia.]
+            + Ti ho ascoltato, {charNameTwo}, e posso aiutarti a riscrivere la tua storia.
                 -> rewriting
             
-            + [Capisco il tuo dolore, ma ho bisogno di riflettere un attimo.]
+            + Capisco il tuo dolore, ma ho bisogno di riflettere un attimo.
                 -> main
 
 
@@ -84,7 +84,7 @@
             Hai detto che da quando nonna è nella casa dei vecchi fa tutto schifo.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             Che tuo papà litiga con tua mamma, e che mamma si arrabbia con te e di non piangere perché nonna è in un posto migliore.
 
-            + [Tua nonna ti ha insegnato a lottare: lotta anche tu!]
+            + Tua nonna ti ha insegnato a lottare: lotta anche tu!
                 -> color_variation_management(SecondCharacter, fireC, varPGYes)->
                 E ti ha insegnato a barare!
                 E a sputare nel caffè di chi ti fa male.
@@ -95,7 +95,7 @@
                 }
                     
             
-            + [I tuoi genitori sono infelici, {charNameTwo}, prova a comprenderli.]
+            + I tuoi genitori sono infelici, {charNameTwo}, prova a comprenderli.
                 -> color_variation_management(SecondCharacter, waterC, varPGYes)->
                 Tutti i litigi, la fuga di tuo padre.
                 Il modo in cui si arrabbia per tutto.
@@ -103,7 +103,7 @@
                 Sono cose che puoi capire, che vivi anche tu.
                     
                     
-            + [Tuo fratello però ha trovato la gioia anche in questo casino.]
+            + Tuo fratello però ha trovato la gioia anche in questo casino.
                 -> color_variation_management(SecondCharacter, earthC, varPGYes)->
                 Ci sono le sue statue, c'è il suo amico.
                 {
@@ -112,7 +112,7 @@
                 }
 
                                 
-            + [E la casa dei vecchi è un posto attrezzato, organizzato.]
+            + E la casa dei vecchi è un posto attrezzato, organizzato.
                     -> color_variation_management(SecondCharacter, airC, varPGYes)->
                 Una persona anziana ha bisogno di cure, {charNameTwo}.
                 Di persone che le diano quello di cui ha bisogno.
@@ -120,7 +120,7 @@
                 Ma sarebbe la cosa giusta per lei, riportarla a casa?
                     
     
-            + [Ma è grazie al pianto che puoi essere diverso da loro.]
+            + Ma è grazie al pianto che puoi essere diverso da loro.
                 -> color_variation_management(SecondCharacter, aetherC, varPGYes)->
                 Tu tieni agli animali.
                 A tuo fratello.
@@ -156,7 +156,7 @@
 
         A scuola le maestre dicono che sei cattivo, bugiardo, violento, e finisci sempre in punizione.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
 
-        + [Le bugie alla fine sono solo storie. Usale per divertirti.]
+        + Le bugie alla fine sono solo storie. Usale per divertirti.
                 -> color_variation_management(SecondCharacter, earthC, varPGYes)->
             {
                 - cooking_with_second_char.third_theme:
@@ -170,14 +170,14 @@
                     Come i racconti che hai trovato in biblioteca!
             }
                    
-        + [Tutto a questo mondo cambia. Anche un bambino cocciuto e bugiardo.]
+        + Tutto a questo mondo cambia. Anche un bambino cocciuto e bugiardo.
                 -> color_variation_management(SecondCharacter, airC, varPGYes)->
             Quando sei arrivato qui hai litigato con {mentorName}.
             E mi hai detto molte bugie.
             Ma hai anche chiesto scusa.
             Puoi partire da questo per cambiare.
                    
-        + [La rabbia è parte della tua vita, della tua famiglia: trasformala.]
+        + La rabbia è parte della tua vita, della tua famiglia: trasformala.
                 -> color_variation_management(SecondCharacter, fireC, varPGYes)->
             Come quando ti arrabbi perché gli animali stanno scomparendo.
             O perché papà tratta male nonna.
@@ -188,7 +188,7 @@
                     Ma tu sì, e puoi cambiare tante cose.
             }
                     
-        + [Ma non sei solo questo: sei gentile, sei curioso, sei divertente.]
+        + Ma non sei solo questo: sei gentile, sei curioso, sei divertente.
                 -> color_variation_management(SecondCharacter, waterC, varPGYes)->
             Hai sviluppato un bel rapporto con {charNameOne}.
             Mi hai raccontato tante cose interessanti sugli animali.
@@ -198,7 +198,7 @@
             E menti.
             Ma sei anche tante altre cose, {charNameTwo}.
                    
-        + [Eppure hai trovato il modo di fare pace con {mentorName}.]
+        + Eppure hai trovato il modo di fare pace con {mentorName}.
                 -> color_variation_management(SecondCharacter, aetherC, varPGYes)->
             Hai fatto lo sforzo di capirla.
             E mi hai chiesto scusa più volte per le tue bugie.
@@ -206,33 +206,33 @@
                    
 
 
-        // + [Non puoi prevedere il futuro. Goditi quello che c'è senza rimpianti.]
+        // + Non puoi prevedere il futuro. Goditi quello che c'è senza rimpianti.
         //     Se le cose sono incerte, prenditi le certezze.
         //     E la cosa certa è che gli animali ci sono ancora.
         //     Che tuo fratello ti vuole bene.
         //     E le caramelle sono buone.
         //            -> color_variation_management(SecondCharacter, earthC, varPGYes)->
  
-        // + [Sei giovane ma sai già un sacco di cose. Studia e salvali.]
+        // + Sei giovane ma sai già un sacco di cose. Studia e salvali.
         //     Si ha paura solo se non si conosce una cosa.
         //     Impara a conoscere quello di cui hai paura.
         //     E a quel punto saprai anche come cambiare le cose.
         //            -> color_variation_management(SecondCharacter, airC, varPGYes)->
 
-        // + [E allora lotta. Unisciti ad altri e protesta!]
+        // + E allora lotta. Unisciti ad altri e protesta!
         //     Sei abituato a stare in castigo, di cosa hai paura?
         //     A scuola fai quello che vuoi.
         //     Fallo anche fuori.
         //     Per salvare il mondo.
         //             -> color_variation_management(SecondCharacter, fireC, varPGYes)->
 
-        // + [Inventa storie, bugie che creino compassione, che cambino le persone.]
+        // + Inventa storie, bugie che creino compassione, che cambino le persone.
         //     Un po' come la bugia del compleanno.
         //     Ma per far sì che ogni bosco abbia migliaia di compleanni.
         //     Usa il tuo dono per convincere le persone a cambiare.
         //            -> color_variation_management(SecondCharacter, waterC, varPGYes)->
   
-        // + [La paura blocca, la paura è una scusa comoda.]
+        // + La paura blocca, la paura è una scusa comoda.
         //     La paura è un rifugio.
         //     Se hai paura, non agisci.
         //     Se agisci non cambi nulla.
@@ -263,7 +263,7 @@
             E hai paura che gli animali possano sparire.
             Così è logico vedere il futuro come un posto spaventoso.
     
-        + [Eppure ci sono le associazioni che proteggono gli animali.]
+        + Eppure ci sono le associazioni che proteggono gli animali.
             -> color_variation_management(SecondCharacter, aetherC, varPGYes)->
             Come quelle di cui ti ha parlato la tua maestra.
             E la sua amica del canile.
@@ -272,14 +272,14 @@
                     E magari da grande studierai davvero come si curano i pesci.
             }
 
-        + [Eppure tuo fratello ama il suo ragazzo.]
+        + Eppure tuo fratello ama il suo ragazzo.
             -> color_variation_management(SecondCharacter, waterC, varPGYes)->
             E ama te.
             E fa in modo che possiate passare tanto tempo assieme.
             Che tu possa avere uno spazio felice.
             E così rende il mondo un po' meno orribile.
                    
-        + [Eppure tuo fratello lotta contro tuo padre perché tu stia meglio.]
+        + Eppure tuo fratello lotta contro tuo padre perché tu stia meglio.
             -> color_variation_management(SecondCharacter, fireC, varPGYes)->
             {
                 - second_char_main_storylets.eleven:
@@ -289,7 +289,7 @@
             Non si è fatto mettere i piedi in testa da nessuno.
             E questo lo fai se pensi ci sia un futuro dove andare.
                     
-        + [Ma sai anche trovare la fantasia e la giocosità nel mondo.]
+        + Ma sai anche trovare la fantasia e la giocosità nel mondo.
             -> color_variation_management(SecondCharacter, earthC, varPGYes)->
             Sei arrivato in questo posto sconosciuto e invece di avere paura, ti sei messo a curiosare.
             Ti sei fatto amico una rana parlante.
@@ -303,7 +303,7 @@
                 }    
             Quando tu giochi non hai paura di nulla.
 
-        + [Eppure sistematicamente tuo fratello per lavoro aggiusta le cose.]
+        + Eppure sistematicamente tuo fratello per lavoro aggiusta le cose.
             -> color_variation_management(SecondCharacter, airC, varPGYes)->
             Vede le cose rotte e le ripara.
             Quindi ci sono cose che si possono aggiustare.
@@ -336,7 +336,7 @@
 
         Hai detto che i grandi fanno schifo, e che non vuoi diventare grande.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
         
-            + [Ma puoi essere un adulto combattente, come tua nonna.]
+            + Ma puoi essere un adulto combattente, come tua nonna.
                 -> color_variation_management(SecondCharacter, fireC, varPGYes)->
                 {
                     - cooking_with_second_char.first_theme:
@@ -349,7 +349,7 @@
                 E non farti mettere i piedi in testa da nessuna persona!
                         
         
-            + [Ma puoi essere un adulto curioso e studioso, come un po' già sei.]
+            + Ma puoi essere un adulto curioso e studioso, come un po' già sei.
                 -> color_variation_management(SecondCharacter, airC, varPGYes)->
                 {
                     -first_second_chit_chat:
@@ -359,7 +359,7 @@
                 E tutto quello che ora sai degli animali diventerà mille volte ancora di più.
 
             
-            + [Ma puoi essere un adulto in cerca di uno scopo più grande, come {charNameOne}.]
+            + Ma puoi essere un adulto in cerca di uno scopo più grande, come {charNameOne}.
                 -> color_variation_management(SecondCharacter, aetherC, varPGYes)->
                 {
                     - cooking_with_second_char.first_theme:
@@ -367,7 +367,7 @@
                 }
                 E trovare modi inaspettati di aiutare le altre persone, gli animali, il mondo.
                     
-            + [Ma puoi essere un adulto che si prende cura delle persone, come {mentorName}.]
+            + Ma puoi essere un adulto che si prende cura delle persone, come {mentorName}.
                 -> color_variation_management(SecondCharacter, waterC, varPGYes)->
                 E rendere più facile la vita all3 altr3.
                 {
@@ -380,7 +380,7 @@
                         Ma un adulto responsabile, come tuo fratello.
                 }
 
-            + [Ma puoi essere un adulto creativo, come tuo fratello.]
+            + Ma puoi essere un adulto creativo, come tuo fratello.
                 -> color_variation_management(SecondCharacter, earthC, varPGYes)->
                 E condividere le tue storie e i tuoi esperimenti.
                 Essere felice nel farli.
@@ -416,14 +416,14 @@
                     <i>Quale <b><i>epilogo</b></i> proporrà {player_name}?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}   
             }     
      
-        + (fire)[Diventa il più forte, il più coraggioso.]
+        + (fire)Diventa il più forte, il più coraggioso.
             -> color_variation_management(SecondCharacter, fireC, varPGYes)->
             Sei un testardo, bugiardo, dispettoso.
             Queste cose unite possono renderti indistruttibile.
             E di cosa avrà mai paura un ragazzo indistruttibile?
                     
     
-        + (aether)[Tutti abbiamo paura. Condividi questa paura con le altre persone.]
+        + (aether)Tutti abbiamo paura. Condividi questa paura con le altre persone.
             -> color_variation_management(SecondCharacter, aetherC, varPGYes)->
             Falle sentire meno sole.
             Meno sbagliate.
@@ -432,20 +432,20 @@
             Assieme.
                    
 
-        + (earth)[L'opposto della paura è la curiosità.]
+        + (earth)L'opposto della paura è la curiosità.
             -> color_variation_management(SecondCharacter, earthC, varPGYes)->
             E tu sei il ritratto della curiosità.
             Guarda le cose che arriveranno chiedendoti "Chissà se..." o "E se invece..." o "Perché accade questo?".
             E a quel punto ogni paura diventerà solo un problema da risolvere.
                    
                 
-        + (water)[I tuoi genitori sono spaventati, aiutatevi a vicenda.]
+        + (water)I tuoi genitori sono spaventati, aiutatevi a vicenda.
             -> color_variation_management(SecondCharacter, waterC, varPGYes)->
             Nessuna persona può cambiare il mondo da sola.
             Ma possiamo partire dal cambiare le cose che ci circondano, un pezzo alla volta.
                    
       
-        + (air)[Con la tua intelligenza puoi rendere il mondo migliore.]
+        + (air)Con la tua intelligenza puoi rendere il mondo migliore.
             -> color_variation_management(SecondCharacter, airC, varPGYes)->
             Puoi aiutare gli adulti a essere meno tristi.
             E gli animali a non morire.

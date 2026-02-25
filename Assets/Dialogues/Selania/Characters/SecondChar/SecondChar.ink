@@ -2,7 +2,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     <i>{player_name} sta per donare qualcosa a {charNameTwo}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             
-            + {backpack_findedGifts != ()} [Scelgo il dono.]
+            + {backpack_findedGifts != ()} Scelgo il dono.
                 ~ gift_currentReceiver += SecondCharacter
                 -> backpack_management
             
