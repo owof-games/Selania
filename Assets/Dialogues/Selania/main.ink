@@ -49,6 +49,7 @@
 
 // //Elementi della foresta
 // <- bench
+<- temp_grimoire
 
 //Elementi della discarica
 <- the_witch
