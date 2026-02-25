@@ -1,10 +1,6 @@
-=== witch_storylets
+=== witch_storylets_management
     {    
     
-        //Dono del libro
-        - not foundLibro && not take_this_book:
-            -> foundLibro
-        
         //Commento sul libro
         - witch_intro && not about_the_book:
             -> about_the_book

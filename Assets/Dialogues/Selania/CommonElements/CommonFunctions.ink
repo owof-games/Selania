@@ -295,6 +295,12 @@
 //Qui metto tutte quelle funzioni e variazioni che sono richieste a ogni cambio stanza.
 ~ temp currentPlace = entity_location(PG)
 
+//Passaggio per spostare il grimorio temporaneo in foresta dopo aver scelto il proprio nome.
+{
+    - player_nameChosen == true && contentsSafekeeping has RewriterBook:
+        ~ move_entity(temporaryGrimoire, Forest)
+}
+
 {debug: passo per on_movement_events}
 //Riduzioni di contatori legati al tempo:
     ~ thirdChar_mailPause --

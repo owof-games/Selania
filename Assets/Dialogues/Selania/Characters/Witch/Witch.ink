@@ -1,6 +1,7 @@
 === the_witch
     + {are_two_entities_together(TheWitch, PG)} [TheWitch]
-    -> witch_storylets
+        ~ move_entity(WitchRecap, BookPlace)
+        -> witch_storylets_management
     
     
 === witch_feedback

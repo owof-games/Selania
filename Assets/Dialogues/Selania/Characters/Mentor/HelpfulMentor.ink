@@ -309,10 +309,10 @@
                 ~ player_somethingStrange --
             -> helping_mentor.top
         
-        * {foundLibro or take_this_book} [Ho trovato questo libro col mio nome.]
+        * {contentsSafekeeping hasnt RewriterBook} [Ho trovato questo libro col mio nome.]
             E raccoglie informazioni su questo posto.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             E dove l'hai trovato?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
-            {foundLibro: Sotto quel vecchio tronco alla foresta.|Me l'ha dato {charNameOne}.}#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+            {temp_grimoire: Sulla panchina.|Me l'ha dato {charNameOne}.}#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             Interessante.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
                 {
                     - player_accessiblePlaces has Library:

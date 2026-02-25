@@ -13,6 +13,21 @@
             -> main
 
 
+
+
+=== temp_grimoire
+    + {are_two_entities_together(temporaryGrimoire, PG)} [temporaryGrimoire]
+        <i>Un libro abbandonato sulla panchina.
+        <i>Sulla copertina il nome di {player_name}.
+            + Lo raccolgo.
+                ~ move_entity(RewriterBook, Forest)
+                ~ move_entity(temporaryGrimoire, Safekeeping)
+                ~ move_entity(MiniGrimoire, Bedroom)
+                ~ player_somethingStrange ++
+            -
+        -> main
+
+
 // === bench
 // + {are_two_entities_together(Bench, PG)} [Bench]
 //     <i>La panchina riposa in attesa di scoprire la sua vocazione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}

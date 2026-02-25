@@ -110,25 +110,6 @@
                 }
         
 
-=== foundLibro
-    <i>Un libro.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-    <i>Carta sgualcita e pagine mancanti.
-        {
-            - player_nameChosen == true:
-                <i> E un nome: {player_name}.
-            - else:
-                <i>E un nome che è il nome di chi legge queste parole.
-        }
-
-
-        ~ move_entity(RewriterBook, Forest)
-        ~ move_entity(WitchRecap, BookPlace)
-        ~ move_entity(MiniGrimoire, Bedroom)
-        ~ move_entity(nightTable, Bedroom)
-        ~ player_somethingStrange ++
-        -> main
-
-
 === about_the_book
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)

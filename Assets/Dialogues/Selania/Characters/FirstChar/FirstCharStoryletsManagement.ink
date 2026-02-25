@@ -8,8 +8,8 @@
                 -> first_char_main_storylets.one
         
             //Chitarra dona il libro a PG -> metto dopo per evitare che parta di nuovo prima delle presentazioni
-            - not foundLibro && firstChar_pauseTalking == 0 && not take_this_book:
-                -> take_this_book   
+            - (contentsSafekeeping has RewriterBook) && firstChar_pauseTalking == 0 && (not take_this_book) && contentsForest hasnt PG:
+                -> take_this_book
                 
             - not first_char_main_storylets.two:
                 -> first_char_main_storylets.two
