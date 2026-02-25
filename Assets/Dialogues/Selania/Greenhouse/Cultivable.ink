@@ -7,18 +7,33 @@
 }
 
 {
-    - greenhouse_cultivableGrowing < 2:
+    //Aumentiamo il valore solo se greenhouse_growStep non ha stepThree
+    - greenhouse_growStep hasnt stepThree:
+        ~ greenhouse_cultivableGrowing ++
+}
+
+
+{
+    - greenhouse_cultivableGrowing < greenhouse_growingValueStepZero:
         ~ greenhouse_growStep = ()
         ~ greenhouse_growStep += stepZero
-    - greenhouse_cultivableGrowing < 3:
+    
+    - greenhouse_cultivableGrowing < greenhouse_growingValueStepOne:
         ~ greenhouse_growStep = ()
         ~ greenhouse_growStep += stepOne    
-    - greenhouse_cultivableGrowing < 4:
+    
+    - greenhouse_cultivableGrowing < greenhouse_growingValueStepTwo:
         ~ greenhouse_growStep = ()
         ~ greenhouse_growStep += stepTwo
+    
     - else:
-        ~ greenhouse_growStep = ()
-        ~ greenhouse_growStep += stepThree
+        //Solo se non ho già lo stepThree lo aggiungo. In questo modo ho la sicurezza che la notifica di crescita mi arrivi solo una volta.
+        {
+            - greenhouse_growStep hasnt stepThree:
+                    ~ greenhouse_growStep = ()
+                    ~ greenhouse_growStep += stepThree
+                    ~ notification_greenhouseGrown = true
+        }
 
 }
 
@@ -1140,6 +1155,8 @@
     ~ backpack_findedGifts += greenhouse_chosenCultivable
     ~ greenhouse_cultivableGrowing = 0
     ~ greenhouse_chosenCultivable = ()
+    ~ greenhouse_growStep = ()
+    ~ notification_greenhouseGrown = false
     
     + {greenhouse_backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
             -> cultivable_test

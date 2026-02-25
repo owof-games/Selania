@@ -20,6 +20,7 @@
     INCLUDE Code\NestDialogue.ink
     INCLUDE Code\SpeakerTagManagers.ink
     INCLUDE Code\TextFunctions.ink
+    INCLUDE Code\Notifications.ink
 
 //File dedicati alla gestione delle personagge
     INCLUDE CommonElements\CommonFunctions.ink
