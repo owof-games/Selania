@@ -1,27 +1,3 @@
-=== witch_storylets
-    {    
-    
-        //Dono del libro
-        - not foundLibro && not take_this_book:
-            -> foundLibro
-        
-        //Commento sul libro
-        - witch_intro && not about_the_book:
-            -> about_the_book
-            
-        //Spiegazione del nido
-        - witch_intro && about_nest && not trully_about_nest:
-            -> trully_about_nest
-        
-        //Dialogo su Franco
-        - witch_intro && closed_mission_verify && not the_witch_and_the_frog:
-            -> the_witch_and_the_frog
-        
-        - else:
-            -> witch_feedback
-
-    }
-
 
 === about_colors_choices
         ~ temp charNameOne = translator(firstChar_ActualName)
@@ -234,4 +210,58 @@
             -> color_variation_management(PG, aetherC, varPGYes)->
         -        
     Cose.
+-> main
+
+
+
+=== the_witch_and_the_frog
+
+    <i>Le radici ci raccontano del tuo incontro con Franco.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+    <i>E il nostro tronco porta il ricordo di Franco e di tutte le rane venute prima e dopo di lui.
+    <i>Franco è un'anima semplice con un grande impegno.
+    <i>Franco è come il vento che invisibile porta pollini e alleggerisce il volo delle rondini.
+    <i>Come acqua leggera su un terreno asciutto.
+    <i>Vede i bisogni che popolano questi spazi.
+    <i>Le voci non ascoltate.
+    <i>E fa in modo che tutte le mancanze vengano risanate.
+    <i>Attento a chi ha troppo, attento a chi ha poco.
+    <i>Un vecchio detto dice: "Quando la palude piange, la rana ascolta".
+    <i>Franco sorride sempre, ma conosce il pianto di tutt3 noi.
+    <i>Non ubbidisce ad alcuna autorità, ad alcuna legge, se non quella della cura delle altre persone.
+    - (bookUpdate)
+        @animation:RewriterBook
+-> main
+
+
+
+//Confessioni sulla sua storia
+
+=== witch_first_confession
+Primo pezzo storia strega
+
+
+-> main
+
+=== witch_second_confession
+Secondo pezzo storia strega
+
+
+-> main
+
+=== witch_third_confession
+Terzo pezzo storia strega
+
+
+-> main
+
+=== witch_fourth_confession
+Quarto pezzo storia strega
+
+
+-> main
+
+=== witch_fifth_confession
+Quinto pezzo storia strega
+
+
 -> main

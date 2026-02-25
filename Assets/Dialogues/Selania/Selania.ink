@@ -46,8 +46,8 @@
     
     INCLUDE Characters\Witch\Witch.ink
     INCLUDE Characters\Witch\WitchManagement.ink
+    INCLUDE Characters\Witch\WitchStoryletsManagement.ink
     INCLUDE Characters\Witch\WitchStorylets.ink
-    INCLUDE Characters\Witch\WitchSpecialStorylets.ink
     
     
     INCLUDE Characters\FirstChar\FirstCharDialogueManager.ink
