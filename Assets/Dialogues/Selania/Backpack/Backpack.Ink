@@ -14,15 +14,15 @@ LIST list_giftElement = Backpack
             Lista delle cose che posso donare
 
  ----------------------------------*/
-+ [Ho bisogno di ragionarci ancora un poco.]
++ Ho bisogno di ragionarci ancora un poco.
     ~ gift_currentReceiver = ()
     ~ disableNestDialogue()
 
 // //Se la lista è vuota
-// + {backpack_findedGifts == ()} [Non ho nulla da donare.]
+// + {backpack_findedGifts == ()} Non ho nulla da donare.
 //     ~ disableNestDialogue()    
               
-+ {backpack_findedGifts has BaccaDellaAddolorata} [Una bacca della Addolorata.]
++ {backpack_findedGifts has BaccaDellaAddolorata} Una bacca della Addolorata.
     ~ backpack_findedGifts -= BaccaDellaAddolorata
     {
         - frog_recoveredCultivables hasnt BaccaDellaAddolorata:
@@ -38,7 +38,7 @@ LIST list_giftElement = Backpack
     }
 
 
-+ {backpack_findedGifts has BarbaDellInciampo} [Una spina di Barba dell'Inciampo.]
++ {backpack_findedGifts has BarbaDellInciampo} Una spina di Barba dell'Inciampo.
     ~ backpack_findedGifts -= BarbaDellInciampo
     {
         - frog_recoveredCultivables hasnt BarbaDellInciampo:
@@ -53,7 +53,7 @@ LIST list_giftElement = Backpack
     }        
   
         
-+ {backpack_findedGifts has BastoneDellOzioso} [Un nodo di Bastone dell'Ozioso.]
++ {backpack_findedGifts has BastoneDellOzioso} Un nodo di Bastone dell'Ozioso.
     ~ backpack_findedGifts -= BastoneDellOzioso
     {
         - frog_recoveredCultivables hasnt BastoneDellOzioso:
@@ -68,7 +68,7 @@ LIST list_giftElement = Backpack
     }
      
     
-+ {backpack_findedGifts has BrinaDellImpossibile} [Un frammento di Brina dell'Impossibile.]
++ {backpack_findedGifts has BrinaDellImpossibile} Un frammento di Brina dell'Impossibile.
     ~ backpack_findedGifts -= BrinaDellImpossibile
     {
         - frog_recoveredCultivables hasnt BrinaDellImpossibile:
@@ -84,7 +84,7 @@ LIST list_giftElement = Backpack
     }
 
 
-+ {backpack_findedGifts has CantoDelleCompagne} [Una goccia di Canto delle Compagne.]
++ {backpack_findedGifts has CantoDelleCompagne} Una goccia di Canto delle Compagne.
     ~ backpack_findedGifts -= CantoDelleCompagne
     {
         - frog_recoveredCultivables hasnt CantoDelleCompagne:
@@ -100,7 +100,7 @@ LIST list_giftElement = Backpack
     }
 
 
-+ {backpack_findedGifts has CardoAspinato} [Un ciuffo di peli di Cardo Aspinato.]
++ {backpack_findedGifts has CardoAspinato} Un ciuffo di peli di Cardo Aspinato.
     ~ backpack_findedGifts -= CardoAspinato
     {
         - frog_recoveredCultivables hasnt CardoAspinato:
@@ -116,7 +116,7 @@ LIST list_giftElement = Backpack
     }
  
         
-+ {backpack_findedGifts has EderaDelleAmanti} [Una foglia di Edera delle amanti.]
++ {backpack_findedGifts has EderaDelleAmanti} Una foglia di Edera delle amanti.
     ~ backpack_findedGifts -= EderaDelleAmanti
     {
         - frog_recoveredCultivables hasnt EderaDelleAmanti:
@@ -131,7 +131,7 @@ LIST list_giftElement = Backpack
     }
 
         
-+ {backpack_findedGifts has ErbaLiccia} [Un ricordo di Erba Liccia.]
++ {backpack_findedGifts has ErbaLiccia} Un ricordo di Erba Liccia.
         ~ backpack_findedGifts -= ErbaLiccia
         {
         - frog_recoveredCultivables hasnt ErbaLiccia:
@@ -145,7 +145,7 @@ LIST list_giftElement = Backpack
                     -> object_value_for_PNG(ErbaLiccia, Backpack, SecondCharacter)
     }
     
- + {backpack_findedGifts has FalsaPalude} [Un petalo di Falsa Palude.]
+ + {backpack_findedGifts has FalsaPalude} Un petalo di Falsa Palude.
     ~ backpack_findedGifts -= FalsaPalude
     {
         - frog_recoveredCultivables hasnt FalsaPalude:
@@ -159,7 +159,7 @@ LIST list_giftElement = Backpack
                 -> object_value_for_PNG(FalsaPalude, Backpack, SecondCharacter)
     }
     
-  + {backpack_findedGifts has LanaNotturna} [Il calore della Lana Notturna.]
+  + {backpack_findedGifts has LanaNotturna} Il calore della Lana Notturna.
         ~ backpack_findedGifts -= LanaNotturna
         {
         - frog_recoveredCultivables hasnt LanaNotturna:
@@ -174,7 +174,7 @@ LIST list_giftElement = Backpack
         
     }       
     
-+ {backpack_findedGifts has LicheneDegliAbissi} [Una traccia dell'odore del Lichene degli Abissi.]
++ {backpack_findedGifts has LicheneDegliAbissi} Una traccia dell'odore del Lichene degli Abissi.
     ~ backpack_findedGifts -= LicheneDegliAbissi
     {
         - frog_recoveredCultivables hasnt LicheneDegliAbissi:
@@ -190,7 +190,7 @@ LIST list_giftElement = Backpack
     }
 
 
-+ {backpack_findedGifts has NonTiScordarDiTe} [L'impronta del Non Ti Scordar di Te.]
++ {backpack_findedGifts has NonTiScordarDiTe} L'impronta del Non Ti Scordar di Te.
     ~ backpack_findedGifts -= NonTiScordarDiTe
     {
         - frog_recoveredCultivables hasnt NonTiScordarDiTe:
@@ -206,7 +206,7 @@ LIST list_giftElement = Backpack
     }
       
 
-+ {backpack_findedGifts has Olobino} [Una cappello di Olobino.]
++ {backpack_findedGifts has Olobino} Una cappello di Olobino.
     ~ backpack_findedGifts -= Olobino
     {
         - frog_recoveredCultivables hasnt Olobino:
@@ -221,7 +221,7 @@ LIST list_giftElement = Backpack
     }
 
     
-+ {backpack_findedGifts has LaSpazzata} [Un rametto della Spezzata.]
++ {backpack_findedGifts has LaSpazzata} Un rametto della Spezzata.
     ~ backpack_findedGifts -= LaSpazzata
     {
         - frog_recoveredCultivables hasnt LaSpazzata:
@@ -238,7 +238,7 @@ LIST list_giftElement = Backpack
 
 
 //Doni insoliti
-+ {backpack_findedGifts has universalIngredient} [L'ingrediente universale della Rana.]
++ {backpack_findedGifts has universalIngredient} L'ingrediente universale della Rana.
     ~ backpack_findedGifts -= universalIngredient
     
     {

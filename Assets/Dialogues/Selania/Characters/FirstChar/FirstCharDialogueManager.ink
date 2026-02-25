@@ -1,7 +1,7 @@
 === first_character ===
     //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
             //Chiacchiera normale
-            + {are_two_entities_together(FirstCharacter, PG) && firstChar_storyStatus == story_storyStarted}[FirstCharacter]
+            + {are_two_entities_together(FirstCharacter, PG) && firstChar_storyStatus == story_storyStarted} [FirstCharacter]
                 -> talk_with_first_character
 
             //Chiacchiera a fine storia
@@ -122,33 +122,33 @@
 
     //Azioni legate alla riscrittura
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-            + {firstChar_storyletsForRewritingCount >= firstChar_minStoryletsForRewriting && not rewriting_proposal_first_character && not ink_and_rewriting} [Vorrei aiutarti a leggere le cose in modo diverso.]
+            + {firstChar_storyletsForRewritingCount >= firstChar_minStoryletsForRewriting && not rewriting_proposal_first_character && not ink_and_rewriting} Vorrei aiutarti a leggere le cose in modo diverso.
                 
                 Ama, mi sa che conviene che tu parli con la nostra fiorellona qui in giro, così ti dice giusto due cose due importanti.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 Tanto non scappo.
                         -> main
         
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona                    
-            + {firstChar_storyletsForRewritingCount >= firstChar_minStoryletsForRewriting && not rewriting_proposal_first_character && ink_and_rewriting} [Ti va di riscrivere la tua storia con me?]
+            + {firstChar_storyletsForRewritingCount >= firstChar_minStoryletsForRewriting && not rewriting_proposal_first_character && ink_and_rewriting} Ti va di riscrivere la tua storia con me?
                 
                 //Incremento le variazioni del libro della Riscrittora           
                 ~ book_BGVariations ++
                     -> rewriting_proposal_first_character
     
         //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo          
-            + {firstChar_storyletsForRewritingCount >= firstChar_minStoryletsForRewriting && rewriting_proposal_first_character} [Iniziamo la riscrittura?]
+            + {firstChar_storyletsForRewritingCount >= firstChar_minStoryletsForRewriting && rewriting_proposal_first_character} Iniziamo la riscrittura?
                     -> rewriting_proposal_first_character
             
         
     //Azioni legate alla costruzione della relazione
     
         //Offrire un dono
-            + {not first_story_gift.ink_outcome && backpack_findedGifts != ()} [Ti vorrei dare questa cosa.]
+            + {not first_story_gift.ink_outcome && backpack_findedGifts != ()} Ti vorrei dare questa cosa.
                         -> first_story_gift
             
         
         //Cucinare assieme    
-            + {open_the_kitchen && not ending_cooking_with_first_char && kitchen_firstCharIsCooking==false}[Ti va di cucinare qualcosa assieme?]
+            + {open_the_kitchen && not ending_cooking_with_first_char && kitchen_firstCharIsCooking==false}Ti va di cucinare qualcosa assieme?
             
                 {
                 
@@ -189,7 +189,7 @@
                 }
     
     //Uscita dalla conversazione
-        + [<i>Lascio il dialogo.]
+        + <i>Lascio il dialogo.
                 -> main
         -
             -> talk_with_first_character
