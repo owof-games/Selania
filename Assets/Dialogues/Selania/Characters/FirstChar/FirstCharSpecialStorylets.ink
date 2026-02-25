@@ -12,6 +12,7 @@
     - (bookUpdate)
 
         ~ move_entity(MiniGrimoire, Bedroom)
+        ~ move_entity(temporaryGrimoire, Safekeeping)
         @animation:RewriterBook
         ~ player_somethingStrange ++
             
