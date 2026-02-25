@@ -7,8 +7,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
-        ~ firstChar_storyletsForRewritingCount ++
-        
+
         Ehi, ciao!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Non è che hai visto in giro la versione umana di un pettirosso, tipo?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
         Una persona rossiccia, morbidosa e che sembra sempre un po’ pissata col mondo?
@@ -172,7 +171,8 @@
 
             ~ move_entity(FirstCharacter, Pond)
             ~ move_entity(FirstRecap, BookPlace)
-            
+            ~ firstChar_storyletsForRewritingCount ++
+
             -> first_char_closing_storylet ->
             -> main
         
@@ -185,8 +185,6 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
-        ~ firstChar_storyletsForRewritingCount ++
-        
 
         {player_name}, ma hai sentito che silenzio che c’è in questo posto?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
         Non silenzio silenzio tipo vuoto nello spazio.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -284,7 +282,8 @@
                     E non ho cambiato idea.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral               
             }
         - (bookUpdate)
-                 
+
+             ~ firstChar_storyletsForRewritingCount ++    
             -> first_char_closing_storylet ->
             -> options_first_character 
         
@@ -296,7 +295,6 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
-        ~ firstChar_storyletsForRewritingCount ++
 
         Ehi {player_name}!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Prima ho parlato con {mentorName} che mi ha spiegato che sei qui per aiutarmi.
@@ -379,6 +377,7 @@
         Mi spiace per come le cose siano cambiate.    
         - (bookUpdate)
 
+                ~ firstChar_storyletsForRewritingCount ++
                 -> first_char_closing_storylet ->
                 -> options_first_character
         
@@ -389,7 +388,6 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
-        ~ firstChar_storyletsForRewritingCount ++
         
         Quando prima sono andata in panico parlando di lavoro, è perché da qualche mese servo in un ristorante.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Uno di quelli lussuosi, che si gasano tipo perché hanno la sede sia a Buco di Culo Lombardo che a Pechino.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
@@ -478,6 +476,7 @@
         La speranza di fargliele ripagare, un giorno o l’altro.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         - (bookUpdate)
 
+            ~ firstChar_storyletsForRewritingCount ++
             -> first_char_closing_storylet ->
             -> options_first_character
             
@@ -489,7 +488,6 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
-        ~ firstChar_storyletsForRewritingCount ++
 
         Prima mi sono tuffata nello stagno.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             {
@@ -579,7 +577,9 @@
                             
             }
 
-        - (bookUpdate)            
+        - (bookUpdate) 
+
+                ~ firstChar_storyletsForRewritingCount ++
                 -> first_char_closing_storylet ->
                 -> options_first_character
         
@@ -590,7 +590,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
-        ~ firstChar_storyletsForRewritingCount ++
+
         
         Ma poi forse non ho sto già davvero vivendo con la mia famiglia?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
         Ah, sì, scusa, sto tornando sul pippone delle case di prima.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -687,6 +687,7 @@
             }
         - (bookUpdate)
 
+                ~ firstChar_storyletsForRewritingCount ++
                 -> first_char_closing_storylet ->
                 -> options_first_character
         
@@ -697,7 +698,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
-        ~ firstChar_storyletsForRewritingCount ++
+
         
         Ammettiamolo: ci sto girando attorno da un bel po’ ormai.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
         Continuo a parlare al passato di Talco, l’avrai notato.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -805,6 +806,7 @@
         “Ora siamo in due ad aspettare un tuo abbraccio.”
         - (bookUpdate)
 
+            ~ firstChar_storyletsForRewritingCount ++
             -> first_char_closing_storylet ->
             -> options_first_character          
     
@@ -816,7 +818,6 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
-        ~ firstChar_storyletsForRewritingCount ++
 
         Tornare dai miei è come un viaggio nel tempo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Scendo, e mi sembra che tutto sia fermo, e questa cosa è rassicurante.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
@@ -886,6 +887,7 @@
                 E se anche io come loro potessi in realtà fiorire, scendendo?
         - (bookUpdate)   
 
+            ~ firstChar_storyletsForRewritingCount ++
             -> first_char_closing_storylet ->
             -> options_first_character
     
@@ -897,7 +899,6 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
-        ~ firstChar_storyletsForRewritingCount ++
         
         Ciao {player_name}, e {player_pronouns has him:benvenuto|{player_pronouns has her:benvenuta|benvenutə}} in un nuovo flusso di coscienza di {charNameOne} che non si chiama {charNameOne} e che prima o poi troverà il suo vero nome.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
         E forse ci sto prendendo gusto con questi pipponi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -984,6 +985,7 @@
             }
         - (bookUpdate)
 
+            ~ firstChar_storyletsForRewritingCount ++
             -> first_char_closing_storylet ->
             -> options_first_character 
     
@@ -996,7 +998,6 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
-        ~ firstChar_storyletsForRewritingCount ++
         
 
         Sai, {player_name}, l’amore non è come me l’aspettavo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -1073,7 +1074,8 @@
                 Per scioperare.
                 Per dare fastidio alla logica di {player_name}.  #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed  
         - (bookUpdate)   
-            
+
+            ~ firstChar_storyletsForRewritingCount ++
             -> first_char_closing_storylet ->
             -> options_first_character
     
@@ -1083,7 +1085,6 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
-        ~ firstChar_storyletsForRewritingCount ++
 
         C’è questa cosa che mi stupisce sempre.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Puoi passare anni con una persona, vederla quasi tutti i giorni.
@@ -1180,6 +1181,7 @@
                 }
         - (bookUpdate)
 
+            ~ firstChar_storyletsForRewritingCount ++
             -> first_char_closing_storylet ->
             -> options_first_character
             
@@ -1190,7 +1192,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
-        ~ firstChar_storyletsForRewritingCount ++
+        
         
         Sai perché litigo tantissimo con mamma?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         È perché dice che non so mai accontentarmi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
@@ -1275,5 +1277,6 @@
                 Cfirei sia una cosa neutra? Non è da persona cattiva?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
         - (bookUpdate)     
 
+            ~ firstChar_storyletsForRewritingCount ++
             -> first_char_closing_storylet ->
             -> options_first_character

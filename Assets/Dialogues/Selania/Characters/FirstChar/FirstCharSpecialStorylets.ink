@@ -115,11 +115,10 @@
         }
     - (bookUpdate)
 
-        ~ firstChar_pauseTalking = firstChar_pauseDuration
         ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
         ~ movements_randomizable_characters += FirstCharacter
-        
         -> opening_places ->
+        -> first_char_closing_storylet ->
         -> main
         
 === a_story_of_revenge 
@@ -200,8 +199,8 @@
             }
 
     - (bookUpdate) 
-        ~ firstChar_pauseTalking = firstChar_pauseDuration
-
+        
+        -> first_char_closing_storylet ->
         -> main
     
 
@@ -232,5 +231,6 @@
                     Appunto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Chiedere a Euforbo cosa significa toeletta.
             }
-
--> main
+    
+    -> first_char_closing_storylet ->
+    -> main

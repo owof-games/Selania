@@ -299,7 +299,7 @@
 
 
 === second_char_closing_storylet ===
-
+        -> growing_check ->
         @animation:RewriterBook
         ~ secondChar_pauseTalking = secondChar_pauseDuration
         ~ secondChar_justTalked = true

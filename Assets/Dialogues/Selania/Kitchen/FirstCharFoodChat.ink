@@ -1244,11 +1244,11 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
     - (bookUpdate)
 
             -> cooking_animations_off ->
-            ~ move_entity(FirstCharacter, Pond)
-            ~ kitchen_firstCharCookingTogetherInvite = false
+                ~ move_entity(FirstCharacter, Pond)
+                ~ kitchen_firstCharCookingTogetherInvite = false
             -> update_colors(FirstCharacter) ->
             -> check_kitchen_recap -> 
-        
+            -> first_char_closing_storylet ->
             -> main
 
 
@@ -1348,7 +1348,5 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
     A dopo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
     - (bookUpdate)
     
-        ~ firstChar_pauseTalking = firstChar_pauseDuration
-        ~ firstChar_justTalked = true
-
--> main
+    -> first_char_closing_storylet ->
+    -> main

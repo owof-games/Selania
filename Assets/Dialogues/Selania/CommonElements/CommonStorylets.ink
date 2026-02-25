@@ -93,9 +93,10 @@
     Bene, direi che abbiamo tutt3 qualcosa a cui pensare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
     Tipo, dove schiacciarmi quel pisolino.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
     - (bookUpdate)
-            ~ firstChar_pauseTalking = firstChar_pauseDuration
+
             ~ secondChar_pauseTalking = secondChar_pauseDuration
-            @animation:RewriterBook
+
+        -> first_char_closing_storylet ->
         -> main    
 
 === about_violence_and_peace
@@ -246,8 +247,7 @@
     Non sono vecchia come te, ma so che non sono tanti gli elogi che ci vengono dati in vita.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
     - (bookUpdate)
 
-        @animation:RewriterBook
-        ~ firstChar_pauseTalking = firstChar_pauseDuration
+        -> first_char_closing_storylet ->
         ~ mentor_pauseTalking = mentor_pauseDuration
         -> main
 
@@ -396,7 +396,9 @@
 
          ~ change_entity_place(FirstCharacter)
     - (bookUpdate)
-    @animation:RewriterBook
+    
+    
+        -> first_char_closing_storylet ->
         -> main
 
 === frog_and_second_char_chit_chat
