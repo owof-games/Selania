@@ -123,4 +123,18 @@
                 
     }
 
-->->   
+->-> 
+
+
+//Formula per la chiusura di uno storylet
+=== fourth_char_closing_storylet
+        //Gestione crescita piante
+        -> growing_check ->
+        //Questo evita che venga proposto un altro storylet fino a quando la pausa non è finita
+        ~ fourthChar_pauseTalking = fourthChar_pauseDuration
+        //Questo è per la gestione delle domande
+        ~ fourthChar_justTalked = true
+        //L'animazione per via dell'informazione nuova
+        @animation:RewriterBook
+
+->->

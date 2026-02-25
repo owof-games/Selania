@@ -4,8 +4,7 @@
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
         + {are_two_entities_together(SecondCharacter, PG) && secondChar_storyStatus == story_storyStarted}[SecondCharacter]
-            ~ actual_speaker = SecondCharacter
-                -> common_storylets
+            -> talk_with_second_character
         
         //Chiacchiera a fine storia
         + {are_two_entities_together(SecondCharacter, PG) && secondChar_storyStatus == story_storyEnded} [SecondCharacter]

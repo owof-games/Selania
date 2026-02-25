@@ -2,12 +2,11 @@
     //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
             //Chiacchiera normale
             + {are_two_entities_together(FirstCharacter, PG) && firstChar_storyStatus == story_storyStarted}[FirstCharacter]
-                ~ actual_speaker = FirstCharacter
-                -> common_storylets
+                -> talk_with_first_character
 
             //Chiacchiera a fine storia
             + {are_two_entities_together(FirstCharacter, PG) && firstChar_storyStatus == story_storyEnded} [FirstCharacter]
-                    -> first_char_story_ended
+                -> first_char_story_ended
             + ->
                 -> DONE
 

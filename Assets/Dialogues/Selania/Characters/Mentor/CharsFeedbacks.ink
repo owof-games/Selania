@@ -111,9 +111,8 @@
         A dopo.
         - (bookUpdate)
 
-            ~ mentor_pauseTalking = mentor_pauseDuration
-            ~ mentor_tutorialPauses = true
-                -> main
+            -> mentor_closing_storylet ->
+            -> main
           
 === second_character_feedback
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -230,9 +229,8 @@
     E a quel punto forse anche io potrò un poco riposare.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sad
     - (bookUpdate)
     
-        ~ mentor_pauseTalking = mentor_pauseDuration
-        ~ mentor_tutorialPauses = true
-            -> main
+        -> mentor_closing_storylet ->
+        -> main
    
 
 === third_character_feedback
@@ -243,7 +241,8 @@
     ~ temp mentorName = translator(mentor_ActualName) 
     
    third_character_feedback #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral 
-    -> main
+        -> mentor_closing_storylet ->
+        -> main
    
 === fourth_character_feedback
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -253,6 +252,8 @@
     ~ temp mentorName = translator(mentor_ActualName)
     
     fourth_character_feedback #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral 
+        
+        -> mentor_closing_storylet ->
         -> main
     
 === fifth_character_feedback
@@ -263,4 +264,6 @@
     ~ temp mentorName = translator(mentor_ActualName)    
     
     fifth_character_feedback#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral 
+        
+        -> mentor_closing_storylet ->
         -> main

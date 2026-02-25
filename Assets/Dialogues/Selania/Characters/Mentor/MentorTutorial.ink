@@ -177,12 +177,10 @@
             
         Io devo raccogliere le foglie dalla foresta.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
 
-        
-        //Con questa voce evito che "you_are_a_rewriter" compaia subito dopo se le condizioni sono sensate.
-                
+            //Pausa tutorial così che non parta subito quello successivo
                 ~ mentor_tutorialPauses = true
-                ~ actual_speaker = ()
-                -> main
+            -> mentor_closing_storylet ->
+            -> main
                 
             
 === you_are_a_rewriter
@@ -277,14 +275,10 @@
         A dopo!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry    
             - (bookUpdate)
 
-              
-            ~ mentor_pauseTalking = mentor_pauseDuration
-            //Con questa voce evito che "ink_and_rewriting" compaia subito dopo se le condizioni sono sensate.
-            ~ mentor_tutorialPauses = true
-        
-        @animation:RewriterBook
-            
-                -> main
+            //Pausa tutorial così che non parta subito quello successivo
+                ~ mentor_tutorialPauses = true
+            -> mentor_closing_storylet ->
+            -> main
              
 
     
@@ -365,11 +359,10 @@
             Quando te la senti, affronta questo ultimo passaggio e poi torna da me.
             - (bookUpdate)
 
-                ~ mentor_pauseTalking = mentor_pauseDuration
-                @animation:RewriterBook
-                ~ mentor_tutorialPauses = true
-                
-                -> main
+            //Pausa tutorial così che non parta subito quello successivo
+            ~ mentor_tutorialPauses = true
+        -> mentor_closing_storylet ->
+        -> main
         
 
 //Minitutorial sui minigames
@@ -405,10 +398,9 @@
     Qualcosa di così forte non può certo essere usato senza coscienza. #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
     - (bookUpdate)
 
-            @animation:RewriterBook
             ~ mentor_tutorialPauses = true
-            ~ mentor_pauseTalking = mentor_pauseDuration
-    -> main
+        -> mentor_closing_storylet ->
+        -> main
 
 
 === about_kitchen
@@ -439,10 +431,9 @@
             }
     - (bookUpdate)
 
-        @animation:RewriterBook
-        ~ mentor_tutorialPauses = true
-        ~ mentor_pauseTalking = mentor_pauseDuration
-    -> main
+            ~ mentor_tutorialPauses = true
+        -> mentor_closing_storylet ->
+        -> main
 
 
 
@@ -463,10 +454,9 @@
             } 
     - (bookUpdate)
 
-    @animation:RewriterBook
-    ~ mentor_pauseTalking = mentor_pauseDuration
-    ~ mentor_tutorialPauses = true
-    -> main
+            ~ mentor_tutorialPauses = true
+            -> mentor_closing_storylet ->
+            -> main
 
 
 //Altre informazioni importanti
@@ -500,8 +490,8 @@
     Fai sempre e solo quello di cui senti il bisogno.
     - (bookUpdate)
     
-        ~ mentor_pauseTalking = mentor_pauseDuration
-        ~ mentor_tutorialPauses = true
+            ~ mentor_tutorialPauses = true
+        -> mentor_closing_storylet ->
         -> main
 
 
@@ -522,7 +512,7 @@
                 La trovi alla fermata del treno.
         }
 
--> main
+        -> main
 
 
 === second_char_new_mail
@@ -542,6 +532,6 @@
                 La trovi alla fermata del treno.
         }
 
--> main
+        -> main
    
    

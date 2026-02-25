@@ -83,9 +83,7 @@
         Grazie per la chiacchierata, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         - (bookUpdate)
 
-             ~ mentor_pauseTalking = mentor_pauseDuration
-            @animation:RewriterBook
- 
+            -> mentor_closing_storylet ->
             -> main
     
     = two
@@ -155,10 +153,8 @@
         Prega per me, {player_name}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         - (bookUpdate)
 
-             ~ mentor_pauseTalking = mentor_pauseDuration
-             @animation:RewriterBook
-             
-                -> main
+            -> mentor_closing_storylet ->
+            -> main
 
     = three
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -224,10 +220,9 @@
                 } 
 
             - (bookUpdate)
-            ~ mentor_pauseTalking = mentor_pauseDuration
-                @animation:RewriterBook
 
-                    -> main
+                -> mentor_closing_storylet ->
+                -> main
     
     = four
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -303,10 +298,9 @@
         Vado a riordinare in ordine di data i libri in biblioteca.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
         - (bookUpdate)
 
-             ~ mentor_pauseTalking = mentor_pauseDuration
-             @animation:RewriterBook
-             
+            -> mentor_closing_storylet ->
             -> main
+
     = five
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -396,9 +390,7 @@
         Parleremo più tardi.
         - (bookUpdate)
         
-        ~ mentor_pauseTalking = mentor_pauseDuration
-        @animation:RewriterBook
-        
+            -> mentor_closing_storylet ->
             -> main
     
     
@@ -429,10 +421,11 @@
                 -> color_variation_management(Mentor, aetherC, varPGYes)->
  
             -
-            //Qui potrebbe aver senso ridurre i tempi di attesa tra un dialogo e l'altro.
-             ~  mentor_pauseDuration = 5
-             ~ mentor_pauseTalking = mentor_pauseDuration
+
+            -> mentor_closing_storylet ->
             -> main
+    
+    
     = seven
     ~ temp mentorName = translator(mentor_ActualName)
     //Non mettere cose TW qui
@@ -459,7 +452,8 @@
                 -> color_variation_management(Mentor, aetherC, varPGYes)->
  
             -
-             ~ mentor_pauseTalking = mentor_pauseDuration
+            
+            -> mentor_closing_storylet ->
             -> main        
             
             
@@ -488,7 +482,8 @@
                 -> color_variation_management(Mentor, aetherC, varPGYes)->
  
             -
-             ~ mentor_pauseTalking = mentor_pauseDuration
+
+            -> mentor_closing_storylet ->
             -> main    
     
     
@@ -517,7 +512,8 @@
                 -> color_variation_management(Mentor, aetherC, varPGYes)->
  
             -
-             ~ mentor_pauseTalking = mentor_pauseDuration
+
+            -> mentor_closing_storylet ->
             -> main    
     
     = ten
@@ -545,7 +541,8 @@
                 -> color_variation_management(Mentor, aetherC, varPGYes)->
  
             -
-             ~ mentor_pauseTalking = mentor_pauseDuration
+
+            -> mentor_closing_storylet ->
             -> main    
     
     = eleven
@@ -573,8 +570,10 @@
                 -> color_variation_management(Mentor, aetherC, varPGYes)->
  
             -
-             ~ mentor_pauseTalking = mentor_pauseDuration
-            -> main    
+
+            -> mentor_closing_storylet ->
+            -> main
+
     = twelve
     ~ temp mentorName = translator(mentor_ActualName)
     
@@ -600,7 +599,8 @@
                 -> color_variation_management(Mentor, aetherC, varPGYes)->
  
             -
-             ~ mentor_pauseTalking = mentor_pauseDuration
+
+            -> mentor_closing_storylet ->
             -> main            
             
         

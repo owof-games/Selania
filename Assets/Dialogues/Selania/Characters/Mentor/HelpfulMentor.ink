@@ -5,7 +5,6 @@
 ~ temp charNameThree = translator(thirdChar_ActualName)
 ~ temp charNameFour= translator(fourthChar_ActualName)
 ~ temp mentorName = translator(mentor_ActualName)
-~ actual_speaker = Mentor
 
 {      
 
@@ -203,6 +202,10 @@
             Non è un caso che sia l'unico luogo senza istruzioni, no?
                 -> second_top
     
+     + {player_accessiblePlaces has Dump}[Sulla discarica.]
+            COMMENTO DA CREARE SULLA DISCARICA.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_bored
+                -> second_top
+
     + [Vorrei parlare di un altro luogo.]
             -> top
     

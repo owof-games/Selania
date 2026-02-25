@@ -14,14 +14,15 @@
 
 //<i><b>firstChar_relationshipStatus è {firstChar_relationshipStatus}, secondChar_relationshipStatus è {secondChar_relationshipStatus}, firstChar_InkLevel è {firstChar_InkLevel}, firstChar_maximum_inkLevel è {firstChar_maximum_inkLevel}, secondChar_InkLevel è  {secondChar_InkLevel}, secondChar_maximum_inkLevel è {secondChar_maximum_inkLevel}, mentor_lastTimeTalking è {mentor_lastTimeTalking}.
 
--> debug_places_open ->
-
-~ actual_speaker = ()
 ~ temp my_location = entity_location(PG)
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
 @interact 
 
+//Passaggio per debug per aprire tutte le aree che si aprirebbero solo più avanti nel gioco
+-> debug_places_open ->
+//Avvio degli storylets comuni
+-> common_storylets ->
 
 //Spostamenti
 <- move_between_rooms(my_location)

@@ -11,7 +11,7 @@
     
 //Variabili per mettere in pausa la conversazione. Plausibilmente per mentore sarà molto alta all'inizio.
     VAR mentor_pauseTalking = 0
-    VAR mentor_pauseDuration = 10
+    VAR mentor_pauseDuration = 1
 
 //Check per monitorare l'ultima volta che abbiamo parlato con Mentore.
     VAR mentor_lastTimeTalking = 0
@@ -73,5 +73,17 @@
     }         
 
 }
+
+->->
+
+
+=== mentor_closing_storylet ===
+        //Gestione crescita piante
+        -> growing_check ->
+        //Questo evita che venga proposto un altro storylet fino a quando la pausa non è finita
+        ~ mentor_pauseTalking = mentor_pauseDuration
+        //L'animazione per via dell'informazione nuova
+        @animation:RewriterBook
+
 
 ->->

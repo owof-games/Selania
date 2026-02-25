@@ -82,3 +82,18 @@
 === thirdNaming ===
 
 ->->
+
+
+
+//Formula per la chiusura di uno storylet
+=== third_char_closing_storylet
+        //Gestione crescita piante
+        -> growing_check ->
+        //Questo evita che venga proposto un altro storylet fino a quando la pausa non è finita
+        ~ thirdChar_pauseTalking = thirdChar_pauseDuration
+        //Questo è per la gestione delle domande
+        ~ thirdChar_justTalked = true
+        //L'animazione per via dell'informazione nuova
+        @animation:RewriterBook
+
+->->

@@ -132,9 +132,9 @@
                     Però è stato molto coraggioso, vero?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
             }
     - (bookUpdate)    
-                ~ change_entity_place(SecondCharacter)
-                ~ mentor_pauseTalking = mentor_pauseDuration
-        
+            
+            ~ change_entity_place(SecondCharacter)
+        -> mentor_closing_storylet ->
         -> second_char_closing_storylet ->
         -> main
 
@@ -170,8 +170,7 @@
     - (bookUpdate)
         @animation:RewriterBook
 
-        ~ mentor_pauseTalking = mentor_pauseDuration
-
+        -> mentor_closing_storylet ->
         -> second_char_closing_storylet ->
         -> main
     
@@ -248,7 +247,7 @@
     - (bookUpdate)
 
         -> first_char_closing_storylet ->
-        ~ mentor_pauseTalking = mentor_pauseDuration
+        -> mentor_closing_storylet ->
         -> main
 
 === frog_and_mentor_chit_chat
@@ -299,8 +298,9 @@
                 No, non è vero: non ce la posso fare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                     ~ change_entity_place(FirstCharacter)
         }
+
     - (bookUpdate)
-        @animation:RewriterBook   
+        -> mentor_closing_storylet ->
         -> main
 
 
@@ -367,10 +367,9 @@
     O magari ti fa sentire meno {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
     Ho qualcosa su cui riflettere, immagino.
     - (bookUpdate)   
-        ~ firstChar_pauseTalking = firstChar_pauseDuration
-        ~ mentor_pauseTalking = mentor_pauseDuration
-        @animation:RewriterBook
-            -> main
+
+        -> mentor_closing_storylet ->
+        -> main
 
 
 === frog_and_first_char_chit_chat
@@ -392,11 +391,10 @@
     Ti ho solo chiesto dove si trova del vino!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
     Zelinda, Veneranda, Uga, Torlonia, Tamatta, Ruslana e Ruslanina.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     Qualcuno mi soffochi, ora.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+        ~ change_entity_place(FirstCharacter)
     Piccarda, Perlita, Macrina, Gliceria, Gianbrunilde, Eulalia, Ermenegigia...#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
 
-         ~ change_entity_place(FirstCharacter)
     - (bookUpdate)
-    
     
         -> first_char_closing_storylet ->
         -> main

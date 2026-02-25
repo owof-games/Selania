@@ -44,6 +44,8 @@
 //Variabili per mettere in pausa la conversazione. Plausibilmente per mentore sarà molto alta all'inizio.
     VAR fifthChar_pauseTalking = 0
     VAR fifthChar_pauseDuration = 10
+//Questa variabile verifica se abbiamo appena parlato con unx PNG, in modo tale da presentarci in modo diverso le possibili proposte che possiamo farle.
+    VAR fifthChar_justTalked = false    
     
 //Variabile per il countdown per la sua uscita di scena
     VAR fifthChar_exitCounter = 0    
@@ -69,5 +71,20 @@
                     
                      ----------------------------------*/
  === fifthNaming ===
+
+->->
+
+
+
+//Formula per la chiusura di uno storylet
+=== fifth_char_closing_storylet
+        //Gestione crescita piante
+        -> growing_check ->
+        //Questo evita che venga proposto un altro storylet fino a quando la pausa non è finita
+        ~ fifthChar_pauseTalking = fourthChar_pauseDuration
+        //Questo è per la gestione delle domande
+        ~ fifthChar_justTalked = true
+        //L'animazione per via dell'informazione nuova
+        @animation:RewriterBook
 
 ->->
