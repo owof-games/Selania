@@ -129,11 +129,13 @@ namespace Selania.Rework.Components
             var tags = MakeTags(story.currentTags);
 
             // allow the various subsystems to update their observables
+            var triggerContinue = UpdateCurrentText(tags, justLoaded);
             UpdateRoom();
             UpdateCurrentChoices();
             UpdateAudio(tags);
-            // this must remain the last line, because it could cause a new Continue() in case of a @save line
-            UpdateCurrentText(tags, justLoaded);
+
+            // in some cases, we must immediately process the next line (e.g.: @save, or old @commands no longer used)
+            if (triggerContinue) Continue();
         }
 
         /// <summary>
@@ -411,7 +413,8 @@ namespace Selania.Rework.Components
         /// <param name="tags">The list of tags computed.</param>
         /// <param name="justLoaded">Whether this update is the result of loading a save file. This is used to correctly
         /// interpret the "@save" line as the <em>previous</em> request for saving.</param>
-        private void UpdateCurrentText(ICollection<Tag> tags, bool justLoaded)
+        /// <returns>Whether a Continue() should be automatically triggered after this line has been fully processed.</returns>
+        private bool UpdateCurrentText(ICollection<Tag> tags, bool justLoaded)
         {
             var story = GetStory();
             var currentText = story.currentText.Trim();
@@ -424,22 +427,24 @@ namespace Selania.Rework.Components
             else if (currentText.StartsWith("@animation"))
             {
                 // special handling: @animation are no longer used, skip them
-                Continue();
+                return true;
             }
             else
             {
                 // e.g.: @interact
                 _conversationInProgressSubject!.OnNext(false);
                 // special handling: @save requires the game to save on a special slot for the reader mode
-                if (currentText != SaveSpecialLine) return;
+                if (currentText != SaveSpecialLine) return false;
                 if (justLoaded)
                     logger.ZLogInformation(
                         $"Skipping the @save instruction that produced this save and progressing");
                 else
                     SaveReaderMode();
 
-                Continue();
+                return true;
             }
+
+            return false;
         }
 
         /// <inheritdoc />
