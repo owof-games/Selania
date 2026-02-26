@@ -11,9 +11,6 @@
     //Lista che tiene conto in ordine progressivo della quantità di storie concluse
     LIST story_endingOrders = story_oneStoryClosed, story_twoStoriesClosed, story_threeStoriesClosed, story_fourStoriesClosed, story_fifthStoriesClosed
 
-    
-//COME PROMEMORIA. LISTA DI TIPI DI TONO CHE POSSIAMO TENERE IN UNA CONVERSAZIONE: ROSSO (RABBIA, PASSIONE, AZIONE, OPPOSIZIONE). VIOLA (SPIRITUALITA', VISIONE DEL GRANDE SCHEMA DELLE COSE, SGUARDO POETICO, TESA VERSO UNA MISSIONE). GIALLO (GIOCOSITA', RISATA, DIVERTIMENTO, FANCIULLEZZA). VERDE (CUORE, AFFETTI, CURA DELLE PERSONE CARE, RIFLESSIONE EMOTIVA). BLU (RAZIONALITA', CALCOLO, VISIONE PRATICA, DISCIPLINA).
-
 
 === story_time_management_for_PNG
 //Questa la uso per far sentire il rumore del treno dove serve
@@ -21,20 +18,20 @@
 
     //Qui commentato a manetta per non fare partire cose che non dovrebbero partire.
     {
-    
-        //Dopo essere arrivata per la prima volta allo stagno, compare mentore, e attivo la sua storia
-        - (pond == true or talk_with_first_character) && (mentorChar_storyStatus != story_storyStarted):
-        {debug: introduco mentore in scena.}
-                ~ move_entity(Mentor, Forest)
-                ~ mentorChar_storyStatus = story_storyStarted
-    
         //Dopo il delay previsto, compare Chitarra.
         - player_movementsCounter == firstChar_delay && firstChar_storyStatus == story_storyNotStarted:
         {debug: introduco {FirstCharacter} in scena.}
                 ~ move_entity(FirstCharacter, TrainStop)
                 ~ move_entity(TrainNoiseComing, CurrentLocation)
                 ~ firstChar_storyStatus = story_storyStarted
-                
+
+        //Dopo essere arrivata per la prima volta allo stagno, compare mentore, e attivo la sua storia
+        - (pond == true or talk_with_first_character) && (mentorChar_storyStatus != story_storyStarted):
+        {debug: introduco mentore in scena.}
+                ~ move_entity(Mentor, Forest)
+                ~ mentorChar_storyStatus = story_storyStarted
+    
+    
         //Dopo due steps della storia della prima personaggia, compare la seconda      
         - first_char_main_storylets.two && secondChar_storyStatus == story_storyNotStarted:
         {debug: introduco {SecondCharacter} in scena.}
@@ -80,13 +77,15 @@
  ----------------------------------*/
 
 //Gestione spostamenti: tempo
-    //Quando questa è a zero, non ci sono spostamenti
+    //Quando questa è a zero, non ci sono spostamenti.
     VAR movements_changeLocationTimer = 0
     
-    //Questo è invece il valore che indica quando far partire la randomizzazione dei luoghi dell3 PNG
+    //Questo è invece il valore che indica quando far partire la randomizzazione dei luoghi dell3 PNG.
     VAR movements_changeLocationTrigger = 9
     
-    //Questa è la lista dei luoghi dove l3 PNG possono andare. All'inizio è ridotta a tre, poi si amplia man mano che sblocchiamo posti.
+    //Questa è la lista dei luoghi dove l3 PNG possono andare. Se serve, posso ampliarla quando si aprono i luoghi, ma è da valutare col bilanciamento.
+    //Posti dove potremmo trovarle e che per ora sono chiusi: Dump, Greenhouse, Library.
+    //Posti sicuramente vietati, salvo scene speciali: Bedroom, Nest. Kitchen solo per scene ad hoc (es: cucina da solx).
     VAR movements_randomablePlaces = (Forest, TrainStop, Pond)
 
 
@@ -97,7 +96,6 @@
 //Qui apriamo i luoghi cambiando gli assets di riferimento
 === opening_places
 {debug: passo da opening_places.}
-    //Provo a togliere la serra e la biblioteca dai luoghi random per vedere se le png si beccano più spesso.
     {
         - welcome.your_name && (entity_location(FromPondToGreenhouse) == Safekeeping) && not olobino.step_tre.colto:
             // ~ movements_randomablePlaces += Greenhouse
@@ -169,8 +167,10 @@
                     ~ movements_randomizable_characters += FirstCharacter
             }
         
-        - firstChar_storyStatus == story_storyEnded:  
+        - firstChar_storyStatus == story_storyEnded && not first_char_story_ended.goodbye:
+            //Così evitiamo che sia alla fermata del treno al momento della partenza, in modo da fare poi l'animazione.
             ~ movements_randomizable_characters -= FirstCharacter 
+            ~ move_entity(FirstCharacter, Forest)
     }
 
     {
@@ -182,15 +182,16 @@
                 ~ movements_randomizable_characters -= SecondCharacter
 
             - kitchen_secondCharCookingTogetherInvite == true:
-                    ~ movements_randomizable_characters -= SecondCharacter    
+                ~ movements_randomizable_characters -= SecondCharacter    
                     
             - else:
                 ~ movements_randomizable_characters += SecondCharacter
                 
         }
-        
-        - secondChar_storyStatus == story_storyEnded:
-                ~ movements_randomizable_characters -= SecondCharacter 
+        //Così evitiamo che sia alla fermata del treno al momento della partenza, in modo da fare poi l'animazione.
+        - secondChar_storyStatus == story_storyEnded && not second_char_story_ended.goodbye:
+            ~ movements_randomizable_characters -= SecondCharacter   
+            ~  move_entity(SecondCharacter, Forest)
     }
   
     {    
@@ -224,19 +225,6 @@
     }
     
     
-    //Se la storia della PNG è conclusa la spostiamo nella foresta, così poi si può spostare in stazione e da lì sentiamo il treno partire.
-    {
-
-        - firstChar_storyStatus == story_storyEnded && not first_char_story_ended.goodbye:  
-            ~  move_entity(FirstCharacter, Forest)
-    }
-    
-    {
-
-        - secondChar_storyStatus == story_storyEnded && not second_char_story_ended.goodbye:  
-            ~  move_entity(SecondCharacter, Forest)
-    }
-    
     -> randomize_png_location
     
 
@@ -246,7 +234,8 @@
 === randomize_png_location    
 {debug: randomize_png_location.}
 
-    {//se ho raggiunto il tempo trigger, resetto il valore, e poi vado avanti.
+    {
+        //se ho raggiunto il tempo trigger, resetto il valore, e poi vado avanti.
         - movements_changeLocationTimer >= movements_changeLocationTrigger:
         {debug: <i> Il valore del Timer è {movements_changeLocationTimer} e quindi randomizzo il luogo.}
             -> top
