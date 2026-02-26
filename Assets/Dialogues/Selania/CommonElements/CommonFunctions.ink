@@ -314,7 +314,9 @@
 
 //Contatore spostamenti PG
     ~ player_movementsCounter ++
-    
+    // E contatore per la notifica di riposo
+    ~ player_lastRestingSession ++
+        
 //Gestione della cucina delle PNG
     
     //Riccio

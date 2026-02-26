@@ -29,6 +29,8 @@
             
                 + + (close)[<i>Ho bisogno di riposare.]
                     <i>Salutiamo {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    //Resettiamo il contatore del riposo della giocatrice
+                        ~ player_lastRestingSession = 0
                     @quit
                     -> END
                     

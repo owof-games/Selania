@@ -1,6 +1,7 @@
 //Variabili per le notifiche
 
 VAR notification_greenhouseGrown = false
+VAR notification_restingSession = false
 
 
 
@@ -12,7 +13,12 @@ VAR notification_greenhouseGrown = false
             ~ notification_greenhouseGrown = false
 }
 
-
+{
+    - player_lastRestingSession >= player_maxPlayingTime && player_restingSessionNotification == true:
+        {player_name} è qui da molto. Perché non si prende una pausa? #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            ~ notification_restingSession = false
+            ~ player_lastRestingSession = player_notificationRestingReset
+}
 
 
 

@@ -2,6 +2,15 @@
     VAR player_name = "Senza nome"
     VAR player_nameChosen = false
     LIST player_pronouns = him, her, they
+
+//Tracciamento del riposo.
+    //Dalle impostazioni può abilitare/disabilitare le notifiche per il riposo
+    VAR player_restingSessionNotification = true
+    VAR player_lastRestingSession = 0
+    VAR player_maxPlayingTime = 100
+    //Questo è il valore a cui viene portato player_lastRestingSession dopo la notifica di invito al riposo, in modo da evitare una notifica troppo frequente, ma anche da non far passare lo stesso tempo da inizio sessione.
+    VAR player_notificationRestingReset = 50
+
     
 //Gestione "cose strane" di cui parlare con mentore
     VAR player_somethingStrange = 0
