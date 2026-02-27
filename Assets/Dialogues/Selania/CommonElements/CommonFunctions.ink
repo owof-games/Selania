@@ -13,6 +13,7 @@
 
 
 === story_time_management_for_PNG
+{debug: passo per story_time_management_for_PNG}
 //Questa la uso per far sentire il rumore del treno dove serve
 ~ temp CurrentLocation = entity_location(PG)
 
@@ -281,6 +282,7 @@
 
     
 === on_movement_events
+{debug: passo da on_movement_events.}
 //Qui metto tutte quelle funzioni e variazioni che sono richieste a ogni cambio stanza.
 ~ temp currentPlace = entity_location(PG)
 
@@ -290,8 +292,9 @@
         ~ move_entity(temporaryGrimoire, Forest)
 }
 
-{debug: passo per on_movement_events}
+
 //Riduzioni di contatori legati al tempo:
+{debug: <i>in on_movement events: riduzioni di contatori legati al tempo.}
     ~ thirdChar_mailPause --
     ~ fifthChar_mailPause --
     
@@ -445,7 +448,9 @@
 
 
 //Altre funzioni:
+{debug: <i>in on_movement events: arrivo alle altre funzioni.}
     -> notification_system ->
+    {debug: <i>in on_movement events: esco dal notification system.}
     -> dump_graphic_changer ->
     -> story_time_management_for_PNG->
     -> check_png_randomizable_status ->
