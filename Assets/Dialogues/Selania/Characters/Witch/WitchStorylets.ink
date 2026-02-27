@@ -95,7 +95,8 @@
         <i>E il terreno ci racconta che {player_name} ha appena compiuto qualcosa di importante.
         - (bookUpdate)
         
-            ~ player_somethingStrange ++
+            ~ player_somethingStrange += strangeVase
+            
                 {
                     - not witch_feedback.first_story_ended_check && firstChar_storyStatus == story_storyEnded:
                         -> witch_feedback.first_story_ended_check

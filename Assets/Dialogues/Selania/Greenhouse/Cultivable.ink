@@ -2,11 +2,6 @@
 
 === growing_check
 {
-    - not growing_check:
-        ~ player_somethingStrange ++
-}
-
-{
     //Aumentiamo il valore solo se greenhouse_growStep non ha stepThree
     - greenhouse_growStep hasnt stepThree && greenhouse_chosenCultivable != ():
         ~ greenhouse_cultivableGrowing ++
@@ -1254,6 +1249,7 @@
      {
        - ending_cultivation == 1:
            ~ move_entity(greenhouseOpened, Bedroom)
+           ~ player_somethingStrange += strangeVoice
      }
     
     {

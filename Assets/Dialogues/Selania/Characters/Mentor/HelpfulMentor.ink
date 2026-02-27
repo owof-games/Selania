@@ -63,7 +63,7 @@
         + Avrei bisogno di una mano.
             -> support
         
-        + {player_somethingStrange > 0 or (firstChar_InkLevel has ink_high && not little_storylets.infoImpo) && you_are_a_rewriter} Mi è successa una cosa strana.
+        + {player_somethingStrange != ()} Mi è successa una cosa strana.
             -> little_storylets
     
         + Ho cambiato idea.
@@ -240,7 +240,7 @@
     
     Vorrei raccontarti una cosa strana.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
 
-        * (voices){growing_check}C'è una voce che mi racconta cose.
+        * (voices){player_somethingStrange has strangeVoice}C'è una voce che mi racconta cose.
             Voce?##speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
             Sì.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             Ad esempio mi descrive le piante della serra.
@@ -249,30 +249,23 @@
             Sicuramente quella voce è il tuo modo di capire questo luogo.
             Un intuito latente che ora è più forte.##speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
             Meglio della stanchezza dell'essere mentore, fidati.##speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_hurry
-                ~ player_somethingStrange --
-                -> helping_mentor.top
-                
-        * (infoImpo){(firstChar_InkLevel has ink_high) or (secondChar_InkLevel has ink_high)} Le personagge hanno informazioni importanti?
-            Dove l'hai sentita questa cosa, stellina?##speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
-            Quando stavo per fare le ultime domande a {charNameOne}, {voices:la|una} voce mi ha detto quanto inchiostro avevo e che avrei ricevuto una informazione importante.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
-            {not voices:Per la voce sarà la stanchezza, questo lavoro è faticoso.|Come ti dicevo, vedrai che è solo la tua empatia che parla.}##speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_sad
-            Comunque ogni cosa qui è importante, {player_name}.##speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
-            Soprattutto se ti aiuta a raggiungere il tuo obiettivo.
-                ~ player_somethingStrange --
+
+                ~ player_somethingStrange -= strangeVoice
                 -> helping_mentor.top
         
-        * (talkingWitch) {witch_intro} Prima ho parlato con le radici nella foresta.
-            Sembra che vedano e sentano tutto quello che accade qui.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+        * (talkingWitch) {player_somethingStrange has strangeVase} Prima ho parlato con un vaso, in una discarica.
+            Sembra che vedan e senta tutto quello che accade qui.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             E mi hanno chiesto come stavo dopo aver concluso la prima riscrittura.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
-            {infoImpo or voices:Stellina, di nuovo con questa voce?|Senti le voci, stellina?}##speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_sad
+            {voices:Stellina, di nuovo con questa voce?|Senti le voci, stellina?}##speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_sad
             Sono in questo posto da non so quanto e non ho mai parlato con tronchi o rami o radici.##speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
             L'unica cosa che ha voce sono le persone che arrivano per chiedere il nostro aiuto.
             Il tuo aiuto.
             Se senti ancora una volte delle voci, prenditi un po' di riposo.
-                ~ player_somethingStrange --
+
+                ~ player_somethingStrange -= strangeVase
                 -> helping_mentor.top
         
-        * (talkingFrog) {contentsPond has TheFrog} C'è una rana blu parlante.
+        * {player_somethingStrange has strangeFrog} C'è una rana blu parlante.
             {
                 - are_entities_together_in(Mentor, PG, Pond):
                     Ho notato.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
@@ -306,10 +299,10 @@
                     Molte cose qui stanno cambiando dal tuo arrivo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
                     Immagino che una rana parlante non sia la cosa più assurda che potesse capitarci, vero?  
             }
-                ~ player_somethingStrange --
-            -> helping_mentor.top
+                ~ player_somethingStrange -= strangeFrog
+                -> helping_mentor.top
         
-        * {contentsSafekeeping hasnt RewriterBook} Ho trovato questo libro col mio nome.
+        * {player_somethingStrange has strangeGrimoire} Ho trovato questo libro col mio nome.
             E raccoglie informazioni su questo posto.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             E dove l'hai trovato?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
             {temp_grimoire: Sulla panchina.|Me l'ha dato {charNameOne}.}#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
@@ -323,6 +316,8 @@
                 }
             Immagino sia comunque utile per il tuo lavoro.
             Spero solo non parli male di me!##speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_sad
+
+                ~ player_somethingStrange -= strangeGrimoire
                 -> helping_mentor.top
         
         + Ripensandoci, non ho nulla di nuovo da dire.

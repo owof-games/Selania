@@ -21,6 +21,6 @@
                 ~ move_entity(RewriterBook, Forest)
                 ~ move_entity(temporaryGrimoire, Safekeeping)
                 ~ move_entity(MiniGrimoire, Bedroom)
-                ~ player_somethingStrange ++
+                ~ player_somethingStrange += strangeGrimoire
             -
     -> main

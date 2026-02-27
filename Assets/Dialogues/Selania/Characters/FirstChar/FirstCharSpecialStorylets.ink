@@ -13,8 +13,8 @@
 
         ~ move_entity(MiniGrimoire, Bedroom)
         ~ move_entity(temporaryGrimoire, Safekeeping)
+        ~ player_somethingStrange += strangeGrimoire
         @animation:RewriterBook
-        ~ player_somethingStrange ++
             
             {
                 - contentsForest has PG:

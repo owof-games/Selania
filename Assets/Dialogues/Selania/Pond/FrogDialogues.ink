@@ -14,7 +14,7 @@
 - (top)   
     {
         - welcoming_frog.top == 1:
-                ~ player_somethingStrange ++
+                ~ player_somethingStrange += strangeFrog
                 ~ book_BGVariations ++
                 ~ move_entity(FrogRecap, BookPlace)
 
