@@ -33,6 +33,7 @@
 //Funzione per farsi notare
 === talk_to_me ===
 {debug: passo per talk_to_me. Il valore di mentor_lastTimeTalking è {mentor_lastTimeTalking}.}
+
     
 {   
     - mentor_lastTimeTalking < mentor_MAX_lastTimeTalking:

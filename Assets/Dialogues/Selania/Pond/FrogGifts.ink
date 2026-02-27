@@ -800,7 +800,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
     @animation:RewriterBook
     ~ frog_aboutGiftRequest = ()
     ~ frog_currentMission = ()
-    ~ frog_witch_notification = false
+    ~ notification_francoQuests = false
     ~ frog_suspended_gift = false
  
     

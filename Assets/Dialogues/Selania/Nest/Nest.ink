@@ -13,8 +13,7 @@
 
     {nest == 1:Frase sul nido.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
-            -> witch_frog_mission_notifier ->
-    
+
     ~ book_arrivingFromTracking = Nest
     -> main
 

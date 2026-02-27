@@ -17,7 +17,7 @@
     VAR frog_aboutGiftRequest = ()
     VAR frog_currentMission = ()
     
-    VAR frog_witch_notification = false
+
 
     VAR frog_randomMissionDice = 0
     VAR frog_maxValueRandomMissionDice = ()

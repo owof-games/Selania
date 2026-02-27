@@ -16,8 +16,7 @@
 
 
     ~ book_arrivingFromTracking = Kitchen
-    
-        -> witch_frog_mission_notifier ->
+
         -> kitchen_storylets_dispatcher
 
 

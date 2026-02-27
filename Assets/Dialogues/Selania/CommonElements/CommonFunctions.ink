@@ -448,7 +448,7 @@
 
 
 //Altre funzioni:
-{debug: <i>in on_movement events: arrivo alle altre funzioni.}
+    {debug: <i>in on_movement events: arrivo alle altre funzioni.}
     -> notification_system ->
     {debug: <i>in on_movement events: esco dal notification system.}
     -> dump_graphic_changer ->
@@ -457,6 +457,7 @@
     -> characters_speaking ->
     -> moon_state_management ->
     -> special_events_tracking ->
+    -> talk_to_me ->
 
 ->->
 

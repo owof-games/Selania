@@ -10,9 +10,7 @@
         - contentsSafekeeping has BedClosingGame:
             ~ move_entity (BedClosingGame, Bedroom)
     }
-    
-            -> witch_frog_mission_notifier ->
-            -> talk_to_me ->
+
     
     ~ book_arrivingFromTracking = TrainStop
 
