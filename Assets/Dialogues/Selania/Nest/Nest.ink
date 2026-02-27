@@ -1,28 +1,20 @@
 === nest ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
-//Qui Oven avrà solo una funzione di animazione, non serve che ci interagiamo
 
-    {debug: <i>La lista degli oggetti nella stanza è: {contentsNest}.}
-    {debug: <i>La lista degli oggetti nel deposito è: {contentsSafekeeping}.}
+{debug: <i>La lista degli oggetti nella stanza è: {contentsNest}.}
+
+{
+    - contentsBook hasnt NestRecap:
+    ~ move_entity(NestRecap, BookPlace)
+}
+
+{
+    - nest == 1:
+        Vecchie piogge e onde come monito.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+}
     
-        {
-            - contentsBook hasnt NestRecap:
-            ~ move_entity(NestRecap, BookPlace)
-        }
-
-    {nest == 1:Frase sul nido.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-    
-
-    ~ book_arrivingFromTracking = Nest
-    -> main
-
-
-
-
-
-
-
+-> main
 
 
 === emotional_backpack_management

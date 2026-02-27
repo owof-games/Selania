@@ -1,22 +1,15 @@
 === bedroom ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
+
 {debug: <i>La lista degli oggetti nella stanza è: {contentsBedroom}.}
-    
-    ~ book_arrivingFromTracking = Bedroom
 
-    {
-        - bedroom == 1:
-            <i>Un morbido letto è comparso, in attesa di membra stanche.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                -> main
+{
+    - bedroom == 1:
+        <i>Un morbido letto è comparso, in attesa di membra stanche.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+}        
 
-    }        
-  
-        -> main
-
-
-
-
+-> main
 
 === settings_management
 //Gestione delle impostazioni, raggiungibile dal libro e dalla camera da letto

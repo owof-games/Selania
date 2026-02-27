@@ -1,23 +1,21 @@
 === kitchen ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
-//Qui Oven avrà solo una funzione di animazione, non serve che ci interagiamo
 
-    {debug: <i>La lista degli oggetti nella stanza è: {contentsKitchen}.}
-    {debug: <i>La lista degli oggetti nel deposito è: {contentsSafekeeping}.}
-
-    {kitchen == 1:<i>La cucina si apre a nuovi ingredienti e grandi confidenze.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-    
-        {
-            - contentsBedroom hasnt kitchenOpened:
-                    ~ move_entity(kitchenOpened, Bedroom)
-                    ~ saturationVar ++
-        }
+{debug: <i>La lista degli oggetti nella stanza è: {contentsKitchen}.}
 
 
-    ~ book_arrivingFromTracking = Kitchen
+{
+    -kitchen == 1:
+        <i>La cucina si apre a nuovi ingredienti e grandi confidenze. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+}    
 
-        -> kitchen_storylets_dispatcher
+{
+    - contentsBedroom hasnt kitchenOpened:
+            ~ move_entity(kitchenOpened, Bedroom)
+}
+
+-> kitchen_storylets_dispatcher
 
 
 === kitchen_storylets_dispatcher ===

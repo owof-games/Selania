@@ -30,7 +30,6 @@ VAR notification_francoQuests = false
                     - first_character_recap.check && second_character_recap.check && greenhouse_recap.check:
                         <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
                                 ~ notification_francoQuests = true
-
                     - else:
                         ->->
                 }
@@ -40,7 +39,6 @@ VAR notification_francoQuests = false
                     - LIST_COUNT(greenhouse_backupCultivable) < 11:
                         <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
                                 ~ notification_francoQuests = true
-                    
                     - else:
                         ->->    
                 }
@@ -66,7 +64,7 @@ VAR notification_francoQuests = false
                     - first_character_notes.check or second_character_notes.check:
                         <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
                                 ~ notification_francoQuests = true
-
+                                
                     - else:
                         ->->    
                 }
@@ -84,8 +82,6 @@ VAR notification_francoQuests = false
                         ~ notification_francoQuests = true
                 
         }
-     
 }
-
 
 ->->

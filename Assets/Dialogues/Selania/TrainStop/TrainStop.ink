@@ -2,21 +2,20 @@
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
 
-    {debug: La lista degli oggetti nella stanza è: {contentsTrainStop}.}
+{debug: La lista degli oggetti nella stanza è: {contentsTrainStop}.}
 
-    {train_stop == 1: <i>La stazione profuma di aria nevosa e nuovi arrivi.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+{
+    -train_stop == 1: 
+        <i>La stazione profuma di aria nevosa e nuovi arrivi.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+}
     
-    {
-        - contentsSafekeeping has BedClosingGame:
-            ~ move_entity (BedClosingGame, Bedroom)
-    }
+{
+    - contentsSafekeeping has BedClosingGame:
+        ~ move_entity (BedClosingGame, Bedroom)
+}
 
-    
-    ~ book_arrivingFromTracking = TrainStop
+-> main
 
-
-        -> main
-  
 
 === doggo_no_notes ===
     + {are_two_entities_together(DoggoNoNotes, PG)}[DoggoNoNotes]
