@@ -339,21 +339,21 @@
                 -> main
 
     
-// === special_mission_one
-//     ~ temp charNameOne = translator(firstChar_ActualName)
-//     ~ temp charNameTwo = translator(secondChar_ActualName)
-//     ~ temp mentorName = translator(mentor_ActualName)
+=== special_mission_one
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
     
-//     Sembra che ci sia della tensione tra Riccio e Mentore.
-//     Perché non vedi cosa accade? #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-//     Poi torna da me, e ti darò quello che ti serve.
-//         ~ frog_currentMission += specialMissionOne
-//         ~ frog_availableSpecialMissions -= specialMissionOne
-//         ~ move_entity(SecondCharacter, Forest)
-//         ~ move_entity(Mentor, Forest)
-//         ~ movements_changeLocationTimer = 0
-//     @animation:RewriterBook    
-//     -> main
+    Sembra che ci sia della tensione tra Riccio e Mentore.
+    Perché non vedi cosa accade? #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    Poi torna da me, e ti darò quello che ti serve.
+        ~ frog_currentMission += specialMissionOne
+        ~ frog_availableSpecialMissions -= specialMissionOne
+        ~ move_entity(SecondCharacter, Forest)
+        ~ move_entity(Mentor, Forest)
+        ~ movements_changeLocationTimer = 0
+    @animation:RewriterBook    
+    -> main
     
     
 === special_mission_two

@@ -11,13 +11,13 @@
 
     VAR contentsLibrary = (FromLibraryToForest, FromLibraryToNestBlocked, ReadingPlace)
 
-    VAR contentsNest = (FromNestToLibrary, fireGlyph, earthGlyph, airGlyph)
+    VAR contentsNest = (FromNestToLibrary, fireGlyph, earthGlyph, airGlyph, waterGlyph, aetherGlyph)
 
     VAR contentsKitchen = (FromKitchenToPond, FirstRipple, SecondRipple, ThirdRipple)
 
     VAR contentsDump = (TheWitch, FromDumpToForest)
 
-    VAR contentsSafekeeping = (BedClosingGame, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FifthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, TheFrog, FifthCharacterNotes, MenuSave, MenuQuit,  RewriterBook, FirstRecap, SecondRecap, ThirdRecap, FourthRecap, FrogRecap, DogRecap, WitchRecap, GreenhouseRecap, KitchenRecap, NestRecap, FifthRecap, RulesRecap, greenhouseOpened, firstCharPaint, kitchenOpened, libraryOpened, secondCharPaint, MiniGrimoire, FromLibraryToNestNight, FromLibraryToNest, FromForestToLibrary, RedBee, GoldenBee, BrownBee, MoonTrees, Snail, FromPondToGreenhouseBlooming, TrainNoiseComing, BastonSound, NewMoonAnim, FirstQuarterAnim, FullMoonAnim, ThirdQuarterAnim, RedMoonAnim, nightTable, Mentor, FromPondToKitchen, FromPondToGreenhouse, waterGlyph, aetherGlyph, KitchenFire, KitchenSmokeOne, KitchenSmokeTwo, KitchenSmokeThree, CookingWithFirstCharOBJ, CookingWithSecondCharOBJ, FirstCharCookingAloneOBJ,  EatingWithSecondCharOBJ, EatingWithFirstCharOBJ, Bat, BatHouseFront, BatHouseRetro, FromLibraryToNestBlockedNight, TrainNoiseGoingAway, StartingNote, DoggoNoNotes, TheKitchenFrog, lighthouseAnimation, FromForestToDump, firstDumpOBJ, secondDumpOBJ, thirdDumpOBJ, fourthDumpOBJ, fifthDumpOBJ, temporaryGrimoire)
+    VAR contentsSafekeeping = (BedClosingGame, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FifthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, TheFrog, FifthCharacterNotes, MenuSave, MenuQuit,  RewriterBook, FirstRecap, SecondRecap, ThirdRecap, FourthRecap, FrogRecap, DogRecap, WitchRecap, GreenhouseRecap, KitchenRecap, NestRecap, FifthRecap, RulesRecap, greenhouseOpened, firstCharPaint, kitchenOpened, libraryOpened, secondCharPaint, MiniGrimoire, FromLibraryToNestNight, FromLibraryToNest, FromForestToLibrary, RedBee, GoldenBee, BrownBee, MoonTrees, Snail, FromPondToGreenhouseBlooming, TrainNoiseComing, BastonSound, NewMoonAnim, FirstQuarterAnim, FullMoonAnim, ThirdQuarterAnim, RedMoonAnim, nightTable, Mentor, FromPondToKitchen, FromPondToGreenhouse, KitchenFire, KitchenSmokeOne, KitchenSmokeTwo, KitchenSmokeThree, CookingWithFirstCharOBJ, CookingWithSecondCharOBJ, FirstCharCookingAloneOBJ,  EatingWithSecondCharOBJ, EatingWithFirstCharOBJ, Bat, BatHouseFront, BatHouseRetro, FromLibraryToNestBlockedNight, TrainNoiseGoingAway, StartingNote, DoggoNoNotes, TheKitchenFrog, lighthouseAnimation, FromForestToDump, firstDumpOBJ, secondDumpOBJ, thirdDumpOBJ, fourthDumpOBJ, fifthDumpOBJ, temporaryGrimoire)
     
     VAR contentsBook = (BookExit, SettingsBookVersion)
    

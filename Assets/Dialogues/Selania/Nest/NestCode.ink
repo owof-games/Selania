@@ -6,27 +6,27 @@
         = first_key
         Suona la prima nota.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
-            + {are_two_entities_together(PG, fireGlyph)}[fireGlyph]
+            + {nest_foundedGlyphs has fireGlyph}[fireGlyph]
             
                 @animation:RedShell
                 ~ nest_firstKeyColour = redKey
             
-            + {are_two_entities_together(PG, earthGlyph)}[earthGlyph]
+            + {nest_foundedGlyphs has earthGlyph}[earthGlyph]
             
                 @animation:YellowShell
                 ~ nest_firstKeyColour = yellowKey
             
-            + {are_two_entities_together(PG, airGlyph)}[airGlyph]
+            + {nest_foundedGlyphs has airGlyph}[airGlyph]
             
                 @animation:BlueShell
                 ~ nest_firstKeyColour = blueKey
             
-            + {are_two_entities_together(PG, waterGlyph)}[waterGlyph]
+            + {nest_foundedGlyphs has waterGlyph}[waterGlyph]
             
                 @animation:GreenShell
                 ~ nest_firstKeyColour = greenKey
             
-            + {are_two_entities_together(PG, aetherGlyph)}[aetherGlyph]
+            + {nest_foundedGlyphs has aetherGlyph}[aetherGlyph]
                 
                 @animation:PurpleShell
                 ~ nest_firstKeyColour = purpleKey

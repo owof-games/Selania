@@ -1,3 +1,5 @@
+VAR nest_foundedGlyphs = (aetherGlyph, waterGlyph, airGlyph)
+
 //Una lista di tutte le parole possibili
     LIST nest_emotionalVariationsList = 
        

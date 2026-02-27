@@ -799,7 +799,7 @@
                     }
                 L'armonia è importante.
                 Per questo ti dono una nota, che troverai al Nido.
-                    ~ move_entity(aetherGlyph, Nest)
+                    ~ nest_foundedGlyphs += earthGlyph
                     ~ frog_currentMission = ()
                     ~ frog_aboutGiftRequest = ()
                     //Metto in pausa le missioni speciali

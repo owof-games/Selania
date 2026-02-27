@@ -563,7 +563,7 @@
             - secondChar_specialEvent == true:
                 -> secret_ending
             - else:
-                -> close
+                -> exit
             }
     
     
@@ -585,7 +585,30 @@
         Ma non mi sembra felice.
             -> close
             
-    
+     = exit
+     ~ temp charNameTwo = translator(secondChar_ActualName)
+        {
+            - nest_foundedGlyphs hasnt fireGlyph:
+            Ah {player_name}, prima ho trovato una cosa in giro.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+            O forse l'ho rubata.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_melanchonic
+            Ma ho pensato che magari tu ci cavi qualcosa.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+            Devo iniziare a comportarmi diversamente, mi sa. 
+            Vero?
+            {
+                - player_accessiblePlaces has Nest: 
+                    Ho chiesto a un amico di lasciartela nel nido.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                
+                - else: 
+                    Stavo per dartela direttamente, ma Franco mi ha detto che te l'avrebbe fatta trovare quando ti sarà servita.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+            }
+            ~ nest_foundedGlyphs += fireGlyph
+
+        }
+            
+    -> close
+
+
+
     = close
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ story_endedStories += story_secondCharStoryEnded
