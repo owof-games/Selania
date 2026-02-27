@@ -2,8 +2,8 @@
     
 //Per abilitare o meno i debug
     VAR debug_openAll = false
-    VAR debug = true
-    VAR debug_cultivable = true
+    VAR debug = false
+    VAR debug_cultivable = false
     VAR debug_changeName = false
     VAR debug_kitchen = false
     VAR debug_nest = false
