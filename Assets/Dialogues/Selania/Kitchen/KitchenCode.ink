@@ -487,28 +487,36 @@
 
     {
         - cookingCompanion == FirstCharacter:
-            ~ kitchen_storageAether = firstChar_aether
-                ~ firstChar_aether = 0
-            ~ kitchen_storageEarth = firstChar_earth
-                ~ firstChar_earth = 0
-            ~ kitchen_storageAir = firstChar_air
-                ~ firstChar_air = 0
-            ~ kitchen_storageWater = firstChar_water
-                ~ firstChar_water = 0
-            ~ kitchen_storageFire = firstChar_fire
-                ~ firstChar_fire= 0
+            Visto che è un momento di pausa, facciamo come se non ci fossimo mai conosciut3, senza gioie né rancori passati. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+            Solo per ora ovviamente.
+
+                ~ kitchen_storageAether = firstChar_aether
+                    ~ firstChar_aether = 0
+                ~ kitchen_storageEarth = firstChar_earth
+                    ~ firstChar_earth = 0
+                ~ kitchen_storageAir = firstChar_air
+                    ~ firstChar_air = 0
+                ~ kitchen_storageWater = firstChar_water
+                    ~ firstChar_water = 0
+                ~ kitchen_storageFire = firstChar_fire
+                    ~ firstChar_fire= 0
+            
+            
     
         - cookingCompanion == SecondCharacter:
-            ~ kitchen_storageAether = secondChar_aether
-                ~ secondChar_aether = 0
-            ~ kitchen_storageEarth = secondChar_earth
-                ~ secondChar_earth = 0
-            ~ kitchen_storageAir = secondChar_air
-                ~ secondChar_air = 0
-            ~ kitchen_storageWater = secondChar_water
-                ~ secondChar_water = 0
-            ~ kitchen_storageFire = secondChar_fire
-                ~ secondChar_fire = 0
+            Cominciamo. E farò finta di non sapere cosa penso di te, così è più facile per tutti e due. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+            Non per sempre, solo adesso che cuciniamo.
+                
+                ~ kitchen_storageAether = secondChar_aether
+                    ~ secondChar_aether = 0
+                ~ kitchen_storageEarth = secondChar_earth
+                    ~ secondChar_earth = 0
+                ~ kitchen_storageAir = secondChar_air
+                    ~ secondChar_air = 0
+                ~ kitchen_storageWater = secondChar_water
+                    ~ secondChar_water = 0
+                ~ kitchen_storageFire = secondChar_fire
+                    ~ secondChar_fire = 0
     }
 ->->
 
