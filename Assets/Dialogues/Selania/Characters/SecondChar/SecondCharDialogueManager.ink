@@ -5,15 +5,15 @@
         //Chiacchiera normale
         + {are_two_entities_together(SecondCharacter, PG) && secondChar_storyStatus == story_storyStarted} [SecondCharacter]
             -> talk_with_second_character
-        
+
         //Chiacchiera a fine storia
         + {are_two_entities_together(SecondCharacter, PG) && secondChar_storyStatus == story_storyEnded} [SecondCharacter]
             -> second_char_story_ended
-        
+
         + ->
-    
+
         -> DONE
-    
+
 
 === talk_with_second_character ===
 ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -24,7 +24,7 @@
 
             //Riccio sta cucinando ed entriamo in cucina
             - are_two_entities_together(SecondCharacter, PG) && entity_location(PG) == Kitchen && kitchen_secondCharIsCooking == true:
-                -> second_char_cooking_alone    
+                -> second_char_cooking_alone
 
             - else:
                 -> options_second_character
@@ -34,27 +34,27 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-{  
+{
     //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
         - secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && about_violence_and_peace && not rewriting_proposal_second_character && not ink_and_rewriting:
                 -> ask
-            
+
     //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
         - secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && about_violence_and_peace && not rewriting_proposal_second_character && ink_and_rewriting:
                 -> ask
-    
-    //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo         
+
+    //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo
         - secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && about_violence_and_peace && rewriting_proposal_second_character:
                 -> ask
 
-    //Vogliamo offrire un dono            
+    //Vogliamo offrire un dono
         - not second_story_gift.ink_outcome && backpack_findedGifts != ():
                 -> ask
-    
-    //Vogliamo cucinare assieme (dopo almeno uno storylet assieme)      
+
+    //Vogliamo cucinare assieme (dopo almeno uno storylet assieme)
         - second_char_main_storylets.four && open_the_kitchen && not ending_cooking_with_second_char && kitchen_secondCharIsCooking==false:
                 -> ask
-    
+
     - else:
         {
             - secondChar_justTalked == false:
@@ -62,7 +62,7 @@
                 - not second_char_main_storylets.eight:
                     {shuffle:
                         - Una volta ho salvato un bambino da un incendio e la sua mamma mi ha fatto una torta gigante.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
-                        
+
                         - Sai che so volare? Ma solo quando non mi vede nessuno. E quindi non mi credono.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
 
                         - Una volta ho trovato un sasso maledetto e ora i grandi mi danno la colpa anche di tutto ma io non faccio mai niente!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
@@ -92,7 +92,7 @@
                         - Ho fatto un tema così bello che la maestra l'ha mandato a tutte le mamme per far vedere che sono il bambino più bravo della scuola!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
                     }
                     -> main
-                
+
                 - else:
                     {shuffle:
                         - Non prendermi in giro, ma le tartarughe mi fanno paura.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
@@ -135,60 +135,58 @@
                             }
                     }
                     -> main
-            }        
+            }
 
             - else:
                 ~ secondChar_justTalked = false
                 -> main
         }
-        
+
 
 }
-             
+
     = ask
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-    
+
         Vuoi chiedermi qualcosa {player_name}? #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_energy
-        
+
         ~ secondChar_justTalked = false
 
-    
-    
         //Azioni legate alla riscrittura
             //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-                + {secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && not rewriting_proposal_second_character && not ink_and_rewriting} {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
-                        Mi sa che {mentorName} vuole dirti qualcosa prima.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
-                            {
-                                - are_two_entities_together(Mentor,PG):
-                                Sì {player_name}, parliamo un attimo!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
-                            }
-                             ~ secondChar_tutorial = true
-                                    -> main
-            
-            //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
-                + {secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && not rewriting_proposal_second_character && ink_and_rewriting} {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
-                        //Incremento le variazioni del libro della Riscrittora           
-                            ~ book_BGVariations ++
-                                -> rewriting_proposal_second_character
-                                
-            //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo             
-                + {secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && rewriting_proposal_second_character}Iniziamo la riscrittura?
+            + {(secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting) && not rewriting_proposal_second_character && not ink_and_rewriting} Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
+                    Mi sa che {mentorName} vuole dirti qualcosa prima.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        {
+                            - are_two_entities_together(Mentor,PG):
+                            Sì {player_name}, parliamo un attimo!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
+                        }
+                            ~ secondChar_tutorial = true
+                                -> main
+
+        //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
+            + {(secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting) && not rewriting_proposal_second_character && ink_and_rewriting} Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
+                    //Incremento le variazioni del libro della Riscrittora
+                        ~ book_BGVariations ++
+                            -> rewriting_proposal_second_character
+
+        //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo
+                + {secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && rewriting_proposal_second_character} Iniziamo la riscrittura?
                         -> rewriting_proposal_second_character
-        
-        
+
+
         //Azioni legate alla costruzione della relazione
-                
+
             //Offrire un dono
                 + {not second_story_gift.ink_outcome && backpack_findedGifts != ()} Ti voglio dare questa cosa.
                             -> second_story_gift
-    
-        
-            
+
+
+
             //Cucinare assieme
             + {second_char_main_storylets.two && open_the_kitchen && not ending_cooking_with_second_char && kitchen_secondCharIsCooking==false}Ti va di cucinare qualcosa assieme?
-                    
+
                 {
                     - kitchen_firstCharIsCooking:
                         C'è già {charNameOne} che cucina qualcosa. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:riccio_energy
@@ -199,10 +197,10 @@
                             ->main
 
                     - contentsKitchen has TheKitchenFrog:
-                        Ma la mia amica rana ti sta aspettando lì! #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy   
-                            ->main        
-                    
-                    - kitchen_secondCharCookingTogetherNumberInvite > 0: 
+                        Ma la mia amica rana ti sta aspettando lì! #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
+                            ->main
+
+                    - kitchen_secondCharCookingTogetherNumberInvite > 0:
                         {stopping:
                             - Prima ti ho aspettato TANTISSIMO! Vado.  #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:riccio_neutral
 
@@ -216,22 +214,21 @@
                             ~ kitchen_secondCharCookingTogetherNumberInvite ++
                             ~ move_entity(SecondCharacter, Kitchen)
                                 ->main
-                    
+
                     - else:
                         Yeah! Ci vediamo in cucina! #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:riccio_emotional
                             ~ move_entity(SecondCharacter, Kitchen)
                             ~ kitchen_secondCharCookingTogetherInvite = true
                             ~ kitchen_secondCharCookingTogetherNumberInvite ++
-                                ->main    
+                                ->main
                 }
-                    
-        //Uscita dalla conversazione        
+
+        //Uscita dalla conversazione
             + <i>Lascio il dialogo.
                 -> main
             -
                 -> talk_with_second_character
 
 
-                        
-  
-        
+
+
