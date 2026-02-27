@@ -860,85 +860,85 @@
 {debug_frog: passo da cultivable_recovery.}
 Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
 
-    + {frog_recoverableCultivables has BaccaDellaAddolorata} {ingredientTranslator(BaccaDellaAddolorata)}.
+    + {frog_recoverableCultivables has BaccaDellaAddolorata} ...{ingredientTranslator(BaccaDellaAddolorata)}.
             ~  frog_aboutGiftRequest = missionObjects
             ~  frog_cultivableRequested = BaccaDellaAddolorata
             ~  frog_recoveredCultivables += BaccaDellaAddolorata
             -> frog_gift_dispatcher
             
-    + {frog_recoverableCultivables has BarbaDellInciampo} {ingredientTranslator(BarbaDellInciampo)}.
+    + {frog_recoverableCultivables has BarbaDellInciampo} ...{ingredientTranslator(BarbaDellInciampo)}.
             ~  frog_aboutGiftRequest = missionObjects
             ~  frog_cultivableRequested = BarbaDellInciampo
             ~  frog_recoveredCultivables += BarbaDellInciampo
             -> frog_gift_dispatcher
             
-    + {frog_recoverableCultivables has BastoneDellOzioso}{ingredientTranslator(BastoneDellOzioso)}.
+    + {frog_recoverableCultivables has BastoneDellOzioso} ...{ingredientTranslator(BastoneDellOzioso)}.
             ~  frog_aboutGiftRequest = missionObjects
             ~  frog_cultivableRequested = BastoneDellOzioso
             ~  frog_recoveredCultivables += BastoneDellOzioso
             -> frog_gift_dispatcher
             
-    + {frog_recoverableCultivables has BrinaDellImpossibile}{ingredientTranslator(BrinaDellImpossibile)}.
+    + {frog_recoverableCultivables has BrinaDellImpossibile} ...{ingredientTranslator(BrinaDellImpossibile)}.
             ~  frog_aboutGiftRequest = missionObjects
             ~  frog_cultivableRequested = BrinaDellImpossibile
             ~  frog_recoveredCultivables += BrinaDellImpossibile
             -> frog_gift_dispatcher
             
-    + {frog_recoverableCultivables has CantoDelleCompagne} {ingredientTranslator(CantoDelleCompagne)}.
+    + {frog_recoverableCultivables has CantoDelleCompagne}  ...{ingredientTranslator(CantoDelleCompagne)}.
             ~  frog_aboutGiftRequest = missionObjects
             ~  frog_cultivableRequested = CantoDelleCompagne
             ~  frog_recoveredCultivables += CantoDelleCompagne
             -> frog_gift_dispatcher
             
-    + {frog_recoverableCultivables has CardoAspinato} {ingredientTranslator(CardoAspinato)}.
+    + {frog_recoverableCultivables has CardoAspinato} ...{ingredientTranslator(CardoAspinato)}.
             ~  frog_aboutGiftRequest = missionObjects
             ~  frog_cultivableRequested = CardoAspinato
             ~  frog_recoveredCultivables += CardoAspinato
             -> frog_gift_dispatcher
             
-    + {frog_recoverableCultivables has EderaDelleAmanti} {ingredientTranslator(EderaDelleAmanti)}.
+    + {frog_recoverableCultivables has EderaDelleAmanti} ...{ingredientTranslator(EderaDelleAmanti)}.
             ~  frog_aboutGiftRequest = missionObjects
             ~  frog_cultivableRequested = EderaDelleAmanti
             ~  frog_recoveredCultivables += EderaDelleAmanti
             -> frog_gift_dispatcher
             
-    + {frog_recoverableCultivables has ErbaLiccia} {ingredientTranslator(ErbaLiccia)}.
+    + {frog_recoverableCultivables has ErbaLiccia} ...{ingredientTranslator(ErbaLiccia)}.
             ~  frog_aboutGiftRequest = missionObjects
             ~  frog_cultivableRequested = ErbaLiccia
             ~  frog_recoveredCultivables += ErbaLiccia
             -> frog_gift_dispatcher
             
-    + {frog_recoverableCultivables has FalsaPalude} {ingredientTranslator(FalsaPalude)}.
+    + {frog_recoverableCultivables has FalsaPalude} ...{ingredientTranslator(FalsaPalude)}.
             ~  frog_aboutGiftRequest = missionObjects
             ~  frog_cultivableRequested = FalsaPalude
             ~  frog_recoveredCultivables += FalsaPalude
             -> frog_gift_dispatcher
             
-    + {frog_recoverableCultivables has LanaNotturna} {ingredientTranslator(LanaNotturna)}.
+    + {frog_recoverableCultivables has LanaNotturna} ...{ingredientTranslator(LanaNotturna)}.
             ~  frog_aboutGiftRequest = missionObjects
             ~  frog_cultivableRequested = LanaNotturna
             ~  frog_recoveredCultivables += LanaNotturna
             -> frog_gift_dispatcher
             
-    + {frog_recoverableCultivables has LicheneDegliAbissi} {ingredientTranslator(LicheneDegliAbissi)}.
+    + {frog_recoverableCultivables has LicheneDegliAbissi} ...{ingredientTranslator(LicheneDegliAbissi)}.
             ~  frog_aboutGiftRequest = missionObjects
             ~  frog_cultivableRequested = LicheneDegliAbissi
             ~  frog_recoveredCultivables += LicheneDegliAbissi
             -> frog_gift_dispatcher
             
-    + {frog_recoverableCultivables has NonTiScordarDiTe} {ingredientTranslator(NonTiScordarDiTe)}.
+    + {frog_recoverableCultivables has NonTiScordarDiTe} ...{ingredientTranslator(NonTiScordarDiTe)}.
             ~  frog_aboutGiftRequest = missionObjects
             ~  frog_cultivableRequested = NonTiScordarDiTe
             ~  frog_recoveredCultivables += NonTiScordarDiTe
             -> frog_gift_dispatcher
             
-    + {frog_recoverableCultivables has Olobino} {ingredientTranslator(Olobino)}.
+    + {frog_recoverableCultivables has Olobino} ...{ingredientTranslator(Olobino)}.
             ~  frog_aboutGiftRequest = missionObjects
             ~  frog_cultivableRequested = Olobino
             ~  frog_recoveredCultivables += Olobino
             -> frog_gift_dispatcher
             
-    + {frog_recoverableCultivables has LaSpazzata} {ingredientTranslator(LaSpazzata)}.
+    + {frog_recoverableCultivables has LaSpazzata} ...{ingredientTranslator(LaSpazzata)}.
             ~  frog_aboutGiftRequest = missionObjects
             ~  frog_cultivableRequested = LaSpazzata
             ~  frog_recoveredCultivables += LaSpazzata
