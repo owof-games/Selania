@@ -99,10 +99,10 @@
 {debug: passo da opening_places.}
     {
         - welcome.your_name && (entity_location(FromPondToGreenhouse) == Safekeeping) && not olobino.step_tre.colto:
-            // ~ movements_randomablePlaces += Greenhouse
             ~ player_accessiblePlaces += Greenhouse
             ~ move_entity(FromPondToGreenhouseBlocked, Safekeeping)
             ~ move_entity(FromPondToGreenhouse, Pond)
+            // ~ movements_randomablePlaces += Greenhouse
     }
     
     {
@@ -168,7 +168,7 @@
                     ~ movements_randomizable_characters += FirstCharacter
             }
         
-        - firstChar_storyStatus == story_storyEnded && not first_char_story_ended.goodbye:
+        - firstChar_storyStatus == story_storyEnded && contentsSafekeeping hasnt FirstCharacter:
             //Così evitiamo che sia alla fermata del treno al momento della partenza, in modo da fare poi l'animazione.
             ~ movements_randomizable_characters -= FirstCharacter 
             ~ move_entity(FirstCharacter, Forest)
@@ -190,7 +190,7 @@
                 
         }
         //Così evitiamo che sia alla fermata del treno al momento della partenza, in modo da fare poi l'animazione.
-        - secondChar_storyStatus == story_storyEnded && not second_char_story_ended.goodbye:
+        - secondChar_storyStatus == story_storyEnded && contentsSafekeeping hasnt SecondCharacter:
             ~ movements_randomizable_characters -= SecondCharacter   
             ~  move_entity(SecondCharacter, Forest)
     }
