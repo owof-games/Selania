@@ -23,7 +23,7 @@
 {
 	- greenhouse_chosenCultivable != ():
         {debug: greenhouse_chosenCultivable è uguale a {greenhouse_chosenCultivable}, per cui vado a growing_updater}        
-        -> growing_updater
+        -> growing_value_updater
         
     - else:
     {

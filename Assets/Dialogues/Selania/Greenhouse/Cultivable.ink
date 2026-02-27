@@ -11,8 +11,10 @@
     - greenhouse_growStep hasnt stepThree && greenhouse_chosenCultivable != ():
         ~ greenhouse_cultivableGrowing ++
 }
+-> growing_value_updater
 
 
+=== growing_value_updater
 {
     - greenhouse_cultivableGrowing < greenhouse_growingValueStepZero:
         ~ greenhouse_growStep = ()
@@ -30,46 +32,29 @@
         {debug: passo da secondo step check greenhouse_cultivableGrowing.  Il valore di greenhouse_cultivableGrowing è {greenhouse_cultivableGrowing}. Imposto greenhouse_growStep come {greenhouse_growStep}. Il coltivabile selezionato è {greenhouse_chosenCultivable}.}
     
     - else:
-        //Solo se non ho già lo stepThree lo aggiungo. In questo modo ho la sicurezza che la notifica di crescita mi arrivi solo una volta.
         {
             - greenhouse_growStep hasnt stepThree:
                     ~ greenhouse_growStep = ()
                     ~ greenhouse_growStep += stepThree
-                    ~ notification_greenhouseGrown = true
         {debug: passo da terzo step check greenhouse_cultivableGrowing. Imposto greenhouse_growStep come {greenhouse_growStep}.}            
         }
 
 }
 
-->->
+{
+    - entity_location(PG) != Greenhouse:
+        {
+            - greenhouse_growStep has stepThree:
+                ~ notification_greenhouseGrown = true
+        }
+            ->->
+    
+    - else:
+        -> growing_updater
+
+}
 
 === growing_updater
-{
-    - greenhouse_cultivableGrowing < greenhouse_growingValueStepZero:
-        ~ greenhouse_growStep = ()
-        ~ greenhouse_growStep += stepZero
-        {debug: passo da step zero check greenhouse_cultivableGrowing. Il valore di greenhouse_cultivableGrowing è {greenhouse_cultivableGrowing}. Imposto greenhouse_growStep come {greenhouse_growStep}. Il coltivabile selezionato è {greenhouse_chosenCultivable}.}
-    
-    - greenhouse_cultivableGrowing < greenhouse_growingValueStepOne:
-        ~ greenhouse_growStep = ()
-        ~ greenhouse_growStep += stepOne
-        {debug: passo da primo check greenhouse_cultivableGrowing. Il valore di greenhouse_cultivableGrowing è {greenhouse_cultivableGrowing}.  Imposto greenhouse_growStep come {greenhouse_growStep}. Il coltivabile selezionato è {greenhouse_chosenCultivable}.}
-    
-    - greenhouse_cultivableGrowing < greenhouse_growingValueStepTwo:
-        ~ greenhouse_growStep = ()
-        ~ greenhouse_growStep += stepTwo
-        {debug: passo da secondo step check greenhouse_cultivableGrowing.  Il valore di greenhouse_cultivableGrowing è {greenhouse_cultivableGrowing}. Imposto greenhouse_growStep come {greenhouse_growStep}. Il coltivabile selezionato è {greenhouse_chosenCultivable}.}
-    
-    - else:
-        {
-            - greenhouse_growStep hasnt stepThree:
-                    ~ greenhouse_growStep = ()
-                    ~ greenhouse_growStep += stepThree
-        {debug: passo da terzo step check greenhouse_cultivableGrowing. Imposto greenhouse_growStep come {greenhouse_growStep}.}            
-        }
-
-}
-
 {
 
     - greenhouse_chosenCultivable has BaccaDellaAddolorata:
