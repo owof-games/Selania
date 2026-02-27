@@ -1,12 +1,6 @@
-//Gestione background
-VAR saturationVar = 0
-    
-    
-    
 //Funzioni di gestione del background
 //Per la nomenclatura: il back di default è backLuogo, il resto vediamo man mano.
 === function tag_background()
-{debug: <i>il valore di saturazione è di {saturationVar}.}
 
     {
         - entity_location(PG) == Bedroom:

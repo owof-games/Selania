@@ -979,7 +979,6 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
         = goodbye
         ~ temp charNameFive = translator(fifthChar_ActualName)
         ~ move_entity(fifthCharPaint, Bedroom)
-        ~ saturationVar ++
         
         {player_name}, per me è arrivato il momento di tornare a casa.
         {firstChar_possibleStates hasnt Chitarra: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}

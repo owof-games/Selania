@@ -810,8 +810,7 @@ Stai per donare qualcosa a {charNameThree}.
         = goodbye
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ move_entity(thirdCharPaint, Bedroom)
-        ~ saturationVar ++
-        
+
         {player_name}, per me è arrivato il momento di tornare a casa.
         {firstChar_possibleStates hasnt Chitarra: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
         {firstChar_possibleStates hasnt Chitarra: Grazie per quello che hai fatto, davvero.}

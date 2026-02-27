@@ -1253,7 +1253,6 @@
 === ending_cultivation
      {
        - ending_cultivation == 1:
-           ~ saturationVar ++
            ~ move_entity(greenhouseOpened, Bedroom)
      }
     

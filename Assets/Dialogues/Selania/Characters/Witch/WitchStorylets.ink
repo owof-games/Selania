@@ -31,8 +31,6 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-        ~ saturationVar ++
-        
         <i>Le nostre radici ci connettono a nuove voci, nuove storie.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
         <b>Ci.</b>
         <i>La cicatrice rimane, ma da essa esplode la vita.

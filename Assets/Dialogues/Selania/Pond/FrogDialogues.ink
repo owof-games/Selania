@@ -15,7 +15,6 @@
     {
         - welcoming_frog.top == 1:
                 ~ player_somethingStrange ++
-                ~ saturationVar ++
                 ~ book_BGVariations ++
                 ~ move_entity(FrogRecap, BookPlace)
 
