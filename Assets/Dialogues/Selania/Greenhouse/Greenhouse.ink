@@ -9,18 +9,21 @@
     {greenhouse == 1:<i>Nella serra a lungo dimenticata i vasi attendono sussurri e confidenze.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             -> witch_frog_mission_notifier ->
             -> talk_to_me ->
+    {debug: sono uscito da talk_to_me}        
 
     ~ book_arrivingFromTracking = Greenhouse
+    {debug: ho aggiornato book_arrivingFromTracking, che ora è {book_arrivingFromTracking}}
 
     {
         - player_name == "Senza nome":
             -> name_choice -> gender ->
     }                
-
+     
 
 {
 	- greenhouse_chosenCultivable != ():
-        -> plant_check
+        {debug: greenhouse_chosenCultivable è uguale a {greenhouse_chosenCultivable}, per cui vado a growing_updater}        
+        -> growing_updater
         
     - else:
     {

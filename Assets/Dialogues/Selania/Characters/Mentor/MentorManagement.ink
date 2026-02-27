@@ -37,6 +37,7 @@
 {   
     - mentor_lastTimeTalking < mentor_MAX_lastTimeTalking:
             ~ mentor_lastTimeTalking ++
+        {debug: aumento il valore di mentor_lastTimeTalking, che ora è {mentor_lastTimeTalking}.}    
         ->->    
 
     - else:
@@ -66,10 +67,12 @@
             }
                 
         - else:
+            {debug: Mentore e PG non sono assieme, per cui vado avanti.}
             ->->   
     }         
 
 }
+
 
 ->->
 

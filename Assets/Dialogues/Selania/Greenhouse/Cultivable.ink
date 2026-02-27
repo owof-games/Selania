@@ -8,7 +8,7 @@
 
 {
     //Aumentiamo il valore solo se greenhouse_growStep non ha stepThree
-    - greenhouse_growStep hasnt stepThree:
+    - greenhouse_growStep hasnt stepThree && greenhouse_chosenCultivable != ():
         ~ greenhouse_cultivableGrowing ++
 }
 
@@ -17,14 +17,17 @@
     - greenhouse_cultivableGrowing < greenhouse_growingValueStepZero:
         ~ greenhouse_growStep = ()
         ~ greenhouse_growStep += stepZero
+        {debug: passo da step zero check greenhouse_cultivableGrowing. Il valore di greenhouse_cultivableGrowing è {greenhouse_cultivableGrowing}. Imposto greenhouse_growStep come {greenhouse_growStep}. Il coltivabile selezionato è {greenhouse_chosenCultivable}.}
     
     - greenhouse_cultivableGrowing < greenhouse_growingValueStepOne:
         ~ greenhouse_growStep = ()
-        ~ greenhouse_growStep += stepOne    
+        ~ greenhouse_growStep += stepOne
+        {debug: passo da primo check greenhouse_cultivableGrowing. Il valore di greenhouse_cultivableGrowing è {greenhouse_cultivableGrowing}.  Imposto greenhouse_growStep come {greenhouse_growStep}. Il coltivabile selezionato è {greenhouse_chosenCultivable}.}
     
     - greenhouse_cultivableGrowing < greenhouse_growingValueStepTwo:
         ~ greenhouse_growStep = ()
         ~ greenhouse_growStep += stepTwo
+        {debug: passo da secondo step check greenhouse_cultivableGrowing.  Il valore di greenhouse_cultivableGrowing è {greenhouse_cultivableGrowing}. Imposto greenhouse_growStep come {greenhouse_growStep}. Il coltivabile selezionato è {greenhouse_chosenCultivable}.}
     
     - else:
         //Solo se non ho già lo stepThree lo aggiungo. In questo modo ho la sicurezza che la notifica di crescita mi arrivi solo una volta.
@@ -33,9 +36,14 @@
                     ~ greenhouse_growStep = ()
                     ~ greenhouse_growStep += stepThree
                     ~ notification_greenhouseGrown = true
+        {debug: passo da terzo step check greenhouse_cultivableGrowing. Imposto greenhouse_growStep come {greenhouse_growStep}.}            
         }
 
 }
+
+->->
+
+=== growing_updater
 
 {
 
@@ -171,15 +179,19 @@
             - greenhouse_growStep has stepZero:
                 ~ growthFalsaPalude = stepZero
                 ~ narrativeGrowthFalsaPalude = stepZero
+            {debug: greenhouse_chosenCultivable = {greenhouse_chosenCultivable}, greenhouse_growStep = {greenhouse_growStep}, narrativeGrowthFalsaPalude = {narrativeGrowthFalsaPalude}.}
             - greenhouse_growStep has stepOne:
                 ~ growthFalsaPalude = stepOne
+            {debug: greenhouse_chosenCultivable = {greenhouse_chosenCultivable}, greenhouse_growStep = {greenhouse_growStep}, narrativeGrowthFalsaPalude = {narrativeGrowthFalsaPalude}.}    
                 ~ narrativeGrowthFalsaPalude = stepOne
             - greenhouse_growStep has stepTwo:
                 ~ growthFalsaPalude = stepTwo
+            {debug: greenhouse_chosenCultivable = {greenhouse_chosenCultivable}, greenhouse_growStep = {greenhouse_growStep}, narrativeGrowthFalsaPalude = {narrativeGrowthFalsaPalude}.}
                 ~ narrativeGrowthFalsaPalude = stepTwo
             - greenhouse_growStep has stepThree:
                  ~ growthFalsaPalude = stepTwo
                  ~ narrativeGrowthFalsaPalude = stepThree
+            {debug: greenhouse_chosenCultivable = {greenhouse_chosenCultivable}, greenhouse_growStep = {greenhouse_growStep}, narrativeGrowthFalsaPalude = {narrativeGrowthFalsaPalude}.}                 
         }     
     
     - greenhouse_chosenCultivable has LanaNotturna:
@@ -264,9 +276,10 @@
     ->->
 }
 
-->->
+-> plant_check
 
 === plant_check
+{debug: entro in plant_check. greenhouse_chosenCultivable è {greenhouse_chosenCultivable}, e greenhouse_growStep è {greenhouse_growStep}.}
 {
     - greenhouse_chosenCultivable has BaccaDellaAddolorata:
     {
@@ -365,14 +378,19 @@
     }
 
     - greenhouse_chosenCultivable has FalsaPalude:
+    {debug: vado al dispatcher della falsaPalude. narrativeGrowthFalsaPalude è {narrativeGrowthFalsaPalude}, mentre greenhouse_growStep è {greenhouse_growStep}.}
     {
         - narrativeGrowthFalsaPalude has stepZero:
+            {debug: vado a falsa_palude.step_zero}
             -> falsa_palude.step_zero 
         - narrativeGrowthFalsaPalude has stepOne:
+            {debug: vado a falsa_palude.step_one}
             -> falsa_palude.step_uno 
         - narrativeGrowthFalsaPalude has stepTwo:
+            {debug: vado a falsa_palude.step_two}
             -> falsa_palude.step_due 
         - narrativeGrowthFalsaPalude has stepThree:
+            {debug: vado a falsa_palude.step_three}
             -> falsa_palude.step_tre 
     }
 
@@ -414,12 +432,16 @@
     }    
 
     - greenhouse_chosenCultivable has Olobino:
+    {debug: narrativeGrowthOlobino è {narrativeGrowthOlobino}.}
     {
         - narrativeGrowthOlobino has stepZero:
+            {debug: vado a olobino.step_zero}
             -> olobino.step_zero 
         - narrativeGrowthOlobino has stepOne:
+            {debug: vado a olobino.step_uno}
             -> olobino.step_uno 
         - narrativeGrowthOlobino has stepTwo:
+            {debug: vado a olobino.step_due}
             -> olobino.step_due 
         - narrativeGrowthOlobino has stepThree:
             -> olobino.step_tre 
