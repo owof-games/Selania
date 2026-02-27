@@ -2,7 +2,7 @@
         //Storylets speciali First Character
         {   
             //Apertura cucina
-                - are_two_entities_together(FirstCharacter, PG) && (first_char_main_storylets.four or second_char_main_storylets.two) and not open_the_kitchen && contentsPond hasnt PG:
+                - are_two_entities_together(FirstCharacter, PG) && (first_char_main_storylets.four or second_char_main_storylets.two) && contentsPond hasnt PG && player_accessiblePlaces hasnt Kitchen:
                        {
                            - entity_location(PG) == Pond:
                                -> open_the_kitchen
@@ -45,7 +45,7 @@
     //Storylets speciali Second Char
         {
             //Apertura biblioteca
-            - are_two_entities_together(SecondCharacter, PG) && (first_char_main_storylets.five or second_char_main_storylets.three) && contentsKitchen hasnt PG && not open_the_library:
+            - are_two_entities_together(SecondCharacter, PG) && (first_char_main_storylets.five or second_char_main_storylets.three) && contentsKitchen hasnt PG && player_accessiblePlaces hasnt Library:
                 {
                     - entity_location(PG) == Forest:
                             -> open_the_library

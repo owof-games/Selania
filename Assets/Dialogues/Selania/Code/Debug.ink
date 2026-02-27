@@ -44,26 +44,31 @@
     - debug_testDump == true && (entity_location(FromForestToDump) == Safekeeping):
         ~ move_entity(FromForestToDumpBlocked, Safekeeping)
         ~ move_entity(FromForestToDump, Forest)
+        ~ player_accessiblePlaces += Dump
 } 
 {
     - debug_testKitchen == true && (entity_location(FromPondToKitchen) == Safekeeping):
         ~ move_entity(FromPondToKitchenBlocked, Safekeeping)
         ~ move_entity(FromPondToKitchen, Pond)
+        ~ player_accessiblePlaces += Kitchen
 }
 {
     - debug_testLibrary == true && (entity_location(FromForestToLibrary) == Safekeeping):
         ~ move_entity(FromForestToLibraryBlocked, Safekeeping)
         ~ move_entity(FromForestToLibrary, Forest)
+        ~ player_accessiblePlaces += Library
 } 
 {
     - debug_testNest == true && (entity_location(FromLibraryToNest) == Safekeeping):
         ~ move_entity(FromLibraryToNestBlocked, Safekeeping)
         ~ move_entity(FromLibraryToNest, Library)
+        ~ player_accessiblePlaces += Nest
 }
 {
     - debug_testGreenhouse == true && (entity_location(FromPondToGreenhouse) == Safekeeping):
         ~ move_entity(FromPondToGreenhouseBlocked, Safekeeping)
         ~ move_entity(FromPondToGreenhouse, Pond)
+        ~ player_accessiblePlaces += Greenhouse
 }
 {
     - debug_testFrog == true && (entity_location(TheFrog) == Safekeeping):
