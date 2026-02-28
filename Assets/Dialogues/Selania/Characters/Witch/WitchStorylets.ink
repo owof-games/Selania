@@ -1,5 +1,5 @@
 
-=== about_colors_choices
+=== about_glyph_choices
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)

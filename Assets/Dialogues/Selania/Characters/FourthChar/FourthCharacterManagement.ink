@@ -64,7 +64,7 @@
     VAR fourthChar_mailPauseDuration = 5
     
 //Moltiplicatore del colore per il personaggio
-    VAR fourthChar_colorVariation = 3.0    
+    VAR fourthChar_glyphVariation = 3.0    
     
 //UP: ???
 //DOWN: ???

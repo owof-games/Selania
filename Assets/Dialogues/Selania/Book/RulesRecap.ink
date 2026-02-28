@@ -8,7 +8,7 @@
     ~ temp mentorName = translator(mentor_ActualName)
 //Sempre dieci righe per blocchetto
     {
-        - about_colors_choices.bookUpdate:
+        - about_glyph_choices.bookUpdate:
             <b>Strade e conversazioni: spunti per un podcast di J.J.</b> <N>Questa la devo spiegare bene o il collettivo non mi accetterà mai.<N>La mia teoria è che ciò che decidiamo di dire o non dire quando parliamo racconta molto del modo in cui vediamo il mondo.<N>U.O.J è sempre stata nota per il suo sguardo empatico, e chi l'ha conosciuta l'ha descritta come propensa a parlare di emozioni e rapporti.
             
             A.S. è unə grandissimə pigna in testa, e il fatto che ti dica sempre che ci sono cose da fare, che bisogna agire, che bisogna cambiare qualcosa non nasconde niente della sua visione rivoluzionaria del mondo.<N>I discorsi di B.M sono pura logica e fattualità, quelli di M.M. puntano sempre alla ricerca della cosa grande, del grande cambiamento, di una saggezza quasi spirituale.

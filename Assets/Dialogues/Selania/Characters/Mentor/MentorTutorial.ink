@@ -19,8 +19,8 @@
         Immagino tu abbia un milione di domande, vero?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
         
             {
-                - not about_colors_choices:
-                    -> about_colors_choices ->
+                - not about_glyph_choices:
+                    -> about_glyph_choices ->
                 Immagino tu abbia un milione di domande, vero?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry    
             }
 

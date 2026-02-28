@@ -1,6 +1,6 @@
-=== color_modifier(partner, number)
+=== glyph_modifier(partner, number)
 //funzione utile per modificare botte di colori
-{debug: passo per color_modifier. Il valore di partner è {partner}, quello di number è {number}.}
+{debug: passo per glyph_modifier. Il valore di partner è {partner}, quello di number è {number}.}
 
     {
         - partner == FirstCharacter:

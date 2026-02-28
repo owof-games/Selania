@@ -61,7 +61,7 @@
                 -> secondAffinityCalc ->
                 
             //Vado a svuotare i contatori di colore, così son tranquilla.
-                -> storage_colors(SecondCharacter) ->
+                -> storage_glyphs(SecondCharacter) ->
             
             //E poi a seconda dello stato di inchiostro, mi sposto sulla domanda prevista      
                 {
@@ -481,10 +481,10 @@
     Cavoli, quante parole che ho in testa!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral        
 
             //Prima chiamo il moltiplicatore di colori, così che comunque le scelte fatte qui abbiano un impatto maggiore.
-                -> color_modifier(SecondCharacter, secondChar_colorVariation) ->
+                -> glyph_modifier(SecondCharacter, secondChar_glyphVariation) ->
             
             //Poi aggiorniamo i colori, così il valore complessivo conta per la scelta del nome
-                -> update_colors(SecondCharacter) ->     
+                -> update_glyphs(SecondCharacter) ->     
      
             //E infine genero il nome
                 -> secondNaming ->naming

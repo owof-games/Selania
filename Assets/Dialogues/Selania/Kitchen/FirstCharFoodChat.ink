@@ -35,7 +35,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
     In particolare, ripensando alle nostre conversazioni, mi farebbe piacere parlare di più...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
         
         + Dei rapporti che hai con le persone che ti sono care.
-                -> storage_colors(FirstCharacter)->
+                -> storage_glyphs(FirstCharacter)->
                 -> cooking_animations_on ->
                 -> first_theme
                 
@@ -43,7 +43,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         + .{first_char_main_storylets.six: Del bisogno di fare qualcosa che salvi il mondo.|<i>{player_name} deve parlare ancora con {charNameOne} per sbloccare questo tema.</i>}
             {
                 - first_char_main_storylets.six:
-                    -> storage_colors(FirstCharacter)->
+                    -> storage_glyphs(FirstCharacter)->
                     -> cooking_animations_on ->
                     -> second_theme
                 
@@ -55,7 +55,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             {
             
                 - first_char_main_storylets.nine:
-                    -> storage_colors(FirstCharacter)->
+                    -> storage_glyphs(FirstCharacter)->
                     -> cooking_animations_on ->
                     -> third_theme
                 
@@ -1291,7 +1291,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             -> cooking_animations_off ->
                 ~ move_entity(FirstCharacter, Pond)
                 ~ kitchen_firstCharCookingTogetherInvite = false
-            -> update_colors(FirstCharacter) ->
+            -> update_glyphs(FirstCharacter) ->
             -> check_kitchen_recap -> 
             -> first_char_closing_storylet ->
             -> main

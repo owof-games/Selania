@@ -67,7 +67,7 @@
                 -> firstAffinityCalc ->
             
             //Vado a svuotare i contatori di colore, così son tranquilla.
-                -> storage_colors(FirstCharacter) ->
+                -> storage_glyphs(FirstCharacter) ->
             
             //E poi a seconda dello stato di inchiostro, mi sposto sulla domanda prevista    
                 {
@@ -437,10 +437,10 @@
         Quante cose a cui pensare, ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
 
             //Prima chiamo il moltiplicatore di colori, così che comunque le scelte fatte qui abbiano un impatto maggiore.
-                -> color_modifier(FirstCharacter, firstChar_colorVariation) ->
+                -> glyph_modifier(FirstCharacter, firstChar_glyphVariation) ->
             
             //Poi aggiorniamo i colori, così il valore complessivo conta per la scelta del nome
-                -> update_colors(FirstCharacter) ->     
+                -> update_glyphs(FirstCharacter) ->     
      
             //E infine genero il nome
                 -> firstNaming -> naming

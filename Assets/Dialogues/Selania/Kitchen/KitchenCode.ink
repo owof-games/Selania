@@ -482,8 +482,8 @@
  ----------------------------------*/
 
 
-=== storage_colors(cookingCompanion)
-{debug_kitchen or debug: storage_colors.}
+=== storage_glyphs(cookingCompanion)
+{debug_kitchen or debug: storage_glyphs.}
 
     {
         - cookingCompanion == FirstCharacter:
@@ -521,8 +521,8 @@
 ->->
 
 
-=== update_colors(cookingCompanion)
-{debug_kitchen or debug: update_colors.}
+=== update_glyphs(cookingCompanion)
+{debug_kitchen or debug: update_glyphs.}
 {debug_kitchen: prima di aggiornare i valori, il valore di kitchen_storageAether è {kitchen_storageAether}, di kitchen_storageEarth {kitchen_storageEarth}, kitchen_storageAir è {kitchen_storageAir}, di kitchen_storageWater {kitchen_storageWater}, di kitchen_storageFire {kitchen_storageFire}. cookingCompanion è {cookingCompanion}.}
     {
         - cookingCompanion == FirstCharacter:

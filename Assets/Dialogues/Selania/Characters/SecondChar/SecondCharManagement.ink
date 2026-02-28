@@ -87,7 +87,7 @@
     VAR secondChar_mailPauseDuration = 5
     
 //Moltiplicatore del colore per il personaggio
-    VAR secondChar_colorVariation = 3.0
+    VAR secondChar_glyphVariation = 3.0
     
 //UP: coerenza.
 //DOWN: incoerenza, cose random

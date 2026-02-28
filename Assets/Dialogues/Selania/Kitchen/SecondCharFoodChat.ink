@@ -45,7 +45,7 @@
             + .{second_char_main_storylets.six: Della scuola.|<i>{player_name} deve parlare ancora con {charNameTwo} per sbloccare questo tema.</i>}
                 {
                     - second_char_main_storylets.six:
-                        -> storage_colors(SecondCharacter)->
+                        -> storage_glyphs(SecondCharacter)->
                         -> cooking_animations_on ->
                         -> second_theme
                     
@@ -57,7 +57,7 @@
                 {
                 
                     - second_char_main_storylets.eight:
-                        -> storage_colors(SecondCharacter)->
+                        -> storage_glyphs(SecondCharacter)->
                         -> cooking_animations_on ->
                         -> third_theme
                     
@@ -1320,7 +1320,7 @@
         -> cooking_animations_off ->
             ~ move_entity(SecondCharacter, Pond)
             ~ kitchen_secondCharCookingTogetherInvite = false
-        -> update_colors(SecondCharacter) ->
+        -> update_glyphs(SecondCharacter) ->
         -> check_kitchen_recap ->
         -> second_char_closing_storylet ->
         -> main

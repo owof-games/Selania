@@ -83,7 +83,7 @@
     VAR firstChar_mailPauseDuration = 5
     
 //Moltiplicatore del colore per il personaggio
-    VAR firstChar_colorVariation = 3.0    
+    VAR firstChar_glyphVariation = 3.0    
     
 //STATI UP: water & aether.
 //STATI DOWN: Air.
