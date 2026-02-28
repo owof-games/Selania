@@ -827,7 +827,6 @@
     //Disabilito il box di dialogo ad hoc per il Nest
         ~ disableNestDialogue()
     
-    -> used_emotional_words_updater ->
 
 ->->
 

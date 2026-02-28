@@ -236,7 +236,7 @@ VAR nest_newSigilDiscovered = ()
     //Air
     {
         - nest_secondAirButton == true && (glyph_secondAir ^ glyph_firstWater != ()) && nest_foundedGlyphs has waterGlyph:
-                ~ nest_firstWaterButton = true
+            ~ nest_firstWaterButton = true
     } 
     {
         - nest_secondAirButton == true && (glyph_secondAir ^ glyph_firstFire != ()) && nest_foundedGlyphs has fireGlyph:
@@ -244,11 +244,11 @@ VAR nest_newSigilDiscovered = ()
     } 
     {
         - nest_secondAirButton == true && (glyph_secondAir ^ glyph_firstEarth != ()) && nest_foundedGlyphs has earthGlyph:
-                    ~ nest_firstEarthButton = true
+            ~ nest_firstEarthButton = true
     } 
     {
         - nest_secondAirButton == true && (glyph_secondAir ^ glyph_firstAether != ()) && nest_foundedGlyphs has aetherGlyph:
-                ~ nest_firstAetherButton = true
+            ~ nest_firstAetherButton = true
     }
 
 
