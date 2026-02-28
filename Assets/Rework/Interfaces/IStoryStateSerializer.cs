@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 
 namespace Selania.Rework.Interfaces
 {
@@ -22,13 +23,14 @@ namespace Selania.Rework.Interfaces
         ///     Start a story using the given serialization descriptor. If none is given, a new story is started.
         /// </summary>
         /// <param name="descriptor">Descriptor for the story serialization to load, or <c>null</c> to start a new story.</param>
-        public void StartStory(string? descriptor);
+        /// <returns>A task that is completed as soon as the story is loaded.</returns>
+        public UniTask StartStory(string? descriptor);
 
         /// <summary>
         /// A save state.
         /// </summary>
         /// <param name="Descriptor">Descriptor for this save state (unique identifier).</param>
-        /// <param name="RoomInkName">The name of the room as it's represented in ink's "listPlaces" list.</param>
+        /// <param name="RoomInkName">Unique identifier of the room name, as known by Ink (currently, name of the Ink variable used to represent the room contents).</param>
         /// <param name="Timestamp">The time when this save state was created, as expressed in number of ticks.</param>
         public record struct SaveState(string Descriptor, string RoomInkName, DateTime Timestamp);
     }

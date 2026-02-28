@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Enumeration;
 using System.Linq;
+using Cysharp.Threading.Tasks;
 using Ink.Runtime;
 using Microsoft.Extensions.Logging;
 using R3;
@@ -44,7 +46,7 @@ namespace Selania.Rework.Components
         /// <summary>
         ///     The story object, if <see cref="SetUp" /> has been called, or <c>null</c> otherwise.
         /// </summary>
-        /// <seealso cref="SetUp"/>
+        /// <seealso cref="SetUp" />
         private Story? _story;
 
         /// <summary>
@@ -60,10 +62,14 @@ namespace Selania.Rework.Components
         /// </summary>
         /// <param name="newLogger">The logger to use to log information about the story.</param>
         /// <param name="saveDirPrefix">Prefix used for the save directories ("save_dir_" by default, if <c>null</c> is provided).</param>
-        public void SetUp(ILogger<InkBridge> newLogger, string? saveDirPrefix = null)
+        /// <param name="minimumTimeBetweenAutomaticSaves">The minimum time between automatic saves.</param>
+        public void SetUp(ILogger<InkBridge> newLogger, string? saveDirPrefix = null,
+            TimeSpan? minimumTimeBetweenAutomaticSaves = null)
         {
             _logger = newLogger;
-            if (saveDirPrefix != null) _saveDirSearchPattern = saveDirPrefix + "*";
+            if (saveDirPrefix != null) _saveDirPrefix = saveDirPrefix;
+            if (minimumTimeBetweenAutomaticSaves != null)
+                _minimumTimeBetweenAutomaticSaves = minimumTimeBetweenAutomaticSaves.Value;
 
             OnStartRoomLocation();
 
@@ -117,9 +123,7 @@ namespace Selania.Rework.Components
         /// <summary>
         ///     Log the current state of the story and notifies listeners of it.
         /// </summary>
-        /// <param name="justLoaded">Whether this update is the result of loading a save file. This is used to correctly
-        /// interpret the "@save" line as the <em>previous</em> request for saving.</param>
-        private void LogAndNotifyCurrentState(bool justLoaded = false)
+        private void LogAndNotifyCurrentState()
         {
             var story = GetStory();
             logger.ZLogInformation($"Story text: {story.currentText.Trim()}");
@@ -129,12 +133,12 @@ namespace Selania.Rework.Components
             var tags = MakeTags(story.currentTags);
 
             // allow the various subsystems to update their observables
-            var triggerContinue = UpdateCurrentText(tags, justLoaded);
+            var triggerContinue = UpdateCurrentText(tags);
             UpdateRoom();
             UpdateCurrentChoices();
             UpdateAudio(tags);
 
-            // in some cases, we must immediately process the next line (e.g.: @save, or old @commands no longer used)
+            // in some cases, we must immediately process the next line (typically with @command lines)
             if (triggerContinue) Continue();
         }
 
@@ -405,16 +409,12 @@ namespace Selania.Rework.Components
         public Observable<bool> conversationInProgressObservable =>
             _conversationInProgressSubject!.DistinctUntilChanged();
 
-        private const string SaveSpecialLine = "@save";
-
         /// <summary>
         ///     Update the listeners with the current text.
         /// </summary>
         /// <param name="tags">The list of tags computed.</param>
-        /// <param name="justLoaded">Whether this update is the result of loading a save file. This is used to correctly
-        /// interpret the "@save" line as the <em>previous</em> request for saving.</param>
         /// <returns>Whether a Continue() should be automatically triggered after this line has been fully processed.</returns>
-        private bool UpdateCurrentText(ICollection<Tag> tags, bool justLoaded)
+        private bool UpdateCurrentText(ICollection<Tag> tags)
         {
             var story = GetStory();
             var currentText = story.currentText.Trim();
@@ -431,16 +431,13 @@ namespace Selania.Rework.Components
             }
             else
             {
-                // e.g.: @interact
+                // Lines starting with "@" have a special handling, and are never about dialogue
                 _conversationInProgressSubject!.OnNext(false);
-                // special handling: @save requires the game to save on a special slot for the reader mode
-                if (currentText != SaveSpecialLine) return false;
-                if (justLoaded)
-                    logger.ZLogInformation(
-                        $"Skipping the @save instruction that produced this save and progressing");
-                else
-                    SaveReaderMode();
 
+                // @interact is the moment we enter a room, and we try to save
+                if (currentText == "@interact") SaveIfNeeded().Forget();
+
+                // in any case, "@" lines require to immediately continue
                 return true;
             }
 
@@ -562,42 +559,58 @@ namespace Selania.Rework.Components
         private const string InkStoryStateJsonFileName = "ink.json";
 
         /// <summary>
+        ///     The prefix of the directories containing save data.
+        /// </summary>
+        private string _saveDirPrefix = "save_dir_";
+
+        /// <summary>
+        ///     The minimum time between automatic saves.
+        /// </summary>
+        private TimeSpan _minimumTimeBetweenAutomaticSaves = TimeSpan.FromMinutes(5);
+
+        /// <summary>
+        ///     Timestamp after which it's required to serialize the save state again, as soon as a new room is entered.
+        /// </summary>
+        private DateTime _minimumNextSaveTime;
+
+        /// <summary>
         ///     The class that gets serialized in the save file.
         /// </summary>
         [Serializable]
         private class SaveData
         {
             /// <summary>
-            /// See <see cref="IStoryStateSerializer.SaveState.timestamp"/>.
+            ///     See <see cref="IStoryStateSerializer.SaveState.Timestamp" />.
             /// </summary>
             public required long timestamp;
 
             /// <summary>
-            ///     See <see cref="IStoryStateSerializer.SaveState.roomInkName" />.
+            ///     See <see cref="IStoryStateSerializer.SaveState.RoomInkName" />.
             /// </summary>
             public required string roomInkName;
         }
 
-        private string _saveDirSearchPattern = "save_dir_*";
-
         /// <inheritdoc />
-        public void StartStory(string? descriptor)
+        public async UniTask StartStory(string? descriptor)
         {
             var story = GetStory();
             // load the save file only if one is provided
             if (descriptor != null)
             {
                 logger.ZLogInformation($"Loading save file {descriptor}.");
-                var jsonPath = Path.Join(Application.persistentDataPath, descriptor, InkStoryStateJsonFileName);
-                var json = File.ReadAllText(jsonPath);
+                var jsonPath = GetInkStoryStateFileAbsolutePath(descriptor);
+                var json = await File.ReadAllTextAsync(jsonPath);
                 story.state.LoadJson(json);
                 logger.ZLogInformation($"Save file {descriptor} loaded!");
-                LogAndNotifyCurrentState(true);
+                _minimumNextSaveTime = DateTime.UtcNow; // will immediately produce a save file at the story start
+                LogAndNotifyCurrentState();
             }
             else
             {
                 // otherwise, just reset and continue to trigger a new story
+                logger.ZLogInformation($"Starting a new story.");
                 story.ResetState();
+                _minimumNextSaveTime = DateTime.UtcNow + _minimumTimeBetweenAutomaticSaves;
                 Continue();
             }
         }
@@ -605,25 +618,149 @@ namespace Selania.Rework.Components
         /// <inheritdoc />
         public async IAsyncEnumerable<IStoryStateSerializer.SaveState> GetSaveStates()
         {
-            // loop over all the directories matching the pattern for save directories.
-            var directories = Directory.GetDirectories(Application.persistentDataPath, _saveDirSearchPattern,
-                SearchOption.TopDirectoryOnly);
+            // loop over all the directories matching the pattern for save directories, starting from the newest one
+            var directories = GetSaveFileSystemEnumerable(GetFileSystemEntryFileName)
+                .OrderByDescending(directoryName => directoryName);
 
-            foreach (var directory in directories)
+            foreach (var descriptor in directories)
             {
                 // read the data describing the save
-                var jsonPath = Path.Join(Application.persistentDataPath, directory, SaveFileJsonFileName);
+                var jsonPath = GetSaveFileAbsolutePath(descriptor);
                 var json = await File.ReadAllTextAsync(jsonPath);
                 var saveData = JsonUtility.FromJson<SaveData>(json);
                 if (saveData == null)
                 {
-                    _logger!.ZLogError($"Error while parsing save data from file {jsonPath}");
+                    logger.ZLogError($"Error while parsing save data from file {jsonPath}");
                     continue;
                 }
 
                 // map it to save states
-                yield return new IStoryStateSerializer.SaveState(directory, saveData.roomInkName,
+                yield return new IStoryStateSerializer.SaveState(descriptor, saveData.roomInkName,
                     new DateTime(saveData.timestamp, DateTimeKind.Utc));
+            }
+
+            yield break;
+
+            static string GetFileSystemEntryFileName(ref FileSystemEntry entry)
+            {
+                return entry.FileName.ToString();
+            }
+        }
+
+        /// <summary>
+        ///     Get the absolute path of the save directory.
+        /// </summary>
+        /// <param name="descriptor">Descriptor of the save.</param>
+        /// <returns>The absolute path of the save directory.</returns>
+        private static string GetSaveDirectoryAbsolutePath(string descriptor)
+        {
+            return Path.Join(Application.persistentDataPath, descriptor);
+        }
+
+        /// <summary>
+        ///     Get the absolute path of the save file.
+        /// </summary>
+        /// <param name="descriptor">Descriptor of the save.</param>
+        /// <returns>The absolute path of the save file.</returns>
+        private static string GetSaveFileAbsolutePath(string descriptor)
+        {
+            return Path.Join(Application.persistentDataPath, descriptor, SaveFileJsonFileName);
+        }
+
+        /// <summary>
+        ///     Get the absolute path of the ink story state JSON file.
+        /// </summary>
+        /// <param name="descriptor">Descriptor of the save.</param>
+        /// <returns>The absolute path of the ink story state JSON file.</returns>
+        private static string GetInkStoryStateFileAbsolutePath(string descriptor)
+        {
+            return Path.Join(Application.persistentDataPath, descriptor, InkStoryStateJsonFileName);
+        }
+
+        /// <summary>
+        ///     Get a file system enumerable which filters only directories containing save date.
+        /// </summary>
+        /// <param name="transform">The transform to apply to the file system entries.</param>
+        /// <returns>The file system enumerable.</returns>
+        private FileSystemEnumerable<T> GetSaveFileSystemEnumerable<T>(FileSystemEnumerable<T>.FindTransform transform)
+        {
+            return new FileSystemEnumerable<T>(
+                Application.persistentDataPath,
+                transform,
+                new EnumerationOptions
+                {
+                    MatchCasing = MatchCasing.CaseInsensitive
+                }
+            )
+            {
+                ShouldIncludePredicate = ShouldIncludePredicate
+            };
+
+            // get only the directories matching _saveDirPrefix
+            bool ShouldIncludePredicate(ref FileSystemEntry entry)
+            {
+                return entry.FileName.StartsWith(_saveDirPrefix, StringComparison.InvariantCultureIgnoreCase);
+            }
+        }
+
+        /// <summary>
+        ///     Serialize the current save state if we surpassed the minimum time required between saves.
+        /// </summary>
+        private async UniTaskVoid SaveIfNeeded()
+        {
+            // check if a save should be performed
+            var now = DateTime.UtcNow;
+            if (now < _minimumNextSaveTime) return;
+
+            // sanity checks and state updates
+            if (_currentRoomName == null)
+                throw new InvalidOperationException("Trying to save, but _currentRoomName hasn't a value yet");
+
+            _minimumNextSaveTime = now + _minimumTimeBetweenAutomaticSaves;
+
+            var mySaveNumber = GetSaveFileSystemEnumerable(GetFileSystemEntryNumber)
+                .DefaultIfEmpty(0)
+                .Max() + 1;
+            var descriptor = $"{_saveDirPrefix}{mySaveNumber:0000000}";
+
+            // produce the serialized data
+            var saveData = new SaveData
+            {
+                timestamp = now.Ticks,
+                roomInkName = _currentRoomName
+            };
+            var jsonSaveData = JsonUtility.ToJson(saveData);
+            var jsonInkStoryState = GetStory().state.ToJson();
+
+            // save to filesystem
+            var directoryName = GetSaveDirectoryAbsolutePath(descriptor);
+            try
+            {
+                Directory.CreateDirectory(directoryName);
+                await File.WriteAllTextAsync(GetSaveFileAbsolutePath(descriptor), jsonSaveData);
+                await File.WriteAllTextAsync(GetInkStoryStateFileAbsolutePath(descriptor), jsonInkStoryState);
+            }
+            catch (Exception)
+            {
+                try
+                {
+                    // if something goes wrong, try to remove potential partial save data
+                    if (Directory.Exists(directoryName)) Directory.Delete(directoryName, true);
+                }
+                catch (Exception e)
+                {
+                    logger.ZLogError(e, $"Error while trying to recover from a failed save");
+                }
+
+                throw;
+            }
+
+            return;
+
+            // find my save name
+            int GetFileSystemEntryNumber(ref FileSystemEntry entry)
+            {
+                return int.Parse(entry.FileName[_saveDirPrefix.Length..]);
             }
         }
 
