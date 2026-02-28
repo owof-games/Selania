@@ -26,7 +26,7 @@
 
         
             + (dove) Questo posto è così inaspettato. Dove mi trovo?
-                -> color_variation_management(Mentor, aetherC, varPGYes)->
+                -> glyph_modifier_variation_management(Mentor, aetherC, varPGYes)->
                     {
                         - contentsTrainStop has PG:
                             Questa? È la fermata del treno.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
@@ -51,7 +51,7 @@
                 Non male, no?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
             
             + (chiSei) Che cosa carina, che sei felice che sono qui!
-                    -> color_variation_management(Mentor, waterC, varPGYes)->
+                    -> glyph_modifier_variation_management(Mentor, waterC, varPGYes)->
                 Sì!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Non mi fraintendere: non so di preciso tu chi sia.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                 Ma so <i>perché</i> sei qui.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
@@ -62,7 +62,7 @@
                 E ora che sei qui, ho uno scopo.
 
             + I binari collegano il nulla e una porta. Non ha senso.
-                    -> color_variation_management(Mentor, airC, varPGYes)->
+                    -> glyph_modifier_variation_management(Mentor, airC, varPGYes)->
                 Uh, credo dipenda.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Nel senso.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                 Ehm.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
@@ -88,7 +88,7 @@
                 Ecco: le cose hanno il senso che gli diamo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                     
             + <i>Cerco un modo per tornare a casa.
-                    -> color_variation_management(Mentor, fireC, varPGYes)->
+                    -> glyph_modifier_variation_management(Mentor, fireC, varPGYes)->
                 Vuoi già andartene?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                 Forse devo rivedere il mio benvenuto.
                 Forse sono stata troppo formale?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_sorry
@@ -107,7 +107,7 @@
                 Ma lascia che ti rubi giusto un secondo!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
                 
             + Posso {contentsTrainStop has PG:dare da mangiare a quegli uccellini?|dare da mangiare agli uccellini della stazione?}
-                    -> color_variation_management(Mentor, earthC, varPGYes)->
+                    -> glyph_modifier_variation_management(Mentor, earthC, varPGYes)->
                 Credo ci sia la loro mamma in giro, a recuperare vermetti vari.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Ma se hai voglia di fare cose, non ti preoccupare: ho compiti a bizzeffe da proporti!
             -
@@ -214,32 +214,32 @@
         Ma questo te lo spiego dopo.
 
             + Non potrebbe servire a tutt3 un nuovo nome, un nuovo inizio?
-                    -> color_variation_management(Mentor, aetherC, varPGYes)->
+                    -> glyph_modifier_variation_management(Mentor, aetherC, varPGYes)->
                 Immagino possa servire a molt3.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 A me no, ad esempio.
                 Questo è stato, è e sarà sempre il mio nome.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Ma alla fine il nome è solo un simbolo, non è l'obiettivo in sé.       
                     
             + Con l'inchiostro ci posso disegnare?
-                    -> color_variation_management(Mentor, earthC, varPGYes)->
+                    -> glyph_modifier_variation_management(Mentor, earthC, varPGYes)->
                 Apprezzo la tua creatività, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Ma tu sei {player_pronouns has him:un riscrittore|{player_pronouns has her:una riscrittora|unə riscrittorə}}, non {player_pronouns has him:un disegnatore|{player_pronouns has her:una disegnatrice|unə disegnatricə}}.
                     
                     
             + Solo le persone care ci fanno vedere in modo diverso.
-                    -> color_variation_management(Mentor, waterC, varPGYes)->
+                    -> glyph_modifier_variation_management(Mentor, waterC, varPGYes)->
                 A volte è più facile aprirsi a chi non si conosce.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 E mentre noi riflettiamo sulle loro difficoltà, impariamo anche qualcosa su di noi.
                         
             + Mi stai chiedendo di fare gaslighting?
-                -> color_variation_management(Mentor, fireC, varPGYes)->
+                -> glyph_modifier_variation_management(Mentor, fireC, varPGYes)->
                 No no no assolutamente no.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                 Cavolo, devo essere più chiara.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                 Ma no.
                 Noi siamo qui per aiutare, non per fare coercizione.
                             
             + Un nome è soltanto un nome. A cosa serve cambiarlo?
-                    -> color_variation_management(Mentor, airC, varPGYes)->
+                    -> glyph_modifier_variation_management(Mentor, airC, varPGYes)->
                 Un nome è come una magia che carichiamo di volta in volta di significato..#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 A volte quella magia non va più bene, e dobbiamo cercare una nuova formula. 
                 Un nuovo nome.
@@ -297,37 +297,37 @@
         Per cui {player_name}: anche se non dovessi accumulare inchiostro, potrai comunque provare ad aiutare la persona, usando il tuo potere dell'epilogo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral    
                 
                 + Come posso fare stare al meglio chi ha bisogno di me?
-                        -> color_variation_management(Mentor, waterC, varPGYes)->
+                        -> glyph_modifier_variation_management(Mentor, waterC, varPGYes)->
                     Ascolta a cuore aperto.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                     Segui i miei consigli.
                     E non chiedere all'altra persona di diventare qualcosa che non è.
                         
                 + Ma non posso dire "Ehi tu chiamati così e cosà" e bona?
-                        -> color_variation_management(Mentor, fireC, varPGYes)->
+                        -> glyph_modifier_variation_management(Mentor, fireC, varPGYes)->
                     Un nuovo nome è una nuova esperienza.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                     E l'esperienza viene dal percorso.
                     Se non c'è percorso, non c'è cambiamento.
                     E poi sta alla persona decidere il suo nome.
                         
                 + {charNameOne} non è una persona razionale. Può farcela?
-                        -> color_variation_management(Mentor, airC, varPGYes)->
+                        -> glyph_modifier_variation_management(Mentor, airC, varPGYes)->
                     {player_name}, capisco la tua perplessità, ma con la giusta guida, ogni strada è percorribile.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                     E noi due assieme non possiamo di certo sbagliare!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
                         {
                             - are_two_entities_together(FirstCharacter, PG):
                                 E {charNameOne} è razionale.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-                                -> color_variation_management(FirstCharacter, airC, varPGYes)->
+                                -> glyph_modifier_variation_management(FirstCharacter, airC, varPGYes)->
                                 A modo suo.     
                         }
                         
                 + Mi son pers{player_pronouns has him:o|{player_pronouns has her:a|ə}} alla terza frase. Succede sempre.
-                        -> color_variation_management(Mentor, earthC, varPGYes)->
+                        -> glyph_modifier_variation_management(Mentor, earthC, varPGYes)->
                     Capita anche a me.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
                     Forse dovrei scrivere queste cose da qualche parte.
                     Ma se ti dimentichi di qualcosa puoi sempre richiedermela!
                         
                 + Preferisco darmi i miei obiettivi da sol{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
-                        -> color_variation_management(Mentor, aetherC, varPGYes)->
+                        -> glyph_modifier_variation_management(Mentor, aetherC, varPGYes)->
                     Il tuo obiettivo <i>qui</i>, perdonami.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                     Non avendo altri luoghi in cui andare, mi dimentico che possono esserci sono altre vite, altri obiettivi da raggiungere. 
                 -

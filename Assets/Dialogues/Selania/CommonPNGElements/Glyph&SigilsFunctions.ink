@@ -342,8 +342,10 @@
 //Se l'utilizzo è arrivato al massimo, a quel punto aggiungiamo il sigillo a quelli utilizzati e svuotiamo la variabile del sigillo attualmente attivo.
 {
     - glyph_actualSigilUses == glyph_maxSigilUses:
+        L'effetto di {glyph_actualActiveSigil} si è esaurito.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         ~ glyph_usedSigils += glyph_actualActiveSigil
         ~ glyph_actualActiveSigil = ()
+        
 }    
 //L'intersezione tra glyph_usedSigils e glyph_discoveredSigils indicherà la presenza di questo sigillo, che sarà quindi tracciato come utilizzato sul libro.
 
