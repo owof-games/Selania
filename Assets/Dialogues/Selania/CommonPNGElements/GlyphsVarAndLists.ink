@@ -110,7 +110,8 @@ GESTIONE DELLO STATO DEI SIGILLI
 
 //Tracciamento del sigillo attualmente attivo
     VAR glyph_actualActiveSigil = ()
-
+    VAR glyph_maxSigilUses = 3
+    VAR glyph_actualSigilUses= 0
 
 
 //Tracciamento delle scelte fatte durante la composizione
@@ -120,3 +121,26 @@ GESTIONE DELLO STATO DEI SIGILLI
     VAR glyph_thirdKeyColour = ()
 
 
+/* ---------------------------------
+                
+GESTIONE DELL'USO DEI SIGILLI
+                
+----------------------------------*/
+//Lista dei possibili stati dei glifi
+LIST glyph_talkingVariations = fireC, earthC, airC, waterC, aetherC
+
+//Check se modificare o meno stato colore PG
+LIST glyph_varpg_status = varPGYes, varPGNo
+
+//Persona a cui stiamo parlando quando compiamo la scelta
+    VAR glyph_currentTalker = ()
+
+//Creazione di parametri generici per semplificarmi la vita legati ai colori che poi verranno riportati sullx PNG    
+    VAR glyph_temporaryFire  = 0.00
+    VAR glyph_temporaryEarth = 0.00
+    VAR glyph_temporaryAir= 0.00
+    VAR glyph_temporaryWater= 0.00
+    VAR glyph_temporaryAether = 0.00
+
+//Contatore d'uso della parola    
+    VAR glyph_temporaryWordUsageCounter = 0

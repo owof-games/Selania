@@ -833,22 +833,22 @@
 //Utilizzato per capire quante volte posso usare una parola
 === word_usage_counter
 {debug_nest: passo per word_usage_counter.}
-{debug_nest: prima dell'aggiornamento il valore di temporaryWordUsageCounter è {temporaryWordUsageCounter}.}
+{debug_nest: prima dell'aggiornamento il valore di glyph_temporaryWordUsageCounter è {glyph_temporaryWordUsageCounter}.}
     
 TODO: capire cosa manca qui sotto per farlo usare    
     // {
     //     - nest_oneUseWords  has nest_activeEmotionalWord:
-    //         ~ temporaryWordUsageCounter = 1
+    //         ~ glyph_temporaryWordUsageCounter = 1
         
     //     - nest_twoUseWords  has nest_activeEmotionalWord:
-    //         ~ temporaryWordUsageCounter = 2
+    //         ~ glyph_temporaryWordUsageCounter = 2
         
     //     - nest_threeUseWords has nest_activeEmotionalWord:
-    //         ~ temporaryWordUsageCounter = 3
+    //         ~ glyph_temporaryWordUsageCounter = 3
         
-    //     - else: ERROR, non riesco a trovare {nest_activeEmotionalWord} in nessuna delle tre liste, per cui non riesco ad assegnare un valore a temporaryWordUsageCounter, che ora è a {temporaryWordUsageCounter}.
+    //     - else: ERROR, non riesco a trovare {nest_activeEmotionalWord} in nessuna delle tre liste, per cui non riesco ad assegnare un valore a glyph_temporaryWordUsageCounter, che ora è a {glyph_temporaryWordUsageCounter}.
     // }
     
-{debug_nest: dopo l'aggiornamento il valore di temporaryWordUsageCounter è {temporaryWordUsageCounter}.}  
+{debug_nest: dopo l'aggiornamento il valore di glyph_temporaryWordUsageCounter è {glyph_temporaryWordUsageCounter}.}  
         
         ->->

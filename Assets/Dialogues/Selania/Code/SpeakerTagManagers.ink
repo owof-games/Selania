@@ -135,12 +135,12 @@ LIST nest_speakersForEwWordTag = Influenced, Other
             - nest_activeEmotionalWord != ():
                 {
                     //E ci sono utilizzi multipli a disposizione
-                    - temporaryWordUsageCounter > 1:
-                        ~ return "{emotional_words_translator(nest_activeEmotionalWord)}, {temporaryWordUsageCounter} usi disponibili."
+                    - glyph_temporaryWordUsageCounter > 1:
+                        ~ return "{emotional_words_translator(nest_activeEmotionalWord)}, {glyph_temporaryWordUsageCounter} usi disponibili."
                     
                     //Altrimenti:
-                    - temporaryWordUsageCounter == 1:
-                        ~ return "{emotional_words_translator(nest_activeEmotionalWord)}, {temporaryWordUsageCounter} uso disponibile."  
+                    - glyph_temporaryWordUsageCounter == 1:
+                        ~ return "{emotional_words_translator(nest_activeEmotionalWord)}, {glyph_temporaryWordUsageCounter} uso disponibile."  
                 }
             
             - else:

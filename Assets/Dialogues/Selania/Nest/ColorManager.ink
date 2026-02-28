@@ -1,19 +1,4 @@
-LIST nest_colorParametersChoice = fireC, earthC, airC, waterC, aetherC
 
-//Persona a cui stiamo parlando quando compiamo la scelta
-    VAR nest_currentTalker = ()
-//Creazione di parametri generici per semplificarmi la vita legati ai colori che poi verranno riportati sullx PNG    
-    VAR nest_temporaryFire = 0.00
-    VAR nest_temporaryEarth = 0.00
-    VAR nest_temporaryAir= 0.00
-    VAR nest_temporaryWater= 0.00
-    VAR nest_temporaryAether = 0.00
-
-//Contatore d'uso della parola    
-    VAR temporaryWordUsageCounter = 0
-
-//Check se modificare o meno stato colore PG
-LIST nest_varpg_status = varPGYes, varPGNo
 
 === color_variation_management(PNG, Color, VARPG)
 {debug_nest: passo per color_variation_management. Il valore di PNG è {PNG}, il valore di colore è {Color}. Lo stato della parola attiva è {nest_activeEmotionalWord}.}
@@ -21,16 +6,16 @@ LIST nest_varpg_status = varPGYes, varPGNo
 
     {
     	- PNG == FirstCharacter:
-    	        ~ nest_currentTalker = FirstCharacter
-    	        {debug_nest: dopo l'operazione il parlante attuale {nest_currentTalker}.} 
+    	        ~ glyph_currentTalker = FirstCharacter
+    	        {debug_nest: dopo l'operazione il parlante attuale {glyph_currentTalker}.} 
     	 
     	- PNG == SecondCharacter:
-    	        ~ nest_currentTalker = SecondCharacter
-    	        {debug_nest: dopo l'operazione il parlante attuale {nest_currentTalker}.} 
+    	        ~ glyph_currentTalker = SecondCharacter
+    	        {debug_nest: dopo l'operazione il parlante attuale {glyph_currentTalker}.} 
     	 
     	- PNG == Mentor:
-    	        ~ nest_currentTalker = Mentor
-    	        {debug_nest: dopo l'operazione il parlante attuale {nest_currentTalker}.}
+    	        ~ glyph_currentTalker = Mentor
+    	        {debug_nest: dopo l'operazione il parlante attuale {glyph_currentTalker}.}
     	        
     	- PNG == PG:
     	//Nel caso dellx PG, non attivo mai le parole magiche.
@@ -133,19 +118,19 @@ LIST nest_varpg_status = varPGYes, varPGNo
     - else:
         {Color:
             -fireC:
-                ~ nest_temporaryFire ++
+                ~ glyph_temporaryFire  ++
      
             -earthC:
-                ~ nest_temporaryEarth ++
+                ~ glyph_temporaryEarth ++
             
             -airC:
-                ~ nest_temporaryAir++
+                ~ glyph_temporaryAir++
             
             -waterC:
-                ~ nest_temporaryWater++   
+                ~ glyph_temporaryWater++   
             
             -aetherC:
-                ~ nest_temporaryAether ++
+                ~ glyph_temporaryAether ++
         }
         {debug_nest: non è attiva alcuna parola magica, per cui mi aumento di uno i valori e basta.}
           //E poi aggiorniamo i dettagli
@@ -162,294 +147,294 @@ TODO: sistemare questa roba a nest risistemato
 //     {nest_activeEmotionalWord:
 //         //Variazioni di un solo colore
 //             - Rosso:
-//                 ~ nest_temporaryFire ++
+//                 ~ glyph_temporaryFire  ++
 //             - RossoRosso:
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
                 
 //             - RossoRossoRosso:
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
             
 //             - Giallo:
-//                 ~ nest_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
 //             - GialloGiallo:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
 //             - GialloGialloGiallo:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
             
 //             - Blu:
-//                 ~ nest_temporaryAir++
+//                 ~ glyph_temporaryAir++
 //             - BluBlu:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
 //             - BluBluBlu:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
             
 //             - Verde:
-//                 ~ nest_temporaryWater++
+//                 ~ glyph_temporaryWater++
 //             - VerdeVerde:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
 //             - VerdeVerdeVerde:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
             
 //             - Viola:
-//                 ~ nest_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
 //             - ViolaViola:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
 //             - ViolaViolaViola:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
                 
 //         //Variazioni di due colori
 //             - RossoRossoBlu:
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryAir--
                 
 //             - RossoRossoVerde:
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryWater--
                 
 //             - RossoRossoViola:
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryAether --
                 
 //             - RossoRossoGiallo:
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryEarth --
                 
 //             - RossoGiallo:
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryEarth --
                 
 //             - RossoGialloRosso:
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
             
 //             - RossoGialloGiallo:
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
             
 //             - RossoBlu:
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryAir--
                 
 //             - RossoBluBlu:
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
             
 //             - RossoBluRosso:
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryFire  --
             
 //             - RossoVerde: 
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryWater--
             
 //             - RossoVerdeVerde:
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
             
 //             - RossoVerdeRosso:
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryFire  --
             
 //             - RossoViola:
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryAether --
                 
 //             - RossoViolaViola:
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
             
 //             - RossoViolaRosso:
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryFire  --
             
             
             
             
             
 //             - GialloVerde:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryWater--
         
 //             - GialloViola:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryAether --
             
 //             - GialloRosso:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryFire  --
             
 //             - GialloBlu:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryAir--
                 
                 
 //             - GialloRossoGiallo:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryEarth --
                 
 //             - GialloRossoRosso:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
                 
 //             - GialloGialloVerde:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryWater--
                 
 //             - GialloGialloViola:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryAether --
                 
 //             - GialloGialloBlu:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryAir--
                 
 //             - GialloGialloRosso:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryFire  --
                 
             
 //             - GialloBluBlu:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
                 
 //             - GialloBluGiallo:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryEarth --
                 
                 
 //             - GialloVerdeVerde:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
                 
 //             - GialloVerdeGiallo:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryEarth --
                 
 //             - GialloViolaViola:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
                 
 //             - GialloViolaGiallo:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryEarth --
                 
             
             
@@ -459,112 +444,112 @@ TODO: sistemare questa roba a nest risistemato
             
             
 //             - BluRosso:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryFire  --
                 
 //             - BluGiallo:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryEarth --
                 
 //             - BluVerde:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryWater--
                 
 //             - BluViola:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAether --
                 
 //             - BluRossoBlu:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryAir--
                 
 //             - BluRossoRosso:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
                 
 //             - BluGialloBlu:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryAir--
                 
 //             - BluGialloGiallo:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
                 
 //             - BluBluVerde:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryWater--
                 
 //             - BluBluViola:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAether --
                 
 //             - BluBluGiallo:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryEarth --
                 
 //             - BluBluRosso:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryFire  --
                 
 //             - BluVerdeVerde:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
                 
 //             - BluVerdeBlu:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryAir--
                 
 //             - BluViolaViola:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
                 
             
             
@@ -574,439 +559,439 @@ TODO: sistemare questa roba a nest risistemato
             
             
 //             - VerdeRosso:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryFire  --
                 
 //             - VerdeViola:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryAether --
                 
 //             - VerdeGiallo:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryEarth --
                 
 //             - VerdeBlu:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryAir--
                 
 //             - VerdeRossoVerde:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryWater--
                 
 //             - VerdeRossoRosso:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
                 
 //             - VerdeGialloVerde:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryWater--
                 
 //             - VerdeGialloGiallo:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
                 
 //             - VerdeBluVerde:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryWater--
                 
 //             - VerdeBluBlu:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
                 
 //             - VerdeVerdeViola:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryAether --
                 
 //             - VerdeVerdeBlu:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryAir--
                 
 //             - VerdeVerdeGiallo:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryEarth --
                 
 //             - VerdeVerdeRosso:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryFire  --
                 
 //             - VerdeViolaVerde:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryWater--
                 
 //             - VerdeViolaViola:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
                 
             
             
             
             
 //             - ViolaRosso:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryFire  --
                 
 //             - ViolaGiallo:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryEarth --
                 
 //             - ViolaBlu:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAir--
                 
 //             - ViolaVerde:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryWater--
                 
 //             - ViolaRossoViola:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryAether --
                 
 //             - ViolaRossoRosso:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
                 
 //             - ViolaGialloViola:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryAether --
                 
 //             - ViolaGialloGiallo:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
                 
 //             - ViolaBluViola:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAether --
                 
 //             - ViolaBluBlu:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
                 
 //             - ViolaVerdeVerde:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
                 
 //             - ViolaVerdeViola:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryAether --
                 
 //             - ViolaViolaVerde:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryWater--
                 
 //             - ViolaViolaBlu:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAir--
                 
 //             - ViolaViolaGiallo:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryEarth --
                 
 //             - ViolaViolaRosso:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryFire  --
                 
         
         
 //         //Varizioni di tre colori
 //             - RossoGialloBlu: 
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryAir--
             
 //             - RossoGialloVerde: 
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryWater--
             
 //             - RossoGialloViola: 
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryAether --
             
 //             - RossoBluVerde: 
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryWater--
             
 //             - RossoBluViola: 
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAether --
             
 //             - RossoBluGiallo: 
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryEarth --
             
 //             - RossoVerdeBlu: 
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryAir--
             
 //             - RossoVerdeViola: 
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryAether --
             
 //             - RossoVerdeGiallo: 
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryEarth --
             
 //             - RossoViolaGiallo:
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryEarth --
                 
 //             - RossoViolaVerde:
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryWater--
                 
 //             - RossoViolaBlu:
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++ 
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++ 
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAir--
                 
         
         
         
         
 //             - GialloRossoVerde:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryWater--
                 
 //             - GialloRossoViola:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryAether --
                 
 //             - GialloRossoBlu:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryAir--
                 
 //             - GialloBluVerde:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryWater--
                 
 //             - GialloBluViola:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAether --
                 
 //             - GialloBluRosso:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryFire  --
                 
 //             - GialloVerdeViola:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryAether --
                 
 //             - GialloVerdeBlu:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryAir--
                 
 //             - GialloVerdeRosso:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryFire  --
                 
 //             - GialloViolaVerde:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryWater--
                 
 //             - GialloViolaBlu:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAir--
                 
 //             - GialloViolaRosso:
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryEarth ++
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryEarth ++
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryFire  --
                 
                 
                 
@@ -1014,204 +999,204 @@ TODO: sistemare questa roba a nest risistemato
                 
             
 //             - BluRossoVerde:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryFire ++
-//                 ~ nest_temporaryFire ++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryFire  ++
+//                 ~ glyph_temporaryFire  ++
                 
 //             - BluRossoViola:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryAether --
                 
 //             - BluRossoGiallo:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryEarth --
                 
 //             - BluGialloVerde:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryWater--
                 
 //             - BluGialloViola:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryAether --
                 
 //             - BluGialloRosso:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryFire  --
                 
 //             - BluVerdeViola:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryAether --
                 
 //             - BluVerdeGiallo:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryEarth --
                 
 //             - BluVerdeRosso:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryFire  --
                 
 //             - BluViolaVerde:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryWater--
                 
 //             - BluViolaBlu:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAir--
                 
 //             - BluViolaGiallo:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryEarth --
                 
 //             - BluViolaRosso:
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAir++
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAir++
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryFire  --
                 
             
 //             - VerdeRossoViola:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryAether --
                 
 //             - VerdeRossoBlu:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryAir--
                 
 //             - VerdeRossoGiallo:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryEarth --
                 
 //             - VerdeGialloViola:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryAether --
                 
 //             - VerdeGialloBlu:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryAir--
                 
 //             - VerdeBluViola:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAether --
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAether --
                 
 //             - VerdeBluGiallo:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryEarth --
                 
 //             - VerdeBluRosso:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryFire  --
                 
 //             - VerdeGialloRosso:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryFire  --
                 
 //             - VerdeViolaBlu:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAir--
                 
 //             - VerdeViolaGiallo:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryEarth --
                 
 //             - VerdeViolaRosso:
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryWater++
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryAether --
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryWater++
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryAether --
+//                 ~ glyph_temporaryFire  --
                 
             
             
@@ -1221,101 +1206,101 @@ TODO: sistemare questa roba a nest risistemato
             
             
 //             - ViolaRossoVerde:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryWater--
                 
 //             - ViolaRossoBlu:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryAir--
                 
 //             - ViolaRossoGiallo:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryFire --
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryFire  --
+//                 ~ glyph_temporaryEarth --
                 
 //             - ViolaGialloVerde:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryWater--
                 
 //             - ViolaGialloBlu:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryAir--
                 
 //             - ViolaGialloRosso:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryEarth --
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryEarth --
+//                 ~ glyph_temporaryFire  --
                 
 //             - ViolaBluVerde:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryWater--
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryWater--
                 
 //             - ViolaBluGiallo:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryEarth --
                 
 //             - ViolaBluRosso:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryAir--
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryAir--
+//                 ~ glyph_temporaryFire  --
                 
             
 //             - ViolaVerdeBlu:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryAir--
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryAir--
                 
 //             - ViolaVerdeGiallo:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryEarth --
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryEarth --
                 
 //             - ViolaVerdeRosso:
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryAether ++
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryWater--
-//                 ~ nest_temporaryFire --
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryAether ++
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryWater--
+//                 ~ glyph_temporaryFire  --
                 
             
 //             -else: Valore colore parola {nest_activeEmotionalWord} non trovato!
@@ -1326,13 +1311,13 @@ TODO: sistemare questa roba a nest risistemato
 
 // //E poi andiamo alle reazioni
 //     {
-//         - nest_currentTalker == FirstCharacter:
+//         - glyph_currentTalker == FirstCharacter:
 //             -> firstCharEmotionalActions
         
-//         - nest_currentTalker == SecondCharacter:
+//         - glyph_currentTalker == SecondCharacter:
 //             -> secondCharEmotionalActions
         
-//         - nest_currentTalker == Mentor:
+//         - glyph_currentTalker == Mentor:
 //             -> fifthCharEmotionalActions
     
 //     }
@@ -1557,12 +1542,12 @@ TODO: sistemare questa roba a nest risistemato
         = word_state_manager
             {debug_nest: entro in word_state_manager.}
         //Qui abbasso l'uso della parola, e se il suo uso è esaurito, la disattivo    
-            {debug_nest: prima di modificare temporaryWordUsageCounter il suo valore è {temporaryWordUsageCounter}.}
-                ~ temporaryWordUsageCounter --
-            {debug_nest: dopo aver ridotto temporaryWordUsageCounter il suo valore è {temporaryWordUsageCounter}.}
+            {debug_nest: prima di modificare glyph_temporaryWordUsageCounter il suo valore è {glyph_temporaryWordUsageCounter}.}
+                ~ glyph_temporaryWordUsageCounter --
+            {debug_nest: dopo aver ridotto glyph_temporaryWordUsageCounter il suo valore è {glyph_temporaryWordUsageCounter}.}
             
                 {
-                    - temporaryWordUsageCounter == 0:
+                    - glyph_temporaryWordUsageCounter == 0:
                     L'effetto di {nest_activeEmotionalWord} si è esaurito.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                         ~ nest_activeEmotionalWord = ()
                 }
@@ -1572,39 +1557,39 @@ TODO: sistemare questa roba a nest risistemato
 
 = update_PNG_color_values
     {debug_nest: entro in update_PNG_color_values.}
-    {debug_nest: prima dell'operazione il parlante attuale è {nest_currentTalker}.}
+    {debug_nest: prima dell'operazione il parlante attuale è {glyph_currentTalker}.}
     //Prima aggiorniamo i dati a seconda dei parlanti
     {
-        - nest_currentTalker == FirstCharacter:
-            ~ firstChar_fire+= nest_temporaryFire
-            ~ firstChar_earth += nest_temporaryEarth
-            ~ firstChar_air += nest_temporaryAir
-            ~ firstChar_water += nest_temporaryWater
-            ~ firstChar_aether += nest_temporaryAether
+        - glyph_currentTalker == FirstCharacter:
+            ~ firstChar_fire+= glyph_temporaryFire 
+            ~ firstChar_earth += glyph_temporaryEarth
+            ~ firstChar_air += glyph_temporaryAir
+            ~ firstChar_water += glyph_temporaryWater
+            ~ firstChar_aether += glyph_temporaryAether
         
-        - nest_currentTalker == SecondCharacter:
-            ~ secondChar_fire += nest_temporaryFire
-            ~ secondChar_earth += nest_temporaryEarth
-            ~ secondChar_air += nest_temporaryAir
-            ~ secondChar_water += nest_temporaryWater
-            ~ secondChar_aether += nest_temporaryAether
+        - glyph_currentTalker == SecondCharacter:
+            ~ secondChar_fire += glyph_temporaryFire 
+            ~ secondChar_earth += glyph_temporaryEarth
+            ~ secondChar_air += glyph_temporaryAir
+            ~ secondChar_water += glyph_temporaryWater
+            ~ secondChar_aether += glyph_temporaryAether
         
-        - nest_currentTalker == Mentor:
-            ~ mentor_fire += nest_temporaryFire
-            ~ mentor_earth += nest_temporaryEarth
-            ~ mentor_air += nest_temporaryAir
-            ~ mentor_water += nest_temporaryWater
-            ~ mentor_aether += nest_temporaryAether
+        - glyph_currentTalker == Mentor:
+            ~ mentor_fire += glyph_temporaryFire 
+            ~ mentor_earth += glyph_temporaryEarth
+            ~ mentor_air += glyph_temporaryAir
+            ~ mentor_water += glyph_temporaryWater
+            ~ mentor_aether += glyph_temporaryAether
     }
 
     //Poi azzeriamo i valori temporanei
-        ~ nest_currentTalker = ()
-        ~ nest_temporaryFire = 0
-        ~ nest_temporaryEarth = 0
-        ~ nest_temporaryAir= 0
-        ~ nest_temporaryWater= 0
-        ~ nest_temporaryAether = 0
-    {debug_nest: dopo l'operazione il parlante attuale {nest_currentTalker}.}
+        ~ glyph_currentTalker = ()
+        ~ glyph_temporaryFire  = 0
+        ~ glyph_temporaryEarth = 0
+        ~ glyph_temporaryAir= 0
+        ~ glyph_temporaryWater= 0
+        ~ glyph_temporaryAether = 0
+    {debug_nest: dopo l'operazione il parlante attuale {glyph_currentTalker}.}
 
 ->->
 
