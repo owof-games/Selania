@@ -23,11 +23,15 @@
     INCLUDE Code\Notifications.ink
 
 //File dedicati alla gestione delle personagge
-    INCLUDE CommonElements\CommonFunctions.ink
-    INCLUDE CommonElements\Ink.ink
-    INCLUDE CommonElements\CommonStoryletsManager.ink
-    INCLUDE CommonElements\CommonStorylets.ink
-    INCLUDE CommonElements\SpecialStorylets.ink
+    INCLUDE CommonPNGElements\ScheduleFunctions.ink
+    INCLUDE CommonPNGElements\InkManagement.ink
+    INCLUDE CommonPNGElements\CommonStoryletsManager.ink
+    INCLUDE CommonPNGElements\CommonStorylets.ink
+    INCLUDE CommonPNGElements\SpecialStorylets.ink
+    INCLUDE CommonPNGElements\OnMovementsEvents.ink
+    INCLUDE CommonPNGElements\GiftsAndIngredientFunctions.ink
+    INCLUDE CommonPNGElements\Glyph&SigilsFunctions.ink
+    INCLUDE CommonPNGElements\NamingFunctions.ink
 
                     /* ---------------------------------
                     
