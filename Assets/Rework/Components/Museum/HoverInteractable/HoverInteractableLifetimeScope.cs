@@ -12,10 +12,10 @@ namespace Selania.Rework.Components.Museum.HoverInteractable
 
         protected override void Configure(IContainerBuilder builder)
         {
-            base.Configure(builder);
+            builder.RegisterSettings(settings);
             builder.RegisterInstance(new StoryChangeRoomContentsNotifier()).AsImplementedInterfaces();
             builder.RegisterInstance(new StoryChoicesSelector()).AsImplementedInterfaces();
-            builder.RegisterLogger(settings);
+            builder.RegisterLogger();
         }
 
         private class StoryChangeRoomContentsNotifier : IStoryChangeRoomContentsNotifier

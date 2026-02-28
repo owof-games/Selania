@@ -728,23 +728,20 @@ MonoBehaviour:
     title: Hover Interactable
     description: "I bottoni hanno un'animazione che viene visualizzata se il mouse
       ci va sopra (per i normali oggetti) o se il mouse non c'\xE8 sopra (per i personaggi)."
-  - prefab: {fileID: 5900152936520379775, guid: 64c3cb6d1895f28419139a59f9300d8e, type: 3}
-    title: Save/Load (gamer mode)
-    description: "Questa \xE8 una storia che va in loop e salva in un set di directory
-      separato da quelle della storia principale, per test. La storia va in loop
-      infinito (step 1..5 con una scelta in mezzo). Sono previsti tre slot di salvataggio,
-      come in gamer mode."
-  - prefab: {fileID: 5900152936520379775, guid: 24ace19218f42ee4a85fde5cd1dd4220, type: 3}
-    title: Save/Load (reader mode)
-    description: "La stanza contiene un oggetto \"letto\" (diamante) che salva la
-      storia come reader mode quando ci si clicca sopra. Il quadrato permette di
-      cambiare e leggere lo stato corrente, cos\xEC da verificare che lo stato sia
-      stato correttamente salvato. Il bottone per far partire una nuova storia simula
-      l'avvio di una nuova storia e la rimozione dello slot in reader mode precedente."
   - prefab: {fileID: 5900152936520379775, guid: d7d0698ca5a8b55438f654ada749c550, type: 3}
     title: Audio System
     description: I bottoni lanciano un cross-fade della colonna sonora, dei suoni
       ambientali, o suonano un SFX.
+  - prefab: {fileID: 5900152936520379775, guid: 752689976787dca44a2fe83a5dee2dda, type: 3}
+    title: Save System
+    description: "Mostra il funzionamento del sistema di salvataggio. Il tempo di
+      salvataggio automatico \xE8 impostato a 10 secondi. Le folder di salvataggio
+      hanno nome \"museum_room_save_dir_<numero>\". Quando viene avviata una nuova
+      storia, viene prodotto un salvataggio automatico. Quando si passa da una stanza
+      all'altra, viene creato un nuovo salvataggio, ma solo se sono passati almeno
+      10 secondi. I bottoni triangolari permettono di passare da una stanza all'altra.
+      Gli altri bottoni interrogano lo stato corrente o lo modificano (per verificare
+      che lo stato venga salvato)."
 --- !u!4 &1073972271
 Transform:
   m_ObjectHideFlags: 0

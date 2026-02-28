@@ -13,10 +13,10 @@ namespace Selania.Rework.Components.Museum.Dialogue
 
         protected override void Configure(IContainerBuilder builder)
         {
-            builder.RegisterLogger(settings);
+            builder.RegisterInstance(settings).As<ISettingsDialogueBox>().As<ISettingsLogger>();
+            builder.RegisterLogger();
             builder.Register<EmptyStory>(Lifetime.Singleton).As<IStoryLinear>().As<IStoryChoicesSelector>();
             builder.Register<EmptyAudioSystem>(Lifetime.Singleton).As<IAudioSystem>();
-            builder.RegisterInstance(settings).As<ISettingsDialogueBox>();
         }
 
         // ReSharper disable once ClassNeverInstantiated.Local - used by DI

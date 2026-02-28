@@ -1,0 +1,295 @@
+﻿{
+  "inkVersion": 21,
+  "root": [
+    [
+      {
+        "->": "main"
+      },
+      [
+        "done",
+        {
+          "#f": 5,
+          "#n": "g-0"
+        }
+      ],
+      null
+    ],
+    "done",
+    {
+      "main": [
+        [
+          "^@interact",
+          "\n",
+          "ev",
+          "str",
+          "^ToRoom2",
+          "/str",
+          {
+            "VAR?": "contentsRoom1"
+          },
+          {
+            "VAR?": "PG"
+          },
+          "?",
+          "/ev",
+          {
+            "*": ".^.c-0",
+            "flg": 5
+          },
+          "ev",
+          "str",
+          "^QueryState",
+          "/str",
+          "/ev",
+          {
+            "*": ".^.c-1",
+            "flg": 4
+          },
+          "ev",
+          "str",
+          "^ChangeState",
+          "/str",
+          "/ev",
+          {
+            "*": ".^.c-2",
+            "flg": 4
+          },
+          "ev",
+          "str",
+          "^ToRoom1",
+          "/str",
+          {
+            "VAR?": "contentsRoom2"
+          },
+          {
+            "VAR?": "PG"
+          },
+          "?",
+          "/ev",
+          {
+            "*": ".^.c-3",
+            "flg": 5
+          },
+          {
+            "c-0": [
+              "\n",
+              "ev",
+              {
+                "VAR?": "contentsRoom1"
+              },
+              {
+                "VAR?": "PG"
+              },
+              "-",
+              {
+                "VAR=": "contentsRoom1",
+                "re": true
+              },
+              "/ev",
+              "ev",
+              {
+                "VAR?": "contentsRoom2"
+              },
+              {
+                "VAR?": "PG"
+              },
+              "+",
+              {
+                "VAR=": "contentsRoom2",
+                "re": true
+              },
+              "/ev",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-1": [
+              "\n",
+              "^Lo stato corrente è ",
+              "ev",
+              {
+                "VAR?": "state"
+              },
+              "out",
+              "/ev",
+              "^. ",
+              "#",
+              "^portrait:chitarra_affectionate ",
+              "/#",
+              "#",
+              "^speaker:Chitarra",
+              "/#",
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-2": [
+              "\n",
+              "^Incremento lo stato ",
+              "ev",
+              {
+                "VAR?": "state"
+              },
+              "out",
+              "/ev",
+              "^. ",
+              "#",
+              "^portrait:chitarra_affectionate ",
+              "/#",
+              "#",
+              "^speaker:Chitarra",
+              "/#",
+              "\n",
+              "ev",
+              {
+                "VAR?": "state"
+              },
+              1,
+              "+",
+              {
+                "VAR=": "state",
+                "re": true
+              },
+              "/ev",
+              "^Ora lo stato vale ",
+              "ev",
+              {
+                "VAR?": "state"
+              },
+              "out",
+              "/ev",
+              "^. ",
+              "#",
+              "^portrait:chitarra_affectionate ",
+              "/#",
+              "#",
+              "^speaker:Chitarra",
+              "/#",
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-3": [
+              "\n",
+              "ev",
+              {
+                "VAR?": "contentsRoom1"
+              },
+              {
+                "VAR?": "PG"
+              },
+              "+",
+              {
+                "VAR=": "contentsRoom1",
+                "re": true
+              },
+              "/ev",
+              "ev",
+              {
+                "VAR?": "contentsRoom2"
+              },
+              {
+                "VAR?": "PG"
+              },
+              "-",
+              {
+                "VAR=": "contentsRoom2",
+                "re": true
+              },
+              "/ev",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "g-0": [
+              {
+                "->": "main"
+              },
+              {
+                "#f": 5
+              }
+            ]
+          }
+        ],
+        {
+          "#f": 1
+        }
+      ],
+      "global decl": [
+        "ev",
+        {
+          "list": {},
+          "origins": [
+            "listCharacters"
+          ]
+        },
+        {
+          "VAR=": "listCharacters"
+        },
+        {
+          "list": {},
+          "origins": [
+            "listObjects"
+          ]
+        },
+        {
+          "VAR=": "listObjects"
+        },
+        {
+          "list": {
+            "listCharacters.PG": 1,
+            "listObjects.ToRoom2": 2,
+            "listObjects.QueryState": 3,
+            "listObjects.ChangeState": 4
+          }
+        },
+        {
+          "VAR=": "contentsRoom1"
+        },
+        {
+          "list": {
+            "listObjects.ToRoom1": 1,
+            "listObjects.QueryState": 3,
+            "listObjects.ChangeState": 4
+          }
+        },
+        {
+          "VAR=": "contentsRoom2"
+        },
+        0,
+        {
+          "VAR=": "state"
+        },
+        "/ev",
+        "end",
+        null
+      ],
+      "#f": 1
+    }
+  ],
+  "listDefs": {
+    "listCharacters": {
+      "PG": 1
+    },
+    "listObjects": {
+      "ToRoom1": 1,
+      "ToRoom2": 2,
+      "QueryState": 3,
+      "ChangeState": 4
+    }
+  }
+}

@@ -18,7 +18,8 @@ namespace Selania.Rework.Components.Museum.MoveBetweenRooms
         protected override void Configure(IContainerBuilder builder)
         {
             builder.RegisterInkBridgeInstance(inkBridge);
-            builder.RegisterLogger(settings);
+            builder.RegisterInstance(settings).As<ISettingsLogger>();
+            builder.RegisterLogger();
             builder.RegisterInstance(new SettingsRoom(rooms)).AsImplementedInterfaces();
         }
 

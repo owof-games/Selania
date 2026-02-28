@@ -61,15 +61,13 @@ namespace Selania.Rework.Components
         ///     Start the story. This sets up the internal state and runs the first <see cref="Continue" />.
         /// </summary>
         /// <param name="newLogger">The logger to use to log information about the story.</param>
-        /// <param name="saveDirPrefix">Prefix used for the save directories ("save_dir_" by default, if <c>null</c> is provided).</param>
+        /// <param name="saveDirPrefix">Prefix used for the save directories.</param>
         /// <param name="minimumTimeBetweenAutomaticSaves">The minimum time between automatic saves.</param>
-        public void SetUp(ILogger<InkBridge> newLogger, string? saveDirPrefix = null,
-            TimeSpan? minimumTimeBetweenAutomaticSaves = null)
+        public void SetUp(ILogger<InkBridge> newLogger, string saveDirPrefix, TimeSpan minimumTimeBetweenAutomaticSaves)
         {
             _logger = newLogger;
-            if (saveDirPrefix != null) _saveDirPrefix = saveDirPrefix;
-            if (minimumTimeBetweenAutomaticSaves != null)
-                _minimumTimeBetweenAutomaticSaves = minimumTimeBetweenAutomaticSaves.Value;
+            _saveDirPrefix = saveDirPrefix;
+            _minimumTimeBetweenAutomaticSaves = minimumTimeBetweenAutomaticSaves;
 
             OnStartRoomLocation();
 
@@ -133,13 +131,14 @@ namespace Selania.Rework.Components
             var tags = MakeTags(story.currentTags);
 
             // allow the various subsystems to update their observables
-            var triggerContinue = UpdateCurrentText(tags);
+            var actionsAfterUpdate = UpdateCurrentText(tags);
             UpdateRoom();
             UpdateCurrentChoices();
             UpdateAudio(tags);
 
             // in some cases, we must immediately process the next line (typically with @command lines)
-            if (triggerContinue) Continue();
+            if (actionsAfterUpdate.saveIfNeeded) SaveIfNeeded().Forget();
+            if (actionsAfterUpdate.@continue) Continue();
         }
 
         /// <summary>
@@ -409,13 +408,16 @@ namespace Selania.Rework.Components
         public Observable<bool> conversationInProgressObservable =>
             _conversationInProgressSubject!.DistinctUntilChanged();
 
+        private record struct ActionsAfterUpdate(bool @continue, bool saveIfNeeded);
+
         /// <summary>
         ///     Update the listeners with the current text.
         /// </summary>
         /// <param name="tags">The list of tags computed.</param>
         /// <returns>Whether a Continue() should be automatically triggered after this line has been fully processed.</returns>
-        private bool UpdateCurrentText(ICollection<Tag> tags)
+        private ActionsAfterUpdate UpdateCurrentText(ICollection<Tag> tags)
         {
+            var actionsAfterUpdate = new ActionsAfterUpdate();
             var story = GetStory();
             var currentText = story.currentText.Trim();
             if (!currentText.StartsWith('@'))
@@ -427,7 +429,7 @@ namespace Selania.Rework.Components
             else if (currentText.StartsWith("@animation"))
             {
                 // special handling: @animation are no longer used, skip them
-                return true;
+                actionsAfterUpdate.@continue = true;
             }
             else
             {
@@ -435,13 +437,10 @@ namespace Selania.Rework.Components
                 _conversationInProgressSubject!.OnNext(false);
 
                 // @interact is the moment we enter a room, and we try to save
-                if (currentText == "@interact") SaveIfNeeded().Forget();
-
-                // in any case, "@" lines require to immediately continue
-                return true;
+                if (currentText == "@interact") actionsAfterUpdate.saveIfNeeded = true;
             }
 
-            return false;
+            return actionsAfterUpdate;
         }
 
         /// <inheritdoc />
@@ -599,20 +598,22 @@ namespace Selania.Rework.Components
             {
                 logger.ZLogInformation($"Loading save file {descriptor}.");
                 var jsonPath = GetInkStoryStateFileAbsolutePath(descriptor);
+                _minimumNextSaveTime = DateTime.UtcNow + _minimumTimeBetweenAutomaticSaves;
                 var json = await File.ReadAllTextAsync(jsonPath);
                 story.state.LoadJson(json);
-                logger.ZLogInformation($"Save file {descriptor} loaded!");
-                _minimumNextSaveTime = DateTime.UtcNow; // will immediately produce a save file at the story start
+                logger.ZLogInformation($"Save file {descriptor} loaded.");
                 LogAndNotifyCurrentState();
             }
             else
             {
                 // otherwise, just reset and continue to trigger a new story
-                logger.ZLogInformation($"Starting a new story.");
                 story.ResetState();
-                _minimumNextSaveTime = DateTime.UtcNow + _minimumTimeBetweenAutomaticSaves;
+                _minimumNextSaveTime = DateTime.UtcNow; // will immediately produce a save file at the story start
+                logger.ZLogInformation($"New story started.");
                 Continue();
             }
+
+            logger.ZLogTrace($"next automatic after {_minimumNextSaveTime}");
         }
 
         /// <inheritdoc />
@@ -712,6 +713,9 @@ namespace Selania.Rework.Components
             var now = DateTime.UtcNow;
             if (now < _minimumNextSaveTime) return;
 
+            logger.ZLogInformation(
+                $"Currently {now:G}, should not save before {_minimumNextSaveTime:G}, so we're saving.");
+
             // sanity checks and state updates
             if (_currentRoomName == null)
                 throw new InvalidOperationException("Trying to save, but _currentRoomName hasn't a value yet");
@@ -739,13 +743,16 @@ namespace Selania.Rework.Components
                 Directory.CreateDirectory(directoryName);
                 await File.WriteAllTextAsync(GetSaveFileAbsolutePath(descriptor), jsonSaveData);
                 await File.WriteAllTextAsync(GetInkStoryStateFileAbsolutePath(descriptor), jsonInkStoryState);
+                logger.ZLogInformation($"Save performed in {directoryName}.");
             }
             catch (Exception)
             {
+                logger.ZLogError($"Save failed, trying to roll-back partial data if necessary.");
                 try
                 {
                     // if something goes wrong, try to remove potential partial save data
                     if (Directory.Exists(directoryName)) Directory.Delete(directoryName, true);
+                    logger.ZLogInformation($"Partial data rollback succeeded.");
                 }
                 catch (Exception e)
                 {

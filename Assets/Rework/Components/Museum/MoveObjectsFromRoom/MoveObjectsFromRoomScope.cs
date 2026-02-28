@@ -14,7 +14,8 @@ namespace Selania.Rework.Components.Museum.MoveObjectsFromRoom
         protected override void Configure(IContainerBuilder builder)
         {
             builder.RegisterInkBridgeInstance(inkBridge);
-            builder.RegisterLogger(settings);
+            builder.RegisterSettings(settings);
+            builder.RegisterLogger();
         }
     }
 }

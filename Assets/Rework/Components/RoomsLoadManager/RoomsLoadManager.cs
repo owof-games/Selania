@@ -13,7 +13,7 @@ namespace Selania.Rework.Components.RoomsLoadManager
     ///     A component that takes care of loading and unloading the rooms from prefabs according to the state of the ink
     ///     story.
     /// </summary>
-    public class RoomsLoadManager : MonoBehaviour
+    public class RoomsLoadManager : MonoBehaviour, IAutomaticEditorInject
     {
         /// <summary>
         ///     The currently instantiated room, or <c>null</c> if no room has been instantiated yet.

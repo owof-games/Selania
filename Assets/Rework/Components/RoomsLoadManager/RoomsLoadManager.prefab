@@ -44,10 +44,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2d86eea6481498e888a882c9065bf38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Selania::Selania.Rework.Components.RoomsLoadManager.RoomsLoadManager
-  rooms:
-  - roomName: Bedroom
-    roomPrefab: {fileID: 7337977647418521128, guid: 5931d58a004c96142b75a5a93dfbedd1, type: 3}
-  - roomName: TrainStop
-    roomPrefab: {fileID: 7337977647418521128, guid: ebc5c4bcd63c4444ca225338e3fd02a2, type: 3}
-  - roomName: Forest
-    roomPrefab: {fileID: 7337977647418521128, guid: 2e39ff78bf51c1f48baaa9b300f0b3c1, type: 3}

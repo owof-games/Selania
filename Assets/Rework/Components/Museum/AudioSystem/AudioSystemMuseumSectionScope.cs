@@ -17,8 +17,8 @@ namespace Selania.Rework.Components.Museum.AudioSystem
 
         protected override void Configure(IContainerBuilder builder)
         {
-            builder.RegisterLogger(settings);
             builder.RegisterSettings(settings);
+            builder.RegisterLogger();
             builder.RegisterInkBridgeInstance(inkBridge);
             builder.RegisterInstance(audioSystem).As<IAudioSystem>();
         }

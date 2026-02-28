@@ -17,9 +17,7 @@ namespace Selania.Rework.Components
         /// </summary>
         /// <param name="containerBuilder">The container builder used to register this instance.</param>
         /// <param name="inkBridge">The ink bridge to register.</param>
-        /// <param name="saveDirPrefix">Prefix used for the save directories ("save_dir_" by default, if <c>null</c> is provided).</param>
-        public static void RegisterInkBridgeInstance(this IContainerBuilder containerBuilder, InkBridge inkBridge,
-            string? saveDirPrefix = null)
+        public static void RegisterInkBridgeInstance(this IContainerBuilder containerBuilder, InkBridge inkBridge)
         {
             // flag used to set up the ink bridge only once per registration.
             var loggerResolved = false;
@@ -30,7 +28,9 @@ namespace Selania.Rework.Components
 
                     // otherwise, set up the ink bridge and return it afterward
                     var logger = resolver.Resolve<ILogger<InkBridge>>();
-                    inkBridge.SetUp(logger, saveDirPrefix);
+                    var saveSystemSettings = resolver.Resolve<ISettingsSaveSystem>();
+                    inkBridge.SetUp(logger, saveSystemSettings.saveDirPrefix,
+                        saveSystemSettings.minimumTimeBetweenAutomaticSaves);
                     loggerResolved = true;
                     return inkBridge;
                 }, Lifetime.Singleton)
@@ -47,46 +47,53 @@ namespace Selania.Rework.Components
         ///     Register a logger in the given builder, provided settings about the log levels.
         /// </summary>
         /// <param name="builder">The builder to register the logger into.</param>
-        /// <param name="settingsLogger">The settings for the logging system.</param>
-        public static void RegisterLogger(this IContainerBuilder builder, ISettingsLogger settingsLogger)
+        public static void RegisterLogger(this IContainerBuilder builder)
         {
             // compute the log file location
             var logFile = Application.persistentDataPath + "/log.txt";
             Debug.Log("Logging to file: " + logFile);
 
-            var loggerFactory = LoggerFactory.Create(logging =>
+            builder.Register(resolver =>
             {
-                logging
-                    // set minimum level (from configuration)
-                    .SetMinimumLevel(settingsLogger.minimumLogLevel)
-                    // setup both file and console logger
-                    .AddZLoggerFile(logFile, options => options.UsePlainTextFormatter(formatter =>
-                    {
-                        formatter.SetPrefixFormatter($"{0} - {1} - {2} - ",
-                            (in MessageTemplate template, in LogInfo info) =>
-                                template.Format(info.Timestamp, info.Category, info.LogLevel));
-                        formatter.SetExceptionFormatter((writer, ex) =>
-                            Utf8String.Format(writer, $"{ex.Message}"));
-                    }))
-                    .AddZLoggerUnityDebug()
-                    // set minimum levels for the two providers
-                    .AddFilter<ZLoggerUnityDebugLoggerProvider>(null,
-                        settingsLogger.consoleProviderSettings.minimumLogLevel)
-                    .AddFilter<ZLoggerFileLoggerProvider>(null, settingsLogger.fileProviderSettings.minimumLogLevel);
+                var settingsLogger = resolver.Resolve<ISettingsLogger>();
 
-                // set category-specific filters for both providers
-                foreach (var categorySettings in settingsLogger.consoleProviderSettings.categorySettings)
-                    logging.AddFilter<ZLoggerUnityDebugLoggerProvider>(categorySettings.categoryPrefix,
-                        categorySettings.minimumLogLevel);
+                var loggerFactory = LoggerFactory.Create(logging =>
+                {
+                    logging
+                        // set minimum level (from configuration)
+                        .SetMinimumLevel(settingsLogger.minimumLogLevel)
+                        // setup both file and console logger
+                        .AddZLoggerFile(logFile, options => options.UsePlainTextFormatter(formatter =>
+                        {
+                            formatter.SetPrefixFormatter($"{0} - {1} - {2} - ",
+                                (in MessageTemplate template, in LogInfo info) =>
+                                    template.Format(info.Timestamp, info.Category, info.LogLevel));
+                            formatter.SetExceptionFormatter((writer, ex) =>
+                                Utf8String.Format(writer, $"{ex.Message}"));
+                        }))
+                        .AddZLoggerUnityDebug()
+                        // set minimum levels for the two providers
+                        .AddFilter<ZLoggerUnityDebugLoggerProvider>(null,
+                            settingsLogger.consoleProviderSettings.minimumLogLevel)
+                        .AddFilter<ZLoggerFileLoggerProvider>(null,
+                            settingsLogger.fileProviderSettings.minimumLogLevel);
 
-                foreach (var categorySettings in settingsLogger.fileProviderSettings.categorySettings)
-                    logging.AddFilter<ZLoggerFileLoggerProvider>(categorySettings.categoryPrefix,
-                        categorySettings.minimumLogLevel);
-            });
+                    // set category-specific filters for both providers
+                    foreach (var categorySettings in settingsLogger.consoleProviderSettings.categorySettings)
+                        logging.AddFilter<ZLoggerUnityDebugLoggerProvider>(categorySettings.categoryPrefix,
+                            categorySettings.minimumLogLevel);
+
+                    foreach (var categorySettings in settingsLogger.fileProviderSettings.categorySettings)
+                        logging.AddFilter<ZLoggerFileLoggerProvider>(categorySettings.categoryPrefix,
+                            categorySettings.minimumLogLevel);
+                });
+
+                return loggerFactory;
+            }, Lifetime.Singleton);
 
             // set up the registrations to allow ILogger<T> to be automatically instantiated
             // see: https://github.com/hadashiA/VContainer/issues/715#issuecomment-2443123941
-            builder.RegisterInstance(loggerFactory).As<ILoggerFactory>();
+            // builder.RegisterInstance(loggerFactory).As<ILoggerFactory>();
             builder.Register(typeof(Logger<>), Lifetime.Singleton).As(typeof(ILogger<>));
         }
 

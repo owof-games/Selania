@@ -11,7 +11,7 @@ namespace Selania.Rework.Components
     [CreateAssetMenu(fileName = "Settings", menuName = "Selania/Settings")]
     [NoReorder]
     public class SelaniaSettings : ScriptableObject, ISettingsDialogueBox, ISettingsLogger, ISettingsRooms,
-        ISettingsAudio
+        ISettingsAudio, ISettingsSaveSystem
     {
         #region dialogue box - text
 
@@ -222,7 +222,7 @@ namespace Selania.Rework.Components
 
         #endregion
 
-        #region
+        #region audio
 
         /// <summary>
         ///     An audio clip with a name.
@@ -311,6 +311,23 @@ namespace Selania.Rework.Components
         {
             return _soundEffectsProvider.Get(soundEffects)[clipName];
         }
+
+        #endregion
+
+        #region save system
+
+        /// <inheritdoc />
+        [field: Title("Save system")]
+        [field: SerializeField]
+        [field: Tooltip("Prefix of the directory names where saves are stored.")]
+        public string saveDirPrefix { get; private set; } = "save_dir_";
+
+        [field: SerializeField] [field: Tooltip("Minimum time (in seconds) between automatic saves.")]
+        private int minimumTimeBetweenAutomaticSavesInSeconds = 5 * 60;
+
+        /// <inheritdoc />
+        public TimeSpan minimumTimeBetweenAutomaticSaves =>
+            TimeSpan.FromSeconds(minimumTimeBetweenAutomaticSavesInSeconds);
 
         #endregion
 

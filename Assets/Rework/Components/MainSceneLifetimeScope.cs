@@ -23,7 +23,7 @@ namespace Selania.Rework.Components
         {
             builder.RegisterInkBridgeInstance(inkBridge);
             builder.RegisterSettings(settings);
-            builder.RegisterLogger(settings);
+            builder.RegisterLogger();
             builder.RegisterInstance(audioSystem).As<IAudioSystem>();
         }
     }
