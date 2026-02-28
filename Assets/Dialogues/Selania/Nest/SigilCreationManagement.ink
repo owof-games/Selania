@@ -26,69 +26,6 @@ VAR secondChoice = ()
 VAR thirdChoice = ()
 VAR nest_newSigilDiscovered = ()
 
-// === sigil_creation_management ===
-//     //Per prima cosa passiamo dalla funzione di attivazione/disattivazione dei tasti glyph_activator_function 
-//         -> glyph_activator_function ->
-        
-//     Prima scelta
-//     {debug_nest: stato bottoni: nest_firstFireButton {nest_firstFireButton}, nest_firstEarthButton {nest_firstEarthButton}, nest_firstAirButton {nest_firstAirButton}, nest_firstWaterButton {nest_firstWaterButton}, nest_firstAetherButton {nest_firstAetherButton}}
-//             + {are_two_entities_together(PG,fireGlyph) && nest_firstFireButton}[fireGlyph]
-//                 ~ firstChoice = glyph_firstFire
-            
-//             + {are_two_entities_together(PG,earthGlyph) && nest_firstEarthButton}[earthGlyph]
-//                 ~ firstChoice = glyph_firstEarth
-            
-//             + {are_two_entities_together(PG,airGlyph) && nest_firstAirButton}[airGlyph]
-//                 ~ firstChoice = glyph_firstAir
-            
-//             + {are_two_entities_together(PG,waterGlyph) && nest_firstWaterButton}[waterGlyph]
-//                 ~ firstChoice = glyph_firstWater
-            
-//             + {are_two_entities_together(PG,aetherGlyph) && nest_firstAetherButton}[aetherGlyph]
-//                 ~ firstChoice = glyph_firstAether
-
-//             -
-
-//     Seconda scelta
-//     {debug_nest: stato bottoni: nest_secondFireButton {nest_secondFireButton}, nest_secondEarthButton {nest_secondEarthButton}, nest_secondAirButton {nest_secondAirButton}, nest_secondWaterButton {nest_secondWaterButton}, nest_secondAetherButton {nest_secondAetherButton}}
-//             + {are_two_entities_together(PG,fireGlyph) && nest_secondFireButton && (firstChoice ^ glyph_secondFire != ())}[fireGlyph]
-//                 ~ secondChoice = glyph_secondFire
-            
-//             + {are_two_entities_together(PG,earthGlyph) && nest_secondEarthButton && (firstChoice ^ glyph_secondEarth != ())}[earthGlyph]
-//                 ~ secondChoice = glyph_secondEarth
-            
-//             + {are_two_entities_together(PG,airGlyph) && nest_secondAirButton && (firstChoice ^ glyph_secondAir!= ())}[airGlyph]
-//                 ~ secondChoice = glyph_secondAir
-            
-//             + {are_two_entities_together(PG,waterGlyph) && nest_secondWaterButton && (firstChoice ^ glyph_secondWater != ())}[waterGlyph]
-//                 ~ secondChoice = glyph_secondWater
-            
-//             + {are_two_entities_together(PG,aetherGlyph) && nest_secondAetherButton && (firstChoice ^ glyph_secondAether != ())}[aetherGlyph]
-//                 ~ secondChoice = glyph_secondAether
-//             -    
-
-//     Terza scelta
-//     {debug_nest: stato bottoni: nest_thirdFireButton {nest_thirdFireButton}, nest_thirdEarthButton {nest_thirdEarthButton}, nest_thirdAirButton {nest_thirdAirButton}, nest_thirdWaterButton {nest_thirdWaterButton}, nest_thirdAetherButton {nest_thirdAetherButton}}
-//             + {are_two_entities_together(PG,fireGlyph) && nest_thirdFireButton && (secondChoice ^ glyph_thirdFire != ())}[fireGlyph]
-//                 ~ thirdChoice = glyph_thirdFire
-            
-//             + {are_two_entities_together(PG,earthGlyph) && nest_thirdEarthButton && (secondChoice ^ glyph_thirdEarth != ())}[earthGlyph]
-//                 ~ thirdChoice = glyph_thirdEarth
-            
-//             + {are_two_entities_together(PG,airGlyph) && nest_thirdAirButton && (secondChoice ^ glyph_thirdAir != ())}[airGlyph]
-//                 ~ thirdChoice = glyph_thirdAir
-            
-//             + {are_two_entities_together(PG,waterGlyph) && nest_thirdWaterButton && (secondChoice ^ glyph_thirdWater != ())}[waterGlyph]
-//                 ~ thirdChoice = glyph_thirdWater
-            
-//             + {are_two_entities_together(PG,aetherGlyph) && nest_thirdAetherButton && (secondChoice ^ glyph_thirdAether != ())}[aetherGlyph]
-//                 ~ thirdChoice = glyph_thirdAether
-//             -  
-
-//     //Fatte le scelte, andiamo a vedere cosa abbiamo generato
-// -> sigil_founder_function
-
-
 
 === glyph_activator_function ===
 {debug_nest: passo per glyph_activator_function.}
@@ -107,21 +44,25 @@ VAR nest_newSigilDiscovered = ()
     {
         - glyph_thirdWater != () && nest_foundedGlyphs has waterGlyph:
             ~ nest_thirdWaterButton = true
+            {debug_nest: nest_thirdWaterButton è {nest_thirdWaterButton}.}
     }
 
     {
         - glyph_thirdEarth != () && nest_foundedGlyphs has earthGlyph:
             ~ nest_thirdEarthButton = true
+            {debug_nest: nest_thirdEarthButton è {nest_thirdEarthButton}.}
     }
 
     {
         - glyph_thirdAir != () && nest_foundedGlyphs has airGlyph:
             ~ nest_thirdAirButton = true
+            {debug_nest: nest_thirdAirButton è {nest_thirdAirButton}.}
     }
 
     {
         - glyph_thirdAether != () && nest_foundedGlyphs has aetherGlyph:
             ~ nest_thirdAetherButton = true
+            {debug_nest: nest_thirdAetherButton è {nest_thirdAetherButton}.}
     }
 
     -> second_level
@@ -129,192 +70,242 @@ VAR nest_newSigilDiscovered = ()
     = second_level
     {debug_nest: passo per glyph_activator_function, second level.}
     //Qui non ci serve vedere se altro che se il tasto del terzo livello è attivo, e fare l'intersezione.
-    {
-        - nest_thirdFireButton == true:
-            {
-                - (glyph_thirdFire ^ glyph_secondWater != ()) && nest_foundedGlyphs has waterGlyph:
-                        ~ nest_secondWaterButton = true
-
-                - (glyph_thirdFire ^ glyph_secondAir != ()) && nest_foundedGlyphs has airGlyph:
-                        ~ nest_secondAirButton = true
-
-                - (glyph_thirdFire ^ glyph_secondEarth != ()) && nest_foundedGlyphs has earthGlyph:
-                         ~ nest_secondEarthButton = true
-
-                - (glyph_thirdFire ^ glyph_secondAether != ()) && nest_foundedGlyphs has aetherGlyph:
-                        ~ nest_secondAetherButton = true
-            }
     
+    //Fire
+    {
+
+        - nest_thirdFireButton == true && (glyph_thirdFire ^ glyph_secondWater != ()) && nest_foundedGlyphs has waterGlyph:
+                ~ nest_secondWaterButton = true
+            {debug_nest: glyph_thirdFire, nest_secondWaterButton è {nest_secondWaterButton}.}
+                
+    }
+    {       
+        - nest_thirdFireButton == true && (glyph_thirdFire ^ glyph_secondAir != ()) && nest_foundedGlyphs has airGlyph:
+                ~ nest_secondAirButton = true
+            {debug_nest: glyph_thirdFire, nest_secondAirButton è {nest_secondAirButton}.}
+                
+    }
+    {
+        - nest_thirdFireButton == true && (glyph_thirdFire ^ glyph_secondEarth != ()) && nest_foundedGlyphs has earthGlyph:
+                ~ nest_secondEarthButton = true
+            {debug_nest: glyph_thirdFire, nest_secondEarthButton è {nest_secondEarthButton}.}
+                    
+    }
+    {
+        - nest_thirdFireButton == true && (glyph_thirdFire ^ glyph_secondAether != ()) && nest_foundedGlyphs has aetherGlyph:
+                ~ nest_secondAetherButton = true
+            {debug_nest: glyph_thirdFire, nest_secondAetherButton è {nest_secondAetherButton}.}
+                
+    }
+    
+    //Air
+    {  
+        - nest_thirdAirButton == true && (glyph_thirdAir ^ glyph_secondWater != ()) && nest_foundedGlyphs has waterGlyph:
+                ~ nest_secondWaterButton = true
+            {debug_nest: glyph_thirdAir, nest_secondWaterButton è {nest_secondWaterButton}.}
+                
+    } 
+    { 
+        - nest_thirdAirButton == true && (glyph_thirdAir ^ glyph_secondFire != ()) && nest_foundedGlyphs has fireGlyph:
+                ~ nest_secondFireButton = true
+            {debug_nest: glyph_thirdAir,nest_secondFireButton è {nest_secondFireButton}.}
+                
+    } 
+    { 
+        - nest_thirdAirButton == true && (glyph_thirdAir ^ glyph_secondEarth != ()) && nest_foundedGlyphs has earthGlyph:
+                ~ nest_secondEarthButton = true
+            {debug_nest: glyph_thirdAir,nest_secondEarthButton è {nest_secondEarthButton}.}
+                    
+    } 
+    {
+        - nest_thirdAirButton == true && (glyph_thirdAir ^ glyph_secondAether != ()) && nest_foundedGlyphs has aetherGlyph:
+                ~ nest_secondAetherButton = true
+            {debug_nest: glyph_thirdAir, nest_secondAetherButton è {nest_secondAetherButton}.}
+                
+    }   
+    
+
+    //Water
+    {
+        - nest_thirdWaterButton == true && (glyph_thirdWater ^ glyph_secondAir != ()) && nest_foundedGlyphs has airGlyph:
+                    ~ nest_secondAirButton = true
+                {debug_nest: glyph_thirdWater, nest_secondAirButton è {nest_secondAirButton}.}
+                        
+    } 
+    {
+        - nest_thirdWaterButton == true && (glyph_thirdWater ^ glyph_secondFire != ()) && nest_foundedGlyphs has fireGlyph:
+                    ~ nest_secondFireButton = true
+                {debug_nest: glyph_thirdWater, nest_secondFireButton è {nest_secondFireButton}.}
+    } 
+    {                    
+
+        - nest_thirdWaterButton == true && (glyph_thirdWater ^ glyph_secondEarth != ()) && nest_foundedGlyphs has earthGlyph:
+                ~ nest_secondEarthButton = true
+                {debug_nest: glyph_thirdWater, nest_secondEarthButton è {nest_secondEarthButton}.}    
+                         
+    } 
+    {
+
+        - nest_thirdWaterButton == true && (glyph_thirdWater ^ glyph_secondAether != ()) && nest_foundedGlyphs has aetherGlyph:
+                ~ nest_secondAetherButton = true
+                {debug_nest: glyph_thirdWater, nest_secondAetherButton è {nest_secondAetherButton}.}
+                        
+    }
+
+    //Earth
+    {
+        - nest_thirdEarthButton == true && (glyph_thirdEarth ^ glyph_secondAir != ()) && nest_foundedGlyphs has airGlyph:
+                ~ nest_secondAirButton = true
+            {debug_nest: glyph_thirdEarth, nest_secondAirButton è {nest_secondAirButton}.}
+                
+    } 
+    {
+        - nest_thirdEarthButton == true && (glyph_thirdEarth ^ glyph_secondFire != ()) && nest_foundedGlyphs has fireGlyph:
+                ~ nest_secondFireButton = true
+            {debug_nest: glyph_thirdEarth,nest_secondFireButton è {nest_secondFireButton}.}
+                
+    } 
+    {
+        - nest_thirdEarthButton == true && (glyph_thirdEarth ^ glyph_secondWater != ()) && nest_foundedGlyphs has waterGlyph:
+                ~ nest_secondWaterButton = true
+            {debug_nest: glyph_thirdEarth,nest_secondWaterButton è {nest_secondWaterButton}.}
+                    
+    } 
+    {
+        - nest_thirdEarthButton == true && (glyph_thirdEarth ^ glyph_secondAether != ()) && nest_foundedGlyphs has aetherGlyph:
+                ~ nest_secondAetherButton = true
+            {debug_nest: glyph_thirdEarth,nest_secondAetherButton è {nest_secondAetherButton}.}
+                
     }
 
 
+    //Aether
     {
-        - nest_thirdAirButton == true:
-            {
-                - (glyph_thirdAir ^ glyph_secondWater != ()) && nest_foundedGlyphs has waterGlyph:
-                        ~ nest_secondWaterButton = true
-
-                - (glyph_thirdAir ^ glyph_secondFire != ()) && nest_foundedGlyphs has fireGlyph:
-                        ~ nest_secondFireButton = true
-
-                - (glyph_thirdAir ^ glyph_secondEarth != ()) && nest_foundedGlyphs has earthGlyph:
-                         ~ nest_secondEarthButton = true
-
-                - (glyph_thirdAir ^ glyph_secondAether != ()) && nest_foundedGlyphs has aetherGlyph:
-                        ~ nest_secondAetherButton = true
-            }
-    
-    }
-
+        - nest_thirdAetherButton == true && (glyph_thirdAether ^ glyph_secondAir != ()) && nest_foundedGlyphs has airGlyph:
+                ~ nest_secondAirButton = true
+            {debug_nest: glyph_thirdAether, nest_secondAirButton è {nest_secondAirButton}.}
+                
+    } 
     {
-        - nest_thirdWaterButton == true:
-            {
-                - (glyph_thirdWater ^ glyph_secondAir != ()) && nest_foundedGlyphs has airGlyph:
-                        ~ nest_secondAirButton = true
-
-                - (glyph_thirdWater ^ glyph_secondFire != ()) && nest_foundedGlyphs has fireGlyph:
-                        ~ nest_secondFireButton = true
-
-                - (glyph_thirdWater ^ glyph_secondEarth != ()) && nest_foundedGlyphs has earthGlyph:
-                         ~ nest_secondEarthButton = true
-
-                - (glyph_thirdWater ^ glyph_secondAether != ()) && nest_foundedGlyphs has aetherGlyph:
-                        ~ nest_secondAetherButton = true
-            }
-    
-    }
-
+        - nest_thirdAetherButton == true && (glyph_thirdAether ^ glyph_secondFire != ()) && nest_foundedGlyphs has fireGlyph:
+                ~ nest_secondFireButton = true
+            {debug_nest: glyph_thirdAether, nest_secondFireButton è {nest_secondFireButton}.}
+                
+    } 
     {
-        - nest_thirdEarthButton == true:
-            {
-                - (glyph_thirdEarth ^ glyph_secondAir != ()) && nest_foundedGlyphs has airGlyph:
-                        ~ nest_secondAirButton = true
-
-                - (glyph_thirdEarth ^ glyph_secondFire != ()) && nest_foundedGlyphs has fireGlyph:
-                        ~ nest_secondFireButton = true
-
-                - (glyph_thirdEarth ^ glyph_secondWater != ()) && nest_foundedGlyphs has waterGlyph:
-                         ~ nest_secondWaterButton = true
-
-                - (glyph_thirdEarth ^ glyph_secondAether != ()) && nest_foundedGlyphs has aetherGlyph:
-                        ~ nest_secondAetherButton = true
-            }
-    
-    }
-
+        - nest_thirdAetherButton == true && (glyph_thirdAether ^ glyph_secondWater != ()) && nest_foundedGlyphs has waterGlyph:
+                ~ nest_secondWaterButton = true
+            {debug_nest: glyph_thirdAether, nest_secondWaterButton è {nest_secondWaterButton}.}
+                    
+    } 
     {
-        - nest_thirdAetherButton == true:
-            {
-                - (glyph_thirdAether ^ glyph_secondAir != ()) && nest_foundedGlyphs has airGlyph:
-                        ~ nest_secondAirButton = true
-
-                - (glyph_thirdAether ^ glyph_secondFire != ()) && nest_foundedGlyphs has fireGlyph:
-                        ~ nest_secondFireButton = true
-
-                - (glyph_thirdAether ^ glyph_secondWater != ()) && nest_foundedGlyphs has waterGlyph:
-                         ~ nest_secondWaterButton = true
-
-                - (glyph_thirdAether ^ glyph_secondEarth != ()) && nest_foundedGlyphs has earthGlyph:
-                        ~ nest_secondEarthButton = true
-            }
-    
+        - nest_thirdAetherButton == true && (glyph_thirdAether ^ glyph_secondEarth != ()) && nest_foundedGlyphs has earthGlyph:
+                ~ nest_secondEarthButton = true
+            {debug_nest: glyph_thirdAether, nest_secondEarthButton è {nest_secondEarthButton}.}
+                
     }
+    
+
 
     -> first_level
 
     = first_level
     {debug_nest: passo per glyph_activator_function, first level.}
     //E qui ci intersezioniamo con il secondo livello, e attiviamo i primi bottoni
+
+    //Fire
     {
-        - nest_secondFireButton == true:
-            {
-                - (glyph_secondFire ^ glyph_firstWater != ()) && nest_foundedGlyphs has waterGlyph:
-                        ~ nest_firstWaterButton = true
+        - nest_secondFireButton == true && (glyph_secondFire ^ glyph_firstWater != ()) && nest_foundedGlyphs has waterGlyph:
+                ~ nest_firstWaterButton = true
+    } 
+    {
+        - nest_secondFireButton == true && (glyph_secondFire ^ glyph_firstAir != ()) && nest_foundedGlyphs has airGlyph:
+                ~ nest_firstAirButton = true
+    } 
+    {
+        - nest_secondFireButton == true && (glyph_secondFire ^ glyph_firstEarth != ()) && nest_foundedGlyphs has earthGlyph:
+                    ~ nest_firstEarthButton = true
+    } 
+    {
+        - nest_secondFireButton == true && (glyph_secondFire ^ glyph_firstAether != ()) && nest_foundedGlyphs has aetherGlyph:
+                ~ nest_firstAetherButton = true
 
-                - (glyph_secondFire ^ glyph_firstAir != ()) && nest_foundedGlyphs has airGlyph:
-                        ~ nest_firstAirButton = true
-
-                - (glyph_secondFire ^ glyph_firstEarth != ()) && nest_foundedGlyphs has earthGlyph:
-                         ~ nest_firstEarthButton = true
-
-                - (glyph_secondFire ^ glyph_firstAether != ()) && nest_foundedGlyphs has aetherGlyph:
-                        ~ nest_firstAetherButton = true
-            }
-    
     }
 
 
+    //Air
     {
-        - nest_secondAirButton == true:
-            {
-                - (glyph_secondAir ^ glyph_firstWater != ()) && nest_foundedGlyphs has waterGlyph:
-                        ~ nest_firstWaterButton = true
-
-                - (glyph_secondAir ^ glyph_firstFire != ()) && nest_foundedGlyphs has fireGlyph:
-                        ~ nest_firstFireButton = true
-
-                - (glyph_secondAir ^ glyph_firstEarth != ()) && nest_foundedGlyphs has earthGlyph:
-                         ~ nest_firstEarthButton = true
-
-                - (glyph_secondAir ^ glyph_firstAether != ()) && nest_foundedGlyphs has aetherGlyph:
-                        ~ nest_firstAetherButton = true
-            }
-    
+        - nest_secondAirButton == true && (glyph_secondAir ^ glyph_firstWater != ()) && nest_foundedGlyphs has waterGlyph:
+                ~ nest_firstWaterButton = true
+    } 
+    {
+        - nest_secondAirButton == true && (glyph_secondAir ^ glyph_firstFire != ()) && nest_foundedGlyphs has fireGlyph:
+                ~ nest_firstFireButton = true
+    } 
+    {
+        - nest_secondAirButton == true && (glyph_secondAir ^ glyph_firstEarth != ()) && nest_foundedGlyphs has earthGlyph:
+                    ~ nest_firstEarthButton = true
+    } 
+    {
+        - nest_secondAirButton == true && (glyph_secondAir ^ glyph_firstAether != ()) && nest_foundedGlyphs has aetherGlyph:
+                ~ nest_firstAetherButton = true
     }
 
+
+    //Water
     {
-        - nest_secondWaterButton == true:
-            {
-                - (glyph_secondWater ^ glyph_firstAir != ()) && nest_foundedGlyphs has airGlyph:
-                        ~ nest_firstAirButton = true
-
-                - (glyph_secondWater ^ glyph_firstFire != ()) && nest_foundedGlyphs has fireGlyph:
-                        ~ nest_firstFireButton = true
-
-                - (glyph_secondWater ^ glyph_firstEarth != ()) && nest_foundedGlyphs has earthGlyph:
-                         ~ nest_firstEarthButton = true
-
-                - (glyph_secondWater ^ glyph_firstAether != ()) && nest_foundedGlyphs has aetherGlyph:
-                        ~ nest_firstAetherButton = true
-            }
-    
+        - nest_secondWaterButton == true && (glyph_secondWater ^ glyph_firstAir != ()) && nest_foundedGlyphs has airGlyph:
+                ~ nest_firstAirButton = true
+    } 
+    {
+        - nest_secondWaterButton == true && (glyph_secondWater ^ glyph_firstFire != ()) && nest_foundedGlyphs has fireGlyph:
+                ~ nest_firstFireButton = true
+    } 
+    {
+        - nest_secondWaterButton == true && (glyph_secondWater ^ glyph_firstEarth != ()) && nest_foundedGlyphs has earthGlyph:
+                    ~ nest_firstEarthButton = true
+    } 
+    {
+        - nest_secondWaterButton == true && (glyph_secondWater ^ glyph_firstAether != ()) && nest_foundedGlyphs has aetherGlyph:
+                ~ nest_firstAetherButton = true
     }
 
+
+    //Earth
     {
-        - nest_secondEarthButton == true:
-            {
-                - (glyph_secondEarth ^ glyph_firstAir != ()) && nest_foundedGlyphs has airGlyph:
-                        ~ nest_firstAirButton = true
-
-                - (glyph_secondEarth ^ glyph_firstFire != ()) && nest_foundedGlyphs has fireGlyph:
-                        ~ nest_firstFireButton = true
-
-                - (glyph_secondEarth ^ glyph_firstWater != ()) && nest_foundedGlyphs has waterGlyph:
-                         ~ nest_firstWaterButton = true
-
-                - (glyph_secondEarth ^ glyph_firstAether != ()) && nest_foundedGlyphs has aetherGlyph:
-                        ~ nest_firstAetherButton = true
-            }
-    
-    }
-
+        - nest_secondEarthButton == true && (glyph_secondEarth ^ glyph_firstAir != ()) && nest_foundedGlyphs has airGlyph:
+                ~ nest_firstAirButton = true
+    } 
     {
-        - nest_secondAetherButton == true:
-            {
-                - (glyph_secondAether ^ glyph_firstAir != ()) && nest_foundedGlyphs has airGlyph:
-                        ~ nest_firstAirButton = true
-
-                - (glyph_secondAether ^ glyph_firstFire != ()) && nest_foundedGlyphs has fireGlyph:
-                        ~ nest_firstFireButton = true
-
-                - (glyph_secondAether ^ glyph_firstWater != ()) && nest_foundedGlyphs has waterGlyph:
-                         ~ nest_firstWaterButton = true
-
-                - (glyph_secondAether ^ glyph_firstEarth != ()) && nest_foundedGlyphs has earthGlyph:
-                        ~ nest_firstEarthButton = true
-            }
-    
+        - nest_secondEarthButton == true && (glyph_secondEarth ^ glyph_firstFire != ()) && nest_foundedGlyphs has fireGlyph:
+                ~ nest_firstFireButton = true
+    } 
+    {
+        - nest_secondEarthButton == true && (glyph_secondEarth ^ glyph_firstWater != ()) && nest_foundedGlyphs has waterGlyph:
+                    ~ nest_firstWaterButton = true
+    } 
+    {
+        - nest_secondEarthButton == true && (glyph_secondEarth ^ glyph_firstAether != ()) && nest_foundedGlyphs has aetherGlyph:
+                ~ nest_firstAetherButton = true
     }
+    
+
+    //Aether
+    {
+        - nest_secondAetherButton == true && (glyph_secondAether ^ glyph_firstAir != ()) && nest_foundedGlyphs has airGlyph:
+                ~ nest_firstAirButton = true
+
+        - nest_secondAetherButton == true &&(glyph_secondAether ^ glyph_firstFire != ()) && nest_foundedGlyphs has fireGlyph:
+                ~ nest_firstFireButton = true
+
+        - nest_secondAetherButton == true &&(glyph_secondAether ^ glyph_firstWater != ()) && nest_foundedGlyphs has waterGlyph:
+                    ~ nest_firstWaterButton = true
+
+        - nest_secondAetherButton == true &&(glyph_secondAether ^ glyph_firstEarth != ()) && nest_foundedGlyphs has earthGlyph:
+                ~ nest_firstEarthButton = true
+    }
+    
+    
 
 ->->
 
