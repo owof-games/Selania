@@ -144,7 +144,6 @@
     INCLUDE Nest\NestVarsAndLists.ink
     INCLUDE Nest\NestDispatcher.ink
     INCLUDE Nest\NestEWM.ink
-    INCLUDE Nest\ColorManager.ink
     INCLUDE Nest\NestTranslator.ink
     INCLUDE Nest\SigilCreationManagement.ink
 

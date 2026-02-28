@@ -78,12 +78,6 @@ VAR nest_foundedGlyphs = (aetherGlyph, waterGlyph, airGlyph)
 //Il tracciamento della parola appena scoperta
     VAR nest_newlyDiscoveredEmotionalWord = ()
 
-//Tracciamento delle scelte fatte durante la composizione
-    LIST nest_keysColour = redKey, yellowKey, blueKey, greenKey, purpleKey
-    VAR nest_firstKeyColour = ()
-    VAR nest_secondKeyColour = ()
-    VAR nest_thirdKeyColour = ()
-
 
 //L'inventario effettivo
     VAR nest_ownedEmotionalWords = ()

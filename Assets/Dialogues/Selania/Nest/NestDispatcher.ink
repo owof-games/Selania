@@ -1,5 +1,4 @@
-=== emotional_words_dispatcher
-//Qui è dove le scelte vengono combinate
+// glyph_modifier_variation_management//Qui è dove le scelte vengono combinate
 // {debug_nest: passo per emotional_words_generator.}
 // {debug_nest: i valori delle tre note sono {nest_firstKeyColour} {nest_secondKeyColour} {nest_thirdKeyColour}.}
 // //Qui abbiamo il primo dispatcher, che ci manda a dei sottonodi di assegnazione, così da non avere dei blocconi giganteschi di roba
