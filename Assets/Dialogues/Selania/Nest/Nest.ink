@@ -25,26 +25,26 @@
 
 === nest_fireGlyph_button ===
     + {are_two_entities_together(PG,fireGlyph) && nest_firstFireButton}[fireGlyph]
-                ~ firstChoice = glyph_firstFire
-                ~ nest_secondFireButton = false
-                ~ nest_thirdFireButton = false
+            ~ firstChoice = glyph_firstFire
+            ~ nest_secondFireButton = false
+            ~ nest_thirdFireButton = false
         -> second_choice
 
 
 
 === nest_airGlyph_button ===
 + {are_two_entities_together(PG,airGlyph) && nest_firstAirButton}[airGlyph]
-                ~ firstChoice = glyph_firstAir
-                ~ nest_secondAirButton = false
-                ~ nest_thirdAirButton = false
+        ~ firstChoice = glyph_firstAir
+        ~ nest_secondAirButton = false
+        ~ nest_thirdAirButton = false
     -> second_choice            
             
 
 === nest_earthGlyph_button ===
 + {are_two_entities_together(PG,earthGlyph) && nest_firstEarthButton}[earthGlyph]
-                ~ firstChoice = glyph_firstEarth
-                ~ nest_secondEarthButton = false
-                ~ nest_thirdEarthButton = false
+        ~ firstChoice = glyph_firstEarth
+        ~ nest_secondEarthButton = false
+        ~ nest_thirdEarthButton = false
     -> second_choice            
             
 
@@ -52,24 +52,26 @@
 
 === nest_waterGlyph_button ===
 + {are_two_entities_together(PG,waterGlyph) && nest_firstWaterButton}[waterGlyph]
-                ~ firstChoice = glyph_firstWater
-                ~ nest_secondWaterButton = false
-                ~ nest_thirdWaterButton = false
+        ~ firstChoice = glyph_firstWater
+        ~ nest_secondWaterButton = false
+        ~ nest_thirdWaterButton = false
     -> second_choice           
             
 
 
 === nest_aetherGlyph_button ===
 + {are_two_entities_together(PG,aetherGlyph) && nest_firstAetherButton}[aetherGlyph]
-                ~ firstChoice = glyph_firstAether
-                ~ nest_secondAetherButton = false
-                ~ nest_thirdAetherButton = false
+        ~ firstChoice = glyph_firstAether
+        ~ nest_secondAetherButton = false
+        ~ nest_thirdAetherButton = false
     -> second_choice
 
 
 
 === second_choice
+//Ovvero: se ho cliccato almeno un tasto, si disattiva l'uscita fino a quando non sono a tre
     {debug_nest: stato bottoni: nest_secondFireButton {nest_secondFireButton}, nest_secondEarthButton {nest_secondEarthButton}, nest_secondAirButton {nest_secondAirButton}, nest_secondWaterButton {nest_secondWaterButton}, nest_secondAetherButton {nest_secondAetherButton}}
+    
             + {are_two_entities_together(PG,fireGlyph) && nest_secondFireButton && (firstChoice ^ glyph_secondFire != ())}[fireGlyph]
                 ~ secondChoice = glyph_secondFire
                 ~ nest_thirdFireButton = false
@@ -89,9 +91,8 @@
             + {are_two_entities_together(PG,aetherGlyph) && nest_secondAetherButton && (firstChoice ^ glyph_secondAether != ())}[aetherGlyph]
                 ~ secondChoice = glyph_secondAether
                 ~ nest_thirdAetherButton = false
-            -    
+            -
 
-    Terza scelta
     {debug_nest: stato bottoni: nest_thirdFireButton {nest_thirdFireButton}, nest_thirdEarthButton {nest_thirdEarthButton}, nest_thirdAirButton {nest_thirdAirButton}, nest_thirdWaterButton {nest_thirdWaterButton}, nest_thirdAetherButton {nest_thirdAetherButton}}
             + {are_two_entities_together(PG,fireGlyph) && nest_thirdFireButton && (secondChoice ^ glyph_thirdFire != ())}[fireGlyph]
                 ~ thirdChoice = glyph_thirdFire
@@ -108,9 +109,9 @@
             + {are_two_entities_together(PG,aetherGlyph) && nest_thirdAetherButton && (secondChoice ^ glyph_thirdAether != ())}[aetherGlyph]
                 ~ thirdChoice = glyph_thirdAether
             -  
-
     //Fatte le scelte, andiamo a vedere cosa abbiamo generato
 -> sigil_founder_function
+
 === emotional_backpack_management
 //Ogni volta che scopriamo una nuova parola, possiamo ignorarla, aggiungerla all'inventario, sostituire una parola dell'inventario con questa
 //Qui è dove aggiungiamo, togliamo, limitiamo l'uso delle parole emozionali. Avremo:

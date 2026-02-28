@@ -318,12 +318,17 @@ VAR nest_newSigilDiscovered = ()
 
     //Il sigillo è l'intersezione delle tre scelte precedenti.
     ~ nest_newSigilDiscovered = firstChoice ^ secondChoice ^ thirdChoice
+    {debug_nest: nest_newSigilDiscovered è {nest_newSigilDiscovered}.}
 
     //A questo punto vanno aggiornate tutte le liste. Partiamo da quella in incremento.
+    {debug_nest: prima dell'aggiornamento, glyph_discoveredSigils contiene {glyph_discoveredSigils}.}
     ~  glyph_discoveredSigils += nest_newSigilDiscovered
+    {debug_nest: dopo l'aggiornamento, glyph_discoveredSigils contiene {glyph_discoveredSigils}.}
 
     //E poi da quelle in svuotamento.
-    ~ glyph_discoverableSigils -= nest_newSigilDiscovered
+    {debug_nest: prima dell'aggiornamento, glyph_discoverableSigils contiene {glyph_discoverableSigils}.}
+        ~ glyph_discoverableSigils -= nest_newSigilDiscovered
+    {debug_nest: dopo l'aggiornamento, glyph_discoverableSigils contiene {glyph_discoverableSigils}.}
 
         //Pulizia fuoco
         {
@@ -344,7 +349,9 @@ VAR nest_newSigilDiscovered = ()
         //Pulizia acqua
         {
             - glyph_firstWater has nest_newSigilDiscovered:
+            {debug_nest: prima dell'aggiornamento, glyph_firstWater contiene {glyph_firstWater}.}
                 ~ glyph_firstWater -= nest_newSigilDiscovered
+            {debug_nest: dopo l'aggiornamento, glyph_firstWater contiene {glyph_firstWater}.}    
         }
 
         {
@@ -382,7 +389,9 @@ VAR nest_newSigilDiscovered = ()
 
         {
             - glyph_secondAir has nest_newSigilDiscovered:
+            {debug_nest: prima dell'aggiornamento, glyph_secondAir contiene {glyph_secondAir}.}
                 ~ glyph_secondAir -= nest_newSigilDiscovered
+            {debug_nest: dopo  l'aggiornamento, glyph_secondAir contiene {glyph_secondAir}.}    
         }
 
         {
@@ -404,14 +413,19 @@ VAR nest_newSigilDiscovered = ()
 
         {
             - glyph_thirdAether has nest_newSigilDiscovered:
+            {debug_nest: prima dell'aggiornamento, glyph_thirdAether contiene {glyph_thirdAether}.}
                 ~ glyph_thirdAether -= nest_newSigilDiscovered
+            {debug_nest: dopo l'aggiornamento, glyph_thirdAether contiene {glyph_thirdAether}.}    
         }
 
         //E poi svuotiamo le variabili
             ~ firstChoice = ()
             ~ secondChoice = ()
             ~ thirdChoice = ()
+        {debug_nest: Prima di uscire svuoto i valori di firstChoice è {firstChoice}, di secondChoice è {secondChoice}, di thirdChoice è {thirdChoice}.}    
 
-
-//E vado a notificare la scoperta alla giocatrice
--> notification_system
+    //Aggiorno lo stato dei glifi interagibili
+    -> glyph_activator_function ->
+    
+    //E vado a notificare la scoperta alla giocatrice
+    -> notification_system
