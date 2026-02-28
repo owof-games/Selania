@@ -23,21 +23,31 @@
         
     Prima scelta
     {debug_nest: stato bottoni: nest_firstFireButton {nest_firstFireButton}, nest_firstEarthButton {nest_firstEarthButton}, nest_firstAirButton {nest_firstAirButton}, nest_firstWaterButton {nest_firstWaterButton}, nest_firstAetherButton {nest_firstAetherButton}}
-    
+
             + {are_two_entities_together(PG,fireGlyph) && nest_firstFireButton}[fireGlyph]
                 ~ firstChoice = glyph_firstFire
+                ~ nest_secondFireButton = false
+                ~ nest_thirdFireButton = false
             
             + {are_two_entities_together(PG,earthGlyph) && nest_firstEarthButton}[earthGlyph]
                 ~ firstChoice = glyph_firstEarth
+                ~ nest_secondEarthButton = false
+                ~ nest_thirdEarthButton = false
             
             + {are_two_entities_together(PG,airGlyph) && nest_firstAirButton}[airGlyph]
                 ~ firstChoice = glyph_firstAir
+                ~ nest_secondAirButton = false
+                ~ nest_thirdAirButton = false
             
             + {are_two_entities_together(PG,waterGlyph) && nest_firstWaterButton}[waterGlyph]
                 ~ firstChoice = glyph_firstWater
+                ~ nest_secondWaterButton = false
+                ~ nest_thirdWaterButton = false
             
             + {are_two_entities_together(PG,aetherGlyph) && nest_firstAetherButton}[aetherGlyph]
                 ~ firstChoice = glyph_firstAether
+                ~ nest_secondAetherButton = false
+                ~ nest_thirdAetherButton = false
 
             -
 
@@ -45,18 +55,23 @@
     {debug_nest: stato bottoni: nest_secondFireButton {nest_secondFireButton}, nest_secondEarthButton {nest_secondEarthButton}, nest_secondAirButton {nest_secondAirButton}, nest_secondWaterButton {nest_secondWaterButton}, nest_secondAetherButton {nest_secondAetherButton}}
             + {are_two_entities_together(PG,fireGlyph) && nest_secondFireButton && (firstChoice ^ glyph_secondFire != ())}[fireGlyph]
                 ~ secondChoice = glyph_secondFire
+                ~ nest_thirdFireButton = false
             
             + {are_two_entities_together(PG,earthGlyph) && nest_secondEarthButton && (firstChoice ^ glyph_secondEarth != ())}[earthGlyph]
                 ~ secondChoice = glyph_secondEarth
+                ~ nest_thirdEarthButton = false
             
             + {are_two_entities_together(PG,airGlyph) && nest_secondAirButton && (firstChoice ^ glyph_secondAir!= ())}[airGlyph]
                 ~ secondChoice = glyph_secondAir
+                ~ nest_thirdAirButton = false
             
             + {are_two_entities_together(PG,waterGlyph) && nest_secondWaterButton && (firstChoice ^ glyph_secondWater != ())}[waterGlyph]
                 ~ secondChoice = glyph_secondWater
+                ~ nest_thirdWaterButton = false
             
             + {are_two_entities_together(PG,aetherGlyph) && nest_secondAetherButton && (firstChoice ^ glyph_secondAether != ())}[aetherGlyph]
                 ~ secondChoice = glyph_secondAether
+                ~ nest_thirdAetherButton = false
             -    
 
     Terza scelta
