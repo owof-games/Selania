@@ -32,6 +32,8 @@
     INCLUDE CommonPNGElements\GiftsAndIngredientFunctions.ink
     INCLUDE CommonPNGElements\Glyph&SigilsFunctions.ink
     INCLUDE CommonPNGElements\NamingFunctions.ink
+    INCLUDE CommonPNGElements\GlyphsVarAndLists.ink
+
 
                     /* ---------------------------------
                     
