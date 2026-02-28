@@ -16,8 +16,7 @@ namespace Selania.Rework.Components.Museum.ChoicePicker
 
         protected override void Configure(IContainerBuilder builder)
         {
-            base.Configure(builder);
-            builder.RegisterInstance(settings).As<ISettingsLogger>();
+            builder.RegisterSettings(settings);
             builder.RegisterLogger();
             builder.Register<StoryChoicesSelector>(Lifetime.Scoped).As<IStoryChoicesSelector>();
             builder.Register<StoryChangeRoomContentsNotifier>(Lifetime.Scoped).As<IStoryChangeRoomContentsNotifier>();

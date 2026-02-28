@@ -13,7 +13,7 @@ namespace Selania.Rework.Components.Museum.Dialogue
 
         protected override void Configure(IContainerBuilder builder)
         {
-            builder.RegisterInstance(settings).As<ISettingsDialogueBox>().As<ISettingsLogger>();
+            builder.RegisterSettings(settings);
             builder.RegisterLogger();
             builder.Register<EmptyStory>(Lifetime.Singleton).As<IStoryLinear>().As<IStoryChoicesSelector>();
             builder.Register<EmptyAudioSystem>(Lifetime.Singleton).As<IAudioSystem>();

@@ -102,13 +102,46 @@ namespace Selania.Rework.Components
         /// </summary>
         /// <param name="containerBuilder">The container builder where to register the settings.</param>
         /// <param name="settings">The settings object to register.</param>
-        public static void RegisterSettings(this IContainerBuilder containerBuilder, SelaniaSettings settings)
+        /// <param name="settingsDialogueBox">An optional replacement object to register for the <see cref="ISettingsDialogueBox"/> interface.</param>
+        /// <param name="settingsLogger">An optional replacement object to register for the <see cref="ISettingsLogger"/> interface.</param>
+        /// <param name="settingsRooms">An optional replacement object to register for the <see cref="ISettingsRooms"/> interface.</param>
+        /// <param name="settingsAudio">An optional replacement object to register for the <see cref="ISettingsAudio"/> interface.</param>
+        /// <param name="settingsSaveSystem">An optional replacement object to register for the <see cref="ISettingsSaveSystem"/> interface.</param>
+        public static void RegisterSettings(this IContainerBuilder containerBuilder, SelaniaSettings settings,
+            ISettingsDialogueBox? settingsDialogueBox = null,
+            ISettingsLogger? settingsLogger = null,
+            ISettingsRooms? settingsRooms = null,
+            ISettingsAudio? settingsAudio = null,
+            ISettingsSaveSystem? settingsSaveSystem = null
+        )
         {
-            containerBuilder
-                .RegisterInstance(settings)
-                .As<ISettingsDialogueBox>()
-                .As<ISettingsRooms>()
-                .As<ISettingsAudio>();
+            var registrationBuilder = containerBuilder
+                .RegisterInstance(settings);
+
+            if (settingsDialogueBox != null)
+                containerBuilder.RegisterInstance(settingsDialogueBox).As<ISettingsDialogueBox>();
+            else
+                registrationBuilder.As<ISettingsDialogueBox>();
+
+            if (settingsLogger != null)
+                containerBuilder.RegisterInstance(settingsLogger).As<ISettingsLogger>();
+            else
+                registrationBuilder.As<ISettingsLogger>();
+
+            if (settingsRooms != null)
+                containerBuilder.RegisterInstance(settingsRooms).As<ISettingsRooms>();
+            else
+                registrationBuilder.As<ISettingsRooms>();
+
+            if (settingsAudio != null)
+                containerBuilder.RegisterInstance(settingsAudio).As<ISettingsAudio>();
+            else
+                registrationBuilder.As<ISettingsAudio>();
+
+            if (settingsSaveSystem != null)
+                containerBuilder.RegisterInstance(settingsSaveSystem).As<ISettingsSaveSystem>();
+            else
+                registrationBuilder.As<ISettingsSaveSystem>();
         }
     }
 }

@@ -20,13 +20,12 @@ namespace Selania.Rework.Components.Museum.SaveSystem
         {
             builder.RegisterInkBridgeInstance(inkBridge);
             builder.RegisterLogger();
-            builder.RegisterInstance(new SettingsRoom(rooms)).AsImplementedInterfaces();
-            builder.RegisterInstance(settings).As<ISettingsDialogueBox>().As<ISettingsLogger>();
-            builder.Register<SettingsSaveSystem>(Lifetime.Singleton).As<ISettingsSaveSystem>();
+            builder.RegisterSettings(settings,
+                settingsRooms: new SettingsRoom(rooms),
+                settingsSaveSystem: new SettingsSaveSystem());
             builder.Register<EmptyAudioSystem>(Lifetime.Singleton).As<IAudioSystem>();
         }
 
-        // ReSharper disable once ClassNeverInstantiated.Local - used by DI
         private class SettingsSaveSystem : ISettingsSaveSystem
         {
             public string saveDirPrefix => "museum_room_save_dir_";

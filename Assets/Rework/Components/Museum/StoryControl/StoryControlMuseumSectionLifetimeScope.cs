@@ -14,9 +14,9 @@ namespace Selania.Rework.Components.Museum.StoryControl
 
         protected override void Configure(IContainerBuilder builder)
         {
+            builder.RegisterSettings(settings);
             builder.RegisterLogger();
             builder.RegisterInkBridgeInstance(inkBridge);
-            builder.RegisterInstance(settings).As<ISettingsDialogueBox>().As<ISettingsLogger>();
             builder.Register<EmptyAudioSystem>(Lifetime.Singleton).As<IAudioSystem>();
         }
 
