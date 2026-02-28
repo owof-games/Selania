@@ -102,16 +102,14 @@ GESTIONE DELLO STATO DEI SIGILLI
 //Lista dei sigilli da scoprire
     VAR glyph_discoverableSigils = ()
 
-//Lista dei sigilli scoperti
+//Lista dei sigilli scoperti. Questa sarà anche la lista che renderà o meno visibili i sigilli sul libro. Se l'intersezione con used sarà vuota, il sigillo sarà attivabile, altrimenti sarà indicato come consumato.
     VAR glyph_discoveredSigils = ()
 
-//Lista dei sigilli utilizzati
+//Lista dei sigilli utilizzati.
     VAR glyph_usedSigils = ()
 
 //Tracciamento del sigillo attualmente attivo
     VAR glyph_actualActiveSigil = ()
-
-
 
 
 
