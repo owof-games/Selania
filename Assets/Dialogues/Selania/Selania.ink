@@ -147,6 +147,7 @@
     INCLUDE Nest\NestEWM.ink
     INCLUDE Nest\ColorManager.ink
     INCLUDE Nest\NestTranslator.ink
+    INCLUDE Nest\SigilCreationManagement.ink
 
 //Kitchen
     INCLUDE Kitchen\Kitchen.ink

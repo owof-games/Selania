@@ -65,7 +65,29 @@ LISTE COMBINATORIE DEI SIGILLI
     VAR glyph_aetherEarthWords = (AetherEarthWater, AetherEarthAir, AetherEarthFire)
 
 //Raggruppamento dei sigilli per posizione (es: FirstFire, SecondFire, ThirdFire)
+    VAR glyph_firstFire = ()
+    VAR glyph_secondFire = ()
+    VAR glyph_thirdFire = ()
 
+
+    VAR glyph_firstWater = ()
+    VAR glyph_secondWater = ()
+    VAR glyph_thirdWater = ()
+
+
+    VAR glyph_firstEarth = ()
+    VAR glyph_secondEarth = ()
+    VAR glyph_thirdEarth = ()
+
+
+    VAR glyph_firstAir = ()
+    VAR glyph_secondAir = ()
+    VAR glyph_thirdAir = ()
+
+
+    VAR glyph_firstAether = ()
+    VAR glyph_secondAether = ()
+    VAR glyph_thirdAether = ()
 
 
 /* ---------------------------------
