@@ -1,14 +1,23 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Selania.Rework.Interfaces
 {
     /// <summary>
-    ///     Interface for objects that support serialization and deserialization of the Ink story. A serialized version of
-    ///     the story, or save, is uniquely identified by a string. A story state serializer performs automatic saves in
-    ///     the background, following its own logic regarding when to do it and how many to keep.
+    ///     Interface for objects that support serialization and deserialization of the Ink story. A save state is a serialized
+    ///     version of the story together with some extra information, like the room where the story was saved in or a
+    ///     screenshot of the moment the story was saved. It is uniquely identified by a string (the descriptor). A story
+    ///     state serializer produces automatic saves in the background, following its own logic regarding when to do it
+    ///     and how many to keep.
     /// </summary>
     public interface IStoryStateSerializer
     {
+        /// <summary>
+        ///     Get the full list of save states, starting from the most recent one to the oldest one.
+        /// </summary>
+        /// <returns>A list of save states.</returns>
+        public IAsyncEnumerable<SaveState> GetSaveStates();
+
         /// <summary>
         ///     Start a story using the given serialization descriptor. If none is given, a new story is started.
         /// </summary>
@@ -16,38 +25,11 @@ namespace Selania.Rework.Interfaces
         public void StartStory(string? descriptor);
 
         /// <summary>
-        ///     Get the list of automatic save descriptors.
+        /// A save state.
         /// </summary>
-        /// <returns>A list of story descriptors.</returns>
-        public IList<string> GetAutomaticSaveDescriptors();
-
-        /// <summary>
-        ///     Explicitly perform a save in the given slot.
-        /// </summary>
-        /// <param name="slot">The slot number to save to.</param>
-        public void Save(int slot);
-
-        /// <summary>
-        ///     Get an explicit save.
-        /// </summary>
-        /// <param name="slot">The slot of the save to retrieve.</param>
-        /// <returns>The descriptor at given slot, or <c>null</c> if the slot is empty.</returns>
-        public string? GetExplicitSaveDescriptor(int slot);
-
-        /// <summary>
-        ///     Delete the save at the given slot.
-        /// </summary>
-        /// <param name="slot">Slot number to free.</param>
-        public void DeleteSave(int slot);
-
-        /// <summary>
-        ///     Get the descriptor for the reader mode, if there's a reader mode save.
-        /// </summary>
-        public string? GetReaderModeDescriptor();
-
-        /// <summary>
-        ///     Delete the special slot for the reader mode (if there's any).
-        /// </summary>
-        public void DeleteReaderModeSlot();
+        /// <param name="Descriptor">Descriptor for this save state (unique identifier).</param>
+        /// <param name="RoomInkName">The name of the room as it's represented in ink's "listPlaces" list.</param>
+        /// <param name="Timestamp">The time when this save state was created, as expressed in number of ticks.</param>
+        public record struct SaveState(string Descriptor, string RoomInkName, DateTime Timestamp);
     }
 }

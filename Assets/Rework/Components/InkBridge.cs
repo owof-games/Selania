@@ -63,7 +63,7 @@ namespace Selania.Rework.Components
         public void SetUp(ILogger<InkBridge> newLogger, string? saveDirPrefix = null)
         {
             _logger = newLogger;
-            if (saveDirPrefix != null) _saveDirPrefix = saveDirPrefix;
+            if (saveDirPrefix != null) _saveDirSearchPattern = saveDirPrefix + "*";
 
             OnStartRoomLocation();
 
@@ -554,7 +554,12 @@ namespace Selania.Rework.Components
         /// <summary>
         ///     Name of the JSON file inside the save directory.
         /// </summary>
-        private const string JsonFileName = "savefile.json";
+        private const string SaveFileJsonFileName = "savefile.json";
+
+        /// <summary>
+        ///     Name of the Ink story state, serialized as JSON, inside the save directory.
+        /// </summary>
+        private const string InkStoryStateJsonFileName = "ink.json";
 
         /// <summary>
         ///     The class that gets serialized in the save file.
@@ -563,34 +568,17 @@ namespace Selania.Rework.Components
         private class SaveData
         {
             /// <summary>
-            ///     The JSON serialized by Ink for its story state
+            /// See <see cref="IStoryStateSerializer.SaveState.timestamp"/>.
             /// </summary>
-            public required string inkStoryState;
+            public required long timestamp;
+
+            /// <summary>
+            ///     See <see cref="IStoryStateSerializer.SaveState.roomInkName" />.
+            /// </summary>
+            public required string roomInkName;
         }
 
-        private string _saveDirPrefix = "save_dir_";
-
-        private const string ReaderModeSlotName = "reader_mode";
-
-        private string GetSlotDescriptor(string slot)
-        {
-            return $"{_saveDirPrefix}slot_{slot}";
-        }
-
-        private string GetSlotDescriptor(int slot)
-        {
-            return GetSlotDescriptor(slot.ToString());
-        }
-
-        private static string GetPathFromDescriptor(string descriptor)
-        {
-            return Path.Join(Application.persistentDataPath, descriptor);
-        }
-
-        private static string GetJsonFilePathFromDescriptor(string descriptor)
-        {
-            return Path.Join(Application.persistentDataPath, descriptor, JsonFileName);
-        }
+        private string _saveDirSearchPattern = "save_dir_*";
 
         /// <inheritdoc />
         public void StartStory(string? descriptor)
@@ -600,10 +588,9 @@ namespace Selania.Rework.Components
             if (descriptor != null)
             {
                 logger.ZLogInformation($"Loading save file {descriptor}.");
-                var jsonPath = GetJsonFilePathFromDescriptor(descriptor);
+                var jsonPath = Path.Join(Application.persistentDataPath, descriptor, InkStoryStateJsonFileName);
                 var json = File.ReadAllText(jsonPath);
-                var saveData = JsonUtility.FromJson<SaveData>(json);
-                story.state.LoadJson(saveData.inkStoryState);
+                story.state.LoadJson(json);
                 logger.ZLogInformation($"Save file {descriptor} loaded!");
                 LogAndNotifyCurrentState(true);
             }
@@ -616,71 +603,28 @@ namespace Selania.Rework.Components
         }
 
         /// <inheritdoc />
-        public IList<string> GetAutomaticSaveDescriptors()
+        public async IAsyncEnumerable<IStoryStateSerializer.SaveState> GetSaveStates()
         {
-            return Directory.GetDirectories(Application.persistentDataPath, $"${_saveDirPrefix}auto_*",
+            // loop over all the directories matching the pattern for save directories.
+            var directories = Directory.GetDirectories(Application.persistentDataPath, _saveDirSearchPattern,
                 SearchOption.TopDirectoryOnly);
-        }
 
-        /// <summary>
-        ///     Create or overwrite a save in the given directory inside the application persistent path.
-        /// </summary>
-        /// <param name="dirName">The name of the directory where to put the save.</param>
-        private void Save(string dirName)
-        {
-            logger.ZLogInformation($"Saving save file in directory {dirName} in {Application.persistentDataPath}.");
-            var story = GetStory();
-            var inkStoryState = story.state.ToJson();
-            var saveData = new SaveData
+            foreach (var directory in directories)
             {
-                inkStoryState = inkStoryState
-            };
-            var json = JsonUtility.ToJson(saveData);
-            Directory.CreateDirectory(GetPathFromDescriptor(dirName));
-            var path = GetJsonFilePathFromDescriptor(dirName);
-            File.WriteAllText(path, json);
-            logger.ZLogInformation($"Save completed.");
-        }
+                // read the data describing the save
+                var jsonPath = Path.Join(Application.persistentDataPath, directory, SaveFileJsonFileName);
+                var json = await File.ReadAllTextAsync(jsonPath);
+                var saveData = JsonUtility.FromJson<SaveData>(json);
+                if (saveData == null)
+                {
+                    _logger!.ZLogError($"Error while parsing save data from file {jsonPath}");
+                    continue;
+                }
 
-        /// <inheritdoc />
-        public void Save(int slot)
-        {
-            Save(GetSlotDescriptor(slot));
-        }
-
-        private void SaveReaderMode()
-        {
-            Save(GetSlotDescriptor(ReaderModeSlotName));
-        }
-
-        /// <inheritdoc />
-        public string? GetExplicitSaveDescriptor(int slot)
-        {
-            var descriptor = GetSlotDescriptor(slot);
-            return Directory.Exists(GetPathFromDescriptor(descriptor)) ? descriptor : null;
-        }
-
-        /// <inheritdoc />
-        public void DeleteSave(int slot)
-        {
-            var path = GetPathFromDescriptor(GetSlotDescriptor(slot));
-            if (Directory.Exists(path)) Directory.Delete(path, true);
-        }
-
-        /// <inheritdoc />
-        public string? GetReaderModeDescriptor()
-        {
-            var readerModeDescriptor = GetSlotDescriptor(ReaderModeSlotName);
-            var path = GetPathFromDescriptor(readerModeDescriptor);
-            return Directory.Exists(path) ? readerModeDescriptor : null;
-        }
-
-        /// <inheritdoc />
-        public void DeleteReaderModeSlot()
-        {
-            var readerModeDescriptor = GetSlotDescriptor(ReaderModeSlotName);
-            var path = GetPathFromDescriptor(readerModeDescriptor);
-            if (Directory.Exists(path)) Directory.Delete(path, true);
+                // map it to save states
+                yield return new IStoryStateSerializer.SaveState(directory, saveData.roomInkName,
+                    new DateTime(saveData.timestamp, DateTimeKind.Utc));
+            }
         }
 
         #endregion
