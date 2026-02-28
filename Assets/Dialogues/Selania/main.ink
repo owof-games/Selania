@@ -63,7 +63,11 @@
 <- reading_place
 
 //Elementi del nido
-// <- nest_object
+<- nest_fireGlyph_button
+<- nest_airGlyph_button
+<- nest_earthGlyph_button
+<- nest_waterGlyph_button
+<- nest_aetherGlyph_button
 
 //Elementi del libro
 <- first_character_recap

@@ -19,39 +19,56 @@
 }
     
 //Per prima cosa passiamo dalla funzione di attivazione/disattivazione dei tasti glyph_activator_function 
-    -> glyph_activator_function ->
-        
-    Prima scelta
-    {debug_nest: stato bottoni: nest_firstFireButton {nest_firstFireButton}, nest_firstEarthButton {nest_firstEarthButton}, nest_firstAirButton {nest_firstAirButton}, nest_firstWaterButton {nest_firstWaterButton}, nest_firstAetherButton {nest_firstAetherButton}}
+    -> glyph_activator_function -> main
+    
 
-            + {are_two_entities_together(PG,fireGlyph) && nest_firstFireButton}[fireGlyph]
+
+=== nest_fireGlyph_button ===
+    + {are_two_entities_together(PG,fireGlyph) && nest_firstFireButton}[fireGlyph]
                 ~ firstChoice = glyph_firstFire
                 ~ nest_secondFireButton = false
                 ~ nest_thirdFireButton = false
-            
-            + {are_two_entities_together(PG,earthGlyph) && nest_firstEarthButton}[earthGlyph]
-                ~ firstChoice = glyph_firstEarth
-                ~ nest_secondEarthButton = false
-                ~ nest_thirdEarthButton = false
-            
-            + {are_two_entities_together(PG,airGlyph) && nest_firstAirButton}[airGlyph]
+        -> second_choice
+
+
+
+=== nest_airGlyph_button ===
++ {are_two_entities_together(PG,airGlyph) && nest_firstAirButton}[airGlyph]
                 ~ firstChoice = glyph_firstAir
                 ~ nest_secondAirButton = false
                 ~ nest_thirdAirButton = false
+    -> second_choice            
             
-            + {are_two_entities_together(PG,waterGlyph) && nest_firstWaterButton}[waterGlyph]
+
+=== nest_earthGlyph_button ===
++ {are_two_entities_together(PG,earthGlyph) && nest_firstEarthButton}[earthGlyph]
+                ~ firstChoice = glyph_firstEarth
+                ~ nest_secondEarthButton = false
+                ~ nest_thirdEarthButton = false
+    -> second_choice            
+            
+
+
+
+=== nest_waterGlyph_button ===
++ {are_two_entities_together(PG,waterGlyph) && nest_firstWaterButton}[waterGlyph]
                 ~ firstChoice = glyph_firstWater
                 ~ nest_secondWaterButton = false
                 ~ nest_thirdWaterButton = false
+    -> second_choice           
             
-            + {are_two_entities_together(PG,aetherGlyph) && nest_firstAetherButton}[aetherGlyph]
+
+
+=== nest_aetherGlyph_button ===
++ {are_two_entities_together(PG,aetherGlyph) && nest_firstAetherButton}[aetherGlyph]
                 ~ firstChoice = glyph_firstAether
                 ~ nest_secondAetherButton = false
                 ~ nest_thirdAetherButton = false
+    -> second_choice
 
-            -
 
-    Seconda scelta
+
+=== second_choice
     {debug_nest: stato bottoni: nest_secondFireButton {nest_secondFireButton}, nest_secondEarthButton {nest_secondEarthButton}, nest_secondAirButton {nest_secondAirButton}, nest_secondWaterButton {nest_secondWaterButton}, nest_secondAetherButton {nest_secondAetherButton}}
             + {are_two_entities_together(PG,fireGlyph) && nest_secondFireButton && (firstChoice ^ glyph_secondFire != ())}[fireGlyph]
                 ~ secondChoice = glyph_secondFire

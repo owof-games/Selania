@@ -305,7 +305,7 @@ VAR nest_newSigilDiscovered = ()
                 ~ nest_firstEarthButton = true
     }
     
-    
+{debug_nest: stato bottoni: nest_firstFireButton {nest_firstFireButton}, nest_firstEarthButton {nest_firstEarthButton}, nest_firstAirButton {nest_firstAirButton}, nest_firstWaterButton {nest_firstWaterButton}, nest_firstAetherButton {nest_firstAetherButton}}    
 
 ->->
 

@@ -12,6 +12,7 @@ VAR notification_francoQuests = false
     - nest_newSigilDiscovered != ():
         {player_name} ha scoperto {nest_newSigilDiscovered}.
             ~ nest_newSigilDiscovered = ()
+        -> main    
 }
 
 
@@ -91,4 +92,4 @@ VAR notification_francoQuests = false
         }
 }
 
--> main
+->->
