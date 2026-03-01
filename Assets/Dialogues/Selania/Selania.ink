@@ -21,6 +21,11 @@
     INCLUDE Code\SpeakerTagManagers.ink
     INCLUDE Code\TextFunctions.ink
     INCLUDE Code\Notifications.ink
+    INCLUDE Code\ChoicesManagement\Glyph&SigilsFunctions.ink
+    INCLUDE Code\ChoicesManagement\ChoicesManager.ink
+    INCLUDE Code\ChoicesManagement\SigilsActivation.ink
+    INCLUDE Code\ChoicesManagement\GlyphsVarAndLists.ink
+    INCLUDE Code\ChoicesManagement\SigilsTranslator.ink
 
 //File dedicati alla gestione delle personagge
     INCLUDE CommonPNGElements\ScheduleFunctions.ink
@@ -30,9 +35,8 @@
     INCLUDE CommonPNGElements\SpecialStorylets.ink
     INCLUDE CommonPNGElements\OnMovementsEvents.ink
     INCLUDE CommonPNGElements\GiftsAndIngredientFunctions.ink
-    INCLUDE CommonPNGElements\Glyph&SigilsFunctions.ink
     INCLUDE CommonPNGElements\NamingFunctions.ink
-    INCLUDE CommonPNGElements\GlyphsVarAndLists.ink
+
 
 
                     /* ---------------------------------
@@ -142,10 +146,6 @@
 //Nest
     INCLUDE Nest\Nest.ink
     INCLUDE Nest\NestVarsAndLists.ink
-    INCLUDE Nest\NestDispatcher.ink
-    INCLUDE Nest\NestEWM.ink
-    INCLUDE Nest\NestTranslator.ink
-    INCLUDE Nest\SigilCreationManagement.ink
 
 //Kitchen
     INCLUDE Kitchen\Kitchen.ink

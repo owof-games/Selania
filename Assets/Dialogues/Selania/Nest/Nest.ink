@@ -22,6 +22,8 @@
     ~ nest_updateButtons()
 -> main
 
+
+//E qui ci sono tutti i bottoni
 === nest_fireGlyph_button ===
     + {are_two_entities_together(PG,fireGlyph) && nest_fireButton}[fireGlyph]
         ~ saveGlyph(Fire)
