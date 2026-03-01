@@ -132,15 +132,15 @@ LIST nest_speakersForEwWordTag = Influenced, Other
     - Influenced:
         {
             //Se c'è una parola attiva
-            - nest_activeEmotionalWord != ():
+            - glyph_actualActiveSigil != ():
                 {
                     //E ci sono utilizzi multipli a disposizione
                     - glyph_temporaryWordUsageCounter > 1:
-                        ~ return "{sigils_translator(nest_activeEmotionalWord)}, {glyph_temporaryWordUsageCounter} usi disponibili."
+                        ~ return "{sigils_translator(glyph_actualActiveSigil)}, {glyph_temporaryWordUsageCounter} usi disponibili."
                     
                     //Altrimenti:
                     - glyph_temporaryWordUsageCounter == 1:
-                        ~ return "{sigils_translator(nest_activeEmotionalWord)}, {glyph_temporaryWordUsageCounter} uso disponibile."  
+                        ~ return "{sigils_translator(glyph_actualActiveSigil)}, {glyph_temporaryWordUsageCounter} uso disponibile."  
                 }
             
             - else:

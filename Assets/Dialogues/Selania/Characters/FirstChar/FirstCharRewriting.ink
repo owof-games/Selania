@@ -554,7 +554,7 @@
     = exit
     ~ temp charNameOne = translator(firstChar_ActualName)
         {
-            - nest_foundedGlyphs hasnt fireGlyph:
+            - contentsNest hasnt fireGlyph:
                 Un'ultima cosa, {player_name}.
             Volevo lasciarti qualcosa di buono di me, prima di andarmene, e ho pensato di donarti una conchiglia.
             {
@@ -564,7 +564,7 @@
                 - else: 
                     Una certa voce mi ha detto che presto saprai cosa farne. E te la farà trovare dove ne avrai più bisogno.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             }
-            ~ nest_foundedGlyphs += fireGlyph
+            ~ move_entity(fireGlyph, Pond)
 
         }
             

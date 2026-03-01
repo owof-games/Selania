@@ -140,10 +140,7 @@ GESTIONE DELLO STATO DEI SIGILLI
 ----------------------------------*/
 
 //I due stati possibili dei sigilli (discovered è implicito se è nella lista glyph_discoveredSigils)
-    LIST glyph_sigilState= Active, Used
-
-//Lista dei sigilli da scoprire
-    VAR glyph_discoverableSigils = (FireAirWater, FireAirEarth, FireAirAether, FireWaterEarth, FireWaterAether, FireWaterAir, FireEarthWater, FireEarthAether, FireEarthAir, FireAetherWater, FireAetherEarth, FireAetherAir, AirFireEarth, AirFireAether, AirFireWater, AirWaterEarth, AirWaterAether, AirWaterFire, AirEarthAether, AirEarthWater, AirEarthFire, AirAetherEarth, AirAetherWater, AirAetherFire,WaterFireEarth, WaterFireAether, WaterFireAir, WaterAirEarth, WaterAirAether, WaterAirFire, WaterEarthAether, WaterEarthAir, WaterEarthFire, WaterAetherEarth, WaterAetherAir, WaterAetherFire, EarthFireAether, EarthFireWater, EarthFireAir, EarthAirAether, EarthAirWater, EarthAirFire, EarthWaterAether, EarthWaterAir, EarthWaterFire,EarthAetherWater, EarthAetherAir, EarthAetherFire, AetherFireEarth, AetherFireWater, AetherFireAir, AetherAirEarth, AetherAirWater, AetherAirFire, AetherWaterEarth, AetherWaterAir, AetherWaterFire, AetherEarthWater, AetherEarthAir, AetherEarthFire)
+    LIST glyph_sigilState = Active, Used
 
 //Lista dei sigilli scoperti. Questa sarà anche la lista che renderà o meno visibili i sigilli sul libro. Se l'intersezione con used sarà vuota, il sigillo sarà attivabile, altrimenti sarà indicato come consumato.
     VAR glyph_discoveredSigils = ()

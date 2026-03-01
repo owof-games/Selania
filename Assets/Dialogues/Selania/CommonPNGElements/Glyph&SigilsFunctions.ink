@@ -24,7 +24,7 @@
 //Funzione di dispatch comune (sigillo attivo o meno)
 
 === glyph_modifier_variation_management(PNG, GlyphC, VARPG)
-{debug_nest: passo per glyph_modifier_variation_management. Il valore di PNG è {PNG}, il valore di GlyphCe è {GlyphC}. Lo stato della parola attiva è {nest_activeEmotionalWord}.}
+{debug_nest: passo per glyph_modifier_variation_management. Il valore di PNG è {PNG}, il valore di GlyphCe è {GlyphC}. Lo stato della parola attiva è {glyph_actualActiveSigil}.}
     
     //Primo step: capiamo di chi si parla.
 
@@ -133,7 +133,7 @@
     {
         //Se sigillo attivo, andiamo a formula ad hoc
         - glyph_actualActiveSigil != ():
-            {debug_nest: è attiva la parola magica {nest_activeEmotionalWord}, per cui mi sposto al settore dedicato.}
+            {debug_nest: è attiva la parola magica {glyph_actualActiveSigil}, per cui mi sposto al settore dedicato.}
                 -> sigil_glyph_updater
         
         

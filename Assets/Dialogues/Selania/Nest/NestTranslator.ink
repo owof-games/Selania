@@ -1,4 +1,3 @@
-
 === function sigils_translator(wordValue)
 //Da fare quando son sicura del tutto
 {debug_nest: sigils_translator.}
@@ -196,5 +195,5 @@
                 ~ return "nome parola"
    
             
-            -else: Traduzione colore parola {nest_activeEmotionalWord} non trovato!
+            -else: Traduzione colore parola {glyph_actualActiveSigil} non trovato!
     }
