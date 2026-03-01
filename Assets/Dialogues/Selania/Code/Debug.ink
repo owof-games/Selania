@@ -6,13 +6,13 @@
     VAR debug_cultivable = false
     VAR debug_changeName = false
     VAR debug_kitchen = false
-    VAR debug_nest = true
+    VAR debug_nest = false
     VAR debug_frog = false
     
     //per testare i luoghi non subito aperti con calma
     VAR debug_testLibrary = false
     VAR debug_testKitchen = false
-    VAR debug_testNest = false
+    VAR debug_testNest = true
     VAR debug_testFrog = false
     VAR debug_testDump = false
     VAR debug_testGreenhouse = false

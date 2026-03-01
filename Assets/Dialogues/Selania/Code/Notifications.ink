@@ -11,6 +11,7 @@ VAR notification_francoQuests = false
 {
     - nest_newSigilDiscovered != ():
         {player_name} ha scoperto {sigils_translator(nest_newSigilDiscovered)}.
+        frase temporanea: {nest_newSigilDiscovered}.
             ~ nest_newSigilDiscovered = ()
         -> main
 }

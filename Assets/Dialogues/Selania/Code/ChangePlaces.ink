@@ -20,7 +20,6 @@
 //Streets to and into the Bedroom
     + {are_two_entities_together(PG, FromTrainStopToBedroom)} [FromTrainStopToBedroom]
             ~ move_entity(PG, Bedroom)
-            ~ book_arrivingFromTracking = Bedroom
         -> on_movement_events ->
         -> bedroom
     
@@ -47,39 +46,32 @@
 //Streets to Train Stop
     + {are_two_entities_together(PG, FromBedroomToTrainStop)} [FromBedroomToTrainStop]
         ~ move_entity(PG, TrainStop)
-        ~ book_arrivingFromTracking = TrainStop
             -> train_stop
     
     + {are_two_entities_together(PG, FromForestToTrainStop)}  [FromForestToTrainStop]
             ~ move_entity(PG, TrainStop)
-            ~ book_arrivingFromTracking = TrainStop
             -> on_movement_events ->
                 -> train_stop
                 
 //Streets to Forest      
     + {are_two_entities_together(PG, FromTrainStopToForest)} [FromTrainStopToForest]
             ~ move_entity(PG, Forest)
-            ~ book_arrivingFromTracking = Forest
             -> on_movement_events ->
                 -> forest
         
-        
     + {are_two_entities_together(PG, FromPondToForest)} [FromPondToForest]
             ~ move_entity(PG, Forest)
-            ~ book_arrivingFromTracking = Forest
             -> on_movement_events ->
                 -> forest
     
     + {are_two_entities_together(PG, FromLibraryToForest)} [FromLibraryToForest]
             ~ move_entity(PG, Forest)
-            ~ book_arrivingFromTracking = Forest
             -> on_movement_events ->
             -> empty_tempTW ->  
                 -> forest
 
     + {are_two_entities_together(PG, FromDumpToForest)} [FromDumpToForest]
             ~ move_entity(PG, Forest)
-            ~ book_arrivingFromTracking = Forest
             -> on_movement_events ->
                 -> forest            
     
@@ -87,7 +79,6 @@
  //Streets to Pond   
     + {are_two_entities_together(PG, FromGreenhouseToPond)} [FromGreenhouseToPond]
             ~ move_entity(PG, Pond)
-            ~ book_arrivingFromTracking = Pond
             //Uscendo dalla serra svuotiamo la lista dei TW temporanei dei coltivabili
             -> empty_tempCultTW ->
             -> on_movement_events ->
@@ -95,13 +86,11 @@
         
     + {are_two_entities_together(PG, FromForestToPond)} [FromForestToPond]
             ~ move_entity(PG, Pond)
-            ~ book_arrivingFromTracking = Pond
             -> on_movement_events ->
                 -> pond
         
     + {are_two_entities_together(PG, FromKitchenToPond)} [FromKitchenToPond]
             ~ move_entity(PG, Pond)
-            ~ book_arrivingFromTracking = Pond
             //Per sicurezza passo per cooking off, soprattutto nel caso in cui lx png stessero cucinando da solx.
             -> cooking_animations_off ->
             -> on_movement_events ->
@@ -110,14 +99,12 @@
 //Streets to Greenhouse
     + {are_two_entities_together(PG, FromPondToGreenhouse)}  [FromPondToGreenhouse]
             ~ move_entity(PG, Greenhouse)
-            ~ book_arrivingFromTracking = Greenhouse
             -> on_movement_events ->
                 -> greenhouse
 
 
     + {are_two_entities_together(PG, FromPondToGreenhouseBlooming)} [FromPondToGreenhouseBlooming]
             ~ move_entity(PG, Greenhouse)
-            ~ book_arrivingFromTracking = Greenhouse
             -> on_movement_events ->
             -> greenhouse
 
@@ -131,7 +118,6 @@
     {
         - debug_testLibrary:
             ~ move_entity(PG, Library)
-            ~ book_arrivingFromTracking = Library
             -> on_movement_events ->
                 -> library
         
@@ -143,13 +129,11 @@
             
     + {are_two_entities_together(PG, FromForestToLibrary)} [FromForestToLibrary]
             ~ move_entity(PG, Library)
-            ~ book_arrivingFromTracking = Library
             -> on_movement_events ->
                 -> library
         
     + {are_two_entities_together(PG, FromNestToLibrary) and not firstGlyph} [FromNestToLibrary]
             ~ move_entity(PG, Library)
-            ~ book_arrivingFromTracking = Library
             -> on_movement_events ->
                 -> library
         
@@ -157,7 +141,6 @@
     //Streets to Kitchen
     + {are_two_entities_together(PG, FromPondToKitchen)} [FromPondToKitchen]
             ~ move_entity(PG, Kitchen)
-            ~ book_arrivingFromTracking = Kitchen
                 -> on_movement_events ->
                 -> kitchen
 
@@ -167,7 +150,6 @@
     {
         - debug_testKitchen:
             ~ move_entity(PG, Kitchen)
-            ~ book_arrivingFromTracking = Kitchen
                 -> on_movement_events ->
                 -> kitchen
         - else:
@@ -179,7 +161,6 @@
     //Streets to Nest
     + {are_two_entities_together(PG, FromLibraryToNest)} [FromLibraryToNest]
             ~ move_entity(PG, Nest)
-            ~ book_arrivingFromTracking = Nest
                 -> on_movement_events ->
                 -> empty_tempTW ->  
                 -> nest
@@ -188,7 +169,6 @@
         {
             - debug_testNest:
                 ~ move_entity(PG, Nest)
-                ~ book_arrivingFromTracking = Nest
                     -> on_movement_events ->
                     -> nest
             - else:
@@ -199,7 +179,6 @@
     //Streets to Dump
     + {are_two_entities_together(PG, FromForestToDump)} [FromForestToDump]
             ~ move_entity(PG, Dump)
-            ~ book_arrivingFromTracking = Dump
                 -> on_movement_events ->
                 -> dump
 

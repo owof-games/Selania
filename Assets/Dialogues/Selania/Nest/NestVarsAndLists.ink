@@ -11,11 +11,8 @@ VAR nest_earthButton = false
 VAR nest_aetherButton = false
 
 
-
-
 //Notifichiamo una nuova scoperta
 VAR nest_newSigilDiscovered = ()   
-
 
 
 //Funzioni per la creazione dei sigilli nel nido
@@ -76,10 +73,12 @@ VAR nest_newSigilDiscovered = ()
 ~ temp chosenSigil = sigilsWithGlyphInFirstPosition(firstGlyph) ^ sigilsWithGlyphInSecondPosition(secondGlyph) ^ sigilsWithGlyphInThirdPosition(thirdGlyph)
 {debug_nest: Il sigillo scelto è: {chosenSigil}}
 ~ glyph_discoveredSigils += chosenSigil
+//con questo pezzetto informo il sistema di notifica di notificare il nuovo sigillo trovato
 ~ nest_newSigilDiscovered += chosenSigil
 ~ firstGlyph = ()
 ~ secondGlyph = ()
 ~ thirdGlyph = ()
+
 
 //Questa funzione decide a quale step di glifo assegnare la scelta fatta
 === function saveGlyph(glyph) ===
@@ -91,7 +90,6 @@ VAR nest_newSigilDiscovered = ()
     - not thirdGlyph:
         ~ thirdGlyph = glyph
 }
-
 
 
 //Funzioni per check posizione glifo
