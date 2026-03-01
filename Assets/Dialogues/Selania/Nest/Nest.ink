@@ -1,3 +1,13 @@
+VAR firstGlyph = ()
+VAR secondGlyph = ()
+VAR thirdGlyph = ()
+
+VAR nest_fireButton = false
+VAR nest_airButton = false
+VAR nest_waterButton = false
+VAR nest_earthButton = false
+VAR nest_aetherButton = false
+
 === nest ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
@@ -17,94 +27,118 @@
                 E un glifo rosso già attende {player_name}, dono di una persona amica dopo la sua riscrittura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         }
 }
+
+~ nest_updateButtons()
+-> main
     
 //Per prima cosa passiamo dalla funzione di attivazione/disattivazione dei tasti glyph_activator_function 
-    -> glyph_activator_function -> main
-    
+    // -> glyph_activator_function -> main
+
+
+=== function nest_updateButtons() ===
+
+~ nest_airButton = canChooseGlyph(Air)
+~ nest_fireButton = canChooseGlyph(Fire)
+~ nest_earthButton = canChooseGlyph(Earth)
+~ nest_waterButton = canChooseGlyph(Water)
+~ nest_aetherButton = canChooseGlyph(Aether)
+
+
+
+
+=== function canChooseGlyph(checkedGlyph) ===
+
+~ temp first = firstGlyph
+~ temp second = secondGlyph
+~ temp third = thirdGlyph
+{
+    - not firstGlyph:
+        ~ first = checkedGlyph
+    - not secondGlyph:
+        ~ second = checkedGlyph
+    - not thirdGlyph:
+        ~ third = checkedGlyph
+}
+
+// primo step: ottenere la lista dei sigilli che posso creare scegliendo first, second e third
+~ temp allSigils = LIST_ALL(glyph_allSigils)
+{first and not second and not third:
+    ~ allSigils = sigilsWithGlyphInFirstPosition(first)
+}
+{first and second and not third:
+    ~ allSigils = sigilsWithGlyphInFirstPosition(first) ^ sigilsWithGlyphInSecondPosition(second)
+}
+{first and second and third:
+    ~ allSigils = sigilsWithGlyphInFirstPosition(first) ^ sigilsWithGlyphInSecondPosition(second) ^ sigilsWithGlyphInThirdPosition(third)
+}
+{debug_nest: I sigilli con first={first}, second={second}, third={third} sono {allSigils}}
+
+// secondo step: togliere quelli già scoperti
+~ allSigils -= glyph_discoveredSigils
+{debug_nest: I sigilli rimasti sono {allSigils}}
+
+// terzo step: verificare se ne è rimasto almeno uno
+~ temp someRemaining = allSigils != ()
+{debug_nest: Rimangono sigilli? {someRemaining}}
+
+~ return someRemaining
+
+
+=== function checkSigilCompleted() ===
+{not thirdGlyph:
+    ~ return
+}
+~ temp chosenSigil = sigilsWithGlyphInFirstPosition(firstGlyph) ^ sigilsWithGlyphInSecondPosition(secondGlyph) ^ sigilsWithGlyphInThirdPosition(thirdGlyph)
+{debug_nest: Il sigillo scelto è: {chosenSigil}}
+~ glyph_discoveredSigils += chosenSigil
+~ firstGlyph = ()
+~ secondGlyph = ()
+~ thirdGlyph = ()
+
+
+
+=== function saveGlyph(glyph) ===
+{
+    - not firstGlyph:
+        ~ firstGlyph = glyph
+    - not secondGlyph:
+        ~ secondGlyph = glyph
+    - not thirdGlyph:
+        ~ thirdGlyph = glyph
+}
 
 
 === nest_fireGlyph_button ===
-    + {are_two_entities_together(PG,fireGlyph) && nest_firstFireButton}[fireGlyph]
-            ~ firstChoice = glyph_firstFire
-            ~ nest_secondFireButton = false
-            ~ nest_thirdFireButton = false
-        -> second_choice
-
-
+    + {are_two_entities_together(PG,fireGlyph) && nest_fireButton}[fireGlyph]
+        ~ saveGlyph(Fire)
+        ~ checkSigilCompleted()
+        ~ nest_updateButtons()
+        -> main
 
 === nest_airGlyph_button ===
-+ {are_two_entities_together(PG,airGlyph) && nest_firstAirButton}[airGlyph]
-        ~ firstChoice = glyph_firstAir
-        ~ nest_secondAirButton = false
-        ~ nest_thirdAirButton = false
-    -> second_choice            
-            
+    + {are_two_entities_together(PG,airGlyph) && nest_airButton}[airGlyph]
+        ~ saveGlyph(Air)
+        ~ checkSigilCompleted()
+        ~ nest_updateButtons()
+        -> main
 
 === nest_earthGlyph_button ===
-+ {are_two_entities_together(PG,earthGlyph) && nest_firstEarthButton}[earthGlyph]
-        ~ firstChoice = glyph_firstEarth
-        ~ nest_secondEarthButton = false
-        ~ nest_thirdEarthButton = false
-    -> second_choice            
-            
-=== nest_waterGlyph_button ===
-+ {are_two_entities_together(PG,waterGlyph) && nest_firstWaterButton}[waterGlyph]
-        ~ firstChoice = glyph_firstWater
-        ~ nest_secondWaterButton = false
-        ~ nest_thirdWaterButton = false
-    -> second_choice           
-            
+    + {are_two_entities_together(PG,earthGlyph) && nest_earthButton}[earthGlyph]
+        ~ saveGlyph(Earth)
+        ~ checkSigilCompleted()
+        ~ nest_updateButtons()
+        -> main
 
+=== nest_waterGlyph_button ===
+    + {are_two_entities_together(PG,waterGlyph) && nest_waterButton}[waterGlyph]
+        ~ saveGlyph(Water)
+        ~ checkSigilCompleted()
+        ~ nest_updateButtons()
+        -> main
 
 === nest_aetherGlyph_button ===
-+ {are_two_entities_together(PG,aetherGlyph) && nest_firstAetherButton}[aetherGlyph]
-        ~ firstChoice = glyph_firstAether
-        ~ nest_secondAetherButton = false
-        ~ nest_thirdAetherButton = false
-    -> second_choice
-
-
-
-=== second_choice
-//Ovvero: se ho cliccato almeno un tasto, si disattiva l'uscita fino a quando non sono a tre
-    {debug_nest: stato bottoni: nest_secondFireButton {nest_secondFireButton}, nest_secondEarthButton {nest_secondEarthButton}, nest_secondAirButton {nest_secondAirButton}, nest_secondWaterButton {nest_secondWaterButton}, nest_secondAetherButton {nest_secondAetherButton}}
-    
-            + {are_two_entities_together(PG,fireGlyph) && nest_secondFireButton && (firstChoice ^ glyph_secondFire != ())}[fireGlyph]
-                ~ secondChoice = glyph_secondFire
-                ~ nest_thirdFireButton = false
-            
-            + {are_two_entities_together(PG,earthGlyph) && nest_secondEarthButton && (firstChoice ^ glyph_secondEarth != ())}[earthGlyph]
-                ~ secondChoice = glyph_secondEarth
-                ~ nest_thirdEarthButton = false
-            
-            + {are_two_entities_together(PG,airGlyph) && nest_secondAirButton && (firstChoice ^ glyph_secondAir!= ())}[airGlyph]
-                ~ secondChoice = glyph_secondAir
-                ~ nest_thirdAirButton = false
-            
-            + {are_two_entities_together(PG,waterGlyph) && nest_secondWaterButton && (firstChoice ^ glyph_secondWater != ())}[waterGlyph]
-                ~ secondChoice = glyph_secondWater
-                ~ nest_thirdWaterButton = false
-            
-            + {are_two_entities_together(PG,aetherGlyph) && nest_secondAetherButton && (firstChoice ^ glyph_secondAether != ())}[aetherGlyph]
-                ~ secondChoice = glyph_secondAether
-                ~ nest_thirdAetherButton = false
-            -
-
-    {debug_nest: stato bottoni: nest_thirdFireButton {nest_thirdFireButton}, nest_thirdEarthButton {nest_thirdEarthButton}, nest_thirdAirButton {nest_thirdAirButton}, nest_thirdWaterButton {nest_thirdWaterButton}, nest_thirdAetherButton {nest_thirdAetherButton}}
-            + {are_two_entities_together(PG,fireGlyph) && nest_thirdFireButton && (secondChoice ^ glyph_thirdFire != ())}[fireGlyph]
-                ~ thirdChoice = glyph_thirdFire
-            
-            + {are_two_entities_together(PG,earthGlyph) && nest_thirdEarthButton && (secondChoice ^ glyph_thirdEarth != ())}[earthGlyph]
-                ~ thirdChoice = glyph_thirdEarth
-            
-            + {are_two_entities_together(PG,airGlyph) && nest_thirdAirButton && (secondChoice ^ glyph_thirdAir != ())}[airGlyph]
-                ~ thirdChoice = glyph_thirdAir
-            
-            + {are_two_entities_together(PG,waterGlyph) && nest_thirdWaterButton && (secondChoice ^ glyph_thirdWater != ())}[waterGlyph]
-                ~ thirdChoice = glyph_thirdWater
-            
-            + {are_two_entities_together(PG,aetherGlyph) && nest_thirdAetherButton && (secondChoice ^ glyph_thirdAether != ())}[aetherGlyph]
-                ~ thirdChoice = glyph_thirdAether
-            -  
-    //Fatte le scelte, andiamo a vedere cosa abbiamo generato
--> sigil_founder_function
+    + {are_two_entities_together(PG,aetherGlyph) && nest_aetherButton}[aetherGlyph]
+        ~ saveGlyph(Aether)
+        ~ checkSigilCompleted()
+        ~ nest_updateButtons()
+        -> main

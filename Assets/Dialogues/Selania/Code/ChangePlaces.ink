@@ -147,7 +147,7 @@
             -> on_movement_events ->
                 -> library
         
-    + {are_two_entities_together(PG, FromNestToLibrary)} [FromNestToLibrary]
+    + {are_two_entities_together(PG, FromNestToLibrary) and not firstGlyph} [FromNestToLibrary]
             ~ move_entity(PG, Library)
             ~ book_arrivingFromTracking = Library
             -> on_movement_events ->

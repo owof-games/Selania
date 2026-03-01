@@ -4,6 +4,8 @@ LISTE COMBINATORIE DEI SIGILLI
                 
 ----------------------------------*/
 
+    LIST allGlyphs = Fire, Air, Water, Earth, Aether
+
 //Lista di tutti i possibili sigilli
     LIST glyph_allSigils = 
        
@@ -89,6 +91,47 @@ LISTE COMBINATORIE DEI SIGILLI
     VAR glyph_secondAether = (FireAetherWater, FireAetherEarth, FireAetherAir, AirAetherEarth, AirAetherWater, AirAetherFire, WaterAetherEarth, WaterAetherAir, WaterAetherFire, EarthAetherWater, EarthAetherAir, EarthAetherFire)
     VAR glyph_thirdAether = (FireAirAether, FireEarthAether, FireWaterAether, AirFireAether, AirWaterAether, AirEarthAether, WaterFireAether, WaterAirAether, WaterEarthAether, EarthFireAether, EarthAirAether, EarthWaterAether)
 
+=== function sigilsWithGlyphInFirstPosition(glyph) ===
+{glyph:
+    - Air:
+        ~ return glyph_firstAir
+    - Fire:
+        ~ return glyph_firstFire
+    - Earth:
+        ~ return glyph_firstEarth
+    - Water:
+        ~ return glyph_firstWater
+    - Aether:
+        ~ return glyph_firstAether
+}
+
+=== function sigilsWithGlyphInSecondPosition(glyph) ===
+{glyph:
+    - Air:
+        ~ return glyph_secondAir
+    - Fire:
+        ~ return glyph_secondFire
+    - Earth:
+        ~ return glyph_secondEarth
+    - Water:
+        ~ return glyph_secondWater
+    - Aether:
+        ~ return glyph_secondAether
+}
+
+=== function sigilsWithGlyphInThirdPosition(glyph) ===
+{glyph:
+    - Air:
+        ~ return glyph_thirdAir
+    - Fire:
+        ~ return glyph_thirdFire
+    - Earth:
+        ~ return glyph_thirdEarth
+    - Water:
+        ~ return glyph_thirdWater
+    - Aether:
+        ~ return glyph_thirdAether
+}
 
 /* ---------------------------------
                 
