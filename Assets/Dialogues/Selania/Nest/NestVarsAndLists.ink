@@ -59,6 +59,19 @@ VAR nest_newSigilDiscovered = ()
     ~ allSigils -= glyph_discoveredSigils
     {debug_nest: I sigilli rimasti sono {allSigils}}
 
+    // secondo step e mezzo: tolgo i sigilli che usano glifi non ancora disponibili
+    {not are_two_entities_together(PG,earthGlyph):
+        ~ allSigils -= sigilsWithGlyphInFirstPosition(Earth)
+        ~ allSigils -= sigilsWithGlyphInSecondPosition(Earth)
+        ~ allSigils -= sigilsWithGlyphInThirdPosition(Earth)
+    }
+
+    {not are_two_entities_together(PG,fireGlyph):
+        ~ allSigils -= sigilsWithGlyphInFirstPosition(Fire)
+        ~ allSigils -= sigilsWithGlyphInSecondPosition(Fire)
+        ~ allSigils -= sigilsWithGlyphInThirdPosition(Fire)
+    }
+
     // terzo step: verificare se ne è rimasto almeno uno
     ~ temp someRemaining = allSigils != ()
     {debug_nest: Rimangono sigilli? {someRemaining}}
