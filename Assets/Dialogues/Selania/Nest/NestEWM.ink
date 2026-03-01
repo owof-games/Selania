@@ -17,268 +17,268 @@
 
 //Tre note
 
-    + {nest_ownedEmotionalWords has RossoBluVerde}[RossoBluVerde]
+    + {nest_ownedEmotionalWords has FireWaterEarth}[FireWaterEarth]
         {
-            - action == Activate: RossoBluVerde è stata attivata.
-                ~ nest_activeEmotionalWord = RossoBluVerde
-                ~ nest_ownedEmotionalWords -= RossoBluVerde
+            - action == Activate: FireWaterEarth è stata attivata.
+                ~ nest_activeEmotionalWord = FireWaterEarth
+                ~ nest_ownedEmotionalWords -= FireWaterEarth
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: RossoBluVerde è stata cancellata.
-                ~ nest_ownedEmotionalWords -= RossoBluVerde
+            - action == Delete: FireWaterEarth è stata cancellata.
+                ~ nest_ownedEmotionalWords -= FireWaterEarth
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso RossoBluVerde dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
+            {debug_nest: ho rimosso FireWaterEarth dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
     
-    + {nest_ownedEmotionalWords has RossoBluViola}[RossoBluViola]
+    + {nest_ownedEmotionalWords has FireWaterAether}[FireWaterAether]
         {
-            - action == Activate: RossoBluViola è stata attivata.
-                ~ nest_activeEmotionalWord = RossoBluViola
-                ~ nest_ownedEmotionalWords -= RossoBluViola
+            - action == Activate: FireWaterAether è stata attivata.
+                ~ nest_activeEmotionalWord = FireWaterAether
+                ~ nest_ownedEmotionalWords -= FireWaterAether
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: RossoBluViola è stata cancellata.
-                ~ nest_ownedEmotionalWords -= RossoBluViola
+            - action == Delete: FireWaterAether è stata cancellata.
+                ~ nest_ownedEmotionalWords -= FireWaterAether
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso RossoBluViola dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}
+            {debug_nest: ho rimosso FireWaterAether dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.}  
         }
         
         
-    + {nest_ownedEmotionalWords has RossoBluGiallo}[RossoBluGiallo]
+    + {nest_ownedEmotionalWords has FireWaterAir}[FireWaterAir]
         {
-            - action == Activate: RossoBluGiallo è stata attivata.
-                ~ nest_activeEmotionalWord = RossoBluGiallo
-                ~ nest_ownedEmotionalWords -= RossoBluGiallo
+            - action == Activate: FireWaterAir è stata attivata.
+                ~ nest_activeEmotionalWord = FireWaterAir
+                ~ nest_ownedEmotionalWords -= FireWaterAir
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: RossoBluGiallo è stata cancellata.
-                ~ nest_ownedEmotionalWords -= RossoBluGiallo
+            - action == Delete: FireWaterAir è stata cancellata.
+                ~ nest_ownedEmotionalWords -= FireWaterAir
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso RossoBluGiallo dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}
+            {debug_nest: ho rimosso FireWaterAir dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.}  
         }        
 
     
-    + {nest_ownedEmotionalWords has RossoVerdeBlu}[RossoVerdeBlu]
+    + {nest_ownedEmotionalWords has FireEarthWater}[FireEarthWater]
         {
-            - action == Activate: RossoVerdeBlu è stata attivata.
-                ~ nest_activeEmotionalWord = RossoVerdeBlu
-                ~ nest_ownedEmotionalWords -= RossoVerdeBlu
+            - action == Activate: FireEarthWater è stata attivata.
+                ~ nest_activeEmotionalWord = FireEarthWater
+                ~ nest_ownedEmotionalWords -= FireEarthWater
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: RossoVerdeBlu è stata cancellata.
-                ~ nest_ownedEmotionalWords -= RossoVerdeBlu
+            - action == Delete: FireEarthWater è stata cancellata.
+                ~ nest_ownedEmotionalWords -= FireEarthWater
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso RossoVerdeBlu dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.} 
+            {debug_nest: ho rimosso FireEarthWater dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.} 
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
         
 
-    + {nest_ownedEmotionalWords has RossoViolaBlu}[RossoViolaBlu]
+    + {nest_ownedEmotionalWords has FireAetherWater}[FireAetherWater]
         {
-            - action == Activate: RossoViolaBlu è stata attivata.
-                ~ nest_activeEmotionalWord = RossoViolaBlu
-                ~ nest_ownedEmotionalWords -= RossoViolaBlu
+            - action == Activate: FireAetherWater è stata attivata.
+                ~ nest_activeEmotionalWord = FireAetherWater
+                ~ nest_ownedEmotionalWords -= FireAetherWater
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: RossoViolaBlu è stata cancellata.
-                ~ nest_ownedEmotionalWords -= RossoViolaBlu
+            - action == Delete: FireAetherWater è stata cancellata.
+                ~ nest_ownedEmotionalWords -= FireAetherWater
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso RossoViolaBlu dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso FireAetherWater dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }    
     
-    + {nest_ownedEmotionalWords has RossoViolaVerde}[RossoViolaVerde]
+    + {nest_ownedEmotionalWords has FireAetherEarth}[FireAetherEarth]
         {
-            - action == Activate: RossoViolaVerde è stata attivata.
-                ~ nest_activeEmotionalWord = RossoViolaVerde
-                ~ nest_ownedEmotionalWords -= RossoViolaVerde
+            - action == Activate: FireAetherEarth è stata attivata.
+                ~ nest_activeEmotionalWord = FireAetherEarth
+                ~ nest_ownedEmotionalWords -= FireAetherEarth
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: RossoViolaVerde è stata cancellata.
-                ~ nest_ownedEmotionalWords -= RossoViolaVerde
+            - action == Delete: FireAetherEarth è stata cancellata.
+                ~ nest_ownedEmotionalWords -= FireAetherEarth
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso RossoViolaVerde dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso FireAetherEarth dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
         
 
  
- //Varianti a dominante Giallo
+ //Varianti a dominante Air
 
     //Tre note
-    + {nest_ownedEmotionalWords has GialloRossoVerde}[GialloRossoVerde]
+    + {nest_ownedEmotionalWords has AirFireEarth}[AirFireEarth]
         {
-            - action == Activate: GialloRossoVerde è stata attivata.
-                ~ nest_activeEmotionalWord = GialloRossoVerde
-                ~ nest_ownedEmotionalWords -= GialloRossoVerde
+            - action == Activate: AirFireEarth è stata attivata.
+                ~ nest_activeEmotionalWord = AirFireEarth
+                ~ nest_ownedEmotionalWords -= AirFireEarth
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: GialloRossoVerde è stata cancellata.
-                ~ nest_ownedEmotionalWords -= GialloRossoVerde
+            - action == Delete: AirFireEarth è stata cancellata.
+                ~ nest_ownedEmotionalWords -= AirFireEarth
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso GialloRossoVerde dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.} 
+            {debug_nest: ho rimosso AirFireEarth dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.} 
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
     
-    + {nest_ownedEmotionalWords has GialloRossoViola}[GialloRossoViola]
+    + {nest_ownedEmotionalWords has AirFireAether}[AirFireAether]
         {
-            - action == Activate: GialloRossoViola è stata attivata.
-                ~ nest_activeEmotionalWord = GialloRossoViola
-                ~ nest_ownedEmotionalWords -= GialloRossoViola
+            - action == Activate: AirFireAether è stata attivata.
+                ~ nest_activeEmotionalWord = AirFireAether
+                ~ nest_ownedEmotionalWords -= AirFireAether
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: GialloRossoViola è stata cancellata.
-                ~ nest_ownedEmotionalWords -= GialloRossoViola
+            - action == Delete: AirFireAether è stata cancellata.
+                ~ nest_ownedEmotionalWords -= AirFireAether
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso GialloRossoViola dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.} 
+            {debug_nest: ho rimosso AirFireAether dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.} 
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }    
     
-    + {nest_ownedEmotionalWords has GialloRossoBlu}[GialloRossoBlu]
+    + {nest_ownedEmotionalWords has AirFireWater}[AirFireWater]
         {
-            - action == Activate: GialloRossoBlu è stata attivata.
-                ~ nest_activeEmotionalWord = GialloRossoBlu
-                ~ nest_ownedEmotionalWords -= GialloRossoBlu
+            - action == Activate: AirFireWater è stata attivata.
+                ~ nest_activeEmotionalWord = AirFireWater
+                ~ nest_ownedEmotionalWords -= AirFireWater
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: GialloRossoBlu è stata cancellata.
-                ~ nest_ownedEmotionalWords -= GialloRossoBlu
+            - action == Delete: AirFireWater è stata cancellata.
+                ~ nest_ownedEmotionalWords -= AirFireWater
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso GialloRossoBlu dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso AirFireWater dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
     
 
-    + {nest_ownedEmotionalWords has GialloBluVerde}[GialloBluVerde]
+    + {nest_ownedEmotionalWords has AirWaterEarth}[AirWaterEarth]
         {
-            - action == Activate: GialloBluVerde è stata attivata.
-                ~ nest_activeEmotionalWord = GialloBluVerde
-                ~ nest_ownedEmotionalWords -= GialloBluVerde
+            - action == Activate: AirWaterEarth è stata attivata.
+                ~ nest_activeEmotionalWord = AirWaterEarth
+                ~ nest_ownedEmotionalWords -= AirWaterEarth
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: GialloBluVerde è stata cancellata.
-                ~ nest_ownedEmotionalWords -= GialloBluVerde
+            - action == Delete: AirWaterEarth è stata cancellata.
+                ~ nest_ownedEmotionalWords -= AirWaterEarth
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso GialloBluVerde dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
+            {debug_nest: ho rimosso AirWaterEarth dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         } 
     
-    + {nest_ownedEmotionalWords has GialloBluViola}[GialloBluViola]
+    + {nest_ownedEmotionalWords has AirWaterAether}[AirWaterAether]
         {
-            - action == Activate: GialloBluViola è stata attivata.
-                ~ nest_activeEmotionalWord = GialloBluViola
-                ~ nest_ownedEmotionalWords -= GialloBluViola
+            - action == Activate: AirWaterAether è stata attivata.
+                ~ nest_activeEmotionalWord = AirWaterAether
+                ~ nest_ownedEmotionalWords -= AirWaterAether
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: GialloBluViola è stata cancellata.
-                ~ nest_ownedEmotionalWords -= GialloBluViola
+            - action == Delete: AirWaterAether è stata cancellata.
+                ~ nest_ownedEmotionalWords -= AirWaterAether
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso GialloBluViola dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
+            {debug_nest: ho rimosso AirWaterAether dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
     
-    + {nest_ownedEmotionalWords has GialloBluRosso}[GialloBluRosso]
+    + {nest_ownedEmotionalWords has AirWaterFire}[AirWaterFire]
         {
-            - action == Activate: GialloBluRosso è stata attivata.
-                ~ nest_activeEmotionalWord = GialloBluRosso
-                ~ nest_ownedEmotionalWords -= GialloBluRosso
+            - action == Activate: AirWaterFire è stata attivata.
+                ~ nest_activeEmotionalWord = AirWaterFire
+                ~ nest_ownedEmotionalWords -= AirWaterFire
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: GialloBluRosso è stata cancellata.
-                ~ nest_ownedEmotionalWords -= GialloBluRosso
+            - action == Delete: AirWaterFire è stata cancellata.
+                ~ nest_ownedEmotionalWords -= AirWaterFire
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso GialloBluRosso dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}
+            {debug_nest: ho rimosso AirWaterFire dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.}  
         }        
 
     
-    + {nest_ownedEmotionalWords has GialloVerdeViola}[GialloVerdeViola]
+    + {nest_ownedEmotionalWords has AirEarthAether}[AirEarthAether]
         {
-            - action == Activate: GialloVerdeViola è stata attivata.
-                ~ nest_activeEmotionalWord = GialloVerdeViola
-                ~ nest_ownedEmotionalWords -= GialloVerdeViola
+            - action == Activate: AirEarthAether è stata attivata.
+                ~ nest_activeEmotionalWord = AirEarthAether
+                ~ nest_ownedEmotionalWords -= AirEarthAether
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: GialloVerdeViola è stata cancellata.
-                ~ nest_ownedEmotionalWords -= GialloVerdeViola
+            - action == Delete: AirEarthAether è stata cancellata.
+                ~ nest_ownedEmotionalWords -= AirEarthAether
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso GialloVerdeViola dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.} 
+            {debug_nest: ho rimosso AirEarthAether dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.} 
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
     
-    + {nest_ownedEmotionalWords has GialloVerdeBlu}[GialloVerdeBlu]
+    + {nest_ownedEmotionalWords has AirEarthWater}[AirEarthWater]
         {
-            - action == Activate: GialloVerdeBlu è stata attivata.
-                ~ nest_activeEmotionalWord = GialloVerdeBlu
-                ~ nest_ownedEmotionalWords -= GialloVerdeBlu
+            - action == Activate: AirEarthWater è stata attivata.
+                ~ nest_activeEmotionalWord = AirEarthWater
+                ~ nest_ownedEmotionalWords -= AirEarthWater
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: GialloVerdeBlu è stata cancellata.
-                ~ nest_ownedEmotionalWords -= GialloVerdeBlu
+            - action == Delete: AirEarthWater è stata cancellata.
+                ~ nest_ownedEmotionalWords -= AirEarthWater
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso GialloVerdeBlu dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.} 
+            {debug_nest: ho rimosso AirEarthWater dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.} 
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }    
     
     
-    + {nest_ownedEmotionalWords has GialloVerdeRosso}[GialloVerdeRosso]
+    + {nest_ownedEmotionalWords has AirEarthFire}[AirEarthFire]
         {
-            - action == Activate: GialloVerdeRosso è stata attivata.
-                ~ nest_activeEmotionalWord = GialloVerdeRosso
-                ~ nest_ownedEmotionalWords -= GialloVerdeRosso
+            - action == Activate: AirEarthFire è stata attivata.
+                ~ nest_activeEmotionalWord = AirEarthFire
+                ~ nest_ownedEmotionalWords -= AirEarthFire
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: GialloVerdeRosso è stata cancellata.
-                ~ nest_ownedEmotionalWords -= GialloVerdeRosso
+            - action == Delete: AirEarthFire è stata cancellata.
+                ~ nest_ownedEmotionalWords -= AirEarthFire
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso GialloVerdeRosso dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso AirEarthFire dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
     
-    + {nest_ownedEmotionalWords has GialloViolaVerde}[GialloViolaVerde]
+    + {nest_ownedEmotionalWords has AirAetherEarth}[AirAetherEarth]
         {
-            - action == Activate: GialloViolaVerde è stata attivata.
-                ~ nest_activeEmotionalWord = GialloViolaVerde
-                ~ nest_ownedEmotionalWords -= GialloViolaVerde
+            - action == Activate: AirAetherEarth è stata attivata.
+                ~ nest_activeEmotionalWord = AirAetherEarth
+                ~ nest_ownedEmotionalWords -= AirAetherEarth
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: GialloViolaVerde è stata cancellata.
-                ~ nest_ownedEmotionalWords -= GialloViolaVerde
+            - action == Delete: AirAetherEarth è stata cancellata.
+                ~ nest_ownedEmotionalWords -= AirAetherEarth
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso GialloViolaVerde dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso AirAetherEarth dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }    
     
         
-    + {nest_ownedEmotionalWords has GialloViolaBlu}[GialloViolaBlu]
+    + {nest_ownedEmotionalWords has AirAetherWater}[AirAetherWater]
         {
-            - action == Activate: GialloViolaBlu è stata attivata.
-                ~ nest_activeEmotionalWord = GialloViolaBlu
-                ~ nest_ownedEmotionalWords -= GialloViolaBlu
+            - action == Activate: AirAetherWater è stata attivata.
+                ~ nest_activeEmotionalWord = AirAetherWater
+                ~ nest_ownedEmotionalWords -= AirAetherWater
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: GialloViolaBlu è stata cancellata.
-                ~ nest_ownedEmotionalWords -= GialloViolaBlu
+            - action == Delete: AirAetherWater è stata cancellata.
+                ~ nest_ownedEmotionalWords -= AirAetherWater
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso GialloViolaBlu dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso AirAetherWater dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
     
     
-    + {nest_ownedEmotionalWords has GialloViolaRosso}[GialloViolaRosso]
+    + {nest_ownedEmotionalWords has AirAetherFire}[AirAetherFire]
         {
-            - action == Activate: GialloViolaRosso è stata attivata.
-                ~ nest_activeEmotionalWord = GialloViolaRosso
-                ~ nest_ownedEmotionalWords -= GialloViolaRosso
+            - action == Activate: AirAetherFire è stata attivata.
+                ~ nest_activeEmotionalWord = AirAetherFire
+                ~ nest_ownedEmotionalWords -= AirAetherFire
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: GialloViolaRosso è stata cancellata.
-                ~ nest_ownedEmotionalWords -= GialloViolaRosso
+            - action == Delete: AirAetherFire è stata cancellata.
+                ~ nest_ownedEmotionalWords -= AirAetherFire
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso GialloViolaRosso dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
+            {debug_nest: ho rimosso AirAetherFire dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
  
@@ -287,90 +287,90 @@
 
     
     //Tre note
-    + {nest_ownedEmotionalWords has BluRossoVerde}[BluRossoVerde]
+    + {nest_ownedEmotionalWords has WaterFireEarth}[WaterFireEarth]
         {
-            - action == Activate: BluRossoVerde è stata attivata.
-                ~ nest_activeEmotionalWord = BluRossoVerde
-                ~ nest_ownedEmotionalWords -= BluRossoVerde
+            - action == Activate: WaterFireEarth è stata attivata.
+                ~ nest_activeEmotionalWord = WaterFireEarth
+                ~ nest_ownedEmotionalWords -= WaterFireEarth
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: BluRossoVerde è stata cancellata.
-                ~ nest_ownedEmotionalWords -= BluRossoVerde
+            - action == Delete: WaterFireEarth è stata cancellata.
+                ~ nest_ownedEmotionalWords -= WaterFireEarth
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso BluRossoVerde dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.} 
+            {debug_nest: ho rimosso WaterFireEarth dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.} 
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
     
-    + {nest_ownedEmotionalWords has BluRossoViola}[BluRossoViola]
+    + {nest_ownedEmotionalWords has WaterFireAether}[WaterFireAether]
         {
-            - action == Activate: BluRossoViola è stata attivata.
-                ~ nest_activeEmotionalWord = BluRossoViola
-                ~ nest_ownedEmotionalWords -= BluRossoViola
+            - action == Activate: WaterFireAether è stata attivata.
+                ~ nest_activeEmotionalWord = WaterFireAether
+                ~ nest_ownedEmotionalWords -= WaterFireAether
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: BluRossoViola è stata cancellata.
-                ~ nest_ownedEmotionalWords -= BluRossoViola
+            - action == Delete: WaterFireAether è stata cancellata.
+                ~ nest_ownedEmotionalWords -= WaterFireAether
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso BluRossoViola dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.} 
+            {debug_nest: ho rimosso WaterFireAether dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.} 
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }    
     
     
-    + {nest_ownedEmotionalWords has BluRossoGiallo}[BluRossoGiallo]
+    + {nest_ownedEmotionalWords has WaterFireAir}[WaterFireAir]
         {
-            - action == Activate: BluRossoGiallo è stata attivata.
-                ~ nest_activeEmotionalWord = BluRossoGiallo
-                ~ nest_ownedEmotionalWords -= BluRossoGiallo
+            - action == Activate: WaterFireAir è stata attivata.
+                ~ nest_activeEmotionalWord = WaterFireAir
+                ~ nest_ownedEmotionalWords -= WaterFireAir
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
 
-            - action == Delete: BluRossoGiallo è stata cancellata.
-                ~ nest_ownedEmotionalWords -= BluRossoGiallo
+            - action == Delete: WaterFireAir è stata cancellata.
+                ~ nest_ownedEmotionalWords -= WaterFireAir
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso BluRossoGiallo dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso WaterFireAir dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
     
 
-    + {nest_ownedEmotionalWords has BluGialloVerde}[BluGialloVerde]
+    + {nest_ownedEmotionalWords has WaterAirEarth}[WaterAirEarth]
         {
-            - action == Activate: BluGialloVerde è stata attivata.
-                ~ nest_activeEmotionalWord = BluGialloVerde
-                ~ nest_ownedEmotionalWords -= BluGialloVerde
+            - action == Activate: WaterAirEarth è stata attivata.
+                ~ nest_activeEmotionalWord = WaterAirEarth
+                ~ nest_ownedEmotionalWords -= WaterAirEarth
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: BluGialloVerde è stata cancellata.
-                ~ nest_ownedEmotionalWords -= BluGialloVerde
+            - action == Delete: WaterAirEarth è stata cancellata.
+                ~ nest_ownedEmotionalWords -= WaterAirEarth
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso BluGialloVerde dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso WaterAirEarth dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
         
-    + {nest_ownedEmotionalWords has BluGialloViola}[BluGialloViola]
+    + {nest_ownedEmotionalWords has WaterAirAether}[WaterAirAether]
         {
-            - action == Activate: BluGialloViola è stata attivata.
-                ~ nest_activeEmotionalWord = BluGialloViola
-                ~ nest_ownedEmotionalWords -= BluGialloViola
+            - action == Activate: WaterAirAether è stata attivata.
+                ~ nest_activeEmotionalWord = WaterAirAether
+                ~ nest_ownedEmotionalWords -= WaterAirAether
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: BluGialloViola è stata cancellata.
-                ~ nest_ownedEmotionalWords -= BluGialloViola
+            - action == Delete: WaterAirAether è stata cancellata.
+                ~ nest_ownedEmotionalWords -= WaterAirAether
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso BluGialloViola dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso WaterAirAether dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
     
 
-    + {nest_ownedEmotionalWords has BluGialloRosso}[BluGialloRosso]
+    + {nest_ownedEmotionalWords has WaterAirFire}[WaterAirFire]
         {
-            - action == Activate: BluGialloRosso è stata attivata.
-                ~ nest_activeEmotionalWord = BluGialloRosso
-                ~ nest_ownedEmotionalWords -= BluGialloRosso
+            - action == Activate: WaterAirFire è stata attivata.
+                ~ nest_activeEmotionalWord = WaterAirFire
+                ~ nest_ownedEmotionalWords -= WaterAirFire
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: BluGialloRosso è stata cancellata.
-                ~ nest_ownedEmotionalWords -= BluGialloRosso
+            - action == Delete: WaterAirFire è stata cancellata.
+                ~ nest_ownedEmotionalWords -= WaterAirFire
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso BluGialloRosso dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
+            {debug_nest: ho rimosso WaterAirFire dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         } 
     
@@ -379,75 +379,75 @@
     
 
         
-    + {nest_ownedEmotionalWords has BluVerdeViola}[BluVerdeViola]
+    + {nest_ownedEmotionalWords has WaterEarthAether}[WaterEarthAether]
         {
-            - action == Activate: BluVerdeViola è stata attivata.
-                ~ nest_activeEmotionalWord = BluVerdeViola
-                ~ nest_ownedEmotionalWords -= BluVerdeViola
+            - action == Activate: WaterEarthAether è stata attivata.
+                ~ nest_activeEmotionalWord = WaterEarthAether
+                ~ nest_ownedEmotionalWords -= WaterEarthAether
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: BluVerdeViola è stata cancellata.
-                ~ nest_ownedEmotionalWords -= BluVerdeViola
+            - action == Delete: WaterEarthAether è stata cancellata.
+                ~ nest_ownedEmotionalWords -= WaterEarthAether
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso BluVerdeViola dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.} 
+            {debug_nest: ho rimosso WaterEarthAether dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.} 
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
     
-    + {nest_ownedEmotionalWords has BluVerdeGiallo}[BluVerdeGiallo]
+    + {nest_ownedEmotionalWords has WaterEarthAir}[WaterEarthAir]
         {
-            - action == Activate: BluVerdeGiallo è stata attivata.
-                ~ nest_activeEmotionalWord = BluVerdeGiallo
-                ~ nest_ownedEmotionalWords -= BluVerdeGiallo
+            - action == Activate: WaterEarthAir è stata attivata.
+                ~ nest_activeEmotionalWord = WaterEarthAir
+                ~ nest_ownedEmotionalWords -= WaterEarthAir
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: BluVerdeGiallo è stata cancellata.
-                ~ nest_ownedEmotionalWords -= BluVerdeGiallo
+            - action == Delete: WaterEarthAir è stata cancellata.
+                ~ nest_ownedEmotionalWords -= WaterEarthAir
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso BluVerdeGiallo dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso WaterEarthAir dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
     
-    + {nest_ownedEmotionalWords has BluVerdeRosso}[BluVerdeRosso]
+    + {nest_ownedEmotionalWords has WaterEarthFire}[WaterEarthFire]
         {
-            - action == Activate: BluVerdeRosso è stata attivata.
-                ~ nest_activeEmotionalWord = BluVerdeRosso
-                ~ nest_ownedEmotionalWords -= BluVerdeRosso
+            - action == Activate: WaterEarthFire è stata attivata.
+                ~ nest_activeEmotionalWord = WaterEarthFire
+                ~ nest_ownedEmotionalWords -= WaterEarthFire
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: BluVerdeRosso è stata cancellata.
-                ~ nest_ownedEmotionalWords -= BluVerdeRosso
+            - action == Delete: WaterEarthFire è stata cancellata.
+                ~ nest_ownedEmotionalWords -= WaterEarthFire
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso BluVerdeRosso dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso WaterEarthFire dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
     
-    + {nest_ownedEmotionalWords has BluViolaVerde}[BluViolaVerde]
+    + {nest_ownedEmotionalWords has WaterAetherEarth}[WaterAetherEarth]
         {
-            - action == Activate: BluViolaVerde è stata attivata.
-                ~ nest_activeEmotionalWord = BluViolaVerde
-                ~ nest_ownedEmotionalWords -= BluViolaVerde
+            - action == Activate: WaterAetherEarth è stata attivata.
+                ~ nest_activeEmotionalWord = WaterAetherEarth
+                ~ nest_ownedEmotionalWords -= WaterAetherEarth
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: BluViolaVerde è stata cancellata.
-                ~ nest_ownedEmotionalWords -= BluViolaVerde
+            - action == Delete: WaterAetherEarth è stata cancellata.
+                ~ nest_ownedEmotionalWords -= WaterAetherEarth
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso BluViolaVerde dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso WaterAetherEarth dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }    
     
         
     
-    + {nest_ownedEmotionalWords has BluViolaRosso}[BluViolaRosso]
+    + {nest_ownedEmotionalWords has WaterAetherFire}[WaterAetherFire]
         {
-            - action == Activate: BluViolaRosso è stata attivata.
-                ~ nest_activeEmotionalWord = BluViolaRosso
-                ~ nest_ownedEmotionalWords -= BluViolaRosso
+            - action == Activate: WaterAetherFire è stata attivata.
+                ~ nest_activeEmotionalWord = WaterAetherFire
+                ~ nest_ownedEmotionalWords -= WaterAetherFire
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: BluViolaRosso è stata cancellata.
-                ~ nest_ownedEmotionalWords -= BluViolaRosso
+            - action == Delete: WaterAetherFire è stata cancellata.
+                ~ nest_ownedEmotionalWords -= WaterAetherFire
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso BluViolaRosso dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
+            {debug_nest: ho rimosso WaterAetherFire dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
  
@@ -456,134 +456,134 @@
  
  
  
-    + {nest_ownedEmotionalWords has VerdeRossoViola}[VerdeRossoViola]
+    + {nest_ownedEmotionalWords has EarthFireAether}[EarthFireAether]
         {
-            - action == Activate: VerdeRossoViola è stata attivata.
-                ~ nest_activeEmotionalWord = VerdeRossoViola
-                ~ nest_ownedEmotionalWords -= VerdeRossoViola
+            - action == Activate: EarthFireAether è stata attivata.
+                ~ nest_activeEmotionalWord = EarthFireAether
+                ~ nest_ownedEmotionalWords -= EarthFireAether
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: VerdeRossoViola è stata cancellata.
-                ~ nest_ownedEmotionalWords -= VerdeRossoViola
+            - action == Delete: EarthFireAether è stata cancellata.
+                ~ nest_ownedEmotionalWords -= EarthFireAether
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso VerdeRossoViola dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.} 
+            {debug_nest: ho rimosso EarthFireAether dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.} 
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }    
     
-    + {nest_ownedEmotionalWords has VerdeRossoBlu}[VerdeRossoBlu]
+    + {nest_ownedEmotionalWords has EarthFireWater}[EarthFireWater]
         {
-            - action == Activate: VerdeRossoBlu è stata attivata.
-                ~ nest_activeEmotionalWord = VerdeRossoBlu
-                ~ nest_ownedEmotionalWords -= VerdeRossoBlu
+            - action == Activate: EarthFireWater è stata attivata.
+                ~ nest_activeEmotionalWord = EarthFireWater
+                ~ nest_ownedEmotionalWords -= EarthFireWater
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
 
-           - action == Delete: VerdeRossoBlu è stata cancellata.
-                ~ nest_ownedEmotionalWords -= VerdeRossoBlu
+           - action == Delete: EarthFireWater è stata cancellata.
+                ~ nest_ownedEmotionalWords -= EarthFireWater
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso VerdeRossoBlu dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso EarthFireWater dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
     
-    + {nest_ownedEmotionalWords has VerdeRossoGiallo}[VerdeRossoGiallo]
+    + {nest_ownedEmotionalWords has EarthFireAir}[EarthFireAir]
         {
-            - action == Activate: VerdeRossoGiallo è stata attivata.
-                ~ nest_activeEmotionalWord = VerdeRossoGiallo
-                ~ nest_ownedEmotionalWords -= VerdeRossoGiallo
+            - action == Activate: EarthFireAir è stata attivata.
+                ~ nest_activeEmotionalWord = EarthFireAir
+                ~ nest_ownedEmotionalWords -= EarthFireAir
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
 
-            - action == Delete: VerdeRossoGiallo è stata cancellata.
-                ~ nest_ownedEmotionalWords -= VerdeRossoGiallo
+            - action == Delete: EarthFireAir è stata cancellata.
+                ~ nest_ownedEmotionalWords -= EarthFireAir
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso VerdeRossoGiallo dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso EarthFireAir dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
     
         
-    + {nest_ownedEmotionalWords has VerdeGialloViola}[VerdeGialloViola]
+    + {nest_ownedEmotionalWords has EarthAirAether}[EarthAirAether]
         {
-            - action == Activate: VerdeGialloViola è stata attivata.
-                ~ nest_activeEmotionalWord = VerdeGialloViola
-                ~ nest_ownedEmotionalWords -= VerdeGialloViola
+            - action == Activate: EarthAirAether è stata attivata.
+                ~ nest_activeEmotionalWord = EarthAirAether
+                ~ nest_ownedEmotionalWords -= EarthAirAether
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: VerdeGialloViola è stata cancellata.
-                ~ nest_ownedEmotionalWords -= VerdeGialloViola
+            - action == Delete: EarthAirAether è stata cancellata.
+                ~ nest_ownedEmotionalWords -= EarthAirAether
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso VerdeGialloViola dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso EarthAirAether dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
     
-    + {nest_ownedEmotionalWords has VerdeGialloBlu}[VerdeGialloBlu]
+    + {nest_ownedEmotionalWords has EarthAirWater}[EarthAirWater]
         {
-            - action == Activate: VerdeGialloBlu è stata attivata.
-                ~ nest_activeEmotionalWord = VerdeGialloBlu
-                ~ nest_ownedEmotionalWords -= VerdeGialloBlu
+            - action == Activate: EarthAirWater è stata attivata.
+                ~ nest_activeEmotionalWord = EarthAirWater
+                ~ nest_ownedEmotionalWords -= EarthAirWater
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: VerdeGialloBlu è stata cancellata.
-                ~ nest_ownedEmotionalWords -= VerdeGialloBlu
+            - action == Delete: EarthAirWater è stata cancellata.
+                ~ nest_ownedEmotionalWords -= EarthAirWater
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso VerdeGialloBlu dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso EarthAirWater dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }    
 
     
-    + {nest_ownedEmotionalWords has VerdeGialloRosso}[VerdeGialloRosso]
+    + {nest_ownedEmotionalWords has EarthAirFire}[EarthAirFire]
         {
-            - action == Activate: VerdeGialloRosso è stata attivata.
-                ~ nest_activeEmotionalWord = VerdeGialloRosso
-                ~ nest_ownedEmotionalWords -= VerdeGialloRosso
+            - action == Activate: EarthAirFire è stata attivata.
+                ~ nest_activeEmotionalWord = EarthAirFire
+                ~ nest_ownedEmotionalWords -= EarthAirFire
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: VerdeGialloRosso è stata cancellata.
-                ~ nest_ownedEmotionalWords -= VerdeGialloRosso
+            - action == Delete: EarthAirFire è stata cancellata.
+                ~ nest_ownedEmotionalWords -= EarthAirFire
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso VerdeGialloRosso dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
+            {debug_nest: ho rimosso EarthAirFire dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         } 
 
-    + {nest_ownedEmotionalWords has VerdeBluViola}[VerdeBluViola]
+    + {nest_ownedEmotionalWords has EarthWaterAether}[EarthWaterAether]
         {
-            - action == Activate: VerdeBluViola è stata attivata.
-                ~ nest_activeEmotionalWord = VerdeBluViola
-                ~ nest_ownedEmotionalWords -= VerdeBluViola
+            - action == Activate: EarthWaterAether è stata attivata.
+                ~ nest_activeEmotionalWord = EarthWaterAether
+                ~ nest_ownedEmotionalWords -= EarthWaterAether
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: VerdeBluViola è stata cancellata.
-                ~ nest_ownedEmotionalWords -= VerdeBluViola
+            - action == Delete: EarthWaterAether è stata cancellata.
+                ~ nest_ownedEmotionalWords -= EarthWaterAether
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso VerdeBluViola dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}
+            {debug_nest: ho rimosso EarthWaterAether dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.}  
         }
         
 
         
-    + {nest_ownedEmotionalWords has VerdeBluGiallo}[VerdeBluGiallo]
+    + {nest_ownedEmotionalWords has EarthWaterAir}[EarthWaterAir]
         {
-            - action == Activate: VerdeBluGiallo è stata attivata.
-                ~ nest_activeEmotionalWord = VerdeBluGiallo
-                ~ nest_ownedEmotionalWords -= VerdeBluGiallo
+            - action == Activate: EarthWaterAir è stata attivata.
+                ~ nest_activeEmotionalWord = EarthWaterAir
+                ~ nest_ownedEmotionalWords -= EarthWaterAir
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: VerdeBluGiallo è stata cancellata.
-                ~ nest_ownedEmotionalWords -= VerdeBluGiallo
+            - action == Delete: EarthWaterAir è stata cancellata.
+                ~ nest_ownedEmotionalWords -= EarthWaterAir
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso VerdeBluGiallo dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}
+            {debug_nest: ho rimosso EarthWaterAir dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.}  
         }        
 
     
-    + {nest_ownedEmotionalWords has VerdeBluRosso}[VerdeBluRosso]
+    + {nest_ownedEmotionalWords has EarthWaterFire}[EarthWaterFire]
         {
-            - action == Activate: VerdeBluRosso è stata attivata.
-                ~ nest_activeEmotionalWord = VerdeBluRosso
-                ~ nest_ownedEmotionalWords -= VerdeBluRosso
+            - action == Activate: EarthWaterFire è stata attivata.
+                ~ nest_activeEmotionalWord = EarthWaterFire
+                ~ nest_ownedEmotionalWords -= EarthWaterFire
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: VerdeBluRosso è stata cancellata.
-                ~ nest_ownedEmotionalWords -= VerdeBluRosso
+            - action == Delete: EarthWaterFire è stata cancellata.
+                ~ nest_ownedEmotionalWords -= EarthWaterFire
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso VerdeBluRosso dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.} 
+            {debug_nest: ho rimosso EarthWaterFire dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.} 
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
         
@@ -591,45 +591,45 @@
 
     
 
-    + {nest_ownedEmotionalWords has VerdeViolaBlu}[VerdeViolaBlu]
+    + {nest_ownedEmotionalWords has EarthAetherWater}[EarthAetherWater]
         {
-            - action == Activate: VerdeViolaBlu è stata attivata.
-                ~ nest_activeEmotionalWord = VerdeViolaBlu
-                ~ nest_ownedEmotionalWords -= VerdeViolaBlu
+            - action == Activate: EarthAetherWater è stata attivata.
+                ~ nest_activeEmotionalWord = EarthAetherWater
+                ~ nest_ownedEmotionalWords -= EarthAetherWater
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: VerdeViolaBlu è stata cancellata.
-                ~ nest_ownedEmotionalWords -= VerdeViolaBlu
+            - action == Delete: EarthAetherWater è stata cancellata.
+                ~ nest_ownedEmotionalWords -= EarthAetherWater
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso VerdeViolaBlu dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso EarthAetherWater dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
     
-    + {nest_ownedEmotionalWords has VerdeViolaGiallo}[VerdeViolaGiallo]
+    + {nest_ownedEmotionalWords has EarthAetherAir}[EarthAetherAir]
         {
-            - action == Activate: VerdeViolaGiallo è stata attivata.
-                ~ nest_activeEmotionalWord = VerdeViolaGiallo
-                ~ nest_ownedEmotionalWords -= VerdeViolaGiallo
+            - action == Activate: EarthAetherAir è stata attivata.
+                ~ nest_activeEmotionalWord = EarthAetherAir
+                ~ nest_ownedEmotionalWords -= EarthAetherAir
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: VerdeViolaGiallo è stata cancellata.
-                ~ nest_ownedEmotionalWords -= VerdeViolaGiallo
+            - action == Delete: EarthAetherAir è stata cancellata.
+                ~ nest_ownedEmotionalWords -= EarthAetherAir
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso VerdeViolaGiallo dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso EarthAetherAir dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }    
     
-    + {nest_ownedEmotionalWords has VerdeViolaRosso}[VerdeViolaRosso]
+    + {nest_ownedEmotionalWords has EarthAetherFire}[EarthAetherFire]
         {
-            - action == Activate: VerdeViolaRosso è stata attivata.
-                ~ nest_activeEmotionalWord = VerdeViolaRosso
-                ~ nest_ownedEmotionalWords -= VerdeViolaRosso
+            - action == Activate: EarthAetherFire è stata attivata.
+                ~ nest_activeEmotionalWord = EarthAetherFire
+                ~ nest_ownedEmotionalWords -= EarthAetherFire
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: VerdeViolaRosso è stata cancellata.
-                ~ nest_ownedEmotionalWords -= VerdeViolaRosso
+            - action == Delete: EarthAetherFire è stata cancellata.
+                ~ nest_ownedEmotionalWords -= EarthAetherFire
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso VerdeViolaRosso dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
+            {debug_nest: ho rimosso EarthAetherFire dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
  
@@ -637,182 +637,182 @@
  
  
  
- //Varianti a dominante viola
+ //Varianti a dominante aether
  
     
     //Tre note
-    + {nest_ownedEmotionalWords has ViolaRossoVerde}[ViolaRossoVerde]
+    + {nest_ownedEmotionalWords has AetherFireEarth}[AetherFireEarth]
         {
-            - action == Activate: ViolaRossoVerde è stata attivata.
-                ~ nest_activeEmotionalWord = ViolaRossoVerde
-                ~ nest_ownedEmotionalWords -= ViolaRossoVerde
+            - action == Activate: AetherFireEarth è stata attivata.
+                ~ nest_activeEmotionalWord = AetherFireEarth
+                ~ nest_ownedEmotionalWords -= AetherFireEarth
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: ViolaRossoVerde è stata cancellata.
-                ~ nest_ownedEmotionalWords -= ViolaRossoVerde
+            - action == Delete: AetherFireEarth è stata cancellata.
+                ~ nest_ownedEmotionalWords -= AetherFireEarth
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso ViolaRossoVerde dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.} 
+            {debug_nest: ho rimosso AetherFireEarth dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.} 
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
 
-    + {nest_ownedEmotionalWords has ViolaRossoBlu}[ViolaRossoBlu]
+    + {nest_ownedEmotionalWords has AetherFireWater}[AetherFireWater]
         {
-            - action == Activate: ViolaRossoBlu è stata attivata.
-                ~ nest_activeEmotionalWord = ViolaRossoBlu
-                ~ nest_ownedEmotionalWords -= ViolaRossoBlu
+            - action == Activate: AetherFireWater è stata attivata.
+                ~ nest_activeEmotionalWord = AetherFireWater
+                ~ nest_ownedEmotionalWords -= AetherFireWater
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
 
-           - action == Delete: ViolaRossoBlu è stata cancellata.
-                ~ nest_ownedEmotionalWords -= ViolaRossoBlu
+           - action == Delete: AetherFireWater è stata cancellata.
+                ~ nest_ownedEmotionalWords -= AetherFireWater
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso ViolaRossoBlu dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso AetherFireWater dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
     
-    + {nest_ownedEmotionalWords has ViolaRossoGiallo}[ViolaRossoGiallo]
+    + {nest_ownedEmotionalWords has AetherFireAir}[AetherFireAir]
         {
-            - action == Activate: ViolaRossoGiallo è stata attivata.
-                ~ nest_activeEmotionalWord = ViolaRossoGiallo
-                ~ nest_ownedEmotionalWords -= ViolaRossoGiallo
+            - action == Activate: AetherFireAir è stata attivata.
+                ~ nest_activeEmotionalWord = AetherFireAir
+                ~ nest_ownedEmotionalWords -= AetherFireAir
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
 
-            - action == Delete: ViolaRossoGiallo è stata cancellata.
-                ~ nest_ownedEmotionalWords -= ViolaRossoGiallo
+            - action == Delete: AetherFireAir è stata cancellata.
+                ~ nest_ownedEmotionalWords -= AetherFireAir
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso ViolaRossoGiallo dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso AetherFireAir dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
 
-    + {nest_ownedEmotionalWords has ViolaGialloVerde}[ViolaGialloVerde]
+    + {nest_ownedEmotionalWords has AetherAirEarth}[AetherAirEarth]
         {
-            - action == Activate: ViolaGialloVerde è stata attivata.
-                ~ nest_activeEmotionalWord = ViolaGialloVerde
-                ~ nest_ownedEmotionalWords -= ViolaGialloVerde
+            - action == Activate: AetherAirEarth è stata attivata.
+                ~ nest_activeEmotionalWord = AetherAirEarth
+                ~ nest_ownedEmotionalWords -= AetherAirEarth
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: ViolaGialloVerde è stata cancellata.
-                ~ nest_ownedEmotionalWords -= ViolaGialloVerde
+            - action == Delete: AetherAirEarth è stata cancellata.
+                ~ nest_ownedEmotionalWords -= AetherAirEarth
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso ViolaGialloVerde dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso AetherAirEarth dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
 
     
-    + {nest_ownedEmotionalWords has ViolaGialloBlu}[ViolaGialloBlu]
+    + {nest_ownedEmotionalWords has AetherAirWater}[AetherAirWater]
         {
-            - action == Activate: ViolaGialloBlu è stata attivata.
-                ~ nest_activeEmotionalWord = ViolaGialloBlu
-                ~ nest_ownedEmotionalWords -= ViolaGialloBlu
+            - action == Activate: AetherAirWater è stata attivata.
+                ~ nest_activeEmotionalWord = AetherAirWater
+                ~ nest_ownedEmotionalWords -= AetherAirWater
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: ViolaGialloBlu è stata cancellata.
-                ~ nest_ownedEmotionalWords -= ViolaGialloBlu
+            - action == Delete: AetherAirWater è stata cancellata.
+                ~ nest_ownedEmotionalWords -= AetherAirWater
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso ViolaGialloBlu dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso AetherAirWater dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }    
     
   
     
-    + {nest_ownedEmotionalWords has ViolaGialloRosso}[ViolaGialloRosso]
+    + {nest_ownedEmotionalWords has AetherAirFire}[AetherAirFire]
         {
-            - action == Activate: ViolaGialloRosso è stata attivata.
-                ~ nest_activeEmotionalWord = ViolaGialloRosso
-                ~ nest_ownedEmotionalWords -= ViolaGialloRosso
+            - action == Activate: AetherAirFire è stata attivata.
+                ~ nest_activeEmotionalWord = AetherAirFire
+                ~ nest_ownedEmotionalWords -= AetherAirFire
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: ViolaGialloRosso è stata cancellata.
-                ~ nest_ownedEmotionalWords -= ViolaGialloRosso
+            - action == Delete: AetherAirFire è stata cancellata.
+                ~ nest_ownedEmotionalWords -= AetherAirFire
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso ViolaGialloRosso dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
+            {debug_nest: ho rimosso AetherAirFire dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         } 
     
-    + {nest_ownedEmotionalWords has ViolaBluVerde}[ViolaBluVerde]
+    + {nest_ownedEmotionalWords has AetherWaterEarth}[AetherWaterEarth]
         {
-            - action == Activate: ViolaBluVerde è stata attivata.
-                ~ nest_activeEmotionalWord = ViolaBluVerde
-                ~ nest_ownedEmotionalWords -= ViolaBluVerde
+            - action == Activate: AetherWaterEarth è stata attivata.
+                ~ nest_activeEmotionalWord = AetherWaterEarth
+                ~ nest_ownedEmotionalWords -= AetherWaterEarth
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: ViolaBluVerde è stata cancellata.
-                ~ nest_ownedEmotionalWords -= ViolaBluVerde
+            - action == Delete: AetherWaterEarth è stata cancellata.
+                ~ nest_ownedEmotionalWords -= AetherWaterEarth
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso ViolaBluVerde dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
+            {debug_nest: ho rimosso AetherWaterEarth dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
     
 
         
-    + {nest_ownedEmotionalWords has ViolaBluGiallo}[ViolaBluGiallo]
+    + {nest_ownedEmotionalWords has AetherWaterAir}[AetherWaterAir]
         {
-            - action == Activate: ViolaBluGiallo è stata attivata.
-                ~ nest_activeEmotionalWord = ViolaBluGiallo
-                ~ nest_ownedEmotionalWords -= ViolaBluGiallo
+            - action == Activate: AetherWaterAir è stata attivata.
+                ~ nest_activeEmotionalWord = AetherWaterAir
+                ~ nest_ownedEmotionalWords -= AetherWaterAir
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: ViolaBluGiallo è stata cancellata.
-                ~ nest_ownedEmotionalWords -= ViolaBluGiallo
+            - action == Delete: AetherWaterAir è stata cancellata.
+                ~ nest_ownedEmotionalWords -= AetherWaterAir
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso ViolaBluGiallo dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}
+            {debug_nest: ho rimosso AetherWaterAir dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.}  
         }        
 
     
-    + {nest_ownedEmotionalWords has ViolaBluRosso}[ViolaBluRosso]
+    + {nest_ownedEmotionalWords has AetherWaterFire}[AetherWaterFire]
         {
-            - action == Activate: ViolaBluRosso è stata attivata.
-                ~ nest_activeEmotionalWord = ViolaBluRosso
-                ~ nest_ownedEmotionalWords -= ViolaBluRosso
+            - action == Activate: AetherWaterFire è stata attivata.
+                ~ nest_activeEmotionalWord = AetherWaterFire
+                ~ nest_ownedEmotionalWords -= AetherWaterFire
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: ViolaBluRosso è stata cancellata.
-                ~ nest_ownedEmotionalWords -= ViolaBluRosso
+            - action == Delete: AetherWaterFire è stata cancellata.
+                ~ nest_ownedEmotionalWords -= AetherWaterFire
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso ViolaBluRosso dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.} 
+            {debug_nest: ho rimosso AetherWaterFire dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.} 
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
         
 
-    + {nest_ownedEmotionalWords has ViolaVerdeBlu}[ViolaVerdeBlu]
+    + {nest_ownedEmotionalWords has AetherEarthWater}[AetherEarthWater]
         {
-            - action == Activate: ViolaVerdeBlu è stata attivata.
-                ~ nest_activeEmotionalWord = ViolaVerdeBlu
-                ~ nest_ownedEmotionalWords -= ViolaVerdeBlu
+            - action == Activate: AetherEarthWater è stata attivata.
+                ~ nest_activeEmotionalWord = AetherEarthWater
+                ~ nest_ownedEmotionalWords -= AetherEarthWater
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: ViolaVerdeBlu è stata cancellata.
-                ~ nest_ownedEmotionalWords -= ViolaVerdeBlu
+            - action == Delete: AetherEarthWater è stata cancellata.
+                ~ nest_ownedEmotionalWords -= AetherEarthWater
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso ViolaVerdeBlu dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso AetherEarthWater dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
     
-    + {nest_ownedEmotionalWords has ViolaVerdeGiallo}[ViolaVerdeGiallo]
+    + {nest_ownedEmotionalWords has AetherEarthAir}[AetherEarthAir]
         {
-            - action == Activate: ViolaVerdeGiallo è stata attivata.
-                ~ nest_activeEmotionalWord = ViolaVerdeGiallo
-                ~ nest_ownedEmotionalWords -= ViolaVerdeGiallo
+            - action == Activate: AetherEarthAir è stata attivata.
+                ~ nest_activeEmotionalWord = AetherEarthAir
+                ~ nest_ownedEmotionalWords -= AetherEarthAir
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: ViolaVerdeGiallo è stata cancellata.
-                ~ nest_ownedEmotionalWords -= ViolaVerdeGiallo
+            - action == Delete: AetherEarthAir è stata cancellata.
+                ~ nest_ownedEmotionalWords -= AetherEarthAir
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso ViolaVerdeGiallo dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso AetherEarthAir dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }
     
-    + {nest_ownedEmotionalWords has ViolaVerdeRosso}[ViolaVerdeRosso]
+    + {nest_ownedEmotionalWords has AetherEarthFire}[AetherEarthFire]
         {
-            - action == Activate: ViolaVerdeRosso è stata attivata.
-                ~ nest_activeEmotionalWord = ViolaVerdeRosso
-                ~ nest_ownedEmotionalWords -= ViolaVerdeRosso
+            - action == Activate: AetherEarthFire è stata attivata.
+                ~ nest_activeEmotionalWord = AetherEarthFire
+                ~ nest_ownedEmotionalWords -= AetherEarthFire
             {debug_nest: ho attivato una parola, che è {nest_activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}    
             
-            - action == Delete: ViolaVerdeRosso è stata cancellata.
-                ~ nest_ownedEmotionalWords -= ViolaVerdeRosso
+            - action == Delete: AetherEarthFire è stata cancellata.
+                ~ nest_ownedEmotionalWords -= AetherEarthFire
                 ~ nest_takenEmotionalWords --
-            {debug_nest: ho rimosso ViolaVerdeRosso dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
+            {debug_nest: ho rimosso AetherEarthFire dalle parole possedute. La lista delle parole possedute ora contiene {nest_ownedEmotionalWords}.}  
             {debug_nest: ho ridotto il numero di parole prese. nest_takenEmotionalWords ora ha il valore di {nest_takenEmotionalWords}.} 
         }    
     

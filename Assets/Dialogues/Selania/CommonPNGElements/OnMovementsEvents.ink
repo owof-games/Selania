@@ -171,9 +171,6 @@
 
 
 //Altre funzioni:
-    {debug: <i>in on_movement events: arrivo alle altre funzioni.}
-    -> notification_system ->
-    {debug: <i>in on_movement events: esco dal notification system.}
     -> dump_graphic_changer ->
     -> story_time_management_for_PNG->
     -> check_png_randomizable_status ->

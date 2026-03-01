@@ -1,73 +1,5 @@
 VAR nest_foundedGlyphs = (aetherGlyph, waterGlyph, airGlyph)
 
-//Una lista di tutte le parole possibili
-    LIST nest_emotionalVariationsList = 
-       
-        RossoGialloBlu, RossoGialloVerde, RossoGialloViola,
-        RossoBluVerde, RossoBluViola, RossoBluGiallo,
-        RossoVerdeBlu, RossoVerdeViola, RossoVerdeGiallo,
-        RossoViolaBlu, RossoViolaVerde, RossoViolaGiallo,
-        
-        GialloRossoVerde, GialloRossoViola, GialloRossoBlu,
-        GialloBluVerde, GialloBluViola, GialloBluRosso,
-        GialloVerdeViola, GialloVerdeBlu, GialloVerdeRosso,
-        GialloViolaVerde, GialloViolaBlu, GialloViolaRosso,
-        
-        BluRossoVerde, BluRossoViola, BluRossoGiallo, 
-        BluGialloVerde, BluGialloViola, BluGialloRosso,
-        BluVerdeViola, BluVerdeGiallo, BluVerdeRosso,
-        BluViolaVerde, BluViolaGiallo, BluViolaRosso,
-        
-        VerdeRossoViola, VerdeRossoBlu, VerdeRossoGiallo, 
-        VerdeGialloViola, VerdeGialloBlu, VerdeGialloRosso,
-        VerdeBluViola, VerdeBluGiallo, VerdeBluRosso,
-        VerdeViolaBlu, VerdeViolaGiallo, VerdeViolaRosso,
-        
-        ViolaRossoVerde, ViolaRossoBlu, ViolaRossoGiallo,
-        ViolaGialloVerde, ViolaGialloBlu, ViolaGialloRosso,
-        ViolaBluVerde, ViolaBluGiallo, ViolaBluRosso,
-        ViolaVerdeBlu, ViolaVerdeGiallo, ViolaVerdeRosso
-        
-//Qui raggruppo le emotional variations per utilizzi:
-    //Remind: una sola nota = un solo utilizzo. Due note diverse: due utilizzi. Tre note diverse: tre utilizzi.
-    
-    
-    VAR nest_threeUseWords = (RossoGialloBlu, RossoGialloVerde, RossoGialloViola, RossoBluVerde, RossoBluViola, RossoBluGiallo, RossoVerdeViola, RossoVerdeBlu, RossoVerdeGiallo, RossoViolaBlu, RossoViolaVerde, RossoViolaGiallo, GialloRossoVerde, GialloRossoViola, GialloRossoBlu,  GialloBluVerde, GialloBluViola, GialloBluRosso, GialloVerdeViola, GialloVerdeBlu, GialloVerdeRosso,  GialloViolaVerde, GialloViolaBlu, GialloViolaRosso, BluRossoVerde, BluRossoViola, BluRossoGiallo, BluGialloVerde, BluGialloViola, BluGialloRosso, BluVerdeViola, BluVerdeGiallo, BluVerdeRosso, BluViolaVerde,  BluViolaGiallo, BluViolaRosso, VerdeRossoViola, VerdeRossoBlu, VerdeRossoGiallo, VerdeBluGiallo, VerdeBluRosso, VerdeGialloViola, VerdeGialloBlu, VerdeGialloRosso, VerdeBluViola, VerdeViolaBlu, VerdeViolaGiallo, VerdeViolaRosso, ViolaRossoVerde, ViolaRossoBlu, ViolaRossoGiallo, ViolaGialloVerde, ViolaGialloBlu, ViolaGialloRosso, ViolaBluVerde, ViolaBluGiallo, ViolaBluRosso, ViolaVerdeBlu, ViolaVerdeGiallo, ViolaVerdeRosso)
-
-
-
-
-//Qui invece raggruppo le emotional variations in emotional words:
-
-    //Varianti a dominante Rosso
-    VAR nest_redYellowWords = (RossoGialloBlu, RossoGialloVerde, RossoGialloViola)
-    VAR nest_redBlueWords = (RossoBluVerde, RossoBluViola, RossoBluGiallo)
-    VAR nest_redGreenWords = (RossoVerdeBlu, RossoVerdeViola, RossoVerdeGiallo)
-    VAR nest_redPurpleWords = (RossoViolaBlu, RossoViolaVerde, RossoViolaGiallo)
-    
-    //Varianti a dominante Giallo
-    VAR nest_yellowRedWords = (GialloRossoVerde, GialloRossoViola, GialloRossoBlu)
-    VAR nest_yellowBlueWords = (GialloBluVerde, GialloBluViola, GialloBluRosso)
-    VAR nest_yellowGreenWords = (GialloVerdeViola, GialloVerdeBlu, GialloVerdeRosso)
-    VAR nest_yellowPurpleWords = (GialloViolaVerde, GialloViolaBlu, GialloViolaRosso)
-    
-    //Varianti a dominate blu
-    VAR nest_blueRedWords = (BluRossoVerde, BluRossoViola, BluRossoGiallo)
-    VAR nest_blueYellowWords = (BluGialloVerde, BluGialloViola, BluGialloRosso)
-    VAR nest_blueGreenWords = (BluVerdeViola, BluVerdeGiallo, BluVerdeRosso)
-    VAR nest_bluePurpleWords = (BluViolaVerde, BluViolaGiallo, BluViolaRosso)
-    
-    //Varianti a dominante verde
-    VAR nest_greenRedWords = (VerdeRossoViola, VerdeRossoBlu, VerdeRossoGiallo)
-    VAR nest_greenYellowWords =  (VerdeGialloViola, VerdeGialloBlu, VerdeGialloRosso)
-    VAR nest_greenBlueWords = (VerdeBluViola, VerdeBluGiallo, VerdeBluRosso)
-    VAR nest_greenPurpleWords = (VerdeViolaBlu, VerdeViolaGiallo, VerdeViolaRosso)
-    
-    //Varianti a dominante viola
-    VAR nest_purpleRedWords = (ViolaRossoVerde, ViolaRossoBlu, ViolaRossoGiallo)
-    VAR nest_purpleYellowWords = (ViolaGialloVerde, ViolaGialloBlu, ViolaGialloRosso)
-    VAR nest_purpleBlueWords = (ViolaBluVerde, ViolaBluGiallo, ViolaBluRosso)
-    VAR nest_purpleGreenWords = (ViolaVerdeBlu, ViolaVerdeGiallo, ViolaVerdeRosso)
     
 //Una lista degli usi possibili di emotional_words_management
     LIST nest_emotionalWordsManagementPossibleStatus = Activate, Delete
@@ -87,6 +19,9 @@ VAR nest_foundedGlyphs = (aetherGlyph, waterGlyph, airGlyph)
 
 //Una lista delle parole effettivamente utilizzate
     VAR nest_usedEmotionaWords = ()
+
+ //Notifichiamo una nuova scoperta
+    VAR nest_newSigilDiscovered = ()   
     
 //Qualcosa che limiti il numero di parole aggiungibili.
 //Remind: ogni volta che aggiungo una parola, il limite si aggiorna.

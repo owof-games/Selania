@@ -23,7 +23,7 @@ VAR nest_aetherButton = false
     - nest == 1:
         Vecchie piogge e onde come monito.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         {
-            - nest_foundedGlyphs has fireGlyph:
+            - contentsNest has fireGlyph:
                 E un glifo rosso già attende {player_name}, dono di una persona amica dopo la sua riscrittura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         }
 }
@@ -91,6 +91,7 @@ VAR nest_aetherButton = false
 ~ temp chosenSigil = sigilsWithGlyphInFirstPosition(firstGlyph) ^ sigilsWithGlyphInSecondPosition(secondGlyph) ^ sigilsWithGlyphInThirdPosition(thirdGlyph)
 {debug_nest: Il sigillo scelto è: {chosenSigil}}
 ~ glyph_discoveredSigils += chosenSigil
+~  nest_newSigilDiscovered += chosenSigil
 ~ firstGlyph = ()
 ~ secondGlyph = ()
 ~ thirdGlyph = ()

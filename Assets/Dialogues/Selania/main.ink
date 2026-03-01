@@ -19,6 +19,9 @@
 #ambientSounds: {tag_ambientSounds()}
 @interact 
 
+
+//Gestione notifiche
+-> notification_system ->
 //Passaggio per debug per aprire tutte le aree che si aprirebbero solo più avanti nel gioco
 -> debug_places_open ->
 //Avvio degli storylets comuni

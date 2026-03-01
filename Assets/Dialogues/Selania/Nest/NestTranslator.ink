@@ -1,199 +1,198 @@
 
-=== function emotional_words_translator(wordValue)
+=== function sigils_translator(wordValue)
 //Da fare quando son sicura del tutto
-{debug_nest: emotional_words_translator.}
+{debug_nest: sigils_translator.}
     
     {wordValue:       
             
-        //Varizioni di tre colori
-            - RossoGialloBlu: 
+            - FireAirWater: 
                 ~ return "nome parola"
             
-            - RossoGialloVerde: 
+            - FireAirEarth: 
                 ~ return "nome parola"
                 
-            - RossoGialloViola: 
+            - FireAirAether: 
                 ~ return "nome parola"
    
-            - RossoBluVerde: 
+            - FireWaterEarth: 
                 ~ return "nome parola"
  
-            - RossoBluViola: 
+            - FireWaterAether: 
                 ~ return "nome parola"
                 
-            - RossoBluGiallo: 
-                ~ return "rosso-blu-giallo"
+            - FireWaterAir: 
+                ~ return "fire-water-air"
 
-            - RossoVerdeBlu: 
+            - FireEarthWater: 
                 ~ return "nome parola"
  
-            - RossoVerdeViola: 
+            - FireEarthAether: 
                 ~ return "nome parola"
    
-            - RossoVerdeGiallo: 
+            - FireEarthAir: 
                 ~ return "nome parola"
     
-            - RossoViolaGiallo:
+            - FireAetherAir:
                 ~ return "nome parola"
                 
-            - RossoViolaVerde:
+            - FireAetherEarth:
                 ~ return "nome parola"
                 
-            - RossoViolaBlu:
+            - FireAetherWater:
                 ~ return "nome parola"
       
         
         
         
-            - GialloRossoVerde:
+            - AirFireEarth:
                 ~ return "nome parola"
   
-            - GialloRossoViola:
+            - AirFireAether:
                 ~ return "nome parola"
                 
-            - GialloRossoBlu:
+            - AirFireWater:
                 ~ return "nome parola"
                 
-            - GialloBluVerde:
+            - AirWaterEarth:
                 ~ return "nome parola"
 
-            - GialloBluViola:
+            - AirWaterAether:
                 ~ return "nome parola"
    
-            - GialloBluRosso:
+            - AirWaterFire:
                 ~ return "nome parola"
   
-            - GialloVerdeViola:
+            - AirEarthAether:
                 ~ return "nome parola"
   
-            - GialloVerdeBlu:
+            - AirEarthWater:
                 ~ return "nome parola"
       
-            - GialloVerdeRosso:
+            - AirEarthFire:
                 ~ return "nome parola"
             
-            - GialloViolaVerde:
+            - AirAetherEarth:
                 ~ return "nome parola"
             
-            - GialloViolaBlu:
+            - AirAetherWater:
                 ~ return "nome parola"
 
-            - GialloViolaRosso:
+            - AirAetherFire:
                 ~ return "nome parola"
                 
                 
 
             
-            - BluRossoVerde:
+            - WaterFireEarth:
                 ~ return "nome parola"
  
-            - BluRossoViola:
+            - WaterFireAether:
                 ~ return "nome parola"
                 
-            - BluRossoGiallo:
+            - WaterFireAir:
                 ~ return "nome parola"
  
-            - BluGialloVerde:
+            - WaterAirEarth:
                 ~ return "nome parola"
 
-            - BluGialloViola:
+            - WaterAirAether:
                 ~ return "nome parola"
                 
-            - BluGialloRosso:
+            - WaterAirFire:
                 ~ return "nome parola"
  
-            - BluVerdeViola:
+            - WaterEarthAether:
                 ~ return "nome parola"
   
-            - BluVerdeGiallo:
+            - WaterEarthAir:
                 ~ return "nome parola"
  
-            - BluVerdeRosso:
+            - WaterEarthFire:
                 ~ return "nome parola"
  
-            - BluViolaVerde:
+            - WaterAetherEarth:
                 ~ return "nome parola"
   
-            - BluViolaGiallo:
+            - WaterAetherAir:
                 ~ return "nome parola"
 
-            - BluViolaRosso:
+            - WaterAetherFire:
                 ~ return "nome parola"
   
                 
             
-            - VerdeRossoViola:
+            - EarthFireAether:
                 ~ return "nome parola"
                 
-            - VerdeRossoBlu:
+            - EarthFireWater:
                 ~ return "nome parola"
 
-            - VerdeRossoGiallo:
+            - EarthFireAir:
                 ~ return "nome parola"
   
-            - VerdeGialloViola:
+            - EarthAirAether:
                 ~ return "nome parola"
   
-            - VerdeGialloBlu:
+            - EarthAirWater:
                 ~ return "nome parola"
  
-            - VerdeBluViola:
+            - EarthWaterAether:
                 ~ return "nome parola"
  
-            - VerdeBluGiallo:
+            - EarthWaterAir:
                 ~ return "nome parola"
   
-            - VerdeBluRosso:
+            - EarthWaterFire:
                 ~ return "nome parola"
    
-            - VerdeGialloRosso:
+            - EarthAirFire:
                 ~ return "nome parola"
   
-            - VerdeViolaBlu:
+            - EarthAetherWater:
                 ~ return "nome parola"
                 
-            - VerdeViolaGiallo:
+            - EarthAetherAir:
                 ~ return "nome parola"
                 
-            - VerdeViolaRosso:
+            - EarthAetherFire:
                 ~ return "nome parola"
                 
                 
             
-            - ViolaRossoVerde:
+            - AetherFireEarth:
                 ~ return "nome parola"
 
-            - ViolaRossoBlu:
+            - AetherFireWater:
                 ~ return "nome parola"
                 
-            - ViolaRossoGiallo:
+            - AetherFireAir:
                 ~ return "nome parola"
  
-            - ViolaGialloVerde:
+            - AetherAirEarth:
                 ~ return "nome parola"
     
-            - ViolaGialloBlu:
+            - AetherAirWater:
                 ~ return "nome parola"
    
-            - ViolaGialloRosso:
+            - AetherAirFire:
                 ~ return "nome parola"
   
-            - ViolaBluVerde:
+            - AetherWaterEarth:
                 ~ return "nome parola"
   
-            - ViolaBluGiallo:
+            - AetherWaterAir:
                 ~ return "nome parola"
   
-            - ViolaBluRosso:
+            - AetherWaterFire:
                 ~ return "nome parola"
   
-            - ViolaVerdeBlu:
+            - AetherEarthWater:
                 ~ return "nome parola"
    
-            - ViolaVerdeGiallo:
+            - AetherEarthAir:
                 ~ return "nome parola"
 
-            - ViolaVerdeRosso:
+            - AetherEarthFire:
                 ~ return "nome parola"
    
             

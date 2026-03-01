@@ -4,7 +4,7 @@ LISTE COMBINATORIE DEI SIGILLI
                 
 ----------------------------------*/
 
-    LIST allGlyphs = Fire, Air, Water, Earth, Aether
+LIST allGlyphs = Fire, Air, Water, Earth, Aether
 
 //Lista di tutti i possibili sigilli
     LIST glyph_allSigils = 
