@@ -1,9 +1,9 @@
-=== emotional_words_management(action)
+=== sigils_activation(action)
     //Abilito il box di dialogo ad hoc per il Nest
         ~ enableNestDialogue()
 
 //Questa è la funzione che usiamo sia per rimuovere che per attivare una parola posseduta.
-{debug_nest: emotional_words_management(action). Il valore di action è {action}.}
+{debug_nest: sigils_activation(action). Il valore di action è {action}.}
 
     //Ho cambiato idea è all'inizio così (dovrebbe) comparire sempre come ultima scelta su unity, e quindi centrata in basso
     + [Ho cambiato idea]
@@ -411,36 +411,8 @@
         {debug_nest: ho attivato una parola, che è {glyph_actualActiveSigil}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {glyph_discoveredSigils}.}    
     -
     
-    {
-        - glyph_actualActiveSigil != ():
-            -> word_usage_counter ->
-    }
-    
     //Disabilito il box di dialogo ad hoc per il Nest
         ~ disableNestDialogue()
     
 
 ->->
-
-//Utilizzato per capire quante volte posso usare una parola
-=== word_usage_counter
-{debug_nest: passo per word_usage_counter.}
-{debug_nest: prima dell'aggiornamento il valore di glyph_temporaryWordUsageCounter è {glyph_temporaryWordUsageCounter}.}
-    
-TODO: capire cosa manca qui sotto per farlo usare    
-    // {
-    //     - nest_oneUseWords  has glyph_actualActiveSigil:
-    //         ~ glyph_temporaryWordUsageCounter = 1
-        
-    //     - nest_twoUseWords  has glyph_actualActiveSigil:
-    //         ~ glyph_temporaryWordUsageCounter = 2
-        
-    //     - nest_threeUseWords has glyph_actualActiveSigil:
-    //         ~ glyph_temporaryWordUsageCounter = 3
-        
-    //     - else: ERROR, non riesco a trovare {glyph_actualActiveSigil} in nessuna delle tre liste, per cui non riesco ad assegnare un valore a glyph_temporaryWordUsageCounter, che ora è a {glyph_temporaryWordUsageCounter}.
-    //
-    
-{debug_nest: dopo l'aggiornamento il valore di glyph_temporaryWordUsageCounter è {glyph_temporaryWordUsageCounter}.}  
-        
-        ->->

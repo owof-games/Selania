@@ -1,13 +1,3 @@
-VAR firstGlyph = ()
-VAR secondGlyph = ()
-VAR thirdGlyph = ()
-
-VAR nest_fireButton = false
-VAR nest_airButton = false
-VAR nest_waterButton = false
-VAR nest_earthButton = false
-VAR nest_aetherButton = false
-
 === nest ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
@@ -28,86 +18,9 @@ VAR nest_aetherButton = false
         }
 }
 
-~ nest_updateButtons()
+//Aggiorniamo lo stato dei bottoni, e poi torniamo a main
+    ~ nest_updateButtons()
 -> main
-    
-//Per prima cosa passiamo dalla funzione di attivazione/disattivazione dei tasti glyph_activator_function 
-    // -> glyph_activator_function -> main
-
-
-=== function nest_updateButtons() ===
-
-~ nest_airButton = canChooseGlyph(Air)
-~ nest_fireButton = canChooseGlyph(Fire)
-~ nest_earthButton = canChooseGlyph(Earth)
-~ nest_waterButton = canChooseGlyph(Water)
-~ nest_aetherButton = canChooseGlyph(Aether)
-
-
-
-
-=== function canChooseGlyph(checkedGlyph) ===
-
-~ temp first = firstGlyph
-~ temp second = secondGlyph
-~ temp third = thirdGlyph
-{
-    - not firstGlyph:
-        ~ first = checkedGlyph
-    - not secondGlyph:
-        ~ second = checkedGlyph
-    - not thirdGlyph:
-        ~ third = checkedGlyph
-}
-
-// primo step: ottenere la lista dei sigilli che posso creare scegliendo first, second e third
-~ temp allSigils = LIST_ALL(glyph_allSigils)
-{first and not second and not third:
-    ~ allSigils = sigilsWithGlyphInFirstPosition(first)
-}
-{first and second and not third:
-    ~ allSigils = sigilsWithGlyphInFirstPosition(first) ^ sigilsWithGlyphInSecondPosition(second)
-}
-{first and second and third:
-    ~ allSigils = sigilsWithGlyphInFirstPosition(first) ^ sigilsWithGlyphInSecondPosition(second) ^ sigilsWithGlyphInThirdPosition(third)
-}
-{debug_nest: I sigilli con first={first}, second={second}, third={third} sono {allSigils}}
-
-// secondo step: togliere quelli già scoperti
-~ allSigils -= glyph_discoveredSigils
-{debug_nest: I sigilli rimasti sono {allSigils}}
-
-// terzo step: verificare se ne è rimasto almeno uno
-~ temp someRemaining = allSigils != ()
-{debug_nest: Rimangono sigilli? {someRemaining}}
-
-~ return someRemaining
-
-
-=== function checkSigilCompleted() ===
-{not thirdGlyph:
-    ~ return
-}
-~ temp chosenSigil = sigilsWithGlyphInFirstPosition(firstGlyph) ^ sigilsWithGlyphInSecondPosition(secondGlyph) ^ sigilsWithGlyphInThirdPosition(thirdGlyph)
-{debug_nest: Il sigillo scelto è: {chosenSigil}}
-~ glyph_discoveredSigils += chosenSigil
-~  nest_newSigilDiscovered += chosenSigil
-~ firstGlyph = ()
-~ secondGlyph = ()
-~ thirdGlyph = ()
-
-
-
-=== function saveGlyph(glyph) ===
-{
-    - not firstGlyph:
-        ~ firstGlyph = glyph
-    - not secondGlyph:
-        ~ secondGlyph = glyph
-    - not thirdGlyph:
-        ~ thirdGlyph = glyph
-}
-
 
 === nest_fireGlyph_button ===
     + {are_two_entities_together(PG,fireGlyph) && nest_fireButton}[fireGlyph]
