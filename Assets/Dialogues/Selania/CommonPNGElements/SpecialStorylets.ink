@@ -84,7 +84,7 @@
 
         {
             //Invito in biblioteca per aprire il nido
-            - are_two_entities_together(ThirdCharacter, PG) && (first_char_main_storylets.six or third_char_main_storylets.two) && contentsForest hasnt PG && player_accessiblePlaces hasnt Nest:
+            - are_two_entities_together(ThirdCharacter, PG) && (first_char_main_storylets.six or third_char_main_storylets.two) && contentsLibrary hasnt PG && player_accessiblePlaces hasnt Nest:
                 
                     {stopping:
                         - Ehi {player_name}! Troviamoci in biblioteca. Ho una cosa che devi vedere!
