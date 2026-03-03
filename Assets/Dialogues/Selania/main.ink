@@ -17,7 +17,6 @@
 ~ temp my_location = entity_location(PG)
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
-@interact 
 
 
 //Notifiche
@@ -27,6 +26,7 @@
 //Avvio degli storylets comuni
 -> common_storylets ->
 
+@interact 
 //Spostamenti
 <- move_between_rooms(my_location)
 
