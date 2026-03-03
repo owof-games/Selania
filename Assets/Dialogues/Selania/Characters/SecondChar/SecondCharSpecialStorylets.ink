@@ -105,8 +105,7 @@
     Chissà se ci sono anche i manga!
     - (bookUpdate)
 
-        ~ secondChar_pauseTalking = secondChar_pauseDuration
-        ~ movements_randomizable_characters += SecondCharacter
+        -> second_char_closing_storylet ->
         -> opening_places ->
         -> main
         
@@ -193,7 +192,7 @@
     Mi sa che dopo mi leggo qualcosa di nuovo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
     - (bookUpdate)
     
-        ~ secondChar_pauseTalking = secondChar_pauseDuration
+        -> second_char_closing_storylet ->
         -> main
 
 
@@ -225,4 +224,6 @@
     Ha provato a prenderla, ma ha sbattuto contro l'albero.
     E poi si è messa a fissarmi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
     C'è un caneeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
--> main        
+
+        -> second_char_closing_storylet ->
+        -> main        

@@ -113,7 +113,7 @@
     }
     
     {
-        - open_nest && (entity_location(FromLibraryToNest) == Safekeeping):
+        - open_the_nest && (entity_location(FromLibraryToNest) == Safekeeping):
             ~ player_accessiblePlaces += Nest
             ~ move_entity(FromLibraryToNestBlocked, Safekeeping)
             ~ move_entity(FromLibraryToNest, Library)

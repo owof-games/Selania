@@ -41,7 +41,7 @@
     //Ho messo (entity_location(SecondCharacter) != Kitchen) perché così non parte mai la cucina autonoma se c'è qualcunx in cucina.
     
         {
-            - player_accessiblePlaces has Kitchen && (not second_char_cooking_tracker) && (entity_location(FirstCharacter) != Kitchen)  && second_char_main_storylets.one && contentsKitchen hasnt TheKitchenFrog && (kitchen_cookingAloneCoolDown == 0):
+            - player_accessiblePlaces has Kitchen && (not second_char_cooking_tracker) && (entity_location(FirstCharacter) != Kitchen) && (entity_location(ThirdCharacter) != Kitchen) && second_char_main_storylets.one && contentsKitchen hasnt TheKitchenFrog && (kitchen_cookingAloneCoolDown == 0):
             
                 ~ kitchen_secondCharIsCooking = true
                 ~ move_entity(SecondCharacter, Kitchen)
@@ -90,7 +90,7 @@
 
     //Chitarra
         {
-            - player_accessiblePlaces has Kitchen && (not first_char_cooking_tracker) && (entity_location(SecondCharacter) != Kitchen) && contentsKitchen hasnt TheKitchenFrog && (kitchen_cookingAloneCoolDown == 0):
+            - player_accessiblePlaces has Kitchen && (not first_char_cooking_tracker) && (entity_location(SecondCharacter) != Kitchen)  && (entity_location(ThirdCharacter) != Kitchen) && contentsKitchen hasnt TheKitchenFrog && (kitchen_cookingAloneCoolDown == 0):
             
                     ~ kitchen_firstCharIsCooking = true
                     ~ move_entity(FirstCharacter, Kitchen)
@@ -131,6 +131,54 @@
                    ~ kitchen_firstCharCookingTogetherInvite = false
                    ~ kitchen_firstCharCookingTogetherWaiting = 0
                    ~ move_entity(FirstCharacter, Pond)
+            }
+        }
+        
+    
+
+    //TerzoPNG
+        {
+            - player_accessiblePlaces has Kitchen && (not third_char_cooking_tracker) && (entity_location(SecondCharacter) != Kitchen) && (entity_location(FirstCharacter) != Kitchen) && contentsKitchen hasnt TheKitchenFrog && (kitchen_cookingAloneCoolDown == 0):
+            
+                    ~ kitchen_thirdCharIsCooking = true
+                    ~ move_entity(ThirdCharacter, Kitchen)
+                        -> third_char_cooking_tracker 
+        }
+        
+        //Gestione tempi di cucina autonoma di PNG3.
+        {debug: il valore di kitchen_thirdCharCookingTime è {kitchen_thirdCharCookingTime}}
+        {debug: il valore di kitchen_thirdCharIsCooking è {kitchen_thirdCharIsCooking}}
+        {
+            - kitchen_thirdCharIsCooking == true:
+            
+                {
+                
+                    - kitchen_thirdCharCookingTime < kitchen_thirdCharCookingMaxTime:
+                        ~ kitchen_thirdCharCookingTime ++
+                    
+                    - else:
+                       ~ kitchen_thirdCharIsCooking = false
+                       ~ move_entity(ThirdCharacter, Pond)
+                       //Attivo il cooldown, così altre png non vanno subito a cucinare da sole
+                        ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
+                       //E poi sposto gli elementi decorativi in cucina
+                       ~ move_entity(ThirdCharCookingAloneOBJ, Kitchen)
+                }
+
+        }
+
+        //Gestione attesa in cucina di PNG3 se invitato a cucinare
+        {   
+            - kitchen_thirdCharCookingTogetherInvite == true:
+            
+            {
+                - kitchen_thirdCharCookingTogetherWaiting < kitchen_thirdCharCookingMAXTogetherWaiting:
+                    ~ kitchen_thirdCharCookingTogetherWaiting ++
+                
+                - else:
+                   ~ kitchen_thirdCharCookingTogetherInvite = false
+                   ~ kitchen_thirdCharCookingTogetherWaiting = 0
+                   ~ move_entity(ThirdCharacter, Pond)
             }
         }
         
