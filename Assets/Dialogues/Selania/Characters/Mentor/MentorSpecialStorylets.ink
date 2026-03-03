@@ -51,7 +51,7 @@
         Anche se non è un bambino facilissimo.
         Ho perso il conto delle bugie che mi ha detto da quando è arrivato.
             {
-                - are_two_entities_together(TheFrog, PG):
+                - are_two_entities_together(Franco, PG):
                     Sono bugie solo se hanno le gambe corte.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Ma {charNameTwo} ha quattro zampette.
                     Quindi al massimo sono...
@@ -85,7 +85,7 @@
                     Stavo solo cercando di fermarlo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sorry
                     Continuava a saltare nello stagno, e non ho idea di cosa possa esserci in quell'acqua lurida e limacciosa.
                         {
-                            - are_two_entities_together(TheFrog, PG):
+                            - are_two_entities_together(Franco, PG):
                                 I miei figli.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         }
             } 
@@ -213,7 +213,7 @@
         -
     Comunque c'è una sola cosa sensata da fare.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         {
-            - are_two_entities_together(TheFrog, PG):
+            - are_two_entities_together(Franco, PG):
                 Insegnarmi a nuotare?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         }
     Chiedere scusa a {charNameTwo}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
@@ -342,7 +342,7 @@
                 }
 
                 {
-                    - are_two_entities_together(TheFrog, PG):
+                    - are_two_entities_together(Franco, PG):
                         Urlare non è già fare qualcosa?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         Zia Graaak lo dice sempre, che non è vero che non fa nulla, perché ci sgrida tutto il giorno.
                 }
@@ -373,7 +373,7 @@
                         } 
             }
             {
-                - are_two_entities_together(TheFrog, PG):
+                - are_two_entities_together(Franco, PG):
                     La mia famiglia lo mangia da anni e va tutto bene.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     A parte quella volta che mamma Craazia ha iniziato a cantare in melanzanese.
             }

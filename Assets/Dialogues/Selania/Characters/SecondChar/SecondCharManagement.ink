@@ -188,7 +188,7 @@
                         ~ change_entity_place(Mentor)
         }
         {
-            - are_two_entities_together(TheFrog, PG):
+            - are_two_entities_together(Franco, PG):
                 Io sto cra buono buono.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 In silenzio.
                 A ricordarmi il numero della scuola dei girini.

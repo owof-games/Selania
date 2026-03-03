@@ -221,9 +221,9 @@
     }
     
     //Comparsa della rana
-    {second_char_main_storylets.two.theFrog && entity_location(TheFrog)!=Pond:
+    {second_char_main_storylets.two.franco && entity_location(Franco)!=Pond:
             {debug: Ho spostato la rana allo stagno.}
-           ~  move_entity(TheFrog, Pond)
+           ~  move_entity(Franco, Pond)
     }
     
     

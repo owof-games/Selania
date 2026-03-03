@@ -184,7 +184,7 @@
     E c'è sempre qualcuno che vuole punirci.
     Ma perché secondo me i grandi non la vedono mica l'aragosta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         {
-                - are_two_entities_together(TheFrog, PG):
+                - are_two_entities_together(Franco, PG):
                     Spesso non vedono neanche le rane.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     O i girini.
                     O l'uomo lucertola.

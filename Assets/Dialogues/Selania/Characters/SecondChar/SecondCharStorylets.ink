@@ -221,7 +221,7 @@
                 Che non mi ha aiutato molto perché gli ho chiesto le caramelle.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
                 E dovrebbero stare nella mia pancia, ma non ci sono.   
 
-            - (theFrog)
+            - (franco)
                          
             Su!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
             Vai a vederla, ora!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
@@ -447,7 +447,7 @@
         DIECI! Mica solo tre come noi!
         E che l'acso, atso, axotolottoto.
             {
-                - are_two_entities_together(TheFrog, PG):
+                - are_two_entities_together(Franco, PG):
                     Botto!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Risotto!
                     Cucciolotto!
@@ -787,7 +787,7 @@
         
         Franco prima mi ha detto che tu scrivi storie.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
             {
-                - are_two_entities_together(TheFrog, PG):
+                - are_two_entities_together(Franco, PG):
                     Anche Franco scrive storie.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Storie in cui Franco sa nuotare!
             }
@@ -870,7 +870,7 @@
             Però ho provato a leccare la rana.
             Ma mi ha chiesto di non farlo, perché poi sarei stato male.
                 {
-                    - are_two_entities_together(TheFrog, PG):
+                    - are_two_entities_together(Franco, PG):
                         Ho un superpotere: se mi lecchi viaggi senza spostarti.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         Sono molto apprezzato alle feste!
                         Ma non mi piace tanto tutta la bava che mi arriva addosso.

@@ -354,7 +354,7 @@
         ~ frog_pauseSpecialMission = frog_pauseSpecialMissionMax
         //Rimetto a posto i vari assets
         ~ move_entity(TheKitchenFrog, Safekeeping)
-        ~ move_entity(TheFrog, Pond)
+        ~ move_entity(Franco, Pond)
 
 -> cooking_animations_off ->
 -> main

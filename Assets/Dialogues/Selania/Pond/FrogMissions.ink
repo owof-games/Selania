@@ -386,7 +386,7 @@
 
         Ci vediamo in cucina!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
 
-        ~ move_entity(TheFrog, Safekeeping)
+        ~ move_entity(Franco, Safekeeping)
         ~ move_entity(TheKitchenFrog, Kitchen)
         ~ frog_currentMission += specialMissionTwo
         ~ frog_availableSpecialMissions -= specialMissionTwo

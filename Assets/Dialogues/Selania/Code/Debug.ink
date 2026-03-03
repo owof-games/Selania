@@ -71,7 +71,7 @@
         ~ player_accessiblePlaces += Greenhouse
 }
 {
-    - debug_testFrog == true && (entity_location(TheFrog) == Safekeeping):
-        ~ move_entity(TheFrog, Pond)
+    - debug_testFrog == true && (entity_location(Franco) == Safekeeping):
+        ~ move_entity(Franco, Pond)
 }      
 ->->

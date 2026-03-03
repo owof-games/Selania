@@ -2,7 +2,7 @@
     LIST listPlaces = Forest, TrainStop, Greenhouse, Library, Nest, Kitchen, Safekeeping, Pond, Bedroom, BookPlace, Dump
 
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
-    LIST listCharacters = Mentor, PG, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, TheFrog, FifthCharacter, TheKitchenFrog
+    LIST listCharacters = Mentor, PG, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, Franco, FifthCharacter, TheKitchenFrog
 
     LIST listTransitions = 
     FromTrainStopToForest, 

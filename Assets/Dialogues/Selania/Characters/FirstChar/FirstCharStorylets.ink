@@ -678,7 +678,7 @@
         Per avere tempo e testa per creare buona musica.
         Per fare concerti che salvino almeno una persona.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad    
             {
-                - are_two_entities_together(TheFrog, PG):
+                - are_two_entities_together(Franco, PG):
                     Ma se i concerti sono in compagnia, allora da solə sono i solcerti?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Soncerti?
                     Sorcerti?

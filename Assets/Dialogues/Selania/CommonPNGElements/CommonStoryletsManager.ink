@@ -22,7 +22,7 @@
                 -> first_mentor_chit_chat
         
         //Chiacchiere tra Rana  e Mentore
-            - are_two_entities_together(Mentor, PG) && welcome.your_name && are_two_entities_together (TheFrog, PG) && not frog_and_mentor_chit_chat:
+            - are_two_entities_together(Mentor, PG) && welcome.your_name && are_two_entities_together (Franco, PG) && not frog_and_mentor_chit_chat:
                 -> frog_and_mentor_chit_chat
 
         //Feedback da parte di Mentore su pensieri strega se le abbiamo detto che abbiamo parlato con la pianta
@@ -30,11 +30,11 @@
                 -> the_witch_and_the_mentor
         
         //Chiacchiera tra Chitarra e Rana                
-            - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(TheFrog, PG) && not frog_and_first_char_chit_chat:
+            - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(Franco, PG) && not frog_and_first_char_chit_chat:
                 -> frog_and_first_char_chit_chat
 
         //Chiacchiera tra Riccio e rana
-            - are_two_entities_together(SecondCharacter, PG) && are_two_entities_together(TheFrog, PG) && not frog_and_second_char_chit_chat:
+            - are_two_entities_together(SecondCharacter, PG) && are_two_entities_together(Franco, PG) && not frog_and_second_char_chit_chat:
                 -> frog_and_second_char_chit_chat
 
             - else:
