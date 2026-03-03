@@ -163,7 +163,7 @@ MonoBehaviour:
     <minimumLogLevel>k__BackingField: 0
   _consoleProviderSettings:
     categorySettingsArray:
-    - <categoryPrefix>k__BackingField: Selania.Rework.Components.InkBridge
+    - <categoryPrefix>k__BackingField: Selania.Rework.Components.Grimoire
       <minimumLogLevel>k__BackingField: 0
     <minimumLogLevel>k__BackingField: 2
   x: '-'
