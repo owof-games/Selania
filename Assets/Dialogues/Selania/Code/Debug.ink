@@ -1,7 +1,7 @@
     VAR debug_seedRandom = true
     
 //Per abilitare o meno i debug
-    VAR debug_openAll = true
+    VAR debug_openAll = false
     VAR debug = false
     VAR debug_cultivable = false
     VAR debug_changeName = false
@@ -12,7 +12,7 @@
     //per testare i luoghi non subito aperti con calma
     VAR debug_testLibrary = false
     VAR debug_testKitchen = false
-    VAR debug_testNest = true
+    VAR debug_testNest = false
     VAR debug_testFrog = false
     VAR debug_testDump = false
     VAR debug_testGreenhouse = false

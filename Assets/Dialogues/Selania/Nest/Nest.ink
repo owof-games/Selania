@@ -18,9 +18,8 @@
         }
 }
 
-
 //Aggiorniamo lo stato dei bottoni, e poi torniamo a main
-    ~ nest_updateButtons()
+    ~ nest_updateButtons()    
 -> main
 
 

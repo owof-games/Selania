@@ -319,7 +319,13 @@
                 {debug: Ho spostato la dogga nel safekeeping.}
     
     }
-    
+        //Abilito Carla se siamo in modalità tutorial
+    {
+        - tutorial_ActivateTutorial == true && not tutorial_choicesStorylet:
+            ~ move_entity(Carla, TrainStop)
+            {debug: il tutorial è attivo e quindi sposto Carla alla fermata del treno.}
+    }
+
     
     ~ firstChar_mailPause --
     ~ secondChar_mailPause --

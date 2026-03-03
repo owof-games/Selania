@@ -20,8 +20,8 @@
 //Streets to and into the Bedroom
     + {are_two_entities_together(PG, FromTrainStopToBedroom)} [FromTrainStopToBedroom]
             ~ move_entity(PG, Bedroom)
-        -> on_movement_events ->
-        -> bedroom
+            -> on_movement_events ->
+            -> bedroom
     
     + {are_two_entities_together(PG, BedClosingGame) && (not debug_stochastic)} [BedClosingGame]
     
@@ -46,6 +46,7 @@
 //Streets to Train Stop
     + {are_two_entities_together(PG, FromBedroomToTrainStop)} [FromBedroomToTrainStop]
         ~ move_entity(PG, TrainStop)
+        -> on_movement_events ->
             -> train_stop
     
     + {are_two_entities_together(PG, FromForestToTrainStop)}  [FromForestToTrainStop]

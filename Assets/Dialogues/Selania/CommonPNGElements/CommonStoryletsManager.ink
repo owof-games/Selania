@@ -1,19 +1,19 @@
 === common_storylets
+
     {
-        
+
         //Gestione dei tutorial di Carla
-            - tutorial_ActivateTutorial == true && are_two_entities_together(Carla, PG) && not tutorialChoices:
+            - tutorial_ActivateTutorial == true && are_two_entities_together(Carla, PG) && not tutorial_choicesStorylet:
                 -> tutorial_choicesStorylet
 
-            - tutorial_ActivateTutorial == true && player_accessiblePlaces has Greenhouse && not tutorial_greenhouseStorylet:
-                    ~ move_entity(Carla, Greenhouse)
+            - tutorial_ActivateTutorial == true && entity_location(PG) == Greenhouse && not tutorial_greenhouseStorylet:
                 -> tutorial_greenhouseStorylet
 
-            - tutorial_ActivateTutorial == true && player_accessiblePlaces has Kitchen && not tutorial_kitchenStorylet:
+            - tutorial_ActivateTutorial == true && entity_location(PG) == Kitchen && not tutorial_kitchenStorylet:
                     ~ move_entity(Carla, Kitchen)
                 -> tutorial_kitchenStorylet
 
-            - tutorial_ActivateTutorial == true && player_accessiblePlaces has Nest && not tutorial_nestStorylet:
+            - tutorial_ActivateTutorial == true && entity_location(PG) == Nest && not tutorial_nestStorylet:
                     ~ move_entity(Carla, Nest)
                 -> tutorial_nestStorylet
 

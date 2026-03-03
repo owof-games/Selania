@@ -9,11 +9,6 @@
 //Qui metto tutte quelle funzioni e variazioni che sono richieste a ogni cambio stanza.
 ~ temp currentPlace = entity_location(PG)
 
-//Abilito Carla se siamo in modalità tutorial
-{
- - tutorial_ActivateTutorial == true:
-    ~ move_entity(Carla, TrainStop)
-}
 
 
 //Passaggio per spostare il grimorio temporaneo in foresta dopo aver scelto il proprio nome.

@@ -15,6 +15,9 @@
             ~ move_entity(kitchenOpened, Bedroom)
 }
 
+    //check storylets soprattutto per far partire il tutorial di Carla, altrimenti la presenza di una scelta blocca il check fino al primo ritorno in main
+    -> common_storylets ->
+
 -> kitchen_storylets_dispatcher
 
 

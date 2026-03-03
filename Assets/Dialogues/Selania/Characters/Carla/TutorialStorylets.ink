@@ -4,32 +4,33 @@ Tutorial scelte spiegato da Carla
 
 
 
-
-{
-    - tutorial_allTutorialSteps hasnt tutorialChoices:
-        ~ tutorial_allTutorialSteps += tutorialChoices
-}
-
+    {
+        - tutorial_allTutorialSteps hasnt tutorialChoices:
+            ~ tutorial_allTutorialSteps += tutorialChoices
+    }
 
     //Se è la prima volta che passo da qui, ovvero se è tutorial effettivo, allora vado anche alla spiegazione delle relazioni, altrimenti no, perché saranno separati.
     {
         - tutorial_choicesStorylet == 1:
             -> tutorial_relationshipStorylet
         - else:
-            ->->    
+            -> main  
     }
 
 
 === tutorial_relationshipStorylet ===
 Tutorial relazione spiegato da Carla
 
+
 {
     - tutorial_allTutorialSteps hasnt tutorialRelationship:
         ~ tutorial_allTutorialSteps += tutorialRelationship
+        ~ move_entity(Carla, Forest)
 }
 
-    ~ move_entity(Carla, Forest)
-->->
+
+    
+-> main
 
 
 === tutorial_inkStorylet ===
@@ -41,7 +42,7 @@ Tutorial inchiostro spiegato da Carla
         ~ tutorial_allTutorialSteps += tutorialInk
 }
 
-->->
+-> main
 
 
 === tutorial_rereadingStorylet ===
@@ -53,18 +54,24 @@ Tutorial rilettura spiegato da Carla
         ~ tutorial_allTutorialSteps += tutorialRereading
 }
 
-->->
+-> main
 
 
 === tutorial_greenhouseStorylet ===
 Tutorial serra spiegato da Carla
 {
-    - tutorial_allTutorialSteps hasnt tutorialGreenhouse:
-        ~ tutorial_allTutorialSteps += tutorialGreenhouse
+    - tutorial_greenhouseStorylet == 1:
+    ~ move_entity(Carla, Greenhouse)
 }
 
-    ~ move_entity(Carla, Forest)
-->->
+{
+    - tutorial_allTutorialSteps hasnt tutorialGreenhouse:
+        ~ tutorial_allTutorialSteps += tutorialGreenhouse
+        ~ move_entity(Carla, Forest)
+}
+
+    
+-> main
 
 
 === tutorial_kitchenStorylet ===
@@ -73,10 +80,11 @@ Tutorial cucina spiegato da Carla
 {
     - tutorial_allTutorialSteps hasnt tutorialKitchen:
         ~ tutorial_allTutorialSteps += tutorialKitchen
+        ~ move_entity(Carla, Forest)
 }
 
-    ~ move_entity(Carla, Forest)
-->->
+    
+-> main
 
 
 === tutorial_nestStorylet ===
@@ -85,7 +93,8 @@ Tutorial nido spiegato da Carla
 {
     - tutorial_allTutorialSteps hasnt tutorialNest:
         ~ tutorial_allTutorialSteps += tutorialNest
+        ~ move_entity(Carla, Forest)
 }
 
-    ~ move_entity(Carla, Forest)
-->->
+    
+-> main
