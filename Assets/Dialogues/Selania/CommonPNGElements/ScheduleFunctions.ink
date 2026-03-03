@@ -41,11 +41,11 @@
                 ~ secondChar_storyStatus = story_storyStarted
     
         //Dopo aver aperto la biblioteca, compare il terzo png
-        //- open_the_library && not (thirdChar_storyStatus == story_storyStarted):
-            //{debug: introduco {ThirdCharacter} in scena.}
-                // ~ move_entity(ThirdCharacter, TrainStop)
-                // ~ move_entity(TrainNoiseComing, CurrentLocation)
-                // ~ thirdChar_storyStatus = story_storyStarted
+        - (first_char_main_storylets.four or second_char_main_storylets.two) && not (thirdChar_storyStatus == story_storyStarted):
+            {debug: introduco {ThirdCharacter} in scena.}
+                ~ move_entity(ThirdCharacter, TrainStop)
+                ~ move_entity(TrainNoiseComing, CurrentLocation)
+                ~ thirdChar_storyStatus = story_storyStarted
                 
         //X movimenti dopo la furia della mentore, compare la quarta png
         //- player_movementsCounter == delayFourthChar && mentor_rage:

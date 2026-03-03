@@ -18,7 +18,7 @@
     VAR debug_testGreenhouse = false
     
 //Per disabilitare uscite e cose varie in caso di testing con il sistema stocastico    
-    VAR debug_stochastic = false
+    VAR debug_stochastic = true
 
 
 {debug_seedRandom:

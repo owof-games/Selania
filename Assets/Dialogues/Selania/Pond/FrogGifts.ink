@@ -113,17 +113,17 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
         }
         
     
-    + {thirdChar_storyStatus == story_storyStarted} PNG 3.
-        ~  frog_aboutGiftRequest = missionCharThree
-            -> frog_gift_dispatcher
+    // // + {thirdChar_storyStatus == story_storyStarted} PNG 3.
+    // //     ~  frog_aboutGiftRequest = missionCharThree
+    // //         -> frog_gift_dispatcher
         
-    + {fourthChar_storyStatus == story_storyStarted} PNG 4.
-        ~  frog_aboutGiftRequest = missionCharFour
-            -> frog_gift_dispatcher
+    // + {fourthChar_storyStatus == story_storyStarted} PNG 4.
+    //     ~  frog_aboutGiftRequest = missionCharFour
+    //         -> frog_gift_dispatcher
         
-    + {fifthChar_storyStatus == story_storyStarted} PNG 5 (non come mentore).
-        ~  frog_aboutGiftRequest = missionCharFive
-            -> frog_gift_dispatcher
+    // + {fifthChar_storyStatus == story_storyStarted} PNG 5 (non come mentore).
+    //     ~  frog_aboutGiftRequest = missionCharFive
+    //         -> frog_gift_dispatcher
         
     + {frog_recoverableCultivables != ()}Ho bisogno di recuperare una pianta che ho utilizzato.
         //Nota: per ora sono quattro massimi gli utilizzi di un coltivabile, per cui non serve un menu ad hoc. Poi capire come fare.
