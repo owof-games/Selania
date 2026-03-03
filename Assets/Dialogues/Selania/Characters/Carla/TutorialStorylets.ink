@@ -20,7 +20,7 @@ Tutorial scelte spiegato da Carla
         - tutorial_choicesStorylet == 1:
             -> tutorial_relationshipStorylet
         - else:
-            -> main  
+            ->->
     }
 
 
@@ -37,7 +37,7 @@ Tutorial relazione spiegato da Carla
 
 
     
--> main
+->->
 
 
 === tutorial_inkStorylet ===
@@ -80,6 +80,7 @@ Tutorial serra spiegato da Carla
     - tutorial_allTutorialSteps hasnt tutorialGreenhouse:
         ~ tutorial_allTutorialSteps += tutorialGreenhouse
         ~ move_entity(Carla, Forest)
+        -> main
 }
 
     
@@ -99,6 +100,7 @@ Tutorial cucina spiegato da Carla
     - tutorial_allTutorialSteps hasnt tutorialKitchen:
         ~ tutorial_allTutorialSteps += tutorialKitchen
         ~ move_entity(Carla, Forest)
+            -> main
 }
 
     
@@ -118,6 +120,7 @@ Tutorial nido spiegato da Carla
     - tutorial_allTutorialSteps hasnt tutorialNest:
         ~ tutorial_allTutorialSteps += tutorialNest
         ~ move_entity(Carla, Forest)
+        -> main
 }
 
     
