@@ -16,32 +16,13 @@
     ~ temp charNameTwo = translator(thirdChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
 
-        Da quando nonna è nella casa dei vecchi fa tutto schifo.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
-        Papà è tornato ma litiga sempre con mamma.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        E quando papà non c'è mamma si arrabbia con me.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
-        E l'unica cosa che mi dice è che devo smetterla di piangere e fare il grande.
-        Che anche se piango nonna non torna e che è in un posto migliore.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        E a scuola le maestre sono fastidiose.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
-        Dicono che sono cattivo e bugiardo e sono violento, e finisco sempre in punizione.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Mio fratello dice che il mondo è un posto orribile e che non si può più aggiustare.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
-        Gli animali spariranno tutti e non posso fare nulla.
-        Papà dice che devo crescere, non pensare agli animali perché ora sono grande.
-        Ma i grandi fanno schifo.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
-        E non voglio fare schifo.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
-        E non voglio diventare grande.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
-        Per questo sono venuto qui.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Per stare con gli animali.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
-        E non è il mio compleanno.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
-        Ma se non mi invento un motivo per le cose nessuno mi ascolta.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Scusa per la bugia {player_name}.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+        Da quando nonna è nella casa dei vecchi fa tutto schifo.
         @animation:RewriterBook
         Io voglio solo fare il bambino.
-        // Invece i grandi mi dicono che mi vogliono bene.
-        // Ma poi mi fanno male.
-        // E io non mi fido più di voi.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
 
-            + Ti ho ascoltato, {charNameTwo}, e posso aiutarti a riscrivere la tua storia.
+            + Ti ho ascoltato, {charNameThree}, e posso aiutarti a riscrivere la tua storia.
                 -> rewriting
             
             + Capisco il tuo dolore, ma ho bisogno di riflettere un attimo.
@@ -51,11 +32,7 @@
     = rewriting
     ~ temp charNameTwo = translator(thirdChar_ActualName)
 
-            Va bene.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-            Ma stavo pensando una cosa però prima.
-            Abbiamo parlato tantissimo noi due.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
-            Ma davvero TANTISSSSSSIMO!
-            E sai cosa penso di te?#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+            Va bene.
 
             //Avvio aggiornamento relazione + commento PNG + commento strega
                 -> thirdAffinityCalc ->
@@ -76,13 +53,13 @@
     ~ temp charNameTwo = translator(thirdChar_ActualName)
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
 
 
         Comunque possiamo cominciare quando vuoi.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         
         //Affrontiamo gli adulti in generale
             Hai detto che da quando nonna è nella casa dei vecchi fa tutto schifo.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
-            Che tuo papà litiga con tua mamma, e che mamma si arrabbia con te e di non piangere perché nonna è in un posto migliore.
 
             + Tua nonna ti ha insegnato a lottare: lotta anche tu!
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC, varPGYes)->
@@ -205,40 +182,6 @@
             Stai già cambiando, {charNameTwo}!
                    
 
-
-        // + Non puoi prevedere il futuro. Goditi quello che c'è senza rimpianti.
-        //     Se le cose sono incerte, prenditi le certezze.
-        //     E la cosa certa è che gli animali ci sono ancora.
-        //     Che tuo fratello ti vuole bene.
-        //     E le caramelle sono buone.
-        //            -> glyph_modifier_variation_management(ThirdCharacter, earthC, varPGYes)->
- 
-        // + Sei giovane ma sai già un sacco di cose. Studia e salvali.
-        //     Si ha paura solo se non si conosce una cosa.
-        //     Impara a conoscere quello di cui hai paura.
-        //     E a quel punto saprai anche come cambiare le cose.
-        //            -> glyph_modifier_variation_management(ThirdCharacter, airC, varPGYes)->
-
-        // + E allora lotta. Unisciti ad altri e protesta!
-        //     Sei abituato a stare in castigo, di cosa hai paura?
-        //     A scuola fai quello che vuoi.
-        //     Fallo anche fuori.
-        //     Per salvare il mondo.
-        //             -> glyph_modifier_variation_management(ThirdCharacter, fireC, varPGYes)->
-
-        // + Inventa storie, bugie che creino compassione, che cambino le persone.
-        //     Un po' come la bugia del compleanno.
-        //     Ma per far sì che ogni bosco abbia migliaia di compleanni.
-        //     Usa il tuo dono per convincere le persone a cambiare.
-        //            -> glyph_modifier_variation_management(ThirdCharacter, waterC, varPGYes)->
-  
-        // + La paura blocca, la paura è una scusa comoda.
-        //     La paura è un rifugio.
-        //     Se hai paura, non agisci.
-        //     Se agisci non cambi nulla.
-        //     Davvero vuoi restare per sempre bloccato dalla paura?
-        //            -> glyph_modifier_variation_management(ThirdCharacter, aetherC, varPGYes)->
-                   
         -
         ~ numberQuestion ++  
         Non ci avevo pensato, pensato davvero.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #portrait:riccio_neutral
@@ -351,11 +294,7 @@
         
             + Ma puoi essere un adulto curioso e studioso, come un po' già sei.
                 -> glyph_modifier_variation_management(ThirdCharacter, airC, varPGYes)->
-                {
-                    -first_third_chit_chat:
-                        Come quando hai detto a {charNameOne} che volevi scoprire dove vanno tutti i posti chiusi qui.
-                        E come trovare le caramelle.
-                }
+
                 E tutto quello che ora sai degli animali diventerà mille volte ancora di più.
 
             
@@ -576,13 +515,7 @@
                     <i>{charNameTwo} ripone piena fiducia in {player_name}, ed è pronto a condividere con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} una informazione importante.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
 
-        Voglio dirti una cosa {player_name}. #speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #portrait:riccio_neutral
-        Su {mentorName}.
-        A me non mi sembra mica felice.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
-        Mi ricorda mamma quando gira per casa dando consigli e dicendo cose sorridendo.
-        E poi si rinchiude in camera e resta in silenzio per ore.
-        Ora fa tante cose e parla tanto.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #portrait:riccio_neutral
-        Ma non mi sembra felice.
+        Voglio dirti una cosa {player_name}.
             -> close
             
      = exit
@@ -616,8 +549,7 @@
         ~ player_movementsCounter = 0
         ~ state_ending_stories(ThirdCharacter)
 
-            Ora voglio stare ancora un po' qui prima di prendere il treno. #speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #portrait:riccio_neutral
-            Mi mancherà la rana!#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+            Ora voglio stare ancora un po' qui prima di prendere il treno.
         
         - (bookUpdate)
         

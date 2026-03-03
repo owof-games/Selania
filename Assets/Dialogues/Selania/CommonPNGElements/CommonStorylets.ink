@@ -448,3 +448,147 @@
     
         -> second_char_closing_storylet ->
         -> main
+
+
+
+=== frog_and_third_char_chit_chat ===
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+    Chiacchierata Franco e PNG3
+
+        + Metà delle cose che la voce dice sono illogiche.
+                -> glyph_modifier_variation_management(ThirdCharacter, airC, varPGYes)->
+            
+        + Dice che stai facendo un buon lavoro.
+                -> glyph_modifier_variation_management(ThirdCharacter, waterC, varPGYes)->
+
+        
+        + Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
+                -> glyph_modifier_variation_management(ThirdCharacter, earthC, varPGYes)->
+
+
+        + Non è più importante il tuo di giudizio sul tuo lavoro, {mentorName}?
+                -> glyph_modifier_variation_management(ThirdCharacter, aetherC, varPGYes)->
+
+
+        + Ha detto tante cose ma la risposta è: no.
+                -> glyph_modifier_variation_management(ThirdCharacter, fireC, varPGYes)->
+
+
+    - (bookUpdate)
+    -> third_char_closing_storylet ->
+    -> main
+
+
+
+=== third_mentor_chit_chat ===
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+    Chiacchierata Mentore e PNG3
+
+        + Metà delle cose che la voce dice sono illogiche.
+                -> glyph_modifier_variation_management(ThirdCharacter, airC, varPGYes)->
+                -> glyph_modifier_variation_management(Mentor, airC, varPGYes)->
+            
+        + Dice che stai facendo un buon lavoro.
+                -> glyph_modifier_variation_management(ThirdCharacter, waterC, varPGYes)->
+                -> glyph_modifier_variation_management(Mentor, airC, varPGYes)->
+
+        
+        + Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
+                -> glyph_modifier_variation_management(ThirdCharacter, earthC, varPGYes)->
+                -> glyph_modifier_variation_management(Mentor, airC, varPGYes)->
+
+
+        + Non è più importante il tuo di giudizio sul tuo lavoro, {mentorName}?
+                -> glyph_modifier_variation_management(ThirdCharacter, aetherC, varPGYes)->
+                -> glyph_modifier_variation_management(Mentor, airC, varPGYes)->
+
+
+        + Ha detto tante cose ma la risposta è: no.
+                -> glyph_modifier_variation_management(ThirdCharacter, fireC, varPGYes)->
+                -> glyph_modifier_variation_management(Mentor, airC, varPGYes)->
+
+    - (bookUpdate)
+
+    -> mentor_closing_storylet ->
+    -> third_char_closing_storylet ->
+    -> main
+
+=== third_second_chit_chat ===
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+    Chiacchierata Riccio e PNG3
+    
+         + Metà delle cose che la voce dice sono illogiche.
+                -> glyph_modifier_variation_management(ThirdCharacter, airC, varPGYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, airC, varPGYes)->
+            
+        + Dice che stai facendo un buon lavoro.
+                -> glyph_modifier_variation_management(ThirdCharacter, waterC, varPGYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, airC, varPGYes)->
+
+        
+        + Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
+                -> glyph_modifier_variation_management(ThirdCharacter, earthC, varPGYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, airC, varPGYes)->
+
+
+        + Non è più importante il tuo di giudizio sul tuo lavoro?
+                -> glyph_modifier_variation_management(ThirdCharacter, aetherC, varPGYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, airC, varPGYes)->
+
+
+        + Ha detto tante cose ma la risposta è: no.
+                -> glyph_modifier_variation_management(ThirdCharacter, fireC, varPGYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, airC, varPGYes)->
+
+    - (bookUpdate)
+    -> second_char_closing_storylet ->
+    -> third_char_closing_storylet ->
+    -> main
+
+=== third_first_chit_chat ===
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+    Chiacchierata Chitarra e PNG3
+
+        + Metà delle cose che la voce dice sono illogiche.
+                -> glyph_modifier_variation_management(ThirdCharacter, airC, varPGYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, airC, varPGYes)->
+            
+        + Dice che stai facendo un buon lavoro.
+                -> glyph_modifier_variation_management(ThirdCharacter, waterC, varPGYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, airC, varPGYes)->
+
+        
+        + Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
+                -> glyph_modifier_variation_management(ThirdCharacter, earthC, varPGYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, airC, varPGYes)->
+
+
+        + Non è più importante il tuo di giudizio sul tuo lavoro?
+                -> glyph_modifier_variation_management(ThirdCharacter, aetherC, varPGYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, airC, varPGYes)->
+
+
+        + Ha detto tante cose ma la risposta è: no.
+                -> glyph_modifier_variation_management(ThirdCharacter, fireC, varPGYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, airC, varPGYes)->
+
+    - (bookUpdate)
+    -> first_char_closing_storylet ->
+    -> third_char_closing_storylet ->
+    -> main
