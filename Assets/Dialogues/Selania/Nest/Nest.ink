@@ -19,7 +19,13 @@
 }
 
 //Aggiorniamo lo stato dei bottoni, e poi torniamo a main
-    ~ nest_updateButtons()    
+    ~ nest_updateButtons()
+
+{
+    - tutorial_ActivateTutorial == true && entity_location(PG) == Nest && not tutorial_nestStorylet:
+            -> tutorial_nestStorylet->
+}
+
 -> main
 
 

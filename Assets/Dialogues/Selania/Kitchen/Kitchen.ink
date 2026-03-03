@@ -15,8 +15,12 @@
             ~ move_entity(kitchenOpened, Bedroom)
 }
 
-    //check storylets soprattutto per far partire il tutorial di Carla, altrimenti la presenza di una scelta blocca il check fino al primo ritorno in main
-    -> common_storylets ->
+
+
+{
+    - tutorial_ActivateTutorial == true && entity_location(PG) == Kitchen && not tutorial_kitchenStorylet:
+            -> tutorial_kitchenStorylet->
+}
 
 -> kitchen_storylets_dispatcher
 

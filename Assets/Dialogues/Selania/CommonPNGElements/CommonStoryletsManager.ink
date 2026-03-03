@@ -5,14 +5,6 @@
             - tutorial_ActivateTutorial == true && entity_location(PG) == TrainStop && not tutorial_choicesStorylet:
                 -> tutorial_choicesStorylet
 
-
-
-            - tutorial_ActivateTutorial == true && entity_location(PG) == Kitchen && not tutorial_kitchenStorylet:
-                -> tutorial_kitchenStorylet
-
-            - tutorial_ActivateTutorial == true && entity_location(PG) == Nest && not tutorial_nestStorylet:
-                -> tutorial_nestStorylet
-
         //Mentore e Riccio parlano dopo il litigio. Parte fintanto che riccio non ha cucinato da solo.
             - are_two_entities_together(Mentor, PG) && are_two_entities_together(SecondCharacter, PG) && addressing_violence && (not about_violence_and_peace):
                 -> about_violence_and_peace
