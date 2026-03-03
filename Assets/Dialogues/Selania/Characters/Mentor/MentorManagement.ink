@@ -45,7 +45,7 @@
     {
         - are_two_entities_together(Mentor, PG) && welcome:
             { 
-                - (contentsTrainStop has FirstCharacterNotes or contentsTrainStop has SecondCharacterNotes) && (contentsTrainStop hasnt Mentor):
+                - (contentsTrainStop has DoggoFirstLetters or contentsTrainStop has DoggoSecondLetters) && (contentsTrainStop hasnt Mentor):
                     {stopping:
                         - Ma hai visto {player_name} che c'è qualcunə che ti aspetta alla fermata del treno?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
                         - Mi sembra di aver sentito un rumore alla fermata prima.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry

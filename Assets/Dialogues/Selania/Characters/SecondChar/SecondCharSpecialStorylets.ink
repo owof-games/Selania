@@ -207,7 +207,7 @@
     {
         - contentsTrainStop has PG:
             {
-                - contentsTrainStop has DoggoNoNotes:
+                - contentsTrainStop has DoggoNoLetters:
                     L'hai visto?!?! Lì sotto al tabellone!
                 
                 - else:

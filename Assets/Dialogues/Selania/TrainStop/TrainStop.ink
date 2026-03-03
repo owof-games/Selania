@@ -18,7 +18,7 @@
 
 
 === doggo_no_notes ===
-    + {are_two_entities_together(DoggoNoNotes, PG)}[DoggoNoNotes]
+    + {are_two_entities_together(DoggoNoLetters, PG)}[DoggoNoLetters]
         
         {shuffle:
             - waarf!#speaker:Doggo #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:doggo
@@ -49,10 +49,10 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-    + (check){are_two_entities_together(FirstCharacterNotes, PG)}[FirstCharacterNotes]
+    + (check){are_two_entities_together(DoggoFirstLetters, PG)}[DoggoFirstLetters]
             
-            ~ move_entity(FirstCharacterNotes, Safekeeping)
-            ~ move_entity(DoggoNoNotes, TrainStop)
+            ~ move_entity(DoggoFirstLetters, Safekeeping)
+            ~ move_entity(DoggoNoLetters, TrainStop)
                     
     
         {
@@ -417,10 +417,10 @@
     
 === second_character_notes ===
 //Mettere cose sul rapporto con nonna, papà. mamma, fratello, animali, futuro.
-    + (check){are_two_entities_together(SecondCharacterNotes, PG)}[SecondCharacterNotes]
+    + (check){are_two_entities_together(DoggoSecondLetters, PG)}[DoggoSecondLetters]
             
-            ~ move_entity(SecondCharacterNotes, Safekeeping)
-            ~ move_entity(DoggoNoNotes, TrainStop)
+            ~ move_entity(DoggoSecondLetters, Safekeeping)
+            ~ move_entity(DoggoNoLetters, TrainStop)
         
     {
             - not one:
@@ -742,7 +742,7 @@
 === third_character_notes ===
 //Forse le sue lettere saranno scritte da una persona cara, vicina.
     
-    + {are_two_entities_together(ThirdCharacterNotes, PG)}[ThirdCharacterNotes]
+    + {are_two_entities_together(DoggoThirdLetters, PG)}[DoggoThirdLetters]
     
         {
             - not one:
@@ -805,7 +805,7 @@
     
 === fourth_character_notes ===
     
-    + {are_two_entities_together(FourthCharacterNotes, PG)}[FourthCharacterNotes]
+    + {are_two_entities_together(DoggoFourthLetters, PG)}[DoggoFourthLetters]
         
         {
             - not one:
@@ -868,7 +868,7 @@
 
 === fifth_character_notes ===
 
-    + {are_two_entities_together(FifthCharacterNotes, PG)}[FifthCharacterNotes]
+    + {are_two_entities_together(DoggoFifthLetters, PG)}[DoggoFifthLetters]
     
         {
             - not one:

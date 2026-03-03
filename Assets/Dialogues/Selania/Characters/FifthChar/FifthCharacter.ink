@@ -988,7 +988,7 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
             //Abbiamo accesso alle note solo se è cambiata. Sennò lei se ne va abbastanza arresa da tutto.
             {
                 - fifthChar_possibleStates hasnt Chitarra:
-                    ~ move_entity(FifthCharacterNotes, TrainStop)
+                    ~ move_entity(DoggoFifthLetters, TrainStop)
             }    
             
         -> main

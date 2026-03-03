@@ -281,26 +281,26 @@
 //Se l'ho letta, quando mi sposterò dalla stazione, il cane se ne andrà
 //Se ci sono lettere da leggere e quella del doggo ancora non è stata letta, 
     {
-        - first_char_story_ended.goodbye && firstChar_mailPause < 0 && contentsTrainStop hasnt SecondCharacterNotes && not first_character_notes.three:
+        - first_char_story_ended.goodbye && firstChar_mailPause < 0 && contentsTrainStop hasnt DoggoSecondLetters && not first_character_notes.three:
         
-                ~ move_entity(FirstCharacterNotes, TrainStop)
+                ~ move_entity(DoggoFirstLetters, TrainStop)
                 {debug: Ho messo la nota della prima personaggia alla fermata del bus.}
             
     }
     
     {
-        - second_char_story_ended.goodbye && secondChar_mailPause < 0 && contentsTrainStop hasnt FirstCharacterNotes && not second_character_notes.three:
+        - second_char_story_ended.goodbye && secondChar_mailPause < 0 && contentsTrainStop hasnt DoggoFirstLetters && not second_character_notes.three:
         
-                ~ move_entity(SecondCharacterNotes, TrainStop)
+                ~ move_entity(DoggoSecondLetters, TrainStop)
                 {debug: Ho messo la nota del secondo personaggio alla fermata del bus.}
 
                 
     }
     
     {
-        - contentsTrainStop has DoggoNoNotes:
+        - contentsTrainStop has DoggoNoLetters:
         
-                ~ move_entity(DoggoNoNotes, Safekeeping)
+                ~ move_entity(DoggoNoLetters, Safekeeping)
                 {debug: Ho spostato la dogga nel safekeeping.}
     
     }

@@ -296,7 +296,7 @@
     {
         - contentsTrainStop has PG:
             {
-                - contentsTrainStop has DoggoNoNotes:
+                - contentsTrainStop has DoggoNoLetters:
                     Ma quanto sei carina cagnolina!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_hurry
                     Ma quanto!
                     Andiamo a fare due passi?

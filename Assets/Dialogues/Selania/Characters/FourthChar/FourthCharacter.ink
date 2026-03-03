@@ -819,7 +819,7 @@ Stai per donare qualcosa a {charNameThree}.
             //Abbiamo accesso alle note solo se è cambiata. Sennò lei se ne va abbastanza arresa da tutto.
             {
                 - fourthChar_possibleStates hasnt Chitarra:
-                    ~ move_entity(FourthCharacterNotes, TrainStop)
+                    ~ move_entity(DoggoFourthLetters, TrainStop)
             }    
             
         -> main

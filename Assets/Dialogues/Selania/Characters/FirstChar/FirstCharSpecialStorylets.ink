@@ -209,7 +209,7 @@
     {
         - contentsTrainStop has PG:
             {
-                - contentsTrainStop has DoggoNoNotes:
+                - contentsTrainStop has DoggoNoLetters:
                     Hai visto com'è carina? #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                     Lì, sotto il tabellone?
                 

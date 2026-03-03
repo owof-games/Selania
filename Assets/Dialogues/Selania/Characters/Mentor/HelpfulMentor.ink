@@ -134,7 +134,7 @@
     + Sulla stazione.
             Intendi il luogo dove passo ore a spalare neve?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_hurry
             La stazione, ad est della foresta, è il posto dove approdano le nuove persone.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
-            {contentsTrainStop has FirstCharacterNotes or contentsTrainStop has SecondCharacterNotes: E dove arriva la cagnolina postina.}
+            {contentsTrainStop has DoggoFirstLetters or contentsTrainStop has DoggoSecondLetters: E dove arriva la cagnolina postina.}
             È anche il luogo attraverso cui potrai raggiungerci.
             O da cui andartene, quando vorrai.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_sad
                 -> top

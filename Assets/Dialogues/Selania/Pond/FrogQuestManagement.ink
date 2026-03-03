@@ -383,7 +383,7 @@
                 -> mission_five
             - 6 && frog_availableCommonMissions has missionSix && ((firstChar_storyStatus == story_storyEnded) or (secondChar_storyStatus == story_storyEnded) or (thirdChar_storyStatus == story_storyEnded)):
                 -> mission_six
-            - 7 && frog_availableCommonMissions has missionSeven && (contentsTrainStop has FirstCharacterNotes) or (contentsTrainStop has SecondCharacterNotes):
+            - 7 && frog_availableCommonMissions has missionSeven && (contentsTrainStop has DoggoFirstLetters) or (contentsTrainStop has DoggoSecondLetters):
                 -> mission_seven
             - 8 && player_accessiblePlaces has Library:
                 -> mission_eight

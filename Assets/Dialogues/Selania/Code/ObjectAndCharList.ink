@@ -14,10 +14,10 @@
     FromKitchenToPond,
     FromDumpToForest
     
-    LIST listStaticObjects = TheWitch, ReadingPlace, StartingNote, Arbustini, MoonTrees,  DoggoNoNotes
+    LIST listStaticObjects = TheWitch, ReadingPlace, StartingNote, Arbustini, MoonTrees,  DoggoNoLetters
     
     LIST listConditionalObjects =  
-    FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes,
+    DoggoFirstLetters, DoggoSecondLetters, DoggoThirdLetters, DoggoFourthLetters, DoggoFifthLetters,
     CookingWithFirstCharOBJ, CookingWithSecondCharOBJ, FirstCharCookingAloneOBJ, BatHouseFront, BatHouseRetro, EatingWithSecondCharOBJ, EatingWithFirstCharOBJ,
     firstDumpOBJ, secondDumpOBJ, thirdDumpOBJ, fourthDumpOBJ, fifthDumpOBJ, temporaryGrimoire
     
