@@ -18,14 +18,10 @@
     INCLUDE Code\BackgroundsAndSounds.ink
     INCLUDE Code\BigDialogue.ink
     INCLUDE Code\NestDialogue.ink
-    INCLUDE Code\SpeakerTagManagers.ink
     INCLUDE Code\TextFunctions.ink
     INCLUDE Code\Notifications.ink
-    INCLUDE Code\ChoicesManagement\Glyph&SigilsFunctions.ink
-    INCLUDE Code\ChoicesManagement\ChoicesManager.ink
-    INCLUDE Code\ChoicesManagement\SigilsActivation.ink
-    INCLUDE Code\ChoicesManagement\GlyphsVarAndLists.ink
-    INCLUDE Code\ChoicesManagement\SigilsTranslator.ink
+ 
+   
 
 //File dedicati alla gestione delle personagge
     INCLUDE CommonPNGElements\ScheduleFunctions.ink
@@ -36,6 +32,12 @@
     INCLUDE CommonPNGElements\OnMovementsEvents.ink
     INCLUDE CommonPNGElements\GiftsAndIngredientFunctions.ink
     INCLUDE CommonPNGElements\NamingFunctions.ink
+    INCLUDE CommonPNGElements\SpeakerTagManagers.ink
+    INCLUDE CommonPNGElements\ChoicesManagement\SigilsTranslator.ink
+    INCLUDE CommonPNGElements\ChoicesManagement\GlyphsVarAndLists.ink
+    INCLUDE CommonPNGElements\ChoicesManagement\SigilsActivation.ink
+    INCLUDE CommonPNGElements\ChoicesManagement\ChoicesManager.ink
+    INCLUDE CommonPNGElements\ChoicesManagement\Glyph&SigilsFunctions.ink
 
 
 
