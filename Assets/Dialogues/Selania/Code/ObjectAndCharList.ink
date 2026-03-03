@@ -18,7 +18,7 @@
     
     LIST listConditionalObjects =  
     DoggoFirstLetters, DoggoSecondLetters, DoggoThirdLetters, DoggoFourthLetters, DoggoFifthLetters,
-    CookingWithFirstCharOBJ, CookingWithSecondCharOBJ, FirstCharCookingAloneOBJ, BatHouseFront, BatHouseRetro, EatingWithSecondCharOBJ, EatingWithFirstCharOBJ,
+    CookingWithFirstCharOBJ, CookingWithSecondCharOBJ, FirstCharCookingAloneOBJ, BatHouseFront, BatHouseRetro, EatingWithSecondCharOBJ, EatingWithFirstCharOBJ, CookingWithThirdCharOBJ, EatingWithThirdCharOBJ,
     firstDumpOBJ, secondDumpOBJ, thirdDumpOBJ, fourthDumpOBJ, fifthDumpOBJ, temporaryGrimoire
     
     LIST listAnimations = 

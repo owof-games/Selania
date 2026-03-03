@@ -35,21 +35,7 @@ Funzione di traduzione da variabile a stringa
         - Corvo:
             ~ return "Corvo"
 
-    //Personaggia Tre
-        - SpettroDelVuoto:
-            ~ return "Spettro del Vuoto"
-        - Consapevole: 
-            ~ return "Consapevole"
-        - Guarente: 
-            ~ return "Guarente"    
-        - Socievole: 
-            ~ return "Socievole"
-        - Terrorizzato: 
-            ~ return "Terrorizzato"
-        - Abbandonato: 
-            ~ return "Abbandonato"    
-        - Arrabbiato: 
-            ~ return "Arrabbiato"            
+    //Personaggio Tre    
     
     //Personaggia Quattro        
         - Mondatrice:

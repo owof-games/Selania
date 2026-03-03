@@ -87,12 +87,14 @@
     INCLUDE Characters\SecondChar\SecondCharRewriting.ink
     
     
-    INCLUDE Characters\ThirdChar\ThirdCharacter.ink
+    INCLUDE Characters\ThirdChar\ThirdChar.ink
     INCLUDE Characters\ThirdChar\ThirdCharacterManagement.ink
     INCLUDE Characters\ThirdChar\ThirdCharStorylets.ink
     INCLUDE Characters\ThirdChar\ThirdCharSpecialStorylets.ink
-    
-    
+    INCLUDE Characters\ThirdChar\ThirdCharDialogueManager.ink
+    INCLUDE Characters\ThirdChar\ThirdCharStoryletsManagement.ink
+    INCLUDE Characters\ThirdChar\ThirdCharRewriting.ink
+ 
     INCLUDE Characters\FourthChar\FourthCharacter.ink
     INCLUDE Characters\FourthChar\FourthCharStorylets.ink
     INCLUDE Characters\FourthChar\FourthCharacterManagement.ink
@@ -159,6 +161,7 @@
     INCLUDE Kitchen\CookingAlone.ink
     INCLUDE Kitchen\FirstCharFoodChat.ink
     INCLUDE Kitchen\SecondCharFoodChat.ink
+    INCLUDE Kitchen\ThirdCharFoodChat.ink
 
 //Library
     INCLUDE Library\Library.ink
