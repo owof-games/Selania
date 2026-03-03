@@ -50,7 +50,7 @@ Tutorial inchiostro spiegato da Carla
             ~ tutorial_allTutorialSteps += tutorialInk
     }
 
--> main
+->->
 
 
 === tutorial_rereadingStorylet ===
@@ -63,7 +63,7 @@ Tutorial rilettura spiegato da Carla
             ~ tutorial_allTutorialSteps += tutorialRereading
     }
 
--> main
+->->
 
 
 === tutorial_greenhouseStorylet ===
@@ -83,7 +83,7 @@ Tutorial serra spiegato da Carla
 }
 
     
--> main
+->->
 
 
 === tutorial_kitchenStorylet ===
@@ -102,7 +102,7 @@ Tutorial cucina spiegato da Carla
 }
 
     
--> main
+->->
 
 
 === tutorial_nestStorylet ===
@@ -121,4 +121,4 @@ Tutorial nido spiegato da Carla
 }
 
     
--> main
+->->

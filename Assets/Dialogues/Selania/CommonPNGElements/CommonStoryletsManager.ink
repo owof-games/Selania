@@ -5,8 +5,7 @@
             - tutorial_ActivateTutorial == true && entity_location(PG) == TrainStop && not tutorial_choicesStorylet:
                 -> tutorial_choicesStorylet
 
-            - tutorial_ActivateTutorial == true && entity_location(PG) == Greenhouse && not tutorial_greenhouseStorylet:
-                -> tutorial_greenhouseStorylet
+
 
             - tutorial_ActivateTutorial == true && entity_location(PG) == Kitchen && not tutorial_kitchenStorylet:
                 -> tutorial_kitchenStorylet

@@ -10,7 +10,10 @@
 }
 
     //check storylets soprattutto per far partire il tutorial di Carla, altrimenti la presenza di una scelta blocca il check fino al primo ritorno in main
-    -> common_storylets ->
+    {
+        - tutorial_ActivateTutorial == true && entity_location(PG) == Greenhouse && not tutorial_greenhouseStorylet:
+            -> tutorial_greenhouseStorylet ->
+    }
 
 {
     //Sta crescendo qualcosa: vado ad aggiornarne lo stato
