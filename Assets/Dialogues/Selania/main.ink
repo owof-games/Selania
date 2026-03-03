@@ -37,6 +37,7 @@
 <- third_character
 <- fourth_character
 <- fifth_character
+<- talking_Carla
 
 //Elementi della fermata del bus
 <- starting_note

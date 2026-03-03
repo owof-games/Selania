@@ -63,6 +63,9 @@
     INCLUDE Characters\Witch\WitchStoryletsManagement.ink
     INCLUDE Characters\Witch\WitchStorylets.ink
     
+    INCLUDE Characters\Carla\TutorialManagement.ink
+    INCLUDE Characters\Carla\TutorialStorylets.ink
+    INCLUDE Characters\Carla\Carla.ink
     
     INCLUDE Characters\FirstChar\FirstCharDialogueManager.ink
     INCLUDE Characters\FirstChar\FirstChar.ink

@@ -1,6 +1,23 @@
 === common_storylets
     {
         
+        //Gestione dei tutorial di Carla
+            - tutorial_ActivateTutorial == true && are_two_entities_together(Carla, PG) && not tutorialChoices:
+                -> tutorial_choicesStorylet
+
+            - tutorial_ActivateTutorial == true && player_accessiblePlaces has Greenhouse && not tutorial_greenhouseStorylet:
+                    ~ move_entity(Carla, Greenhouse)
+                -> tutorial_greenhouseStorylet
+
+            - tutorial_ActivateTutorial == true && player_accessiblePlaces has Kitchen && not tutorial_kitchenStorylet:
+                    ~ move_entity(Carla, Kitchen)
+                -> tutorial_kitchenStorylet
+
+            - tutorial_ActivateTutorial == true && player_accessiblePlaces has Nest && not tutorial_nestStorylet:
+                    ~ move_entity(Carla, Nest)
+                -> tutorial_nestStorylet
+
+
         //Mentore e Riccio parlano dopo il litigio. Parte fintanto che riccio non ha cucinato da solo.
             - are_two_entities_together(Mentor, PG) && are_two_entities_together(SecondCharacter, PG) && addressing_violence && (not about_violence_and_peace):
                 -> about_violence_and_peace
