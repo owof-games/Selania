@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 56fbc29907b11484ba923c2e8e1d3547
+guid: 28b2e80d1d086c64fadb2671ed1aa11a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7782960328781149112
-    second: Sfondo - Dark Mode_0
+      213: -4066855870708974472
+    second: Completamento serra_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sfondo - Dark Mode_0
+      name: Completamento serra_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1718
-        height: 974
+        width: 123
+        height: 107
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 84cca0e11de5df390800000000000000
-      internalID: -7782960328781149112
+      spriteID: 87cfda9f120af87c0800000000000000
+      internalID: -4066855870708974472
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sfondo - Dark Mode_0: -7782960328781149112
+      Completamento serra_0: -4066855870708974472
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
