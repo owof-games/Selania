@@ -1,3 +1,10 @@
+//Tracciamento inviti
+VAR firstChar_PondInvite = false
+VAR secondChar_ForestInvite = false
+VAR thirdChar_LibraryInvite = false
+
+
+
 === special_automatic_storylets
         //Storylets speciali First Character
         {   
@@ -11,7 +18,7 @@
                             - Bene, vediamo se è l'ultima volta. Vediamoci allo stagno {player_name}, così ti mostro quello che ho combinato!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
                         }
                             ~ move_entity(FirstCharacter, Pond)
-                            ~ movements_randomizable_characters -= FirstCharacter
+                            ~ firstChar_PondInvite = true
                                 ->->   
                         
 
@@ -54,7 +61,7 @@
                         - Mi arrendo. Vediamoci alla foresta, ho una cosa da farti vedere.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     }
                         ~ move_entity(SecondCharacter, Forest)
-                        ~ movements_randomizable_characters -= SecondCharacter
+                        ~ secondChar_ForestInvite = true
                         ->->   
 
 
@@ -90,7 +97,7 @@
                         - Ehi {player_name}! Troviamoci in biblioteca. Ho una cosa che devi vedere!
                     }
                         ~ move_entity(ThirdCharacter, Library)
-                        ~ movements_randomizable_characters -= ThirdCharacter
+                        ~ thirdChar_LibraryInvite = true
                         ->->   
 
 

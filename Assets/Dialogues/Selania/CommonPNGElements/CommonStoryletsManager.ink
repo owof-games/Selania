@@ -48,15 +48,15 @@
         
         //Con PNG e Franco
             //Chiacchiera tra Chitarra e Franco                
-                - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(Franco, PG) && not frog_and_first_char_chit_chat:
+                - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(Franco, PG) && not frog_and_first_char_chit_chat && firstChar_pauseTalking == 0:
                     -> frog_and_first_char_chit_chat
 
             //Chiacchiera tra Riccio e franco
-                - are_two_entities_together(SecondCharacter, PG) && are_two_entities_together(Franco, PG) && not frog_and_second_char_chit_chat:
+                - are_two_entities_together(SecondCharacter, PG) && are_two_entities_together(Franco, PG) && not frog_and_second_char_chit_chat && secondChar_pauseTalking == 0:
                     -> frog_and_second_char_chit_chat
 
             //Chiacchiera tra Tre e franco
-                - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(Franco, PG) && not frog_and_third_char_chit_chat:
+                - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(Franco, PG) && not frog_and_third_char_chit_chat && thirdChar_pauseTalking == 0:
                     -> frog_and_third_char_chit_chat
             
             //Discorso sbloccato da Franco            

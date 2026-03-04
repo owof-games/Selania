@@ -105,6 +105,7 @@
     Chissà se ci sono anche i manga!
     - (bookUpdate)
 
+        ~ secondChar_ForestInvite = true
         -> second_char_closing_storylet ->
         -> opening_places ->
         -> main

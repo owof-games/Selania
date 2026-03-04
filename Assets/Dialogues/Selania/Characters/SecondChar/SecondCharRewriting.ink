@@ -601,7 +601,7 @@
                 - else: 
                     Stavo per dartela direttamente, ma Franco mi ha detto che te l'avrebbe fatta trovare quando ti sarà servita.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
             }
-            ~ move_entity(fireGlyph, Pond)
+            ~ move_entity(fireGlyph, Nest)
 
         }
             

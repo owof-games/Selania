@@ -164,6 +164,9 @@
 
                 - kitchen_firstCharCookingTogetherInvite == true:
                     ~ movements_randomizable_characters -= FirstCharacter
+
+                - firstChar_PondInvite == true:
+                    ~ movements_randomizable_characters -= FirstCharacter    
                 
                 - else:
                     ~ movements_randomizable_characters += FirstCharacter
@@ -179,30 +182,51 @@
         - secondChar_storyStatus == story_storyStarted && second_char_main_storylets.one:
         
         //Evitiamo che venga tolto dalla cucina se sta cucinando o se ci sta aspettando in cucina
-        {
-            - kitchen_secondCharIsCooking == true:
-                ~ movements_randomizable_characters -= SecondCharacter
+            {
+                - kitchen_secondCharIsCooking == true:
+                    ~ movements_randomizable_characters -= SecondCharacter
 
-            - kitchen_secondCharCookingTogetherInvite == true:
-                ~ movements_randomizable_characters -= SecondCharacter    
+                - kitchen_secondCharCookingTogetherInvite == true:
+                    ~ movements_randomizable_characters -= SecondCharacter    
+
+                - secondChar_ForestInvite == true:
+                    ~ movements_randomizable_characters -= SecondCharacter 
+
+                - else:
+                    ~ movements_randomizable_characters += SecondCharacter
                     
-            - else:
-                ~ movements_randomizable_characters += SecondCharacter
-                
-        }
-        //Così evitiamo che sia alla fermata del treno al momento della partenza, in modo da fare poi l'animazione.
-        - secondChar_storyStatus == story_storyEnded && contentsSafekeeping hasnt SecondCharacter:
-            ~ movements_randomizable_characters -= SecondCharacter   
-            ~  move_entity(SecondCharacter, Forest)
+            }
+            //Così evitiamo che sia alla fermata del treno al momento della partenza, in modo da fare poi l'animazione.
+            - secondChar_storyStatus == story_storyEnded && contentsSafekeeping hasnt SecondCharacter:
+                ~ movements_randomizable_characters -= SecondCharacter   
+                ~  move_entity(SecondCharacter, Forest)
+    }
+
+
+    {
+        - thirdChar_storyStatus == story_storyStarted && third_char_main_storylets.one:
+        
+        //Evitiamo che venga tolto dalla cucina se sta cucinando o se ci sta aspettando in cucina
+            {
+                - kitchen_thirdCharIsCooking == true:
+                    ~ movements_randomizable_characters -= ThirdCharacter
+
+                - kitchen_thirdCharCookingTogetherInvite == true:
+                    ~ movements_randomizable_characters -= ThirdCharacter    
+
+                - thirdChar_LibraryInvite == true:
+                    ~ movements_randomizable_characters -= ThirdCharacter 
+
+                - else:
+                    ~ movements_randomizable_characters += ThirdCharacter
+                    
+            }
+            //Così evitiamo che sia alla fermata del treno al momento della partenza, in modo da fare poi l'animazione.
+            - thirdChar_storyStatus == story_storyEnded && contentsSafekeeping hasnt ThirdCharacter:
+                ~ movements_randomizable_characters -= ThirdCharacter   
+                ~  move_entity(ThirdCharacter, Forest)
     }
   
-    {    
-        - thirdChar_storyStatus == story_storyStarted:
-             ~ movements_randomizable_characters += ThirdCharacter
-        
-        - thirdChar_storyStatus == story_storyEnded:
-            ~ movements_randomizable_characters -= ThirdCharacter
-    }
     
     {
         - fourthChar_storyStatus == story_storyStarted:

@@ -128,6 +128,7 @@
                 - are_two_entities_together(Mentor, PG):
                     Altri bambini? Ma questo posto è pieno di pericoli!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
             }
+
         - (bookUpdate)
         
             ~ move_entity(SecondRecap, BookPlace)

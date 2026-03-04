@@ -44,9 +44,9 @@
         {
             - greenhouse_growStep has stepThree:
                 ~ notification_greenhouseGrown = true
-                -> main
+                ->->
             - else:
-                -> main
+                ->->
         }
             
     - else:

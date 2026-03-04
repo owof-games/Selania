@@ -534,7 +534,7 @@
                 - else: 
                     Stavo per dartela direttamente, ma Franco mi ha detto che te l'avrebbe fatta trovare quando ti sarà servita.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #portrait:riccio_neutral
             }
-            ~ move_entity(fireGlyph, Pond)
+            ~ move_entity(fireGlyph, Nest)
 
         }
             

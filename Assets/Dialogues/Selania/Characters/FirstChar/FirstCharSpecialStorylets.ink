@@ -115,7 +115,7 @@
     - (bookUpdate)
 
         ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
-        ~ movements_randomizable_characters += FirstCharacter
+        ~ firstChar_PondInvite = true
         -> opening_places ->
         -> first_char_closing_storylet ->
         -> main

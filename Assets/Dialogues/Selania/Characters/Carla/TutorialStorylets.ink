@@ -80,7 +80,7 @@ Tutorial serra spiegato da Carla
     - tutorial_allTutorialSteps hasnt tutorialGreenhouse:
         ~ tutorial_allTutorialSteps += tutorialGreenhouse
         ~ move_entity(Carla, Forest)
-        -> main
+        ->->
 }
 
     
