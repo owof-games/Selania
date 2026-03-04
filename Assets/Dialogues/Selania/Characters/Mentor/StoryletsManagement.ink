@@ -69,7 +69,7 @@
             -> you_are_a_rewriter
         
         //Sulla riscrittura: la mettiamo dopo un po' che si è parlato assieme    
-        - not ink_and_rewriting && (first_char_main_storylets.five or second_char_main_storylets.five):
+        - not ink_and_rewriting && (first_char_main_storylets.five or second_char_main_storylets.five or third_char_main_storylets.five):
             -> ink_and_rewriting
 
         //Info sulla non obbligatorietà dei minigames
