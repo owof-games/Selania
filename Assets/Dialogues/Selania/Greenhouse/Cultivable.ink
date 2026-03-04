@@ -42,7 +42,7 @@
     
     - entity_location(PG) != Greenhouse:
         {
-            - greenhouse_growStep has stepThree:
+            - greenhouse_growStep has stepThree && notification_greenhouseGrownRepropose == true:
                 ~ notification_greenhouseGrown = true
                 ->->
             - else:
@@ -1293,6 +1293,7 @@
             ~ frog_second_temp_growing_ingredient = false
     }
     
+    ~ notification_greenhouseGrownRepropose = true
     ~ backpack_findedGifts += greenhouse_chosenCultivable
     ~ greenhouse_cultivableGrowing = 0
     ~ greenhouse_chosenCultivable = ()

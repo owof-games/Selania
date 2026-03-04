@@ -1,6 +1,8 @@
 //Variabili per le notifiche
 
 VAR notification_greenhouseGrown = false
+    //Per questa: true == posso riproporre la notifica, cosa che accade solo dopo che ho raccolto la pianta arrivata allo step tre
+VAR notification_greenhouseGrownRepropose = true 
 VAR notification_restingSession = false
 VAR notification_francoQuests = false
 
@@ -21,6 +23,7 @@ VAR notification_francoQuests = false
     - notification_greenhouseGrown == true:
         Qualcosa di nuovo è cresciuto in serra. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             ~ notification_greenhouseGrown = false
+            ~ notification_greenhouseGrownRepropose = false
 }
 
 {

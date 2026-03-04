@@ -32,7 +32,6 @@
                 ~ move_entity(Mentor, Forest)
                 ~ mentorChar_storyStatus = story_storyStarted
     
-    
         //Dopo due steps della storia della prima personaggia, compare la seconda      
         - first_char_main_storylets.two && secondChar_storyStatus == story_storyNotStarted:
         {debug: introduco {SecondCharacter} in scena.}
