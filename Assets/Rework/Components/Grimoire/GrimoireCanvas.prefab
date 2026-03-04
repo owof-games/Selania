@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6819229344194899402}
   - component: {fileID: 1197396072271955494}
   m_Layer: 5
-  m_Name: OpenGrimoireButton
+  m_Name: Open Grimoire Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,117 +168,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2e9fda63ae149f9bf0d579b8dc9f53d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.OpenGrimoireButton
---- !u!1 &2137253526023432336
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3521766086425384938}
-  - component: {fileID: 7421319038064161151}
-  - component: {fileID: 3036883418927769480}
-  - component: {fileID: 5256198884525021823}
-  - component: {fileID: 1731373081658418565}
-  m_Layer: 5
-  m_Name: BookBackground
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &3521766086425384938
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137253526023432336}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 7679026817889864182}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1718, y: 974}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &7421319038064161151
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137253526023432336}
-  m_CullTransparentMesh: 1
---- !u!114 &3036883418927769480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137253526023432336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6795ac05fd3c27d4fa188bffc7149225, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!225 &5256198884525021823
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137253526023432336}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
---- !u!95 &1731373081658418565
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137253526023432336}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2423df979ef9b664eba2881bb0196602, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3670473909327728454
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,7 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb9199ed0854239acc98e67930faa49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.Grimoire
-  bookAnimator: {fileID: 1731373081658418565}
+  grimoireBackground: {fileID: 6731398204704311497}
 --- !u!1 &7784579863941009633
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,3 +391,144 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 3
   m_AspectRatio: 1.777778
+--- !u!1001 &1318146171079910229
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7679026817889864182}
+    m_Modifications:
+    - target: {fileID: 1145025050145033157, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: m_Name
+      value: Grimoire Background
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491947918251357375, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491947918251357375, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491947918251357375, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491947918251357375, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491947918251357375, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491947918251357375, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491947918251357375, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1718
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491947918251357375, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 974
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491947918251357375, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491947918251357375, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491947918251357375, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491947918251357375, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491947918251357375, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491947918251357375, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491947918251357375, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491947918251357375, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491947918251357375, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491947918251357375, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491947918251357375, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491947918251357375, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5701634050047355804, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: close.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5701634050047355804, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: close.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5701634050047355804, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: close.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7134149963027409014}
+    - target: {fileID: 5701634050047355804, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: close.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5701634050047355804, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: close.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnGrimoireCloseButtonClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 5701634050047355804, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: close.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Selania.Rework.Components.Grimoire.Grimoire, Selania
+      objectReference: {fileID: 0}
+    - target: {fileID: 5701634050047355804, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+      propertyPath: close.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+--- !u!224 &3521766086425384938 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2491947918251357375, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+  m_PrefabInstance: {fileID: 1318146171079910229}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6731398204704311497 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5701634050047355804, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+  m_PrefabInstance: {fileID: 1318146171079910229}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8702ac0f31b45a0b79a531c28567278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.GrimoireBackground

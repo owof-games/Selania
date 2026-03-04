@@ -48,5 +48,12 @@ namespace Selania.Rework.Components.Grimoire
             if (_button != null) _button.interactable = false;
             _animator?.SetBool(Disabled, true);
         }
+
+        public void OnGrimoireCloseButtonClick()
+        {
+            Logger.ZLogInformation($"Re-enable grimoire button.");
+            if (_button != null) _button.interactable = true;
+            _animator?.SetBool(Disabled, false);
+        }
     }
 }

@@ -4,13 +4,16 @@ namespace Selania.Rework.Components.Grimoire
 {
     public class Grimoire : MonoBehaviour, IAutomaticEditorInject
     {
-        private static readonly int Opened = Animator.StringToHash("Opened");
-
-        [SerializeField] private Animator bookAnimator = null!;
+        [SerializeField] private GrimoireBackground grimoireBackground = null!;
 
         public void OnGrimoireButtonClick()
         {
-            bookAnimator.SetBool(Opened, true);
+            grimoireBackground.ShowGrimoire();
+        }
+
+        public void OnGrimoireCloseButtonClick()
+        {
+            grimoireBackground.HideGrimoire();
         }
     }
 }

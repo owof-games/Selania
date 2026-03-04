@@ -742,6 +742,9 @@ MonoBehaviour:
       10 secondi. I bottoni triangolari permettono di passare da una stanza all'altra.
       Gli altri bottoni interrogano lo stato corrente o lo modificano (per verificare
       che lo stato venga salvato)."
+  - prefab: {fileID: 5900152936520379775, guid: 1bece8f9290f304468d43869c8083c20, type: 3}
+    title: Grimoire (display)
+    description: Elenco delle azioni possibili e visualizzazioni possibil sul grimorio.
 --- !u!4 &1073972271
 Transform:
   m_ObjectHideFlags: 0

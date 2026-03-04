@@ -16,7 +16,7 @@ namespace Selania.Rework.Components
         /// <returns><c>true</c> if the object is already in the list of auto-inject objects, false otherwise.</returns>
         public bool ContainsObjectInAutoInject(GameObject o)
         {
-            return autoInjectGameObjects.Contains(o);
+            return autoInjectGameObjects != null && autoInjectGameObjects.Contains(o);
         }
 
         /// <summary>
@@ -26,7 +26,8 @@ namespace Selania.Rework.Components
         /// <returns><c>true</c> if the object was added, or <c>false</c> if it was already present.</returns>
         public bool AddObjectToAutoInject(GameObject o)
         {
-            if (autoInjectGameObjects.Contains(o)) return false;
+            if (ContainsObjectInAutoInject(o)) return false;
+            autoInjectGameObjects ??= new List<GameObject>();
             autoInjectGameObjects.Add(o);
             return true;
         }

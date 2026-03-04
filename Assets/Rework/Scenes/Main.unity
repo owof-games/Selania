@@ -164,6 +164,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c95de5d585ca6b4dafeaaf091c3fdb4, type: 3}
+--- !u!114 &669755334 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1197396072271955494, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+  m_PrefabInstance: {fileID: 3945680005205697891}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2e9fda63ae149f9bf0d579b8dc9f53d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.OpenGrimoireButton
 --- !u!1001 &683155586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1001,6 +1012,34 @@ PrefabInstance:
     - target: {fileID: 6659486126330021642, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6731398204704311497, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: close.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6731398204704311497, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: close.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6731398204704311497, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: close.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 669755334}
+    - target: {fileID: 6731398204704311497, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: close.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6731398204704311497, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: close.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnGrimoireCloseButtonClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 6731398204704311497, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: close.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Selania.Rework.Components.Grimoire.OpenGrimoireButton, Selania
+      objectReference: {fileID: 0}
+    - target: {fileID: 6731398204704311497, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: close.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7613648562806579963, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
       propertyPath: parentReference.TypeName
