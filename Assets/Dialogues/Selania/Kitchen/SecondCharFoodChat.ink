@@ -1381,7 +1381,7 @@
 
         ~ secondChar_pauseTalking = secondChar_pauseDuration
 
-->->
+-> main
 
 
 
