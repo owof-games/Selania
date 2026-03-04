@@ -16,6 +16,22 @@ MonoBehaviour:
   characterDialogueInfo:
   - <name>k__BackingField: PG
     <color>k__BackingField: {r: 0.29003027, g: 0.2783019, b: 1, a: 1}
+  - <name>k__BackingField: Chitarra
+    <color>k__BackingField: {r: 0.60784316, g: 0.43529412, b: 0.07058824, a: 1}
+  - <name>k__BackingField: Riccio
+    <color>k__BackingField: {r: 0.078431375, g: 0.17254902, b: 0.19607843, a: 1}
+  - <name>k__BackingField: ???
+    <color>k__BackingField: {r: 0.103773594, g: 0.09476683, b: 0.09251514, a: 1}
+  - <name>k__BackingField: Mentore
+    <color>k__BackingField: {r: 0.36078432, g: 0.3529412, b: 0.29411766, a: 1}
+  - <name>k__BackingField: Franco
+    <color>k__BackingField: {r: 0.08627451, g: 0.07058824, b: 0.6745098, a: 1}
+  - <name>k__BackingField: Carla
+    <color>k__BackingField: {r: 1, g: 0, b: 1, a: 1}
+  - <name>k__BackingField: Doggo
+    <color>k__BackingField: {r: 0.5686275, g: 0.46666667, b: 0.36862746, a: 1}
+  - <name>k__BackingField: Boccale
+    <color>k__BackingField: {r: 0.8392157, g: 0.67058825, b: 0.22745098, a: 1}
   <textLineSlideSpeed>k__BackingField: 800
   <slideInDuration>k__BackingField: 0.3
   <choiceIndentationPercentage>k__BackingField: 8
