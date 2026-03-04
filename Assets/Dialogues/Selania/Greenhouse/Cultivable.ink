@@ -36,20 +36,27 @@
 
 }
 
+{debug: vedo se attivare o meno la notifica di notification_greenhouseGrown. notification_greenhouseGrown {notification_greenhouseGrown}, PG location {entity_location(PG)}, stato greenhouse_growStep {greenhouse_growStep}.}
+
 {
+    
     - entity_location(PG) != Greenhouse:
         {
             - greenhouse_growStep has stepThree:
                 ~ notification_greenhouseGrown = true
+                -> main
+            - else:
+                -> main
         }
-            ->->
-    
+            
     - else:
+    {debug: entity location {entity_location(PG)}, per cui vado a growing_updater}
         -> growing_updater
 
 }
 
 === growing_updater
+{debug: passo per growing_updater}
 {
 
     - greenhouse_chosenCultivable has BaccaDellaAddolorata:
