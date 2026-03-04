@@ -14,6 +14,10 @@
                     ~ glyph_currentTalker = SecondCharacter
                     {debug_nest: dopo l'operazione il parlante attuale {glyph_currentTalker}.} 
             
+            - PNG == ThirdCharacter:
+                    ~ glyph_currentTalker = ThirdCharacter
+                    {debug_nest: dopo l'operazione il parlante attuale {glyph_currentTalker}.}
+            
             - PNG == Mentor:
                     ~ glyph_currentTalker = Mentor
                     {debug_nest: dopo l'operazione il parlante attuale {glyph_currentTalker}.}
@@ -83,6 +87,24 @@
                             -aetherC:
                                 ~ player_aether_second_char ++
                         }
+
+                - PNG == ThirdCharacter:
+                        {GlyphC:
+                            -fireC:
+                                ~ player_fire_third_char ++
+                        
+                            -earthC:
+                                ~ player_earth_third_char ++
+                            
+                            -airC:
+                                ~ player_air_third_char ++
+                            
+                            -waterC:
+                                ~ player_water_third_char ++   
+                            
+                            -aetherC:
+                                ~ player_aether_third_char ++
+                        }        
                     
                 - PNG == Mentor:
                     {GlyphC:
@@ -245,6 +267,9 @@
         - glyph_currentTalker == SecondCharacter:
             -> sigil_SecondCharacter_reactions
 
+        - glyph_currentTalker == ThirdCharacter:
+            -> sigil_ThirdCharacter_reactions    
+
         - glyph_currentTalker == Mentor:
             -> sigil_Mentor_reactions
 
@@ -259,6 +284,13 @@
     
     
     = sigil_SecondCharacter_reactions
+
+    
+    
+    -> update_PNG_glyph_values
+
+    
+    = sigil_ThirdCharacter_reactions
 
     
     
@@ -290,7 +322,14 @@
             ~ secondChar_air += glyph_temporaryAir
             ~ secondChar_water += glyph_temporaryWater
             ~ secondChar_aether += glyph_temporaryAether
-        
+
+        - glyph_currentTalker == ThirdCharacter:
+            ~ thirdChar_fire += glyph_temporaryFire 
+            ~ thirdChar_earth += glyph_temporaryEarth
+            ~ thirdChar_air += glyph_temporaryAir
+            ~ thirdChar_water += glyph_temporaryWater
+            ~ thirdChar_aether += glyph_temporaryAether
+
         - glyph_currentTalker == Mentor:
             ~ mentor_fire += glyph_temporaryFire 
             ~ mentor_earth += glyph_temporaryEarth
