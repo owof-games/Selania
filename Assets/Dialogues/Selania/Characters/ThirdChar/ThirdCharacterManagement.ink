@@ -4,8 +4,8 @@
                     
                      ----------------------------------*/
 //Possibili nomi:
-    LIST thirdChar_possibleStates = Prova, Provata, Provatina
-    VAR thirdChar_ActualName = Lupo
+    LIST thirdChar_possibleStates = Prova, Provata, Provatina, Boccale
+    VAR thirdChar_ActualName = Boccale
     
     VAR thirdChar_storyStatus = story_storyNotStarted
     VAR thirdChar_storyEndingPosition = ()

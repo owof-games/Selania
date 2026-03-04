@@ -9,7 +9,7 @@
         ~ temp mentorName = translator(mentor_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         
-        Ma tu perché sei qui?
+        Ma tu perché sei qui?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
             
             + (capire) Questo luogo è insolito e voglio studiarlo, capirlo.
                     -> glyph_modifier_variation_management(ThirdCharacter, airC, varPGYes)->
@@ -39,7 +39,7 @@
                     Oh povera anima!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
             }
 
-        Ma lui mica ci può venire qui.
+        Ma lui mica ci può venire qui.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
             {
                 - are_two_entities_together(FirstCharacter, PG):
                     Ho bisogno di bere. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_annoyed
@@ -49,17 +49,12 @@
 
             + (twoAir) Il compleanno arriva sempre, a prescindere dalle caramelle.
                     -> glyph_modifier_variation_management(ThirdCharacter, airC, varPGYes)->
-                Forse la data.
+                Forse la data.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
                     
                 
             + (twoEarth) Niente caramelle, ma c'è uno stagno dove nuotare!
                     -> glyph_modifier_variation_management(ThirdCharacter, earthC, varPGYes)->
-                WOOOOOOOOOOW!#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
-                Non avevo mai visto uno stagno!#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
-                Però questa estate ho visto un mare gigantesco.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
-                Più grande anche del cielo!
-                Quello qui non c'è di sicuro!#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
-                Ma era comunque freddo e mamma aveva paura che ci annegavo.    
+                WOOOOOOOOOOW!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
     
             + (twoFire) E poi ti sei arrabbiato e hai ripreso i giocattoli, giusto?
                     -> glyph_modifier_variation_management(ThirdCharacter, fireC, varPGYes)->
@@ -75,7 +70,7 @@
                     -> glyph_modifier_variation_management(ThirdCharacter, aetherC, varPGYes)->
                 Sì no boh.
             -
-        Ma sai che io non mi ricordo mica il mio nome?
+        Ma sai che io non mi ricordo mica il mio nome?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
         - (nameThird)
 
             {
@@ -88,7 +83,7 @@
                         Perché come un riccio hai la faccina tenera ma spini come pochi, ragazzo.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                     
             }  
-        Dove saranno i miei compagni di scuola?
+        Dove saranno i miei compagni di scuola?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
         
             {
                 - are_two_entities_together(Mentor, PG):
@@ -109,7 +104,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
 
-        Non sai che cosa fighissima!
+        Non sai che cosa fighissima!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
                 {
                     - are_two_entities_together(Mentor, PG): 
                             Non ci sono rane in questo posto!
@@ -127,7 +122,7 @@
                     Magari ti aiuta a capire chi sei come dicevi prima!#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 
             }
-        Gliel'ho detto che è il mio compleanno e che quindi il dono deve essere per me.
+        Gliel'ho detto che è il mio compleanno e che quindi il dono deve essere per me.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
         
             + Una cosa mai accaduta è comunque ragionevolmente possibile.
                     -> glyph_modifier_variation_management(ThirdCharacter, airC, varPGYes)->
@@ -168,7 +163,7 @@
         ~ temp mentorName = translator(mentor_ActualName)
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
-
+#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
         Mica mi hai detto come ti chiami.
   
             {
@@ -222,7 +217,7 @@
         ~ temp mentorName = translator(mentor_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         
-        {mentorName} dice che prima le hai dato un calcio.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+        Cose.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
             
             + (disciplinato) Pensavo tu fossi più disciplinato, lucido. Che delusione.
                     -> glyph_modifier_variation_management(ThirdCharacter, airC, varPGYes)->
@@ -249,7 +244,7 @@
                 Ha smesso di dirmi che non devo stare qui.
             -
 
-        Lui è superforte.
+        Lui è superforte.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
                 {
                     - are_two_entities_together(FirstCharacter, PG):
                         Io.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_neutral
@@ -271,7 +266,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         
 
-        Sicuro le piace tantissimo questo posto.
+        Sicuro le piace tantissimo questo posto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
         
             + Non parli mai di tuo nonno. Deduco che non c'è più?
                     -> glyph_modifier_variation_management(ThirdCharacter, airC, varPGYes)->
@@ -310,7 +305,7 @@
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
 
-        Prima, con {mentorName}.
+        Prima, con {mentorName}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
        
             + È provato che anche i maschi piangono, e pure gli orsi e gli elefanti.
                     -> glyph_modifier_variation_management(ThirdCharacter, airC, varPGYes)->
@@ -333,7 +328,7 @@
                 A non farmi scoprire.  
         - (bookUpdate)
 
-        Comunque qui non c'è la scuola e quindi è bello.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+        Comunque qui non c'è la scuola e quindi è bello.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
                     
          ~ thirdChar_storyletsForRewritingCount ++           
         -> third_char_closing_storylet ->            
@@ -347,7 +342,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
 
         
-        Franco prima mi ha detto che tu scrivi storie.
+        Franco prima mi ha detto che tu scrivi storie.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
             {
                 - are_two_entities_together(Mentor, PG):
                         Qui ogni tanto passa un cane con la posta.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
@@ -355,7 +350,7 @@
                         Sarebbe fighissimooooooooooooooooooooooooooooooo!#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
             }
             
-            + Obiettivamente conosci tutto degli animali.
+            + Obiettivamente conosci tutto degli animali.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
                     -> glyph_modifier_variation_management(ThirdCharacter, airC, varPGYes)->
                 Tutto, sì!
 
@@ -376,7 +371,7 @@
                 Perché se qualcuno mi chiama è arrabbiato con me.
                     
             -
-            Da quando sono qui però non ho riscritto nulla.
+            Da quando sono qui però non ho riscritto nulla.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
                 {
                     - are_two_entities_together(Franco, PG):
                         Ho un superpotere: se mi lecchi viaggi senza spostarti.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -399,7 +394,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
      ~ temp charNameThree = translator(thirdChar_ActualName)
 
-        Sai che mio fratello è campione di Karate?
+        Sai che mio fratello è campione di Karate?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
 
             + Obiettivamente pescare è una cosa, nuotare un'altra.
                     -> glyph_modifier_variation_management(ThirdCharacter, airC, varPGYes)->
@@ -422,7 +417,7 @@
                 Sì no boh.
             -
 
-            Forse nello stagno posso imparare a nuotare.
+            Forse nello stagno posso imparare a nuotare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
 
                 ~ thirdChar_storyletsForRewritingCount ++
                 -> third_char_closing_storylet ->        
@@ -435,7 +430,8 @@
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
 
-        Tu hai sempre voluto fare {player_pronouns has him: il riscrittore|{player_pronouns has her: la riscrittora|lə riscrittorə}} come lavoro?
+        Tu hai sempre voluto fare {player_pronouns has him: il riscrittore|{player_pronouns has her: la riscrittora|lə riscrittorə}} come lavoro?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+
             + Fino a poco fa non sapevo esistesse questo posto.
                     -> glyph_modifier_variation_management(ThirdCharacter, airC, varPGYes)->
                 Figo!
@@ -459,7 +455,7 @@
             -
 
             
-        I miei compagni fanno tantissime cose.
+        I miei compagni fanno tantissime cose.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
             
             + Ma crescerai comunque, non è una scelta.
                     -> glyph_modifier_variation_management(ThirdCharacter, airC, varPGYes)->
@@ -502,7 +498,7 @@
         ~ temp mentorName = translator(mentor_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
 
-        Stavo ripensando a un bambino.
+        Stavo ripensando a un bambino.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
             {
                 - are_two_entities_together(FirstCharacter, PG):
                     Mai provato a suonare la batteria?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_affectionate
@@ -531,7 +527,7 @@
                 Ma chi protegge me?
             -
 
-        Essere adulti è terribile.
+        Essere adulti è terribile.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
         - (bookUpdate)
 
             ~ thirdChar_storyletsForRewritingCount ++
@@ -545,7 +541,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
 
         
-        Quando vado da mio fratello e non c'è il suo amico, mi lascia sperimentare con le sue cose.
+        Quando vado da mio fratello e non c'è il suo amico, mi lascia sperimentare con le sue cose.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
             {
                 - are_two_entities_together(FirstCharacter, PG):
                     Ti ci vedrei benissimo con mio padre, a fare casini in garage e far spaventare mia madre!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed 
@@ -553,24 +549,24 @@
         
             + Hai la mente da scienziato e vuoi verificare tutto.
                     -> glyph_modifier_variation_management(ThirdCharacter, airC, varPGYes)->
-                Lo dice anche mio fratello.
+                Lo dice anche mio fratello.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
 
             + Proviamo con la lampada della biblioteca!
                     -> glyph_modifier_variation_management(ThirdCharacter, earthC, varPGYes)->
-                Sì!
+                Sì!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
                 
             + Sei tosto perché alla fine fai quello che ti va.
                     -> glyph_modifier_variation_management(ThirdCharacter, fireC, varPGYes)->
-                Sì no boh.
+                Sì no boh.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
                     
             + Mi prometti che non mangerai nulla di strano? Non voglio tu stia male.
                     -> glyph_modifier_variation_management(ThirdCharacter, waterC, varPGYes)->
-                Non sei mia mamma.
+                Non sei mia mamma.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
          
                         
             + Tuo fratello ti lascia essere te stesso.
                     -> glyph_modifier_variation_management(ThirdCharacter, aetherC, varPGYes)->
-                Sì!
+                Sì!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
             -
 
         Comunque è una fortuna che qui c'è un bambino!
@@ -586,7 +582,7 @@
         ~ temp charNameOne = translator(firstChar_ActualName)
          ~ temp charNameThree = translator(thirdChar_ActualName)
 
-        Mi piace molto passare il tempo in biblioteca.
+        Mi piace molto passare il tempo in biblioteca.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
 
             + I libri ti insegnano tante cose.
                     -> glyph_modifier_variation_management(ThirdCharacter, airC, varPGYes)->

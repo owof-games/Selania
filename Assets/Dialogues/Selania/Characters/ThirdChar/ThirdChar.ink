@@ -57,7 +57,7 @@
     
         - (top)
         {shuffle:
-                - Magari da grande posso fare il riscrittore. Ma per gli animali.
+                - Magari da grande posso fare il riscrittore. Ma per gli animali. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
             }
                 ~ thirdChar_exitCounter ++
         -> main

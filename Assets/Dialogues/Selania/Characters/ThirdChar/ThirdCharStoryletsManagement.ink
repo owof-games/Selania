@@ -8,29 +8,15 @@
                 -> third_char_main_storylets.one
                 
             - not third_char_main_storylets.two:
-                {
-                    - entity_location(PG) == Pond:
-                        C'è una cosa che voglio dirti, ma te la dico quando non sarò allo stagno. #speaker:{thirdChar_tag()}#inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_energy
-                            ~ move_entity(ThirdCharacter, Forest)
-                                -> main
-                    
-                    - else: 
-                        -> third_char_main_storylets.two
-                }   
+                -> third_char_main_storylets.two
+                
 
             - not third_char_main_storylets.three:
-                        -> third_char_main_storylets.three
+                -> third_char_main_storylets.three
                 
             - not third_char_main_storylets.four:
-                {   //Se passo dallo storylet dedicato della mentore
-                    - that_little_liar_storylet:
-                        -> third_char_main_storylets.four
+                -> third_char_main_storylets.four
                     
-                    //Altrimenti    
-                    - else:
-                        -> not_talk
-                }
-                
             - not third_char_main_storylets.five:
                 -> third_char_main_storylets.five
         

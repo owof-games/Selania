@@ -10,14 +10,14 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
         
         + Sono pront{player_pronouns has him:o|{player_pronouns has her:a|ə}}!
             -> cooking_with_third_char
         
         + Vorrei pensarci un attimo {charNameOne}.
-            Prenditela con calma {player_name}.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-            Intanto cerco qualcosa da sgranocchiare.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+            Prenditela con calma {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
+            Intanto cerco qualcosa da sgranocchiare.
                 -> main
  
 
@@ -78,7 +78,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{thirdChar_tag()} #i
     ~ temp mentorName = translator(mentor_ActualName)
 
        
-        Credi abbia senso?
+        Credi abbia senso?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
         
             + Realisticamente, le relazioni sono compromesso e imprevedibilità.
                 -> glyph_modifier_variation_management(ThirdCharacter, airC, varPGYes)->
@@ -101,7 +101,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{thirdChar_tag()} #i
                 -> glyph_modifier_variation_management(ThirdCharacter, aetherC, varPGYes)->
                 Messa così è più tipo una rete di relazioni, che non una relazione?
             -    
-        No no taglio io, non ti preoccupare, continua a mischiare.
+        No no taglio io, non ti preoccupare, continua a mischiare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
             {
                 - not cooking_with_second_char:
                     <i>{player_name} prova a parlare, ma le parole rimangono bloccate in gola. Ma gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -134,7 +134,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{thirdChar_tag()} #i
                 Merda.
             -  
         
-        Dove ho messo il sale?
+        Dove ho messo il sale?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
     
             + Un'amicizia non è una onlus, e se si sta male ci si divide.
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC, varPGYes)->
@@ -157,7 +157,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{thirdChar_tag()} #i
                 In realtà è quello che è successo.
             -
         
-        Buono comunque questo vino rosso.
+        Buono comunque questo vino rosso.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
         
             + <i>Tosto del pepe dell'onestà.
                 ~ kitchen_recipeAdjective = "onesta"
@@ -185,7 +185,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{thirdChar_tag()} #i
                 Essere leali significa essere affidabili, vero?
             -      
         
-        Aspè, aggiungo ancora del brodino.
+        Aspè, aggiungo ancora del brodino.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
 
             + L'avresti detto se non fossi stata ubriaca?
                 -> glyph_modifier_variation_management(ThirdCharacter, aetherC, varPGYes)->
@@ -213,7 +213,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{thirdChar_tag()} #i
                 Ma c'è da dire che da quando c'è lui in giro ci sono meno zanzare in giro!#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
 
             - else:
-                Carini gli insetti ma vorrei non finissero nel nostro veganissimo piatto.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                Carini gli insetti ma vorrei non finissero nel nostro veganissimo piatto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
         }
         Ecco, questo coperchio ci sta perfettamente.
         
@@ -253,7 +253,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{thirdChar_tag()} #i
         ~ temp mentorName = translator(mentor_ActualName)
 
         
-        Ha senso?
+        Ha senso?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
         
             + Non è che prima di battere un mostro lo studi, no?
                 -> glyph_modifier_variation_management(ThirdCharacter, earthC, varPGYes)->
@@ -276,7 +276,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{thirdChar_tag()} #i
                 E quando decidi che cosa hai capito e cosa no?
             -        
         
-        Aspetta, ho visto delle forbici prima.
+        Aspetta, ho visto delle forbici prima.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
             
             + <i>Infarino confusamente delle tagliatelle.
                 ~ kitchen_recipeNoun = "Tagliatelle"
@@ -303,7 +303,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{thirdChar_tag()} #i
                 È un sentimento.
             -  
        
-        Mi sa che mi metto ad affettare qualcosa intanto.
+        Mi sa che mi metto ad affettare qualcosa intanto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
         
             + Serve del metodo. Se la base non è solida, crolla tutta la casa.
                 -> glyph_modifier_variation_management(ThirdCharacter, airC, varPGYes)->
@@ -326,7 +326,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{thirdChar_tag()} #i
                 Mi suona molto.
             -
         
-        <i>Più gorgonzola, meno poliziott3.</i>
+        <i>Più gorgonzola, meno poliziott3.</i>#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
 
             + <i>Aggiungo con convinzione delle prugne.
                 ~ kitchen_recipeAdjective = "convinte"
@@ -349,7 +349,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{thirdChar_tag()} #i
                 -> glyph_modifier_variation_management(PG, aetherC, varPGNo)->
             -     
         
-        Madonna, che profumino che sta salendo.
+        Madonna, che profumino che sta salendo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
             + Il cuore è caldo quando aiutiamo le altre persone, vero?
                 -> glyph_modifier_variation_management(ThirdCharacter, waterC, varPGYes)->
                 C'è quel momento.
@@ -371,7 +371,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{thirdChar_tag()} #i
                 Io.
             -
         
-        Ancora due minuti e ci siamo ama.
+        Ancora due minuti e ci siamo ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
 
             + <i>Trituro con gioia dell'anice stellato.
                 ~ kitchen_recipeComplement = "con anice stellato"
@@ -400,7 +400,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{thirdChar_tag()} #i
 
             - (bookUpdate)  
 
-        Che poi è una domanda stupida da farti, vero?
+        Che poi è una domanda stupida da farti, vero?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
 
             -> fourth_ingredient_dispatcher
                 
@@ -413,7 +413,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{thirdChar_tag()} #i
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-        Cavolo.
+        Cavolo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
 
             + Ogni cosa che immagini crea nuove versioni di te.
                     -> glyph_modifier_variation_management(ThirdCharacter, aetherC, varPGYes)->
@@ -446,7 +446,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{thirdChar_tag()} #i
             + <i>Lesso sportivamente delle patate.
                 ~ kitchen_recipeNoun = "Patate"
                 -> glyph_modifier_variation_management(PG, earthC, varPGNo)->
-                Ti ci vedo a correre e scaricare il nervo.
+                Ti ci vedo a correre e scaricare il nervo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
 
             + <i>Friggo con creatività delle mele.
                 ~ kitchen_recipeNoun = "Mele"
@@ -492,7 +492,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{thirdChar_tag()} #i
                     -> glyph_modifier_variation_management(ThirdCharacter, fireC, varPGYes)->
                 La maggior parte delle volte il mio obiettivo è "non dover campare a crackers ogni fine mese".
             -
-        Che botta questo vino comunque.
+        Che botta questo vino comunque.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
 
             + <i>Frullo della zucca camminando in avanti.
                 ~ kitchen_recipeAdjective = "avanzanti"
@@ -520,7 +520,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{thirdChar_tag()} #i
                 A volte è solo questione di tempo, vero?
             -      
     
-        Il sapore è ottimo, aggiusto appena appena di sale.
+        Il sapore è ottimo, aggiusto appena appena di sale.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
 
             + Tua: chi l'ha fatta la fatica, il lavoro?
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC, varPGYes)->
@@ -543,7 +543,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{thirdChar_tag()} #i
                 Good point.
             -
         
-        Merda, credo di aver raggiunto dei livelli di pesantezza da record.
+        Merda, credo di aver raggiunto dei livelli di pesantezza da record.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
 
             + <i>Brucio del peperoncino.
                 ~ kitchen_recipeComplement = "con peperoncino"
@@ -607,7 +607,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{thirdChar_tag()} #i
                 + <i>Non aggiungo altro.
                 -
                 
-            Andiamo a mangiare, ama!
+            Andiamo a mangiare, ama!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
                 -> recipe_name_creator ->
                 -> recipe_name_storage(ThirdCharacter) ->
                 -> at_table_with_third_char
@@ -623,13 +623,13 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{thirdChar_tag()} #i
 
         {
             -cooking_with_third_char.third_theme:
-                E non mi facevo certe domande da molto.
+                E non mi facevo certe domande da molto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
 
             -cooking_with_third_char.second_theme:
-                E non avevo mai pensato fino in fondo al discorso del salvare il mondo etc etc.
+                E non avevo mai pensato fino in fondo al discorso del salvare il mondo etc etc.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
             
             -cooking_with_third_char.third_theme:
-                E discutere di creatività.
+                E discutere di creatività.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
 
         }
     E poi questo {piatto}!
@@ -716,7 +716,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{thirdChar_tag()} #i
     
         
     = relationship_feedback
-        Comunque {player_name}, stavo pensando alla nostra conversazione qui, assieme.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+        Comunque {player_name}, stavo pensando alla nostra conversazione qui, assieme.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
         E se basandomi solo su questa chiacchierata in cucina dovessi dire: ho appena conosciuto {player_name}, vorrei farci amicizia?
         
             -> thirdAffinityCalc ->
@@ -754,9 +754,9 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{thirdChar_tag()} #i
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-    E ora {player_name}, credo mi farò due passi.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+    E ora {player_name}, credo mi farò due passi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
     Mi sento piena e soddisfatta.
-    Grazie ancora per questo tempo assieme.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+    Grazie ancora per questo tempo assieme.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
     - (bookUpdate)
 
             -> cooking_animations_off ->
@@ -796,32 +796,31 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{thirdChar_tag()} #i
     {kitchen_thirdCharCookingTime:
 
         - 0:
-            {Voglio preparare il piatto preferito di mio padre.|Scusami {player_name}, ma sto cucinando.}#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+            {Voglio preparare il piatto preferito di mio padre.|Scusami {player_name}, ma sto cucinando.}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
 
         - 1:
-            {Voglio preparare il piatto preferito di mio padre.|Scusami {player_name}, ma sto cucinando.}#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+            {Voglio preparare il piatto preferito di mio padre.|Scusami {player_name}, ma sto cucinando.}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
             
         - 2:
-            {Potrei sostituire l'aneto con, uh, no, non una buona idea.|Perdonami {player_name}, ma sto cercando qualcosa che non mi avveleni.}#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+            {Potrei sostituire l'aneto con, uh, no, non una buona idea.|Perdonami {player_name}, ma sto cercando qualcosa che non mi avveleni.}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
         
         - 3:
-            {Ricordati ragazza che cucinare non è una scusa per bere. Ma che gioia aver trovato del vinello. |Torna dopo {player_name}, devo, ehm, riflettere.}#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+            {Ricordati ragazza che cucinare non è una scusa per bere. Ma che gioia aver trovato del vinello. |Torna dopo {player_name}, devo, ehm, riflettere.}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
             
         - 4:
-            {Quante possibilità ci sono che se caccio la mano nell'alveare della serra riesco a recuperare del miele?|{player_name}, ho un'idea stupida, torna dopo.}#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+            {Quante possibilità ci sono che se caccio la mano nell'alveare della serra riesco a recuperare del miele?|{player_name}, ho un'idea stupida, torna dopo.}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
         
         - 5:
-            {Uh, questo sughino spacca. Mamma ne sarebbe orgogliosa.|{player_name}, ho bisogno di concentrazione, a dopo.}#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+            {Uh, questo sughino spacca. Mamma ne sarebbe orgogliosa.|{player_name}, ho bisogno di concentrazione, a dopo.}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
     
         - 6:
-            {Sarà una buona idea avere tutti questi coltelli accessibili con il bimbo in giro in giro? Merda, stavo per tagliarmi. Forse sono io il problema, non lui.|{player_name}, faccio danni già da sola, torna tra un po'.}#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+            {Sarà una buona idea avere tutti questi coltelli accessibili con il bimbo in giro in giro? Merda, stavo per tagliarmi. Forse sono io il problema, non lui.|{player_name}, faccio danni già da sola, torna tra un po'.}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
         
         - 7:
-            {Tocco finale, la crema di funghi. E ora lasciamo cuocere un po'. E ci beviamo un altro goccino.|{player_name}, resisti che ho quasi finito!}#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+            {Tocco finale, la crema di funghi. E ora lasciamo cuocere un po'. E ci beviamo un altro goccino.|{player_name}, resisti che ho quasi finito!}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
         
         - else:
-            {Direi che ci siamo. Giusto la fiammata per restringere il brodo, ed è perfetta!|{player_name}, un attimo e ti lascio i fornelli, promesso.}#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        
+            {Direi che ci siamo. Giusto la fiammata per restringere il brodo, ed è perfetta!|{player_name}, un attimo e ti lascio i fornelli, promesso.}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
     }
     
         ~ thirdChar_pauseTalking = thirdChar_pauseDuration
