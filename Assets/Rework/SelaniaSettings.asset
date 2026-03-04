@@ -24,12 +24,60 @@ MonoBehaviour:
   <hoveredChoiceColor>k__BackingField: {r: 0.372549, g: 0.6196079, b: 0.627451, a: 1}
   defaultCharacterTagSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   characterTagInfo:
-  - <tag>k__BackingField: mentore_hurry
-    <sprite>k__BackingField: {fileID: 21300000, guid: a962fcdf445938947a61af58b91e46bf, type: 3}
   - <tag>k__BackingField: chitarra_affectionate
     <sprite>k__BackingField: {fileID: 21300000, guid: 2db91d165dd198c4391ba68eeed07c33, type: 3}
+  - <tag>k__BackingField: chitarra_annoyed
+    <sprite>k__BackingField: {fileID: 21300000, guid: db1adbf7e8b0d85479c0ece3584ef0c3, type: 3}
+  - <tag>k__BackingField: chitarra_curious
+    <sprite>k__BackingField: {fileID: 21300000, guid: 197e039deba4a1b4ea84d6ae7ba9a1e2, type: 3}
+  - <tag>k__BackingField: chitarra_neutral
+    <sprite>k__BackingField: {fileID: 21300000, guid: be263273257eb3247941fd5f3d9e78cf, type: 3}
+  - <tag>k__BackingField: chitarra_sad
+    <sprite>k__BackingField: {fileID: 21300000, guid: 64f6f4f498b084d42b1b3f585e68dedc, type: 3}
+  - <tag>k__BackingField: mentore_hurry
+    <sprite>k__BackingField: {fileID: 21300000, guid: a962fcdf445938947a61af58b91e46bf, type: 3}
+  - <tag>k__BackingField: mentore_bored
+    <sprite>k__BackingField: {fileID: 21300000, guid: 971a9d5006825f9449d83bcf792fa7d3, type: 3}
+  - <tag>k__BackingField: mentore_neutral
+    <sprite>k__BackingField: {fileID: 21300000, guid: 6e9ab649598c61249a56275663efe151, type: 3}
+  - <tag>k__BackingField: mentore_sad
+    <sprite>k__BackingField: {fileID: 21300000, guid: b273ba61fe9c64c49b97c6a990fe0d94, type: 3}
+  - <tag>k__BackingField: mentore_sorry
+    <sprite>k__BackingField: {fileID: 21300000, guid: e37c67fb505350b49a9e950ed9b37459, type: 3}
+  - <tag>k__BackingField: riccio_angry
+    <sprite>k__BackingField: {fileID: 21300000, guid: caef3e631850f2245ba19d599d06f03f, type: 3}
+  - <tag>k__BackingField: riccio_emotional
+    <sprite>k__BackingField: {fileID: 21300000, guid: 38d1f8b1799e89a49b3aba3cb60f2701, type: 3}
+  - <tag>k__BackingField: riccio_high_energy
+    <sprite>k__BackingField: {fileID: 21300000, guid: 1a3f0a3739cb9ca48bd4cbf1144a0318, type: 3}
+  - <tag>k__BackingField: riccio_melanchonic
+    <sprite>k__BackingField: {fileID: 21300000, guid: a99c384555c81f54da771c22909e1fcc, type: 3}
+  - <tag>k__BackingField: riccio_neutral
+    <sprite>k__BackingField: {fileID: 21300000, guid: 39e5076576781fc4090031e03d9d5125, type: 3}
+  - <tag>k__BackingField: boccale_judgmental
+    <sprite>k__BackingField: {fileID: 21300000, guid: 347adc9fe8805054ab6b8006759dc15f, type: 3}
+  - <tag>k__BackingField: boccale_neutral
+    <sprite>k__BackingField: {fileID: 21300000, guid: 2285801924b45234985b9da66eac5415, type: 3}
   - <tag>k__BackingField: witch_first_quarter
     <sprite>k__BackingField: {fileID: 21300000, guid: 13941ae41114ad74bbb45dec67023c0b, type: 3}
+  - <tag>k__BackingField: witch_full_moon
+    <sprite>k__BackingField: {fileID: 21300000, guid: ebc7fc77891e6404b99bcb008ba2b23c, type: 3}
+  - <tag>k__BackingField: witch_new_moon
+    <sprite>k__BackingField: {fileID: 21300000, guid: 3f52b03c44537ba41b49ad4d3a86530e, type: 3}
+  - <tag>k__BackingField: witch_red_moon
+    <sprite>k__BackingField: {fileID: 21300000, guid: 63e58b2a3145cd9448fdf8260dc87138, type: 3}
+  - <tag>k__BackingField: witch_third_quarter
+    <sprite>k__BackingField: {fileID: 21300000, guid: 4add65e07378ff4428dc163dc6f949c5, type: 3}
+  - <tag>k__BackingField: PG_neutral
+    <sprite>k__BackingField: {fileID: 21300000, guid: 00fff9eb5d083484ab9d1afa02131b67, type: 3}
+  - <tag>k__BackingField: carla_bored
+    <sprite>k__BackingField: {fileID: 21300000, guid: 1fa8c2cef4f52394fbc8b9c7629abf9e, type: 3}
+  - <tag>k__BackingField: doggo_neutral
+    <sprite>k__BackingField: {fileID: 21300000, guid: 230549ef2b990b749b59bb376cfa82c1, type: 3}
+  - <tag>k__BackingField: frog_kitchen
+    <sprite>k__BackingField: {fileID: 21300000, guid: df4f26c132dd4e245ba6d2bb3b0efc4a, type: 3}
+  - <tag>k__BackingField: frog_neutral
+    <sprite>k__BackingField: {fileID: 21300000, guid: cc33664b5b30d2449bdc61ee164f9ea2, type: 3}
   <badRelationshipStatusBarColor>k__BackingField: {r: 0.25882354, g: 0.09803922, b: 0.8627451, a: 1}
   <normalRelationshipStatusBarColor>k__BackingField: {r: 0.8627451, g: 0.74509805, b: 0.09803922, a: 1}
   <goodRelationshipStatusBarColor>k__BackingField: {r: 0.96862745, g: 0.3764706, b: 0.60784316, a: 1}
@@ -91,6 +139,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 2a17b8582b907504ab59b97ef03b9449, type: 3}
   - name: closeDialogue
     clip: {fileID: 8300000, guid: 7b3ec5938470579439f3dad96a76529a, type: 3}
+  <saveDirPrefix>k__BackingField: save_dir_
+  minimumTimeBetweenAutomaticSavesInSeconds: 300
   <minimumLogLevel>k__BackingField: 0
   _fileProviderSettings:
     categorySettingsArray: []

@@ -4,7 +4,7 @@
 
 
 === questions_Carla
-        {~ Frasina shuffle di Carla|Altra frasina di Carla}
+        {~ Frasina shuffle di Carla|Altra frasina di Carla}#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
 
     + {tutorial_allTutorialSteps has tutorialChoices} Mi rispiegheresti il discorso delle scelte?
             -> tutorial_choicesStorylet -> questions_Carla

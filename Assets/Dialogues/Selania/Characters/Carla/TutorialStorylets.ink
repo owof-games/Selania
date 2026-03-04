@@ -4,7 +4,7 @@
     - tutorial_greenhouseStorylet == 1:
     ~ move_entity(Carla, TrainStop)
     }
-Tutorial scelte spiegato da Carla
+Tutorial scelte spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
 
 
 
@@ -25,7 +25,7 @@ Tutorial scelte spiegato da Carla
 
 
 === tutorial_relationshipStorylet ===
-Tutorial relazione spiegato da Carla
+Tutorial relazione spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
 
 
 
@@ -41,7 +41,7 @@ Tutorial relazione spiegato da Carla
 
 
 === tutorial_inkStorylet ===
-Tutorial inchiostro spiegato da Carla
+Tutorial inchiostro spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
 
 
 
@@ -54,7 +54,7 @@ Tutorial inchiostro spiegato da Carla
 
 
 === tutorial_rereadingStorylet ===
-Tutorial rilettura spiegato da Carla
+Tutorial rilettura spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
 
 
 
@@ -72,7 +72,7 @@ Tutorial rilettura spiegato da Carla
     ~ move_entity(Carla, Greenhouse)
 }
 
-Tutorial serra spiegato da Carla
+Tutorial serra spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
 
 
 
@@ -94,7 +94,7 @@ Tutorial serra spiegato da Carla
 }
 
 
-Tutorial cucina spiegato da Carla
+Tutorial cucina spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
 
 {
     - tutorial_allTutorialSteps hasnt tutorialKitchen:
@@ -114,7 +114,7 @@ Tutorial cucina spiegato da Carla
 }
 
 
-Tutorial nido spiegato da Carla
+Tutorial nido spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
 
 {
     - tutorial_allTutorialSteps hasnt tutorialNest:
