@@ -1,26 +1,103 @@
-//Funzione di dispatch comune (sigillo attivo o meno)
 
-=== glyph_modifier_variation_management(PNG, GlyphC, VARPG)
+//Check se ridurre o meno il valore del sigillo
+LIST glyph_decreaseSigilsStatus = decreaseYes, decreaseNo
+
+//Variabile per decidere se decrementare o meno il valore
+VAR glyph_decreaseSigil = true
+
+//Funzione di dispatch comune (sigillo attivo o meno)
+=== glyph_modifier_variation_management(PNG, GlyphC, DecreaseS)
 {debug_nest: passo per glyph_modifier_variation_management. Il valore di PNG è {PNG}, il valore di GlyphCe è {GlyphC}. Lo stato della parola attiva è {glyph_actualActiveSigil}.}
-    
+//PNG = Su chi ha effetto la scelta
+//GlyphC = Su quale colore ha effetto    
+//DecreaseS = Se diminuire o meno il contatore del sigillo
+
     //Primo step: capiamo di chi si parla.
 
         {
             - PNG == FirstCharacter:
                     ~ glyph_currentTalker = FirstCharacter
-                    {debug_nest: dopo l'operazione il parlante attuale {glyph_currentTalker}.} 
+                    {debug_nest: dopo l'operazione il parlante attuale {glyph_currentTalker}.}
+                    //Aggiorno i corrispettivi valori lato PNG
+                    {GlyphC:
+                        -fireC:
+                            ~ player_fire_first_char ++
+                    
+                        -earthC:
+                            ~ player_earth_first_char ++
+                        
+                        -airC:
+                            ~ player_air_first_char ++
+                        
+                        -waterC:
+                            ~ player_water_first_char ++   
+                        
+                        -aetherC:
+                            ~ player_aether_first_char ++
+                    }
             
             - PNG == SecondCharacter:
                     ~ glyph_currentTalker = SecondCharacter
-                    {debug_nest: dopo l'operazione il parlante attuale {glyph_currentTalker}.} 
+                    {debug_nest: dopo l'operazione il parlante attuale {glyph_currentTalker}.}
+                    //Aggiorno i corrispettivi valori lato PNG
+                    {GlyphC:
+                            -fireC:
+                                ~ player_fire_second_char ++
+                        
+                            -earthC:
+                                ~ player_earth_second_char ++
+                            
+                            -airC:
+                                ~ player_air_second_char ++
+                            
+                            -waterC:
+                                ~ player_water_second_char ++   
+                            
+                            -aetherC:
+                                ~ player_aether_second_char ++
+                        }
             
             - PNG == ThirdCharacter:
                     ~ glyph_currentTalker = ThirdCharacter
                     {debug_nest: dopo l'operazione il parlante attuale {glyph_currentTalker}.}
+                    //Aggiorno i corrispettivi valori lato PNG
+                    {GlyphC:
+                            -fireC:
+                                ~ player_fire_third_char ++
+                        
+                            -earthC:
+                                ~ player_earth_third_char ++
+                            
+                            -airC:
+                                ~ player_air_third_char ++
+                            
+                            -waterC:
+                                ~ player_water_third_char ++   
+                            
+                            -aetherC:
+                                ~ player_aether_third_char ++
+                    }  
             
             - PNG == Mentor:
                     ~ glyph_currentTalker = Mentor
                     {debug_nest: dopo l'operazione il parlante attuale {glyph_currentTalker}.}
+                    //Aggiorno i corrispettivi valori lato PNG
+                    {GlyphC:
+                            -fireC:
+                                ~ player_fire_mentor ++
+                        
+                            -earthC:
+                                ~ player_earth_mentor ++
+                            
+                            -airC:
+                                ~ player_air_mentor ++
+                            
+                            -waterC:
+                                ~ player_water_mentor ++   
+                            
+                            -aetherC:
+                                ~ player_aether_mentor ++
+                    }
                     
             - PNG == PG:
             //Nel caso dellx PG, non attivo mai le parole magiche.
@@ -46,86 +123,18 @@
             - else: ERROR: sono in GlyphC_variation_management ma non trovo lx PNG indicatx
         }
 
-        //Secondo step: aggiorniamo glifi PG se stato positivo
-        //Nota: per ora sono tutti i varPGYes, da valutare lato design che farne
-        {VARPG == varPGYes:
-            {debug_nest: cambio il GlyphCe della PG, perché è la prima volta per questa scelta.}
-            
-            {
-                - PNG == FirstCharacter:
-                        {GlyphC:
-                            -fireC:
-                                ~ player_fire_first_char ++
-                        
-                            -earthC:
-                                ~ player_earth_first_char ++
-                            
-                            -airC:
-                                ~ player_air_first_char ++
-                            
-                            -waterC:
-                                ~ player_water_first_char ++   
-                            
-                            -aetherC:
-                                ~ player_aether_first_char ++
-                        }
-                    
-                - PNG == SecondCharacter:
-                        {GlyphC:
-                            -fireC:
-                                ~ player_fire_second_char ++
-                        
-                            -earthC:
-                                ~ player_earth_second_char ++
-                            
-                            -airC:
-                                ~ player_air_second_char ++
-                            
-                            -waterC:
-                                ~ player_water_second_char ++   
-                            
-                            -aetherC:
-                                ~ player_aether_second_char ++
-                        }
 
-                - PNG == ThirdCharacter:
-                        {GlyphC:
-                            -fireC:
-                                ~ player_fire_third_char ++
-                        
-                            -earthC:
-                                ~ player_earth_third_char ++
-                            
-                            -airC:
-                                ~ player_air_third_char ++
-                            
-                            -waterC:
-                                ~ player_water_third_char ++   
-                            
-                            -aetherC:
-                                ~ player_aether_third_char ++
-                        }        
-                    
-                - PNG == Mentor:
-                    {GlyphC:
-                            -fireC:
-                                ~ player_fire_mentor ++
-                        
-                            -earthC:
-                                ~ player_earth_mentor ++
-                            
-                            -airC:
-                                ~ player_air_mentor ++
-                            
-                            -waterC:
-                                ~ player_water_mentor ++   
-                            
-                            -aetherC:
-                                ~ player_aether_mentor ++
-                    }
+    //Secondo step: aggiorniamo il valore della variabile 
+     {
+        - DecreaseS == decreaseYes:
+        {debug: il valore di DecreaseS è {DecreaseS} e quindi vado a mettere glyph_decreaseSigil su true.}
+            ~ glyph_decreaseSigil = true
 
-            }
-        }    
+        - else:
+             ~ glyph_decreaseSigil = false 
+        {debug: il valore di DecreaseS è {DecreaseS} e quindi vado a mettere glyph_decreaseSigil su false.}      
+       
+    }
 
 
     //Terzo step: valuto se c'è o meno un sigillo attivo, altrimenti proseguiamo regolarmente.
@@ -136,8 +145,7 @@
                 -> sigil_glyph_updater
         
         
-        //Altrimenti aumentiamo di uno come sempre
-
+        //Altrimenti aumentiamo di uno come sempre il valore per lx PNG
         - else:
             {GlyphC:
                 -fireC:
@@ -347,10 +355,19 @@
         ~ glyph_temporaryAether = 0
     {debug_nest: dopo l'operazione il parlante attuale {glyph_currentTalker}.}
 
-->update_sigil_value
+
+    //Infine: se il valore di DecreaseS è su sì, dimuiamo il valore del sigillo, altrimenti no
+    {
+        - glyph_decreaseSigil == true:
+        {debug: il valore di glyph_decreaseSigil è {glyph_decreaseSigil} e quindi vado a ridurre il contatore del sigillo.}
+            -> update_sigil_value
+        - else: 
+            ->->   
+    }
 
 
-= update_sigil_value
+
+=== update_sigil_value
 //Qui infine aggiorniamo l'utilizzo del sigillo.
 //Prima aumentiamo il valore
     ~ glyph_actualSigilUses ++

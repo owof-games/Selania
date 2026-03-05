@@ -60,7 +60,7 @@
     Che ne dici?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
 
         + {mentorName} aveva detto di non andare nei posti chiusi.
-            -> glyph_modifier_variation_management(FirstCharacter, airC, varPGYes)->
+            -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseYes)->
                 {
                     - are_two_entities_together(Mentor, PG):
                         Sono felice di venire ascoltata, ogni tanto.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
@@ -69,19 +69,19 @@
                 Pensavo di aver fatto una cosa buona.
     
         + Grande! Mai stare con le mani in mano!
-            -> glyph_modifier_variation_management(FirstCharacter, fireC, varPGYes)->
+            -> glyph_modifier_variation_management(FirstCharacter, fireC, decreaseYes)->
                 Non esageriamo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 Diciamo che ero motivata dalla fame.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 E dalla nostalgia.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
 
         + Sentivo il bisogno di un posto dove fare qualcosa assieme.
-                -> glyph_modifier_variation_management(FirstCharacter, aetherC, varPGYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, aetherC, decreaseYes)->
                 Me felice.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
                 Temevo non avresti apprezzato.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Non vedo l'ora di cucinare assieme ora!
     
         + Che dovremmo inaugurarla con una festa!
-            -> glyph_modifier_variation_management(FirstCharacter, earthC, varPGYes)->
+            -> glyph_modifier_variation_management(FirstCharacter, earthC, decreaseYes)->
                 {
                     - are_two_entities_together(Mentor, PG):
                         Oppure, potremmo gioire in modi non pericolosi.  #speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
@@ -97,7 +97,7 @@
                 Magari con chiacchiere e vino.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
             
         + Cibo, chiacchiere e intimità: mi piace molto, grazie {charNameOne}.
-            -> glyph_modifier_variation_management(FirstCharacter, waterC, varPGYes)->
+            -> glyph_modifier_variation_management(FirstCharacter, waterC, decreaseYes)->
                 Sono felice che ci capiamo {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 Ho davvero bisogno di sentire un po' di casa.
                 Cucinare assieme potrà aiutarmi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -154,7 +154,7 @@
     
     //Risposte.    
         + La vendetta non è giustizia. A cosa è servita?
-                -> glyph_modifier_variation_management(FirstCharacter, airC, varPGYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseYes)->
             A volte le cose non devono "servire", ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
             E nemmeno la giustizia è giustizia, {player_name}.
             Io non so cosa ha scatenato la tipa del racconto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -162,19 +162,19 @@
             Per cui almeno è servita a farla stare meglio, credo.
             
         + Lui è ricco, ho pensato parlasse di lotta di classe.
-                -> glyph_modifier_variation_management(FirstCharacter, aetherC, varPGYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, aetherC, decreaseYes)->
             Quindi dici tipo che la rabbia è giustificata che per un progetto più grande?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             Però se è ricco ma lei si vendica perché stronzo?
             O magari è stronzo <i>anche</i> perché è ricco?
             
         + Mi è sembrato un gioco: "cosa succede se sono un mostro?".
-                -> glyph_modifier_variation_management(FirstCharacter, earthC, varPGYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, earthC, decreaseYes)->
             Non è male come gioco, vero?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
             Mi piacerebbe farlo una volta.
             Credo mi farebbe sentire parti di me che non cago mai.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             
         + Posso capirla, ma non ha pensato a Irene, generando altro dolore.
-                -> glyph_modifier_variation_management(FirstCharacter, waterC, varPGYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, waterC, decreaseYes)->
             Ed è una cosa che capisco, ma.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
             Lui non si è posto questa domanda mi sa, qualsiasi cosa abbia fatto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             Perché la protagonista è palesemente strapissata.
@@ -183,7 +183,7 @@
             Bisogna sempre ingoiare tutto per proteggere le altre persone?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
             
         + La sua non è vendetta, ma ribellione e autodifesa.
-                -> glyph_modifier_variation_management(FirstCharacter, fireC, varPGYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, fireC, decreaseYes)->
             Non credo reggerebbe in un processo, ma mi suona.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             A volte quando ti viene detto che non puoi arrabbiarti, ci metti molto per capire che sei arrabbiata.
             Quindi è un po' come se avesse reagito con ventitré anni di ritardo a quello che Jacopo le ha fatto.

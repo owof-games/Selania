@@ -51,30 +51,30 @@
     Tu cosa fai se ci hanno rapito gli alieni?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
     
             + Dormiamo qualche giorno, siii!
-                 -> glyph_modifier_variation_management(FirstCharacter, earthC, varPGYes)->
-                 -> glyph_modifier_variation_management(SecondCharacter, aetherC, varPGYes)->
+                 -> glyph_modifier_variation_management(FirstCharacter, earthC, decreaseYes)->
+                 -> glyph_modifier_variation_management(SecondCharacter, aetherC, decreaseNo)->
 
                 Voi persone vecchie siete noiose.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Nemmeno la nonna pensa così tanto a dormire!
                 Perché tua nonna è in pensione e non deve pensare costantemente a PRODURRE!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
 
             + Anche io voglio studiarmi tutto!
-                -> glyph_modifier_variation_management(FirstCharacter, aetherC, varPGYes)->
-                -> glyph_modifier_variation_management(SecondCharacter, airC, varPGYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, airC, decreaseNo)->
                  
                 Sìì! E il nostro team batte il team SIAMO NOIOSI E DORMIAMO SEMPRE DI {charNameOne}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 Sarò noiosa, ma tu arriverai ai quindici anni più ansioso di un pinscher, piccoletto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
 
             + Mi metterei a piangere {player_pronouns has him:terrorizzato|{player_pronouns has her:terrorizzata|terrorizzatə}} in un angolino.
-                    -> glyph_modifier_variation_management(FirstCharacter, waterC, varPGYes)->
-                    -> glyph_modifier_variation_management(SecondCharacter, waterC, varPGYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, waterC, decreaseYes)->
+                    -> glyph_modifier_variation_management(SecondCharacter, waterC, decreaseNo)->
                     
                 Come i bambini piccoli. No no no.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
                 Mi ci riconosco, totale.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
 
             + Mentre mi leggono la mente penso a cose assurdissime!
-                -> glyph_modifier_variation_management(FirstCharacter, airC, varPGYes)->
-                -> glyph_modifier_variation_management(SecondCharacter, earthC, varPGYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, earthC, decreaseNo)->
                 
                 Sarebbe divertentissimo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 Ora provo a pensare tantissimo alla cacca!
@@ -82,8 +82,8 @@
                 Non come quella di un bambino, ascoltando le cose che dice il piccoletto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 
             + Magari conoscono il senso della vita.
-                -> glyph_modifier_variation_management(FirstCharacter, aetherC, varPGYes)->
-                -> glyph_modifier_variation_management(SecondCharacter, fireC, varPGYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, fireC, decreaseNo)->
                 
                 Te lo dico io: caramelle!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 E vedere i pinguini.
@@ -146,25 +146,25 @@
     Mentore e Riccio stanno discutendo se è meglio Wicked  o Attack of Titan. Mentore tifa per il primo, Riccio per il secondo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
     
         + (not_intervention) Decidi di non intervenire
-             -> glyph_modifier_variation_management(Mentor, airC, varPGYes)->
-             -> glyph_modifier_variation_management(SecondCharacter, airC, varPGYes)->
+             -> glyph_modifier_variation_management(Mentor, airC, decreaseYes)->
+             -> glyph_modifier_variation_management(SecondCharacter, airC, decreaseNo)->
     
         + (pro_mentor) Wicked!
-            -> glyph_modifier_variation_management(Mentor, airC, varPGYes)->
-            -> glyph_modifier_variation_management(SecondCharacter, fireC, varPGYes)->
+            -> glyph_modifier_variation_management(Mentor, airC, decreaseYes)->
+            -> glyph_modifier_variation_management(SecondCharacter, fireC, decreaseNo)->
      
         + (pro_riccio) Attack of Titan, ovvio!
-                -> glyph_modifier_variation_management(Mentor, earthC, varPGYes)->
-                -> glyph_modifier_variation_management(SecondCharacter, airC, varPGYes)->
+                -> glyph_modifier_variation_management(Mentor, earthC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, airC, decreaseNo)->
     
         + (disagree)The Lady, mi spiace.
-            -> glyph_modifier_variation_management(Mentor, fireC, varPGYes)->
-            -> glyph_modifier_variation_management(SecondCharacter, fireC, varPGYes)->
+            -> glyph_modifier_variation_management(Mentor, fireC, decreaseYes)->
+            -> glyph_modifier_variation_management(SecondCharacter, fireC, decreaseNo)->
     
             
         + (paracula)Attack of the Wicked, che ne dite?
-            -> glyph_modifier_variation_management(Mentor, waterC, varPGYes)->
-            -> glyph_modifier_variation_management(SecondCharacter, waterC, varPGYes)->
+            -> glyph_modifier_variation_management(Mentor, waterC, decreaseYes)->
+            -> glyph_modifier_variation_management(SecondCharacter, waterC, decreaseNo)->
                 -    
     Finisce la scena. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     - (bookUpdate)
@@ -207,34 +207,34 @@
     Qualcosa che è sempre altrove e quindi irraggiungibile?#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
     
         + {mentorName}, tu parli di arrendersi.
-            -> glyph_modifier_variation_management(FirstCharacter, fireC, varPGYes)->
-            -> glyph_modifier_variation_management(Mentor, fireC, varPGYes)->
+            -> glyph_modifier_variation_management(FirstCharacter, fireC, decreaseYes)->
+            -> glyph_modifier_variation_management(Mentor, fireC, decreaseNo)->
             Non arrendersi, {player_name}, ma accogliere quello che si ha.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             E non vedo differenza, {mentorName}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
             
         + {mentorName}, razionalmente la felicità ha una natura temporanea.
-            -> glyph_modifier_variation_management(FirstCharacter, airC, varPGYes)->
-            -> glyph_modifier_variation_management(Mentor, airC, varPGYes)->
+            -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseYes)->
+            -> glyph_modifier_variation_management(Mentor, airC, decreaseNo)->
             Oh, che bello sentire qualcun{player_pronouns has him:o|{player_pronouns has her:a|ə}} che matcha la mia gioia di vivere.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
             Il fatto che sia temporanea non nega la mia teoria.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         
         + La felicità ce l'hai se trovi il gioco e l'assurdo ovunque.
-            -> glyph_modifier_variation_management(FirstCharacter, earthC, varPGYes)->
-            -> glyph_modifier_variation_management(Mentor, earthC, varPGYes)->
+            -> glyph_modifier_variation_management(FirstCharacter, earthC, decreaseYes)->
+            -> glyph_modifier_variation_management(Mentor, earthC, decreaseNo)->
             Credo che quello si chiami "abuso di sostanze".#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
             Con un linguaggio meno colorito, direi comunque che sì, ha ragione {charNameOne}.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
 
         + Non credo nella felicità, ma credo nel piacere dato dalle persone vicine.
-            -> glyph_modifier_variation_management(FirstCharacter, waterC, varPGYes)->    
-            -> glyph_modifier_variation_management(Mentor, waterC, varPGYes)->
+            -> glyph_modifier_variation_management(FirstCharacter, waterC, decreaseYes)->    
+            -> glyph_modifier_variation_management(Mentor, waterC, decreaseNo)->
             Questa è una lettura che potrei apprezzare.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             Woah!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
             Vuol dire che {player_name} ha trovato un punto di contatto tra noi in questa discussione?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
             Eh sì, mi sa proprio di sì.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
             
         + La felicità è qualcosa che cresce nelle pieghe del quotidiano.
-            -> glyph_modifier_variation_management(FirstCharacter, aetherC, varPGYes)->
-            -> glyph_modifier_variation_management(Mentor, airC, varPGYes)->
+            -> glyph_modifier_variation_management(FirstCharacter, aetherC, decreaseYes)->
+            -> glyph_modifier_variation_management(Mentor, airC, decreaseNo)->
             Sono contenta che la vediamo allo stesso modo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
             Le cose che crescono nelle pieghe di solito sono sporche.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
             Infestanti.
@@ -323,14 +323,14 @@
     <i>O portare nomi che non sa.
 
         + Metà delle cose che la voce dice sono illogiche.
-                -> glyph_modifier_variation_management(Mentor, airC, varPGYes)->
+                -> glyph_modifier_variation_management(Mentor, airC, decreaseYes)->
             <i>{player_name} non vede, e quindi decide che qualcosa non esiste.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             <i>Ma quella cosa esiste anche se {player_name} non vede.
             Uh, peccato.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
             Ma ci sta: questo luogo è così insolito, immagino sia inevitabile non capirlo fino in fondo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             
         + Dice che stai facendo un buon lavoro.
-                -> glyph_modifier_variation_management(Mentor, waterC, varPGYes)->
+                -> glyph_modifier_variation_management(Mentor, waterC, decreaseYes)->
             Oh, ma sicuramente esagera.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
             Prendi prima: ho scoperto che per via della mia incuria sta crescendo del muschio sotto la panchina.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
             Però.
@@ -338,14 +338,14 @@
             <i>Dire una mezza verità porta su una mezza strada.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
         + Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
-                -> glyph_modifier_variation_management(Mentor, earthC, varPGYes)->
+                -> glyph_modifier_variation_management(Mentor, earthC, decreaseYes)->
             Non è che ho lasciato qualcosa di acceso in cucina?#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
             No dai, si vedrebbe il fumo da qui, sicuro.
             Magari è qualcosa di simbolico.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             Spero di non aver distrutto nulla.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
         
         + Non è più importante il tuo di giudizio sul tuo lavoro, {mentorName}?
-                -> glyph_modifier_variation_management(Mentor, aetherC, varPGYes)->
+                -> glyph_modifier_variation_management(Mentor, aetherC, decreaseYes)->
             Credo di sì.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             Ma uno sguardo esterno ci può aiutare, immagino.
             Oh, non lo so.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
@@ -353,7 +353,7 @@
             Credo di star facendo un buon lavoro.
 
         + Ha detto tante cose ma la risposta è: no.
-                -> glyph_modifier_variation_management(Mentor, fireC, varPGYes)->
+                -> glyph_modifier_variation_management(Mentor, fireC, decreaseYes)->
             <i>La frusta che cade senza motivo non porta alcun insegnamento.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             Oh.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
             Forse potrei chiedere scusa in qualche modo a...
@@ -460,22 +460,22 @@
     Chiacchierata Franco e PNG3
 
         + Metà delle cose che la voce dice sono illogiche.
-                -> glyph_modifier_variation_management(ThirdCharacter, airC, varPGYes)->
+                -> glyph_modifier_variation_management(ThirdCharacter, airC, decreaseYes)->
             
         + Dice che stai facendo un buon lavoro.
-                -> glyph_modifier_variation_management(ThirdCharacter, waterC, varPGYes)->
+                -> glyph_modifier_variation_management(ThirdCharacter, waterC, decreaseYes)->
 
         
         + Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
-                -> glyph_modifier_variation_management(ThirdCharacter, earthC, varPGYes)->
+                -> glyph_modifier_variation_management(ThirdCharacter, earthC, decreaseYes)->
 
 
         + Non è più importante il tuo di giudizio sul tuo lavoro, {mentorName}?
-                -> glyph_modifier_variation_management(ThirdCharacter, aetherC, varPGYes)->
+                -> glyph_modifier_variation_management(ThirdCharacter, aetherC, decreaseYes)->
 
 
         + Ha detto tante cose ma la risposta è: no.
-                -> glyph_modifier_variation_management(ThirdCharacter, fireC, varPGYes)->
+                -> glyph_modifier_variation_management(ThirdCharacter, fireC, decreaseYes)->
 
 
     - (bookUpdate)
@@ -493,27 +493,27 @@
     Chiacchierata Mentore e PNG3
 
         + Metà delle cose che la voce dice sono illogiche.
-                -> glyph_modifier_variation_management(ThirdCharacter, airC, varPGYes)->
-                -> glyph_modifier_variation_management(Mentor, airC, varPGYes)->
+                -> glyph_modifier_variation_management(ThirdCharacter, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(Mentor, airC, decreaseNo)->
             
         + Dice che stai facendo un buon lavoro.
-                -> glyph_modifier_variation_management(ThirdCharacter, waterC, varPGYes)->
-                -> glyph_modifier_variation_management(Mentor, airC, varPGYes)->
+                -> glyph_modifier_variation_management(ThirdCharacter, waterC, decreaseYes)->
+                -> glyph_modifier_variation_management(Mentor, airC, decreaseNo)->
 
         
         + Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
-                -> glyph_modifier_variation_management(ThirdCharacter, earthC, varPGYes)->
-                -> glyph_modifier_variation_management(Mentor, airC, varPGYes)->
+                -> glyph_modifier_variation_management(ThirdCharacter, earthC, decreaseYes)->
+                -> glyph_modifier_variation_management(Mentor, airC, decreaseNo)->
 
 
         + Non è più importante il tuo di giudizio sul tuo lavoro, {mentorName}?
-                -> glyph_modifier_variation_management(ThirdCharacter, aetherC, varPGYes)->
-                -> glyph_modifier_variation_management(Mentor, airC, varPGYes)->
+                -> glyph_modifier_variation_management(ThirdCharacter, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(Mentor, airC, decreaseNo)->
 
 
         + Ha detto tante cose ma la risposta è: no.
-                -> glyph_modifier_variation_management(ThirdCharacter, fireC, varPGYes)->
-                -> glyph_modifier_variation_management(Mentor, airC, varPGYes)->
+                -> glyph_modifier_variation_management(ThirdCharacter, fireC, decreaseYes)->
+                -> glyph_modifier_variation_management(Mentor, airC, decreaseNo)->
 
     - (bookUpdate)
 
@@ -530,27 +530,27 @@
     Chiacchierata Riccio e PNG3
     
          + Metà delle cose che la voce dice sono illogiche.
-                -> glyph_modifier_variation_management(ThirdCharacter, airC, varPGYes)->
-                -> glyph_modifier_variation_management(SecondCharacter, airC, varPGYes)->
+                -> glyph_modifier_variation_management(ThirdCharacter, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, airC, decreaseNo)->
             
         + Dice che stai facendo un buon lavoro.
-                -> glyph_modifier_variation_management(ThirdCharacter, waterC, varPGYes)->
-                -> glyph_modifier_variation_management(SecondCharacter, airC, varPGYes)->
+                -> glyph_modifier_variation_management(ThirdCharacter, waterC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, airC, decreaseNo)->
 
         
         + Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
-                -> glyph_modifier_variation_management(ThirdCharacter, earthC, varPGYes)->
-                -> glyph_modifier_variation_management(SecondCharacter, airC, varPGYes)->
+                -> glyph_modifier_variation_management(ThirdCharacter, earthC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, airC, decreaseNo)->
 
 
         + Non è più importante il tuo di giudizio sul tuo lavoro?
-                -> glyph_modifier_variation_management(ThirdCharacter, aetherC, varPGYes)->
-                -> glyph_modifier_variation_management(SecondCharacter, airC, varPGYes)->
+                -> glyph_modifier_variation_management(ThirdCharacter, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, airC, decreaseNo)->
 
 
         + Ha detto tante cose ma la risposta è: no.
-                -> glyph_modifier_variation_management(ThirdCharacter, fireC, varPGYes)->
-                -> glyph_modifier_variation_management(SecondCharacter, airC, varPGYes)->
+                -> glyph_modifier_variation_management(ThirdCharacter, fireC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, airC, decreaseNo)->
 
     - (bookUpdate)
     -> second_char_closing_storylet ->
@@ -566,27 +566,27 @@
     Chiacchierata Chitarra e PNG3
 
         + Metà delle cose che la voce dice sono illogiche.
-                -> glyph_modifier_variation_management(ThirdCharacter, airC, varPGYes)->
-                -> glyph_modifier_variation_management(FirstCharacter, airC, varPGYes)->
+                -> glyph_modifier_variation_management(ThirdCharacter, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseNo)->
             
         + Dice che stai facendo un buon lavoro.
-                -> glyph_modifier_variation_management(ThirdCharacter, waterC, varPGYes)->
-                -> glyph_modifier_variation_management(FirstCharacter, airC, varPGYes)->
+                -> glyph_modifier_variation_management(ThirdCharacter, waterC, decreaseYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseNo)->
 
         
         + Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
-                -> glyph_modifier_variation_management(ThirdCharacter, earthC, varPGYes)->
-                -> glyph_modifier_variation_management(FirstCharacter, airC, varPGYes)->
+                -> glyph_modifier_variation_management(ThirdCharacter, earthC, decreaseYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseNo)->
 
 
         + Non è più importante il tuo di giudizio sul tuo lavoro?
-                -> glyph_modifier_variation_management(ThirdCharacter, aetherC, varPGYes)->
-                -> glyph_modifier_variation_management(FirstCharacter, airC, varPGYes)->
+                -> glyph_modifier_variation_management(ThirdCharacter, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseNo)->
 
 
         + Ha detto tante cose ma la risposta è: no.
-                -> glyph_modifier_variation_management(ThirdCharacter, fireC, varPGYes)->
-                -> glyph_modifier_variation_management(FirstCharacter, airC, varPGYes)->
+                -> glyph_modifier_variation_management(ThirdCharacter, fireC, decreaseYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseNo)->
 
     - (bookUpdate)
     -> first_char_closing_storylet ->

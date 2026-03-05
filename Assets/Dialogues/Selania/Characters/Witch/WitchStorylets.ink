@@ -39,7 +39,7 @@
         <i>{player_name} cosa si domanda?
         
             + Posso sfiorarti?
-                    -> glyph_modifier_variation_management(PG, waterC, varPGNo)->
+                    -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->
                 <i>{player_name} sente la voce del Canto delle Compagne.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>{player_name} realizza che è {player_pronouns has him:collegato|{player_pronouns has her:collegata|collegatə}} a {charNameOne}.
                 <i>A {charNameTwo}.
@@ -49,7 +49,7 @@
                 <i>E quel ricordo, {player_name}, è il tuo sfiorarci.
                 
             + Ehi tu, esci dalla mia testa! Subito!
-                    -> glyph_modifier_variation_management(PG, fireC, varPGNo)->
+                    -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
                 <i>Non siamo nella testa di {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Non più di quanto {player_name} sia nella sua stessa testa.
                 <i>Non meno di quanto {player_name} sia nella nostra.
@@ -57,7 +57,7 @@
                 <i>E questa è una cosa che non è e non sarà.
                 
             + Le piante non possono parlare.
-                    -> glyph_modifier_variation_management(PG, airC, varPGNo)->
+                    -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
                 <i>Le piante raccontano storie da notte a giorno. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>E noi non siamo una pianta.
                 <i>Ma siamo una pianta.
@@ -72,13 +72,13 @@
                 <i>Da te.
                 
             + Ci piace la gioia!
-                    -> glyph_modifier_variation_management(PG, earthC, varPGNo)->
+                    -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
                 <i>E a noi piace {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>E tutte le emozioni che genera con le sue azioni.
                 <i>E tutti i tempi che {player_name} vive, ha vissuto e vivrà.
             
             + La tua voce mi guida dal mio arrivo.
-                    -> glyph_modifier_variation_management(PG, aetherC, varPGNo)->
+                    -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->
                 <i>E la tua guida noi, {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>La separazione è una illusione.
                 <i>{player_name} è noi, noi siamo {charNameOne}.
@@ -146,19 +146,19 @@
         E ci spiega che la manipolazione è un intento, non qualcosa di inerente all'oggetto, o al nido.
         
         + Scelta verde.
-            -> glyph_modifier_variation_management(PG, waterC, varPGNo)->
+            -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->
             
         + Scelta rossa.
-            -> glyph_modifier_variation_management(PG, fireC, varPGNo)->
+            -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
             
         + Scelta blu.
-            -> glyph_modifier_variation_management(PG, airC, varPGNo)->
+            -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
      
         + Scelta gialla.
-            -> glyph_modifier_variation_management(PG, earthC, varPGNo)->
+            -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
  
         + Scelta viola.
-            -> glyph_modifier_variation_management(PG, aetherC, varPGNo)->
+            -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->
         - (bookUpdate)       
             -> main  
 
@@ -175,19 +175,19 @@
     Compare lo sfondo stellato.
     
         + Scelta verde.
-            -> glyph_modifier_variation_management(PG, waterC, varPGNo)->
+            -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->
             
         + SCelta rossa.
-            -> glyph_modifier_variation_management(PG, fireC, varPGNo)->
+            -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
             
         + Scelta blu.
-            -> glyph_modifier_variation_management(PG, airC, varPGNo)->
+            -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
      
         + Scelta gialla.
-            -> glyph_modifier_variation_management(PG, earthC, varPGNo)->
+            -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
  
         + Scelta viola.
-            -> glyph_modifier_variation_management(PG, aetherC, varPGNo)->
+            -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->
         -        
     Cose.
 -> main

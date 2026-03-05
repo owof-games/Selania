@@ -128,8 +128,6 @@ GESTIONE DELL'USO DEI SIGILLI
 //Lista dei possibili stati dei glifi
 LIST glyph_talkingVariations = fireC, earthC, airC, waterC, aetherC
 
-//Check se modificare o meno stato colore PG
-LIST glyph_varpg_status = varPGYes, varPGNo
 
 //Persona a cui stiamo parlando quando compiamo la scelta
     VAR glyph_currentTalker = ()
