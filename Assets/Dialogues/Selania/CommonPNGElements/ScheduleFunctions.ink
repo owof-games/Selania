@@ -12,6 +12,8 @@
     LIST story_endingOrders = story_oneStoryClosed, story_twoStoriesClosed, story_threeStoriesClosed, story_fourStoriesClosed, story_fifthStoriesClosed
 
 
+
+
 === story_time_management_for_PNG
 {debug: passo per story_time_management_for_PNG}
 //Questa la uso per far sentire il rumore del treno dove serve
@@ -39,7 +41,7 @@
                 ~ move_entity(TrainNoiseComing, CurrentLocation)
                 ~ secondChar_storyStatus = story_storyStarted
     
-        //Dopo aver aperto la biblioteca, compare il terzo png
+        //Dopo quattro dialoghi con Chitarra o due con Riccio, compare il terzo PNG.
         - (first_char_main_storylets.four or second_char_main_storylets.two) && not (thirdChar_storyStatus == story_storyStarted):
             {debug: introduco {ThirdCharacter} in scena.}
                 ~ move_entity(ThirdCharacter, TrainStop)
@@ -93,9 +95,11 @@
     VAR movements_randomizable_characters = ()
 
 
-//Qui apriamo i luoghi cambiando gli assets di riferimento
+//Qui apriamo i luoghi cambiando gli assets di riferimento: serra, cucina, biblioteca, nido, discarica
 === opening_places
 {debug: passo da opening_places.}
+
+    //Apertura serra
     {
         - welcome.your_name && (entity_location(FromPondToGreenhouse) == Safekeeping) && not olobino.step_tre.colto:
             ~ player_accessiblePlaces += Greenhouse
@@ -104,6 +108,7 @@
             // ~ movements_randomablePlaces += Greenhouse
     }
     
+    //Apertura cucina
     {
         - open_the_kitchen && (entity_location(FromPondToKitchen) == Safekeeping):
             ~ player_accessiblePlaces += Kitchen
@@ -111,13 +116,7 @@
             ~ move_entity(FromPondToKitchen, Pond)
     }
     
-    {
-        - open_the_nest && (entity_location(FromLibraryToNest) == Safekeeping):
-            ~ player_accessiblePlaces += Nest
-            ~ move_entity(FromLibraryToNestBlocked, Safekeeping)
-            ~ move_entity(FromLibraryToNest, Library)
-    }
-    
+    //Apertura biblioteca
     {
         - open_the_library && (entity_location(FromForestToLibrary) == Safekeeping):
             ~ move_entity(FromForestToLibraryBlocked, Safekeeping)
@@ -126,13 +125,22 @@
             ~ player_accessiblePlaces += Library
     }
 
-
-    //Per ora mi appoggio a Riccio, ma poi sbloccherò con PNG3
+    
+    //Apertura nido
     {
-        - second_char_main_storylets.three && (entity_location(FromForestToDump) == Safekeeping) && (entity_location(PG) != Forest):
-            Crediamo sia giunto il momento ti parlare, {player_name}.
+        - open_the_nest && (entity_location(FromLibraryToNest) == Safekeeping):
+            ~ player_accessiblePlaces += Nest
+            ~ move_entity(FromLibraryToNestBlocked, Safekeeping)
+            ~ move_entity(FromLibraryToNest, Library)
+    }
+    
+
+    //Dopo aver parlato con Boccale, si apre l'accesso alla discarica
+    {
+        - third_char_main_storylets.one && (entity_location(FromForestToDump) == Safekeeping) && (entity_location(PG) != Forest):
+            Crediamo sia giunto il momento ti parlare, {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             Ti aspettiamo ai margini della foresta.
-            Capirai come trovarci.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            Capirai come trovarci.
                 ~ move_entity(FromForestToDumpBlocked, Safekeeping)
                 ~ move_entity(FromForestToDump, Forest)
                 ~ player_accessiblePlaces += Dump
@@ -141,9 +149,9 @@
 ->->   
 
 //Qui aggiorniamo lo stato di randomizzabilità o meno di unx PNG
-=== check_png_randomizable_status
+=== on_movement_randomize_png_places
 //Prima cosa: se una storia è iniziata, aggiungo la personaggia alla lista dei randomizzabili, altrimenti la levo
-    {debug: passo da check_png_randomizable_status.}
+    {debug: passo da on_movement_randomize_png_places.}
     
     {
         - mentorChar_storyStatus == story_storyStarted:
@@ -310,64 +318,7 @@
     
     ->->
     
-=== special_events_tracking
-//Qui traccio tutti gli eventi eccezionali, così li ho in un unico posto: animazioni, cambi assets e via di seguito
-
-//Comparsa lettere dopo fine delle storie (così non compaiono subito.
-//La logica è: quando una png se ne va dal gioco, setto  (es.)~ firstChar_mailPause = firstChar_mailPauseDuration
-//Quando il valore di firstChar_mailPause è minore di zero: se non c'è già una lettera in giro, sposto la lettera/dogga in stazione.
-//Se l'ho letta, quando mi sposterò dalla stazione, il cane se ne andrà
-//Se ci sono lettere da leggere e quella del doggo ancora non è stata letta, 
-    {
-        - first_char_story_ended.goodbye && firstChar_mailPause < 0 && contentsTrainStop hasnt DoggoSecondLetters && not first_character_notes.three:
-        
-                ~ move_entity(DoggoFirstLetters, TrainStop)
-                {debug: Ho messo la nota della prima personaggia alla fermata del bus.}
-            
-    }
-    
-    {
-        - second_char_story_ended.goodbye && secondChar_mailPause < 0 && contentsTrainStop hasnt DoggoFirstLetters && not second_character_notes.three:
-        
-                ~ move_entity(DoggoSecondLetters, TrainStop)
-                {debug: Ho messo la nota del secondo personaggio alla fermata del bus.}
-
-                
-    }
-    
-    {
-        - contentsTrainStop has DoggoNoLetters:
-        
-                ~ move_entity(DoggoNoLetters, Safekeeping)
-                {debug: Ho spostato la dogga nel safekeeping.}
-    
-    }
-        //Abilito Carla se siamo in modalità tutorial
-    {
-        - tutorial_ActivateTutorial == true && not tutorial_choicesStorylet:
-            ~ move_entity(Carla, TrainStop)
-            {debug: il tutorial è attivo e quindi sposto Carla alla fermata del treno.}
-    }
-
-    
-    ~ firstChar_mailPause --
-    ~ secondChar_mailPause --
-    
-//Eventi legati alla serra    
-    {
-        - olobino.step_tre.colto && (entity_location(FromPondToGreenhouseBlooming) == Safekeeping):
-            ~ move_entity(FromPondToGreenhouse, Safekeeping)
-            ~ move_entity(FromPondToGreenhouseBlooming, Pond)
-    }
-
-->->
-
-
-                
-
-
-  
-                
+ 
 
 
 

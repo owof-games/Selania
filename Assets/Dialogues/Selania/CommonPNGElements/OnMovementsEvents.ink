@@ -3,13 +3,48 @@
    Aggiornamenti di stato durante gli spostamenti 
 
  ----------------------------------*/
- 
+
 === on_movement_events
 {debug: passo da on_movement_events.}
-//Qui metto tutte quelle funzioni e variazioni che sono richieste a ogni cambio stanza.
+//Prima aggiorno tutti i valori che possono condizionarne altri
+    -> story_time_management_for_PNG->
+    -> on_movement_PG_values ->
+    -> on_movement_characters_values ->
+    -> on_movement_kitchen_tracker ->
+    -> on_movement_randomize_png_places ->
+    -> on_movement_special_events ->
+    -> on_movement_letters_management ->
+    -> on_movement_sounds_effects ->    
+
+//Poi gli elementi grafici/estetici
+    -> opening_places ->       
+    -> dump_graphic_changer ->
+    -> moon_state_management ->
+    -> talk_to_me ->
+
+//E infine le notifiche
+    -> notification_system ->
+
+->->
+
+
+//Raccolta di azioni uniche                
+=== on_movement_special_events
+{debug: passo da on_movement_special_events.}
 ~ temp currentPlace = entity_location(PG)
+//Abilito Carla se siamo in modalità tutorial
+    {
+        - tutorial_ActivateTutorial == true && not tutorial_choicesStorylet:
+            ~ move_entity(Carla, TrainStop)
+            {debug: il tutorial è attivo e quindi sposto Carla alla fermata del treno.}
+    }
 
-
+//A crescita Olobino, cambio asset accesso serra  
+    {
+        - olobino.step_tre.colto && (entity_location(FromPondToGreenhouseBlooming) == Safekeeping):
+            ~ move_entity(FromPondToGreenhouse, Safekeeping)
+            ~ move_entity(FromPondToGreenhouseBlooming, Pond)
+    }
 
 //Passaggio per spostare il grimorio temporaneo in foresta dopo aver scelto il proprio nome.
 {
@@ -17,25 +52,172 @@
         ~ move_entity(temporaryGrimoire, Forest)
 }
 
+//Spostamento di libro e inventario se scoperti
+    {
+        - contentsSafekeeping hasnt RewriterBook && currentPlace != Bedroom:
+            ~ move_entity(RewriterBook, currentPlace)
+    }
 
-//Riduzioni di contatori legati al tempo:
-{debug: <i>in on_movement events: riduzioni di contatori legati al tempo.}
+->->    
+           
+
+
+//Gestione della posta 
+=== on_movement_letters_management
+{debug: passo da on_movement_letters_management.}
+~ temp currentPlace = entity_location(PG)
+
+//Variabile per far comparire una lettera alla volta.
+VAR letters_doggoPause = false
+
+    {
+        - first_char_story_ended.goodbye && firstChar_mailPause < 0 && not first_character_notes.three && letters_doggoPause == false:
+        
+                ~ move_entity(DoggoFirstLetters, TrainStop)
+                {debug: Ho messo la nota della prima personaggia alla fermata del bus.}
+                ~ letters_doggoPause = true
+                {debug: ho messo in pausa le altre lettere.}
+            
+    }
+    
+    {
+        - second_char_story_ended.goodbye && secondChar_mailPause < 0 && not second_character_notes.three && letters_doggoPause == false:
+        
+                ~ move_entity(DoggoSecondLetters, TrainStop)
+                {debug: Ho messo la nota del secondo personaggio alla fermata del bus.}
+                ~ letters_doggoPause = true
+                {debug: ho messo in pausa le altre lettere.}
+
+                
+    }
+
+    {
+        - third_char_story_ended.goodbye && thirdChar_mailPause < 0 && not third_character_notes.three && letters_doggoPause == false:
+        
+                ~ move_entity(DoggoThirdLetters, TrainStop)
+                {debug: Ho messo la nota del third personaggio alla fermata del bus.}
+                ~ letters_doggoPause = true
+                {debug: ho messo in pausa le altre lettere.}
+
+                
+    }
+    
+    {
+        - contentsTrainStop has DoggoNoLetters:
+        
+                ~ move_entity(DoggoNoLetters, Safekeeping)
+                {debug: Ho spostato la dogga nel safekeeping.}
+                ~ letters_doggoPause = false
+                {debug: ho tolto dalla pausa le altre lettere.}
+    
+    }
+
+
+
+    //Riduzione della pausa tra le lettere
+    ~ firstChar_mailPause --
+    ~ secondChar_mailPause --
     ~ thirdChar_mailPause --
+    ~ fourthChar_mailPause --
     ~ fifthChar_mailPause --
     
-//Riduzione valore Mindfulness per proporne una diversa poi    
+->->
+
+//Gestione dei suoni legati agli spostamenti
+=== on_movement_sounds_effects
+{debug: passo da on_movement_sounds_effects.}
+    
+//Gestione suoni
+    {
+        - contentsSafekeeping hasnt TrainNoiseComing:
+            ~ move_entity(TrainNoiseComing, Safekeeping)
+    }
+
+
+    {
+        - contentsSafekeeping hasnt TrainNoiseGoingAway:
+            ~ move_entity(TrainNoiseGoingAway, Safekeeping)
+    }
+                 
+  
+->->
+
+
+
+//Gestione dei valori delle PNG legati agli spostamenti (pause dialogo, mindfulness etc.)
+=== on_movement_characters_values
+{debug: passo per on_movement_characters_values}
+    {
+        - firstChar_pauseTalking > 0:
+            ~ firstChar_pauseTalking --
+            {debug: Il valore di firstChar_pauseTalking è {firstChar_pauseTalking}}
+    }
+
+    {    
+        - secondChar_pauseTalking > 0:
+            ~ secondChar_pauseTalking --
+    } 
+
+    {    
+        - thirdChar_pauseTalking > 0:
+            ~ thirdChar_pauseTalking --
+    }
+
+    {    
+        - fourthChar_pauseTalking > 0:
+            ~ fourthChar_pauseTalking --
+    }  
+
+    {    
+        - fifthChar_pauseTalking > 0:
+            ~ fifthChar_pauseTalking --
+    }  
+
+    {   
+        - mentor_pauseTalking > 0:
+            ~ mentor_pauseTalking --    
+    } 
+
+
+    //Riduzione valore Mindfulness per proporne una diversa poi    
     ~ mentor_lastMindfulness --
 
-//Riduzione stanchezza rana
+    //Riduzione stanchezza rana
     ~ frog_tiredValue --
 
-//Contatore spostamenti PG
+    //Avvio dialoghi di chiusura
+    {
+        - firstChar_storyStatus == story_storyEnded:
+	        ~ firstChar_exitCounter ++
+	}
+	
+	{
+	    - secondChar_storyStatus == story_storyEnded:
+	        ~ secondChar_exitCounter ++     
+    }
+
+    {
+	    - thirdChar_storyStatus == story_storyEnded:
+	        ~ thirdChar_exitCounter ++     
+    }
+
+->-> 
+
+
+//Contatori della PG
+=== on_movement_PG_values ===
+{debug: passo da on_movement_PG_values.}
+    //Contatore spostamenti PG
     ~ player_movementsCounter ++
     // E contatore per la notifica di riposo
     ~ player_lastRestingSession ++
-        
+
+->->
+
+
 //Gestione della cucina delle PNG
-    
+=== on_movement_kitchen_tracker ===
+{debug: passo da on_movement_kitchen_tracker.}
     //Riccio
     //Riccio inizia a cucinare. Metto prima di Chitarra giusto perché il suo storylet coinvolge anche Mentore e quindi forse è più interessante.
     //Ho messo (entity_location(SecondCharacter) != Kitchen) perché così non parte mai la cucina autonoma se c'è qualcunx in cucina.
@@ -187,66 +369,5 @@
             - kitchen_cookingAloneCoolDown > 0:
                 ~ kitchen_cookingAloneCoolDown --
         }
-    
-//Gestione suoni
-    {
-        - contentsSafekeeping hasnt TrainNoiseComing:
-            ~ move_entity(TrainNoiseComing, Safekeeping)
-    }
 
-
-    {
-        - contentsSafekeeping hasnt TrainNoiseGoingAway:
-            ~ move_entity(TrainNoiseGoingAway, Safekeeping)
-    }
-                 
-  
-
-//Avvio dialoghi di chiusura
-    {
-        - firstChar_storyStatus == story_storyEnded:
-	        ~ firstChar_exitCounter ++
-	}
-	
-	{
-	    - secondChar_storyStatus == story_storyEnded:
-	        ~ secondChar_exitCounter ++     
-    }
-
-//Spostamento di libro e inventario se scoperti
-    {
-        - contentsSafekeeping hasnt RewriterBook && currentPlace != Bedroom:
-            ~ move_entity(RewriterBook, currentPlace)
-    }
-
-
-//Altre funzioni:
-    -> notification_system ->
-    -> dump_graphic_changer ->
-    -> story_time_management_for_PNG->
-    -> check_png_randomizable_status ->
-    -> characters_speaking ->
-    -> moon_state_management ->
-    -> special_events_tracking ->
-    -> talk_to_me ->
-
-->->
-
-//Riduzione del tempo di pausa del dialogo fino a quando non siamo a 0
-=== characters_speaking
-    {
-        - firstChar_pauseTalking > 0:
-            ~ firstChar_pauseTalking --
-            {debug: Il valore di firstChar_pauseTalking è {firstChar_pauseTalking}}
-        
-        - secondChar_pauseTalking > 0:
-            ~ secondChar_pauseTalking --
-        
-        - thirdChar_pauseTalking > 0:
-            ~ thirdChar_pauseTalking --
-        
-        - mentor_pauseTalking > 0:
-            ~ mentor_pauseTalking --    
-    }
-->-> 
-
+->->        
