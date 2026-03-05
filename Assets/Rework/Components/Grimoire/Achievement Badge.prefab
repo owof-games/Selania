@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 6130749933454004105}
   - component: {fileID: 3631232908104348872}
   - component: {fileID: 30062446556141474}
+  - component: {fileID: 6379106042471874654}
   m_Layer: 5
   m_Name: Achievement Badge
   m_TagString: Untagged
@@ -322,3 +323,17 @@ MonoBehaviour:
   alternativeSprite: {fileID: 21300000, guid: 6df2fe89bbb22184f8048287463cf3b5, type: 3}
   textObject: {fileID: 765926783098239229}
   useAlternativeSprite: 0
+--- !u!114 &6379106042471874654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8140876442786450184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00fe557be62f4aa58e511d606b0c30f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.AchievementAmount
+  <achievementName>k__BackingField: 
+  disabledTint: {r: 1, g: 1, b: 1, a: 0.49019608}

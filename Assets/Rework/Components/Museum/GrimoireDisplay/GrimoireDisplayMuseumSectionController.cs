@@ -12,6 +12,11 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
             grimoireBackground.ShowGrimoire();
         }
 
+        public void HideGrimoire()
+        {
+            grimoireBackground.HideGrimoire();
+        }
+
         public void DisableAllLeftButtons()
         {
             grimoireBackground.DisableAllLeftButtons();
@@ -26,6 +31,23 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
             grimoireBackground.EnableLeftButton("Rules", true);
             grimoireBackground.EnableLeftButton("Lore", true);
             grimoireBackground.EnableLeftButton("Settings", true);
+        }
+
+        public void SetGamerMode()
+        {
+            grimoireBackground.SetGamerMode(true);
+        }
+
+        public void UnsetGamerMode()
+        {
+            grimoireBackground.SetGamerMode(false);
+        }
+
+        public void SetSomeAchievements()
+        {
+            grimoireBackground.SetAchievementStatus("FirstAchievement", 0, 5);
+            grimoireBackground.SetAchievementStatus("SecondAchievement", 3, 5);
+            grimoireBackground.SetAchievementStatus("ThirdAchievement", 5, 5);
         }
     }
 }

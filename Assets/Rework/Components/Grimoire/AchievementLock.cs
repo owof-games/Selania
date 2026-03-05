@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Selania.Rework.Components.Museum.GrimoireDisplay
+namespace Selania.Rework.Components.Grimoire
 {
     /// <summary>
     ///     A component that locks an achievement if needed.

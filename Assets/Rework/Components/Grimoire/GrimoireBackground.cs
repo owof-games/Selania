@@ -19,6 +19,10 @@ namespace Selania.Rework.Components.Grimoire
         [Tooltip("Invoked when the grimoire is asked to close.")] [SerializeField]
         private UnityEvent close = new();
 
+        [SerializeField] private GameObject loadButtonContainer = null!;
+
+        [SerializeField] private AchievementAmount[] achievements = null!;
+
         private Animator _animator = null!;
 
         [Inject] internal ILogger<GrimoireBackground> Logger = null!;
@@ -33,11 +37,17 @@ namespace Selania.Rework.Components.Grimoire
             DisableAllLeftButtons();
         }
 
+        /// <summary>
+        ///     Show the grimoire. Usually called from outside.
+        /// </summary>
         public void ShowGrimoire()
         {
             _animator.SetBool(Opened, true);
         }
 
+        /// <summary>
+        ///     Hide the grimoire. Usually handled by the "close" bookmark itself.
+        /// </summary>
         public void HideGrimoire()
         {
             _animator.SetBool(Opened, false);
@@ -77,10 +87,34 @@ namespace Selania.Rework.Components.Grimoire
             descriptor.target.interactable = isButtonEnabled;
         }
 
+        /// <summary>
+        ///     Set (or unset) the gamer mode.
+        /// </summary>
+        /// <param name="gamerMode">Whether we're in gamer mode.</param>
+        public void SetGamerMode(bool gamerMode)
+        {
+            loadButtonContainer.SetActive(gamerMode);
+        }
+
+        public void SetAchievementStatus(string achievementName, int current, int max)
+        {
+            var achievement =
+                achievements.FirstOrDefault(achievement => achievement.achievementName == achievementName);
+            if (achievement == null)
+            {
+                Logger.ZLogWarning($"Could not find achievement with name {achievementName}");
+                return;
+            }
+
+            achievement.SetAchievementStatus(current, max);
+        }
+
         [Serializable]
         public class LeftButtonDescriptor
         {
-            public required string name;
+            [Tooltip("The name of the button.")] public required string name;
+
+            [Tooltip("The button to enable or disable")]
             public required Selectable target;
         }
     }

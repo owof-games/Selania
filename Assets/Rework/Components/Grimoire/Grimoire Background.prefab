@@ -37,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -459.25226}
+  m_AnchoredPosition: {x: 0, y: -625.25226}
   m_SizeDelta: {x: 632.2769, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &4857012415396846478
@@ -467,6 +467,20 @@ MonoBehaviour:
   close:
     m_PersistentCalls:
       m_Calls: []
+  loadButtonContainer: {fileID: 7231823009376858813}
+  achievements:
+  - {fileID: 9036093101316987606}
+  - {fileID: 6575993060835027761}
+  - {fileID: 4284280304704781611}
+  - {fileID: 5239848245727286198}
+  - {fileID: 1312036689943155962}
+  - {fileID: 7223712362175466498}
+  - {fileID: 6454429435289830438}
+  - {fileID: 6059700332054465995}
+  - {fileID: 5214177906511284840}
+  - {fileID: 1486835003480073505}
+  - {fileID: 3675946997996991082}
+  - {fileID: 7344233923551947235}
 --- !u!1 &1787756452143129338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,7 +1017,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -379.25226}
+  m_AnchoredPosition: {x: 0, y: -257.25226}
   m_SizeDelta: {x: 632.2769, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &4745594941225638506
@@ -1516,7 +1530,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -419.25226}
+  m_AnchoredPosition: {x: 0, y: -441.25226}
   m_SizeDelta: {x: 632.2769, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &5567221794593877205
@@ -1853,7 +1867,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -499.25226}
+  m_AnchoredPosition: {x: 0, y: -787.25226}
   m_SizeDelta: {x: 632.2769, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &7789121659927808560
@@ -2428,7 +2442,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -339.25226}
+  m_AnchoredPosition: {x: 0, y: -73.25226}
   m_SizeDelta: {x: 632.2769, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &4307206952282886837
@@ -2545,7 +2559,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -65.505
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2621,6 +2635,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
   m_PrefabInstance: {fileID: 78142815780144248}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6454429435289830438 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+  m_PrefabInstance: {fileID: 78142815780144248}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00fe557be62f4aa58e511d606b0c30f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.AchievementAmount
 --- !u!1001 &271832245953948527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2695,7 +2720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -65.505
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2732,6 +2757,10 @@ PrefabInstance:
     - target: {fileID: 1591185181475149393, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -119.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+      propertyPath: <achievementName>k__BackingField
+      value: SecondAchievement
       objectReference: {fileID: 0}
     - target: {fileID: 7555114823039244191, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2771,6 +2800,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
   m_PrefabInstance: {fileID: 271832245953948527}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6575993060835027761 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+  m_PrefabInstance: {fileID: 271832245953948527}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00fe557be62f4aa58e511d606b0c30f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.AchievementAmount
 --- !u!1001 &731788198335641655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2954,7 +2994,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -65.505
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3030,6 +3070,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
   m_PrefabInstance: {fileID: 909518756126510485}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6059700332054465995 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+  m_PrefabInstance: {fileID: 909518756126510485}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00fe557be62f4aa58e511d606b0c30f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.AchievementAmount
 --- !u!1001 &1000128620653591549
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3246,7 +3297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -65.505
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3322,6 +3373,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
   m_PrefabInstance: {fileID: 1166587414044660712}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5239848245727286198 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+  m_PrefabInstance: {fileID: 1166587414044660712}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00fe557be62f4aa58e511d606b0c30f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.AchievementAmount
 --- !u!1001 &1214661332387629622
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3396,7 +3458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -65.505
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3472,6 +3534,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
   m_PrefabInstance: {fileID: 1214661332387629622}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5214177906511284840 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+  m_PrefabInstance: {fileID: 1214661332387629622}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00fe557be62f4aa58e511d606b0c30f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.AchievementAmount
 --- !u!1001 &1582226924814636205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3692,7 +3765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -65.505
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3730,6 +3803,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -119.005
       objectReference: {fileID: 0}
+    - target: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+      propertyPath: <achievementName>k__BackingField
+      value: FirstAchievement
+      objectReference: {fileID: 0}
     - target: {fileID: 7555114823039244191, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3764,6 +3841,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
   m_PrefabInstance: {fileID: 2729610085663693448}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9036093101316987606 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+  m_PrefabInstance: {fileID: 2729610085663693448}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00fe557be62f4aa58e511d606b0c30f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.AchievementAmount
 --- !u!1001 &2921090214805149090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3988,7 +4076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -65.505
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4064,6 +4152,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
   m_PrefabInstance: {fileID: 4375505676978654300}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7223712362175466498 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+  m_PrefabInstance: {fileID: 4375505676978654300}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00fe557be62f4aa58e511d606b0c30f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.AchievementAmount
 --- !u!1001 &4426148870258059709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4138,7 +4237,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -65.505
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4214,6 +4313,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
   m_PrefabInstance: {fileID: 4426148870258059709}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7344233923551947235 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+  m_PrefabInstance: {fileID: 4426148870258059709}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00fe557be62f4aa58e511d606b0c30f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.AchievementAmount
 --- !u!1001 &4875918922645076022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4361,7 +4471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -65.505
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4432,6 +4542,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+--- !u!114 &1312036689943155962 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+  m_PrefabInstance: {fileID: 5382480291782907044}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00fe557be62f4aa58e511d606b0c30f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.AchievementAmount
 --- !u!224 &6467202460460420360 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
@@ -4511,7 +4632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -65.505
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4582,6 +4703,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+--- !u!114 &1486835003480073505 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+  m_PrefabInstance: {fileID: 5486914501521335679}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00fe557be62f4aa58e511d606b0c30f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.AchievementAmount
 --- !u!224 &6869986945198079187 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
@@ -4885,7 +5017,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -65.505
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4923,6 +5055,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -119.005
       objectReference: {fileID: 0}
+    - target: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+      propertyPath: <achievementName>k__BackingField
+      value: ThirdAchievement
+      objectReference: {fileID: 0}
     - target: {fileID: 7555114823039244191, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4956,6 +5092,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+--- !u!114 &4284280304704781611 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+  m_PrefabInstance: {fileID: 7202365319815691637}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00fe557be62f4aa58e511d606b0c30f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.AchievementAmount
 --- !u!224 &8106908175144363225 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
@@ -5108,7 +5255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -65.505
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5179,6 +5326,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+--- !u!114 &3675946997996991082 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+  m_PrefabInstance: {fileID: 7747516770328752692}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00fe557be62f4aa58e511d606b0c30f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.AchievementAmount
 --- !u!224 &8716367868185799576 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
