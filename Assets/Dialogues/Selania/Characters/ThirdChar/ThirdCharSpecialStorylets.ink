@@ -1,5 +1,10 @@
 //Questi storylets speciali non tornano sulle opzioni di dialogo, ma sul main        
     === open_the_nest
+    ~ temp charNameTwo = translator(thirdChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
     //Apertura del nido
     Dialogo in biblioteca.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
         + [Scelta blu.]
@@ -18,8 +23,10 @@
             -> glyph_modifier_variation_management(SecondCharacter, waterC, decreaseYes)->
         -    
     Ci viene aperto il nido.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-
+    E poi {charNameThree} se ne va.
+    
         ~ thirdChar_LibraryInvite = false
+        ~  move_entity(ThirdCharacter, Forest)
         -> third_char_closing_storylet ->
         -> opening_places ->
         -> main
