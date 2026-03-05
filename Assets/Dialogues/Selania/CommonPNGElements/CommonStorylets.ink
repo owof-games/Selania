@@ -592,3 +592,15 @@
     -> first_char_closing_storylet ->
     -> third_char_closing_storylet ->
     -> main
+
+
+=== carla_and_second_char_chit_chat ===    
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+    Chiacchierata Riccio e Carla, puramente di colore
+
+    -> second_char_closing_storylet ->
+    -> main

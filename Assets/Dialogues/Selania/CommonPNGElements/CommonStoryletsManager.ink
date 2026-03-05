@@ -22,6 +22,7 @@
                 - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(FirstCharacter, PG)&& thirdChar_pauseTalking == 0 && firstChar_pauseTalking == 0 && not third_first_chit_chat:
                     -> third_first_chit_chat 
 
+        
         //Con PNG e Mentore
             //Mentore e Riccio parlano dopo il litigio. Parte fintanto che riccio non ha cucinato da solo.
                 - are_two_entities_together(Mentor, PG) && are_two_entities_together(SecondCharacter, PG) && mentor_pauseTalking == 0 && secondChar_pauseTalking == 0 && addressing_violence && (not about_violence_and_peace):
@@ -61,6 +62,11 @@
             //Discorso sbloccato da Franco            
                 - are_two_entities_together(Mentor, PG) && are_two_entities_together(SecondCharacter, PG) && frog_currentMission has specialMissionOne  && mentor_pauseTalking == 0 && secondChar_pauseTalking == 0 && (not special_mission_one_dialogue):
                     -> special_mission_one_dialogue
+        
+        //Altre
+            //Scambio tra Riccio e Carla
+             - are_two_entities_together(SecondCharacter, PG) && are_two_entities_together(Carla, PG) && secondChar_pauseTalking == 0 && not carla_and_second_char_chit_chat:
+                    -> carla_and_second_char_chit_chat
 
             - else:
                 //Andiamo a vedere se ci sono storylets speciali di un singolo personaggio
