@@ -37,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -612.1522}
+  m_AnchoredPosition: {x: 0, y: -459.25226}
   m_SizeDelta: {x: 632.2769, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &4857012415396846478
@@ -439,6 +439,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8702ac0f31b45a0b79a531c28567278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.GrimoireBackground
+  leftButtonDescriptors:
+  - name: FirstCharacter
+    target: {fileID: 7462769121449417898}
+  - name: SecondCharacter
+    target: {fileID: 4989721850624209215}
+  - name: ThirdCharacter
+    target: {fileID: 4313033562042255631}
+  - name: FourthCharacter
+    target: {fileID: 7198000456027567675}
+  - name: FifthCharacter
+    target: {fileID: 1352709808870722743}
+  - name: Moon
+    target: {fileID: 8666036763443327024}
+  - name: Franco
+    target: {fileID: 527925371054113351}
+  - name: Greenhouse
+    target: {fileID: 6942274819876675424}
+  - name: Sigils
+    target: {fileID: 4119613507636652198}
+  - name: Rules
+    target: {fileID: 3322671267722304683}
+  - name: Lore
+    target: {fileID: 6221580215117882871}
+  - name: Settings
+    target: {fileID: 8233089590170935744}
   close:
     m_PersistentCalls:
       m_Calls: []
@@ -978,7 +1003,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -254.15225}
+  m_AnchoredPosition: {x: 0, y: -379.25226}
   m_SizeDelta: {x: 632.2769, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &4745594941225638506
@@ -1491,7 +1516,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -433.15225}
+  m_AnchoredPosition: {x: 0, y: -419.25226}
   m_SizeDelta: {x: 632.2769, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &5567221794593877205
@@ -1828,7 +1853,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -777.2522}
+  m_AnchoredPosition: {x: 0, y: -499.25226}
   m_SizeDelta: {x: 632.2769, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &7789121659927808560
@@ -2403,7 +2428,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -75.15225}
+  m_AnchoredPosition: {x: 0, y: -339.25226}
   m_SizeDelta: {x: 632.2769, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &4307206952282886837
@@ -2520,7 +2545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -65.505
+      value: -53.5
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2670,7 +2695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -65.505
+      value: -53.5
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2832,7 +2857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
       propertyPath: m_Name
-      value: Top Level Button
+      value: First Character Top Level Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2844,6 +2869,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
   m_PrefabInstance: {fileID: 731788198335641655}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7462769121449417898 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7905718971798742173, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_PrefabInstance: {fileID: 731788198335641655}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &909518756126510485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2918,7 +2954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -65.505
+      value: -53.5
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3044,7 +3080,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: b542bfd49cf4db44a957672b22bfccb4, type: 3}
     - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
       propertyPath: m_Name
-      value: Top Level Button (1)
+      value: Greenhouse Top Level Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3056,6 +3092,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
   m_PrefabInstance: {fileID: 1000128620653591549}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6942274819876675424 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7905718971798742173, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_PrefabInstance: {fileID: 1000128620653591549}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &1032079421235663526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3102,7 +3149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
       propertyPath: m_Name
-      value: Top Level Button
+      value: Fourth Character Top Level Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3114,6 +3161,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
   m_PrefabInstance: {fileID: 1032079421235663526}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7198000456027567675 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7905718971798742173, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_PrefabInstance: {fileID: 1032079421235663526}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &1166587414044660712
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3188,7 +3246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -65.505
+      value: -53.5
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3338,7 +3396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -65.505
+      value: -53.5
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3464,7 +3522,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 0cffa1c52bf519c4baab7cf13f7443ee, type: 3}
     - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
       propertyPath: m_Name
-      value: Top Level Button (2)
+      value: Moon Top Level Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3476,6 +3534,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
   m_PrefabInstance: {fileID: 1582226924814636205}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8666036763443327024 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7905718971798742173, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_PrefabInstance: {fileID: 1582226924814636205}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &2303326056544437597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3526,7 +3595,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: d669add6cb179ad4f807387d82ab0cd2, type: 3}
     - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
       propertyPath: m_Name
-      value: Top Level Button (2)
+      value: Settings Top Level Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3538,6 +3607,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
   m_PrefabInstance: {fileID: 2303326056544437597}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8233089590170935744 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7905718971798742173, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_PrefabInstance: {fileID: 2303326056544437597}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &2729610085663693448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3612,7 +3692,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -65.505
+      value: -53.5
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3738,7 +3818,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
       propertyPath: m_Name
-      value: Top Level Button (1)
+      value: Second Character Top Level Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3750,6 +3830,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
   m_PrefabInstance: {fileID: 2921090214805149090}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4989721850624209215 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7905718971798742173, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_PrefabInstance: {fileID: 2921090214805149090}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &4314940726930719082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3800,7 +3891,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: d65fc1e786aa2e14696741190bd4dd8f, type: 3}
     - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
       propertyPath: m_Name
-      value: Top Level Button (1)
+      value: Lore Top Level Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3812,6 +3903,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
   m_PrefabInstance: {fileID: 4314940726930719082}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6221580215117882871 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7905718971798742173, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_PrefabInstance: {fileID: 4314940726930719082}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &4375505676978654300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3886,7 +3988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -65.505
+      value: -53.5
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4036,7 +4138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -65.505
+      value: -53.5
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4162,13 +4264,24 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 3c97b8ece2ee6974c90503ee68a96d61, type: 3}
     - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
       propertyPath: m_Name
-      value: Top Level Button
+      value: Rules Top Level Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+--- !u!114 &3322671267722304683 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7905718971798742173, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_PrefabInstance: {fileID: 4875918922645076022}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!224 &5255302555809451959 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
@@ -4248,7 +4361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -65.505
+      value: -53.5
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4398,7 +4511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -65.505
+      value: -53.5
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4524,13 +4637,24 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 00397c982bce6ab48ac36a1203ea652c, type: 3}
     - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
       propertyPath: m_Name
-      value: Top Level Button (2)
+      value: Sigils Top Level Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+--- !u!114 &4119613507636652198 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7905718971798742173, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_PrefabInstance: {fileID: 6097046153637137467}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!224 &6906591729496947642 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
@@ -4580,15 +4704,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 939524010463004744, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2b9511e6aedc8ae44af6c3f979b841c4, type: 3}
     - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
       propertyPath: m_Name
-      value: Top Level Button (2)
+      value: Third Character Top Level Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+--- !u!114 &4313033562042255631 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7905718971798742173, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_PrefabInstance: {fileID: 6227414681535688082}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!224 &6712636208768899603 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
@@ -4612,11 +4751,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 115.2
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 111.2
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4646,13 +4785,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 939524010463004744, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: ab8c0beadb77a624794190f437590d93, type: 3}
     - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
       propertyPath: m_Name
-      value: Top Level Button
+      value: Save Top Level Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 7223143176891612941, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_PreferredHeight
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4738,7 +4885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -65.505
+      value: -53.5
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4864,13 +5011,24 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: f36655aba210e4346a12e3743509accd, type: 3}
     - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
       propertyPath: m_Name
-      value: Top Level Button
+      value: Franco Top Level Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+--- !u!114 &527925371054113351 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7905718971798742173, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_PrefabInstance: {fileID: 7702651622869542618}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!224 &7035039808298504539 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
@@ -4950,7 +5108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -65.505
+      value: -53.5
       objectReference: {fileID: 0}
     - target: {fileID: 1401313350172039596, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5076,13 +5234,24 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: fe09cdbb3e3a163429cad5a7533a1e01, type: 3}
     - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
       propertyPath: m_Name
-      value: Top Level Button (1)
+      value: Fifth Character Top Level Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+--- !u!114 &1352709808870722743 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7905718971798742173, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_PrefabInstance: {fileID: 9183697137841236010}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!224 &8374197604013612971 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
