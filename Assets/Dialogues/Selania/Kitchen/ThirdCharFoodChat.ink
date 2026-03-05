@@ -102,10 +102,8 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
                 Messa così è più tipo una rete di relazioni, che non una relazione?
             -    
         No no taglio io, non ti preoccupare, continua a mischiare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
-            {
-                - not cooking_with_second_char:
-                    <i>{player_name} prova a parlare, ma le parole rimangono bloccate in gola. Ma gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-            }
+            
+            -> kitchen_moon_feedback -> 
         
 
             + <i>Soffriggo dei cubetti di grano del rispetto.
@@ -277,6 +275,8 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
             -        
         
         Aspetta, ho visto delle forbici prima.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
+        
+            -> kitchen_moon_feedback -> 
             
             + <i>Infarino confusamente delle tagliatelle.
                 ~ kitchen_recipeNoun = "Tagliatelle"
@@ -438,10 +438,7 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
             -    
         Ciotole pulite!
 
-             {
-                - not cooking_with_second_char:
-                    <i>{player_name} prova a parlare, ma le parole rimangono bloccate in gola. Ma gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-            }
+             -> kitchen_moon_feedback -> 
 
             + <i>Lesso sportivamente delle patate.
                 ~ kitchen_recipeNoun = "Patate"
@@ -673,10 +670,9 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
                 ~ temp charNameThree = translator(thirdChar_ActualName)
                 ~ temp charNameFour= translator(fourthChar_ActualName)
                 ~ temp mentorName = translator(mentor_ActualName)
-                        {
-                            - not at_table_with_second_char.good_reaction:
-                                <i>{player_name} ha aggiunto un ingrediente adorato da {charNameOne}, e quindi riceverà un consiglio su come gestire le conversazioni con lei.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                        }
+                        
+                        -> kitchen_moon_feedback -> 
+
                     Aggiungere {ingredientTranslator(kitchen_thirdCharExtraIngredient)} è stato un tocco geniale.
                         @animation:RewriterBook
 
@@ -688,10 +684,9 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
                 ~ temp charNameThree = translator(thirdChar_ActualName)
                 ~ temp charNameFour= translator(fourthChar_ActualName)
                 ~ temp mentorName = translator(mentor_ActualName)  
-                        {
-                            - not at_table_with_second_char.bad_reaction:
-                                <i>{player_name} ha aggiunto un ingrediente detestato da {charNameOne}, e quindi non riceverà alcun consiglio su come gestire le conversazioni con lei.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                        }
+
+                        -> kitchen_moon_feedback -> 
+
                     Aggiungere {ingredientTranslator(kitchen_thirdCharExtraIngredient)} è stata una scelta.
         
                         -> relationship_feedback
@@ -703,10 +698,8 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
                 ~ temp charNameThree = translator(thirdChar_ActualName)
                 ~ temp charNameFour= translator(fourthChar_ActualName)
                 ~ temp mentorName = translator(mentor_ActualName)
-                        {
-                            - not at_table_with_second_char.meh_reaction:
-                                <i>{player_name} ha aggiunto un ingrediente abbastanza apprezzato da {charNameOne}, e quindi riceverà un consiglio fumoso su cosa fare parlando con lei.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                        }
+                        
+                        -> kitchen_moon_feedback -> 
 
                     L'aggiunta di {ingredientTranslator(kitchen_thirdCharExtraIngredient)} mi ha confusa.
                         @animation:RewriterBook

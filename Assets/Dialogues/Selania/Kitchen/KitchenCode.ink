@@ -24,6 +24,10 @@
 //Variabile per evitare che le personagge cucinino una di fila all'altra
     VAR kitchen_cookingAloneCoolDown = 0
     VAR kitchen_cookingAloneCoolDownMAX = 2
+
+//Variabile per tracciare con chi stiamo cucinando
+    VAR kitchen_actualChef = ()
+    VAR kitchen_actualChefPronouns = ()
     
 //Reazioni possibili al quarto ingrediente
     //Nota: notReaction = non dato
@@ -563,4 +567,70 @@
 
 {debug_kitchen: dopo aver aggiornato i valori, il valore di kitchen_storageAether è {kitchen_storageAether}, di kitchen_storageEarth {kitchen_storageEarth}, kitchen_storageAir è {kitchen_storageAir}, di kitchen_storageWater {kitchen_storageWater}, di kitchen_storageFire {kitchen_storageFire}. cookingCompanion è {cookingCompanion}.} 
 ->->
+
+=== kitchen_moon_feedback ===
+
+//Assegnazione parlante
+{
+    - are_two_entities_together(FirstCharacter,PG):
+        ~ kitchen_actualChef = translator(firstChar_ActualName)
+        ~ kitchen_actualChefPronouns = her
+
+    - are_two_entities_together(SecondCharacter,PG):
+        ~ kitchen_actualChef = translator(secondChar_ActualName)
+        ~ kitchen_actualChefPronouns = him
+
+    - are_two_entities_together(ThirdCharacter,PG):
+        ~ kitchen_actualChef = translator(thirdChar_ActualName)
+        ~ kitchen_actualChefPronouns = him
+
+    - are_two_entities_together(FirstCharacter,PG):
+        ~ kitchen_actualChef = Franco
+        ~ kitchen_actualChefPronouns = him
+}
+
+
+{
+//Il feedback per il primo ingrediente inserito da sole c'è alla prima volta che si cucina.
+	- not first_time_ingredient:
+		-> first_time_ingredient
+//Poi posso sfruttare il tracciamento delle reazioni.
+	- (kitchen_firstCharExtraIngredientReaction == goodReaction or kitchen_secondCharExtraIngredientReaction == goodReaction or kitchen_thirdCharExtraIngredientReaction == goodReaction) && not first_time_good_reaction:
+		-> first_time_good_reaction
+	
+	- (kitchen_firstCharExtraIngredientReaction == mehReaction or kitchen_secondCharExtraIngredientReaction == mehReaction or kitchen_thirdCharExtraIngredientReaction == mehReaction)&& not first_time_meh_reaction:
+		-> first_time_meh_reaction
+
+	- (kitchen_firstCharExtraIngredientReaction == badReaction or kitchen_secondCharExtraIngredientReaction == badReaction or kitchen_thirdCharExtraIngredientReaction == badReaction) && not first_time_bad_reaction:
+		-> first_time_bad_reaction
+
+    - else:
+        ->->    
+}        
+
+    = first_time_ingredient
+
+
+            <i>{player_name} prova a parlare, ma le parole rimangono bloccate in gola. Ma gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        
+        ->->
+
+    = first_time_good_reaction
+            <i>{player_name} ha aggiunto un ingrediente adorato da {kitchen_actualChef}, e quindi riceverà un consiglio su come gestire le conversazioni con {kitchen_actualChefPronouns == him:lui|lei}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        
+        ->->
+
+
+    = first_time_meh_reaction
+
+
+            <i>{player_name} ha aggiunto un ingrediente abbastanza apprezzato da {kitchen_actualChef}, e quindi riceverà un consiglio fumoso su cosa fare parlando con {kitchen_actualChefPronouns == him:lui|lei}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        
+        ->->
+
+    = first_time_bad_reaction
+            <i>{player_name} ha aggiunto un ingrediente detestato da {kitchen_actualChef}, e quindi non riceverà alcun consiglio su come gestire le conversazioni con {kitchen_actualChefPronouns == him:lui|lei}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        
+        
+        ->->
 
