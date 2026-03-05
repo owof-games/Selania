@@ -58,6 +58,18 @@
             ~ move_entity(RewriterBook, currentPlace)
     }
 
+
+//Dopo aver parlato con Boccale, si apre l'accesso alla discarica
+    {
+        - third_char_main_storylets.one && (entity_location(FromForestToDump) == Safekeeping) && (entity_location(PG) != Forest):
+            Crediamo sia giunto il momento ti parlare, {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            Ti aspettiamo ai margini della foresta.
+            Capirai come trovarci.
+                ~ move_entity(FromForestToDumpBlocked, Safekeeping)
+                ~ move_entity(FromForestToDump, Forest)
+                ~ player_accessiblePlaces += Dump
+    }
+
 ->->    
            
 

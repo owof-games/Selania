@@ -135,16 +135,6 @@
     }
     
 
-    //Dopo aver parlato con Boccale, si apre l'accesso alla discarica
-    {
-        - third_char_main_storylets.one && (entity_location(FromForestToDump) == Safekeeping) && (entity_location(PG) != Forest):
-            Crediamo sia giunto il momento ti parlare, {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-            Ti aspettiamo ai margini della foresta.
-            Capirai come trovarci.
-                ~ move_entity(FromForestToDumpBlocked, Safekeeping)
-                ~ move_entity(FromForestToDump, Forest)
-                ~ player_accessiblePlaces += Dump
-    }
 
 ->->   
 
@@ -289,20 +279,20 @@
                 {debug: i luoghi randomizzabili sono {movements_randomablePlaces}}
                 {debug: il luogo scelto per la randomizzazione è {location}}
                 //Per il pezzo qui sotto, l'idea è di avere unx solx personaggix alla volta in biblioteca e nella discarica, se e solo se comunque lx dovessi sbloccare come aree (e a quel punto mi basta aggiungerle a movements_randomablePlaces)
-                    {
-                        - location == Dump:
-                            {
-                                - (contentsDump has FirstCharacter) or (contentsDump has SecondCharacter) or (contentsDump has ThirdCharacter) or (contentsDump has Mentor):
-                                    ~ location = Forest
-                            }
-                    }
-                    {
-                        - location == Library:
-                            {
-                                - (contentsDump has FirstCharacter) or (contentsDump has SecondCharacter) or (contentsDump has ThirdCharacter) or (contentsDump has Mentor):
-                                    ~ location = Pond
-                            }
-                    }
+                    // {
+                    //     - location == Dump:
+                    //         {
+                    //             - (contentsDump has FirstCharacter) or (contentsDump has SecondCharacter) or (contentsDump has ThirdCharacter) or (contentsDump has Mentor):
+                    //                 ~ location = Forest
+                    //         }
+                    // }
+                    // {
+                    //     - location == Library:
+                    //         {
+                    //             - (contentsLibrary has FirstCharacter) or (contentsLibrary has SecondCharacter) or (contentsLibrary has ThirdCharacter) or (contentsLibrary has Mentor):
+                    //                 ~ location = Pond
+                    //         }
+                    // }
             //Scelto il luogo e lx PNG, sposto e resetto.
             ~ move_entity(character, location)
             ~ movements_randomizable_characters -= character    
