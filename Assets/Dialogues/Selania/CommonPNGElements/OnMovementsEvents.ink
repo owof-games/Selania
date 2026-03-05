@@ -22,9 +22,10 @@
     -> moon_state_management ->
     -> talk_to_me ->
 
-//E infine le notifiche
     -> notification_system ->
-
+    -> on_movement_tutorial_steps ->
+    -> talk_to_me -> 
+      
 ->->
 
 

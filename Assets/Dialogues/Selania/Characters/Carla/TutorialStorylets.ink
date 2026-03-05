@@ -1,3 +1,4 @@
+//Tutorial sul game play principale
 
 === tutorial_choicesStorylet ===
     {
@@ -12,16 +13,12 @@ Tutorial scelte spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState #in
     {
         - tutorial_allTutorialSteps hasnt tutorialChoices:
             ~ tutorial_allTutorialSteps += tutorialChoices
+             ~ move_entity(Carla, Forest)
     }
 
 
-    //Se è la prima volta che passo da qui, ovvero se è tutorial effettivo, allora vado anche alla spiegazione delle relazioni, altrimenti no, perché saranno separati.
-    {
-        - tutorial_choicesStorylet == 1:
-            -> tutorial_relationshipStorylet
-        - else:
-            ->->
-    }
+->->
+
 
 
 === tutorial_relationshipStorylet ===
@@ -32,7 +29,6 @@ Tutorial relazione spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState 
     {
         - tutorial_allTutorialSteps hasnt tutorialRelationship:
             ~ tutorial_allTutorialSteps += tutorialRelationship
-            ~ move_entity(Carla, Forest)
     }
 
 
@@ -66,6 +62,10 @@ Tutorial rilettura spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState 
 ->->
 
 
+
+
+
+//Tutorial sui luoghi
 === tutorial_greenhouseStorylet ===
 {
     - tutorial_greenhouseStorylet == 1:
@@ -74,6 +74,17 @@ Tutorial rilettura spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState 
 
 Tutorial serra spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
 
+
+{
+    - tutorial_relationshipStorylet: commento se sei passatx dal tutorial relazione.
+    - else: commento se non sei passatx dal tutorial relazione.
+}
+
+
+{
+    - tutorial_inkStorylet: commento se sei passatx dal tutorial inchiostro.
+    - else: commento se non sei passatx dal tutorial inchiostro.
+}
 
 
 {
@@ -87,6 +98,7 @@ Tutorial serra spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState #ink
 ->->
 
 
+
 === tutorial_kitchenStorylet ===
 {
     - tutorial_kitchenStorylet == 1:
@@ -95,6 +107,21 @@ Tutorial serra spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState #ink
 
 
 Tutorial cucina spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
+
+{
+    - tutorial_relationshipStorylet: commento se sei passatx dal tutorial relazione.
+    - else: commento se non sei passatx dal tutorial relazione.
+}
+
+{
+    - tutorial_inkStorylet: commento se sei passatx dal tutorial inchiostro.
+    - else: commento se non sei passatx dal tutorial inchiostro.
+}
+
+{
+    - tutorial_greenhouseStorylet: commento sei sei passatx dal tutorial serra.
+    - else: commento se non sei passatx dal tutorial serra, questo perché si mettono gli ingredienti come extra
+}
 
 {
     - tutorial_allTutorialSteps hasnt tutorialKitchen:

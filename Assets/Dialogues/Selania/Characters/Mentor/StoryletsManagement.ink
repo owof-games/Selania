@@ -64,13 +64,13 @@
         - not welcome:
             -> welcome
         
-        //Relazioni e inchiostro
-        - not you_are_a_rewriter:
-            -> you_are_a_rewriter
+        // //Relazioni e inchiostro -> sposati su on_movement_tutorial_steps
+        // - not you_are_a_rewriter:
+        //     -> you_are_a_rewriter
         
-        //Sulla riscrittura: la mettiamo dopo un po' che si è parlato assieme    
-        - not ink_and_rewriting && (first_char_main_storylets.five or second_char_main_storylets.five or third_char_main_storylets.five):
-            -> ink_and_rewriting
+        // //Sulla riscrittura: la mettiamo dopo un po' che si è parlato assieme    
+        // - not ink_and_rewriting && (first_char_main_storylets.five or second_char_main_storylets.five or third_char_main_storylets.five):
+        //     -> ink_and_rewriting
 
         //Info sulla non obbligatorietà dei minigames
         - player_accessiblePlaces has Library or player_accessiblePlaces has Kitchen and not about_not_mandatory_work:
