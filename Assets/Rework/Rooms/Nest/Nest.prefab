@@ -2219,7 +2219,7 @@ PrefabInstance:
     - target: {fileID: 7215676493785075422, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 70b7bb4c1c2b5874ebcdf6b3d8f95344, type: 2}
+      objectReference: {fileID: 22100000, guid: 62c8414d9cd3283458d19cd081d93ecc, type: 2}
     - target: {fileID: 7465546172250548277, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2442,7 +2442,7 @@ PrefabInstance:
     - target: {fileID: 7215676493785075422, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: eac6217cb2289814288f60d9c8f40077, type: 2}
+      objectReference: {fileID: 22100000, guid: 41d92d6268d0a4a47b250116bb7d2419, type: 2}
     - target: {fileID: 7465546172250548277, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2704,7 +2704,7 @@ PrefabInstance:
     - target: {fileID: 7215676493785075422, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: a06dfe132c0bcca40b2d149e4fe5fe1d, type: 2}
+      objectReference: {fileID: 22100000, guid: c180db10f0f6db04783216e63494f86b, type: 2}
     - target: {fileID: 7465546172250548277, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2867,6 +2867,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4151842594449095391, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5344787421971937063, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 80
@@ -2978,11 +2982,35 @@ PrefabInstance:
     - target: {fileID: 7215676493785075422, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 672dab2e1b92e1247ab8e89165075c19, type: 2}
+      objectReference: {fileID: 22100000, guid: ee36559fe5a3a8e4dafd49722ec7610b, type: 2}
+    - target: {fileID: 7465546172250548277, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465546172250548277, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7465546172250548277, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: ca8798c20c0b52947b6777cec86fc04f, type: 3}
+    - target: {fileID: 7465546172250548277, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465546172250548277, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465546172250548277, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465546172250548277, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8235661390823931172, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: inkName
       value: waterGlyph
@@ -3428,7 +3456,7 @@ PrefabInstance:
     - target: {fileID: 7215676493785075422, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: d9f3c3d3030a4a34fadf884a55d519aa, type: 2}
+      objectReference: {fileID: 22100000, guid: 23aa63fcab78cf6428dfa9b2373b6006, type: 2}
     - target: {fileID: 7465546172250548277, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Sprite
       value: 
