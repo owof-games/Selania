@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 2b3a030eed75f754fadcf5800ab6f24b
+guid: f3c19015a43e07347a452b3cf3dab742
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3376725671568660576
-    second: 04 - Elementi industriali_0
-  - first:
-      213: -4103161465814855711
-    second: 04 - Elementi industriali_1
-  - first:
-      213: 1111064884046577054
-    second: 04 - Elementi industriali_2
+      213: 9146989730260980390
+    second: Fumo Tre_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 04 - Elementi industriali_0
+      name: Fumo Tre_0
       rect:
         serializedVersion: 2
-        x: 614
-        y: 353
-        width: 522
-        height: 501
+        x: 0
+        y: 0
+        width: 204
+        height: 173
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,52 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a7253274e57321d0800000000000000
-      internalID: -3376725671568660576
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 04 - Elementi industriali_1
-      rect:
-        serializedVersion: 2
-        x: 1256
-        y: 363
-        width: 325
-        height: 462
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1efc806e264ae07c0800000000000000
-      internalID: -4103161465814855711
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 04 - Elementi industriali_2
-      rect:
-        serializedVersion: 2
-        x: 1533
-        y: 382
-        width: 232
-        height: 698
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e9db10810ab4b6f00800000000000000
-      internalID: 1111064884046577054
+      spriteID: 6a21a5462b2a0fe70800000000000000
+      internalID: 9146989730260980390
       vertices: []
       indices: 
       edges: []
@@ -198,9 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      04 - Elementi industriali_0: -3376725671568660576
-      04 - Elementi industriali_1: -4103161465814855711
-      04 - Elementi industriali_2: 1111064884046577054
+      Fumo Tre_0: 9146989730260980390
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
