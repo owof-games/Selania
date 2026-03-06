@@ -61,10 +61,10 @@ LIST nest_speakersForEwWordTag = Influenced, Other
 === function thirdChar_tag
 {
 
-    - !welcome.chiSei && !welcome.your_name.selfName:
+    - ! third_char_main_storylets.one:
 	    ~ return "???"
-    - thirdChar_ActualName == Mentore:
-	    ~ return "Mentore"
+    - thirdChar_ActualName == Boccale:
+	    ~ return "Boccale"
 }
 
 

@@ -24,6 +24,8 @@
 //Variabile per evitare che le personagge cucinino una di fila all'altra
     VAR kitchen_cookingAloneCoolDown = 0
     VAR kitchen_cookingAloneCoolDownMAX = 2
+    //O che vengano in cucina se c'è qualcunx
+    VAR kitchen_kitchenOccupied = false
 
 //Variabile per tracciare con chi stiamo cucinando
     VAR kitchen_actualChef = ()

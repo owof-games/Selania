@@ -355,6 +355,7 @@
         //Rimetto a posto i vari assets
         ~ move_entity(TheKitchenFrog, Safekeeping)
         ~ move_entity(Franco, Pond)
+        ~ kitchen_kitchenOccupied = false
 
 -> cooking_animations_off ->
 -> main

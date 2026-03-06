@@ -388,6 +388,7 @@
 
         ~ move_entity(Franco, Safekeeping)
         ~ move_entity(TheKitchenFrog, Kitchen)
+        ~ kitchen_kitchenOccupied = true
         ~ frog_currentMission += specialMissionTwo
         ~ frog_availableSpecialMissions -= specialMissionTwo
         @animation:RewriterBook    

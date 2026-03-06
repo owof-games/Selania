@@ -59,7 +59,7 @@
     Magari scopri anche qualcosa di utile per il tuo lavoro qui.
     Che ne dici?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
 
-        + {mentorName} aveva detto di non andare nei posti chiusi.
+        + Ma {mentorName} aveva detto di non andare nei posti chiusi.
             -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseYes)->
                 {
                     - are_two_entities_together(Mentor, PG):

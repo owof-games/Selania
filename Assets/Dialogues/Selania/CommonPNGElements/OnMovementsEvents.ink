@@ -22,7 +22,7 @@
     -> moon_state_management ->
     -> talk_to_me ->
 
-    -> notification_system ->
+    // -> notification_system ->
     -> on_movement_tutorial_steps ->
     -> talk_to_me -> 
       
@@ -236,10 +236,11 @@ VAR letters_doggoPause = false
     //Ho messo (entity_location(SecondCharacter) != Kitchen) perché così non parte mai la cucina autonoma se c'è qualcunx in cucina.
     
         {
-            - player_accessiblePlaces has Kitchen && (not second_char_cooking_tracker) && (entity_location(FirstCharacter) != Kitchen) && (entity_location(ThirdCharacter) != Kitchen) && second_char_main_storylets.one && contentsKitchen hasnt TheKitchenFrog && (kitchen_cookingAloneCoolDown == 0):
+            - player_accessiblePlaces has Kitchen && (not second_char_cooking_tracker) && kitchen_kitchenOccupied == false && second_char_main_storylets.one && (kitchen_cookingAloneCoolDown == 0):
             
                 ~ kitchen_secondCharIsCooking = true
                 ~ move_entity(SecondCharacter, Kitchen)
+                ~ kitchen_kitchenOccupied = true
                     -> second_char_cooking_tracker
         }            
         
@@ -263,6 +264,7 @@ VAR letters_doggoPause = false
                     ~ move_entity(BatHouseFront, Kitchen)
                     ~ move_entity(BatHouseRetro, Kitchen)
                     ~ move_entity(Bat, Kitchen)
+                    ~ kitchen_kitchenOccupied = false
                     
             }
             
@@ -280,15 +282,17 @@ VAR letters_doggoPause = false
                    ~ kitchen_secondCharCookingTogetherInvite = false
                    ~ kitchen_secondCharCookingTogetherWaiting = 0
                    ~ move_entity(SecondCharacter, Pond)
+                   ~ kitchen_kitchenOccupied = false
             }
         }
 
     //Chitarra
         {
-            - player_accessiblePlaces has Kitchen && (not first_char_cooking_tracker) && (entity_location(SecondCharacter) != Kitchen)  && (entity_location(ThirdCharacter) != Kitchen) && contentsKitchen hasnt TheKitchenFrog && (kitchen_cookingAloneCoolDown == 0):
+            - player_accessiblePlaces has Kitchen && (not first_char_cooking_tracker) && kitchen_kitchenOccupied == false && (kitchen_cookingAloneCoolDown == 0):
             
                     ~ kitchen_firstCharIsCooking = true
                     ~ move_entity(FirstCharacter, Kitchen)
+                    ~ kitchen_kitchenOccupied = true
                         -> first_char_cooking_tracker 
         }
         
@@ -310,6 +314,7 @@ VAR letters_doggoPause = false
                         ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
                        //E poi sposto gli elementi decorativi in cucina
                        ~ move_entity(FirstCharCookingAloneOBJ, Kitchen)
+                       ~ kitchen_kitchenOccupied = false
                 }
 
         }
@@ -326,6 +331,7 @@ VAR letters_doggoPause = false
                    ~ kitchen_firstCharCookingTogetherInvite = false
                    ~ kitchen_firstCharCookingTogetherWaiting = 0
                    ~ move_entity(FirstCharacter, Pond)
+                   ~ kitchen_kitchenOccupied = false
             }
         }
         
@@ -333,10 +339,11 @@ VAR letters_doggoPause = false
 
     //TerzoPNG
         {
-            - player_accessiblePlaces has Kitchen && (not third_char_cooking_tracker) && (entity_location(SecondCharacter) != Kitchen) && (entity_location(FirstCharacter) != Kitchen) && contentsKitchen hasnt TheKitchenFrog && (kitchen_cookingAloneCoolDown == 0):
+            - player_accessiblePlaces has Kitchen && (not third_char_cooking_tracker) && kitchen_firstCharIsCooking == false && (kitchen_cookingAloneCoolDown == 0):
             
                     ~ kitchen_thirdCharIsCooking = true
                     ~ move_entity(ThirdCharacter, Kitchen)
+                    ~ kitchen_kitchenOccupied = true
                         -> third_char_cooking_tracker 
         }
         
@@ -358,6 +365,7 @@ VAR letters_doggoPause = false
                         ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
                        //E poi sposto gli elementi decorativi in cucina
                        ~ move_entity(ThirdCharCookingAloneOBJ, Kitchen)
+                       ~ kitchen_kitchenOccupied = false
                 }
 
         }
@@ -374,6 +382,7 @@ VAR letters_doggoPause = false
                    ~ kitchen_thirdCharCookingTogetherInvite = false
                    ~ kitchen_thirdCharCookingTogetherWaiting = 0
                    ~ move_entity(ThirdCharacter, Pond)
+                   ~ kitchen_kitchenOccupied = false
             }
         }
         

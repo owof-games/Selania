@@ -213,6 +213,7 @@
                             ~ kitchen_secondCharCookingTogetherInvite = true
                             ~ kitchen_secondCharCookingTogetherNumberInvite ++
                             ~ move_entity(SecondCharacter, Kitchen)
+                            ~ kitchen_kitchenOccupied = true
                                 ->main
 
                     - else:
