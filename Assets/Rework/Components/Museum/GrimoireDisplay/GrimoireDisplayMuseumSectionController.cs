@@ -49,5 +49,15 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
             grimoireBackground.SetAchievementStatus("SecondAchievement", 3, 5);
             grimoireBackground.SetAchievementStatus("ThirdAchievement", 5, 5);
         }
+
+        public void EmptyFrancoMission()
+        {
+            grimoireBackground.SetFrancoMission("");
+        }
+
+        public void SetFrancoMission()
+        {
+            grimoireBackground.SetFrancoMission("Coltiva almeno tre piante nella serra.");
+        }
     }
 }

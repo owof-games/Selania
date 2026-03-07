@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Microsoft.Extensions.Logging;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -22,6 +23,10 @@ namespace Selania.Rework.Components.Grimoire
         [SerializeField] private GameObject loadButtonContainer = null!;
 
         [SerializeField] private AchievementAmount[] achievements = null!;
+
+        [SerializeField] private Image francoImage = null!;
+
+        [SerializeField] private TextMeshProUGUI francoText = null!;
 
         private Animator _animator = null!;
 
@@ -107,6 +112,24 @@ namespace Selania.Rework.Components.Grimoire
             }
 
             achievement.SetAchievementStatus(current, max);
+        }
+
+        /// <summary>
+        ///     Set the current mission for Franco.
+        /// </summary>
+        /// <param name="francoMissionText">Text of the mission. If null / empty / whitespace, franco is not visibile.</param>
+        public void SetFrancoMission(string francoMissionText)
+        {
+            if (string.IsNullOrWhiteSpace(francoMissionText))
+            {
+                francoImage.enabled = false;
+                francoText.text = string.Empty;
+            }
+            else
+            {
+                francoImage.enabled = true;
+                francoText.text = $"<font-weight=\"500\">{francoMissionText}</font-weight>";
+            }
         }
 
         [Serializable]
