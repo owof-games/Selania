@@ -34,7 +34,7 @@ namespace Selania.Rework.Components.Grimoire
         {
             _achievementLock.useAlternativeSprite = current == 0;
             _achievementImage.color = current > 0 && current < max ? disabledTint : Color.white;
-            _textMeshPro.text = $"{current} / ${max}";
+            _textMeshPro.text = $"{current} / {max}";
         }
     }
 }

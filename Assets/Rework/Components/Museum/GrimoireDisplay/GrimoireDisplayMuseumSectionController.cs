@@ -46,11 +46,18 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
             grimoireBackground.SetGamerMode(false);
         }
 
-        public void SetSomeAchievements()
+        public void SetSomeGamerModeAchievements()
         {
-            grimoireBackground.SetAchievementStatus("FirstAchievement", 0, 5);
-            grimoireBackground.SetAchievementStatus("SecondAchievement", 3, 5);
-            grimoireBackground.SetAchievementStatus("ThirdAchievement", 5, 5);
+            grimoireBackground.SetGamerModeAchievementStatus("FirstAchievement", Random.Range(0, 6), 5);
+            grimoireBackground.SetGamerModeAchievementStatus("SecondAchievement", Random.Range(0, 6), 5);
+            grimoireBackground.SetGamerModeAchievementStatus("ThirdAchievement", Random.Range(0, 6), 5);
+        }
+
+        public void SetSomeReaderModeAchievements()
+        {
+            grimoireBackground.SetReaderModeAchievementStatus("FirstAchievementRM", Random.Range(0, 6), 5);
+            grimoireBackground.SetReaderModeAchievementStatus("SecondAchievementRM", Random.Range(0, 6), 5);
+            grimoireBackground.SetReaderModeAchievementStatus("ThirdAchievementRM", Random.Range(0, 6), 5);
         }
 
         public void EmptyFrancoMission()

@@ -23,7 +23,13 @@ namespace Selania.Rework.Components.Grimoire
 
         [SerializeField] private GameObject loadButtonContainer = null!;
 
-        [SerializeField] private AchievementAmount[] achievements = null!;
+        [SerializeField] private GameObject gamerModeAchievementsContainer = null!;
+
+        [SerializeField] private AchievementAmount[] gamerModeAchievements = null!;
+
+        [SerializeField] private GameObject readerModeAchievementsContainer = null!;
+
+        [SerializeField] private AchievementAmount[] readerModeAchievements = null!;
 
         [SerializeField] private Image francoImage = null!;
 
@@ -117,15 +123,30 @@ namespace Selania.Rework.Components.Grimoire
         public void SetGamerMode(bool gamerMode)
         {
             loadButtonContainer.SetActive(gamerMode);
+            gamerModeAchievementsContainer.SetActive(gamerMode);
+            readerModeAchievementsContainer.SetActive(!gamerMode);
         }
 
-        public void SetAchievementStatus(string achievementName, int current, int max)
+        public void SetGamerModeAchievementStatus(string achievementName, int current, int max)
         {
             var achievement =
-                achievements.FirstOrDefault(achievement => achievement.achievementName == achievementName);
+                gamerModeAchievements.FirstOrDefault(achievement => achievement.achievementName == achievementName);
             if (achievement == null)
             {
-                Logger.ZLogWarning($"Could not find achievement with name {achievementName}");
+                Logger.ZLogWarning($"Could not find gamer mode achievement with name {achievementName}");
+                return;
+            }
+
+            achievement.SetAchievementStatus(current, max);
+        }
+
+        public void SetReaderModeAchievementStatus(string achievementName, int current, int max)
+        {
+            var achievement =
+                readerModeAchievements.FirstOrDefault(achievement => achievement.achievementName == achievementName);
+            if (achievement == null)
+            {
+                Logger.ZLogWarning($"Could not find reader mode achievement with name {achievementName}");
                 return;
             }
 
@@ -182,7 +203,7 @@ namespace Selania.Rework.Components.Grimoire
             }
 
             // set the text
-            sigilUsagesTextMeshPro.text = text;
+            sigilUsagesTextMeshPro.text = $"<font-weight=\"500\">{text}</font-weight>";
             // be sure that this part of the interface is active
             sigilRoot.SetActive(true);
         }
