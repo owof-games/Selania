@@ -52,8 +52,8 @@
         //- player_movementsCounter == delayFourthChar && mentor_rage:
                 //{debug: introduco {FourthCharacter} in scena.}
                 //~ move_entity(FourthCharacter, Forest)
+                // ~ move_entity(chaletSmoke, Safekeeping)
                 //~ fourthChar_storyStatus = story_storyStarted
-                //qualcosa per panchina sistemata
                 
         //E quando la storia della quarta è a tre, si presenta la mentore come uovo
         //- knowing_fourth_character.three && fifthChar_storyStatus == story_storyNotStarted:

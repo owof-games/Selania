@@ -1,7 +1,7 @@
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
     VAR contentsBedroom = (FromBedroomToTrainStop, PG, Settings)
 
-    VAR contentsTrainStop = (FromTrainStopToForest, FromTrainStopToBedroom, Birds)
+    VAR contentsTrainStop = (FromTrainStopToForest, FromTrainStopToBedroom, Birds, chaletSmoke)
 
     VAR contentsForest = (LeafOneSin, LeafTwoSin, LeafThreeSin, LeafFourSin, LeafFiveSin, LeafOneDx, LeafTwoDx, LeafThreeDx, FromForestToTrainStop, FromForestToPond, FromForestToLibraryBlocked, Arbustini, FromForestToDumpBlocked)
 
