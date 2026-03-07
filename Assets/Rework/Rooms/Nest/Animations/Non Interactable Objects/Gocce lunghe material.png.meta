@@ -1,0 +1,962 @@
+fileFormatVersion: 2
+guid: ccb2343cc03f0f646aa9ff3ca30423ce
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4391618231071603079
+    second: Gocce lunghe material_0
+  - first:
+      213: 6406705735855689734
+    second: Gocce lunghe material_1
+  - first:
+      213: 6258498723862490798
+    second: Gocce lunghe material_2
+  - first:
+      213: -3257033390213877556
+    second: Gocce lunghe material_3
+  - first:
+      213: 4420146164061805729
+    second: Gocce lunghe material_4
+  - first:
+      213: -8280831672571889893
+    second: Gocce lunghe material_5
+  - first:
+      213: 7796822073670356312
+    second: Gocce lunghe material_6
+  - first:
+      213: -1996001853265220298
+    second: Gocce lunghe material_7
+  - first:
+      213: 7702863982286948950
+    second: Gocce lunghe material_8
+  - first:
+      213: 7586744780512786916
+    second: Gocce lunghe material_9
+  - first:
+      213: -3010768498925586644
+    second: Gocce lunghe material_10
+  - first:
+      213: 727712820459575531
+    second: Gocce lunghe material_11
+  - first:
+      213: 8985866953954542975
+    second: Gocce lunghe material_12
+  - first:
+      213: -6899971536194791602
+    second: Gocce lunghe material_13
+  - first:
+      213: -5625503648908238670
+    second: Gocce lunghe material_14
+  - first:
+      213: 5085202485095909689
+    second: Gocce lunghe material_15
+  - first:
+      213: 3067778610037853641
+    second: Gocce lunghe material_16
+  - first:
+      213: 2324572642850712459
+    second: Gocce lunghe material_17
+  - first:
+      213: 3576789911146169575
+    second: Gocce lunghe material_18
+  - first:
+      213: 4261653872851092613
+    second: Gocce lunghe material_19
+  - first:
+      213: 431623897550586674
+    second: Gocce lunghe material_20
+  - first:
+      213: 2408782188340395864
+    second: Gocce lunghe material_21
+  - first:
+      213: -2896226300063015376
+    second: Gocce lunghe material_22
+  - first:
+      213: 4339209725798065888
+    second: Gocce lunghe material_23
+  - first:
+      213: 5293751879305143894
+    second: Gocce lunghe material_24
+  - first:
+      213: -705515840108714824
+    second: Gocce lunghe material_25
+  - first:
+      213: 1873233493590861115
+    second: Gocce lunghe material_26
+  - first:
+      213: 5392600944240419026
+    second: Gocce lunghe material_27
+  - first:
+      213: -3162657568939904421
+    second: Gocce lunghe material_28
+  - first:
+      213: 3015567218872870442
+    second: Gocce lunghe material_29
+  - first:
+      213: 7742692869259227774
+    second: Gocce lunghe material_30
+  - first:
+      213: 1819851346937486163
+    second: Gocce lunghe material_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Gocce lunghe material_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 51
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97609d39c76dd03c0800000000000000
+      internalID: -4391618231071603079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 600d22e2ce039e850800000000000000
+      internalID: 6406705735855689734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_2
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 51
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eae2f0f2e67aad650800000000000000
+      internalID: 6258498723862490798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_3
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 4
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc037ba5361bcc2d0800000000000000
+      internalID: -3257033390213877556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_4
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 51
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac953c6483875d30800000000000000
+      internalID: 4420146164061805729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_5
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 4
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b177c8fa773941d80800000000000000
+      internalID: -8280831672571889893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_6
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 51
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85dcb0edd50e33c60800000000000000
+      internalID: 7796822073670356312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_7
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 4
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63dea15c3e6cc44e0800000000000000
+      internalID: -1996001853265220298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_8
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 51
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a4d59faf116ea60800000000000000
+      internalID: 7702863982286948950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_9
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 4
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e9730c7e28894960800000000000000
+      internalID: 7586744780512786916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_10
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 51
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c27ba90800a9736d0800000000000000
+      internalID: -3010768498925586644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_11
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 4
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be89df164fa591a00800000000000000
+      internalID: 727712820459575531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_12
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 51
+        width: 7
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f75c16da26634bc70800000000000000
+      internalID: 8985866953954542975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_13
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 4
+        width: 7
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e479dc802706e30a0800000000000000
+      internalID: -6899971536194791602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_14
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 51
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b0292c8c323ee1b0800000000000000
+      internalID: -5625503648908238670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_15
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 4
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9394317b7b4429640800000000000000
+      internalID: 5085202485095909689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_16
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 51
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cd09dc5460f29a20800000000000000
+      internalID: 3067778610037853641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_17
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 4
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8b25b7a08a824020800000000000000
+      internalID: 2324572642850712459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_18
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 51
+        width: 7
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e4811a397f43a130800000000000000
+      internalID: 3576789911146169575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_19
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 4
+        width: 7
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58405fe3e9f642b30800000000000000
+      internalID: 4261653872851092613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_20
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 51
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2338212e5af6df500800000000000000
+      internalID: 431623897550586674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_21
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 4
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85f315553a6bd6120800000000000000
+      internalID: 2408782188340395864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_22
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 51
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03e999366898ec7d0800000000000000
+      internalID: -2896226300063015376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_23
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 4
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e62d186148f73c30800000000000000
+      internalID: 4339209725798065888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_24
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 51
+        width: 7
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6562a07694f277940800000000000000
+      internalID: 5293751879305143894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_25
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 4
+        width: 7
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b4a8e6d4118536f0800000000000000
+      internalID: -705515840108714824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_26
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 51
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b35e8d600ff0ff910800000000000000
+      internalID: 1873233493590861115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_27
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 4
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d0e2e0dcfd56da40800000000000000
+      internalID: 5392600944240419026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_28
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 51
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b52f22192bbfb14d0800000000000000
+      internalID: -3162657568939904421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_29
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 4
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a26ea3d886279d920800000000000000
+      internalID: 3015567218872870442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_30
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 51
+        width: 7
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e72752d5422937b60800000000000000
+      internalID: 7742692869259227774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gocce lunghe material_31
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 4
+        width: 7
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35b99367829614910800000000000000
+      internalID: 1819851346937486163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Gocce lunghe material_0: -4391618231071603079
+      Gocce lunghe material_1: 6406705735855689734
+      Gocce lunghe material_10: -3010768498925586644
+      Gocce lunghe material_11: 727712820459575531
+      Gocce lunghe material_12: 8985866953954542975
+      Gocce lunghe material_13: -6899971536194791602
+      Gocce lunghe material_14: -5625503648908238670
+      Gocce lunghe material_15: 5085202485095909689
+      Gocce lunghe material_16: 3067778610037853641
+      Gocce lunghe material_17: 2324572642850712459
+      Gocce lunghe material_18: 3576789911146169575
+      Gocce lunghe material_19: 4261653872851092613
+      Gocce lunghe material_2: 6258498723862490798
+      Gocce lunghe material_20: 431623897550586674
+      Gocce lunghe material_21: 2408782188340395864
+      Gocce lunghe material_22: -2896226300063015376
+      Gocce lunghe material_23: 4339209725798065888
+      Gocce lunghe material_24: 5293751879305143894
+      Gocce lunghe material_25: -705515840108714824
+      Gocce lunghe material_26: 1873233493590861115
+      Gocce lunghe material_27: 5392600944240419026
+      Gocce lunghe material_28: -3162657568939904421
+      Gocce lunghe material_29: 3015567218872870442
+      Gocce lunghe material_3: -3257033390213877556
+      Gocce lunghe material_30: 7742692869259227774
+      Gocce lunghe material_31: 1819851346937486163
+      Gocce lunghe material_4: 4420146164061805729
+      Gocce lunghe material_5: -8280831672571889893
+      Gocce lunghe material_6: 7796822073670356312
+      Gocce lunghe material_7: -1996001853265220298
+      Gocce lunghe material_8: 7702863982286948950
+      Gocce lunghe material_9: 7586744780512786916
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
