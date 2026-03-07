@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 3399276042036082612}
   - component: {fileID: 8376295703499640512}
   m_Layer: 0
-  m_Name: 21 - Ripple
+  m_Name: 21 - Anim - Ripple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -350,7 +350,7 @@ GameObject:
   - component: {fileID: 4031638497947324398}
   - component: {fileID: 7397501296436190471}
   m_Layer: 0
-  m_Name: 21 - Ripple
+  m_Name: 21 - Anim - Ripple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 8338382158375950967}
   - component: {fileID: 6474765177468097196}
   m_Layer: 0
-  m_Name: 03 - Nube Tre
+  m_Name: 03 - Anim - Nube Tre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -621,7 +621,7 @@ GameObject:
   - component: {fileID: 2407391138573809218}
   - component: {fileID: 1469064762730066231}
   m_Layer: 0
-  m_Name: 01 - Nube Uno
+  m_Name: 01 - Anim - Nube Uno
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -734,7 +734,7 @@ GameObject:
   - component: {fileID: 3388898624401156350}
   - component: {fileID: 3048827756338758257}
   m_Layer: 0
-  m_Name: 01 - Nube Due
+  m_Name: 01 - Anim - Nube Due
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -937,7 +937,7 @@ GameObject:
   - component: {fileID: 5258241827862458853}
   - component: {fileID: 6568977109976282641}
   m_Layer: 0
-  m_Name: 21 - Ripple
+  m_Name: 21 - Anim - Ripple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1509,7 +1509,7 @@ GameObject:
   - component: {fileID: 5074576961310737784}
   - component: {fileID: 6228860689064076577}
   m_Layer: 0
-  m_Name: 21 - Ripple
+  m_Name: 21 - Anim - Ripple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
