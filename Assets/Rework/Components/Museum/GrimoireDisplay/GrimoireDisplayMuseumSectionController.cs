@@ -1,5 +1,8 @@
-﻿using Selania.Rework.Components.Grimoire;
+﻿using System;
+using Selania.Rework.Components.Grimoire;
+using Selania.Rework.Interfaces;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Selania.Rework.Components.Museum.GrimoireDisplay
 {
@@ -58,6 +61,39 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
         public void SetFrancoMission()
         {
             grimoireBackground.SetFrancoMission("Coltiva almeno tre piante nella serra.");
+        }
+
+        public void HideSigil()
+        {
+            grimoireBackground.HideSigil();
+        }
+
+        public void ShowRandomSigil()
+        {
+            var glyphs = (ISettingsSigils.GlyphType[])Enum.GetValues(typeof(ISettingsSigils.GlyphType));
+            var texts = new[]
+            {
+                "Un uso rimasto",
+                "Due usi rimasti",
+                "Tre usi rimasti"
+            };
+
+            ISettingsSigils.GlyphType secondGlyph, thirdGlyph;
+            var firstGlyph = glyphs[Random.Range(0, glyphs.Length)];
+
+            do
+            {
+                secondGlyph = glyphs[Random.Range(0, glyphs.Length)];
+            } while (secondGlyph == firstGlyph);
+
+            do
+            {
+                thirdGlyph = glyphs[Random.Range(0, glyphs.Length)];
+            } while (thirdGlyph == firstGlyph || thirdGlyph == secondGlyph);
+
+            var text = texts[Random.Range(0, texts.Length)];
+
+            grimoireBackground.ShowSigil(firstGlyph, secondGlyph, thirdGlyph, text);
         }
     }
 }

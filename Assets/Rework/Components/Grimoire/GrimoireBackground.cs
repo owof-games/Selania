@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Microsoft.Extensions.Logging;
+using Selania.Rework.Interfaces;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -28,9 +29,26 @@ namespace Selania.Rework.Components.Grimoire
 
         [SerializeField] private TextMeshProUGUI francoText = null!;
 
+        [Tooltip("game object that contains the whole sigil structure and text.")] [SerializeField]
+        private GameObject sigilRoot = null!;
+
+        [Tooltip("image representing the sigil in first position.")] [SerializeField]
+        private Image sigilFirstPosition = null!;
+
+        [Tooltip("image representing the sigil in second position.")] [SerializeField]
+        private Image sigilSecondPosition = null!;
+
+        [Tooltip("image representing the sigil in third position.")] [SerializeField]
+        private Image sigilThirdPosition = null!;
+
+        [Tooltip("Text explaining how many usages are remaining of the sigil.")] [SerializeField]
+        private TextMeshProUGUI sigilUsagesTextMeshPro = null!;
+
         private Animator _animator = null!;
 
         [Inject] internal ILogger<GrimoireBackground> Logger = null!;
+
+        [Inject] internal ISettingsSigils SettingsSigils = null!;
 
         private void Awake()
         {
@@ -130,6 +148,43 @@ namespace Selania.Rework.Components.Grimoire
                 francoImage.enabled = true;
                 francoText.text = $"<font-weight=\"500\">{francoMissionText}</font-weight>";
             }
+        }
+
+        /// <summary>
+        ///     Hide the sigil part of the book.
+        /// </summary>
+        public void HideSigil()
+        {
+            sigilRoot.SetActive(false);
+        }
+
+        /// <summary>
+        ///     Show the sigil part of the book with given settings.
+        /// </summary>
+        /// <param name="firstPositionGlyph">Glyph in first position.</param>
+        /// <param name="secondPositionGlyph">Glyph in second position.</param>
+        /// <param name="thirdPositionGlyph">Glyph in third position.</param>
+        /// <param name="text">Text explaining how many uses are remaining.</param>
+        public void ShowSigil(ISettingsSigils.GlyphType firstPositionGlyph,
+            ISettingsSigils.GlyphType secondPositionGlyph, ISettingsSigils.GlyphType thirdPositionGlyph, string text)
+        {
+            // set the glyphs
+            var glyphTypes = new[] { firstPositionGlyph, secondPositionGlyph, thirdPositionGlyph };
+            var glyphImages = new[] { sigilFirstPosition, sigilSecondPosition, sigilThirdPosition };
+            for (var i = 0; i < 3; i++)
+            {
+                var glyphType = glyphTypes[i];
+                var glyphImage = glyphImages[i];
+                var sprite = SettingsSigils.GetGlyphSprite(glyphType, i);
+                var color = SettingsSigils.GetGlyphColor(glyphType);
+                glyphImage.sprite = sprite;
+                glyphImage.color = color;
+            }
+
+            // set the text
+            sigilUsagesTextMeshPro.text = text;
+            // be sure that this part of the interface is active
+            sigilRoot.SetActive(true);
         }
 
         [Serializable]

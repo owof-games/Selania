@@ -157,6 +157,31 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 7b3ec5938470579439f3dad96a76529a, type: 3}
   <saveDirPrefix>k__BackingField: save_dir_
   minimumTimeBetweenAutomaticSavesInSeconds: 300
+  airGlyphs:
+  - {fileID: 21300000, guid: 8660bf5d2a46db145a551e0a1e4e661b, type: 3}
+  - {fileID: 21300000, guid: 1904ed240a4786540a014ef27fdc402c, type: 3}
+  - {fileID: 21300000, guid: d9dd32dac2fb05a449579b6f766497ae, type: 3}
+  airGlyphColor: {r: 1, g: 0.8509804, b: 0.30980393, a: 1}
+  waterGlyphs:
+  - {fileID: 21300000, guid: 23e22e4fd5c0cee42b77ebc9e191b2d0, type: 3}
+  - {fileID: 21300000, guid: 6c804b1d6ce88404eb388a9e3b1cf3bd, type: 3}
+  - {fileID: 21300000, guid: 28286143ebb106e44b24630fd6d1539b, type: 3}
+  waterGlyphColor: {r: 0.2784314, g: 0.43529412, b: 1, a: 1}
+  earthGlyphs:
+  - {fileID: 21300000, guid: 25acd29ce91b87748a28887d7ee452d5, type: 3}
+  - {fileID: 21300000, guid: fce9f27d8ae01cc4abe6d21eb08d00f0, type: 3}
+  - {fileID: 21300000, guid: f9ce620b77f49ce4ba1d23d3d5da660f, type: 3}
+  earthGlyphColor: {r: 0.31764707, g: 1, b: 0.2784314, a: 1}
+  fireGlyphs:
+  - {fileID: 21300000, guid: 8790554432ee95d4ca486bae93480ef3, type: 3}
+  - {fileID: 21300000, guid: 6c4566c60ff81e94a91fd16b9b644ca7, type: 3}
+  - {fileID: 21300000, guid: 8fe90d4daf7b8c942acdfc93077b6e70, type: 3}
+  fireGlyphColor: {r: 1, g: 0.30588236, b: 0.2784314, a: 1}
+  aetherGlyphs:
+  - {fileID: 21300000, guid: 4a5fe14433dd73b4492d45a8206644e2, type: 3}
+  - {fileID: 21300000, guid: e822e48f9b772be4587128b0ed3fe2ad, type: 3}
+  - {fileID: 21300000, guid: c339a44c6b50dc144975d224cb41691b, type: 3}
+  aetherGlyphColor: {r: 0.84313726, g: 0.2784314, b: 1, a: 1}
   <minimumLogLevel>k__BackingField: 0
   _fileProviderSettings:
     categorySettingsArray: []
