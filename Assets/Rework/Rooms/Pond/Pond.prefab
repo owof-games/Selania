@@ -3763,7 +3763,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4449773367406173467, guid: 006e44085e2d64d41a1da8f234fe75b6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6190357544502295237, guid: 006e44085e2d64d41a1da8f234fe75b6, type: 3}
       propertyPath: m_Sprite
@@ -5548,6 +5548,10 @@ PrefabInstance:
     - target: {fileID: 4449773367406173467, guid: c82814cd41f0b4f4ea5277bd9d1d5e39, type: 3}
       propertyPath: m_Name
       value: 30 - Franco
+      objectReference: {fileID: 0}
+    - target: {fileID: 4449773367406173467, guid: c82814cd41f0b4f4ea5277bd9d1d5e39, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

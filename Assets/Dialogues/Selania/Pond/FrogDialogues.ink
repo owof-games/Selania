@@ -6,7 +6,7 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-+ {are_two_entities_together(Franco, PG) or (debug_testFrog == true)} [Franco]
++ {are_two_entities_together(Franco, PG)} [Franco]
     
     //Aggiorniamo il discorso missioni
     -> discovered_things_updater ->

@@ -36,6 +36,7 @@
             ~ debug_testNest = true
             ~ debug_testDump = true
             ~ debug_testGreenhouse = true
+            ~ debug_testFrog = true
         
 }
 
@@ -50,12 +51,14 @@
     - debug_testKitchen == true && (entity_location(FromPondToKitchen) == Safekeeping):
         ~ move_entity(FromPondToKitchenBlocked, Safekeeping)
         ~ move_entity(FromPondToKitchen, Pond)
+        ~ move_entity(kitchenOpened, Bedroom)
         ~ player_accessiblePlaces += Kitchen
 }
 {
     - debug_testLibrary == true && (entity_location(FromForestToLibrary) == Safekeeping):
         ~ move_entity(FromForestToLibraryBlocked, Safekeeping)
         ~ move_entity(FromForestToLibrary, Forest)
+        ~ move_entity(libraryOpened, Bedroom)
         ~ player_accessiblePlaces += Library
 } 
 {
@@ -68,10 +71,17 @@
     - debug_testGreenhouse == true && (entity_location(FromPondToGreenhouse) == Safekeeping):
         ~ move_entity(FromPondToGreenhouseBlocked, Safekeeping)
         ~ move_entity(FromPondToGreenhouse, Pond)
+        ~ move_entity(greenhouseOpened, Bedroom)
         ~ player_accessiblePlaces += Greenhouse
 }
 {
     - debug_testFrog == true && (entity_location(Franco) == Safekeeping):
         ~ move_entity(Franco, Pond)
 }      
+
+//Spostiamo anche il letto in camera
+~ move_entity(BedClosingGame, Bedroom)
+
 ->->
+
+
