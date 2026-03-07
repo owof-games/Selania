@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: bcc43ff6926562648a911bbb837990f4
+guid: 939419a00b9b8954885fe786e6323ae7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1135967757440279161
-    second: 22 - Animazione - Nubi_0
-  - first:
-      213: 2363502312197440127
-    second: 22 - Animazione - Nubi_1
-  - first:
-      213: 187983257342766163
-    second: 22 - Animazione - Nubi_2
+      213: -9114057942438144643
+    second: Nube chiara due_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -90,6 +84,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -119,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 22 - Animazione - Nubi_0
+      name: Nube chiara due_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 288
-        height: 149
+        x: 16
+        y: 9
+        width: 376
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,52 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 78d997dd75b3c30f0800000000000000
-      internalID: -1135967757440279161
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 22 - Animazione - Nubi_1
-      rect:
-        serializedVersion: 2
-        x: 508
-        y: 26
-        width: 350
-        height: 87
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f72c750a4d8dcc020800000000000000
-      internalID: 2363502312197440127
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 22 - Animazione - Nubi_2
-      rect:
-        serializedVersion: 2
-        x: 1081
-        y: 60
-        width: 77
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 35ce2adc6c9db9200800000000000000
-      internalID: 187983257342766163
+      spriteID: d7595a6f69c548180800000000000000
+      internalID: -9114057942438144643
       vertices: []
       indices: 
       edges: []
@@ -198,9 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      22 - Animazione - Nubi_0: -1135967757440279161
-      22 - Animazione - Nubi_1: 2363502312197440127
-      22 - Animazione - Nubi_2: 187983257342766163
+      Nube chiara due_0: -9114057942438144643
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
