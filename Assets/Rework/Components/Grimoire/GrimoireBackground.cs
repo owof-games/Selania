@@ -64,6 +64,9 @@ namespace Selania.Rework.Components.Grimoire
         private void Start()
         {
             DisableAllLeftButtons();
+            // activate both at the beginning to trigger all components' "Start"
+            readerModeAchievementsContainer.SetActive(true);
+            gamerModeAchievementsContainer.SetActive(true);
         }
 
         /// <summary>
@@ -127,26 +130,14 @@ namespace Selania.Rework.Components.Grimoire
             readerModeAchievementsContainer.SetActive(!gamerMode);
         }
 
-        public void SetGamerModeAchievementStatus(string achievementName, int current, int max)
+        public void SetAchievementStatus(string achievementName, int current, int max)
         {
-            var achievement =
-                gamerModeAchievements.FirstOrDefault(achievement => achievement.achievementName == achievementName);
+            var achievement = gamerModeAchievements
+                .Concat(readerModeAchievements)
+                .FirstOrDefault(achievement => achievement.achievementName == achievementName);
             if (achievement == null)
             {
-                Logger.ZLogWarning($"Could not find gamer mode achievement with name {achievementName}");
-                return;
-            }
-
-            achievement.SetAchievementStatus(current, max);
-        }
-
-        public void SetReaderModeAchievementStatus(string achievementName, int current, int max)
-        {
-            var achievement =
-                readerModeAchievements.FirstOrDefault(achievement => achievement.achievementName == achievementName);
-            if (achievement == null)
-            {
-                Logger.ZLogWarning($"Could not find reader mode achievement with name {achievementName}");
+                Logger.ZLogWarning($"Could not find achievement with name {achievementName}");
                 return;
             }
 

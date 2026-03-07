@@ -51,7 +51,7 @@ namespace Selania.Rework.Editor
                     // only take into consideration objects that are not prefabs with their lifetime scope on their
                     // own
                     var gameObject = component.gameObject;
-                    var prefabRoot = PrefabUtility.GetNearestPrefabInstanceRoot(gameObject);
+                    var prefabRoot = PrefabUtility.GetOutermostPrefabInstanceRoot(gameObject);
                     if (prefabRoot != null)
                         if (prefabRoot.GetComponentInChildren<LifetimeScope>() != null)
                         {

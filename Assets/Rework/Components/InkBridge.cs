@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Enumeration;
 using System.Linq;
+using Alchemy.Inspector;
 using Cysharp.Threading.Tasks;
 using Ink.Runtime;
 using Microsoft.Extensions.Logging;
@@ -20,7 +21,7 @@ namespace Selania.Rework.Components
     /// </summary>
     [CreateAssetMenu(fileName = "InkBridge", menuName = "Selania/Create Ink Bridge", order = 0)]
     public class InkBridge : ScriptableObjectSetupSupport, IStoryChangeRoomNotifier, IStoryChoicesSelector,
-        IStoryLinear, IStoryChangeRoomContentsNotifier, IStoryStateSerializer, IStoryAudioSupport
+        IStoryLinear, IStoryChangeRoomContentsNotifier, IStoryStateSerializer, IStoryAudioSupport, IStoryGrimoire
     {
         [Header("Ink Settings")] [SerializeField] [Tooltip("The JSON asset containing the story.")]
         private TextAsset? inkAssetJson;
@@ -160,6 +161,7 @@ namespace Selania.Rework.Components
             SetupLinearProgression();
             SetupChoices();
             SetupAudio();
+            SetupGrimoire();
         }
 
         /// <inheritdoc />
@@ -169,6 +171,7 @@ namespace Selania.Rework.Components
             CleanupLinearProgression();
             CleanupChoices();
             CleanupAudio();
+            CleanupGrimoire();
         }
 
         #region room location / contents
@@ -430,6 +433,10 @@ namespace Selania.Rework.Components
             {
                 // special handling: @animation are no longer used, skip them
                 actionsAfterUpdate.@continue = true;
+            }
+            else if (currentText.StartsWith("@grimoire"))
+            {
+                UpdateCurrentTextGrimoire(currentText, tags);
             }
             else
             {
@@ -806,6 +813,236 @@ namespace Selania.Rework.Components
         {
             var tag = tags.FirstOrDefault(tag => tag.category == category);
             if (tag is { value: not null }) subject.OnNext(tag.value);
+        }
+
+        #endregion
+
+        #region grimoire
+
+        [Title("Grimoire")]
+        [Tooltip("Name of the Ink node to jump to when getting in the grimoire flow.")]
+        [SerializeField]
+        private string grimoireInkNodeName = "grimoire";
+
+        [Tooltip("Name of the tag used to mark one of the left buttons as available.")] [SerializeField]
+        private string leftButtonTagName = "leftButton";
+
+        [Tooltip("Name of the tag used to mark an achievement.")] [SerializeField]
+        private string achievementTagName = "achievement";
+
+        [Tooltip("Name of the tag used for Franco's mission.")] [SerializeField]
+        private string francoTagName = "franco";
+
+        [Tooltip("Name of the variable containing the current sigil.")] [SerializeField]
+        private string currentSigilVariableName = "glyph_actualActiveSigil";
+
+        [Tooltip("Name of the variable containing the number of usages.")] [SerializeField]
+        private string numSigilUsagesVariableName = "glyph_actualSigilUses";
+
+        [Tooltip(
+            "Name of the variables containing the sigils that have fire in, respectively, first, second, and third position.")]
+        [SerializeField]
+        private string[] fireSigilListsByPosition =
+        {
+            "glyph_firstFire", "glyph_secondFire", "glyph_thirdFire"
+        };
+
+        [Tooltip(
+            "Name of the variables containing the sigils that have water in, respectively, first, second, and third position.")]
+        [SerializeField]
+        private string[] waterSigilListsByPosition =
+        {
+            "glyph_firstWater", "glyph_secondWater", "glyph_thirdWater"
+        };
+
+        [Tooltip(
+            "Name of the variables containing the sigils that have earth in, respectively, first, second, and third position.")]
+        [SerializeField]
+        private string[] earthSigilListsByPosition =
+        {
+            "glyph_firstEarth", "glyph_secondEarth", "glyph_thirdEarth"
+        };
+
+        [Tooltip(
+            "Name of the variables containing the sigils that have air in, respectively, first, second, and third position.")]
+        [SerializeField]
+        private string[] airSigilListsByPosition =
+        {
+            "glyph_firstAir", "glyph_secondAir", "glyph_thirdAir"
+        };
+
+        [Tooltip(
+            "Name of the variables containing the sigils that have aether in, respectively, first, second, and third position.")]
+        [SerializeField]
+        private string[] aetherSigilListsByPosition =
+        {
+            "glyph_firstAether", "glyph_secondAether", "glyph_thirdAether"
+        };
+
+        // will be localized
+        [SerializeField] private string oneUsageText = "Un uso rimanente.";
+        [SerializeField] private string twoUsagesText = "Due usi rimanenti.";
+        [SerializeField] private string threeUsagesText = "Tre usi rimanenti.";
+
+        /// <summary>
+        ///     The subject used to produce info about the first level navigation.
+        /// </summary>
+        private Subject<IStoryGrimoire.FirstLevelGrimoirePageDescriptor>? _firstLevelGrimoirePageDescriptorsSubject;
+
+        /// <inheritdoc />
+        public Observable<IStoryGrimoire.FirstLevelGrimoirePageDescriptor> firstLevelGrimoirePageDescriptors =>
+            _firstLevelGrimoirePageDescriptorsSubject?.AsObservable() ??
+            throw new InvalidOperationException(
+                "Cannot get the first level grimoire page descriptors before initialization");
+
+        private void SetupGrimoire()
+        {
+            _firstLevelGrimoirePageDescriptorsSubject = new Subject<IStoryGrimoire.FirstLevelGrimoirePageDescriptor>();
+        }
+
+        private void CleanupGrimoire()
+        {
+            _firstLevelGrimoirePageDescriptorsSubject?.Dispose();
+        }
+
+        public void SwitchToGrimoire()
+        {
+            var story = GetStory();
+            story.SwitchFlow("Grimoire");
+            story.ChoosePathString(grimoireInkNodeName);
+            Continue();
+        }
+
+        public void SwitchFromGrimoire()
+        {
+            var story = GetStory();
+            story.SwitchToDefaultFlow();
+        }
+
+        /// <summary>
+        ///     Method called by all the "@grimoire..." tags
+        /// </summary>
+        /// <param name="currentText"></param>
+        /// <param name="tags"></param>
+        /// <exception cref="NotImplementedException"></exception>
+        private void UpdateCurrentTextGrimoire(string currentText, ICollection<Tag> tags)
+        {
+            switch (currentText)
+            {
+                case "@grimoire1":
+                    UpdateCurrentTextGrimoireFirstLevel(tags);
+                    break;
+                default:
+                    logger.ZLogWarning($"Unknown grimoire tag {currentText}");
+                    break;
+            }
+        }
+
+        private void UpdateCurrentTextGrimoireFirstLevel(ICollection<Tag> tags)
+        {
+            // extract enabled left buttons from tags
+            var enabledLeftButtonNames = from tag in tags where tag.category == leftButtonTagName select tag.value;
+
+            // extract achievements from tags
+            var achievements = new List<IStoryGrimoire.AchievementDescriptor>();
+            foreach (var tag in tags.Where(tag => tag.category == achievementTagName))
+            {
+                if (tag.value == null)
+                {
+                    logger.ZLogWarning($"Found an achievement tag without arguments");
+                    continue;
+                }
+
+                var parts = tag.value.Split(':');
+                if (parts.Length != 3)
+                    logger.ZLogWarning(
+                        $"Achievement tags should have three parts (achievementName:currentValue:maxValue), but this one did not: '{tag.value}'");
+
+                if (!int.TryParse(parts[1], out var amount))
+                    logger.ZLogWarning(
+                        $"Achievement value's second part should be the current value, an integer, but '{parts[1]}' was not.");
+
+                if (!int.TryParse(parts[2], out var max))
+                    logger.ZLogWarning(
+                        $"Achievement value's third part should be the max value, an integer, but '{parts[2]}' was not.");
+
+                achievements.Add(new IStoryGrimoire.AchievementDescriptor(parts[0], amount, max));
+            }
+
+            // extract Franco's mission from tags
+            var francoMission = tags.FirstOrDefault(tag => tag.category == francoTagName)?.value ?? "";
+
+            // extract current sigil from variables
+            IStoryGrimoire.SigilDescriptor? sigilDescriptor = null;
+            var story = GetStory();
+            var currentSigil = (InkList)story.variablesState[currentSigilVariableName];
+            if (currentSigil.Count > 1)
+                logger.ZLogWarning(
+                    $"Ink variable {currentSigilVariableName} should have at most one value, but it has {currentSigil.Count}: {currentSigil}");
+
+            if (currentSigil.Count >= 1)
+            {
+                var sigilName = currentSigil.Keys.First().itemName;
+                var glyphs = new ISettingsSigils.GlyphType[3];
+                for (var i = 0; i < 3; i++)
+                {
+                    if (HasValueInCurrentPosition(fireSigilListsByPosition))
+                    {
+                        glyphs[i] = ISettingsSigils.GlyphType.Fire;
+                        continue;
+                    }
+
+                    if (HasValueInCurrentPosition(airSigilListsByPosition))
+                    {
+                        glyphs[i] = ISettingsSigils.GlyphType.Air;
+                        continue;
+                    }
+
+                    if (HasValueInCurrentPosition(waterSigilListsByPosition))
+                    {
+                        glyphs[i] = ISettingsSigils.GlyphType.Water;
+                        continue;
+                    }
+
+                    if (HasValueInCurrentPosition(earthSigilListsByPosition))
+                    {
+                        glyphs[i] = ISettingsSigils.GlyphType.Earth;
+                        continue;
+                    }
+
+                    if (HasValueInCurrentPosition(aetherSigilListsByPosition))
+                    {
+                        glyphs[i] = ISettingsSigils.GlyphType.Aether;
+                        continue;
+                    }
+
+                    logger.ZLogError(
+                        $"Could not find glyph {sigilName} in any of the sigils list, defaulting to 'fire'.");
+                    glyphs[i] = ISettingsSigils.GlyphType.Fire;
+
+                    continue;
+
+                    bool HasValueInCurrentPosition(string[] variableNames)
+                    {
+                        return ((InkList)story.variablesState[variableNames[i]]).ContainsItemNamed(sigilName);
+                    }
+                }
+
+                var numUsages = (int)story.variablesState[numSigilUsagesVariableName];
+                if (numUsages is < 0 or > 2)
+                    logger.ZLogError(
+                        $"Number of usages found in variable {numSigilUsagesVariableName} is {numUsages}, whereas it should be 0, 1 or 2.");
+
+                sigilDescriptor = new IStoryGrimoire.SigilDescriptor(glyphs[0], glyphs[1], glyphs[2],
+                    numUsages == 0 ? threeUsagesText :
+                    numUsages == 1 ? twoUsagesText :
+                    oneUsageText
+                );
+            }
+
+            // emit the signal
+            _firstLevelGrimoirePageDescriptorsSubject!.OnNext(new IStoryGrimoire.FirstLevelGrimoirePageDescriptor(
+                false, enabledLeftButtonNames, achievements, francoMission, sigilDescriptor));
         }
 
         #endregion

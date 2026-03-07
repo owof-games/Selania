@@ -744,7 +744,12 @@ MonoBehaviour:
       che lo stato venga salvato)."
   - prefab: {fileID: 5900152936520379775, guid: 1bece8f9290f304468d43869c8083c20, type: 3}
     title: Grimoire (display)
-    description: Elenco delle azioni possibili e visualizzazioni possibil sul grimorio.
+    description: Elenco delle azioni possibili e visualizzazioni possibil sul primo
+      livello del grimorio.
+  - prefab: {fileID: 5900152936520379775, guid: 085fffd4d0a50bb4e872a9821ca61f35, type: 3}
+    title: Grimoire (story)
+    description: Visualizzazione del grimorio comandato dalla storia Ink. Vedi Museum/GrimoireStory/GrimoireStoryInk.ink
+      per vedere la struttura della storia Ink che controlla questa sezione del museo
 --- !u!4 &1073972271
 Transform:
   m_ObjectHideFlags: 0

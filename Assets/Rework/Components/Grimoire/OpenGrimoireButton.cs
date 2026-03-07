@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
+using R3;
+using Selania.Rework.Interfaces;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -17,38 +19,51 @@ namespace Selania.Rework.Components.Grimoire
 
         [Inject] internal ILogger<OpenGrimoireButton> Logger = null!;
 
+        [Inject] internal IStoryGrimoire StoryGrimoire = null!;
+
         private void Start()
         {
             _animator = GetComponent<Animator>();
             _button = GetComponent<Button>();
 
-            _button.onClick.AddListener(OnClick);
-        }
+            // when the button is clicked, disable it and ask to switch to the grimoire
+            _button.OnClickAsObservable().Subscribe(_ =>
+            {
+                Logger.ZLogInformation($"Open grimoire button clicked.");
+                if (_button != null) _button.interactable = false;
+                StoryGrimoire.SwitchToGrimoire();
+            }).AddTo(this);
 
-        private void OnDestroy()
-        {
-            _button?.onClick.RemoveListener(OnClick);
+            StoryGrimoire.firstLevelGrimoirePageDescriptors.Subscribe(OnFirstLevelGrimoirePageDescriptors).AddTo(this);
         }
 
         public void OnPointerEnter(PointerEventData eventData)
         {
+            // start animation when the pointer enters 
             Logger.ZLogTrace($"Pointer entering grimoire button.");
             _animator?.SetBool(Hovered, _button?.interactable ?? false);
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
+            // stop animation when the pointer exits
             Logger.ZLogTrace($"Pointer exiting grimoire button.");
             _animator?.SetBool(Hovered, false);
         }
 
-        private void OnClick()
+        /// <summary>
+        ///     Method invoked when the first level page of the grimoire is displayed.
+        /// </summary>
+        /// <param name="descriptor">Descriptor of the page.</param>
+        private void OnFirstLevelGrimoirePageDescriptors(IStoryGrimoire.FirstLevelGrimoirePageDescriptor descriptor)
         {
-            Logger.ZLogInformation($"Open grimoire button clicked.");
-            if (_button != null) _button.interactable = false;
             _animator?.SetBool(Disabled, true);
         }
 
+        /// <summary>
+        ///     Callback method invoked when the grimoire closes.
+        /// </summary>
+        /// <seealso cref="Grimoire.OnGrimoireCloseButtonClick" />
         public void OnGrimoireCloseButtonClick()
         {
             Logger.ZLogInformation($"Re-enable grimoire button.");
