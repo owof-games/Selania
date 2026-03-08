@@ -4983,7 +4983,7 @@ GameObject:
   - component: {fileID: 271878500295447702}
   - component: {fileID: 2216564845838527818}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: 01 - Particle System - chaletSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4998,8 +4998,8 @@ Transform:
   m_GameObject: {fileID: 779654203133478751}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7009807, y: 0.09287693, z: -0.11926856, w: 0.6969756}
-  m_LocalPosition: {x: -754, y: 305, z: 0}
-  m_LocalScale: {x: 30, y: 30, z: 30}
+  m_LocalPosition: {x: -752.6, y: 301.8, z: 0.1}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4033213190699239440}
@@ -5087,7 +5087,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 20
+      scalar: 30
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5140,7 +5140,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.6
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5258,7 +5258,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5841,7 +5841,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.3
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -5958,7 +5958,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0.0068807337
-          value: 0.18461417
+          value: 0.21538351
           inSlope: 2.3756516
           outSlope: 2.3756516
           tangentMode: 0
@@ -9774,7 +9774,7 @@ ParticleSystemRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
