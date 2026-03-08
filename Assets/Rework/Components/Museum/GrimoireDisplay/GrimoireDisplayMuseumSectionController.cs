@@ -102,5 +102,25 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
 
             grimoireBackground.ShowSigil(firstGlyph, secondGlyph, thirdGlyph, text);
         }
+
+        public void ShowFirstLevelBookmarks()
+        {
+            grimoireBackground.ShowBookmarks(false, null, null, null);
+        }
+
+        public void ShowSecondLevelBookmarks()
+        {
+            grimoireBackground.ShowBookmarks(true, null, null, null);
+        }
+
+        public void ShowThirdLevelBookmarks()
+        {
+            grimoireBackground.ShowBookmarks(true, "Riccio", "Chitarra", "Birra");
+        }
+
+        public void ShowRewritingBookmarks()
+        {
+            grimoireBackground.ShowBookmarks(false, "Piante", "Olobino", "???");
+        }
     }
 }

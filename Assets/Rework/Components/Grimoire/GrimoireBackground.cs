@@ -21,6 +21,18 @@ namespace Selania.Rework.Components.Grimoire
         [Tooltip("Invoked when the grimoire is asked to close.")] [SerializeField]
         private UnityEvent close = new();
 
+        [Tooltip("Invoked when the index button has been clicked")] [SerializeField]
+        private UnityEvent goToIndex = new();
+
+        [Tooltip("Invoked when the button to go back to level two has been clicked")] [SerializeField]
+        private UnityEvent goBackToLevelTwo = new();
+
+        [Tooltip("Invoked when the 'previous' button has been clicked")] [SerializeField]
+        private UnityEvent goPrevious = new();
+
+        [Tooltip("Invoked when the 'next' button has been clicked")] [SerializeField]
+        private UnityEvent goNext = new();
+
         [SerializeField] private GameObject loadButtonContainer = null!;
 
         [SerializeField] private GameObject gamerModeAchievementsContainer = null!;
@@ -50,7 +62,23 @@ namespace Selania.Rework.Components.Grimoire
         [Tooltip("Text explaining how many usages are remaining of the sigil.")] [SerializeField]
         private TextMeshProUGUI sigilUsagesTextMeshPro = null!;
 
+        [SerializeField] [Tooltip("Game object containing the button for the index bookmark.")]
+        private GameObject indexBookmarkButton = null!;
+
+        [SerializeField] [Tooltip("Game object containing the button for the 'back to level two' bookmark.")]
+        private GameObject backToLevelTwoBookmarkButton = null!;
+
+        [SerializeField] [Tooltip("Game object containing the button for the 'previous page' bookmark.")]
+        private GameObject previousPageBookmarkButton = null!;
+
+        [SerializeField] [Tooltip("Game object containing the button for the 'next page' bookmark.")]
+        private GameObject nextPageBookmarkButton = null!;
+
         private Animator _animator = null!;
+
+        private TextMeshProUGUI _backToLevelTwoTextMeshPro = null!;
+        private TextMeshProUGUI _nextPageTextMeshPro = null!;
+        private TextMeshProUGUI _previousPageTextMeshPro = null!;
 
         [Inject] internal ILogger<GrimoireBackground> Logger = null!;
 
@@ -63,10 +91,14 @@ namespace Selania.Rework.Components.Grimoire
 
         private void Start()
         {
+            // turn off all left buttons at startup
             DisableAllLeftButtons();
-            // activate both at the beginning to trigger all components' "Start"
+            // activate both achievement contains at the beginning to trigger all components' "Start"
             readerModeAchievementsContainer.SetActive(true);
             gamerModeAchievementsContainer.SetActive(true);
+            // turn off all bookmarks at startup
+            SetUpBookmarks();
+            ShowBookmarks(false, null, null, null);
         }
 
         /// <summary>
@@ -197,6 +229,61 @@ namespace Selania.Rework.Components.Grimoire
             sigilUsagesTextMeshPro.text = $"<font-weight=\"500\">{text}</font-weight>";
             // be sure that this part of the interface is active
             sigilRoot.SetActive(true);
+        }
+
+        private void SetUpBookmarks()
+        {
+            _backToLevelTwoTextMeshPro = backToLevelTwoBookmarkButton.GetComponentInChildren<TextMeshProUGUI>();
+            _previousPageTextMeshPro = previousPageBookmarkButton.GetComponentInChildren<TextMeshProUGUI>();
+            _nextPageTextMeshPro = nextPageBookmarkButton.GetComponentInChildren<TextMeshProUGUI>();
+        }
+
+        /// <summary>
+        ///     Set up the bookmarks in the grimoire. The 'close' bookmark is always active.
+        /// </summary>
+        /// <param name="hasIndex">Whether the 'index' bookmark is active (it's <c>false</c> during rewriting).</param>
+        /// <param name="backToLevelTwoText">
+        ///     Text for the 'back to level two' button, if not <c>null</c>, otherwise the bookmark is
+        ///     hidden.
+        /// </param>
+        /// <param name="previousPageText">
+        ///     Text for the 'previous page' button, if not <c>null</c>, otherwise the bookmark is
+        ///     hidden.
+        /// </param>
+        /// <param name="nextPageText">Text for the 'next page' button, if not <c>null</c>, otherwise the bookmark is hidden.</param>
+        public void ShowBookmarks(bool hasIndex, string? backToLevelTwoText, string? previousPageText,
+            string? nextPageText)
+        {
+            indexBookmarkButton.SetActive(hasIndex);
+
+            _backToLevelTwoTextMeshPro.text = backToLevelTwoText ?? "";
+            backToLevelTwoBookmarkButton.SetActive(backToLevelTwoText != null);
+
+            _previousPageTextMeshPro.text = previousPageText ?? "";
+            previousPageBookmarkButton.SetActive(previousPageText != null);
+
+            _nextPageTextMeshPro.text = nextPageText ?? "";
+            nextPageBookmarkButton.SetActive(nextPageText != null);
+        }
+
+        public void OnIndexBookmarkButtonClick()
+        {
+            goToIndex.Invoke();
+        }
+
+        public void OnBackToLevelTwoButtonClick()
+        {
+            goBackToLevelTwo.Invoke();
+        }
+
+        public void OnPreviousPageButtonClick()
+        {
+            goPrevious.Invoke();
+        }
+
+        public void OnNextPageButtonClick()
+        {
+            goNext.Invoke();
         }
 
         [Serializable]
