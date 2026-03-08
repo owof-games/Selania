@@ -20,9 +20,11 @@
     INCLUDE Code\NestDialogue.ink
     INCLUDE Code\TextFunctions.ink
     INCLUDE Code\Notifications.ink
-    INCLUDE Code\Settings.ink
- 
-   
+  
+    INCLUDE GamerModeMaterial\Settings.ink
+    INCLUDE GamerModeMaterial\Carla\TutorialManagement.ink
+    INCLUDE GamerModeMaterial\Carla\TutorialStorylets.ink
+    INCLUDE GamerModeMaterial\Carla\Carla.ink
 
 //File dedicati alla gestione delle personagge
     INCLUDE CommonPNGElements\ScheduleFunctions.ink
@@ -64,9 +66,6 @@
     INCLUDE Characters\Witch\WitchStoryletsManagement.ink
     INCLUDE Characters\Witch\WitchStorylets.ink
     
-    INCLUDE Characters\Carla\TutorialManagement.ink
-    INCLUDE Characters\Carla\TutorialStorylets.ink
-    INCLUDE Characters\Carla\Carla.ink
     
     INCLUDE Characters\FirstChar\FirstCharDialogueManager.ink
     INCLUDE Characters\FirstChar\FirstChar.ink
