@@ -95,34 +95,427 @@
         }
       ],
       "grimoire": [
-        "^@grimoire1 ",
-        "#",
-        "^leftButton:FirstCharacter ",
-        "/#",
-        "#",
-        "^leftButton:Moon ",
-        "/#",
-        "#",
-        "^leftButton:Greenhouse ",
-        "/#",
-        "#",
-        "^leftButton:Rules ",
-        "/#",
-        "#",
-        "^leftButton:Lore ",
-        "/#",
-        "#",
-        "^achievement:FirstAchievementRM:3:5 ",
-        "/#",
-        "#",
-        "^achievement:SecondAchievementRM:0:5 ",
-        "/#",
-        "#",
-        "^achievement:ThirdAchievementRM:5:5",
-        "/#",
-        "\n",
-        "done",
+        "ev",
         {
+          "VAR?": "loop"
+        },
+        1,
+        "+",
+        {
+          "VAR=": "loop",
+          "re": true
+        },
+        "/ev",
+        "ev",
+        {
+          "VAR?": "loop"
+        },
+        4,
+        ">",
+        "/ev",
+        [
+          {
+            "->": ".^.b",
+            "c": true
+          },
+          {
+            "b": [
+              "\n",
+              "ev",
+              1,
+              "/ev",
+              {
+                "VAR=": "loop",
+                "re": true
+              },
+              {
+                "->": ".^.^.^.12"
+              },
+              null
+            ]
+          }
+        ],
+        "nop",
+        "\n",
+        "ev",
+        {
+          "VAR?": "loop"
+        },
+        "/ev",
+        [
+          "du",
+          "ev",
+          1,
+          "==",
+          "/ev",
+          {
+            "->": ".^.b",
+            "c": true
+          },
+          {
+            "b": [
+              "pop",
+              "\n",
+              "^@grimoire1 ",
+              "#",
+              "^leftButton:FirstCharacter ",
+              "/#",
+              "#",
+              "^leftButton:Moon ",
+              "/#",
+              "#",
+              "^leftButton:Greenhouse ",
+              "/#",
+              "#",
+              "^leftButton:Rules ",
+              "/#",
+              "#",
+              "^leftButton:Lore ",
+              "/#",
+              "#",
+              "^achievement:FirstAchievementRM:3:5 ",
+              "/#",
+              "#",
+              "^achievement:SecondAchievementRM:0:5 ",
+              "/#",
+              "#",
+              "^achievement:ThirdAchievementRM:5:5",
+              "/#",
+              "\n",
+              {
+                "->": ".^.^.^.end"
+              },
+              {
+                "->": ".^.^.^.22"
+              },
+              null
+            ]
+          }
+        ],
+        [
+          "du",
+          "ev",
+          2,
+          "==",
+          "/ev",
+          {
+            "->": ".^.b",
+            "c": true
+          },
+          {
+            "b": [
+              "pop",
+              "\n",
+              "^@grimoire1 ",
+              "#",
+              "^leftButton:FirstCharacter ",
+              "/#",
+              "#",
+              "^leftButton:Moon ",
+              "/#",
+              "#",
+              "^leftButton:Greenhouse ",
+              "/#",
+              "#",
+              "^leftButton:Rules ",
+              "/#",
+              "#",
+              "^leftButton:Lore ",
+              "/#",
+              "#",
+              "^achievement:FirstAchievementRM:3:5 ",
+              "/#",
+              "#",
+              "^achievement:SecondAchievementRM:0:5 ",
+              "/#",
+              "#",
+              "^achievement:ThirdAchievementRM:5:5",
+              "/#",
+              "\n",
+              "ev",
+              "str",
+              "^Index ",
+              "#",
+              "^bookmark:index",
+              "/#",
+              "/str",
+              "/ev",
+              {
+                "*": ".^.c-0",
+                "flg": 4
+              },
+              {
+                "->": ".^.^.^.22"
+              },
+              {
+                "c-0": [
+                  "\n",
+                  {
+                    "->": "grimoire.end"
+                  },
+                  {
+                    "#f": 5
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          "du",
+          "ev",
+          3,
+          "==",
+          "/ev",
+          {
+            "->": ".^.b",
+            "c": true
+          },
+          {
+            "b": [
+              "pop",
+              "\n",
+              "^@grimoire1 ",
+              "#",
+              "^leftButton:FirstCharacter ",
+              "/#",
+              "#",
+              "^leftButton:Moon ",
+              "/#",
+              "#",
+              "^leftButton:Greenhouse ",
+              "/#",
+              "#",
+              "^leftButton:Rules ",
+              "/#",
+              "#",
+              "^leftButton:Lore ",
+              "/#",
+              "#",
+              "^achievement:FirstAchievementRM:3:5 ",
+              "/#",
+              "#",
+              "^achievement:SecondAchievementRM:0:5 ",
+              "/#",
+              "#",
+              "^achievement:ThirdAchievementRM:5:5",
+              "/#",
+              "\n",
+              "ev",
+              "str",
+              "^Index ",
+              "#",
+              "^bookmark:index",
+              "/#",
+              "/str",
+              "/ev",
+              {
+                "*": ".^.c-0",
+                "flg": 4
+              },
+              "ev",
+              "str",
+              "^Piante ",
+              "#",
+              "^bookmark:secondLevel",
+              "/#",
+              "/str",
+              "/ev",
+              {
+                "*": ".^.c-1",
+                "flg": 4
+              },
+              "ev",
+              "str",
+              "^Olobino ",
+              "#",
+              "^bookmark:back",
+              "/#",
+              "/str",
+              "/ev",
+              {
+                "*": ".^.c-2",
+                "flg": 4
+              },
+              "ev",
+              "str",
+              "^??? ",
+              "#",
+              "^bookmark:forward",
+              "/#",
+              "/str",
+              "/ev",
+              {
+                "*": ".^.c-3",
+                "flg": 4
+              },
+              {
+                "->": ".^.^.^.22"
+              },
+              {
+                "c-0": [
+                  "\n",
+                  {
+                    "->": "grimoire.end"
+                  },
+                  {
+                    "#f": 5
+                  }
+                ],
+                "c-1": [
+                  "\n",
+                  {
+                    "->": "grimoire.end"
+                  },
+                  {
+                    "#f": 5
+                  }
+                ],
+                "c-2": [
+                  "\n",
+                  {
+                    "->": "grimoire.end"
+                  },
+                  {
+                    "#f": 5
+                  }
+                ],
+                "c-3": [
+                  "\n",
+                  {
+                    "->": "grimoire.end"
+                  },
+                  {
+                    "#f": 5
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          "du",
+          "ev",
+          4,
+          "==",
+          "/ev",
+          {
+            "->": ".^.b",
+            "c": true
+          },
+          {
+            "b": [
+              "pop",
+              "\n",
+              "^@grimoire1 ",
+              "#",
+              "^leftButton:FirstCharacter ",
+              "/#",
+              "#",
+              "^leftButton:Moon ",
+              "/#",
+              "#",
+              "^leftButton:Greenhouse ",
+              "/#",
+              "#",
+              "^leftButton:Rules ",
+              "/#",
+              "#",
+              "^leftButton:Lore ",
+              "/#",
+              "#",
+              "^achievement:FirstAchievementRM:3:5 ",
+              "/#",
+              "#",
+              "^achievement:SecondAchievementRM:0:5 ",
+              "/#",
+              "#",
+              "^achievement:ThirdAchievementRM:5:5",
+              "/#",
+              "\n",
+              "ev",
+              "str",
+              "^Piante ",
+              "#",
+              "^bookmark:secondLevel",
+              "/#",
+              "/str",
+              "/ev",
+              {
+                "*": ".^.c-0",
+                "flg": 4
+              },
+              "ev",
+              "str",
+              "^Olobino ",
+              "#",
+              "^bookmark:back",
+              "/#",
+              "/str",
+              "/ev",
+              {
+                "*": ".^.c-1",
+                "flg": 4
+              },
+              "ev",
+              "str",
+              "^??? ",
+              "#",
+              "^bookmark:forward",
+              "/#",
+              "/str",
+              "/ev",
+              {
+                "*": ".^.c-2",
+                "flg": 4
+              },
+              {
+                "->": ".^.^.^.22"
+              },
+              {
+                "c-0": [
+                  "\n",
+                  {
+                    "->": "grimoire.end"
+                  },
+                  {
+                    "#f": 5
+                  }
+                ],
+                "c-1": [
+                  "\n",
+                  {
+                    "->": "grimoire.end"
+                  },
+                  {
+                    "#f": 5
+                  }
+                ],
+                "c-2": [
+                  "\n",
+                  {
+                    "->": "grimoire.end"
+                  },
+                  {
+                    "#f": 5
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "pop",
+        "nop",
+        "\n",
+        {
+          "end": [
+            {
+              "->": ".^.^"
+            },
+            {
+              "#f": 1
+            }
+          ],
           "#f": 1
         }
       ],
@@ -669,6 +1062,10 @@
         1,
         {
           "VAR=": "glyph_actualSigilUses"
+        },
+        0,
+        {
+          "VAR=": "loop"
         },
         "/ev",
         "end",

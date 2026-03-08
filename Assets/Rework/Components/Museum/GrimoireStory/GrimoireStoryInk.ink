@@ -106,17 +106,53 @@ LIST allGlyphs = Fire, Air, Water, Earth, Aether
     VAR glyph_actualSigilUses = 1
 
 
+VAR loop = 0
+
+
 -> start
 
-= start
+=== start
 @interact
 + Item1
 -
 
 -> start
 
-= grimoire
+=== grimoire
 
-@grimoire1 #leftButton:FirstCharacter #leftButton:Moon #leftButton:Greenhouse #leftButton:Rules #leftButton:Lore #achievement:FirstAchievementRM:3:5 #achievement:SecondAchievementRM:0:5 #achievement:ThirdAchievementRM:5:5
+~ loop += 1
+{loop > 4:
+    ~ loop = 1
+}
 
--> DONE
+{loop:
+    - 1:
+        @grimoire1 #leftButton:FirstCharacter #leftButton:Moon #leftButton:Greenhouse #leftButton:Rules #leftButton:Lore #achievement:FirstAchievementRM:3:5 #achievement:SecondAchievementRM:0:5 #achievement:ThirdAchievementRM:5:5
+        -> end
+    - 2:
+        @grimoire1 #leftButton:FirstCharacter #leftButton:Moon #leftButton:Greenhouse #leftButton:Rules #leftButton:Lore #achievement:FirstAchievementRM:3:5 #achievement:SecondAchievementRM:0:5 #achievement:ThirdAchievementRM:5:5
+        + [Index #bookmark:index]
+            -> end
+    - 3:
+        @grimoire1 #leftButton:FirstCharacter #leftButton:Moon #leftButton:Greenhouse #leftButton:Rules #leftButton:Lore #achievement:FirstAchievementRM:3:5 #achievement:SecondAchievementRM:0:5 #achievement:ThirdAchievementRM:5:5
+        + [Index #bookmark:index]
+            -> end
+        + [Piante #bookmark:secondLevel]
+            -> end
+        + [Olobino #bookmark:back]
+            -> end
+        + [??? #bookmark:forward]
+            -> end
+    - 4:
+        @grimoire1 #leftButton:FirstCharacter #leftButton:Moon #leftButton:Greenhouse #leftButton:Rules #leftButton:Lore #achievement:FirstAchievementRM:3:5 #achievement:SecondAchievementRM:0:5 #achievement:ThirdAchievementRM:5:5
+        + [Piante #bookmark:secondLevel]
+            -> end
+        + [Olobino #bookmark:back]
+            -> end
+        + [??? #bookmark:forward]
+            -> end
+}
+
+= end
+
+-> grimoire

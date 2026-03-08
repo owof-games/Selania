@@ -39,6 +39,9 @@ namespace Selania.Rework.Components.Grimoire
                 grimoireBackground.ShowSigil(descriptor.sigilDescriptor.firstPositionGlyph,
                     descriptor.sigilDescriptor.secondPositionGlyph, descriptor.sigilDescriptor.thirdPositionGlyph,
                     descriptor.sigilDescriptor.text);
+
+            grimoireBackground.ShowBookmarks(descriptor.hasIndex, descriptor.backToLevelTwoText,
+                descriptor.previousPageText, descriptor.nextPageText);
         }
 
         /// <summary>

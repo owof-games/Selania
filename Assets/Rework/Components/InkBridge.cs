@@ -879,6 +879,21 @@ namespace Selania.Rework.Components
             "glyph_firstAether", "glyph_secondAether", "glyph_thirdAether"
         };
 
+        [SerializeField] [Tooltip("Category for the bookmark tags")]
+        private string bookmarkTagCategory = "bookmark";
+
+        [SerializeField] [Tooltip("Value for the index bookmark tag")]
+        private string indexBookmarkTagValue = "index";
+
+        [SerializeField] [Tooltip("Value for the 'back to second level' bookmark tag")]
+        private string secondLevelBookmarkTagValue = "secondLevel";
+
+        [SerializeField] [Tooltip("Value for the 'go back' bookmark tag")]
+        private string backBookmarkTagValue = "back";
+
+        [SerializeField] [Tooltip("Value for the 'go forward' bookmark tag")]
+        private string forwardBookmarkTagValue = "forward";
+
         // will be localized
         [SerializeField] private string oneUsageText = "Un uso rimanente.";
         [SerializeField] private string twoUsagesText = "Due usi rimanenti.";
@@ -1040,9 +1055,22 @@ namespace Selania.Rework.Components
                 );
             }
 
+            // check choice nodes for first level navigation
+            var choicesWithTags = story.currentChoices.Map(choice => (Choice: choice,
+                Tags: MakeTags(choice.tags).Where(t => t.category == bookmarkTagCategory).ToList()));
+            var indexChoice = choicesWithTags.FirstOrDefault(c => c.Tags.Any(t => t.value == indexBookmarkTagValue))
+                .Choice;
+            var secondLevelChoice = choicesWithTags
+                .FirstOrDefault(c => c.Tags.Any(t => t.value == secondLevelBookmarkTagValue)).Choice;
+            var backChoice = choicesWithTags.FirstOrDefault(c => c.Tags.Any(t => t.value == backBookmarkTagValue))
+                .Choice;
+            var forwardChoice = choicesWithTags.FirstOrDefault(c => c.Tags.Any(t => t.value == forwardBookmarkTagValue))
+                .Choice;
+
             // emit the signal
             _firstLevelGrimoirePageDescriptorsSubject!.OnNext(new IStoryGrimoire.FirstLevelGrimoirePageDescriptor(
-                false, enabledLeftButtonNames, achievements, francoMission, sigilDescriptor));
+                false, enabledLeftButtonNames, achievements, francoMission, sigilDescriptor, indexChoice != null,
+                secondLevelChoice?.text?.Trim(), backChoice?.text?.Trim(), forwardChoice?.text?.Trim()));
         }
 
         #endregion

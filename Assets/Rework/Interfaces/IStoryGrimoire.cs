@@ -59,12 +59,26 @@ namespace Selania.Rework.Interfaces
         /// </param>
         /// <param name="francoMission">Text for Franco's mission, or empty string if there's no mission.</param>
         /// <param name="sigilDescriptor">Descriptor of the current sigil, or <c>null</c> if there's no active sigil.</param>
+        /// <param name="hasIndex">Whether the 'index' bookmark is active (it's <c>false</c> during rewriting).</param>
+        /// <param name="backToLevelTwoText">
+        ///     Text for the 'back to level two' button, if not <c>null</c>, otherwise the bookmark is
+        ///     hidden.
+        /// </param>
+        /// <param name="previousPageText">
+        ///     Text for the 'previous page' button, if not <c>null</c>, otherwise the bookmark is
+        ///     hidden.
+        /// </param>
+        /// <param name="nextPageText">Text for the 'next page' button, if not <c>null</c>, otherwise the bookmark is hidden.</param>
         /// <seealso cref="IStoryGrimoire.firstLevelGrimoirePageDescriptors" />
         record FirstLevelGrimoirePageDescriptor(
             bool isGamerMode,
             IEnumerable<string> enabledLeftButtonNames,
             IEnumerable<AchievementDescriptor> achievements,
             string francoMission,
-            SigilDescriptor? sigilDescriptor);
+            SigilDescriptor? sigilDescriptor,
+            bool hasIndex,
+            string? backToLevelTwoText,
+            string? previousPageText,
+            string? nextPageText);
     }
 }

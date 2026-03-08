@@ -749,7 +749,10 @@ MonoBehaviour:
   - prefab: {fileID: 5900152936520379775, guid: 085fffd4d0a50bb4e872a9821ca61f35, type: 3}
     title: Grimoire (story)
     description: Visualizzazione del grimorio comandato dalla storia Ink. Vedi Museum/GrimoireStory/GrimoireStoryInk.ink
-      per vedere la struttura della storia Ink che controlla questa sezione del museo
+      per vedere la struttura della storia Ink che controlla questa sezione del museo.
+      Ogni volta che si chiude il grimorio e lo si ri-apre, viene visualizzata una
+      nuova scelta di bookmark di navigazione (primo livello, poi secondo, poi terzo,
+      poi riscrittura, e a quel punto cicla)
 --- !u!4 &1073972271
 Transform:
   m_ObjectHideFlags: 0
