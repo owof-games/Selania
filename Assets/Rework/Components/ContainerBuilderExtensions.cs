@@ -40,7 +40,8 @@ namespace Selania.Rework.Components
                 .As<IStoryLinear>()
                 .As<IStoryChangeRoomContentsNotifier>()
                 .As<IStoryStateSerializer>()
-                .As<IStoryAudioSupport>();
+                .As<IStoryAudioSupport>()
+                .As<IStoryGrimoire>();
         }
 
         /// <summary>
@@ -107,12 +108,14 @@ namespace Selania.Rework.Components
         /// <param name="settingsRooms">An optional replacement object to register for the <see cref="ISettingsRooms"/> interface.</param>
         /// <param name="settingsAudio">An optional replacement object to register for the <see cref="ISettingsAudio"/> interface.</param>
         /// <param name="settingsSaveSystem">An optional replacement object to register for the <see cref="ISettingsSaveSystem"/> interface.</param>
+        /// <param name="settingsSigils">An optional replacement object to register for the <see cref="ISettingsSigils"/> interface.</param>
         public static void RegisterSettings(this IContainerBuilder containerBuilder, SelaniaSettings settings,
             ISettingsDialogueBox? settingsDialogueBox = null,
             ISettingsLogger? settingsLogger = null,
             ISettingsRooms? settingsRooms = null,
             ISettingsAudio? settingsAudio = null,
-            ISettingsSaveSystem? settingsSaveSystem = null
+            ISettingsSaveSystem? settingsSaveSystem = null,
+            ISettingsSigils? settingsSigils = null
         )
         {
             var registrationBuilder = containerBuilder
@@ -142,6 +145,11 @@ namespace Selania.Rework.Components
                 containerBuilder.RegisterInstance(settingsSaveSystem).As<ISettingsSaveSystem>();
             else
                 registrationBuilder.As<ISettingsSaveSystem>();
+
+            if (settingsSigils != null)
+                containerBuilder.RegisterInstance(settingsSigils).As<ISettingsSigils>();
+            else
+                registrationBuilder.As<ISettingsSigils>();
         }
     }
 }

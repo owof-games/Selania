@@ -11,7 +11,7 @@ namespace Selania.Rework.Components
     [CreateAssetMenu(fileName = "Settings", menuName = "Selania/Settings")]
     [NoReorder]
     public class SelaniaSettings : ScriptableObject, ISettingsDialogueBox, ISettingsLogger, ISettingsRooms,
-        ISettingsAudio, ISettingsSaveSystem
+        ISettingsAudio, ISettingsSaveSystem, ISettingsSigils
     {
         #region dialogue box - text
 
@@ -328,6 +328,70 @@ namespace Selania.Rework.Components
         /// <inheritdoc />
         public TimeSpan minimumTimeBetweenAutomaticSaves =>
             TimeSpan.FromSeconds(minimumTimeBetweenAutomaticSavesInSeconds);
+
+        #endregion
+
+        #region sigils
+
+        [Title("Sigils")]
+        [SerializeField]
+        [Tooltip("The three air glyphs, according to the position (first, second and third)")]
+        private Sprite[] airGlyphs = null!;
+
+        [SerializeField] [Tooltip("Color of the air glyphs")]
+        private Color airGlyphColor;
+
+        [SerializeField] [Tooltip("The three water glyphs, according to the position (first, second and third)")]
+        private Sprite[] waterGlyphs = null!;
+
+        [SerializeField] [Tooltip("Color of the air glyphs")]
+        private Color waterGlyphColor;
+
+        [SerializeField] [Tooltip("The three earth glyphs, according to the position (first, second and third)")]
+        private Sprite[] earthGlyphs = null!;
+
+        [SerializeField] [Tooltip("Color of the air glyphs")]
+        private Color earthGlyphColor;
+
+        [SerializeField] [Tooltip("The three fire glyphs, according to the position (first, second and third)")]
+        private Sprite[] fireGlyphs = null!;
+
+        [SerializeField] [Tooltip("Color of the air glyphs")]
+        private Color fireGlyphColor;
+
+        [SerializeField] [Tooltip("The three aether glyphs, according to the position (first, second and third)")]
+        private Sprite[] aetherGlyphs = null!;
+
+        [SerializeField] [Tooltip("Color of the air glyphs")]
+        private Color aetherGlyphColor;
+
+        /// <inheritdoc />
+        public Sprite GetGlyphSprite(ISettingsSigils.GlyphType glyphType, int position)
+        {
+            return glyphType switch
+            {
+                ISettingsSigils.GlyphType.Air => airGlyphs[position],
+                ISettingsSigils.GlyphType.Water => waterGlyphs[position],
+                ISettingsSigils.GlyphType.Earth => earthGlyphs[position],
+                ISettingsSigils.GlyphType.Fire => fireGlyphs[position],
+                ISettingsSigils.GlyphType.Aether => aetherGlyphs[position],
+                _ => throw new ArgumentOutOfRangeException(nameof(glyphType), glyphType, null)
+            };
+        }
+
+        /// <inheritdoc />
+        public Color GetGlyphColor(ISettingsSigils.GlyphType glyphType)
+        {
+            return glyphType switch
+            {
+                ISettingsSigils.GlyphType.Air => airGlyphColor,
+                ISettingsSigils.GlyphType.Water => waterGlyphColor,
+                ISettingsSigils.GlyphType.Earth => earthGlyphColor,
+                ISettingsSigils.GlyphType.Fire => fireGlyphColor,
+                ISettingsSigils.GlyphType.Aether => aetherGlyphColor,
+                _ => throw new ArgumentOutOfRangeException(nameof(glyphType), glyphType, null)
+            };
+        }
 
         #endregion
 

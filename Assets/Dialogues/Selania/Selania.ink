@@ -127,6 +127,9 @@
     INCLUDE Book\GreenhouseRecap.ink
     INCLUDE Book\KitchenRecap.ink
     INCLUDE Book\NestRecap.ink
+
+//Grimoire - temporaneo?
+    INCLUDE Book\Grimoire.ink
     
 //Bedroom
     INCLUDE Bedroom\Bedroom.ink

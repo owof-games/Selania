@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ebe5e072a1d4ae09987d1fbf98f1188, type: 3}
+  m_Name: GrimoireStoryInkBridge
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.InkBridge
+  inkAssetJson: {fileID: 4900000, guid: 2a8cc582c1b4e614eb9d18a2fe16cc4d, type: 3}
+  debugWordsToDisable: []
+  pgListName: listCharacters
+  pgListItemName: PG
+  roomListPrefix: contents
+  grimoireInkNodeName: grimoire
+  leftButtonTagName: leftButton
+  achievementTagName: achievement
+  francoTagName: franco
+  currentSigilVariableName: glyph_actualActiveSigil
+  numSigilUsagesVariableName: glyph_actualSigilUses
+  fireSigilListsByPosition:
+  - glyph_firstFire
+  - glyph_secondFire
+  - glyph_thirdFire
+  waterSigilListsByPosition:
+  - glyph_firstWater
+  - glyph_secondWater
+  - glyph_thirdWater
+  earthSigilListsByPosition:
+  - glyph_firstEarth
+  - glyph_secondEarth
+  - glyph_thirdEarth
+  airSigilListsByPosition:
+  - glyph_firstAir
+  - glyph_secondAir
+  - glyph_thirdAir
+  aetherSigilListsByPosition:
+  - glyph_firstAether
+  - glyph_secondAether
+  - glyph_thirdAether
+  oneUsageText: Un uso rimanente.
+  twoUsagesText: Due usi rimanenti.
+  threeUsagesText: Tre usi rimanenti.

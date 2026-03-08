@@ -1,0 +1,1154 @@
+﻿{
+  "inkVersion": 21,
+  "root": [
+    [
+      {
+        "->": "start"
+      },
+      [
+        "done",
+        {
+          "#f": 5,
+          "#n": "g-0"
+        }
+      ],
+      null
+    ],
+    "done",
+    {
+      "start": [
+        [
+          "^@interact",
+          "\n",
+          [
+            "ev",
+            {
+              "^->": "start.0.2.$r1"
+            },
+            {
+              "temp=": "$r"
+            },
+            "str",
+            {
+              "->": ".^.s"
+            },
+            [
+              {
+                "#n": "$r1"
+              }
+            ],
+            "/str",
+            "/ev",
+            {
+              "*": ".^.^.c-0",
+              "flg": 2
+            },
+            {
+              "s": [
+                "^Item1",
+                {
+                  "->": "$r",
+                  "var": true
+                },
+                null
+              ]
+            }
+          ],
+          {
+            "c-0": [
+              "ev",
+              {
+                "^->": "start.0.c-0.$r2"
+              },
+              "/ev",
+              {
+                "temp=": "$r"
+              },
+              {
+                "->": ".^.^.2.s"
+              },
+              [
+                {
+                  "#n": "$r2"
+                }
+              ],
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "g-0": [
+              {
+                "->": "start"
+              },
+              {
+                "#f": 5
+              }
+            ]
+          }
+        ],
+        {
+          "#f": 1
+        }
+      ],
+      "grimoire": [
+        "ev",
+        {
+          "VAR?": "loop"
+        },
+        1,
+        "+",
+        {
+          "VAR=": "loop",
+          "re": true
+        },
+        "/ev",
+        "ev",
+        {
+          "VAR?": "loop"
+        },
+        4,
+        ">",
+        "/ev",
+        [
+          {
+            "->": ".^.b",
+            "c": true
+          },
+          {
+            "b": [
+              "\n",
+              "ev",
+              1,
+              "/ev",
+              {
+                "VAR=": "loop",
+                "re": true
+              },
+              {
+                "->": ".^.^.^.12"
+              },
+              null
+            ]
+          }
+        ],
+        "nop",
+        "\n",
+        "ev",
+        {
+          "VAR?": "loop"
+        },
+        "/ev",
+        [
+          "du",
+          "ev",
+          1,
+          "==",
+          "/ev",
+          {
+            "->": ".^.b",
+            "c": true
+          },
+          {
+            "b": [
+              "pop",
+              "\n",
+              "^@grimoire1 ",
+              "#",
+              "^leftButton:FirstCharacter ",
+              "/#",
+              "#",
+              "^leftButton:Moon ",
+              "/#",
+              "#",
+              "^leftButton:Greenhouse ",
+              "/#",
+              "#",
+              "^leftButton:Rules ",
+              "/#",
+              "#",
+              "^leftButton:Lore ",
+              "/#",
+              "#",
+              "^achievement:FirstAchievementRM:3:5 ",
+              "/#",
+              "#",
+              "^achievement:SecondAchievementRM:0:5 ",
+              "/#",
+              "#",
+              "^achievement:ThirdAchievementRM:5:5",
+              "/#",
+              "\n",
+              {
+                "->": ".^.^.^.end"
+              },
+              {
+                "->": ".^.^.^.22"
+              },
+              null
+            ]
+          }
+        ],
+        [
+          "du",
+          "ev",
+          2,
+          "==",
+          "/ev",
+          {
+            "->": ".^.b",
+            "c": true
+          },
+          {
+            "b": [
+              "pop",
+              "\n",
+              "^@grimoire1 ",
+              "#",
+              "^leftButton:FirstCharacter ",
+              "/#",
+              "#",
+              "^leftButton:Moon ",
+              "/#",
+              "#",
+              "^leftButton:Greenhouse ",
+              "/#",
+              "#",
+              "^leftButton:Rules ",
+              "/#",
+              "#",
+              "^leftButton:Lore ",
+              "/#",
+              "#",
+              "^achievement:FirstAchievementRM:3:5 ",
+              "/#",
+              "#",
+              "^achievement:SecondAchievementRM:0:5 ",
+              "/#",
+              "#",
+              "^achievement:ThirdAchievementRM:5:5",
+              "/#",
+              "\n",
+              "ev",
+              "str",
+              "^Index ",
+              "#",
+              "^bookmark:index",
+              "/#",
+              "/str",
+              "/ev",
+              {
+                "*": ".^.c-0",
+                "flg": 4
+              },
+              {
+                "->": ".^.^.^.22"
+              },
+              {
+                "c-0": [
+                  "\n",
+                  {
+                    "->": "grimoire.end"
+                  },
+                  {
+                    "#f": 5
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          "du",
+          "ev",
+          3,
+          "==",
+          "/ev",
+          {
+            "->": ".^.b",
+            "c": true
+          },
+          {
+            "b": [
+              "pop",
+              "\n",
+              "^@grimoire1 ",
+              "#",
+              "^leftButton:FirstCharacter ",
+              "/#",
+              "#",
+              "^leftButton:Moon ",
+              "/#",
+              "#",
+              "^leftButton:Greenhouse ",
+              "/#",
+              "#",
+              "^leftButton:Rules ",
+              "/#",
+              "#",
+              "^leftButton:Lore ",
+              "/#",
+              "#",
+              "^achievement:FirstAchievementRM:3:5 ",
+              "/#",
+              "#",
+              "^achievement:SecondAchievementRM:0:5 ",
+              "/#",
+              "#",
+              "^achievement:ThirdAchievementRM:5:5",
+              "/#",
+              "\n",
+              "ev",
+              "str",
+              "^Index ",
+              "#",
+              "^bookmark:index",
+              "/#",
+              "/str",
+              "/ev",
+              {
+                "*": ".^.c-0",
+                "flg": 4
+              },
+              "ev",
+              "str",
+              "^Piante ",
+              "#",
+              "^bookmark:secondLevel",
+              "/#",
+              "/str",
+              "/ev",
+              {
+                "*": ".^.c-1",
+                "flg": 4
+              },
+              "ev",
+              "str",
+              "^Olobino ",
+              "#",
+              "^bookmark:back",
+              "/#",
+              "/str",
+              "/ev",
+              {
+                "*": ".^.c-2",
+                "flg": 4
+              },
+              "ev",
+              "str",
+              "^??? ",
+              "#",
+              "^bookmark:forward",
+              "/#",
+              "/str",
+              "/ev",
+              {
+                "*": ".^.c-3",
+                "flg": 4
+              },
+              {
+                "->": ".^.^.^.22"
+              },
+              {
+                "c-0": [
+                  "\n",
+                  {
+                    "->": "grimoire.end"
+                  },
+                  {
+                    "#f": 5
+                  }
+                ],
+                "c-1": [
+                  "\n",
+                  {
+                    "->": "grimoire.end"
+                  },
+                  {
+                    "#f": 5
+                  }
+                ],
+                "c-2": [
+                  "\n",
+                  {
+                    "->": "grimoire.end"
+                  },
+                  {
+                    "#f": 5
+                  }
+                ],
+                "c-3": [
+                  "\n",
+                  {
+                    "->": "grimoire.end"
+                  },
+                  {
+                    "#f": 5
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          "du",
+          "ev",
+          4,
+          "==",
+          "/ev",
+          {
+            "->": ".^.b",
+            "c": true
+          },
+          {
+            "b": [
+              "pop",
+              "\n",
+              "^@grimoire1 ",
+              "#",
+              "^leftButton:FirstCharacter ",
+              "/#",
+              "#",
+              "^leftButton:Moon ",
+              "/#",
+              "#",
+              "^leftButton:Greenhouse ",
+              "/#",
+              "#",
+              "^leftButton:Rules ",
+              "/#",
+              "#",
+              "^leftButton:Lore ",
+              "/#",
+              "#",
+              "^achievement:FirstAchievementRM:3:5 ",
+              "/#",
+              "#",
+              "^achievement:SecondAchievementRM:0:5 ",
+              "/#",
+              "#",
+              "^achievement:ThirdAchievementRM:5:5",
+              "/#",
+              "\n",
+              "ev",
+              "str",
+              "^Piante ",
+              "#",
+              "^bookmark:secondLevel",
+              "/#",
+              "/str",
+              "/ev",
+              {
+                "*": ".^.c-0",
+                "flg": 4
+              },
+              "ev",
+              "str",
+              "^Olobino ",
+              "#",
+              "^bookmark:back",
+              "/#",
+              "/str",
+              "/ev",
+              {
+                "*": ".^.c-1",
+                "flg": 4
+              },
+              "ev",
+              "str",
+              "^??? ",
+              "#",
+              "^bookmark:forward",
+              "/#",
+              "/str",
+              "/ev",
+              {
+                "*": ".^.c-2",
+                "flg": 4
+              },
+              {
+                "->": ".^.^.^.22"
+              },
+              {
+                "c-0": [
+                  "\n",
+                  {
+                    "->": "grimoire.end"
+                  },
+                  {
+                    "#f": 5
+                  }
+                ],
+                "c-1": [
+                  "\n",
+                  {
+                    "->": "grimoire.end"
+                  },
+                  {
+                    "#f": 5
+                  }
+                ],
+                "c-2": [
+                  "\n",
+                  {
+                    "->": "grimoire.end"
+                  },
+                  {
+                    "#f": 5
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "pop",
+        "nop",
+        "\n",
+        {
+          "end": [
+            {
+              "->": ".^.^"
+            },
+            {
+              "#f": 1
+            }
+          ],
+          "#f": 1
+        }
+      ],
+      "global decl": [
+        "ev",
+        {
+          "list": {},
+          "origins": [
+            "listCharacters"
+          ]
+        },
+        {
+          "VAR=": "listCharacters"
+        },
+        {
+          "list": {},
+          "origins": [
+            "Items"
+          ]
+        },
+        {
+          "VAR=": "Items"
+        },
+        {
+          "list": {
+            "listCharacters.PG": 1,
+            "Items.Item1": 1
+          }
+        },
+        {
+          "VAR=": "contentsRoom1"
+        },
+        {
+          "list": {},
+          "origins": [
+            "allGlyphs"
+          ]
+        },
+        {
+          "VAR=": "allGlyphs"
+        },
+        {
+          "list": {},
+          "origins": [
+            "glyph_allSigils"
+          ]
+        },
+        {
+          "VAR=": "glyph_allSigils"
+        },
+        {
+          "list": {
+            "glyph_allSigils.FireAirWater": 1,
+            "glyph_allSigils.FireAirEarth": 2,
+            "glyph_allSigils.FireAirAether": 3
+          }
+        },
+        {
+          "VAR=": "glyph_fireAirSigils"
+        },
+        {
+          "list": {
+            "glyph_allSigils.FireWaterEarth": 4,
+            "glyph_allSigils.FireWaterAether": 5,
+            "glyph_allSigils.FireWaterAir": 6
+          }
+        },
+        {
+          "VAR=": "glyph_fireWaterSigils"
+        },
+        {
+          "list": {
+            "glyph_allSigils.FireEarthWater": 7,
+            "glyph_allSigils.FireEarthAether": 8,
+            "glyph_allSigils.FireEarthAir": 9
+          }
+        },
+        {
+          "VAR=": "glyph_fireEarthSigils"
+        },
+        {
+          "list": {
+            "glyph_allSigils.FireAetherWater": 10,
+            "glyph_allSigils.FireAetherEarth": 11,
+            "glyph_allSigils.FireAetherAir": 12
+          }
+        },
+        {
+          "VAR=": "glyph_fireAetherSigils"
+        },
+        {
+          "list": {
+            "glyph_allSigils.AirFireEarth": 13,
+            "glyph_allSigils.AirFireAether": 14,
+            "glyph_allSigils.AirFireWater": 15
+          }
+        },
+        {
+          "VAR=": "glyph_airFireSigils"
+        },
+        {
+          "list": {
+            "glyph_allSigils.AirWaterEarth": 16,
+            "glyph_allSigils.AirWaterAether": 17,
+            "glyph_allSigils.AirWaterFire": 18
+          }
+        },
+        {
+          "VAR=": "glyph_airWaterSigils"
+        },
+        {
+          "list": {
+            "glyph_allSigils.AirEarthAether": 19,
+            "glyph_allSigils.AirEarthWater": 20,
+            "glyph_allSigils.AirEarthFire": 21
+          }
+        },
+        {
+          "VAR=": "glyph_airEarthSigils"
+        },
+        {
+          "list": {
+            "glyph_allSigils.AirAetherEarth": 22,
+            "glyph_allSigils.AirAetherWater": 23,
+            "glyph_allSigils.AirAetherFire": 24
+          }
+        },
+        {
+          "VAR=": "glyph_airAetherSigils"
+        },
+        {
+          "list": {
+            "glyph_allSigils.WaterFireEarth": 25,
+            "glyph_allSigils.WaterFireAether": 26,
+            "glyph_allSigils.WaterFireAir": 27
+          }
+        },
+        {
+          "VAR=": "glyph_WaterFireSigils"
+        },
+        {
+          "list": {
+            "glyph_allSigils.WaterAirEarth": 28,
+            "glyph_allSigils.WaterAirAether": 29,
+            "glyph_allSigils.WaterAirFire": 30
+          }
+        },
+        {
+          "VAR=": "glyph_WaterAirSigils"
+        },
+        {
+          "list": {
+            "glyph_allSigils.WaterEarthAether": 31,
+            "glyph_allSigils.WaterEarthAir": 32,
+            "glyph_allSigils.WaterEarthFire": 33
+          }
+        },
+        {
+          "VAR=": "glyph_WaterEarthSigils"
+        },
+        {
+          "list": {
+            "glyph_allSigils.WaterAetherEarth": 34,
+            "glyph_allSigils.WaterAetherAir": 35,
+            "glyph_allSigils.WaterAetherFire": 36
+          }
+        },
+        {
+          "VAR=": "glyph_WaterAetherSigils"
+        },
+        {
+          "list": {
+            "glyph_allSigils.EarthFireAether": 37,
+            "glyph_allSigils.EarthFireWater": 38,
+            "glyph_allSigils.EarthFireAir": 39
+          }
+        },
+        {
+          "VAR=": "glyph_earthFireSigils"
+        },
+        {
+          "list": {
+            "glyph_allSigils.EarthAirAether": 40,
+            "glyph_allSigils.EarthAirWater": 41,
+            "glyph_allSigils.EarthAirFire": 42
+          }
+        },
+        {
+          "VAR=": "glyph_earthAirSigils"
+        },
+        {
+          "list": {
+            "glyph_allSigils.EarthWaterAether": 43,
+            "glyph_allSigils.EarthWaterAir": 44,
+            "glyph_allSigils.EarthWaterFire": 45
+          }
+        },
+        {
+          "VAR=": "glyph_earthWaterSigils"
+        },
+        {
+          "list": {
+            "glyph_allSigils.EarthAetherWater": 46,
+            "glyph_allSigils.EarthAetherAir": 47,
+            "glyph_allSigils.EarthAetherFire": 48
+          }
+        },
+        {
+          "VAR=": "glyph_earthAetherSigils"
+        },
+        {
+          "list": {
+            "glyph_allSigils.AetherFireEarth": 49,
+            "glyph_allSigils.AetherFireWater": 50,
+            "glyph_allSigils.AetherFireAir": 51
+          }
+        },
+        {
+          "VAR=": "glyph_aetherFireSigils"
+        },
+        {
+          "list": {
+            "glyph_allSigils.AetherAirEarth": 52,
+            "glyph_allSigils.AetherAirWater": 53,
+            "glyph_allSigils.AetherAirFire": 54
+          }
+        },
+        {
+          "VAR=": "glyph_aetherAirSigils"
+        },
+        {
+          "list": {
+            "glyph_allSigils.AetherWaterEarth": 55,
+            "glyph_allSigils.AetherWaterAir": 56,
+            "glyph_allSigils.AetherWaterFire": 57
+          }
+        },
+        {
+          "VAR=": "glyph_aetherWaterSigils"
+        },
+        {
+          "list": {
+            "glyph_allSigils.AetherEarthWater": 58,
+            "glyph_allSigils.AetherEarthAir": 59,
+            "glyph_allSigils.AetherEarthFire": 60
+          }
+        },
+        {
+          "VAR=": "glyph_aetherEarthSigils"
+        },
+        {
+          "list": {
+            "glyph_allSigils.FireAirWater": 1,
+            "glyph_allSigils.FireAirEarth": 2,
+            "glyph_allSigils.FireAirAether": 3,
+            "glyph_allSigils.FireWaterEarth": 4,
+            "glyph_allSigils.FireWaterAether": 5,
+            "glyph_allSigils.FireWaterAir": 6,
+            "glyph_allSigils.FireEarthWater": 7,
+            "glyph_allSigils.FireEarthAether": 8,
+            "glyph_allSigils.FireEarthAir": 9,
+            "glyph_allSigils.FireAetherWater": 10,
+            "glyph_allSigils.FireAetherEarth": 11,
+            "glyph_allSigils.FireAetherAir": 12
+          }
+        },
+        {
+          "VAR=": "glyph_firstFire"
+        },
+        {
+          "list": {
+            "glyph_allSigils.AirFireEarth": 13,
+            "glyph_allSigils.AirFireAether": 14,
+            "glyph_allSigils.AirFireWater": 15,
+            "glyph_allSigils.WaterFireEarth": 25,
+            "glyph_allSigils.WaterFireAether": 26,
+            "glyph_allSigils.WaterFireAir": 27,
+            "glyph_allSigils.EarthFireAether": 37,
+            "glyph_allSigils.EarthFireWater": 38,
+            "glyph_allSigils.EarthFireAir": 39,
+            "glyph_allSigils.AetherFireEarth": 49,
+            "glyph_allSigils.AetherFireWater": 50,
+            "glyph_allSigils.AetherFireAir": 51
+          }
+        },
+        {
+          "VAR=": "glyph_secondFire"
+        },
+        {
+          "list": {
+            "glyph_allSigils.AirWaterFire": 18,
+            "glyph_allSigils.AirEarthFire": 21,
+            "glyph_allSigils.AirAetherFire": 24,
+            "glyph_allSigils.WaterAirFire": 30,
+            "glyph_allSigils.WaterEarthFire": 33,
+            "glyph_allSigils.WaterAetherFire": 36,
+            "glyph_allSigils.EarthAirFire": 42,
+            "glyph_allSigils.EarthWaterFire": 45,
+            "glyph_allSigils.EarthAetherFire": 48,
+            "glyph_allSigils.AetherAirFire": 54,
+            "glyph_allSigils.AetherWaterFire": 57,
+            "glyph_allSigils.AetherEarthFire": 60
+          }
+        },
+        {
+          "VAR=": "glyph_thirdFire"
+        },
+        {
+          "list": {
+            "glyph_allSigils.WaterFireEarth": 25,
+            "glyph_allSigils.WaterFireAether": 26,
+            "glyph_allSigils.WaterFireAir": 27,
+            "glyph_allSigils.WaterAirEarth": 28,
+            "glyph_allSigils.WaterAirAether": 29,
+            "glyph_allSigils.WaterAirFire": 30,
+            "glyph_allSigils.WaterEarthAether": 31,
+            "glyph_allSigils.WaterEarthAir": 32,
+            "glyph_allSigils.WaterEarthFire": 33,
+            "glyph_allSigils.WaterAetherEarth": 34,
+            "glyph_allSigils.WaterAetherAir": 35,
+            "glyph_allSigils.WaterAetherFire": 36
+          }
+        },
+        {
+          "VAR=": "glyph_firstWater"
+        },
+        {
+          "list": {
+            "glyph_allSigils.FireWaterEarth": 4,
+            "glyph_allSigils.FireWaterAether": 5,
+            "glyph_allSigils.FireWaterAir": 6,
+            "glyph_allSigils.AirWaterEarth": 16,
+            "glyph_allSigils.AirWaterAether": 17,
+            "glyph_allSigils.AirWaterFire": 18,
+            "glyph_allSigils.EarthWaterAether": 43,
+            "glyph_allSigils.EarthWaterAir": 44,
+            "glyph_allSigils.EarthWaterFire": 45,
+            "glyph_allSigils.AetherWaterEarth": 55,
+            "glyph_allSigils.AetherWaterAir": 56,
+            "glyph_allSigils.AetherWaterFire": 57
+          }
+        },
+        {
+          "VAR=": "glyph_secondWater"
+        },
+        {
+          "list": {
+            "glyph_allSigils.FireAirWater": 1,
+            "glyph_allSigils.FireEarthWater": 7,
+            "glyph_allSigils.FireAetherWater": 10,
+            "glyph_allSigils.AirFireWater": 15,
+            "glyph_allSigils.AirEarthWater": 20,
+            "glyph_allSigils.AirAetherWater": 23,
+            "glyph_allSigils.EarthFireWater": 38,
+            "glyph_allSigils.EarthAirWater": 41,
+            "glyph_allSigils.EarthAetherWater": 46,
+            "glyph_allSigils.AetherFireWater": 50,
+            "glyph_allSigils.AetherAirWater": 53,
+            "glyph_allSigils.AetherEarthWater": 58
+          }
+        },
+        {
+          "VAR=": "glyph_thirdWater"
+        },
+        {
+          "list": {
+            "glyph_allSigils.EarthFireAether": 37,
+            "glyph_allSigils.EarthFireWater": 38,
+            "glyph_allSigils.EarthFireAir": 39,
+            "glyph_allSigils.EarthAirAether": 40,
+            "glyph_allSigils.EarthAirWater": 41,
+            "glyph_allSigils.EarthAirFire": 42,
+            "glyph_allSigils.EarthWaterAether": 43,
+            "glyph_allSigils.EarthWaterAir": 44,
+            "glyph_allSigils.EarthWaterFire": 45,
+            "glyph_allSigils.EarthAetherWater": 46,
+            "glyph_allSigils.EarthAetherAir": 47,
+            "glyph_allSigils.EarthAetherFire": 48
+          }
+        },
+        {
+          "VAR=": "glyph_firstEarth"
+        },
+        {
+          "list": {
+            "glyph_allSigils.FireEarthWater": 7,
+            "glyph_allSigils.FireEarthAether": 8,
+            "glyph_allSigils.FireEarthAir": 9,
+            "glyph_allSigils.AirEarthAether": 19,
+            "glyph_allSigils.AirEarthWater": 20,
+            "glyph_allSigils.AirEarthFire": 21,
+            "glyph_allSigils.WaterEarthAether": 31,
+            "glyph_allSigils.WaterEarthAir": 32,
+            "glyph_allSigils.WaterEarthFire": 33,
+            "glyph_allSigils.AetherEarthWater": 58,
+            "glyph_allSigils.AetherEarthAir": 59,
+            "glyph_allSigils.AetherEarthFire": 60
+          }
+        },
+        {
+          "VAR=": "glyph_secondEarth"
+        },
+        {
+          "list": {
+            "glyph_allSigils.FireAirEarth": 2,
+            "glyph_allSigils.FireWaterEarth": 4,
+            "glyph_allSigils.FireAetherEarth": 11,
+            "glyph_allSigils.AirFireEarth": 13,
+            "glyph_allSigils.AirWaterEarth": 16,
+            "glyph_allSigils.AirAetherEarth": 22,
+            "glyph_allSigils.WaterFireEarth": 25,
+            "glyph_allSigils.WaterAirEarth": 28,
+            "glyph_allSigils.WaterAetherEarth": 34,
+            "glyph_allSigils.AetherFireEarth": 49,
+            "glyph_allSigils.AetherAirEarth": 52,
+            "glyph_allSigils.AetherWaterEarth": 55
+          }
+        },
+        {
+          "VAR=": "glyph_thirdEarth"
+        },
+        {
+          "list": {
+            "glyph_allSigils.AirFireEarth": 13,
+            "glyph_allSigils.AirFireAether": 14,
+            "glyph_allSigils.AirFireWater": 15,
+            "glyph_allSigils.AirWaterEarth": 16,
+            "glyph_allSigils.AirWaterAether": 17,
+            "glyph_allSigils.AirWaterFire": 18,
+            "glyph_allSigils.AirEarthAether": 19,
+            "glyph_allSigils.AirEarthWater": 20,
+            "glyph_allSigils.AirEarthFire": 21,
+            "glyph_allSigils.AirAetherEarth": 22,
+            "glyph_allSigils.AirAetherWater": 23,
+            "glyph_allSigils.AirAetherFire": 24
+          }
+        },
+        {
+          "VAR=": "glyph_firstAir"
+        },
+        {
+          "list": {
+            "glyph_allSigils.FireAirWater": 1,
+            "glyph_allSigils.FireAirEarth": 2,
+            "glyph_allSigils.FireAirAether": 3,
+            "glyph_allSigils.WaterAirEarth": 28,
+            "glyph_allSigils.WaterAirAether": 29,
+            "glyph_allSigils.WaterAirFire": 30,
+            "glyph_allSigils.EarthAirAether": 40,
+            "glyph_allSigils.EarthAirWater": 41,
+            "glyph_allSigils.EarthAirFire": 42,
+            "glyph_allSigils.AetherAirEarth": 52,
+            "glyph_allSigils.AetherAirWater": 53,
+            "glyph_allSigils.AetherAirFire": 54
+          }
+        },
+        {
+          "VAR=": "glyph_secondAir"
+        },
+        {
+          "list": {
+            "glyph_allSigils.FireWaterAir": 6,
+            "glyph_allSigils.FireAetherAir": 12,
+            "glyph_allSigils.FireEarthAir": 9,
+            "glyph_allSigils.WaterFireAir": 27,
+            "glyph_allSigils.WaterEarthAir": 32,
+            "glyph_allSigils.WaterAetherAir": 35,
+            "glyph_allSigils.EarthFireAir": 39,
+            "glyph_allSigils.EarthWaterAir": 44,
+            "glyph_allSigils.EarthAetherAir": 47,
+            "glyph_allSigils.AetherFireAir": 51,
+            "glyph_allSigils.AetherWaterAir": 56,
+            "glyph_allSigils.AetherEarthAir": 59
+          }
+        },
+        {
+          "VAR=": "glyph_thirdAir"
+        },
+        {
+          "list": {
+            "glyph_allSigils.AetherFireEarth": 49,
+            "glyph_allSigils.AetherFireWater": 50,
+            "glyph_allSigils.AetherFireAir": 51,
+            "glyph_allSigils.AetherAirEarth": 52,
+            "glyph_allSigils.AetherAirWater": 53,
+            "glyph_allSigils.AetherAirFire": 54,
+            "glyph_allSigils.AetherWaterEarth": 55,
+            "glyph_allSigils.AetherWaterAir": 56,
+            "glyph_allSigils.AetherWaterFire": 57,
+            "glyph_allSigils.AetherEarthWater": 58,
+            "glyph_allSigils.AetherEarthAir": 59,
+            "glyph_allSigils.AetherEarthFire": 60
+          }
+        },
+        {
+          "VAR=": "glyph_firstAether"
+        },
+        {
+          "list": {
+            "glyph_allSigils.FireAetherWater": 10,
+            "glyph_allSigils.FireAetherEarth": 11,
+            "glyph_allSigils.FireAetherAir": 12,
+            "glyph_allSigils.AirAetherEarth": 22,
+            "glyph_allSigils.AirAetherWater": 23,
+            "glyph_allSigils.AirAetherFire": 24,
+            "glyph_allSigils.WaterAetherEarth": 34,
+            "glyph_allSigils.WaterAetherAir": 35,
+            "glyph_allSigils.WaterAetherFire": 36,
+            "glyph_allSigils.EarthAetherWater": 46,
+            "glyph_allSigils.EarthAetherAir": 47,
+            "glyph_allSigils.EarthAetherFire": 48
+          }
+        },
+        {
+          "VAR=": "glyph_secondAether"
+        },
+        {
+          "list": {
+            "glyph_allSigils.FireAirAether": 3,
+            "glyph_allSigils.FireEarthAether": 8,
+            "glyph_allSigils.FireWaterAether": 5,
+            "glyph_allSigils.AirFireAether": 14,
+            "glyph_allSigils.AirWaterAether": 17,
+            "glyph_allSigils.AirEarthAether": 19,
+            "glyph_allSigils.WaterFireAether": 26,
+            "glyph_allSigils.WaterAirAether": 29,
+            "glyph_allSigils.WaterEarthAether": 31,
+            "glyph_allSigils.EarthFireAether": 37,
+            "glyph_allSigils.EarthAirAether": 40,
+            "glyph_allSigils.EarthWaterAether": 43
+          }
+        },
+        {
+          "VAR=": "glyph_thirdAether"
+        },
+        {
+          "list": {
+            "glyph_allSigils.WaterEarthFire": 33
+          }
+        },
+        {
+          "VAR=": "glyph_actualActiveSigil"
+        },
+        1,
+        {
+          "VAR=": "glyph_actualSigilUses"
+        },
+        0,
+        {
+          "VAR=": "loop"
+        },
+        "/ev",
+        "end",
+        null
+      ],
+      "#f": 1
+    }
+  ],
+  "listDefs": {
+    "listCharacters": {
+      "PG": 1
+    },
+    "Items": {
+      "Item1": 1
+    },
+    "allGlyphs": {
+      "Fire": 1,
+      "Air": 2,
+      "Water": 3,
+      "Earth": 4,
+      "Aether": 5
+    },
+    "glyph_allSigils": {
+      "FireAirWater": 1,
+      "FireAirEarth": 2,
+      "FireAirAether": 3,
+      "FireWaterEarth": 4,
+      "FireWaterAether": 5,
+      "FireWaterAir": 6,
+      "FireEarthWater": 7,
+      "FireEarthAether": 8,
+      "FireEarthAir": 9,
+      "FireAetherWater": 10,
+      "FireAetherEarth": 11,
+      "FireAetherAir": 12,
+      "AirFireEarth": 13,
+      "AirFireAether": 14,
+      "AirFireWater": 15,
+      "AirWaterEarth": 16,
+      "AirWaterAether": 17,
+      "AirWaterFire": 18,
+      "AirEarthAether": 19,
+      "AirEarthWater": 20,
+      "AirEarthFire": 21,
+      "AirAetherEarth": 22,
+      "AirAetherWater": 23,
+      "AirAetherFire": 24,
+      "WaterFireEarth": 25,
+      "WaterFireAether": 26,
+      "WaterFireAir": 27,
+      "WaterAirEarth": 28,
+      "WaterAirAether": 29,
+      "WaterAirFire": 30,
+      "WaterEarthAether": 31,
+      "WaterEarthAir": 32,
+      "WaterEarthFire": 33,
+      "WaterAetherEarth": 34,
+      "WaterAetherAir": 35,
+      "WaterAetherFire": 36,
+      "EarthFireAether": 37,
+      "EarthFireWater": 38,
+      "EarthFireAir": 39,
+      "EarthAirAether": 40,
+      "EarthAirWater": 41,
+      "EarthAirFire": 42,
+      "EarthWaterAether": 43,
+      "EarthWaterAir": 44,
+      "EarthWaterFire": 45,
+      "EarthAetherWater": 46,
+      "EarthAetherAir": 47,
+      "EarthAetherFire": 48,
+      "AetherFireEarth": 49,
+      "AetherFireWater": 50,
+      "AetherFireAir": 51,
+      "AetherAirEarth": 52,
+      "AetherAirWater": 53,
+      "AetherAirFire": 54,
+      "AetherWaterEarth": 55,
+      "AetherWaterAir": 56,
+      "AetherWaterFire": 57,
+      "AetherEarthWater": 58,
+      "AetherEarthAir": 59,
+      "AetherEarthFire": 60
+    }
+  }
+}

@@ -164,6 +164,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c95de5d585ca6b4dafeaaf091c3fdb4, type: 3}
+--- !u!114 &669755334 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1197396072271955494, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+  m_PrefabInstance: {fileID: 3945680005205697891}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2e9fda63ae149f9bf0d579b8dc9f53d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.OpenGrimoireButton
 --- !u!1001 &683155586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -906,6 +917,155 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3945680005205697891
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4797568313442610556, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_Name
+      value: GrimoireCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4797568313442610556, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659486126330021642, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659486126330021642, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659486126330021642, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659486126330021642, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659486126330021642, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659486126330021642, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659486126330021642, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659486126330021642, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659486126330021642, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659486126330021642, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659486126330021642, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659486126330021642, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659486126330021642, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659486126330021642, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659486126330021642, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659486126330021642, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659486126330021642, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659486126330021642, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659486126330021642, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659486126330021642, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6731398204704311497, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: close.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6731398204704311497, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: close.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6731398204704311497, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: close.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 669755334}
+    - target: {fileID: 6731398204704311497, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: close.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6731398204704311497, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: close.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnGrimoireCloseButtonClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 6731398204704311497, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: close.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Selania.Rework.Components.Grimoire.OpenGrimoireButton, Selania
+      objectReference: {fileID: 0}
+    - target: {fileID: 6731398204704311497, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: close.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613648562806579963, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: parentReference.TypeName
+      value: Selania.Rework.Components.MainSceneLifetimeScope
+      objectReference: {fileID: 0}
+    - target: {fileID: 7679026817889864182, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7679026817889864182, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7679026817889864182, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7679026817889864182, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
 --- !u!1001 &4894535478000212812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -975,4 +1135,5 @@ SceneRoots:
   - {fileID: 4894535478000212812}
   - {fileID: 683155586}
   - {fileID: 925919821}
+  - {fileID: 3945680005205697891}
   - {fileID: 1998640721}
