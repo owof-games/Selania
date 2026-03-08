@@ -22,9 +22,11 @@
     INCLUDE Code\Notifications.ink
   
     INCLUDE GamerModeMaterial\Settings.ink
+    INCLUDE GamerModeMaterial\Achievements.ink
     INCLUDE GamerModeMaterial\Carla\TutorialManagement.ink
     INCLUDE GamerModeMaterial\Carla\TutorialStorylets.ink
     INCLUDE GamerModeMaterial\Carla\Carla.ink
+
 
 //File dedicati alla gestione delle personagge
     INCLUDE CommonPNGElements\ScheduleFunctions.ink
