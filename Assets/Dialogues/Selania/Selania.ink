@@ -20,6 +20,7 @@
     INCLUDE Code\NestDialogue.ink
     INCLUDE Code\TextFunctions.ink
     INCLUDE Code\Notifications.ink
+    INCLUDE Code\Settings.ink
  
    
 
