@@ -21,7 +21,7 @@ LIST nest_speakersForEwWordTag = Influenced, Other
 	    ~ return "Orchestra"
 	    
 	- firstChar_ActualName == FlautoDolce:
-	    ~ return "Flauto Dolce"
+	    ~ return "Flauto"
 	    
 	- firstChar_ActualName == Ocarina:
 	    ~ return "Ocarina"
