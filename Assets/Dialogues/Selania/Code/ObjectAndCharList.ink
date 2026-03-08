@@ -39,4 +39,4 @@
     
     LIST listSounds = TrainNoiseComing, TrainNoiseGoingAway, BastonSound
     
-    LIST listColoredGlyphs  = fireGlyph, earthGlyph, airGlyph, waterGlyph, aetherGlyph
+    LIST listColoredGlyphs  = fireGlyph, earthGlyph, airGlyph, waterGlyph, aetherGlyph, aetherGlyph_off, airGlyph_off, fireGlyph_off, earthGlyph_off, waterGlyph_off

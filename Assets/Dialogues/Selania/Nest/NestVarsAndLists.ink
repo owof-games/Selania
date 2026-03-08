@@ -147,3 +147,40 @@ VAR nest_newSigilDiscovered = ()
     - Aether:
         ~ return glyph_thirdAether
 }
+
+
+
+
+=== nest_reactivateGliphs ===
+
+{
+    - contentsNest has fireGlyph_off:
+        ~ move_entity(fireGlyph, Nest)
+        ~ move_entity(fireGlyph_off, Safekeeping)
+}
+
+{
+    - contentsNest has waterGlyph_off:
+        ~ move_entity(waterGlyph, Nest)
+        ~ move_entity(waterGlyph_off, Safekeeping)
+}
+
+{
+    - contentsNest has airGlyph_off:
+        ~ move_entity(airGlyph, Nest)
+        ~ move_entity(airGlyph_off, Safekeeping)
+}
+
+{
+    - contentsNest has earthGlyph_off:
+        ~ move_entity(earthGlyph, Nest)
+        ~ move_entity(earthGlyph_off, Safekeeping)
+}
+
+{
+    - contentsNest has aetherGlyph_off:
+        ~ move_entity(aetherGlyph, Nest)
+        ~ move_entity(aetherGlyph_off, Safekeeping)
+}
+    
+->->
