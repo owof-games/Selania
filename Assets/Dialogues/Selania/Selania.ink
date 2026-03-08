@@ -21,11 +21,11 @@
     INCLUDE Code\TextFunctions.ink
     INCLUDE Code\Notifications.ink
   
-    INCLUDE GamerModeMaterial\Settings.ink
-    INCLUDE GamerModeMaterial\Achievements.ink
-    INCLUDE GamerModeMaterial\Carla\TutorialManagement.ink
-    INCLUDE GamerModeMaterial\Carla\TutorialStorylets.ink
-    INCLUDE GamerModeMaterial\Carla\Carla.ink
+    INCLUDE GamerOReaderModeMaterial\Settings.ink
+    INCLUDE GamerOReaderModeMaterial\Achievements.ink
+    INCLUDE GamerOReaderModeMaterial\Carla\TutorialManagement.ink
+    INCLUDE GamerOReaderModeMaterial\Carla\TutorialStorylets.ink
+    INCLUDE GamerOReaderModeMaterial\Carla\Carla.ink
 
 
 //File dedicati alla gestione delle personagge
