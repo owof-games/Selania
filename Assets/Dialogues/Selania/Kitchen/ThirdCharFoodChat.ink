@@ -39,8 +39,7 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
                 -> cooking_animations_on ->
                 -> third_theme
                 
-        TODO: risolvere questa parte
-        + .{third_char_main_storylets.six: Del bisogno di fare qualcosa che salvi il mondo.|<i>{player_name} deve parlare ancora con {charNameOne} per sbloccare questo tema.</i>}
+        + \ {third_char_main_storylets.six: Del bisogno di fare qualcosa che salvi il mondo.|<i>{player_name} deve parlare ancora con {charNameOne} per sbloccare questo tema.</i>}
             {
                 - third_char_main_storylets.six:
                     -> storage_glyphs(ThirdCharacter)->
@@ -51,7 +50,7 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
                     -> top
             }
         
-        + .{third_char_main_storylets.nine: Della tua creatività.|<i>{player_name} deve parlare ancora con {charNameOne} per sbloccare questo tema.</i>}
+        + \ {third_char_main_storylets.nine: Della tua creatività.|<i>{player_name} deve parlare ancora con {charNameOne} per sbloccare questo tema.</i>}
             {
             
                 - third_char_main_storylets.nine:
@@ -193,7 +192,7 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC, decreaseYes)->
                 Mmm.
             
-            + {charNameOne}, basta con "ha senso". Ha senso per voi, no?
+            +  \ {charNameOne}, basta con "ha senso". Ha senso per voi, no?
                 -> glyph_modifier_variation_management(ThirdCharacter, earthC, decreaseYes)->
                 Sì.
              

@@ -1137,7 +1137,7 @@
                 Anche se poi la compagnia a volte è davvero faticosa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Dovrei imparare a godermi il tempo con me.
              
-            + {charNameOne}, tu devi pensare meno e fare più casino.
+            +  \ {charNameOne}, tu devi pensare meno e fare più casino.
                     -> glyph_modifier_variation_management(FirstCharacter, earthC, decreaseYes)-> 
                 Guarda {player_name}, sarei strafelice se ci riuscissi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Ci ho provato anche con la terapia.

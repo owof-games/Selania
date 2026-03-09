@@ -404,7 +404,7 @@
                     -> glyph_modifier_variation_management(ThirdCharacter, earthC, decreaseYes)->
                 Forse quando non ci siamo?
                     
-            + {charNameTwo} mannaggia, non dare sempre ragione ai grandi!
+            +  \ {charNameTwo} mannaggia, non dare sempre ragione ai grandi!
                     -> glyph_modifier_variation_management(ThirdCharacter, fireC, decreaseYes)->
                 Non è mica facile!
                 

@@ -41,8 +41,7 @@
             + Parliamo di animali.
                     -> first_theme
 
-            TODO: risolvere questa parte
-            + .{second_char_main_storylets.six: Della scuola.|<i>{player_name} deve parlare ancora con {charNameTwo} per sbloccare questo tema.</i>}
+            + \ {second_char_main_storylets.six: Della scuola.|<i>{player_name} deve parlare ancora con {charNameTwo} per sbloccare questo tema.</i>}
                 {
                     - second_char_main_storylets.six:
                         -> storage_glyphs(SecondCharacter)->
@@ -53,7 +52,7 @@
                         -> top
                 }
             
-            +  .{second_char_main_storylets.eight: Delle bugie.|<i>{player_name} deve parlare ancora con {charNameTwo} per sbloccare questo tema.</i>}
+            + \ {second_char_main_storylets.eight: Delle bugie.|<i>{player_name} deve parlare ancora con {charNameTwo} per sbloccare questo tema.</i>}
                 {
                 
                     - second_char_main_storylets.eight:
@@ -109,7 +108,7 @@
                 E poi lui si è buttato in acqua.
                 E il gatto gli è stato sulla pancia, perché non sa nuotare.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
                
-            + {charNameTwo}: gli adulti devono imparare tanto dai bambini!
+            + \ {charNameTwo}: gli adulti devono imparare tanto dai bambini!
                 -> glyph_modifier_variation_management(SecondCharacter, earthC, decreaseYes)->
                 Si no boh.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Io voglio insegnare tante cose agli adulti.

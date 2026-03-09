@@ -39,8 +39,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 -> cooking_animations_on ->
                 -> first_theme
                 
-        TODO: risolvere questa parte
-        + .{first_char_main_storylets.six: Del bisogno di fare qualcosa che salvi il mondo.|<i>{player_name} deve parlare ancora con {charNameOne} per sbloccare questo tema.</i>}
+        + \ {first_char_main_storylets.six: Del bisogno di fare qualcosa che salvi il mondo.|<i>{player_name} deve parlare ancora con {charNameOne} per sbloccare questo tema.</i>}
             {
                 - first_char_main_storylets.six:
                     -> storage_glyphs(FirstCharacter)->
@@ -51,7 +50,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                     -> top
             }
         
-        + .{first_char_main_storylets.nine: Della tua creatività.|<i>{player_name} deve parlare ancora con {charNameOne} per sbloccare questo tema.</i>}
+        + \ {first_char_main_storylets.nine: Della tua creatività.|<i>{player_name} deve parlare ancora con {charNameOne} per sbloccare questo tema.</i>}
             {
             
                 - first_char_main_storylets.nine:
@@ -313,7 +312,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 Cioè: ti posso dare uno schiaffo per difendermi o per attaccarti.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 E sono due schiaffi proprio diversi, no?
             
-            + {charNameOne}, basta con "ha senso". Ha senso per voi, no?
+            + \ {charNameOne}, basta con "ha senso". Ha senso per voi, no?
                 -> glyph_modifier_variation_management(FirstCharacter, earthC, decreaseYes)->
                 Sì.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Ma a volte due cose con un senso ti servono, anche solo per capire dove stai andando.
