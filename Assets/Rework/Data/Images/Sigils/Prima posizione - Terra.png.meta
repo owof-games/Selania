@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4a5fe14433dd73b4492d45a8206644e2
+guid: 25acd29ce91b87748a28887d7ee452d5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2071543136968438700
-    second: Prima posizione -  Spirito_0
+      213: 2888413295913577959
+    second: Prima posizione - Terra_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Prima posizione -  Spirito_0
+      name: Prima posizione - Terra_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 80
-        width: 505
-        height: 380
+        x: 145
+        y: 20
+        width: 236
+        height: 417
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 45c09101e766043e0800000000000000
-      internalID: -2071543136968438700
+      spriteID: 7eda173d694b51820800000000000000
+      internalID: 2888413295913577959
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Prima posizione -  Spirito_0: -2071543136968438700
+      Prima posizione - Terra_0: 2888413295913577959
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

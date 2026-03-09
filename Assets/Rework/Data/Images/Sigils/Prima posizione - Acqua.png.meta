@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 8790554432ee95d4ca486bae93480ef3
+guid: 23e22e4fd5c0cee42b77ebc9e191b2d0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3033443525014255582
-    second: Prima posizione -  Fuoco_0
+      213: 6825483969315771252
+    second: Prima posizione - Acqua_0
+  - first:
+      213: 8452176757967812197
+    second: Prima posizione - Acqua_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Prima posizione -  Fuoco_0
+      name: Prima posizione - Acqua_0
       rect:
         serializedVersion: 2
-        x: 76
-        y: 0
-        width: 480
-        height: 397
+        x: 72
+        y: 230
+        width: 390
+        height: 222
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ed7feaa60d4f81a20800000000000000
-      internalID: 3033443525014255582
+      spriteID: 4739033d18df8be50800000000000000
+      internalID: 6825483969315771252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prima posizione - Acqua_1
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 57
+        width: 382
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 566fb75daf92c4570800000000000000
+      internalID: 8452176757967812197
       vertices: []
       indices: 
       edges: []
@@ -148,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Prima posizione -  Fuoco_0: 3033443525014255582
+      Prima posizione - Acqua_0: 6825483969315771252
+      Prima posizione - Acqua_1: 8452176757967812197
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

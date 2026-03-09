@@ -116,10 +116,10 @@ TextureImporter:
       name: Terza posizione - Spirito_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 50
-        width: 215
-        height: 192
+        x: 154
+        y: 541
+        width: 222
+        height: 198
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

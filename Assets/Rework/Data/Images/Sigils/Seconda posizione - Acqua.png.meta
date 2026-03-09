@@ -122,10 +122,10 @@ TextureImporter:
       name: Seconda posizione - Acqua_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 173
-        width: 304
-        height: 131
+        x: 118
+        y: 465
+        width: 324
+        height: 142
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,10 +144,10 @@ TextureImporter:
       name: Seconda posizione - Acqua_1
       rect:
         serializedVersion: 2
-        x: 72
-        y: 139
-        width: 59
-        height: 66
+        x: 165
+        y: 429
+        width: 67
+        height: 75
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,10 +166,10 @@ TextureImporter:
       name: Seconda posizione - Acqua_2
       rect:
         serializedVersion: 2
-        x: 37
-        y: 30
-        width: 279
-        height: 134
+        x: 128
+        y: 315
+        width: 298
+        height: 146
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

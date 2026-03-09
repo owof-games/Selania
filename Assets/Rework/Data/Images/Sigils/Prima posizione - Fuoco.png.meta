@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f9ce620b77f49ce4ba1d23d3d5da660f
+guid: 8790554432ee95d4ca486bae93480ef3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6634317788170240624
-    second: Terza posizione -  Terra_0
+      213: 8530602465299537153
+    second: Prima posizione - Fuoco_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Terza posizione -  Terra_0
+      name: Prima posizione - Fuoco_0
       rect:
         serializedVersion: 2
-        x: 44
-        y: 4
-        width: 119
-        height: 255
+        x: 74
+        y: 0
+        width: 486
+        height: 403
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 09dbe0d2f1b2ee3a0800000000000000
-      internalID: -6634317788170240624
+      spriteID: 10d1040ceb9c26670800000000000000
+      internalID: 8530602465299537153
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Terza posizione -  Terra_0: -6634317788170240624
+      Prima posizione - Fuoco_0: 8530602465299537153
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

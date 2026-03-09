@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d9dd32dac2fb05a449579b6f766497ae
+guid: 8660bf5d2a46db145a551e0a1e4e661b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2657718048805688135
-    second: Terza posizione -  Aria_0
+      213: -898664826923538245
+    second: Prima posizione - Aria_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Terza posizione -  Aria_0
+      name: Prima posizione - Aria_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 50
-        width: 193
-        height: 168
+        x: 82
+        y: 32
+        width: 418
+        height: 364
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7431534fb7c12e420800000000000000
-      internalID: 2657718048805688135
+      spriteID: bb8a51be91d4783f0800000000000000
+      internalID: -898664826923538245
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Terza posizione -  Aria_0: 2657718048805688135
+      Prima posizione - Aria_0: -898664826923538245
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

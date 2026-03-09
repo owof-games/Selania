@@ -116,10 +116,10 @@ TextureImporter:
       name: Seconda posizione - Aria_0
       rect:
         serializedVersion: 2
-        x: 31
-        y: 78
-        width: 313
-        height: 272
+        x: 131
+        y: 322
+        width: 320
+        height: 278
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

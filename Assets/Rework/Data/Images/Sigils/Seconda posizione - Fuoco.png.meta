@@ -116,10 +116,10 @@ TextureImporter:
       name: Seconda posizione - Fuoco_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 34
-        width: 364
-        height: 293
+        x: 106
+        y: 301
+        width: 370
+        height: 299
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8fe90d4daf7b8c942acdfc93077b6e70
+guid: 4a5fe14433dd73b4492d45a8206644e2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9053040016847699919
-    second: Terza posizione -  Fuoco_0
+      213: -2642666317929553392
+    second: Prima posizione - Spirito_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Terza posizione -  Fuoco_0
+      name: Prima posizione - Spirito_0
       rect:
         serializedVersion: 2
-        x: 31
-        y: 50
-        width: 195
-        height: 214
+        x: 0
+        y: 0
+        width: 511
+        height: 385
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 130856ad1142d5280800000000000000
-      internalID: -9053040016847699919
+      spriteID: 0126beb3cfc535bd0800000000000000
+      internalID: -2642666317929553392
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Terza posizione -  Fuoco_0: -9053040016847699919
+      Prima posizione - Spirito_0: -2642666317929553392
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

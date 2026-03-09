@@ -116,10 +116,10 @@ TextureImporter:
       name: Seconda posizione - Terra_0
       rect:
         serializedVersion: 2
-        x: 101
-        y: 1
-        width: 153
-        height: 332
+        x: 188
+        y: 279
+        width: 159
+        height: 338
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
