@@ -83,37 +83,37 @@
 
             
             - WaterFireEarth:
-                ~ return "nome parola"
+                ~ return "Alluvione"
  
             - WaterFireAether:
-                ~ return "nome parola"
+                ~ return "Diga"
                 
             - WaterFireAir:
-                ~ return "nome parola"
+                ~ return "Zattera"
  
             - WaterAirEarth:
-                ~ return "nome parola"
+                ~ return "Neve"
 
             - WaterAirAether:
-                ~ return "nome parola"
+                ~ return "Nebbia"
                 
             - WaterAirFire:
-                ~ return "nome parola"
+                ~ return "Grandine"
  
             - WaterEarthAether:
-                ~ return "nome parola"
+                ~ return "Pinna"
   
             - WaterEarthAir:
-                ~ return "nome parola"
+                ~ return "Vela"
  
             - WaterEarthFire:
-                ~ return "nome parola"
+                ~ return "Pontile"
  
             - WaterAetherEarth:
                 ~ return "nome parola"
   
             - WaterAetherAir:
-                ~ return "nome parola"
+                ~ return "Catino"
 
             - WaterAetherFire:
                 ~ return "nome parola"
