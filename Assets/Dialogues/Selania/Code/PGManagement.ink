@@ -56,6 +56,21 @@
     VAR player_air_third_char = 0.00
     VAR player_water_third_char = 0.00
     VAR player_fire_third_char = 0.00
+
+   //Scelte quarta pg
+    VAR player_aether_fourth_char = 0.00
+    VAR player_earth_fourth_char = 0.00
+    VAR player_air_fourth_char = 0.00
+    VAR player_water_fourth_char = 0.00
+    VAR player_fire_fourth_char = 0.00
+
+
+    //Scelte quinta pg
+    VAR player_aether_fifth_char = 0.00
+    VAR player_earth_fifth_char = 0.00
+    VAR player_air_fifth_char = 0.00
+    VAR player_water_fifth_char = 0.00
+    VAR player_fire_fifth_char = 0.00 
     
     
     
@@ -166,9 +181,9 @@
 
 
 
-=== function get_random_name()
-    ~ temp random_name = "{~ Alessio|Gianni|Matteo|Alessandro|Lorenzo|Diego|Tommaso|Riccardo|Leonardo|Gabriele|Edoardo|Samuele|Liam|Nathan|Noah|Enea|Cesare|Ivo|Arturo|Nevio|Ettore|Roberto|Valerio|Pierluigi|Gianmaria|Gianmarco|Maurizio|Emanuele|Niccolò|Nicola|Filippo|Santiago|Alberto|Corrado|Ernesto|Giuliano|Ivan|Juri|Lupo|Tancredi|Jacob|Micahel|Ethan|Joshua|Daniel|Aurelio|Mario|Stefano|Cristian|Carmine|Ciro|Corrado|Carlo|Cesare|Carlo|Dante|Dario|Davide|Damiano|Diego|Domenico|Dino|Eugenio|Flavio|Filippo|Fabio|Francesco|Gaetano|Giordano|Giovanni|Alex|Alexander|Luca|Jacopo|Milo|Cristiano|Thomas|Lucas|Joele|Massimo|Giosuè|Oliver|William|James|Henry|John|Ryan|Ethan|Gus|Logan|Nolan|Sean|Tyler|Ursula|Adowa|Amina|Fayola|Dara|Makena|Rashida|Zahra|Ashaki|Obioma|Terehasa|Zainabu|Busara|Dafina|Kamohelo|Mbhali|Aya|Mariam|Adama|Fatouma|Jeannette|Hong|Yu|Min|Xin|Bin|Cheng|Zhen|Eriko|Fujiko|Ikuyo|Keiko|Madoka|Natsumi|Rumiko|Ryo|Toyoko|Yumi|Yuki|Tamafune|Kaori|Chikako|Atsuko|Shaila|Ravi|Gita|Manju|Urmila|Sita|Nirmala|Savita|Kamal|Aadhya|Bimala|Chandra|Uma|Rita|Maura|Giulia|Francesca|Cecilia|Ilaria|Vittoria|Cinzia|Marisa|Antonia|Antonietta|Valeria|Maria|Olga|Tatyana|Natalya|Irina|Svetlana|Ekaterina|Cristina|Kristina|Emma|Jade|Louise|Chloé|Camille|Inès|Sarah|Ivy|Taylor|Sophia|Rosie|Poppy|Sienna|Karen|Ruby|Eva|Violet|Margot|Aurora|Elizabeth|Scarlett|Virginia|Atsushi|Dalai|Edoardo |Haoyu|Ming|Masao|Toshi|Song|Wei|Lang|Wei|Akio|Akihiro|Fumihiko|Bishamon|Chikayoshi|Daiichi|Fumihiro|Genjo|Hiromu|Mitsuo|Vyomesh|Vishwatma|Umachandra|Tarkesh|Sujan|Ranjeet|Mattia|Gabriele|Marco|Prajit|Nripendra|Kundan|Sergey|Aleksandr|Roman|Denis|Igor|Anton|Lev|Pavel|Kirill|Oleg|Stanislav|Antoine|Alexandre|Étienne|François|Henri|Louis|Olivier|Pierre|Vincent|Paul|Almira|Amalia|Charo|Carmen|Clarissa|Elena|Claudia|Estella|Zita|Zoe|Veronica|Felix|Jago|Jose|Jorde|Rodrigo|Sergio|Andrea|Harper|Dakota|Blue|Elliot|Kraken|Charlie|Avery|Jordan |Felice|Noah|Celeste|Fiore|Diamante|Evan|Leslie|Lago|Fiume|Casey|Harper|Sidney|Gail|Syb|Max|Nicky|Sasha|Carmine|Beatrice|Asad|Danilo|Sissi|Javi|Salvo|Sven|Jacopo|Letizia|Ren|Pablo|Guido|Arianna|Simão|Nicolò|Ivana|Lorena|Benedetta|Loris|Tosca|Federica|Fausto|Jay|Mauro|Adriano|Adriene|Romeo|Romi|Simone|Alexias|Alexis|Salvatore|{firstChar_storyStatus == story_storyEnded:Chitarra}|{firstChar_storyStatus == story_storyEnded:Triangolo}|{firstChar_storyStatus == story_storyEnded:Ocarina}|{firstChar_storyStatus == story_storyEnded:Orchestra}|{firstChar_storyStatus == story_storyEnded:Flauto}|{firstChar_storyStatus == story_storyEnded:Violino}|{secondChar_storyStatus == story_storyEnded:Riccio}|{secondChar_storyStatus == story_storyEnded:Grizzly}|{secondChar_storyStatus == story_storyEnded:Lupo}|{secondChar_storyStatus == story_storyEnded:Delfino}|{secondChar_storyStatus == story_storyEnded:Capibara}|{secondChar_storyStatus == story_storyEnded:Corvo}}"
-    ~ return random_name
+        === function get_random_name()
+            ~ temp random_name = "{~ Alessio|Gianni|Matteo|Alessandro|Lorenzo|Diego|Tommaso|Riccardo|Leonardo|Gabriele|Edoardo|Samuele|Liam|Nathan|Noah|Enea|Cesare|Ivo|Arturo|Nevio|Ettore|Roberto|Valerio|Pierluigi|Gianmaria|Gianmarco|Maurizio|Emanuele|Niccolò|Nicola|Filippo|Santiago|Alberto|Corrado|Ernesto|Giuliano|Ivan|Juri|Lupo|Tancredi|Jacob|Micahel|Ethan|Joshua|Daniel|Aurelio|Mario|Stefano|Cristian|Carmine|Ciro|Corrado|Carlo|Cesare|Carlo|Dante|Dario|Davide|Damiano|Diego|Domenico|Dino|Eugenio|Flavio|Filippo|Fabio|Francesco|Gaetano|Giordano|Giovanni|Alex|Alexander|Luca|Jacopo|Milo|Cristiano|Thomas|Lucas|Joele|Massimo|Giosuè|Oliver|William|James|Henry|John|Ryan|Ethan|Gus|Logan|Nolan|Sean|Tyler|Ursula|Adowa|Amina|Fayola|Dara|Makena|Rashida|Zahra|Ashaki|Obioma|Terehasa|Zainabu|Busara|Dafina|Kamohelo|Mbhali|Aya|Mariam|Adama|Fatouma|Jeannette|Hong|Yu|Min|Xin|Bin|Cheng|Zhen|Eriko|Fujiko|Ikuyo|Keiko|Madoka|Natsumi|Rumiko|Ryo|Toyoko|Yumi|Yuki|Tamafune|Kaori|Chikako|Atsuko|Shaila|Ravi|Gita|Manju|Urmila|Sita|Nirmala|Savita|Kamal|Aadhya|Bimala|Chandra|Uma|Rita|Maura|Giulia|Francesca|Cecilia|Ilaria|Vittoria|Cinzia|Marisa|Antonia|Antonietta|Valeria|Maria|Olga|Tatyana|Natalya|Irina|Svetlana|Ekaterina|Cristina|Kristina|Emma|Jade|Louise|Chloé|Camille|Inès|Sarah|Ivy|Taylor|Sophia|Rosie|Poppy|Sienna|Karen|Ruby|Eva|Violet|Margot|Aurora|Elizabeth|Scarlett|Virginia|Atsushi|Dalai|Edoardo |Haoyu|Ming|Masao|Toshi|Song|Wei|Lang|Wei|Akio|Akihiro|Fumihiko|Bishamon|Chikayoshi|Daiichi|Fumihiro|Genjo|Hiromu|Mitsuo|Vyomesh|Vishwatma|Umachandra|Tarkesh|Sujan|Ranjeet|Mattia|Gabriele|Marco|Prajit|Nripendra|Kundan|Sergey|Aleksandr|Roman|Denis|Igor|Anton|Lev|Pavel|Kirill|Oleg|Stanislav|Antoine|Alexandre|Étienne|François|Henri|Louis|Olivier|Pierre|Vincent|Paul|Almira|Amalia|Charo|Carmen|Clarissa|Elena|Claudia|Estella|Zita|Zoe|Veronica|Felix|Jago|Jose|Jorde|Rodrigo|Sergio|Andrea|Harper|Dakota|Blue|Elliot|Kraken|Charlie|Avery|Jordan |Felice|Noah|Celeste|Fiore|Diamante|Evan|Leslie|Lago|Fiume|Casey|Harper|Sidney|Gail|Syb|Max|Nicky|Sasha|Carmine|Beatrice|Asad|Danilo|Sissi|Javi|Salvo|Sven|Jacopo|Letizia|Ren|Pablo|Guido|Arianna|Simão|Nicolò|Ivana|Lorena|Benedetta|Loris|Tosca|Federica|Fausto|Jay|Mauro|Adriano|Adriene|Romeo|Romi|Simone|Alexias|Alexis|Salvatore|{firstChar_storyStatus == story_storyEnded:Chitarra}|{firstChar_storyStatus == story_storyEnded:Triangolo}|{firstChar_storyStatus == story_storyEnded:Ocarina}|{firstChar_storyStatus == story_storyEnded:Orchestra}|{firstChar_storyStatus == story_storyEnded:Flauto}|{firstChar_storyStatus == story_storyEnded:Violino}|{secondChar_storyStatus == story_storyEnded:Riccio}|{secondChar_storyStatus == story_storyEnded:Grizzly}|{secondChar_storyStatus == story_storyEnded:Lupo}|{secondChar_storyStatus == story_storyEnded:Delfino}|{secondChar_storyStatus == story_storyEnded:Capibara}|{secondChar_storyStatus == story_storyEnded:Corvo}}"
+            ~ return random_name
 
 
 
@@ -227,6 +242,29 @@
 }
 
 
+
+=== function png_random_sigils_opener()
+{debug: passo per png_random_sigils_opener}
+//L'idea è: valuto i tre glifi meno usati (togliendo da una lista i due più usati), e apro un glifo random per ognuno di loro.
+//La realtà: è un gran casino e mi rompo i coglioni.
+//Quello che facciamo è per tre volte prendere in modo randomico un sigillo dalla lista di quelli disponibili, spostarlo nei discovered e bona.
+
+    //Lista temporanea == lista di tutti i sigilli del gioco
+    ~ temp allSigils = LIST_ALL(glyph_allSigils)
+    //A cui tolgo poi quelli già scoperti
+    ~ allSigils -= glyph_discoveredSigils
+    //Prendo un sigillo randomico
+    ~ temp chosenSigil = LIST_RANDOM(allSigils)
+    //Aggiungo il sigillo a quelli scoperti
+    ~ glyph_discoveredSigils += chosenSigil
+    //Aggiungo il sigillo come "nuovo", per le notifiche
+    ~ nest_newSigilDiscovered += chosenSigil
+
+
+
+
+
+
 === function tree_advance_management(charES)
 //resetto player_orderGrowingTreeUpdater 
 {debug: <i>Passo per PG_advance_management. Il valore di charES è {charES}.}
@@ -279,10 +317,24 @@
 			~ temp_PGFire= player_fire_third_char
 			~ temp_PGEarth = player_earth_third_char
 			~ temp_PGAether = player_aether_third_char
+
+        - charES == FourthCharacter:
+			~ temp_PGWater = player_water_fourth_char
+			~ temp_PGAir = player_air_fourth_char
+			~ temp_PGFire= player_fire_fourth_char
+			~ temp_PGEarth = player_earth_fourth_char
+			~ temp_PGAether = player_aether_fourth_char
+
+        - charES == ThirdCharacter:
+			~ temp_PGWater = player_water_fifth_char
+			~ temp_PGAir = player_air_fifth_char
+			~ temp_PGFire= player_fire_fifth_char
+			~ temp_PGEarth = player_earth_fifth_char
+			~ temp_PGAether = player_aether_fifth_char       
 			
 		}
 
-
+//TODO: risolvere codice per problema mixed status
 //E poi confronto quella che è la storia della personaggia, la progressione delle sue scelte: di fatto per ora basta che non ci siano pareggi tra colori per evitare il marrone. A quel punto emerge il colore dominante.
     {
         - (temp_PGWater > temp_PGAir) && (temp_PGWater > temp_PGFire) && (temp_PGWater > temp_PGEarth) && (temp_PGWater > temp_PGAether):
@@ -297,14 +349,24 @@
                     ~ player_secondStepStatus = ()
                     ~ player_secondStepStatus += waterStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}    
-                // - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
-                //     ~ player_thirdStepStatus += waterStatus
-                // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
-                //     ~ player_fourthStepStatus += waterStatus
-                // - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
-                //     ~ player_fifthStepStatus += waterStatus
-                      - else:
-                        ERRORE
+                
+                - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
+                    ~ player_secondStepStatus = ()
+                    ~ player_secondStepStatus += waterStatus
+                    {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}   
+                
+                - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
+                    ~ player_secondStepStatus = ()
+                    ~ player_secondStepStatus += waterStatus
+                    {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}   
+                
+                - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
+                    ~ player_secondStepStatus = ()
+                    ~ player_secondStepStatus += waterStatus
+                    {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}   
+                
+                - else:
+                    ERRORE
             }
         
         - (temp_PGAir > temp_PGWater) && (temp_PGAir > temp_PGFire) && (temp_PGAir > temp_PGEarth) && (temp_PGAir > temp_PGAether):
@@ -319,14 +381,23 @@
                     ~ player_secondStepStatus += airStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
                 
-                // - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
-                //     ~ player_thirdStepStatus += airStatus
-                // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
-                //     ~ player_fourthStepStatus += airStatus
-                // - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
-                //     ~ player_fifthStepStatus += airStatus
-                      - else:
-                        ERRORE
+                - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
+                    ~ player_secondStepStatus = ()
+                    ~ player_secondStepStatus += airStatus
+                    {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
+
+                - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
+                    ~ player_secondStepStatus = ()
+                    ~ player_secondStepStatus += airStatus
+                    {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
+
+                - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
+                    ~ player_secondStepStatus = ()
+                    ~ player_secondStepStatus += airStatus
+                    {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
+
+                - else:
+                    ERRORE
             }        
         
         - (temp_PGFire> temp_PGWater) && (temp_PGFire> temp_PGAir) && (temp_PGFire> temp_PGEarth) && (temp_PGFire> temp_PGAether):
@@ -341,14 +412,23 @@
                     ~ player_secondStepStatus += fireStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
                 
-                // - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
-                //     ~ player_thirdStepStatus += fireStatus
-                // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
-                //     ~ player_fourthStepStatus += fireStatus
-                // - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
-                //     ~ player_fifthStepStatus += fireStatus
-                     - else:
-                        ERRORE
+                - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
+                    ~ player_firstStepStatus = ()
+                    ~ player_firstStepStatus += fireStatus
+                    {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
+
+                - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
+                    ~ player_firstStepStatus = ()
+                    ~ player_firstStepStatus += fireStatus
+                    {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
+
+                - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
+                    ~ player_firstStepStatus = ()
+                    ~ player_firstStepStatus += fireStatus
+                    {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
+
+                - else:
+                    ERRORE
             }    
         
         - (temp_PGEarth > temp_PGWater) && (temp_PGEarth > temp_PGAir) && (temp_PGEarth > temp_PGFire) && (temp_PGEarth > temp_PGAether):
@@ -363,13 +443,22 @@
                     ~ player_secondStepStatus += earthStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
                 
-                // - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
-                //     ~ player_thirdStepStatus += earthStatus
-                // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
-                //     ~ player_fourthStepStatus += earthStatus
-                // - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
-                //     ~ player_fifthStepStatus += earthStatus
-                     - else:
+                - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
+                     ~ player_firstStepStatus = ()
+                    ~ player_firstStepStatus += earthStatus
+                    {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
+                
+                - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
+                     ~ player_firstStepStatus = ()
+                    ~ player_firstStepStatus += earthStatus
+                    {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
+                
+                - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
+                     ~ player_firstStepStatus = ()
+                    ~ player_firstStepStatus += earthStatus
+                    {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
+                
+                - else:
                         ERRORE
             }    
         
@@ -385,14 +474,20 @@
                     ~ player_secondStepStatus += aetherStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
                 
-                // - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
-                //     ~ player_thirdStepStatus += aetherStatus
-                // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
-                //     ~ player_fourthStepStatus += aetherStatus
-                // - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
-                //     ~ player_fifthStepStatus += aetherStatus
-                     - else:
-                        ERRORE
+                - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
+                    ~ player_firstStepStatus = ()
+                    ~ player_firstStepStatus += aetherStatus
+                
+                - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
+                    ~ player_firstStepStatus = ()
+                    ~ player_firstStepStatus += aetherStatus
+                
+                - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
+                    ~ player_firstStepStatus = ()
+                    ~ player_firstStepStatus += aetherStatus
+                
+                - else:
+                    ERRORE
             }
         
         // - else:
