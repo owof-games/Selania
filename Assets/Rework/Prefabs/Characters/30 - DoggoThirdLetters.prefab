@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1131149654844477419, guid: 0f1a688640c53d74893c657fe4343781, type: 3}
       propertyPath: m_Name
-      value: 30 - DoggoFirstLetters
+      value: 30 - DoggoThirdLetters
       objectReference: {fileID: 0}
     - target: {fileID: 2889362861158594370, guid: 0f1a688640c53d74893c657fe4343781, type: 3}
       propertyPath: choiceText
-      value: DoggoFirstLetters
+      value: DoggoThirdLetters
       objectReference: {fileID: 0}
     - target: {fileID: 4151842594449095391, guid: 0f1a688640c53d74893c657fe4343781, type: 3}
       propertyPath: m_LocalPosition.x
@@ -719,7 +719,7 @@ PrefabInstance:
     - target: {fileID: 7215676493785075422, guid: 0f1a688640c53d74893c657fe4343781, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: 40316ab544c258e4faa314c93d14fde1, type: 2}
+      objectReference: {fileID: 22100000, guid: 9038b29249da2984fb3626f4f6411091, type: 2}
     - target: {fileID: 7465546172250548277, guid: 0f1a688640c53d74893c657fe4343781, type: 3}
       propertyPath: m_Size.x
       value: 166
@@ -731,18 +731,14 @@ PrefabInstance:
     - target: {fileID: 7465546172250548277, guid: 0f1a688640c53d74893c657fe4343781, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6d20c76778785ae4c97f44f77d11ce06, type: 3}
-    - target: {fileID: 7465546172250548277, guid: 0f1a688640c53d74893c657fe4343781, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: ad912fd379b8aa14fb2cb203201bb032, type: 3}
     - target: {fileID: 7465546172250548277, guid: 0f1a688640c53d74893c657fe4343781, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8235661390823931172, guid: 0f1a688640c53d74893c657fe4343781, type: 3}
       propertyPath: inkName
-      value: DoggoFirstLetters
+      value: DoggoThirdLetters
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
