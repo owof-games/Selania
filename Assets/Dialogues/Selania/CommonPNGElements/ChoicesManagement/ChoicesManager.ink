@@ -502,7 +502,7 @@ VAR glyph_decreaseSigil = true
                     ~ firstCharRelCalculator ++
             }   
         {debug: dopo i conti fatti, il valore di firstCharRelCalculator è {firstCharRelCalculator}.}
-        
+
             {
                 - firstCharRelCalculator > 0:
                     ~ firstChar_relationshipReaction = positive
@@ -523,6 +523,65 @@ VAR glyph_decreaseSigil = true
 
 === function secondChar_relationship_variation()
 ~ temp secondCharRelCalculator = 0
+    //Step uno: calcolo qual è il colore dominante.
+    {
+        - (secondChar_aether > secondChar_water) && (secondChar_aether > secondChar_fire) && (secondChar_aether > secondChar_air) && (secondChar_aether > secondChar_earth):
+                ~ secondChar_relationshipActualDominantGlyphValue = secondChar_aether
+                ~ secondChar_relationshipActualDominantGlyph  = aetherC
+    
+        - (secondChar_water > secondChar_aether) && (secondChar_water > secondChar_fire) && (secondChar_water > secondChar_air) && (secondChar_water > secondChar_earth):
+                ~ secondChar_relationshipActualDominantGlyphValue = secondChar_water
+                ~ secondChar_relationshipActualDominantGlyph  = waterC
+           	
+        
+        - (secondChar_fire > secondChar_water) && (secondChar_fire > secondChar_aether) && (secondChar_fire > secondChar_air) && (secondChar_fire > secondChar_earth):
+                ~ secondChar_relationshipActualDominantGlyphValue = secondChar_fire
+                ~ secondChar_relationshipActualDominantGlyph  = fireC
+         
+        
+        - (secondChar_earth > secondChar_water) && (secondChar_earth > secondChar_aether) && (secondChar_earth > secondChar_air) && (secondChar_earth > secondChar_fire):
+                ~ secondChar_relationshipActualDominantGlyphValue = secondChar_earth
+                ~ secondChar_relationshipActualDominantGlyph  = earthC
+          
+        
+        - (secondChar_air > secondChar_water) && (secondChar_air > secondChar_aether) && (secondChar_air > secondChar_earth) && (secondChar_air > secondChar_fire):
+                ~ secondChar_relationshipActualDominantGlyphValue = secondChar_air
+                ~ secondChar_relationshipActualDominantGlyph  = airC
+              
+    }
+
+
+
+//Step due: calcolo il risultato    
+    {
+        
+        - secondChar_relationshipActualDominantGlyph == secondChar_relationshipLastDominantGlyph:
+            {
+                //Se non cambia glifo dominante ma aumenta il valore, cosa buona
+                -secondChar_relationshipActualDominantGlyphValue > secondChar_relationshipLastDominantGlyphValue:
+                        ~ secondCharRelCalculator ++
+                
+                //Se non cambia glifo dominante ma diminuisce il valore, cosa cattiva
+                -secondChar_relationshipActualDominantGlyphValue < secondChar_relationshipLastDominantGlyphValue:
+                        ~ secondCharRelCalculator --        
+            }
+        //Se cambia glifo dominante, cosa brutta    
+        - secondChar_relationshipActualDominantGlyph != secondChar_relationshipLastDominantGlyph:
+                ~ secondCharRelCalculator --
+        
+        //Eccezione con la prima scelta
+        - secondChar_relationshipLastDominantGlyph == ():
+            ~ secondCharRelCalculator ++
+        
+        //Il resto è neutro        
+
+    }
+
+    //Aggiorno i valori di tracciamento
+    ~ secondChar_relationshipLastDominantGlyphValue = secondChar_relationshipActualDominantGlyphValue
+    ~ secondChar_relationshipLastDominantGlyph = secondChar_relationshipActualDominantGlyph
+
+    //E poi le reazioni
         {
             -secondCharRelCalculator > 0:
                 ~ secondChar_relationshipReaction = positive
