@@ -79,9 +79,11 @@
         ~ move_entity(Franco, Pond)
 }      
 
-//Spostiamo anche il letto in camera
-~ move_entity(BedClosingGame, Bedroom)
-
+//Spostiamo anche il letto in camera, se non siamo in debug stocastico
+{
+    - debug_stochastic == false:
+        ~ move_entity(BedClosingGame, Bedroom)
+}
 ->->
 
 
