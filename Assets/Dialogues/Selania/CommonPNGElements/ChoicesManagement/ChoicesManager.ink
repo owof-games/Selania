@@ -547,6 +547,12 @@ VAR glyph_decreaseSigil = true
         - (secondChar_air > secondChar_water) && (secondChar_air > secondChar_aether) && (secondChar_air > secondChar_earth) && (secondChar_air > secondChar_fire):
                 ~ secondChar_relationshipActualDominantGlyphValue = secondChar_air
                 ~ secondChar_relationshipActualDominantGlyph  = airC
+
+        - else:
+            //In caso di pareggio, per ora la soluzione è che comunque vada a registrare l'ultimo dominante e il suo valore come quello attuale. L'idea è che il pareggio debba essere per forza temporaneo: nessuna scelta genera un valore di incremento o decremento uguale per due glifi diversi, e quindi la volta successiva comunque riemergerà la "rottura" dell'equilibro.
+            ~ secondChar_relationshipLastDominantGlyphValue = secondChar_relationshipActualDominantGlyphValue
+            ~ secondChar_relationshipLastDominantGlyph = secondChar_relationshipActualDominantGlyph
+  
               
     }
 
