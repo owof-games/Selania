@@ -5,79 +5,79 @@
     {wordValue:       
             
             - FireAirWater: 
-                ~ return "nome parola"
+                ~ return "Trottola"
             
             - FireAirEarth: 
-                ~ return "nome parola"
+                ~ return "Dado"
                 
             - FireAirAether: 
-                ~ return "nome parola"
+                ~ return "Corda"
    
             - FireWaterEarth: 
-                ~ return "nome parola"
+                ~ return "Catena"
  
             - FireWaterAether: 
-                ~ return "nome parola"
+                ~ return "Moschettone"
                 
             - FireWaterAir: 
-                ~ return "fire-water-air"
+                ~ return "Soglia"
 
             - FireEarthWater: 
-                ~ return "nome parola"
+                ~ return "Chiodo"
  
             - FireEarthAether: 
-                ~ return "nome parola"
+                ~ return "Uncinetto"
    
             - FireEarthAir: 
-                ~ return "nome parola"
+                ~ return "Scalpello"
     
             - FireAetherAir:
-                ~ return "nome parola"
+                ~ return "Griglia"
                 
             - FireAetherEarth:
-                ~ return "nome parola"
+                ~ return "Traguardo"
                 
             - FireAetherWater:
-                ~ return "nome parola"
+                ~ return "Bussola"
       
         
         
         
             - AirFireEarth:
-                ~ return "nome parola"
+                ~ return "Mestolo"
   
             - AirFireAether:
-                ~ return "nome parola"
+                ~ return "Setaccio"
                 
             - AirFireWater:
-                ~ return "nome parola"
+                ~ return "Tagliere"
                 
             - AirWaterEarth:
-                ~ return "nome parola"
+                ~ return "Macchia"
 
             - AirWaterAether:
-                ~ return "nome parola"
+                ~ return "Linea"
    
             - AirWaterFire:
-                ~ return "nome parola"
+                ~ return "Punto"
   
             - AirEarthAether:
-                ~ return "nome parola"
+                ~ return "Registro"
   
             - AirEarthWater:
-                ~ return "nome parola"
+                ~ return "Diario"
       
             - AirEarthFire:
-                ~ return "nome parola"
+                ~ return "Agenda"
             
             - AirAetherEarth:
-                ~ return "nome parola"
+                ~ return "Vassoio"
             
             - AirAetherWater:
-                ~ return "nome parola"
+                ~ return "Caraffa"
 
             - AirAetherFire:
-                ~ return "nome parola"
+                ~ return "Macina"
                 
                 
 
@@ -110,89 +110,89 @@
                 ~ return "Pontile"
  
             - WaterAetherEarth:
-                ~ return "nome parola"
+                ~ return "Pozzo"
   
             - WaterAetherAir:
                 ~ return "Catino"
 
             - WaterAetherFire:
-                ~ return "nome parola"
+                ~ return "Barile"
   
                 
             
             - EarthFireAether:
-                ~ return "nome parola"
+                ~ return "Seme"
                 
             - EarthFireWater:
-                ~ return "nome parola"
+                ~ return "Polpa"
 
             - EarthFireAir:
-                ~ return "nome parola"
+                ~ return "Buccia"
   
             - EarthAirAether:
-                ~ return "nome parola"
+                ~ return "Polline"
   
             - EarthAirWater:
-                ~ return "nome parola"
+                ~ return "Gemma"
+            
+            - EarthAirFire:
+                ~ return "Ghianda"
  
             - EarthWaterAether:
-                ~ return "nome parola"
+                ~ return "Floema"
  
             - EarthWaterAir:
-                ~ return "nome parola"
+                ~ return "Corteccia"
   
             - EarthWaterFire:
-                ~ return "nome parola"
+                ~ return "Resina"
    
-            - EarthAirFire:
-                ~ return "nome parola"
-  
             - EarthAetherWater:
-                ~ return "nome parola"
+                ~ return "Zolla"
                 
             - EarthAetherAir:
-                ~ return "nome parola"
+                ~ return "Apice"
                 
             - EarthAetherFire:
-                ~ return "nome parola"
+                ~ return "Fittone"
                 
                 
             
             - AetherFireEarth:
-                ~ return "nome parola"
+                ~ return "Lama"
 
             - AetherFireWater:
-                ~ return "nome parola"
+                ~ return "Punta"
                 
             - AetherFireAir:
-                ~ return "nome parola"
+                ~ return "Dorso"
  
             - AetherAirEarth:
-                ~ return "nome parola"
+                ~ return "Spago"
     
             - AetherAirWater:
-                ~ return "nome parola"
+                ~ return "Fumo"
    
             - AetherAirFire:
-                ~ return "nome parola"
+                ~ return "Cenere"
   
             - AetherWaterEarth:
-                ~ return "nome parola"
+                ~ return "Goccia"
   
             - AetherWaterAir:
-                ~ return "nome parola"
+                ~ return "Crepa"
   
             - AetherWaterFire:
-                ~ return "nome parola"
+                ~ return "Fondo"
   
             - AetherEarthWater:
-                ~ return "nome parola"
+                ~ return "Altare"
    
             - AetherEarthAir:
-                ~ return "nome parola"
+                ~ return "Campanella"
 
             - AetherEarthFire:
-                ~ return "nome parola"
+                ~ return "Arazzo"
    
             
             -else: Traduzione colore parola {glyph_actualActiveSigil} non trovato!
