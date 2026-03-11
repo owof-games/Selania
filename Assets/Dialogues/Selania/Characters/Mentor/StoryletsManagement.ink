@@ -164,7 +164,7 @@
 
      //Commenti a situazioni, eventi o altro.
         //Crescita strega.
-        - witch_feedback.first_story_ended_check && not growing_witch_storylet:
+        - player_accessiblePlaces has Dump && not witch_intro && not growing_witch_storylet:
             -> growing_witch_storylet
 
         //Commento sul cane    
