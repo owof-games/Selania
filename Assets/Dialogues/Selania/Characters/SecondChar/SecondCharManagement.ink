@@ -18,8 +18,15 @@
     //Questo lo usiamo per verificare se il valore dell'ultimo glifo è variato. LAST: dato aggiornato dopo la scelta. Actual: dato controllato durante la scelta.
     VAR secondChar_relationshipLastDominantGlyph = ()
     VAR secondChar_relationshipLastDominantGlyphValue = 0
+    VAR secondChar_relationshipLastSecondDominantGlyph = ()
+    VAR secondChar_relationshipLastSecondDominantGlyphValue = 0
+
     VAR secondChar_relationshipActualDominantGlyph = ()
     VAR secondChar_relationshipActualDominantGlyphValue = 0
+     VAR secondChar_relationshipActualSecondDominantGlyph = ()
+    VAR secondChar_relationshipActualSecondDominantGlyphValue = 0
+
+    VAR secondChar_relationshipTrackingChoise = ()
 
 //Valori per definire l'esito del nome
 //come minimo, otteniamo 20% (prendo esattamente la stessa quantità di risposte per ogni colore)

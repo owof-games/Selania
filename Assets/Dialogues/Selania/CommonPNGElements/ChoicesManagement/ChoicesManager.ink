@@ -44,18 +44,23 @@ VAR glyph_decreaseSigil = true
                     {GlyphC:
                             -fireC:
                                 ~ player_fire_second_char ++
+                                ~ secondChar_relationshipTrackingChoise = fireC
                         
                             -earthC:
                                 ~ player_earth_second_char ++
+                                ~ secondChar_relationshipTrackingChoise = earthC
                             
                             -airC:
                                 ~ player_air_second_char ++
+                                ~ secondChar_relationshipTrackingChoise = airC
                             
                             -waterC:
-                                ~ player_water_second_char ++   
+                                ~ player_water_second_char ++ 
+                                ~ secondChar_relationshipTrackingChoise = waterC
                             
                             -aetherC:
                                 ~ player_aether_second_char ++
+                                ~ secondChar_relationshipTrackingChoise = aetherC
                         }
             
             - PNG == ThirdCharacter:
@@ -550,9 +555,33 @@ VAR glyph_decreaseSigil = true
 
         - else:
             //In caso di pareggio, per ora la soluzione è che comunque vada a registrare l'ultimo dominante e il suo valore come quello attuale. L'idea è che il pareggio debba essere per forza temporaneo: nessuna scelta genera un valore di incremento o decremento uguale per due glifi diversi, e quindi la volta successiva comunque riemergerà la "rottura" dell'equilibro.
-            ~ secondChar_relationshipLastDominantGlyphValue = secondChar_relationshipActualDominantGlyphValue
-            ~ secondChar_relationshipLastDominantGlyph = secondChar_relationshipActualDominantGlyph
-  
+            //questa cosa crea due problemi: se faccio all'inizio cinque scelte diverse, se vado avanti a due colori dominanti.
+            {
+                - secondChar_relationshipLastDominantGlyph == 1.00:
+                //Risolto il problema dell'inizio, ma non quelli successivi
+                    {
+                        - secondChar_relationshipTrackingChoise == aetherC:
+                            ~ secondChar_relationshipActualDominantGlyphValue = secondChar_aether
+                            ~ secondChar_relationshipActualDominantGlyph  = aetherC
+                        - secondChar_relationshipTrackingChoise == waterC:
+                             ~ secondChar_relationshipActualDominantGlyphValue = secondChar_water
+                            ~ secondChar_relationshipActualDominantGlyph  = waterC
+                        - secondChar_relationshipTrackingChoise == fireC:
+                            ~ secondChar_relationshipActualDominantGlyphValue = secondChar_fire
+                            ~ secondChar_relationshipActualDominantGlyph  = fireC
+                        - secondChar_relationshipTrackingChoise == earthC:
+                            ~ secondChar_relationshipActualDominantGlyphValue = secondChar_earth
+                            ~ secondChar_relationshipActualDominantGlyph  = earthC
+                        - secondChar_relationshipTrackingChoise == airC:
+                            ~ secondChar_relationshipActualDominantGlyphValue = secondChar_air
+                            ~ secondChar_relationshipActualDominantGlyph  = airC
+                    }
+
+                - else:
+                    ~ secondChar_relationshipLastDominantGlyphValue = secondChar_relationshipActualDominantGlyphValue
+                    ~ secondChar_relationshipLastDominantGlyph = secondChar_relationshipActualDominantGlyph
+            }
+            
               
     }
 
@@ -564,20 +593,23 @@ VAR glyph_decreaseSigil = true
         - secondChar_relationshipActualDominantGlyph == secondChar_relationshipLastDominantGlyph:
             {
                 //Se non cambia glifo dominante ma aumenta il valore, cosa buona
-                -secondChar_relationshipActualDominantGlyphValue > secondChar_relationshipLastDominantGlyphValue:
+                -secondChar_relationshipActualDominantGlyphValue >= secondChar_relationshipLastDominantGlyphValue:
                         ~ secondCharRelCalculator ++
                 
                 //Se non cambia glifo dominante ma diminuisce il valore, cosa cattiva
                 -secondChar_relationshipActualDominantGlyphValue < secondChar_relationshipLastDominantGlyphValue:
                         ~ secondCharRelCalculator --        
             }
-        //Se cambia glifo dominante, cosa brutta    
-        - secondChar_relationshipActualDominantGlyph != secondChar_relationshipLastDominantGlyph:
-                ~ secondCharRelCalculator --
         
         //Eccezione con la prima scelta
         - secondChar_relationshipLastDominantGlyph == ():
             ~ secondCharRelCalculator ++
+        
+        //Se cambia glifo dominante, cosa brutta    
+        - secondChar_relationshipActualDominantGlyph != secondChar_relationshipLastDominantGlyph:
+                ~ secondCharRelCalculator --
+        
+
         
         //Il resto è neutro        
 
