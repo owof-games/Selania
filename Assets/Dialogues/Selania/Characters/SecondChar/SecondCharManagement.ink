@@ -13,6 +13,8 @@
 //Tracciamento della relazione
     VAR secondChar_relationshipStatus = 0
     VAR secondChar_relationshipGoodPercentage = 66.00
+    VAR secondChar_relationshipIndicator = 0
+    VAR secondChar_relationshipReaction = neutral
 
 //Valori per definire l'esito del nome
 //come minimo, otteniamo 20% (prendo esattamente la stessa quantità di risposte per ogni colore)

@@ -26,8 +26,8 @@
     INCLUDE GamerOReaderModeMaterial\Carla\TutorialManagement.ink
     INCLUDE GamerOReaderModeMaterial\Carla\TutorialStorylets.ink
     INCLUDE GamerOReaderModeMaterial\Carla\Carla.ink
-
-
+    INCLUDE GamerOReaderModeMaterial\VariablesAndFunctions.ink
+    
 //File dedicati alla gestione delle personagge
     INCLUDE CommonPNGElements\ScheduleFunctions.ink
     INCLUDE CommonPNGElements\InkManagement.ink

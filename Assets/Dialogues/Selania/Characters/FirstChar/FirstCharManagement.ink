@@ -18,7 +18,13 @@
     VAR firstChar_delay = 2
 
 //Tracciamento della relazione
+    //Status = chiamato da cucina e prima della riscrittura per valutare il rapporto creato e il relativo inchiostro
     VAR firstChar_relationshipStatus = 0
+    //Indicator = l'informazione che diamo a Unity per indicare in una scala -x/x quale sia il rapporto con lx PNG
+    VAR firstChar_relationshipIndicator = 0
+    //Reaction: qui registriamo la reazione che verrà attivata coi sigilli
+    VAR firstChar_relationshipReaction = neutral
+
 
 //Tracciamento cucina
     //Autonoma

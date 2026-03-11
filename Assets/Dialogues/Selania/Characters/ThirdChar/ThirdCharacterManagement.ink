@@ -12,7 +12,8 @@
 
 //Tracciamento della relazione
     VAR thirdChar_relationshipStatus = 0
-    VAR thirdChar_relationshipGoodPercentage = 66.00
+    VAR thirdChar_relationshipIndicator = 0
+    VAR thirdChar_relationshipReaction = neutral
 
 //Valori per definire l'esito del nome
 //come minimo, otteniamo 20% (prendo esattamente la stessa quantità di risposte per ogni colore)
@@ -112,54 +113,6 @@
     //L'obbiettivo è: beccare almeno il 66% delle risposte.
     //Invece di complicarmi la vita posso usare la matematica.
     
-    ~ temp allColorsValue = thirdChar_fire + thirdChar_air + thirdChar_water + thirdChar_earth + thirdChar_aether
-    ~ temp minimumPercentValue = ((allColorsValue/100.00)*thirdChar_relationshipGoodPercentage)
-    
-        {debug: La percentuale di risposte coerenti per una buona relazione è di {thirdChar_relationshipGoodPercentage}. Il {thirdChar_relationshipGoodPercentage}% di tutta la somma dei colori di Riccio (che è {allColorsValue}) è {minimumPercentValue}.}
-        {debug: Il valore di viola è: {FLOAT(thirdChar_aether)}, di verde è: {FLOAT(thirdChar_water)}, di rosso è: {FLOAT(thirdChar_fire)}, di blu è: {FLOAT(thirdChar_air)}, di giallo è: {FLOAT(thirdChar_earth)}}
-        
-        {
-            - thirdChar_aether > minimumPercentValue:
-                    ~ thirdChar_relationshipStatus ++
-
-            - thirdChar_water > minimumPercentValue:
-                    ~ thirdChar_relationshipStatus ++  
-
-            - thirdChar_fire > minimumPercentValue:
-                    ~ thirdChar_relationshipStatus ++ 
-
-            - thirdChar_air > minimumPercentValue:
-                    ~ thirdChar_relationshipStatus ++
-
-            - thirdChar_earth > minimumPercentValue:
-                    ~ thirdChar_relationshipStatus ++
-
-            {debug: Una risposta supera il 66 per cento delle scelte e quindi aumento l'inchiostro del thirdo personaggio di un livello. Ora è a {thirdChar_relationshipStatus}}
-        }    
-
-    
-    
-        {
-            //Se vengo dalla preriscrittura:
-            - rewriting_proposal_third_character.rewriting:
-                {debug: ho cliccato rewriting e quindi faccio gli ultimi passaggi e attivo il feedback.} 
-                //"Trasformo" la relazione in inchiostro
-                    ~ fromRelationshipToInk(ThirdCharacter)
-                   
-                // Mando ai feedback
-                    -> thirdAffinityFeedback ->
-                    
-                //Arriva il commento della strega
-                    ~ inkLevel(ThirdCharacter)
-                                
-                //Salvo il massimo di inchiostro raggiunto con la personaggia
-                    ~ maxInkLevelUpdater(ThirdCharacter)    
-                    ->-> 
-            
-            // altrimenti, mando avanti
-            - else:
-                ->->
-        }
     
             ->->
 
