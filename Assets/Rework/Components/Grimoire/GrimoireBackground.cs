@@ -13,7 +13,34 @@ namespace Selania.Rework.Components.Grimoire
 {
     public class GrimoireBackground : MonoBehaviour, IAutomaticEditorInject
     {
+        /// <summary>
+        ///     The page types available in the grimoire.
+        /// </summary>
+        public enum PageType
+        {
+            /// <summary>
+            ///     First level page.
+            /// </summary>
+            FirstLevel,
+
+            /// <summary>
+            ///     Second level page (greenhouse).
+            /// </summary>
+            SecondLevelGreenhouse
+        }
+
         private static readonly int Opened = Animator.StringToHash("Opened");
+        private static readonly int HideAnimatorProperty = Animator.StringToHash("Hide");
+        private static readonly int ShowAnimatorProperty = Animator.StringToHash("Show");
+
+        private static readonly int AnimationSpeedMultiplierAnimatorProperty =
+            Animator.StringToHash("AnimationSpeedMultiplier");
+
+        [Tooltip("The animator controlling the first level page")] [SerializeField]
+        private Animator firstLevelAnimator = null!;
+
+        [Tooltip("The animator controlling the second level page for the greenhouse")] [SerializeField]
+        private Animator secondLevelAnimatorGreenhouse = null!;
 
         [Tooltip("List of buttons controlled by Ink")] [SerializeField]
         private LeftButtonDescriptor[] leftButtonDescriptors = null!;
@@ -78,9 +105,17 @@ namespace Selania.Rework.Components.Grimoire
 
         private TextMeshProUGUI _backToLevelTwoTextMeshPro = null!;
         private TextMeshProUGUI _nextPageTextMeshPro = null!;
+
+        /// <summary>
+        ///     All the animators for pages, or <c>null</c> if it hasn't been initialized yet.
+        /// </summary>
+        private Animator[]? _pageAnimators;
+
         private TextMeshProUGUI _previousPageTextMeshPro = null!;
 
         [Inject] internal ILogger<GrimoireBackground> Logger = null!;
+
+        [Inject] internal ISettingsBook SettingsBook = null!;
 
         [Inject] internal ISettingsSigils SettingsSigils = null!;
 
@@ -284,6 +319,46 @@ namespace Selania.Rework.Components.Grimoire
         public void OnNextPageButtonClick()
         {
             goNext.Invoke();
+        }
+
+        /// <summary>
+        ///     Switch to the given page.
+        /// </summary>
+        /// <param name="pageType">Page type to switch to.</param>
+        /// <exception cref="ArgumentOutOfRangeException">If the <paramref name="pageType" /> is unknown.</exception>
+        public void SwitchToPage(PageType pageType)
+        {
+            switch (pageType)
+            {
+                case PageType.FirstLevel:
+                    ShowPage(firstLevelAnimator);
+                    break;
+                case PageType.SecondLevelGreenhouse:
+                    ShowPage(secondLevelAnimatorGreenhouse);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(pageType), pageType, null);
+            }
+        }
+
+        /// <summary>
+        ///     Show a specific page.
+        /// </summary>
+        /// <param name="animatorToShow">The animator of the page to show.</param>
+        private void ShowPage(Animator animatorToShow)
+        {
+            // fill the page animators if necessary.
+            _pageAnimators ??= new[]
+            {
+                firstLevelAnimator, secondLevelAnimatorGreenhouse
+            };
+
+            foreach (var animator in _pageAnimators)
+            {
+                animator.SetFloat(AnimationSpeedMultiplierAnimatorProperty,
+                    SettingsBook.switchPageAnimationSpeedMultiplier);
+                animator.SetTrigger(animator == animatorToShow ? ShowAnimatorProperty : HideAnimatorProperty);
+            }
         }
 
         [Serializable]

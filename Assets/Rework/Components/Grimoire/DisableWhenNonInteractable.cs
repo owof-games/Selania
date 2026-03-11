@@ -21,6 +21,7 @@ namespace Selania.Rework.Components.Grimoire
         {
             Observable.EveryUpdate()
                 .Select(_ => selectable.interactable)
+                .DistinctUntilChanged()
                 .Subscribe(interactable => target.enabled = interactable)
                 .AddTo(this);
         }

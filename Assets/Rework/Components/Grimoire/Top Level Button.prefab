@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 7905718971798742173}
   - component: {fileID: 607578409909269630}
   - component: {fileID: 7223143176891612941}
+  - component: {fileID: 2466848855336276597}
   m_Layer: 5
   m_Name: Top Level Button
   m_TagString: Untagged
@@ -173,7 +174,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -232,3 +233,17 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &2466848855336276597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6966734578016778631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e131874b0f0426ba8cc18e539f42b63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.TopLevelButtonSpriteSwap
+  targetGraphic: {fileID: 5050124664244812261}
+  disabledSprite: {fileID: 21300000, guid: 1d2ba3499e7795d4585a5a78ca35e2d3, type: 3}

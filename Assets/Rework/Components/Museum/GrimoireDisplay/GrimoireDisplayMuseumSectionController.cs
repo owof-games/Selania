@@ -122,5 +122,15 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
         {
             grimoireBackground.ShowBookmarks(false, "Piante", "Olobino", "???");
         }
+
+        public void SwitchToFirstLevelPage()
+        {
+            grimoireBackground.SwitchToPage(GrimoireBackground.PageType.FirstLevel);
+        }
+
+        public void SwitchToSecondLevelGreenhousePage()
+        {
+            grimoireBackground.SwitchToPage(GrimoireBackground.PageType.SecondLevelGreenhouse);
+        }
     }
 }

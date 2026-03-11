@@ -519,6 +519,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8702ac0f31b45a0b79a531c28567278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.GrimoireBackground
+  firstLevelAnimator: {fileID: 8932518895277769207}
+  secondLevelAnimatorGreenhouse: {fileID: 5523194603672354619}
   leftButtonDescriptors:
   - name: FirstCharacter
     target: {fileID: 7462769121449417898}

@@ -11,7 +11,7 @@ namespace Selania.Rework.Components
     [CreateAssetMenu(fileName = "Settings", menuName = "Selania/Settings")]
     [NoReorder]
     public class SelaniaSettings : ScriptableObject, ISettingsDialogueBox, ISettingsLogger, ISettingsRooms,
-        ISettingsAudio, ISettingsSaveSystem, ISettingsSigils
+        ISettingsAudio, ISettingsSaveSystem, ISettingsSigils, ISettingsBook
     {
         #region dialogue box - text
 
@@ -392,6 +392,16 @@ namespace Selania.Rework.Components
                 _ => throw new ArgumentOutOfRangeException(nameof(glyphType), glyphType, null)
             };
         }
+
+        #endregion
+
+        #region book
+
+        [Title("Book")] [Tooltip("Duration (in seconds) for the page switch animation")] [SerializeField]
+        private float switchPageAnimationDuration;
+
+        /// <inheritdoc />
+        public float switchPageAnimationSpeedMultiplier => 1 / switchPageAnimationDuration;
 
         #endregion
 
