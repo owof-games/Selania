@@ -502,18 +502,19 @@ VAR glyph_decreaseSigil = true
                     ~ firstCharRelCalculator ++
             }   
         {debug: dopo i conti fatti, il valore di firstCharRelCalculator è {firstCharRelCalculator}.}
-
+        
             {
-                - firstChar_relationshipIndicator > firstCharRelCalculator:
+                - firstCharRelCalculator > 0:
                     ~ firstChar_relationshipReaction = positive
 
-                - firstChar_relationshipIndicator < firstCharRelCalculator:
+                - firstCharRelCalculator < 0:
                     ~ firstChar_relationshipReaction = negative
 
-                - firstChar_relationshipIndicator== firstCharRelCalculator: 
+                - firstCharRelCalculator == 0:
                     ~ firstChar_relationshipReaction = neutral
             }
-            ~ firstChar_relationshipIndicator = firstCharRelCalculator
+            
+            ~ firstChar_relationshipIndicator += firstCharRelCalculator
 
         {debug: dopo l'aggiornamento, il valore di firstChar_relationshipIndicator è {firstChar_relationshipIndicator}.} 
             
@@ -523,29 +524,33 @@ VAR glyph_decreaseSigil = true
 === function secondChar_relationship_variation()
 ~ temp secondCharRelCalculator = 0
         {
-            -secondChar_relationshipIndicator > secondCharRelCalculator:
+            -secondCharRelCalculator > 0:
                 ~ secondChar_relationshipReaction = positive
 
-            - secondChar_relationshipIndicator< secondCharRelCalculator:
+            - secondCharRelCalculator < 0:
                 ~ secondChar_relationshipReaction = negative
 
-            -secondChar_relationshipIndicator == secondCharRelCalculator: 
+            -secondCharRelCalculator == 0: 
                 ~ secondChar_relationshipReaction = neutral
         }
+
+    ~ secondChar_relationshipIndicator += secondCharRelCalculator    
     ~ relationshipIndicator_Adjustments(SecondCharacter)
 
 === function thirdChar_relationship_variation()
 ~ temp thirdCharRelCalculator = 0
         {
-            - thirdChar_relationshipIndicator> thirdCharRelCalculator:
+            - thirdCharRelCalculator > 0:
                 ~ thirdChar_relationshipReaction = positive
 
-            - thirdChar_relationshipIndicator< thirdCharRelCalculator:
+            - thirdCharRelCalculator < 0:
                 ~ thirdChar_relationshipReaction = negative
 
-            - thirdChar_relationshipIndicator== thirdCharRelCalculator: 
+            - thirdCharRelCalculator == 0: 
                 ~ thirdChar_relationshipReaction = neutral
         }
+
+    ~ thirdChar_relationshipIndicator += thirdCharRelCalculator    
     ~ relationshipIndicator_Adjustments(ThirdCharacter)
 
 
@@ -556,27 +561,27 @@ VAR glyph_decreaseSigil = true
 
 {
     - PNG == FirstCharacter:
-        {firstChar_relationshipIndicator:
-            - < relationship_indicator_minValue:
+        {
+            - firstChar_relationshipIndicator < relationship_indicator_minValue:
                ~ firstChar_relationshipIndicator =  relationship_indicator_minValue
 
-            - > relationship_indicator_minValue:
+            - firstChar_relationshipIndicator > relationship_indicator_maxValue:
                ~ firstChar_relationshipIndicator =  relationship_indicator_maxValue
         }
     - PNG == SecondCharacter:
-        {secondChar_relationshipIndicator:
-        - < relationship_indicator_minValue:
+        {
+        - secondChar_relationshipIndicator < relationship_indicator_minValue:
             ~ secondChar_relationshipIndicator =  relationship_indicator_minValue
 
-        - > relationship_indicator_minValue:
+        - secondChar_relationshipIndicator > relationship_indicator_maxValue:
             ~ secondChar_relationshipIndicator =  relationship_indicator_maxValue
         }   
     - PNG == ThirdCharacter:
-        {thirdChar_relationshipIndicator:
-            - < relationship_indicator_minValue:
+        {
+            - thirdChar_relationshipIndicator < relationship_indicator_minValue:
                ~ thirdChar_relationshipIndicator =  relationship_indicator_minValue
 
-            - > relationship_indicator_minValue:
+            - thirdChar_relationshipIndicator > relationship_indicator_maxValue:
                ~ thirdChar_relationshipIndicator =  relationship_indicator_maxValue
         }
 
