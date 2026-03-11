@@ -11,7 +11,12 @@
     //Lista che tiene conto in ordine progressivo della quantità di storie concluse
     LIST story_endingOrders = story_oneStoryClosed, story_twoStoriesClosed, story_threeStoriesClosed, story_fourStoriesClosed, story_fifthStoriesClosed
 
-
+    //Variabili per far comparire i personaggi in scena.
+        VAR firstChar_delay = 2
+        VAR thirdChar_delay = 3
+        VAR openingKitchen_delay = 4
+        VAR openingLibrary_delay = 6
+        VAR openingNest_delay = 7
 
 
 === story_time_management_for_PNG
@@ -42,7 +47,7 @@
                 ~ secondChar_storyStatus = story_storyStarted
     
         //Dopo quattro dialoghi con Chitarra o due con Riccio, compare il terzo PNG.
-        - (first_char_main_storylets.four or second_char_main_storylets.two) && not (thirdChar_storyStatus == story_storyStarted):
+        - (firstChar_storyletsForRewritingCount + secondChar_storyletsForRewritingCount > thirdChar_delay) && not (thirdChar_storyStatus == story_storyStarted):
             {debug: introduco {ThirdCharacter} in scena.}
                 ~ move_entity(ThirdCharacter, TrainStop)
                 ~ move_entity(TrainNoiseComing, CurrentLocation)

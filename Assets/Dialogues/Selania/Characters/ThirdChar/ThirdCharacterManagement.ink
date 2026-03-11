@@ -15,18 +15,9 @@
     VAR thirdChar_relationshipIndicator = 0
     VAR thirdChar_relationshipReaction = neutral
 
-//Valori per definire l'esito del nome
-//come minimo, otteniamo 20% (prendo esattamente la stessa quantità di risposte per ogni colore)
-//quindi divido l'intervallo 20% - 100% in cinque blocchi, a distanza uniforme: 20%-36%, 36%-52%,
-//ecc ecc...
-    VAR thirdChar_crowPercentage = 84.00
-    VAR thirdChar_capibaraPercentage = 68.00
-    VAR thirdChar_dolphinePercentage = 52.00
-    VAR thirdChar_wolfPercentage = 36.00
-
 //Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
-    VAR thirdChar_favouritesGifts = (BrinaDellImpossibile, BastoneDellOzioso, LicheneDegliAbissi)
-    VAR thirdChar_goodGifts = (CantoDelleCompagne, LanaNotturna, LaSpazzata, NonTiScordarDiTe)
+    VAR thirdChar_favouritesGifts = ()
+    VAR thirdChar_goodGifts = ()
     //Dono consigliato dalla rana
     VAR frog_third_char_gift = ""
     VAR frog_third_temp_growing_gift = false
@@ -228,24 +219,24 @@
     
     }
 
-    {debug:Il valore da superare per corvo è {minimumPercentValue * thirdChar_crowPercentage}; il valore da superare per capibara è {minimumPercentValue * thirdChar_capibaraPercentage}; Il valore da superare per delfino è {minimumPercentValue * thirdChar_dolphinePercentage}; il valore da superare per lupo è {minimumPercentValue * thirdChar_wolfPercentage}}
+    // {debug:Il valore da superare per corvo è {minimumPercentValue * thirdChar_crowPercentage}; il valore da superare per capibara è {minimumPercentValue * thirdChar_capibaraPercentage}; Il valore da superare per delfino è {minimumPercentValue * thirdChar_dolphinePercentage}; il valore da superare per lupo è {minimumPercentValue * thirdChar_wolfPercentage}}
     
-    {
-        - winnerColor >= (minimumPercentValue * thirdChar_crowPercentage):
-            ~ thirdChar_ActualName += Corvo
+    // {
+    //     - winnerColor >= (minimumPercentValue * thirdChar_crowPercentage):
+    //         ~ thirdChar_ActualName += Corvo
         
-        - winnerColor >= (minimumPercentValue * thirdChar_capibaraPercentage):
-            ~ thirdChar_ActualName += Capibara   
+    //     - winnerColor >= (minimumPercentValue * thirdChar_capibaraPercentage):
+    //         ~ thirdChar_ActualName += Capibara   
         
-        - winnerColor >= (minimumPercentValue * thirdChar_dolphinePercentage):
-            ~ thirdChar_ActualName += Delfino    
+    //     - winnerColor >= (minimumPercentValue * thirdChar_dolphinePercentage):
+    //         ~ thirdChar_ActualName += Delfino    
         
-        - winnerColor >= (minimumPercentValue * thirdChar_wolfPercentage):
-            ~ thirdChar_ActualName += Lupo
+    //     - winnerColor >= (minimumPercentValue * thirdChar_wolfPercentage):
+    //         ~ thirdChar_ActualName += Lupo
         
-        - else:
-            ~ thirdChar_ActualName += Grizzly
-    }
+    //     - else:
+    //         ~ thirdChar_ActualName += Grizzly
+    // }
     
     ->-> 
 

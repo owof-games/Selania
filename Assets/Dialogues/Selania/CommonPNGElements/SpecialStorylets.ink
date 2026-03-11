@@ -9,7 +9,7 @@ VAR thirdChar_LibraryInvite = false
         //Storylets speciali First Character
         {   
             //Invito allo stagno per aprire la cucina
-                - are_two_entities_together(FirstCharacter, PG) && (first_char_main_storylets.four or second_char_main_storylets.two) && contentsPond hasnt PG && player_accessiblePlaces hasnt Kitchen:
+                - are_two_entities_together(FirstCharacter, PG) && (firstChar_storyletsForRewritingCount + secondChar_storyletsForRewritingCount + thirdChar_storyletsForRewritingCount > openingKitchen_delay) && contentsPond hasnt PG && player_accessiblePlaces hasnt Kitchen:
         
                         {stopping:
                             - Ehi {player_name}! Vediamoci allo stagno. Ho una cosa da mostrarti!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
@@ -23,7 +23,7 @@ VAR thirdChar_LibraryInvite = false
                         
 
             //Apertura cucina
-                - are_two_entities_together(FirstCharacter, PG) && (first_char_main_storylets.four or second_char_main_storylets.two) && entity_location(PG) == Pond && player_accessiblePlaces hasnt Kitchen && firstChar_pauseTalking == 0:
+                - are_two_entities_together(FirstCharacter, PG) && (firstChar_storyletsForRewritingCount + secondChar_storyletsForRewritingCount + thirdChar_storyletsForRewritingCount > openingKitchen_delay) && entity_location(PG) == Pond && player_accessiblePlaces hasnt Kitchen && firstChar_pauseTalking == 0:
                     -> open_the_kitchen
 
             //Chitarra sta cucinando ed entriamo in cucina
@@ -52,7 +52,7 @@ VAR thirdChar_LibraryInvite = false
     //Storylets speciali Second Char
         {
             //Invito alla foresta per aprire la biblioteca
-            - are_two_entities_together(SecondCharacter, PG) && (first_char_main_storylets.five or second_char_main_storylets.three) && contentsForest hasnt PG && player_accessiblePlaces hasnt Library:
+            - are_two_entities_together(SecondCharacter, PG) && (firstChar_storyletsForRewritingCount + secondChar_storyletsForRewritingCount + thirdChar_storyletsForRewritingCount > openingLibrary_delay) && contentsForest hasnt PG && player_accessiblePlaces hasnt Library:
                 
                     {stopping:
                         - Ehi {player_name}! Troviamoci alla foresta. Ho una cosa che devi vedere!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_energy
@@ -66,7 +66,7 @@ VAR thirdChar_LibraryInvite = false
 
 
             //Apertura biblioteca    
-                - are_two_entities_together(SecondCharacter, PG) && (first_char_main_storylets.five or second_char_main_storylets.three) && entity_location(PG) == Forest && player_accessiblePlaces hasnt Library && firstChar_pauseTalking == 0:
+                - are_two_entities_together(SecondCharacter, PG) && (firstChar_storyletsForRewritingCount + secondChar_storyletsForRewritingCount + thirdChar_storyletsForRewritingCount > openingLibrary_delay) && entity_location(PG) == Forest && player_accessiblePlaces hasnt Library && firstChar_pauseTalking == 0:
                     -> open_the_library
 
             //Cucina
@@ -91,7 +91,7 @@ VAR thirdChar_LibraryInvite = false
 
         {
             //Invito in biblioteca per aprire il nido
-            - are_two_entities_together(ThirdCharacter, PG) && (first_char_main_storylets.six or third_char_main_storylets.two) && contentsLibrary hasnt PG && player_accessiblePlaces hasnt Nest && player_accessiblePlaces has Library:
+            - are_two_entities_together(ThirdCharacter, PG) && (firstChar_storyletsForRewritingCount + secondChar_storyletsForRewritingCount + thirdChar_storyletsForRewritingCount > openingNest_delay) && contentsLibrary hasnt PG && player_accessiblePlaces hasnt Nest && player_accessiblePlaces has Library:
                 
                     {stopping:
                         - Ehi {player_name}! Troviamoci in biblioteca. Ho una cosa che devi vedere!
@@ -102,7 +102,7 @@ VAR thirdChar_LibraryInvite = false
 
 
             //Apertura biblioteca    
-                - are_two_entities_together(ThirdCharacter, PG) && (first_char_main_storylets.six or third_char_main_storylets.two) && entity_location(PG) == Library && player_accessiblePlaces hasnt Nest && firstChar_pauseTalking == 0:
+                - are_two_entities_together(ThirdCharacter, PG) && (firstChar_storyletsForRewritingCount + secondChar_storyletsForRewritingCount + thirdChar_storyletsForRewritingCount > openingNest_delay) && entity_location(PG) == Library && player_accessiblePlaces hasnt Nest && firstChar_pauseTalking == 0:
                     -> open_the_nest
         }            
     

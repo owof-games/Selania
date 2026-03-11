@@ -14,8 +14,6 @@
     //Ordine di conclusione della riscrittura (prima storia conclusa, seconda storia conclusa)
     VAR firstChar_storyEndingPosition = ()
 
-//Attesa comparsa prima personaggia
-    VAR firstChar_delay = 2
 
 //Tracciamento della relazione
     //Status = chiamato da cucina e prima della riscrittura per valutare il rapporto creato e il relativo inchiostro
@@ -62,8 +60,8 @@
     VAR firstChar_giftedObject = ()
 
 //Tracciamento apprezzamento glifi. Tutto ciò che è fuori da questa lista = reazione neutrale.
-    VAR firstChar_positiveGlyphs = ()
-    VAR firstChar_negativeGlyphs = ()
+    // VAR firstChar_positiveGlyphs = ()
+    // VAR firstChar_negativeGlyphs = ()
 
 //Tracciamento del racconto
     VAR frog_first_novel = ""
