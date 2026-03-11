@@ -556,31 +556,33 @@ VAR glyph_decreaseSigil = true
         - else:
             //In caso di pareggio, per ora la soluzione è che comunque vada a registrare l'ultimo dominante e il suo valore come quello attuale. L'idea è che il pareggio debba essere per forza temporaneo: nessuna scelta genera un valore di incremento o decremento uguale per due glifi diversi, e quindi la volta successiva comunque riemergerà la "rottura" dell'equilibro.
             //questa cosa crea due problemi: se faccio all'inizio cinque scelte diverse, se vado avanti a due colori dominanti.
-            {
-                - secondChar_relationshipLastDominantGlyph == 1.00:
-                //Risolto il problema dell'inizio, ma non quelli successivi
-                    {
-                        - secondChar_relationshipTrackingChoise == aetherC:
-                            ~ secondChar_relationshipActualDominantGlyphValue = secondChar_aether
-                            ~ secondChar_relationshipActualDominantGlyph  = aetherC
-                        - secondChar_relationshipTrackingChoise == waterC:
-                             ~ secondChar_relationshipActualDominantGlyphValue = secondChar_water
-                            ~ secondChar_relationshipActualDominantGlyph  = waterC
-                        - secondChar_relationshipTrackingChoise == fireC:
-                            ~ secondChar_relationshipActualDominantGlyphValue = secondChar_fire
-                            ~ secondChar_relationshipActualDominantGlyph  = fireC
-                        - secondChar_relationshipTrackingChoise == earthC:
-                            ~ secondChar_relationshipActualDominantGlyphValue = secondChar_earth
-                            ~ secondChar_relationshipActualDominantGlyph  = earthC
-                        - secondChar_relationshipTrackingChoise == airC:
-                            ~ secondChar_relationshipActualDominantGlyphValue = secondChar_air
-                            ~ secondChar_relationshipActualDominantGlyph  = airC
-                    }
-
-                - else:
-                    ~ secondChar_relationshipLastDominantGlyphValue = secondChar_relationshipActualDominantGlyphValue
+            ~ secondChar_relationshipLastDominantGlyphValue = secondChar_relationshipActualDominantGlyphValue
                     ~ secondChar_relationshipLastDominantGlyph = secondChar_relationshipActualDominantGlyph
-            }
+            // {
+            //     - secondChar_relationshipLastDominantGlyph == 1.00:
+            //     //Risolto il problema dell'inizio, ma non quelli successivi
+            //         {
+            //             - secondChar_relationshipTrackingChoise == aetherC:
+            //                 ~ secondChar_relationshipActualDominantGlyphValue = secondChar_aether
+            //                 ~ secondChar_relationshipActualDominantGlyph  = aetherC
+            //             - secondChar_relationshipTrackingChoise == waterC:
+            //                  ~ secondChar_relationshipActualDominantGlyphValue = secondChar_water
+            //                 ~ secondChar_relationshipActualDominantGlyph  = waterC
+            //             - secondChar_relationshipTrackingChoise == fireC:
+            //                 ~ secondChar_relationshipActualDominantGlyphValue = secondChar_fire
+            //                 ~ secondChar_relationshipActualDominantGlyph  = fireC
+            //             - secondChar_relationshipTrackingChoise == earthC:
+            //                 ~ secondChar_relationshipActualDominantGlyphValue = secondChar_earth
+            //                 ~ secondChar_relationshipActualDominantGlyph  = earthC
+            //             - secondChar_relationshipTrackingChoise == airC:
+            //                 ~ secondChar_relationshipActualDominantGlyphValue = secondChar_air
+            //                 ~ secondChar_relationshipActualDominantGlyph  = airC
+            //         }
+
+            //     - else:
+            //         ~ secondChar_relationshipLastDominantGlyphValue = secondChar_relationshipActualDominantGlyphValue
+            //         ~ secondChar_relationshipLastDominantGlyph = secondChar_relationshipActualDominantGlyph
+            // }
             
               
     }
