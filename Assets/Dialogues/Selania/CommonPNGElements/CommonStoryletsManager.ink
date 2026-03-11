@@ -33,7 +33,7 @@
                     -> food_gift_second_char        
             
             //Chiacchiere tra Chitarra e Mentore
-                - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(Mentor, PG)&& first_char_main_storylets.one && firstChar_pauseTalking == 0 && mentor_pauseTalking == 0 && not first_mentor_chit_chat:
+                - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(Mentor, PG)&& first_char_main_storylets.three && firstChar_pauseTalking == 0 && mentor_pauseTalking == 0 && not first_mentor_chit_chat:
                     -> first_mentor_chit_chat
             
             //Chiacchiere tra Franco e Mentore
