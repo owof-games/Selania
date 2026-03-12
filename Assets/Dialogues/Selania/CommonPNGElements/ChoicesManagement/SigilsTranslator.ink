@@ -177,22 +177,22 @@
                 ~ return "Cenere"
   
             - AetherWaterEarth:
-                ~ return "Goccia"
+                ~ return "Fondo"
   
             - AetherWaterAir:
                 ~ return "Crepa"
   
             - AetherWaterFire:
-                ~ return "Fondo"
+                ~ return "Ruggine"
   
             - AetherEarthWater:
-                ~ return "Altare"
+                ~ return "Arazzo"
    
             - AetherEarthAir:
                 ~ return "Campanella"
 
             - AetherEarthFire:
-                ~ return "Arazzo"
+                ~ return "Altare"
    
             
             -else: Traduzione colore parola {glyph_actualActiveSigil} non trovato!
