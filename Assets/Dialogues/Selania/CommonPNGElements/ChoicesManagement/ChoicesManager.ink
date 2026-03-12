@@ -292,19 +292,27 @@ VAR glyph_decreaseSigil = true
     //Qui inseriamo il commento progressivo, es.
     {glyph_actualActiveSigil:
         //Uso shuffle stopping con l'idea di poi associare a ogni frase una variabile stringa da mettere direttamente sul grimorio, in modo che si popoli tutto in automatico.
-        - FireAirWater:
+        - WaterEarthFire:
             {shuffle stopping:
-                - Prima frase.
-                - Seconda frase.
-                - Terza frase.
+                - {glyph_textWaterEarthFireOne}
+                //poi qui potrei mettere una cosa tipo ~ grimoire_textWaterEarthFireOne = glyph_textWaterEarthFireOne. lascerei i grimoire_textWaterEarthFireOne vuoti e li aggiornerei solo alla scoperta. così non devo usare altre variabili in giro. E poi quando voglio sbloccare tutto
+                - {glyph_textWaterEarthFireTwo}
+                - {glyph_textWaterEarthFireThree}
             }
 
-        - FireAirEarth:
+        - WaterEarthAir:
             {shuffle stopping:
-                - Prima frase.
-                - Seconda frase.
-                - Terza frase.
-            }    
+                - {glyph_textWaterEarthAirOne}
+                - {glyph_textWaterEarthAirTwo}
+                - {glyph_textWaterEarthAirThree}
+            } 
+
+        - WaterEarthAether:
+            {shuffle stopping:
+                - {glyph_textWaterEarthAetherOne}
+                - {glyph_textWaterEarthAetherTwo}
+                - {glyph_textWaterEarthAetherThree}
+            }       
         //Se non ci sono sigilli attivi, skippa in automatico
     }
     -> sigil_PNG_reactions

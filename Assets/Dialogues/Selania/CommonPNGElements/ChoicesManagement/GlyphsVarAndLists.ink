@@ -141,3 +141,21 @@ LIST glyph_talkingVariations = fireC, earthC, airC, waterC, aetherC
 
 //Contatore d'uso della parola    
     VAR glyph_temporaryWordUsageCounter = 0
+
+
+//Lista dei descrittori
+//Dominante acqua
+    //Più terra
+    VAR glyph_textWaterEarthFireOne = "Sole sull’acqua, legno sicuro, "
+    VAR glyph_textWaterEarthFireTwo = "gambe tese "
+    VAR glyph_textWaterEarthFireThree = "in un salto sospeso."
+
+    //Più aria
+    VAR glyph_textWaterEarthAirOne = "Onde tranquille, assi solide. "
+    VAR glyph_textWaterEarthAirTwo = "Il riflesso dei monti, "
+    VAR glyph_textWaterEarthAirThree = "profondità precluse."
+
+    //Più spirito
+    VAR glyph_textWaterEarthAetherOne = "Acqua sulla pelle, tiepide correnti,  "
+    VAR glyph_textWaterEarthAetherTwo = "scalciare verso il fondo,  "
+    VAR glyph_textWaterEarthAetherThree = "toccare la riva"
