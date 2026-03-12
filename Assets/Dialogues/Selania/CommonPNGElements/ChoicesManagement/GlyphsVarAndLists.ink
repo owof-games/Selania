@@ -413,4 +413,272 @@ LIST glyph_talkingVariations = fireC, earthC, airC, waterC, aetherC
     VAR glyph_textAetherEarthFireThree = "in un salto sospeso."
 
 
+
+
 //Lista delle varianti per il grimorio
+//Dominante fuoco
+    //Più aria
+    VAR grimoire_textFireAirWaterOne = ""
+    VAR grimoire_textFireAirWaterTwo = ""
+    VAR grimoire_textFireAirWaterThree = ""
+
+    VAR grimoire_textFireAirEarthOne = ""
+    VAR grimoire_textFireAirEarthTwo = ""
+    VAR grimoire_textFireAirEarthThree = ""
+
+    VAR grimoire_textFireAirAetheOne = ""
+    VAR grimoire_textFireAirAetheTwo = ""
+    VAR grimoire_textFireAirAetheThree = ""
+
+    //Più acqua
+    VAR grimoire_textFireWaterEarthOne = ""
+    VAR grimoire_textFireWaterEarthTwo = ""
+    VAR grimoire_textFireWaterEarthThree = ""
+
+    VAR grimoire_textFireWaterAetherOne = ""
+    VAR grimoire_textFireWaterAetherTwo = ""
+    VAR grimoire_textFireWaterAetherThree = ""
+
+    VAR grimoire_textFireWaterAirOne = ""
+    VAR grimoire_textFireWaterAirTwo = ""
+    VAR grimoire_textFireWaterAirThree = ""
+
+    //Più terra
+    VAR grimoire_textFireEarthWaterOne = ""
+    VAR grimoire_textFireEarthWaterTwo = ""
+    VAR grimoire_textFireEarthWaterThree = ""
+
+    VAR grimoire_textFireEarthAetherOne = ""
+    VAR grimoire_textFireEarthAetherTwo = ""
+    VAR grimoire_textFireEarthAetherThree = ""
+
+    VAR grimoire_textFireEarthAirOne = ""
+    VAR grimoire_textFireEarthAirTwo = ""
+    VAR grimoire_textFireEarthAirThree = ""
+
+    //Più spirito
+    VAR grimoire_textFireAetherWaterOne = ""
+    VAR grimoire_textFireAetherWaterTwo = ""
+    VAR grimoire_textFireAetherWaterThree = ""
+
+    VAR grimoire_textFireAetherEarthOne = ""
+    VAR grimoire_textFireAetherEarthTwo = ""
+    VAR grimoire_textFireAetherEarthThree = ""
+
+    VAR grimoire_textFireAetherAirOne = ""
+    VAR grimoire_textFireAetherAirTwo = ""
+    VAR grimoire_textFireAetherAirThree = ""
+
+//Dominante aria
+    //Più fuoco
+    VAR grimoire_textAirFireEarthOne = ""
+    VAR grimoire_textAirFireEarthTwo = ""
+    VAR grimoire_textAirFireEarthThree = ""
+
+    VAR grimoire_textAirFireAetherOne = ""
+    VAR grimoire_textAirFireAetherTwo = ""
+    VAR grimoire_textAirFireAetherThree = ""
+
+    VAR grimoire_textAirFireWaterOne = ""
+    VAR grimoire_textAirFireWaterTwo = ""
+    VAR grimoire_textAirFireWaterThree = ""
+
+    //Più acqua
+    VAR grimoire_textAirWaterEarthOne = ""
+    VAR grimoire_textAirWaterEarthTwo = ""
+    VAR grimoire_textAirWaterEarthThree = ""
+
+    VAR grimoire_textAirWaterAetherOne = ""
+    VAR grimoire_textAirWaterAetherTwo = ""
+    VAR grimoire_textAirWaterAetherThree = ""
+
+    VAR grimoire_textAirWaterFireOne = ""
+    VAR grimoire_textAirWaterFireTwo = ""
+    VAR grimoire_textAirWaterFireThree = ""
+
+    //Più terra
+    VAR grimoire_textAirEarthAetherOne = ""
+    VAR grimoire_textAirEarthAetherTwo = ""
+    VAR grimoire_textAirEarthAetherThree = ""
+
+    VAR grimoire_textAirEarthWaterOne = ""
+    VAR grimoire_textAirEarthWaterTwo = ""
+    VAR grimoire_textAirEarthWaterThree = ""
+
+    VAR grimoire_textAirEarthFireOne = ""
+    VAR grimoire_textAirEarthFireTwo = ""
+    VAR grimoire_textAirEarthFireThree = ""
+
+    //Più spirito
+    VAR grimoire_textAirAetherEarthOne = ""
+    VAR grimoire_textAirAetherEarthTwo = ""
+    VAR grimoire_textAirAetherEarthThree = ""
+
+    VAR grimoire_textAirAetherWaterOne = ""
+    VAR grimoire_textAirAetherWaterTwo = ""
+    VAR grimoire_textAirAetherWaterThree = ""
+
+    VAR grimoire_textAirAetherFireOne = ""
+    VAR grimoire_textAirAetherFireTwo = ""
+    VAR grimoire_textAirAetherFireThree = ""
+
+
+//Dominante acqua
+    //Più fuoco
+    VAR grimoire_textWaterFireEarthOne = ""
+    VAR grimoire_textWaterFireEarthTwo = ""
+    VAR grimoire_textWaterFireEarthThree = ""
+
+    VAR grimoire_textWaterFireAetherOne = ""
+    VAR grimoire_textWaterFireAetherTwo = ""
+    VAR grimoire_textWaterFireAetherThree = ""
+
+    VAR grimoire_textWaterFireAirOne = ""
+    VAR grimoire_textWaterFireAirTwo = ""
+    VAR grimoire_textWaterFireAirThree = ""
+
+    //Più aria
+    VAR grimoire_textWaterAirEarthOne = ""
+    VAR grimoire_textWaterAirEarthTwo = ""
+    VAR grimoire_textWaterAirEarthThree = ""
+
+    VAR grimoire_textWaterAirAetherOne = ""
+    VAR grimoire_textWaterAirAetherTwo = ""
+    VAR grimoire_textWaterAirAetherThree = ""
+
+    VAR grimoire_textWaterAirFireOne = ""
+    VAR grimoire_textWaterAirFireTwo = ""
+    VAR grimoire_textWaterAirFireThree = ""
+
+    //Più terra
+    VAR grimoire_textWaterEarthFireOne = ""
+    VAR grimoire_textWaterEarthFireTwo = ""
+    VAR grimoire_textWaterEarthFireThree = ""
+
+    VAR grimoire_textWaterEarthAirOne = ""
+    VAR grimoire_textWaterEarthAirTwo = ""
+    VAR grimoire_textWaterEarthAirThree = ""
+
+    VAR grimoire_textWaterEarthAetherOne = ""
+    VAR grimoire_textWaterEarthAetherTwo = ""
+    VAR grimoire_textWaterEarthAetherThree = ""
+
+    //Più spirito
+    VAR grimoire_textWaterAetherEarthOne = ""
+    VAR grimoire_textWaterAetherEarthTwo = ""
+    VAR grimoire_textWaterAetherEarthThree = ""
+
+    VAR grimoire_textWaterAetherAirOne = ""
+    VAR grimoire_textWaterAetherAirTwo = ""
+    VAR grimoire_textWaterAetherAirThree = ""
+
+    VAR grimoire_textWaterAetherFireOne = ""
+    VAR grimoire_textWaterAetherFireTwo = ""
+    VAR grimoire_textWaterAetherFireThree = ""
+
+
+//Dominante Terra
+    //Più fuoco
+    VAR grimoire_textEarthFireAetherOne = ""
+    VAR grimoire_textEarthFireAetherTwo = ""
+    VAR grimoire_textEarthFireAetherThree = ""
+
+    VAR grimoire_textEarthFireWaterOne = ""
+    VAR grimoire_textEarthFireWaterTwo = ""
+    VAR grimoire_textEarthFireWaterThree = ""
+
+    VAR grimoire_textEarthFireAirOne = ""
+    VAR grimoire_textEarthFireAirTwo = ""
+    VAR grimoire_textEarthFireAirThree = ""
+
+    //Più aria
+    VAR grimoire_textEarthAirAetherOne = ""
+    VAR grimoire_textEarthAirAetherTwo = ""
+    VAR grimoire_textEarthAirAetherThree = ""
+
+    VAR grimoire_textEarthAirWaterOne = ""
+    VAR grimoire_textEarthAirWaterTwo = ""
+    VAR grimoire_textEarthAirWaterThree = ""
+
+    VAR grimoire_textEarthAirFireOne = ""
+    VAR grimoire_textEarthAirFireTwo = ""
+    VAR grimoire_textEarthAirFireThree = ""
+
+    //Più acqua
+    VAR grimoire_textEarthWaterAetherOne = ""
+    VAR grimoire_textEarthWaterAetherTwo = ""
+    VAR grimoire_textEarthWaterAetherThree = ""
+
+    VAR grimoire_textEarthWaterAirOne = ""
+    VAR grimoire_textEarthWaterAirTwo = ""
+    VAR grimoire_textEarthWaterAirThree = ""
+
+    VAR grimoire_textEarthWaterFireOne = ""
+    VAR grimoire_textEarthWaterFireTwo = ""
+    VAR grimoire_textEarthWaterFireThree = ""
+
+    //Più spirito
+    VAR grimoire_textEarthAetherWaterOne = ""
+    VAR grimoire_textEarthAetherWaterTwo = ""
+    VAR grimoire_textEarthAetherWaterThree = ""
+
+    VAR grimoire_textEarthAetherAirOne = ""
+    VAR grimoire_textEarthAetherAirTwo = ""
+    VAR grimoire_textEarthAetherAirThree = ""
+
+    VAR grimoire_textEarthAetherFireOne = ""
+    VAR grimoire_textEarthAetherFireTwo = ""
+    VAR grimoire_textEarthAetherFireThree = ""
+
+//Dominante Spirito
+    //Più fuoco
+    VAR grimoire_textAetherFireEarthOne = ""
+    VAR grimoire_textAetherFireEarthTwo = ""
+    VAR grimoire_textAetherFireEarthThree = ""
+
+    VAR grimoire_textAetherFireWaterOne = ""
+    VAR grimoire_textAetherFireWaterTwo = ""
+    VAR grimoire_textAetherFireWaterThree = ""
+
+    VAR grimoire_textAetherFireAirOne = ""
+    VAR grimoire_textAetherFireAirTwo = ""
+    VAR grimoire_textAetherFireAirThree = ""
+
+    //Più aria
+    VAR grimoire_textAetherAirEarthOne = ""
+    VAR grimoire_textAetherAirEarthTwo = ""
+    VAR grimoire_textAetherAirEarthThree = ""
+
+    VAR grimoire_textAetherAirWaterOne = ""
+    VAR grimoire_textAetherAirWaterTwo = ""
+    VAR grimoire_textAetherAirWaterThree = ""
+
+    VAR grimoire_textAetherAirFireOne = ""
+    VAR grimoire_textAetherAirFireTwo = ""
+    VAR grimoire_textAetherAirFireThree = ""
+
+    //Più acqua
+    VAR grimoire_textAetherWaterEarthOne = ""
+    VAR grimoire_textAetherWaterEarthTwo = ""
+    VAR grimoire_textAetherWaterEarthThree = ""
+
+    VAR grimoire_textAetherWaterAirOne = ""
+    VAR grimoire_textAetherWaterAirTwo = ""
+    VAR grimoire_textAetherWaterAirThree = ""
+
+    VAR grimoire_textAetherWaterFireOne = ""
+    VAR grimoire_textAetherWaterFireTwo = ""
+    VAR grimoire_textAetherWaterFireThree = ""
+
+    //Più terra
+    VAR grimoire_textAetherEarthWaterOne = ""
+    VAR grimoire_textAetherEarthWaterTwo = ""
+    VAR grimoire_textAetherEarthWaterThree = ""
+
+    VAR grimoire_textAetherEarthAirOne = ""
+    VAR grimoire_textAetherEarthAirTwo = ""
+    VAR grimoire_textAetherEarthAirThree = ""
+
+    VAR grimoire_textAetherEarthFireOne = ""
+    VAR grimoire_textAetherEarthFireTwo = ""
+    VAR grimoire_textAetherEarthFireThree = ""
