@@ -165,6 +165,27 @@
 
 
 
+
+
+=== witch_allSigils_opening ===
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(mentor_ActualName)
+
+Ehi {player_name}, hai finito tutte le riscritture. Se vuoi posso anche sbloccarti tutti i significati dei sigilli, che ne dici?
+    + No
+        Capisco
+    + Sì 
+        -> glyph_open_all_sigils ->
+        Fatto
+    -   
+Ciao ciao.
+
+-> main    
+
+
 === final ===
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)

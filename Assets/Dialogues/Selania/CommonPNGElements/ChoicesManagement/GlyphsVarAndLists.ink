@@ -106,10 +106,6 @@ LIST allGlyphs = Fire, Air, Water, Earth, Aether
 GESTIONE DELLO STATO DEI SIGILLI
                 
 ----------------------------------*/
-
-//I due stati possibili dei sigilli (discovered è implicito se è nella lista glyph_discoveredSigils)
-    LIST glyph_sigilState = Active, Used
-
 //Lista dei sigilli scoperti. Questa sarà anche la lista che renderà o meno visibili i sigilli sul libro. Se l'intersezione con used sarà vuota, il sigillo sarà attivabile, altrimenti sarà indicato come consumato.
     VAR glyph_discoveredSigils = ()
 
