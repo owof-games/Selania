@@ -295,7 +295,6 @@ VAR glyph_decreaseSigil = true
         - WaterEarthFire:
             {shuffle stopping:
                 - {glyph_textWaterEarthFireOne}
-                //poi qui potrei mettere una cosa tipo ~ grimoire_textWaterEarthFireOne = glyph_textWaterEarthFireOne. lascerei i grimoire_textWaterEarthFireOne vuoti e li aggiornerei solo alla scoperta. così non devo usare altre variabili in giro. E poi quando voglio sbloccare tutto
                 - {glyph_textWaterEarthFireTwo}
                 - {glyph_textWaterEarthFireThree}
             }
@@ -454,6 +453,9 @@ VAR glyph_decreaseSigil = true
     //Qui aggiorniamo l'utilizzo del sigillo.
     //Prima aumentiamo il valore
         ~ glyph_actualSigilUses ++
+
+    //Poi chiamo l'updater delle informazioni sul grimorio    
+        ~ glyph_grimoireUpdater()
 
     //Se l'utilizzo è arrivato al massimo, a quel punto aggiungiamo il sigillo a quelli utilizzati e svuotiamo la variabile del sigillo attualmente attivo.
     {

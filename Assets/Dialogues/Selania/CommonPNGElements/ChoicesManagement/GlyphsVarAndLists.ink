@@ -159,3 +159,10 @@ LIST glyph_talkingVariations = fireC, earthC, airC, waterC, aetherC
     VAR glyph_textWaterEarthAetherOne = "Acqua sulla pelle, tiepide correnti,  "
     VAR glyph_textWaterEarthAetherTwo = "scalciare verso il fondo,  "
     VAR glyph_textWaterEarthAetherThree = "toccare la riva"
+
+
+
+
+
+
+//Lista delle varianti per il grimorio

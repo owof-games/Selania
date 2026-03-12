@@ -29,15 +29,31 @@
         //Chiamiamo il primo, notifichiamo, ripetiamo  
         ~ png_random_sigils_opener ()
             {player_name} ha ricevuto {sigils_translator(nest_newSigilDiscovered)}.
+            //Chiamo tre volte l'updater, così aggiorno l'informazione sul grimorio
+            ~ glyph_grimoireUpdater()
+            ~ glyph_grimoireUpdater()
+            ~ glyph_grimoireUpdater()
+            //E poi svuoto il nuovo sigillo
             ~ nest_newSigilDiscovered = ()
 
         ~ png_random_sigils_opener ()
             {player_name} ha ricevuto {sigils_translator(nest_newSigilDiscovered)}.
+            //Chiamo tre volte l'updater, così aggiorno l'informazione sul grimorio
+            ~ glyph_grimoireUpdater()
+            ~ glyph_grimoireUpdater()
+            ~ glyph_grimoireUpdater()
+            //E poi svuoto il nuovo sigillo
             ~ nest_newSigilDiscovered = ()
+
 
         ~ png_random_sigils_opener ()
             {player_name} ha ricevuto {sigils_translator(nest_newSigilDiscovered)}.
-            ~ nest_newSigilDiscovered = ()    
+            //Chiamo tre volte l'updater, così aggiorno l'informazione sul grimorio
+            ~ glyph_grimoireUpdater()
+            ~ glyph_grimoireUpdater()
+            ~ glyph_grimoireUpdater()
+            //E poi svuoto il nuovo sigillo
+            ~ nest_newSigilDiscovered = ()
 
         ~ thirdChar_LibraryInvite = false
         ~  move_entity(ThirdCharacter, Forest)

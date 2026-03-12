@@ -18,6 +18,86 @@
             ~ secondChar_water = secondChar_water * number
             ~ secondChar_fire = secondChar_fire * number
 
+        - partner == ThirdCharacter:
+            ~ thirdChar_aether = thirdChar_aether * number
+            ~ thirdChar_earth = thirdChar_earth * number
+            ~ thirdChar_air = thirdChar_air * number
+            ~ thirdChar_water = thirdChar_water * number
+            ~ thirdChar_fire = thirdChar_fire * number    
+
     }
 ->->
   
+=== function glyph_grimoireUpdater()
+{glyph_actualActiveSigil:
+    -  FireAirWater:
+    - FireAirEarth:
+    - FireAirAether:
+    - FireWaterEarth:
+    - FireWaterAether:
+    - FireWaterAir:
+    - FireEarthWater:
+    - FireEarthAether:
+    - FireEarthAir:
+    - FireAetherWater:
+    - FireAetherEarth:
+    - FireAetherAir:
+            
+    - AirFireEarth:
+    - AirFireAether:
+    - AirFireWater:
+    - AirWaterEarth:
+    - AirWaterAether:
+    - AirWaterFire:
+    - AirEarthAether:
+    - AirEarthWater:
+    - AirEarthFire:
+    - AirAetherEarth:
+    - AirAetherWater:
+    - AirAetherFire:
+            
+    - WaterFireEarth:
+    - WaterFireAether:
+    - WaterFireAir:
+    - WaterAirEarth:
+    - WaterAirAether:
+    - WaterAirFire:
+    - WaterEarthAether:
+    - WaterEarthAir:
+    - WaterEarthFire:
+    - WaterAetherEarth:
+    - WaterAetherAir:
+    - WaterAetherFire:
+            
+    - EarthFireAether:
+    - EarthFireWater:
+    - EarthFireAir:
+    - EarthAirAether:
+    - EarthAirWater:
+    - EarthAirFire:
+    - EarthWaterAether:
+    - EarthWaterAir:
+    - EarthWaterFire:
+    - EarthAetherWater:
+    - EarthAetherAir:
+    - EarthAetherFire:
+            
+    - AetherFireEarth:
+    - AetherFireWater:
+    - AetherFireAir:
+    - AetherAirEarth:
+    - AetherAirWater:
+    - AetherAirFire:
+    - AetherWaterEarth:
+    - AetherWaterAir:
+    - AetherWaterFire:
+    - AetherEarthWater:
+    - AetherEarthAir:
+    - AetherEarthFire:       
+        
+}
+
+
+
+
+
