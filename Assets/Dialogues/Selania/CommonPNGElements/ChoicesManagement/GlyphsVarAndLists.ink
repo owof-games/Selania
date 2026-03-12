@@ -691,3 +691,139 @@ LIST glyph_talkingVariations = fireC, earthC, airC, waterC, aetherC
     VAR grimoire_textAetherEarthFireOne = ""
     VAR grimoire_textAetherEarthFireTwo = ""
     VAR grimoire_textAetherEarthFireThree = ""
+
+
+
+//Venti sigilli principali: varianti per la raccolta del testo
+    //Dominante acqua
+    VAR glyph_textWaterAirOne = "Sole sull’acqua, legno sicuro, "
+    VAR glyph_textWaterAirTwo = "gambe tese "
+
+    VAR glyph_textWaterFireOne = "Sole sull’acqua, legno sicuro, "
+    VAR glyph_textWaterFireTwo = "gambe tese "
+
+    VAR glyph_textWaterAetherOne = "Sole sull’acqua, legno sicuro, "
+    VAR glyph_textWaterAetherTwo = "gambe tese "
+
+    VAR glyph_textWaterEarthOne = "Sole sull’acqua, legno sicuro, "
+    VAR glyph_textWaterEarthTwo = "gambe tese "
+
+    //Dominante aria
+    VAR glyph_textAirAetherOne = "Sole sull’acqua, legno sicuro, "
+    VAR glyph_textAirAetherTwo = "gambe tese "
+
+    VAR glyph_textAirFireOne = "Sole sull’acqua, legno sicuro, "
+    VAR glyph_textAirFireTwo = "gambe tese "
+
+    VAR glyph_textAirEarthOne = "Sole sull’acqua, legno sicuro, "
+    VAR glyph_textAirEarthTwo = "gambe tese "
+
+    VAR glyph_textAirWaterOne = "Sole sull’acqua, legno sicuro, "
+    VAR glyph_textAirWaterTwo = "gambe tese "
+
+    //Dominante spirito
+    VAR glyph_textAetherAirOne = "Sole sull’acqua, legno sicuro, "
+    VAR glyph_textAetherAirTwo = "gambe tese "
+
+    VAR glyph_textAetherFireOne = "Sole sull’acqua, legno sicuro, "
+    VAR glyph_textAetherFireTwo = "gambe tese "
+
+    VAR glyph_textAetherEarthOne = "Sole sull’acqua, legno sicuro, "
+    VAR glyph_textAetherEarthTwo = "gambe tese "
+
+    VAR glyph_textAetherWaterOne = "Sole sull’acqua, legno sicuro, "
+    VAR glyph_textAetherWaterTwo = "gambe tese "
+
+    //Dominante terra
+    VAR glyph_textEarthAirOne = "Sole sull’acqua, legno sicuro, "
+    VAR glyph_textEarthAirTwo = "gambe tese "
+
+    VAR glyph_textEarthWaterOne = "Sole sull’acqua, legno sicuro, "
+    VAR glyph_textEarthWaterTwo = "gambe tese "
+
+    VAR glyph_textEarthFireOne = "Sole sull’acqua, legno sicuro, "
+    VAR glyph_textEarthFireTwo = "gambe tese "
+
+    VAR glyph_textEarthAetherOne = "Sole sull’acqua, legno sicuro, "
+    VAR glyph_textEarthAetherTwo = "gambe tese "
+
+    //Dominante fuoco
+    VAR glyph_textFireAetherOne = "Sole sull’acqua, legno sicuro, "
+    VAR glyph_textFireAetherTwo = "gambe tese "
+
+    VAR glyph_textFireAirOne = "Sole sull’acqua, legno sicuro, "
+    VAR glyph_textFireAirTwo = "gambe tese "
+
+    VAR glyph_textFireEarthOne = "Sole sull’acqua, legno sicuro, "
+    VAR glyph_textFireEarthTwo = "gambe tese "
+
+    VAR glyph_textFireWaterOne = "Sole sull’acqua, legno sicuro, "
+    VAR glyph_textFireWaterTwo = "gambe tese "
+
+
+
+//Venti sigilli principali: varianti per il grimorio
+    //Dominante acqua
+    VAR grimoire_textWaterAirOne = ""
+    VAR grimoire_textWaterAirTwo = ""
+
+    VAR grimoire_textWaterFireOne = ""
+    VAR grimoire_textWaterFireTwo = ""
+
+    VAR grimoire_textWaterAetherOne = ""
+    VAR grimoire_textWaterAetherTwo = ""
+
+    VAR grimoire_textWaterEarthOne = ""
+    VAR grimoire_textWaterEarthTwo = ""
+
+    //Dominante aria
+    VAR grimoire_textAirAetherOne = ""
+    VAR grimoire_textAirAetherTwo = ""
+
+    VAR grimoire_textAirFireOne = ""
+    VAR grimoire_textAirFireTwo = ""
+
+    VAR grimoire_textAirEarthOne = ""
+    VAR grimoire_textAirEarthTwo = ""
+
+    VAR grimoire_textAirWaterOne = ""
+    VAR grimoire_textAirWaterTwo = ""
+
+    //Dominante spirito
+    VAR grimoire_textAetherAirOne = ""
+    VAR grimoire_textAetherAirTwo = ""
+
+    VAR grimoire_textAetherFireOne = ""
+    VAR grimoire_textAetherFireTwo = ""
+
+    VAR grimoire_textAetherEarthOne = ""
+    VAR grimoire_textAetherEarthTwo = ""
+
+    VAR grimoire_textAetherWaterOne = ""
+    VAR grimoire_textAetherWaterTwo = ""
+
+    //Dominante terra
+    VAR grimoire_textEarthAirOne = ""
+    VAR grimoire_textEarthAirTwo = ""
+
+    VAR grimoire_textEarthWaterOne = ""
+    VAR grimoire_textEarthWaterTwo = ""
+
+    VAR grimoire_textEarthFireOne = ""
+    VAR grimoire_textEarthFireTwo = ""
+
+    VAR grimoire_textEarthAetherOne = ""
+    VAR grimoire_textEarthAetherTwo = ""
+
+    //Dominante fuoco
+    VAR grimoire_textFireAetherOne = ""
+    VAR grimoire_textFireAetherTwo = ""
+
+    VAR grimoire_textFireAirOne = ""
+    VAR grimoire_textFireAirTwo = ""
+
+    VAR grimoire_textFireEarthOne = ""
+    VAR grimoire_textFireEarthTwo = ""
+
+    VAR grimoire_textFireWaterOne = ""
+    VAR grimoire_textFireWaterTwo = ""    
