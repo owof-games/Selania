@@ -30,7 +30,7 @@
   
 === function glyph_grimoireUpdater()
 {glyph_actualActiveSigil:
-    -  FireAirWater:
+    - FireAirWater:
     - FireAirEarth:
     - FireAirAether:
     - FireWaterEarth:
