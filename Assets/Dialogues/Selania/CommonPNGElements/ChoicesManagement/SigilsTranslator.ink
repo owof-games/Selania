@@ -194,6 +194,51 @@
             - AetherEarthFire:
                 ~ return "Altare"
    
+    //Venti sigilli principali
+            - WaterEarth:
+                ~ return "Lago"
+            - WaterAir:
+                ~ return "Nube"
+            - WaterFire:
+                ~ return "Fiume"
+            - WaterAether:
+                ~ return "Fonte"
             
+            - AirWater:
+                ~ return "Cavalletto"
+            - AirEarth:
+                ~ return "Leggio"
+            - AirFire:
+                ~ return "Stufa"
+            - AirAether:
+                ~ return "Tavolo"
+
+            - AetherWater:
+                ~ return "Calice"
+            - AetherEarth:
+                ~ return "Tempio"
+            - AetherFire:
+                ~ return "Pugnale"
+            - AetherAir:
+                ~ return "Incenso"
+
+            - EarthWater:
+                ~ return "Linfa"
+            - EarthAir:
+                ~ return "Frasca"
+            - EarthFire:
+                ~ return "Frutto"
+            - EarthAether:
+                ~ return "Radice"
+
+            - FireWater:
+                ~ return "Chiave"
+            - FireEarth:
+                ~ return "Calibro"
+            - FireAir:
+                ~ return "Palla"
+            - FireAether:
+                ~ return "Mappa"
+                                                            
             -else: Traduzione colore parola {glyph_actualActiveSigil} non trovato!
     }

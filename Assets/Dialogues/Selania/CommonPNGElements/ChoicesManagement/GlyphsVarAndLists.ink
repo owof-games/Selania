@@ -6,7 +6,16 @@ LISTE COMBINATORIE DEI SIGILLI
 
 LIST allGlyphs = Fire, Air, Water, Earth, Aether
 
-//Lista di tutti i possibili sigilli
+//Lista di tutti i sigilli principali
+    LIST glyph_allMainSigils = 
+        WaterEarth, WaterAir, WaterAether, WaterFire,
+        AirWater, AirFire, AirAether, AirEarth,
+        AetherWater, AetherFire, AetherEarth, AetherAir,
+        EarthWater, EarthFire, EarthAether, EarthAir,
+        FireAether, FireWater, FireAir, FireEarth
+
+
+//Lista di tutti i possibili sigilli a tre
     LIST glyph_allSigils = 
        
         FireAirWater, FireAirEarth, FireAirAether,
@@ -32,7 +41,7 @@ LIST allGlyphs = Fire, Air, Water, Earth, Aether
         AetherFireEarth, AetherFireWater, AetherFireAir,
         AetherAirEarth, AetherAirWater, AetherAirFire,
         AetherWaterEarth, AetherWaterAir, AetherWaterFire,
-        AetherEarthWater, AetherEarthAir, AetherEarthFire
+        AetherEarthWater, AetherEarthAir, AetherEarthFire       
         
 //Raggruppamento dei sigilli per dominante (es: per gestione pagine libro)
 
