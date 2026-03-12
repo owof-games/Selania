@@ -139,58 +139,460 @@
             -:
 			    ~ grimoire_textFireAetherAirThree = glyph_textFireAetherAirThree
         }
-            
+
+
+
     - AirFireEarth:
+        {shuffle stopping:
+                -:
+                    ~ grimoire_textAirFireEarthOne = glyph_textAirFireEarthOne
+                -:
+                    ~ grimoire_textAirFireEarthTwo = glyph_textAirFireEarthTwo
+                -:
+                    ~ grimoire_textAirFireEarthThree = glyph_textAirFireEarthThree
+            }
     - AirFireAether:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textAirFireAetherOne = glyph_textAirFireAetherOne
+            -:
+			    ~ grimoire_textAirFireAetherTwo = glyph_textAirFireAetherTwo
+            -:
+			    ~ grimoire_textAirFireAetherThree = glyph_textAirFireAetherThree
+        }
     - AirFireWater:
+        {shuffle stopping:
+                -:
+                    ~ grimoire_textAirFireWaterOne = glyph_textAirFireWaterOne
+                -:
+                    ~ grimoire_textAirFireWaterTwo = glyph_textAirFireWaterTwo
+                -:
+                    ~ grimoire_textAirFireWaterThree = glyph_textAirFireWaterThree
+        }
     - AirWaterEarth:
+        {shuffle stopping:
+            -:
+                ~ grimoire_textAirWaterEarthOne = glyph_textAirWaterEarthOne
+            -:
+                ~ grimoire_textAirWaterEarthTwo = glyph_textAirWaterEarthTwo
+            -:
+                ~ grimoire_textAirWaterEarthThree = glyph_textAirWaterEarthThree
+        }
     - AirWaterAether:
+        {shuffle stopping:
+            -:
+                ~ grimoire_textAirWaterAetherOne = glyph_textAirWaterAetherOne
+            -:
+                ~ grimoire_textAirWaterAetherTwo = glyph_textAirWaterAetherTwo
+            -:
+                ~ grimoire_textAirWaterAetherThree = glyph_textAirWaterAetherThree
+        }
     - AirWaterFire:
+        {shuffle stopping:
+            -:
+                ~ grimoire_textAirWaterFireOne = glyph_textAirWaterFireOne
+            -:
+                ~ grimoire_textAirWaterFireTwo = glyph_textAirWaterFireTwo
+            -:
+                ~ grimoire_textAirWaterFireThree = glyph_textAirWaterFireThree
+        }
     - AirEarthAether:
+        {shuffle stopping:
+            -:
+                ~ grimoire_textAirEarthAetherOne = glyph_textAirEarthAetherOne
+            -:
+                ~ grimoire_textAirEarthAetherTwo = glyph_textAirEarthAetherTwo
+            -:
+                ~ grimoire_textAirEarthAetherThree = glyph_textAirEarthAetherThree
+        }
     - AirEarthWater:
+        {shuffle stopping:
+            -:
+                ~ grimoire_textAirEarthWaterOne = glyph_textAirEarthWaterOne
+            -:
+                ~ grimoire_textAirEarthWaterTwo = glyph_textAirEarthWaterTwo
+            -:
+                ~ grimoire_textAirEarthWaterThree = glyph_textAirEarthWaterThree
+        }
     - AirEarthFire:
+        {shuffle stopping:
+            -:
+                ~ grimoire_textAirEarthFireOne = glyph_textAirEarthFireOne
+            -:
+                ~ grimoire_textAirEarthFireTwo = glyph_textAirEarthFireTwo
+            -:
+                ~ grimoire_textAirEarthFireThree = glyph_textAirEarthFireThree
+        }
     - AirAetherEarth:
+        {shuffle stopping:
+            -:
+                ~ grimoire_textAirAetherEarthOne = glyph_textAirAetherEarthOne
+            -:
+                ~ grimoire_textAirAetherEarthTwo = glyph_textAirAetherEarthTwo
+            -:
+                ~ grimoire_textAirAetherEarthThree = glyph_textAirAetherEarthThree
+        }
     - AirAetherWater:
+        {shuffle stopping:
+            -:
+                ~ grimoire_textAirAetherWaterOne = glyph_textAirAetherWaterOne
+            -:
+                ~ grimoire_textAirAetherWaterTwo = glyph_textAirAetherWaterTwo
+            -:
+                ~ grimoire_textAirAetherWaterThree = glyph_textAirAetherWaterThree
+        }
     - AirAetherFire:
+        {shuffle stopping:
+            -:
+                ~ grimoire_textAirAetherFireOne = glyph_textAirAetherFireOne
+            -:
+                ~ grimoire_textAirAetherFireTwo = glyph_textAirAetherFireTwo
+            -:
+                ~ grimoire_textAirAetherFireThree = glyph_textAirAetherFireThree
+        }
             
+
+
+
     - WaterFireEarth:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textWaterFireEarthOne = glyph_textWaterFireEarthOne
+            -:
+			    ~ grimoire_textWaterFireEarthTwo = glyph_textWaterFireEarthTwo
+            -:
+			    ~ grimoire_textWaterFireEarthThree = glyph_textWaterFireEarthThree
+        }
     - WaterFireAether:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textWaterFireAetherOne = glyph_textWaterFireAetherOne
+            -:
+			    ~ grimoire_textWaterFireAetherTwo = glyph_textWaterFireAetherTwo
+            -:
+			    ~ grimoire_textWaterFireAetherThree = glyph_textWaterFireAetherThree
+        }
     - WaterFireAir:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textWaterFireAirOne = glyph_textWaterFireAirOne
+            -:
+			    ~ grimoire_textWaterFireAirTwo = glyph_textWaterFireAirTwo
+            -:
+			    ~ grimoire_textWaterFireAirThree = glyph_textWaterFireAirThree
+        }
     - WaterAirEarth:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textWaterAirEarthOne = glyph_textWaterAirEarthOne
+            -:
+			    ~ grimoire_textWaterAirEarthTwo = glyph_textWaterAirEarthTwo
+            -:
+			    ~ grimoire_textWaterAirEarthThree = glyph_textWaterAirEarthThree
+        }
     - WaterAirAether:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textWaterAirAetherOne = glyph_textWaterAirAetherOne
+            -:
+			    ~ grimoire_textWaterAirAetherTwo = glyph_textWaterAirAetherTwo
+            -:
+			    ~ grimoire_textWaterAirAetherThree = glyph_textWaterAirAetherThree
+        }
     - WaterAirFire:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textWaterAirFireOne = glyph_textWaterAirFireOne
+            -:
+			    ~ grimoire_textWaterAirFireTwo = glyph_textWaterAirFireTwo
+            -:
+			    ~ grimoire_textWaterAirFireThree = glyph_textWaterAirFireThree
+        }
     - WaterEarthAether:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textWaterEarthAetherOne = glyph_textWaterEarthAetherOne
+            -:
+			    ~ grimoire_textWaterEarthAetherTwo = glyph_textWaterEarthAetherTwo
+            -:
+			    ~ grimoire_textWaterEarthAetherThree = glyph_textWaterEarthAetherThree
+        }
     - WaterEarthAir:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textWaterEarthAirOne = glyph_textWaterEarthAirOne
+            -:
+			    ~ grimoire_textWaterEarthAirTwo = glyph_textWaterEarthAirTwo
+            -:
+			    ~ grimoire_textWaterEarthAirThree = glyph_textWaterEarthAirThree
+        }
     - WaterEarthFire:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textWaterEarthFireOne = glyph_textWaterEarthFireOne
+            -:
+			    ~ grimoire_textWaterEarthFireTwo = glyph_textWaterEarthFireTwo
+            -:
+			    ~ grimoire_textWaterEarthFireThree = glyph_textWaterEarthFireThree
+        }
     - WaterAetherEarth:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textWaterAetherEarthOne = glyph_textWaterAetherEarthOne
+            -:
+			    ~ grimoire_textWaterAetherEarthTwo = glyph_textWaterAetherEarthTwo
+            -:
+			    ~ grimoire_textWaterAetherEarthThree = glyph_textWaterAetherEarthThree
+        }
     - WaterAetherAir:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textWaterAetherAirOne = glyph_textWaterAetherAirOne
+            -:
+			    ~ grimoire_textWaterAetherAirTwo = glyph_textWaterAetherAirTwo
+            -:
+			    ~ grimoire_textWaterAetherAirThree = glyph_textWaterAetherAirThree
+        }
     - WaterAetherFire:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textWaterAetherFireOne = glyph_textWaterAetherFireOne
+            -:
+			    ~ grimoire_textWaterAetherFireTwo = glyph_textWaterAetherFireTwo
+            -:
+			    ~ grimoire_textWaterAetherFireThree = glyph_textWaterAetherFireThree
+        }
             
+
+
+
+
+
+
     - EarthFireAether:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textEarthFireAetherOne = glyph_textEarthFireAetherOne
+            -:
+			    ~ grimoire_textEarthFireAetherTwo = glyph_textEarthFireAetherTwo
+            -:
+			    ~ grimoire_textEarthFireAetherThree = glyph_textEarthFireAetherThree
+        }
     - EarthFireWater:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textEarthFireWaterOne = glyph_textEarthFireWaterOne
+            -:
+			    ~ grimoire_textEarthFireWaterTwo = glyph_textEarthFireWaterTwo
+            -:
+			    ~ grimoire_textEarthFireWaterThree = glyph_textEarthFireWaterThree
+        }
     - EarthFireAir:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textEarthFireAirOne = glyph_textEarthFireAirOne
+            -:
+			    ~ grimoire_textEarthFireAirTwo = glyph_textEarthFireAirTwo
+            -:
+			    ~ grimoire_textEarthFireAirThree = glyph_textEarthFireAirThree
+        }
     - EarthAirAether:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textEarthAirAetherOne = glyph_textEarthAirAetherOne
+            -:
+			    ~ grimoire_textEarthAirAetherTwo = glyph_textEarthAirAetherTwo
+            -:
+			    ~ grimoire_textEarthAirAetherThree = glyph_textEarthAirAetherThree
+        }
     - EarthAirWater:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textEarthAirWaterOne = glyph_textEarthAirWaterOne
+            -:
+			    ~ grimoire_textEarthAirWaterTwo = glyph_textEarthAirWaterTwo
+            -:
+			    ~ grimoire_textEarthAirWaterThree = glyph_textEarthAirWaterThree
+        }
     - EarthAirFire:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textEarthAirFireOne = glyph_textEarthAirFireOne
+            -:
+			    ~ grimoire_textEarthAirFireTwo = glyph_textEarthAirFireTwo
+            -:
+			    ~ grimoire_textEarthAirFireThree = glyph_textEarthAirFireThree
+        }
     - EarthWaterAether:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textEarthWaterAetherOne = glyph_textEarthWaterAetherOne
+            -:
+			    ~ grimoire_textEarthWaterAetherTwo = glyph_textEarthWaterAetherTwo
+            -:
+			    ~ grimoire_textEarthWaterAetherThree = glyph_textEarthWaterAetherThree
+        }
     - EarthWaterAir:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textEarthWaterAirOne = glyph_textEarthWaterAirOne
+            -:
+			    ~ grimoire_textEarthWaterAirTwo = glyph_textEarthWaterAirTwo
+            -:
+			    ~ grimoire_textEarthWaterAirThree = glyph_textEarthWaterAirThree
+        }
     - EarthWaterFire:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textEarthWaterFireOne = glyph_textEarthWaterFireOne
+            -:
+			    ~ grimoire_textEarthWaterFireTwo = glyph_textEarthWaterFireTwo
+            -:
+			    ~ grimoire_textEarthWaterFireThree = glyph_textEarthWaterFireThree
+        }
     - EarthAetherWater:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textEarthAetherWaterOne = glyph_textEarthAetherWaterOne
+            -:
+			    ~ grimoire_textEarthAetherWaterTwo = glyph_textEarthAetherWaterTwo
+            -:
+			    ~ grimoire_textEarthAetherWaterThree = glyph_textEarthAetherWaterThree
+        }
     - EarthAetherAir:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textEarthAetherAirOne = glyph_textEarthAetherAirOne
+            -:
+			    ~ grimoire_textEarthAetherAirTwo = glyph_textEarthAetherAirTwo
+            -:
+			    ~ grimoire_textEarthAetherAirThree = glyph_textEarthAetherAirThree
+        }
     - EarthAetherFire:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textEarthAetherFireOne = glyph_textEarthAetherFireOne
+            -:
+			    ~ grimoire_textEarthAetherFireTwo = glyph_textEarthAetherFireTwo
+            -:
+			    ~ grimoire_textEarthAetherFireThree = glyph_textEarthAetherFireThree
+        }
             
+
+
+
+
+
+
+
     - AetherFireEarth:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textAetherFireEarthOne = glyph_textAetherFireEarthOne
+            -:
+			    ~ grimoire_textAetherFireEarthTwo = glyph_textAetherFireEarthTwo
+            -:
+			    ~ grimoire_textAetherFireEarthThree = glyph_textAetherFireEarthThree
+        }
     - AetherFireWater:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textAetherFireWaterOne = glyph_textAetherFireWaterOne
+            -:
+			    ~ grimoire_textAetherFireWaterTwo = glyph_textAetherFireWaterTwo
+            -:
+			    ~ grimoire_textAetherFireWaterThree = glyph_textAetherFireWaterThree
+        }
     - AetherFireAir:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textAetherFireAirOne = glyph_textAetherFireAirOne
+            -:
+			    ~ grimoire_textAetherFireAirTwo = glyph_textAetherFireAirTwo
+            -:
+			    ~ grimoire_textAetherFireAirThree = glyph_textAetherFireAirThree
+        }
     - AetherAirEarth:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textAetherAirEarthOne = glyph_textAetherAirEarthOne
+            -:
+			    ~ grimoire_textAetherAirEarthTwo = glyph_textAetherAirEarthTwo
+            -:
+			    ~ grimoire_textAetherAirEarthThree = glyph_textAetherAirEarthThree
+        }
     - AetherAirWater:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textAetherAirWaterOne = glyph_textAetherAirWaterOne
+            -:
+			    ~ grimoire_textAetherAirWaterTwo = glyph_textAetherAirWaterTwo
+            -:
+			    ~ grimoire_textAetherAirWaterThree = glyph_textAetherAirWaterThree
+        }
     - AetherAirFire:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textAetherAirFireOne = glyph_textAetherAirFireOne
+            -:
+			    ~ grimoire_textAetherAirFireTwo = glyph_textAetherAirFireTwo
+            -:
+			    ~ grimoire_textAetherAirFireThree = glyph_textAetherAirFireThree
+        }
     - AetherWaterEarth:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textAetherWaterEarthOne = glyph_textAetherWaterEarthOne
+            -:
+			    ~ grimoire_textAetherWaterEarthTwo = glyph_textAetherWaterEarthTwo
+            -:
+			    ~ grimoire_textAetherWaterEarthThree = glyph_textAetherWaterEarthThree
+        }
     - AetherWaterAir:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textAetherWaterAirOne = glyph_textAetherWaterAirOne
+            -:
+			    ~ grimoire_textAetherWaterAirTwo = glyph_textAetherWaterAirTwo
+            -:
+			    ~ grimoire_textAetherWaterAirThree = glyph_textAetherWaterAirThree
+        }
     - AetherWaterFire:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textAetherWaterFireOne = glyph_textAetherWaterFireOne
+            -:
+			    ~ grimoire_textAetherWaterFireTwo = glyph_textAetherWaterFireTwo
+            -:
+			    ~ grimoire_textAetherWaterFireThree = glyph_textAetherWaterFireThree
+        }
     - AetherEarthWater:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textAetherEarthWaterOne = glyph_textAetherEarthWaterOne
+            -:
+			    ~ grimoire_textAetherEarthWaterTwo = glyph_textAetherEarthWaterTwo
+            -:
+			    ~ grimoire_textAetherEarthWaterThree = glyph_textAetherEarthWaterThree
+        }
     - AetherEarthAir:
-    - AetherEarthFire:       
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textAetherEarthAirOne = glyph_textAetherEarthAirOne
+            -:
+			    ~ grimoire_textAetherEarthAirTwo = glyph_textAetherEarthAirTwo
+            -:
+			    ~ grimoire_textAetherEarthAirThree = glyph_textAetherEarthAirThree
+        }
+    - AetherEarthFire:    
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textAetherEarthFireOne = glyph_textAetherEarthFireOne
+            -:
+			    ~ grimoire_textAetherEarthFireTwo = glyph_textAetherEarthFireTwo
+            -:
+			    ~ grimoire_textAetherEarthFireThree = glyph_textAetherEarthFireThree
+        }   
         
 }
 
