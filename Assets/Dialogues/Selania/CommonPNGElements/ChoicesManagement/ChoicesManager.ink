@@ -285,39 +285,7 @@ VAR glyph_decreaseSigil = true
         }
 
     
-    -> sigil_PNG_comment
-
-    = sigil_PNG_comment
-
-    //Qui inseriamo il commento progressivo, es.
-    {glyph_actualActiveSigil:
-        //Uso shuffle stopping con l'idea di poi associare a ogni frase una variabile stringa da mettere direttamente sul grimorio, in modo che si popoli tutto in automatico.
-        - WaterEarthFire:
-            {shuffle stopping:
-                - {glyph_textWaterEarthFireOne}
-                - {glyph_textWaterEarthFireTwo}
-                - {glyph_textWaterEarthFireThree}
-            }
-
-        - WaterEarthAir:
-            {shuffle stopping:
-                - {glyph_textWaterEarthAirOne}
-                - {glyph_textWaterEarthAirTwo}
-                - {glyph_textWaterEarthAirThree}
-            } 
-
-        - WaterEarthAether:
-            {shuffle stopping:
-                - {glyph_textWaterEarthAetherOne}
-                - {glyph_textWaterEarthAetherTwo}
-                - {glyph_textWaterEarthAetherThree}
-            }       
-        //Se non ci sono sigilli attivi, skippa in automatico
-    }
     -> sigil_PNG_reactions
-
-
-
 
     = sigil_PNG_reactions
     //Qui invece abbiamo le reazioni dellx PNG
@@ -425,8 +393,6 @@ VAR glyph_decreaseSigil = true
             
             
                 -> closing_function
-
-
 
 
     = closing_function

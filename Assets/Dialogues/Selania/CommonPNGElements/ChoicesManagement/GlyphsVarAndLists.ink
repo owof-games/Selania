@@ -155,9 +155,9 @@ LIST glyph_talkingVariations = fireC, earthC, airC, waterC, aetherC
     VAR glyph_textFireAirEarthTwo = "gambe tese "
     VAR glyph_textFireAirEarthThree = "in un salto sospeso."
 
-    VAR glyph_textFireAirAetheOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textFireAirAetheTwo = "gambe tese "
-    VAR glyph_textFireAirAetheThree = "in un salto sospeso."
+    VAR glyph_textFireAirAetherOne = "Sole sull’acqua, legno sicuro, "
+    VAR glyph_textFireAirAetherTwo = "gambe tese "
+    VAR glyph_textFireAirAetherThree = "in un salto sospeso."
 
     //Più acqua
     VAR glyph_textFireWaterEarthOne = "Sole sull’acqua, legno sicuro, "
@@ -426,9 +426,9 @@ LIST glyph_talkingVariations = fireC, earthC, airC, waterC, aetherC
     VAR grimoire_textFireAirEarthTwo = ""
     VAR grimoire_textFireAirEarthThree = ""
 
-    VAR grimoire_textFireAirAetheOne = ""
-    VAR grimoire_textFireAirAetheTwo = ""
-    VAR grimoire_textFireAirAetheThree = ""
+    VAR grimoire_textFireAirAetherOne = ""
+    VAR grimoire_textFireAirAetherTwo = ""
+    VAR grimoire_textFireAirAetherThree = ""
 
     //Più acqua
     VAR grimoire_textFireWaterEarthOne = ""
