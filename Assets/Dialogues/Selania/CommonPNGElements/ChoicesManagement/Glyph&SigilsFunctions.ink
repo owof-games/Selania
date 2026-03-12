@@ -28,7 +28,7 @@
     }
 ->->
   
-=== function glyph_grimoireUpdater()
+=== function glyph_grimoireTripleSigilsUpdater()
 {glyph_actualActiveSigil:
     - FireAirWater:
         {shuffle stopping:
@@ -600,3 +600,156 @@
 
 
 
+=== function glyph_grimoireMainSigilsUpdater()
+//Faccio passare questa funzione solo al primo utilizzo, così 
+{
+    - glyph_fireAirSigils has glyph_actualActiveSigil:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textFireAirOne = glyph_textFireAirOne
+            -:
+			    ~ grimoire_textFireAirTwo = glyph_textFireAirTwo
+        }
+    - glyph_fireWaterSigils has glyph_actualActiveSigil:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textFireWaterOne = glyph_textFireWaterOne
+            -:
+			    ~ grimoire_textFireWaterTwo = glyph_textFireWaterTwo
+        }
+    - glyph_fireEarthSigils has glyph_actualActiveSigil:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textFireEarthOne = glyph_textFireEarthOne
+            -:
+			    ~ grimoire_textFireEarthTwo = glyph_textFireEarthTwo
+        }
+    - glyph_fireAetherSigils  has glyph_actualActiveSigil:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textFireAetherOne = glyph_textFireAetherOne
+            -:
+			    ~ grimoire_textFireAetherTwo = glyph_textFireAetherTwo
+        }
+
+        
+    - glyph_airFireSigils has glyph_actualActiveSigil:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textAirFireOne = glyph_textAirFireOne
+            -:
+			    ~ grimoire_textAirFireTwo = glyph_textAirFireTwo
+        }
+    - glyph_airWaterSigils has glyph_actualActiveSigil:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textAirWaterOne = glyph_textAirWaterOne
+            -:
+			    ~ grimoire_textAirWaterTwo = glyph_textAirWaterTwo
+        }
+    - glyph_airEarthSigils has glyph_actualActiveSigil:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textAirEarthOne = glyph_textAirEarthOne
+            -:
+			    ~ grimoire_textAirEarthTwo = glyph_textAirEarthTwo
+        }
+    - glyph_airAetherSigils has glyph_actualActiveSigil:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textAirAetherOne = glyph_textAirAetherOne
+            -:
+			    ~ grimoire_textAirAetherTwo = glyph_textAirAetherTwo
+        }
+
+        
+    - glyph_WaterFireSigils has glyph_actualActiveSigil:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textWaterFireOne = glyph_textWaterFireOne
+            -:
+			    ~ grimoire_textWaterFireTwo = glyph_textWaterFireTwo
+        }
+    - glyph_WaterAirSigils has glyph_actualActiveSigil:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textWaterAirOne = glyph_textWaterAirOne
+            -:
+			    ~ grimoire_textWaterAirTwo = glyph_textWaterAirTwo
+        }
+    - glyph_WaterEarthSigils has glyph_actualActiveSigil:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textWaterEarthOne = glyph_textWaterEarthOne
+            -:
+			    ~ grimoire_textWaterEarthTwo = glyph_textWaterEarthTwo
+        }
+    - glyph_WaterAetherSigils has glyph_actualActiveSigil:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textWaterAetherOne = glyph_textWaterAetherOne
+            -:
+			    ~ grimoire_textWaterAetherTwo = glyph_textWaterAetherTwo
+        }
+
+        
+    - glyph_earthFireSigils has glyph_actualActiveSigil:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textEarthFireOne = glyph_textEarthFireOne
+            -:
+			    ~ grimoire_textEarthFireTwo = glyph_textEarthFireTwo
+        }
+    - glyph_earthAirSigils has glyph_actualActiveSigil:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textEarthAirOne = glyph_textEarthAirOne
+            -:
+			    ~ grimoire_textEarthAirTwo = glyph_textEarthAirTwo
+        }
+    - glyph_earthWaterSigils has glyph_actualActiveSigil:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textEarthWaterOne = glyph_textEarthWaterOne
+            -:
+			    ~ grimoire_textEarthWaterTwo = glyph_textEarthWaterTwo
+        }
+    - glyph_earthAetherSigils has glyph_actualActiveSigil:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textEarthAetherOne = glyph_textEarthAetherOne
+            -:
+			    ~ grimoire_textEarthAetherTwo = glyph_textEarthAetherTwo
+        }
+
+        
+    - glyph_aetherFireSigils has glyph_actualActiveSigil:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textAetherFireOne = glyph_textAetherFireOne
+            -:
+			    ~ grimoire_textAetherFireTwo = glyph_textAetherFireTwo
+        }
+    - glyph_aetherAirSigils has glyph_actualActiveSigil:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textAetherAirOne = glyph_textAetherAirOne
+            -:
+			    ~ grimoire_textAetherAirTwo = glyph_textAetherAirTwo
+        }
+    - glyph_aetherWaterSigils has glyph_actualActiveSigil:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textAetherWaterOne = glyph_textAetherWaterOne
+            -:
+			    ~ grimoire_textAetherWaterTwo = glyph_textAetherWaterTwo
+        }
+    - glyph_aetherEarthSigils has glyph_actualActiveSigil:
+        {shuffle stopping:
+            -:
+			    ~ grimoire_textAetherEarthOne = glyph_textAetherEarthOne
+            -:
+			    ~ grimoire_textAetherEarthTwo = glyph_textAetherEarthTwo
+        }
+
+}

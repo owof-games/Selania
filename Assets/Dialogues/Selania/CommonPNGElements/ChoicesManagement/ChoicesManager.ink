@@ -416,18 +416,22 @@ VAR glyph_decreaseSigil = true
 
 
     = update_sigil_value
-    //Qui aggiorniamo l'utilizzo del sigillo.
-    //Prima aumentiamo il valore
+    //Qui aggiorniamo un po' di cose attorno al sigillo
+    //Prima chiamo l'updater delle informazioni sul grimorio per il sigillo a tre
+        ~ glyph_grimoireTripleSigilsUpdater()
+        
+    //Poi aumentiamo il valore di utilizzo
         ~ glyph_actualSigilUses ++
-
-    //Poi chiamo l'updater delle informazioni sul grimorio    
-        ~ glyph_grimoireUpdater()
-
+    
     //Se l'utilizzo è arrivato al massimo, a quel punto aggiungiamo il sigillo a quelli utilizzati e svuotiamo la variabile del sigillo attualmente attivo.
     {
         - glyph_actualSigilUses == glyph_maxSigilUses:
             L'effetto di {glyph_actualActiveSigil} si è esaurito.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            //poi aggiorno le informazioni sul sigillo principale
+            ~ glyph_grimoireMainSigilsUpdater()
+            //sposto il sigillo su quelli utilizzati
             ~ glyph_usedSigils += glyph_actualActiveSigil
+            //e svuoto il sigillo attivo
             ~ glyph_actualActiveSigil = ()
             
     }    
