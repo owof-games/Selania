@@ -68,6 +68,7 @@
             Capirai come trovarci.
                 ~ move_entity(FromForestToDumpBlocked, Safekeeping)
                 ~ move_entity(FromForestToDump, Forest)
+                ~ move_entity(mapDump, TrainStop)
                 ~ player_accessiblePlaces += Dump
     }
 

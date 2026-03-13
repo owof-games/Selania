@@ -45,6 +45,7 @@
     - debug_testDump == true && (entity_location(FromForestToDump) == Safekeeping):
         ~ move_entity(FromForestToDumpBlocked, Safekeeping)
         ~ move_entity(FromForestToDump, Forest)
+        ~ move_entity(mapDump, TrainStop)
         ~ player_accessiblePlaces += Dump
 } 
 {
@@ -52,6 +53,7 @@
         ~ move_entity(FromPondToKitchenBlocked, Safekeeping)
         ~ move_entity(FromPondToKitchen, Pond)
         ~ move_entity(kitchenOpened, Bedroom)
+        ~ move_entity(mapKitchen, TrainStop)
         ~ player_accessiblePlaces += Kitchen
 }
 {
@@ -59,12 +61,14 @@
         ~ move_entity(FromForestToLibraryBlocked, Safekeeping)
         ~ move_entity(FromForestToLibrary, Forest)
         ~ move_entity(libraryOpened, Bedroom)
+        ~ move_entity(mapLibrary, TrainStop)
         ~ player_accessiblePlaces += Library
 } 
 {
     - debug_testNest == true && (entity_location(FromLibraryToNest) == Safekeeping):
         ~ move_entity(FromLibraryToNestBlocked, Safekeeping)
         ~ move_entity(FromLibraryToNest, Library)
+        ~ move_entity(mapNest, TrainStop)
         ~ player_accessiblePlaces += Nest
 }
 {
@@ -72,6 +76,7 @@
         ~ move_entity(FromPondToGreenhouseBlocked, Safekeeping)
         ~ move_entity(FromPondToGreenhouse, Pond)
         ~ move_entity(greenhouseOpened, Bedroom)
+        ~ move_entity(mapGreenhouse, TrainStop)
         ~ player_accessiblePlaces += Greenhouse
 }
 {

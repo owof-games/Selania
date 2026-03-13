@@ -110,6 +110,7 @@
             ~ player_accessiblePlaces += Greenhouse
             ~ move_entity(FromPondToGreenhouseBlocked, Safekeeping)
             ~ move_entity(FromPondToGreenhouse, Pond)
+            ~ move_entity(mapGreenhouse, TrainStop)
             // ~ movements_randomablePlaces += Greenhouse
     }
     
@@ -119,6 +120,7 @@
             ~ player_accessiblePlaces += Kitchen
             ~ move_entity(FromPondToKitchenBlocked, Safekeeping)
             ~ move_entity(FromPondToKitchen, Pond)
+            ~ move_entity(mapKitchen, TrainStop)
     }
     
     //Apertura biblioteca
@@ -126,6 +128,7 @@
         - open_the_library && (entity_location(FromForestToLibrary) == Safekeeping):
             ~ move_entity(FromForestToLibraryBlocked, Safekeeping)
             ~ move_entity(FromForestToLibrary, Forest)
+            ~ move_entity(mapLibrary, TrainStop)
             // ~ movements_randomablePlaces += Library
             ~ player_accessiblePlaces += Library
     }
@@ -137,6 +140,7 @@
             ~ player_accessiblePlaces += Nest
             ~ move_entity(FromLibraryToNestBlocked, Safekeeping)
             ~ move_entity(FromLibraryToNest, Library)
+            ~ move_entity(mapNest, TrainStop)
     }
     
 
