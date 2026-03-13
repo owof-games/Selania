@@ -5196,38 +5196,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Alchemy::Alchemy.Hierarchy.HierarchySeparator
   hierarchyObjectMode: 0
---- !u!1 &1698175439968674626
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1510406748561692333}
-  m_Layer: 0
-  m_Name: bone_1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1510406748561692333
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1698175439968674626}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.0044046924, w: 0.9999903}
-  m_LocalPosition: {x: -7.621174, y: -70.22372, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8096110090525467555}
-  m_Father: {fileID: 6582976764267722608}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3100873677327278414
 GameObject:
   m_ObjectHideFlags: 0
@@ -20143,6 +20111,11 @@ Transform:
   - {fileID: 4449035067283256756}
   - {fileID: 350123399331862521}
   - {fileID: 4791141793978497089}
+  - {fileID: 5548515564548478162}
+  - {fileID: 3126432294506541472}
+  - {fileID: 4932884895282853852}
+  - {fileID: 2655080196004082714}
+  - {fileID: 8552457306882526194}
   - {fileID: 4602128810031178555}
   - {fileID: 4099463210324834314}
   - {fileID: 4988368586595198221}
@@ -20198,37 +20171,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Alchemy::Alchemy.Hierarchy.HierarchySeparator
   hierarchyObjectMode: 0
---- !u!1 &7808226729949851693
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8096110090525467555}
-  m_Layer: 0
-  m_Name: bone_2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8096110090525467555
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7808226729949851693}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.70706874, w: 0.7071449}
-  m_LocalPosition: {x: 61.879105, y: 0.00041883482, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1510406748561692333}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8456350040249704865
 GameObject:
   m_ObjectHideFlags: 0
@@ -20258,12 +20200,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5548515564548478162}
-  - {fileID: 3126432294506541472}
-  - {fileID: 4932884895282853852}
-  - {fileID: 2655080196004082714}
-  - {fileID: 8552457306882526194}
+  m_Children: []
   m_Father: {fileID: 4033213190699239440}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1768107130540081672
@@ -20370,37 +20307,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Alchemy::Alchemy.Hierarchy.HierarchySeparator
   hierarchyObjectMode: 0
---- !u!1 &8596327907783082995
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9010571178981997126}
-  m_Layer: 0
-  m_Name: bone_3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &9010571178981997126
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8596327907783082995}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.78315985, w: 0.62182045}
-  m_LocalPosition: {x: -25.222458, y: -69.860794, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6582976764267722608}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9057237827028926131
 GameObject:
   m_ObjectHideFlags: 0
@@ -22322,7 +22228,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 4791141793978497089}
+    m_TransformParent: {fileID: 4033213190699239440}
     m_Modifications:
     - target: {fileID: 859111126649792559, guid: 5751a4f0bbe0b1847b6fc3b9e0ef1b09, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22389,7 +22295,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 4791141793978497089}
+    m_TransformParent: {fileID: 4033213190699239440}
     m_Modifications:
     - target: {fileID: 859111126649792559, guid: 006e44085e2d64d41a1da8f234fe75b6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23132,7 +23038,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 4791141793978497089}
+    m_TransformParent: {fileID: 4033213190699239440}
     m_Modifications:
     - target: {fileID: 859111126649792559, guid: d9fc3e6d5ec037f4798e7b618465cb85, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23199,7 +23105,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 4791141793978497089}
+    m_TransformParent: {fileID: 4033213190699239440}
     m_Modifications:
     - target: {fileID: 859111126649792559, guid: 9bf56dff6e4ae59468f8849706fe34a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23322,11 +23228,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5344787421971937063, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 118
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 5344787421971937063, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 146
+      value: 153
       objectReference: {fileID: 0}
     - target: {fileID: 5344787421971937063, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
@@ -23967,20 +23873,14 @@ PrefabInstance:
     - target: {fileID: 7465546172250548277, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 49934cfaa63d511408b56cbd06d799b6, type: 3}
+      objectReference: {fileID: 21300000, guid: e5392e6536a6ba146840ecabb240ca31, type: 3}
     - target: {fileID: 8235661390823931172, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: inkName
       value: FromForestToTrainStop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4151842594449095391, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1510406748561692333}
-    - targetCorrespondingSourceObject: {fileID: 4151842594449095391, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 9010571178981997126}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1131149654844477419, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       insertIndex: -1
@@ -24003,16 +23903,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7887920832530678340}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57c008f954fe54a8bb972de1018a2cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteSkin
-  m_RootBone: {fileID: 1510406748561692333}
+  m_RootBone: {fileID: 0}
   m_BoneTransforms:
-  - {fileID: 1510406748561692333}
-  - {fileID: 8096110090525467555}
-  - {fileID: 9010571178981997126}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   m_Bounds:
     m_Center: {x: 865, y: -347.99997, z: 0}
     m_Extent: {x: 59, y: 73.00003, z: 0}
@@ -24383,7 +24283,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 4791141793978497089}
+    m_TransformParent: {fileID: 4033213190699239440}
     m_Modifications:
     - target: {fileID: 859111126649792559, guid: 18d0a60e1cfae7640a3c7faa96873a75, type: 3}
       propertyPath: m_LocalPosition.x
