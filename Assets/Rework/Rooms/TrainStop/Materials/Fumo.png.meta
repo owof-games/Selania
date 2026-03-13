@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2591ef5e67a54d140a3840c8f1e294e4
+guid: 47185a4681bc75e4e95d818f135832d6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6215681114637064914
-    second: Nube scura piccola copy 2_0
+      213: -7893044380587151015
+    second: Fumo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Nube scura piccola copy 2_0
+      name: Fumo_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 3
-        width: 38
-        height: 33
+        x: 0
+        y: 5
+        width: 44
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e2524f455f67db9a0800000000000000
-      internalID: -6215681114637064914
+      spriteID: 951b5ba74f5467290800000000000000
+      internalID: -7893044380587151015
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Nube scura piccola copy 2_0: -6215681114637064914
+      Fumo_0: -7893044380587151015
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
