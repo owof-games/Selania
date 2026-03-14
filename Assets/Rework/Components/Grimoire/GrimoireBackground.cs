@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Microsoft.Extensions.Logging;
+using R3;
 using Selania.Rework.Interfaces;
 using TMPro;
 using UnityEngine;
@@ -13,6 +14,27 @@ namespace Selania.Rework.Components.Grimoire
 {
     public class GrimoireBackground : MonoBehaviour, IAutomaticEditorInject
     {
+        /// <summary>
+        ///     Possible status of a greenhouse button.
+        /// </summary>
+        public enum GreenhouseButtonStatus
+        {
+            /// <summary>
+            ///     Shown and available.
+            /// </summary>
+            Shown,
+
+            /// <summary>
+            ///     Locked.
+            /// </summary>
+            Locked,
+
+            /// <summary>
+            ///     Shown, but exhausted.
+            /// </summary>
+            Exhausted
+        }
+
         /// <summary>
         ///     The page types available in the grimoire.
         /// </summary>
@@ -42,8 +64,8 @@ namespace Selania.Rework.Components.Grimoire
         [Tooltip("The animator controlling the second level page for the greenhouse")] [SerializeField]
         private Animator secondLevelAnimatorGreenhouse = null!;
 
-        [Tooltip("List of buttons controlled by Ink")] [SerializeField]
-        private LeftButtonDescriptor[] leftButtonDescriptors = null!;
+        [Tooltip("List of top level buttons")] [SerializeField]
+        private TopLevelButton[] topLevelButtons = null!;
 
         [Tooltip("Invoked when the grimoire is asked to close.")] [SerializeField]
         private UnityEvent close = new();
@@ -101,6 +123,9 @@ namespace Selania.Rework.Components.Grimoire
         [SerializeField] [Tooltip("Game object containing the button for the 'next page' bookmark.")]
         private GameObject nextPageBookmarkButton = null!;
 
+        [SerializeField] [Tooltip("Plant buttons of the greenhouse section")]
+        private SecondLevelGreenhouseButton[] secondLevelGreenhouseButtons = null!;
+
         private Animator _animator = null!;
 
         private TextMeshProUGUI _backToLevelTwoTextMeshPro = null!;
@@ -118,6 +143,18 @@ namespace Selania.Rework.Components.Grimoire
         [Inject] internal ISettingsBook SettingsBook = null!;
 
         [Inject] internal ISettingsSigils SettingsSigils = null!;
+
+        /// <summary>
+        ///     An observable that exposes clicks on top level buttons.
+        /// </summary>
+        public Observable<string> firstLevelButtonClick =>
+            topLevelButtons.Select(topLevelButton => topLevelButton.click).Merge();
+
+        /// <summary>
+        ///     An observable that exposes clicks on second level greenhouse buttons.
+        /// </summary>
+        public Observable<string> secondLevelGreenhouseButtonClick =>
+            secondLevelGreenhouseButtons.Select(secondLevelButton => secondLevelButton.click).Merge();
 
         private void Awake()
         {
@@ -165,25 +202,28 @@ namespace Selania.Rework.Components.Grimoire
         /// </summary>
         public void DisableAllLeftButtons()
         {
-            foreach (var descriptor in leftButtonDescriptors) descriptor.target.interactable = false;
+            // foreach (var descriptor in leftButtonDescriptors) descriptor.target.interactable = false;
+            foreach (var topLevelButton in topLevelButtons) topLevelButton.interactable = false;
         }
 
         /// <summary>
         ///     Enable (or disable) a button on the left.
         /// </summary>
-        /// <param name="buttonName">Name of the button, according to <see cref="leftButtonDescriptors" />.</param>
+        /// <param name="buttonName">Name of the button, according to <see cref="topLevelButtons" />.</param>
         /// <param name="isButtonEnabled">Whether the button must be enabled or disabled.</param>
         public void EnableLeftButton(string buttonName, bool isButtonEnabled)
         {
-            var descriptor = leftButtonDescriptors.FirstOrDefault(descriptor => descriptor.name == buttonName);
-            if (descriptor == null)
+            // var descriptor = leftButtonDescriptors.FirstOrDefault(descriptor => descriptor.name == buttonName);
+            var topLevelButton =
+                topLevelButtons.FirstOrDefault(topLevelButton => topLevelButton.buttonName == buttonName);
+            if (topLevelButton == null)
             {
                 Logger.ZLogWarning(
                     $"Trying to set button {buttonName} to enabled state {isButtonEnabled}, but cannot find a button with this name");
                 return;
             }
 
-            descriptor.target.interactable = isButtonEnabled;
+            topLevelButton.interactable = isButtonEnabled;
         }
 
         /// <summary>
@@ -358,6 +398,39 @@ namespace Selania.Rework.Components.Grimoire
                 animator.SetFloat(AnimationSpeedMultiplierAnimatorProperty,
                     SettingsBook.switchPageAnimationSpeedMultiplier);
                 animator.SetTrigger(animator == animatorToShow ? ShowAnimatorProperty : HideAnimatorProperty);
+            }
+        }
+
+        /// <summary>
+        ///     Set the greenhouse button status.
+        /// </summary>
+        /// <param name="plantName">Name of the plant to set.</param>
+        /// <param name="status">Status of the button.</param>
+        public void SetGreenhouseButtonStatus(string plantName, GreenhouseButtonStatus status)
+        {
+            var button = secondLevelGreenhouseButtons.FirstOrDefault(button => button.plantName == plantName);
+            if (button == null)
+            {
+                Logger.ZLogError($"Cannot find plant with name {plantName}");
+                return;
+            }
+
+            switch (status)
+            {
+                case GreenhouseButtonStatus.Shown:
+                    button.interactable = true;
+                    button.SetSaturation(1f);
+                    break;
+                case GreenhouseButtonStatus.Exhausted:
+                    button.interactable = true;
+                    button.SetSaturation(SettingsBook.ExhaustedGreenhouseButtonSaturationLevel);
+                    break;
+                case GreenhouseButtonStatus.Locked:
+                    button.interactable = false;
+                    button.SetSaturation(1f);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(status), status, null);
             }
         }
 

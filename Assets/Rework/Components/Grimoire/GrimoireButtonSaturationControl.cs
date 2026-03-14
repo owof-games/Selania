@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Selania.Rework.Components.Grimoire
@@ -10,8 +11,15 @@ namespace Selania.Rework.Components.Grimoire
     {
         private static readonly int Saturation = Shader.PropertyToID("_Saturation");
 
+        private static readonly Dictionary<float, Material> MaterialsBySaturation = new();
+
         [Tooltip("The image whose saturation will be changed.")] [SerializeField]
         private Image image = null!;
+
+        private void Start()
+        {
+            if (!MaterialsBySaturation.ContainsKey(1)) MaterialsBySaturation[1] = image.material;
+        }
 
         /// <summary>
         ///     Set the saturation of the image.
@@ -20,7 +28,14 @@ namespace Selania.Rework.Components.Grimoire
         public void SetSaturation(float saturation)
         {
             saturation = Mathf.Clamp(saturation, 0, 1);
-            image.material.SetFloat(Saturation, saturation);
+            if (!MaterialsBySaturation.ContainsKey(saturation))
+            {
+                var saturationMaterial = new Material(MaterialsBySaturation[1]);
+                saturationMaterial.SetFloat(Saturation, saturation);
+                MaterialsBySaturation[saturation] = saturationMaterial;
+            }
+
+            image.material = MaterialsBySaturation[saturation];
         }
     }
 }

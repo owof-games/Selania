@@ -403,6 +403,11 @@ namespace Selania.Rework.Components
         /// <inheritdoc />
         public float switchPageAnimationSpeedMultiplier => 1 / switchPageAnimationDuration;
 
+        /// <inheritdoc />
+        [field: SerializeField]
+        [field: Tooltip("The saturation level (0..1) for the exhausted version of the greenhouse buttons.")]
+        public float ExhaustedGreenhouseButtonSaturationLevel { get; private set; } = 0.5f;
+
         #endregion
 
         #region logger

@@ -30,9 +30,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5255302555809451959}
-  - {fileID: 3505370626732242667}
-  - {fileID: 1491577003518685916}
+  - {fileID: 4572075128171791891}
+  - {fileID: 5131930721238859599}
+  - {fileID: 7146920892561554296}
   m_Father: {fileID: 5968742801937884086}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -521,31 +521,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.GrimoireBackground
   firstLevelAnimator: {fileID: 8932518895277769207}
   secondLevelAnimatorGreenhouse: {fileID: 5523194603672354619}
-  leftButtonDescriptors:
-  - name: FirstCharacter
-    target: {fileID: 7462769121449417898}
-  - name: SecondCharacter
-    target: {fileID: 4989721850624209215}
-  - name: ThirdCharacter
-    target: {fileID: 4313033562042255631}
-  - name: FourthCharacter
-    target: {fileID: 7198000456027567675}
-  - name: FifthCharacter
-    target: {fileID: 1352709808870722743}
-  - name: Moon
-    target: {fileID: 8666036763443327024}
-  - name: Franco
-    target: {fileID: 527925371054113351}
-  - name: Greenhouse
-    target: {fileID: 6942274819876675424}
-  - name: Sigils
-    target: {fileID: 4119613507636652198}
-  - name: Rules
-    target: {fileID: 3322671267722304683}
-  - name: Lore
-    target: {fileID: 6221580215117882871}
-  - name: Settings
-    target: {fileID: 8233089590170935744}
+  topLevelButtons:
+  - {fileID: 5102442109911782390}
+  - {fileID: 7233235647308480099}
+  - {fileID: 1910768436962362963}
+  - {fileID: 4808436676678990183}
+  - {fileID: 3718665484013093867}
+  - {fileID: 6421396863378112364}
+  - {fileID: 2741849649289530651}
+  - {fileID: 4686411869204058172}
+  - {fileID: 1762418465712580602}
+  - {fileID: 1099704045482431479}
+  - {fileID: 8577649573886257835}
+  - {fileID: 5989611264159821468}
+  - {fileID: 1196922637276542736}
   close:
     m_PersistentCalls:
       m_Calls: []
@@ -592,6 +581,22 @@ MonoBehaviour:
   backToLevelTwoBookmarkButton: {fileID: 1912665402285332035}
   previousPageBookmarkButton: {fileID: 5912058078895232752}
   nextPageBookmarkButton: {fileID: 2781779064908301732}
+  secondLevelGreenhouseButtons:
+  - {fileID: 1791447093814352057}
+  - {fileID: 6670848556191076414}
+  - {fileID: 652035077322104727}
+  - {fileID: 4242593777021006286}
+  - {fileID: 5972315793649876643}
+  - {fileID: 1552397704694147759}
+  - {fileID: 5877564625645019197}
+  - {fileID: 7735401041595056192}
+  - {fileID: 6889730373854989350}
+  - {fileID: 3268548850103940992}
+  - {fileID: 3617850514432973057}
+  - {fileID: 6626932653307427911}
+  - {fileID: 6559103814511310796}
+  - {fileID: 8784142273757143386}
+  - {fileID: 1188017702662707375}
 --- !u!1 &1628220909378838597
 GameObject:
   m_ObjectHideFlags: 0
@@ -1697,7 +1702,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4511577973031081720}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -1753,9 +1758,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 366627180611560743}
-  - {fileID: 8374197604013612971}
-  - {fileID: 2211576073995838252}
+  - {fileID: 8253786074094464131}
+  - {fileID: 264291347232790031}
+  - {fileID: 7578655982963387016}
   m_Father: {fileID: 5968742801937884086}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -2490,9 +2495,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7035039808298504539}
-  - {fileID: 478789038332365948}
-  - {fileID: 6906591729496947642}
+  - {fileID: 1602340976703101183}
+  - {fileID: 8158503657148204504}
+  - {fileID: 2901716032605221406}
   m_Father: {fileID: 5968742801937884086}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -2806,7 +2811,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6282565564217830224}
+  - {fileID: 2354815078242689780}
   m_Father: {fileID: 5968742801937884086}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -3493,9 +3498,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 100203737711808438}
-  - {fileID: 2579972884817535523}
-  - {fileID: 6712636208768899603}
+  - {fileID: 8574340265699378706}
+  - {fileID: 6075413506367024007}
+  - {fileID: 3077577985951650743}
   m_Father: {fileID: 5968742801937884086}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -3877,107 +3882,111 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7747816083377206531}
     m_Modifications:
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
+    - target: {fileID: 1671684154543271971, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_Name
+      value: FirstCharacter Top Level Button
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
+    - target: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: <buttonName>k__BackingField
+      value: FirstCharacter
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 939524010463004744, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 8832702165185495532, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_Name
-      value: First Character Top Level Button
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
---- !u!224 &100203737711808438 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-  m_PrefabInstance: {fileID: 731788198335641655}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7462769121449417898 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+--- !u!114 &5102442109911782390 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7905718971798742173, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
   m_PrefabInstance: {fileID: 731788198335641655}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 42d24e25ae444bde880108c2d0c13086, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.TopLevelButton
+--- !u!224 &8574340265699378706 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+  m_PrefabInstance: {fileID: 731788198335641655}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &909518756126510485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4147,71 +4156,71 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3615255542106510330}
     m_Modifications:
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+    - target: {fileID: 1671684154543271971, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_Name
+      value: Greenhouse Top Level Button
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
+    - target: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: <buttonName>k__BackingField
+      value: Greenhouse
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 939524010463004744, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 8832702165185495532, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: b542bfd49cf4db44a957672b22bfccb4, type: 3}
-    - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_Name
-      value: Greenhouse Top Level Button
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
---- !u!224 &478789038332365948 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-  m_PrefabInstance: {fileID: 1000128620653591549}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6942274819876675424 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+--- !u!114 &4686411869204058172 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7905718971798742173, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
   m_PrefabInstance: {fileID: 1000128620653591549}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 42d24e25ae444bde880108c2d0c13086, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.TopLevelButton
+--- !u!224 &8158503657148204504 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+  m_PrefabInstance: {fileID: 1000128620653591549}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1032079421235663526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4220,67 +4229,71 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1233468988642493020}
     m_Modifications:
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 1671684154543271971, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_Name
+      value: FourthCharacter Top Level Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: <buttonName>k__BackingField
+      value: FourthCharacter
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_Name
-      value: Fourth Character Top Level Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
---- !u!224 &366627180611560743 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-  m_PrefabInstance: {fileID: 1032079421235663526}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7198000456027567675 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+--- !u!114 &4808436676678990183 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7905718971798742173, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
   m_PrefabInstance: {fileID: 1032079421235663526}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 42d24e25ae444bde880108c2d0c13086, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.TopLevelButton
+--- !u!224 &8253786074094464131 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+  m_PrefabInstance: {fileID: 1032079421235663526}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1166587414044660712
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4699,6 +4712,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Second Level Greenhouse Button (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+      propertyPath: <plantName>k__BackingField
+      value: BarbaDellInciampo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4709,6 +4726,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2417355502686245483, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
   m_PrefabInstance: {fileID: 1268934389061193058}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6670848556191076414 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+  m_PrefabInstance: {fileID: 1268934389061193058}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7acbc33999064d1a8dfe3072c6a21814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.SecondLevelGreenhouseButton
 --- !u!1001 &1338282895893057914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4805,6 +4833,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Second Level Greenhouse Button (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+      propertyPath: <plantName>k__BackingField
+      value: FalsaPalude
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4815,6 +4847,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2417355502686245483, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
   m_PrefabInstance: {fileID: 1338282895893057914}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6889730373854989350 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+  m_PrefabInstance: {fileID: 1338282895893057914}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7acbc33999064d1a8dfe3072c6a21814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.SecondLevelGreenhouseButton
 --- !u!1001 &1582226924814636205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4823,71 +4866,71 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1233468988642493020}
     m_Modifications:
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+    - target: {fileID: 1671684154543271971, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_Name
+      value: Moon Top Level Button
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
+    - target: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: <buttonName>k__BackingField
+      value: Moon
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 939524010463004744, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 8832702165185495532, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 0cffa1c52bf519c4baab7cf13f7443ee, type: 3}
-    - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_Name
-      value: Moon Top Level Button
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
---- !u!224 &2211576073995838252 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-  m_PrefabInstance: {fileID: 1582226924814636205}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8666036763443327024 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+--- !u!114 &6421396863378112364 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7905718971798742173, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
   m_PrefabInstance: {fileID: 1582226924814636205}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 42d24e25ae444bde880108c2d0c13086, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.TopLevelButton
+--- !u!224 &7578655982963387016 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+  m_PrefabInstance: {fileID: 1582226924814636205}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1587846915795217040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4984,6 +5027,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Second Level Greenhouse Button
       objectReference: {fileID: 0}
+    - target: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+      propertyPath: <plantName>k__BackingField
+      value: Olobino
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4994,6 +5041,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2417355502686245483, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
   m_PrefabInstance: {fileID: 1587846915795217040}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6559103814511310796 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+  m_PrefabInstance: {fileID: 1587846915795217040}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7acbc33999064d1a8dfe3072c6a21814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.SecondLevelGreenhouseButton
 --- !u!1001 &1655121596435931419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5090,6 +5148,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Second Level Greenhouse Button (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+      propertyPath: <plantName>k__BackingField
+      value: NonTiScordarDiTe
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5100,6 +5162,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2417355502686245483, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
   m_PrefabInstance: {fileID: 1655121596435931419}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6626932653307427911 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+  m_PrefabInstance: {fileID: 1655121596435931419}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7acbc33999064d1a8dfe3072c6a21814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.SecondLevelGreenhouseButton
 --- !u!1001 &1773160435537139039
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5446,6 +5519,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Second Level Greenhouse Button
       objectReference: {fileID: 0}
+    - target: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+      propertyPath: <plantName>k__BackingField
+      value: EderaDelleAmanti
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5456,6 +5533,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2417355502686245483, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
   m_PrefabInstance: {fileID: 2062360090858388833}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5877564625645019197 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+  m_PrefabInstance: {fileID: 2062360090858388833}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7acbc33999064d1a8dfe3072c6a21814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.SecondLevelGreenhouseButton
 --- !u!1001 &2300875294741095423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5552,6 +5640,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Second Level Greenhouse Button (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+      propertyPath: <plantName>k__BackingField
+      value: CantoDelleCompagne
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5562,6 +5654,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2417355502686245483, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
   m_PrefabInstance: {fileID: 2300875294741095423}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5972315793649876643 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+  m_PrefabInstance: {fileID: 2300875294741095423}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7acbc33999064d1a8dfe3072c6a21814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.SecondLevelGreenhouseButton
 --- !u!1001 &2303326056544437597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5570,71 +5673,71 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5173424258264277867}
     m_Modifications:
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+    - target: {fileID: 1671684154543271971, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_Name
+      value: Settings Top Level Button
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
+    - target: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: <buttonName>k__BackingField
+      value: Settings
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 939524010463004744, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 8832702165185495532, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: d669add6cb179ad4f807387d82ab0cd2, type: 3}
-    - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_Name
-      value: Settings Top Level Button
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
---- !u!224 &1491577003518685916 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-  m_PrefabInstance: {fileID: 2303326056544437597}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8233089590170935744 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+--- !u!114 &5989611264159821468 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7905718971798742173, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
   m_PrefabInstance: {fileID: 2303326056544437597}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 42d24e25ae444bde880108c2d0c13086, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.TopLevelButton
+--- !u!224 &7146920892561554296 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+  m_PrefabInstance: {fileID: 2303326056544437597}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2633042667787257528
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6210,6 +6313,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Second Level Greenhouse Button (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+      propertyPath: <plantName>k__BackingField
+      value: ErbaLiccia
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6220,6 +6327,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2417355502686245483, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
   m_PrefabInstance: {fileID: 2762428625528724764}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7735401041595056192 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+  m_PrefabInstance: {fileID: 2762428625528724764}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7acbc33999064d1a8dfe3072c6a21814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.SecondLevelGreenhouseButton
 --- !u!1001 &2921090214805149090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6228,75 +6346,75 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7747816083377206531}
     m_Modifications:
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+    - target: {fileID: 1671684154543271971, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_Name
+      value: SecondCharacter Top Level Button
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
+    - target: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: <buttonName>k__BackingField
+      value: SecondCharacter
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 939524010463004744, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 8832702165185495532, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 75ecc8e3d444ca641a4090e9702c5de6, type: 3}
-    - target: {fileID: 939524010463004744, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 8832702165185495532, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_Name
-      value: Second Character Top Level Button
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
---- !u!224 &2579972884817535523 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+--- !u!224 &6075413506367024007 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
   m_PrefabInstance: {fileID: 2921090214805149090}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4989721850624209215 stripped
+--- !u!114 &7233235647308480099 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7905718971798742173, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
   m_PrefabInstance: {fileID: 2921090214805149090}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 42d24e25ae444bde880108c2d0c13086, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.TopLevelButton
 --- !u!1001 &2968725351175301868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6566,6 +6684,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Second Level Greenhouse Button (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+      propertyPath: <plantName>k__BackingField
+      value: LaSpazzata
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6576,6 +6698,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2417355502686245483, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
   m_PrefabInstance: {fileID: 3812365984614726662}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8784142273757143386 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+  m_PrefabInstance: {fileID: 3812365984614726662}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7acbc33999064d1a8dfe3072c6a21814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.SecondLevelGreenhouseButton
 --- !u!1001 &4314940726930719082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6584,71 +6717,71 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5173424258264277867}
     m_Modifications:
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+    - target: {fileID: 1671684154543271971, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_Name
+      value: Lore Top Level Button
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
+    - target: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: <buttonName>k__BackingField
+      value: Lore
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 939524010463004744, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 8832702165185495532, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: d65fc1e786aa2e14696741190bd4dd8f, type: 3}
-    - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_Name
-      value: Lore Top Level Button
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
---- !u!224 &3505370626732242667 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+--- !u!224 &5131930721238859599 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
   m_PrefabInstance: {fileID: 4314940726930719082}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6221580215117882871 stripped
+--- !u!114 &8577649573886257835 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7905718971798742173, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
   m_PrefabInstance: {fileID: 4314940726930719082}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 42d24e25ae444bde880108c2d0c13086, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.TopLevelButton
 --- !u!1001 &4375505676978654300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6979,69 +7112,69 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5173424258264277867}
     m_Modifications:
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+    - target: {fileID: 1671684154543271971, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_Name
+      value: Rules Top Level Button
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
+    - target: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: <buttonName>k__BackingField
+      value: Rules
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 939524010463004744, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 8832702165185495532, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 3c97b8ece2ee6974c90503ee68a96d61, type: 3}
-    - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_Name
-      value: Rules Top Level Button
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
---- !u!114 &3322671267722304683 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+--- !u!114 &1099704045482431479 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7905718971798742173, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
   m_PrefabInstance: {fileID: 4875918922645076022}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 42d24e25ae444bde880108c2d0c13086, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
---- !u!224 &5255302555809451959 stripped
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.TopLevelButton
+--- !u!224 &4572075128171791891 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
   m_PrefabInstance: {fileID: 4875918922645076022}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4900982934776283851
@@ -7140,11 +7273,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Second Level Greenhouse Button (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+      propertyPath: <plantName>k__BackingField
+      value: BastoneDellOzioso
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+--- !u!114 &652035077322104727 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+  m_PrefabInstance: {fileID: 4900982934776283851}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7acbc33999064d1a8dfe3072c6a21814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.SecondLevelGreenhouseButton
 --- !u!224 &7318320835576762528 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2417355502686245483, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
@@ -7621,69 +7769,69 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3615255542106510330}
     m_Modifications:
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+    - target: {fileID: 1671684154543271971, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_Name
+      value: Sigils Top Level Button
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
+    - target: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: <buttonName>k__BackingField
+      value: Sigils
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 939524010463004744, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 8832702165185495532, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 00397c982bce6ab48ac36a1203ea652c, type: 3}
-    - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_Name
-      value: Sigils Top Level Button
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
---- !u!114 &4119613507636652198 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+--- !u!114 &1762418465712580602 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7905718971798742173, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
   m_PrefabInstance: {fileID: 6097046153637137467}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 42d24e25ae444bde880108c2d0c13086, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
---- !u!224 &6906591729496947642 stripped
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.TopLevelButton
+--- !u!224 &2901716032605221406 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
   m_PrefabInstance: {fileID: 6097046153637137467}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6184510817954858469
@@ -7782,11 +7930,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Second Level Greenhouse Button
       objectReference: {fileID: 0}
+    - target: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+      propertyPath: <plantName>k__BackingField
+      value: BaccaDellaAddolorata
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+--- !u!114 &1791447093814352057 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+  m_PrefabInstance: {fileID: 6184510817954858469}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7acbc33999064d1a8dfe3072c6a21814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.SecondLevelGreenhouseButton
 --- !u!224 &8385675945225328526 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2417355502686245483, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
@@ -7800,69 +7963,69 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7747816083377206531}
     m_Modifications:
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+    - target: {fileID: 1671684154543271971, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_Name
+      value: ThirdCharacter Top Level Button
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
+    - target: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: <buttonName>k__BackingField
+      value: ThirdCharacter
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 939524010463004744, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 8832702165185495532, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 2b9511e6aedc8ae44af6c3f979b841c4, type: 3}
-    - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_Name
-      value: Third Character Top Level Button
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
---- !u!114 &4313033562042255631 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+--- !u!114 &1910768436962362963 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7905718971798742173, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
   m_PrefabInstance: {fileID: 6227414681535688082}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 42d24e25ae444bde880108c2d0c13086, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
---- !u!224 &6712636208768899603 stripped
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.TopLevelButton
+--- !u!224 &3077577985951650743 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
   m_PrefabInstance: {fileID: 6227414681535688082}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6378378060497582067
@@ -7961,11 +8124,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Second Level Greenhouse Button (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+      propertyPath: <plantName>k__BackingField
+      value: CardoAspinato
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+--- !u!114 &1552397704694147759 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+  m_PrefabInstance: {fileID: 6378378060497582067}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7acbc33999064d1a8dfe3072c6a21814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.SecondLevelGreenhouseButton
 --- !u!224 &8721397738067551640 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2417355502686245483, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
@@ -7979,90 +8157,101 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1640152361193631710}
     m_Modifications:
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 939524010463004744, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: ab8c0beadb77a624794190f437590d93, type: 3}
-    - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_Name
-      value: Save Top Level Button
-      objectReference: {fileID: 0}
-    - target: {fileID: 7223143176891612941, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_PreferredHeight
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8313221761485311288, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 343308125539697820, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_SizeDelta.x
       value: 71
       objectReference: {fileID: 0}
-    - target: {fileID: 8313221761485311288, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 343308125539697820, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_SizeDelta.y
       value: 75
       objectReference: {fileID: 0}
-    - target: {fileID: 8313221761485311288, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 343308125539697820, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 20
       objectReference: {fileID: 0}
-    - target: {fileID: 8313221761485311288, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 343308125539697820, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1414149787837839017, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_PreferredHeight
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1671684154543271971, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_Name
+      value: Load Top Level Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: <buttonName>k__BackingField
+      value: Load
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832702165185495532, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ab8c0beadb77a624794190f437590d93, type: 3}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
---- !u!224 &6282565564217830224 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+--- !u!114 &1196922637276542736 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+  m_PrefabInstance: {fileID: 6661953741474421969}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d24e25ae444bde880108c2d0c13086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.TopLevelButton
+--- !u!224 &2354815078242689780 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
   m_PrefabInstance: {fileID: 6661953741474421969}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6733756378816529907
@@ -8162,6 +8351,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+--- !u!114 &1188017702662707375 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+  m_PrefabInstance: {fileID: 6733756378816529907}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7acbc33999064d1a8dfe3072c6a21814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.SecondLevelGreenhouseButton
 --- !u!224 &9006979052876224408 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2417355502686245483, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
@@ -8263,11 +8463,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Second Level Greenhouse Button
       objectReference: {fileID: 0}
+    - target: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+      propertyPath: <plantName>k__BackingField
+      value: LanaNotturna
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+--- !u!114 &3268548850103940992 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+  m_PrefabInstance: {fileID: 6941036230096431836}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7acbc33999064d1a8dfe3072c6a21814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.SecondLevelGreenhouseButton
 --- !u!224 &4746705671405222071 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2417355502686245483, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
@@ -8731,71 +8946,71 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3615255542106510330}
     m_Modifications:
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+    - target: {fileID: 1671684154543271971, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_Name
+      value: Franco Top Level Button
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
+    - target: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: <buttonName>k__BackingField
+      value: Franco
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 939524010463004744, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 8832702165185495532, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: f36655aba210e4346a12e3743509accd, type: 3}
-    - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_Name
-      value: Franco Top Level Button
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
---- !u!114 &527925371054113351 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+--- !u!224 &1602340976703101183 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+  m_PrefabInstance: {fileID: 7702651622869542618}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2741849649289530651 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7905718971798742173, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
   m_PrefabInstance: {fileID: 7702651622869542618}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 42d24e25ae444bde880108c2d0c13086, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
---- !u!224 &7035039808298504539 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-  m_PrefabInstance: {fileID: 7702651622869542618}
-  m_PrefabAsset: {fileID: 0}
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.TopLevelButton
 --- !u!1001 &7747516770328752692
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9053,11 +9268,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Second Level Greenhouse Button
       objectReference: {fileID: 0}
+    - target: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+      propertyPath: <plantName>k__BackingField
+      value: BrinaDellImpossibile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+--- !u!114 &4242593777021006286 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+  m_PrefabInstance: {fileID: 8642140496567331986}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7acbc33999064d1a8dfe3072c6a21814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.SecondLevelGreenhouseButton
 --- !u!224 &6224855376619831033 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2417355502686245483, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
@@ -9159,11 +9389,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Second Level Greenhouse Button (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+      propertyPath: <plantName>k__BackingField
+      value: LicheneDegliAbissi
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+--- !u!114 &3617850514432973057 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+  m_PrefabInstance: {fileID: 9167811164875949149}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7acbc33999064d1a8dfe3072c6a21814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.SecondLevelGreenhouseButton
 --- !u!224 &6824844233803404854 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2417355502686245483, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
@@ -9177,68 +9422,68 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1233468988642493020}
     m_Modifications:
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+    - target: {fileID: 1671684154543271971, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_Name
+      value: FifthCharacter Top Level Button
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
+    - target: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: <buttonName>k__BackingField
+      value: FifthCharacter
       objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 939524010463004744, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+    - target: {fileID: 8832702165185495532, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: fe09cdbb3e3a163429cad5a7533a1e01, type: 3}
-    - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      propertyPath: m_Name
-      value: Fifth Character Top Level Button
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
---- !u!114 &1352709808870722743 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+--- !u!224 &264291347232790031 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8996494923935612453, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
+  m_PrefabInstance: {fileID: 9183697137841236010}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3718665484013093867 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7905718971798742173, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5541768872569809857, guid: 3370cb0dc921f0449b0d69377ca3000d, type: 3}
   m_PrefabInstance: {fileID: 9183697137841236010}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 42d24e25ae444bde880108c2d0c13086, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
---- !u!224 &8374197604013612971 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-  m_PrefabInstance: {fileID: 9183697137841236010}
-  m_PrefabAsset: {fileID: 0}
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.TopLevelButton

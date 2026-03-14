@@ -1,6 +1,8 @@
 ﻿using System;
+using R3;
 using Selania.Rework.Components.Grimoire;
 using Selania.Rework.Interfaces;
+using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,6 +11,30 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
     public class GrimoireDisplayMuseumSectionController : MonoBehaviour, IAutomaticEditorInject
     {
         [SerializeField] private GrimoireBackground grimoireBackground = null!;
+
+        [SerializeField] private TextMeshProUGUI output = null!;
+
+        private void Start()
+        {
+            grimoireBackground.firstLevelButtonClick
+                .Subscribe(buttonName => AppendText($"Clicked on first level button '{buttonName}'")).AddTo(this);
+            grimoireBackground.secondLevelGreenhouseButtonClick
+                .Subscribe(buttonName => AppendText($"Clicked on second level greenhouse button '{buttonName}'"))
+                .AddTo(this);
+        }
+
+        private void AppendText(string s)
+        {
+            if (output.text.Length == 0)
+            {
+                output.text = s;
+            }
+            else
+            {
+                output.text += '\n';
+                output.text += s;
+            }
+        }
 
         public void ShowGrimoire()
         {
@@ -131,6 +157,24 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
         public void SwitchToSecondLevelGreenhousePage()
         {
             grimoireBackground.SwitchToPage(GrimoireBackground.PageType.SecondLevelGreenhouse);
+        }
+
+        public void RandomizeGreenhouseButtons()
+        {
+            var buttonNames = new[]
+            {
+                "BaccaDellaAddolorata", "BarbaDellInciampo", "BastoneDellOzioso", "BrinaDellImpossibile",
+                "CantoDelleCompagne", "CardoAspinato", "EderaDelleAmanti", "ErbaLiccia", "FalsaPalude", "LanaNotturna",
+                "LicheneDegliAbissi", "NonTiScordarDiTe", "Olobino", "LaSpazzata"
+            };
+            var statuses =
+                (GrimoireBackground.GreenhouseButtonStatus[])Enum.GetValues(
+                    typeof(GrimoireBackground.GreenhouseButtonStatus));
+            foreach (var button in buttonNames)
+            {
+                var status = statuses[Random.Range(0, statuses.Length)];
+                grimoireBackground.SetGreenhouseButtonStatus(button, status);
+            }
         }
     }
 }
