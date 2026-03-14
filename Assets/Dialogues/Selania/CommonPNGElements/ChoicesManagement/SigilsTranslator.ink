@@ -189,10 +189,10 @@
                 ~ return "Arazzo"
    
             - AetherEarthAir:
-                ~ return "Campanella"
+                ~ return "Altare"
 
             - AetherEarthFire:
-                ~ return "Altare"
+                ~ return "Campanella"
    
     //Venti sigilli principali
             - WaterEarth:
