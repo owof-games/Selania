@@ -97,6 +97,14 @@
     VAR firstChar_water = 0.00
     VAR firstChar_fire= 0.00
 
+    //Storage precedente valore
+    VAR firstChar_last_aether = 0.00
+    VAR firstChar_last_earth = 0.00
+    VAR firstChar_last_air = 0.00
+    VAR firstChar_last_water = 0.00
+    VAR firstChar_last_fire= 0.00
+
+
 
 
 

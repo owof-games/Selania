@@ -12,13 +12,21 @@ VAR glyph_decreaseSigil = true
 //GlyphC = Su quale colore ha effetto    
 //DecreaseS = Se diminuire o meno il contatore del sigillo
 
-    //
+
     //Primo step: capiamo di chi si parla.
     //
         {
             - PNG == FirstCharacter:
+                    //Per il sigillo aggiorno il current talker
                     ~ glyph_currentTalker = FirstCharacter
                     {debug_nest: dopo l'operazione il parlante attuale {glyph_currentTalker}.}
+                    //Poi aggiorno il record dello stato precedente dei glifi
+                        ~ firstChar_last_aether = firstChar_aether
+                        ~ firstChar_last_earth = firstChar_earth
+                        ~ firstChar_last_air = firstChar_air
+                        ~ firstChar_last_water = firstChar_water
+                        ~ firstChar_last_fire = firstChar_fire
+                    
                     //Aggiorno i corrispettivi valori lato rapporto PNG/PG (ovvero: non cambio il valore dei dati dellx PNG)
                     {GlyphC:
                         -fireC:
@@ -38,8 +46,15 @@ VAR glyph_decreaseSigil = true
                     }
             
             - PNG == SecondCharacter:
+                    //Per il sigillo aggiorno il current talker
                     ~ glyph_currentTalker = SecondCharacter
                     {debug_nest: dopo l'operazione il parlante attuale {glyph_currentTalker}.}
+                    //Poi aggiorno il record dello stato precedente dei glifi
+                        ~ secondChar_last_aether = secondChar_aether
+                        ~ secondChar_last_earth = secondChar_earth
+                        ~ secondChar_last_air = secondChar_air
+                        ~ secondChar_last_water = secondChar_water
+                        ~ secondChar_last_fire = secondChar_fire
                     //Aggiorno i corrispettivi valori lato rapporto PNG/PG (ovvero: non cambio il valore dei dati dellx PNG)
                     {GlyphC:
                             -fireC:
@@ -64,8 +79,15 @@ VAR glyph_decreaseSigil = true
                         }
             
             - PNG == ThirdCharacter:
+                    //Per il sigillo aggiorno il current talker
                     ~ glyph_currentTalker = ThirdCharacter
                     {debug_nest: dopo l'operazione il parlante attuale {glyph_currentTalker}.}
+                    //Poi aggiorno il record dello stato precedente dei glifi
+                        ~ thirdChar_last_aether = thirdChar_aether
+                        ~ thirdChar_last_earth = thirdChar_earth
+                        ~ thirdChar_last_air = thirdChar_air
+                        ~ thirdChar_last_water = thirdChar_water
+                        ~ thirdChar_last_fire = thirdChar_fire
                     //Aggiorno i corrispettivi valori lato rapporto PNG/PG (ovvero: non cambio il valore dei dati dellx PNG)
                     {GlyphC:
                             -fireC:

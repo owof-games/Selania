@@ -87,7 +87,14 @@
     VAR thirdChar_earth = 0.00
     VAR thirdChar_air = 0.00
     VAR thirdChar_water = 0.00
-    VAR thirdChar_fire = 0.00                   
+    VAR thirdChar_fire = 0.00
+
+    //Storage precedente valore
+    VAR thirdChar_last_aether = 0.00
+    VAR thirdChar_last_earth = 0.00
+    VAR thirdChar_last_air = 0.00
+    VAR thirdChar_last_water = 0.00
+    VAR thirdChar_last_fire= 0.00       
                      
                     /* ---------------------------------
                     
