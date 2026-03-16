@@ -250,17 +250,17 @@
 
 //Dominante fuoco
     //Più aria
-    VAR glyph_textFireAirWaterOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textFireAirWaterTwo = "gambe tese "
-    VAR glyph_textFireAirWaterThree = "in un salto sospeso."
+    VAR glyph_textFireAirWaterOne = "Maglie sull’erba, occhi febbrili."
+    VAR glyph_textFireAirWaterTwo = "Corpi accalcati,"
+    VAR glyph_textFireAirWaterThree = "una coppa spezzata."
 
     VAR glyph_textFireAirEarthOne = "Sole sull’acqua, legno sicuro, "
     VAR glyph_textFireAirEarthTwo = "gambe tese "
     VAR glyph_textFireAirEarthThree = "in un salto sospeso."
 
-    VAR glyph_textFireAirAetherOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textFireAirAetherTwo = "gambe tese "
-    VAR glyph_textFireAirAetherThree = "in un salto sospeso."
+    VAR glyph_textFireAirAetherOne = "Lotte tra le sterpaglie, l’ansimare dei cuccioli."
+    VAR glyph_textFireAirAetherTwo = "I padri a distanza,"
+    VAR glyph_textFireAirAetherThree = "sangue sul crisantemo."
 
     //Più acqua
     VAR glyph_textFireWaterEarthOne = "Sole sull’acqua, legno sicuro, "
@@ -280,26 +280,26 @@
     VAR glyph_textFireEarthWaterTwo = "gambe tese "
     VAR glyph_textFireEarthWaterThree = "in un salto sospeso."
 
-    VAR glyph_textFireEarthAetherOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textFireEarthAetherTwo = "gambe tese "
-    VAR glyph_textFireEarthAetherThree = "in un salto sospeso."
+    VAR glyph_textFireEarthAetherOne = "Si spoglia la pecora, si essica il cardo."
+    VAR glyph_textFireEarthAetherTwo = "Dalla stalla al filatoio,"
+    VAR glyph_textFireEarthAetherThree = "dal filatoio alla torre."
 
-    VAR glyph_textFireEarthAirOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textFireEarthAirTwo = "gambe tese "
-    VAR glyph_textFireEarthAirThree = "in un salto sospeso."
+    VAR glyph_textFireEarthAirOne = "Il mare nascosto nella bianca pietra."
+    VAR glyph_textFireEarthAirTwo = "La punta mostra,"
+    VAR glyph_textFireEarthAirThree = "la punta cancella."
 
     //Più spirito
-    VAR glyph_textFireAetherWaterOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textFireAetherWaterTwo = "gambe tese "
-    VAR glyph_textFireAetherWaterThree = "in un salto sospeso."
+    VAR glyph_textFireAetherWaterOne = "Cielo incerto, bassa la rondine."
+    VAR glyph_textFireAetherWaterTwo = "La lucertola segue il sole,"
+    VAR glyph_textFireAetherWaterThree = "bassa la poiana."
 
     VAR glyph_textFireAetherEarthOne = "Sole sull’acqua, legno sicuro, "
     VAR glyph_textFireAetherEarthTwo = "gambe tese "
     VAR glyph_textFireAetherEarthThree = "in un salto sospeso."
 
-    VAR glyph_textFireAetherAirOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textFireAetherAirTwo = "gambe tese "
-    VAR glyph_textFireAetherAirThree = "in un salto sospeso."
+    VAR glyph_textFireAetherAirOne = "Testa di serpente, capelli sulla riva."
+    VAR glyph_textFireAetherAirTwo = "Svolazza l’atlante,"
+    VAR glyph_textFireAetherAirThree = "il salice si bagna."
 
 //Dominante aria
     //Più fuoco
@@ -411,56 +411,56 @@
 
 //Dominante Terra
     //Più fuoco
-    VAR glyph_textEarthFireAetherOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textEarthFireAetherTwo = "gambe tese "
-    VAR glyph_textEarthFireAetherThree = "in un salto sospeso."
+    VAR glyph_textEarthFireAetherOne = "Petali al vento, ventre teso."
+    VAR glyph_textEarthFireAetherTwo = "Gambe intrecciate,"
+    VAR glyph_textEarthFireAetherThree = "briciole sull’erba."
 
-    VAR glyph_textEarthFireWaterOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textEarthFireWaterTwo = "gambe tese "
-    VAR glyph_textEarthFireWaterThree = "in un salto sospeso."
+    VAR glyph_textEarthFireWaterOne = "Rivoli sulla roccia, umide le corolle."
+    VAR glyph_textEarthFireWaterTwo = "Polline sulle dita,"
+    VAR glyph_textEarthFireWaterThree = "ghirlande essiccate."
 
-    VAR glyph_textEarthFireAirOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textEarthFireAirTwo = "gambe tese "
-    VAR glyph_textEarthFireAirThree = "in un salto sospeso."
+    VAR glyph_textEarthFireAirOne = "Ninfee dormienti, il canto dell’anatra."
+    VAR glyph_textEarthFireAirTwo = "Danze circolari,"
+    VAR glyph_textEarthFireAirThree = "piuma contro piuma."
 
     //Più aria
-    VAR glyph_textEarthAirAetherOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textEarthAirAetherTwo = "gambe tese "
-    VAR glyph_textEarthAirAetherThree = "in un salto sospeso."
+    VAR glyph_textEarthAirAetherOne = "Ombra sul pesco, rami come onde."
+    VAR glyph_textEarthAirAetherTwo = "Uova nell’incavo,"
+    VAR glyph_textEarthAirAetherThree = "riposa lo scoiattolo."
 
-    VAR glyph_textEarthAirWaterOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textEarthAirWaterTwo = "gambe tese "
-    VAR glyph_textEarthAirWaterThree = "in un salto sospeso."
+    VAR glyph_textEarthAirWaterOne = "Grappolo sull’apice, rondini nel cielo.."
+    VAR glyph_textEarthAirWaterTwo = "Il ramo si piega,"
+    VAR glyph_textEarthAirWaterThree = "il bruco ingrassa."
 
-    VAR glyph_textEarthAirFireOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textEarthAirFireTwo = "gambe tese "
-    VAR glyph_textEarthAirFireThree = "in un salto sospeso."
+    VAR glyph_textEarthAirFireOne = "Azioni sparse, copri fermi."
+    VAR glyph_textEarthAirFireTwo = "Polloni fragili,"
+    VAR glyph_textEarthAirFireThree = "il daino cresce."
 
     //Più acqua
-    VAR glyph_textEarthWaterAetherOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textEarthWaterAetherTwo = "gambe tese "
-    VAR glyph_textEarthWaterAetherThree = "in un salto sospeso."
+    VAR glyph_textEarthWaterAetherOne = "Canto di cicale, aria secca."
+    VAR glyph_textEarthWaterAetherTwo = "Fichi voluttuosi,"
+    VAR glyph_textEarthWaterAetherThree = "muore e nasce la vespa."
 
-    VAR glyph_textEarthWaterAirOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textEarthWaterAirTwo = "gambe tese "
-    VAR glyph_textEarthWaterAirThree = "in un salto sospeso."
+    VAR glyph_textEarthWaterAirOne = "Acacia verso il cielo, erba in ombra."
+    VAR glyph_textEarthWaterAirTwo = "La formica protegge,"
+    VAR glyph_textEarthWaterAirThree = "l’albero rifugia."
 
-    VAR glyph_textEarthWaterFireOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textEarthWaterFireTwo = "gambe tese "
-    VAR glyph_textEarthWaterFireThree = "in un salto sospeso."
+    VAR glyph_textEarthWaterFireOne = "Asce a riposare, chiacchiericcio sudato."
+    VAR glyph_textEarthWaterFireTwo = "Ambra lungo gli anelli,"
+    VAR glyph_textEarthWaterFireThree = "piatto il tronco."
 
     //Più spirito
-    VAR glyph_textEarthAetherWaterOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textEarthAetherWaterTwo = "gambe tese "
-    VAR glyph_textEarthAetherWaterThree = "in un salto sospeso."
+    VAR glyph_textEarthAetherWaterOne = "Rami sotterranei e lana di micelio."
+    VAR glyph_textEarthAetherWaterTwo = "Florido il trifoglio,"
+    VAR glyph_textEarthAetherWaterThree = "nuda la senape."
 
-    VAR glyph_textEarthAetherAirOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textEarthAetherAirTwo = "gambe tese "
-    VAR glyph_textEarthAetherAirThree = "in un salto sospeso."
+    VAR glyph_textEarthAetherAirOne = "Notte piena, luna assente."
+    VAR glyph_textEarthAetherAirTwo = " L’edera si espande,"
+    VAR glyph_textEarthAetherAirThree = "si abbracciano le falene."
 
-    VAR glyph_textEarthAetherFireOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textEarthAetherFireTwo = "gambe tese "
-    VAR glyph_textEarthAetherFireThree = "in un salto sospeso."
+    VAR glyph_textEarthAetherFireOne = "Giardino di pietra, foglie rade."
+    VAR glyph_textEarthAetherFireTwo = "Pugno nella terra,."
+    VAR glyph_textEarthAetherFireThree = "ossa di talpa"
 
 //Dominante Spirito
     //Più fuoco
