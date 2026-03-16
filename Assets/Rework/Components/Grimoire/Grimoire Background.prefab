@@ -538,9 +538,6 @@ MonoBehaviour:
   close:
     m_PersistentCalls:
       m_Calls: []
-  goToIndex:
-    m_PersistentCalls:
-      m_Calls: []
   goBackToLevelTwo:
     m_PersistentCalls:
       m_Calls: []
@@ -1702,7 +1699,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4511577973031081720}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -2014,7 +2011,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 48
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -2188,7 +2185,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_Spacing: 40
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
@@ -2907,7 +2904,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7656502301985264631}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -7933,6 +7930,14 @@ PrefabInstance:
     - target: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
       propertyPath: <plantName>k__BackingField
       value: BaccaDellaAddolorata
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689671198024063719, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+      propertyPath: m_PreferredWidth
+      value: 153
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689671198024063719, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
+      propertyPath: m_PreferredHeight
+      value: 157
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

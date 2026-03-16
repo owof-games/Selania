@@ -106,9 +106,6 @@ LIST allGlyphs = Fire, Air, Water, Earth, Aether
     VAR glyph_actualSigilUses = 1
 
 
-VAR loop = 0
-
-
 -> start
 
 === start
@@ -120,39 +117,87 @@ VAR loop = 0
 
 === grimoire
 
-~ loop += 1
-{loop > 4:
-    ~ loop = 1
-}
-
-{loop:
-    - 1:
-        @grimoire1 #leftButton:FirstCharacter #leftButton:Moon #leftButton:Greenhouse #leftButton:Rules #leftButton:Lore #achievement:FirstAchievementRM:3:5 #achievement:SecondAchievementRM:0:5 #achievement:ThirdAchievementRM:5:5
-        -> end
-    - 2:
-        @grimoire1 #leftButton:FirstCharacter #leftButton:Moon #leftButton:Greenhouse #leftButton:Rules #leftButton:Lore #achievement:FirstAchievementRM:3:5 #achievement:SecondAchievementRM:0:5 #achievement:ThirdAchievementRM:5:5
-        + [Index #bookmark:index]
-            -> end
-    - 3:
-        @grimoire1 #leftButton:FirstCharacter #leftButton:Moon #leftButton:Greenhouse #leftButton:Rules #leftButton:Lore #achievement:FirstAchievementRM:3:5 #achievement:SecondAchievementRM:0:5 #achievement:ThirdAchievementRM:5:5
-        + [Index #bookmark:index]
-            -> end
-        + [Piante #bookmark:secondLevel]
-            -> end
-        + [Olobino #bookmark:back]
-            -> end
-        + [??? #bookmark:forward]
-            -> end
-    - 4:
-        @grimoire1 #leftButton:FirstCharacter #leftButton:Moon #leftButton:Greenhouse #leftButton:Rules #leftButton:Lore #achievement:FirstAchievementRM:3:5 #achievement:SecondAchievementRM:0:5 #achievement:ThirdAchievementRM:5:5
-        + [Piante #bookmark:secondLevel]
-            -> end
-        + [Olobino #bookmark:back]
-            -> end
-        + [??? #bookmark:forward]
-            -> end
-}
-
-= end
+        @grimoire1 #franco:Ho voglia di patatine #achievement:FirstAchievementRM:3:5 #achievement:SecondAchievementRM:0:5 #achievement:ThirdAchievementRM:5:5
+        + [Greenhouse]
+        -> grimoire_greenhouse
+        -
 
 -> grimoire
+
+
+=== grimoire_greenhouse
+    @grimoireGreenhouse
+    + {RANDOM(1, 6) <= 3} [BaccaDellaAddolorata #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {RANDOM(1, 6) <= 3} [BarbaDellInciampo #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {RANDOM(1, 6) <= 3} [BastoneDellOzioso #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {RANDOM(1, 6) <= 3} [BrinaDellImpossibile #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {RANDOM(1, 6) <= 3} [CantoDelleCompagne #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {RANDOM(1, 6) <= 3} [CardoAspinato #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {RANDOM(1, 6) <= 3} [EderaDelleAmanti #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {RANDOM(1, 6) <= 3} [ErbaLiccia #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {RANDOM(1, 6) <= 3} [FalsaPalude #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {RANDOM(1, 6) <= 3} [LanaNotturna #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {RANDOM(1, 6) <= 3} [LicheneDegliAbissi #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {RANDOM(1, 6) <= 3} [NonTiScordarDiTe #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {RANDOM(1, 6) <= 3} [Olobino #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {RANDOM(1, 6) <= 3} [LaSpazzata #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + [Index #bookmark:index]
+    -> grimoire
+    -
+    -> grimoire_greenhouse
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// VAR loop = 0
+
+
+// ~ loop += 1
+// {loop > 4:
+//     ~ loop = 1
+// }
+
+// {loop:
+//     - 1:
+
+
+        // -> end
+//     - 2:
+//         @grimoire1 #leftButton:FirstCharacter #leftButton:Moon #leftButton:Greenhouse #leftButton:Rules #leftButton:Lore #achievement:FirstAchievementRM:3:5 #achievement:SecondAchievementRM:0:5 #achievement:ThirdAchievementRM:5:5
+//         <- subsectionButtons
+//         + [Index #bookmark:index]
+//             -> end
+//     - 3:
+//         @grimoire1 #leftButton:FirstCharacter #leftButton:Moon #leftButton:Greenhouse #leftButton:Rules #leftButton:Lore #achievement:FirstAchievementRM:3:5 #achievement:SecondAchievementRM:0:5 #achievement:ThirdAchievementRM:5:5
+//         <- subsectionButtons
+//         + [Index #bookmark:index]
+//             -> end
+//         + [Piante #bookmark:secondLevel]
+//             -> end
+//         + [Olobino #bookmark:back]
+//             -> end
+//         + [??? #bookmark:forward]
+//             -> end
+//     - 4:
+//         @grimoire1 #leftButton:FirstCharacter #leftButton:Moon #leftButton:Greenhouse #leftButton:Rules #leftButton:Lore #achievement:FirstAchievementRM:3:5 #achievement:SecondAchievementRM:0:5 #achievement:ThirdAchievementRM:5:5
+//         <- subsectionButtons
+//         + [Piante #bookmark:secondLevel]
+//             -> end
+//         + [Olobino #bookmark:back]
+//             -> end
+//         + [??? #bookmark:forward]
+//             -> end
+// }
+
+// = end

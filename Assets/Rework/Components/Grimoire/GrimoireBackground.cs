@@ -70,9 +70,6 @@ namespace Selania.Rework.Components.Grimoire
         [Tooltip("Invoked when the grimoire is asked to close.")] [SerializeField]
         private UnityEvent close = new();
 
-        [Tooltip("Invoked when the index button has been clicked")] [SerializeField]
-        private UnityEvent goToIndex = new();
-
         [Tooltip("Invoked when the button to go back to level two has been clicked")] [SerializeField]
         private UnityEvent goBackToLevelTwo = new();
 
@@ -129,6 +126,13 @@ namespace Selania.Rework.Components.Grimoire
         private Animator _animator = null!;
 
         private TextMeshProUGUI _backToLevelTwoTextMeshPro = null!;
+
+        /// <summary>
+        /// Subject that produces the index choice text every time it's chosen.
+        /// </summary>
+        private Subject<string>? _indexChoiceSubject;
+
+        private string? _indexText;
         private TextMeshProUGUI _nextPageTextMeshPro = null!;
 
         /// <summary>
@@ -145,6 +149,13 @@ namespace Selania.Rework.Components.Grimoire
         [Inject] internal ISettingsSigils SettingsSigils = null!;
 
         /// <summary>
+        /// Observable that produces the index choice text every time it's chosen.
+        /// </summary>
+        public Observable<string> IndexChoiceObservable =>
+            _indexChoiceSubject?.AsObservable() ??
+            throw new InvalidOperationException("Cannot access the IndexChoiceObservable before component setup");
+
+        /// <summary>
         ///     An observable that exposes clicks on top level buttons.
         /// </summary>
         public Observable<string> firstLevelButtonClick =>
@@ -158,7 +169,10 @@ namespace Selania.Rework.Components.Grimoire
 
         private void Awake()
         {
+            // get components
             _animator = GetComponent<Animator>();
+            // set up observables
+            _indexChoiceSubject = new Subject<string>().AddTo(this);
         }
 
         private void Start()
@@ -170,7 +184,7 @@ namespace Selania.Rework.Components.Grimoire
             gamerModeAchievementsContainer.SetActive(true);
             // turn off all bookmarks at startup
             SetUpBookmarks();
-            ShowBookmarks(false, null, null, null);
+            ShowBookmarks(null, null, null, null);
         }
 
         /// <summary>
@@ -316,7 +330,7 @@ namespace Selania.Rework.Components.Grimoire
         /// <summary>
         ///     Set up the bookmarks in the grimoire. The 'close' bookmark is always active.
         /// </summary>
-        /// <param name="hasIndex">Whether the 'index' bookmark is active (it's <c>false</c> during rewriting).</param>
+        /// <param name="indexText">The 'index' bookmark text (it's <c>null</c> during rewriting).</param>
         /// <param name="backToLevelTwoText">
         ///     Text for the 'back to level two' button, if not <c>null</c>, otherwise the bookmark is
         ///     hidden.
@@ -326,10 +340,11 @@ namespace Selania.Rework.Components.Grimoire
         ///     hidden.
         /// </param>
         /// <param name="nextPageText">Text for the 'next page' button, if not <c>null</c>, otherwise the bookmark is hidden.</param>
-        public void ShowBookmarks(bool hasIndex, string? backToLevelTwoText, string? previousPageText,
+        public void ShowBookmarks(string? indexText, string? backToLevelTwoText, string? previousPageText,
             string? nextPageText)
         {
-            indexBookmarkButton.SetActive(hasIndex);
+            _indexText = indexText;
+            indexBookmarkButton.SetActive(indexText != null);
 
             _backToLevelTwoTextMeshPro.text = backToLevelTwoText ?? "";
             backToLevelTwoBookmarkButton.SetActive(backToLevelTwoText != null);
@@ -343,7 +358,13 @@ namespace Selania.Rework.Components.Grimoire
 
         public void OnIndexBookmarkButtonClick()
         {
-            goToIndex.Invoke();
+            if (_indexText == null)
+            {
+                Logger.ZLogError($"Index bookmark clicked, but no index text was set.");
+                return;
+            }
+
+            _indexChoiceSubject!.OnNext(_indexText);
         }
 
         public void OnBackToLevelTwoButtonClick()
@@ -398,6 +419,17 @@ namespace Selania.Rework.Components.Grimoire
                 animator.SetFloat(AnimationSpeedMultiplierAnimatorProperty,
                     SettingsBook.switchPageAnimationSpeedMultiplier);
                 animator.SetTrigger(animator == animatorToShow ? ShowAnimatorProperty : HideAnimatorProperty);
+            }
+        }
+
+        /// <summary>
+        /// Disable all buttons of the greenhouse. Used to reset everything to default state.
+        /// </summary>
+        public void DisableAllGreenhouseButtons()
+        {
+            foreach (var secondLevelButton in secondLevelGreenhouseButtons)
+            {
+                SetGreenhouseButtonStatus(secondLevelButton.plantName, GreenhouseButtonStatus.Locked);
             }
         }
 

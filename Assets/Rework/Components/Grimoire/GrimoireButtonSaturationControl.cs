@@ -21,6 +21,12 @@ namespace Selania.Rework.Components.Grimoire
             if (!MaterialsBySaturation.ContainsKey(1)) MaterialsBySaturation[1] = image.material;
         }
 
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        private static void ResetMaterialsBySaturation()
+        {
+            MaterialsBySaturation.Clear();
+        }
+
         /// <summary>
         ///     Set the saturation of the image.
         /// </summary>

@@ -125,6 +125,10 @@ PrefabInstance:
       value: Second Level Greenhouse Button
       objectReference: {fileID: 0}
     - target: {fileID: 7223143176891612941, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_PreferredWidth
+      value: 173
+      objectReference: {fileID: 0}
+    - target: {fileID: 7223143176891612941, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
       propertyPath: m_PreferredHeight
       value: 167
       objectReference: {fileID: 0}

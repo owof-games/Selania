@@ -9,17 +9,30 @@ namespace Selania.Rework.Components.Grimoire
     {
         [SerializeField] private GrimoireBackground grimoireBackground = null!;
         [SerializeField] private OpenGrimoireButton openGrimoireButton = null!;
+        [Inject] internal IStoryChoicesSelector StoryChoicesSelector = null!;
         [Inject] internal IStoryGrimoire StoryGrimoire = null!;
 
         private void Start()
         {
+            // story events
             StoryGrimoire.firstLevelGrimoirePageDescriptors.Subscribe(OnFirstLevelGrimoirePageDescriptors).AddTo(this);
+            StoryGrimoire.secondLevelGreenhouseGrimoirePageDescriptors
+                .Subscribe(OnSecondLevelGreenhouseGrimoirePageDescriptors).AddTo(this);
+            // grimoire events
+            grimoireBackground.IndexChoiceObservable.Subscribe(PickChoice).AddTo(this);
+            grimoireBackground.firstLevelButtonClick.Subscribe(PickChoice).AddTo(this);
+        }
+
+        private void PickChoice(string firstLevelButtonName)
+        {
+            StoryChoicesSelector.PickChoiceWithText(firstLevelButtonName);
         }
 
         private void OnFirstLevelGrimoirePageDescriptors(IStoryGrimoire.FirstLevelGrimoirePageDescriptor descriptor)
         {
             // show the grimoire (first level)
             grimoireBackground.ShowGrimoire();
+            grimoireBackground.SwitchToPage(GrimoireBackground.PageType.FirstLevel);
 
             // set up the grimoire to show the info described in descriptor
             grimoireBackground.SetGamerMode(descriptor.isGamerMode);
@@ -40,7 +53,38 @@ namespace Selania.Rework.Components.Grimoire
                     descriptor.sigilDescriptor.secondPositionGlyph, descriptor.sigilDescriptor.thirdPositionGlyph,
                     descriptor.sigilDescriptor.text);
 
-            grimoireBackground.ShowBookmarks(descriptor.hasIndex, descriptor.backToLevelTwoText,
+            // set up navigation
+            SetUpNavigation(descriptor);
+        }
+
+        private void OnSecondLevelGreenhouseGrimoirePageDescriptors(
+            IStoryGrimoire.SecondLevelGreenhouseGrimoirePageDescriptor descriptor)
+        {
+            // show the grimoire (second level greenhouse)
+            grimoireBackground.ShowGrimoire();
+            grimoireBackground.SwitchToPage(GrimoireBackground.PageType.SecondLevelGreenhouse);
+
+            // set up the grimoire to show the info described in descriptor
+            grimoireBackground.DisableAllGreenhouseButtons();
+            foreach (var buttonDescriptor in descriptor.greenhouseButtonPlantDescriptors)
+            {
+                grimoireBackground.SetGreenhouseButtonStatus(buttonDescriptor.name,
+                    buttonDescriptor.owned
+                        ? GrimoireBackground.GreenhouseButtonStatus.Shown
+                        : GrimoireBackground.GreenhouseButtonStatus.Exhausted);
+            }
+
+            // set up navigation
+            SetUpNavigation(descriptor);
+        }
+
+        /// <summary>
+        /// Set up the bookmark navigation from a descriptor.
+        /// </summary>
+        /// <param name="descriptor">The navigation descriptor.</param>
+        private void SetUpNavigation(IStoryGrimoire.BaseNavigationDescriptor descriptor)
+        {
+            grimoireBackground.ShowBookmarks(descriptor.indexText, descriptor.backToLevelTwoText,
                 descriptor.previousPageText, descriptor.nextPageText);
         }
 

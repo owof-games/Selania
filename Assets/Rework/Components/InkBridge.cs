@@ -125,8 +125,15 @@ namespace Selania.Rework.Components
         private void LogAndNotifyCurrentState()
         {
             var story = GetStory();
-            logger.ZLogInformation($"Story text: {story.currentText.Trim()}");
-            foreach (var choice in story.currentChoices) logger.ZLogInformation($"Story choice: {choice.text.Trim()}");
+            logger.ZLogInformation($"Story text: {story.currentText}");
+            foreach (var choice in story.currentChoices)
+            {
+                logger.ZLogInformation($"  Story choice: {choice.text}");
+                foreach (var tag in choice.tags ?? new List<string>())
+                {
+                    logger.ZLogDebug($"    Tag: {tag}");
+                }
+            }
 
             // extract the tags
             var tags = MakeTags(story.currentTags);
@@ -458,9 +465,9 @@ namespace Selania.Rework.Components
         /// </summary>
         /// <param name="currentTags">The ink tags.</param>
         /// <returns>A collection of tags.</returns>
-        private static ICollection<Tag> MakeTags(List<string> currentTags)
+        private static ICollection<Tag> MakeTags(IList<string>? currentTags)
         {
-            return currentTags.Select(tag => new Tag(tag)).ToList();
+            return (currentTags ?? Array.Empty<string>()).Select(tag => new Tag(tag)).ToList();
         }
 
         /// <inheritdoc />
@@ -824,8 +831,8 @@ namespace Selania.Rework.Components
         [SerializeField]
         private string grimoireInkNodeName = "grimoire";
 
-        [Tooltip("Name of the tag used to mark one of the left buttons as available.")] [SerializeField]
-        private string leftButtonTagName = "leftButton";
+        // [Tooltip("Name of the tag used to mark one of the left buttons as available.")] [SerializeField]
+        // private string leftButtonTagName = "leftButton";
 
         [Tooltip("Name of the tag used to mark an achievement.")] [SerializeField]
         private string achievementTagName = "achievement";
@@ -882,17 +889,20 @@ namespace Selania.Rework.Components
         [SerializeField] [Tooltip("Category for the bookmark tags")]
         private string bookmarkTagCategory = "bookmark";
 
+        [SerializeField] [Tooltip("Category for the status tags (greenhouse)")]
+        private string statusTagCategory = "status";
+
         [SerializeField] [Tooltip("Value for the index bookmark tag")]
         private string indexBookmarkTagValue = "index";
 
         [SerializeField] [Tooltip("Value for the 'back to second level' bookmark tag")]
         private string secondLevelBookmarkTagValue = "secondLevel";
 
-        [SerializeField] [Tooltip("Value for the 'go back' bookmark tag")]
-        private string backBookmarkTagValue = "back";
+        [SerializeField] [Tooltip("Value for the 'previous' bookmark tag")]
+        private string backBookmarkTagValue = "previous";
 
-        [SerializeField] [Tooltip("Value for the 'go forward' bookmark tag")]
-        private string forwardBookmarkTagValue = "forward";
+        [SerializeField] [Tooltip("Value for the 'next' bookmark tag")]
+        private string forwardBookmarkTagValue = "next";
 
         // will be localized
         [SerializeField] private string oneUsageText = "Un uso rimanente.";
@@ -910,14 +920,31 @@ namespace Selania.Rework.Components
             throw new InvalidOperationException(
                 "Cannot get the first level grimoire page descriptors before initialization");
 
+        /// <summary>
+        ///     The subject used to produce info about the first level navigation.
+        /// </summary>
+        private Subject<IStoryGrimoire.SecondLevelGreenhouseGrimoirePageDescriptor>?
+            _secondLevelGrimoirePageDescriptorsSubject;
+
+        /// <inheritdoc />
+        public Observable<IStoryGrimoire.SecondLevelGreenhouseGrimoirePageDescriptor>
+            secondLevelGreenhouseGrimoirePageDescriptors =>
+            _secondLevelGrimoirePageDescriptorsSubject?.AsObservable() ??
+            throw new InvalidOperationException(
+                "Cannot get the second level greenhouse grimoire page descriptors before initialization");
+
+
         private void SetupGrimoire()
         {
             _firstLevelGrimoirePageDescriptorsSubject = new Subject<IStoryGrimoire.FirstLevelGrimoirePageDescriptor>();
+            _secondLevelGrimoirePageDescriptorsSubject =
+                new Subject<IStoryGrimoire.SecondLevelGreenhouseGrimoirePageDescriptor>();
         }
 
         private void CleanupGrimoire()
         {
             _firstLevelGrimoirePageDescriptorsSubject?.Dispose();
+            _secondLevelGrimoirePageDescriptorsSubject?.Dispose();
         }
 
         public void SwitchToGrimoire()
@@ -945,7 +972,10 @@ namespace Selania.Rework.Components
             switch (currentText)
             {
                 case "@grimoire1":
-                    UpdateCurrentTextGrimoireFirstLevel(tags);
+                    EmitFirstLevelGrimoirePage(tags);
+                    break;
+                case "@grimoireGreenhouse":
+                    EmitSecondLevelGreenhouseGrimoirePage();
                     break;
                 default:
                     logger.ZLogWarning($"Unknown grimoire tag {currentText}");
@@ -953,10 +983,12 @@ namespace Selania.Rework.Components
             }
         }
 
-        private void UpdateCurrentTextGrimoireFirstLevel(ICollection<Tag> tags)
+        private void EmitFirstLevelGrimoirePage(ICollection<Tag> tags)
         {
             // extract enabled left buttons from tags
-            var enabledLeftButtonNames = from tag in tags where tag.category == leftButtonTagName select tag.value;
+            // var enabledLeftButtonNames = from tag in tags where tag.category == leftButtonTagName select tag.value;
+            var story = GetStory();
+            var enabledLeftButtonNames = story.currentChoices.Select(choice => choice.text);
 
             // extract achievements from tags
             var achievements = new List<IStoryGrimoire.AchievementDescriptor>();
@@ -989,7 +1021,6 @@ namespace Selania.Rework.Components
 
             // extract current sigil from variables
             IStoryGrimoire.SigilDescriptor? sigilDescriptor = null;
-            var story = GetStory();
             var currentSigil = (InkList)story.variablesState[currentSigilVariableName];
             if (currentSigil.Count > 1)
                 logger.ZLogWarning(
@@ -1055,22 +1086,108 @@ namespace Selania.Rework.Components
                 );
             }
 
-            // check choice nodes for first level navigation
-            var choicesWithTags = story.currentChoices.Map(choice => (Choice: choice,
-                Tags: MakeTags(choice.tags).Where(t => t.category == bookmarkTagCategory).ToList()));
-            var indexChoice = choicesWithTags.FirstOrDefault(c => c.Tags.Any(t => t.value == indexBookmarkTagValue))
-                .Choice;
-            var secondLevelChoice = choicesWithTags
-                .FirstOrDefault(c => c.Tags.Any(t => t.value == secondLevelBookmarkTagValue)).Choice;
-            var backChoice = choicesWithTags.FirstOrDefault(c => c.Tags.Any(t => t.value == backBookmarkTagValue))
-                .Choice;
-            var forwardChoice = choicesWithTags.FirstOrDefault(c => c.Tags.Any(t => t.value == forwardBookmarkTagValue))
-                .Choice;
+            // analyze navigation
+            GetNavigationChoices(story, out var indexChoice, out var secondLevelChoice, out var previousChoice,
+                out var nextChoice);
+            if (indexChoice != null)
+            {
+                logger.ZLogWarning(
+                    $"First level has a choice to get back to the first level ({indexChoice} #{bookmarkTagCategory}:{indexBookmarkTagValue}) that should not be present");
+            }
+
+            if (secondLevelChoice != null)
+            {
+                logger.ZLogWarning(
+                    $"First level has a choice to get back to the second level ({secondLevelChoice} #{bookmarkTagCategory}:{secondLevelBookmarkTagValue}) that should not be present");
+            }
+
+            if (previousChoice != null)
+            {
+                logger.ZLogWarning(
+                    $"First level has a choice to go to the previous page ({previousChoice} #{bookmarkTagCategory}:{backBookmarkTagValue}) that should not be present");
+            }
+
+            if (nextChoice != null)
+            {
+                logger.ZLogWarning(
+                    $"First level has a choice to go to the next page ({nextChoice} #{bookmarkTagCategory}:{forwardBookmarkTagValue}) that should not be present");
+            }
 
             // emit the signal
             _firstLevelGrimoirePageDescriptorsSubject!.OnNext(new IStoryGrimoire.FirstLevelGrimoirePageDescriptor(
-                false, enabledLeftButtonNames, achievements, francoMission, sigilDescriptor, indexChoice != null,
-                secondLevelChoice?.text?.Trim(), backChoice?.text?.Trim(), forwardChoice?.text?.Trim()));
+                false, enabledLeftButtonNames, achievements, francoMission, sigilDescriptor));
+        }
+
+        /// <summary>
+        /// Get the navigation choices of this node.
+        /// </summary>
+        /// <param name="story">The story to extract navigation choices from.</param>
+        /// <param name="indexChoice">The choice to take to get back to the index, if any.</param>
+        /// <param name="secondLevelChoice">The choice to take to get back to the second level, if any.</param>
+        /// <param name="previousChoice">The choice to take to get to the previous page, if any.</param>
+        /// <param name="nextChoice">The choice to take to get to the next page, if any.</param>
+        private void GetNavigationChoices(Story story, out string? indexChoice, out string? secondLevelChoice,
+            out string? previousChoice,
+            out string? nextChoice)
+        {
+            // check choice nodes for first level navigation
+            var choicesWithTags = story.currentChoices.Map(choice => (Choice: choice,
+                Tags: MakeTags(choice.tags).Where(t => t.category == bookmarkTagCategory).ToList()));
+            indexChoice = choicesWithTags.FirstOrDefault(c => c.Tags.Any(t => t.value == indexBookmarkTagValue))
+                .Choice?.text?.Trim();
+            secondLevelChoice = choicesWithTags
+                .FirstOrDefault(c => c.Tags.Any(t => t.value == secondLevelBookmarkTagValue)).Choice?.text?.Trim();
+            previousChoice = choicesWithTags.FirstOrDefault(c => c.Tags.Any(t => t.value == backBookmarkTagValue))
+                .Choice?.text?.Trim();
+            nextChoice = choicesWithTags.FirstOrDefault(c => c.Tags.Any(t => t.value == forwardBookmarkTagValue))
+                .Choice?.text?.Trim();
+        }
+
+        private void EmitSecondLevelGreenhouseGrimoirePage()
+        {
+            // get the button descriptors
+            var story = GetStory();
+            var greenhouseButtonPlantDescriptors = story
+                .currentChoices
+                .Select(choice => (Choice: choice,
+                    Tags: MakeTags(choice.tags).Where(t => t.category == statusTagCategory).ToList()))
+                .Where(e => e.Tags.Any())
+                .Select(e => new IStoryGrimoire.GreenhouseButtonPlantDescriptor(
+                    e.Tags.Any(t => t.value == "owned"),
+                    e.Choice.text.Trim()
+                ));
+
+            // navigation
+            GetNavigationChoices(story, out var indexChoice, out var secondLevelChoice, out var previousChoice,
+                out var nextChoice);
+            if (indexChoice == null)
+            {
+                logger.ZLogError($"Second level greenhouse has not a choice to get back to the first level!");
+                return;
+            }
+
+            if (secondLevelChoice != null)
+            {
+                logger.ZLogWarning(
+                    $"First level has a choice to get back to the second level ({secondLevelChoice} #{bookmarkTagCategory}:{secondLevelBookmarkTagValue}) that should not be present");
+            }
+
+            if (previousChoice != null)
+            {
+                logger.ZLogWarning(
+                    $"First level has a choice to go to the previous page ({previousChoice} #{bookmarkTagCategory}:{backBookmarkTagValue}) that should not be present");
+            }
+
+            if (nextChoice != null)
+            {
+                logger.ZLogWarning(
+                    $"First level has a choice to go to the next page ({nextChoice} #{bookmarkTagCategory}:{forwardBookmarkTagValue}) that should not be present");
+            }
+
+            // emit the signal
+            _secondLevelGrimoirePageDescriptorsSubject!.OnNext(
+                new IStoryGrimoire.SecondLevelGreenhouseGrimoirePageDescriptor(
+                    indexChoice, greenhouseButtonPlantDescriptors));
         }
 
         #endregion

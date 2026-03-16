@@ -14,6 +14,11 @@ namespace Selania.Rework.Interfaces
         Observable<FirstLevelGrimoirePageDescriptor> firstLevelGrimoirePageDescriptors { get; }
 
         /// <summary>
+        ///     An observable that produces a value whenever a second level greenhouse grimoire page should be displayed.
+        /// </summary>
+        Observable<SecondLevelGreenhouseGrimoirePageDescriptor> secondLevelGreenhouseGrimoirePageDescriptors { get; }
+
+        /// <summary>
         ///     Switches to the flow of the grimoire.
         /// </summary>
         /// <seealso cref="SwitchFromGrimoire" />
@@ -49,6 +54,25 @@ namespace Selania.Rework.Interfaces
             string text);
 
         /// <summary>
+        /// Information about navigation bookmarks.
+        /// </summary>
+        /// <param name="indexText">Text for the 'index' bookmark, if not <c>null</c>, otherwise the bookmark is hidden (e.g. during rewriting).</param>
+        /// <param name="backToLevelTwoText">
+        ///     Text for the 'back to level two' button, if not <c>null</c>, otherwise the bookmark is
+        ///     hidden.
+        /// </param>
+        /// <param name="previousPageText">
+        ///     Text for the 'previous page' button, if not <c>null</c>, otherwise the bookmark is
+        ///     hidden.
+        /// </param>
+        /// <param name="nextPageText">Text for the 'next page' button, if not <c>null</c>, otherwise the bookmark is hidden.</param>
+        record BaseNavigationDescriptor(
+            string? indexText,
+            string? backToLevelTwoText,
+            string? previousPageText,
+            string? nextPageText);
+
+        /// <summary>
         ///     Descriptor for the data to show on the first page of the grimoire.
         /// </summary>
         /// <param name="isGamerMode">Whether the page should be displayed in gamer mode.</param>
@@ -59,26 +83,28 @@ namespace Selania.Rework.Interfaces
         /// </param>
         /// <param name="francoMission">Text for Franco's mission, or empty string if there's no mission.</param>
         /// <param name="sigilDescriptor">Descriptor of the current sigil, or <c>null</c> if there's no active sigil.</param>
-        /// <param name="hasIndex">Whether the 'index' bookmark is active (it's <c>false</c> during rewriting).</param>
-        /// <param name="backToLevelTwoText">
-        ///     Text for the 'back to level two' button, if not <c>null</c>, otherwise the bookmark is
-        ///     hidden.
-        /// </param>
-        /// <param name="previousPageText">
-        ///     Text for the 'previous page' button, if not <c>null</c>, otherwise the bookmark is
-        ///     hidden.
-        /// </param>
-        /// <param name="nextPageText">Text for the 'next page' button, if not <c>null</c>, otherwise the bookmark is hidden.</param>
         /// <seealso cref="IStoryGrimoire.firstLevelGrimoirePageDescriptors" />
         record FirstLevelGrimoirePageDescriptor(
             bool isGamerMode,
             IEnumerable<string> enabledLeftButtonNames,
             IEnumerable<AchievementDescriptor> achievements,
             string francoMission,
-            SigilDescriptor? sigilDescriptor,
-            bool hasIndex,
-            string? backToLevelTwoText,
-            string? previousPageText,
-            string? nextPageText);
+            SigilDescriptor? sigilDescriptor) : BaseNavigationDescriptor(null, null, null, null);
+
+        /// <summary>
+        /// Descriptor of a single greenhouse button.
+        /// </summary>
+        /// <param name="owned">Whether this plant is currently owned or not.</param>
+        /// <param name="name">Name of the plant (as expressed in the ink items).</param>
+        record GreenhouseButtonPlantDescriptor(bool owned, string name);
+
+        /// <summary>
+        /// Descriptor of the second level page of the greenhouse.
+        /// </summary>
+        /// <param name="greenhouseButtonPlantDescriptors">Descriptor for all the buttons.</param>
+        record SecondLevelGreenhouseGrimoirePageDescriptor(
+            string? indexText,
+            IEnumerable<GreenhouseButtonPlantDescriptor> greenhouseButtonPlantDescriptors
+        ) : BaseNavigationDescriptor(indexText, null, null, null);
     }
 }
