@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Second Level Container (Sigils)
+  m_Controller: {fileID: 9100000, guid: e679918db6bc1c245857061a14534df1, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 87c96fccbad480b409830bf954752c67, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b36befc473da1014c8e374d371bec39e, type: 2}

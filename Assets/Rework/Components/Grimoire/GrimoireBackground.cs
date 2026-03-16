@@ -48,7 +48,33 @@ namespace Selania.Rework.Components.Grimoire
             /// <summary>
             ///     Second level page (greenhouse).
             /// </summary>
-            SecondLevelGreenhouse
+            SecondLevelGreenhouse,
+
+            /// <summary>
+            ///     Second level page (sigils).
+            /// </summary>
+            SecondLevelSigils
+        }
+
+        /// <summary>
+        ///     Possible status of a second level sigil button.
+        /// </summary>
+        public enum SecondLevelSigilButtonStatus
+        {
+            /// <summary>
+            ///     Shown.
+            /// </summary>
+            Shown,
+
+            /// <summary>
+            ///     Locked.
+            /// </summary>
+            Locked,
+
+            /// <summary>
+            ///     Enabled.
+            /// </summary>
+            Enabled
         }
 
         private static readonly int Opened = Animator.StringToHash("Opened");
@@ -63,6 +89,9 @@ namespace Selania.Rework.Components.Grimoire
 
         [Tooltip("The animator controlling the second level page for the greenhouse")] [SerializeField]
         private Animator secondLevelAnimatorGreenhouse = null!;
+
+        [Tooltip("The animator controlling the second level page for the sigils")] [SerializeField]
+        private Animator secondLevelAnimatorSigils = null!;
 
         [Tooltip("List of top level buttons")] [SerializeField]
         private TopLevelButton[] topLevelButtons = null!;
@@ -122,6 +151,9 @@ namespace Selania.Rework.Components.Grimoire
 
         [SerializeField] [Tooltip("Plant buttons of the greenhouse section")]
         private SecondLevelGreenhouseButton[] secondLevelGreenhouseButtons = null!;
+
+        [Tooltip("All the second level sigil buttons")] [SerializeField]
+        private SecondLevelSigilsButton[] secondLevelSigilsButtons = null!;
 
         private Animator _animator = null!;
 
@@ -397,6 +429,9 @@ namespace Selania.Rework.Components.Grimoire
                 case PageType.SecondLevelGreenhouse:
                     ShowPage(secondLevelAnimatorGreenhouse);
                     break;
+                case PageType.SecondLevelSigils:
+                    ShowPage(secondLevelAnimatorSigils);
+                    break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(pageType), pageType, null);
             }
@@ -411,7 +446,7 @@ namespace Selania.Rework.Components.Grimoire
             // fill the page animators if necessary.
             _pageAnimators ??= new[]
             {
-                firstLevelAnimator, secondLevelAnimatorGreenhouse
+                firstLevelAnimator, secondLevelAnimatorGreenhouse, secondLevelAnimatorSigils
             };
 
             foreach (var animator in _pageAnimators)
@@ -466,13 +501,22 @@ namespace Selania.Rework.Components.Grimoire
             }
         }
 
-        [Serializable]
-        public class LeftButtonDescriptor
+        public void SetSecondLevelSigilButtonStatus(ISettingsSigils.GlyphType firstLevelGlyph,
+            ISettingsSigils.GlyphType secondLevelGlyph,
+            SecondLevelSigilButtonStatus status)
         {
-            [Tooltip("The name of the button.")] public required string name;
+            var button = secondLevelSigilsButtons.FirstOrDefault(b =>
+                b.firstLevelGlyph == firstLevelGlyph && b.secondLevelGlyph == secondLevelGlyph);
+            if (button == null)
+            {
+                Logger.ZLogError(
+                    $"Cannot find  second level sigil button with glyphs {firstLevelGlyph} {secondLevelGlyph}");
+                return;
+            }
 
-            [Tooltip("The button to enable or disable")]
-            public required Selectable target;
+            // TODO: should cache the selectable corresponding to each second level sigils button, maybe with a weak dict
+            button.GetComponent<Selectable>().interactable = status != SecondLevelSigilButtonStatus.Locked;
+            button.EnableAnimation(status == SecondLevelSigilButtonStatus.Enabled);
         }
     }
 }

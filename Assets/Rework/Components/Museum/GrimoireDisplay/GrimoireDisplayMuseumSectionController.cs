@@ -159,6 +159,11 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
             grimoireBackground.SwitchToPage(GrimoireBackground.PageType.SecondLevelGreenhouse);
         }
 
+        public void SwitchToSecondLevelSigilsPage()
+        {
+            grimoireBackground.SwitchToPage(GrimoireBackground.PageType.SecondLevelSigils);
+        }
+
         public void RandomizeGreenhouseButtons()
         {
             var buttonNames = new[]
@@ -174,6 +179,30 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
             {
                 var status = statuses[Random.Range(0, statuses.Length)];
                 grimoireBackground.SetGreenhouseButtonStatus(button, status);
+            }
+        }
+
+        public void RandomizeSigilButtons()
+        {
+            var glyphTypes = (ISettingsSigils.GlyphType[])Enum.GetValues(typeof(ISettingsSigils.GlyphType));
+            foreach (var glyphType1 in glyphTypes)
+            foreach (var glyphType2 in glyphTypes)
+            {
+                if (glyphType1 == glyphType2) continue;
+                grimoireBackground.SetSecondLevelSigilButtonStatus(glyphType1, glyphType2,
+                    Random.value < 0.5
+                        ? GrimoireBackground.SecondLevelSigilButtonStatus.Locked
+                        : GrimoireBackground.SecondLevelSigilButtonStatus.Shown);
+            }
+
+            for (;;)
+            {
+                var glyphType1 = glyphTypes[Random.Range(0, glyphTypes.Length)];
+                var glyphType2 = glyphTypes[Random.Range(0, glyphTypes.Length)];
+                if (glyphType1 == glyphType2) continue;
+                grimoireBackground.SetSecondLevelSigilButtonStatus(glyphType1, glyphType2,
+                    GrimoireBackground.SecondLevelSigilButtonStatus.Enabled);
+                break;
             }
         }
     }
