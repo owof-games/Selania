@@ -429,6 +429,7 @@
 
         ~ move_entity(Franco, Pond)
         ~ frog_currentMission = ()
+        ~ frog_currentMission = ()
         ~ frog_aboutGiftRequest = ()
         //Metto in pausa le missioni speciali
         ~ frog_pauseSpecialMission = frog_pauseSpecialMissionMax

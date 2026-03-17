@@ -109,63 +109,63 @@
 
         -> closed_mission_verify
         
-        {    
-            - firstChar_storyStatus == story_storyStarted && firstChar_giftedObject == () && frog_firstCharObtainedGifts hasnt charOneCultivable:
-                {debug_frog: condizioni rispettate per poter offrire info sul dono per Chitarra.}
-                    -> autonomy_mission_verify
+        // {    
+        //     - firstChar_storyStatus == story_storyStarted && firstChar_giftedObject == () && frog_firstCharObtainedGifts hasnt charOneCultivable:
+        //         {debug_frog: condizioni rispettate per poter offrire info sul dono per Chitarra.}
+        //             -> autonomy_mission_verify
             
-            - firstChar_storyStatus == story_storyStarted && !ending_cooking_with_first_char && frog_firstCharObtainedGifts hasnt charOneCooking && player_accessiblePlaces has Kitchen:
-                {debug_frog: condizioni rispettate per poter offrire info sull'ingrediente per Chitarra.}
-                    -> autonomy_mission_verify
+        //     - firstChar_storyStatus == story_storyStarted && !ending_cooking_with_first_char && frog_firstCharObtainedGifts hasnt charOneCooking && player_accessiblePlaces has Kitchen:
+        //         {debug_frog: condizioni rispettate per poter offrire info sull'ingrediente per Chitarra.}
+        //             -> autonomy_mission_verify
                     
-            // - firstChar_storyStatus == story_storyStarted && player_accessiblePlaces has Nest && frog_firstCharObtainedGifts hasnt charOneEmotionalWord:
-            //     {debug_frog: condizioni rispettate per poter offrire info su parola per Chitarra.}
-            //         -> autonomy_mission_verify
+        //     // - firstChar_storyStatus == story_storyStarted && player_accessiblePlaces has Nest && frog_firstCharObtainedGifts hasnt charOneEmotionalWord:
+        //     //     {debug_frog: condizioni rispettate per poter offrire info su parola per Chitarra.}
+        //     //         -> autonomy_mission_verify
                     
-            - firstChar_storyStatus == story_storyStarted && player_accessiblePlaces has Library && frog_firstCharObtainedGifts hasnt charOneLibrary:
-                {debug_frog: condizioni rispettate per poter offrire info su racconto per Chitarra.}
-                    -> autonomy_mission_verify
+        //     - firstChar_storyStatus == story_storyStarted && player_accessiblePlaces has Library && frog_firstCharObtainedGifts hasnt charOneLibrary:
+        //         {debug_frog: condizioni rispettate per poter offrire info su racconto per Chitarra.}
+        //             -> autonomy_mission_verify
                     
-            - secondChar_storyStatus == story_storyStarted && secondChar_giftedObject == () && frog_secondCharObtainedGifts hasnt charTwoCultivable:
-                {debug_frog: condizioni rispettate per poter offrire info sul dono per Riccio.}
-                    -> autonomy_mission_verify
+        //     - secondChar_storyStatus == story_storyStarted && secondChar_giftedObject == () && frog_secondCharObtainedGifts hasnt charTwoCultivable:
+        //         {debug_frog: condizioni rispettate per poter offrire info sul dono per Riccio.}
+        //             -> autonomy_mission_verify
                     
-            - secondChar_storyStatus == story_storyStarted && !ending_cooking_with_second_char && frog_secondCharObtainedGifts hasnt charTwoCooking && player_accessiblePlaces has Kitchen:
-                {debug_frog: condizioni rispettate per poter offrire info su ingrediente per Chitarra.}
-                    -> autonomy_mission_verify
+        //     - secondChar_storyStatus == story_storyStarted && !ending_cooking_with_second_char && frog_secondCharObtainedGifts hasnt charTwoCooking && player_accessiblePlaces has Kitchen:
+        //         {debug_frog: condizioni rispettate per poter offrire info su ingrediente per Chitarra.}
+        //             -> autonomy_mission_verify
                     
-            // - secondChar_storyStatus == story_storyStarted && player_accessiblePlaces has Nest && frog_secondCharObtainedGifts hasnt charTwoEmotionalWord:
-            //     {debug_frog: condizioni rispettate per poter offrire info sul dono per Chitarra.}
-            //         -> autonomy_mission_verify
+        //     // - secondChar_storyStatus == story_storyStarted && player_accessiblePlaces has Nest && frog_secondCharObtainedGifts hasnt charTwoEmotionalWord:
+        //     //     {debug_frog: condizioni rispettate per poter offrire info sul dono per Chitarra.}
+        //     //         -> autonomy_mission_verify
                     
-            - secondChar_storyStatus == story_storyStarted && player_accessiblePlaces has Library && frog_secondCharObtainedGifts hasnt charTwoLibrary:
-                {debug_frog: condizioni rispettate per poter offrire info su parola per Chitarra.}
-                    -> autonomy_mission_verify
+        //     - secondChar_storyStatus == story_storyStarted && player_accessiblePlaces has Library && frog_secondCharObtainedGifts hasnt charTwoLibrary:
+        //         {debug_frog: condizioni rispettate per poter offrire info su parola per Chitarra.}
+        //             -> autonomy_mission_verify
                     
-            - (frog_recoverableCultivables!= ()):
-                {debug_frog: condizioni rispettate per poter offrire info su racconto per Chitarra.}
-                    -> autonomy_mission_verify
+        //     - (frog_recoverableCultivables!= ()):
+        //         {debug_frog: condizioni rispettate per poter offrire info su racconto per Chitarra.}
+        //             -> autonomy_mission_verify
                     
-            //Condizioni in cui la rana non offre nulla:
+        //     //Condizioni in cui la rana non offre nulla:
 
-            - LIST_COUNT(frog_firstCharObtainedGifts) >= 3 && LIST_COUNT(frog_secondCharObtainedGifts) >= 3 && frog_availableSpecialMissions == ():
-                Non ho più niente da offrirti {player_name}. Ora è tutto nelle tue mani#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    -> main
+        //     - LIST_COUNT(frog_firstCharObtainedGifts) >= 3 && LIST_COUNT(frog_secondCharObtainedGifts) >= 3 && frog_availableSpecialMissions == ():
+        //         Non ho più niente da offrirti {player_name}. Ora è tutto nelle tue mani#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        //             -> main
             
-            - else:
-            {
-                - frog_availableCommonMissions != () && frog_availableSpecialMissions != ():
-                    Naa {player_name}, per ora sono qui con le zampe in zampa.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    Ma torna più tardi e mi invento qualcosa da farti fare!
-                        -> main
+        //     - else:
+        //     {
+        //         - frog_availableCommonMissions != () && frog_availableSpecialMissions != ():
+        //             Naa {player_name}, per ora sono qui con le zampe in zampa.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        //             Ma torna più tardi e mi invento qualcosa da farti fare!
+        //                 -> main
                 
-                - else:
-                    Ehi {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    Hai fatto un lavoro così buono ma così buono, che non ho niente da farti fare.
-                    Complimenti girino.
-                    Ora non ti resta che riposare!
-                        -> main
-            }
+        //         - else:
+        //             Ehi {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        //             Hai fatto un lavoro così buono ma così buono, che non ho niente da farti fare.
+        //             Complimenti girino.
+        //             Ora non ti resta che riposare!
+        //                 -> main
+        //     }
                
-        }
+        // }
 
