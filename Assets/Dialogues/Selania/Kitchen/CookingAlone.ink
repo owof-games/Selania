@@ -38,6 +38,8 @@
         Ma mentre cuciniamo, mi dici un po' come stai approcciando questo posto?
         Vai col caos come il famoso Girino Ir Rosponsabile, o sei più una persona ranalitica?
 
+        -> kitchen_moon_feedback ->
+
             + <i>Setaccio della polenta analitica.
                     ~ kitchen_recipeNoun = "Polenta"
                 -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
