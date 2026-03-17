@@ -84,14 +84,6 @@ VAR notification_francoQuests = false
             - frog_currentMission has missionEight && library_readStories != ():
                 <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
                         ~ notification_francoQuests = true
-            
-            - frog_currentMission has specialMissionOne && special_mission_one_dialogue:
-                <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
-                        ~ notification_francoQuests = true
-                
-            - frog_currentMission has specialMissionTwo && cooking_alone :
-                <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
-                        ~ notification_francoQuests = true
                 
         }
 }
