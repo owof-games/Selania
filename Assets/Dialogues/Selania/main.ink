@@ -72,6 +72,12 @@
 <- nest_earthGlyph_button
 <- nest_waterGlyph_button
 <- nest_aetherGlyph_button
+    //bottoni per la missione di Franco
+        <- nest_Franco_fireGlyph_button
+        <- nest_Franco_airGlyph_button
+        <- nest_Franco_earthGlyph_button
+        <- nest_Franco_waterGlyph_button
+        <- nest_Franco_aetherGlyph_button
 
 //Elementi del libro
 <- first_character_recap

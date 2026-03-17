@@ -338,24 +338,41 @@
             @animation:RewriterBook  
                 -> main
 
-    
+
+
+//Missioni speciali, con script ad hoc per dare premi o cose del genere.
+
+
 === special_mission_one
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-    Sembra che ci sia della tensione tra Riccio e Mentore.
-    Perché non vedi cosa accade? #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-    Poi torna da me, e ti darò quello che ti serve.
+        Avvio missione nest
+
+        ~ move_entity(earthGlyph, Nest)
         ~ frog_currentMission += specialMissionOne
         ~ frog_availableSpecialMissions -= specialMissionOne
-        ~ move_entity(SecondCharacter, Forest)
-        ~ move_entity(Mentor, Forest)
-        ~ movements_changeLocationTimer = 0
+        ~ move_entity(Franco, Nest)
     @animation:RewriterBook    
     -> main
     
+=== special_mission_one_closed
+
+    Feedback missione nido conclusa. Ti lascio il glifo, girino!
+
+    ~ move_entity(Franco, Pond)
+    ~ frog_currentMission = ()
+    ~ frog_aboutGiftRequest = ()
+    //Metto in pausa le missioni speciali
+    ~ frog_pauseSpecialMission = frog_pauseSpecialMissionMax
+    ~  nest_francoUsedEarth = false
+        @animation:RewriterBook
+
+            -> main
     
+
+  
 === special_mission_two
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -395,33 +412,6 @@
             -> main
     
 
-// === special_mission_three
-//     ~ temp charNameOne = translator(firstChar_ActualName)
-//     ~ temp charNameTwo = translator(secondChar_ActualName)
-//     ~ temp mentorName = translator(mentor_ActualName)
-    
-//     //* Missione tre: liberare uno slot parola
-// 	//    * Porta questa cosa a qualcun
 
 
-//     missione speciale tre: le special creano storylets ad hoc anche con le altre personagge, magari con un blocco di scelte#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-//     @animation:RewriterBook    
-//         ~ frog_currentMission += specialMissionThree
-//         ~ frog_availableSpecialMissions -= specialMissionThree
-//     -> main    
- 
-// === special_mission_four
-//     ~ temp charNameOne = translator(firstChar_ActualName)
-//     ~ temp charNameTwo = translator(secondChar_ActualName)
-//     ~ temp mentorName = translator(mentor_ActualName)
-    
-//     //* Missione quattro: informazioni preziose
-// 	//* Dona un coltivabile a una delle persone non riscrivibili, e ti dirò qualcosa di importante su di lei.
-//     missione speciale quattro: le special creano storylets ad hoc anche con le altre personagge, magari con un blocco di scelte#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-//     @animation:RewriterBook    
-//         ~ frog_currentMission += specialMissionFour
-//         ~ frog_availableSpecialMissions -= specialMissionFour
-//     -> main   
-    
 
-    

@@ -774,46 +774,6 @@
                         -> main  
             }
         
-  
-    
-        //Le missioni speciali risolvono il dono direttamente, senza andare a frog_about_who_questions
-        - specialMissionOne:
-            {
-                - special_mission_one_dialogue:
-                    Hai assistito alla discussione tra Riccio e Mentore, {player_name}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    {
-                        - special_mission_one_dialogue.not_intervention:
-                            E hai deciso di non intervenire.
-                        
-                        - special_mission_one_dialogue.pro_mentor:
-                            E scelto Wicked: dillo a Fabio!
-                        
-                        - special_mission_one_dialogue.pro_riccio:
-                            E scelto Attack of Titan, lovvo.
-                        
-                        - special_mission_one_dialogue.disagree:
-                            E hai optato per The Lady: tu si che capisci il mondo.
-                        
-                        - special_mission_one_dialogue.paracula:
-                            E hai proposto Attack of The Wicked: discutibile.
-                    }
-                L'armonia è importante.
-                Per questo ti dono una nota, che troverai al Nido.
-                    ~ move_entity(earthGlyph, Pond)
-                    ~ frog_currentMission = ()
-                    ~ frog_aboutGiftRequest = ()
-                    //Metto in pausa le missioni speciali
-                    ~ frog_pauseSpecialMission = frog_pauseSpecialMissionMax
-                    -> main
-                    
-                - else:
-                Ricorda {player_name}: ascolta la discussione tra Mentore e Riccio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    E poi torna da me.
-                    -> main
-            }
-            
-
-        
         - else:
             //Vuol dire che non ci sono missioni attive e posso proporne di nuove, se la rana non risulterà stanca
             {

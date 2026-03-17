@@ -14,6 +14,8 @@ VAR nest_aetherButton = false
 //Notifichiamo una nuova scoperta
 VAR nest_newSigilDiscovered = ()   
 
+//Tracciamento per missione franco
+VAR nest_francoUsedEarth = false
 
 //Funzioni per la creazione dei sigilli nel nido
 
@@ -83,14 +85,25 @@ VAR nest_newSigilDiscovered = ()
 {not thirdGlyph:
     ~ return
 }
+
 ~ temp chosenSigil = sigilsWithGlyphInFirstPosition(firstGlyph) ^ sigilsWithGlyphInSecondPosition(secondGlyph) ^ sigilsWithGlyphInThirdPosition(thirdGlyph)
 {debug_nest: Il sigillo scelto è: {chosenSigil}}
+
+//aggiungo il sigillo a quelli scoperti
 ~ glyph_discoveredSigils += chosenSigil
-//con questo pezzetto informo il sistema di notifica di notificare il nuovo sigillo trovato
-~ nest_newSigilDiscovered += chosenSigil
+
+//svuoto il valore del glifo
 ~ firstGlyph = ()
 ~ secondGlyph = ()
 ~ thirdGlyph = ()
+
+//con questo pezzetto informo il sistema di notifica di notificare il nuovo sigillo trovato SE non sono in missione franco
+{
+    - nest_francoUsedEarth == false:
+        ~ nest_newSigilDiscovered += chosenSigil
+    //Altrimenti vado al feedback di franco
+}
+
 
 
 //Questa funzione decide a quale step di glifo assegnare la scelta fatta

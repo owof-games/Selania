@@ -74,3 +74,52 @@
         ~ move_entity(aetherGlyph, Safekeeping)
         ~ move_entity(aetherGlyph_off, Nest)
         -> main
+
+
+//Questa è la variante pensata SOLO per la missione di Franco
+//E qui ci sono tutti i bottoni
+=== nest_Franco_fireGlyph_button ===
+    + {are_two_entities_together(PG,fireGlyph) && are_two_entities_together(PG,Franco) && nest_francoUsedEarth && nest_fireButton}[fireGlyph]
+        ~ saveGlyph(Fire)
+        ~ checkSigilCompleted()
+        ~ nest_updateButtons()
+        ~ move_entity(fireGlyph, Safekeeping)
+        ~ move_entity(fireGlyph_off, Nest)
+        -> main
+
+=== nest_Franco_airGlyph_button ===
+    + {are_two_entities_together(PG,airGlyph) && are_two_entities_together(PG,Franco) && nest_francoUsedEarth && nest_airButton}[airGlyph]
+        ~ saveGlyph(Air)
+        ~ checkSigilCompleted()
+        ~ nest_updateButtons()
+        ~ move_entity(airGlyph, Safekeeping)
+        ~ move_entity(airGlyph_off, Nest)
+        -> main
+
+=== nest_Franco_earthGlyph_button ===
+    + {are_two_entities_together(PG,earthGlyph) && are_two_entities_together(PG,Franco) && nest_earthButton}[earthGlyph]
+        ~ saveGlyph(Earth)
+        ~ nest_francoUsedEarth = true
+        ~ checkSigilCompleted()
+        ~ nest_updateButtons()
+        ~ move_entity(earthGlyph, Safekeeping)
+        ~ move_entity(earthGlyph_off, Nest)
+        -> main
+
+=== nest_Franco_waterGlyph_button ===
+    + {are_two_entities_together(PG,waterGlyph) && are_two_entities_together(PG,Franco) && nest_francoUsedEarth && nest_waterButton}[waterGlyph]
+        ~ saveGlyph(Water)
+        ~ checkSigilCompleted()
+        ~ nest_updateButtons()
+        ~ move_entity(waterGlyph, Safekeeping)
+        ~ move_entity(waterGlyph_off, Nest)
+        -> main
+
+=== nest_Franco_aetherGlyph_button ===
+    + {are_two_entities_together(PG,aetherGlyph) && are_two_entities_together(PG,Franco) && nest_francoUsedEarth && nest_aetherButton}[aetherGlyph]
+        ~ saveGlyph(Aether)
+        ~ checkSigilCompleted()
+        ~ nest_updateButtons()
+        ~ move_entity(aetherGlyph, Safekeeping)
+        ~ move_entity(aetherGlyph_off, Nest)
+        -> main        

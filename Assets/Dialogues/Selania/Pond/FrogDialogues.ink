@@ -64,11 +64,14 @@
             }
                 -> frog_about_who_questions   
         
-        //Condizione in cui possiamo attivare la missione speciale.
-            
+        //Condizione in cui possiamo attivare le missioni speciali.
         - frog_pauseSpecialMission < 1 && (frog_availableSpecialMissions has specialMissionTwo) && (player_accessiblePlaces ? Kitchen) && frog_currentMission == ():
                     {debug_frog: condizioni rispettate per poter offrire la seconda missione speciale.}
-                        -> special_mission_two 
+                        -> special_mission_two
+
+        - frog_pauseSpecialMission < 1 && (frog_availableSpecialMissions has specialMissionOne) && (player_accessiblePlaces ? Nest) && frog_currentMission == () && glyph_discoveredSigils != ():
+                    {debug_frog: condizioni rispettate per poter offrire la prima missione speciale.}
+                        -> special_mission_one             
         
         - else:
             {shuffle:
