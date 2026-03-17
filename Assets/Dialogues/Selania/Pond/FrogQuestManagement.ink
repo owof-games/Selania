@@ -364,6 +364,21 @@
         - (top)
         //Dato che no mi fa fare questa cosa direttamente nella variabile, provo così.
         //~ frog_maxValueRandomMissionDice = LIST_COUNT(frog_allMissions)
+
+        //Se ho missioni speciali disponibili attivo quelle, altrimenti passo a quelle normali
+        {
+            - frog_pauseSpecialMission == 0 && (frog_availableSpecialMissions has specialMissionOne) && frog_currentMission == () && glyph_discoveredSigils != ():
+                    {debug_frog: condizioni rispettate per poter offrire la prima missione speciale.}
+                        -> special_mission_one    
+
+            - frog_pauseSpecialMission == 0 && (frog_availableSpecialMissions has specialMissionTwo) && (player_accessiblePlaces has Kitchen) && frog_currentMission == ():
+                {debug_frog: condizioni rispettate per poter offrire la seconda missione speciale.}
+                    -> special_mission_two
+
+        }
+
+
+
         
         //Tiro il dado
         ~ frog_randomMissionDice = RANDOM(1,8)

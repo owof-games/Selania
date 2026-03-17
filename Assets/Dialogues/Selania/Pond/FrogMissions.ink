@@ -359,14 +359,28 @@
     
 === special_mission_one_closed
 
-    Feedback missione nido conclusa. Ti lascio il glifo, girino!
+    Feedback missione nido conclusa.
+    Hai trovato {sigils_translator(nest_francoChosenSigil)}
+    Ora lo consumo e ti aggiorno i valori 
+            //Associo ~ glyph_actualActiveSigil al sigillo di Franco
+            ~ glyph_actualActiveSigil = nest_francoChosenSigil
+            //Aggiorno i testi
+            ~ glyph_grimoireTripleSigilsUpdater()
+            ~ glyph_grimoireTripleSigilsUpdater()
+            ~ glyph_grimoireTripleSigilsUpdater()
+            //Poi aggiorno il sigillo principale
+            ~ glyph_grimoireMainSigilsUpdater()
+            //E svuoto glyph_actualActiveSigil
+            ~ glyph_actualActiveSigil = ()
+    
+    Ti lascio il glifo, girino!
 
     ~ move_entity(Franco, Pond)
     ~ frog_currentMission = ()
     ~ frog_aboutGiftRequest = ()
     //Metto in pausa le missioni speciali
     ~ frog_pauseSpecialMission = frog_pauseSpecialMissionMax
-    ~  nest_francoUsedEarth = false
+    ~ nest_francoUsedEarth = false
         @animation:RewriterBook
 
             -> main

@@ -31,7 +31,7 @@
 
 //E qui ci sono tutti i bottoni
 === nest_fireGlyph_button ===
-    + {are_two_entities_together(PG,fireGlyph) && nest_fireButton}[fireGlyph]
+    + {are_two_entities_together(PG,fireGlyph) && nest_fireButton && not are_two_entities_together(PG,Franco)}[fireGlyph]
         ~ saveGlyph(Fire)
         ~ checkSigilCompleted()
         ~ nest_updateButtons()
@@ -40,7 +40,7 @@
         -> main
 
 === nest_airGlyph_button ===
-    + {are_two_entities_together(PG,airGlyph) && nest_airButton}[airGlyph]
+    + {are_two_entities_together(PG,airGlyph) && nest_airButton && not are_two_entities_together(PG,Franco)}[airGlyph]
         ~ saveGlyph(Air)
         ~ checkSigilCompleted()
         ~ nest_updateButtons()
@@ -49,7 +49,7 @@
         -> main
 
 === nest_earthGlyph_button ===
-    + {are_two_entities_together(PG,earthGlyph) && nest_earthButton}[earthGlyph]
+    + {are_two_entities_together(PG,earthGlyph) && nest_earthButton && not are_two_entities_together(PG,Franco)}[earthGlyph]
         ~ saveGlyph(Earth)
         ~ checkSigilCompleted()
         ~ nest_updateButtons()
@@ -58,7 +58,7 @@
         -> main
 
 === nest_waterGlyph_button ===
-    + {are_two_entities_together(PG,waterGlyph) && nest_waterButton}[waterGlyph]
+    + {are_two_entities_together(PG,waterGlyph) && nest_waterButton && not are_two_entities_together(PG,Franco)}[waterGlyph]
         ~ saveGlyph(Water)
         ~ checkSigilCompleted()
         ~ nest_updateButtons()
@@ -67,7 +67,7 @@
         -> main
 
 === nest_aetherGlyph_button ===
-    + {are_two_entities_together(PG,aetherGlyph) && nest_aetherButton}[aetherGlyph]
+    + {are_two_entities_together(PG,aetherGlyph) && nest_aetherButton && not are_two_entities_together(PG,Franco)}[aetherGlyph]
         ~ saveGlyph(Aether)
         ~ checkSigilCompleted()
         ~ nest_updateButtons()

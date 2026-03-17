@@ -16,6 +16,7 @@ VAR nest_newSigilDiscovered = ()
 
 //Tracciamento per missione franco
 VAR nest_francoUsedEarth = false
+VAR nest_francoChosenSigil = ()
 
 //Funzioni per la creazione dei sigilli nel nido
 
@@ -62,13 +63,13 @@ VAR nest_francoUsedEarth = false
     {debug_nest: I sigilli rimasti sono {allSigils}}
 
     // secondo step e mezzo: tolgo i sigilli che usano glifi non ancora disponibili
-    {not are_two_entities_together(PG,earthGlyph):
+    {(not are_two_entities_together(PG,earthGlyph)) && (not are_two_entities_together(PG,earthGlyph_off)):
         ~ allSigils -= sigilsWithGlyphInFirstPosition(Earth)
         ~ allSigils -= sigilsWithGlyphInSecondPosition(Earth)
         ~ allSigils -= sigilsWithGlyphInThirdPosition(Earth)
     }
 
-    {not are_two_entities_together(PG,fireGlyph):
+    {not are_two_entities_together(PG,fireGlyph) && (not are_two_entities_together(PG,fireGlyph_off)):
         ~ allSigils -= sigilsWithGlyphInFirstPosition(Fire)
         ~ allSigils -= sigilsWithGlyphInSecondPosition(Fire)
         ~ allSigils -= sigilsWithGlyphInThirdPosition(Fire)
@@ -101,7 +102,8 @@ VAR nest_francoUsedEarth = false
 {
     - nest_francoUsedEarth == false:
         ~ nest_newSigilDiscovered += chosenSigil
-    //Altrimenti vado al feedback di franco
+    - else: 
+       ~ nest_francoChosenSigil = chosenSigil
 }
 
 

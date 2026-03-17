@@ -103,19 +103,8 @@
 
 
         -> closed_mission_verify
-
-        //{
-            //Provo a mettere le missioni speciali come prioritarie
-                //Special mission one offre la nota
-                // - frog_pauseSpecialMission < 1 && (frog_availableSpecialMissions has specialMissionOne) && (player_accessiblePlaces ? Nest) && second_char_main_storylets.four:
-                //     {debug_frog: condizioni rispettate per poter offrire la prima missione speciale.}
-                //         -> special_mission_one
-                    
-                //Special mission two offre l'ingrediente universale
-                
-        //}
+        
         {    
-
             - firstChar_storyStatus == story_storyStarted && firstChar_giftedObject == () && frog_firstCharObtainedGifts hasnt charOneCultivable:
                 {debug_frog: condizioni rispettate per poter offrire info sul dono per Chitarra.}
                     -> autonomy_mission_verify

@@ -33,6 +33,8 @@
             ~ glyph_grimoireTripleSigilsUpdater()
             ~ glyph_grimoireTripleSigilsUpdater()
             ~ glyph_grimoireTripleSigilsUpdater()
+            //Poi aggiorno il sigillo principale
+            ~ glyph_grimoireMainSigilsUpdater()
             //E poi svuoto il nuovo sigillo
             ~ nest_newSigilDiscovered = ()
 
@@ -42,6 +44,8 @@
             ~ glyph_grimoireTripleSigilsUpdater()
             ~ glyph_grimoireTripleSigilsUpdater()
             ~ glyph_grimoireTripleSigilsUpdater()
+            //Poi aggiorno il sigillo principale
+            ~ glyph_grimoireMainSigilsUpdater()
             //E poi svuoto il nuovo sigillo
             ~ nest_newSigilDiscovered = ()
 
@@ -52,11 +56,13 @@
             ~ glyph_grimoireTripleSigilsUpdater()
             ~ glyph_grimoireTripleSigilsUpdater()
             ~ glyph_grimoireTripleSigilsUpdater()
+            //Poi aggiorno il sigillo principale
+            ~ glyph_grimoireMainSigilsUpdater()
             //E poi svuoto il nuovo sigillo
             ~ nest_newSigilDiscovered = ()
 
         ~ thirdChar_LibraryInvite = false
-        ~  move_entity(ThirdCharacter, Forest)
+        ~ move_entity(ThirdCharacter, Forest)
         -> third_char_closing_storylet ->
         -> opening_places ->
         -> main

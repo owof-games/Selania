@@ -8,11 +8,11 @@
     LIST frog_missionAboutChar = missionCharOne, missionCharTwo, missionCharThree, missionCharFour, missionCharFive, missionObjects, specialDelivery
     
     //Lista di tutte le missioni che la rana può offrire, e quelle completate. Nota: missionOne etc son nomi temporanei, che verranno aggiornati man mano che le creo
-    LIST frog_allMissions = missionOne, missionTwo, missionThree, missionFour, missionFive, missionSix, missionSeven, missionEight, specialMissionOne, specialMissionTwo, specialMissionThree, specialMissionFour
+    LIST frog_allMissions = missionOne, missionTwo, missionThree, missionFour, missionFive, missionSix, missionSeven, missionEight, specialMissionOne, specialMissionTwo
         //Separo la lista totale da quelle disponibili anche per un discorso di TW
     VAR frog_availableCommonMissions = (missionOne, missionTwo, missionThree, missionFour, missionFive, missionSix, missionSeven, missionEight)
         //Nota: per ora sono solo due missioni speciali, poi vediamo.
-    VAR frog_availableSpecialMissions = (specialMissionTwo)
+    VAR frog_availableSpecialMissions = (specialMissionOne, specialMissionTwo)
     
     VAR frog_aboutGiftRequest = ()
     VAR frog_currentMission = ()

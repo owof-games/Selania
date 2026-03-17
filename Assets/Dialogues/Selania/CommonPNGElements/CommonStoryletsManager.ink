@@ -68,7 +68,7 @@
              - are_two_entities_together(SecondCharacter, PG) && are_two_entities_together(Carla, PG) && secondChar_pauseTalking == 0 && not carla_and_second_char_chit_chat:
                     -> carla_and_second_char_chit_chat
             //Missione speciale Franco
-            - are_two_entities_together(Franco, PG) && entity_location(PG) == Nest && nest_francoUsedEarth == true:
+            - are_two_entities_together(Franco, PG) && entity_location(PG) == Nest && nest_francoChosenSigil != ():
                     -> special_mission_one_closed 
 
             - else:
