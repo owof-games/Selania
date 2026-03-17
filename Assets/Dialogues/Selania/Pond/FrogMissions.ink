@@ -348,7 +348,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-        Avvio missione nest
+        Franco ci dice di raggiungerlo al nido
 
         ~ move_entity(earthGlyph, Nest)
         ~ frog_currentMission += specialMissionOne
@@ -357,6 +357,17 @@
     @animation:RewriterBook    
     -> main
     
+=== special_mission_one_contents
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+    Franco ci spiega la missione
+
+    @animation:RewriterBook  
+    -> main
+
+
 === special_mission_one_closed
 
     Feedback missione nido conclusa.

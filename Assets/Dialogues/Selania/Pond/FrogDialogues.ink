@@ -73,6 +73,13 @@
                     {debug_frog: condizioni rispettate per poter offrire la prima missione speciale.}
                         -> special_mission_one             
         
+        - entity_location(PG) == Nest: 
+        {shuffle stopping:
+           - Girino, continua a divertirti con quei sassi!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+           - Che fastidio la pioggia sulla testa. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+           - Son qui che aspetto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        }
+
         - else:
             {shuffle:
                 - Ciao girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -97,7 +104,7 @@
       + Per ora me ne vado.
             -> main
         
-      + Franco, {dimmi cosa devo fare.|hai qualcosa da farmi fare?}
+      + {entity_location(PG) == Pond}Franco, {dimmi cosa devo fare.|hai qualcosa da farmi fare?}
       {debug_frog: il valore di frog_availableSpecialMissions è {frog_availableSpecialMissions}.}
       {debug_frog: player_accessiblePlaces contiene {player_accessiblePlaces}.}
 

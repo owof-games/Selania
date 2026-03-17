@@ -67,7 +67,10 @@
             //Scambio tra Riccio e Carla
              - are_two_entities_together(SecondCharacter, PG) && are_two_entities_together(Carla, PG) && secondChar_pauseTalking == 0 && not carla_and_second_char_chit_chat:
                     -> carla_and_second_char_chit_chat
-            //Missione speciale Franco
+            //Primo commento di Franco quando entriamo nel nest con lui
+            - are_two_entities_together(Franco, PG) && entity_location(PG) == Nest && nest_francoChosenSigil == () && not special_mission_one_contents:
+                -> special_mission_one_contents
+            //Missione speciale Franco chiusa
             - are_two_entities_together(Franco, PG) && entity_location(PG) == Nest && nest_francoChosenSigil != ():
                     -> special_mission_one_closed 
 
