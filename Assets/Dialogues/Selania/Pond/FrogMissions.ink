@@ -381,6 +381,8 @@
     //Metto in pausa le missioni speciali
     ~ frog_pauseSpecialMission = frog_pauseSpecialMissionMax
     ~ nest_francoUsedEarth = false
+    //Riattivo poi i tasti se posseduti
+    -> nest_reactivateGliphs ->
         @animation:RewriterBook
 
             -> main
