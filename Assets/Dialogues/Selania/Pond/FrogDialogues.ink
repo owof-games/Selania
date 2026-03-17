@@ -55,7 +55,7 @@
 
         //manca feedback dopo esperienza al nido
         - frog_availableSpecialMissions hasnt specialMissionOne && entity_location(PG) == Pond && not feedback_mission_one_closed:
-            -> feedback_mission_one_closed
+            -> feedback_mission_one_closed ->
 
 
         - frog_suspended_gift == true:
