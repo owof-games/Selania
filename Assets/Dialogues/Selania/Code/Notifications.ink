@@ -12,7 +12,7 @@ VAR notification_francoQuests = false
 //Per ora la struttura è in ordine gerarchico di priorità, poi vediamo se ha senso. Per ora ho messo il tagging della strega, ma poi probabilmente metterò il simbolo più sensato.
 {
     - nest_newSigilDiscovered != ():
-        {player_name} ha scoperto {sigils_translator(nest_newSigilDiscovered)}.
+        {player_name} ha scoperto {sigils_translator(nest_newSigilDiscovered)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             ~ nest_newSigilDiscovered = ()
         -> nest_reactivateGliphs ->
         -> main

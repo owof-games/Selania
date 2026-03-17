@@ -235,22 +235,22 @@
         Poveri girini.
         Però poteva andare peggio, per fortuna ci ha aiutato la nostra amica comune.
         E visto che alcune cose sono cambiate, perché non provi a parlarle direttamente?
-        Vive nell'albero della foresta.
+        La trovi dalle parti della discarica.
             {
                 - are_two_entities_together(SecondCharacter, PG):
-                    C'è qualcuno nell'albero!!!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
+                    C'è qualcuno nella discarica?!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
                         
             }
 
             {
                 - are_two_entities_together(FirstCharacter, PG):
-                    C'è qualcuno nell'albero???#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                    C'è un'altra persona qui in giro?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
                         
             }
 
             {
                 - are_two_entities_together(Mentor, PG):
-                    C'è qualcuno nell'albero?!?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_bored
+                    C'è una discarica?!?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_bored
                         
             }
         Credo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -348,7 +348,13 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-        Franco ci dice di raggiungerlo al nido
+        Girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        Mi serve un favore enorme, grande almeno quanto il cuore di zia Graaak.
+        Che il medico dice che è un problema.
+        Il cuore, non zia Graak.
+        Lei è adorabile, quando non mi sgrida.
+        E ora mi sgriderebbe perché ho perso il filo.
+        Vediamoci sulla spiaggia!
 
         ~ move_entity(earthGlyph, Nest)
         ~ frog_currentMission += specialMissionOne
@@ -362,42 +368,104 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    Franco ci spiega la missione
+        Eccoti girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        Questa è una cosa molto delicata, per cui promettimi che la terrai per te.
+        E per me ovviamente, perché se la tieni solo per te me la dimentico, e quello sì che diventerebbe un problema.
+        Si tratta di Euforbo.
+        Le maestre sono preoccupate.
+        Dicono che è molto intelligente. 
+        Sa tipo come respirare sott'acqua e ha anche trovato un modo per gracchiare senza sputare, e conosce tutto delle salamandre.
+        Ma non sa come esprimere bene le sue emozioni, si agita tantissimo quando prova a dirle e poi si zittisce tutto.
+        Mi si rompe il cuore quando lo vedo così.
+        Ma la nostra amica comune mi ha detto che ci sono questi sigilli che non servono per chiudere le cose ma per aprirle.
+        Che quindi sarebbero delle chiavi, no?
+        Anche se pure le chiavi chiudono e aprono.
+        Quindi forse dei grimaldelli?
+        Che poi ho visto che mi ha dato un sasso, quel sasso lì nuovo che vedi.
+        E i sassi aprono anche le teste con un po' di forza.
+        Ma non voglio metterci le emozioni dentro a Euforbo, voglio che le sappia dire.
+        E mi ha detto "crediamo che con questo tipo di glifo all'inizio, {player_name} possa scoprire un sigillo adatto per aiutare Euforbo".
+        Confermiamo. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        Mi fido di lei, non mi ha detto molto altro.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        E non so cosa faranno quei sigilli di preciso, ma mi sono ricordato di quando Euforbo era piccolo e non voleva nuotare.
+        Poi l'abbiamo lasciato da solo quando abbiamo traslocato verso la nuova corrente e ha imparato da solo.
+        Un pezzo alla volta.
+        E quindi mi sa che se ci dai un sigillo così, bello o brutto che sia, alla fine è come il primo colpo di pinna, e poi lui sa meglio come dirle le cose.
+        Creane uno, io me lo prendo e poi glielo dono e vediamo che succede.
+        Grazie, girino!
 
     @animation:RewriterBook  
+
     -> main
 
 
 === special_mission_one_closed
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 
-    Feedback missione nido conclusa.
-    Hai trovato {sigils_translator(nest_francoChosenSigil)}
-    Ora lo consumo e ti aggiorno i valori 
-            //Associo ~ glyph_actualActiveSigil al sigillo di Franco
-            ~ glyph_actualActiveSigil = nest_francoChosenSigil
-            //Aggiorno i testi
-            ~ glyph_grimoireTripleSigilsUpdater()
-            ~ glyph_grimoireTripleSigilsUpdater()
-            ~ glyph_grimoireTripleSigilsUpdater()
-            //Poi aggiorno il sigillo principale
-            ~ glyph_grimoireMainSigilsUpdater()
-            //E svuoto glyph_actualActiveSigil
-            ~ glyph_actualActiveSigil = ()
-    
-    Ti lascio il glifo, girino!
-
-    ~ move_entity(Franco, Pond)
-    ~ frog_currentMission = ()
-    ~ frog_aboutGiftRequest = ()
-    //Metto in pausa le missioni speciali
-    ~ frog_pauseSpecialMission = frog_pauseSpecialMissionMax
-    ~ nest_francoUsedEarth = false
-    //Riattivo poi i tasti se posseduti
-    -> nest_reactivateGliphs ->
+        //Associo ~ glyph_actualActiveSigil al sigillo di Franco
+        ~ glyph_actualActiveSigil = nest_francoChosenSigil
+        //Aggiorno i testi
+        ~ glyph_grimoireTripleSigilsUpdater()
+        ~ glyph_grimoireTripleSigilsUpdater()
+        ~ glyph_grimoireTripleSigilsUpdater()
+        //Poi aggiorno il sigillo principale
+        ~ glyph_grimoireMainSigilsUpdater()
+        //E svuoto glyph_actualActiveSigil
+        ~ glyph_actualActiveSigil = ()
         @animation:RewriterBook
 
-            -> main
+
+        Girino, ma che carino questo sigillo!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        {player_name} ha trovato {sigils_translator(nest_francoChosenSigil)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        {sigils_translator(nest_francoChosenSigil)}, suona bene.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        Ora vado da Euforbo e glielo dono subito.
+        Chissà se lo deve mangiare?
+        O metterlo in testa?
+        Magari ci si fa un cappellino?
+        Uh, tieniti pure la pietra, così puoi scoprire altri sigilli.
+        Magari ti aiutano a dire le tue emozioni.
+
+        ~ move_entity(Franco, Pond)
+        ~ frog_currentMission = ()
+        ~ frog_aboutGiftRequest = ()
+        //Metto in pausa le missioni speciali
+        ~ frog_pauseSpecialMission = frog_pauseSpecialMissionMax
+        ~ nest_francoUsedEarth = false
+        //Riattivo poi i tasti se posseduti
+        -> nest_reactivateGliphs ->
+        
+        -> main
     
+
+=== feedback_mission_one_closed ===
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+        Ehi girino, grazie ancora per prima.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        Euforbo all'inizio era confuso, si è portato il sigillo in camera.
+        Poi è venuto in soggiorno a fare le sue cose, e quando i suoi fratelli gli hanno dato noia <>
+
+        {
+            - glyph_earthFireSigils has nest_francoChosenSigil:
+                all'inizio si è agitato, ma poi ha iniziato a nuotare veloce veloce e a scaricare la tensione.
+            - glyph_earthAirSigils has nest_francoChosenSigil:
+                ha preso un grande respiro e poi si è messo a cucinare con Tullio, e si è rilassato.
+            - glyph_earthWaterSigils has nest_francoChosenSigil:
+                li ha ignorati, si è messo le sue cuffie preferite e ha iniziato a disegnare, ed era tutto felice.
+            - glyph_earthAetherSigils has nest_francoChosenSigil:
+                si è avvicinato a Giulio, e si è messo a leggere con lui.
+        }
+
+        Per il resto della serata l'ho visto più sereno.
+        Ha anche riso a una mia battuta!
+
+    ->->
+
+
 
   
 === special_mission_two

@@ -53,6 +53,11 @@
                         Livello di confusione: sì.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
                 }
 
+        //manca feedback dopo esperienza al nido
+        - frog_availableSpecialMissions hasnt specialMissionOne && entity_location(PG) == Pond && not feedback_mission_one_closed:
+            -> feedback_mission_one_closed
+
+
         - frog_suspended_gift == true:
             Ehi girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             {shuffle:
@@ -64,14 +69,7 @@
             }
                 -> frog_about_who_questions   
         
-        //Condizione in cui possiamo attivare le missioni speciali.
-        - frog_pauseSpecialMission < 1 && (frog_availableSpecialMissions has specialMissionTwo) && (player_accessiblePlaces ? Kitchen) && frog_currentMission == ():
-                    {debug_frog: condizioni rispettate per poter offrire la seconda missione speciale.}
-                        -> special_mission_two
 
-        - frog_pauseSpecialMission < 1 && (frog_availableSpecialMissions has specialMissionOne) && (player_accessiblePlaces ? Nest) && frog_currentMission == () && glyph_discoveredSigils != ():
-                    {debug_frog: condizioni rispettate per poter offrire la prima missione speciale.}
-                        -> special_mission_one             
         
         - entity_location(PG) == Nest: 
         {shuffle stopping:
