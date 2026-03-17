@@ -367,7 +367,7 @@
 
     VAR glyph_textWaterFireAirOne = "Flusso impetuoso, remo disperso."
     VAR glyph_textWaterFireAirTwo = "Il tarabuso si dichiara,"
-    VAR glyph_textWaterFireAirThree = "il falco cattura."
+    VAR glyph_textWaterFireAirThree = "la volpe cattura."
 
     //Più aria
     VAR glyph_textWaterAirEarthOne = "Nubi cineree, rumori soffocati."
@@ -790,69 +790,69 @@
 
 //Venti sigilli principali: varianti per la raccolta del testo
     //Dominante acqua
-    VAR glyph_textWaterAirOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textWaterAirTwo = "gambe tese "
+    VAR glyph_textWaterAirOne = "La nube trasforma l’acqua in vita o dolore,"
+    VAR glyph_textWaterAirTwo = "similmente l’emozione trasforma il messaggio."
 
-    VAR glyph_textWaterFireOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textWaterFireTwo = "gambe tese "
+    VAR glyph_textWaterFireOne = "Scavando o collegando,"
+    VAR glyph_textWaterFireTwo = "acqua ed emotività mutano il mondo."
 
-    VAR glyph_textWaterAetherOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textWaterAetherTwo = "gambe tese "
+    VAR glyph_textWaterAetherOne = "Una fonte gioiosa e una comunicazione trasparente,"
+    VAR glyph_textWaterAetherTwo = "tengono in vita una comunità."
 
-    VAR glyph_textWaterEarthOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textWaterEarthTwo = "gambe tese "
+    VAR glyph_textWaterEarthOne = "Le acque del lago sono calme solo in superficie,"
+    VAR glyph_textWaterEarthTwo = "come le motivazioni dietro le nostre azioni."
 
     //Dominante aria
-    VAR glyph_textAirAetherOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textAirAetherTwo = "gambe tese "
+    VAR glyph_textAirAetherOne = "A tavola ci si passa il sale,"
+    VAR glyph_textAirAetherTwo = "si condividono esperienze."
 
-    VAR glyph_textAirFireOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textAirFireTwo = "gambe tese "
+    VAR glyph_textAirFireOne = "Cucina e domande trasformano"
+    VAR glyph_textAirFireTwo = "il dubbio in sapere."
 
-    VAR glyph_textAirEarthOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textAirEarthTwo = "gambe tese "
+    VAR glyph_textAirEarthOne = "Una casa solida è"
+    VAR glyph_textAirEarthTwo = "spazio per la conoscenza."
 
-    VAR glyph_textAirWaterOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textAirWaterTwo = "gambe tese "
+    VAR glyph_textAirWaterOne = " La tela raccoglie verità"
+    VAR glyph_textAirWaterTwo = "che chiedono bugie per essere comprese."
 
     //Dominante spirito
-    VAR glyph_textAetherAirOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textAetherAirTwo = "gambe tese "
+    VAR glyph_textAetherAirOne = "Fumo e tradizioni rafforzano"
+    VAR glyph_textAetherAirTwo = "quando sono scelte e condivise."
 
-    VAR glyph_textAetherFireOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textAetherFireTwo = "gambe tese "
+    VAR glyph_textAetherFireOne = "Nel rito si agisce richiamando rabbia,"
+    VAR glyph_textAetherFireTwo = "o evocando tutela."
 
-    VAR glyph_textAetherEarthOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textAetherEarthTwo = "gambe tese "
+    VAR glyph_textAetherEarthOne = "Lo spirito si accresce"
+    VAR glyph_textAetherEarthTwo = "tra le braccia della famiglia scelta."
 
-    VAR glyph_textAetherWaterOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textAetherWaterTwo = "gambe tese "
+    VAR glyph_textAetherWaterOne = "La natura ci offre infiniti modi"
+    VAR glyph_textAetherWaterTwo = "per bere e vedere il divino."
 
     //Dominante terra
-    VAR glyph_textEarthAirOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textEarthAirTwo = "gambe tese "
+    VAR glyph_textEarthAirOne = "Capire i propri bisogni separa"
+    VAR glyph_textEarthAirTwo = "l’azione dalla reazione."
 
-    VAR glyph_textEarthWaterOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textEarthWaterTwo = "gambe tese "
+    VAR glyph_textEarthWaterOne = "L’albero non scinde tronco e linfa,"
+    VAR glyph_textEarthWaterTwo = "corpo e mente chiedono cura."
 
-    VAR glyph_textEarthFireOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textEarthFireTwo = "gambe tese "
+    VAR glyph_textEarthFireOne = "L’estate ci offre la calura,"
+    VAR glyph_textEarthFireTwo = "e il frutto per goderne."
 
-    VAR glyph_textEarthAetherOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textEarthAetherTwo = "gambe tese "
+    VAR glyph_textEarthAetherOne = "Sotto terra non c’è grossa distinzione"
+    VAR glyph_textEarthAetherTwo = "tra l’albero e la foresta."
 
     //Dominante fuoco
-    VAR glyph_textFireAetherOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textFireAetherTwo = "gambe tese "
+    VAR glyph_textFireAetherOne = "La mappa è una guida per chi"
+    VAR glyph_textFireAetherTwo = "ha la meta già scelta."
 
-    VAR glyph_textFireAirOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textFireAirTwo = "gambe tese "
+    VAR glyph_textFireAirOne = "Il gioco è trasformazione simulata,"
+    VAR glyph_textFireAirTwo = "e scoperta insensata."
 
-    VAR glyph_textFireEarthOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textFireEarthTwo = "gambe tese "
+    VAR glyph_textFireEarthOne = "La mano inquieta trova sempre."
+    VAR glyph_textFireEarthTwo = "nuovi modi di creare."
 
-    VAR glyph_textFireWaterOne = "Sole sull’acqua, legno sicuro, "
-    VAR glyph_textFireWaterTwo = "gambe tese "
+    VAR glyph_textFireWaterOne = "La chiave di un vecchio baule è una azione"
+    VAR glyph_textFireWaterTwo = "tesa verso il passato."
 
 
 
