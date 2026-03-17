@@ -501,6 +501,13 @@ namespace Selania.Rework.Components.Grimoire
             }
         }
 
+        public void DisableAllSigilsButtons()
+        {
+            foreach (var secondLevelButton in secondLevelSigilsButtons)
+                SetSecondLevelSigilButtonStatus(secondLevelButton.firstLevelGlyph, secondLevelButton.secondLevelGlyph,
+                    SecondLevelSigilButtonStatus.Locked);
+        }
+
         public void SetSecondLevelSigilButtonStatus(ISettingsSigils.GlyphType firstLevelGlyph,
             ISettingsSigils.GlyphType secondLevelGlyph,
             SecondLevelSigilButtonStatus status)

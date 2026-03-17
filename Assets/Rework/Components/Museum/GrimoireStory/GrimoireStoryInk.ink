@@ -120,6 +120,8 @@ LIST allGlyphs = Fire, Air, Water, Earth, Aether
         @grimoire1 #franco:Ho voglia di patatine #achievement:FirstAchievementRM:3:5 #achievement:SecondAchievementRM:0:5 #achievement:ThirdAchievementRM:5:5
         + [Greenhouse]
         -> grimoire_greenhouse
+        + [Sigils]
+        -> grimoire_sigils
         -
 
 -> grimoire
@@ -147,57 +149,37 @@ LIST allGlyphs = Fire, Air, Water, Earth, Aether
     -> grimoire_greenhouse
 
 
+=== grimoire_sigils
+    @grimoireSigils
+    + {RANDOM(1, 6) <= 3} [{Fire}{Air} #enabled:{hasSigilStartingWith(glyph_fireAirSigils)}]
+    + {RANDOM(1, 6) <= 3} [{Fire}{Water} #enabled:{hasSigilStartingWith(glyph_fireWaterSigils)}]
+    + {RANDOM(1, 6) <= 3} [{Fire}{Earth} #enabled:{hasSigilStartingWith(glyph_fireEarthSigils)}]
+    + {RANDOM(1, 6) <= 3} [{Fire}{Aether} #enabled:{hasSigilStartingWith(glyph_fireAetherSigils)}]
+    + {RANDOM(1, 6) <= 3} [{Air}{Fire} #enabled:{hasSigilStartingWith(glyph_airFireSigils)}]
+    + {RANDOM(1, 6) <= 3} [{Air}{Water} #enabled:{hasSigilStartingWith(glyph_airWaterSigils)}]
+    + {RANDOM(1, 6) <= 3} [{Air}{Earth} #enabled:{hasSigilStartingWith(glyph_airEarthSigils)}]
+    + {RANDOM(1, 6) <= 3} [{Air}{Aether} #enabled:{hasSigilStartingWith(glyph_airAetherSigils)}]
+    + {RANDOM(1, 6) <= 3} [{Water}{Fire} #enabled:{hasSigilStartingWith(glyph_WaterFireSigils)}]
+    + {RANDOM(1, 6) <= 3} [{Water}{Air} #enabled:{hasSigilStartingWith(glyph_WaterAirSigils)}]
+    + [{Water}{Earth} #enabled:{hasSigilStartingWith(glyph_WaterEarthSigils)}]
+    + {RANDOM(1, 6) <= 3} [{Water}{Aether} #enabled:{hasSigilStartingWith(glyph_WaterAetherSigils)}]
+    + {RANDOM(1, 6) <= 3} [{Earth}{Fire} #enabled:{hasSigilStartingWith(glyph_earthFireSigils)}]
+    + {RANDOM(1, 6) <= 3} [{Earth}{Air} #enabled:{hasSigilStartingWith(glyph_earthAirSigils)}]
+    + {RANDOM(1, 6) <= 3} [{Earth}{Water} #enabled:{hasSigilStartingWith(glyph_earthWaterSigils)}]
+    + {RANDOM(1, 6) <= 3} [{Earth}{Aether} #enabled:{hasSigilStartingWith(glyph_earthAetherSigils)}]
+    + {RANDOM(1, 6) <= 3} [{Aether}{Fire} #enabled:{hasSigilStartingWith(glyph_aetherFireSigils)}]
+    + {RANDOM(1, 6) <= 3} [{Aether}{Air} #enabled:{hasSigilStartingWith(glyph_aetherAirSigils)}]
+    + {RANDOM(1, 6) <= 3} [{Aether}{Water} #enabled:{hasSigilStartingWith(glyph_aetherWaterSigils)}]
+    + {RANDOM(1, 6) <= 3} [{Aether}{Earth} #enabled:{hasSigilStartingWith(glyph_aetherEarthSigils)}]
+    // LIST allGlyphs = Fire, Air, Water, Earth, Aether
+    + [Index #bookmark:index]
+    -> grimoire
+    -
+    -> grimoire_sigils
 
-
-
-
-
-
-
-
-
-
-
-
-
-// VAR loop = 0
-
-
-// ~ loop += 1
-// {loop > 4:
-//     ~ loop = 1
-// }
-
-// {loop:
-//     - 1:
-
-
-        // -> end
-//     - 2:
-//         @grimoire1 #leftButton:FirstCharacter #leftButton:Moon #leftButton:Greenhouse #leftButton:Rules #leftButton:Lore #achievement:FirstAchievementRM:3:5 #achievement:SecondAchievementRM:0:5 #achievement:ThirdAchievementRM:5:5
-//         <- subsectionButtons
-//         + [Index #bookmark:index]
-//             -> end
-//     - 3:
-//         @grimoire1 #leftButton:FirstCharacter #leftButton:Moon #leftButton:Greenhouse #leftButton:Rules #leftButton:Lore #achievement:FirstAchievementRM:3:5 #achievement:SecondAchievementRM:0:5 #achievement:ThirdAchievementRM:5:5
-//         <- subsectionButtons
-//         + [Index #bookmark:index]
-//             -> end
-//         + [Piante #bookmark:secondLevel]
-//             -> end
-//         + [Olobino #bookmark:back]
-//             -> end
-//         + [??? #bookmark:forward]
-//             -> end
-//     - 4:
-//         @grimoire1 #leftButton:FirstCharacter #leftButton:Moon #leftButton:Greenhouse #leftButton:Rules #leftButton:Lore #achievement:FirstAchievementRM:3:5 #achievement:SecondAchievementRM:0:5 #achievement:ThirdAchievementRM:5:5
-//         <- subsectionButtons
-//         + [Piante #bookmark:secondLevel]
-//             -> end
-//         + [Olobino #bookmark:back]
-//             -> end
-//         + [??? #bookmark:forward]
-//             -> end
-// }
-
-// = end
+=== function hasSigilStartingWith(sigils)
+{sigils has glyph_actualActiveSigil:
+    ~ return "true"
+- else:
+    ~ return "false"
+}

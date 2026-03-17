@@ -892,6 +892,9 @@ namespace Selania.Rework.Components
         [SerializeField] [Tooltip("Category for the status tags (greenhouse)")]
         private string statusTagCategory = "status";
 
+        [SerializeField] [Tooltip("Category for the enable tag (sigils)")]
+        private string enabledTagCategory = "enabled";
+
         [SerializeField] [Tooltip("Value for the index bookmark tag")]
         private string indexBookmarkTagValue = "index";
 
@@ -933,18 +936,30 @@ namespace Selania.Rework.Components
             throw new InvalidOperationException(
                 "Cannot get the second level greenhouse grimoire page descriptors before initialization");
 
+        private Subject<IStoryGrimoire.SecondLevelSigilsGrimoirePageDescriptor>?
+            _secondLevelSigilsGrimoirePageDescriptorsSubject;
+
+        /// <inheritdoc />
+        public Observable<IStoryGrimoire.SecondLevelSigilsGrimoirePageDescriptor>
+            secondLevelSigilsGrimoirePageDescriptors =>
+            _secondLevelSigilsGrimoirePageDescriptorsSubject?.AsObservable() ??
+            throw new InvalidOperationException(
+                "Cannot get the second level sigils grimoire page descriptors before initialization");
 
         private void SetupGrimoire()
         {
             _firstLevelGrimoirePageDescriptorsSubject = new Subject<IStoryGrimoire.FirstLevelGrimoirePageDescriptor>();
             _secondLevelGrimoirePageDescriptorsSubject =
                 new Subject<IStoryGrimoire.SecondLevelGreenhouseGrimoirePageDescriptor>();
+            _secondLevelSigilsGrimoirePageDescriptorsSubject =
+                new Subject<IStoryGrimoire.SecondLevelSigilsGrimoirePageDescriptor>();
         }
 
         private void CleanupGrimoire()
         {
-            _firstLevelGrimoirePageDescriptorsSubject?.Dispose();
+            _secondLevelSigilsGrimoirePageDescriptorsSubject?.Dispose();
             _secondLevelGrimoirePageDescriptorsSubject?.Dispose();
+            _firstLevelGrimoirePageDescriptorsSubject?.Dispose();
         }
 
         public void SwitchToGrimoire()
@@ -976,6 +991,9 @@ namespace Selania.Rework.Components
                     break;
                 case "@grimoireGreenhouse":
                     EmitSecondLevelGreenhouseGrimoirePage();
+                    break;
+                case "@grimoireSigils":
+                    EmitSecondLevelSigilsGrimoirePage();
                     break;
                 default:
                     logger.ZLogWarning($"Unknown grimoire tag {currentText}");
@@ -1169,25 +1187,97 @@ namespace Selania.Rework.Components
             if (secondLevelChoice != null)
             {
                 logger.ZLogWarning(
-                    $"First level has a choice to get back to the second level ({secondLevelChoice} #{bookmarkTagCategory}:{secondLevelBookmarkTagValue}) that should not be present");
+                    $"Second level greenhouse has a choice to get back to the second level ({secondLevelChoice} #{bookmarkTagCategory}:{secondLevelBookmarkTagValue}) that should not be present");
             }
 
             if (previousChoice != null)
             {
                 logger.ZLogWarning(
-                    $"First level has a choice to go to the previous page ({previousChoice} #{bookmarkTagCategory}:{backBookmarkTagValue}) that should not be present");
+                    $"Second level greenhouse has a choice to go to the previous page ({previousChoice} #{bookmarkTagCategory}:{backBookmarkTagValue}) that should not be present");
             }
 
             if (nextChoice != null)
             {
                 logger.ZLogWarning(
-                    $"First level has a choice to go to the next page ({nextChoice} #{bookmarkTagCategory}:{forwardBookmarkTagValue}) that should not be present");
+                    $"Second level greenhouse has a choice to go to the next page ({nextChoice} #{bookmarkTagCategory}:{forwardBookmarkTagValue}) that should not be present");
             }
 
             // emit the signal
             _secondLevelGrimoirePageDescriptorsSubject!.OnNext(
                 new IStoryGrimoire.SecondLevelGreenhouseGrimoirePageDescriptor(
                     indexChoice, greenhouseButtonPlantDescriptors));
+        }
+
+        private readonly (string, ISettingsSigils.GlyphType)[] _glyphsByName =
+        {
+            ("Air", ISettingsSigils.GlyphType.Air),
+            ("Water", ISettingsSigils.GlyphType.Water),
+            ("Earth", ISettingsSigils.GlyphType.Earth),
+            ("Fire", ISettingsSigils.GlyphType.Fire),
+            ("Aether", ISettingsSigils.GlyphType.Aether)
+        };
+
+        private void EmitSecondLevelSigilsGrimoirePage()
+        {
+            // parse the sigils choices
+            var story = GetStory();
+            var sigilsGroupDescriptors = story
+                .currentChoices
+                .Select(ParseChoice)
+                .WhereNotNull();
+
+            // navigation
+            GetNavigationChoices(story, out var indexChoice, out var secondLevelChoice, out var previousChoice,
+                out var nextChoice);
+            if (indexChoice == null)
+            {
+                logger.ZLogError($"Second level sigils has not a choice to get back to the first level!");
+                return;
+            }
+
+            if (secondLevelChoice != null)
+                logger.ZLogWarning(
+                    $"Second level sigils has a choice to get back to the second level ({secondLevelChoice} #{bookmarkTagCategory}:{secondLevelBookmarkTagValue}) that should not be present");
+
+            if (previousChoice != null)
+                logger.ZLogWarning(
+                    $"Second level sigils has a choice to go to the previous page ({previousChoice} #{bookmarkTagCategory}:{backBookmarkTagValue}) that should not be present");
+
+            if (nextChoice != null)
+                logger.ZLogWarning(
+                    $"Second level sigils has a choice to go to the next page ({nextChoice} #{bookmarkTagCategory}:{forwardBookmarkTagValue}) that should not be present");
+
+            // emit the signal
+            _secondLevelSigilsGrimoirePageDescriptorsSubject!.OnNext(
+                new IStoryGrimoire.SecondLevelSigilsGrimoirePageDescriptor(
+                    indexChoice, sigilsGroupDescriptors));
+
+            return;
+
+            IStoryGrimoire.SigilsGroupDescriptor? ParseChoice(Choice choice)
+            {
+                // try to find the first glyph at the beginning of the choice text
+                var text = choice.text.Trim();
+                foreach (var (name1, glyph1) in _glyphsByName)
+                {
+                    if (!text.StartsWith(name1)) continue;
+                    // try to find the second glyph as the rest of the choice text
+                    text = text[name1.Length..];
+                    foreach (var (name2, glyph2) in _glyphsByName)
+                    {
+                        if (text != name2) continue;
+                        // found! it's enabled iff there's an #enabled:true; if it's false or missing, it's not enabled
+                        var enabled =
+                            MakeTags(choice.tags).FirstOrDefault(t => t.category == enabledTagCategory)?.value ==
+                            "true";
+                        // return the result
+                        return new IStoryGrimoire.SigilsGroupDescriptor(glyph1, glyph2, enabled);
+                    }
+                }
+
+                // the search brought nothing
+                return null;
+            }
         }
 
         #endregion

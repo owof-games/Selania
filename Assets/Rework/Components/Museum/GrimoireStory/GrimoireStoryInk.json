@@ -119,11 +119,32 @@
             "*": ".^.c-0",
             "flg": 4
           },
+          "ev",
+          "str",
+          "^Sigils",
+          "/str",
+          "/ev",
+          {
+            "*": ".^.c-1",
+            "flg": 4
+          },
           {
             "c-0": [
               "\n",
               {
                 "->": "grimoire_greenhouse"
+              },
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-1": [
+              "\n",
+              {
+                "->": "grimoire_sigils"
               },
               {
                 "->": ".^.^.g-0"
@@ -1067,6 +1088,1044 @@
             ]
           }
         ],
+        {
+          "#f": 1
+        }
+      ],
+      "grimoire_sigils": [
+        [
+          "^@grimoireSigils",
+          "\n",
+          "ev",
+          "str",
+          "ev",
+          {
+            "VAR?": "Fire"
+          },
+          "out",
+          "/ev",
+          "ev",
+          {
+            "VAR?": "Air"
+          },
+          "out",
+          "/ev",
+          "^ ",
+          "#",
+          "^enabled:",
+          "ev",
+          {
+            "VAR?": "glyph_fireAirSigils"
+          },
+          {
+            "f()": "hasSigilStartingWith"
+          },
+          "out",
+          "/ev",
+          "/#",
+          "/str",
+          1,
+          6,
+          "rnd",
+          3,
+          "<=",
+          "/ev",
+          {
+            "*": ".^.c-0",
+            "flg": 5
+          },
+          "ev",
+          "str",
+          "ev",
+          {
+            "VAR?": "Fire"
+          },
+          "out",
+          "/ev",
+          "ev",
+          {
+            "VAR?": "Water"
+          },
+          "out",
+          "/ev",
+          "^ ",
+          "#",
+          "^enabled:",
+          "ev",
+          {
+            "VAR?": "glyph_fireWaterSigils"
+          },
+          {
+            "f()": "hasSigilStartingWith"
+          },
+          "out",
+          "/ev",
+          "/#",
+          "/str",
+          1,
+          6,
+          "rnd",
+          3,
+          "<=",
+          "/ev",
+          {
+            "*": ".^.c-1",
+            "flg": 5
+          },
+          "ev",
+          "str",
+          "ev",
+          {
+            "VAR?": "Fire"
+          },
+          "out",
+          "/ev",
+          "ev",
+          {
+            "VAR?": "Earth"
+          },
+          "out",
+          "/ev",
+          "^ ",
+          "#",
+          "^enabled:",
+          "ev",
+          {
+            "VAR?": "glyph_fireEarthSigils"
+          },
+          {
+            "f()": "hasSigilStartingWith"
+          },
+          "out",
+          "/ev",
+          "/#",
+          "/str",
+          1,
+          6,
+          "rnd",
+          3,
+          "<=",
+          "/ev",
+          {
+            "*": ".^.c-2",
+            "flg": 5
+          },
+          "ev",
+          "str",
+          "ev",
+          {
+            "VAR?": "Fire"
+          },
+          "out",
+          "/ev",
+          "ev",
+          {
+            "VAR?": "Aether"
+          },
+          "out",
+          "/ev",
+          "^ ",
+          "#",
+          "^enabled:",
+          "ev",
+          {
+            "VAR?": "glyph_fireAetherSigils"
+          },
+          {
+            "f()": "hasSigilStartingWith"
+          },
+          "out",
+          "/ev",
+          "/#",
+          "/str",
+          1,
+          6,
+          "rnd",
+          3,
+          "<=",
+          "/ev",
+          {
+            "*": ".^.c-3",
+            "flg": 5
+          },
+          "ev",
+          "str",
+          "ev",
+          {
+            "VAR?": "Air"
+          },
+          "out",
+          "/ev",
+          "ev",
+          {
+            "VAR?": "Fire"
+          },
+          "out",
+          "/ev",
+          "^ ",
+          "#",
+          "^enabled:",
+          "ev",
+          {
+            "VAR?": "glyph_airFireSigils"
+          },
+          {
+            "f()": "hasSigilStartingWith"
+          },
+          "out",
+          "/ev",
+          "/#",
+          "/str",
+          1,
+          6,
+          "rnd",
+          3,
+          "<=",
+          "/ev",
+          {
+            "*": ".^.c-4",
+            "flg": 5
+          },
+          "ev",
+          "str",
+          "ev",
+          {
+            "VAR?": "Air"
+          },
+          "out",
+          "/ev",
+          "ev",
+          {
+            "VAR?": "Water"
+          },
+          "out",
+          "/ev",
+          "^ ",
+          "#",
+          "^enabled:",
+          "ev",
+          {
+            "VAR?": "glyph_airWaterSigils"
+          },
+          {
+            "f()": "hasSigilStartingWith"
+          },
+          "out",
+          "/ev",
+          "/#",
+          "/str",
+          1,
+          6,
+          "rnd",
+          3,
+          "<=",
+          "/ev",
+          {
+            "*": ".^.c-5",
+            "flg": 5
+          },
+          "ev",
+          "str",
+          "ev",
+          {
+            "VAR?": "Air"
+          },
+          "out",
+          "/ev",
+          "ev",
+          {
+            "VAR?": "Earth"
+          },
+          "out",
+          "/ev",
+          "^ ",
+          "#",
+          "^enabled:",
+          "ev",
+          {
+            "VAR?": "glyph_airEarthSigils"
+          },
+          {
+            "f()": "hasSigilStartingWith"
+          },
+          "out",
+          "/ev",
+          "/#",
+          "/str",
+          1,
+          6,
+          "rnd",
+          3,
+          "<=",
+          "/ev",
+          {
+            "*": ".^.c-6",
+            "flg": 5
+          },
+          "ev",
+          "str",
+          "ev",
+          {
+            "VAR?": "Air"
+          },
+          "out",
+          "/ev",
+          "ev",
+          {
+            "VAR?": "Aether"
+          },
+          "out",
+          "/ev",
+          "^ ",
+          "#",
+          "^enabled:",
+          "ev",
+          {
+            "VAR?": "glyph_airAetherSigils"
+          },
+          {
+            "f()": "hasSigilStartingWith"
+          },
+          "out",
+          "/ev",
+          "/#",
+          "/str",
+          1,
+          6,
+          "rnd",
+          3,
+          "<=",
+          "/ev",
+          {
+            "*": ".^.c-7",
+            "flg": 5
+          },
+          "ev",
+          "str",
+          "ev",
+          {
+            "VAR?": "Water"
+          },
+          "out",
+          "/ev",
+          "ev",
+          {
+            "VAR?": "Fire"
+          },
+          "out",
+          "/ev",
+          "^ ",
+          "#",
+          "^enabled:",
+          "ev",
+          {
+            "VAR?": "glyph_WaterFireSigils"
+          },
+          {
+            "f()": "hasSigilStartingWith"
+          },
+          "out",
+          "/ev",
+          "/#",
+          "/str",
+          1,
+          6,
+          "rnd",
+          3,
+          "<=",
+          "/ev",
+          {
+            "*": ".^.c-8",
+            "flg": 5
+          },
+          "ev",
+          "str",
+          "ev",
+          {
+            "VAR?": "Water"
+          },
+          "out",
+          "/ev",
+          "ev",
+          {
+            "VAR?": "Air"
+          },
+          "out",
+          "/ev",
+          "^ ",
+          "#",
+          "^enabled:",
+          "ev",
+          {
+            "VAR?": "glyph_WaterAirSigils"
+          },
+          {
+            "f()": "hasSigilStartingWith"
+          },
+          "out",
+          "/ev",
+          "/#",
+          "/str",
+          1,
+          6,
+          "rnd",
+          3,
+          "<=",
+          "/ev",
+          {
+            "*": ".^.c-9",
+            "flg": 5
+          },
+          "ev",
+          "str",
+          "ev",
+          {
+            "VAR?": "Water"
+          },
+          "out",
+          "/ev",
+          "ev",
+          {
+            "VAR?": "Earth"
+          },
+          "out",
+          "/ev",
+          "^ ",
+          "#",
+          "^enabled:",
+          "ev",
+          {
+            "VAR?": "glyph_WaterEarthSigils"
+          },
+          {
+            "f()": "hasSigilStartingWith"
+          },
+          "out",
+          "/ev",
+          "/#",
+          "/str",
+          "/ev",
+          {
+            "*": ".^.c-10",
+            "flg": 4
+          },
+          "ev",
+          "str",
+          "ev",
+          {
+            "VAR?": "Water"
+          },
+          "out",
+          "/ev",
+          "ev",
+          {
+            "VAR?": "Aether"
+          },
+          "out",
+          "/ev",
+          "^ ",
+          "#",
+          "^enabled:",
+          "ev",
+          {
+            "VAR?": "glyph_WaterAetherSigils"
+          },
+          {
+            "f()": "hasSigilStartingWith"
+          },
+          "out",
+          "/ev",
+          "/#",
+          "/str",
+          1,
+          6,
+          "rnd",
+          3,
+          "<=",
+          "/ev",
+          {
+            "*": ".^.c-11",
+            "flg": 5
+          },
+          "ev",
+          "str",
+          "ev",
+          {
+            "VAR?": "Earth"
+          },
+          "out",
+          "/ev",
+          "ev",
+          {
+            "VAR?": "Fire"
+          },
+          "out",
+          "/ev",
+          "^ ",
+          "#",
+          "^enabled:",
+          "ev",
+          {
+            "VAR?": "glyph_earthFireSigils"
+          },
+          {
+            "f()": "hasSigilStartingWith"
+          },
+          "out",
+          "/ev",
+          "/#",
+          "/str",
+          1,
+          6,
+          "rnd",
+          3,
+          "<=",
+          "/ev",
+          {
+            "*": ".^.c-12",
+            "flg": 5
+          },
+          "ev",
+          "str",
+          "ev",
+          {
+            "VAR?": "Earth"
+          },
+          "out",
+          "/ev",
+          "ev",
+          {
+            "VAR?": "Air"
+          },
+          "out",
+          "/ev",
+          "^ ",
+          "#",
+          "^enabled:",
+          "ev",
+          {
+            "VAR?": "glyph_earthAirSigils"
+          },
+          {
+            "f()": "hasSigilStartingWith"
+          },
+          "out",
+          "/ev",
+          "/#",
+          "/str",
+          1,
+          6,
+          "rnd",
+          3,
+          "<=",
+          "/ev",
+          {
+            "*": ".^.c-13",
+            "flg": 5
+          },
+          "ev",
+          "str",
+          "ev",
+          {
+            "VAR?": "Earth"
+          },
+          "out",
+          "/ev",
+          "ev",
+          {
+            "VAR?": "Water"
+          },
+          "out",
+          "/ev",
+          "^ ",
+          "#",
+          "^enabled:",
+          "ev",
+          {
+            "VAR?": "glyph_earthWaterSigils"
+          },
+          {
+            "f()": "hasSigilStartingWith"
+          },
+          "out",
+          "/ev",
+          "/#",
+          "/str",
+          1,
+          6,
+          "rnd",
+          3,
+          "<=",
+          "/ev",
+          {
+            "*": ".^.c-14",
+            "flg": 5
+          },
+          "ev",
+          "str",
+          "ev",
+          {
+            "VAR?": "Earth"
+          },
+          "out",
+          "/ev",
+          "ev",
+          {
+            "VAR?": "Aether"
+          },
+          "out",
+          "/ev",
+          "^ ",
+          "#",
+          "^enabled:",
+          "ev",
+          {
+            "VAR?": "glyph_earthAetherSigils"
+          },
+          {
+            "f()": "hasSigilStartingWith"
+          },
+          "out",
+          "/ev",
+          "/#",
+          "/str",
+          1,
+          6,
+          "rnd",
+          3,
+          "<=",
+          "/ev",
+          {
+            "*": ".^.c-15",
+            "flg": 5
+          },
+          "ev",
+          "str",
+          "ev",
+          {
+            "VAR?": "Aether"
+          },
+          "out",
+          "/ev",
+          "ev",
+          {
+            "VAR?": "Fire"
+          },
+          "out",
+          "/ev",
+          "^ ",
+          "#",
+          "^enabled:",
+          "ev",
+          {
+            "VAR?": "glyph_aetherFireSigils"
+          },
+          {
+            "f()": "hasSigilStartingWith"
+          },
+          "out",
+          "/ev",
+          "/#",
+          "/str",
+          1,
+          6,
+          "rnd",
+          3,
+          "<=",
+          "/ev",
+          {
+            "*": ".^.c-16",
+            "flg": 5
+          },
+          "ev",
+          "str",
+          "ev",
+          {
+            "VAR?": "Aether"
+          },
+          "out",
+          "/ev",
+          "ev",
+          {
+            "VAR?": "Air"
+          },
+          "out",
+          "/ev",
+          "^ ",
+          "#",
+          "^enabled:",
+          "ev",
+          {
+            "VAR?": "glyph_aetherAirSigils"
+          },
+          {
+            "f()": "hasSigilStartingWith"
+          },
+          "out",
+          "/ev",
+          "/#",
+          "/str",
+          1,
+          6,
+          "rnd",
+          3,
+          "<=",
+          "/ev",
+          {
+            "*": ".^.c-17",
+            "flg": 5
+          },
+          "ev",
+          "str",
+          "ev",
+          {
+            "VAR?": "Aether"
+          },
+          "out",
+          "/ev",
+          "ev",
+          {
+            "VAR?": "Water"
+          },
+          "out",
+          "/ev",
+          "^ ",
+          "#",
+          "^enabled:",
+          "ev",
+          {
+            "VAR?": "glyph_aetherWaterSigils"
+          },
+          {
+            "f()": "hasSigilStartingWith"
+          },
+          "out",
+          "/ev",
+          "/#",
+          "/str",
+          1,
+          6,
+          "rnd",
+          3,
+          "<=",
+          "/ev",
+          {
+            "*": ".^.c-18",
+            "flg": 5
+          },
+          "ev",
+          "str",
+          "ev",
+          {
+            "VAR?": "Aether"
+          },
+          "out",
+          "/ev",
+          "ev",
+          {
+            "VAR?": "Earth"
+          },
+          "out",
+          "/ev",
+          "^ ",
+          "#",
+          "^enabled:",
+          "ev",
+          {
+            "VAR?": "glyph_aetherEarthSigils"
+          },
+          {
+            "f()": "hasSigilStartingWith"
+          },
+          "out",
+          "/ev",
+          "/#",
+          "/str",
+          1,
+          6,
+          "rnd",
+          3,
+          "<=",
+          "/ev",
+          {
+            "*": ".^.c-19",
+            "flg": 5
+          },
+          "ev",
+          "str",
+          "^Index ",
+          "#",
+          "^bookmark:index",
+          "/#",
+          "/str",
+          "/ev",
+          {
+            "*": ".^.c-20",
+            "flg": 4
+          },
+          {
+            "c-0": [
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-1": [
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-2": [
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-3": [
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-4": [
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-5": [
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-6": [
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-7": [
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-8": [
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-9": [
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-10": [
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-11": [
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-12": [
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-13": [
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-14": [
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-15": [
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-16": [
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-17": [
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-18": [
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-19": [
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-20": [
+              "\n",
+              {
+                "->": "grimoire"
+              },
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "g-0": [
+              {
+                "->": ".^.^.^"
+              },
+              {
+                "#f": 5
+              }
+            ]
+          }
+        ],
+        {
+          "#f": 1
+        }
+      ],
+      "hasSigilStartingWith": [
+        {
+          "temp=": "sigils"
+        },
+        "ev",
+        {
+          "VAR?": "sigils"
+        },
+        {
+          "VAR?": "glyph_actualActiveSigil"
+        },
+        "?",
+        "/ev",
+        [
+          {
+            "->": ".^.b",
+            "c": true
+          },
+          {
+            "b": [
+              "\n",
+              "ev",
+              "str",
+              "^true",
+              "/str",
+              "/ev",
+              "~ret",
+              {
+                "->": ".^.^.^.8"
+              },
+              null
+            ]
+          }
+        ],
+        [
+          {
+            "->": ".^.b"
+          },
+          {
+            "b": [
+              "\n",
+              "ev",
+              "str",
+              "^false",
+              "/str",
+              "/ev",
+              "~ret",
+              {
+                "->": ".^.^.^.8"
+              },
+              null
+            ]
+          }
+        ],
+        "nop",
+        "\n",
         {
           "#f": 1
         }

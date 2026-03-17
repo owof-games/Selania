@@ -18,6 +18,8 @@ namespace Selania.Rework.Components.Grimoire
             StoryGrimoire.firstLevelGrimoirePageDescriptors.Subscribe(OnFirstLevelGrimoirePageDescriptors).AddTo(this);
             StoryGrimoire.secondLevelGreenhouseGrimoirePageDescriptors
                 .Subscribe(OnSecondLevelGreenhouseGrimoirePageDescriptors).AddTo(this);
+            StoryGrimoire.secondLevelSigilsGrimoirePageDescriptors.Subscribe(OnSecondLevelSigilsGrimoirePageDescriptors)
+                .AddTo(this);
             // grimoire events
             grimoireBackground.IndexChoiceObservable.Subscribe(PickChoice).AddTo(this);
             grimoireBackground.firstLevelButtonClick.Subscribe(PickChoice).AddTo(this);
@@ -73,6 +75,25 @@ namespace Selania.Rework.Components.Grimoire
                         ? GrimoireBackground.GreenhouseButtonStatus.Shown
                         : GrimoireBackground.GreenhouseButtonStatus.Exhausted);
             }
+
+            // set up navigation
+            SetUpNavigation(descriptor);
+        }
+
+        private void OnSecondLevelSigilsGrimoirePageDescriptors(
+            IStoryGrimoire.SecondLevelSigilsGrimoirePageDescriptor descriptor)
+        {
+            // show the grimoire (second level sigils)
+            grimoireBackground.ShowGrimoire();
+            grimoireBackground.SwitchToPage(GrimoireBackground.PageType.SecondLevelSigils);
+
+            // set up the grimoire to show the info described in descriptor
+            grimoireBackground.DisableAllSigilsButtons();
+            foreach (var buttonDescriptor in descriptor.sigilsGroupDescriptors)
+                grimoireBackground.SetSecondLevelSigilButtonStatus(buttonDescriptor.glyph1, buttonDescriptor.glyph2,
+                    buttonDescriptor.enabled
+                        ? GrimoireBackground.SecondLevelSigilButtonStatus.Enabled
+                        : GrimoireBackground.SecondLevelSigilButtonStatus.Shown);
 
             // set up navigation
             SetUpNavigation(descriptor);

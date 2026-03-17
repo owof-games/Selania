@@ -19,6 +19,11 @@ namespace Selania.Rework.Interfaces
         Observable<SecondLevelGreenhouseGrimoirePageDescriptor> secondLevelGreenhouseGrimoirePageDescriptors { get; }
 
         /// <summary>
+        ///     An observable that produces a value whenever a second level sigils grimoire page should be displayed.
+        /// </summary>
+        Observable<SecondLevelSigilsGrimoirePageDescriptor> secondLevelSigilsGrimoirePageDescriptors { get; }
+
+        /// <summary>
         ///     Switches to the flow of the grimoire.
         /// </summary>
         /// <seealso cref="SwitchFromGrimoire" />
@@ -101,10 +106,29 @@ namespace Selania.Rework.Interfaces
         /// <summary>
         /// Descriptor of the second level page of the greenhouse.
         /// </summary>
+        /// <param name="indexText">Text of the "index" choice.</param>
         /// <param name="greenhouseButtonPlantDescriptors">Descriptor for all the buttons.</param>
         record SecondLevelGreenhouseGrimoirePageDescriptor(
             string? indexText,
             IEnumerable<GreenhouseButtonPlantDescriptor> greenhouseButtonPlantDescriptors
         ) : BaseNavigationDescriptor(indexText, null, null, null);
+
+        /// <summary>
+        ///     Descriptor for a sigils group (sigil button in second level).
+        /// </summary>
+        /// <param name="glyph1">First level glyph of the sigil group.</param>
+        /// <param name="glyph2">Second level glyph of the sigil group.</param>
+        /// <param name="enabled">Whether the currently enabled sigil is in this group.</param>
+        record SigilsGroupDescriptor(ISettingsSigils.GlyphType glyph1, ISettingsSigils.GlyphType glyph2, bool enabled);
+
+        /// <summary>
+        ///     Descriptor of the second level page of the sigils.
+        /// </summary>
+        /// <param name="indexText">Text of the "index" choice.</param>
+        /// <param name="sigilsGroupDescriptors">Descriptors for all the buttons.</param>
+        record SecondLevelSigilsGrimoirePageDescriptor(
+            string? indexText,
+            IEnumerable<SigilsGroupDescriptor> sigilsGroupDescriptors)
+            : BaseNavigationDescriptor(indexText, null, null, null);
     }
 }
