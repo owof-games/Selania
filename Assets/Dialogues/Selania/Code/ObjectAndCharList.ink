@@ -22,7 +22,7 @@
     firstDumpOBJ, secondDumpOBJ, thirdDumpOBJ, fourthDumpOBJ, fifthDumpOBJ,
     temporaryGrimoire, 
     mapDump, mapKitchen, mapGreenhouse, mapLibrary, mapNest, 
-    docDump, docKitchen, docGreenhouse, docNest, docLibrary
+    docDump, docKitchen, docGreenhouse, docNest, docLibrary, Clothespin
     
     LIST listAnimations = 
     Birds,

@@ -160,6 +160,11 @@ VAR horizontalS_libraryFourthTier = 3
             ~ horizontalS_libraryDocs = false
 
 }
+//La prima volta che compare una lettera arriva la molletta, così poi non ci si pensa più
+{
+    - contentsForest hasnt Clothespin:
+        ~ move_entity(Clothespin, Forest)
+}
 
 
 {debug_horizontalS: dopo l'operazione, horizontalS_currentDoc è {horizontalS_currentDoc}. horizontalS_dump contiene {horizontalS_dump}, horizontalS_kitchen contiene {horizontalS_kitchen}, horizontalS_greenhouse contiene {horizontalS_greenhouse}, horizontalS_nest contiene {horizontalS_nest}, horizontalS_library contiene {horizontalS_library}. horizontalS_currentDoc contiene{horizontalS_currentDoc}.}
