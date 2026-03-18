@@ -44,6 +44,9 @@
     INCLUDE CommonPNGElements\ChoicesManagement\ChoicesManager.ink
     INCLUDE CommonPNGElements\ChoicesManagement\Glyph&SigilsFunctions.ink
 
+    INCLUDE HorizontalStory\Storylets.ink
+    INCLUDE HorizontalStory\VarAndFunctions.ink
+
 
 
                     /* ---------------------------------
