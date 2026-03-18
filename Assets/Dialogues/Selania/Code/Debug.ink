@@ -8,6 +8,7 @@
     VAR debug_kitchen = false
     VAR debug_nest = false
     VAR debug_frog = false
+    VAR debug_horizontalS = true
     
     //per testare i luoghi non subito aperti con calma
     VAR debug_testLibrary = false

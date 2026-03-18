@@ -20,6 +20,7 @@
     -> opening_places ->       
     -> dump_graphic_changer ->
     -> moon_state_management ->
+    -> horizontalS_documentDispatcher ->
     -> talk_to_me ->
 
     // -> notification_system ->
