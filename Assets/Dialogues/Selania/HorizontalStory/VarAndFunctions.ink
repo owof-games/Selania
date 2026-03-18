@@ -1,16 +1,16 @@
 //Variabili e liste
 LIST horizontalS_allDocs = docOne, docTwo, docThree, docFour, docFive, docSix, docSeven, docEight, docNine, docTen, docEleven, docTwelve, docThirteen, docFourteen, docFifteen, docSixteen, docSeventeen, docEighteen, docNineteen, docTwenty, docTwentyOne, docTwentyTwo, docTwentyThree, docTwentyFour, docTwentyFive
 
-//Alt: 1, 9, 16, 19, 21
-VAR horizontalS_dump = (docEight, docTen, docEighteen, docNineteen, docTwentyOne)
+//Alt: 1, 9, 16, 19, 21 (uguale)
+VAR horizontalS_dump = (docOne, docNine, docSixteen,  docNineteen, docTwentyOne)
 //Alt: 2, 15, 20, 22, 23, 25 (uguale)
 VAR horizontalS_kitchen = (docTwo, docFifteen, docTwenty, docTwentyTwo, docTwentyThree, docTwentyFive)
 //Alt: 4, 6, 10, 13, 18, uno in più
-VAR horizontalS_greenhouse = (docFour, docSix, docThirteen, docFourteen)
+VAR horizontalS_greenhouse = (docFour, docSix, docTen, docThirteen,  docEighteen)
 //Alt: 3, 7, 12, 17, 24
-VAR horizontalS_nest = (docSeven, docNine, docTwelve, docSeventeen, docTwentyFour)
+VAR horizontalS_nest = (docThree, docSeven, docTwelve, docSeventeen, docTwentyFour)
 //alt: 5, 8, 11, 14, uno in meno
-VAR horizontalS_library = (docOne, docThree, docFive, docEleven, docSixteen)
+VAR horizontalS_library = (docFive, docEight, docEleven, docFourteen)
 
 //Questo è il documento che leggerò sulla panchina
 VAR horizontalS_currentDoc = ()
@@ -28,7 +28,8 @@ VAR horizontalS_allChefs = ()
 VAR horizontalS_greenhouseDocs = false
 VAR horizontalS_greenhouseFirstTier = 12
 VAR horizontalS_greenhouseSecondTier = 9
-VAR horizontalS_greenhouseThirdTier = 4
+VAR horizontalS_greenhouseThirdTier = 6
+VAR horizontalS_greenhouseFourthTier = 3
 
 //Variabili per le notifiche del nido
 VAR horizontalS_nestDocs = false
@@ -42,9 +43,8 @@ VAR horizontalS_nestFifth = 60
 //Variabili per le notifiche della biblioteca
 VAR horizontalS_libraryDocs = false
 VAR horizontalS_libraryFirstTier = 14
-VAR horizontalS_librarySecondTier = 11
-VAR horizontalS_libraryThirdTier = 6
-VAR horizontalS_libraryFourthTier = 3
+VAR horizontalS_librarySecondTier = 10
+VAR horizontalS_libraryThirdTier = 5
 
 
 === horizontalS_documentDispatcher ===
@@ -63,6 +63,9 @@ VAR horizontalS_libraryFourthTier = 3
             
         - LIST_COUNT(greenhouse_backupCultivable) == horizontalS_greenhouseThirdTier:
                 ~ horizontalS_greenhouseDocs = true
+
+        - LIST_COUNT(greenhouse_backupCultivable) == horizontalS_greenhouseFourthTier:
+                ~ horizontalS_greenhouseDocs = true  
 
         - greenhouse_backupCultivable == () && horizontalS_greenhouse != ():
             ~ horizontalS_greenhouseDocs = true
@@ -97,9 +100,6 @@ VAR horizontalS_libraryFourthTier = 3
         - LIST_COUNT(library_unreadStories) == horizontalS_libraryThirdTier:
             ~ horizontalS_libraryDocs = true
 
-        - LIST_COUNT(library_unreadStories) == horizontalS_libraryFourthTier:
-            ~ horizontalS_libraryDocs = true
-
         - library_unreadStories == () && horizontalS_library != ():
             ~ horizontalS_libraryDocs = true
     }
@@ -131,6 +131,12 @@ VAR horizontalS_libraryFourthTier = 3
             ~ horizontalS_DumpActivators = listDumpCharActivators
             ~ move_entity(docDump, Forest)
 
+            //La prima volta che compare una lettera arriva la molletta, così poi non ci si pensa più
+            {
+                - contentsForest hasnt Clothespin:
+                    ~ move_entity(Clothespin, Forest)
+            }
+
         - kitchen_allChefs != horizontalS_allChefs:
             //Prima di tutto genero il documento
             ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_kitchen)
@@ -140,6 +146,11 @@ VAR horizontalS_libraryFourthTier = 3
             //Aggiorno la lista per far sì che siano uguali.
             ~ horizontalS_allChefs = kitchen_allChefs
             ~ move_entity(docKitchen, Forest)
+            //La prima volta che compare una lettera arriva la molletta, così poi non ci si pensa più
+            {
+                - contentsForest hasnt Clothespin:
+                    ~ move_entity(Clothespin, Forest)
+            }
 
 
         - horizontalS_greenhouseDocs == true:
@@ -148,6 +159,11 @@ VAR horizontalS_libraryFourthTier = 3
             ~ horizontalS_discoveredDocs += horizontalS_currentDoc
             ~ move_entity(docGreenhouse, Forest)
             ~ horizontalS_greenhouseDocs = false
+            //La prima volta che compare una lettera arriva la molletta, così poi non ci si pensa più
+            {
+                - contentsForest hasnt Clothespin:
+                    ~ move_entity(Clothespin, Forest)
+            }
 
 
         - horizontalS_nestDocs == true:
@@ -156,6 +172,11 @@ VAR horizontalS_libraryFourthTier = 3
             ~ horizontalS_discoveredDocs += horizontalS_currentDoc
             ~ horizontalS_nestDocs = false
             ~ move_entity(docNest, Forest)
+            //La prima volta che compare una lettera arriva la molletta, così poi non ci si pensa più
+            {
+                - contentsForest hasnt Clothespin:
+                    ~ move_entity(Clothespin, Forest)
+            }
 
         - horizontalS_libraryDocs == true:
             ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_library)
@@ -163,14 +184,13 @@ VAR horizontalS_libraryFourthTier = 3
             ~ horizontalS_discoveredDocs += horizontalS_currentDoc
             ~ move_entity(docLibrary, Forest)
             ~ horizontalS_libraryDocs = false
+            //La prima volta che compare una lettera arriva la molletta, così poi non ci si pensa più
+            {
+                - contentsForest hasnt Clothespin:
+                    ~ move_entity(Clothespin, Forest)
+            }
 
 }
-//La prima volta che compare una lettera arriva la molletta, così poi non ci si pensa più
-{
-    - contentsForest hasnt Clothespin:
-        ~ move_entity(Clothespin, Forest)
-}
-
 
 {debug_horizontalS: dopo l'operazione, horizontalS_currentDoc è {horizontalS_currentDoc}. horizontalS_dump contiene {horizontalS_dump}, horizontalS_kitchen contiene {horizontalS_kitchen}, horizontalS_greenhouse contiene {horizontalS_greenhouse}, horizontalS_nest contiene {horizontalS_nest}, horizontalS_library contiene {horizontalS_library}. horizontalS_currentDoc contiene{horizontalS_currentDoc}.}
 
