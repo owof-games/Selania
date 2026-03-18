@@ -432,7 +432,7 @@
     VAR glyph_textEarthAirWaterTwo = "Il ramo si piega,"
     VAR glyph_textEarthAirWaterThree = "il bruco ingrassa."
 
-    VAR glyph_textEarthAirFireOne = "Azioni sparse, copri fermi."
+    VAR glyph_textEarthAirFireOne = "Azioni sparse, corpi fermi."
     VAR glyph_textEarthAirFireTwo = "Polloni fragili,"
     VAR glyph_textEarthAirFireThree = "il daino cresce."
 
