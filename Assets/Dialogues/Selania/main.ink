@@ -49,8 +49,12 @@
 <- doggo_no_notes
 
 // //Elementi della foresta
-// <- bench
 <- temp_grimoire
+<- docDump_document
+<- docKitchen_document
+<- docGreenhouse_document
+<- docNest_document
+<- docLibrary_document
 
 //Elementi della discarica
 <- the_witch

@@ -21,7 +21,8 @@
     CookingWithFirstCharOBJ, CookingWithSecondCharOBJ, FirstCharCookingAloneOBJ, BatHouseFront, BatHouseRetro, EatingWithSecondCharOBJ, EatingWithFirstCharOBJ, CookingWithThirdCharOBJ, EatingWithThirdCharOBJ, ThirdCharCookingAloneOBJ,
     firstDumpOBJ, secondDumpOBJ, thirdDumpOBJ, fourthDumpOBJ, fifthDumpOBJ,
     temporaryGrimoire, 
-    mapDump, mapKitchen, mapGreenhouse, mapLibrary, mapNest
+    mapDump, mapKitchen, mapGreenhouse, mapLibrary, mapNest, 
+    docDump, docKitchen, docGreenhouse, docNest, docLibrary
     
     LIST listAnimations = 
     Birds,
