@@ -37,7 +37,7 @@ VAR horizontalS_nestFifth = 60
 //Variabili per le notifiche della biblioteca
 VAR horizontalS_libraryDocs = false
 VAR horizontalS_libraryFirstTier = 14
-VAR horizontalS_librarySecondtier = 11
+VAR horizontalS_librarySecondTier = 11
 VAR horizontalS_libraryThirdTier = 6
 VAR horizontalS_libraryFourthTier = 3
 
@@ -86,7 +86,7 @@ VAR horizontalS_libraryFourthTier = 3
         - LIST_COUNT(library_unreadStories) == horizontalS_libraryFirstTier:
             ~ horizontalS_libraryDocs = true
 
-        - LIST_COUNT(library_unreadStories) == horizontalS_librarySecondtier:
+        - LIST_COUNT(library_unreadStories) == horizontalS_librarySecondTier:
             ~ horizontalS_libraryDocs = true
 
         - LIST_COUNT(library_unreadStories) == horizontalS_libraryThirdTier:
