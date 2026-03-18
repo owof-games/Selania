@@ -30,6 +30,9 @@
 //Variabile per tracciare con chi stiamo cucinando
     VAR kitchen_actualChef = ()
     VAR kitchen_actualChefPronouns = ()
+
+//Tracciamento della quantità di cucinate che ho fatto, utilizzato per la storia orizzontale
+    VAR kitchen_allChefs = ()    
     
 //Reazioni possibili al quarto ingrediente
     //Nota: notReaction = non dato

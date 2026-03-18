@@ -1306,6 +1306,7 @@
         -> cooking_animations_off ->
             ~ move_entity(SecondCharacter, Pond)
             ~ kitchen_secondCharCookingTogetherInvite = false
+            ~ kitchen_allChefs += SecondCharacter
         -> update_glyphs(SecondCharacter) ->
         -> check_kitchen_recap ->
         -> second_char_closing_storylet ->

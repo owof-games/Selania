@@ -352,6 +352,7 @@
         ~ backpack_findedGifts += universalIngredient
         ~ frog_currentMission = ()
         ~ frog_aboutGiftRequest = ()
+        ~ kitchen_allChefs += PG
         //Metto in pausa le missioni speciali
         ~ frog_pauseSpecialMission = frog_pauseSpecialMissionMax
         //Rimetto a posto i vari assets
