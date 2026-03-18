@@ -21,12 +21,25 @@ VAR horizontalS_allChefs = ()
 
 //Variabili per le notifiche della serra
 VAR horizontalS_greenhouseDocs = false
+VAR horizontalS_greenhouseFirstTier = 12
+VAR horizontalS_greenhouseSecondTier = 9
+VAR horizontalS_greenhouseThirdTier = 4
 
 //Variabili per le notifiche del nido
 VAR horizontalS_nestDocs = false
+VAR horizontalS_nestFirstTier = 12
+VAR horizontalS_nestSecondTier = 24
+VAR horizontalS_nestThirdTier = 36
+VAR horizontalS_nestFourthTier = 48
+VAR horizontalS_nestFifth = 60
+
 
 //Variabili per le notifiche della biblioteca
 VAR horizontalS_libraryDocs = false
+VAR horizontalS_libraryFirstTier = 14
+VAR horizontalS_librarySecondtier = 11
+VAR horizontalS_libraryThirdTier = 6
+VAR horizontalS_libraryFourthTier = 3
 
 
 === horizontalS_documentDispatcher ===
@@ -37,13 +50,13 @@ VAR horizontalS_libraryDocs = false
 
     {
         //Lavoro preliminare per le notifiche della SERRA. Ricorda: se proprio dovessero saltare da una validazione all'altra (es: saltare la 12), l'obiettivo è il pacing, e se non leggono è perché non era interessante per loro.
-        - LIST_COUNT(greenhouse_backupCultivable) == 12:
+        - LIST_COUNT(greenhouse_backupCultivable) == horizontalS_greenhouseFirstTier:
                 ~ horizontalS_greenhouseDocs = true
 
-        - LIST_COUNT(greenhouse_backupCultivable) == 9:
+        - LIST_COUNT(greenhouse_backupCultivable) == horizontalS_greenhouseSecondTier:
                 ~ horizontalS_greenhouseDocs = true
             
-        - LIST_COUNT(greenhouse_backupCultivable) == 4:
+        - LIST_COUNT(greenhouse_backupCultivable) == horizontalS_greenhouseThirdTier:
                 ~ horizontalS_greenhouseDocs = true
 
         - greenhouse_backupCultivable == () && horizontalS_greenhouse != ():
@@ -53,33 +66,33 @@ VAR horizontalS_libraryDocs = false
 
     {
         //Lavoro preliminare per le notifiche dei SIGILLI.   
-        - LIST_COUNT(glyph_discoveredSigils) == 12:
+        - LIST_COUNT(glyph_discoveredSigils) == horizontalS_nestFirstTier:
             ~ horizontalS_nestDocs = true
 
-        - LIST_COUNT(glyph_discoveredSigils) == 24:
+        - LIST_COUNT(glyph_discoveredSigils) == horizontalS_nestSecondTier:
             ~ horizontalS_nestDocs = true
 
-        - LIST_COUNT(glyph_discoveredSigils) == 36:
+        - LIST_COUNT(glyph_discoveredSigils) == horizontalS_nestThirdTier:
             ~ horizontalS_nestDocs = true
 
-        - LIST_COUNT(glyph_discoveredSigils) == 48:
+        - LIST_COUNT(glyph_discoveredSigils) == horizontalS_nestFourthTier:
             ~ horizontalS_nestDocs = true    
 
-        - LIST_COUNT(glyph_discoveredSigils) == 60 && horizontalS_nest != ():
+        - LIST_COUNT(glyph_discoveredSigils) == horizontalS_nestFifth && horizontalS_nest != ():
             ~ horizontalS_nestDocs = true
     }     
 
     {
-        - LIST_COUNT(library_unreadStories) == 14:
+        - LIST_COUNT(library_unreadStories) == horizontalS_libraryFirstTier:
             ~ horizontalS_libraryDocs = true
 
-        - LIST_COUNT(library_unreadStories) == 11:
+        - LIST_COUNT(library_unreadStories) == horizontalS_librarySecondtier:
             ~ horizontalS_libraryDocs = true
 
-        - LIST_COUNT(library_unreadStories) == 6:
+        - LIST_COUNT(library_unreadStories) == horizontalS_libraryThirdTier:
             ~ horizontalS_libraryDocs = true
 
-        - LIST_COUNT(library_unreadStories) == 3:
+        - LIST_COUNT(library_unreadStories) == horizontalS_libraryFourthTier:
             ~ horizontalS_libraryDocs = true
 
         - library_unreadStories == () && horizontalS_library != ():
@@ -102,7 +115,7 @@ VAR horizontalS_libraryDocs = false
 
 //E poi faccio il lavoro di codice
 {
-    //Per horizontalS_dump: quando attivo un nuovo asset del dump, mi salvo la PNG che l'ha generato così che ci sia una sola istanza per PNG. Posso sfruttare questa cosa tenendo conto della grandezza della lista.
+ 
         - listDumpCharActivators != horizontalS_DumpActivators:
             //Prima di tutto genero il documento
             ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_dump)
@@ -112,35 +125,7 @@ VAR horizontalS_libraryDocs = false
             //Aggiorno la lista per far sì che siano uguali.
             ~ horizontalS_DumpActivators = listDumpCharActivators
             ~ move_entity(docDump, Forest)
-        
-        // - LIST_COUNT(listDumpCharActivators) == 2 && LIST_COUNT(horizontalS_dump) == 4:
-        //     ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_dump)
-        //     ~ horizontalS_dump -= horizontalS_currentDoc
-        //     ~ horizontalS_discoveredDocs += horizontalS_currentDoc
-        //     ~ move_entity(docDump, Forest)
 
-        // - LIST_COUNT(listDumpCharActivators) == 3 && LIST_COUNT(horizontalS_dump) == 3:
-        //     ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_dump)
-        //     ~ horizontalS_dump -= horizontalS_currentDoc
-        //     ~ horizontalS_discoveredDocs += horizontalS_currentDoc
-        //     ~ move_entity(docDump, Forest)
-
-        // - LIST_COUNT(listDumpCharActivators) == 4 && LIST_COUNT(horizontalS_dump) == 2:
-        //     ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_dump)
-        //     ~ horizontalS_dump -= horizontalS_currentDoc
-        //     ~ horizontalS_discoveredDocs += horizontalS_currentDoc
-        //     ~ move_entity(docDump, Forest)
-
-        //     //Metto maggiore uguale come confronto perché potrebbero crearsi delle situazioni in cui non leggo una ceppa fino a quando non ho sbloccato tutto, e a quel punto i documenti mi devono comunque comparire
-        // - LIST_COUNT(listDumpCharActivators) == 5 && LIST_COUNT(horizontalS_dump) >= 1:
-        //     ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_dump)
-        //     ~ horizontalS_dump -= horizontalS_currentDoc
-        //     ~ horizontalS_discoveredDocs += horizontalS_currentDoc
-        //     ~ move_entity(docDump, Forest)
-
-
-
-    //Per horizontalS_kitchen: ho i nodi, che possono creare problemi, per cui mi conviene banalmente tracciare in una variabile la quantità di cucinate che ho fatto. Usiamo quindi kitchen_allChefs
         - kitchen_allChefs != horizontalS_allChefs:
             //Prima di tutto genero il documento
             ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_kitchen)
@@ -150,41 +135,7 @@ VAR horizontalS_libraryDocs = false
             //Aggiorno la lista per far sì che siano uguali.
             ~ horizontalS_allChefs = kitchen_allChefs
             ~ move_entity(docKitchen, Forest)
-        
-        // - LIST_COUNT(kitchen_allChefs) == 2 && LIST_COUNT(horizontalS_kitchen) == 5:
-        //     ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_kitchen)
-        //     ~ horizontalS_kitchen -= horizontalS_currentDoc
-        //     ~ horizontalS_discoveredDocs += horizontalS_currentDoc
-        //     ~ move_entity(docKitchen, Forest)
 
-        // - LIST_COUNT(kitchen_allChefs) == 3 && LIST_COUNT(horizontalS_kitchen) == 4:
-        //     ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_kitchen)
-        //     ~ horizontalS_kitchen -= horizontalS_currentDoc
-        //     ~ horizontalS_discoveredDocs += horizontalS_currentDoc
-        //     ~ move_entity(docKitchen, Forest)
-
-        // - LIST_COUNT(kitchen_allChefs) == 4 && LIST_COUNT(horizontalS_kitchen) == 3:
-        //     ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_kitchen)
-        //     ~ horizontalS_kitchen -= horizontalS_currentDoc
-        //     ~ horizontalS_discoveredDocs += horizontalS_currentDoc
-        //     ~ move_entity(docKitchen, Forest)   
-
-        // - LIST_COUNT(kitchen_allChefs) == 5 && LIST_COUNT(horizontalS_kitchen) == 2:
-        //     ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_kitchen)
-        //     ~ horizontalS_kitchen -= horizontalS_currentDoc
-        //     ~ horizontalS_discoveredDocs += horizontalS_currentDoc
-        //     ~ move_entity(docKitchen, Forest)
-
-        // //Metto maggiore uguale come confronto perché potrebbero crearsi delle situazioni in cui non leggo una ceppa fino a quando non ho sbloccato tutto, e a quel punto i documenti mi devono comunque comparire
-        // - LIST_COUNT(kitchen_allChefs) == 6 && horizontalS_kitchen != ():
-        //     ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_kitchen)
-        //     ~ horizontalS_kitchen -= horizontalS_currentDoc
-        //     ~ horizontalS_discoveredDocs += horizontalS_currentDoc
-        //     ~ move_entity(docKitchen, Forest)    
-
-
-    //Per horizontalS_greenhouse invece uso greenhouse_backupCultivable. I coltivabili totali sono 14, le lettere 4, per cui ne metterei una ogni tre a parte a metà? Ricordiamoci che il backup va a ritroso. Anche per questo la logica non è più un ==, ma < di.
-        
 
         - horizontalS_greenhouseDocs == true:
             ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_greenhouse)
@@ -193,35 +144,6 @@ VAR horizontalS_libraryDocs = false
             ~ move_entity(docGreenhouse, Forest)
             ~ horizontalS_greenhouseDocs = false
 
-        // - LIST_COUNT(greenhouse_backupCultivable) == 12 && LIST_COUNT(horizontalS_greenhouse) == 4:
-        //     ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_greenhouse)
-        //     ~ horizontalS_greenhouse -= horizontalS_currentDoc
-        //     ~ horizontalS_discoveredDocs += horizontalS_currentDoc
-        //     ~ move_entity(docGreenhouse, Forest)
-
-        // - LIST_COUNT(greenhouse_backupCultivable) == 7 && LIST_COUNT(horizontalS_greenhouse) == 3:
-        //     ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_greenhouse)
-        //     ~ horizontalS_greenhouse -= horizontalS_currentDoc
-        //     ~ horizontalS_discoveredDocs += horizontalS_currentDoc
-        //     ~ move_entity(docGreenhouse, Forest) 
-        
-        // - LIST_COUNT(greenhouse_backupCultivable) == 4 && LIST_COUNT(horizontalS_greenhouse) == 2:
-        //     ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_greenhouse)
-        //     ~ horizontalS_greenhouse -= horizontalS_currentDoc
-        //     ~ horizontalS_discoveredDocs += horizontalS_currentDoc
-        //     ~ move_entity(docGreenhouse, Forest)
-
-        // //Metto maggiore uguale come confronto perché potrebbero crearsi delle situazioni in cui non leggo una ceppa fino a quando non ho sbloccato tutto, e a quel punto i documenti mi devono comunque comparire.
-        // - greenhouse_backupCultivable == () && horizontalS_greenhouse != ():
-        //     ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_greenhouse)
-        //     ~ horizontalS_greenhouse -= horizontalS_currentDoc
-        //     ~ horizontalS_discoveredDocs += horizontalS_currentDoc
-        //     ~ move_entity(docGreenhouse, Forest)  
-
-
-
-
-    //Per horizontalS_nest invece uso glyph_discoveredSigils. I coltivabili totali sono 60, le lettere cinque, per cui ne metterei una ogni 12.
 
         - horizontalS_nestDocs == true:
             ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_nest)
@@ -230,36 +152,6 @@ VAR horizontalS_libraryDocs = false
             ~ horizontalS_nestDocs = false
             ~ move_entity(docNest, Forest)
 
-        // - LIST_COUNT(glyph_discoveredSigils) == 30 && LIST_COUNT(horizontalS_nest) == 4:
-        //     ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_nest)
-        //     ~ horizontalS_nest -= horizontalS_currentDoc
-        //     ~ horizontalS_discoveredDocs += horizontalS_currentDoc
-        //     ~ move_entity(docNest, Forest)
-
-        // - LIST_COUNT(glyph_discoveredSigils) == 45 && LIST_COUNT(horizontalS_nest) == 3:
-        //     ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_nest)
-        //     ~ horizontalS_nest -= horizontalS_currentDoc
-        //     ~ horizontalS_discoveredDocs += horizontalS_currentDoc
-        //     ~ move_entity(docNest, Forest)
-
-        // - LIST_COUNT(glyph_discoveredSigils) == 60 && LIST_COUNT(horizontalS_nest) == 2:
-        //     ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_nest)
-        //     ~ horizontalS_nest -= horizontalS_currentDoc
-        //     ~ horizontalS_discoveredDocs += horizontalS_currentDoc
-        //     ~ move_entity(docNest, Forest)
-
-        // //Metto maggiore uguale come confronto perché potrebbero crearsi delle situazioni in cui non leggo una ceppa fino a quando non ho sbloccato tutto, e a quel punto i documenti mi devono comunque comparire.
-        // - LIST_COUNT(glyph_discoveredSigils) == 60 && horizontalS_nest != ():
-        //     ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_nest)
-        //     ~ horizontalS_nest -= horizontalS_currentDoc
-        //     ~ horizontalS_discoveredDocs += horizontalS_currentDoc
-        //     ~ move_entity(docNest, Forest)
-
-
-
-
-    //Per horizontalS_library invece uso library_unreadStories. I racconti sono 18, le lettere cinque, per pacing le metto in ordine progressivo.
-
         - horizontalS_libraryDocs == true:
             ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_library)
             ~ horizontalS_library -= horizontalS_currentDoc
@@ -267,30 +159,6 @@ VAR horizontalS_libraryDocs = false
             ~ move_entity(docLibrary, Forest)
             ~ horizontalS_libraryDocs = false
 
-        // - LIST_COUNT(library_unreadStories) == 11 && LIST_COUNT(horizontalS_library) == 4:
-        //     ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_library)
-        //     ~ horizontalS_library -= horizontalS_currentDoc
-        //     ~ horizontalS_discoveredDocs += horizontalS_currentDoc
-        //      ~ move_entity(docLibrary, Forest)
-
-        // - LIST_COUNT(library_unreadStories) == 6 && LIST_COUNT(horizontalS_library) == 3:
-        //     ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_library)
-        //     ~ horizontalS_library -= horizontalS_currentDoc
-        //     ~ horizontalS_discoveredDocs += horizontalS_currentDoc
-        //      ~ move_entity(docLibrary, Forest)
-
-        // - LIST_COUNT(library_unreadStories) == 3 && LIST_COUNT(horizontalS_library) == 2:
-        //     ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_library)
-        //     ~ horizontalS_library -= horizontalS_currentDoc
-        //     ~ horizontalS_discoveredDocs += horizontalS_currentDoc
-        //     ~ move_entity(docLibrary, Forest)
-
-        // //Metto maggiore uguale come confronto perché potrebbero crearsi delle situazioni in cui non leggo una ceppa fino a quando non ho sbloccato tutto, e a quel punto i documenti mi devono comunque comparire.
-        // - library_unreadStories == () && horizontalS_library != ():
-        //     ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_library)
-        //     ~ horizontalS_library -= horizontalS_currentDoc
-        //     ~ horizontalS_discoveredDocs += horizontalS_currentDoc
-        //     ~ move_entity(docLibrary, Forest) 
 }
 
 
