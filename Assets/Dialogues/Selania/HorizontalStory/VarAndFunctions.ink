@@ -1,10 +1,15 @@
 //Variabili e liste
 LIST horizontalS_allDocs = docOne, docTwo, docThree, docFour, docFive, docSix, docSeven, docEight, docNine, docTen, docEleven, docTwelve, docThirteen, docFourteen, docFifteen, docSixteen, docSeventeen, docEighteen, docNineteen, docTwenty, docTwentyOne, docTwentyTwo, docTwentyThree, docTwentyFour, docTwentyFive
 
+//Alt: 1, 9, 16, 19, 21
 VAR horizontalS_dump = (docEight, docTen, docEighteen, docNineteen, docTwentyOne)
+//Alt: 2, 15, 20, 22, 23, 25 (uguale)
 VAR horizontalS_kitchen = (docTwo, docFifteen, docTwenty, docTwentyTwo, docTwentyThree, docTwentyFive)
+//Alt: 4, 6, 10, 13, 18, uno in più
 VAR horizontalS_greenhouse = (docFour, docSix, docThirteen, docFourteen)
+//Alt: 3, 7, 12, 17, 24
 VAR horizontalS_nest = (docSeven, docNine, docTwelve, docSeventeen, docTwentyFour)
+//alt: 5, 8, 11, 14, uno in meno
 VAR horizontalS_library = (docOne, docThree, docFive, docEleven, docSixteen)
 
 //Questo è il documento che leggerò sulla panchina
