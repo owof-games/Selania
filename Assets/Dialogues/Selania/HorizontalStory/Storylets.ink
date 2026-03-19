@@ -274,6 +274,7 @@
     Ieri ho passato la notte con G.M.
     Non facevo sesso da così tanto tempo che ho temuto stessi per avere un infarto.
     Quando si è addormentato accanto a me, il glifo che sembra una croce ha brillato per ore.
+    S.C.
 
     ~ horizontalSEndingStorylet()
     -> main
@@ -293,19 +294,43 @@
     La prima: la serra fa crescere piante magiche che nascono da suggestioni. Ho provato ad usare metafore del luogo che ci circonda, parlando di api o nubi o radici. Sto ancora cercando di calibrare la tecnica, ma sono riuscita ad evocare tre volte di fila un Olobino (me lo ricordo dal libro di nonna!), per cui direi che la strada è quella giusta.
     La seconda: che donare queste piante genera l'inchiostro che ha trovato G.M..
     Non tutte. 
-    In accordo con O.U.J. ho fatto un paio di prove, e quando le ho regalato del <i>Non ti scordar di te</i>, ha lacrimato due gocce di inchiostro.
-    Abbiamo deciso di comune accordo di nasconderle nella cucina e non dire niente alle altre: il modo in cui hanno cambiato l'essenza di quel povero pappagallino più volte ha lasciato entrambe preoccupate.
+    In accordo con O.U.J. ho fatto un paio di prove, e quando le ho regalato del <i>Non ti scordar di te</i>, ha lacrimato una goccia di inchiostro.
+    Abbiamo deciso di comune accordo di nasconderla nella cucina e non dire niente alle altre: il modo in cui hanno cambiato l'essenza di quel povero pappagallino più volte ha lasciato entrambe preoccupate.
     E a proposito delle altre: W.R. mi ha chiesto di portarle un po' di questo eccesso di Olobino. Immagino voglia tirarci fuori dell'inchiostro normale per i suoi libri.
+    K.
 
     ~ horizontalSEndingStorylet()
     -> main
 
 
 === docFourteen_storylet ===
-Esperienza con l'Olobino e visione di W.R. (W.R)
+//C.
 
-
-
+    Qualcosa non va.
+    Qualcosa di grosso e no, me lo ripeto anche ora, non è colpa del trip con l'Olobino.
+    Cavolo, non me ne facevo uno così dai tempi della vecchia congrega.
+    Chissà se Marzio fa ancora quell'idromele potenziato?
+    Ma non è quello il punto.
+    Il mese scorso K. mi ha donato dei funghi in eccesso. Ho deciso di farli essicare, e l'idea era di darli a O.U.J. per un risotto.
+    Ma come sempre mi succede quando sono distratta sgranocchio qualsiasi cosa, e invece della punta della biro (le ho quasi finite!) ho masticato un pezzo di fungo.
+    E dalle dita mi sono uscite due, DUE gocce di inchiostro.
+    E a quel punto è iniziato il trip.
+    Ho pensato a tantissime cose del passato.
+    A come le persone si incazzano con me perché mi distraggo o perché mi fisso sulle cose. Al sentirmi sempre sempre sempre sbagliata.
+    Ho iniziato a giocare con l'inchiostro, il mio inchiostro, e mi sentivo mutare.
+    Trip e inchiostro hanno quasi iniziato a comunicare.
+    E a un certo punto mi sono resa conto che il problema non sono io.
+    Sono ciò che si aspettano gli altri da me.
+    E a quel punto mi sono sentita rinascere, cambiare.
+    Ora mi sento ancora diversa, sicura.
+    Come se la mia storia fosse stata riletta in modo diverso.
+    I problemi ora sono due.
+    Il primo: abbiamo fatto provare ogni volta questa roba a quel povero pappagallino?
+    Il secondo: è cambiato anche il mio corpo. Sono più solida, non so se abbia senso. Occupo spazio, non ho paura di essere vista, di dare fastidio.
+    E questa è la cosa che non va.
+    Perché abbiamo trovato qualcosa che è troppo troppo troppo grosso per gestirlo così, tra di noi, con i nostri enormi entusiasmi.
+    C'è un'ultima cosa: W.R. mi sta stretto.
+    Credo che il nome giusto per me ora sia C.
 
     ~ horizontalSEndingStorylet()
     -> main
