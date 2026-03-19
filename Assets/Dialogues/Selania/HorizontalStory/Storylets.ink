@@ -200,10 +200,22 @@
 
 
 === docTen_storylet ===
-Conoscenza di Franco (K.)
-
-
-
+//K.
+    Se mesi fa ero basita da un pino che si riscalda, ora quell'evento mi sembra una sciocchezza rispetto a quello che sto per scrivere.
+    Probabilmente sono diventata la migliore amica di una rana.
+    Si fa chiamare Franco, e dico "si fa" perché è l'acronimo di un nome infinito.
+    L'ho incontrato mentre girellavo fuori dalla serra, cercando di capire perché non riesco a farci crescere nulla di commestibile, e lui mi ha visto, e mi ha chiesto se fosse passata la carpa della sera, che doveva mandare una lettera a sua madre.
+    Ho fatto mente locale su tutte le piante che possono creare allucinazioni e che forse ho toccato durante la mattinata, e nel mentre lui si è messo a raccontarmi del suo prossimo matrimonio con Tullio e Giulio. Due uomini! Due rospi. Rane.
+    Abbiamo finito per parlare per ore, e non sono sicura di aver capito sempre tutto, prende ogni parola molto alla lettera (a volte mi ricorda W.R.). Ma c'è qualcosa di saggio nel suo modo di ragionare.
+    E mi ha detto che la serra non è per coltivare quello che deve nutrire la pancia, ma ciò che deve nutrire il cuore. O la pelle, perché mi ha detto che per loro le emozioni sono nella pelle. Che l'ho trovata poetica come cosa: è l'organo che ci mette in contatto con l'esterno, no?
+    Vorrei fare delle prove, anche perché mi sento un po' frustrata.
+    S.C. ha la sua teoria.
+    W.R. e G.M. stanno lavorando su non ho capito che inchiostro.
+    E O.U.J.
+    Oh. Povera.
+    Senza rendercene conto l'abbiamo relegata a cuoca della compagnia.
+    Vado a farle un po' di compagnia.
+    K.
 
     ~ horizontalSEndingStorylet()
     -> main
