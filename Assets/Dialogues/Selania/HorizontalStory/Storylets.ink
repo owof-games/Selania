@@ -280,10 +280,22 @@
 
 
 === docThirteen_storylet ===
-Esperimenti alla serra su suggerimento di Franco (K.)
-
-
-
+//K.
+    Franco ed io siamo ufficialmente migliori amici e compagni di scorrazzamenti.
+    Anche perché O.U.J. è sempre presa dalla cucina e dal farti domande.
+    W.R. crede di poter generare una magia enorme dalle emozioni dei racconti della biblioteca.
+    Mentre G.M. e S.C. sono spesso assieme.
+    G.M. guarda S.C. in un modo che non mi piace, e non lo dico contro G.M.: quel ragazzino sembra innamorato. 
+    Lui ha sedici anni, lei ventisei.
+    Una tale differenza di età, con lui così giovane, offre a S.C. molto potere e molte responsabilità, e non credo se ne renda conto.
+    Anche il dislivello tra me e Franco è notevole. Perché se anche una rana può vivere sette anni, questa bestiola ha la saggezza caotica di un centenario.
+    E grazie a lui ho scoperto due cose.
+    La prima: la serra fa crescere piante magiche che nascono da suggestioni. Ho provato ad usare metafore del luogo che ci circonda, parlando di api o nubi o radici. Sto ancora cercando di calibrare la tecnica, ma sono riuscita ad evocare tre volte di fila un Olobino (me lo ricordo dal libro di nonna!), per cui direi che la strada è quella giusta.
+    La seconda: che donare queste piante genera l'inchiostro che ha trovato G.M..
+    Non tutte. 
+    In accordo con O.U.J. ho fatto un paio di prove, e quando le ho regalato del <i>Non ti scordar di te</i>, ha lacrimato due gocce di inchiostro.
+    Abbiamo deciso di comune accordo di nasconderle nella cucina e non dire niente alle altre: il modo in cui hanno cambiato l'essenza di quel povero pappagallino più volte ha lasciato entrambe preoccupate.
+    E a proposito delle altre: W.R. mi ha chiesto di portarle un po' di questo eccesso di Olobino. Immagino voglia tirarci fuori dell'inchiostro normale per i suoi libri.
 
     ~ horizontalSEndingStorylet()
     -> main
