@@ -404,21 +404,40 @@
     Con due glifi c'è questa immagine, questo sigillo che è molto solido, ma che non interagisce col mondo. Sembra una lente, perché se lo passo sulle cose, le vedo in modi diversi, ma non le cambia.
     Con tre glifi invece il sigillo è instabile, ma cambia il modo in cui vengono percepite le cose che dico o faccio!
     Ho provato a dire la stessa parola davanti ai glifi con sigilli diversi attivi, e reagiscono secondo il sigillo, e non secondo il valore della parola.
+    Pensavo si trattasse di magia simpatetica, di una relazione tra il simbolo e il tutto, ma invece è una relazione più diretta.
     E qui c'è la soluzione ai nostri problemi: possiamo far capire alle persone che la nostra missione, la nostra posizione è quella giusta. Non più solo con le parole, ma con la magia.
     E visto che questa cosa è magnifica e potente, ho deciso di utilizzarne uno, che ho chiamato Altare, per parlare con G.M., per convincerlo a non andarsene.
     Perché sarà felice poi di essere rimasto.
     Noi cinque, faremo la storia.
     S.C.
-    
+
     ~ horizontalSEndingStorylet()
     -> main
 
 
 === docEighteen_storylet ===
-Lettera d'amore a W.R. (K.)
-
-
-
+//K.
+    Oggi Franco mi ha portato alla fontana.
+    Non ci andavo da quando siamo arrivate qui, perché vedere il mondo fuori, quel tipo di mondo fuori con fabbriche e casermoni, mi mette tristezza.
+    Mi ha offerto una talea e mi ha ascoltato mentre scavavo, fertilizzavo, coprivo.
+    Abbiamo cacciato S.C. dalla camera comune. Si è costruita una tenda sulla sua fottuta spiaggia.
+    Quello che ha fatto a G.M., merda. Provo rabbia e tristezza.
+    S.C. è una mia amica. Quante cose abbiamo fatto assieme? Ho sempre pensato che il mondo poteva pure bruciare e sarei stata comunque felice con lei, O.U.J. e Y. vicine.
+    E G.M.? Povero G.M.
+    Combattiamo da una vita contro quel modo di fare, quella coercizione, quell'esibizione di potere.
+    E lei.
+    Io non so nemmeno cosa scrivere.
+    Questo posto ci ha dato così tanto, ci ha insegnato così tanto quando siamo state capaci di ascoltarlo, di aspettare.
+    No, non è nemmeno questo il punto.
+    Il punto è che se diventiamo quello che vogliamo combattere, allora abbiamo perso.
+    Perso.
+    Ci deve essere un modo per salvare questa situazione, aiutare S.C.
+    Franco dice che questa talea crescerà molto lentamente, e che come in ogni relazione, sarà un riflesso delle nostre scelte, delle nostre azioni.
+    Spero che sarà florida e alta e orgogliosa, e non secca e rigida e prepotente.
+    Che offra spazio a uccelli e scoiattoli e insetti e bambini, e non che sia una cosina chiusa e rigida come una pianta da appartamento.
+    Mi manca l'aria.
+    Non sono mai stata così forte come strega, non sono mai stata così debole come essere umano.
+    K.
 
     ~ horizontalSEndingStorylet()
     -> main
