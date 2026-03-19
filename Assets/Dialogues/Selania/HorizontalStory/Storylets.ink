@@ -62,10 +62,25 @@
 
 
 === docFour_storylet ===
-Arrivo al luogo, primi assestamenti, le persone a cui tiene sono tutte lì (K.)
+//K.
 
-
-
+    Ora: nonna ha giurato fino alla fine che fosse una mia invenzione.
+    Eppure ricordo di aver sfogliato per anni quando ero piccola una sua guida: "Fitomanzia ed erboristeria esoterica".
+    Probabilmente non voleva che mamma ci allontanasse di nuovo.
+    Una delle mie piante preferite era il Ranuncolo di sabbia: un fiore che sboccia solo quando in casa va tutto bene.
+    Credo che l'idea sia che la sabbia è così instabile che serve molta forza per tenerlo assieme.
+    E credo che in questa casa, in questo posto se ne potrebbe fare un intero giardino.
+    Sono circondata dalle persone che amo, non mi sono mai sentita così tanto al sicuro.
+    Anche quando ci litigo.
+    Ad esempio ieri O.U.J. mi ha sgridata per come tratto G.M., come se fosse un bambino.
+    Io le ho spiegato che il punto non è che è un bambino, ma un ragazzo: a quindici anni una ragazza è obbligata ad essere già una donna matura, alla stessa età un ragazzo è ancora un bambino.
+    E quando G.M. sbuffa perché è una giornata di pioggia e non sa cosa fare, inizia a dire che abbiamo sbagliato, che dovremmo essere in città a rispondere agli attacchi, alle bombe, invece di cercare questa fantomatica riscrittura.
+    Ho detto a O.U.J. che mi sembrano capricci, ma O.U.J. mi ha risposto che siamo molto simili, e mi ha ricordato dei miei litigi infiniti col Movimento per la Rinascita Maschile (vomito).
+    Dice che sia io che lui vogliamo il cambiamento, e anche se i mezzi sono diversi, la passione è la stessa.
+    Forse a ventisei anni anche io devo imparare ancora delle cose. Molte cose.
+    Non fosse per O.U.J., sarei persa.
+    K.
+    PS: S.C. ha chiesto a tutte di non lasciare in giro nomi e cognomi su diari e appunti perché "non si sa mai". Ho l'impressione che ci sia qualcosa che non ci sta dicendo, ma ancora non riesco a capire cosa.
 
     ~ horizontalSEndingStorylet()
     -> main
