@@ -101,6 +101,7 @@
     Merda.
     Ho usato la V. sia per Viola che per Verde.
     Devo ricominciare.
+    E devo anche trovare un modo per tenere quella maledetta capra lontano dalle mie pagine!
 
     W.R., tesoro: ricordati di firmare i tuoi appunti o non si capisce mai di chi è cosa.
     O.U.J.
