@@ -337,10 +337,30 @@
 
 
 === docFifteen_storylet ===
-Cucina con le cose della serra (profilo di K.) (OUJ)
+//OUJ
 
-
-
+    Diciassette agosto '73
+    Caro diario.
+    Oggi ho passato una giornata a cucinare con K., e abbiamo utilizzato alcune delle piante che sta facendo crescere nella serra.
+    Fortunatamente non è successo più quello che è accaduto quando mi ha donato quel bel Non ti scordar di te. Tengo ancora il risultato nell'armadietto.
+    Ma anche K. ora ha il suo, nascosto nell'innaffiatoio.
+    Oggi le ho chiesto di aiutarmi a provare una mia teoria.
+    L'idea è che questo posto generi magia grazie alle relazioni tra i suoi elementi, e che S.C. e G.M. stiano sbagliando la prospettiva delle loro scoperte, confondendo il segno per il significato.
+    Prendi il modo in cui riempio la dispensa: facendo cose per la cucina.
+    La pulisco, mantengo in funzione il forno, mi occupo di dare i giusti avanzi a rane e pesci, e il barattolo vuoto del riso è di nuovo pieno, ho della frutta fresca su un tavolo prima vuoto, e nessuna mosca viene a disturbare l'impasto che sta lievitando.
+    Questa cosa è magica. 
+    E dopo il dono che K. mi ha fatto, e dopo la storia del pappagallo, mi sono detta: forse "basta" curare una relazione per generare cambiamento.
+    Così oggi ho fatto delle domande mirate a K. mentre preparavamo uno stufato di funghi (non gli Olobini, che C. ci sta ancora parlando degli effetti dopo un mese).
+    Ed è stata una bella occasione anche per capire come sta.
+    Da una parte è felice delle scoperte che sta facendo in serra, e del rapporto con Franco.
+    Dall'altra si è resa conto anche lei che c'è qualcosa tra S.C. e G.M., ed è preoccupata.
+    Io da vecchiarella non mi sono posta i suoi dubbi, ma più ci penso più mi fa rabbia che S.C. non si renda conto del modo diverso in cui lei, donna e G.M., un ragazzetto, possono vivere questa cosa.
+    E dopo un anno senza incazzamenti, credo che stasera tirerò fuori la cosa.
+    La conversazione ha rassicurato K., e dopo aver finito di cucinare mi ha detto che preferisce le conversazioni dirette e difficili alle cose dette in modo educato ma non chiaro.
+    Poi si è messa le mani sulla bocca e ha detto che era vero, ma che non voleva dire quella cosa.
+    A quanto pare la vecchia O.U.J. ha ancora qualche potere magico.
+    Mi rimetto ai fornelli.
+    O.U.J.
 
     ~ horizontalSEndingStorylet()
     -> main
