@@ -119,7 +119,8 @@
     Il pino della stazione (credo sia un pino) ha i suoi aghetti, e la sua forma è quella di una pianta esposta a un forte vento costante.
     I rovi della fontana sono ricchi di bacche che ancora non ho avuto il coraggio di assaggiare, ma che sono estremamente apprezzati dalle api, e lo prendo come un buon segno.
     Ma.
-    Il pino ospita degli uccelli tropicali.
+    Il pino ospita dei pappagalli. 
+    Che sono uccelli tropicali.
     In un'area innevata.
     Con l'aiuto di G.M. ieri ho aspettato che se ne andassero per studiarne il nido, e l'albero è caldo. 
     Caldo. 
@@ -221,10 +222,33 @@
     -> main
 
 === docEleven_storylet ===
-Raccolta di racconti e confini (stranezza dello spazio della zona) (W.R)
-
-
-
+//W.R.
+    Ho sedici cose che mi corrono in testa assieme e se non le metto giù ora URLO.
+    G.M., quel genio di G.M., è venuto da me verso Natale dicendomi che uno dei pappagallini gli ha dato dell'inchiostro.
+    L'ha raccolto in una boccetta, era una goccia soltanto.
+    Abbiamo passato più di due mesi a chiederci che farne.
+    Anche perché il pappagallino non ne ha più dato.
+    E poi l'abbiamo usato per scrivere una parola.
+    Pappagallo.
+    E la parola si è trasformata in un simbolo, una foglia.
+    Sotto ai nostri occhi.
+    Abbiamo chiamato subito le altre, spiegando quello che era accaduto.
+    Tre giorni di battibecco.
+    Succede sempre così: prendi cinque streghe anarchiche, mettile in una stanza, e discuteranno giorni per decidere che pizza mangiare. E poi si faranno comunque una pasta. Mi manca la pasta. O.U.J. fa del riso buonissimo, ne abbiamo a quintali (continuo a dimenticarmi di chiederle da dove venga tutta questa roba), ma darei tutto per delle tagliatelle.
+    Potrei trasformare il riso in tagliatella, con quei simboli?
+    Merda.
+    Perché il punto è quello.
+    Quindi: tre giorni di battibecco, mi annoio, torno al libro, e mi rendo conto che l'inchiostro è ancora fresco e, gommoso?
+    Inizio a pungolarlo. Ha le sue resistenze, alcune direzioni gli vanno, altre no, un po' come un racconto.
+    Pian piano però emerge una forma piuttosto semplice: un triangolo.
+    E non metto assieme i pezzi fino a quando il giorno dopo non arriva G.M. con gli occhi fuori dalle orbite: uno dei pappagallini è diventato un gufo.
+    G.M. giura che sè sempre il suo pappagallino, perché si fida di lui come prima.
+    E c'è qualcosa, forse nel tono delle piume che mi fa dire che è vero.
+    Dio, devo farla breve.
+    Prendo il libro con l'inchiostro, torno sotto l'albero.
+    Provo a spingere il triangolo e con pazienza riprende la forma della foglia.
+    Il gufo torna ad essere un pappagallino.
+    La mia testa esplode.
 
     ~ horizontalSEndingStorylet()
     -> main
