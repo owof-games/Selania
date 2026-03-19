@@ -575,8 +575,21 @@
     -> main
 
 === docTwentyFour_storylet ===
-Sigilli, nessun riferimento a quanto accaduto (S.C.)
-
+//S.C.
+    Sono arrivata a una quadra.
+    Esistono venti sigilli stabili.
+    Li chiamo "stabili" perché non mutano, non influenzano il mondo, ma sono lenti con cui interpretarlo, capirlo.
+    E sono composti sempre da due glifi irripetibili.
+    Ogni sigillo stabile ha tre varianti "instabili", derivate dall'aggiunta di un altro glifo.
+    E sono instabili perché da una parte durano giusto una manciata di utilizzi, ma per questo interagiscono col mondo.
+    E la cosa che non avevo capito davvero fino in fondo, è che questa instabilità apre a delle ambiguità.
+    Sono sicura che Altare farebbe davvero bene a O.U.J. per esempio, perché è una persona già solida, mentre G.M. è così piccolo, giovane, deve ancora scoprire tanto su di sé.
+    So che è giusto, so che è sensato.
+    Sto anche scrivendo tutto quello che ho scoperto in un manuale, con tutte le suggestioni che ho pensato, precise ma non troppo, evocative, perché questi sigilli parlano una lingua che non è nostra.
+    E con questo materiale finalmente posso tornare anche dalle altre, spiegare, far capire che tutta questa fatica, queste tensioni alla fine sono servite a qualcosa.
+    Sono sicura che K. troverà un uso per la sua serra, e Y. per creare libri trasformativi e G.M., credo che col giusto sigillo G.M. possa scoprire cosa l'ha ferito con Altare.
+    Ora corro da loro, e così facciamo una grande festa.
+    S.C.
 
 
 
