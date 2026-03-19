@@ -421,7 +421,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492131852280177239}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -940,6 +940,7 @@ MonoBehaviour:
   firstLevelAnimator: {fileID: 8932518895277769207}
   secondLevelAnimatorGreenhouse: {fileID: 5523194603672354619}
   secondLevelAnimatorSigils: {fileID: 7577056092533575052}
+  thirdLevelAnimatorSigils: {fileID: 3582885329405426736}
   topLevelButtons:
   - {fileID: 5102442109911782390}
   - {fileID: 7233235647308480099}

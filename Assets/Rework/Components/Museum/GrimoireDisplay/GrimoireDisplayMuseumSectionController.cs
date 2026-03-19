@@ -164,6 +164,11 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
             grimoireBackground.SwitchToPage(GrimoireBackground.PageType.SecondLevelSigils);
         }
 
+        public void SwitchToThirdLevelSigilsPage()
+        {
+            grimoireBackground.SwitchToPage(GrimoireBackground.PageType.ThirdLevelSigils);
+        }
+
         public void RandomizeGreenhouseButtons()
         {
             var buttonNames = new[]

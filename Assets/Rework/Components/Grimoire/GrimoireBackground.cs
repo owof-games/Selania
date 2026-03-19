@@ -53,7 +53,12 @@ namespace Selania.Rework.Components.Grimoire
             /// <summary>
             ///     Second level page (sigils).
             /// </summary>
-            SecondLevelSigils
+            SecondLevelSigils,
+
+            /// <summary>
+            ///     Third level page (sigils).
+            /// </summary>
+            ThirdLevelSigils
         }
 
         /// <summary>
@@ -92,6 +97,9 @@ namespace Selania.Rework.Components.Grimoire
 
         [Tooltip("The animator controlling the second level page for the sigils")] [SerializeField]
         private Animator secondLevelAnimatorSigils = null!;
+
+        [Tooltip("The animator controlling the third level page for the sigils")] [SerializeField]
+        private Animator thirdLevelAnimatorSigils = null!;
 
         [Tooltip("List of top level buttons")] [SerializeField]
         private TopLevelButton[] topLevelButtons = null!;
@@ -432,6 +440,9 @@ namespace Selania.Rework.Components.Grimoire
                 case PageType.SecondLevelSigils:
                     ShowPage(secondLevelAnimatorSigils);
                     break;
+                case PageType.ThirdLevelSigils:
+                    ShowPage(thirdLevelAnimatorSigils);
+                    break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(pageType), pageType, null);
             }
@@ -446,7 +457,7 @@ namespace Selania.Rework.Components.Grimoire
             // fill the page animators if necessary.
             _pageAnimators ??= new[]
             {
-                firstLevelAnimator, secondLevelAnimatorGreenhouse, secondLevelAnimatorSigils
+                firstLevelAnimator, secondLevelAnimatorGreenhouse, secondLevelAnimatorSigils, thirdLevelAnimatorSigils
             };
 
             foreach (var animator in _pageAnimators)
