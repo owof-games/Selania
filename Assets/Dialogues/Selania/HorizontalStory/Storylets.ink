@@ -132,24 +132,42 @@
     Da sempre il mio sogno è scrivere una guida esoterica di piante e spezie, ma per la prima volta sono a chiedermi: posso davvero capire qualcosa del mondo? Perché se non lo capisco, di cosa dovrei parlare?
     K.
 
-
-
     ~ horizontalSEndingStorylet()
     -> main
 
 === docSeven_storylet ===
-Esperimenti coi glifi (S.C.)
-
-
-
+//S.C.
+    Cosa ha imparato S.C. a distanza di quattro mesi?
+    Che questo posto non cambia, per lo meno non in modo permanente.
+    Ogni area ha la sua stagione, i suoi ritmi, i suoi movimenti.
+    Mi sento come se fossi nelle prime pagine di "Gita al faro", e tutto fosse in movimento e costantemente sospeso.
+    Però c'è qualcosa che regola il cambiamento.
+    Me ne son resa conto per caso, in preda alla noia mentre ascoltavo la nuova classificazione di W.R. sui suoi libri: ogni oggetto sembra raggruppabile in cinque gruppi, vuoi per il colore, vuoi per le cose che fa.
+    Non me la sento ancora di stendere a modo questa intuizione, ho paura di fossilizzarmi sulla prima lettura soddisfacente e perdere l'occasione per vedere le cose più in là.
+    Ma c'è un pattern in questa imprevedibilità.
+    E se posso capire qual è, posso anche controllarlo.
 
     ~ horizontalSEndingStorylet()
     -> main
 
 === docEight_storylet ===
-Una cena e ricordi, senso di mancanza, contesto storico (W.R.)
-
-
+//W.R.
+    O.U.J. ha deciso di fare una festa per i primi sei mesi qui.
+    E mi sono accorta che non vedevo alcune di loro da settimane.
+    Forse devo darmi una calmata coi miei libri.
+    Ma ci sono storie che parlano di cose che non sono ancora accadute, di oggetti che non ho mai sentito nominare.
+    Mi siedo sulla poltrona all'alba, ed è subito notte.
+    Ho provato a parlarne stasera, ma erano tutte malinconiche.
+    A parte S.C.: anche lei come me quando si fissa su qualcosa non vede più il resto del mondo.
+    Forse è anche colpa di questo tempo che non cambia mai: so che è il 2 ottobre perché O.U.J. ha creato un calendario appeso in cucina. Ma potrebbe essere il 6 luglio o il 33 gennaio, e poco cambierebbe.
+    E per me è sempre così.
+    Prima di partire K. mi ha chiesto se ci tengo davvero a tutto questo, alla lotta, perché non mi vede mai in piazza, o alle riunioni allargate. Secondo lei mi interessa solo la congrega stretta e i miei libri.
+    E io non so come dirglielo che non ho ancora capito come ci si sta con le persone.
+    Anche ora qui: voglio bene a tutte loro, ma non so come dimostrarlo.
+    Non è che se non le cerco smetto di tenerci.
+    I libri questa cosa non me la chiedono.
+    Ed è grazie ai libri che ho avuto un'idea: usare le energie di questo luogo per far rileggere alle persone in modo diverso le cose.
+    Come ad esempio fare rileggere a K. i miei comportamenti per quello che sono: il mio modo di trovare soluzioni per salvare il mondo.
 
 
     ~ horizontalSEndingStorylet()
