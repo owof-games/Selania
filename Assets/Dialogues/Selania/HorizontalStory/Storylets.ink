@@ -87,9 +87,25 @@
 
 
 === docFive_storylet ===
-Arrivo al luogo, primi assestamenti, scoperta della biblioteca (W.R.)
+//WR.
+    Sì spostano!
+    Non ha senso, ma si spostano!
+    L'ho detto a S.C. e mi ha detto di numerare le copertine. Come se fossi arrivata qui con un pennarello e.
+    Ah, la penna.
+    Ho in mano una penna.
 
+    Bene, ne ho numerati dieci. Quelli più rovinati, ormai illeggibili.
+    La sofferenza.
+    Non ho usato il Dewey perché non si capisce nemmeno il contenuto di metà di questi libri.
+    Per cui li ho numerati per colore, con verde che ha a che fare con le cose concrete, pratiche, il viola con la spiritualità e.
+    Merda.
+    Ho usato la V. sia per Viola che per Verde.
+    Devo ricominciare.
 
+    W.R., tesoro: ricordati di firmare i tuoi appunti o non si capisce mai di chi è cosa.
+    O.U.J.
+
+    Mmm, come se a qualcun altra interessassero così tanto, i libri.
 
 
     ~ horizontalSEndingStorylet()
