@@ -518,7 +518,7 @@
 
 === docTwentyTwo_storylet ===
 //OUJ
-    Ventinove maggio '74
+    Otto maggio '74
     Caro diario.
     Sto per dirti cose così private che mi sembra di fare un torto anche solo a scrivertele qui.
     Ci sono dei modi amari di sapere di avere ragione.
@@ -546,10 +546,30 @@
 
 
 === docTwentyThree_storylet ===
-OUJ rimasta sola (profilo di OUJ scritto da OUJ)
-
-
-
+//OUJ
+    Ventinove maggio '74
+    Caro diario, siamo solo tu e io ormai.
+    Ed S.C., se trovo il coraggio di andare a trovarla sulla spiaggia.
+    Y. è stata gravemente ferita a Brescia. Una bomba in una piazza mentre protestava contro i terroristi fascisti.
+    G.M. l'ha letto su un giornale, perché è saltato fuori che quando spariva per ore non era nei boschi, ma scendeva al paesino in fondo valle.
+    Credo sia stata una delle giornate più lunghe per me, diario.
+    Perché G.M. ha deciso di andarsene per fare qualcosa, per vedere come Y. sta, ma temo anche per scappare da una parte di sé, quella parte di sé.
+    L'ho fatto anche io così tante volte.
+    Abbiamo dovuto praticamente cacciare K.: non mi voleva lasciare da sola con S.C., ma io non voglio andarmene. Ma non ha senso che lei rimanga qui, anche perché mi illudo di una possibilità: che senza le tensioni con le altre, S.C. possa tornare la persona che ho conosciuto.
+    E.
+    Ho imparato così tante cose, qui.
+    Per la maggiore, belle.
+    Ma per altre, amare.
+    Come il fatto di non esser stata mai davvero vista come una strega dalle mie compagne.
+    Come se stare ai fornelli non sia già di per sé un atto di magia.
+    Ho teorizzato e confermato il sistema di relazioni che regge questo posto, l'economia del dono e dello scambio che fa sì che tutto sia florido.
+    La possibilità di generare inchiostro cucinando assieme, e di fare emergere i propri bisogni col giusto ingrediente.
+    Eppure ogni sera a cena erano le teorie di S.C. e i progressi di K. e le scoperte di Y. e le scorribande di G.M.
+    Pensavo fosse pesante essere invisible come donna, avevo sottovalutato quanto poco tu venga vista quando sei vecchia.
+    Anche dalle persone amiche.
+    Mi do ancora qualche settimana per far rinsavire S.C., sennò me ne torno per un po' nelle mie valli.
+    tua.
+    O.U.J.
 
     ~ horizontalSEndingStorylet()
     -> main
