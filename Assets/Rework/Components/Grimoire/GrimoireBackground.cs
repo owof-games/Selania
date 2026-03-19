@@ -163,6 +163,10 @@ namespace Selania.Rework.Components.Grimoire
         [Tooltip("All the second level sigil buttons")] [SerializeField]
         private SecondLevelSigilsButton[] secondLevelSigilsButtons = null!;
 
+        [SerializeField] private ThirdLevelSigilsHeader thirdLevelSigilsHeaderLeft = null!;
+        [SerializeField] private ThirdLevelSigilsHeader thirdLevelSigilsHeaderRight = null!;
+        [SerializeField] private ThirdLevelSigilsRow[] thirdLevelSigilsRows = null!;
+
         private Animator _animator = null!;
 
         private TextMeshProUGUI _backToLevelTwoTextMeshPro = null!;
@@ -535,6 +539,55 @@ namespace Selania.Rework.Components.Grimoire
             // TODO: should cache the selectable corresponding to each second level sigils button, maybe with a weak dict
             button.GetComponent<Selectable>().interactable = status != SecondLevelSigilButtonStatus.Locked;
             button.EnableAnimation(status == SecondLevelSigilButtonStatus.Enabled);
+        }
+
+        /// <summary>
+        ///     Set up the header of the third level sigils page.
+        /// </summary>
+        /// <param name="leftTitle">Left title of the page.</param>
+        /// <param name="leftSubtitle">Left subtitle of the page.</param>
+        /// <param name="leftSigil">Left sigil of the page.</param>
+        /// <param name="rightTitle">right title of the page.</param>
+        /// <param name="rightSubtitle">right subtitle of the page.</param>
+        /// <param name="rightSigil">right sigil of the page.</param>
+        public void SetUpThirdLevelSigilsHeader(string leftTitle, string leftSubtitle,
+            (ISettingsSigils.GlyphType, ISettingsSigils.GlyphType)? leftSigil, string rightTitle, string rightSubtitle,
+            (ISettingsSigils.GlyphType, ISettingsSigils.GlyphType)? rightSigil)
+        {
+            thirdLevelSigilsHeaderLeft.SetUp(leftTitle, leftSubtitle, leftSigil);
+            thirdLevelSigilsHeaderRight.SetUp(rightTitle, rightSubtitle, rightSigil);
+        }
+
+        /// <summary>
+        ///     Set up a single sigil for the third level sigils page.
+        /// </summary>
+        /// <param name="index">Index of the sigil (0,1,2 are the left ones, 3,4,5 the right ones)</param>
+        /// <param name="title">Title of the sigil.</param>
+        /// <param name="firstDescriptionLine">First line of description for the sigil.</param>
+        /// <param name="secondDescriptionLine">Second line of description for the sigil.</param>
+        /// <param name="thirdDescriptionLine">Third line of description for the sigil.</param>
+        /// <param name="glyphs">The three glyphs describing the sigil.</param>
+        /// <param name="isActivated">Whether this button is activated.</param>
+        public void SetUpThirdLevelSigilRow(int index, string title, string firstDescriptionLine,
+            string secondDescriptionLine,
+            string thirdDescriptionLine,
+            (ISettingsSigils.GlyphType, ISettingsSigils.GlyphType, ISettingsSigils.GlyphType) glyphs, bool isActivated)
+        {
+            thirdLevelSigilsRows[index].SetUp(title, firstDescriptionLine, secondDescriptionLine, thirdDescriptionLine,
+                glyphs);
+            thirdLevelSigilsRows[index].SetActivated(isActivated);
+        }
+
+        /// <summary>
+        ///     Disable all the third-level sigil buttons and rows.
+        /// </summary>
+        public void DisableAllThirdLevelSigilsRows()
+        {
+            foreach (var thirdLevelSigilsRow in thirdLevelSigilsRows)
+            {
+                thirdLevelSigilsRow.SetUp("", "", "", "", null);
+                thirdLevelSigilsRow.SetActivated(false);
+            }
         }
     }
 }

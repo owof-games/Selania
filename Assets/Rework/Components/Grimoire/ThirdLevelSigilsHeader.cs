@@ -23,14 +23,15 @@ namespace Selania.Rework.Components.Grimoire
         /// </summary>
         /// <param name="title">Title of this page.</param>
         /// <param name="subtitle">Subtitle of this page.</param>
-        /// <param name="glyph1">First-level glyph for this page.</param>
-        /// <param name="glyph2">Second-level glyph for this page.</param>
-        public void SetUp(string title, string subtitle, ISettingsSigils.GlyphType glyph1,
-            ISettingsSigils.GlyphType glyph2)
+        /// <param name="glyphs">The two glyphs for this page, or <c>null</c> if it's locked.</param>
+        public void SetUp(string title, string subtitle, (ISettingsSigils.GlyphType, ISettingsSigils.GlyphType)? glyphs)
         {
             titleTextMeshProUGUI.text = title;
             subtitleTextMeshProUGUI.text = subtitle;
-            thirdLevelSigilIcon.SetGlyphs(glyph1, glyph2);
+            if (glyphs.HasValue)
+                thirdLevelSigilIcon.SetGlyphs(glyphs.Value.Item1, glyphs.Value.Item2);
+            else
+                thirdLevelSigilIcon.Locked();
         }
     }
 }

@@ -421,7 +421,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492131852280177239}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -1035,6 +1035,15 @@ MonoBehaviour:
   - {fileID: 1109985837793699605}
   - {fileID: 6101589704410478869}
   - {fileID: 4416326834326823316}
+  thirdLevelSigilsHeaderLeft: {fileID: 398894444991548254}
+  thirdLevelSigilsHeaderRight: {fileID: 4426270742766124661}
+  thirdLevelSigilsRows:
+  - {fileID: 1056870911097517830}
+  - {fileID: 5415914035966530450}
+  - {fileID: 6503919431584551822}
+  - {fileID: 8074309669297781769}
+  - {fileID: 4408651818287488740}
+  - {fileID: 7459624796715032355}
 --- !u!1 &1175051552139587376
 GameObject:
   m_ObjectHideFlags: 0
@@ -5640,6 +5649,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f6a254a9d1e465408db542302460c53, type: 3}
+--- !u!114 &1056870911097517830 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 809681279965222508, guid: 3f6a254a9d1e465408db542302460c53, type: 3}
+  m_PrefabInstance: {fileID: 402600115064627562}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 811b66016a0f4ceaab51b44aff54db73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.ThirdLevelSigilsRow
 --- !u!224 &1533981791497457504 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1215865127357312522, guid: 3f6a254a9d1e465408db542302460c53, type: 3}
@@ -10068,6 +10088,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1215865127357312522, guid: 3f6a254a9d1e465408db542302460c53, type: 3}
   m_PrefabInstance: {fileID: 3896244444876998792}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4408651818287488740 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 809681279965222508, guid: 3f6a254a9d1e465408db542302460c53, type: 3}
+  m_PrefabInstance: {fileID: 3896244444876998792}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 811b66016a0f4ceaab51b44aff54db73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.ThirdLevelSigilsRow
 --- !u!1001 &4314940726930719082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10608,6 +10639,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f6a254a9d1e465408db542302460c53, type: 3}
+--- !u!114 &5415914035966530450 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 809681279965222508, guid: 3f6a254a9d1e465408db542302460c53, type: 3}
+  m_PrefabInstance: {fileID: 4617774887904871934}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 811b66016a0f4ceaab51b44aff54db73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.ThirdLevelSigilsRow
 --- !u!224 &5821534940845632500 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1215865127357312522, guid: 3f6a254a9d1e465408db542302460c53, type: 3}
@@ -11211,6 +11253,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6628953435717285397, guid: 455299974330c5944815f779ed5f2a63, type: 3}
   m_PrefabInstance: {fileID: 5272275601336035810}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4426270742766124661 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8378849747360847767, guid: 455299974330c5944815f779ed5f2a63, type: 3}
+  m_PrefabInstance: {fileID: 5272275601336035810}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1890edf9e4e4588993afb12f18052c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.ThirdLevelSigilsHeader
 --- !u!1001 &5382480291782907044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11969,6 +12022,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1215865127357312522, guid: 3f6a254a9d1e465408db542302460c53, type: 3}
   m_PrefabInstance: {fileID: 5872131608764990946}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6503919431584551822 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 809681279965222508, guid: 3f6a254a9d1e465408db542302460c53, type: 3}
+  m_PrefabInstance: {fileID: 5872131608764990946}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 811b66016a0f4ceaab51b44aff54db73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.ThirdLevelSigilsRow
 --- !u!1001 &6097046153637137467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14246,6 +14310,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f6a254a9d1e465408db542302460c53, type: 3}
+--- !u!114 &7459624796715032355 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 809681279965222508, guid: 3f6a254a9d1e465408db542302460c53, type: 3}
+  m_PrefabInstance: {fileID: 7834427095340632399}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 811b66016a0f4ceaab51b44aff54db73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.ThirdLevelSigilsRow
 --- !u!224 &8964106144747595589 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1215865127357312522, guid: 3f6a254a9d1e465408db542302460c53, type: 3}
@@ -14348,6 +14423,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 455299974330c5944815f779ed5f2a63, type: 3}
+--- !u!114 &398894444991548254 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8378849747360847767, guid: 455299974330c5944815f779ed5f2a63, type: 3}
+  m_PrefabInstance: {fileID: 8200649277371423945}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1890edf9e4e4588993afb12f18052c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.ThirdLevelSigilsHeader
 --- !u!224 &3040010109758548700 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6628953435717285397, guid: 455299974330c5944815f779ed5f2a63, type: 3}
@@ -14769,6 +14855,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1215865127357312522, guid: 3f6a254a9d1e465408db542302460c53, type: 3}
   m_PrefabInstance: {fileID: 8876917060259719781}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8074309669297781769 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 809681279965222508, guid: 3f6a254a9d1e465408db542302460c53, type: 3}
+  m_PrefabInstance: {fileID: 8876917060259719781}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 811b66016a0f4ceaab51b44aff54db73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.ThirdLevelSigilsRow
 --- !u!1001 &9167811164875949149
 PrefabInstance:
   m_ObjectHideFlags: 0

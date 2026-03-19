@@ -12,7 +12,14 @@ namespace Selania.Rework.Components.Grimoire
     {
         [SerializeField] private Image firstLevelGlyphImage = null!;
         [SerializeField] private Image secondLevelGlyphImage = null!;
+        [SerializeField] private Image lockedImage = null!;
+        private Image _borderImage = null!;
         [Inject] internal ISettingsSigils SettingsSigils = null!;
+
+        private void Start()
+        {
+            _borderImage = GetComponent<Image>();
+        }
 
         /// <summary>
         ///     Set the correct image for this sigil.
@@ -21,10 +28,25 @@ namespace Selania.Rework.Components.Grimoire
         /// <param name="glyph2">Second-level glyph for the sigil.</param>
         public void SetGlyphs(ISettingsSigils.GlyphType glyph1, ISettingsSigils.GlyphType glyph2)
         {
+            firstLevelGlyphImage.gameObject.SetActive(true);
+            secondLevelGlyphImage.gameObject.SetActive(true);
+            lockedImage.gameObject.SetActive(false);
+            _borderImage.enabled = true;
             firstLevelGlyphImage.sprite = SettingsSigils.GetGlyphSprite(glyph1, 0);
             firstLevelGlyphImage.color = SettingsSigils.GetGlyphColor(glyph1);
             secondLevelGlyphImage.sprite = SettingsSigils.GetGlyphSprite(glyph2, 1);
             secondLevelGlyphImage.color = SettingsSigils.GetGlyphColor(glyph2);
+        }
+
+        /// <summary>
+        ///     Show the locked image instead of the glyph
+        /// </summary>
+        public void Locked()
+        {
+            firstLevelGlyphImage.gameObject.SetActive(false);
+            secondLevelGlyphImage.gameObject.SetActive(false);
+            lockedImage.gameObject.SetActive(true);
+            _borderImage.enabled = false;
         }
     }
 }

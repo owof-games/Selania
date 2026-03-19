@@ -210,5 +210,60 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
                 break;
             }
         }
+
+        public void ThirdLevelSigilsHeadersLocked()
+        {
+            grimoireBackground.SetUpThirdLevelSigilsHeader("", "", null, "", "", null);
+        }
+
+        public void ThirdLevelSigilsHeadersOnlyTitle()
+        {
+            grimoireBackground.SetUpThirdLevelSigilsHeader("Pontile", "",
+                (ISettingsSigils.GlyphType.Air, ISettingsSigils.GlyphType.Aether), "Altro", "",
+                (ISettingsSigils.GlyphType.Air, ISettingsSigils.GlyphType.Fire));
+        }
+
+        public void ThirdLevelSigilsHeadersFull()
+        {
+            grimoireBackground.SetUpThirdLevelSigilsHeader("Pontile", "per tuffarsi nel mare di sé",
+                (ISettingsSigils.GlyphType.Air, ISettingsSigils.GlyphType.Aether), "Altro", "altro sottotitolo.",
+                (ISettingsSigils.GlyphType.Air, ISettingsSigils.GlyphType.Fire));
+        }
+
+        public void ThirdLevelSigilsAllLocked()
+        {
+            grimoireBackground.DisableAllThirdLevelSigilsRows();
+        }
+
+        public void ThirdLevelSigilsRandomized()
+        {
+            grimoireBackground.DisableAllThirdLevelSigilsRows();
+            var activated = Random.Range(0, 6);
+            for (var i = 0; i < 6; i++)
+            {
+                var level = Random.Range(0, 5);
+                if (level == 0) continue;
+                grimoireBackground.SetUpThirdLevelSigilRow(i,
+                    "Strappo",
+                    level > 1 ? "qualcosa" : "",
+                    level > 2 ? "altra riga" : "",
+                    level > 3 ? "ultima riga" : "",
+                    (ISettingsSigils.GlyphType.Air,
+                        i < 3 ? ISettingsSigils.GlyphType.Aether : ISettingsSigils.GlyphType.Fire,
+                        i switch
+                        {
+                            0 => ISettingsSigils.GlyphType.Fire,
+                            1 => ISettingsSigils.GlyphType.Earth,
+                            2 => ISettingsSigils.GlyphType.Water,
+                            3 => ISettingsSigils.GlyphType.Earth,
+                            4 => ISettingsSigils.GlyphType.Water,
+                            5 => ISettingsSigils.GlyphType.Aether,
+                            _ => throw new ArgumentOutOfRangeException()
+                        }
+                    ),
+                    i == activated
+                );
+            }
+        }
     }
 }

@@ -28,18 +28,28 @@ namespace Selania.Rework.Components.Grimoire
         /// <param name="firstDescriptionLine">First description line for the row.</param>
         /// <param name="secondDescriptionLine">Second description line for the row.</param>
         /// <param name="thirdDescriptionLine">Third description line for the row.</param>
-        /// <param name="glyph1">First-level glyph of the sigil.</param>
-        /// <param name="glyph2">Second-level glyph of the sigil.</param>
-        /// <param name="glyph3">Third-level glyph of the sigil.</param>
+        /// <param name="glyphs">The glyphs of this sigil.</param>
         public void SetUp(string title, string firstDescriptionLine, string secondDescriptionLine,
-            string thirdDescriptionLine, ISettingsSigils.GlyphType glyph1, ISettingsSigils.GlyphType glyph2,
-            ISettingsSigils.GlyphType glyph3)
+            string thirdDescriptionLine, (ISettingsSigils.GlyphType, ISettingsSigils.GlyphType,
+                ISettingsSigils.GlyphType)? glyphs)
         {
             titleTextMeshProUGUI.text = title;
             firstDescriptionLineTextMeshProUGUI.text = firstDescriptionLine;
             secondDescriptionLineTextMeshProUGUI.text = secondDescriptionLine;
             thirdDescriptionLineTextMeshProUGUI.text = thirdDescriptionLine;
-            button.SetUp(glyph1, glyph2, glyph3);
+            if (glyphs.HasValue)
+                button.SetUp(glyphs.Value.Item1, glyphs.Value.Item2, glyphs.Value.Item3);
+            else
+                button.Disable();
+        }
+
+        /// <summary>
+        ///     Set whether this button is activated or not.
+        /// </summary>
+        /// <param name="isActivated">Whether the button is activated or not.</param>
+        public void SetActivated(bool isActivated)
+        {
+            button.SetActivated(isActivated);
         }
     }
 }
