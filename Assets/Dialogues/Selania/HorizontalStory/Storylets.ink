@@ -146,6 +146,7 @@
     Non me la sento ancora di stendere a modo questa intuizione, ho paura di fossilizzarmi sulla prima lettura soddisfacente e perdere l'occasione per vedere le cose più in là.
     Ma c'è un pattern in questa imprevedibilità.
     E se posso capire qual è, posso anche controllarlo.
+    S.C.
 
     ~ horizontalSEndingStorylet()
     -> main
@@ -174,9 +175,25 @@
     -> main
 
 === docNine_storylet ===
-Inchiostro e glifi (G.M.)
-
-
+//G.M.
+    Non mi aspettavo di fare una grossa scoperta, ma forse ora anche K. crederà che posso essere una strega. Uno strego? Non mi piace l'idea dello stregone.
+    Qualche mese fa l'ho aiutata con gli uccellini della stazione, e da lì mi sono affezionato a loro, a quel posto.
+    Ho anche iniziato a sistemarla un po', forse sperando che arrivi qualcuno di nuovo, per rompere questa routine. 
+    Magari una carina della mia età.
+    O uno.
+    L'ho detto?
+    L'ho detto.
+    Ma non è quella la scoperta.
+    Questa estate S.C. si è concentrata a lungo su questa idea che tutto in questo luogo sia raggruppabile in cinque gruppi.
+    E col pane in bocca ho commentato "Come i cinque elementi intendi?".
+    Ha fatto la faccia di una lasciata sull'altare, ed è corsa via.
+    O.U.J. ha detto che la mia mente fresca è una manna, e mi sono sentito una brava strega.
+    E allora ho iniziato ad applicare quello che ricordo dei miei studi nel rapporto con gli uccellini.
+    Non è stato facile, ma una volta trovata la logica, la relazione con loro si è consolidata.
+    E una mattina mi hanno dato dell'inchiostro.
+    Inchiostro.
+    L'ho portato a W.R.per capire se ha qualcosa di speciale, ed è presa benissimo.
+    G.M.
 
     ~ horizontalSEndingStorylet()
     -> main
