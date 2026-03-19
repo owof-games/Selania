@@ -112,7 +112,25 @@
     -> main
 
 === docSix_storylet ===
-Natura del terreno del luogo (K.)
+//K.
+    A distanza di un mese posso dire con certezza solo una cosa: non sto capendo nulla di questo posto.
+    L'idea era quella di sviluppare uno sguardo di insieme sul rapporto tra ambiente e piante, così da iniziare a fare un po' di prove, magari coltivare in serra qualcosa di queste magnifiche erbe, e capirne il portato magico.
+    E le piante di per sé fanno cose da piante: i cespugli della foresta sono un universo di vita, le loro foglie sono pungenti ma ricche di oli profumati.
+    Il pino della stazione (credo sia un pino) ha i suoi aghetti, e la sua forma è quella di una pianta esposta a un forte vento costante.
+    I rovi della fontana sono ricchi di bacche che ancora non ho avuto il coraggio di assaggiare, ma che sono estremamente apprezzati dalle api, e lo prendo come un buon segno.
+    Ma.
+    Il pino ospita degli uccelli tropicali.
+    In un'area innevata.
+    Con l'aiuto di G.M. ieri ho aspettato che se ne andassero per studiarne il nido, e l'albero è caldo. 
+    Caldo. 
+    Un pino. 
+    Sotto la neve.
+    <i>Caldo.</i>
+    E la biblioteca.
+    Ci ho messo settimane a capirlo, anche perché W.R. è presa dalle sue ricerche e ha messo mille veti su quello spazio, ma il legno degli scaffali e delle colonne è vivo.
+    Sotto la pavimentazione continua ad avere radici, e quando ho provato a incidere la balaustra, ne è uscita resina.
+    Da sempre il mio sogno è scrivere una guida esoterica di piante e spezie, ma per la prima volta sono a chiedermi: posso davvero capire qualcosa del mondo? Perché se non lo capisco, di cosa dovrei parlare?
+    K.
 
 
 
