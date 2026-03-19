@@ -29,7 +29,7 @@
     L'unica cosa che mi ero ripromessa era di non scrivere più "Caro diario" come se avessi dodici e non cinquantasei anni. Ma non sai quanto mi senta viva e giovane!
     Siamo arrivate al "posto" (non abbiamo ancora pensato a un nome) da tre giorni e, tolta la solita S.C., ce la stiamo prendendo tutte con calma.
     Quando lei ci ha parlato di questo luogo, delle sue possibilità, non mi aspettavo sarebbe stato così "umano".
-    Però umano in un modo strano: la biblioteca in un bosco, camere enormi in piccoli tronchi, e una cucina intera sulle palafitte.
+    Però umano in un modo strano: la biblioteca in un bosco, una camera enorme in piccoli tronchi, e una cucina intera sulle palafitte.
     Oggi K. mi ha aiutato a sistemarla e pulirla, liberando per lo meno il forno e il lavello. Ha intravisto una serra, e dice che nel tempo libero si ingegnerà per coltivarmi qualche pomodoro, delle zucchine.
     Però passiamo metà del tempo a dire solo: wow.
     Ogni cosa qui è così vivida.
@@ -393,11 +393,23 @@
 
 
 === docSeventeen_storylet ===
-S.C. ed "esperimento" su G.M. (S.C.)
-
-
-
-
+//SC
+    Inizio a sentire il peso della situazione.
+    O.U.J. e K. ce l'hanno con me per il rapporto con G.M., dicono che la differenza di età è troppa, che è minorenne, che abbiamo bisogni diversi e capacità diverse di gestire la cosa. Ne abbiamo parlato, e sappiamo entrambi che è solo sesso.
+    Ma G.M. vuole andarsene.
+    Sapevo che era questione di tempo: non sta avendo i successi che sto avendo io nella ricerca, e anche se ho provato a coinvolgerlo nelle mie prove, dice di voler stare lontano da tutto quello che riguarda i glifi, dopo quello che è successo a Y.
+    Ma so di essere vicina alla risposta sul perché siamo qui, su cosa possiamo farne.
+    Ho iniziato a combinare i glifi.
+    Riesco a creare due tipi di combinazione.
+    Con due glifi c'è questa immagine, questo sigillo che è molto solido, ma che non interagisce col mondo. Sembra una lente, perché se lo passo sulle cose, le vedo in modi diversi, ma non le cambia.
+    Con tre glifi invece il sigillo è instabile, ma cambia il modo in cui vengono percepite le cose che dico o faccio!
+    Ho provato a dire la stessa parola davanti ai glifi con sigilli diversi attivi, e reagiscono secondo il sigillo, e non secondo il valore della parola.
+    E qui c'è la soluzione ai nostri problemi: possiamo far capire alle persone che la nostra missione, la nostra posizione è quella giusta. Non più solo con le parole, ma con la magia.
+    E visto che questa cosa è magnifica e potente, ho deciso di utilizzarne uno, che ho chiamato Altare, per parlare con G.M., per convincerlo a non andarsene.
+    Perché sarà felice poi di essere rimasto.
+    Noi cinque, faremo la storia.
+    S.C.
+    
     ~ horizontalSEndingStorylet()
     -> main
 
