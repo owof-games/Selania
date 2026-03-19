@@ -1,8 +1,21 @@
 === docOne_storylet ===
+//GM
 
-Arrivo al luogo, primi assestamenti, riferimenti alla famiglia d’origine (G.M)
-
-
+    Le altre stanno finendo di sistemarsi.
+    W.R. è su di giri, si è già persa due volte.
+    E poi sarei io quello piccolo del gruppo.
+    Beh: quello piccolo continua a pensare che sia un'idea idiota, e che dobbiamo andare a menarli quelli là, non cercare le magie.
+    O.U.J. mi ha detto che se non penso alle cose belle, rimanere qui sarà faticoso.
+    Quindi: pro di questa esperienza.
+    1. Sono lontano da mia madre e dalle sue rotture per ogni cosa.
+    2. Niente scuola, niente teste di merda come Matteo, niente battute del cazzo.
+    3. Le ragazze mi vogliono bene, anche se non sono sicuro che mi vogliano tutte qui.
+    4. In particolare K.: un ragazzo in una congrega non le va giù.
+    5. Però forse qui posso provare che anche io so fare magie. Spero.
+    Ci sono le cose che lasciamo dietro, però. Tipo le altre a lottare contro i fasci di merda. A me questa cosa non mi va giù.
+    Ma sono troppo testone per darla vinta a K.
+    Se butta male, posso sempre tornare.
+    G.M.
 
     ~ horizontalSEndingStorylet()
     -> main
@@ -10,9 +23,18 @@ Arrivo al luogo, primi assestamenti, riferimenti alla famiglia d’origine (G.M)
 
 === docTwo_storylet ===
 
-Arrivo al luogo, primi assestamenti, creazione della cucina con l’aiuto di K. (O.U.J.)
-
-
+    Cinque aprile '72
+    Caro diario.
+    L'unica cosa che mi ero ripromessa era di non scrivere più "Caro diario" come se avessi dodici e non cinquantasei anni. Ma non sai quanto mi senta viva e giovane!
+    Siamo arrivate al "posto" (non abbiamo ancora pensato a un nome) da tre giorni e, tolta la solita S.C., ce la stiamo prendendo tutte con calma.
+    Quando lei ci ha parlato di questo luogo, delle sue possibilità, non mi aspettavo sarebbe stato così "umano".
+    Però umano in un modo strano: la biblioteca in un bosco, camere enormi in piccoli tronchi, e una cucina intera sulle palafitte.
+    Oggi K. mi ha aiutato a sistemarla e pulirla, liberando per lo meno il forno e il lavello. Ha intravisto una serra, e dice che nel tempo libero si ingegnerà per coltivarmi qualche pomodoro, delle zucchine.
+    Però passiamo metà del tempo a dire solo: wow.
+    Ogni cosa qui è così vivida.
+    E, con un po' di senso di colpa, ammetto di non sentire la mancanza della città, delle lotte, della fatica costante.
+    Dei commenti di merda quando esco di casa o vado a fare la spesa.
+    Prima non respiravo, e non me ne sono mai accorta.
 
     ~ horizontalSEndingStorylet()
     -> main
