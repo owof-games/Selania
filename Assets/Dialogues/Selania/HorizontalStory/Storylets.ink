@@ -463,18 +463,35 @@
     Non credo di volerle più parlare.
     G.M.
 
-
-
-
     ~ horizontalSEndingStorylet()
     -> main
 
 
 === docTwenty_storylet ===
-W.R. decide di andarsene (profilo di W.R.) (OUJ)
-
-
-
+//OUJ
+    Otto gennaio '74
+    Caro odiato diario.
+    Caro perché mi sopporti, odiato perché parlo più con te che con le altre.
+    Y. se ne è andata.
+    E se ne è andata alla grande: distruggendo metà della biblioteca, e dicendo che stavamo giocando con qualcosa di più grande di lei.
+    Ma so anche che ha fatto quella scenata per spaventare S.C., e lo so perché l'abbiamo organizzata assieme.
+    Perché Y. è felice di quello che ha vissuto.
+    L'ha chiamata "riscrittura", perché dice che è come se avesse riscritto il modo in cui guarda la sua storia e il suo passato.
+    E ha smesso di vedersi come una tipa senza sapore, strana, per accogliersi come la persona che è, punto. Anche per questo ha deciso di cambiare nome.
+    E quando le ho parlato della mia esperienza in cucina, delle ricerche di K., ha detto che questo posto può essere grandioso per prendersi cura di sé, e che noi "altre" dovremmo continuare la nostra ricerca.
+    Quando le ho chiesto chi intendesse con "altre", ha risposto: "Non la Signora delle Pietre".
+    Ho odiato quella frase: stimo ancora S.C., le voglio bene.
+    Ma ho capito la preoccupazione di Y.
+    E visto che ritiene di non aver altro da dare o imparare da questo luogo, aveva già deciso di tornare in città, operativa.
+    Per cui, perché non farlo facendo cagare addosso un po' S.C.?
+    Non so se abbia funzionato, sinceramente.
+    Siamo arrivate in questo posto con una compagna determinata ma capace di ascoltarti, di vederti.
+    E ora siamo qui con un essere fissato coi suoi sigilli e la conoscenza.
+    Sono mesi che non le sento dire nulla sul mondo fuori, nulla.
+    Non è più qui per salvare il mondo, è qui per sé stessa.
+    E questa cosa mi preoccupa.
+    Tua.
+    O.U.J.
 
     ~ horizontalSEndingStorylet()
     -> main
