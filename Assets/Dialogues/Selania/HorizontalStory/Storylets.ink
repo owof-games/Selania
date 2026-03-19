@@ -501,7 +501,11 @@
 //GM
     O.U.J. ha proposto una festa per festeggiare il 25 aprile.
     Per la prima volta da mesi ci siamo ritrovate tutte al tavolo, ma è andato tutto davvero di merda.
-    O.U.J. ha fatto domande a tutte, domande leggere, per facilitare la conversazione.
+    Tutte, tranne Y.
+    Che a quanto pare prima di andarsene ha lanciato un incantesimo di pioggia permanente sulla spiaggia per far desistere o punire S.C., non ne ho idea.
+    Ma quella non se ne va. 
+    Per qualche motivo crede che i suoi sassi funzionino meglio lì e non si smuove.
+    Durante la cena, O.U.J. ha fatto domande a tutte, domande leggere, per facilitare la conversazione.
     K. e io siamo intervenute per un po', ma come S.C. ha parlato, ci siamo fatte mute.
     Mi spiace, mi pesa, ma non ce la faccio.
     S.C. è stata il mio primo amore, e la mia prima volta.
@@ -591,17 +595,28 @@
     Ora corro da loro, e così facciamo una grande festa.
     S.C.
 
-
-
     ~ horizontalSEndingStorylet()
     -> main
 
 
  === docTwentyFive_storylet ===
-Biglietto di OUJ prima di andarsene (profilo di S.C.) (OUJ)
-
-
-
+//OUJ
+    Cara S.C.
+    Non so quando leggerai questo biglietto, visto che non vieni in cucina da settimane.
+    Non so quanto cibo andato a male ho buttato.
+    Cosa hai mangiato sulla spiaggia? Hai mangiato?
+    So che sei viva perché l'altro ieri sono passata alla spiaggia, col suo continuo temporale, ed eri a prendere appunti sotto la tua tenda improvvisata.
+    Questo biglietto comunque è qui per dirti che me ne vado, come le altre.
+    Siamo partite assieme in questo viaggio, ce ne siamo andate separate.
+    E non riesco a non dartene la colpa.
+    Io non so cosa ci farai con quello che hai scoperto, e ne ho molta paura: nessun tipo di potere è fatto per stare in una sola mano.
+    Non credo affatto che quello che hai trovato sia negativo, così come sono sicura che le scoperte fatte da noi altre si integrino al meglio con quei sigilli.
+    Credo tu sia davanti a una scelta, S.A.: continuare a raccogliere il sapere per il piacere di accumularlo, come se fosse un giochino per sentirti importante, facendo del male agli altri.
+    O capire cos'è davvero questo luogo, perché questo luogo e non altri hanno generato questo potere, e a quel punto forse saprai cosa farne di buono.
+    Ricorda: qui come altrove, tutto è relazione.
+    Spero di vederti di nuovo, spero di ritrovarti come la persona che eri.
+    Ti voglio bene.
+    O.U.J.
 
     ~ horizontalSEndingStorylet()
     -> main   
