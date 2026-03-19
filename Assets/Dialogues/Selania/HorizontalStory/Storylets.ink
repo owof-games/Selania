@@ -517,10 +517,29 @@
 
 
 === docTwentyTwo_storylet ===
-Litigio tra K. (che difende S.C.) e G.M (ancora ferito dal sigillo). (profilo di G.M) (OUJ) 
-
-
-
+//OUJ
+    Ventinove maggio '74
+    Caro diario.
+    Sto per dirti cose così private che mi sembra di fare un torto anche solo a scrivertele qui.
+    Ci sono dei modi amari di sapere di avere ragione.
+    G.M. ieri mi ha chiesto di potermi parlare.
+    L'ha presa larga. Abbiamo parlato di Franco, dei pappagallini, di Carla, di come starà ora Y.
+    Poi mi ha chiesto come ho capito davvero chi ero.
+    E quel tono era <i>quel</i> tono.
+    Non mi ha chiesto quando ho capito che ero una strega, o anarchica o che.
+    "Che sono una donna trans?"
+    Ha iniziato a piangere a dirotto.
+    Mentre S.C. gli parlava col sigillo attivo, tutto quello che percepiva è ciò che sarebbe potuto essere, e non era.
+    Perché la prendo alla larga anche qui? A cosa servono le lotte se poi ancora mi vergogno di me?!?
+    Si è visto donna.
+    E non riesce a pensarsi diversamente, non riesce più.
+    E gli ho detto che ho avuto un'esperienza simile, ma più lenta.
+    Come un puzzle che crea la sua immagine un pezzo dopo l'altro, anno dopo anno.
+    "Ma alla fine l'immagine del puzzle è sempre stata lì, non trovi?"
+    Quando scenderemo in città, perché ormai è palese che accadrà presto, farò in modo di farle conoscere qualche altra sorella.
+    Forse l'albero di K. parla di G.M., e dietro al dolore generato dalle azioni di S.C., per G.M. questo è l'inizio della sua vera vita.
+    A presto.
+    O.U.J.
 
     ~ horizontalSEndingStorylet()
     -> main
