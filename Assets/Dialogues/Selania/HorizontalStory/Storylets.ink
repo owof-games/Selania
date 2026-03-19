@@ -22,6 +22,7 @@
 
 
 === docTwo_storylet ===
+//OUJ
 
     Cinque aprile '72
     Caro diario.
@@ -35,16 +36,26 @@
     E, con un po' di senso di colpa, ammetto di non sentire la mancanza della città, delle lotte, della fatica costante.
     Dei commenti di merda quando esco di casa o vado a fare la spesa.
     Prima non respiravo, e non me ne sono mai accorta.
+    Ora vado a preparare qualcosa per le altre.
+    A presto.
+    O.U.J.
 
     ~ horizontalSEndingStorylet()
     -> main
 
 
 === docThree_storylet ===
-Arrivo al luogo, primi assestamenti, si capisce come hanno trovato questo luogo (S.C.)
+//SC
 
-
-
+    Osman Spare disse "I grandi pensieri si oppongono a tutte le dottrine del conformismo".
+    Ho passato gli ultimi mesi a credere di aver perso il senno completamente, ma ora che siamo qui in questa manifestazione vivente del magico, credo di essere stata guidata sin da subito da un unico grande pensiero.
+    Non credo se ne siano ancora accorte, ma le compagne stanno tutte brillando, levitando come se fossero fatte d'aria, di leggerezza. Ognuna sta sbocciando nella forma migliore di sé.
+    Anche G.M., e questo mi sta facendo mettere i miei dubbi da parte. Non sarò mai così diretta come K., ma ho compiuto un atto di fiducia verso O.U.J., quando ha detto "Ancora non lo sa nemmeno G.M., ma è una di noi".
+    Per l'esattezza, ho donato un atto di fiducia verso ognuna delle mie compagne, per chiedere loro in cambio un unico grande salto nel vuoto.
+    E forse anche per questo ora sono un po' irrequieta. Mi sento come questo tempo mutevole. Tutte hanno trovato la propria luce qui, io ancora non ho sentito il mio richiamo, la mia voce.
+    Ieri sera, mentre guardavo la luna nel cielo, mi sono chiesta se questo silenzio, questa mancanza di scopo non sia una punizione per il mio piccolo tradimento.
+    Chiederò all'acqua di portarmi visione con una bella nuotata.
+    S.C.
 
     ~ horizontalSEndingStorylet()
     -> main
