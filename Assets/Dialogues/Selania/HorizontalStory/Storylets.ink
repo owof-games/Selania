@@ -444,7 +444,24 @@
 
 
 === docNineteen_storylet ===
-Dolore personale (G.M.)
+//GM
+    Ho riparlato con S.C., per la prima volta dopo quello che mi ha fatto.
+    Volevo solo capire che cosa ha utilizzato, e le sue tristi scuse sono scomparse sotto la luce dell'entusiasmo.
+    Dice che ha usato un sigillo che ha chiamato Altare, che fa parte di un Tempio (ha senso solo per lei questa cosa). E che Tempio è lo spazio della famiglia scelta, del crescere spiritualmente assieme.
+    Che lei l'ha voluto usare per farmi capire che non è vero che stiamo perdendo tempo, che è il contrario.
+    Che abbiamo uno strumento per salvare il mondo.
+    Le ho risposto che non ha salvato il mondo e nemmeno me, perché mi ha fatto vedere cose che non volevo vedere.
+    Mi ha chiesto di dirgliele, e non ce l'ho fatta.
+    Non ce l'ho fatta.
+    A me piace la magia, piace lottare.
+    Ma tutte le cose metafisiche di merda sono solo merda.
+    Merda merda merda.
+    Merda.
+    Mi sono visto come non volevo.
+    O come vorrei.
+    Mi son visto in un modo pieno, e troppo costoso.
+    Non credo di volerle più parlare.
+    G.M.
 
 
 
