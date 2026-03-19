@@ -255,10 +255,25 @@
 
 
 === docTwelve_storylet ===
-Scoperta dei sigilli (S.C.)
-
-
-
+//S.C.
+    Woolf ha scritto "Dicendole, non si rovinano forse le cose?"
+    Forse ho trovato il modo di non dirle, e migliorarle.
+    Marzo è passato, aprile pure.
+    Le ricerche di W.R. e G.M. sembrano essere arrivate a uno stallo: hanno trovato cinque simboli, cinque glifi.
+    Sono riuscite a fare ancora una variazione del pappagallino (trasformandolo in una falena) e a farlo tornare alla sua forma prima che l'inchiostro si solidificasse.
+    La bestiola è ancora affezionata a G.M., ma non ci ha dato più una singola goccia di inchiostro.
+    Ma forse non serve.
+    Ho scoperto che questi glifi rispondo alle parole.
+    Ci sono cose che dico che attivano la foglia, e altre il triangolo. O la stella.
+    Cinque glifi, come cinque sono i gruppi che raccolgono le cose di questo luogo.
+    Forse bastano le giuste parole per produrre una trasformazione.
+    Alchimia verbale.
+    Tre giorni fa trovato cinque pietre sulla spiaggia, cinque molto simili. Mi sono fidata dell'istinto e vi ho inscritto i glifi.
+    Li tengo con me, e spesso reagiscono anche alle frasi delle mie compagne.
+    E a proposito delle mie compagne.
+    Ieri ho passato la notte con G.M.
+    Non facevo sesso da così tanto tempo che ho temuto stessi per avere un infarto.
+    Quando si è addormentato accanto a me, il glifo che sembra una croce ha brillato per ore.
 
     ~ horizontalSEndingStorylet()
     -> main
