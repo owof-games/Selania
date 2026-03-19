@@ -304,7 +304,7 @@
 
 
 === docFourteen_storylet ===
-//C.
+//Y.
 
     Qualcosa non va.
     Qualcosa di grosso e no, me lo ripeto anche ora, non è colpa del trip con l'Olobino.
@@ -330,7 +330,7 @@
     E questa è la cosa che non va.
     Perché abbiamo trovato qualcosa che è troppo troppo troppo grosso per gestirlo così, tra di noi, con i nostri enormi entusiasmi.
     C'è un'ultima cosa: W.R. mi sta stretto.
-    Credo che il nome giusto per me ora sia C.
+    Credo che il nome giusto per me ora sia Y.
 
     ~ horizontalSEndingStorylet()
     -> main
@@ -350,7 +350,7 @@
     La pulisco, mantengo in funzione il forno, mi occupo di dare i giusti avanzi a rane e pesci, e il barattolo vuoto del riso è di nuovo pieno, ho della frutta fresca su un tavolo prima vuoto, e nessuna mosca viene a disturbare l'impasto che sta lievitando.
     Questa cosa è magica. 
     E dopo il dono che K. mi ha fatto, e dopo la storia del pappagallo, mi sono detta: forse "basta" curare una relazione per generare cambiamento.
-    Così oggi ho fatto delle domande mirate a K. mentre preparavamo uno stufato di funghi (non gli Olobini, che C. ci sta ancora parlando degli effetti dopo un mese).
+    Così oggi ho fatto delle domande mirate a K. mentre preparavamo uno stufato di funghi (non gli Olobini, che Y. ci sta ancora parlando degli effetti dopo un mese).
     Ed è stata una bella occasione anche per capire come sta.
     Da una parte è felice delle scoperte che sta facendo in serra, e del rapporto con Franco.
     Dall'altra si è resa conto anche lei che c'è qualcosa tra S.C. e G.M., ed è preoccupata.
@@ -367,10 +367,26 @@
 
 
 === docSixteen_storylet ===
-Notizie di un altro attentato, voglia di agire, dubbi sull'esperienza (G.M.)
+//G.M. 
 
+    Contro di questa esperienza.
+    1. O.U.J. mi ha fatto una paternale sulla mia relazione con S.C.
+    2. Non sto imparando niente di nuovo su glifi o che, e tutte le mie intuizioni sono servite solo a Y. ed S.C.
+    3. Mi sento solo, isolato. Il sesso con S.C. mi fa volare, ma poi mi sento solo.
+    4. C'è stato un altro attentato a Milano, a maggio. L'ho scoperto solo ora perché sono settimane che ogni tanto fuggo da qui per andare al paese più vicino. Tanto non se ne accorgono.
+    5. Sono stanco di mangiare riso e funghi.
+    6. Non sarò mai una strega.
+    7. Mi manca mia madre. Temo sarà davvero preoccupata.
+    8. La roba successa a Y., il modo in cui è cambiata, mi terrorizza. Si vede che è felice, ma boh, no. Non voglio che accada anche a me.
 
+    Pro di questa esperienza.
+    1. Vado molto più d'accordo con K., è quasi protettiva, e mi sta insegnando tanto sulle piante.
+    2. Amo S.C.. Lo so da tempo ormai, ma non ho il coraggio di dirglielo.
 
+    Ma la cosa più difficile di tutte, è ammettere che qui non sono utile per niente. Ma laggiù i fasci continuano a uccidere persone. E l'unica cosa che so è che voglio cambiare le cose.
+    Per cui credo che entro fine settimana dirò alle altre che me ne andrò.
+    Abbiamo le compagne rimaste in città, quelle che non sanno della congrega. Mi riunirò a loro.
+    G.M.
 
     ~ horizontalSEndingStorylet()
     -> main
