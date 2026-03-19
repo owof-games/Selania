@@ -498,10 +498,19 @@
 
 
 === docTwentyOne_storylet ===
-L'ultima cena (G.M.)
-
-
-
+//GM
+    O.U.J. ha proposto una festa per festeggiare il 25 aprile.
+    Per la prima volta da mesi ci siamo ritrovate tutte al tavolo, ma è andato tutto davvero di merda.
+    O.U.J. ha fatto domande a tutte, domande leggere, per facilitare la conversazione.
+    K. e io siamo intervenute per un po', ma come S.C. ha parlato, ci siamo fatte mute.
+    Mi spiace, mi pesa, ma non ce la faccio.
+    S.C. è stata il mio primo amore, e la mia prima volta.
+    E ha tradito la mia fiducia.
+    A un certo punto K. ha chiesto a me e O.U.J. se ci andava di vedere una cosa, ha preso del vino che ha fatto in questi mesi e ci ha portate a quella bacinella che K. chiama "fontana".
+    Sta crescendo un albero.
+    Dice che è il segno che le cose possono crescere anche se butta male.
+    Era buio e così ho pianto.
+    E poi ci siamo ubriacate sul prato.
 
     ~ horizontalSEndingStorylet()
     -> main
