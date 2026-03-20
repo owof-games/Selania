@@ -43574,7 +43574,7 @@ PrefabInstance:
     - target: {fileID: 7465546172250548277, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 7029f32129f394b4198b45f5f352b989, type: 3}
+      objectReference: {fileID: 21300000, guid: 1d256db4f80c36348a40fb722de32f63, type: 3}
     - target: {fileID: 8235661390823931172, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: inkName
       value: FromForestToLibraryBlocked
