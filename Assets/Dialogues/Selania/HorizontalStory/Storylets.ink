@@ -1,7 +1,7 @@
 === docOne_storylet ===
 //GM
 
-    Le altre stanno finendo di sistemarsi.
+    Le altre stanno finendo di sistemarsi.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docDump
     W.R. è su di giri, si è già persa due volte.
     E poi sarei io quello piccolo del gruppo.
     Beh: quello piccolo continua a pensare che sia un'idea idiota, e che dobbiamo andare a menarli quelli là, non cercare le magie.
@@ -26,7 +26,7 @@
 === docTwo_storylet ===
 //OUJ
 
-    Cinque aprile '72
+    Cinque aprile '72#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docKitchen
     Caro diario.
     L'unica cosa che mi ero ripromessa era di non scrivere più "Caro diario" come se avessi dodici e non cinquantasei anni.
     Ma non sai quanto mi sento viva e giovane!
@@ -51,7 +51,7 @@
 === docThree_storylet ===
 //SC
 
-    Osman Spare disse "I grandi pensieri si oppongono a tutte le dottrine del conformismo".
+    Osman Spare disse "I grandi pensieri si oppongono a tutte le dottrine del conformismo".#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docNest
     Ho passato gli ultimi mesi a credere di aver perso completamente il senno, ma ora che siamo qui in questa testimonianza vivente del magico, credo di essere stata guidata sin da subito da un unico grande pensiero.
     Non credo se ne siano ancora accorte, ma le compagne stanno tutte brillando, levitando come se fossero fatte d'aria, di leggerezza. Ognuna sta sbocciando nella forma migliore di sé.
     Anche G.M., spegnendo così alcuni dei miei dubbi. 
@@ -70,7 +70,7 @@
 === docFour_storylet ===
 //K.
 
-    Ora: nonna ha giurato fino alla fine che fosse una mia invenzione.
+    Ora: nonna ha giurato fino alla fine che fosse una mia invenzione.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docGreenhouse
     Eppure ricordo di aver sfogliato per anni quando ero piccola una sua guida: "Fitomanzia ed erboristeria esoterica".
     Probabilmente non voleva che mamma ci allontanasse di nuovo.
     Una delle mie piante preferite era il Ranuncolo di sabbia: un fiore che sboccia solo quando in casa va tutto bene.
@@ -95,7 +95,7 @@
 
 === docFive_storylet ===
 //WR.
-    Sì spostano!
+    Sì spostano!#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docLibrary
     Non ha senso, ma si spostano!
     L'ho detto a S.C. e mi ha detto di numerare le copertine. Come se fossi arrivata qui con un pennarello e.
     Ah, la penna.
@@ -122,7 +122,7 @@
 
 === docSix_storylet ===
 //K.
-    A distanza di un mese posso dire con certezza solo una cosa: non sto capendo nulla di questo posto.
+    A distanza di un mese posso dire con certezza solo una cosa: non sto capendo nulla di questo posto.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docGreenhouse
     L'idea era quella di sviluppare uno sguardo di insieme sul rapporto tra ambiente e piante, così da iniziare a fare un po' di prove, magari coltivare in serra qualcosa di queste magnifiche erbe, e capirne il portato magico.
     E le piante di per sé fanno cose da piante: i cespugli della foresta sono un universo di vita, le loro foglie sono pungenti ma ricche di oli profumati.
     Il pino della stazione (credo sia un pino) ha i suoi aghetti, e la sua forma è quella di una pianta esposta a un forte vento costante.
@@ -148,7 +148,7 @@
 
 === docSeven_storylet ===
 //S.C.
-    Cosa ha imparato S.C. a distanza di quattro mesi?
+    Cosa ha imparato S.C. a distanza di quattro mesi?#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docNest
     Che questo posto non cambia, per lo meno non in modo permanente.
     Ogni area ha la sua stagione, i suoi ritmi, i suoi movimenti.
     Mi sento come se fossi nelle prime pagine di "Gita al faro", e tutto fosse in un movimento costante e sospeso.
@@ -164,7 +164,7 @@
 
 === docEight_storylet ===
 //W.R.
-    O.U.J. ha deciso di fare una festa per i primi sei mesi qui.
+    O.U.J. ha deciso di fare una festa per i primi sei mesi qui.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docLibrary
     E mi sono accorta che non vedevo S.C. e G.M. da giorni.
     Forse devo darmi una calmata coi miei libri.
     Ma ci sono storie che parlano di cose che non sono ancora accadute, di oggetti che non ho mai sentito nominare.
@@ -187,7 +187,7 @@
 
 === docNine_storylet ===
 //G.M.
-    Non mi aspettavo di fare una grossa scoperta, ma forse ora anche K. crederà che posso essere una strega.
+    Non mi aspettavo di fare una grossa scoperta, ma forse ora anche K. crederà che posso essere una strega.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docDump
     O uno strego? Non mi piace l'idea dello stregone.
     Qualche mese fa l'ho aiutata con gli uccellini della stazione, e da lì mi sono affezionato a loro, a quel posto.
     Ho anche iniziato anche a sistemare la vecchia pensilina, la mappa, forse sperando che arrivi qualcuno di nuovo, per rompere questa routine. 
@@ -213,7 +213,7 @@
 
 === docTen_storylet ===
 //K.
-    Se mesi fa ero basita da un pino che si riscalda, ora quell'evento mi sembra una sciocchezza rispetto a quello che sto per scrivere.
+    Se mesi fa ero basita da un pino che si riscalda, ora quell'evento mi sembra una sciocchezza rispetto a quello che sto per scrivere.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docGreenhouse
     Sono diventata la migliore amica di una rana.
     Si fa chiamare Franco, e dico "si fa" perché è l'acronimo di un nome infinito.
     L'ho incontrato mentre girellavo fuori dalla serra, cercando di capire perché non riesco a farci crescere nulla di commestibile, e lui mi ha visto, e mi ha chiesto se fosse passata la carpa della sera, che doveva mandare una lettera a sua madre.
@@ -241,7 +241,7 @@
 
 === docEleven_storylet ===
 //W.R.
-    Ho sedici cose che mi corrono in testa assieme e se non le metto giù ora URLO.
+    Ho sedici cose che mi corrono in testa assieme e se non le metto giù ora URLO.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docLibrary
     G.M., quel genio di G.M., è venuto da me verso Natale dicendomi che uno dei pappagallini gli ha dato dell'inchiostro.
     L'ha raccolto in una boccetta, era una goccia soltanto.
     Abbiamo passato più di due mesi a chiederci che farne.
@@ -277,7 +277,7 @@
 
 === docTwelve_storylet ===
 //S.C.
-    Woolf ha scritto "Dicendole, non si rovinano forse le cose?"
+    Woolf ha scritto "Dicendole, non si rovinano forse le cose?"#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docNest
     Forse ho trovato il modo di non dirle, e migliorarle.
     Marzo è passato, aprile pure.
     Le ricerche di W.R. e G.M. sembrano essere arrivate a uno stallo: hanno trovato cinque simboli, cinque glifi.
@@ -304,7 +304,7 @@
 
 === docThirteen_storylet ===
 //K.
-    Franco ed io siamo ufficialmente migliori amici e compagni di esplorazioni.
+    Franco ed io siamo ufficialmente migliori amici e compagni di esplorazioni.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docGreenhouse
     Anche perché O.U.J. è sempre presa dalla cucina e dal farti domande.
     W.R. crede di poter generare una magia enorme dalle emozioni dei racconti della biblioteca.
     Mentre G.M. e S.C. sono spesso assieme.
@@ -333,7 +333,7 @@
 === docFourteen_storylet ===
 //Y.
 
-    Qualcosa non va.
+    Qualcosa non va.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docLibrary
     Qualcosa di grosso e no, me lo ripeto anche ora, non è colpa del trip con l'Olobino.
     Cavolo, non me ne facevo uno così dai tempi della vecchia congrega.
     Chissà se Marzio fa ancora quell'idromele potenziato?
@@ -369,7 +369,7 @@
 === docFifteen_storylet ===
 //OUJ
 
-    Diciassette agosto '73
+    Diciassette agosto '73#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docKitchen
     Caro diario.
     Oggi ho passato una giornata a cucinare con K., e abbiamo utilizzato alcune delle piante che sta facendo crescere nella serra.
     Fortunatamente non è successo più quello che è accaduto quando mi ha donato quel bel <i>Non ti scordar di te</i>.
@@ -401,7 +401,7 @@
 === docSixteen_storylet ===
 //G.M. 
 
-    Contro di questa esperienza.
+    Contro di questa esperienza.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docDump
     1. O.U.J. mi ha fatto una paternale sulla mia relazione con S.C..
     2. Non sto imparando niente di nuovo su glifi o che, e tutte le mie intuizioni sono servite solo a Y. ed S.C..
     3. Mi sento isolato. Il sesso con S.C. mi fa volare, ma poi mi sento solo.
@@ -428,7 +428,7 @@
 
 === docSeventeen_storylet ===
 //SC
-    Inizio a sentire il peso della situazione.
+    Inizio a sentire il peso della situazione.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docNest
     O.U.J. e K. ce l'hanno con me per il rapporto con G.M., dicono che la differenza di età è troppa, che è minorenne, che abbiamo bisogni diversi e capacità diverse di gestire la cosa.
     Ne ho parlato con lui, e sappiamo entrambi che è solo sesso.
     Ma vuole andarsene.
@@ -451,7 +451,7 @@
 
 === docEighteen_storylet ===
 //K.
-    Oggi Franco mi ha portato alla fontana.
+    Oggi Franco mi ha portato alla fontana.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docGreenhouse
     Non ci andavo da quando siamo arrivate qui, perché vedere il mondo fuori, quel tipo di mondo fuori con fabbriche e casermoni, mi mette tristezza.
     Mi ha offerto una talea e mi ha ascoltato mentre scavavo, fertilizzavo, coprivo.
     Abbiamo cacciato S.C. dalla camera comune.
@@ -481,7 +481,7 @@
 
 === docNineteen_storylet ===
 //GM
-    Ho riparlato con S.C., per la prima volta dopo quello che mi ha fatto.
+    Ho riparlato con S.C., per la prima volta dopo quello che mi ha fatto.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docDump
     Volevo solo capire che cosa ha utilizzato, e le sue tristi scuse sono scomparse sotto la luce dell'entusiasmo.
     Dice che ha usato un sigillo che ha chiamato Altare, che fa parte di un Tempio (ha senso solo per lei questa cosa).
     E che Tempio è lo spazio della famiglia scelta, del crescere spiritualmente assieme.
@@ -506,7 +506,7 @@
 
 === docTwenty_storylet ===
 //OUJ
-    Otto gennaio '74
+    Otto gennaio '74#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docKitchen
     Caro odiato diario.
     Caro perché mi sopporti, odiato perché parlo più con te che con le altre.
     Y. se ne è andata.
@@ -537,7 +537,7 @@
 
 === docTwentyOne_storylet ===
 //GM
-    O.U.J. ha proposto una festa per festeggiare il 25 aprile.
+    O.U.J. ha proposto una festa per festeggiare il 25 aprile.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docDump
     Per la prima volta da mesi ci siamo ritrovate tutte al tavolo.
     Tutte, tranne Y.
     Che a quanto pare prima di andarsene ha lanciato un incantesimo di pioggia permanente sulla spiaggia per far desistere o punire S.C., non ne ho idea.
@@ -559,7 +559,7 @@
 
 === docTwentyTwo_storylet ===
 //OUJ
-    Otto maggio '74
+    Otto maggio '74#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docKitchen
     Caro diario.
     Sto per dirti cose così private che mi sembra di fare un torto anche solo a scrivertele qui.
     Ci sono dei modi amari di sapere di avere ragione.
@@ -589,7 +589,7 @@
 
 === docTwentyThree_storylet ===
 //OUJ
-    Ventinove maggio '74
+    Ventinove maggio '74#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docKitchen
     Caro diario, siamo solo tu e io ormai.
     Tu, io e S.C., se trovo il coraggio di andare a trovarla sulla spiaggia.
     Y. è stata gravemente ferita a Brescia. Una bomba in una piazza mentre protestava contro i terroristi fascisti.
@@ -619,7 +619,7 @@
 
 === docTwentyFour_storylet ===
 //S.C.
-    Sono arrivata a una quadra.
+    Sono arrivata a una quadra.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docNest
     Esistono venti sigilli stabili.
     Li chiamo "stabili" perché non mutano, non influenzano il mondo, ma sono lenti con cui interpretarlo, capirlo.
     E sono composti sempre da due glifi irripetibili.
@@ -640,7 +640,7 @@
 
  === docTwentyFive_storylet ===
 //OUJ
-    Cara S.C., non so quando leggerai questo biglietto, visto che non ti allontani dalla spiaggia da giorni.
+    Cara S.C., non so quando leggerai questo biglietto, visto che non ti allontani dalla spiaggia da giorni.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docKitchen
     Non so quanto cibo andato a male ho buttato.
     Cosa hai mangiato sulla spiaggia? 
     Hai mangiato?
