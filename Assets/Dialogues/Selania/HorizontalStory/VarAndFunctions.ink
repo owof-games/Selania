@@ -1,15 +1,13 @@
 //Variabili e liste
 LIST horizontalS_allDocs = docOne, docTwo, docThree, docFour, docFive, docSix, docSeven, docEight, docNine, docTen, docEleven, docTwelve, docThirteen, docFourteen, docFifteen, docSixteen, docSeventeen, docEighteen, docNineteen, docTwenty, docTwentyOne, docTwentyTwo, docTwentyThree, docTwentyFour, docTwentyFive
 
-//Alt: 1, 9, 16, 19, 21 (uguale)
+
+//Nota: se volessi sbloccare alcuni storylets solo verso la fine, quelli più sensati sarebbero docTwentyFour docTwentyFive docEighteen docFourteen
+
 VAR horizontalS_dump = (docOne, docNine, docSixteen,  docNineteen, docTwentyOne)
-//Alt: 2, 15, 20, 22, 23, 25 (uguale)
 VAR horizontalS_kitchen = (docTwo, docFifteen, docTwenty, docTwentyTwo, docTwentyThree, docTwentyFive)
-//Alt: 4, 6, 10, 13, 18, uno in più
 VAR horizontalS_greenhouse = (docFour, docSix, docTen, docThirteen,  docEighteen)
-//Alt: 3, 7, 12, 17, 24
 VAR horizontalS_nest = (docThree, docSeven, docTwelve, docSeventeen, docTwentyFour)
-//alt: 5, 8, 11, 14, uno in meno
 VAR horizontalS_library = (docFive, docEight, docEleven, docFourteen)
 
 //Questo è il documento che leggerò sulla panchina
