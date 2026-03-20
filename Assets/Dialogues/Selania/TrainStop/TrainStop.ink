@@ -84,7 +84,7 @@
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-        Ciao {player_name}, come stai?#speaker:{firstChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_unknown
+        Ciao {player_name}, come stai?#speaker:{firstChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_firstChar
         Qui, questi primi giorni qui sono stati strani.
         A quanto pare la mia assenza è stata solo per qualche ora.
         E nessunə mi ha fatto domande su nulla.
@@ -176,7 +176,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-    Ciao {player_name}, qui è sempre {charNameOne} che ti scrive.#speaker:{firstChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_unknown
+    Ciao {player_name}, qui è sempre {charNameOne} che ti scrive.#speaker:{firstChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_firstChar
        
        {
             - firstChar_ActualName has Triangolo:
@@ -285,7 +285,7 @@
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
     
-    Ciao ama!#speaker:{firstChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_unknown
+    Ciao ama!#speaker:{firstChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_firstChar
     
      {
             - firstChar_ActualName has Triangolo:
@@ -451,7 +451,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-        Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}.#speaker:{secondChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_unknown
+        Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}.#speaker:{secondChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_secondChar
         Cioè a te.
         Anche se non ho mica capito come te la mando la lettera.
         Ma come sta la rana?
@@ -543,7 +543,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-        Che strano.#speaker:{secondChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_unknown
+        Che strano.#speaker:{secondChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_secondChar
         Ho lasciato l'altra lettera sul comodino di notte.
         E poi è sparita.
         Non so mica se ti è arrivata.
@@ -639,7 +639,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-        Ciao {player_name}.#speaker:{secondChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_unknown
+        Ciao {player_name}.#speaker:{secondChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_secondChar
                 
                 {
      
@@ -759,7 +759,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-        {charNameThree}: Lettere random note da parte della personaggia #speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)} #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #portrait:third_neutral
+        {charNameThree}: Lettere random note da parte della personaggia#speaker:{thirdChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_thirdChar
         
         {
             - thirdChar_possibleStates has Riccio: 
@@ -775,7 +775,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-        {charNameThree}: seconda lettera
+        {charNameThree}: seconda lettera#speaker:{thirdChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_thirdChar
         
         {
             - thirdChar_possibleStates has Riccio: 
@@ -791,7 +791,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-        {charNameThree}: terza lettera
+        {charNameThree}: terza lettera#speaker:{thirdChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_thirdChar
         
         {
             - thirdChar_possibleStates has Riccio: 
@@ -823,7 +823,7 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-        {charNameFour}: Lettere random note da parte della personaggia#speaker:{fourthChar_tag()} #inkA:{ink_tag_a(fourthChar_InkLevel)} #inkB:{ink_tag_b(fourthChar_InkLevel)} #inkC:{ink_tag_c(fourthChar_InkLevel)}  #inkD:{ink_tag_d(fourthChar_InkLevel)} #portrait:fourth_neutral
+        {charNameFour}: Lettere random note da parte della personaggia#speaker:{fourthChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_fourthChar
         
         {
             - fourthChar_possibleStates has Riccio: 
@@ -839,7 +839,7 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-        {charNameFour}: seconda lettera
+        {charNameFour}: seconda lettera#speaker:{fourthChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_fourthChar
         
         {
             - fourthChar_possibleStates has Riccio: 
@@ -854,7 +854,7 @@
     = three
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
-        {charNameFour}: terza lettera
+        {charNameFour}: terza lettera#speaker:{fourthChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_fourthChar
     
         {
             - fourthChar_possibleStates has Riccio: 
