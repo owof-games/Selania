@@ -356,7 +356,6 @@
         //Metto in pausa le missioni speciali
         ~ frog_pauseSpecialMission = frog_pauseSpecialMissionMax
         //Rimetto a posto i vari assets
-        ~ move_entity(TheKitchenFrog, Safekeeping)
         ~ move_entity(Franco, Pond)
         ~ kitchen_kitchenOccupied = false
 

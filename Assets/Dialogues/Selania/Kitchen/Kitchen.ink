@@ -45,7 +45,7 @@
         -> pre_start_cooking_with_second_char
 
     //Scena in cui cuciniamo da solx
-    - are_two_entities_together(TheKitchenFrog, PG) && not cooking_alone && (kitchen_secondCharIsCooking == false) && (kitchen_firstCharIsCooking == false):
+    - are_two_entities_together(Franco, PG) && not cooking_alone && (kitchen_secondCharIsCooking == false) && (kitchen_firstCharIsCooking == false):
         -> cooking_alone
     
     - else:
@@ -54,5 +54,5 @@
 }
 
 === the_kitchen_frog ===
-        + {are_two_entities_together(TheKitchenFrog, PG)} [TheKitchenFrog]
+        + {are_two_entities_together(Franco, PG)} [Franco]
     -> cooking_alone
