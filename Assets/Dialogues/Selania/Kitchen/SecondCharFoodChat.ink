@@ -151,7 +151,7 @@
         
             + <i>Preparo una base per biscotti sportivi.
                 ~ kitchen_recipeNoun = "Biscotti"
-                -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, fireC, decreaseNo)->
                 Bleah.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Non i biscotti.
                 Ma lo sport.
@@ -159,21 +159,21 @@
                
             + <i>Stendo della sfoglia per brioches giocose.
                 ~ kitchen_recipeNoun = "Brioches"
-                -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, airC, decreaseNo)->
                 E a chi giochi?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 A me piace tantissimo fare quelli di intelligenza ora.
                 Quando sono a casa di mio fratello posso starci tutto il tempo che voglio!
              
             + <i>Impasto un preparato per crostate socievoli.
                ~ kitchen_recipeNoun = "Crostata"
-               -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
+               -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->
                Nel senso che stai sempre con le persone?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                Sempre?
                Anche dopo la scuola e il lavoro?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
         
             + <i>Pulisco le formine per gelati artistici.
                 ~ kitchen_recipeNoun = "Gelato"
-                -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->
                 Mmm.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 So che è roba che piace a {charNameOne}.
                 A me mi piace fare le cose.
@@ -181,7 +181,7 @@
     
             + <i>Raffreddo la frutta per sorbetti sonnacchiosi.
                 ~ kitchen_recipeNoun = "Sorbetto"
-                -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, waterC, decreaseNo)->
                 {first_second_chit_chat: Ancora con questa cosa del dormire!|Che balle dormire!}
                 Ci sono così tante cose da fare!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                 Che noia!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -256,7 +256,7 @@
         
             + <i>Aggiungo del caramello della perplessità.
                 ~ kitchen_recipeAdjective = "della perplessità"
-                -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, airC, decreaseNo)->
                 Anche io.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Sono così difficili.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
                 È come capire degli animaletti strani.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -266,13 +266,13 @@
 
             + <i>Spolvero del cacao della convinzione.
                 ~ kitchen_recipeAdjective = "della convinzione"
-                -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->
                 Magari mentre siamo assieme capisco qualcosa da te allora.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Magari.
              
             + <i>Verso dello sciroppo della negazione.
                ~ kitchen_recipeAdjective = "della negazione"
-               -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
+               -> glyph_modifier_variation_management(PG, fireC, decreaseNo)->
                 Magari allora puoi provare anche tu con gli animali.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 O un'altra cosa che ti piace.
                 L'amico di mio fratello usa i segni zodiacali.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
@@ -281,14 +281,14 @@
                 
             + <i>Grattugio della noce della vicinanza.
                 ~ kitchen_recipeAdjective = "della vicinanza"
-                -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->
                 Si no boh.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Le persone vicine mi sembrano ancora più incasinate.
                 Per loro devo avere almeno tre animali per capirle.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
     
             + <i>Mescolo della vaniglia della solitudine.
                 ~ kitchen_recipeAdjective = "della solitudine"
-                -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, waterC, decreaseNo)->
                 Già.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Si no boh.
                 Quindi capita anche alle altre persone.
@@ -353,7 +353,7 @@
 
             + <i>Guarnisco con delle ciliege deluse.
                 ~ kitchen_recipeComplement = "con ciliege deluse"
-                -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, airC, decreaseNo)->
                 A mamma piace tanto quella parola.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Delusa.
                 Di solito quando dice "{charNameTwo}, mi hai delusa."#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
@@ -363,20 +363,20 @@
                
             + <i>Decoro con della granella soddisfatta.
                 ~ kitchen_recipeComplement = "con granella soddisfatta"
-                -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->
                 Deve essere bello.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Come l'amico di mio fratello.
                 Mio fratello dice che ha un cuore grande e gli vogliono tutti bene.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
              
             + <i>Rifinisco con della glassa sofferente.
                ~ kitchen_recipeComplement = "con glassa sofferente"
-               -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->
+               -> glyph_modifier_variation_management(PG, waterC, decreaseNo)->
                 Mmm.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Mi dispiace.
         
             + <i>Aggiungo delle crema migliorante.
                 ~ kitchen_recipeComplement = "con crema migliorante"
-                -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, fireC, decreaseNo)->
                 Nonna dice che tutto migliora, sempre.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Però a me interessa più che una cosa arriva da qualche parte.
                 Mica puoi migliorare all'infinito.
@@ -384,7 +384,7 @@
     
             + <i>Spalmo della confettura altalenante.
                 ~ kitchen_recipeComplement = "con confettura altalenante"
-                -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->
                 Cioè che dipende dalle persone?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 O dalla persona?
                 Come mamma che un giorno ti adora e poi il giorno dopo non ti parla più?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
@@ -467,19 +467,19 @@
             
             + <i>Preparo un mediocre stampo da cupcake.
                 ~ kitchen_recipeNoun = "Cupcake"
-                -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, airC, decreaseNo)->
                     Nonna dice sempre che la virtù sta a metà.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     Mamma dice che è una frase da perdenti.
 
             + <i>Pulisco le migliori formine da muffin.
                 ~ kitchen_recipeNoun = "Muffin"
-                -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, fireC, decreaseNo)->
                     Sii.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                     Tra migliori ci capiamo!!!
              
             + <i>Infarino la peggior teglia per tartellette.
                ~ kitchen_recipeNoun = "Tartellette "
-               -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->
+               -> glyph_modifier_variation_management(PG, waterC, decreaseNo)->
                     Uh.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     Io ad esempio sono il peggiore a ginnastica.
                     Solo Lara è peggio di me.
@@ -487,14 +487,14 @@
         
             + <i>Riscaldo l'unica piastra da waffle.
                 ~ kitchen_recipeNoun = "Waffle"
-                -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->
                     Sulla cima.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     Anche io ci arrivo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                     Sì sì.
     
             + <i>Controllo una disperata teglia da plumcake.
                 ~ kitchen_recipeNoun = "Plumcake"
-                -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->
                     Mi sembra piena di buchi, {player_name}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     Che vuole dire?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
                     Non capisco.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
@@ -575,20 +575,20 @@
         
                 + <i>Trito della menta isolata.
                     ~ kitchen_recipeAdjective = "dell'isolamento"
-                    -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->
+                    -> glyph_modifier_variation_management(PG, waterC, decreaseNo)->
                     Deve essere difficile questo lavoro allora.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     Perché c'è sempre gente in giro.
                     E devi parlare con noi.
                 
                 + <i>Sbuccio della vaniglia frenetica.
                     ~ kitchen_recipeAdjective = "della frenesia"
-                    -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
+                    -> glyph_modifier_variation_management(PG, fireC, decreaseNo)->
                     Un po' come {mentorName} allora.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     Che corre sempre da una parte all'altra.
                 
                 + <i>Spremo del cedro organizzato.
                     ~ kitchen_recipeAdjective = "dell'organizzazione"
-                    -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
+                    -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->
                     Io ci provo a organizzarmi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     Ma non mi viene benissimo.
                     Voglio fare le cose con calma.
@@ -596,14 +596,14 @@
             
                 + <i>Setaccio della cannella ritardataria.
                     ~ kitchen_recipeAdjective = "dell'indugio"
-                    -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
+                    -> glyph_modifier_variation_management(PG, airC, decreaseNo)->
                     Lara in classe fa sempre così.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     Arriva sempre il giorno dopo coi compiti.
                     La maestra dice che Lara si dimenticherà la testa a casa un giorno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
         
                 + <i>Frullo del caffè caotico.
                     ~ kitchen_recipeAdjective = "della caoticità"
-                    -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->
+                    -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->
                     Io non posso bere il caffè.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                     Mamma dice che faccio già abbastanza casini da solo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     Però conosco il caos.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
@@ -687,27 +687,27 @@
 
             + <i>Do una spolverata di moltissimo cacao.
                 ~ kitchen_recipeComplement = "con moltissimo cacao"
-                -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, waterC, decreaseNo)->
                 Però ora hai me!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 E {charNameOne}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
                 E me!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 
             + <i>Incorporo un poco di marmellata.
                 ~ kitchen_recipeComplement = "con poca marmellata"
-                -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, airC, decreaseNo)->
                 In effetti già qui hai fatto tante amicizie, vero?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Anche con me.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
              
             + <i>Non aggiungo nulla.
                ~ kitchen_recipeComplement = "senza guarnizioni"
-               -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
+               -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->
                 Woah.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 Deve essere bello.
                 Spero di essere anche io tuo amico!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
         
             + <i>Spennello della glassa solitaria.
                 ~ kitchen_recipeComplement = "con glassa solitaria"
-                -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, fireC, decreaseNo)->
                 Mio fratello è uno solitario.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Dice che è un orso.
                 Anche il suo amico dice che è un orso.
@@ -716,7 +716,7 @@
     
             + <i>Farcisco con pochi ma affidabili pezzetti di cioccolato.
                 ~ kitchen_recipeComplement = "con affidabili pezzetti di cioccolato"
-                -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->
                 Come nonna.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
                 Che dice che la vita ti da un grande amore, due grandi amicizie, tre grandi rotture di gatto.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Non abbiamo un gatto.
@@ -816,14 +816,14 @@
         
             + (bugie_innocenti) <i>Sbuccio delle pesche innocenti.
                 ~ kitchen_recipeNoun = "Pesche"
-                -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, airC, decreaseNo)->
                 Esatto!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 Ci sono bugie che non fanno male a nessuno.
                 E sono anche carine!
                
             + (bugie_omesse) <i>Affetto delle mele omesse.
                 ~ kitchen_recipeNoun = "Mele"
-                -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, waterC, decreaseNo)->
                 Come quando non dici che hai fatto una cosa.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 Fino a quando non ti scoprono.
                 Però poi finisci nei guai.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
@@ -831,14 +831,14 @@
              
             + (bugie_difensive)<i>Taglio delle pere difensive.
                ~ kitchen_recipeNoun = "Pere"
-               -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
+               -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->
                A scuola servono le bugie per difendersi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
                Tantissime.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                Le maestre pensano sempre che hai fatto qualcosa di brutto.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
         
             + (bugie_nessuna)<i>Sciacquo delle prugne impeccabili.
                 ~ kitchen_recipeNoun = "Prugne"
-                -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->
                 Si no boh.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Nessuna persona non dice le bugie.
                 Anche perché ci ricordiamo sempre le cose diverse da come sono.
@@ -847,7 +847,7 @@
     
             + (bugie_autoinganno)<i>Spremo delle arance dell'autoinganno
                 ~ kitchen_recipeNoun = "Arance"
-                -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, fireC, decreaseNo)->
                 Come quando mi dico che a ginnastica sono stato bravo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Anche se sono caduto con la faccia sulle scarpe di Tommaso.
                 Che schifo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
@@ -933,19 +933,19 @@
 
             + <i>Shakero un bicchiere vuoto.
                 ~ kitchen_recipeAdjective = "del vuoto"
-                -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->
                 Non è vero!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Abbiamo già parlato tantissimo!
                
             + <i>Aggiungo della lavanda empatica.
                 ~ kitchen_recipeAdjective = "dell'empatia"
-                -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, waterC, decreaseNo)->
                 Come quando io mi faccio male e tu senti dolore?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Deve essere faticoso!
              
             + <i>Grattugio della scorza di chinotto sportivo.
                ~ kitchen_recipeAdjective = "della sportività"
-               -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
+               -> glyph_modifier_variation_management(PG, fireC, decreaseNo)->
                 Magari conosci Jin.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
                 O suo fratello.
                 Il fratello di Jin è ENORME!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -954,14 +954,14 @@
         
             + <i>Misuro dell'acqua di rose erudita.
                 ~ kitchen_recipeAdjective = "dell'erudizione"
-                -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, airC, decreaseNo)->
                 Anche a me piace sapere le cose.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 Ma poi devi trovare le persone a cui piacciono le cose che piacciono a te.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 O ti dicono che sei strano.
     
             + <i>Macino del pepe rosa divertito.
                 ~ kitchen_recipeAdjective = "del divertimento"
-                -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->
                 Scherzi e battute!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 Ma lontano dalle maestre.
                 E da {mentorName}.
@@ -1026,13 +1026,13 @@
         
             + <i>Unisco della cioccolata angosciata.
                 ~ kitchen_recipeComplement = "con cioccolata angosciata"
-                -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, waterC, decreaseNo)->
                 Vedi?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                 Perché dovrei diventare grande?!?
                
             + <i>Caramello delle scorze di limone indipendente.
                 ~ kitchen_recipeComplement = "con limone indipendente"
-                -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, fireC, decreaseNo)->
                 Perché fai quello che vuoi?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Questo è bello.
                 Per lo struzzo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
@@ -1042,20 +1042,20 @@
              
             + <i>Guarnisco con marshmallow responsabili.
                ~ kitchen_recipeComplement = "con marshmallow responsabili"
-               -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
+               -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->
                Sì no boh.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                Anche i bambini sono responsabili.
                Quindi non è tanto diverso no?
         
             + <i>Spolvero dello zenzero fallito.
                 ~ kitchen_recipeComplement = "con zenzero fallito"
-                -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->
                 Non voglio diventare grandeeeeeee.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
                 Non vogliooooo!
     
             + <i>Verso del succo d'ananas esplorativo.
                 ~ kitchen_recipeComplement = "con ananas esplorativo"
-                -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, airC, decreaseNo)->
                 Non ci avevo pensato.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Però posso viaggiare dove voglio.
                 Noi viaggiamo poco.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic

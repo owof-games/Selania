@@ -111,27 +111,27 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
 
             + <i>Soffriggo dei cubetti di grano del rispetto.
                 ~ kitchen_recipeNoun = "Zuppa di grano"
-                -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->
                 Uh, credo di capire.
 
             + <i>Impano delle striscioline di seitan malinconico.
                 ~ kitchen_recipeNoun = "Grigliata di seitan"
-                -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, waterC, decreaseNo)->
                 Credo mi dispiaccia, vero?
                 
             + <i>Sgrano dei fagioli del conflitto.
                ~ kitchen_recipeNoun = "Fagiolata"
-               -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
+               -> glyph_modifier_variation_management(PG, fireC, decreaseNo)->
                Non so se ti possa consolare, ma è una cosa comune.
         
             + <i>Sbollento delle cimette di broccolo della fiducia.
                 ~ kitchen_recipeNoun = "Cimetta di broccolo"
-                -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->
                 Sento anche io questa cosa.
     
             + <i>Schiaccio degli spicchi di aglio del distacco.
                 ~ kitchen_recipeNoun = "Crema d'aglio"
-                -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->
                 Merda.
             -  
         
@@ -162,27 +162,27 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
         
             + <i>Tosto del pepe dell'onestà.
                 ~ kitchen_recipeAdjective = "onesta"
-                -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->
                 Come Talco.
                
             + <i>Spargo della curcuma divertente.
                 ~ kitchen_recipeAdjective = "allegra"
-                -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, airC, decreaseNo)->
                 L'amicizia da balotta quindi.
              
             + <i>Aggiungo del cumino empatico.
                ~ kitchen_recipeAdjective = "empatica"
-               -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->
+               -> glyph_modifier_variation_management(PG, waterC, decreaseNo)->
                Quel tipo di rapporto che ti fa sentire ascoltata.
         
             + <i>Grattugio della cannella incondizionata.
                 ~ kitchen_recipeAdjective = "incondizionata"
-                -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->
                 Posso capire, ma non mi piace tantissimo come idea.
     
             + <i>Sminuzzo dello zenzero leale.
                 ~ kitchen_recipeAdjective = "leale"
-                -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, fireC, decreaseNo)->
                 Essere leali significa essere affidabili, vero?
             -      
         
@@ -220,27 +220,27 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
         
             + <i>Verso una mestolata di brodo del terrore.
                 ~ kitchen_recipeComplement = "con brodo del terrore"
-                -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, waterC, decreaseNo)->
                 Woah, {player_name}.
                
             + <i>Manteco della noce euforica.
                 ~ kitchen_recipeComplement = "con noce euforica"
-                -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->
                 Mi risuona tanto.
              
             + <i>Condisco con semi dell'"io? no, no è possibile!".
                ~ kitchen_recipeComplement = "con semi dell'<i>io? no, no è possibile!</i>"
-               -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
+               -> glyph_modifier_variation_management(PG, airC, decreaseNo)->
                 Coff Coff.
         
             + <i>Incorporo una cucchiata di olio delle lusinghe.
                 ~ kitchen_recipeComplement = "con olio delle lusinghe"
-                -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->
                 Uh, a qualcuno piace quando il suo pelo viene lisciato, vero?
     
             + <i>Sminuzzo una manciata di peperoncini arrapati.
                 ~ kitchen_recipeComplement = "con peperoncini arrapati"
-                -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, fireC, decreaseNo)->
                 Questa non me l'aspettavo, ma ci sta.
             -
             -> fourth_ingredient_dispatcher
@@ -283,26 +283,26 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
             
             + <i>Infarino confusamente delle tagliatelle.
                 ~ kitchen_recipeNoun = "Tagliatelle"
-                -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, airC, decreaseNo)->
                 Già.
                
             + <i>Stendo con decisione delle lasagne.
                 ~ kitchen_recipeNoun = "Lasagne"
-                -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, fireC, decreaseNo)->
                 Uh.
             + <i>Affetto con disinteresse delle bruschette.
                ~ kitchen_recipeNoun = "Bruschette"
-               -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
+               -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->
                Quindi sei più del tipo "Vediamo dove andiamo?
         
             + <i>Impasto furiosamente delle arancine.
                 ~ kitchen_recipeNoun = "Arancine"
-                -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, fireC, decreaseNo)->
                Immagino che la furia sia un modo per guardare a ciò che non va ora.
                
             + <i>Scaldo disperatamente delle tortillas.
                 ~ kitchen_recipeNoun = "Tortillas"
-                -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->
                 È un sentimento.
             -  
        
@@ -333,23 +333,23 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
 
             + <i>Aggiungo con convinzione delle prugne.
                 ~ kitchen_recipeAdjective = "convinte"
-                -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->
                
             + <i>Spolvero con titubanza del mais.
                 ~ kitchen_recipeAdjective = "titubanti"
-                -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, waterC, decreaseNo)->
              
             + <i>Affetto con autocontrollo delle zucchine.
                ~ kitchen_recipeAdjective = "disciplinate"
-               -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
+               -> glyph_modifier_variation_management(PG, fireC, decreaseNo)->
         
             + <i>Spremo tempestosamente del chinotto.
                 ~ kitchen_recipeAdjective = "tempestose"
-                -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, airC, decreaseNo)->
     
             + <i>Sminuzzo con consapevolezza della cipolla.
                 ~ kitchen_recipeAdjective = "consapevoli"
-                -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->
             -     
         
         Madonna, che profumino che sta salendo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
@@ -378,27 +378,27 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
 
             + <i>Trituro con gioia dell'anice stellato.
                 ~ kitchen_recipeComplement = "con anice stellato"
-                -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, airC, decreaseNo)->
                     Gioiaaaaa!
 
             + <i>Aggiungo {player_pronouns has him:pieno|{player_pronouns has her:piena|pienə}} di terrore esistenziale dell'origano.
                 ~ kitchen_recipeComplement = "con origano"
-                -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, waterC, decreaseNo)->
                     La cosa più millennial che potessi dire, ama.
 
             + <i>Sbuccio titubante della vaniglia.
                ~ kitchen_recipeComplement = "con vaniglia"
-               -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
+               -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->
                     Già.
         
             + <i>Tosto {player_pronouns has him:rassegnato|{player_pronouns has her:rassegnata|rassegnatə}} del coriandolo.
                 ~ kitchen_recipeComplement = "con coriandolo"
-                -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->
                     No no, niente rassegnazione {player_name}!
     
             + <i>Caramello {player_pronouns has him:sopraffatto|{player_pronouns has her:sopraffatta|sopraffattə}} della salvia.
                 ~ kitchen_recipeComplement = "con salvia"
-                -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, fireC, decreaseNo)->
                     Sentimento comune.
 
             - (bookUpdate)  
@@ -445,28 +445,28 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
 
             + <i>Lesso sportivamente delle patate.
                 ~ kitchen_recipeNoun = "Patate"
-                -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->
                 Ti ci vedo a correre e scaricare il nervo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
 
             + <i>Friggo con creatività delle mele.
                 ~ kitchen_recipeNoun = "Mele"
-                -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->
                 Lo sapevo!
 
             + <i>Arrostisco scientemente delle melanzane.
                ~ kitchen_recipeNoun = "Melanzane"
-               -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
+               -> glyph_modifier_variation_management(PG, airC, decreaseNo)->
                 Ennio fa qualcosa di simile.
             
         
             + <i>Griglio amichevolmente delle pesche.
                 ~ kitchen_recipeNoun = "Pesche"
-                -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, waterC, decreaseNo)->
                 Stare assieme è una cosa che cura molte ferite.
 
             + <i>Abbrustolisco meditativamente delle bietole.
                 ~ kitchen_recipeNoun = "Bietole"
-                -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->
                 Ci ho provato mille volte.
             -  
         
@@ -496,27 +496,27 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
 
             + <i>Frullo della zucca camminando in avanti.
                 ~ kitchen_recipeAdjective = "avanzanti"
-                -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, fireC, decreaseNo)->
                C'è anche qualcosa di bello nel sapere che si sta compiendo la propria strada, vero?
 
             + <i>Pesto dell'ortica con statica soddisfazione.
                 ~ kitchen_recipeAdjective = "soddisfatte"
-                -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->
                 Vorrei sapere cosa si prova ad esser al proprio posto.
              
             + <i>Schiaccio dei rapanelli girando in tondo.
                ~ kitchen_recipeAdjective = "bloccate"
-               -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
+               -> glyph_modifier_variation_management(PG, airC, decreaseNo)->
                 Già.
         
             + <i>Pulisco dei finferli arretrando.
                 ~ kitchen_recipeAdjective = "arretranti"
-                -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, waterC, decreaseNo)->
                 Uh.
     
             + <i>Sciacquo confusamente della lattuga.
                 ~ kitchen_recipeAdjective = "confuse"
-                -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->
                 A volte è solo questione di tempo, vero?
             -      
     
@@ -547,28 +547,28 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
 
             + <i>Brucio del peperoncino.
                 ~ kitchen_recipeComplement = "con peperoncino"
-                -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->
                 Merda.
 
             + <i>Spargo ovunque del cardamomo.
                 ~ kitchen_recipeComplement = "con cardamomo"
-                -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, fireC, decreaseNo)->
                 Un gesto sicuro, deciso.
              
             + <i>Raggruppo dei chiodi di garofano.
                ~ kitchen_recipeComplement = "con chiodi di garofano"
-               -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
+               -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->
                 Anche a me piace condividere solo con la cerchia ristretta di am3.
 
         
             + <i>Copro dello zenzero.
                 ~ kitchen_recipeComplement = "con zenzero"
-                -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, fireC, decreaseNo)->
                 Tieni le tue creature per te.
     
             + <i>Non faccio nulla.
                 ~ kitchen_recipeComplement = "con essenza del nulla"
-                -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, airC, decreaseNo)->
                 Perdonami, do sempre per scontato che le persone creino qualcosa.
             - (bookUpdate)  
             -> fourth_ingredient_dispatcher
