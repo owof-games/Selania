@@ -38,31 +38,6 @@
     //Nota: notReaction = non dato
     LIST kitchen_extraIngredientPossibleReactions = notReaction, badReaction, mehReaction, goodReaction
 
-=== check_kitchen_recap
-    
-    //Disabilitato per ora perché non c'è un recap sul libro
-    // @animation:RewriterBook
-
-    // {
-    //     - BookPlace hasnt KitchenRecap:
-        
-    //         ~ move_entity(KitchenRecap, BookPlace)
-    //             {
-    //                 - kitchen == 1:
-    //                 ~ saturationVar ++
-    //                 ~ move_entity(kitchenOpened, Bedroom)
-    //             }
-    // }
-        // {
-    //     - contentsBedroom hasnt kitchenOpened:
-        
-    //         ~ move_entity(kitchenOpened, Bedroom)
-    
-    //                 ~ saturationVar ++
- 
-    // }
-
-->->
 
 === cooking_animations_on
 {debug_kitchen: passo per cooking_animations_on. Prima dell'intervento KitchenFire è in, {entity_location(KitchenFire)} mentre KitchenSmokeOneOne è in {entity_location(KitchenSmokeOne)}.}

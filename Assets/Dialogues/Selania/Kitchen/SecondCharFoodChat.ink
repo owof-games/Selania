@@ -1308,7 +1308,6 @@
             ~ kitchen_secondCharCookingTogetherInvite = false
             ~ kitchen_allChefs += SecondCharacter
         -> update_glyphs(SecondCharacter) ->
-        -> check_kitchen_recap ->
         -> second_char_closing_storylet ->
         -> main
 

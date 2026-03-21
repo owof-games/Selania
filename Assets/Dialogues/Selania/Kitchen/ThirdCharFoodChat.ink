@@ -756,7 +756,6 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
                 ~ kitchen_thirdCharCookingTogetherInvite = false
                 ~ kitchen_allChefs += ThirdCharacter
             -> update_glyphs(ThirdCharacter) ->
-            -> check_kitchen_recap -> 
             -> third_char_closing_storylet ->
             -> main
 

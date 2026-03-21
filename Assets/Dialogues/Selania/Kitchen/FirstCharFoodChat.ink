@@ -1280,7 +1280,6 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 ~ kitchen_firstCharCookingTogetherInvite = false
                 ~ kitchen_allChefs += FirstCharacter
             -> update_glyphs(FirstCharacter) ->
-            -> check_kitchen_recap -> 
             -> first_char_closing_storylet ->
             -> main
 
