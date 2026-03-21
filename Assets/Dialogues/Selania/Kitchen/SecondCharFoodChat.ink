@@ -37,11 +37,15 @@
         - (top)
     
     In particolare, ripensando alle nostre conversazioni, mi farebbe piacere parlare di più... #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+        {
+            - not first_char_main_storylets.nine:
+                <i>{charNameTwo} ha altri temi che vorrebbe condividere con {player_name}, ma vorrebbe che {player_name} prima lo conoscesse un po' meglio.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        }
 
             + Parliamo di animali.
                     -> first_theme
 
-            + \ {second_char_main_storylets.six: Della scuola.|<i>{player_name} deve parlare ancora con {charNameTwo} per sbloccare questo tema.</i>}
+            + {second_char_main_storylets.six}Della scuola.
                 {
                     - second_char_main_storylets.six:
                         -> storage_glyphs(SecondCharacter)->
@@ -52,7 +56,7 @@
                         -> top
                 }
             
-            + \ {second_char_main_storylets.eight: Delle bugie.|<i>{player_name} deve parlare ancora con {charNameTwo} per sbloccare questo tema.</i>}
+            + {second_char_main_storylets.eight}Delle bugie.
                 {
                 
                     - second_char_main_storylets.eight:

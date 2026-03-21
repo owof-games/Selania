@@ -30,16 +30,21 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
     
     
     Sai {charNameOne}, mentre cuciniamo potremmo parlare un po'.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
-    
+
     - (top)
     In particolare, ripensando alle nostre conversazioni, mi farebbe piacere parlare di più...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
-        
+
+        {
+            - not first_char_main_storylets.nine:
+                <i>{charNameOne} ha ancora spunti di conversazione da offrire a {player_name}, se {player_name} deciderà di parlarle ancora un po'.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        }
+    
         + Dei rapporti che hai con le persone che ti sono care.
                 -> storage_glyphs(FirstCharacter)->
                 -> cooking_animations_on ->
                 -> first_theme
                 
-        + \ {first_char_main_storylets.six: Del bisogno di fare qualcosa che salvi il mondo.|<i>{player_name} deve parlare ancora con {charNameOne} per sbloccare questo tema.</i>}
+        + {first_char_main_storylets.six}Del bisogno di fare qualcosa che salvi il mondo.
             {
                 - first_char_main_storylets.six:
                     -> storage_glyphs(FirstCharacter)->
@@ -49,8 +54,9 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 - else:
                     -> top
             }
-        
-        + \ {first_char_main_storylets.nine: Della tua creatività.|<i>{player_name} deve parlare ancora con {charNameOne} per sbloccare questo tema.</i>}
+
+
+        + {first_char_main_storylets.nine}Della tua creatività.
             {
             
                 - first_char_main_storylets.nine:
