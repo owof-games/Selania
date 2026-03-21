@@ -65,7 +65,7 @@
 //Elementi della serra
 
 //Elementi della cucina
-<- the_kitchen_frog
+<- cooking_alone
 
 //Elementi della libreria
 <- reading_place

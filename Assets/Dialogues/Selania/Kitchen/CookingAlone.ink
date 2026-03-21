@@ -1,16 +1,3 @@
-=== cooking_alone ====
-
-    Girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
-    Eccoti cra!
-    Sei {player_pronouns has him:pronto|{player_pronouns has her:pronta|prontə}} per cucinare assieme?
-        
-        + Ci sto!
-            -> cooking_with_frog
-
-        + Ci penso un attimo.
-            -> main
-
-
 === cooking_with_frog
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)

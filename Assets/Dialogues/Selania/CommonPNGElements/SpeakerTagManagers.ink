@@ -110,7 +110,7 @@ LIST nest_speakersForEwWordTag = Influenced, Other
     - frog_nameDiscovered == false:
         ~ return "???"
     
-    - are_two_entities_together(PG, Franco) && entity_location(PG) == true:
+    - are_two_entities_together(PG, Franco) && entity_location(PG) == Kitchen:
         ~ return "Franco Lo Chef"
 
     - else:
