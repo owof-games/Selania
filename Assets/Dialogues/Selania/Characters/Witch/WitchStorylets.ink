@@ -6,6 +6,9 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
+TODO: questo ora è uno storylet autonomo dopo un po'.
+
+
     <i>Ciò che in te respira ricorda.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
     <i>Ricorda che ogni dialogo è una strada.
     <i>Che ogni strada è una scelta.

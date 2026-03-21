@@ -18,13 +18,6 @@
         }
         Immagino tu abbia un milione di domande, vero?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
         
-            {
-                - not about_glyph_choices:
-                    -> about_glyph_choices ->
-                Immagino tu abbia un milione di domande, vero?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry    
-            }
-
-        
             + (dove) Questo posto è così inaspettato. Dove mi trovo?
                 -> glyph_modifier_variation_management(Mentor, aetherC, decreaseYes)->
                     {
