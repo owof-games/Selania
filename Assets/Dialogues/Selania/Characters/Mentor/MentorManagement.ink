@@ -14,6 +14,9 @@
     VAR mentor_lastTimeTalking = 0
     VAR mentor_MAX_lastTimeTalking = 10
 
+//Questo è per il conteggio totale delle scelte prese con la PNG
+    VAR mentor_totalChoices = 0        
+
 //Tracciamento apprezzamento glifi. Tutto ciò che è fuori da questa lista = reazione neutrale.
     VAR mentorChar_positiveGlyphs = ()
     VAR mentorChar_negativeGlyphs = ()

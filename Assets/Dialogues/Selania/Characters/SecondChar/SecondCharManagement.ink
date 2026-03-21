@@ -88,6 +88,10 @@
     VAR secondChar_specialEvent = false
     VAR secondChar_justTalked = false
 
+//Questo è per il conteggio totale delle scelte prese con la PNG
+    VAR secondChar_totalChoices = 0    
+
+
 //Variabili per mettere in pausa la conversazione
     VAR secondChar_pauseTalking = 0
     VAR secondChar_pauseDuration = 1

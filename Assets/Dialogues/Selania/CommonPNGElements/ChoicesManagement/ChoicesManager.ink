@@ -26,6 +26,9 @@ VAR glyph_decreaseSigil = true
                         ~ firstChar_last_air = firstChar_air
                         ~ firstChar_last_water = firstChar_water
                         ~ firstChar_last_fire = firstChar_fire
+
+                    //E il contatore delle scelte prese
+                        ~ firstChar_totalChoices ++   
                     
                     //Aggiorno i corrispettivi valori lato rapporto PNG/PG (ovvero: non cambio il valore dei dati dellx PNG)
                     {GlyphC:
@@ -55,6 +58,10 @@ VAR glyph_decreaseSigil = true
                         ~ secondChar_last_air = secondChar_air
                         ~ secondChar_last_water = secondChar_water
                         ~ secondChar_last_fire = secondChar_fire
+
+                    //E il contatore delle scelte prese
+                        ~ secondChar_totalChoices ++       
+
                     //Aggiorno i corrispettivi valori lato rapporto PNG/PG (ovvero: non cambio il valore dei dati dellx PNG)
                     {GlyphC:
                             -fireC:
@@ -88,6 +95,10 @@ VAR glyph_decreaseSigil = true
                         ~ thirdChar_last_air = thirdChar_air
                         ~ thirdChar_last_water = thirdChar_water
                         ~ thirdChar_last_fire = thirdChar_fire
+
+                    //E il contatore delle scelte prese
+                        ~ thirdChar_totalChoices ++   
+
                     //Aggiorno i corrispettivi valori lato rapporto PNG/PG (ovvero: non cambio il valore dei dati dellx PNG)
                     {GlyphC:
                             -fireC:
@@ -131,6 +142,10 @@ VAR glyph_decreaseSigil = true
                                 ~ player_aether_mentor ++
                                 ~  mentor_aether ++
                     }
+
+                    //E il contatore delle scelte prese
+                        ~ mentor_totalChoices ++   
+
                     ->->
                     
             - PNG == PG:

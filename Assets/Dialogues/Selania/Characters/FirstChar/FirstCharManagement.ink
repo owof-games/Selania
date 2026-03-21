@@ -71,6 +71,9 @@
 //Quantità di storylets letti dalla giocatrice prima di accedere alla riscrittura
     VAR firstChar_minStoryletsForRewriting = 9    
     VAR firstChar_specialEvent = false
+
+//Questo è per il conteggio totale delle scelte prese con la PNG
+    VAR firstChar_totalChoices = 0    
     
 //Variabili per mettere in pausa la conversazione
     VAR firstChar_pauseTalking = 0
