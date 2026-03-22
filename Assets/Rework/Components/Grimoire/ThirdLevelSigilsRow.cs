@@ -44,12 +44,12 @@ namespace Selania.Rework.Components.Grimoire
         }
 
         /// <summary>
-        ///     Set whether this button is activated or not.
+        /// Set the status of the button.
         /// </summary>
-        /// <param name="isActivated">Whether the button is activated or not.</param>
-        public void SetActivated(bool isActivated)
+        /// <param name="status">The status of the button.</param>
+        public void SetStatus(ThirdLevelSigilsButton.Status status)
         {
-            button.SetActivated(isActivated);
+            button.SetStatus(status);
         }
     }
 }

@@ -10,6 +10,11 @@
         /// <summary>
         ///     The saturation level (0..1) for the exhausted version of the greenhouse buttons.
         /// </summary>
-        public float ExhaustedGreenhouseButtonSaturationLevel { get; }
+        public float exhaustedGreenhouseButtonSaturationLevel { get; }
+
+        /// <summary>
+        ///     Saturation level for disabled sigils.
+        /// </summary>
+        public float disabledSigilsSaturationLevel { get; }
     }
 }

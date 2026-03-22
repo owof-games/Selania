@@ -261,7 +261,9 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
                             _ => throw new ArgumentOutOfRangeException()
                         }
                     ),
-                    i == activated
+                    i == activated ? ThirdLevelSigilsButton.Status.Activated :
+                    Random.Range(0f, 1f) < 0.5f ? ThirdLevelSigilsButton.Status.Standard :
+                    ThirdLevelSigilsButton.Status.Disabled
                 );
             }
         }

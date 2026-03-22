@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 6637337563918251430}
   - component: {fileID: 5200235350455183608}
   - component: {fileID: 8363554422597243470}
+  - component: {fileID: 8820913920133880821}
   m_Layer: 5
   m_Name: Third Level Glyph
   m_TagString: Untagged
@@ -132,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 3efb5f2d7893bd145b3c896af040b90a, type: 2}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -150,6 +151,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8820913920133880821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5018516992604430944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb9e448865a4fb5b0e86ae86f48b963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.GrimoireButtonSaturationControl
+  image: {fileID: 8363554422597243470}
 --- !u!1 &6076512939418188149
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,6 +175,7 @@ GameObject:
   - component: {fileID: 615876088602295612}
   - component: {fileID: 7676882800164951630}
   - component: {fileID: 8504997147884970041}
+  - component: {fileID: 3982086130899052390}
   m_Layer: 5
   m_Name: Second Level Glyph
   m_TagString: Untagged
@@ -207,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 3efb5f2d7893bd145b3c896af040b90a, type: 2}
   m_Color: {r: 0.008547783, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -225,6 +240,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3982086130899052390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6076512939418188149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb9e448865a4fb5b0e86ae86f48b963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.GrimoireButtonSaturationControl
+  image: {fileID: 8504997147884970041}
 --- !u!1 &7945714182878357178
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,6 +264,7 @@ GameObject:
   - component: {fileID: 6784631224364788771}
   - component: {fileID: 2594832158489971349}
   - component: {fileID: 4762558841031706140}
+  - component: {fileID: 8571975119227436772}
   m_Layer: 5
   m_Name: First Level Glyph
   m_TagString: Untagged
@@ -282,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 3efb5f2d7893bd145b3c896af040b90a, type: 2}
   m_Color: {r: 0.0061826706, g: 0, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -300,6 +329,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8571975119227436772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7945714182878357178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb9e448865a4fb5b0e86ae86f48b963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.GrimoireButtonSaturationControl
+  image: {fileID: 4762558841031706140}
 --- !u!1001 &50858422863087510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -392,6 +434,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: d51943f92e2e7584f91036029a6d2083, type: 3}
+    - target: {fileID: 2127631174429788715, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2466848855336276597, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
       propertyPath: disabledSprite
       value: 
@@ -400,6 +446,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: b829de832ae55ba43939ee7f1ce62b01, type: 3}
+    - target: {fileID: 5050124664244812261, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
       propertyPath: m_Name
       value: Third Level Sigils Button
@@ -559,6 +609,10 @@ MonoBehaviour:
   firstLevelImage: {fileID: 4762558841031706140}
   secondLevelImage: {fileID: 8504997147884970041}
   thirdLevelImage: {fileID: 8363554422597243470}
+  firstLevelSaturationControl: {fileID: 8571975119227436772}
+  secondLevelSaturationControl: {fileID: 3982086130899052390}
+  thirdLevelSaturationControl: {fileID: 8820913920133880821}
+  disabledBackgroundSprite: {fileID: 21300000, guid: 7c4e8bebae4c4034e951824e463dfbc6, type: 3}
 --- !u!95 &6385953494612133434
 Animator:
   serializedVersion: 7

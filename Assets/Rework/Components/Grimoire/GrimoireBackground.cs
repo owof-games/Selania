@@ -505,7 +505,7 @@ namespace Selania.Rework.Components.Grimoire
                     break;
                 case GreenhouseButtonStatus.Exhausted:
                     button.interactable = true;
-                    button.SetSaturation(SettingsBook.ExhaustedGreenhouseButtonSaturationLevel);
+                    button.SetSaturation(SettingsBook.exhaustedGreenhouseButtonSaturationLevel);
                     break;
                 case GreenhouseButtonStatus.Locked:
                     button.interactable = false;
@@ -567,15 +567,16 @@ namespace Selania.Rework.Components.Grimoire
         /// <param name="secondDescriptionLine">Second line of description for the sigil.</param>
         /// <param name="thirdDescriptionLine">Third line of description for the sigil.</param>
         /// <param name="glyphs">The three glyphs describing the sigil.</param>
-        /// <param name="isActivated">Whether this button is activated.</param>
+        /// <param name="status">Status of the button.</param>
         public void SetUpThirdLevelSigilRow(int index, string title, string firstDescriptionLine,
             string secondDescriptionLine,
             string thirdDescriptionLine,
-            (ISettingsSigils.GlyphType, ISettingsSigils.GlyphType, ISettingsSigils.GlyphType) glyphs, bool isActivated)
+            (ISettingsSigils.GlyphType, ISettingsSigils.GlyphType, ISettingsSigils.GlyphType) glyphs,
+            ThirdLevelSigilsButton.Status status)
         {
             thirdLevelSigilsRows[index].SetUp(title, firstDescriptionLine, secondDescriptionLine, thirdDescriptionLine,
                 glyphs);
-            thirdLevelSigilsRows[index].SetActivated(isActivated);
+            thirdLevelSigilsRows[index].SetStatus(status);
         }
 
         /// <summary>
@@ -586,7 +587,6 @@ namespace Selania.Rework.Components.Grimoire
             foreach (var thirdLevelSigilsRow in thirdLevelSigilsRows)
             {
                 thirdLevelSigilsRow.SetUp("", "", "", "", null);
-                thirdLevelSigilsRow.SetActivated(false);
             }
         }
     }

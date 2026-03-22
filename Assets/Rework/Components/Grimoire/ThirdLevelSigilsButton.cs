@@ -1,4 +1,5 @@
-﻿using Selania.Rework.Interfaces;
+﻿using System;
+using Selania.Rework.Interfaces;
 using UnityEngine;
 using UnityEngine.UI;
 using VContainer;
@@ -10,18 +11,51 @@ namespace Selania.Rework.Components.Grimoire
     /// </summary>
     public class ThirdLevelSigilsButton : MonoBehaviour, IAutomaticEditorInject
     {
+        /// <summary>
+        ///     Possible statuses of the button.
+        /// </summary>
+        public enum Status
+        {
+            /// <summary>
+            ///     Standard version.
+            /// </summary>
+            Standard,
+
+            /// <summary>
+            ///     The sigil is activated and animated.
+            /// </summary>
+            Activated,
+
+            /// <summary>
+            ///     The sigil has been used to the end, and it's disabled.
+            /// </summary>
+            Disabled
+        }
+
         private static readonly int AnimatedCachedAnimatorProperty = Animator.StringToHash("Animated");
         [SerializeField] private Image firstLevelImage = null!;
         [SerializeField] private Image secondLevelImage = null!;
         [SerializeField] private Image thirdLevelImage = null!;
+        [SerializeField] private GrimoireButtonSaturationControl firstLevelSaturationControl = null!;
+        [SerializeField] private GrimoireButtonSaturationControl secondLevelSaturationControl = null!;
+        [SerializeField] private GrimoireButtonSaturationControl thirdLevelSaturationControl = null!;
+
+        [SerializeField] private Sprite disabledBackgroundSprite = null!;
         private Animator _animator = null!;
         private Button _button = null!;
+        private Sprite _defaultBackgroundSprite = null!;
+        private Image _image = null!;
+
+        private float _saturation = 1;
+        [Inject] internal ISettingsBook SettingsBook = null!;
         [Inject] internal ISettingsSigils SettingsSigils = null!;
 
         private void Start()
         {
             _button = GetComponent<Button>();
             _animator = GetComponent<Animator>();
+            _image = GetComponent<Image>();
+            _defaultBackgroundSprite = _image.sprite;
         }
 
         /// <summary>
@@ -39,6 +73,7 @@ namespace Selania.Rework.Components.Grimoire
             firstLevelImage.color = SettingsSigils.GetGlyphColor(glyph1);
             secondLevelImage.color = SettingsSigils.GetGlyphColor(glyph2);
             thirdLevelImage.color = SettingsSigils.GetGlyphColor(glyph3);
+            UpdateSaturationAndColor();
             _button.interactable = true;
         }
 
@@ -48,16 +83,44 @@ namespace Selania.Rework.Components.Grimoire
         public void Disable()
         {
             _button.interactable = false;
-            SetActivated(false);
+            SetStatus(Status.Standard);
         }
 
         /// <summary>
-        ///     Set whether this button is activated or not.
+        /// Set the status of the button.
         /// </summary>
-        /// <param name="isActivated">Whether the button is activated or not.</param>
-        public void SetActivated(bool isActivated)
+        /// <param name="status">The status of the button.</param>
+        public void SetStatus(Status status)
         {
-            _animator.SetBool(AnimatedCachedAnimatorProperty, isActivated);
+            switch (status)
+            {
+                case Status.Standard:
+                    _image.sprite = _defaultBackgroundSprite;
+                    _animator.SetBool(AnimatedCachedAnimatorProperty, false);
+                    _saturation = 1;
+                    break;
+                case Status.Activated:
+                    _image.sprite = _defaultBackgroundSprite;
+                    _animator.SetBool(AnimatedCachedAnimatorProperty, true);
+                    _saturation = 1;
+                    break;
+                case Status.Disabled:
+                    _image.sprite = disabledBackgroundSprite;
+                    _animator.SetBool(AnimatedCachedAnimatorProperty, false);
+                    _saturation = SettingsBook.disabledSigilsSaturationLevel;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(status), status, null);
+            }
+
+            UpdateSaturationAndColor();
+        }
+
+        private void UpdateSaturationAndColor()
+        {
+            firstLevelSaturationControl.SetSaturation(_saturation, firstLevelImage.color);
+            secondLevelSaturationControl.SetSaturation(_saturation, secondLevelImage.color);
+            thirdLevelSaturationControl.SetSaturation(_saturation, thirdLevelImage.color);
         }
     }
 }

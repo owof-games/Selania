@@ -406,7 +406,12 @@ namespace Selania.Rework.Components
         /// <inheritdoc />
         [field: SerializeField]
         [field: Tooltip("The saturation level (0..1) for the exhausted version of the greenhouse buttons.")]
-        public float ExhaustedGreenhouseButtonSaturationLevel { get; private set; } = 0.5f;
+        public float exhaustedGreenhouseButtonSaturationLevel { get; private set; } = 0.5f;
+
+        /// <inheritdoc />
+        [field: SerializeField]
+        [field: Tooltip("Saturation level for disabled sigils.")]
+        public float disabledSigilsSaturationLevel { get; private set; } = 0.5f;
 
         #endregion
 
