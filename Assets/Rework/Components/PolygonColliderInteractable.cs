@@ -14,8 +14,8 @@ namespace Selania.Rework.Components
     ///     An <see cref="IInteractable"/> component that uses a click on a polygon collider as the trigger for interaction.
     /// </summary>
     [RequireComponent(typeof(SpriteRenderer))]
-    public class PolygonColliderInteractable : MonoBehaviour, IInteractable, IPointerClickHandler, IPointerEnterHandler,
-        IPointerExitHandler, IAutomaticEditorInject
+    public class PolygonColliderInteractable : MonoBehaviour, IInteractable, IPointerClickHandler,
+        IAutomaticEditorInject
     {
         /// <summary>
         ///     Shared list used to update the polygon collider.
@@ -27,9 +27,6 @@ namespace Selania.Rework.Components
         /// </summary>
         private Subject<IInteractable>? _interactionSubject;
 
-        // temporary, to render a color change
-        private SpriteRenderer? _spriteRenderer;
-
         /// <summary>
         ///     The logger used for this object.
         /// </summary>
@@ -37,9 +34,6 @@ namespace Selania.Rework.Components
 
         private void Start()
         {
-            // extract sprite renderer
-            _spriteRenderer = GetComponent<SpriteRenderer>();
-
             // create the interaction subject and register its cancellation
             _interactionSubject = new Subject<IInteractable>().AddTo(this);
         }
@@ -51,32 +45,6 @@ namespace Selania.Rework.Components
         public void OnPointerClick(PointerEventData eventData)
         {
             _interactionSubject!.OnNext(this);
-        }
-
-        /// <inheritdoc />
-        public void OnPointerEnter(PointerEventData eventData)
-        {
-            // temporary
-            if (_spriteRenderer == null)
-            {
-                Debug.LogWarning("Mouse entered an uninitialized PolygonColliderInteractable", this);
-                return;
-            }
-
-            _spriteRenderer.color = Color.gray;
-        }
-
-        /// <inheritdoc />
-        public void OnPointerExit(PointerEventData eventData)
-        {
-            // temporary
-            if (_spriteRenderer == null)
-            {
-                Debug.LogWarning("Mouse entered an uninitialized PolygonColliderInteractable", this);
-                return;
-            }
-
-            _spriteRenderer.color = Color.white;
         }
 
         [Button]
