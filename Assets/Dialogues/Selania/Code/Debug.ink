@@ -9,7 +9,8 @@
     VAR debug_nest = false
     VAR debug_frog = false
     VAR debug_horizontalS = false
-    
+    VAR debug_achievements = true
+
     //per testare i luoghi non subito aperti con calma
     VAR debug_testLibrary = false
     VAR debug_testKitchen = false

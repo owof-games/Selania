@@ -22,6 +22,10 @@
     -> moon_state_management ->
     -> horizontalS_documentDispatcher ->
     -> talk_to_me ->
+    
+//E degli achievements
+    -> achievements_onGame_statusUpdate_RM ->
+    -> achievements_onGame_statusUpdate_GM ->
 
     // -> notification_system ->
     -> on_movement_tutorial_steps ->

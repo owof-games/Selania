@@ -63,6 +63,8 @@ VAR achievements_goodReader = notActive
 
 === achievements_onGame_statusUpdate_GM
 //Aggiornamento achievements legati alla riscrittura.
+{debug_achievements: entro achievements_onGame_statusUpdate_GM, lo stato di settings_gamerMode è {settings_gamerMode}.}
+
     {
         - settings_gamerMode == false:
             ->->
@@ -143,29 +145,29 @@ VAR achievements_goodReader = notActive
     //         ~ achievements_perfectIngredientsCounter ++
     // }
     {
-        - achievements_perfectIngredientsCounter == 0:
+        - LIST_COUNT(achievements_perfectIngredientsCounter)  == 0:
             ~ achievements_onePerfectIngredient = notDiscovered
-            ~ achievements_fivePerfectGifts = notDiscovered
+            ~ achievements_fivePerfectIngredients = notDiscovered
 
-        - achievements_perfectIngredientsCounter == 1:
+        - LIST_COUNT(achievements_perfectIngredientsCounter)  == 1:
             ~ achievements_onePerfectIngredient = Discovered
-            ~ achievements_fivePerfectGifts = inProgress
+            ~ achievements_fivePerfectIngredients = inProgress
 
-        - achievements_perfectIngredientsCounter == 2:
+        - LIST_COUNT(achievements_perfectIngredientsCounter)  == 2:
             ~ achievements_onePerfectIngredient = Discovered
-            ~ achievements_fivePerfectGifts = inProgress
+            ~ achievements_fivePerfectIngredients = inProgress
 
-        - achievements_perfectIngredientsCounter == 3:
+        - LIST_COUNT(achievements_perfectIngredientsCounter)  == 3:
             ~ achievements_onePerfectIngredient = Discovered
-            ~ achievements_fivePerfectGifts = inProgress
+            ~ achievements_fivePerfectIngredients = inProgress
 
-        - achievements_perfectIngredientsCounter == 4:
+        - LIST_COUNT(achievements_perfectIngredientsCounter)  == 4:
             ~ achievements_onePerfectIngredient = Discovered
-            ~ achievements_fivePerfectGifts = inProgress
+            ~ achievements_fivePerfectIngredients = inProgress
 
-        - achievements_perfectIngredientsCounter == 5:
+        - LIST_COUNT(achievements_perfectIngredientsCounter) == 5:
             ~ achievements_onePerfectIngredient = Discovered
-            ~ achievements_fivePerfectGifts = Discovered                    
+            ~ achievements_fivePerfectIngredients = Discovered                    
     }
 
 
@@ -191,27 +193,27 @@ VAR achievements_goodReader = notActive
     //         ~ achievements_perfectGiftsCounter ++
     // }
     {
-        - achievements_perfectGiftsCounter == 0:
+        - LIST_COUNT(achievements_perfectGiftsCounter) == 0:
             ~ achievements_onePerfectGift = notDiscovered
             ~ achievements_fivePerfectGifts = notDiscovered
 
-        - achievements_perfectGiftsCounter == 1:
+        - LIST_COUNT(achievements_perfectGiftsCounter) == 1:
             ~ achievements_onePerfectGift = Discovered
             ~ achievements_fivePerfectGifts = inProgress
 
-        - achievements_perfectGiftsCounter == 2:
+        - LIST_COUNT(achievements_perfectGiftsCounter) == 2:
             ~ achievements_onePerfectGift = Discovered
             ~ achievements_fivePerfectGifts = inProgress
 
-        - achievements_perfectGiftsCounter == 3:
+        - LIST_COUNT(achievements_perfectGiftsCounter) == 3:
             ~ achievements_onePerfectGift = Discovered
             ~ achievements_fivePerfectGifts = inProgress
 
-        - achievements_perfectGiftsCounter == 4:
+        - LIST_COUNT(achievements_perfectGiftsCounter) == 4:
             ~ achievements_onePerfectGift = Discovered
             ~ achievements_fivePerfectGifts = inProgress
 
-        - achievements_perfectGiftsCounter == 5:
+        - LIST_COUNT(achievements_perfectGiftsCounter) == 5:
             ~ achievements_onePerfectGift = Discovered
             ~ achievements_fivePerfectGifts = Discovered                    
     }
@@ -220,26 +222,26 @@ VAR achievements_goodReader = notActive
     //Prima di tutto guardo qual è la somma delle missioni mancanti.
     ~ achievements_counterLastingMissions = LIST_COUNT(frog_availableCommonMissions) + LIST_COUNT(frog_availableSpecialMissions)
     {
-        - achievements_maxFrancoMissions == achievements_counterLastingMissions:
+        - LIST_COUNT(achievements_maxFrancoMissions) == LIST_COUNT(achievements_counterLastingMissions):
             ~ achievements_fullFranco = notDiscovered
 
-        - achievements_maxFrancoMissions != achievements_counterLastingMissions && achievements_counterLastingMissions > 0:
+        - LIST_COUNT(achievements_maxFrancoMissions) != LIST_COUNT(achievements_counterLastingMissions) && LIST_COUNT(achievements_counterLastingMissions) > 0:
             ~ achievements_fullFranco = inProgress
 
-        - achievements_counterLastingMissions == 0:
+        - LIST_COUNT(achievements_counterLastingMissions) == 0:
             ~ achievements_fullFranco = Discovered     
 
     }
 
 //Achievement sigilli.
     {
-        - glyph_discoveredSigils == 0:
+        - LIST_COUNT(glyph_discoveredSigils) == 0:
             ~ achievements_allSigils = notDiscovered
 
-        - glyph_discoveredSigils > 0 && glyph_discoveredSigils < LIST_COUNT(glyph_allSigils):
+        - LIST_COUNT(glyph_discoveredSigils) > 0 && LIST_COUNT(glyph_discoveredSigils) < LIST_COUNT(glyph_allSigils):
             ~ achievements_allSigils = inProgress
 
-        - glyph_discoveredSigils == LIST_COUNT(glyph_allSigils):
+        - LIST_COUNT(glyph_discoveredSigils) == LIST_COUNT(glyph_allSigils):
             ~ achievements_allSigils = Discovered
     }
 
@@ -249,22 +251,38 @@ VAR achievements_goodReader = notActive
 
 //Achievement serra.
     {
-        - greenhouse_backupCultivable == LIST_COUNT(greenhouse_cultivable):
+        - LIST_COUNT(greenhouse_backupCultivable) == LIST_COUNT(greenhouse_cultivable):
             ~ achievements_fullGreenhouse = notDiscovered
 
-        - greenhouse_backupCultivable < LIST_COUNT(greenhouse_cultivable) && greenhouse_backupCultivable > 0:
+        - LIST_COUNT(greenhouse_backupCultivable)  < LIST_COUNT(greenhouse_cultivable) && greenhouse_backupCultivable > 0:
             ~ achievements_fullGreenhouse = inProgress
 
-        - greenhouse_backupCultivable == 0:
+        - LIST_COUNT(greenhouse_backupCultivable)  == 0:
             ~ achievements_fullGreenhouse = Discovered         
 
     }
+
+
+{
+    - debug_achievements: 
+        <b>LIST_COUNT(greenhouse_backupCultivable) è uguale a {LIST_COUNT(greenhouse_backupCultivable)}, e quindi lo stato di achievements_fullGreenhouse è {achievements_fullGreenhouse}.
+        <b>LIST_COUNT(glyph_discoveredSigils) è uguale a {LIST_COUNT(glyph_discoveredSigils)}, e quindi lo stato di achievements_allSigils è {achievements_allSigils}.
+        <b>LIST_COUNT(LIST_COUNT(achievements_counterLastingMissions)) è uguale a {LIST_COUNT(achievements_counterLastingMissions)}, e quindi lo stato di achievements_fullFranco è {achievements_fullFranco}.
+        <b>LIST_COUNT(achievements_perfectGiftsCounter) è uguale a {LIST_COUNT(achievements_perfectGiftsCounter)}, e quindi lo stato di achievements_onePerfectGift è {achievements_onePerfectGift}, mentre quello di achievements_fivePerfectGifts è {achievements_fivePerfectGifts}.
+        <b>LIST_COUNT(achievements_perfectIngredientsCounter) è uguale a {LIST_COUNT(achievements_perfectIngredientsCounter)}, e quindi lo stato di achievements_onePerfectIngredient è {achievements_onePerfectIngredient}, mentre quello di achievements_fivePerfectIngredients è {achievements_fivePerfectIngredients}.
+        <b>LIST_COUNT(horizontalS_allChefs) è uguale a {LIST_COUNT(horizontalS_allChefs)}, e quindi lo stato di achievements_fullKitchen è {achievements_fullKitchen}.
+        <b>LIST_COUNT(story_endedStories) è uguale a {LIST_COUNT(story_endedStories)}, e quindi lo stato di achievements_oneRewrite è {achievements_oneRewrite}, mentre quello di achievements_threeRewrite è {achievements_threeRewrite} e quello di achievements_fiveRewrite è {achievements_fiveRewrite}.
+
+}
+
         
 ->->
 
 
 
 === achievements_onGame_statusUpdate_RM
+{debug_achievements: entro achievements_onGame_statusUpdate_RM, lo stato di settings_gamerMode è {settings_gamerMode}.}
+
     {
         - settings_gamerMode == true:
             ->->
@@ -316,6 +334,13 @@ VAR achievements_goodReader = notActive
 
     - LIST_COUNT(library_unreadStories) == 0:
         ~ achievements_goodReader = Discovered        
+}
+
+{
+    - debug_achievements: 
+        <b>LIST_COUNT(achievements_goodListener_tracker) è {LIST_COUNT(achievements_goodListener_tracker)}, e quindi lo stato di achievements_goodListener è {achievements_goodListener}.
+        <b>LIST_COUNT(horizontalS_discoveredDocs) è {LIST_COUNT(horizontalS_discoveredDocs)}, e quindi lo stato di achievements_fullLore è {achievements_fullLore}.
+        <b>LIST_COUNT(library_unreadStories) è {LIST_COUNT(library_unreadStories)}, e quindi lo stato di achievements_goodReader è {achievements_goodReader}.
 }
 
 
