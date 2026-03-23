@@ -7,13 +7,19 @@
     }
 Tutorial scelte spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
 
+TEMPORANEAMENTE CI FA ATTIVARE/DISATTIVARE LA MODALITa' GAMER e READER MODE, per testing.
+    + Voglio la modalità Gamer Mode
+        ~ settings_gamerMode = true
+    + Voglio la modalità Reader Mode
+        ~ settings_gamerMode = false
+    -
 
-
+    ~ achievements_start_statusUpdate()
 
     {
         - tutorial_allTutorialSteps hasnt tutorialChoices:
             ~ tutorial_allTutorialSteps += tutorialChoices
-             ~ move_entity(Carla, Forest)
+            ~ move_entity(Carla, Forest)
     }
 
 
