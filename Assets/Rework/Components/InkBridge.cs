@@ -895,6 +895,63 @@ namespace Selania.Rework.Components
         [SerializeField] [Tooltip("Category for the enable tag (sigils)")]
         private string enabledTagCategory = "enabled";
 
+        [SerializeField] [Tooltip("Category for the left page title (sigils, third level)")]
+        private string leftPageTitleCategory = "leftPageTitle";
+
+        [SerializeField] [Tooltip("Category for the left page description (sigils, third level)")]
+        private string leftPageDescriptionCategory = "leftPageDescription";
+
+        [SerializeField] [Tooltip("Category for the left page the first glyph (sigils, third level)")]
+        private string leftPageGlyph1Category = "leftPageGlyph1";
+
+        [SerializeField] [Tooltip("Category for the left page the second glyph (sigils, third level)")]
+        private string leftPageGlyph2Category = "leftPageGlyph2";
+
+        [SerializeField] [Tooltip("Category for the right page title (sigils, third level)")]
+        private string rightPageTitleCategory = "rightPageTitle";
+
+        [SerializeField] [Tooltip("Category for the right page description (sigils, third level)")]
+        private string rightPageDescriptionCategory = "rightPageDescription";
+
+        [SerializeField] [Tooltip("Category for the right page the first glyph (sigils, third level)")]
+        private string rightPageGlyph1Category = "rightPageGlyph1";
+
+        [SerializeField] [Tooltip("Category for the right page the second glyph (sigils, third level)")]
+        private string rightPageGlyph2Category = "rightPageGlyph2";
+
+        [SerializeField] [Tooltip("Category for the position (sigils, third level)")]
+        private string positionCategory = "position";
+
+        [SerializeField] [Tooltip("Value for the first left position (sigils, third level)")]
+        private string left1PositionValue = "left1";
+
+        [SerializeField] [Tooltip("Value for the second left position (sigils, third level)")]
+        private string left2PositionValue = "left2";
+
+        [SerializeField] [Tooltip("Value for the third left position (sigils, third level)")]
+        private string left3PositionValue = "left3";
+
+        [SerializeField] [Tooltip("Value for the first right position (sigils, third level)")]
+        private string right1PositionValue = "right1";
+
+        [SerializeField] [Tooltip("Value for the second right position (sigils, third level)")]
+        private string right2PositionValue = "right2";
+
+        [SerializeField] [Tooltip("Value for the third right position (sigils, third level)")]
+        private string right3PositionValue = "right3";
+
+        [SerializeField] [Tooltip("Category for the third level glyph (sigils, third level")]
+        private string glyph3Category = "glyph3";
+
+        [SerializeField] [Tooltip("Category for the first line of sigil text (sigils, third level)")]
+        private string firstLineCategory = "firstLine";
+
+        [SerializeField] [Tooltip("Category for the second line of sigil text (sigils, third level)")]
+        private string secondLineCategory = "secondLine";
+
+        [SerializeField] [Tooltip("Category for the third line of sigil text (sigils, third level)")]
+        private string thirdLineCategory = "thirdLine";
+
         [SerializeField] [Tooltip("Value for the index bookmark tag")]
         private string indexBookmarkTagValue = "index";
 
@@ -946,6 +1003,15 @@ namespace Selania.Rework.Components
             throw new InvalidOperationException(
                 "Cannot get the second level sigils grimoire page descriptors before initialization");
 
+        private Subject<IStoryGrimoire.ThirdLevelSigilsGrimoirePageDescriptor>?
+            _thirdLevelSigilsGrimoirePageDescriptorsSubject;
+
+        /// <inheritdoc />
+        public Observable<IStoryGrimoire.ThirdLevelSigilsGrimoirePageDescriptor>
+            thirdLevelSigilsGrimoirePageDescriptors =>
+            _thirdLevelSigilsGrimoirePageDescriptorsSubject?.AsObservable() ?? throw new InvalidOperationException(
+                "Cannot get the third level sigils grimoire page descriptors before initialization");
+
         private void SetupGrimoire()
         {
             _firstLevelGrimoirePageDescriptorsSubject = new Subject<IStoryGrimoire.FirstLevelGrimoirePageDescriptor>();
@@ -953,10 +1019,13 @@ namespace Selania.Rework.Components
                 new Subject<IStoryGrimoire.SecondLevelGreenhouseGrimoirePageDescriptor>();
             _secondLevelSigilsGrimoirePageDescriptorsSubject =
                 new Subject<IStoryGrimoire.SecondLevelSigilsGrimoirePageDescriptor>();
+            _thirdLevelSigilsGrimoirePageDescriptorsSubject =
+                new Subject<IStoryGrimoire.ThirdLevelSigilsGrimoirePageDescriptor>();
         }
 
         private void CleanupGrimoire()
         {
+            _thirdLevelSigilsGrimoirePageDescriptorsSubject?.Dispose();
             _secondLevelSigilsGrimoirePageDescriptorsSubject?.Dispose();
             _secondLevelGrimoirePageDescriptorsSubject?.Dispose();
             _firstLevelGrimoirePageDescriptorsSubject?.Dispose();
@@ -981,7 +1050,6 @@ namespace Selania.Rework.Components
         /// </summary>
         /// <param name="currentText"></param>
         /// <param name="tags"></param>
-        /// <exception cref="NotImplementedException"></exception>
         private void UpdateCurrentTextGrimoire(string currentText, ICollection<Tag> tags)
         {
             switch (currentText)
@@ -994,6 +1062,9 @@ namespace Selania.Rework.Components
                     break;
                 case "@grimoireSigils":
                     EmitSecondLevelSigilsGrimoirePage();
+                    break;
+                case "@grimoireSigilPages":
+                    EmitThirdLevelSigilsGrimoirePage();
                     break;
                 default:
                     logger.ZLogWarning($"Unknown grimoire tag {currentText}");
@@ -1277,6 +1348,108 @@ namespace Selania.Rework.Components
 
                 // the search brought nothing
                 return null;
+            }
+        }
+
+        private void EmitThirdLevelSigilsGrimoirePage()
+        {
+            var story = GetStory();
+
+            // parse the headers
+            var mainTags = MakeTags(story.currentTags);
+
+            var leftPageTitle = mainTags.FirstOrDefault(t => t.category == leftPageTitleCategory)?.value ?? "";
+            var leftPageDescription =
+                mainTags.FirstOrDefault(t => t.category == leftPageDescriptionCategory)?.value ?? "";
+            var leftGlyph1 =
+                GetGlyphFromName(mainTags.FirstOrDefault(t => t.category == leftPageGlyph1Category)?.value ?? "air");
+            var leftGlyph2 =
+                GetGlyphFromName(mainTags.FirstOrDefault(t => t.category == leftPageGlyph2Category)?.value ?? "water");
+            var leftHeader = new IStoryGrimoire.ThirdLevelSigilsGrimoirePageSideDescriptor(leftPageTitle == "",
+                leftPageTitle, leftPageDescription, leftGlyph1, leftGlyph2);
+
+            var rightPageTitle = mainTags.FirstOrDefault(t => t.category == rightPageTitleCategory)?.value ?? "";
+            var rightPageDescription =
+                mainTags.FirstOrDefault(t => t.category == rightPageDescriptionCategory)?.value ?? "";
+            var rightGlyph1 =
+                GetGlyphFromName(mainTags.FirstOrDefault(t => t.category == rightPageGlyph1Category)?.value ?? "air");
+            var rightGlyph2 =
+                GetGlyphFromName(mainTags.FirstOrDefault(t => t.category == rightPageGlyph2Category)?.value ?? "water");
+            var rightHeader = new IStoryGrimoire.ThirdLevelSigilsGrimoirePageSideDescriptor(rightPageTitle == "",
+                rightPageTitle, rightPageDescription, rightGlyph1, rightGlyph2);
+
+            // parse the choices
+            var positionsAndSigils = story.currentChoices.Map(choice =>
+            {
+                var tags = MakeTags(choice.tags);
+                var text = choice.text.Trim();
+                var position = tags.FirstOrDefault(tag => tag.category == positionCategory)?.value;
+                var glyph3 =
+                    GetGlyphFromName(tags.FirstOrDefault(tag => tag.category == glyph3Category)?.value ?? "fire");
+                var firstLine = tags.FirstOrDefault(tag => tag.category == firstLineCategory)?.value ?? "";
+                var secondLine = tags.FirstOrDefault(tag => tag.category == secondLineCategory)?.value ?? "";
+                var thirdLine = tags.FirstOrDefault(tag => tag.category == thirdLineCategory)?.value ?? "";
+                return (Position: position,
+                    Sigil: new IStoryGrimoire.ThirdLevelSigil(false, text, glyph3, firstLine, secondLine, thirdLine));
+            });
+            var sigils = new[]
+                {
+                    left1PositionValue, left2PositionValue, left3PositionValue, right1PositionValue,
+                    right2PositionValue, right3PositionValue
+                }
+                .Map(position =>
+                {
+                    var sigils = (from entry in positionsAndSigils where entry.Position == position select entry.Sigil)
+                        .ToList();
+                    switch (sigils.Count)
+                    {
+                        case > 1:
+                            logger.ZLogError($"Found more than one sigil at position {position}");
+                            return sigils[0];
+                        case 1:
+                            return sigils[0];
+                        default:
+                            return new IStoryGrimoire.ThirdLevelSigil(true, "", ISettingsSigils.GlyphType.Aether, "",
+                                "",
+                                "");
+                    }
+                });
+
+            // navigation
+            GetNavigationChoices(story, out var indexChoice, out var secondLevelChoice, out var previousChoice,
+                out var nextChoice);
+            if (indexChoice == null)
+            {
+                logger.ZLogError($"Third level sigils has not a choice to get back to the first level!");
+                return;
+            }
+
+            if (secondLevelChoice == null)
+            {
+                logger.ZLogWarning(
+                    $"Third level sigils has not a choice to get back to the second level!");
+                return;
+            }
+
+            // emit the message
+            _thirdLevelSigilsGrimoirePageDescriptorsSubject!.OnNext(
+                new IStoryGrimoire.ThirdLevelSigilsGrimoirePageDescriptor(
+                    indexChoice, secondLevelChoice, previousChoice, nextChoice,
+                    leftHeader, rightHeader, sigils[0], sigils[1], sigils[2], sigils[3], sigils[4], sigils[5]));
+
+            return;
+
+            ISettingsSigils.GlyphType GetGlyphFromName(string glyphName)
+            {
+                return glyphName.ToLower() switch
+                {
+                    "air" => ISettingsSigils.GlyphType.Air,
+                    "aether" => ISettingsSigils.GlyphType.Aether,
+                    "earth" => ISettingsSigils.GlyphType.Earth,
+                    "fire" => ISettingsSigils.GlyphType.Fire,
+                    "water" => ISettingsSigils.GlyphType.Water,
+                    _ => throw new InvalidOperationException($"Unknown glyph name '{glyphName}'")
+                };
             }
         }
 

@@ -24,6 +24,11 @@ namespace Selania.Rework.Interfaces
         Observable<SecondLevelSigilsGrimoirePageDescriptor> secondLevelSigilsGrimoirePageDescriptors { get; }
 
         /// <summary>
+        ///     An observable that produces a value whenever a third level sigils grimoire page should be displayed.
+        /// </summary>
+        Observable<ThirdLevelSigilsGrimoirePageDescriptor> thirdLevelSigilsGrimoirePageDescriptors { get; }
+
+        /// <summary>
         ///     Switches to the flow of the grimoire.
         /// </summary>
         /// <seealso cref="SwitchFromGrimoire" />
@@ -130,5 +135,63 @@ namespace Selania.Rework.Interfaces
             string? indexText,
             IEnumerable<SigilsGroupDescriptor> sigilsGroupDescriptors)
             : BaseNavigationDescriptor(indexText, null, null, null);
+
+        /// <summary>
+        ///     Description of a third level sigils' header.
+        /// </summary>
+        /// <param name="isLocked">Whether the header is locked; if it is, all the rest of the data is ignored.</param>
+        /// <param name="title">Title of the page side.</param>
+        /// <param name="description">Description of the page side.</param>
+        /// <param name="glyph1">First-level glyph for left side sigils.</param>
+        /// <param name="glyph2">Second-level glyph for left side sigils.</param>
+        record ThirdLevelSigilsGrimoirePageSideDescriptor(
+            bool isLocked,
+            string title,
+            string description,
+            ISettingsSigils.GlyphType glyph1,
+            ISettingsSigils.GlyphType glyph2);
+
+        /// <summary>
+        ///     Description for third level sigils.
+        /// </summary>
+        /// <param name="isLocked">Whether the sigil is locked; if it is, all the rest of the data is ignored.</param>
+        /// <param name="name">Name of the sigil.</param>
+        /// <param name="glyph3">Third-level glyph of the sigil (first two levels are given by the header).</param>
+        /// <param name="firstLine">First line of description for the sigils.</param>
+        /// <param name="secondLine">Second line of description for the sigils.</param>
+        /// <param name="thirdLine">Third line of description for the sigils.</param>
+        record ThirdLevelSigil(
+            bool isLocked,
+            string name,
+            ISettingsSigils.GlyphType glyph3,
+            string firstLine,
+            string secondLine,
+            string thirdLine);
+
+        /// <summary>
+        ///     Descriptor of the third level page of the sigils.
+        /// </summary>
+        /// <param name="leftSideHeader">Description for the left side header.</param>
+        /// <param name="rightSideHeader">Description for the right side header.</param>
+        /// <param name="leftSide1">Description of the first left side sigil.</param>
+        /// <param name="leftSide2">Description of the second left side sigil.</param>
+        /// <param name="leftSide3">Description of the third left side sigil.</param>
+        /// <param name="rightSide1">Description of the first right side sigil.</param>
+        /// <param name="rightSide2">Description of the second right side sigil.</param>
+        /// <param name="rightSide3">Description of the third right side sigil.</param>
+        record ThirdLevelSigilsGrimoirePageDescriptor(
+            string indexText,
+            string backToLevelTwoText,
+            string? previousPageText,
+            string? nextPageText,
+            ThirdLevelSigilsGrimoirePageSideDescriptor leftSideHeader,
+            ThirdLevelSigilsGrimoirePageSideDescriptor rightSideHeader,
+            ThirdLevelSigil leftSide1,
+            ThirdLevelSigil leftSide2,
+            ThirdLevelSigil leftSide3,
+            ThirdLevelSigil rightSide1,
+            ThirdLevelSigil rightSide2,
+            ThirdLevelSigil rightSide3
+        ) : BaseNavigationDescriptor(indexText, backToLevelTwoText, previousPageText, nextPageText);
     }
 }

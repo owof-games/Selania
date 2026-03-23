@@ -106,7 +106,7 @@ LIST allGlyphs = Fire, Air, Water, Earth, Aether
     VAR glyph_actualSigilUses = 1
 
 
--> start
+-> grimoire
 
 === start
 @interact
@@ -152,6 +152,7 @@ LIST allGlyphs = Fire, Air, Water, Earth, Aether
 === grimoire_sigils
     @grimoireSigils
     + {RANDOM(1, 6) <= 3} [{Fire}{Air} #enabled:{hasSigilStartingWith(glyph_fireAirSigils)}]
+        -> grimoire_sigils_third
     + {RANDOM(1, 6) <= 3} [{Fire}{Water} #enabled:{hasSigilStartingWith(glyph_fireWaterSigils)}]
     + {RANDOM(1, 6) <= 3} [{Fire}{Earth} #enabled:{hasSigilStartingWith(glyph_fireEarthSigils)}]
     + {RANDOM(1, 6) <= 3} [{Fire}{Aether} #enabled:{hasSigilStartingWith(glyph_fireAetherSigils)}]
@@ -173,9 +174,28 @@ LIST allGlyphs = Fire, Air, Water, Earth, Aether
     + {RANDOM(1, 6) <= 3} [{Aether}{Earth} #enabled:{hasSigilStartingWith(glyph_aetherEarthSigils)}]
     // LIST allGlyphs = Fire, Air, Water, Earth, Aether
     + [Index #bookmark:index]
-    -> grimoire
+        -> grimoire
     -
     -> grimoire_sigils
+
+=== grimoire_sigils_third
+    @grimoireSigilPages #leftPageTitle:Pontile #leftPageDescription:descrizione #leftGlyph1:Air #leftGlyph2:Water #rightPageTitle:Destra #rightPageDescription:altra descrizione #rightGlyph1:Air #rightGlyph2:Fire
+    + [LOCKED]
+    + [Strappo #glyph1:Air #glyph2:Water #glyph3:Fire #firstLine: #secondLine:seconda #thirdLine:]
+    + [Strappooo #glyph1:Air #glyph2:Water #glyph3:Earth #firstLine:prima #secondLine: #thirdLine:terza]
+    + [Boh #glyph1:Air #glyph2:Fire #glyph3:Water #firstLine:prima #secondLine:seconda #thirdLine:terza]
+    + [Altro #glyph1:Air #glyph2:Fire #glyph3:Earth #firstLine: #secondLine: #thirdLine: #status:selected]
+    + [Altro #glyph1:Air #glyph2:Fire #glyph3:Aether #firstLine: #secondLine: #thirdLine: #status:consumed]
+    + [Index #bookmark:index]
+        -> grimoire
+    + [Sigilli #bookmark:secondLevel]
+        -> grimoire_sigils
+    + [Vaso #bookmark:previous]
+        -> grimoire_sigils_third
+    + [Increspatura #bookmark:next]
+        -> grimoire_sigils_third
+    -
+    -> grimoire_sigils_third
 
 === function hasSigilStartingWith(sigils)
 {sigils has glyph_actualActiveSigil:
