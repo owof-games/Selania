@@ -48,16 +48,11 @@
             ~ move_entity(FromPondToGreenhouseBlooming, Pond)
     }
 
-//Passaggio per spostare il grimorio temporaneo in foresta dopo aver scelto il proprio nome.
-{
-    - player_nameChosen == true && contentsSafekeeping has RewriterBook:
-        ~ move_entity(temporaryGrimoire, Forest)
-}
 
 //Spostamento di libro e inventario se scoperti
     {
-        - contentsSafekeeping hasnt RewriterBook && currentPlace != Bedroom:
-            ~ move_entity(RewriterBook, currentPlace)
+        - contentsSafekeeping hasnt Grimoire && currentPlace != Bedroom:
+            ~ move_entity(Grimoire, currentPlace)
     }
 
 

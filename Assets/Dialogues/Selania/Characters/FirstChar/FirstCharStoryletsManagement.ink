@@ -7,10 +7,6 @@
             - not first_char_main_storylets.one:
                 -> first_char_main_storylets.one
         
-            //Chitarra dona il libro a PG -> metto dopo per evitare che parta di nuovo prima delle presentazioni
-            - (contentsSafekeeping has RewriterBook) && firstChar_pauseTalking == 0 && (not take_this_book) && contentsForest hasnt PG:
-                -> take_this_book
-                
             - not first_char_main_storylets.two:
                 -> first_char_main_storylets.two
                 

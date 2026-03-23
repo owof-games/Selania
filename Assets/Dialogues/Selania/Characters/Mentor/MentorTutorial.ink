@@ -167,7 +167,18 @@
                         E quando avrai fatto un po' di amicizia con loro, torna da me, così ti dirò cosa dovrai fare.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
     
             }
-            
+
+        Ah: tieni questo.
+        Può aiutarti col tuo lavoro.
+            {
+                - contentsForest has PG:
+                    ~ move_entity(Grimoire, Forest)
+                - contentsTrainStop has PG:
+                    ~ move_entity(Grimoire, TrainStop)
+                - contentsPond has PG:
+                    ~ move_entity(Grimoire, Pond)        
+            }
+
         Io devo raccogliere le foglie dalla foresta.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
 
             -> mentor_closing_storylet ->

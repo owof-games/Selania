@@ -1260,8 +1260,8 @@
      }
     
     {
-       - are_two_entities_together(PG,RewriterBook):
-           @animation:RewriterBook
+       - are_two_entities_together(PG,Grimoire):
+           @animation:Grimoire
     }
     {
         - contentsBook hasnt GreenhouseRecap:

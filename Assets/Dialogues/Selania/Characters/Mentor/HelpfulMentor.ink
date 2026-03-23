@@ -303,9 +303,9 @@
                 -> helping_mentor.top
         
         * {player_somethingStrange has strangeGrimoire} Ho trovato questo libro col mio nome.
+            TODO: Questo diventa un "il libro che mi hai dato si aggiorna da solo"
             E raccoglie informazioni su questo posto.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             E dove l'hai trovato?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
-            {temp_grimoire: Sulla panchina.|Me l'ha dato {charNameOne}.}#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             Interessante.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
                 {
                     - player_accessiblePlaces has Library:

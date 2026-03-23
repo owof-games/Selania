@@ -14,21 +14,21 @@
 {
     - book_arrivingFromTracking == Forest:
         ~ move_entity(PG, Forest)
-        ~ move_entity(RewriterBook, Forest)
+        ~ move_entity(Grimoire, Forest)
         ~ disableBigDialogue()
 
         @exit_from_rewriter_book
     
     - book_arrivingFromTracking == Dump:
         ~ move_entity(PG, Dump)
-        ~ move_entity(RewriterBook, Dump)
+        ~ move_entity(Grimoire, Dump)
         ~ disableBigDialogue()
 
         @exit_from_rewriter_book
     
     - book_arrivingFromTracking == Greenhouse:
         ~ move_entity(PG, Greenhouse)
-        ~ move_entity(RewriterBook, Greenhouse)
+        ~ move_entity(Grimoire, Greenhouse)
         ~ disableBigDialogue()
 
         @exit_from_rewriter_book
@@ -36,34 +36,34 @@
     
     - book_arrivingFromTracking == Pond:
         ~ move_entity(PG, Pond)
-        ~ move_entity(RewriterBook, Pond)
+        ~ move_entity(Grimoire, Pond)
         ~ disableBigDialogue()
 
         @exit_from_rewriter_book
     
     - book_arrivingFromTracking == Kitchen:
         ~ move_entity(PG, Kitchen)
-        ~ move_entity(RewriterBook, Kitchen)
+        ~ move_entity(Grimoire, Kitchen)
         ~ disableBigDialogue()
         @exit_from_rewriter_book
 
     - book_arrivingFromTracking == Library:
         ~ move_entity(PG, Library)
-        ~ move_entity(RewriterBook, Library)
+        ~ move_entity(Grimoire, Library)
         ~ disableBigDialogue()
 
         @exit_from_rewriter_book
         
     - book_arrivingFromTracking == Nest:
         ~ move_entity(PG, Nest)
-        ~ move_entity(RewriterBook, Nest)
+        ~ move_entity(Grimoire, Nest)
         ~ disableBigDialogue()
 
         @exit_from_rewriter_book
         
     - book_arrivingFromTracking == TrainStop:
         ~ move_entity(PG, TrainStop)
-        ~ move_entity(RewriterBook, TrainStop)
+        ~ move_entity(Grimoire, TrainStop)
         ~ disableBigDialogue()
 
         @exit_from_rewriter_book

@@ -4,12 +4,12 @@
  //Book management (the book will be treated as a place)
 
     // Ho separato la versione blocca amico stocastico da una che non lo blocca perché così se devo testare elementi del libro non ci sono problemi
-    + {are_two_entities_together(PG, RewriterBook) && !debug_stochastic}[RewriterBook]
+    + {are_two_entities_together(PG, Grimoire) && !debug_stochastic}[Grimoire]
             ~ move_entity(PG, BookPlace)
         -> main_book
     
     //Versione utile se devo testare anche il libro con amico stocastico
-    // + {are_two_entities_together(PG, RewriterBook) && debug_stochastic}[RewriterBook]
+    // + {are_two_entities_together(PG, Grimoire) && debug_stochastic}[Grimoire]
     //        ~ move_entity(PG, BookPlace)
     //    -> main_book    
         

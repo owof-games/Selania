@@ -1,32 +1,3 @@
-=== take_this_book
-//Se non abbiamo raccolto il libro della riscrittora autonomamente
-    Ehi, {player_name}!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-    Prima ai piedi di quel vecchio tronco ho trovato questo libro.
-    E ha il tuo nome.
-    Hai unə ammiratorə segretə?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
-        {
-            - are_two_entities_together(SecondCharacter, PG):
-                Bleah!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        } 
-    Comunque ho pensato fosse il caso di dartelo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-    - (bookUpdate)
-
-        ~ move_entity(MiniGrimoire, Bedroom)
-        ~ move_entity(temporaryGrimoire, Safekeeping)
-        ~ player_somethingStrange += strangeGrimoire
-        @animation:RewriterBook
-            
-            {
-                - contentsForest has PG:
-                    ~ move_entity(RewriterBook, Forest)
-                - contentsTrainStop has PG:
-                    ~ move_entity(RewriterBook, TrainStop)
-                - contentsPond has PG:
-                    ~ move_entity(RewriterBook, Pond)        
-            }
-            
-        -> main
-
 
 === open_the_kitchen
     ~ temp charNameOne = translator(firstChar_ActualName)

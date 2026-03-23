@@ -49,7 +49,6 @@
 <- doggo_no_notes
 
 // //Elementi della foresta
-<- temp_grimoire
 <- docDump_document
 <- docKitchen_document
 <- docGreenhouse_document
