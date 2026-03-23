@@ -43,7 +43,7 @@ namespace Selania.Rework.Components.Grimoire
         [SerializeField] private Sprite disabledBackgroundSprite = null!;
         private Animator _animator = null!;
         private Button _button = null!;
-        private GrimoireButtonHelper _grimoireButtonHelper;
+        private GrimoireButtonHelper _grimoireButtonHelper = null!;
 
         private float _saturation = 1;
         [Inject] internal ISettingsBook SettingsBook = null!;

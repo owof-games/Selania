@@ -392,6 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b42365eab12454981d78216c66881b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.ThirdLevelSigilIcon
+  backgroundImage: {fileID: 6076655353602513183}
   firstLevelGlyphImage: {fileID: 7730449670828748583}
   secondLevelGlyphImage: {fileID: 2434733103531108236}
   lockedImage: {fileID: 535206249453425095}

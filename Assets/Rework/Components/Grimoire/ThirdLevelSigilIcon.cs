@@ -10,6 +10,7 @@ namespace Selania.Rework.Components.Grimoire
     /// </summary>
     public class ThirdLevelSigilIcon : MonoBehaviour, IAutomaticEditorInject
     {
+        [SerializeField] private Image backgroundImage = null!;
         [SerializeField] private Image firstLevelGlyphImage = null!;
         [SerializeField] private Image secondLevelGlyphImage = null!;
         [SerializeField] private Image lockedImage = null!;
@@ -30,6 +31,7 @@ namespace Selania.Rework.Components.Grimoire
         {
             firstLevelGlyphImage.gameObject.SetActive(true);
             secondLevelGlyphImage.gameObject.SetActive(true);
+            backgroundImage.gameObject.SetActive(true);
             lockedImage.gameObject.SetActive(false);
             _borderImage.enabled = true;
             firstLevelGlyphImage.sprite = SettingsSigils.GetGlyphSprite(glyph1, 0);
@@ -45,6 +47,7 @@ namespace Selania.Rework.Components.Grimoire
         {
             firstLevelGlyphImage.gameObject.SetActive(false);
             secondLevelGlyphImage.gameObject.SetActive(false);
+            backgroundImage.gameObject.SetActive(false);
             lockedImage.gameObject.SetActive(true);
             _borderImage.enabled = false;
         }

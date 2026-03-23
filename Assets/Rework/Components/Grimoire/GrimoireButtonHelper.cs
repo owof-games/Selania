@@ -19,7 +19,7 @@ namespace Selania.Rework.Components.Grimoire
 
         private readonly Subject<bool> _pressedSubject = new();
 
-        private Subject<Sprite?> _overrideOriginalSpriteSubject;
+        private Subject<Sprite?> _overrideOriginalSpriteSubject = null!;
 
         private void Start()
         {
@@ -32,7 +32,7 @@ namespace Selania.Rework.Components.Grimoire
                 .Select(_ => selectable.interactable);
             interactableObservable
                 .DistinctUntilChanged()
-                .CombineLatest(_overrideOriginalSpriteSubject.DistinctUntilChanged(),
+                .CombineLatest(_overrideOriginalSpriteSubject.Prepend((Sprite?)null).DistinctUntilChanged(),
                     (interactable, overriddenOriginalSprite) => interactable
                         ? overriddenOriginalSprite == null ? originalSprite : overriddenOriginalSprite
                         : disabledSprite)
