@@ -19,16 +19,24 @@ namespace Selania.Rework.Components.Grimoire
 
         private readonly Subject<bool> _pressedSubject = new();
 
+        private Subject<Sprite?> _overrideOriginalSpriteSubject;
+
         private void Start()
         {
             var selectable = GetComponent<Selectable>();
             var originalSprite = targetGraphic.sprite;
 
+            _overrideOriginalSpriteSubject = new Subject<Sprite?>().AddTo(this);
+
             var interactableObservable = Observable.EveryUpdate()
                 .Select(_ => selectable.interactable);
             interactableObservable
                 .DistinctUntilChanged()
-                .Subscribe(interactable => targetGraphic.sprite = interactable ? originalSprite : disabledSprite)
+                .CombineLatest(_overrideOriginalSpriteSubject.DistinctUntilChanged(),
+                    (interactable, overriddenOriginalSprite) => interactable
+                        ? overriddenOriginalSprite == null ? originalSprite : overriddenOriginalSprite
+                        : disabledSprite)
+                .Subscribe(sprite => targetGraphic.sprite = sprite)
                 .AddTo(this);
 
             _pressedSubject
@@ -47,6 +55,15 @@ namespace Selania.Rework.Components.Grimoire
         public void OnPointerUp(PointerEventData eventData)
         {
             _pressedSubject.OnNext(false);
+        }
+
+        /// <summary>
+        ///     Set an override for the non-disabled sprite of this object.
+        /// </summary>
+        /// <param name="sprite">The new sprite to use, or <c>null</c> if no override should happen.</param>
+        public void OverrideOriginalSprite(Sprite? sprite)
+        {
+            _overrideOriginalSpriteSubject.OnNext(sprite);
         }
     }
 }

@@ -515,16 +515,16 @@ PrefabInstance:
       addedObject: {fileID: 6637337563918251430}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      insertIndex: -1
+      insertIndex: 6
       addedObject: {fileID: 5831612311000964326}
     - targetCorrespondingSourceObject: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      insertIndex: -1
+      insertIndex: 7
       addedObject: {fileID: 129252774527165550}
     - targetCorrespondingSourceObject: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      insertIndex: -1
+      insertIndex: 8
       addedObject: {fileID: 5695110801188267995}
     - targetCorrespondingSourceObject: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
-      insertIndex: -1
+      insertIndex: 9
       addedObject: {fileID: 8807397629735057390}
     - targetCorrespondingSourceObject: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
       insertIndex: -1

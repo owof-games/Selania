@@ -43,8 +43,7 @@ namespace Selania.Rework.Components.Grimoire
         [SerializeField] private Sprite disabledBackgroundSprite = null!;
         private Animator _animator = null!;
         private Button _button = null!;
-        private Sprite _defaultBackgroundSprite = null!;
-        private Image _image = null!;
+        private GrimoireButtonHelper _grimoireButtonHelper;
 
         private float _saturation = 1;
         [Inject] internal ISettingsBook SettingsBook = null!;
@@ -54,8 +53,7 @@ namespace Selania.Rework.Components.Grimoire
         {
             _button = GetComponent<Button>();
             _animator = GetComponent<Animator>();
-            _image = GetComponent<Image>();
-            _defaultBackgroundSprite = _image.sprite;
+            _grimoireButtonHelper = GetComponent<GrimoireButtonHelper>();
         }
 
         /// <summary>
@@ -95,17 +93,17 @@ namespace Selania.Rework.Components.Grimoire
             switch (status)
             {
                 case Status.Standard:
-                    _image.sprite = _defaultBackgroundSprite;
+                    _grimoireButtonHelper.OverrideOriginalSprite(null);
                     _animator.SetBool(AnimatedCachedAnimatorProperty, false);
                     _saturation = 1;
                     break;
                 case Status.Activated:
-                    _image.sprite = _defaultBackgroundSprite;
+                    _grimoireButtonHelper.OverrideOriginalSprite(null);
                     _animator.SetBool(AnimatedCachedAnimatorProperty, true);
                     _saturation = 1;
                     break;
                 case Status.Disabled:
-                    _image.sprite = disabledBackgroundSprite;
+                    _grimoireButtonHelper.OverrideOriginalSprite(disabledBackgroundSprite);
                     _animator.SetBool(AnimatedCachedAnimatorProperty, false);
                     _saturation = SettingsBook.disabledSigilsSaturationLevel;
                     break;

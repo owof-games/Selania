@@ -1,9 +1,12 @@
 ﻿using System;
+using Microsoft.Extensions.Logging;
 using R3;
 using Selania.Rework.Components.Grimoire;
 using Selania.Rework.Interfaces;
 using TMPro;
 using UnityEngine;
+using VContainer;
+using ZLogger;
 using Random = UnityEngine.Random;
 
 namespace Selania.Rework.Components.Museum.GrimoireDisplay
@@ -13,6 +16,8 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
         [SerializeField] private GrimoireBackground grimoireBackground = null!;
 
         [SerializeField] private TextMeshProUGUI output = null!;
+
+        [Inject] internal ILogger<GrimoireDisplayMuseumSectionController> Logger = null!;
 
         private void Start()
         {
@@ -239,10 +244,15 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
         {
             grimoireBackground.DisableAllThirdLevelSigilsRows();
             var activated = Random.Range(0, 6);
+            Logger.ZLogInformation($"Activated: {activated}");
             for (var i = 0; i < 6; i++)
             {
                 var level = Random.Range(0, 5);
                 if (level == 0) continue;
+                var status = i == activated ? ThirdLevelSigilsButton.Status.Activated :
+                    Random.Range(0f, 1f) < 0.5f ? ThirdLevelSigilsButton.Status.Standard :
+                    ThirdLevelSigilsButton.Status.Disabled;
+                Logger.ZLogInformation($"sigil {i}: level {level}, status {status}");
                 grimoireBackground.SetUpThirdLevelSigilRow(i,
                     "Strappo",
                     level > 1 ? "qualcosa" : "",
@@ -261,9 +271,7 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
                             _ => throw new ArgumentOutOfRangeException()
                         }
                     ),
-                    i == activated ? ThirdLevelSigilsButton.Status.Activated :
-                    Random.Range(0f, 1f) < 0.5f ? ThirdLevelSigilsButton.Status.Standard :
-                    ThirdLevelSigilsButton.Status.Disabled
+                    status
                 );
             }
         }

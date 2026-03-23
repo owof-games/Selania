@@ -205,7 +205,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c339a44c6b50dc144975d224cb41691b, type: 3}
   aetherGlyphColor: {r: 0.84313726, g: 0.2784314, b: 1, a: 1}
   switchPageAnimationDuration: 0.2
-  <ExhaustedGreenhouseButtonSaturationLevel>k__BackingField: 0
+  <exhaustedGreenhouseButtonSaturationLevel>k__BackingField: 0.5
+  <disabledSigilsSaturationLevel>k__BackingField: 0
   <minimumLogLevel>k__BackingField: 0
   _fileProviderSettings:
     categorySettingsArray: []
