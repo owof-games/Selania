@@ -316,10 +316,10 @@ VAR achievements_goodReader = notActive
     - LIST_COUNT(horizontalS_discoveredDocs) == 0:
         ~ achievements_fullLore = notDiscovered
 
-    - LIST_COUNT(horizontalS_discoveredDocs) > 0 && horizontalS_discoveredDocs < LIST_COUNT(horizontalS_allDocs):
+    - LIST_COUNT(horizontalS_discoveredDocs) > 0 && LIST_COUNT(horizontalS_discoveredDocs) < LIST_COUNT(horizontalS_allDocs):
         ~ achievements_fullLore = inProgress
 
-    - horizontalS_discoveredDocs == LIST_COUNT(horizontalS_allDocs):
+    - LIST_COUNT(horizontalS_discoveredDocs) == LIST_COUNT(horizontalS_allDocs):
         ~ achievements_fullLore = Discovered        
 }
 
