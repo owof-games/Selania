@@ -28,7 +28,7 @@
                 -> tutorial_nestStorylet -> questions_Carla
 
         + Qual è lo stato degli achievement? (domanda giusto ora che non c'è il grimorio)
-                -> carla_achievements
+                -> carla_achievements -> questions_Carla
 
 
         + Sbloccami tutti i sigilli.
