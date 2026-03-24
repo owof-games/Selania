@@ -1,5 +1,5 @@
 //Variabili e liste
-LIST horizontalS_allDocs = docOne, docTwo, docThree, docFour, docFive, docSix, docSeven, docEight, docNine, docTen, docEleven, docTwelve, docThirteen, docFourteen, docFifteen, docSixteen, docSeventeen, docEighteen, docNineteen, docTwenty, docTwentyOne, docTwentyTwo, docTwentyThree, docTwentyFour, docTwentyFive
+LIST horizontalS_allDocs = (docOne), (docTwo), (docThree), (docFour), (docFive), (docSix), (docSeven), (docEight), (docNine), (docTen), (docEleven), (docTwelve), (docThirteen), (docFourteen), (docFifteen), (docSixteen), (docSeventeen), (docEighteen), (docNineteen), (docTwenty), (docTwentyOne), (docTwentyTwo), (docTwentyThree), (docTwentyFour), (docTwentyFive)
 
 //Nota: se volessi sbloccare alcuni storylets solo verso la fine, quelli più sensati sarebbero docTwentyFour docTwentyFive docEighteen docFourteen
 

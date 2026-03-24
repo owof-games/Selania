@@ -390,19 +390,18 @@ VAR achievements_goodReader = notActive
 
 
 //Scoperta lore
-~ temp maxDocs = horizontalS_allDocs
 {
     - LIST_COUNT(horizontalS_discoveredDocs) == 0:
         ~ achievements_fullLore = notDiscovered
             ~ achievements_fullLore_text = ""
 
-    - LIST_COUNT(horizontalS_discoveredDocs) == LIST_COUNT(maxDocs):
+    - LIST_COUNT(horizontalS_discoveredDocs) == LIST_COUNT(horizontalS_allDocs):
         ~ achievements_fullLore = Discovered
-            ~ achievements_fullLore_text = "{LIST_COUNT(horizontalS_discoveredDocs)}/{LIST_COUNT(maxDocs)}"
+            ~ achievements_fullLore_text = "{LIST_COUNT(horizontalS_discoveredDocs)}/{LIST_COUNT(horizontalS_allDocs)}"
 
     - (LIST_COUNT(horizontalS_discoveredDocs) > 0):
         ~ achievements_fullLore = inProgress
-            ~ achievements_fullLore_text = "{LIST_COUNT(horizontalS_discoveredDocs)}/{LIST_COUNT(maxDocs)}"        
+            ~ achievements_fullLore_text = "{LIST_COUNT(horizontalS_discoveredDocs)}/{LIST_COUNT(horizontalS_allDocs)}"        
 }
 
 
