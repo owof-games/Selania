@@ -7,8 +7,11 @@ TODO: aggiungere logica testi.
 
 //Achievements Gamer Mode
 VAR achievements_oneRewrite = notActive
+    VAR achievements_oneRewrite_text = ""
 VAR achievements_threeRewrite = notActive
+    VAR achievements_threeRewrite_text = ""
 VAR achievements_fiveRewrite = notActive
+    VAR achievements_fiveRewrite_text = ""
 
 VAR achievements_fullKitchen = notActive
 VAR achievements_onePerfectIngredient = notActive
@@ -72,33 +75,51 @@ VAR achievements_goodReader = notActive
     {
         - LIST_COUNT(story_endedStories) == 0:
             ~ achievements_oneRewrite = notDiscovered
+                ~ achievements_oneRewrite_text = ""
             ~ achievements_threeRewrite = notDiscovered
+                ~ achievements_threeRewrite_text = ""
             ~ achievements_fiveRewrite = notDiscovered
+                ~ achievements_fiveRewrite_text = ""
 
         - LIST_COUNT(story_endedStories) == 1:
             ~ achievements_oneRewrite = Discovered
+                ~ achievements_oneRewrite_text = "1/1"
             ~ achievements_threeRewrite = inProgress
+                ~ achievements_threeRewrite_text = "{LIST_COUNT(story_endedStories)}/3"
             ~ achievements_fiveRewrite = notDiscovered
+                ~ achievements_fiveRewrite_text = ""
 
         - LIST_COUNT(story_endedStories) == 2:
             ~ achievements_oneRewrite = Discovered
+                ~ achievements_oneRewrite_text = "1/1"
             ~ achievements_threeRewrite = inProgress
+                ~ achievements_threeRewrite_text = "{LIST_COUNT(story_endedStories)}/3"
             ~ achievements_fiveRewrite = notDiscovered
+                ~ achievements_fiveRewrite_text = ""
 
         - LIST_COUNT(story_endedStories) == 3:
             ~ achievements_oneRewrite = Discovered
+                ~ achievements_oneRewrite_text = "1/1"
             ~ achievements_threeRewrite = Discovered
+                ~ achievements_threeRewrite_text = "{LIST_COUNT(story_endedStories)}/3"
             ~ achievements_fiveRewrite = inProgress
+                ~ achievements_fiveRewrite_text = "{LIST_COUNT(story_endedStories)}/5"
 
         - LIST_COUNT(story_endedStories) == 4:
             ~ achievements_oneRewrite = Discovered
+                ~ achievements_oneRewrite_text = "1/1"
             ~ achievements_threeRewrite = Discovered
+                ~ achievements_threeRewrite_text = "3/3"
             ~ achievements_fiveRewrite = inProgress
+                ~ achievements_fiveRewrite_text = "{LIST_COUNT(story_endedStories)}/5"
 
         - LIST_COUNT(story_endedStories) == 5:
             ~ achievements_oneRewrite = Discovered
+                ~ achievements_oneRewrite_text = "1/1"
             ~ achievements_threeRewrite = Discovered
-            ~ achievements_fiveRewrite = Discovered                
+                ~ achievements_threeRewrite_text = "3/3"
+            ~ achievements_fiveRewrite = Discovered
+                ~ achievements_fiveRewrite_text = "{LIST_COUNT(story_endedStories)}/5"              
     }
 
 //Aggiornamento achievements legati alla cucina.
