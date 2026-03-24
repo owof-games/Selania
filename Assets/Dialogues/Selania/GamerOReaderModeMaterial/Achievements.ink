@@ -196,31 +196,31 @@ VAR achievements_goodReader = notActive
             ~ achievements_onePerfectIngredient = Discovered
                 ~ achievements_onePerfectIngredient_text = "1/1"
             ~ achievements_fivePerfectIngredients = inProgress
-                ~ achievements_fivePerfectIngredients_text = "{LIST_COUNT(achievements_perfectIngredientsCounter)}/5"
+                ~ achievements_fivePerfectIngredients_text = "{achievements_perfectIngredientsCounter}/5"
 
         - achievements_perfectIngredientsCounter == 2:
             ~ achievements_onePerfectIngredient = Discovered
                 ~ achievements_onePerfectIngredient_text = "1/1"
             ~ achievements_fivePerfectIngredients = inProgress
-                ~ achievements_fivePerfectIngredients_text = "{LIST_COUNT(achievements_perfectIngredientsCounter)}/5"
+                ~ achievements_fivePerfectIngredients_text = "{achievements_perfectIngredientsCounter}/5"
 
         - achievements_perfectIngredientsCounter == 3:
             ~ achievements_onePerfectIngredient = Discovered
                 ~ achievements_onePerfectIngredient_text = "1/1"
             ~ achievements_fivePerfectIngredients = inProgress
-                ~ achievements_fivePerfectIngredients_text = "{LIST_COUNT(achievements_perfectIngredientsCounter)}/5"
+                ~ achievements_fivePerfectIngredients_text = "{achievements_perfectIngredientsCounter}/5"
 
         - achievements_perfectIngredientsCounter == 4:
             ~ achievements_onePerfectIngredient = Discovered
                 ~ achievements_onePerfectIngredient_text = "1/1"
             ~ achievements_fivePerfectIngredients = inProgress
-                ~ achievements_fivePerfectIngredients_text = "{LIST_COUNT(achievements_perfectIngredientsCounter)}/5"
+                ~ achievements_fivePerfectIngredients_text = "{achievements_perfectIngredientsCounter}/5"
 
         - achievements_perfectIngredientsCounter == 5:
             ~ achievements_onePerfectIngredient = Discovered
                 ~ achievements_onePerfectIngredient_text = "1/1"
             ~ achievements_fivePerfectIngredients = Discovered
-                ~ achievements_fivePerfectIngredients_text = "{LIST_COUNT(achievements_perfectIngredientsCounter)}/5"                 
+                ~ achievements_fivePerfectIngredients_text = "{achievements_perfectIngredientsCounter}/5"                 
     }
 
 
@@ -250,43 +250,43 @@ VAR achievements_goodReader = notActive
             ~ achievements_onePerfectGift = notDiscovered
                 ~ achievements_onePerfectGift_text = ""
             ~ achievements_fivePerfectGifts = notDiscovered
-                ~ achievements_fivePerfectGift_text = ""
+                ~ achievements_fivePerfectGifts_text = ""
 
         - achievements_perfectGiftsCounter == 1:
             ~ achievements_onePerfectGift = Discovered
                 ~ achievements_onePerfectGift_text = "1/1"
             ~ achievements_fivePerfectGifts = inProgress
-                ~ achievements_fivePerfectGift_text = "{LIST_COUNT(achievements_perfectGiftsCounter)}/5"
+                ~ achievements_fivePerfectGifts_text = "{achievements_perfectGiftsCounter}/5"
 
         - achievements_perfectGiftsCounter == 2:
             ~ achievements_onePerfectGift = Discovered
                 ~ achievements_onePerfectGift_text = "1/1"
             ~ achievements_fivePerfectGifts = inProgress
-                ~ achievements_fivePerfectGift_text = "{LIST_COUNT(achievements_perfectGiftsCounter)}/5"
+                ~ achievements_fivePerfectGifts_text = "{achievements_perfectGiftsCounter}/5"
 
         - achievements_perfectGiftsCounter == 3:
             ~ achievements_onePerfectGift = Discovered
                 ~ achievements_onePerfectGift_text = "1/1"
             ~ achievements_fivePerfectGifts = inProgress
-                ~ achievements_fivePerfectGift_text = "{LIST_COUNT(achievements_perfectGiftsCounter)}/5"
+                ~ achievements_fivePerfectGifts_text = "{achievements_perfectGiftsCounter}/5"
 
         - achievements_perfectGiftsCounter == 4:
             ~ achievements_onePerfectGift = Discovered
                 ~ achievements_onePerfectGift_text = "1/1"
             ~ achievements_fivePerfectGifts = inProgress
-                ~ achievements_fivePerfectGift_text = "{LIST_COUNT(achievements_perfectGiftsCounter)}/5"
+                ~ achievements_fivePerfectGifts_text = "{achievements_perfectGiftsCounter}/5"
 
         - achievements_perfectGiftsCounter == 5:
             ~ achievements_onePerfectGift = Discovered
                 ~ achievements_onePerfectGift_text = "1/1"
             ~ achievements_fivePerfectGifts = Discovered
-                ~ achievements_fivePerfectGift_text = "{LIST_COUNT(achievements_perfectGiftsCounter)}/5"                  
+                ~ achievements_fivePerfectGifts_text = "{achievements_perfectGiftsCounter}/5"                  
     }
 
 //Achievement Franco.
     //Prima di tutto guardo qual è la somma delle missioni mancanti.
     ~ achievements_counterLastingMissions = LIST_COUNT(frog_availableCommonMissions) + LIST_COUNT(frog_availableSpecialMissions)
-        ~ temp completed_missions = LIST_COUNT(achievements_maxFrancoMissions) - LIST_COUNT(achievements_counterLastingMissions)
+        ~ temp completed_missions = achievements_maxFrancoMissions - achievements_counterLastingMissions
     {
         - achievements_maxFrancoMissions == achievements_counterLastingMissions:
             ~ achievements_fullFranco = notDiscovered
@@ -294,11 +294,11 @@ VAR achievements_goodReader = notActive
 
         - achievements_maxFrancoMissions != achievements_counterLastingMissions && achievements_counterLastingMissions > 0:
             ~ achievements_fullFranco = inProgress
-                ~ achievements_fullFranco_text = "{LIST_COUNT(completed_missions)}/{LIST_COUNT(achievements_counterLastingMissions)}"
+                ~ achievements_fullFranco_text = "{completed_missions}/{achievements_maxFrancoMissions}"
 
         - achievements_counterLastingMissions == 0:
             ~ achievements_fullFranco = Discovered
-                ~ achievements_fullFranco_text = "{LIST_COUNT(completed_missions)}/{LIST_COUNT(achievements_counterLastingMissions)}"     
+                ~ achievements_fullFranco_text = "{completed_missions}/{achievements_maxFrancoMissions}"     
 
     }
 
@@ -322,7 +322,6 @@ VAR achievements_goodReader = notActive
     //~ achievements_allLetters = notDiscovered
 
 //Achievement serra.
-backpack_findedGifts
     {
         - LIST_COUNT(backpack_findedGifts) == 0:
             ~ achievements_fullGreenhouse = notDiscovered
@@ -391,18 +390,19 @@ backpack_findedGifts
 
 
 //Scoperta lore
+~ temp maxDocs = horizontalS_allDocs
 {
     - LIST_COUNT(horizontalS_discoveredDocs) == 0:
         ~ achievements_fullLore = notDiscovered
             ~ achievements_fullLore_text = ""
 
-    - LIST_COUNT(horizontalS_discoveredDocs) > 0 && LIST_COUNT(horizontalS_discoveredDocs) < LIST_COUNT(horizontalS_allDocs):
-        ~ achievements_fullLore = inProgress
-            ~ achievements_fullLore_text = "{LIST_COUNT(horizontalS_discoveredDocs)}/{LIST_COUNT(horizontalS_allDocs)}"
-
-    - LIST_COUNT(horizontalS_discoveredDocs) == LIST_COUNT(horizontalS_allDocs):
+    - LIST_COUNT(horizontalS_discoveredDocs) == LIST_COUNT(maxDocs):
         ~ achievements_fullLore = Discovered
-            ~ achievements_fullLore_text = "{LIST_COUNT(horizontalS_discoveredDocs)}/{LIST_COUNT(horizontalS_allDocs)}"    
+            ~ achievements_fullLore_text = "{LIST_COUNT(horizontalS_discoveredDocs)}/{LIST_COUNT(maxDocs)}"
+
+    - (LIST_COUNT(horizontalS_discoveredDocs) > 0):
+        ~ achievements_fullLore = inProgress
+            ~ achievements_fullLore_text = "{LIST_COUNT(horizontalS_discoveredDocs)}/{LIST_COUNT(maxDocs)}"        
 }
 
 
