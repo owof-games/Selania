@@ -13,7 +13,7 @@ TEMPORANEAMENTE CI FA ATTIVARE/DISATTIVARE LA MODALITa' GAMER e READER MODE, per
     + Voglio la modalità Reader Mode
         ~ settings_gamerMode = false
     -
-
+Va bene.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
     ~ achievements_start_statusUpdate()
 
     {
