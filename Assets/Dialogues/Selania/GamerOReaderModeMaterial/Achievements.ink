@@ -3,8 +3,6 @@
 LIST achievements_statusAchievements = notActive, notDiscovered, inProgress, Discovered
 
 
-TODO: aggiungere logica testi.
-
 //Achievements Gamer Mode
 VAR achievements_oneRewrite = notActive
     VAR achievements_oneRewrite_text = ""
@@ -43,8 +41,11 @@ VAR achievements_fullGreenhouse = notActive
 //Achievements Reader Mode
 VAR achievements_goodListener = notActive
     VAR achievements_goodListener_tracker = ()
+    VAR achievements_goodListener_text = ""
 VAR achievements_fullLore = notActive
+    VAR achievements_fullLore_text = ""
 VAR achievements_goodReader = notActive
+    VAR achievements_goodReader_text = ""
 
 
 //Chiamo a inizio partita
@@ -375,12 +376,15 @@ backpack_findedGifts
 {
     - LIST_COUNT(achievements_goodListener_tracker) == 0:
         ~ achievements_goodListener = notDiscovered
+            ~ achievements_goodListener_text = ""
 
     - LIST_COUNT(achievements_goodListener_tracker) > 0 && LIST_COUNT(achievements_goodListener_tracker) < 5:
         ~ achievements_goodListener = inProgress
+            ~ achievements_goodListener_text = "{LIST_COUNT(achievements_goodListener_tracker)}/5"
 
     - LIST_COUNT(achievements_goodListener_tracker) == 5:
-        ~ achievements_goodListener = Discovered   
+        ~ achievements_goodListener = Discovered
+            ~ achievements_goodListener_text = "{LIST_COUNT(achievements_goodListener_tracker)}/5"
 
 }
 
@@ -390,27 +394,33 @@ backpack_findedGifts
 {
     - LIST_COUNT(horizontalS_discoveredDocs) == 0:
         ~ achievements_fullLore = notDiscovered
+            ~ achievements_fullLore_text = ""
 
     - LIST_COUNT(horizontalS_discoveredDocs) > 0 && LIST_COUNT(horizontalS_discoveredDocs) < LIST_COUNT(horizontalS_allDocs):
         ~ achievements_fullLore = inProgress
+            ~ achievements_fullLore_text = "{LIST_COUNT(horizontalS_discoveredDocs)}/{LIST_COUNT(horizontalS_allDocs)}"
 
     - LIST_COUNT(horizontalS_discoveredDocs) == LIST_COUNT(horizontalS_allDocs):
-        ~ achievements_fullLore = Discovered        
+        ~ achievements_fullLore = Discovered
+            ~ achievements_fullLore_text = "{LIST_COUNT(horizontalS_discoveredDocs)}/{LIST_COUNT(horizontalS_allDocs)}"    
 }
 
 
 
 //Lettura racconti
-
+~ temp readStories = LIST_COUNT(library_allStories) - LIST_COUNT(library_unreadStories)
 {
     - LIST_COUNT(library_unreadStories) == LIST_COUNT(library_allStories):
         ~ achievements_goodReader = notDiscovered
+            ~ achievements_goodReader_text = ""
 
     - LIST_COUNT(library_unreadStories) < LIST_COUNT(library_allStories) && LIST_COUNT(library_unreadStories) > 0:
         ~ achievements_goodReader = inProgress
+            ~ achievements_goodReader_text = "{LIST_COUNT(readStories)}/{LIST_COUNT(library_allStories)}"
 
     - LIST_COUNT(library_unreadStories) == 0:
-        ~ achievements_goodReader = Discovered        
+        ~ achievements_goodReader = Discovered
+            ~ achievements_goodReader_text = "{LIST_COUNT(readStories)}/{LIST_COUNT(library_allStories)}"    
 }
 
 {
