@@ -16,12 +16,16 @@ VAR achievements_fiveRewrite = notActive
 VAR achievements_fullKitchen = notActive
     VAR achievements_fullKitchen_text = ""
 VAR achievements_onePerfectIngredient = notActive
+    VAR achievements_onePerfectIngredient_text = ""
 VAR achievements_fivePerfectIngredients = notActive
     VAR achievements_perfectIngredientsCounter = 0
+    VAR achievements_fivePerfectIngredients_text = ""
 
 VAR achievements_onePerfectGift = notActive
+    VAR achievements_onePerfectGift_text = ""
 VAR achievements_fivePerfectGifts = notActive
     VAR achievements_perfectGiftsCounter = 0
+    VAR achievements_fivePerfectGifts_text = "" 
 
 VAR achievements_fullFranco = notActive
     VAR achievements_maxFrancoMissions = 0
@@ -135,23 +139,23 @@ VAR achievements_goodReader = notActive
 
         - LIST_COUNT(kitchen_allChefs) == 2:
             ~ achievements_fullKitchen = inProgress
-                ~ achievements_fullKitchen_text = "{LIST_COUNT(kitchen_allChefs)}/6
+                ~ achievements_fullKitchen_text = "{LIST_COUNT(kitchen_allChefs)}/6"
 
         - LIST_COUNT(kitchen_allChefs) == 3:
             ~ achievements_fullKitchen = inProgress
-                ~ achievements_fullKitchen_text = "{LIST_COUNT(kitchen_allChefs)}/6
+                ~ achievements_fullKitchen_text = "{LIST_COUNT(kitchen_allChefs)}/6"
 
         - LIST_COUNT(kitchen_allChefs) == 4:
             ~ achievements_fullKitchen = inProgress
-                ~ achievements_fullKitchen_text = "{LIST_COUNT(kitchen_allChefs)}/6
+                ~ achievements_fullKitchen_text = "{LIST_COUNT(kitchen_allChefs)}/6"
 
         - LIST_COUNT(kitchen_allChefs) == 5:
             ~ achievements_fullKitchen = inProgress
-                ~ achievements_fullKitchen_text = "{LIST_COUNT(kitchen_allChefs)}/6
+                ~ achievements_fullKitchen_text = "{LIST_COUNT(kitchen_allChefs)}/6"
 
         - LIST_COUNT(kitchen_allChefs) == 6:
             ~ achievements_fullKitchen = Discovered
-                ~ achievements_fullKitchen_text = "{LIST_COUNT(kitchen_allChefs)}/6  
+                ~ achievements_fullKitchen_text = "{LIST_COUNT(kitchen_allChefs)}/6"
 
     }
 
@@ -179,27 +183,39 @@ VAR achievements_goodReader = notActive
     {
         - achievements_perfectIngredientsCounter == 0:
             ~ achievements_onePerfectIngredient = notDiscovered
+                ~ achievements_onePerfectIngredient_text = ""
             ~ achievements_fivePerfectIngredients = notDiscovered
+                ~ achievements_fivePerfectIngredients_text = ""
 
         - achievements_perfectIngredientsCounter == 1:
             ~ achievements_onePerfectIngredient = Discovered
+                ~ achievements_onePerfectIngredient_text = "1/1"
             ~ achievements_fivePerfectIngredients = inProgress
+                ~ achievements_fivePerfectIngredients_text = "{LIST_COUNT(achievements_perfectIngredientsCounter)}/5"
 
         - achievements_perfectIngredientsCounter == 2:
             ~ achievements_onePerfectIngredient = Discovered
+                ~ achievements_onePerfectIngredient_text = "1/1"
             ~ achievements_fivePerfectIngredients = inProgress
+                ~ achievements_fivePerfectIngredients_text = "{LIST_COUNT(achievements_perfectIngredientsCounter)}/5"
 
         - achievements_perfectIngredientsCounter == 3:
             ~ achievements_onePerfectIngredient = Discovered
+                ~ achievements_onePerfectIngredient_text = "1/1"
             ~ achievements_fivePerfectIngredients = inProgress
+                ~ achievements_fivePerfectIngredients_text = "{LIST_COUNT(achievements_perfectIngredientsCounter)}/5"
 
         - achievements_perfectIngredientsCounter == 4:
             ~ achievements_onePerfectIngredient = Discovered
+                ~ achievements_onePerfectIngredient_text = "1/1"
             ~ achievements_fivePerfectIngredients = inProgress
+                ~ achievements_fivePerfectIngredients_text = "{LIST_COUNT(achievements_perfectIngredientsCounter)}/5"
 
         - achievements_perfectIngredientsCounter == 5:
             ~ achievements_onePerfectIngredient = Discovered
-            ~ achievements_fivePerfectIngredients = Discovered                    
+                ~ achievements_onePerfectIngredient_text = "1/1"
+            ~ achievements_fivePerfectIngredients = Discovered
+                ~ achievements_fivePerfectIngredients_text = "{LIST_COUNT(achievements_perfectIngredientsCounter)}/5"                 
     }
 
 
@@ -227,27 +243,39 @@ VAR achievements_goodReader = notActive
     {
         - achievements_perfectGiftsCounter == 0:
             ~ achievements_onePerfectGift = notDiscovered
+                ~ achievements_onePerfectGift_text = ""
             ~ achievements_fivePerfectGifts = notDiscovered
+                ~ achievements_fivePerfectGift_text = ""
 
         - achievements_perfectGiftsCounter == 1:
             ~ achievements_onePerfectGift = Discovered
+                ~ achievements_onePerfectGift_text = "1/1"
             ~ achievements_fivePerfectGifts = inProgress
+                ~ achievements_fivePerfectGift_text = "{LIST_COUNT(achievements_perfectGiftsCounter)}/5"
 
         - achievements_perfectGiftsCounter == 2:
             ~ achievements_onePerfectGift = Discovered
+                ~ achievements_onePerfectGift_text = "1/1"
             ~ achievements_fivePerfectGifts = inProgress
+                ~ achievements_fivePerfectGift_text = "{LIST_COUNT(achievements_perfectGiftsCounter)}/5"
 
         - achievements_perfectGiftsCounter == 3:
             ~ achievements_onePerfectGift = Discovered
+                ~ achievements_onePerfectGift_text = "1/1"
             ~ achievements_fivePerfectGifts = inProgress
+                ~ achievements_fivePerfectGift_text = "{LIST_COUNT(achievements_perfectGiftsCounter)}/5"
 
         - achievements_perfectGiftsCounter == 4:
             ~ achievements_onePerfectGift = Discovered
+                ~ achievements_onePerfectGift_text = "1/1"
             ~ achievements_fivePerfectGifts = inProgress
+                ~ achievements_fivePerfectGift_text = "{LIST_COUNT(achievements_perfectGiftsCounter)}/5"
 
         - achievements_perfectGiftsCounter == 5:
             ~ achievements_onePerfectGift = Discovered
-            ~ achievements_fivePerfectGifts = Discovered                    
+                ~ achievements_onePerfectGift_text = "1/1"
+            ~ achievements_fivePerfectGifts = Discovered
+                ~ achievements_fivePerfectGift_text = "{LIST_COUNT(achievements_perfectGiftsCounter)}/5"                  
     }
 
 //Achievement Franco.
