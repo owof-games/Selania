@@ -24,6 +24,7 @@ VAR achievements_fivePerfectIngredients = notActive
     VAR achievements_perfectIngredientsCounter = 0
     VAR achievements_fivePerfectIngredients_text = ""
     VAR achievements_fivePerfectIngredients_notified = false
+    VAR achievements_perfectIngredientsReceivers = ()
 
 VAR achievements_onePerfectGift = notActive
     VAR achievements_onePerfectGift_text = ""
@@ -209,29 +210,29 @@ VAR achievements_goodReader = notActive
 
 
     {
-        - firstChar_favouritesGifts has kitchen_firstCharExtraIngredient && achievements_perfectGiftReceivers hasnt FirstCharacter:
+        - firstChar_favouritesGifts has kitchen_firstCharExtraIngredient && achievements_perfectIngredientsReceivers hasnt FirstCharacter:
             ~ achievements_perfectIngredientsCounter ++
-            ~ achievements_perfectGiftReceivers += FirstCharacter
+            ~ achievements_perfectIngredientsReceivers += FirstCharacter
     }
     {
-        - secondChar_favouritesGifts has kitchen_secondCharExtraIngredient && achievements_perfectGiftReceivers hasnt SecondCharacter:
+        - secondChar_favouritesGifts has kitchen_secondCharExtraIngredient && achievements_perfectIngredientsReceivers hasnt SecondCharacter:
             ~ achievements_perfectIngredientsCounter ++
-            ~ achievements_perfectGiftReceivers += SecondCharacter
+            ~ achievements_perfectIngredientsReceivers += SecondCharacter
     }
     {
-        - thirdChar_favouritesGifts has kitchen_thirdCharExtraIngredient && achievements_perfectGiftReceivers hasnt ThirdCharacter:
+        - thirdChar_favouritesGifts has kitchen_thirdCharExtraIngredient && achievements_perfectIngredientsReceivers hasnt ThirdCharacter:
             ~ achievements_perfectIngredientsCounter ++
-            ~ achievements_perfectGiftReceivers += ThirdCharacter
+            ~ achievements_perfectIngredientsReceivers += ThirdCharacter
     }
     {
-        - fourthChar_favouritesGifts has kitchen_fourthCharExtraIngredient && achievements_perfectGiftReceivers hasnt FourthCharacter:
+        - fourthChar_favouritesGifts has kitchen_fourthCharExtraIngredient && achievements_perfectIngredientsReceivers hasnt FourthCharacter:
             ~ achievements_perfectIngredientsCounter ++
-            ~ achievements_perfectGiftReceivers += FourthCharacter
+            ~ achievements_perfectIngredientsReceivers += FourthCharacter
     }
     // {
-    //     - fifthChar_favouritesGifts has kitchen_fifthCharExtraIngredient && achievements_perfectGiftReceivers hasnt FifthCharacter:
+    //     - fifthChar_favouritesGifts has kitchen_fifthCharExtraIngredient && achievements_perfectIngredientReceivers hasnt FifthCharacter:
     //       ~ achievements_perfectIngredientsCounter ++
-    //       ~ achievements_perfectGiftReceivers += FifthCharacter
+    //       ~ achievements_perfectIngredientReceivers += FifthCharacter
     // }
     {
         - achievements_perfectIngredientsCounter == 0:
@@ -288,24 +289,29 @@ VAR achievements_goodReader = notActive
 
 //Aggiornamento achievements legati ai doni
     {
-        - firstChar_favouritesGifts has firstChar_giftedObject:
+        - firstChar_favouritesGifts has firstChar_giftedObject && achievements_perfectGiftReceivers hasnt FirstCharacter:
             ~ achievements_perfectGiftsCounter ++
+            ~ achievements_perfectGiftReceivers += FirstCharacter
     }
     {
-        - secondChar_favouritesGifts has secondChar_giftedObject:
+        - secondChar_favouritesGifts has secondChar_giftedObject && achievements_perfectGiftReceivers hasnt SecondCharacter:
             ~ achievements_perfectGiftsCounter ++
+            ~ achievements_perfectGiftReceivers += SecondCharacter
     }
     {
-        - thirdChar_favouritesGifts has thirdChar_giftedObject:
+        - thirdChar_favouritesGifts has thirdChar_giftedObject && achievements_perfectGiftReceivers hasnt ThirdCharacter:
             ~ achievements_perfectGiftsCounter ++
+            ~ achievements_perfectGiftReceivers += ThirdCharacter
     }
     {
-        - fourthChar_favouritesGifts has fourthChar_giftedObject:
+        - fourthChar_favouritesGifts has fourthChar_giftedObject && achievements_perfectGiftReceivers hasnt FourthCharacter:
             ~ achievements_perfectGiftsCounter ++
+            ~ achievements_perfectGiftReceivers += FourthCharacter
     }
     // {
-    //     - fifthChar_favouritesGifts has fifthChar_giftedObject:
-    //         ~ achievements_perfectGiftsCounter ++
+    //     - fifthChar_favouritesGifts has fifthChar_giftedObject && achievements_perfectGiftReceivers hasnt FifthCharacter:
+//          ~ achievements_perfectGiftsCounter ++
+//          ~ achievements_perfectGiftReceivers += FifthCharacter
     // }
     {
         - achievements_perfectGiftsCounter == 0:
