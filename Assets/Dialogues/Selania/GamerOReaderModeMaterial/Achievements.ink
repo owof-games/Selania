@@ -19,7 +19,7 @@ VAR achievements_fullKitchen = notActive
     VAR achievements_fullKitchen_notified = false
 VAR achievements_onePerfectIngredient = notActive
     VAR achievements_onePerfectIngredient_text = ""
-    VAR achievements_onePerfectIngredient_ notified = false
+    VAR achievements_onePerfectIngredient_notified = false
 VAR achievements_fivePerfectIngredients = notActive
     VAR achievements_perfectIngredientsCounter = 0
     VAR achievements_fivePerfectIngredients_text = ""
@@ -32,6 +32,7 @@ VAR achievements_fivePerfectGifts = notActive
     VAR achievements_perfectGiftsCounter = 0
     VAR achievements_fivePerfectGifts_text = ""
     VAR achievements_fivePerfectGifts_notified = false
+    VAR achievements_perfectGiftReceivers = ()
 
 VAR achievements_fullFranco = notActive
     VAR achievements_maxFrancoMissions = 0
@@ -54,10 +55,13 @@ VAR achievements_fullGreenhouse = notActive
 VAR achievements_goodListener = notActive
     VAR achievements_goodListener_tracker = ()
     VAR achievements_goodListener_text = ""
+    VAR achievements_goodListener_notified = false
 VAR achievements_fullLore = notActive
     VAR achievements_fullLore_text = ""
+    VAR achievements_fullLore_notified = false
 VAR achievements_goodReader = notActive
     VAR achievements_goodReader_text = ""
+    VAR achievements_goodReader_notified = false
 
 
 //Chiamo a inizio partita
@@ -205,24 +209,29 @@ VAR achievements_goodReader = notActive
 
 
     {
-        - firstChar_favouritesGifts has kitchen_firstCharExtraIngredient:
+        - firstChar_favouritesGifts has kitchen_firstCharExtraIngredient && achievements_perfectGiftReceivers hasnt FirstCharacter:
             ~ achievements_perfectIngredientsCounter ++
+            ~ achievements_perfectGiftReceivers += FirstCharacter
     }
     {
-        - secondChar_favouritesGifts has kitchen_secondCharExtraIngredient:
+        - secondChar_favouritesGifts has kitchen_secondCharExtraIngredient && achievements_perfectGiftReceivers hasnt SecondCharacter:
             ~ achievements_perfectIngredientsCounter ++
+            ~ achievements_perfectGiftReceivers += SecondCharacter
     }
     {
-        - thirdChar_favouritesGifts has kitchen_thirdCharExtraIngredient:
+        - thirdChar_favouritesGifts has kitchen_thirdCharExtraIngredient && achievements_perfectGiftReceivers hasnt ThirdCharacter:
             ~ achievements_perfectIngredientsCounter ++
+            ~ achievements_perfectGiftReceivers += ThirdCharacter
     }
     {
-        - fourthChar_favouritesGifts has kitchen_fourthCharExtraIngredient:
+        - fourthChar_favouritesGifts has kitchen_fourthCharExtraIngredient && achievements_perfectGiftReceivers hasnt FourthCharacter:
             ~ achievements_perfectIngredientsCounter ++
+            ~ achievements_perfectGiftReceivers += FourthCharacter
     }
     // {
-    //     - fifthChar_favouritesGifts has kitchen_fifthCharExtraIngredient:
-    //         ~ achievements_perfectIngredientsCounter ++
+    //     - fifthChar_favouritesGifts has kitchen_fifthCharExtraIngredient && achievements_perfectGiftReceivers hasnt FifthCharacter:
+    //       ~ achievements_perfectIngredientsCounter ++
+    //       ~ achievements_perfectGiftReceivers += FifthCharacter
     // }
     {
         - achievements_perfectIngredientsCounter == 0:
