@@ -30,6 +30,7 @@ VAR achievements_fivePerfectGifts = notActive
 VAR achievements_fullFranco = notActive
     VAR achievements_maxFrancoMissions = 0
     VAR achievements_counterLastingMissions = 0
+    VAR achievements_fullFranco_text = ""
 
 VAR achievements_allSigils = notActive
 VAR achievements_allLetters = notActive
@@ -281,15 +282,19 @@ VAR achievements_goodReader = notActive
 //Achievement Franco.
     //Prima di tutto guardo qual è la somma delle missioni mancanti.
     ~ achievements_counterLastingMissions = LIST_COUNT(frog_availableCommonMissions) + LIST_COUNT(frog_availableSpecialMissions)
+        ~ temp completed_missions = LIST_COUNT(achievements_maxFrancoMissions) - LIST_COUNT(achievements_counterLastingMissions)
     {
         - achievements_maxFrancoMissions == achievements_counterLastingMissions:
             ~ achievements_fullFranco = notDiscovered
+                ~ achievements_fullFranco_text = ""
 
         - achievements_maxFrancoMissions != achievements_counterLastingMissions && achievements_counterLastingMissions > 0:
             ~ achievements_fullFranco = inProgress
+                ~ achievements_fullFranco_text = "{LIST_COUNT(completed_missions)}/{LIST_COUNT(achievements_counterLastingMissions)}"
 
         - achievements_counterLastingMissions == 0:
-            ~ achievements_fullFranco = Discovered     
+            ~ achievements_fullFranco = Discovered
+                ~ achievements_fullFranco_text = "{LIST_COUNT(completed_missions)}/{LIST_COUNT(achievements_counterLastingMissions)}"     
 
     }
 
