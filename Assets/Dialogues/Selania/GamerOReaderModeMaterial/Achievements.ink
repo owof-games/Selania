@@ -14,6 +14,7 @@ VAR achievements_fiveRewrite = notActive
     VAR achievements_fiveRewrite_text = ""
 
 VAR achievements_fullKitchen = notActive
+    VAR achievements_fullKitchen_text = ""
 VAR achievements_onePerfectIngredient = notActive
 VAR achievements_fivePerfectIngredients = notActive
     VAR achievements_perfectIngredientsCounter = 0
@@ -124,23 +125,33 @@ VAR achievements_goodReader = notActive
 
 //Aggiornamento achievements legati alla cucina.
     {
-        - LIST_COUNT(horizontalS_allChefs) == 0:
+        - LIST_COUNT(kitchen_allChefs) == 0:
             ~ achievements_fullKitchen = notDiscovered
+                ~ achievements_fullKitchen_text = ""
 
-        - LIST_COUNT(horizontalS_allChefs) == 1:
+        - LIST_COUNT(kitchen_allChefs) == 1:
             ~ achievements_fullKitchen = inProgress
+                ~ achievements_fullKitchen_text = "{LIST_COUNT(kitchen_allChefs)}/6"
 
-        - LIST_COUNT(horizontalS_allChefs) == 2:
+        - LIST_COUNT(kitchen_allChefs) == 2:
             ~ achievements_fullKitchen = inProgress
+                ~ achievements_fullKitchen_text = "{LIST_COUNT(kitchen_allChefs)}/6
 
-        - LIST_COUNT(horizontalS_allChefs) == 3:
+        - LIST_COUNT(kitchen_allChefs) == 3:
             ~ achievements_fullKitchen = inProgress
+                ~ achievements_fullKitchen_text = "{LIST_COUNT(kitchen_allChefs)}/6
 
-        - LIST_COUNT(horizontalS_allChefs) == 4:
+        - LIST_COUNT(kitchen_allChefs) == 4:
             ~ achievements_fullKitchen = inProgress
+                ~ achievements_fullKitchen_text = "{LIST_COUNT(kitchen_allChefs)}/6
 
-        - LIST_COUNT(horizontalS_allChefs) == 5:
-            ~ achievements_fullKitchen = Discovered    
+        - LIST_COUNT(kitchen_allChefs) == 5:
+            ~ achievements_fullKitchen = inProgress
+                ~ achievements_fullKitchen_text = "{LIST_COUNT(kitchen_allChefs)}/6
+
+        - LIST_COUNT(kitchen_allChefs) == 6:
+            ~ achievements_fullKitchen = Discovered
+                ~ achievements_fullKitchen_text = "{LIST_COUNT(kitchen_allChefs)}/6  
 
     }
 
@@ -291,7 +302,7 @@ VAR achievements_goodReader = notActive
         <b>achievements_counterLastingMissions è uguale a {achievements_counterLastingMissions}, e quindi lo stato di achievements_fullFranco è {achievements_fullFranco}.
         <b>achievements_perfectGiftsCounter è uguale a {achievements_perfectGiftsCounter}, e quindi lo stato di achievements_onePerfectGift è {achievements_onePerfectGift}, mentre quello di achievements_fivePerfectGifts è {achievements_fivePerfectGifts}.
         <b>achievements_perfectIngredientsCounter è uguale a {achievements_perfectIngredientsCounter}, e quindi lo stato di achievements_onePerfectIngredient è {achievements_onePerfectIngredient}, mentre quello di achievements_fivePerfectIngredients è {achievements_fivePerfectIngredients}.
-        <b>LIST_COUNT(horizontalS_allChefs) è uguale a {LIST_COUNT(horizontalS_allChefs)}, e quindi lo stato di achievements_fullKitchen è {achievements_fullKitchen}.
+        <b>LIST_COUNT(kitchen_allChefs) è uguale a {LIST_COUNT(kitchen_allChefs)}, e quindi lo stato di achievements_fullKitchen è {achievements_fullKitchen}.
         <b>LIST_COUNT(story_endedStories) è uguale a {LIST_COUNT(story_endedStories)}, e quindi lo stato di achievements_oneRewrite è {achievements_oneRewrite}, mentre quello di achievements_threeRewrite è {achievements_threeRewrite} e quello di achievements_fiveRewrite è {achievements_fiveRewrite}.
 
 }
