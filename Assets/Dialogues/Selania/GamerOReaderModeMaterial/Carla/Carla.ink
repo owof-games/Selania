@@ -27,6 +27,10 @@
         + {tutorial_nestStorylet} Quindi, con quelle pietre sulla spiaggia che ci devo fare?
                 -> tutorial_nestStorylet -> questions_Carla
 
+        + Qual è lo stato degli achievement? (domanda giusto ora che non c'è il grimorio)
+                -> carla_achievements
+
+
         + Sbloccami tutti i sigilli.
                 -> glyph_open_all_sigils ->
         Dopo l'operazione, glyph_discoveredSigils = {LIST_COUNT(glyph_discoveredSigils)}
