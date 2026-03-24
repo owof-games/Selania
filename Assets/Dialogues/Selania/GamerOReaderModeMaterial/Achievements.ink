@@ -33,8 +33,11 @@ VAR achievements_fullFranco = notActive
     VAR achievements_fullFranco_text = ""
 
 VAR achievements_allSigils = notActive
+    VAR achievements_allSigils_text = ""
 VAR achievements_allLetters = notActive
+    VAR achievements_allLetters_text = ""
 VAR achievements_fullGreenhouse = notActive
+    VAR achievements_fullGreenhouse_text = ""
 
 
 //Achievements Reader Mode
@@ -302,12 +305,15 @@ VAR achievements_goodReader = notActive
     {
         - LIST_COUNT(glyph_discoveredSigils) == 0:
             ~ achievements_allSigils = notDiscovered
+                ~ achievements_allSigils_text = ""
 
         - LIST_COUNT(glyph_discoveredSigils) > 0 && LIST_COUNT(glyph_discoveredSigils) < 60:
             ~ achievements_allSigils = inProgress
+                ~ achievements_allSigils_text = "{LIST_COUNT(glyph_discoveredSigils)}/60"
 
         - LIST_COUNT(glyph_discoveredSigils) == 60:
             ~ achievements_allSigils = Discovered
+                ~ achievements_allSigils_text = "{LIST_COUNT(glyph_discoveredSigils)}/60"
     }
 
 //Achievement lettere.
@@ -315,15 +321,19 @@ VAR achievements_goodReader = notActive
     //~ achievements_allLetters = notDiscovered
 
 //Achievement serra.
+backpack_findedGifts
     {
-        - LIST_COUNT(greenhouse_backupCultivable) == LIST_COUNT(greenhouse_cultivable):
+        - LIST_COUNT(backpack_findedGifts) == 0:
             ~ achievements_fullGreenhouse = notDiscovered
+                ~ achievements_fullGreenhouse_text = ""
 
-        - LIST_COUNT(greenhouse_backupCultivable) < LIST_COUNT(greenhouse_cultivable) && LIST_COUNT(greenhouse_backupCultivable) > 0:
+        - LIST_COUNT(backpack_findedGifts) < LIST_COUNT(greenhouse_cultivable) && LIST_COUNT(backpack_findedGifts) > 0:
             ~ achievements_fullGreenhouse = inProgress
+                ~ achievements_fullGreenhouse_text = "{LIST_COUNT(backpack_findedGifts)}/{LIST_COUNT(greenhouse_cultivable)}"
 
-        - LIST_COUNT(greenhouse_backupCultivable)  == 0:
-            ~ achievements_fullGreenhouse = Discovered         
+        - LIST_COUNT(backpack_findedGifts) == LIST_COUNT(greenhouse_cultivable):
+            ~ achievements_fullGreenhouse = Discovered
+                ~ achievements_fullGreenhouse_text = "{LIST_COUNT(backpack_findedGifts)}/{LIST_COUNT(greenhouse_cultivable)}"      
 
     }
 
