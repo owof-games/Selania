@@ -94,6 +94,8 @@ VAR achievements_goodReader = notActive
         - LIST_COUNT(story_endedStories) == 1:
             ~ achievements_oneRewrite = Discovered
                 ~ achievements_oneRewrite_text = "1/1"
+                ~ notification_achievement = true
+                ~ notification_achievement = "{achievements_oneRewrite_text}"
             ~ achievements_threeRewrite = inProgress
                 ~ achievements_threeRewrite_text = "{LIST_COUNT(story_endedStories)}/3"
             ~ achievements_fiveRewrite = notDiscovered
@@ -106,12 +108,15 @@ VAR achievements_goodReader = notActive
                 ~ achievements_threeRewrite_text = "{LIST_COUNT(story_endedStories)}/3"
             ~ achievements_fiveRewrite = notDiscovered
                 ~ achievements_fiveRewrite_text = ""
+                
 
         - LIST_COUNT(story_endedStories) == 3:
             ~ achievements_oneRewrite = Discovered
                 ~ achievements_oneRewrite_text = "1/1"
             ~ achievements_threeRewrite = Discovered
                 ~ achievements_threeRewrite_text = "{LIST_COUNT(story_endedStories)}/3"
+                ~ notification_achievement = true
+                ~ notification_achievement = "{achievements_threeRewrite}"
             ~ achievements_fiveRewrite = inProgress
                 ~ achievements_fiveRewrite_text = "{LIST_COUNT(story_endedStories)}/5"
 
@@ -129,7 +134,9 @@ VAR achievements_goodReader = notActive
             ~ achievements_threeRewrite = Discovered
                 ~ achievements_threeRewrite_text = "3/3"
             ~ achievements_fiveRewrite = Discovered
-                ~ achievements_fiveRewrite_text = "{LIST_COUNT(story_endedStories)}/5"              
+                ~ achievements_fiveRewrite_text = "{LIST_COUNT(story_endedStories)}/5"
+                ~ notification_achievement = true
+                ~ notification_achievement = "{achievements_fiveRewrite}"             
     }
 
 //Aggiornamento achievements legati alla cucina.
@@ -161,6 +168,8 @@ VAR achievements_goodReader = notActive
         - LIST_COUNT(kitchen_allChefs) == 6:
             ~ achievements_fullKitchen = Discovered
                 ~ achievements_fullKitchen_text = "{LIST_COUNT(kitchen_allChefs)}/6"
+                ~ notification_achievement = true
+                ~ notification_achievement = "{achievements_fullKitchen_text}"
 
     }
 
@@ -195,6 +204,8 @@ VAR achievements_goodReader = notActive
         - achievements_perfectIngredientsCounter == 1:
             ~ achievements_onePerfectIngredient = Discovered
                 ~ achievements_onePerfectIngredient_text = "1/1"
+                ~ notification_achievement = true
+                ~ notification_achievement = "{achievements_onePerfectIngredient}"
             ~ achievements_fivePerfectIngredients = inProgress
                 ~ achievements_fivePerfectIngredients_text = "{achievements_perfectIngredientsCounter}/5"
 
@@ -220,7 +231,9 @@ VAR achievements_goodReader = notActive
             ~ achievements_onePerfectIngredient = Discovered
                 ~ achievements_onePerfectIngredient_text = "1/1"
             ~ achievements_fivePerfectIngredients = Discovered
-                ~ achievements_fivePerfectIngredients_text = "{achievements_perfectIngredientsCounter}/5"                 
+                ~ achievements_fivePerfectIngredients_text = "{achievements_perfectIngredientsCounter}/5"
+                ~ notification_achievement = true
+                ~ notification_achievement = "{achievements_fivePerfectIngredients}"                
     }
 
 
@@ -280,7 +293,9 @@ VAR achievements_goodReader = notActive
             ~ achievements_onePerfectGift = Discovered
                 ~ achievements_onePerfectGift_text = "1/1"
             ~ achievements_fivePerfectGifts = Discovered
-                ~ achievements_fivePerfectGifts_text = "{achievements_perfectGiftsCounter}/5"                  
+                ~ achievements_fivePerfectGifts_text = "{achievements_perfectGiftsCounter}/5"
+                ~ notification_achievement = true
+                ~ notification_achievement = "{achievements_fivePerfectGifts}"                   
     }
 
 //Achievement Franco.
@@ -298,7 +313,9 @@ VAR achievements_goodReader = notActive
 
         - achievements_counterLastingMissions == 0:
             ~ achievements_fullFranco = Discovered
-                ~ achievements_fullFranco_text = "{completed_missions}/{achievements_maxFrancoMissions}"     
+                ~ achievements_fullFranco_text = "{completed_missions}/{achievements_maxFrancoMissions}"
+                ~ notification_achievement = true
+                ~ notification_achievement = "{achievements_fullFranco}"        
 
     }
 
@@ -315,6 +332,8 @@ VAR achievements_goodReader = notActive
         - LIST_COUNT(glyph_discoveredSigils) == 60:
             ~ achievements_allSigils = Discovered
                 ~ achievements_allSigils_text = "{LIST_COUNT(glyph_discoveredSigils)}/60"
+                ~ notification_achievement = true
+                ~ notification_achievement = "{achievements_allSigils}"   
     }
 
 //Achievement lettere.
@@ -333,7 +352,9 @@ VAR achievements_goodReader = notActive
 
         - LIST_COUNT(backpack_findedGifts) == LIST_COUNT(greenhouse_cultivable):
             ~ achievements_fullGreenhouse = Discovered
-                ~ achievements_fullGreenhouse_text = "{LIST_COUNT(backpack_findedGifts)}/{LIST_COUNT(greenhouse_cultivable)}"      
+                ~ achievements_fullGreenhouse_text = "{LIST_COUNT(backpack_findedGifts)}/{LIST_COUNT(greenhouse_cultivable)}"
+                ~ notification_achievement = true
+                ~ notification_achievement = "{achievements_fullGreenhouse}"     
 
     }
 
@@ -384,6 +405,8 @@ VAR achievements_goodReader = notActive
     - LIST_COUNT(achievements_goodListener_tracker) == 5:
         ~ achievements_goodListener = Discovered
             ~ achievements_goodListener_text = "{LIST_COUNT(achievements_goodListener_tracker)}/5"
+            ~ notification_achievement = true
+            ~ notification_achievement = "{achievements_goodListener_text}"  
 
 }
 
@@ -398,6 +421,8 @@ VAR achievements_goodReader = notActive
     - LIST_COUNT(horizontalS_discoveredDocs) == LIST_COUNT(horizontalS_allDocs):
         ~ achievements_fullLore = Discovered
             ~ achievements_fullLore_text = "{LIST_COUNT(horizontalS_discoveredDocs)}/{LIST_COUNT(horizontalS_allDocs)}"
+            ~ notification_achievement = true
+            ~ notification_achievement = "{achievements_fullLore}" 
 
     - (LIST_COUNT(horizontalS_discoveredDocs) > 0):
         ~ achievements_fullLore = inProgress
@@ -419,7 +444,9 @@ VAR achievements_goodReader = notActive
 
     - LIST_COUNT(library_unreadStories) == 0:
         ~ achievements_goodReader = Discovered
-            ~ achievements_goodReader_text = "{LIST_COUNT(readStories)}/{LIST_COUNT(library_allStories)}"    
+            ~ achievements_goodReader_text = "{LIST_COUNT(readStories)}/{LIST_COUNT(library_allStories)}"
+            ~ notification_achievement = true
+            ~ notification_achievement = "{achievements_goodReader}"   
 }
 
 {

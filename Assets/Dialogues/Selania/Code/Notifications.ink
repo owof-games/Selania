@@ -5,6 +5,8 @@ VAR notification_greenhouseGrown = false
 VAR notification_greenhouseGrownRepropose = true 
 VAR notification_restingSession = false
 VAR notification_francoQuests = false
+VAR notification_achievement = false
+VAR notification_achievementName = ""
 
 
 
@@ -31,6 +33,13 @@ VAR notification_francoQuests = false
         {player_name} è qui da molto. Perché non si prende una pausa? #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             ~ notification_restingSession = false
             ~ player_lastRestingSession = player_notificationRestingReset
+}
+
+{
+    - notification_achievement == true:
+        {player_name} ha completato l'achievement {notification_achievementName}.
+            ~ notification_achievement = false
+            ~ notification_achievement = ""
 }
 
 //Notifiche per le missioni di Franco
