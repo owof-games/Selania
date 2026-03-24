@@ -15,7 +15,7 @@ MonoBehaviour:
   <defaultCharacterColor>k__BackingField: {r: 1, g: 0.39354917, b: 0, a: 1}
   characterDialogueInfo:
   - <name>k__BackingField: PG
-    <color>k__BackingField: {r: 0.29003027, g: 0.2783019, b: 1, a: 1}
+    <color>k__BackingField: {r: 0.84313726, g: 0.14901961, b: 0.3019608, a: 1}
   - <name>k__BackingField: Chitarra
     <color>k__BackingField: {r: 0.60784316, g: 0.43529412, b: 0.07058824, a: 1}
   - <name>k__BackingField: Riccio
@@ -31,7 +31,13 @@ MonoBehaviour:
   - <name>k__BackingField: Doggo
     <color>k__BackingField: {r: 0.5686275, g: 0.46666667, b: 0.36862746, a: 1}
   - <name>k__BackingField: Boccale
-    <color>k__BackingField: {r: 0.8392157, g: 0.67058825, b: 0.22745098, a: 1}
+    <color>k__BackingField: {r: 0.47058824, g: 0.12941177, b: 0.08235294, a: 1}
+  - <name>k__BackingField: Nonna Molotov
+    <color>k__BackingField: {r: 0.84705883, g: 0.2, b: 0.07450981, a: 1}
+  - <name>k__BackingField: PNG5
+    <color>k__BackingField: {r: 0.23529412, g: 0.44705883, b: 0.22352941, a: 1}
+  - <name>k__BackingField: Luna
+    <color>k__BackingField: {r: 0.40784314, g: 0.5176471, b: 0.56078434, a: 1}
   <textLineSlideSpeed>k__BackingField: 800
   <slideInDuration>k__BackingField: 0.3
   <choiceIndentationPercentage>k__BackingField: 8
