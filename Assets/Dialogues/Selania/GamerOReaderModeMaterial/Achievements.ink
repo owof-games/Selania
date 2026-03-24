@@ -6,36 +6,48 @@ LIST achievements_statusAchievements = notActive, notDiscovered, inProgress, Dis
 //Achievements Gamer Mode
 VAR achievements_oneRewrite = notActive
     VAR achievements_oneRewrite_text = ""
+    VAR achievements_oneRewrite_notified = false
 VAR achievements_threeRewrite = notActive
     VAR achievements_threeRewrite_text = ""
+    VAR achievements_threeRewrite_notified = false
 VAR achievements_fiveRewrite = notActive
     VAR achievements_fiveRewrite_text = ""
+    VAR achievements_fiveRewrite_notified = false
 
 VAR achievements_fullKitchen = notActive
     VAR achievements_fullKitchen_text = ""
+    VAR achievements_fullKitchen_notified = false
 VAR achievements_onePerfectIngredient = notActive
     VAR achievements_onePerfectIngredient_text = ""
+    VAR achievements_onePerfectIngredient_ notified = false
 VAR achievements_fivePerfectIngredients = notActive
     VAR achievements_perfectIngredientsCounter = 0
     VAR achievements_fivePerfectIngredients_text = ""
+    VAR achievements_fivePerfectIngredients_notified = false
 
 VAR achievements_onePerfectGift = notActive
     VAR achievements_onePerfectGift_text = ""
+    VAR achievements_onePerfectGift_notified = false
 VAR achievements_fivePerfectGifts = notActive
     VAR achievements_perfectGiftsCounter = 0
-    VAR achievements_fivePerfectGifts_text = "" 
+    VAR achievements_fivePerfectGifts_text = ""
+    VAR achievements_fivePerfectGifts_notified = false
 
 VAR achievements_fullFranco = notActive
     VAR achievements_maxFrancoMissions = 0
     VAR achievements_counterLastingMissions = 0
     VAR achievements_fullFranco_text = ""
+    VAR achievements_fullFranco_notified = false
 
 VAR achievements_allSigils = notActive
     VAR achievements_allSigils_text = ""
+    VAR achievements_allSigils_notified = false
 VAR achievements_allLetters = notActive
     VAR achievements_allLetters_text = ""
+    VAR achievements_allLetters_notified = false
 VAR achievements_fullGreenhouse = notActive
     VAR achievements_fullGreenhouse_text = ""
+    VAR achievements_fullGreenhouse_notified = false
 
 
 //Achievements Reader Mode
@@ -94,12 +106,16 @@ VAR achievements_goodReader = notActive
         - LIST_COUNT(story_endedStories) == 1:
             ~ achievements_oneRewrite = Discovered
                 ~ achievements_oneRewrite_text = "1/1"
-                ~ notification_achievement = true
-                ~ notification_achievement = "{achievements_oneRewrite_text}"
             ~ achievements_threeRewrite = inProgress
                 ~ achievements_threeRewrite_text = "{LIST_COUNT(story_endedStories)}/3"
             ~ achievements_fiveRewrite = notDiscovered
                 ~ achievements_fiveRewrite_text = ""
+                {
+                    - achievements_oneRewrite_notified == false:
+                        ~ notification_achievement = true
+                        ~ achievements_oneRewrite_notified = true
+                        ~ notification_achievement = "{achievements_oneRewrite_text}"
+                }
 
         - LIST_COUNT(story_endedStories) == 2:
             ~ achievements_oneRewrite = Discovered
@@ -115,10 +131,15 @@ VAR achievements_goodReader = notActive
                 ~ achievements_oneRewrite_text = "1/1"
             ~ achievements_threeRewrite = Discovered
                 ~ achievements_threeRewrite_text = "{LIST_COUNT(story_endedStories)}/3"
-                ~ notification_achievement = true
-                ~ notification_achievement = "{achievements_threeRewrite}"
+                
             ~ achievements_fiveRewrite = inProgress
                 ~ achievements_fiveRewrite_text = "{LIST_COUNT(story_endedStories)}/5"
+                {
+                    - achievements_threeRewrite_notified == false:
+                        ~ achievements_threeRewrite_notified = true
+                        ~ notification_achievement = true
+                        ~ notification_achievement = "{achievements_threeRewrite}"
+                }
 
         - LIST_COUNT(story_endedStories) == 4:
             ~ achievements_oneRewrite = Discovered
@@ -135,8 +156,12 @@ VAR achievements_goodReader = notActive
                 ~ achievements_threeRewrite_text = "3/3"
             ~ achievements_fiveRewrite = Discovered
                 ~ achievements_fiveRewrite_text = "{LIST_COUNT(story_endedStories)}/5"
-                ~ notification_achievement = true
-                ~ notification_achievement = "{achievements_fiveRewrite}"             
+                {
+                    - achievements_fiveRewrite_notified == false:
+                        ~ achievements_fiveRewrite_notified = true
+                        ~ notification_achievement = true
+                        ~ notification_achievement = "{achievements_fiveRewrite}"
+                }          
     }
 
 //Aggiornamento achievements legati alla cucina.
@@ -168,8 +193,13 @@ VAR achievements_goodReader = notActive
         - LIST_COUNT(kitchen_allChefs) == 6:
             ~ achievements_fullKitchen = Discovered
                 ~ achievements_fullKitchen_text = "{LIST_COUNT(kitchen_allChefs)}/6"
-                ~ notification_achievement = true
-                ~ notification_achievement = "{achievements_fullKitchen_text}"
+                
+                {
+                    - achievements_fullKitchen_notified == false:
+                        ~ achievements_fullKitchen_notified = true
+                        ~ notification_achievement = true
+                        ~ notification_achievement = "{achievements_fullKitchen_text}"
+                } 
 
     }
 
@@ -204,10 +234,15 @@ VAR achievements_goodReader = notActive
         - achievements_perfectIngredientsCounter == 1:
             ~ achievements_onePerfectIngredient = Discovered
                 ~ achievements_onePerfectIngredient_text = "1/1"
-                ~ notification_achievement = true
-                ~ notification_achievement = "{achievements_onePerfectIngredient}"
+                
             ~ achievements_fivePerfectIngredients = inProgress
                 ~ achievements_fivePerfectIngredients_text = "{achievements_perfectIngredientsCounter}/5"
+                {
+                    - achievements_onePerfectIngredient_notified == false:
+                        ~ achievements_onePerfectIngredient_notified = true
+                        ~ notification_achievement = true
+                        ~ notification_achievement = "{achievements_onePerfectIngredient}"
+                } 
 
         - achievements_perfectIngredientsCounter == 2:
             ~ achievements_onePerfectIngredient = Discovered
@@ -232,8 +267,13 @@ VAR achievements_goodReader = notActive
                 ~ achievements_onePerfectIngredient_text = "1/1"
             ~ achievements_fivePerfectIngredients = Discovered
                 ~ achievements_fivePerfectIngredients_text = "{achievements_perfectIngredientsCounter}/5"
-                ~ notification_achievement = true
-                ~ notification_achievement = "{achievements_fivePerfectIngredients}"                
+                
+                {
+                    - achievements_fivePerfectIngredients_notified == false:
+                        ~ achievements_fivePerfectIngredients_notified = true
+                        ~ notification_achievement = true
+                        ~ notification_achievement = "{achievements_fivePerfectIngredients}"
+                }            
     }
 
 
@@ -270,6 +310,12 @@ VAR achievements_goodReader = notActive
                 ~ achievements_onePerfectGift_text = "1/1"
             ~ achievements_fivePerfectGifts = inProgress
                 ~ achievements_fivePerfectGifts_text = "{achievements_perfectGiftsCounter}/5"
+                {
+                    - achievements_onePerfectGift_notified == false:
+                        ~ achievements_onePerfectGift_notified = true
+                        ~ notification_achievement = true
+                        ~ notification_achievement = "{achievements_onePerfectGift}"
+                } 
 
         - achievements_perfectGiftsCounter == 2:
             ~ achievements_onePerfectGift = Discovered
@@ -294,8 +340,12 @@ VAR achievements_goodReader = notActive
                 ~ achievements_onePerfectGift_text = "1/1"
             ~ achievements_fivePerfectGifts = Discovered
                 ~ achievements_fivePerfectGifts_text = "{achievements_perfectGiftsCounter}/5"
-                ~ notification_achievement = true
-                ~ notification_achievement = "{achievements_fivePerfectGifts}"                   
+                {
+                    - achievements_fivePerfectGifts_notified == false:
+                        ~ achievements_fivePerfectGifts_notified = true
+                        ~ notification_achievement = true
+                        ~ notification_achievement = "{achievements_fivePerfectGifts}"
+                }                 
     }
 
 //Achievement Franco.
@@ -314,8 +364,13 @@ VAR achievements_goodReader = notActive
         - achievements_counterLastingMissions == 0:
             ~ achievements_fullFranco = Discovered
                 ~ achievements_fullFranco_text = "{completed_missions}/{achievements_maxFrancoMissions}"
-                ~ notification_achievement = true
-                ~ notification_achievement = "{achievements_fullFranco}"        
+               
+                {
+                    - achievements_fullFranco_notified == false:
+                        ~ achievements_fullFranco_notified = true
+                        ~ notification_achievement = true
+                        ~ notification_achievement = "{achievements_fullFranco}"
+                }        
 
     }
 
@@ -332,8 +387,13 @@ VAR achievements_goodReader = notActive
         - LIST_COUNT(glyph_discoveredSigils) == 60:
             ~ achievements_allSigils = Discovered
                 ~ achievements_allSigils_text = "{LIST_COUNT(glyph_discoveredSigils)}/60"
-                ~ notification_achievement = true
-                ~ notification_achievement = "{achievements_allSigils}"   
+                
+                {
+                    - achievements_allSigils_notified == false:
+                        ~ achievements_allSigils_notified = true
+                        ~ notification_achievement = true
+                        ~ notification_achievement = "{achievements_allSigils}"
+                } 
     }
 
 //Achievement lettere.
@@ -353,8 +413,12 @@ VAR achievements_goodReader = notActive
         - LIST_COUNT(backpack_findedGifts) == LIST_COUNT(greenhouse_cultivable):
             ~ achievements_fullGreenhouse = Discovered
                 ~ achievements_fullGreenhouse_text = "{LIST_COUNT(backpack_findedGifts)}/{LIST_COUNT(greenhouse_cultivable)}"
-                ~ notification_achievement = true
-                ~ notification_achievement = "{achievements_fullGreenhouse}"     
+                {
+                    - achievements_fullGreenhouse_notified == false:
+                        ~ achievements_fullGreenhouse_notified = true
+                        ~ notification_achievement = true
+                        ~ notification_achievement = "{achievements_fullGreenhouse}"
+                }    
 
     }
 
@@ -405,8 +469,12 @@ VAR achievements_goodReader = notActive
     - LIST_COUNT(achievements_goodListener_tracker) == 5:
         ~ achievements_goodListener = Discovered
             ~ achievements_goodListener_text = "{LIST_COUNT(achievements_goodListener_tracker)}/5"
-            ~ notification_achievement = true
-            ~ notification_achievement = "{achievements_goodListener_text}"  
+                {
+                    - achievements_goodListener_notified == false:
+                        ~ achievements_goodListener_notified = true
+                        ~ notification_achievement = true
+                        ~ notification_achievement = "{achievements_goodListener}"
+                }   
 
 }
 
@@ -421,12 +489,16 @@ VAR achievements_goodReader = notActive
     - LIST_COUNT(horizontalS_discoveredDocs) == LIST_COUNT(horizontalS_allDocs):
         ~ achievements_fullLore = Discovered
             ~ achievements_fullLore_text = "{LIST_COUNT(horizontalS_discoveredDocs)}/{LIST_COUNT(horizontalS_allDocs)}"
-            ~ notification_achievement = true
-            ~ notification_achievement = "{achievements_fullLore}" 
+                {
+                    - achievements_fullLore_notified == false:
+                        ~ achievements_fullLore_notified = true
+                        ~ notification_achievement = true
+                        ~ notification_achievement = "{achievements_fullLore}"
+                }   
 
     - (LIST_COUNT(horizontalS_discoveredDocs) > 0):
         ~ achievements_fullLore = inProgress
-            ~ achievements_fullLore_text = "{LIST_COUNT(horizontalS_discoveredDocs)}/{LIST_COUNT(horizontalS_allDocs)}"        
+            ~ achievements_fullLore_text = "{LIST_COUNT(horizontalS_discoveredDocs)}/{LIST_COUNT(horizontalS_allDocs)}"      
 }
 
 
@@ -445,8 +517,12 @@ VAR achievements_goodReader = notActive
     - LIST_COUNT(library_unreadStories) == 0:
         ~ achievements_goodReader = Discovered
             ~ achievements_goodReader_text = "{LIST_COUNT(readStories)}/{LIST_COUNT(library_allStories)}"
-            ~ notification_achievement = true
-            ~ notification_achievement = "{achievements_goodReader}"   
+                {
+                    - achievements_goodReader_notified == false:
+                        ~ achievements_goodReader_notified = true
+                        ~ notification_achievement = true
+                        ~ notification_achievement = "{achievements_goodReader}"
+                }   
 }
 
 {
