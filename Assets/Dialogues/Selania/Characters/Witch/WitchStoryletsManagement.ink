@@ -7,7 +7,6 @@
             -> witch_intro
 
 
-        
         //Dialogo su Franco
         - witch_intro && closed_mission_verify && not the_witch_and_the_frog:
             -> the_witch_and_the_frog
@@ -37,7 +36,7 @@
             -> about_glyph_choices
 
         //Commento sul libro
-        - witch_intro && not about_the_book:
+        - witch_intro && welcome && not about_the_book:
             -> about_the_book
         
         

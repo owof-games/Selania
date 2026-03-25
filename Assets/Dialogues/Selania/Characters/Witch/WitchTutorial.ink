@@ -11,8 +11,7 @@
 //     - La riscrittura è un momento a sé, e questa è una cosa importante da far capire in vista dei sigilli.
 //     - Non sei mai tu a scegliere il nome: tu sei una guida, ma la strada è di chi la percorre.
 
-->->
-
+-> main
 
 === tutorial_witchSigils
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -27,7 +26,7 @@
 //     - non sono in opposizione, ma in comunicazione, generano sinergie, cose nuove
 //     - il mutare che è portato rimane positivo, anche quando sembra negativo: serve che qualcosa perisca, si disgreghi, affinché il nuovo emerga. solo la morte è immutevole (e non è manco vero).
 
-->->
+-> main
 
 
 === about_glyph_choices
@@ -54,7 +53,7 @@
     <i>Raccontando la storia di chi cammina.
     - (bookUpdate)
     
-->->
+-> main
 
 
 
