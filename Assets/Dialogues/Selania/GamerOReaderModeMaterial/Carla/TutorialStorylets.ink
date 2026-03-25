@@ -3,7 +3,8 @@
 === tutorial_choicesRelationshipStorylet ===
 
     {
-        - tutorial_choicesRelationshipStorylet > 1: Le ricordo che ripeto sempre lo stesso script della prima volta, ok?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
+        - tutorial_choicesRelationshipStorylet > 1:
+            Le ricordo che ripeto sempre lo stesso script della prima volta, ok?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
     }
     
     Perché non sono andata a vivere nei boschi da sola, quando avevo vent'anni, perché?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
@@ -73,6 +74,10 @@
 === tutorial_rereadingStorylet ===
     
     Questa roba è di competenza di quelli dell'amministrazione centrale, non mia.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
+        {
+            - tutorial_rereadingStorylet > 1: 
+                Ripetiamo la pappardella.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
+        }
     Sbrighiamoci.
     Non so se gliel'hanno già detto, ma lei è qui per aiutare le persone a trovare un nuovo nome.
     Perché?
@@ -91,6 +96,7 @@
     E quando sono insicure, chiedono troppi perché.
     Sono tenuta comunque a ricordarle che anche se potrà fare la riscrittura dopo, che ne so, sette chiacchierate, le può convenire continuare a conoscere meglio la persona, prima di iniziare il processo.
     Anche perché poco dopo la riscrittura, quella persona se ne andrà.
+    Non mi chieda dove, perché non è di mia competenza.
     Ah, dimenticavo!
     Le scelte fatte durante la riscrittura hanno un valore molto più alto di quelle durante il resto del vostro rapporto.
         {
@@ -111,7 +117,8 @@
 
     Ma quando mi finisce il turno?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
     {
-        - tutorial_interfaceStorylets > 1: Ripeterò le cose esattamente come la prima volta, voglio brucare in santa pace.
+        - tutorial_interfaceStorylets > 1:
+            Ripeterò le cose esattamente come la prima volta, voglio brucare in santa pace.
     }
     Sono Carla, e prima di entrare in Selanìa devo dirle cinque cose.
     Prenda appunti perché odio ripetermi.
@@ -148,8 +155,8 @@
                     Come?
                     Non siamo autorizzate a dare spiegazioni.
             }
-    Infine devo spiegarle il sistema di relazioni.
-    Ma è finito il mio turno.
+    Infine dovrei spiegarle il sistema di relazioni.
+    Ma non è di mia competenza.
     {
         - entity_location(Carla) != Forest:
             Lo sportello chiude.
@@ -159,6 +166,11 @@
 ->->
 
 === tutorial_GrimoireStorylet ===
+
+        {
+            - tutorial_GrimoireStorylet > 1: 
+                Per fortuna questa è breve.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
+        }
 
     Ha finalmente ricevuto il suo Grimorio!#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
     Festa!
@@ -194,9 +206,10 @@
     }
 
     Deve parlare con la responsabile.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
-    {
-        - tutorial_greenhouseGiftsInkStorylet > 1: Abbiamo uno script da seguire, per cui non cambierò una virgola rispetto a prima.
-    }
+        {
+            - tutorial_greenhouseGiftsInkStorylet > 1:
+                Abbiamo uno script da seguire, per cui non cambierò una virgola rispetto a prima.
+        }
     Ah no scusi, è l'abitudine.
     Mi è stato chiesto di spiegarle come funziona la serra.
     Ci fa crescere le piante ed è fatta.
@@ -210,7 +223,8 @@
     Perché sennò muoiono, no?
     Due: alcune persone possono accettare in dono da parte sua una pianta.
         {
-            - player_accessiblePlaces has Kitchen: Oppure può usarle come ingrediente in cucina.
+            - player_accessiblePlaces has Kitchen:
+                Oppure può usarle come ingrediente in cucina.
         }
     Per fare un dono basta dire alla persona: "Ehi, voglio donarti una cosa" o qualcosa del genere.
     A quel punto si aprirà il suo grimorio, e lei potrà scegliere quale pianta donare.
@@ -228,6 +242,7 @@
     In che senso stanno finendo i germogli? 
     Un po' di gramigna è rimasta?
     Volo!
+    Ah: se rimane a stomaco vuoto, non è un problema di mia competenza.
 
         {
             - entity_location(Carla) != Forest:
@@ -246,10 +261,14 @@
                 ~ move_entity(Carla, Kitchen)
         }
 
+        {
+            - tutorial_kitchenStorylet == 1:
+                Quindi non ci stavano ampliando la mensa?!?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
 
-    Quindi non ci stavano ampliando la mensa?!?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
-    Salve.
-    Di nuovo.
+            - else: 
+                Perché ho sempre fame?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
+        }
+
     Sono qui per spiegarle come funziona questa cucina.
     Sperando sia più sveglio di mio figlio.
     Uno: ogni persona cucinerà con lei solo una volta.
@@ -269,6 +288,10 @@
     Se la persona apprezzerà l'ingrediente, le dirà qualcosa di utile a capire meglio come ragiona.
     Non sono previsti rimborsi in caso di insuccesso.
     Non dovrei dirglielo, ma il signor Franco potrebbe aiutarla in caso di difficoltà.
+    Perché?
+    Perché è un bravo ranocchio.
+    Perché è un bravo ranocchio?
+    Non è di mia competenza.
 
 
         {
@@ -284,14 +307,18 @@
 === tutorial_SigilsActivationStorylet ===
 ~ temp charNameThree = translator(thirdChar_ActualName)
 
-    {
-        - entity_location(Carla) != Forest:
-            ~ move_entity(Carla, Forest)
-            ->->
-    }
+        {
+            - entity_location(Carla) != Forest:
+                ~ move_entity(Carla, Forest)
+                ->->
+        }
 
     Ma perché questi non si fanno mai i cavoli propri? #speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
-    Salve!
+        {
+            - tutorial_SigilsActivationStorylet > 1:
+                Devo recuperare il documento del Ministero.
+        }
+
     Quindi {charNameThree} le ha aperto il Nido!
     Ma che gentile.
     Già.
@@ -309,9 +336,7 @@
     Dopo l'aggiornamento 13.12c, la SISSI indica anche la quantità residua di utilizzi, costantemente aggiornata.
     Per sua natura invece il Libro Oscuro di Sapienza e Potere aggiornerà i descrittori del sigillo ad ogni utilizzo.
     La comprensione dei descrittori è fondamentale per ogni Riscrittorə per anticipare l'effetto e la portata dei sigilli.
-    Per ulteriori informazioni, rivolgersi a Carla.
-    "
-    Rivolgersi a Carla, certo.
+    Altre informazioni non sono di nostra competenza."
     Questa conversazione poteva essere una mail.
     Vado in pausa sigaretta, anche se non fumo dall'Ottantaquattro.
     Ora dovrei spiegarti come crearli, ma purtroppo il sistema è fuori uso.
@@ -325,14 +350,17 @@
 === tutorial_nestStorylet ===
 ~ temp charNameThree = translator(thirdChar_ActualName)
 
-    {
-        - tutorial_nestStorylet == 1:
-            ~ move_entity(Carla, Nest)
-    }
+        {
+            - tutorial_nestStorylet == 1:
+                ~ move_entity(Carla, Nest)
+        }
 
-
+        {
+            - tutorial_nestStorylet > 1:
+                E quindi rispieghiamo i glifi. Che gioia!#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
+        }
+  
     Ogni volta che vedo questi cosi mi chiedo perché non ho concluso la laurea in ingegneria, mannaggia a me.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
-    Salve.
     Questi sassi sono qui per creare i Sigilli, che abbiamo già visto quando il suo caro amico {charNameThree} ha deciso di aprire questo posto.
     Uno: un sigillo utilizzabile è sempre composta da tre glifi.
     Non è sempre vero, ma il resto non è di mia competenza.
