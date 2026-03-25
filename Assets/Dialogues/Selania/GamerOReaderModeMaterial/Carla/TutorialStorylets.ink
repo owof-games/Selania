@@ -323,20 +323,29 @@
 
 
 === tutorial_nestStorylet ===
-{
-    - tutorial_nestStorylet == 1:
-        ~ move_entity(Carla, Nest)
-}
+~ temp charNameThree = translator(thirdChar_ActualName)
 
-// - Cosa ci indica:
-//     - Composizione: i glifi sono disponibili, possono essere usati solo una volta per sigillo, e quando sono consumati si spengono.
-//     - Ogni sigillo è composto da tre glifi.
-//     - Quando scoprirai un sigillo il grimorio si aggiornerà in automatico.
-//     - Non puoi creare due volte lo stesso sigillo.
+    {
+        - tutorial_nestStorylet == 1:
+            ~ move_entity(Carla, Nest)
+    }
 
 
-Tutorial nido spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
-
+    Ogni volta che vedo questi cosi mi chiedo perché non ho concluso la laurea in ingegneria, mannaggia a me.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
+    Salve.
+    Questi sassi sono qui per creare i Sigilli, che abbiamo già visto quando il suo caro amico {charNameThree} ha deciso di aprire questo posto.
+    Uno: un sigillo utilizzabile è sempre composta da tre glifi.
+    Non è sempre vero, ma il resto non è di mia competenza.
+    Due: per creare un sigillo basta iniziare cliccando uno per volta i glifi a disposizione.
+    Tre: un sigillo è composto da tre glifi diversi, per cui ogni volta che sceglierà un glifo, quello non sarà disponibile fino a nuova composizione.
+    Quattro: Grimorio e glifi comunicano, e per questo i glifi si disattiveranno in automatico se non ci saranno nuove composizioni disponibili.
+    Cinque: il Ministero ha tracciato una quantità invereconda di glifi in giro per gli universi, e infiniti sigilli, ma per qualche motivo in questa zona ne funzionano solo.
+    Uh, quanti erano?
+    Boh, ne vedo tre qui, quindi immagino siano tre.
+    Se qualcosa non dovesse funzionare, non contatti me.
+    Ah, dimenticavo: ogni volta che scoprirà un nuovo sigillo, verrà aggiunto in automatico sul grimorio.
+    E potrà essere attivato in qualsiasi momento, se non c'è un sigillo già attivo.
+    Non chieda eccezioni: il sistema non lo permette.
 
     {
         - entity_location(Carla) != Forest:
