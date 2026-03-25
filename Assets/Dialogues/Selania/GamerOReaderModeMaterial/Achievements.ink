@@ -232,11 +232,12 @@ VAR achievements_goodReader = notActive
             ~ achievements_perfectIngredientsCounter ++
             ~ achievements_perfectIngredientsReceivers += FourthCharacter
     }
-    // {
-    //     - fifthChar_favouritesGifts has kitchen_fifthCharExtraIngredient && achievements_perfectIngredientReceivers hasnt FifthCharacter:
-    //       ~ achievements_perfectIngredientsCounter ++
-    //       ~ achievements_perfectIngredientReceivers += FifthCharacter
-    // }
+    {
+        - fifthChar_favouritesGifts has kitchen_fifthCharExtraIngredient && achievements_perfectIngredientsReceivers hasnt FifthCharacter:
+          ~ achievements_perfectIngredientsCounter ++
+          ~ achievements_perfectIngredientsReceivers += FifthCharacter
+    }
+    
     {
         - achievements_perfectIngredientsCounter == 0:
             ~ achievements_onePerfectIngredient = notDiscovered
@@ -311,11 +312,11 @@ VAR achievements_goodReader = notActive
             ~ achievements_perfectGiftsCounter ++
             ~ achievements_perfectGiftReceivers += FourthCharacter
     }
-    // {
-    //     - fifthChar_favouritesGifts has fifthChar_giftedObject && achievements_perfectGiftReceivers hasnt FifthCharacter:
-//          ~ achievements_perfectGiftsCounter ++
-//          ~ achievements_perfectGiftReceivers += FifthCharacter
-    // }
+    {
+        - fifthChar_favouritesGifts has fifthChar_giftedObject && achievements_perfectGiftReceivers hasnt FifthCharacter:
+         ~ achievements_perfectGiftsCounter ++
+         ~ achievements_perfectGiftReceivers += FifthCharacter
+    }
     {
         - achievements_perfectGiftsCounter == 0:
             ~ achievements_onePerfectGift = notDiscovered

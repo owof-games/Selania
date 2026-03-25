@@ -31,6 +31,8 @@
     
 //Tracciamento del dono
     VAR fifthChar_giftedObject = ()
+    VAR fifthChar_favouritesGifts = (NonTiScordarDiTe, BaccaDellaAddolorata, CantoDelleCompagne)
+    VAR fifhtChar_goodGifts = (ErbaLiccia, Olobino, BastoneDellOzioso, LanaNotturna)
 
 //Tracciamento apprezzamento glifi. Tutto ciò che è fuori da questa lista = reazione neutrale.
     VAR fifthChar_positiveGlyphs = ()
