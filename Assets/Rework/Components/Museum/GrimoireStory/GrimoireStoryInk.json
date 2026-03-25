@@ -3,7 +3,7 @@
   "root": [
     [
       {
-        "->": "start"
+        "->": "grimoire"
       },
       [
         "done",
@@ -1867,6 +1867,9 @@
             "c-0": [
               "\n",
               {
+                "->": "grimoire_sigils_third"
+              },
+              {
                 "->": ".^.^.g-0"
               },
               {
@@ -1875,6 +1878,9 @@
             ],
             "c-1": [
               "\n",
+              {
+                "->": "grimoire_sigils_third"
+              },
               {
                 "->": ".^.^.g-0"
               },
@@ -1885,6 +1891,9 @@
             "c-2": [
               "\n",
               {
+                "->": "grimoire_sigils_third"
+              },
+              {
                 "->": ".^.^.g-0"
               },
               {
@@ -1893,6 +1902,9 @@
             ],
             "c-3": [
               "\n",
+              {
+                "->": "grimoire_sigils_third"
+              },
               {
                 "->": ".^.^.g-0"
               },
@@ -1903,6 +1915,9 @@
             "c-4": [
               "\n",
               {
+                "->": "grimoire_sigils_third"
+              },
+              {
                 "->": ".^.^.g-0"
               },
               {
@@ -1911,6 +1926,9 @@
             ],
             "c-5": [
               "\n",
+              {
+                "->": "grimoire_sigils_third"
+              },
               {
                 "->": ".^.^.g-0"
               },
@@ -1921,6 +1939,9 @@
             "c-6": [
               "\n",
               {
+                "->": "grimoire_sigils_third"
+              },
+              {
                 "->": ".^.^.g-0"
               },
               {
@@ -1929,6 +1950,9 @@
             ],
             "c-7": [
               "\n",
+              {
+                "->": "grimoire_sigils_third"
+              },
               {
                 "->": ".^.^.g-0"
               },
@@ -1939,6 +1963,9 @@
             "c-8": [
               "\n",
               {
+                "->": "grimoire_sigils_third"
+              },
+              {
                 "->": ".^.^.g-0"
               },
               {
@@ -1947,6 +1974,9 @@
             ],
             "c-9": [
               "\n",
+              {
+                "->": "grimoire_sigils_third"
+              },
               {
                 "->": ".^.^.g-0"
               },
@@ -1957,6 +1987,9 @@
             "c-10": [
               "\n",
               {
+                "->": "grimoire_sigils_third"
+              },
+              {
                 "->": ".^.^.g-0"
               },
               {
@@ -1965,6 +1998,9 @@
             ],
             "c-11": [
               "\n",
+              {
+                "->": "grimoire_sigils_third"
+              },
               {
                 "->": ".^.^.g-0"
               },
@@ -1975,6 +2011,9 @@
             "c-12": [
               "\n",
               {
+                "->": "grimoire_sigils_third"
+              },
+              {
                 "->": ".^.^.g-0"
               },
               {
@@ -1983,6 +2022,9 @@
             ],
             "c-13": [
               "\n",
+              {
+                "->": "grimoire_sigils_third"
+              },
               {
                 "->": ".^.^.g-0"
               },
@@ -1993,6 +2035,9 @@
             "c-14": [
               "\n",
               {
+                "->": "grimoire_sigils_third"
+              },
+              {
                 "->": ".^.^.g-0"
               },
               {
@@ -2001,6 +2046,9 @@
             ],
             "c-15": [
               "\n",
+              {
+                "->": "grimoire_sigils_third"
+              },
               {
                 "->": ".^.^.g-0"
               },
@@ -2011,6 +2059,9 @@
             "c-16": [
               "\n",
               {
+                "->": "grimoire_sigils_third"
+              },
+              {
                 "->": ".^.^.g-0"
               },
               {
@@ -2019,6 +2070,9 @@
             ],
             "c-17": [
               "\n",
+              {
+                "->": "grimoire_sigils_third"
+              },
               {
                 "->": ".^.^.g-0"
               },
@@ -2029,6 +2083,9 @@
             "c-18": [
               "\n",
               {
+                "->": "grimoire_sigils_third"
+              },
+              {
                 "->": ".^.^.g-0"
               },
               {
@@ -2037,6 +2094,9 @@
             ],
             "c-19": [
               "\n",
+              {
+                "->": "grimoire_sigils_third"
+              },
               {
                 "->": ".^.^.g-0"
               },
@@ -2080,41 +2140,54 @@
           "^leftPageDescription:descrizione ",
           "/#",
           "#",
-          "^leftGlyph1:Air ",
+          "^leftPageGlyph1:Air ",
           "/#",
           "#",
-          "^leftGlyph2:Water ",
+          "^leftPageGlyph2:Water ",
           "/#",
           "#",
-          "^leftPageTitle:Destra ",
+          "^rightPageTitle:Destra ",
           "/#",
           "#",
-          "^leftPageDescription:altra descrizione ",
+          "^rightPageDescription:altra descrizione ",
           "/#",
           "#",
-          "^leftGlyph1:Air ",
+          "^rightPageGlyph1:Air ",
           "/#",
           "#",
-          "^leftGlyph2:Fire",
+          "^rightPageGlyph2:Fire",
           "/#",
           "\n",
           "ev",
           "str",
-          "^Locked",
+          "^Lockato ",
+          "#",
+          "^position:left1 ",
+          "/#",
+          "#",
+          "^glyph3:Aether ",
+          "/#",
+          "#",
+          "^firstLine: ",
+          "/#",
+          "#",
+          "^secondLine:seconda ",
+          "/#",
+          "#",
+          "^thirdLine:",
+          "/#",
           "/str",
+          false,
           "/ev",
           {
             "*": ".^.c-0",
-            "flg": 4
+            "flg": 5
           },
           "ev",
           "str",
           "^Strappo ",
           "#",
-          "^glyph1:Air ",
-          "/#",
-          "#",
-          "^glyph2:Water ",
+          "^position:left2 ",
           "/#",
           "#",
           "^glyph3:Fire ",
@@ -2138,10 +2211,7 @@
           "str",
           "^Strappooo ",
           "#",
-          "^glyph1:Air ",
-          "/#",
-          "#",
-          "^glyph2:Water ",
+          "^position:left3 ",
           "/#",
           "#",
           "^glyph3:Earth ",
@@ -2165,10 +2235,7 @@
           "str",
           "^Boh ",
           "#",
-          "^glyph1:Air ",
-          "/#",
-          "#",
-          "^glyph2:Fire ",
+          "^position:right1 ",
           "/#",
           "#",
           "^glyph3:Water ",
@@ -2192,10 +2259,7 @@
           "str",
           "^Altro ",
           "#",
-          "^glyph1:Air ",
-          "/#",
-          "#",
-          "^glyph2:Fire ",
+          "^position:right2 ",
           "/#",
           "#",
           "^glyph3:Earth ",
@@ -2222,10 +2286,7 @@
           "str",
           "^Altro ",
           "#",
-          "^glyph1:Air ",
-          "/#",
-          "#",
-          "^glyph2:Fire ",
+          "^position:right3 ",
           "/#",
           "#",
           "^glyph3:Aether ",
@@ -2286,7 +2347,7 @@
           },
           "ev",
           "str",
-          "^Vaso ",
+          "^Increspatura ",
           "#",
           "^bookmark:next",
           "/#",

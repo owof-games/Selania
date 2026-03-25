@@ -154,38 +154,56 @@ LIST allGlyphs = Fire, Air, Water, Earth, Aether
     + {RANDOM(1, 6) <= 3} [{Fire}{Air} #enabled:{hasSigilStartingWith(glyph_fireAirSigils)}]
         -> grimoire_sigils_third
     + {RANDOM(1, 6) <= 3} [{Fire}{Water} #enabled:{hasSigilStartingWith(glyph_fireWaterSigils)}]
+        -> grimoire_sigils_third
     + {RANDOM(1, 6) <= 3} [{Fire}{Earth} #enabled:{hasSigilStartingWith(glyph_fireEarthSigils)}]
+        -> grimoire_sigils_third
     + {RANDOM(1, 6) <= 3} [{Fire}{Aether} #enabled:{hasSigilStartingWith(glyph_fireAetherSigils)}]
+        -> grimoire_sigils_third
     + {RANDOM(1, 6) <= 3} [{Air}{Fire} #enabled:{hasSigilStartingWith(glyph_airFireSigils)}]
+        -> grimoire_sigils_third
     + {RANDOM(1, 6) <= 3} [{Air}{Water} #enabled:{hasSigilStartingWith(glyph_airWaterSigils)}]
+        -> grimoire_sigils_third
     + {RANDOM(1, 6) <= 3} [{Air}{Earth} #enabled:{hasSigilStartingWith(glyph_airEarthSigils)}]
+        -> grimoire_sigils_third
     + {RANDOM(1, 6) <= 3} [{Air}{Aether} #enabled:{hasSigilStartingWith(glyph_airAetherSigils)}]
+        -> grimoire_sigils_third
     + {RANDOM(1, 6) <= 3} [{Water}{Fire} #enabled:{hasSigilStartingWith(glyph_WaterFireSigils)}]
+        -> grimoire_sigils_third
     + {RANDOM(1, 6) <= 3} [{Water}{Air} #enabled:{hasSigilStartingWith(glyph_WaterAirSigils)}]
+        -> grimoire_sigils_third
     + [{Water}{Earth} #enabled:{hasSigilStartingWith(glyph_WaterEarthSigils)}]
+        -> grimoire_sigils_third
     + {RANDOM(1, 6) <= 3} [{Water}{Aether} #enabled:{hasSigilStartingWith(glyph_WaterAetherSigils)}]
+        -> grimoire_sigils_third
     + {RANDOM(1, 6) <= 3} [{Earth}{Fire} #enabled:{hasSigilStartingWith(glyph_earthFireSigils)}]
+        -> grimoire_sigils_third
     + {RANDOM(1, 6) <= 3} [{Earth}{Air} #enabled:{hasSigilStartingWith(glyph_earthAirSigils)}]
+        -> grimoire_sigils_third
     + {RANDOM(1, 6) <= 3} [{Earth}{Water} #enabled:{hasSigilStartingWith(glyph_earthWaterSigils)}]
+        -> grimoire_sigils_third
     + {RANDOM(1, 6) <= 3} [{Earth}{Aether} #enabled:{hasSigilStartingWith(glyph_earthAetherSigils)}]
+        -> grimoire_sigils_third
     + {RANDOM(1, 6) <= 3} [{Aether}{Fire} #enabled:{hasSigilStartingWith(glyph_aetherFireSigils)}]
+        -> grimoire_sigils_third
     + {RANDOM(1, 6) <= 3} [{Aether}{Air} #enabled:{hasSigilStartingWith(glyph_aetherAirSigils)}]
+        -> grimoire_sigils_third
     + {RANDOM(1, 6) <= 3} [{Aether}{Water} #enabled:{hasSigilStartingWith(glyph_aetherWaterSigils)}]
+        -> grimoire_sigils_third
     + {RANDOM(1, 6) <= 3} [{Aether}{Earth} #enabled:{hasSigilStartingWith(glyph_aetherEarthSigils)}]
-    // LIST allGlyphs = Fire, Air, Water, Earth, Aether
+        -> grimoire_sigils_third
     + [Index #bookmark:index]
         -> grimoire
     -
     -> grimoire_sigils
 
 === grimoire_sigils_third
-    @grimoireSigilPages #leftPageTitle:Pontile #leftPageDescription:descrizione #leftGlyph1:Air #leftGlyph2:Water #rightPageTitle:Destra #rightPageDescription:altra descrizione #rightGlyph1:Air #rightGlyph2:Fire
-    + [LOCKED]
-    + [Strappo #glyph1:Air #glyph2:Water #glyph3:Fire #firstLine: #secondLine:seconda #thirdLine:]
-    + [Strappooo #glyph1:Air #glyph2:Water #glyph3:Earth #firstLine:prima #secondLine: #thirdLine:terza]
-    + [Boh #glyph1:Air #glyph2:Fire #glyph3:Water #firstLine:prima #secondLine:seconda #thirdLine:terza]
-    + [Altro #glyph1:Air #glyph2:Fire #glyph3:Earth #firstLine: #secondLine: #thirdLine: #status:selected]
-    + [Altro #glyph1:Air #glyph2:Fire #glyph3:Aether #firstLine: #secondLine: #thirdLine: #status:consumed]
+    @grimoireSigilPages #leftPageTitle:Pontile #leftPageDescription:descrizione #leftPageGlyph1:Air #leftPageGlyph2:Water #rightPageTitle:Destra #rightPageDescription:altra descrizione #rightPageGlyph1:Air #rightPageGlyph2:Fire
+    + {false} [Lockato #position:left1 #glyph3:Aether #firstLine: #secondLine:seconda #thirdLine:]
+    + [Strappo #position:left2 #glyph3:Fire #firstLine: #secondLine:seconda #thirdLine:]
+    + [Strappooo #position:left3 #glyph3:Earth #firstLine:prima #secondLine: #thirdLine:terza]
+    + [Boh #position:right1 #glyph3:Water #firstLine:prima #secondLine:seconda #thirdLine:terza]
+    + [Altro #position:right2 #glyph3:Earth #firstLine: #secondLine: #thirdLine: #status:selected]
+    + [Altro #position:right3 #glyph3:Aether #firstLine: #secondLine: #thirdLine: #status:consumed]
     + [Index #bookmark:index]
         -> grimoire
     + [Sigilli #bookmark:secondLevel]

@@ -47,7 +47,7 @@ namespace Selania.Rework.Components.Grimoire
         /// Set the status of the button.
         /// </summary>
         /// <param name="status">The status of the button.</param>
-        public void SetStatus(ThirdLevelSigilsButton.Status status)
+        public void SetStatus(IStoryGrimoire.ThirdLevelSigilStatus status)
         {
             button.SetStatus(status);
         }

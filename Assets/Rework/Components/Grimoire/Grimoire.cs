@@ -20,9 +20,12 @@ namespace Selania.Rework.Components.Grimoire
                 .Subscribe(OnSecondLevelGreenhouseGrimoirePageDescriptors).AddTo(this);
             StoryGrimoire.secondLevelSigilsGrimoirePageDescriptors.Subscribe(OnSecondLevelSigilsGrimoirePageDescriptors)
                 .AddTo(this);
+            StoryGrimoire.thirdLevelSigilsGrimoirePageDescriptors.Subscribe(OnThirdLevelSigilsGrimoirePageDescriptors)
+                .AddTo(this);
             // grimoire events
             grimoireBackground.IndexChoiceObservable.Subscribe(PickChoice).AddTo(this);
             grimoireBackground.firstLevelButtonClick.Subscribe(PickChoice).AddTo(this);
+            grimoireBackground.secondLevelSigilsButtonClick.Subscribe(PickSigilChoice).AddTo(this);
         }
 
         private void PickChoice(string firstLevelButtonName)
@@ -97,6 +100,65 @@ namespace Selania.Rework.Components.Grimoire
 
             // set up navigation
             SetUpNavigation(descriptor);
+        }
+
+        private void PickSigilChoice((ISettingsSigils.GlyphType, ISettingsSigils.GlyphType) secondLevelSigil)
+        {
+            StoryChoicesSelector.PickChoiceWithText($"{secondLevelSigil.Item1}{secondLevelSigil.Item2}");
+        }
+
+        private void OnThirdLevelSigilsGrimoirePageDescriptors(
+            IStoryGrimoire.ThirdLevelSigilsGrimoirePageDescriptor descriptor)
+        {
+            // show the grimoire (third level sigils)
+            grimoireBackground.ShowGrimoire();
+            grimoireBackground.SwitchToPage(GrimoireBackground.PageType.ThirdLevelSigils);
+
+            // set up the grimoire header to show the info in the descriptor
+            grimoireBackground.SetUpThirdLevelSigilsHeader(
+                descriptor.leftSideHeader.isLocked ? "" : descriptor.leftSideHeader.title,
+                descriptor.leftSideHeader.isLocked ? "" : descriptor.leftSideHeader.description,
+                descriptor.leftSideHeader.isLocked
+                    ? null
+                    : (descriptor.leftSideHeader.glyph1, descriptor.leftSideHeader.glyph2),
+                descriptor.rightSideHeader.isLocked ? "" : descriptor.rightSideHeader.title,
+                descriptor.rightSideHeader.isLocked ? "" : descriptor.rightSideHeader.description,
+                descriptor.rightSideHeader.isLocked
+                    ? null
+                    : (descriptor.rightSideHeader.glyph1, descriptor.rightSideHeader.glyph2)
+            );
+
+            // set up the grimoire body to show the info in the descriptor
+            grimoireBackground.DisableAllThirdLevelSigilsRows();
+            var sigilDescriptors = new[]
+            {
+                descriptor.leftSide1, descriptor.leftSide2, descriptor.leftSide3, descriptor.rightSide1,
+                descriptor.rightSide2, descriptor.rightSide3
+            };
+            var referenceHeaders = new[]
+            {
+                descriptor.leftSideHeader,
+                descriptor.leftSideHeader,
+                descriptor.leftSideHeader,
+                descriptor.rightSideHeader,
+                descriptor.rightSideHeader,
+                descriptor.rightSideHeader
+            };
+            for (var i = 0; i < sigilDescriptors.Length; i++)
+            {
+                var sigilDescriptor = sigilDescriptors[i];
+                var referenceHeader = referenceHeaders[i];
+                if (sigilDescriptor.isLocked) continue;
+                grimoireBackground.SetUpThirdLevelSigilRow(
+                    i,
+                    sigilDescriptor.name,
+                    sigilDescriptor.firstLine,
+                    sigilDescriptor.secondLine,
+                    sigilDescriptor.thirdLine,
+                    (referenceHeader.glyph1, referenceHeader.glyph2, sigilDescriptor.glyph3),
+                    sigilDescriptor.status
+                );
+            }
         }
 
         /// <summary>

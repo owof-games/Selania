@@ -11,27 +11,6 @@ namespace Selania.Rework.Components.Grimoire
     /// </summary>
     public class ThirdLevelSigilsButton : MonoBehaviour, IAutomaticEditorInject
     {
-        /// <summary>
-        ///     Possible statuses of the button.
-        /// </summary>
-        public enum Status
-        {
-            /// <summary>
-            ///     Standard version.
-            /// </summary>
-            Standard,
-
-            /// <summary>
-            ///     The sigil is activated and animated.
-            /// </summary>
-            Activated,
-
-            /// <summary>
-            ///     The sigil has been used to the end, and it's disabled.
-            /// </summary>
-            Disabled
-        }
-
         private static readonly int AnimatedCachedAnimatorProperty = Animator.StringToHash("Animated");
         [SerializeField] private Image firstLevelImage = null!;
         [SerializeField] private Image secondLevelImage = null!;
@@ -81,28 +60,28 @@ namespace Selania.Rework.Components.Grimoire
         public void Disable()
         {
             _button.interactable = false;
-            SetStatus(Status.Standard);
+            SetStatus(IStoryGrimoire.ThirdLevelSigilStatus.Default);
         }
 
         /// <summary>
         /// Set the status of the button.
         /// </summary>
         /// <param name="status">The status of the button.</param>
-        public void SetStatus(Status status)
+        public void SetStatus(IStoryGrimoire.ThirdLevelSigilStatus status)
         {
             switch (status)
             {
-                case Status.Standard:
+                case IStoryGrimoire.ThirdLevelSigilStatus.Default:
                     _grimoireButtonHelper.OverrideOriginalSprite(null);
                     _animator.SetBool(AnimatedCachedAnimatorProperty, false);
                     _saturation = 1;
                     break;
-                case Status.Activated:
+                case IStoryGrimoire.ThirdLevelSigilStatus.Selected:
                     _grimoireButtonHelper.OverrideOriginalSprite(null);
                     _animator.SetBool(AnimatedCachedAnimatorProperty, true);
                     _saturation = 1;
                     break;
-                case Status.Disabled:
+                case IStoryGrimoire.ThirdLevelSigilStatus.Consumed:
                     _grimoireButtonHelper.OverrideOriginalSprite(disabledBackgroundSprite);
                     _animator.SetBool(AnimatedCachedAnimatorProperty, false);
                     _saturation = SettingsBook.disabledSigilsSaturationLevel;

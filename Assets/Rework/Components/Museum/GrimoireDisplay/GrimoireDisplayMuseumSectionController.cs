@@ -249,9 +249,9 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
             {
                 var level = Random.Range(0, 5);
                 if (level == 0) continue;
-                var status = i == activated ? ThirdLevelSigilsButton.Status.Activated :
-                    Random.Range(0f, 1f) < 0.5f ? ThirdLevelSigilsButton.Status.Standard :
-                    ThirdLevelSigilsButton.Status.Disabled;
+                var status = i == activated ? IStoryGrimoire.ThirdLevelSigilStatus.Selected :
+                    Random.Range(0f, 1f) < 0.5f ? IStoryGrimoire.ThirdLevelSigilStatus.Default :
+                    IStoryGrimoire.ThirdLevelSigilStatus.Consumed;
                 Logger.ZLogInformation($"sigil {i}: level {level}, status {status}");
                 grimoireBackground.SetUpThirdLevelSigilRow(i,
                     "Strappo",

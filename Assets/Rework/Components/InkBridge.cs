@@ -952,6 +952,15 @@ namespace Selania.Rework.Components
         [SerializeField] [Tooltip("Category for the third line of sigil text (sigils, third level)")]
         private string thirdLineCategory = "thirdLine";
 
+        [SerializeField] [Tooltip("Value for the status of third level sigils when in default state")]
+        private string thirdLevelStatusDefault = "default";
+
+        [SerializeField] [Tooltip("Value for the status of third level sigils when selected")]
+        private string thirdLevelStatusSelected = "selected";
+
+        [SerializeField] [Tooltip("Value for the status of third level sigils when consumed")]
+        private string thirdLevelStatusConsumed = "consumed";
+
         [SerializeField] [Tooltip("Value for the index bookmark tag")]
         private string indexBookmarkTagValue = "index";
 
@@ -1361,20 +1370,28 @@ namespace Selania.Rework.Components
             var leftPageTitle = mainTags.FirstOrDefault(t => t.category == leftPageTitleCategory)?.value ?? "";
             var leftPageDescription =
                 mainTags.FirstOrDefault(t => t.category == leftPageDescriptionCategory)?.value ?? "";
+            var leftGlyph1Name = mainTags.FirstOrDefault(t => t.category == leftPageGlyph1Category)?.value;
+            if (leftGlyph1Name == null) logger.ZLogError($"Missing {leftPageGlyph1Category} tag.");
             var leftGlyph1 =
-                GetGlyphFromName(mainTags.FirstOrDefault(t => t.category == leftPageGlyph1Category)?.value ?? "air");
+                GetGlyphFromName(leftGlyph1Name ?? "air");
+            var leftGlyph2Name = mainTags.FirstOrDefault(t => t.category == leftPageGlyph2Category)?.value;
+            if (leftGlyph2Name == null) logger.ZLogError($"Missing {leftPageGlyph2Category} tag.");
             var leftGlyph2 =
-                GetGlyphFromName(mainTags.FirstOrDefault(t => t.category == leftPageGlyph2Category)?.value ?? "water");
+                GetGlyphFromName(leftGlyph2Name ?? "water");
             var leftHeader = new IStoryGrimoire.ThirdLevelSigilsGrimoirePageSideDescriptor(leftPageTitle == "",
                 leftPageTitle, leftPageDescription, leftGlyph1, leftGlyph2);
 
             var rightPageTitle = mainTags.FirstOrDefault(t => t.category == rightPageTitleCategory)?.value ?? "";
             var rightPageDescription =
                 mainTags.FirstOrDefault(t => t.category == rightPageDescriptionCategory)?.value ?? "";
+            var rightGlyph1Name = mainTags.FirstOrDefault(t => t.category == rightPageGlyph1Category)?.value;
+            if (rightGlyph1Name == null) logger.ZLogError($"Missing {rightPageGlyph1Category} tag.");
             var rightGlyph1 =
-                GetGlyphFromName(mainTags.FirstOrDefault(t => t.category == rightPageGlyph1Category)?.value ?? "air");
+                GetGlyphFromName(rightGlyph1Name ?? "air");
+            var rightGlyph2Name = mainTags.FirstOrDefault(t => t.category == rightPageGlyph2Category)?.value;
+            if (rightGlyph2Name == null) logger.ZLogError($"Missing {rightPageGlyph2Category} tag.");
             var rightGlyph2 =
-                GetGlyphFromName(mainTags.FirstOrDefault(t => t.category == rightPageGlyph2Category)?.value ?? "water");
+                GetGlyphFromName(rightGlyph2Name ?? "water");
             var rightHeader = new IStoryGrimoire.ThirdLevelSigilsGrimoirePageSideDescriptor(rightPageTitle == "",
                 rightPageTitle, rightPageDescription, rightGlyph1, rightGlyph2);
 
@@ -1389,8 +1406,16 @@ namespace Selania.Rework.Components
                 var firstLine = tags.FirstOrDefault(tag => tag.category == firstLineCategory)?.value ?? "";
                 var secondLine = tags.FirstOrDefault(tag => tag.category == secondLineCategory)?.value ?? "";
                 var thirdLine = tags.FirstOrDefault(tag => tag.category == thirdLineCategory)?.value ?? "";
+                var status = tags.FirstOrDefault(tag => tag.category == statusTagCategory)?.value ??
+                             thirdLevelStatusDefault;
                 return (Position: position,
-                    Sigil: new IStoryGrimoire.ThirdLevelSigil(false, text, glyph3, firstLine, secondLine, thirdLine));
+                    Sigil: new IStoryGrimoire.ThirdLevelSigil(false, text, glyph3, firstLine, secondLine, thirdLine,
+                        status == thirdLevelStatusDefault ? IStoryGrimoire.ThirdLevelSigilStatus.Default :
+                        status == thirdLevelStatusSelected ? IStoryGrimoire.ThirdLevelSigilStatus.Selected :
+                        status == thirdLevelStatusConsumed ? IStoryGrimoire.ThirdLevelSigilStatus.Consumed :
+                        throw new InvalidOperationException(
+                            $"Found a third-level sigil with invalid status '{status}', but should be either '{thirdLevelStatusDefault}' (default), '{thirdLevelStatusSelected}' or '{thirdLevelStatusConsumed}'.")
+                    ));
             });
             var sigils = new[]
                 {
@@ -1411,7 +1436,7 @@ namespace Selania.Rework.Components
                         default:
                             return new IStoryGrimoire.ThirdLevelSigil(true, "", ISettingsSigils.GlyphType.Aether, "",
                                 "",
-                                "");
+                                "", IStoryGrimoire.ThirdLevelSigilStatus.Default);
                     }
                 });
 

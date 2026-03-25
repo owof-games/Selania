@@ -211,6 +211,12 @@ namespace Selania.Rework.Components.Grimoire
         public Observable<string> secondLevelGreenhouseButtonClick =>
             secondLevelGreenhouseButtons.Select(secondLevelButton => secondLevelButton.click).Merge();
 
+        /// <summary>
+        ///     An observable that exposes clicks on second level sigils buttons.
+        /// </summary>
+        public Observable<(ISettingsSigils.GlyphType, ISettingsSigils.GlyphType)> secondLevelSigilsButtonClick =>
+            secondLevelSigilsButtons.Select(secondLevelButton => secondLevelButton.click).Merge();
+
         private void Awake()
         {
             // get components
@@ -572,7 +578,7 @@ namespace Selania.Rework.Components.Grimoire
             string secondDescriptionLine,
             string thirdDescriptionLine,
             (ISettingsSigils.GlyphType, ISettingsSigils.GlyphType, ISettingsSigils.GlyphType) glyphs,
-            ThirdLevelSigilsButton.Status status)
+            IStoryGrimoire.ThirdLevelSigilStatus status)
         {
             thirdLevelSigilsRows[index].SetUp(title, firstDescriptionLine, secondDescriptionLine, thirdDescriptionLine,
                 glyphs);

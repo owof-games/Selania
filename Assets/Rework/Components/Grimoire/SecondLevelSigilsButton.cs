@@ -1,4 +1,5 @@
-﻿using Selania.Rework.Interfaces;
+﻿using R3;
+using Selania.Rework.Interfaces;
 using UnityEngine;
 using UnityEngine.UI;
 using VContainer;
@@ -33,6 +34,13 @@ namespace Selania.Rework.Components.Grimoire
         ///     The settings regarding sigils
         /// </summary>
         [Inject] internal ISettingsSigils SettingsSigils = null!;
+
+        /// <summary>
+        ///     An observable that produces an event with this button's name for every click.
+        /// </summary>
+        public Observable<(ISettingsSigils.GlyphType, ISettingsSigils.GlyphType)> click => GetComponent<Button>()
+            .OnClickAsObservable().Select(_ => (firstLevelGlyph, secondLevelGlyph));
+
 
         private void Start()
         {

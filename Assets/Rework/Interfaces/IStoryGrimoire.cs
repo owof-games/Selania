@@ -9,6 +9,27 @@ namespace Selania.Rework.Interfaces
     public interface IStoryGrimoire
     {
         /// <summary>
+        ///     Possible status for third-level sigils
+        /// </summary>
+        enum ThirdLevelSigilStatus
+        {
+            /// <summary>
+            ///     Default status.
+            /// </summary>
+            Default,
+
+            /// <summary>
+            ///     Sigil is selected (at most one).
+            /// </summary>
+            Selected,
+
+            /// <summary>
+            ///     Sigil is consumed (cannot be selected any longer).
+            /// </summary>
+            Consumed
+        }
+
+        /// <summary>
         ///     An observable that produces a value whenever a top level grimoire page should be displayed.
         /// </summary>
         Observable<FirstLevelGrimoirePageDescriptor> firstLevelGrimoirePageDescriptors { get; }
@@ -166,7 +187,8 @@ namespace Selania.Rework.Interfaces
             ISettingsSigils.GlyphType glyph3,
             string firstLine,
             string secondLine,
-            string thirdLine);
+            string thirdLine,
+            ThirdLevelSigilStatus status);
 
         /// <summary>
         ///     Descriptor of the third level page of the sigils.
