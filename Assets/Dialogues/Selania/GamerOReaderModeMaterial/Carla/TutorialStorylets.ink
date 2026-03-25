@@ -11,20 +11,10 @@
 //     - Se non vediamo indicatori, è perché non siamo lì per quella persona (e il suo indicatore si disattiva).
 //     - Che ogni persona ha il suo sistema di valori, per cui non è così lineare come con lei, ma che lei è qui per spiegare come si fanno le cose, il perché non è roba sua.
 
-    {
-    - tutorial_greenhouseGiftsInkStorylet == 1:
-    ~ move_entity(Carla, TrainStop)
-    }
+    
 Tutorial scelte spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
 
-TEMPORANEAMENTE CI FA ATTIVARE/DISATTIVARE LA MODALITa' GAMER e READER MODE, per testing.
-    + Voglio la modalità Gamer Mode
-        ~ settings_gamerMode = true
-    + Voglio la modalità Reader Mode
-        ~ settings_gamerMode = false
-    -
-Va bene.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
-    ~ achievements_start_statusUpdate()
+
 
     {
         - entity_location(Carla) != Forest:
@@ -180,6 +170,12 @@ Tutorial cucina spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState #in
 //     - Man mano che li utilizzerai, compariranno anche delle descrizioni, utili per capirne la logica.
 //     - Ma come li scopri? vediamoci nel nido.
 
+
+    {
+        - entity_location(Carla) != Forest:
+            ~ move_entity(Carla, Forest)
+            ->->
+    }
 
 ->->
 

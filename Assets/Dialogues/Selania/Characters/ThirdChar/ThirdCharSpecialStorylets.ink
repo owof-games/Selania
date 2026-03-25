@@ -65,7 +65,9 @@
         ~ move_entity(ThirdCharacter, Forest)
         -> third_char_closing_storylet ->
         -> opening_places ->
-        -> main
+        //Parte subito lo spiegozzo sui sigilli di Carla
+        ~ move_entity(Carla, Library)
+        -> tutorial_SigilsActivationStorylet
         
 
 === third_read_story_library

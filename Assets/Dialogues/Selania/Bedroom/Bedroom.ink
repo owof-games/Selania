@@ -7,6 +7,7 @@
 {
     - bedroom == 1:
         <i>Un morbido letto è comparso, in attesa di membra stanche.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        
 }        
 
 -> main
@@ -20,3 +21,18 @@
     + {are_two_entities_together(PG, SettingsBookVersion)} [SettingsBookVersion]
         <i>Qui in futuro si potranno modificare le impostazioni.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             -> rewriter_book_with_flow
+
+
+
+=== gm_rm_activation
+    (testo temporaneo per il testing interno) Prima di iniziare, ci chiediamo in che modalità giocare.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    La modalità Reader Mode è come il gioco è stato pensato: ogni scelta si deve appoggiare al tuo intuito, alla comprensione delle persone con cui interagisci.
+    La modalità Gamer Mode ti offre maggiore supporto con indicatori di diverso tipo, oltre a un tutorial extra ad hoc.
+
+        + Voglio la modalità Gamer Mode
+            -> gamerMode_activation ->
+        + Voglio la modalità Reader Mode
+    -
+    Perfetto.
+    Buon inizio di questo tuo viaggio.
+-> main            

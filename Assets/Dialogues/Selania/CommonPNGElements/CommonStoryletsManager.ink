@@ -2,7 +2,7 @@
     {
 
         //Gestione dei tutorial di Carla
-            - tutorial_ActivateTutorial == true && entity_location(PG) == TrainStop && not tutorial_choicesRelationshipStorylet:
+            - are_two_entities_together(PG, Carla) && not tutorial_choicesRelationshipStorylet:
                 -> tutorial_choicesRelationshipStorylet
 
         //Feedback da parte di Mentore su pensieri strega se le abbiamo detto che abbiamo parlato con la pianta

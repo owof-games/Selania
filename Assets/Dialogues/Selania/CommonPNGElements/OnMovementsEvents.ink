@@ -38,12 +38,6 @@
 === on_movement_special_events
 {debug: passo da on_movement_special_events.}
 ~ temp currentPlace = entity_location(PG)
-//Abilito Carla se siamo in modalità tutorial
-    {
-        - tutorial_ActivateTutorial == true && not tutorial_choicesRelationshipStorylet:
-            ~ move_entity(Carla, TrainStop)
-            {debug: il tutorial è attivo e quindi sposto Carla alla fermata del treno.}
-    }
 
 //A crescita Olobino, cambio asset accesso serra  
     {

@@ -26,7 +26,11 @@ VAR tutorial_rereadingActive = false
         -> tutorial_choicesRelationshipStorylet
 
     - are_two_entities_together(PG, Carla) && tutorial_rereadingActive && not tutorial_rereadingStorylet:
-        -> tutorial_rereadingStorylet   
+        -> tutorial_rereadingStorylet
+
+        //parte dopo che mi è stato dato il libro da Mentore
+    - are_two_entities_together(PG, Carla) && welcome && not tutorial_GrimoireStorylet:
+        -> tutorial_GrimoireStorylet    
 
 }
 
