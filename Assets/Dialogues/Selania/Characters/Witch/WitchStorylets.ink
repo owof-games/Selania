@@ -81,6 +81,9 @@
 
                     - not witch_feedback.third_story_ended_check && thirdChar_storyStatus == story_storyEnded:
                         -> witch_feedback.third_story_ended_check
+
+                    - else:
+                        -> main
                 }
         
 
