@@ -1,4 +1,5 @@
 VAR tutorial_ActivateTutorial = true
+VAR tutorial_CarlaRelationshipIndicator = 0
 
 
 //Valori per decidere quanti storylets in meno rispetto a quelli per arrivare alla riscrittura servono per attivare il tutorial

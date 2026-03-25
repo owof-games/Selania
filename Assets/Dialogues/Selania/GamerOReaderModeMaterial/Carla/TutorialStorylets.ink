@@ -1,19 +1,62 @@
 //Tutorial sul game play principale
 
 === tutorial_choicesRelationshipStorylet ===
-// - Cosa indica: ci spiega che il dialogo crea un rapporto.
-//     - Ci fa simulare un paio di scambi con lei, molto forzati: 4 scelte sbagliate e 1 giusta.
-//     - L’indicatore del rapporto cambia: cuore intero buono, cuore spezzato, non buono.
-//     - Ci dice che il più delle volte avremo una scelta per dialogo.
-//     - Che ogni scelta rappesenta delle cose, ma non ci dice cosa.
-//         - Ma se non abbiamo il Grimorio, ci invita a parlare con Mentore perché ce lo dia.
-//     - Ma ci dice che viene tracciata nel recap delle scelte, che è ad hoc per ogni personaggia.
-//     - Se non vediamo indicatori, è perché non siamo lì per quella persona (e il suo indicatore si disattiva).
-//     - Che ogni persona ha il suo sistema di valori, per cui non è così lineare come con lei, ma che lei è qui per spiegare come si fanno le cose, il perché non è roba sua.
 
+    {
+        - tutorial_choicesRelationshipStorylet > 1: Le ricordo che ripeto sempre lo stesso script della prima volta, ok?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
+    }
     
-Tutorial scelte spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
+    Perché non sono andata a vivere nei boschi da sola, quando avevo vent'anni, perché?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
+    Non risponda, è una domanda retorica, e l'ufficio domande retoriche è al 5° piano, stanza 13.
+    Sono qui per dirle al volo cosa deve fare.
+    Il perché non è di mia competenza.
+    Lei deve parlare con le persone che trova qui in giro.
+    Le diranno cose più o meno personali, e si aspetteranno da lei una risposta.
+    La risposta influenzerà il modo in cui quella persona la vede.
+    Facciamo una prova.
+    Ora le racconto una cosa, e lei mi dà la sua opinione.
+    Mio figlio dice che a sessant'anni devo smetterla di farmi la cresta viola.
+    Gli ho risposto che ha quarant'anni e che ancora non sa lavarsi le mutande da solo.
+    Questo fa di me una cattiva madre?
+        + No.
+            ~ tutorial_CarlaRelationshipIndicator ++
+        + Sì.
+            ~ tutorial_CarlaRelationshipIndicator --
+        + No.
+            ~ tutorial_CarlaRelationshipIndicator ++
+        + No.
+            ~ tutorial_CarlaRelationshipIndicator ++
+        + No.
+            ~ tutorial_CarlaRelationshipIndicator ++
+        -
+    {
+        - tutorial_CarlaRelationshipIndicator < 0:
+            Questo è un problema suo.
+            Se ha delle lamentele, deve fare richiesta scritta.
+        
+        - else:
+            Concordo.
+            Non che me ne importi molto della sua opinione.    
+    }
+    Come avrà notato, l'indicatore sotto il mio ritratto è cambiato.
+    Se parla con una persona, e quella persona ha un indicatore sotto al ritratto, vuol dire che l'idea che quella persona si farà di lei è importante per il suo lavoro.
+    Ora disattivo il mio, non voglio che veda quanto mi sta infastidendo.
+    Le scelte saranno più complesse di quelle dell'esempio, e ogni scelta rappresenta una cosa diversa.
+    Cosa?
+    Lo chieda all'addetta alla discarica, se non è di nuovo in malattia.
+    Sono tenuta infine a ricordarle che ogni persona ragiona in modo diverso, per cui dovrà capire da sé cosa apprezza o meno chi ha davanti.
+    Per facilitarle il lavoro, l'ufficio centrale ha inserito nel suo libro un riepilogo delle scelte fatte, con questo indicatore grafico.
+    Lo troverà sotto il ritratto di ogni personaggia con cui dovrà lavorare.
+    Tiene traccia dell'ultima e penultima scelta fatte, così può monitorare da sé le variazioni, senza stressare me.
+    {
+        - not welcome:
+            Non ha ancora il suo libro?
+            Strano, di solito lo consegnano in automatico all'arrivo.
+            Ma qui non possiamo fare niente per aiutarla.    
+    }
 
+    E ora sono in pausa.
+    Vada a fare le sue cose.
 
 
     {
