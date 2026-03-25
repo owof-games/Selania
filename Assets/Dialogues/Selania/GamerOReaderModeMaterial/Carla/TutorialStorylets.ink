@@ -147,28 +147,49 @@ Tutorial rilettura spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState 
 
 //Tutorial attivati da luoghi
 === tutorial_greenhouseGiftsInkStorylet ===
-{
-    - tutorial_greenhouseGiftsInkStorylet == 1:
-        ~ move_entity(Carla, Greenhouse)
-}
-
-Tutorial serra spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
-// - Cosa ci indica:
-//     - Si fanno due scelte.
-//     - La pianta evocata inizia a crescere.
-//     - Man mano che parliamo in giro la pianta riceve energia, e dopo 4 step è fiorita, e possiamo raccoglierne un pezzo come dono.
-//     - Si può raccogliere solo un pezzo e basta, per non ferire le piante.
-//     - Possiamo donare la pianta alle persone: il dono giusto può farci ricevere una o addirittura due boccette di inchiostro. A cosa serve? non sta a me dirlo.
-//      - Utilizzo il grimorio
-
-
-
-
     {
-        - entity_location(Carla) != Forest:
-            ~ move_entity(Carla, Forest)
-            ->->
+        - tutorial_greenhouseGiftsInkStorylet == 1:
+            ~ move_entity(Carla, Greenhouse)
     }
+
+    Deve parlare con la responsabile.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
+    Ah no scusi, è l'abitudine.
+    Mi è stato chiesto di spiegarle come funziona la serra.
+    Ci fa crescere le piante ed è fatta.
+    Arrivederci.
+    Mmm, ah.
+    La responsabile dice che c'è fila in mensa, e devo ammazzare il tempo.
+    Uno: se non sta crescendo niente, la serra le farà due domande, e lei deve rispondere come se la sente.
+    A quel punto inizierà a crescere una pianta.
+    E dopo un po' potrà raccoglierne un pezzo.
+    Perché uno solo?
+    Perché sennò muoiono, no?
+    Due: alcune persone possono accettare in dono da parte sua una pianta.
+        {
+            - player_accessiblePlaces has Kitchen: Oppure può usarle come ingrediente in cucina.
+        }
+    Per fare un dono basta dire alla persona: "Ehi, voglio donarti una cosa" o qualcosa del genere.
+    A quel punto si aprirà il suo grimorio, e lei potrà scegliere quale pianta donare.
+    Perché attraverso il grimorio?
+    Ho aperto una pratica, le faremo sapere.
+    Tre: il dono genera inchiostro.
+    Se ha fatto un dono moooolto apprezzato, riceverà due gocce di inchiostro.
+    Se abbastanza apprezzato, una.
+    Altrimenti, zero.
+    E no, non possiamo fare eccezioni, mi spiace.
+    Si può fare un solo dono a persona, per cui valuti bene.
+    E non mi chieda perché, perché è sempre stato così.
+    Quattro: a cosa serve l'inchiostro?
+    Aspetti, ho in linea la mia responsabile.
+    In che senso stanno finendo i germogli? 
+    Un po' di gramigna è rimasta?
+    Volo!
+
+        {
+            - entity_location(Carla) != Forest:
+                ~ move_entity(Carla, Forest)
+                ->->
+        }
 
 ->->
 
