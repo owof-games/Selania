@@ -269,7 +269,7 @@
     Se la persona apprezzerà l'ingrediente, le dirà qualcosa di utile a capire meglio come ragiona.
     Non sono previsti rimborsi in caso di insuccesso.
     Non dovrei dirglielo, ma il signor Franco potrebbe aiutarla in caso di difficoltà.
-    
+
 
         {
             - entity_location(Carla) != Forest:
@@ -282,21 +282,42 @@
 
 
 === tutorial_SigilsActivationStorylet ===
-// - Cosa ci indica:
-//     - Che i sigilli sono strumenti che influenzano il modo in cui vengono interpretate le tue scelte. Come? Non sta a me dirlo.
-//     - Per attivarli basta andare sul Grimorio e cliccare il bottone. puoi avere un solo sigillo attivo alla volta, e si consuma durante tre utilizzi. Poi non è riutilizzabile.
-//     - Come capire che hai un sigillo attivo? Spazio recap in prima pagina, più animazione in secondo e terzo livello.
-//     - Inoltre sono presenti durante il dialogo con le personagge, con l’indicatore degli utilizzi a disposizione.
-//     - Se hai un sigillo attivo ma non lo vedi quando parli con qualcunx, vuol dire che quella persona è immune all’effetto del sigillo, e non verrà consumato.
-//     - Man mano che li utilizzerai, compariranno anche delle descrizioni, utili per capirne la logica.
-//     - Ma come li scopri? vediamoci nel nido.
-
+~ temp charNameThree = translator(thirdChar_ActualName)
 
     {
         - entity_location(Carla) != Forest:
             ~ move_entity(Carla, Forest)
             ->->
     }
+
+    Ma perché questi non si fanno mai i cavoli propri? #speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
+    Salve!
+    Quindi {charNameThree} le ha aperto il Nido!
+    Ma che gentile.
+    Già.
+    Mannaggia al.
+    Il Nido le sblocca i Sigilli, e i Sigilli sono una cosa pericolosa.
+    Leggo direttamente dalla comunicazione ministeriale.
+    "Premesso che la Combinata Triglifica Esoterica Espansa (da qui in avanti per brevità chiamato Sigillo) è uno strumento di cui ancora conosciamo poco.
+    Premesso che il Sigillo influenza il modo in cui viene percepito il parlante che lo attiva.
+    Preso inoltre atto della necessità di utilizzare un Grimorio (da qui in avanti per chiarezza chiamato Libro Oscuro di Sapienza e Potere) per farne l'attivazione.
+    E considerata infine la durata limitata di utilizzo di un sigillo (tre utilizzi, non ripetibili né combinabili).
+    Il Ministero, con l'obiettivo di facilitare il lavoro dellə Riscrittorə, ha istituito il Servizio di Indicazione Stato Sigillo Integrato (SISSI).
+    Qualora un sigillo fosse attivo, la SISSI sarà presente a ogni livello del Libro Oscuro di Sapienza e Potere attraverso la caratteristica animazione.
+    La SISSI inoltre comparirà durante il dialogo con le persone che ne possono essere condizionate.
+    Nel caso in cui un Sigillo fosse attivo e la SISSI non fosse presente durante il dialogo, questo significa che la persona non è in assoluto o in quel momento influenzabile dal potere del sigillo.
+    Dopo l'aggiornamento 13.12c, la SISSI indica anche la quantità residua di utilizzi, costantemente aggiornata.
+    Per sua natura invece il Libro Oscuro di Sapienza e Potere aggiornerà i descrittori del sigillo ad ogni utilizzo.
+    La comprensione dei descrittori è fondamentale per ogni Riscrittorə per anticipare l'effetto e la portata dei sigilli.
+    Per ulteriori informazioni, rivolgersi a Carla.
+    "
+    Rivolgersi a Carla, certo.
+    Questa conversazione poteva essere una mail.
+    Vado in pausa sigaretta, anche se non fumo dall'Ottantaquattro.
+    Ora dovrei spiegarti come crearli, ma purtroppo il sistema è fuori uso.
+    E io ho dimenticato tutto.
+    Sono solo una capra.
+    Bee.
 
 ->->
 
