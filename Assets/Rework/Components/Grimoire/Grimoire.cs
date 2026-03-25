@@ -23,7 +23,10 @@ namespace Selania.Rework.Components.Grimoire
             StoryGrimoire.thirdLevelSigilsGrimoirePageDescriptors.Subscribe(OnThirdLevelSigilsGrimoirePageDescriptors)
                 .AddTo(this);
             // grimoire events
-            grimoireBackground.IndexChoiceObservable.Subscribe(PickChoice).AddTo(this);
+            grimoireBackground.indexChoiceObservable.Subscribe(PickChoice).AddTo(this);
+            grimoireBackground.backToLevelTwoObservable.Subscribe(PickChoice).AddTo(this);
+            grimoireBackground.previousPageObservable.Subscribe(PickChoice).AddTo(this);
+            grimoireBackground.nextPageObservable.Subscribe(PickChoice).AddTo(this);
             grimoireBackground.firstLevelButtonClick.Subscribe(PickChoice).AddTo(this);
             grimoireBackground.secondLevelSigilsButtonClick.Subscribe(PickSigilChoice).AddTo(this);
         }
@@ -159,6 +162,9 @@ namespace Selania.Rework.Components.Grimoire
                     sigilDescriptor.status
                 );
             }
+
+            // set up navigation
+            SetUpNavigation(descriptor);
         }
 
         /// <summary>

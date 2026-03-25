@@ -107,15 +107,6 @@ namespace Selania.Rework.Components.Grimoire
         [Tooltip("Invoked when the grimoire is asked to close.")] [SerializeField]
         private UnityEvent close = new();
 
-        [Tooltip("Invoked when the button to go back to level two has been clicked")] [SerializeField]
-        private UnityEvent goBackToLevelTwo = new();
-
-        [Tooltip("Invoked when the 'previous' button has been clicked")] [SerializeField]
-        private UnityEvent goPrevious = new();
-
-        [Tooltip("Invoked when the 'next' button has been clicked")] [SerializeField]
-        private UnityEvent goNext = new();
-
         [SerializeField] private GameObject loadButtonContainer = null!;
 
         [SerializeField] private GameObject gamerModeAchievementsContainer = null!;
@@ -169,20 +160,29 @@ namespace Selania.Rework.Components.Grimoire
 
         private Animator _animator = null!;
 
+        private string? _backToLevelTwoChoice;
+        private Subject<string>? _backToLevelTwoSubject;
+
         private TextMeshProUGUI _backToLevelTwoTextMeshPro = null!;
+
+        private string? _indexChoice;
 
         /// <summary>
         /// Subject that produces the index choice text every time it's chosen.
         /// </summary>
         private Subject<string>? _indexChoiceSubject;
 
-        private string? _indexText;
+        private string? _nextPageChoice;
+        private Subject<string>? _nextPageSubject;
         private TextMeshProUGUI _nextPageTextMeshPro = null!;
 
         /// <summary>
         ///     All the animators for pages, or <c>null</c> if it hasn't been initialized yet.
         /// </summary>
         private Animator[]? _pageAnimators;
+
+        private string? _previousPageChoice;
+        private Subject<string>? _previousPageSubject;
 
         private TextMeshProUGUI _previousPageTextMeshPro = null!;
 
@@ -195,9 +195,21 @@ namespace Selania.Rework.Components.Grimoire
         /// <summary>
         /// Observable that produces the index choice text every time it's chosen.
         /// </summary>
-        public Observable<string> IndexChoiceObservable =>
+        public Observable<string> indexChoiceObservable =>
             _indexChoiceSubject?.AsObservable() ??
-            throw new InvalidOperationException("Cannot access the IndexChoiceObservable before component setup");
+            throw new InvalidOperationException("Cannot access the indexChoiceObservable before component setup");
+
+        public Observable<string> backToLevelTwoObservable =>
+            _backToLevelTwoSubject?.AsObservable() ??
+            throw new InvalidOperationException("Cannot access the backToLevelTwoObservable before component setup");
+
+        public Observable<string> previousPageObservable =>
+            _previousPageSubject?.AsObservable() ??
+            throw new InvalidOperationException("Cannot access the previousPageObservable before component setup");
+
+        public Observable<string> nextPageObservable =>
+            _nextPageSubject?.AsObservable() ??
+            throw new InvalidOperationException("Cannot access the nextPageObservable before component setup");
 
         /// <summary>
         ///     An observable that exposes clicks on top level buttons.
@@ -223,6 +235,9 @@ namespace Selania.Rework.Components.Grimoire
             _animator = GetComponent<Animator>();
             // set up observables
             _indexChoiceSubject = new Subject<string>().AddTo(this);
+            _backToLevelTwoSubject = new Subject<string>().AddTo(this);
+            _previousPageSubject = new Subject<string>().AddTo(this);
+            _nextPageSubject = new Subject<string>().AddTo(this);
         }
 
         private void Start()
@@ -393,43 +408,64 @@ namespace Selania.Rework.Components.Grimoire
         public void ShowBookmarks(string? indexText, string? backToLevelTwoText, string? previousPageText,
             string? nextPageText)
         {
-            _indexText = indexText;
+            _indexChoice = indexText;
             indexBookmarkButton.SetActive(indexText != null);
 
             _backToLevelTwoTextMeshPro.text = backToLevelTwoText ?? "";
+            _backToLevelTwoChoice = backToLevelTwoText;
             backToLevelTwoBookmarkButton.SetActive(backToLevelTwoText != null);
 
             _previousPageTextMeshPro.text = previousPageText ?? "";
+            _previousPageChoice = previousPageText;
             previousPageBookmarkButton.SetActive(previousPageText != null);
 
             _nextPageTextMeshPro.text = nextPageText ?? "";
+            _nextPageChoice = nextPageText;
             nextPageBookmarkButton.SetActive(nextPageText != null);
         }
 
         public void OnIndexBookmarkButtonClick()
         {
-            if (_indexText == null)
+            if (_indexChoice == null)
             {
                 Logger.ZLogError($"Index bookmark clicked, but no index text was set.");
                 return;
             }
 
-            _indexChoiceSubject!.OnNext(_indexText);
+            _indexChoiceSubject!.OnNext(_indexChoice);
         }
 
         public void OnBackToLevelTwoButtonClick()
         {
-            goBackToLevelTwo.Invoke();
+            if (_backToLevelTwoChoice == null)
+            {
+                Logger.ZLogError($"Back to level two bookmark clicked, but no text was set.");
+                return;
+            }
+
+            _backToLevelTwoSubject!.OnNext(_backToLevelTwoChoice);
         }
 
         public void OnPreviousPageButtonClick()
         {
-            goPrevious.Invoke();
+            if (_previousPageChoice == null)
+            {
+                Logger.ZLogError($"Back to level two bookmark clicked, but no text was set.");
+                return;
+            }
+
+            _previousPageSubject!.OnNext(_previousPageChoice);
         }
 
         public void OnNextPageButtonClick()
         {
-            goNext.Invoke();
+            if (_nextPageChoice == null)
+            {
+                Logger.ZLogError($"Back to level two bookmark clicked, but no text was set.");
+                return;
+            }
+
+            _nextPageSubject!.OnNext(_nextPageChoice);
         }
 
         /// <summary>
