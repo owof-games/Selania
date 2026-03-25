@@ -181,7 +181,7 @@
     Infine, se vede questa icona, vuol dire che c'è una nuova informazione per lei.
     Se qualcosa non torna, può contattare la sezione Lamentele Inevadibili, al 9° piano.
     Se lo dimentica in giro, non posso garantirle che non ne mangerò le pagine.
-    
+
 
 ->->
 
@@ -240,29 +240,42 @@
 
 
 === tutorial_kitchenStorylet ===
-{
-    - tutorial_kitchenStorylet == 1:
-        ~ move_entity(Carla, Kitchen)
-}
 
-// - Cosa ci indica:
-//     - Si può fare solo una cucinata a personaggia.
-//     - Durante il dialogo useremo gli ingredienti per esprimere cose personali.
-//     - Possiamo aggiungere un ingrediente extra dalla serra: se piace alla PNG, ci aiuterà a capire come ragiona, e quindi che tipi di scelte preferisce nel dialogo.
-//         - Esempio sempre inventato con Carla, tipo “preferisco quando non mi parlano2
-//     - A fine cucina, feedback sul rapporto sviluppato in quel momento: immaginalo come un reset, per capire se stai andando o meno nella direzione giusta.
-//     - Ma il suo valore verrà comunque tenuto in considerazione per la relazione complessiva
+        {
+            - tutorial_kitchenStorylet == 1:
+                ~ move_entity(Carla, Kitchen)
+        }
 
 
-Tutorial cucina spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
+    Quindi non ci stavano ampliando la mensa?!?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
+    Salve.
+    Di nuovo.
+    Sono qui per spiegarle come funziona questa cucina.
+    Sperando sia più sveglio di mio figlio.
+    Uno: ogni persona cucinerà con lei solo una volta.
+    Perché?
+    Il Ministero ha tagliato i fondi.
+    Due: prima di cucinare, proporrà alla persona di approfondire un argomento che avete già affrontato.
+    Ogni persona di solito ha tre argomenti a disposizione.
+    Se ne vede meno, vuole dire che deve conoscere meglio quella persona per potergliene poi parlare.
+    Tre: farà delle scelte, come sempre.
+    Ma la cucina è una pausa dal mondo, e per questo la persona le darà un feedback sull'impressione che si è fatta su di lei mentre cucinavate.
+    Questo è molto utile per capire che tipo di rapporto state creando, e se ci sono correzioni da fare.
+    Quattro: in cucina le persone le faranno domande personali.
+    Potrà rispondere non a parole, ma aggiungendo ingredienti.
+    Non ha senso?
+    Prenda un appuntamento con la sezione Disprezzi e Disservizi.
+    Cinque: opzionalmente potrà decidere di aggiungere come ingrediente una pianta coltivata in serra.
+    Se la persona apprezzerà l'ingrediente, le dirà qualcosa di utile a capire meglio come ragiona.
+    Non sono previsti rimborsi in caso di insuccesso.
+    Non dovrei dirglielo, ma il signor Franco potrebbe aiutarla in caso di difficoltà.
+    
 
-
-
-    {
-        - entity_location(Carla) != Forest:
-            ~ move_entity(Carla, Forest)
-                -> main
-    }
+        {
+            - entity_location(Carla) != Forest:
+                ~ move_entity(Carla, Forest)
+                    -> main
+        }
 
     
 ->->
