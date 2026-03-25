@@ -99,9 +99,10 @@ VAR achievements_goodReader = notActive
 {debug_achievements: entro achievements_onGame_statusUpdate_GM, lo stato di settings_gamerMode è {settings_gamerMode}.}
 
     {
-        - settings_gamerMode == false && not tutorial_carlaChoicesRelationshipStorylet:
+        - settings_gamerMode == false:
             ->->
     }
+
     {
         - LIST_COUNT(story_endedStories) == 0:
             ~ achievements_oneRewrite = notDiscovered
@@ -512,7 +513,7 @@ VAR achievements_goodReader = notActive
     {
         - settings_gamerMode == true:
             ->->
-        - not tutorial_carlaChoicesRelationshipStorylet:
+        - not gm_rm_activation:
             ->->
     }
 
