@@ -3,6 +3,63 @@
        Storylets tutorial
 
  ----------------------------------*/
+///RIORDINO TUTORIAL
+=== tutorial_mentorTalkingChoiceRelationship
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+// - Presentazioni (commento sul luogo, voglio nome, pronomi)
+// - Ogni scelta è un modo di vedere il mondo.
+//     - E fa un commento sulla prima cosa che le abbiamo detto, e su che cosa esprime.
+// - Il modo in cui l’altra reagisce serve a capire come ragiona.
+// - Capire come ragiona serve a costruire una relazione e conquistare la sua fiducia.
+// - E per aiutarti a ricordare, tieni questo libro.
+//     - CI VIENE DATO IL GRIMORIO
+
+
+
+
+
+-> main
+
+
+=== tutorial_mentorInkAndYouAreARewriter
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+// - Sei una riscrittora.
+// - L’inchiostro è il “premio” di una buona relazione.
+// - L’inchiostro è il tuo strumento per compiere una buona riscrittura, ma te lo spiego poi.
+
+
+
+-> main
+
+=== tutorial_mentorInkAndRewriting
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+// - Cos’è la riscrittura.
+// - Come l’inchiostro sia utile.
+// - Cos’è un buon esito di una riscrittura.
+
+
+
+-> main
+
+
+
+
+
 === welcome ===
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)

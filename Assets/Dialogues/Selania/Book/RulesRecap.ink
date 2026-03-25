@@ -64,7 +64,7 @@
     }
     
     {
-        - trully_about_nest.bookUpdate:
+        - tutorial_witchSigils:
             Lə riscrittorə è una persona che parla e riscrive. <N>Per cui non può non riconoscere il potere delle parole. <N>Ogni parola ha un carico enorme, ha una storia culturale che si mischia a quella personale.
             
             Prendiamo "casa": quanto può essere diverso il significato di casa per una persona che la possiede e la condivide con qualcunə che ama, rispetto a una persona che arranca per pagare l'affitto, o vive con persone che non lə fanno star bene o che vive per strada? <N>E prima ancora: nel nostro Occidente moderno, la casa ha un valore di passaggio, una conferma dell'accesso nell'età adulta se non al diritto alla dignità personale (diritto sempre più inaccessibile, e per questo il Collettivo P.K. organizza occupazioni di vario tipo. Nel caso, scriveteci).

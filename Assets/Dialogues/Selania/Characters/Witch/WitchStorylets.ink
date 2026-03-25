@@ -1,32 +1,4 @@
 
-=== about_glyph_choices
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp charNameThree = translator(thirdChar_ActualName)
-        ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
-
-TODO: questo ora è uno storylet autonomo dopo un po'.
-
-
-    <i>Ciò che in te respira ricorda.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
-    <i>Ricorda che ogni dialogo è una strada.
-    <i>Che ogni strada è una scelta.
-    <i>E che ogni scelta importante apre cinque vie.
-    <i>Un vicolo di curiosità e disubbidienza.
-    <i>Un sentiero di azione e protesta.
-    <i>Un cammino di analisi e comprensione.
-    <i>Un viottolo di affetto e cura.
-    <i>Una calle di saggezza e spiritualità.
-    <i>Ogni scelta e ogni passo accumulano visioni del mondo.
-        ~ move_entity(RulesRecap, BookPlace)
-        @animation:RewriterBook
-    <i>Raccontando la storia di chi cammina.
-    - (bookUpdate)
-    
-->->
-
-
 === witch_intro
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -112,110 +84,6 @@ TODO: questo ora è uno storylet autonomo dopo un po'.
                 }
         
 
-=== about_the_book
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(mentor_ActualName)
-
-        
-            {
-                - first_character_recap.check && second_character_recap.check && greenhouse_recap.check:
-                    <i>{player_name} cerca spesso risposte tra le pagine del libro.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                
-                - else:
-                    <i>{player_name} cerca di rado risposte tra le pagine del libro.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-            }
-        <i>Un libro è ricordo condiviso.
-        <i>Una magia che pronuncia sé stessa.
-        <i>Per questo le pagine si popolano man mano che {player_name} vive.
-        <i>A volte il libro usa la nostra voce.
-        <i>A volte ritrova altri nomi e parole.
-        <i>In una canzone collettiva che guida {player_name} alla comprensione.
-    @animation:RewriterBook
-    - (bookUpdate)
-    -> main
-
-
-
-=== trully_about_nest
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(mentor_ActualName)
-        Dove ci viene detto a cosa serve il nido in modo sereno.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-        E ci spiega che la manipolazione è un intento, non qualcosa di inerente all'oggetto, o al nido.
-        
-        + Scelta verde.
-            -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->
-            
-        + Scelta rossa.
-            -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
-            
-        + Scelta blu.
-            -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
-     
-        + Scelta gialla.
-            -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
- 
-        + Scelta viola.
-            -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->
-        - (bookUpdate)       
-            -> main  
-
-
-
-
-
-
-=== witch_allSigils_opening ===
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(mentor_ActualName)
-
-Ehi {player_name}, hai finito tutte le riscritture. Se vuoi posso anche sbloccarti tutti i significati dei sigilli, che ne dici?
-    + No
-        Capisco
-    + Sì 
-        -> glyph_open_all_sigils ->
-        Fatto
-    -   
-Ciao ciao.
-
--> main    
-
-
-=== final ===
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(mentor_ActualName)
-    Hai donato la Selanìa, il gioco è finito.
-    Compare lo sfondo stellato.
-    
-        + Scelta verde.
-            -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->
-            
-        + SCelta rossa.
-            -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
-            
-        + Scelta blu.
-            -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
-     
-        + Scelta gialla.
-            -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
- 
-        + Scelta viola.
-            -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->
-        -        
-    Cose.
--> main
-
 
 
 === the_witch_and_the_frog
@@ -269,3 +137,51 @@ Quinto pezzo storia strega. Scopriamo che il suo nome è M.M., come la persona c
 
 
 -> main
+
+
+=== witch_allSigils_opening ===
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(mentor_ActualName)
+
+Ehi {player_name}, hai finito tutte le riscritture. Se vuoi posso anche sbloccarti tutti i significati dei sigilli, che ne dici?
+    + No
+        Capisco
+    + Sì 
+        -> glyph_open_all_sigils ->
+        Fatto
+    -   
+Ciao ciao.
+
+-> main    
+
+
+=== final ===
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(mentor_ActualName)
+    Hai donato la Selanìa, il gioco è finito.
+    Compare lo sfondo stellato.
+    
+        + Scelta verde.
+            -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->
+            
+        + SCelta rossa.
+            -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->
+            
+        + Scelta blu.
+            -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
+     
+        + Scelta gialla.
+            -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->
+ 
+        + Scelta viola.
+            -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->
+        -        
+    Cose.
+-> main
+

@@ -1,13 +1,12 @@
 === witch_storylets_management
     {    
-    
-        //Commento sul libro
-        - witch_intro && not about_the_book:
-            -> about_the_book
-            
-        //Spiegazione del nido
-        - witch_intro && about_nest && not trully_about_nest:
-            -> trully_about_nest
+        
+
+        //Check per intro
+        - not witch_intro:
+            -> witch_intro
+
+
         
         //Dialogo su Franco
         - witch_intro && closed_mission_verify && not the_witch_and_the_frog:
@@ -33,11 +32,16 @@
         - listDumpGraphics has fifthStateDump && not witch_fifth_confession:
             -> witch_fifth_confession    
 
+        //Commento sui glifi
+        - not about_glyph_choices:
+            -> about_glyph_choices
+
+        //Commento sul libro
+        - witch_intro && not about_the_book:
+            -> about_the_book
         
         
-        
-        
-        
+
         - else:
             -> witch_feedback
 

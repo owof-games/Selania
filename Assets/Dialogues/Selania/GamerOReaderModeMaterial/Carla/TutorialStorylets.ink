@@ -1,9 +1,9 @@
 //Tutorial sul game play principale
 
-=== tutorial_choicesRelationshipStorylet ===
+=== tutorial_carlaChoicesRelationshipStorylet ===
 
     {
-        - tutorial_choicesRelationshipStorylet > 1:
+        - tutorial_carlaChoicesRelationshipStorylet > 1:
             Le ricordo che ripeto sempre lo stesso script della prima volta, ok?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
     }
     
@@ -71,11 +71,11 @@
 
 
 
-=== tutorial_rereadingStorylet ===
+=== tutorial_carlaRereadingStorylet ===
     
     Questa roba è di competenza di quelli dell'amministrazione centrale, non mia.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
         {
-            - tutorial_rereadingStorylet > 1: 
+            - tutorial_carlaRereadingStorylet > 1: 
                 Ripetiamo la pappardella.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
         }
     Sbrighiamoci.
@@ -113,11 +113,11 @@
 
 //Tutorial sulle interfacce
 
-=== tutorial_interfaceStorylets ===
+=== tutorial_carlaInterfaceStorylets ===
 
     Ma quando mi finisce il turno?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
     {
-        - tutorial_interfaceStorylets > 1:
+        - tutorial_carlaInterfaceStorylets > 1:
             Ripeterò le cose esattamente come la prima volta, voglio brucare in santa pace.
     }
     Sono Carla, e prima di entrare in Selanìa devo dirle cinque cose.
@@ -165,10 +165,10 @@
 
 ->->
 
-=== tutorial_GrimoireStorylet ===
+=== tutorial_carlaGrimoireStorylet ===
 
         {
-            - tutorial_GrimoireStorylet > 1: 
+            - tutorial_carlaGrimoireStorylet > 1: 
                 Per fortuna questa è breve.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
         }
 
@@ -199,15 +199,15 @@
 
 
 //Tutorial attivati da luoghi
-=== tutorial_greenhouseGiftsInkStorylet ===
+=== tutorial_carlaGreenhouseGiftsInkStorylet ===
     {
-        - tutorial_greenhouseGiftsInkStorylet == 1:
+        - tutorial_carlaGreenhouseGiftsInkStorylet == 1:
             ~ move_entity(Carla, Greenhouse)
     }
 
     Deve parlare con la responsabile.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
         {
-            - tutorial_greenhouseGiftsInkStorylet > 1:
+            - tutorial_carlaGreenhouseGiftsInkStorylet > 1:
                 Abbiamo uno script da seguire, per cui non cambierò una virgola rispetto a prima.
         }
     Ah no scusi, è l'abitudine.
@@ -254,15 +254,15 @@
 
 
 
-=== tutorial_kitchenStorylet ===
+=== tutorial_carlaKitchenStorylet ===
 
         {
-            - tutorial_kitchenStorylet == 1:
+            - tutorial_carlaKitchenStorylet == 1:
                 ~ move_entity(Carla, Kitchen)
         }
 
         {
-            - tutorial_kitchenStorylet == 1:
+            - tutorial_carlaKitchenStorylet == 1:
                 Quindi non ci stavano ampliando la mensa?!?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
 
             - else: 
@@ -304,7 +304,7 @@
 ->->
 
 
-=== tutorial_SigilsActivationStorylet ===
+=== tutorial_carlaSigilsActivationStorylet ===
 ~ temp charNameThree = translator(thirdChar_ActualName)
 
         {
@@ -315,7 +315,7 @@
 
     Ma perché questi non si fanno mai i cavoli propri? #speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
         {
-            - tutorial_SigilsActivationStorylet > 1:
+            - tutorial_carlaSigilsActivationStorylet > 1:
                 Devo recuperare il documento del Ministero.
         }
 
@@ -347,16 +347,16 @@
 ->->
 
 
-=== tutorial_nestStorylet ===
+=== tutorial_carlaNestStorylet ===
 ~ temp charNameThree = translator(thirdChar_ActualName)
 
         {
-            - tutorial_nestStorylet == 1:
+            - tutorial_carlaNestStorylet == 1:
                 ~ move_entity(Carla, Nest)
         }
 
         {
-            - tutorial_nestStorylet > 1:
+            - tutorial_carlaNestStorylet > 1:
                 E quindi rispieghiamo i glifi. Che gioia!#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
         }
   

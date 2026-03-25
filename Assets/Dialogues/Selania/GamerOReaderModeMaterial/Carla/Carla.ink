@@ -8,31 +8,31 @@
 
 
         //Tutorial gameplay
-        + {tutorial_choicesRelationshipStorylet} Mi rispiegheresti la faccenda delle scelte e delle relazioni?
-                -> tutorial_choicesRelationshipStorylet -> questions_Carla
+        + {tutorial_carlaChoicesRelationshipStorylet} Mi rispiegheresti la faccenda delle scelte e delle relazioni?
+                -> tutorial_carlaChoicesRelationshipStorylet -> questions_Carla
 
-        + {tutorial_rereadingStorylet} Com'era quella cosa della riscrittura?
-                -> tutorial_rereadingStorylet -> questions_Carla
+        + {tutorial_carlaRereadingStorylet} Com'era quella cosa della riscrittura?
+                -> tutorial_carlaRereadingStorylet -> questions_Carla
 
         //Tutorial legati ai luoghi
-        + {tutorial_greenhouseGiftsInkStorylet} Com'è che si collegavano piante, doni e inchiostro?
-                -> tutorial_greenhouseGiftsInkStorylet -> questions_Carla
+        + {tutorial_carlaGreenhouseGiftsInkStorylet} Com'è che si collegavano piante, doni e inchiostro?
+                -> tutorial_carlaGreenhouseGiftsInkStorylet -> questions_Carla
 
-        + {tutorial_kitchenStorylet} Ho bisogno che mi rispieghi la faccenda della cucina.
-                -> tutorial_kitchenStorylet -> questions_Carla
+        + {tutorial_carlaKitchenStorylet} Ho bisogno che mi rispieghi la faccenda della cucina.
+                -> tutorial_carlaKitchenStorylet -> questions_Carla
 
-        + {tutorial_nestStorylet} Quindi, con quelle pietre sulla spiaggia che ci devo fare?
-                -> tutorial_nestStorylet -> questions_Carla
+        + {tutorial_carlaNestStorylet} Quindi, con quelle pietre sulla spiaggia che ci devo fare?
+                -> tutorial_carlaNestStorylet -> questions_Carla
 
-        + {tutorial_SigilsActivationStorylet} Mi ridici come si utilizzano i sigilli?
-                -> tutorial_SigilsActivationStorylet -> questions_Carla              
+        + {tutorial_carlaSigilsActivationStorylet} Mi ridici come si utilizzano i sigilli?
+                -> tutorial_carlaSigilsActivationStorylet -> questions_Carla              
 
         //Tutorial UI
-        + {tutorial_GrimoireStorylet} Un ripassino sulle funzioni del Grimorio?
-                -> tutorial_GrimoireStorylet -> questions_Carla 
+        + {tutorial_carlaGrimoireStorylet} Un ripassino sulle funzioni del Grimorio?
+                -> tutorial_carlaGrimoireStorylet -> questions_Carla 
 
         + Come interagisco col mondo?
-                -> tutorial_interfaceStorylets -> questions_Carla       
+                -> tutorial_carlaInterfaceStorylets -> questions_Carla       
 
         //Scelte di testing
         + Qual è lo stato degli achievement? (domanda giusto ora che non c'è il grimorio)

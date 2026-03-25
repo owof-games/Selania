@@ -70,8 +70,9 @@
     INCLUDE Characters\Witch\WitchManagement.ink
     INCLUDE Characters\Witch\WitchStoryletsManagement.ink
     INCLUDE Characters\Witch\WitchStorylets.ink
-    
-    
+    INCLUDE Characters\Witch\WitchTutorial.ink
+    INCLUDE Characters\Witch\WitchFeedbacks.ink
+   
     INCLUDE Characters\FirstChar\FirstCharDialogueManager.ink
     INCLUDE Characters\FirstChar\FirstChar.ink
     INCLUDE Characters\FirstChar\FirstCharManagement.ink
