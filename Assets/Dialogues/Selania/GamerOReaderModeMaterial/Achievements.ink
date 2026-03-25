@@ -99,7 +99,7 @@ VAR achievements_goodReader = notActive
 {debug_achievements: entro achievements_onGame_statusUpdate_GM, lo stato di settings_gamerMode è {settings_gamerMode}.}
 
     {
-        - settings_gamerMode == false && not tutorial_choicesStorylet:
+        - settings_gamerMode == false && not tutorial_choicesRelationshipStorylet:
             ->->
     }
     {
@@ -512,7 +512,7 @@ VAR achievements_goodReader = notActive
     {
         - settings_gamerMode == true:
             ->->
-        - not tutorial_choicesStorylet:
+        - not tutorial_choicesRelationshipStorylet:
             ->->
     }
 

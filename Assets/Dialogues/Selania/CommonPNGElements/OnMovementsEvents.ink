@@ -40,7 +40,7 @@
 ~ temp currentPlace = entity_location(PG)
 //Abilito Carla se siamo in modalità tutorial
     {
-        - tutorial_ActivateTutorial == true && not tutorial_choicesStorylet:
+        - tutorial_ActivateTutorial == true && not tutorial_choicesRelationshipStorylet:
             ~ move_entity(Carla, TrainStop)
             {debug: il tutorial è attivo e quindi sposto Carla alla fermata del treno.}
     }
