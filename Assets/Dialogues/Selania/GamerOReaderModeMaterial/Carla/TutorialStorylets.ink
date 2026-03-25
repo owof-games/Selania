@@ -71,13 +71,36 @@
 
 
 === tutorial_rereadingStorylet ===
-Tutorial rilettura spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
-// - Inchiostro dalla relazione, rapporto tra indicatore e inchiostro generato.
-// - Ogni inchiostro è una scelta che puoi fare in più.
-// - Ogni scelta è un modo di rileggere un pezzo della storia della persona in modo diverso.
-// - Dopo la riscrittura, la persona sceglierà un nuovo nome.
-// - Le scelte della riscrittura sono importanti, per cui gli effetti dei sigilli vengono triplicati.
-
+    
+    Questa roba è di competenza di quelli dell'amministrazione centrale, non mia.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
+    Sbrighiamoci.
+    Non so se gliel'hanno già detto, ma lei è qui per aiutare le persone a trovare un nuovo nome.
+    Perché?
+    Non ne ho idea, io eseguo solo le indicazioni del ministero.
+    Quando avrà conosciuto abbastanza una persona, potrà proporle di rileggere la sua storia e scegliersi un nuovo nome.
+    Quindi.
+    Uno: dice alla persona una cosa tipo "Ti va di rileggere la tua storia con me?".
+    Due: prima della riscrittura, la persona le dirà quello che pensa di lei.
+    Tra relazione e doni può ricevere da zero a quattro gocce di inchiostro.
+    Non una di più, c'è scritto anche sul sito.
+    Tre: a quel punto lei avrà diritto al suo monologo per dimostrare alla persona che la conosce davvero bene.
+    Più inchiostro ha accumulato, più cose potrà dire, facendo riferimento alle confidenze fatte da quella persona.
+    Quindi: più inchiostro uguale lavoro più facile.
+    Perché?
+    Perché le persone sono insicure, e devi sempre spiegargli le cose mille volte mentre tu vorresti solo andare a casa coi gatti e la switch.
+    E quando sono insicure, chiedono troppi perché.
+    Sono tenuta comunque a ricordarle che anche se potrà fare la riscrittura dopo, che ne so, sette chiacchierate, le può convenire continuare a conoscere meglio la persona, prima di iniziare il processo.
+    Anche perché poco dopo la riscrittura, quella persona se ne andrà.
+    Ah, dimenticavo!
+    Le scelte fatte durante la riscrittura hanno un valore molto più alto di quelle durante il resto del vostro rapporto.
+        {
+            - player_accessiblePlaces has Nest: 
+                E questa cosa è importante da considerare se dovesse avere dei sigilli attivi.
+            - else:
+                Se lo ricordi, soprattutto se dovesse usare qualcosa che modifica le sue prestazioni.    
+        }
+    Ma in questo posto non arriva mai il venerdì?
+    
 
 ->->
 
@@ -153,6 +176,9 @@ Tutorial rilettura spiegato da Carla#speaker:Carla#inkA:offState #inkB:offState 
     }
 
     Deve parlare con la responsabile.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
+    {
+        - tutorial_greenhouseGiftsInkStorylet > 1: Abbiamo uno script da seguire, per cui non cambierò una virgola rispetto a prima.
+    }
     Ah no scusi, è l'abitudine.
     Mi è stato chiesto di spiegarle come funziona la serra.
     Ci fa crescere le piante ed è fatta.
