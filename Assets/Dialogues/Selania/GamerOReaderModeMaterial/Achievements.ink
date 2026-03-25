@@ -462,7 +462,7 @@ VAR achievements_goodReader = notActive
 
         - else:
             ~ achievements_allLetters = inProgress
-            ~ achievements_allLetters_text = "LIST_COUNT(achievements_allLetters_Receivers)/5" 
+            ~ achievements_allLetters_text = "{LIST_COUNT(achievements_allLetters_Receivers)}/5" 
             
     }  
 
