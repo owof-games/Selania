@@ -47,6 +47,9 @@ VAR achievements_allSigils = notActive
 VAR achievements_allLetters = notActive
     VAR achievements_allLetters_text = ""
     VAR achievements_allLetters_notified = false
+    VAR achievements_allLetters_Receivers = ()
+    VAR achievements_allLetters_Counter = 0
+
 VAR achievements_fullGreenhouse = notActive
     VAR achievements_fullGreenhouse_text = ""
     VAR achievements_fullGreenhouse_notified = false
@@ -412,8 +415,55 @@ VAR achievements_goodReader = notActive
     }
 
 //Achievement lettere.
-    TODO: da creare una volta capito cosa faccio delle lettere di PNG4 e PNG5
-    //~ achievements_allLetters = notDiscovered
+    //Preparazione.
+    {
+        - achievements_allLetters_Receivers hasnt FirstCharacter && first_character_notes.one:
+            ~ achievements_allLetters_Receivers += FirstCharacter
+            ~ achievements_allLetters_Counter ++
+    }
+    {
+        - achievements_allLetters_Receivers hasnt SecondCharacter && second_character_notes.one:
+            ~ achievements_allLetters_Receivers += SecondCharacter
+            ~ achievements_allLetters_Counter ++
+    }
+    {
+        - achievements_allLetters_Receivers hasnt ThirdCharacter && third_character_notes.one:
+            ~ achievements_allLetters_Receivers += ThirdCharacter
+            ~ achievements_allLetters_Counter ++
+    }
+    {
+        - achievements_allLetters_Receivers hasnt FourthCharacter && fourth_character_notes.one:
+            ~ achievements_allLetters_Receivers += FourthCharacter
+            ~ achievements_allLetters_Counter ++
+    }
+    {
+        - achievements_allLetters_Receivers hasnt FifthCharacter && fifth_character_notes.one:
+            ~ achievements_allLetters_Receivers += FifthCharacter
+            ~ achievements_allLetters_Counter ++
+    }
+
+
+
+    {
+        - achievements_allLetters_Counter == 0:
+            ~ achievements_allLetters = notDiscovered
+            ~ achievements_allLetters_text = ""
+
+        - achievements_allLetters_Counter == 5:
+            ~ achievements_allLetters = Discovered
+            ~ achievements_allLetters_text = "5/5"
+            {
+                - achievements_allLetters_notified == false:
+                    ~ achievements_allLetters_notified = true
+                    ~ notification_achievement = true
+                    ~ notification_achievement = "{achievements_allLetters}"
+            } 
+
+        - else:
+            ~ achievements_allLetters = inProgress
+            ~ achievements_allLetters_text = "LIST_COUNT(achievements_allLetters_Receivers)/5" 
+            
+    }  
 
 //Achievement serra.
     {
