@@ -159,12 +159,30 @@
 ->->
 
 === tutorial_GrimoireStorylet ===
-// - Cosa ci indica:
-//     - Funzionamento delle etichette.
-//     - Funzionamento dei tasti e delle pagine.
-//     - Spazio achievements.
-//     - Spazio informazioni (ora vuoto perché non hai ancora conosciuto nessuno).
-//     - Notifiche (sul libro e nelle sezioni).
+
+    Ha finalmente ricevuto il suo Grimorio!#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
+    Festa!
+    Rumore di trombette!
+    Espressione di gioia.
+    Altra espressione di gioia.
+    Basta.
+    Alcune informazioni pratiche sul Grimorio, gentilmente offerte dal Ministero.
+    Che gentilmente potrebbe pagarmi di più.
+    Quando apre il grimorio vedrà due pagine.
+    A destra troverà alcune informazioni utili per il suo lavoro, mentre a sinistra è presente l'indice.
+    L'indice serve per portarla ai vari capitoli del Grimorio, che di solito raccolgono informazioni su un luogo o una persona.
+    Se c'è un bottone, può cliccarlo per andare al relativo capitolo.
+    Se c'è un lucchetto, deve ancora scoprire quella voce.
+    Alcuni capitoli possono avere delle sottosezioni, e la logica è la stessa: lucchetto uguale informazione bloccata.
+    Perché un lucchetto?
+    La risposta non è di mia competenza.
+    Ai lati del Grimorio troverà delle etichette.
+    Servono per chiuderlo, per tornare verso l'indice, o per sfogliare le pagine.
+    Infine, se vede questa icona, vuol dire che c'è una nuova informazione per lei.
+    Se qualcosa non torna, può contattare la sezione Lamentele Inevadibili, al 9° piano.
+    Se lo dimentica in giro, non posso garantirle che non ne mangerò le pagine.
+    
+
 ->->
 
 
