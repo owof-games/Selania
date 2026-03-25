@@ -9,11 +9,7 @@
         <i>Nella serra a lungo dimenticata i vasi attendono sussurri e confidenze.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
 }
 
-    //check storylets soprattutto per far partire il tutorial di Carla, altrimenti la presenza di una scelta blocca il check fino al primo ritorno in main
-    {
-        - tutorial_ActivateTutorial == true && entity_location(PG) == Greenhouse && not tutorial_greenhouseGiftsInkStorylet:
-            -> tutorial_greenhouseGiftsInkStorylet ->
-    }
+    
 
 {
     //Sta crescendo qualcosa: vado ad aggiornarne lo stato

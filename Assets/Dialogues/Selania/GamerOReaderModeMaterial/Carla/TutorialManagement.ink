@@ -21,17 +21,31 @@ VAR tutorial_rereadingActive = false
 
 
 //Poi faccio il dispatch dei vari elementi del tutorial. Se Carla è attiva, deve parlare sempre PRIMA di mentore
+//Tutti i tutorial di Carla passano da qui, a parte quello sui sigilli, che va sbloccato subito dopo aver parlato con Boccale
 
 {
     - are_two_entities_together(PG, Carla) && not tutorial_choicesRelationshipStorylet:
         -> tutorial_choicesRelationshipStorylet
 
+    //questa è una posizione temporanea, poi faremo in modo di farlo partire all'avvio del gioco.
+    - are_two_entities_together(PG, Carla)  && entity_location(PG) == Forest && not tutorial_interfaceStorylets:
+        -> tutorial_interfaceStorylets
+
     - are_two_entities_together(PG, Carla) && tutorial_rereadingActive && not tutorial_rereadingStorylet:
         -> tutorial_rereadingStorylet
 
-        //parte dopo che mi è stato dato il libro da Mentore
+            //parte dopo che mi è stato dato il libro da Mentore
     - are_two_entities_together(PG, Carla) && welcome && not tutorial_GrimoireStorylet:
-        -> tutorial_GrimoireStorylet    
+        -> tutorial_GrimoireStorylet        
+
+    - tutorial_ActivateTutorial == true && entity_location(PG) == Greenhouse && not tutorial_greenhouseGiftsInkStorylet:
+            -> tutorial_greenhouseGiftsInkStorylet
+
+    - tutorial_ActivateTutorial == true && entity_location(PG) == Kitchen && not tutorial_kitchenStorylet:
+            -> tutorial_kitchenStorylet
+
+    - tutorial_ActivateTutorial == true && entity_location(PG) == Nest && not tutorial_nestStorylet:
+            -> tutorial_nestStorylet
 
 }
 

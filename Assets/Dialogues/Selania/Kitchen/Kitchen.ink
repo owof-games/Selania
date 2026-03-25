@@ -17,10 +17,6 @@
 
 
 
-{
-    - tutorial_ActivateTutorial == true && entity_location(PG) == Kitchen && not tutorial_kitchenStorylet:
-            -> tutorial_kitchenStorylet->
-}
 
 -> kitchen_storylets_dispatcher
 

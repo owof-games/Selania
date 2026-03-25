@@ -1,9 +1,7 @@
 === common_storylets
     {
 
-        //Gestione dei tutorial di Carla
-            - are_two_entities_together(PG, Carla) && not tutorial_choicesRelationshipStorylet:
-                -> tutorial_choicesRelationshipStorylet
+        
 
         //Feedback da parte di Mentore su pensieri strega se le abbiamo detto che abbiamo parlato con la pianta
             - are_two_entities_together(Mentor, PG) && are_two_entities_together(TheWitch, PG) && little_storylets.talkingWitch && not the_witch_and_the_mentor:
