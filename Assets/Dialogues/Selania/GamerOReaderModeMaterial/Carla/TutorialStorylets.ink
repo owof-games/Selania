@@ -11,6 +11,18 @@
     Non risponda, è una domanda retorica, e l'ufficio domande retoriche è al 5° piano, stanza 13.
     Sono qui per dirle al volo cosa deve fare.
     Il perché non è di mia competenza.
+    Vuole sentire, la spiegazione?
+        + Certo!
+            Anche meno entusiasmo.
+        + Passo.
+            Meglio per me.
+            Le ricordo che l'ufficio Incidenti e Svenimenti è chiuso fino a data indefinita.
+                {
+                    - entity_location(Carla) != Forest:
+                        ~ move_entity(Carla, Forest)
+                }
+                -> main
+        -
     Lei deve parlare con le persone che trova qui in giro.
     Le diranno cose più o meno personali, e si aspetteranno da lei una risposta.
     La risposta influenzerà il modo in cui quella persona la vede.
@@ -78,6 +90,19 @@
             - tutorial_carlaRereadingStorylet > 1: 
                 Ripetiamo la pappardella.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
         }
+    Sto per spiegarle come funziona la riscrittura.
+    Vuole ascoltare?
+        + Con piacere!
+            Dubito.
+        + No, grazie.
+            Saggia scelta.
+            Per me per lo meno.
+                {
+                    - entity_location(Carla) != Forest:
+                        ~ move_entity(Carla, Forest)
+                }
+                -> main
+        -    
     Sbrighiamoci.
     Non so se gliel'hanno già detto, ma lei è qui per aiutare le persone a trovare un nuovo nome.
     Perché?
@@ -120,7 +145,20 @@
         - tutorial_carlaInterfaceStorylets > 1:
             Ripeterò le cose esattamente come la prima volta, voglio brucare in santa pace.
     }
-    Sono Carla, e prima di entrare in Selanìa devo dirle cinque cose.
+    Sono Carla, e prima di entrare in Selanìa devo dirle cinque cose su come muoversi in questi luoghi.
+    Iniziamo?
+        + Non vedo l'ora.
+            Buffo.
+            Anche io non vedo l'ora che finisca il mio turno.
+        + So già tutto, grazie.
+            Allora mi spieghi perché a sessant'anni sono ancora in questo ufficio.
+            Buona continuazione.
+                {
+                    - entity_location(Carla) != Forest:
+                        ~ move_entity(Carla, Forest)
+                }
+                -> main
+        -
     Prenda appunti perché odio ripetermi.
     Uno: può utilizzare mouse, tastiera e controller, e passare da uno strumento all'altro.
     Col mouse basta passare sopra le cose che deve toccare, e cliccare.
@@ -179,6 +217,18 @@
     Altra espressione di gioia.
     Basta.
     Alcune informazioni pratiche sul Grimorio, gentilmente offerte dal Ministero.
+    Le vuole ascoltare?
+        + Gliene sarei grat{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
+            Se sapesse le cose che penso di lei, non mi sarebbe grat{player_pronouns has him:o|{player_pronouns has her:a|ə}} di nulla.
+        + Non importa.
+            Siamo in due.
+            Sono tenuta giusto a ricordarle che il Ministero la riterrà responsabile di ogni uso sconsiderato del Grimorio.
+                {
+                    - entity_location(Carla) != Forest:
+                        ~ move_entity(Carla, Forest)
+                }
+                -> main
+        -
     Che gentilmente potrebbe pagarmi di più.
     Quando apre il grimorio vedrà due pagine.
     A destra troverà alcune informazioni utili per il suo lavoro, mentre a sinistra è presente l'indice.
@@ -212,6 +262,18 @@
         }
     Ah no scusi, è l'abitudine.
     Mi è stato chiesto di spiegarle come funziona la serra.
+    È pront{player_pronouns has him:o|{player_pronouns has her:a|ə}}?
+        + Adoro le piante!
+            Le assicuro che la cosa non è reciproca.
+        + Non serve, ho il pollice verde.
+            Allora dovrebbe fare segnalazione al Ministero per i Malanni Immaginari.
+            Ottavo piano, a destra dopo l'ascensore guasto.
+                {
+                    - entity_location(Carla) != Forest:
+                        ~ move_entity(Carla, Forest)
+                }
+                -> main
+        -
     Ci fa crescere le piante ed è fatta.
     Arrivederci.
     Mmm, ah.
@@ -270,7 +332,20 @@
         }
 
     Sono qui per spiegarle come funziona questa cucina.
-    Sperando sia più sveglio di mio figlio.
+    Sperando sia più svegli{player_pronouns has him:o|{player_pronouns has her:a|ə}} di mio figlio.
+    Accetta di ascoltare la mia spiegazione?
+        + Ne ho proprio bisogno.
+            È quello che temevo.
+        + Non serve, sono laureat{player_pronouns has him:o|{player_pronouns has her:a|ə}} in Masterchef.
+            Mmm.
+            Forse mio figlio è più sveglio di lei.
+            Si ricordi che gli incidenti in cucina non sono coperti dall'assicurazione.
+                {
+                    - entity_location(Carla) != Forest:
+                        ~ move_entity(Carla, Forest)
+                }
+                -> main
+        -
     Uno: ogni persona cucinerà con lei solo una volta.
     Perché?
     Il Ministero ha tagliato i fondi.
@@ -323,6 +398,20 @@
     Ma che gentile.
     Già.
     Mannaggia al.
+    Vuole che le spieghi come funzionano i Sigilli?
+        + Sarebbe magnifico.
+            No.
+            Magnifica è la pensione.
+            Non questa mole immensa di scartoffie.
+        + Preferisco imparare sul campo.
+            È una scelta.
+            Le ricordo che il numero verde per gli incidenti magici e le trasformazioni involontarie è fuori servizio dal millenovecentoottantaquattro.
+                {
+                    - entity_location(Carla) != Forest:
+                        ~ move_entity(Carla, Forest)
+                }
+                -> main
+        -
     Il Nido le sblocca i Sigilli, e i Sigilli sono una cosa pericolosa.
     Leggo direttamente dalla comunicazione ministeriale.
     "Premesso che la Combinata Triglifica Esoterica Espansa (da qui in avanti per brevità chiamato Sigillo) è uno strumento di cui ancora conosciamo poco.
@@ -361,6 +450,20 @@
         }
   
     Ogni volta che vedo questi cosi mi chiedo perché non ho concluso la laurea in ingegneria, mannaggia a me.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
+    Le spiego i sassi, va bene?
+        + Sassiiiiiiiiiiiiii!
+            Anche meno, figliol{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
+            Anche meno.
+        + Sassnooooooooooooo!
+            Lei è amic{player_pronouns has him:o|{player_pronouns has her:a|ə}} di Franco, vero?
+            Avrebbe dovuto dirmelo prima.
+            Avrei evitato di sprecare il mio tempo.
+                {
+                    - entity_location(Carla) != Forest:
+                        ~ move_entity(Carla, Forest)
+                }
+                -> main
+        -
     Questi sassi sono qui per creare i Sigilli, che abbiamo già visto quando il suo caro amico {charNameThree} ha deciso di aprire questo posto.
     Uno: un sigillo utilizzabile è sempre composta da tre glifi.
     Non è sempre vero, ma il resto non è di mia competenza.

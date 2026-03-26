@@ -27,8 +27,8 @@ VAR tutorial_rereadingActive = false
         -> tutorial_carlaChoicesRelationshipStorylet
 
     //questa è una posizione temporanea, poi faremo in modo di farlo partire all'avvio del gioco.
-    - are_two_entities_together(PG, Carla)  && entity_location(PG) == Forest && not tutorial_carlaInterfaceStorylets:
-        -> tutorial_carlaInterfaceStorylets
+    // - are_two_entities_together(PG, Carla)  && entity_location(PG) == Forest && not tutorial_carlaInterfaceStorylets:
+    //     -> tutorial_carlaInterfaceStorylets
 
     - are_two_entities_together(PG, Carla) && tutorial_rereadingActive && not tutorial_carlaRereadingStorylet:
         -> tutorial_carlaRereadingStorylet
