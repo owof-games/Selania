@@ -92,8 +92,6 @@ MonoBehaviour:
     <sprite>k__BackingField: {fileID: 21300000, guid: 4add65e07378ff4428dc163dc6f949c5, type: 3}
   - <tag>k__BackingField: PG_neutral
     <sprite>k__BackingField: {fileID: 21300000, guid: 00fff9eb5d083484ab9d1afa02131b67, type: 3}
-  - <tag>k__BackingField: carla_bored
-    <sprite>k__BackingField: {fileID: 21300000, guid: 1fa8c2cef4f52394fbc8b9c7629abf9e, type: 3}
   - <tag>k__BackingField: doggo_neutral
     <sprite>k__BackingField: {fileID: 21300000, guid: 230549ef2b990b749b59bb376cfa82c1, type: 3}
   - <tag>k__BackingField: frog_kitchen
@@ -116,6 +114,16 @@ MonoBehaviour:
     <sprite>k__BackingField: {fileID: 21300000, guid: 4bb6984829bc4b5468eca356c4830059, type: 3}
   - <tag>k__BackingField: docNest
     <sprite>k__BackingField: {fileID: 21300000, guid: f7d8c5e2866f12c498cfd20a649648fe, type: 3}
+  - <tag>k__BackingField: carla_bored
+    <sprite>k__BackingField: {fileID: 21300000, guid: 1fa8c2cef4f52394fbc8b9c7629abf9e, type: 3}
+  - <tag>k__BackingField: carla_angry
+    <sprite>k__BackingField: {fileID: 21300000, guid: c2802aa3b91208445ba9d7a6b3009db2, type: 3}
+  - <tag>k__BackingField: carla_happy
+    <sprite>k__BackingField: {fileID: 21300000, guid: 4182dc4029e0429459423e41edefd9d5, type: 3}
+  - <tag>k__BackingField: carla_neutral
+    <sprite>k__BackingField: {fileID: 21300000, guid: 7bb7f9594ff0b6f4c83d09b1ab9eaf29, type: 3}
+  - <tag>k__BackingField: carla_sad
+    <sprite>k__BackingField: {fileID: 21300000, guid: 8a640edc9da2ea5408e452f53df30580, type: 3}
   <badRelationshipStatusBarColor>k__BackingField: {r: 0.25882354, g: 0.09803922, b: 0.8627451, a: 1}
   <normalRelationshipStatusBarColor>k__BackingField: {r: 0.8627451, g: 0.74509805, b: 0.09803922, a: 1}
   <goodRelationshipStatusBarColor>k__BackingField: {r: 0.96862745, g: 0.3764706, b: 0.60784316, a: 1}
