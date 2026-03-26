@@ -11,6 +11,15 @@
     Non risponda, è una domanda retorica, e l'ufficio domande retoriche è al 5° piano, stanza 13.
     Sono qui per dirle al volo cosa deve fare.
     Il perché non è di mia competenza.
+
+        {
+            - tutorial_carlaChoicesRelationshipStorylet > 1:
+                -> top2
+            - else:
+                -> top1    
+        }
+
+    - (top1)
     Vuole sentire, la spiegazione?
         + Certo!
             Anche meno entusiasmo.
@@ -23,6 +32,9 @@
                 }
                 -> main
         -
+
+
+    - (top2)
     Lei deve parlare con le persone che trova qui in giro.
     Le diranno cose più o meno personali, e si aspetteranno da lei una risposta.
     La risposta influenzerà il modo in cui quella persona la vede.
@@ -70,7 +82,8 @@
 
     E ora sono in pausa.
     Vada a fare le sue cose.
-
+    //Resetto, così se viene richiamato più avanti riparte da capo
+        ~ tutorial_CarlaRelationshipIndicator = 0
 
     {
         - entity_location(Carla) != Forest:
@@ -91,6 +104,14 @@
                 Ripetiamo la pappardella.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
         }
     Sto per spiegarle come funziona la riscrittura.
+        {
+            - tutorial_carlaChoicesRelationshipStorylet > 1:
+                -> top2
+            - else:
+                -> top1    
+        }
+
+    - (top1)    
     Vuole ascoltare?
         + Con piacere!
             Dubito.
@@ -102,7 +123,9 @@
                         ~ move_entity(Carla, Forest)
                 }
                 -> main
-        -    
+        -
+
+    - (top2)        
     Sbrighiamoci.
     Non so se gliel'hanno già detto, ma lei è qui per aiutare le persone a trovare un nuovo nome.
     Perché?
@@ -146,6 +169,14 @@
             Ripeterò le cose esattamente come la prima volta, voglio brucare in santa pace.
     }
     Sono Carla, e prima di entrare in Selanìa devo dirle cinque cose su come muoversi in questi luoghi.
+        {
+            - tutorial_carlaChoicesRelationshipStorylet > 1:
+                -> top2
+            - else:
+                -> top1    
+        }
+
+    - (top1) 
     Iniziamo?
         + Non vedo l'ora.
             Buffo.
@@ -159,6 +190,8 @@
                 }
                 -> main
         -
+
+    - (top2)    
     Prenda appunti perché odio ripetermi.
     Uno: può utilizzare mouse, tastiera e controller, e passare da uno strumento all'altro.
     Col mouse basta passare sopra le cose che deve toccare, e cliccare.
@@ -217,6 +250,14 @@
     Altra espressione di gioia.
     Basta.
     Alcune informazioni pratiche sul Grimorio, gentilmente offerte dal Ministero.
+        {
+            - tutorial_carlaChoicesRelationshipStorylet > 1:
+                -> top2
+            - else:
+                -> top1    
+        }
+
+    - (top1)     
     Le vuole ascoltare?
         + Gliene sarei grat{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
             Se sapesse le cose che penso di lei, non mi sarebbe grat{player_pronouns has him:o|{player_pronouns has her:a|ə}} di nulla.
@@ -229,6 +270,8 @@
                 }
                 -> main
         -
+
+    - (top2)    
     Che gentilmente potrebbe pagarmi di più.
     Quando apre il grimorio vedrà due pagine.
     A destra troverà alcune informazioni utili per il suo lavoro, mentre a sinistra è presente l'indice.
@@ -262,6 +305,14 @@
         }
     Ah no scusi, è l'abitudine.
     Mi è stato chiesto di spiegarle come funziona la serra.
+        {
+            - tutorial_carlaChoicesRelationshipStorylet > 1:
+                -> top2
+            - else:
+                -> top1    
+        }
+
+    - (top1)     
     È pront{player_pronouns has him:o|{player_pronouns has her:a|ə}}?
         + Adoro le piante!
             Le assicuro che la cosa non è reciproca.
@@ -274,6 +325,8 @@
                 }
                 -> main
         -
+
+    - (top2)    
     Ci fa crescere le piante ed è fatta.
     Arrivederci.
     Mmm, ah.
@@ -333,6 +386,14 @@
 
     Sono qui per spiegarle come funziona questa cucina.
     Sperando sia più svegli{player_pronouns has him:o|{player_pronouns has her:a|ə}} di mio figlio.
+        {
+            - tutorial_carlaChoicesRelationshipStorylet > 1:
+                -> top2
+            - else:
+                -> top1    
+        }
+
+    - (top1) 
     Accetta di ascoltare la mia spiegazione?
         + Ne ho proprio bisogno.
             È quello che temevo.
@@ -346,6 +407,8 @@
                 }
                 -> main
         -
+
+    - (top2)    
     Uno: ogni persona cucinerà con lei solo una volta.
     Perché?
     Il Ministero ha tagliato i fondi.
@@ -398,6 +461,14 @@
     Ma che gentile.
     Già.
     Mannaggia al.
+        {
+            - tutorial_carlaChoicesRelationshipStorylet > 1:
+                -> top2
+            - else:
+                -> top1    
+        }
+
+    - (top1) 
     Vuole che le spieghi come funzionano i Sigilli?
         + Sarebbe magnifico.
             No.
@@ -412,6 +483,7 @@
                 }
                 -> main
         -
+    - (top2)    
     Il Nido le sblocca i Sigilli, e i Sigilli sono una cosa pericolosa.
     Leggo direttamente dalla comunicazione ministeriale.
     "Premesso che la Combinata Triglifica Esoterica Espansa (da qui in avanti per brevità chiamato Sigillo) è uno strumento di cui ancora conosciamo poco.
@@ -450,6 +522,14 @@
         }
   
     Ogni volta che vedo questi cosi mi chiedo perché non ho concluso la laurea in ingegneria, mannaggia a me.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
+        {
+            - tutorial_carlaChoicesRelationshipStorylet > 1:
+                -> top2
+            - else:
+                -> top1    
+        }
+
+    - (top1) 
     Le spiego i sassi, va bene?
         + Sassiiiiiiiiiiiiii!
             Anche meno, figliol{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
@@ -464,6 +544,8 @@
                 }
                 -> main
         -
+
+    - (top2)
     Questi sassi sono qui per creare i Sigilli, che abbiamo già visto quando il suo caro amico {charNameThree} ha deciso di aprire questo posto.
     Uno: un sigillo utilizzabile è sempre composta da tre glifi.
     Non è sempre vero, ma il resto non è di mia competenza.
