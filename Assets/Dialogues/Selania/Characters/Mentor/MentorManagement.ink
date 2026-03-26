@@ -46,7 +46,7 @@
 
     - else:
     {
-        - are_two_entities_together(Mentor, PG) && welcome:
+        - are_two_entities_together(Mentor, PG) && tutorial_mentorTalkingChoiceRelationship:
             { 
                 - (contentsTrainStop has DoggoFirstLetters or contentsTrainStop has DoggoSecondLetters) && (contentsTrainStop hasnt Mentor):
                     {stopping:

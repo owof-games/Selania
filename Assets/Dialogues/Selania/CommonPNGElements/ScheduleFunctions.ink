@@ -106,7 +106,7 @@
 
     //Apertura serra
     {
-        - welcome.your_name && (entity_location(FromPondToGreenhouse) == Safekeeping) && not olobino.step_tre.colto:
+        - tutorial_mentorTalkingChoiceRelationship && (entity_location(FromPondToGreenhouse) == Safekeeping) && not olobino.step_tre.colto:
             ~ player_accessiblePlaces += Greenhouse
             ~ move_entity(FromPondToGreenhouseBlocked, Safekeeping)
             ~ move_entity(FromPondToGreenhouse, Pond)

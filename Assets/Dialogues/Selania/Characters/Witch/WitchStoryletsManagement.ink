@@ -36,7 +36,7 @@
             -> about_glyph_choices
 
         //Commento sul libro
-        - witch_intro && welcome && not about_the_book:
+        - witch_intro && tutorial_mentorTalkingChoiceRelationship && not about_the_book:
             -> about_the_book
         
         

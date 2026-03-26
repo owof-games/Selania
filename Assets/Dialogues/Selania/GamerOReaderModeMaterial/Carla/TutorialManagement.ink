@@ -34,7 +34,7 @@ VAR tutorial_rereadingActive = false
         -> tutorial_carlaRereadingStorylet
 
     //parte dopo che mi è stato dato il libro da Mentore
-    - are_two_entities_together(PG, Carla) && welcome && not tutorial_carlaGrimoireStorylet:
+    - are_two_entities_together(PG, Carla) && tutorial_mentorTalkingChoiceRelationship && not tutorial_carlaGrimoireStorylet:
         -> tutorial_carlaGrimoireStorylet        
 
     - tutorial_ActivateTutorial == true && entity_location(PG) == Greenhouse && not tutorial_carlaGreenhouseGiftsInkStorylet:
@@ -61,7 +61,7 @@ VAR tutorial_rereadingActive = false
                 -> tutorial_mentorInkAndYouAreARewriter
 
             //Se il tutorial non è attivo:    
-            - tutorial_ActivateTutorial == false && LIST_COUNT(greenhouse_backupCultivable) < 14:
+            - tutorial_ActivateTutorial == false && backpack_findedGifts != ():
                 -> tutorial_mentorInkAndYouAreARewriter
 
             - else:
@@ -92,7 +92,7 @@ VAR tutorial_rereadingActive = false
 
 //E uno per la strega
 {
-    - are_two_entities_together(TheWitch, PG) && entity_location(PG) == Dump && witch_intro && welcome && not tutorial_witchRelationship:
+    - are_two_entities_together(TheWitch, PG) && entity_location(PG) == Dump && witch_intro && tutorial_mentorTalkingChoiceRelationship && not tutorial_witchRelationship:
         -> tutorial_witchRelationship
 
     - are_two_entities_together(TheWitch, PG) && entity_location(PG) == Dump && player_accessiblePlaces has Nest && tutorial_witchRelationship && not tutorial_witchSigils:

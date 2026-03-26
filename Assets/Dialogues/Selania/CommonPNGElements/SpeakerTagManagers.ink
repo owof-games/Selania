@@ -71,7 +71,7 @@ LIST nest_speakersForEwWordTag = Influenced, Other
 === function fourthChar_tag
 {
 
-    - !welcome.chiSei && !welcome.your_name.selfName:
+    - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
 	    ~ return "???"
     - fourthChar_ActualName == Mentore:
 	    ~ return "Mentore"
@@ -80,7 +80,7 @@ LIST nest_speakersForEwWordTag = Influenced, Other
 === function mentor_tag
 {
 
-    - !welcome.chiSei && !welcome.your_name.selfName:
+    - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
 	    ~ return "???"
     - mentor_ActualName == Mentore:
 	    ~ return "Mentore"
@@ -90,7 +90,7 @@ LIST nest_speakersForEwWordTag = Influenced, Other
 === function fifthChar_tag
 {
 
-    - !welcome.chiSei && !welcome.your_name.selfName:
+    - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
 	    ~ return "???"
     - mentor_ActualName == Mentore:
 	    ~ return "Mentore"

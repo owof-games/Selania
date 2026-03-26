@@ -74,7 +74,7 @@
     Lo troverà sotto il ritratto di ogni personaggia con cui dovrà lavorare.
     Tiene traccia dell'ultima e penultima scelta fatte, così può monitorare da sé le variazioni, senza stressare me.
     {
-        - not welcome:
+        - not tutorial_mentorTalkingChoiceRelationship:
             Non ha ancora il suo libro?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_sad
             Strano, di solito lo consegnano in automatico all'arrivo.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_neutral
             Ma qui non possiamo fare niente per aiutarla.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored  

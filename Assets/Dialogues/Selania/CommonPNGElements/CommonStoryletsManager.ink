@@ -35,7 +35,7 @@
                     -> first_mentor_chit_chat
             
             //Chiacchiere tra Franco e Mentore
-                - are_two_entities_together(Mentor, PG) && welcome.your_name && are_two_entities_together (Franco, PG) && mentor_pauseTalking == 0 && not frog_and_mentor_chit_chat:
+                - are_two_entities_together(Mentor, PG) && tutorial_mentorTalkingChoiceRelationship && are_two_entities_together (Franco, PG) && mentor_pauseTalking == 0 && not frog_and_mentor_chit_chat:
                     -> frog_and_mentor_chit_chat
             
             //Chiacchiera tra PNG3 e Mentore

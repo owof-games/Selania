@@ -147,7 +147,7 @@
             -
         
             {
-                - not welcome:
+                - not tutorial_mentorTalkingChoiceRelationship:
                     Vi chiedo scusa, non avrei voluto origliare, ma volevo dirvi che non siete in un sogno, e che posso aiutarvi.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
                     E tu quando puoi parlami, e ti spiegherò un po’ di cose.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 
