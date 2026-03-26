@@ -190,19 +190,21 @@ VAR horizontalS_libraryThirdTier = 5
 }
 
 {debug_horizontalS: dopo l'operazione, horizontalS_currentDoc è {horizontalS_currentDoc}. horizontalS_dump contiene {horizontalS_dump}, horizontalS_kitchen contiene {horizontalS_kitchen}, horizontalS_greenhouse contiene {horizontalS_greenhouse}, horizontalS_nest contiene {horizontalS_nest}, horizontalS_library contiene {horizontalS_library}. horizontalS_currentDoc contiene{horizontalS_currentDoc}.}
+{debug_horizontalS: dopo le operazioni, la foresta contiene {contentsForest}.}
 
 ->->
 
 
 //Funzione che chiamo a fine storylet per spostare/pulire quello che c'è da spostare e pulire
 === function horizontalSEndingStorylet()
+{debug_horizontalS: horizontalSEndingStorylet}    
     ~ horizontalS_currentDoc = ()
     ~ move_entity(docDump, Safekeeping)
     ~ move_entity(docKitchen, Safekeeping)
     ~ move_entity(docGreenhouse, Safekeeping)
     ~ move_entity(docNest, Safekeeping)
     ~ move_entity(docLibrary, Safekeeping)
-
+{debug_horizontalS: dopo {debug_horizontalS: horizontalSEndingStorylet} i contenuti della foresta sono {contentsForest}.}    
 
 
 === horizontalS_storyletsDispatcher
@@ -285,6 +287,7 @@ VAR horizontalS_libraryThirdTier = 5
 
         - else:
             ERROR: non ci sono valori validi per  horizontalS_currentDoc, che è uguale a {horizontalS_currentDoc}.   
+            -> END
 
     }
 
