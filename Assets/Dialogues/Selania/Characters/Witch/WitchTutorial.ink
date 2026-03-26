@@ -52,7 +52,8 @@
         <i>Vorremmo lasciare {player_name} con una informazione importante: ciò che accade durante la riscrittura ha regole diverse dal resto della conversazione.
         <i>{player_name} può immaginarla come una tempesta sulla spiaggia: quando sarà finita, la sabbia sarà la stessa, ma inaspettate le cose che rimangono sulla riva.
 
--> main
+    -> witch_closing_storylet ->
+    -> main
 
 === tutorial_witchSigils
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -108,7 +109,8 @@
     <i>Una calle di saggezza e spiritualità.
     <i>E se la strada si dovesse fare buia, {player_name} sappia che il nostro sguardo vigila sempre su di {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.   
 
--> main
+    -> witch_closing_storylet ->
+    -> main
 
 
 === about_the_book
@@ -132,7 +134,9 @@
         <i>A volte il libro usa la nostra voce.
         <i>A volte ritrova altri nomi e parole.
         <i>In una canzone collettiva che guida {player_name} alla comprensione.
-    @animation:RewriterBook
+
     - (bookUpdate)
+
+    -> witch_closing_storylet ->
     -> main
 

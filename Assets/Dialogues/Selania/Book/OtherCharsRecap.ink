@@ -31,26 +31,26 @@ dog
         Abbiamo anche informato {player_name} che il libro che stringe ora in mano viene aggiornato da noi mano a mano che le cose accadono, anche con ricerche altrui. E speriamo la cosa non {player_pronouns has him:gli|{player_pronouns has her:le|lə}} crei dispiacere, ma la memoria è come neve in primavera.
 }
 
-{witch_feedback.fifth_story_ended_check: cose che scopro sul fungo a fine della fifth storia.}
+// {witch_feedback.fifth_story_ended_check: cose che scopro sul fungo a fine della fifth storia.}
 
-{witch_feedback.fourth_story_ended_check: cose che scopro sul fungo a fine della fourth storia.}
+// {witch_feedback.fourth_story_ended_check: cose che scopro sul fungo a fine della fourth storia.}
 
-{witch_feedback.third_story_ended_check: cose che scopro sul fungo a fine della third storia.}
+// {witch_feedback.third_story_ended_check: cose che scopro sul fungo a fine della third storia.}
 
-{
-    - witch_feedback.second_story_ended_check.bookUpdate: 
-        Abbiamo detto a {player_name} che la storia di {charNameTwo} è stata faticosa per {mentorName}, che le sue radici sembrano solide, ma il suo tronco ondeggia a ogni accenno di burrasca. E che {player_name} può decidere di essere sostegno, o di lasciarla cadere, e ricominciare.
-}
+// {
+//     - second_story_ended_check.bookUpdate: 
+//         Abbiamo detto a {player_name} che la storia di {charNameTwo} è stata faticosa per {mentorName}, che le sue radici sembrano solide, ma il suo tronco ondeggia a ogni accenno di burrasca. E che {player_name} può decidere di essere sostegno, o di lasciarla cadere, e ricominciare.
+// }
 
-{
-    - witch_feedback.first_story_ended_check.bookUpdate:
-        Abbiamo detto a {player_name} che può studiare le persone come un libro, come vorrebbe {mentorName}, ma che può anche decidere secondo quello che è giusto per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}. Che a volte le persone hanno bisogno di venire contraddette, perché la frizione genera fuoco e il fuoco brucia il vecchio, dando la possibilità al nuovo di crescere.
-}
+// {
+//     - first_story_ended_check.bookUpdate:
+//         Abbiamo detto a {player_name} che può studiare le persone come un libro, come vorrebbe {mentorName}, ma che può anche decidere secondo quello che è giusto per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}. Che a volte le persone hanno bisogno di venire contraddette, perché la frizione genera fuoco e il fuoco brucia il vecchio, dando la possibilità al nuovo di crescere.
+// }
 
-{
-    - witch_intro.bookUpdate:
-        {player_name} ha scoperto che non siamo solo un vecchio tronco, comunque. Attraverso il tronco può parlare con la voce che si sente in testa, che descrive i luoghi e altre cose di questo posto. E abbiamo detto a {player_name} che saremo la luna e un sorriso.
-}
+// {
+//     - witch_intro.bookUpdate:
+//         {player_name} ha scoperto che non siamo solo un vecchio tronco, comunque. Attraverso il tronco può parlare con la voce che si sente in testa, che descrive i luoghi e altre cose di questo posto. E abbiamo detto a {player_name} che saremo la luna e un sorriso.
+// }
 
 
 -> rewriter_book_with_flow

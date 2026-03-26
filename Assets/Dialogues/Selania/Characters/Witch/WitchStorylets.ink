@@ -67,25 +67,9 @@
         <i>Ecco, sì: oggi saremo la luna.
             - (nameWitch)
         <i>Queste radici cercano di imparare le voci del terreno.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-        <i>E il terreno ci racconta che {player_name} ha appena compiuto qualcosa di importante.
-        - (bookUpdate)
-        
-            ~ player_somethingStrange += strangeVase
-            
-                {
-                    - not witch_feedback.first_story_ended_check && firstChar_storyStatus == story_storyEnded:
-                        -> witch_feedback.first_story_ended_check
 
-                    - not witch_feedback.second_story_ended_check && secondChar_storyStatus == story_storyEnded:
-                        -> witch_feedback.second_story_ended_check
-
-                    - not witch_feedback.third_story_ended_check && thirdChar_storyStatus == story_storyEnded:
-                        -> witch_feedback.third_story_ended_check
-
-                    - else:
-                        -> main
-                }
-        
+        -> witch_closing_storylet ->
+        -> main
 
 
 
@@ -104,8 +88,10 @@
     <i>Franco sorride sempre, ma conosce il pianto di tutt3 noi.
     <i>Non ubbidisce ad alcuna autorità, ad alcuna legge, se non quella della cura delle altre persone.
     - (bookUpdate)
-        @animation:RewriterBook
--> main
+
+
+        -> witch_closing_storylet ->
+        -> main
 
 
 
@@ -115,31 +101,36 @@
 Primo pezzo storia strega
 
 
--> main
+    -> witch_closing_storylet ->
+    -> main
 
 === witch_second_confession
 Secondo pezzo storia strega
 
 
--> main
+    -> witch_closing_storylet ->
+    -> main
 
 === witch_third_confession
 Terzo pezzo storia strega
 
 
--> main
+    -> witch_closing_storylet ->
+    -> main
 
 === witch_fourth_confession
 Quarto pezzo storia strega
 
 
--> main
+    -> witch_closing_storylet ->
+    -> main
 
 === witch_fifth_confession
 Quinto pezzo storia strega. Scopriamo che il suo nome è M.M., come la persona che ha commentato greenhouse e nido.
 
 
--> main
+    -> witch_closing_storylet ->
+    -> main
 
 
 === witch_allSigils_opening ===
@@ -186,5 +177,6 @@ Ciao ciao.
             -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->
         -        
     Cose.
--> main
+    -> witch_closing_storylet ->
+    -> main
 

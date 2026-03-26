@@ -1,35 +1,4 @@
-
-    
-=== witch_feedback
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
-    
-
-    {
-        //Check post storie dopo l'intro
-        - witch_intro && firstChar_storyStatus == story_storyEnded && not first_story_ended_check:
-            -> first_story_ended_check
-        - witch_intro && secondChar_storyStatus == story_storyEnded && not second_story_ended_check:
-            -> second_story_ended_check
-        - witch_intro && thirdChar_storyStatus == story_storyEnded && not third_story_ended_check:
-            -> third_story_ended_check
-        - witch_intro && fourthChar_storyStatus == story_storyEnded:
-            -> fourth_story_ended_check
-        - witch_intro && fifthChar_storyStatus == story_storyEnded:
-            -> fifth_story_ended_check    
-
-        
-        - else:
-            -> descriptions
-    }
-
-
-
-
-    = first_story_ended_check
+=== witch_first_story_ended_check
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -93,12 +62,11 @@
         <i>Senza mai davvero lasciarti.
         - (bookUpdate)
 
-            @animation:RewriterBook
-
-                -> main
+        -> witch_closing_storylet ->
+        -> main
     
     
-    = second_story_ended_check
+    === witch_second_story_ended_check
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -156,11 +124,10 @@
         <i>Ma più tardi tornaci a trovare.
         - (bookUpdate)
         
-            @animation:RewriterBook
-
-                -> main
+        -> witch_closing_storylet ->
+        -> main
         
-    = third_story_ended_check
+    === witch_third_story_ended_check
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -182,9 +149,10 @@
         + Scelta viola.
             -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->
         -        
-            -> main  
+        -> witch_closing_storylet ->
+        -> main 
         
-    = fourth_story_ended_check
+    === witch_fourth_story_ended_check
          ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -206,9 +174,10 @@
         + Scelta viola.
             -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->
         -        
-            -> main   
+        -> witch_closing_storylet ->
+        -> main  
     
-    = fifth_story_ended_check
+    === witch_fifth_story_ended_check
          ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -230,4 +199,5 @@
         + Scelta viola.
             -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->
         -        
-            -> main  
+        -> witch_closing_storylet ->
+        -> main 

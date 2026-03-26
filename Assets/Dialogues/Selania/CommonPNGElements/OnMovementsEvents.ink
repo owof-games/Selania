@@ -184,7 +184,13 @@ VAR letters_doggoPause = false
     {   
         - mentor_pauseTalking > 0:
             ~ mentor_pauseTalking --    
+    }
+
+    {   
+        - witch_pauseTalking > 0:
+            ~ witch_pauseTalking --    
     } 
+
 
 
     //Riduzione valore Mindfulness per proporne una diversa poi    

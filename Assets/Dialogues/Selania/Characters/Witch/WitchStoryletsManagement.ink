@@ -6,12 +6,27 @@
         - not witch_intro:
             -> witch_intro
 
+        //Feedback post riscrittura
+        - witch_intro && firstChar_storyStatus == story_storyEnded && not witch_first_story_ended_check:
+            -> witch_first_story_ended_check
+
+        - witch_intro && secondChar_storyStatus == story_storyEnded && not witch_second_story_ended_check:
+            -> witch_second_story_ended_check
+
+        - witch_intro && thirdChar_storyStatus == story_storyEnded && not witch_third_story_ended_check:
+            -> witch_third_story_ended_check
+
+        - witch_intro && fourthChar_storyStatus == story_storyEnded && not witch_fourth_story_ended_check:
+            -> witch_fourth_story_ended_check
+
+        - witch_intro && fifthChar_storyStatus == story_storyEnded && not witch_fifth_story_ended_check:
+            -> witch_fifth_story_ended_check    
 
         //Dialogo su Franco
         - witch_intro && closed_mission_verify && not the_witch_and_the_frog:
             -> the_witch_and_the_frog
         
-        
+        //Apertura di tutti i sigilli
         - firstChar_storyStatus == story_storyEnded && secondChar_storyStatus == story_storyEnded && thirdChar_storyStatus == story_storyEnded && fourthChar_storyStatus == story_storyEnded && fifthChar_storyStatus == story_storyEnded && not witch_allSigils_opening: 
             -> witch_allSigils_opening
 
@@ -30,19 +45,14 @@
 
         - listDumpGraphics has fifthStateDump && not witch_fifth_confession:
             -> witch_fifth_confession    
-
-        //Commento sui glifi
-        - not about_glyph_choices:
-            -> about_glyph_choices
-
+        
         //Commento sul libro
         - witch_intro && tutorial_mentorTalkingChoiceRelationship && not about_the_book:
             -> about_the_book
         
         
-
         - else:
-            -> witch_feedback
+            -> descriptions
 
     }
 

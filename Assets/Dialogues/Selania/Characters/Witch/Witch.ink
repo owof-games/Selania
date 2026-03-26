@@ -9,9 +9,6 @@
 
 
 
-
-
-
 === descriptions
     {   
         //Opinioni dopo la fine di due storie    
