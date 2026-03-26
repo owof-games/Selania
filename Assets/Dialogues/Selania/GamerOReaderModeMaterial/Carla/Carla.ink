@@ -8,7 +8,7 @@
 
 
         //Tutorial gameplay
-        + {tutorial_carlaChoicesRelationshipStorylet} Mi rispiegheresti la faccenda delle scelte e delle relazioni?
+        + {tutorial_carlaChoicesRelationshipStorylet} Mi rispiegherebbe la faccenda delle scelte e delle relazioni?
                 -> tutorial_carlaChoicesRelationshipStorylet -> questions_Carla
 
         + {tutorial_carlaRereadingStorylet} Com'era quella cosa della riscrittura?
@@ -24,7 +24,7 @@
         + {tutorial_carlaNestStorylet} Quindi, con quelle pietre sulla spiaggia che ci devo fare?
                 -> tutorial_carlaNestStorylet -> questions_Carla
 
-        + {tutorial_carlaSigilsActivationStorylet} Mi ridici come si utilizzano i sigilli?
+        + {tutorial_carlaSigilsActivationStorylet} Mi ridice come si utilizzano i sigilli?
                 -> tutorial_carlaSigilsActivationStorylet -> questions_Carla              
 
         //Tutorial UI
@@ -38,9 +38,9 @@
         + Qual è lo stato degli achievement? (domanda giusto ora che non c'è il grimorio)
                 -> carla_achievements -> questions_Carla
 
-        + Sbloccami tutti i sigilli.
+        + Mi sbloccherebbe tutti i sigilli?
                 -> glyph_open_all_sigils ->
-                Dopo l'operazione, glyph_discoveredSigils = {LIST_COUNT(glyph_discoveredSigils)}
+                Fatto.
                 -> questions_Carla
                 
         //Uscita
