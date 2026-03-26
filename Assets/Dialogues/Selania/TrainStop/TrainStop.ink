@@ -748,11 +748,25 @@
             - not one:
                 -> one
                 
-            - not two && thirdChar_mailPause < 0:
-                -> two
+            - not two:
+                {  
+                    - thirdChar_mailPause < 0:
+                        -> two
+                    - else:
+                        -> one
+                }
                 
-            - not three && thirdChar_mailPause < 0:
+            - not three:
+                {  
+                    - thirdChar_mailPause < 0:
+                        -> three
+                    - else:
+                        -> two
+                }
+            
+            - else:
                 -> three
+            
         }
         
     = one
@@ -811,14 +825,26 @@
             - not one:
                 -> one
                 
-            - not two && thirdChar_mailPause < 0:
-                -> two
+            - not two:
+                {  
+                    - fourthChar_mailPause < 0:
+                        -> two
+                    - else:
+                        -> one
+                }
                 
-            - not three && thirdChar_mailPause < 0:
+            - not three:
+                {  
+                    - fourthChar_mailPause < 0:
+                        -> three
+                    - else:
+                        -> two
+                }
+            
+            - else:
                 -> three
             
         }
-        
     = one
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
@@ -874,10 +900,23 @@
             - not one:
                 -> one
                 
-            - not two && thirdChar_mailPause < 0:
-                -> two
+            - not two:
+                {  
+                    - fifthChar_mailPause < 0:
+                        -> two
+                    - else:
+                        -> one
+                }
                 
-            - not three && thirdChar_mailPause < 0:
+            - not three:
+                {  
+                    - fifthChar_mailPause < 0:
+                        -> three
+                    - else:
+                        -> two
+                }
+            
+            - else:
                 -> three
             
         }

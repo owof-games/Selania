@@ -283,6 +283,9 @@ VAR horizontalS_libraryThirdTier = 5
         - docTwentyFive:
             -> docTwentyFive_storylet
 
+        - else:
+            ERROR: non ci sono valori validi per  horizontalS_currentDoc, che è uguale a {horizontalS_currentDoc}.   
+
     }
 
 
