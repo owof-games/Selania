@@ -132,6 +132,11 @@
     INCLUDE Book\KitchenRecap.ink
     INCLUDE Book\NestRecap.ink
 
+//Gestione del Grimorio
+//Nota: "BOOK" diventa il repository del vecchio materiale di testo.
+
+    INCLUDE Grimoire\Appendices.ink
+
 //Grimoire - temporaneo?
     INCLUDE Book\Grimoire.ink
     
