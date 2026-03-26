@@ -44,7 +44,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 -> cooking_animations_on ->
                 -> first_theme
                 
-        + {first_char_main_storylets.six}Del bisogno di fare qualcosa che salvi il mondo.
+        + {first_char_main_storylets.six} Del bisogno di fare qualcosa che salvi il mondo.
             {
                 - first_char_main_storylets.six:
                     -> storage_glyphs(FirstCharacter)->
