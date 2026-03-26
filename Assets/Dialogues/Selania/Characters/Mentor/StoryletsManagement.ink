@@ -60,6 +60,7 @@
 
     //Tutorial
     {
+        //Questi sono i tutorial che non devono partire in automatico, ma solo se le parliamo
         //Presentazione generale
         - not tutorial_mentorTalkingChoiceRelationship:
             -> tutorial_mentorTalkingChoiceRelationship

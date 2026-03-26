@@ -52,7 +52,7 @@ VAR tutorial_rereadingActive = false
 {
 
     //Relazioni e inchiostro
-    - are_two_entities_together(PG, Mentor) && not you_are_a_rewriter:
+    - are_two_entities_together(PG, Mentor) && not tutorial_mentorInkAndYouAreARewriter:
 
         {   
 

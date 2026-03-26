@@ -24,13 +24,13 @@
 
 
     {
-        - you_are_a_rewriter.bookUpdate:
+        - tutorial_mentorInkAndYouAreARewriter.bookUpdate:
             <b>Sulla riscrittura: appunti apocrifi del collettivo P.K.</b> <>
             Il processo di riscrittura si basa principalmente su una cosa: la <b><i>fiducia</b></i>. <N>E qui l'attitudine dellə riscrittorə fa tutto. <N>Se U.O.J. è stata famosa per assecondare al massimo l'interlocutorə, A.S. viene ancora ricordatə per la sua natura prettamente oppositiva, mentre gli schemi logici di B.M., pieni di formule e statistiche, sono quelli che ci hanno permesso di arrivare a questo volume. <N>Molt3 riscrittor3 si affidano a quello che ritengono sia buonsenso, ma l'indipendenza di pensiero è sempre un'ottima qualità per unə riscrittorə. 
     }
     {
 
-        - ink_and_rewriting.bookUpdate:
+        - tutorial_mentorInkAndRewriting.bookUpdate:
             Misteriosa rimane poi l'origine dell'<b><i>inchiostro</b></i>. <N>L'unica cosa certa è che maggiore è il rapporto di fiducia tra persona e riscrittorə, maggiore è il suo valore. <N>E <b>un alto valore di inchiostro può facilitare di molto la vita dellə riscrittorə</b>.
             
             Ma cosa intendiamo con <b><i>riscrittura</b></i>? <N>In realtà sarebbe più giusto usare il plurale: quando la fiducia sarà sufficiente, la persona potrà decidere di raccontare allə riscrittorə cosa l'ha condotta da ləi. <N>A quel punto lə riscrittorə potrà iniziare a compiere delle azioni di riscrittura della visione che la persona ha di sé. <N>Forse è più facile spiegarlo con degli esempi.

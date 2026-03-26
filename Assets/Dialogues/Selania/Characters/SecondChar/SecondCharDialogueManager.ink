@@ -36,11 +36,11 @@
     ~ temp mentorName = translator(mentor_ActualName)
 {
     //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-        - secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && about_violence_and_peace && not rewriting_proposal_second_character && not ink_and_rewriting:
+        - secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && about_violence_and_peace && not rewriting_proposal_second_character && not tutorial_mentorInkAndRewriting:
                 -> ask
 
     //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
-        - secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && about_violence_and_peace && not rewriting_proposal_second_character && ink_and_rewriting:
+        - secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && about_violence_and_peace && not rewriting_proposal_second_character && tutorial_mentorInkAndRewriting:
                 -> ask
 
     //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo
@@ -156,7 +156,7 @@
 
         //Azioni legate alla riscrittura
             //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-            + {(secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting) && not rewriting_proposal_second_character && not ink_and_rewriting} Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
+            + {(secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting) && not rewriting_proposal_second_character && not tutorial_mentorInkAndRewriting} Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
                     Mi sa che {mentorName} vuole dirti qualcosa prima.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
                         {
                             - are_two_entities_together(Mentor,PG):
@@ -166,7 +166,7 @@
                                 -> main
 
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
-            + {(secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting) && not rewriting_proposal_second_character && ink_and_rewriting} Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
+            + {(secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting) && not rewriting_proposal_second_character && tutorial_mentorInkAndRewriting} Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
                     //Incremento le variazioni del libro della Riscrittora
                         ~ book_BGVariations ++
                             -> rewriting_proposal_second_character

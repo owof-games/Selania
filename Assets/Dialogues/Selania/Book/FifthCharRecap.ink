@@ -71,7 +71,7 @@
 }
 {
     - tutorial_mentorTalkingChoiceRelationship:
-        {player_name} ha incontrato una persona che {player_pronouns has him:gli|{player_pronouns has her:le|lə}} ha detto di chiamarla {mentorName}, perché {player_pronouns has him:gli|{player_pronouns has her:le|lə}} farà da guida in questo luogo. E dopo aver{player_pronouns has him:gli|{player_pronouns has her:le|lə}} chiesto nomi e pronomi, l'ha {player_pronouns has him:invitato|{player_pronouns has her:invitata|invitatə}} a parlare con le persone che trova in giro. {you_are_a_rewriter: Per poi dir{player_pronouns has him:gli|{player_pronouns has her:le|lə}} che è {player_pronouns has him:un riscrittore|{player_pronouns has her:una riscrittora|unə riscrittorə}}, e dar{player_pronouns has him:gli|{player_pronouns has her:le|lə}} un po' di indicazioni su cosa dovrebbe fare.}
+        {player_name} ha incontrato una persona che {player_pronouns has him:gli|{player_pronouns has her:le|lə}} ha detto di chiamarla {mentorName}, perché {player_pronouns has him:gli|{player_pronouns has her:le|lə}} farà da guida in questo luogo. E dopo aver{player_pronouns has him:gli|{player_pronouns has her:le|lə}} chiesto nomi e pronomi, l'ha {player_pronouns has him:invitato|{player_pronouns has her:invitata|invitatə}} a parlare con le persone che trova in giro. {tutorial_mentorInkAndYouAreARewriter: Per poi dir{player_pronouns has him:gli|{player_pronouns has her:le|lə}} che è {player_pronouns has him:un riscrittore|{player_pronouns has her:una riscrittora|unə riscrittorə}}, e dar{player_pronouns has him:gli|{player_pronouns has her:le|lə}} un po' di indicazioni su cosa dovrebbe fare.}
 }
 
 

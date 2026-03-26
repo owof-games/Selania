@@ -36,11 +36,11 @@
     ~ temp mentorName = translator(mentor_ActualName)
 {
     //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-        - thirdChar_storyletsForRewritingCount >= thirdChar_minStoryletsForRewriting && about_violence_and_peace && not rewriting_proposal_third_character && not ink_and_rewriting:
+        - thirdChar_storyletsForRewritingCount >= thirdChar_minStoryletsForRewriting && about_violence_and_peace && not rewriting_proposal_third_character && not tutorial_mentorInkAndRewriting:
                 -> ask
 
     //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
-        - thirdChar_storyletsForRewritingCount >= thirdChar_minStoryletsForRewriting && about_violence_and_peace && not rewriting_proposal_third_character && ink_and_rewriting:
+        - thirdChar_storyletsForRewritingCount >= thirdChar_minStoryletsForRewriting && about_violence_and_peace && not rewriting_proposal_third_character && tutorial_mentorInkAndRewriting:
                 -> ask
 
     //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo
@@ -103,7 +103,7 @@
 
         //Azioni legate alla riscrittura
             //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-            + {(thirdChar_storyletsForRewritingCount >= thirdChar_minStoryletsForRewriting) && not rewriting_proposal_third_character && not ink_and_rewriting} Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
+            + {(thirdChar_storyletsForRewritingCount >= thirdChar_minStoryletsForRewriting) && not rewriting_proposal_third_character && not tutorial_mentorInkAndRewriting} Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
                     Mi sa che {mentorName} vuole dirti qualcosa prima.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
                         {
                             - are_two_entities_together(Mentor,PG):
@@ -113,7 +113,7 @@
                                 -> main
 
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
-            + {(thirdChar_storyletsForRewritingCount >= thirdChar_minStoryletsForRewriting) && not rewriting_proposal_third_character && ink_and_rewriting} Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
+            + {(thirdChar_storyletsForRewritingCount >= thirdChar_minStoryletsForRewriting) && not rewriting_proposal_third_character && tutorial_mentorInkAndRewriting} Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
                     //Incremento le variazioni del libro della Riscrittora
                         ~ book_BGVariations ++
                             -> rewriting_proposal_third_character

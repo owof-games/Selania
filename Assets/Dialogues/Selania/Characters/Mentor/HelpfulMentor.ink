@@ -80,7 +80,7 @@
     - (top)
     Hai bisogno dei miei consigli?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_hurry
     
-        + {you_are_a_rewriter}Mi ripeteresti cosa devo fare?
+        + {tutorial_mentorInkAndYouAreARewriter}Mi ripeteresti cosa devo fare?
             -> to_do
         
         + Ho una domanda su un luogo.
@@ -218,15 +218,15 @@
 === to_do
 ~ temp mentorName = translator(mentor_ActualName)
 
-        {you_are_a_rewriter:La prima cosa da fare è: conquistare la <b><i>fiducia</b></i> della persona che devi aiutare.}#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
-        {you_are_a_rewriter:Ci <b><i>parli</b></i>, cerchi di capire di cosa ha bisogno e quali sono le risposte che le piacciono.}
-        {ink_and_rewriting: Fino a quando non è pronta per una <b><i>riscrittura</b></i>}
-        {ink_and_rewriting: A quel punto inizi i tuoi <b><i>riscritture</b></i>: riprendi eventi della sua storia e la aiuti a guardarli sotto una luce diversa.}
-        {ink_and_rewriting: Più inchiostro hai, più riscritture puoi fare.}
+        {tutorial_mentorInkAndYouAreARewriter:La prima cosa da fare è: conquistare la <b><i>fiducia</b></i> della persona che devi aiutare.}#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)}#portrait:mentore_neutral
+        {tutorial_mentorInkAndYouAreARewriter:Ci <b><i>parli</b></i>, cerchi di capire di cosa ha bisogno e quali sono le risposte che le piacciono.}
+        {tutorial_mentorInkAndRewriting: Fino a quando non è pronta per una <b><i>riscrittura</b></i>}
+        {tutorial_mentorInkAndRewriting: A quel punto inizi i tuoi <b><i>riscritture</b></i>: riprendi eventi della sua storia e la aiuti a guardarli sotto una luce diversa.}
+        {tutorial_mentorInkAndRewriting: Più inchiostro hai, più riscritture puoi fare.}
         {about_greenhouse: Per aumentare l'inchiostro puoi fare cose diverse. Come dare il giusto dono. E i doni migliori crescono nella serra.}
         {about_kitchen: E se mangiate qualcosa assieme, magari riesci anche a capire se stai o meno conquistando la fiducia di quella persona.}
-        {ink_and_rewriting: Così, a fine riscrittura, in base alle cose che avrai detto, la persona sceglierà il suo <b><i>nuovo nome</b></i>.}
-        {ink_and_rewriting: E poi si ricomincia.}
+        {tutorial_mentorInkAndRewriting: Così, a fine riscrittura, in base alle cose che avrai detto, la persona sceglierà il suo <b><i>nuovo nome</b></i>.}
+        {tutorial_mentorInkAndRewriting: E poi si ricomincia.}
            -> helping_mentor.top
 
 
