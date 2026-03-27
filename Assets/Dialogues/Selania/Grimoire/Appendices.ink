@@ -121,7 +121,7 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
 
     Mettiamo le cose in chiaro, Barbara: mi avete scritto voi per avere un mio memoir, quindi ora non mi rompete per ridimensionare le mie "follie".
     Ho raccontato della mia relazione con tu sai chi per far felici i vostri followers.
-    Ho allungato il brodo sulla faccenda della coven "così fai felici i tuoi fans, K."(Barbara: non ho fan, non ho followers. Siamo sorelle, punto.)
+    Ho allungato il brodo sulla faccenda della congrega "così fai felici i tuoi fans, K."(Barbara: non ho fan, non ho followers. Siamo sorelle, punto.)
     Però mi devi lasciare in pace su Franco.
     La sua parte rimane così com'è.
     Anche perché senza Franco non ci sarebbe stata nessuna serra, e senza serra, nessun <i>"Funghi, licheni, muschi: fitomanzia ed erboristeria esoterica"</i>.
@@ -141,7 +141,7 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     Lì, col ricordo di Franco, col ricordo delle mie amiche.
     Magari rimestando tra le erbe della serra.
     Ti svelo un segreto, anzi, una rivelazione.
-    C'è una cosa che ho capito solo ora, da vecchia, ed è perché le piante della serra generano inchiostro se donate (e giuro che se metti questa cosa nel memoir appena sono spirito rendo amari tutti i tuoi piatti per il resto della tua vita! L'inchiostro è tabù. T-A-B-ù.).
+    C'è una cosa che ho capito solo ora, da vecchia, ed è perché le piante della serra generano inchiostro se donate (e giuro che se metti questa cosa nel memoir appena sono spirito rendo amari tutti i tuoi piatti per il resto della tua vita! L'inchiostro è tabù. T-A-B-ù. Abbiamo visto cosa è accaduto ad Y.).
     Ho pensato per anni che la faccenda fosse che fare un regalo, un buon regalo, dica molto di quello che pensi della persona, più delle parole.
     Però nei due anni passati con le ragazze di doni ce ne siamo fatti: pensa anche solo all'aiuto che ci siamo date.
     Pensa a come probabilmente G.M. mi abbia salvato dall'esaurimento, trascinandomi via da lì.
@@ -189,13 +189,13 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     Testo scritto per O.U.J.
 
 **************************/
-<i><b>Registrazione anonima trascritta per l'archivio della coven</i></b>
+<i><b>Registrazione anonima trascritta per l'archivio della congrega</i></b>
 
     Vi chiedo scusa per la voce incerta, ma l'emozione è tanta.
     E non conosco un modo per parlare di O.U.J. senza emozionarmi.
     Se fosse qui con noi, oggi, la prima domanda che ci farebbe è: "Com'è che non state mangiando?"
     <i>Risate in sottofondo.</i>
-    Uno dei principi di questa coven è: manifestiamo il futuro consapevoli del nostro passato.
+    Uno dei principi di questa congrega è: manifestiamo il futuro consapevoli del nostro passato.
     Ma O.U.J. fa davvero parte del nostro passato?
     Oggi, due agosto duemiladieci, sono passati esattamente trent'anni dalla bomba che ce l'ha portata via mentre era alla stazione di Bologna.
     Bomba messa dalle stesse persone contro cui ha lottato per una vita, con la piazza e con la magia.
@@ -207,7 +207,7 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     Attraverso i racconti delle più vecchie, come me.
     Attraverso la testimonianza costante di quella capacità di cura e ascolto che solo lei aveva.
     O.U.J. ha lottato, sempre.
-    Anche contro la coven, quando alcune di noi, me compresa, non erano pronte ad accogliere una donna trans tra le nostre fila.
+    Anche contro la congrega, quando alcune di noi, me compresa, non erano pronte ad accogliere una donna trans tra le nostre fila.
     <i>Una porta che si chiude.</i>
     Ci sono volte in cui la cosa migliore che ti possa capitare è di non avere ragione.
     Scusate ma le lacrime rendono difficile leggere.
@@ -219,11 +219,12 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     Perché O.U.J. è stata il nostro passato, ma soprattutto è il nostro presente e futuro.
     Chi ha avuto la fortuna di cucinare con lei ha visto quanto quell'esperienza potesse essere trasformativa.
     Quante di noi hanno ammesso per la prima volta a voce alta cose di sé che nemmeno conoscevano, mentre condividevano con lei un piatto di zuppa?
-    Quante hanno raccontato le difficoltà che vivevano dentro e fuori la coven con tranquillità, con senso di accoglienza, così da capire cosa fare, cosa cambiare?
+    Quante hanno raccontato le difficoltà che vivevano dentro e fuori la congrega con tranquillità, con senso di accoglienza, così da capire cosa fare, cosa cambiare?
+    Quante volte il giusto ingrediente, ci ha aiutato a capire cosa andava o meno nei nostri rapporti?
     O.U.J. ci ha lasciato uno dei riti più potenti: la condivisione.
     O.U.J. non riconosceva alcun possesso.
     Le cose sono fatte per essere usate da chi ne ha bisogno in quel momento.
-    Ha creato un modo di gestire la coven, e la magia, che mette al centro non il possedere, ma il donare.
+    Ha creato un modo di gestire la congrega, e la magia, che mette al centro non il possedere, ma il donare.
     Ha sempre detto che è qualcosa che ha imparato "nel giardino", quando è scomparsa per due mesi con altre compagne.
     Ma ho sempre pensato che in realtà quell'esperienza avesse fatto maturare in lei qualcosa che già era lì, viva e potente.
     Pensiamo a come ci ha insegnato a cucinare.
@@ -269,12 +270,62 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     Testo scritto da Y.
 
 **************************/
-* Tipo di testo: appunti per un convegno
-* Elementi della storia orizzontale: 
-* Elementi di spiegazione:
-* Dove S.C. vede uno stallo sullo studio dell'inchiostro, Y ha trovato qualcosa di profondo.
-* Y e il dono dell'olobino, il dono ha generato inchiostro.
--
+
+<i><b>Un nuovo nome, una nuova vita: appunti sulla riscrittura.</i></b>
+<i>Lectio Magistralis di Y., DAMS di Bologna, ottobre 2004.</i>
+
+    In tutti questi anni non mi sarei mai aspettata di tornare a parlare in un'Università pubblica.
+    Non dopo la cacciata che ho subito vent'anni fa da parte dei miei colleghi di Lettere.
+    Non dopo essermi vista negare ogni pubblicazione da almeno un decennio.
+    Può sembrare un inizio troppo personale per un discorso davanti a giovani studenti e studentesse, a professori di cui per lo più non conosco il nome.
+    Ma in fondo sono stata chiamata qui per parlare di qualcosa di molto personale.
+    E poi non sono mai stata molto brava a fare le cose per bene.
+    Ma c'è una cosa che ho fatto per bene, ormai trent'anni fa.
+    Ed è stata quella di scegliermi un nuovo nome.
+    Prendere quello che la mia famiglia aveva deciso per me, quello con cui il mondo mi leggeva, valutava, giudicava, e prenderne uno che fosse solo mio.
+    Il nome è una cosa potente.
+    Ce lo insegna Ursula LeGuin ne "Il mago di Earthsea": conosci il vero nome di qualcuno, e avrai su di lui potere.
+    Il mio vecchio nome era un incantesimo che mi teneva imprigionata.
+    Ma per giungere al mio nuovo nome ho dovuto fare un percorso.
+    Un percorso che ha a che far col riscrivere il proprio passato.
+    Non intendo un riscrivere di revisione: quella è una vecchia passione che lascio a chi ancora oggi ci è nemico.
+    Parlo di una riscrittura che è un cambio di prospettiva, come quando ti rendi conto di aver trovato la protagonista giusta, ma la storia sbagliata.
+    Voi qui ora siete così giovani, e sono sicura che vi sarete già sentite dire migliaia di volte che è un'età grandiosa questa, che avete tutto e non lo sapete.
+    Credo sia una grandiosa cazzata.
+    Ogni età è terribile, ogni età è grandiosa.
+    E ogni età è un passo in avanti su una strada che rischia di essere dettata da tutti i passi che abbiamo alle spalle.
+    Da come li raccontiamo, li nominiamo.
+    La riscrittura di cui parlo è il riprendere in mano il diritto a narrarsi.
+    A riconoscere che le cose che ci sono successe, e le cose che facciamo, sono, punto.
+    Ma anche che possono essere lette in modi molto diversi.
+    Magari ti chiamano Pesante, perché parli sempre di ciò che non va. Ma magari vorresti chiamarti Giustizia, perché noti sempre le storture di questo mondo.
+    Magari ti chiamano Pasticciona, perché ti metti sempre nei casini. E invece potresti chiamarti Curiosità, perché credi solo a quello che puoi sperimentare in prima persona.
+    Magari ti chiamano Robot, perché sembri riservato e distaccato. Ma forse il tuo vero nome è Voce, perché la tua unicità è così difficile da fare ascoltare, che hai smesso di provare a parlare.
+    Riscriversi e scegliere il proprio nome non è alzarsi e dirsi: da oggi sono questo.
+    Per me è stato un processo solitario: avevo la vostra età, e pensavo di essere solamente sbagliata.
+    Negli anni ho aiutato altre persone a riscriversi, e come tante cose, anche questo è un processo che funziona al meglio in compagnia.
+    Una buona relazione è un forte sicuro nei momenti di cambiamento, quando ci sentiamo vulnerabili.
+    Quando mi hanno cacciata da Lettere, l'hanno fatto dicendomi che parlavo di esoterismo, di magia.
+    Eppure la pubblicità che ci circonda cerca ogni giorno di riscriverci, per convincerci di avere bisogni che non abbiamo.
+    Ma a differenza della pubblicità, quando decidiamo di aiutare o di farci aiutare in un processo di riscrittura, il nuovo nome è qualcosa che viene dal cuore di chi si fa riscrivere.
+    Non può essere forzato, non è coercizione.
+    E qui vi chiedo di fare con me il salto più grande.
+    La mia riscrittura è stata un incidente.
+    Ero in pieno trip da fungo, uno dei migliori della mia vita, e mi sono ritrovata tra le dita dell'inchiostro.
+    Qualcosa di intimo, di personale, che all'epoca avevo appena iniziato a studiare.
+    Riscriversi in compagnia funziona meglio perché una buona relazione produce qualcosa, che chiameremo inchiostro, che è il simbolo della nostra natura più intima.
+    Più la relazione è alta, più inchiostro produrremo, più sarà facile riscrivere il modo in cui guardiamo la nostra storia.
+    E quell'inchiostro, quella è la cosa su cui lavoriamo per passare dalla persona che ci hanno detto di essere, è ciò che davvero siamo.
+    Forse se fossi stata una pittrice avrei pensato più a un ridisegnare che a un riscrivere.
+    Se fossi stata scultrice, al trovare la vena nella materia grezza, per farne emergere la figura.
+    E forse, se non fossi sempre stata una strega con la passione per libri e vecchi archivi, avrei realizzato sin da subito la cosa più ovvia: le relazioni che viviamo ci cambiano, ci mostrano parti di noi che non conoscevamo.
+    Accoglierle è sempre parte del nostro percorso.
+    E a volte celebrarle, scegliendo un nuovo nome.
+    Vi auguro quindi che le amicizie, gli asti e gli amori che affronterete in questi anni di Università e poi dopo, siano il laboratorio costante per voi per trovare altri cinque, venti, mille nomi.
+    Per rompere quel qualcosa che fa dire e decidere agli altri chi siete.
+    Per stupirvi sempre della persona che sarete.
+    Y.
+
 
 ->->
 
