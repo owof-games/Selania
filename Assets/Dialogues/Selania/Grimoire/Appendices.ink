@@ -362,26 +362,50 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     Testo scritto da S.C.
 
 **************************/
-* Tipo di testo: appunti operativi.
-* Elementi della storia orizzontale: non ho scambi, relazioni, devo fare tutto da sola.
-* Elementi di spiegazione: logica di massima.
--
+<i><b>Fogli sparsi trovati al Nido, nessuna firma.</i></b>
 
-Partiamo da questo:
+
     Sono arrivata a una quadra.
-    Esistono venti sigilli stabili.
-    Li chiamo "stabili" perché non mutano, non influenzano il mondo, ma sono lenti con cui interpretarlo, capirlo.
-    E sono composti sempre da due glifi irripetibili.
-    Ogni sigillo stabile ha tre varianti "instabili", derivate dall'aggiunta di un altro glifo.
-    E sono instabili perché da una parte durano giusto una manciata di utilizzi, ma per questo interagiscono col mondo.
-    E la cosa che non avevo capito davvero fino in fondo, è che questa instabilità apre a delle ambiguità.
-    Sono sicura che Altare farebbe davvero bene a O.U.J. per esempio, perché è una persona già solida, mentre G.M. è così piccolo, giovane, deve ancora scoprire tanto su di sé.
-    So che è giusto, so che è sensato.
-    Sto anche scrivendo tutto quello che ho scoperto in un taccuino, con tutte le suggestioni che ho pensato, precise ma non troppo, evocative, perché questi sigilli parlano una lingua che non è nostra.
-    E con questo materiale finalmente posso tornare anche dalle altre, spiegare, far capire che tutta questa fatica, queste tensioni alla fine sono servite a qualcosa.
-    Sono sicura che K. troverà un uso per la sua serra, e Y. per creare libri trasformativi e G.M., credo che col giusto sigillo G.M. possa scoprire cosa l'ha ferito con Altare.
-    Ora corro da loro, e così facciamo una grande festa.
-    S.C.
+    1. Posso creare qualsiasi tipo di sigillo, l'importante è che un glifo non venga ripetuto.
+    2. Posso usarne solo uno alla volta.
+    3. E una volta che l'ho usato, non posso più recuperarlo.
+    Cosa che mi genera molta frustrazione.
 
+    Inoltre non posso usare tutto quello che creo.
+    1. Con quattro glifi il sigillo implode subito. Svanisce nel nulla, puff.
+    2. Con quello a cinque l'energia è così forte che a distanza di due giorni ho ancora una gamba semibloccata. Per fortuna avevo vicino il piede e non la faccia quando li ho attivati.
+    3. Tre glifi creano un sigillo instabile, ma che regge tre utilizzi prima di consumarsi.
+    4. Due glifi sono stabili, ma per questo inutilizzabili. Sono però utili per capire come funzionano le loro varianti a tre glifi.
+    Uh.
+    Sto scrivendo ad elenco come G.M. e con la stessa mancanza di fuoco di Y., mi prendo una pausa.
+
+    Ho iniziato a raccogliere in modo logico i sigilli che ho scoperto.
+    Sto costruendo una guida per il futuro, perché credo siano lo strumento più potente che abbiamo mai trovato in questo luogo.
+    Avendo trovato cinque glifi, i sigilli stabili, quelli a due, sono venti.
+    Ognuno di questi può avere tre varianti a tre glifi, che sono instabili, ma il sigillo a due aiuta che li accomuna aiuta a capirne meglio la natura, il fuoco.
+    Il modo in cui ragionano è così alieno, che sto usando un linguaggio più evocativo, simile a quello degli i-Ching, per descriverne le proprietà.
+    Anche perché non ho ancora capito fino in fondo cosa possano fare.
+    Ad esempio quello che ho chiamato <i>Zolla</i> mi è diventato chiaro grazie a K.
+    "Rami sotterranei e lana di micelio. Florido il trifoglio, nuda la senape."
+    K. mi ha spiegato che nei campi il trifoglio prospera quando la rete del micelio fungino è estesa, collegando erbe e piante.
+    Ma la senape soffre in questa situazione, perché incapace di connettersi alla rete, e si ritrova con un terreno povero dell'azoto che le serve.
+    <i>Zolla</i> è un sigillo che parla di radici che crescono assieme, che si aiutano a vicenda, e la domanda che rimane aperta è: dove finisce il confine tra supporto e dipendenza?
+    Un altro sigillo molto chiaro è quello che ho chiamato <i>Uncinetto</i>, pensando a mia madre.
+    "Si spoglia la pecora, si essica il cardo. Dalla stalla al filatoio, dal filatoio alla torre".
+    La logica che ho usato è quella di trovare nel punto di contatto tra il fuoco (azione e trasformazione) e la terra (la parte che concretizza l'azione) la figura del sigillo stabile <i>Calibro</i>, come emblema dell'artigianalità.
+    <i>Uncinetto</i> ha qualcosa di spirituale, è un chiedersi: le cose che creiamo, a chi vanno, chi connettono? Di chi facciamo il bene?
+    Perché alla torre c'è il carceriere, e c'è il carcerato.
+
+    
+    Dopo l'esperienza con G.M., ho lanciato un incantesimo sul taccuino che sto creando: se qualcuno studierà i sigilli utilizzandolo, vedrà comparire le frasi poco per volta, e a caso.
+    Ho bisogno che ci sia prudenza, che ci sia attenzione, perché non tutto è così chiaro (ancora mi chiedo a cosa serva <i>Dado</i>, così come metà dei sigilli con la stella per dominante).
+    Se lasciassi il taccuino totalmente accessibile sin da subito, l'illusione del sapere spingerebbe la persona a fare mosse sciocche.
+    Non sono ancora così sicura che questi sigilli siano una buona cosa.
+    O.U.J. dice che ci sono strumenti nati per fare il bene, altri il male, ma che per lo più il loro valore sta nell'utilizzo che ne facciamo.
+    Io li ho usati pensando di far del bene, e ho ferito una persona amica.
+    Spero che le altre possano cavare da tutto questo qualcosa di davvero utile per le nostre lotte.
+    Oggi, otto giugno settantaquattro, chiudo finalmente i miei studi.
+    Ora voglio solo riprendere a dedicarmi alle persone che mi hanno accompagnata fin qui.
+    Negli ultimi mesi le ho completamente trascurate.
 
 ->->

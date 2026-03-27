@@ -619,7 +619,7 @@
     Eppure ogni sera a cena erano le teorie di S.C. e i progressi di K. e le scoperte di Y. e le scorribande di G.M. al centro delle conversazioni.
     Pensavo fosse pesante essere invisible come donna, avevo sottovalutato quanto poco tu venga vista quando sei vecchia.
     Anche dalle persone amiche.
-    Mi do ancora qualche settimana per far rinsavire S.C., sennò me ne torno per un po' nelle mie valli.
+    Mi do ancora una settimana per far rinsavire S.C., sennò me ne torno per un po' nelle mie valli.
     tua.
     O.U.J.
 
