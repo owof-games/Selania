@@ -115,11 +115,9 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     Testo scritto da K.
 
 **************************/
-* Tipo di testo: mail all'editore per un memoir
-* Elementi della storia orizzontale: ha provato a tornare al luogo, senza mai riuscirci.
-* Elementi di spiegazione:
-* Nome intero di Franco, qualcosa su Franco e la serra, sua nonna, e su come siano collegati (K.) Parte con "no, non correggerò una parola della parte su Franco, anche se dovessi risultare pazza". Non dice mai che è una rana.
--
+
+<i><b>Re: Ma se cancellassimo la parte di Franco?</i></b>
+<i>Destinatario: barbaraC@edizioniEsoteriche.com</i>
 
     Mettiamo le cose in chiaro, Barbara: mi avete scritto voi per avere un mio memoir, quindi ora non mi rompete per ridimensionare le mie "follie".
     Ho raccontato della mia relazione con tu sai chi per far felici i vostri followers.
@@ -141,12 +139,12 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     Eppure non riesco ad arrivarci.
     Forse una parte di me spera di morirci.
     Lì, col ricordo di Franco, col ricordo delle mie amiche.
-    Anche di S.C., nonostante tutto.
     Magari rimestando tra le erbe della serra.
+    Ti svelo un segreto, anzi, una rivelazione.
     C'è una cosa che ho capito solo ora, da vecchia, ed è perché le piante della serra generano inchiostro se donate (e giuro che se metti questa cosa nel memoir appena sono spirito rendo amari tutti i tuoi piatti per il resto della tua vita! L'inchiostro è tabù. T-A-B-ù.).
     Ho pensato per anni che la faccenda fosse che fare un regalo, un buon regalo, dica molto di quello che pensi della persona, più delle parole.
     Però nei due anni passati con le ragazze di doni ce ne siamo fatti: pensa anche solo all'aiuto che ci siamo date.
-    Pensa a come probabilmente G.M. mi abbia salvato la vita, trascinandomi via da lì.
+    Pensa a come probabilmente G.M. mi abbia salvato dall'esaurimento, trascinandomi via da lì.
     Non è questo un dono grandioso?
     Eppure non ho versato una goccia di inchiostro che una.
     Perché invece accade con le piante della serra?
@@ -165,7 +163,7 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     Quali delle sue storie assurde non ho mai ascoltato.
     E cosa è successo a G.M. dopo la fuga.
     Era così giovane, e l'abbiamo trascinato in una cosa enorme.
-    Per cui ti dono la mia vulnerabilità più grande, Barbara: speravo di morire sentendomi una bella persona, ma credo di aver fatto un grosso errore cinquantaquattro anni fa, quando ho permesso a S.C. di portare quel povero quindicenne con noi.
+    Per cui ti dono la mia vulnerabilità più grande, Barbara: speravo di morire sentendomi una bella persona, ma credo di aver fatto un grosso errore cinquantaquattro anni fa, quando ho permesso a tua zia di portare quel povero quindicenne con noi.
     Forse questo memoir è un modo per chiedergli scusa.
     Per cui non chiedermi di togliere Franco, non chiedermi di sembrare più "normale", non chiedermi di tradire la memoria di quel povero ragazzo.
     K.
