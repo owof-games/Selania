@@ -121,8 +121,54 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
 * Nome intero di Franco, qualcosa su Franco e la serra, sua nonna, e su come siano collegati (K.) Parte con "no, non correggerò una parola della parte su Franco, anche se dovessi risultare pazza". Non dice mai che è una rana.
 -
 
-
-
+    Mettiamo le cose in chiaro, Barbara: mi avete scritto voi per avere un mio memoir, quindi ora non mi rompete per ridimensionare le mie "follie".
+    Ho raccontato della mia relazione con tu sai chi per far felici i vostri followers.
+    Ho allungato il brodo sulla faccenda della coven "così fai felici i tuoi fans, K."(Barbara: non ho fan, non ho followers. Siamo sorelle, punto.)
+    Però mi devi lasciare in pace su Franco.
+    La sua parte rimane così com'è.
+    Anche perché senza Franco non ci sarebbe stata nessuna serra, e senza serra, nessun <i>"Funghi, licheni, muschi: fitomanzia ed erboristeria esoterica"</i>.
+    E senza quel libro, la vostra casa editrice sarebbe fallita vent'anni fa.
+    E sì, voglio il suo nome per intero, perché deve essere ricordato: Franco Lelio Arpagone Romualdo Arcezio Nepomiceno Alcuino.
+    È stato il mio migliore amico e mentore in un periodo bello e complesso.
+    Non deve essere dimenticato.
+    Ok, ora mi calmo.
+    Ma inizio ad essere vecchia per queste stronzate, Barbara.
+    E forse scrivere questo memoir è più difficile di quanto pensassi: ho ottantaquattro anni, la mia vita sta finendo, e so ancora così poco del mondo.
+    E delle piante.
+    Ho provato a tornare più volte in quel luogo, sai?
+    Esiste il sentiero, esistono le sue colline.
+    Esistono ancora alcune delle fabbriche che si vedevano dalla fontana.
+    Eppure non riesco ad arrivarci.
+    Forse una parte di me spera di morirci.
+    Lì, col ricordo di Franco, col ricordo delle mie amiche.
+    Anche di S.C., nonostante tutto.
+    Magari rimestando tra le erbe della serra.
+    C'è una cosa che ho capito solo ora, da vecchia, ed è perché le piante della serra generano inchiostro se donate (e giuro che se metti questa cosa nel memoir appena sono spirito rendo amari tutti i tuoi piatti per il resto della tua vita! L'inchiostro è tabù. T-A-B-ù.).
+    Ho pensato per anni che la faccenda fosse che fare un regalo, un buon regalo, dica molto di quello che pensi della persona, più delle parole.
+    Però nei due anni passati con le ragazze di doni ce ne siamo fatti: pensa anche solo all'aiuto che ci siamo date.
+    Pensa a come probabilmente G.M. mi abbia salvato la vita, trascinandomi via da lì.
+    Non è questo un dono grandioso?
+    Eppure non ho versato una goccia di inchiostro che una.
+    Perché invece accade con le piante della serra?
+    Credo che la cosa abbia a che fare con la trasformazione.
+    In fondo, tutta la faccenda della "riscrittura", come la chiamava Y., aveva a che fare col trasformare.
+    Le domande che genera la serra, le risposte che offre, sono un riflesso di ciò che è in noi fermo e che deve cambiare, smuoversi, mutare.
+    Quelle piante crescono sulle nostre ferite, tra le pieghe delle nostre vulnerabilità.
+    E cosa c'è di più grande in una relazione, che non regalare con fiducia ciò che ci rende vulnerabili?
+    Anzi, forse risuonare, nelle nostre vulnerabilità.
+    E per questo alcune piante non stimolano la comparsa dell'inchiostro, altre un po', altre molte.
+    Perché alla fin fine, per fortuna, ognuna di noi è vulnerabile in modo diverso.
+    Prendi me: sono qui, vecchia e malata a incazzarmi con te, e sai qual è la cosa che mi fa sentire più vulnerabile?
+    Non l'arrivo della morte, perché è parte del processo della vita, le piante me l'hanno sempre insegnato.
+    È non sapere cosa ne è stato di Franco.
+    Se vive, se è morto.
+    Quali delle sue storie assurde non ho mai ascoltato.
+    E cosa è successo a G.M. dopo la fuga.
+    Era così giovane, e l'abbiamo trascinato in una cosa enorme.
+    Per cui ti dono la mia vulnerabilità più grande, Barbara: speravo di morire sentendomi una bella persona, ma credo di aver fatto un grosso errore cinquantaquattro anni fa, quando ho permesso a S.C. di portare quel povero quindicenne con noi.
+    Forse questo memoir è un modo per chiedergli scusa.
+    Per cui non chiedermi di togliere Franco, non chiedermi di sembrare più "normale", non chiedermi di tradire la memoria di quel povero ragazzo.
+    K.
 
 ->->
 
