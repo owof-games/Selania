@@ -571,12 +571,27 @@
     -> close
         
     = close   
-            
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
+        
             
             Direi che sono pronta per andarmene, {player_name}.
             Abbiamo fatto un viaggio enorme assieme, ora è giunto il tempo per me di riprendere in mano la mia vita.
             Grazie di tutto, davvero.
             Grazie di tutto.
+            {
+                - secondChar_storyStatus == story_storyStarted:
+                    Salutami quella bestiola di {charNameTwo}.
+
+            }
+            {
+                - thirdChar_storyStatus == story_storyStarted:
+                    E anche {charNameThree}.
+
+            }
+            
 
             //Useremo questo spostamento poi per attivare l'animazione del treno.
             ~ story_endedStories += story_firstCharStoryEnded

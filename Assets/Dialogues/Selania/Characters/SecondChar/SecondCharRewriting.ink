@@ -610,17 +610,43 @@
 
 
     = close
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
+        
+            Torno a casa, {player_name}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+            Non so cosa mi aspetta.
+            Spero un po' di dolci.
+            Ma te lo farò sapere, promesso!
+            Mi mancherai, sia?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+            Salutami Franco!
+            E {mentorName}.
+            {
+                - firstChar_storyStatus == story_storyStarted:
+                    E {charNameOne}.
+
+            }
+            {
+                - thirdChar_storyStatus == story_storyStarted:
+                    E anche {charNameThree}.
+
+            }
+            
+            
+        
+        - (bookUpdate)
+
         ~ story_endedStories += story_secondCharStoryEnded
         ~ secondChar_storyStatus = story_storyEnded
         ~ player_movementsCounter = 0
         ~ state_ending_stories(SecondCharacter)
-
-            Ora voglio stare ancora un po' qui prima di prendere il treno. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
-            Mi mancherà la rana!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
-        
-        - (bookUpdate)
-        
+        ~ temp currentPlace = entity_location(PG)
+        ~ tree_advance_management(SecondCharacter)
+        ~ move_entity(SecondCharacter, Safekeeping)
+        ~ secondChar_mailPause = secondChar_mailPauseDuration
+        ~ move_entity(TrainNoiseGoingAway, currentPlace)
+        ~ move_entity(secondCharPaint, Bedroom)
         ~ numberQuestion = 0
         ~ secondChar_InkLevel = ink_empty
             @animation:RewriterBook

@@ -79,7 +79,7 @@
 VAR letters_doggoPause = false
 
     {
-        - first_char_story_ended.goodbye && firstChar_mailPause < 0 && not first_character_notes.three && letters_doggoPause == false:
+        - firstChar_storyStatus == story_storyEnded && firstChar_mailPause < 0 && not first_character_notes.three && letters_doggoPause == false:
         
                 ~ move_entity(DoggoFirstLetters, TrainStop)
                 {debug: Ho messo la nota della prima personaggia alla fermata del bus.}
@@ -89,7 +89,7 @@ VAR letters_doggoPause = false
     }
     
     {
-        - second_char_story_ended.goodbye && secondChar_mailPause < 0 && not second_character_notes.three && letters_doggoPause == false:
+        - secondChar_storyStatus == story_storyEnded && secondChar_mailPause < 0 && not second_character_notes.three && letters_doggoPause == false:
         
                 ~ move_entity(DoggoSecondLetters, TrainStop)
                 {debug: Ho messo la nota del secondo personaggio alla fermata del bus.}
@@ -100,7 +100,7 @@ VAR letters_doggoPause = false
     }
 
     {
-        - third_char_story_ended.goodbye && thirdChar_mailPause < 0 && not third_character_notes.three && letters_doggoPause == false:
+        - thirdChar_storyStatus == story_storyEnded && thirdChar_mailPause < 0 && not third_character_notes.three && letters_doggoPause == false:
         
                 ~ move_entity(DoggoThirdLetters, TrainStop)
                 {debug: Ho messo la nota del third personaggio alla fermata del bus.}

@@ -67,52 +67,52 @@
                 -> options_second_character 
     
     
-=== second_char_story_ended
-~ temp charNameTwo = translator(secondChar_ActualName)
-//Con questa formula dopo un tot di scambi o di spostamenti la personaggia se ne va salutandoci.
+// === second_char_story_ended
+// ~ temp charNameTwo = translator(secondChar_ActualName)
+// //Con questa formula dopo un tot di scambi o di spostamenti la personaggia se ne va salutandoci.
 
-    {
-        - secondChar_exitCounter < secondChar_startingValueExitCounter:
-            -> top
-        - else:
-            -> goodbye
-    }
+//     {
+//         - secondChar_exitCounter < secondChar_startingValueExitCounter:
+//             -> top
+//         - else:
+//             -> goodbye
+//     }
     
-        - (top)
-        {shuffle:
-                - Magari da grande posso fare il riscrittore. Ma per gli animali.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+//         - (top)
+//         {shuffle:
+//                 - Magari da grande posso fare il riscrittore. Ma per gli animali.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
 
-                - Quando sono grande porto via la nonna dalla casa dei vecchi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+//                 - Quando sono grande porto via la nonna dalla casa dei vecchi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
 
-                - Voglio chiedere a mio fratello se si prende un cane così ci gioco quando vado da loro.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+//                 - Voglio chiedere a mio fratello se si prende un cane così ci gioco quando vado da loro.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
 
-                - Sono contento di tornare a casa ora, ma mica di non potere tornare qui.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+//                 - Sono contento di tornare a casa ora, ma mica di non potere tornare qui.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
 
-                - Vieni a trovarmi! Così ti faccio vedere tutte le statue di mio fratello.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+//                 - Vieni a trovarmi! Così ti faccio vedere tutte le statue di mio fratello.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
                 
-                - Magari a papà tutta questa roba non la racconto mica.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
-            }
-                ~ secondChar_exitCounter ++
-        -> main
+//                 - Magari a papà tutta questa roba non la racconto mica.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+//             }
+//                 ~ secondChar_exitCounter ++
+//         -> main
         
-        = goodbye
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ move_entity(secondCharPaint, Bedroom)
+//         = goodbye
+//         ~ temp charNameTwo = translator(secondChar_ActualName)
+//         ~ move_entity(secondCharPaint, Bedroom)
         
-            {player_name}, mi sa che torno a casa.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
-            Sai che mi è piaciuta alla fine tutta questa cosa?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
-            Mi hai regalato il migliore compleanno del mondo.
-            Anche se non era mica davvero il mio compleanno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-            Vieni a trovarmi una volta.
-            Mi mancherai.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+//             {player_name}, mi sa che torno a casa.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+//             Sai che mi è piaciuta alla fine tutta questa cosa?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
+//             Mi hai regalato il migliore compleanno del mondo.
+//             Anche se non era mica davvero il mio compleanno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+//             Vieni a trovarmi una volta.
+//             Mi mancherai.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
   
-                ~ temp currentPlace = entity_location(PG)
-                ~ tree_advance_management(SecondCharacter)
-                ~ move_entity(SecondCharacter, Safekeeping)
-                ~ secondChar_mailPause = secondChar_mailPauseDuration
-                ~ move_entity(TrainNoiseGoingAway, currentPlace)
+//                 ~ temp currentPlace = entity_location(PG)
+//                 ~ tree_advance_management(SecondCharacter)
+//                 ~ move_entity(SecondCharacter, Safekeeping)
+//                 ~ secondChar_mailPause = secondChar_mailPauseDuration
+//                 ~ move_entity(TrainNoiseGoingAway, currentPlace)
                 
-                    -> main
+//                     -> main
 
 
 

@@ -6,13 +6,13 @@
         + {are_two_entities_together(SecondCharacter, PG) && secondChar_storyStatus == story_storyStarted} [SecondCharacter]
             -> talk_with_second_character
 
-        //Chiacchiera a fine storia
-        + {are_two_entities_together(SecondCharacter, PG) && secondChar_storyStatus == story_storyEnded} [SecondCharacter]
-            -> second_char_story_ended
+        // //Chiacchiera a fine storia
+        // + {are_two_entities_together(SecondCharacter, PG) && secondChar_storyStatus == story_storyEnded} [SecondCharacter]
+        //     -> second_char_story_ended
 
-        + ->
+        // + ->
 
-        -> DONE
+        // -> DONE
 
 
 === talk_with_second_character ===
