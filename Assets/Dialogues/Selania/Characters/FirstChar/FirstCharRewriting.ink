@@ -555,7 +555,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
         {
             - contentsNest hasnt fireGlyph:
-                Un'ultima cosa, {player_name}.
+            Un'ultima cosa, {player_name}.
             Volevo lasciarti qualcosa di buono di me, prima di andarmene, e ho pensato di donarti un glifo.
             {
                 - player_accessiblePlaces has Nest: 
@@ -571,16 +571,27 @@
     -> close
         
     = close   
+            
+            
+            Direi che sono pronta per andarmene, {player_name}.
+            Abbiamo fatto un viaggio enorme assieme, ora è giunto il tempo per me di riprendere in mano la mia vita.
+            Grazie di tutto, davvero.
+            Grazie di tutto.
+
+            //Useremo questo spostamento poi per attivare l'animazione del treno.
             ~ story_endedStories += story_firstCharStoryEnded
             ~ firstChar_storyStatus = story_storyEnded
             ~ player_movementsCounter = 0
             ~ state_ending_stories(FirstCharacter)
             
-            Credo resterò ancora un po' in giro.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-            Ma senza altri pipponi per te, promesso!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
-            E cerca di riposarti, non voglio che mi schiodi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-            - (bookUpdate)
-
+            ~ move_entity(firstCharPaint, Bedroom)
+            ~ temp currentPlace = entity_location(PG)
+            ~ move_entity(FirstCharacter, Safekeeping)
+            ~ tree_advance_management(FirstCharacter)
+            
+            ~ move_entity(TrainNoiseGoingAway, currentPlace)
+            ~ firstChar_mailPause = firstChar_mailPauseDuration
+            ~ move_entity(FirstCharacter, Safekeeping)
             ~ numberQuestion = 0
             ~ firstChar_InkLevel = ink_empty
             @animation:RewriterBook

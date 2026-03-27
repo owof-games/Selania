@@ -106,6 +106,7 @@
             E non ti abbraccio, ma un po' è come se l'avessi fatto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
             Ciao!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 
+                ~ move_entity(firstCharPaint, Bedroom)
                 ~ temp currentPlace = entity_location(PG)
                 ~ move_entity(FirstCharacter, Safekeeping)
                 ~ tree_advance_management(FirstCharacter)

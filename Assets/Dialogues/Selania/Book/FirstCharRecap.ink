@@ -149,7 +149,7 @@
         }
 }
     {
-    - rewriting_proposal_first_character.close.bookUpdate: 
+    - rewriting_proposal_first_character.close: 
         Dopo la riscrittura, ha scelto un nuovo nome: <b><i>{translator(firstChar_ActualName)}.</b></i><N><>
     }
 {firstAffinityFeedback:
