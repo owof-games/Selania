@@ -189,12 +189,59 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     Testo scritto per O.U.J.
 
 **************************/
-* Tipo di testo: una prefazione scritta per il ricettario di O.U.J. (da parte della vecchia coven, da nominare in giro nei documenti)
-* Elementi della storia orizzontale: morte di O.U.J., strage di Bologna, il caso e la sua lotta contro quelle persone.
-* Elementi di spiegazione: Gli elementi vivi e le caratteristiche di quel luogo, l'economia di scambio.
--
+<i><b>Registrazione anonima trascritta per l'archivio della coven</i></b>
 
-
+    Vi chiedo scusa per la voce incerta, ma l'emozione è tanta.
+    E non conosco un modo per parlare di O.U.J. senza emozionarmi.
+    Se fosse qui con noi, oggi, la prima domanda che ci farebbe è: "Com'è che non state mangiando?"
+    <i>Risate in sottofondo.</i>
+    Uno dei principi di questa coven è: manifestiamo il futuro consapevoli del nostro passato.
+    Ma O.U.J. fa davvero parte del nostro passato?
+    Oggi, due agosto duemiladieci, sono passati esattamente trent'anni dalla bomba che ce l'ha portata via mentre era alla stazione di Bologna.
+    Bomba messa dalle stesse persone contro cui ha lottato per una vita, con la piazza e con la magia.
+    Le stesse persone i cui volti e ideali ora sono al Governo, sdoganati con una leggerezza che alcune di noi, le più vecchie di noi, vivono come un fallimento.
+    Il passato, quel passato che non doveva ripetersi, è oggi il nostro presente.
+    <i>Mormorii dalla sala.</i>
+    Ma lo sono anche i suoi anticorpi.
+    Molte di voi non erano nemmeno nate quando O.U.J. ha perso la vita, ma tutte voi la conoscete.
+    Attraverso i racconti delle più vecchie, come me.
+    Attraverso la testimonianza costante di quella capacità di cura e ascolto che solo lei aveva.
+    O.U.J. ha lottato, sempre.
+    Anche contro la coven, quando alcune di noi, me compresa, non erano pronte ad accogliere una donna trans tra le nostre fila.
+    <i>Una porta che si chiude.</i>
+    Ci sono volte in cui la cosa migliore che ti possa capitare è di non avere ragione.
+    Scusate ma le lacrime rendono difficile leggere.
+    <i>Rumore d'acqua in un bicchiere.</i>
+    Grazie.
+    Dicevo.
+    O.U.J. fa davvero parte del nostro passato?
+    E la risposta è no.
+    Perché O.U.J. è stata il nostro passato, ma soprattutto è il nostro presente e futuro.
+    Chi ha avuto la fortuna di cucinare con lei ha visto quanto quell'esperienza potesse essere trasformativa.
+    Quante di noi hanno ammesso per la prima volta a voce alta cose di sé che nemmeno conoscevano, mentre condividevano con lei un piatto di zuppa?
+    Quante hanno raccontato le difficoltà che vivevano dentro e fuori la coven con tranquillità, con senso di accoglienza, così da capire cosa fare, cosa cambiare?
+    O.U.J. ci ha lasciato uno dei riti più potenti: la condivisione.
+    O.U.J. non riconosceva alcun possesso.
+    Le cose sono fatte per essere usate da chi ne ha bisogno in quel momento.
+    Ha creato un modo di gestire la coven, e la magia, che mette al centro non il possedere, ma il donare.
+    Ha sempre detto che è qualcosa che ha imparato "nel giardino", quando è scomparsa per due mesi con altre compagne.
+    Ma ho sempre pensato che in realtà quell'esperienza avesse fatto maturare in lei qualcosa che già era lì, viva e potente.
+    Pensiamo a come ci ha insegnato a cucinare.
+    Cucinare con lei voleva dire rispondere a domande non con "Sì" e "No" e "In realtà credo che...".
+    Voleva dire aggiungere della noce moscata in modo inquieto per far capire quanto stesse stretta la famiglia d'origine.
+    O rimestare del bicarbonato nell'impasto per far lievitare il pane e parlare del proprio desiderio.
+    Il rito della cucina di O.U.J. ci ha tenute assieme durante gli attacchi della polizia, durante l'esplosione del berlusconismo, durante la cementificazione selvaggia dei campi e dei boschi in cui praticavamo.
+    Il rito della cucina di O.U.J. ci ha fatto superare i nostri limiti, come quando sorella Wanda ci ha ricordato che "siete diventate un gruppo di femministe bianche viziate".
+    Il rito della cucina di O.U.J. ci ha permesso di metterci in ascolto e cambiare.
+    Ed è qui la grande differenza tra noi e loro, i fascisti ora al potere: grazie a O.U.J., noi abbiamo imparato a cambiare. Loro non cambiano mai.
+    E l'unica cosa che a questo mondo non cambia, è ciò che è morto.
+    Per celebrare quindi la vita di O.U.J., ripetiamo assieme le sue tre regole:
+    Ogni ingrediente che metto viene dal cuore.
+    Ogni critica deve essere un atto d'amore.
+    Il pasto è finito quando i piatti sono lavati.
+    <i>Rumore di acqua bevuta.</i>
+    E ora lascio la parola a K., che ci racconterà alcuni aneddoti della sua amicizia con O.U.J.
+    
 ->->
 
 
