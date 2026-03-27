@@ -57,7 +57,8 @@
     Anche G.M., spegnendo così alcuni dei miei dubbi. 
     Non sarò mai così diretta come K., ma ho compiuto un atto di fiducia verso O.U.J. quando ha detto "Ancora non lo sa, ma è una di noi".
     Ad essere onesta, ho donato un atto di fiducia verso ognuna delle mie compagne, per poter poi chiedere a tutte in cambio un unico grande salto nel vuoto.
-    E forse anche per questo mi sento irrequieta. Come questo tempo mutevole. 
+    E forse anche per questo mi sento irrequieta.
+    Come questo tempo mutevole. 
     Tutte hanno trovato la propria luce qui, mentre io ancora non ho sentito il mio richiamo, la mia voce.
     Ieri sera, mentre guardavo la luna nel cielo, mi sono chiesta se questo silenzio, questa mancanza di scopo non sia una punizione per il mio piccolo tradimento.
     Chiederò all'acqua di donarmi visioni con una bella nuotata.
@@ -97,7 +98,8 @@
 //WR.
     Sì spostano!#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docLibrary
     Non ha senso, ma si spostano!
-    L'ho detto a S.C. e mi ha detto di numerare le copertine. Come se fossi arrivata qui con un pennarello e.
+    L'ho detto a S.C. e mi ha detto di numerare le copertine.
+    Come se fossi arrivata qui con un pennarello e.
     Ah, la penna.
     Ho in mano una penna.
 
@@ -112,7 +114,7 @@
     E devo anche trovare un modo per tenere quella maledetta capra lontano dalle mie pagine!
 
     W.R., tesoro: ricordati di firmare i tuoi appunti o non si capisce mai di chi è cosa.
-    O.U.J.
+    <i>O.U.J.</i>
 
     Mmm, come se a qualcun altra interessassero così tanto i libri.
 
@@ -126,13 +128,13 @@
     L'idea era quella di sviluppare uno sguardo di insieme sul rapporto tra ambiente e piante, così da iniziare a fare un po' di prove, magari coltivare in serra qualcosa di queste magnifiche erbe, e capirne il portato magico.
     E le piante di per sé fanno cose da piante: i cespugli della foresta sono un universo di vita, le loro foglie sono pungenti ma ricche di oli profumati.
     Il pino della stazione (credo sia un pino) ha i suoi aghetti, e la sua forma è quella di una pianta esposta a un forte vento costante.
-    I rovi della fontana sono ricchi di bacche che ancora non ho avuto il coraggio di assaggiare, ma che sono estremamente apprezzati dalle api, e lo prendo come un buon segno.
+    I rovi della fontana sono ricchi di bacche che ancora non ho avuto il coraggio di assaggiare, ma che sono estremamente apprezzati dalle api, cosa che prendo come un buon segno.
     Ma.
     Il pino ospita dei pappagalli. 
     Che sono uccelli tropicali.
     In un'area innevata.
-    Con l'aiuto di G.M. ieri ho aspettato che se ne andassero per studiarne il nido, e l'albero è caldo. 
-    Caldo. 
+    Con l'aiuto di G.M. ieri ho aspettato che se ne andassero per studiarne il nido, e l'albero è caldo.
+    Caldo.
     Un pino. 
     Sotto la neve.
     <i>Caldo.</i>
@@ -170,11 +172,12 @@
     Ma ci sono storie che parlano di cose che non sono ancora accadute, di oggetti che non ho mai sentito nominare.
     Mi siedo sulla poltrona all'alba, ed è subito notte.
     Ho provato a parlarne stasera, ma erano tutte malinconiche.
-    A parte S.C.: anche lei come me quando si fissa su qualcosa non vede più il resto del mondo.
+    A parte S.C.: anche lei quando si fissa su qualcosa non vede più il resto del mondo.
     Forse è anche colpa di questo tempo che non cambia mai: so che è il 2 ottobre perché O.U.J. ha creato un calendario appeso in cucina.
-    Ma potrebbe essere il 6 luglio o il 33 gennaio, e poco cambierebbe.
+    Ma potrebbe essere il 3 luglio o il 33 gennaio, e poco cambierebbe.
     E per me è sempre così.
-    Prima di partire K. mi ha chiesto se ci tengo davvero a tutto questo, alla lotta, perché non mi vede mai in piazza, o alle riunioni allargate. Secondo lei mi interessa solo la congrega stretta e i miei libri.
+    Prima di partire K. mi ha chiesto se ci tengo davvero a tutto questo, alla lotta, perché non mi vede mai in piazza, o alle riunioni allargate.
+    Secondo lei mi interessa solo la congrega stretta e i miei libri.
     E io non so come dirglielo che non ho ancora capito come ci si sta con le persone.
     Anche ora qui: voglio bene a tutte loro, ma non so come dimostrarlo.
     Non è che se non le cerco smetto di tenerci.
@@ -229,7 +232,7 @@
     Vorrei fare delle prove, anche perché mi sento un po' frustrata.
     S.C. ha la sua teoria.
     W.R. e G.M. stanno lavorando su non ho capito che inchiostro.
-    E O.U.J.
+    Mentre O.U.J.
     Oh. 
     Povera.
     Senza rendercene conto l'abbiamo relegata a cuoca della compagnia.
@@ -255,7 +258,7 @@
     Succede sempre così: prendi cinque streghe anarchiche, mettile in una stanza, e discuteranno giorni per decidere che pizza mangiare. 
     E poi si faranno comunque una pasta.
     Mi manca la pasta.
-    O.U.J. fa del riso buonissimo, ne abbiamo a quintali (continuo a dimenticarmi di chiederle da dove venga tutta questa roba), ma darei tutto per delle tagliatelle.
+    O.U.J. fa del riso buonissimo, ne abbiamo a quintali (che poi da dove viene tutta quella roba che cucina?), ma darei tutto per delle tagliatelle.
     Potrei trasformare il riso in tagliatella, con quei simboli?
     Perché il punto è quello.
     Quindi: tre giorni di battibecco, mi annoio, torno al libro, e mi rendo conto che l'inchiostro è ancora fresco e gommoso.
@@ -289,13 +292,13 @@
     Cinque glifi, come cinque sono i gruppi che raccolgono le cose di questo luogo.
     Forse bastano le giuste parole per produrre una trasformazione.
     Alchimia verbale.
-    Tre giorni fa trovato cinque pietre sulla spiaggia, molto simili tra loro.
+    Tre giorni fa ho trovato cinque pietre sulla spiaggia, molto simili tra loro.
     Mi sono fidata dell'istinto e vi ho inscritto i glifi.
-    Li tengo con me, e spesso reagiscono anche alle frasi delle mie compagne.
+    Le tengo con me, e spesso reagiscono anche alle frasi delle mie compagne.
     E a proposito delle mie compagne.
     Ieri ho passato la notte con G.M..
     Non facevo sesso da così tanto tempo che ho temuto stessi per avere un infarto.
-    Quando si è addormentato accanto a me, il glifo a croce ha brillato per ore.
+    Quando si è addormentato al mio fianco, il glifo a croce ha brillato per ore.
     S.C.
 
     ~ horizontalSEndingStorylet()
@@ -315,15 +318,15 @@
     Perché se anche una rana può vivere sette anni, questa bestiola ha la saggezza caotica di un centenario.
     E grazie a lui ho scoperto due cose.
     La prima: la serra fa crescere piante magiche che nascono da suggestioni.
-    Ho provato ad usare metafore del luogo che ci circonda, parlando di api o nubi o radici.
+    Ho provato ad usare metafore naturali parlando di api o nubi o radici.
     Sto ancora cercando di calibrare la tecnica, ma sono riuscita ad evocare tre volte di fila un Olobino (me lo ricordo dal libro di nonna!), per cui direi che la strada è quella giusta.
     La seconda: che donare queste piante genera l'inchiostro che ha trovato G.M..
     Non tutte.
     In accordo con O.U.J. ho fatto un paio di prove, e solo quando le ho regalato del <i>Non ti scordar di te</i>, ha lacrimato una goccia di inchiostro.
     Mi ha detto che le ha fatto pensare alle sue amiche scomparse.
-    Abbiamo deciso di comune accordo di nasconderla nella cucina e non dire niente alle altre: il modo in cui hanno cambiato l'essenza di quel povero pappagallino più volte ha lasciato entrambe preoccupate.
+    Abbiamo deciso di comune accordo di nascondere l'inchiostro nella cucina e non dire niente alle altre: il modo in cui hanno cambiato l'essenza di quel povero uccello più volte ha scosso entrambe.
     E a proposito delle altre: W.R. mi ha chiesto di portarle un po' di questo eccesso di Olobino.
-    Immagino voglia tirarci fuori dell'inchiostro normale per i suoi libri.
+    Non voglio sapere cosa ci combinerà.
     K.
 
     ~ horizontalSEndingStorylet()
@@ -334,7 +337,7 @@
 //Y.
 
     Qualcosa non va.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docLibrary
-    Qualcosa di grosso e no, me lo ripeto anche ora, non è colpa del trip con l'Olobino.
+    Qualcosa di grosso e no, me lo ripeto anche ora, non è colpa del viaggio con l'Olobino.
     Cavolo, non me ne facevo uno così dai tempi della vecchia congrega.
     Chissà se Marzio fa ancora quell'idromele potenziato?
     Ma non è quello il punto.
@@ -344,7 +347,7 @@
     E dalle dita mi sono uscite due, DUE gocce di inchiostro.
     E a quel punto è iniziato il trip.
     Ho pensato a tantissime cose del passato.
-    A come le persone si incazzano con me perché mi distraggo o perché mi fisso sulle cose.
+    A come le persone si incazzano con me perché mi distraggo o parlo troppo o mi fisso sulle cose.
     Al sentirmi sempre sempre sempre sbagliata.
     Ho iniziato a giocare con l'inchiostro, il mio inchiostro, e mi sentivo mutare.
     Trip e inchiostro hanno quasi iniziato a comunicare.
@@ -355,12 +358,13 @@
     Come se la mia storia fosse stata riletta in modo diverso.
     I problemi ora sono due.
     Il primo: abbiamo fatto provare ogni volta questa roba a quel povero pappagallino?
-    Il secondo: è cambiato anche il mio corpo. Sono più solida, non so se abbia senso.
+    Il secondo: è cambiato anche il mio corpo. 
+    Sono più solida, non so se abbia senso.
     Occupo spazio, non ho paura di essere vista, di dare fastidio.
     E questa è la cosa che non va.
     Perché abbiamo trovato qualcosa che è troppo troppo troppo grosso per gestirlo così, tra di noi, con i nostri enormi entusiasmi.
-    C'è un'ultima cosa: W.R. mi sta stretto.
-    Credo che il nome giusto per me ora sia Y.
+    C'è un'ultima cosa: il mio nome mi sta stretto, non suona più giusto.
+    Da ora mi chiamerò Y.
 
     ~ horizontalSEndingStorylet()
     -> main
@@ -385,7 +389,7 @@
     Ed è stata una bella occasione anche per capire come sta.
     Da una parte è felice delle scoperte che sta facendo in serra, e del rapporto con la rana.
     Dall'altra si è resa conto anche lei che c'è qualcosa tra S.C. e G.M., ed è preoccupata.
-    Io da vecchiarella non mi sono posta i suoi dubbi, ma più ci penso più mi fa rabbia che S.C. non si renda conto del modo diverso in cui lei, donna e G.M., un ragazzetto, possono vivere questa cosa.
+    Io da vecchiarella non mi sono posta i suoi dubbi, ma più ci penso più mi fa rabbia che S.C. non si renda conto del modo diverso in cui lei, donna adulta e G.M., un ragazzetto, possano vivere questa cosa.
     E dopo un anno senza incazzamenti, credo che stasera tirerò fuori la cosa.
     Ho voglia di arrabbiarmi.
     La conversazione ha rassicurato K., e dopo aver finito di cucinare mi ha detto che preferisce le conversazioni dirette e difficili alle cose dette in modo educato ma non chiaro.
@@ -402,9 +406,9 @@
 //G.M. 
 
     Contro di questa esperienza.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docDump
-    1. O.U.J. mi ha fatto una paternale sulla mia relazione con S.C..
+    1. O.U.J. mi ha fatto una paternale dicendomi che "la differenza d'età è un coltello in amore, e non sono io dalla parte del manico".
     2. Non sto imparando niente di nuovo su glifi o che, e tutte le mie intuizioni sono servite solo a Y. ed S.C..
-    3. Mi sento isolato. Il sesso con S.C. mi fa volare, ma poi mi sento solo.
+    3. Mi sento isolato. Solo. Inascoltato.
     4. C'è stato un altro attentato a Milano, a maggio. L'ho scoperto solo ora perché sono settimane che ogni tanto fuggo da qui per andare al paese più vicino. Tanto non se ne accorgono.
     5. Sono stanco di mangiare riso e funghi.
     6. Non sarò mai una strega.
@@ -413,7 +417,8 @@
 
     Pro di questa esperienza.
     1. Vado molto più d'accordo con K., è quasi protettiva, e mi sta insegnando tanto sulle piante.
-    2. Amo S.C.. Lo so da tempo ormai, ma non ho il coraggio di dirglielo.
+    2. La cucina di O.U.J..
+    3. Ho insegnato agli uccellini a seguirmi, e girelliamo assieme per i boschi.
 
     Ma la cosa più difficile di tutte, è ammettere che qui non sono utile per niente.
     Mentre laggiù i fasci continuano a uccidere persone.
@@ -439,7 +444,8 @@
     Ma con tre glifi il sigillo è instabile, e cambia il modo in cui vengono percepite le cose che dico e faccio!
     Ho provato a dire la stessa parola davanti ai glifi con sigilli diversi attivi, e reagiscono secondo il sigillo, e non secondo il valore della parola.
     Pensavo si trattasse di magia simpatetica, di una relazione tra il simbolo e il tutto, ma invece è una relazione più diretta.
-    E qui c'è la soluzione ai nostri problemi: possiamo far capire alle persone che la nostra missione, la nostra posizione è quella giusta. Non più solo con le parole, ma con la magia.
+    E qui c'è la soluzione ai nostri problemi: possiamo far capire alle persone che la nostra missione, la nostra posizione è quella giusta.
+    Non più solo con le parole, ma con la magia.
     E visto che questa cosa è magnifica e potente, ho deciso di utilizzarne uno, che ho chiamato Altare, per parlare con G.M., per convincerlo a non andarsene.
     Perché sarà felice poi di essere rimasto.
     Noi cinque faremo la storia.
@@ -458,8 +464,11 @@
     Si è costruita una tenda sulla sua fottuta spiaggia.
     Quello che ha fatto a G.M., merda.
     Provo rabbia e tristezza.
-    S.C. è una mia amica. Quante cose abbiamo fatto assieme? Ho sempre pensato che il mondo poteva pure bruciare e sarei stata comunque felice con lei, O.U.J. e Y. vicine.
-    E G.M.? Povero G.M.
+    S.C. è una mia amica.
+    Quante cose abbiamo fatto assieme?
+    Ho sempre pensato che il mondo poteva pure bruciare e sarei stata comunque felice con lei, O.U.J. e Y. vicine.
+    E G.M.?
+    Povero G.M.
     Combattiamo da una vita contro quel modo di fare, quella coercizione, quell'esibizione di potere.
     E lei...
     Io non so nemmeno cosa scrivere.
@@ -482,8 +491,8 @@
 === docNineteen_storylet ===
 //GM
     Ho riparlato con S.C., per la prima volta dopo quello che mi ha fatto.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docDump
-    Volevo solo capire che cosa ha utilizzato, e le sue tristi scuse sono scomparse sotto la luce dell'entusiasmo.
-    Dice che ha usato un sigillo che ha chiamato Altare, che fa parte di un Tempio (ha senso solo per lei questa cosa).
+    Volevo capire il perché, e invece le sue tristi scuse sono scomparse sotto la luce dell'entusiasmo del <i>come</i>.
+    Dice che ha usato un sigillo che ha chiamato <i>Altare</i>, che fa parte di un Tempio (ha senso solo per lei questa cosa).
     E che Tempio è lo spazio della famiglia scelta, del crescere spiritualmente assieme.
     Che lei l'ha voluto usare per farmi capire che non è vero che stiamo perdendo tempo, che è il contrario.
     Che abbiamo uno strumento per salvare il mondo.
@@ -496,7 +505,7 @@
     Merda.
     Mi sono visto come non volevo.
     O come vorrei.
-    Mi son visto in un modo pieno, e troppo costoso.
+    Mi son visto in un modo pieno, e troppo pericoloso.
     Non credo di volerle più parlare.
     G.M.
 
@@ -514,14 +523,14 @@
     Ma so anche che ha fatto quella scenata per spaventare S.C., e lo so perché l'abbiamo organizzata assieme.
     Perché Y. è felice di quello che ha vissuto.
     L'ha chiamata "riscrittura", perché dice che è come se avesse riscritto il modo in cui guarda la sua storia e il suo passato.
-    E ha smesso di vedersi come una tipa senza sapore, strana, per accogliersi come la persona che è, punto.
+    E ha smesso di vedersi come una ragazza senza sapore, strana, per accogliersi come la persona che è, punto.
     Anche per questo ha deciso di cambiare nome.
     E quando le ho parlato della mia esperienza in cucina, delle ricerche di K., ha detto che questo posto può essere grandioso per prendersi cura di sé, e che noi "altre" dovremmo continuare la nostra ricerca.
     "Tutte voi, ma non la Signora delle Pietre".
     Ho odiato quella frase: stimo ancora S.C., le voglio bene.
     Ma ho capito la preoccupazione di Y.
     E visto che ritiene di non aver altro da dare o imparare da questo luogo, aveva già deciso di tornare in città, operativa.
-    Per cui, perché non farlo facendo cagare addosso un po' S.C.?
+    Per cui, perché non farlo spaventando un po' S.C.?
     Non so se abbia funzionato, sinceramente.
     Siamo arrivate in questo posto con una S.C. determinata ma capace di ascoltarti, di vederti.
     E ora siamo qui con un essere fissato coi suoi sigilli e la conoscenza.
@@ -541,12 +550,11 @@
     Per la prima volta da mesi ci siamo ritrovate tutte al tavolo.
     Tutte, tranne Y.
     Che a quanto pare prima di andarsene ha lanciato un incantesimo di pioggia permanente sulla spiaggia per far desistere o punire S.C., non ne ho idea.
-    Ma per qualche motivo crede che i suoi sassi funzionino meglio lì e non si smuove.
+    Ma lei per qualche motivo crede che i suoi sassi funzionino meglio lì e non si smuove.
     Durante la cena, O.U.J. ha fatto domande a tutte, domande leggere, per facilitare la conversazione.
     K. e io siamo intervenute per un po', ma come S.C. ha parlato, ci siamo fatte mute.
     Mi spiace, mi pesa, ma non ce la faccio.
-    S.C. è stata il mio primo amore, e la mia prima volta.
-    E ha tradito la mia fiducia.
+    S.C. è stata il mio primo tutto, e ha tradito la mia fiducia.
     A un certo punto K. ha chiesto a me e O.U.J. se ci andava di vedere una cosa, ha preso del liquore che ha fatto in questi mesi e ci ha portate a quella bacinella che K. chiama "fontana".
     Sta crescendo un albero.
     Dice che è il segno che le cose possono crescere anche se butta male.
@@ -570,7 +578,7 @@
     Non mi ha chiesto quando ho capito che ero una strega, o anarchica o che.
     "Che non ero un ragazzo?"
     Ha iniziato a piangere a dirotto.
-    Mentre S.C. gli parlava col sigillo attivo, tutto quello che percepiva è ciò che sarebbe potuto essere, e non era.
+    Durante la magia di S.C. tutto quello che percepiva è ciò che sarebbe potuto essere, e non era.
     Perché la prendo alla larga anche qui?
     A cosa servono le lotte se poi ancora mi vergogno di me?!?
     Si è visto donna.
@@ -592,7 +600,8 @@
     Ventinove maggio '74#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docKitchen
     Caro diario, siamo solo tu e io ormai.
     Tu, io e S.C., se trovo il coraggio di andare a trovarla sulla spiaggia.
-    Y. è stata gravemente ferita a Brescia. Una bomba in una piazza mentre protestava contro i terroristi fascisti.
+    Y. è stata gravemente ferita a Brescia.
+    Una bomba in una piazza mentre protestava contro i terroristi fascisti.
     G.M. l'ha letto su un giornale, perché è saltato fuori che quando spariva per ore non era nei boschi, ma scendeva al paesino in fondo valle.
     Credo sia stata una delle giornate più lunghe per me, diario.
     Perché G.M. ha deciso di andarsene per fare qualcosa, per vedere come sta Y., ma temo anche per scappare da una parte di sé, quella parte di sé.
@@ -604,9 +613,9 @@
     Per la maggiore, belle.
     Ma per altre, amare.
     Come il fatto di non esser stata mai davvero vista come una strega dalle mie compagne.
-    Come se stare ai fornelli non sia già di per sé un atto di magia.
-    Ho teorizzato e confermato il sistema di relazioni che regge questo posto, l'economia del dono e dello scambio che fa sì che tutto sia florido.
-    La possibilità di generare inchiostro cucinando assieme, e di fare emergere i propri bisogni col giusto ingrediente.
+    Come se riempire le pance altrui non sia già di per sé un rito magico.
+    Ho teorizzato e confermato il sistema di relazioni che regge questo posto, la logica di dono e scambio che fa sì che tutto sia florido.
+    La possibilità di rafforzare la relazione cucinando assieme, e di fare emergere i propri bisogni col giusto ingrediente.
     Eppure ogni sera a cena erano le teorie di S.C. e i progressi di K. e le scoperte di Y. e le scorribande di G.M. al centro delle conversazioni.
     Pensavo fosse pesante essere invisible come donna, avevo sottovalutato quanto poco tu venga vista quando sei vecchia.
     Anche dalle persone amiche.
@@ -619,20 +628,7 @@
 
 === docTwentyFour_storylet ===
 //S.C.
-    Sono arrivata a una quadra.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docNest
-    Esistono venti sigilli stabili.
-    Li chiamo "stabili" perché non mutano, non influenzano il mondo, ma sono lenti con cui interpretarlo, capirlo.
-    E sono composti sempre da due glifi irripetibili.
-    Ogni sigillo stabile ha tre varianti "instabili", derivate dall'aggiunta di un altro glifo.
-    E sono instabili perché da una parte durano giusto una manciata di utilizzi, ma per questo interagiscono col mondo.
-    E la cosa che non avevo capito davvero fino in fondo, è che questa instabilità apre a delle ambiguità.
-    Sono sicura che Altare farebbe davvero bene a O.U.J. per esempio, perché è una persona già solida, mentre G.M. è così piccolo, giovane, deve ancora scoprire tanto su di sé.
-    So che è giusto, so che è sensato.
-    Sto anche scrivendo tutto quello che ho scoperto in un taccuino, con tutte le suggestioni che ho pensato, precise ma non troppo, evocative, perché questi sigilli parlano una lingua che non è nostra.
-    E con questo materiale finalmente posso tornare anche dalle altre, spiegare, far capire che tutta questa fatica, queste tensioni alla fine sono servite a qualcosa.
-    Sono sicura che K. troverà un uso per la sua serra, e Y. per creare libri trasformativi e G.M., credo che col giusto sigillo G.M. possa scoprire cosa l'ha ferito con Altare.
-    Ora corro da loro, e così facciamo una grande festa.
-    S.C.
+    Ora che so come fargli del bene, lui non è più qui con me.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docNest
 
     ~ horizontalSEndingStorylet()
     -> main
@@ -640,17 +636,14 @@
 
  === docTwentyFive_storylet ===
 //OUJ
-    Cara S.C., non so quando leggerai questo biglietto, visto che non ti allontani dalla spiaggia da giorni.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docKitchen
-    Non so quanto cibo andato a male ho buttato.
-    Cosa hai mangiato sulla spiaggia? 
-    Hai mangiato?
-    So che sei viva perché l'altro ieri sono passata lungo la riva, col suo continuo temporale, ed eri a prendere appunti sotto la tua tenda improvvisata.
-    Questo biglietto comunque è qui per dirti che me ne vado, come le altre.
+    Non so quando leggerai questo biglietto, visto che non ti allontani dalla spiaggia da giorni.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docKitchen
+    Starai mangiando?
+    So che sei viva perché l'altro ieri sono passata lungo la riva ed eri a prendere appunti sotto la tua tenda improvvisata.
+    Questo biglietto è qui per dirti che me ne vado, come le altre.
     Siamo partite assieme in questo viaggio, ce ne siamo andate separate.
     E non riesco a non dartene la colpa.
     Io non so cosa ci farai con quello che hai scoperto, e ne ho molta paura: nessun tipo di potere è fatto per stare in una sola mano.
-    Non credo affatto che quello che hai trovato sia negativo, così come sono sicura che le scoperte fatte da noi altre si integrino al meglio con quei sigilli.
-    Credo tu sia davanti a una scelta, S.A.: continuare a raccogliere il sapere per il piacere di accumularlo, come se fosse un giochino per sentirti importante, facendo del male agli altri.
+    Credo tu sia davanti a una scelta: continuare a raccogliere il sapere per il piacere di accumularlo, come se fosse un giochino per sentirti importante, facendo del male agli altri.
     O capire cos'è davvero questo luogo, perché questo luogo e non altri hanno generato questo potere, e a quel punto forse saprai cosa farne di buono.
     Ricorda: qui come altrove, tutto è relazione.
     Spero di vederti di nuovo, spero di ritrovarti come la persona che eri.
