@@ -174,10 +174,10 @@
         La serra è un bel posto dove rilassarsi, e non solo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
         Ma evita assolutamente tutti gli altri posti bloccati, perché sono pericolosi!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_bored
         Più tardi ti spiegherò perché sei qui.
-
-        - (bookUpdate)
-
         Io devo raccogliere le foglie dalla foresta.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+
+            
+             ~ grimoire_Appendices += grimChoicesMentor
 
             -> mentor_closing_storylet ->
             -> main
@@ -328,7 +328,8 @@
         Ricorda {player_name}: sei una guida, ma sta alla persona decidere alla fine chi è, e di cosa ha bisogno.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         Anche per questo non c'è un buon esito o un cattivo esito di una riscrittura.
         Quando te la senti, affronta questo ultimo passaggio e poi torna da me.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-        - (bookUpdate)
+        
+        ~ grimoire_Appendices += grimRewritingMentor
 
                 -> mentor_closing_storylet ->
                 -> main
@@ -365,7 +366,8 @@
     Gli effetti dei doni tra l'altro sono immediati e permanenti.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
     Ed è per questo che ogni riscrittorə può darne solo uno a persona.
     Qualcosa di così forte non può certo essere usato senza coscienza. #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-    - (bookUpdate)
+
+        ~ grimoire_Appendices += grimGreenhouseMentor
 
         -> mentor_closing_storylet ->
         -> main
@@ -420,7 +422,7 @@
     Immagino che sarà il modo in cui ne farai uso a definirne il valore.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
     Un giorno mi piacerebbe impararne qualcuno.
 
-    - (bookUpdate)
+    ~ grimoire_Appendices += grimSigilsMentor
 
             -> mentor_closing_storylet ->
             -> main

@@ -225,7 +225,7 @@
             Durante l'incontro in cucina, {charNameOne} ha parlato del suo rapporto con la creatività. Ha detto che ci sono cose che sa pensare solo quando compone, e per questo è terapeutico. Ma che è preoccupata perché il lavoro la stanca così tanto che a volte non riesce a comporre nulla. E ha paura di non esistere più se dovesse smettere di creare. Creare per lei poi è come gettare un ponte: sia tra le persone che ha conosciuto, sia tra persone che non si conoscono. Trovare l'universale nel particolare, così da potersi ritrovare.
     }
     {
-        - open_the_kitchen.bookUpdate:
+        - open_the_kitchen:
             Aprendo la strada per la cucina, {charNameOne} ha detto che il cibo apre alle confidenze, e che si è ricordata tutte le belle chiacchierate fatte a tavola.
 
     }

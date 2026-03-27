@@ -83,8 +83,9 @@
                 Zio Gracco sa fare una lasagna di pulci d'acqua che è la morte.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Delle pulci d'acqua, per lo più.     
         }
-    - (bookUpdate)
+    
 
+        ~ grimoire_Appendices += grimKitchenChitarra
         ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
         ~ firstChar_PondInvite = true
         -> opening_places ->

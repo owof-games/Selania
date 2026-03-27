@@ -135,8 +135,12 @@
 //Gestione del Grimorio
 //Nota: "BOOK" diventa il repository del vecchio materiale di testo.
 
+    INCLUDE Grimoire\MainPage.Ink
+    INCLUDE Grimoire\Functions.ink
     INCLUDE Grimoire\Appendices.ink
-
+    INCLUDE Grimoire\VarAndLists.ink
+    
+    
 //Grimoire - temporaneo?
     INCLUDE Book\Grimoire.ink
     

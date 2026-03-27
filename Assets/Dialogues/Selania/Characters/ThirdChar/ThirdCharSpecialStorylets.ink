@@ -61,6 +61,9 @@
             //E poi svuoto il nuovo sigillo
             ~ nest_newSigilDiscovered = ()
 
+
+
+        ~ grimoire_Appendices += grimSigilsBoccale
         ~ thirdChar_LibraryInvite = false
         ~ move_entity(ThirdCharacter, Forest)
         -> third_char_closing_storylet ->

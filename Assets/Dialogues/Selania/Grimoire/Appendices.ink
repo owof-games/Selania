@@ -1,11 +1,11 @@
 /*************************
 
 La logica di comparsa delle appendici è:
-    * grimoire_choicesAndRelationships: sbloccata quando ce ne parlano o Mentore o Luna.
+    * grimoire_choicesAndRelationships: sbloccata quando ce ne parlano o Mentore o Strega.
     * grimoire_greenhouseAndGifts: sbloccata dopo la prima pianta raccolta (backpack_findedGifts != ()) o dopo il commento di Mentore.
     * grimoire_kitchenAndRelationships: dopo l'apertura della cucina da parte di Chitarra.
-    * grimoire_inkAndRewriting: dopo il commento di Mentore o di Luna sulla riscrittura.
-    * grimoire_Sigils: dopo che ce ne parlano Mentore o Luna (l'idea è comunque di non condividerlo subito).
+    * grimoire_inkAndRewriting: dopo il commento di Mentore sulla riscrittura.
+    * grimoire_Sigils: dopo che ce ne parlano Mentore o Strega (l'idea è comunque di non condividerlo subito).
 
 Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché potrebbe aver senso vedere i libri prima dei commenti, più per impaginazione che altro.
 
@@ -26,7 +26,7 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
 
 /*************************
 
-    Commento Luna se sbloccato
+    Commento Strega se sbloccato
 
 **************************/
 
@@ -69,7 +69,7 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     Insomma: il mondo è enorme e complesso e senza strumenti uno si sente perso.
     Ma se può ridurre tutto a cinque cose, allora è un punto di partenza per un viaggio immenso.
     E il primo punto che voglio dirle, è che davanti a una situazione o a un dialogo, tutte le cose che possiamo dire o fare si riducono a cinque.
-    Prendiamo quando si è appoggiata a me ieri sera, sotto la luna piena, e mi ha sfiorato il collo: avrei potuto agire come l'acqua, e mettere a nudo quei sentimenti che maturo da tempo.
+    Prendiamo quando si è appoggiata a me ieri sera, sotto la Strega piena, e mi ha sfiorato il collo: avrei potuto agire come l'acqua, e mettere a nudo quei sentimenti che maturo da tempo.
     Oppure come il fuoco, e strapparle i vestiti di dosso.
     (Alla fine ho agito come aria, aria cattiva, e mi sono ripetuto che era razionalmente impossibile. C'è voluto un suo bacio per capire che davvero voleva fare sesso <b>con me</b>.)
     Credo sia quello che è successo col pappagallo: abbiamo trovato due simboli così elementari da cambiarne l'essenza.
@@ -259,11 +259,6 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
 
 **************************/
 
-/*************************
-
-    Commento Luna se sbloccato
-
-**************************/
 
 /*************************
 
@@ -354,7 +349,7 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
 
 /*************************
 
-    Commento Luna se sbloccato
+    Commento Strega se sbloccato
 
 **************************/
 /*************************
