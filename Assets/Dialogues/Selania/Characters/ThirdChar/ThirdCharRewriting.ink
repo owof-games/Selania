@@ -543,16 +543,35 @@
 
 
     = close
-        ~ temp charNameTwo = translator(thirdChar_ActualName)
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
+        
+        Me ne vado.
+        Salutami
+            {
+                - secondChar_storyStatus == story_storyStarted:
+                    E {charNameTwo}.
+
+            }
+            {
+                - thirdChar_storyStatus == story_storyStarted:
+                    E anche {charNameThree}.
+
+            }
+        
+
+        
         ~ story_endedStories += story_thirdCharStoryEnded
         ~ thirdChar_storyStatus = story_storyEnded
         ~ player_movementsCounter = 0
         ~ state_ending_stories(ThirdCharacter)
-
-            Ora voglio stare ancora un po' qui prima di prendere il treno.
-        
-        - (bookUpdate)
-        
+        ~ temp currentPlace = entity_location(PG)
+        ~ tree_advance_management(ThirdCharacter)
+        ~ move_entity(ThirdCharacter, Safekeeping)
+        ~ thirdChar_mailPause = thirdChar_mailPauseDuration
+        ~ move_entity(TrainNoiseGoingAway, currentPlace)
         ~ numberQuestion = 0
         ~ thirdChar_InkLevel = ink_empty
             @animation:RewriterBook
