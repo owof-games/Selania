@@ -29,7 +29,7 @@ LIST grimoire_allElements =
     grimMentorOne, grimMentorTwo, grimMentorThree, grimMentorFour, grimMentorFive, grimMentorSix, grimMentorSeven, grimMentorEight, grimMentorNine, grimMentorTen, grimMentorEleven, grimMentorTwelve, grimMentorNovel, grimMentorDog, grimMentorWitchTwo, grimMentorLiar, grimMentorViolence, grimMentorOlobinoUno, grimMentorOlobinoDue,
 
 //Storylets strega
-    grimWitchFirstCharFeedback, grimWitchSecondCharFeedback, grimWitchThirdCharFeedback, grimWitchFourthCharFeedback, grimWitchFifthCharFeedback, grimWitchIntro, grimWitchFrog, grimWitchMainOne, grimWitchMainTwo, grimWitchMainThree, grimWitchMainFour, grimWitchMainFive, grimWitchBook, 
+    grimWitchFirstCharFeedback, grimWitchSecondCharFeedback, grimWitchThirdCharFeedback, grimWitchFourthCharFeedback, grimWitchFifthCharFeedback, grimWitchIntro, grimWitchFrog, grimWitchMainOne, grimWitchMainTwo, grimWitchMainThree, grimWitchMainFour, grimWitchMainFive, grimWitchBook, grimWitchOpenDump, 
 
 //Common Storylets
     grimFirstSecondChar, grimFirstThirdChar, grimFirstCharMentor, grimFirstCharFranco, grimSecondCharMentorOne, grimSecondThirdChar, grimSecondCharFranco, grimThirdCharFranco, grimThirdCharMentor, grimMentorFranco, grimMentorWitchOne

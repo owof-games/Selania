@@ -51,7 +51,7 @@
 
 //A crescita Olobino, cambio asset accesso serra  
     {
-        - olobino.step_tre.colto && (entity_location(FromPondToGreenhouseBlooming) == Safekeeping):
+        - greenhouse_findedCultivables has Olobino && (entity_location(FromPondToGreenhouseBlooming) == Safekeeping):
             ~ move_entity(FromPondToGreenhouse, Safekeeping)
             ~ move_entity(FromPondToGreenhouseBlooming, Pond)
     }
@@ -61,19 +61,6 @@
     {
         - contentsSafekeeping hasnt Grimoire && currentPlace != Bedroom:
             ~ move_entity(Grimoire, currentPlace)
-    }
-
-
-//Dopo aver parlato con Boccale, si apre l'accesso alla discarica
-    {
-        - third_char_main_storylets.one && (entity_location(FromForestToDump) == Safekeeping) && (entity_location(PG) != Forest):
-            Crediamo sia giunto il momento ti parlare, {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-            Ti aspettiamo ai margini della foresta.
-            Capirai come trovarci.
-                ~ move_entity(FromForestToDumpBlocked, Safekeeping)
-                ~ move_entity(FromForestToDump, Forest)
-                ~ move_entity(mapDump, TrainStop)
-                ~ player_accessiblePlaces += Dump
     }
 
 ->->    

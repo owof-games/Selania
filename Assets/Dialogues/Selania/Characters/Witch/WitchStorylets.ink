@@ -1,3 +1,21 @@
+=== open_the_dump
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour = translator(fourthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
+    
+    Crediamo sia giunto il momento ti parlare di persona, {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    Ti aspettiamo ai margini della foresta.
+    Capirai come trovarci.
+
+        ~ move_entity(FromForestToDumpBlocked, Safekeeping)
+        ~ move_entity(FromForestToDump, Forest)
+        ~ move_entity(mapDump, TrainStop)
+        ~ player_accessiblePlaces += Dump
+        
+    -> witch_closing_storylet ->
+    -> main
 
 === witch_intro
         ~ temp charNameOne = translator(firstChar_ActualName)

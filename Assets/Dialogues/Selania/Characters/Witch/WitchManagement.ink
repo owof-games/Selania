@@ -55,6 +55,9 @@
 
 
             //Main storylets
+            - open_the_dump && grimoire_witch hasnt grimWitchOpenDump:
+                ~ grimoire_witch += grimWitchOpenDump
+
             - witch_intro && grimoire_witch hasnt grimWitchIntro:
                 ~ grimoire_witch += grimWitchIntro
 
@@ -64,8 +67,8 @@
             - about_the_book && grimoire_witch hasnt grimWitchBook:
                 ~ grimoire_witch += grimWitchBook    
             
+            
             //Storia personale strega
-
             - witch_first_confession && grimoire_witch hasnt grimWitchMainOne:
                 ~ grimoire_witch += grimWitchMainOne    
 

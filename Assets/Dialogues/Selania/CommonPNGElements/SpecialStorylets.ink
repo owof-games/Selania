@@ -104,6 +104,13 @@ VAR thirdChar_LibraryInvite = false
             //Apertura biblioteca    
                 - are_two_entities_together(ThirdCharacter, PG) && (firstChar_storyletsForRewritingCount + secondChar_storyletsForRewritingCount + thirdChar_storyletsForRewritingCount > openingNest_delay) && entity_location(PG) == Library && player_accessiblePlaces hasnt Nest && firstChar_pauseTalking == 0:
                     -> open_the_nest
-        }            
+        } 
+
+
+        //Speciali della strega
+        {
+            - grimoire_thirdChar has grimThirdCharOne && (entity_location(FromForestToDump) == Safekeeping) && (entity_location(PG) != Forest):
+                -> open_the_dump
+        }          
     
 ->->        
