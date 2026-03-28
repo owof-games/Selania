@@ -38,6 +38,7 @@ VAR achievements_fivePerfectGifts = notActive
 VAR achievements_fullFranco = notActive
     VAR achievements_maxFrancoMissions = 0
     VAR achievements_counterLastingMissions = 0
+    VAR achievements_counterCompletedMissions = 0
     VAR achievements_fullFranco_text = ""
     VAR achievements_fullFranco_notified = false
 
@@ -90,7 +91,7 @@ VAR achievements_goodReader = notActive
         ~ achievements_allSigils = notDiscovered
         ~ achievements_allLetters = notDiscovered
         ~ achievements_fullGreenhouse = notDiscovered
-        ~ achievements_maxFrancoMissions = LIST_COUNT(frog_availableCommonMissions) + LIST_COUNT(frog_availableSpecialMissions)
+        ~ achievements_maxFrancoMissions = frog_availableCommonMissions + frog_availableSpecialMissions
 
 }
 
@@ -369,21 +370,27 @@ VAR achievements_goodReader = notActive
     }
 
 //Achievement Franco.
-    //Prima di tutto guardo qual è la somma delle missioni mancanti.
-    ~ achievements_counterLastingMissions = LIST_COUNT(frog_availableCommonMissions) + LIST_COUNT(frog_availableSpecialMissions)
-        ~ temp completed_missions = achievements_maxFrancoMissions - achievements_counterLastingMissions
+    //Prima di tutto guardo qual è la somma delle missioni mancanti. Svuoto achievements_counterLastingMissions e poi lo aggiorno.
+    ~ achievements_counterLastingMissions = ()
+    ~ achievements_counterLastingMissions = frog_availableCommonMissions + frog_availableSpecialMissions
+    //Le missioni completate sono achievements_maxFrancoMissions, a cui sottraggo quelle mancanti di achievements_counterLastingMissions
+    ~ achievements_counterCompletedMissions = ()
+    ~ achievements_counterCompletedMissions = achievements_maxFrancoMissions - achievements_counterLastingMissions
     {
-        - achievements_maxFrancoMissions == achievements_counterLastingMissions:
+        //Completamento a zero, non parto
+        - LIST_COUNT(achievements_counterCompletedMissions) == 0:
             ~ achievements_fullFranco = notDiscovered
                 ~ achievements_fullFranco_text = ""
 
-        - achievements_maxFrancoMissions != achievements_counterLastingMissions && achievements_counterLastingMissions > 0:
+        //Completamento maggiore di 0 ma minore di tutte quelle disponibili
+        - LIST_COUNT(achievements_counterCompletedMissions) < LIST_COUNT(achievements_maxFrancoMissions) && LIST_COUNT(achievements_counterCompletedMissions) > 0:
             ~ achievements_fullFranco = inProgress
-                ~ achievements_fullFranco_text = "{completed_missions}/{achievements_maxFrancoMissions}"
+                ~ achievements_fullFranco_text = "{LIST_COUNT(achievements_counterCompletedMissions)}/{LIST_COUNT(achievements_maxFrancoMissions)}"
 
-        - achievements_counterLastingMissions == 0:
+        //Se le missioni sono uguali alle massime, ho completato l'achievement.
+        - achievements_counterCompletedMissions == 0:
             ~ achievements_fullFranco = Discovered
-                ~ achievements_fullFranco_text = "{completed_missions}/{achievements_maxFrancoMissions}"
+                ~ achievements_fullFranco_text = "{LIST_COUNT(achievements_counterCompletedMissions)}/{LIST_COUNT(achievements_maxFrancoMissions)}"
                
                 {
                     - achievements_fullFranco_notified == false:
