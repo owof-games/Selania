@@ -78,5 +78,44 @@
 -> main  
         
     
-        
-        
+=== grimoire_common_storylets_updater
+
+        {
+            //First Char
+            - first_second_chit_chat && grimoire_firstChar hasnt grimFirstSecondChar:
+                ~ grimoire_firstChar += grimFirstSecondChar
+
+            - first_mentor_chit_chat && grimoire_firstChar hasnt grimFirstCharMentor:
+                ~ grimoire_firstChar += grimFirstCharMentor
+
+            - frog_and_first_char_chit_chat && grimoire_firstChar hasnt grimFirstCharFranco:
+                ~ grimoire_firstChar += grimFirstCharFranco
+
+            - third_first_chit_chat && grimoire_firstChar hasnt grimFirstThirdChar:
+                ~ grimoire_firstChar += grimFirstThirdChar 
+
+            //Second Char
+            - about_violence_and_peace && grimoire_secondChar hasnt grimSecondCharMentorOne:
+                ~ grimoire_firstChar += grimSecondCharMentorOne
+
+            - frog_and_second_char_chit_chat && grimoire_secondChar hasnt grimSecondCharFranco:
+                ~ grimoire_firstChar += grimSecondCharFranco
+
+            - third_second_chit_chat && grimoire_secondChar hasnt grimSecondThirdChar:
+                ~ grimoire_firstChar += grimSecondThirdChar
+
+            //Third Char
+            - third_mentor_chit_chat && grimoire_thirdChar hasnt grimThirdCharMentor:
+                ~ grimoire_firstChar += grimThirdCharMentor 
+
+            - frog_and_third_char_chit_chat && grimoire_thirdChar hasnt grimThirdCharFranco:
+                ~ grimoire_firstChar += grimThirdCharFranco
+
+            //Mentor
+            - the_witch_and_the_mentor && grimoire_fifthChar hasnt grimMentorWitchOne:
+                ~ grimoire_firstChar += grimMentorWitchOne
+
+            - frog_and_mentor_chit_chat && grimoire_fifthChar hasnt grimMentorFranco:
+                ~ grimoire_firstChar += grimMentorFranco              
+        }
+->->        

@@ -12,7 +12,14 @@ LIST grimoire_allElements =
 //Storylets Chitarra
     grimFirstCharOne, grimFirstCharTwo, grimFirstCharThree, grimFirstCharFour, grimFirstCharFive, grimFirstCharSix, grimFirstCharSeven, grimFirstCharEight, grimFirstCharNine, grimFirstCharTen, grimFirstCharEleven, grimFirstCharTwelve, grimFirstOpenKitchen, grimFirstCharNovel, grimFirstCharDog, grimFirstCharKitchenOne, grimFirstCharKitchenTwo, grimFirstCharKitchenThree, grimFirstCharKitchenEnded, grimFirstCharKitchenAlone, grimFirstCharProposal, grimFirstCharNewName, 
 //Common Storylets
-    grimFirstSecondChar, grimFirstThirdChar, grimFirstCharMentor, grimFirstCharFranco, grimSecondCharMentorOne, grimSecondThirdChar, grimSecondCharFranco, grimThirdCharFranco, grimThirdCharMentor, grimMentorFranco, grimMentorWitch,
+    grimFirstSecondChar, grimFirstThirdChar, grimFirstCharMentor, grimFirstCharFranco, grimSecondCharMentorOne, grimSecondThirdChar, grimSecondCharFranco, grimThirdCharFranco, grimThirdCharMentor, grimMentorFranco, grimMentorWitchOne
 
 VAR grimoire_firstChar = ()
+VAR grimoire_secondChar = ()
+VAR grimoire_thirdChar = ()
+VAR grimoire_fourthChar = ()
+VAR grimoire_fifthChar = ()
 VAR grimoire_Appendices = ()
+
+
+
