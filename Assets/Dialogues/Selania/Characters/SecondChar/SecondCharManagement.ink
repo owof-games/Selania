@@ -84,7 +84,7 @@
     
 //Tengo conto delle interazioni avute per aprire la possibilità della riscrittura
     VAR secondChar_storyletsForRewritingCount = 0.00
-    VAR secondChar_minStoryletsForRewriting = 9.00   
+    VAR secondChar_minStoryletsForRewriting = grimSecondCharNine   
     VAR secondChar_specialEvent = false
     VAR secondChar_justTalked = false
 
@@ -332,6 +332,90 @@
         ~ secondChar_justTalked = true
         //L'animazione per via dell'informazione nuova
         @animation:RewriterBook
+    {
+            //Main storylets
+            - second_char_main_storylets.one && grimoire_secondChar hasnt grimSecondCharOne:
+                ~ grimoire_secondChar += grimSecondCharOne
 
+            - second_char_main_storylets.two && grimoire_secondChar hasnt grimSecondCharTwo:
+                ~ grimoire_secondChar += grimSecondCharTwo
+
+            - second_char_main_storylets.three && grimoire_secondChar hasnt grimSecondCharThree:
+                ~ grimoire_secondChar += grimSecondCharThree    
+
+            - second_char_main_storylets.four && grimoire_secondChar hasnt grimSecondCharFour:
+                ~ grimoire_secondChar += grimSecondCharFour  
+
+            - second_char_main_storylets.five && grimoire_secondChar hasnt grimSecondCharFive:
+                ~ grimoire_secondChar += grimSecondCharFive
+
+            - second_char_main_storylets.six && grimoire_secondChar hasnt grimSecondCharSix:
+                ~ grimoire_secondChar += grimSecondCharSix
+
+            - second_char_main_storylets.seven && grimoire_secondChar hasnt grimSecondCharSeven:
+                ~ grimoire_secondChar += grimSecondCharSeven
+
+            - second_char_main_storylets.eight && grimoire_secondChar hasnt grimSecondCharEight:
+                ~ grimoire_secondChar += grimSecondCharEight    
+
+            - second_char_main_storylets.nine && grimoire_secondChar hasnt grimSecondCharNine:
+                ~ grimoire_secondChar += grimSecondCharNine  
+
+            - second_char_main_storylets.ten && grimoire_secondChar hasnt grimSecondCharTen:
+                ~ grimoire_secondChar += grimSecondCharTen 
+
+            - second_char_main_storylets.eleven && grimoire_secondChar hasnt grimSecondCharEleven:
+                ~ grimoire_secondChar += grimSecondCharEleven   
+
+            - second_char_main_storylets.twelve && grimoire_secondChar hasnt grimSecondCharTwelve:
+                ~ grimoire_secondChar += grimSecondCharTwelve
+
+            //Storylets legati alla cucina
+            - cooking_with_second_char.second_theme && grimoire_secondChar hasnt grimSecondCharKitchenOne:
+                ~ grimoire_secondChar += grimSecondCharKitchenOne  
+
+            - cooking_with_second_char.second_theme && grimoire_secondChar hasnt grimSecondCharKitchenTwo:
+                ~ grimoire_secondChar += grimSecondCharKitchenTwo     
+
+            - cooking_with_second_char.third_theme && grimoire_secondChar hasnt grimSecondCharKitchenThree:
+                ~ grimoire_secondChar += grimSecondCharKitchenThree
+
+            - ending_cooking_with_second_char && grimoire_secondChar hasnt grimSecondCharKitchenEnded:
+                ~ grimoire_secondChar += grimSecondCharKitchenEnded 
+
+            - second_char_cooking_alone && grimoire_secondChar hasnt grimSecondCharKitchenAlone:
+                ~ grimoire_secondChar += grimSecondCharKitchenAlone                
+
+            //Riscrittura
+            - rewriting_proposal_second_character.confession && grimoire_secondChar hasnt grimSecondCharProposal:
+                ~ grimoire_secondChar += grimSecondCharProposal
+
+            - rewriting_proposal_second_character.close && grimoire_secondChar hasnt grimSecondCharNewName:
+                ~ grimoire_secondChar += grimSecondCharNewName
+            
+            //Storylets speciali
+            - open_the_library && grimoire_secondChar hasnt grimSecondOpenLibrary:
+                ~ grimoire_secondChar += grimSecondOpenLibrary
+
+            - a_story_of_rebellion && grimoire_secondChar hasnt grimSecondCharNovel:
+                ~ grimoire_secondChar += grimSecondCharNovel
+
+            - dog_second_char && grimoire_secondChar hasnt grimSecondCharDog:
+                ~ grimoire_secondChar += grimSecondCharDog
+
+            //Lettere    
+            - second_character_notes.one && grimoire_secondChar hasnt grimSecondCharLetterOne:
+                ~ grimoire_secondChar += grimSecondCharLetterOne
+
+            - second_character_notes.two && grimoire_secondChar hasnt grimSecondCharLetterTwo:
+                ~ grimoire_secondChar += grimSecondCharLetterTwo
+
+            - second_character_notes.three && grimoire_secondChar hasnt grimSecondCharLetterThree:
+                ~ grimoire_secondChar += grimSecondCharLetterThree        
+
+
+        }
+        //Aggiornamento lista di quelli comuni
+        -> grimoire_common_storylets_updater ->
 
 ->->

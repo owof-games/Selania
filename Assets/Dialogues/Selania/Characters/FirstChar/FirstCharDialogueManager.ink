@@ -46,7 +46,7 @@ grimFirstCharNine
                 -> ask
         
         //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo         
-        - grimoire_firstChar has grimFirstCharProposal && rewriting_proposal_first_character:
+        - grimoire_firstChar has grimFirstCharProposal:
                 -> ask
         
         //Vogliamo offrire un dono            
@@ -137,7 +137,7 @@ grimFirstCharNine
                     -> rewriting_proposal_first_character
     
         //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo          
-            + {grimoire_firstChar has grimFirstCharProposal && rewriting_proposal_first_character} Iniziamo la riscrittura?
+            + {grimoire_firstChar has grimFirstCharProposal} Iniziamo la riscrittura?
                     -> rewriting_proposal_first_character
             
         
@@ -156,6 +156,10 @@ grimFirstCharNine
                     - kitchen_secondCharIsCooking:
                         Uh, mi sa che la cucina è occupata da {charNameTwo}, sta cucinando qualcosa di strano.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                             ->main
+
+                    - kitchen_thirdCharIsCooking:
+                        Mi farebbe piacere ama, ma c'è {charNameThree} a fare non so cosa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                            ->main        
 
                     - contentsKitchen has Franco:
                         C'è già una certa ranocchia che sta aspettando di cucinare con te. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious 

@@ -873,7 +873,7 @@
                 Ma non mi sento mai davvero <b>a casa</b>.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 E anche se sono una bestiola ansiosa e guardo sempre al peggio, il dubbio mi viene spesso.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 E se anche io come loro potessi in realtà fiorire, scendendo?
-          
+            -
 
             
             -> first_char_closing_storylet ->
@@ -1060,7 +1060,7 @@
                 Per la pulizia.
                 Per scioperare.
                 Per dare fastidio alla logica di {player_name}.  #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed  
-          
+            -
 
             
             -> first_char_closing_storylet ->
@@ -1261,7 +1261,7 @@
                 E poi alla fine non faccio mai nulla di crudele o che.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Al massimo mi intristisco in un angolino e bona.
                 Cfirei sia una cosa neutra? Non è da persona cattiva?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-            
+            -
 
             
             -> first_char_closing_storylet ->
