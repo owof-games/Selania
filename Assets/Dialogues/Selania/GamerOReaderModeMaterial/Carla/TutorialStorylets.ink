@@ -362,7 +362,7 @@
         {
             - entity_location(Carla) != Forest:
                 ~ move_entity(Carla, Forest)
-                -> main
+                -> greenhouse_entry_check
         }
 
 ->->

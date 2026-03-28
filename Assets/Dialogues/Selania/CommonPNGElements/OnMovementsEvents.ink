@@ -46,7 +46,7 @@
 //Idem per i coltivabili
     {
         - greenhouse_allCultivables == ():
-            ~ greenhouse_allCultivables = greenhouse_cultivable
+            ~ greenhouse_allCultivables += greenhouse_cultivable
     }
 
 //A crescita Olobino, cambio asset accesso serra  
