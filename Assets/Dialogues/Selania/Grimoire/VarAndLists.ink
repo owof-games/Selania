@@ -10,7 +10,23 @@ LIST grimoire_allElements =
 //Appendici
     grimChoicesMentor, grimChoicesWitch, grimGreenhouseMentor, grimKitchenChitarra, grimRewritingMentor, grimSigilsBoccale, grimSigilsMentor, grimSigilsWitch,
 //Storylets Chitarra
-    grimFirstCharOne, grimFirstCharTwo, grimFirstCharThree, grimFirstCharFour, grimFirstCharFive, grimFirstCharSix, grimFirstCharSeven, grimFirstCharEight, grimFirstCharNine, grimFirstCharTen, grimFirstCharEleven, grimFirstCharTwelve, grimFirstOpenKitchen, grimFirstCharNovel, grimFirstCharDog, grimFirstCharKitchenOne, grimFirstCharKitchenTwo, grimFirstCharKitchenThree, grimFirstCharKitchenEnded, grimFirstCharKitchenAlone, grimFirstCharProposal, grimFirstCharNewName, grimFirstCharMentorFeedback, grimFirstCharLetterOne, grimFirstCharLetterTwo, grimFirstCharLetterThree, 
+    grimFirstCharOne, grimFirstCharTwo, grimFirstCharThree, grimFirstCharFour, grimFirstCharFive, grimFirstCharSix, grimFirstCharSeven, grimFirstCharEight, grimFirstCharNine, grimFirstCharTen, grimFirstCharEleven, grimFirstCharTwelve, grimFirstOpenKitchen, grimFirstCharNovel, grimFirstCharDog, grimFirstCharKitchenOne, grimFirstCharKitchenTwo, grimFirstCharKitchenThree, grimFirstCharKitchenEnded, grimFirstCharKitchenAlone, grimFirstCharProposal, grimFirstCharNewName, grimFirstCharMentorFeedback, grimFirstCharLetterOne, grimFirstCharLetterTwo, grimFirstCharLetterThree,
+
+//Storylets Riccio
+    grimSecondCharOne, grimSecondCharTwo, grimSecondCharThree, grimSecondCharFour, grimSecondCharFive, grimSecondCharSix, grimSecondCharSeven, grimSecondCharEight, grimSecondCharNine, grimSecondCharTen, grimSecondCharEleven, grimSecondCharTwelve, grimSecondOpenLibrary, grimSecondCharNovel, grimSecondCharDog, grimSecondCharKitchenOne, grimSecondCharKitchenTwo, grimSecondCharKitchenThree, grimSecondCharKitchenEnded, grimSecondCharKitchenAlone, grimSecondCharProposal, grimSecondCharNewName, grimSecondCharMentorFeedback, grimSecondCharLetterOne, grimSecondCharLetterTwo, grimSecondCharLetterThree,
+
+//Storylets Boccale
+    grimThirdCharOne, grimThirdCharTwo, grimThirdCharThree, grimThirdCharFour, grimThirdCharFive, grimThirdCharSix, grimThirdCharSeven, grimThirdCharEight, grimThirdCharNine, grimThirdCharTen, grimThirdCharEleven, grimThirdCharTwelve, grimThirdOpenNest, grimThirdCharNovel, grimThirdCharDog, grimThirdCharKitchenOne, grimThirdCharKitchenTwo, grimThirdCharKitchenThree, grimThirdCharKitchenEnded, grimThirdCharKitchenAlone, grimThirdCharProposal, grimThirdCharNewName, grimThirdCharMentorFeedback, grimThirdCharLetterOne, grimThirdCharLetterTwo, grimThirdCharLetterThree,
+
+//Storylets Nonna Molotov
+    grimFourthCharOne, grimFourthCharTwo, grimFourthCharThree, grimFourthCharFour, grimFourthCharFive, grimFourthCharSix, grimFourthCharSeven, grimFourthCharEight, grimFourthCharNine, grimFourthCharTen, grimFourthCharEleven, grimFourthCharTwelve, grimFourthCharNovel, grimFourthCharDog, grimFourthCharKitchenOne, grimFourthCharKitchenTwo, grimFourthCharKitchenThree, grimFourthCharKitchenEnded, grimFourthCharKitchenAlone, grimFourthCharProposal, grimFourthCharNewName, grimFourthCharMentorFeedback, grimFourthCharLetterOne, grimFourthCharLetterTwo, grimFourthCharLetterThree,
+
+//Storylets Mostro
+    grimFifthCharOne, grimFifthCharTwo, grimFifthCharThree, grimFifthCharFour, grimFifthCharFive, grimFifthCharSix, grimFifthCharSeven, grimFifthCharEight, grimFifthCharNine, grimFifthCharTen, grimFifthCharEleven, grimFifthCharTwelve, grimFifthCharNovel, grimFifthCharDog, grimFifthCharKitchenOne, grimFifthCharKitchenTwo, grimFifthCharKitchenThree, grimFifthCharKitchenEnded, grimFifthCharKitchenAlone, grimFifthCharProposal, grimFifthCharNewName, grimFifthCharMentorFeedback, grimFifthCharLetterOne, grimFifthCharLetterTwo, grimFifthCharLetterThree,
+
+//Storylets Mentore
+    grimMentorOne, grimMentorTwo, grimMentorThree, grimMentorFour, grimMentorFive, grimMentorSix, grimMentorSeven, grimMentorEight, grimMentorNine, grimMentorTen, grimMentorEleven, grimMentorTwelve, grimMentorOpenGreenhouse, grimMentorNovel, grimMentorDog,
+
 //Common Storylets
     grimFirstSecondChar, grimFirstThirdChar, grimFirstCharMentor, grimFirstCharFranco, grimSecondCharMentorOne, grimSecondThirdChar, grimSecondCharFranco, grimThirdCharFranco, grimThirdCharMentor, grimMentorFranco, grimMentorWitchOne
 

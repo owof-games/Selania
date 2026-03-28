@@ -2,7 +2,6 @@
 {debug: passo per dump_graphic_changer. listDumpGraphics contiene {listDumpGraphics}, mentre listDumpCharActivators contiene {listDumpCharActivators}}
 LIST listDumpGraphics = firstStateDump, secondStateDump, thirdStateDump, fourthStateDump, fifthStateDump
 VAR listDumpCharActivators = ()
-VAR dumpVariationActivator = 2
 
 //La logica è: ogni volta che con una personaggia superiamo minStoryletsForRewriting (es: firstChar_minStoryletsForRewriting), il valore di listDumpGraphics sale e si sblocca un nuovo oggetto
 //Per evitare che unx PNG attivi due volte il processo, metto il suo nome nella lista listDumpCharActivators, e controllo da lì.
@@ -10,7 +9,7 @@ VAR dumpVariationActivator = 2
 
 //Step uno: variare se necessario lo stato di listDumpGraphics
     {
-        - (firstChar_storyletsForRewritingCount >= firstChar_minStoryletsForRewriting + dumpVariationActivator) && listDumpCharActivators hasnt FirstCharacter:
+        - grimoire_firstChar has grimFirstCharTwelve && listDumpCharActivators hasnt FirstCharacter:
             ~ listDumpGraphics ++
             ~ listDumpCharActivators += FirstCharacter
             {debug: il valore di firstChar_storyletsForRewritingCount è uguale a {firstChar_storyletsForRewritingCount}, e per questo ho aumentato il valore di listDumpGraphics e aggiunto FirstCharacter a listDumpCharActivators. listDumpGraphics contiene {listDumpGraphics}, mentre listDumpCharActivators contiene {listDumpCharActivators}}
@@ -18,28 +17,28 @@ VAR dumpVariationActivator = 2
     }
 
     {
-        - (secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting + dumpVariationActivator) && listDumpCharActivators hasnt SecondCharacter:
+        - grimoire_secondChar has grimSecondCharTwelve && listDumpCharActivators hasnt SecondCharacter:
             ~ listDumpGraphics ++
             ~ listDumpCharActivators += SecondCharacter
             {debug: il valore di secondChar_storyletsForRewritingCount è uguale a {secondChar_storyletsForRewritingCount}, e per questo ho aumentato il valore di listDumpGraphics e aggiunto SecondCharacter a listDumpCharActivators. listDumpGraphics contiene {listDumpGraphics}, mentre listDumpCharActivators contiene {listDumpCharActivators}}
     }
 
     {
-        - (thirdChar_storyletsForRewritingCount >= thirdChar_minStoryletsForRewriting + dumpVariationActivator) && listDumpCharActivators hasnt ThirdCharacter:
+        - grimoire_thirdChar has grimThirdCharTwelve && listDumpCharActivators hasnt ThirdCharacter:
             ~ listDumpGraphics ++
             ~ listDumpCharActivators += ThirdCharacter
             {debug: il valore di thirdChar_storyletsForRewritingCount è uguale a {thirdChar_storyletsForRewritingCount}, e per questo ho aumentato il valore di listDumpGraphics e aggiunto ThirdCharacter a listDumpCharActivators. listDumpGraphics contiene {listDumpGraphics}, mentre listDumpCharActivators contiene {listDumpCharActivators}}
     }
 
     {
-        - (fourthChar_storyletsForRewritingCount >= fourthChar_minStoryletsForRewriting + dumpVariationActivator) && listDumpCharActivators hasnt FourthCharacter:
+        - grimoire_fourthChar has grimFourthCharTwelve && listDumpCharActivators hasnt FourthCharacter:
             ~ listDumpGraphics ++
             ~ listDumpCharActivators += FourthCharacter
             {debug: il valore di fourthChar_storyletsForRewritingCount è uguale a {fourthChar_storyletsForRewritingCount}, e per questo ho aumentato il valore di listDumpGraphics e aggiunto FourthCharacter a listDumpCharActivators. listDumpGraphics contiene {listDumpGraphics}, mentre listDumpCharActivators contiene {listDumpCharActivators}}
     }
 
     {
-        - (fifthChar_storyletsForRewritingCount >= fifthChar_minStoryletsForRewriting + dumpVariationActivator) && listDumpCharActivators hasnt FifthCharacter:
+        - grimoire_fifthChar has grimFifthCharTwelve && listDumpCharActivators hasnt FifthCharacter:
             ~ listDumpGraphics ++
             ~ listDumpCharActivators += FifthCharacter
             {debug: il valore di fifthChar_storyletsForRewritingCount è uguale a {fifthChar_storyletsForRewritingCount}, e per questo ho aumentato il valore di listDumpGraphics e aggiunto FifthCharacter a listDumpCharActivators. listDumpGraphics contiene {listDumpGraphics}, mentre listDumpCharActivators contiene {listDumpCharActivators}}
