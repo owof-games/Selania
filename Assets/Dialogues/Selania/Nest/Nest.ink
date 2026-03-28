@@ -5,11 +5,6 @@
 {debug: <i>La lista degli oggetti nella stanza è: {contentsNest}.}
 
 {
-    - contentsBook hasnt NestRecap:
-    ~ move_entity(NestRecap, BookPlace)
-}
-
-{
     - nest == 1:
         Vecchie piogge e onde come monito.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         {

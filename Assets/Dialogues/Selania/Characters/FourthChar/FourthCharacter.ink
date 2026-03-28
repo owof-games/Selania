@@ -124,7 +124,6 @@
     	        -> gender ->
     	Grandioso, io uso i femminili.      
              ~ fourthChar_pauseTalking = fourthChar_pauseDuration
-             ~ move_entity(FourthRecap, BookPlace)
             -> main
     
     = two

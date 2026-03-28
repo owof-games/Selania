@@ -90,9 +90,7 @@
                     Altri bambini? Ma questo posto è pieno di pericoli!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
             }
         - 
-        
-            ~ move_entity(ThirdRecap, BookPlace)
-            ~ thirdChar_storyletsForRewritingCount ++   
+
 
         -> third_char_closing_storylet ->
         -> options_third_character
@@ -153,8 +151,6 @@
                          
             Su!
             - 
-
-            ~ thirdChar_storyletsForRewritingCount ++
             -> third_char_closing_storylet ->
             -> options_third_character
 
@@ -205,7 +201,7 @@
 
         - 
 
-            ~ thirdChar_storyletsForRewritingCount ++
+            
             -> third_char_closing_storylet ->
             -> options_third_character
             
@@ -255,7 +251,7 @@
 
         - 
 
-        ~ thirdChar_storyletsForRewritingCount ++
+        
         -> third_char_closing_storylet ->
         -> options_third_character
 
@@ -294,7 +290,7 @@
 
         - 
 
-            ~ thirdChar_storyletsForRewritingCount ++
+            
             -> third_char_closing_storylet ->
             -> options_third_character
     
@@ -330,7 +326,7 @@
 
         Comunque qui non c'è la scuola e quindi è bello.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
                     
-         ~ thirdChar_storyletsForRewritingCount ++           
+                  
         -> third_char_closing_storylet ->            
         -> options_third_character
     
@@ -383,7 +379,7 @@
 
         - 
 
-        ~ thirdChar_storyletsForRewritingCount ++    
+          
         -> third_char_closing_storylet ->        
         -> options_third_character     
             
@@ -419,7 +415,7 @@
 
             Forse nello stagno posso imparare a nuotare.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
 
-                ~ thirdChar_storyletsForRewritingCount ++
+                
                 -> third_char_closing_storylet ->        
                 -> options_third_character 
     
@@ -488,7 +484,7 @@
 
         - 
 
-            ~ thirdChar_storyletsForRewritingCount ++
+            
             -> third_char_closing_storylet ->
             -> options_third_character
     
@@ -530,7 +526,7 @@
         Essere adulti è terribile.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
         - 
 
-            ~ thirdChar_storyletsForRewritingCount ++
+            
             -> third_char_closing_storylet ->
             -> options_third_character 
     
@@ -572,7 +568,7 @@
         Comunque è una fortuna che qui c'è un bambino!
         - 
                 
-                ~ thirdChar_storyletsForRewritingCount ++
+                
                 -> third_char_closing_storylet ->
                 -> options_third_character 
     
@@ -607,6 +603,6 @@
 
         - 
 
-            ~ thirdChar_storyletsForRewritingCount ++
+            
             -> third_char_closing_storylet ->
             -> options_third_character   

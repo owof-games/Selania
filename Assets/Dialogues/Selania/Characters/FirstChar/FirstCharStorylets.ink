@@ -163,8 +163,6 @@
         Devo assolutamente idratarmi.
 
             ~ move_entity(FirstCharacter, Pond)
-            ~ move_entity(FirstRecap, BookPlace)
-            
 
             -> first_char_closing_storylet ->
             -> main

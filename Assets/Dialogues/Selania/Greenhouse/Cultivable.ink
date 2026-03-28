@@ -1263,10 +1263,7 @@
        - are_two_entities_together(PG,Grimoire):
            @animation:Grimoire
     }
-    {
-        - contentsBook hasnt GreenhouseRecap:
-        ~ move_entity(GreenhouseRecap, BookPlace)
-    }
+
     @animation:Backpack
     
     <i>{~{player_name} ha raccolto|{player_name} ha ricevuto in dono|Tra le dita {player_name} si ritrova|Nello zaino {player_name} ora ha|{player_name} riceve in dono|Ecco per {player_name}} {ingredientTranslator(greenhouse_chosenCultivable)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}

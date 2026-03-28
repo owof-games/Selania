@@ -36,23 +36,23 @@
     ~ temp mentorName = translator(mentor_ActualName)
 {
     //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-        - thirdChar_storyletsForRewritingCount >= thirdChar_minStoryletsForRewriting && about_violence_and_peace && not rewriting_proposal_third_character && not tutorial_mentorInkAndRewriting:
+        - grimoire_thirdChar has thirdChar_minStoryletsForRewriting && not rewriting_proposal_third_character && grimoire_Appendices hasnt grimRewritingMentor:
                 -> ask
 
     //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
-        - thirdChar_storyletsForRewritingCount >= thirdChar_minStoryletsForRewriting && about_violence_and_peace && not rewriting_proposal_third_character && tutorial_mentorInkAndRewriting:
+        - grimoire_thirdChar has thirdChar_minStoryletsForRewriting && grimoire_thirdChar hasnt grimThirdCharProposal && grimoire_Appendices has grimRewritingMentor:
                 -> ask
 
     //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo
-        - thirdChar_storyletsForRewritingCount >= thirdChar_minStoryletsForRewriting && about_violence_and_peace && rewriting_proposal_third_character:
+        - grimoire_thirdChar has grimThirdCharProposal:
                 -> ask
 
     //Vogliamo offrire un dono
-        - not third_story_gift.ink_outcome && backpack_findedGifts != ():
+        - thirdChar_giftedObject == () && backpack_findedGifts != ():
                 -> ask
 
     //Vogliamo cucinare assieme (dopo almeno uno storylet assieme)
-        - third_char_main_storylets.four && open_the_kitchen && not ending_cooking_with_third_char && kitchen_thirdCharIsCooking==false:
+        - player_accessiblePlaces has Kitchen && grimoire_thirdChar has grimThirdCharOne && grimoire_thirdChar hasnt grimThirdCharKitchenEnded && kitchen_thirdCharIsCooking==false:
                 -> ask
 
     - else:
@@ -103,7 +103,7 @@
 
         //Azioni legate alla riscrittura
             //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-            + {(thirdChar_storyletsForRewritingCount >= thirdChar_minStoryletsForRewriting) && not rewriting_proposal_third_character && not tutorial_mentorInkAndRewriting} Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
+            + {(thirdChar_storyletsForRewritingCount >= thirdChar_minStoryletsForRewriting) && not rewriting_proposal_third_character && grimoire_Appendices hasnt grimRewritingMentor} Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
                     Mi sa che {mentorName} vuole dirti qualcosa prima.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
                         {
                             - are_two_entities_together(Mentor,PG):
@@ -113,26 +113,26 @@
                                 -> main
 
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
-            + {(thirdChar_storyletsForRewritingCount >= thirdChar_minStoryletsForRewriting) && not rewriting_proposal_third_character && tutorial_mentorInkAndRewriting} Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
+            + {grimoire_thirdChar has thirdChar_minStoryletsForRewriting && grimoire_thirdChar hasnt grimThirdCharProposal && grimoire_Appendices has grimRewritingMentor} Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
                     //Incremento le variazioni del libro della Riscrittora
                         ~ book_BGVariations ++
                             -> rewriting_proposal_third_character
 
         //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo
-                + {thirdChar_storyletsForRewritingCount >= thirdChar_minStoryletsForRewriting && rewriting_proposal_third_character} Iniziamo la riscrittura?
+                + {grimoire_thirdChar has grimThirdCharProposal} Iniziamo la riscrittura?
                         -> rewriting_proposal_third_character
 
 
         //Azioni legate alla costruzione della relazione
 
             //Offrire un dono
-                + {not third_story_gift.ink_outcome && backpack_findedGifts != ()} Ti voglio dare questa cosa.
+                + {thirdChar_giftedObject == () && backpack_findedGifts != ()} Ti voglio dare questa cosa.
                             -> third_story_gift
 
 
 
             //Cucinare assieme
-            + {third_char_main_storylets.two && open_the_kitchen && not ending_cooking_with_third_char && kitchen_thirdCharIsCooking==false}Ti va di cucinare qualcosa assieme?
+            + {player_accessiblePlaces has Kitchen && grimoire_thirdChar has grimThirdCharOne && grimoire_thirdChar hasnt grimThirdCharKitchenEnded && kitchen_thirdCharIsCooking==false}Ti va di cucinare qualcosa assieme?
 
                 {
                     - kitchen_firstCharIsCooking:
@@ -142,6 +142,14 @@
                     - kitchen_firstCharCookingTogetherInvite:
                         C'è già {charNameOne} che ti sta aspettando.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
                             ->main
+
+                    - kitchen_secondCharIsCooking:
+                        C'è già {charNameTwo} che cucina qualcosa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+                            ->main
+
+                    - kitchen_secondCharCookingTogetherInvite:
+                        C'è già {charNameTwo} che ti sta aspettando.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+                            ->main        
 
                     - contentsKitchen has Franco:
                         Ma la mia amica rana ti sta aspettando lì!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
