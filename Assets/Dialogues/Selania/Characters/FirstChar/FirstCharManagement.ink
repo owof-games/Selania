@@ -383,8 +383,20 @@
             - dog_first_char && grimoire_firstChar hasnt grimFirstCharDog:
                 ~ grimoire_firstChar += grimFirstCharDog
 
+            //Lettere    
+            - first_character_notes.one && grimoire_firstChar hasnt grimFirstCharLetterOne:
+                ~ grimoire_firstChar += grimFirstCharLetterOne
+
+            - first_character_notes.two && grimoire_firstChar hasnt grimFirstCharLetterTwo:
+                ~ grimoire_firstChar += grimFirstCharLetterTwo
+
+            - first_character_notes.three && grimoire_firstChar hasnt grimFirstCharLetterThree:
+                ~ grimoire_firstChar += grimFirstCharLetterThree        
+
+
         }
         //Aggiornamento lista di quelli comuni
         -> grimoire_common_storylets_updater ->
 
 ->->
+

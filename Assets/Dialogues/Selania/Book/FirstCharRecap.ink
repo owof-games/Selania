@@ -13,7 +13,7 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 {
-    - first_character_notes.three.bookUpdate:
+    - grimoire_firstChar has grimFirstCharLetterThree:
         <b><i>Terza lettera di {charNameOne}.</b></i><N>Ciao ama!<N><>
      {
             - firstChar_ActualName has Triangolo:
@@ -55,7 +55,7 @@
         Un saluto.<N><b>{charNameOne}</b>.
 }
 {
-    - first_character_notes.two.bookUpdate:
+    - grimoire_firstChar has grimFirstCharLetterTwo:
         <b><i>Seconda lettera di {charNameOne}.</b></i><N>Ciao {player_name}, qui è sempre {charNameOne} che ti scrive.<N><>
        {
             - firstChar_ActualName has Triangolo:
@@ -96,7 +96,7 @@
     E lì invece? Come stanno le tue piante?<N>Sono arrivate nuove persone interessanti?<N>Sicuro, nessunə più interessante di me!<N>A presto, <b>{charNameOne}</b>.
 }
 {
-    - first_character_notes.one.bookUpdate:
+    - grimoire_firstChar has grimFirstCharLetterOne:
         <b><i>Prima lettera di {charNameOne}.</b></i><N><>
     
         Ciao {player_name}, come stai?<N>Qui, questi primi giorni qui sono stati strani.<N>A quanto pare la mia assenza è stata solo per qualche ora.<N>E nessunə mi ha fatto domande su nulla.<N>Eppure io vedo i cambiamenti, i cambiamenti in me.
@@ -131,9 +131,9 @@
 }
 {
     - first_story_gift.ink_outcome: <b><i>Appunti su dono e riscrittura.</b></i><N><>
-}
+} 
 {
-    - first_character_feedback.bookUpdate: {mentorName} ha detto a {player_name} che <>
+    - grimoire_firstChar has grimFirstCharMentorFeedback: {mentorName} ha detto a {player_name} che <>
 
         {
             - firstChar_ActualName has Triangolo: ha aiutato {translator(firstChar_ActualName)} a trovare il bello nel quotidiano, cosa che {mentorName} apprezza molto.
@@ -149,7 +149,7 @@
         }
 }
     {
-    - rewriting_proposal_first_character.close: 
+    - grimoire_firstChar has grimFirstCharNewName:
         Dopo la riscrittura, ha scelto un nuovo nome: <b><i>{translator(firstChar_ActualName)}.</b></i><N><>
     }
 {firstAffinityFeedback:
@@ -172,7 +172,7 @@
         }
 }        
 {
-    - rewriting_proposal_first_character.bookUpdate:
+    - grimoire_firstChar has grimFirstCharProposal:
         Dopo il dono, {charNameOne} ha detto a {player_name} di aver capito perché si sia ritrovata con questo nome. Crede che la chitarra sia la cosa media, la cosa che possono fare tutt3. Lei si aspettava grandi cose dalla vita, e invece ora ha una vita comune. E si chiede se questo è il massimo che può aspettarsi dalla vita, e se le cose non andranno sempre peggio.
 }        
     {
@@ -197,12 +197,12 @@
     }
     
     {
-        - food_gift_first_char.bookUpdate:
+        - grimoire_firstChar has grimFirstCharKitchenAlone:
             Dopo aver cucinato da sola, {charNameOne} ha parlato del rapporto che ha con sua madre, e di come lei non la capisca fino in fondo. Ma sa che è una donna che parla poco ma ci tiene tanto alle altre persone. Ha raccontato a {player_name} del cibo che ha preparato quando è salita a trovarla, del riordino della casa, del saper dire "Ti voglio bene" solo coi fornelli. E che da quando {charNameOne} questa cosa un po' l'ha portata con sé, cucinando cenoni con le ame.
     }
 
     {
-        - ending_cooking_with_first_char.bookUpdate:
+        - grimoire_firstChar has grimFirstCharKitchenEnded:
             Cucinando assieme, {charNameOne} e {player_name} hanno preparato un buon piatto di {kitchen_firstCharRecipe}. <>
             {
                 - at_table_with_first_char.good_reaction:
@@ -213,103 +213,103 @@
             }
     }
     {
-        - cooking_with_first_char.first_theme.bookUpdate:
+        - grimoire_firstChar has grimFirstCharKitchenOne:
             Durante l'incontro in cucina, {charNameOne} ha parlato delle sue relazione. Ha raccontato di aver avuto un'infanzia senza amici, ma con un forte legame con suo padre, che le ha passato l'amore per la musica. E dai suoi ha imparato che le relazioni sono cura e sacrificio. Con l'arrivo al nord ha fatto molte amicizie in Conservatorio, scoprendo però che nei gruppi si litiga, e questa cosa l'ha riempita di conflitti, soprattutto quando il rapporto con un'amica è stato lasciato morire. Crede anche che non ci sia una differenza vera tra amicizia e amore, e che sia un problema per lo più culturale e linguistico, e le complicazioni che nascono vengono dalle parole che ancora mancano per parlare a modo delle relazioni.
     }
     {
-        - cooking_with_first_char.second_theme.bookUpdate:
+        - grimoire_firstChar has grimFirstCharKitchenTwo:
             Durante l'incontro in cucina, {charNameOne} ha parlato del suo desiderio di salvare il mondo. E delle sue difficoltà: non si sente brava a parlare di cose politiche, e La Rifugia è nata perché ha potuto vedere un problema concreto e decidere di fare qualcosa, mentre altre parole cariche la fanno sentire inadeguata. E crede che parte di questa inadeguatezza venga dalle dinamiche social e dal giudizio costante. Ritiene che questo tolga la possibilità di sbagliare, ma gli sbagli creano possibilità impreviste. Come il gorgonzola. E poi ha citato la sua amica Valeria, che dice che l'attivismo deve dare piacere, e che a {charNameOne} piace addormentarsi sapendo di aver portato qualcosa di buono nel mondo. E poi: <i>più gorgonzola, meno poliziott3.</i>
     }
     {
-        - cooking_with_first_char.third_theme.bookUpdate:
+        - grimoire_firstChar has grimFirstCharKitchenThree:
             Durante l'incontro in cucina, {charNameOne} ha parlato del suo rapporto con la creatività. Ha detto che ci sono cose che sa pensare solo quando compone, e per questo è terapeutico. Ma che è preoccupata perché il lavoro la stanca così tanto che a volte non riesce a comporre nulla. E ha paura di non esistere più se dovesse smettere di creare. Creare per lei poi è come gettare un ponte: sia tra le persone che ha conosciuto, sia tra persone che non si conoscono. Trovare l'universale nel particolare, così da potersi ritrovare.
     }
     {
-        - open_the_kitchen:
+        - grimoire_firstChar has grimFirstOpenKitchen:
             Aprendo la strada per la cucina, {charNameOne} ha detto che il cibo apre alle confidenze, e che si è ricordata tutte le belle chiacchierate fatte a tavola.
 
     }
     {
-        - a_story_of_revenge.bookUpdate:
+        - grimoire_firstChar has grimFirstCharNovel:
             Dopo aver letto <b>Luna vergine</b> di Aza, {charNameOne} ha raccontato di non avere un buon rapporto con la rabbia, ma di aver sentito il desiderio, leggendo il racconto, di morsicare anche lei il tizio, di tirare fuori gli artigli. E per la prima volta ha visto la rabbia non come qualcosa da evitare ma come un segnale, l'allarme che scatta perché è stato superato un confine invalicabile.
     }
     {
-    - first_mentor_chit_chat.bookUpdate:
+    -  grimoire_firstChar has grimFirstCharMentor:
         Dopo che {charNameOne} ha detto a {mentorName} che la invidia perché la sua vita ha uno scopo chiaro, {mentorName} le ha detto che anche lei ha uno scopo, deve solo scoprirlo. A quel punto si sono messe a discutere sul valore della felicità: per {mentorName} è qualcosa da trovare nelle piccole cose, ma per {charNameOne} questa è una frase da persona privilegiata, che fa ciò che ama. Dopo l'intervento di {player_name}, {charNameOne} ha detto a {mentorName} che per lo meno deve imparare a prendersi i commenti di stima e goderseli.
     }
     {
-        - frog_and_first_char_chit_chat.bookUpdate:
+        - grimoire_firstChar has grimFirstCharFranco:
             Anche {charNameOne} ha perso la pazienza con Franco La Rana.
     }
     {
-        - first_second_chit_chat.bookUpdate:
+        - grimoire_firstChar has grimFirstSecondChar:
             {charNameOne} e {second_char_main_storylets.one.nameSecond:{charNameTwo}|il bimbo} si sono presentat3, discutendo di alieni e pisolini.
     }
     
     {
-        - first_mentor_chit_chat.bookUpdate:
+        - grimoire_firstChar has grimFirstCharMentor:
             Durante una conversazione con {mentorName}, {charNameOne} si è infastidita perché {mentorName} ha definito la felicità "non un luogo da raggiungere, ma qualcosa che si ha dentro", ma {charNameOne} crede sia un privilegio di chi fa il lavoro che ama. E teme che questo significhi che la felicità "te la ritrovi se ti fai andare bene quello che hai".
     }
     
 
     
     {
-        - first_char_main_storylets.twelve.bookUpdate:
+        - grimoire_firstChar has grimFirstCharTen:
             {charNameOne} ha parlato di sua mamma, e del fatto che litigano perché la madre pensa che lei non sappia accontentarsi. Ma {charNameOne} in realtà non si sente all'altezza delle sue aspettative. Soffre perché prova invidia verso chi ha raggiunto dei traguardi, e a volte vorrebbe avere la loro vita. Per questo si sente una delusione.
     }
     
     {
-        - first_char_main_storylets.eleven.bookUpdate:
+        - grimoire_firstChar has grimFirstCharEleven:
             Una delle paure di {charNameOne} all'idea di andare a vivere in Islanda con Talco, è che possa diventare una "amica da ricorrenza" per le persone a cui vuol bene. Quel tipo di persona a cui tieni, ma che finisci per sentire una volta ogni tanto, giusto per le feste e i compleanni. E teme che diventare grandi significhi rimanere soli. E lei non vuole stare da sola.
     }
     
     {
-        - first_char_main_storylets.ten.bookUpdate:
+        - grimoire_firstChar has grimFirstCharTen:
             {charNameOne} ha raccontato che l'amore non è come se lo aspettava. E soprattutto ora che le cose con Ennio si sono fatte solide, sembra un pane caldo, una cosa semplice. Lei ed Ennio passano molto tempo assieme, il sesso con lui è rassicurante. Lui ultimamente è più insofferente, sembra abbia bisogno di passare più tempo con lei. Ma {charNameOne} a volte si chiede se non stia rischiando di ritrovarsi su un treno fermo, senza sapere se sia fermo perché arrivato a destinazione, o perché non ripartirà più.
     }
 
     {
-        - first_char_main_storylets.nine.bookUpdate:
+        - grimoire_firstChar has grimFirstCharNine:
             {charNameOne} ama scrivere comporre la notte, quando a casa tutt3 dormono. E sente la creatività come l'immergersi in un fiume, una "acqua antica" l'ha chiamata, che raccoglie tutte le storie del mondo. E quel posto, quell'acqua la rassicura, perché le dice che i problemi di tutti i giorni sono problemi che come persone abbiamo affrontato miliardi di volte, e siamo ancora qui. Questo le offre speranza.
     }
 
     {
-        - first_char_main_storylets.eight.bookUpdate:
+        - grimoire_firstChar has grimFirstCharEight:
             {charNameOne} si trova molto bene con la sua famiglia, in particolare con suo padre, con cui può suonare e ubriacarsi. Tornare a vivere giù è una opzione, ma ha la sensazione di rischiare di viverla come un fallimento. E dice che teme di essere la persona che il contesto le permette di essere. Che le piace la persona che è ora, ma che non sa se le piacerebbe essere la persona che sarebbe se tornasse giù.
     }
 
     {
-        - first_char_main_storylets.seven.bookUpdate:
+        - grimoire_firstChar has grimFirstCharSeven:
             Per la prima volta {charNameOne} ha parlato del suo litigio con Talco. Si erano ripromess3 di non aver figli, di non aver ostacoli al loro rapporto. Ma poi Talco è rimastə incintə, e ha deciso di trasferirsi in Islanda con il compagno, Thomas. E ha invitato {charNameOne} con ləi. Ma {charNameOne} è scappata a casa, ha fatto sesso con Ennio e pianto tutta la notte. Ma comunque, mesi dopo, Talco le ha inviato una foto dellə figliə con l'invito di nuovo a vivere con loro.
     } 
     
     {
-        - first_char_main_storylets.six.bookUpdate:
+        - grimoire_firstChar has grimFirstCharSix:
             {charNameOne} ha parlato della sua famiglia, quella d'adozione: le ragazze con cui vive. Hanno creato assieme un gruppo, La Rifugia, che praticamente è la sua casa dove ospitano persone che hanno bisogno di un tetto, fanno cose con associazioni migranti, proteste, raccolte fondi. E ha detto che l'arte può fare tanto per cambiare le cose. E che vorrebbe scrivere qualcosa così forte da spazzare tutta questa merda.
     }
 
     {
-        - first_char_main_storylets.five.bookUpdate:
+        - grimoire_firstChar has grimFirstCharFive:
             {charNameOne} si è fatta delle domande su cosa sia casa, e sul suo rapporto con Ennio. Si chiede se Ennio, il fidanzato, possa essere il suo rifugio. Lo vede come un tipo ordinato, coi suoi ritmi un po' pedanti, e solido. Quando si è messa con lui, pensava che una persona così solida le avrebbe permesso di svolazzare dentro i suoi casini. Ora si chiede se lui non la stia ancorando a terra.
     } 
 
     {
-        - first_char_main_storylets.four.bookUpdate:
+        - grimoire_firstChar has grimFirstCharFour:
             {charNameOne} ha raccontato delle dinamiche a lavoro, e di quando con le sue colleghe si è rifiutata si servire al ristorante un tizio di una compagnia petrolifera. E che ora stanno provando a creare un sindacato, anche se la situazione è incasinata perché hanno contratti di merda, ma sente il bisogno di fare qualcosa di grande.
     } 
     
     {
-        - first_char_main_storylets.three.bookUpdate:
+        - grimoire_firstChar has grimFirstCharThree:
             {charNameOne} ha parlato di fiducia, e in particolare del rapporto con Talco, che lə ha permesso di uscire da un brutto film mentale per imparare a guardare il mondo in modo diverso, tipo stendendosi in piazza o facendo sentire le persone anziane, importanti e ascoltate.
     }
     
     {
-        - first_char_main_storylets.two.bookUpdate:
+        - grimoire_firstChar has grimFirstCharTwo:
             {charNameOne} sta iniziando a godersi il silenzio di questo luogo. Ha smesso di credere che sia una allucinazione, e si sta chiedendo se le coinquiline siano preoccupate. O se le colleghe siano nella merda per la sua assenza. E poi ha detto che vorrebbe comporre qualcosa, approfittando della situazione, perché sono settimane che riesce a creare nulla.
     }    
     
     {
-        - first_char_main_storylets.one.bookUpdate:
+        - grimoire_firstChar has grimFirstCharOne:
             C'è questa ragazza, si chiama {charNameOne}. Ha iniziato la conversazione chiedendo a {player_name} dove fosse lə suə migliore amə, Talco. Poi ha accennato al suo ragazzo, Ennio, e a un risotto allucinogeno coi funghi. E quando è {tutorial_mentorTalkingChoiceRelationship: è arrivata {mentorName}|arrivato un fiore parlante} si è convinta che fosse un trip, e se ne è andata a cercare dell'acqua.
     }
     
