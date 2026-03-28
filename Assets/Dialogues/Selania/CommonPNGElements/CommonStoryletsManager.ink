@@ -56,10 +56,6 @@
             //Chiacchiera tra Tre e Franco
                 - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(Franco, PG) && thirdChar_pauseTalking == 0 && not frog_and_third_char_chit_chat :
                     -> frog_and_third_char_chit_chat
-            
-            //Discorso sbloccato da Franco            
-                - are_two_entities_together(Mentor, PG) && are_two_entities_together(SecondCharacter, PG) && frog_currentMission has specialMissionOne  && mentor_pauseTalking == 0 && secondChar_pauseTalking == 0 && (not special_mission_one_dialogue):
-                    -> special_mission_one_dialogue
         
         //Altre
             //Scambio tra Riccio e Carla

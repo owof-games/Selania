@@ -242,19 +242,19 @@
     }
     
     {
-        - frog_and_second_char_chit_chat.bookUpdate:
+        - grimoire_secondChar has grimSecondCharFranco:
             {charNameTwo} e Franco la Rana hanno discusso sulla capacità o meno delle rane di nuotare. Franco ha forse convinto {charNameTwo} di non essere un bambino ma una rana.
     }
 
     {
-        - first_second_chit_chat.bookUpdate:
+        - grimoire_secondChar has grimFirstSecondChar:
             {charNameOne} e {second_char_main_storylets.one.nameSecond:{charNameTwo}|il bimbo} si sono presentat3, discutendo di alieni e pisolini.
     }
     
 
 
     {
-        - about_violence_and_peace.bookUpdate:
+        - grimoire_secondChar has grimSecondCharMentorOne:
             {mentorName} e {charNameTwo} hanno provato a chiarirsi. {mentorName} con un po' di fatica ha ammesso che non avrebbe dovuto fare male a {charNameTwo}. E quando lui ha reagito senza entusiasmo, ci è rimasta male. A quel punto {charNameTwo} ha detto a {mentorName} che "I grandi chiedono sempre scusa per tutte le cose ma poi le rifanno. Poi piangono e chiedono scusa. E poi le rifanno.". Lei ha detto che ci crede davvero, ma {charNameTwo} se ne è andato.
     }
 

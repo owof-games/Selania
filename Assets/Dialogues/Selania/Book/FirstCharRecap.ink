@@ -176,7 +176,7 @@
         Dopo il dono, {charNameOne} ha detto a {player_name} di aver capito perché si sia ritrovata con questo nome. Crede che la chitarra sia la cosa media, la cosa che possono fare tutt3. Lei si aspettava grandi cose dalla vita, e invece ora ha una vita comune. E si chiede se questo è il massimo che può aspettarsi dalla vita, e se le cose non andranno sempre peggio.
 }        
     {
-        - first_char_main_storylets.one.bookUpdate: <b><i>Appunti dalle conversazioni.</b></i><N><>
+        - grimoire_firstChar != (): <b><i>Appunti dalle conversazioni.</b></i><N><>
     }
     {
     

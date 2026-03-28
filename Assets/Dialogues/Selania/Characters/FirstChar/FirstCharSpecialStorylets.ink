@@ -169,7 +169,7 @@
                     Quasi quanto Tullio.  
             }
 
-    - (bookUpdate) 
+    
         
         -> first_char_closing_storylet ->
         -> main

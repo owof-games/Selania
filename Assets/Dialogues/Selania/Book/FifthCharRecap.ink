@@ -12,15 +12,15 @@
 <b><i>Appunti dalle conversazioni.</b></i><N><>
 
 {
-    - the_witch_and_the_mentor.bookUpdate:
+    - grimoire_fifthChar has grimMentorWitchOne:
         {mentorName} ha chiesto a {player_name} di intercedere con noi, per sapere cosa noi pensiamo di {mentorName}. Noi abbiamo risposto a {player_name} che {mentorName} sta facendo un buon lavoro, ma che così come l'acqua non può essere incendio, così {mentorName} non può essere qualcosa che non è. Dopo uno scambio con {player_name}, {mentorName} ha detto che deve essere difficile avere una voce in testa, ma che magari fa sentire meno solə.
 }
 {
-    - frog_and_mentor_chit_chat.bookUpdate:
+    - grimoire_fifthChar has grimMentorFranco:
         {mentorName} e Franco La Rana hanno discusso. E quando {mentorName} si è allontanata, Franco ha aggiunto di non ricordare l'esistenza di alcun mentore da queste parti.
 }
 {
-    - first_mentor_chit_chat.bookUpdate:
+    - grimoire_fifthChar has grimFirstCharMentor:
         Dopo che {charNameOne} ha detto a {mentorName} che la invidia perché la sua vita ha uno scopo chiaro, {mentorName} le ha detto che anche lei ha uno scopo, deve solo scoprirlo. A quel punto si sono messe a discutere sul valore della felicità: per {mentorName} è qualcosa da trovare nelle piccole cose, ma per {charNameOne} questa è una frase da persona privilegiata, che fa ciò che ama. Dopo l'intervento di {player_name}, {charNameOne} ha detto a {mentorName} che per lo meno deve imparare a prendersi i commenti di stima e goderseli.
 }
 
@@ -30,7 +30,7 @@
 }
 
 {
-    - about_violence_and_peace.bookUpdate:
+    - grimoire_fifthChar has grimSecondCharMentorOne:
         {mentorName} e {charNameTwo} hanno provato a chiarirsi. {mentorName} con un po' di fatica ha ammesso che non avrebbe dovuto fare male a {charNameTwo}. E quando lui ha reagito senza entusiasmo, ci è rimasta male. A quel punto {charNameTwo} ha detto a {mentorName} che "I grandi chiedono sempre scusa per tutte le cose ma poi le rifanno. Poi piangono e chiedono scusa. E poi le rifanno.". Lei ha detto che ci crede davvero, ma {charNameTwo} se ne è andato.
 }
 
@@ -75,42 +75,5 @@
 }
 
 
-//Da riordinare
-
-// {
-//     - knowing_mentor_character.six: prima informazione.
-    
-// }
-
-// {
-//     - knowing_mentor_character.seven: prima informazione.
-    
-// }
-
-// {
-//     - knowing_mentor_character.eight: prima informazione.
-    
-// }
-
-// {
-//     - knowing_mentor_character.nine: prima informazione.
-    
-// }
-
-// {
-//     - knowing_mentor_character.ten: prima informazione.
-    
-// }
-
-// {
-//     - knowing_mentor_character.eleven:
-//     prima informazione.
-    
-// }
-// {
-//     - knowing_mentor_character.twelve:
-//     prima informazione.
-
-// }
 
 -> rewriter_book_with_flow

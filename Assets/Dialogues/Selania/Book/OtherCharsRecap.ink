@@ -23,7 +23,7 @@ dog
 }    
 
 {
-    - the_witch_and_the_mentor.bookUpdate:
+    - grimoire_fifthChar has grimMentorWitchOne:
         {mentorName} ha chiesto a {player_name} di intercedere con noi, per sapere cosa noi pensiamo di {mentorName}. Noi abbiamo risposto a {player_name} che {mentorName} sta facendo un buon lavoro, ma che così come l'acqua non può essere incendio, così {mentorName} non può essere qualcosa che non è. Dopo uno scambio con {player_name}, {mentorName} ha detto che deve essere difficile avere una voce in testa, ma che magari fa sentire meno solə.
 }
 {

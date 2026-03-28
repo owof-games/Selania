@@ -92,8 +92,7 @@
             -    
     Bene, direi che abbiamo tutt3 qualcosa a cui pensare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
     Tipo, dove schiacciarmi quel pisolino.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-    - (bookUpdate)
-
+ 
         -> second_char_closing_storylet ->
         -> first_char_closing_storylet ->
         -> main    
@@ -131,49 +130,13 @@
                     Povero piccolo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                     Però è stato molto coraggioso, vero?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
             }
-    - (bookUpdate)    
-            
+ 
+
             ~ change_entity_place(SecondCharacter)
         -> mentor_closing_storylet ->
         -> second_char_closing_storylet ->
         -> main
 
-=== special_mission_one_dialogue
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
-    Questa conversazione è generata dalla missione della rana. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-    Mentore e Riccio stanno discutendo se è meglio Wicked  o Attack of Titan. Mentore tifa per il primo, Riccio per il secondo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-    
-        + (not_intervention) Decidi di non intervenire
-             -> glyph_modifier_variation_management(Mentor, airC, decreaseYes)->
-             -> glyph_modifier_variation_management(SecondCharacter, airC, decreaseNo)->
-    
-        + (pro_mentor) Wicked!
-            -> glyph_modifier_variation_management(Mentor, airC, decreaseYes)->
-            -> glyph_modifier_variation_management(SecondCharacter, fireC, decreaseNo)->
-     
-        + (pro_riccio) Attack of Titan, ovvio!
-                -> glyph_modifier_variation_management(Mentor, earthC, decreaseYes)->
-                -> glyph_modifier_variation_management(SecondCharacter, airC, decreaseNo)->
-    
-        + (disagree)The Lady, mi spiace.
-            -> glyph_modifier_variation_management(Mentor, fireC, decreaseYes)->
-            -> glyph_modifier_variation_management(SecondCharacter, fireC, decreaseNo)->
-    
-            
-        + (paracula)Attack of the Wicked, che ne dite?
-            -> glyph_modifier_variation_management(Mentor, waterC, decreaseYes)->
-            -> glyph_modifier_variation_management(SecondCharacter, waterC, decreaseNo)->
-                -    
-    Finisce la scena. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-    - (bookUpdate)
-        @animation:RewriterBook
-
-        -> mentor_closing_storylet ->
-        -> second_char_closing_storylet ->
-        -> main
-    
     
 === first_mentor_chit_chat
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -244,7 +207,7 @@
     Lezione?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
     Sì: che se una persona ti dice che ti ammira, è meglio portarsi a casa il complimento e goderselo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
     Non sono vecchia come te, ma so che non sono tanti gli elogi che ci vengono dati in vita.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-    - (bookUpdate)
+
 
         -> first_char_closing_storylet ->
         -> mentor_closing_storylet ->
@@ -301,7 +264,7 @@
                     ~ change_entity_place(FirstCharacter)
         }
 
-    - (bookUpdate)
+
         -> mentor_closing_storylet ->
         -> main
 
@@ -368,8 +331,7 @@
     Immagino sia faticoso, avere una voce in testa, così.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
     O magari ti fa sentire meno {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
     Ho qualcosa su cui riflettere, immagino.
-    - (bookUpdate)   
-
+  
         -> mentor_closing_storylet ->
         -> main
 
@@ -396,8 +358,6 @@
         ~ change_entity_place(FirstCharacter)
     Piccarda, Perlita, Macrina, Gliceria, Gianbrunilde, Eulalia, Ermenegigia...#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
 
-    - (bookUpdate)
-    
         -> first_char_closing_storylet ->
         -> main
 
@@ -446,7 +406,6 @@
             - are_two_entities_together(Mentor, PG):
                 Comincio a sospettare che questa rana farà più danni di quanti ne potrò risolvere.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         }
-    - (bookUpdate)
     
         -> second_char_closing_storylet ->
         -> main
@@ -479,8 +438,7 @@
         + Ha detto tante cose ma la risposta è: no.
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC, decreaseYes)->
 
-
-    - (bookUpdate)
+    -
     -> third_char_closing_storylet ->
     -> main
 
@@ -516,8 +474,7 @@
         + Ha detto tante cose ma la risposta è: no.
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC, decreaseYes)->
                 -> glyph_modifier_variation_management(Mentor, airC, decreaseNo)->
-
-    - (bookUpdate)
+    -
 
     -> mentor_closing_storylet ->
     -> third_char_closing_storylet ->
@@ -554,7 +511,7 @@
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC, decreaseYes)->
                 -> glyph_modifier_variation_management(SecondCharacter, airC, decreaseNo)->
 
-    - (bookUpdate)
+    -
     -> second_char_closing_storylet ->
     -> third_char_closing_storylet ->
     -> main
@@ -590,7 +547,8 @@
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC, decreaseYes)->
                 -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseNo)->
 
-    - (bookUpdate)
+
+    -
     -> first_char_closing_storylet ->
     -> third_char_closing_storylet ->
     -> main

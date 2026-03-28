@@ -161,11 +161,10 @@
         Quindi è un trip.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
         Devo idratarmi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Devo assolutamente idratarmi.
-        - (bookUpdate)
 
             ~ move_entity(FirstCharacter, Pond)
             ~ move_entity(FirstRecap, BookPlace)
-            ~ firstChar_storyletsForRewritingCount ++
+            
 
             -> first_char_closing_storylet ->
             -> main
@@ -275,9 +274,8 @@
                     Avevi detto che ti fanno schifo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
                     E non ho cambiato idea.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral               
             }
-        - (bookUpdate)
 
-             ~ firstChar_storyletsForRewritingCount ++    
+                
             -> first_char_closing_storylet ->
             -> options_first_character 
         
@@ -369,9 +367,8 @@
             -
         Mi manca, Talco.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
         Mi spiace per come le cose siano cambiate.    
-        - (bookUpdate)
 
-                ~ firstChar_storyletsForRewritingCount ++
+                
                 -> first_char_closing_storylet ->
                 -> options_first_character
         
@@ -468,9 +465,8 @@
         Gli insulti ai capoccia.
         Il tenere traccia di tutte le ingiustizie.
         La speranza di fargliele ripagare, un giorno o l’altro.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        - (bookUpdate)
 
-            ~ firstChar_storyletsForRewritingCount ++
+            
             -> first_char_closing_storylet ->
             -> options_first_character
             
@@ -571,9 +567,9 @@
                             
             }
 
-        - (bookUpdate) 
+        
 
-                ~ firstChar_storyletsForRewritingCount ++
+                
                 -> first_char_closing_storylet ->
                 -> options_first_character
         
@@ -679,9 +675,8 @@
                     Che cosa strana la lingua.
                     Ma anche le dita sono strane.
             }
-        - (bookUpdate)
 
-                ~ firstChar_storyletsForRewritingCount ++
+                
                 -> first_char_closing_storylet ->
                 -> options_first_character
         
@@ -798,9 +793,8 @@
         Un mese dopo Talco è partitə, e non ci siamo più sentite fino a qualche settimana fa, quando mi ha mandato una cartolina.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Una foto dellə bimbə.
         “Ora siamo in due ad aspettare un tuo abbraccio.”
-        - (bookUpdate)
 
-            ~ firstChar_storyletsForRewritingCount ++
+            
             -> first_char_closing_storylet ->
             -> options_first_character          
     
@@ -879,9 +873,9 @@
                 Ma non mi sento mai davvero <b>a casa</b>.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 E anche se sono una bestiola ansiosa e guardo sempre al peggio, il dubbio mi viene spesso.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 E se anche io come loro potessi in realtà fiorire, scendendo?
-        - (bookUpdate)   
+          
 
-            ~ firstChar_storyletsForRewritingCount ++
+            
             -> first_char_closing_storylet ->
             -> options_first_character
     
@@ -977,9 +971,8 @@
                     Allora sìììììììììììì!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                     E voglio metterci le parolacce!       
             }
-        - (bookUpdate)
 
-            ~ firstChar_storyletsForRewritingCount ++
+            
             -> first_char_closing_storylet ->
             -> options_first_character 
     
@@ -1067,9 +1060,9 @@
                 Per la pulizia.
                 Per scioperare.
                 Per dare fastidio alla logica di {player_name}.  #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed  
-        - (bookUpdate)   
+          
 
-            ~ firstChar_storyletsForRewritingCount ++
+            
             -> first_char_closing_storylet ->
             -> options_first_character
     
@@ -1173,9 +1166,8 @@
                         Ma mi dispiace per te.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
                         Anche a me.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad      
                 }
-        - (bookUpdate)
 
-            ~ firstChar_storyletsForRewritingCount ++
+            
             -> first_char_closing_storylet ->
             -> options_first_character
             
@@ -1269,8 +1261,8 @@
                 E poi alla fine non faccio mai nulla di crudele o che.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Al massimo mi intristisco in un angolino e bona.
                 Cfirei sia una cosa neutra? Non è da persona cattiva?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-        - (bookUpdate)     
+            
 
-            ~ firstChar_storyletsForRewritingCount ++
+            
             -> first_char_closing_storylet ->
             -> options_first_character
