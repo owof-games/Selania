@@ -89,7 +89,7 @@
                 - are_two_entities_together(Mentor, PG):
                     Altri bambini? Ma questo posto è pieno di pericoli!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
             }
-        - (bookUpdate)
+        - 
         
             ~ move_entity(ThirdRecap, BookPlace)
             ~ thirdChar_storyletsForRewritingCount ++   
@@ -152,7 +152,7 @@
             - (franco)
                          
             Su!
-            - (bookUpdate)
+            - 
 
             ~ thirdChar_storyletsForRewritingCount ++
             -> third_char_closing_storylet ->
@@ -203,7 +203,7 @@
                         Poi muoio di noia!#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             }
 
-        - (bookUpdate)
+        - 
 
             ~ thirdChar_storyletsForRewritingCount ++
             -> third_char_closing_storylet ->
@@ -253,7 +253,7 @@
                         Mi ero dimenticata quanto fosse schifoso essere bambini.
                 }
 
-        - (bookUpdate)
+        - 
 
         ~ thirdChar_storyletsForRewritingCount ++
         -> third_char_closing_storylet ->
@@ -292,7 +292,7 @@
 
         Mi spiace, {player_name}.
 
-        - (bookUpdate)
+        - 
 
             ~ thirdChar_storyletsForRewritingCount ++
             -> third_char_closing_storylet ->
@@ -326,7 +326,7 @@
             + Hai mai imparato davvero qualcosa dai castighi?
                     -> glyph_modifier_variation_management(ThirdCharacter, aetherC, decreaseYes)->
                 A non farmi scoprire.  
-        - (bookUpdate)
+        - 
 
         Comunque qui non c'è la scuola e quindi è bello.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
                     
@@ -381,7 +381,7 @@
                         Franco, sai che sei appena diventato il mio migliore amico?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 }
 
-        - (bookUpdate)
+        - 
 
         ~ thirdChar_storyletsForRewritingCount ++    
         -> third_char_closing_storylet ->        
@@ -486,7 +486,7 @@
                     Già, non nello stagno.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
             }  
 
-        - (bookUpdate)
+        - 
 
             ~ thirdChar_storyletsForRewritingCount ++
             -> third_char_closing_storylet ->
@@ -528,7 +528,7 @@
             -
 
         Essere adulti è terribile.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-        - (bookUpdate)
+        - 
 
             ~ thirdChar_storyletsForRewritingCount ++
             -> third_char_closing_storylet ->
@@ -570,7 +570,7 @@
             -
 
         Comunque è una fortuna che qui c'è un bambino!
-        - (bookUpdate)
+        - 
                 
                 ~ thirdChar_storyletsForRewritingCount ++
                 -> third_char_closing_storylet ->
@@ -605,7 +605,7 @@
                 Mi aiuta a capirle meglio.
             -
 
-        - (bookUpdate)
+        - 
 
             ~ thirdChar_storyletsForRewritingCount ++
             -> third_char_closing_storylet ->

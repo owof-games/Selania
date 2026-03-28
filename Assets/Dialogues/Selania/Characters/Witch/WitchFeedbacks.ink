@@ -49,7 +49,7 @@
             -
 
         <i>L'acqua antica di {charNameOne} raccoglie tutti i sempre e i mai e ciò che non è stato.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-       <i>E ci racconta che {mentorName} ha molto aiutato {player_name} in questo viaggio.
+        <i>E ci racconta che {mentorName} ha molto aiutato {player_name} in questo viaggio.
         <i>Anche noi vogliamo aiutare {player_name}, e per questo condividiamo una cosa.
         <i>{player_name} può seguire la voce di {mentorName} e scegliere di studiare la persona che ha davanti come un uomo studia la vita attraverso un libro.
         <i>Oppure {player_name} può decidere di essere sé {player_pronouns has him:stesso|{player_pronouns has her:stessa|stessə}}, anche se questo può creare attrito con l'altra persona.
@@ -60,7 +60,7 @@
         <i>Ma funghi solleticano e distraggono le nostre rinascenti radici.
         <i>Ringraziandoti ancora {player_name} per ora ci congediamo.
         <i>Senza mai davvero lasciarti.
-        - (bookUpdate)
+        - 
 
         -> witch_closing_storylet ->
         -> main
@@ -122,7 +122,7 @@
         <i>O forse {player_name} può lasciarla cadere, e ricominciare.
         <i>Ora noi ci godiamo la brezza e il sole.
         <i>Ma più tardi tornaci a trovare.
-        - (bookUpdate)
+        - 
         
         -> witch_closing_storylet ->
         -> main

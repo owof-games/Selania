@@ -28,6 +28,9 @@ LIST grimoire_allElements =
 //Storylets Mentore
     grimMentorOne, grimMentorTwo, grimMentorThree, grimMentorFour, grimMentorFive, grimMentorSix, grimMentorSeven, grimMentorEight, grimMentorNine, grimMentorTen, grimMentorEleven, grimMentorTwelve, grimMentorNovel, grimMentorDog, grimMentorWitchTwo, grimMentorLiar, grimMentorViolence, grimMentorOlobinoUno, grimMentorOlobinoDue,
 
+//Storylets strega
+    grimWitchFirstCharFeedback, grimWitchSecondCharFeedback, grimWitchThirdCharFeedback, grimWitchFourthCharFeedback, grimWitchFifthCharFeedback, grimWitchIntro, grimWitchFrog, grimWitchMainOne, grimWitchMainTwo, grimWitchMainThree, grimWitchMainFour, grimWitchMainFive, grimWitchBook, 
+
 //Common Storylets
     grimFirstSecondChar, grimFirstThirdChar, grimFirstCharMentor, grimFirstCharFranco, grimSecondCharMentorOne, grimSecondThirdChar, grimSecondCharFranco, grimThirdCharFranco, grimThirdCharMentor, grimMentorFranco, grimMentorWitchOne
 
@@ -36,6 +39,7 @@ VAR grimoire_secondChar = ()
 VAR grimoire_thirdChar = ()
 VAR grimoire_fourthChar = ()
 VAR grimoire_fifthChar = ()
+VAR grimoire_witch = ()
 VAR grimoire_Appendices = ()
 
 

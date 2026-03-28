@@ -160,7 +160,7 @@
             }
         Alla prossima lettera.
         <b>{charNameOne}</b>
-        - (bookUpdate)
+        - 
         
             {
                 - one == 1:
@@ -265,7 +265,7 @@
     Sono arrivate nuove persone interessanti?
     Sicuro, nessunə più interessante di me!
     A presto, <b>{charNameOne}</b>.
-    - (bookUpdate)
+    - 
     
         ~ firstChar_mailPause = firstChar_mailPauseDuration
         
@@ -404,7 +404,7 @@
 
     Un saluto.
     <b>{charNameOne}</b>.
-    - (bookUpdate)
+    - 
 
         {
             - three == 1:
@@ -528,7 +528,7 @@
             PS: come sta {mentorName}? Mi spiace per come l'ho trattata mentre ero lì, sai?
             Ma non dirglielo. Per ora per lo meno.
             Ciao!
-            - (bookUpdate)
+            - 
 
         {
             - one == 1:
@@ -624,7 +624,7 @@
             }
             PS: mi piace mettere i PS, su internet non ci sono.
             PPS: ma sono arrivate persone nuove poi? Qualcuna con dei dolci magari?
-            - (bookUpdate)
+            - 
         
         {
             - two == 1:
@@ -729,7 +729,7 @@
         
         PS: Ma poi hai scoperto cos'è quel tronco nella foresta? 
         PPS: Ho un segreto che riguarda la serra, ma te lo dirò con la prossima lettera! Ciao ciao!
-        - (bookUpdate)
+        - 
         
         {
             - three == 1:

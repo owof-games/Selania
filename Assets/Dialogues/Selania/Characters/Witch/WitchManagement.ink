@@ -26,4 +26,62 @@
         //L'animazione per via dell'informazione nuova
         @animation:RewriterBook
 
+         {
+            //Tutorial
+            - tutorial_witchRelationship && grimoire_Appendices hasnt grimChoicesWitch:
+                ~ grimoire_Appendices += grimChoicesWitch
+
+            - tutorial_witchSigils && grimoire_Appendices hasnt grimSigilsWitch:
+                ~ grimoire_Appendices += grimSigilsWitch
+
+            
+
+
+            //Feedback
+            - witch_first_story_ended_check && grimoire_witch hasnt grimWitchFirstCharFeedback:
+                ~ grimoire_witch += grimWitchFirstCharFeedback
+
+            - witch_second_story_ended_check && grimoire_witch hasnt grimWitchSecondCharFeedback:
+                ~ grimoire_witch += grimWitchSecondCharFeedback
+
+            - witch_third_story_ended_check && grimoire_witch hasnt grimWitchThirdCharFeedback:
+                ~ grimoire_witch += grimWitchThirdCharFeedback
+
+            - witch_fourth_story_ended_check && grimoire_witch hasnt grimWitchFourthCharFeedback:
+                ~ grimoire_witch += grimWitchFourthCharFeedback  
+
+            - witch_fifth_story_ended_check && grimoire_witch hasnt grimWitchFifthCharFeedback:
+                ~ grimoire_witch += grimWitchFifthCharFeedback                  
+
+
+            //Main storylets
+            - witch_intro && grimoire_witch hasnt grimWitchIntro:
+                ~ grimoire_witch += grimWitchIntro
+
+            - the_witch_and_the_frog && grimoire_witch hasnt grimWitchFrog:
+                ~ grimoire_witch += grimWitchFrog
+
+            - about_the_book && grimoire_witch hasnt grimWitchBook:
+                ~ grimoire_witch += grimWitchBook    
+            
+            //Storia personale strega
+
+            - witch_first_confession && grimoire_witch hasnt grimWitchMainOne:
+                ~ grimoire_witch += grimWitchMainOne    
+
+            - witch_second_confession && grimoire_witch hasnt grimWitchMainTwo:
+                ~ grimoire_witch += grimWitchMainTwo  
+
+            - witch_third_confession && grimoire_witch hasnt grimWitchMainThree:
+                ~ grimoire_witch += grimWitchMainThree
+
+            - witch_fourth_confession && grimoire_witch hasnt grimWitchMainFour:
+                ~ grimoire_witch += grimWitchMainFour
+
+            - witch_fifth_confession && grimoire_witch hasnt grimWitchMainFive:
+                ~ grimoire_witch += grimWitchMainFive
+
+        }
+        //Aggiornamento lista di quelli comuni
+        -> grimoire_common_storylets_updater ->
 ->->

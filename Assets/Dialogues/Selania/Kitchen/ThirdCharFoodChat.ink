@@ -401,7 +401,7 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
                 -> glyph_modifier_variation_management(PG, fireC, decreaseNo)->
                     Sentimento comune.
 
-            - (bookUpdate)  
+            -   
 
         Che poi è una domanda stupida da farti, vero?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:boccale_neutral
 
@@ -570,7 +570,7 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
                 ~ kitchen_recipeComplement = "con essenza del nulla"
                 -> glyph_modifier_variation_management(PG, airC, decreaseNo)->
                 Perdonami, do sempre per scontato che le persone creino qualcosa.
-            - (bookUpdate)  
+            -   
             -> fourth_ingredient_dispatcher
     
     
@@ -753,7 +753,7 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
     E ora {player_name}, credo mi farò due passi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
     Mi sento piena e soddisfatta.
     Grazie ancora per questo tempo assieme.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-    - (bookUpdate)
+    - 
 
             -> cooking_animations_off ->
                 ~ move_entity(ThirdCharacter, Pond)
