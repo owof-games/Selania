@@ -1,16 +1,20 @@
 //Lista coltivabili e stati possibili    
-    LIST greenhouse_cultivable = BaccaDellaAddolorata, BarbaDellInciampo, BastoneDellOzioso, BrinaDellImpossibile, CantoDelleCompagne, CardoAspinato, EderaDelleAmanti,  ErbaLiccia, FalsaPalude, LanaNotturna, LicheneDegliAbissi, NonTiScordarDiTe, Olobino, LaSpazzata
+    LIST greenhouse_cultivable = (BaccaDellaAddolorata), (BarbaDellInciampo), (BastoneDellOzioso), (BrinaDellImpossibile), (CantoDelleCompagne), (CardoAspinato), (EderaDelleAmanti),  (ErbaLiccia), (FalsaPalude), (LanaNotturna), (LicheneDegliAbissi), (NonTiScordarDiTe), (Olobino), (LaSpazzata)
 
     LIST greenhouse_growStep = notStarted, stepZero, stepOne, stepTwo, stepThree
 
-//Valori per far crescere la singola pianta
-VAR greenhouse_growingValueStepZero = 2
-VAR greenhouse_growingValueStepOne = 3
-VAR greenhouse_growingValueStepTwo = 4
+    //Valori per far crescere la singola pianta
+    VAR greenhouse_growingValueStepZero = 2
+    VAR greenhouse_growingValueStepOne = 3
+    VAR greenhouse_growingValueStepTwo = 4
 
 
 //QUESTA LISTA LA USO PER GESTIRE LA PESCATA O MENO DEI COLTIVABILI
     VAR greenhouse_backupCultivable = (BaccaDellaAddolorata, BarbaDellInciampo, BastoneDellOzioso, BrinaDellImpossibile, CantoDelleCompagne, CardoAspinato, EderaDelleAmanti, ErbaLiccia, FalsaPalude, LanaNotturna, LicheneDegliAbissi, NonTiScordarDiTe, Olobino, LaSpazzata)
+    //E questo è il recap di tutto quello che ho trovato
+    VAR greenhouse_findedCultivables = ()
+    //E come per Franco, faccio un conto di tutte le cose coltivabili sin dall'inizio.
+    VAR greenhouse_allCultivables = ()
 
 //LISTA PER FAR AVANZARE GLI ELEMENTI GRAFICI
     VAR growthBaccaDellaAddolorata = notStarted

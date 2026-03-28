@@ -43,7 +43,11 @@
         - frog_allAvailableMissions == ():
             ~  frog_allAvailableMissions = frog_availableCommonMissions + frog_availableSpecialMissions
     }
-
+//Idem per i coltivabili
+    {
+        - greenhouse_allCultivables == ():
+            ~ greenhouse_allCultivables = greenhouse_cultivable
+    }
 
 //A crescita Olobino, cambio asset accesso serra  
     {

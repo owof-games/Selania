@@ -1253,11 +1253,11 @@
                     -> main                              
 
 === ending_cultivation
-     {
-       - ending_cultivation == 1:
-           ~ move_entity(greenhouseOpened, Bedroom)
-           ~ player_somethingStrange += strangeVoice
-     }
+    {
+    - ending_cultivation == 1:
+        ~ move_entity(greenhouseOpened, Bedroom)
+        ~ player_somethingStrange += strangeVoice
+    }
     
     {
        - are_two_entities_together(PG,Grimoire):
@@ -1292,6 +1292,7 @@
     
     ~ notification_greenhouseGrownRepropose = true
     ~ backpack_findedGifts += greenhouse_chosenCultivable
+    ~ greenhouse_findedCultivables += greenhouse_chosenCultivable
     ~ greenhouse_cultivableGrowing = 0
     ~ greenhouse_chosenCultivable = ()
     ~ greenhouse_growStep = ()

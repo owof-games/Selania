@@ -466,17 +466,17 @@ VAR achievements_goodReader = notActive
 
 //Achievement serra.
     {
-        - LIST_COUNT(backpack_findedGifts) == 0:
+        - LIST_COUNT(greenhouse_findedCultivables) == 0:
             ~ achievements_fullGreenhouse = notDiscovered
                 ~ achievements_fullGreenhouse_text = ""
 
-        - LIST_COUNT(backpack_findedGifts) < LIST_COUNT(greenhouse_cultivable) && LIST_COUNT(backpack_findedGifts) > 0:
+        - LIST_COUNT(greenhouse_findedCultivables) < LIST_COUNT(greenhouse_allCultivables) && LIST_COUNT(greenhouse_findedCultivables) > 0:
             ~ achievements_fullGreenhouse = inProgress
-                ~ achievements_fullGreenhouse_text = "{LIST_COUNT(backpack_findedGifts)}/{LIST_COUNT(greenhouse_cultivable)}"
+                ~ achievements_fullGreenhouse_text = "{LIST_COUNT(greenhouse_findedCultivables)}/{LIST_COUNT(greenhouse_allCultivables)}"
 
-        - LIST_COUNT(backpack_findedGifts) == LIST_COUNT(greenhouse_cultivable):
+        - LIST_COUNT(greenhouse_findedCultivables) == LIST_COUNT(greenhouse_allCultivables):
             ~ achievements_fullGreenhouse = Discovered
-                ~ achievements_fullGreenhouse_text = "{LIST_COUNT(backpack_findedGifts)}/{LIST_COUNT(greenhouse_cultivable)}"
+                ~ achievements_fullGreenhouse_text = "{LIST_COUNT(greenhouse_findedCultivables)}/{LIST_COUNT(greenhouse_allCultivables)}"
                 {
                     - achievements_fullGreenhouse_notified == false:
                         ~ achievements_fullGreenhouse_notified = true
