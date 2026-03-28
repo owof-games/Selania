@@ -27,6 +27,11 @@ VAR horizontalS_greenhouseFirstTier = 12
 VAR horizontalS_greenhouseSecondTier = 9
 VAR horizontalS_greenhouseThirdTier = 6
 VAR horizontalS_greenhouseFourthTier = 3
+    //Per evitare che allo stesso tier venga dato più di un documento, blocco il dispatch fino alla condizione successiva.
+    VAR horizontalS_greenhouseFirstTier_check = false
+    VAR horizontalS_greenhouseSecondTier_check = false
+    VAR horizontalS_greenhouseThirdTier_check = false
+    VAR horizontalS_greenhouseFourthTier_check = false
 
 //Variabili per le notifiche del nido
 VAR horizontalS_nestDocs = false
@@ -35,38 +40,60 @@ VAR horizontalS_nestSecondTier = 24
 VAR horizontalS_nestThirdTier = 36
 VAR horizontalS_nestFourthTier = 48
 VAR horizontalS_nestFifth = 60
-
+    //Per evitare che allo stesso tier venga dato più di un documento, blocco il dispatch fino alla condizione successiva.
+    VAR horizontalS_nestFirstTier_check = false
+    VAR horizontalS_nestSecondTier_check = false
+    VAR horizontalS_nestThirdTier_check = false
+    VAR horizontalS_nestFourthTier_check = false
 
 //Variabili per le notifiche della biblioteca
 VAR horizontalS_libraryDocs = false
 VAR horizontalS_libraryFirstTier = 14
 VAR horizontalS_librarySecondTier = 10
 VAR horizontalS_libraryThirdTier = 5
-
+    //Per evitare che allo stesso tier venga dato più di un documento, blocco il dispatch fino alla condizione successiva.
+    VAR horizontalS_libraryFirstTier_check = false
+    VAR horizontalS_librarySecondTier_check = false
+    VAR horizontalS_libraryThirdTier_check = false
 
 === horizontalS_documentDispatcher ===
 {debug_horizontalS: passo per horizontalS_documentDispatcher}
 {debug_horizontalS: horizontalS_dump contiene {horizontalS_dump}, horizontalS_kitchen contiene {horizontalS_kitchen}, horizontalS_greenhouse contiene {horizontalS_greenhouse}, horizontalS_nest contiene {horizontalS_nest}, horizontalS_library contiene {horizontalS_library}. horizontalS_discoveredDocs contiene{horizontalS_discoveredDocs}.}
 
-//PARTE PRELIMINARE: serve a vedere se le aree con molti oggetti (serra, nido, biblioteca) hanno raggiunto le condizioni per dare una lettera
+    
+    //PRIMA DI TUTTO VERIFICO SE ATTIVARE O MENO UN DOCUMENTO
+    {
+        //Se c'è già un documento attivo, skippo.
+        - horizontalS_currentDoc != ():
+        {debug_horizontalS: il valore di horizontalS_discoveredDocs è {horizontalS_discoveredDocs} e quindi torno indietro senza agire.}
+        ->->
+    }
+
+
+    //Poi verifico se le aree con molti oggetti (serra, nido, biblioteca) hanno raggiunto le condizioni per dare una lettera
 
     {
         //Lavoro preliminare per le notifiche della SERRA. Ricorda: se proprio dovessero saltare da una validazione all'altra (es: saltare la 12), l'obiettivo è il pacing, e se non leggono è perché non era interessante per loro.
         - horizontalS_greenhouse == ():
             ~ horizontalS_greenhouseDocs = false
         
-        - LIST_COUNT(greenhouse_backupCultivable) == horizontalS_greenhouseFirstTier:
+        - LIST_COUNT(greenhouse_backupCultivable) == horizontalS_greenhouseFirstTier && horizontalS_greenhouseFirstTier_check == false:
             ~ horizontalS_greenhouseDocs = true
+            ~ horizontalS_greenhouseFirstTier_check = true
 
-        - LIST_COUNT(greenhouse_backupCultivable) == horizontalS_greenhouseSecondTier:
+        - LIST_COUNT(greenhouse_backupCultivable) == horizontalS_greenhouseSecondTier && horizontalS_greenhouseSecondTier_check == false:
             ~ horizontalS_greenhouseDocs = true
+            ~ horizontalS_greenhouseSecondTier_check = true
             
-        - LIST_COUNT(greenhouse_backupCultivable) == horizontalS_greenhouseThirdTier:
+        - LIST_COUNT(greenhouse_backupCultivable) == horizontalS_greenhouseThirdTier && horizontalS_greenhouseThirdTier_check == false:
             ~ horizontalS_greenhouseDocs = true
+            ~ horizontalS_greenhouseThirdTier_check = true
 
-        - LIST_COUNT(greenhouse_backupCultivable) == horizontalS_greenhouseFourthTier:
-            ~ horizontalS_greenhouseDocs = true  
+        - LIST_COUNT(greenhouse_backupCultivable) == horizontalS_greenhouseFourthTier && horizontalS_greenhouseFourthTier_check == false:
+            ~ horizontalS_greenhouseDocs = true
+            ~ horizontalS_greenhouseFirstTier_check = true
 
+        //Se il backup è vuoto, "sforno" senza vincoli documenti, perché la giocatrice potrebbe essersi persa alcune delle condizioni qui sopra
         - greenhouse_backupCultivable == () && horizontalS_greenhouse != ():
             ~ horizontalS_greenhouseDocs = true
 
@@ -77,17 +104,21 @@ VAR horizontalS_libraryThirdTier = 5
         - horizontalS_nest == ():
             ~ horizontalS_nestDocs = false
 
-        - LIST_COUNT(glyph_discoveredSigils) == horizontalS_nestFirstTier:
+        - LIST_COUNT(glyph_discoveredSigils) == horizontalS_nestFirstTier && horizontalS_nestFirstTier_check == false:
             ~ horizontalS_nestDocs = true
+            ~ horizontalS_nestFirstTier_check = true
 
-        - LIST_COUNT(glyph_discoveredSigils) == horizontalS_nestSecondTier:
+        - LIST_COUNT(glyph_discoveredSigils) == horizontalS_nestSecondTier && horizontalS_nestSecondTier_check == false:
             ~ horizontalS_nestDocs = true
+            ~ horizontalS_nestSecondTier_check = true
 
-        - LIST_COUNT(glyph_discoveredSigils) == horizontalS_nestThirdTier:
+        - LIST_COUNT(glyph_discoveredSigils) == horizontalS_nestThirdTier && horizontalS_nestThirdTier_check == false:
             ~ horizontalS_nestDocs = true
+            ~ horizontalS_nestThirdTier_check = true
 
-        - LIST_COUNT(glyph_discoveredSigils) == horizontalS_nestFourthTier:
-            ~ horizontalS_nestDocs = true    
+        - LIST_COUNT(glyph_discoveredSigils) == horizontalS_nestFourthTier && horizontalS_nestFourthTier_check == false:
+            ~ horizontalS_nestDocs = true
+            ~ horizontalS_nestFourthTier_check = true 
 
         - LIST_COUNT(glyph_discoveredSigils) == horizontalS_nestFifth && horizontalS_nest != ():
             ~ horizontalS_nestDocs = true
@@ -98,28 +129,20 @@ VAR horizontalS_libraryThirdTier = 5
         - horizontalS_library == ():
             ~ horizontalS_libraryDocs = false
 
-        - LIST_COUNT(library_unreadStories) == horizontalS_libraryFirstTier:
+        - LIST_COUNT(library_unreadStories) == horizontalS_libraryFirstTier && horizontalS_libraryFirstTier_check == false:
             ~ horizontalS_libraryDocs = true
+            ~ horizontalS_libraryFirstTier_check = true
 
-        - LIST_COUNT(library_unreadStories) == horizontalS_librarySecondTier:
+        - LIST_COUNT(library_unreadStories) == horizontalS_librarySecondTier && horizontalS_librarySecondTier_check == false:
             ~ horizontalS_libraryDocs = true
+            ~ horizontalS_librarySecondTier_check = true
 
-        - LIST_COUNT(library_unreadStories) == horizontalS_libraryThirdTier:
+        - LIST_COUNT(library_unreadStories) == horizontalS_libraryThirdTier && horizontalS_libraryThirdTier_check == false:
             ~ horizontalS_libraryDocs = true
+            ~ horizontalS_libraryThirdTier_check = true
 
         - library_unreadStories == () && horizontalS_library != ():
             ~ horizontalS_libraryDocs = true
-    }
-
-
-
-    //POI VERIFICO SE ATTIVARE O MENO UN DOCUMENTO
-    {
-    //Se c'è già un documento attivo, skippo.
-    - horizontalS_currentDoc != ():
-    {debug_horizontalS: il valore di horizontalS_discoveredDocs è {horizontalS_discoveredDocs} e quindi torno indietro senza agire.}
-        
-        ->->
     }
 
 
