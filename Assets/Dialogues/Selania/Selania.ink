@@ -141,6 +141,7 @@
     INCLUDE Grimoire\Functions.ink
     INCLUDE Grimoire\Appendices.ink
     INCLUDE Grimoire\VarAndLists.ink
+    INCLUDE Grimoire\Strings.ink
     
     
 //Grimoire - temporaneo?

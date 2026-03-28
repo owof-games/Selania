@@ -248,7 +248,7 @@
     
     {
         - grimoire_firstChar has grimFirstCharMentor:
-            Durante una conversazione con {mentorName}, {charNameOne} si è infastidita perché {mentorName} ha definito la felicità "non un luogo da raggiungere, ma qualcosa che si ha dentro", ma {charNameOne} crede sia un privilegio di chi fa il lavoro che ama. E teme che questo significhi che la felicità "te la ritrovi se ti fai andare bene quello che hai".
+            {grimFirstCharMentor_text}
     }
     
 
