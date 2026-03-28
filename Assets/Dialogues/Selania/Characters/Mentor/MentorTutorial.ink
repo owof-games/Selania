@@ -176,9 +176,6 @@
         Più tardi ti spiegherò perché sei qui.
         Io devo raccogliere le foglie dalla foresta.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
 
-            
-             ~ grimoire_Appendices += grimChoicesMentor
-
             -> mentor_closing_storylet ->
             -> main
 
@@ -252,7 +249,6 @@
         Ora devo assolutamente spolverare le foglie della foresta.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
         Questo posto collasserebbe senza me.
         A dopo!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry    
-            - (bookUpdate)
 
             {
                 - entity_location(Mentor) != Forest:
@@ -329,7 +325,6 @@
         Anche per questo non c'è un buon esito o un cattivo esito di una riscrittura.
         Quando te la senti, affronta questo ultimo passaggio e poi torna da me.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
         
-        ~ grimoire_Appendices += grimRewritingMentor
 
                 -> mentor_closing_storylet ->
                 -> main
@@ -367,7 +362,6 @@
     Ed è per questo che ogni riscrittorə può darne solo uno a persona.
     Qualcosa di così forte non può certo essere usato senza coscienza. #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
 
-        ~ grimoire_Appendices += grimGreenhouseMentor
 
         -> mentor_closing_storylet ->
         -> main
@@ -399,11 +393,9 @@
                     O per bruciare cose strane e vedere cosa succede!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                     
             }
-    - (bookUpdate)
     
         -> mentor_closing_storylet ->
         -> main
-
 
 
 === about_nest
@@ -421,8 +413,6 @@
     È così difficile far capire alle altre persone quello che si prova e si pensa, e sarebbe bello avere uno strumento, un codice, qualcosa che ti faccia sapere sin da subito che verrai capita.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
     Immagino che sarà il modo in cui ne farai uso a definirne il valore.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
     Un giorno mi piacerebbe impararne qualcuno.
-
-    ~ grimoire_Appendices += grimSigilsMentor
 
             -> mentor_closing_storylet ->
             -> main
@@ -457,8 +447,7 @@
     E alcuni di questi possono anche offrirti qualche strumento che, sinceramente, nemmeno avevo calcolato.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
     Ma ricorda che non sono passaggi obbligatori.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
     Fai sempre e solo quello di cui senti il bisogno.
-    - (bookUpdate)
-    
+
         -> mentor_closing_storylet ->
         -> main
 

@@ -25,7 +25,7 @@
 }
 
 {
-    - a_story_of_transformation.bookUpdate:
+    - grimoire_fifthChar has grimMentorNovel:
         Dopo aver letto il racconto <b>Il cancello</b>, {mentorName} ha chiesto a {player_name} se non si è mai sentit{player_pronouns has him:o|{player_pronouns has her:a|ə}} così stanc{player_pronouns has him:o|{player_pronouns has her:a|ə}} da volere sparire per un po' dal mondo.
 }
 
@@ -35,38 +35,38 @@
 }
 
 {
-    - addressing_violence.bookUpdate:
+    - grimoire_fifthChar has grimMentorViolence:
         {mentorName} ha ripreso la conversazione sulla stretta che ha dato al braccio di {charNameTwo}. Ha iniziato dicendo a {player_name} che non le piace arrabbiarsi, ma poi ha tentennato per un po'. E dopo uno scambio con {player_name} ha deciso di chiedere scusa a {charNameTwo}.
 
 }
 
 {
-    - that_little_liar_storylet.bookUpdate: 
+    - grimoire_fifthChar has grimMentorLiar: 
         Dopo l'arrivo di {charNameTwo}, la prima cosa che {mentorName} ha chiesto a {player_name} è se è {player_pronouns has him:riuscito|{player_pronouns has her:riuscita|riuscitə}} a mandarlo a casa. Dice che qui non è sicuro per i bambini, che lui le ha tirato un calcio. Ma che le fa tenerezza, e per questo le sembra un riccio.
 }
 
 {
-    - knowing_mentor_character.five.bookUpdate:
+    - grimoire_fifthChar has grimMentorFive:
         Da quando {player_name} è qui, per la prima volta {mentorName} ha ammesso di essere stanca. E di sentire caldo. E poi si è lasciata andare ai ricordi: il suo primo bacio, l'uomo che ha sposato. A cui ha dedicato il resto dei suoi giorni, fino a quando non è arrivata qui. Ha chiesto a {player_name} cosa significa per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} amare un'altra persona. Per poi definirsi una "sciocca romantica", e dirmi che l'amore è ovunque, anche qui. Amore per noi.
 }
 
 {
-    - knowing_mentor_character.four.bookUpdate:
+    - grimoire_fifthChar has grimMentorFour:
         Ora che {charNameTwo} ha trovato il suo nome, {mentorName} si chiede se non sia stata troppo severa con lui. Dice che era spaventata, e forse ha reagito con violenza. Si è chiesta cosa possa significare essere un genitore che si rende conto che suo figlio, così piccolo, ha già perso la sua strada. E perché non pensa al pallone, o allo studio, invece che al futuro e all'ambiente.
 }
 
 {
-    - knowing_mentor_character.three.bookUpdate:
+    - grimoire_fifthChar has grimMentorThree:
         {mentorName} ha raccontato a {player_name} che a volte ci sono persone, persone passate da qui, che vorrebbe sentire più spesso. Ma le loro lettere non arrivano, o arrivano sempre più di rado E allora si chiede se ha sbagliato qualcosa.
 }
 
 {
-    - knowing_mentor_character.two.bookUpdate:
+    - grimoire_fifthChar has grimMentorTwo:
         {mentorName} è rimasta colpita da come {charNameOne} sia rimasta così bloccata da tutte le possibilità che ha avuto davanti a sé. Però poi ha aggiunto che forse si è dimenticata di quanto possa essere facile perdere sé stesse quando si è giovani.
 }
 
 {
-    - knowing_mentor_character.one.bookUpdate:
+    - grimoire_fifthChar has grimMentorOne:
         Durante una chiacchierata, {mentorName} ha raccontato a {player_name} che il suo posto preferito è la serra, perché vedere crescere le cose la fa sentire appagata, la sensazione di permettere con le proprie mani a un altro corpo di crescere al meglio.
 }
 {

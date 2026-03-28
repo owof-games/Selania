@@ -109,7 +109,6 @@
         Ma se avrai bisogno di aiuto per i luoghi del giardino, o un po' di supporto personale, sono qui.
         O anche solo per due chiacchiere.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         A dopo.
-        - (bookUpdate)
 
             -> mentor_closing_storylet ->
             -> main
@@ -227,7 +226,6 @@
     A prescindere dal risultato.
     E un giorno potrai fare questo lavoro da {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_hurry
     E a quel punto forse anche io potrò un poco riposare.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sad
-    - (bookUpdate)
     
         -> mentor_closing_storylet ->
         -> main

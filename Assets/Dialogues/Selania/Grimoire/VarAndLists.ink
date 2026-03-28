@@ -8,7 +8,7 @@
 
 LIST grimoire_allElements = 
 //Appendici
-    grimChoicesMentor, grimChoicesWitch, grimGreenhouseMentor, grimKitchenChitarra, grimRewritingMentor, grimSigilsBoccale, grimSigilsMentor, grimSigilsWitch,
+    grimChoicesMentor, grimChoicesWitch, grimGreenhouseMentor, grimKitchenChitarra, grimInkMentor, grimRewritingMentor, grimSigilsBoccale, grimSigilsMentor, grimSigilsWitch,
 
 //Storylets Chitarra
     grimFirstCharOne, grimFirstCharTwo, grimFirstCharThree, grimFirstCharFour, grimFirstCharFive, grimFirstCharSix, grimFirstCharSeven, grimFirstCharEight, grimFirstCharNine, grimFirstCharTen, grimFirstCharEleven, grimFirstCharTwelve, grimFirstOpenKitchen, grimFirstCharNovel, grimFirstCharDog, grimFirstCharKitchenOne, grimFirstCharKitchenTwo, grimFirstCharKitchenThree, grimFirstCharKitchenEnded, grimFirstCharKitchenAlone, grimFirstCharProposal, grimFirstCharNewName, grimFirstCharMentorFeedback, grimFirstCharLetterOne, grimFirstCharLetterTwo, grimFirstCharLetterThree,
@@ -26,7 +26,7 @@ LIST grimoire_allElements =
     grimFifthCharOne, grimFifthCharTwo, grimFifthCharThree, grimFifthCharFour, grimFifthCharFive, grimFifthCharSix, grimFifthCharSeven, grimFifthCharEight, grimFifthCharNine, grimFifthCharTen, grimFifthCharEleven, grimFifthCharTwelve, grimFifthCharNovel, grimFifthCharDog, grimFifthCharKitchenOne, grimFifthCharKitchenTwo, grimFifthCharKitchenThree, grimFifthCharKitchenEnded, grimFifthCharKitchenAlone, grimFifthCharProposal, grimFifthCharNewName, grimFifthCharMentorFeedback, grimFifthCharLetterOne, grimFifthCharLetterTwo, grimFifthCharLetterThree,
 
 //Storylets Mentore
-    grimMentorOne, grimMentorTwo, grimMentorThree, grimMentorFour, grimMentorFive, grimMentorSix, grimMentorSeven, grimMentorEight, grimMentorNine, grimMentorTen, grimMentorEleven, grimMentorTwelve, grimMentorOpenGreenhouse, grimMentorNovel, grimMentorDog,
+    grimMentorOne, grimMentorTwo, grimMentorThree, grimMentorFour, grimMentorFive, grimMentorSix, grimMentorSeven, grimMentorEight, grimMentorNine, grimMentorTen, grimMentorEleven, grimMentorTwelve, grimMentorNovel, grimMentorDog, grimMentorWitchTwo, grimMentorLiar, grimMentorViolence, grimMentorOlobinoUno, grimMentorOlobinoDue,
 
 //Common Storylets
     grimFirstSecondChar, grimFirstThirdChar, grimFirstCharMentor, grimFirstCharFranco, grimSecondCharMentorOne, grimSecondThirdChar, grimSecondCharFranco, grimThirdCharFranco, grimThirdCharMentor, grimMentorFranco, grimMentorWitchOne

@@ -122,6 +122,23 @@
                 ~ grimoire_fifthChar += grimMentorWitchOne
 
             - frog_and_mentor_chit_chat && grimoire_fifthChar hasnt grimMentorFranco:
-                ~ grimoire_fifthChar += grimMentorFranco              
+                ~ grimoire_fifthChar += grimMentorFranco
+
+            //Feedback sulle png
+            - first_character_feedback && grimoire_firstChar hasnt grimFirstCharMentorFeedback:
+                ~ grimoire_firstChar += grimFirstCharMentorFeedback
+
+            - second_character_feedback && grimoire_secondChar hasnt grimSecondCharMentorFeedback:
+                ~ grimoire_secondChar += grimSecondCharMentorFeedback
+
+            - third_character_feedback && grimoire_thirdChar hasnt grimThirdCharMentorFeedback:
+                ~ grimoire_thirdChar += grimThirdCharMentorFeedback
+
+            - fourth_character_feedback && grimoire_fourthChar hasnt grimFourthCharMentorFeedback:
+                ~ grimoire_fourthChar += grimFourthCharMentorFeedback
+
+            - fifth_character_feedback && grimoire_fifthChar hasnt grimFifthCharMentorFeedback:
+                ~ grimoire_fifthChar += grimFifthCharMentorFeedback    
+
         }
 ->->        

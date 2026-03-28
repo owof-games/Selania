@@ -89,5 +89,86 @@
         //L'animazione per via dell'informazione nuova
         @animation:RewriterBook
 
+    {
+            //Tutorial
+            - tutorial_mentorTalkingChoiceRelationship && grimoire_Appendices hasnt grimChoicesMentor:
+                ~ grimoire_Appendices += grimChoicesMentor
+
+            - tutorial_mentorInkAndYouAreARewriter && grimoire_Appendices hasnt grimInkMentor:
+                ~ grimoire_Appendices += grimInkMentor
+
+            - tutorial_mentorInkAndRewriting && grimoire_Appendices hasnt grimRewritingMentor:
+                ~ grimoire_Appendices += grimRewritingMentor
+
+            - about_greenhouse && grimoire_Appendices hasnt grimGreenhouseMentor:
+                ~ grimoire_Appendices += grimGreenhouseMentor  
+
+            - about_nest && grimoire_Appendices hasnt grimSigilsMentor:
+                ~ grimoire_Appendices += grimSigilsMentor                  
+
+
+            //Main storylets
+            - knowing_mentor_character.one && grimoire_fifthChar hasnt grimMentorOne:
+                ~ grimoire_fifthChar += grimMentorOne
+
+            - knowing_mentor_character.two && grimoire_fifthChar hasnt grimMentorTwo:
+                ~ grimoire_fifthChar += grimMentorTwo
+
+            - knowing_mentor_character.three && grimoire_fifthChar hasnt grimMentorThree:
+                ~ grimoire_fifthChar += grimMentorThree    
+
+            - knowing_mentor_character.four && grimoire_fifthChar hasnt grimMentorFour:
+                ~ grimoire_fifthChar += grimMentorFour  
+
+            - knowing_mentor_character.five && grimoire_fifthChar hasnt grimMentorFive:
+                ~ grimoire_fifthChar += grimMentorFive
+
+            - knowing_mentor_character.six && grimoire_fifthChar hasnt grimMentorSix:
+                ~ grimoire_fifthChar += grimMentorSix
+
+            - knowing_mentor_character.seven && grimoire_fifthChar hasnt grimMentorSeven:
+                ~ grimoire_fifthChar += grimMentorSeven
+
+            - knowing_mentor_character.eight && grimoire_fifthChar hasnt grimMentorEight:
+                ~ grimoire_fifthChar += grimMentorEight    
+
+            - knowing_mentor_character.nine && grimoire_fifthChar hasnt grimMentorNine:
+                ~ grimoire_fifthChar += grimMentorNine  
+
+            - knowing_mentor_character.ten && grimoire_fifthChar hasnt grimMentorEight:
+                ~ grimoire_fifthChar += grimMentorEight 
+
+            - knowing_mentor_character.eleven && grimoire_fifthChar hasnt grimMentorEleven:
+                ~ grimoire_fifthChar += grimMentorEleven   
+
+            - knowing_mentor_character.twelve && grimoire_fifthChar hasnt grimMentorTwelve:
+                ~ grimoire_fifthChar += grimMentorTwelve
+            
+            //StoryletsSpeciali
+            - growing_witch_storylet && grimoire_fifthChar hasnt grimMentorWitchTwo:
+                ~ grimoire_fifthChar += grimMentorWitchTwo
+
+            - that_little_liar_storylet && grimoire_fifthChar hasnt grimMentorLiar:
+                ~ grimoire_fifthChar += grimMentorLiar    
+
+            - addressing_violence && grimoire_fifthChar hasnt grimMentorViolence:
+                ~ grimoire_fifthChar += grimMentorViolence  
+
+            - a_story_of_transformation && grimoire_fifthChar hasnt grimMentorNovel:
+                ~ grimoire_fifthChar += grimMentorNovel 
+
+            - dog_mentor && grimoire_fifthChar hasnt grimMentorDog:
+                ~ grimoire_fifthChar += grimMentorDog   
+
+            - about_olobino && grimoire_fifthChar hasnt grimMentorOlobinoUno:
+                ~ grimoire_fifthChar += grimMentorOlobinoUno
+
+            - again_about_olobino && grimoire_fifthChar hasnt grimMentorOlobinoDue:
+                ~ grimoire_fifthChar += grimMentorOlobinoDue    
+
+        }
+        //Aggiornamento lista di quelli comuni
+        -> grimoire_common_storylets_updater ->
 
 ->->
+
