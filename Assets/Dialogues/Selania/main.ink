@@ -54,11 +54,11 @@
 <- doggo_no_notes
 
 // //Elementi della foresta
-<- docDump_document
-<- docKitchen_document
-<- docGreenhouse_document
-<- docNest_document
-<- docLibrary_document
+// <- docDump_document
+// <- docKitchen_document
+// <- docGreenhouse_document
+// <- docNest_document
+// <- docLibrary_document
 
 //Elementi della discarica
 <- the_witch

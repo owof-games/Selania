@@ -16,22 +16,22 @@
 
 ///Bottoni per i documenti
 
-=== docDump_document
-    + {are_two_entities_together(PG, docDump)}[docDump]
-        -> horizontalS_storyletsDispatcher
+// === docDump_document
+//     + {are_two_entities_together(PG, docDump)}[docDump]
+//         -> horizontalS_storyletsDispatcher
 
-=== docKitchen_document
-    + {are_two_entities_together(PG, docKitchen)}[docKitchen]
-        -> horizontalS_storyletsDispatcher
+// === docKitchen_document
+//     + {are_two_entities_together(PG, docKitchen)}[docKitchen]
+//         -> horizontalS_storyletsDispatcher
 
-=== docGreenhouse_document
-    + {are_two_entities_together(PG, docGreenhouse)}[docGreenhouse]
-        -> horizontalS_storyletsDispatcher
+// === docGreenhouse_document
+//     + {are_two_entities_together(PG, docGreenhouse)}[docGreenhouse]
+//         -> horizontalS_storyletsDispatcher
 
-=== docNest_document
-    + {are_two_entities_together(PG, docNest)}[docNest]
-        -> horizontalS_storyletsDispatcher             
+// === docNest_document
+//     + {are_two_entities_together(PG, docNest)}[docNest]
+//         -> horizontalS_storyletsDispatcher             
 
-=== docLibrary_document
-    + {are_two_entities_together(PG, docLibrary)}[docLibrary]
-        -> horizontalS_storyletsDispatcher   
+// === docLibrary_document
+//     + {are_two_entities_together(PG, docLibrary)}[docLibrary]
+//         -> horizontalS_storyletsDispatcher   
