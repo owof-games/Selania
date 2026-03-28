@@ -141,6 +141,9 @@
     E la biblioteca.
     Ci ho messo settimane a capirlo, anche perché W.R. è presa dalle sue ricerche e ha messo mille veti su quello spazio, ma il legno degli scaffali e delle colonne è vivo.
     Sotto la pavimentazione continua ad avere radici, e quando ho provato a incidere la balaustra, ne è uscita resina.
+    E quella brutta mappa che c'è alla stazione si è aggiornata ogni volta che sistemavamo le vecchie aree.
+    Da sola.
+    All'inizio pensavo fosse un lavoro di G.M., ma non si era nemmeno accorto del cambiamento.
     Da sempre il mio sogno è scrivere una guida esoterica di piante e spezie, ma per la prima volta mi chiedo: posso davvero capire qualcosa del mondo?
     Perché se non lo capisco, di cosa dovrei parlare?
     K.
@@ -169,6 +172,7 @@
     O.U.J. ha deciso di fare una festa per i primi sei mesi qui.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docLibrary
     E mi sono accorta che non vedevo S.C. e G.M. da giorni.
     Forse devo darmi una calmata coi miei libri.
+    La luce delle candele è molto bella, ma di questo passo avrò bisogno degli occhiali entro fine mese.
     Ma ci sono storie che parlano di cose che non sono ancora accadute, di oggetti che non ho mai sentito nominare.
     Mi siedo sulla poltrona all'alba, ed è subito notte.
     Ho provato a parlarne stasera, ma erano tutte malinconiche.
@@ -209,6 +213,11 @@
     Inchiostro.
     L'ho portato a W.R.per capire se ha qualcosa di speciale, ed è presa benissimo.
     G.M.
+
+    PS: K. stamattina mi ha regalato una scopa di saggina.
+    L'ha fatta con le sue mani.
+    Devo ancora capire se è una presa in giro, o se è un modo per dire "Benvenuto nella congrega".
+    Comunque sia, la adoro.
 
     ~ horizontalSEndingStorylet()
     -> main
