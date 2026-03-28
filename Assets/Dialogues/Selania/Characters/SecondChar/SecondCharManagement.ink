@@ -340,9 +340,15 @@
             - second_char_main_storylets.two && grimoire_secondChar hasnt grimSecondCharTwo:
                 ~ grimoire_secondChar += grimSecondCharTwo
 
-            - second_char_main_storylets.three && grimoire_secondChar hasnt grimSecondCharThree:
-                ~ grimoire_secondChar += grimSecondCharThree    
+            - second_char_main_storylets.him_liar && grimoire_secondChar hasnt grimSecondCharThreeHim:
+                ~ grimoire_secondChar += grimSecondCharThreeHim   
 
+             - second_char_main_storylets.her_liar && grimoire_secondChar hasnt grimSecondCharThreeHer:
+                ~ grimoire_secondChar += grimSecondCharThreeHer    
+
+            - second_char_main_storylets.they_liar && grimoire_secondChar hasnt grimSecondCharThreeThey:
+                ~ grimoire_secondChar += grimSecondCharThreeThey    
+    
             - second_char_main_storylets.four && grimoire_secondChar hasnt grimSecondCharFour:
                 ~ grimoire_secondChar += grimSecondCharFour  
 
