@@ -333,7 +333,7 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
 ~ temp charNameThree = translator(thirdChar_ActualName)
 ~ temp charNameFour = translator(fourthChar_ActualName)
 ~ temp mentorName = translator(mentor_ActualName)
-
+//Da aprire con un LIST_COUNT > 2, perché i fogli sparsi danno molte informazioni.
 /*************************
 
     Commento Boccale
@@ -360,6 +360,10 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
 <i><b>Fogli sparsi trovati al Nido, nessuna firma.</i></b>
 
 
+    G.M.: se trovi questi fogli ma sei ancora dell'idea di capire come i sigilli funzionino con la tua testolina magnifica, non leggere, perché ci sono molti dettagli.
+    Può anche darsi che troverai un modo più intelligente del mio di capirli.
+    O che di nuovo non ti raccapezzerai col mio modo di ragionare.
+    
     Sono arrivata a una quadra.
     1. Posso creare qualsiasi tipo di sigillo, l'importante è che un glifo non venga ripetuto.
     2. Posso usarne solo uno alla volta.
@@ -371,6 +375,11 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     2. Con quello a cinque l'energia è così forte che a distanza di due giorni ho ancora una gamba semibloccata. Per fortuna avevo vicino il piede e non la faccia quando li ho attivati.
     3. Tre glifi creano un sigillo instabile, ma che regge tre utilizzi prima di consumarsi.
     4. Due glifi sono stabili, ma per questo inutilizzabili. Sono però utili per capire come funzionano le loro varianti a tre glifi.
+    Infine:
+    1. Il primo glifo che inserisco nel sigillo sembra esserne sempre rafforzato.
+    2. Il secondo non subisce particolari modifiche.
+    3. Il terzo invece ne esce in qualche modo indebolito, anche se non per forza in modo negativo.
+    È come un accordo sospeso, che può concludere il brano o generare un cambiamento.
     Uh.
     Sto scrivendo ad elenco come G.M. e con la stessa mancanza di fuoco di Y., mi prendo una pausa.
 
