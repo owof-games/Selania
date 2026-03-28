@@ -52,25 +52,31 @@ VAR horizontalS_libraryThirdTier = 5
 
     {
         //Lavoro preliminare per le notifiche della SERRA. Ricorda: se proprio dovessero saltare da una validazione all'altra (es: saltare la 12), l'obiettivo è il pacing, e se non leggono è perché non era interessante per loro.
+        - horizontalS_greenhouse == ():
+            ~ horizontalS_greenhouseDocs = false
+        
         - LIST_COUNT(greenhouse_backupCultivable) == horizontalS_greenhouseFirstTier:
-                ~ horizontalS_greenhouseDocs = true
+            ~ horizontalS_greenhouseDocs = true
 
         - LIST_COUNT(greenhouse_backupCultivable) == horizontalS_greenhouseSecondTier:
-                ~ horizontalS_greenhouseDocs = true
+            ~ horizontalS_greenhouseDocs = true
             
         - LIST_COUNT(greenhouse_backupCultivable) == horizontalS_greenhouseThirdTier:
-                ~ horizontalS_greenhouseDocs = true
+            ~ horizontalS_greenhouseDocs = true
 
         - LIST_COUNT(greenhouse_backupCultivable) == horizontalS_greenhouseFourthTier:
-                ~ horizontalS_greenhouseDocs = true  
+            ~ horizontalS_greenhouseDocs = true  
 
         - greenhouse_backupCultivable == () && horizontalS_greenhouse != ():
             ~ horizontalS_greenhouseDocs = true
 
     }
 
-    {
-        //Lavoro preliminare per le notifiche dei SIGILLI.   
+    {   
+        //Lavoro preliminare per le notifiche dei SIGILLI.  
+        - horizontalS_nest == ():
+            ~ horizontalS_nestDocs = false
+
         - LIST_COUNT(glyph_discoveredSigils) == horizontalS_nestFirstTier:
             ~ horizontalS_nestDocs = true
 
@@ -87,7 +93,11 @@ VAR horizontalS_libraryThirdTier = 5
             ~ horizontalS_nestDocs = true
     }     
 
-    {
+    {   
+        //Lavoro preliminare per le notifiche dalla BIBLIOTECA.
+        - horizontalS_library == ():
+            ~ horizontalS_libraryDocs = false
+
         - LIST_COUNT(library_unreadStories) == horizontalS_libraryFirstTier:
             ~ horizontalS_libraryDocs = true
 
