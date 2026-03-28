@@ -428,7 +428,7 @@
         Magari ti aiutano a dire le tue emozioni.
 
         ~ move_entity(Franco, Pond)
-        ~ frog_currentMission = ()
+        ~ frog_allMissionsCompleted += frog_currentMission
         ~ frog_currentMission = ()
         ~ frog_aboutGiftRequest = ()
         //Metto in pausa le missioni speciali

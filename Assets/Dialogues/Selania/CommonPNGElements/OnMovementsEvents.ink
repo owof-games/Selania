@@ -38,6 +38,12 @@
 === on_movement_special_events
 {debug: passo da on_movement_special_events.}
 ~ temp currentPlace = entity_location(PG)
+//A inizio gioco, mi salvo la lista di tutte le missioni di Franco.
+    {
+        - frog_allAvailableMissions == ():
+            ~  frog_allAvailableMissions = frog_availableCommonMissions + frog_availableSpecialMissions
+    }
+
 
 //A crescita Olobino, cambio asset accesso serra  
     {

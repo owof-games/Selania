@@ -36,9 +36,6 @@ VAR achievements_fivePerfectGifts = notActive
     VAR achievements_perfectGiftReceivers = ()
 
 VAR achievements_fullFranco = notActive
-    VAR achievements_maxFrancoMissions = 0
-    VAR achievements_counterLastingMissions = 0
-    VAR achievements_counterCompletedMissions = 0
     VAR achievements_fullFranco_text = ""
     VAR achievements_fullFranco_notified = false
 
@@ -91,7 +88,6 @@ VAR achievements_goodReader = notActive
         ~ achievements_allSigils = notDiscovered
         ~ achievements_allLetters = notDiscovered
         ~ achievements_fullGreenhouse = notDiscovered
-        ~ achievements_maxFrancoMissions = frog_availableCommonMissions + frog_availableSpecialMissions
 
 }
 
@@ -370,27 +366,21 @@ VAR achievements_goodReader = notActive
     }
 
 //Achievement Franco.
-    //Prima di tutto guardo qual è la somma delle missioni mancanti. Svuoto achievements_counterLastingMissions e poi lo aggiorno.
-    ~ achievements_counterLastingMissions = ()
-    ~ achievements_counterLastingMissions = frog_availableCommonMissions + frog_availableSpecialMissions
-    //Le missioni completate sono achievements_maxFrancoMissions, a cui sottraggo quelle mancanti di achievements_counterLastingMissions
-    ~ achievements_counterCompletedMissions = ()
-    ~ achievements_counterCompletedMissions = achievements_maxFrancoMissions - achievements_counterLastingMissions
     {
         //Completamento a zero, non parto
-        - LIST_COUNT(achievements_counterCompletedMissions) == 0:
+        - LIST_COUNT(frog_allMissionsCompleted) == 0:
             ~ achievements_fullFranco = notDiscovered
                 ~ achievements_fullFranco_text = ""
 
         //Completamento maggiore di 0 ma minore di tutte quelle disponibili
-        - LIST_COUNT(achievements_counterCompletedMissions) < LIST_COUNT(achievements_maxFrancoMissions) && LIST_COUNT(achievements_counterCompletedMissions) > 0:
+        - LIST_COUNT(frog_allMissionsCompleted) < LIST_COUNT(frog_allAvailableMissions) && LIST_COUNT(frog_allMissionsCompleted) > 0:
             ~ achievements_fullFranco = inProgress
-                ~ achievements_fullFranco_text = "{LIST_COUNT(achievements_counterCompletedMissions)}/{LIST_COUNT(achievements_maxFrancoMissions)}"
+                ~ achievements_fullFranco_text = "{LIST_COUNT(frog_allMissionsCompleted)}/{LIST_COUNT(frog_allAvailableMissions)}"
 
         //Se le missioni sono uguali alle massime, ho completato l'achievement.
-        - achievements_counterCompletedMissions == 0:
+        - LIST_COUNT(frog_allMissionsCompleted) == 0:
             ~ achievements_fullFranco = Discovered
-                ~ achievements_fullFranco_text = "{LIST_COUNT(achievements_counterCompletedMissions)}/{LIST_COUNT(achievements_maxFrancoMissions)}"
+                ~ achievements_fullFranco_text = "{LIST_COUNT(frog_allMissionsCompleted)}/{LIST_COUNT(frog_allAvailableMissions)}"
                
                 {
                     - achievements_fullFranco_notified == false:
@@ -501,7 +491,7 @@ VAR achievements_goodReader = notActive
     - debug_achievements: 
         <b>LIST_COUNT(greenhouse_backupCultivable) è uguale a {LIST_COUNT(greenhouse_backupCultivable)}, e quindi lo stato di achievements_fullGreenhouse è {achievements_fullGreenhouse}.
         <b>LIST_COUNT(glyph_discoveredSigils) è uguale a {LIST_COUNT(glyph_discoveredSigils)}, e quindi lo stato di achievements_allSigils è {achievements_allSigils}.
-        <b>achievements_counterLastingMissions è uguale a {achievements_counterLastingMissions}, e quindi lo stato di achievements_fullFranco è {achievements_fullFranco}.
+        <b>frog_allMissionsCompleted è uguale a {frog_allMissionsCompleted}, e quindi lo stato di achievements_fullFranco è {achievements_fullFranco}.
         <b>achievements_perfectGiftsCounter è uguale a {achievements_perfectGiftsCounter}, e quindi lo stato di achievements_onePerfectGift è {achievements_onePerfectGift}, mentre quello di achievements_fivePerfectGifts è {achievements_fivePerfectGifts}.
         <b>achievements_perfectIngredientsCounter è uguale a {achievements_perfectIngredientsCounter}, e quindi lo stato di achievements_onePerfectIngredient è {achievements_onePerfectIngredient}, mentre quello di achievements_fivePerfectIngredients è {achievements_fivePerfectIngredients}.
         <b>LIST_COUNT(kitchen_allChefs) è uguale a {LIST_COUNT(kitchen_allChefs)}, e quindi lo stato di achievements_fullKitchen è {achievements_fullKitchen}.

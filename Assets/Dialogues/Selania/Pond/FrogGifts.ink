@@ -799,6 +799,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
     //Svuoto il destinatario della missione attuale per sicurezza
     @animation:RewriterBook
     ~ frog_aboutGiftRequest = ()
+    ~ frog_allMissionsCompleted += frog_currentMission
     ~ frog_currentMission = ()
     ~ notification_francoQuests = false
     ~ frog_suspended_gift = false

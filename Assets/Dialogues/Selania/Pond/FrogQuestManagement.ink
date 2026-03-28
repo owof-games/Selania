@@ -48,6 +48,7 @@
         {
             - first_character_recap.check && second_character_recap.check && greenhouse_recap.check && frog_availableCommonMissions has missionOne:
                 ~ frog_availableCommonMissions -= missionOne
+                ~ frog_currentMission += missionOne
 
                 Ma sei un portento, girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Pensa che ero qui a dirmi "Servirebbe una persona con una bella testolina, più grande di quella di zia Torba."
@@ -68,7 +69,8 @@
         {
             - LIST_COUNT(greenhouse_backupCultivable) < 12 && frog_availableCommonMissions has missionTwo:
                 ~ frog_availableCommonMissions -= missionTwo
-                
+                ~ frog_currentMission += missionTwo
+
                 Dove l'ho messo di nuovo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Ah eccolo!
                 Mi hanno scritto le formiche per dirmi che ti stai prendendo cura della serra!
@@ -89,6 +91,7 @@
         {
             - mindfulness && frog_availableCommonMissions has missionThree:
                 ~ frog_availableCommonMissions -= missionThree
+                ~ frog_currentMission += missionThree
 
                 Girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Sei sempre un salto avanti!
@@ -130,6 +133,7 @@
         {
             - little_storylets && frog_availableCommonMissions has missionFour:
                 ~ frog_availableCommonMissions -= missionFour
+                ~ frog_currentMission += missionFour
 
                 Questa no.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Nemmeno questa.
@@ -176,6 +180,7 @@
         {
             - first_second_chit_chat && frog_availableCommonMissions has missionFive:
                 ~ frog_availableCommonMissions -= missionFive
+                ~ frog_currentMission += missionFive
 
                 Avannotti!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Era "avannotti".
@@ -214,6 +219,7 @@
         {
             - witch_intro && frog_availableCommonMissions has missionSix:
                 ~ frog_availableCommonMissions -= missionSix
+                ~ frog_currentMission += missionSix
 
                 Girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Ho saputo che finalmente hai parlato con la nostra amica comune!
@@ -242,6 +248,7 @@
         {
             - first_character_notes.check or second_character_notes.check && frog_availableCommonMissions has missionSeven:
                 ~ frog_availableCommonMissions -= missionSeven
+                ~ frog_currentMission += missionSeven
 
                 I gemelli stanno facendo lo sciopero del sonno.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 A fatica mi ricordo il mio nome.
@@ -286,6 +293,7 @@
         {
             - library_readStories != () && frog_availableCommonMissions has missionEight:
                 ~ frog_availableCommonMissions -= missionEight
+                ~ frog_currentMission += missionEight
 
                 "Caro zio Gracco."#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 "La algonara è stata inventata nemmeno cento schiuse fa."
@@ -462,8 +470,6 @@
                         E tu hai già letto tante ma tante delle pagine del libro che ti è stato donato!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         E come dico sempre: la conoscenza è sapere!
                         E il sapere è sapore per cui: dimmi come posso aiutarti.
-                            ~ frog_currentMission = ()
-
                             -> frog_about_who_questions
                 
                 - else:
@@ -494,7 +500,6 @@
                                 Il cibo è sempre una motivazione.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                         }
                     E a proposito di cose buone: vediamo come posso aiutarti!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                        ~ frog_currentMission = ()
 
                         -> frog_about_who_questions
                 - else:
@@ -524,7 +529,6 @@
                     Però ora {mentorName} è più felice.
                     E questo posto è un po' più felice.
                     E allora io ti rendo un po' più felice: dimmi come posso aiutarti.
-                        ~ frog_currentMission = ()
                         -> frog_about_who_questions
 
                 - else:
@@ -581,7 +585,6 @@
                     Per cui grazie per aver parlato con {mentorName} delle cose insolite che hai incontrato.
                     Non sai quanto abbia bisogno quella donna di uscire dal suo guscio.
                     Per cui: vediamo come posso aiutarti!
-                        ~ frog_currentMission = ()
                             -> frog_about_who_questions
 
                 - else:
@@ -631,7 +634,6 @@
                     Ma devo aiutarti, mannaggia alla mia distrazione.
                     Zio Gracco lo dice sempre: Franco!
                     Zio Gracco è un rospo di poche parole.
-                        ~ frog_currentMission = ()
                             -> frog_about_who_questions
 
                 - else:
@@ -674,7 +676,6 @@
                     Ed è bello avere una guida, un'alleata così saggia.
                     <i>La saggezza ha molte facce, e una porta il volto di Franco.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
                     E ora quindi è il mio momento di aiutarti.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                        ~ frog_currentMission = ()
                             -> frog_about_who_questions
 
                 - else:
@@ -722,7 +723,6 @@
                     E Dora mi ha detto che hai conosciuto il cane del treno!
                     E allora io ti aiuterò con il tuo lavoro.
                     Così magari Giulio capisce che sono un bravo girino, e ci prende il cane!
-                        ~ frog_currentMission = ()
                             -> frog_about_who_questions
 
                 - else:
@@ -776,7 +776,6 @@
                                 Quindi sono in pace.
                     }
                     E a proposito di pace: vediamo come posso aiutarti!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                        ~ frog_currentMission = ()
                             -> frog_about_who_questions
                             
                 - else:
@@ -795,7 +794,7 @@
                 //Ma voglio evitare questa cosa per la prima missione.
                 - !missions_dispatcher:
                     //andiamo a vedere se ci sono state missioni compiute in autonomia
-                        -> autonomy_mission_verify
+                    -> autonomy_mission_verify
                     
                 - else:
                     -> tired_frog 

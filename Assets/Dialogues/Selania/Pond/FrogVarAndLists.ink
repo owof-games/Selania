@@ -14,6 +14,13 @@
         //Nota: per ora sono solo due missioni speciali, poi vediamo.
     VAR frog_availableSpecialMissions = (specialMissionOne, specialMissionTwo)
     
+        //Lista a inizio gioco di tutte le missioni di Franco.
+    VAR frog_allAvailableMissions = ()
+        //Lista delle missioni completate
+    VAR frog_allMissionsCompleted = ()
+
+
+
     VAR frog_aboutGiftRequest = ()
     VAR frog_currentMission = ()
     

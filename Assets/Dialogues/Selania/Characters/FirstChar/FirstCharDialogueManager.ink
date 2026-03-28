@@ -35,7 +35,6 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-grimFirstCharNine
     {   
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylets, ma non ho fatto il tutorial su come funziona
         - grimoire_firstChar has firstChar_minStoryletsForRewriting && not rewriting_proposal_first_character && not tutorial_mentorInkAndRewriting:
