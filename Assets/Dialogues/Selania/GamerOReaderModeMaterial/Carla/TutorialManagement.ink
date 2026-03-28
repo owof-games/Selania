@@ -70,7 +70,7 @@ VAR tutorial_rereadingActive = false
         }
         
     //Riscrittura e inchiostro
-    - are_two_entities_together(PG, Mentor) && tutorial_rereadingActive && not grimoire_Appendices hasnt grimRewritingMentor:
+    - are_two_entities_together(PG, Mentor) && tutorial_rereadingActive && grimoire_Appendices hasnt grimRewritingMentor:
 
         {   
             //Se il tutorial è attivo, ho raggiunto le condizioni, ma ancora Carla non mi ha spiegato come funzionano le relazioni:
