@@ -152,7 +152,7 @@
 
     }
 
-    {rewriting_proposal_second_character.close.bookUpdate: Dopo la conversazione con {player_name}, {charNameTwo} ha scelto un nuovo nome: <b><i>{charNameTwo}.}
+    {rewriting_proposal_second_character.close: Dopo la conversazione con {player_name}, {charNameTwo} ha scelto un nuovo nome: <b><i>{charNameTwo}.}
 
     {secondAffinityFeedback:
         Il valore massimo di inchiostro che {player_name} ha raggiunto è stato: <b>{fromInkToNumbers(SecondCharacter)}</b>. <>
@@ -175,7 +175,7 @@
 
 
     {
-        - rewriting_proposal_second_character.bookUpdate: 
+        - rewriting_proposal_second_character: 
             Dopo il dono, {charNameTwo} ha detto a {player_name} che da quando la nonna è nella casa dei vecchi, tutto fa schifo. Suo padre è tornato e litiga sempre con sua madre. Se il padre non c'è, la madre si incazza con lui, e gli dice di smetterla di piangere e di fare il grande. Le maestre sono "fastidiose". Il fratello dice che il mondo è un posto orribile e irreparabile. Gli animali spariranno tutti per colpa nostra. I grandi fanno schifo e per questo non vuole crescere. E ha inventato la storia del compleanno perché se non inventa motivi, nessuno lo ascolta.
     }
 

@@ -38,11 +38,13 @@
     INCLUDE CommonPNGElements\GiftsAndIngredientFunctions.ink
     INCLUDE CommonPNGElements\NamingFunctions.ink
     INCLUDE CommonPNGElements\SpeakerTagManagers.ink
+    INCLUDE CommonPNGElements\Functions.ink
     INCLUDE CommonPNGElements\ChoicesManagement\SigilsTranslator.ink
     INCLUDE CommonPNGElements\ChoicesManagement\GlyphsVarAndLists.ink
     INCLUDE CommonPNGElements\ChoicesManagement\SigilsActivation.ink
     INCLUDE CommonPNGElements\ChoicesManagement\ChoicesManager.ink
     INCLUDE CommonPNGElements\ChoicesManagement\Glyph&SigilsFunctions.ink
+    
 
     INCLUDE HorizontalStory\Storylets.ink
     INCLUDE HorizontalStory\VarAndFunctions.ink

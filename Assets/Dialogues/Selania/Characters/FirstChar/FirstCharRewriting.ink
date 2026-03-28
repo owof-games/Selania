@@ -593,23 +593,5 @@
             }
             
 
-            //Useremo questo spostamento poi per attivare l'animazione del treno.
-            ~ story_endedStories += story_firstCharStoryEnded
-            ~ firstChar_storyStatus = story_storyEnded
-            ~ player_movementsCounter = 0
-            ~ state_ending_stories(FirstCharacter)
-            
-            ~ move_entity(firstCharPaint, Bedroom)
-            ~ temp currentPlace = entity_location(PG)
-            ~ move_entity(FirstCharacter, Safekeeping)
-            ~ tree_advance_management(FirstCharacter)
-            
-            ~ move_entity(TrainNoiseGoingAway, currentPlace)
-            ~ firstChar_mailPause = firstChar_mailPauseDuration
-            ~ move_entity(FirstCharacter, Safekeeping)
-            ~ numberQuestion = 0
-            ~ firstChar_InkLevel = ink_empty
-            @animation:RewriterBook
-            
-        -> main  
+    -> endingPNGstory(FirstCharacter)
         

@@ -633,22 +633,5 @@
 
             }
             
-            
         
-        - (bookUpdate)
-
-        ~ story_endedStories += story_secondCharStoryEnded
-        ~ secondChar_storyStatus = story_storyEnded
-        ~ player_movementsCounter = 0
-        ~ state_ending_stories(SecondCharacter)
-        ~ temp currentPlace = entity_location(PG)
-        ~ tree_advance_management(SecondCharacter)
-        ~ move_entity(SecondCharacter, Safekeeping)
-        ~ secondChar_mailPause = secondChar_mailPauseDuration
-        ~ move_entity(TrainNoiseGoingAway, currentPlace)
-        ~ move_entity(secondCharPaint, Bedroom)
-        ~ numberQuestion = 0
-        ~ secondChar_InkLevel = ink_empty
-            @animation:RewriterBook
-
-                -> main
+    -> endingPNGstory(SecondCharacter)

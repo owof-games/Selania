@@ -563,17 +563,4 @@
         
 
         
-        ~ story_endedStories += story_thirdCharStoryEnded
-        ~ thirdChar_storyStatus = story_storyEnded
-        ~ player_movementsCounter = 0
-        ~ state_ending_stories(ThirdCharacter)
-        ~ temp currentPlace = entity_location(PG)
-        ~ tree_advance_management(ThirdCharacter)
-        ~ move_entity(ThirdCharacter, Safekeeping)
-        ~ thirdChar_mailPause = thirdChar_mailPauseDuration
-        ~ move_entity(TrainNoiseGoingAway, currentPlace)
-        ~ numberQuestion = 0
-        ~ thirdChar_InkLevel = ink_empty
-            @animation:RewriterBook
-
-                -> main
+        -> endingPNGstory(ThirdCharacter)
