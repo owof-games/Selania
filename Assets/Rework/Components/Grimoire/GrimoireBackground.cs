@@ -242,6 +242,8 @@ namespace Selania.Rework.Components.Grimoire
 
         private void Start()
         {
+            // set up page animators
+            SetUpPageAnimators();
             // turn off all left buttons at startup
             DisableAllLeftButtons();
             // activate both achievement contains at the beginning to trigger all components' "Start"
@@ -492,6 +494,11 @@ namespace Selania.Rework.Components.Grimoire
                 default:
                     throw new ArgumentOutOfRangeException(nameof(pageType), pageType, null);
             }
+        }
+
+        private void SetUpPageAnimators()
+        {
+            _pageAnimators = null;
         }
 
         /// <summary>
