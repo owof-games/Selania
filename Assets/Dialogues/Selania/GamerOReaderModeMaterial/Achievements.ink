@@ -232,7 +232,7 @@ VAR achievements_goodReader = notActive
             ~ achievements_fivePerfectIngredients = notDiscovered
 
 
-        - achievements_perfectIngredientsCounter == 1 & achievements_perfectIngredientsCounter <5:
+        - achievements_perfectIngredientsCounter == 1 && achievements_perfectIngredientsCounter <5:
             ~ achievements_onePerfectIngredient = Discovered
                 ~ achievements_onePerfectIngredient_actualValue = 1
                 
@@ -359,7 +359,7 @@ VAR achievements_goodReader = notActive
             ~ achievements_allSigils = inProgress
                 ~ achievements_allSigils_actualValue = LIST_COUNT(glyph_discoveredSigils)
 
-        - LIST_COUNT(glyph_discoveredSigils) == 60:
+        - LIST_COUNT(glyph_discoveredSigils) == 60 && not witch_allSigils_opening.yes:
             ~ achievements_allSigils = Discovered
                 ~ achievements_allSigils_actualValue = LIST_COUNT(glyph_discoveredSigils)
                 

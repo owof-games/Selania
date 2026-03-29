@@ -161,7 +161,7 @@ Quinto pezzo storia strega. Scopriamo che il suo nome è M.M., come la persona c
 Ehi {player_name}, hai finito tutte le riscritture. Se vuoi posso anche sbloccarti tutti i significati dei sigilli, che ne dici?
     + No
         Capisco
-    + Sì 
+    + (yes) Sì 
         -> glyph_open_all_sigils ->
         Fatto
     -   
