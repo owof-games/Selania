@@ -22,7 +22,6 @@ VAR achievements_fullKitchen = notActive
     VAR achievements_fullKitchen_maxValue = 6
     VAR achievements_fullKitchen_actualValue = 0
 VAR achievements_onePerfectIngredient = notActive
-    VAR achievements_onePerfectIngredient_text = ""
     VAR achievements_onePerfectIngredient_notified = false
     VAR achievements_onePerfectIngredient_maxValue = 1
     VAR achievements_onePerfectIngredient_actualValue = 0
