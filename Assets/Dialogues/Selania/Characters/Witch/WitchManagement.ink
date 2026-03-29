@@ -28,11 +28,11 @@
 
          {
             //Tutorial
-            - tutorial_witchRelationship && grimoire_Appendices hasnt grimChoicesWitch:
-                ~ grimoire_Appendices += grimChoicesWitch
+            - tutorial_witchRelationship && grimoire_appendices hasnt grimChoicesWitch:
+                ~ grimoire_appendices += grimChoicesWitch
 
-            - tutorial_witchSigils && grimoire_Appendices hasnt grimSigilsWitch:
-                ~ grimoire_Appendices += grimSigilsWitch
+            - tutorial_witchSigils && grimoire_appendices hasnt grimSigilsWitch:
+                ~ grimoire_appendices += grimSigilsWitch
 
             
 

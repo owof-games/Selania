@@ -34,7 +34,7 @@ VAR tutorial_rereadingActive = false
             -> tutorial_carlaRereadingStorylet
 
     //parte dopo che mi è stato dato il libro da Mentore
-    - are_two_entities_together(PG, Carla) && grimoire_Appendices has grimChoicesMentor && not tutorial_carlaGrimoireStorylet:
+    - are_two_entities_together(PG, Carla) && grimoire_appendices has grimChoicesMentor && not tutorial_carlaGrimoireStorylet:
             -> tutorial_carlaGrimoireStorylet        
 
     - tutorial_ActivateTutorial == true && entity_location(PG) == Greenhouse && not tutorial_carlaGreenhouseGiftsInkStorylet:
@@ -52,7 +52,7 @@ VAR tutorial_rereadingActive = false
 {
 
     //Relazioni e inchiostro
-    - are_two_entities_together(PG, Mentor) && grimoire_Appendices has grimChoicesMentor && grimoire_Appendices hasnt grimInkMentor:
+    - are_two_entities_together(PG, Mentor) && grimoire_appendices has grimChoicesMentor && grimoire_appendices hasnt grimInkMentor:
 
         {   
 
@@ -70,7 +70,7 @@ VAR tutorial_rereadingActive = false
         }
         
     //Riscrittura e inchiostro
-    - are_two_entities_together(PG, Mentor) && tutorial_rereadingActive && grimoire_Appendices hasnt grimRewritingMentor:
+    - are_two_entities_together(PG, Mentor) && tutorial_rereadingActive && grimoire_appendices hasnt grimRewritingMentor:
 
         {   
             //Se il tutorial è attivo, ho raggiunto le condizioni, ma ancora Carla non mi ha spiegato come funzionano le relazioni:

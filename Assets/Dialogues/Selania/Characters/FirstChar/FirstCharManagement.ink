@@ -376,6 +376,7 @@
             //Storylets speciali
             - open_the_kitchen && grimoire_firstChar hasnt grimFirstOpenKitchen:
                 ~ grimoire_firstChar += grimFirstOpenKitchen
+                ~ grimoire_appendices += grimKitchenChitarra
 
             - a_story_of_revenge && grimoire_firstChar hasnt grimFirstCharNovel:
                 ~ grimoire_firstChar += grimFirstCharNovel

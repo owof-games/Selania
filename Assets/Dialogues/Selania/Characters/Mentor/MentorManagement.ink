@@ -91,20 +91,20 @@
 
     {
             //Tutorial
-            - tutorial_mentorTalkingChoiceRelationship && grimoire_Appendices hasnt grimChoicesMentor:
-                ~ grimoire_Appendices += grimChoicesMentor
+            - tutorial_mentorTalkingChoiceRelationship && grimoire_appendices hasnt grimChoicesMentor:
+                ~ grimoire_appendices += grimChoicesMentor
 
-            - tutorial_mentorInkAndYouAreARewriter && grimoire_Appendices hasnt grimInkMentor:
-                ~ grimoire_Appendices += grimInkMentor
+            - tutorial_mentorInkAndYouAreARewriter && grimoire_appendices hasnt grimInkMentor:
+                ~ grimoire_appendices += grimInkMentor
 
-            - tutorial_mentorInkAndRewriting && grimoire_Appendices hasnt grimRewritingMentor:
-                ~ grimoire_Appendices += grimRewritingMentor
+            - tutorial_mentorInkAndRewriting && grimoire_appendices hasnt grimRewritingMentor:
+                ~ grimoire_appendices += grimRewritingMentor
 
-            - about_greenhouse && grimoire_Appendices hasnt grimGreenhouseMentor:
-                ~ grimoire_Appendices += grimGreenhouseMentor  
+            - about_greenhouse && grimoire_appendices hasnt grimGreenhouseMentor:
+                ~ grimoire_appendices += grimGreenhouseMentor  
 
-            - about_nest && grimoire_Appendices hasnt grimSigilsMentor:
-                ~ grimoire_Appendices += grimSigilsMentor                  
+            - about_nest && grimoire_appendices hasnt grimSigilsMentor:
+                ~ grimoire_appendices += grimSigilsMentor                  
 
 
             //Main storylets

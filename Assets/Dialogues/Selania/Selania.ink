@@ -142,6 +142,7 @@
     INCLUDE Grimoire\Functions.ink
     INCLUDE Grimoire\VarAndLists.ink
     INCLUDE Grimoire\Texts\Appendices.ink
+    INCLUDE Grimoire\Texts\Rules.ink
     INCLUDE Grimoire\TextGenerators\Strings.ink
     INCLUDE Grimoire\TextGenerators\FrancoMissions.ink
     

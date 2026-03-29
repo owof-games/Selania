@@ -84,8 +84,6 @@
                 Delle pulci d'acqua, per lo più.     
         }
     
-
-        ~ grimoire_Appendices += grimKitchenChitarra
         ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
         ~ firstChar_PondInvite = true
         -> opening_places ->

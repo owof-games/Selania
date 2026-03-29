@@ -327,6 +327,7 @@
             //Storylets speciali
             - open_the_nest && grimoire_thirdChar hasnt grimThirdOpenNest:
                 ~ grimoire_thirdChar += grimThirdOpenNest
+                ~ grimoire_appendices += grimSigilsBoccale
 
             - third_read_story_library && grimoire_thirdChar hasnt grimThirdCharNovel:
                 ~ grimoire_thirdChar += grimThirdCharNovel

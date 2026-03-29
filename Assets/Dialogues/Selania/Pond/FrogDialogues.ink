@@ -17,6 +17,7 @@
                 ~ player_somethingStrange += strangeFrog
                 ~ book_BGVariations ++
                 ~ move_entity(FrogRecap, BookPlace)
+                ~ grimoire_franco += grimFrancoFirst
 
             Ma dove avevo messo quel.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             Eccola cra!
