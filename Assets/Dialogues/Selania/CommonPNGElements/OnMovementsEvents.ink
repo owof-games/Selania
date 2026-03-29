@@ -47,6 +47,7 @@
     {
         - greenhouse_allCultivables == ():
             ~ greenhouse_allCultivables += greenhouse_cultivable
+            ~ achievements_fullGreenhouse_maxValue = LIST_COUNT(greenhouse_allCultivables)
     }
 
 //A crescita Olobino, cambio asset accesso serra  

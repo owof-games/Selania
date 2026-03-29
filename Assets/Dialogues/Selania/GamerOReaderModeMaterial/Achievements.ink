@@ -7,12 +7,18 @@ LIST achievements_statusAchievements = notActive, notDiscovered, inProgress, Dis
 VAR achievements_oneRewrite = notActive
     VAR achievements_oneRewrite_text = ""
     VAR achievements_oneRewrite_notified = false
+    VAR achievements_oneRewrite_maxValue = 1
+    VAR achievements_oneRewrite_actualValue = 0
 VAR achievements_threeRewrite = notActive
     VAR achievements_threeRewrite_text = ""
     VAR achievements_threeRewrite_notified = false
+    VAR achievements_threeRewrite_maxValue = 3
+    VAR achievements_threeRewrite_actualValue = 0
 VAR achievements_fiveRewrite = notActive
     VAR achievements_fiveRewrite_text = ""
     VAR achievements_fiveRewrite_notified = false
+    VAR achievements_fiveRewrite_maxValue = 5
+    VAR achievements_fiveRewrite_actualValue = 0
 
 VAR achievements_fullKitchen = notActive
     VAR achievements_fullKitchen_text = ""
@@ -42,6 +48,8 @@ VAR achievements_fullFranco = notActive
 VAR achievements_allSigils = notActive
     VAR achievements_allSigils_text = ""
     VAR achievements_allSigils_notified = false
+    VAR achievements_allSigils_maxValue = 60
+    VAR achievements_allSigils_actualValue = 0
 VAR achievements_allLetters = notActive
     VAR achievements_allLetters_text = ""
     VAR achievements_allLetters_notified = false
@@ -51,6 +59,8 @@ VAR achievements_allLetters = notActive
 VAR achievements_fullGreenhouse = notActive
     VAR achievements_fullGreenhouse_text = ""
     VAR achievements_fullGreenhouse_notified = false
+    VAR achievements_fullGreenhouse_maxValue = 0
+    VAR achievements_fullGreenhouse_actualValue = 0
 
 
 //Achievements Reader Mode
@@ -112,8 +122,10 @@ VAR achievements_goodReader = notActive
         - LIST_COUNT(story_endedStories) == 1:
             ~ achievements_oneRewrite = Discovered
                 ~ achievements_oneRewrite_text = "1/1"
+                ~ achievements_oneRewrite_actualValue = 1
             ~ achievements_threeRewrite = inProgress
                 ~ achievements_threeRewrite_text = "{LIST_COUNT(story_endedStories)}/3"
+                ~ achievements_threeRewrite_actualValue = LIST_COUNT(story_endedStories)
             ~ achievements_fiveRewrite = notDiscovered
                 ~ achievements_fiveRewrite_text = ""
                 {
@@ -128,6 +140,7 @@ VAR achievements_goodReader = notActive
                 ~ achievements_oneRewrite_text = "1/1"
             ~ achievements_threeRewrite = inProgress
                 ~ achievements_threeRewrite_text = "{LIST_COUNT(story_endedStories)}/3"
+                ~ achievements_threeRewrite_actualValue = LIST_COUNT(story_endedStories)
             ~ achievements_fiveRewrite = notDiscovered
                 ~ achievements_fiveRewrite_text = ""
                 
@@ -137,9 +150,10 @@ VAR achievements_goodReader = notActive
                 ~ achievements_oneRewrite_text = "1/1"
             ~ achievements_threeRewrite = Discovered
                 ~ achievements_threeRewrite_text = "{LIST_COUNT(story_endedStories)}/3"
-                
+                ~ achievements_threeRewrite_actualValue = LIST_COUNT(story_endedStories)
             ~ achievements_fiveRewrite = inProgress
                 ~ achievements_fiveRewrite_text = "{LIST_COUNT(story_endedStories)}/5"
+                ~ achievements_fiveRewrite_actualValue = LIST_COUNT(story_endedStories)
                 {
                     - achievements_threeRewrite_notified == false:
                         ~ achievements_threeRewrite_notified = true
@@ -152,16 +166,20 @@ VAR achievements_goodReader = notActive
                 ~ achievements_oneRewrite_text = "1/1"
             ~ achievements_threeRewrite = Discovered
                 ~ achievements_threeRewrite_text = "3/3"
+                ~ achievements_threeRewrite_actualValue = LIST_COUNT(story_endedStories)
             ~ achievements_fiveRewrite = inProgress
                 ~ achievements_fiveRewrite_text = "{LIST_COUNT(story_endedStories)}/5"
+                ~ achievements_fiveRewrite_actualValue = LIST_COUNT(story_endedStories)
 
         - LIST_COUNT(story_endedStories) == 5:
             ~ achievements_oneRewrite = Discovered
                 ~ achievements_oneRewrite_text = "1/1"
             ~ achievements_threeRewrite = Discovered
                 ~ achievements_threeRewrite_text = "3/3"
+                ~ achievements_threeRewrite_actualValue = LIST_COUNT(story_endedStories)
             ~ achievements_fiveRewrite = Discovered
                 ~ achievements_fiveRewrite_text = "{LIST_COUNT(story_endedStories)}/5"
+                ~ achievements_fiveRewrite_actualValue = LIST_COUNT(story_endedStories)
                 {
                     - achievements_fiveRewrite_notified == false:
                         ~ achievements_fiveRewrite_notified = true
@@ -400,10 +418,12 @@ VAR achievements_goodReader = notActive
         - LIST_COUNT(glyph_discoveredSigils) > 0 && LIST_COUNT(glyph_discoveredSigils) < 60:
             ~ achievements_allSigils = inProgress
                 ~ achievements_allSigils_text = "{LIST_COUNT(glyph_discoveredSigils)}/60"
+                ~ achievements_allSigils_actualValue = LIST_COUNT(glyph_discoveredSigils)
 
         - LIST_COUNT(glyph_discoveredSigils) == 60:
             ~ achievements_allSigils = Discovered
                 ~ achievements_allSigils_text = "{LIST_COUNT(glyph_discoveredSigils)}/60"
+                ~ achievements_allSigils_actualValue = LIST_COUNT(glyph_discoveredSigils)
                 
                 {
                     - achievements_allSigils_notified == false:
@@ -473,10 +493,12 @@ VAR achievements_goodReader = notActive
         - LIST_COUNT(greenhouse_findedCultivables) < LIST_COUNT(greenhouse_allCultivables) && LIST_COUNT(greenhouse_findedCultivables) > 0:
             ~ achievements_fullGreenhouse = inProgress
                 ~ achievements_fullGreenhouse_text = "{LIST_COUNT(greenhouse_findedCultivables)}/{LIST_COUNT(greenhouse_allCultivables)}"
+                ~ achievements_fullGreenhouse_actualValue = LIST_COUNT(greenhouse_findedCultivables)
 
         - LIST_COUNT(greenhouse_findedCultivables) == LIST_COUNT(greenhouse_allCultivables):
             ~ achievements_fullGreenhouse = Discovered
                 ~ achievements_fullGreenhouse_text = "{LIST_COUNT(greenhouse_findedCultivables)}/{LIST_COUNT(greenhouse_allCultivables)}"
+                ~ achievements_fullGreenhouse_actualValue = LIST_COUNT(greenhouse_findedCultivables)
                 {
                     - achievements_fullGreenhouse_notified == false:
                         ~ achievements_fullGreenhouse_notified = true
