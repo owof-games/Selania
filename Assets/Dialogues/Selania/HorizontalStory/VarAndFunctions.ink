@@ -159,7 +159,6 @@ VAR horizontalS_libraryThirdTier = 5
             ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_dump)
             //Lo aggiungo a quelli scoperti, lo rimuovo da horizontalS_dump
             ~ horizontalS_dump -= horizontalS_currentDoc
-            ~ horizontalS_discoveredDocs += horizontalS_currentDoc
             //Aggiorno la lista per far sì che siano uguali.
             ~ horizontalS_DumpActivators = listDumpCharActivators
             ~ move_entity(docDump, Forest)
@@ -175,7 +174,6 @@ VAR horizontalS_libraryThirdTier = 5
             ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_kitchen)
             //Lo aggiungo a quelli scoperti, lo rimuovo da horizontalS_kitchen
             ~ horizontalS_kitchen -= horizontalS_currentDoc
-            ~ horizontalS_discoveredDocs += horizontalS_currentDoc
             //Aggiorno la lista per far sì che siano uguali.
             ~ horizontalS_allChefs = kitchen_allChefs
             ~ move_entity(docKitchen, Forest)
@@ -189,7 +187,6 @@ VAR horizontalS_libraryThirdTier = 5
         - horizontalS_greenhouseDocs == true:
             ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_greenhouse)
             ~ horizontalS_greenhouse -= horizontalS_currentDoc
-            ~ horizontalS_discoveredDocs += horizontalS_currentDoc
             ~ move_entity(docGreenhouse, Forest)
             ~ horizontalS_greenhouseDocs = false
             //La prima volta che compare una lettera arriva la molletta, così poi non ci si pensa più
@@ -202,7 +199,6 @@ VAR horizontalS_libraryThirdTier = 5
         - horizontalS_nestDocs == true:
             ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_nest)
             ~ horizontalS_nest -= horizontalS_currentDoc
-            ~ horizontalS_discoveredDocs += horizontalS_currentDoc
             ~ horizontalS_nestDocs = false
             ~ move_entity(docNest, Forest)
             //La prima volta che compare una lettera arriva la molletta, così poi non ci si pensa più
@@ -214,7 +210,6 @@ VAR horizontalS_libraryThirdTier = 5
         - horizontalS_libraryDocs == true:
             ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_library)
             ~ horizontalS_library -= horizontalS_currentDoc
-            ~ horizontalS_discoveredDocs += horizontalS_currentDoc
             ~ move_entity(docLibrary, Forest)
             ~ horizontalS_libraryDocs = false
             //La prima volta che compare una lettera arriva la molletta, così poi non ci si pensa più
@@ -233,7 +228,8 @@ VAR horizontalS_libraryThirdTier = 5
 
 //Funzione che chiamo a fine storylet per spostare/pulire quello che c'è da spostare e pulire
 === horizontalSEndingStorylet
-{debug_horizontalS: horizontalSEndingStorylet}    
+{debug_horizontalS: horizontalSEndingStorylet}
+    ~ horizontalS_discoveredDocs += horizontalS_currentDoc
     ~ horizontalS_currentDoc = ()
     ~ move_entity(docDump, Safekeeping)
     ~ move_entity(docKitchen, Safekeeping)
