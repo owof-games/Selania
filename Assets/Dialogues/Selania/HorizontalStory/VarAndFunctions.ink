@@ -1,6 +1,9 @@
 //Variabili e liste
 LIST horizontalS_allDocs = (docOne), (docTwo), (docThree), (docFour), (docFive), (docSix), (docSeven), (docEight), (docNine), (docTen), (docEleven), (docTwelve), (docThirteen), (docFourteen), (docFifteen), (docSixteen), (docSeventeen), (docEighteen), (docNineteen), (docTwenty), (docTwentyOne), (docTwentyTwo), (docTwentyThree), (docTwentyFour), (docTwentyFive)
 
+//E una var giusto per gli achievements che raccoglie tutti i documenti
+VAR horizontalS_allAchievementDocs = ()
+
 //Nota: se volessi sbloccare alcuni storylets solo verso la fine, quelli più sensati sarebbero docTwentyFour docTwentyFive docEighteen docFourteen
 
 VAR horizontalS_dump = (docOne, docNine, docSixteen,  docNineteen, docTwentyOne)

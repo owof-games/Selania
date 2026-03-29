@@ -1,6 +1,9 @@
 //Variabili per la gestione della biblioteca
 LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola, FrancescaToscaRaimondi, Lamia, LorisCasagrandi, Kayleig, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, Simo
 
+//Tracking per l'achievement
+VAR library_allAchievementStories = ()   
+
 //Liste per distinguere storie lette e non
     VAR library_unreadStories = (AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola, FrancescaToscaRaimondi, Lamia, LorisCasagrandi, Kayleig, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, Simo)
     VAR library_readStories = ()

@@ -41,13 +41,26 @@
 //A inizio gioco, mi salvo la lista di tutte le missioni di Franco.
     {
         - frog_allAvailableMissions == ():
-            ~  frog_allAvailableMissions = frog_availableCommonMissions + frog_availableSpecialMissions
+            ~ frog_allAvailableMissions = frog_availableCommonMissions + frog_availableSpecialMissions
+            ~ achievements_fullFranco_maxValue = LIST_COUNT(frog_allAvailableMissions)
     }
 //Idem per i coltivabili
     {
         - greenhouse_allCultivables == ():
             ~ greenhouse_allCultivables += greenhouse_cultivable
             ~ achievements_fullGreenhouse_maxValue = LIST_COUNT(greenhouse_allCultivables)
+    }
+//E per il libri
+    {
+        - library_allAchievementStories == ():
+            ~ library_allAchievementStories += library_unreadStories
+            ~ achievements_goodReader_maxValue = LIST_COUNT(library_allAchievementStories)
+    }
+//E la lore
+    {
+        - horizontalS_allAchievementDocs == ():
+            ~ horizontalS_allAchievementDocs += horizontalS_allDocs
+            ~ achievements_fullLore_maxValue = LIST_COUNT(horizontalS_allAchievementDocs)
     }
 
 //A crescita Olobino, cambio asset accesso serra  

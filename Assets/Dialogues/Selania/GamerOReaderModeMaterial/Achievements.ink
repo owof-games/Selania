@@ -73,11 +73,11 @@ VAR achievements_goodListener = notActive
     VAR achievements_goodListener_actualValue = 0
 VAR achievements_fullLore = notActive
     VAR achievements_fullLore_notified = false
-    VAR achievements_fullLore_maxValue = 5
+    VAR achievements_fullLore_maxValue = 0
     VAR achievements_fullLore_actualValue = 0
 VAR achievements_goodReader = notActive
     VAR achievements_goodReader_notified = false
-    VAR achievements_goodReader_maxValue = 5
+    VAR achievements_goodReader_maxValue = 0
     VAR achievements_goodReader_actualValue = 0
 
 
@@ -137,14 +137,12 @@ VAR achievements_goodReader = notActive
                 }
 
         - LIST_COUNT(story_endedStories) == 2:
-            // ~ achievements_oneRewrite = Discovered
             ~ achievements_threeRewrite = inProgress
                 ~ achievements_threeRewrite_actualValue = LIST_COUNT(story_endedStories)
             ~ achievements_fiveRewrite = notDiscovered
                 
 
         - LIST_COUNT(story_endedStories) == 3:
-            // ~ achievements_oneRewrite = Discovered
             ~ achievements_threeRewrite = Discovered
                 ~ achievements_threeRewrite_actualValue = LIST_COUNT(story_endedStories)
             ~ achievements_fiveRewrite = inProgress
@@ -157,16 +155,10 @@ VAR achievements_goodReader = notActive
                 }
 
         - LIST_COUNT(story_endedStories) == 4:
-            // ~ achievements_oneRewrite = Discovered
-            // ~ achievements_threeRewrite = Discovered
-            //     ~ achievements_threeRewrite_actualValue = LIST_COUNT(story_endedStories)
             ~ achievements_fiveRewrite = inProgress
                 ~ achievements_fiveRewrite_actualValue = LIST_COUNT(story_endedStories)
 
         - LIST_COUNT(story_endedStories) == 5:
-            // ~ achievements_oneRewrite = Discovered
-            // ~ achievements_threeRewrite = Discovered
-            //     ~ achievements_threeRewrite_actualValue = LIST_COUNT(story_endedStories)
             ~ achievements_fiveRewrite = Discovered
                 ~ achievements_fiveRewrite_actualValue = LIST_COUNT(story_endedStories)
                 {
@@ -178,17 +170,14 @@ VAR achievements_goodReader = notActive
     }
 
 //Aggiornamento achievements legati alla cucina.
+~ achievements_fullKitchen_actualValue = LIST_COUNT(kitchen_allChefs)
+
     {
-        - LIST_COUNT(kitchen_allChefs) == 0:
+        - achievements_fullKitchen_actualValue == 0:
             ~ achievements_fullKitchen = notDiscovered
 
-        - LIST_COUNT(kitchen_allChefs) >= 1 && LIST_COUNT(kitchen_allChefs) < 6:
-            ~ achievements_fullKitchen = inProgress
-                ~ achievements_fullKitchen_actualValue = LIST_COUNT(kitchen_allChefs)
-
-        - LIST_COUNT(kitchen_allChefs) == 6:
+        - achievements_fullKitchen_actualValue == 6:
             ~ achievements_fullKitchen = Discovered
-                ~ achievements_fullKitchen_actualValue = LIST_COUNT(kitchen_allChefs)
                 
                 {
                     - achievements_fullKitchen_notified == false:
@@ -196,6 +185,11 @@ VAR achievements_goodReader = notActive
                         ~ notification_achievement = true
                         ~ notification_achievement = "{achievements_fullKitchen}"
                 } 
+
+
+        - achievements_fullKitchen_actualValue > 0:
+            ~ achievements_fullKitchen = inProgress
+                
 
     }
 
@@ -285,16 +279,18 @@ VAR achievements_goodReader = notActive
          ~ achievements_perfectGiftsCounter ++
          ~ achievements_perfectGiftReceivers += FifthCharacter
     }
+
+    ~ achievements_fivePerfectGifts_actualValue = achievements_perfectGiftsCounter
+
     {
         - achievements_perfectGiftsCounter == 0:
             ~ achievements_onePerfectGift = notDiscovered
             ~ achievements_fivePerfectGifts = notDiscovered
 
-        - achievements_perfectGiftsCounter == 1:
+        - achievements_fivePerfectGifts_actualValue == 1:
             ~ achievements_onePerfectGift = Discovered
                 ~ achievements_onePerfectGift_actualValue = 1
             ~ achievements_fivePerfectGifts = inProgress
-                ~ achievements_fivePerfectGifts_actualValue = achievements_perfectGiftsCounter
                 {
                     - achievements_onePerfectGift_notified == false:
                         ~ achievements_onePerfectGift_notified = true
@@ -302,45 +298,36 @@ VAR achievements_goodReader = notActive
                         ~ notification_achievement = "{achievements_onePerfectGift}"
                 } 
 
-        - achievements_perfectGiftsCounter > 1 && achievements_perfectGiftsCounter <5:
-            // ~ achievements_onePerfectGift = Discovered
-            //     ~ achievements_onePerfectGift_actualValue = 1
-            ~ achievements_fivePerfectGifts = inProgress
-                ~ achievements_fivePerfectGifts_actualValue = achievements_perfectGiftsCounter
-
-
-        - achievements_perfectGiftsCounter == 5:
-            // ~ achievements_onePerfectGift = Discovered
-            //     ~ achievements_onePerfectGift_actualValue = 1
+         - achievements_fivePerfectGifts_actualValue == 5:
             ~ achievements_fivePerfectGifts = Discovered
-                ~ achievements_fivePerfectGifts_actualValue = achievements_perfectGiftsCounter
                 {
                     - achievements_fivePerfectGifts_notified == false:
                         ~ achievements_fivePerfectGifts_notified = true
                         ~ notification_achievement = true
                         ~ notification_achievement = "{achievements_fivePerfectGifts}"
-                }                 
+                }  
+        
+        - achievements_fivePerfectGifts_actualValue > 1:
+            ~ achievements_fivePerfectGifts = inProgress
+                
+                      
     }
 
 //Achievement Franco.
+~  achievements_fullFranco_actualValue = LIST_COUNT(frog_allMissionsCompleted)
     {
         //Completamento a zero, non parto
-        - LIST_COUNT(frog_allMissionsCompleted) == 0:
+        - achievements_fullFranco_actualValue == 0:
             ~ achievements_fullFranco = notDiscovered
-            
+        
+        //Se le missioni sono uguali alle massime, ho completato l'achievement.
+        - achievements_fullFranco_actualValue == 0:
+            ~ achievements_fullFranco = Discovered    
 
         //Completamento maggiore di 0 ma minore di tutte quelle disponibili
-        - LIST_COUNT(frog_allMissionsCompleted) < LIST_COUNT(frog_allAvailableMissions) && LIST_COUNT(frog_allMissionsCompleted) > 0:
+        - achievements_fullFranco_actualValue > 0:
             ~ achievements_fullFranco = inProgress
-                ~ achievements_fullFranco_maxValue = LIST_COUNT(frog_allAvailableMissions)
-                ~  achievements_fullFranco_actualValue = LIST_COUNT(frog_allMissionsCompleted)
 
-        //Se le missioni sono uguali alle massime, ho completato l'achievement.
-        - LIST_COUNT(frog_allMissionsCompleted) == 0:
-            ~ achievements_fullFranco = Discovered
-                // ~ achievements_fullFranco_maxValue = LIST_COUNT(frog_allAvailableMissions)
-                ~  achievements_fullFranco_actualValue = LIST_COUNT(frog_allMissionsCompleted)
-               
                 {
                     - achievements_fullFranco_notified == false:
                         ~ achievements_fullFranco_notified = true
@@ -351,15 +338,12 @@ VAR achievements_goodReader = notActive
     }
 
 //Achievement sigilli.
+~ achievements_allSigils_actualValue = LIST_COUNT(glyph_discoveredSigils)
     {
-        - LIST_COUNT(glyph_discoveredSigils) == 0:
+        - achievements_allSigils_actualValue == 0:
             ~ achievements_allSigils = notDiscovered
 
-        - LIST_COUNT(glyph_discoveredSigils) > 0 && LIST_COUNT(glyph_discoveredSigils) < 60:
-            ~ achievements_allSigils = inProgress
-                ~ achievements_allSigils_actualValue = LIST_COUNT(glyph_discoveredSigils)
-
-        - LIST_COUNT(glyph_discoveredSigils) == 60 && not witch_allSigils_opening.yes:
+        - achievements_allSigils_actualValue == 60 && not witch_allSigils_opening.yes:
             ~ achievements_allSigils = Discovered
                 ~ achievements_allSigils_actualValue = LIST_COUNT(glyph_discoveredSigils)
                 
@@ -369,6 +353,12 @@ VAR achievements_goodReader = notActive
                         ~ notification_achievement = true
                         ~ notification_achievement = "{achievements_allSigils}"
                 } 
+
+        - achievements_allSigils_actualValue > 0:
+            ~ achievements_allSigils = inProgress
+                
+
+        
     }
 
 //Achievement lettere.
@@ -400,15 +390,15 @@ VAR achievements_goodReader = notActive
     }
 
 
+    ~ achievements_allLetters_actualValue = LIST_COUNT(achievements_allLetters_Receivers)
 
     {
-        - achievements_allLetters_Counter == 0:
+        - achievements_allLetters_actualValue == 0:
             ~ achievements_allLetters = notDiscovered
             
 
-        - achievements_allLetters_Counter == 5:
+        - achievements_allLetters_actualValue == 5:
             ~ achievements_allLetters = Discovered
-            ~ achievements_allLetters_actualValue = LIST_COUNT(achievements_allLetters_Receivers)
             {
                 - achievements_allLetters_notified == false:
                     ~ achievements_allLetters_notified = true
@@ -423,23 +413,26 @@ VAR achievements_goodReader = notActive
     }  
 
 //Achievement serra.
+~ achievements_fullGreenhouse_actualValue = LIST_COUNT(greenhouse_findedCultivables)
+
     {
-        - LIST_COUNT(greenhouse_findedCultivables) == 0:
+        - achievements_fullGreenhouse_actualValue == 0:
             ~ achievements_fullGreenhouse = notDiscovered
 
-        - LIST_COUNT(greenhouse_findedCultivables) < LIST_COUNT(greenhouse_allCultivables) && LIST_COUNT(greenhouse_findedCultivables) > 0:
-            ~ achievements_fullGreenhouse = inProgress
-                ~ achievements_fullGreenhouse_actualValue = LIST_COUNT(greenhouse_findedCultivables)
-
-        - LIST_COUNT(greenhouse_findedCultivables) == LIST_COUNT(greenhouse_allCultivables):
+        - achievements_fullGreenhouse_actualValue == LIST_COUNT(greenhouse_allCultivables):
             ~ achievements_fullGreenhouse = Discovered
-                ~ achievements_fullGreenhouse_actualValue = LIST_COUNT(greenhouse_findedCultivables)
                 {
                     - achievements_fullGreenhouse_notified == false:
                         ~ achievements_fullGreenhouse_notified = true
                         ~ notification_achievement = true
                         ~ notification_achievement = "{achievements_fullGreenhouse}"
-                }    
+                }  
+
+        - achievements_fullGreenhouse_actualValue > 0:
+            ~ achievements_fullGreenhouse = inProgress
+
+
+          
 
     }
 
@@ -478,16 +471,14 @@ VAR achievements_goodReader = notActive
             ~ achievements_goodListener_tracker = listDumpCharActivators
             
 }
+
+    ~ achievements_goodListener_actualValue = LIST_COUNT(achievements_goodListener_tracker)
+
 {
-    - LIST_COUNT(achievements_goodListener_tracker) == 0:
+    - achievements_goodListener_actualValue == 0:
         ~ achievements_goodListener = notDiscovered
 
-
-    - LIST_COUNT(achievements_goodListener_tracker) > 0 && LIST_COUNT(achievements_goodListener_tracker) < 5:
-        ~ achievements_goodListener = inProgress
-            ~ achievements_goodListener_actualValue = LIST_COUNT(achievements_goodListener_tracker)
-
-    - LIST_COUNT(achievements_goodListener_tracker) == 5:
+    - achievements_goodListener_actualValue == 5:
         ~ achievements_goodListener = Discovered
             ~ achievements_goodListener_actualValue = LIST_COUNT(achievements_goodListener_tracker)
                 {
@@ -495,18 +486,24 @@ VAR achievements_goodReader = notActive
                         ~ achievements_goodListener_notified = true
                         ~ notification_achievement = true
                         ~ notification_achievement = "{achievements_goodListener}"
-                }   
+                }
+
+    - achievements_goodListener_actualValue > 0 :
+        ~ achievements_goodListener = inProgress
+            ~ achievements_goodListener_actualValue = LIST_COUNT(achievements_goodListener_tracker)            
 
 }
 
 
 
 //Scoperta lore
+~ achievements_fullLore_actualValue = LIST_COUNT(horizontalS_discoveredDocs) 
+
 {
-    - LIST_COUNT(horizontalS_discoveredDocs) == 0:
+    - achievements_fullLore_actualValue == 0:
         ~ achievements_fullLore = notDiscovered
 
-    - LIST_COUNT(horizontalS_discoveredDocs) == LIST_COUNT(horizontalS_allDocs):
+    - achievements_fullLore_actualValue == LIST_COUNT(horizontalS_allAchievementDocs):
         ~ achievements_fullLore = Discovered
                 {
                     - achievements_fullLore_notified == false:
@@ -515,7 +512,7 @@ VAR achievements_goodReader = notActive
                         ~ notification_achievement = "{achievements_fullLore}"
                 }   
 
-    - (LIST_COUNT(horizontalS_discoveredDocs) > 0):
+    - achievements_fullLore_actualValue > 0:
         ~ achievements_fullLore = inProgress
     
 }
@@ -523,15 +520,11 @@ VAR achievements_goodReader = notActive
 
 
 //Lettura racconti
-~ temp readStories = LIST_COUNT(library_allStories) - LIST_COUNT(library_unreadStories)
+~ temp readStories = LIST_COUNT(library_allAchievementStories) - LIST_COUNT(library_unreadStories)
 {
-    - LIST_COUNT(library_unreadStories) == LIST_COUNT(library_allStories):
+    - LIST_COUNT(library_unreadStories) == LIST_COUNT(library_allAchievementStories):
         ~ achievements_goodReader = notDiscovered
 
-    - LIST_COUNT(library_unreadStories) < LIST_COUNT(library_allStories) && LIST_COUNT(library_unreadStories) > 0:
-        ~ achievements_goodReader = inProgress
-            ~ achievements_goodReader_maxValue = LIST_COUNT(library_allStories)
-            ~ achievements_goodReader_actualValue = LIST_COUNT(readStories)
 
     - LIST_COUNT(library_unreadStories) == 0:
         ~ achievements_goodReader = Discovered
@@ -542,6 +535,10 @@ VAR achievements_goodReader = notActive
                         ~ notification_achievement = true
                         ~ notification_achievement = "{achievements_goodReader}"
                 }   
+    
+    - LIST_COUNT(library_unreadStories) > 0:
+        ~ achievements_goodReader = inProgress
+        ~ achievements_goodReader_actualValue = readStories
 }
 
 {
