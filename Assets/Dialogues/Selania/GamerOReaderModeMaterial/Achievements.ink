@@ -137,14 +137,14 @@ VAR achievements_goodReader = notActive
                 }
 
         - LIST_COUNT(story_endedStories) == 2:
-            ~ achievements_oneRewrite = Discovered
+            // ~ achievements_oneRewrite = Discovered
             ~ achievements_threeRewrite = inProgress
                 ~ achievements_threeRewrite_actualValue = LIST_COUNT(story_endedStories)
             ~ achievements_fiveRewrite = notDiscovered
                 
 
         - LIST_COUNT(story_endedStories) == 3:
-            ~ achievements_oneRewrite = Discovered
+            // ~ achievements_oneRewrite = Discovered
             ~ achievements_threeRewrite = Discovered
                 ~ achievements_threeRewrite_actualValue = LIST_COUNT(story_endedStories)
             ~ achievements_fiveRewrite = inProgress
@@ -157,16 +157,16 @@ VAR achievements_goodReader = notActive
                 }
 
         - LIST_COUNT(story_endedStories) == 4:
-            ~ achievements_oneRewrite = Discovered
-            ~ achievements_threeRewrite = Discovered
-                ~ achievements_threeRewrite_actualValue = LIST_COUNT(story_endedStories)
+            // ~ achievements_oneRewrite = Discovered
+            // ~ achievements_threeRewrite = Discovered
+            //     ~ achievements_threeRewrite_actualValue = LIST_COUNT(story_endedStories)
             ~ achievements_fiveRewrite = inProgress
                 ~ achievements_fiveRewrite_actualValue = LIST_COUNT(story_endedStories)
 
         - LIST_COUNT(story_endedStories) == 5:
-            ~ achievements_oneRewrite = Discovered
-            ~ achievements_threeRewrite = Discovered
-                ~ achievements_threeRewrite_actualValue = LIST_COUNT(story_endedStories)
+            // ~ achievements_oneRewrite = Discovered
+            // ~ achievements_threeRewrite = Discovered
+            //     ~ achievements_threeRewrite_actualValue = LIST_COUNT(story_endedStories)
             ~ achievements_fiveRewrite = Discovered
                 ~ achievements_fiveRewrite_actualValue = LIST_COUNT(story_endedStories)
                 {
@@ -232,7 +232,7 @@ VAR achievements_goodReader = notActive
             ~ achievements_fivePerfectIngredients = notDiscovered
 
 
-        - achievements_perfectIngredientsCounter == 1:
+        - achievements_perfectIngredientsCounter == 1 & achievements_perfectIngredientsCounter <5:
             ~ achievements_onePerfectIngredient = Discovered
                 ~ achievements_onePerfectIngredient_actualValue = 1
                 
@@ -245,8 +245,8 @@ VAR achievements_goodReader = notActive
                         ~ notification_achievement = "{achievements_onePerfectIngredient}"
                 } 
 
-        - achievements_perfectIngredientsCounter <= 5:
-            ~ achievements_onePerfectIngredient = Discovered
+        - achievements_perfectIngredientsCounter == 5:
+            // ~ achievements_onePerfectIngredient = Discovered
             ~ achievements_fivePerfectIngredients = Discovered
                 ~ achievements_fivePerfectIngredient_actualValue = achievements_perfectIngredientsCounter
                 
@@ -303,15 +303,15 @@ VAR achievements_goodReader = notActive
                 } 
 
         - achievements_perfectGiftsCounter > 1 && achievements_perfectGiftsCounter <5:
-            ~ achievements_onePerfectGift = Discovered
-                ~ achievements_onePerfectGift_actualValue = 1
+            // ~ achievements_onePerfectGift = Discovered
+            //     ~ achievements_onePerfectGift_actualValue = 1
             ~ achievements_fivePerfectGifts = inProgress
                 ~ achievements_fivePerfectGifts_actualValue = achievements_perfectGiftsCounter
 
 
         - achievements_perfectGiftsCounter == 5:
-            ~ achievements_onePerfectGift = Discovered
-                ~ achievements_onePerfectGift_actualValue = 1
+            // ~ achievements_onePerfectGift = Discovered
+            //     ~ achievements_onePerfectGift_actualValue = 1
             ~ achievements_fivePerfectGifts = Discovered
                 ~ achievements_fivePerfectGifts_actualValue = achievements_perfectGiftsCounter
                 {
@@ -338,7 +338,7 @@ VAR achievements_goodReader = notActive
         //Se le missioni sono uguali alle massime, ho completato l'achievement.
         - LIST_COUNT(frog_allMissionsCompleted) == 0:
             ~ achievements_fullFranco = Discovered
-                ~ achievements_fullFranco_maxValue = LIST_COUNT(frog_allAvailableMissions)
+                // ~ achievements_fullFranco_maxValue = LIST_COUNT(frog_allAvailableMissions)
                 ~  achievements_fullFranco_actualValue = LIST_COUNT(frog_allMissionsCompleted)
                
                 {
