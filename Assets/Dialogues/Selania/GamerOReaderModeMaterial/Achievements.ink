@@ -23,6 +23,8 @@ VAR achievements_fiveRewrite = notActive
 VAR achievements_fullKitchen = notActive
     VAR achievements_fullKitchen_text = ""
     VAR achievements_fullKitchen_notified = false
+    VAR achievements_fullKitchen_maxValue = 6
+    VAR achievements_fullKitchen_actualValue = 0
 VAR achievements_onePerfectIngredient = notActive
     VAR achievements_onePerfectIngredient_text = ""
     VAR achievements_onePerfectIngredient_notified = false
@@ -197,26 +199,32 @@ VAR achievements_goodReader = notActive
         - LIST_COUNT(kitchen_allChefs) == 1:
             ~ achievements_fullKitchen = inProgress
                 ~ achievements_fullKitchen_text = "{LIST_COUNT(kitchen_allChefs)}/6"
+                ~ achievements_fullKitchen_actualValue = LIST_COUNT(kitchen_allChefs)
 
         - LIST_COUNT(kitchen_allChefs) == 2:
             ~ achievements_fullKitchen = inProgress
                 ~ achievements_fullKitchen_text = "{LIST_COUNT(kitchen_allChefs)}/6"
+                ~ achievements_fullKitchen_actualValue = LIST_COUNT(kitchen_allChefs)
 
         - LIST_COUNT(kitchen_allChefs) == 3:
             ~ achievements_fullKitchen = inProgress
                 ~ achievements_fullKitchen_text = "{LIST_COUNT(kitchen_allChefs)}/6"
+                ~ achievements_fullKitchen_actualValue = LIST_COUNT(kitchen_allChefs)
 
         - LIST_COUNT(kitchen_allChefs) == 4:
             ~ achievements_fullKitchen = inProgress
                 ~ achievements_fullKitchen_text = "{LIST_COUNT(kitchen_allChefs)}/6"
+                ~ achievements_fullKitchen_actualValue = LIST_COUNT(kitchen_allChefs)
 
         - LIST_COUNT(kitchen_allChefs) == 5:
             ~ achievements_fullKitchen = inProgress
                 ~ achievements_fullKitchen_text = "{LIST_COUNT(kitchen_allChefs)}/6"
+                ~ achievements_fullKitchen_actualValue = LIST_COUNT(kitchen_allChefs)
 
         - LIST_COUNT(kitchen_allChefs) == 6:
             ~ achievements_fullKitchen = Discovered
                 ~ achievements_fullKitchen_text = "{LIST_COUNT(kitchen_allChefs)}/6"
+                ~ achievements_fullKitchen_actualValue = LIST_COUNT(kitchen_allChefs)
                 
                 {
                     - achievements_fullKitchen_notified == false:
