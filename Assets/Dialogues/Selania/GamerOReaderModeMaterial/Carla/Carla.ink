@@ -34,10 +34,6 @@
         + Come interagisco col mondo?
                 -> tutorial_carlaInterfaceStorylets -> questions_Carla       
 
-        //Scelte di testing
-        + Qual è lo stato degli achievement? (domanda giusto ora che non c'è il grimorio)
-                -> carla_achievements -> questions_Carla
-
         + Mi sbloccherebbe tutti i sigilli?
                 -> glyph_open_all_sigils ->
                 Fatto.

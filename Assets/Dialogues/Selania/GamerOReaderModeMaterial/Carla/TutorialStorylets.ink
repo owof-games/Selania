@@ -579,25 +579,4 @@
 ->->
 
 
-=== carla_achievements
-Achievements Gamer Mode
-achievements_oneRewrite: {achievements_oneRewrite}, {achievements_oneRewrite_text}
-achievements_threeRewrite: {achievements_threeRewrite}, {achievements_threeRewrite_text}
-achievements_fiveRewrite: {achievements_fiveRewrite}, {achievements_fiveRewrite_text}
-achievements_fullKitchen: {achievements_fullKitchen}, {achievements_fullKitchen_text}
-achievements_onePerfectIngredient: {achievements_onePerfectIngredient}, {achievements_onePerfectIngredient_text}
-achievements_fivePerfectIngredients: {achievements_fivePerfectIngredients}, {achievements_fivePerfectIngredients_text}
-achievements_onePerfectGift: {achievements_onePerfectGift}, {achievements_onePerfectGift_text}
-achievements_fivePerfectGifts: {achievements_fivePerfectGifts}, {achievements_fivePerfectGifts_text}
-achievements_fullFranco: {achievements_fullFranco}, {achievements_fullFranco_text}
-achievements_allSigils: {achievements_allSigils}, {achievements_allSigils_text}
-achievements_allLetters: {achievements_allLetters}, {achievements_allLetters_text}
-achievements_fullGreenhouse: {achievements_fullGreenhouse}, {achievements_fullGreenhouse_text}
 
-Achievements Reader Mode
-achievements_goodListener: {achievements_goodListener}, {achievements_goodListener_text}
-achievements_fullLore: {achievements_fullLore}, {achievements_fullLore_text}
-achievements_goodReader: {achievements_goodReader}, {achievements_goodReader_text}
-
-
-->->
