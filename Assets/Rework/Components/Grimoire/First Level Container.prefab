@@ -283,7 +283,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -257.25226}
+  m_AnchoredPosition: {x: 0, y: -310.25226}
   m_SizeDelta: {x: 632.2769, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &8091421954431722449
@@ -517,7 +517,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -625.25226}
+  m_AnchoredPosition: {x: 0, y: -678.25226}
   m_SizeDelta: {x: 632.2769, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &8284001116559122997
@@ -1089,7 +1089,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -73.25226}
+  m_AnchoredPosition: {x: 0, y: -126.25226}
   m_SizeDelta: {x: 632.2769, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &745198361274755854
@@ -1208,7 +1208,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -787.25226}
+  m_AnchoredPosition: {x: 0, y: -840.25226}
   m_SizeDelta: {x: 632.2769, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &6740121660455285643
@@ -1424,7 +1424,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -441.25226}
+  m_AnchoredPosition: {x: 0, y: -494.25226}
   m_SizeDelta: {x: 632.2769, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &8994676542521120110
@@ -2110,6 +2110,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -119.005
       objectReference: {fileID: 0}
+    - target: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+      propertyPath: <achievementName>k__BackingField
+      value: fullGreenhouse
+      objectReference: {fileID: 0}
     - target: {fileID: 7555114823039244191, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2132,7 +2136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8140876442786450184, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Name
-      value: Achievement Badge (3)
+      value: fullGreenhouse
       objectReference: {fileID: 0}
     - target: {fileID: 8479772612103665801, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Sprite
@@ -2260,6 +2264,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -119.005
       objectReference: {fileID: 0}
+    - target: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+      propertyPath: <achievementName>k__BackingField
+      value: onePerfectIngredient
+      objectReference: {fileID: 0}
     - target: {fileID: 7555114823039244191, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2282,7 +2290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8140876442786450184, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Name
-      value: Achievement Badge (1)
+      value: onePerfectIngredient
       objectReference: {fileID: 0}
     - target: {fileID: 8479772612103665801, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Sprite
@@ -2420,7 +2428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: <achievementName>k__BackingField
-      value: FirstAchievementRM
+      value: goodListener
       objectReference: {fileID: 0}
     - target: {fileID: 7555114823039244191, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2444,8 +2452,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8140876442786450184, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Name
-      value: Achievement Badge
+      value: goodListener
       objectReference: {fileID: 0}
+    - target: {fileID: 8479772612103665801, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c7e20ddcd0a4cc7419df24b16cebe4e4, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2570,7 +2582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: <achievementName>k__BackingField
-      value: FirstAchievement
+      value: oneRewrite
       objectReference: {fileID: 0}
     - target: {fileID: 7555114823039244191, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2594,7 +2606,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8140876442786450184, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Name
-      value: Achievement Badge
+      value: oneRewrite
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2732,7 +2744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: <achievementName>k__BackingField
-      value: SecondAchievementRM
+      value: goodReader
       objectReference: {fileID: 0}
     - target: {fileID: 7555114823039244191, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2756,8 +2768,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8140876442786450184, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Name
-      value: Achievement Badge (1)
+      value: goodReader
       objectReference: {fileID: 0}
+    - target: {fileID: 8479772612103665801, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cd805a8327a39dc45b63db5561809162, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2946,6 +2962,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -119.005
       objectReference: {fileID: 0}
+    - target: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+      propertyPath: <achievementName>k__BackingField
+      value: allLetters
+      objectReference: {fileID: 0}
     - target: {fileID: 7555114823039244191, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2968,7 +2988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8140876442786450184, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Name
-      value: Achievement Badge
+      value: allLetters
       objectReference: {fileID: 0}
     - target: {fileID: 8479772612103665801, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Sprite
@@ -3096,6 +3116,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -119.005
       objectReference: {fileID: 0}
+    - target: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+      propertyPath: <achievementName>k__BackingField
+      value: fullFranco
+      objectReference: {fileID: 0}
     - target: {fileID: 7555114823039244191, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3118,7 +3142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8140876442786450184, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Name
-      value: Achievement Badge (3)
+      value: fullFranco
       objectReference: {fileID: 0}
     - target: {fileID: 8479772612103665801, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Sprite
@@ -3370,6 +3394,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -119.005
       objectReference: {fileID: 0}
+    - target: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+      propertyPath: <achievementName>k__BackingField
+      value: fivePerfectIngredients
+      objectReference: {fileID: 0}
     - target: {fileID: 7555114823039244191, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3392,7 +3420,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8140876442786450184, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Name
-      value: Achievement Badge (2)
+      value: fivePerfectIngredients
       objectReference: {fileID: 0}
     - target: {fileID: 8479772612103665801, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Sprite
@@ -3522,7 +3550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: <achievementName>k__BackingField
-      value: SecondAchievement
+      value: threeRewrite
       objectReference: {fileID: 0}
     - target: {fileID: 7555114823039244191, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3546,7 +3574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8140876442786450184, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Name
-      value: Achievement Badge (1)
+      value: threeRewrite
       objectReference: {fileID: 0}
     - target: {fileID: 8479772612103665801, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Sprite
@@ -3838,6 +3866,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -119.005
       objectReference: {fileID: 0}
+    - target: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+      propertyPath: <achievementName>k__BackingField
+      value: allSigils
+      objectReference: {fileID: 0}
     - target: {fileID: 7555114823039244191, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3860,7 +3892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8140876442786450184, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Name
-      value: Achievement Badge (3)
+      value: allSigils
       objectReference: {fileID: 0}
     - target: {fileID: 8479772612103665801, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Sprite
@@ -4114,7 +4146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: <achievementName>k__BackingField
-      value: ThirdAchievement
+      value: fiveRewrite
       objectReference: {fileID: 0}
     - target: {fileID: 7555114823039244191, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4138,7 +4170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8140876442786450184, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Name
-      value: Achievement Badge (2)
+      value: fiveRewrite
       objectReference: {fileID: 0}
     - target: {fileID: 8479772612103665801, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Sprite
@@ -4280,7 +4312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: <achievementName>k__BackingField
-      value: ThirdAchievementRM
+      value: fullLore
       objectReference: {fileID: 0}
     - target: {fileID: 7555114823039244191, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4304,8 +4336,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8140876442786450184, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Name
-      value: Achievement Badge (2)
+      value: fullLore
       objectReference: {fileID: 0}
+    - target: {fileID: 8479772612103665801, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cba4b3e771183af4a8961c3accc746bb, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4428,6 +4464,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -119.005
       objectReference: {fileID: 0}
+    - target: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+      propertyPath: <achievementName>k__BackingField
+      value: fivePerfectGifts
+      objectReference: {fileID: 0}
     - target: {fileID: 7555114823039244191, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4450,7 +4490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8140876442786450184, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Name
-      value: Achievement Badge (2)
+      value: fivePerfectGifts
       objectReference: {fileID: 0}
     - target: {fileID: 8479772612103665801, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Sprite
@@ -4920,6 +4960,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -119.005
       objectReference: {fileID: 0}
+    - target: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+      propertyPath: <achievementName>k__BackingField
+      value: fullKitchen
+      objectReference: {fileID: 0}
     - target: {fileID: 7555114823039244191, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4942,7 +4986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8140876442786450184, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Name
-      value: Achievement Badge
+      value: fullKitchen
       objectReference: {fileID: 0}
     - target: {fileID: 8479772612103665801, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Sprite
@@ -5070,6 +5114,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -119.005
       objectReference: {fileID: 0}
+    - target: {fileID: 6379106042471874654, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
+      propertyPath: <achievementName>k__BackingField
+      value: onePerfectGift
+      objectReference: {fileID: 0}
     - target: {fileID: 7555114823039244191, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5092,7 +5140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8140876442786450184, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Name
-      value: Achievement Badge (1)
+      value: onePerfectGift
       objectReference: {fileID: 0}
     - target: {fileID: 8479772612103665801, guid: debbd0fa20b284f44a35df185c6853b2, type: 3}
       propertyPath: m_Sprite
