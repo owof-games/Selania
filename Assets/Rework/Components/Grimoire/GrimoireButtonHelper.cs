@@ -1,4 +1,5 @@
-﻿using R3;
+﻿using System;
+using R3;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -17,9 +18,32 @@ namespace Selania.Rework.Components.Grimoire
         [SerializeField] private Sprite disabledSprite = null!;
         [SerializeField] private Color pressedColor = new(0xc8 / 256.0f, 0xc8 / 256.0f, 0xc8 / 256.0f);
 
-        private readonly Subject<bool> _pressedSubject = new();
+        /// <summary>
+        ///     An observable that says if this button should logically disabled (it doesn't produce click animations but
+        ///     click events are sent anyway)
+        /// </summary>
+        private Subject<bool> _logicallyDisabled = null!;
 
-        private Subject<Sprite?> _overrideOriginalSpriteSubject = null!;
+        /// <summary>
+        ///     An observable that produces <c>null</c> if the default sprite must be used, or an alternative sprite.
+        /// </summary>
+        private Subject<Sprite?>? _overrideOriginalSpriteSubject;
+
+        /// <summary>
+        ///     An observable that emits <c>true</c> when this button is pressed, <c>false</c> otherwise.
+        /// </summary>
+        private Subject<bool>? _pressedSubject;
+
+        public Observable<bool> LogicallyDisabled => _logicallyDisabled?.DistinctUntilChanged() ??
+                                                     throw new InvalidOperationException(
+                                                         "Cannot request LogicallyDisabled until started");
+
+        private void Awake()
+        {
+            _pressedSubject = new Subject<bool>().AddTo(this);
+            _logicallyDisabled = new Subject<bool>().AddTo(this);
+            _overrideOriginalSpriteSubject = new Subject<Sprite?>().AddTo(this);
+        }
 
         private void Start()
         {
@@ -39,9 +63,10 @@ namespace Selania.Rework.Components.Grimoire
                 .Subscribe(sprite => targetGraphic.sprite = sprite)
                 .AddTo(this);
 
-            _pressedSubject
+            _pressedSubject!
                 .Prepend(false)
-                .CombineLatest(interactableObservable, (pressed, interactable) => pressed && interactable)
+                .CombineLatest(interactableObservable, _logicallyDisabled,
+                    (pressed, interactable, logicallyDisabled) => pressed && interactable && !logicallyDisabled)
                 .DistinctUntilChanged()
                 .Subscribe(pressed => targetGraphic.color = pressed ? pressedColor : Color.white)
                 .AddTo(this);
@@ -49,12 +74,12 @@ namespace Selania.Rework.Components.Grimoire
 
         public void OnPointerDown(PointerEventData eventData)
         {
-            _pressedSubject.OnNext(true);
+            _pressedSubject!.OnNext(true);
         }
 
         public void OnPointerUp(PointerEventData eventData)
         {
-            _pressedSubject.OnNext(false);
+            _pressedSubject!.OnNext(false);
         }
 
         /// <summary>
@@ -63,7 +88,18 @@ namespace Selania.Rework.Components.Grimoire
         /// <param name="sprite">The new sprite to use, or <c>null</c> if no override should happen.</param>
         public void OverrideOriginalSprite(Sprite? sprite)
         {
+            if (_overrideOriginalSpriteSubject == null)
+                throw new InvalidOperationException("Cannot call OverrideOriginalSprite before Awake");
             _overrideOriginalSpriteSubject.OnNext(sprite);
+        }
+
+        /// <summary>
+        ///     Set whether this button is logically disabled (no animation, but click events are emitted anyway).
+        /// </summary>
+        /// <param name="logicallyDisabled">Whether this button is logically disabled.</param>
+        public void SetLogicallyDisabledStatus(bool logicallyDisabled)
+        {
+            _logicallyDisabled.OnNext(logicallyDisabled);
         }
     }
 }

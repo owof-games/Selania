@@ -20,8 +20,12 @@ namespace Selania.Rework.Components.Grimoire
         [SerializeField] private GrimoireButtonSaturationControl thirdLevelSaturationControl = null!;
 
         [SerializeField] private Sprite disabledBackgroundSprite = null!;
+
+        [SerializeField] private RectTransform imageTransformRoot = null!;
+        [SerializeField] private Vector2 flatAnchoredPosition;
         private Animator _animator = null!;
         private Button _button = null!;
+        private Vector2 _defaultAnchoredPosition = Vector2.zero;
         private GrimoireButtonHelper _grimoireButtonHelper = null!;
 
         private float _saturation = 1;
@@ -33,6 +37,7 @@ namespace Selania.Rework.Components.Grimoire
             _button = GetComponent<Button>();
             _animator = GetComponent<Animator>();
             _grimoireButtonHelper = GetComponent<GrimoireButtonHelper>();
+            _defaultAnchoredPosition = imageTransformRoot.anchoredPosition;
         }
 
         /// <summary>
@@ -73,18 +78,31 @@ namespace Selania.Rework.Components.Grimoire
             {
                 case IStoryGrimoire.ThirdLevelSigilStatus.Default:
                     _grimoireButtonHelper.OverrideOriginalSprite(null);
+                    _grimoireButtonHelper.SetLogicallyDisabledStatus(false);
+                    imageTransformRoot.anchoredPosition = _defaultAnchoredPosition;
                     _animator.SetBool(AnimatedCachedAnimatorProperty, false);
                     _saturation = 1;
                     break;
                 case IStoryGrimoire.ThirdLevelSigilStatus.Selected:
-                    _grimoireButtonHelper.OverrideOriginalSprite(null);
+                    _grimoireButtonHelper.OverrideOriginalSprite(disabledBackgroundSprite);
+                    _grimoireButtonHelper.SetLogicallyDisabledStatus(true);
+                    imageTransformRoot.anchoredPosition = flatAnchoredPosition;
                     _animator.SetBool(AnimatedCachedAnimatorProperty, true);
                     _saturation = 1;
                     break;
                 case IStoryGrimoire.ThirdLevelSigilStatus.Consumed:
                     _grimoireButtonHelper.OverrideOriginalSprite(disabledBackgroundSprite);
+                    _grimoireButtonHelper.SetLogicallyDisabledStatus(true);
+                    imageTransformRoot.anchoredPosition = flatAnchoredPosition;
                     _animator.SetBool(AnimatedCachedAnimatorProperty, false);
                     _saturation = SettingsBook.disabledSigilsSaturationLevel;
+                    break;
+                case IStoryGrimoire.ThirdLevelSigilStatus.Unclickable:
+                    _grimoireButtonHelper.OverrideOriginalSprite(disabledBackgroundSprite);
+                    _grimoireButtonHelper.SetLogicallyDisabledStatus(true);
+                    imageTransformRoot.anchoredPosition = flatAnchoredPosition;
+                    _animator.SetBool(AnimatedCachedAnimatorProperty, false);
+                    _saturation = 1;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(status), status, null);

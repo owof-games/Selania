@@ -26,7 +26,12 @@ namespace Selania.Rework.Interfaces
             /// <summary>
             ///     Sigil is consumed (cannot be selected any longer).
             /// </summary>
-            Consumed
+            Consumed,
+
+            /// <summary>
+            ///     Sigil is unclickable (some other sigil is already active).
+            /// </summary>
+            Unclickable
         }
 
         /// <summary>

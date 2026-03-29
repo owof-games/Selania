@@ -964,6 +964,9 @@ namespace Selania.Rework.Components
         [SerializeField] [Tooltip("Value for the status of third level sigils when consumed")]
         private string thirdLevelStatusConsumed = "consumed";
 
+        [SerializeField] [Tooltip("Value for the status of third level sigils when consumed")]
+        private string thirdLevelStatusUnclickable = "unclickable";
+
         [SerializeField] [Tooltip("Value for the index bookmark tag")]
         private string indexBookmarkTagValue = "index";
 
@@ -1420,6 +1423,7 @@ namespace Selania.Rework.Components
                         status == thirdLevelStatusDefault ? IStoryGrimoire.ThirdLevelSigilStatus.Default :
                         status == thirdLevelStatusSelected ? IStoryGrimoire.ThirdLevelSigilStatus.Selected :
                         status == thirdLevelStatusConsumed ? IStoryGrimoire.ThirdLevelSigilStatus.Consumed :
+                        status == thirdLevelStatusUnclickable ? IStoryGrimoire.ThirdLevelSigilStatus.Unclickable :
                         throw new InvalidOperationException(
                             $"Found a third-level sigil with invalid status '{status}', but should be either '{thirdLevelStatusDefault}' (default), '{thirdLevelStatusSelected}' or '{thirdLevelStatusConsumed}'.")
                     ));
