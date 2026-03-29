@@ -9,42 +9,42 @@
     {frog_currentMission:
         - missionOne:
             ~ return
-                "Franco ha invitato {player_name} <b>a leggere altre pagine di questo libro, e poi tornare da lui."
+                "Franco ha invitato {player_name} a leggere altre pagine di questo libro."
             
         - missionTwo:
             ~ return
-                "Franco ha chiesto a {player_name} <b>di coltivare almeno tre piante alla serra prima di tornare da lui."
+                "Franco ha chiesto a {player_name} di coltivare almeno tre piante alla serra."
 
         - missionThree:
             ~ return
-                "Franco ha chiesto a {player_name} <b>di ricevere dei consigli a {mentorName} su come star bene, e poi tornare da lui."
+                "Franco ha chiesto a {player_name} di ricevere dei consigli a {mentorName} su come star bene."
             
         - missionFour:
             ~ return
-                "Franco ha chiesto a {player_name} <b>di raccontare a {mentorName} le cose strane che {player_pronouns has him:gli|{player_pronouns has her:le|lə}} sono accadute da quando è qui, e poi tornare da lui."
+                "Franco ha chiesto a {player_name} di raccontare a {mentorName} le cose strane che {player_pronouns has him:gli|{player_pronouns has her:le|lə}} sono accadute da quando è qui."
             
         - missionFive:
             ~ return
-                "Franco ha chiesto a {player_name} <b>di vedere cosa succede se {charNameOne} e {charNameTwo} sono assieme, e poi tornare da lui."
+                "Franco ha chiesto a {player_name} di vedere cosa succede se {charNameOne} e {charNameTwo} sono assieme."
             
         - missionSix:
             ~ return
-                "Franco ha chiesto a {player_name} <b>di parlare all'albero al centro della foresta, e poi tornare da lui."
+                "Franco ha chiesto a {player_name} di parlare all'albero al centro della foresta."
             
         - missionSeven:
             ~ return
-                "Franco ha chiesto a {player_name} <b>di leggere la lettera che {player_pronouns has him:gli|{player_pronouns has her:le|lə}} è arrivata in stazione, e poi tornare da lui."
+                "Franco ha chiesto a {player_name} di leggere la lettera che è arrivata in stazione."
             
         - missionEight:
             ~ return
-                "Franco ha chiesto a {player_name} <b>di leggere qualcosa in biblioteca, e poi tornare da lui."
+                "Franco ha chiesto a {player_name} di leggere qualcosa in biblioteca."
         
         - specialMissionOne:
             ~ return
                 "Franco ha detto a {player_name} di raggiungerlo al Nido."
             
         - specialMissionTwo:
-                "Franco ha chiesto a {player_name} <b>di raggiungerlo in cucina."
+                "Franco ha chiesto a {player_name} di raggiungerlo in cucina."
 
     }
 
