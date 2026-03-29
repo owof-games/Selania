@@ -1,6 +1,8 @@
-﻿using Selania.Rework.Interfaces;
+﻿using R3;
+using Selania.Rework.Interfaces;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Selania.Rework.Components.Grimoire
 {
@@ -21,6 +23,17 @@ namespace Selania.Rework.Components.Grimoire
         [Tooltip("Text element for the third description line")] [SerializeField]
         private TextMeshProUGUI thirdDescriptionLineTextMeshProUGUI = null!;
 
+        private string _title;
+
+        /// <summary>
+        ///     An observable that produces the title of this row whenever the button is clicked.
+        /// </summary>
+        public Observable<string> click => button.GetComponent<Button>()
+            .OnClickAsObservable()
+            .CombineLatest(button.GetComponent<GrimoireButtonHelper>().LogicallyDisabled, (_, disabled) => disabled)
+            .Where(disabled => !disabled)
+            .Select(_ => _title);
+
         /// <summary>
         ///     Set up the row.
         /// </summary>
@@ -33,7 +46,8 @@ namespace Selania.Rework.Components.Grimoire
             string thirdDescriptionLine, (ISettingsSigils.GlyphType, ISettingsSigils.GlyphType,
                 ISettingsSigils.GlyphType)? glyphs)
         {
-            titleTextMeshProUGUI.text = title;
+            _title = title;
+            titleTextMeshProUGUI.text = _title;
             firstDescriptionLineTextMeshProUGUI.text = firstDescriptionLine;
             secondDescriptionLineTextMeshProUGUI.text = secondDescriptionLine;
             thirdDescriptionLineTextMeshProUGUI.text = thirdDescriptionLine;

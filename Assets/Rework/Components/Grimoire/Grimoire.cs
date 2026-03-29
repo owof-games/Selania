@@ -1,7 +1,9 @@
-﻿using R3;
+﻿using Microsoft.Extensions.Logging;
+using R3;
 using Selania.Rework.Interfaces;
 using UnityEngine;
 using VContainer;
+using ZLogger;
 
 namespace Selania.Rework.Components.Grimoire
 {
@@ -9,6 +11,7 @@ namespace Selania.Rework.Components.Grimoire
     {
         [SerializeField] private GrimoireBackground grimoireBackground = null!;
         [SerializeField] private OpenGrimoireButton openGrimoireButton = null!;
+        [Inject] internal ILogger<Grimoire> Logger = null!;
         [Inject] internal IStoryChoicesSelector StoryChoicesSelector = null!;
         [Inject] internal IStoryGrimoire StoryGrimoire = null!;
 
@@ -29,11 +32,13 @@ namespace Selania.Rework.Components.Grimoire
             grimoireBackground.nextPageObservable.Subscribe(PickChoice).AddTo(this);
             grimoireBackground.firstLevelButtonClick.Subscribe(PickChoice).AddTo(this);
             grimoireBackground.secondLevelSigilsButtonClick.Subscribe(PickSigilChoice).AddTo(this);
+            grimoireBackground.thirdLevelSigilsButtonClick.Subscribe(PickChoice).AddTo(this);
         }
 
-        private void PickChoice(string firstLevelButtonName)
+        private void PickChoice(string buttonName)
         {
-            StoryChoicesSelector.PickChoiceWithText(firstLevelButtonName);
+            Logger.ZLogInformation($"Picking grimoire choice: {buttonName}");
+            StoryChoicesSelector.PickChoiceWithText(buttonName);
         }
 
         private void OnFirstLevelGrimoirePageDescriptors(IStoryGrimoire.FirstLevelGrimoirePageDescriptor descriptor)
