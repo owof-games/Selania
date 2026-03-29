@@ -51,3 +51,10 @@ Franco la rana vuole aiutare {player_name} nel suo percorso. <N><>
 
 
 -> rewriter_book_with_flow
+
+
+
+// ESEMPIO: quando frog_character_recap verrà trasformato in una funzione che torna una stringa, poi la stringa può essere stampata così:
+// === frog_character_recap_print
+// ~ temp testoDaStampare = frog_character_recap()
+// {testoDaStampare}
