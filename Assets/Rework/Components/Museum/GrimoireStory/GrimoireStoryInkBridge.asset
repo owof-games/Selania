@@ -18,9 +18,9 @@ MonoBehaviour:
   pgListItemName: PG
   roomListPrefix: contents
   grimoireInkNodeName: grimoire
-  leftButtonTagName: leftButton
   achievementTagName: achievement
   francoTagName: franco
+  gamerModeVariableName: settings_gamerMode
   currentSigilVariableName: glyph_actualActiveSigil
   numSigilUsagesVariableName: glyph_actualSigilUses
   fireSigilListsByPosition:
@@ -43,6 +43,35 @@ MonoBehaviour:
   - glyph_firstAether
   - glyph_secondAether
   - glyph_thirdAether
+  bookmarkTagCategory: bookmark
+  statusTagCategory: status
+  enabledTagCategory: enabled
+  leftPageTitleCategory: leftPageTitle
+  leftPageDescriptionCategory: leftPageDescription
+  leftPageGlyph1Category: leftPageGlyph1
+  leftPageGlyph2Category: leftPageGlyph2
+  rightPageTitleCategory: rightPageTitle
+  rightPageDescriptionCategory: rightPageDescription
+  rightPageGlyph1Category: rightPageGlyph1
+  rightPageGlyph2Category: rightPageGlyph2
+  positionCategory: position
+  left1PositionValue: left1
+  left2PositionValue: left2
+  left3PositionValue: left3
+  right1PositionValue: right1
+  right2PositionValue: right2
+  right3PositionValue: right3
+  glyph3Category: glyph3
+  firstLineCategory: firstLine
+  secondLineCategory: secondLine
+  thirdLineCategory: thirdLine
+  thirdLevelStatusDefault: default
+  thirdLevelStatusSelected: selected
+  thirdLevelStatusConsumed: consumed
+  indexBookmarkTagValue: index
+  secondLevelBookmarkTagValue: secondLevel
+  backBookmarkTagValue: previous
+  forwardBookmarkTagValue: next
   oneUsageText: Un uso rimanente.
   twoUsagesText: Due usi rimanenti.
   threeUsagesText: Tre usi rimanenti.

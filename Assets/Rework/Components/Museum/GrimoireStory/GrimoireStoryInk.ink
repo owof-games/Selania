@@ -8,6 +8,8 @@ LIST Items = Item1
 
 VAR contentsRoom1 = (PG, Item1)
 
+VAR settings_gamerMode = false
+
 /* ---------------------------------
                 
 LISTE COMBINATORIE DEI SIGILLI

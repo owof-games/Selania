@@ -840,6 +840,9 @@ namespace Selania.Rework.Components
         [Tooltip("Name of the tag used for Franco's mission.")] [SerializeField]
         private string francoTagName = "franco";
 
+        [Tooltip("Name of the variable containing whether we're in gamer or reader mode.")] [SerializeField]
+        private string gamerModeVariableName = "settings_gamerMode";
+
         [Tooltip("Name of the variable containing the current sigil.")] [SerializeField]
         private string currentSigilVariableName = "glyph_actualActiveSigil";
 
@@ -1083,9 +1086,13 @@ namespace Selania.Rework.Components
 
         private void EmitFirstLevelGrimoirePage(ICollection<Tag> tags)
         {
-            // extract enabled left buttons from tags
-            // var enabledLeftButtonNames = from tag in tags where tag.category == leftButtonTagName select tag.value;
+            // get gamer or reader mode mode
             var story = GetStory();
+            var gamerModeVariable = story.variablesState[gamerModeVariableName];
+            var isGamerMode = (bool)gamerModeVariable;
+
+            // extract enabled left buttons from tags
+
             var enabledLeftButtonNames = story.currentChoices.Select(choice => choice.text);
 
             // extract achievements from tags
@@ -1213,7 +1220,7 @@ namespace Selania.Rework.Components
 
             // emit the signal
             _firstLevelGrimoirePageDescriptorsSubject!.OnNext(new IStoryGrimoire.FirstLevelGrimoirePageDescriptor(
-                false, enabledLeftButtonNames, achievements, francoMission, sigilDescriptor));
+                isGamerMode, enabledLeftButtonNames, achievements, francoMission, sigilDescriptor));
         }
 
         /// <summary>
