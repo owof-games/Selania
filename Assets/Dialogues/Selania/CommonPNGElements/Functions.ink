@@ -68,13 +68,8 @@
 ~ numberQuestion = 0
 @animation:RewriterBook
 
-
-
-
-//Useremo questo spostamento poi per attivare l'animazione del treno.
-            
-            
         
+-> achievements_onGame_statusUpdate_GM ->        
 -> main  
         
     

@@ -716,6 +716,8 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
         E se basandomi solo su questa chiacchierata in cucina dovessi dire: ho appena conosciuto {player_name}, vorrei farci amicizia?
         
             -> thirdAffinityCalc ->
+            -> achievements_onGame_statusUpdate_GM ->
+            
             {
                 - thirdAffinityCalc == 1:
                     {
@@ -760,6 +762,7 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
                 ~ kitchen_thirdCharCookingTogetherInvite = false
                 ~ kitchen_allChefs += ThirdCharacter
             -> update_glyphs(ThirdCharacter) ->
+            -> achievements_onGame_statusUpdate_GM ->
             -> third_char_closing_storylet ->
             -> main
 

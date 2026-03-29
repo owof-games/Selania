@@ -251,5 +251,5 @@ LIST list_giftElement = Backpack
        
 -
 //Passo da qui a dono fatto
-    ~ disableNestDialogue()       
+    -> achievements_onGame_statusUpdate_GM ->      
     -> main

@@ -45,7 +45,7 @@ VAR library_allAchievementStories = ()
         
         + {library_readStories != ()} <i>Voglio rileggere qualcosa.
             <i>Ad ora {player_name} ha letto {number_translator(library_readStories)} {libro_libri(library_readStories)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                -> reread
+            -> reread
             
         + {library_unreadStories != ()} <i>Voglio una nuova storia casuale.
             -> storyRandom

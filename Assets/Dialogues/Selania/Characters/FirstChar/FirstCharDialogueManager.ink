@@ -144,7 +144,7 @@
     
         //Offrire un dono
             + {firstChar_giftedObject == () && backpack_findedGifts != ()} Ti vorrei dare questa cosa.
-                        -> first_story_gift
+                -> first_story_gift
             
         
         //Cucinare assieme    

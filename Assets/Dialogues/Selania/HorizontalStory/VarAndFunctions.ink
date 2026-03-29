@@ -232,7 +232,7 @@ VAR horizontalS_libraryThirdTier = 5
 
 
 //Funzione che chiamo a fine storylet per spostare/pulire quello che c'è da spostare e pulire
-=== function horizontalSEndingStorylet()
+=== horizontalSEndingStorylet
 {debug_horizontalS: horizontalSEndingStorylet}    
     ~ horizontalS_currentDoc = ()
     ~ move_entity(docDump, Safekeeping)
@@ -240,7 +240,9 @@ VAR horizontalS_libraryThirdTier = 5
     ~ move_entity(docGreenhouse, Safekeeping)
     ~ move_entity(docNest, Safekeeping)
     ~ move_entity(docLibrary, Safekeeping)
-{debug_horizontalS: dopo {debug_horizontalS: horizontalSEndingStorylet} i contenuti della foresta sono {contentsForest}.}    
+    -> achievements_onGame_statusUpdate_RM ->
+{debug_horizontalS: dopo {debug_horizontalS: horizontalSEndingStorylet} i contenuti della foresta sono {contentsForest}.} 
+-> main
 
 
 === horizontalS_storyletsDispatcher

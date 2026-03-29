@@ -1297,7 +1297,9 @@
     ~ greenhouse_chosenCultivable = ()
     ~ greenhouse_growStep = ()
     ~ notification_greenhouseGrown = false
-    
+
+        -> achievements_onGame_statusUpdate_GM ->
+
     + {greenhouse_backupCultivable != ()}<i>Voglio coltivare qualcosa di nuovo.
             -> cultivable_test
     

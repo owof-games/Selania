@@ -1217,6 +1217,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         E se basandomi solo su questa chiacchierata in cucina dovessi dire: ho appena conosciuto {player_name}, vorrei farci amicizia?
         
             -> firstAffinityCalc ->
+            -> achievements_onGame_statusUpdate_GM ->
             {
                 - firstAffinityCalc == 1:
                     {
@@ -1287,6 +1288,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 ~ kitchen_allChefs += FirstCharacter
             -> update_glyphs(FirstCharacter) ->
             -> first_char_closing_storylet ->
+            -> achievements_onGame_statusUpdate_GM ->
             -> main
 
 

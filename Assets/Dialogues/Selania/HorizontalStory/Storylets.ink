@@ -19,8 +19,8 @@
     Se butta male, posso sempre tornare.
     G.M.
 
-    ~ horizontalSEndingStorylet()
-    -> main
+    -> horizontalSEndingStorylet
+    
 
 
 === docTwo_storylet ===
@@ -44,8 +44,8 @@
     A presto.
     O.U.J.
 
-    ~ horizontalSEndingStorylet()
-    -> main
+    -> horizontalSEndingStorylet
+    
 
 
 === docThree_storylet ===
@@ -64,8 +64,8 @@
     Chiederò all'acqua di donarmi visioni con una bella nuotata.
     S.C.
 
-    ~ horizontalSEndingStorylet()
-    -> main
+    -> horizontalSEndingStorylet
+    
 
 
 === docFour_storylet ===
@@ -90,8 +90,7 @@
     PS: S.C. ha chiesto a tutte di non lasciare in giro nomi e cognomi su diari e appunti perché "non si sa mai".
     Ho l'impressione che ci sia qualcosa che non ci sta dicendo, ma ancora non riesco a capire cosa.
 
-    ~ horizontalSEndingStorylet()
-    -> main
+    -> horizontalSEndingStorylet
 
 
 === docFive_storylet ===
@@ -119,8 +118,8 @@
     Mmm, come se a qualcun altra interessassero così tanto i libri.
 
 
-    ~ horizontalSEndingStorylet()
-    -> main
+    -> horizontalSEndingStorylet 
+    
 
 === docSix_storylet ===
 //K.
@@ -148,8 +147,8 @@
     Perché se non lo capisco, di cosa dovrei parlare?
     K.
 
-    ~ horizontalSEndingStorylet()
-    -> main
+    -> horizontalSEndingStorylet 
+    
 
 === docSeven_storylet ===
 //S.C.
@@ -164,8 +163,8 @@
     E se posso capire qual è, posso anche controllarlo.
     S.C.
 
-    ~ horizontalSEndingStorylet()
-    -> main
+    -> horizontalSEndingStorylet 
+    
 
 === docEight_storylet ===
 //W.R.
@@ -189,8 +188,8 @@
     Ed è grazie ai libri che ho avuto un'idea: usare le energie di questo luogo per far rileggere alle persone in modo diverso le cose.
     Come ad esempio fare rileggere a K. i miei comportamenti per quello che sono: il mio modo di trovare soluzioni per salvare il mondo.
 
-    ~ horizontalSEndingStorylet()
-    -> main
+    -> horizontalSEndingStorylet 
+    
 
 === docNine_storylet ===
 //G.M.
@@ -219,8 +218,8 @@
     Devo ancora capire se è una presa in giro, o se è un modo per dire "Benvenuto nella congrega".
     Comunque sia, la adoro.
 
-    ~ horizontalSEndingStorylet()
-    -> main
+    -> horizontalSEndingStorylet 
+    
 
 
 === docTen_storylet ===
@@ -248,8 +247,8 @@
     Vado a farle un po' di compagnia.
     K.
 
-    ~ horizontalSEndingStorylet()
-    -> main
+    -> horizontalSEndingStorylet 
+    
 
 === docEleven_storylet ===
 //W.R.
@@ -283,8 +282,8 @@
     Il gufo torna ad essere un pappagallino.
     La mia testa esplode.
 
-    ~ horizontalSEndingStorylet()
-    -> main
+    -> horizontalSEndingStorylet 
+    
 
 
 === docTwelve_storylet ===
@@ -310,8 +309,8 @@
     Quando si è addormentato al mio fianco, il glifo a croce ha brillato per ore.
     S.C.
 
-    ~ horizontalSEndingStorylet()
-    -> main
+    -> horizontalSEndingStorylet 
+    
 
 
 === docThirteen_storylet ===
@@ -338,8 +337,8 @@
     Non voglio sapere cosa ci combinerà.
     K.
 
-    ~ horizontalSEndingStorylet()
-    -> main
+    -> horizontalSEndingStorylet 
+    
 
 
 === docFourteen_storylet ===
@@ -375,8 +374,8 @@
     C'è un'ultima cosa: il mio nome mi sta stretto, non suona più giusto.
     Da ora mi chiamerò Y.
 
-    ~ horizontalSEndingStorylet()
-    -> main
+    -> horizontalSEndingStorylet 
+    
 
 
 === docFifteen_storylet ===
@@ -407,8 +406,8 @@
     Mi rimetto ai fornelli.
     O.U.J.
 
-    ~ horizontalSEndingStorylet()
-    -> main
+    -> horizontalSEndingStorylet 
+    
 
 
 === docSixteen_storylet ===
@@ -436,8 +435,8 @@
     Abbiamo le compagne rimaste in città, quelle che non sanno della congrega. Mi riunirò a loro.
     G.M.
 
-    ~ horizontalSEndingStorylet()
-    -> main
+    -> horizontalSEndingStorylet 
+    
 
 
 === docSeventeen_storylet ===
@@ -460,8 +459,8 @@
     Noi cinque faremo la storia.
     S.C.
 
-    ~ horizontalSEndingStorylet()
-    -> main
+    -> horizontalSEndingStorylet 
+    
 
 
 === docEighteen_storylet ===
@@ -493,8 +492,8 @@
     Non sono mai stata così forte come strega, non sono mai stata così debole come essere umano.
     K.
 
-    ~ horizontalSEndingStorylet()
-    -> main
+    -> horizontalSEndingStorylet 
+    
 
 
 === docNineteen_storylet ===
@@ -518,8 +517,8 @@
     Non credo di volerle più parlare.
     G.M.
 
-    ~ horizontalSEndingStorylet()
-    -> main
+    -> horizontalSEndingStorylet 
+    
 
 
 === docTwenty_storylet ===
@@ -549,8 +548,8 @@
     Tua.
     O.U.J.
 
-    ~ horizontalSEndingStorylet()
-    -> main
+    -> horizontalSEndingStorylet 
+    
 
 
 === docTwentyOne_storylet ===
@@ -570,8 +569,8 @@
     Era buio e così ho pianto.
     E poi ci siamo ubriacate sul prato.
 
-    ~ horizontalSEndingStorylet()
-    -> main
+    -> horizontalSEndingStorylet 
+    
 
 
 === docTwentyTwo_storylet ===
@@ -600,8 +599,8 @@
     A presto.
     O.U.J.
 
-    ~ horizontalSEndingStorylet()
-    -> main
+    -> horizontalSEndingStorylet 
+    
 
 
 === docTwentyThree_storylet ===
@@ -632,15 +631,15 @@
     tua.
     O.U.J.
 
-    ~ horizontalSEndingStorylet()
-    -> main
+    -> horizontalSEndingStorylet 
+    
 
 === docTwentyFour_storylet ===
 //S.C.
     Ora che so come fargli del bene, lui non è più qui con me.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docNest
 
-    ~ horizontalSEndingStorylet()
-    -> main
+    -> horizontalSEndingStorylet 
+    
 
 
  === docTwentyFive_storylet ===
@@ -659,5 +658,5 @@
     Ti voglio bene.
     O.U.J.
 
-    ~ horizontalSEndingStorylet()
-    -> main   
+    -> horizontalSEndingStorylet 
+       

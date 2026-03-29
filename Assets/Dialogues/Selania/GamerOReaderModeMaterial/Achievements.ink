@@ -1,4 +1,3 @@
-
 //Stati possibili di un achievement. notActive = appartiene all'altra modalità (GR per GM e viceversa). notDiscovered: appartiene a quella modalità, ma è ancora lucchettato.
 LIST achievements_statusAchievements = notActive, notDiscovered, inProgress, Discovered
 

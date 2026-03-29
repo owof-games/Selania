@@ -1251,6 +1251,7 @@
         E penso che se ti ho conosciuto solo qui in cucina ora e {charNameOne} mi dice: vuoi fare amicizia con {player_name}?
 
             -> secondAffinityCalc ->
+            -> achievements_onGame_statusUpdate_GM ->
             {
                 - secondAffinityCalc == 1:
                     {
@@ -1312,6 +1313,7 @@
             ~ kitchen_secondCharCookingTogetherInvite = false
             ~ kitchen_allChefs += SecondCharacter
         -> update_glyphs(SecondCharacter) ->
+        -> achievements_onGame_statusUpdate_GM ->
         -> second_char_closing_storylet ->
         -> main
 
