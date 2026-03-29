@@ -1,7 +1,7 @@
 === grimoire
 
-@grimoire1 #franco:{strings_francoMissions()}
--> grimoire
+@grimoire1 #franco:{strings_francoMissions()} #achievement:achievements_oneRewrite:{achievements_oneRewrite_actualValue}:{achievements_oneRewrite_maxValue} #achievement:achievements_threeRewrite:{achievements_threeRewrite_actualValue}:{achievements_threeRewrite_maxValue} #achievement:achievements_fiveRewrite:{achievements_fiveRewrite_actualValue}:{achievements_fiveRewrite_maxValue} #achievement:achievements_fullKitchen:{achievements_fullKitchen_actualValue}:{achievements_fullKitchen_maxValue} #achievement:achievements_onePerfectIngredient:{achievements_onePerfectIngredient_actualValue}:{achievements_onePerfectIngredient_maxValue} #achievement:achievements_fivePerfectIngredients:{achievements_fivePerfectIngredients_actualValue}:{achievements_fivePerfectIngredients_maxValue} #achievement:achievements_onePerfectGift:{achievements_onePerfectGift_actualValue}:{achievements_onePerfectGift_maxValue} #achievement:achievements_fivePerfectGifts:{achievements_fivePerfectGifts_actualValue}:{achievements_fivePerfectGifts_maxValue} #achievement:achievements_fullFranco:{achievements_fullFranco_actualValue}:{achievements_fullFranco_maxValue} #achievement:achievements_allSigils:{achievements_allSigils_actualValue}:{achievements_allSigils_maxValue} #achievement:achievements_allLetters:{achievements_allLetters_actualValue}:{achievements_allLetters_maxValue} #achievement:achievements_fullGreenhouse:{achievements_fullGreenhouse_actualValue}:{achievements_fullGreenhouse_maxValue} #achievement:achievements_goodListener:{achievements_goodListener_actualValue}:{achievements_goodListener_maxValue} #achievement:achievements_fullLore:{achievements_fullLore_actualValue}:{achievements_fullLore_maxValue} #achievement:achievements_goodReader:{achievements_goodReader_actualValue}:{achievements_goodReader_maxValue}
+    -> grimoire
 
 
 
@@ -25,4 +25,3 @@
 //  -> grimoire_sigils_third
 // + [Increspatura #bookmark:next]
 //  -> grimoire_sigils_third
-//#achievement:FullLore:{achievements_fullLore_actualValue}:{achievements_fullLore_maxValue}

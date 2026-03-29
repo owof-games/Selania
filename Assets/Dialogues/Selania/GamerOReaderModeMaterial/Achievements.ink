@@ -27,8 +27,8 @@ VAR achievements_onePerfectIngredient = notActive
     VAR achievements_onePerfectIngredient_actualValue = 0
 VAR achievements_fivePerfectIngredients = notActive
     VAR achievements_perfectIngredientsCounter = 0
-    VAR achievements_fivePerfectIngredient_maxValue = 5
-    VAR achievements_fivePerfectIngredient_actualValue = 0
+    VAR achievements_fivePerfectIngredients_maxValue = 5
+    VAR achievements_fivePerfectIngredients_actualValue = 0
     VAR achievements_fivePerfectIngredients_notified = false
     VAR achievements_perfectIngredientsReceivers = ()
 
@@ -237,7 +237,7 @@ VAR achievements_goodReader = notActive
                 ~ achievements_onePerfectIngredient_actualValue = 1
                 
             ~ achievements_fivePerfectIngredients = inProgress
-                ~ achievements_fivePerfectIngredient_actualValue = achievements_perfectIngredientsCounter
+                ~ achievements_fivePerfectIngredients_actualValue = achievements_perfectIngredientsCounter
                 {
                     - achievements_onePerfectIngredient_notified == false:
                         ~ achievements_onePerfectIngredient_notified = true
@@ -248,7 +248,7 @@ VAR achievements_goodReader = notActive
         - achievements_perfectIngredientsCounter == 5:
             // ~ achievements_onePerfectIngredient = Discovered
             ~ achievements_fivePerfectIngredients = Discovered
-                ~ achievements_fivePerfectIngredient_actualValue = achievements_perfectIngredientsCounter
+                ~ achievements_fivePerfectIngredients_actualValue = achievements_perfectIngredientsCounter
                 
                 {
                     - achievements_fivePerfectIngredients_notified == false:
