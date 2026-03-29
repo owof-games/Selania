@@ -140,9 +140,11 @@
     INCLUDE Grimoire\Grimoire.ink
     INCLUDE Grimoire\MainPage.Ink
     INCLUDE Grimoire\Functions.ink
-    INCLUDE Grimoire\Appendices.ink
     INCLUDE Grimoire\VarAndLists.ink
-    INCLUDE Grimoire\Strings.ink
+    INCLUDE Grimoire\Texts\Appendices.ink
+    INCLUDE Grimoire\TextGenerators\Strings.ink
+    INCLUDE Grimoire\TextGenerators\FrancoMissions.ink
+    
     
     
 //Bedroom
