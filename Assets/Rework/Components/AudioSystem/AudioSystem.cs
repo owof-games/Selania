@@ -81,10 +81,12 @@ namespace Selania.Rework.Components.AudioSystem
 
             // try to play it with the first free audio source found
             var firstFreeAudioSource =
-                soundEffectAudioSources.FirstOrDefault(soundEffectAudioSource => !soundEffectAudioSource.isPlaying);
+                soundEffectAudioSources.FirstOrDefault(soundEffectAudioSource =>
+                    soundEffectAudioSource.clip == null || !soundEffectAudioSource.isPlaying);
             if (firstFreeAudioSource != null)
             {
                 firstFreeAudioSource.clip = audioClip;
+                firstFreeAudioSource.Stop();
                 firstFreeAudioSource.Play();
                 return;
             }
