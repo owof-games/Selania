@@ -1,6 +1,6 @@
 === grimoire
 
-@grimoire1 #franco: #achievement:FullLore:{achievements_fullLore_actualValue}:{achievements_fullLore_maxValue}
+@grimoire1 #franco:{strings_francoMissions()}
 -> grimoire
 
 
@@ -25,3 +25,4 @@
 //  -> grimoire_sigils_third
 // + [Increspatura #bookmark:next]
 //  -> grimoire_sigils_third
+//#achievement:FullLore:{achievements_fullLore_actualValue}:{achievements_fullLore_maxValue}
