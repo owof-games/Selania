@@ -139,14 +139,18 @@
     + {glyph_WaterAetherSigils ^ glyph_discoveredSigils != ()}[{Water}{Aether} #enabled:grimoire_statusSigils(glyph_WaterAetherSigils)]
         -> grimoire_sigils_thirdLevel (Water, Earth, Water, Aether)
 
-    //Sigilli a dominante terra    
+    //Pagine da tredici a sedici   
     + {glyph_earthFireSigils ^ glyph_discoveredSigils != ()}[{Earth}{Fire} #enabled:grimoire_statusSigils(glyph_earthFireSigils)]
+        -> grimoire_sigils_thirdLevel (Earth, Fire, Earth, Air)
         
     + {glyph_earthAirSigils ^ glyph_discoveredSigils != ()}[{Earth}{Air} #enabled:grimoire_statusSigils(glyph_earthAirSigils)]
+        -> grimoire_sigils_thirdLevel (Earth, Fire, Earth, Air)
         
     + {glyph_earthWaterSigils ^ glyph_discoveredSigils != ()}[{Earth}{Water} #enabled:grimoire_statusSigils(glyph_earthWaterSigils)]
+        -> grimoire_sigils_thirdLevel (Earth, Water, Earth, Aether)
         
     + {glyph_earthAetherSigils ^ glyph_discoveredSigils != ()}[{Earth}{Aether} #enabled:grimoire_statusSigils(glyph_earthAetherSigils)]
+        -> grimoire_sigils_thirdLevel (Earth, Water, Earth, Aether)
 
     //Sigilli a dominante spirito    
     + {glyph_aetherFireSigils ^ glyph_discoveredSigils != ()}[{Aether}{Fire} #enabled:grimoire_statusSigils(glyph_aetherFireSigils)]
