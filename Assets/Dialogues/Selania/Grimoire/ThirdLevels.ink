@@ -90,6 +90,30 @@
     + {glyph_discoveredSigils has AetherEarthFire && leftSigilName == "AetherWater"}[{sigils_translator(AetherEarthFire)} #position:right2 #glyph3:{grimoire_sigilGlyph3(AetherEarthFire)} #firstLine:{grimoire_textAetherEarthFireOne} #secondLine:{grimoire_textAetherEarthFireTwo} #thirdLine:{grimoire_textAetherEarthFireThree} #status:{grimoire_statusThirdSigils(AetherEarthFire)}]
     + {glyph_discoveredSigils has AetherEarthAir && leftSigilName == "AetherWater"}[{sigils_translator(AetherEarthAir)} #position:right3 #glyph3:{grimoire_sigilGlyph3(AetherEarthAir)} #firstLine:{grimoire_textAetherEarthAirOne} #secondLine:{grimoire_textAetherEarthAirTwo} #thirdLine:{grimoire_textAetherEarthAirThree} #status:{grimoire_statusThirdSigils(AetherEarthAir)}]
 
+
+    //Tasti precedenti
+    + {leftSigilName == "FireEarth"} [{sigils_translator(FireAether)}#bookmark:previous]
+    + {leftSigilName == "AirFire"} [{sigils_translator(FireEarth)}#bookmark:previous]
+    + {leftSigilName == "AirEarth"} [{sigils_translator(AirWater)}#bookmark:previous]
+    + {leftSigilName == "WaterFire"} [{sigils_translator(AirAether)}#bookmark:previous]
+    + {leftSigilName == "WaterEarth"} [{sigils_translator(WaterAir)}#bookmark:previous]
+    + {leftSigilName == "EarthFire"} [{sigils_translator(WaterAether)}#bookmark:previous]
+    + {leftSigilName == "EarthWater"} [{sigils_translator(EarthAir)}#bookmark:previous]
+    + {leftSigilName == "AetherFire"} [{sigils_translator(EarthAether)}#bookmark:previous]
+    + {leftSigilName == "AetherWater"} [{sigils_translator(AetherAir)}#bookmark:previous]
+
+    //Tasti seguenti
+    + {leftSigilName == "FireAir"} [{sigils_translator(FireEarth)}#bookmark:next]
+    + {leftSigilName == "FireEarth"} [{sigils_translator(AirFire)}#bookmark:next]
+    + {leftSigilName == "AirFire"} [{sigils_translator(AirEarth)}#bookmark:next]
+    + {leftSigilName == "AirEarth"} [{sigils_translator(WaterFire)}#bookmark:next]
+    + {leftSigilName == "WaterFire"} [{sigils_translator(WaterEarth)}#bookmark:next]
+    + {leftSigilName == "WaterEarth"} [{sigils_translator(EarthFire)}#bookmark:next]
+    + {leftSigilName == "EarthFire"} [{sigils_translator(EarthWater)}#bookmark:next]
+    + {leftSigilName == "EarthWater"} [{sigils_translator(AetherFire)}#bookmark:next]
+    + {leftSigilName == "AetherFire"} [{sigils_translator(AetherWater)}#bookmark:next]
+
+
     + [Index #bookmark:index]
         -> grimoire
     + [Sigilli #bookmark:secondLevel]
