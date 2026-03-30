@@ -370,8 +370,6 @@
     ~ temp maxRandomDice = 0
 
         - (top)
-        //Dato che no mi fa fare questa cosa direttamente nella variabile, provo così.
-        //~ frog_maxValueRandomMissionDice = LIST_COUNT(frog_allMissions)
 
         //Se ho missioni speciali disponibili attivo quelle, altrimenti passo a quelle normali
         {
@@ -379,7 +377,7 @@
                     {debug_frog: condizioni rispettate per poter offrire la prima missione speciale.}
                         -> special_mission_one    
 
-            - frog_pauseSpecialMission == 0 && (frog_availableSpecialMissions has specialMissionTwo) && (player_accessiblePlaces has Kitchen) && frog_currentMission == ():
+            - frog_pauseSpecialMission == 0 && (frog_availableSpecialMissions has specialMissionTwo) && (player_accessiblePlaces has Kitchen) && kitchen_firstCharIsCooking == false && kitchen_firstCharCookingTogetherInvite == false && kitchen_secondCharIsCooking == false && kitchen_secondCharCookingTogetherInvite == false && kitchen_thirdCharIsCooking == false && kitchen_thirdCharCookingTogetherInvite == false && frog_currentMission == ():
                 {debug_frog: condizioni rispettate per poter offrire la seconda missione speciale.}
                     -> special_mission_two
 

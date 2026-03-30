@@ -229,13 +229,19 @@ VAR horizontalS_libraryThirdTier = 5
 //Funzione che chiamo a fine storylet per spostare/pulire quello che c'è da spostare e pulire
 === horizontalSEndingStorylet
 {debug_horizontalS: horizontalSEndingStorylet}
+    //Aggiorno la lista dei documenti scoperti
     ~ horizontalS_discoveredDocs += horizontalS_currentDoc
+    //Abilito la voce sul grimorio
+    ~ grimoire_appendices += horizontalS_currentDoc
+    //Svuoto il documento attuale
     ~ horizontalS_currentDoc = ()
+    //Mi accerto che i bottoni tornino nel Safekeeping
     ~ move_entity(docDump, Safekeeping)
     ~ move_entity(docKitchen, Safekeeping)
     ~ move_entity(docGreenhouse, Safekeeping)
     ~ move_entity(docNest, Safekeeping)
     ~ move_entity(docLibrary, Safekeeping)
+    //E faccio un check subito per il progresso degli achievement
     -> achievements_onGame_statusUpdate_RM ->
 {debug_horizontalS: dopo {debug_horizontalS: horizontalSEndingStorylet} i contenuti della foresta sono {contentsForest}.} 
 -> main

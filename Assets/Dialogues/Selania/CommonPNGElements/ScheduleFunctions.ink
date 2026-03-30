@@ -47,7 +47,7 @@
                 ~ secondChar_storyStatus = story_storyStarted
     
         //Dopo quattro dialoghi con Chitarra o due con Riccio, compare il terzo PNG.
-        - (firstChar_storyletsForRewritingCount + secondChar_storyletsForRewritingCount > thirdChar_delay) && not (thirdChar_storyStatus == story_storyStarted):
+        - ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar)) > thirdChar_delay) && not (thirdChar_storyStatus == story_storyStarted):
             {debug: introduco {ThirdCharacter} in scena.}
                 ~ move_entity(ThirdCharacter, TrainStop)
                 ~ move_entity(TrainNoiseComing, CurrentLocation)
