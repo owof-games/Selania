@@ -47,4 +47,5 @@ VAR grimoire_franco = ()
 VAR grimoire_appendices = ()
 
 
-
+//Liste per gestire i tag
+LIST grimoire_possibilePlantsStatus = missing, owned
