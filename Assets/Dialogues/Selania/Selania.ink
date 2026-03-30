@@ -137,8 +137,9 @@
 //Gestione del Grimorio
 //Nota: "BOOK" diventa il repository del vecchio materiale di testo.
 
-    INCLUDE Grimoire\Grimoire.ink
-    INCLUDE Grimoire\MainPage.Ink
+    INCLUDE Grimoire\FirstLevel.ink
+    INCLUDE Grimoire\SecondLevels.ink
+    INCLUDE Grimoire\ThirdLevels.ink
     INCLUDE Grimoire\Functions.ink
     INCLUDE Grimoire\VarAndLists.ink
     INCLUDE Grimoire\Texts\Appendices.ink
