@@ -1,7 +1,11 @@
 === function sigils_translator(wordValue)
 //Da fare quando son sicura del tutto
 {debug_nest: sigils_translator.}
-    
+{
+    - glyph_discoveredSigils hasnt wordValue:
+        ~ return "Da scoprire"
+    - else:    
+
     {wordValue:       
             
             - FireAirWater: 
@@ -243,7 +247,8 @@
             -else: Traduzione colore parola {glyph_actualActiveSigil} non trovato!
     }
 
-
+}
+    
 
 
 //Lista dei descrittori
