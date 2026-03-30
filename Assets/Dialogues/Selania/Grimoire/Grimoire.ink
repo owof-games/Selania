@@ -152,49 +152,49 @@
     @grimoireSigils
 
     //Sigilli a dominante fuoco
-    + {glyph_fireAirSigils ^ glyph_discoveredSigils != ()}[{Fire}{Air}]
+    + {glyph_fireAirSigils ^ glyph_discoveredSigils != ()}[{Fire}{Air} #enabled:grimoire_statusSigils(glyph_fireAirSigils)]
         
-    + {glyph_fireWaterSigils ^ glyph_discoveredSigils != ()}[{Fire}{Water}]
+    + {glyph_fireWaterSigils ^ glyph_discoveredSigils != ()}[{Fire}{Water} #enabled:grimoire_statusSigils(glyph_fireWaterSigils)]
         
-    + {glyph_fireEarthSigils ^ glyph_discoveredSigils != ()}[{Fire}{Earth}]
+    + {glyph_fireEarthSigils ^ glyph_discoveredSigils != ()}[{Fire}{Earth} #enabled:grimoire_statusSigils(glyph_fireEarthSigils)]
         
-    + {glyph_fireAetherSigils ^ glyph_discoveredSigils != ()}[{Fire}{Aether}]
+    + {glyph_fireAetherSigils ^ glyph_discoveredSigils != ()}[{Fire}{Aether} #enabled:grimoire_statusSigils(glyph_fireAetherSigils)]
 
     //Sigilli a dominante aria    
-    + {glyph_airFireSigils ^ glyph_discoveredSigils != ()}[{Air}{Fire}]
+    + {glyph_airFireSigils ^ glyph_discoveredSigils != ()}[{Air}{Fire} #enabled:grimoire_statusSigils(glyph_airFireSigils)]
         
-    + {glyph_airWaterSigils ^ glyph_discoveredSigils != ()}[{Air}{Water}]
+    + {glyph_airWaterSigils ^ glyph_discoveredSigils != ()}[{Air}{Water} #enabled:grimoire_statusSigils(glyph_airWaterSigils)]
         
-    + {glyph_airEarthSigils ^ glyph_discoveredSigils != ()}[{Air}{Earth}]
+    + {glyph_airEarthSigils ^ glyph_discoveredSigils != ()}[{Air}{Earth} #enabled:grimoire_statusSigils(glyph_airEarthSigils)]
         
-    + {glyph_airAetherSigils ^ glyph_discoveredSigils != ()}[{Air}{Aether}]
+    + {glyph_airAetherSigils ^ glyph_discoveredSigils != ()}[{Air}{Aether} #enabled:grimoire_statusSigils(glyph_airAetherSigils)]
 
     //Sigilli a dominante acqua    
-    + {glyph_WaterFireSigils ^ glyph_discoveredSigils != ()}[{Water}{Fire}]
+    + {glyph_WaterFireSigils ^ glyph_discoveredSigils != ()}[{Water}{Fire} #enabled:grimoire_statusSigils(glyph_WaterFireSigils)]
         
-    + {glyph_WaterAirSigils ^ glyph_discoveredSigils != ()}[{Water}{Air}]
+    + {glyph_WaterAirSigils ^ glyph_discoveredSigils != ()}[{Water}{Air} #enabled:grimoire_statusSigils(glyph_WaterAirSigils)]
         
-    + {glyph_WaterEarthSigils ^ glyph_discoveredSigils != ()}[{Water}{Earth}]
+    + {glyph_WaterEarthSigils ^ glyph_discoveredSigils != ()}[{Water}{Earth} #enabled:grimoire_statusSigils(glyph_WaterEarthSigils)]
         
-    + {glyph_WaterAetherSigils ^ glyph_discoveredSigils != ()}[{Water}{Aether}]
+    + {glyph_WaterAetherSigils ^ glyph_discoveredSigils != ()}[{Water}{Aether} #enabled:grimoire_statusSigils(glyph_WaterAetherSigils)]
 
     //Sigilli a dominante terra    
-    + {glyph_earthFireSigils ^ glyph_discoveredSigils != ()}[{Earth}{Fire}]
+    + {glyph_earthFireSigils ^ glyph_discoveredSigils != ()}[{Earth}{Fire} #enabled:grimoire_statusSigils(glyph_earthFireSigils)]
         
-    + {glyph_earthAirSigils ^ glyph_discoveredSigils != ()}[{Earth}{Air}]
+    + {glyph_earthAirSigils ^ glyph_discoveredSigils != ()}[{Earth}{Air} #enabled:grimoire_statusSigils(glyph_earthAirSigils)]
         
-    + {glyph_earthWaterSigils ^ glyph_discoveredSigils != ()}[{Earth}{Water}]
+    + {glyph_earthWaterSigils ^ glyph_discoveredSigils != ()}[{Earth}{Water} #enabled:grimoire_statusSigils(glyph_earthWaterSigils)]
         
-    + {glyph_earthAetherSigils ^ glyph_discoveredSigils != ()}[{Earth}{Aether}]
+    + {glyph_earthAetherSigils ^ glyph_discoveredSigils != ()}[{Earth}{Aether} #enabled:grimoire_statusSigils(glyph_earthAetherSigils)]
 
     //Sigilli a dominante spirito    
-    + {glyph_aetherFireSigils ^ glyph_discoveredSigils != ()}[{Aether}{Fire}]
+    + {glyph_aetherFireSigils ^ glyph_discoveredSigils != ()}[{Aether}{Fire} #enabled:grimoire_statusSigils(glyph_aetherFireSigils)]
         
-    + {glyph_aetherAirSigils ^ glyph_discoveredSigils != ()}[{Aether}{Air}]
+    + {glyph_aetherAirSigils ^ glyph_discoveredSigils != ()}[{Aether}{Air} #enabled:grimoire_statusSigils(glyph_aetherAirSigils)]
         
-    + {glyph_aetherWaterSigils ^ glyph_discoveredSigils != ()}[{Aether}{Water}]
+    + {glyph_aetherWaterSigils ^ glyph_discoveredSigils != ()}[{Aether}{Water} #enabled:grimoire_statusSigils(glyph_aetherWaterSigils)]
         
-    + {glyph_aetherEarthSigils ^ glyph_discoveredSigils != ()}[{Aether}{Earth}]
+    + {glyph_aetherEarthSigils ^ glyph_discoveredSigils != ()}[{Aether}{Earth} #enabled:grimoire_statusSigils(glyph_aetherEarthSigils)]
         
     + [Index #bookmark:index]
     -> grimoire
