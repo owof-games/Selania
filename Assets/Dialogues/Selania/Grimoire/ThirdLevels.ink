@@ -23,6 +23,15 @@
     + {glyph_discoveredSigils has AirEarthWater && leftSigilName == "AirEarth"}[{sigils_translator(AirEarthWater)} #position:left2 #glyph3:{grimoire_sigilGlyph3(AirEarthWater)} #firstLine:{grimoire_textAirEarthWaterOne} #secondLine:{grimoire_textAirEarthWaterTwo} #thirdLine:{grimoire_textAirEarthWaterThree} #status:{grimoire_statusThirdSigils(AirEarthWater)}]
     + {glyph_discoveredSigils has AirEarthAether && leftSigilName == "AirEarth"}[{sigils_translator(AirEarthAether)} #position:left3 #glyph3:{grimoire_sigilGlyph3(AirEarthAether)} #firstLine:{grimoire_textAirEarthAetherOne} #secondLine:{grimoire_textAirEarthAetherTwo} #thirdLine:{grimoire_textAirEarthAetherThree} #status:{grimoire_statusThirdSigils(AirEarthAether)}]
 
+    + {glyph_discoveredSigils has WaterFireAir && leftSigilName == "WaterFire"}[{sigils_translator(WaterFireAir)} #position:left1 #glyph3:{grimoire_sigilGlyph3(WaterFireAir)} #firstLine:{grimoire_textWaterFireAirOne} #secondLine:{grimoire_textWaterFireAirTwo} #thirdLine:{grimoire_textWaterFireAirThree} #status:{grimoire_statusThirdSigils(WaterFireAir)}]
+    + {glyph_discoveredSigils has WaterFireAether && leftSigilName == "WaterFire"}[{sigils_translator(WaterFireAether)} #position:left1 #glyph3:{grimoire_sigilGlyph3(WaterFireAether)} #firstLine:{grimoire_textWaterFireAetherOne} #secondLine:{grimoire_textWaterFireAetherTwo} #thirdLine:{grimoire_textWaterFireAetherThree} #status:{grimoire_statusThirdSigils(WaterFireAether)}]
+    + {glyph_discoveredSigils has WaterFireEarth && leftSigilName == "WaterFire"}[{sigils_translator(WaterFireEarth)} #position:left1 #glyph3:{grimoire_sigilGlyph3(WaterFireEarth)} #firstLine:{grimoire_textWaterFireEarthOne} #secondLine:{grimoire_textWaterFireEarthTwo} #thirdLine:{grimoire_textWaterFireEarthThree} #status:{grimoire_statusThirdSigils(WaterFireEarth)}]
+
+    + {glyph_discoveredSigils has WaterEarthAir && leftSigilName == "WaterEarth"}[{sigils_translator(WaterEarthAir)} #position:left1 #glyph3:{grimoire_sigilGlyph3(WaterEarthAir)} #firstLine:{grimoire_textWaterEarthAirOne} #secondLine:{grimoire_textWaterEarthAirTwo} #thirdLine:{grimoire_textWaterEarthAirThree} #status:{grimoire_statusThirdSigils(WaterEarthAir)}]
+    + {glyph_discoveredSigils has WaterEarthFire && leftSigilName == "WaterEarth"}[{sigils_translator(WaterEarthFire)} #position:left2 #glyph3:{grimoire_sigilGlyph3(WaterEarthFire)} #firstLine:{grimoire_textWaterEarthFireOne} #secondLine:{grimoire_textWaterEarthFireTwo} #thirdLine:{grimoire_textWaterEarthFireThree} #status:{grimoire_statusThirdSigils(WaterEarthFire)}]
+    + {glyph_discoveredSigils has WaterEarthAether && leftSigilName == "WaterEarth"}[{sigils_translator(WaterEarthAether)} #position:left3 #glyph3:{grimoire_sigilGlyph3(WaterEarthAether)} #firstLine:{grimoire_textWaterEarthAetherOne} #secondLine:{grimoire_textWaterEarthAetherTwo} #thirdLine:{grimoire_textWaterEarthAetherThree} #status:{grimoire_statusThirdSigils(WaterEarthAether)}]
+
+
 
     //right
     + {glyph_discoveredSigils has FireWaterEarth && leftSigilName == "FireAir"}[{sigils_translator(FireWaterEarth)} #position:right1 #glyph3:{grimoire_sigilGlyph3(WaterAetherAir)} #firstLine:{grimoire_textFireWaterEarthOne} #secondLine:{grimoire_textFireWaterEarthTwo} #thirdLine:{grimoire_textFireWaterEarthThree} #status:{grimoire_statusThirdSigils(FireWaterEarth)}]
@@ -41,9 +50,17 @@
     + {glyph_discoveredSigils has AirAetherEarth && leftSigilName == "AirEarth"}[{sigils_translator(AirAetherEarth)} #position:right2 #glyph3:{grimoire_sigilGlyph3(AirAetherEarth)} #firstLine:{grimoire_textAirAetherEarthOne} #secondLine:{grimoire_textAirAetherEarthTwo} #thirdLine:{grimoire_textAirAetherEarthThree} #status:{grimoire_statusThirdSigils(AirAetherEarth)}]
     + {glyph_discoveredSigils has AirAetherWater && leftSigilName == "AirEarth"}[{sigils_translator(AirAetherWater)} #position:right3 #glyph3:{grimoire_sigilGlyph3(AirAetherWater)} #firstLine:{grimoire_textAirAetherWaterOne} #secondLine:{grimoire_textAirAetherWaterTwo} #thirdLine:{grimoire_textAirAetherWaterThree} #status:{grimoire_statusThirdSigils(AirAetherWater)}]
 
+    + {glyph_discoveredSigils has WaterAirAether && leftSigilName == "WaterFire"}[{sigils_translator(WaterAirAether)} #position:right1 #glyph3:{grimoire_sigilGlyph3(WaterAirAether)} #firstLine:{grimoire_textWaterAirAetherOne} #secondLine:{grimoire_textWaterAirAetherTwo} #thirdLine:{grimoire_textWaterAirAetherThree} #status:{grimoire_statusThirdSigils(WaterAirAether)}]
+    + {glyph_discoveredSigils has WaterAirFire && leftSigilName == "WaterFire"}[{sigils_translator(WaterAirFire)} #position:right1 #glyph3:{grimoire_sigilGlyph3(WaterAirFire)} #firstLine:{grimoire_textWaterAirFireOne} #secondLine:{grimoire_textWaterAirFireTwo} #thirdLine:{grimoire_textWaterAirFireThree} #status:{grimoire_statusThirdSigils(WaterAirFire)}]
+    + {glyph_discoveredSigils has WaterAirEarth && leftSigilName == "WaterFire"}[{sigils_translator(WaterAirEarth)} #position:right1 #glyph3:{grimoire_sigilGlyph3(WaterAirEarth)} #firstLine:{grimoire_textWaterAirEarthOne} #secondLine:{grimoire_textWaterAirEarthTwo} #thirdLine:{grimoire_textWaterAirEarthThree} #status:{grimoire_statusThirdSigils(WaterAirEarth)}]
+
+    + {glyph_discoveredSigils has WaterAetherAir && leftSigilName == "WaterEarth"}[{sigils_translator(WaterAetherAir)} #position:right1 #glyph3:{grimoire_sigilGlyph3(WaterAetherAir)} #firstLine:{grimoire_textWaterAetherAirOne} #secondLine:{grimoire_textWaterAetherAirTwo} #thirdLine:{grimoire_textWaterAetherAirThree} #status:{grimoire_statusThirdSigils(WaterAetherAir)}]
+    + {glyph_discoveredSigils has WaterAetherEarth && leftSigilName == "WaterEarth"}[{sigils_translator(WaterAetherEarth)} #position:right2 #glyph3:{grimoire_sigilGlyph3(WaterAetherEarth)} #firstLine:{grimoire_textWaterAetherEarthOne} #secondLine:{grimoire_textWaterAetherEarthTwo} #thirdLine:{grimoire_textWaterAetherEarthThree} #status:{grimoire_statusThirdSigils(WaterAetherEarth)}]
+    + {glyph_discoveredSigils has WaterAetherFire && leftSigilName == "WaterEarth"}[{sigils_translator(WaterAetherFire)} #position:right3 #glyph3:{grimoire_sigilGlyph3(WaterAetherFire)} #firstLine:{grimoire_textWaterAetherFireOne} #secondLine:{grimoire_textWaterAetherFireTwo} #thirdLine:{grimoire_textWaterAetherFireThree} #status:{grimoire_statusThirdSigils(WaterAetherFire)}]
+
     + [Index #bookmark:index]
         -> grimoire
     + [Sigilli #bookmark:secondLevel]
         -> grimoire_sigils
-    -   
+    - 
         -> top    
