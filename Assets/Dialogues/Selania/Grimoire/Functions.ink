@@ -54,6 +54,59 @@
     }
 
 
+=== function grimoire_sigilsLabelsName(sigil)
+{
+     //Venti sigilli principali
+            - WaterEarth has sigil:
+                ~ return "Lago"
+            - WaterAir has sigil:
+                ~ return "Nube"
+            - WaterFire has sigil:
+                ~ return "Fiume"
+            - WaterAether has sigil:
+                ~ return "Fonte"
+            
+            - AirWater has sigil:
+                ~ return "Cavalletto"
+            - AirEarth has sigil:
+                ~ return "Leggio"
+            - AirFire has sigil:
+                ~ return "Stufa"
+            - AirAether has sigil:
+                ~ return "Tavolo"
+
+            - AetherWater has sigil:
+                ~ return "Calice"
+            - AetherEarth has sigil:
+                ~ return "Tempio"
+            - AetherFire has sigil:
+                ~ return "Pugnale"
+            - AetherAir has sigil:
+                ~ return "Incenso"
+
+            - EarthWater has sigil:
+                ~ return "Linfa"
+            - EarthAir has sigil:
+                ~ return "Frasca"
+            - EarthFire has sigil:
+                ~ return "Frutto"
+            - EarthAether has sigil:
+                ~ return "Radice"
+
+            - FireWater has sigil:
+                ~ return "Chiave"
+            - FireEarth has sigil:
+                ~ return "Calibro"
+            - FireAir has sigil:
+                ~ return "Palla"
+            - FireAether has sigil:
+                ~ return "Mappa"
+                                                            
+            -else: Traduzione colore parola {glyph_actualActiveSigil} non trovato!
+}
+
+
+
 === function grimoire_sigilSigilName(sigilName)
 {sigilName:
      //Venti sigilli principali
