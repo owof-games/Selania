@@ -229,6 +229,12 @@ namespace Selania.Rework.Components.Grimoire
         public Observable<(ISettingsSigils.GlyphType, ISettingsSigils.GlyphType)> secondLevelSigilsButtonClick =>
             secondLevelSigilsButtons.Select(secondLevelButton => secondLevelButton.click).Merge();
 
+        /// <summary>
+        ///     An observable that produces the name of a third level sigil whenever it's clicked.
+        /// </summary>
+        public Observable<string> thirdLevelSigilsButtonClick =>
+            thirdLevelSigilsRows.Select(row => row.click).Merge();
+
         private void Awake()
         {
             // get components

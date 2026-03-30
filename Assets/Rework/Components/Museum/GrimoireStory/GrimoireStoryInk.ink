@@ -202,8 +202,8 @@ LIST allGlyphs = Fire, Air, Water, Earth, Aether
     @grimoireSigilPages #leftPageTitle:Pontile #leftPageDescription:descrizione #leftPageGlyph1:Air #leftPageGlyph2:Water #rightPageTitle:Destra #rightPageDescription:altra descrizione #rightPageGlyph1:Air #rightPageGlyph2:Fire
     + {false} [Lockato #position:left1 #glyph3:Aether #firstLine: #secondLine:seconda #thirdLine:]
     + [Strappo #position:left2 #glyph3:Fire #firstLine: #secondLine:seconda #thirdLine:]
-    + [Strappooo #position:left3 #glyph3:Earth #firstLine:prima #secondLine: #thirdLine:terza]
-    + [Boh #position:right1 #glyph3:Water #firstLine:prima #secondLine:seconda #thirdLine:terza]
+    + [Strappooo #position:left3 #glyph3:Earth #firstLine:prima #secondLine: #thirdLine:terza #status:default]
+    + [Boh #position:right1 #glyph3:Water #firstLine:prima #secondLine:seconda #thirdLine:terza #status:unclickable]
     + [Altro #position:right2 #glyph3:Earth #firstLine: #secondLine: #thirdLine: #status:selected]
     + [Altro #position:right3 #glyph3:Aether #firstLine: #secondLine: #thirdLine: #status:consumed]
     + [Index #bookmark:index]

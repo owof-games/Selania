@@ -613,6 +613,8 @@ MonoBehaviour:
   secondLevelSaturationControl: {fileID: 3982086130899052390}
   thirdLevelSaturationControl: {fileID: 8820913920133880821}
   disabledBackgroundSprite: {fileID: 21300000, guid: 7c4e8bebae4c4034e951824e463dfbc6, type: 3}
+  imageTransformRoot: {fileID: 8352717512822377134}
+  flatAnchoredPosition: {x: 16.5, y: 13.5}
 --- !u!95 &6385953494612133434
 Animator:
   serializedVersion: 7
