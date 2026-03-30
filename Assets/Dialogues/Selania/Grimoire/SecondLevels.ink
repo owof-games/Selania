@@ -102,8 +102,10 @@
 
     //Sigilli a dominante fuoco
     + {glyph_fireAirSigils ^ glyph_discoveredSigils != ()}[{Fire}{Air} #enabled:grimoire_statusSigils(glyph_fireAirSigils)]
+        -> grimoire_sigils_thirdLevelOne (Fire, Air, Fire, Water)
         
     + {glyph_fireWaterSigils ^ glyph_discoveredSigils != ()}[{Fire}{Water} #enabled:grimoire_statusSigils(glyph_fireWaterSigils)]
+        -> grimoire_sigils_thirdLevelOne (Fire, Air, Fire, Water)
         
     + {glyph_fireEarthSigils ^ glyph_discoveredSigils != ()}[{Fire}{Earth} #enabled:grimoire_statusSigils(glyph_fireEarthSigils)]
         
