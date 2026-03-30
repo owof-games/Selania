@@ -10,7 +10,7 @@
 
 
 === function grimoire_statusSigils(sigilList)
-
+//Per secondo livello
     {
         - glyph_aetherFireSigils ^ glyph_actualActiveSigil has sigilList:
             ~ return true
@@ -20,6 +20,38 @@
     }
 
 
+=== function grimoire_statusThirdSigils(sigil)
+//Per terzo livello
+
+{
+    - glyph_actualActiveSigil has sigil:
+        ~ return selected
+
+    - glyph_usedSigils has sigil:
+        ~ return consumed
+
+    - glyph_actualActiveSigil != () && glyph_usedSigils hasnt sigil && glyph_actualActiveSigil hasnt sigil:
+        ~ return unclickable
+
+    - else:
+         ~ return default   
+
+}
+
+
+=== function grimoire_sigilGlyph3(sigil)
+    {
+        - glyph_thirdFire has sigil:
+            ~ return Fire
+        - glyph_thirdWater has sigil:
+            ~ return Water
+        - glyph_thirdEarth has sigil:
+            ~ return Earth
+        - glyph_thirdAir has sigil:
+            ~ return Air
+        - glyph_thirdAether has sigil:
+            ~ return Aether
+    }
 
 
 === function grimoire_sigilSigilName(sigilName)

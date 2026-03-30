@@ -49,3 +49,4 @@ VAR grimoire_appendices = ()
 
 //Liste per gestire i tag
 LIST grimoire_possibilePlantsStatus = missing, owned
+LIST grimoire_possibileSigilsStatus = selected, consumed, unclickable, default
