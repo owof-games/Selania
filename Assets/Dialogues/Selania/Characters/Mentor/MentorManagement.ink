@@ -93,6 +93,7 @@
             //Tutorial
             - tutorial_mentorTalkingChoiceRelationship && grimoire_appendices hasnt grimChoicesMentor:
                 ~ grimoire_appendices += grimChoicesMentor
+                ~ grimoire_fifthChar += grimChoicesMentor
 
             - tutorial_mentorInkAndYouAreARewriter && grimoire_appendices hasnt grimInkMentor:
                 ~ grimoire_appendices += grimInkMentor
