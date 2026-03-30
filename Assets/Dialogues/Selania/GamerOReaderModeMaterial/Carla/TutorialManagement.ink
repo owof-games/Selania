@@ -13,7 +13,7 @@ VAR tutorial_rereadingActive = false
 //Prima di tutto vedo se attivare o meno le variabili legate al livello di rapporto con l3 PNG
 
     {
-        - (firstChar_storyletsForRewritingCount + secondChar_storyletsForRewritingCount + thirdChar_storyletsForRewritingCount >=  tutorial_rereadingValueActivator) && not tutorial_carlaRereadingStorylet:
+        - ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar) + LIST_COUNT(grimoire_thirdChar)) >=  tutorial_rereadingValueActivator) && not tutorial_carlaRereadingStorylet:
                 ~ tutorial_rereadingActive = true
             
     }

@@ -12,7 +12,7 @@ VAR listDumpCharActivators = ()
         - grimoire_firstChar has grimFirstCharTwelve && listDumpCharActivators hasnt FirstCharacter:
             ~ listDumpGraphics ++
             ~ listDumpCharActivators += FirstCharacter
-            {debug: il valore di firstChar_storyletsForRewritingCount è uguale a {firstChar_storyletsForRewritingCount}, e per questo ho aumentato il valore di listDumpGraphics e aggiunto FirstCharacter a listDumpCharActivators. listDumpGraphics contiene {listDumpGraphics}, mentre listDumpCharActivators contiene {listDumpCharActivators}}
+            {debug: il valore di grimoire_firstChar ha grimFirstCharTwelve {grimoire_firstChar}, e per questo ho aumentato il valore di listDumpGraphics e aggiunto FirstCharacter a listDumpCharActivators. listDumpGraphics contiene {listDumpGraphics}, mentre listDumpCharActivators contiene {listDumpCharActivators}}
             
     }
 
@@ -20,28 +20,28 @@ VAR listDumpCharActivators = ()
         - grimoire_secondChar has grimSecondCharTwelve && listDumpCharActivators hasnt SecondCharacter:
             ~ listDumpGraphics ++
             ~ listDumpCharActivators += SecondCharacter
-            {debug: il valore di secondChar_storyletsForRewritingCount è uguale a {secondChar_storyletsForRewritingCount}, e per questo ho aumentato il valore di listDumpGraphics e aggiunto SecondCharacter a listDumpCharActivators. listDumpGraphics contiene {listDumpGraphics}, mentre listDumpCharActivators contiene {listDumpCharActivators}}
+            {debug: il valore di grimoire_secondChar ha grimSecondCharTwelve{grimoire_secondChar}, e per questo ho aumentato il valore di listDumpGraphics e aggiunto SecondCharacter a listDumpCharActivators. listDumpGraphics contiene {listDumpGraphics}, mentre listDumpCharActivators contiene {listDumpCharActivators}}
     }
 
     {
         - grimoire_thirdChar has grimThirdCharTwelve && listDumpCharActivators hasnt ThirdCharacter:
             ~ listDumpGraphics ++
             ~ listDumpCharActivators += ThirdCharacter
-            {debug: il valore di thirdChar_storyletsForRewritingCount è uguale a {thirdChar_storyletsForRewritingCount}, e per questo ho aumentato il valore di listDumpGraphics e aggiunto ThirdCharacter a listDumpCharActivators. listDumpGraphics contiene {listDumpGraphics}, mentre listDumpCharActivators contiene {listDumpCharActivators}}
+            {debug: il valore di grimoire_thirdChar ha grimThirdCharTwelve {grimoire_thirdChar}, e per questo ho aumentato il valore di listDumpGraphics e aggiunto ThirdCharacter a listDumpCharActivators. listDumpGraphics contiene {listDumpGraphics}, mentre listDumpCharActivators contiene {listDumpCharActivators}}
     }
 
     {
         - grimoire_fourthChar has grimFourthCharTwelve && listDumpCharActivators hasnt FourthCharacter:
             ~ listDumpGraphics ++
             ~ listDumpCharActivators += FourthCharacter
-            {debug: il valore di fourthChar_storyletsForRewritingCount è uguale a {fourthChar_storyletsForRewritingCount}, e per questo ho aumentato il valore di listDumpGraphics e aggiunto FourthCharacter a listDumpCharActivators. listDumpGraphics contiene {listDumpGraphics}, mentre listDumpCharActivators contiene {listDumpCharActivators}}
+            {debug: il valore di grimoire_fourthChar ha grimFourthCharTwelve {grimoire_fourthChar}, e per questo ho aumentato il valore di listDumpGraphics e aggiunto FourthCharacter a listDumpCharActivators. listDumpGraphics contiene {listDumpGraphics}, mentre listDumpCharActivators contiene {listDumpCharActivators}}
     }
 
     {
         - grimoire_fifthChar has grimFifthCharTwelve && listDumpCharActivators hasnt FifthCharacter:
             ~ listDumpGraphics ++
             ~ listDumpCharActivators += FifthCharacter
-            {debug: il valore di fifthChar_storyletsForRewritingCount è uguale a {fifthChar_storyletsForRewritingCount}, e per questo ho aumentato il valore di listDumpGraphics e aggiunto FifthCharacter a listDumpCharActivators. listDumpGraphics contiene {listDumpGraphics}, mentre listDumpCharActivators contiene {listDumpCharActivators}}
+            {debug: il valore di grimoire_fifthChar ha grimFifthCharTwelve {grimoire_fifthChar}, e per questo ho aumentato il valore di listDumpGraphics e aggiunto FifthCharacter a listDumpCharActivators. listDumpGraphics contiene {listDumpGraphics}, mentre listDumpCharActivators contiene {listDumpCharActivators}}
     }
 
 //Step due: aggiornare gli oggetti nel dump se necessario

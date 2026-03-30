@@ -83,7 +83,6 @@
     VAR secondChar_negativeGlyphs = ()
     
 //Tengo conto delle interazioni avute per aprire la possibilità della riscrittura
-    VAR secondChar_storyletsForRewritingCount = 0.00
     VAR secondChar_minStoryletsForRewriting = grimSecondCharNine   
     VAR secondChar_specialEvent = false
     VAR secondChar_justTalked = false

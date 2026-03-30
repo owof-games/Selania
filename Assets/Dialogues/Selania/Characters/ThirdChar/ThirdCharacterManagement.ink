@@ -61,7 +61,6 @@
     VAR thirdChar_negativeGlyphs = ()
     
 //Tengo conto delle interazioni avute per aprire la possibilità della riscrittura
-    VAR thirdChar_storyletsForRewritingCount = 0.00
     VAR thirdChar_minStoryletsForRewriting = grimThirdCharNine 
     VAR thirdChar_specialEvent = false
     VAR thirdChar_justTalked = false

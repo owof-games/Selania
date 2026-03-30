@@ -66,8 +66,6 @@
 //Tracciamento del racconto
     VAR frog_first_novel = ""
 
-//Tengo conto delle interazioni avute per aprire la possibilità di avviare la riscrittura
-    VAR firstChar_storyletsForRewritingCount = 0
 //Quantità di storylets letti dalla giocatrice prima di accedere alla riscrittura
     VAR firstChar_minStoryletsForRewriting = grimFirstCharNine   
     VAR firstChar_specialEvent = false
