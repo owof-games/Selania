@@ -100,25 +100,31 @@
 === grimoire_sigils
     @grimoireSigils
 
-    //Sigilli a dominante fuoco
+    //Pagine da uno a quattro
     + {glyph_fireAirSigils ^ glyph_discoveredSigils != ()}[{Fire}{Air} #enabled:grimoire_statusSigils(glyph_fireAirSigils)]
-        -> grimoire_sigils_thirdLevelOne (Fire, Air, Fire, Water)
+        -> grimoire_sigils_thirdLevel (Fire, Air, Fire, Water)
         
     + {glyph_fireWaterSigils ^ glyph_discoveredSigils != ()}[{Fire}{Water} #enabled:grimoire_statusSigils(glyph_fireWaterSigils)]
-        -> grimoire_sigils_thirdLevelOne (Fire, Air, Fire, Water)
+        -> grimoire_sigils_thirdLevel (Fire, Air, Fire, Water)
         
     + {glyph_fireEarthSigils ^ glyph_discoveredSigils != ()}[{Fire}{Earth} #enabled:grimoire_statusSigils(glyph_fireEarthSigils)]
+        -> grimoire_sigils_thirdLevel (Fire, Earth, Fire, Aether)
         
     + {glyph_fireAetherSigils ^ glyph_discoveredSigils != ()}[{Fire}{Aether} #enabled:grimoire_statusSigils(glyph_fireAetherSigils)]
+        -> grimoire_sigils_thirdLevel (Fire, Earth, Fire, Aether)
 
-    //Sigilli a dominante aria    
+    //Pagine da cinque a otto 
     + {glyph_airFireSigils ^ glyph_discoveredSigils != ()}[{Air}{Fire} #enabled:grimoire_statusSigils(glyph_airFireSigils)]
+        -> grimoire_sigils_thirdLevel (Air, Fire, Air, Water)
         
     + {glyph_airWaterSigils ^ glyph_discoveredSigils != ()}[{Air}{Water} #enabled:grimoire_statusSigils(glyph_airWaterSigils)]
+        -> grimoire_sigils_thirdLevel (Air, Fire, Air, Water)
         
     + {glyph_airEarthSigils ^ glyph_discoveredSigils != ()}[{Air}{Earth} #enabled:grimoire_statusSigils(glyph_airEarthSigils)]
+        -> grimoire_sigils_thirdLevel (Air, Earth, Air, Aether)
         
     + {glyph_airAetherSigils ^ glyph_discoveredSigils != ()}[{Air}{Aether} #enabled:grimoire_statusSigils(glyph_airAetherSigils)]
+        -> grimoire_sigils_thirdLevel (Air, Earth, Air, Aether)
 
     //Sigilli a dominante acqua    
     + {glyph_WaterFireSigils ^ glyph_discoveredSigils != ()}[{Water}{Fire} #enabled:grimoire_statusSigils(glyph_WaterFireSigils)]
