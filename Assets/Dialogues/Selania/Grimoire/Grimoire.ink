@@ -112,6 +112,7 @@
 
 === grimoire_greenhouse
     @grimoireGreenhouse
+
     + {greenhouse_findedCultivables has BaccaDellaAddolorata} [BaccaDellaAddolorata #status:{grimoire_statusPlants(BaccaDellaAddolorata)}]
 
     + {greenhouse_findedCultivables has BarbaDellInciampo} [BarbaDellInciampo #status:{grimoire_statusPlants(BarbaDellInciampo)}]
@@ -150,12 +151,58 @@
 === grimoire_sigils
     @grimoireSigils
 
+    //Sigilli a dominante fuoco
+    + {glyph_fireAirSigils ^ glyph_discoveredSigils != ()}[{Fire}{Air}]
+        
+    + {glyph_fireWaterSigils ^ glyph_discoveredSigils != ()}[{Fire}{Water}]
+        
+    + {glyph_fireEarthSigils ^ glyph_discoveredSigils != ()}[{Fire}{Earth}]
+        
+    + {glyph_fireAetherSigils ^ glyph_discoveredSigils != ()}[{Fire}{Aether}]
 
+    //Sigilli a dominante aria    
+    + {glyph_airFireSigils ^ glyph_discoveredSigils != ()}[{Air}{Fire}]
+        
+    + {glyph_airWaterSigils ^ glyph_discoveredSigils != ()}[{Air}{Water}]
+        
+    + {glyph_airEarthSigils ^ glyph_discoveredSigils != ()}[{Air}{Earth}]
+        
+    + {glyph_airAetherSigils ^ glyph_discoveredSigils != ()}[{Air}{Aether}]
 
-+ [Index #bookmark:index]
+    //Sigilli a dominante acqua    
+    + {glyph_WaterFireSigils ^ glyph_discoveredSigils != ()}[{Water}{Fire}]
+        
+    + {glyph_WaterAirSigils ^ glyph_discoveredSigils != ()}[{Water}{Air}]
+        
+    + {glyph_WaterEarthSigils ^ glyph_discoveredSigils != ()}[{Water}{Earth}]
+        
+    + {glyph_WaterAetherSigils ^ glyph_discoveredSigils != ()}[{Water}{Aether}]
+
+    //Sigilli a dominante terra    
+    + {glyph_earthFireSigils ^ glyph_discoveredSigils != ()}[{Earth}{Fire}]
+        
+    + {glyph_earthAirSigils ^ glyph_discoveredSigils != ()}[{Earth}{Air}]
+        
+    + {glyph_earthWaterSigils ^ glyph_discoveredSigils != ()}[{Earth}{Water}]
+        
+    + {glyph_earthAetherSigils ^ glyph_discoveredSigils != ()}[{Earth}{Aether}]
+
+    //Sigilli a dominante spirito    
+    + {glyph_aetherFireSigils ^ glyph_discoveredSigils != ()}[{Aether}{Fire}]
+        
+    + {glyph_aetherAirSigils ^ glyph_discoveredSigils != ()}[{Aether}{Air}]
+        
+    + {glyph_aetherWaterSigils ^ glyph_discoveredSigils != ()}[{Aether}{Water}]
+        
+    + {glyph_aetherEarthSigils ^ glyph_discoveredSigils != ()}[{Aether}{Earth}]
+        
+    + [Index #bookmark:index]
     -> grimoire
     -
     -> grimoire_sigils
+
+
+
 
 
 === grimoire_appendicesCollection
@@ -189,6 +236,6 @@
 // + [Sigilli #bookmark:secondLevel]
 //  -> grimoire_sigils
 // + [Vaso #bookmark:previous]
-//  -> grimoire_sigils_third
+//  
 // + [Increspatura #bookmark:next]
-//  -> grimoire_sigils_third
+//  
