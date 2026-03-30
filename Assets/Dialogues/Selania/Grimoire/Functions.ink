@@ -20,51 +20,104 @@
     }
 
 
+
+
+=== function grimoire_sigilSigilName(sigilName)
+{sigilName:
+     //Venti sigilli principali
+            - "WaterEarth":
+                ~ return "Lago"
+            - "WaterAir":
+                ~ return "Nube"
+            - "WaterFire":
+                ~ return "Fiume"
+            - "WaterAether":
+                ~ return "Fonte"
+            
+            - "AirWater":
+                ~ return "Cavalletto"
+            - "AirEarth":
+                ~ return "Leggio"
+            - "AirFire":
+                ~ return "Stufa"
+            - "AirAether":
+                ~ return "Tavolo"
+
+            - "AetherWater":
+                ~ return "Calice"
+            - "AetherEarth":
+                ~ return "Tempio"
+            - "AetherFire":
+                ~ return "Pugnale"
+            - "AetherAir":
+                ~ return "Incenso"
+
+            - "EarthWater":
+                ~ return "Linfa"
+            - "EarthAir":
+                ~ return "Frasca"
+            - "EarthFire":
+                ~ return "Frutto"
+            - "EarthAether":
+                ~ return "Radice"
+
+            - "FireWater":
+                ~ return "Chiave"
+            - "FireEarth":
+                ~ return "Calibro"
+            - "FireAir":
+                ~ return "Palla"
+            - "FireAether":
+                ~ return "Mappa"
+}
+
+
+
 === function grimoire_sigilsDescription(sigilName)
 {sigilName:
-    - WaterEarth:
+    - "WaterEarth":
         ~ return "{grimoire_textWaterEarthOne} {grimoire_textWaterEarthTwo}"
-    - WaterAir:
+    - "WaterAir":
         ~ return "{grimoire_textWaterAirOne} {grimoire_textWaterAirTwo}"
-    - WaterFire:
+    - "WaterFire":
         ~ return "{grimoire_textWaterFireOne} {grimoire_textWaterFireTwo}"
-    - WaterAether:
+    - "WaterAether":
         ~ return "{grimoire_textWaterAetherOne} {grimoire_textWaterAetherTwo}"
     
-    - AirWater:
+    - "AirWater":
         ~ return "{grimoire_textAirWaterOne} {grimoire_textAirWaterTwo}"
-    - AirEarth:
+    - "AirEarth":
         ~ return "{grimoire_textAirEarthOne} {grimoire_textAirEarthTwo}"
-    - AirFire:
+    - "AirFire":
         ~ return "{grimoire_textAirFireOne} {grimoire_textAirFireTwo}"
-    - AirAether:
+    - "AirAether":
         ~ return "{grimoire_textAirAetherOne} {grimoire_textAirAetherTwo}"
 
-    - AetherWater:
+    - "AetherWater":
         ~ return "{grimoire_textAetherWaterOne} {grimoire_textAetherWaterTwo}"
-    - AetherEarth:
+    - "AetherEarth":
         ~ return "{grimoire_textAetherEarthOne} {grimoire_textAetherEarthTwo}"
-    - AetherFire:
+    - "AetherFire":
         ~ return "{grimoire_textAetherFireOne} {grimoire_textAetherFireTwo}"
-    - AetherAir:
+    - "AetherAir":
         ~ return "{grimoire_textAetherAirOne} {grimoire_textAetherAirTwo}"
 
-    - EarthWater:
+    - "EarthWater":
         ~ return "{grimoire_textEarthWaterOne} {grimoire_textEarthWaterTwo}"
-    - EarthAir:
+    - "EarthAir":
         ~ return "{grimoire_textEarthAirOne} {grimoire_textEarthAirTwo}"
-    - EarthFire:
+    - "EarthFire":
         ~ return "{grimoire_textEarthFireOne} {grimoire_textEarthFireTwo}"
-    - EarthAether:
+    - "EarthAether":
         ~ return "{grimoire_textEarthAetherOne} {grimoire_textEarthAetherTwo}"
 
-    - FireWater:
+    - "FireWater":
         ~ return "{grimoire_textFireWaterOne} {grimoire_textFireWaterTwo}"
-    - FireEarth:
+    - "FireEarth":
         ~ return "{grimoire_textFireEarthOne} {grimoire_textFireEarthTwo}"
-    - FireAir:
+    - "FireAir":
         ~ return "{grimoire_textFireAirOne} {grimoire_textFireAirTwo}"
-    - FireAether:
+    - "FireAether":
         ~ return "{grimoire_textFireAetherOne} {grimoire_textFireAetherTwo}"
 
 

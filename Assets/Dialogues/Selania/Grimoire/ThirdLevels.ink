@@ -25,7 +25,7 @@
     ~ temp leftSigilName = "{leftGlyph1}{leftGlyph2}"
     ~ temp rightSigilName = "{rightGlyph1}{rightGlyph2}"
 
-@grimoireSigilPages #leftPageTitle{sigils_translator(leftSigilName)} #leftPageDescription{grimoire_sigilsDescription(leftSigilName)} #leftPageGlyph1:{leftGlyph1} #leftPageGlyph2:{leftGlyph2} #rightPageTitle{sigils_translator(rightSigilName)} #rightPageDescription{grimoire_sigilsDescription(rightSigilName)} #rightPageGlyph1:{rightGlyph1} #rightPageGlyph2:{rightGlyph2}
+@grimoireSigilPages #leftPageTitle{grimoire_sigilSigilName(leftSigilName)} #leftPageDescription{grimoire_sigilsDescription(leftSigilName)} #leftPageGlyph1:{leftGlyph1} #leftPageGlyph2:{leftGlyph2} #rightPageTitle{grimoire_sigilSigilName(rightSigilName)} #rightPageDescription{grimoire_sigilsDescription(rightSigilName)} #rightPageGlyph1:{rightGlyph1} #rightPageGlyph2:{rightGlyph2}
 
 
 + [Index #bookmark:index]
