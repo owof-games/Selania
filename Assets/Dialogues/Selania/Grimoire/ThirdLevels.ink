@@ -92,26 +92,44 @@
 
 
     //Tasti precedenti
-    + {leftSigilName == "FireEarth"} [{sigils_translator(FireAether)}#bookmark:previous]
-    + {leftSigilName == "AirFire"} [{sigils_translator(FireEarth)}#bookmark:previous]
+    + {leftSigilName == "FireEarth"} [{sigils_translator(FireWater)}#bookmark:previous]
+        -> grimoire_sigils_thirdLevel (Fire, Air, Fire, Water)
+    + {leftSigilName == "AirFire"} [{sigils_translator(FireAether)}#bookmark:previous]
+        -> grimoire_sigils_thirdLevel (Fire, Earth, Fire, Aether)
     + {leftSigilName == "AirEarth"} [{sigils_translator(AirWater)}#bookmark:previous]
+        -> grimoire_sigils_thirdLevel (Air, Fire, Air, Water)
     + {leftSigilName == "WaterFire"} [{sigils_translator(AirAether)}#bookmark:previous]
+        -> grimoire_sigils_thirdLevel (Air, Earth, Air, Aether)
     + {leftSigilName == "WaterEarth"} [{sigils_translator(WaterAir)}#bookmark:previous]
+        -> grimoire_sigils_thirdLevel (Water, Fire, Water, Air)
     + {leftSigilName == "EarthFire"} [{sigils_translator(WaterAether)}#bookmark:previous]
+        -> grimoire_sigils_thirdLevel (Water, Earth, Water, Aether)
     + {leftSigilName == "EarthWater"} [{sigils_translator(EarthAir)}#bookmark:previous]
+        -> grimoire_sigils_thirdLevel (Earth, Fire, Earth, Air)
     + {leftSigilName == "AetherFire"} [{sigils_translator(EarthAether)}#bookmark:previous]
+        -> grimoire_sigils_thirdLevel (Earth, Water, Earth, Aether)
     + {leftSigilName == "AetherWater"} [{sigils_translator(AetherAir)}#bookmark:previous]
+        -> grimoire_sigils_thirdLevel (Aether, Fire, Aether, Air)
 
     //Tasti seguenti
     + {leftSigilName == "FireAir"} [{sigils_translator(FireEarth)}#bookmark:next]
+        -> grimoire_sigils_thirdLevel (Fire, Earth, Fire, Aether)
     + {leftSigilName == "FireEarth"} [{sigils_translator(AirFire)}#bookmark:next]
+        -> grimoire_sigils_thirdLevel (Air, Fire, Air, Water)
     + {leftSigilName == "AirFire"} [{sigils_translator(AirEarth)}#bookmark:next]
+        -> grimoire_sigils_thirdLevel (Air, Earth, Air, Aether)
     + {leftSigilName == "AirEarth"} [{sigils_translator(WaterFire)}#bookmark:next]
+        -> grimoire_sigils_thirdLevel (Water, Fire, Water, Air)
     + {leftSigilName == "WaterFire"} [{sigils_translator(WaterEarth)}#bookmark:next]
+        -> grimoire_sigils_thirdLevel (Water, Earth, Water, Aether)
     + {leftSigilName == "WaterEarth"} [{sigils_translator(EarthFire)}#bookmark:next]
+        -> grimoire_sigils_thirdLevel (Earth, Fire, Earth, Air)
     + {leftSigilName == "EarthFire"} [{sigils_translator(EarthWater)}#bookmark:next]
+        -> grimoire_sigils_thirdLevel (Earth, Water, Earth, Aether)
     + {leftSigilName == "EarthWater"} [{sigils_translator(AetherFire)}#bookmark:next]
+        -> grimoire_sigils_thirdLevel (Aether, Fire, Aether, Air)
     + {leftSigilName == "AetherFire"} [{sigils_translator(AetherWater)}#bookmark:next]
+        -> grimoire_sigils_thirdLevel (Aether, Water, Aether, Earth)
 
 
     + [Index #bookmark:index]
