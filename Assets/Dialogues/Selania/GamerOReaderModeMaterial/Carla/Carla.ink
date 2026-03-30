@@ -32,7 +32,10 @@
                 -> tutorial_carlaGrimoireStorylet -> questions_Carla 
 
         + Come interagisco col mondo?
-                -> tutorial_carlaInterfaceStorylets -> questions_Carla       
+                -> tutorial_carlaInterfaceStorylets -> questions_Carla
+
+        + Grimorio (solo per test ink!)
+                -> grimoire -> questions_Carla      
 
         + Mi sbloccherebbe tutti i sigilli?
                 -> glyph_open_all_sigils ->
