@@ -47,7 +47,7 @@ LIST allGlyphs = Fire, Air, Water, Earth, Aether
 
     //Varianti a dominante Fire
     VAR glyph_fireAirSigils = (FireAirWater, FireAirEarth, FireAirAether)
-    VAR glyph_fireWaterSigils = (WaterAetherAir, FireWaterAether, FireWaterAir)
+    VAR glyph_fireWaterSigils = (FireWaterEarth, FireWaterAether, FireWaterAir)
     VAR glyph_fireEarthSigils = (FireEarthWater, FireEarthAether, FireEarthAir)
     VAR glyph_fireAetherSigils = (FireAetherWater, FireAetherEarth, FireAetherAir)
     
@@ -76,19 +76,19 @@ LIST allGlyphs = Fire, Air, Water, Earth, Aether
     VAR glyph_aetherEarthSigils = (AetherEarthWater, AetherEarthAir, AetherEarthFire)
 
 //Raggruppamento dei sigilli per posizione (es: FirstFire, SecondFire, ThirdFire)
-    VAR glyph_firstFire = (FireAirWater, FireAirEarth, FireAirAether, WaterAetherAir, FireWaterAether, FireWaterAir, FireEarthWater, FireEarthAether, FireEarthAir, FireAetherWater, FireAetherEarth, FireAetherAir)
+    VAR glyph_firstFire = (FireAirWater, FireAirEarth, FireAirAether, FireWaterAether, FireWaterAir, FireWaterEarth, FireEarthWater, FireEarthAether, FireEarthAir, FireAetherWater, FireAetherEarth, FireAetherAir)
     VAR glyph_secondFire = (AirFireEarth, AirFireAether, AirFireWater, WaterFireEarth, WaterFireAether, WaterFireAir, EarthFireAether, EarthFireWater, EarthFireAir, AetherFireEarth, AetherFireWater, AetherFireAir )
     VAR glyph_thirdFire = (AirWaterFire, AirEarthFire, AirAetherFire, WaterAirFire, WaterEarthFire, WaterAetherFire, EarthAirFire, EarthWaterFire, EarthAetherFire, AetherAirFire, AetherWaterFire, AetherEarthFire)
 
 
     VAR glyph_firstWater = (WaterFireEarth, WaterFireAether, WaterFireAir, WaterAirEarth, WaterAirAether, WaterAirFire, WaterEarthAether, WaterEarthAir, WaterEarthFire, WaterAetherEarth, WaterAetherAir, WaterAetherFire)
-    VAR glyph_secondWater = (WaterAetherAir, FireWaterAether, FireWaterAir, AirWaterEarth, AirWaterAether, AirWaterFire, EarthWaterAether, EarthWaterAir, EarthWaterFire, AetherWaterEarth, AetherWaterAir, AetherWaterFire)
+    VAR glyph_secondWater = ( FireWaterAether, FireWaterAir, FireWaterEarth, AirWaterEarth, AirWaterAether, AirWaterFire, EarthWaterAether, EarthWaterAir, EarthWaterFire, AetherWaterEarth, AetherWaterAir, AetherWaterFire)
     VAR glyph_thirdWater = (FireAirWater, FireEarthWater, FireAetherWater, AirFireWater, AirEarthWater, AirAetherWater, EarthFireWater, EarthAirWater, EarthAetherWater, AetherFireWater, AetherAirWater, AetherEarthWater)
 
 
     VAR glyph_firstEarth = (EarthFireAether, EarthFireWater, EarthFireAir, EarthAirAether, EarthAirWater, EarthAirFire, EarthWaterAether, EarthWaterAir, EarthWaterFire, EarthAetherWater, EarthAetherAir, EarthAetherFire)
     VAR glyph_secondEarth = (FireEarthWater, FireEarthAether, FireEarthAir, AirEarthAether, AirEarthWater, AirEarthFire, WaterEarthAether, WaterEarthAir, WaterEarthFire, AetherEarthWater, AetherEarthAir, AetherEarthFire)
-    VAR glyph_thirdEarth = (FireAirEarth, FireAetherEarth, AirFireEarth, AirWaterEarth, AirAetherEarth, WaterFireEarth, WaterAirEarth, WaterAetherEarth, AetherFireEarth, AetherAirEarth, AetherWaterEarth)
+    VAR glyph_thirdEarth = (FireAirEarth, FireAetherEarth, AirFireEarth, AirWaterEarth, AirAetherEarth, WaterFireEarth, WaterAirEarth, WaterAetherEarth, AetherFireEarth, AetherAirEarth, AetherWaterEarth, FireWaterEarth)
 
 
     VAR glyph_firstAir = (AirFireEarth, AirFireAether, AirFireWater, AirWaterEarth, AirWaterAether, AirWaterFire, AirEarthAether, AirEarthWater, AirEarthFire, AirAetherEarth, AirAetherWater, AirAetherFire)
