@@ -12,7 +12,7 @@
 === function grimoire_statusSigils(sigilList)
 //Per secondo livello
     {
-        - glyph_aetherFireSigils ^ glyph_actualActiveSigil has sigilList:
+        - sigilList has glyph_actualActiveSigil:
             ~ return true
         
         - else:
