@@ -30,7 +30,7 @@ namespace Selania.Rework.Components.Grimoire
         /// </summary>
         public Observable<string> click => button.GetComponent<Button>()
             .OnClickAsObservable()
-            .CombineLatest(button.GetComponent<GrimoireButtonHelper>().LogicallyDisabled, (_, disabled) => disabled)
+            .CombineLatest(button.GetComponent<GrimoireButtonHelper>().logicallyDisabled, (_, disabled) => disabled)
             .Where(disabled => !disabled)
             .Select(_ => _title);
 

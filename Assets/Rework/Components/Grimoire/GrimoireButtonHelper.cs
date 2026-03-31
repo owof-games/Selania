@@ -19,10 +19,10 @@ namespace Selania.Rework.Components.Grimoire
         [SerializeField] private Color pressedColor = new(0xc8 / 256.0f, 0xc8 / 256.0f, 0xc8 / 256.0f);
 
         /// <summary>
-        ///     An observable that says if this button should logically disabled (it doesn't produce click animations but
+        ///     An observable that says if this button should be logically disabled (it doesn't produce click animations but
         ///     click events are sent anyway)
         /// </summary>
-        private Subject<bool> _logicallyDisabled = null!;
+        private Subject<bool>? _logicallyDisabled;
 
         /// <summary>
         ///     An observable that produces <c>null</c> if the default sprite must be used, or an alternative sprite.
@@ -34,9 +34,13 @@ namespace Selania.Rework.Components.Grimoire
         /// </summary>
         private Subject<bool>? _pressedSubject;
 
-        public Observable<bool> LogicallyDisabled => _logicallyDisabled?.DistinctUntilChanged() ??
-                                                     throw new InvalidOperationException(
-                                                         "Cannot request LogicallyDisabled until started");
+        /// <summary>
+        ///     Whether this button is logically disabled or not.
+        /// </summary>
+        /// <exception cref="InvalidOperationException">If this observable is accessed before Awake.</exception>
+        public Observable<bool> logicallyDisabled =>
+            _logicallyDisabled?.DistinctUntilChanged() ??
+            throw new InvalidOperationException("Cannot request LogicallyDisabled until started");
 
         private void Awake()
         {
@@ -65,8 +69,8 @@ namespace Selania.Rework.Components.Grimoire
 
             _pressedSubject!
                 .Prepend(false)
-                .CombineLatest(interactableObservable, _logicallyDisabled,
-                    (pressed, interactable, logicallyDisabled) => pressed && interactable && !logicallyDisabled)
+                .CombineLatest(interactableObservable, _logicallyDisabled!,
+                    (pressed, interactable, isLogicallyDisabled) => pressed && interactable && !isLogicallyDisabled)
                 .DistinctUntilChanged()
                 .Subscribe(pressed => targetGraphic.color = pressed ? pressedColor : Color.white)
                 .AddTo(this);
@@ -96,10 +100,13 @@ namespace Selania.Rework.Components.Grimoire
         /// <summary>
         ///     Set whether this button is logically disabled (no animation, but click events are emitted anyway).
         /// </summary>
-        /// <param name="logicallyDisabled">Whether this button is logically disabled.</param>
-        public void SetLogicallyDisabledStatus(bool logicallyDisabled)
+        /// <param name="isLogicallyDisabled">Whether this button is logically disabled.</param>
+        public void SetLogicallyDisabledStatus(bool isLogicallyDisabled)
         {
-            _logicallyDisabled.OnNext(logicallyDisabled);
+            if (_logicallyDisabled == null)
+                throw new InvalidOperationException("Cannot set the logical disabled status before Awake");
+
+            _logicallyDisabled?.OnNext(isLogicallyDisabled);
         }
     }
 }
