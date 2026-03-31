@@ -144,18 +144,19 @@
 
 
     //Pagine da tredici a sedici   
-    + {glyph_fireAirSigils ^ glyph_discoveredSigils != ()}[{Air}{Fire} #enabled:grimoire_statusSigils(glyph_fireAirSigils)]
+    + {glyph_fireAirSigils ^ glyph_discoveredSigils != ()}[{Fire}{Air} #enabled:grimoire_statusSigils(glyph_fireAirSigils)]
         -> grimoire_sigils_thirdLevel (Fire, Air, Fire, Water)
         
-    + {glyph_fireWaterSigils ^ glyph_discoveredSigils != ()}[{Air}{Water} #enabled:grimoire_statusSigils(glyph_fireWaterSigils)]
+    + {glyph_fireWaterSigils ^ glyph_discoveredSigils != ()}[{Fire}{Water} #enabled:grimoire_statusSigils(glyph_fireWaterSigils)]
         -> grimoire_sigils_thirdLevel (Fire, Air, Fire, Water)
         
-    + {glyph_fireEarthSigils ^ glyph_discoveredSigils != ()}[{Air}{Earth} #enabled:grimoire_statusSigils(glyph_fireEarthSigils)]
+    + {glyph_fireEarthSigils ^ glyph_discoveredSigils != ()}[{Fire}{Earth} #enabled:grimoire_statusSigils(glyph_fireEarthSigils)]
         -> grimoire_sigils_thirdLevel (Fire, Earth, Fire, Aether)
         
-    + {glyph_fireAetherSigils ^ glyph_discoveredSigils != ()}[{Air}{Aether} #enabled:grimoire_statusSigils(glyph_fireAetherSigils)]
+    + {glyph_fireAetherSigils ^ glyph_discoveredSigils != ()}[{Fire}{Aether} #enabled:grimoire_statusSigils(glyph_fireAetherSigils)]
         -> grimoire_sigils_thirdLevel (Fire, Earth, Fire, Aether)
 
+    
     //Pagine da diciassette a venti
     + {glyph_aetherAirSigils ^ glyph_discoveredSigils != ()}[{Aether}{Air} #enabled:grimoire_statusSigils(glyph_aetherAirSigils)]
         -> grimoire_sigils_thirdLevel (Aether, Air, Aether, Water)

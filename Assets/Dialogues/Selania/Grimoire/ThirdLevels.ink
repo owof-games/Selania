@@ -157,7 +157,7 @@
     + {leftSigilName == "AirFire"} [{grimoire_sigilsLabelsName(AirEarth)}#bookmark:previous]
         -> grimoire_sigils_thirdLevel (Air, Water, Air, Earth)
     
-    + {leftSigilName == "WaterEarth"} [{grimoire_sigilsLabelsName(AirAether)}#bookmark:previous]
+    + {leftSigilName == "WaterAir"} [{grimoire_sigilsLabelsName(AirAether)}#bookmark:previous]
         -> grimoire_sigils_thirdLevel (Air, Fire, Air, Aether)
     
     + {leftSigilName == "WaterFire"} [{grimoire_sigilsLabelsName(WaterEarth)}#bookmark:previous]
@@ -206,7 +206,7 @@
     + {leftSigilName == "FireEarth"} [{grimoire_sigilsLabelsName(AetherAir)}#bookmark:next]
         -> grimoire_sigils_thirdLevel (Aether, Air, Aether, Water)
 
-    + {leftSigilName == "AetherEarth"} [{grimoire_sigilsLabelsName(AetherEarth)}#bookmark:next]
+    + {leftSigilName == "AetherAir"} [{grimoire_sigilsLabelsName(AetherEarth)}#bookmark:next]
         -> grimoire_sigils_thirdLevel (Aether, Earth, Aether, Fire)
 
 
