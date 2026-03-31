@@ -4,7 +4,7 @@
     ~ temp leftSigilName = "{leftGlyph1}{leftGlyph2}"
     ~ temp rightSigilName = "{rightGlyph1}{rightGlyph2}"
 
-@grimoireSigilPages #leftPageTitle{grimoire_sigilSigilName(leftSigilName)} #leftPageDescription{grimoire_sigilsDescription(leftSigilName)} #leftPageGlyph1:{leftGlyph1} #leftPageGlyph2:{leftGlyph2} #rightPageTitle{grimoire_sigilSigilName(rightSigilName)} #rightPageDescription{grimoire_sigilsDescription(rightSigilName)} #rightPageGlyph1:{rightGlyph1} #rightPageGlyph2:{rightGlyph2}
+@grimoireSigilPages #leftPageTitle:{grimoire_sigilSigilName(leftSigilName)} #leftPageDescription:{grimoire_sigilsDescription(leftSigilName)} #leftPageGlyph1:{leftGlyph1} #leftPageGlyph2:{leftGlyph2} #rightPageTitle:{grimoire_sigilSigilName(rightSigilName)} #rightPageDescription:{grimoire_sigilsDescription(rightSigilName)} #rightPageGlyph1:{rightGlyph1} #rightPageGlyph2:{rightGlyph2}
 
     //left
     + {glyph_discoveredSigils has FireAirWater && leftSigilName == "FireAir"}[{sigils_translator(FireAirWater)} #position:left1 #glyph3:{grimoire_sigilGlyph3(FireAirWater)} #firstLine:{grimoire_textFireAirWaterOne} #secondLine:{grimoire_textFireAirWaterTwo} #thirdLine:{grimoire_textFireAirWaterThree} #status:{grimoire_statusThirdSigils(FireAirWater)}]

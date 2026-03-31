@@ -157,6 +157,57 @@
 }
 
 
+===  function grimoire_sigilsFromStringToObject(sigilName)
+~ temp object = ()
+{sigilName:
+     //Venti sigilli principali
+            - "WaterEarth":
+                ~ object += WaterEarth
+            - "WaterAir":
+                ~ object += WaterAir
+            - "WaterFire":
+                ~ object += WaterFire
+            - "WaterAether":
+                ~ object += WaterAether
+            
+            - "AirWater":
+                ~ object += AirWater
+            - "AirEarth":
+                ~ object += AirEarth
+            - "AirFire":
+                ~ object += AirFire
+            - "AirAether":
+                ~ object += AirAether
+
+            - "AetherWater":
+                ~ object += AetherWater
+            - "AetherEarth":
+                ~ object += AetherEarth
+            - "AetherFire":
+                ~ object += AetherFire
+            - "AetherAir":
+                ~ object += AetherAir
+
+            - "EarthWater":
+                ~ object += EarthWater
+            - "EarthAir":
+                ~ object += EarthAir
+            - "EarthFire":
+                ~ object += EarthFire
+            - "EarthAether":
+                ~ object += EarthAether
+
+            - "FireWater":
+                ~ object += FireWater
+            - "FireEarth":
+                ~ object += FireEarth
+            - "FireAir":
+                ~ object += FireAir
+            - "FireAether":
+                ~ object += FireAether
+}
+
+
 
 === function grimoire_sigilsDescription(sigilName)
 {sigilName:
