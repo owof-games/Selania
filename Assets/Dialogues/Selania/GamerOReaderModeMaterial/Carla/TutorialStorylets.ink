@@ -3,7 +3,7 @@
 === tutorial_carlaChoicesRelationshipStorylet ===
 
     {
-        - tutorial_carlaChoicesRelationshipStorylet > 1:
+        - tutorial_CarlaDiscoveredTutorials has tutorialChoicesRelationship:
             Le ricordo che ripeto sempre lo stesso script della prima volta, ok?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_neutral
     }
     
@@ -13,7 +13,7 @@
     Il perché non è di mia competenza.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
 
         {
-            - tutorial_carlaChoicesRelationshipStorylet > 1:
+            - tutorial_CarlaDiscoveredTutorials has tutorialChoicesRelationship:
                 -> top2
             - else:
                 -> top1    
@@ -88,12 +88,12 @@
     
     Questa roba è di competenza di quelli dell'amministrazione centrale, non mia.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
         {
-            - tutorial_carlaRereadingStorylet > 1: 
+            - tutorial_CarlaDiscoveredTutorials has tutorialRereading: 
                 Ripetiamo la pappardella.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
         }
     Sto per spiegarle come funziona la riscrittura.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_neutral
         {
-            - tutorial_carlaChoicesRelationshipStorylet > 1:
+            - tutorial_CarlaDiscoveredTutorials has tutorialRereading:
                 -> top2
             - else:
                 -> top1    
@@ -149,12 +149,12 @@
 
     Ma quando mi finisce il turno?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_angry
     {
-        - tutorial_carlaInterfaceStorylets > 1:
+        - tutorial_CarlaDiscoveredTutorials has tutorialInterface:
             Ripeterò le cose esattamente come la prima volta, voglio brucare in santa pace.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
     }
     Sono Carla, e prima di entrare in Selanìa devo dirle cinque cose su come muoversi in questi luoghi.
         {
-            - tutorial_carlaChoicesRelationshipStorylet > 1:
+            - tutorial_CarlaDiscoveredTutorials has tutorialInterface:
                 -> top2
             - else:
                 -> top1    
@@ -213,7 +213,7 @@
 === tutorial_carlaGrimoireStorylet ===
 
         {
-            - tutorial_carlaGrimoireStorylet > 1: 
+            - tutorial_CarlaDiscoveredTutorials has tutorialGrimoire: 
                 Per fortuna questa è breve.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
         }
 
@@ -225,7 +225,7 @@
     Basta.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
     Alcune informazioni pratiche sul Grimorio, gentilmente offerte dal Ministero.
         {
-            - tutorial_carlaChoicesRelationshipStorylet > 1:
+            - tutorial_CarlaDiscoveredTutorials has tutorialGrimoire:
                 -> top2
             - else:
                 -> top1    
@@ -264,19 +264,19 @@
 //Tutorial attivati da luoghi
 === tutorial_carlaGreenhouseGiftsInkStorylet ===
     {
-        - tutorial_carlaGreenhouseGiftsInkStorylet == 1:
+        - tutorial_CarlaDiscoveredTutorials hasnt tutorialGreenhouse:
             ~ move_entity(Carla, Greenhouse)
     }
 
     Deve parlare con la responsabile.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
         {
-            - tutorial_carlaGreenhouseGiftsInkStorylet > 1:
+            - tutorial_CarlaDiscoveredTutorials has tutorialGreenhouse:
                 Abbiamo uno script da seguire, per cui non cambierò una virgola rispetto a prima.
         }
     Ah no scusi, è l'abitudine.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_neutral
     Mi è stato chiesto di spiegarle come funziona la serra.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_sad
         {
-            - tutorial_carlaChoicesRelationshipStorylet > 1:
+            - tutorial_CarlaDiscoveredTutorials has tutorialGreenhouse:
                 -> top2
             - else:
                 -> top1    
@@ -289,8 +289,7 @@
         + Non serve, ho il pollice verde.
             Allora dovrebbe fare segnalazione al Ministero per i Malanni Immaginari.
             Ottavo piano, a destra dopo l'ascensore guasto.
-                -> carla_closing_storylet ->
-                -> greenhouse_entry_check
+                -> carla_closing_storylet
         -
 
     - (top2)    
@@ -326,11 +325,6 @@
     Volo!
     Ah: se rimane a stomaco vuoto, non è un problema di mia competenza.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
 
-        {
-            - entity_location(Carla) != Forest:
-                -> greenhouse_entry_check
-        }
-
 -> carla_closing_storylet
 
 
@@ -338,12 +332,12 @@
 === tutorial_carlaKitchenStorylet ===
 
         {
-            - tutorial_carlaKitchenStorylet == 1:
+            - tutorial_CarlaDiscoveredTutorials hasnt tutorialKitchen:
                 ~ move_entity(Carla, Kitchen)
         }
 
         {
-            - tutorial_carlaKitchenStorylet == 1:
+            - tutorial_CarlaDiscoveredTutorials hasnt tutorialKitchen:
                 Quindi non ci stavano ampliando la mensa?!?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
 
             - else: 
@@ -353,7 +347,7 @@
     Sono qui per spiegarle come funziona questa cucina.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_happy
     Sperando sia più svegli{player_pronouns has him:o|{player_pronouns has her:a|ə}} di mio figlio.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
         {
-            - tutorial_carlaChoicesRelationshipStorylet > 1:
+            - tutorial_CarlaDiscoveredTutorials has tutorialKitchen:
                 -> top2
             - else:
                 -> top1    
@@ -400,7 +394,7 @@
 ~ temp charNameThree = translator(thirdChar_ActualName)
     Ma perché questi non si fanno mai i cavoli propri? #speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
         {
-            - tutorial_carlaSigilsActivationStorylet > 1:
+            - tutorial_CarlaDiscoveredTutorials has tutorialSigils:
                 Devo recuperare il documento del Ministero.
         }
 
@@ -409,7 +403,7 @@
     Già.
     Mannaggia al.
         {
-            - tutorial_carlaChoicesRelationshipStorylet > 1:
+            - tutorial_CarlaDiscoveredTutorials has tutorialSigils:
                 -> top2
             - else:
                 -> top1    
@@ -455,18 +449,18 @@
 ~ temp charNameThree = translator(thirdChar_ActualName)
 
         {
-            - tutorial_carlaNestStorylet == 1:
+            - tutorial_CarlaDiscoveredTutorials hasnt tutorialNest:
                 ~ move_entity(Carla, Nest)
         }
 
         {
-            - tutorial_carlaNestStorylet > 1:
+            - tutorial_CarlaDiscoveredTutorials has tutorialNest:
                 E quindi rispieghiamo i glifi. Che gioia!#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
         }
   
     Ogni volta che vedo questi cosi mi chiedo perché non ho concluso la laurea in ingegneria.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_angry
         {
-            - tutorial_carlaChoicesRelationshipStorylet > 1:
+            - tutorial_CarlaDiscoveredTutorials has tutorialNest:
                 -> top2
             - else:
                 -> top1    

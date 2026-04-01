@@ -209,6 +209,10 @@
                         Ma la mia amica rana ti sta aspettando lì! #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
                             ->main
 
+                    - kitchen_kitchenOccupied == true:
+                        Sai che ho visto il fumo salire prima? Per cui di sicuro c'è qualcuno!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:riccio_melanchonic
+                            ->main 
+
                     - kitchen_secondCharCookingTogetherNumberInvite > 0:
                         {stopping:
                             - Prima ti ho aspettato TANTISSIMO! Vado.  #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:riccio_neutral

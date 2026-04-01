@@ -116,7 +116,7 @@
     
     //Apertura cucina
     {
-        - grimFirstOpenKitchen has grimSecondOpenLibrary && (entity_location(FromPondToKitchen) == Safekeeping):
+        - grimoire_firstChar has grimFirstOpenKitchen && (entity_location(FromPondToKitchen) == Safekeeping):
             ~ player_accessiblePlaces += Kitchen
             ~ move_entity(FromPondToKitchenBlocked, Safekeeping)
             ~ move_entity(FromPondToKitchen, Pond)
@@ -178,14 +178,11 @@
                     ~ movements_randomizable_characters += FirstCharacter
             }
         
-        - firstChar_storyStatus == story_storyEnded && contentsSafekeeping hasnt FirstCharacter:
-            //Così evitiamo che sia alla fermata del treno al momento della partenza, in modo da fare poi l'animazione.
-            ~ movements_randomizable_characters -= FirstCharacter 
-            ~ move_entity(FirstCharacter, Forest)
+        
     }
 
     {
-        - secondChar_storyStatus == story_storyStarted && second_char_main_storylets.one:
+        - secondChar_storyStatus == story_storyStarted:
         
         //Evitiamo che venga tolto dalla cucina se sta cucinando o se ci sta aspettando in cucina
             {
@@ -202,15 +199,12 @@
                     ~ movements_randomizable_characters += SecondCharacter
                     
             }
-            //Così evitiamo che sia alla fermata del treno al momento della partenza, in modo da fare poi l'animazione.
-            - secondChar_storyStatus == story_storyEnded && contentsSafekeeping hasnt SecondCharacter:
-                ~ movements_randomizable_characters -= SecondCharacter   
-                ~  move_entity(SecondCharacter, Forest)
+
     }
 
 
     {
-        - thirdChar_storyStatus == story_storyStarted && third_char_main_storylets.one:
+        - thirdChar_storyStatus == story_storyStarted:
         
         //Evitiamo che venga tolto dalla cucina se sta cucinando o se ci sta aspettando in cucina
             {
@@ -227,10 +221,7 @@
                     ~ movements_randomizable_characters += ThirdCharacter
                     
             }
-            //Così evitiamo che sia alla fermata del treno al momento della partenza, in modo da fare poi l'animazione.
-            - thirdChar_storyStatus == story_storyEnded && contentsSafekeeping hasnt ThirdCharacter:
-                ~ movements_randomizable_characters -= ThirdCharacter   
-                ~  move_entity(ThirdCharacter, Forest)
+
     }
   
     

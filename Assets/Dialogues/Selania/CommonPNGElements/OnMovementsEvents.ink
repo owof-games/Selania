@@ -246,6 +246,7 @@ VAR letters_doggoPause = false
 //Gestione della cucina delle PNG
 === on_movement_kitchen_tracker ===
 {debug: passo da on_movement_kitchen_tracker.}
+
     //Primo check: la cucina è occupata o è libera?
     {
         - contentsKitchen has FirstCharacter:
@@ -264,16 +265,18 @@ VAR letters_doggoPause = false
             ~ kitchen_kitchenOccupied = true
 
         - contentsKitchen has Franco:
-            ~ kitchen_kitchenOccupied = true                  
+            ~ kitchen_kitchenOccupied = true
+
+        - else:
+            ~ kitchen_kitchenOccupied = false                 
 
     }
 
     //Riccio
     //Riccio inizia a cucinare. Metto prima di Chitarra giusto perché il suo storylet coinvolge anche Mentore e quindi forse è più interessante.
-    //Ho messo (entity_location(SecondCharacter) != Kitchen) perché così non parte mai la cucina autonoma se c'è qualcunx in cucina.
     
         {
-            - player_accessiblePlaces has Kitchen && (not second_char_cooking_tracker) && kitchen_kitchenOccupied == false && second_char_main_storylets.one && (kitchen_cookingAloneCoolDown == 0):
+            - player_accessiblePlaces has Kitchen && (not second_char_cooking_tracker) && kitchen_kitchenOccupied == false && grimoire_secondChar has grimSecondCharOne && (kitchen_cookingAloneCoolDown == 0):
             
                 ~ kitchen_secondCharIsCooking = true
                 ~ move_entity(SecondCharacter, Kitchen)
@@ -376,12 +379,12 @@ VAR letters_doggoPause = false
 
     //TerzoPNG
         {
-            - player_accessiblePlaces has Kitchen && (not third_char_cooking_tracker) && kitchen_firstCharIsCooking == false && (kitchen_cookingAloneCoolDown == 0):
+            - player_accessiblePlaces has Kitchen && (not third_char_cooking_tracker) && kitchen_kitchenOccupied == false && grimoire_thirdChar hasnt grimThirdCharOne && (kitchen_cookingAloneCoolDown == 0):
             
                     ~ kitchen_thirdCharIsCooking = true
                     ~ move_entity(ThirdCharacter, Kitchen)
                     ~ kitchen_kitchenOccupied = true
-                        -> third_char_cooking_tracker 
+                        -> third_char_cooking_tracker ->
         }
         
         //Gestione tempi di cucina autonoma di PNG3.

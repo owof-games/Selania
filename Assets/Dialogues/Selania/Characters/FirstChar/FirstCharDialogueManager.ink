@@ -170,7 +170,11 @@
 
                     - kitchen_thirdCharCookingTogetherInvite:
                         Credo che {charNameThree} ti stia già aspettando, sai?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-                            ->main        
+                            ->main
+
+                    - kitchen_kitchenOccupied == true:
+                        Accetterei volentieri, ma credo che ora sia occupata, {player_name}. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious 
+                            ->main            
 
                     - kitchen_firstCharCookingTogetherNumberInvite > 0 :
                         {stopping:
