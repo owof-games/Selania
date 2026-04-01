@@ -125,8 +125,10 @@ VAR thirdChar_LibraryInvite = false
 
         //Speciali della strega
         {
-            - grimoire_thirdChar has grimThirdCharOne && (entity_location(FromForestToDump) == Safekeeping) && (entity_location(PG) != Forest):
+            - grimoire_thirdChar has grimThirdCharOne && (entity_location(FromForestToDump) == Safekeeping) && (entity_location(PG) != Forest) && grimoire_witch hasnt grimWitchOpenDump:
                 -> open_the_dump
         }          
-    
+
+        //Solo come ultima cosa: check dei commentini needy di Mentore
+            -> talk_to_me -> 
 ->->        
