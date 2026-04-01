@@ -331,7 +331,8 @@
     Immagino sia faticoso, avere una voce in testa, così.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
     O magari ti fa sentire meno {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
     Ho qualcosa su cui riflettere, immagino.
-  
+
+        -> witch_closing_storylet ->
         -> mentor_closing_storylet ->
         -> main
 

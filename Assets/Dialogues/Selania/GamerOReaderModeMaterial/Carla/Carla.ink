@@ -49,3 +49,22 @@
 
 
 -> main
+
+
+=== carla_closing_storylet 
+        
+        //Resetto, così se viene richiamato il tutorial relazioni, è a zero
+        ~ tutorial_CarlaRelationshipIndicator = 0
+        //Pausa per non far partire altri tutorial o cose simili
+        ~ png_commonPauseTalking = true
+
+        {
+                - entity_location(Carla) != Forest:
+                        ~ move_entity(Carla, Forest)
+                        -> main
+                - else:
+                        ->->
+        }
+
+
+->->

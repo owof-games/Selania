@@ -259,6 +259,8 @@
         ~ thirdChar_pauseTalking = thirdChar_pauseDuration
         //Questo è per la gestione delle domande
         ~ thirdChar_justTalked = true
+        //Cooldown comune
+        ~ png_commonPauseTalking = true
         //L'animazione per via dell'informazione nuova
         @animation:RewriterBook
 

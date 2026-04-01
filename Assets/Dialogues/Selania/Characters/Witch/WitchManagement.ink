@@ -23,6 +23,8 @@
         ~ witch_pauseTalking = witch_pauseDuration
         //Questo è per la gestione delle domande
         ~ witchChar_justTalked = true
+        //Cooldown comune
+        ~ png_commonPauseTalking = true
         //L'animazione per via dell'informazione nuova
         @animation:RewriterBook
 

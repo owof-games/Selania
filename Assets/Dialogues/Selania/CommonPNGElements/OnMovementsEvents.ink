@@ -167,6 +167,11 @@ VAR letters_doggoPause = false
 === on_movement_characters_values
 {debug: passo per on_movement_characters_values}
     {
+        - png_commonPauseTalking == true:
+            ~ png_commonPauseTalking = false 
+    }
+
+    {
         - firstChar_pauseTalking > 0:
             ~ firstChar_pauseTalking --
             {debug: Il valore di firstChar_pauseTalking è {firstChar_pauseTalking}}

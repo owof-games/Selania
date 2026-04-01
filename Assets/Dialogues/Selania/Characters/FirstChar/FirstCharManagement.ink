@@ -307,6 +307,8 @@
         ~ firstChar_pauseTalking = firstChar_pauseDuration
         //Questo è per la gestione delle domande
         ~ firstChar_justTalked = true
+        //E cooldown storylets comuni, per evitare catena.
+        ~ png_commonPauseTalking = true
         //L'animazione per via dell'informazione nuova
         @animation:RewriterBook
         //E poi facciamo il check degli storylets.

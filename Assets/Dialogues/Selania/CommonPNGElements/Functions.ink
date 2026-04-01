@@ -1,3 +1,7 @@
+//gestione della pausa per gli storylets comuni e automatici.
+VAR png_commonPauseTalking = false
+
+
 === endingPNGstory(PNG)
 //Chiamiamo questa funzione a fine riscrittura, per fare tutti i passaggi previsti di quando finisce una storia.
 {

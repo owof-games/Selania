@@ -1,4 +1,3 @@
-
 === open_the_kitchen
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -86,8 +85,8 @@
     
         ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
         ~ firstChar_PondInvite = true
-        -> opening_places ->
         -> first_char_closing_storylet ->
+        -> opening_places ->
         -> main
         
 === a_story_of_revenge 
@@ -168,7 +167,6 @@
             }
 
     
-        
         -> first_char_closing_storylet ->
         -> main
     

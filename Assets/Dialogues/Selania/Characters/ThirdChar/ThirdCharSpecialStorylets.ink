@@ -86,7 +86,7 @@
     ~ temp mentorName = translator(mentor_ActualName)
 
     Racconto letto in biblioteca.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-
+    A racconto scelto, cambia anche logica in Special Storylets
     - 
     
         -> third_char_closing_storylet ->

@@ -26,11 +26,7 @@
         + Passo.
             Meglio per me.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_happy
             Le ricordo che l'ufficio Incidenti e Svenimenti è chiuso fino a data indefinita.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
-                {
-                    - entity_location(Carla) != Forest:
-                        ~ move_entity(Carla, Forest)
-                }
-                -> main
+                -> carla_closing_storylet
         -
 
 
@@ -82,16 +78,8 @@
 
     E ora sono in pausa.
     Vada a fare le sue cose.
-    //Resetto, così se viene richiamato più avanti riparte da capo
-        ~ tutorial_CarlaRelationshipIndicator = 0
 
-    {
-        - entity_location(Carla) != Forest:
-            ~ move_entity(Carla, Forest)
-    }
-
-
-->->
+    -> carla_closing_storylet
 
 
 
@@ -118,11 +106,7 @@
         + No, grazie.
             Saggia scelta.
             Per me per lo meno.
-                {
-                    - entity_location(Carla) != Forest:
-                        ~ move_entity(Carla, Forest)
-                }
-                -> main
+                -> carla_closing_storylet
         -
 
     - (top2)        
@@ -156,7 +140,7 @@
     Ma in questo posto non arriva mai il venerdì?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
     
 
-->->
+-> carla_closing_storylet
 
 
 //Tutorial sulle interfacce
@@ -184,11 +168,7 @@
         + So già tutto, grazie.
             Allora mi spieghi perché a sessant'anni sono ancora in questo ufficio.
             Buona continuazione.
-                {
-                    - entity_location(Carla) != Forest:
-                        ~ move_entity(Carla, Forest)
-                }
-                -> main
+                -> carla_closing_storylet
         -
 
     - (top2)    
@@ -228,13 +208,7 @@
             }
     Infine dovrei spiegarle il sistema di relazioni.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_sad
     Ma non è di mia competenza.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_happy
-    {
-        - entity_location(Carla) != Forest:
-            Lo sportello chiude.
-    }
-    
-
-->->
+-> carla_closing_storylet
 
 === tutorial_carlaGrimoireStorylet ===
 
@@ -264,11 +238,7 @@
         + Non importa.
             Siamo in due.
             Sono tenuta giusto a ricordarle che il Ministero la riterrà responsabile di ogni uso sconsiderato del Grimorio.
-                {
-                    - entity_location(Carla) != Forest:
-                        ~ move_entity(Carla, Forest)
-                }
-                -> main
+                -> carla_closing_storylet
         -
 
     - (top2)    
@@ -288,7 +258,7 @@
     Se lo dimentica in giro, non posso garantirle che non ne mangerò le pagine.
 
 
-->->
+-> carla_closing_storylet
 
 
 //Tutorial attivati da luoghi
@@ -319,10 +289,7 @@
         + Non serve, ho il pollice verde.
             Allora dovrebbe fare segnalazione al Ministero per i Malanni Immaginari.
             Ottavo piano, a destra dopo l'ascensore guasto.
-                {
-                    - entity_location(Carla) != Forest:
-                        ~ move_entity(Carla, Forest)
-                }
+                -> carla_closing_storylet ->
                 -> greenhouse_entry_check
         -
 
@@ -361,11 +328,10 @@
 
         {
             - entity_location(Carla) != Forest:
-                ~ move_entity(Carla, Forest)
                 -> greenhouse_entry_check
         }
 
-->->
+-> carla_closing_storylet
 
 
 
@@ -401,11 +367,7 @@
             Mmm.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_neutral
             Forse mio figlio è più sveglio di lei.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
             Si ricordi che gli incidenti in cucina non sono coperti dall'assicurazione.
-                {
-                    - entity_location(Carla) != Forest:
-                        ~ move_entity(Carla, Forest)
-                }
-                -> main
+                -> carla_closing_storylet
         -
 
     - (top2)    
@@ -431,26 +393,11 @@
     Perché è un bravo ranocchio?
     Non è di mia competenza.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
 
-
-        {
-            - entity_location(Carla) != Forest:
-                ~ move_entity(Carla, Forest)
-                    -> main
-        }
-
-    
-->->
+-> carla_closing_storylet
 
 
 === tutorial_carlaSigilsActivationStorylet ===
 ~ temp charNameThree = translator(thirdChar_ActualName)
-
-        {
-            - entity_location(Carla) != Forest:
-                ~ move_entity(Carla, Forest)
-                ->->
-        }
-
     Ma perché questi non si fanno mai i cavoli propri? #speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
         {
             - tutorial_carlaSigilsActivationStorylet > 1:
@@ -477,11 +424,7 @@
         + Preferisco imparare sul campo.
             È una scelta.
             Le ricordo che il numero verde per gli incidenti magici e le trasformazioni involontarie è fuori servizio dal millenovecentoottantaquattro.
-                {
-                    - entity_location(Carla) != Forest:
-                        ~ move_entity(Carla, Forest)
-                }
-                -> main
+                -> carla_closing_storylet
         -
     - (top2)    
     Il Nido le sblocca i Sigilli, e i Sigilli sono una cosa pericolosa.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_happy
@@ -505,7 +448,7 @@
     Sono solo una capra.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_neutral
     Bee.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_happy
 
-->->
+-> carla_closing_storylet
 
 
 === tutorial_carlaNestStorylet ===
@@ -538,11 +481,7 @@
             Lei è amic{player_pronouns has him:o|{player_pronouns has her:a|ə}} di Franco, vero?
             Avrebbe dovuto dirmelo prima.
             Avrei evitato di sprecare il mio tempo.
-                {
-                    - entity_location(Carla) != Forest:
-                        ~ move_entity(Carla, Forest)
-                }
-                -> main
+                -> carla_closing_storylet
         -
 
     - (top2)
@@ -569,14 +508,7 @@
     E potrà essere attivato in qualsiasi momento, se non c'è un sigillo già attivo.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_neutral
     Non chieda eccezioni: il sistema non lo permette.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
 
-    {
-        - entity_location(Carla) != Forest:
-            ~ move_entity(Carla, Forest)
-            -> main
-    }
-
-    
-->->
+-> carla_closing_storylet
 
 
 

@@ -86,6 +86,8 @@
         -> growing_check ->
         //Questo evita che venga proposto un altro storylet fino a quando la pausa non è finita
         ~ mentor_pauseTalking = mentor_pauseDuration
+        //Cooldown comune
+        ~ png_commonPauseTalking = true
         //L'animazione per via dell'informazione nuova
         @animation:RewriterBook
 

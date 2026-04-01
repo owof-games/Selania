@@ -329,6 +329,8 @@
         ~ secondChar_pauseTalking = secondChar_pauseDuration
         //Questo è per la gestione delle domande
         ~ secondChar_justTalked = true
+        //Cooldown comune
+        ~ png_commonPauseTalking = true
         //L'animazione per via dell'informazione nuova
         @animation:RewriterBook
     {

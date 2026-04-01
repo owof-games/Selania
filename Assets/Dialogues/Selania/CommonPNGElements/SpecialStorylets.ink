@@ -21,17 +21,16 @@ VAR thirdChar_LibraryInvite = false
                             ~ firstChar_PondInvite = true
                                 ->->   
                         
-
             //Apertura cucina
-                - are_two_entities_together(FirstCharacter, PG) && ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar) + LIST_COUNT(grimoire_thirdChar)) > openingKitchen_delay) && entity_location(PG) == Pond && player_accessiblePlaces hasnt Kitchen && firstChar_pauseTalking == 0:
+                - are_two_entities_together(FirstCharacter, PG) && ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar) + LIST_COUNT(grimoire_thirdChar)) > openingKitchen_delay) && entity_location(PG) == Pond && player_accessiblePlaces hasnt Kitchen && png_commonPauseTalking == false:
                     -> open_the_kitchen
 
             //Chitarra sta cucinando ed entriamo in cucina
-                - are_two_entities_together(FirstCharacter, PG) && entity_location(PG) == Kitchen && kitchen_firstCharIsCooking == true && firstChar_pauseTalking == 0:
+                - are_two_entities_together(FirstCharacter, PG) && entity_location(PG) == Kitchen && png_commonPauseTalking == false:
                     -> first_char_cooking_alone
             
             //Chitarra ha cucinato, e vediamo la scena del dono (a sé stessa)
-                - are_two_entities_together(FirstCharacter, PG) && first_char_cooking_tracker && kitchen_firstCharIsCooking == false && not food_gift_first_char:
+                - are_two_entities_together(FirstCharacter, PG) && first_char_cooking_tracker && kitchen_firstCharIsCooking == false && png_commonPauseTalking == false && not food_gift_first_char:
                     -> food_gift_first_char
                 
             //Chitarra cucina con noi
@@ -39,11 +38,11 @@ VAR thirdChar_LibraryInvite = false
                     -> cooking_with_first_char
                 
             //Racconto di Aza letto
-                - are_two_entities_together(FirstCharacter, PG) && library_readStories has Aza && not a_story_of_revenge:
+                - are_two_entities_together(FirstCharacter, PG) && library_readStories has Aza && png_commonPauseTalking == false && not a_story_of_revenge:
                     -> a_story_of_revenge
             
             //Commento sul cane    
-                - are_two_entities_together(FirstCharacter, PG) && second_character_notes.one && not dog_first_char:
+                - are_two_entities_together(FirstCharacter, PG) && second_character_notes.one or third_character_notes.one && png_commonPauseTalking == false && not dog_first_char:
                     -> dog_first_char      
                     
         }
@@ -66,12 +65,12 @@ VAR thirdChar_LibraryInvite = false
 
 
             //Apertura biblioteca    
-                - are_two_entities_together(SecondCharacter, PG) && ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar) + LIST_COUNT(grimoire_thirdChar)) > openingLibrary_delay) && entity_location(PG) == Forest && player_accessiblePlaces hasnt Library && firstChar_pauseTalking == 0:
+                - are_two_entities_together(SecondCharacter, PG) && ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar) + LIST_COUNT(grimoire_thirdChar)) > openingLibrary_delay) && entity_location(PG) == Forest && player_accessiblePlaces hasnt Library && png_commonPauseTalking == false:
                     -> open_the_library
 
             //Cucina
                 //Riccio sta cucinando ed entriamo in cucina
-                - are_two_entities_together(SecondCharacter, PG) && entity_location(PG) == Kitchen && kitchen_secondCharIsCooking == true  && secondChar_pauseTalking == 0:
+                - are_two_entities_together(SecondCharacter, PG) && entity_location(PG) == Kitchen && kitchen_secondCharIsCooking == true && png_commonPauseTalking == false:
                     -> second_char_cooking_alone
             
                 //Riccio cucina con noi
@@ -79,16 +78,16 @@ VAR thirdChar_LibraryInvite = false
                     -> cooking_with_second_char        
 
                 //Lettura Riccio
-                - are_two_entities_together(SecondCharacter, PG) && library_readStories has Lamia && not a_story_of_rebellion:
+                - are_two_entities_together(SecondCharacter, PG) && library_readStories has Lamia && png_commonPauseTalking == false && not a_story_of_rebellion:
                     -> a_story_of_rebellion
                         
             //Commento sul cane    
-                - are_two_entities_together(SecondCharacter, PG) && first_character_notes.one && not dog_second_char:
+                - are_two_entities_together(SecondCharacter, PG) && first_character_notes.one or third_character_notes.one && png_commonPauseTalking == false && not dog_second_char:
                     -> dog_second_char
 
         }
 
-
+    //Storylets speciali Third Char
         {
             //Invito in biblioteca per aprire il nido
             - are_two_entities_together(ThirdCharacter, PG) && ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar) + LIST_COUNT(grimoire_thirdChar)) > openingNest_delay) && contentsLibrary hasnt PG && player_accessiblePlaces hasnt Nest && player_accessiblePlaces has Library:
@@ -102,8 +101,25 @@ VAR thirdChar_LibraryInvite = false
 
 
             //Apertura biblioteca    
-                - are_two_entities_together(ThirdCharacter, PG) && ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar) + LIST_COUNT(grimoire_thirdChar)) > openingNest_delay) && entity_location(PG) == Library && player_accessiblePlaces hasnt Nest && firstChar_pauseTalking == 0:
+                - are_two_entities_together(ThirdCharacter, PG) && ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar) + LIST_COUNT(grimoire_thirdChar)) > openingNest_delay) && entity_location(PG) == Library && player_accessiblePlaces hasnt Nest && png_commonPauseTalking == false:
                     -> open_the_nest
+
+            //Cucina
+                //Boccale sta cucinando ed entriamo in cucina
+                - are_two_entities_together(ThirdCharacter, PG) && entity_location(PG) == Kitchen && kitchen_thirdCharIsCooking == true && png_commonPauseTalking == false:
+                    -> third_char_cooking_alone
+            
+                //Boccale cucina con noi
+                -  are_two_entities_together(ThirdCharacter, PG) && entity_location(PG) == Kitchen && not ending_cooking_with_third_char && kitchen_thirdCharIsCooking == false:
+                    -> cooking_with_third_char        
+
+                //Lettura Boccale
+                - are_two_entities_together(ThirdCharacter, PG) && library_readStories has Lamia && png_commonPauseTalking == false && not a_story_of_rebellion:
+                    -> third_read_story_library
+                        
+            //Commento sul cane    
+                - are_two_entities_together(ThirdCharacter, PG) && first_character_notes.one or second_character_notes.one && png_commonPauseTalking == false && not dog_third_char:
+                    -> dog_third_char        
         } 
 
 
