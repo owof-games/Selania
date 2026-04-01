@@ -88,6 +88,8 @@
         ~ mentor_pauseTalking = mentor_pauseDuration
         //Cooldown comune
         ~ png_commonPauseTalking = true
+        //Aggiorno il contatore ansiosetto
+        ~ mentor_lastTimeTalking = 0
         //L'animazione per via dell'informazione nuova
         @animation:RewriterBook
 
