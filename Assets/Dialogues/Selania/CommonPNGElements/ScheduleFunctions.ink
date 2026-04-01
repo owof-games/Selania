@@ -106,7 +106,7 @@
 
     //Apertura serra
     {
-        - tutorial_mentorTalkingChoiceRelationship && (entity_location(FromPondToGreenhouse) == Safekeeping) && not olobino.step_tre.colto:
+        - grimoire_fifthChar has grimChoicesMentor && (entity_location(FromPondToGreenhouse) == Safekeeping) && greenhouse_findedCultivables hasnt Olobino:
             ~ player_accessiblePlaces += Greenhouse
             ~ move_entity(FromPondToGreenhouseBlocked, Safekeeping)
             ~ move_entity(FromPondToGreenhouse, Pond)
@@ -116,7 +116,7 @@
     
     //Apertura cucina
     {
-        - open_the_kitchen && (entity_location(FromPondToKitchen) == Safekeeping):
+        - grimFirstOpenKitchen has grimSecondOpenLibrary && (entity_location(FromPondToKitchen) == Safekeeping):
             ~ player_accessiblePlaces += Kitchen
             ~ move_entity(FromPondToKitchenBlocked, Safekeeping)
             ~ move_entity(FromPondToKitchen, Pond)
@@ -125,7 +125,7 @@
     
     //Apertura biblioteca
     {
-        - open_the_library && (entity_location(FromForestToLibrary) == Safekeeping):
+        - grimoire_secondChar has grimSecondOpenLibrary && (entity_location(FromForestToLibrary) == Safekeeping):
             ~ move_entity(FromForestToLibraryBlocked, Safekeeping)
             ~ move_entity(FromForestToLibrary, Forest)
             ~ move_entity(mapLibrary, TrainStop)
@@ -136,7 +136,7 @@
     
     //Apertura nido
     {
-        - open_the_nest && (entity_location(FromLibraryToNest) == Safekeeping):
+        - grimoire_thirdChar has grimThirdOpenNest && (entity_location(FromLibraryToNest) == Safekeeping):
             ~ player_accessiblePlaces += Nest
             ~ move_entity(FromLibraryToNestBlocked, Safekeeping)
             ~ move_entity(FromLibraryToNest, Library)
