@@ -6,7 +6,7 @@
     ~ temp mentorName = translator(mentor_ActualName)
     
     Dopo che {mentorName} mi ha detto che sei qui per aiutarci mi sono detta: come posso rendere la vita più facile a {player_name}?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
-    Alla fine ti stai ascoltando le mie seghe mentali da un bel po’.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+    Alla fine ti stai ascoltando le mie seghe mentali da un bel po'.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
     E immagino che anche il piccoletto avrà i suoi casini da gestire.
         {
             - are_two_entities_together(SecondCharacter, PG):

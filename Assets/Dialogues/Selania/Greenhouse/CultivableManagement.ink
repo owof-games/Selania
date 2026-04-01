@@ -61,7 +61,7 @@
 
 //QUESTE LISTE HANNO UN VALORE CATALOGATIVO E PER LA GESTIONE DELLE DOMANDE
 
-    //Relazione: con sé e con gli altri, anche con l’ambiente.
+    //Relazione: con sé e con gli altri, anche con l'ambiente.
     VAR greenhouse_relationshipCrops = (BaccaDellaAddolorata, CantoDelleCompagne, EderaDelleAmanti, FalsaPalude, LicheneDegliAbissi, Olobino, LaSpazzata)
     //Mutamento: capacità di generare e accogliere il cambiamento.
     VAR greenhouse_shiftCrops = (BaccaDellaAddolorata, BarbaDellInciampo, BrinaDellImpossibile, CantoDelleCompagne, CardoAspinato, ErbaLiccia, FalsaPalude, LanaNotturna, LaSpazzata)
@@ -71,7 +71,7 @@
     VAR greenhouse_selfdeterminationCrops = (BarbaDellInciampo, BastoneDellOzioso, ErbaLiccia, LanaNotturna, LicheneDegliAbissi, LaSpazzata)
     //Stupore, meraviglia: sorprendermi, scoprire cose nuove, scoprire cose inaspettate. Vedere la vita come qualcosa di non prevedibile e godere di questo.
     VAR greenhouse_wonderCrops = (BaccaDellaAddolorata, BastoneDellOzioso, CardoAspinato, EderaDelleAmanti, NonTiScordarDiTe, Olobino)
-    //Immaginazione e creazione: sono due parole legate ma non sinonimi, ma mi viene istintivo unirle. Da una parte abbiamo la possibilità di pensare a ciò che non c’è, dall’altra di generarlo. In parte immaginazione si collega a stupore (una nuova idea), in parte a comprensione (quando capisco qualcosa e provo ad applicarlo in realtà immaginate). Creatività invece è sia un processo di mutamento (creando porto cambiamento, con tutte le sue conseguenze) che di autodeterminazione (creo ciò che voglio, ciò che penso possa servire, portare piacere, ristorare la mia comunità).
+    //Immaginazione e creazione: sono due parole legate ma non sinonimi, ma mi viene istintivo unirle. Da una parte abbiamo la possibilità di pensare a ciò che non c'è, dall'altra di generarlo. In parte immaginazione si collega a stupore (una nuova idea), in parte a comprensione (quando capisco qualcosa e provo ad applicarlo in realtà immaginate). Creatività invece è sia un processo di mutamento (creando porto cambiamento, con tutte le sue conseguenze) che di autodeterminazione (creo ciò che voglio, ciò che penso possa servire, portare piacere, ristorare la mia comunità).
     VAR greenhouse_imaginationCrops = (BastoneDellOzioso, BrinaDellImpossibile, CantoDelleCompagne, EderaDelleAmanti, FalsaPalude, LanaNotturna, NonTiScordarDiTe)
 
 

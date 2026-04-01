@@ -372,7 +372,7 @@
             Come uscire da una vita che non senti più tua.
 
             + (fire) Rivoluziona la tua vita, raggiungi Talco in Islanda.
-            //me ne vado all’estero da Talco.
+            //me ne vado all'estero da Talco.
                 -> glyph_modifier_variation_management(FirstCharacter, fireC, decreaseYes)->
             
             + (aether) La musica ti dà uno scopo più grande. Seguila.
