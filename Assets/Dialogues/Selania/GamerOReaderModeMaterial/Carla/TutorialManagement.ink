@@ -2,28 +2,41 @@ VAR tutorial_ActivateTutorial = true
 VAR tutorial_CarlaRelationshipIndicator = 0
 
 
-//Valori per decidere quanti storylets in meno rispetto a quelli per arrivare alla riscrittura servono per attivare il tutorial
-VAR tutorial_rereadingValueActivator = 8
+//Valori dei tutorial necessari per avviare i due tutorial principali (tolto quello iniziale che è automatico sia per Carla che per Mentore)
+VAR tutorial_inkValueActivator_firstChar = grimFirstCharThree
+VAR tutorial_inkValueActivator_secondChar = grimSecondCharFour
+VAR tutorial_inkValueActivator_thirdChar = grimThirdCharThree
 
-//Variabili per attivare il tutorial
+VAR tutorial_rereadingValueActivator_firstChar = grimFirstCharFive
+VAR tutorial_rereadingValueActivator_secondChar = grimSecondCharFive
+VAR tutorial_rereadingValueActivator_thirdChar = grimThirdCharFive
+
+
+//Variabili per attivare i tutorial
+VAR tutorial_inkActive = false
 VAR tutorial_rereadingActive = false
 
 
 === on_movement_tutorial_steps ===
 //Prima di tutto vedo se attivare o meno le variabili legate al livello di rapporto con l3 PNG
 
+    //Tutorial inchiostro
     {
-        - ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar) + LIST_COUNT(grimoire_thirdChar)) >=  tutorial_rereadingValueActivator) && not tutorial_carlaRereadingStorylet:
-                ~ tutorial_rereadingActive = true
-            
+        - (grimoire_firstChar has tutorial_inkValueActivator_firstChar) or (grimoire_secondChar has tutorial_inkValueActivator_secondChar) or (grimoire_thirdChar has tutorial_inkValueActivator_thirdChar):
+                ~ tutorial_inkActive = true
     }
 
+    //Tutorial riscrittura
+    {
+        - (grimoire_firstChar has tutorial_rereadingValueActivator_firstChar) or (grimoire_secondChar has tutorial_rereadingValueActivator_secondChar) or (grimoire_thirdChar has tutorial_rereadingValueActivator_thirdChar):
+                ~ tutorial_rereadingActive = true
+    }
 
 //Poi faccio il dispatch dei vari elementi del tutorial. Se Carla è attiva, deve parlare sempre PRIMA di mentore
 //Tutti i tutorial di Carla passano da qui, a parte quello sui sigilli, che va sbloccato subito dopo aver parlato con Boccale
 
 {
-    - are_two_entities_together(PG, Carla) && not tutorial_carlaChoicesRelationshipStorylet && settings_gamerMode == true:
+    - are_two_entities_together(PG, Carla) && tutorial_inkActive && not tutorial_carlaChoicesRelationshipStorylet && settings_gamerMode == true:
         -> tutorial_carlaChoicesRelationshipStorylet
 
     //questa è una posizione temporanea, poi faremo in modo di farlo partire all'avvio del gioco.
@@ -52,7 +65,7 @@ VAR tutorial_rereadingActive = false
 {
 
     //Relazioni e inchiostro
-    - are_two_entities_together(PG, Mentor) && grimoire_appendices has grimChoicesMentor && grimoire_appendices hasnt grimInkMentor:
+    - are_two_entities_together(PG, Mentor) && tutorial_inkActive && grimoire_appendices has grimChoicesMentor && grimoire_appendices hasnt grimInkMentor:
 
         {   
 
@@ -61,16 +74,16 @@ VAR tutorial_rereadingActive = false
                 -> tutorial_mentorInkAndYouAreARewriter
 
             //Se il tutorial non è attivo:    
-            - tutorial_ActivateTutorial == false && backpack_findedGifts != ():
+            - tutorial_ActivateTutorial == false:
                 -> tutorial_mentorInkAndYouAreARewriter
 
             - else:
-                ->->    
+                ->->
             
         }
         
     //Riscrittura e inchiostro
-    - are_two_entities_together(PG, Mentor) && tutorial_rereadingActive && grimoire_appendices hasnt grimRewritingMentor:
+    - are_two_entities_together(PG, Mentor) && tutorial_rereadingActive = true && grimoire_appendices hasnt grimRewritingMentor:
 
         {   
             //Se il tutorial è attivo, ho raggiunto le condizioni, ma ancora Carla non mi ha spiegato come funzionano le relazioni:
@@ -82,7 +95,7 @@ VAR tutorial_rereadingActive = false
                 -> tutorial_mentorInkAndRewriting
 
             //Se il tutorial non è attivo, mi affido a tutorial_rereadingActive:
-            - tutorial_ActivateTutorial == false && tutorial_rereadingActive == true:
+            - tutorial_ActivateTutorial == false
                 -> tutorial_mentorInkAndRewriting
             
         }
