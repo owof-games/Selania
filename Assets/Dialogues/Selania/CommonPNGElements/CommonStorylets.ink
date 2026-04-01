@@ -132,7 +132,6 @@
             }
  
 
-            ~ change_entity_place(SecondCharacter)
         -> mentor_closing_storylet ->
         -> second_char_closing_storylet ->
         -> main
@@ -208,7 +207,6 @@
     Sì: che se una persona ti dice che ti ammira, è meglio portarsi a casa il complimento e goderselo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
     Non sono vecchia come te, ma so che non sono tanti gli elogi che ci vengono dati in vita.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
 
-
         -> first_char_closing_storylet ->
         -> mentor_closing_storylet ->
         -> main
@@ -263,7 +261,6 @@
                 No, non è vero: non ce la posso fare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                     ~ change_entity_place(FirstCharacter)
         }
-
 
         -> mentor_closing_storylet ->
         -> main

@@ -329,6 +329,9 @@
             - open_the_nest && grimoire_thirdChar hasnt grimThirdOpenNest:
                 ~ grimoire_thirdChar += grimThirdOpenNest
                 ~ grimoire_appendices += grimSigilsBoccale
+                //Spostamenti legati all'evento
+                ~ thirdChar_LibraryInvite = false
+                ~ move_entity(ThirdCharacter, Forest)
 
             - third_read_story_library && grimoire_thirdChar hasnt grimThirdCharNovel:
                 ~ grimoire_thirdChar += grimThirdCharNovel

@@ -112,13 +112,13 @@
         ~ temp mentorName = translator(mentor_ActualName)
 
         {
-        - mentor_riccioMentoreViciniColpo:
-            Dopo la discussione di prima, ho riparlato con {charNameTwo}, e dice che gli hai dato uno strattone, {mentorName}. #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
-            Che ti sei comportata da prepotente.
-        
-        - else:
-            Ho parlato con {charNameTwo}, e dice che gli hai dato uno strattone, {mentorName}. #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
-            Che ti sei comportata da prepotente.
+            - mentor_riccioMentoreViciniColpo:
+                Dopo la discussione di prima, ho riparlato con {charNameTwo}, e dice che gli hai dato uno strattone, {mentorName}. #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+                Che ti sei comportata da prepotente.
+            
+            - else:
+                Ho parlato con {charNameTwo}, e dice che gli hai dato uno strattone, {mentorName}. #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+                Che ti sei comportata da prepotente.
         }
             
         {
@@ -217,7 +217,7 @@
     Grazie per l'ascolto, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
     Sono sicura che diventerai {player_pronouns has him:un ottimo riscrittore|{player_pronouns has her:un'ottima riscrittora| unə ottimə riscrittorə}}.
 
-        ~ change_entity_place(Mentor)
+        
         -> mentor_closing_storylet ->
         -> main
     
@@ -398,4 +398,4 @@ Mentore sbrocca
         Un gesto semplice che aiuta i giochi indie a essere più visibili.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
         Grazie di cuore, e buona vita.
         A presto!
-        -> main
+    -> main

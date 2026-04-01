@@ -148,6 +148,9 @@
                 ~ grimoire_fifthChar += grimMentorTwelve
             
             //StoryletsSpeciali
+            - the_witch_and_the_mentor && grimoire_fifthChar hasnt grimMentorWitchOne:
+                ~ grimoire_fifthChar += grimMentorWitchOne
+
             - growing_witch_storylet && grimoire_fifthChar hasnt grimMentorWitchTwo:
                 ~ grimoire_fifthChar += grimMentorWitchTwo
 
@@ -155,7 +158,14 @@
                 ~ grimoire_fifthChar += grimMentorLiar    
 
             - addressing_violence && grimoire_fifthChar hasnt grimMentorViolence:
-                ~ grimoire_fifthChar += grimMentorViolence  
+                ~ grimoire_fifthChar += grimMentorViolence
+                //Questo storylet genera uno spostamento di Mentore
+                ~ change_entity_place(Mentor)
+
+            - about_violence_and_peace && grimoire_fifthChar hasnt grimSecondCharMentorPeace:
+                    ~ grimoire_fifthChar += grimSecondCharMentorPeace
+                    //A fine discorso, Riccio se ne va
+                    ~ change_entity_place(SecondCharacter)    
 
             - a_story_of_transformation && grimoire_fifthChar hasnt grimMentorNovel:
                 ~ grimoire_fifthChar += grimMentorNovel 

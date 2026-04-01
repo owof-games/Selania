@@ -61,9 +61,6 @@
             //E poi svuoto il nuovo sigillo
             ~ nest_newSigilDiscovered = ()
 
-
-        ~ thirdChar_LibraryInvite = false
-        ~ move_entity(ThirdCharacter, Forest)
         -> third_char_closing_storylet ->
         -> opening_places ->
         //Parte subito lo spiegozzo sui sigilli di Carla

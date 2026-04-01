@@ -2,26 +2,26 @@
     {
 
         //Feedback da parte di Mentore su pensieri strega se le abbiamo detto che abbiamo parlato con la pianta
-            - are_two_entities_together(Mentor, PG) && are_two_entities_together(TheWitch, PG) && little_storylets.talkingWitch && not the_witch_and_the_mentor && png_commonPauseTalking == false:
+            - are_two_entities_together(Mentor, PG) && are_two_entities_together(TheWitch, PG) && little_storylets.talkingWitch && grimoire_fifthChar hasnt grimMentorWitchOne && png_commonPauseTalking == false:
                 -> the_witch_and_the_mentor
         
         //Tra PNG
             //Chiacchiere tra Riccio e Chitarra
-                - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(SecondCharacter, PG) && png_commonPauseTalking == false && not first_second_chit_chat :
+                - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(SecondCharacter, PG) && png_commonPauseTalking == false && grimoire_firstChar hasnt grimFirstSecondChar:
                     -> first_second_chit_chat
 
             //Chiacchiere tra Riccio e PNG3
-                - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(SecondCharacter, PG) && png_commonPauseTalking == false && not third_second_chit_chat:
+                - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(SecondCharacter, PG) && png_commonPauseTalking == false && grimoire_secondChar hasnt grimSecondThirdChar:
                     -> third_second_chit_chat        
 
             //Chiacchiere tra Chitarra e PNG3
-                - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(FirstCharacter, PG) && png_commonPauseTalking == false && not third_first_chit_chat:
+                - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(FirstCharacter, PG) && png_commonPauseTalking == false && grimoire_firstChar hasnt grimFirstThirdChar:
                     -> third_first_chit_chat 
 
         
         //Con PNG e Mentore
             //Mentore e Riccio parlano dopo il litigio. Parte fintanto che riccio non ha cucinato da solo.
-                - are_two_entities_together(Mentor, PG) && are_two_entities_together(SecondCharacter, PG) && png_commonPauseTalking == false&& addressing_violence && (not about_violence_and_peace):
+                - are_two_entities_together(Mentor, PG) && are_two_entities_together(SecondCharacter, PG) && png_commonPauseTalking == false && grimoire_fifthChar has grimMentorViolence && grimoire_fifthChar hasnt grimSecondCharMentorPeace: 
                     -> about_violence_and_peace
             
             //Riccio ha cucinato, e vediamo la scena del dono
@@ -44,11 +44,11 @@
         
         //Con PNG e Franco
             //Chiacchiera tra Chitarra e Franco                
-                - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(Franco, PG) && png_commonPauseTalking == false&& not frog_and_first_char_chit_chat :
+                - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(Franco, PG) && png_commonPauseTalking == false && not frog_and_first_char_chit_chat :
                     -> frog_and_first_char_chit_chat
 
             //Chiacchiera tra Riccio e Franco
-                - are_two_entities_together(SecondCharacter, PG) && are_two_entities_together(Franco, PG) && png_commonPauseTalking == false&& not frog_and_second_char_chit_chat :
+                - are_two_entities_together(SecondCharacter, PG) && are_two_entities_together(Franco, PG) && png_commonPauseTalking == false && not frog_and_second_char_chit_chat :
                     -> frog_and_second_char_chit_chat
 
             //Chiacchiera tra Tre e Franco

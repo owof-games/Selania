@@ -26,7 +26,7 @@
         }
 
         {
-            - are_two_entities_together(Mentor, PG) && (not that_little_liar_storylet):
+            - are_two_entities_together(Mentor, PG) && grimoire_fifthChar hasnt grimMentorLiar:
                 ~ mentor_riccioMentoreViciniColpo = true
                 -> that_little_liar_storylet  
 
@@ -104,7 +104,6 @@
     Ora sposto tutti quei legni così puoi andarci anche tu!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
     Chissà se ci sono anche i manga!
 
-        ~ secondChar_ForestInvite = true
         -> second_char_closing_storylet ->
         -> opening_places ->
         -> main

@@ -377,6 +377,9 @@
             - open_the_kitchen && grimoire_firstChar hasnt grimFirstOpenKitchen:
                 ~ grimoire_firstChar += grimFirstOpenKitchen
                 ~ grimoire_appendices += grimKitchenChitarra
+                //Cose legate all'evento
+                ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
+                ~ firstChar_PondInvite = true
 
             - a_story_of_revenge && grimoire_firstChar hasnt grimFirstCharNovel:
                 ~ grimoire_firstChar += grimFirstCharNovel

@@ -59,7 +59,12 @@
             //Main storylets
             - open_the_dump && grimoire_witch hasnt grimWitchOpenDump:
                 ~ grimoire_witch += grimWitchOpenDump
-
+                //Tutte le cose legate all'apertura del dump
+                ~ move_entity(FromForestToDumpBlocked, Safekeeping)
+                ~ move_entity(FromForestToDump, Forest)
+                ~ move_entity(mapDump, TrainStop)
+                ~ player_accessiblePlaces += Dump
+        
             - witch_intro && grimoire_witch hasnt grimWitchIntro:
                 ~ grimoire_witch += grimWitchIntro
 

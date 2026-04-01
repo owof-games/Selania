@@ -403,12 +403,17 @@
             //Storylets speciali
             - open_the_library && grimoire_secondChar hasnt grimSecondOpenLibrary:
                 ~ grimoire_secondChar += grimSecondOpenLibrary
+                //Così ci aspetta nella foresta
+                ~ secondChar_ForestInvite = true
 
             - a_story_of_rebellion && grimoire_secondChar hasnt grimSecondCharNovel:
                 ~ grimoire_secondChar += grimSecondCharNovel
 
             - dog_second_char && grimoire_secondChar hasnt grimSecondCharDog:
                 ~ grimoire_secondChar += grimSecondCharDog
+
+            - about_violence_and_peace && grimoire_secondChar hasnt grimSecondCharMentorPeace:
+                    ~ grimoire_secondChar += grimSecondCharMentorPeace
 
             //Lettere    
             - second_character_notes.one && grimoire_secondChar hasnt grimSecondCharLetterOne:

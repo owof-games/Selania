@@ -83,8 +83,6 @@
                 Delle pulci d'acqua, per lo più.     
         }
     
-        ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
-        ~ firstChar_PondInvite = true
         -> first_char_closing_storylet ->
         -> opening_places ->
         -> main
@@ -166,7 +164,6 @@
                     Quasi quanto Tullio.  
             }
 
-    
         -> first_char_closing_storylet ->
         -> main
     

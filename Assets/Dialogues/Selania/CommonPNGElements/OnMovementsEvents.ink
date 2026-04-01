@@ -248,6 +248,28 @@ VAR letters_doggoPause = false
 //Gestione della cucina delle PNG
 === on_movement_kitchen_tracker ===
 {debug: passo da on_movement_kitchen_tracker.}
+    //Primo check: la cucina è occupata o è libera?
+    {
+        - contentsKitchen has FirstCharacter:
+            ~ kitchen_kitchenOccupied = true
+
+        - contentsKitchen has SecondCharacter:
+            ~ kitchen_kitchenOccupied = true
+
+        - contentsKitchen has ThirdCharacter:
+            ~ kitchen_kitchenOccupied = true
+
+        - contentsKitchen has FourthCharacter:
+            ~ kitchen_kitchenOccupied = true
+        
+        - contentsKitchen has FifthCharacter:
+            ~ kitchen_kitchenOccupied = true
+
+        - contentsKitchen has Franco:
+            ~ kitchen_kitchenOccupied = true                  
+
+    }
+
     //Riccio
     //Riccio inizia a cucinare. Metto prima di Chitarra giusto perché il suo storylet coinvolge anche Mentore e quindi forse è più interessante.
     //Ho messo (entity_location(SecondCharacter) != Kitchen) perché così non parte mai la cucina autonoma se c'è qualcunx in cucina.
@@ -258,7 +280,7 @@ VAR letters_doggoPause = false
                 ~ kitchen_secondCharIsCooking = true
                 ~ move_entity(SecondCharacter, Kitchen)
                 ~ kitchen_kitchenOccupied = true
-                    -> second_char_cooking_tracker
+                    -> second_char_cooking_tracker ->
         }            
         
             
@@ -310,7 +332,7 @@ VAR letters_doggoPause = false
                     ~ kitchen_firstCharIsCooking = true
                     ~ move_entity(FirstCharacter, Kitchen)
                     ~ kitchen_kitchenOccupied = true
-                        -> first_char_cooking_tracker 
+                        -> first_char_cooking_tracker ->
         }
         
         //Gestione tempi di cucina autonoma di Chitarra.
