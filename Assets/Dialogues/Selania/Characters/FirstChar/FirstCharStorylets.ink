@@ -75,9 +75,9 @@
         
             + {name_choice} Mi chiamo {player_name}.
             + Il mio nome è...
-                -> name_choice ->
+                -> name_choice.top ->
             -
-                -> gender ->
+                -> gender.top ->
 
         {player_pronouns has her:Anche io uso i pronomi femminili!|Invece io uso i femminili.}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Anche se continuo a non chiamarmi {charNameOne}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
