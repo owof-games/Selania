@@ -10,7 +10,7 @@ VAR glyph_actualGlyphChoice = ()
 VAR glyph_mainTalker = ()
 
 //Funzione di dispatch comune (sigillo attivo o meno)
-=== glyph_modifier_variation_management(PNG, GlyphC, DecreaseS)
+=== glyph_modifier_variation_management(PNG, GlyphC)
 {debug_nest: passo per glyph_modifier_variation_management. Il valore di PNG è {PNG}, il valore di GlyphCe è {GlyphC}. Lo stato della parola attiva è {glyph_actualActiveSigil}.}
 //PNG = Su chi ha effetto la scelta
 //GlyphC = Su quale colore ha effetto    
@@ -97,20 +97,9 @@ VAR glyph_mainTalker = ()
     {
         //Se sigillo attivo, andiamo a formula ad hoc
         - glyph_actualActiveSigil != ():
-            {
-                - DecreaseS == decreaseYes:
-                {debug_nest: il valore di DecreaseS è {DecreaseS} e quindi vado a mettere glyph_decreaseSigil su true.}
-                    ~ glyph_decreaseSigil = true
-                        -> sigil_glyph_updater
-                
-                - else:
-                    ~ glyph_decreaseSigil = false 
-                {debug_nest: il valore di DecreaseS è {DecreaseS} e quindi vado a mettere glyph_decreaseSigil su false.}
-                        -> sigil_glyph_updater   
+            -> sigil_glyph_updater
             
-            }
 
-        
         //Altrimenti aumentiamo di uno come sempre il valore per lx PNG
         - else:
             {GlyphC:
@@ -1051,5 +1040,32 @@ VAR glyph_mainTalker = ()
             ~ glyph_mainTalker += Mentor
 
     }
+
+//Terzo: in cucina, con gli ingredienti, non vogliamo le reazioni delle PNG, perché commenteranno già in automatico, ma il codice attuale non le fermerebbe, perché non sono considertate main talk, per cui devo apportare una correzione.
+{
+    - glyph_mainTalker == (PG) && entity_location == Kitchen:
+        ~ glyph_allPNGAffectedByChoice = ()
+}
+
+
+//Quarto: verifichiamo se il sigillo è o meno da consumare.
+    {
+        //In teoria è un confronto di lista preciso, per cui se c'è mentore E un'altra persona, a quel punto la condizione non vale
+        - glyph_allPNGAffectedByChoice == (Mentor):
+            ~ glyph_decreaseSigil = false
+
+        - glyph_mainTalker == (PG):
+            ~ glyph_decreaseSigil = false
+
+        - else:
+            {
+                - glyph_actualActiveSigil != ():
+                    ~ glyph_decreaseSigil = true
+
+                - else:
+                    ~ glyph_decreaseSigil = false    
+            }
+    }
+
 
 ->->

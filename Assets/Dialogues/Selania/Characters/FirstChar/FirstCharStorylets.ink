@@ -18,33 +18,33 @@
         
         
             + (aether)Ho sempre pensato che Florence fosse una strega.
-                    -> glyph_modifier_variation_management(FirstCharacter, aetherC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                 Dai, palese!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 Ha una congrega con Kate Bush e Tori Amos.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
                 E passano i sabati sera a maledire gli uomini del loro passato.
                 <i>"Women said, "We've been waiting, Waiting to meet you, it's only a matter of time"."#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             
             + (fire)<i>Attendo impazientemente che dica altro.
-                    -> glyph_modifier_variation_management(FirstCharacter, fireC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, fireC)->
                 Ehm, tutto bene ama?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 O non l'hai vistə?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 O ti stai ancora riprendendo dalle pezze?
     
             + (air)Ma una persona non può essere un uccello.
-                    -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, airC)->
                 Aspè.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Tu devi essere la persona simpatica della festa, vero?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 E non chiedermi quale festa per favore. 
                  
             + (water)È una persona a cui tieni?
-                    -> glyph_modifier_variation_management(FirstCharacter, waterC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                 Talco è.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 Sì.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Sì.
                 LA persona a cui tengo.
 
             + (earth)Vanno bene due uccellini arancioni? Una bacheca? Dei cespugli?
-                    -> glyph_modifier_variation_management(FirstCharacter, earthC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, earthC)->
                 Che al mercato mio padre comprò.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
                 Potremmo cavarci una band forse.
                 Ma non sono Talco.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
@@ -90,7 +90,7 @@
         Datti da fare con le stronzate da inconscio, così mi sveglio o ripiglio e vedo di non mandare a puttane lavoro e relazione.
         
             + Sono una persona, non il tuo inconscio.
-                -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, airC)->
                 {
                     - one.air:
                         E due.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
@@ -102,7 +102,7 @@
                 Qualcosa del genere.
 
             + Sì sì sono il tuo inconscio e tu sei un canarino! Vola canarino, vola!
-                -> glyph_modifier_variation_management(FirstCharacter, earthC, decreaseYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, earthC)->
                 {
                     - one.earth:
                         Ok, allora è un po' una fissa con questi uccellini.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -112,7 +112,7 @@
                 E potrei fare la cacca in testa al mio capo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 
             + Allora dovrei mostrarti lune di sangue, volpi affamate, rami eterni.
-                -> glyph_modifier_variation_management(FirstCharacter, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                 {
                     - one.aether:
                         Dopo il commento su Florence, ora chiedo direttamente la tua mano.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
@@ -121,7 +121,7 @@
                 Perché è un piano che mi piace molto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             
             + (pizzico) <i>La pizzico, così capisce che sono reale.
-                -> glyph_modifier_variation_management(FirstCharacter, fireC, decreaseYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, fireC)->
                 Ehi!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 {
                     - one.fire:
@@ -132,7 +132,7 @@
                 O siamo tutt3 e due in un sogno.
                  
             + (water2) E se facessimo un bel respiro e ripartissimo da capo?
-                -> glyph_modifier_variation_management(FirstCharacter, waterC, decreaseYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                 {
                     - one.water:
                         Le cose che mi dici mi rassicurano, {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -227,7 +227,7 @@
         Ma sto dicendo cose senza senso, vero {player_name}?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
 
             + Naa, una cosa insensata è una rana che non sa nuotare.
-                    -> glyph_modifier_variation_management(FirstCharacter, earthC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, earthC)->
                 Ehm, come scusa?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 Uh, forse rivaluto l'idea dell'allucinazione.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
                 Fa che non sia come quando ho chiamato mamma ed ero strafatta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -235,26 +235,26 @@
                 Non di nuovo!
 
             + Tu hai più bisogno di fare cose e parlare meno.
-                    -> glyph_modifier_variation_management(FirstCharacter, fireC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, fireC)->
                 Mmm, non amo proprio tanto tanto questo modo aggressivo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 Ma ha senso.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Potrei iniziare buttandoti nello stagno per esempio, no?
                 
             + Respirare è un punto di partenza. L'aria qui è buona.
-                    -> glyph_modifier_variation_management(FirstCharacter, aetherC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                 Già, e non è solo quello, ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 C'è qualcosa di <i>concreto</i> in quest'aria.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 Come se lentamente mi pulisse via cose che mi appesantiscono.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 
             + Un terzo delle persone odia il proprio capo, sei in buona compagnia.
-                -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, airC)->
                 Bellini i numeri.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
                 No, non è vero.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 Ma per farti felice: bellini i numeri.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Ma se è un problema di un terzo delle persone, allora bisogna fare qualcosa a monte, no?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
 
             + Ti mancano, le amiche della band?
-                    -> glyph_modifier_variation_management(FirstCharacter, waterC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                 Come l'aria.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 Quando suoniamo è come se ci capissimo anche meglio di quando parliamo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 A volte finiamo un brano ridendo sguaiate.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
@@ -329,7 +329,7 @@
         E mi chiedevo: secondo te, cosa vuol dire fidarsi?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
         
             + Sapere di poter essere vulnerabili.
-                    -> glyph_modifier_variation_management(FirstCharacter, waterC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                 Questa è una cosa che mi tocca il cuore, {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 È così bello essere vulnerabili.
                 E così faticoso.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
@@ -337,26 +337,26 @@
                 Totale.
                 
             + La fiducia è una rete che ti accoglie quando cadi.
-                    -> glyph_modifier_variation_management(FirstCharacter, aetherC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                 E a volte hai bisogno di cadere.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Quando arrivi proprio in alto, ma è un alto che non è tuo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 E allora devi mollare la presa, e sperare che qualcuno ti prenda.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Ha senso?
             
             + Quando si può essere stran3 assieme. E non si dicono cose banali.
-                    -> glyph_modifier_variation_management(FirstCharacter, earthC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, earthC)->
                 Con Talco posso essere strana, tantissimo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 Anche se la cosa difficile a volte è che con le persone a cui piaci perché sei strana, poi non piaci quando sei triste.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
             
             + Concordare delle regole e vederle rispettate.
-                    -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, airC)->
                 Uh.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Ma ti hanno spedit{player_pronouns has him:o|{player_pronouns has her:a|ə}} qui per caso col manuale delle istruzioni?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 Che così ti resetto.
                 Che noia.
             
             + La certezza che si può finire nella merda assieme e uscirne assieme.
-                    -> glyph_modifier_variation_management(FirstCharacter, fireC, decreaseYes)-> 
+                    -> glyph_modifier_variation_management(FirstCharacter, fireC)-> 
                 Tu devi essere un{player_pronouns has him:o|{player_pronouns has her:a|ə}} che si caccia spesso nei casini, vero?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
                 Mi piace come frase.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Ma non c'è solo il casino, no?
@@ -424,27 +424,27 @@
         Non so se ha senso.
         
             + (no) Molti "no" hanno cambiato la storia.
-                    -> glyph_modifier_variation_management(FirstCharacter, aetherC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                 ESATTO!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 Sono paroline potentissime.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Talco dice che alcune parole sono magiche.
                 E "no" sicuramente è magica.
             
             + Le energie sono sprecate solo se non le indirizzi.
-                    -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, airC)->
                 Mmm.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Ok.
                 Cioè: ha senso.
                 Ma non era quello il punto per me.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
             
             + Siamo viv3 solo quando lottiamo, {charNameOne}! Vai di sindacato!
-                    -> glyph_modifier_variation_management(FirstCharacter, fireC, decreaseYes)-> 
+                    -> glyph_modifier_variation_management(FirstCharacter, fireC)-> 
                 Quando si torna nel mondo tu vieni con me.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 Che con questa energia risolviamo tutti i problemi in quindici giorni.
                 Risolviamo anche la fame nel mondo a 'sto punto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 
             + E se invece di chiederti se ha senso, decidessi tu che ha senso e basta?
-                    -> glyph_modifier_variation_management(FirstCharacter, earthC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, earthC)->
                 Ehm.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Mmm.
                 Puoi avere ragione.
@@ -452,7 +452,7 @@
                 Sennò l'avrei tipo già fatto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 
             + Sono le parole di una persona generosa.
-                    -> glyph_modifier_variation_management(FirstCharacter, waterC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                 Una che ci prova.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 E poi non è solo generosità.
                 Chi è che vuole vivere in un mondo pieno di merda?
@@ -513,7 +513,7 @@
         Secondo te una relazione ci cambia? O ci mostra chi siamo davvero?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
         
             + Ogni relazione esalta aspetti diversi di noi.
-                    -> glyph_modifier_variation_management(FirstCharacter, waterC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                 Questa cosa è verissima.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 A volte non concilio la persona che sono con Talco con quella che sono con Valeria o con Ennio.
                 E mi sento bugiarda.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
@@ -521,7 +521,7 @@
                 Grazie {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
             
             + Però ti manca svolazzare mi sa, vero?
-                    -> glyph_modifier_variation_management(FirstCharacter, earthC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, earthC)->
                 Ehm.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Sì ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 Mi sa di sì.
@@ -530,21 +530,21 @@
                 Tanto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 
             + Non esiste un "chi siamo davvero".
-                    -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, airC)->
                 Beh: sono abbastanza sicura che tu sia davvero pragmatic{player_pronouns has him:o|{player_pronouns has her:a|ə}}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Con o senza relazioni.
                 Non deve essere male tutta questa sicurezza.
                 Credo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 
             + È buona solo se ci smuove, se ci evita di ristagnare.
-                    -> glyph_modifier_variation_management(FirstCharacter, fireC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, fireC)->
                 Su quello credo che la relazione abbia poco potere.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Sono uscita con tipi de coccio, e non c'era modo di farli smuovere, qualsiasi cosa facessi.
                 E ci sono state volte in cui ero io quella non pronta a fare qualcosa di diverso.
                 Non è sempre colpa della relazione, no?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                     
             + La relazione è un albero con le radici in due terreni.
-                    -> glyph_modifier_variation_management(FirstCharacter, aetherC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                 Quindi intendi tipo una cosa terza?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
                 Che nasce dall'incontro tra le due persone?
                 Mi piace l'idea dell'albero.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
@@ -613,7 +613,7 @@
             }
         
             + Non è arrogante: è nostro dovere cambiare quello che non va!
-                    -> glyph_modifier_variation_management(FirstCharacter, fireC, decreaseYes)-> 
+                    -> glyph_modifier_variation_management(FirstCharacter, fireC)-> 
                 Ehm, uh.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Ok.
                 Credo abbia senso.
@@ -621,19 +621,19 @@
                 Intens{player_pronouns has him:o|{player_pronouns has her:a|ə}} per me intendo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                     
             + <i>Resto in meditativo silenzio.
-                    -> glyph_modifier_variation_management(FirstCharacter, aetherC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                 Forse se è la seconda volta che ci torno è perché è importante.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Importante per me.
                 Ha senso, vero?
         
             + Anche la fantasia salva il mondo, e ti fa sentire potente.
-                    -> glyph_modifier_variation_management(FirstCharacter, earthC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, earthC)->
                 Ma non è che mi interessa la potenza.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 Mi interessa più sapere che le cose sono giuste.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Però la fantasia è bella.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
             
             + Credo che siamo pien3 di emozioni, non di fatti.
-                    -> glyph_modifier_variation_management(FirstCharacter, waterC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                 Esatto ama, esatto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 Cioè: bellini i fatti, davvero.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Graziosi.
@@ -641,7 +641,7 @@
                 Ha senso?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
     
             + "Riempire di calore" i fatti li rende inattendibili.
-                    -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, airC)->
                 Però se rimangono attendibili e incagabili non servono a nulla.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 Messa così è una sconfitta a prescindere.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 {
@@ -742,7 +742,7 @@
         Tu come ti saresti {player_pronouns has him:sentito|{player_pronouns has her:sentita|sentitə}} al mio posto?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
        
             + Tradit{player_pronouns has him:o|{player_pronouns has her:a|ə}}. E arrabbiat{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
-                    -> glyph_modifier_variation_management(FirstCharacter, fireC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, fireC)->
                 Uh.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Scusa per il sospirone.
                 Ma credo sia stata la prima emozione che mi ha colta.
@@ -750,7 +750,7 @@
                 Un male boia.
                 
             + Incuriosit{player_pronouns has him:o|{player_pronouns has her:a|ə}} dall'idea di qualcosa di nuovo.
-                    -> glyph_modifier_variation_management(FirstCharacter, earthC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, earthC)->
                 Qualcosa di nuovo con un tizio che ho visto tre volte.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 In una città diversa in un altro continente.
                 Eppure.
@@ -758,7 +758,7 @@
                 Dalla stasi della mia vita.
                 
             + Forse spaventat{player_pronouns has him:o|{player_pronouns has her:a|ə}}, ma anche felice di questa nuova famiglia con Talco.
-                    -> glyph_modifier_variation_management(FirstCharacter, waterC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                 Sei una persona migliore di me allora, {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 Perché le emozioni che ho provato erano davvero tante, ma non felicità.
                 Per nessuna delle persone coinvolte.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -767,7 +767,7 @@
                 Io non son stata capace di essere felice per ləi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 
             + Una situazione assurda può farmi conoscere cose assurde di me.
-                    -> glyph_modifier_variation_management(FirstCharacter, aetherC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                 Possibile.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 E la cosa più assurda sarebbe scoprire che è vero che non mi piacciono i bambini.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 A migliaia di chilometri da tutto quello che conosco.
@@ -775,7 +775,7 @@
                 Dipendendo totalmente da una persona che deve prendersi cura di un infante.
             
             + Confus{player_pronouns has him:o|{player_pronouns has her:a|ə}} dall'irrazionalità di questa situazione.
-                    -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, airC)->
                 Con Talco è tutto irrazionale.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 O razionale secondo gli standard di Talco.
                 Ma <i>confusione</i> è una parola che mi ritorna, quando ripenso a quella sera.
@@ -839,25 +839,25 @@
         Credi abbia senso?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
             
             + È come un gioco: se non lo provi non sai se ti piace.
-                    -> glyph_modifier_variation_management(FirstCharacter, earthC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, earthC)->
                 Può darsi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Ma un gioco lo fermo se non mi va.
                 Mentre tornare su potrebbe essere mooolto più difficile.
             
             + Datti uno scopo e saprai per cosa lottare, come non perderti.
-                    -> glyph_modifier_variation_management(FirstCharacter, fireC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, fireC)->
                 Un po' come Luigia e Anna, immagino.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Si può fare.
                 Ma sono una che si perde spesso per strada, ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
             
             + (air)Scientificamente, sì: siamo bestie sociali, le persone ci influenzano.
-                    -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, airC)->
                 Sei una brava persona, non mi fraintendere.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Ma riesci a rendere fredda anche una cosa bella come la socialità, {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 E sei riuscit{player_pronouns has him:o|{player_pronouns has her:a|ə}} pure a farmi preoccupare ancora di più.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
             
             + Potresti confidare queste paure ai tuoi?
-                    -> glyph_modifier_variation_management(FirstCharacter, waterC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                 Non ci avevo pensato.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Non so se capirebbero.
                 Forse direbbero che non devo scendere, che ce la fanno da soli.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
@@ -865,7 +865,7 @@
                 Potrei provarci.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                     
             + Luigia e Anna trovando le loro radici sono sbocciate.
-                    -> glyph_modifier_variation_management(FirstCharacter, aetherC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                 Questa è una cosa a cui penso spesso.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Al nord sto bene, ma.
                 Ma non mi sento mai davvero <b>a casa</b>.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
@@ -923,34 +923,34 @@
             }
             
             + Non so cosa dire, non trovo il filo logico del discorso.
-                    -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, airC)->
                 E probabilmente non c'è.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Alla fine sono solo emozioni.
                 Non il tuo forte, mi sembra.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
             
             + Fa sentire meno sol3, e più parte di una lunga rete di storie.
-                    -> glyph_modifier_variation_management(FirstCharacter, waterC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                 Sì!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 E dà sicurezza, fiducia.
                 Non si tratta nemmeno più di fare qualcosa di stravolgente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Ma di continuare un percorso che avanza da millenni.
                     
             + C'è molto coraggio nel riconoscersi parte di qualcosa di così grande.
-                    -> glyph_modifier_variation_management(FirstCharacter, aetherC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                 Ehm.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Non so se sia coraggio.
                 Forse è più un bisogno, {player_name}.
                 Ma mi piace l'idea di sentirmi coraggiosa per una volta, per cui me la porto a casa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
             
             + L'unione genera speranza, e la speranza porta cambiamento.
-                    -> glyph_modifier_variation_management(FirstCharacter, fireC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, fireC)->
                 La speranza è una gran cosa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Anche se non la conosco molto bene.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 Non so se si era visto, ma tendo a vedere il peggio nelle cose.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Cosa che spesso non mi permette di cambiare nulla.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
             
             + Immaginare è bello perché ci si stupisce, e stupirci ci rende viv3.
-                    -> glyph_modifier_variation_management(FirstCharacter, earthC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, earthC)->
                 Sai {player_name}?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 A volte ho l'impressione che l'unica cosa che ci rende adulti è la perdita dello stupore.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 Tutto è prevedibile.
@@ -1018,7 +1018,7 @@
         E a quel punto, ripartirà mai il treno dalla mia stazione?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
 
             + E se Ennio fosse la tua stazione, il tuo arrivo?
-                    -> glyph_modifier_variation_management(FirstCharacter, waterC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                 Sarebbe una scoperta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Una bella scoperta.
                 Forse non ho mai davvero considerato la possibilità di fermarmi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
@@ -1026,7 +1026,7 @@
                 Innamorata.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
             
             + Nel dubbio prendi il controllo del treno e parti.
-                    -> glyph_modifier_variation_management(FirstCharacter, fireC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, fireC)->
                 Ehm.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Senza sapere come funziona il treno?
                 E con tutt3 l3 altr3 passegger3 che magari devono andare in altri luoghi?
@@ -1034,7 +1034,7 @@
                 Non è egoista?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                     
             + Cosa vuoi promettergli quando gli dici "ti amo"? E a cosa rinunci?
-                    -> glyph_modifier_variation_management(FirstCharacter, aetherC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                 Merda.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Io.
                 Io.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
@@ -1045,14 +1045,14 @@
                 A cosa dovrei rinunciare?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             
             + Hai provato a chiedere al capotreno quando ripartite?
-                    -> glyph_modifier_variation_management(FirstCharacter, earthC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, earthC)->
                 Sì, ma dice che il treno è stato soppresso e ancora non c'è la vettura sostitutiva.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Sai com'è con i controllori.
                 No {player_name}, anche perché dovrei essere io la capotreno.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
                 E non ho manco idea di dove stiamo andando. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed 
             
             + Non c'è logica nel tenere un treno fermo.
-                    -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, airC)->
                 Non è vero!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 Per una manutenzione.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Per la pulizia.
@@ -1100,13 +1100,13 @@
                 }
 
             + Sì, ma sai già cosa vuoi evitare: fallo.
-                    -> glyph_modifier_variation_management(FirstCharacter, fireC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, fireC)->
                 Ma tu hai sempre questa visione così chiara del mondo?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 Di ciò che sei e fai?
                 Perché quasi quasi te la invidio.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 
             + Talco ti vuole bene anche nella distanza e nel conflitto: non resterai sola.
-                    -> glyph_modifier_variation_management(FirstCharacter, waterC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                 Questo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Questo è vero.
                 Mi suona molto, seppur a fatica.
@@ -1115,7 +1115,7 @@
                 Ma grossa. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad   
                     
             + Hai paura di stare sola, o di sentirti sola?
-                    -> glyph_modifier_variation_management(FirstCharacter, aetherC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                 Merda.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Ora come ora forse di non sapere stare da sola.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 Non so come si faccia, {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
@@ -1124,7 +1124,7 @@
                 Dovrei imparare a godermi il tempo con me.
              
             +  \ {charNameOne}, tu devi pensare meno e fare più casino.
-                    -> glyph_modifier_variation_management(FirstCharacter, earthC, decreaseYes)-> 
+                    -> glyph_modifier_variation_management(FirstCharacter, earthC)-> 
                 Guarda {player_name}, sarei strafelice se ci riuscissi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Ci ho provato anche con la terapia.
                 Almeno fintanto che la copriva il bonus psicologo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
@@ -1132,13 +1132,13 @@
                 Scusa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 
             + {not eight.air} Razionalmente ci sono decine di modi per non restare solə.
-                -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, airC)->
                     Eppure ora sento l'urgenza di andarmene via di qui.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                     Lontana da queste frasi da scienziat{player_pronouns has him:o|{player_pronouns has her:a|ə}}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                     Pensa un po'.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
 
             + {eight.air} Te l'ho detto prima: siamo bestie sociali, è inevitabile.
-                    -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, airC)->
                 E come ti ho detto prima, è una cosa molto fredda..#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 E io non riesco a ragionare in quel modo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Immagino sia bello, {player_name}.
@@ -1223,20 +1223,20 @@
             }
         
             + Non accontentarsi è fondamentale, o le lotte poi si spengono.
-                    -> glyph_modifier_variation_management(FirstCharacter, fireC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, fireC)->
                 Già.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Anche se non sarebbe male riposare ogni tanto, credo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 No?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 
             + Guardiamo i fatti, {charNameOne}: l'erba del vicino è...?
-                    -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, airC)->
                 Inesistente?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 Perché chi ce l'ha una casa in centro col giardino?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 E prima che mi rispondi che ho frainteso: no, non ho frainteso.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 E ho bisogno di bere.
         
             + Anche tu sembrerai felice sui social, è un gioco senza vincitor3.
-                    -> glyph_modifier_variation_management(FirstCharacter, earthC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, earthC)->
                 Uh.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 No.
                 Cioè: se unə si ingelosisce per la mia vita è messə male male.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
@@ -1245,7 +1245,7 @@
                 Aiuto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
         
             + Non colpevolizzarti per ciò che provi, {charNameOne}. Sii gentile con te.
-                    -> glyph_modifier_variation_management(FirstCharacter, waterC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                 Io.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 Già.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 Potrebbe essere una cosa carina da fare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -1253,7 +1253,7 @@
                 Grazie, {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
             
             + Sei responsabile di ciò che fai, non ciò che provi.
-                    -> glyph_modifier_variation_management(FirstCharacter, aetherC, decreaseYes)->
+                    -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                 Tu e Talco andreste davvero d'accordo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 Questa è una cosa che mi dice spesso.
                 E poi alla fine non faccio mai nulla di crudele o che.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral

@@ -85,7 +85,7 @@
             Che tuo papà litiga con tua mamma, e che mamma si arrabbia con te e di non piangere perché nonna è in un posto migliore.
 
             + Tua nonna ti ha insegnato a lottare: lotta anche tu!
-                -> glyph_modifier_variation_management(SecondCharacter, fireC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, fireC)->
                 E ti ha insegnato a barare!
                 E a sputare nel caffè di chi ti fa male.
                 {
@@ -96,7 +96,7 @@
                     
             
             + I tuoi genitori sono infelici, {charNameTwo}, prova a comprenderli.
-                -> glyph_modifier_variation_management(SecondCharacter, waterC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, waterC)->
                 Tutti i litigi, la fuga di tuo padre.
                 Il modo in cui si arrabbia per tutto.
                 Le paure di tua mamma.
@@ -104,7 +104,7 @@
                     
                     
             + Tuo fratello però ha trovato la gioia anche in questo casino.
-                -> glyph_modifier_variation_management(SecondCharacter, earthC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, earthC)->
                 Ci sono le sue statue, c'è il suo amico.
                 {
                     -second_char_main_storylets.eleven:
@@ -113,7 +113,7 @@
 
                                 
             + E la casa dei vecchi è un posto attrezzato, organizzato.
-                    -> glyph_modifier_variation_management(SecondCharacter, airC, decreaseYes)->
+                    -> glyph_modifier_variation_management(SecondCharacter, airC)->
                 Una persona anziana ha bisogno di cure, {charNameTwo}.
                 Di persone che le diano quello di cui ha bisogno.
                 È giusto che tu senta la sua mancanza.
@@ -121,7 +121,7 @@
                     
     
             + Ma è grazie al pianto che puoi essere diverso da loro.
-                -> glyph_modifier_variation_management(SecondCharacter, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
                 Tu tieni agli animali.
                 A tuo fratello.
                 Alla nonna.
@@ -157,7 +157,7 @@
         A scuola le maestre dicono che sei cattivo, bugiardo, violento, e finisci sempre in punizione.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
 
         + Le bugie alla fine sono solo storie. Usale per divertirti.
-                -> glyph_modifier_variation_management(SecondCharacter, earthC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, earthC)->
             {
                 - cooking_with_second_char.third_theme:
                     L'hai detto anche mentre cucinavamo: non tutte le bugie sono uguali.
@@ -171,14 +171,14 @@
             }
                    
         + Tutto a questo mondo cambia. Anche un bambino cocciuto e bugiardo.
-                -> glyph_modifier_variation_management(SecondCharacter, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, airC)->
             Quando sei arrivato qui hai litigato con {mentorName}.
             E mi hai detto molte bugie.
             Ma hai anche chiesto scusa.
             Puoi partire da questo per cambiare.
                    
         + La rabbia è parte della tua vita, della tua famiglia: trasformala.
-                -> glyph_modifier_variation_management(SecondCharacter, fireC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, fireC)->
             Come quando ti arrabbi perché gli animali stanno scomparendo.
             O perché papà tratta male nonna.
             Puoi prendere quello che senti a farci qualcosa di buono per te e le persone che ami.
@@ -189,7 +189,7 @@
             }
                     
         + Ma non sei solo questo: sei gentile, sei curioso, sei divertente.
-                -> glyph_modifier_variation_management(SecondCharacter, waterC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, waterC)->
             Hai sviluppato un bel rapporto con {charNameOne}.
             Mi hai raccontato tante cose interessanti sugli animali.
             Hai fatto amicizia con la rana.
@@ -199,7 +199,7 @@
             Ma sei anche tante altre cose, {charNameTwo}.
                    
         + Eppure hai trovato il modo di fare pace con {mentorName}.
-                -> glyph_modifier_variation_management(SecondCharacter, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
             Hai fatto lo sforzo di capirla.
             E mi hai chiesto scusa più volte per le tue bugie.
             Stai già cambiando, {charNameTwo}!
@@ -211,33 +211,33 @@
         //     E la cosa certa è che gli animali ci sono ancora.
         //     Che tuo fratello ti vuole bene.
         //     E le caramelle sono buone.
-        //            -> glyph_modifier_variation_management(SecondCharacter, earthC, decreaseYes)->
+        //            -> glyph_modifier_variation_management(SecondCharacter, earthC)->
  
         // + Sei giovane ma sai già un sacco di cose. Studia e salvali.
         //     Si ha paura solo se non si conosce una cosa.
         //     Impara a conoscere quello di cui hai paura.
         //     E a quel punto saprai anche come cambiare le cose.
-        //            -> glyph_modifier_variation_management(SecondCharacter, airC, decreaseYes)->
+        //            -> glyph_modifier_variation_management(SecondCharacter, airC)->
 
         // + E allora lotta. Unisciti ad altri e protesta!
         //     Sei abituato a stare in castigo, di cosa hai paura?
         //     A scuola fai quello che vuoi.
         //     Fallo anche fuori.
         //     Per salvare il mondo.
-        //             -> glyph_modifier_variation_management(SecondCharacter, fireC, decreaseYes)->
+        //             -> glyph_modifier_variation_management(SecondCharacter, fireC)->
 
         // + Inventa storie, bugie che creino compassione, che cambino le persone.
         //     Un po' come la bugia del compleanno.
         //     Ma per far sì che ogni bosco abbia migliaia di compleanni.
         //     Usa il tuo dono per convincere le persone a cambiare.
-        //            -> glyph_modifier_variation_management(SecondCharacter, waterC, decreaseYes)->
+        //            -> glyph_modifier_variation_management(SecondCharacter, waterC)->
   
         // + La paura blocca, la paura è una scusa comoda.
         //     La paura è un rifugio.
         //     Se hai paura, non agisci.
         //     Se agisci non cambi nulla.
         //     Davvero vuoi restare per sempre bloccato dalla paura?
-        //            -> glyph_modifier_variation_management(SecondCharacter, aetherC, decreaseYes)->
+        //            -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
                    
         -
         ~ numberQuestion ++  
@@ -264,7 +264,7 @@
             Così è logico vedere il futuro come un posto spaventoso.
     
         + Eppure ci sono le associazioni che proteggono gli animali.
-            -> glyph_modifier_variation_management(SecondCharacter, aetherC, decreaseYes)->
+            -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
             Come quelle di cui ti ha parlato la tua maestra.
             E la sua amica del canile.
             {
@@ -273,14 +273,14 @@
             }
 
         + Eppure tuo fratello ama il suo ragazzo.
-            -> glyph_modifier_variation_management(SecondCharacter, waterC, decreaseYes)->
+            -> glyph_modifier_variation_management(SecondCharacter, waterC)->
             E ama te.
             E fa in modo che possiate passare tanto tempo assieme.
             Che tu possa avere uno spazio felice.
             E così rende il mondo un po' meno orribile.
                    
         + Eppure tuo fratello lotta contro tuo padre perché tu stia meglio.
-            -> glyph_modifier_variation_management(SecondCharacter, fireC, decreaseYes)->
+            -> glyph_modifier_variation_management(SecondCharacter, fireC)->
             {
                 - second_char_main_storylets.eleven:
                     E quando sei a casa sua ti fa fare un sacco di esperimenti.
@@ -290,7 +290,7 @@
             E questo lo fai se pensi ci sia un futuro dove andare.
                     
         + Ma sai anche trovare la fantasia e la giocosità nel mondo.
-            -> glyph_modifier_variation_management(SecondCharacter, earthC, decreaseYes)->
+            -> glyph_modifier_variation_management(SecondCharacter, earthC)->
             Sei arrivato in questo posto sconosciuto e invece di avere paura, ti sei messo a curiosare.
             Ti sei fatto amico una rana parlante.
                 {
@@ -304,7 +304,7 @@
             Quando tu giochi non hai paura di nulla.
 
         + Eppure sistematicamente tuo fratello per lavoro aggiusta le cose.
-            -> glyph_modifier_variation_management(SecondCharacter, airC, decreaseYes)->
+            -> glyph_modifier_variation_management(SecondCharacter, airC)->
             Vede le cose rotte e le ripara.
             Quindi ci sono cose che si possono aggiustare.
             Serve solo un meccanico per le cose che lo spaventano.
@@ -337,7 +337,7 @@
         Hai detto che i grandi fanno schifo, e che non vuoi diventare grande.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
         
             + Ma puoi essere un adulto combattente, come tua nonna.
-                -> glyph_modifier_variation_management(SecondCharacter, fireC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, fireC)->
                 {
                     - cooking_with_second_char.first_theme:
                         Un adulto che dice le cose come sono, come mi raccontavi cucinando.
@@ -350,7 +350,7 @@
                         
         
             + Ma puoi essere un adulto curioso e studioso, come un po' già sei.
-                -> glyph_modifier_variation_management(SecondCharacter, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, airC)->
                 {
                     -first_second_chit_chat:
                         Come quando hai detto a {charNameOne} che volevi scoprire dove vanno tutti i posti chiusi qui.
@@ -360,7 +360,7 @@
 
             
             + Ma puoi essere un adulto in cerca di uno scopo più grande, come {charNameOne}.
-                -> glyph_modifier_variation_management(SecondCharacter, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
                 {
                     - cooking_with_second_char.first_theme:
                         Non uno di quegli adulti che fanno le cose perché devono, come raccontavi in cucina.
@@ -368,7 +368,7 @@
                 E trovare modi inaspettati di aiutare le altre persone, gli animali, il mondo.
                     
             + Ma puoi essere un adulto che si prende cura delle persone, come {mentorName}.
-                -> glyph_modifier_variation_management(SecondCharacter, waterC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, waterC)->
                 E rendere più facile la vita all3 altr3.
                 {
                     - cooking_with_second_char.second_theme:
@@ -381,7 +381,7 @@
                 }
 
             + Ma puoi essere un adulto creativo, come tuo fratello.
-                -> glyph_modifier_variation_management(SecondCharacter, earthC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, earthC)->
                 E condividere le tue storie e i tuoi esperimenti.
                 Essere felice nel farli.
                         
@@ -417,14 +417,14 @@
             }     
      
         + (fire)Diventa il più forte, il più coraggioso.
-            -> glyph_modifier_variation_management(SecondCharacter, fireC, decreaseYes)->
+            -> glyph_modifier_variation_management(SecondCharacter, fireC)->
             Sei un testardo, bugiardo, dispettoso.
             Queste cose unite possono renderti indistruttibile.
             E di cosa avrà mai paura un ragazzo indistruttibile?
                     
     
         + (aether)Tutti abbiamo paura. Condividi questa paura con le altre persone.
-            -> glyph_modifier_variation_management(SecondCharacter, aetherC, decreaseYes)->
+            -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
             Falle sentire meno sole.
             Meno sbagliate.
             A quel punto saranno pronte a fare il passo.
@@ -433,20 +433,20 @@
                    
 
         + (earth)L'opposto della paura è la curiosità.
-            -> glyph_modifier_variation_management(SecondCharacter, earthC, decreaseYes)->
+            -> glyph_modifier_variation_management(SecondCharacter, earthC)->
             E tu sei il ritratto della curiosità.
             Guarda le cose che arriveranno chiedendoti "Chissà se..." o "E se invece..." o "Perché accade questo?".
             E a quel punto ogni paura diventerà solo un problema da risolvere.
                    
                 
         + (water)I tuoi genitori sono spaventati, aiutatevi a vicenda.
-            -> glyph_modifier_variation_management(SecondCharacter, waterC, decreaseYes)->
+            -> glyph_modifier_variation_management(SecondCharacter, waterC)->
             Nessuna persona può cambiare il mondo da sola.
             Ma possiamo partire dal cambiare le cose che ci circondano, un pezzo alla volta.
                    
       
         + (air)Con la tua intelligenza puoi rendere il mondo migliore.
-            -> glyph_modifier_variation_management(SecondCharacter, airC, decreaseYes)->
+            -> glyph_modifier_variation_management(SecondCharacter, airC)->
             Puoi aiutare gli adulti a essere meno tristi.
             E gli animali a non morire.
             E tua nonna a uscire dalla casa dei vecchi.

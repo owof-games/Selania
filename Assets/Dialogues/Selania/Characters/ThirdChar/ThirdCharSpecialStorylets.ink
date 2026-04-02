@@ -8,19 +8,19 @@
     //Apertura del nido
     Dialogo in biblioteca.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
         + [Scelta blu.]
-             -> glyph_modifier_variation_management(SecondCharacter, airC, decreaseYes)->
+             -> glyph_modifier_variation_management(SecondCharacter, airC)->
     
         + [Scelta rossa.]
-            -> glyph_modifier_variation_management(SecondCharacter, fireC, decreaseYes)->
+            -> glyph_modifier_variation_management(SecondCharacter, fireC)->
      
         + [Scelta viola.]
-                -> glyph_modifier_variation_management(SecondCharacter, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
     
         + [Scelta gialla.]
-            -> glyph_modifier_variation_management(SecondCharacter, earthC, decreaseYes)->
+            -> glyph_modifier_variation_management(SecondCharacter, earthC)->
             
         + [Scelta verde.]
-            -> glyph_modifier_variation_management(SecondCharacter, waterC, decreaseYes)->
+            -> glyph_modifier_variation_management(SecondCharacter, waterC)->
         -    
     Ci viene aperto il nido.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
     E poi {charNameThree} se ne va.
