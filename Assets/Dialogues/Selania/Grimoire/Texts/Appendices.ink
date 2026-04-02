@@ -279,12 +279,12 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     E poi non sono mai stata molto brava a fare le cose per bene.
     Ma c'è una cosa che ho fatto per bene, ormai trent'anni fa.
     Ed è stata quella di scegliermi un nuovo nome.
-    Prendere quello che la mia famiglia aveva deciso per me, quello con cui il mondo mi leggeva, valutava, giudicava, e prenderne uno che fosse solo mio.
+    Rinunciare a quello che la mia famiglia aveva deciso per me, quello con cui il mondo mi leggeva, valutava, giudicava, e prenderne uno che fosse solo mio.
     Il nome è una cosa potente.
     Ce lo insegna Ursula LeGuin ne "Il mago di Earthsea": conosci il vero nome di qualcuno, e avrai su di lui potere.
     Il mio vecchio nome era un incantesimo che mi teneva imprigionata.
     Ma per giungere al mio nuovo nome ho dovuto fare un percorso.
-    Un percorso che ha a che far col riscrivere il proprio passato.
+    Un percorso che ha a che far col riscrivere il mio passato.
     Non intendo un riscrivere di revisione: quella è una vecchia passione che lascio a chi ancora oggi ci è nemico.
     Parlo di una riscrittura che è un cambio di prospettiva, come quando ti rendi conto di aver trovato la protagonista giusta, ma la storia sbagliata.
     Voi qui ora siete così giovani, e sono sicura che vi sarete già sentite dire migliaia di volte che è un'età grandiosa questa, che avete tutto e non lo sapete.
@@ -298,6 +298,9 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     Magari ti chiamano Pesante, perché parli sempre di ciò che non va. Ma magari vorresti chiamarti Giustizia, perché noti sempre le storture di questo mondo.
     Magari ti chiamano Pasticciona, perché ti metti sempre nei casini. E invece potresti chiamarti Curiosità, perché credi solo a quello che puoi sperimentare in prima persona.
     Magari ti chiamano Robot, perché sembri riservato e distaccato. Ma forse il tuo vero nome è Voce, perché la tua unicità è così difficile da fare ascoltare, che hai smesso di provare a parlare.
+    Magari ti chiamano "Non abbastanza".
+    Ti chiamano "Rotta".
+    E tu dici: basta.
     Riscriversi e scegliere il proprio nome non è alzarsi e dirsi: da oggi sono questo.
     Per me è stato un processo solitario: avevo la vostra età, e pensavo di essere solamente sbagliata.
     Negli anni ho aiutato altre persone a riscriversi, e come tante cose, anche questo è un processo che funziona al meglio in compagnia.
