@@ -116,8 +116,17 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     //Se arrivo a options da un dialogo, non mostro commenti da parte della PNG, altrimenti sì.
-        C'è qualcosa che vuoi chiedermi ama?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious 
-                ~ firstChar_justTalked = false
+        {
+            - grimoire_firstChar has grimFirstCharOne:
+                C'è qualcosa che vuoi chiedermi ama?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious 
+
+            - else:
+                Serve qualcosa? #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed   
+
+
+        }
+
+        ~ firstChar_justTalked = false
         
 
     //Azioni legate alla riscrittura

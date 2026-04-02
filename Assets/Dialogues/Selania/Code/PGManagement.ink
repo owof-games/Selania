@@ -149,6 +149,8 @@
     <i>Un nome è un incantesimo, una possibilità.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
     <i>Quale nome verrà pronunciato?
 
+    - (top2)
+    
         + {name_choice > 1} [Il mio nome è {player_name}.]
             ->->
         
