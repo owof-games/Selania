@@ -1,9 +1,10 @@
 
 //Check se ridurre o meno il valore del sigillo
 LIST glyph_decreaseSigilsStatus = decreaseYes, decreaseNo
-
+LIST glyph_guestStarPossibileStatus= guestYes, guestNo
 //Variabile per decidere se decrementare o meno il valore
 VAR glyph_decreaseSigil = true
+VAR glyph_guestStarStatus = guestNo
 
 //Funzione di dispatch comune (sigillo attivo o meno)
 === glyph_modifier_variation_management(PNG, GlyphC, DecreaseS)
@@ -28,7 +29,7 @@ VAR glyph_decreaseSigil = true
                         ~ firstChar_last_fire = firstChar_fire
 
                     //E il contatore delle scelte prese
-                        ~ firstChar_totalChoices ++   
+                        ~ firstChar_totalChoices ++
                     
                     //Aggiorno i corrispettivi valori lato rapporto PNG/PG (ovvero: non cambio il valore dei dati dellx PNG)
                     {GlyphC:
@@ -120,33 +121,28 @@ VAR glyph_decreaseSigil = true
             - PNG == Mentor:
                     ~ glyph_currentTalker = Mentor
                     {debug_nest: dopo l'operazione il parlante attuale {glyph_currentTalker}.}
-                    //Nel caso di Mentore, non attivo mai le parole magiche, per cui esco direttamente dalla funzione
+                    //Non ho bisogno di aggiornare lo stato dei glifi, perché non vengono tracciati
+
+                    //Aumento il contatore delle scelte prese
+                        ~ mentor_totalChoices ++   
+
+                    //Aggiorno i corrispettivi valori lato rapporto PNG/PG (ovvero: non cambio il valore dei dati dellx PNG)
                     {GlyphC:
                             -fireC:
                                 ~ player_fire_mentor ++
-                                ~  mentor_fire ++
                         
                             -earthC:
                                 ~ player_earth_mentor ++
-                                ~  mentor_earth ++
                             
                             -airC:
                                 ~ player_air_mentor ++
-                                ~  mentor_air ++
                             
                             -waterC:
                                 ~ player_water_mentor ++   
-                                ~  mentor_water ++
                             
                             -aetherC:
                                 ~ player_aether_mentor ++
-                                ~  mentor_aether ++
                     }
-
-                    //E il contatore delle scelte prese
-                        ~ mentor_totalChoices ++   
-
-                    ->->
                     
             - PNG == PG:
             //Nel caso dellx PG, non attivo mai le parole magiche, per cui esco direttamente dalla funzione
@@ -319,6 +315,14 @@ VAR glyph_decreaseSigil = true
                 ~ thirdChar_water += glyph_temporaryWater
                 ~ thirdChar_aether += glyph_temporaryAether
                 ~ thirdChar_relationship_variation()
+
+            - glyph_currentTalker == Mentor:
+                ~ mentor_fire += glyph_temporaryFire 
+                ~ mentor_earth += glyph_temporaryEarth
+                ~ mentor_air += glyph_temporaryAir
+                ~ mentor_water += glyph_temporaryWater
+                ~ mentor_aether += glyph_temporaryAether
+                  
         }
 
     
@@ -327,6 +331,7 @@ VAR glyph_decreaseSigil = true
     = sigil_PNG_reactions
     //Qui invece abbiamo le reazioni dellx PNG
     {
+        //Ai sigilli, se attivi
         - glyph_currentTalker == FirstCharacter && glyph_actualActiveSigil != ():
             -> sigil_FirstCharacter_reactions
         
@@ -336,12 +341,37 @@ VAR glyph_decreaseSigil = true
         - glyph_currentTalker == ThirdCharacter && glyph_actualActiveSigil != ():
             -> sigil_ThirdCharacter_reactions
 
+        - glyph_currentTalker == FourthCharacter && glyph_actualActiveSigil != ():
+            -> sigil_FourthCharacter_reactions
+
+        - glyph_currentTalker == FifthCharacter && glyph_actualActiveSigil != ():
+            -> sigil_FifthCharacter_reactions    
+
+        //Come guests, se presenti
+        - glyph_currentTalker == FirstCharacter && glyph_guestStarStatus == guestYes:
+            -> glyph_FirstCharacter_reactions
+        
+        - glyph_currentTalker == SecondCharacter && glyph_guestStarStatus == guestYes:
+            -> glyph_SecondCharacter_reactions
+
+        - glyph_currentTalker == ThirdCharacter && glyph_guestStarStatus == guestYes:
+            -> glyph_ThirdCharacter_reactions
+
+        - glyph_currentTalker == FourthCharacter && glyph_guestStarStatus == guestYes:
+            -> glyph_ThirdCharacter_reactions  
+
+        - glyph_currentTalker == FifthCharacter && glyph_guestStarStatus == guestYes:
+            -> glyph_ThirdCharacter_reactions  
+
+        - glyph_currentTalker == Mentor && glyph_guestStarStatus == guestYes:
+            -> glyph_ThirdCharacter_reactions              
+
         - else:
             -> closing_function    
 
     }
 
-
+    //Reazione ai sigilli
             = sigil_FirstCharacter_reactions
             //Qui settiamo le reazioni ad hoc, a seconda delle variazioni 
             {firstChar_relationshipReaction:
@@ -368,8 +398,7 @@ VAR glyph_decreaseSigil = true
                     }
 
             }
-
-                -> closing_function
+            -> closing_function
             
             
             = sigil_SecondCharacter_reactions
@@ -397,9 +426,7 @@ VAR glyph_decreaseSigil = true
                     }
 
             }
-            
-            
-                -> closing_function
+            -> closing_function
 
             
             = sigil_ThirdCharacter_reactions
@@ -427,9 +454,212 @@ VAR glyph_decreaseSigil = true
                     }
 
             }
-            
-            
-                -> closing_function
+            -> closing_function
+
+            = sigil_FourthCharacter_reactions
+            {fourthChar_relationshipReaction:
+
+                - neutral:
+                    {shuffle:
+                        - Reazione neutra al sigillo.
+                        - Altra reazione neutra al sigillo.
+                        - Un'altra ancora reazione neutra al sigillo.
+                    }
+
+                - positive:
+                    {shuffle:
+                        - Reazione positiva al sigillo.
+                        - Altra reazione positiva al sigillo.
+                        - Un'altra ancora reazione positiva al sigillo.
+                    }
+
+                - negative:
+                    {shuffle:
+                        - Reazione negativa al sigillo.
+                        - Altra reazione negativa al sigillo.
+                        - Un'altra ancora reazione negativa al sigillo.
+                    }
+
+            }
+            -> closing_function
+
+            = sigil_FifthCharacter_reactions
+            {fifthChar_relationshipReaction:
+
+                - neutral:
+                    {shuffle:
+                        - Reazione neutra al sigillo.
+                        - Altra reazione neutra al sigillo.
+                        - Un'altra ancora reazione neutra al sigillo.
+                    }
+
+                - positive:
+                    {shuffle:
+                        - Reazione positiva al sigillo.
+                        - Altra reazione positiva al sigillo.
+                        - Un'altra ancora reazione positiva al sigillo.
+                    }
+
+                - negative:
+                    {shuffle:
+                        - Reazione negativa al sigillo.
+                        - Altra reazione negativa al sigillo.
+                        - Un'altra ancora reazione negativa al sigillo.
+                    }
+
+            }
+            -> closing_function
+
+
+    //Reazione ai glifi
+    = glyph_FirstCharacter_reactions
+            //Qui settiamo le reazioni ad hoc, a seconda delle variazioni 
+            {firstChar_relationshipReaction:
+
+                - neutral:
+                    {shuffle:
+                        - Reazione neutra al glifo.
+                        - Altra reazione neutra al glifo.
+                        - Un'altra ancora reazione neutra al glifo.
+                    }
+
+                - positive:
+                    {shuffle:
+                        - Reazione positiva al glifo.
+                        - Altra reazione positiva al glifo.
+                        - Un'altra ancora reazione positiva al glifo.
+                    }
+
+                - negative:
+                    {shuffle:
+                        - Reazione negativa al glifo.
+                        - Altra reazione negativa al glifo.
+                        - Un'altra ancora reazione negativa al glifo.
+                    }
+
+            }
+            -> closing_function
+
+    = glyph_SecondCharacter_reactions
+            //Qui settiamo le reazioni ad hoc, a seconda delle variazioni 
+            {secondChar_relationshipReaction:
+
+                - neutral:
+                    {shuffle:
+                        - Reazione neutra al glifo.
+                        - Altra reazione neutra al glifo.
+                        - Un'altra ancora reazione neutra al glifo.
+                    }
+
+                - positive:
+                    {shuffle:
+                        - Reazione positiva al glifo.
+                        - Altra reazione positiva al glifo.
+                        - Un'altra ancora reazione positiva al glifo.
+                    }
+
+                - negative:
+                    {shuffle:
+                        - Reazione negativa al glifo.
+                        - Altra reazione negativa al glifo.
+                        - Un'altra ancora reazione negativa al glifo.
+                    }
+
+            }
+            -> closing_function    
+
+    = glyph_ThirdCharacter_reactions
+            //Qui settiamo le reazioni ad hoc, a seconda delle variazioni 
+            {thirdChar_relationshipReaction:
+
+                - neutral:
+                    {shuffle:
+                        - Reazione neutra al glifo.
+                        - Altra reazione neutra al glifo.
+                        - Un'altra ancora reazione neutra al glifo.
+                    }
+
+                - positive:
+                    {shuffle:
+                        - Reazione positiva al glifo.
+                        - Altra reazione positiva al glifo.
+                        - Un'altra ancora reazione positiva al glifo.
+                    }
+
+                - negative:
+                    {shuffle:
+                        - Reazione negativa al glifo.
+                        - Altra reazione negativa al glifo.
+                        - Un'altra ancora reazione negativa al glifo.
+                    }
+
+            }
+            -> closing_function
+
+    = glyph_FourthCharacter_reactions
+            //Qui settiamo le reazioni ad hoc, a seconda delle variazioni 
+            {fourthChar_relationshipReaction:
+
+                - neutral:
+                    {shuffle:
+                        - Reazione neutra al glifo.
+                        - Altra reazione neutra al glifo.
+                        - Un'altra ancora reazione neutra al glifo.
+                    }
+
+                - positive:
+                    {shuffle:
+                        - Reazione positiva al glifo.
+                        - Altra reazione positiva al glifo.
+                        - Un'altra ancora reazione positiva al glifo.
+                    }
+
+                - negative:
+                    {shuffle:
+                        - Reazione negativa al glifo.
+                        - Altra reazione negativa al glifo.
+                        - Un'altra ancora reazione negativa al glifo.
+                    }
+
+            }
+            -> closing_function
+
+    = glyph_FifthCharacter_reactions
+            //Qui settiamo le reazioni ad hoc, a seconda delle variazioni 
+            {fifthChar_relationshipReaction:
+
+                - neutral:
+                    {shuffle:
+                        - Reazione neutra al glifo.
+                        - Altra reazione neutra al glifo.
+                        - Un'altra ancora reazione neutra al glifo.
+                    }
+
+                - positive:
+                    {shuffle:
+                        - Reazione positiva al glifo.
+                        - Altra reazione positiva al glifo.
+                        - Un'altra ancora reazione positiva al glifo.
+                    }
+
+                - negative:
+                    {shuffle:
+                        - Reazione negativa al glifo.
+                        - Altra reazione negativa al glifo.
+                        - Un'altra ancora reazione negativa al glifo.
+                    }
+
+            }
+            -> closing_function
+
+    = glyph_Mentor_reactions
+            //Per ora per Mentore punterei su una serie di reazioni neutre, visto che non abbiamo un contatore della relazion
+                {shuffle:
+                    - Reazione neutra al glifo.
+                    - Altra reazione neutra al glifo.
+                    - Un'altra ancora reazione neutra al glifo.
+                }
+            -> closing_function
 
 
     = closing_function
@@ -440,6 +670,7 @@ VAR glyph_decreaseSigil = true
         ~ glyph_temporaryAir= 0
         ~ glyph_temporaryWater= 0
         ~ glyph_temporaryAether = 0
+        
     {debug_nest: dopo l'operazione il parlante attuale {glyph_currentTalker}.}
 
     //Infine: se il valore di DecreaseS è su sì, diminuiamo il valore del sigillo, altrimenti no

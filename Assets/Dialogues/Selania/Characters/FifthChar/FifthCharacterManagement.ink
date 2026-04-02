@@ -13,7 +13,8 @@
     VAR fifthChar_storyEndingPosition = ()
     
 //Tracciamento della relazione
-    VAR fifthChar_relationshipStatus = 0 
+    VAR fifthChar_relationshipStatus = 0
+    VAR fifthChar_relationshipReaction = neutral
  
  //Tracciamento cucina
     //Autonoma
