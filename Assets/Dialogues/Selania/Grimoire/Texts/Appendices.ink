@@ -200,7 +200,9 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     Oggi, due agosto duemiladieci, sono passati esattamente trent'anni dalla bomba che ce l'ha portata via mentre era alla stazione di Bologna.
     Bomba messa dalle stesse persone contro cui ha lottato per una vita, con la piazza e con la magia.
     Le stesse persone i cui volti e ideali ora sono al Governo, sdoganati con una leggerezza che alcune di noi, le più vecchie di noi, vivono come un fallimento.
-    Il passato, quel passato che non doveva ripetersi, è oggi il nostro presente.
+    L'avevamo detto alla fine della guerra, e non ci hanno ascoltate: il fascismo era qualcosa da estirpare.
+    Invece hanno lasciato i suoi funzionari nello scheletro della Repubblica, c'è stata l'amnistia.
+    E quel passato, quel passato che non doveva ripetersi, è oggi il nostro presente.
     <i>Mormorii dalla sala.</i>
     Ma lo sono anche i suoi anticorpi.
     Molte di voi non erano nemmeno nate quando O.U.J. ha perso la vita, ma tutte voi la conoscete.
@@ -208,7 +210,7 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     Attraverso la testimonianza costante di quella capacità di cura e ascolto che solo lei aveva.
     O.U.J. ha lottato, sempre.
     Anche contro la congrega, quando alcune di noi, me compresa, non erano pronte ad accogliere una donna trans tra le nostre fila.
-    <i>Una porta che si chiude.</i>
+    <i>Una porta viene sbattuta.</i>
     Ci sono volte in cui la cosa migliore che ti possa capitare è di non avere ragione.
     Scusate ma le lacrime rendono difficile leggere.
     <i>Rumore d'acqua in un bicchiere.</i>
@@ -220,12 +222,12 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     Chi ha avuto la fortuna di cucinare con lei ha visto quanto quell'esperienza potesse essere trasformativa.
     Quante di noi hanno ammesso per la prima volta a voce alta cose di sé che nemmeno conoscevano, mentre condividevano con lei un piatto di zuppa?
     Quante hanno raccontato le difficoltà che vivevano dentro e fuori la congrega con tranquillità, con senso di accoglienza, così da capire cosa fare, cosa cambiare?
-    Quante volte il giusto ingrediente, ci ha aiutato a capire cosa andava o meno nei nostri rapporti?
+    Quante volte il giusto ingrediente ci ha aiutate a capire cosa andava o meno nei nostri rapporti?
     O.U.J. ci ha lasciato uno dei riti più potenti: la condivisione.
     O.U.J. non riconosceva alcun possesso.
     Le cose sono fatte per essere usate da chi ne ha bisogno in quel momento.
     Ha creato un modo di gestire la congrega, e la magia, che mette al centro non il possedere, ma il donare.
-    Ha sempre detto che è qualcosa che ha imparato "nel giardino", quando è scomparsa per due mesi con altre compagne.
+    Ha sempre detto che è qualcosa che ha imparato "nel giardino", quando è scomparsa per due anni con altre compagne.
     Ma ho sempre pensato che in realtà quell'esperienza avesse fatto maturare in lei qualcosa che già era lì, viva e potente.
     Pensiamo a come ci ha insegnato a cucinare.
     Cucinare con lei voleva dire rispondere a domande non con "Sì" e "No" e "In realtà credo che...".
