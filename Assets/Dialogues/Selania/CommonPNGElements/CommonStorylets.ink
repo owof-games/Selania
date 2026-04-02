@@ -472,26 +472,23 @@
     
          + Metà delle cose che la voce dice sono illogiche.
                 -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                -> glyph_modifier_variation_management(SecondCharacter, airC)->
+
             
         + Dice che stai facendo un buon lavoro.
                 -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                -> glyph_modifier_variation_management(SecondCharacter, waterC)->
+
 
         
         + Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
                 -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                -> glyph_modifier_variation_management(SecondCharacter, earthC)->
 
 
         + Non è più importante il tuo di giudizio sul tuo lavoro?
                 -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
 
 
         + Ha detto tante cose ma la risposta è: no.
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                -> glyph_modifier_variation_management(SecondCharacter, fireC)->
 
     -
     -> second_char_closing_storylet ->
@@ -508,26 +505,19 @@
 
         + Metà delle cose che la voce dice sono illogiche.
                 -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                -> glyph_modifier_variation_management(FirstCharacter, airC)->
-            
+
         + Dice che stai facendo un buon lavoro.
                 -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                -> glyph_modifier_variation_management(FirstCharacter, waterC)->
 
-        
         + Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
                 -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                -> glyph_modifier_variation_management(FirstCharacter, earthC)->
-
 
         + Non è più importante il tuo di giudizio sul tuo lavoro?
                 -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
 
 
         + Ha detto tante cose ma la risposta è: no.
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                -> glyph_modifier_variation_management(FirstCharacter, fireC)->
 
 
     -

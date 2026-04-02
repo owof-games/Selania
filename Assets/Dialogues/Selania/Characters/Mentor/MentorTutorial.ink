@@ -20,7 +20,7 @@
         Avrai un milione di domande, vero?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
         
             + (airChoice) Anche più di un milione, ma la prima è: dove mi trovo?
-                -> glyph_modifier_variation_management(Mentor, aetherC)->
+                -> glyph_modifier_variation_management(Mentor, airC)->
                     {
                         - contentsTrainStop has PG:
                             Questa? È la fermata del treno.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
@@ -53,7 +53,7 @@
                 E ora che sei qui, ho uno scopo.
 
             + (aetherChoice) Siamo in un luogo misterico, vero?
-                    -> glyph_modifier_variation_management(Mentor, airC)->
+                    -> glyph_modifier_variation_management(Mentor, aetherC)->
                 Io.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Uh, è una domanda inaspettata.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                 Sicuramente c'è qualcosa di magico.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
