@@ -19,8 +19,7 @@
     Se butta male, posso sempre tornare.
     G.M.
 
-    -> horizontalSEndingStorylet
-    
+    ->->
 
 
 === docTwo_storylet ===
@@ -44,8 +43,7 @@
     A presto.
     O.U.J.
 
-    -> horizontalSEndingStorylet
-    
+    ->->
 
 
 === docThree_storylet ===
@@ -64,7 +62,7 @@
     Chiederò all'acqua di donarmi visioni con una bella nuotata.
     S.C.
 
-    -> horizontalSEndingStorylet
+    ->->
     
 
 
@@ -90,7 +88,7 @@
     PS: S.C. ha chiesto a tutte di non lasciare in giro nomi e cognomi su diari e appunti perché "non si sa mai".
     Ho l'impressione che ci sia qualcosa che non ci sta dicendo, ma ancora non riesco a capire cosa.
 
-    -> horizontalSEndingStorylet
+    ->->
 
 
 === docFive_storylet ===
@@ -118,7 +116,7 @@
     Mmm, come se a qualcun altra interessassero così tanto i libri.
 
 
-    -> horizontalSEndingStorylet 
+    ->->
     
 
 === docSix_storylet ===
@@ -147,7 +145,7 @@
     Perché se non lo capisco, di cosa dovrei parlare?
     K.
 
-    -> horizontalSEndingStorylet 
+    ->->
     
 
 === docSeven_storylet ===
@@ -163,7 +161,7 @@
     E se posso capire qual è, posso anche controllarlo.
     S.C.
 
-    -> horizontalSEndingStorylet 
+    ->->
     
 
 === docEight_storylet ===
@@ -188,7 +186,7 @@
     Ed è grazie ai libri che ho avuto un'idea: usare le energie di questo luogo per far rileggere alle persone in modo diverso le cose.
     Come ad esempio fare rileggere a K. i miei comportamenti per quello che sono: il mio modo di trovare soluzioni per salvare il mondo.
 
-    -> horizontalSEndingStorylet 
+    ->->
     
 
 === docNine_storylet ===
@@ -218,7 +216,7 @@
     Devo ancora capire se è una presa in giro, o se è un modo per dire "Benvenuto nella congrega".
     Comunque sia, la adoro.
 
-    -> horizontalSEndingStorylet 
+    ->->
     
 
 
@@ -247,7 +245,7 @@
     Vado a farle un po' di compagnia.
     K.
 
-    -> horizontalSEndingStorylet 
+    ->->
     
 
 === docEleven_storylet ===
@@ -282,7 +280,7 @@
     Il gufo torna ad essere un pappagallino.
     La mia testa esplode.
 
-    -> horizontalSEndingStorylet 
+    ->->
     
 
 
@@ -309,7 +307,7 @@
     Quando si è addormentato al mio fianco, il glifo a croce ha brillato per ore.
     S.C.
 
-    -> horizontalSEndingStorylet 
+    ->->
     
 
 
@@ -337,7 +335,7 @@
     Non voglio sapere cosa ci combinerà.
     K.
 
-    -> horizontalSEndingStorylet 
+    ->->
     
 
 
@@ -374,7 +372,7 @@
     C'è un'ultima cosa: il mio nome mi sta stretto, non suona più giusto.
     Da ora mi chiamerò Y.
 
-    -> horizontalSEndingStorylet 
+    ->->
     
 
 
@@ -406,7 +404,7 @@
     Mi rimetto ai fornelli.
     O.U.J.
 
-    -> horizontalSEndingStorylet 
+    ->->
     
 
 
@@ -435,7 +433,7 @@
     Abbiamo le compagne rimaste in città, quelle che non sanno della congrega. Mi riunirò a loro.
     G.M.
 
-    -> horizontalSEndingStorylet 
+    ->->
     
 
 
@@ -459,7 +457,7 @@
     Noi cinque faremo la storia.
     S.C.
 
-    -> horizontalSEndingStorylet 
+    ->->
     
 
 
@@ -492,7 +490,7 @@
     Non sono mai stata così forte come strega, non sono mai stata così debole come essere umano.
     K.
 
-    -> horizontalSEndingStorylet 
+    ->->
     
 
 
@@ -517,7 +515,7 @@
     Non credo di volerle più parlare.
     G.M.
 
-    -> horizontalSEndingStorylet 
+    ->->
     
 
 
@@ -548,7 +546,7 @@
     Tua.
     O.U.J.
 
-    -> horizontalSEndingStorylet 
+    ->->
     
 
 
@@ -569,7 +567,7 @@
     Era buio e così ho pianto.
     E poi ci siamo ubriacate sul prato.
 
-    -> horizontalSEndingStorylet 
+    ->->
     
 
 
@@ -599,7 +597,7 @@
     A presto.
     O.U.J.
 
-    -> horizontalSEndingStorylet 
+    ->->
     
 
 
@@ -631,14 +629,14 @@
     tua.
     O.U.J.
 
-    -> horizontalSEndingStorylet 
+    ->->
     
 
 === docTwentyFour_storylet ===
 //S.C.
     Ora che so come fargli del bene, lui non è più qui con me.#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docNest
 
-    -> horizontalSEndingStorylet 
+    ->->
     
 
 
@@ -658,5 +656,5 @@
     Ti voglio bene.
     O.U.J.
 
-    -> horizontalSEndingStorylet 
+    ->->
        

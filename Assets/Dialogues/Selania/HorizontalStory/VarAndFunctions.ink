@@ -251,85 +251,84 @@ VAR horizontalS_libraryThirdTier = 5
 {debug_horizontalS: passo per horizontalS_storyletsDispatcher}    
     {horizontalS_currentDoc:
         - docOne:
-            -> docOne_storylet
+            -> docOne_storylet -> horizontalSEndingStorylet 
 
         - docTwo:
-            -> docTwo_storylet
+            -> docTwo_storylet -> horizontalSEndingStorylet 
 
         - docThree:
-            -> docThree_storylet
+            -> docThree_storylet -> horizontalSEndingStorylet 
 
         - docFour:
-            -> docFour_storylet
+            -> docFour_storylet -> horizontalSEndingStorylet 
 
         - docFive:
-            -> docFive_storylet
+            -> docFive_storylet -> horizontalSEndingStorylet 
 
         - docSix:
-            -> docSix_storylet
+            -> docSix_storylet -> horizontalSEndingStorylet 
 
         - docSeven:
-            -> docSeven_storylet
+            -> docSeven_storylet -> horizontalSEndingStorylet 
         
         - docEight:
-            -> docEight_storylet
+            -> docEight_storylet -> horizontalSEndingStorylet 
         
         - docNine:
-            -> docNine_storylet
+            -> docNine_storylet -> horizontalSEndingStorylet 
         
         - docTen:
-            -> docTen_storylet
+            -> docTen_storylet -> horizontalSEndingStorylet 
         
         - docEleven:
-            -> docEleven_storylet
+            -> docEleven_storylet -> horizontalSEndingStorylet 
 
         - docTwelve:
-            -> docTwelve_storylet
+            -> docTwelve_storylet -> horizontalSEndingStorylet 
          
         - docThirteen:
-            -> docThirteen_storylet
+            -> docThirteen_storylet -> horizontalSEndingStorylet 
         
         - docFourteen:
-            -> docFourteen_storylet
+            -> docFourteen_storylet -> horizontalSEndingStorylet 
         
         - docFifteen:
-            -> docFifteen_storylet
+            -> docFifteen_storylet -> horizontalSEndingStorylet 
         
         - docSixteen:
-            -> docSixteen_storylet
+            -> docSixteen_storylet -> horizontalSEndingStorylet 
         
         - docSeventeen:
-            -> docSeventeen_storylet
+            -> docSeventeen_storylet -> horizontalSEndingStorylet 
         
         - docEighteen:
-            -> docEighteen_storylet
+            -> docEighteen_storylet -> horizontalSEndingStorylet 
         
         - docNineteen:
-            -> docNineteen_storylet
+            -> docNineteen_storylet -> horizontalSEndingStorylet 
 
         - docTwenty:
-            -> docTwenty_storylet
+            -> docTwenty_storylet -> horizontalSEndingStorylet 
 
         - docTwentyOne:
-            -> docTwentyOne_storylet
+            -> docTwentyOne_storylet -> horizontalSEndingStorylet 
         
         - docTwentyTwo:
-            -> docTwentyTwo_storylet
+            -> docTwentyTwo_storylet -> horizontalSEndingStorylet 
         
         - docTwentyThree:
-            -> docTwentyThree_storylet
+            -> docTwentyThree_storylet -> horizontalSEndingStorylet 
         
         - docTwentyFour:
-            -> docTwentyFour_storylet
+            -> docTwentyFour_storylet -> horizontalSEndingStorylet 
         
         - docTwentyFive:
-            -> docTwentyFive_storylet
+            -> docTwentyFive_storylet -> horizontalSEndingStorylet 
 
         - else:
             ERROR: non ci sono valori validi per  horizontalS_currentDoc, che è uguale a {horizontalS_currentDoc}.   
             -> END
 
     }
-
 
 ->->
