@@ -28,6 +28,9 @@
     
     Ma Liliana non voleva cedere: No, ripeteva, No, scelgo io da sola.<N>Lo zio stava per aprire il cancello.<N>Liliana tremava: storie di famiglia raccontavano del passato violento di quell'uomo.<N>Liliana era stanca, tremava di rabbia, urlo di nuovo e più forte “NO” mentre lui apriva il cancello che di scatto si chiuse, tranciando di netto le mani dello zio.<N>Qualche giorno dopo Liliana andò al cimitero. Era una giornata di sole: in lontananza la casa sua e di Alfredo brillava sulle chiome degli ulivi. 
 
+    //Check per achievement racconti
+    -> achievements_onGame_statusUpdate_RM ->
+
         + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
            -> book_test_intro
@@ -64,6 +67,9 @@
     E fa bene.<N>La mia mano comincia a stringersi attorno a lui, facendo attenzione a non coprirgli la faccia perché non voglio perdermi neanche un secondo della sua sofferenza.<N>Prova a parlare, a chiedermi pietà, e io rido.<N>La malvagità stampata sul mio volto - Perché non provi a chiedermelo di nuovo? -.
     
     Lui apre la bocca.<N>Urlo più forte - CHIEDIMELO ANCORA! -<N>Nel momento in cui prova di nuovo a prendere fiato lo stringo con entrambe le mani e lo faccio diventare polvere.<N>Raccolgo il cumulo rimasto nella conca della mia mano e lo soffio al vento.<N>Lo guardo volare via con il sorriso sul volto mentre ritorno alle mie dimensioni normali.<N>Mi accorgo che anche la mia pazzia sta volando via.<N>La riacciuffo immediatamente “Tu resti qua con me.
+
+    //Check per achievement racconti
+    -> achievements_onGame_statusUpdate_RM ->
 
         + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
@@ -109,6 +115,9 @@
     "<i>Poi hai incontrato quella porta. Un pugno, un singolo pugno. Da allora tutto è cambiato, vero?</i>"<N>"Già."<N>"<i>Ecco di cosa siamo custodi. Del vostro io, della vostra realtà, della vostra identità. Della vostra rabbia."<N>"Rabbia? È questo che sei?"<N>"<i>Cos'è? Percepisco forse della delusione?</i>"<N>"No, no, anzi. Solo che, boh, ti immaginavo più violenta."<N>"<i>Sì, sì, ci credo, guarda. Magari ti immaginavi che la rabbia fosse, che so, un fucile d'assalto, vero?"
     
     "E invece..."<N>"E invece sei una porta decisamente pacata."<N>"<i>Ma sì, che senso avrebbe che io urlassi, strepitassi, sbattessi? Cambierebbe forse qualcosa del mio essere porta? Nah, per nulla.</i>"<N>"Invece..."<N>"<i>Invece se ad aprirmi, sbattermi, rompermi, sfondarmi, sei tu...</i>"<N>"Cosa troverò al di là?"<N>"<i>Al di là di me?</i>"<N>"Sì."<N>"<i>Dai un'occhiata.</i>"
+
+    //Check per achievement racconti
+    -> achievements_onGame_statusUpdate_RM ->
 
         + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
@@ -156,6 +165,9 @@
     
     Il fiume nero smette di scorrere in segreto e si trasforma in un incendio che mi brucia, ma non mi distrugge. Mi purifica.<N>Giro il mazzo, l'ultima carta, il Matto.<N>Il viaggiatore con il fagotto sulla spalla, il piede sospeso sull'orlo del precipizio.<N>Un salto nel vuoto, un atto di fede.<N>Lo guardo e sorrido, per la prima volta da mesi, da anni o forse da sempre, è un sorriso che è tutto mio ed è solo per me.
 
+    //Check per achievement racconti
+    -> achievements_onGame_statusUpdate_RM ->
+
         + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
            -> book_test_intro
@@ -184,6 +196,9 @@
 //     Nel parco è rimasto un vuoto più ampio dello spazio che hai mai occupato.<N>L'ho fatto senza pensarci: ho posato la mano a terra.<N>Ho pregato.<N>E tutto quello che vedevo ha bruciato.<N>Ma.<N>Stasera, tornando niente fuoco, niente fuliggine. <N>Ma vicino alla tua carcassa il cane e io abbiamo notato un pollone.<N>Tenace e piccolino teso verso l'alto, i rami ancora gemme, la corteccia morbida e rigata.
     
 //     Le macchine che ti hanno tagliato moriranno.<N>Spariranno gli uomini che le hanno comandate.<N>Ma tu, di notte in notte, riprenderai a lanciare i tuoi fiori nell'aria.<N>A rendere gialla la strada verso casa.
+
+//Check per achievement racconti
+//    -> achievements_onGame_statusUpdate_RM ->
 
 //         + <i>Vorrei leggere ancora.
 //             ~ disableBigDialogue()

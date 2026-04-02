@@ -27,6 +27,9 @@
     
     «Sindaco, l'unica opzione qui è incollarli a terra. Tutti. Ogni muretto, ogni sasso del viale, ogni minuscola briciola di calcestruzzo che esce dalle fughe delle piastrelle di ogni cucina.»<N>«Inutile incollare qualcosa di demoniaco! Qui, sindaco, propongo di torchiare quelle aragoste, capire come hanno fatto a mettere certe idee strane in mente a quel sasso! Via la testa, il corpo cade.»<N>Mentre discutevano sulle tipologie di colla vinilica in commercio, e vagliavano la possibilità di gambizzare qualcosa che non possiede arti, un rumore attirò la loro attenzione: toc, toc.<N>Dei sassolini avevano iniziato a colpire la finestra.
 
+    //Check per achievement racconti
+    -> achievements_onGame_statusUpdate_RM ->
+
         + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
            -> book_test_intro
@@ -63,6 +66,9 @@
     
     Con violenza l'ho urlato alla mia ansia e ai miei errori, l'ho urlato alla tua immagine, l'ho urlato alle tue idee che erano la mia  croce.<N>L'ho gridato in corteo e alle mie etichette, alla vita e alle politiche fasciste.<N>Ed è da allora che come un'accetta che taglia il legno mi faccio strada tra la vita e il sogno. Un colpo alla volta faccio di me il mio unico regno e non mi curo di cosa perdo per strada, ogni fronda tagliata, caduta e abbandonata sarà ricreata o ne rimarrò senza: in ogni caso sarà una nuova cicatrice da me scelta e non inflitta dalla tua cura scellerata.
     
+    //Check per achievement racconti
+    -> achievements_onGame_statusUpdate_RM ->
+
         + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
            -> book_test_intro
@@ -99,6 +105,9 @@
     And so he enters me and asks if I like it, and my obedient voice answers Yes, yes, I like it, even though my body feels nothing, even though the rabid dog inside me thrashes, even though <N>I <N>want <N>to <N>tear <N>this <N>man <N>open<N>with spider legs, even though I want to slam my head against the wall until I no longer recognize it, even though I can only come when I lie on my bed and touch myself, without penetration, without him—now that, 
     
     finally, <N>testosterone is secretly coursing through me, and I imagine myself on top, penetrating, claiming, doing what my body wants, and my rage erupts, and the dog's chain snaps, and my body shiny with T-gel is the meltdown of the universe—the entire universe kicks and screams and thrashes with me.<N>And my house is quiet now.<N>Its walls are drenched in colors I have never seen before, flung in strokes.<N>My body is the home I have chosen for myself.
+
+    //Check per achievement racconti
+    -> achievements_onGame_statusUpdate_RM ->
 
         + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
@@ -143,6 +152,9 @@
     
     nella biblioteca dove i precettori gli dicevano che <N>pensava troppo e ubbidiva poco, fino alle stanze reali, dove aveva sentito il Re dire alla Regina che si vergognava di lui.<N>E con la spada in mano si riprese tutto ciò che gli apparteneva di diritto.
 
+    //Check per achievement racconti
+    -> achievements_onGame_statusUpdate_RM ->
+    
         + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
            -> book_test_intro

@@ -401,7 +401,8 @@
         }
         //Aggiornamento lista di quelli comuni
         -> grimoire_common_storylets_updater ->
+        //E check achievement nel caso avessimo finito i dodici storylets principali
+        -> achievements_onGame_statusUpdate_RM ->
         
-
 ->->
 

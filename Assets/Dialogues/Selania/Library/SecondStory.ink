@@ -25,6 +25,10 @@
     Mimosa abbracciò stretta Alchemilla, schioccandole un bacio sulla guancia. Il fuoco diventò tutto rosso dall'emozione. <N>Forsizia passò a tutte una ciotola fumante e infine le raggiunse, sedendosi anche lei ad ammirare il fuoco, soddisfatta.<N>"Che hai preparato oggi?" le chiese Alchemilla, ancora un po' su di giri.<N>"Zuppa di patate" rispose Forsizia, prendendo un'abbondante cucchiaiata. <N>"La mia preferita!" sospirò felice Bergamotto, prendendo posto anche lei intorno al fuoco.
     
     "Ci ho messo un ingrediente segreto stavolta. Vediamo se indovinate."<N>"Mmm… cos'è, paprika dolce?" chiese Alchemilla, assaggiando.<N>"No, secondo me è berberè" disse Mimosa.<N>"Fuochino" rispose Forsizia, ridacchiando.<N>Il fuoco, che poco prima ruggiva alto e incandescente, ora lambiva dolcemente i ciocchi di legno, caldo e avvolgente, illuminando tutte di una dolce, incantevole luce dorata.
+
+    //Check per achievement racconti
+    -> achievements_onGame_statusUpdate_RM ->
+
         + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
            -> book_test_intro
@@ -69,6 +73,9 @@
         
         Ma forse ho la magia della luce ora che l'ho vista così da vicino, quindi mi posso rialzare e posso provarci di nuovo, se succede.<N>Abbraccio forte la mia mamma anche se lei non mi guarda. <N>Non me lo dice mai con la voce ma è un po' come se chiedesse aiuto quando fa così. <N>Forse a volte mi chiede anche scusa senza dirlo. Mi accarezza la testa. <N>Nessuno merita di stare da solo quando piange.
 
+        //Check per achievement racconti
+        -> achievements_onGame_statusUpdate_RM ->
+
         + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
            -> book_test_intro
@@ -104,7 +111,10 @@
     Non sono stata in grado di accoglierla quando era più fragile. Spero che abbia sempre saputo che le volevo bene, anche quando c'era questa rabbia fra di noi.<N>Ho imparato che tutti dobbiamo fare i conti con le nostre ferite se non vogliamo che infliggano dolore anche agli altri. <N>Oggi, quella rabbia non è più con me. È un ricordo sbiadito, che non riesco ad afferrare: se n'è andata, non mi appartiene più.
     
     Non sono più quell'adolescente piena di rabbia.<N>Ho sempre pensato che quella rabbia mi rendesse forte, che fosse come un'armatura che mi avrebbe resa inscalfibile. Ora che non riesco più a ritrovarla, mi domando se non fosse ,forse solo, forse anche, un peso, un peso che mi ero abituata a portare ma senza il quale sono più leggera. Più fragile, ma più leggera.         
-            
+
+    //Check per achievement racconti
+    -> achievements_onGame_statusUpdate_RM ->        
+    
         + <i>Vorrei leggere ancora.
                 ~ disableBigDialogue()
            -> book_test_intro

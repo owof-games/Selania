@@ -1239,6 +1239,7 @@
     
         
     = relationship_feedback
+    -> achievements_onGame_statusUpdate_GM ->
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -1251,7 +1252,7 @@
         E penso che se ti ho conosciuto solo qui in cucina ora e {charNameOne} mi dice: vuoi fare amicizia con {player_name}?
 
             -> secondAffinityCalc ->
-            -> achievements_onGame_statusUpdate_GM ->
+            
             {
                 - secondAffinityCalc == 1:
                     {

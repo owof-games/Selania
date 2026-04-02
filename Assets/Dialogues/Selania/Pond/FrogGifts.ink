@@ -5,6 +5,7 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
+-> achievements_onGame_statusUpdate_GM ->
 Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
 
 - (top)
@@ -795,7 +796,6 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
     Quella è una mano, vero?
     A dopo girino!
 
-    -> achievements_onGame_statusUpdate_GM ->
     -> special_mission_pause_check ->
     //Svuoto il destinatario della missione attuale per sicurezza
     @animation:RewriterBook

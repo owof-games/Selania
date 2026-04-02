@@ -170,7 +170,8 @@
             
        
             ~ firstChar_mailPause = firstChar_mailPauseDuration
-                -> main
+            -> achievements_onGame_statusUpdate_GM ->
+            -> main
     
     = two
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -537,6 +538,7 @@
         }
         
             ~ secondChar_mailPause = secondChar_mailPauseDuration
+                -> achievements_onGame_statusUpdate_GM ->
                 -> main
     
     = two
@@ -737,6 +739,7 @@
             
         }        
             ~ secondChar_mailPause = secondChar_mailPauseDuration
+            
                 -> main
     
 === third_character_notes ===
@@ -783,6 +786,7 @@
         }
         
         ~ thirdChar_mailPause = thirdChar_mailPauseDuration
+            -> achievements_onGame_statusUpdate_GM ->
             -> main
     
     = two
@@ -859,6 +863,7 @@
         }    
         
         ~ fourthChar_mailPause = fourthChar_mailPauseDuration
+            -> achievements_onGame_statusUpdate_GM ->
             -> main
     
     = two
@@ -938,6 +943,7 @@
         }
         
         ~ fifthChar_mailPause = fifthChar_mailPauseDuration
+            -> achievements_onGame_statusUpdate_GM ->
             -> main
     
     = two

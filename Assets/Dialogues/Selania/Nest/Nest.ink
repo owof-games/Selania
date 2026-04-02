@@ -1,7 +1,7 @@
 === nest ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
-    -> achievements_onGame_statusUpdate_GM ->
+
 {debug: <i>La lista degli oggetti nella stanza è: {contentsNest}.}
 
 {

@@ -347,5 +347,6 @@
         ~ move_entity(Franco, Pond)
         ~ kitchen_kitchenOccupied = false
 
+-> achievements_onGame_statusUpdate_RM ->
 -> cooking_animations_off ->
 -> main

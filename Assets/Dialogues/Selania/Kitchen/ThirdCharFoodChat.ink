@@ -712,11 +712,12 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
     
         
     = relationship_feedback
+        -> achievements_onGame_statusUpdate_GM ->
         Comunque {player_name}, stavo pensando alla nostra conversazione qui, assieme.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
         E se basandomi solo su questa chiacchierata in cucina dovessi dire: ho appena conosciuto {player_name}, vorrei farci amicizia?
         
             -> thirdAffinityCalc ->
-            -> achievements_onGame_statusUpdate_GM ->
+            
             
             {
                 - thirdAffinityCalc == 1:

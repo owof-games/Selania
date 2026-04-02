@@ -1,5 +1,4 @@
 //Variabili per le notifiche
-
 VAR notification_greenhouseGrown = false
     //Per questa: true == posso riproporre la notifica, cosa che accade solo dopo che ho raccolto la pianta arrivata allo step tre
 VAR notification_greenhouseGrownRepropose = true 
@@ -17,6 +16,7 @@ VAR notification_achievementName = ""
         {player_name} ha scoperto {sigils_translator(nest_newSigilDiscovered)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             ~ nest_newSigilDiscovered = ()
         -> nest_reactivateGliphs ->
+        -> achievements_onGame_statusUpdate_GM ->
         -> main
 }
 

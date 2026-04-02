@@ -35,6 +35,9 @@
     
     Mi son presə il gatto sulle ginocchia.<N>Ho iniziato ad accarezzarlo.<N>Cos'è che vuoi da me, rabbia?<N>Mi ha rivolto uno sguardo dorato, ha fatto le fusa.<N>E niente: mi ha lasciato quattro buchi sulla coscia con i suoi artigli, 'sta scena m'ha ricordato Frankenstein Junior.
     
+    //Check per achievement racconti
+    -> achievements_onGame_statusUpdate_RM ->
+    
         + <i>Vorrei leggere ancora.
         ~ disableBigDialogue()
            -> book_test_intro
@@ -102,6 +105,9 @@
     
     Dallo sgabuzzino tirò fuori una tela bianca e il cavalletto.<N>Poi afferrò l'astuccio con le matite e i pennelli.<N>Un'infinità di realtà l'aspettava al di là di quella tela bianca.<N>Doveva solo disegnare la porta.<N>“Basta nascondersi.”<N>Il suo futuro cominciò con una pennellata di verde.
 
+    //Check per achievement racconti
+    -> achievements_onGame_statusUpdate_RM ->
+
         + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
             -> book_test_intro
@@ -152,6 +158,9 @@
     
     L'ultima cosa che ricordo è la sensazione di sabbia fredda fra le dita dei piedi, i botti dei fuochi d'artificio e il suo ansimare sofferente, non saprò mai se mi ha riconosciuta o meno.
     
+    //Check per achievement racconti
+    -> achievements_onGame_statusUpdate_RM ->
+
         + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
            -> book_test_intro
@@ -192,6 +201,9 @@
     Voglio catturare il suo fulmine a mani nude.<N>Farà male, ma va bene.<N> <N>Voglio spaccare il labirinto di specchi<N>e farne finestre.<N> <N>Voglio puntare questo nuovo uragano lontano,<N>verso i monti della mia mente,<N>trasformare le loro pale eoliche in eliche<N>e farla decollare.<N>
     
     Verso dove, ancora non lo so.<N>E mi piace.
+
+    //Check per achievement racconti
+    -> achievements_onGame_statusUpdate_RM ->
 
         + <i>Vorrei leggere ancora.
         ~ disableBigDialogue()
@@ -248,6 +260,9 @@
     
     // Learning to wield my anger for a good cause was one of the most rewarding achievements in my life as a person and as a woman.
     // And I hope that every person out there is also living their life to their fullest, knowing how precious each emotion we feel is… anger too.
+
+    //Check per achievement racconti
+    -> achievements_onGame_statusUpdate_RM ->
 
         + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
@@ -320,6 +335,9 @@
     
     E lo sono anche grazie a voi che mi avete ascoltato.<N>Ma è ora che ce lo diciamo e che lo sappiamo: la rete come ce la raccontiamo non esiste.<N>Se senti che qualcuno ti dice “lì sarai al sicuro” o “questo modo di pensare è più inclusivo di quest'altro” metti di fianco a queste frasi un grande punto di domanda.<N>Se esiste una rete è quella il cui collante sei tu, fatta di singole persone che tu scegli e che ti scelgono.<N>E se qualcuno ti fa del male, semplicemente non ne fa parte.
 
+    //Check per achievement racconti
+    -> achievements_onGame_statusUpdate_RM ->
+
         + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
            -> book_test_intro
@@ -358,6 +376,9 @@
     
     Ma la bestia trova solo il tocco della compagna di viaggio che è riuscita a tenerla in vita fino a quel momento:<N>Rabbia.<N>Rabbia dedita a riprendersi la vita che ha perso.<N>Rabbia che a breve scagionerà in un abbagliante performance di denti e artigli.<N>Rabbia che porterà fine all'umanità che l'ha imprigionata.<N>Un ululato affilato come un coltello attraversa il pozzo.<N>La paura smarrita dagli uomini torna in loro mentre vedono la gabbia che li teneva al sicuro distrutta dall'interno. Le urla riempiono la stanza e il loro prezioso intelletto umano viene tagliato come burro.
 
+    //Check per achievement racconti
+    -> achievements_onGame_statusUpdate_RM ->
+    
         + <i>Vorrei leggere ancora.
             ~ disableBigDialogue()
            -> book_test_intro
