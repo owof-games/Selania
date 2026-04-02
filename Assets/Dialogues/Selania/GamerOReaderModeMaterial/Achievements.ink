@@ -521,11 +521,11 @@ VAR achievements_goodReader = notActive
 //Lettura racconti
 ~ temp readStories = LIST_COUNT(library_allAchievementStories) - LIST_COUNT(library_unreadStories)
 {
-    - LIST_COUNT(library_unreadStories) == LIST_COUNT(library_allAchievementStories):
+    - readStories == 0:
         ~ achievements_goodReader = notDiscovered
 
 
-    - LIST_COUNT(library_unreadStories) == 0:
+    - readStories == LIST_COUNT(library_allAchievementStories):
         ~ achievements_goodReader = Discovered
             ~ achievements_goodReader_actualValue = readStories
                 {
@@ -535,7 +535,7 @@ VAR achievements_goodReader = notActive
                         ~ notification_achievement = "{achievements_goodReader}"
                 }   
     
-    - LIST_COUNT(library_unreadStories) > 0:
+    - readStories > 0:
         ~ achievements_goodReader = inProgress
         ~ achievements_goodReader_actualValue = readStories
 }
