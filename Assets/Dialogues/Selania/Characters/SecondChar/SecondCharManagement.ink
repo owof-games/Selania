@@ -433,3 +433,24 @@
         -> achievements_onGame_statusUpdate_RM ->
 
 ->->
+
+=== second_char_closing_letters
+    ~ secondChar_mailPause = secondChar_mailPauseDuration
+    @animation:RewriterBook
+
+    {
+        - second_character_notes.one && grimoire_secondChar hasnt grimSecondCharLetterOne:
+                ~ grimoire_secondChar += grimSecondCharLetterOne
+
+        - second_character_notes.two && grimoire_secondChar hasnt grimSecondCharLetterTwo:
+                ~ grimoire_secondChar += grimSecondCharLetterTwo                 
+
+        - second_character_notes.three && grimoire_secondChar hasnt grimSecondCharLetterThree:
+                ~ grimoire_secondChar += grimSecondCharLetterThree
+    }
+
+    //Aggiornamento lista di quelli comuni
+        -> grimoire_common_storylets_updater ->
+    //E check achievement nel caso avessimo finito i dodici storylets principali
+        -> achievements_onGame_statusUpdate_RM ->
+-> main

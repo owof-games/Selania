@@ -160,18 +160,8 @@
             }
         Alla prossima lettera.
         <b>{charNameOne}</b>
-        - 
-        
-            {
-                - one == 1:
-                @animation:RewriterBook
-            
-            }
-            
-       
-            ~ firstChar_mailPause = firstChar_mailPauseDuration
-            -> achievements_onGame_statusUpdate_GM ->
-            -> main
+
+            -> first_char_closing_letters
     
     = two
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -266,18 +256,8 @@
     Sono arrivate nuove persone interessanti?
     Sicuro, nessunə più interessante di me!
     A presto, <b>{charNameOne}</b>.
-    - 
-    
-        ~ firstChar_mailPause = firstChar_mailPauseDuration
-        
-        {
-            - two == 1:
-            @animation:RewriterBook
-            
-        }
-    
-       
-        -> main
+
+    -> first_char_closing_letters
         
     = three
         ~ temp charNameOne = translator(firstChar_ActualName)
@@ -405,16 +385,8 @@
 
     Un saluto.
     <b>{charNameOne}</b>.
-    - 
 
-        {
-            - three == 1:
-            @animation:RewriterBook
-            
-        }
-    
-    
-            -> main
+    -> first_char_closing_letters
     
 === second_character_notes ===
 //Mettere cose sul rapporto con nonna, papà. mamma, fratello, animali, futuro.
@@ -529,17 +501,7 @@
             PS: come sta {mentorName}? Mi spiace per come l'ho trattata mentre ero lì, sai?
             Ma non dirglielo. Per ora per lo meno.
             Ciao!
-            - 
-
-        {
-            - one == 1:
-            @animation:RewriterBook
-            
-        }
-        
-            ~ secondChar_mailPause = secondChar_mailPauseDuration
-                -> achievements_onGame_statusUpdate_GM ->
-                -> main
+            -> second_char_closing_letters
     
     = two
         ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -626,16 +588,7 @@
             }
             PS: mi piace mettere i PS, su internet non ci sono.
             PPS: ma sono arrivate persone nuove poi? Qualcuna con dei dolci magari?
-            - 
-        
-        {
-            - two == 1:
-            @animation:RewriterBook
-            
-        }
-        
-                ~ secondChar_mailPause = secondChar_mailPauseDuration
-                    -> main
+            -> second_char_closing_letters
     
     = three
         ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -731,16 +684,8 @@
         
         PS: Ma poi hai scoperto cos'è quel tronco nella foresta? 
         PPS: Ho un segreto che riguarda la serra, ma te lo dirò con la prossima lettera! Ciao ciao!
-        - 
         
-        {
-            - three == 1:
-            @animation:RewriterBook
-            
-        }        
-            ~ secondChar_mailPause = secondChar_mailPauseDuration
-            
-                -> main
+        -> second_char_closing_letters
     
 === third_character_notes ===
 //Forse le sue lettere saranno scritte da una persona cara, vicina.
@@ -785,10 +730,8 @@
                 {charNameThree}: zz
         }
         
-        ~ thirdChar_mailPause = thirdChar_mailPauseDuration
-            -> achievements_onGame_statusUpdate_GM ->
-            -> main
-    
+        -> third_char_closing_letters
+
     = two
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
@@ -818,8 +761,7 @@
                 {charNameThree}: zz
         }    
         
-        ~ thirdChar_mailPause = thirdChar_mailPauseDuration
-            -> main
+        -> third_char_closing_letters
     
 === fourth_character_notes ===
     
@@ -894,8 +836,7 @@
                 {charNameFour}: zz
         }      
         
-        ~ fourthChar_mailPause = fourthChar_mailPauseDuration
-            -> main
+        -> third_char_closing_letters
 
 === fifth_character_notes ===
 

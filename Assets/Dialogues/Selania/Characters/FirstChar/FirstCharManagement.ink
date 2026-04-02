@@ -406,3 +406,23 @@
         
 ->->
 
+=== first_char_closing_letters
+    ~ firstChar_mailPause = firstChar_mailPauseDuration
+    @animation:RewriterBook
+
+    {
+        - first_character_notes.one && grimoire_firstChar hasnt grimFirstCharLetterOne:
+                ~ grimoire_firstChar += grimFirstCharLetterOne
+
+        - first_character_notes.two && grimoire_firstChar hasnt grimFirstCharLetterTwo:
+                ~ grimoire_firstChar += grimFirstCharLetterTwo                 
+
+        - first_character_notes.three && grimoire_firstChar hasnt grimFirstCharLetterThree:
+                ~ grimoire_firstChar += grimFirstCharLetterThree
+    }
+
+    //Aggiornamento lista di quelli comuni
+        -> grimoire_common_storylets_updater ->
+    //E check achievement nel caso avessimo finito i dodici storylets principali
+        -> achievements_onGame_statusUpdate_RM ->
+-> main

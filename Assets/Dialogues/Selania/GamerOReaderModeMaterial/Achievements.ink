@@ -527,7 +527,7 @@ VAR achievements_goodReader = notActive
 
     - LIST_COUNT(library_unreadStories) == 0:
         ~ achievements_goodReader = Discovered
-            ~ achievements_goodReader_actualValue = LIST_COUNT(readStories)
+            ~ achievements_goodReader_actualValue = readStories
                 {
                     - achievements_goodReader_notified == false:
                         ~ achievements_goodReader_notified = true
