@@ -67,7 +67,7 @@
                     -> special_mission_one_closed 
 
             - else:
-                //Andiamo a vedere se ci sono storylets speciali di un singolo personaggio
-                -> special_automatic_storylets
+                //Frasina ansiosa di Mentore
+                -> talk_to_me
     }
 

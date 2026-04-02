@@ -17,7 +17,7 @@
         VAR thirdChar_delay = 4
         VAR openingKitchen_delay = 4
         VAR openingLibrary_delay = 6
-        VAR openingNest_delay = 7
+        VAR openingNest_delay = 8
 
 
 === story_time_management_for_PNG
@@ -41,7 +41,7 @@
                 ~ mentorChar_storyStatus = story_storyStarted
     
         //Dopo due steps della storia della prima personaggia, compare la seconda      
-        - (LIST_COUNT(grimoire_firstChar) > secondChar_delay) && secondChar_storyStatus == story_storyNotStarted:
+        - (LIST_COUNT(grimoire_firstChar) >= secondChar_delay) && secondChar_storyStatus == story_storyNotStarted:
         {debug: introduco {SecondCharacter} in scena.}
                 ~ move_entity(SecondCharacter, TrainStop)
                 ~ move_entity(TrainNoiseComing, CurrentLocation)

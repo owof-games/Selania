@@ -51,7 +51,7 @@ VAR thirdChar_LibraryInvite = false
     //Storylets speciali Second Char
         {
             //Invito alla foresta per aprire la biblioteca
-            - are_two_entities_together(SecondCharacter, PG) && ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar) + LIST_COUNT(grimoire_thirdChar)) > openingLibrary_delay) && contentsForest hasnt PG && player_accessiblePlaces hasnt Library:
+            - are_two_entities_together(SecondCharacter, PG) && ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar) + LIST_COUNT(grimoire_thirdChar)) > openingLibrary_delay) && contentsForest hasnt PG && contentsKitchen hasnt PG  && player_accessiblePlaces hasnt Library:
                 
                     {stopping:
                         - Ehi {player_name}! Troviamoci alla foresta. Ho una cosa che devi vedere!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_energy
@@ -90,7 +90,7 @@ VAR thirdChar_LibraryInvite = false
     //Storylets speciali Third Char
         {
             //Invito in biblioteca per aprire il nido
-            - are_two_entities_together(ThirdCharacter, PG) && ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar) + LIST_COUNT(grimoire_thirdChar)) > openingNest_delay) && contentsLibrary hasnt PG && player_accessiblePlaces hasnt Nest && player_accessiblePlaces has Library:
+            - are_two_entities_together(ThirdCharacter, PG) && ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar) + LIST_COUNT(grimoire_thirdChar)) > openingNest_delay) && contentsLibrary hasnt PG && contentsKitchen hasnt PG && player_accessiblePlaces hasnt Nest && player_accessiblePlaces has Library:
                 
                     {stopping:
                         - Ehi {player_name}! Troviamoci in biblioteca. Ho una cosa che devi vedere!
@@ -129,6 +129,7 @@ VAR thirdChar_LibraryInvite = false
                 -> open_the_dump
         }          
 
-        //Solo come ultima cosa: check dei commentini needy di Mentore
-            -> talk_to_me
-->->        
+
+        //Else
+        -> common_storylets
+      
