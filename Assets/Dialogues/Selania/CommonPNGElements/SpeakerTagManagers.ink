@@ -100,9 +100,9 @@ LIST nest_speakersForEwWordTag = Influenced, Other
 === function witch_tag
 {
     - !witch_intro.nameWitch:
-        ~ return "..."
+        ~ return ""
     - else:
-        ~ return "<i>La luna</i>"
+        ~ return "<i>Luna</i>"
 }
 
 === function frog_tag
