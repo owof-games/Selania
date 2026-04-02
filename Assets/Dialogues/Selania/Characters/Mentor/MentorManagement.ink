@@ -42,7 +42,7 @@
     - mentor_lastTimeTalking < mentor_MAX_lastTimeTalking:
             ~ mentor_lastTimeTalking ++
         {debug: aumento il valore di mentor_lastTimeTalking, che ora è {mentor_lastTimeTalking}.}    
-        ->->    
+        -> main   
 
     - else:
     {
@@ -57,7 +57,7 @@
                         - Credo sia arrivata una lettera per te, {player_name}. La trovi come sempre in stazione.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
                     }
                         ~ mentor_lastTimeTalking = 0
-                        ->->
+                        -> main 
                 
                 - else:
                     {shuffle:
@@ -67,18 +67,18 @@
                         - Ciao {player_name}, spero tu non ti stia affaticando troppo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_sad     
                     }
                         ~ mentor_lastTimeTalking = 0
-                        ->->
+                        -> main 
             }
                 
         - else:
             {debug: Mentore e PG non sono assieme, per cui vado avanti.}
-            ->->   
+            -> main    
     }         
 
 }
 
 
-->->
+-> main 
 
 
 === mentor_closing_storylet ===

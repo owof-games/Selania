@@ -130,5 +130,5 @@ VAR thirdChar_LibraryInvite = false
         }          
 
         //Solo come ultima cosa: check dei commentini needy di Mentore
-            -> talk_to_me -> 
+            -> talk_to_me
 ->->        

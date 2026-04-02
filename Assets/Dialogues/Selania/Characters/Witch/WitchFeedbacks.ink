@@ -1,3 +1,5 @@
+//Gradualmente ognuno dei cinque feedback che lei ci dà serviranno per tracciare un percorso che parta dalla riscrittura come esperienza personale a qualcosa che è parte di un cambiamento per forza collettivo, inevitabilmente collettivo.
+
 === witch_first_story_ended_check
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -134,6 +136,8 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
+        Domanda: chi mi ha insegnato a vedermi così? cosa me l'ha insegnato? In generale: da dove vengono le credenze su di sé, queste riscritture che dobbiamo poi andare a fare?
+
         + Scelta verde.
             -> glyph_modifier_variation_management(PG, waterC)->
             
@@ -153,12 +157,14 @@
         -> main 
         
     === witch_fourth_story_ended_check
-         ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
+        Nonna molotov ci ha insegnate ora in modo evidente che il problema è sistemico. A cosa serve riscriversi, quando un problema è sistemico?
+
         + Scelta verde.
             -> glyph_modifier_variation_management(PG, waterC)->
             
@@ -183,6 +189,11 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
+
+        Personale e sociale non sono scollegati. E la rilettura di Mentore diventa la presenza di una doppia strada: prendersi cura di sé, cambiare il mondo.
+        Con gli altri.
+        Mentore stava di merda perché cercava di essere qualcosa che non era.
+        Ma non perché fosse pazza, ma perché il nostro mondo ci dice: sii una sola cosa, o smetti di esistere.
         
         + Scelta verde.
             -> glyph_modifier_variation_management(PG, waterC)->
