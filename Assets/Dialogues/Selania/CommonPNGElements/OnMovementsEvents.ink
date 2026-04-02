@@ -3,7 +3,6 @@
    Aggiornamenti di stato durante gli spostamenti 
 
  ----------------------------------*/
-
 === on_movement_events
 {debug: passo da on_movement_events.}
 //Prima aggiorno tutti i valori che possono condizionarne altri
@@ -245,9 +244,10 @@ VAR letters_doggoPause = false
 
 //Gestione della cucina delle PNG
 === on_movement_kitchen_tracker ===
-{debug: passo da on_movement_kitchen_tracker.}
+{debug_kitchen: passo da on_movement_kitchen_tracker.}
+{debug_kitchen: i contenuti di contentsKitchen sono {contentsKitchen}.}
 
-    //Primo check: la cucina è occupata o è libera?
+    //Primo check: la cucina è occupata?
     {
         - contentsKitchen has FirstCharacter:
             ~ kitchen_kitchenOccupied = true
@@ -265,19 +265,17 @@ VAR letters_doggoPause = false
             ~ kitchen_kitchenOccupied = true
 
         - contentsKitchen has Franco:
-            ~ kitchen_kitchenOccupied = true
-
-        - else:
-            ~ kitchen_kitchenOccupied = false                 
+            ~ kitchen_kitchenOccupied = true             
 
     }
 
+    //Secondo check: stato personagge
     //Riccio
     //Riccio inizia a cucinare. Metto prima di Chitarra giusto perché il suo storylet coinvolge anche Mentore e quindi forse è più interessante.
     
         {
             - player_accessiblePlaces has Kitchen && (not second_char_cooking_tracker) && kitchen_kitchenOccupied == false && grimoire_secondChar has grimSecondCharOne && (kitchen_cookingAloneCoolDown == 0):
-            
+                {debug_kitchen: le condizioni sono giuste per far cucinare Riccio da solo}
                 ~ kitchen_secondCharIsCooking = true
                 ~ move_entity(SecondCharacter, Kitchen)
                 ~ kitchen_kitchenOccupied = true
@@ -294,6 +292,7 @@ VAR letters_doggoPause = false
             {
                 - kitchen_secondCharCookingTime < kitchen_secondCharCookingMaxTime:
                     ~ kitchen_secondCharCookingTime ++
+                    {debug_kitchen: aumento il valore di cucina autonoma di Riccio a {kitchen_secondCharCookingTime}.}
                 
                 - else:
                     ~ kitchen_secondCharIsCooking = false
@@ -305,24 +304,25 @@ VAR letters_doggoPause = false
                     ~ move_entity(BatHouseRetro, Kitchen)
                     ~ move_entity(Bat, Kitchen)
                     ~ kitchen_kitchenOccupied = false
-                    
+                    {debug_kitchen: Riccio ha finito di cucinare.}
             }
-            
         }
 
         //Gestione attesa in cucina di Riccio se invitato a cucinare
         {   
             - kitchen_secondCharCookingTogetherInvite == true:
-            
+                {debug_kitchen: Riccio è stato invitato in cucina.}
             {
                 - kitchen_secondCharCookingTogetherWaiting < kitchen_secondCharCookingMAXTogetherWaiting:
                     ~ kitchen_secondCharCookingTogetherWaiting ++
+                    {debug_kitchen: Riccio ci sta aspettando in cucina, kitchen_secondCharCookingTogetherWaiting è {kitchen_secondCharCookingTogetherWaiting}.}
                 
                 - else:
                    ~ kitchen_secondCharCookingTogetherInvite = false
                    ~ kitchen_secondCharCookingTogetherWaiting = 0
                    ~ move_entity(SecondCharacter, Pond)
                    ~ kitchen_kitchenOccupied = false
+                   {debug_kitchen: Riccio cha smesso di aspettarci in cucina.}
             }
         }
 
@@ -341,11 +341,12 @@ VAR letters_doggoPause = false
         {debug: il valore di kitchen_firstCharIsCooking è {kitchen_firstCharIsCooking}}
         {
             - kitchen_firstCharIsCooking == true:
-            
+                {debug_kitchen: le condizioni sono giuste per far cucinare Chitarra da sola}
                 {
                 
                     - kitchen_firstCharCookingTime < kitchen_firstCharCookingMaxTime:
                         ~ kitchen_firstCharCookingTime ++
+                        {debug_kitchen: kitchen_firstCharCookingTime è {kitchen_firstCharCookingTime}.}
                     
                     - else:
                        ~ kitchen_firstCharIsCooking = false
@@ -355,6 +356,7 @@ VAR letters_doggoPause = false
                        //E poi sposto gli elementi decorativi in cucina
                        ~ move_entity(FirstCharCookingAloneOBJ, Kitchen)
                        ~ kitchen_kitchenOccupied = false
+                       {debug_kitchen: chitarra ha finito di cucinare da sola.}
                 }
 
         }
@@ -362,16 +364,18 @@ VAR letters_doggoPause = false
         //Gestione attesa in cucina di Chitarra se invitata a cucinare
         {   
             - kitchen_firstCharCookingTogetherInvite == true:
-            
+            {debug_kitchen: chitarra ci aspetta in cucina su nostro invito.}
             {
                 - kitchen_firstCharCookingTogetherWaiting < kitchen_firstCharCookingMAXTogetherWaiting:
                     ~ kitchen_firstCharCookingTogetherWaiting ++
+                    {debug_kitchen: cucina ci aspetta in cucina da kitchen_firstCharCookingTogetherWaiting {kitchen_firstCharCookingTogetherWaiting}}
                 
                 - else:
                    ~ kitchen_firstCharCookingTogetherInvite = false
                    ~ kitchen_firstCharCookingTogetherWaiting = 0
                    ~ move_entity(FirstCharacter, Pond)
                    ~ kitchen_kitchenOccupied = false
+                   {debug_kitchen: chitarra ha smesso di aspettarci in cucina.}
             }
         }
         
@@ -380,7 +384,7 @@ VAR letters_doggoPause = false
     //TerzoPNG
         {
             - player_accessiblePlaces has Kitchen && (not third_char_cooking_tracker) && kitchen_kitchenOccupied == false && grimoire_thirdChar hasnt grimThirdCharOne && (kitchen_cookingAloneCoolDown == 0):
-            
+                {debug_kitchen: le condizioni per far cucinare Boccale da solo sono valide.}
                     ~ kitchen_thirdCharIsCooking = true
                     ~ move_entity(ThirdCharacter, Kitchen)
                     ~ kitchen_kitchenOccupied = true
@@ -392,11 +396,12 @@ VAR letters_doggoPause = false
         {debug: il valore di kitchen_thirdCharIsCooking è {kitchen_thirdCharIsCooking}}
         {
             - kitchen_thirdCharIsCooking == true:
-            
+            {debug_kitchen: Boccale sta cucinando da solo.}
                 {
                 
                     - kitchen_thirdCharCookingTime < kitchen_thirdCharCookingMaxTime:
                         ~ kitchen_thirdCharCookingTime ++
+                        {debug_kitchen: boccale cucina da solo da {kitchen_thirdCharCookingTime}.}
                     
                     - else:
                        ~ kitchen_thirdCharIsCooking = false
@@ -406,6 +411,7 @@ VAR letters_doggoPause = false
                        //E poi sposto gli elementi decorativi in cucina
                        ~ move_entity(ThirdCharCookingAloneOBJ, Kitchen)
                        ~ kitchen_kitchenOccupied = false
+                       {debug_kitchen: boccale ha finito di cucinare da solo}
                 }
 
         }
@@ -413,16 +419,19 @@ VAR letters_doggoPause = false
         //Gestione attesa in cucina di PNG3 se invitato a cucinare
         {   
             - kitchen_thirdCharCookingTogetherInvite == true:
+            {debug_kitchen: boccale ci aspetta in cucina}
             
             {
                 - kitchen_thirdCharCookingTogetherWaiting < kitchen_thirdCharCookingMAXTogetherWaiting:
                     ~ kitchen_thirdCharCookingTogetherWaiting ++
+                     {debug_kitchen: boccale ci aspetta in cucina da {kitchen_thirdCharCookingTogetherWaiting}.}
                 
                 - else:
                    ~ kitchen_thirdCharCookingTogetherInvite = false
                    ~ kitchen_thirdCharCookingTogetherWaiting = 0
                    ~ move_entity(ThirdCharacter, Pond)
                    ~ kitchen_kitchenOccupied = false
+                   {debug_kitchen: boccale ha smesso di aspettarci in cucina.}
             }
         }
         
