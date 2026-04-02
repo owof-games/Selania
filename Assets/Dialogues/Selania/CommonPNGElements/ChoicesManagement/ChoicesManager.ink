@@ -393,7 +393,13 @@ VAR glyph_mainTalker = ()
             -> glyph_ThirdCharacter_reactions              
 
         - else:
-            -> closing_function    
+            {
+                - glyph_allPNGAffectedByChoice != ():
+                    -> glyph_thereAreOtherTalkers
+                - else:
+                    -> closing_function       
+            }
+             
 
     }
 
@@ -452,7 +458,7 @@ VAR glyph_mainTalker = ()
                     }
 
             }
-            -> closing_function
+            -> glyph_thereAreOtherTalkers
 
             
             = sigil_ThirdCharacter_reactions
@@ -693,9 +699,11 @@ VAR glyph_mainTalker = ()
     {debug_nest: passo per glyph_thereAreOtherTalkers}
         {
             - glyph_allPNGAffectedByChoice != ():
+                {debug_nest: glyph_allPNGAffectedByChoice è {glyph_allPNGAffectedByChoice}.}
                 ~ temp newSpeaker = LIST_RANDOM(glyph_allPNGAffectedByChoice)
                 ~ glyph_currentTalker = ()
                 ~ glyph_currentTalker += newSpeaker
+                {debug_nest: glyph_currentTalker {glyph_currentTalker}}
                     -> sigil_PNG_reactions
             - else:
                 -> closing_function        
@@ -1043,7 +1051,7 @@ VAR glyph_mainTalker = ()
 
 //Terzo: in cucina, con gli ingredienti, non vogliamo le reazioni delle PNG, perché commenteranno già in automatico, ma il codice attuale non le fermerebbe, perché non sono considertate main talk, per cui devo apportare una correzione.
 {
-    - glyph_mainTalker == (PG) && entity_location == Kitchen:
+    - glyph_mainTalker == (PG) && entity_location(PG) == Kitchen:
         ~ glyph_allPNGAffectedByChoice = ()
 }
 
