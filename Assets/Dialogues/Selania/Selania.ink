@@ -155,6 +155,7 @@
 
 //Train Stop
     INCLUDE TrainStop\TrainStop.ink
+    INCLUDE TrainStop\TrainLetters.ink
 
 //Forest
     INCLUDE Forest\Forest.ink
