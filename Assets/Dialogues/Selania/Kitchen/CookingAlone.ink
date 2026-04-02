@@ -29,7 +29,7 @@
 
             + <i>Setaccio della polenta analitica.
                     ~ kitchen_recipeNoun = "Polenta"
-                -> glyph_modifier_variation_management(PG, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(PG, airC, decreaseNo)->
                 Craande!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Un po' come me.
                 Sempre tutto chiaro e sotto controllo.
@@ -38,7 +38,7 @@
                
             + <i>Riscaldo l'acqua per della zuppetta empatica.
                     ~ kitchen_recipeNoun = "Zuppetta"
-                -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->    
+                -> glyph_modifier_variation_management(PG, waterC, decreaseNo)->    
                 Ah, come la tosse di zia Graaak!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Povera, faceva di quelle bolle sott'acqua.
                 Uh, una lettera di Giulio.
@@ -47,7 +47,7 @@
 
             + <i>Impasto una focaccia decisa.
                     ~ kitchen_recipeNoun = "Focaccia"
-                -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->    
+                -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->    
                 Un approccio con una direzione precisa.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Un po' come quando Euforbo ha preso la patente.
                 Ma i girini hanno solo la coda.
@@ -57,7 +57,7 @@
         
             + <i>Preparo una panzanella caotica.
                     ~ kitchen_recipeNoun = "Panzanella"
-                -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->    
+                -> glyph_modifier_variation_management(PG, fireC, decreaseNo)->    
                 Te l'ho mai raccontata la storia di Girino Ir Rosponsabile?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 È questo tizio leggendario, che da piccolo ha provato le cose più assurde.
                 Una volta è finito anche dentro la bocca di una carpa.
@@ -67,7 +67,7 @@
     
             + <i>Friggo della spirituale cicerchiata.
                     ~ kitchen_recipeNoun = "Cicerchiata"
-                -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->    
+                -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->    
                 Cice.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Cerch.
                 Cicherch.
@@ -95,7 +95,7 @@
             
             + <i>Aggiungo con risolutezza della assafetida.
                     ~ kitchen_recipeAdjective = "risoluta"
-                -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->    
+                -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->    
                 Qui il nostro girino sa dove sta andando!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Non tutti possono dirlo.
                 Io non ho ancora capito come sono finito qui.
@@ -105,7 +105,7 @@
 
             + <i>Spargo con insicurezza del sommacco.
                     ~ kitchen_recipeAdjective = "insicura"
-                -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->    
+                -> glyph_modifier_variation_management(PG, waterC, decreaseNo)->    
                 Ora, so che potrebbe stupirti, ma a volte anche io non so cosa faccio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Ed è normale.
                 Solo i girini hanno le idee chiare.
@@ -115,7 +115,7 @@
 
             + <i>Spolvero con disperazione della curcuma.
                     ~ kitchen_recipeAdjective = "disperata"
-                -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->    
+                -> glyph_modifier_variation_management(PG, fireC, decreaseNo)->    
                 Conosco quella sensazione, girino. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Ma non disperarti: qui le cose vanno sempre bene.
                 Nel senso che chi riscrive non è che dice alle persone che cosa fare.
@@ -128,7 +128,7 @@
 
             + <i>Incorporo con arroganza del cajun.
                     ~ kitchen_recipeAdjective = "arrogante"
-                -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->    
+                -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->    
                 Questo è il momento per raccontarti la storia di Bavarana.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Bavarana era questo tipo convinto di sapere tutto lui, e non ascoltava mai nessuno.
                 E passava le notti a gracidare quando tutti volevano dormire.
@@ -140,7 +140,7 @@
     
             + <i>Macino con mediocrità del pepe rosa.
                     ~ kitchen_recipeAdjective = "mediocre"
-                -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->    
+                -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->    
                 Non è male essere mediocri.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Pensa a quel modo di dire: "Non è né carne né pesce."
                 Noi rane non siamo pesci.
@@ -168,7 +168,7 @@
 
             + <i>Decoro con della granella di affetto.
                     ~ kitchen_recipeComplement = "con granella di affetto"
-                -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->    
+                -> glyph_modifier_variation_management(PG, waterC, decreaseNo)->    
                 Eh, ma si vede che tu c'ha il cuore grande.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Come zia Graaak.
                 Per questo deve andare dal dottore.
@@ -178,7 +178,7 @@
               
             + <i>Abbellisco con delle gocce di cioccolato e sospetto.
                     ~ kitchen_recipeComplement = "con gocce di cioccolato e sospetto"
-                -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->    
+                -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->    
                 Come nei thriller?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Quindi c'è un crimine?
                 E {mentorName} è sospettata?
@@ -189,7 +189,7 @@
    
             + <i>Guarnisco con un battuto di caramello e indifferenza.
                     ~ kitchen_recipeComplement = "con battuto di caramello e indifferenza"
-                -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->    
+                -> glyph_modifier_variation_management(PG, waterC, decreaseNo)->    
                 Ah, come quando dividi la spazzatura.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Uh, una lettera di Giulio.
                 "Amore, indifferenza è come quando mamma Craazia è così arrabbiata che fa finta che non esisti."
@@ -203,7 +203,7 @@
 
             + <i>Addobbo con strisce di pastella e gratitudine.
                     ~ kitchen_recipeComplement = "con strisce di pastella e gratitudine"
-                -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->    
+                -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->    
                 Mi piace la gratitudine!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Anche se a volte mi si brucia un poco.
                 Per fortuna ho uno stomaco di feltro.
@@ -214,7 +214,7 @@
 
             + <i>Rifinisco con semi di zucca e fastidio.
                     ~ kitchen_recipeComplement = "con semi di zucca e fastidio"
-                -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->    
+                -> glyph_modifier_variation_management(PG, fireC, decreaseNo)->    
                 Ah, come quel modo di dire.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 "Essere una spina nel Franco."
                 Una volta mi è successo.
@@ -242,7 +242,7 @@
         
             + <i>Mi verso un bicchiere di succo gioioso.
                     ~ kitchen_recipePP = "e contorno di gioia"
-                -> glyph_modifier_variation_management(PG, earthC, decreaseYes)->    
+                -> glyph_modifier_variation_management(PG, earthC, decreaseNo)->    
                 Il mio sentimento preferito!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Dopo la fiducia.
                 Io ho molta fiducia in me, girino.
@@ -253,7 +253,7 @@
                
             + <i>Mi preparo una tazza di tisana rilassata.
                     ~ kitchen_recipePP = "e contorno di rilassatezza"
-                -> glyph_modifier_variation_management(PG, aetherC, decreaseYes)->    
+                -> glyph_modifier_variation_management(PG, aetherC, decreaseNo)->    
                 Lo dico sempre a Tullio e Giulio: amori, la vita va presa con rilassatezza.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Fanno così tante cose i miei amorini.
                 Pensa che Tullio ha una agenda dove segna tutte le cose da fare per i gemelli.
@@ -263,7 +263,7 @@
    
             + <i>Mi riempio una tazzina di caffè frenetico.
                     ~ kitchen_recipePP = "e contorno di frenesia"
-                -> glyph_modifier_variation_management(PG, fireC, decreaseYes)->    
+                -> glyph_modifier_variation_management(PG, fireC, decreaseNo)->    
                 C'è una leggenda tra le rane.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 La leggenda di Ranetica.
                 Una rana che nuotava così veloce ma così veloce che quando si muoveva l'acqua bolliva.
@@ -279,7 +279,7 @@
 
             + <i>Mi offro un goccio dil distillato di curiosità.
                     ~ kitchen_recipePP = "e contorno di curiosità"
-                -> glyph_modifier_variation_management(PG, airC, decreaseYes)->    
+                -> glyph_modifier_variation_management(PG, airC, decreaseNo)->    
                 Euforbo è supercurioso.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 L'altro giorno mi ha detto: "Sarei curioso di capire come sei diventato adulto." 
                 E io gli ho spiegato che è una cosa che accade da sola, come innamorarsi o attraversare la strada.
@@ -289,7 +289,7 @@
     
             + <i>Prendo un bicchiere di acqua annoiata.
                     ~ kitchen_recipePP = "e contorno di noia"
-                -> glyph_modifier_variation_management(PG, waterC, decreaseYes)->    
+                -> glyph_modifier_variation_management(PG, waterC, decreaseNo)->    
                 Noo, la noia nooo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Mi fa venire le bolle nella pancia.
                 E prude tutto.

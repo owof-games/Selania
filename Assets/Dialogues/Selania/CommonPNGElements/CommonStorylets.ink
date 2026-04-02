@@ -52,14 +52,14 @@
     
             + Dormiamo qualche giorno, siii!
                  -> glyph_modifier_variation_management(FirstCharacter, earthC, decreaseYes)->
-                 -> glyph_modifier_variation_management(SecondCharacter, aetherC, decreaseNo)->
+                 -> glyph_modifier_variation_management(SecondCharacter, earthC, decreaseNo)->
 
                 Voi persone vecchie siete noiose.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Nemmeno la nonna pensa così tanto a dormire!
                 Perché tua nonna è in pensione e non deve pensare costantemente a PRODURRE!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
 
             + Anche io voglio studiarmi tutto!
-                -> glyph_modifier_variation_management(FirstCharacter, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseYes)->
                 -> glyph_modifier_variation_management(SecondCharacter, airC, decreaseNo)->
                  
                 Sìì! E il nostro team batte il team SIAMO NOIOSI E DORMIAMO SEMPRE DI {charNameOne}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
@@ -73,8 +73,8 @@
                 Mi ci riconosco, totale.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
 
             + Mentre mi leggono la mente penso a cose assurdissime!
-                -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseYes)->
-                -> glyph_modifier_variation_management(SecondCharacter, earthC, decreaseNo)->
+                -> glyph_modifier_variation_management(FirstCharacter, fireC, decreaseYes)->
+                -> glyph_modifier_variation_management(SecondCharacter, fireC, decreaseNo)->
                 
                 Sarebbe divertentissimo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 Ora provo a pensare tantissimo alla cacca!
@@ -83,7 +83,7 @@
                 
             + Magari conoscono il senso della vita.
                 -> glyph_modifier_variation_management(FirstCharacter, aetherC, decreaseYes)->
-                -> glyph_modifier_variation_management(SecondCharacter, fireC, decreaseNo)->
+                -> glyph_modifier_variation_management(SecondCharacter, aetherC, decreaseNo)->
                 
                 Te lo dico io: caramelle!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 E vedere i pinguini.
@@ -196,7 +196,7 @@
             
         + La felicità è qualcosa che cresce nelle pieghe del quotidiano.
             -> glyph_modifier_variation_management(FirstCharacter, aetherC, decreaseYes)->
-            -> glyph_modifier_variation_management(Mentor, airC, decreaseNo)->
+            -> glyph_modifier_variation_management(Mentor, aetherC, decreaseNo)->
             Sono contenta che la vediamo allo stesso modo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
             Le cose che crescono nelle pieghe di solito sono sporche.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
             Infestanti.
@@ -456,22 +456,22 @@
             
         + Dice che stai facendo un buon lavoro.
                 -> glyph_modifier_variation_management(ThirdCharacter, waterC, decreaseYes)->
-                -> glyph_modifier_variation_management(Mentor, airC, decreaseNo)->
+                -> glyph_modifier_variation_management(Mentor, waterC, decreaseNo)->
 
         
         + Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
                 -> glyph_modifier_variation_management(ThirdCharacter, earthC, decreaseYes)->
-                -> glyph_modifier_variation_management(Mentor, airC, decreaseNo)->
+                -> glyph_modifier_variation_management(Mentor, earthC, decreaseNo)->
 
 
         + Non è più importante il tuo di giudizio sul tuo lavoro, {mentorName}?
                 -> glyph_modifier_variation_management(ThirdCharacter, aetherC, decreaseYes)->
-                -> glyph_modifier_variation_management(Mentor, airC, decreaseNo)->
+                -> glyph_modifier_variation_management(Mentor, aetherC, decreaseNo)->
 
 
         + Ha detto tante cose ma la risposta è: no.
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC, decreaseYes)->
-                -> glyph_modifier_variation_management(Mentor, airC, decreaseNo)->
+                -> glyph_modifier_variation_management(Mentor, fireC, decreaseNo)->
     -
 
     -> mentor_closing_storylet ->
@@ -492,22 +492,22 @@
             
         + Dice che stai facendo un buon lavoro.
                 -> glyph_modifier_variation_management(ThirdCharacter, waterC, decreaseYes)->
-                -> glyph_modifier_variation_management(SecondCharacter, airC, decreaseNo)->
+                -> glyph_modifier_variation_management(SecondCharacter, waterC, decreaseNo)->
 
         
         + Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
                 -> glyph_modifier_variation_management(ThirdCharacter, earthC, decreaseYes)->
-                -> glyph_modifier_variation_management(SecondCharacter, airC, decreaseNo)->
+                -> glyph_modifier_variation_management(SecondCharacter, earthC, decreaseNo)->
 
 
         + Non è più importante il tuo di giudizio sul tuo lavoro?
                 -> glyph_modifier_variation_management(ThirdCharacter, aetherC, decreaseYes)->
-                -> glyph_modifier_variation_management(SecondCharacter, airC, decreaseNo)->
+                -> glyph_modifier_variation_management(SecondCharacter, aetherC, decreaseNo)->
 
 
         + Ha detto tante cose ma la risposta è: no.
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC, decreaseYes)->
-                -> glyph_modifier_variation_management(SecondCharacter, airC, decreaseNo)->
+                -> glyph_modifier_variation_management(SecondCharacter, fireC, decreaseNo)->
 
     -
     -> second_char_closing_storylet ->
@@ -528,22 +528,22 @@
             
         + Dice che stai facendo un buon lavoro.
                 -> glyph_modifier_variation_management(ThirdCharacter, waterC, decreaseYes)->
-                -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseNo)->
+                -> glyph_modifier_variation_management(FirstCharacter, waterC, decreaseNo)->
 
         
         + Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
                 -> glyph_modifier_variation_management(ThirdCharacter, earthC, decreaseYes)->
-                -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseNo)->
+                -> glyph_modifier_variation_management(FirstCharacter, earthC, decreaseNo)->
 
 
         + Non è più importante il tuo di giudizio sul tuo lavoro?
                 -> glyph_modifier_variation_management(ThirdCharacter, aetherC, decreaseYes)->
-                -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseNo)->
+                -> glyph_modifier_variation_management(FirstCharacter, aetherC, decreaseNo)->
 
 
         + Ha detto tante cose ma la risposta è: no.
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC, decreaseYes)->
-                -> glyph_modifier_variation_management(FirstCharacter, airC, decreaseNo)->
+                -> glyph_modifier_variation_management(FirstCharacter, fireC, decreaseNo)->
 
 
     -

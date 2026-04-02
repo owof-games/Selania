@@ -148,7 +148,7 @@
     Non me la sento.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
         
         + Che razionalmente sai che è sbagliato?
-                -> glyph_modifier_variation_management(Mentor, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(Mentor, airC, decreaseNo)->
             Mi sento potente.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             Forte.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
             Ascoltata.
@@ -160,7 +160,7 @@
                 }
 
         + Che è bello perdere il controllo, ribellarsi.
-                -> glyph_modifier_variation_management(Mentor, fireC, decreaseYes)->
+                -> glyph_modifier_variation_management(Mentor, fireC, decreaseNo)->
             Peggio.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_sorry
             Il controllo non si perde, {player_name}.
             Si decide sempre se fare o meno il salto da "non alzare le mani" a "dai uno schiaffo"
@@ -175,7 +175,7 @@
                 }
             
         + Arrabbiarsi è umano, il problema è la violenza.
-                -> glyph_modifier_variation_management(Mentor, waterC, decreaseYes)->
+                -> glyph_modifier_variation_management(Mentor, waterC, decreaseNo)->
             Arrabbiarsi è da deboli.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
             Lo fai quando non comprendi le tue emozioni.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             E quando non provi empatia per le altre persone.
@@ -189,13 +189,13 @@
                 }
             
         + Sei stata crudele, e hai rovinato la festa per {charNameTwo}.
-                -> glyph_modifier_variation_management(Mentor, earthC, decreaseYes)->
+                -> glyph_modifier_variation_management(Mentor, earthC, decreaseNo)->
             Essere {player_pronouns has him:riscrittore|{player_pronouns has her:riscrittora|riscrittorə}} chiede empatia, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             Ma sì.
             Sono stata crudele, punto.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
             
         + <i>Resto in silenzio.</i>
-                -> glyph_modifier_variation_management(Mentor, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(Mentor, aetherC, decreaseNo)->
             La cosa peggiore è che non mi piace arrabbiarmi, ma mi fa sentire potente.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             Visibile.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
             Per pochi secondi mi sembra di potermi far rispettare.
@@ -238,7 +238,7 @@
     Ti senti mai così {player_pronouns has him:stanco|{player_pronouns has her:stanca|stancə}} che vorresti sparire per un po' dal mondo, e basta?
 
         + Non si può sparire, per cui è un pensiero abbastanza inutile.
-                -> glyph_modifier_variation_management(Mentor, airC, decreaseYes)->
+                -> glyph_modifier_variation_management(Mentor, airC, decreaseNo)->
             Un pensiero non è inutile.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             Un pensiero è solo un pensiero.
             E a volte ti fa stare bene anche quando non può essere vero.
@@ -248,21 +248,21 @@
                 }
     
         + Ma Liliana è stanca dell'ingiustizia, non del mondo. E ha reagito.
-                -> glyph_modifier_variation_management(Mentor, fireC, decreaseYes)->
+                -> glyph_modifier_variation_management(Mentor, fireC, decreaseNo)->
             Ma una magari a volte ha voglia di non reagire e basta.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             E di agire.
             No?
             Di fare quello che vuole, e non solo rispondere a quello che ha attorno.
      
         + Vorresti sparire dal mondo, o da te?
-                -> glyph_modifier_variation_management(Mentor, aetherC, decreaseYes)->
+                -> glyph_modifier_variation_management(Mentor, aetherC, decreaseNo)->
             Cambierebbe poi così tanto?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             No, è una cosa stupida da dire.
             Ed è stato stupido dire di voler sparire.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
             Lascia perdere.
     
         + No, però mi capita di fare dei grandiosi pisolini.
-                -> glyph_modifier_variation_management(Mentor, earthC, decreaseYes)->
+                -> glyph_modifier_variation_management(Mentor, earthC, decreaseNo)->
             Pensavo a qualcosa di più impegnativo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             Qualcosa che non si risolve dormendo.
             Ma comunque tempo per dormire non l'ho mai.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
@@ -273,7 +273,7 @@
             } 
             
         + A volte vorrei solo diventare invisibile.
-                -> glyph_modifier_variation_management(Mentor, waterC, decreaseYes)->
+                -> glyph_modifier_variation_management(Mentor, waterC, decreaseNo)->
             Esatto, {player_name}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
             So che è una scelta egoista.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
             Perché abbiamo una responsabilità verso il mondo.

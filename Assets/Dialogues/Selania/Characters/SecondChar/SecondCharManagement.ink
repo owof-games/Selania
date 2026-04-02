@@ -390,7 +390,7 @@
             - ending_cooking_with_second_char && grimoire_secondChar hasnt grimSecondCharKitchenEnded:
                 ~ grimoire_secondChar += grimSecondCharKitchenEnded 
 
-            - second_char_cooking_alone && grimoire_secondChar hasnt grimSecondCharKitchenAlone:
+            - food_gift_first_char && grimoire_secondChar hasnt grimSecondCharKitchenAlone:
                 ~ grimoire_secondChar += grimSecondCharKitchenAlone                
 
             //Riscrittura
