@@ -1,4 +1,6 @@
-﻿namespace Selania.Rework.Interfaces
+﻿using UnityEngine;
+
+namespace Selania.Rework.Interfaces
 {
     public interface ISettingsBook
     {
@@ -16,5 +18,12 @@
         ///     Saturation level for disabled sigils.
         /// </summary>
         public float disabledSigilsSaturationLevel { get; }
+
+        /// <summary>
+        ///     Get the sprite corresponding to the given name.
+        /// </summary>
+        /// <param name="plantName">Name of the plant, as present in the ink list.</param>
+        /// <returns>The sprite name.</returns>
+        public Sprite? GetGreenhouseSprite(string plantName);
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Alchemy.Inspector;
 using JetBrains.Annotations;
 using Microsoft.Extensions.Logging;
@@ -412,6 +413,34 @@ namespace Selania.Rework.Components
         [field: SerializeField]
         [field: Tooltip("Saturation level for disabled sigils.")]
         public float disabledSigilsSaturationLevel { get; private set; } = 0.5f;
+
+        /// <summary>
+        ///     Entry for <see cref="SelaniaSettings.plantSprites" />.
+        /// </summary>
+        [Serializable]
+        public class PlantSprite
+        {
+            [field: SerializeField]
+            [field: Tooltip("Name of the plant, as it appears in the ink list")]
+            public string plantName { get; private set; } = null!;
+
+            [field: SerializeField]
+            [field: Tooltip("The corresponding sprite")]
+            public Sprite sprite { get; private set; } = null!;
+        }
+
+        [SerializeField] [Tooltip("List of sprites for each plant")]
+        private PlantSprite[] plantSprites = null!;
+
+        /// <summary>
+        ///     Get the sprite corresponding to the given name.
+        /// </summary>
+        /// <param name="plantName">Name of the plant, as present in the ink list.</param>
+        /// <returns>The sprite name.</returns>
+        public Sprite? GetGreenhouseSprite(string plantName)
+        {
+            return plantSprites.FirstOrDefault(entry => entry.plantName == plantName)?.sprite;
+        }
 
         #endregion
 

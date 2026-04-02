@@ -281,7 +281,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6628953435717285397}
-  - component: {fileID: 8378849747360847767}
+  - component: {fileID: 8859943765130695759}
   m_Layer: 5
   m_Name: Third Level Greenhouse Header
   m_TagString: Untagged
@@ -313,7 +313,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8378849747360847767
+--- !u!114 &8859943765130695759
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -322,12 +322,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4202622604287074369}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1890edf9e4e4588993afb12f18052c1, type: 3}
+  m_Script: {fileID: 11500000, guid: cd7c6cee435d46cfa879aa27a9647d7e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.ThirdLevelSigilsHeader
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.ThirdLevelGreenhouseHeader
+  button: {fileID: 7655790237988397216}
   titleTextMeshProUGUI: {fileID: 1159274269880763630}
-  subtitleTextMeshProUGUI: {fileID: 2703955506939718178}
-  thirdLevelSigilIcon: {fileID: 0}
+  subtitledConsumedTextMeshProUGUI: {fileID: 2703955506939718178}
+  subtitledOwnedTextMeshProUGUI: {fileID: 4530545678260503887}
+  box: {fileID: 5409509004665567438}
 --- !u!1 &5365684090743137883
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,8 +364,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -359, y: 301}
-  m_SizeDelta: {x: 635, y: 215}
+  m_AnchoredPosition: {x: -484, y: 301}
+  m_SizeDelta: {x: 372, y: 215}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7439367208539480625
 CanvasRenderer:
@@ -393,7 +395,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f592df86fd9ac194582c0fee61c122fe, type: 3}
+  m_Sprite: {fileID: 6098409753491660141, guid: f592df86fd9ac194582c0fee61c122fe, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -636,6 +638,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed137cffcecf50546874e3e52c7bec6f, type: 3}
+--- !u!114 &7655790237988397216 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6728975885486740506, guid: ed137cffcecf50546874e3e52c7bec6f, type: 3}
+  m_PrefabInstance: {fileID: 3989286855457174714}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc97d600ea74ed0b72de6db526fc613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.ThirdLevelGreenhouseButton
 --- !u!224 &8462927432140794304 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4768908396537699706, guid: ed137cffcecf50546874e3e52c7bec6f, type: 3}
