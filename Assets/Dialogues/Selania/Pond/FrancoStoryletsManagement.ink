@@ -22,7 +22,7 @@
             - Ricordati che se ti serve c'ho qui il tuo dono!
         }
             
-        -> frog_about_who_questions
+        -> franco_giftsManagement
 
     //Mentre siamo al nido
     - are_two_entities_together(PG, Franco) && entity_location(PG) == Nest && frog_currentMission == special_mission_one: 

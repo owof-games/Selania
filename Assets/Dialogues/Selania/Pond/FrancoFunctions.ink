@@ -97,6 +97,11 @@
                 - frog_firstCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
                     ~ frog_giftability = false
                     ~ frog_firstCharGiftable = false
+
+                - frog_firstCharAchievableGifts == bookGift && player_accessiblePlaces hasnt Library:
+                    ~ frog_giftability = false
+                    ~ frog_firstCharGiftable = false
+
                 - else:
                     ~ frog_giftability = true
                     ~ frog_firstCharGiftable = true
@@ -107,6 +112,11 @@
                 - frog_secondCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
                     ~ frog_giftability = false
                     ~ frog_secondCharGiftable = false
+
+                - frog_secondCharAchievableGifts == bookGift && player_accessiblePlaces hasnt Library:
+                    ~ frog_giftability = false
+                    ~ frog_secondCharGiftable = false
+
                 - else:
                     ~ frog_giftability = true
                     ~ frog_secondCharGiftable = true
@@ -117,6 +127,11 @@
                 - frog_thirdCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
                     ~ frog_giftability = false
                     ~ frog_thirdCharGiftable = false
+
+                - frog_thirdCharAchievableGifts == bookGift && player_accessiblePlaces hasnt Library:
+                    ~ frog_giftability = false
+                    ~ frog_thirdCharGiftable = false  
+
                 - else:
                     ~ frog_giftability = true
                     ~ frog_thirdCharGiftable = true
@@ -127,6 +142,15 @@
                 - frog_fourthCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
                     ~ frog_giftability = false
                     ~ frog_fourthCharGiftable = false
+                    //Se la cucina non è aperta ora, non si aprirà più.
+                    ~ frog_fourthCharAchievableGifts -= ingredientGift
+
+                - frog_fourthCharAchievableGifts == bookGift && player_accessiblePlaces hasnt Library:
+                    ~ frog_giftability = false
+                    ~ frog_fourthCharGiftable = false
+                    //Se la biblioteca non è aperta ora, non si aprirà più
+                    ~ frog_fourthCharAchievableGifts -= bookGift
+
                 - else:
                     ~ frog_giftability = true
                     ~ frog_fourthCharGiftable = true
@@ -137,6 +161,15 @@
                 - frog_fifthCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
                     ~ frog_giftability = false
                     ~ frog_fifthCharGiftable = false
+                    //Se la cucina non è aperta ora, non si aprirà più.
+                    ~ frog_fifthCharAchievableGifts -= ingredientGift
+
+                - frog_fifthCharAchievableGifts == bookGift && player_accessiblePlaces hasnt Library:
+                    ~ frog_giftability = false
+                    ~ frog_fifthCharGiftable = false
+                    //Se la biblioteca non è aperta ora, non si aprirà più
+                    ~ frog_fifthCharAchievableGifts -= bookGift
+
                 - else:
                     ~ frog_giftability = true
                     ~ frog_fifthCharGiftable = true
@@ -357,7 +390,7 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
             
     
     + Ho cambiato idea
-        -> frog_about_who_questions
+        -> franco_giftsManagement
 
   
 === tired_frog

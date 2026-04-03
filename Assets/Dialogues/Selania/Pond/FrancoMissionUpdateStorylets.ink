@@ -168,7 +168,7 @@
     E come dico sempre: la conoscenza è sapere!
     E il sapere è sapore per cui: dimmi come posso aiutarti.
         
-        -> frog_about_who_questions
+        -> franco_giftsManagement
 
 === franco_missionTwo_closed
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -190,7 +190,7 @@
             }
         E a proposito di cose buone: vediamo come posso aiutarti!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral    
 
-            -> frog_about_who_questions
+            -> franco_giftsManagement
 
 === franco_missionThree_closed
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -215,7 +215,7 @@
         E questo posto è un po' più felice.
         E allora io ti rendo un po' più felice: dimmi come posso aiutarti.
         
-            -> frog_about_who_questions
+            -> franco_giftsManagement
 
 === franco_missionFour_closed
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -254,7 +254,7 @@
     Non sai quanto abbia bisogno quella donna di uscire dal suo guscio.
     Per cui: vediamo come posso aiutarti!
         
-        -> frog_about_who_questions
+        -> franco_giftsManagement
 
 === franco_missionFive_closed
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -292,7 +292,7 @@
     Zio Gracco lo dice sempre: Franco!
     Zio Gracco è un rospo di poche parole.
         
-        -> frog_about_who_questions
+        -> franco_giftsManagement
 
 === franco_missionSix_closed
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -321,7 +321,7 @@
     <i>La saggezza ha molte facce, e una porta il volto di Franco.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
     E ora quindi è il mio momento di aiutarti.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         
-        -> frog_about_who_questions
+        -> franco_giftsManagement
 
 === franco_missionSeven_closed
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -365,7 +365,7 @@
     E allora io ti aiuterò con il tuo lavoro.
     Così magari Giulio capisce che sono un bravo girino, e ci prende il cane!
         
-        -> frog_about_who_questions
+        -> franco_giftsManagement
 
 === franco_missionEight_closed
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -414,7 +414,7 @@
     }
     E a proposito di pace: vediamo come posso aiutarti!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         
-        -> frog_about_who_questions
+        -> franco_giftsManagement
 
 === special_mission_one_closed
     ~ temp charNameOne = translator(firstChar_ActualName)

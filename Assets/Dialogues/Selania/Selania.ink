@@ -178,6 +178,7 @@
     INCLUDE Pond\FrancoFunctions.ink
     INCLUDE Pond\FrancoNewMissionStorylets.ink
     INCLUDE Pond\FrancoMissionUpdateStorylets.ink
+    INCLUDE Pond\FrancoGiftsManagement.ink
 
 //Nest
     INCLUDE Nest\Nest.ink
