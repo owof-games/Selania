@@ -345,6 +345,7 @@
         E ora mi sgriderebbe perché ho perso il filo.
         Vediamoci sulla spiaggia!
 
+        
         ~ move_entity(earthGlyph, Nest)
         ~ move_entity(Franco, Nest)
     @animation:RewriterBook    

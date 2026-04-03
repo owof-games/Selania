@@ -100,7 +100,7 @@
 
     //Missione speciale due richiede l'apertura della cucina e che sia vuota.
     {
-        - frog_allMissionsCompleted hasnt specialMissionTwo && player_accessiblePlaces has Kitchen:
+        - frog_allMissionsCompleted hasnt specialMissionTwo && player_accessiblePlaces has Kitchen && kitchen_kitchenOccupied == false:
             ~ frog_availableSpecialMissions += specialMissionTwo
 
         - else:
