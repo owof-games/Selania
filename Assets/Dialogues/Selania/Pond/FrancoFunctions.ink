@@ -415,3 +415,175 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
     Basta che poi me la restituisci, sennò non so come grattare la schiena di zio Gracco.
 
 -> main
+
+
+
+=== franco_giftsPlants(PNG)
+~ temp frog_temp_char_gift = ""
+~ temp frog_temp_temp_growing_gift = false
+~ temp tempChar_favouritesGifts = ()
+~ temp speaker = ()
+~ temp frog_temp_char_ingredient = ""
+
+    //Check preliminare    
+    {
+        - PNG == FirstCharacter:
+            ~ tempChar_favouritesGifts = firstChar_favouritesGifts
+            ~ speaker = FirstCharacter
+
+        - PNG == SecondCharacter:
+            ~ tempChar_favouritesGifts = secondChar_favouritesGifts
+            ~ speaker = SecondCharacter
+
+        - PNG == ThirdCharacter:
+            ~ tempChar_favouritesGifts = thirdChar_favouritesGifts
+            ~ speaker = ThirdCharacter
+
+        - PNG == FourthCharacter:
+            ~ tempChar_favouritesGifts = fourthChar_favouritesGifts
+            ~ speaker = FourthCharacter
+            
+        - PNG == FifthCharacter:
+            ~ tempChar_favouritesGifts = fifthChar_favouritesGifts
+            ~ speaker = FifthCharacter                
+    }
+
+
+
+   {
+        //Caso uno: il dono è in crescita:
+        - tempChar_favouritesGifts has greenhouse_chosenCultivable:
+            Girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+            Quello che ti serve sta crescendo proprio ora in serra!
+            Sento l'odore fino a qui.
+            O forse è solo zia Graaak che non si è ancora lavata.
+                ~ frog_temp_char_gift = "sta crescendo proprio ora in serra!"
+                ~ frog_temp_temp_growing_gift = true
+
+        //Caso due: il dono è nello zaino
+        - backpack_findedGifts ^ tempChar_favouritesGifts != ():
+            ~ temp findedFavourite = backpack_findedGifts ^ tempChar_favouritesGifts
+            ~ temp backGift = LIST_RANDOM(findedFavourite)
+                
+                {backGift:
+                    - BaccaDellaAddolorata:
+                        Pensa alla difficoltà di fare il primo passo, di accogliere il cambiamento. Quale pianta racconta questa cosa?
+                            ~ frog_temp_char_ingredient = "qualcosa che parli del fare il primo passo, di accogliere il cambiamento" 
+
+                    - BastoneDellOzioso:
+                        Pensa al piacere di viversi le cose per il piacere di farle. Quale pianta racconta questa storia?
+                            ~ frog_temp_char_ingredient = "qualcosa che parli del viversi le cose per il piacere di farle"
+
+                    - BrinaDellImpossibile: 
+                        Pensa al bisogno di comprendere che le ferite non ci bloccano nel passato. Quale pianta può aiutarlo?
+                            ~ frog_temp_char_ingredient = "qualcosa che aiuti a comprendere le ferite che bloccano nel passato"
+
+                    - CantoDelleCompagne:
+                        Pensa al piacere di stare con persone amiche, e chiediti cosa ricordi una festa.
+                             ~ frog_temp_char_ingredient = "qualcosa che parli del piacere dello stare con persone amiche"        
+                    
+                    - LicheneDegliAbissi:
+                        Ci sono relazioni che non sono sane. E c'è una pianta che le racconta. Quale?
+                            ~ frog_temp_char_ingredient = "ci sono relazioni che non sono sane. E c'è una pianta che le racconta. Quale?"
+
+                    - NonTiScordarDiTe: 
+                        Qualcosa che parli di chi fa parte di noi, delle nostre radici.
+                             ~ frog_temp_char_ingredient = "qualcosa che parli di chi fa parte di noi, delle nostre radici"        
+
+
+                }
+
+
+
+        //Caso tre: non abbiamo mai trovato il dono
+        - tempChar_favouritesGifts ^ greenhouse_findedCultivables == ():
+
+            Allora?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+            Scusa se ho spiato nello zaino ma no, non hai niente di utile.
+            Ma ora ci penso io.
+            "Care formiche."
+            "Come avrete visto, ora sono vegetariano."
+            "E in onore di questa nostra nuova amicizia vi chiederei un favore: potreste coltivare qualcosa di utile per {player_name}?"
+            "Grazie mille."
+            "PS.: Vi allego un po' del miele di Dora."
+            Ottimo.
+            La prossima volta che coltivi qualcosa in serra vedrai che sarà il dono giusto!
+
+                ~ temp perfectGift = LIST_RANDOM(tempChar_favouritesGifts)
+
+                {
+                    - greenhouse_frog_nextCultivableOne == ():
+                        ~ greenhouse_frog_nextCultivableOne = perfectGift
+                        ~ frog_temp_char_ingredient = "{ingredientTranslator(perfectGift)}"
+    
+                    - greenhouse_frog_nextCultivableTwo == () && greenhouse_frog_nextCultivableOne != ():
+                        ~ greenhouse_frog_nextCultivableTwo = perfectGift
+                        ~ frog_temp_char_ingredient = "{ingredientTranslator(perfectGift)}"
+                        
+                    - greenhouse_frog_nextCultivableThree == () && greenhouse_frog_nextCultivableTwo != ():
+                        ~ greenhouse_frog_nextCultivableThree = perfectGift
+                        ~ frog_temp_char_ingredient = "{ingredientTranslator(perfectGift)}"
+    
+                }
+        //Caso quattro: abbiamo trovato tutti i doni, ma li abbiamo già consumati.
+        - else:
+
+            ~ temp perfectGiftTwo = LIST_RANDOM(tempChar_favouritesGifts)
+
+            Girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+            Credo tu abbia fatto l'impossibile: c'erano un sacchissimo di doni a disposizione, ma li hai già consumati tutti in altre situazioni.
+            {
+                - frog_recoverableCultivables!= () && frog_recoveredCultivables == ():
+                    Però non mi hai ancora chiesto di recuperare una delle piante che hai già utilizzato.
+                    Ti consiglio di recuperare {ingredientTranslator(perfectGiftTwo)}.
+                    Ricorda però che posso fare un solo recupero!
+                        -> cultivable_recovery
+
+                - else:
+                    Hai già anche utilizzato il mio superpotere del recupero.
+                    Però posso dirti una cosa: ho fiducia in te, davvero.
+                    E so già che riuscirai a trovare altri modi per dimostrare quanto tieni a {translator(speaker)}.      
+
+            }
+
+} 
+
+//Check in uscita    
+    {
+        - PNG == FirstCharacter:
+            ~ frog_first_char_gift = frog_temp_char_gift
+            ~ frog_first_temp_growing_gift = frog_temp_temp_growing_gift
+            ~ frog_first_char_ingredient = frog_temp_char_ingredient 
+
+        - PNG == SecondCharacter:
+            ~ frog_second_char_gift = frog_temp_char_gift
+            ~ frog_second_temp_growing_gift = frog_temp_temp_growing_gift
+
+        - PNG == ThirdCharacter:
+            ~ frog_third_char_gift = frog_temp_char_gift
+            ~ frog_third_temp_growing_gift = frog_temp_temp_growing_gift
+
+        // - PNG == FourthCharacter:
+        //     ~ frog_fourth_char_gift = frog_temp_char_gift
+        //     ~ frog_fourth_temp_growing_gift = frog_temp_temp_growing_gift
+
+        // - PNG == FifthCharacter:
+        //     ~ frog_fifth_char_gift = frog_temp_char_gift
+        //     ~ frog_fifth_temp_growing_gift = frog_temp_temp_growing_gift                
+
+    }
+
+
+->->
+
+
+
+
+
+
+
+
+
+
+
+->->

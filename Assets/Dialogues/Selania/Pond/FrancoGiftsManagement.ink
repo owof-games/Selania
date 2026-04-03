@@ -79,7 +79,7 @@
     }
     
     + {frog_firstCharAchievableGifts has cultivableGift} Cosa potrei regalarle?
-        -> gift
+        -> franco_giftsPlants(FirstCharacter)
     + {frog_firstCharAchievableGifts has ingredientGift && player_accessiblePlaces has Kitchen} Quale ingrediente potrei usare in cucina con lei?
         -> ingredient
     + {frog_firstCharAchievableGifts has bookGift && player_accessiblePlaces has Library} Di quale racconto vorrebbe parlare?
@@ -144,7 +144,7 @@
     }
     
     + {frog_secondCharAchievableGifts has cultivableGift} Cosa potrei regalarle?
-        -> gift
+        -> franco_giftsPlants(SecondCharacter)
     + {frog_secondCharAchievableGifts has ingredientGift && player_accessiblePlaces has Kitchen} Quale ingrediente potrei usare in cucina con lei?
         -> ingredient
     + {frog_secondCharAchievableGifts has bookGift && player_accessiblePlaces has Library} Di quale racconto vorrebbe parlare?
@@ -207,7 +207,7 @@
     }
     
     + {frog_thirdCharAchievableGifts has cultivableGift} Cosa potrei regalarle?
-        -> gift
+        -> franco_giftsPlants(ThirdCharacter)
     + {frog_thirdCharAchievableGifts has ingredientGift && player_accessiblePlaces has Kitchen} Quale ingrediente potrei usare in cucina con lei?
         -> ingredient
     + {frog_thirdCharAchievableGifts has bookGift && player_accessiblePlaces has Library} Di quale racconto vorrebbe parlare?
@@ -270,7 +270,7 @@
     }
     
     + {frog_fourthCharAchievableGifts has cultivableGift} Cosa potrei regalarle?
-        -> gift
+        -> franco_giftsPlants(FourthCharacter)
     + {frog_fourthCharAchievableGifts has ingredientGift && player_accessiblePlaces has Kitchen} Quale ingrediente potrei usare in cucina con lei?
         -> ingredient
     + {frog_fourthCharAchievableGifts has bookGift && player_accessiblePlaces has Library} Di quale racconto vorrebbe parlare?
@@ -333,7 +333,7 @@
     }
     
     + {frog_fifthCharAchievableGifts has cultivableGift} Cosa potrei regalarle?
-        -> gift
+        -> franco_giftsPlants(FifthCharacter)
     + {frog_fifthCharAchievableGifts has ingredientGift && player_accessiblePlaces has Kitchen} Quale ingrediente potrei usare in cucina con lei?
         -> ingredient
     + {frog_fifthCharAchievableGifts has bookGift && player_accessiblePlaces has Library} Di quale racconto vorrebbe parlare?
