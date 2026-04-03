@@ -8,7 +8,10 @@
         
     - dice == 5:
         ~ frog_tiredValue = frog_maxTiredValue
-            -> top
+        -> top
+
+    - else:
+        ->->        
     
 }
     

@@ -1,13 +1,16 @@
 === function franco_giftsStateUpdater()
+{debug_frog: franco_giftsStateUpdater.}
 //Prima di tutto aggiorno lo stato delle azioni che la giocatrice può aver fatto senza Franco.
     {
         //Ho già fatto il dono (ed è il primo check)
         - firstChar_giftedObject != () && frog_firstCharAchievableGifts has cultivableGift:
                 ~ frog_firstCharAchievableGifts -= cultivableGift
+                {debug_frog: rimuovo cultivableGift da frog_firstCharAchievableGifts.}
 
         //Ho già cucinato (ed è il primo check). Traccio il nodo più vicino alla fine per prevenire problemi con eventuali crush del gioco
         - grimoire_firstChar has grimFirstCharKitchenEnded && frog_firstCharAchievableGifts has ingredientGift:
                 ~ frog_firstCharAchievableGifts -= ingredientGift
+                {debug_frog: rimuovo ingredientGift da frog_firstCharAchievableGifts.}
     }
     
     
@@ -15,10 +18,12 @@
         //Ho già fatto il dono (ed è il primo check)
         - secondChar_giftedObject != () && frog_secondCharAchievableGifts has cultivableGift:
                 ~ frog_secondCharAchievableGifts -= cultivableGift
-                
+                {debug_frog: rimuovo cultivableGift da frog_secondCharAchievableGifts.}
+
         //Ho già cucinato (ed è il primo check). Traccio il nodo più vicino alla fine per prevenire problemi con eventuali crush del gioco
         - grimoire_secondChar has grimSecondCharKitchenEnded && frog_secondCharAchievableGifts has ingredientGift:
                 ~ frog_secondCharAchievableGifts -= ingredientGift
+                {debug_frog: rimuovo ingredientGift da frog_secondCharAchievableGifts.}
     
     }
 
@@ -26,10 +31,12 @@
         //Ho già fatto il dono (ed è il primo check)
         - thirdChar_giftedObject != () && frog_thirdCharAchievableGifts has cultivableGift:
                 ~ frog_thirdCharAchievableGifts -= cultivableGift
-                
+                {debug_frog: rimuovo cultivableGift da frog_thirdCharAchievableGifts.}
+
         //Ho già cucinato (ed è il primo check). Traccio il nodo più vicino alla fine per prevenire problemi con eventuali crush del gioco
         - grimoire_thirdChar has grimThirdCharKitchenEnded && frog_thirdCharAchievableGifts has ingredientGift:
                 ~ frog_thirdCharAchievableGifts -= ingredientGift
+                {debug_frog: rimuovo ingredientGift da frog_thirdCharAchievableGifts.}
     
     }
 
@@ -121,8 +128,11 @@
         - else:                    
             ~ frog_giftability = false
     }
+
+    {debug_frog: dopo franco_giftsStateUpdater frog_giftability è {frog_giftability}.}
     
 === franco_giftsPlants(PNG, Location)
+{debug_frog: passo per franco_giftsPlants}
 ~ temp frog_temp_char_gift = ""
 ~ temp frog_temp_temp_growing_gift = false
 ~ temp tempChar_favouritesGifts = ()
@@ -183,7 +193,8 @@
             ~ temp findedFavourite = backpack_findedGifts ^ tempChar_favouritesGifts
             ~ temp findedFavouriteNotUsed = findedFavourite - usedGift
             ~ temp backGift = LIST_RANDOM(findedFavouriteNotUsed)
-                
+        {debug_frog: il dono è nello zaino ed è {backGift}.}
+
                 {backGift:
                     - BaccaDellaAddolorata:
                         Pensa alla difficoltà di fare il primo passo, di accogliere il cambiamento. Quale pianta racconta questa cosa?
@@ -229,6 +240,7 @@
             La prossima volta che coltivi qualcosa in serra vedrai che sarà il dono giusto!
 
                 ~ temp perfectGift = LIST_RANDOM(tempChar_favouritesGifts)
+            {debug_frog: il dono è stato messo in serra ed è {perfectGift}.}
 
                 {
                     - greenhouse_frog_nextCultivableOne == ():
@@ -404,6 +416,6 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
         Signori e signore e signor3, ecco quanto richiesto dal girino: {ingredientTranslator(recoveredCultivable)}! #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         Direttamente nello zainetto di {player_name}!
 
-             ~ backpack_findedGifts += recoveredCultivable
+            ~ backpack_findedGifts += recoveredCultivable
         
     -> closed_exchange

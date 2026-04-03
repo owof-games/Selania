@@ -1,4 +1,5 @@
 === franco_giftsManagement ===
+{debug_frog: passo da franco_giftsManagement.}
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -55,6 +56,7 @@
 ->->
 
 === franco_giftsFirstChar ===
+{debug_frog: passo da franco_giftsFirstChar.}
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -134,6 +136,7 @@
 
 
 === franco_giftsSecondChar ===
+{debug_frog: passo da franco_giftsSecondChar.}
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -211,6 +214,7 @@
 
 
 === franco_giftsThirdChar ===
+{debug_frog: passo da franco_giftsThirdChar.}
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)

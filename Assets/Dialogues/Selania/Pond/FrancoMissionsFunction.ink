@@ -1,4 +1,5 @@
 === function franco_missionsStateUpdater()
+{debug_frog: passo da franco_missionsStateUpdater.}
 //La logica qui è quella di avere un unico canale per vedere se le condizioni per una missione sono state raggiunte o meno.
     {  
         //Prima missione: leggere.
@@ -54,7 +55,10 @@
 
     }
 
+{debug_frog: dopo franco_missionsStateUpdater frog_updatedMissions contiene {frog_updatedMissions}.}
+
 === franco_missionsDispatcher
+{debug_frog: passo da franco_missionsDispatcher.}
 //Primo step: verifico se ci sono missioni da togliere dalla lista perché non sono state raggiunte le condizioni per attivarle.
 
     //Missione sei richiede invito strega a parlarle

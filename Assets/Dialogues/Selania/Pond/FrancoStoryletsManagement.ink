@@ -1,4 +1,5 @@
 === franco_storyletsManagement
+{debug_frog: passo da franco_storyletsManagement.}
 //Da qui passano tutti i check narrativi per quando iniziamo a parlare con Franco
 {
     //Storylets speciali

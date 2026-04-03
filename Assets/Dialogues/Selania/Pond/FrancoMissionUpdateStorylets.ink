@@ -3,7 +3,6 @@
     Sollecito missioni
 
 ****************************/ 
-
 === franco_missionOne_solicit
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
