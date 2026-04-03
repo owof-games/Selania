@@ -415,3 +415,47 @@
     E a proposito di pace: vediamo come posso aiutarti!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         
         -> frog_about_who_questions
+
+=== special_mission_one_closed
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+        //Associo ~ glyph_actualActiveSigil al sigillo di Franco
+        ~ glyph_actualActiveSigil = nest_francoChosenSigil
+        @animation:RewriterBook
+
+        Girino, ma che carino questo sigillo!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        {player_name} ha trovato {sigils_translator(nest_francoChosenSigil)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        {sigils_translator(nest_francoChosenSigil)}, suona bene.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        Spero che la nostra amica comune ti dia anche le informazioni utili per capire come funzioni.
+        {player_name} troverà le informazioni su {sigils_translator(nest_francoChosenSigil)} direttamente nel Grimorio.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+
+            //Aggiorno i testi
+            ~ glyph_grimoireTripleSigilsUpdater()
+            ~ glyph_grimoireTripleSigilsUpdater()
+            ~ glyph_grimoireTripleSigilsUpdater()
+            //Poi aggiorno il sigillo principale
+            ~ glyph_grimoireMainSigilsUpdater()
+            //E svuoto glyph_actualActiveSigil
+            ~ glyph_actualActiveSigil = ()
+            
+        Ora vado da Euforbo e glielo dono subito.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        Chissà se lo deve mangiare?
+        O metterlo in testa?
+        Magari ci si fa un cappellino?
+        Uh, tieniti pure la pietra, così puoi scoprire altri sigilli.
+        Magari ti aiutano a dire le tue emozioni.
+
+        ~ move_entity(Franco, Pond)
+        ~ frog_allMissionsCompleted += frog_currentMission
+        ~ frog_currentMission = ()
+        ~ frog_aboutGiftRequest = ()
+        //Metto in pausa le missioni speciali
+        ~ frog_pauseSpecialMission = frog_pauseSpecialMissionMax
+        ~ nest_francoUsedEarth = false
+        //Riattivo poi i tasti se posseduti
+        -> nest_reactivateGliphs ->
+        
+        -> main
+            

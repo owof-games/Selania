@@ -24,8 +24,6 @@
         E se c'è una rana, sarà felice di sapere anche lei che {player_name} ha letto il suo libro.
         Per cui girino: leggi un po' del tuo libro e poi torna da me.
 
-            ~ frog_currentMission += missionOne
-            ~ frog_availableCommonMissions -= missionOne
             @animation:RewriterBook
              -> main
 
@@ -56,8 +54,6 @@
         Per cui facciamo le formiche.
         E facciamole felici: torna quando avrai coltivato almeno tre piante!
 
-            ~ frog_currentMission += missionTwo
-            ~ frog_availableCommonMissions -= missionTwo
             @animation:RewriterBook
                 -> main
     
@@ -126,8 +122,8 @@
                     E poi ululo alla luna!
                     Devo subito avvisare Euforbo!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             }
-            ~ frog_currentMission += missionThree
-            ~ frog_availableCommonMissions -= missionThree
+
+
             @animation:RewriterBook    
                 -> main
 
@@ -161,8 +157,6 @@
 
         Io intanto vado a salutare bisnonno Ninfea.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
 
-            ~ frog_currentMission += missionFour
-            ~ frog_availableCommonMissions -= missionFour
             @animation:RewriterBook
                 -> main
 
@@ -195,11 +189,11 @@
         Ma c'è una lettera di Giulio.
         "Dal{player_pronouns has him:gli|{player_pronouns has her:le|lə}} la missione, Franco, abbi pietà per quella povera creatura!"
         Oggi i mariti sono un po' nervosetti.
-        Pensavo comunque {player_name}: perché non provi a parlare a {charNameOne} e {charNameTwo} quando sono assieme?
+        Pensavo comunque {player_name}: perché non provi a parlare con due persone quando sono assieme?
         Sono abbastanza sicuro che succederà qualcosa di interessante.
             {
                 - are_two_entities_together(SecondCharacter, PG):
-                    Noi due ci diciamo sempre cose grandi!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                    Io parlo sempre di cose grandi!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
             }
 
             {
@@ -209,8 +203,6 @@
             }
         Magari anche loro si mettono a nuotare!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
 
-        ~ frog_currentMission += missionFive
-        ~ frog_availableCommonMissions -= missionFive
         @animation:RewriterBook    
             -> main
 
@@ -262,8 +254,6 @@
         O era qualcosa sulla minestra?
         A dopo girino!
 
-            ~ frog_currentMission += missionSix
-            ~ frog_availableCommonMissions -= missionSix
             @animation:RewriterBook     
                 -> main
 
@@ -304,8 +294,7 @@
         Spera sempre di diventare famoso.
         A dopo {player_name}!
 
-            ~ frog_currentMission += missionSeven
-            ~ frog_availableCommonMissions -= missionSeven
+
             @animation:RewriterBook    
                 -> main
 
@@ -337,16 +326,12 @@
         E forse anche le lettere.
         Uh, è da un po' che non mi scrivono.
         
-            ~ frog_currentMission += missionEight
-            ~ frog_availableCommonMissions -= missionEight
+
             @animation:RewriterBook  
                 -> main
 
 
-
 //Missioni speciali, con script ad hoc per dare premi o cose del genere.
-
-
 === special_mission_one
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -361,8 +346,6 @@
         Vediamoci sulla spiaggia!
 
         ~ move_entity(earthGlyph, Nest)
-        ~ frog_currentMission += specialMissionOne
-        ~ frog_availableSpecialMissions -= specialMissionOne
         ~ move_entity(Franco, Nest)
     @animation:RewriterBook    
     -> main
@@ -403,52 +386,6 @@
     -> main
 
 
-=== special_mission_one_closed
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
-
-        //Associo ~ glyph_actualActiveSigil al sigillo di Franco
-        ~ glyph_actualActiveSigil = nest_francoChosenSigil
-        @animation:RewriterBook
-
-        Girino, ma che carino questo sigillo!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-        {player_name} ha trovato {sigils_translator(nest_francoChosenSigil)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-        {sigils_translator(nest_francoChosenSigil)}, suona bene.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-        Spero che la nostra amica comune ti dia anche le informazioni utili per capire come funzioni.
-        {player_name} troverà le informazioni su {sigils_translator(nest_francoChosenSigil)} direttamente nel Grimorio.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-
-            //Aggiorno i testi
-            ~ glyph_grimoireTripleSigilsUpdater()
-            ~ glyph_grimoireTripleSigilsUpdater()
-            ~ glyph_grimoireTripleSigilsUpdater()
-            //Poi aggiorno il sigillo principale
-            ~ glyph_grimoireMainSigilsUpdater()
-            //E svuoto glyph_actualActiveSigil
-            ~ glyph_actualActiveSigil = ()
-            
-        Ora vado da Euforbo e glielo dono subito.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-        Chissà se lo deve mangiare?
-        O metterlo in testa?
-        Magari ci si fa un cappellino?
-        Uh, tieniti pure la pietra, così puoi scoprire altri sigilli.
-        Magari ti aiutano a dire le tue emozioni.
-
-        ~ move_entity(Franco, Pond)
-        ~ frog_allMissionsCompleted += frog_currentMission
-        ~ frog_currentMission = ()
-        ~ frog_aboutGiftRequest = ()
-        //Metto in pausa le missioni speciali
-        ~ frog_pauseSpecialMission = frog_pauseSpecialMissionMax
-        ~ nest_francoUsedEarth = false
-        //Riattivo poi i tasti se posseduti
-        -> nest_reactivateGliphs ->
-        
-        -> main
-    
-
-
-  
 === special_mission_two
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -481,8 +418,6 @@
 
         ~ move_entity(Franco, Kitchen)
         ~ kitchen_kitchenOccupied = true
-        ~ frog_currentMission += specialMissionTwo
-        ~ frog_availableSpecialMissions -= specialMissionTwo
         @animation:RewriterBook    
             -> main
     

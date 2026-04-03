@@ -10,18 +10,17 @@
     //Lista di tutte le missioni che la rana può offrire, e quelle completate. Nota: missionOne etc son nomi temporanei, che verranno aggiornati man mano che le creo
     LIST frog_allMissions = missionOne, missionTwo, missionThree, missionFour, missionFive, missionSix, missionSeven, missionEight, specialMissionOne, specialMissionTwo
         //Separo la lista totale da quelle disponibili anche per un discorso di TW
-    VAR frog_availableCommonMissions = (missionOne, missionTwo, missionThree, missionFour, missionFive, missionSix, missionSeven, missionEight)
+    VAR frog_availableCommonMissions = (missionOne, missionTwo, missionThree, missionFour, missionSix, missionSeven, missionEight)
         //Nota: per ora sono solo due missioni speciali, poi vediamo.
-    VAR frog_availableSpecialMissions = (specialMissionOne, specialMissionTwo)
-    
+    VAR frog_availableSpecialMissions = (missionFive, specialMissionOne, specialMissionTwo)
+
         //Lista a inizio gioco di tutte le missioni di Franco.
     VAR frog_allAvailableMissions = ()
         //Lista delle missioni completate
     VAR frog_allMissionsCompleted = ()
         //Lista delle missioni completate ma non riscattate
     VAR frog_updatedMissions = ()
-
-
+        //Lista delle missioni prioritarie
 
     VAR frog_aboutGiftRequest = ()
     VAR frog_currentMission = ()
@@ -49,13 +48,13 @@
                                      ----------------------------------*/
 
 //Lista di tutto ciò che posso "donare" per ogni personaggia
-    LIST frog_firstCharAllPossibleGifts = charOneCultivable, charOneCooking, charOneEmotionalWord, charOneLibrary
-    LIST frog_secondCharAllPossibleGifts = charTwoCultivable, charTwoCooking, charTwoEmotionalWord, charTwoLibrary
+    LIST frog_AllPossibleGifts = cultivableGift, ingredientGift, sigilGift, bookGift
     LIST frog_universalGifts = universalIngredient
     
     //Devo poi tracciare la quantità di cose che rana mi può dare su una persona, e che sono per lo più legate a nodi, perché sono il dono giusto, le scelte giuste da dire, al max una formula utile per parlare con quella persona.
     VAR frog_firstCharObtainedGifts = ()
     VAR frog_secondCharObtainedGifts = ()
+    VAR frog_thirdCharObtainedGifts = ()
         
         //Questa lista traccia i coltivabili che sono stati utilizzati in giro per il gioco. La rana pescherà i disponibili da qui.
     VAR frog_recoverableCultivables = ()

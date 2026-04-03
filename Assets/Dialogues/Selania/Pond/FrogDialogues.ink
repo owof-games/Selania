@@ -8,15 +8,11 @@
     
 + {are_two_entities_together(Franco, PG) && entity_location(PG) == Pond} [Franco]
     
-    //Vediamo se sono già stati fatti doni o si è già cucinato, per verificare se abbiamo o meno la possibilità di dare effettivamente una mano.
-    -> discovered_things_updater
-    //Poi aggiorniamo lo stato delle varie missioni
-        ~ franco_missionsStateUpdater()
+    //Aggiorniamo lo stato delle varie missioni e dei doni
+        ~ franco_missionsAndGiftsStateUpdater()
     //Vediamo poi se ci sono degli storylets speciali o dei commenti sulle missioni in corso, concluse o meno che siano
-    -> franco_storyletsManagement
+        -> franco_storyletsManagement
     //Se supero anche questo nodo, significa che non ho missioni in corso e non ne ho concluse, per cui arrivano i saluti generali e poi la proposta di una nuova missione
-
-    
 
     {shuffle:
         - Ciao girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -41,5 +37,5 @@
         -> main
         
       + {entity_location(PG) == Pond}Franco, {dimmi cosa devo fare.|hai qualcosa da farmi fare?}
-        -> closed_mission_verify
+        -> franco_missionsDispatcher
         

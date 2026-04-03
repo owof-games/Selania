@@ -23,7 +23,7 @@
             -> witch_fifth_story_ended_check    
 
         //Dialogo su Franco
-        - witch_intro && closed_mission_verify && not the_witch_and_the_frog:
+        - witch_intro && grimoire_franco != () && not the_witch_and_the_frog:
             -> the_witch_and_the_frog
         
         //Apertura di tutti i sigilli
