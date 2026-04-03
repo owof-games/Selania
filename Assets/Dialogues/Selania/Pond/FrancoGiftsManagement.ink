@@ -36,7 +36,6 @@
         + {frog_thirdCharGiftable == true}{charNameThree}.
         + {frog_fourthCharGiftable == true}{charNameFour}.
         + {frog_fifthCharGiftable == true}{charNameFive}.
-
         + {frog_recoverableCultivables!= () && frog_recoveredCultivables == ()} Puoi aiutarmi a recuperare una pianta che ho già utilizzato?
             Certo che craack!
             Ma.
@@ -45,8 +44,6 @@
                     -> cultivable_recovery
                 + + Mmm, ci ragiono su.
                     -> top
-        + {glyph_usedSigils != ()} Puoi aiutarmi a recuperare un sigillo che ho già consumato?
-            TODO: da creare gestione recupero sigilli. Potrebbe anche essere troppo incasinata come cosa.
         + Vorrei pensarci ancora un po'.
             Mi trovi qui girino.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             Voglio contare tutte le onde!
