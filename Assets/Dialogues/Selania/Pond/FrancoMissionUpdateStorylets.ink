@@ -155,6 +155,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
+    //Dato che potrebbe trattarsi di una missione fatta in autonomia, aggiungo (solo ora) la missione a quelle completate.
+    ~ frog_currentMission = missionOne  
+
     Ma sei un portento, girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     Pensa che ero qui a dirmi "Servirebbe una persona con una bella testolina, più grande di quella di zia Torba."
     "Una capace di leggere quasi quanto {charNameTwo}."
@@ -174,6 +177,9 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
+
+    //Dato che potrebbe trattarsi di una missione fatta in autonomia, aggiungo (solo ora) la missione a quelle completate.
+    ~ frog_currentMission = missionTwo
 
         Dove l'ho messo di nuovo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         Ah eccolo!
@@ -196,6 +202,9 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
+
+    //Dato che potrebbe trattarsi di una missione fatta in autonomia, aggiungo (solo ora) la missione a quelle completate.
+    ~ frog_currentMission = missionThree
 
         Girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         Mi hanno detto che hai chiesto a {mentorName} di darti qualche consiglio di benessere.
@@ -221,6 +230,9 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
+
+    //Dato che potrebbe trattarsi di una missione fatta in autonomia, aggiungo (solo ora) la missione a quelle completate.
+    ~ frog_currentMission = missionFour
 
     Questa no.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     Nemmeno questa.
@@ -261,6 +273,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
+    //Dato che potrebbe trattarsi di una missione fatta in autonomia, aggiungo (solo ora) la missione a quelle completate.
+    ~ frog_currentMission = missionFive
+
     Avannotti!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     Era "avannotti".
     Non "ananassi."
@@ -290,7 +305,6 @@
     Ma devo aiutarti, mannaggia alla mia distrazione.
     Zio Gracco lo dice sempre: Franco!
     Zio Gracco è un rospo di poche parole.
-        
         -> franco_giftsManagement
 
 === franco_missionSix_closed
@@ -298,6 +312,9 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
+
+    //Dato che potrebbe trattarsi di una missione fatta in autonomia, aggiungo (solo ora) la missione a quelle completate.
+    ~ frog_currentMission = missionSix  
 
     Girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     Ho saputo che finalmente hai parlato con la nostra amica comune!
@@ -327,6 +344,9 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
+
+    //Dato che potrebbe trattarsi di una missione fatta in autonomia, aggiungo (solo ora) la missione a quelle completate.
+    ~ frog_currentMission = missionSeven
 
     I gemelli stanno facendo lo sciopero del sonno.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     A fatica mi ricordo il mio nome.
@@ -371,6 +391,9 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
+
+    //Dato che potrebbe trattarsi di una missione fatta in autonomia, aggiungo (solo ora) la missione a quelle completate.
+    ~ frog_currentMission = missionEight
 
     "Caro zio Gracco."#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     "La algonara è stata inventata nemmeno cento schiuse fa."

@@ -31,12 +31,17 @@
     - (top)
     Come vuoi che ti aiuti?
 
-        + {frog_firstCharGiftable == true}{charNameOne}.
-        + {frog_secondCharGiftable == true}{charNameTwo}.
-        + {frog_thirdCharGiftable == true}{charNameThree}.
-        + {frog_fourthCharGiftable == true}{charNameFour}.
-        + {frog_fifthCharGiftable == true}{charNameFive}.
-        + {frog_recoverableCultivables!= () && frog_recoveredCultivables == ()} Puoi aiutarmi a recuperare una pianta che ho già utilizzato?
+        + {frog_firstCharGiftable == true}Mi servirebbe un consiglio su {charNameOne}.
+            -> franco_giftsFirstChar
+        + {frog_secondCharGiftable == true}Vorrei una mano con {charNameTwo}.
+            -> franco_giftsSecondChar
+        + {frog_thirdCharGiftable == true}Cosa potresti offrirmi per {charNameThree}?
+            -> franco_giftsThirdChar
+        + {frog_fourthCharGiftable == true}Apprezzerei un aiuto con {charNameFour}.
+            -> franco_giftsFourthChar
+        + {frog_fifthCharGiftable == true}Qualche dritta su {charNameFive}?
+            -> franco_giftsFifthChar
+        + {(frog_recoverableCultivables != ()) && (frog_recoveredCultivables == ())} Puoi aiutarmi a recuperare una pianta che ho già utilizzato?
             Certo che craack!
             Ma.
             Lo posso fare solo una volta.

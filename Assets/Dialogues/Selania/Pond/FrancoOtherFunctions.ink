@@ -42,6 +42,8 @@
     @animation:RewriterBook
     ~ frog_aboutGiftRequest = ()
     ~ frog_allMissionsCompleted += frog_currentMission
+    //Levo per sicurezza dalle missioni update
+    ~ frog_updatedMissions -= frog_currentMission
     ~ frog_currentMission = ()
     ~ notification_francoQuests = false
     ~ frog_suspended_gift = false

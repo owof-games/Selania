@@ -26,7 +26,7 @@
         -> franco_giftsManagement
 
     //Mentre siamo al nido
-    - are_two_entities_together(PG, Franco) && entity_location(PG) == Nest && frog_currentMission == special_mission_one: 
+    - are_two_entities_together(PG, Franco) && entity_location(PG) == Nest && frog_currentMission has specialMissionOne: 
         
         {shuffle stopping:
            - Girino, continua a divertirti con quei sassi!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
