@@ -168,14 +168,13 @@
     
 //Pond    
     INCLUDE Pond\Pond.ink
-    INCLUDE Pond\FrogVarAndLists.ink
-    INCLUDE Pond\FrogDialogues.ink
-    INCLUDE Pond\FrogQuestManagement.ink
-    INCLUDE Pond\FrogGifts.ink
-
+    INCLUDE Pond\FrancoVarAndLists.ink
+    INCLUDE Pond\Franco.ink
     INCLUDE Pond\FrancoStorylets.ink
     INCLUDE Pond\FrancoStoryletsManagement.ink
-    INCLUDE Pond\FrancoFunctions.ink
+    INCLUDE Pond\FrancoOtherFunctions.ink
+    INCLUDE Pond\FrancoMissionsFunction.ink
+    INCLUDE Pond\FrancoGiftsFunctions.ink
     INCLUDE Pond\FrancoNewMissionStorylets.ink
     INCLUDE Pond\FrancoMissionUpdateStorylets.ink
     INCLUDE Pond\FrancoGiftsManagement.ink

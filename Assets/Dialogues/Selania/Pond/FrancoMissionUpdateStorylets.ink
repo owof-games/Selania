@@ -452,7 +452,7 @@
         ~ frog_currentMission = ()
         ~ frog_aboutGiftRequest = ()
         //Metto in pausa le missioni speciali
-        ~ frog_pauseSpecialMission = frog_pauseSpecialMissionMax
+        ~ franco_pauseSpecialStorylets()
         ~ nest_francoUsedEarth = false
         //Riattivo poi i tasti se posseduti
         -> nest_reactivateGliphs ->

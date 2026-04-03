@@ -339,11 +339,10 @@
         ~ backpack_findedGifts += universalIngredient
         ~ frog_otherGifts -= universalIngredient
         ~ frog_allMissionsCompleted += frog_currentMission
+        ~ franco_pauseSpecialStorylets()
         ~ frog_currentMission = ()
         ~ frog_aboutGiftRequest = ()
         ~ kitchen_allChefs += PG
-        //Metto in pausa le missioni speciali
-        ~ frog_pauseSpecialMission = frog_pauseSpecialMissionMax
         //Rimetto a posto i vari assets
         ~ move_entity(Franco, Pond)
         ~ kitchen_kitchenOccupied = false

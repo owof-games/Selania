@@ -39,6 +39,10 @@
         -> main
         
     + {entity_location(PG) == Pond}Franco, {dimmi cosa devo fare.|hai qualcosa da farmi fare?}
+        //Prima di tutto: check stanchezza!
+        -> tired_frog
+        //Se passato, controllo la disponibilità dei regali.
+
         {
             - frog_giftability == false && LIST_COUNT(frog_allAvailableMissions) > LIST_COUNT(frog_allMissionsCompleted):
                 Girino!#inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral

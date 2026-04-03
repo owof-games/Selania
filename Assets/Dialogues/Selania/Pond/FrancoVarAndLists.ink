@@ -22,7 +22,8 @@
     VAR frog_updatedMissions = ()
         //E la missione corrente
     VAR frog_currentMission = ()
-    //Pausa tra una missione speciale e l'altra
+
+        //Infine, pauso le missioni speciali
     VAR frog_pauseSpecialMission = 0
     VAR frog_pauseSpecialMissionMax = 1
 
@@ -56,8 +57,6 @@
     VAR frog_recoverableCultivables = ()
     VAR frog_recoveredCultivables = ()
     
-    //Serve o serviva per tracciare il coltivabile "prenotato" dalla giocatrice prima di concludere la missione.
-    VAR frog_cultivableRequested = ()
     
     //Per chi abbiamo richiesto il dono
     VAR frog_aboutGiftRequest = ()
