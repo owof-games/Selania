@@ -1,4 +1,8 @@
-//Missioni    
+/*****************************
+
+        Avvio missioni
+
+****************************/ 
 === mission_one
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -443,33 +447,6 @@
         -> main
     
 
-=== feedback_mission_one_closed ===
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
-
-        Ehi girino, grazie ancora per prima.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-        Euforbo all'inizio era confuso, si è portato il sigillo in camera.
-        Poi è venuto in soggiorno a fare le sue cose, e quando i suoi fratelli gli hanno dato noia <>
-
-        {
-            - glyph_earthFireSigils has nest_francoChosenSigil:
-                all'inizio si è agitato, ma poi ha iniziato a nuotare veloce veloce e a scaricare la tensione.
-            - glyph_earthAirSigils has nest_francoChosenSigil:
-                ha preso un grande respiro e poi si è messo a cucinare con Tullio, e si è rilassato.
-            - glyph_earthWaterSigils has nest_francoChosenSigil:
-                li ha ignorati, si è messo le sue cuffie preferite e ha iniziato a disegnare, ed era tutto felice.
-            - glyph_earthAetherSigils has nest_francoChosenSigil:
-                si è avvicinato a Giulio, e si è messo a leggere con lui.
-        }
-
-        Per il resto della serata l'ho visto più sereno.
-        Ha anche riso a una mia battuta!
-
-    ->->
-
-
 
   
 === special_mission_two
@@ -509,7 +486,3 @@
         @animation:RewriterBook    
             -> main
     
-
-
-
-

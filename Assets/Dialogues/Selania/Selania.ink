@@ -171,9 +171,13 @@
     INCLUDE Pond\FrogVarAndLists.ink
     INCLUDE Pond\FrogDialogues.ink
     INCLUDE Pond\FrogQuestManagement.ink
-    INCLUDE Pond\FrogMissions.ink
     INCLUDE Pond\FrogGifts.ink
-    
+
+    INCLUDE Pond\FrancoStorylets.ink
+    INCLUDE Pond\FrancoStoryletsManagement.ink
+    INCLUDE Pond\FrancoFunctions.ink
+    INCLUDE Pond\FrancoNewMissionStorylets.ink
+    INCLUDE Pond\FrancoMissionUpdateStorylets.ink
 
 //Nest
     INCLUDE Nest\Nest.ink

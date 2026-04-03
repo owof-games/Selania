@@ -18,6 +18,8 @@
     VAR frog_allAvailableMissions = ()
         //Lista delle missioni completate
     VAR frog_allMissionsCompleted = ()
+        //Lista delle missioni completate ma non riscattate
+    VAR frog_updatedMissions = ()
 
 
 
