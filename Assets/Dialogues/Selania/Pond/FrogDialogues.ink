@@ -8,8 +8,10 @@
     
 + {are_two_entities_together(Franco, PG) && entity_location(PG) == Pond} [Franco]
     
-    //Aggiorniamo lo stato delle varie missioni e dei doni
-        ~ franco_missionsAndGiftsStateUpdater()
+    //Aggiorniamo lo stato delle varie missioni
+        ~ franco_missionsStateUpdater()
+    //E quello dei doni
+        ~ franco_giftsStateUpdater()    
     //Vediamo poi se ci sono degli storylets speciali o dei commenti sulle missioni in corso, concluse o meno che siano
         -> franco_storyletsManagement
     //Se supero anche questo nodo, significa che non ho missioni in corso e non ne ho concluse, per cui arrivano i saluti generali e poi la proposta di una nuova missione
@@ -33,9 +35,24 @@
     }
     -
     
-      + Per ora me ne vado.
+    + Per ora me ne vado.
         -> main
         
-      + {entity_location(PG) == Pond}Franco, {dimmi cosa devo fare.|hai qualcosa da farmi fare?}
-        -> franco_missionsDispatcher
+    + {entity_location(PG) == Pond}Franco, {dimmi cosa devo fare.|hai qualcosa da farmi fare?}
+        {
+            - frog_giftability == false && LIST_COUNT(frog_allAvailableMissions) > LIST_COUNT(frog_allMissionsCompleted):
+                Girino!#inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                Ho un po' di missioni a disposizione, ma non avrei niente con cui ringraziarti, almeno per ora.
+                Torna più tardi.
+                -> main
+
+            - else:
+                -> franco_missionsDispatcher
+
+            
+        }
+
+
+
+        
         

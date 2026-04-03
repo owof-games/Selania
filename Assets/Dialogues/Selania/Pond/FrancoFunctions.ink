@@ -1,6 +1,5 @@
-=== function franco_missionsAndGiftsStateUpdater()
-//La logica qui è quella di avere un unico canale per vedere se le condizioni per una missione sono state raggiunte o meno, e anche lo stato dei doni
-//MISSIONI
+=== function franco_missionsStateUpdater()
+//La logica qui è quella di avere un unico canale per vedere se le condizioni per una missione sono state raggiunte o meno.
     {  
         //Prima missione: leggere.
         - first_character_recap.check && second_character_recap.check && greenhouse_recap.check && frog_allMissionsCompleted hasnt missionOne:
@@ -55,41 +54,88 @@
 
     }
 
-//DONI ETC.
+
+=== function franco_giftsStateUpdater()
+//Prima di tutto aggiorno lo stato delle azioni che la giocatrice può aver fatto senza Franco.
     {
         //Ho già fatto il dono (ed è il primo check)
-        - firstChar_giftedObject != () && frog_firstCharObtainedGifts hasnt cultivableGift:
-                ~ frog_firstCharObtainedGifts += cultivableGift
+        - firstChar_giftedObject != () && frog_firstCharAchievableGifts has cultivableGift:
+                ~ frog_firstCharAchievableGifts -= cultivableGift
 
         //Ho già cucinato (ed è il primo check). Traccio il nodo più vicino alla fine per prevenire problemi con eventuali crush del gioco
-        - grimoire_firstChar has grimFirstCharKitchenEnded && frog_firstCharObtainedGifts hasnt ingredientGift:
-                ~ frog_firstCharObtainedGifts += ingredientGift
+        - grimoire_firstChar has grimFirstCharKitchenEnded && frog_firstCharAchievableGifts has ingredientGift:
+                ~ frog_firstCharAchievableGifts -= ingredientGift
     }
     
     
     {
         //Ho già fatto il dono (ed è il primo check)
-        - secondChar_giftedObject != () && frog_secondCharObtainedGifts hasnt cultivableGift:
-                ~ frog_secondCharObtainedGifts += cultivableGift
+        - secondChar_giftedObject != () && frog_secondCharAchievableGifts has cultivableGift:
+                ~ frog_secondCharAchievableGifts -= cultivableGift
                 
         //Ho già cucinato (ed è il primo check). Traccio il nodo più vicino alla fine per prevenire problemi con eventuali crush del gioco
-        - grimoire_secondChar has grimSecondCharKitchenEnded && frog_secondCharObtainedGifts hasnt ingredientGift:
-                ~ frog_secondCharObtainedGifts += ingredientGift
+        - grimoire_secondChar has grimSecondCharKitchenEnded && frog_secondCharAchievableGifts has ingredientGift:
+                ~ frog_secondCharAchievableGifts -= ingredientGift
     
     }
 
     {
         //Ho già fatto il dono (ed è il primo check)
-        - thirdChar_giftedObject != () && frog_thirdCharObtainedGifts hasnt cultivableGift:
-                ~ frog_thirdCharObtainedGifts += cultivableGift
+        - thirdChar_giftedObject != () && frog_thirdCharAchievableGifts has cultivableGift:
+                ~ frog_thirdCharAchievableGifts -= cultivableGift
                 
         //Ho già cucinato (ed è il primo check). Traccio il nodo più vicino alla fine per prevenire problemi con eventuali crush del gioco
-        - grimoire_thirdChar has grimThirdCharKitchenEnded && frog_thirdCharObtainedGifts hasnt ingredientGift:
-                ~ frog_thirdCharObtainedGifts += ingredientGift
+        - grimoire_thirdChar has grimThirdCharKitchenEnded && frog_thirdCharAchievableGifts has ingredientGift:
+                ~ frog_thirdCharAchievableGifts -= ingredientGift
     
     }
 
-->->
+//Poi voglio vedere in generale in questo momento posso dare dei doni alla giocatrice
+    {
+        - frog_firstCharAchievableGifts != () && firstChar_storyStatus == story_storyStarted:
+            {
+                - frog_firstCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
+                    ~ frog_giftability = false
+                - else:
+                    ~ frog_giftability = true
+            }
+
+        - frog_secondCharAchievableGifts != () && secondChar_storyStatus == story_storyStarted:
+            {
+                - frog_secondCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
+                    ~ frog_giftability = false
+                - else:
+                    ~ frog_giftability = true
+            }
+
+        - frog_thirdCharAchievableGifts != () && thirdChar_storyStatus == story_storyStarted:
+            {
+                - frog_thirdCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
+                    ~ frog_giftability = false
+                - else:
+                    ~ frog_giftability = true
+            }
+
+        - frog_fourthCharAchievableGifts != () && fourthChar_storyStatus == story_storyStarted:
+            {
+                - frog_fourthCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
+                    ~ frog_giftability = false
+                - else:
+                    ~ frog_giftability = true
+            }
+
+        - frog_fifthCharAchievableGifts != () && fifthChar_storyStatus == story_storyStarted:
+            {
+                - frog_fifthCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
+                    ~ frog_giftability = false
+                - else:
+                    ~ frog_giftability = true
+            } 
+        
+        - else:                    
+            ~ frog_giftability = false
+    }
+
 
 
 === franco_missionsDispatcher

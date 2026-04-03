@@ -41,6 +41,17 @@
             ~ frog_allAvailableMissions = frog_availableCommonMissions + frog_availableSpecialMissions
             ~ achievements_fullFranco_maxValue = LIST_COUNT(frog_allAvailableMissions)
     }
+    //E aggiorno lo stato dei doni disponibili. Blocco questa cosa dopo il primo discorso con Chitarra, perché è una cosa che devo fare solo una volta.
+    {
+        - grimoire_firstChar == ():
+            ~ frog_firstCharAchievableGifts += frog_allCharactersGifts
+            ~ frog_secondCharAchievableGifts += frog_allCharactersGifts
+            ~ frog_thirdCharAchievableGifts += frog_allCharactersGifts
+            ~ frog_fourthCharAchievableGifts += frog_allCharactersGifts
+            ~ frog_fifthCharAchievableGifts += frog_allCharactersGifts
+            ~ frog_otherGifts += frog_uniqueGifts
+
+    }
 //Idem per i coltivabili
     {
         - greenhouse_allCultivables == ():

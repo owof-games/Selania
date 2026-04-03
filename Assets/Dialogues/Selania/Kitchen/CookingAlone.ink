@@ -337,6 +337,7 @@
         @animation:Backpack
                     
         ~ backpack_findedGifts += universalIngredient
+        ~ frog_otherGifts -= universalIngredient
         ~ frog_allMissionsCompleted += frog_currentMission
         ~ frog_currentMission = ()
         ~ frog_aboutGiftRequest = ()
