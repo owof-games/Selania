@@ -35,15 +35,19 @@ Funzione di traduzione da variabile a stringa
         - Corvo:
             ~ return "Corvo"
 
-    //Personaggio Tre    
+    //Personaggio Tre
+        - Boccale:
+            ~ return "Boccale"
     
     //Personaggia Quattro        
-        - Mondatrice:
-            ~ return "Mondatrice"
+        - NonnaMolotov:
+            ~ return "Nonna Molotov"
 
     //Personaggia Cinque        
         - Mentore:
             ~ return "Mentore"
+        - Mostro:
+            ~ return "Mostro"   
 
     }
 

@@ -5,8 +5,8 @@
                      ----------------------------------*/
 
 //Possibili nomi
-    LIST fourthChar_possibleStates = Mondatrice, NuovoStatoUnoQuattro, NuovoStatoDueQuattro, NuovoStatoTreQuattro
-    VAR fourthChar_ActualName = Mondatrice
+    LIST fourthChar_possibleStates = NonnaMolotov
+    VAR fourthChar_ActualName = NonnaMolotov
     
     
     VAR fourthChar_storyStatus = story_storyNotStarted
