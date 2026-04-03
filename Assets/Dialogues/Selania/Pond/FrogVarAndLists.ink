@@ -40,10 +40,15 @@
 
     //Devo poi tracciare la quantità di cose che rana mi può dare su una persona, e che sono per lo più legate a nodi, perché sono il dono giusto, le scelte giuste da dire, al max una formula utile per parlare con quella persona.
     VAR frog_firstCharAchievableGifts = ()
+        VAR frog_firstCharGiftable = true
     VAR frog_secondCharAchievableGifts = ()
+        VAR frog_secondCharGiftable = true
     VAR frog_thirdCharAchievableGifts = ()
+        VAR frog_thirdCharGiftable = true
     VAR frog_fourthCharAchievableGifts = ()
+        VAR frog_fourthCharGiftable = true
     VAR frog_fifthCharAchievableGifts = ()
+        VAR frog_fifthCharGiftable = true
     VAR frog_otherGifts = ()
  
         

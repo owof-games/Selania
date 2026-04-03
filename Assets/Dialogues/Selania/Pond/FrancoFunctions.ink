@@ -96,40 +96,50 @@
             {
                 - frog_firstCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
                     ~ frog_giftability = false
+                    ~ frog_firstCharGiftable = false
                 - else:
                     ~ frog_giftability = true
+                    ~ frog_firstCharGiftable = true
             }
 
         - frog_secondCharAchievableGifts != () && secondChar_storyStatus == story_storyStarted:
             {
                 - frog_secondCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
                     ~ frog_giftability = false
+                    ~ frog_secondCharGiftable = false
                 - else:
                     ~ frog_giftability = true
+                    ~ frog_secondCharGiftable = true
             }
 
         - frog_thirdCharAchievableGifts != () && thirdChar_storyStatus == story_storyStarted:
             {
                 - frog_thirdCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
                     ~ frog_giftability = false
+                    ~ frog_thirdCharGiftable = false
                 - else:
                     ~ frog_giftability = true
+                    ~ frog_thirdCharGiftable = true
             }
 
         - frog_fourthCharAchievableGifts != () && fourthChar_storyStatus == story_storyStarted:
             {
                 - frog_fourthCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
                     ~ frog_giftability = false
+                    ~ frog_fourthCharGiftable = false
                 - else:
                     ~ frog_giftability = true
+                    ~ frog_fourthCharGiftable = true
             }
 
         - frog_fifthCharAchievableGifts != () && fifthChar_storyStatus == story_storyStarted:
             {
                 - frog_fifthCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
                     ~ frog_giftability = false
+                    ~ frog_fifthCharGiftable = false
                 - else:
                     ~ frog_giftability = true
+                    ~ frog_fifthCharGiftable = true
             } 
         
         - else:                    
