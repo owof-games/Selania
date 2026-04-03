@@ -45,15 +45,12 @@
         - frog_firstCharAchievableGifts != () && firstChar_storyStatus == story_storyStarted:
             {
                 - frog_firstCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
-                    ~ frog_giftability = false
                     ~ frog_firstCharGiftable = false
 
                 - frog_firstCharAchievableGifts == bookGift && player_accessiblePlaces hasnt Library:
-                    ~ frog_giftability = false
                     ~ frog_firstCharGiftable = false
 
                 - else:
-                    ~ frog_giftability = true
                     ~ frog_firstCharGiftable = true
             }
     }
@@ -61,15 +58,12 @@
         - frog_secondCharAchievableGifts != () && secondChar_storyStatus == story_storyStarted:
             {
                 - frog_secondCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
-                    ~ frog_giftability = false
                     ~ frog_secondCharGiftable = false
 
                 - frog_secondCharAchievableGifts == bookGift && player_accessiblePlaces hasnt Library:
-                    ~ frog_giftability = false
                     ~ frog_secondCharGiftable = false
 
                 - else:
-                    ~ frog_giftability = true
                     ~ frog_secondCharGiftable = true
             }
     }
@@ -77,15 +71,12 @@
         - frog_thirdCharAchievableGifts != () && thirdChar_storyStatus == story_storyStarted:
             {
                 - frog_thirdCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
-                    ~ frog_giftability = false
                     ~ frog_thirdCharGiftable = false
 
                 - frog_thirdCharAchievableGifts == bookGift && player_accessiblePlaces hasnt Library:
-                    ~ frog_giftability = false
                     ~ frog_thirdCharGiftable = false  
 
                 - else:
-                    ~ frog_giftability = true
                     ~ frog_thirdCharGiftable = true
             }
     }
@@ -93,19 +84,16 @@
         - frog_fourthCharAchievableGifts != () && fourthChar_storyStatus == story_storyStarted:
             {
                 - frog_fourthCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
-                    ~ frog_giftability = false
                     ~ frog_fourthCharGiftable = false
                     //Se la cucina non è aperta ora, non si aprirà più.
                     ~ frog_fourthCharAchievableGifts -= ingredientGift
 
                 - frog_fourthCharAchievableGifts == bookGift && player_accessiblePlaces hasnt Library:
-                    ~ frog_giftability = false
                     ~ frog_fourthCharGiftable = false
                     //Se la biblioteca non è aperta ora, non si aprirà più
                     ~ frog_fourthCharAchievableGifts -= bookGift
 
                 - else:
-                    ~ frog_giftability = true
                     ~ frog_fourthCharGiftable = true
             }
     }
@@ -114,27 +102,28 @@
         - frog_fifthCharAchievableGifts != () && fifthChar_storyStatus == story_storyStarted:
             {
                 - frog_fifthCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
-                    ~ frog_giftability = false
                     ~ frog_fifthCharGiftable = false
                     //Se la cucina non è aperta ora, non si aprirà più.
                     ~ frog_fifthCharAchievableGifts -= ingredientGift
 
                 - frog_fifthCharAchievableGifts == bookGift && player_accessiblePlaces hasnt Library:
-                    ~ frog_giftability = false
                     ~ frog_fifthCharGiftable = false
                     //Se la biblioteca non è aperta ora, non si aprirà più
                     ~ frog_fifthCharAchievableGifts -= bookGift
 
                 - else:
-                    ~ frog_giftability = true
                     ~ frog_fifthCharGiftable = true
             } 
         
-        - else:                    
-            ~ frog_giftability = false
+    }
+    {
+        - (frog_firstCharGiftable == true) or (frog_secondCharGiftable == true) or (frog_thirdCharGiftable == true) or (frog_fourthCharGiftable == true) or (frog_fifthCharGiftable == true):
+            ~ frog_giftability = true
+        - else:
+            ~ frog_giftability = false    
     }
 
-    {debug_frog: dopo franco_giftsStateUpdater frog_giftability è {frog_giftability}.}
+    {debug_frog: dopo franco_giftsStateUpdater frog_giftability è {frog_giftability}. frog_firstCharGiftable è {frog_firstCharGiftable}, frog_secondCharGiftable è {frog_secondCharGiftable}, frog_thirdCharGiftable è {frog_thirdCharGiftable}, frog_fourthCharGiftable è {frog_fourthCharGiftable}, frog_fifthCharGiftable è {frog_fifthCharGiftable}.}
     
 === franco_giftsPlants(PNG, Location)
 {debug_frog: passo per franco_giftsPlants}
@@ -198,7 +187,7 @@
             ~ temp findedFavourite = backpack_findedGifts ^ tempChar_favouritesGifts
             ~ temp findedFavouriteNotUsed = findedFavourite - usedGift
             ~ temp backGift = LIST_RANDOM(findedFavouriteNotUsed)
-        {debug_frog: il dono è nello zaino ed è {backGift}.}
+            {debug_frog: il dono è nello zaino ed è {backGift}.}
 
                 {backGift:
                     - BaccaDellaAddolorata:
@@ -215,19 +204,23 @@
 
                     - CantoDelleCompagne:
                         Pensa al piacere di stare con persone amiche, e chiediti cosa ricordi una festa.
-                             ~ frog_temp_char_ingredient = "qualcosa che parli del piacere dello stare con persone amiche"        
-                    
+                             ~ frog_temp_char_ingredient = "qualcosa che parli del piacere dello stare con persone amiche"    
+
+                    - CardoAspinato:
+                        Pensa al pene.
+                             ~ frog_temp_char_ingredient = "pene." 
+
                     - LicheneDegliAbissi:
                         Ci sono relazioni che non sono sane. E c'è una pianta che le racconta. Quale?
                             ~ frog_temp_char_ingredient = "ci sono relazioni che non sono sane. E c'è una pianta che le racconta. Quale?"
 
                     - NonTiScordarDiTe: 
                         Qualcosa che parli di chi fa parte di noi, delle nostre radici.
-                             ~ frog_temp_char_ingredient = "qualcosa che parli di chi fa parte di noi, delle nostre radici"        
+                             ~ frog_temp_char_ingredient = "qualcosa che parli di chi fa parte di noi, delle nostre radici."        
 
 
                 }
-
+                {debug_frog: frog_temp_char_ingredient è {frog_temp_char_ingredient}.}
 
 
         //Caso tre: non abbiamo mai trovato il dono
@@ -245,7 +238,7 @@
             La prossima volta che coltivi qualcosa in serra vedrai che sarà il dono giusto!
 
                 ~ temp perfectGift = LIST_RANDOM(tempChar_favouritesGifts)
-            {debug_frog: il dono è stato messo in serra ed è {perfectGift}.}
+            {debug_frog: il dono è stato messo in serra ed è {ingredientTranslator(perfectGift)}. La lista tempChar_favouritesGifts contiene {tempChar_favouritesGifts}.}
 
                 {
                     - greenhouse_frog_nextCultivableOne == ():

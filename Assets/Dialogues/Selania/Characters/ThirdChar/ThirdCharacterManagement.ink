@@ -16,7 +16,7 @@
     VAR thirdChar_relationshipReaction = neutral
 
 //Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
-    VAR thirdChar_favouritesGifts = ()
+    VAR thirdChar_favouritesGifts = (CardoAspinato)
     VAR thirdChar_goodGifts = ()
     //Dono consigliato dalla rana
     VAR frog_third_char_gift = ""

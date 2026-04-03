@@ -7,7 +7,7 @@
     VAR debug_changeName = false
     VAR debug_kitchen = false
     VAR debug_nest = false
-    VAR debug_frog = false
+    VAR debug_frog = true
     VAR debug_horizontalS = false
     VAR debug_achievements = false
 

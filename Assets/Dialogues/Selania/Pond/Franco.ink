@@ -16,6 +16,8 @@
         -> franco_storyletsManagement
     //Se supero anche questo nodo, significa che non ho missioni in corso e non ne ho concluse, per cui arrivano i saluti generali e poi la proposta di una nuova missione
 
+
+- (top)
     {shuffle:
         - Ciao girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
 
@@ -43,19 +45,7 @@
         -> tired_frog
         //Se passato, controllo la disponibilità dei regali.
 
-        {
-            - frog_giftability == false && LIST_COUNT(frog_allAvailableMissions) > LIST_COUNT(frog_allMissionsCompleted):
-                Girino!#inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                Ho un po' di missioni a disposizione, ma non avrei niente con cui ringraziarti, almeno per ora.
-                Torna più tardi.
-                -> main
-
-            - else:
-                -> franco_missionsDispatcher
-
-            
-        }
-
+        
 
 
         

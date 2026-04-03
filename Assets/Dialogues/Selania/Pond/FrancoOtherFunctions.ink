@@ -1,7 +1,9 @@
 === tired_frog
 {debug_frog: passo da tired_frog.}
- ~ temp dice = RANDOM(1,5)
- 
+    ~ temp dice = RANDOM(1,5)
+{debug_frog: il valore di dice è {dice}.}
+{debug_frog: il valore di frog_giftability è {frog_giftability}.}
+
 {
     - frog_tiredValue > 0:
         -> top
@@ -11,8 +13,16 @@
         -> top
 
     - else:
-        ->->        
-    
+        {
+            - frog_giftability == false && LIST_COUNT(frog_allAvailableMissions) > LIST_COUNT(frog_allMissionsCompleted):
+                Girino!#inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                Ho un po' di missioni a disposizione, ma non avrei niente con cui ringraziarti, almeno per ora.
+                Torna più tardi.
+                -> main
+
+            - else:
+                -> franco_missionsDispatcher
+        }
 }
     
 - (top)
@@ -26,6 +36,7 @@
 
 
 === function franco_pauseSpecialStorylets()
+{debug_frog: passo franco_pauseSpecialStorylets().}
     ~ frog_pauseSpecialMission = frog_pauseSpecialMissionMax
 
 
