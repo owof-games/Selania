@@ -1027,6 +1027,15 @@ namespace Selania.Rework.Components
             _thirdLevelSigilsGrimoirePageDescriptorsSubject?.AsObservable() ?? throw new InvalidOperationException(
                 "Cannot get the third level sigils grimoire page descriptors before initialization");
 
+        private Subject<IStoryGrimoire.ThirdLevelGreenhouseGrimoirePageDescriptor>?
+            _thirdLevelGreenhouseGrimoirePageDescriptorsSubject;
+
+        /// <inheritdoc />
+        public Observable<IStoryGrimoire.ThirdLevelGreenhouseGrimoirePageDescriptor>
+            thirdLevelGreenhouseGrimoirePageDescriptors =>
+            _thirdLevelGreenhouseGrimoirePageDescriptorsSubject?.AsObservable() ?? throw new InvalidOperationException(
+                "Cannot get the third level greenhouse grimoire page descriptors before initialization");
+
         private void SetupGrimoire()
         {
             _firstLevelGrimoirePageDescriptorsSubject = new Subject<IStoryGrimoire.FirstLevelGrimoirePageDescriptor>();
@@ -1036,10 +1045,13 @@ namespace Selania.Rework.Components
                 new Subject<IStoryGrimoire.SecondLevelSigilsGrimoirePageDescriptor>();
             _thirdLevelSigilsGrimoirePageDescriptorsSubject =
                 new Subject<IStoryGrimoire.ThirdLevelSigilsGrimoirePageDescriptor>();
+            _thirdLevelGreenhouseGrimoirePageDescriptorsSubject =
+                new Subject<IStoryGrimoire.ThirdLevelGreenhouseGrimoirePageDescriptor>();
         }
 
         private void CleanupGrimoire()
         {
+            _thirdLevelGreenhouseGrimoirePageDescriptorsSubject?.Dispose();
             _thirdLevelSigilsGrimoirePageDescriptorsSubject?.Dispose();
             _secondLevelSigilsGrimoirePageDescriptorsSubject?.Dispose();
             _secondLevelGrimoirePageDescriptorsSubject?.Dispose();
@@ -1080,6 +1092,9 @@ namespace Selania.Rework.Components
                     break;
                 case "@grimoireSigilPages":
                     EmitThirdLevelSigilsGrimoirePage();
+                    break;
+                case "@grimoireGreenhousePages":
+                    EmitThirdLevelGreenhouseGrimoirePage();
                     break;
                 default:
                     logger.ZLogWarning($"Unknown grimoire tag {currentText}");
@@ -1486,6 +1501,135 @@ namespace Selania.Rework.Components
                     "water" => ISettingsSigils.GlyphType.Water,
                     _ => throw new InvalidOperationException($"Unknown glyph name '{glyphName}'")
                 };
+            }
+        }
+
+        private void EmitThirdLevelGreenhouseGrimoirePage()
+        {
+            var story = GetStory();
+
+            // extract left and right data from tags
+            var mainTags = MakeTags(story.currentTags);
+            var (leftTitle, leftPlant, leftStatus) = GetFromMainTags(true);
+            var (rightTitle, rightPlant, rightStatus) = GetFromMainTags(false);
+
+            // collect content lines
+            var leftPageContents = new List<(bool IsSubtitle, string Text)>();
+            var rightPageContents = new List<(bool IsSubtitle, string Text)>();
+
+            while (story.canContinue)
+            {
+                var line = story.Continue();
+                if (string.IsNullOrWhiteSpace(line)) continue;
+                var subTags = MakeTags(story.currentTags);
+                foreach (var subTag in subTags)
+                    switch (subTag.category)
+                    {
+                        case "leftPageDescription":
+                            leftPageContents.Add((false, line));
+                            break;
+                        case "leftPageSubtitle":
+                            leftPageContents.Add((true, line));
+                            break;
+                        case "rightPageDescription":
+                            rightPageContents.Add((false, line));
+                            break;
+                        case "rightPageSubtitle":
+                            rightPageContents.Add((true, line));
+                            break;
+                        default:
+                            logger.ZLogWarning(
+                                $"Unknown tag {subTag.category} associated to a third level greenhouse content");
+                            break;
+                    }
+            }
+
+            // navigation
+            GetNavigationChoices(story, out var indexChoice, out var secondLevelChoice, out var previousChoice,
+                out var nextChoice);
+            if (indexChoice == null)
+            {
+                logger.ZLogError($"Third level greenhouse has not a choice to get back to the first level!");
+                return;
+            }
+
+            if (secondLevelChoice == null)
+            {
+                logger.ZLogWarning(
+                    $"Third level greenhouse has not a choice to get back to the second level!");
+                return;
+            }
+
+            // emit the message
+            _thirdLevelGreenhouseGrimoirePageDescriptorsSubject!.OnNext(
+                new IStoryGrimoire.ThirdLevelGreenhouseGrimoirePageDescriptor(
+                    indexChoice, secondLevelChoice, previousChoice, nextChoice,
+                    new IStoryGrimoire.ThirdLevelGreenhousePageDescriptor(leftTitle, leftStatus, leftPlant,
+                        leftPageContents),
+                    new IStoryGrimoire.ThirdLevelGreenhousePageDescriptor(rightTitle, rightStatus, rightPlant,
+                        rightPageContents)));
+
+            return;
+
+            // helper function to extract title, status and plant from tags
+            (string, string, IStoryGrimoire.ThirdLevelGreenhouseStatus) GetFromMainTags(bool isLeft)
+            {
+                var prefix = isLeft ? "left" : "right";
+
+                var titleTag = $"{prefix}PageTitle";
+                var title = mainTags.FirstOrDefault(t => t.category == titleTag)?.value;
+                string actualTitle;
+                if (title == null)
+                {
+                    logger.ZLogWarning($"Could not find tag {titleTag} for third level greenhouse page");
+                    actualTitle = "";
+                }
+                else
+                {
+                    actualTitle = title;
+                }
+
+                var plantTag = $"{prefix}PagePlant";
+                var plant = mainTags.FirstOrDefault(t => t.category == plantTag)?.value;
+                string actualPlant;
+                if (plant == null)
+                {
+                    logger.ZLogWarning($"Could not find tag {plantTag} for third level greenhouse page");
+                    actualPlant = "";
+                }
+                else
+                {
+                    actualPlant = plant;
+                }
+
+                var statusTag = $"{prefix}PageStatus";
+                var status = mainTags.FirstOrDefault(t => t.category == statusTag)?.value;
+                IStoryGrimoire.ThirdLevelGreenhouseStatus actualStatus;
+                switch (status)
+                {
+                    case null:
+                        logger.ZLogWarning($"Could not find tag {statusTag} for third level greenhouse page");
+                        actualStatus = IStoryGrimoire.ThirdLevelGreenhouseStatus.Hidden;
+                        break;
+                    case "hidden":
+                        actualStatus = IStoryGrimoire.ThirdLevelGreenhouseStatus.Hidden;
+                        break;
+                    case "locked":
+                        actualStatus = IStoryGrimoire.ThirdLevelGreenhouseStatus.Locked;
+                        break;
+                    case "consumed":
+                        actualStatus = IStoryGrimoire.ThirdLevelGreenhouseStatus.Consumed;
+                        break;
+                    case "owned":
+                        actualStatus = IStoryGrimoire.ThirdLevelGreenhouseStatus.Owned;
+                        break;
+                    default:
+                        logger.ZLogWarning($"Could not recognize {statusTag} value {status}: forcing to 'hidden'");
+                        actualStatus = IStoryGrimoire.ThirdLevelGreenhouseStatus.Hidden;
+                        break;
+                }
+
+                return (actualTitle, actualPlant, actualStatus);
             }
         }
 
