@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using System;
+using System.Linq;
+using Microsoft.Extensions.Logging;
 using R3;
 using Selania.Rework.Interfaces;
 using UnityEngine;
@@ -25,14 +27,19 @@ namespace Selania.Rework.Components.Grimoire
                 .AddTo(this);
             StoryGrimoire.thirdLevelSigilsGrimoirePageDescriptors.Subscribe(OnThirdLevelSigilsGrimoirePageDescriptors)
                 .AddTo(this);
-            // grimoire events
+            StoryGrimoire.thirdLevelGreenhouseGrimoirePageDescriptors
+                .Subscribe(OnThirdLevelGreenhouseGrimoirePageDescriptors)
+                .AddTo(this);
+            // grimoire events: navigation
             grimoireBackground.indexChoiceObservable.Subscribe(PickChoice).AddTo(this);
             grimoireBackground.backToLevelTwoObservable.Subscribe(PickChoice).AddTo(this);
             grimoireBackground.previousPageObservable.Subscribe(PickChoice).AddTo(this);
             grimoireBackground.nextPageObservable.Subscribe(PickChoice).AddTo(this);
+            // grimoire events: specific page buttons
             grimoireBackground.firstLevelButtonClick.Subscribe(PickChoice).AddTo(this);
             grimoireBackground.secondLevelSigilsButtonClick.Subscribe(PickSigilChoice).AddTo(this);
             grimoireBackground.thirdLevelSigilsButtonClick.Subscribe(PickChoice).AddTo(this);
+            grimoireBackground.secondLevelGreenhouseButtonClick.Subscribe(PickChoice).AddTo(this);
         }
 
         private void PickChoice(string buttonName)
@@ -166,6 +173,51 @@ namespace Selania.Rework.Components.Grimoire
                     (referenceHeader.glyph1, referenceHeader.glyph2, sigilDescriptor.glyph3),
                     sigilDescriptor.status
                 );
+            }
+
+            // set up navigation
+            SetUpNavigation(descriptor);
+        }
+
+        private void OnThirdLevelGreenhouseGrimoirePageDescriptors(
+            IStoryGrimoire.ThirdLevelGreenhouseGrimoirePageDescriptor descriptor)
+        {
+            // show the grimoire (third level greenhouse)
+            grimoireBackground.ShowGrimoire();
+            grimoireBackground.SwitchToPage(GrimoireBackground.PageType.ThirdLevelGreenhouse);
+
+            // set up the grimoire header to show the info in the descriptor
+            for (var i = 0; i < 2; i++)
+            {
+                var isLeft = i == 0;
+                var pageDescriptor = isLeft ? descriptor.leftPage : descriptor.rightPage;
+                switch (pageDescriptor.status)
+                {
+                    case IStoryGrimoire.ThirdLevelGreenhouseStatus.Hidden:
+                        grimoireBackground.ThirdLevelGreenhouseHidePage(isLeft);
+                        break;
+                    case IStoryGrimoire.ThirdLevelGreenhouseStatus.Locked:
+                        grimoireBackground.ThirdLevelGreenhouseDisablePage(isLeft);
+                        break;
+                    case IStoryGrimoire.ThirdLevelGreenhouseStatus.Consumed:
+                    case IStoryGrimoire.ThirdLevelGreenhouseStatus.Owned:
+                    {
+                        var text = string.Join("\n",
+                            pageDescriptor.pageContents.Select(c =>
+                                c.IsSubtitle ? $"<b><i>{c.Text}</i></b>" : c.Text));
+                        grimoireBackground.ThirdLevelGreenhouseFillPage(isLeft,
+                            pageDescriptor.title,
+                            pageDescriptor.status == IStoryGrimoire.ThirdLevelGreenhouseStatus.Owned,
+                            pageDescriptor.status == IStoryGrimoire.ThirdLevelGreenhouseStatus.Owned
+                                ? ThirdLevelGreenhouseButton.Status.Owned
+                                : ThirdLevelGreenhouseButton.Status.Consumed,
+                            pageDescriptor.plantName, text);
+                        break;
+                    }
+                    default:
+                        throw new ArgumentOutOfRangeException(nameof(pageDescriptor.status), pageDescriptor.status,
+                            $"Unknown third level greenhouse page status {pageDescriptor.status}");
+                }
             }
 
             // set up navigation

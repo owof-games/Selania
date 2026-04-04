@@ -58,7 +58,12 @@ namespace Selania.Rework.Components.Grimoire
             /// <summary>
             ///     Third level page (sigils).
             /// </summary>
-            ThirdLevelSigils
+            ThirdLevelSigils,
+
+            /// <summary>
+            ///     Third level page (greenhouse).
+            /// </summary>
+            ThirdLevelGreenhouse
         }
 
         /// <summary>
@@ -100,6 +105,9 @@ namespace Selania.Rework.Components.Grimoire
 
         [Tooltip("The animator controlling the third level page for the sigils")] [SerializeField]
         private Animator thirdLevelAnimatorSigils = null!;
+
+        [Tooltip("The animator controlling the third level page for the greenhouse")] [SerializeField]
+        private Animator thirdLevelAnimatorGreenhouse = null!;
 
         [Tooltip("List of top level buttons")] [SerializeField]
         private TopLevelButton[] topLevelButtons = null!;
@@ -157,6 +165,9 @@ namespace Selania.Rework.Components.Grimoire
         [SerializeField] private ThirdLevelSigilsHeader thirdLevelSigilsHeaderLeft = null!;
         [SerializeField] private ThirdLevelSigilsHeader thirdLevelSigilsHeaderRight = null!;
         [SerializeField] private ThirdLevelSigilsRow[] thirdLevelSigilsRows = null!;
+
+        [SerializeField] [Tooltip("The third level greenhouse controller")]
+        private ThirdLevelGreenhouseGrimoire thirdLevelGreenhouseGrimoire = null!;
 
         private Animator _animator = null!;
 
@@ -497,6 +508,9 @@ namespace Selania.Rework.Components.Grimoire
                 case PageType.ThirdLevelSigils:
                     ShowPage(thirdLevelAnimatorSigils);
                     break;
+                case PageType.ThirdLevelGreenhouse:
+                    ShowPage(thirdLevelAnimatorGreenhouse);
+                    break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(pageType), pageType, null);
             }
@@ -516,7 +530,8 @@ namespace Selania.Rework.Components.Grimoire
             // fill the page animators if necessary.
             _pageAnimators ??= new[]
             {
-                firstLevelAnimator, secondLevelAnimatorGreenhouse, secondLevelAnimatorSigils, thirdLevelAnimatorSigils
+                firstLevelAnimator, secondLevelAnimatorGreenhouse, secondLevelAnimatorSigils, thirdLevelAnimatorSigils,
+                thirdLevelAnimatorGreenhouse
             };
 
             foreach (var animator in _pageAnimators)
@@ -643,6 +658,40 @@ namespace Selania.Rework.Components.Grimoire
             {
                 thirdLevelSigilsRow.SetUp("", "", "", "", null);
             }
+        }
+
+        /// <summary>
+        ///     Disable a page of the third level greenhouse.
+        /// </summary>
+        /// <param name="isLeft">Whether the page to disable is the left one.</param>
+        public void ThirdLevelGreenhouseDisablePage(bool isLeft)
+        {
+            thirdLevelGreenhouseGrimoire.DisablePage(isLeft);
+        }
+
+        /// <summary>
+        ///     Hide a page of the third level greenhouse.
+        /// </summary>
+        /// <param name="isLeft">Whether the page to hide is the left one.</param>
+        public void ThirdLevelGreenhouseHidePage(bool isLeft)
+        {
+            thirdLevelGreenhouseGrimoire.HidePage(isLeft);
+        }
+
+        /// <summary>
+        ///     Fill one of the two pages of the third level greenhouse with given information.
+        /// </summary>
+        /// <param name="isLeft">Whether this is the left or right page.</param>
+        /// <param name="title">Text for the title.</param>
+        /// <param name="isOwned">Whether the plant is owned.</param>
+        /// <param name="buttonStatus">Button status.</param>
+        /// <param name="plantName">Name of the plant.</param>
+        /// <param name="text">Text of the page.</param>
+        public void ThirdLevelGreenhouseFillPage(bool isLeft, string title, bool isOwned,
+            ThirdLevelGreenhouseButton.Status buttonStatus,
+            string plantName, string text)
+        {
+            thirdLevelGreenhouseGrimoire.FillPage(isLeft, title, isOwned, buttonStatus, plantName, text);
         }
     }
 }

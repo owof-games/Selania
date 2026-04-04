@@ -174,6 +174,11 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
             grimoireBackground.SwitchToPage(GrimoireBackground.PageType.ThirdLevelSigils);
         }
 
+        public void SwitchToThirdLevelGreenhousePage()
+        {
+            grimoireBackground.SwitchToPage(GrimoireBackground.PageType.ThirdLevelGreenhouse);
+        }
+
         public void RandomizeGreenhouseButtons()
         {
             var buttonNames = new[]
@@ -274,6 +279,27 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
                     status
                 );
             }
+        }
+
+        public void ThirdLevelGreenhouseFirstSet()
+        {
+            grimoireBackground.ThirdLevelGreenhouseDisablePage(true);
+            grimoireBackground.ThirdLevelGreenhouseHidePage(false);
+        }
+
+        public void ThirdLevelGreenhouseSecondSet()
+        {
+            grimoireBackground.ThirdLevelGreenhouseFillPage(true, "Left", true,
+                ThirdLevelGreenhouseButton.Status.Active, "BaccaDellaAddolorata", "descrizione bacca");
+            grimoireBackground.ThirdLevelGreenhouseFillPage(false, "Right", false,
+                ThirdLevelGreenhouseButton.Status.Consumed, "BarbaDellInciampo", "descrizione bacca");
+        }
+
+        public void ThirdLevelGreenhouseThirdSet()
+        {
+            grimoireBackground.ThirdLevelGreenhouseFillPage(true, "Left", true,
+                ThirdLevelGreenhouseButton.Status.Owned, "BastoneDellOzioso", "descrizione bacca");
+            grimoireBackground.ThirdLevelGreenhouseHidePage(false);
         }
     }
 }

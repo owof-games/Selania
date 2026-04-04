@@ -9,6 +9,32 @@ namespace Selania.Rework.Interfaces
     public interface IStoryGrimoire
     {
         /// <summary>
+        ///     Possible statuses of a third level greenhouse page.
+        /// </summary>
+        enum ThirdLevelGreenhouseStatus
+        {
+            /// <summary>
+            ///     The page is not displayed at all (empty page).
+            /// </summary>
+            Hidden,
+
+            /// <summary>
+            ///     The page shows a locked plant.
+            /// </summary>
+            Locked,
+
+            /// <summary>
+            ///     The page shows a used plant.
+            /// </summary>
+            Consumed,
+
+            /// <summary>
+            ///     The page shows a plant currently owned.
+            /// </summary>
+            Owned
+        }
+
+        /// <summary>
         ///     Possible status for third-level sigils
         /// </summary>
         enum ThirdLevelSigilStatus
@@ -53,6 +79,11 @@ namespace Selania.Rework.Interfaces
         ///     An observable that produces a value whenever a third level sigils grimoire page should be displayed.
         /// </summary>
         Observable<ThirdLevelSigilsGrimoirePageDescriptor> thirdLevelSigilsGrimoirePageDescriptors { get; }
+
+        /// <summary>
+        ///     An observable that produces a value whenever a third level greenhouse grimoire page should be displayed.
+        /// </summary>
+        Observable<ThirdLevelGreenhouseGrimoirePageDescriptor> thirdLevelGreenhouseGrimoirePageDescriptors { get; }
 
         /// <summary>
         ///     Switches to the flow of the grimoire.
@@ -178,6 +209,19 @@ namespace Selania.Rework.Interfaces
             ISettingsSigils.GlyphType glyph2);
 
         /// <summary>
+        ///     Description of a third level greenhouse page.
+        /// </summary>
+        /// <param name="title">Title of the page.</param>
+        /// <param name="status">Status of the page.</param>
+        /// <param name="plantName">Name of the plant, as it appears in the ink list.</param>
+        /// <param name="pageContents">Contents of the page: a list of page elements, which are either subtitles or contents.</param>
+        record ThirdLevelGreenhousePageDescriptor(
+            string title,
+            ThirdLevelGreenhouseStatus status,
+            string plantName,
+            IList<(bool IsSubtitle, string Text)> pageContents);
+
+        /// <summary>
         ///     Description for third level sigils.
         /// </summary>
         /// <param name="isLocked">Whether the sigil is locked; if it is, all the rest of the data is ignored.</param>
@@ -198,6 +242,10 @@ namespace Selania.Rework.Interfaces
         /// <summary>
         ///     Descriptor of the third level page of the sigils.
         /// </summary>
+        /// <param name="indexText">Text of the choice to get back to the index.</param>
+        /// <param name="backToLevelTwoText">Text of the choice to get back to the second level (sigils).</param>
+        /// <param name="previousPageText">Text of the choice to get to the previous page, if there is a previous page, and <c>null</c> otherwise.</param>
+        /// <param name="nextPageText">Text of the choice to get to the next page, if there is a previous page, and <c>null</c> otherwise.</param>
         /// <param name="leftSideHeader">Description for the left side header.</param>
         /// <param name="rightSideHeader">Description for the right side header.</param>
         /// <param name="leftSide1">Description of the first left side sigil.</param>
@@ -219,6 +267,30 @@ namespace Selania.Rework.Interfaces
             ThirdLevelSigil rightSide1,
             ThirdLevelSigil rightSide2,
             ThirdLevelSigil rightSide3
+        ) : BaseNavigationDescriptor(indexText, backToLevelTwoText, previousPageText, nextPageText);
+
+        /// <summary>
+        ///     Descriptor of the third level page of the greenhouse.
+        /// </summary>
+        /// <param name="indexText">Text of the choice to get back to the index.</param>
+        /// <param name="backToLevelTwoText">Text of the choice to get back to the second level (greenhouse).</param>
+        /// <param name="previousPageText">
+        ///     Text of the choice to get to the previous page, if there is a previous page, and
+        ///     <c>null</c> otherwise.
+        /// </param>
+        /// <param name="nextPageText">
+        ///     Text of the choice to get to the next page, if there is a previous page, and <c>null</c>
+        ///     otherwise.
+        /// </param>
+        /// <param name="leftPage">Descriptor for the left page.</param>
+        /// <param name="rightPage">Descriptor for the right page.</param>
+        record ThirdLevelGreenhouseGrimoirePageDescriptor(
+            string indexText,
+            string backToLevelTwoText,
+            string? previousPageText,
+            string? nextPageText,
+            ThirdLevelGreenhousePageDescriptor leftPage,
+            ThirdLevelGreenhousePageDescriptor rightPage
         ) : BaseNavigationDescriptor(indexText, backToLevelTwoText, previousPageText, nextPageText);
     }
 }

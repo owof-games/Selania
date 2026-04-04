@@ -1,0 +1,168 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5290246677421435643
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 144
+      objectReference: {fileID: 0}
+    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 144
+      objectReference: {fileID: 0}
+    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 811821908615296897, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 939524010463004744, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1e6db0b3fede66c47b50400e7a0d0428, type: 3}
+    - target: {fileID: 939524010463004744, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 3efb5f2d7893bd145b3c896af040b90a, type: 2}
+    - target: {fileID: 2127631174429788715, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466848855336276597, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: disabledSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f2d22e94eea1a294d9e16846418922c8, type: 3}
+    - target: {fileID: 5050124664244812261, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 56a1a1352ae7afb499836633be5519a7, type: 3}
+    - target: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      propertyPath: m_Name
+      value: Third Level Greenhouse Button
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1393977905408830648}
+    - targetCorrespondingSourceObject: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6728975885486740506}
+  m_SourcePrefab: {fileID: 100100000, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+--- !u!1 &3009648635789693820 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6966734578016778631, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_PrefabInstance: {fileID: 5290246677421435643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1393977905408830648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3009648635789693820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb9e448865a4fb5b0e86ae86f48b963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.GrimoireButtonSaturationControl
+  image: {fileID: 4927896005879014067}
+--- !u!114 &6728975885486740506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3009648635789693820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc97d600ea74ed0b72de6db526fc613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.ThirdLevelGreenhouseButton
+  nonActiveBackground: {fileID: 45227373116686784, guid: f592df86fd9ac194582c0fee61c122fe, type: 3}
+  image: {fileID: 4927896005879014067}
+--- !u!114 &4927896005879014067 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 939524010463004744, guid: 99eaeab69c73e4441a86b552ea9867b8, type: 3}
+  m_PrefabInstance: {fileID: 5290246677421435643}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image

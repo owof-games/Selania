@@ -132,23 +132,73 @@ LIST allGlyphs = Fire, Air, Water, Earth, Aether
 === grimoire_greenhouse
     @grimoireGreenhouse
     + {RANDOM(1, 6) <= 3} [BaccaDellaAddolorata #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third
     + {RANDOM(1, 6) <= 3} [BarbaDellInciampo #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third
     + {RANDOM(1, 6) <= 3} [BastoneDellOzioso #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third
     + {RANDOM(1, 6) <= 3} [BrinaDellImpossibile #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third
     + {RANDOM(1, 6) <= 3} [CantoDelleCompagne #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third
     + {RANDOM(1, 6) <= 3} [CardoAspinato #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third
     + {RANDOM(1, 6) <= 3} [EderaDelleAmanti #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third
     + {RANDOM(1, 6) <= 3} [ErbaLiccia #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third
     + {RANDOM(1, 6) <= 3} [FalsaPalude #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third
     + {RANDOM(1, 6) <= 3} [LanaNotturna #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third
     + {RANDOM(1, 6) <= 3} [LicheneDegliAbissi #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third
     + {RANDOM(1, 6) <= 3} [NonTiScordarDiTe #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third
     + {RANDOM(1, 6) <= 3} [Olobino #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third
     + {RANDOM(1, 6) <= 3} [LaSpazzata #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third
     + [Index #bookmark:index]
-    -> grimoire
-    -
-    -> grimoire_greenhouse
+        -> grimoire
+
+
+=== grimoire_greenhouse_third
+    @grimoireGreenhousePages #leftPageTitle:Lana Notturna #leftPageStatus:locked #leftPagePlant:LanaNotturna #rightPageTitle:Bacca dell'Addolorata #rightPageStatus:owned #rightPagePlant:BaccaDellaAddolorata
+    Lorem ipsum. #leftPageDescription
+    Altro Lorem. #leftPageDescription
+    Donata a Chitarra #leftPageSubtitle
+    Non ha espresso particolare entusiasmo. #leftPageDescription
+    Descrizione a destra #rightPageDescription
+    Aggiunta cucinando con Riccio #rightPageSubtitle
+    Recuperata da Franco #rightPageSubtitle
+    + [Index #bookmark:index]
+        -> grimoire
+    + [Piante #bookmark:secondLevel]
+        -> grimoire_greenhouse
+    + [Pianta1 #bookmark:previous]
+        -> grimoire_greenhouse_third_alt
+    + [Pianta2 #bookmark:next]
+        -> grimoire_greenhouse_third_alt
+
+
+=== grimoire_greenhouse_third_alt
+    @grimoireGreenhousePages #leftPageTitle:Lana Notturna #leftPageStatus:consumed #leftPagePlant:LanaNotturna #rightPageTitle:Bacca dell'Addolorata #rightPageStatus:hidden #rightPagePlant:BaccaDellaAddolorata
+    Lorem ipsum. #leftPageDescription
+    Altro Lorem. #leftPageDescription
+    Donata a Chitarra #leftPageSubtitle
+    Non ha espresso particolare entusiasmo. #leftPageDescription
+    Descrizione a destra #rightPageDescription
+    Aggiunta cucinando con Riccio #rightPageSubtitle
+    Recuperata da Franco #rightPageSubtitle
+    + [Index #bookmark:index]
+        -> grimoire
+    + [Piante #bookmark:secondLevel]
+        -> grimoire_greenhouse
+    + [Pianta1 #bookmark:previous]
+        -> grimoire_greenhouse_third
+    + [Pianta2 #bookmark:next]
+        -> grimoire_greenhouse_third
 
 
 === grimoire_sigils

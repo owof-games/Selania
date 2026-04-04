@@ -23,16 +23,16 @@ namespace Selania.Rework.Components.Grimoire
         [Tooltip("Text element for the third description line")] [SerializeField]
         private TextMeshProUGUI thirdDescriptionLineTextMeshProUGUI = null!;
 
-        private string _title;
+        private string? _title;
 
         /// <summary>
         ///     An observable that produces the title of this row whenever the button is clicked.
         /// </summary>
         public Observable<string> click => button.GetComponent<Button>()
             .OnClickAsObservable()
-            .CombineLatest(button.GetComponent<GrimoireButtonHelper>().LogicallyDisabled, (_, disabled) => disabled)
+            .CombineLatest(button.GetComponent<GrimoireButtonHelper>().logicallyDisabled, (_, disabled) => disabled)
             .Where(disabled => !disabled)
-            .Select(_ => _title);
+            .Select(_ => _title ?? "");
 
         /// <summary>
         ///     Set up the row.

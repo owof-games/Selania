@@ -46,7 +46,7 @@ namespace Selania.Rework.Components.Grimoire
         public Observable<string> click => GetComponent<Button>().OnClickAsObservable().Select(_ => plantName);
 
         /// <summary>
-        ///     Set the saturation of the image. Facade method over <see cref="GrimoireButtonSaturationControl.SetSaturation" />.
+        ///     Set the saturation of the image. Facade method over <see cref="GrimoireButtonSaturationControl.SetSaturation(float)" />.
         /// </summary>
         /// <param name="saturation">The new saturation (0..1).</param>
         public void SetSaturation(float saturation)
