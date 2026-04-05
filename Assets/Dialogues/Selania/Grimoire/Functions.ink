@@ -107,7 +107,15 @@
 
 
 
-=== function grimoire_sigilSigilName(sigilName)
+=== function grimoire_sigilSigilName(glyph1, glyph2) ===
+    ~ temp pertinentSigils = sigilsWithGlyphInFirstPosition(glyph1) ^ sigilsWithGlyphInSecondPosition(glyph2)
+    ~ temp discoveredPertinentSigils = pertinentSigils ^ glyph_discoveredSigils
+    {not discoveredPertinentSigils:
+        ~ return ""
+    }
+
+    ~ temp sigilName = "{glyph1}{glyph2}"
+
 {sigilName:
      //Venti sigilli principali
             - "WaterEarth":
