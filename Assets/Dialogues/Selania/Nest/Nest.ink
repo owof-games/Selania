@@ -27,8 +27,6 @@
         ~ saveGlyph(Fire)
         ~ checkSigilCompleted()
         ~ nest_updateButtons()
-        ~ move_entity(fireGlyph, Safekeeping)
-        ~ move_entity(fireGlyph_off, Nest)
         -> main
 
 === nest_airGlyph_button ===
@@ -36,8 +34,6 @@
         ~ saveGlyph(Air)
         ~ checkSigilCompleted()
         ~ nest_updateButtons()
-        ~ move_entity(airGlyph, Safekeeping)
-        ~ move_entity(airGlyph_off, Nest)
         -> main
 
 === nest_earthGlyph_button ===
@@ -45,8 +41,6 @@
         ~ saveGlyph(Earth)
         ~ checkSigilCompleted()
         ~ nest_updateButtons()
-        ~ move_entity(earthGlyph, Safekeeping)
-        ~ move_entity(earthGlyph_off, Nest)
         -> main
 
 === nest_waterGlyph_button ===
@@ -54,8 +48,6 @@
         ~ saveGlyph(Water)
         ~ checkSigilCompleted()
         ~ nest_updateButtons()
-        ~ move_entity(waterGlyph, Safekeeping)
-        ~ move_entity(waterGlyph_off, Nest)
         -> main
 
 === nest_aetherGlyph_button ===
@@ -63,8 +55,6 @@
         ~ saveGlyph(Aether)
         ~ checkSigilCompleted()
         ~ nest_updateButtons()
-        ~ move_entity(aetherGlyph, Safekeeping)
-        ~ move_entity(aetherGlyph_off, Nest)
         -> main
 
 
@@ -75,8 +65,6 @@
         ~ saveGlyph(Fire)
         ~ checkSigilCompleted()
         ~ nest_updateButtons()
-        ~ move_entity(fireGlyph, Safekeeping)
-        ~ move_entity(fireGlyph_off, Nest)
         -> main
 
 === nest_Franco_airGlyph_button ===
@@ -84,8 +72,6 @@
         ~ saveGlyph(Air)
         ~ checkSigilCompleted()
         ~ nest_updateButtons()
-        ~ move_entity(airGlyph, Safekeeping)
-        ~ move_entity(airGlyph_off, Nest)
         -> main
 
 === nest_Franco_earthGlyph_button ===
@@ -94,8 +80,6 @@
         ~ nest_francoUsedEarth = true
         ~ checkSigilCompleted()
         ~ nest_updateButtons()
-        ~ move_entity(earthGlyph, Safekeeping)
-        ~ move_entity(earthGlyph_off, Nest)
         -> main
 
 === nest_Franco_waterGlyph_button ===
@@ -103,8 +87,6 @@
         ~ saveGlyph(Water)
         ~ checkSigilCompleted()
         ~ nest_updateButtons()
-        ~ move_entity(waterGlyph, Safekeeping)
-        ~ move_entity(waterGlyph_off, Nest)
         -> main
 
 === nest_Franco_aetherGlyph_button ===
@@ -112,6 +94,4 @@
         ~ saveGlyph(Aether)
         ~ checkSigilCompleted()
         ~ nest_updateButtons()
-        ~ move_entity(aetherGlyph, Safekeeping)
-        ~ move_entity(aetherGlyph_off, Nest)
         -> main        

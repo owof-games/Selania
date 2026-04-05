@@ -199,3 +199,27 @@ VAR nest_francoChosenSigil = ()
 }
     
 ->->
+
+
+=== function set_up_glyphs() ===
+
+~ _setup_up_glyph(waterGlyph, waterGlyph_off, nest_waterButton)
+~ _setup_up_glyph(earthGlyph, earthGlyph_off, nest_earthButton)
+~ _setup_up_glyph(fireGlyph, fireGlyph_off, nest_fireButton)
+~ _setup_up_glyph(aetherGlyph, aetherGlyph_off, nest_aetherButton)
+~ _setup_up_glyph(airGlyph, airGlyph_off, nest_airButton)
+
+
+=== function _setup_up_glyph(glyph, glyph_off, is_in_scene) ===
+{not are_two_entities_together(PG, glyph) and not are_two_entities_together(PG, glyph_off):
+    ~ return
+}
+
+~ temp buttonDestination = Safekeeping
+~ temp buttonOffDestination = Nest
+{is_in_scene:
+    ~ buttonDestination = Nest
+    ~ buttonOffDestination = Safekeeping
+}
+~ move_entity(glyph, buttonDestination)
+~ move_entity(glyph_off, buttonOffDestination)

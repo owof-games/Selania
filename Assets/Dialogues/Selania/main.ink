@@ -31,6 +31,8 @@
 //Avvio degli storylets comuni
 -> special_automatic_storylets ->
 
+~ set_up_glyphs()
+
 @interact 
 //Spostamenti
 <- move_between_rooms(my_location)
