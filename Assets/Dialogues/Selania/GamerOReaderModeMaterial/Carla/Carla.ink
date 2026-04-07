@@ -42,7 +42,16 @@
                 -> glyph_open_all_sigils ->
                 Fatto.
                 -> questions_Carla.top
-                
+        
+        + Mi darebbe tutte le piante da coltivare e l'ingrediente universale?
+                ~ greenhouse_findedCultivables += greenhouse_allCultivables
+                ~ greenhouse_findedCultivables += universalIngredient
+                ~ backpack_findedGifts += greenhouse_allCultivables
+                ~ backpack_findedGifts += universalIngredient
+                ~ greenhouse_backupCultivable = ()
+                Fatto.
+                -> questions_Carla.top
+
         //Uscita
         + No, ho cambiato idea.
                 {~ E doveva farmi perdere tempo così?|Non potevo fare la suora di clausura?|Già una più del solito, insomma.}#speaker:Carla#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
