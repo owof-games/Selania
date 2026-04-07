@@ -56,6 +56,11 @@
     //Questa lista traccia i coltivabili che sono stati utilizzati in giro per il gioco. La rana pescherà i disponibili da qui.
     VAR frog_recoverableCultivables = ()
     VAR frog_recoveredCultivables = ()
+    VAR frog_cultivableGiftable = false
+
+    //Questa lista si segna quale sigillo abbiamo riabilitato e se è possibile o meno recuperarne uno.
+    VAR frog_recoveredSigil = ()
+    VAR frog_sigilGiftable = false
     
     
     //Per chi abbiamo richiesto il dono

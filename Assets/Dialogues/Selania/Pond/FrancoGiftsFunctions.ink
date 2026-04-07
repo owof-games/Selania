@@ -54,6 +54,7 @@
                     ~ frog_firstCharGiftable = true
             }
     }
+
     {
         - frog_secondCharAchievableGifts != () && secondChar_storyStatus == story_storyStarted:
             {
@@ -67,6 +68,7 @@
                     ~ frog_secondCharGiftable = true
             }
     }
+
     {        
         - frog_thirdCharAchievableGifts != () && thirdChar_storyStatus == story_storyStarted:
             {
@@ -80,6 +82,7 @@
                     ~ frog_thirdCharGiftable = true
             }
     }
+
     {
         - frog_fourthCharAchievableGifts != () && fourthChar_storyStatus == story_storyStarted:
             {
@@ -97,6 +100,7 @@
                     ~ frog_fourthCharGiftable = true
             }
     }
+
     {
 
         - frog_fifthCharAchievableGifts != () && fifthChar_storyStatus == story_storyStarted:
@@ -114,11 +118,29 @@
                 - else:
                     ~ frog_fifthCharGiftable = true
             } 
-        
     }
+
     {
-        - (frog_firstCharGiftable == true) or (frog_secondCharGiftable == true) or (frog_thirdCharGiftable == true) or (frog_fourthCharGiftable == true) or (frog_fifthCharGiftable == true):
+        - (frog_recoverableCultivables != ()) && (frog_recoveredCultivables == ()):
+            ~ frog_cultivableGiftable = true
+
+        - else:
+            ~ frog_cultivableGiftable = false 
+    }
+
+    {
+        - frog_recoveredSigil == () && glyph_usedSigils != ():
+            ~ frog_sigilGiftable = true
+
+        - else:
+            ~ frog_sigilGiftable = false 
+    }
+
+
+    {
+        - (frog_firstCharGiftable == true) or (frog_secondCharGiftable == true) or (frog_thirdCharGiftable == true) or (frog_fourthCharGiftable == true) or (frog_fifthCharGiftable == true) or (frog_sigilGiftable == true) or (frog_cultivableGiftable == true):
             ~ frog_giftability = true
+
         - else:
             ~ frog_giftability = false    
     }
@@ -405,6 +427,21 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
 
 
 
+=== function sigil_recovery()
+    ~ temp sigil = LIST_RANDOM(glyph_usedSigils)
+    ~ frog_recoveredSigil += sigil
+    ~ glyph_usedSigils -= sigil
+
+    //Levo la possibilità di recuperare il sigillo
+        ~ frog_otherGifts -= sigilRecovery
+    
+    E allora girino, eccoti di nuovo a disposizione {sigils_translator(sigil)}!
+    Fanne buon uso!
+
+
+
+
+
 === franco_afterRecovery
     //Oggetti
     {debug_frog: passo mission_objects.}
@@ -415,5 +452,8 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
         Direttamente nello zainetto di {player_name}!
 
             ~ backpack_findedGifts += recoveredCultivable
+            
+            //Levo la possibilità di recuperare il coltivabile
+            ~ frog_otherGifts -= cultivableRecovery
         
     -> closed_exchange

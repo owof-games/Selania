@@ -42,13 +42,29 @@
         + {frog_fifthCharGiftable == true}Qualche dritta su {charNameFive}?
             -> franco_giftsFifthChar
         + {(frog_recoverableCultivables != ()) && (frog_recoveredCultivables == ())} Puoi aiutarmi a recuperare una pianta che ho già utilizzato?
-            Certo che craack!
-            Ma.
-            Lo posso fare solo una volta.
-                + + Ok, voglio usare ora questa occasione!
-                    -> cultivable_recovery
-                + + Mmm, ci ragiono su.
-                    -> top
+                Certo che craack!
+                Ma.
+                Lo posso fare solo una volta.
+                    + + Ok, voglio usare ora questa occasione!
+                        -> cultivable_recovery
+                    + + Mmm, ci ragiono su.
+                        -> top
+
+        + {frog_recoveredSigil == () && glyph_usedSigils != ()} Puoi aiutarmi a recuperare un sigillo che ho già utilizzato?
+                Certo che craack!
+                Ma.
+                Lo posso fare solo una volta.
+                E dandotene uno a caso.
+                I sigilli sono più strani delle capre, e non so fare di meglio.
+                    + + Ok, voglio usare ora questa occasione!
+                        //Chiamo direttamente la funzione, non ci sono scelte da compiere in questo caso.
+                        ~ sigil_recovery ()
+                        //E poi esco
+                        -> closed_exchange
+
+                    + + Mmm, ci ragiono su.
+                        -> top
+
         + Vorrei pensarci ancora un po'.
             Mi trovi qui girino.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             Voglio contare tutte le onde!
