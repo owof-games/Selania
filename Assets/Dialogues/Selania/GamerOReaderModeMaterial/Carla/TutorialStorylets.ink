@@ -9,7 +9,8 @@
     
     Perché non sono andata a vivere nei boschi da sola, quando avevo vent'anni, perché?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_sad
     Non risponda, è una domanda retorica, e l'ufficio domande retoriche è al 5° piano, stanza 13.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
-    Sono qui per dirle al volo cosa deve fare.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_neutral
+    Mi chiamo Carla, e sono qui per dirle al volo cosa deve fare.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_neutral
+    - (nameDiscovered)
     Il perché non è di mia competenza.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
 
         {

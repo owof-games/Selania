@@ -6,6 +6,141 @@ LIST nest_speakersForEwWordTag = Influenced, Other
 
  ----------------------------------*/
 
+=== function charTag(PNG)
+{
+    - PNG == FirstCharacter:
+        {
+            - !first_char_main_storylets.one.firstPresentation:
+                ~ return "???"
+                
+            - firstChar_ActualName == Chitarra:
+                ~ return "Chitarra"
+                
+            - firstChar_ActualName == Triangolo:
+                ~ return "Triangolo"
+                
+            - firstChar_ActualName == RagazzaOrchestra:
+                ~ return "Orchestra"
+                
+            - firstChar_ActualName == FlautoDolce:
+                ~ return "Flauto"
+                
+            - firstChar_ActualName == Ocarina:
+                ~ return "Ocarina"
+                
+            - firstChar_ActualName == Violino:
+                ~ return "Violino"
+                
+        }  
+
+    - PNG == SecondCharacter:
+        {
+            - ! second_char_main_storylets.one.nameSecond:
+                ~ return "???"
+                
+            - secondChar_ActualName == Riccio:
+                ~ return "Riccio"
+            
+            - secondChar_ActualName == Grizzly:
+                ~ return "Grizzly"
+                
+            - secondChar_ActualName == Lupo:
+                ~ return "Lupo"
+                
+            - secondChar_ActualName == Delfino:
+                ~ return "Delfino"
+                
+            - secondChar_ActualName == Capibara:
+                ~ return "Capibara"
+                
+            - secondChar_ActualName == Corvo:
+                ~ return "Corvo"
+        
+        }
+
+    - PNG == ThirdCharacter:
+        {
+
+            - ! third_char_main_storylets.one:
+                ~ return "???"
+            
+            - thirdChar_ActualName == Boccale:
+                ~ return "Boccale"
+        }
+
+    - PNG == FourthCharacter:
+        {
+
+            - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
+                ~ return "???"
+            
+            - fourthChar_ActualName == Mentore:
+                ~ return "Mentore"
+        }    
+    
+    - PNG == Mentor:
+        {
+            - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
+                ~ return "???"
+            
+            - mentor_ActualName == Mentore:
+                ~ return "Mentore"
+        }
+    
+    - PNG == FifthCharacter:
+        {
+            - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
+                ~ return "???"
+            
+            - mentor_ActualName == Mentore:
+                ~ return "Mentore"
+        }
+    
+    - PNG == TheWitch:
+        {
+            - witch_intro.nameWitch:
+                ~ return "<i>Luna</i>"
+            
+            - else:
+                ~ return ""
+        }
+
+    - PNG == Franco:
+        {
+            - frog_nameDiscovered == false:
+                ~ return "???"
+            
+            - are_two_entities_together(PG, Franco) && entity_location(PG) == Kitchen:
+                ~ return "Franco Lo Chef"
+
+            - else:
+                ~ return "Franco La Rana"
+        }
+
+    - PNG == Documents:
+        ~ return ""
+
+    - PNG == Carla:
+        {
+            - tutorial_carlaChoicesRelationshipStorylet.nameDiscovered:
+                ~ return "Carla"
+
+            - else:
+                ~ return "???"
+        }
+        
+
+    - PNG == Doggo:
+        ~ return "Doggo"
+
+}
+
+
+
+
+
+
+
 === function firstChar_tag
 {
     - !first_char_main_storylets.one.firstPresentation:
