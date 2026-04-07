@@ -38,7 +38,7 @@
                     -> main
     
     //Solo scelta per l'amico stocastico
-    + {are_two_entities_together(PG, BedClosingGame) && (debug_stochastic == true) && (firstChar_storyStatus == story_storyEnded) && (secondChar_storyStatus == story_storyEnded)} [BedClosingGame]
+    + {are_two_entities_together(PG, BedClosingGame) && (debug_stochastic == true) && (firstChar_storyStatus == story_storyEnded) && (secondChar_storyStatus == story_storyEnded)  && (thirdChar_storyStatus == story_storyEnded)} [BedClosingGame]
             @quit
                 -> END
 
