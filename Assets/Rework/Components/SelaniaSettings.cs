@@ -37,6 +37,29 @@ namespace Selania.Rework.Components
         [field: Tooltip("Time to make the dialogue window slide in (in seconds).")]
         public float slideInDuration { get; private set; } = 800;
 
+        /// <inheritdoc />
+        public Color GetCharacterTagColorByName(string characterName)
+        {
+            var characterDialogueLabelColors = _characterDialogueLabelColorsProvider.Get(characterDialogueInfo);
+            return characterDialogueLabelColors.TryGetValue(characterName, out var color)
+                ? color
+                : defaultCharacterColor;
+        }
+
+        /// <summary>
+        ///     The provider which generates a dictionary from tag name to its sprite.
+        /// </summary>
+        private readonly DerivedDictionaryProvider<string, Color, CharacterTagInfo> _characterColorsProvider =
+            new(info => info.tag, info => info.color, CharacterTagInfo.DefaultComparer);
+
+
+        /// <inheritdoc />
+        public Color GetCharacterTagColorByMood(string moodTag)
+        {
+            var charactersColors = _characterColorsProvider.Get(characterTagInfo);
+            return charactersColors.TryGetValue(moodTag, out var color) ? color : defaultCharacterColor;
+        }
+
         #endregion
 
         #region dialogue box - choices
@@ -74,15 +97,6 @@ namespace Selania.Rework.Components
             _characterDialogueLabelColorsProvider =
                 new(info => info.name, info => info.color, CharacterDialogueInfo.DefaultComparer);
 
-        /// <inheritdoc />
-        public Color GetCharacterTagColorByName(string characterName)
-        {
-            var characterDialogueLabelColors = _characterDialogueLabelColorsProvider.Get(characterDialogueInfo);
-            return characterDialogueLabelColors.TryGetValue(characterName, out var color)
-                ? color
-                : defaultCharacterColor;
-        }
-
         #endregion
 
         #region dialogue box - portraits
@@ -106,11 +120,15 @@ namespace Selania.Rework.Components
             [field: Tooltip("The sprite for this tag")]
             public Sprite sprite { get; private set; } = null!;
 
+            [field: SerializeField]
+            [field: Tooltip("The color for this tag")]
+            public Color color { get; private set; } = Color.black;
+
             public bool Equals(CharacterTagInfo? other)
             {
                 if (other is null) return false;
                 if (ReferenceEquals(this, other)) return true;
-                return tag == other.tag && sprite.Equals(other.sprite);
+                return tag == other.tag && sprite.Equals(other.sprite) && color.Equals(other.color);
             }
 
             public override bool Equals(object? obj)
@@ -123,7 +141,7 @@ namespace Selania.Rework.Components
             public override int GetHashCode()
             {
                 // ReSharper disable NonReadonlyMemberInGetHashCode
-                return HashCode.Combine(tag, sprite);
+                return HashCode.Combine(tag, sprite, color);
                 // ReSharper restore NonReadonlyMemberInGetHashCode
             }
 
@@ -159,6 +177,13 @@ namespace Selania.Rework.Components
             return characterSprites.TryGetValue(tag, out var sprite)
                 ? sprite
                 : defaultCharacterTagSprite;
+        }
+
+        /// <inheritdoc />
+        public bool HasCharacterMood(string moodTag)
+        {
+            var characterSprites = _characterSpritesProvider.Get(characterTagInfo);
+            return characterSprites.ContainsKey(moodTag);
         }
 
         #endregion

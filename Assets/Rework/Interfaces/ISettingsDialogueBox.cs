@@ -83,17 +83,31 @@ namespace Selania.Rework.Interfaces
         float percentageBetweenNormalAndGreatHeart { get; }
 
         /// <summary>
-        ///     Get the color to use to write the character tag on the dialogue.
+        ///     Get the color to use to write the character tag on the dialogue. Old version of <see cref="GetCharacterTagColorByMood"/>.
         /// </summary>
         /// <param name="characterName">Name of the character.</param>
         /// <returns>Color to use.</returns>
         Color GetCharacterTagColorByName(string characterName);
 
         /// <summary>
-        ///     Get the character sprite by tag.
+        ///     Get the color of the character by mood. New version of <see cref="GetCharacterTagColorByName" />.
         /// </summary>
-        /// <param name="tag">The tag (mentore_neutral, chitarra_bored, ...)</param>
+        /// <param name="moodTag">The mood tag (mentore_neutral, chitarra_bored, ...)</param>
+        /// <returns>The color for this tag.</returns>
+        Color GetCharacterTagColorByMood(string moodTag);
+
+        /// <summary>
+        ///     Get the character sprite by mood.
+        /// </summary>
+        /// <param name="moodTag">The mood tag (mentore_neutral, chitarra_bored, ...)</param>
         /// <returns>The sprite for this tag.</returns>
-        Sprite GetCharacterSpriteByTag(string tag);
+        Sprite GetCharacterSpriteByTag(string moodTag);
+
+        /// <summary>
+        ///     Check whether the given mood is known.
+        /// </summary>
+        /// <param name="moodTag">The mood tag (mentore_neutral, chitarra_bored, ...)</param>
+        /// <returns><c>true</c> if the mood tag is known, <c>false</c> otherwise.</returns>
+        bool HasCharacterMood(string moodTag);
     }
 }

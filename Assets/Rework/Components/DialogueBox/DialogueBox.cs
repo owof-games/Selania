@@ -182,8 +182,9 @@ namespace Selania.Rework.Components.DialogueBox
         ///     Add a new text line to the dialogue box.
         /// </summary>
         /// <param name="speaker">The character speaking; if null, the character name is not shown.</param>
+        /// <param name="moodTag">The portrait, from which the color is derived.</param>
         /// <param name="text">The text to add.</param>
-        public void AddTextLine(string? speaker, string? text)
+        public void AddTextLine(string? speaker, string? moodTag, string? text)
         {
             SlideInIfNecessary();
 
@@ -192,7 +193,7 @@ namespace Selania.Rework.Components.DialogueBox
                 _inputActionsDialogueBox?.ContinueMap.Enable();
                 var textLineGameObject = Instantiate(textLinePrefab, textLinesContainer);
                 var textLine = textLineGameObject.GetComponent<TextLine>();
-                textLine.SetText(speaker, text);
+                textLine.SetText(speaker, moodTag, text);
                 _latestTextLine = textLine;
             }
 

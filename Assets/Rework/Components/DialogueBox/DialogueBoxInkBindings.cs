@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Microsoft.Extensions.Logging;
 using R3;
@@ -23,6 +24,8 @@ namespace Selania.Rework.Components.DialogueBox
         ///     Logger used by this component.
         /// </summary>
         [Inject] internal ILogger<DialogueBoxInkBindings> Logger = null!;
+
+        [Inject] internal ISettingsDialogueBox SettingsDialogueBox = null!;
 
         /// <summary>
         ///     The object that can control the choices of the story.
@@ -89,22 +92,30 @@ namespace Selania.Rework.Components.DialogueBox
             // extract fields
             var (currentText, tags) = currentTextInfo;
 
+            // try to parse the line with the new system:
+            // Chitarra, chitarra_neutral: Hi!
+            if (!TryGetSpeakerAndPortraitWithNewSystem(currentText, out var speaker, out var portrait,
+                    out var actualText))
+            {
+                speaker = GetValue(tags, "speaker");
+                portrait = GetValue(tags, "portrait");
+                actualText = currentText;
+            }
+
             // add the current line with an optional speaker, if it changed
-            var speaker = GetValue(tags, "speaker");
             if (speaker != _lastSpeaker && speaker != null)
             {
                 Logger.ZLogTrace($"Previous speaker was {_lastSpeaker}, new one is {speaker}.");
-                dialogueBox.AddTextLine(speaker, currentText);
+                dialogueBox.AddTextLine(speaker, portrait, actualText);
                 _lastSpeaker = speaker;
             }
             else
             {
                 Logger.ZLogTrace($"Got a new speaker: {speaker}.");
-                dialogueBox.AddTextLine(null, currentText);
+                dialogueBox.AddTextLine(null, portrait, actualText);
             }
 
             // set the portrait
-            var portrait = GetValue(tags, "portrait");
             if (portrait != null)
             {
                 Logger.ZLogTrace($"Setting portrait image {portrait}.");
@@ -114,6 +125,29 @@ namespace Selania.Rework.Components.DialogueBox
             {
                 Logger.ZLogTrace($"No portrait to set");
             }
+        }
+
+        private bool TryGetSpeakerAndPortraitWithNewSystem(string currentText, [NotNullWhen(true)] out string? speaker,
+            [NotNullWhen(true)] out string? portrait, [NotNullWhen(true)] out string? actualText)
+        {
+            speaker = null;
+            portrait = null;
+            actualText = null;
+
+            // try to split the speaker + mood part from the actual text
+            var parts = currentText.Split(':', 2);
+            if (parts.Length != 2) return false;
+
+            actualText = parts[1].Trim();
+
+            // try to split the speaker and mood
+            var speakerAndMood = parts[0].Trim().Split(',', 2);
+            if (speakerAndMood.Length != 2) return false;
+
+            // confirm that the parsing succeeded only if the character mood exists
+            speaker = speakerAndMood[0].Trim();
+            portrait = speakerAndMood[1].Trim();
+            return SettingsDialogueBox.HasCharacterMood(portrait);
         }
 
         /// <summary>

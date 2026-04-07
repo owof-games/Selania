@@ -25,19 +25,19 @@ namespace Selania.Rework.Components.Museum.Dialogue
         public void AddLineOfTextNoSpeaker()
         {
             var text = AvailableTextLines[Random.Range(0, AvailableTextLines.Length)];
-            dialogueBox.AddTextLine(null, text);
+            dialogueBox.AddTextLine(null, "chitarra_affectionate", text);
         }
 
         public void AddLineOfTextSpeakerPg()
         {
             var text = AvailableTextLines[Random.Range(0, AvailableTextLines.Length)];
-            dialogueBox.AddTextLine("PG", text);
+            dialogueBox.AddTextLine("PG", "chitarra_affectionate", text);
         }
 
         public void AddLineOfTextSpeakerChitarra()
         {
             var text = AvailableTextLines[Random.Range(0, AvailableTextLines.Length)];
-            dialogueBox.AddTextLine("Chitarra", text);
+            dialogueBox.AddTextLine("Chitarra", "chitarra_affectionate", text);
         }
 
         public void AddDialogueChoices()
