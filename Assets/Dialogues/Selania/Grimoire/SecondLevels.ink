@@ -107,10 +107,6 @@
     + {greenhouse_findedCultivables has universalIngredient} [universalIngredient #status:{grimoire_statusPlants(universalIngredient)}]
         -> grimoire_greenhouse_thirdLevel (universalIngredient, Hidden)
 
-    + [Hidden #status:Hidden]
-        -> grimoire_greenhouse_thirdLevel (universalIngredient, Hidden)
-
-
     + [Index #bookmark:index]
     -> grimoire
     -
