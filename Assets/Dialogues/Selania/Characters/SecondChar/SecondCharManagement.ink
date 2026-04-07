@@ -337,6 +337,8 @@
             //Main storylets
             - second_char_main_storylets.one && grimoire_secondChar hasnt grimSecondCharOne:
                 ~ grimoire_secondChar += grimSecondCharOne
+                //Dopo la prima chiacchierata lo sposto al pond, così almeno il discorso su Franco ha senso
+                ~ move_entity(SecondCharacter, Pond)
 
             - second_char_main_storylets.two && grimoire_secondChar hasnt grimSecondCharTwo:
                 ~ grimoire_secondChar += grimSecondCharTwo

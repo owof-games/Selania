@@ -101,7 +101,7 @@ VAR thirdChar_LibraryInvite = false
 
 
             //Apertura biblioteca    
-                - are_two_entities_together(ThirdCharacter, PG) && ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar) + LIST_COUNT(grimoire_thirdChar)) > openingNest_delay) && entity_location(PG) == Library && player_accessiblePlaces hasnt Nest && png_commonPauseTalking == false:
+                - are_two_entities_together(ThirdCharacter, PG) && ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar) + LIST_COUNT(grimoire_thirdChar)) > openingNest_delay) && LIST_COUNT(grimoire_thirdChar) >= 2 && entity_location(PG) == Library && player_accessiblePlaces hasnt Nest && png_commonPauseTalking == false:
                     -> open_the_nest
 
             //Cucina

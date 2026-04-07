@@ -215,7 +215,10 @@ VAR letters_doggoPause = false
         - witch_pauseTalking > 0:
             ~ witch_pauseTalking --    
     } 
-
+    {
+        - frog_pauseSpecialMission > 0:
+           ~ frog_pauseSpecialMission --
+    }
 
 
     //Riduzione valore Mindfulness per proporne una diversa poi    

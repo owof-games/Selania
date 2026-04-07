@@ -9,7 +9,7 @@
 
     {
         //Seconda missione: coltivare.
-        - LIST_COUNT(greenhouse_findedCultivables) == 3 && frog_allMissionsCompleted hasnt missionTwo:
+        - LIST_COUNT(greenhouse_findedCultivables) >= 3 && frog_allMissionsCompleted hasnt missionTwo:
             ~ frog_updatedMissions += missionTwo
     }
 
@@ -112,7 +112,7 @@
     ~ temp newMission = ()
     {
         - frog_availableSpecialMissions != () && frog_pauseSpecialMission == 0:
-            ~ newMission = LIST_RANDOM(frog_availableSpecialMissions)
+            ~ newMission = LIST_MIN(frog_availableSpecialMissions)
             ~ frog_currentMission += newMission
             ~ frog_availableSpecialMissions -= newMission
 

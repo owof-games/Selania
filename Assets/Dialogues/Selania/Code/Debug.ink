@@ -82,7 +82,7 @@
         ~ player_accessiblePlaces += Greenhouse
 }
 {
-    - debug_testFrog == true && (entity_location(Franco) == Safekeeping):
+    - debug_testFrog == true && (entity_location(Franco) == Safekeeping) && grimoire_franco == ():
         ~ move_entity(Franco, Pond)
 }      
 

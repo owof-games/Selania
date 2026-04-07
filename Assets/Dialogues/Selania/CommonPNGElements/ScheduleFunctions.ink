@@ -249,7 +249,7 @@
     }
     
     //Comparsa della rana
-    {second_char_main_storylets.two.franco && entity_location(Franco)!=Pond:
+    {grimoire_secondChar has grimSecondCharTwo && entity_location(Franco) == Safekeeping:
             {debug: Ho spostato la rana allo stagno.}
            ~  move_entity(Franco, Pond)
     }

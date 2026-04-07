@@ -7,7 +7,7 @@
     - are_two_entities_together(PG, Franco) && grimoire_franco hasnt grimFrancoFirst:
         -> franco_intro
     
-    - frog_availableSpecialMissions hasnt specialMissionOne && entity_location(PG) == Pond && not feedback_mission_one_closed:
+    - special_mission_one_contents && entity_location(PG) == Pond && not feedback_mission_one_closed:
         -> feedback_mission_one_closed
 
     //Commenti speciali
