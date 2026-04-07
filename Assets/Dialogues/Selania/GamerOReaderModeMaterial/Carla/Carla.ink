@@ -35,15 +35,15 @@
         + Come interagisco col mondo?
                 -> tutorial_carlaInterfaceStorylets -> questions_Carla.top
 
-        + Grimorio (solo per test ink!)
+        + {!debug_stochastic} Grimorio (solo per test ink!)
                 -> grimoire -> questions_Carla.top     
 
-        + Mi sbloccherebbe tutti i sigilli?
+        + {!debug_stochastic} Mi sbloccherebbe tutti i sigilli?
                 -> glyph_open_all_sigils ->
                 Fatto.
                 -> questions_Carla.top
         
-        + Mi darebbe tutte le piante da coltivare e l'ingrediente universale?
+        + {!debug_stochastic}Mi darebbe tutte le piante da coltivare e l'ingrediente universale?
                 ~ greenhouse_findedCultivables += greenhouse_allCultivables
                 ~ greenhouse_findedCultivables += universalIngredient
                 ~ backpack_findedGifts += greenhouse_allCultivables
