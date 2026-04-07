@@ -170,11 +170,7 @@
 
 === function grimoire_sigilsLabelsName(sigil)
 //La logica è: se quel "doppio sigillo" ha un contenuto, mostro l'etichetta, altrimenti mostro altro.
-{
-    - glyph_discoveredSigils ^ sigil == ():
-        ~ return "Sconosciuto"
-    
-    - else:
+
         {
         //Venti sigilli principali
             - WaterEarth has sigil:
@@ -222,9 +218,10 @@
             - FireAether has sigil:
                 ~ return "Mappa"
                                                             
-            -else: Traduzione colore parola {glyph_actualActiveSigil} non trovato!
+            -else:
+                ~ return "Sconosciuto"
         }
-}
+
 
 
 

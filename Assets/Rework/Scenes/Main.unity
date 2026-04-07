@@ -961,6 +961,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 159404150987455482, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
+      propertyPath: <plantName>k__BackingField
+      value: universalIngredient
+      objectReference: {fileID: 0}
     - target: {fileID: 167372101265157975, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
