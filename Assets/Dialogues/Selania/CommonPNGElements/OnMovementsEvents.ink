@@ -57,6 +57,7 @@
         - greenhouse_allCultivables == ():
             ~ greenhouse_allCultivables += greenhouse_cultivable
             ~ achievements_fullGreenhouse_maxValue = LIST_COUNT(greenhouse_allCultivables)
+            ~ achievements_fullGreenhouse_maxValue ++
     }
 //E per il libri
     {
