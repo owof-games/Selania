@@ -222,6 +222,30 @@ MonoBehaviour:
     <sprite>k__BackingField: {fileID: 21300000, guid: 3d7831efdd18a29438f38bfbd2f1e4f3, type: 3}
   - <plantName>k__BackingField: BastoneDellOzioso
     <sprite>k__BackingField: {fileID: 21300000, guid: 852858dac64443440949528b57315979, type: 3}
+  - <plantName>k__BackingField: BrinaDellImpossibile
+    <sprite>k__BackingField: {fileID: 21300000, guid: 95214e92d5dbfe84785595e6478abdf7, type: 3}
+  - <plantName>k__BackingField: CantoDelleCompagne
+    <sprite>k__BackingField: {fileID: 21300000, guid: 51d6f49d6f1d4a84490bf84ab15f16b0, type: 3}
+  - <plantName>k__BackingField: CardoAspinato
+    <sprite>k__BackingField: {fileID: 21300000, guid: 72bb97c2181fe454aa7ad0a3461b6ce5, type: 3}
+  - <plantName>k__BackingField: EderaDelleAmanti
+    <sprite>k__BackingField: {fileID: 21300000, guid: 5ad7a241fd108204f90cc050e9a520b4, type: 3}
+  - <plantName>k__BackingField: ErbaLiccia
+    <sprite>k__BackingField: {fileID: 21300000, guid: 501b6dfbad831e948ab4933f787a3ac8, type: 3}
+  - <plantName>k__BackingField: FalsaPalude
+    <sprite>k__BackingField: {fileID: 21300000, guid: 77aa0032b603fde408fef5c3735523d8, type: 3}
+  - <plantName>k__BackingField: LanaNotturna
+    <sprite>k__BackingField: {fileID: 21300000, guid: 539da40f423652a429d54a696aaf47f4, type: 3}
+  - <plantName>k__BackingField: LicheneDegliAbissi
+    <sprite>k__BackingField: {fileID: 21300000, guid: b6851268d4640c146a17cb1da41b0874, type: 3}
+  - <plantName>k__BackingField: NonTiScordarDiTe
+    <sprite>k__BackingField: {fileID: 21300000, guid: 9f7b6973cf91ab947a02e515e5532fb6, type: 3}
+  - <plantName>k__BackingField: Olobino
+    <sprite>k__BackingField: {fileID: 21300000, guid: bac7974824c75124bbf392f4f2bcb3ec, type: 3}
+  - <plantName>k__BackingField: LaSpazzata
+    <sprite>k__BackingField: {fileID: 21300000, guid: d13e629153e4172429072cb3c67b947f, type: 3}
+  - <plantName>k__BackingField: universalIngredient
+    <sprite>k__BackingField: {fileID: 21300000, guid: 3d7831efdd18a29438f38bfbd2f1e4f3, type: 3}
   <minimumLogLevel>k__BackingField: 0
   _fileProviderSettings:
     categorySettingsArray: []
