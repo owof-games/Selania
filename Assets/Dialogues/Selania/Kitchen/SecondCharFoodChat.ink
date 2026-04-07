@@ -1372,9 +1372,8 @@
         
     }
 
-        ~ secondChar_pauseTalking = secondChar_pauseDuration
-
--> main
+    -> second_char_closing_storylet ->
+    ->->
 
 
 
