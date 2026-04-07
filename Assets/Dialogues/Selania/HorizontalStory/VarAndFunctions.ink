@@ -156,7 +156,7 @@ VAR horizontalS_libraryThirdTier = 5
  
         - listDumpCharActivators != horizontalS_DumpActivators:
             //Prima di tutto genero il documento
-            ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_dump)
+            ~ horizontalS_currentDoc = LIST_MIN(horizontalS_dump)
             //Lo aggiungo a quelli scoperti, lo rimuovo da horizontalS_dump
             ~ horizontalS_dump -= horizontalS_currentDoc
             //Aggiorno la lista per far sì che siano uguali.
@@ -171,7 +171,7 @@ VAR horizontalS_libraryThirdTier = 5
 
         - kitchen_allChefs != horizontalS_allChefs:
             //Prima di tutto genero il documento
-            ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_kitchen)
+            ~ horizontalS_currentDoc = LIST_MIN(horizontalS_kitchen)
             //Lo aggiungo a quelli scoperti, lo rimuovo da horizontalS_kitchen
             ~ horizontalS_kitchen -= horizontalS_currentDoc
             //Aggiorno la lista per far sì che siano uguali.
@@ -185,7 +185,7 @@ VAR horizontalS_libraryThirdTier = 5
 
 
         - horizontalS_greenhouseDocs == true:
-            ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_greenhouse)
+            ~ horizontalS_currentDoc = LIST_MIN(horizontalS_greenhouse)
             ~ horizontalS_greenhouse -= horizontalS_currentDoc
             ~ move_entity(docGreenhouse, Forest)
             ~ horizontalS_greenhouseDocs = false
@@ -197,7 +197,7 @@ VAR horizontalS_libraryThirdTier = 5
 
 
         - horizontalS_nestDocs == true:
-            ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_nest)
+            ~ horizontalS_currentDoc = LIST_MIN(horizontalS_nest)
             ~ horizontalS_nest -= horizontalS_currentDoc
             ~ horizontalS_nestDocs = false
             ~ move_entity(docNest, Forest)
@@ -208,7 +208,7 @@ VAR horizontalS_libraryThirdTier = 5
             }
 
         - horizontalS_libraryDocs == true:
-            ~ horizontalS_currentDoc = LIST_RANDOM(horizontalS_library)
+            ~ horizontalS_currentDoc = LIST_MIN(horizontalS_library)
             ~ horizontalS_library -= horizontalS_currentDoc
             ~ move_entity(docLibrary, Forest)
             ~ horizontalS_libraryDocs = false
