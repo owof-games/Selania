@@ -9,6 +9,9 @@ VAR glyph_actualGlyphChoice = ()
 //Tracciamo anche la "main talker", che non deve generare reazioni.
 VAR glyph_mainTalker = ()
 
+//Per la parte di animazione o meno dell'effetto del sigillo invece
+
+
 //Funzione di dispatch comune (sigillo attivo o meno)
 === glyph_modifier_variation_management(PNG, GlyphC)
 {debug_nest: passo per glyph_modifier_variation_management. Il valore di PNG è {PNG}, il valore di GlyphCe è {GlyphC}. Lo stato della parola attiva è {glyph_actualActiveSigil}.}
@@ -424,6 +427,8 @@ Recap della logica.
                     }
 
             }
+
+            @animation: ActiveSigil
             -> glyph_thereAreOtherTalkers
             
             
@@ -452,6 +457,8 @@ Recap della logica.
                     }
 
             }
+
+             @animation: ActiveSigil
             -> glyph_thereAreOtherTalkers
 
             
@@ -480,6 +487,8 @@ Recap della logica.
                     }
 
             }
+
+             @animation: ActiveSigil
             -> glyph_thereAreOtherTalkers
 
             = sigil_FourthCharacter_reactions
@@ -507,6 +516,8 @@ Recap della logica.
                     }
 
             }
+
+             @animation: ActiveSigil
             -> glyph_thereAreOtherTalkers
 
             = sigil_FifthCharacter_reactions
@@ -534,6 +545,8 @@ Recap della logica.
                     }
 
             }
+
+             @animation: ActiveSigil
             -> glyph_thereAreOtherTalkers
 
 
@@ -682,7 +695,7 @@ Recap della logica.
             //Per ora per Mentore punterei su una serie di reazioni neutre, visto che non abbiamo un contatore della relazion
                 {shuffle:
                     - Mentor Reazione neutra al glifo.
-                    - Mentor RAltra reazione neutra al glifo.
+                    - Mentor Altra reazione neutra al glifo.
                     - Mentor RUn'altra ancora reazione neutra al glifo.
                 }
             -> glyph_thereAreOtherTalkers
