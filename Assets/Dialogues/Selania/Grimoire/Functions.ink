@@ -34,29 +34,78 @@
 
 
 === function grimoire_pageSubtitle(plant, PNG, location)
-    ~ temp gifted = ()
-    ~ temp cooked = ()
+
 
     {
         - PNG == FirstCharacter:
-           ~ gifted = firstChar_giftedObject
-           ~ cooked = kitchen_firstCharExtraIngredient
+            {
+                - location == Kitchen:
+                    {
+                        - kitchen_firstCharExtraIngredient == plant:
+                            ~ return "Pianta utilizzata in cucina con {translator(firstChar_ActualName)}."
+                    }
+                - location == Backpack:
+                    {
+                        - firstChar_giftedObject == plant:
+                            ~ return "Pianta donata a {translator(firstChar_ActualName)}."
+                    }
+            }
 
         - PNG == SecondCharacter:
-           ~ gifted = secondChar_giftedObject
-           ~ cooked = kitchen_secondCharExtraIngredient
+            {
+                - location == Kitchen:
+                    {
+                        - kitchen_secondCharExtraIngredient == plant:
+                            ~ return "Pianta utilizzata in cucina con {translator(secondChar_ActualName)}."
+                    }
+                - location == Backpack:
+                    {
+                        - secondChar_giftedObject == plant:
+                            ~ return "Pianta donata a {translator(secondChar_ActualName)}."
+                    }
+            }
 
         - PNG == ThirdCharacter:
-           ~ gifted = thirdChar_giftedObject
-           ~ cooked = kitchen_thirdCharExtraIngredient
+            {
+                - location == Kitchen:
+                    {
+                        - kitchen_thirdCharExtraIngredient == plant:
+                            ~ return "Pianta utilizzata in cucina con {translator(thirdChar_ActualName)}."
+                    }
+                - location == Backpack:
+                    {
+                        - thirdChar_giftedObject == plant:
+                            ~ return "Pianta donata a {translator(thirdChar_ActualName)}."
+                    }
+            }
 
         - PNG == FourthCharacter:
-           ~ gifted = fourthChar_giftedObject
-           ~ cooked = kitchen_fourthCharExtraIngredient
+            {
+                - location == Kitchen:
+                    {
+                        - kitchen_fourthCharExtraIngredient == plant:
+                            ~ return "Pianta utilizzata in cucina con {translator(fourthChar_ActualName)}."
+                    }
+                - location == Backpack:
+                    {
+                        - fourthChar_giftedObject == plant:
+                            ~ return "Pianta donata a {translator(fourthChar_ActualName)}."
+                    }
+            }
 
         - PNG == FifthCharacter:
-           ~ gifted = fifthChar_giftedObject
-           ~ cooked = kitchen_fifthCharExtraIngredient  
+            {
+                - location == Kitchen:
+                    {
+                        - kitchen_fifthCharExtraIngredient == plant:
+                            ~ return "Pianta utilizzata in cucina con {translator(fifthChar_ActualName)}."
+                    }
+                - location == Backpack:
+                    {
+                        - fifthChar_giftedObject == plant:
+                            ~ return "Pianta donata a {translator(fifthChar_ActualName)}."
+                    }
+            }
 
         - PNG == Franco:
             {
@@ -65,18 +114,7 @@
             }          
     }
 
-    {
-        - location == Kitchen:
-            {
-                - cooked == plant:
-                    ~ return "Pianta utilizzata in cucina con {translator(PNG)}."
-            }
-        - location == Backpack:
-             {
-                - gifted == plant:
-                    ~ return "Pianta donata a {translator(PNG)}."
-            }
-    }
+
 
 /***********************************
 
