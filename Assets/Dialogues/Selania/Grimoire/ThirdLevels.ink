@@ -236,10 +236,15 @@
     {grimoire_pageSubtitle(leftPlant, FifthCharacter, Kitchen)} #leftPageSubtitle
     //Dono
     {grimoire_pageSubtitle(leftPlant, FirstCharacter, Backpack)} #leftPageSubtitle
+    {grimoire_pageGiftDescription(leftPlant, FirstCharacter)}#leftPageDescription
     {grimoire_pageSubtitle(leftPlant, SecondCharacter, Backpack)} #leftPageSubtitle
+    {grimoire_pageGiftDescription(leftPlant, SecondCharacter)}#leftPageDescription
     {grimoire_pageSubtitle(leftPlant, ThirdCharacter, Backpack)} #leftPageSubtitle
+    {grimoire_pageGiftDescription(leftPlant, ThirdCharacter)}#leftPageDescription
     {grimoire_pageSubtitle(leftPlant, FourthCharacter, Backpack)} #leftPageSubtitle
+    {grimoire_pageGiftDescription(leftPlant, FourthCharacter)}#leftPageDescription
     {grimoire_pageSubtitle(leftPlant, FifthCharacter, Backpack)} #leftPageSubtitle
+    {grimoire_pageGiftDescription(leftPlant, FifthCharacter)}#leftPageDescription
     //Recupero Franco
     {grimoire_pageSubtitle(leftPlant, Franco, Backpack)} #leftPageSubtitle
 
@@ -256,10 +261,15 @@
     {grimoire_pageSubtitle(rightPlant, FifthCharacter, Kitchen)} #rightPageSubtitle
     //Dono
     {grimoire_pageSubtitle(rightPlant, FirstCharacter, Backpack)} #rightPageSubtitle
+    {grimoire_pageGiftDescription(rightPlant, FirstCharacter)}#rightPageDescription
     {grimoire_pageSubtitle(rightPlant, SecondCharacter, Backpack)} #rightPageSubtitle
+    {grimoire_pageGiftDescription(rightPlant, SecondCharacter)}#rightPageDescription
     {grimoire_pageSubtitle(rightPlant, ThirdCharacter, Backpack)} #rightPageSubtitle
+    {grimoire_pageGiftDescription(rightPlant, ThirdCharacter)}#rightPageDescription
     {grimoire_pageSubtitle(rightPlant, FourthCharacter, Backpack)} #rightPageSubtitle
+    {grimoire_pageGiftDescription(rightPlant, FourthCharacter)}#rightPageDescription
     {grimoire_pageSubtitle(rightPlant, FifthCharacter, Backpack)} #rightPageSubtitle
+    {grimoire_pageGiftDescription(rightPlant, FifthCharacter)}#rightPageDescription
     //Recupero Franco
     {grimoire_pageSubtitle(rightPlant, Franco, Backpack)} #rightPageSubtitle
 

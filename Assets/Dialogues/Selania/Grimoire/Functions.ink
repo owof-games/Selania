@@ -35,7 +35,6 @@
 
 === function grimoire_pageSubtitle(plant, PNG, location)
 
-
     {
         - PNG == FirstCharacter:
             {
@@ -112,6 +111,72 @@
                 - plant == frog_recoveredCultivables:
                     ~ return "Pianta recuperata con l'aiuto di Franco."
             }          
+    }
+
+
+=== function grimoire_pageGiftDescription(plant, PNG)
+
+    {
+        - PNG == FirstCharacter:
+            {
+                - firstChar_giftedObject has plant && firstChar_favouritesGifts has plant:
+                    ~ return "Dopo il dono, {player_name} ha ricevuto due gocce di inchiostro."
+
+                - firstChar_giftedObject has plant && firstChar_goodGifts has plant:
+                    ~ return "Dopo il dono, {player_name} ha ricevuto una goccia di inchiostro."
+                
+                - firstChar_giftedObject has plant:
+                    ~ return "Dopo il dono, {player_name} non ha ricevuto alcuna goccia di inchiostro."
+            }
+
+        - PNG == SecondCharacter:
+            {
+                - secondChar_giftedObject has plant && secondChar_favouritesGifts has plant:
+                    ~ return "Dopo il dono, {player_name} ha ricevuto due gocce di inchiostro."
+
+                - secondChar_giftedObject has plant && secondChar_goodGifts has plant:
+                    ~ return "Dopo il dono, {player_name} ha ricevuto una goccia di inchiostro."
+                
+                - secondChar_giftedObject has plant:
+                    ~ return "Dopo il dono, {player_name} non ha ricevuto alcuna goccia di inchiostro."
+            }
+
+        - PNG == ThirdCharacter:
+            {
+                - thirdChar_giftedObject has plant && thirdChar_favouritesGifts has plant:
+                    ~ return "Dopo il dono, {player_name} ha ricevuto due gocce di inchiostro."
+
+                - thirdChar_giftedObject has plant && thirdChar_goodGifts has plant:
+                    ~ return "Dopo il dono, {player_name} ha ricevuto una goccia di inchiostro."
+                
+                - thirdChar_giftedObject has plant:
+                    ~ return "Dopo il dono, {player_name} non ha ricevuto alcuna goccia di inchiostro."
+            }
+
+        - PNG == FourthCharacter:
+            {
+                - fourthChar_giftedObject has plant && fourthChar_favouritesGifts has plant:
+                    ~ return "Dopo il dono, {player_name} ha ricevuto due gocce di inchiostro."
+
+                - fourthChar_giftedObject has plant && fourthChar_goodGifts has plant:
+                    ~ return "Dopo il dono, {player_name} ha ricevuto una goccia di inchiostro."
+                
+                - fourthChar_giftedObject has plant:
+                    ~ return "Dopo il dono, {player_name} non ha ricevuto alcuna goccia di inchiostro."
+            }
+
+        - PNG == FifthCharacter:
+            {
+                - fifthChar_giftedObject has plant && fifthChar_favouritesGifts has plant:
+                    ~ return "Dopo il dono, {player_name} ha ricevuto due gocce di inchiostro."
+
+                // - fifthChar_giftedObject has plant && fifthChar_goodGifts has plant:
+                //     ~ return "Dopo il dono, {player_name} ha ricevuto una goccia di inchiostro."
+                
+                - fifthChar_giftedObject has plant:
+                    ~ return "Dopo il dono, {player_name} non ha ricevuto alcuna goccia di inchiostro."
+            }
+
     }
 
 
