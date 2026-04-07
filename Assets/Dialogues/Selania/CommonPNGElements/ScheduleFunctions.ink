@@ -185,8 +185,11 @@
     {
         - secondChar_storyStatus == story_storyStarted:
         
-        //Evitiamo che venga tolto dalla cucina se sta cucinando o se ci sta aspettando in cucina
+        //Evitiamo che venga tolto dalla cucina se sta cucinando o se ci sta aspettando in cucina, o se non gli abbiamo mai parlato
             {
+                - grimoire_secondChar == ():
+                    ~ movements_randomizable_characters -= SecondCharacter 
+                
                 - kitchen_secondCharIsCooking == true:
                     ~ movements_randomizable_characters -= SecondCharacter
 
@@ -209,6 +212,9 @@
         
         //Evitiamo che venga tolto dalla cucina se sta cucinando o se ci sta aspettando in cucina
             {
+                - grimoire_thirdChar == ():
+                    ~ movements_randomizable_characters -= ThirdCharacter 
+
                 - kitchen_thirdCharIsCooking == true:
                     ~ movements_randomizable_characters -= ThirdCharacter
 
