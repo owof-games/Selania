@@ -1,12 +1,88 @@
+/***********************************
+
+    Funzioni per pagine piante
+
+***********************************/
+
+
 === function grimoire_statusPlants(plant)
 
     {
-        - greenhouse_findedCultivables ^ backpack_findedGifts hasnt plant:
+        - greenhouse_findedCultivables hasnt plant:
             ~ return missing
         
         - else:
             ~ return owned
     }
+
+
+=== function grimoire_pageStatus(plant)
+    {
+        - plant == Hidden:
+           ~ return hidden
+
+        - greenhouse_findedCultivables hasnt plant:
+           ~ return locked
+
+            //se è tra le cose trovate ma non risulta nell'intersezione tra cose trovate e cose possedute, vuol dire che l'ho usata
+        - greenhouse_findedCultivables has plant && (greenhouse_findedCultivables ^ backpack_findedGifts hasnt plant):
+            ~ return consumed
+        - else:
+            ~ return consumed       
+
+    }
+
+
+=== function grimoire_pageSubtitle(plant, PNG, location)
+    ~ temp gifted = ()
+    ~ temp cooked = ()
+
+    {
+        - PNG == FirstCharacter:
+           ~ gifted = firstChar_giftedObject
+           ~ cooked = kitchen_firstCharExtraIngredient
+
+        - PNG == SecondCharacter:
+           ~ gifted = secondChar_giftedObject
+           ~ cooked = kitchen_secondCharExtraIngredient
+
+        - PNG == ThirdCharacter:
+           ~ gifted = thirdChar_giftedObject
+           ~ cooked = kitchen_thirdCharExtraIngredient
+
+        - PNG == FourthCharacter:
+           ~ gifted = fourthChar_giftedObject
+           ~ cooked = kitchen_fourthCharExtraIngredient
+
+        - PNG == FifthCharacter:
+           ~ gifted = fifthChar_giftedObject
+           ~ cooked = kitchen_fifthCharExtraIngredient  
+
+        - PNG == Franco:
+            {
+                - plant == frog_recoveredCultivables:
+                    ~ return "Pianta recuperata con l'aiuto di Franco."
+            }          
+    }
+
+    {
+        - location == Kitchen:
+            {
+                - cooked == plant:
+                    ~ return "Pianta utilizzata in cucina con {translator(PNG)}."
+            }
+        - location == Backpack:
+             {
+                - gifted == plant:
+                    ~ return "Pianta donata a {translator(PNG)}."
+            }
+    }
+
+/***********************************
+
+    Funzioni per pagine sigilli
+
+***********************************/
 
 
 === function grimoire_statusSigils(sigilList)

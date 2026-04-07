@@ -216,3 +216,59 @@
         -> grimoire_sigils
     - 
         -> top    
+
+
+
+
+=== grimoire_greenhouse_thirdLevel (leftPlant, rightPlant)
+- (top)
+@grimoireGreenhousePages #leftPageTitle:{plantsNameTranslator(leftPlant)} #leftPageStatus:{grimoire_pageStatus(leftPlant)} #leftPagePlant:{leftPlant} #rightPageTitle:{plantsNameTranslator(rightPlant)} #rightPageStatus:{grimoire_pageStatus(rightPlant)}  #rightPagePlant:{rightPlant}
+
+    //Descrizione generale pagina sinistra
+    {grimoire_plantsDescription(leftPlant)} #leftPageDescription
+
+    //Sottotitoli
+    //Utilizzo in cucina
+    {grimoire_pageSubtitle(leftPlant, FirstCharacter, Kitchen)} #leftPageSubtitle
+    {grimoire_pageSubtitle(leftPlant, SecondCharacter, Kitchen)} #leftPageSubtitle
+    {grimoire_pageSubtitle(leftPlant, ThirdCharacter, Kitchen)} #leftPageSubtitle
+    {grimoire_pageSubtitle(leftPlant, FourthCharacter, Kitchen)} #leftPageSubtitle
+    {grimoire_pageSubtitle(leftPlant, FifthCharacter, Kitchen)} #leftPageSubtitle
+    //Dono
+    {grimoire_pageSubtitle(leftPlant, FirstCharacter, Backpack)} #leftPageSubtitle
+    {grimoire_pageSubtitle(leftPlant, SecondCharacter, Backpack)} #leftPageSubtitle
+    {grimoire_pageSubtitle(leftPlant, ThirdCharacter, Backpack)} #leftPageSubtitle
+    {grimoire_pageSubtitle(leftPlant, FourthCharacter, Backpack)} #leftPageSubtitle
+    {grimoire_pageSubtitle(leftPlant, FifthCharacter, Backpack)} #leftPageSubtitle
+    //Recupero Franco
+    {grimoire_pageSubtitle(leftPlant, Franco, Backpack)} #leftPageSubtitle
+
+
+    //Descrizione generale pagina destra
+    {grimoire_plantsDescription(rightPlant)} #rightPageDescription
+
+    //Sottotitoli
+    //Utilizzo in cucina
+    {grimoire_pageSubtitle(rightPlant, FirstCharacter, Kitchen)} #rightPageSubtitle
+    {grimoire_pageSubtitle(rightPlant, SecondCharacter, Kitchen)} #rightPageSubtitle
+    {grimoire_pageSubtitle(rightPlant, ThirdCharacter, Kitchen)} #rightPageSubtitle
+    {grimoire_pageSubtitle(rightPlant, FourthCharacter, Kitchen)} #rightPageSubtitle
+    {grimoire_pageSubtitle(rightPlant, FifthCharacter, Kitchen)} #rightPageSubtitle
+    //Dono
+    {grimoire_pageSubtitle(rightPlant, FirstCharacter, Backpack)} #rightPageSubtitle
+    {grimoire_pageSubtitle(rightPlant, SecondCharacter, Backpack)} #rightPageSubtitle
+    {grimoire_pageSubtitle(rightPlant, ThirdCharacter, Backpack)} #rightPageSubtitle
+    {grimoire_pageSubtitle(rightPlant, FourthCharacter, Backpack)} #rightPageSubtitle
+    {grimoire_pageSubtitle(rightPlant, FifthCharacter, Backpack)} #rightPageSubtitle
+    //Recupero Franco
+    {grimoire_pageSubtitle(rightPlant, Franco, Backpack)} #rightPageSubtitle
+
+
+
+
+    + [Index #bookmark:index]
+        -> grimoire
+    + [Piante #bookmark:secondLevel]
+        -> grimoire_greenhouse
+    - 
+        -> top    

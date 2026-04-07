@@ -8,6 +8,7 @@ VAR backpack_findedGifts = ()
 
 
 === function ingredientTranslator(ingredient)
+
     {ingredient:
 
         - BaccaDellaAddolorata: 

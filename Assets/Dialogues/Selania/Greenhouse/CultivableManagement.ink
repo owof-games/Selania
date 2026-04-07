@@ -1467,3 +1467,62 @@ QUESTIONS
 ->->
 
 	
+
+
+=== function plantsNameTranslator(plant)
+{
+     - greenhouse_findedCultivables hasnt plant:
+            ~ return "Sconosciuto"
+        
+    - else:
+        {plant:
+
+            - BaccaDellaAddolorata: 
+                ~ return "Bacca della Addolorata"
+            
+            - BarbaDellInciampo:
+                ~ return "Barba dell'Inciampo"
+                
+            - BastoneDellOzioso:
+                ~ return "Bastone dell'Ozioso"
+                    
+            - BrinaDellImpossibile:
+                ~ return "Brina dell'Impossibile"
+                
+            - CantoDelleCompagne: 
+                ~ return "Canto delle Compagne"
+
+            - CardoAspinato:
+                ~ return "Cardo Aspinato"
+                
+            - EderaDelleAmanti:
+                ~ return "Edera delle Amanti"
+        
+            - ErbaLiccia:
+                ~ return "Erba Liccia"
+                
+            - FalsaPalude:
+                ~ return "Falsa Palude"
+
+            - LanaNotturna:
+                ~ return "Lana Notturna"        
+                            
+            - LicheneDegliAbissi:
+                ~ return "Lichene degli Abissi"
+                
+            - NonTiScordarDiTe:
+                ~ return "Non Ti Scordar di Te"
+
+            - Olobino:
+                ~ return "Olobino"
+
+            - LaSpazzata: 
+                ~ return "Spezzata"
+            
+            - universalIngredient:
+                ~ return "Ingrediente Universale"
+                        
+    }
+}
+
+    
