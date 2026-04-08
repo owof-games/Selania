@@ -24,9 +24,6 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
-        
-
-        <i>Osserviamo {player_name} e ci chiediamo cosa provi dopo aver aiutato {charNameOne}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
 
         {
         //Frasi sulle PNG
@@ -43,17 +40,17 @@
                  ~ witch_debriefPNG += ThirdCharacter   
         }
 
-
+        Descriviamo il problema della PNG in chiave personale (un po' come mentore), e poi chiediamo com'è stata la PG.
 
         
-            + Mi chiedo se sono all'altezza di tutto questo.
+            + (water) Mi chiedo se sono all'altezza di tutto questo.
                     -> glyph_modifier_variation_management(PG, waterC)->
                 <i>All'altezza per {charNameOne}?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>All'altezza per {player_name}?
                 <i>O all'altezza per soddisfare {mentorName}?
                 <i>La serra è tiepida, la stazione attende, e le nubi dicono che {player_name} è dove deve essere.</i>
                 
-            + Sono felice per lei, ma il mondo non deve farle così paura.
+            + (fire) Sono felice per lei, ma il mondo non deve farle così paura.
                     -> glyph_modifier_variation_management(PG, fireC)->
                 <i>Non è il mondo a farle paura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Il mondo gira e muta e muore e rinasce.
@@ -61,7 +58,7 @@
                 <i>Ma così come l'acqua cancella anche la pietra più dura, {player_name} e {charNameOne} possono piegare le regole più severe.
                 <i>Con l'aiuto di altre gocce.</i>
                 
-            + Non ho apprezzato la sua mancanza di senso logico.
+            + (air) Non ho apprezzato la sua mancanza di senso logico.
                    -> glyph_modifier_variation_management(PG, airC)->
                 <i>{charNameOne} possiede un forte senso logico.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Soltanto, è diverso da quello di {player_name}.
@@ -70,7 +67,7 @@
                 <i>Quello della talpa verso il basso.
                 <i>E {charNameOne} segue ora la sua nuova direzione.</i>
                 
-            + Pensavo sarebbe stato più divertente.
+            + (earth) Pensavo sarebbe stato più divertente.
                     -> glyph_modifier_variation_management(PG, earthC)->
                 <i>Quando il leone salta su un altro leone, trova la rissa.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Ma quando un leoncino salta su un altro leoncino, trova ruzzoloni e corse.
@@ -78,7 +75,7 @@
                 <i>Quale attitudine è radicata nelle azioni di {player_name}?
                 <i>Dove {player_name} trova il suo giocare?</i>
             
-            + Spero che {charNameOne} sia capace di portare il suo cambiamento nel mondo.
+            + (aether) Spero che {charNameOne} sia capace di portare il suo cambiamento nel mondo.
                     -> glyph_modifier_variation_management(PG, aetherC)->
                 <i>La luna distante sposta oceani.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Il vento invisibile sradica alberi.
@@ -111,37 +108,33 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
-        <i>Un nuovo pezzo di noi ritrova spazio in questo mondo.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-        <i>L'aria finalmente ci rinfresca.
-        <i>E gli uccelli ci raccontano cose su {player_name}.
-        <i>E su quello che ha fatto per {charNameTwo}.
-        <i>E noi ci chiediamo: come sta {player_name} ora che {charNameTwo} è libero?</i>
-
+        Descriviamo il problema delle PNG come più esteso, magari citando cose dalle loro storie, o che in generale sono comuni ad altre persone.
+        Chiediamo alla PG se si è trovata in qualche modo legata alla personaggia.
 
         {
         //Frasi sulle PNG
             - firstChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt FirstCharacter:
                 Testo:
-                 ~ witch_debriefPNG += FirstCharacter       
+                ~ witch_debriefPNG += FirstCharacter       
 
             - secondChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt SecondCharacter:
                 Testo:
-                 ~ witch_debriefPNG += SecondCharacter 
+                ~ witch_debriefPNG += SecondCharacter 
 
             - thirdChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt ThirdCharacter:
                 Testo:
-                 ~ witch_debriefPNG += ThirdCharacter   
+                ~ witch_debriefPNG += ThirdCharacter   
         }
 
         
-            + Mi chiedo chi sarei ora, con una famiglia diversa alle spalle.
+            + (water) Mi chiedo chi sarei ora, con una famiglia diversa alle spalle.
                     -> glyph_modifier_variation_management(PG, waterC)->
                 <i>La gemma sul ramo ignora il tronco, eppure cresce.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Il girino nuota, non importa la dimensione dello stagno.
                 <i>{player_name} prova a riscrivere il passato.
                 <i>La sua voce può forse cercare nuovi modi di guardarlo?</i>
      
-            + Secondo te serve uno scopo più grande per vivere davvero?
+            + (aether) Secondo te serve uno scopo più grande per vivere davvero?
                     -> glyph_modifier_variation_management(PG, aetherC)->
                 <i>La rondine crea un nido di paglia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>E quando l'inverno arriva il nido cade sul terreno.
@@ -149,20 +142,20 @@
                 <i>In primavera l'erba ricresce, il caldo la secca.
                 <i>La rondine crea un nido di paglia.</i>
                             
-            + La rabbia è sottovalutata. Ha protetto questo bambino.
+            + (fire) La rabbia è sottovalutata. Ha protetto questo bambino.
                     -> glyph_modifier_variation_management(PG, fireC)->
                 <i>La lava scorre e brucia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Col tempo rende il terreno fertile.
                 <i>E dove prima cresceva solo erba, ora c'è un'intera foresta.</i>
                 
-            + Avevo dimenticato quanto conforto possa dare il sapere.
+            + (air) Avevo dimenticato quanto conforto possa dare il sapere.
                     -> glyph_modifier_variation_management(PG, airC)->
                 <i>Il sapere è una luce.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Il sapere è un rifugio.
                 <i>Una luce troppo forte confonde strada e burrone.
                 <i>Un rifugio col tempo può diventare prigione.</i>
          
-            + Devo riprendere a giocare, a prendere le cose alla leggera.
+            + (earth) Devo riprendere a giocare, a prendere le cose alla leggera.
                     -> glyph_modifier_variation_management(PG, earthC)->
                 <i>Le radici ridono quando l'erba fa solletico.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Le foglie ridono quando il vento le sfiora.
@@ -189,6 +182,9 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
+        Descriviamo gli aspetti culturali e sociali che favoriscono l'oppressione (o mettiamo luce su cose diverse, nel caso di PNG3, sul perché non lo sia).
+        Poi cosa chiediamo alla PG?
+        Se vive una oppressione?
 
         {
         //Frasi sulle PNG
@@ -209,20 +205,22 @@
 
         Domanda: chi mi ha insegnato a vedermi così? cosa me l'ha insegnato? In generale: da dove vengono le credenze su di sé, queste riscritture che dobbiamo poi andare a fare?
 
-        + Scelta verde.
-            -> glyph_modifier_variation_management(PG, waterC)->
+        
             
-        + SCelta rossa.
+        + (fire) SCelta rossa.
             -> glyph_modifier_variation_management(PG, fireC)->
             
-        + Scelta blu.
+        + (air) Scelta blu.
             -> glyph_modifier_variation_management(PG, airC)->
+
+        + (aether) Scelta viola.
+            -> glyph_modifier_variation_management(PG, aetherC)->    
+
+        + (water) Scelta verde.
+            -> glyph_modifier_variation_management(PG, waterC)->    
      
-        + Scelta gialla.
+        + (earth) Scelta gialla.
             -> glyph_modifier_variation_management(PG, earthC)->
- 
-        + Scelta viola.
-            -> glyph_modifier_variation_management(PG, aetherC)->
         -        
         -> witch_closing_storylet ->
         -> main 
@@ -234,6 +232,9 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
+        Descriviamo il vantaggio personale e collettivo di un gruppo rispetto all'esperienza della personaggia. Le scappatoie di questo gruppo, le irresponsabilità. Stesso gesto, scelte diverse.
+        E poi chiediamo alla giocatrice qualcosa sulla sua posizione di vantaggio, di privilegio.
+
         {
         //Frasi sulle PNG
             - fourthChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt FourthCharacter:
@@ -241,27 +242,33 @@
                  ~ witch_debriefPNG += FourthCharacter       
 
             - fifthChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt FifthCharacter:
-                Testo:
+                    Personale e sociale non sono scollegati. E la rilettura di Mentore diventa la presenza di una doppia strada: prendersi cura di sé, cambiare il mondo.
+                    Con gli altri.
+                    Mentore stava di merda perché cercava di essere qualcosa che non era.
+                    Ma non perché fosse pazza, ma perché il nostro mondo ci dice: sii una sola cosa, o smetti di esistere.
+
                  ~ witch_debriefPNG += FifthCharacter 
         }
 
         
         Nonna molotov ci ha insegnate ora in modo evidente che il problema è sistemico. A cosa serve riscriversi, quando un problema è sistemico?
 
-        + Scelta verde.
-            -> glyph_modifier_variation_management(PG, waterC)->
+
             
-        + SCelta rossa.
-            -> glyph_modifier_variation_management(PG, fireC)->
-            
-        + Scelta blu.
+        + (air) Scelta blu.
             -> glyph_modifier_variation_management(PG, airC)->
-     
-        + Scelta gialla.
+
+        + (water) Scelta verde.
+            -> glyph_modifier_variation_management(PG, waterC)->
+
+        + (earth) Scelta gialla.
             -> glyph_modifier_variation_management(PG, earthC)->
  
-        + Scelta viola.
-            -> glyph_modifier_variation_management(PG, aetherC)->
+        + (aether) Scelta viola.
+            -> glyph_modifier_variation_management(PG, aetherC)-> 
+
+        + (fire) SCelta rossa.
+            -> glyph_modifier_variation_management(PG, fireC)->            
         -        
         -> witch_closing_storylet ->
         -> main  
@@ -273,10 +280,10 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
-        Personale e sociale non sono scollegati. E la rilettura di Mentore diventa la presenza di una doppia strada: prendersi cura di sé, cambiare il mondo.
-        Con gli altri.
-        Mentore stava di merda perché cercava di essere qualcosa che non era.
-        Ma non perché fosse pazza, ma perché il nostro mondo ci dice: sii una sola cosa, o smetti di esistere.
+        Parliamo della necessità di lottare assieme per il cambiamento.
+        Il dolore e le fatiche personali rimangono, e serve trovare modi per stare bene. Ma nel mentre devono cambiare le leggi, i poteri, le culture che permettono l'oppressione.
+        E la domanda ora è:
+        come pensi di lottare, PG?
 
         {
         //Frasi sulle PNG
@@ -285,25 +292,30 @@
                  ~ witch_debriefPNG += FourthCharacter       
 
             - fifthChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt FifthCharacter:
-                Testo:
+                    Personale e sociale non sono scollegati. E la rilettura di Mentore diventa la presenza di una doppia strada: prendersi cura di sé, cambiare il mondo.
+                    Con gli altri.
+                    Mentore stava di merda perché cercava di essere qualcosa che non era.
+                    Ma non perché fosse pazza, ma perché il nostro mondo ci dice: sii una sola cosa, o smetti di esistere.
+
                  ~ witch_debriefPNG += FifthCharacter 
         }
 
-        
-        + Scelta verde.
-            -> glyph_modifier_variation_management(PG, waterC)->
-            
-        + SCelta rossa.
-            -> glyph_modifier_variation_management(PG, fireC)->
-            
-        + Scelta blu.
-            -> glyph_modifier_variation_management(PG, airC)->
-     
-        + Scelta gialla.
+        + (earth) Scelta gialla.
             -> glyph_modifier_variation_management(PG, earthC)->
  
-        + Scelta viola.
+        + (aether) Scelta viola.
             -> glyph_modifier_variation_management(PG, aetherC)->
+        
+        + (fire) SCelta rossa.
+            -> glyph_modifier_variation_management(PG, fireC)->
+
+        + (water) Scelta verde.
+            -> glyph_modifier_variation_management(PG, waterC)->
+    
+        + (air) Scelta blu.
+            -> glyph_modifier_variation_management(PG, airC)->
+     
+
         -        
         -> witch_closing_storylet ->
         -> main 
