@@ -42,17 +42,17 @@
                 {   
                     
                     - firstChar_favouritesGifts has object:
-                    <i>{~{translator(firstChar_ActualName)} abbraccia {player_name} entusiasta.|Sulle guance di {translator(firstChar_ActualName)} compare una lacrima.|{translator(firstChar_ActualName)} è un concentrato di gioia.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                    <i>{~{translator(firstChar_ActualName)} abbraccia {player_name} entusiasta.|Sulle guance di {translator(firstChar_ActualName)} compare una lacrima.|{translator(firstChar_ActualName)} è un concentrato di gioia.}</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                             ~ firstChar_InkLevel ++
                             ~ firstChar_InkLevel ++
          
                     //Presupponiamo che un po' ma non troppo le piaccia l'ingrediente universale
                     - firstChar_goodGifts has object or object == universalIngredient:
-                        <i>{~{translator(firstChar_ActualName)} si passa il dono tra le mani.|{translator(firstChar_ActualName)} sorride.|{translator(firstChar_ActualName)} ringrazia {player_name}.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                        <i>{~{translator(firstChar_ActualName)} si passa il dono tra le mani.|{translator(firstChar_ActualName)} sorride.|{translator(firstChar_ActualName)} ringrazia {player_name}.}</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                             ~ firstChar_InkLevel ++
                     
                     - else:
-                        <i>{~{translator(firstChar_ActualName)} ignora il dono.|{translator(firstChar_ActualName)} ringrazia {player_name} e si distrae rapidamente.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                        <i>{~{translator(firstChar_ActualName)} ignora il dono.|{translator(firstChar_ActualName)} ringrazia {player_name} e si distrae rapidamente.}</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                 }
                 
             
@@ -96,17 +96,17 @@
                 {   
                     
                     - secondChar_favouritesGifts has object:
-                       <i>{~{translator(secondChar_ActualName)} abbraccia {player_name}, entusiasta.|Sulle guance di {translator(secondChar_ActualName)} compare una lacrima.|{translator(secondChar_ActualName)} è un concentrato di gioia.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                       <i>{~{translator(secondChar_ActualName)} abbraccia {player_name}, entusiasta.|Sulle guance di {translator(secondChar_ActualName)} compare una lacrima.|{translator(secondChar_ActualName)} è un concentrato di gioia.}</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                         ~ secondChar_InkLevel ++
                         ~ secondChar_InkLevel ++
          
                     //Presupponiamo che un po' ma non troppo le piaccia l'ingrediente universale
                     - secondChar_goodGifts has object or object == universalIngredient:
-                        <i>{~{translator(secondChar_ActualName)} prova ad assaggiare il dono, divertito.|Sulle guance di {translator(secondChar_ActualName)} compare un grande sorriso.|{translator(secondChar_ActualName)} saltella.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                        <i>{~{translator(secondChar_ActualName)} prova ad assaggiare il dono, divertito.|Sulle guance di {translator(secondChar_ActualName)} compare un grande sorriso.|{translator(secondChar_ActualName)} saltella.}</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                         ~ secondChar_InkLevel ++
                     
                     - else:
-                        <i>{~{translator(secondChar_ActualName)} insegue una lucertola con lo sguardo.|{translator(secondChar_ActualName)} lascia scivolare il dono a terra.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                        <i>{~{translator(secondChar_ActualName)} insegue una lucertola con lo sguardo.|{translator(secondChar_ActualName)} lascia scivolare il dono a terra.}</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                 }
             
             ~ gift_currentReceiver = ()
@@ -148,17 +148,17 @@
                 {   
                     
                     - thirdChar_favouritesGifts has object:
-                       <i>{~{translator(thirdChar_ActualName)} abbraccia {player_name}, entusiasta.|Sulle guance di {translator(thirdChar_ActualName)} compare una lacrima.|{translator(thirdChar_ActualName)} è un concentrato di gioia.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                       <i>{~{translator(thirdChar_ActualName)} abbraccia {player_name}, entusiasta.|Sulle guance di {translator(thirdChar_ActualName)} compare una lacrima.|{translator(thirdChar_ActualName)} è un concentrato di gioia.}</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                         ~ thirdChar_InkLevel ++
                         ~ thirdChar_InkLevel ++
          
                     //Presupponiamo che un po' ma non troppo le piaccia l'ingrediente universale
                     - thirdChar_goodGifts has object or object == universalIngredient:
-                        <i>{~{translator(thirdChar_ActualName)} prova ad assaggiare il dono, divertito.|Sulle guance di {translator(thirdChar_ActualName)} compare un grande sorriso.|{translator(thirdChar_ActualName)} saltella.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                        <i>{~{translator(thirdChar_ActualName)} prova ad assaggiare il dono, divertito.|Sulle guance di {translator(thirdChar_ActualName)} compare un grande sorriso.|{translator(thirdChar_ActualName)} saltella.}</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                         ~ thirdChar_InkLevel ++
                     
                     - else:
-                        <i>{~{translator(thirdChar_ActualName)} insegue una lucertola con lo sguardo.|{translator(thirdChar_ActualName)} lascia scivolare il dono a terra.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                        <i>{~{translator(thirdChar_ActualName)} insegue una lucertola con lo sguardo.|{translator(thirdChar_ActualName)} lascia scivolare il dono a terra.}</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                 }
             
             ~ gift_currentReceiver = ()

@@ -49,7 +49,7 @@ VAR notification_achievementName = ""
             - frog_currentMission has missionOne:
                 {
                     - first_character_recap.check && second_character_recap.check && greenhouse_recap.check:
-                        <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+                        <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
                                 ~ notification_francoQuests = true
                     - else:
                         ->->
@@ -58,32 +58,32 @@ VAR notification_achievementName = ""
             - frog_currentMission has missionTwo:
                 {
                     - LIST_COUNT(greenhouse_backupCultivable) < 11:
-                        <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+                        <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
                                 ~ notification_francoQuests = true
                     - else:
                         ->->    
                 }
                 
             - frog_currentMission has missionThree && mindfulness:
-                <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+                <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
                         ~ notification_francoQuests = true
                     
             - frog_currentMission has missionFour && little_storylets:
-                <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+                <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
                         ~ notification_francoQuests = true 
     
             - frog_currentMission has missionFive && first_second_chit_chat:
-                <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+                <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
                         ~ notification_francoQuests = true
             
             - frog_currentMission has missionSix && witch_intro:
-                <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+                <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
                         ~ notification_francoQuests = true
         
             - frog_currentMission has missionSeven:
                 {
                     - first_character_notes.check or second_character_notes.check:
-                        <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+                        <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
                                 ~ notification_francoQuests = true
                                 
                     - else:
@@ -91,7 +91,7 @@ VAR notification_achievementName = ""
                 }
             
             - frog_currentMission has missionEight && library_readStories != ():
-                <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+                <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
                         ~ notification_francoQuests = true
                 
         }

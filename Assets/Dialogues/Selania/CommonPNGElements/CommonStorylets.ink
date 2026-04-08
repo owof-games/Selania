@@ -269,15 +269,15 @@
     Se sto facendo un buon lavoro.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
     Visto che vede e sente tutto.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
 
-    <i>Crediamo che {mentorName} stia facendo un buon lavoro.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-    <i>Così come l'acqua che si raccoglie tra le mani per dissetarci.
-    <i>Ma così come l'acqua non può essere incendio, così {mentorName} non può essere qualcosa che non è.
-    <i>O portare nomi che non sa.
+    <i>Crediamo che {mentorName} stia facendo un buon lavoro.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>Così come l'acqua che si raccoglie tra le mani per dissetarci.</i>
+    <i>Ma così come l'acqua non può essere incendio, così {mentorName} non può essere qualcosa che non è.</i>
+    <i>O portare nomi che non sa.</i>
 
         + Metà delle cose che la voce dice sono illogiche.
                 -> glyph_modifier_variation_management(Mentor, airC)->
-            <i>{player_name} non vede, e quindi decide che qualcosa non esiste.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-            <i>Ma quella cosa esiste anche se {player_name} non vede.
+            <i>{player_name} non vede, e quindi decide che qualcosa non esiste.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            <i>Ma quella cosa esiste anche se {player_name} non vede.</i>
             Uh, peccato.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
             Ma ci sta: questo luogo è così insolito, immagino sia inevitabile non capirlo fino in fondo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             
@@ -287,7 +287,7 @@
             Prendi prima: ho scoperto che per via della mia incuria sta crescendo del muschio sotto la panchina.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
             Però.
             Ringrazia la voce da parte mia.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-            <i>Dire una mezza verità porta su una mezza strada.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            <i>Dire una mezza verità porta su una mezza strada.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
         + Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
                 -> glyph_modifier_variation_management(Mentor, earthC)->
@@ -306,14 +306,14 @@
 
         + Ha detto tante cose ma la risposta è: no.
                 -> glyph_modifier_variation_management(Mentor, fireC)->
-            <i>La frusta che cade senza motivo non porta alcun insegnamento.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            <i>La frusta che cade senza motivo non porta alcun insegnamento.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             Oh.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
             Forse potrei chiedere scusa in qualche modo a...
             Ma a chi?
             Come?
             Ho deciso: pulisco il tronco.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
             Potrebbe apprezzare, immagino.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-            <i>Noi non abbiamo bisogno di pulizia, il nostro sporco è nido per funghi e insetti.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()} 
+            <i>Noi non abbiamo bisogno di pulizia, il nostro sporco è nido per funghi e insetti.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()} 
         -
     Immagino sia faticoso, avere una voce in testa, così.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
     O magari ti fa sentire meno {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral

@@ -14,7 +14,7 @@ LIST list_giftElement = Backpack
             Lista delle cose che posso donare
 
  ----------------------------------*/
-+ Ho bisogno di ragionarci ancora un poco.
++ <i>Ho bisogno di ragionarci ancora un poco.</i>
     ~ gift_currentReceiver = ()
     ~ disableNestDialogue()
 

@@ -334,7 +334,7 @@
     Perché il lavoro che fai è molto delicato.
     Molto.
     Ed è bello avere una guida, un'alleata così saggia.
-    <i>La saggezza ha molte facce, e una porta il volto di Franco.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+    <i>La saggezza ha molte facce, e una porta il volto di Franco.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
     E ora quindi è il mio momento di aiutarti.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         
         -> franco_giftsManagement

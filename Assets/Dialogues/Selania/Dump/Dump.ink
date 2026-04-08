@@ -6,7 +6,7 @@
 
 {
     - dump == 1:
-        <i>Un vecchio vaso attende {player_name}.#speaker:{witch_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        <i>Un vecchio vaso attende {player_name}.</i>#speaker:{witch_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
 }
 
 -> main

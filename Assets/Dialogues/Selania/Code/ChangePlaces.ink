@@ -25,16 +25,16 @@
     
     + {are_two_entities_together(PG, BedClosingGame) && (not debug_stochastic)} [BedClosingGame]
     
-            <i>Un letto morbido attende {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()} 
+            <i>Un letto morbido attende {player_name}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()} 
             
-                + + (close)[<i>Ho bisogno di riposare.]
-                    <i>Salutiamo {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                + + (close)<i>Ho bisogno di riposare.</i>
+                    <i>Salutiamo {player_name}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                     //Resettiamo il contatore del riposo della giocatrice
                         ~ player_lastRestingSession = 0
                     @quit
                     -> END
                     
-                + + [<i>Resto ancora un po'.]
+                + + <i>Resto ancora un po'.</i>
                     -> main
     
     //Solo scelta per l'amico stocastico
@@ -123,7 +123,7 @@
                 -> library
         
         - else:
-            <i>Legna e carta proteggono la strada.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>Un masso blocca la strada.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
     }  
     
@@ -154,7 +154,7 @@
                 -> on_movement_events ->
                 -> kitchen
         - else:
-            <i>Un ponte spezzato interrompe il cammino di chi viaggia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>Un ponte spezzato interrompe il cammino di chi viaggia.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
     }        
 
@@ -173,7 +173,7 @@
                     -> on_movement_events ->
                     -> nest
             - else:
-                <i>Il relitto di una barca ostacola il cammino di {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                <i>Un relitto ostacola il cammino di {player_name}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                 -> main
         }   
 

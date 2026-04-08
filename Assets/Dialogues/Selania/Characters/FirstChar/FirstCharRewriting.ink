@@ -141,7 +141,7 @@
             
             {
                 - story_endedStories == ():
-                    <i>{player_name} ha utilizzato la sua prima goccia di inchiostro per compiere una riscrittura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    <i>{player_name} ha utilizzato la sua prima goccia di inchiostro per compiere una riscrittura.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
             
             
@@ -206,7 +206,7 @@
             
             {
                 - story_endedStories == ():
-                    <i>{player_name} ha utilizzato la sua seconda goccia di inchiostro per procedere con la riscrittura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    <i>{player_name} ha utilizzato la sua seconda goccia di inchiostro per procedere con la riscrittura.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }        
             
             {
@@ -281,7 +281,7 @@
             
                 {
                     - story_endedStories == ():
-                        <i>{player_name} ha utilizzato la terza goccia di inchiostro, proponendo una riscrittura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                        <i>{player_name} ha utilizzato la terza goccia di inchiostro, proponendo una riscrittura.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 }        
                 
                 {
@@ -343,7 +343,7 @@
             
                 {
                     - story_endedStories == ():
-                        <i>{player_name} ha utilizzato la quarta e ultima unità di inchiostro, compiendo il massimo di riscritture possibili.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                        <i>{player_name} ha utilizzato la quarta e ultima unità di inchiostro, compiendo il massimo di riscritture possibili.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 }   
             
             -> ending
@@ -450,7 +450,7 @@
                 - firstChar_ActualName has Triangolo:
                     {
                         - ending.air:
-                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, cfireo che questa sia la mia canzone.
+                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
                         - else:
                             Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
                     }
@@ -466,7 +466,7 @@
                 - firstChar_ActualName has RagazzaOrchestra:
                     {
                         - ending.fire:
-                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, cfireo che questa sia la mia canzone.
+                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
                         - else:
                             Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
                     }
@@ -482,7 +482,7 @@
                 - firstChar_ActualName has FlautoDolce:
                     {
                         - ending.aether:
-                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, cfireo che questa sia la mia canzone.
+                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
                         - else:
                             Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
                     }
@@ -496,7 +496,7 @@
                 - firstChar_ActualName has Ocarina:
                     {
                         - ending.earth:
-                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, cfireo che questa sia la mia canzone.
+                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
                         - else:
                             Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
                     }
@@ -510,7 +510,7 @@
                 - firstChar_ActualName has Violino:
                     {
                         - ending.water:
-                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, cfireo che questa sia la mia canzone.
+                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
                         - else:
                             Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
                     }
@@ -537,7 +537,7 @@
     ~ temp mentorName = translator(mentor_ActualName)
             {
                 - not rewriting_proposal_second_character.secret_ending or not rewriting_proposal_third_character.secret_ending:
-                    <i>{charNameOne} ripone piena fiducia in {player_name}, ed è pronta a condividere con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} una informazione importante.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    <i>{charNameOne} ripone piena fiducia in {player_name}, ed è pronta a condividere con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} una informazione importante.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
 
         Vorrei anche dirti una cosa, {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral

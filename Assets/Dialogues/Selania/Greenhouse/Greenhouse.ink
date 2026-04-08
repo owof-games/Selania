@@ -6,7 +6,7 @@
 
 {
     - greenhouse == 1:
-        <i>Nella serra a lungo dimenticata i vasi attendono sussurri e confidenze.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        <i>Nella serra a lungo dimenticata i vasi attendono sussurri e confidenze.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
 }
 
     
@@ -23,7 +23,7 @@
         - greenhouse_backupCultivable != ():
             -> greenhouse_entry_check
         - else:
-            <i>Al momento la serra non ha domande da porre a {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            <i>Al momento la serra non ha domande da porre a {player_name}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         -> main
         
     }
@@ -31,15 +31,10 @@
 
 
 === greenhouse_entry_check
-    <i>La serra attende risposte.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-        +  {greenhouse_backupCultivable != ()}<i>Voglio coltivare qualcosa.
+    <i>La serra attende risposte.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        +  {greenhouse_backupCultivable != ()}<i>Voglio coltivare qualcosa.</i>
                 -> cultivable_test
-        +  <i>{~ Mi aggiro per la serra.|Osservo ciò che è in crescita.|Ascolto i rumori della serra.|Mi rilasso un attimo.|Mi perdo nei colori dei vasi.}
+        +  <i>{~ Mi aggiro per la serra.|Osservo ciò che è in crescita.|Ascolto i rumori della serra.|Mi rilasso un attimo.|Mi perdo nei colori dei vasi.}</i>
                 -> main
-
-
-// === stolen_watering_can
-// <i>La serra è smarrita, non trova più il suo innaffiatoio, e ora non sa domandare.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-// -> main
 
     

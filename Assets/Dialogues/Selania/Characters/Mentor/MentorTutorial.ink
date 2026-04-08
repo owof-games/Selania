@@ -61,7 +61,7 @@
                 Al contrario: hai in me una guida.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
 
                     
-            + (fireChoice) <i>Cerco un modo per tornare a casa.
+            + (fireChoice) <i>Cerco un modo per tornare a casa.</i>
                     -> glyph_modifier_variation_management(Mentor, fireC)->
                 Vuoi già andartene?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                 Forse devo rivedere il mio benvenuto.

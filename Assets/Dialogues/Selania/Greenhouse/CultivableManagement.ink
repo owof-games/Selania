@@ -137,8 +137,8 @@
 //Step due: attivazione o meno (parte solo se greenhouse_chosenCultivable è vuoto)
  {
         - greenhouse_frog_nextCultivableOne != () && greenhouse_chosenCultivable == ():
-            <i>Sembra che Franco abbia messo qui le sue zampine.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-            <i>Ecco qualcosa che crescerà su sua richiesta.
+            <i>Sembra che Franco abbia messo qui le sue zampine.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            <i>Ecco qualcosa che crescerà su sua richiesta.</i>
                 ~ greenhouse_chosenCultivable = greenhouse_frog_nextCultivableOne
                 
             {debug or debug_frog: il valore di nextCultivable è {greenhouse_frog_nextCultivableOne} e per questo skippo le domande. Ora greenhouse_chosenCultivable è = a {greenhouse_chosenCultivable}.}
@@ -160,7 +160,7 @@
 -> next_cultivable_management ->
 
 - (top)
-<i>{~La serra ha qualcosa da svelare.|I vasi hanno nuove domande.|La terra è fertile di risposte.|L'aria scompiglia ragnatele e capelli.|Sussurri serpeggiano tra i vasi, ponendo domande.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+<i>{~La serra ha qualcosa da svelare.|I vasi hanno nuove domande.|La terra è fertile di risposte.|L'aria scompiglia ragnatele e capelli.|Sussurri serpeggiano tra i vasi, ponendo domande.}</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     -> test
 
 === test
@@ -1419,7 +1419,7 @@ QUESTIONS
             ->  cultivable_test
         
         - else:
-            <i>Al momento la serra non ha domande da porre a {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            <i>Al momento la serra non ha domande da porre a {player_name}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             -> main
     }
             

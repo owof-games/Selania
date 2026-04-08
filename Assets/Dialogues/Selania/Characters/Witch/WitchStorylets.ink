@@ -5,9 +5,9 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
     
-    Crediamo sia giunto il momento ti parlare di persona, {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-    Ti aspettiamo ai margini della foresta.
-    Capirai come trovarci.
+    <i>Crediamo sia giunto il momento ti parlare di persona, {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>Ti aspettiamo ai margini della foresta.
+    <i>Capirai come trovarci.</i>
 
         
     -> witch_closing_storylet ->
@@ -25,7 +25,7 @@
         <i>La cicatrice rimane, ma da essa esplode la vita.
         <i>Torniamo a percepire, e questa è gioia.
         <i>{player_name} ci ha portato questa gioia.
-        <i>{player_name} cosa si domanda?
+        <i>{player_name} cosa si domanda?</i>
         
             + Posso sfiorarti?
                     -> glyph_modifier_variation_management(PG, waterC)->
@@ -35,7 +35,7 @@
                 <i>A {mentorName}.
                 <i>E ogni collegamento riporta a pochi istanti fa, quando ha sfiorato il suo stesso viso.
                 <i>Il contatto ha risvegliato un ricordo.
-                <i>E quel ricordo, {player_name}, è il tuo sfiorarci.
+                <i>E quel ricordo, {player_name}, è il tuo sfiorarci.</i>
                 
             + Ehi tu, esci dalla mia testa! Subito!
                     -> glyph_modifier_variation_management(PG, fireC)->
@@ -43,7 +43,7 @@
                 <i>Non più di quanto {player_name} sia nella sua stessa testa.
                 <i>Non meno di quanto {player_name} sia nella nostra.
                 <i>È come se {player_name} ci chiedesse di non essere.
-                <i>E questa è una cosa che non è e non sarà.
+                <i>E questa è una cosa che non è e non sarà.</i>
                 
             + Le piante non possono parlare.
                     -> glyph_modifier_variation_management(PG, airC)->
@@ -58,13 +58,13 @@
                 <i>In te.
                 <i>Con te.
                 <i>Per te.
-                <i>Da te.
+                <i>Da te.</i>
                 
             + Ci piace la gioia!
                     -> glyph_modifier_variation_management(PG, earthC)->
                 <i>E a noi piace {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>E tutte le emozioni che genera con le sue azioni.
-                <i>E tutti i tempi che {player_name} vive, ha vissuto e vivrà.
+                <i>E tutti i tempi che {player_name} vive, ha vissuto e vivrà.</i>
             
             + La tua voce mi guida dal mio arrivo.
                     -> glyph_modifier_variation_management(PG, aetherC)->
@@ -73,14 +73,14 @@
                 <i>{player_name} è noi, noi siamo {charNameOne}.
                 <i>{charNameOne} è {charNameTwo} che è {mentorName}.
                 <i>E {mentorName} è {player_name}.
-                <i>Che è noi.
+                <i>Che è noi.</i>
             -
         <i>Noi siamo sussurro e siamo ascolto. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         <i>Un sorriso attento ai bisogni di {player_name}.
         <i>Se {player_name} osserva la luna, noi saremo con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.
         <i>Ecco, sì: oggi saremo la luna.
             - (nameWitch)
-        <i>Queste radici cercano di imparare le voci del terreno.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        <i>Queste radici cercano di imparare le voci del terreno.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
 
         -> witch_closing_storylet ->
         -> main
@@ -100,10 +100,8 @@
     <i>Attento a chi ha troppo, attento a chi ha poco.
     <i>Un vecchio detto dice: "Quando la palude piange, la rana ascolta".
     <i>Franco sorride sempre, ma conosce il pianto di tutt3 noi.
-    <i>Non ubbidisce ad alcuna autorità, ad alcuna legge, se non quella della cura delle altre persone.
+    <i>Non ubbidisce ad alcuna autorità, ad alcuna legge, se non quella della cura delle altre persone.</i>
     - 
-
-
         -> witch_closing_storylet ->
         -> main
 

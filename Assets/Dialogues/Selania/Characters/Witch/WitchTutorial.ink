@@ -10,34 +10,34 @@
         <i>Quando {player_name} compie una scelta su cosa dire, non sta parlando del mondo che vede, ma di come lo vive.
         <i>E crediamo sia importante, perché una visione è qualcosa di contrattabile, ma ciò che si vive è, punto.
         <i>Esprimere sé in una relazione è più importante che concordare con l'altra persona.
-        <i>Il lichene prospera perché i bisogni si sovrappongono, non perché l'alga è uguale al fungo.
+        <i>Il lichene prospera perché i bisogni si sovrappongono, non perché l'alga è uguale al fungo.</i>
 
                 + Sono sicur{player_pronouns has him:o|{player_pronouns has her:a|ə}} che {mentorName} avesse le migliori intenzioni.
                         -> glyph_modifier_variation_management(PG, waterC)->
                     <i>{player_name} risplende nella sua empatia.
                     <i>E il nostro intento non è creare attrito, ma porre una domanda.
                     <i>Quando il maestro sferza l'alunno, può vedere educazione, può vedere punizione.
-                    <i>Ma ciò che vive è comunque violenza.
+                    <i>Ma ciò che vive è comunque violenza.</i>
                     
                 + È ciò che facciamo per l'altrə che conta, non quello che diciamo.
                         -> glyph_modifier_variation_management(PG, fireC)->
                     <i>La falena plana per raggiungere la compagna.
                     <i>Il pipistrello plana per mangiare la falena.
                     <i>L'azione è la stessa-
-                    <i>Stesso è il risultato?
+                    <i>Stesso è il risultato?</i>
                     
                 + Il modo in cui viviamo riflette il mondo per come lo guardiamo.
                         -> glyph_modifier_variation_management(PG, airC)->
                     <i>Il modo in cui {player_name} vive riflette il mondo per come lo guarda.
                     <i>Ma riflette anche la sua storia, le corazze e le ferite che porta.
-                    <i>Così come la rosa decide quando fiorire, ma non può decidere quali petali lasciare al vento.
+                    <i>Così come la rosa decide quando fiorire, ma non può decidere quali petali lasciare al vento.</i>
                     
                 + Ma in concreto, non sono due modi diversi per dire la stessa cosa?
                         -> glyph_modifier_variation_management(PG, earthC)->
                     <i>Il cucciolo affonda i denti nel fratellino.
                     <i>Alla madre dice che è per pietà, e lei lo abbraccia.
                     <i>Al padre dice che è per dominanza, e lui lo festeggia.
-                    <i>Padre e madre hanno visto gli stessi denti?
+                    <i>Padre e madre hanno visto gli stessi denti?</i>
                     
                 + Siamo uman3, e la nostra crescita prospera nella contraddizione.
                         -> glyph_modifier_variation_management(PG, aetherC)->
@@ -45,12 +45,12 @@
                     <i>E noi parliamo non del prosperare, ma del valore delle azioni di {player_name}.
                     <i>L'azione richiede sempre responsabilità.
                     <i>Il falco torna senza cibo.
-                    <i>I pulli periscono.    
+                    <i>I pulli periscono.</i>
                 -
         <i>Il dialogo può essere un sacchetto per accumulare fiducia, o una finestra per far conoscere {player_name} all'altrə.
         <i>{player_name} cerca un sacchetto, o cerca una finestra?       
         <i>Vorremmo lasciare {player_name} con una informazione importante: ciò che accade durante la riscrittura ha regole diverse dal resto della conversazione.
-        <i>{player_name} può immaginarla come una tempesta sulla spiaggia: quando sarà finita, la sabbia sarà la stessa, ma inaspettate le cose che rimangono sulla riva.
+        <i>{player_name} può immaginarla come una tempesta sulla spiaggia: quando sarà finita, la sabbia sarà la stessa, ma inaspettate le cose che rimangono sulla riva.</i>
 
     -> witch_closing_storylet ->
     -> main
@@ -72,31 +72,31 @@
     <i>Il nostro ammonimento per {player_name}.
     <i>Il bimbo piange, il padre lo soccorre.
     <i>Il gatto osserva, e imita il pianto.
-    <i>{player_name} conosce il confine tra strumento e manipolazione?
+    <i>{player_name} conosce il confine tra strumento e manipolazione?</i>
 
             + Solo il tempo conosce le risposte.
                     -> glyph_modifier_variation_management(PG, earthC)->
                 <i>Il tempo porta le risposte che vogliamo vedere.
-                <i>E se {player_name} non sa leggere il futuro, su cosa basa le scelte del suo presente?
+                <i>E se {player_name} non sa leggere il futuro, su cosa basa le scelte del suo presente?</i>
 
             + Basta chiedersi "questa cosa farà bene all'altrə?".
                     -> glyph_modifier_variation_management(PG, waterC)->
                 <i>Il Ministro scatena la guerra per il bene del paese.
-                <i>In migliaia muoiono al fronte.    
+                <i>In migliaia muoiono al fronte.</i>
                 
             + Ci sono parti di me che mi rimangono ignote.
                     -> glyph_modifier_variation_management(PG, aetherC)->
                 <i>La pianta si accresce con lentezza in molteplici direzioni.
-                <i>Il lusso di non rispondere delle proprie azioni.
+                <i>Il lusso di non rispondere delle proprie azioni.</i>
 
             + La mia volontà è forte, è quello che conta.
                     -> glyph_modifier_variation_management(PG, fireC)->
-                <i>La roccia inamovibile, scivola di millimetro in millimetro verso l'abisso.
+                <i>La roccia inamovibile, scivola di millimetro in millimetro verso l'abisso.</i>
                 
             + La risposta logica risiede nell'intenzione.
                     -> glyph_modifier_variation_management(PG, airC)->
                 <i>Con forte intenzione Icaro volò verso il sole.
-                <i>E con altrettanto stupore trovò la morte.
+                <i>E con altrettanto stupore trovò la morte.</i>
                 
             -
     <i>Non è nella nostra natura il proibire.
@@ -107,7 +107,7 @@
     <i>Un cammino di praticità e radicamento.
     <i>Un viottolo di affetto e cura.
     <i>Una calle di saggezza e spiritualità.
-    <i>E se la strada si dovesse fare buia, {player_name} sappia che il nostro sguardo vigila sempre su di {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.   
+    <i>E se la strada si dovesse fare buia, {player_name} sappia che il nostro sguardo vigila sempre su di {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.</i>
 
     -> witch_closing_storylet ->
     -> main
@@ -133,7 +133,7 @@
         <i>Per questo le pagine si popolano man mano che {player_name} vive.
         <i>A volte il libro usa la nostra voce.
         <i>A volte ritrova altri nomi e parole.
-        <i>In una canzone collettiva che guida {player_name} alla comprensione.
+        <i>In una canzone collettiva che guida {player_name} alla comprensione.</i>
 
     - 
 

@@ -7,7 +7,7 @@
 
 {
     -kitchen == 1:
-        <i>La cucina si apre a nuovi ingredienti e grandi confidenze. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        <i>La cucina si apre a nuovi ingredienti e grandi confidenze.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
 }    
 
 {

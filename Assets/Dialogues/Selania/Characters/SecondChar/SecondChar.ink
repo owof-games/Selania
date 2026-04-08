@@ -1,13 +1,13 @@
 === second_story_gift ===
     ~ temp charNameTwo = translator(secondChar_ActualName)
-    <i>{player_name} sta per donare qualcosa a {charNameTwo}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+    <i>{player_name} sta per donare qualcosa a {charNameTwo}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             
             + {backpack_findedGifts != ()} Scelgo il dono.
                 ~ gift_currentReceiver += SecondCharacter
                 -> backpack_management
             
             +->
-                <i>{player_name} non ha nulla da donare.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                <i>{player_name} non ha nulla da donare.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                     
                     ->main
             
@@ -30,7 +30,7 @@
 
                 }
 
-                <i>Dopo il dono di {player_name} {inkTranslator(SecondCharacter)}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                <i>Dopo il dono di {player_name} {inkTranslator(SecondCharacter)}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
 
                      -> main
 

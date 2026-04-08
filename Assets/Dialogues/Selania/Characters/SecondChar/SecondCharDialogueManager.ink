@@ -245,7 +245,7 @@
                 }
 
         //Uscita dalla conversazione
-            + <i>Lascio il dialogo.
+            + <i>Lascio il dialogo.</i>
                 -> main
             -
                 -> talk_with_second_character

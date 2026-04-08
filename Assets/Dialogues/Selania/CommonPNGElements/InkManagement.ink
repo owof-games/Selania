@@ -194,8 +194,8 @@
                         - fifthChar_giftedObject != (): e il dono consegnato<>
                     }
             }
-            , {player_name} ha a disposizione una goccia di inchiostro. 
-            <i>Potrà compiere una riscrittura e usare il potere dell'epilogo.
+            , {player_name} ha a disposizione una goccia di inchiostro.</i>
+            <i>Potrà compiere una riscrittura e usare il potere dell'epilogo.</i>
         
         - ink_normal:
             <i>E quindi.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -227,8 +227,8 @@
                         - fifthChar_giftedObject != (): e il dono consegnato<>
                     }
             }
-            , {player_name} ha a disposizione due gocce di inchiostro. 
-            <i>Potrà compiere due riscritture e usare il potere dell'epilogo.
+            , {player_name} ha a disposizione due gocce di inchiostro.</i>
+            <i>Potrà compiere due riscritture e usare il potere dell'epilogo.</i>
         
         - ink_medium:
             <i>E quindi.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -260,8 +260,8 @@
                         - fifthChar_giftedObject != (): e il dono consegnato<>
                     }
             }
-            , {player_name} ha a disposizione tre gocce di inchiostro. 
-            <i>Potrà compiere tre riscritture e usare il potere dell'epilogo.
+            , {player_name} ha a disposizione tre gocce di inchiostro.</i>
+            <i>Potrà compiere tre riscritture e usare il potere dell'epilogo.</i>
 
         - ink_high:
             <i>E quindi.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -293,8 +293,8 @@
                         - fifthChar_giftedObject != (): e il dono consegnato<>
                     }
             }
-            , {player_name} ha a disposizione quattro gocce di inchiostro. 
-            <i>Potrà compiere quattro riscritture e usare il potere dell'epilogo. E riceverà un'informazione importante.
+            , {player_name} ha a disposizione quattro gocce di inchiostro.</i>
+            <i>Potrà compiere quattro riscritture e usare il potere dell'epilogo. E riceverà un'informazione importante.</i>
 
                 {
                     - Character == FirstCharacter:
@@ -395,7 +395,7 @@
                         {translator(fifthChar_ActualName)} <>
 
                 }
-                una informazione importante.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                una informazione importante.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
 
         - else:
             <i>Errore: non riesco a capire quante azioni {player_name} ha a disposizione.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -426,19 +426,19 @@
     
     {ink_status:
         - ink_empty:
-            nessuna goccia di inchiostro.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            nessuna goccia di inchiostro.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         - ink_low:
-            una goccia di inchiostro.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            una goccia di inchiostro.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         - ink_normal:
-            due gocce di inchiostro.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            due gocce di inchiostro.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         - ink_medium:
-            tre gocce di inchiostro.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}     
+            tre gocce di inchiostro.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}     
         
         - ink_high:
-            quattro gocce di inchiostro, e una informazione importante.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            quattro gocce di inchiostro, e una informazione importante.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         - else:
             <i>Errore: non riesco a capire quante azioni {player_name} ha a disposizione.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}

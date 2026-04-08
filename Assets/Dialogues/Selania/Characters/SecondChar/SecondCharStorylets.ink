@@ -454,7 +454,7 @@
 
             + Perché hai dato un calcio a {mentorName}?
                 -> top
-            + <i>Lo lascio continuare.
+            + <i>Lo lascio continuare.</i>
             -
 
             {
@@ -469,7 +469,7 @@
         Tu sai camminare indietro? Secondo me no.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             + Perché hai dato un calcio a {mentorName}?
                 -> top
-            + <i>Lo lascio continuare.
+            + <i>Lo lascio continuare.</i>
             -
         I nasi dei cani sotto tutti diversi, non ci sono due cani con lo stesso naso.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
         E...

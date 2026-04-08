@@ -8,14 +8,14 @@
         ~ temp mentorName = translator(mentor_ActualName)
         
 
-        <i>Osserviamo {player_name} e ci chiediamo cosa provi dopo aver aiutato {charNameOne}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        <i>Osserviamo {player_name} e ci chiediamo cosa provi dopo aver aiutato {charNameOne}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
             + Mi chiedo se sono all'altezza di tutto questo.
                     -> glyph_modifier_variation_management(PG, waterC)->
                 <i>All'altezza per {charNameOne}?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>All'altezza per {player_name}?
                 <i>O all'altezza per soddisfare {mentorName}?
-                <i>La serra è tiepida, la stazione attende, e le nubi dicono che {player_name} è dove deve essere.
+                <i>La serra è tiepida, la stazione attende, e le nubi dicono che {player_name} è dove deve essere.</i>
                 
             + Sono felice per lei, ma il mondo non deve farle così paura.
                     -> glyph_modifier_variation_management(PG, fireC)->
@@ -23,7 +23,7 @@
                 <i>Il mondo gira e muta e muore e rinasce.
                 <i>Sono le regole degli uomini a generare la paura.
                 <i>Ma così come l'acqua cancella anche la pietra più dura, {player_name} e {charNameOne} possono piegare le regole più severe.
-                <i>Con l'aiuto di altre gocce.
+                <i>Con l'aiuto di altre gocce.</i>
                 
             + Non ho apprezzato la sua mancanza di senso logico.
                    -> glyph_modifier_variation_management(PG, airC)->
@@ -32,7 +32,7 @@
                 <i>O di {mentorName}.
                 <i>Il senso logico del falco lo spinge verso l'alto.
                 <i>Quello della talpa verso il basso.
-                <i>E {charNameOne} segue ora la sua nuova direzione.
+                <i>E {charNameOne} segue ora la sua nuova direzione.</i>
                 
             + Pensavo sarebbe stato più divertente.
                     -> glyph_modifier_variation_management(PG, earthC)->
@@ -40,14 +40,14 @@
                 <i>Ma quando un leoncino salta su un altro leoncino, trova ruzzoloni e corse.
                 <i>Il gioco non è nell'azione, ma nell'attitudine.
                 <i>Quale attitudine è radicata nelle azioni di {player_name}?
-                <i>Dove {player_name} trova il suo giocare?
+                <i>Dove {player_name} trova il suo giocare?</i>
             
             + Spero che {charNameOne} sia capace di portare il suo cambiamento nel mondo.
                     -> glyph_modifier_variation_management(PG, aetherC)->
                 <i>La luna distante sposta oceani.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Il vento invisibile sradica alberi.
                 <i>{charNameOne} respira e il mondo ruota un po' più rapido.
-                <i>E {player_name} decide di osservare le cose nell'interezza.
+                <i>E {player_name} decide di osservare le cose nell'interezza.</i>
             -
 
         <i>L'acqua antica di {charNameOne} raccoglie tutti i sempre e i mai e ciò che non è stato.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -61,7 +61,7 @@
         <i>Nessuna persona è uguale, nessuna persona vuole lo stesso trattamento.
         <i>Ma funghi solleticano e distraggono le nostre rinascenti radici.
         <i>Ringraziandoti ancora {player_name} per ora ci congediamo.
-        <i>Senza mai davvero lasciarti.
+        <i>Senza mai davvero lasciarti.</i>
         - 
 
         -> witch_closing_storylet ->
@@ -79,14 +79,14 @@
         <i>L'aria finalmente ci rinfresca.
         <i>E gli uccelli ci raccontano cose su {player_name}.
         <i>E su quello che ha fatto per {charNameTwo}.
-        <i>E noi ci chiediamo: come sta {player_name} ora che {charNameTwo} è libero?
+        <i>E noi ci chiediamo: come sta {player_name} ora che {charNameTwo} è libero?</i>
         
             + Mi chiedo chi sarei ora, con una famiglia diversa alle spalle.
                     -> glyph_modifier_variation_management(PG, waterC)->
                 <i>La gemma sul ramo ignora il tronco, eppure cresce.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Il girino nuota, non importa la dimensione dello stagno.
                 <i>{player_name} prova a riscrivere il passato.
-                <i>La sua voce può forse cercare nuovi modi di guardarlo?
+                <i>La sua voce può forse cercare nuovi modi di guardarlo?</i>
      
             + Secondo te serve uno scopo più grande per vivere davvero?
                     -> glyph_modifier_variation_management(PG, aetherC)->
@@ -94,26 +94,26 @@
                 <i>E quando l'inverno arriva il nido cade sul terreno.
                 <i>I funghi lo trasformano in cibo per il terreno.
                 <i>In primavera l'erba ricresce, il caldo la secca.
-                <i>La rondine crea un nido di paglia.
+                <i>La rondine crea un nido di paglia.</i>
                             
             + La rabbia è sottovalutata. Ha protetto questo bambino.
                     -> glyph_modifier_variation_management(PG, fireC)->
                 <i>La lava scorre e brucia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Col tempo rende il terreno fertile.
-                <i>E dove prima cresceva solo erba, ora c'è un'intera foresta.
+                <i>E dove prima cresceva solo erba, ora c'è un'intera foresta.</i>
                 
             + Avevo dimenticato quanto conforto possa dare il sapere.
                     -> glyph_modifier_variation_management(PG, airC)->
                 <i>Il sapere è una luce.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Il sapere è un rifugio.
                 <i>Una luce troppo forte confonde strada e burrone.
-                <i>Un rifugio col tempo può diventare prigione.
+                <i>Un rifugio col tempo può diventare prigione.</i>
          
             + Devo riprendere a giocare, a prendere le cose alla leggera.
                     -> glyph_modifier_variation_management(PG, earthC)->
                 <i>Le radici ridono quando l'erba fa solletico.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Le foglie ridono quando il vento le sfiora.
-                <i>{player_name} forse ride quando non è {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}.
+                <i>{player_name} forse ride quando non è {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}.</i>
             -
         <i>Un'amica ci disse in tempi inquieti che per trovare il sentiero della magia occorre osservare con attenzione il bimbo che gioca.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         <i>{charNameTwo} ha portato in questi spazi sentieri inaspettati.
@@ -123,7 +123,7 @@
         <i>Forse {player_name} può essere il suo sostegno.
         <i>O forse {player_name} può lasciarla cadere, e ricominciare.
         <i>Ora noi ci godiamo la brezza e il sole.
-        <i>Ma più tardi tornaci a trovare.
+        <i>Ma più tardi tornaci a trovare.</i>
         - 
         
         -> witch_closing_storylet ->
