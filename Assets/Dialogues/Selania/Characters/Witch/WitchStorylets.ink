@@ -14,11 +14,11 @@
     -> main
 
 === witch_intro
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp charNameThree = translator(thirdChar_ActualName)
-        ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
         
         <i>Le nostre radici ci connettono a nuove voci, nuove storie.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
         <b>Ci.</b>
@@ -88,6 +88,11 @@
 
 
 === the_witch_and_the_frog
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 
     <i>Le radici ci raccontano del tuo incontro con Franco.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
     <i>E il nostro tronco porta il ricordo di Franco e di tutte le rane venute prima e dopo di lui.
@@ -108,22 +113,74 @@
 
 
 //Confessioni sulla sua storia
-
 === witch_first_confession
-// Rifiuto e negazione: parla del crollo, del periodo con Franco (che fino a quel momento non aveva mai nemmeno visto) e del furto di un documento a una compagna che l’ha portata in quel luogo, ma colpevolizza le compagne → si è sentita abbandonata.
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 
+// Rifiuto e negazione: parla del crollo, del furto di un documento a una compagna che l’ha portata in quel luogo, ma colpevolizza le compagne → si è sentita abbandonata.
+    
+    <i>Abbiamo osservato {player_name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+    <i>L'abbiamo vist{player_pronouns has him:o|{player_pronouns has her:a|ə}} accogliere tutte le storie di <>
+        {
+            - listDumpCharActivators has FirstCharacter:
+                    {charNameOne},<>
+            - listDumpCharActivators has SecondCharacter:
+                    {charNameTwo},<>
+            - listDumpCharActivators has ThirdCharacter:
+                    {charNameThree},<>
+            - listDumpCharActivators has FourthCharacter:
+                    {charNameFour},<>
+            - listDumpCharActivators has FifthCharacter:
+                    {charNameFive},<>
+        }
+    e abbiamo pensato che {player_name} potrebbe ascoltare un pezzo della nostra.
+    <i>Della mia.
+    <i>C'è stato un tempo in cui eravamo separazione, in cui usavamo "io".
+    <i>Un tempo di confusione.
+    <i>Ma non lo sapevamo.
+    <i>E abbiamo fatto cose sbagliate.
+    <i>Come tradire una persona amica, qualcuna che faceva parte della nostra congrega.
+    <i>Qualcuna che aveva trovato un modo per arrivare in un luogo speciale, un luogo del possibile.
+    <i>Noi le abbiamo rubato quel sapere, {player_name}.
+    <i>Noi siamo arrivate qui dicendo che avremmo salvato il mondo.
+    <i>Ma volendo sentirci solo importanti.
+    <i>Viste.
+    <i>Abbiamo fatto di tutto per essere viste, apprezzate, amate.
+    <i>Così tanto da venire abbandonate.
+    <i>C'è stato un tempo di confusione.
+    <i>E poi è arrivato il dolore.
+    <i>Ma una vita è lunga da raccontare.
+    <i>A dopo, {player_name}.
 
-    -> witch_closing_storylet ->
-    -> main
+        -> witch_closing_storylet ->
+        -> main
 
 === witch_second_confession
-// Rabbia: crea la discarica per bloccare l’accesso da cui erano arrivate, in un mix di “sono pericolosa per gli altri” e “questo posto è pericoloso, il mondo non lo deve avere”. Ha cercato di uccidere l'albero, l'ha tagliato lei. Non voleva che rimanesse niente di chi l'ha abbandonata.
-
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+// Rabbia: incontro con Franco. crea la discarica per bloccare l’accesso da cui erano arrivate, in un mix di “sono pericolosa per gli altri” e “questo posto è pericoloso, il mondo non lo deve avere”. Ha cercato di uccidere l'albero, l'ha tagliato lei. Non voleva che rimanesse niente di chi l'ha abbandonata.
+    
+    <i>{player_name} continua a stupirci.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+    
 
     -> witch_closing_storylet ->
     -> main
 
 === witch_third_confession
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 // Contrattazione: Franco le dice“ Sei sempre stata come XXX che cercava di essere YYY invece di essere totalmente XXX”. 
 
 
@@ -131,6 +188,12 @@
     -> main
 
 === witch_fourth_confession
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 // Depressione: è la storyline che dovrebbe arrivare dopo la riscrittura di Nonna Molotov, cosa racconta?
 //Sicuro ci dirà comunque che a quel punto aveva capito che U.O.J. aveva ragione, che il fulcro di tutto è la relazione, ma oramai non aveva nessuno con cui interagire.
 
@@ -138,8 +201,14 @@
     -> main
 
 === witch_fifth_confession
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 // Accettazione: decide di riscrivere il suo nome nel nome del luogo, di Selanìa, scoperto attraverso Franco, in modo da perdersi nel luogo stesso e diventare pura relazione, per attirare persone bisognose della riscrittura.
-// Capisce solo ora le parole di Franco di settimane prima: “A quel punto ha capito che sì, aveva sbagliato, ma che non serviva piangere, non serviva essere qualcosa che non era: serviva accogliere la sua indole più profonda, trasformativa, come quella dei sigilli, e far sì che altre persone potessero avere uno spazio sicuro in cui ritrovarsi, farsi forti per uscire da lì, cambiare le cose. Diventare Selanìa, diventare il luogo in cui ci troviamo.”
+// Capisce solo ora le parole di Franco di settimane prima: “A quel punto ha capito che sì, aveva sbagliato, ma che non serviva piangere, non serviva essere qualcosa che non era: serviva accogliere la sua indole più profonda, trasformativa, come quella dei sigilli, e far sì che altre persone potessero avere uno spazio sicuro in cui ritrovarsi, farsi forti per uscire da lì, cambiare le cose. Diventare Selanìa, diventare il luogo in cui ci troviamo.” Come siamo diventate "noi"
 
     -> witch_closing_storylet ->
     -> main
