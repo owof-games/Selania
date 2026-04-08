@@ -42,7 +42,8 @@ namespace Selania.Rework.Components
                 .As<IStoryStateSerializer>()
                 .As<IStoryAudioSupport>()
                 .As<IStoryGrimoire>()
-                .As<IStoryInkInfo>();
+                .As<IStoryInkInfo>()
+                .As<IStoryGamerMode>();
         }
 
         /// <summary>

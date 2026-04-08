@@ -11,173 +11,174 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-        Oh, quanto ho sperato nel tuo arrivo!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-        Scusa, ma sono così felice che tu sia qui.
-            {
-                - that_little_liar_storylet:
-                    Con tutto il trambusto causato da quel bambino non ho nemmeno fatto una buona figura.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-            }
-        Avrai un milione di domande, vero?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+        {charTag(FifthCharacter, "hurry")}:     Oh, quanto ho sperato nel tuo arrivo!
+                                                Scusa, ma sono così felice che tu sia qui.
+        {that_little_liar_storylet:
+            {charTag(FifthCharacter, "sad")}:       Con tutto il trambusto causato da quel bambino non ho nemmeno fatto una buona figura.
+        }
+        {charTag(FifthCharacter, "hurry")}:     Avrai un milione di domande, vero?
         
-            + (airChoice) Anche più di un milione, ma la prima è: dove mi trovo?
-                -> glyph_modifier_variation_management(Mentor, airC)->
-                    {
-                        - contentsTrainStop has PG:
-                            Questa? È la fermata del treno.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                            Da qui arrivano le persone che hanno bisogno del nostro aiuto.
-                        - contentsForest has PG:
-                            Ora siamo nella foresta.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                            O meglio, la chiamo così perché.
-                            Beh, ci sono tanti alberi.
-                            Compreso quello lì tutto brutto e deperito.
-                        - contentsPond has PG:
-                            Questo è lo stagno.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                            Regno dei funghi, dell'umidità e delle zanzare.
-                            E lì c'è la serra!
-                    }
-                Ma forse intendi dire cos'è questo luogo in generale, vero?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Non ha un vero nome, ma il lo chiamo <b><i>Il giardino</b></i>.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                E faccio di tutto per renderlo un posto sicuro.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Un posto dove prenderti cura di te.
-                Non male, no?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-            
-            + (waterChoice) Che cosa tenera e gentile da dire! Perché sei felice che sono qui?
-                    -> glyph_modifier_variation_management(Mentor, waterC)->
-                Sì!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Non mi fraintendere: non so di preciso tu chi sia.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-                Ma so <i>perché</i> sei qui.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                E il mio di <i>perché</i> è legato alla tua presenza.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Perché io sono la persona che tiene in piedi questo luogo, ma non solo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                Io sono <b><i>{translator(mentor_ActualName)}</b></i>.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral 
-                La tua {translator(mentor_ActualName)}.
-                E ora che sei qui, ho uno scopo.
+        + (airChoice) \ {charTag(PG, "neutral")}: Anche più di un milione, ma la prima è: dove mi trovo?
+            -> glyph_modifier_variation_management(Mentor, airC) ->
+            {
+                - contentsTrainStop has PG:
+                    {charTag(FifthCharacter, "neutral")}:   Questa? È la fermata del treno.
+                                                            Da qui arrivano le persone che hanno bisogno del nostro aiuto.
+                - contentsForest has PG:
+                    {charTag(FifthCharacter, "neutral")}:   Ora siamo nella foresta.
+                                                            O meglio, la chiamo così perché.
+                                                            Beh, ci sono tanti alberi.
+                                                            Compreso quello lì tutto brutto e deperito.
+                - contentsPond has PG:
+                    {charTag(FifthCharacter, "neutral")}:   Questo è lo stagno.
+                                                            Regno dei funghi, dell'umidità e delle zanzare.
+                                                            E lì c'è la serra!
+            }
+            {charTag(FifthCharacter, "neutral")}:   Ma forse intendi dire cos'è questo luogo in generale, vero?
+            {charTag(FifthCharacter, "hurry")}:     Non ha un vero nome, ma il lo chiamo <b><i>Il giardino</b></i>.
+            {charTag(FifthCharacter, "neutral")}:   E faccio di tutto per renderlo un posto sicuro.
+                                                    Un posto dove prenderti cura di te.
+            {charTag(FifthCharacter, "hurry")}:     Non male, no?
+        
+        + (waterChoice) \ {charTag(PG, "neutral")}: Che cosa tenera e gentile da dire! Perché sei felice che sono qui?
+            -> glyph_modifier_variation_management(Mentor, waterC) ->
+            {charTag(FifthCharacter, "neutral")}:   Sì!
+            {charTag(FifthCharacter, "sad")}:       Non mi fraintendere: non so di preciso tu chi sia.
+            {charTag(FifthCharacter, "hurry")}:     Ma so <i>perché</i> sei qui.
+            {charTag(FifthCharacter, "neutral")}:   E il mio di <i>perché</i> è legato alla tua presenza.
+            {charTag(FifthCharacter, "hurry")}:     Perché io sono la persona che tiene in piedi questo luogo, ma non solo.
+            {charTag(FifthCharacter, "neutral")}:   Io sono <b><i>{translator(mentor_ActualName)}</b></i>.
+                                                    La tua {translator(mentor_ActualName)}.
+                                                    E ora che sei qui, ho uno scopo.
 
-            + (aetherChoice) Siamo in un luogo misterico, vero?
-                    -> glyph_modifier_variation_management(Mentor, aetherC)->
-                Io.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Uh, è una domanda inaspettata.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-                Sicuramente c'è qualcosa di magico.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                Ma nulla viene tenuto nascosto.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Al contrario: hai in me una guida.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+        + (aetherChoice) \ {charTag(PG, "neutral")}: Siamo in un luogo misterico, vero?
+            -> glyph_modifier_variation_management(Mentor, aetherC) ->
+            {charTag(FifthCharacter, "neutral")}:   Io.
+            {charTag(FifthCharacter, "sorry")}:     Uh, è una domanda inaspettata.
+            {charTag(FifthCharacter, "hurry")}:     Sicuramente c'è qualcosa di magico.
+            {charTag(FifthCharacter, "neutral")}:   Ma nulla viene tenuto nascosto.
+            {charTag(FifthCharacter, "hurry")}:     Al contrario: hai in me una guida.
 
-                    
-            + (fireChoice) <i>Cerco un modo per tornare a casa.</i>
-                    -> glyph_modifier_variation_management(Mentor, fireC)->
-                Vuoi già andartene?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-                Forse devo rivedere il mio benvenuto.
-                Forse sono stata troppo formale?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_sorry
-                O dovrei essere più autorevole?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                Ma non devo essere scortese ora.
-                Mi hai fatto una domanda, e vedrò di rispondere.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                    {
-                        - contentsTrainStop has PG:
-                            Lì ad est troverai una porta, e ti ritroverai nella tua camera da letto.
-                            Basta che ti stenderai a dormire, e tornerai nel mondo da cui vieni.
-                        
-                        - else:
-                            A est della stazione troverai una porta, e da lì, la tua camera da letto.
-                            Stenditi a dormire, e ti troverai nel mondo da cui vieni.
-                    }
-                E se deciderai di tornare, troverai tutto nello stato in cui l'hai lasciato.
-                Prima però lascia che ti rubi giusto un secondo!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
                 
-            + (earthChoice) Non sai quanto mi mancava tutta questa natura!
-                    -> glyph_modifier_variation_management(Mentor, earthC)->
-                È pace per il cuore, vero?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                Ogni angolo di questo spazio mi rasserena, anche quando mi sento fuori fuoco.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Continua a stupirmi, giorno per giorno.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-            -
-        Ma come ti devo chiamare?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-        E quali pronomi usi?
-        Puoi usare un nome qualsiasi e i pronomi che preferisci: prendi questa occasione come un nuovo inizio.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-            -> name_choice.top2 ->
-            -> gender.top ->
-        Piacere di conoscerti, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-        E {player_pronouns has him:benvenuto|{player_pronouns has her:benvenuta|benvenutə}}.
-        Con me usa pure i pronomi femminili.
-        {not waterChoice:Ah, che sbadata. Mi chiamo <b><i>{mentorName}</b></i>, e il mio obiettivo è farti stare bene.|Come Mentore, il mio unico obiettivo è farti stare bene.}#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-            - (selfName)
-        Tra poco ti spiegherò anche il tuo lavoro, {player_name}.
-                {
-                    - are_two_entities_together(FirstCharacter, PG):
-                        Cioè, {player_pronouns has him:uno|{player_pronouns has her:una|unə}} deve ritrovarsi a lavorare anche in una allucinazione?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-                        Allucinazione?{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                }
-        Prima però una cosa importante: qui avrai a che fare con cose viventi piene di storie.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        E ogni storia ha le sue complessità.
-        Per questo potresti incontrare tematiche per te faticose.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-        Ci saranno occasioni in cui potrai evitarle e non ti perderai nulla di questa esperienza.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Ma quando si tratta delle persone, accogliere le loro ferite farà parte del tuo lavoro.
-        Sono sicura che parleranno di cose delicate nel modo migliore, ma ricorda: fermarsi o rinunciare non è un fallimento.
-        Se senti il bisogno di staccare puoi tornare in camera, il posto da cui sei {player_pronouns has him:arrivato|{player_pronouns has her:arrivata|arrivatə}} e stenderti sul letto.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Al risveglio, troverai tutto come l'hai lasciato.
-        E se non vorrai più tornare, ci saranno sicuramente altre persone pronte ad aiutare chi viene qui in cerca di risposte.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-        E a proposito di risposte.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        La maggior parte delle cose che dirai in questo luogo influenzeranno il rapporto che hai con le persone che incontri.
-        Ogni frase in fondo rappresenta un modo di vedere il mondo. E non tutte le visioni vanno d'accordo.
+        + (fireChoice) \ {charTag(PG, "neutral")}: <i>Cerco un modo per tornare a casa.</i>
+            -> glyph_modifier_variation_management(Mentor, fireC) ->
+            {charTag(FifthCharacter, "sad")}:       Vuoi già andartene?
+                                                    Forse devo rivedere il mio benvenuto.
+            {charTag(FifthCharacter, "sorry")}:     Forse sono stata troppo formale?
+            {charTag(FifthCharacter, "hurry")}:     O dovrei essere più autorevole?
+                                                    Ma non devo essere scortese ora.
+            {charTag(FifthCharacter, "neutral")}:   Mi hai fatto una domanda, e vedrò di rispondere.
+            {
+                - contentsTrainStop has PG:
+                                                        Lì ad est troverai una porta, e ti ritroverai nella tua camera da letto.
+                                                        Basta che ti stenderai a dormire, e tornerai nel mondo da cui vieni.
+                - else:
+                                                        A est della stazione troverai una porta, e da lì, la tua camera da letto.
+                                                        Stenditi a dormire, e ti troverai nel mondo da cui vieni.
+            }
+                                                    E se deciderai di tornare, troverai tutto nello stato in cui l'hai lasciato.
+            {charTag(FifthCharacter, "hurry")}:     Prima però lascia che ti rubi giusto un secondo!
+            
+        + (earthChoice) \ {charTag(PG, "neutral")}: Non sai quanto mi mancava tutta questa natura!
+            -> glyph_modifier_variation_management(Mentor, earthC) ->
+            {charTag(FifthCharacter, "hurry")}:     È pace per il cuore, vero?
+            {charTag(FifthCharacter, "neutral")}:   Ogni angolo di questo spazio mi rasserena, anche quando mi sento fuori fuoco.
+            {charTag(FifthCharacter, "hurry")}:     Continua a stupirmi, giorno per giorno.
+        
+        -
+
+        {charTag(FifthCharacter, "hurry")}:     Ma come ti devo chiamare?
+                                                E quali pronomi usi?
+        {charTag(FifthCharacter, "neutral")}:   Puoi usare un nome qualsiasi e i pronomi che preferisci: prendi questa occasione come un nuovo inizio.
+        -> name_choice.top2 ->
+        -> gender.top ->
+        {charTag(FifthCharacter, "hurry")}:     Piacere di conoscerti, {player_name}.
+                                                E {player_pronouns has him:benvenuto|{player_pronouns has her:benvenuta|benvenutə}}.
+                                                Con me usa pure i pronomi femminili.
+        {not waterChoice:{charTag(FifthCharacter, "neutral")}:   Ah, che sbadata. Mi chiamo <b><i>{mentorName}</b></i>, e il mio obiettivo è farti stare bene.|{charTag(FifthCharacter, "neutral")}:   Come Mentore, il mio unico obiettivo è farti stare bene.}
+        - (selfName)
+                                                Tra poco ti spiegherò anche il tuo lavoro, {player_name}.
+        {
+            - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:   Cioè, {player_pronouns has him:uno|{player_pronouns has her:una|unə}} deve ritrovarsi a lavorare anche in una allucinazione?
+                {charTag(FifthCharacter, "neutral")}:   Allucinazione?
+        }
+        {charTag(FifthCharacter, "neutral")}:   Prima però una cosa importante: qui avrai a che fare con cose viventi piene di storie.
+                                                E ogni storia ha le sue complessità.
+        {charTag(FifthCharacter, "sorry")}:     Per questo potresti incontrare tematiche per te faticose.
+        {charTag(FifthCharacter, "neutral")}:   Ci saranno occasioni in cui potrai evitarle e non ti perderai nulla di questa esperienza.
+                                                Ma quando si tratta delle persone, accogliere le loro ferite farà parte del tuo lavoro.
+                                                Sono sicura che parleranno di cose delicate nel modo migliore, ma ricorda: fermarsi o rinunciare non è un fallimento.
+                                                Se senti il bisogno di staccare puoi tornare in camera, il posto da cui sei {player_pronouns has him:arrivato|{player_pronouns has her:arrivata|arrivatə}} e stenderti sul letto.
+                                                Al risveglio, troverai tutto come l'hai lasciato.
+        {charTag(FifthCharacter, "hurry")}:     E se non vorrai più tornare, ci saranno sicuramente altre persone pronte ad aiutare chi viene qui in cerca di risposte.
+        {charTag(FifthCharacter, "neutral")}:   E a proposito di risposte.
+                                                La maggior parte delle cose che dirai in questo luogo influenzeranno il rapporto che hai con le persone che incontri.
+                                                Ogni frase in fondo rappresenta un modo di vedere il mondo. E non tutte le visioni vanno d'accordo.
+
         {
             - fireChoice:
-                Quando prima hai cercato di andartene, ad esempio, mi sono sentita ferita.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-                Poi fortunatamente la mia preparazione mi ha aiutato a sopprimere quel sentimento.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                Un'altra persona magari si sarebbe offesa.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-                O avrebbe apprezzato la tua propensione per l'azione.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                {charTag(FifthCharacter, "sad")}:       Quando prima hai cercato di andartene, ad esempio, mi sono sentita ferita.
+                {charTag(FifthCharacter, "hurry")}:     Poi fortunatamente la mia preparazione mi ha aiutato a sopprimere quel sentimento.
+                {charTag(FifthCharacter, "sad")}:       Un'altra persona magari si sarebbe offesa.
+                {charTag(FifthCharacter, "neutral")}:   O avrebbe apprezzato la tua propensione per l'azione.
 
             - aetherChoice:
-                Quando prima mi hai chiesto se questo sia un luogo misterico, hai mostrato con tranquillità un interesse verso l'occulto e le cose spirituali.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Ed è una cosa che mi risuona molto.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                Altre persone potrebbero giudicarti poco razionale, scollegat{player_pronouns has him:o|{player_pronouns has her:a|ə}} dalla realtà.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-                Oppure potrebbero ritrovare in te un{player_pronouns has him:o|{player_pronouns has her:a|ə}} compagn{player_pronouns has him:o|{player_pronouns has her:a|ə}} con cui confidare le esperienze più insolite.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                {charTag(FifthCharacter, "neutral")}:   Quando prima mi hai chiesto se questo sia un luogo misterico, hai mostrato con tranquillità un interesse verso l'occulto e le cose spirituali.
+                {charTag(FifthCharacter, "hurry")}:     Ed è una cosa che mi risuona molto.
+                {charTag(FifthCharacter, "sad")}:       Altre persone potrebbero giudicarti poco razionale, scollegat{player_pronouns has him:o|{player_pronouns has her:a|ə}} dalla realtà.
+                {charTag(FifthCharacter, "neutral")}:   Oppure potrebbero ritrovare in te un{player_pronouns has him:o|{player_pronouns has her:a|ə}} compagn{player_pronouns has him:o|{player_pronouns has her:a|ə}} con cui confidare le esperienze più insolite.
 
             - earthChoice:
-                Quando prima hai detto che ti mancava tutta questa natura, ho scoperto di aver già un punto di contatto con te.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                Non tutte le persone potrebbero trovarsi d'accordo: c'è chi ama gli spazi urbani e chi ha paura dell'imprevedibilità di un bosco.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-                Oppure potresti trovare qualcunə che non aspettava altro che di parlarti di tutti i suoi animali preferiti.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                {charTag(FifthCharacter, "hurry")}:     Quando prima hai detto che ti mancava tutta questa natura, ho scoperto di aver già un punto di contatto con te.
+                {charTag(FifthCharacter, "sad")}:       Non tutte le persone potrebbero trovarsi d'accordo: c'è chi ama gli spazi urbani e chi ha paura dell'imprevedibilità di un bosco.
+                {charTag(FifthCharacter, "neutral")}:   Oppure potresti trovare qualcunə che non aspettava altro che di parlarti di tutti i suoi animali preferiti.
 
             - airChoice:
-                La prima cosa che mi hai chiesto è stata dove siamo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                E l'hai chiesto con una curiosità che ho apprezzato molto: le domande sono strade aperte verso il sapere.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                Ma potresti trovare qualcunə che invece preferisce un approccio più emotivo, o spirituale, e potrebbe mettersi sulla difensiva.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-                Oppure unə compagnə di studi, scambi ed analisi.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                {charTag(FifthCharacter, "neutral")}:   La prima cosa che mi hai chiesto è stata dove siamo.
+                {charTag(FifthCharacter, "hurry")}:     E l'hai chiesto con una curiosità che ho apprezzato molto: le domande sono strade aperte verso il sapere.
+                {charTag(FifthCharacter, "sad")}:       Ma potresti trovare qualcunə che invece preferisce un approccio più emotivo, o spirituale, e potrebbe mettersi sulla difensiva.
+                {charTag(FifthCharacter, "neutral")}:   Oppure unə compagnə di studi, scambi ed analisi.
 
             - waterChoice:
-                La prima cosa che mi hai detto è stata parlare di dolcezza e tenerezza.
-                L'emotività attrae molte persone, perché in tant3 abbiamo bisogno di parlare di ciò che proviamo, di condividere gli aspetti profondi del nostro cuore.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                Ma allontana altrettante persone, vuoi perché quello non è il loro linguaggio, vuoi perché non se la sentono di parlarne con chi non conoscono.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-
+                                                        La prima cosa che mi hai detto è stata parlare di dolcezza e tenerezza.
+                {charTag(FifthCharacter, "hurry")}:     L'emotività attrae molte persone, perché in tant3 abbiamo bisogno di parlare di ciò che proviamo, di condividere gli aspetti profondi del nostro cuore.
+                {charTag(FifthCharacter, "sad")}:       Ma allontana altrettante persone, vuoi perché quello non è il loro linguaggio, vuoi perché non se la sentono di parlarne con chi non conoscono.
         }
-        Le cose non sono poi così lineari, perché giustamente il modo in cui ognunə di noi vede il mondo è molto molto molto complesso.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        La cosa bella però è che le persone tendono sempre a reagire a ciò che diciamo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-        E capire le loro reazioni è la prima parte del tuo lavoro.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Prima di riempirti di troppe informazioni, ti invito per un po' <>
+
+        {charTag(FifthCharacter, "neutral")}:   Le cose non sono poi così lineari, perché giustamente il modo in cui ognunə di noi vede il mondo è molto molto molto complesso.
+        {charTag(FifthCharacter, "hurry")}:     La cosa bella però è che le persone tendono sempre a reagire a ciò che diciamo.
+        {charTag(FifthCharacter, "neutral")}:   E capire le loro reazioni è la prima parte del tuo lavoro.
+                                                Prima di riempirti di troppe informazioni, ti invito per un po' <>
         {
             - first_char_main_storylets:
-                a continuare a parlare con le persone che incontrerai qui in giro, <>
+                                                a continuare a parlare con le persone che incontrerai qui in giro, <>
             - else:
-                a parlare con le persone che incontrerai qui in giro, <>
+                                                a parlare con le persone che incontrerai qui in giro, <>
         }
-        e a capire meglio come ragionano.
-        Capire come ragionano ti aiuterà a conquistare la loro fiducia.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-        Che è la parte davvero fondamentale per compiere il tuo lavoro.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Ma prima di salutarti, due cose che potrebbero aiutarti.
-        Questo è un Grimorio: ti aiuterà nel raccogliere tutte le informazioni che incontrerai man mano.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-            {
-                - contentsForest has PG:
-                    ~ move_entity(Grimoire, Forest)
-                - contentsTrainStop has PG:
-                    ~ move_entity(Grimoire, TrainStop)
-                - contentsPond has PG:
-                    ~ move_entity(Grimoire, Pond)        
-            }
-        Consultalo ogni volta che sei in difficoltà.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral    
-        E poi ti ho aperto la serra, la trovi nei pressi dello stagno.
-                -> opening_places ->
-        La serra è un bel posto dove rilassarsi, e non solo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-        Ma evita assolutamente tutti gli altri posti bloccati, perché sono pericolosi!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_bored
-        Più tardi ti spiegherò perché sei qui.
-        Io devo raccogliere le foglie dalla foresta.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                                                e a capire meglio come ragionano.
+        {charTag(FifthCharacter, "hurry")}:     Capire come ragionano ti aiuterà a conquistare la loro fiducia.
+        {charTag(FifthCharacter, "neutral")}:   Che è la parte davvero fondamentale per compiere il tuo lavoro.
+                                                Ma prima di salutarti, due cose che potrebbero aiutarti.
+        {charTag(FifthCharacter, "hurry")}:     Questo è un Grimorio: ti aiuterà nel raccogliere tutte le informazioni che incontrerai man mano.
+        {
+            - contentsForest has PG:
+                ~ move_entity(Grimoire, Forest)
+            - contentsTrainStop has PG:
+                ~ move_entity(Grimoire, TrainStop)
+            - contentsPond has PG:
+                ~ move_entity(Grimoire, Pond)        
+        }
+        {charTag(FifthCharacter, "neutral")}:   Consultalo ogni volta che sei in difficoltà.
+                                                E poi ti ho aperto la serra, la trovi nei pressi dello stagno.
+        -> opening_places ->
+        {charTag(FifthCharacter, "hurry")}:     La serra è un bel posto dove rilassarsi, e non solo.
+        {charTag(FifthCharacter, "bored")}:     Ma evita assolutamente tutti gli altri posti bloccati, perché sono pericolosi!
+                                                Più tardi ti spiegherò perché sei qui.
+        {charTag(FifthCharacter, "hurry")}:     Io devo raccogliere le foglie dalla foresta.
 
-            -> mentor_closing_storylet ->
-            -> main
+        -> mentor_closing_storylet ->
+        -> main
 
 
 === tutorial_mentorInkAndYouAreARewriter

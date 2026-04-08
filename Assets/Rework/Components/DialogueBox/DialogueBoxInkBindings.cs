@@ -37,6 +37,8 @@ namespace Selania.Rework.Components.DialogueBox
         /// </summary>
         [Inject] internal IStoryChoicesSelector StoryChoicesSelector = null!;
 
+        [Inject] internal IStoryGamerMode StoryGamerMode = null!;
+
         [Inject] internal IStoryInkInfo StoryInkInfo = null!;
 
         /// <summary>
@@ -55,24 +57,31 @@ namespace Selania.Rework.Components.DialogueBox
 
             dialogueBox.continueRequestsObservable.Subscribe(ContinueActionOnPerformed).AddTo(this);
 
-            // create ink variables lazy object
+            StoryGamerMode.gamerMode.Subscribe(OnGamerModeChanged).AddTo(this);
+
+            // hook to all ink variables, and update the ink only when it's the current speaker
             foreach (var c in SettingsDialogueBox.characterInkVariables)
             {
-                if (string.IsNullOrWhiteSpace(c.InkVariable)) continue;
-                StoryInkInfo
-                    .GetInkLevelObservable(c.InkVariable)
-                    .CombineLatest(_lastSpeakingCharacter.WhereNotNull(),
-                        (inkLevel, lastSpeakingCharacter) => (inkLevel, lastSpeakingCharacter))
-                    .Subscribe(value =>
-                    {
-                        if (value.lastSpeakingCharacter != c.Character) return;
-                        if (value.inkLevel == 0)
-                            dialogueBox.SetInkStatus(0, 0);
-                        else
-                            dialogueBox.SetInkStatus(value.inkLevel, 4 - value.inkLevel);
-                    })
-                    .AddTo(this);
+                SubscribeToCharacterInk(c.Character, c.InkVariable);
             }
+        }
+
+        private void SubscribeToCharacterInk(string character, string inkVariable)
+        {
+            if (string.IsNullOrWhiteSpace(inkVariable)) return;
+            StoryInkInfo
+                .GetInkLevelObservable(inkVariable)
+                .CombineLatest(_lastSpeakingCharacter.WhereNotNull(),
+                    (inkLevel, lastSpeakingCharacter) => (inkLevel, lastSpeakingCharacter))
+                .Subscribe(value =>
+                {
+                    if (value.lastSpeakingCharacter != character) return;
+                    if (value.inkLevel == 0)
+                        dialogueBox.SetInkStatus(0, 0);
+                    else
+                        dialogueBox.SetInkStatus(value.inkLevel, 4 - value.inkLevel);
+                })
+                .AddTo(this);
         }
 
         /// <summary>
@@ -220,6 +229,11 @@ namespace Selania.Rework.Components.DialogueBox
                     Logger.ZLogTrace($"Choice index {index}");
                     StoryChoicesSelector.PickChoiceWithIndex(index);
                 });
+        }
+
+        private void OnGamerModeChanged(bool gamerMode)
+        {
+            // dialogueBox.
         }
     }
 }

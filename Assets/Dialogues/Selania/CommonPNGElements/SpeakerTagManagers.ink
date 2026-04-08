@@ -6,9 +6,15 @@ LIST nest_speakersForEwWordTag = Influenced, Other
 
  ----------------------------------*/
 
-=== function charTag(PNG)
-{
-    - PNG == FirstCharacter:
+=== function charTag(PNG, mood)
+~ temp displayName = charName(PNG)
+~ return "{PNG}, {displayName}, {mood}"
+
+=== function charName(PNG)
+{PNG:
+    - PG:
+        ~ return player_name
+    - FirstCharacter:
         {
             - !first_char_main_storylets.one.firstPresentation:
                 ~ return "???"
@@ -33,7 +39,7 @@ LIST nest_speakersForEwWordTag = Influenced, Other
                 
         }  
 
-    - PNG == SecondCharacter:
+    - SecondCharacter:
         {
             - ! second_char_main_storylets.one.nameSecond:
                 ~ return "???"
@@ -58,7 +64,7 @@ LIST nest_speakersForEwWordTag = Influenced, Other
         
         }
 
-    - PNG == ThirdCharacter:
+    - ThirdCharacter:
         {
 
             - ! third_char_main_storylets.one:
@@ -68,7 +74,7 @@ LIST nest_speakersForEwWordTag = Influenced, Other
                 ~ return "Boccale"
         }
 
-    - PNG == FourthCharacter:
+    - FourthCharacter:
         {
 
             - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
@@ -78,7 +84,7 @@ LIST nest_speakersForEwWordTag = Influenced, Other
                 ~ return "Mentore"
         }    
     
-    - PNG == Mentor:
+    - Mentor:
         {
             - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
                 ~ return "???"
@@ -87,7 +93,7 @@ LIST nest_speakersForEwWordTag = Influenced, Other
                 ~ return "Mentore"
         }
     
-    - PNG == FifthCharacter:
+    - FifthCharacter:
         {
             - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
                 ~ return "???"
@@ -96,7 +102,7 @@ LIST nest_speakersForEwWordTag = Influenced, Other
                 ~ return "Mentore"
         }
     
-    - PNG == TheWitch:
+    - TheWitch:
         {
             - witch_intro.nameWitch:
                 ~ return "<i>Luna</i>"
@@ -105,7 +111,7 @@ LIST nest_speakersForEwWordTag = Influenced, Other
                 ~ return ""
         }
 
-    - PNG == Franco:
+    - Franco:
         {
             - frog_nameDiscovered == false:
                 ~ return "???"
@@ -117,10 +123,10 @@ LIST nest_speakersForEwWordTag = Influenced, Other
                 ~ return "Franco La Rana"
         }
 
-    - PNG == Documents:
+    - Documents:
         ~ return ""
 
-    - PNG == Carla:
+    - Carla:
         {
             - tutorial_carlaChoicesRelationshipStorylet.nameDiscovered:
                 ~ return "Carla"
@@ -130,7 +136,7 @@ LIST nest_speakersForEwWordTag = Influenced, Other
         }
         
 
-    - PNG == Doggo:
+    - Doggo:
         ~ return "Doggo"
 
 }

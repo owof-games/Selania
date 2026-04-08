@@ -129,7 +129,7 @@
     + ->
     
     - (top)
-    I miei pronomi sono...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+    {charTag(PG, "neutral")}: I miei pronomi sono...
         + [Mi trovo a mio agio col maschile.]
             ~ player_pronouns = ()
             ~ player_pronouns += him
@@ -161,7 +161,7 @@
         + ->
     
     - (top)
-        Il mio nome è...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+        {charTag(PG, "neutral")}: Il mio nome è...
         ~ temp random_name1 = get_random_name()
         ~ temp random_name2 = get_random_name()
         ~ temp random_name3 = get_random_name()

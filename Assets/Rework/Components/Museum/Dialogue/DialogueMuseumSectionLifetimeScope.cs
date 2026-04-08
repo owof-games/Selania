@@ -15,7 +15,8 @@ namespace Selania.Rework.Components.Museum.Dialogue
         {
             builder.RegisterSettings(settings);
             builder.RegisterLogger();
-            builder.Register<EmptyStory>(Lifetime.Singleton).As<IStoryLinear>().As<IStoryChoicesSelector>();
+            builder.Register<EmptyStory>(Lifetime.Singleton).As<IStoryLinear>().As<IStoryChoicesSelector>()
+                .As<IStoryInkInfo>().As<IStoryGamerMode>();
             builder.Register<EmptyAudioSystem>(Lifetime.Singleton).As<IAudioSystem>();
         }
 
@@ -35,7 +36,7 @@ namespace Selania.Rework.Components.Museum.Dialogue
             }
         }
 
-        private class EmptyStory : IStoryLinear, IStoryChoicesSelector
+        private class EmptyStory : IStoryLinear, IStoryChoicesSelector, IStoryInkInfo, IStoryGamerMode
         {
             public Observable<IStoryChoicesSelector.ChoicesInfo> choicesObservable =>
                 Observable.Empty<IStoryChoicesSelector.ChoicesInfo>();
@@ -46,6 +47,13 @@ namespace Selania.Rework.Components.Museum.Dialogue
 
             public void PickChoiceWithIndex(int index)
             {
+            }
+
+            public Observable<bool> gamerMode => Observable.Return<bool>(false);
+
+            public Observable<int> GetInkLevelObservable(string inkVariableName)
+            {
+                return Observable.Never<int>();
             }
 
             public Observable<IStoryLinear.CurrentTextInfo> currentTextObservable =>

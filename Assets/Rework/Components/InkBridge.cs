@@ -22,7 +22,7 @@ namespace Selania.Rework.Components
     [CreateAssetMenu(fileName = "InkBridge", menuName = "Selania/Create Ink Bridge", order = 0)]
     public class InkBridge : ScriptableObjectSetupSupport, IStoryChangeRoomNotifier, IStoryChoicesSelector,
         IStoryLinear, IStoryChangeRoomContentsNotifier, IStoryStateSerializer, IStoryAudioSupport, IStoryGrimoire,
-        IStoryInkInfo
+        IStoryInkInfo, IStoryGamerMode
     {
         [Header("Ink Settings")] [SerializeField] [Tooltip("The JSON asset containing the story.")]
         private TextAsset? inkAssetJson;
@@ -58,6 +58,13 @@ namespace Selania.Rework.Components
         private ILogger<InkBridge> logger =>
             _logger ?? throw new InvalidOperationException(
                 "Logger is not set, call SetUp before accessing the logger");
+
+        #region gamer mode
+
+        /// <inheritdoc />
+        public Observable<bool> gamerMode => GetVariableObservable<bool>(gamerModeVariableName);
+
+        #endregion
 
         /// <summary>
         ///     Start the story. This sets up the internal state and runs the first <see cref="Continue" />.
@@ -181,6 +188,31 @@ namespace Selania.Rework.Components
             CleanupAudio();
             CleanupGrimoire();
         }
+
+        #region common
+
+        private Observable<T> GetVariableObservable<T>(string variableName)
+        {
+            return Observable.Create<T>(observer =>
+            {
+                var story = GetStory();
+
+                Story.VariableObserver variableObserver = (_, value) => { EmitValue(value, variableName); };
+                story.ObserveVariable(variableName, variableObserver);
+                var currentValue = story.variablesState[variableName];
+
+                EmitValue(currentValue, variableName);
+
+                return Disposable.Create(() => story.RemoveVariableObserver(variableObserver));
+
+                void EmitValue(object value, string _)
+                {
+                    observer.OnNext((T)value);
+                }
+            });
+        }
+
+        #endregion
 
         #region room location / contents
 
@@ -1644,29 +1676,14 @@ namespace Selania.Rework.Components
         /// <inheritdoc />
         public Observable<int> GetInkLevelObservable(string inkVariableName)
         {
-            return Observable.Create<int>(observer =>
+            return GetVariableObservable<InkList>(inkVariableName).Select(inkList =>
             {
-                var story = GetStory();
-
-                Story.VariableObserver variableObserver = (variableName, value) => { EmitValue(value, variableName); };
-                story.ObserveVariable(inkVariableName, variableObserver);
-                var currentValue = story.variablesState[inkVariableName];
-
-                EmitValue(currentValue, inkVariableName);
-
-                return Disposable.Create(() => story.RemoveVariableObserver(variableObserver));
-
-                void EmitValue(object value, string variableName)
-                {
-                    var inkList = (InkList)value;
-                    var currentItem = inkList.Keys.First().itemName;
-                    var index = inkVariableLevels.IndexOf(level => level == currentItem);
-                    if (index < 0)
-                        logger.ZLogWarning($"Unknown ink level ${currentItem} from variable ${variableName}");
-                    else
-                        observer.OnNext(index);
-                }
-            });
+                var currentItem = inkList.Keys.First().itemName;
+                var index = inkVariableLevels.IndexOf(level => level == currentItem);
+                if (index >= 0) return index;
+                logger.ZLogWarning($"Unknown ink level ${currentItem} from variable ${inkVariableName}");
+                return (int?)null;
+            }).Where(i => i.HasValue).Select(i => i!.Value);
         }
 
         #endregion
