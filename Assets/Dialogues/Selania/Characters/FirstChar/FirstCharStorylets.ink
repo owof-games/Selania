@@ -22,7 +22,7 @@
                 Dai, palese!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 Ha una congrega con Kate Bush e Tori Amos.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
                 E passano i sabati sera a maledire gli uomini del loro passato.
-                <i>"Women said, "We've been waiting, Waiting to meet you, it's only a matter of time"."#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                // <i>"Women said, "We've been waiting, Waiting to meet you, it's only a matter of time"."#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             
             + (fire)<i>Attendo impazientemente che dica altro.
                     -> glyph_modifier_variation_management(FirstCharacter, fireC)->

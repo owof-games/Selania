@@ -6,7 +6,7 @@
 
 {
     -train_stop == 1: 
-        <i>La stazione profuma di aria nevosa e nuovi arrivi.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        <i>La stazione profuma di aria nevosa e nuovi arrivi.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
 }
     
 {

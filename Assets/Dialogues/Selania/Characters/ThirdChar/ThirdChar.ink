@@ -7,7 +7,7 @@
                 -> backpack_management
             
             +->
-                <i>Lo zaino che accompagna {player_name} è privo di oggetti.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                <i>L{player_name} non ha nulla da donare.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                     ->main
             
         

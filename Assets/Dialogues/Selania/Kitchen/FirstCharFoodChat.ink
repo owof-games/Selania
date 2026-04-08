@@ -1056,7 +1056,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
     
         {
             - backpack_findedGifts == (): 
-                <i>Lo zaino di {player_name} giace vuoto sulle sue spalle. {player_name} non può aggiungere alla ricetta un ingrediente speciale.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                <i>{player_name} non ha ingredienti da aggiungere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                     -> recipe_name_creator ->
                     -> recipe_name_storage(FirstCharacter) ->
                     -> at_table_with_first_char
