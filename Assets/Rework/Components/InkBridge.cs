@@ -21,7 +21,8 @@ namespace Selania.Rework.Components
     /// </summary>
     [CreateAssetMenu(fileName = "InkBridge", menuName = "Selania/Create Ink Bridge", order = 0)]
     public class InkBridge : ScriptableObjectSetupSupport, IStoryChangeRoomNotifier, IStoryChoicesSelector,
-        IStoryLinear, IStoryChangeRoomContentsNotifier, IStoryStateSerializer, IStoryAudioSupport, IStoryGrimoire
+        IStoryLinear, IStoryChangeRoomContentsNotifier, IStoryStateSerializer, IStoryAudioSupport, IStoryGrimoire,
+        IStoryInkInfo
     {
         [Header("Ink Settings")] [SerializeField] [Tooltip("The JSON asset containing the story.")]
         private TextAsset? inkAssetJson;
@@ -434,7 +435,7 @@ namespace Selania.Rework.Components
             {
                 _conversationInProgressSubject!.OnNext(true);
                 _currentTextObservable!.OnNext(
-                    new IStoryLinear.CurrentTextInfo(currentText, tags));
+                    new IStoryLinear.CurrentTextInfo(currentText));
             }
             else if (currentText.StartsWith("@animation"))
             {
@@ -1631,6 +1632,41 @@ namespace Selania.Rework.Components
 
                 return (actualTitle, actualPlant, actualStatus);
             }
+        }
+
+        #endregion
+
+        #region ink
+
+        [Header("ink variable levels")] [SerializeField]
+        private string[] inkVariableLevels = null!;
+
+        /// <inheritdoc />
+        public Observable<int> GetInkLevelObservable(string inkVariableName)
+        {
+            return Observable.Create<int>(observer =>
+            {
+                var story = GetStory();
+
+                Story.VariableObserver variableObserver = (variableName, value) => { EmitValue(value, variableName); };
+                story.ObserveVariable(inkVariableName, variableObserver);
+                var currentValue = story.variablesState[inkVariableName];
+
+                EmitValue(currentValue, inkVariableName);
+
+                return Disposable.Create(() => story.RemoveVariableObserver(variableObserver));
+
+                void EmitValue(object value, string variableName)
+                {
+                    var inkList = (InkList)value;
+                    var currentItem = inkList.Keys.First().itemName;
+                    var index = inkVariableLevels.IndexOf(level => level == currentItem);
+                    if (index < 0)
+                        logger.ZLogWarning($"Unknown ink level ${currentItem} from variable ${variableName}");
+                    else
+                        observer.OnNext(index);
+                }
+            });
         }
 
         #endregion

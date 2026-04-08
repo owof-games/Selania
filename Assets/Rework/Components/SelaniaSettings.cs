@@ -24,6 +24,7 @@ namespace Selania.Rework.Components
         [field: TabGroup("Dialogue Box", "Text")]
         [field: SerializeField]
         [field: Tooltip("Info about every character who can have dialogue lines.")]
+        [Obsolete]
         private CharacterDialogueInfo[] characterDialogueInfo = Array.Empty<CharacterDialogueInfo>();
 
         /// <inheritdoc />
@@ -38,10 +39,10 @@ namespace Selania.Rework.Components
         public float slideInDuration { get; private set; } = 800;
 
         /// <inheritdoc />
-        public Color GetCharacterTagColorByName(string characterName)
+        public Color GetCharacterTagColor(string character)
         {
-            var characterDialogueLabelColors = _characterDialogueLabelColorsProvider.Get(characterDialogueInfo);
-            return characterDialogueLabelColors.TryGetValue(characterName, out var color)
+            var characterDialogueLabelColors = _characterDialogueLabelColorsProvider.Get(characterInfo);
+            return characterDialogueLabelColors.TryGetValue(character, out var color)
                 ? color
                 : defaultCharacterColor;
         }
@@ -49,16 +50,8 @@ namespace Selania.Rework.Components
         /// <summary>
         ///     The provider which generates a dictionary from tag name to its sprite.
         /// </summary>
-        private readonly DerivedDictionaryProvider<string, Color, CharacterTagInfo> _characterColorsProvider =
-            new(info => info.tag, info => info.color, CharacterTagInfo.DefaultComparer);
-
-
-        /// <inheritdoc />
-        public Color GetCharacterTagColorByMood(string moodTag)
-        {
-            var charactersColors = _characterColorsProvider.Get(characterTagInfo);
-            return charactersColors.TryGetValue(moodTag, out var color) ? color : defaultCharacterColor;
-        }
+        private readonly DerivedDictionaryProvider<string, Color, CharacterInfo> _characterColorsProvider =
+            new(info => info.listName, info => info.dialogueColor, CharacterInfo.DefaultComparer);
 
         #endregion
 
@@ -93,9 +86,9 @@ namespace Selania.Rework.Components
         /// <summary>
         ///     The provider which generates a dictionary from character name to its color.
         /// </summary>
-        private readonly DerivedDictionaryProvider<string, Color, CharacterDialogueInfo>
+        private readonly DerivedDictionaryProvider<string, Color, CharacterInfo>
             _characterDialogueLabelColorsProvider =
-                new(info => info.name, info => info.color, CharacterDialogueInfo.DefaultComparer);
+                new(info => info.listName, info => info.dialogueColor, CharacterInfo.DefaultComparer);
 
         #endregion
 
@@ -162,29 +155,111 @@ namespace Selania.Rework.Components
         [TabGroup("Dialogue Box", "Portraits")]
         [SerializeField]
         [Tooltip("The sprites corresponding to the various expressions")]
+        [Obsolete("Use characterInfo")]
         private CharacterTagInfo[] characterTagInfo = Array.Empty<CharacterTagInfo>();
+
+        [Serializable]
+        public class CharacterInfo
+        {
+            public static readonly EqualityComparer<CharacterInfo> DefaultComparer =
+                new CharacterInfoEqualityComparer();
+
+            [field: SerializeField]
+            [field: Tooltip("Name of the character as it appears in the Ink list.")]
+            public string listName { get; private set; } = null!;
+
+            [field: SerializeField]
+            [field: Tooltip("Color of this character's name in the dialogue box.")]
+            public Color dialogueColor { get; private set; }
+
+            [field: SerializeField]
+            [field: Tooltip("Name of the ink variable containing the ink level.")]
+            public string inkVariableName { get; private set; } = null!;
+
+            [field: SerializeField]
+            [field: Tooltip("All the possible moods of this character.")]
+            public CharacterMood[] characterMoods { get; private set; } = null!;
+
+            private class CharacterInfoEqualityComparer : EqualityComparer<CharacterInfo>
+            {
+                public override bool Equals(CharacterInfo x, CharacterInfo y)
+                {
+                    return x.listName == y.listName && x.dialogueColor == y.dialogueColor &&
+                           x.inkVariableName == y.inkVariableName &&
+                           x.characterMoods.SequenceEqual(y.characterMoods, CharacterMood.DefaultComparer);
+                }
+
+                public override int GetHashCode(CharacterInfo obj)
+                {
+                    var h = new HashCode();
+                    h.Add(obj.listName);
+                    h.Add(obj.dialogueColor);
+                    h.Add(obj.inkVariableName);
+                    foreach (var mood in obj.characterMoods) h.Add(CharacterMood.DefaultComparer.GetHashCode(mood));
+
+                    return h.ToHashCode();
+                }
+            }
+        }
+
+        [Serializable]
+        public class CharacterMood
+        {
+            public static readonly EqualityComparer<CharacterMood> DefaultComparer =
+                new CharacterMoodEqualityComparer();
+
+            [field: SerializeField]
+            [field: Tooltip("The name of this mood (e.g.: bored)")]
+            public string name { get; private set; } = "";
+
+            [field: SerializeField]
+            [field: Tooltip("The sprite for this tag")]
+            public Sprite sprite { get; private set; } = null!;
+
+            private class CharacterMoodEqualityComparer : EqualityComparer<CharacterMood>
+            {
+                public override bool Equals(CharacterMood x, CharacterMood y)
+                {
+                    return x.name == y.name && x.sprite.Equals(y.sprite);
+                }
+
+                public override int GetHashCode(CharacterMood obj)
+                {
+                    return HashCode.Combine(obj.name, obj.sprite);
+                }
+            }
+        }
+
+        [TabGroup("Dialogue Box", "Portraits")] [SerializeField] [Tooltip("All the info about character display.")]
+        private CharacterInfo[] characterInfo = Array.Empty<CharacterInfo>();
 
         /// <summary>
         ///     The provider which generates a dictionary from tag name to its sprite.
         /// </summary>
-        private readonly DerivedDictionaryProvider<string, Sprite, CharacterTagInfo> _characterSpritesProvider =
-            new(info => info.tag, info => info.sprite, CharacterTagInfo.DefaultComparer);
+        private readonly DerivedDictionaryProvider<string, CharacterMood[], CharacterInfo> _characterSpritesProvider =
+            new(info => info.listName, info => info.characterMoods, CharacterInfo.DefaultComparer);
 
         /// <inheritdoc />
-        public Sprite GetCharacterSpriteByTag(string tag)
+        public Sprite GetMoodSprite(string character, string mood)
         {
-            var characterSprites = _characterSpritesProvider.Get(characterTagInfo);
-            return characterSprites.TryGetValue(tag, out var sprite)
-                ? sprite
+            var characterMoods = _characterSpritesProvider.Get(characterInfo);
+            return characterMoods.TryGetValue(character, out var moods) &&
+                   moods.TryFirst(m => m.name.ToLower() == mood, out var matchingMood)
+                ? matchingMood.sprite
                 : defaultCharacterTagSprite;
         }
 
         /// <inheritdoc />
-        public bool HasCharacterMood(string moodTag)
+        public bool VerifyCharacterData(string character, string moodTag)
         {
-            var characterSprites = _characterSpritesProvider.Get(characterTagInfo);
-            return characterSprites.ContainsKey(moodTag);
+            var characterSprites = _characterSpritesProvider.Get(characterInfo);
+            return characterSprites.TryGetValue(character, out var moods) &&
+                   moods.Any(m => m.name.ToLower() == moodTag);
         }
+
+        /// <inheritdoc />
+        public IEnumerable<(string, string)> characterInkVariables =>
+            characterInfo.Select(c => (c.listName, c.inkVariableName));
 
         #endregion
 

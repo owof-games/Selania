@@ -181,10 +181,9 @@ namespace Selania.Rework.Components.DialogueBox
         /// <summary>
         ///     Add a new text line to the dialogue box.
         /// </summary>
-        /// <param name="speaker">The character speaking; if null, the character name is not shown.</param>
-        /// <param name="moodTag">The portrait, from which the color is derived.</param>
+        /// <param name="speaker">Info about the speaker (character like FirstCharacter and display name like Chitarra).</param>
         /// <param name="text">The text to add.</param>
-        public void AddTextLine(string? speaker, string? moodTag, string? text)
+        public void AddTextLine((string Character, string DisplayName)? speaker, string? text)
         {
             SlideInIfNecessary();
 
@@ -193,7 +192,7 @@ namespace Selania.Rework.Components.DialogueBox
                 _inputActionsDialogueBox?.ContinueMap.Enable();
                 var textLineGameObject = Instantiate(textLinePrefab, textLinesContainer);
                 var textLine = textLineGameObject.GetComponent<TextLine>();
-                textLine.SetText(speaker, moodTag, text);
+                textLine.SetText(speaker, text);
                 _latestTextLine = textLine;
             }
 
@@ -278,14 +277,15 @@ namespace Selania.Rework.Components.DialogueBox
         /// <summary>
         ///     Set the image of the portrait according to the tag.
         /// </summary>
-        /// <param name="tagName">The tag (e.g.: mentore_bored).</param>
-        public void SetPortraitImage(string tagName)
+        /// <param name="mood">The mood (e.g.: neutral, bored, ...)</param>
+        /// <param name="character">The character (e.g.: FirstCharacter, SecondCharacter, ...).</param>
+        public void SetPortraitImage(string character, string mood)
         {
             animator.SetFloat(PortraitVisibleSpeedAnimatorHash, 1 / Settings.slideInDuration);
             animator.SetFloat(ShowPortraitSpeedAnimatorHash, 1 / Settings.slideInDuration);
             animator.SetBool(PortraitVisibleAnimatorHash, true);
             animator.SetBool(ShowPortrait1AnimatorHash, _willUsePortrait1);
-            portraitContainer.SetImage(tagName, _willUsePortrait1);
+            portraitContainer.SetImage(character, mood, _willUsePortrait1);
             _willUsePortrait1 = !_willUsePortrait1;
         }
 

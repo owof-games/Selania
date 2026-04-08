@@ -44,15 +44,14 @@ namespace Selania.Rework.Components.DialogueBox
         /// <summary>
         ///     Set the text of this line.
         /// </summary>
-        /// <param name="speaker">The character speaking; if null, the character name is not shown.</param>
-        /// <param name="moodTag">The portrait, from which the color is derived.</param>
-        /// <param name="text">The text of this line.</param>
-        public void SetText(string? speaker, string? moodTag, string? text)
+        /// <param name="speaker">Info about the speaker (character like FirstCharacter and display name like Chitarra).</param>
+        /// <param name="text">The text for this line.</param>
+        public void SetText((string Character, string DisplayName)? speaker, string? text)
         {
             if (speaker != null)
             {
-                speakerTextMeshPro.text = speaker;
-                if (moodTag != null) speakerTextMeshPro.color = SettingsDialogueBox.GetCharacterTagColorByMood(moodTag);
+                speakerTextMeshPro.text = speaker.Value.DisplayName;
+                speakerTextMeshPro.color = SettingsDialogueBox.GetCharacterTagColor(speaker.Value.Character);
             }
             else
             {

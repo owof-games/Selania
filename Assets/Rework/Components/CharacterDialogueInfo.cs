@@ -8,6 +8,7 @@ namespace Selania.Rework.Interfaces
     ///     Info about the necessary information for a single character.
     /// </summary>
     [Serializable]
+    [Obsolete("Use SelaniaSettings.CharacterInfo instead")]
     public class CharacterDialogueInfo : IEquatable<CharacterDialogueInfo>
     {
         /// <summary>

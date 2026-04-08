@@ -25,19 +25,19 @@ namespace Selania.Rework.Components.Museum.Dialogue
         public void AddLineOfTextNoSpeaker()
         {
             var text = AvailableTextLines[Random.Range(0, AvailableTextLines.Length)];
-            dialogueBox.AddTextLine(null, "chitarra_affectionate", text);
+            dialogueBox.AddTextLine(null, text);
         }
 
         public void AddLineOfTextSpeakerPg()
         {
             var text = AvailableTextLines[Random.Range(0, AvailableTextLines.Length)];
-            dialogueBox.AddTextLine("PG", "chitarra_affectionate", text);
+            dialogueBox.AddTextLine(("PG", "PG"), text);
         }
 
         public void AddLineOfTextSpeakerChitarra()
         {
             var text = AvailableTextLines[Random.Range(0, AvailableTextLines.Length)];
-            dialogueBox.AddTextLine("Chitarra", "chitarra_affectionate", text);
+            dialogueBox.AddTextLine(("FirstCharacter", "Chitarra"), text);
         }
 
         public void AddDialogueChoices()
@@ -52,12 +52,12 @@ namespace Selania.Rework.Components.Museum.Dialogue
 
         public void SetChitarraAffectionate()
         {
-            dialogueBox.SetPortraitImage("chitarra_affectionate");
+            dialogueBox.SetPortraitImage("FirstCharacter", "affectionate");
         }
 
         public void SetMentoreHurry()
         {
-            dialogueBox.SetPortraitImage("mentore_hurry");
+            dialogueBox.SetPortraitImage("FifthCharacter", "hurry");
         }
 
         public void SetNoInk()

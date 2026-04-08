@@ -13,6 +13,72 @@ MonoBehaviour:
   m_Name: MoveBetweenRoomsMuseumSceneInkBridge
   m_EditorClassIdentifier: Selania::Selania.Rework.Components.InkBridge
   inkAssetJson: {fileID: 4900000, guid: e655fe6029efa7342bacf0cec9b4cd3d, type: 3}
+  debugWordsToDisable: []
   pgListName: listCharacters
   pgListItemName: PG
   roomListPrefix: contents
+  grimoireInkNodeName: grimoire
+  achievementTagName: achievement
+  francoTagName: franco
+  gamerModeVariableName: settings_gamerMode
+  currentSigilVariableName: glyph_actualActiveSigil
+  numSigilUsagesVariableName: glyph_actualSigilUses
+  fireSigilListsByPosition:
+  - glyph_firstFire
+  - glyph_secondFire
+  - glyph_thirdFire
+  waterSigilListsByPosition:
+  - glyph_firstWater
+  - glyph_secondWater
+  - glyph_thirdWater
+  earthSigilListsByPosition:
+  - glyph_firstEarth
+  - glyph_secondEarth
+  - glyph_thirdEarth
+  airSigilListsByPosition:
+  - glyph_firstAir
+  - glyph_secondAir
+  - glyph_thirdAir
+  aetherSigilListsByPosition:
+  - glyph_firstAether
+  - glyph_secondAether
+  - glyph_thirdAether
+  bookmarkTagCategory: bookmark
+  statusTagCategory: status
+  enabledTagCategory: enabled
+  leftPageTitleCategory: leftPageTitle
+  leftPageDescriptionCategory: leftPageDescription
+  leftPageGlyph1Category: leftPageGlyph1
+  leftPageGlyph2Category: leftPageGlyph2
+  rightPageTitleCategory: rightPageTitle
+  rightPageDescriptionCategory: rightPageDescription
+  rightPageGlyph1Category: rightPageGlyph1
+  rightPageGlyph2Category: rightPageGlyph2
+  positionCategory: position
+  left1PositionValue: left1
+  left2PositionValue: left2
+  left3PositionValue: left3
+  right1PositionValue: right1
+  right2PositionValue: right2
+  right3PositionValue: right3
+  glyph3Category: glyph3
+  firstLineCategory: firstLine
+  secondLineCategory: secondLine
+  thirdLineCategory: thirdLine
+  thirdLevelStatusDefault: default
+  thirdLevelStatusSelected: selected
+  thirdLevelStatusConsumed: consumed
+  thirdLevelStatusUnclickable: unclickable
+  indexBookmarkTagValue: index
+  secondLevelBookmarkTagValue: secondLevel
+  backBookmarkTagValue: previous
+  forwardBookmarkTagValue: next
+  oneUsageText: Un uso rimanente.
+  twoUsagesText: Due usi rimanenti.
+  threeUsagesText: Tre usi rimanenti.
+  inkVariableLevels:
+  - ink_empty
+  - ink_low
+  - ink_normal
+  - ink_medium
+  - ink_high

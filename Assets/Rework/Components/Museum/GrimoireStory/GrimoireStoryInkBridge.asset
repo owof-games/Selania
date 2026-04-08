@@ -68,6 +68,7 @@ MonoBehaviour:
   thirdLevelStatusDefault: default
   thirdLevelStatusSelected: selected
   thirdLevelStatusConsumed: consumed
+  thirdLevelStatusUnclickable: unclickable
   indexBookmarkTagValue: index
   secondLevelBookmarkTagValue: secondLevel
   backBookmarkTagValue: previous
@@ -75,3 +76,9 @@ MonoBehaviour:
   oneUsageText: Un uso rimanente.
   twoUsagesText: Due usi rimanenti.
   threeUsagesText: Tre usi rimanenti.
+  inkVariableLevels:
+  - ink_empty
+  - ink_low
+  - ink_normal
+  - ink_medium
+  - ink_high

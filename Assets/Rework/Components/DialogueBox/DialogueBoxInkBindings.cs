@@ -18,7 +18,12 @@ namespace Selania.Rework.Components.DialogueBox
         /// <summary>
         ///     Who was the speaker of the last line (or <c>null</c> if there has been no line yet).
         /// </summary>
-        private string? _lastSpeaker;
+        private readonly ReactiveProperty<string?> _lastSpeakingCharacter = new(null);
+
+        /// <summary>
+        ///     The display name last used for the speaking character.
+        /// </summary>
+        private string? _lastSpeakingDisplayName;
 
         /// <summary>
         ///     Logger used by this component.
@@ -31,6 +36,8 @@ namespace Selania.Rework.Components.DialogueBox
         ///     The object that can control the choices of the story.
         /// </summary>
         [Inject] internal IStoryChoicesSelector StoryChoicesSelector = null!;
+
+        [Inject] internal IStoryInkInfo StoryInkInfo = null!;
 
         /// <summary>
         ///     The object that can control the linear progression of the story.
@@ -47,6 +54,25 @@ namespace Selania.Rework.Components.DialogueBox
             StoryChoicesSelector.choicesObservable.Subscribe(ChoicesChanged).AddTo(this);
 
             dialogueBox.continueRequestsObservable.Subscribe(ContinueActionOnPerformed).AddTo(this);
+
+            // create ink variables lazy object
+            foreach (var c in SettingsDialogueBox.characterInkVariables)
+            {
+                if (string.IsNullOrWhiteSpace(c.InkVariable)) continue;
+                StoryInkInfo
+                    .GetInkLevelObservable(c.InkVariable)
+                    .CombineLatest(_lastSpeakingCharacter.WhereNotNull(),
+                        (inkLevel, lastSpeakingCharacter) => (inkLevel, lastSpeakingCharacter))
+                    .Subscribe(value =>
+                    {
+                        if (value.lastSpeakingCharacter != c.Character) return;
+                        if (value.inkLevel == 0)
+                            dialogueBox.SetInkStatus(0, 0);
+                        else
+                            dialogueBox.SetInkStatus(value.inkLevel, 4 - value.inkLevel);
+                    })
+                    .AddTo(this);
+            }
         }
 
         /// <summary>
@@ -57,6 +83,7 @@ namespace Selania.Rework.Components.DialogueBox
         {
             if (isInProgress) return;
             dialogueBox.Hide();
+            _lastSpeakingCharacter.Value = null;
             // no need to explicitly handle the show part: adding a line of text or a choice automatically shows the
             // dialogue panel
         }
@@ -90,36 +117,29 @@ namespace Selania.Rework.Components.DialogueBox
         private void CurrentTextChanged(IStoryLinear.CurrentTextInfo currentTextInfo)
         {
             // extract fields
-            var (currentText, tags) = currentTextInfo;
+            currentTextInfo.Deconstruct(out var currentText);
 
-            // try to parse the line with the new system:
-            // Chitarra, chitarra_neutral: Hi!
-            if (!TryGetSpeakerAndPortraitWithNewSystem(currentText, out var speaker, out var portrait,
-                    out var actualText))
-            {
-                speaker = GetValue(tags, "speaker");
-                portrait = GetValue(tags, "portrait");
-                actualText = currentText;
-            }
+            TryGetSpeakerAndPortraitWithNewSystem(currentText, out var character, out var displayName, out var mood,
+                out var actualText);
+            _lastSpeakingCharacter.Value = character;
 
-            // add the current line with an optional speaker, if it changed
-            if (speaker != _lastSpeaker && speaker != null)
+            if (displayName != _lastSpeakingDisplayName && character != null && displayName != null)
             {
-                Logger.ZLogTrace($"Previous speaker was {_lastSpeaker}, new one is {speaker}.");
-                dialogueBox.AddTextLine(speaker, portrait, actualText);
-                _lastSpeaker = speaker;
+                Logger.ZLogTrace($"Previous speaker was {_lastSpeakingCharacter}, new one is {character}.");
+                dialogueBox.AddTextLine((character, displayName), actualText);
+                _lastSpeakingDisplayName = displayName;
             }
             else
             {
-                Logger.ZLogTrace($"Got a new speaker: {speaker}.");
-                dialogueBox.AddTextLine(null, portrait, actualText);
+                // either the speaker was the same (do not print it), or no speaker was given (AKA it's implied it's
+                // the same as the previous line)
+                dialogueBox.AddTextLine(null, actualText);
             }
 
-            // set the portrait
-            if (portrait != null)
+            if (character != null && mood != null)
             {
-                Logger.ZLogTrace($"Setting portrait image {portrait}.");
-                dialogueBox.SetPortraitImage(portrait);
+                Logger.ZLogTrace($"Setting portrait image {character} + {mood}.");
+                dialogueBox.SetPortraitImage(character, mood);
             }
             else
             {
@@ -127,27 +147,55 @@ namespace Selania.Rework.Components.DialogueBox
             }
         }
 
-        private bool TryGetSpeakerAndPortraitWithNewSystem(string currentText, [NotNullWhen(true)] out string? speaker,
-            [NotNullWhen(true)] out string? portrait, [NotNullWhen(true)] out string? actualText)
+        /// <summary>
+        ///     Try to parse the line and its header.
+        /// </summary>
+        /// <param name="currentText">
+        ///     The text to parse, in the form "character, displayName, mood: text", or just "text" if
+        ///     nothing changed from the previous line.
+        /// </param>
+        /// <param name="character">The character extracted from the header.</param>
+        /// <param name="displayName">The display name extracted from the header.</param>
+        /// <param name="mood">The mood extracted from the header.</param>
+        /// <param name="actualText">The actual text contained in the line.</param>
+        /// <returns>
+        ///     <c>true</c> if the <paramref name="character" />, <paramref name="displayName" /> and <paramref name="mood" />
+        ///     were present in the header and filled, <c>false</c> otherwise.
+        /// </returns>
+        private bool TryGetSpeakerAndPortraitWithNewSystem(string currentText,
+            [NotNullWhen(true)] out string? character, [NotNullWhen(true)] out string? displayName,
+            [NotNullWhen(true)] out string? mood, out string actualText)
         {
-            speaker = null;
-            portrait = null;
-            actualText = null;
+            // initial set up, to use when we can't parse the header.
+            character = null;
+            displayName = null;
+            mood = null;
+            actualText = currentText;
 
             // try to split the speaker + mood part from the actual text
             var parts = currentText.Split(':', 2);
-            if (parts.Length != 2) return false;
+            if (parts.Length != 2)
+            {
+                Logger.ZLogTrace($"No header found in the line.");
+                return false;
+            }
 
+            // there was a header, so set the actual text.
             actualText = parts[1].Trim();
 
-            // try to split the speaker and mood
-            var speakerAndMood = parts[0].Trim().Split(',', 2);
-            if (speakerAndMood.Length != 2) return false;
+            // try to split the header parts
+            var headerParts = parts[0].Trim().Split(',', 3);
+            if (headerParts.Length != 3)
+            {
+                Logger.ZLogWarning($"Cannot parse the header '{parts[0]}'");
+                return false;
+            }
 
             // confirm that the parsing succeeded only if the character mood exists
-            speaker = speakerAndMood[0].Trim();
-            portrait = speakerAndMood[1].Trim();
-            return SettingsDialogueBox.HasCharacterMood(portrait);
+            character = headerParts[0].Trim();
+            displayName = headerParts[1].Trim();
+            mood = headerParts[2].Trim();
+            return SettingsDialogueBox.VerifyCharacterData(character, mood);
         }
 
         /// <summary>
@@ -159,7 +207,11 @@ namespace Selania.Rework.Components.DialogueBox
             // create the choice objects
             if (choicesInfo.choices.Count == 0) return;
             var dialogueBoxChoices = choicesInfo.choices
-                .Map(choice => new DialogueChoices.Choice(choice.index, choice.text));
+                .Map(choice =>
+                {
+                    TryGetSpeakerAndPortraitWithNewSystem(choice.text, out _, out _, out _, out var actualText);
+                    return new DialogueChoices.Choice(choice.index, actualText);
+                });
 
             // show the choices
             dialogueBox.AddChoices(dialogueBoxChoices,

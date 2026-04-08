@@ -21,11 +21,12 @@ namespace Selania.Rework.Components.DialogueBox
         /// <summary>
         ///     Set the image of the portrait according to the tag.
         /// </summary>
-        /// <param name="tagName">The tag (e.g.: mentore_bored).</param>
         /// <param name="usePortrait1">Whether to use the portrait 1.</param>
-        public void SetImage(string tagName, bool usePortrait1)
+        /// <param name="mood">The mood (e.g.: neutral, bored, ...)</param>
+        /// <param name="character">The character (e.g.: FirstCharacter, SecondCharacter, ...).</param>
+        public void SetImage(string character, string mood, bool usePortrait1)
         {
-            var sprite = SettingsDialogueBox.GetCharacterSpriteByTag(tagName);
+            var sprite = SettingsDialogueBox.GetMoodSprite(character, mood);
             (usePortrait1 ? portraitImage1 : portraitImage2).sprite = sprite;
         }
 

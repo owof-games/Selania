@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using R3;
+﻿using R3;
 
 namespace Selania.Rework.Interfaces
 {
@@ -33,7 +32,6 @@ namespace Selania.Rework.Interfaces
         ///     Information about current text changes.
         /// </summary>
         /// <param name="currentText">The current text as a string.</param>
-        /// <param name="tags">The tags associated with this text.</param>
-        record struct CurrentTextInfo(string currentText, ICollection<Tag> tags);
+        record struct CurrentTextInfo(string currentText);
     }
 }

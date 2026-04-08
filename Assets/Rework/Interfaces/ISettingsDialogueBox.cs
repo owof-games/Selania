@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace Selania.Rework.Interfaces
 {
@@ -83,31 +84,31 @@ namespace Selania.Rework.Interfaces
         float percentageBetweenNormalAndGreatHeart { get; }
 
         /// <summary>
-        ///     Get the color to use to write the character tag on the dialogue. Old version of <see cref="GetCharacterTagColorByMood"/>.
+        ///     A mapping between character names (FirstCharacter, SecondCharacter, ...) and the relative ink variable.
         /// </summary>
-        /// <param name="characterName">Name of the character.</param>
-        /// <returns>Color to use.</returns>
-        Color GetCharacterTagColorByName(string characterName);
+        IEnumerable<(string Character, string InkVariable)> characterInkVariables { get; }
 
         /// <summary>
-        ///     Get the color of the character by mood. New version of <see cref="GetCharacterTagColorByName" />.
+        ///     Get the color of the character by mood.
         /// </summary>
-        /// <param name="moodTag">The mood tag (mentore_neutral, chitarra_bored, ...)</param>
-        /// <returns>The color for this tag.</returns>
-        Color GetCharacterTagColorByMood(string moodTag);
+        /// <param name="character">The character (FirstCharacter, SecondCharacter, ...)</param>
+        /// <returns>The color for this character.</returns>
+        Color GetCharacterTagColor(string character);
 
         /// <summary>
-        ///     Get the character sprite by mood.
+        ///     Get the character sprite.
         /// </summary>
-        /// <param name="moodTag">The mood tag (mentore_neutral, chitarra_bored, ...)</param>
+        /// <param name="character">The character (FirstCharacter, SecondCharacter, ...)</param>
+        /// <param name="mood">The mood tag (neutral, bored, ...)</param>
         /// <returns>The sprite for this tag.</returns>
-        Sprite GetCharacterSpriteByTag(string moodTag);
+        Sprite GetMoodSprite(string character, string mood);
 
         /// <summary>
-        ///     Check whether the given mood is known.
+        ///     Check whether the given character data is known.
         /// </summary>
-        /// <param name="moodTag">The mood tag (mentore_neutral, chitarra_bored, ...)</param>
-        /// <returns><c>true</c> if the mood tag is known, <c>false</c> otherwise.</returns>
-        bool HasCharacterMood(string moodTag);
+        /// <param name="character">Character name.</param>
+        /// <param name="moodTag">The mood tag (neutral, bored, ...)</param>
+        /// <returns><c>true</c> if the couple character + mood is known, <c>false</c> otherwise.</returns>
+        bool VerifyCharacterData(string character, string moodTag);
     }
 }

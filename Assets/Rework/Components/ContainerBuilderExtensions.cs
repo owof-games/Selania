@@ -41,7 +41,8 @@ namespace Selania.Rework.Components
                 .As<IStoryChangeRoomContentsNotifier>()
                 .As<IStoryStateSerializer>()
                 .As<IStoryAudioSupport>()
-                .As<IStoryGrimoire>();
+                .As<IStoryGrimoire>()
+                .As<IStoryInkInfo>();
         }
 
         /// <summary>

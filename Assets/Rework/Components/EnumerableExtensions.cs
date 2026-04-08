@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 
 namespace Selania.Rework.Components
@@ -15,6 +17,21 @@ namespace Selania.Rework.Components
             where T : class
         {
             return enumerable.Where(x => x != null).Cast<T>();
+        }
+
+        /// <summary>
+        ///     Try finding the first element that satisfies a certain condition.
+        /// </summary>
+        /// <param name="enumerable">The enumerable to look into.</param>
+        /// <param name="predicate">The predicate to check.</param>
+        /// <param name="result">The result, if the element is found.</param>
+        /// <typeparam name="T">Type of the elements.</typeparam>
+        /// <returns>Whether there is an element satisfying the predicate.</returns>
+        public static bool TryFirst<T>(this IEnumerable<T> enumerable, Func<T, bool> predicate,
+            [NotNullWhen(true)] out T? result)
+        {
+            result = enumerable.FirstOrDefault(predicate);
+            return result != null;
         }
     }
 }
