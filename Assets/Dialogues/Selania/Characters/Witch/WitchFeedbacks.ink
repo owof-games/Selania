@@ -25,74 +25,72 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
+        <i>Le radici ci raccontano che {player_name} ha fatto la sua prima riscrittura.
+
         {
         //Frasi sulle PNG
             - firstChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt FirstCharacter:
-                Testo:
-                 ~ witch_debriefPNG += FirstCharacter       
+                <i>Siamo contente che {charNameOne} abbia trovato un nuovo nome, e un nuovo modo di vedere il proprio presente.
+                <i>{charNameOne} è così giovane, eppure faticava a immaginare un futuro.
+                <i>La gemma per crescere deve già contenere la foglia.
+                <i>{charNameOne} ora ha trovato la sua forma.
+                    ~ witch_debriefPNG += FirstCharacter       
 
             - secondChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt SecondCharacter:
-                Testo:
-                 ~ witch_debriefPNG += SecondCharacter 
+                <i>Il piccolo {charNameTwo} ora ha un nuovo nome da gridare.
+                <i>La sua rabbia l'ha inzuppato di problemi.
+                <i>L'ha protetto da cose peggiori.
+                    ~ witch_debriefPNG += SecondCharacter 
 
             - thirdChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt ThirdCharacter:
                 Testo:
                  ~ witch_debriefPNG += ThirdCharacter   
         }
 
-        Descriviamo il problema della PNG in chiave personale (un po' come mentore), e poi chiediamo com'è stata la PG.
-
+        <i>Un problema personale è un masso lungo il sentiero.
+        <i>Il terreno può essere pulito.
+        <i>La vista magnifica.
+        <i>L'aria fresca.
+        <i>Ma è comunque impossibile proseguire.
+        <i>Cosa c'è nel petto di {player_name} dopo questa prima riscrittura?
         
-            + (water) Mi chiedo se sono all'altezza di tutto questo.
+            + (water) La gioia di aver aiutato qualcuno.
                     -> glyph_modifier_variation_management(PG, waterC)->
-                <i>All'altezza per {charNameOne}?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                <i>All'altezza per {player_name}?
-                <i>O all'altezza per soddisfare {mentorName}?
+                <i>Aiutato chi {player_name} ha riscritto?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                <i>O aiutato l{player_pronouns has him:o|{player_pronouns has her:a|ə}} stess{player_pronouns has him:o|{player_pronouns has her:a|ə}} {player_name}?
+                <i>Ma anche noi sentiamo questa gioia.
                 <i>La serra è tiepida, la stazione attende, e le nubi dicono che {player_name} è dove deve essere.</i>
                 
-            + (fire) Sono felice per lei, ma il mondo non deve farle così paura.
+            + (fire) L'energia della voglia di fare, fare, fare ancora.
                     -> glyph_modifier_variation_management(PG, fireC)->
-                <i>Non è il mondo a farle paura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                <i>Il mondo gira e muta e muore e rinasce.
-                <i>Sono le regole degli uomini a generare la paura.
-                <i>Ma così come l'acqua cancella anche la pietra più dura, {player_name} e {charNameOne} possono piegare le regole più severe.
-                <i>Con l'aiuto di altre gocce.</i>
+                <i>Il vulcano si carica di energia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                <i>Il suo fare scivola lungo la collina.
+                <i>Il terreno si fa fertile.
+                <i>Fertile è la volontà di {player_name}.
                 
-            + (air) Non ho apprezzato la sua mancanza di senso logico.
+            + (air) La curiosità di scoprire quali nuove cose accadranno.
                    -> glyph_modifier_variation_management(PG, airC)->
-                <i>{charNameOne} possiede un forte senso logico.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                <i>Soltanto, è diverso da quello di {player_name}.
-                <i>O di {mentorName}.
-                <i>Il senso logico del falco lo spinge verso l'alto.
-                <i>Quello della talpa verso il basso.
-                <i>E {charNameOne} segue ora la sua nuova direzione.</i>
+                <i>La curiosità del falco lo spinge verso l'alto.
+                <i>Quella della talpa verso il basso.
+                <i>Abbiamo l'impressione che quella di {player_name} sappia seguire ogni direzione.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 
-            + (earth) Pensavo sarebbe stato più divertente.
+            + (earth) La soddisfazione di aver raggiunto un obbiettivo.
                     -> glyph_modifier_variation_management(PG, earthC)->
-                <i>Quando il leone salta su un altro leone, trova la rissa.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                <i>Ma quando un leoncino salta su un altro leoncino, trova ruzzoloni e corse.
-                <i>Il gioco non è nell'azione, ma nell'attitudine.
-                <i>Quale attitudine è radicata nelle azioni di {player_name}?
-                <i>Dove {player_name} trova il suo giocare?</i>
+                <i>Il leoncino salta di fosso in fosso, senza mai trovare pace.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                <i>La leonessa si stende per ore dopo la caccia.
+                <i>Crogiolarsi nella soddisfazione è una dote che siamo liete {player_name} sappia coltivare.
             
-            + (aether) Spero che {charNameOne} sia capace di portare il suo cambiamento nel mondo.
+            + (aether) La sorpresa di aver scoperto cose nuove su di me.
                     -> glyph_modifier_variation_management(PG, aetherC)->
                 <i>La luna distante sposta oceani.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Il vento invisibile sradica alberi.
-                <i>{charNameOne} respira e il mondo ruota un po' più rapido.
-                <i>E {player_name} decide di osservare le cose nell'interezza.</i>
+                <i>E {player_name} decide di osservare sé nella propria interezza.</i>
             -
 
-        <i>L'acqua antica di {charNameOne} raccoglie tutti i sempre e i mai e ciò che non è stato.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-        <i>E ci racconta che {mentorName} ha molto aiutato {player_name} in questo viaggio.
-        <i>Anche noi vogliamo aiutare {player_name}, e per questo condividiamo una cosa.
-        <i>{player_name} può seguire la voce di {mentorName} e scegliere di studiare la persona che ha davanti come un uomo studia la vita attraverso un libro.
-        <i>Oppure {player_name} può decidere di essere sé {player_pronouns has him:stesso|{player_pronouns has her:stessa|stessə}}, anche se questo può creare attrito con l'altra persona.
-        <i>E scoprire che c'è chi ha bisogno di venir contraddettə.
-        <i>A volte l'attrito genera fastidio, o volte genera fuoco.
-        <i>A volte brucia il vecchio, permettendo al nuovo di crescere.
-        <i>Nessuna persona è uguale, nessuna persona vuole lo stesso trattamento.
-        <i>Ma funghi solleticano e distraggono le nostre rinascenti radici.
+        <i>Riconoscere ciò che si prova a volte è un lusso che non tutti conoscono.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        <i>Soprattutto quando c'è qualcosa che fa star male.
+        <i>A volte è solo qualcosa di personale.
+        <i>A volte è il segno che qualcosa deve bruciare.
         <i>Ringraziandoti ancora {player_name} per ora ci congediamo.
         <i>Senza mai davvero lasciarti.</i>
         - 
@@ -109,23 +107,35 @@
         ~ temp mentorName = translator(mentor_ActualName)
 
         Descriviamo il problema delle PNG come più esteso, magari citando cose dalle loro storie, o che in generale sono comuni ad altre persone.
-        Chiediamo alla PG se si è trovata in qualche modo legata alla personaggia.
+        Chiediamo alla PG se si è trovata in qualche modo legata a una delle personagge. c'è un punto di contatto.
+
+        <i>Il vento canta di una seconda riscrittura.
+        <i>{player_name} conosce ormai il proprio valore.
 
         {
         //Frasi sulle PNG
             - firstChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt FirstCharacter:
-                Testo:
-                ~ witch_debriefPNG += FirstCharacter       
+                <i>{charNameOne} racconta la storia di una generazione.
+                <i>Del peso del capire troppo, e del non sapere che fare.
+                <i>E del non poter accettare che le cose non possano cambiare.
+                    ~ witch_debriefPNG += FirstCharacter       
 
             - secondChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt SecondCharacter:
-                Testo:
-                ~ witch_debriefPNG += SecondCharacter 
+                <i>La famiglia di {charNameTwo} è come una slavina.
+                <i>Fiocco sulla vetta.
+                <i>Valanga a valle.
+                <i>Ma forse {charNameTwo} può trasformare la neve in pupazzo. 
+                    ~ witch_debriefPNG += SecondCharacter 
 
             - thirdChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt ThirdCharacter:
                 Testo:
                 ~ witch_debriefPNG += ThirdCharacter   
         }
 
+        <i>Ci sono problemi che restano personali.
+        <i>E altri che sono condivisi.
+        <i>Come nubi scure che adombrano intere vallate.
+        <i>Quale nube condivide {player_name} con le persone qui incontrate?
         
             + (water) Mi chiedo chi sarei ora, con una famiglia diversa alle spalle.
                     -> glyph_modifier_variation_management(PG, waterC)->

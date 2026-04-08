@@ -52,6 +52,16 @@
         <i>Vorremmo lasciare {player_name} con una informazione importante: ciò che accade durante la riscrittura ha regole diverse dal resto della conversazione.
         <i>{player_name} può immaginarla come una tempesta sulla spiaggia: quando sarà finita, la sabbia sarà la stessa, ma inaspettate le cose che rimangono sulla riva.</i>
 
+        // Vecchio testo su questa parte
+        // <i>Anche noi vogliamo aiutare {player_name}, e per questo condividiamo una cosa.
+        // <i>{player_name} può seguire la voce di {mentorName} e scegliere di studiare la persona che ha davanti come un uomo studia la vita attraverso un libro.
+        // <i>Oppure {player_name} può decidere di essere sé {player_pronouns has him:stesso|{player_pronouns has her:stessa|stessə}}, anche se questo può creare attrito con l'altra persona.
+        // <i>E scoprire che c'è chi ha bisogno di venir contraddettə.
+        // <i>A volte l'attrito genera fastidio, o volte genera fuoco.
+        // <i>A volte brucia il vecchio, permettendo al nuovo di crescere.
+        // <i>Nessuna persona è uguale, nessuna persona vuole lo stesso trattamento.
+        // <i>Ma funghi solleticano e distraggono le nostre rinascenti radici.
+
     -> witch_closing_storylet ->
     -> main
 
