@@ -47,27 +47,27 @@ VAR listDumpCharActivators = ()
 //Step due: aggiornare gli oggetti nel dump se necessario
 
     {
-        - listDumpGraphics has firstStateDump && contentsDump hasnt firstDumpOBJ:
+        - LIST_COUNT(listDumpGraphics) > 0 && contentsDump hasnt firstDumpOBJ:
             ~ move_entity(firstDumpOBJ, Dump)
     }
 
     {
-        - listDumpGraphics has secondStateDump && contentsDump hasnt secondDumpOBJ:
+        - LIST_COUNT(listDumpGraphics) > 1 && contentsDump hasnt secondDumpOBJ:
             ~ move_entity(secondDumpOBJ, Dump)
     }
 
     {
-        - listDumpGraphics has thirdStateDump && contentsDump hasnt thirdDumpOBJ:
+        - LIST_COUNT(listDumpGraphics) > 2 && contentsDump hasnt thirdDumpOBJ:
             ~ move_entity(thirdDumpOBJ, Dump)
     }
 
     {
-        - listDumpGraphics has fourthStateDump && contentsDump hasnt fourthDumpOBJ:
+        - LIST_COUNT(listDumpGraphics) > 3 && contentsDump hasnt fourthDumpOBJ:
             ~ move_entity(fourthDumpOBJ, Dump)
     }
 
     {
-        - listDumpGraphics has fifthStateDump && contentsDump hasnt fifthDumpOBJ:
+        - LIST_COUNT(listDumpGraphics) > 4 && contentsDump hasnt fifthDumpOBJ:
             ~ move_entity(fifthDumpOBJ, Dump)
     }
 

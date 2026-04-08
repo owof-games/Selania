@@ -30,20 +30,20 @@
         - firstChar_storyStatus == story_storyEnded && secondChar_storyStatus == story_storyEnded && thirdChar_storyStatus == story_storyEnded && fourthChar_storyStatus == story_storyEnded && fifthChar_storyStatus == story_storyEnded && not witch_allSigils_opening: 
             -> witch_allSigils_opening
 
-        //Pezzi della sua storia
-        - listDumpGraphics has firstStateDump && not witch_first_confession:
+        //Pezzi della sua storia. Compaiono linearmente, in base a quante storie ho fatto fino in fondo.
+        - LIST_COUNT(listDumpGraphics) > 0 && grimoire_witch hasnt grimWitchMainOne:
             -> witch_first_confession
 
-        - listDumpGraphics has secondStateDump && not witch_second_confession:
+        - LIST_COUNT(listDumpGraphics) > 1 && grimoire_witch hasnt grimWitchMainTwo:
             -> witch_second_confession
 
-        - listDumpGraphics has thirdStateDump && not witch_third_confession:
+        - LIST_COUNT(listDumpGraphics) > 2 && grimoire_witch hasnt grimWitchMainThree:
             -> witch_third_confession
 
-        - listDumpGraphics has fourthStateDump && not witch_fourth_confession:
+        - LIST_COUNT(listDumpGraphics) > 3 && grimoire_witch hasnt grimWitchMainFour:
             -> witch_fourth_confession
 
-        - listDumpGraphics has fifthStateDump && not witch_fifth_confession:
+        - LIST_COUNT(listDumpGraphics) > 4 && grimoire_witch hasnt grimWitchMainFive:
             -> witch_fifth_confession    
         
         //Commento sul libro
