@@ -188,26 +188,34 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
-        Descriviamo gli aspetti culturali e sociali che favoriscono l'oppressione (o mettiamo luce su cose diverse, nel caso di PNG3, sul perché non lo sia).
-        Poi cosa chiediamo alla PG?
+        <i>La cagnolina della posta è sorpresa da questa terza riscrittura.
+
         Se vive una oppressione?
 
         {
         //Frasi sulle PNG
             - firstChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt FirstCharacter:
-                Testo:
-                 ~ witch_debriefPNG += FirstCharacter       
+                    <i>{charNameOne} le ha insegnato che non tutt3 hanno una casa.
+                    <i>E che alcun3 ne hanno ancora meno di altr3.
+                    <i>E la cagnolina non comprende, perché il mondo per lei è una grande tana.
+                        ~ witch_debriefPNG += FirstCharacter       
 
             - secondChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt SecondCharacter:
-                Testo:
-                 ~ witch_debriefPNG += SecondCharacter 
+                    <i>Con {charNameTwo} ha scoperto che esistono i bambini.
+                    <i>E che i bambini come i cuccioli vivono e fanno cose.
+                    <i>Ma non possono decidere le cose che li riguardano.
+                    <i>Il cucciolo cresce facendo i suoi errori.
+                    <i>Ai bambini si chiede di crescere sembrano piccoli adulti.
+                        ~ witch_debriefPNG += SecondCharacter 
 
             - thirdChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt ThirdCharacter:
                 Testo:
                  ~ witch_debriefPNG += ThirdCharacter   
         }
         
-
+        <i>La cagnolina non può pensare quello che non conosce.
+        <i>La cagnolina si vede per quello che crede di essere, e vede il mondo allo stesso modo.
+        <i>Chi ci insegna a vederci come siamo?
 
         Domanda: chi mi ha insegnato a vedermi così? cosa me l'ha insegnato? In generale: da dove vengono le credenze su di sé, queste riscritture che dobbiamo poi andare a fare?
 
