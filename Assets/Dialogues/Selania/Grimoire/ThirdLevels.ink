@@ -4,7 +4,7 @@
     ~ temp leftSigilName = "{leftGlyph1}{leftGlyph2}"
     ~ temp rightSigilName = "{rightGlyph1}{rightGlyph2}"
 
-@grimoireSigilPages #leftPageTitle:{grimoire_sigilSigilName(leftGlyph1, leftGlyph2)} #leftPageDescription:{grimoire_sigilsDescription(leftSigilName)} #leftPageGlyph1:{leftGlyph1} #leftPageGlyph2:{leftGlyph2} #rightPageTitle:{grimoire_sigilSigilName(rightGlyph1, rightGlyph2)} #rightPageDescription:{grimoire_sigilsDescription(rightSigilName)} #rightPageGlyph1:{rightGlyph1} #rightPageGlyph2:{rightGlyph2}
+    @grimoireSigilPages #leftPageTitle:{grimoire_sigilSigilName(leftGlyph1, leftGlyph2)} #leftPageDescription:{grimoire_sigilsDescription(leftSigilName)} #leftPageGlyph1:{leftGlyph1} #leftPageGlyph2:{leftGlyph2} #rightPageTitle:{grimoire_sigilSigilName(rightGlyph1, rightGlyph2)} #rightPageDescription:{grimoire_sigilsDescription(rightSigilName)} #rightPageGlyph1:{rightGlyph1} #rightPageGlyph2:{rightGlyph2}
 
     //left
     + {glyph_discoveredSigils has AirWaterFire && leftSigilName == "AirWater"}[{sigils_translator(AirWaterFire)} #position:left1 #glyph3:{grimoire_sigilGlyph3(AirWaterFire)} #firstLine:{grimoire_textAirWaterFireOne} #secondLine:{grimoire_textAirWaterFireTwo} #thirdLine:{grimoire_textAirWaterFireThree} #status:{grimoire_statusThirdSigils(AirWaterFire)}]
@@ -222,61 +222,61 @@
 
 === grimoire_greenhouse_thirdLevel (leftPlant, rightPlant)
 - (top)
-@grimoireGreenhousePages #leftPageTitle:{plantsNameTranslator(leftPlant)} #leftPageStatus:{grimoire_pageStatus(leftPlant)} #leftPagePlant:{leftPlant} #rightPageTitle:{plantsNameTranslator(rightPlant)} #rightPageStatus:{grimoire_pageStatus(rightPlant)}  #rightPagePlant:{rightPlant}
+
+    @grimoireGreenhousePages#leftPageTitle:{plantsNameTranslator(leftPlant)}#leftPageStatus:{grimoire_pageStatus(leftPlant)}#leftPagePlant:{leftPlant}#rightPageTitle:{plantsNameTranslator(rightPlant)}#rightPageStatus:{grimoire_pageStatus(rightPlant)}#rightPagePlant:{rightPlant}
 
     //Descrizione generale pagina sinistra
-    {grimoire_plantsDescription(leftPlant)} #leftPageDescription
+    {grimoire_plantsDescription(leftPlant)}#leftPageDescription
 
     //Sottotitoli
     //Utilizzo in cucina
-    {grimoire_pageSubtitle(leftPlant, FirstCharacter, Kitchen)} #leftPageSubtitle
-    {grimoire_pageSubtitle(leftPlant, SecondCharacter, Kitchen)} #leftPageSubtitle
-    {grimoire_pageSubtitle(leftPlant, ThirdCharacter, Kitchen)} #leftPageSubtitle
-    {grimoire_pageSubtitle(leftPlant, FourthCharacter, Kitchen)} #leftPageSubtitle
-    {grimoire_pageSubtitle(leftPlant, FifthCharacter, Kitchen)} #leftPageSubtitle
+    {grimoire_pageSubtitle(leftPlant, FirstCharacter, Kitchen)}#leftPageSubtitle
+    {grimoire_pageSubtitle(leftPlant, SecondCharacter, Kitchen)}#leftPageSubtitle
+    {grimoire_pageSubtitle(leftPlant, ThirdCharacter, Kitchen)}#leftPageSubtitle
+    {grimoire_pageSubtitle(leftPlant, FourthCharacter, Kitchen)}#leftPageSubtitle
+    {grimoire_pageSubtitle(leftPlant, FifthCharacter, Kitchen)}#leftPageSubtitle
     //Dono
-    {grimoire_pageSubtitle(leftPlant, FirstCharacter, Backpack)} #leftPageSubtitle
+    {grimoire_pageSubtitle(leftPlant, FirstCharacter, Backpack)}#leftPageSubtitle
     {grimoire_pageGiftDescription(leftPlant, FirstCharacter)}#leftPageDescription
-    {grimoire_pageSubtitle(leftPlant, SecondCharacter, Backpack)} #leftPageSubtitle
+    {grimoire_pageSubtitle(leftPlant, SecondCharacter, Backpack)}#leftPageSubtitle
     {grimoire_pageGiftDescription(leftPlant, SecondCharacter)}#leftPageDescription
-    {grimoire_pageSubtitle(leftPlant, ThirdCharacter, Backpack)} #leftPageSubtitle
+    {grimoire_pageSubtitle(leftPlant, ThirdCharacter, Backpack)}#leftPageSubtitle
     {grimoire_pageGiftDescription(leftPlant, ThirdCharacter)}#leftPageDescription
-    {grimoire_pageSubtitle(leftPlant, FourthCharacter, Backpack)} #leftPageSubtitle
+    {grimoire_pageSubtitle(leftPlant, FourthCharacter, Backpack)}#leftPageSubtitle
     {grimoire_pageGiftDescription(leftPlant, FourthCharacter)}#leftPageDescription
-    {grimoire_pageSubtitle(leftPlant, FifthCharacter, Backpack)} #leftPageSubtitle
+    {grimoire_pageSubtitle(leftPlant, FifthCharacter, Backpack)}#leftPageSubtitle
     {grimoire_pageGiftDescription(leftPlant, FifthCharacter)}#leftPageDescription
     //Recupero Franco
-    {grimoire_pageSubtitle(leftPlant, Franco, Backpack)} #leftPageSubtitle
+    {grimoire_pageSubtitle(leftPlant, Franco, Backpack)}#leftPageSubtitle
 
 
     //Descrizione generale pagina destra
-    {grimoire_plantsDescription(rightPlant)} #rightPageDescription
+    {grimoire_plantsDescription(rightPlant)}#rightPageDescription
 
     //Sottotitoli
     //Utilizzo in cucina
-    {grimoire_pageSubtitle(rightPlant, FirstCharacter, Kitchen)} #rightPageSubtitle
-    {grimoire_pageSubtitle(rightPlant, SecondCharacter, Kitchen)} #rightPageSubtitle
-    {grimoire_pageSubtitle(rightPlant, ThirdCharacter, Kitchen)} #rightPageSubtitle
-    {grimoire_pageSubtitle(rightPlant, FourthCharacter, Kitchen)} #rightPageSubtitle
-    {grimoire_pageSubtitle(rightPlant, FifthCharacter, Kitchen)} #rightPageSubtitle
+    {grimoire_pageSubtitle(rightPlant, FirstCharacter, Kitchen)}#rightPageSubtitle
+    {grimoire_pageSubtitle(rightPlant, SecondCharacter, Kitchen)}#rightPageSubtitle
+    {grimoire_pageSubtitle(rightPlant, ThirdCharacter, Kitchen)}#rightPageSubtitle
+    {grimoire_pageSubtitle(rightPlant, FourthCharacter, Kitchen)}#rightPageSubtitle
+    {grimoire_pageSubtitle(rightPlant, FifthCharacter, Kitchen)}#rightPageSubtitle
     //Dono
-    {grimoire_pageSubtitle(rightPlant, FirstCharacter, Backpack)} #rightPageSubtitle
+    {grimoire_pageSubtitle(rightPlant, FirstCharacter, Backpack)}#rightPageSubtitle
     {grimoire_pageGiftDescription(rightPlant, FirstCharacter)}#rightPageDescription
-    {grimoire_pageSubtitle(rightPlant, SecondCharacter, Backpack)} #rightPageSubtitle
+    {grimoire_pageSubtitle(rightPlant, SecondCharacter, Backpack)}#rightPageSubtitle
     {grimoire_pageGiftDescription(rightPlant, SecondCharacter)}#rightPageDescription
-    {grimoire_pageSubtitle(rightPlant, ThirdCharacter, Backpack)} #rightPageSubtitle
+    {grimoire_pageSubtitle(rightPlant, ThirdCharacter, Backpack)}#rightPageSubtitle
     {grimoire_pageGiftDescription(rightPlant, ThirdCharacter)}#rightPageDescription
-    {grimoire_pageSubtitle(rightPlant, FourthCharacter, Backpack)} #rightPageSubtitle
+    {grimoire_pageSubtitle(rightPlant, FourthCharacter, Backpack)}#rightPageSubtitle
     {grimoire_pageGiftDescription(rightPlant, FourthCharacter)}#rightPageDescription
-    {grimoire_pageSubtitle(rightPlant, FifthCharacter, Backpack)} #rightPageSubtitle
+    {grimoire_pageSubtitle(rightPlant, FifthCharacter, Backpack)}#rightPageSubtitle
     {grimoire_pageGiftDescription(rightPlant, FifthCharacter)}#rightPageDescription
     //Recupero Franco
-    {grimoire_pageSubtitle(rightPlant, Franco, Backpack)} #rightPageSubtitle
+    {grimoire_pageSubtitle(rightPlant, Franco, Backpack)}#rightPageSubtitle
 
 
 
     //Tasti precedenti
-
     + {leftPlant == BastoneDellOzioso} [{plantsNameTranslator(BarbaDellInciampo)}#bookmark:previous]
         -> grimoire_greenhouse_thirdLevel (BaccaDellaAddolorata, BarbaDellInciampo)
     

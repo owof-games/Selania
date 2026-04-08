@@ -8,7 +8,7 @@
 === function grimoire_statusPlants(plant)
 
     {
-        - greenhouse_findedCultivables hasnt plant:
+        - greenhouse_findedCultivables has plant && (greenhouse_findedCultivables ^ backpack_findedGifts hasnt plant):
             ~ return missing
         
         - else:
@@ -23,12 +23,13 @@
 
         - greenhouse_findedCultivables hasnt plant:
            ~ return locked
-
-            //se è tra le cose trovate ma non risulta nell'intersezione tra cose trovate e cose possedute, vuol dire che l'ho usata
+           
+        //se è tra le cose trovate ma non risulta nell'intersezione tra cose trovate e cose possedute, vuol dire che l'ho usata
         - greenhouse_findedCultivables has plant && (greenhouse_findedCultivables ^ backpack_findedGifts hasnt plant):
             ~ return consumed
+        
         - else:
-            ~ return consumed       
+            ~ return owned       
 
     }
 
