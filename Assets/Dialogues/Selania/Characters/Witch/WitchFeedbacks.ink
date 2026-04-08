@@ -106,9 +106,6 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
-        Descriviamo il problema delle PNG come più esteso, magari citando cose dalle loro storie, o che in generale sono comuni ad altre persone.
-        Chiediamo alla PG se si è trovata in qualche modo legata a una delle personagge. c'è un punto di contatto.
-
         <i>Il vento canta di una seconda riscrittura.
         <i>{player_name} conosce ormai il proprio valore.
 
@@ -137,14 +134,14 @@
         <i>Come nubi scure che adombrano intere vallate.
         <i>Quale nube condivide {player_name} con le persone qui incontrate?
         
-            + (water) Mi chiedo chi sarei ora, con una famiglia diversa alle spalle.
+            + (water) Penso a {charNameTwo} e mi chiedo chi sarei ora, con una famiglia diversa alle spalle.
                     -> glyph_modifier_variation_management(PG, waterC)->
                 <i>La gemma sul ramo ignora il tronco, eppure cresce.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Il girino nuota, non importa la dimensione dello stagno.
                 <i>{player_name} prova a riscrivere il passato.
                 <i>La sua voce può forse cercare nuovi modi di guardarlo?</i>
      
-            + (aether) Secondo te serve uno scopo più grande per vivere davvero?
+            + (aether) Come {charNameOne} ho bisogno di uno scopo per vivere davvero, ma non lo trovo.
                     -> glyph_modifier_variation_management(PG, aetherC)->
                 <i>La rondine crea un nido di paglia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>E quando l'inverno arriva il nido cade sul terreno.
@@ -152,34 +149,33 @@
                 <i>In primavera l'erba ricresce, il caldo la secca.
                 <i>La rondine crea un nido di paglia.</i>
                             
-            + (fire) La rabbia è sottovalutata. Ha protetto questo bambino.
+            + (fire) Ho la sensazione che Mentore si senta viva solo se utile, e lo stesso è per me.
                     -> glyph_modifier_variation_management(PG, fireC)->
-                <i>La lava scorre e brucia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                <i>Col tempo rende il terreno fertile.
-                <i>E dove prima cresceva solo erba, ora c'è un'intera foresta.</i>
-                
-            + (air) Avevo dimenticato quanto conforto possa dare il sapere.
+                <i>Il colibrì vola ansioso di fiore in fiore.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                <i>Se non mangia spesso, muore.
+                <i>Migliaia sono le piante nate dalla sua fatica.
+                <i>In quante ricordano il suo nome?
+
+            + (air) COMMENTO LEGATO A PNG3.
                     -> glyph_modifier_variation_management(PG, airC)->
                 <i>Il sapere è una luce.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Il sapere è un rifugio.
                 <i>Una luce troppo forte confonde strada e burrone.
                 <i>Un rifugio col tempo può diventare prigione.</i>
          
-            + (earth) Devo riprendere a giocare, a prendere le cose alla leggera.
+            + (earth) Franco è sempre iperattivo. Forse lui ed io dovremmo imparare a riposare.
                     -> glyph_modifier_variation_management(PG, earthC)->
-                <i>Le radici ridono quando l'erba fa solletico.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                <i>Le radici si rilassano nel tepore del terreno.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Le foglie ridono quando il vento le sfiora.
-                <i>{player_name} forse ride quando non è {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}.</i>
+                <i>L'albero cresce, l'albero riposa.
             -
-        <i>Un'amica ci disse in tempi inquieti che per trovare il sentiero della magia occorre osservare con attenzione il bimbo che gioca.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-        <i>{charNameTwo} ha portato in questi spazi sentieri inaspettati.
-        <i>Così come l'acqua ci ha portato le lacrime di {mentorName}.
-        <i>Questa storia per lei è stata faticosa.
-        <i>Le sue radici sembrano solide, ma il tronco ondeggia a ogni accenno di burrasca.
-        <i>Forse {player_name} può essere il suo sostegno.
-        <i>O forse {player_name} può lasciarla cadere, e ricominciare.
-        <i>Ora noi ci godiamo la brezza e il sole.
-        <i>Ma più tardi tornaci a trovare.</i>
+        
+        <i>Un albero è un albero.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        <i>Quanti alberi fanno una foresta?
+        <i>"Mi è successo questo", racconta qualcuna.
+        <i>"Anche a me", risponde un'altra.
+        <i>Una ferita è una ferita.
+        <i>Quante ferite richiedono una protesta?
         - 
         
         -> witch_closing_storylet ->
