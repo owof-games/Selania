@@ -3,6 +3,10 @@
     VAR witch_pauseDuration = 1
     VAR witchChar_justTalked = false
 
+//Variabili per la gestione del debrief
+    VAR witch_debriefPNG = ()
+
+
 //Variabili per la gestione del ritratto
     LIST witch_moonPhases = NewMoon, FirstQuarter, FullMoon, ThirdQuarter, RedMoon
     VAR witch_moonState = FirstQuarter
@@ -10,6 +14,7 @@
     //l'idea è che ogni tre passaggi sia un giorno, e che cambi ogni sette giorni (siamo passate a sei giorni)
     VAR witch_timeForChangingMoonPhase = 13
     
+
 
 
 
@@ -36,24 +41,22 @@
             - tutorial_witchSigils && grimoire_appendices hasnt grimSigilsWitch:
                 ~ grimoire_appendices += grimSigilsWitch
 
-            
+        
+            //Debrief
+            - witch_first_debrief && grimoire_witch hasnt grimWitchFirstDebrief:
+                ~ grimoire_witch += grimWitchFirstDebrief
 
+            - witch_second_debrief && grimoire_witch hasnt grimWitchSecondDebrief:
+                ~ grimoire_witch += grimWitchSecondDebrief
 
-            //Feedback
-            - witch_first_story_ended_check && grimoire_witch hasnt grimWitchFirstCharFeedback:
-                ~ grimoire_witch += grimWitchFirstCharFeedback
+            - witch_third_debrief && grimoire_witch hasnt grimWitchThirdDebrief:
+                ~ grimoire_witch += grimWitchThirdDebrief
 
-            - witch_second_story_ended_check && grimoire_witch hasnt grimWitchSecondCharFeedback:
-                ~ grimoire_witch += grimWitchSecondCharFeedback
+            - witch_fourth_debrief && grimoire_witch hasnt grimWitchFourthDebrief:
+                ~ grimoire_witch += grimWitchFourthDebrief  
 
-            - witch_third_story_ended_check && grimoire_witch hasnt grimWitchThirdCharFeedback:
-                ~ grimoire_witch += grimWitchThirdCharFeedback
-
-            - witch_fourth_story_ended_check && grimoire_witch hasnt grimWitchFourthCharFeedback:
-                ~ grimoire_witch += grimWitchFourthCharFeedback  
-
-            - witch_fifth_story_ended_check && grimoire_witch hasnt grimWitchFifthCharFeedback:
-                ~ grimoire_witch += grimWitchFifthCharFeedback                  
+            - witch_fifth_debrief && grimoire_witch hasnt grimWitchFifthDebrief:
+                ~ grimoire_witch += grimWitchFifthDebrief                  
 
 
             //Main storylets

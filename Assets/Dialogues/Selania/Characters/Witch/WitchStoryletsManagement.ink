@@ -7,20 +7,20 @@
             -> witch_intro
 
         //Feedback post riscrittura
-        - witch_intro && firstChar_storyStatus == story_storyEnded && not witch_first_story_ended_check:
-            -> witch_first_story_ended_check
+        - witch_intro && LIST_COUNT(story_endedStories) > 0 && not witch_first_debrief:
+            -> witch_first_debrief
 
-        - witch_intro && secondChar_storyStatus == story_storyEnded && not witch_second_story_ended_check:
-            -> witch_second_story_ended_check
+        - witch_intro && LIST_COUNT(story_endedStories) > 1 && not witch_second_debrief:
+            -> witch_second_debrief
 
-        - witch_intro && thirdChar_storyStatus == story_storyEnded && not witch_third_story_ended_check:
-            -> witch_third_story_ended_check
+        - witch_intro && LIST_COUNT(story_endedStories) > 2 && not witch_third_debrief:
+            -> witch_third_debrief
 
-        - witch_intro && fourthChar_storyStatus == story_storyEnded && not witch_fourth_story_ended_check:
-            -> witch_fourth_story_ended_check
+        - witch_intro && LIST_COUNT(story_endedStories) > 3 && not witch_fourth_debrief:
+            -> witch_fourth_debrief
 
-        - witch_intro && fifthChar_storyStatus == story_storyEnded && not witch_fifth_story_ended_check:
-            -> witch_fifth_story_ended_check    
+        - witch_intro && LIST_COUNT(story_endedStories) > 4 && not witch_fifth_debrief:
+            -> witch_fifth_debrief    
 
         //Dialogo su Franco
         - witch_intro && grimoire_franco != () && not the_witch_and_the_frog:

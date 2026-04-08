@@ -1,6 +1,24 @@
 //Gradualmente ognuno dei cinque feedback che lei ci dà serviranno per tracciare un percorso che parta dalla riscrittura come esperienza personale a qualcosa che è parte di un cambiamento per forza collettivo, inevitabilmente collettivo.
+/***************
 
-=== witch_first_story_ended_check
+    Ogni debriefing è un percorso per tracciare il passaggio da una lettura personale a una sistemica delle repressioni.
+    FASE 1: Mi succede qualcosa che non sembra essere grave per gli altri, ma lo è per me, o che mi viene chiesto di nascondere.
+        es1: le luci a lavoro mi innervosiscono tantissimo, ma se provo a chiedere di cambiarle mi rispondo che sono le leggi, che se ne occupa HR o cose del genere.
+        es2: provo desiderio verso un uomo, ma sin da piccolo "frocio" è un'offesa e mi vedo come sbagliato.
+    FASE 2: Non è una cosa che capita solo a me, e inizio a sentirmi meno in colpa/sbagliata etc.
+        es1: una collega confida che anche lei ha dei problemi, ma che non sa come comunicarlo senza sentirsi dire che fa troppe storie.
+        es2: un compagno di scuola fa coming out, e il suo mondo non crolla.
+    FASE 3: Riconosciamo che ci sono motivi culturali e sociali che favoriscono l'oppressione:
+        es1: quando parliamo dentro e fuori dal lavoro delle nostre difficoltà, vengono sminuite. Ma soprattutto l'etica del lavoro e del sacrificio ci mette costantemente nella posizione di persone pigre, lamentone, fannullone.
+        es2: col compagno scopriamo che la mascolinità egemone resta in piedi solo perché ha qualcuno da opprimere.
+    FASE 4: Ci rendiamo conto che quelle norme favoriscono un gruppo, e che questo gruppo ha maggiore potere sociale, politico ed economico. Non solo: queste persone hanno sempre delle scappatoie, delle scuse per non prendersi responsabilità, cosa che a noi non è concesso. Stesso gesto, risposte sociali diverse.
+        es1: ci rivolgiamo ad HR con una raccolta di testimonianze ampia sui problemi di accessibilità nel luogo di lavoro. HR ci risponde che non ci sono fondi, eppure il CEO ha appena ricevuto un assegno milionario. Ci viene detto che le soluzioni si possono trovare se portiamo delle certificazioni mediche, ma il medico non riconosce molti dei nostri problemi, oppure le liste d'attesa sono infinite, oppure la soluzione è farmacologica.
+        es2: i bulli della scuola si sentono più fighi quando ci prendono di mira, definiscono la loro mascolinità dal modo in cui ci possono insultare. Ma questo lo fanno anche i politici, e quando portiamo i problemi che stiamo vivendo alla preside, questa ci dice che non può farci nulla, che la scuola non è politica e cose del genere. Eppure un mese prima ha ospitato il vescovo, ed è venuto anche il sindaco di FdI a parlare del suo lavoro.
+    FASE 5: Diventa necessario lottare assieme per il cambiamento.
+        Il dolore e le fatiche personali rimangono, e serve trovare modi per stare bene. Ma nel mentre devono cambiare le leggi, i poteri, le culture che permettono l'oppressione.
+
+**************/
+=== witch_first_debrief
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -9,6 +27,24 @@
         
 
         <i>Osserviamo {player_name} e ci chiediamo cosa provi dopo aver aiutato {charNameOne}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+
+        {
+        //Frasi sulle PNG
+            - firstChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt FirstCharacter:
+                Testo:
+                 ~ witch_debriefPNG += FirstCharacter       
+
+            - secondChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt SecondCharacter:
+                Testo:
+                 ~ witch_debriefPNG += SecondCharacter 
+
+            - thirdChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt ThirdCharacter:
+                Testo:
+                 ~ witch_debriefPNG += ThirdCharacter   
+        }
+
+
+
         
             + Mi chiedo se sono all'altezza di tutto questo.
                     -> glyph_modifier_variation_management(PG, waterC)->
@@ -68,7 +104,7 @@
         -> main
     
     
-    === witch_second_story_ended_check
+    === witch_second_debrief
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -80,6 +116,23 @@
         <i>E gli uccelli ci raccontano cose su {player_name}.
         <i>E su quello che ha fatto per {charNameTwo}.
         <i>E noi ci chiediamo: come sta {player_name} ora che {charNameTwo} è libero?</i>
+
+
+        {
+        //Frasi sulle PNG
+            - firstChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt FirstCharacter:
+                Testo:
+                 ~ witch_debriefPNG += FirstCharacter       
+
+            - secondChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt SecondCharacter:
+                Testo:
+                 ~ witch_debriefPNG += SecondCharacter 
+
+            - thirdChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt ThirdCharacter:
+                Testo:
+                 ~ witch_debriefPNG += ThirdCharacter   
+        }
+
         
             + Mi chiedo chi sarei ora, con una famiglia diversa alle spalle.
                     -> glyph_modifier_variation_management(PG, waterC)->
@@ -129,13 +182,31 @@
         -> witch_closing_storylet ->
         -> main
         
-    === witch_third_story_ended_check
+    === witch_third_debrief
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
+
+
+        {
+        //Frasi sulle PNG
+            - firstChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt FirstCharacter:
+                Testo:
+                 ~ witch_debriefPNG += FirstCharacter       
+
+            - secondChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt SecondCharacter:
+                Testo:
+                 ~ witch_debriefPNG += SecondCharacter 
+
+            - thirdChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt ThirdCharacter:
+                Testo:
+                 ~ witch_debriefPNG += ThirdCharacter   
+        }
         
+
+
         Domanda: chi mi ha insegnato a vedermi così? cosa me l'ha insegnato? In generale: da dove vengono le credenze su di sé, queste riscritture che dobbiamo poi andare a fare?
 
         + Scelta verde.
@@ -156,12 +227,24 @@
         -> witch_closing_storylet ->
         -> main 
         
-    === witch_fourth_story_ended_check
+    === witch_fourth_debrief
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
+
+        {
+        //Frasi sulle PNG
+            - fourthChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt FourthCharacter:
+                Testo:
+                 ~ witch_debriefPNG += FourthCharacter       
+
+            - fifthChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt FifthCharacter:
+                Testo:
+                 ~ witch_debriefPNG += FifthCharacter 
+        }
+
         
         Nonna molotov ci ha insegnate ora in modo evidente che il problema è sistemico. A cosa serve riscriversi, quando un problema è sistemico?
 
@@ -183,7 +266,7 @@
         -> witch_closing_storylet ->
         -> main  
     
-    === witch_fifth_story_ended_check
+    === witch_fifth_debrief
          ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -194,6 +277,18 @@
         Con gli altri.
         Mentore stava di merda perché cercava di essere qualcosa che non era.
         Ma non perché fosse pazza, ma perché il nostro mondo ci dice: sii una sola cosa, o smetti di esistere.
+
+        {
+        //Frasi sulle PNG
+            - fourthChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt FourthCharacter:
+                Testo:
+                 ~ witch_debriefPNG += FourthCharacter       
+
+            - fifthChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt FifthCharacter:
+                Testo:
+                 ~ witch_debriefPNG += FifthCharacter 
+        }
+
         
         + Scelta verde.
             -> glyph_modifier_variation_management(PG, waterC)->
