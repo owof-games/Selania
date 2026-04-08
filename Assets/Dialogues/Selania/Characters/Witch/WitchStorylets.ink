@@ -110,36 +110,36 @@
 //Confessioni sulla sua storia
 
 === witch_first_confession
-Primo pezzo storia strega
+// Rifiuto e negazione: parla del crollo, del periodo con Franco (che fino a quel momento non aveva mai nemmeno visto) e del furto di un documento a una compagna che l’ha portata in quel luogo, ma colpevolizza le compagne → si è sentita abbandonata.
 
 
     -> witch_closing_storylet ->
     -> main
 
 === witch_second_confession
-Secondo pezzo storia strega
+// Rabbia: crea la discarica per bloccare l’accesso da cui erano arrivate, in un mix di “sono pericolosa per gli altri” e “questo posto è pericoloso, il mondo non lo deve avere”. Ha cercato di uccidere l'albero, l'ha tagliato lei. Non voleva che rimanesse niente di chi l'ha abbandonata.
 
 
     -> witch_closing_storylet ->
     -> main
 
 === witch_third_confession
-Terzo pezzo storia strega
+// Contrattazione: Franco le dice“ Sei sempre stata come XXX che cercava di essere YYY invece di essere totalmente XXX”. 
 
 
     -> witch_closing_storylet ->
     -> main
 
 === witch_fourth_confession
-Quarto pezzo storia strega
-
+// Depressione: è la storyline che dovrebbe arrivare dopo la riscrittura di Nonna Molotov, cosa racconta?
+//Sicuro ci dirà comunque che a quel punto aveva capito che U.O.J. aveva ragione, che il fulcro di tutto è la relazione, ma oramai non aveva nessuno con cui interagire.
 
     -> witch_closing_storylet ->
     -> main
 
 === witch_fifth_confession
-Quinto pezzo storia strega. Scopriamo che il suo nome è M.M., come la persona che ha commentato greenhouse e nido.
-
+// Accettazione: decide di riscrivere il suo nome nel nome del luogo, di Selanìa, scoperto attraverso Franco, in modo da perdersi nel luogo stesso e diventare pura relazione, per attirare persone bisognose della riscrittura.
+// Capisce solo ora le parole di Franco di settimane prima: “A quel punto ha capito che sì, aveva sbagliato, ma che non serviva piangere, non serviva essere qualcosa che non era: serviva accogliere la sua indole più profonda, trasformativa, come quella dei sigilli, e far sì che altre persone potessero avere uno spazio sicuro in cui ritrovarsi, farsi forti per uscire da lì, cambiare le cose. Diventare Selanìa, diventare il luogo in cui ci troviamo.”
 
     -> witch_closing_storylet ->
     -> main
@@ -152,14 +152,19 @@ Quinto pezzo storia strega. Scopriamo che il suo nome è M.M., come la persona c
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(mentor_ActualName)
 
-Ehi {player_name}, hai finito tutte le riscritture. Se vuoi posso anche sbloccarti tutti i significati dei sigilli, che ne dici?
-    + No
-        Capisco
-    + (yes) Sì 
+    <i>{player_name} ha finito le riscritture.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+    <i>Ci sono ancora un po' di cose da fare, ma se vuole, prima di continuare, possiamo sbloccare tutte le informazioni mancanti riguardo ai sigilli.
+    <i>Per il piacere di condividere la conoscenza.
+
+    + <i>No, preferirei di no.</i>
+        <i>La neve si scioglie al sole.
+        <i>E {player_name} si prepara per una nuova primavera.
+
+    + (yes) <i>Certo che sì!</i>
         -> glyph_open_all_sigils ->
-        Fatto
+        <i>Ora il grimorio è colmo delle descrizioni mancanti.</i>
     -   
-Ciao ciao.
+    <i>{player_name} quando vuole sa già dove trovarci.</i>
 
 -> main    
 

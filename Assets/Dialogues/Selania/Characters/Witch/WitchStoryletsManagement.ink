@@ -26,9 +26,6 @@
         - witch_intro && grimoire_franco != () && not the_witch_and_the_frog:
             -> the_witch_and_the_frog
         
-        //Apertura di tutti i sigilli
-        - firstChar_storyStatus == story_storyEnded && secondChar_storyStatus == story_storyEnded && thirdChar_storyStatus == story_storyEnded && fourthChar_storyStatus == story_storyEnded && fifthChar_storyStatus == story_storyEnded && not witch_allSigils_opening: 
-            -> witch_allSigils_opening
 
         //Pezzi della sua storia. Compaiono linearmente, in base a quante storie ho fatto fino in fondo.
         - LIST_COUNT(listDumpGraphics) > 0 && grimoire_witch hasnt grimWitchMainOne:

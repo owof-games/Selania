@@ -34,12 +34,15 @@
         @animation:RewriterBook
 
          {
-            //Tutorial
+            //Tutorial e supporto
             - tutorial_witchRelationship && grimoire_appendices hasnt grimChoicesWitch:
                 ~ grimoire_appendices += grimChoicesWitch
 
             - tutorial_witchSigils && grimoire_appendices hasnt grimSigilsWitch:
                 ~ grimoire_appendices += grimSigilsWitch
+
+            - witch_allSigils_opening && grimoire_appendices hasnt grimWitchAllSigilsOpened:
+                ~ grimoire_appendices += grimWitchAllSigilsOpened  
 
         
             //Debrief

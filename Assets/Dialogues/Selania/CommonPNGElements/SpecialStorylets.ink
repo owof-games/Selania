@@ -127,6 +127,10 @@ VAR thirdChar_LibraryInvite = false
         {
             - grimoire_thirdChar has grimThirdCharOne && (entity_location(FromForestToDump) == Safekeeping) && (entity_location(PG) != Forest) && grimoire_witch hasnt grimWitchOpenDump:
                 -> open_the_dump
+
+            //Apertura di tutti i sigilli
+            - LIST_COUNT(story_endedStories) > 4 && grimoire_witch hasnt grimWitchAllSigilsOpened: 
+                -> witch_allSigils_opening    
         }          
 
 
