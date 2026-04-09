@@ -273,17 +273,9 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
+
     <i>Sono tante le cose che {player_name} ha ascoltato da <>
         {
-            - listDumpCharActivators has FirstCharacter && witch_mainStoryPNG hasnt FirstCharacter:
-                    ~ witch_mainStoryPNG += FirstCharacter
-                    {charNameOne},<>
-            - listDumpCharActivators has SecondCharacter && witch_mainStoryPNG hasnt SecondCharacter:
-                    ~ witch_mainStoryPNG += SecondCharacter
-                    {charNameTwo},<>
-            - listDumpCharActivators has ThirdCharacter && witch_mainStoryPNG hasnt ThirdCharacter:
-                    ~ witch_mainStoryPNG += ThirdCharacter
-                    {charNameThree},<>
             - listDumpCharActivators has FourthCharacter && witch_mainStoryPNG hasnt FourthCharacter:
                     ~ witch_mainStoryPNG += FourthCharacter
                     {charNameFour},<>
@@ -291,7 +283,7 @@
                     ~ witch_mainStoryPNG += FifthCharacter
                     {charNameFive},<>
         }
-    e poche le cose che vorremmo ancora raccontar{player_pronouns has him:gli|{player_pronouns has her:le|lə}}.
+    e poche le cose che vorremmo ancora raccontar{player_pronouns has him:gli|{player_pronouns has her:le|lə}}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
     <i>Per un cucciolo ogni bastone è un nuovo gioco.
     <i>Ma per un cane adulto un bastone è solo un bastone.
     <i>Al cambiamento bisognerebbe arrivare come cuccioli.
@@ -307,7 +299,7 @@
     <i>Ora galleggiavo nel grigio.
     <i>"Volevi conoscere l'acqua, ma ti sei fatta nuotare", mi aveva detto Franco.
     <i>"Ti sei fatta prendere dal sapere, e hai lasciato che il sapere ti comandasse", ho letto io.
-    <i>Ma poi un giorno, le dita nell'acqua, il loro riflesso spezzato.
+    <i>Ma poi un giorno, i piedi nelle acque della cucina, il loro riflesso spezzato.
     <i>E ho davvero capito di che cosa parlasse Franco.
     <i>Ma le cose belle richiedono il giusto spazio, {player_name}, e quindi concluderemo questa storia un'altra volta.
     <i>Ma grazie per avermi ascoltata.
@@ -322,27 +314,36 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-// Accettazione: decide di riscrivere il suo nome nel nome del luogo, di Selanìa, scoperto attraverso Franco, in modo da perdersi nel luogo stesso e diventare pura relazione, per attirare persone bisognose della riscrittura.
-// Capisce solo ora le parole di Franco di settimane prima: “A quel punto ha capito che sì, aveva sbagliato, ma che non serviva piangere, non serviva essere qualcosa che non era: serviva accogliere la sua indole più profonda, trasformativa, come quella dei sigilli, e far sì che altre persone potessero avere uno spazio sicuro in cui ritrovarsi, farsi forti per uscire da lì, cambiare le cose. Diventare Selanìa, diventare il luogo in cui ci troviamo.” Come siamo diventate "noi"
-//Sicuro ci dirà comunque che a quel punto aveva capito che U.O.J. aveva ragione, che il fulcro di tutto è la relazione, ma oramai non aveva nessuno con cui interagire.
+
+    <i>{player_name} ha ascoltato le storie di tutte, anche di <>
 
         {
-            - listDumpCharActivators has FirstCharacter && witch_mainStoryPNG hasnt FirstCharacter:
-                    ~ witch_mainStoryPNG += FirstCharacter
-                    {charNameOne},<>
-            - listDumpCharActivators has SecondCharacter && witch_mainStoryPNG hasnt SecondCharacter:
-                    ~ witch_mainStoryPNG += SecondCharacter
-                    {charNameTwo},<>
-            - listDumpCharActivators has ThirdCharacter && witch_mainStoryPNG hasnt ThirdCharacter:
-                    ~ witch_mainStoryPNG += ThirdCharacter
-                    {charNameThree},<>
             - listDumpCharActivators has FourthCharacter && witch_mainStoryPNG hasnt FourthCharacter:
                     ~ witch_mainStoryPNG += FourthCharacter
-                    {charNameFour},<>
+                    {charNameFour}, <>
             - listDumpCharActivators has FifthCharacter && witch_mainStoryPNG hasnt FifthCharacter:
                     ~ witch_mainStoryPNG += FifthCharacter
-                    {charNameFive},<>
+                    {charNameFive}, <>
         }
+    e ora si conclude anche la nostra.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+    <i>"Volevi conoscere l'acqua, ma ti sei fatta nuotare", mi aveva detto Franco.
+    <i>E un'altra persona saggia diceva sempre "Noi diventiamo le nostre relazioni".
+    <i>Quella persona aveva passato due anni a cucinare tra quelle che avevo reso macerie.
+    <i>Unendoci nei giorni disperati, ascoltandoci negli entusiasmi e nelle noie.
+    <i>Per lei, tutto è relazione.
+    <i>Se volevo conoscere l'acqua, dovevo diventare acqua.
+    <i>Se volevo conoscere questo luogo, dovevo diventare questo luogo.
+    <i>Invece di correre mi sono seduta, e ho ascoltato.
+    <i>Le dissertazioni delle libellule e gli amori delle lucciole.
+    <i>I canti delle api e i desideri degli uccelli.
+    <i>E poi più giù, tra i sogni degli alberi, i ricordi dell'acqua.
+    <i>Su, nelle gioie delle nubi, nelle certezze del cielo.
+    <i>Il suono di ogni fiore ripeteva il suo nome, il nome di questo luogo.
+    <i>Ho lasciato che mi riempisse, che diventassimo relazione.
+    <i>Ho lasciato il mio io, ho trovato un noi.
+    <i>Siamo diventate Selanìa.
+    <i>Abbiamo invitato il mondo a trovarci.
+    <i>Per poter cambiare.
 
     -> witch_closing_storylet ->
     -> main
