@@ -419,6 +419,9 @@
             - about_violence_and_peace && grimoire_secondChar hasnt grimSecondCharMentorPeace:
                     ~ grimoire_secondChar += grimSecondCharMentorPeace
 
+            - carla_and_second_char_chit_chat && grimoire_secondChar hasnt grimSecondCharCarla:
+                    ~ grimoire_secondChar += grimSecondCharCarla
+
             //Lettere    
             - second_character_notes.one && grimoire_secondChar hasnt grimSecondCharLetterOne:
                 ~ grimoire_secondChar += grimSecondCharLetterOne

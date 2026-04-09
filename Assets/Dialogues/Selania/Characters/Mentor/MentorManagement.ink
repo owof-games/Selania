@@ -46,7 +46,7 @@
 
     - else:
     {
-        - are_two_entities_together(Mentor, PG) && tutorial_mentorTalkingChoiceRelationship:
+        - are_two_entities_together(Mentor, PG) && grimoire_appendices has grimChoicesMentor:
             { 
                 - (contentsTrainStop has DoggoFirstLetters or contentsTrainStop has DoggoSecondLetters) && (contentsTrainStop hasnt Mentor):
                     {stopping:
