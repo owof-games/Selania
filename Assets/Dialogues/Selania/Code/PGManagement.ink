@@ -1,5 +1,5 @@
 //Nome giocatrice e player_pronouns
-    VAR player_name = "Senza nome"
+    VAR player_name = ""
     VAR player_nameChosen = false
     LIST player_pronouns = him, her, they
 

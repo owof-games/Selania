@@ -17,7 +17,7 @@
     
 //E possibili nomi
     LIST witch_possibleNames = Luna, Strega, Radice, Fiamma, Parola
-    VAR witch_actualName = (Luna)
+    VAR witch_actualName = ()
 
 
 
