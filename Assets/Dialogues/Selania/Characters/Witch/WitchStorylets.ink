@@ -272,8 +272,8 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-// Depressione: è la storyline che dovrebbe arrivare dopo la riscrittura di Nonna Molotov, cosa racconta? (senso di fallimento per il non cambiamento)
-//Sicuro ci dirà comunque che a quel punto aveva capito che U.O.J. aveva ragione, che il fulcro di tutto è la relazione, ma oramai non aveva nessuno con cui interagire.
+
+    <i>Sono tante le cose che {player_name} ha ascoltato da <>
         {
             - listDumpCharActivators has FirstCharacter && witch_mainStoryPNG hasnt FirstCharacter:
                     ~ witch_mainStoryPNG += FirstCharacter
@@ -291,9 +291,29 @@
                     ~ witch_mainStoryPNG += FifthCharacter
                     {charNameFive},<>
         }
+    e poche le cose che vorremmo ancora raccontar{player_pronouns has him:gli|{player_pronouns has her:le|lə}}.
+    <i>Per un cucciolo ogni bastone è un nuovo gioco.
+    <i>Ma per un cane adulto un bastone è solo un bastone.
+    <i>Al cambiamento bisognerebbe arrivare come cuccioli.
+    <i>Noi ci eravamo arrivate convinte di avere occhi aperti allo stupore, ma eravamo capaci di vedere solo il bastone.
+    <i>E così ci siamo immerse nella ricerca, ignorando noi stesse, ignorando Franco.
+    <i>Di corsa dalla spiaggia alla foresta alla stazione, fino a quando le corse non si sono fatte passi.
+    <i>I passi strascicati.
+    <i>E le gambe non hanno ceduto.
+    <i>Passavamo le ore stese allo stagno in silenzio con Franco, gli occhi pieni di lacrime, per poi spostarci in cucina.
+    <i>Utilizzare quel poco che rimaneva, pensare alle voci che l'avevano riempita.
+    <i>Che non avevo ascoltato.
+    <i>Il dolore di mesi prima mi aveva portato ad affondare.
+    <i>Ora galleggiavo nel grigio.
+    <i>"Volevi conoscere l'acqua, ma ti sei fatta nuotare", mi aveva detto Franco.
+    <i>"Ti sei fatta prendere dal sapere, e hai lasciato che il sapere ti comandasse", ho letto io.
+    <i>Ma poi un giorno, le dita nell'acqua, il loro riflesso spezzato.
+    <i>E ho davvero capito di che cosa parlasse Franco.
+    <i>Ma le cose belle richiedono il giusto spazio, {player_name}, e quindi concluderemo questa storia un'altra volta.
+    <i>Ma grazie per avermi ascoltata.
 
-    -> witch_closing_storylet ->
-    -> main
+        -> witch_closing_storylet ->
+        -> main
 
 === witch_fifth_confession
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -304,6 +324,8 @@
     ~ temp mentorName = translator(mentor_ActualName)
 // Accettazione: decide di riscrivere il suo nome nel nome del luogo, di Selanìa, scoperto attraverso Franco, in modo da perdersi nel luogo stesso e diventare pura relazione, per attirare persone bisognose della riscrittura.
 // Capisce solo ora le parole di Franco di settimane prima: “A quel punto ha capito che sì, aveva sbagliato, ma che non serviva piangere, non serviva essere qualcosa che non era: serviva accogliere la sua indole più profonda, trasformativa, come quella dei sigilli, e far sì che altre persone potessero avere uno spazio sicuro in cui ritrovarsi, farsi forti per uscire da lì, cambiare le cose. Diventare Selanìa, diventare il luogo in cui ci troviamo.” Come siamo diventate "noi"
+//Sicuro ci dirà comunque che a quel punto aveva capito che U.O.J. aveva ragione, che il fulcro di tutto è la relazione, ma oramai non aveva nessuno con cui interagire.
+
         {
             - listDumpCharActivators has FirstCharacter && witch_mainStoryPNG hasnt FirstCharacter:
                     ~ witch_mainStoryPNG += FirstCharacter
