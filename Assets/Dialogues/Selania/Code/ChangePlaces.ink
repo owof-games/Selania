@@ -25,10 +25,10 @@
     
     + {are_two_entities_together(PG, BedClosingGame) && (not debug_stochastic)} [BedClosingGame]
     
-            {charTag(TheWitch, witch_state())}   <i>Un letto morbido attende {player_name}.</i> 
+            {charTag(TheWitch, "{witch_state()}")}:   <i>Un letto morbido attende {player_name}.</i> 
             
                 + + (close)<i>Ho bisogno di riposare.</i>
-                    {charTag(TheWitch, witch_state())}   <i>Salutiamo {player_name}.</i>
+                    {charTag(TheWitch, "{witch_state()}")}:   <i>Salutiamo {player_name}.</i>
                     //Resettiamo il contatore del riposo della giocatrice
                         ~ player_lastRestingSession = 0
                     @quit
@@ -110,7 +110,7 @@
             -> greenhouse
 
     + {are_two_entities_together(PG, FromPondToGreenhouseBlocked)} [FromPondToGreenhouseBlocked]
-        {charTag(TheWitch, witch_state())}   <i>Una porta chiusa, un interno buio.</i> 
+        {charTag(TheWitch, "{witch_state()}")}:   <i>Una porta chiusa, un interno buio.</i> 
         -> main
 
     //Streets to Library    
@@ -123,7 +123,7 @@
                 -> library
         
         - else:
-            {charTag(TheWitch, witch_state())}   <i>Un masso blocca la strada.</i>
+            {charTag(TheWitch, "{witch_state()}")}:   <i>Un masso blocca la strada.</i>
             -> main
     }  
     
@@ -154,7 +154,7 @@
                 -> on_movement_events ->
                 -> kitchen
         - else:
-            {charTag(TheWitch, witch_state())}   <i>Un ponte spezzato interrompe il cammino di chi viaggia.</i>
+            {charTag(TheWitch, "{witch_state()}")}:   <i>Un ponte spezzato interrompe il cammino di chi viaggia.</i>
             -> main
     }        
 
@@ -173,7 +173,7 @@
                     -> on_movement_events ->
                     -> nest
             - else:
-                {charTag(TheWitch, witch_state())}   <i>Un relitto ostacola il cammino di {player_name}.</i>
+                {charTag(TheWitch, "{witch_state()}")}:   <i>Un relitto ostacola il cammino di {player_name}.</i>
                 -> main
         }   
 

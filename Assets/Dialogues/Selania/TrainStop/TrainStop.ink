@@ -6,7 +6,7 @@
 
 {
     -train_stop == 1: 
-        {charTag(TheWitch, witch_state())}   <i>La stazione profuma di aria nevosa e nuovi arrivi.</i>
+        {charTag(TheWitch, "{witch_state()}")}:   <i>La stazione profuma di aria nevosa e nuovi arrivi.</i>
 }
     
 {

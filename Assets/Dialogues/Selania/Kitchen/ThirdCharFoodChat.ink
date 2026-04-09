@@ -35,7 +35,7 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
     In particolare, ripensando alle nostre conversazioni, mi farebbe piacere parlare di più...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
         {
             - not first_char_main_storylets.nine:
-                {charTag(TheWitch, witch_state())}   <i>{charNameTwo} ha ancora spunti di conversazione da offrire a {player_name}, se {player_name} deciderà di parlarle ancora un po'.
+                {charTag(TheWitch, "{witch_state()}")}:   <i>{charNameTwo} ha ancora spunti di conversazione da offrire a {player_name}, se {player_name} deciderà di parlarle ancora un po'.
         }
         
         + Dei rapporti che hai con le persone che ti sono care.
@@ -580,7 +580,7 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
     
         {
             - backpack_findedGifts == (): 
-                {charTag(TheWitch, witch_state())}   <i>{player_name} non possiede alcun ingrediente speciale.</i>
+                {charTag(TheWitch, "{witch_state()}")}:   <i>{player_name} non possiede alcun ingrediente speciale.</i>
                     -> recipe_name_creator ->
                     -> recipe_name_storage(ThirdCharacter) ->
                     -> at_table_with_third_char
@@ -597,7 +597,7 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-            {charTag(TheWitch, witch_state())}   <i>Il giusto ingrediente renderà la ricetta di {player_name} e {charNameOne} musicale.
+            {charTag(TheWitch, "{witch_state()}")}:   <i>Il giusto ingrediente renderà la ricetta di {player_name} e {charNameOne} musicale.
             <i>E {player_name} potrebbe capire un po' meglio {charNameOne}.
        
                 + <i>Aggiunto un ingrediente speciale.

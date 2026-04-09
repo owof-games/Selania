@@ -132,7 +132,7 @@
 
     {ink_status:
         - ink_empty:
-            {charTag(TheWitch, witch_state())}   <i>E quindi.
+            {charTag(TheWitch, "{witch_state()}")}:   <i>E quindi.
             <i>Dopo le molte parole spese <>
             {
                 - Character == FirstCharacter:
@@ -165,7 +165,7 @@
             <i>Potrà solo usare il potere dell'epilogo.
         
         - ink_low:
-            {charTag(TheWitch, witch_state())}   <i>E quindi.
+            {charTag(TheWitch, "{witch_state()}")}:   <i>E quindi.
             <i>Dopo le molte parole spese <>
             {
                 - Character == FirstCharacter:
@@ -198,7 +198,7 @@
             <i>Potrà compiere una riscrittura e usare il potere dell'epilogo.</i>
         
         - ink_normal:
-            {charTag(TheWitch, witch_state())}   <i>E quindi.
+            {charTag(TheWitch, "{witch_state()}")}:   <i>E quindi.
            <i>Dopo le molte parole spese <>
             {
                 - Character == FirstCharacter:
@@ -231,7 +231,7 @@
             <i>Potrà compiere due riscritture e usare il potere dell'epilogo.</i>
         
         - ink_medium:
-            {charTag(TheWitch, witch_state())}   <i>E quindi.
+            {charTag(TheWitch, "{witch_state()}")}:   <i>E quindi.
             <i>Dopo le molte parole spese <>
             {
                 - Character == FirstCharacter:
@@ -264,7 +264,7 @@
             <i>Potrà compiere tre riscritture e usare il potere dell'epilogo.</i>
 
         - ink_high:
-            {charTag(TheWitch, witch_state())}   <i>E quindi.
+            {charTag(TheWitch, "{witch_state()}")}:   <i>E quindi.
             <i>Dopo le molte parole spese <>
             {
                 - Character == FirstCharacter:
@@ -365,19 +365,19 @@
     
     {ink_status:
         - ink_empty:
-            {charTag(TheWitch, witch_state())}   <i>non ha raccolto alcuna goccia di inchiostro
+            {charTag(TheWitch, "{witch_state()}")}:   <i>non ha raccolto alcuna goccia di inchiostro
         
         - ink_low:
-            {charTag(TheWitch, witch_state())}   <i>ha raccolto una goccia di inchiostro
+            {charTag(TheWitch, "{witch_state()}")}:   <i>ha raccolto una goccia di inchiostro
         
         - ink_normal:
-            {charTag(TheWitch, witch_state())}   <i>ha raccolto due gocce di inchiostro
+            {charTag(TheWitch, "{witch_state()}")}:   <i>ha raccolto due gocce di inchiostro
         
         - ink_medium:
-            {charTag(TheWitch, witch_state())}   <i>ha raccolto tre gocce di inchiostro     
+            {charTag(TheWitch, "{witch_state()}")}:   <i>ha raccolto tre gocce di inchiostro     
         
         - ink_high:
-            {charTag(TheWitch, witch_state())}   <i>ha raccolto tre gocce di inchiostro, e col tempo riceverà da <>
+            {charTag(TheWitch, "{witch_state()}")}:   <i>ha raccolto tre gocce di inchiostro, e col tempo riceverà da <>
                 {Character:
                     - FirstCharacter:
                         {translator(firstChar_ActualName)} <>

@@ -15,7 +15,7 @@
 
 === talk_with_fifth_character ===
 ~ temp charNameFive = translator(fifthChar_ActualName)
-    {charTag(TheWitch, witch_state())}   C'è qualcosa che ti frulla nella testa.
+    {charTag(TheWitch, "{witch_state()}")}:   C'è qualcosa che ti frulla nella testa.
 
             + Ti va di raccontarmi qualcosa di te?
                 -> knowing_fifth_character
@@ -625,7 +625,7 @@
 
 === fifth_story_gift ===
 ~ temp charNameFive = translator(fifthChar_ActualName)
-    {charTag(TheWitch, witch_state())}   Stai per donare qualcosa a {charNameFive}.
+    {charTag(TheWitch, "{witch_state()}")}:   Stai per donare qualcosa a {charNameFive}.
         + {backpack_findedGifts != ()} Scelgo il dono.
             ~ gift_currentReceiver += FifthCharacter
             -> backpack_management -> ink_outcome 

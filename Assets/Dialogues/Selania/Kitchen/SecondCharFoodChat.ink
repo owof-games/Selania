@@ -39,7 +39,7 @@
     In particolare, ripensando alle nostre conversazioni, mi farebbe piacere parlare di più... #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
         {
             - not first_char_main_storylets.nine:
-                {charTag(TheWitch, witch_state())}   <i>{charNameTwo} ha altri temi che vorrebbe condividere con {player_name}, ma vorrebbe che {player_name} prima lo conoscesse un po' meglio.</i>
+                {charTag(TheWitch, "{witch_state()}")}:   <i>{charNameTwo} ha altri temi che vorrebbe condividere con {player_name}, ma vorrebbe che {player_name} prima lo conoscesse un po' meglio.</i>
         }
 
             + Parliamo di animali.
@@ -1079,7 +1079,7 @@
         
             {
                 - backpack_findedGifts == ():
-                    {charTag(TheWitch, witch_state())}   <i>{player_name} non ha niente da aggiungere alla ricetta.</i>
+                    {charTag(TheWitch, "{witch_state()}")}:   <i>{player_name} non ha niente da aggiungere alla ricetta.</i>
                     -> recipe_name_creator ->
                     -> recipe_name_storage(SecondCharacter) ->
                     -> at_table_with_second_char
@@ -1096,7 +1096,7 @@
                 ~ temp charNameFour= translator(fourthChar_ActualName)
                 ~ temp mentorName = translator(mentor_ActualName)
                 
-                {charTag(TheWitch, witch_state())}   <i>Il giusto ingrediente renderà la ricetta di {player_name} e {charNameTwo} spaziale.</i>
+                {charTag(TheWitch, "{witch_state()}")}:   <i>Il giusto ingrediente renderà la ricetta di {player_name} e {charNameTwo} spaziale.</i>
                 <i>E {player_name} potrebbe capire un po' meglio {charNameTwo}.</i>
 
                     + <i>Voglio aggiungere un ingrediente speciale.</i>
