@@ -1,25 +1,24 @@
 === witch_storylets_management
     {    
         
-
         //Check per intro
-        - not witch_intro:
+        - grimoire_witch hasnt grimWitchIntro:
             -> witch_intro
 
         //Feedback post riscrittura
-        - witch_intro && LIST_COUNT(story_endedStories) > 0 && not witch_first_debrief:
+        - grimoire_witch has grimWitchIntro && LIST_COUNT(story_endedStories) > 0 && grimoire_witch hasnt grimWitchFirstDebrief:
             -> witch_first_debrief
 
-        - witch_intro && LIST_COUNT(story_endedStories) > 1 && not witch_second_debrief:
+        - grimoire_witch has grimWitchIntro && LIST_COUNT(story_endedStories) > 1 && grimoire_witch hasnt grimWitchSecondDebrief:
             -> witch_second_debrief
 
-        - witch_intro && LIST_COUNT(story_endedStories) > 2 && not witch_third_debrief:
+        - grimoire_witch has grimWitchIntro && LIST_COUNT(story_endedStories) > 2 && grimoire_witch hasnt grimWitchThirdDebrief:
             -> witch_third_debrief
 
-        - witch_intro && LIST_COUNT(story_endedStories) > 3 && not witch_fourth_debrief:
+        - grimoire_witch has grimWitchIntro && LIST_COUNT(story_endedStories) > 3 && grimoire_witch hasnt grimWitchFourthDebrief:
             -> witch_fourth_debrief
 
-        - witch_intro && LIST_COUNT(story_endedStories) > 4 && not witch_fifth_debrief:
+        - grimoire_witch has grimWitchIntro && LIST_COUNT(story_endedStories) > 4 && grimoire_witch hasnt grimWitchFifthDebrief:
             -> witch_fifth_debrief    
     
 
@@ -41,11 +40,11 @@
         
 
         //Commento sul libro
-        - witch_intro && tutorial_mentorTalkingChoiceRelationship && not about_the_book:
+        - grimoire_witch has grimWitchIntro && grimoire_appendices has grimChoicesMentor && grimoire_witch hasnt grimWitchBook:
             -> about_the_book
 
         //Dialogo su Franco
-        - witch_intro && grimoire_franco != () && not the_witch_and_the_frog:
+        - grimoire_witch has grimWitchIntro && grimoire_franco != () && grimoire_witch hasnt grimWitchFrog:
             -> the_witch_and_the_frog    
         
         

@@ -3,40 +3,57 @@
         -> witch_storylets_management
 
 
-
-
-
-
-
 === descriptions
-    {   
-        //Opinioni dopo la fine di due storie    
-        - (firstChar_storyStatus == story_storyEnded) && (secondChar_storyStatus == story_storyEnded):
-            -> three
-        //Opinioni dopo la fine di una storia     
-        - (firstChar_storyStatus == story_storyEnded) or (secondChar_storyStatus == story_storyEnded):
-            -> two
-        //Opinioni presenti da inizio gioco    
-        - else:
+    {      
+        //Commenti quando nessuna storia è finita 
+        - LIST_COUNT(story_endedStories) == 0 :
+            -> zero
+        //Commenti dopo la fine di una storia    
+
+        - LIST_COUNT(story_endedStories) > 0 :
             -> one
+        
+        //Commenti dopo la fine di due storie     
+        - LIST_COUNT(story_endedStories) > 1:
+            -> two
+        
+        //Commenti dopo la fine di tre storie    
+        - LIST_COUNT(story_endedStories) > 2:
+            -> three
+
+        //Commenti dopo la fine di tre storie    
+        - LIST_COUNT(story_endedStories) > 3:
+            -> four
+
+        //Commenti dopo la fine di tre storie    
+        - else:
+            -> five
+
     }
+
+
+    = zero
+        <i>{~Nebbie sottili e ricordi pesanti|Formiche distanti su macchine arrugginite|Ritmi percussivi e voci silenti.}</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            -> main
+
     
     = one
-    //Contenuti iniziali
-        <i>{~Vecchie radici si ancorano nella memoria.|La corteccia tenace resiste alla dimenticanza.|Formiche inquiete cercano riparo nel vecchio legno.}</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        <i>{~Vecchie radici si ancorano nella memoria.|La corteccia tenace resiste alla dimenticanza.|Porcellini di terra rotolano tra radici distese.}</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             -> main
     
     = two
-    //Opinioni dopo la fine di una storia  
-        <i>{~Gambe chiedono di percorrere nuove strade.|Nuovi piedi si riempiono di vecchie domande.|Porcellini di terra rotolano tra dita distese.}</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        <i>{~Il tronco chiede di percorrere nuove strade.|Pilastri reggono vecchie facciate.|Formiche inquiete cercano riparo nel vecchio legno.}</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             -> main
 
     = three
-    //Opinioni dopo la fine di due storie 
-        <i>{~L'aria saggia scalda il petto.|Un braccio steso in cerca di risposte.|Il tronco si torce inquieto.|L'erba si rinfresca ai piedi della nuova ombra.}</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        <i>{~L'aria saggia scalda le foglie.|Una chioma stesa in cerca di risposte.|L'erba si rinfresca ai piedi della nuova ombra.}</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             -> main
 
     = four
-    
-    -> main
-    
+        <i>{~L'aria saggia scalda il petto.|Un braccio steso in cerca di risposte.|Il tronco si torce inquieto.|L'erba si rinfresca ai piedi della nuova ombra.}</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            -> main
+
+    = five
+        <i>{~L'aria saggia scalda il petto.|Un braccio steso in cerca di risposte.|Il tronco si torce inquieto.|L'erba si rinfresca ai piedi della nuova ombra.}</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            -> main
+

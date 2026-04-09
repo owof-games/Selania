@@ -27,6 +27,7 @@
         ~ temp sigilUsed = false
 
         <i>Le radici ci raccontano che {player_name} ha fatto la sua prima riscrittura.
+        <i>E un nuovo tronco cresce. Questo ci porta gioia.
 
         {
         //Frasi sulle PNG
@@ -122,7 +123,8 @@
         ~ temp sigilUsed = false
 
         <i>Il vento canta di una seconda riscrittura.
-        <i>{player_name} conosce ormai il proprio valore.
+        <i>I rami si riempiono di storie.
+        <i>E {player_name} conosce ormai il proprio valore.
 
         {
         //Frasi sulle PNG
@@ -216,7 +218,7 @@
         ~ temp sigilUsed = false
 
         <i>La cagnolina della posta è sorpresa da questa terza riscrittura.
-
+        <i>La nuova chioma raccoglie i suoi dubbi.
         Se vive una oppressione?
 
         {
