@@ -41,7 +41,6 @@
     INCLUDE CommonPNGElements\Functions.ink
     INCLUDE CommonPNGElements\ChoicesManagement\SigilsTranslator.ink
     INCLUDE CommonPNGElements\ChoicesManagement\GlyphsVarAndLists.ink
-    INCLUDE CommonPNGElements\ChoicesManagement\SigilsActivation.ink
     INCLUDE CommonPNGElements\ChoicesManagement\ChoicesManager.ink
     INCLUDE CommonPNGElements\ChoicesManagement\Glyph&SigilsFunctions.ink
     
