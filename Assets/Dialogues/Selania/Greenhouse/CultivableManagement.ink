@@ -137,7 +137,7 @@
 //Step due: attivazione o meno (parte solo se greenhouse_chosenCultivable è vuoto)
  {
         - greenhouse_frog_nextCultivableOne != () && greenhouse_chosenCultivable == ():
-            <i>Sembra che Franco abbia messo qui le sue zampine.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            {charTag(witch_tag(), witch_state())}   <i>Sembra che Franco abbia messo qui le sue zampine.</i>
             <i>Ecco qualcosa che crescerà su sua richiesta.</i>
                 ~ greenhouse_chosenCultivable = greenhouse_frog_nextCultivableOne
                 
@@ -160,7 +160,7 @@
 -> next_cultivable_management ->
 
 - (top)
-<i>{~La serra ha qualcosa da svelare.|I vasi hanno nuove domande.|La terra è fertile di risposte.|L'aria scompiglia ragnatele e capelli.|Sussurri serpeggiano tra i vasi, ponendo domande.}</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+{charTag(witch_tag(), witch_state())}   <i>{~La serra ha qualcosa da svelare.|I vasi hanno nuove domande.|La terra è fertile di risposte.|L'aria scompiglia ragnatele e capelli.|Sussurri serpeggiano tra i vasi, ponendo domande.}</i>
     -> test
 
 === test
@@ -191,7 +191,7 @@
                     -> list_to_crops
             
             - else:
-                In questo momento non è possibile coltivare altro. #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                {charTag(witch_tag(), witch_state())}   In questo momento non è possibile coltivare altro. 
                     -> main
       }
 
@@ -679,7 +679,7 @@ QUESTIONS
      ~ greenhouse_firstQuest = true
          {debug_cultivable: Entro in first_question. {greenhouse_firstQuest: greenhouse_firstQuest ora = true|greenhouse_firstQuest = false}}
  
-        <i>Le foglie...#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        {charTag(witch_tag(), witch_state())}   <i>Le foglie...
             + [{~Si sfiorano|Si mescolano|Si proteggono le une con le altre}.]
                     ~ greenhouse_cropsType += relationship
                     ~ greenhouse_firstAnswerTracker = greenhouse_relationshipCrops
@@ -696,7 +696,7 @@ QUESTIONS
     ~ greenhouse_secondQuest = true
         {debug_cultivable: Entro in second_question. {greenhouse_secondQuest: greenhouse_secondQuest ora = true|greenhouse_secondQuest = false}}
 
-        <i>L'aria... #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        {charTag(witch_tag(), witch_state())}   <i>L'aria... 
             + [{~Insegue sé stessa|Crea mulinelli di foglie|Ruota e ruzzola portando odori inaspettati}.]
                     ~ greenhouse_cropsType += shift
                     ~ greenhouse_firstAnswerTracker = greenhouse_shiftCrops
@@ -714,7 +714,7 @@ QUESTIONS
      ~ greenhouse_thirdQuest = true
     {debug_cultivable:Entro in third_question. {greenhouse_thirdQuest: greenhouse_thirdQuest ora = true|greenhouse_thirdQuest = false}.}
     
-        <i>L'acqua...#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        {charTag(witch_tag(), witch_state())}   <i>L'acqua...
             + [{~È mossa solo sulla superficie|È torbida|È piena di foglie e petali}.]
                     ~ greenhouse_cropsType += wonder
                     ~ greenhouse_firstAnswerTracker = greenhouse_wonderCrops
@@ -731,7 +731,7 @@ QUESTIONS
      ~ greenhouse_fourthQuest = true
     {debug_cultivable: Entro in greenhouse_fourthQuest. {greenhouse_fourthQuest: greenhouse_fourthQuest ora = true|greenhouse_fourthQuest = false}.}
     
-        <i>Le api...#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        {charTag(witch_tag(), witch_state())}   <i>Le api...
             + [{~Proteggono la regina|Si scambiano direzioni|Si puliscono a vicenda}.]
                     ~ greenhouse_cropsType += relationship
                     ~ greenhouse_firstAnswerTracker = greenhouse_relationshipCrops 
@@ -748,7 +748,7 @@ QUESTIONS
      ~ greenhouse_fifthQuest = true
     {debug_cultivable: Entro in greenhouse_fifthQuest. {greenhouse_fifthQuest: greenhouse_fifthQuest ora = true|greenhouse_fifthQuest = false}.}
     
-        <i>Le formiche...#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        {charTag(witch_tag(), witch_state())}   <i>Le formiche...
             + [{~Lasciano tracce per le compagne|Accumulano cibo per l'inverno|Creano ponti di foglie}.]
                     ~ greenhouse_cropsType += relationship
                     ~ greenhouse_firstAnswerTracker = greenhouse_relationshipCrops 
@@ -765,7 +765,7 @@ QUESTIONS
      ~ greenhouse_sixthQuest = true
     {debug_cultivable: Entro in sixfthQuest. {greenhouse_sixthQuest: sixfthQuest ora = true|sixfthQuest = false}.}
     
-        <i>I sassi... #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        {charTag(witch_tag(), witch_state())}   <i>I sassi... 
             + [{~Creano scale verso il cielo|Si fanno mura, protezione|Si scaldano fregandosi lentamente l'un l'altro}.]
                     ~ greenhouse_cropsType += relationship
                     ~ greenhouse_firstAnswerTracker = greenhouse_relationshipCrops 
@@ -782,7 +782,7 @@ QUESTIONS
      ~ greenhouse_seventhQuest = true
     {debug_cultivable: Entro in greenhouse_seventhQuest. {greenhouse_seventhQuest: greenhouse_seventhQuest ora = true|greenhouse_seventhQuest = false}.}
     
-        <i>La terra...#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        {charTag(witch_tag(), witch_state())}   <i>La terra...
             + [{~Avanza massaggiando le radici nodose delle querce|Scivola, trascinando con sé i rospi|Asciutta, rotola a valle}.]
                     ~ greenhouse_cropsType += shift
                     ~ greenhouse_firstAnswerTracker = greenhouse_shiftCrops 
@@ -799,7 +799,7 @@ QUESTIONS
      ~ greenhouse_eighthQuest = true
     {debug_cultivable: Entro in greenhouse_eighthQuest. {greenhouse_eighthQuest: greenhouse_eighthQuest ora = true|greenhouse_eighthQuest = false}.}
     
-        <i>I cardellini...#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        {charTag(witch_tag(), witch_state())}   <i>I cardellini...
             + [{~Svolazzano in stormi sopra alla foresta|Saltellano tra i rami del salice}.]
                     ~ greenhouse_cropsType += shift 
                     ~ greenhouse_firstAnswerTracker = greenhouse_shiftCrops 
@@ -816,7 +816,7 @@ QUESTIONS
      ~ greenhouse_ninthQuest = true
     {debug_cultivable: Entro in greenhouse_ninthQuest. {greenhouse_ninthQuest: greenhouse_ninthQuest ora = true|greenhouse_ninthQuest = false}.}
     
-        <i>Il cervo volante... #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        {charTag(witch_tag(), witch_state())}   <i>Il cervo volante... 
             + [{~Insegue l'odore di frutta matura|Scava nel legno lunghe gallerie|Trascina pensieri dimenticati}.]
                     ~ greenhouse_cropsType += shift
                     ~ greenhouse_firstAnswerTracker = greenhouse_shiftCrops
@@ -834,7 +834,7 @@ QUESTIONS
      ~ greenhouse_tenthQuest = true
     {debug_cultivable: Entro in greenhouse_tenthQuest. {greenhouse_tenthQuest: greenhouse_tenthQuest ora = true|greenhouse_tenthQuest = false}.}
     
-        <i>Il sole... #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        {charTag(witch_tag(), witch_state())}   <i>Il sole... 
             + [{~Mostra il cammino|Offre coraggio alle lucertole|Solleva gocce dalla palude silente}. ]
                     ~ greenhouse_cropsType += imagination  
                     ~ greenhouse_firstAnswerTracker = greenhouse_understandingCrops 
@@ -851,7 +851,7 @@ QUESTIONS
      ~ greenhouse_eleventhQuest = true
     {debug_cultivable: Entro in greenhouse_eleventhQuest. {greenhouse_eleventhQuest: greenhouse_eleventhQuest ora = true|greenhouse_eleventhQuest = false}.}
     
-        <i>La notte...#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        {charTag(witch_tag(), witch_state())}   <i>La notte...
             + [{~Nasconde i sotterfugi delle falene|Raccoglie i baci delle amanti|Accompagna i ghiri nello spazio del sogno}.]
                     ~ greenhouse_cropsType += imagination  
                     ~ greenhouse_firstAnswerTracker = greenhouse_understandingCrops 
@@ -868,7 +868,7 @@ QUESTIONS
      ~ greenhouse_twelfthQuest = true
     {debug_cultivable: Entro in greenhouse_twelfthQuest. {greenhouse_twelfthQuest: greenhouse_twelfthQuest ora = true|greenhouse_twelfthQuest = false}.}
     
-        <i>La neve...#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        {charTag(witch_tag(), witch_state())}   <i>La neve...
             + [{~Nasconde allo stambecco il burrone|Spinge ai confini del parco|Piega le punte degli abeti più alti}.]
                     ~ greenhouse_cropsType += imagination  
                     ~ greenhouse_firstAnswerTracker = greenhouse_understandingCrops 
@@ -885,7 +885,7 @@ QUESTIONS
      ~ greenhouse_thirteenthQuest = true
     {debug_cultivable: Entro in greenhouse_thirteenthQuest. {greenhouse_thirteenthQuest: greenhouse_thirteenthQuest ora = true|greenhouse_thirteenthQuest = false}.}
     
-        <i>{player_pronouns has him: Il riscrittore...|{player_pronouns has her:La riscrittora...|Lə riscrittorə...}}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        {charTag(witch_tag(), witch_state())}   <i>{player_pronouns has him: Il riscrittore...|{player_pronouns has her:La riscrittora...|Lə riscrittorə...}}
         
             + [{~Assapora sulla lingua il sapore del cambiamento|Sente sulle mani un accesso di futuro|Freme nel lanciarsi verso ciò che arriverà}.]
                     ~ greenhouse_cropsType += understanding
@@ -903,7 +903,7 @@ QUESTIONS
      ~ greenhouse_fourteenthQuest = true
     {debug_cultivable: Entro in greenhouse_fourteenthQuest. {greenhouse_fourteenthQuest: greenhouse_fourteenthQuest ora = true|greenhouse_fourteenthQuest = false}.}
     
-        <i>La serra...#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        {charTag(witch_tag(), witch_state())}   <i>La serra...
             + [{~Brama la crescita di una nuova pianta|Gioisce per l'erbetta che cresce tra le travi|Spalanca le sue porte a nuove sementi}.]
                     ~ greenhouse_cropsType += understanding   
                     ~ greenhouse_firstAnswerTracker = greenhouse_selfdeterminationCrops 
@@ -920,7 +920,7 @@ QUESTIONS
     ~ greenhouse_fifteenQuest = true
     {debug_cultivable: Entro in greenhouse_fifteenQuest. {greenhouse_fifteenQuest: greenhouse_fifteenQuest ora = true|greenhouse_fifteenQuest = false}.}
     
-        <i>La luna... #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        {charTag(witch_tag(), witch_state())}   <i>La luna... 
             + [{~Accenna timida un nuovo ciclo|Invita la Bella di Notte a sbocciare|Suggerisci sogni di cambiamento}.]
                     ~ greenhouse_cropsType += understanding   
                     ~ greenhouse_firstAnswerTracker = greenhouse_selfdeterminationCrops 
@@ -1419,7 +1419,7 @@ QUESTIONS
             ->  cultivable_test
         
         - else:
-            <i>Al momento la serra non ha domande da porre a {player_name}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            {charTag(witch_tag(), witch_state())}   <i>Al momento la serra non ha domande da porre a {player_name}.</i>
             -> main
     }
             

@@ -26,7 +26,7 @@
         ~ temp mentorName = translator(mentor_ActualName)
         ~ temp sigilUsed = false
 
-        <i>Le radici ci raccontano che {player_name} ha fatto la sua prima riscrittura.
+        {charTag(witch_tag(), witch_state())}<i>Le radici ci raccontano che {player_name} ha fatto la sua prima riscrittura.
         <i>E un nuovo tronco cresce. Questo ci porta gioia.
 
         {
@@ -64,38 +64,38 @@
         
             + (water) La gioia di aver aiutato qualcuno.
                     -> glyph_modifier_variation_management(PG, waterC)->
-                <i>Aiutato chi {player_name} ha riscritto?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                {charTag(witch_tag(), witch_state())}<i>Aiutato chi {player_name} ha riscritto?
                 <i>O aiutato l{player_pronouns has him:o|{player_pronouns has her:a|ə}} stess{player_pronouns has him:o|{player_pronouns has her:a|ə}} {player_name}?
                 <i>Ma anche noi sentiamo questa gioia.
                 <i>La serra è tiepida, la stazione attende, e le nubi dicono che {player_name} è dove deve essere.</i>
                 
             + (fire) L'energia della voglia di fare, fare, fare ancora.
                     -> glyph_modifier_variation_management(PG, fireC)->
-                <i>Il vulcano si carica di energia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                {charTag(witch_tag(), witch_state())}<i>Il vulcano si carica di energia.
                 <i>Il suo fare scivola lungo la collina.
                 <i>Il terreno si fa fertile.
                 <i>Fertile è la volontà di {player_name}.
                 
             + (air) La curiosità di scoprire quali nuove cose accadranno.
                    -> glyph_modifier_variation_management(PG, airC)->
-                <i>La curiosità del falco lo spinge verso l'alto.
+                {charTag(witch_tag(), witch_state())}<i>La curiosità del falco lo spinge verso l'alto.
                 <i>Quella della talpa verso il basso.
-                <i>Abbiamo l'impressione che quella di {player_name} sappia seguire ogni direzione.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                <i>Abbiamo l'impressione che quella di {player_name} sappia seguire ogni direzione.</i>
                 
             + (earth) La soddisfazione di aver raggiunto un obbiettivo.
                     -> glyph_modifier_variation_management(PG, earthC)->
-                <i>Il leoncino salta di fosso in fosso, senza mai trovare pace.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                {charTag(witch_tag(), witch_state())}<i>Il leoncino salta di fosso in fosso, senza mai trovare pace.
                 <i>La leonessa si stende per ore dopo la caccia.
                 <i>Crogiolarsi nella soddisfazione è una dote che siamo liete {player_name} sappia coltivare.
             
             + (aether) La sorpresa di aver scoperto cose nuove su di me.
                     -> glyph_modifier_variation_management(PG, aetherC)->
-                <i>La luna distante sposta oceani.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                {charTag(witch_tag(), witch_state())}<i>La luna distante sposta oceani.
                 <i>Il vento invisibile sradica alberi.
                 <i>E {player_name} decide di osservare sé nella propria interezza.</i>
             -
 
-        <i>Riconoscere ciò che si prova a volte è un lusso che non tutti conoscono.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        <i>Riconoscere ciò che si prova a volte è un lusso che non tutti conoscono.
         <i>Soprattutto quando c'è qualcosa che fa star male.
         <i>A volte è solo qualcosa di personale.
         <i>A volte è il segno che qualcosa deve bruciare.
@@ -122,7 +122,7 @@
         ~ temp mentorName = translator(mentor_ActualName)
         ~ temp sigilUsed = false
 
-        <i>Il vento canta di una seconda riscrittura.
+        {charTag(witch_tag(), witch_state())}<i>Il vento canta di una seconda riscrittura.
         <i>I rami si riempiono di storie.
         <i>E {player_name} conosce ormai il proprio valore.
 
@@ -159,14 +159,14 @@
         
             + (water) Penso a {charNameTwo} e mi chiedo chi sarei ora, con una famiglia diversa alle spalle.
                     -> glyph_modifier_variation_management(PG, waterC)->
-                <i>La gemma sul ramo ignora il tronco, eppure cresce.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                {charTag(witch_tag(), witch_state())}<i>La gemma sul ramo ignora il tronco, eppure cresce.
                 <i>Il girino nuota, non importa la dimensione dello stagno.
                 <i>{player_name} prova a riscrivere il passato.
                 <i>La sua voce può forse cercare nuovi modi di guardarlo?</i>
      
             + (aether) Come {charNameOne} ho bisogno di uno scopo per vivere davvero, ma non lo trovo.
                     -> glyph_modifier_variation_management(PG, aetherC)->
-                <i>La rondine crea un nido di paglia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                {charTag(witch_tag(), witch_state())}<i>La rondine crea un nido di paglia.
                 <i>E quando l'inverno arriva il nido cade sul terreno.
                 <i>I funghi lo trasformano in cibo per il terreno.
                 <i>In primavera l'erba ricresce, il caldo la secca.
@@ -174,26 +174,26 @@
                             
             + (fire) Ho la sensazione che Mentore si senta viva solo se utile, e lo stesso è per me.
                     -> glyph_modifier_variation_management(PG, fireC)->
-                <i>Il colibrì vola ansioso di fiore in fiore.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                {charTag(witch_tag(), witch_state())}<i>Il colibrì vola ansioso di fiore in fiore.
                 <i>Se non mangia spesso, muore.
                 <i>Migliaia sono le piante nate dalla sua fatica.
                 <i>In quante ricordano il suo nome?
 
             + (air) COMMENTO LEGATO A PNG3.
                     -> glyph_modifier_variation_management(PG, airC)->
-                <i>Il sapere è una luce.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                {charTag(witch_tag(), witch_state())}<i>Il sapere è una luce.
                 <i>Il sapere è un rifugio.
                 <i>Una luce troppo forte confonde strada e burrone.
                 <i>Un rifugio col tempo può diventare prigione.</i>
          
             + (earth) Franco è sempre iperattivo. Forse lui ed io dovremmo imparare a riposare.
                     -> glyph_modifier_variation_management(PG, earthC)->
-                <i>Le radici si rilassano nel tepore del terreno.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                {charTag(witch_tag(), witch_state())}<i>Le radici si rilassano nel tepore del terreno.
                 <i>Le foglie ridono quando il vento le sfiora.
                 <i>L'albero cresce, l'albero riposa.
             -
         
-        <i>Un albero è un albero.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        <i>Un albero è un albero.
         <i>Quanti alberi fanno una foresta?
         <i>"Mi è successo questo", racconta qualcuna.
         <i>"Anche a me", risponde un'altra.
@@ -217,7 +217,7 @@
         ~ temp mentorName = translator(mentor_ActualName)
         ~ temp sigilUsed = false
 
-        <i>La cagnolina della posta è sorpresa da questa terza riscrittura.
+        {charTag(witch_tag(), witch_state())}<i>La cagnolina della posta è sorpresa da questa terza riscrittura.
         <i>La nuova chioma raccoglie i suoi dubbi.
         Se vive una oppressione?
 
@@ -289,7 +289,7 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
-        Descriviamo il vantaggio personale e collettivo di un gruppo rispetto all'esperienza della personaggia. Le scappatoie di questo gruppo, le irresponsabilità. Stesso gesto, scelte diverse.
+        {charTag(witch_tag(), witch_state())} Descriviamo il vantaggio personale e collettivo di un gruppo rispetto all'esperienza della personaggia. Le scappatoie di questo gruppo, le irresponsabilità. Stesso gesto, scelte diverse.
         E poi chiediamo alla giocatrice qualcosa sulla sua posizione di vantaggio, di privilegio.
 
         {
@@ -337,7 +337,7 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
-        Parliamo della necessità di lottare assieme per il cambiamento.
+        {charTag(witch_tag(), witch_state())} Parliamo della necessità di lottare assieme per il cambiamento.
         Il dolore e le fatiche personali rimangono, e serve trovare modi per stare bene. Ma nel mentre devono cambiare le leggi, i poteri, le culture che permettono l'oppressione.
         E la domanda ora è:
         come pensi di lottare, PG?

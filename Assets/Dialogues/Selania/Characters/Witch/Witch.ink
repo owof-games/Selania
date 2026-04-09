@@ -33,27 +33,27 @@
 
 
     = zero
-        <i>{~Nebbie sottili e ricordi pesanti|Formiche distanti su macchine arrugginite|Ritmi percussivi e voci silenti.}</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        {charTag(witch_tag(), witch_state())} <i>{~Nebbie sottili e ricordi pesanti|Formiche distanti su macchine arrugginite|Ritmi percussivi e voci silenti.}</i>
             -> main
 
     
     = one
-        <i>{~Vecchie radici si ancorano nella memoria.|La corteccia tenace resiste alla dimenticanza.|Porcellini di terra rotolano tra radici distese.}</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        {charTag(witch_tag(), witch_state())}<i>{~Vecchie radici si ancorano nella memoria.|La corteccia tenace resiste alla dimenticanza.|Porcellini di terra rotolano tra radici distese.}</i>
             -> main
     
     = two
-        <i>{~Il tronco chiede di percorrere nuove strade.|Pilastri reggono vecchie facciate.|Formiche inquiete cercano riparo nel vecchio legno.}</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        {charTag(witch_tag(), witch_state())}<i>{~Il tronco chiede di percorrere nuove strade.|Pilastri reggono vecchie facciate.|Formiche inquiete cercano riparo nel vecchio legno.}</i>
             -> main
 
     = three
-        <i>{~L'aria saggia scalda le foglie.|Una chioma stesa in cerca di risposte.|L'erba si rinfresca ai piedi della nuova ombra.}</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        {charTag(witch_tag(), witch_state())}<i>{~L'aria saggia scalda le foglie.|Una chioma stesa in cerca di risposte.|L'erba si rinfresca ai piedi della nuova ombra.}</i>
             -> main
 
     = four
-        <i>{~L'aria saggia scalda il petto.|Un braccio steso in cerca di risposte.|Il tronco si torce inquieto.|L'erba si rinfresca ai piedi della nuova ombra.}</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        {charTag(witch_tag(), witch_state())}<i>{~L'aria saggia scalda il petto.|Un braccio steso in cerca di risposte.|Il tronco si torce inquieto.|L'erba si rinfresca ai piedi della nuova ombra.}</i>
             -> main
 
     = five
-        <i>{~L'aria saggia scalda il petto.|Un braccio steso in cerca di risposte.|Il tronco si torce inquieto.|L'erba si rinfresca ai piedi della nuova ombra.}</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        {charTag(witch_tag(), witch_state())}<i>{~L'aria saggia scalda il petto.|Un braccio steso in cerca di risposte.|Il tronco si torce inquieto.|L'erba si rinfresca ai piedi della nuova ombra.}</i>
             -> main
 

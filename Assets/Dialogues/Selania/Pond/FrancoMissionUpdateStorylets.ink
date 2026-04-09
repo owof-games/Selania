@@ -334,7 +334,7 @@
     Perché il lavoro che fai è molto delicato.
     Molto.
     Ed è bello avere una guida, un'alleata così saggia.
-    <i>La saggezza ha molte facce, e una porta il volto di Franco.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+    {charTag(witch_tag(), witch_state())}   <i>La saggezza ha molte facce, e una porta il volto di Franco.</i>
     E ora quindi è il mio momento di aiutarti.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         
         -> franco_giftsManagement
@@ -448,10 +448,10 @@
         @animation:RewriterBook
 
         Girino, ma che carino questo sigillo!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-        {player_name} ha trovato {sigils_translator(nest_francoChosenSigil)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        {charTag(witch_tag(), witch_state())}   {player_name} ha trovato {sigils_translator(nest_francoChosenSigil)}.
         {sigils_translator(nest_francoChosenSigil)}, suona bene.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         Spero che la nostra amica comune ti dia anche le informazioni utili per capire come funzioni.
-        {player_name} troverà le informazioni su {sigils_translator(nest_francoChosenSigil)} direttamente nel Grimorio.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        {charTag(witch_tag(), witch_state())}   {player_name} troverà le informazioni su {sigils_translator(nest_francoChosenSigil)} direttamente nel Grimorio.
 
             //Aggiorno i testi
             ~ glyph_grimoireTripleSigilsUpdater()

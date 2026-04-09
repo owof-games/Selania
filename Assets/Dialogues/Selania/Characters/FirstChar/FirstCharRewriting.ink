@@ -141,7 +141,7 @@
             
             {
                 - story_endedStories == ():
-                    <i>{player_name} ha utilizzato la sua prima goccia di inchiostro per compiere una riscrittura.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    {charTag(witch_tag(), witch_state())}   <i>{player_name} ha utilizzato la sua prima goccia di inchiostro per compiere una riscrittura.</i>
             }
             
             
@@ -206,7 +206,7 @@
             
             {
                 - story_endedStories == ():
-                    <i>{player_name} ha utilizzato la sua seconda goccia di inchiostro per procedere con la riscrittura.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    {charTag(witch_tag(), witch_state())}   <i>{player_name} ha utilizzato la sua seconda goccia di inchiostro per procedere con la riscrittura.</i>
             }        
             
             {
@@ -281,7 +281,7 @@
             
                 {
                     - story_endedStories == ():
-                        <i>{player_name} ha utilizzato la terza goccia di inchiostro, proponendo una riscrittura.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                        {charTag(witch_tag(), witch_state())}   <i>{player_name} ha utilizzato la terza goccia di inchiostro, proponendo una riscrittura.</i>
                 }        
                 
                 {
@@ -343,7 +343,7 @@
             
                 {
                     - story_endedStories == ():
-                        <i>{player_name} ha utilizzato la quarta e ultima unità di inchiostro, compiendo il massimo di riscritture possibili.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                        {charTag(witch_tag(), witch_state())}   <i>{player_name} ha utilizzato la quarta e ultima unità di inchiostro, compiendo il massimo di riscritture possibili.</i>
                 }   
             
             -> ending
@@ -354,7 +354,7 @@
 
             {
                 - story_endedStories == ():
-                    <i>{player_name} sta per utilizzare il potere dell'<b><i>epilogo</b></i>.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    {charTag(witch_tag(), witch_state())}   <i>{player_name} sta per utilizzare il potere dell'<b><i>epilogo</b></i>.
             }  
         
             {
@@ -537,7 +537,7 @@
     ~ temp mentorName = translator(mentor_ActualName)
             {
                 - not rewriting_proposal_second_character.secret_ending or not rewriting_proposal_third_character.secret_ending:
-                    <i>{charNameOne} ripone piena fiducia in {player_name}, ed è pronta a condividere con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} una informazione importante.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    {charTag(witch_tag(), witch_state())}   <i>{charNameOne} ripone piena fiducia in {player_name}, ed è pronta a condividere con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} una informazione importante.</i>
             }
 
         Vorrei anche dirti una cosa, {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral

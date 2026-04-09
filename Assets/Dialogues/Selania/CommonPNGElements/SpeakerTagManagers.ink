@@ -14,6 +14,7 @@ LIST nest_speakersForEwWordTag = Influenced, Other
 {PNG:
     - PG:
         ~ return player_name
+    
     - FirstCharacter:
         {
             - !first_char_main_storylets.one.firstPresentation:
@@ -80,8 +81,8 @@ LIST nest_speakersForEwWordTag = Influenced, Other
             - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
                 ~ return "???"
             
-            - fourthChar_ActualName == Mentore:
-                ~ return "Mentore"
+            - fourthChar_ActualName == NonnaMolotov:
+                ~ return "Nonna Molotov"
         }    
     
     - Mentor:
@@ -98,8 +99,8 @@ LIST nest_speakersForEwWordTag = Influenced, Other
             - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
                 ~ return "???"
             
-            - mentor_ActualName == Mentore:
-                ~ return "Mentore"
+            - mentor_ActualName == Mostro:
+                ~ return "Mostro"
         }
     
     - TheWitch:

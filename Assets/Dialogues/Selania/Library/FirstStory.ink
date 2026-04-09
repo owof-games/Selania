@@ -1,7 +1,7 @@
 //Cognome/alias A-E
 
 === adri_allora
-<b>Il mio bellissimo gatto</b> di Adri Allora (ləi).<N>Trigger warning: violenza psicologica, abusi fisici.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+<b>Il mio bellissimo gatto</b> di Adri Allora (ləi).<N>Trigger warning: violenza psicologica, abusi fisici.
 
     + <i>Inizio la lettura.
     //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
@@ -48,7 +48,7 @@
             -> main
 
 === alexias_d_avino
-<b>Il Riflesso</b> di Alexias D'Avino (lui/lei).<N>Instagram: @togetherweread29<N>Trigger warning: lutto, rifiuto da parte della figura genitoriale.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+<b>Il Riflesso</b> di Alexias D'Avino (lui/lei).<N>Instagram: @togetherweread29<N>Trigger warning: lutto, rifiuto da parte della figura genitoriale.
         
         + <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
@@ -119,7 +119,7 @@
 
 
 === aza
-<b>Luna vergine</b> di Aza (any).<N>Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+<b>Luna vergine</b> di Aza (any).<N>Trigger warning: alcolismo, violenza fisica.
         
         + <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
@@ -172,7 +172,7 @@
 
 
 === steno_artico
-<b>Questa rabbia, che mi è stata rubata</b> by StenoArtico (he/him, none).<N>Instagram: @stenoartico<N>Trigger warning: violenza psicologica, abusi fisici, depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+<b>Questa rabbia, che mi è stata rubata</b> by StenoArtico (he/him, none).<N>Instagram: @stenoartico<N>Trigger warning: violenza psicologica, abusi fisici, depressione.
         
         + <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
@@ -216,7 +216,7 @@
 
 === b
 // <b>The touch of anger</b> di K.(she/her).
-<b>Il tocco della rabbia</b> di K.(she/her).<N>Trigger warning: violenza fisica, depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+<b>Il tocco della rabbia</b> di K.(she/her).<N>Trigger warning: violenza fisica, depressione.
         
         + <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
@@ -274,7 +274,7 @@
             -> main
 
 === beatrice
-<b>La rete non esiste</b> di Beatrice (she/her).<N>Instagram: @vistadibea<N>Trigger warning: depressione, religione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+<b>La rete non esiste</b> di Beatrice (she/her).<N>Instagram: @vistadibea<N>Trigger warning: depressione, religione.
         
         + <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
@@ -348,7 +348,7 @@
             -> main
             
 === beatrice_y_bottura
-<b>Artigli Rosso Ruggine</b> di Beatrice Y. Bottura (she/it).<N>Trigger warning: violenza psicologica, abusi fisici.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+<b>Artigli Rosso Ruggine</b> di Beatrice Y. Bottura (she/it).<N>Trigger warning: violenza psicologica, abusi fisici.
         
         + <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.

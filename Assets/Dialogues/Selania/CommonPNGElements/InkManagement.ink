@@ -132,7 +132,7 @@
 
     {ink_status:
         - ink_empty:
-            <i>E quindi.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            {charTag(witch_tag(), witch_state())}   <i>E quindi.
             <i>Dopo le molte parole spese <>
             {
                 - Character == FirstCharacter:
@@ -165,7 +165,7 @@
             <i>Potrà solo usare il potere dell'epilogo.
         
         - ink_low:
-            <i>E quindi.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            {charTag(witch_tag(), witch_state())}   <i>E quindi.
             <i>Dopo le molte parole spese <>
             {
                 - Character == FirstCharacter:
@@ -198,7 +198,7 @@
             <i>Potrà compiere una riscrittura e usare il potere dell'epilogo.</i>
         
         - ink_normal:
-            <i>E quindi.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            {charTag(witch_tag(), witch_state())}   <i>E quindi.
            <i>Dopo le molte parole spese <>
             {
                 - Character == FirstCharacter:
@@ -231,7 +231,7 @@
             <i>Potrà compiere due riscritture e usare il potere dell'epilogo.</i>
         
         - ink_medium:
-            <i>E quindi.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            {charTag(witch_tag(), witch_state())}   <i>E quindi.
             <i>Dopo le molte parole spese <>
             {
                 - Character == FirstCharacter:
@@ -264,7 +264,7 @@
             <i>Potrà compiere tre riscritture e usare il potere dell'epilogo.</i>
 
         - ink_high:
-            <i>E quindi.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            {charTag(witch_tag(), witch_state())}   <i>E quindi.
             <i>Dopo le molte parole spese <>
             {
                 - Character == FirstCharacter:
@@ -314,7 +314,7 @@
                 }
                 
         - else:
-            <i>Errore: non riesco a capire quante azioni {player_name} ha a disposizione.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            <i>Errore: non riesco a capire quante azioni {player_name} ha a disposizione.</i>
 
     }
 
@@ -365,19 +365,19 @@
     
     {ink_status:
         - ink_empty:
-            <i>non ha raccolto alcuna goccia di inchiostro#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            {charTag(witch_tag(), witch_state())}   <i>non ha raccolto alcuna goccia di inchiostro
         
         - ink_low:
-            <i>ha raccolto una goccia di inchiostro#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            {charTag(witch_tag(), witch_state())}   <i>ha raccolto una goccia di inchiostro
         
         - ink_normal:
-            <i>ha raccolto due gocce di inchiostro#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            {charTag(witch_tag(), witch_state())}   <i>ha raccolto due gocce di inchiostro
         
         - ink_medium:
-            <i>ha raccolto tre gocce di inchiostro#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}     
+            {charTag(witch_tag(), witch_state())}   <i>ha raccolto tre gocce di inchiostro     
         
         - ink_high:
-            <i>ha raccolto tre gocce di inchiostro, e col tempo riceverà da <>
+            {charTag(witch_tag(), witch_state())}   <i>ha raccolto tre gocce di inchiostro, e col tempo riceverà da <>
                 {Character:
                     - FirstCharacter:
                         {translator(firstChar_ActualName)} <>
@@ -395,10 +395,10 @@
                         {translator(fifthChar_ActualName)} <>
 
                 }
-                una informazione importante.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                una informazione importante.</i>
 
         - else:
-            <i>Errore: non riesco a capire quante azioni {player_name} ha a disposizione.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            <i>Errore: non riesco a capire quante azioni {player_name} ha a disposizione.</i>
             {debug: <i>Il livello di inchiostro per la prima personaggia è {firstChar_InkLevel}}
     
     }
@@ -426,22 +426,22 @@
     
     {ink_status:
         - ink_empty:
-            nessuna goccia di inchiostro.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            nessuna goccia di inchiostro.</i>
         
         - ink_low:
-            una goccia di inchiostro.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            una goccia di inchiostro.</i>
         
         - ink_normal:
-            due gocce di inchiostro.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            due gocce di inchiostro.</i>
         
         - ink_medium:
-            tre gocce di inchiostro.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}     
+            tre gocce di inchiostro.</i>     
         
         - ink_high:
-            quattro gocce di inchiostro, e una informazione importante.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            quattro gocce di inchiostro, e una informazione importante.</i>
         
         - else:
-            <i>Errore: non riesco a capire quante azioni {player_name} ha a disposizione.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            <i>Errore: non riesco a capire quante azioni {player_name} ha a disposizione.</i>
             {debug: <i>Il livello di inchiostro per la prima personaggia è {firstChar_InkLevel}}
 
     

@@ -1,6 +1,6 @@
 //Cognome/alias L - R
 === lamia
-<b>Il sassolino</b> di Lamia (she/they).<N>Instagram: @mannaggiate_#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+<b>Il sassolino</b> di Lamia (she/they).<N>Instagram: @mannaggiate_
     //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
         {
             - library_unreadStories has Lamia:
@@ -41,7 +41,7 @@
 
 
 === loris_casagrandi
-<b>Volevo essere solo cervello</b>, di Loris Casagrandi (he/him - she/her).<N>Instagram: @lorisdesign4exp<N>Trigger warning: riferimento a gesti ti autolesionismo o violenza.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+<b>Volevo essere solo cervello</b>, di Loris Casagrandi (he/him - she/her).<N>Instagram: @lorisdesign4exp<N>Trigger warning: riferimento a gesti ti autolesionismo o violenza.
         
         + <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
@@ -81,7 +81,7 @@
 
 
 === val_fausto_lattanzio
-<b>Home</b>, di Val Fausto Lattanzio (he/they).<N>Instagram: @_whimsival<N>Trigger warning: disforia, dismorfia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+<b>Home</b>, di Val Fausto Lattanzio (he/they).<N>Instagram: @_whimsival<N>Trigger warning: disforia, dismorfia.
 
         + <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
@@ -119,7 +119,7 @@
             -> main
 
 === romi
-<b>Il principe sbagliato</b> di Sofia Abatangelo alias Romi alias Romi Sofia Abatangelo(any).<N>Instagram: @romiabatangelo<N>Trigger warning: violenza psicologica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+<b>Il principe sbagliato</b> di Sofia Abatangelo alias Romi alias Romi Sofia Abatangelo(any).<N>Instagram: @romiabatangelo<N>Trigger warning: violenza psicologica.
         + <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {

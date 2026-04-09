@@ -6,10 +6,10 @@
 
 {
     - nest == 1:
-        <i>Vecchie piogge e onde come monito.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        {charTag(witch_tag(), witch_state())}   <i>Vecchie piogge e onde come monito.</i>
         {
             - contentsNest has fireGlyph:
-                <i>E un glifo rosso già attende {player_name}, dono di una persona amica dopo la sua riscrittura.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                <i>E un glifo rosso già attende {player_name}, dono di una persona amica dopo la sua riscrittura.</i>
         }
 }
 

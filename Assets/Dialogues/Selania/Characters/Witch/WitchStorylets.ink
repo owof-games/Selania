@@ -5,7 +5,7 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
     
-        <i>Crediamo sia giunto il momento di presentarci, {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        {charTag(witch_tag(), witch_state())}   <i>Crediamo sia giunto il momento di presentarci, {player_name}.
         <i>Aspettiamo {player_name} ai margini della foresta.
 
             -> witch_closing_storylet ->
@@ -18,7 +18,7 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-        <i>A volte dimentichiamo quando sarà ieri, cos'è successo domani.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+        {charTag(witch_tag(), witch_state())}   <i>A volte dimentichiamo quando sarà ieri, cos'è successo domani.
         <i>Ma non dimentichiamo mai {player_name}.
         <i>Le nostre radici vibrano di voci, i nostri crateri si riempiono di storie.
         <i>{player_name} ci ha portato questa gioia.
@@ -27,7 +27,7 @@
             + Grazie per avermi guidat{player_pronouns has him:o|{player_pronouns has her:a|ə}} dall'inizio.
                     -> glyph_modifier_variation_management(PG, waterC)->
 
-                <i>E grazie a {player_name} per aver guidato noi.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                {charTag(witch_tag(), witch_state())}   <i>E grazie a {player_name} per aver guidato noi.
                 <i>La separazione è una illusione.
                 <i>{player_name} è noi, noi siamo {charNameOne}.
                 <i>{charNameOne} è {charNameTwo} che è {charNameThree} che è {mentorName}.
@@ -37,7 +37,7 @@
             + Esci dalla mia testa! Subito!
                     -> glyph_modifier_variation_management(PG, fireC)->
 
-                <i>Non siamo nella testa di {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                {charTag(witch_tag(), witch_state())}   <i>Non siamo nella testa di {player_name}.
                 <i>Non più di quanto {player_name} sia nella sua stessa testa.
                 <i>Non meno di quanto {player_name} sia nella nostra.
                 <i>È come se {player_name} ci chiedesse di non essere.
@@ -46,7 +46,7 @@
             + Parli di radici: sei un albero?
                     -> glyph_modifier_variation_management(PG, airC)->
 
-                <i>Le piante raccontano storie da notte a giorno. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                {charTag(witch_tag(), witch_state())}   <i>Le piante raccontano storie da notte a giorno. 
                 <i>E noi non siamo una pianta.
                 <i>Ma siamo una pianta.
                 <i>E non parliamo.
@@ -59,18 +59,18 @@
             + Perché non mi hai detto subito di essere reale?
                     -> glyph_modifier_variation_management(PG, earthC)->
 
-                <i>{player_name} sente l'odore del Canto delle Compagne.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                {charTag(witch_tag(), witch_state())}   <i>{player_name} sente l'odore del Canto delle Compagne.
                 <i>E sa che è reale.
                 <i>{player_name} sente il legame che ha con {charNameTwo}, e sa che è reale.
                 <i>Una voce {player_pronouns has him:lo|{player_pronouns has her:la|lə}} accompagna, e non è reale?
         
             + "Cosa è successo domani": il tempo qui funziona in modo strano?
                     -> glyph_modifier_variation_management(PG, aetherC)->
-                <i>La mosca vive un'istante, ma per lei il suo tempo è una vita.
+                {charTag(witch_tag(), witch_state())}   <i>La mosca vive un'istante, ma per lei il suo tempo è una vita.
                 <i>Noi viviamo nel sempremai, e confondiamo i tempi.
                 <i>Ma il tempo di {player_name} è quello giusto per {player_name}.
             -
-        <i>Noi siamo sussurro e siamo ascolto. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        <i>Noi siamo sussurro e siamo ascolto. 
         <i>Un sorriso attento ai bisogni di {player_name}.
         <i>Ricordiamo il tempo in cui un nome era importante anche per noi.
         <i>Ci hanno chiamate Strega, Radice e Fiamma.
@@ -112,7 +112,7 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    <i>Le radici ci raccontano dell'incontro di {player_name} con Franco.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+    {charTag(witch_tag(), witch_state())}   <i>Le radici ci raccontano dell'incontro di {player_name} con Franco.
     <i>E il nostro tronco porta il ricordo di Franco e di tutte le rane venute prima e dopo di lui.
     <i>Franco è un'anima semplice con un grande impegno.
     <i>Franco è come il vento che invisibile porta pollini e alleggerisce il volo delle rondini.
@@ -139,7 +139,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-    <i>Abbiamo osservato {player_name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+    {charTag(witch_tag(), witch_state())}   <i>Abbiamo osservato {player_name}.
     <i>L'abbiamo vist{player_pronouns has him:o|{player_pronouns has her:a|ə}} accogliere tutte le storie di <>
         {
             - listDumpCharActivators has FirstCharacter:
@@ -191,7 +191,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    <i>{player_name} continua a stupirci.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+    {charTag(witch_tag(), witch_state())}   <i>{player_name} continua a stupirci.
     <i>E lo stupore viene da quanto tempo ha dedicato alle parole di <>
         {
             - listDumpCharActivators has FirstCharacter && witch_mainStoryPNG hasnt FirstCharacter:
@@ -241,7 +241,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    <i>Un'altra storia ascoltata fino alla sua foce.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+    {charTag(witch_tag(), witch_state())}   <i>Un'altra storia ascoltata fino alla sua foce.
     <i>Un altro fiume attraversato da {player_name}.
     <i>Siamo sicure che <>
         {
@@ -290,7 +290,7 @@
     ~ temp mentorName = translator(mentor_ActualName)
 
 
-    <i>Sono tante le cose che {player_name} ha ascoltato da <>
+    {charTag(witch_tag(), witch_state())}   <i>Sono tante le cose che {player_name} ha ascoltato da <>
         {
             - listDumpCharActivators has FourthCharacter && witch_mainStoryPNG hasnt FourthCharacter:
                     ~ witch_mainStoryPNG += FourthCharacter
@@ -299,7 +299,7 @@
                     ~ witch_mainStoryPNG += FifthCharacter
                     {charNameFive},<>
         }
-    e poche le cose che vorremmo ancora raccontar{player_pronouns has him:gli|{player_pronouns has her:le|lə}}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+    e poche le cose che vorremmo ancora raccontar{player_pronouns has him:gli|{player_pronouns has her:le|lə}}.
     <i>Per un cucciolo ogni bastone è un nuovo gioco.
     <i>Ma per un cane adulto un bastone è solo un bastone.
     <i>Al cambiamento bisognerebbe arrivare come cuccioli.
@@ -331,7 +331,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    <i>{player_name} ha ascoltato le storie di tutte, anche di <>
+    {charTag(witch_tag(), witch_state())}   <i>{player_name} ha ascoltato le storie di tutte, anche di <>
 
         {
             - listDumpCharActivators has FourthCharacter && witch_mainStoryPNG hasnt FourthCharacter:
@@ -341,7 +341,7 @@
                     ~ witch_mainStoryPNG += FifthCharacter
                     {charNameFive}, <>
         }
-    e ora si conclude anche la nostra.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+    e ora si conclude anche la nostra.
     <i>"Volevi conoscere l'acqua, ma ti sei fatta nuotare", mi aveva detto Franco.
     <i>E un'altra persona saggia diceva sempre: "Noi siamo le nostre relazioni".
     <i>Quella persona aveva passato due anni a cucinare tra quegli spazi che avevo reso maceria.
@@ -372,7 +372,7 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(mentor_ActualName)
 
-    <i>{player_name} ha finito le riscritture.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+    {charTag(witch_tag(), witch_state())}   <i>{player_name} ha finito le riscritture.
     <i>Ci sono ancora un po' di cose da fare, ma se vuole, prima di continuare, possiamo sbloccare tutte le informazioni mancanti riguardo ai sigilli.
     <i>Per il piacere di condividere la conoscenza.
 
@@ -396,6 +396,7 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(mentor_ActualName)
 
+    {charTag(witch_tag(), witch_state())}    Cose
     
         + Scelta verde.
             -> glyph_modifier_variation_management(PG, waterC)->

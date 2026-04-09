@@ -36,7 +36,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
 
         {
             - not first_char_main_storylets.nine:
-                <i>{charNameOne} ha ancora spunti di conversazione da offrire a {player_name}, se {player_name} deciderà di parlarle ancora un po'.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                {charTag(witch_tag(), witch_state())}   <i>{charNameOne} ha ancora spunti di conversazione da offrire a {player_name}, se {player_name} deciderà di parlarle ancora un po'.</i>
         }
     
         + Dei rapporti che hai con le persone che ti sono care.
@@ -1056,7 +1056,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
     
         {
             - backpack_findedGifts == (): 
-                <i>{player_name} non ha ingredienti da aggiungere.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                {charTag(witch_tag(), witch_state())}   <i>{player_name} non ha ingredienti da aggiungere.</i>
                     -> recipe_name_creator ->
                     -> recipe_name_storage(FirstCharacter) ->
                     -> at_table_with_first_char
@@ -1073,7 +1073,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-            <i>Il giusto ingrediente renderà la ricetta di {player_name} e {charNameOne} musicale.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            {charTag(witch_tag(), witch_state())}   <i>Il giusto ingrediente renderà la ricetta di {player_name} e {charNameOne} musicale.</i>
             <i>E {player_name} potrebbe capire un po' meglio {charNameOne}.</i>
        
                 + <i>Aggiungo un ingrediente speciale.</i>

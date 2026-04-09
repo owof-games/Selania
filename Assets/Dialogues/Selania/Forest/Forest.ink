@@ -6,7 +6,7 @@
 
 {
     - forest == 1:
-        <i>La foresta è canto sospeso.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        {charTag(witch_tag(), witch_state())}   <i>La foresta è canto sospeso.</i>
 }
 
 -> main

@@ -1,7 +1,7 @@
 //Cognome/alias S - Z
 
 === salvo
-<b>Il cancello</b> di Salvo (he/him).<N>Instagram: @about_to_tore.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+<b>Il cancello</b> di Salvo (he/him).<N>Instagram: @about_to_tore.
     //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
         {
             - library_unreadStories has Salvo:
@@ -41,7 +41,7 @@
 
 
 === maura
-    <b>Polvere</b> di Maura (she/they).<N>Instagram: @maura_sacca<N>Trigger warning: violenza fisica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+    <b>Polvere</b> di Maura (she/they).<N>Instagram: @maura_sacca<N>Trigger warning: violenza fisica.
        
         + <i>Inizio la lettura.
     //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
@@ -82,7 +82,7 @@
 
 
 === simo
-<b>SCP</b> di Simo (they/he).<N>Instagram: @il_radioattivo<N>Trigger violenza, deadnaming, morte.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+<b>SCP</b> di Simo (they/he).<N>Instagram: @il_radioattivo<N>Trigger violenza, deadnaming, morte.
         + <i>Inizio la lettura.
 //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
@@ -130,7 +130,7 @@
             
 
 === letizia_vaccarella
-<b>Dodici stelle</b> di Letizia Vaccarella (she/her).<N>Instagram: @aidoruinquantumland<N>Trigger warning: depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+<b>Dodici stelle</b> di Letizia Vaccarella (she/her).<N>Instagram: @aidoruinquantumland<N>Trigger warning: depressione.
         + <i>Inizio la lettura.
 //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
@@ -187,7 +187,7 @@
 //                 ~ library_readStories += QueerginiaWolf
 //                  -> refresh_book_lists ->
 //         }
-// <b>Giallo</b> di Queerginia Wolf/Marco Spelgatti (she/he/they).<N>Instagram: @queerginiawolf#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+// <b>Giallo</b> di Queerginia Wolf/Marco Spelgatti (she/he/they).<N>Instagram: @queerginiawolf
 //         -> DarkLibraryModeOn ->
 //         ~ enableBigDialogue()
 
