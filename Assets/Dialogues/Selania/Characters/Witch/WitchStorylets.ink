@@ -120,21 +120,24 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-
-// Rifiuto e negazione: parla del crollo, del furto di un documento a una compagna che l’ha portata in quel luogo, ma colpevolizza le compagne → si è sentita abbandonata.
     
     <i>Abbiamo osservato {player_name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
     <i>L'abbiamo vist{player_pronouns has him:o|{player_pronouns has her:a|ə}} accogliere tutte le storie di <>
         {
             - listDumpCharActivators has FirstCharacter:
+                    ~ witch_mainStoryPNG += FirstCharacter
                     {charNameOne},<>
             - listDumpCharActivators has SecondCharacter:
+                    ~ witch_mainStoryPNG += SecondCharacter
                     {charNameTwo},<>
             - listDumpCharActivators has ThirdCharacter:
+                    ~ witch_mainStoryPNG += ThirdCharacter
                     {charNameThree},<>
             - listDumpCharActivators has FourthCharacter:
+                    ~ witch_mainStoryPNG += FourthCharacter
                     {charNameFour},<>
             - listDumpCharActivators has FifthCharacter:
+                    ~ witch_mainStoryPNG += FifthCharacter
                     {charNameFive},<>
         }
     e abbiamo pensato che {player_name} potrebbe ascoltare un pezzo della nostra.
@@ -143,16 +146,20 @@
     <i>Un tempo di confusione.
     <i>Ma non lo sapevamo.
     <i>E abbiamo fatto cose sbagliate.
-    <i>Come tradire una persona amica, qualcuna che faceva parte della nostra congrega.
-    <i>Qualcuna che aveva trovato un modo per arrivare in un luogo speciale, un luogo del possibile.
+    <i>Come tradire una persona amica.
+    <i>Qualcuna che aveva trovato un modo per arrivare in un luogo speciale, un luogo impossibile.
     <i>Noi le abbiamo rubato quel sapere, {player_name}.
-    <i>Noi siamo arrivate qui dicendo che avremmo salvato il mondo.
-    <i>Ma volendo sentirci solo importanti.
-    <i>Viste.
-    <i>Abbiamo fatto di tutto per essere viste, apprezzate, amate.
+    <i>Noi, io sono arrivata qui dicendo che avrei salvato il mondo.
+    <i>Ma volevo soltanto sentirmi importante.
+    <i>Essere vista.
+    <i>I perché contano, {player_name}.
+    <i>E i miei perché erano sbagliati.
+    <i>La madre becca il pullo per pulirgli le piume.
+    <i>Il padre becca il pullo per ucciderlo.
+    <i>E noi abbiamo cercato risposte che ci facessero sentire apprezzate.
     <i>Così tanto da venire abbandonate.
-    <i>C'è stato un tempo di confusione.
-    <i>E poi è arrivato il dolore.
+    <i>Abbiamo scoperto che eravamo confuse solo quando la confusione se ne è andata.
+    <i>Lasciando spazio al dolore.
     <i>Ma una vita è lunga da raccontare.
     <i>A dopo, {player_name}.
 
@@ -166,13 +173,48 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-// Rabbia: incontro con Franco. crea la discarica per bloccare l’accesso da cui erano arrivate, in un mix di “sono pericolosa per gli altri” e “questo posto è pericoloso, il mondo non lo deve avere”. Ha cercato di uccidere l'albero, l'ha tagliato lei. Non voleva che rimanesse niente di chi l'ha abbandonata.
-    
-    <i>{player_name} continua a stupirci.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
-    
 
-    -> witch_closing_storylet ->
-    -> main
+    <i>{player_name} continua a stupirci.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+    <i>E lo stupore viene da quanto tempo ha dedicato alle parole di <>
+        {
+            - listDumpCharActivators has FirstCharacter && witch_mainStoryPNG hasnt FirstCharacter:
+                    ~ witch_mainStoryPNG += FirstCharacter
+                    {charNameOne}.
+            - listDumpCharActivators has SecondCharacter && witch_mainStoryPNG hasnt SecondCharacter:
+                    ~ witch_mainStoryPNG += SecondCharacter
+                    {charNameTwo}.
+            - listDumpCharActivators has ThirdCharacter && witch_mainStoryPNG hasnt ThirdCharacter:
+                    ~ witch_mainStoryPNG += ThirdCharacter
+                    {charNameThree}.
+            - listDumpCharActivators has FourthCharacter && witch_mainStoryPNG hasnt FourthCharacter:
+                    ~ witch_mainStoryPNG += FourthCharacter
+                    {charNameFour}.
+            - listDumpCharActivators has FifthCharacter && witch_mainStoryPNG hasnt FifthCharacter:
+                    ~ witch_mainStoryPNG += FifthCharacter
+                    {charNameFive}.
+        }
+    <i>Speriamo quindi voglia accogliere ancora anche le nostre.
+    <i>Perché è da tempo che sentiamo il bisogno di raccontare la nostra storia.
+    <i>Di cosa c'è stato dopo il dolore dell'abbandono.
+    <i>Era profondo come l'oceano, quel dolore, e lo sappiamo perché abbiamo provato a raggiungerne il fondo.
+    <i>Sassi in tasca e occhi spenti.
+    <i>Ma l'acqua nei polmoni ha acceso un rogo.
+    <i>Le sue fiamme hanno allontanato le ombre, la sua foga ci ha riportate a riva.
+    <i>La sabbia si è fatta vetro mentre gridavamo.
+    <i>Mentre insultavamo ogni nome di chi ci aveva abbandonate.
+    <i>Dalla biblioteca alla cucina alla serra, abbiamo distrutto tutto ciò che avevano creato.
+    <i>Portato le macerie qui, su questa collina, per far sì che niente potesse entrare.
+    <i>E con le mani stanche, abbiamo distrutto un albero.
+    <i>Un albero che era una promessa, che era una possibilità.
+    <i>Un albero curato da una persona amata.
+    <i>Il dolore si è fatto rabbia.
+    <i>La rabbia si è fatta disprezzo.
+    <i>E quando siamo, quando sono crollata davanti a queste radici, mi sono odiata.
+    <i>Il ricordo ci brucia anche ora, {player_name}.
+    <i>Per cui ci prendiamo un pezzo di tempo, un poco di cura.
+    
+        -> witch_closing_storylet ->
+        -> main
 
 === witch_third_confession
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -181,11 +223,47 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-// Contrattazione: Franco le dice“ Sei sempre stata come XXX che cercava di essere YYY invece di essere totalmente XXX”. 
+// Contrattazione: Franco le dice“ Sei sempre stata come XXX che cercava di essere YYY invece di essere totalmente XXX”.
+    <i>Un'altra storia ascoltata fino alla sua foce.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+    <i>Un altro fiume attraversato da {player_name}.
+    <i>Siamo sicure che <>
+        {
+            - listDumpCharActivators has FirstCharacter && witch_mainStoryPNG hasnt FirstCharacter:
+                    ~ witch_mainStoryPNG += FirstCharacter
+                    {charNameOne} si senta sollevata <>
+            - listDumpCharActivators has SecondCharacter && witch_mainStoryPNG hasnt SecondCharacter:
+                    ~ witch_mainStoryPNG += SecondCharacter
+                    {charNameTwo} si senta sollevato <>
+            - listDumpCharActivators has ThirdCharacter && witch_mainStoryPNG hasnt ThirdCharacter:
+                    ~ witch_mainStoryPNG += ThirdCharacter
+                    {charNameThree} si senta sollevato <>
+            - listDumpCharActivators has FourthCharacter && witch_mainStoryPNG hasnt FourthCharacter:
+                    ~ witch_mainStoryPNG += FourthCharacter
+                    {charNameFour} si senta sollevata <>
+            - listDumpCharActivators has FifthCharacter && witch_mainStoryPNG hasnt FifthCharacter:
+                    ~ witch_mainStoryPNG += FifthCharacter
+                    {charNameFive} si senta sollevata <>
+        }
 
-
-    -> witch_closing_storylet ->
-    -> main
+    dopo questa lunga condivisione.
+    <i>Noi nel dolore abbiamo trovato sollievo in una rana.
+    <i>Avevamo passato anni tra questi luoghi, ma cieche di orgoglio, cieche di razionalità, non ci eravamo mai accorte di non essere sole.
+    <i>Franco ci ha accolte come delle vecchie amiche.
+    <i>Franco sapeva tante cose di noi.
+    <i>Ogni giorno, per settimane, ci ha accolte lungo le sue rive, nuotando nell'acqua delle nostre parole.
+    <i>Il disprezzo per noi stesse si è fatto domanda, la domanda ha cercato comprensione.
+    <i>Un giorno abbiamo chiesto a Franco dove abbiamo sbagliato.
+    <i>"Volevi conoscere l'acqua, ma ti sei fatta nuotare."
+    <i>E coi piedi immersi nello stagno, abbiamo creduto di capire.
+    <i>Abbiamo ripreso a studiare, ma questa volta pensando alle persone amiche, pensando a come avrei potuto aiutarle.
+    <i>Ho riconosciuto il mio errore, e ho cercato un modo di farmi perdonare.
+    <i>Il disprezzo si è fatto domanda, la domanda comprensione.
+    <i>E la comprensione un primo passo verso un nuovo errore.
+    <i>Ma ora {player_name} ha altre cose importanti da fare.
+    <i>E noi abbiamo bisogno di un attimo per respirare.
+    
+        -> witch_closing_storylet ->
+        -> main
 
 === witch_fourth_confession
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -194,8 +272,25 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-// Depressione: è la storyline che dovrebbe arrivare dopo la riscrittura di Nonna Molotov, cosa racconta?
+// Depressione: è la storyline che dovrebbe arrivare dopo la riscrittura di Nonna Molotov, cosa racconta? (senso di fallimento per il non cambiamento)
 //Sicuro ci dirà comunque che a quel punto aveva capito che U.O.J. aveva ragione, che il fulcro di tutto è la relazione, ma oramai non aveva nessuno con cui interagire.
+        {
+            - listDumpCharActivators has FirstCharacter && witch_mainStoryPNG hasnt FirstCharacter:
+                    ~ witch_mainStoryPNG += FirstCharacter
+                    {charNameOne},<>
+            - listDumpCharActivators has SecondCharacter && witch_mainStoryPNG hasnt SecondCharacter:
+                    ~ witch_mainStoryPNG += SecondCharacter
+                    {charNameTwo},<>
+            - listDumpCharActivators has ThirdCharacter && witch_mainStoryPNG hasnt ThirdCharacter:
+                    ~ witch_mainStoryPNG += ThirdCharacter
+                    {charNameThree},<>
+            - listDumpCharActivators has FourthCharacter && witch_mainStoryPNG hasnt FourthCharacter:
+                    ~ witch_mainStoryPNG += FourthCharacter
+                    {charNameFour},<>
+            - listDumpCharActivators has FifthCharacter && witch_mainStoryPNG hasnt FifthCharacter:
+                    ~ witch_mainStoryPNG += FifthCharacter
+                    {charNameFive},<>
+        }
 
     -> witch_closing_storylet ->
     -> main
@@ -209,6 +304,23 @@
     ~ temp mentorName = translator(mentor_ActualName)
 // Accettazione: decide di riscrivere il suo nome nel nome del luogo, di Selanìa, scoperto attraverso Franco, in modo da perdersi nel luogo stesso e diventare pura relazione, per attirare persone bisognose della riscrittura.
 // Capisce solo ora le parole di Franco di settimane prima: “A quel punto ha capito che sì, aveva sbagliato, ma che non serviva piangere, non serviva essere qualcosa che non era: serviva accogliere la sua indole più profonda, trasformativa, come quella dei sigilli, e far sì che altre persone potessero avere uno spazio sicuro in cui ritrovarsi, farsi forti per uscire da lì, cambiare le cose. Diventare Selanìa, diventare il luogo in cui ci troviamo.” Come siamo diventate "noi"
+        {
+            - listDumpCharActivators has FirstCharacter && witch_mainStoryPNG hasnt FirstCharacter:
+                    ~ witch_mainStoryPNG += FirstCharacter
+                    {charNameOne},<>
+            - listDumpCharActivators has SecondCharacter && witch_mainStoryPNG hasnt SecondCharacter:
+                    ~ witch_mainStoryPNG += SecondCharacter
+                    {charNameTwo},<>
+            - listDumpCharActivators has ThirdCharacter && witch_mainStoryPNG hasnt ThirdCharacter:
+                    ~ witch_mainStoryPNG += ThirdCharacter
+                    {charNameThree},<>
+            - listDumpCharActivators has FourthCharacter && witch_mainStoryPNG hasnt FourthCharacter:
+                    ~ witch_mainStoryPNG += FourthCharacter
+                    {charNameFour},<>
+            - listDumpCharActivators has FifthCharacter && witch_mainStoryPNG hasnt FifthCharacter:
+                    ~ witch_mainStoryPNG += FifthCharacter
+                    {charNameFive},<>
+        }
 
     -> witch_closing_storylet ->
     -> main

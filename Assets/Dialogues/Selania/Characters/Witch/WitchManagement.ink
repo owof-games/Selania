@@ -3,9 +3,9 @@
     VAR witch_pauseDuration = 1
     VAR witchChar_justTalked = false
 
-//Variabili per la gestione del debrief
+//Variabili per la gestione del debrief e degli storylets personali
     VAR witch_debriefPNG = ()
-
+    VAR witch_mainStoryPNG = ()
 
 //Variabili per la gestione del ritratto
     LIST witch_moonPhases = NewMoon, FirstQuarter, FullMoon, ThirdQuarter, RedMoon
