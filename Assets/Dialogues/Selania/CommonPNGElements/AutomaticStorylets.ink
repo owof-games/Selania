@@ -1,7 +1,3 @@
-VAR firstChar_PondInvite = false
-VAR secondChar_ForestInvite = false
-VAR thirdChar_LibraryInvite = false
-
 === automatic_storylets ===
 {debug: passo per automatic_storylets.}
 
@@ -16,8 +12,6 @@ VAR thirdChar_LibraryInvite = false
             APERTURE LUOGHI
 
 *******************************************/
-
-
 {
     //Invito allo stagno per aprire la cucina
     - are_two_entities_together(FirstCharacter, PG) && ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar) + LIST_COUNT(grimoire_thirdChar)) > openingKitchen_delay) && contentsPond hasnt PG && player_accessiblePlaces hasnt Kitchen:
@@ -78,7 +72,6 @@ VAR thirdChar_LibraryInvite = false
             STORYLETS COLLETTIVI
 
 *******************************************/
-
 
 {
 
@@ -147,7 +140,6 @@ VAR thirdChar_LibraryInvite = false
         - are_two_entities_together(Franco, PG) && entity_location(PG) == Nest && nest_francoChosenSigil != ():
             -> special_mission_one_closed 
 }  
-
 
 /*******************************************
 

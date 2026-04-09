@@ -1,6 +1,10 @@
-//gestione della pausa per gli storylets comuni e automatici.
+//Gestione della pausa per gli storylets comuni e automatici.
 VAR png_commonPauseTalking = false
 
+//Gestione degli inviti.
+VAR firstChar_PondInvite = false
+VAR secondChar_ForestInvite = false
+VAR thirdChar_LibraryInvite = false
 
 === endingPNGstory(PNG)
 //Chiamiamo questa funzione a fine riscrittura, per fare tutti i passaggi previsti di quando finisce una storia.
@@ -64,21 +68,17 @@ VAR png_commonPauseTalking = false
 }
 
 
-
-
 //Elementi non dipendenti dallx PNG
 ~ temp currentPlace = entity_location(PG)
 ~ move_entity(TrainNoiseGoingAway, currentPlace)
 ~ numberQuestion = 0
 @animation:RewriterBook
 
-        
 -> achievements_onGame_statusUpdate_GM ->        
 -> main  
         
     
 === grimoire_common_storylets_updater
-
         {
             //First Char
             - first_second_chit_chat && grimoire_firstChar hasnt grimFirstSecondChar:
