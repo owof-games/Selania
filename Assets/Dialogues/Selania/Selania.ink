@@ -31,14 +31,13 @@
 //File dedicati alla gestione delle personagge
     INCLUDE CommonPNGElements\ScheduleFunctions.ink
     INCLUDE CommonPNGElements\InkManagement.ink
-    INCLUDE CommonPNGElements\CommonStoryletsManager.ink
     INCLUDE CommonPNGElements\CommonStorylets.ink
-    INCLUDE CommonPNGElements\SpecialStorylets.ink
     INCLUDE CommonPNGElements\OnMovementsEvents.ink
     INCLUDE CommonPNGElements\GiftsAndIngredientFunctions.ink
     INCLUDE CommonPNGElements\NamingFunctions.ink
     INCLUDE CommonPNGElements\SpeakerTagManagers.ink
     INCLUDE CommonPNGElements\Functions.ink
+    INCLUDE CommonPNGElements\AutomaticStorylets.ink
     INCLUDE CommonPNGElements\ChoicesManagement\SigilsTranslator.ink
     INCLUDE CommonPNGElements\ChoicesManagement\GlyphsVarAndLists.ink
     INCLUDE CommonPNGElements\ChoicesManagement\ChoicesManager.ink
