@@ -9,11 +9,13 @@ LIST nest_speakersForEwWordTag = Influenced, Other
 === function charTag(PNG, mood)
 ~ temp displayName = charName(PNG)
 ~ return "{PNG}, {displayName}, {mood}"
+{debug: entro in charTag(PNG, mood). Il valore di PNG è {PNG}, di displayName {displayName}, di mood {mood}.}
 
 === function charName(PNG)
 {debug: entro in charName. Il valore di PNG è {PNG}.}
 {PNG:
     - PG:
+    {debug: Arrivo a PG}
         ~ return "{player_name}"
     
     - FirstCharacter:
@@ -153,6 +155,9 @@ LIST nest_speakersForEwWordTag = Influenced, Other
 
     - Doggo:
         ~ return "Doggo"
+
+    - else:
+        ERROR: name not found. PNG = {PNG}.
 
 }
 

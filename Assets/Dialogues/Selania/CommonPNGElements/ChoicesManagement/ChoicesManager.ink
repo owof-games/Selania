@@ -372,19 +372,19 @@ Recap della logica.
     //Qui invece abbiamo le reazioni dellx PNG
     {
         //Ai sigilli, se attivi
-        - glyph_currentTalker == FirstCharacter && glyph_mainTalker hasnt FirstCharacter && glyph_actualActiveSigil != ():
+        - glyph_currentTalker == FirstCharacter && glyph_actualActiveSigil != ():
             -> sigil_FirstCharacter_reactions
         
-        - glyph_currentTalker == SecondCharacter && glyph_mainTalker hasnt SecondCharacter && glyph_actualActiveSigil != ():
+        - glyph_currentTalker == SecondCharacter && glyph_actualActiveSigil != ():
             -> sigil_SecondCharacter_reactions
 
-        - glyph_currentTalker == ThirdCharacter && glyph_mainTalker hasnt ThirdCharacter && glyph_actualActiveSigil != ():
+        - glyph_currentTalker == ThirdCharacter && glyph_actualActiveSigil != ():
             -> sigil_ThirdCharacter_reactions
 
-        - glyph_currentTalker == FourthCharacter  && glyph_mainTalker hasnt FourthCharacter && glyph_actualActiveSigil != ():
+        - glyph_currentTalker == FourthCharacter && glyph_actualActiveSigil != ():
             -> sigil_FourthCharacter_reactions
 
-        - glyph_currentTalker == FifthCharacter  && glyph_mainTalker hasnt FifthCharacter && glyph_actualActiveSigil != ():
+        - glyph_currentTalker == FifthCharacter  && glyph_actualActiveSigil != ():
             -> sigil_FifthCharacter_reactions    
 
         //Come guests, se presenti
