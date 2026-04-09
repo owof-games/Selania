@@ -11,63 +11,63 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-        {charTag(FifthCharacter, "hurry")}:     Oh, quanto ho sperato nel tuo arrivo!
+        {charTag(Mentor, "hurry")}:     Oh, quanto ho sperato nel tuo arrivo!
                                                 Scusa, ma sono così felice che tu sia qui.
         {that_little_liar_storylet:
-            {charTag(FifthCharacter, "sad")}:       Con tutto il trambusto causato da quel bambino non ho nemmeno fatto una buona figura.
+            {charTag(Mentor, "sad")}:       Con tutto il trambusto causato da quel bambino non ho nemmeno fatto una buona figura.
         }
-        {charTag(FifthCharacter, "hurry")}:     Avrai un milione di domande, vero?
+        {charTag(Mentor, "hurry")}:     Avrai un milione di domande, vero?
         
         + (airChoice) \ {charTag(PG, "neutral")}: Anche più di un milione, ma la prima è: dove mi trovo?
             -> glyph_modifier_variation_management(Mentor, airC) ->
             {
                 - contentsTrainStop has PG:
-                    {charTag(FifthCharacter, "neutral")}:   Questa? È la fermata del treno.
+                    {charTag(Mentor, "neutral")}:   Questa? È la fermata del treno.
                                                             Da qui arrivano le persone che hanno bisogno del nostro aiuto.
                 - contentsForest has PG:
-                    {charTag(FifthCharacter, "neutral")}:   Ora siamo nella foresta.
+                    {charTag(Mentor, "neutral")}:   Ora siamo nella foresta.
                                                             O meglio, la chiamo così perché.
                                                             Beh, ci sono tanti alberi.
                                                             Compreso quello lì tutto brutto e deperito.
                 - contentsPond has PG:
-                    {charTag(FifthCharacter, "neutral")}:   Questo è lo stagno.
+                    {charTag(Mentor, "neutral")}:   Questo è lo stagno.
                                                             Regno dei funghi, dell'umidità e delle zanzare.
                                                             E lì c'è la serra!
             }
-            {charTag(FifthCharacter, "neutral")}:   Ma forse intendi dire cos'è questo luogo in generale, vero?
-            {charTag(FifthCharacter, "hurry")}:     Non ha un vero nome, ma il lo chiamo <b><i>Il giardino</b></i>.
-            {charTag(FifthCharacter, "neutral")}:   E faccio di tutto per renderlo un posto sicuro.
+            {charTag(Mentor, "neutral")}:   Ma forse intendi dire cos'è questo luogo in generale, vero?
+            {charTag(Mentor, "hurry")}:     Non ha un vero nome, ma il lo chiamo <b><i>Il giardino</b></i>.
+            {charTag(Mentor, "neutral")}:   E faccio di tutto per renderlo un posto sicuro.
                                                     Un posto dove prenderti cura di te.
-            {charTag(FifthCharacter, "hurry")}:     Non male, no?
+            {charTag(Mentor, "hurry")}:     Non male, no?
         
         + (waterChoice) \ {charTag(PG, "neutral")}: Che cosa tenera e gentile da dire! Perché sei felice che sono qui?
             -> glyph_modifier_variation_management(Mentor, waterC) ->
-            {charTag(FifthCharacter, "neutral")}:   Sì!
-            {charTag(FifthCharacter, "sad")}:       Non mi fraintendere: non so di preciso tu chi sia.
-            {charTag(FifthCharacter, "hurry")}:     Ma so <i>perché</i> sei qui.
-            {charTag(FifthCharacter, "neutral")}:   E il mio di <i>perché</i> è legato alla tua presenza.
-            {charTag(FifthCharacter, "hurry")}:     Perché io sono la persona che tiene in piedi questo luogo, ma non solo.
-            {charTag(FifthCharacter, "neutral")}:   Io sono <b><i>{translator(mentor_ActualName)}</b></i>.
+            {charTag(Mentor, "neutral")}:   Sì!
+            {charTag(Mentor, "sad")}:       Non mi fraintendere: non so di preciso tu chi sia.
+            {charTag(Mentor, "hurry")}:     Ma so <i>perché</i> sei qui.
+            {charTag(Mentor, "neutral")}:   E il mio di <i>perché</i> è legato alla tua presenza.
+            {charTag(Mentor, "hurry")}:     Perché io sono la persona che tiene in piedi questo luogo, ma non solo.
+            {charTag(Mentor, "neutral")}:   Io sono <b><i>{translator(mentor_ActualName)}</b></i>.
                                                     La tua {translator(mentor_ActualName)}.
                                                     E ora che sei qui, ho uno scopo.
 
         + (aetherChoice) \ {charTag(PG, "neutral")}: Siamo in un luogo misterico, vero?
             -> glyph_modifier_variation_management(Mentor, aetherC) ->
-            {charTag(FifthCharacter, "neutral")}:   Io.
-            {charTag(FifthCharacter, "sorry")}:     Uh, è una domanda inaspettata.
-            {charTag(FifthCharacter, "hurry")}:     Sicuramente c'è qualcosa di magico.
-            {charTag(FifthCharacter, "neutral")}:   Ma nulla viene tenuto nascosto.
-            {charTag(FifthCharacter, "hurry")}:     Al contrario: hai in me una guida.
+            {charTag(Mentor, "neutral")}:   Io.
+            {charTag(Mentor, "sorry")}:     Uh, è una domanda inaspettata.
+            {charTag(Mentor, "hurry")}:     Sicuramente c'è qualcosa di magico.
+            {charTag(Mentor, "neutral")}:   Ma nulla viene tenuto nascosto.
+            {charTag(Mentor, "hurry")}:     Al contrario: hai in me una guida.
 
                 
         + (fireChoice) \ {charTag(PG, "neutral")}: <i>Cerco un modo per tornare a casa.</i>
             -> glyph_modifier_variation_management(Mentor, fireC) ->
-            {charTag(FifthCharacter, "sad")}:       Vuoi già andartene?
+            {charTag(Mentor, "sad")}:       Vuoi già andartene?
                                                     Forse devo rivedere il mio benvenuto.
-            {charTag(FifthCharacter, "sorry")}:     Forse sono stata troppo formale?
-            {charTag(FifthCharacter, "hurry")}:     O dovrei essere più autorevole?
+            {charTag(Mentor, "sorry")}:     Forse sono stata troppo formale?
+            {charTag(Mentor, "hurry")}:     O dovrei essere più autorevole?
                                                     Ma non devo essere scortese ora.
-            {charTag(FifthCharacter, "neutral")}:   Mi hai fatto una domanda, e vedrò di rispondere.
+            {charTag(Mentor, "neutral")}:   Mi hai fatto una domanda, e vedrò di rispondere.
             {
                 - contentsTrainStop has PG:
                                                         Lì ad est troverai una porta, e ti ritroverai nella tua camera da letto.
@@ -77,78 +77,78 @@
                                                         Stenditi a dormire, e ti troverai nel mondo da cui vieni.
             }
                                                     E se deciderai di tornare, troverai tutto nello stato in cui l'hai lasciato.
-            {charTag(FifthCharacter, "hurry")}:     Prima però lascia che ti rubi giusto un secondo!
+            {charTag(Mentor, "hurry")}:     Prima però lascia che ti rubi giusto un secondo!
             
         + (earthChoice) \ {charTag(PG, "neutral")}: Non sai quanto mi mancava tutta questa natura!
             -> glyph_modifier_variation_management(Mentor, earthC) ->
-            {charTag(FifthCharacter, "hurry")}:     È pace per il cuore, vero?
-            {charTag(FifthCharacter, "neutral")}:   Ogni angolo di questo spazio mi rasserena, anche quando mi sento fuori fuoco.
-            {charTag(FifthCharacter, "hurry")}:     Continua a stupirmi, giorno per giorno.
+            {charTag(Mentor, "hurry")}:     È pace per il cuore, vero?
+            {charTag(Mentor, "neutral")}:   Ogni angolo di questo spazio mi rasserena, anche quando mi sento fuori fuoco.
+            {charTag(Mentor, "hurry")}:     Continua a stupirmi, giorno per giorno.
         
         -
 
-        {charTag(FifthCharacter, "hurry")}:     Ma come ti devo chiamare?
+        {charTag(Mentor, "hurry")}:     Ma come ti devo chiamare?
                                                 E quali pronomi usi?
-        {charTag(FifthCharacter, "neutral")}:   Puoi usare un nome qualsiasi e i pronomi che preferisci: prendi questa occasione come un nuovo inizio.
+        {charTag(Mentor, "neutral")}:   Puoi usare un nome qualsiasi e i pronomi che preferisci: prendi questa occasione come un nuovo inizio.
         -> name_choice.top2 ->
         -> gender.top ->
-        {charTag(FifthCharacter, "hurry")}:     Piacere di conoscerti, {player_name}.
+        {charTag(Mentor, "hurry")}:     Piacere di conoscerti, {player_name}.
                                                 E {player_pronouns has him:benvenuto|{player_pronouns has her:benvenuta|benvenutə}}.
                                                 Con me usa pure i pronomi femminili.
-        {not waterChoice:{charTag(FifthCharacter, "neutral")}:   Ah, che sbadata. Mi chiamo <b><i>{mentorName}</b></i>, e il mio obiettivo è farti stare bene.|{charTag(FifthCharacter, "neutral")}:   Come Mentore, il mio unico obiettivo è farti stare bene.}
+        {not waterChoice:{charTag(Mentor, "neutral")}:   Ah, che sbadata. Mi chiamo <b><i>{mentorName}</b></i>, e il mio obiettivo è farti stare bene.|{charTag(Mentor, "neutral")}:   Come Mentore, il mio unico obiettivo è farti stare bene.}
         - (selfName)
                                                 Tra poco ti spiegherò anche il tuo lavoro, {player_name}.
         {
             - are_two_entities_together(FirstCharacter, PG):
                 {charTag(FirstCharacter, "annoyed")}:   Cioè, {player_pronouns has him:uno|{player_pronouns has her:una|unə}} deve ritrovarsi a lavorare anche in una allucinazione?
-                {charTag(FifthCharacter, "neutral")}:   Allucinazione?
+                {charTag(Mentor, "neutral")}:   Allucinazione?
         }
-        {charTag(FifthCharacter, "neutral")}:   Prima però una cosa importante: qui avrai a che fare con cose viventi piene di storie.
+        {charTag(Mentor, "neutral")}:   Prima però una cosa importante: qui avrai a che fare con cose viventi piene di storie.
                                                 E ogni storia ha le sue complessità.
-        {charTag(FifthCharacter, "sorry")}:     Per questo potresti incontrare tematiche per te faticose.
-        {charTag(FifthCharacter, "neutral")}:   Ci saranno occasioni in cui potrai evitarle e non ti perderai nulla di questa esperienza.
+        {charTag(Mentor, "sorry")}:     Per questo potresti incontrare tematiche per te faticose.
+        {charTag(Mentor, "neutral")}:   Ci saranno occasioni in cui potrai evitarle e non ti perderai nulla di questa esperienza.
                                                 Ma quando si tratta delle persone, accogliere le loro ferite farà parte del tuo lavoro.
                                                 Sono sicura che parleranno di cose delicate nel modo migliore, ma ricorda: fermarsi o rinunciare non è un fallimento.
                                                 Se senti il bisogno di staccare puoi tornare in camera, il posto da cui sei {player_pronouns has him:arrivato|{player_pronouns has her:arrivata|arrivatə}} e stenderti sul letto.
                                                 Al risveglio, troverai tutto come l'hai lasciato.
-        {charTag(FifthCharacter, "hurry")}:     E se non vorrai più tornare, ci saranno sicuramente altre persone pronte ad aiutare chi viene qui in cerca di risposte.
-        {charTag(FifthCharacter, "neutral")}:   E a proposito di risposte.
+        {charTag(Mentor, "hurry")}:     E se non vorrai più tornare, ci saranno sicuramente altre persone pronte ad aiutare chi viene qui in cerca di risposte.
+        {charTag(Mentor, "neutral")}:   E a proposito di risposte.
                                                 La maggior parte delle cose che dirai in questo luogo influenzeranno il rapporto che hai con le persone che incontri.
                                                 Ogni frase in fondo rappresenta un modo di vedere il mondo. E non tutte le visioni vanno d'accordo.
 
         {
             - fireChoice:
-                {charTag(FifthCharacter, "sad")}:       Quando prima hai cercato di andartene, ad esempio, mi sono sentita ferita.
-                {charTag(FifthCharacter, "hurry")}:     Poi fortunatamente la mia preparazione mi ha aiutato a sopprimere quel sentimento.
-                {charTag(FifthCharacter, "sad")}:       Un'altra persona magari si sarebbe offesa.
-                {charTag(FifthCharacter, "neutral")}:   O avrebbe apprezzato la tua propensione per l'azione.
+                {charTag(Mentor, "sad")}:       Quando prima hai cercato di andartene, ad esempio, mi sono sentita ferita.
+                {charTag(Mentor, "hurry")}:     Poi fortunatamente la mia preparazione mi ha aiutato a sopprimere quel sentimento.
+                {charTag(Mentor, "sad")}:       Un'altra persona magari si sarebbe offesa.
+                {charTag(Mentor, "neutral")}:   O avrebbe apprezzato la tua propensione per l'azione.
 
             - aetherChoice:
-                {charTag(FifthCharacter, "neutral")}:   Quando prima mi hai chiesto se questo sia un luogo misterico, hai mostrato con tranquillità un interesse verso l'occulto e le cose spirituali.
-                {charTag(FifthCharacter, "hurry")}:     Ed è una cosa che mi risuona molto.
-                {charTag(FifthCharacter, "sad")}:       Altre persone potrebbero giudicarti poco razionale, scollegat{player_pronouns has him:o|{player_pronouns has her:a|ə}} dalla realtà.
-                {charTag(FifthCharacter, "neutral")}:   Oppure potrebbero ritrovare in te un{player_pronouns has him:o|{player_pronouns has her:a|ə}} compagn{player_pronouns has him:o|{player_pronouns has her:a|ə}} con cui confidare le esperienze più insolite.
+                {charTag(Mentor, "neutral")}:   Quando prima mi hai chiesto se questo sia un luogo misterico, hai mostrato con tranquillità un interesse verso l'occulto e le cose spirituali.
+                {charTag(Mentor, "hurry")}:     Ed è una cosa che mi risuona molto.
+                {charTag(Mentor, "sad")}:       Altre persone potrebbero giudicarti poco razionale, scollegat{player_pronouns has him:o|{player_pronouns has her:a|ə}} dalla realtà.
+                {charTag(Mentor, "neutral")}:   Oppure potrebbero ritrovare in te un{player_pronouns has him:o|{player_pronouns has her:a|ə}} compagn{player_pronouns has him:o|{player_pronouns has her:a|ə}} con cui confidare le esperienze più insolite.
 
             - earthChoice:
-                {charTag(FifthCharacter, "hurry")}:     Quando prima hai detto che ti mancava tutta questa natura, ho scoperto di aver già un punto di contatto con te.
-                {charTag(FifthCharacter, "sad")}:       Non tutte le persone potrebbero trovarsi d'accordo: c'è chi ama gli spazi urbani e chi ha paura dell'imprevedibilità di un bosco.
-                {charTag(FifthCharacter, "neutral")}:   Oppure potresti trovare qualcunə che non aspettava altro che di parlarti di tutti i suoi animali preferiti.
+                {charTag(Mentor, "hurry")}:     Quando prima hai detto che ti mancava tutta questa natura, ho scoperto di aver già un punto di contatto con te.
+                {charTag(Mentor, "sad")}:       Non tutte le persone potrebbero trovarsi d'accordo: c'è chi ama gli spazi urbani e chi ha paura dell'imprevedibilità di un bosco.
+                {charTag(Mentor, "neutral")}:   Oppure potresti trovare qualcunə che non aspettava altro che di parlarti di tutti i suoi animali preferiti.
 
             - airChoice:
-                {charTag(FifthCharacter, "neutral")}:   La prima cosa che mi hai chiesto è stata dove siamo.
-                {charTag(FifthCharacter, "hurry")}:     E l'hai chiesto con una curiosità che ho apprezzato molto: le domande sono strade aperte verso il sapere.
-                {charTag(FifthCharacter, "sad")}:       Ma potresti trovare qualcunə che invece preferisce un approccio più emotivo, o spirituale, e potrebbe mettersi sulla difensiva.
-                {charTag(FifthCharacter, "neutral")}:   Oppure unə compagnə di studi, scambi ed analisi.
+                {charTag(Mentor, "neutral")}:   La prima cosa che mi hai chiesto è stata dove siamo.
+                {charTag(Mentor, "hurry")}:     E l'hai chiesto con una curiosità che ho apprezzato molto: le domande sono strade aperte verso il sapere.
+                {charTag(Mentor, "sad")}:       Ma potresti trovare qualcunə che invece preferisce un approccio più emotivo, o spirituale, e potrebbe mettersi sulla difensiva.
+                {charTag(Mentor, "neutral")}:   Oppure unə compagnə di studi, scambi ed analisi.
 
             - waterChoice:
                                                         La prima cosa che mi hai detto è stata parlare di dolcezza e tenerezza.
-                {charTag(FifthCharacter, "hurry")}:     L'emotività attrae molte persone, perché in tant3 abbiamo bisogno di parlare di ciò che proviamo, di condividere gli aspetti profondi del nostro cuore.
-                {charTag(FifthCharacter, "sad")}:       Ma allontana altrettante persone, vuoi perché quello non è il loro linguaggio, vuoi perché non se la sentono di parlarne con chi non conoscono.
+                {charTag(Mentor, "hurry")}:     L'emotività attrae molte persone, perché in tant3 abbiamo bisogno di parlare di ciò che proviamo, di condividere gli aspetti profondi del nostro cuore.
+                {charTag(Mentor, "sad")}:       Ma allontana altrettante persone, vuoi perché quello non è il loro linguaggio, vuoi perché non se la sentono di parlarne con chi non conoscono.
         }
 
-        {charTag(FifthCharacter, "neutral")}:   Le cose non sono poi così lineari, perché giustamente il modo in cui ognunə di noi vede il mondo è molto molto molto complesso.
-        {charTag(FifthCharacter, "hurry")}:     La cosa bella però è che le persone tendono sempre a reagire a ciò che diciamo.
-        {charTag(FifthCharacter, "neutral")}:   E capire le loro reazioni è la prima parte del tuo lavoro.
+        {charTag(Mentor, "neutral")}:   Le cose non sono poi così lineari, perché giustamente il modo in cui ognunə di noi vede il mondo è molto molto molto complesso.
+        {charTag(Mentor, "hurry")}:     La cosa bella però è che le persone tendono sempre a reagire a ciò che diciamo.
+        {charTag(Mentor, "neutral")}:   E capire le loro reazioni è la prima parte del tuo lavoro.
                                                 Prima di riempirti di troppe informazioni, ti invito per un po' <>
         {
             - first_char_main_storylets:
@@ -157,10 +157,10 @@
                                                 a parlare con le persone che incontrerai qui in giro, <>
         }
                                                 e a capire meglio come ragionano.
-        {charTag(FifthCharacter, "hurry")}:     Capire come ragionano ti aiuterà a conquistare la loro fiducia.
-        {charTag(FifthCharacter, "neutral")}:   Che è la parte davvero fondamentale per compiere il tuo lavoro.
+        {charTag(Mentor, "hurry")}:     Capire come ragionano ti aiuterà a conquistare la loro fiducia.
+        {charTag(Mentor, "neutral")}:   Che è la parte davvero fondamentale per compiere il tuo lavoro.
                                                 Ma prima di salutarti, due cose che potrebbero aiutarti.
-        {charTag(FifthCharacter, "hurry")}:     Questo è un Grimorio: ti aiuterà nel raccogliere tutte le informazioni che incontrerai man mano.
+        {charTag(Mentor, "hurry")}:     Questo è un Grimorio: ti aiuterà nel raccogliere tutte le informazioni che incontrerai man mano.
         {
             - contentsForest has PG:
                 ~ move_entity(Grimoire, Forest)
@@ -169,13 +169,13 @@
             - contentsPond has PG:
                 ~ move_entity(Grimoire, Pond)        
         }
-        {charTag(FifthCharacter, "neutral")}:   Consultalo ogni volta che sei in difficoltà.
+        {charTag(Mentor, "neutral")}:   Consultalo ogni volta che sei in difficoltà.
                                                 E poi ti ho aperto la serra, la trovi nei pressi dello stagno.
         -> opening_places ->
-        {charTag(FifthCharacter, "hurry")}:     La serra è un bel posto dove rilassarsi, e non solo.
-        {charTag(FifthCharacter, "bored")}:     Ma evita assolutamente tutti gli altri posti bloccati, perché sono pericolosi!
+        {charTag(Mentor, "hurry")}:     La serra è un bel posto dove rilassarsi, e non solo.
+        {charTag(Mentor, "bored")}:     Ma evita assolutamente tutti gli altri posti bloccati, perché sono pericolosi!
                                                 Più tardi ti spiegherò perché sei qui.
-        {charTag(FifthCharacter, "hurry")}:     Io devo raccogliere le foglie dalla foresta.
+        {charTag(Mentor, "hurry")}:     Io devo raccogliere le foglie dalla foresta.
 
         -> mentor_closing_storylet ->
         -> main
