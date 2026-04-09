@@ -110,7 +110,6 @@ VAR thirdChar_LibraryInvite = false
         - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(Mentor, PG) && png_commonPauseTalking == false && third_char_main_storylets.one && not third_mentor_chit_chat:
             -> third_mentor_chit_chat
 
-    
     //Con PNG e Franco
         //Chiacchiera tra Chitarra e Franco                
         - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(Franco, PG) && png_commonPauseTalking == false && not frog_and_first_char_chit_chat :
