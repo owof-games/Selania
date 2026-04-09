@@ -68,7 +68,6 @@
 //Questo è per il conteggio totale delle scelte prese con la PNG
     VAR thirdChar_totalChoices = 0    
 
-
 //Variabili per mettere in pausa la conversazione
     VAR thirdChar_pauseTalking = 0
     VAR thirdChar_pauseDuration = 1
@@ -83,6 +82,9 @@
     
 //Moltiplicatore del colore per il personaggio
     VAR thirdChar_glyphVariation = 3.0
+
+//Check se ho utilizzato almeno un sigillo col personaggio
+    VAR thirdChar_usedSigil = 0    
     
 //UP: coerenza.
 //DOWN: incoerenza, cose random

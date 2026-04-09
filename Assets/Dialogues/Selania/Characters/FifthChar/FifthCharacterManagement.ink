@@ -57,6 +57,9 @@
     VAR fifthChar_mailPause = 0
     VAR fifthChar_mailPauseDuration = 5    
     
+//Calcolo utilizzo sigilli su png
+    VAR fifthChar_usedSigil = 0  
+
 //STATI UP: ???
 //STATI DOWN: ???
     VAR fifthChar_aether = 0.00

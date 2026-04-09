@@ -24,6 +24,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
+        ~ temp sigilUsed = false
 
         <i>Le radici ci raccontano che {player_name} ha fatto la sua prima riscrittura.
 
@@ -34,17 +35,23 @@
                 <i>{charNameOne} è così giovane, eppure faticava a immaginare un futuro.
                 <i>La gemma per crescere deve già contenere la foglia.
                 <i>{charNameOne} ora ha trovato la sua forma.
-                    ~ witch_debriefPNG += FirstCharacter       
-
+                    ~ witch_debriefPNG += FirstCharacter
+                    ~ witch_sigilsComment += FirstCharacter   
+                    ~ sigilUsed = firstChar_usedSigil
+            
             - secondChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt SecondCharacter:
                 <i>Il piccolo {charNameTwo} ora ha un nuovo nome da gridare.
                 <i>La sua rabbia l'ha inzuppato di problemi.
                 <i>L'ha protetto da cose peggiori.
-                    ~ witch_debriefPNG += SecondCharacter 
+                    ~ witch_debriefPNG += SecondCharacter
+                    ~ witch_sigilsComment += SecondCharacter
+                    ~ sigilUsed = secondChar_usedSigil 
 
             - thirdChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt ThirdCharacter:
                 Testo:
-                 ~ witch_debriefPNG += ThirdCharacter   
+                    ~ witch_debriefPNG += ThirdCharacter
+                    ~ witch_sigilsComment += ThirdCharacter
+                    ~ sigilUsed = thirdChar_usedSigil   
         }
 
         <i>Un problema personale è un masso lungo il sentiero.
@@ -91,13 +98,20 @@
         <i>Soprattutto quando c'è qualcosa che fa star male.
         <i>A volte è solo qualcosa di personale.
         <i>A volte è il segno che qualcosa deve bruciare.
-        <i>Ringraziandoti ancora {player_name} per ora ci congediamo.
-        <i>Senza mai davvero lasciarti.</i>
-        - 
 
-        -> witch_closing_storylet ->
-        -> main
+            {
+                - sigilUsed > 0:
+                    <i>Prima di congedarci, vorremo dire una cosa a {player_name}.
+                    -> witch_sigilsUsedComment -> 
+            }
+
     
+        <i>Ringraziando ancora {player_name} per ora ci congediamo.
+        <i>Senza mai davvero lasciar{player_pronouns has him:lo|{player_pronouns has her:la|lə}}.</i>
+    
+            -> witch_closing_storylet ->
+            -> main
+        
     
     === witch_second_debrief
         ~ temp charNameOne = translator(firstChar_ActualName)
@@ -105,6 +119,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
+        ~ temp sigilUsed = false
 
         <i>Il vento canta di una seconda riscrittura.
         <i>{player_name} conosce ormai il proprio valore.
@@ -115,18 +130,24 @@
                 <i>{charNameOne} racconta la storia di una generazione.
                 <i>Del peso del capire troppo, e del non sapere che fare.
                 <i>E del non poter accettare che le cose non possano cambiare.
-                    ~ witch_debriefPNG += FirstCharacter       
+                    ~ witch_debriefPNG += FirstCharacter
+                    ~ witch_sigilsComment += FirstCharacter
+                    ~ sigilUsed = firstChar_usedSigil
 
             - secondChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt SecondCharacter:
                 <i>La famiglia di {charNameTwo} è come una slavina.
                 <i>Fiocco sulla vetta.
                 <i>Valanga a valle.
                 <i>Ma forse {charNameTwo} può trasformare la neve in pupazzo. 
-                    ~ witch_debriefPNG += SecondCharacter 
+                    ~ witch_debriefPNG += SecondCharacter
+                    ~ witch_sigilsComment += SecondCharacter
+                    ~ sigilUsed = secondChar_usedSigil
 
             - thirdChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt ThirdCharacter:
                 Testo:
-                ~ witch_debriefPNG += ThirdCharacter   
+                ~ witch_debriefPNG += ThirdCharacter
+                ~ witch_sigilsComment += ThirdCharacter
+                ~ sigilUsed = thirdChar_usedSigil
         }
 
         <i>Ci sono problemi che restano personali.
@@ -176,7 +197,12 @@
         <i>"Anche a me", risponde un'altra.
         <i>Una ferita è una ferita.
         <i>Quante ferite richiedono una protesta?
-        - 
+        
+            {
+                - sigilUsed > 0:
+                    <i>Prima di congedarci, vorremo dire una cosa a {player_name}.
+                    -> witch_sigilsUsedComment -> 
+            }
         
         -> witch_closing_storylet ->
         -> main
@@ -187,6 +213,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
+        ~ temp sigilUsed = false
 
         <i>La cagnolina della posta è sorpresa da questa terza riscrittura.
 
@@ -198,7 +225,9 @@
                     <i>{charNameOne} le ha insegnato che non tutt3 hanno una casa.
                     <i>E che alcun3 ne hanno ancora meno di altr3.
                     <i>E la cagnolina non comprende, perché il mondo per lei è una grande tana.
-                        ~ witch_debriefPNG += FirstCharacter       
+                        ~ witch_debriefPNG += FirstCharacter
+                        ~ witch_sigilsComment += FirstCharacter
+                        ~ sigilUsed = firstChar_usedSigil    
 
             - secondChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt SecondCharacter:
                     <i>Con {charNameTwo} ha scoperto che esistono i bambini.
@@ -206,11 +235,15 @@
                     <i>Ma non possono decidere le cose che li riguardano.
                     <i>Il cucciolo cresce facendo i suoi errori.
                     <i>Ai bambini si chiede di crescere sembrano piccoli adulti.
-                        ~ witch_debriefPNG += SecondCharacter 
+                        ~ witch_debriefPNG += SecondCharacter
+                        ~ witch_sigilsComment += SecondCharacter
+                        ~ sigilUsed = secondChar_usedSigil
 
             - thirdChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt ThirdCharacter:
                 Testo:
-                 ~ witch_debriefPNG += ThirdCharacter   
+                        ~ witch_debriefPNG += ThirdCharacter
+                        ~ witch_sigilsComment += ThirdCharacter
+                        ~ sigilUsed = thirdChar_usedSigil  
         }
         
         <i>La cagnolina non può pensare quello che non conosce.
@@ -235,7 +268,15 @@
      
         + (earth) Scelta gialla.
             -> glyph_modifier_variation_management(PG, earthC)->
-        -        
+        - 
+
+            {
+                - sigilUsed > 0:
+                    <i>Prima di congedarci, vorremo dire una cosa a {player_name}.
+                    -> witch_sigilsUsedComment -> 
+            }
+
+
         -> witch_closing_storylet ->
         -> main 
         
@@ -333,3 +374,98 @@
         -        
         -> witch_closing_storylet ->
         -> main 
+
+
+
+=== witch_sigilsUsedComment
+
+{   
+        
+            - glyph_usedSigils == ():
+                <i>Abbiamo visto che {player_name} non ha utilizzato i sigilli, {tutorial_witchSigils: e siamo felici che ci abbia ascoltate|e ne siamo felici}.
+
+            - else:
+                <i>Abbiamo visto che {player_name} ha utilizzato i sigilli, {tutorial_witchSigils: nonostante il nostro consiglio|e la cosa non ci rende felici}.
+        
+                    ~ temp speaker = ""
+                    ~ temp char_aether = 0.00
+                    ~ temp char_earth = 0.00
+                    ~ temp char_air = 0.00
+                    ~ temp char_water = 0.00
+                    ~ temp char_fire = 0.00
+                    ~ temp player_PNG_aether = 0.00
+                    ~ temp player_PNG_earth = 0.00
+                    ~ temp player_PNG_air = 0.00
+                    ~ temp player_PNG_water = 0.00
+                    ~ temp player_PNG_fire = 0.00
+
+                {
+                    - witch_sigilsComment has FirstCharacter:
+                        ~ speaker = translator(firstChar_ActualName)
+                        ~ char_aether = firstChar_aether
+                        ~ char_earth =  firstChar_earth
+                        ~ char_air =  firstChar_air
+                        ~ char_water =  firstChar_water
+                        ~ char_fire =  firstChar_fire
+                        ~ player_PNG_aether =  player_aether_first_char
+                        ~ player_PNG_earth =  player_earth_first_char
+                        ~ player_PNG_air =  player_air_first_char
+                        ~ player_PNG_water =  player_water_first_char
+                        ~ player_PNG_fire =  player_fire_first_char
+
+                    - witch_sigilsComment has SecondCharacter:
+                        ~ speaker = translator(secondChar_ActualName)
+                        ~ char_aether = secondChar_aether
+                        ~ char_earth =  secondChar_earth
+                        ~ char_air =  secondChar_air
+                        ~ char_water =  secondChar_water
+                        ~ char_fire =  secondChar_fire
+                        ~ player_PNG_aether =  player_aether_second_char
+                        ~ player_PNG_earth =  player_earth_second_char
+                        ~ player_PNG_air =  player_air_second_char
+                        ~ player_PNG_water =  player_water_second_char
+                        ~ player_PNG_fire =  player_fire_second_char
+
+                    - witch_sigilsComment has ThirdCharacter:
+                        ~ speaker = translator(thirdChar_ActualName)
+                        ~ char_aether = thirdChar_aether
+                        ~ char_earth =  thirdChar_earth
+                        ~ char_air =  thirdChar_air
+                        ~ char_water =  thirdChar_water
+                        ~ char_fire =  thirdChar_fire
+                        ~ player_PNG_aether =  player_aether_third_char
+                        ~ player_PNG_earth =  player_earth_third_char
+                        ~ player_PNG_air =  player_air_third_char
+                        ~ player_PNG_water =  player_water_third_char
+                        ~ player_PNG_fire =  player_fire_third_char    
+                }
+
+                {
+                    - char_fire > player_PNG_fire:
+                        <i>Ad esempio {player_name} ha suggerito spesso a {speaker} di agire, di fare, ma ha usato sigilli molto meno attivi.
+
+                    - char_earth > player_PNG_earth:
+                        <i>Ad esempio {player_name} ha parlato spesso a {speaker} di cose concrete, di praticità, ma ha usato sigilli molto più vacui.
+
+                    - char_water > player_PNG_water:
+                        <i>Ad esempio {player_name} ha parlato spesso a {speaker} di relazioni e cura, ma ha usato sigilli meno emozionali.
+
+                    - char_air > player_PNG_air:
+                        <i>Ad esempio {player_name} ha evocato con {speaker} parole di sapere e curiosità, ma ha usato sigilli molto meno propensi alla conoscenza.
+
+                    - else:
+                        <i>Ad esempio {player_name} ha parlato spesso a {speaker} di unità, di una visione collettiva, spirituale, ma ha usato sigilli molto più concreti.
+                }
+
+                    <i>Noi crediamo nel lavoro e nelle scelte di {player_name}.
+                    <i>Ma il bosco ha memoria, e noi con lui.
+
+        }    
+
+
+
+
+
+
+
+->->

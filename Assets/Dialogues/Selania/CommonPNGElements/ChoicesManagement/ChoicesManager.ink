@@ -198,6 +198,24 @@ Recap della logica.
                ~ glyph_temporaryAether --             
     }
 
+    //E su chi l'ho utilizzato
+    {
+        - glyph_currentTalker == FirstCharacter:
+            ~ firstChar_usedSigil ++
+        
+        - glyph_currentTalker == SecondCharacter:
+            ~ secondChar_usedSigil ++
+        
+        - glyph_currentTalker == ThirdCharacter:
+            ~ thirdChar_usedSigil ++
+        
+        - glyph_currentTalker == FourthCharacter:
+            ~ fourthChar_usedSigil ++
+        
+        - glyph_currentTalker == FifthCharacter:
+            ~ fifthChar_usedSigil ++
+    }
+
     -> update_PNG_glyph_values
 
 //Quarto step: aggiorno i valori dei glifi dell3 PNG e lo stato della relazione, a prescindere che il sigillo sia o meno attivo.

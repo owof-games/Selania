@@ -6,6 +6,7 @@
 //Variabili per la gestione del debrief e degli storylets personali
     VAR witch_debriefPNG = ()
     VAR witch_mainStoryPNG = ()
+    VAR witch_sigilsComment = ()
 
 //Variabili per la gestione del ritratto
     LIST witch_moonPhases = NewMoon, FirstQuarter, FullMoon, ThirdQuarter, RedMoon
@@ -31,6 +32,8 @@
         ~ witchChar_justTalked = true
         //Cooldown comune
         ~ png_commonPauseTalking = true
+        //Svuotiamo la parte legata al commento sull'uso dei sigilli
+        ~ witch_sigilsComment = () 
         //L'animazione per via dell'informazione nuova
         @animation:RewriterBook
 

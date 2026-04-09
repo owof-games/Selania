@@ -5,11 +5,9 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
     
-        <i>Crediamo sia giunto il momento ti parlare di persona, {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-        <i>Ti aspettiamo ai margini della foresta.
-        <i>Capirai come trovarci.</i>
+        <i>Crediamo sia giunto il momento di presentarci, {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        <i>Aspettiamo {player_name} ai margini della foresta.
 
-            
             -> witch_closing_storylet ->
             -> main
 
@@ -114,7 +112,7 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    <i>Le radici ci raccontano del tuo incontro con Franco.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+    <i>Le radici ci raccontano dell'incontro di {player_name} con Franco.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
     <i>E il nostro tronco porta il ricordo di Franco e di tutte le rane venute prima e dopo di lui.
     <i>Franco è un'anima semplice con un grande impegno.
     <i>Franco è come il vento che invisibile porta pollini e alleggerisce il volo delle rondini.
@@ -126,7 +124,7 @@
     <i>Un vecchio detto dice: "Quando la palude piange, la rana ascolta".
     <i>Franco sorride sempre, ma conosce il pianto di tutt3 noi.
     <i>Non ubbidisce ad alcuna autorità, ad alcuna legge, se non quella della cura delle altre persone.</i>
-    - 
+
         -> witch_closing_storylet ->
         -> main
 
@@ -397,8 +395,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(mentor_ActualName)
-    Hai donato la Selanìa, il gioco è finito.
-    Compare lo sfondo stellato.
+
     
         + Scelta verde.
             -> glyph_modifier_variation_management(PG, waterC)->

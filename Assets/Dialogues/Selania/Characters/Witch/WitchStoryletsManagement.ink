@@ -21,11 +21,7 @@
 
         - witch_intro && LIST_COUNT(story_endedStories) > 4 && not witch_fifth_debrief:
             -> witch_fifth_debrief    
-
-        //Dialogo su Franco
-        - witch_intro && grimoire_franco != () && not the_witch_and_the_frog:
-            -> the_witch_and_the_frog
-        
+    
 
         //Pezzi della sua storia. Compaiono linearmente, in base a quante storie ho fatto fino in fondo.
         - LIST_COUNT(listDumpGraphics) > 0 && grimoire_witch hasnt grimWitchMainOne:
@@ -43,9 +39,14 @@
         - LIST_COUNT(listDumpGraphics) > 4 && grimoire_witch hasnt grimWitchMainFive:
             -> witch_fifth_confession    
         
+
         //Commento sul libro
         - witch_intro && tutorial_mentorTalkingChoiceRelationship && not about_the_book:
             -> about_the_book
+
+        //Dialogo su Franco
+        - witch_intro && grimoire_franco != () && not the_witch_and_the_frog:
+            -> the_witch_and_the_frog    
         
         
         - else:

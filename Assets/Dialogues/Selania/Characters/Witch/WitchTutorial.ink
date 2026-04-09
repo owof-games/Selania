@@ -130,7 +130,6 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(mentor_ActualName)
 
-        
             {
                 - first_character_recap.check && second_character_recap.check && greenhouse_recap.check:
                     <i>{player_name} cerca spesso risposte tra le pagine del libro.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -138,6 +137,7 @@
                 - else:
                     <i>{player_name} cerca di rado risposte tra le pagine del libro.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
+
         <i>Un libro è ricordo condiviso.
         <i>Una magia che pronuncia sé stessa.
         <i>Per questo le pagine si popolano man mano che {player_name} vive.
@@ -145,8 +145,6 @@
         <i>A volte ritrova altri nomi e parole.
         <i>In una canzone collettiva che guida {player_name} alla comprensione.</i>
 
-    - 
-
-    -> witch_closing_storylet ->
-    -> main
+            -> witch_closing_storylet ->
+            -> main
 

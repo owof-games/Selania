@@ -66,7 +66,9 @@
     
 //Moltiplicatore del colore per il personaggio
     VAR fourthChar_glyphVariation = 3.0    
-    
+//Calcolo utilizzo sigilli su png
+    VAR fourthChar_usedSigil = 0  
+
 //UP: ???
 //DOWN: ???
     VAR fourthChar_aether = 0.00
