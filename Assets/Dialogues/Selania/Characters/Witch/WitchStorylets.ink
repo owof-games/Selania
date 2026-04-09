@@ -5,13 +5,13 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
     
-    <i>Crediamo sia giunto il momento ti parlare di persona, {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-    <i>Ti aspettiamo ai margini della foresta.
-    <i>Capirai come trovarci.</i>
+        <i>Crediamo sia giunto il momento ti parlare di persona, {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        <i>Ti aspettiamo ai margini della foresta.
+        <i>Capirai come trovarci.</i>
 
-        
-    -> witch_closing_storylet ->
-    -> main
+            
+            -> witch_closing_storylet ->
+            -> main
 
 === witch_intro
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -19,71 +19,91 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-        
-        <i>Le nostre radici ci connettono a nuove voci, nuove storie.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
-        <b>Ci.</b>
-        <i>La cicatrice rimane, ma da essa esplode la vita.
-        <i>Torniamo a percepire, e questa è gioia.
+
+        <i>A volte dimentichiamo quando sarà ieri, cos'è successo domani.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+        <i>Ma non dimentichiamo mai {player_name}.
+        <i>Le nostre radici vibrano di voci, i nostri crateri si riempiono di storie.
         <i>{player_name} ci ha portato questa gioia.
-        <i>{player_name} cosa si domanda?</i>
-        
-            + Posso sfiorarti?
+        <i>C'è qualcosa che {player_name} vorrebbe dirci?
+
+            + Grazie per avermi guidat{player_pronouns has him:o|{player_pronouns has her:a|ə}} dall'inizio.
                     -> glyph_modifier_variation_management(PG, waterC)->
-                <i>{player_name} sente la voce del Canto delle Compagne.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                <i>{player_name} realizza che è {player_pronouns has him:collegato|{player_pronouns has her:collegata|collegatə}} a {charNameOne}.
-                <i>A {charNameTwo}.
-                <i>A {mentorName}.
-                <i>E ogni collegamento riporta a pochi istanti fa, quando ha sfiorato il suo stesso viso.
-                <i>Il contatto ha risvegliato un ricordo.
-                <i>E quel ricordo, {player_name}, è il tuo sfiorarci.</i>
+
+                <i>E grazie a {player_name} per aver guidato noi.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                <i>La separazione è una illusione.
+                <i>{player_name} è noi, noi siamo {charNameOne}.
+                <i>{charNameOne} è {charNameTwo} che è {charNameThree} che è {mentorName}.
+                <i>E {mentorName} è {player_name}.
+                <i>Che è noi.</i>
                 
-            + Ehi tu, esci dalla mia testa! Subito!
+            + Esci dalla mia testa! Subito!
                     -> glyph_modifier_variation_management(PG, fireC)->
+
                 <i>Non siamo nella testa di {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>Non più di quanto {player_name} sia nella sua stessa testa.
                 <i>Non meno di quanto {player_name} sia nella nostra.
                 <i>È come se {player_name} ci chiedesse di non essere.
                 <i>E questa è una cosa che non è e non sarà.</i>
                 
-            + Le piante non possono parlare.
+            + Parli di radici: sei un albero?
                     -> glyph_modifier_variation_management(PG, airC)->
+
                 <i>Le piante raccontano storie da notte a giorno. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 <i>E noi non siamo una pianta.
                 <i>Ma siamo una pianta.
                 <i>E non parliamo.
                 <i>Eppure accade.
                 <i>E ascoltiamo.
-                <i>Elaboriamo.
-                <i>Scopriamo.
-                <i>In te.
-                <i>Con te.
-                <i>Per te.
-                <i>Da te.</i>
+                <i>Con le radici nel cielo.
+                <i>I rami a terra.
+                <i>E il tronco in {player_name}.
                 
-            + Ci piace la gioia!
+            + Perché non mi hai detto subito di essere reale?
                     -> glyph_modifier_variation_management(PG, earthC)->
-                <i>E a noi piace {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                <i>E tutte le emozioni che genera con le sue azioni.
-                <i>E tutti i tempi che {player_name} vive, ha vissuto e vivrà.</i>
-            
-            + La tua voce mi guida dal mio arrivo.
+
+                <i>{player_name} sente l'odore del Canto delle Compagne.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                <i>E sa che è reale.
+                <i>{player_name} sente il legame che ha con {charNameTwo}, e sa che è reale.
+                <i>Una voce {player_pronouns has him:lo|{player_pronouns has her:la|lə}} accompagna, e non è reale?
+        
+            + "Cosa è successo domani": il tempo qui funziona in modo strano?
                     -> glyph_modifier_variation_management(PG, aetherC)->
-                <i>E la tua guida noi, {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                <i>La separazione è una illusione.
-                <i>{player_name} è noi, noi siamo {charNameOne}.
-                <i>{charNameOne} è {charNameTwo} che è {mentorName}.
-                <i>E {mentorName} è {player_name}.
-                <i>Che è noi.</i>
+                <i>La mosca vive un'istante, ma per lei il suo tempo è una vita.
+                <i>Noi viviamo nel sempremai, e confondiamo i tempi.
+                <i>Ma il tempo di {player_name} è quello giusto per {player_name}.
             -
         <i>Noi siamo sussurro e siamo ascolto. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         <i>Un sorriso attento ai bisogni di {player_name}.
-        <i>Se {player_name} osserva la luna, noi saremo con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.
-        <i>Ecco, sì: oggi saremo la luna.
-            - (nameWitch)
-        <i>Queste radici cercano di imparare le voci del terreno.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        <i>Ricordiamo il tempo in cui un nome era importante anche per noi.
+        <i>Ci hanno chiamate Strega, Radice e Fiamma.
+        <i>Ci hanno chiamate Luna e Parola.
+        <i>Con quale nome {player_name} vorrebbe chiamarci?
 
-        -> witch_closing_storylet ->
-        -> main
+            + Strega.
+                -> glyph_modifier_variation_management(PG, aetherC)->
+                ~ witch_actualName += Strega
+
+            + Luna.
+                -> glyph_modifier_variation_management(PG, waterC)->
+                ~ witch_actualName += Luna
+
+            + Parola.
+                -> glyph_modifier_variation_management(PG, airC)->
+                ~ witch_actualName += Parola
+
+            + Radice.
+                -> glyph_modifier_variation_management(PG, earthC)->
+                ~ witch_actualName += Radice
+
+            + Fiamma.
+                -> glyph_modifier_variation_management(PG, fireC)->
+                ~ witch_actualName += Fiamma
+            -
+        <i>E {witch_actualName} saremo.
+        <i>Ora altre voci ci chiamano, ma aspetteremo {player_name} per quando ne avrà bisogno.
+    
+            -> witch_closing_storylet ->
+            -> main
 
 
 

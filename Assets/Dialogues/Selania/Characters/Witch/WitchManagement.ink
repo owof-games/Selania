@@ -14,8 +14,9 @@
     //l'idea è che ogni tre passaggi sia un giorno, e che cambi ogni sette giorni (siamo passate a sei giorni)
     VAR witch_timeForChangingMoonPhase = 13
     
-
-
+//E possibili nomi
+    LIST witch_possibleNames = Luna, Strega, Radice, Fiamma, Parola
+    VAR witch_actualName = ()
 
 
 

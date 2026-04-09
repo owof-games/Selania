@@ -104,11 +104,11 @@ LIST nest_speakersForEwWordTag = Influenced, Other
     
     - TheWitch:
         {
-            - witch_intro.nameWitch:
-                ~ return "<i>Luna</i>"
-            
-            - else:
+            - witch_actualName == ():
                 ~ return ""
+                
+            - else:
+                ~ return "{witch_actualName}"
         }
 
     - Franco:
@@ -240,10 +240,10 @@ LIST nest_speakersForEwWordTag = Influenced, Other
 
 === function witch_tag
 {
-    - !witch_intro.nameWitch:
+    - witch_actualName == ():
         ~ return ""
     - else:
-        ~ return "<i>Luna</i>"
+        ~ return "{witch_actualName}"
 }
 
 === function frog_tag
