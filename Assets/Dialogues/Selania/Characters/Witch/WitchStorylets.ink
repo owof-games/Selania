@@ -150,12 +150,11 @@
     <i>Qualcuna che aveva trovato un modo per arrivare in un luogo speciale, un luogo impossibile.
     <i>Noi le abbiamo rubato quel sapere, {player_name}.
     <i>Noi, io sono arrivata qui dicendo che avrei salvato il mondo.
-    <i>Ma volevo soltanto sentirmi importante.
-    <i>Essere vista.
+    <i>Ma volevo soltanto essere vista.
     <i>I perché contano, {player_name}.
     <i>E i miei perché erano sbagliati.
     <i>La madre becca il pullo per pulirgli le piume.
-    <i>Il padre becca il pullo per ucciderlo.
+    <i>Il padre becca il pullo per eliminare un rivale.
     <i>E noi abbiamo cercato risposte che ci facessero sentire apprezzate.
     <i>Così tanto da venire abbandonate.
     <i>Abbiamo scoperto che eravamo confuse solo quando la confusione se ne è andata.
@@ -211,7 +210,7 @@
     <i>La rabbia si è fatta disprezzo.
     <i>E quando siamo, quando sono crollata davanti a queste radici, mi sono odiata.
     <i>Il ricordo ci brucia anche ora, {player_name}.
-    <i>Per cui ci prendiamo un pezzo di tempo, un poco di cura.
+    <i>Per cui ci prendiamo un pezzo di tempo, un momento di cura.
     
         -> witch_closing_storylet ->
         -> main
@@ -223,7 +222,7 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-// Contrattazione: Franco le dice“ Sei sempre stata come XXX che cercava di essere YYY invece di essere totalmente XXX”.
+
     <i>Un'altra storia ascoltata fino alla sua foce.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
     <i>Un altro fiume attraversato da {player_name}.
     <i>Siamo sicure che <>
@@ -250,17 +249,16 @@
     <i>Avevamo passato anni tra questi luoghi, ma cieche di orgoglio, cieche di razionalità, non ci eravamo mai accorte di non essere sole.
     <i>Franco ci ha accolte come delle vecchie amiche.
     <i>Franco sapeva tante cose di noi.
-    <i>Ogni giorno, per settimane, ci ha accolte lungo le sue rive, nuotando nell'acqua delle nostre parole.
+    <i>Ogni giorno, per settimane, ci ha raccolte lungo le sue rive, nuotando nell'acqua delle nostre parole.
     <i>Il disprezzo per noi stesse si è fatto domanda, la domanda ha cercato comprensione.
-    <i>Un giorno abbiamo chiesto a Franco dove abbiamo sbagliato.
+    <i>Un giorno abbiamo chiesto a Franco dove avevamo sbagliato.
     <i>"Volevi conoscere l'acqua, ma ti sei fatta nuotare."
-    <i>E coi piedi immersi nello stagno, abbiamo creduto di capire.
+    <i>E coi piedi verso il cielo, abbiamo creduto di capire.
     <i>Abbiamo ripreso a studiare, ma questa volta pensando alle persone amiche, pensando a come avrei potuto aiutarle.
     <i>Ho riconosciuto il mio errore, e ho cercato un modo di farmi perdonare.
     <i>Il disprezzo si è fatto domanda, la domanda comprensione.
     <i>E la comprensione un primo passo verso un nuovo errore.
-    <i>Ma ora {player_name} ha altre cose importanti da fare.
-    <i>E noi abbiamo bisogno di un attimo per respirare.
+    <i>Ma ora abbiamo bisogno di un attimo per respirare.
     
         -> witch_closing_storylet ->
         -> main
@@ -327,9 +325,9 @@
         }
     e ora si conclude anche la nostra.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
     <i>"Volevi conoscere l'acqua, ma ti sei fatta nuotare", mi aveva detto Franco.
-    <i>E un'altra persona saggia diceva sempre "Noi diventiamo le nostre relazioni".
-    <i>Quella persona aveva passato due anni a cucinare tra quelle che avevo reso macerie.
-    <i>Unendoci nei giorni disperati, ascoltandoci negli entusiasmi e nelle noie.
+    <i>E un'altra persona saggia diceva sempre: "Noi siamo le nostre relazioni".
+    <i>Quella persona aveva passato due anni a cucinare tra quegli spazi che avevo reso maceria.
+    <i>Creando uno spazio di unione nei giorni disperati, ascoltandoci negli entusiasmi e nelle noie.
     <i>Per lei, tutto è relazione.
     <i>Se volevo conoscere l'acqua, dovevo diventare acqua.
     <i>Se volevo conoscere questo luogo, dovevo diventare questo luogo.
@@ -340,13 +338,13 @@
     <i>Su, nelle gioie delle nubi, nelle certezze del cielo.
     <i>Il suono di ogni fiore ripeteva il suo nome, il nome di questo luogo.
     <i>Ho lasciato che mi riempisse, che diventassimo relazione.
-    <i>Ho lasciato il mio io, ho trovato un noi.
+    <i>Ho rinunciato al mio io e ho trovato un noi.
     <i>Siamo diventate Selanìa.
     <i>Abbiamo invitato il mondo a trovarci.
     <i>Per poter cambiare.
 
-    -> witch_closing_storylet ->
-    -> main
+        -> witch_closing_storylet ->
+        -> main
 
 
 === witch_allSigils_opening ===
