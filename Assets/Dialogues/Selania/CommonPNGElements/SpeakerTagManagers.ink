@@ -14,7 +14,7 @@ LIST nest_speakersForEwWordTag = Influenced, Other
 {debug: entro in charName. Il valore di PNG è {PNG}.}
 {PNG:
     - PG:
-        ~ return "player_name"
+        ~ return "{player_name}"
     
     - FirstCharacter:
         {
