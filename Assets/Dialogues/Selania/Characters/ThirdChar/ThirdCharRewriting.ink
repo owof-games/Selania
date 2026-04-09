@@ -113,7 +113,7 @@
         
             {
                 - story_endedStories == ():
-                    {charTag(witch_tag(), witch_state())}   <i>{player_name} ha utilizzato la sua prima goccia di inchiostro per compiere una riscrittura.
+                    {charTag(TheWitch, witch_state())}   <i>{player_name} ha utilizzato la sua prima goccia di inchiostro per compiere una riscrittura.
             }        
 
             {
@@ -189,7 +189,7 @@
         
             {
                 - story_endedStories == ():
-                    {charTag(witch_tag(), witch_state())}   <i>{player_name} ha utilizzato la sua thirda goccia di inchiostro per procedere con la riscrittura.
+                    {charTag(TheWitch, witch_state())}   <i>{player_name} ha utilizzato la sua thirda goccia di inchiostro per procedere con la riscrittura.
             }         
         
             {
@@ -260,7 +260,7 @@
         
             {
                 - story_endedStories == ():
-                    {charTag(witch_tag(), witch_state())}   <i>{player_name} ha utilizzato la terza goccia di inchiostro, proponendo una riscrittura.
+                    {charTag(TheWitch, witch_state())}   <i>{player_name} ha utilizzato la terza goccia di inchiostro, proponendo una riscrittura.
             }         
         
             {
@@ -332,7 +332,7 @@
         
             {
                 - story_endedStories == ():
-                    {charTag(witch_tag(), witch_state())}   <i>{player_name} ha utilizzato la quarta e ultima unità di inchiostro, compiendo il massimo di riscritture possibili.
+                    {charTag(TheWitch, witch_state())}   <i>{player_name} ha utilizzato la quarta e ultima unità di inchiostro, compiendo il massimo di riscritture possibili.
             }  
             
             -> ending
@@ -350,10 +350,10 @@
             
             {
                 - story_endedStories == ():
-                    {charTag(witch_tag(), witch_state())}   <i>{player_name} sta per utilizzare il potere dell'<b><i>epilogo</b></i>.
+                    {charTag(TheWitch, witch_state())}   <i>{player_name} sta per utilizzare il potere dell'<b><i>epilogo</b></i>.
                 
                 - else:
-                    {charTag(witch_tag(), witch_state())}   <i>Quale <b><i>epilogo</b></i> proporrà {player_name}?   
+                    {charTag(TheWitch, witch_state())}   <i>Quale <b><i>epilogo</b></i> proporrà {player_name}?   
             }     
      
         + (fire)Diventa il più forte, il più coraggioso.
@@ -513,7 +513,7 @@
 
             {
                 - not rewriting_proposal_second_character.secret_ending or not rewriting_proposal_first_character.secret_ending:
-                    {charTag(witch_tag(), witch_state())}   <i>{charNameTwo} ripone piena fiducia in {player_name}, ed è pronto a condividere con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} una informazione importante.
+                    {charTag(TheWitch, witch_state())}   <i>{charNameTwo} ripone piena fiducia in {player_name}, ed è pronto a condividere con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} una informazione importante.
             }
 
         Voglio dirti una cosa {player_name}.

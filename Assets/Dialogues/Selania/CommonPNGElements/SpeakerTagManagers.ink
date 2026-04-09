@@ -11,9 +11,10 @@ LIST nest_speakersForEwWordTag = Influenced, Other
 ~ return "{PNG}, {displayName}, {mood}"
 
 === function charName(PNG)
+{debug: entro in charName. Il valore di PNG è {PNG}.}
 {PNG:
     - PG:
-        ~ return player_name
+        ~ return "player_name"
     
     - FirstCharacter:
         {
@@ -104,12 +105,25 @@ LIST nest_speakersForEwWordTag = Influenced, Other
         }
     
     - TheWitch:
+    {debug: Arrivo a The Witch}
         {
-            - witch_actualName == ():
-                ~ return ""
-                
-            - else:
-                ~ return "{witch_actualName}"
+                - not witch_intro.nameChosen:
+                    ~ return ""
+
+                - witch_actualName == Luna: 
+                    ~ return "Luna"
+
+                - witch_actualName == Strega:
+                    ~ return "Strega"     
+
+                - witch_actualName == Radice:
+                    ~ return "Radice"
+
+                - witch_actualName == Fiamma:
+                    ~ return "Fiamma"
+                    
+                - witch_actualName == Parola
+                    ~ return "Parola"
         }
 
     - Franco:
@@ -241,10 +255,23 @@ LIST nest_speakersForEwWordTag = Influenced, Other
 
 === function witch_tag
 {
-    - witch_actualName == ():
+    - witch_intro.nameChosen:
         ~ return ""
-    - else:
-        ~ return "{witch_actualName}"
+
+    - witch_actualName == Luna: 
+        ~ return "Luna"
+
+    - witch_actualName == Strega:
+        ~ return "Strega"     
+
+    - witch_actualName == Radice:
+        ~ return "Radice"
+
+    - witch_actualName == Fiamma:
+        ~ return "Fiamma"
+
+    - witch_actualName == Parola
+        ~ return "Parola"
 }
 
 === function frog_tag

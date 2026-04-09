@@ -115,7 +115,7 @@
 === gender ===
     {
         - gender == 1:
-            {charTag(witch_tag(), witch_state())}   <i>Quali sono i pronomi di {player_name}?</i>
+            {charTag(TheWitch, witch_state())}   <i>Quali sono i pronomi di {player_name}?</i>
 
         - else:
             {charTag(PG, "neutral")}   E per quanto riguarda i miei pronomi:#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
@@ -146,7 +146,7 @@
 
 //Per la scelta del nome
 === name_choice ===
-    {charTag(witch_tag(), witch_state())}   <i>Un nome è un incantesimo, una possibilità.
+    {charTag(TheWitch, witch_state())}   <i>Un nome è un incantesimo, una possibilità.
     <i>Quale nome verrà pronunciato?
 
     - (top2)

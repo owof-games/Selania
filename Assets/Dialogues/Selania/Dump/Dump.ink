@@ -6,7 +6,7 @@
 
 {
     - dump == 1:
-        {charTag(witch_tag(), witch_state())}   <i>Un vecchio vaso attende {player_name}.</i>
+        {charTag(TheWitch, witch_state())}   <i>Un vecchio vaso attende {player_name}.</i>
 }
 
 -> main

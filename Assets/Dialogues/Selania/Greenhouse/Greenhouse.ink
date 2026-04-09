@@ -6,7 +6,7 @@
 
 {
     - greenhouse == 1:
-        {charTag(witch_tag(), witch_state())}   <i>Nella serra a lungo dimenticata i vasi attendono sussurri e confidenze.</i>
+        {charTag(TheWitch, witch_state())}   <i>Nella serra a lungo dimenticata i vasi attendono sussurri e confidenze.</i>
 }
 
     
@@ -23,7 +23,7 @@
         - greenhouse_backupCultivable != ():
             -> greenhouse_entry_check
         - else:
-            {charTag(witch_tag(), witch_state())}   <i>Al momento la serra non ha domande da porre a {player_name}.</i>
+            {charTag(TheWitch, witch_state())}   <i>Al momento la serra non ha domande da porre a {player_name}.</i>
         -> main
         
     }
@@ -31,7 +31,7 @@
 
 
 === greenhouse_entry_check
-    {charTag(witch_tag(), witch_state())}   <i>La serra attende risposte.</i>
+    {charTag(TheWitch, witch_state())}   <i>La serra attende risposte.</i>
         +  {greenhouse_backupCultivable != ()}<i>Voglio coltivare qualcosa.</i>
                 -> cultivable_test
         +  <i>{~ Mi aggiro per la serra.|Osservo ciò che è in crescita.|Ascolto i rumori della serra.|Mi rilasso un attimo.|Mi perdo nei colori dei vasi.}</i>

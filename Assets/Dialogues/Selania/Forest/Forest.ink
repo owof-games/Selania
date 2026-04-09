@@ -6,7 +6,7 @@
 
 {
     - forest == 1:
-        {charTag(witch_tag(), witch_state())}   <i>La foresta è canto sospeso.</i>
+        {charTag(TheWitch, witch_state())}   <i>La foresta è canto sospeso.</i>
 }
 
 -> main
