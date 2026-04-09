@@ -7,8 +7,11 @@
     - are_two_entities_together(PG, Franco) && grimoire_franco hasnt grimFrancoFirst:
         -> franco_intro
     
-    - special_mission_one_contents && entity_location(PG) == Pond && not feedback_mission_one_closed:
-        -> feedback_mission_one_closed
+    - are_two_entities_together(PG, Franco) && special_mission_one_contents && entity_location(PG) == Pond && grimoire_franco hasnt grimFrancoMissionOneFeedback:
+        -> franco_feedback_mission_one_closed
+
+    - are_two_entities_together(PG, Franco) && achievements_fullLore ==  Discovered && grimoire_franco hasnt grimFrancoAllDocuments:
+        -> franco_allDocuments
 
     //Commenti speciali
     //Regalo da raccogliere

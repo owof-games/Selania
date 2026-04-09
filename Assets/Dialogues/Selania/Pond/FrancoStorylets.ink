@@ -49,7 +49,7 @@
 
     -> welcoming_frog.top2
 
-=== feedback_mission_one_closed ===
+=== franco_feedback_mission_one_closed ===
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -72,11 +72,21 @@
 
         Per il resto della serata l'ho visto più sereno.
         Ha anche riso a una mia battuta!
+        
+        ~ grimoire_franco += grimFrancoMissionOneFeedback
 
     -> welcoming_frog.top2
 
 
+=== franco_allDocuments ===
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 
+    Franco ci dice che è stato lui a seminare in giro tutti i documenti che abbiamo raccolto.
 
+        ~ grimoire_franco += grimFrancoAllDocuments
 
+    -> welcoming_frog.top2
 
