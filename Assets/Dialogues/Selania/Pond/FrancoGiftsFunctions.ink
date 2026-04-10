@@ -42,7 +42,7 @@
 
 //Poi voglio vedere in generale in questo momento posso dare dei doni alla giocatrice
     {
-        - frog_firstCharAchievableGifts != () && firstChar_storyStatus == story_storyStarted:
+        - frog_firstCharAchievableGifts != () && grimoire_firstChar has grimFirstCharOne:
             {
                 - frog_firstCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
                     ~ frog_firstCharGiftable = false
@@ -56,7 +56,7 @@
     }
 
     {
-        - frog_secondCharAchievableGifts != () && secondChar_storyStatus == story_storyStarted:
+        - frog_secondCharAchievableGifts != () && grimoire_secondChar has grimSecondCharOne:
             {
                 - frog_secondCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
                     ~ frog_secondCharGiftable = false
@@ -70,7 +70,7 @@
     }
 
     {        
-        - frog_thirdCharAchievableGifts != () && thirdChar_storyStatus == story_storyStarted:
+        - frog_thirdCharAchievableGifts != () && grimoire_thirdChar has grimThirdCharOne:
             {
                 - frog_thirdCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
                     ~ frog_thirdCharGiftable = false
@@ -84,7 +84,7 @@
     }
 
     {
-        - frog_fourthCharAchievableGifts != () && fourthChar_storyStatus == story_storyStarted:
+        - frog_fourthCharAchievableGifts != () && grimoire_fourthChar has grimFourthCharOne:
             {
                 - frog_fourthCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
                     ~ frog_fourthCharGiftable = false
@@ -103,7 +103,7 @@
 
     {
 
-        - frog_fifthCharAchievableGifts != () && fifthChar_storyStatus == story_storyStarted:
+        - frog_fifthCharAchievableGifts != () && grimoire_fifthChar has grimFifthCharOne:
             {
                 - frog_fifthCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
                     ~ frog_fifthCharGiftable = false

@@ -64,7 +64,33 @@
     - are_two_entities_together(PG, Franco) && frog_currentMission == missionEight && frog_updatedMissions hasnt missionEight && entity_location(PG) == Pond:
         -> franco_missionEight_solicit
 
-    //Commenti sulle missioni in corso, CONCLUSE su richiesta di franco o in autonomia
+    //Commenti sulle missioni in corso. Anche se ridondante, punto a far commentare PRIMA quelle commissionate da Franco, POI quelle concluse in autonomia.
+    - are_two_entities_together(PG, Franco) && frog_updatedMissions has missionOne && frog_currentMission has missionOne && entity_location(PG) == Pond:
+        -> franco_missionOne_closed
+
+    - are_two_entities_together(PG, Franco) && frog_updatedMissions has missionTwo && frog_currentMission has missionTwo && entity_location(PG) == Pond:
+        -> franco_missionTwo_closed
+
+    - are_two_entities_together(PG, Franco) && frog_updatedMissions has missionThree && frog_currentMission has missionThree && entity_location(PG) == Pond:
+        -> franco_missionThree_closed
+
+    - are_two_entities_together(PG, Franco) && frog_updatedMissions has missionFour && frog_currentMission has missionFour && entity_location(PG) == Pond:
+        -> franco_missionFour_closed
+
+    - are_two_entities_together(PG, Franco) && frog_updatedMissions has missionFive && frog_currentMission has missionFive && entity_location(PG) == Pond:
+        -> franco_missionFive_closed
+
+    - are_two_entities_together(PG, Franco) && frog_updatedMissions has missionSix && frog_currentMission has missionSix && entity_location(PG) == Pond:
+        -> franco_missionSix_closed
+
+    - are_two_entities_together(PG, Franco) && frog_updatedMissions has missionSeven && frog_currentMission has missionSeven && entity_location(PG) == Pond:
+        -> franco_missionSeven_closed
+
+    - are_two_entities_together(PG, Franco) && frog_updatedMissions has missionEight && frog_currentMission has missionEight && entity_location(PG) == Pond:
+        -> franco_missionEight_closed
+
+
+    //Chiuse in autonomia
     - are_two_entities_together(PG, Franco) && frog_updatedMissions has missionOne && entity_location(PG) == Pond:
         -> franco_missionOne_closed
 
