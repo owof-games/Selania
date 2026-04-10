@@ -88,6 +88,7 @@
         <- nest_Franco_earthGlyph_button
         <- nest_Franco_waterGlyph_button
         <- nest_Franco_aetherGlyph_button
+        <- franco_inTheNest
 
 //Elementi del libro
 <- first_character_recap

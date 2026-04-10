@@ -64,54 +64,67 @@
     //Missione sei richiede invito strega a parlarle
     {
         - frog_allMissionsCompleted hasnt missionSix && player_accessiblePlaces has Dump:
+            {debug_frog: ci sono le condizioni per abilitare missionSix.}
             ~ frog_availableCommonMissions += missionSix
 
         - else:
-            ~ frog_availableCommonMissions -= missionSix        
+            ~ frog_availableCommonMissions -= missionSix
+            {debug_frog: NON ci sono le condizioni per abilitare missionSix.}    
     }
 
 
     //Missione sette richiede la presenza di Ursula alla stazione
     {
         - frog_allMissionsCompleted hasnt missionSeven && (contentsTrainStop has DoggoFirstLetters) or (contentsTrainStop has DoggoSecondLetters) or (contentsTrainStop has DoggoThirdLetters):
+        {debug_frog: ci sono le condizioni per abilitare missionSeven.}
             ~ frog_availableCommonMissions += missionSeven
 
         - else:
-            ~ frog_availableCommonMissions -= missionSeven        
+            ~ frog_availableCommonMissions -= missionSeven
+            {debug_frog: NON ci sono le condizioni per abilitare missionSeven.}      
     }
 
     //Missione otto richiede che la biblioteca sia aperta
     {
         - frog_allMissionsCompleted hasnt missionEight && player_accessiblePlaces has Library:
             ~ frog_availableCommonMissions += missionEight
+            {debug_frog: ci sono le condizioni per abilitare missionEight.}
 
         - else:
-            ~ frog_availableCommonMissions -= missionEight        
+            ~ frog_availableCommonMissions -= missionEight 
+            {debug_frog: NON ci sono le condizioni per abilitare missionEight.} 
     }
 
     //Missione speciale uno richiede l'apertura del nido e che sia stato creato almeno un sigillo. Strega all'inizio ce ne dona tre, per cui il conto è >3.
     {
         - frog_allMissionsCompleted hasnt specialMissionOne && player_accessiblePlaces has Nest && LIST_COUNT(glyph_discoveredSigils) > 3:
             ~ frog_availableSpecialMissions += specialMissionOne
+            {debug_frog: ci sono le condizioni per abilitare specialMissionOne.}
 
         - else:
-            ~ frog_availableSpecialMissions -= specialMissionOne        
+            ~ frog_availableSpecialMissions -= specialMissionOne
+            {debug_frog: NON ci sono le condizioni per abilitare specialMissionOne.}
+             
     }
 
     //Missione speciale due richiede l'apertura della cucina e che sia vuota.
     {
         - frog_allMissionsCompleted hasnt specialMissionTwo && player_accessiblePlaces has Kitchen && kitchen_kitchenOccupied == false:
             ~ frog_availableSpecialMissions += specialMissionTwo
+            {debug_frog: ci sono le condizioni per abilitare specialMissionTwo.}
 
         - else:
-            ~ frog_availableSpecialMissions -= specialMissionTwo        
+            ~ frog_availableSpecialMissions -= specialMissionTwo
+            {debug_frog: NON ci sono le condizioni per abilitare specialMissionTwo.}  
     }
 
+
+{debug_frog: dopo tutti i check, le missioni disponibili sono per frog_availableSpecialMissions {frog_availableSpecialMissions} e per frog_availableCommonMissions {frog_availableCommonMissions}. frog_pauseSpecialMission è {frog_pauseSpecialMission}.}
 
 //Secondo step, assegno una missione a caso, passando prima da quelle prioritarie, e poi dalle altre.
     ~ temp newMission = ()
     {
-        - frog_availableSpecialMissions != () && frog_pauseSpecialMission == 0:
+        - frog_availableSpecialMissions != () && frog_pauseSpecialMission <= 0:
             ~ newMission = LIST_MIN(frog_availableSpecialMissions)
             ~ frog_currentMission += newMission
             ~ frog_availableSpecialMissions -= newMission

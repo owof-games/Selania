@@ -9,7 +9,7 @@
         <i>Aspettiamo {player_name} ai margini della foresta.
 
             -> witch_closing_storylet ->
-            -> main
+            ->->
 
 === witch_intro
     ~ temp charNameOne = translator(firstChar_ActualName)

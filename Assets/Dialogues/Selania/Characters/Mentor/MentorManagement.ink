@@ -78,8 +78,6 @@
 
 
 === mentor_closing_storylet ===
-        //Gestione crescita piante
-        -> growing_check ->
         //Questo evita che venga proposto un altro storylet fino a quando la pausa non è finita
         ~ mentor_pauseTalking = mentor_pauseDuration
         //Cooldown comune
@@ -180,6 +178,8 @@
         }
         //Aggiornamento lista di quelli comuni
         -> grimoire_common_storylets_updater ->
+        //Gestione crescita piante
+        -> growing_check ->
 
 ->->
 

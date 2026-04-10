@@ -16,10 +16,12 @@
 //Aggiorniamo lo stato dei bottoni, e poi torniamo a main
     ~ nest_updateButtons()
 
-
-
 -> main
 
+
+=== franco_inTheNest
++ {are_two_entities_together(Franco, PG) && entity_location(PG) == Nest} [Franco]
+    -> franco_storyletsManagement -> main
 
 //E qui ci sono tutti i bottoni
 === nest_fireGlyph_button ===
@@ -94,4 +96,8 @@
         ~ saveGlyph(Aether)
         ~ checkSigilCompleted()
         ~ nest_updateButtons()
-        -> main        
+        -> main 
+
+
+
+

@@ -24,8 +24,6 @@
 
     //Formula per la chiusura di uno storylet
 === witch_closing_storylet
-        //Gestione crescita piante
-        -> growing_check ->
         //Questo evita che venga proposto un altro storylet fino a quando la pausa non è finita
         ~ witch_pauseTalking = witch_pauseDuration
         //Questo è per la gestione delle domande
@@ -104,4 +102,6 @@
         }
         //Aggiornamento lista di quelli comuni
         -> grimoire_common_storylets_updater ->
+        //Gestione crescita piante
+        -> growing_check ->
 ->->
