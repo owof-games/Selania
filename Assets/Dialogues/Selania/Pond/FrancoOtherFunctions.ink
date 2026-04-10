@@ -68,8 +68,5 @@
     ~ frog_currentMission = ()
     ~ notification_francoQuests = false
     ~ frog_suspended_gift = false
-    //E abbasso il valore delle missioni speciali
-    ~ frog_pauseSpecialMission --
- 
-    
+
 -> main

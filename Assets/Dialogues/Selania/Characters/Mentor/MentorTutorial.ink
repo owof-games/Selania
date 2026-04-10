@@ -170,8 +170,15 @@
                 ~ move_entity(Grimoire, Pond)        
         }
         {charTag(Mentor, "neutral")}:   Consultalo ogni volta che sei in difficoltà.
-                                                E poi ti ho aperto la serra, la trovi nei pressi dello stagno.
-        -> opening_places ->
+                                        E poi ti ho aperto la serra, <>
+                                        {
+                                            - contentsPond has PG:
+                                                è quell'edificio lì a destra.
+                                            - else:
+                                                la trovi nei pressi dello stagno.
+                                        }
+                                                
+            -> opening_places ->
         {charTag(Mentor, "hurry")}:     La serra è un bel posto dove rilassarsi, e non solo.
         {charTag(Mentor, "bored")}:     Ma evita assolutamente tutti gli altri posti bloccati, perché sono pericolosi!
                                                 Più tardi ti spiegherò perché sei qui.

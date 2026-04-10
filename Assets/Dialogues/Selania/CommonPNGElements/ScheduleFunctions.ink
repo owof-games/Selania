@@ -18,6 +18,8 @@
         VAR openingKitchen_delay = 4
         VAR openingLibrary_delay = 6
         VAR openingNest_delay = 8
+        VAR openingPlacesPause = 0
+        VAR openingPlacesMaxPause = 2
 
 
 === story_time_management_for_PNG
@@ -112,6 +114,8 @@
             ~ move_entity(FromPondToGreenhouseBlocked, Safekeeping)
             ~ move_entity(FromPondToGreenhouse, Pond)
             ~ move_entity(mapGreenhouse, TrainStop)
+            //Attiviamo una pausa per evitare che i luoghi vengano aperti tutti di fila
+            ~ openingPlacesPause = openingPlacesMaxPause
             // ~ movements_randomablePlaces += Greenhouse
     }
     
@@ -122,6 +126,8 @@
             ~ move_entity(FromPondToKitchenBlocked, Safekeeping)
             ~ move_entity(FromPondToKitchen, Pond)
             ~ move_entity(mapKitchen, TrainStop)
+            //Attiviamo una pausa per evitare che i luoghi vengano aperti tutti di fila
+            ~ openingPlacesPause = openingPlacesMaxPause
     }
     
     //Apertura biblioteca
@@ -132,6 +138,8 @@
             ~ move_entity(mapLibrary, TrainStop)
             // ~ movements_randomablePlaces += Library
             ~ player_accessiblePlaces += Library
+            //Attiviamo una pausa per evitare che i luoghi vengano aperti tutti di fila
+            ~ openingPlacesPause = openingPlacesMaxPause
     }
 
     
@@ -142,6 +150,8 @@
             ~ move_entity(FromLibraryToNestBlocked, Safekeeping)
             ~ move_entity(FromLibraryToNest, Library)
             ~ move_entity(mapNest, TrainStop)
+            //Attiviamo una pausa per evitare che i luoghi vengano aperti tutti di fila
+            ~ openingPlacesPause = openingPlacesMaxPause
     }
     
 

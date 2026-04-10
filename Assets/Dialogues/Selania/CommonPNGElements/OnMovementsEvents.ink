@@ -219,13 +219,21 @@ VAR letters_doggoPause = false
         - frog_pauseSpecialMission > 0:
            ~ frog_pauseSpecialMission --
     }
+    {
+        - openingPlacesPause > 0:
+            ~ openingPlacesPause --
+    }
 
+    {
+        - mentor_lastMindfulness > 0:
+            ~ mentor_lastMindfulness --
+    }
 
-    //Riduzione valore Mindfulness per proporne una diversa poi    
-    ~ mentor_lastMindfulness --
+    {
+        - frog_tiredValue > 0:
+            ~ frog_tiredValue --
+    }
 
-    //Riduzione stanchezza rana
-    ~ frog_tiredValue --
 
     //Avvio dialoghi di chiusura
     {
