@@ -113,7 +113,7 @@ GESTIONE DELLO STATO DEI SIGILLI
     VAR glyph_usedSigils = ()
 
 //Tracciamento del sigillo attualmente attivo
-    VAR glyph_actualActiveSigil = ()
+    VAR glyph_actualActiveSigil = (FireEarthAether)
     VAR glyph_maxSigilUses = 3
     VAR glyph_actualSigilUses= 0
 

@@ -106,7 +106,8 @@
 //Moltiplicatore del colore per il personaggio
     VAR secondChar_glyphVariation = 3.0
 //Check se ho utilizzato almeno un sigillo col personaggio
-    VAR secondChar_usedSigil = 0       
+    VAR secondChar_usedSigil = 0
+    VAR secondChar_usedSigilsTracking = ()
     
 //UP: coerenza.
 //DOWN: incoerenza, cose random

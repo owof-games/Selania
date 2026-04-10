@@ -166,7 +166,7 @@
         
         //Lettura Mentore
         - are_two_entities_together(Mentor, PG) && library_readStories has Salvo && not a_story_of_transformation:
-                -> a_story_of_transformation      
+            -> a_story_of_transformation      
 
     //Scene speciali
         //Crescita olobino

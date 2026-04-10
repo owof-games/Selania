@@ -17,10 +17,6 @@
 //Questo è per il conteggio totale delle scelte prese con la PNG
     VAR mentor_totalChoices = 0        
 
-//Tracciamento apprezzamento glifi. Tutto ciò che è fuori da questa lista = reazione neutrale.
-    VAR mentorChar_positiveGlyphs = ()
-    VAR mentorChar_negativeGlyphs = ()
-
 //Variabili colore
     VAR mentor_aether = 0.00
     VAR mentor_earth = 0.00

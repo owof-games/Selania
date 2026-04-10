@@ -84,7 +84,8 @@
     VAR thirdChar_glyphVariation = 3.0
 
 //Check se ho utilizzato almeno un sigillo col personaggio
-    VAR thirdChar_usedSigil = 0    
+    VAR thirdChar_usedSigil = 0
+    VAR thirdChar_usedSigilsTracking = () 
     
 //UP: coerenza.
 //DOWN: incoerenza, cose random

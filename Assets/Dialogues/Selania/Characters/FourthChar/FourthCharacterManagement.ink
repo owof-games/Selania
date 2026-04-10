@@ -68,6 +68,7 @@
     VAR fourthChar_glyphVariation = 3.0    
 //Calcolo utilizzo sigilli su png
     VAR fourthChar_usedSigil = 0  
+    VAR fourthChar_usedSigilsTracking = () 
 
 //UP: ???
 //DOWN: ???

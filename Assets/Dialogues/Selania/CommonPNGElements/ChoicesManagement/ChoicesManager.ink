@@ -373,18 +373,23 @@ Recap della logica.
     {
         //Ai sigilli, se attivi
         - glyph_currentTalker == FirstCharacter && glyph_actualActiveSigil != ():
+                ~ firstChar_usedSigilsTracking += glyph_actualActiveSigil
             -> sigil_FirstCharacter_reactions
         
         - glyph_currentTalker == SecondCharacter && glyph_actualActiveSigil != ():
+                ~ secondChar_usedSigilsTracking += glyph_actualActiveSigil
             -> sigil_SecondCharacter_reactions
 
         - glyph_currentTalker == ThirdCharacter && glyph_actualActiveSigil != ():
+                ~ thirdChar_usedSigilsTracking += glyph_actualActiveSigil
             -> sigil_ThirdCharacter_reactions
 
         - glyph_currentTalker == FourthCharacter && glyph_actualActiveSigil != ():
+                ~ fourthChar_usedSigilsTracking += glyph_actualActiveSigil
             -> sigil_FourthCharacter_reactions
 
         - glyph_currentTalker == FifthCharacter  && glyph_actualActiveSigil != ():
+                ~ fifthChar_usedSigilsTracking += glyph_actualActiveSigil
             -> sigil_FifthCharacter_reactions    
 
         //Come guests, se presenti

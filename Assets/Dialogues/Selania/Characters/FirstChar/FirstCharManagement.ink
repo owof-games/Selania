@@ -90,7 +90,8 @@
 //Moltiplicatore del colore per il personaggio
     VAR firstChar_glyphVariation = 3.0 
 //Check se ho utilizzato almeno un sigillo col personaggio
-    VAR firstChar_usedSigil = 0   
+    VAR firstChar_usedSigil = 0
+    VAR firstChar_usedSigilsTracking = ()
     
 //STATI UP: water & aether.
 //STATI DOWN: Air.
