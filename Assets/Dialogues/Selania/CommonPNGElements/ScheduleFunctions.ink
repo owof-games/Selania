@@ -183,7 +183,15 @@
                     ~ movements_randomizable_characters -= FirstCharacter
 
                 - firstChar_PondInvite == true:
-                    ~ movements_randomizable_characters -= FirstCharacter    
+                    {
+                        - firstChar_PondWaiting > 0:
+                            ~ firstChar_PondWaiting --
+                            ~ movements_randomizable_characters -= FirstCharacter 
+
+                        - else:
+                            ~ firstChar_PondInvite = false
+                            ~ movements_randomizable_characters += FirstCharacter
+                    }  
                 
                 - else:
                     ~ movements_randomizable_characters += FirstCharacter
@@ -207,7 +215,15 @@
                     ~ movements_randomizable_characters -= SecondCharacter    
 
                 - secondChar_ForestInvite == true:
-                    ~ movements_randomizable_characters -= SecondCharacter 
+                    {
+                        - secondChar_ForestWaiting > 0:
+                            ~ secondChar_ForestWaiting --
+                            ~ movements_randomizable_characters -= SecondCharacter 
+
+                        - else:
+                            ~ secondChar_ForestInvite = false
+                            ~ movements_randomizable_characters += SecondCharacter 
+                    }
 
                 - else:
                     ~ movements_randomizable_characters += SecondCharacter
@@ -232,7 +248,17 @@
                     ~ movements_randomizable_characters -= ThirdCharacter    
 
                 - thirdChar_LibraryInvite == true:
-                    ~ movements_randomizable_characters -= ThirdCharacter 
+                    {
+                        - thirdChar_LibraryWaiting > 0:
+                            ~ thirdChar_LibraryWaiting --
+                            ~ movements_randomizable_characters -= ThirdCharacter 
+
+                        - else:
+                            ~ thirdChar_LibraryInvite = false
+                            ~ movements_randomizable_characters += ThirdCharacter 
+
+                    }
+                    
 
                 - else:
                     ~ movements_randomizable_characters += ThirdCharacter

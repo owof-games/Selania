@@ -2,9 +2,16 @@
 VAR png_commonPauseTalking = false
 
 //Gestione degli inviti.
+VAR chars_MaxOpenPlacesWaiting = 4
+
 VAR firstChar_PondInvite = false
+VAR firstChar_PondWaiting = 0
+
 VAR secondChar_ForestInvite = false
+VAR secondChar_ForestWaiting = 0
+
 VAR thirdChar_LibraryInvite = false
+VAR thirdChar_LibraryWaiting = 0
 
 === endingPNGstory(PNG)
 //Chiamiamo questa funzione a fine riscrittura, per fare tutti i passaggi previsti di quando finisce una storia.
