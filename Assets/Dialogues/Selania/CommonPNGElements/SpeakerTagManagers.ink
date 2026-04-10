@@ -257,41 +257,6 @@ LIST nest_speakersForEwWordTag = Influenced, Other
 	    ~ return "Mentore"
 }
 
-
-=== function witch_tag
-{
-    - witch_intro.nameChosen:
-        ~ return ""
-
-    - witch_actualName == Luna: 
-        ~ return "Luna"
-
-    - witch_actualName == Strega:
-        ~ return "Strega"     
-
-    - witch_actualName == Radice:
-        ~ return "Radice"
-
-    - witch_actualName == Fiamma:
-        ~ return "Fiamma"
-
-    - witch_actualName == Parola
-        ~ return "Parola"
-}
-
-=== function frog_tag
-{
-    - frog_nameDiscovered == false:
-        ~ return "???"
-    
-    - are_two_entities_together(PG, Franco) && entity_location(PG) == Kitchen:
-        ~ return "Franco Lo Chef"
-
-    - else:
-        ~ return "Franco La Rana"
-
-}
-    
     
 === function PG_tag
     {
@@ -336,6 +301,16 @@ LIST nest_speakersForEwWordTag = Influenced, Other
    Funzioni per la gestione del ritratto 
 
  ----------------------------------*/
+
+=== function portrait_Franco()
+    {
+        - are_two_entities_together(PG, Franco) && entity_location(PG) == Kitchen:
+            ~ return "kitchen"
+
+        - else:
+            ~ return "neutral"
+    }
+
 
  === function witch_state()
 //{

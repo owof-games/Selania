@@ -274,11 +274,11 @@
                             E dopo averci parlato, non mi ispira molta fiducia.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_bored
                             {
                                 - are_two_entities_together(Franco, PG):
-                                    Hai provata ad espirarla?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                                    Una volta ho espirato un insetto così grosso che ha fatto un rumore come di botto.
-                                    E mi sono spaventato per il rumore.
-                                    E a quel punto l'insetto si è spaventato a sua volta ed è finito nel naso di Tullio.
-                                    Credo sia ancora lì dentro.
+                                    {charTag(Franco, "{portrait_Franco()}")}:       Hai provata ad espirarla?
+                                                                                    Una volta ho espirato un insetto così grosso che ha fatto un rumore come di botto.
+                                                                                    E mi sono spaventato per il rumore.
+                                                                                    E a quel punto l'insetto si è spaventato a sua volta ed è finito nel naso di Tullio.
+                                                                                    Credo sia ancora lì dentro.
                                     Appunto.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
                             }
                     }

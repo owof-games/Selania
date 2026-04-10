@@ -10,22 +10,22 @@
     //Facciamo un passaggio di aggiornamento degli achievements subito dopo la chiusura di una missione
     -> achievements_onGame_statusUpdate_GM ->
 
-    Bene girino, direi che è il momento che Franco ti dia una zampa!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {charTag(Franco, "{portrait_Franco()}")}:       Bene girino, direi che è il momento che Franco ti dia una zampa!
     
     {
         - firstChar_storyStatus == story_storyStarted && frog_firstCharAchievableGifts != () && frog_firstCharGiftable == false:
-            Ti dico che per ora non ho consigli utili su {charNameOne}, ma mi sto attivando per aiutarti, parola di Franco! 
+                                                    Ti dico che per ora non ho consigli utili su {charNameOne}, ma mi sto attivando per aiutarti, parola di Franco! 
     }
 
     {
         - secondChar_storyStatus == story_storyStarted && frog_secondCharAchievableGifts != () && frog_secondCharGiftable == false:
-            Non ho dritte su {charNameTwo}, solo rovesci, ma se torni più avanti sono sicuro che qualcosa di nuovo te lo posso dare.
+                                                    Non ho dritte su {charNameTwo}, solo rovesci, ma se torni più avanti sono sicuro che qualcosa di nuovo te lo posso dare.
     }
 
     {
         - thirdChar_storyStatus == story_storyStarted && frog_thirdCharAchievableGifts != () && frog_thirdCharGiftable == false:
-            Ci sono cose di {charNameThree} che per ora mi sono un mistero misterioso, ma se torni più tardi te le posso smisterare.
-            O smistare?
+                                                    Ci sono cose di {charNameThree} che per ora mi sono un mistero misterioso, ma se torni più tardi te le posso smisterare.
+                                                    O smistare?
     }
 
     - (top)
@@ -42,34 +42,34 @@
         + {frog_fifthCharGiftable == true}Qualche dritta su {charNameFive}?
             -> franco_giftsFifthChar
         + {(frog_recoverableCultivables != ()) && (frog_recoveredCultivables == ())} Puoi aiutarmi a recuperare una pianta che ho già utilizzato?
-                Certo che craack!
-                Ma.
-                Lo posso fare solo una volta.
-                    + + Ok, voglio usare ora questa occasione!
-                        -> cultivable_recovery
-                    + + Mmm, ci ragiono su.
-                        -> top
+                {charTag(Franco, "{portrait_Franco()}")}:       Certo che craack!
+                                                                Ma.
+                                                                Lo posso fare solo una volta.
+                                                                    + + Ok, voglio usare ora questa occasione!
+                                                                        -> cultivable_recovery
+                                                                    + + Mmm, ci ragiono su.
+                                                                        -> top
 
         + {frog_recoveredSigil == () && glyph_usedSigils != ()} Puoi aiutarmi a recuperare un sigillo che ho già utilizzato?
-                Certo che craack!
-                Ma.
-                Lo posso fare solo una volta.
-                E dandotene uno a caso.
-                I sigilli sono più strani delle capre, e non so fare di meglio.
-                    + + Ok, voglio usare ora questa occasione!
-                        //Chiamo direttamente la funzione, non ci sono scelte da compiere in questo caso.
-                        ~ sigil_recovery ()
-                        //E poi esco
-                        -> closed_exchange
+                {charTag(Franco, "{portrait_Franco()}")}:       Certo che craack!
+                                                                Ma.
+                                                                Lo posso fare solo una volta.
+                                                                E dandotene uno a caso.
+                                                                I sigilli sono più strani delle capre, e non so fare di meglio.
+                                                                    + + Ok, voglio usare ora questa occasione!
+                                                                        //Chiamo direttamente la funzione, non ci sono scelte da compiere in questo caso.
+                                                                        ~ sigil_recovery ()
+                                                                        //E poi esco
+                                                                        -> closed_exchange
 
-                    + + Mmm, ci ragiono su.
-                        -> top
+                                                                    + + Mmm, ci ragiono su.
+                                                                        -> top
 
         + Vorrei pensarci ancora un po'.
-            Mi trovi qui girino.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-            Voglio contare tutte le onde!
-                ~ frog_suspended_gift = true
-            -> main
+            {charTag(Franco, "{portrait_Franco()}")}:       Mi trovi qui girino.
+                                                            Voglio contare tutte le onde!
+                                                                ~ frog_suspended_gift = true
+                                                            -> main
         -
 ->->
 
@@ -90,12 +90,12 @@
     }
 
     {shuffle once:
-        - Uh, mi piace {charNameOne}, è sempre così gentile con me!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-        - {charNameOne} ha una bella testolina.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-            Piena di girini che corrono alla svelta.
-        - {charNameOne} andrebbe molto d'accordo con Tullio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-            Anche lui è un artista.
-        - Ottimamente! #inkD:offState #portrait:frog_neutral                                       
+        - {charTag(Franco, "{portrait_Franco()}")}:     Uh, mi piace {charNameOne}, è sempre così gentile con me!
+        - {charTag(Franco, "{portrait_Franco()}")}:     {charNameOne} ha una bella testolina.
+                                                        Piena di girini che corrono alla svelta.
+        - {charTag(Franco, "{portrait_Franco()}")}:     {charNameOne} andrebbe molto d'accordo con Tullio.
+                                                        Anche lui è un artista.
+        - {charTag(Franco, "{portrait_Franco()}")}:     Ottimamente!                                   
     }
     
     + {frog_firstCharAchievableGifts has cultivableGift} Cosa potrei regalarle?
@@ -117,35 +117,35 @@
 
         {
             - library_readStories has Aza:
-                Franco vede, vede vede...#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                Uh, devo aprire gli occhi.
-                Ma mi dicevano i topi della biblioteca che prima hai letto <b>Luna vergine</b> di Aza.
+                {charTag(Franco, "{portrait_Franco()}")}:       Franco vede, vede vede...
+                                                                Uh, devo aprire gli occhi.
+                                                                Ma mi dicevano i topi della biblioteca che prima hai letto <b>Luna vergine</b> di Aza.
                     {
                         - a_story_of_revenge :
-                            E che ne hai già parlato con {charNameOne}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                            Perché non scegli un altro dono?
+                            {charTag(Franco, "{portrait_Franco()}")}:       E che ne hai già parlato con {charNameOne}!
+                                                                            Perché non scegli un altro dono?
                                 ~ frog_aboutGiftRequest = ()
                                 ~ frog_first_novel = "<b>Luna vergine</b> di Aza"
                                 -> franco_giftsManagement.top
                     
                         - else:
-                            Prova a parlare con {charNameOne} e vedrai che avrà sicuramente qualcosa da dirti.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                            Anche perché so che ha già letto <b>Luna vergine</b> di Aza.
-                            Le persone parlano tanto delle cose che leggono.
-                            O vedono.
-                            O ascoltano.
-                            Per fortuna io parlo poco.
+                            {charTag(Franco, "{portrait_Franco()}")}:       Prova a parlare con {charNameOne} e vedrai che avrà sicuramente qualcosa da dirti.
+                                                                            Anche perché so che ha già letto <b>Luna vergine</b> di Aza.
+                                                                            Le persone parlano tanto delle cose che leggono.
+                                                                            O vedono.
+                                                                            O ascoltano.
+                                                                            Per fortuna io parlo poco.
                                 ~ frog_first_novel = "<b>Luna vergine</b> di Aza"
                                 -> closed_exchange
                     
                     }
 
             - else:
-                C'è una lettera dei topi della biblioteca.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                "Parola chiave: trasformazione".
-                Ah, e dietro c'è scritto: "Lunga".
-                Forse vogliono diventare zucche?
-                Ma magari tu ci capisci qualcosa e allora trovi il racconto che ti serve!
+                {charTag(Franco, "{portrait_Franco()}")}:       C'è una lettera dei topi della biblioteca.
+                                                                "Parola chiave: trasformazione".
+                                                                Ah, e dietro c'è scritto: "Lunga".
+                                                                Forse vogliono diventare zucche?
+                                                                Ma magari tu ci capisci qualcosa e allora trovi il racconto che ti serve!
                     ~ frog_first_novel = "una storia lunga che parli di trasformazione"
                     -> closed_exchange
             }
@@ -171,11 +171,11 @@
     }
 
     {shuffle once:
-        - Mi piace {charNameTwo}! Mi ha insegnato tantissime cose!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-        - Sì! Voglio chiedere a {charNameTwo} se facciamo lezioni di nuoto assieme!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-        - {charNameTwo} mi sta tanto simpatico.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-            Anche se non ho ancora capito quella cosa della elettricità.
-        - Ottimamente! #inkD:offState #portrait:frog_neutral                                       
+        - {charTag(Franco, "{portrait_Franco()}")}:     Mi piace {charNameTwo}! Mi ha insegnato tantissime cose!
+        - {charTag(Franco, "{portrait_Franco()}")}:     Sì! Voglio chiedere a {charNameTwo} se facciamo lezioni di nuoto assieme!
+        - {charTag(Franco, "{portrait_Franco()}")}:     {charNameTwo} mi sta tanto simpatico.
+                                                        Anche se non ho ancora capito quella cosa della elettricità.
+        - {charTag(Franco, "{portrait_Franco()}")}:     Ottimamente!                                   
     }
     
     + {frog_secondCharAchievableGifts has cultivableGift} Cosa potrei regalarle?
@@ -199,31 +199,31 @@
                 
         {
             - library_readStories has Lamia:
-                Prima Gliberia, una delle topoline della biblioteca, ha visto che stavi leggendo <b>Il sassolino</b>.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                {charTag(Franco, "{portrait_Franco()}")}:       Prima Gliberia, una delle topoline della biblioteca, ha visto che stavi leggendo <b>Il sassolino</b>.
                     {
                         - a_story_of_rebellion:
-                            E che ne avete già parlato con {charNameTwo}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                            Perché non scegli un altro dono?
+                                                                E che ne avete già parlato con {charNameTwo}.
+                                                                Perché non scegli un altro dono?
                                 ~ frog_aboutGiftRequest = ()
                                 ~ frog_second_novel = "<b>Il sassolino</b> di Lamia"
                                     -> franco_giftsManagement.top
                     
                         - else:
-                            Prova a parlare con lui e vedrai che avrà sicuramente qualcosa da dirti.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                            Anche perché è certissimamerrimo che ha già letto <b>Il sassolino</b>!
-                            A {charNameTwo} piace parlare.
-                            Ora mi sta insegnando come non annegare!
+                                                                Prova a parlare con lui e vedrai che avrà sicuramente qualcosa da dirti.
+                                                                Anche perché è certissimamerrimo che ha già letto <b>Il sassolino</b>!
+                                                                A {charNameTwo} piace parlare.
+                                                                Ora mi sta insegnando come non annegare!
                                 ~ frog_second_novel = "<b>Il sassolino</b> di Lamia"
                                 -> closed_exchange
                     }
 
             - else:
-                Secondo il manuale della biblioteca, {charNameTwo} è uno da fenotipo "ribellione" combinato con "veloce".#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                E tu dirai "Franco la rana, cos'è un fenotipo?"
-                E io ti dirò "Un tipo a cui piace tanto il fieno!"
-                E poi aggiungerò "Che è un po' diverso dal topognomastico, che è un topo che mastica gli gnomi."
-                E so che sono tante informazioni anche per una bella testolina come la tua, girino.
-                Per cui vai pure a cercare questa ribellione in biblioteca e vedrai che farai felice {charNameTwo}!
+                {charTag(Franco, "{portrait_Franco()}")}:       Secondo il manuale della biblioteca, {charNameTwo} è uno da fenotipo "ribellione" combinato con "veloce".
+                                                                E tu dirai "Franco la rana, cos'è un fenotipo?"
+                                                                E io ti dirò "Un tipo a cui piace tanto il fieno!"
+                                                                E poi aggiungerò "Che è un po' diverso dal topognomastico, che è un topo che mastica gli gnomi."
+                                                                E so che sono tante informazioni anche per una bella testolina come la tua, girino.
+                                                                Per cui vai pure a cercare questa ribellione in biblioteca e vedrai che farai felice {charNameTwo}!
                     ~ frog_second_novel = "qualcosa di veloce che parli di ribellione"
                         -> closed_exchange
         }
@@ -247,11 +247,11 @@
     }
 
     {shuffle once:
-        - Mi piace {charNameTwo}! Mi ha insegnato tantissime cose!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-        - Sì! Voglio chiedere a {charNameTwo} se facciamo lezioni di nuoto assieme!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-        - {charNameTwo} mi sta tanto simpatico.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-            Anche se non ho ancora capito quella cosa della elettricità.
-        - Ottimamente! #inkD:offState #portrait:frog_neutral                                       
+        - {charTag(Franco, "{portrait_Franco()}")}:     Mi piace {charNameTwo}! Mi ha insegnato tantissime cose!
+        - {charTag(Franco, "{portrait_Franco()}")}:     Sì! Voglio chiedere a {charNameTwo} se facciamo lezioni di nuoto assieme!
+        - {charTag(Franco, "{portrait_Franco()}")}:     {charNameTwo} mi sta tanto simpatico.
+                                                        Anche se non ho ancora capito quella cosa della elettricità.
+        - {charTag(Franco, "{portrait_Franco()}")}:     Ottimamente!                                   
     }
     
     + {frog_thirdCharAchievableGifts has cultivableGift} Cosa potrei regalarle?
@@ -290,11 +290,11 @@
     }
 
     {shuffle once:
-        - Mi piace {charNameTwo}! Mi ha insegnato tantissime cose!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-        - Sì! Voglio chiedere a {charNameTwo} se facciamo lezioni di nuoto assieme!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-        - {charNameTwo} mi sta tanto simpatico.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-            Anche se non ho ancora capito quella cosa della elettricità.
-        - Ottimamente! #inkD:offState #portrait:frog_neutral                                       
+        - {charTag(Franco, "{portrait_Franco()}")}:     Mi piace {charNameTwo}! Mi ha insegnato tantissime cose!
+        - {charTag(Franco, "{portrait_Franco()}")}:     Sì! Voglio chiedere a {charNameTwo} se facciamo lezioni di nuoto assieme!
+        - {charTag(Franco, "{portrait_Franco()}")}:     {charNameTwo} mi sta tanto simpatico.
+                                                        Anche se non ho ancora capito quella cosa della elettricità.
+        - {charTag(Franco, "{portrait_Franco()}")}:     Ottimamente!                                   
     }
     
     + {frog_fourthCharAchievableGifts has cultivableGift} Cosa potrei regalarle?
@@ -332,11 +332,11 @@
     }
 
     {shuffle once:
-        - Mi piace {charNameTwo}! Mi ha insegnato tantissime cose!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-        - Sì! Voglio chiedere a {charNameTwo} se facciamo lezioni di nuoto assieme!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-        - {charNameTwo} mi sta tanto simpatico.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-            Anche se non ho ancora capito quella cosa della elettricità.
-        - Ottimamente! #inkD:offState #portrait:frog_neutral                                       
+        - {charTag(Franco, "{portrait_Franco()}")}:     Mi piace {charNameTwo}! Mi ha insegnato tantissime cose!
+        - {charTag(Franco, "{portrait_Franco()}")}:     Sì! Voglio chiedere a {charNameTwo} se facciamo lezioni di nuoto assieme!
+        - {charTag(Franco, "{portrait_Franco()}")}:     {charNameTwo} mi sta tanto simpatico.
+                                                        Anche se non ho ancora capito quella cosa della elettricità.
+        - {charTag(Franco, "{portrait_Franco()}")}:     Ottimamente!                                   
     }
     
     + {frog_fifthCharAchievableGifts has cultivableGift} Cosa potrei regalarle?

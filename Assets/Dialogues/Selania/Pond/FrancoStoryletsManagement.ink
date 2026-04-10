@@ -17,13 +17,13 @@
     //Regalo da raccogliere
     - frog_suspended_gift == true:
                 
-        Ehi girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        {charTag(Franco, "{portrait_Franco()}")}:       Ehi girino!
         {shuffle:
-            - Hai ancora quel dono di prima da prendere!
-            - Devo ancora darti quel dono!
-            - Te lo ricordi che c'ho qui una cosa per te, vero?
-            - Franco La Rana ha qui qualcosa che è tuo!
-            - Ricordati che se ti serve c'ho qui il tuo dono!
+                                                        - Hai ancora quel dono di prima da prendere!
+                                                        - Devo ancora darti quel dono!
+                                                        - Te lo ricordi che c'ho qui una cosa per te, vero?
+                                                        - Franco La Rana ha qui qualcosa che è tuo!
+                                                        - Ricordati che se ti serve c'ho qui il tuo dono!
         }
             
         -> franco_giftsManagement
@@ -32,9 +32,9 @@
     - are_two_entities_together(PG, Franco) && entity_location(PG) == Nest && frog_currentMission has specialMissionOne: 
         
         {shuffle stopping:
-           - Girino, continua a divertirti con quei sassi!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-           - Che fastidio la pioggia sulla testa. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-           - Son qui che aspetto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+           - {charTag(Franco, "{portrait_Franco()}")}:       Girino, continua a divertirti con quei sassi!
+           - {charTag(Franco, "{portrait_Franco()}")}:       Che fastidio la pioggia sulla testa.
+           - {charTag(Franco, "{portrait_Franco()}")}:       Son qui che aspetto.
         }
         
         ->->                    

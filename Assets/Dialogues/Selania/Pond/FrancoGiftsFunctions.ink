@@ -197,10 +197,12 @@
    {
         //Caso uno: il dono è in crescita:
         - tempChar_favouritesGifts has greenhouse_chosenCultivable:
-            Girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-            Quello che ti serve sta crescendo proprio ora in serra!
-            Sento l'odore fino a qui.
-            O forse è solo zia Graaak che non si è ancora lavata.
+
+            {charTag(Franco, "{portrait_Franco()}")}:       Girino!
+                                                            Quello che ti serve sta crescendo proprio ora in serra!
+                                                            Sento l'odore fino a qui.
+                                                            O forse è solo zia Graaak che non si è ancora lavata.
+                
                 ~ frog_temp_char_gift = "sta crescendo proprio ora in serra!"
                 ~ frog_temp_temp_growing_gift = true
 
@@ -248,16 +250,16 @@
         //Caso tre: non abbiamo mai trovato il dono
         - tempChar_favouritesGifts ^ greenhouse_findedCultivables == ():
 
-            Allora?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-            Scusa se ho spiato nello zaino ma no, non hai niente di utile.
-            Ma ora ci penso io.
-            "Care formiche."
-            "Come avrete visto, ora sono vegetariano."
-            "E in onore di questa nostra nuova amicizia vi chiederei un favore: potreste coltivare qualcosa di utile per {player_name}?"
-            "Grazie mille."
-            "PS.: Vi allego un po' del miele di Dora."
-            Ottimo.
-            La prossima volta che coltivi qualcosa in serra vedrai che sarà il dono giusto!
+            {charTag(Franco, "{portrait_Franco()}")}:       Allora?
+                                                            Scusa se ho spiato tra le tue cose ma no, non hai niente di utile.
+                                                            Ma ora ci penso io.
+                                                            "Care formiche."
+                                                            "Come avrete visto, ora sono vegetariano."
+                                                            "E in onore di questa nostra nuova amicizia vi chiederei un favore: potreste coltivare qualcosa di utile per {player_name}?"
+                                                            "Grazie mille."
+                                                            "PS.: Vi allego un po' del miele di Dora."
+                                                            Ottimo.
+                                                            La prossima volta che coltivi qualcosa in serra vedrai che sarà il dono giusto!
 
                 ~ temp perfectGift = LIST_RANDOM(tempChar_favouritesGifts)
             {debug_frog: il dono è stato messo in serra ed è {ingredientTranslator(perfectGift)}. La lista tempChar_favouritesGifts contiene {tempChar_favouritesGifts}.}
@@ -281,19 +283,19 @@
 
             ~ temp perfectGiftTwo = LIST_RANDOM(tempChar_favouritesGifts)
 
-            Girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-            Credo tu abbia fatto l'impossibile: c'erano un sacchissimo di doni a disposizione, ma li hai già consumati tutti in altre situazioni.
+            {charTag(Franco, "{portrait_Franco()}")}:       Girino!
+                                                            Credo tu abbia fatto l'impossibile: c'erano un sacchissimo di doni a disposizione, ma li hai già consumati tutti in altre situazioni.
             {
                 - frog_recoverableCultivables!= () && frog_recoveredCultivables == ():
-                    Però non mi hai ancora chiesto di recuperare una delle piante che hai già utilizzato.
-                    Ti consiglio di recuperare {ingredientTranslator(perfectGiftTwo)}.
-                    Ricorda però che posso fare un solo recupero!
-                        -> cultivable_recovery
+                                                            Però non mi hai ancora chiesto di recuperare una delle piante che hai già utilizzato.
+                                                            Ti consiglio di recuperare {ingredientTranslator(perfectGiftTwo)}.
+                                                            Ricorda però che posso fare un solo recupero!
+                                                                -> cultivable_recovery
 
                 - else:
-                    Hai già anche utilizzato il mio superpotere del recupero.
-                    Però posso dirti una cosa: ho fiducia in te, davvero.
-                    E so già che riuscirai a trovare altri modi per dimostrare quanto tieni a {translator(speaker)}.      
+                                                            Hai già anche utilizzato il mio superpotere del recupero.
+                                                            Però posso dirti una cosa: ho fiducia in te, davvero.
+                                                            E so già che riuscirai a trovare altri modi per dimostrare quanto tieni a {translator(speaker)}.      
 
             }
 
@@ -435,8 +437,8 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
     //Levo la possibilità di recuperare il sigillo
         ~ frog_otherGifts -= sigilRecovery
     
-    E allora girino, eccoti di nuovo a disposizione {sigils_translator(sigil)}!
-    Fanne buon uso!
+    {charTag(Franco, "{portrait_Franco()}")}:       E allora girino, eccoti di nuovo a disposizione {sigils_translator(sigil)}!
+                                                    Fanne buon uso!
 
 
 
@@ -448,8 +450,8 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
         
     ~ temp recoveredCultivable = LIST_RANDOM(frog_recoveredCultivables)
 
-        Signori e signore e signor3, ecco quanto richiesto dal girino: {ingredientTranslator(recoveredCultivable)}! #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-        Direttamente nello zainetto di {player_name}!
+        {charTag(Franco, "{portrait_Franco()}")}:       Signori e signore e signor3, ecco quanto richiesto dal girino: {ingredientTranslator(recoveredCultivable)}!
+                                                        Direttamente nella collezione di {player_name}!
 
             ~ backpack_findedGifts += recoveredCultivable
             

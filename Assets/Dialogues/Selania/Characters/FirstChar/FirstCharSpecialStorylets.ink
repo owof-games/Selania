@@ -80,8 +80,8 @@
     Scusa.
         {
             - are_two_entities_together(Franco, PG):
-                Zio Gracco sa fare una lasagna di pulci d'acqua che è la morte.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                Delle pulci d'acqua, per lo più.     
+                {charTag(Franco, "{portrait_Franco()}")}:       Zio Gracco sa fare una lasagna di pulci d'acqua che è la morte.
+                                                                Delle pulci d'acqua, per lo più.     
         }
     
         -> first_char_closing_storylet ->
@@ -161,8 +161,8 @@
     Erano mesi che non mi mettevo a leggere qualcosa per più di dieci minuti.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
             {
                 - are_two_entities_together(Franco, PG):
-                    Certo che voi parlate tantissimo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    Quasi quanto Tullio.  
+                    {charTag(Franco, "{portrait_Franco()}")}:       Certo che voi parlate tantissimo.
+                                                                    Quasi quanto Tullio.  
             }
 
         -> first_char_closing_storylet ->
@@ -193,8 +193,8 @@
     La adoro.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             {
                 - are_two_entities_together(Franco, PG):
-                    Appunto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    Chiedere a Euforbo cosa significa toeletta.
+                    {charTag(Franco, "{portrait_Franco()}")}:       Appunto.
+                                                                    Chiedere a Euforbo cosa significa toeletta.
             }
     
     -> first_char_closing_storylet ->

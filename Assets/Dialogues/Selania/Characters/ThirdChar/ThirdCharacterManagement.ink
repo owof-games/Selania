@@ -146,11 +146,11 @@
         }
         {
             - are_two_entities_together(Franco, PG):
-                Io sto cra buono buono.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                In silenzio.
-                A ricordarmi il numero della scuola dei girini.
-                Che non ricordo a che ora chiude.
-                Di nuovo.     
+                {charTag(Franco, "{portrait_Franco()}")}:       Io sto cra buono buono.
+                                                                In silenzio.
+                                                                A ricordarmi il numero della scuola dei girini.
+                                                                Che non ricordo a che ora chiude.
+                                                                Di nuovo.     
         }
 
         Ecco... #speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral

@@ -19,21 +19,21 @@
 
 - (top)
     {shuffle:
-        - Ciao girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        - {charTag(Franco, "{portrait_Franco()}")}:     Ciao girino!
 
-        - Ma guarda chi c'è!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        - {charTag(Franco, "{portrait_Franco()}")}:     Ma guarda chi c'è!
 
-        - Uh, zia Graaak non mi scrive da un bel po'!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        - {charTag(Franco, "{portrait_Franco()}")}:     Uh, zia Graaak non mi scrive da un bel po'!
 
-        - Devo assolutamente ricordarmi il compleanno dei gemelli. E preparare tutti i pacchettini.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        - {charTag(Franco, "{portrait_Franco()}")}:     Devo assolutamente ricordarmi il compleanno dei gemelli. E preparare tutti i pacchettini.
 
-        - {player_name}: quando la carpa non c'è, le pulci d'acqua ballano. Anche se non sono molto brave.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        - {charTag(Franco, "{portrait_Franco()}")}:     {player_name}: quando la carpa non c'è, le pulci d'acqua ballano. Anche se non sono molto brave.
 
-        - Magari se trattengo il fiato a lungo posso volare.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        - {charTag(Franco, "{portrait_Franco()}")}:     Magari se trattengo il fiato a lungo posso volare.
 
-        - Il mio nome completo è Franco Lelio Arpagone Romualdo Arcezio Nepomiceno Alcuino. Franco La Rana è più facile.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        - {charTag(Franco, "{portrait_Franco()}")}:     Il mio nome completo è Franco Lelio Arpagone Romualdo Arcezio Nepomiceno Alcuino. Franco La Rana è più facile.
 
-        - "Gentile signor La Rana, le chiediamo di desistere dal chiederci altre cose assurde sulle lontre. Associazione Mondiale delle Dighe." #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        - {charTag(Franco, "{portrait_Franco()}")}:     "Gentile signor La Rana, le chiediamo di desistere dal chiederci altre cose assurde sulle lontre. Associazione Mondiale delle Dighe."
     }
     - (top2)
     

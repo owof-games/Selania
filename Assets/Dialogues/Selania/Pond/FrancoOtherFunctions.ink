@@ -15,9 +15,9 @@
     - else:
         {
             - frog_giftability == false && LIST_COUNT(frog_allAvailableMissions) > LIST_COUNT(frog_allMissionsCompleted):
-                Girino!#inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                Ho un po' di missioni a disposizione, ma non avrei niente con cui ringraziarti, almeno per ora.
-                Torna più tardi.
+                {charTag(Franco, "{portrait_Franco()}")}:       Girino!
+                                                                Ho un po' di missioni a disposizione, ma non avrei niente con cui ringraziarti, almeno per ora.
+                                                                Torna più tardi.
                 -> main
 
             - else:
@@ -27,10 +27,10 @@
     
 - (top)
 
-    Girino! #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-    Franco è stanchino ora.
-    Torna più tardi e provo a darti una zampa.
-    Basta che poi me la restituisci, sennò non so come grattare la schiena di zio Gracco.
+    {charTag(Franco, "{portrait_Franco()}")}:       Girino!
+                                                    Franco è stanchino ora.
+                                                    Torna più tardi e provo a darti una zampa.
+                                                    Basta che poi me la restituisci, sennò non so come grattare la schiena di zio Gracco.
 
 -> main
 
@@ -43,10 +43,10 @@
 === closed_exchange
 {debug_frog: passo closed_exchange.}
 
-    Facciamo un bel duo, noi due.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-    Io il cervello, tu la mano.
-    Quella è una mano, vero?
-    A dopo girino!
+    {charTag(Franco, "{portrait_Franco()}")}:       Facciamo un bel duo, noi due.
+                                                    Io il cervello, tu la mano.
+                                                    Quella è una mano, vero?
+                                                    A dopo girino!
 
 
     //Svuoto il destinatario della missione attuale per sicurezza

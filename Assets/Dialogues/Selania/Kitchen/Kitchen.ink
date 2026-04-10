@@ -52,9 +52,9 @@
 === cooking_alone ===
     + {are_two_entities_together(Franco, PG) && entity_location(PG) == Kitchen} [Franco] 
     
-    Girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
-    Eccoti cra!
-    Sei {player_pronouns has him:pronto|{player_pronouns has her:pronta|prontə}} per cucinare assieme?
+    {charTag(Franco, "{portrait_Franco()}")}:       Girino!
+                                                    Eccoti cra!
+                                                    Sei {player_pronouns has him:pronto|{player_pronouns has her:pronta|prontə}} per cucinare assieme?
         
         + + Ci sto!
             -> cooking_with_frog

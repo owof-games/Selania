@@ -368,14 +368,7 @@
                     
             -
             Da quando sono qui però non ho riscritto nulla.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-                {
-                    - are_two_entities_together(Franco, PG):
-                        Ho un superpotere: se mi lecchi viaggi senza spostarti.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                        Sono molto apprezzato alle feste!
-                        Ma non mi piace tanto tutta la bava che mi arriva addosso.
-                        Però c'è il cibo gratis!
-                        Franco, sai che sei appena diventato il mio migliore amico?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-                }
+  
 
         - 
 

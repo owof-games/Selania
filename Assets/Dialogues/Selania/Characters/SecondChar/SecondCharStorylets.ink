@@ -443,9 +443,9 @@
         E che l'acso, atso, axotolottoto.
             {
                 - are_two_entities_together(Franco, PG):
-                    Botto!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    Risotto!
-                    Cucciolotto!
+                    {charTag(Franco, "{portrait_Franco()}")}:       Botto!
+                                                                    Risotto!
+                                                                    Cucciolotto!
                     Franco!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                     Così mi distraggo!
             }
@@ -780,8 +780,8 @@
         Franco prima mi ha detto che tu scrivi storie.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
             {
                 - are_two_entities_together(Franco, PG):
-                    Anche Franco scrive storie.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    Storie in cui Franco sa nuotare!
+                    {charTag(Franco, "{portrait_Franco()}")}:       Anche Franco scrive storie.
+                                                                    Storie in cui Franco sa nuotare!
             }
         A me mi piacciono le storie.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         C'è una cosa che non dico mai a nessuno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -863,10 +863,10 @@
             Ma mi ha chiesto di non farlo, perché poi sarei stato male.
                 {
                     - are_two_entities_together(Franco, PG):
-                        Ho un superpotere: se mi lecchi viaggi senza spostarti.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                        Sono molto apprezzato alle feste!
-                        Ma non mi piace tanto tutta la bava che mi arriva addosso.
-                        Però c'è il cibo gratis!
+                        {charTag(Franco, "{portrait_Franco()}")}:       Ho un superpotere: se mi lecchi viaggi senza spostarti.
+                                                                        Sono molto apprezzato alle feste!
+                                                                        Ma non mi piace tanto tutta la bava che mi arriva addosso.
+                                                                        Però c'è il cibo gratis!
                         Franco, sai che sei appena diventato il mio migliore amico?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 }
 

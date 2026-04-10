@@ -8,8 +8,8 @@
     No.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         {
             - are_two_entities_together(Franco, PG):
-                Neanche io.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                Ma so come sono arrivato cra, vale?
+                {charTag(Franco, "{portrait_Franco()}")}:       Neanche io.
+                                                                Ma so come sono arrivato cra, vale?
         }
     A un certo punto ero alla stazione.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
     E avevo voglia di caramelle.
@@ -143,8 +143,8 @@
     Mi sembra la cosa migliore che possa capitare nella vita.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
         {
             - are_two_entities_together(Franco, PG):
-                La cosa migliore che ti possa capitare è il karaoke di cugina Sputt.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                Ma è meglio non starle troppo vicino.
+                {charTag(Franco, "{portrait_Franco()}")}:       La cosa migliore che ti possa capitare è il karaoke di cugina Sputt.
+                                                                Ma è meglio non starle troppo vicino.
         }
     Anche tu hai uno scopo, {charNameOne}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
     Tutti l'abbiamo.
@@ -209,44 +209,44 @@
     TODO: rendere Franco più dubitante della cosa, non ne è così certo.
 
     Però non ti ho mai visto in giro.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-    Però sono sempre stato cra!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {charTag(Franco, "{portrait_Franco()}")}:       Però sono sempre stato cra!
     Ma non ti ho mai mai visto in giro.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
     E ogni giorno vengo a sistemare il sentiero e pulire la serra.
-    Forse allora non sei venuta ogni giorno.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {charTag(Franco, "{portrait_Franco()}")}:       Forse allora non sei venuta ogni giorno.
     O forse mi hai scambiato per Tullio? A volte succede.
     O forse non è che hai proprio proprio proprio tutto sotto il tuo controllo.
     Un po' come zio Gracco e il suo problema con l'alcool. E i combustibili in generale.
     Impossibile.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
     Controllo tutto, è il mio lavoro.
-    Eppure eccoci cra, con io che so dove sono stato, e tu mi dici che non ricordo bene.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {charTag(Franco, "{portrait_Franco()}")}:       Eppure eccoci cra, con io che so dove sono stato, e tu mi dici che non ricordo bene.
     Non ho detto che non ricordi bene.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-    Ma dici che hai tutto sotto il tuo controllo e che non mi hai visto, quindi o non ricordo bene, o mento.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {charTag(Franco, "{portrait_Franco()}")}:       Ma dici che hai tutto sotto il tuo controllo e che non mi hai visto, quindi o non ricordo bene, o mento.
     E io sono una rana e una rana non ha un collo e quindi non mento.
     Non mi permetterei mai di dirlo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-    Infatti non l'hai detto, l'hai implicato.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {charTag(Franco, "{portrait_Franco()}")}:       Infatti non l'hai detto, l'hai implicato.
     Questa me l'ha insegnata stamani mio figlio Euforbo.
     Ma mi ha chiesto di non usare "stazampe" invece di stamani.
     Non mi piace il tuo tono, rana.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-    Ma non cambia il fatto che mi stai dando o del bugiardo o dello smemorato.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {charTag(Franco, "{portrait_Franco()}")}:       Ma non cambia il fatto che mi stai dando o del bugiardo o dello smemorato.
     Io non l'ho detto!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_bored
-    Ma l'hai implicato.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {charTag(Franco, "{portrait_Franco()}")}:       Ma l'hai implicato.
     Che non è ampilato, perché i lati non sono ampi.
     Questo lo dice sempre Euforbo.
     AAAAAAAARG!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_bored
     SEI INSOPPORTABILE!
         ~ change_entity_place(Mentor)
-    No, sono Franco La Rana.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {charTag(Franco, "{portrait_Franco()}")}:       No, sono Franco La Rana.
     Non mi ha molto ascoltato.    
     E comunque non ricordo l'esistenza di nessun mentore da queste parti.
         {
             - are_two_entities_together(FirstCharacter, PG):
                 In che senso, scusa?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
-                {charNameOne}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                Prima è passata zia Graaak e ti voleva parlare!
-                Tullio dice che c'ha una cotta per te.
-                Però non ho visto dove si è bruciata.
-                O se ti deve bruciare.
-                Non sarebbe molto gentile però, vero?
+                {charTag(Franco, "{portrait_Franco()}")}:       {charNameOne}!
+                                                                Prima è passata zia Graaak e ti voleva parlare!
+                                                                Tullio dice che c'ha una cotta per te.
+                                                                Però non ho visto dove si è bruciata.
+                                                                O se ti deve bruciare.
+                                                                Non sarebbe molto gentile però, vero?
                 Ooook#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 No, non è vero: non ce la posso fare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                     ~ change_entity_place(FirstCharacter)
@@ -330,21 +330,21 @@
     ~ temp mentorName = translator(mentor_ActualName)
 
     Credo di avere il mal di testa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-    Lo dice sempre anche Giulio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {charTag(Franco, "{portrait_Franco()}")}:       Lo dice sempre anche Giulio.
     Che è tuo figlio.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-    No, che è uno dei miei mariti.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-    I miei figli sono Abaco, Aimone, Altobrando, Appasilarco, Azzolino, Borci, Clodoveo, Comunardo
+    {charTag(Franco, "{portrait_Franco()}")}:       No, che è uno dei miei mariti.
+                                                    I miei figli sono Abaco, Aimone, Altobrando, Appasilarco, Azzolino, Borci, Clodoveo, Comunardo
     No aspetta aspetta, ti avevo solo chiesto di.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-    Emerenzio, Etelbero, Euforbo, Fulco, Matteo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {charTag(Franco, "{portrait_Franco()}")}:       Emerenzio, Etelbero, Euforbo, Fulco, Matteo.
     Matteo?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
     Un nome così normale?
-    L'abbiamo adottato.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-    Poi c'è Giosafatta, Gondio, Grimildo, Pierpietro, Piersabato.
+    {charTag(Franco, "{portrait_Franco()}")}:       L'abbiamo adottato.
+                                                    Poi c'è Giosafatta, Gondio, Grimildo, Pierpietro, Piersabato.
     Ti ho solo chiesto dove si trova del vino!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-    Zelinda, Veneranda, Uga, Torlonia, Tamatta, Ruslana e Ruslanina.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {charTag(Franco, "{portrait_Franco()}")}:       Zelinda, Veneranda, Uga, Torlonia, Tamatta, Ruslana e Ruslanina.
     Qualcuno mi soffochi, ora.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
         ~ change_entity_place(FirstCharacter)
-    Piccarda, Perlita, Macrina, Gliceria, Gianbrunilde, Eulalia, Ermenegigia...#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {charTag(Franco, "{portrait_Franco()}")}:       Piccarda, Perlita, Macrina, Gliceria, Gianbrunilde, Eulalia, Ermenegigia...
 
         -> first_char_closing_storylet ->
         -> main
@@ -354,31 +354,31 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    E Franco ti dice che non è vero, {charNameTwo}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {charTag(Franco, "{portrait_Franco()}")}:       E Franco ti dice che non è vero, {charNameTwo}.
     Ma è IM-POS-SI-BI-LE!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
-    No no no, impossibile è un bambino che sa parlare.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {charTag(Franco, "{portrait_Franco()}")}:       No no no, impossibile è un bambino che sa parlare.
     Ma io so parlare!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
-    E sei un bambino? Dimostralo!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {charTag(Franco, "{portrait_Franco()}")}:       E sei un bambino? Dimostralo!
     Sono basso.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-    Anche io.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {charTag(Franco, "{portrait_Franco()}")}:       Anche io.
     E vado a scuola.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-    Quello lo fanno i girini, non i bambini.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {charTag(Franco, "{portrait_Franco()}")}:       Quello lo fanno i girini, non i bambini.
     E non sono un girino?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-    Hai delle braccia, i girini non le hanno.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {charTag(Franco, "{portrait_Franco()}")}:       Hai delle braccia, i girini non le hanno.
     Quindi sono una rana?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
-    Può darsi.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {charTag(Franco, "{portrait_Franco()}")}:       Può darsi.
     Sai fare CRAAAAAAC?
     CRAAAAAAC!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
-    E sai saltare?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {charTag(Franco, "{portrait_Franco()}")}:       E sai saltare?
     Sìì!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
-    E hai uno zio che si chiama Gracco?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {charTag(Franco, "{portrait_Franco()}")}:       E hai uno zio che si chiama Gracco?
     No.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
-    Forse però non è così importante.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {charTag(Franco, "{portrait_Franco()}")}:       Forse però non è così importante.
     Quindi sì: non sei un bambino, sei una rana!
     E sai nuotare?
     Sì no boh.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
     No.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
-    Visto?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+   {charTag(Franco, "{portrait_Franco()}")}:       Visto?
     Come ti dicevo prima: le rane non sanno nuotare.
     Logico, no?
     Mmm.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -388,7 +388,7 @@
                 Beeeene!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 E anche questa roba tra qualche anno si trasformerà in un lunghissimo percorso di psicoterapia.
         }
-    Però possiamo chiedere alle foglie.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {charTag(Franco, "{portrait_Franco()}")}:       Però possiamo chiedere alle foglie.
     Tullio dice sempre che nuotano nell'aria.
         {
             - are_two_entities_together(Mentor, PG):

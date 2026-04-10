@@ -49,15 +49,15 @@
         Ho perso il conto delle bugie che mi ha detto da quando è arrivato.
             {
                 - are_two_entities_together(Franco, PG):
-                    Sono bugie solo se hanno le gambe corte.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    Ma {charNameTwo} ha quattro zampette.
-                    Quindi al massimo sono...
-                    Cosa sono?
+                    {charTag(Franco, "{portrait_Franco()}")}:       Sono bugie solo se hanno le gambe corte.
+                                                                    Ma {charNameTwo} ha quattro zampette.
+                                                                    Quindi al massimo sono...
+                                                                    Cosa sono?
                         {
                             - are_two_entities_together(FirstCharacter, PG):
                                 Se due gambe fanno una bugia, il doppio fa una duogia?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
-                                Esatto!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                                Sono sicuro che è il termine scientifico!
+                                {charTag(Franco, "{portrait_Franco()}")}:       Esatto!
+                                                                                Sono sicuro che è il termine scientifico!
                                 Quindi {charNameTwo} non può dire bugie, ma solo duogie!
                                 Basta!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Other)} #portrait:mentore_bored
                                 Quel bambino è inaffidabile!
@@ -83,7 +83,7 @@
                     Continuava a saltare nello stagno, e non ho idea di cosa possa esserci in quell'acqua lurida e limacciosa.
                         {
                             - are_two_entities_together(Franco, PG):
-                                I miei figli.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                                {charTag(Franco, "{portrait_Franco()}")}:       I miei figli.
                         }
             } 
 
@@ -210,7 +210,7 @@
     Comunque c'è una sola cosa sensata da fare.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         {
             - are_two_entities_together(Franco, PG):
-                Insegnarmi a nuotare?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                {charTag(Franco, "{portrait_Franco()}")}:       Insegnarmi a nuotare?
         }
     Chiedere scusa a {charNameTwo}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
     E vedere se avrà voglia di perdonarmi.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
@@ -337,8 +337,8 @@
 
                 {
                     - are_two_entities_together(Franco, PG):
-                        Urlare non è già fare qualcosa?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                        Zia Graaak lo dice sempre, che non è vero che non fa nulla, perché ci sgrida tutto il giorno.
+                        {charTag(Franco, "{portrait_Franco()}")}:       Urlare non è già fare qualcosa?
+                                                                        Zia Graaak lo dice sempre, che non è vero che non fa nulla, perché ci sgrida tutto il giorno.
                 }
     
     -> mentor_closing_storylet ->
@@ -368,8 +368,8 @@
             }
             {
                 - are_two_entities_together(Franco, PG):
-                    La mia famiglia lo mangia da anni e va tutto bene.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    A parte quella volta che mamma Craazia ha iniziato a cantare in melanzanese.
+                    {charTag(Franco, "{portrait_Franco()}")}:       La mia famiglia lo mangia da anni e va tutto bene.
+                                                                    A parte quella volta che mamma Craazia ha iniziato a cantare in melanzanese.
             }
 
     
