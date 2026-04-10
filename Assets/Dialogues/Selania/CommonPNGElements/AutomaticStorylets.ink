@@ -205,11 +205,11 @@
             -> cooking_with_third_char
 
         //Boccale ha cucinato, e vediamo la scena del dono
-        - are_two_entities_together(ThirdCharacter, PG) && third_char_cooking_tracker && kitchen_thirdCharIsCooking == false && not food_gift_third_char:
+        - are_two_entities_together(ThirdCharacter, PG) && third_char_cooking_tracker && kitchen_thirdCharIsCooking == false && grimoire_thirdChar hasnt grimThirdCharKitchenAlone:
             -> food_gift_third_char            
 
     //Lettura Boccale
-    - are_two_entities_together(ThirdCharacter, PG) && library_readStories has Lamia && not grimoire_thirdChar hasnt grimThirdCharNovel:
+    - are_two_entities_together(ThirdCharacter, PG) && library_readStories has Lamia && grimoire_thirdChar hasnt grimThirdCharNovel:
         -> third_read_story_library
                 
     //Commento sul cane    
