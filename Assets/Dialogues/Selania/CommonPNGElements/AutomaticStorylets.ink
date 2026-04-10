@@ -24,6 +24,7 @@
             }
                 ~ move_entity(FirstCharacter, Pond)
                 ~ firstChar_PondInvite = true
+                ~ firstChar_PondWaiting = chars_MaxOpenPlacesWaiting
                     ->->   
             
     //Apertura cucina
@@ -41,6 +42,7 @@
             }
                 ~ move_entity(SecondCharacter, Forest)
                 ~ secondChar_ForestInvite = true
+                ~ secondChar_ForestWaiting = chars_MaxOpenPlacesWaiting
                 ->->   
 
 
@@ -59,6 +61,7 @@
             }
                     ~ move_entity(ThirdCharacter, Library)
                     ~ thirdChar_LibraryInvite = true
+                    ~ thirdChar_LibraryWaiting = chars_MaxOpenPlacesWaiting
                     ->->   
 
     //Apertura biblioteca    
