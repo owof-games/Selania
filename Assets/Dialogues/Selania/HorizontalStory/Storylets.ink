@@ -174,6 +174,7 @@
     Mi siedo sulla poltrona all'alba, ed è subito notte.
     Ho provato a parlarne stasera, ma erano tutte malinconiche.
     A parte S.C.: anche lei quando si fissa su qualcosa non vede più il resto del mondo.
+    Diventa una fiamma capace di estinguersi pur di arrivare a una risposta.
     Forse è anche colpa di questo tempo che non cambia mai: so che è il 2 ottobre perché O.U.J. ha creato un calendario appeso in cucina.
     Ma potrebbe essere il 3 luglio o il 33 gennaio, e poco cambierebbe.
     E per me è sempre così.
@@ -320,6 +321,7 @@
     G.M. guarda S.C. in un modo che non mi piace, e non lo dico contro G.M.: quel ragazzino sembra innamorato. 
     Lui ha sedici anni, lei ventisei.
     Una tale differenza di età, con lui così giovane, offre a S.C. molto potere e molte responsabilità, e non credo se ne renda conto.
+    S.C. è una radice già solida, in cerca di nuovi nutrienti, mentre G.M. è come un fuscello che ancora non sa se supererà l'inverno.
     Anche il dislivello tra me e Franco è notevole.
     Perché se anche una rana può vivere sette anni, questa bestiola ha la saggezza caotica di un centenario.
     E grazie a lui ho scoperto due cose.
@@ -396,6 +398,11 @@
     Da una parte è felice delle scoperte che sta facendo in serra, e del rapporto con la rana.
     Dall'altra si è resa conto anche lei che c'è qualcosa tra S.C. e G.M., ed è preoccupata.
     Io da vecchiarella non mi sono posta i suoi dubbi, ma più ci penso più mi fa rabbia che S.C. non si renda conto del modo diverso in cui lei, donna adulta e G.M., un ragazzetto, possano vivere questa cosa.
+    Essere streghe vuol dire rompere le regole, ma se sono idiote.
+    A volte sembra invece che per S.C. "Strega" sia solo una parola.
+    Per lei tutto è solo una parola.
+    Una cosa da rimestare come preferisce, rigirare, a cui dare nuovi significati.
+    Ma una parola è una cosa potentissima.
     E dopo un anno senza incazzamenti, credo che stasera tirerò fuori la cosa.
     Ho voglia di arrabbiarmi.
     La conversazione ha rassicurato K., e dopo aver finito di cucinare mi ha detto che preferisce le conversazioni dirette e difficili alle cose dette in modo educato ma non chiaro.
@@ -561,6 +568,8 @@
     K. e io siamo intervenute per un po', ma come S.C. ha parlato, ci siamo fatte mute.
     Mi spiace, mi pesa, ma non ce la faccio.
     S.C. è stata il mio primo tutto, e ha tradito la mia fiducia.
+    Per me lei è come la luna: qualcosa che amo, che mi attira, ma che non potrò mai cogliere nel suo insieme.
+    E questa cosa mi fa un male boia.
     A un certo punto K. ha chiesto a me e O.U.J. se ci andava di vedere una cosa, ha preso del liquore che ha fatto in questi mesi e ci ha portate a quella bacinella che K. chiama "fontana".
     Sta crescendo un albero.
     Dice che è il segno che le cose possono crescere anche se butta male.
