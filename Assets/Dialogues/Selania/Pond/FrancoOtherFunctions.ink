@@ -43,10 +43,20 @@
 === closed_exchange
 {debug_frog: passo closed_exchange.}
 
-    {charTag(Franco, "{portrait_Franco()}")}:       Facciamo un bel duo, noi due.
+    {charTag(Franco, "{portrait_Franco()}")}:       Girino!
+
+        {shuffle:
+                                                    - Facciamo un bel duo, noi due.
                                                     Io il cervello, tu la mano.
                                                     Quella è una mano, vero?
                                                     A dopo girino!
+
+                                                    - xyz
+
+        }      
+    
+    
+    
 
 
     //Svuoto il destinatario della missione attuale per sicurezza
