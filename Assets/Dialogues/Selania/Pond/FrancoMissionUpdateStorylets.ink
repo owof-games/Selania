@@ -1,6 +1,6 @@
 /*****************************
 
-    Sollecito missioni
+    Sollecito commissioni
 
 ****************************/ 
 === franco_missionOne_solicit
@@ -143,6 +143,26 @@
 
 -> main
 
+=== franco_missionNine_solicit
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+    {charTag(Franco, "{portrait_Franco()}")}:       {player_name}, continuano ad arrivarmi lettere dai topi della biblioteca.
+                                                    
+-> main
+
+=== franco_missionTen_solicit
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+    {charTag(Franco, "{portrait_Franco()}")}:       {player_name}, continuano ad arrivarmi lettere dai topi della biblioteca.
+                                                    
+
+-> main
 
 /*****************************
 
@@ -156,17 +176,29 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    //Dato che potrebbe trattarsi di una missione fatta in autonomia, aggiungo (solo ora) la missione a quelle completate.
-    ~ frog_currentMission = missionOne  
+//Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
+    {
+        - frog_currentMission has missionOne:
+        {charTag(Franco, "{portrait_Franco()}")}:   Hai completato la commissione!
 
-    {charTag(Franco, "{portrait_Franco()}")}:       Ma sei un portento, girino!
+        - else:
+        {charTag(Franco, "{portrait_Franco()}")}:   Ma sei un portento, girino!
                                                     Pensa che ero qui a dirmi "Servirebbe una persona con una bella testolina, più grande di quella di zia Torba."
-                                                    "Una capace di leggere quasi quanto {charNameTwo}."
+    }
+
+//Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
+    ~ frog_currentMission = missionOne
+
+//E poi scrivo la parte comune
+
+    {charTag(Franco, "{portrait_Franco()}")}:       "Una capace di leggere quasi quanto {charNameTwo}."
+                                                    
         {
             - are_two_entities_together(SecondCharacter, PG):
                 Quasi però!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 Perché io sono il più megagrande lettore della scuola!
         }
+
     {charTag(Franco, "{portrait_Franco()}")}:       E tu hai già letto tante ma tante delle pagine del libro che ti è stato donato!
                                                     E come dico sempre: la conoscenza è sapere!
                                                     E il sapere è sapore per cui: dimmi come posso aiutarti.
@@ -179,8 +211,20 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    //Dato che potrebbe trattarsi di una missione fatta in autonomia, aggiungo (solo ora) la missione a quelle completate.
+//Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
+    {
+        - frog_currentMission has missionTwo:
+        {charTag(Franco, "{portrait_Franco()}")}:   Hai completato la commissione!
+
+        - else:
+        {charTag(Franco, "{portrait_Franco()}")}:   Ma sei un portento, girino!
+                                                    Pensa che ero qui a dirmi "Servirebbe una persona con una bella testolina, più grande di quella di zia Torba."
+    }
+
+//Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
     ~ frog_currentMission = missionTwo
+
+//E poi scrivo la parte comune
 
     {charTag(Franco, "{portrait_Franco()}")}:       Dove l'ho messo di nuovo.
                                                     Ah eccolo!
@@ -204,7 +248,17 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    //Dato che potrebbe trattarsi di una missione fatta in autonomia, aggiungo (solo ora) la missione a quelle completate.
+//Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
+    {
+        - frog_currentMission has missionThree:
+        {charTag(Franco, "{portrait_Franco()}")}:   Hai completato la commissione!
+
+        - else:
+        {charTag(Franco, "{portrait_Franco()}")}:   Ma sei un portento, girino!
+                                                    Pensa che ero qui a dirmi "Servirebbe una persona con una bella testolina, più grande di quella di zia Torba."
+    }
+
+//Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
     ~ frog_currentMission = missionThree
 
     {charTag(Franco, "{portrait_Franco()}")}:       Girino!
@@ -232,7 +286,17 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    //Dato che potrebbe trattarsi di una missione fatta in autonomia, aggiungo (solo ora) la missione a quelle completate.
+//Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
+    {
+        - frog_currentMission has missionFour:
+        {charTag(Franco, "{portrait_Franco()}")}:   Hai completato la commissione!
+
+        - else:
+        {charTag(Franco, "{portrait_Franco()}")}:   Ma sei un portento, girino!
+                                                    Pensa che ero qui a dirmi "Servirebbe una persona con una bella testolina, più grande di quella di zia Torba."
+    }
+
+//Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
     ~ frog_currentMission = missionFour
 
     {charTag(Franco, "{portrait_Franco()}")}:       Questa no.
@@ -274,7 +338,17 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    //Dato che potrebbe trattarsi di una missione fatta in autonomia, aggiungo (solo ora) la missione a quelle completate.
+//Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
+    {
+        - frog_currentMission has missionFive:
+        {charTag(Franco, "{portrait_Franco()}")}:   Hai completato la commissione!
+
+        - else:
+        {charTag(Franco, "{portrait_Franco()}")}:   Ma sei un portento, girino!
+                                                    Pensa che ero qui a dirmi "Servirebbe una persona con una bella testolina, più grande di quella di zia Torba."
+    }
+
+//Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
     ~ frog_currentMission = missionFive
 
     {charTag(Franco, "{portrait_Franco()}")}:       Avannotti!
@@ -314,8 +388,18 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    //Dato che potrebbe trattarsi di una missione fatta in autonomia, aggiungo (solo ora) la missione a quelle completate.
-    ~ frog_currentMission = missionSix  
+//Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
+    {
+        - frog_currentMission has missionSix:
+        {charTag(Franco, "{portrait_Franco()}")}:   Hai completato la commissione!
+
+        - else:
+        {charTag(Franco, "{portrait_Franco()}")}:   Ma sei un portento, girino!
+                                                    Pensa che ero qui a dirmi "Servirebbe una persona con una bella testolina, più grande di quella di zia Torba."
+    }
+
+//Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
+    ~ frog_currentMission = missionSix
 
     {charTag(Franco, "{portrait_Franco()}")}:       Girino!
                                                     Ho saputo che finalmente hai parlato con la nostra amica comune!
@@ -346,7 +430,17 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    //Dato che potrebbe trattarsi di una missione fatta in autonomia, aggiungo (solo ora) la missione a quelle completate.
+//Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
+    {
+        - frog_currentMission has missionSeven:
+        {charTag(Franco, "{portrait_Franco()}")}:   Hai completato la commissione!
+
+        - else:
+        {charTag(Franco, "{portrait_Franco()}")}:   Ma sei un portento, girino!
+                                                    Pensa che ero qui a dirmi "Servirebbe una persona con una bella testolina, più grande di quella di zia Torba."
+    }
+
+//Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
     ~ frog_currentMission = missionSeven
 
     {charTag(Franco, "{portrait_Franco()}")}:       I gemelli stanno facendo lo sciopero del sonno.
@@ -393,7 +487,17 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    //Dato che potrebbe trattarsi di una missione fatta in autonomia, aggiungo (solo ora) la missione a quelle completate.
+//Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
+    {
+        - frog_currentMission has missionEight:
+        {charTag(Franco, "{portrait_Franco()}")}:   Hai completato la commissione!
+
+        - else:
+        {charTag(Franco, "{portrait_Franco()}")}:   Ma sei un portento, girino!
+                                                    Pensa che ero qui a dirmi "Servirebbe una persona con una bella testolina, più grande di quella di zia Torba."
+    }
+
+//Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
     ~ frog_currentMission = missionEight
 
     {charTag(Franco, "{portrait_Franco()}")}:       "Caro zio Gracco."
@@ -439,6 +543,62 @@
         
         -> franco_giftsManagement
 
+
+
+=== franco_missionNine_closed
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+//Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
+    {
+        - frog_currentMission has missionNine:
+        {charTag(Franco, "{portrait_Franco()}")}:   Hai completato la commissione!
+
+        - else:
+        {charTag(Franco, "{portrait_Franco()}")}:   Ma sei un portento, girino!
+                                                    
+    }
+
+//Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
+    ~ frog_currentMission = missionNine
+
+    {charTag(Franco, "{portrait_Franco()}")}:       "Caro zio Gracco."
+                                                    
+    {charTag(Franco, "{portrait_Franco()}")}:       E a proposito di pace: vediamo come posso aiutarti!
+        
+        -> franco_giftsManagement
+
+
+=== franco_missionTen_closed
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+//Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
+    {
+        - frog_currentMission has missionTen:
+        {charTag(Franco, "{portrait_Franco()}")}:   Hai completato la commissione!
+
+        - else:
+        {charTag(Franco, "{portrait_Franco()}")}:   Ma sei un portento, girino!
+                                                    
+    }
+
+//Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
+    ~ frog_currentMission = missionTen
+
+    {charTag(Franco, "{portrait_Franco()}")}:       "Caro zio Gracco."
+                                                    
+    {charTag(Franco, "{portrait_Franco()}")}:       E a proposito di pace: vediamo come posso aiutarti!
+        
+        -> franco_giftsManagement
+
+
+
+//Missioni speciali
 === special_mission_one_closed
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -473,8 +633,7 @@
         ~ move_entity(Franco, Pond)
         ~ frog_allMissionsCompleted += frog_currentMission
         ~ frog_currentMission = ()
-        ~ frog_aboutGiftRequest = ()
-        //Metto in pausa le missioni speciali
+        //Metto in pausa le commissioni speciali
         ~ franco_pauseSpecialStorylets()
         ~ nest_francoUsedEarth = false
         //Riattivo poi i tasti se posseduti

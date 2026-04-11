@@ -14,7 +14,7 @@ VAR nest_aetherButton = false
 //Notifichiamo una nuova scoperta
 VAR nest_newSigilDiscovered = ()   
 
-//Tracciamento per missione franco
+//Tracciamento per commissione franco
 VAR nest_francoUsedEarth = false
 VAR nest_francoChosenSigil = ()
 
@@ -98,7 +98,7 @@ VAR nest_francoChosenSigil = ()
 ~ secondGlyph = ()
 ~ thirdGlyph = ()
 
-//con questo pezzetto informo il sistema di notifica di notificare il nuovo sigillo trovato SE non sono in missione franco
+//con questo pezzetto informo il sistema di notifica di notificare il nuovo sigillo trovato SE non sono in commissione franco
 {
     - nest_francoUsedEarth == false:
         ~ nest_newSigilDiscovered += chosenSigil

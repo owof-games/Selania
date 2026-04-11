@@ -342,7 +342,6 @@
         ~ frog_allMissionsCompleted += frog_currentMission
         ~ franco_pauseSpecialStorylets()
         ~ frog_currentMission = ()
-        ~ frog_aboutGiftRequest = ()
         ~ kitchen_allChefs += PG
         //Rimetto a posto i vari assets
         ~ move_entity(Franco, Pond)

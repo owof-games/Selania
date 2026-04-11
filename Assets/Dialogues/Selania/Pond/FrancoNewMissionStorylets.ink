@@ -1,6 +1,6 @@
 /*****************************
 
-        Avvio missioni
+        Avvio commissioni
 
 ****************************/ 
 === mission_one
@@ -187,7 +187,7 @@
                                                         Te la immagini, girino?
                                                         Una rana che salta?
                                                         Ma c'è una lettera di Giulio.
-                                                        "Dal{player_pronouns has him:gli|{player_pronouns has her:le|lə}} la missione, Franco, abbi pietà per quella povera creatura!"
+                                                        "Dal{player_pronouns has him:gli|{player_pronouns has her:le|lə}} la commissione, Franco, abbi pietà per quella povera creatura!"
                                                         Oggi i mariti sono un po' nervosetti.
                                                         Pensavo comunque {player_name}: perché non provi a parlare con due persone quando sono assieme?
                                                         Sono abbastanza sicuro che succederà qualcosa di interessante.
@@ -328,6 +328,31 @@
             @animation:RewriterBook  
                 -> main
 
+=== mission_nine
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+    
+        {charTag(Franco, "{portrait_Franco()}")}:       Euforbo ha portato a casa una pulce d'acqua.
+                                                        La maestra vuole che imparino a prendersi cura di altre forme di vita.
+   
+        
+            @animation:RewriterBook  
+                -> main
+
+
+
+=== mission_ten
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+    
+        {charTag(Franco, "{portrait_Franco()}")}:       Euforbo ha portato a casa una pulce d'acqua.
+                                                        La maestra vuole che imparino a prendersi cura di altre forme di vita.
+      
+        
+            @animation:RewriterBook  
+                -> main
 
 //Missioni speciali, con script ad hoc per dare premi o cose del genere.
 === special_mission_one

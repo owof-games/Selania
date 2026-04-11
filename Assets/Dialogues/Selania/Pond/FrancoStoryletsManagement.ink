@@ -39,7 +39,7 @@
         
         ->->                    
 
-    //Commenti sulle missioni in corso, NON concluse
+    //Commenti sulle commissioni in corso, NON concluse
     - are_two_entities_together(PG, Franco) && frog_currentMission == missionOne && frog_updatedMissions hasnt missionOne && entity_location(PG) == Pond:
         -> franco_missionOne_solicit
 
@@ -64,7 +64,15 @@
     - are_two_entities_together(PG, Franco) && frog_currentMission == missionEight && frog_updatedMissions hasnt missionEight && entity_location(PG) == Pond:
         -> franco_missionEight_solicit
 
-    //Commenti sulle missioni in corso. Anche se ridondante, punto a far commentare PRIMA quelle commissionate da Franco, POI quelle concluse in autonomia.
+    - are_two_entities_together(PG, Franco) && frog_currentMission == missionNine && frog_updatedMissions hasnt missionNine && entity_location(PG) == Pond:
+        -> franco_missionNine_solicit
+
+    - are_two_entities_together(PG, Franco) && frog_currentMission == missionTen && frog_updatedMissions hasnt missionTen && entity_location(PG) == Pond:
+        -> franco_missionTen_solicit        
+
+
+
+    //Commenti sulle commissioni in corso. Anche se ridondante, punto a far commentare PRIMA quelle commissionate da Franco, POI quelle concluse in autonomia.
     - are_two_entities_together(PG, Franco) && frog_updatedMissions has missionOne && frog_currentMission has missionOne && entity_location(PG) == Pond:
         -> franco_missionOne_closed
 
@@ -88,6 +96,14 @@
 
     - are_two_entities_together(PG, Franco) && frog_updatedMissions has missionEight && frog_currentMission has missionEight && entity_location(PG) == Pond:
         -> franco_missionEight_closed
+
+    - are_two_entities_together(PG, Franco) && frog_updatedMissions has missionNine && frog_currentMission has missionNine && entity_location(PG) == Pond:
+        -> franco_missionNine_closed
+
+    - are_two_entities_together(PG, Franco) && frog_updatedMissions has missionTen && frog_currentMission has missionTen && entity_location(PG) == Pond:
+        -> franco_missionTen_closed        
+
+
 
 
     //Chiuse in autonomia
@@ -114,6 +130,12 @@
 
     - are_two_entities_together(PG, Franco) && frog_updatedMissions has missionEight && entity_location(PG) == Pond:
         -> franco_missionEight_closed
+
+    - are_two_entities_together(PG, Franco) && frog_updatedMissions has missionNine && entity_location(PG) == Pond:
+        -> franco_missionNine_closed
+
+    - are_two_entities_together(PG, Franco) && frog_updatedMissions has missionTen && entity_location(PG) == Pond:
+        -> franco_missionTen_closed        
 
 }
 

@@ -42,7 +42,7 @@ VAR notification_achievementName = ""
             ~ notification_achievement = ""
 }
 
-//Notifiche per le missioni di Franco
+//Notifiche per le commissioni di Franco
 {
     - notification_francoQuests == false:
         {

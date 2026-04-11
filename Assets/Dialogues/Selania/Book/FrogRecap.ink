@@ -46,7 +46,7 @@ Franco la rana vuole aiutare {player_name} nel suo percorso. <N><>
             Franco ha chiesto a {player_name} <b>di raggiungerlo in cucina.
             
         - else: 
-            Franco per ora non ha proposto missioni a {player_name}.
+            Franco per ora non ha proposto commissioni a {player_name}.
     }
 
 

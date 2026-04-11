@@ -319,7 +319,7 @@ VAR achievements_goodReader = notActive
         - achievements_fullFranco_actualValue == 0:
             ~ achievements_fullFranco = notDiscovered
         
-        //Se le missioni sono uguali alle massime, ho completato l'achievement.
+        //Se le commissioni sono uguali alle massime, ho completato l'achievement.
         - achievements_fullFranco_actualValue == 0:
             ~ achievements_fullFranco = Discovered    
 

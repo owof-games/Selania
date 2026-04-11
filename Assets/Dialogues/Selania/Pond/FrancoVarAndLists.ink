@@ -1,29 +1,28 @@
                                     /* ---------------------------------
                                     
-                                                Gestione missioni 
+                                                Gestione commissioni 
                                     
                                      ----------------------------------*/
 
-    //Lista di tutto ciò che può generare una missione
+    //Lista di tutto ciò che può generare una commissione
     LIST frog_missionAboutChar = missionCharOne, missionCharTwo, missionCharThree, missionCharFour, missionCharFive, missionObjects, specialDelivery
     
-    //Lista di tutte le missioni che la rana può offrire, e quelle completate. Nota: missionOne etc son nomi temporanei, che verranno aggiornati man mano che le creo
-    LIST frog_allMissions = missionOne, missionTwo, missionThree, missionFour, missionFive, missionSix, missionSeven, missionEight, specialMissionOne, specialMissionTwo
+    //Lista di tutte le commissioni che la rana può offrire, e quelle completate. Nota: missionOne etc son nomi temporanei, che verranno aggiornati man mano che le creo
+    LIST frog_allMissions = missionOne, missionTwo, missionThree, missionFour, missionFive, missionSix, missionSeven, missionEight, missionNine, missionTen, specialMissionOne, specialMissionTwo
         //Separo la lista totale da quelle disponibili anche per un discorso di TW
-    VAR frog_availableCommonMissions = (missionOne, missionTwo, missionThree, missionFour, missionSix, missionSeven, missionEight)
-        //Nota: per ora sono solo due missioni speciali, poi vediamo.
+    VAR frog_availableCommonMissions = (missionOne, missionTwo, missionThree, missionFour, missionSix, missionSeven, missionEight, missionNine, missionTen)
     VAR frog_availableSpecialMissions = (specialMissionOne, missionFive, specialMissionTwo)
 
-        //Lista a inizio gioco di tutte le missioni di Franco.
+        //Lista a inizio gioco di tutte le commissioni di Franco.
     VAR frog_allAvailableMissions = ()
-        //Lista delle missioni completate
+        //Lista delle commissioni completate
     VAR frog_allMissionsCompleted = ()
-        //Lista delle missioni completate ma non riscattate
+        //Lista delle commissioni completate ma non riscattate
     VAR frog_updatedMissions = ()
-        //E la missione corrente
+        //E la commissione corrente
     VAR frog_currentMission = ()
 
-        //Infine, pauso le missioni speciali
+        //Infine, pauso le commissioni speciali
     VAR frog_pauseSpecialMission = 0
     VAR frog_pauseSpecialMissionMax = 1
 
@@ -62,9 +61,6 @@
     VAR frog_recoveredSigil = ()
     VAR frog_sigilGiftable = false
     
-    
-    //Per chi abbiamo richiesto il dono
-    VAR frog_aboutGiftRequest = ()
 
     //Dono in sospeso
     VAR frog_suspended_gift = false

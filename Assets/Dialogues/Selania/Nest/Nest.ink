@@ -60,7 +60,7 @@
         -> main
 
 
-//Questa è la variante pensata SOLO per la missione di Franco
+//Questa è la variante pensata SOLO per la commissione di Franco
 //E qui ci sono tutti i bottoni
 === nest_Franco_fireGlyph_button ===
     + {are_two_entities_together(PG,fireGlyph) && are_two_entities_together(PG,Franco) && nest_francoUsedEarth && nest_fireButton}[fireGlyph]

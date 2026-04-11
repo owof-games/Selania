@@ -1,67 +1,72 @@
 === function franco_missionsStateUpdater()
 {debug_frog: passo da franco_missionsStateUpdater.}
-//La logica qui è quella di avere un unico canale per vedere se le condizioni per una missione sono state raggiunte o meno.
+//La logica qui è quella di avere un unico canale per vedere se le condizioni per una commissione sono state raggiunte o meno.
     {  
-        //Prima missione: leggere.
+        //Prima commissione: leggere.
         - first_character_recap.check && second_character_recap.check && greenhouse_recap.check && frog_allMissionsCompleted hasnt missionOne:
             ~ frog_updatedMissions += missionOne
     }
 
     {
-        //Seconda missione: coltivare.
+        //Seconda commissione: coltivare.
         - LIST_COUNT(greenhouse_findedCultivables) >= 3 && frog_allMissionsCompleted hasnt missionTwo:
             ~ frog_updatedMissions += missionTwo
     }
 
     {
-        //Terza missione: parlare di mindfulness con Mentore.
+        //Terza commissione: parlare di mindfulness con Mentore.
         - mindfulness && frog_allMissionsCompleted hasnt missionThree:
             ~ frog_updatedMissions += missionThree
 
     }
 
     {
-        //Quarta missione: parlare di cose strane con Mentore.
+        //Quarta commissione: parlare di cose strane con Mentore.
         - little_storylets && frog_allMissionsCompleted hasnt missionFour:
             ~ frog_updatedMissions += missionFour
 
     }
 
     {
-        //Quinta missione: assistere a una conversazione a due.
+        //Quinta commissione: assistere a una conversazione a due.
         - (grimoire_firstChar has grimFirstSecondChar) or (grimoire_firstChar has grimFirstThirdChar) or (grimoire_firstChar has grimFirstCharMentor) or (grimoire_secondChar has grimSecondCharMentorOne) or (grimoire_secondChar has grimSecondCharMentorPeace) or (grimoire_secondChar has grimSecondThirdChar) or (grimoire_thirdChar has grimThirdCharMentor) or (grimoire_fourthChar has grimFourthFifthChar) && frog_allMissionsCompleted hasnt missionFive:
             ~ frog_updatedMissions += missionFive
 
     }
 
     {
-        //Sesta missione: conoscere la strega.
+        //Sesta commissione: conoscere la strega.
         - grimoire_witch has grimWitchIntro && frog_allMissionsCompleted hasnt missionSix:
             ~ frog_updatedMissions += missionSix
 
     }
 
     {
-        //Settima missione: leggere una lettera.
+        //Settima commissione: leggere una lettera.
         - (grimoire_firstChar has grimFirstCharLetterOne or grimoire_secondChar has grimSecondCharLetterOne or grimoire_thirdChar has grimThirdCharLetterOne) && frog_allMissionsCompleted hasnt missionSeven:
             ~ frog_updatedMissions += missionSeven
 
     }
 
     {
-        //Ottava missione: leggere un racconto.
+        //Ottava commissione: leggere un racconto.
         - library_readStories != () && frog_allMissionsCompleted hasnt missionEight:
             ~ frog_updatedMissions += missionEight
 
     }
 
+    //Condizioni commissione nove
+
+
+    //Condizioni commissione dieci
+
 {debug_frog: dopo franco_missionsStateUpdater frog_updatedMissions contiene {frog_updatedMissions}.}
 
 === franco_missionsDispatcher
 {debug_frog: passo da franco_missionsDispatcher.}
-//Primo step: verifico se ci sono missioni da togliere dalla lista perché non sono state raggiunte le condizioni per attivarle.
+//Primo step: verifico se ci sono commissioni da togliere dalla lista perché non sono state raggiunte le condizioni per attivarle.
 
-    //Missione sei richiede invito strega a parlarle
+    //Commissione sei richiede invito strega a parlarle
     {
         - frog_allMissionsCompleted hasnt missionSix && player_accessiblePlaces has Dump:
             {debug_frog: ci sono le condizioni per abilitare missionSix.}
@@ -73,7 +78,7 @@
     }
 
 
-    //Missione sette richiede la presenza di Ursula alla stazione
+    //Commissione sette richiede la presenza di Ursula alla stazione
     {
         - frog_allMissionsCompleted hasnt missionSeven && (contentsTrainStop has DoggoFirstLetters) or (contentsTrainStop has DoggoSecondLetters) or (contentsTrainStop has DoggoThirdLetters):
         {debug_frog: ci sono le condizioni per abilitare missionSeven.}
@@ -84,7 +89,7 @@
             {debug_frog: NON ci sono le condizioni per abilitare missionSeven.}      
     }
 
-    //Missione otto richiede che la biblioteca sia aperta
+    //Commissione otto richiede che la biblioteca sia aperta
     {
         - frog_allMissionsCompleted hasnt missionEight && player_accessiblePlaces has Library:
             ~ frog_availableCommonMissions += missionEight
@@ -95,7 +100,7 @@
             {debug_frog: NON ci sono le condizioni per abilitare missionEight.} 
     }
 
-    //Missione speciale uno richiede l'apertura del nido e che sia stato creato almeno un sigillo. Strega all'inizio ce ne dona tre, per cui il conto è >3.
+    //Commissione speciale uno richiede l'apertura del nido e che sia stato creato almeno un sigillo. Strega all'inizio ce ne dona tre, per cui il conto è >3.
     {
         - frog_allMissionsCompleted hasnt specialMissionOne && player_accessiblePlaces has Nest && LIST_COUNT(glyph_discoveredSigils) > 3:
             ~ frog_availableSpecialMissions += specialMissionOne
@@ -107,7 +112,7 @@
              
     }
 
-    //Missione speciale due richiede l'apertura della cucina e che sia vuota.
+    //Commissione speciale due richiede l'apertura della cucina e che sia vuota.
     {
         - frog_allMissionsCompleted hasnt specialMissionTwo && player_accessiblePlaces has Kitchen && kitchen_kitchenOccupied == false:
             ~ frog_availableSpecialMissions += specialMissionTwo
@@ -119,9 +124,9 @@
     }
 
 
-{debug_frog: dopo tutti i check, le missioni disponibili sono per frog_availableSpecialMissions {frog_availableSpecialMissions} e per frog_availableCommonMissions {frog_availableCommonMissions}. frog_pauseSpecialMission è {frog_pauseSpecialMission}.}
+{debug_frog: dopo tutti i check, le commissioni disponibili sono per frog_availableSpecialMissions {frog_availableSpecialMissions} e per frog_availableCommonMissions {frog_availableCommonMissions}. frog_pauseSpecialMission è {frog_pauseSpecialMission}.}
 
-//Secondo step, assegno una missione a caso, passando prima da quelle prioritarie, e poi dalle altre.
+//Secondo step, assegno una commissione a caso, passando prima da quelle prioritarie, e poi dalle altre.
     ~ temp newMission = ()
     {
         - frog_availableSpecialMissions != () && frog_pauseSpecialMission <= 0:
@@ -138,14 +143,14 @@
             {
                 - LIST_COUNT(frog_allMissionsCompleted) < LIST_COUNT(frog_allAvailableMissions):
                     Girino! #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    Per ora non ho missioni da offrirti, ma non ti preoccupare, qualcosa poi me lo invento!
+                    Per ora non ho commissioni da offrirti, ma non ti preoccupare, qualcosa poi me lo invento!
                     Torna più tardi.
                     E fatti anche tu un pisolino!
                         -> main
 
                 - else:
                     Girino! #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    Ma sai che hai fatto tuuuuuuutto quello che posso offrirti?
+                    Ma sai che hai fatto tuuuuuuutte le commissioni che potevo offrirti?
                     Però possiamo rilassarci assieme!
                         -> main
 
@@ -153,7 +158,7 @@
 
     }
 
-//Terzo step: faccio il dispatch effettivo delle missioni.
+//Terzo step: faccio il dispatch effettivo delle commissioni.
     {newMission:
         
         - missionOne:
@@ -179,6 +184,12 @@
 
         - missionEight:
             -> mission_eight
+
+        - missionNine:
+            -> mission_nine
+
+        - missionTen:
+            -> mission_ten        
 
         - specialMissionOne:
             -> special_mission_one

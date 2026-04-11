@@ -7,7 +7,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    //Facciamo un passaggio di aggiornamento degli achievements subito dopo la chiusura di una missione
+    //Facciamo un passaggio di aggiornamento degli achievements subito dopo la chiusura di una commissione
     -> achievements_onGame_statusUpdate_GM ->
 
     {charTag(Franco, "{portrait_Franco()}")}:       Bene girino, direi che è il momento che Franco ti dia una zampa!
@@ -124,7 +124,6 @@
                         - a_story_of_revenge :
                             {charTag(Franco, "{portrait_Franco()}")}:       E che ne hai già parlato con {charNameOne}!
                                                                             Perché non scegli un altro dono?
-                                ~ frog_aboutGiftRequest = ()
                                 ~ frog_first_novel = "<b>Luna vergine</b> di Aza"
                                 -> franco_giftsManagement.top
                     
@@ -204,7 +203,6 @@
                         - a_story_of_rebellion:
                                                                 E che ne avete già parlato con {charNameTwo}.
                                                                 Perché non scegli un altro dono?
-                                ~ frog_aboutGiftRequest = ()
                                 ~ frog_second_novel = "<b>Il sassolino</b> di Lamia"
                                     -> franco_giftsManagement.top
                     
