@@ -38,6 +38,14 @@
         - missionEight:
             ~ return
                 "Franco ha chiesto a {player_name} di leggere qualcosa in biblioteca."
+
+        - missionNine:
+            ~ return
+                "Franco ha chiesto a {player_name} di leggere qualcosa in biblioteca."
+
+        - missionTen:
+            ~ return
+                "Franco ha chiesto a {player_name} di aggiungere un ingrediente extra mentre cucina."                
         
         - specialMissionOne:
             ~ return

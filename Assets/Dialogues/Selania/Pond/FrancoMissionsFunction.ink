@@ -55,10 +55,20 @@
 
     }
 
-    //Condizioni commissione nove
+    {
+        //Nona commissione: prendersi una pausa.
+        - library_readStories != () && frog_allMissionsCompleted hasnt missionNine:
+            ~ frog_updatedMissions += missionNine
 
+    }
 
-    //Condizioni commissione dieci
+    
+    {
+       //Decima commissione: aggiungere un ingrediente extra in cucina.
+        - (kitchen_firstCharExtraIngredient != () or kitchen_secondCharExtraIngredient != () or kitchen_thirdCharExtraIngredient!= () or kitchen_fourthCharExtraIngredient!=() or kitchen_fifthCharExtraIngredient != ()) && frog_allMissionsCompleted hasnt missionTen:
+            ~ frog_updatedMissions += missionTen
+
+    }
 
 {debug_frog: dopo franco_missionsStateUpdater frog_updatedMissions contiene {frog_updatedMissions}.}
 
@@ -98,6 +108,17 @@
         - else:
             ~ frog_availableCommonMissions -= missionEight 
             {debug_frog: NON ci sono le condizioni per abilitare missionEight.} 
+    }
+
+    //Commissione dieci richiede che la cucina sia aperta
+    {
+        - frog_allMissionsCompleted hasnt missionTen && player_accessiblePlaces has Kitchen:
+            ~ frog_availableSpecialMissions += missionTen
+            {debug_frog: ci sono le condizioni per abilitare specialMissionTwo.}
+
+        - else:
+            ~ frog_availableSpecialMissions -= missionTen
+            {debug_frog: NON ci sono le condizioni per abilitare specialMissionTwo.}  
     }
 
     //Commissione speciale uno richiede l'apertura del nido e che sia stato creato almeno un sigillo. Strega all'inizio ce ne dona tre, per cui il conto è >3.

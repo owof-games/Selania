@@ -149,7 +149,11 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    {charTag(Franco, "{portrait_Franco()}")}:       {player_name}, continuano ad arrivarmi lettere dai topi della biblioteca.
+    {charTag(Franco, "{portrait_Franco()}")}:       {player_name}, quelli del MENSA mi stanno dicendo che li ho diffamati.
+                                                    Solo perché ho scritto sotto un loro post che non è vero che se c'è internet allora uno è tenuto a sapere che la noce moscata non vola.
+                                                    Anche perché ci sono un sacco di cose sbagliate su internet.
+                                                    Tipo che tutte le rane nuotano.
+                                                    Ma mi sa invece che tu non hai ancora aggiunto un ingrediente extra in cucina, vero?
                                                     
 -> main
 
@@ -159,7 +163,11 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    {charTag(Franco, "{portrait_Franco()}")}:       {player_name}, continuano ad arrivarmi lettere dai topi della biblioteca.
+    {charTag(Franco, "{portrait_Franco()}")}:       {player_name}, quelli del MENSA mi stanno dicendo che li ho diffamati.
+                                                    Solo perché ho scritto sotto un loro post che non è vero che se c'è internet allora uno è tenuto a sapere che la noce moscata non vola.
+                                                    Anche perché ci sono un sacco di cose sbagliate su internet.
+                                                    Tipo che tutte le rane nuotano.
+                                                    Ma mi sa invece che tu non hai ancora aggiunto un ingrediente extra in cucina, vero?
                                                     
 
 -> main
@@ -557,16 +565,40 @@
         {charTag(Franco, "{portrait_Franco()}")}:   Hai completato la commissione!
 
         - else:
-        {charTag(Franco, "{portrait_Franco()}")}:   Ma sei un portento, girino!
-                                                    
+        {charTag(Franco, "{portrait_Franco()}")}:   Ti svelo un segreto.
+                                                    Sapevi che Franco, questo Franco, non un altro Franco, tipo Franco il postino o Franco il cugino di Pino.
+                                                    E neanche quel cugino Franco che ha deciso di fare il poliziotto, e allora zia Graaak l'ha buttato fuori di casa.
+                                                    No no, questo Franco che vedi qui davanti a te, lo sapevi che è un socio MENSA?
+                                                    Non è che la cosa mi rende molto orgoglioso: è un po' snob come posto.
+                                                    E poi non penso capiscano proprio proprio bene che il test per entrare è pieno di limiti.
+                                                    E che magari non è che una rana non ce la fa ad entrarci perché è stupida, ma perché è una poveraccia.
+                                                    Però l'ho fatto perché zio Gracco insisteva.
+                                                    Dice che è fondamentale per trovare certi tipi di lavoro.
+                                                    E io continuo a dirglielo che non voglio lavorare.
+                                                    Soprattutto non in cucina.
+                                                    Che è difficilissimo mettere l'ingrediente giusto.
+                                                    E al MENSA hanno i corsi per gli ingredienti.
+                                                    E anche per scegliere i mestoli.
+                                                    Mica per niente si chiama Mestolo, Erbazzone, Nocciola: Scegliere Accuratamente.
+                                                    Se gli dico che non mi piacciono le nocciole, mi tolgono la tessera?
+                                                    Però so che tu sai fare le scelte giuste, {player_name}.
+                                                    E infatti hai già completato una commissione prima ancora che te lo chiedessi, e aggiunto un ingrediente extra in cucina!
+                                                                  
     }
 
 //Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
     ~ frog_currentMission = missionNine
 
-    {charTag(Franco, "{portrait_Franco()}")}:       "Caro zio Gracco."
+    {charTag(Franco, "{portrait_Franco()}")}:       Non so se lo sapevi già, ma ogni persona ha le sue cose preferite.
+                                                    E quelle schiferite.
+                                                    Per cui non arrabbiarti se qualcosa non è piaciuto.
+                                                    Tipo a me non piace il formaggio.
+                                                    Fa delle cose strane quando cade in acqua.
+                                                    Però con l'ingrediente giusto finisce che magari la persona ti dice anche delle cose molto personali.
+                                                    Come quando ho messo la grappa nella zuppa di Tullio.
+                                                    E poi mi ha detto che vorrebbe comprarsi una moto, ma che le fanno troppo grandi per noi rane.
                                                     
-    {charTag(Franco, "{portrait_Franco()}")}:       E a proposito di pace: vediamo come posso aiutarti!
+    {charTag(Franco, "{portrait_Franco()}")}:       E a proposito di cose grandi: vediamo come posso aiutarti!
         
         -> franco_giftsManagement
 

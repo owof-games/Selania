@@ -223,8 +223,8 @@
                                                         "Ah."
                                                         O è meglio "Yeah"?
                                                         Ah no, stavo parlando dell'incontro con gli insegnanti.
-                                                        Ci sono anni in cui un solo incontro dura settimane.
-                                                        Un anno c'erano così tanti girini che abbiamo avuto più tempo speso all'incontro che non con le lezioni.
+                                                        Ci sono anni in cui un incontro dura settimane.
+                                                        Una volta c'erano così tanti girini che abbiamo avuto più tempo speso all'incontro che non con le lezioni.
                                                         Ora però ci sono classi più piccole.
                                                         Soprattutto dopo <b>quel</b> fattaccio con l'airone.
                                                         Glielo avevano detto tutti a zio Gracco che non aveva davvero la faccia da critico gastronomico.
@@ -347,10 +347,26 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-        {charTag(Franco, "{portrait_Franco()}")}:       Euforbo ha portato a casa una pulce d'acqua.
-                                                        La maestra vuole che imparino a prendersi cura di altre forme di vita.
-      
-        
+        {charTag(Franco, "{portrait_Franco()}")}:       Ti svelo un segreto.
+                                                        Sapevi che Franco, questo Franco, non un altro Franco, tipo Franco il postino o Franco il cugino di Pino.
+                                                        E neanche quel cugino Franco che ha deciso di fare il poliziotto, e allora zia Graaak l'ha buttato fuori di casa.
+                                                        No no, questo Franco che vedi qui davanti a te, lo sapevi che è un socio MENSA?
+                                                        Non è che la cosa mi rende molto orgoglioso: è un po' snob come posto.
+                                                        E poi non penso capiscano proprio proprio bene che il test per entrare è pieno di limiti.
+                                                        E che magari non è che una rana non ce la fa ad entrarci perché è stupida, ma perché è una poveraccia.
+                                                        Però l'ho fatto perché zio Gracco insisteva.
+                                                        Dice che è fondamentale per trovare certi tipi di lavoro.
+                                                        E io continuo a dirglielo che non voglio lavorare.
+                                                        Soprattutto non in cucina.
+                                                        Che è difficilissimo mettere l'ingrediente giusto.
+                                                        E al MENSA hanno i corsi per gli ingredienti.
+                                                        E anche per scegliere i mestoli.
+                                                        Mica per niente si chiama Mestolo, Erbazzone, Nocciola: Scegliere Accuratamente.
+                                                        Se gli dico che non mi piacciono le nocciole, mi tolgono la tessera?
+                                                        Però so che tu sai fare le scelte giuste, {player_name}.
+                                                        Per cui la tua prossima commissione è: quando sarai in cucina con un'altra persona, aggiungi un ingrediente extra.
+                                                        E poi torna da me.
+                                                        
             @animation:RewriterBook  
                 -> main
 
