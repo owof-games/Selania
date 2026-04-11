@@ -41,7 +41,7 @@
 
         - missionNine:
             ~ return
-                "Franco ha chiesto a {player_name} di leggere qualcosa in biblioteca."
+                "Franco ha chiesto a {player_name} di guardare il ritratto che è in camera sua."
 
         - missionTen:
             ~ return

@@ -149,11 +149,14 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    {charTag(Franco, "{portrait_Franco()}")}:       {player_name}, quelli del MENSA mi stanno dicendo che li ho diffamati.
-                                                    Solo perché ho scritto sotto un loro post che non è vero che se c'è internet allora uno è tenuto a sapere che la noce moscata non vola.
-                                                    Anche perché ci sono un sacco di cose sbagliate su internet.
-                                                    Tipo che tutte le rane nuotano.
-                                                    Ma mi sa invece che tu non hai ancora aggiunto un ingrediente extra in cucina, vero?
+    {charTag(Franco, "{portrait_Franco()}")}:       "E mi rendo conto che le rane non piacciono a tutte le persone."
+                                                    "Ma se per questo nemmeno le persone piacciono a tutte le rane."
+                                                    "E quindi vi chiedo di accogliere mio marito nella vostra Accademia."
+                                                    "Ma senza serpenti."
+                                                    "Quelli ci mangiano."
+                                                    {player_name}, mi sa che ancora non hai guardato la nuova opera di Giulio, vero?
+                                                    La trovi in camera tua!
+                                                    "PS: ma il vostro campus ha ninfee singole o condivise?"
                                                     
 -> main
 
@@ -562,6 +565,58 @@
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
         - frog_currentMission has missionNine:
+        {charTag(Franco, "{portrait_Franco()}")}:   Hai guardato il ritratto di Giulio!
+
+        - else:
+        {charTag(Franco, "{portrait_Franco()}")}:   Mi è arrivata una lettera dall'Accademia dei Bei Party.
+                                                    "Esimio dottor Franco Lelio Arpagone Romualdo Arcezio Nepomiceno Alcuino."
+                                                    "Le scriviamo in merito alla sua applicazione fatta per le veci del signor Giulio Igidio Liutprando Rigoberto Odovilio Sulpicio Policarpo Oruccio."
+                                                    "E per l'ottava volta le ripetiamo che, per quanto apprezziamo gli sforzi del signor Giulio Il Rospo, noi siamo un'agenzia di viaggi e NON"
+                                                    "E ripetiamo NON"
+                                                    "Un'accademia di pittura."
+                                                    "Per cui NO, non abbiamo borse di studio per il signor Giulio Il Rospo e"
+                                                    "NO, non doniamo blocchi di marmo di Craackrara"
+                                                    "E NO, non è che escludiamo il signor Giulio Il Rospo dai nostri corsi per un pregiudizio contro le rane."
+                                                    "Ma noi non facciamo corsi di alcun tipo perché noi siamo una AGENZIA DI VIAGGI!"
+                                                    "Se le interessa, abbiamo un pacchetto famiglia molto conveniente per l'isola dei serpenti."
+                                                    "Cordialmente."
+                                                    "Lo staff ABP."
+                                                    "PS: e comunque i ritratti del signor Giulio Il Rospo sono brutti."
+                                                    {player_name}, questa Accademia è così esclusiva!
+                                                    Sono due anni che provo a coronare il sogno di Giulio di diventare pittore.
+                                                    Tutto questo è crudele.
+                                                    Potrei forse andare a parlare loro di persona?
+                                                    Però so che tu hai già visto una delle sue opere, il nuovo ritratto che è appeso in camera tua!                                                
+    }
+
+//Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
+    ~ frog_currentMission = missionNine
+
+    {charTag(Franco, "{portrait_Franco()}")}:       E voglio chiederti cosa ne pensi.
+                                                    Ma poi ho paura che mi dici che non ti piace.
+                                                    Perché Giulio ci rimarrebbe male.
+                                                    E non mi va che lui ci rimanga male.
+                                                    Perché poi allora sarebbe penserebbe che è colpa sua se non lo prendono all'Accademia.
+                                                    Ma secondo me è una cosa stupida quella di sentirsi in colpa.
+                                                    Perché fai le cose che sai fare come le sai fare e per chi le sai fare.
+                                                    E se non vanno bene all'Accademia, magari andranno bene in camera tua, no?
+                                                    Sicuramente va bene in camera tua!
+                                                    
+    {charTag(Franco, "{portrait_Franco()}")}:       E a proposito di cose che vanno bene: vediamo come posso aiutarti!
+        
+        -> franco_giftsManagement
+
+
+
+=== franco_missionTen_closed
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+//Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
+    {
+        - frog_currentMission has missionTen:
         {charTag(Franco, "{portrait_Franco()}")}:   Hai completato la commissione!
 
         - else:
@@ -587,7 +642,7 @@
     }
 
 //Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
-    ~ frog_currentMission = missionNine
+    ~ frog_currentMission = missionTen
 
     {charTag(Franco, "{portrait_Franco()}")}:       Non so se lo sapevi già, ma ogni persona ha le sue cose preferite.
                                                     E quelle schiferite.
@@ -599,32 +654,6 @@
                                                     E poi mi ha detto che vorrebbe comprarsi una moto, ma che le fanno troppo grandi per noi rane.
                                                     
     {charTag(Franco, "{portrait_Franco()}")}:       E a proposito di cose grandi: vediamo come posso aiutarti!
-        
-        -> franco_giftsManagement
-
-
-=== franco_missionTen_closed
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
-
-//Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
-    {
-        - frog_currentMission has missionTen:
-        {charTag(Franco, "{portrait_Franco()}")}:   Hai completato la commissione!
-
-        - else:
-        {charTag(Franco, "{portrait_Franco()}")}:   Ma sei un portento, girino!
-                                                    
-    }
-
-//Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
-    ~ frog_currentMission = missionTen
-
-    {charTag(Franco, "{portrait_Franco()}")}:       "Caro zio Gracco."
-                                                    
-    {charTag(Franco, "{portrait_Franco()}")}:       E a proposito di pace: vediamo come posso aiutarti!
         
         -> franco_giftsManagement
 

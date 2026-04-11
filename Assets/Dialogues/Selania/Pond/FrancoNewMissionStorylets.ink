@@ -333,10 +333,31 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-        {charTag(Franco, "{portrait_Franco()}")}:       Euforbo ha portato a casa una pulce d'acqua.
-                                                        La maestra vuole che imparino a prendersi cura di altre forme di vita.
-   
-        
+        {charTag(Franco, "{portrait_Franco()}")}:       Mi è arrivata una lettera dall'Accademia dei Bei Party.
+                                                        "Esimio dottor Franco Lelio Arpagone Romualdo Arcezio Nepomiceno Alcuino."
+                                                        "Le scriviamo in merito alla sua applicazione fatta per le veci del signor Giulio Igidio Liutprando Rigoberto Odovilio Sulpicio Policarpo Oruccio."
+                                                        "E per l'ottava volta le ripetiamo che, per quanto apprezziamo gli sforzi del signor Giulio Il Rospo, noi siamo un'agenzia di viaggi e NON"
+                                                        "E ripetiamo NON"
+                                                        "Un'accademia di pittura."
+                                                        "Per cui NO, non abbiamo borse di studio per il signor Giulio Il Rospo e"
+                                                        "NO, non doniamo blocchi di marmo di Craackrara"
+                                                        "E NO, non è che escludiamo il signor Giulio Il Rospo dai nostri corsi per un pregiudizio contro le rane."
+                                                        "Ma noi non facciamo corsi di alcun tipo perché noi siamo una AGENZIA DI VIAGGI!"
+                                                        "Se le interessa, abbiamo un pacchetto famiglia molto conveniente per l'isola dei serpenti."
+                                                        "Cordialmente."
+                                                        "Lo staff ABP."
+                                                        "PS: e comunque i ritratti del signor Giulio Il Rospo sono brutti."
+                                                        {player_name}, questa Accademia è così esclusiva!
+                                                        Sono due anni che provo a coronare il sogno di Giulio di diventare pittore.
+                                                        Tutto questo è crudele.
+                                                        Potrei forse andare a parlare loro di persona?
+                                                        Nel mentre ti chiedo un favore: ho appeso uno dei suoi ritratti nella tua camera.
+                                                        Ti andrebbe di darci un'occhiata e dirmi cosa ne pensi?
+                                                        Nel mentre rispondo all'Accademia.
+                                                        "Cara Accademia dei Bei Party."
+                                                        "Sono sicuro che possiamo raggiungere un accordo per far accedere mio marito ai vostri corsi."
+                                                        "Vi piacciono le nocciole?"
+
             @animation:RewriterBook  
                 -> main
 
@@ -366,7 +387,7 @@
                                                         Però so che tu sai fare le scelte giuste, {player_name}.
                                                         Per cui la tua prossima commissione è: quando sarai in cucina con un'altra persona, aggiungi un ingrediente extra.
                                                         E poi torna da me.
-                                                        
+
             @animation:RewriterBook  
                 -> main
 

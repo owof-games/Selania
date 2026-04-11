@@ -10,6 +10,14 @@
         
 }        
 
+{
+    - frog_currentMission == missionNine:
+        ~ frog_updatedMissions += missionNine
+
+    - LIST_COUNT(story_endedStories) == 1  && frog_allMissionsCompleted hasnt missionNine:
+        ~ frog_updatedMissions += missionNine
+}
+
 -> main
 
 === settings_management

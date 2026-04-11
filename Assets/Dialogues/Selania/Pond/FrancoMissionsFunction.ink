@@ -55,14 +55,8 @@
 
     }
 
-    {
-        //Nona commissione: prendersi una pausa.
-        - library_readStories != () && frog_allMissionsCompleted hasnt missionNine:
-            ~ frog_updatedMissions += missionNine
+        //Nona commissione: non si può generare in automatico
 
-    }
-
-    
     {
        //Decima commissione: aggiungere un ingrediente extra in cucina.
         - (kitchen_firstCharExtraIngredient != () or kitchen_secondCharExtraIngredient != () or kitchen_thirdCharExtraIngredient!= () or kitchen_fourthCharExtraIngredient!=() or kitchen_fifthCharExtraIngredient != ()) && frog_allMissionsCompleted hasnt missionTen:
@@ -110,15 +104,26 @@
             {debug_frog: NON ci sono le condizioni per abilitare missionEight.} 
     }
 
+    //Commissione nove richiede che almeno una riscrittura sia stata conclusa, così che ci sia il ritratto in camera
+    {
+        - frog_allMissionsCompleted hasnt missionNine && LIST_COUNT(story_endedStories) > 0:
+            ~ frog_availableSpecialMissions += missionNine
+            {debug_frog: ci sono le condizioni per abilitare missionNine.}
+
+        - else:
+            ~ frog_availableSpecialMissions -= missionNine
+            {debug_frog: NON ci sono le condizioni per abilitare missionNine.}  
+    }
+
     //Commissione dieci richiede che la cucina sia aperta
     {
         - frog_allMissionsCompleted hasnt missionTen && player_accessiblePlaces has Kitchen:
             ~ frog_availableSpecialMissions += missionTen
-            {debug_frog: ci sono le condizioni per abilitare specialMissionTwo.}
+            {debug_frog: ci sono le condizioni per abilitare missionTen.}
 
         - else:
             ~ frog_availableSpecialMissions -= missionTen
-            {debug_frog: NON ci sono le condizioni per abilitare specialMissionTwo.}  
+            {debug_frog: NON ci sono le condizioni per abilitare missionTen.}  
     }
 
     //Commissione speciale uno richiede l'apertura del nido e che sia stato creato almeno un sigillo. Strega all'inizio ce ne dona tre, per cui il conto è >3.
