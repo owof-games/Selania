@@ -7,6 +7,9 @@ VAR notification_francoQuests = false
 VAR notification_achievement = false
 VAR notification_achievementName = ""
 
+//Check missioni franco notificato
+VAR notification_francoUpdatedMissions = ()
+
 
 
 === notification_system ===
@@ -45,55 +48,17 @@ VAR notification_achievementName = ""
 //Notifiche per le commissioni di Franco
 {
     - notification_francoQuests == false:
+        //Facciamo un update delle missioni
+        ~ temp newMissionsCompleted = frog_updatedMissions
+        ~ franco_missionsStateUpdater()
+
         {
-            - frog_currentMission has missionOne:
-                {
-                    - first_character_recap.check && second_character_recap.check && greenhouse_recap.check:
-                        {charTag(TheWitch, "{witch_state()}")}:   <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>
-                                ~ notification_francoQuests = true
-                    - else:
-                        ->->
-                }
-                
-            - frog_currentMission has missionTwo:
-                {
-                    - LIST_COUNT(greenhouse_backupCultivable) < 11:
-                        {charTag(TheWitch, "{witch_state()}")}:   <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>
-                                ~ notification_francoQuests = true
-                    - else:
-                        ->->    
-                }
-                
-            - frog_currentMission has missionThree && mindfulness:
-                {charTag(TheWitch, "{witch_state()}")}:   <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>
-                        ~ notification_francoQuests = true
-                    
-            - frog_currentMission has missionFour && little_storylets:
-                {charTag(TheWitch, "{witch_state()}")}:   <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>
-                        ~ notification_francoQuests = true 
-    
-            - frog_currentMission has missionFive && first_second_chit_chat:
-                {charTag(TheWitch, "{witch_state()}")}:   <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>
-                        ~ notification_francoQuests = true
             
-            - frog_currentMission has missionSix && witch_intro:
-                {charTag(TheWitch, "{witch_state()}")}:   <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>
+            - notification_francoUpdatedMissions != newMissionsCompleted:
+                {charTag(TheWitch, "{witch_state()}")}:     <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>
                         ~ notification_francoQuests = true
+                        ~ notification_francoUpdatedMissions = frog_updatedMissions
         
-            - frog_currentMission has missionSeven:
-                {
-                    - first_character_notes.check or second_character_notes.check:
-                        {charTag(TheWitch, "{witch_state()}")}:   <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>
-                                ~ notification_francoQuests = true
-                                
-                    - else:
-                        ->->    
-                }
-            
-            - frog_currentMission has missionEight && library_readStories != ():
-                {charTag(TheWitch, "{witch_state()}")}:   <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>
-                        ~ notification_francoQuests = true
-                
         }
 }
 
