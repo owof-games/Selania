@@ -190,11 +190,21 @@
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
         - frog_currentMission has missionOne:
-        {charTag(Franco, "{portrait_Franco()}")}:   Hai completato la commissione!
+        {charTag(Franco, "{portrait_Franco()}")}:   Hai letto il grimorio!
+                                                    Hai una testa grande!
 
         - else:
-        {charTag(Franco, "{portrait_Franco()}")}:   Ma sei un portento, girino!
-                                                    Pensa che ero qui a dirmi "Servirebbe una persona con una bella testolina, più grande di quella di zia Torba."
+        {charTag(Franco, "{portrait_Franco()}")}:   Vediamo vediamo vediamo.
+                                                    Interessante.
+                                                    Ho dimenticato di ordinare del punteruolo.
+                                                    Devo assolutamente passare a prenderlo da qualche parte, prima che Tullio se ne accorga.
+                                                    Ehi, {player_name}!
+                                                    Mi diceva zio Gracco che hai trovato un libro.
+                                                    E che l'hai letto molto.
+                                                    E come dico sempre ai gemelli: sapere è podere.
+                                                    E se il podere ha uno stagno, allora c'è una rana.
+                                                    E se c'è una rana, sarà felice di sapere anche lei che {player_name} ha letto il suo libro.
+                                                    Sei un bravo girino.
     }
 
 //Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
@@ -202,7 +212,7 @@
 
 //E poi scrivo la parte comune
 
-    {charTag(Franco, "{portrait_Franco()}")}:       "Una capace di leggere quasi quanto {charNameTwo}."
+    {charTag(Franco, "{portrait_Franco()}")}:       Sei capace di leggere quasi quanto {charNameTwo}.
                                                     
         {
             - are_two_entities_together(SecondCharacter, PG):
@@ -210,8 +220,7 @@
                 Perché io sono il più megagrande lettore della scuola!
         }
 
-    {charTag(Franco, "{portrait_Franco()}")}:       E tu hai già letto tante ma tante delle pagine del libro che ti è stato donato!
-                                                    E come dico sempre: la conoscenza è sapere!
+    {charTag(Franco, "{portrait_Franco()}")}:       E come dico sempre: la conoscenza è sapere!
                                                     E il sapere è sapore per cui: dimmi come posso aiutarti.
         
         -> franco_giftsManagement
@@ -225,11 +234,28 @@
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
         - frog_currentMission has missionTwo:
-        {charTag(Franco, "{portrait_Franco()}")}:   Hai completato la commissione!
+        {charTag(Franco, "{portrait_Franco()}")}:   Hai coltivato le piante in serra!
 
         - else:
-        {charTag(Franco, "{portrait_Franco()}")}:   Ma sei un portento, girino!
-                                                    Pensa che ero qui a dirmi "Servirebbe una persona con una bella testolina, più grande di quella di zia Torba."
+        {charTag(Franco, "{portrait_Franco()}")}:   L'avresti mai detto?
+                                                    I girini sono future rane.
+                                                    Ma se si lanciano sulla terra, non sanno respirare.
+                                                    Da piccolo ci ho provato, e mamma Craazia mi ha detto: "Franco, hai il fango sugli occhi! Svegliati!"
+                                                    Poi mi sono lavato via il fango e ci ho riprovato.
+                                                    A quel punto è arrivato zio Gracco, che mi ha detto: "Non ti azzardare a rifare la algonara con la panna!"
+                                                    E mi ha ributtato in acqua.
+                                                    Ma c'è una lettera delle formiche!
+                                                    "Ci servivano  più piante in serra, era urgente, e {player_name} ci ha aiutate!"
+                                                    Ah, le formiche.
+                                                    Il rapporto tra me e loro è un po' complicato perché.
+                                                    Insomma.
+                                                    Di solito le rane mangiano le formiche.
+                                                    Ma poi Giulio mi ha fatto diventare vegetariano.
+                                                    Ma loro comunque non si fidano.
+                                                    Giulio dice sempre: "Con l'arrivo dei gemelli dovremmo fare le formiche, non comprare cose inutili!"
+                                                    E allora scavo dei cunicoli per tutto lo stagno.
+                                                    E lui mi bacia sulla testa e mi dice: "Fortuna che ti amo."
+                                                    Anche io lo amo tanto.
     }
 
 //Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
@@ -237,12 +263,8 @@
 
 //E poi scrivo la parte comune
 
-    {charTag(Franco, "{portrait_Franco()}")}:       Dove l'ho messo di nuovo.
-                                                    Ah eccolo!
-                                                    Mi hanno scritto le formiche per dirmi che ti stai prendendo cura della serra!
-                                                    Ed è una cosa grandiosa girino, e sai perché?
-                                                    Io no.
-                                                    Ah no, eccolo, me lo scrivono sempre le formiche.
+    {charTag(Franco, "{portrait_Franco()}")}:       Ma chissà come mai le formiche avevano bisogno di nuove piante.
+                                                    Ah, ecco una loro lettera.
                                                     "Avevamo fame."
                                                     Mi sembra una buona motivazione.
             {
@@ -262,31 +284,77 @@
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
         - frog_currentMission has missionThree:
-        {charTag(Franco, "{portrait_Franco()}")}:   Hai completato la commissione!
+        {charTag(Franco, "{portrait_Franco()}")}:   Hai parlato con {Mentor}!
 
         - else:
-        {charTag(Franco, "{portrait_Franco()}")}:   Ma sei un portento, girino!
-                                                    Pensa che ero qui a dirmi "Servirebbe una persona con una bella testolina, più grande di quella di zia Torba."
+        {charTag(Franco, "{portrait_Franco()}")}:   Questa è facile.
+                                                    Mi raccomando Franco, non distrarti.
+                                                    La nostra amica comune, hai presente no?
+                                                    Quella che ci spiega le cose.
+                                                    La voce.
+                                                    Ecco.
+                                                    Mi ha spiegato tante cose su {mentorName}.
+                                                    Sapevi ad esempio che può respirare fino a due minuti sott'acqua?
+                                                    {
+                                                        - are_two_entities_together(Mentor, PG):
+                                                            Eh?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                                                    }
+                                                    {
+                                                        - are_two_entities_together(FirstCharacter, PG):
+                                                            Questa me la voglio godere tutta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                                                    }
+    {charTag(Franco, "{portrait_Franco()}")}:       E che mangia solo pesce?
+                                                    E che le piace giocare?
+                                                    {
+                                                        - are_two_entities_together(SecondCharacter, PG):
+                                                            IM-POS-SI-BI-LE!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                                                            {
+                                                                - are_two_entities_together(Mentor, PG):
+                                                                    Guarda che sono bravissima a burraco!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                                                                    Ma è una roba da vecchi!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                                                            }
+                                                    }
+        {charTag(Franco, "{portrait_Franco()}")}:       E che ha una tasca sotto l'ascella dove conserva le pietre che usa per rompere i gusci?
+                                                    {
+                                                        - are_two_entities_together(Mentor, PG):
+                                                            A dire il vero ne ho anche una in testa, dove raccolgo le sciocchezze dette dalle rane.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                                                            {charTag(Franco, "{portrait_Franco()}")}:       Ma le rana sono molto sagge, quindi non hai molto da raccogliere.
+                                                    }
+                                                        E.
+                                                        Uh, una lettera di Euforbo.
+                                                        "Papà Franco, quella è la lontra, non {mentorName}."
+                                                        Uh.
+                                                        Euforbo.
+                                                        È più furbo di un pesce rosso.
+                                                        Ma {mentorName}.
+                                                        Di cosa aveva bisogno {mentorName}?
+        {charTag(TheWitch, "{witch_state()}")}:         <i>{mentorName} ama dare consigli per far star bene le persone.</i>
+                                                        <i>{mentorName} crede di potere esistere solo quando si rende utile.</i>
+        {charTag(Franco, "{portrait_Franco()}")}:       Esatto.
+                                                        Quella roba lì.
+                                                        E tu l'hai fatta felice chiedendole un consiglio su come stare bene!
+        {charTag(Franco, "{portrait_Franco()}")}:       Ma quindi non è {charNameOne} che fa il nido sugli alberi?
+                                                    {
+                                                        - are_two_entities_together(FirstCharacter, PG):
+                                                            Esatto!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                                                            E poi ululo alla luna!
+                                                            {charTag(Franco, "{portrait_Franco()}")}:       Devo subito avvisare Euforbo!
+                                                    }
     }
 
 //Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
     ~ frog_currentMission = missionThree
 
-    {charTag(Franco, "{portrait_Franco()}")}:       Girino!
-                                                    Mi hanno detto che hai chiesto a {mentorName} di darti qualche consiglio di benessere.
-                                                    Come lo so?
-                                                    Perché ora li sta dando a tutte le persone che incontra.
-            {
-                - are_two_entities_together(Mentor, PG):
-                    Non a tutte tutte.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                    Però poi Franco ho una dritta per quella tensione muscolare!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-            }
-    {charTag(Franco, "{portrait_Franco()}")}:       Tullio mi ha anche detto: "Franco, sei una brava persona, ma devi farti due domande prima di chiedere certe cose a {player_name}."
+    {charTag(Franco, "{portrait_Franco()}")}:       Prima Tullio mi ha detto: "Franco, sei una brava persona, ma devi farti due domande prima di chiedere certe cose a {player_name}."
                                                     Gli ho chiesto quali fossero le due domande, e lui mi ha baciato sulla testa.
                                                     E poi mi ha detto "Per fortuna che sei simpatico."
                                                     Ci amiamo così tanto.
                                                     Però ora {mentorName} è più felice.
-                                                    E questo posto è un po' più felice.
+                                                     {
+                                                        - are_two_entities_together(Mentor, PG):
+                                                            Vero.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                                                    }
+    {charTag(Franco, "{portrait_Franco()}")}:       E questo posto è un po' più felice.
                                                     E allora io ti rendo un po' più felice: dimmi come posso aiutarti.
         
             -> franco_giftsManagement
@@ -300,30 +368,44 @@
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
         - frog_currentMission has missionFour:
-        {charTag(Franco, "{portrait_Franco()}")}:   Hai completato la commissione!
+        {charTag(Franco, "{portrait_Franco()}")}:   Rieccoti {player_name}!
 
         - else:
-        {charTag(Franco, "{portrait_Franco()}")}:   Ma sei un portento, girino!
-                                                    Pensa che ero qui a dirmi "Servirebbe una persona con una bella testolina, più grande di quella di zia Torba."
+        {charTag(Franco, "{portrait_Franco()}")}:   Quando ero ancora un girino, mamma Craazia mi diceva sempre:
+                                                    "Tuo fratello Clodoveo ha preso la mia intelligenza."
+                                                    "Tua sorella Boemonda la bellezza di tuo padre."
+                                                    E poi continuava così elencando tutt3 l3 mi3 centottantasei fradell3.
+                                                    E infine.
+                                                    "Tu, Franco. Hai delle belle pupille."
+                                                    Mi piacciono le mie pupille, mi fanno vedere tante cose.
+                                                    Cose strane.
+                                                    E le cose strane vanno condivise, così le persone sanno cosa aspettarsi dal mondo.
+                                                    Come quando ho scoperto che gli umani chiamano la mia pancia "tronco".
+                                                    Come il tronco degli alberi.
+                                                    E allora ho capito che noi rane nasciamo girini, diventiamo rane, e poi, quando siamo vecchie, alberi.
+                                                    Bello, vero?
+                                                    Il mondo è un po' una grande rana.
     }
 
 //Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
     ~ frog_currentMission = missionFour
 
-    {charTag(Franco, "{portrait_Franco()}")}:       Questa no.
+    {charTag(Franco, "{portrait_Franco()}")}:       E poi.
+                                                    Ma dov'era?
+                                                    Questa no.
                                                     Nemmeno questa.
                                                     {player_name}, tu non sai quanto sia bravo mio marito Tullio ad allungare lo stagno quando parla.
                                                     Non arriva mai al punto.
-        {
-        - are_two_entities_together(FirstCharacter, PG):
-            Perché tu arrivi sempre al punto, Franco.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-            Sì sì, sempre.#inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-            Preciso cone una mosca.
-            Non credo che.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-            Ah, lascia perdere.
-            Non perdo mai.#inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-            E Tullio non perde mai la parola.
-        }
+                                                    {
+                                                    - are_two_entities_together(FirstCharacter, PG):
+                                                        Perché tu arrivi sempre al punto, Franco.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                                                         {charTag(Franco, "{portrait_Franco()}")}:          Sì sì, sempre.
+                                                        Preciso cone una mosca.
+                                                        Non credo che.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                                                        Ah, lascia perdere.
+                                                        {charTag(Franco, "{portrait_Franco()}")}:           Non perdo mai.
+                                                        E Tullio non perde mai la parola.
+                                                    }
     {charTag(Franco, "{portrait_Franco()}")}:       Nemmeno sui bigliettini.
                                                     Ah, ecco qui.
                                                     "Ricordati di recuperare i gemelli al nido."
@@ -352,17 +434,40 @@
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
         - frog_currentMission has missionFive:
-        {charTag(Franco, "{portrait_Franco()}")}:   Hai completato la commissione!
+        {charTag(Franco, "{portrait_Franco()}")}:   Ma ciao chiacchieron{player_pronouns has him:e|{player_pronouns has her:a|ə}}!
 
         - else:
-        {charTag(Franco, "{portrait_Franco()}")}:   Ma sei un portento, girino!
-                                                    Pensa che ero qui a dirmi "Servirebbe una persona con una bella testolina, più grande di quella di zia Torba."
+        {charTag(Franco, "{portrait_Franco()}")}:   Tra qualche sera c'è il karaoke di cugina Sputt.
+                                                    Non hai idea delle cose che accadono durante le sue feste, girino!
+                                                    L'anno scorso ero così ubriaco di grappa d'alghe che ho addirittura...
+                                                    Oh, mi vergogno a dirlo.
+                                                    No, non posso dirlo.
+                                                    Una cosa così stupida.
+                                                    Ehi, una lettera di Tullio!
+                                                    "Diglielo amore, ti supplico, diglielo e lascial{player_pronouns has him:o|{player_pronouns has her:a|ə}} andare."
+                                                    Uh.
+                                                    Insomma, {player_name}!
+                                                    Ho <b>nuotato</b>!
+                                                    Non è assurdo?
+                                                    Una rana che nuota!
+                                                    Quando l'ho raccontato ai girini, mi hanno preso per pazzo!
+                                                    Anche perché poi ovviamente sono quasi annegato.
+                                                    Quest'anno ho promesso che non toccherò la grappa.
+                                                    Niente, zero.
+                                                    Sennò chissà cosa farò.
+                                                    Magari mi metto addirittura a <b>saltare</b>!
+                                                    Te la immagini, girino?
+                                                    Una rana che salta?
+                                                    Ma c'è una lettera di Giulio.
+                                                    "Di{player_pronouns has him:gli|{player_pronouns has her:lle|llə}} della commissione, Franco, abbi pietà per quella povera creatura!"
+                                                    Oggi i mariti sono un po' nervosetti.
     }
 
 //Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
     ~ frog_currentMission = missionFive
 
     {charTag(Franco, "{portrait_Franco()}")}:       Avannotti!
+                                                    Ora ricordo!
                                                     Era "avannotti".
                                                     Non "ananassi."
                                                     Franco, hai sempre la testa tra le alghe.
@@ -370,18 +475,9 @@
                                                     Prima mio marito Tullio e l'altro marito, Giulio, stavano parlando di una partita di pallanuoto tra ananassi.
                                                     E, girino, quanto ero confuso!
                                                     Però a volte ho paura di sembrare tonto come una conchiglia, e quindi non chiedo nulla.
-                                                    Invece sono contento che prima hai partecipato alla conversazione tra {charNameOne} e {charNameTwo}, girino.
-        {
-            - are_two_entities_together(FirstCharacter, PG):
-                Ci stavi spiando quindi?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-        }                        
-
-    {charTag(Franco, "{portrait_Franco()}")}:       Non hai avuto paura di dire una cosa e sembrare stupid{player_pronouns has him:o|{player_pronouns has her:a|ə}}!
-        {
-            - are_two_entities_together(SecondCharacter, PG):
-                La nonna dice sempre che non ci sono domande stupide ma solo risposte sbagliate.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
-        }
-    {charTag(Franco, "{portrait_Franco()}")}:       Quindi: non essere come Franco. E se vedi due persone vicine, prova ancora a chiacchierare con loro.
+                                                    Invece sono contento che prima hai visto cosa succede quando due persone parlano tra loro.
+                                                    Alcune cose si complicano, altre sono più chiare!
+                                                    Quindi: non essere come Franco. E se vedi due persone vicine, prova ancora a chiacchierare con loro.
                                                     Però una partita tra ananassi io me la guarderei.
                                                     Dopo lo dico a Giulio, magari ne esce qualcosa.
                                                     Come quella volta che abbiamo tirato su una band.
@@ -402,18 +498,60 @@
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
         - frog_currentMission has missionSix:
-        {charTag(Franco, "{portrait_Franco()}")}:   Hai completato la commissione!
+        {charTag(Franco, "{portrait_Franco()}")}:   Finalmente l'hai conosciuta!
 
         - else:
-        {charTag(Franco, "{portrait_Franco()}")}:   Ma sei un portento, girino!
-                                                    Pensa che ero qui a dirmi "Servirebbe una persona con una bella testolina, più grande di quella di zia Torba."
+        {charTag(Franco, "{portrait_Franco()}")}:   Prima c'è stato l'incontro tra genitori e insegnanti.
+                                                    Non è facilissimo quando ci sono così tanti girini in giro.
+                                                    "Girini in giro", suona bene!
+                                                    Potrei farci una canzone trap!
+                                                    "Girano i girini col girello nel girotondo".
+                                                    "Girano e si agitano e smuovono il fondo!"
+                                                    "Sono profondo!"
+                                                    E poi?
+                                                    "Ah."
+                                                    O è meglio "Yeah"?
+                                                    Ah no, stavo parlando dell'incontro con gli insegnanti.
+                                                    Ci sono anni in cui un incontro dura settimane.
+                                                    Una volta c'erano così tanti girini che abbiamo avuto più tempo speso all'incontro che non con le lezioni.
+                                                    Ora però ci sono classi più piccole.
+                                                    Soprattutto dopo <b>quel</b> fattaccio con l'airone.
+                                                    Glielo avevano detto tutti a zio Gracco che non aveva davvero la faccia da critico gastronomico.
+                                                    Poveri girini.
+                                                    Però poteva andare peggio, per fortuna ci ha aiutato la nostra amica comune, quella della discarica.
+                                                    {
+                                                        - are_two_entities_together(SecondCharacter, PG):
+                                                            C'è qualcuno nella discarica?!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
+                                                                
+                                                    }
+
+                                                    {
+                                                        - are_two_entities_together(FirstCharacter, PG):
+                                                            C'è un'altra persona qui in giro?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                                                                
+                                                    }
+
+                                                    {
+                                                        - are_two_entities_together(ThirdCharacter, PG):
+                                                            Questo posto è pieno di donne.#speaker:{thirdChar_tag()} #portrait:boccale_neutral
+                                                                
+                                                    }
+
+                                                    {
+                                                        - are_two_entities_together(Mentor, PG):
+                                                            C'è una discarica?!?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_bored
+                                                                
+                                                    }
     }
 
 //Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
     ~ frog_currentMission = missionSix
 
-    {charTag(Franco, "{portrait_Franco()}")}:       Girino!
-                                                    Ho saputo che finalmente hai parlato con la nostra amica comune!
+    {charTag(Franco, "{portrait_Franco()}")}:       Non mi è ancora chiaro perché decida di stare in quella discarica.
+    {charTag(TheWitch, "{witch_state()}")}:         La discarica è un promemoria delle nostre responsabilità.
+    {charTag(Franco, "{portrait_Franco()}")}:       Un po' come quando Tullio mi mette i promemoria sul cellulare.
+                                                    Ma poi dimentico il cellulare a casa.
+                                                    Ma sono felice che hai parlato con la nostra amica comune!
                                                     E tu dirai: "Ma Franco, come fai a sapere sempre tutto?"
                                                     E io ti dirò: "Ma Franco è sempre la prima ruota del gatto, ovvio che sa tutto!"
                                                     E tu dirai: "Ma i gatti non hanno le ruote."
@@ -426,7 +564,7 @@
                                                     Uh, una lettera di Tullio.
                                                     "Franco, di a quel{player_pronouns has her:la|lə} pover{player_pronouns has him:o|{player_pronouns has her:a|ə}} {player_name} quello che devi dir{player_pronouns has him:gli|{player_pronouns has her:le|lə}}!"
                                                     Uh, è sempre così nervoso.
-                                                    Comunque {player_name}: sono felice che hai parlato con chi sai tu.
+                                                    Comunque {player_name}: sono felice che hai parlato con lei.
                                                     Perché il lavoro che fai è molto delicato.
                                                     Molto.
                                                     Ed è bello avere una guida, un'alleata così saggia.
@@ -444,11 +582,27 @@
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
         - frog_currentMission has missionSeven:
-        {charTag(Franco, "{portrait_Franco()}")}:   Hai completato la commissione!
+        {charTag(Franco, "{portrait_Franco()}")}:   Hai conosciuto la cagnolina!
 
         - else:
-        {charTag(Franco, "{portrait_Franco()}")}:   Ma sei un portento, girino!
-                                                    Pensa che ero qui a dirmi "Servirebbe una persona con una bella testolina, più grande di quella di zia Torba."
+        {charTag(Franco, "{portrait_Franco()}")}:   Mannaggina che sonno, girino.
+                                                    Ma sai una cosa?
+                                                    Mi diceva Dora che hai conosciuto la cagnolina della posta!
+                                                    E che hai letto una lettera.
+                                                    Non è ora di frasi un pisolino assieme, che ne dici?
+                                                    Uh, una lettera di zio Gracco!
+                                                    "Franco, c'è questo tizio che sembra un recensore magnifico!"
+                                                    "E ha definito i miei lombrichi all'amatriciana "sublimi"!"
+                                                    "Deve avere ovviamente buon gusto."
+                                                    "Avrebbe bisogno di un po' di spazio per dormire, ma qui stiamo attendendo una nuova schiusa."
+                                                    "Non è che puoi ospitarlo tu?"
+                                                    "Si firma Signor Gufo de Predatoris."
+                                                    "Puoi contattarlo tramite la carpa della sera."
+                                                    "Anche se l'ultima è sparita da qualche giorno."
+                                                    Mmm.
+                                                    Che cosa strana.
+                                                    Non dovrebbe essere "Signore Gufo" invece di "Signor Gufo"?
+                                                    Sennò è come se dicessi "Ciao, sono la Ran Franco", no?
     }
 
 //Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
@@ -464,7 +618,7 @@
         }
     {charTag(Franco, "{portrait_Franco()}")}:       Comunque è sempre colpa di Dora l'ape.
                                                     Quella passa il tempo a svolazzare in giro, e poi se ne sta lì sulla riva a bere acqua e raccontare cose.
-                                                    E ha detto ai gemelli del cane alla fermata del treno.
+                                                    E ha detto ai gemelli della cagnolina alla fermata del treno.
                                                     Scusa, sono arrabbiato.
                                                     Dora è una brava ape, buona come l'alga.
                                                     Ma ho sonno!
@@ -473,22 +627,20 @@
                                                     "Un cane non sa respirare sott'acqua, punto."
                                                     Ma poi Euforbo, che è il più sveglio dei gemelli, ha un mese e mezzo ma sta già nella classe dei tre mesi, mi dice: "Papà, siamo anfibi."
                                                     "E quindi?" gli chiedo, sperando solo di andare a dormire.
-                                                    "E quindi sappiamo respirare fuori dall'acqua, papà Franco!"
+                                                    "E quindi sappiamo respirare anche fuori dall'acqua, papà Franco!"
                                                     E la sorpresa, {player_name}!
                                                     Non ci avevo mai pensato, ma respiro fuori dall'acqua!
-        {
-            - are_two_entities_together(FirstCharacter, PG):
-                Franco, ma tu come ci sei arrivato all'età adulta?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-                {charTag(Franco, "{portrait_Franco()}")}:       Un po' a piedi, un po' col treno.
-        }
+                                                    {
+                                                        - are_two_entities_together(FirstCharacter, PG):
+                                                            Franco, ma tu come ci sei arrivato all'età adulta?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                                                            {charTag(Franco, "{portrait_Franco()}")}:       Un po' a piedi, un po' col treno.
+                                                    }
     {charTag(Franco, "{portrait_Franco()}")}:       E il mondo ora mi sembra così grande.
                                                     E pieno di possibilità.
                                                     Come quella di avere un cane.
                                                     Ora sto scioperando anche io coi gemelli.
                                                     Ma non sai quanto ho sonno!
-                                                    E Dora mi ha detto che hai conosciuto il cane del treno!
-                                                    E allora io ti aiuterò con il tuo lavoro.
-                                                    Così magari Giulio capisce che sono un bravo girino, e ci prende il cane!
+                                                    E se ora ti aiuto col tuo lavoro, magari Giulio capisce che sono un bravo girino, e ci prende il cane!
         
         -> franco_giftsManagement
 
@@ -501,55 +653,74 @@
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
         - frog_currentMission has missionEight:
-        {charTag(Franco, "{portrait_Franco()}")}:   Hai completato la commissione!
+        {charTag(Franco, "{portrait_Franco()}")}:   Hai ecco qui {player_pronouns has him:il|{player_pronouns has her:la|lə}} campion{player_pronouns has him:e|{player_pronouns has her:essa|essə}} di bibliotecosità!
 
         - else:
-        {charTag(Franco, "{portrait_Franco()}")}:   Ma sei un portento, girino!
-                                                    Pensa che ero qui a dirmi "Servirebbe una persona con una bella testolina, più grande di quella di zia Torba."
+        {charTag(Franco, "{portrait_Franco()}")}:   Euforbo ha portato a casa una pulce d'acqua.
+                                                    La maestra vuole che imparino a prendersi cura di altre forme di vita.
+                                                    Gli altri gemelli hanno già divorato le loro pulci, ma Euforbo ha un altro cuore.
+                                                    Che un po' è ovvio: non è che potrebbe condividere il cuore con un altro gemello.
+                                                    O con Tullio.
+                                                    O con Giulio.
+                                                    O con me.
+                                                    Anche se Tullio mi dice sempre "Ti ho nel cuore".
+                                                    Che è una cosa che un po' mi confonde.
+                                                    Come quando Giulio dice "Euforbo ha la testa sulle spalle."
+                                                    Ma è un girino, al massimo ha la testa sull'addome.
+                                                    A volte quando condivido questi dubbi, Euforbo mi bacia sulla fronte e mi dice: "Papà, perché non torni a scuola?"
+                                                    Mamma Craazia diceva sempre che prendo tutto alla lettera.
+                                                    Forse per questo mi scrivono così spesso.
+                                                    Ma a proposito di scrivere!
+                                                    I topi della biblioteca mi hanno detto che hai portato un po' di movimento.
+                                                    Hai addirittura letto dei racconti, e sono così felici
+                                                    I racconti.
+                                                    E i topi.
+                                                    E forse anche le lettere.
+                                                    Uh, è da un po' che non mi scrivono.
     }
 
 //Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
     ~ frog_currentMission = missionEight
 
-    {charTag(Franco, "{portrait_Franco()}")}:       "Caro zio Gracco."
+    {charTag(Franco, "{portrait_Franco()}")}:       Devo rispondere allo zio!
+                                                    "Caro zio Gracco."
                                                     "La algonara è stata inventata nemmeno cento schiuse fa."
                                                     "Quindi se ci metto la panna no, non è un crimine contro lo stagno."
                                                     "Tuo nipote Franco."
-                                                    "PS: potresti tenere i gemelli sabato? Vorrei andare alla partita degli ananassi con Tullio e Giulio. Grazie mille."
+                                                    "PS: potresti tenere i gemelli sabato? Vorrei andare alla seconda partita degli ananassi con Tullio e Giulio. Grazie mille."
                                                     "PPS: non è che mi passeresti anche la ricetta per la frittura di opilione? Grazie mille!"
-                                                    Ehi {player_name}, eccoti cra!
-                                                    Scusa, ero preso dalla corrispondenza.
+                                                    Fatto.
                                                     Mi passa tra poco la carpa del pomeriggio, e quella è pignola con la posta.
                                                     Come si dice? Cerca sempre la squama nel batterio.
                                                     O era il batterio nella salamandra?
                                                     No, quella era la parola segreta per il karaoke di cugina Sputt.
                                                     Cugina è una che canta benissimo, girino!
                                                     Ha una voce così forte che a volte vengono a lamentarsi anche i topi della biblioteca.
-                                                    E a proposito di biblioteca!
-                                                    Ho visto che hai ascoltato il mio consiglio e hai letto qualche racconto!
-                                                    Un po' ti invidio: se tocco la carta i libri si rovinano.
+                                                    Forse ora che hai letto si calmano un poco.
+                                                    Un po' ti invidio, sai?
+                                                    Se tocco la carta i libri si rovinano.
                                                     Però la nostra amica comune a volte mi legge qualche storia.
                                                     La mia preferita è quella del principe ranocchio.
                                                     Quando lei lo bacia e le vengono tutte le verruche.
-        {
-            - are_two_entities_together(FirstCharacter, PG):
-                Onesto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        }
+                                                    {
+                                                        - are_two_entities_together(FirstCharacter, PG):
+                                                            Onesto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                                                    }
     {charTag(Franco, "{portrait_Franco()}")}:       Gli umani dovrebbero imparare a lasciarci in pace.
-        {
-            - are_two_entities_together(SecondCharacter, PG):
-                Anche io?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
-                {
-                    - frog_and_second_char_chit_chat:
-                        {charTag(Franco, "{portrait_Franco()}")}:       Ma abbiamo già detto che tu sei una rana, {charNameTwo}!
-                    - else:
-                        {charTag(Franco, "{portrait_Franco()}")}:       Mmm.
-                                                                        Io non sono sicuro che tu sei un umano.
-                                                                        Sei troppo basso.    
-                }
-                                                                        Ma quando sei qui mi diverto tanto.
-                                                                        Quindi sono in pace.
-    }
+                                                    {
+                                                        - are_two_entities_together(SecondCharacter, PG):
+                                                            Anche io?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+                                                            {
+                                                                - frog_and_second_char_chit_chat:
+                                                                    {charTag(Franco, "{portrait_Franco()}")}:       Ma abbiamo già detto che tu sei una rana, {charNameTwo}!
+                                                                - else:
+                                                                    {charTag(Franco, "{portrait_Franco()}")}:       Mmm.
+                                                                                                                    Io non sono sicuro che tu sei un umano.
+                                                                                                                    Sei troppo basso.    
+                                                            }
+                                                    Ma quando sei qui mi diverto tanto.
+                                                    Quindi sono in pace.
+                                                }
     {charTag(Franco, "{portrait_Franco()}")}:       E a proposito di pace: vediamo come posso aiutarti!
         
         -> franco_giftsManagement
