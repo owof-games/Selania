@@ -13,7 +13,7 @@
     4. In particolare K.: un ragazzo in una congrega non le va giù.
     5. Però forse qui posso provare che anche io so fare magie. Spero.
     Ci sono le cose che lasciamo dietro, però.
-    Tipo le altre a lottare contro i fasci di merda.
+    Tipo le altre a lottare contro le teste di merda.
     A me questa cosa non mi va giù.
     Ma sono troppo testone per darla vinta a K.
     Se butta male, posso sempre tornare.
@@ -52,7 +52,7 @@
     Osman Spare disse "I grandi pensieri si oppongono a tutte le dottrine del conformismo".#speaker: #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:docNest
     Ho passato gli ultimi mesi a credere di aver perso completamente il senno, ma ora che siamo qui in questa testimonianza vivente del magico, credo di essere stata guidata sin da subito da un unico grande pensiero.
     Non credo se ne siano ancora accorte, ma le compagne stanno tutte brillando, levitando come se fossero fatte d'aria, di leggerezza. Ognuna sta sbocciando nella forma migliore di sé.
-    Anche G.M., spegnendo così alcuni dei miei dubbi. 
+    Anche G.M., spegnendo così alcuni dei miei dubbi.
     Non sarò mai così diretta come K., ma ho compiuto un atto di fiducia verso O.U.J. quando ha detto "Ancora non lo sa, ma è una di noi".
     Ad essere onesta, ho donato un atto di fiducia verso ognuna delle mie compagne, per poter poi chiedere a tutte in cambio un unico grande salto nel vuoto.
     E forse anche per questo mi sento irrequieta.
