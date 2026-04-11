@@ -25,7 +25,7 @@
             
         - missionFive:
             ~ return
-                "Franco ha chiesto a {player_name} di vedere cosa succede se {charNameOne} e {charNameTwo} sono assieme."
+                "Franco ha chiesto a {player_name} di vedere cosa succede quando due persone parlano tra loro."
             
         - missionSix:
             ~ return
@@ -52,7 +52,11 @@
                 "Franco ha detto a {player_name} di raggiungerlo al Nido."
             
         - specialMissionTwo:
+            ~ return
                 "Franco ha chiesto a {player_name} di raggiungerlo in cucina."
+        - else:
+            ~ return
+                "Error"        
 
     }
 
