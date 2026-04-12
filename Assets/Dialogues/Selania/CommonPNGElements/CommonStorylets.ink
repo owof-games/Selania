@@ -90,7 +90,7 @@
  
         -> second_char_closing_storylet ->
         -> first_char_closing_storylet ->
-        -> main    
+        ->->    
 
 === about_violence_and_peace
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -129,7 +129,7 @@
 
         -> mentor_closing_storylet ->
         -> second_char_closing_storylet ->
-        -> main
+        ->->
 
     
 === first_mentor_chit_chat
@@ -199,7 +199,7 @@
 
         -> first_char_closing_storylet ->
         -> mentor_closing_storylet ->
-        -> main
+        ->->
 
 === frog_and_mentor_chit_chat
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -253,7 +253,7 @@
         }
 
         -> mentor_closing_storylet ->
-        -> main
+        ->->
 
 
 === the_witch_and_the_mentor
@@ -321,7 +321,7 @@
 
         -> witch_closing_storylet ->
         -> mentor_closing_storylet ->
-        -> main
+        ->->
 
 
 === frog_and_first_char_chit_chat
@@ -347,7 +347,7 @@
     {charTag(Franco, "{portrait_Franco()}")}:       Piccarda, Perlita, Macrina, Gliceria, Gianbrunilde, Eulalia, Ermenegigia...
 
         -> first_char_closing_storylet ->
-        -> main
+        ->->
 
 === frog_and_second_char_chit_chat
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -396,7 +396,7 @@
         }
     
         -> second_char_closing_storylet ->
-        -> main
+        ->->
 
 
 
@@ -428,7 +428,7 @@
 
     -
     -> third_char_closing_storylet ->
-    -> main
+    ->->
 
 
 
@@ -460,7 +460,7 @@
 
     -> mentor_closing_storylet ->
     -> third_char_closing_storylet ->
-    -> main
+    ->->
 
 === third_second_chit_chat ===
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -493,7 +493,7 @@
     -
     -> second_char_closing_storylet ->
     -> third_char_closing_storylet ->
-    -> main
+    ->->
 
 === third_first_chit_chat ===
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -523,7 +523,7 @@
     -
     -> first_char_closing_storylet ->
     -> third_char_closing_storylet ->
-    -> main
+    ->->
 
 
 === carla_and_second_char_chit_chat ===    
@@ -535,4 +535,4 @@
     Chiacchierata Riccio e Carla, puramente di colore
 
     -> second_char_closing_storylet ->
-    -> main
+    ->->

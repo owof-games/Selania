@@ -32,7 +32,7 @@
                                                     Torna più tardi e provo a darti una zampa.
                                                     Basta che poi me la restituisci, sennò non so come grattare la schiena di zio Gracco.
 
--> main
+    -> main
 
 
 === function franco_pauseSpecialStorylets()

@@ -480,5 +480,5 @@
         ~ move_entity(Franco, Kitchen)
         ~ kitchen_kitchenOccupied = true
         @animation:RewriterBook    
-            -> main
+        -> main
     

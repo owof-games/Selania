@@ -765,7 +765,7 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
             -> update_glyphs(ThirdCharacter) ->
             -> achievements_onGame_statusUpdate_GM ->
             -> third_char_closing_storylet ->
-            -> main
+            ->->
 
 
 
@@ -840,4 +840,4 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
     Cucinare da sola prima è stato un momento terapeutico.
     
     -> third_char_closing_storylet ->
-    -> main
+    ->->

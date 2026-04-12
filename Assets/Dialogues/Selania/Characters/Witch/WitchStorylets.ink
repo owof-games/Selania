@@ -101,7 +101,7 @@
         <i>Ora altre voci ci chiamano, ma aspetteremo {player_name} per quando ne avrà bisogno.
     
             -> witch_closing_storylet ->
-            -> main
+            ->->
 
 
 
@@ -126,7 +126,7 @@
     <i>Non ubbidisce ad alcuna autorità, ad alcuna legge, se non quella della cura delle altre persone.</i>
 
         -> witch_closing_storylet ->
-        -> main
+        ->->
 
 
 
@@ -181,7 +181,7 @@
     <i>A dopo, {player_name}.
 
         -> witch_closing_storylet ->
-        -> main
+        ->->
 
 === witch_second_confession
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -231,7 +231,7 @@
     <i>Per cui ci prendiamo un pezzo di tempo, un momento di cura.
     
         -> witch_closing_storylet ->
-        -> main
+        ->->
 
 === witch_third_confession
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -279,7 +279,7 @@
     <i>Ma ora abbiamo bisogno di un attimo per respirare.
     
         -> witch_closing_storylet ->
-        -> main
+        ->->
 
 === witch_fourth_confession
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -321,7 +321,7 @@
     <i>Ma grazie per avermi ascoltata.
 
         -> witch_closing_storylet ->
-        -> main
+        ->->
 
 === witch_fifth_confession
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -362,7 +362,7 @@
     <i>Per poter cambiare.
 
         -> witch_closing_storylet ->
-        -> main
+        ->->
 
 
 === witch_allSigils_opening ===
@@ -386,7 +386,7 @@
     -   
     <i>{player_name} quando vuole sa già dove trovarci.</i>
 
--> main    
+    ->->    
 
 
 === final ===
@@ -415,5 +415,5 @@
         -        
     Cose.
     -> witch_closing_storylet ->
-    -> main
+    ->->
 

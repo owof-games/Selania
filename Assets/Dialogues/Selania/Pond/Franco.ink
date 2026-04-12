@@ -13,7 +13,7 @@
     //E quello dei doni
         ~ franco_giftsStateUpdater()    
     //Vediamo poi se ci sono degli storylets speciali o dei commenti sulle commissioni in corso, concluse o meno che siano
-        -> franco_storyletsManagement
+        -> franco_storyletsManagement ->
     //Se supero anche questo nodo, significa che non ho commissioni in corso e non ne ho concluse, per cui arrivano i saluti generali e poi la proposta di una nuova commissione
 
 

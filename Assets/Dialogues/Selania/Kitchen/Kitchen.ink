@@ -34,7 +34,7 @@
     
     //Scena in cui Riccio sta cucinando da solo
     - are_two_entities_together(SecondCharacter, PG) && kitchen_secondCharIsCooking == true:
-        -> second_char_cooking_alone 
+        -> second_char_cooking_alone
     
     //Scena in cui cuciniamo con Riccio
     - are_two_entities_together(SecondCharacter, PG) && not ending_cooking_with_second_char && (kitchen_secondCharIsCooking == false):
