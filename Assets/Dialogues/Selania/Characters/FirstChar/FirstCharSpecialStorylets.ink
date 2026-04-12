@@ -86,7 +86,7 @@
     
         -> first_char_closing_storylet ->
         -> opening_places ->
-        -> main
+        ->->
         
 === a_story_of_revenge 
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -166,7 +166,7 @@
             }
 
         -> first_char_closing_storylet ->
-        -> main
+        ->->
     
 
 === dog_first_char
@@ -198,4 +198,4 @@
             }
     
     -> first_char_closing_storylet ->
-    -> main
+    ->->

@@ -233,6 +233,4 @@
 
 //Infine:
 //Check frasina ansiosa di Mentore
-    -> talk_to_me ->
-
-->->
+    -> talk_to_me

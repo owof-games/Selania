@@ -69,7 +69,7 @@
                 ~ move_entity(Carla, Library)
                 -> tutorial_carlaSigilsActivationStorylet
             - else:
-                -> main
+                ->->
 
         }
         
@@ -88,7 +88,7 @@
     - 
     
         -> third_char_closing_storylet ->
-        -> main
+        ->->
 
 
 === dog_third_char
@@ -101,4 +101,4 @@
    Tre ha visto un cane.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
 
     -> third_char_closing_storylet ->
-    -> main        
+    ->->        

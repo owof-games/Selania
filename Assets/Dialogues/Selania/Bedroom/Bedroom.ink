@@ -25,7 +25,7 @@
     + {are_two_entities_together(PG, Settings)} [Settings]
 
         {charTag(TheWitch, "{witch_state()}")}:   <i>Qui in futuro si potranno modificare le impostazioni.</i>
-            -> main
+            ->->
             
     + {are_two_entities_together(PG, SettingsBookVersion)} [SettingsBookVersion]
 

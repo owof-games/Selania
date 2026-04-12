@@ -31,7 +31,7 @@
                 -> that_little_liar_storylet  
 
             - else:
-                -> main           
+                ->->           
         }
                 
 
@@ -106,7 +106,7 @@
 
         -> second_char_closing_storylet ->
         -> opening_places ->
-        -> main
+        ->->
         
 
 === a_story_of_rebellion
@@ -191,7 +191,7 @@
     Mi sa che dopo mi leggo qualcosa di nuovo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
     
         -> second_char_closing_storylet ->
-        -> main
+        ->->
 
 
 === dog_second_char
@@ -224,4 +224,4 @@
     C'è un caneeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
 
         -> second_char_closing_storylet ->
-        -> main        
+        ->->       
