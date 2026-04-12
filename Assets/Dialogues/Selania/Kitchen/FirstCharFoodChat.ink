@@ -1290,7 +1290,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             -> update_glyphs(FirstCharacter) ->
             -> first_char_closing_storylet ->
             -> achievements_onGame_statusUpdate_GM ->
-            ->->
+            -> main
 
 
 
@@ -1350,7 +1350,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
     }
     
     -> first_char_closing_storylet ->
-    ->->
+    -> main
 
 
 === food_gift_first_char

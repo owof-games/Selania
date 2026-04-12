@@ -1316,7 +1316,7 @@
         -> update_glyphs(SecondCharacter) ->
         -> achievements_onGame_statusUpdate_GM ->
         -> second_char_closing_storylet ->
-        ->->
+        -> main
 
 
 /* ---------------------------------
@@ -1373,7 +1373,7 @@
     }
 
     -> second_char_closing_storylet ->
-    ->->
+    -> main
 
 
 

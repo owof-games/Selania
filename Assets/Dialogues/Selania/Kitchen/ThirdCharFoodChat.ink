@@ -765,7 +765,7 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
             -> update_glyphs(ThirdCharacter) ->
             -> achievements_onGame_statusUpdate_GM ->
             -> third_char_closing_storylet ->
-            ->->
+            -> main
 
 
 
@@ -824,7 +824,7 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
     }
     
     -> third_char_closing_storylet ->
-    ->->
+    -> main
 
 
 
