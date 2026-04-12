@@ -171,7 +171,7 @@ namespace Selania.Rework.Components.DialogueBox
         ///     <c>true</c> if the <paramref name="character" />, <paramref name="displayName" /> and <paramref name="mood" />
         ///     were present in the header and filled, <c>false</c> otherwise.
         /// </returns>
-        private bool TryGetSpeakerAndPortraitWithNewSystem(string currentText,
+        private void TryGetSpeakerAndPortraitWithNewSystem(string currentText,
             [NotNullWhen(true)] out string? character, [NotNullWhen(true)] out string? displayName,
             [NotNullWhen(true)] out string? mood, out string actualText)
         {
@@ -186,25 +186,27 @@ namespace Selania.Rework.Components.DialogueBox
             if (parts.Length != 2)
             {
                 Logger.ZLogTrace($"No header found in the line.");
-                return false;
+                return;
             }
-
-            // there was a header, so set the actual text.
-            actualText = parts[1].Trim();
 
             // try to split the header parts
             var headerParts = parts[0].Trim().Split(',', 3);
             if (headerParts.Length != 3)
             {
                 Logger.ZLogWarning($"Cannot parse the header '{parts[0]}'");
-                return false;
+                return;
             }
 
             // confirm that the parsing succeeded only if the character mood exists
             character = headerParts[0].Trim();
-            displayName = headerParts[1].Trim();
             mood = headerParts[2].Trim();
-            return SettingsDialogueBox.VerifyCharacterData(character, mood);
+
+            // if the parsing failed, don't update and immediately return
+            if (!SettingsDialogueBox.VerifyCharacterData(character, mood)) return;
+
+            // there was a valid header, so set the actual text and the display name
+            displayName = headerParts[1].Trim();
+            actualText = parts[1].Trim();
         }
 
         /// <summary>
