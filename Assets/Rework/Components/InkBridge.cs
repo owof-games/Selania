@@ -149,7 +149,8 @@ namespace Selania.Rework.Components
             // allow the various subsystems to update their observables
             var actionsAfterUpdate = UpdateCurrentText(tags);
             UpdateRoom();
-            UpdateCurrentChoices();
+            if (!actionsAfterUpdate.skipChoices) UpdateCurrentChoices();
+
             UpdateAudio(tags);
 
             // in some cases, we must immediately process the next line (typically with @command lines)
@@ -451,7 +452,7 @@ namespace Selania.Rework.Components
         public Observable<bool> conversationInProgressObservable =>
             _conversationInProgressSubject!.DistinctUntilChanged();
 
-        private record struct ActionsAfterUpdate(bool @continue, bool saveIfNeeded);
+        private record struct ActionsAfterUpdate(bool @continue, bool saveIfNeeded, bool skipChoices);
 
         /// <summary>
         ///     Update the listeners with the current text.
@@ -463,7 +464,11 @@ namespace Selania.Rework.Components
             var actionsAfterUpdate = new ActionsAfterUpdate();
             var story = GetStory();
             var currentText = story.currentText.Trim();
-            if (!currentText.StartsWith('@'))
+            if (currentText == "")
+            {
+                actionsAfterUpdate.@continue = true;
+            }
+            else if (!currentText.StartsWith('@'))
             {
                 _conversationInProgressSubject!.OnNext(true);
                 _currentTextObservable!.OnNext(
@@ -477,6 +482,7 @@ namespace Selania.Rework.Components
             else if (currentText.StartsWith("@grimoire"))
             {
                 UpdateCurrentTextGrimoire(currentText, tags);
+                actionsAfterUpdate.skipChoices = true;
             }
             else
             {
