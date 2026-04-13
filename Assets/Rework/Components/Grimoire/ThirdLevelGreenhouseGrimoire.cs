@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using R3;
+using TMPro;
 using UnityEngine;
 
 namespace Selania.Rework.Components.Grimoire
@@ -16,6 +17,12 @@ namespace Selania.Rework.Components.Grimoire
 
         [SerializeField] [Tooltip("Text for the right page.")]
         private TextMeshProUGUI rightText = null!;
+
+        /// <summary>
+        /// An observable producing "true" when the left button is clicked, "false" when the right button is clicked.
+        /// </summary>
+        public Observable<bool> clickedOnLeft =>
+            leftHeader.click.Select(_ => true).Merge(rightHeader.click.Select(_ => false));
 
         /// <summary>
         ///     Disable a page.

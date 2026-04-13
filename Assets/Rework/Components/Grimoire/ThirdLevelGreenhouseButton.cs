@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using R3;
 using Selania.Rework.Interfaces;
 using UnityEngine;
 using UnityEngine.UI;
@@ -36,6 +37,8 @@ namespace Selania.Rework.Components.Grimoire
         [Tooltip("Button image")] [SerializeField]
         private Image image = null!;
 
+        private Observable<Unit>? _click;
+
         /// <summary>
         ///     (lazy) reference to the grimoire button helper.
         /// </summary>
@@ -45,6 +48,8 @@ namespace Selania.Rework.Components.Grimoire
         ///     (lazy) reference to the saturation control component on this button.
         /// </summary>
         private GrimoireButtonSaturationControl? _grimoireButtonSaturationControl;
+
+        private Status _status = Status.Consumed;
 
         /// <summary>
         ///     The logger for this component.
@@ -56,12 +61,16 @@ namespace Selania.Rework.Components.Grimoire
         /// </summary>
         [Inject] internal ISettingsBook SettingsBook = null!;
 
+        public Observable<Unit> click =>
+            _click ??= GetComponent<Button>().OnClickAsObservable().Where(_ => _status == Status.Active);
+
         /// <summary>
         ///     Set the current status of the button.
         /// </summary>
         /// <param name="status">The status of the button.</param>
         public void SetStatus(Status status)
         {
+            _status = status;
             var isConsumed = status == Status.Consumed;
             var isActive = status == Status.Active;
 

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Selania.Rework.Interfaces;
+using UnityEngine;
 using VContainer;
 
 namespace Selania.Rework.Components.Museum.GrimoireStory
@@ -13,6 +14,22 @@ namespace Selania.Rework.Components.Museum.GrimoireStory
             builder.RegisterInkBridgeInstance(inkBridge);
             builder.RegisterSettings(selaniaSettings);
             builder.RegisterLogger();
+            builder.RegisterInstance<IAudioSystem>(new EmptyAudioSystem());
+        }
+
+        private class EmptyAudioSystem : IAudioSystem
+        {
+            public void CrossFadeToSoundtrack(string soundtrackName)
+            {
+            }
+
+            public void CrossFadeToAmbientSounds(string ambientSoundsName)
+            {
+            }
+
+            public void PlaySoundEffect(string soundEffectName)
+            {
+            }
         }
     }
 }

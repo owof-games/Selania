@@ -1018,6 +1018,9 @@ namespace Selania.Rework.Components
         [SerializeField] [Tooltip("Value for the 'next' bookmark tag")]
         private string forwardBookmarkTagValue = "next";
 
+        [SerializeField] [Tooltip("Value for the 'close' bookmark tag")]
+        private string closeBookmarkTagValue = "close";
+
         // will be localized
         [SerializeField] private string oneUsageText = "Un uso rimanente.";
         [SerializeField] private string twoUsagesText = "Due usi rimanenti.";
@@ -1077,6 +1080,7 @@ namespace Selania.Rework.Components
 
         private void SetupGrimoire()
         {
+            _closeSubject = new Subject<Unit>();
             _firstLevelGrimoirePageDescriptorsSubject = new Subject<IStoryGrimoire.FirstLevelGrimoirePageDescriptor>();
             _secondLevelGrimoirePageDescriptorsSubject =
                 new Subject<IStoryGrimoire.SecondLevelGreenhouseGrimoirePageDescriptor>();
@@ -1095,6 +1099,7 @@ namespace Selania.Rework.Components
             _secondLevelSigilsGrimoirePageDescriptorsSubject?.Dispose();
             _secondLevelGrimoirePageDescriptorsSubject?.Dispose();
             _firstLevelGrimoirePageDescriptorsSubject?.Dispose();
+            _closeSubject?.Dispose();
         }
 
         public void SwitchToGrimoire()
@@ -1120,6 +1125,9 @@ namespace Selania.Rework.Components
         {
             switch (currentText)
             {
+                case "@grimoireClose":
+                    EmitGrimoireClose();
+                    break;
                 case "@grimoire1":
                     EmitFirstLevelGrimoirePage(tags);
                     break;
@@ -1139,6 +1147,17 @@ namespace Selania.Rework.Components
                     logger.ZLogWarning($"Unknown grimoire tag {currentText}");
                     break;
             }
+        }
+
+        private Subject<Unit>? _closeSubject;
+
+        /// <inheritdoc/>
+        public Observable<Unit> close => _closeSubject?.AsObservable() ?? throw new InvalidOperationException(
+            "Cannot get the close observable before initialization");
+
+        private void EmitGrimoireClose()
+        {
+            _closeSubject!.OnNext(Unit.Default);
         }
 
         private void EmitFirstLevelGrimoirePage(ICollection<Tag> tags)
@@ -1250,7 +1269,7 @@ namespace Selania.Rework.Components
 
             // analyze navigation
             GetNavigationChoices(story, out var indexChoice, out var secondLevelChoice, out var previousChoice,
-                out var nextChoice);
+                out var nextChoice, out var closeChoice);
             if (indexChoice != null)
             {
                 logger.ZLogWarning(
@@ -1275,6 +1294,12 @@ namespace Selania.Rework.Components
                     $"First level has a choice to go to the next page ({nextChoice} #{bookmarkTagCategory}:{forwardBookmarkTagValue}) that should not be present");
             }
 
+            if (closeChoice != null)
+            {
+                logger.ZLogWarning(
+                    $"First level has a choice to close the grimoire ({closeChoice} #{bookmarkTagCategory}:{closeBookmarkTagValue}) that should not be present");
+            }
+
             // emit the signal
             _firstLevelGrimoirePageDescriptorsSubject!.OnNext(new IStoryGrimoire.FirstLevelGrimoirePageDescriptor(
                 isGamerMode, enabledLeftButtonNames, achievements, francoMission, sigilDescriptor));
@@ -1288,9 +1313,9 @@ namespace Selania.Rework.Components
         /// <param name="secondLevelChoice">The choice to take to get back to the second level, if any.</param>
         /// <param name="previousChoice">The choice to take to get to the previous page, if any.</param>
         /// <param name="nextChoice">The choice to take to get to the next page, if any.</param>
+        /// <param name="closeChoice">The choice to take to exit the grimoire, if any.</param>
         private void GetNavigationChoices(Story story, out string? indexChoice, out string? secondLevelChoice,
-            out string? previousChoice,
-            out string? nextChoice)
+            out string? previousChoice, out string? nextChoice, out string? closeChoice)
         {
             // check choice nodes for first level navigation
             var choicesWithTags = story.currentChoices.Map(choice => (Choice: choice,
@@ -1302,6 +1327,8 @@ namespace Selania.Rework.Components
             previousChoice = choicesWithTags.FirstOrDefault(c => c.Tags.Any(t => t.value == backBookmarkTagValue))
                 .Choice?.text?.Trim();
             nextChoice = choicesWithTags.FirstOrDefault(c => c.Tags.Any(t => t.value == forwardBookmarkTagValue))
+                .Choice?.text?.Trim();
+            closeChoice = choicesWithTags.FirstOrDefault(c => c.Tags.Any(t => t.value == closeBookmarkTagValue))
                 .Choice?.text?.Trim();
         }
 
@@ -1321,11 +1348,10 @@ namespace Selania.Rework.Components
 
             // navigation
             GetNavigationChoices(story, out var indexChoice, out var secondLevelChoice, out var previousChoice,
-                out var nextChoice);
+                out var nextChoice, out var closeChoice);
             if (indexChoice == null)
             {
-                logger.ZLogError($"Second level greenhouse has not a choice to get back to the first level!");
-                return;
+                logger.ZLogInformation($"Second level greenhouse has not a choice to get back to the first level.");
             }
 
             if (secondLevelChoice != null)
@@ -1346,10 +1372,16 @@ namespace Selania.Rework.Components
                     $"Second level greenhouse has a choice to go to the next page ({nextChoice} #{bookmarkTagCategory}:{forwardBookmarkTagValue}) that should not be present");
             }
 
+            if (closeChoice != null)
+            {
+                logger.ZLogInformation(
+                    $"Second level greenhouse has a choice to close the grimoire ({closeChoice} #{bookmarkTagCategory}:{closeBookmarkTagValue}).");
+            }
+
             // emit the signal
             _secondLevelGrimoirePageDescriptorsSubject!.OnNext(
                 new IStoryGrimoire.SecondLevelGreenhouseGrimoirePageDescriptor(
-                    indexChoice, greenhouseButtonPlantDescriptors));
+                    indexChoice, closeChoice, greenhouseButtonPlantDescriptors));
         }
 
         private readonly (string, ISettingsSigils.GlyphType)[] _glyphsByName =
@@ -1372,7 +1404,7 @@ namespace Selania.Rework.Components
 
             // navigation
             GetNavigationChoices(story, out var indexChoice, out var secondLevelChoice, out var previousChoice,
-                out var nextChoice);
+                out var nextChoice, out var closeChoice);
             if (indexChoice == null)
             {
                 logger.ZLogError($"Second level sigils has not a choice to get back to the first level!");
@@ -1390,6 +1422,10 @@ namespace Selania.Rework.Components
             if (nextChoice != null)
                 logger.ZLogWarning(
                     $"Second level sigils has a choice to go to the next page ({nextChoice} #{bookmarkTagCategory}:{forwardBookmarkTagValue}) that should not be present");
+
+            if (closeChoice != null)
+                logger.ZLogWarning(
+                    $"Second level sigils has a choice to close the grimoire ({closeChoice} #{bookmarkTagCategory}:{closeBookmarkTagValue}) that should not be present");
 
             // emit the signal
             _secondLevelSigilsGrimoirePageDescriptorsSubject!.OnNext(
@@ -1507,7 +1543,7 @@ namespace Selania.Rework.Components
 
             // navigation
             GetNavigationChoices(story, out var indexChoice, out var secondLevelChoice, out var previousChoice,
-                out var nextChoice);
+                out var nextChoice, out var closeChoice);
             if (indexChoice == null)
             {
                 logger.ZLogError($"Third level sigils has not a choice to get back to the first level!");
@@ -1518,6 +1554,13 @@ namespace Selania.Rework.Components
             {
                 logger.ZLogWarning(
                     $"Third level sigils has not a choice to get back to the second level!");
+                return;
+            }
+
+            if (closeChoice != null)
+            {
+                logger.ZLogWarning(
+                    $"Third level sigils has a close choice!");
                 return;
             }
 
@@ -1583,13 +1626,16 @@ namespace Selania.Rework.Components
                     }
             }
 
+            // find left and right choices, if any
+            var leftInkChoice = GetFromChoicesTag("left", ref leftStatus);
+            var rightInkChoice = GetFromChoicesTag("right", ref rightStatus);
+
             // navigation
             GetNavigationChoices(story, out var indexChoice, out var secondLevelChoice, out var previousChoice,
-                out var nextChoice);
+                out var nextChoice, out var closeChoice);
             if (indexChoice == null)
             {
-                logger.ZLogError($"Third level greenhouse has not a choice to get back to the first level!");
-                return;
+                logger.ZLogInformation($"Third level greenhouse has not a choice to get back to the first level.");
             }
 
             if (secondLevelChoice == null)
@@ -1602,11 +1648,11 @@ namespace Selania.Rework.Components
             // emit the message
             _thirdLevelGreenhouseGrimoirePageDescriptorsSubject!.OnNext(
                 new IStoryGrimoire.ThirdLevelGreenhouseGrimoirePageDescriptor(
-                    indexChoice, secondLevelChoice, previousChoice, nextChoice,
+                    indexChoice, secondLevelChoice, previousChoice, nextChoice, closeChoice,
                     new IStoryGrimoire.ThirdLevelGreenhousePageDescriptor(leftTitle, leftStatus, leftPlant,
-                        leftPageContents),
+                        leftInkChoice, leftPageContents),
                     new IStoryGrimoire.ThirdLevelGreenhousePageDescriptor(rightTitle, rightStatus, rightPlant,
-                        rightPageContents)));
+                        rightInkChoice, rightPageContents)));
 
             return;
 
@@ -1662,6 +1708,9 @@ namespace Selania.Rework.Components
                     case "owned":
                         actualStatus = IStoryGrimoire.ThirdLevelGreenhouseStatus.Owned;
                         break;
+                    case "active":
+                        actualStatus = IStoryGrimoire.ThirdLevelGreenhouseStatus.Active;
+                        break;
                     default:
                         logger.ZLogWarning($"Could not recognize {statusTag} value {status}: forcing to 'hidden'");
                         actualStatus = IStoryGrimoire.ThirdLevelGreenhouseStatus.Hidden;
@@ -1669,6 +1718,19 @@ namespace Selania.Rework.Components
                 }
 
                 return (actualTitle, actualPlant, actualStatus);
+            }
+
+            string? GetFromChoicesTag(string direction, ref IStoryGrimoire.ThirdLevelGreenhouseStatus status)
+            {
+                var choice = story.currentChoices.FirstOrDefault(choice =>
+                    MakeTags(choice.tags).Any(t => t.category == "page" && t.value == direction));
+                if (choice != null && status == IStoryGrimoire.ThirdLevelGreenhouseStatus.Owned)
+                {
+                    // since we have a choice, upgrade the status to "active"
+                    status = IStoryGrimoire.ThirdLevelGreenhouseStatus.Active;
+                }
+
+                return choice?.text;
             }
         }
 

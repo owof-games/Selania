@@ -10,6 +10,13 @@ VAR contentsRoom1 = (PG, Item1)
 
 VAR settings_gamerMode = false
 
+LIST ink_possibileLevels = ink_empty, ink_low, ink_normal, ink_medium, ink_high
+VAR firstChar_InkLevel = ink_empty
+VAR secondChar_InkLevel = ink_empty
+VAR thirdChar_InkLevel = ink_empty
+VAR fourthChar_InkLevel = ink_empty
+VAR fifthChar_InkLevel = ink_empty
+
 /* ---------------------------------
                 
 LISTE COMBINATORIE DEI SIGILLI
@@ -108,13 +115,13 @@ LIST allGlyphs = Fire, Air, Water, Earth, Aether
     VAR glyph_actualSigilUses = 1
 
 
--> grimoire
+-> start
 
 === start
-@interact
-+ Item1
--
-
+Questo è un dialogo.
+Questa è la seconda riga.
+E ora apro la scelta delle piante.
+-> grimoire_greenhouse_in_dialogue ->
 -> start
 
 === grimoire
@@ -199,6 +206,84 @@ LIST allGlyphs = Fire, Air, Water, Earth, Aether
         -> grimoire_greenhouse_third
     + [Pianta2 #bookmark:next]
         -> grimoire_greenhouse_third
+
+=== grimoire_greenhouse_in_dialogue
+    @grimoireGreenhouse
+    + {RANDOM(1, 6) <= 3} [BaccaDellaAddolorata #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third_in_dialogue
+    + {RANDOM(1, 6) <= 3} [BarbaDellInciampo #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third_in_dialogue
+    + {RANDOM(1, 6) <= 3} [BastoneDellOzioso #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third_in_dialogue
+    + {RANDOM(1, 6) <= 3} [BrinaDellImpossibile #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third_in_dialogue
+    + {RANDOM(1, 6) <= 3} [CantoDelleCompagne #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third_in_dialogue
+    + {RANDOM(1, 6) <= 3} [CardoAspinato #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third_in_dialogue
+    + {RANDOM(1, 6) <= 3} [EderaDelleAmanti #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third_in_dialogue
+    + {RANDOM(1, 6) <= 3} [ErbaLiccia #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third_in_dialogue
+    + {RANDOM(1, 6) <= 3} [FalsaPalude #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third_in_dialogue
+    + {RANDOM(1, 6) <= 3} [LanaNotturna #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third_in_dialogue
+    + {RANDOM(1, 6) <= 3} [LicheneDegliAbissi #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third_in_dialogue
+    + {RANDOM(1, 6) <= 3} [NonTiScordarDiTe #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third_in_dialogue
+    + {RANDOM(1, 6) <= 3} [Olobino #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third_in_dialogue
+    + {RANDOM(1, 6) <= 3} [LaSpazzata #status:{RANDOM(1,6) <= 3:owned|missing}]
+        -> grimoire_greenhouse_third_in_dialogue
+    + [Close #bookmark:close]
+        @grimoireClose
+        -> start
+
+
+=== grimoire_greenhouse_third_in_dialogue
+    @grimoireGreenhousePages #leftPageTitle:Lana Notturna #leftPageStatus:locked #leftPagePlant:LanaNotturna #rightPageTitle:Bacca dell'Addolorata #rightPageStatus:active #rightPagePlant:BaccaDellaAddolorata
+    Lorem ipsum. #leftPageDescription
+    Altro Lorem. #leftPageDescription
+    Donata a Chitarra #leftPageSubtitle
+    Non ha espresso particolare entusiasmo. #leftPageDescription
+    Descrizione a destra #rightPageDescription
+    Aggiunta cucinando con Riccio #rightPageSubtitle
+    Recuperata da Franco #rightPageSubtitle
+    + [BaccaDellaAddolorata #page:right]
+        @grimoireClose
+        Hai scelto Bacca dell'addolorata!
+        -> start
+    + [Piante #bookmark:secondLevel]
+        -> grimoire_greenhouse_in_dialogue
+    + [Pianta1 #bookmark:previous]
+        -> grimoire_greenhouse_third_alt_in_dialogue
+    + [Pianta2 #bookmark:next]
+        -> grimoire_greenhouse_third_alt_in_dialogue
+    + [Close #bookmark:close]
+        @grimoireClose
+        -> start
+
+
+=== grimoire_greenhouse_third_alt_in_dialogue
+    @grimoireGreenhousePages #leftPageTitle:Lana Notturna #leftPageStatus:consumed #leftPagePlant:LanaNotturna #rightPageTitle:Bacca dell'Addolorata #rightPageStatus:hidden #rightPagePlant:BaccaDellaAddolorata
+    Lorem ipsum. #leftPageDescription
+    Altro Lorem. #leftPageDescription
+    Donata a Chitarra #leftPageSubtitle
+    Non ha espresso particolare entusiasmo. #leftPageDescription
+    Descrizione a destra #rightPageDescription
+    Aggiunta cucinando con Riccio #rightPageSubtitle
+    Recuperata da Franco #rightPageSubtitle
+    + [Piante #bookmark:secondLevel]
+        -> grimoire_greenhouse_in_dialogue
+    + [Pianta1 #bookmark:previous]
+        -> grimoire_greenhouse_third_in_dialogue
+    + [Pianta2 #bookmark:next]
+        -> grimoire_greenhouse_third_in_dialogue
+    + [Close #bookmark:close]
+        @grimoireClose
+        -> start
 
 
 === grimoire_sigils

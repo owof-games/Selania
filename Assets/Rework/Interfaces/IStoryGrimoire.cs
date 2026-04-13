@@ -31,7 +31,12 @@ namespace Selania.Rework.Interfaces
             /// <summary>
             ///     The page shows a plant currently owned.
             /// </summary>
-            Owned
+            Owned,
+
+            /// <summary>
+            ///     The page shows a plant currently owned and with an active button.
+            /// </summary>
+            Active
         }
 
         /// <summary>
@@ -59,6 +64,11 @@ namespace Selania.Rework.Interfaces
             /// </summary>
             Unclickable
         }
+
+        /// <summary>
+        ///     An observable that produces a <c>Unit.Default</c> whenever a @grimoireClose command is raised.
+        /// </summary>
+        Observable<Unit> close { get; }
 
         /// <summary>
         ///     An observable that produces a value whenever a top level grimoire page should be displayed.
@@ -137,7 +147,8 @@ namespace Selania.Rework.Interfaces
             string? indexText,
             string? backToLevelTwoText,
             string? previousPageText,
-            string? nextPageText);
+            string? nextPageText,
+            string? closeChoiceText);
 
         /// <summary>
         ///     Descriptor for the data to show on the first page of the grimoire.
@@ -156,7 +167,7 @@ namespace Selania.Rework.Interfaces
             IEnumerable<string> enabledLeftButtonNames,
             IEnumerable<AchievementDescriptor> achievements,
             string francoMission,
-            SigilDescriptor? sigilDescriptor) : BaseNavigationDescriptor(null, null, null, null);
+            SigilDescriptor? sigilDescriptor) : BaseNavigationDescriptor(null, null, null, null, null);
 
         /// <summary>
         /// Descriptor of a single greenhouse button.
@@ -169,11 +180,13 @@ namespace Selania.Rework.Interfaces
         /// Descriptor of the second level page of the greenhouse.
         /// </summary>
         /// <param name="indexText">Text of the "index" choice.</param>
+        /// <param name="closeText">Text of the "close" choice.</param>
         /// <param name="greenhouseButtonPlantDescriptors">Descriptor for all the buttons.</param>
         record SecondLevelGreenhouseGrimoirePageDescriptor(
             string? indexText,
+            string? closeText,
             IEnumerable<GreenhouseButtonPlantDescriptor> greenhouseButtonPlantDescriptors
-        ) : BaseNavigationDescriptor(indexText, null, null, null);
+        ) : BaseNavigationDescriptor(indexText, null, null, null, closeText);
 
         /// <summary>
         ///     Descriptor for a sigils group (sigil button in second level).
@@ -191,7 +204,7 @@ namespace Selania.Rework.Interfaces
         record SecondLevelSigilsGrimoirePageDescriptor(
             string? indexText,
             IEnumerable<SigilsGroupDescriptor> sigilsGroupDescriptors)
-            : BaseNavigationDescriptor(indexText, null, null, null);
+            : BaseNavigationDescriptor(indexText, null, null, null, null);
 
         /// <summary>
         ///     Description of a third level sigils' header.
@@ -214,11 +227,13 @@ namespace Selania.Rework.Interfaces
         /// <param name="title">Title of the page.</param>
         /// <param name="status">Status of the page.</param>
         /// <param name="plantName">Name of the plant, as it appears in the ink list.</param>
+        /// <param name="inkChoice">Ink choice, if the status is active.</param>
         /// <param name="pageContents">Contents of the page: a list of page elements, which are either subtitles or contents.</param>
         record ThirdLevelGreenhousePageDescriptor(
             string title,
             ThirdLevelGreenhouseStatus status,
             string plantName,
+            string? inkChoice,
             IList<(bool IsSubtitle, string Text)> pageContents);
 
         /// <summary>
@@ -267,7 +282,7 @@ namespace Selania.Rework.Interfaces
             ThirdLevelSigil rightSide1,
             ThirdLevelSigil rightSide2,
             ThirdLevelSigil rightSide3
-        ) : BaseNavigationDescriptor(indexText, backToLevelTwoText, previousPageText, nextPageText);
+        ) : BaseNavigationDescriptor(indexText, backToLevelTwoText, previousPageText, nextPageText, null);
 
         /// <summary>
         ///     Descriptor of the third level page of the greenhouse.
@@ -285,12 +300,13 @@ namespace Selania.Rework.Interfaces
         /// <param name="leftPage">Descriptor for the left page.</param>
         /// <param name="rightPage">Descriptor for the right page.</param>
         record ThirdLevelGreenhouseGrimoirePageDescriptor(
-            string indexText,
+            string? indexText,
             string backToLevelTwoText,
             string? previousPageText,
             string? nextPageText,
+            string? closeChoice,
             ThirdLevelGreenhousePageDescriptor leftPage,
             ThirdLevelGreenhousePageDescriptor rightPage
-        ) : BaseNavigationDescriptor(indexText, backToLevelTwoText, previousPageText, nextPageText);
+        ) : BaseNavigationDescriptor(indexText, backToLevelTwoText, previousPageText, nextPageText, closeChoice);
     }
 }

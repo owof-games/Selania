@@ -136,22 +136,22 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
 
         public void ShowFirstLevelBookmarks()
         {
-            grimoireBackground.ShowBookmarks(null, null, null, null);
+            grimoireBackground.ShowBookmarks(null, null, null, null, null);
         }
 
         public void ShowSecondLevelBookmarks()
         {
-            grimoireBackground.ShowBookmarks("index", null, null, null);
+            grimoireBackground.ShowBookmarks("index", null, null, null, null);
         }
 
         public void ShowThirdLevelBookmarks()
         {
-            grimoireBackground.ShowBookmarks("index", "Riccio", "Chitarra", "Birra");
+            grimoireBackground.ShowBookmarks("index", "Riccio", "Chitarra", "Birra", null);
         }
 
         public void ShowRewritingBookmarks()
         {
-            grimoireBackground.ShowBookmarks("index", "Piante", "Olobino", "???");
+            grimoireBackground.ShowBookmarks("index", "Piante", "Olobino", "???", null);
         }
 
         public void SwitchToFirstLevelPage()

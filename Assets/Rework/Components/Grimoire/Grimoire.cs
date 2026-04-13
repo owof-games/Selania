@@ -20,6 +20,7 @@ namespace Selania.Rework.Components.Grimoire
         private void Start()
         {
             // story events
+            StoryGrimoire.close.Subscribe(OnClose).AddTo(this);
             StoryGrimoire.firstLevelGrimoirePageDescriptors.Subscribe(OnFirstLevelGrimoirePageDescriptors).AddTo(this);
             StoryGrimoire.secondLevelGreenhouseGrimoirePageDescriptors
                 .Subscribe(OnSecondLevelGreenhouseGrimoirePageDescriptors).AddTo(this);
@@ -35,17 +36,34 @@ namespace Selania.Rework.Components.Grimoire
             grimoireBackground.backToLevelTwoObservable.Subscribe(PickChoice).AddTo(this);
             grimoireBackground.previousPageObservable.Subscribe(PickChoice).AddTo(this);
             grimoireBackground.nextPageObservable.Subscribe(PickChoice).AddTo(this);
+            grimoireBackground.closeObservable.Subscribe(PickChoice).AddTo(this);
             // grimoire events: specific page buttons
             grimoireBackground.firstLevelButtonClick.Subscribe(PickChoice).AddTo(this);
             grimoireBackground.secondLevelSigilsButtonClick.Subscribe(PickSigilChoice).AddTo(this);
             grimoireBackground.thirdLevelSigilsButtonClick.Subscribe(PickChoice).AddTo(this);
             grimoireBackground.secondLevelGreenhouseButtonClick.Subscribe(PickChoice).AddTo(this);
+            grimoireBackground.thirdLevelGreenhouseButtonClickOnLeft
+                .Select((isLeft, i) => (isLeft, i))
+                .CombineLatest(
+                    StoryGrimoire.thirdLevelGreenhouseGrimoirePageDescriptors,
+                    (x, descriptor) =>
+                        x.isLeft ? (x.i, descriptor.leftPage.inkChoice) : (x.i, descriptor.rightPage.inkChoice))
+                .DistinctUntilChangedBy(x => x.i)
+                .Select(x => x.inkChoice)
+                .WhereNotNull()
+                .Subscribe(PickChoice)
+                .AddTo(this);
         }
 
         private void PickChoice(string buttonName)
         {
             Logger.ZLogInformation($"Picking grimoire choice: {buttonName}");
             StoryChoicesSelector.PickChoiceWithText(buttonName);
+        }
+
+        private void OnClose(Unit _)
+        {
+            grimoireBackground.HideGrimoire();
         }
 
         private void OnFirstLevelGrimoirePageDescriptors(IStoryGrimoire.FirstLevelGrimoirePageDescriptor descriptor)
@@ -201,6 +219,7 @@ namespace Selania.Rework.Components.Grimoire
                         break;
                     case IStoryGrimoire.ThirdLevelGreenhouseStatus.Consumed:
                     case IStoryGrimoire.ThirdLevelGreenhouseStatus.Owned:
+                    case IStoryGrimoire.ThirdLevelGreenhouseStatus.Active:
                     {
                         var text = string.Join("\n",
                             pageDescriptor.pageContents.Select(c =>
@@ -208,9 +227,14 @@ namespace Selania.Rework.Components.Grimoire
                         grimoireBackground.ThirdLevelGreenhouseFillPage(isLeft,
                             pageDescriptor.title,
                             pageDescriptor.status == IStoryGrimoire.ThirdLevelGreenhouseStatus.Owned,
-                            pageDescriptor.status == IStoryGrimoire.ThirdLevelGreenhouseStatus.Owned
-                                ? ThirdLevelGreenhouseButton.Status.Owned
-                                : ThirdLevelGreenhouseButton.Status.Consumed,
+                            pageDescriptor.status switch
+                            {
+                                IStoryGrimoire.ThirdLevelGreenhouseStatus.Active => ThirdLevelGreenhouseButton.Status
+                                    .Active,
+                                IStoryGrimoire.ThirdLevelGreenhouseStatus.Owned => ThirdLevelGreenhouseButton.Status
+                                    .Owned,
+                                _ => ThirdLevelGreenhouseButton.Status.Consumed
+                            },
                             pageDescriptor.plantName, text);
                         break;
                     }
@@ -231,7 +255,7 @@ namespace Selania.Rework.Components.Grimoire
         private void SetUpNavigation(IStoryGrimoire.BaseNavigationDescriptor descriptor)
         {
             grimoireBackground.ShowBookmarks(descriptor.indexText, descriptor.backToLevelTwoText,
-                descriptor.previousPageText, descriptor.nextPageText);
+                descriptor.previousPageText, descriptor.nextPageText, descriptor.closeChoiceText);
         }
 
         /// <summary>

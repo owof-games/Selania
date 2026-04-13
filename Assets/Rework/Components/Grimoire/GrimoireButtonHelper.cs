@@ -85,8 +85,6 @@ namespace Selania.Rework.Components.Grimoire
                 .DistinctUntilChanged()
                 .Subscribe(pressed => targetGraphic.color = pressed ? pressedColor : Color.white)
                 .AddTo(this);
-
-            // update the alternative position
         }
 
         public void OnPointerDown(PointerEventData eventData)

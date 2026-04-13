@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using R3;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +14,8 @@ namespace Selania.Rework.Components.Grimoire
         [SerializeField] private Image box = null!;
 
         private Button? _actualButton;
+
+        public Observable<Unit> click => button.click;
 
         private Button GetButton()
         {

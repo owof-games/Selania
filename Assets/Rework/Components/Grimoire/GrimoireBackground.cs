@@ -176,6 +176,17 @@ namespace Selania.Rework.Components.Grimoire
 
         private TextMeshProUGUI _backToLevelTwoTextMeshPro = null!;
 
+        /// <summary>
+        /// Text of the Ink choice to take when the "close" button is clicked; if not present, the "close" button simply
+        /// closes the grimoire.
+        /// </summary>
+        private string? _closeChoice;
+
+        private Subject<string>? _closeSubject;
+
+        /// <summary>
+        /// Text of the Ink choice to take when the "index" button is clicked.
+        /// </summary>
         private string? _indexChoice;
 
         /// <summary>
@@ -223,6 +234,14 @@ namespace Selania.Rework.Components.Grimoire
             throw new InvalidOperationException("Cannot access the nextPageObservable before component setup");
 
         /// <summary>
+        /// An observable that produces the text of the ink choice when the close button is invoked. If no choice has
+        /// been set, it means that clicking the "close" button simply closes the grimoire, and no event is raised.
+        /// </summary>
+        public Observable<string> closeObservable =>
+            _closeSubject?.AsObservable() ??
+            throw new InvalidOperationException("Cannot access the closeObservable before component setup");
+
+        /// <summary>
         ///     An observable that exposes clicks on top level buttons.
         /// </summary>
         public Observable<string> firstLevelButtonClick =>
@@ -246,6 +265,12 @@ namespace Selania.Rework.Components.Grimoire
         public Observable<string> thirdLevelSigilsButtonClick =>
             thirdLevelSigilsRows.Select(row => row.click).Merge();
 
+        /// <summary>
+        /// An observable producing "true" when the left button on third level greenhouse is clicked, "false" when the right button is clicked.
+        /// </summary>
+        public Observable<bool> thirdLevelGreenhouseButtonClickOnLeft =>
+            thirdLevelGreenhouseGrimoire.clickedOnLeft;
+
         private void Awake()
         {
             // get components
@@ -255,6 +280,7 @@ namespace Selania.Rework.Components.Grimoire
             _backToLevelTwoSubject = new Subject<string>().AddTo(this);
             _previousPageSubject = new Subject<string>().AddTo(this);
             _nextPageSubject = new Subject<string>().AddTo(this);
+            _closeSubject = new Subject<string>().AddTo(this);
         }
 
         private void Start()
@@ -266,9 +292,9 @@ namespace Selania.Rework.Components.Grimoire
             // activate both achievement contains at the beginning to trigger all components' "Start"
             readerModeAchievementsContainer.SetActive(true);
             gamerModeAchievementsContainer.SetActive(true);
-            // turn off all bookmarks at startup
+            // turn off all bookmarks at startup and set the default behavior for 'close'
             SetUpBookmarks();
-            ShowBookmarks(null, null, null, null);
+            ShowBookmarks(null, null, null, null, null);
         }
 
         /// <summary>
@@ -285,14 +311,6 @@ namespace Selania.Rework.Components.Grimoire
         public void HideGrimoire()
         {
             _animator.SetBool(Opened, false);
-        }
-
-        /// <summary>
-        ///     Callback for the close button.
-        /// </summary>
-        public void OnCloseButtonClicked()
-        {
-            close.Invoke();
         }
 
         /// <summary>
@@ -424,8 +442,9 @@ namespace Selania.Rework.Components.Grimoire
         ///     hidden.
         /// </param>
         /// <param name="nextPageText">Text for the 'next page' button, if not <c>null</c>, otherwise the bookmark is hidden.</param>
+        /// <param name="closeText">Choice text for the 'close' button, if not <c>null</c>, otherwise the close button simply closes the grimoire.</param>
         public void ShowBookmarks(string? indexText, string? backToLevelTwoText, string? previousPageText,
-            string? nextPageText)
+            string? nextPageText, string? closeText)
         {
             _indexChoice = indexText;
             indexBookmarkButton.SetActive(indexText != null);
@@ -441,6 +460,8 @@ namespace Selania.Rework.Components.Grimoire
             _nextPageTextMeshPro.text = nextPageText ?? "";
             _nextPageChoice = nextPageText;
             nextPageBookmarkButton.SetActive(nextPageText != null);
+
+            _closeChoice = closeText;
         }
 
         public void OnIndexBookmarkButtonClick()
@@ -485,6 +506,21 @@ namespace Selania.Rework.Components.Grimoire
             }
 
             _nextPageSubject!.OnNext(_nextPageChoice);
+        }
+
+        /// <summary>
+        ///     Callback for the close button.
+        /// </summary>
+        public void OnCloseButtonClicked()
+        {
+            if (_closeChoice == null)
+            {
+                close.Invoke();
+            }
+            else
+            {
+                _closeSubject!.OnNext(_closeChoice);
+            }
         }
 
         /// <summary>
