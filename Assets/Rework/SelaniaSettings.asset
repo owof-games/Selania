@@ -435,7 +435,7 @@ MonoBehaviour:
   - <plantName>k__BackingField: LaSpazzata
     <sprite>k__BackingField: {fileID: 21300000, guid: d13e629153e4172429072cb3c67b947f, type: 3}
   - <plantName>k__BackingField: universalIngredient
-    <sprite>k__BackingField: {fileID: 21300000, guid: 3d7831efdd18a29438f38bfbd2f1e4f3, type: 3}
+    <sprite>k__BackingField: {fileID: 21300000, guid: daa9db06a7459c44a88acc067791adc5, type: 3}
   <minimumLogLevel>k__BackingField: 0
   _fileProviderSettings:
     categorySettingsArray: []
