@@ -677,6 +677,10 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
                         -> kitchen_moon_feedback -> 
 
                     Aggiungere {ingredientTranslator(kitchen_thirdCharExtraIngredient)} è stato un tocco geniale.
+                    {
+                        - kitchen_firstCharExtraIngredient == universalIngredient:
+                            AGGIUNGI RICORDO IMPORTANTE DI BOCCALE.
+                    }
                         @animation:RewriterBook
 
                         -> relationship_feedback
