@@ -232,6 +232,10 @@ VAR letters_doggoPause = false
     {
         - frog_tiredValue > 0:
             ~ frog_tiredValue --
+
+        //Se è nel safekeeping, vuol dire che non è nel nest o in cucina ad aspettarmi
+        - frog_tiredValue == 0 && contentsSafekeeping has Franco && grimoire_secondChar has grimSecondCharTwo:
+            ~ move_entity(Franco, Pond)
     }
 
 
