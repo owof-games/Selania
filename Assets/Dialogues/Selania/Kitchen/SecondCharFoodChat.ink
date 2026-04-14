@@ -1377,7 +1377,7 @@
     }
 
     -> second_char_closing_storylet ->
-    ->->
+    -> main
 
 
 

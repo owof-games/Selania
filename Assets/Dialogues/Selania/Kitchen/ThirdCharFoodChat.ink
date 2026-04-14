@@ -828,7 +828,7 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
     }
     
     -> third_char_closing_storylet ->
-    ->->
+    -> main
 
 
 

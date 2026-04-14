@@ -156,18 +156,10 @@
  //Storylets speciali First Character
 {   
     //Cucina
-        //Chitarra sta cucinando ed entriamo in cucina
-        - are_two_entities_together(FirstCharacter, PG) && entity_location(PG) == Kitchen:
-            -> first_char_cooking_alone
-    
         //Chitarra ha cucinato, e vediamo la scena del dono (a sé stessa)
         - are_two_entities_together(FirstCharacter, PG) && first_char_cooking_tracker && kitchen_firstCharIsCooking == false && grimoire_firstChar hasnt grimFirstCharKitchenAlone:
             -> food_gift_first_char
-        
-        //Chitarra cucina con noi
-        -  are_two_entities_together(FirstCharacter, PG) && entity_location(PG) == Kitchen && grimoire_firstChar hasnt grimFirstCharKitchenEnded && kitchen_firstCharIsCooking == false:
-            -> cooking_with_first_char
-        
+
     //Racconto di Aza letto
         - are_two_entities_together(FirstCharacter, PG) && library_readStories has Aza && grimoire_firstChar hasnt grimFirstCharNovel:
             -> a_story_of_revenge
@@ -180,15 +172,6 @@
 
 //Storylets speciali Second Char
 {
-    //Cucina
-        //Riccio sta cucinando ed entriamo in cucina
-        - are_two_entities_together(SecondCharacter, PG) && entity_location(PG) == Kitchen && kitchen_secondCharIsCooking == true:
-            -> second_char_cooking_alone
-    
-        //Riccio cucina con noi
-        -  are_two_entities_together(SecondCharacter, PG) && entity_location(PG) == Kitchen && grimoire_secondChar hasnt grimSecondCharKitchenEnded && kitchen_secondCharIsCooking == false:
-            -> cooking_with_second_char        
-
     //Lettura Riccio
         - are_two_entities_together(SecondCharacter, PG) && library_readStories has Lamia && grimoire_secondChar hasnt grimSecondCharNovel:
             -> a_story_of_rebellion
@@ -201,20 +184,11 @@
 
 //Storylets speciali Third Char
 {
-    //Cucina
-        //Boccale sta cucinando ed entriamo in cucina
-        - are_two_entities_together(ThirdCharacter, PG) && entity_location(PG) == Kitchen && kitchen_thirdCharIsCooking == true:
-            -> third_char_cooking_alone
-    
-        //Boccale cucina con noi
-        -  are_two_entities_together(ThirdCharacter, PG) && entity_location(PG) == Kitchen && grimoire_thirdChar hasnt grimThirdCharKitchenEnded && kitchen_thirdCharIsCooking == false:
-            -> cooking_with_third_char
-
-        //Boccale ha cucinato, e vediamo la scena del dono
+    //Boccale ha cucinato, e vediamo la scena del dono
         - are_two_entities_together(ThirdCharacter, PG) && third_char_cooking_tracker && kitchen_thirdCharIsCooking == false && grimoire_thirdChar hasnt grimThirdCharKitchenAlone:
             -> food_gift_third_char            
 
-        //Lettura Boccale
+    //Lettura Boccale
         - are_two_entities_together(ThirdCharacter, PG) && library_readStories has Lamia && grimoire_thirdChar hasnt grimThirdCharNovel:
             -> third_read_story_library
                 

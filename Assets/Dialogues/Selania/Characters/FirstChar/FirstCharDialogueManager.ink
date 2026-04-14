@@ -4,6 +4,11 @@
             + {are_two_entities_together(FirstCharacter, PG) && firstChar_storyStatus == story_storyStarted} [FirstCharacter]
                 -> talk_with_first_character
 
+            //Chiacchierata in cucina
+            + {are_two_entities_together(FirstCharacter, PG) && firstChar_storyStatus == story_storyStarted && entity_location(PG)  == Kitchen} [FirstCharacter]
+                -> kitchen_storylets_dispatcher
+
+
             // //Chiacchiera a fine storia
             // + {are_two_entities_together(FirstCharacter, PG) && firstChar_storyStatus == story_storyEnded} [FirstCharacter]
             //     -> first_char_story_ended
@@ -19,10 +24,6 @@
 
             - firstChar_pauseTalking == 0:
                 -> knowing_first_character
-            
-            //Chitarra sta cucinando ed entriamo in cucina
-            - are_two_entities_together(FirstCharacter, PG) && entity_location(PG) == Kitchen && kitchen_firstCharIsCooking == true:
-                -> first_char_cooking_alone
             
             - else:
                 -> options_first_character

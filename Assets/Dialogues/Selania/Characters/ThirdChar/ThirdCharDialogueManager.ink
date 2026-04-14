@@ -6,6 +6,10 @@
         + {are_two_entities_together(ThirdCharacter, PG) && thirdChar_storyStatus == story_storyStarted} [ThirdCharacter]
             -> talk_with_third_character
 
+        //Chiacchierata in cucina
+        + {are_two_entities_together(ThirdCharacter, PG) && thirdChar_storyStatus == story_storyStarted && entity_location(PG)  == Kitchen} [ThirdCharacter]
+            -> kitchen_storylets_dispatcher  
+
         // //Chiacchiera a fine storia
         // + {are_two_entities_together(ThirdCharacter, PG) && thirdChar_storyStatus == story_storyEnded} [ThirdCharacter]
         //     -> third_char_story_ended
@@ -21,10 +25,6 @@
 
             - thirdChar_pauseTalking == 0:
                 -> knowing_third_character
-
-            //Riccio sta cucinando ed entriamo in cucina
-            - are_two_entities_together(ThirdCharacter, PG) && entity_location(PG) == Kitchen && kitchen_thirdCharIsCooking == true:
-                -> third_char_cooking_alone
 
             - else:
                 -> options_third_character

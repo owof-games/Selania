@@ -1354,7 +1354,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
     }
     
     -> first_char_closing_storylet ->
-    ->->
+    -> main
 
 
 === food_gift_first_char

@@ -16,33 +16,44 @@
 }
 
 
-
-
 -> kitchen_storylets_dispatcher
 
 
 === kitchen_storylets_dispatcher ===
-{
-    
-    //Scena in cui Chitarra sta cucinando da sola
-    - are_two_entities_together(FirstCharacter, PG) && kitchen_firstCharIsCooking == true:
-        -> first_char_cooking_alone   
-    
-    //Scena in cui cuciniamo con Chitarra
-    - are_two_entities_together(FirstCharacter, PG) && not ending_cooking_with_first_char && (kitchen_firstCharIsCooking == false):
-        -> pre_start_cooking_with_first_char
-    
-    //Scena in cui Riccio sta cucinando da solo
-    - are_two_entities_together(SecondCharacter, PG) && kitchen_secondCharIsCooking == true:
-        -> second_char_cooking_alone
-    
-    //Scena in cui cuciniamo con Riccio
-    - are_two_entities_together(SecondCharacter, PG) && not ending_cooking_with_second_char && (kitchen_secondCharIsCooking == false):
-        -> pre_start_cooking_with_second_char
+{   
+    //Chitarra
+        //Chitarra sta cucinando ed entriamo in cucina
+        - are_two_entities_together(FirstCharacter, PG) && entity_location(PG) == Kitchen && kitchen_firstCharIsCooking == true:
+            -> first_char_cooking_alone
 
+        
+        //Chitarra cucina con noi
+        -  are_two_entities_together(FirstCharacter, PG) && entity_location(PG) == Kitchen && grimoire_firstChar hasnt grimFirstCharKitchenEnded && kitchen_firstCharIsCooking == false:
+            -> pre_start_cooking_with_first_char
+
+
+    //Riccio
+        //Riccio sta cucinando ed entriamo in cucina
+        - are_two_entities_together(SecondCharacter, PG) && entity_location(PG) == Kitchen && kitchen_secondCharIsCooking == true:
+            -> second_char_cooking_alone
+    
+        //Riccio cucina con noi
+        -  are_two_entities_together(SecondCharacter, PG) && entity_location(PG) == Kitchen && grimoire_secondChar hasnt grimSecondCharKitchenEnded && kitchen_secondCharIsCooking == false:
+            -> pre_start_cooking_with_second_char   
+
+    //Boccale
+        //Boccale sta cucinando ed entriamo in cucina
+        - are_two_entities_together(ThirdCharacter, PG) && entity_location(PG) == Kitchen && kitchen_thirdCharIsCooking == true:
+            -> third_char_cooking_alone
+    
+        //Boccale cucina con noi
+        -  are_two_entities_together(ThirdCharacter, PG) && entity_location(PG) == Kitchen && grimoire_thirdChar hasnt grimThirdCharKitchenEnded && kitchen_thirdCharIsCooking == false:
+            -> pre_start_cooking_with_third_char
+
+    
     //Scena in cui cuciniamo da solx
-    - are_two_entities_together(Franco, PG) && not cooking_alone && (kitchen_secondCharIsCooking == false) && (kitchen_firstCharIsCooking == false):
-        -> cooking_alone
+        - are_two_entities_together(Franco, PG) && not cooking_alone && (kitchen_secondCharIsCooking == false) && (kitchen_firstCharIsCooking == false):
+            -> cooking_alone
     
     - else:
         -> main
