@@ -434,9 +434,9 @@
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
 //Doni insoliti
-    + {backpack_findedGifts has universalIngredient} <i>L'ingrediente universale della Rana.</i>
+    + {backpack_findedGifts has universalIngredient} <i>Un chicco di Zandelia.</i>
         ~ backpack_findedGifts -= universalIngredient
-        ~ kitchen_recipePP = "e gratinatura goduriosa"
+        ~ kitchen_recipePP = "e gratinatura del ricordo"
         
             {
                 - PNG == FirstCharacter:

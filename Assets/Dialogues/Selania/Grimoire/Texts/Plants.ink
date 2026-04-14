@@ -49,7 +49,7 @@
                 ~ return "Ci sono pensieri che feriscono. Che alimentano sé stessi fino a diventare terremoti, valanghe, diluvi. E quando qualcosa li fa tremare, travolgono tutto ciò che incontrano, senza distinzione. <b><i>Spazzata</b></i> è dolorosa, ma come ogni dolore ci invita a prestare attenzione. A capire cosa liberare, prima che una piccola goccia si trasformi in valanga. (Appunto per la editor: specificare da qualche parte che La<b><i>Spazzata</b></i> non è l'insieme di foglie, ma il micelio che sgretola e distrugge rocce e muri. Le foglie sono solo organismi simbionti che prosperano sulla debolezza lasciata dal fungo.)"
             
             - universalIngredient:
-                ~ return "Testo sull'Ingrediente Universale"
+                ~ return "La <b></i>Zandelia</i></b>, chiamata anche <i>Fior del Ricordo</i> è una spezia tanto rara quanto potente, capace di portare alla memoria il ricordo più bello vissuto da quella persona. In passato era la protagonista delle Zandeliore, giornate di festa collettiva a inizio primavera, pensate per condividere assieme momenti di gioia, e superare le tensioni dell'inverno."
                         
     }
 }

@@ -238,7 +238,7 @@ LIST list_giftElement = Backpack
 
 
 //Doni insoliti
-+ {backpack_findedGifts has universalIngredient} L'ingrediente universale della Rana.
++ {backpack_findedGifts has universalIngredient} Un chicco di Zandelia.
     ~ backpack_findedGifts -= universalIngredient
     
     {

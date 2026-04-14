@@ -1520,7 +1520,7 @@ QUESTIONS
                 ~ return "Spezzata"
             
             - universalIngredient:
-                ~ return "Ingrediente Universale"
+                ~ return "Zandelia"
                         
     }
 }
