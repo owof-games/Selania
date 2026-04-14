@@ -22,7 +22,7 @@
 
 === settings_management
 //Gestione delle impostazioni, raggiungibile dal libro e dalla camera da letto
-    + {are_two_entities_together(PG, Settings)} [Settings]
+    + {are_two_entities_together(PG, Settings) && !debug_stochastic} [Settings]
 
         {charTag(TheWitch, "{witch_state()}")}:   <i>Qui in futuro si potranno modificare le impostazioni.</i>
             -> main

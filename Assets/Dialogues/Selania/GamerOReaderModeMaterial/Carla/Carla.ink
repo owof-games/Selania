@@ -1,5 +1,5 @@
 === talking_Carla ===
-    + {are_two_entities_together(Carla, PG)} [Carla]
+    + {are_two_entities_together(Carla, PG) && !debug_stochastic} [Carla]
                 -> questions_Carla
 
 

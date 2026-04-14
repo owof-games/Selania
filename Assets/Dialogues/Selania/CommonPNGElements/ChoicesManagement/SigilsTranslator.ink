@@ -800,7 +800,7 @@
     VAR glyph_textWaterAetherOne = "Una fonte gioiosa e una comunicazione trasparente,"
     VAR glyph_textWaterAetherTwo = "tengono in vita una comunità."
 
-    VAR glyph_textWaterEarthOne = "Le acque del lago sono calme solo in superficie,"
+    VAR glyph_textWaterEarthOne = "Le acque calme solo in superficie,"
     VAR glyph_textWaterEarthTwo = "come le motivazioni dietro le nostre azioni."
 
     //Dominante aria

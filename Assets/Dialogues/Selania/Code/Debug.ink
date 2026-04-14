@@ -1,4 +1,4 @@
-    VAR debug_seedRandom = true
+    VAR debug_seedRandom = false
     
 //Per abilitare o meno i debug
     VAR debug_openAll = false
