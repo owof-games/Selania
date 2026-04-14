@@ -73,8 +73,7 @@
                                                         Per il resto della serata l'ho visto più sereno.
                                                         Ha anche riso a una mia battuta!
         
-        ~ grimoire_franco += grimFrancoMissionOneFeedback
-
+    ~ grimoire_franco += grimFrancoMissionOneFeedback
     -> welcoming_frog.top2
 
 
@@ -84,9 +83,30 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    {charTag(Franco, "{portrait_Franco()}")}:       Franco ci dice che è stato lui a seminare in giro tutti i documenti che abbiamo raccolto.
-
-        ~ grimoire_franco += grimFrancoAllDocuments
-
+    {charTag(Franco, "{portrait_Franco()}")}:           Girino!
+                                                        Hai trovato tutti i documenti della vecchia congrega!
+                                                        E tu mi dirai: "Come fai a saperlo, Franco?"
+                                                        E io ti dirò: "Perché Franco sa tutto! Tranne nuotare."
+                                                        Soprattutto se è Franco a fare le cose.
+                                                        Anche se non me le ricordo proprio tutte tutte.
+                                                        Tipo come quando apro il frigo e poi non ricordo perché l'ho aperto.
+                                                        E poi ci trovo dentro la tessera della palestra a cui non sono mai andato.
+                                                        E zia Graaak che si fa un pisolino.
+                                                        Una volta ha dormito così tanto che quando si è svegliata aveva altri centoquindici nipotini!
+                                                        Mia sorella è molto pratica, e quindi li ha chiamati per numero.
+                                                        Uh, una lettera di Euforbo!
+                                                        "Papà, devi dire a {player_name} che abbiamo messo in giro noi i documenti!"
+                                                        Giusto!
+                                                        Ero lì che mi dicevo: "Mmm, quando mi spiegano le cose tutte assieme mi distraggo, e a quel punto non capisco proprio nulla."
+                                                        Ma ho pensato fosse importante per te conoscere quella storia.
+                                                        E a quel punto mi son detto: "Ok Franco, facciamo un gioco. Ogni volta che {player_name} fa certe cose, metti un nuovo documento sulla panchina."
+                                                        E ho fatto anche uno schema molto colorato che spiegava quando dovevo darti i documenti.
+                                                        Ma poi me lo sono dimenticato.
+                                                        Fino a quando poco fa Euforbo non mi ha detto "Ehi papà, ho trovato una logica per dare quei vecchi appunti a {player_name}".
+                                                        E visto che sa che a volte mi distraggo, ha fatto tutto lui il lavoro.
+                                                        Devo ringraziarlo.
+                                                        Magari gli compro il prossimo "Starview Galley".
+                                
+    ~ grimoire_franco += grimFrancoAllDocuments
     -> welcoming_frog.top2
 
