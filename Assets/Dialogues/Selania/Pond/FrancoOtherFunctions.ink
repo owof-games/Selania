@@ -69,13 +69,41 @@
 
     - else:
 
-    {shuffle:
-                                                    - Facciamo un bel duo, noi due.
-                                                    Io il cervello, tu la mano.
-                                                    Quella è una mano, vero?
-                                                    A dopo girino!
+    {shuffle once:
+                                                    -   Facciamo un bel duo noi due.
+                                                        Io il cervello, tu la mano.
+                                                        Quella è una mano, vero?
+                                                        A dopo girino!
 
-                                                    - xyz
+                                                    -   Non la senti la soddisfazione di qualcosa di concluso?
+                                                        E non confuso?
+                                                        Illuso?
+                                                        Escluso?
+                                                        Deluso.
+                                                        Uh, dicevamo?
+
+                                                    -   Come dice sempre Tullio: "Per fortuna che non sai guidare."
+                                                        E come dice sempre Giulio: "Dopo il lavoro bisogna riposare."
+                                                        E ora riposiamo un po', {player_name}!
+
+                                                    -   Siamo un portento assieme, abbiamo chiuso un'altra commissione!
+                                                        Anche se zia Graaak dice che sono più un tormento.
+                                                        Forse perché da piccolo soffiavo tantissimo.
+                                                        E una volta ho avuto un raffreddore che faceva piovere ovunque.
+                                                        Uh, una lettera di Tullio.
+                                                        "Quella è la tormenta, Franco."
+                                                        "Tu sei un tormento di coccole."
+                                                        Quanto è carino?
+                                                        Devo assolutamente spupazzarlo.
+
+                                                    -   Un'altra commissione chiusa dal dream team Franco e {player_name}!
+                                                        Chi ci ferma più, a noi?
+                                                        A parte la polizia, {~per quella cosa dei volantini.|dopo quella faccenda della molotov.|per via di quegli adesivi su Mangione.|per via di quel datacenter in fiamme.|dopo la schedatura alla manifestazione per la Palestina.}
+                                                        Ma è un'altra storia.
+                                                        {
+                                                            - are_two_entities_together(PG, FourthCharacter):
+                                                                {charTag(FourthCharacter, "neutral")}:    Non cambiare mai Franco.
+                                                        }  
 
     }      
     

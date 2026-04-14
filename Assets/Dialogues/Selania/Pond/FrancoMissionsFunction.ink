@@ -168,16 +168,20 @@
         - else:
             {
                 - LIST_COUNT(frog_allMissionsCompleted) < LIST_COUNT(frog_allAvailableMissions):
-                    Girino! #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    Per ora non ho commissioni da offrirti, ma non ti preoccupare, qualcosa poi me lo invento!
-                    Torna più tardi.
-                    E fatti anche tu un pisolino!
+                    {charTag(Franco, "{portrait_Franco()}")}:           Girino!
+                    {shuffle:
+                                                                    -   Per ora non ho commissioni da offrirti, ma non ti preoccupare, qualcosa poi me lo invento! Torna più tardi.
+                                                                    -   Sono in attesa della carpa che mi porta le commissioni, torna più tardi!
+                                                                    -   Sembra che per ora tutto vada bene, ma se torni più tardi magari ho nuove cose da farti fare!
+                    }
+                    
+        
                         -> main
 
                 - else:
-                    Girino! #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    Ma sai che hai fatto tuuuuuuutte le commissioni che potevo offrirti?
-                    Però possiamo rilassarci assieme!
+                    {charTag(Franco, "{portrait_Franco()}")}:       Girino!
+                                                                    Ma sai che hai fatto tuuuuuuutte le commissioni che potevo offrirti?
+                                                                    Però possiamo rilassarci assieme!
                         -> main
 
             }    

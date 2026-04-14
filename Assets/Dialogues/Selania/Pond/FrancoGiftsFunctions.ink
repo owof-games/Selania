@@ -199,11 +199,28 @@
         - tempChar_favouritesGifts has greenhouse_chosenCultivable:
 
             {charTag(Franco, "{portrait_Franco()}")}:       Girino!
-                                                            Quello che ti serve sta crescendo proprio ora in serra!
+            {stopping:
+                                                        -   Tu c'hai i superportieri!
+                                                            Come zia Graaak, che sa sempre quando sto per respirare.
+                                                            La pianta che ti serve sta già crescendo in serra.
+
+                                                        -   Quello che ti serve sta crescendo proprio ora in serra!
                                                             Sento l'odore fino a qui.
                                                             O forse è solo zia Graaak che non si è ancora lavata.
-                
-                ~ frog_temp_char_gift = "sta crescendo proprio ora in serra!"
+                                                        
+                                                        -   Non so come fai, ma di nuovo quello che ti serve sta crescendo in serra.
+                                                            Forse sai parlare con le formiche?
+                                                            Nel caso chiedi loro di restituirmi il giroscopio?
+                                                            Mi serve per girare i girini quando sono a pancia all'aria.
+                                                        
+                                                        -   Ma che te lo dico a fare: quello che ti serve sta crescendo in serra.
+                                                            Di nuovo.
+                                                            Povero Franco.
+                                                            Ormai non serve più nemmeno a piantare le piante.
+                                                            Forse potrei fiorare i fiori?
+
+            }    
+                ~ frog_temp_char_gift = "sta crescendo ora in serra!"
                 ~ frog_temp_temp_growing_gift = true
 
         //Caso due: il dono è nello zaino
@@ -213,10 +230,18 @@
             ~ temp backGift = LIST_RANDOM(findedFavouriteNotUsed)
             {debug_frog: il dono è nello zaino ed è {backGift}.}
 
+            {charTag(Franco, "{portrait_Franco()}")}:       Girino!
+                                                            Sai che hai già la pianta giusta?
+                                                            Ti do un indizio.
+
                 {backGift:
                     - BaccaDellaAddolorata:
                         Pensa alla difficoltà di fare il primo passo, di accogliere il cambiamento. Quale pianta racconta questa cosa?
                             ~ frog_temp_char_ingredient = "qualcosa che parli del fare il primo passo, di accogliere il cambiamento" 
+
+                    - BarbaDellInciampo:
+                        C'è una pianta che parla di colpa e responsabilità. Quella è la pianta che ti serve!
+                            ~ frog_temp_char_ingredient = "qualcosa che parla di colpa e responsabilità"
 
                     - BastoneDellOzioso:
                         Pensa al piacere di viversi le cose per il piacere di farle. Quale pianta racconta questa storia?
@@ -231,17 +256,40 @@
                              ~ frog_temp_char_ingredient = "qualcosa che parli del piacere dello stare con persone amiche"    
 
                     - CardoAspinato:
-                        Pensa al pene.
-                             ~ frog_temp_char_ingredient = "pene." 
+                        C'è una pianta che prima è spinosa e rigida, ma poi morbida e vulnerabile. Ti serve quella.
+                             ~ frog_temp_char_ingredient = "qualcosa che prima è spinoso e rigido, poi morbido e vulnerabile." 
+
+                    - EderaDelleAmanti:
+                        Uh, la mia preferita! Parla di piacere e cibo e amore. Quella è perfetta.
+                             ~ frog_temp_char_ingredient = "qualcosa che parli di piacere, cibo e amore."
+
+                    - ErbaLiccia:
+                        C'è una pianta che collega passato, presente e futuro per aiutarci a formare la nostra identità. Lei è quella giusta.
+                             ~ frog_temp_char_ingredient = "qualcosa che colleghi passato, presente e futuro."
+
+                    - FalsaPalude:
+                        Pensa a una situazione in cui non ci sono capi, in cui il cambiamento è collettivo. Quale pianta racconta questa cosa?
+                             ~ frog_temp_char_ingredient = "qualcosa legato alla collettività, al cambiamento senza capi."        
+
+                    - LanaNotturna:
+                        Questa pianta cresce dove non c'è spazio per la vita. Ci ricorda che quando tutto sembra perduto, qualcosa sta sempre cambiando.
+                             ~ frog_temp_char_ingredient = "qualcosa legato al vedere la vita anche quando tutto sembra perduto." 
 
                     - LicheneDegliAbissi:
                         Ci sono relazioni che non sono sane. E c'è una pianta che le racconta. Quale?
                             ~ frog_temp_char_ingredient = "ci sono relazioni che non sono sane. E c'è una pianta che le racconta. Quale?"
 
                     - NonTiScordarDiTe: 
-                        Qualcosa che parli di chi fa parte di noi, delle nostre radici.
+                        Una pianta tenera, che parla di chi fa parte di noi, delle nostre radici, di come la nostra storia sia anche la storia di chi incontriamo.
                              ~ frog_temp_char_ingredient = "qualcosa che parli di chi fa parte di noi, delle nostre radici."        
 
+                    - Olobino: 
+                        C'è una pianta che ha tantissimi nomi, difficile da spiegare, e che chiede di essere provata. Quella è la pianta giusta.
+                             ~ frog_temp_char_ingredient = "qualcosa che ha tantissimi nomi e che è difficile da spiegare."
+
+                    - LaSpazzata: 
+                        Quella pianta che cresce quando hai tanti pensieri che ti sommergono e feriscono. Quella.
+                             ~ frog_temp_char_ingredient = "qualcosa che cresce quando hai tanti pensieri che ti sommergono e ti fanno male."           
 
                 }
                 {debug_frog: frog_temp_char_ingredient è {frog_temp_char_ingredient}.}
@@ -250,8 +298,10 @@
         //Caso tre: non abbiamo mai trovato il dono
         - tempChar_favouritesGifts ^ greenhouse_findedCultivables == ():
 
-            {charTag(Franco, "{portrait_Franco()}")}:       Allora?
-                                                            Scusa se ho spiato tra le tue cose ma no, non hai niente di utile.
+            {charTag(Franco, "{portrait_Franco()}")}:       Girino!
+                                                            
+            {stopping:                                                
+                                                        -   Scusa se ho spiato tra le tue cose ma no, non hai niente di utile.
                                                             Ma ora ci penso io.
                                                             "Care formiche."
                                                             "Come avrete visto, ora sono vegetariano."
@@ -259,7 +309,38 @@
                                                             "Grazie mille."
                                                             "PS.: Vi allego un po' del miele di Dora."
                                                             Ottimo.
-                                                            La prossima volta che coltivi qualcosa in serra vedrai che sarà il dono giusto!
+                                                            La prossima volta che coltivi qualcosa in serra vedrai che sarà la pianta giusta!
+
+                                                        -   Di nuovo non hai niente di utile tra le tue cose.
+                                                            Mando una lettera alle amiche formiche.
+                                                            "Care formiche, qui è sempre Franco che vi scrive."
+                                                            "Mi diceva Dora che avete passato un periodo difficile."
+                                                            "Vi mando quindi un po' di terriccio per il nido e l'ultimo libro di zio Gracco."
+                                                            "Così magari il passato vi sembra migliore."
+                                                            "Non è che potreste inoltre aiutare {player_name}, e coltivare qualcosa che {translator(speaker)} possa apprezzare?"
+                                                            "Cordialmente."
+                                                            "Franco La Rana (non Franco Il Rospo, quello non si vede da mesi)."
+                                                            Perfetto: la prossima volta che coltiverai qualcosa, ti arriverà la pianta perfetta.        
+
+                                                        -   Mi sa che devi coltivare più piante, sennò le formiche poi si arrabbiano con me.
+                                                            Perché ancora non hai nulla di utile.
+                                                            "Care formiche, sono qui a chiedervi di nuovo di aiutare {player_name}."
+                                                            "In cambio a questo giro vi invito alla serata karaoke di cugina Sputt."
+                                                            "Ma vi chiedo di non portare di nuovo "Tintarella di muta", che poi attirate tutti i serpenti."
+                                                            "E nemmeno "È l'uovo per me", che poi i girini si spaventano."
+                                                            "Però mi piacerebbe sentire "La canzone di Raganella", se vi va."
+                                                            "Grazie mille."
+                                                            "Franco."
+                                                            Bene: la prossima volta che coltivi qualcosa, ti arriverà la pianta giusta per {translator(speaker)}.
+
+                                                        -   Di nuovo senza la pianta giusta.
+                                                            "Care formiche, la solita richiesta."
+                                                            "Una pianta che aiuti {player_name} con {translator(speaker)}."
+                                                            "Ho finito le cose che vi posso offrire, ma spero avrete pazienza con me."
+                                                            Sai già come funziona, girino.
+                                                            Ma come fai ad essere sempre senza piante?    
+
+            }                                                
 
                 ~ temp perfectGift = LIST_RANDOM(tempChar_favouritesGifts)
             {debug_frog: il dono è stato messo in serra ed è {ingredientTranslator(perfectGift)}. La lista tempChar_favouritesGifts contiene {tempChar_favouritesGifts}.}
@@ -284,10 +365,10 @@
             ~ temp perfectGiftTwo = LIST_RANDOM(tempChar_favouritesGifts)
 
             {charTag(Franco, "{portrait_Franco()}")}:       Girino!
-                                                            Credo tu abbia fatto l'impossibile: c'erano un sacchissimo di doni a disposizione, ma li hai già consumati tutti in altre situazioni.
+                                                            Credo tu abbia fatto l'impossibile: c'erano un sacchissimo di piante a disposizione, ma le hai già consumate tutte in altre situazioni.
             {
                 - frog_recoverableCultivables!= () && frog_recoveredCultivables == ():
-                                                            Però non mi hai ancora chiesto di recuperare una delle piante che hai già utilizzato.
+                                                            Però non mi hai ancora chiesto di recuperarne una tra quelle che hai già utilizzato.
                                                             Ti consiglio di recuperare {ingredientTranslator(perfectGiftTwo)}.
                                                             Ricorda però che posso fare un solo recupero!
                                                                 -> cultivable_recovery
@@ -295,8 +376,7 @@
                 - else:
                                                             Hai già anche utilizzato il mio superpotere del recupero.
                                                             Però posso dirti una cosa: ho fiducia in te, davvero.
-                                                            E so già che riuscirai a trovare altri modi per dimostrare quanto tieni a {translator(speaker)}.      
-
+                                                            E so già che riuscirai a trovare altri modi per dimostrare quanto tieni a {translator(speaker)}.
             }
 
 } 

@@ -67,7 +67,15 @@
 
         + Vorrei pensarci ancora un po'.
             {charTag(Franco, "{portrait_Franco()}")}:       Mi trovi qui girino.
-                                                            Voglio contare tutte le onde!
+            {shuffle:
+                                                        -   Continuo a contare tutte le onde!
+                                                        -   Intanto sonnecchio sulla ninfea.
+                                                        -   Nel mentre scrivo a Babbo Navale.
+                                                        -   Continuo a leggere "Lezioni di nuoto per girini".
+                                                        -   Devo decidere cosa cucinare per il compleanno dei gemelli.
+            }
+
+                                                            
                                                                 ~ frog_suspended_gift = true
                                                             -> main
         -
@@ -95,7 +103,7 @@
                                                         Piena di girini che corrono alla svelta.
         - {charTag(Franco, "{portrait_Franco()}")}:     {charNameOne} andrebbe molto d'accordo con Tullio.
                                                         Anche lui è un artista.
-        - {charTag(Franco, "{portrait_Franco()}")}:     Ottimamente!                                   
+        - {charTag(Franco, "{portrait_Franco()}")}:     Ottimamente!                             
     }
     
     + {frog_firstCharAchievableGifts has cultivableGift} Cosa potrei regalarle?
