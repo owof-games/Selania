@@ -42,8 +42,6 @@
             
         - specialMissionTwo:
             ~ return "Franco ha chiesto a {player_name} di raggiungerlo in cucina."
-        - else:
-            ~ return "Error"        
 
     }
 
