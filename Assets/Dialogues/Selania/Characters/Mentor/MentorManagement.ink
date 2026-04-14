@@ -92,89 +92,138 @@
             - tutorial_mentorTalkingChoiceRelationship && grimoire_appendices hasnt grimChoicesMentor:
                 ~ grimoire_appendices += grimChoicesMentor
                 ~ grimoire_fifthChar += grimChoicesMentor
+        }
 
+        {
             - tutorial_mentorInkAndYouAreARewriter && grimoire_appendices hasnt grimInkMentor:
                 ~ grimoire_appendices += grimInkMentor
+        }
 
+        {
             - tutorial_mentorInkAndRewriting && grimoire_appendices hasnt grimRewritingMentor:
                 ~ grimoire_appendices += grimRewritingMentor
+        }
 
+        {
             - about_greenhouse && grimoire_appendices hasnt grimGreenhouseMentor:
                 ~ grimoire_appendices += grimGreenhouseMentor  
+        }
 
+        {
             - about_nest && grimoire_appendices hasnt grimSigilsMentor:
                 ~ grimoire_appendices += grimSigilsMentor                  
+        }
 
+        {
 
             //Main storylets
             - knowing_mentor_character.one && grimoire_fifthChar hasnt grimMentorOne:
                 ~ grimoire_fifthChar += grimMentorOne
+        }
 
+        {
             - knowing_mentor_character.two && grimoire_fifthChar hasnt grimMentorTwo:
                 ~ grimoire_fifthChar += grimMentorTwo
+        }
 
+        {
             - knowing_mentor_character.three && grimoire_fifthChar hasnt grimMentorThree:
                 ~ grimoire_fifthChar += grimMentorThree    
+        }
 
+        {
             - knowing_mentor_character.four && grimoire_fifthChar hasnt grimMentorFour:
                 ~ grimoire_fifthChar += grimMentorFour  
+        }
 
+        {
             - knowing_mentor_character.five && grimoire_fifthChar hasnt grimMentorFive:
                 ~ grimoire_fifthChar += grimMentorFive
 
             - knowing_mentor_character.six && grimoire_fifthChar hasnt grimMentorSix:
                 ~ grimoire_fifthChar += grimMentorSix
+        }
 
+        {
             - knowing_mentor_character.seven && grimoire_fifthChar hasnt grimMentorSeven:
                 ~ grimoire_fifthChar += grimMentorSeven
+        }
 
+        {
             - knowing_mentor_character.eight && grimoire_fifthChar hasnt grimMentorEight:
                 ~ grimoire_fifthChar += grimMentorEight    
+        }
 
+        {
             - knowing_mentor_character.nine && grimoire_fifthChar hasnt grimMentorNine:
                 ~ grimoire_fifthChar += grimMentorNine  
+        }
 
+        {
             - knowing_mentor_character.ten && grimoire_fifthChar hasnt grimMentorEight:
                 ~ grimoire_fifthChar += grimMentorEight 
+        }
 
+        {
             - knowing_mentor_character.eleven && grimoire_fifthChar hasnt grimMentorEleven:
                 ~ grimoire_fifthChar += grimMentorEleven   
+        }
 
+        {
             - knowing_mentor_character.twelve && grimoire_fifthChar hasnt grimMentorTwelve:
                 ~ grimoire_fifthChar += grimMentorTwelve
-            
+        }
+
+
+
+        {        
             //StoryletsSpeciali
             - the_witch_and_the_mentor && grimoire_fifthChar hasnt grimMentorWitchOne:
                 ~ grimoire_fifthChar += grimMentorWitchOne
+        }
 
+        {
             - growing_witch_storylet && grimoire_fifthChar hasnt grimMentorWitchTwo:
                 ~ grimoire_fifthChar += grimMentorWitchTwo
+        }
 
+        {
             - that_little_liar_storylet && grimoire_fifthChar hasnt grimMentorLiar:
                 ~ grimoire_fifthChar += grimMentorLiar    
+        }
 
+        {
             - addressing_violence && grimoire_fifthChar hasnt grimMentorViolence:
                 ~ grimoire_fifthChar += grimMentorViolence
                 //Questo storylet genera uno spostamento di Mentore
                 ~ change_entity_place(Mentor)
+        }
 
+        {
             - about_violence_and_peace && grimoire_fifthChar hasnt grimSecondCharMentorPeace:
                     ~ grimoire_fifthChar += grimSecondCharMentorPeace
                     //A fine discorso, Riccio se ne va
                     ~ change_entity_place(SecondCharacter)    
+        }
 
+        {
             - a_story_of_transformation && grimoire_fifthChar hasnt grimMentorNovel:
                 ~ grimoire_fifthChar += grimMentorNovel 
+        }
 
+        {
             - dog_mentor && grimoire_fifthChar hasnt grimMentorDog:
                 ~ grimoire_fifthChar += grimMentorDog   
+        }
 
+        {
             - about_olobino && grimoire_fifthChar hasnt grimMentorOlobinoUno:
                 ~ grimoire_fifthChar += grimMentorOlobinoUno
+        }
 
+        {
             - again_about_olobino && grimoire_fifthChar hasnt grimMentorOlobinoDue:
                 ~ grimoire_fifthChar += grimMentorOlobinoDue    
-
         }
         //Aggiornamento lista di quelli comuni
         -> grimoire_common_storylets_updater ->

@@ -35,35 +35,50 @@
         //L'animazione per via dell'informazione nuova
         @animation:RewriterBook
 
-         {
+        {
             //Tutorial e supporto
             - tutorial_witchRelationship && grimoire_appendices hasnt grimChoicesWitch:
                 ~ grimoire_appendices += grimChoicesWitch
+        }
 
+        {
             - tutorial_witchSigils && grimoire_appendices hasnt grimSigilsWitch:
                 ~ grimoire_appendices += grimSigilsWitch
+        }
 
+        {
             - witch_allSigils_opening && grimoire_appendices hasnt grimWitchAllSigilsOpened:
                 ~ grimoire_appendices += grimWitchAllSigilsOpened  
+        }
 
+        {
         
             //Debrief
             - witch_first_debrief && grimoire_witch hasnt grimWitchFirstDebrief:
                 ~ grimoire_witch += grimWitchFirstDebrief
+        }
 
+        {
             - witch_second_debrief && grimoire_witch hasnt grimWitchSecondDebrief:
                 ~ grimoire_witch += grimWitchSecondDebrief
+        }
 
+        {
             - witch_third_debrief && grimoire_witch hasnt grimWitchThirdDebrief:
                 ~ grimoire_witch += grimWitchThirdDebrief
+        }
 
+        {
             - witch_fourth_debrief && grimoire_witch hasnt grimWitchFourthDebrief:
                 ~ grimoire_witch += grimWitchFourthDebrief  
+        }
 
+        {
             - witch_fifth_debrief && grimoire_witch hasnt grimWitchFifthDebrief:
                 ~ grimoire_witch += grimWitchFifthDebrief                  
+        }
 
-
+        {
             //Main storylets
             - open_the_dump && grimoire_witch hasnt grimWitchOpenDump:
                 ~ grimoire_witch += grimWitchOpenDump
@@ -72,33 +87,47 @@
                 ~ move_entity(FromForestToDump, Forest)
                 ~ move_entity(mapDump, TrainStop)
                 ~ player_accessiblePlaces += Dump
-        
+        }
+
+        {
             - witch_intro && grimoire_witch hasnt grimWitchIntro:
                 ~ grimoire_witch += grimWitchIntro
+        }
 
+        {
             - the_witch_and_the_frog && grimoire_witch hasnt grimWitchFrog:
                 ~ grimoire_witch += grimWitchFrog
+        }
 
+        {
             - about_the_book && grimoire_witch hasnt grimWitchBook:
                 ~ grimoire_witch += grimWitchBook    
-            
-            
+        }
+
+        {            
             //Storia personale strega
             - witch_first_confession && grimoire_witch hasnt grimWitchMainOne:
                 ~ grimoire_witch += grimWitchMainOne    
+        }
 
+        {
             - witch_second_confession && grimoire_witch hasnt grimWitchMainTwo:
                 ~ grimoire_witch += grimWitchMainTwo  
+        }
 
+        {
             - witch_third_confession && grimoire_witch hasnt grimWitchMainThree:
                 ~ grimoire_witch += grimWitchMainThree
+        }
 
+        {
             - witch_fourth_confession && grimoire_witch hasnt grimWitchMainFour:
                 ~ grimoire_witch += grimWitchMainFour
+        }
 
+        {
             - witch_fifth_confession && grimoire_witch hasnt grimWitchMainFive:
                 ~ grimoire_witch += grimWitchMainFive
-
         }
         //Aggiornamento lista di quelli comuni
         -> grimoire_common_storylets_updater ->

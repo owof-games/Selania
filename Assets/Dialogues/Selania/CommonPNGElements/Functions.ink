@@ -91,58 +91,103 @@ VAR thirdChar_LibraryWaiting = 0
             - first_second_chit_chat && grimoire_firstChar hasnt grimFirstSecondChar:
                 ~ grimoire_firstChar += grimFirstSecondChar
                 ~ grimoire_secondChar += grimFirstSecondChar
+        }
 
+        {
             - first_mentor_chit_chat && grimoire_firstChar hasnt grimFirstCharMentor:
                 ~ grimoire_firstChar += grimFirstCharMentor
                 ~ grimoire_fifthChar += grimFirstCharMentor
+        }
 
+        {
             - frog_and_first_char_chit_chat && grimoire_firstChar hasnt grimFirstCharFranco:
                 ~ grimoire_firstChar += grimFirstCharFranco
+        }
 
+        {
             - third_first_chit_chat && grimoire_firstChar hasnt grimFirstThirdChar:
                 ~ grimoire_firstChar += grimFirstThirdChar
                 ~ grimoire_thirdChar += grimFirstThirdChar 
+        }
 
+
+
+
+
+        {
             //Second Char
             - about_violence_and_peace && grimoire_secondChar hasnt grimSecondCharMentorOne:
                 ~ grimoire_secondChar += grimSecondCharMentorOne
                 ~ grimoire_fifthChar += grimSecondCharMentorOne
+        }
 
+        {
             - frog_and_second_char_chit_chat && grimoire_secondChar hasnt grimSecondCharFranco:
                 ~ grimoire_secondChar += grimSecondCharFranco
+        }
 
+        {
             - third_second_chit_chat && grimoire_secondChar hasnt grimSecondThirdChar:
                 ~ grimoire_secondChar += grimSecondThirdChar
                 ~ grimoire_thirdChar += grimSecondThirdChar
+        }
 
+
+
+
+
+        {
             //Third Char
             - third_mentor_chit_chat && grimoire_thirdChar hasnt grimThirdCharMentor:
                 ~ grimoire_thirdChar += grimThirdCharMentor
                 ~ grimoire_fifthChar += grimThirdCharMentor 
+        }
 
+        {
             - frog_and_third_char_chit_chat && grimoire_thirdChar hasnt grimThirdCharFranco:
                 ~ grimoire_thirdChar += grimThirdCharFranco
+        }
 
+
+
+
+
+        {
             //Mentor
             - the_witch_and_the_mentor && grimoire_fifthChar hasnt grimMentorWitchOne:
                 ~ grimoire_fifthChar += grimMentorWitchOne
+        }
 
+        {
             - frog_and_mentor_chit_chat && grimoire_fifthChar hasnt grimMentorFranco:
                 ~ grimoire_fifthChar += grimMentorFranco
+        }
 
+
+
+
+        {
             //Feedback sulle png
             - first_character_feedback && grimoire_firstChar hasnt grimFirstCharMentorFeedback:
                 ~ grimoire_firstChar += grimFirstCharMentorFeedback
+        }
 
+        {
             - second_character_feedback && grimoire_secondChar hasnt grimSecondCharMentorFeedback:
                 ~ grimoire_secondChar += grimSecondCharMentorFeedback
+        }
 
+        {
             - third_character_feedback && grimoire_thirdChar hasnt grimThirdCharMentorFeedback:
                 ~ grimoire_thirdChar += grimThirdCharMentorFeedback
+        }
 
+        {
             - fourth_character_feedback && grimoire_fourthChar hasnt grimFourthCharMentorFeedback:
                 ~ grimoire_fourthChar += grimFourthCharMentorFeedback
+        }
 
+        {
             - fifth_character_feedback && grimoire_fifthChar hasnt grimFifthCharMentorFeedback:
                 ~ grimoire_fifthChar += grimFifthCharMentorFeedback    
 
