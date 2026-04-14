@@ -128,7 +128,7 @@
 
     //Commissione speciale uno richiede l'apertura del nido e che sia stato creato almeno un sigillo. Strega all'inizio ce ne dona tre, per cui il conto è >3.
     {
-        - frog_allMissionsCompleted hasnt specialMissionOne && player_accessiblePlaces has Nest && LIST_COUNT(glyph_discoveredSigils) > 3:
+        - (frog_allMissionsCompleted hasnt specialMissionOne) && (player_accessiblePlaces has Nest) && (glyph_discoveredSigils != ()):
             ~ frog_availableSpecialMissions += specialMissionOne
             {debug_frog: ci sono le condizioni per abilitare specialMissionOne.}
 

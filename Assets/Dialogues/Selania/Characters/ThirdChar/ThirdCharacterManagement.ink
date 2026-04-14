@@ -304,10 +304,10 @@
                 ~ grimoire_thirdChar += grimThirdCharTwelve
 
             //Storylets legati alla cucina
-            - cooking_with_third_char.third_theme && grimoire_thirdChar hasnt grimThirdCharKitchenOne:
+            - cooking_with_third_char.first_theme && grimoire_thirdChar hasnt grimThirdCharKitchenOne:
                 ~ grimoire_thirdChar += grimThirdCharKitchenOne  
 
-            - cooking_with_third_char.third_theme && grimoire_thirdChar hasnt grimThirdCharKitchenTwo:
+            - cooking_with_third_char.second_theme && grimoire_thirdChar hasnt grimThirdCharKitchenTwo:
                 ~ grimoire_thirdChar += grimThirdCharKitchenTwo     
 
             - cooking_with_third_char.third_theme && grimoire_thirdChar hasnt grimThirdCharKitchenThree:

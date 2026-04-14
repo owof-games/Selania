@@ -143,6 +143,7 @@
                                                                             O ascoltano.
                                                                             Per fortuna io parlo poco.
                                 ~ frog_first_novel = "<b>Luna vergine</b> di Aza"
+                                ~ frog_firstCharAchievableGifts -= bookGift
                                 -> closed_exchange
                     
                     }
@@ -154,6 +155,7 @@
                                                                 Forse vogliono diventare zucche?
                                                                 Ma magari tu ci capisci qualcosa e allora trovi il racconto che ti serve!
                     ~ frog_first_novel = "una storia lunga che parli di trasformazione"
+                    ~ frog_firstCharAchievableGifts -= bookGift
                     -> closed_exchange
             }
  
@@ -185,9 +187,9 @@
         - {charTag(Franco, "{portrait_Franco()}")}:     Ottimamente!                                   
     }
     
-    + {frog_secondCharAchievableGifts has cultivableGift} Cosa potrei regalarle?
+    + {frog_secondCharAchievableGifts has cultivableGift} Cosa potrei regalargli?
         -> franco_giftsPlants(SecondCharacter, Pond)
-    + {frog_secondCharAchievableGifts has ingredientGift && player_accessiblePlaces has Kitchen} Quale ingrediente potrei usare in cucina con lei?
+    + {frog_secondCharAchievableGifts has ingredientGift && player_accessiblePlaces has Kitchen} Quale ingrediente potrei usare in cucina con lui?
         -> franco_giftsPlants(SecondCharacter, Kitchen)
     + {frog_secondCharAchievableGifts has bookGift && player_accessiblePlaces has Library} Di quale racconto vorrebbe parlare?
         -> book
@@ -220,6 +222,7 @@
                                                                 A {charNameTwo} piace parlare.
                                                                 Ora mi sta insegnando come non annegare!
                                 ~ frog_second_novel = "<b>Il sassolino</b> di Lamia"
+                                ~ frog_secondCharAchievableGifts -= bookGift
                                 -> closed_exchange
                     }
 
@@ -231,6 +234,7 @@
                                                                 E so che sono tante informazioni anche per una bella testolina come la tua, girino.
                                                                 Per cui vai pure a cercare questa ribellione in biblioteca e vedrai che farai felice {charNameTwo}!
                     ~ frog_second_novel = "qualcosa di veloce che parli di ribellione"
+                    ~ frog_secondCharAchievableGifts -= bookGift
                         -> closed_exchange
         }
 
@@ -260,9 +264,9 @@
         - {charTag(Franco, "{portrait_Franco()}")}:     Ottimamente!                                   
     }
     
-    + {frog_thirdCharAchievableGifts has cultivableGift} Cosa potrei regalarle?
+    + {frog_thirdCharAchievableGifts has cultivableGift} Cosa potrei regalargli?
         -> franco_giftsPlants(ThirdCharacter, Pond)
-    + {frog_thirdCharAchievableGifts has ingredientGift && player_accessiblePlaces has Kitchen} Quale ingrediente potrei usare in cucina con lei?
+    + {frog_thirdCharAchievableGifts has ingredientGift && player_accessiblePlaces has Kitchen} Quale ingrediente potrei usare in cucina con lui?
         -> franco_giftsPlants(ThirdCharacter, Kitchen)
     + {frog_thirdCharAchievableGifts has bookGift && player_accessiblePlaces has Library} Di quale racconto vorrebbe parlare?
         -> book

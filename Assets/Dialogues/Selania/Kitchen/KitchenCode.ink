@@ -181,6 +181,10 @@
                     -> object_value_for_PNG(BaccaDellaAddolorata, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
+
+                - PNG == ThirdCharacter:
+                    -> object_value_for_PNG(BaccaDellaAddolorata, Kitchen, ThirdCharacter) ->
+        
             }
     
     + {backpack_findedGifts has BarbaDellInciampo} <i>Una spina di Barba dell'Inciampo.</i>
@@ -201,6 +205,9 @@
                     -> object_value_for_PNG(BarbaDellInciampo, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
+
+                - PNG == ThirdCharacter:
+                    -> object_value_for_PNG(BarbaDellInciampo, Kitchen, ThirdCharacter) ->    
             }
             
     + {backpack_findedGifts has BastoneDellOzioso} <i>Un nodo di Bastone dell'Ozioso.</i>
@@ -221,6 +228,9 @@
                     -> object_value_for_PNG(BastoneDellOzioso, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
+
+                - PNG == ThirdCharacter:
+                    -> object_value_for_PNG(BastoneDellOzioso, Kitchen, ThirdCharacter) ->    
             }
         
     + {backpack_findedGifts has BrinaDellImpossibile} <i>Un frammento di Brina dell'Impossibile.</i>
@@ -242,6 +252,9 @@
 
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
+
+                - PNG == ThirdCharacter:
+                    -> object_value_for_PNG(BrinaDellImpossibile, Kitchen, ThirdCharacter) ->    
             }        
     
     + {backpack_findedGifts has CantoDelleCompagne} <i>Una goccia di Canto delle Compagne.</i>
@@ -261,6 +274,9 @@
                     -> object_value_for_PNG(CantoDelleCompagne, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
+
+                - PNG == ThirdCharacter:
+                    -> object_value_for_PNG(CantoDelleCompagne, Kitchen, ThirdCharacter) ->    
             }        
     
     + {backpack_findedGifts has CardoAspinato} <i>Un ciuffo di peli di Cardo Aspinato.</i>
@@ -280,6 +296,9 @@
                     -> object_value_for_PNG(CardoAspinato, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
+
+                - PNG == ThirdCharacter:
+                    -> object_value_for_PNG(CardoAspinato, Kitchen, ThirdCharacter) ->    
             }        
             
     + {backpack_findedGifts has EderaDelleAmanti} <i>Una foglia di Edera delle amanti.</i>
@@ -299,6 +318,9 @@
                     -> object_value_for_PNG(EderaDelleAmanti, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
+
+                - PNG == ThirdCharacter:
+                    -> object_value_for_PNG(EderaDelleAmanti, Kitchen, ThirdCharacter) ->    
             }        
 
     + {backpack_findedGifts has ErbaLiccia} <i>Un ricordo di Erba Liccia.</i>
@@ -318,6 +340,9 @@
                    -> object_value_for_PNG(ErbaLiccia, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
+
+                - PNG == ThirdCharacter:
+                   -> object_value_for_PNG(ErbaLiccia, Kitchen, ThirdCharacter) ->    
             }        
         
      + {backpack_findedGifts has FalsaPalude} <i>Un petalo di Falsa Palude.</i>
@@ -337,6 +362,9 @@
                     -> object_value_for_PNG(FalsaPalude, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
+
+                - PNG == ThirdCharacter:
+                    -> object_value_for_PNG(FalsaPalude, Kitchen, ThirdCharacter) ->    
             }        
         
       + {backpack_findedGifts has LanaNotturna} <i>Il calore della Lana Notturna.</i>
@@ -356,6 +384,9 @@
                     -> object_value_for_PNG(LicheneDegliAbissi, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
+
+                - PNG == ThirdCharacter:
+                    -> object_value_for_PNG(LicheneDegliAbissi, Kitchen, ThirdCharacter) ->    
             }        
         
     + {backpack_findedGifts has LicheneDegliAbissi} <i>Una traccia dell'odore del Lichene degli Abissi.</i>
@@ -375,6 +406,9 @@
                     -> object_value_for_PNG(LicheneDegliAbissi, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
+
+                - PNG == ThirdCharacter:
+                    -> object_value_for_PNG(LicheneDegliAbissi, Kitchen, ThirdCharacter) ->    
             }        
     
     + {backpack_findedGifts has NonTiScordarDiTe} <i>L'impronta del Non Ti Scordar di Te.</i>
@@ -394,6 +428,9 @@
                     -> object_value_for_PNG(NonTiScordarDiTe, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
+
+                - PNG == ThirdCharacter:
+                    -> object_value_for_PNG(NonTiScordarDiTe, Kitchen, ThirdCharacter) ->    
             }        
     
     + {backpack_findedGifts has Olobino} <i>Una cappello di Olobino.</i>
@@ -413,6 +450,9 @@
                     -> object_value_for_PNG(Olobino, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
+
+                - PNG == ThirdCharacter:
+                    -> object_value_for_PNG(Olobino, Kitchen, ThirdCharacter) ->    
             }        
         
     + {backpack_findedGifts has LaSpazzata} <i>Un rametto della Spezzata.</i>
@@ -432,6 +472,9 @@
                     -> object_value_for_PNG(LaSpazzata, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
+
+                - PNG == ThirdCharacter:
+                    -> object_value_for_PNG(LaSpazzata, Kitchen, ThirdCharacter) ->    
             }        
 //Doni insoliti
     + {backpack_findedGifts has universalIngredient} <i>Un chicco di Zandelia.</i>
@@ -450,6 +493,9 @@
 
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
+
+                - PNG == ThirdCharacter:
+                   -> object_value_for_PNG(universalIngredient, Kitchen, ThirdCharacter) ->     
             }
     
     -

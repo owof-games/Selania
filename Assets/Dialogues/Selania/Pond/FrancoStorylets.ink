@@ -42,12 +42,57 @@
                                                     Al funerale erano tutti molto molto imbarazzati.
                                                     Tranne la biscia: quella aveva ancora fame.
                                                     Insomma: tu aiuti me, e io aiuto te.
+                                                    Ad esempio dandoti dei consigli sulle cose da donare a una persona.
+                                                    O recuperando una pianta che hai già usato.
         {
             - are_two_entities_together(FirstCharacter, PG):
                                                     Livello di confusione: sì.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
         }
 
     -> welcoming_frog.top2
+
+
+=== franco_open_kitchen
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+    {charTag(Franco, "{portrait_Franco()}")}:       Girino!
+                                                    Ora che {charNameOne} ti ha aperto la cucina, posso darti delle dritte anche su quale ingrediente aggiungere quando cucini con una persona!
+                                                    Non è una cosa francosissima?!?
+                                                    Che è tipo bellissima, solo più bagnaticcia.
+
+
+    -> welcoming_frog.top2
+
+=== franco_open_library
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+    {charTag(Franco, "{portrait_Franco()}")}:       Girino!
+                                                    {charNameTwo} ti ha aperto la biblioteca, e io ora ti apro la possibilità di conoscere quale racconto amano le persone che vuoi aiutare!
+                                                    Così ne potete parlare.
+                                                    O gracchiare.
+                                                    Qui gracchiano tutti molto poco.
+                                                    Craack.
+
+    -> welcoming_frog.top2
+
+=== franco_open_nest
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+    {charTag(Franco, "{portrait_Franco()}")}:       Girino!
+                                                    Ho saputo che {charNameThree} ha aperto il nido.
+                                                    Qui non posso fare miracoli, perché quei sigilli sono un graaaack casino.
+                                                    Ma posso recuperartene uno che hai utilizzato.
+                                                    Uno ce la faccio.
+                                                    Poi sono troppo pesanti per le mie zampine.
+      
+    -> welcoming_frog.top2
+
 
 === franco_feedback_mission_one_closed ===
     ~ temp charNameOne = translator(firstChar_ActualName)

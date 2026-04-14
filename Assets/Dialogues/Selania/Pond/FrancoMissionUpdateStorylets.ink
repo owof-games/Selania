@@ -87,7 +87,7 @@
                                                     Ma se poi la tiro fuori, è intera!
                                                     E non sento dolore!
                                                     Questa è magia!
-                                                    Continuo a studiare questa cosa mentre tu provi a parlare assieme a {charNameOne} e {charNameTwo}.
+                                                    Continuo a studiare questa cosa mentre tu provi a vedere cosa succede se parli con due persone assieme.
         {
             - are_two_entities_together(FirstCharacter, PG):
                 In che senso scusa?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
@@ -284,7 +284,7 @@
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
         - frog_currentMission has missionThree:
-        {charTag(Franco, "{portrait_Franco()}")}:   Hai parlato con {Mentor}!
+        {charTag(Franco, "{portrait_Franco()}")}:   Hai parlato con {mentorName}!
 
         - else:
         {charTag(Franco, "{portrait_Franco()}")}:   Questa è facile.

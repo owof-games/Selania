@@ -5,6 +5,10 @@
 {debug_frog: il valore di frog_giftability è {frog_giftability}.}
 
 {
+
+    - frog_allMissionsCompleted == ():
+        -> franco_missionsDispatcher
+
     - frog_tiredValue > 0:
         -> top
         

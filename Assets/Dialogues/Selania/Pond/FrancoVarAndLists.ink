@@ -21,6 +21,8 @@
     VAR frog_updatedMissions = ()
         //E la commissione corrente
     VAR frog_currentMission = ()
+        //Cose per missioni ad hoc
+    VAR frog_mentorStrangeThings = false    
 
         //Infine, pauso le commissioni speciali
     VAR frog_pauseSpecialMission = 0

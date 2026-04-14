@@ -238,6 +238,8 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
+    ~ frog_mentorStrangeThings = true
+
     Vorrei raccontarti una cosa strana.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
 
         * (voices){player_somethingStrange has strangeVoice}C'è una voce che mi racconta cose.

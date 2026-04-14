@@ -53,6 +53,9 @@
                 - else:
                     ~ frog_firstCharGiftable = true
             }
+
+        - frog_firstCharAchievableGifts == ():
+                ~ frog_firstCharGiftable = false
     }
 
     {
@@ -67,6 +70,9 @@
                 - else:
                     ~ frog_secondCharGiftable = true
             }
+
+        - frog_secondCharAchievableGifts == ():
+                ~ frog_secondCharGiftable = false    
     }
 
     {        
@@ -81,6 +87,9 @@
                 - else:
                     ~ frog_thirdCharGiftable = true
             }
+
+        - frog_thirdCharAchievableGifts == ():
+                ~ frog_thirdCharGiftable = false      
     }
 
     {
@@ -99,6 +108,9 @@
                 - else:
                     ~ frog_fourthCharGiftable = true
             }
+
+        - frog_fourthCharAchievableGifts == ():
+                ~ frog_fourthCharGiftable = false      
     }
 
     {
@@ -117,7 +129,10 @@
 
                 - else:
                     ~ frog_fifthCharGiftable = true
-            } 
+            }
+        
+        - frog_fifthCharAchievableGifts == ():
+                ~ frog_fifthCharGiftable = false      
     }
 
     {

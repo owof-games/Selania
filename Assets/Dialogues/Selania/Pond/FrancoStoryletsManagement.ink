@@ -10,6 +10,15 @@
     - are_two_entities_together(PG, Franco) && special_mission_one_contents && entity_location(PG) == Pond && grimoire_franco hasnt grimFrancoMissionOneFeedback:
         -> franco_feedback_mission_one_closed
 
+    - are_two_entities_together(PG, Franco) && not franco_open_kitchen && entity_location(PG) == Pond && player_accessiblePlaces has Kitchen:
+        -> franco_open_kitchen
+
+    - are_two_entities_together(PG, Franco) && not franco_open_nest && entity_location(PG) == Pond && player_accessiblePlaces has Nest:
+        -> franco_open_nest
+
+    - are_two_entities_together(PG, Franco) && not franco_open_library && entity_location(PG) == Pond && player_accessiblePlaces has Library:
+        -> franco_open_library    
+
     - are_two_entities_together(PG, Franco) && achievements_fullLore ==  Discovered && grimoire_franco hasnt grimFrancoAllDocuments:
         -> franco_allDocuments
 
