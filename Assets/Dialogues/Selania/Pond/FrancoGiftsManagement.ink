@@ -129,7 +129,7 @@
                                                                 Uh, devo aprire gli occhi.
                                                                 Ma mi dicevano i topi della biblioteca che prima hai letto <b>Luna vergine</b> di Aza.
                     {
-                        - a_story_of_revenge :
+                        - grimoire_firstChar has grimFirstCharNovel:
                             {charTag(Franco, "{portrait_Franco()}")}:       E che ne hai già parlato con {charNameOne}!
                                                                             Perché non scegli un altro dono?
                                 ~ frog_first_novel = "<b>Luna vergine</b> di Aza"
@@ -208,7 +208,7 @@
             - library_readStories has Lamia:
                 {charTag(Franco, "{portrait_Franco()}")}:       Prima Gliberia, una delle topoline della biblioteca, ha visto che stavi leggendo <b>Il sassolino</b>.
                     {
-                        - a_story_of_rebellion:
+                        - grimoire_secondChar has grimSecondCharNovel:
                                                                 E che ne avete già parlato con {charNameTwo}.
                                                                 Perché non scegli un altro dono?
                                 ~ frog_second_novel = "<b>Il sassolino</b> di Lamia"

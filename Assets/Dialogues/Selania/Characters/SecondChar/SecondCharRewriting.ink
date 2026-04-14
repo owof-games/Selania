@@ -89,7 +89,7 @@
                 E ti ha insegnato a barare!
                 E a sputare nel caffè di chi ti fa male.
                 {
-                    - about_violence_and_peace:
+                    - grimoire_fifthChar has grimSecondCharMentorPeace:
                         Pensa a prima, a quando hai convinto {mentorName} a chiederti scusa.
                         Sapevi di avere ragione, e per questo hai ottenuto quello di cui avevi bisogno.
                 }
@@ -166,7 +166,7 @@
             Ti piace immaginare giornate diverse: prova a condividere questa cosa con i tuoi amici.
             La tua testa è un bellissimo parco giochi: perché non condividerla con gli altri?
             {
-                - open_the_library:
+                - grimoire_secondChar has grimSecondOpenLibrary:
                     Come i racconti che hai trovato in biblioteca!
             }
                    
@@ -183,7 +183,7 @@
             O perché papà tratta male nonna.
             Puoi prendere quello che senti a farci qualcosa di buono per te e le persone che ami.
             {
-                - a_story_of_rebellion:
+                - grimoire_secondChar has grimSecondCharNovel:
                     L'hai detto anche quando hai letto il racconto del sassolino: i grandi non sempre vedono l'aragosta.
                     Ma tu sì, e puoi cambiare tante cose.
             }
@@ -294,7 +294,7 @@
             Sei arrivato in questo posto sconosciuto e invece di avere paura, ti sei messo a curiosare.
             Ti sei fatto amico una rana parlante.
                 {
-                    - dog_second_char:
+                    - grimoire_secondChar has grimSecondCharDog:
                         E ti sei esaltato quando hai incontrato il cane.
                 }
                 {
@@ -352,7 +352,7 @@
             + Ma puoi essere un adulto curioso e studioso, come un po' già sei.
                 -> glyph_modifier_variation_management(SecondCharacter, airC)->
                 {
-                    -first_second_chit_chat:
+                    - grimoire_firstChar has grimFirstSecondChar:
                         Come quando hai detto a {charNameOne} che volevi scoprire dove vanno tutti i posti chiusi qui.
                         E come trovare le caramelle.
                 }
@@ -375,7 +375,7 @@
                         Una brava persona, come ti ha detto tuo fratello.
                 }
                 {
-                    - about_violence_and_peace:
+                    - grimoire_fifthChar has grimSecondCharMentorPeace:
                         Non uno di quei grandi che chiedono sempre scusa per tutte le cose ma poi le rifanno, come hai detto a {mentorName}.
                         Ma un adulto responsabile, come tuo fratello.
                 }

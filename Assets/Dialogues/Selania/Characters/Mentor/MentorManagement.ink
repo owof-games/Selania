@@ -53,7 +53,7 @@
                         - Credo sia arrivata una lettera per te, {player_name}. La trovi come sempre in stazione.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
                     }
                         ~ mentor_lastTimeTalking = 0
-                        -> main 
+                        ->->
                 
                 - else:
                     {shuffle:
@@ -63,7 +63,7 @@
                         - Ciao {player_name}, spero tu non ti stia affaticando troppo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_sad     
                     }
                         ~ mentor_lastTimeTalking = 0
-                        -> main
+                        ->->
             }
                 
         - else:
@@ -74,7 +74,7 @@
 }
 
 
--> main 
+->->
 
 
 === mentor_closing_storylet ===

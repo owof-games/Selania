@@ -270,7 +270,7 @@
                 - are_entities_together_in(Mentor, PG, Pond):
                     Ho notato.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
                     {
-                        - frog_and_mentor_chit_chat: 
+                        - grimoire_fifthChar has grimMentorFranco: 
                             E dopo averci parlato, non mi ispira molta fiducia.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_bored
                             {
                                 - are_two_entities_together(Franco, PG):
@@ -291,7 +291,7 @@
                 
                 - else:
                     {
-                        - frog_and_mentor_chit_chat: 
+                        - grimoire_fifthChar has grimMentorFranco:
                             Ci ho parlato prima. E non mi ispira molta fiducia.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
                         - else: 
                             Ho notato.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral    

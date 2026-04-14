@@ -75,7 +75,7 @@
                     ~ kitchen_secondCharCookingTogetherInvite = false
                     ~ kitchen_secondCharCookingTogetherWaiting = 0
                     ~ move_entity(SecondCharacter, Pond)
-            -> main
+            ->->
 
     
     = first_theme
@@ -182,7 +182,7 @@
             + <i>Raffreddo la frutta per sorbetti sonnacchiosi.</i>
                 ~ kitchen_recipeNoun = "Sorbetto"
                 -> glyph_modifier_variation_management(PG, waterC)->
-                {first_second_chit_chat: Ancora con questa cosa del dormire!|Che balle dormire!}
+                {grimoire_firstChar has grimFirstSecondChar: Ancora con questa cosa del dormire!|Che balle dormire!}
                 Ci sono così tante cose da fare!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                 Che noia!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             -
@@ -783,7 +783,7 @@
                     Ma sono ancora un po' arrabbiato.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                     E questo mi fa arrabbiare velocemente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
 
-                - about_violence_and_peace:
+                - grimoire_fifthChar has grimSecondCharMentorPeace:
                     Sto ancora cercando di non essere arrabbiato con {mentorName}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                     E non mi piace essere arrabbiato.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
                     Mi fa arrabbiare di più.
@@ -1377,7 +1377,7 @@
     }
 
     -> second_char_closing_storylet ->
-    -> main
+    ->->
 
 
 

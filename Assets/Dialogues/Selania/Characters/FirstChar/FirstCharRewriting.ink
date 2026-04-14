@@ -227,7 +227,7 @@
                 Il mondo è duro da cambiare, ma l'esempio è una gran cosa.
                 Rompere le aspettative, l'ovvio, è rivoluzionario.
                 {
-                    - a_story_of_revenge: 
+                    - grimoire_firstChar has grimFirstCharNovel: 
                         O come hai detto per <b>Luna vergine</b>, puoi abbracciare il tuo essere mostro.
                 }
 
@@ -262,7 +262,7 @@
             + Ma potresti fare qualcosa di buono anche prendendoti cura dei tuoi genitori.
                 -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                 {
-                    -food_gift_first_char: 
+                    -grimoire_firstChar has grimFirstCharKitchenAlone: 
                         Magari scoprendo come capire tua madre cucinando assieme.
                 }
                 {

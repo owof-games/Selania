@@ -72,7 +72,7 @@
                 E hai aiutato {charNameOne} a trovare il bello nel quotidiano.
                 Qualcosa che personalmente apprezzo molto.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
                 {
-                    - first_mentor_chit_chat: Come ricorderai dalla mia chiacchierata con {charNameOne}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                    - grimoire_firstChar has grimFirstCharMentor: Come ricorderai dalla mia chiacchierata con {charNameOne}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 }
                 E che spero possa apprezzare anche lei.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 {charNameOne} forse ora è capace di vedere quanta bellezza e quante soddisfazioni ha nella vita.

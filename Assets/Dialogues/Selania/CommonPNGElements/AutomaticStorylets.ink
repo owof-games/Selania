@@ -143,7 +143,7 @@
             -> special_mission_one_contents
         
         //Missione speciale Franco chiusa
-        - are_two_entities_together(Franco, PG) && entity_location(PG) == Nest && nest_francoChosenSigil != ():
+        - are_two_entities_together(Franco, PG) && entity_location(PG) == Nest && nest_francoChosenSigil != () && special_mission_one_contents:
             -> special_mission_one_closed 
 }  
 
@@ -234,3 +234,5 @@
 //Infine:
 //Check frasina ansiosa di Mentore
     -> talk_to_me
+
+->->

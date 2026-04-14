@@ -711,7 +711,7 @@
                                                         - are_two_entities_together(SecondCharacter, PG):
                                                             Anche io?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
                                                             {
-                                                                - frog_and_second_char_chit_chat:
+                                                                - grimoire_secondChar has grimSecondCharFranco:
                                                                     {charTag(Franco, "{portrait_Franco()}")}:       Ma abbiamo già detto che tu sei una rana, {charNameTwo}!
                                                                 - else:
                                                                     {charTag(Franco, "{portrait_Franco()}")}:       Mmm.

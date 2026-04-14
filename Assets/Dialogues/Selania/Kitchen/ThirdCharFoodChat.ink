@@ -71,7 +71,7 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
                 ~ kitchen_thirdCharCookingTogetherInvite = false
                 ~ kitchen_thirdCharCookingTogetherWaiting = 0
                 ~ move_entity(ThirdCharacter, Pond)
-            -> main
+            ->->
 
 
     
@@ -828,7 +828,7 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
     }
     
     -> third_char_closing_storylet ->
-    -> main
+    ->->
 
 
 

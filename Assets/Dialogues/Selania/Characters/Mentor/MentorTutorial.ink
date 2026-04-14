@@ -436,13 +436,13 @@
 
     Stavo pensando a una cosa, {player_name}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         {
-            - open_the_kitchen:
+            - grimoire_firstChar has grimFirstOpenKitchen:
                 Sono felice che {charNameOne} abbia sistemato la vecchia cucina.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
         }
         {
-            - open_the_library:
+            - grimoire_secondChar has grimSecondOpenLibrary:
                 {
-                    - open_the_kitchen:
+                    - grimoire_firstChar has grimFirstOpenKitchen:
                         E mi <>
                     
                     - else:

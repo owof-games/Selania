@@ -773,7 +773,7 @@
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
             {
-                - not about_violence_and_peace:
+                - grimoire_fifthChar hasnt grimSecondCharMentorPeace:
                 ~ change_entity_place(Mentor)
             }     
         
@@ -881,7 +881,7 @@
     ~ temp mentorName = translator(mentor_ActualName)
     ~ temp charNameOne = translator(firstChar_ActualName)
             {
-                - not about_violence_and_peace:
+                - grimoire_fifthChar hasnt grimSecondCharMentorPeace:
                 ~ change_entity_place(Mentor)
             }     
         
@@ -978,7 +978,7 @@
         ~ temp mentorName = translator(mentor_ActualName)
         ~ temp charNameOne = translator(firstChar_ActualName)
             {
-                - not about_violence_and_peace:
+                - grimoire_fifthChar hasnt grimSecondCharMentorPeace:
                 ~ change_entity_place(Mentor)
             }     
         
@@ -1158,7 +1158,7 @@
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
             {
-                - not about_violence_and_peace:
+                - grimoire_fifthChar hasnt grimSecondCharMentorPeace:
                 ~ change_entity_place(Mentor)
             }     
         
@@ -1245,7 +1245,7 @@
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
             {
-                - not about_violence_and_peace:
+                - grimoire_fifthChar hasnt grimSecondCharMentorPeace:
                 ~ change_entity_place(Mentor)
             }     
         
@@ -1346,7 +1346,7 @@
         ~ temp mentorName = translator(mentor_ActualName)
         ~ temp charNameOne = translator(firstChar_ActualName)
             {
-                - not about_violence_and_peace:
+                - grimoire_fifthChar hasnt grimSecondCharMentorPeace:
                 ~ change_entity_place(Mentor)
             }     
         
