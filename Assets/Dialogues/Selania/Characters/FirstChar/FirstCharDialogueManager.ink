@@ -1,7 +1,7 @@
 === first_character ===
     //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
             //Chiacchiera normale
-            + {are_two_entities_together(FirstCharacter, PG) && firstChar_storyStatus == story_storyStarted} [FirstCharacter]
+            + {are_two_entities_together(FirstCharacter, PG) && firstChar_storyStatus == story_storyStarted && entity_location(PG) != Kitchen} [FirstCharacter]
                 -> talk_with_first_character
 
             //Chiacchierata in cucina

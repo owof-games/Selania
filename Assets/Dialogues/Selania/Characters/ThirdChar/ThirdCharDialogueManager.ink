@@ -3,11 +3,11 @@
 
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
-        + {are_two_entities_together(ThirdCharacter, PG) && thirdChar_storyStatus == story_storyStarted} [ThirdCharacter]
+        + {are_two_entities_together(ThirdCharacter, PG) && thirdChar_storyStatus == story_storyStarted && entity_location(PG) != Kitchen} [ThirdCharacter]
             -> talk_with_third_character
 
         //Chiacchierata in cucina
-        + {are_two_entities_together(ThirdCharacter, PG) && thirdChar_storyStatus == story_storyStarted && entity_location(PG)  == Kitchen} [ThirdCharacter]
+        + {are_two_entities_together(ThirdCharacter, PG) && thirdChar_storyStatus == story_storyStarted && entity_location(PG) == Kitchen} [ThirdCharacter]
             -> kitchen_storylets_dispatcher  
 
         // //Chiacchiera a fine storia

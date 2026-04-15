@@ -74,15 +74,15 @@
             } 
 
         {charTag(Mentor, "sad")}:                               Mi spiace se si è spaventato.
-        {charTag(PG, "neutral")}:                               E mi fa tenerezza, sai?
+        {charTag(Mentor, "neutral")}:                               E mi fa tenerezza, sai?
         {charTag(Mentor, "hurry")}:                             Mi sembra un riccio.
                                                                 Così carino, tenero.
-        {charTag(PG, "neutral")}:                               Quando è assorto nei suoi discorsi sugli animali o è incuriosito da qualcosa è adorabile.
+        {charTag(Mentor, "neutral")}:                               Quando è assorto nei suoi discorsi sugli animali o è incuriosito da qualcosa è adorabile.
         {charTag(Mentor, "sad")}:                               Ma poi provi ad avvicinarti, a conoscerlo meglio, e ti fa male.
         {charTag(Mentor, "sorry")}:                             Mi spiace di avere perso la pazienza con lui.
                                                                 E so che non è un'emozione nobile per una mentore, ma sono rimasta ferita da quel calcio.
                                                                 E anche per questo ti chiedo di occupartene tu, così che i miei sentimenti non complichino la situazione.
-        {charTag(PG, "neutral")}:                               Trova un modo per allontanarlo.
+        {charTag(Mentor, "neutral")}:                               Trova un modo per allontanarlo.
                                                                 Velocemente, se riesci.
             {
                 - are_two_entities_together(FirstCharacter, PG):
