@@ -764,9 +764,7 @@ Stai per donare qualcosa a {charNameThree}.
             -> exit
         }
         
-        ~ greenhouse_cultivableGrowing ++   
-        ~ book_BGVariations ++
-        
+
     
     = secret_ending
     ~ temp charNameThree = translator(fourthChar_ActualName)

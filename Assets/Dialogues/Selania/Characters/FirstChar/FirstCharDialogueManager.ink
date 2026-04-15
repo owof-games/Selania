@@ -142,7 +142,6 @@
             + {grimoire_firstChar has firstChar_minStoryletsForRewriting && grimoire_firstChar hasnt grimFirstCharProposal && tutorial_mentorInkAndRewriting} Ti va di riscrivere la tua storia con me?
                 
                 //Incremento le variazioni del libro della Riscrittora           
-                ~ book_BGVariations ++
                     -> rewriting_proposal_first_character
     
         //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo          

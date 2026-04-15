@@ -175,7 +175,7 @@
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
             + {grimoire_secondChar has secondChar_minStoryletsForRewriting && grimoire_secondChar hasnt grimSecondCharProposal && grimoire_appendices has grimRewritingMentor} Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
                     //Incremento le variazioni del libro della Riscrittora
-                        ~ book_BGVariations ++
+
                             -> rewriting_proposal_second_character
 
         //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo

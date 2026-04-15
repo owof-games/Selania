@@ -199,6 +199,7 @@
 
 === grimoire_appendicesCollection
 
+
 + [Index #bookmark:index]
     -> grimoire
     -

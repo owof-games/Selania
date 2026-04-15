@@ -1256,7 +1256,7 @@
     {
     - ending_cultivation == 1:
         ~ move_entity(greenhouseOpened, Bedroom)
-        ~ player_somethingStrange += strangeVoice
+
     }
     
     {

@@ -522,8 +522,6 @@
                     Smuovendo le sue acque sicure per trovare la mia felicità.
             }
             
-                ~ book_BGVariations ++
-    
                     {
                     - firstChar_specialEvent == true:
                         -> secret_ending

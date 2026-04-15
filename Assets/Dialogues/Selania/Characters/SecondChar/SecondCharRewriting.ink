@@ -558,8 +558,7 @@
         }
         
 
-            ~ book_BGVariations ++
-            
+
             {
             - secondChar_specialEvent == true:
                 -> secret_ending

@@ -269,6 +269,37 @@ VAR letters_doggoPause = false
     // E contatore per la notifica di riposo
     ~ player_lastRestingSession ++
 
+//Aggiornamento per la parte di argomenti "strani" per mentore
+//Step uno: verifico se c'è un nuovo argomento strano
+
+    {
+        - grimoire_franco has grimFrancoFirst && player_somethingStrange hasnt strangeFrog:
+            ~ player_somethingStrangeTalkable += strangeFrog
+            ~ player_somethingStrange += strangeFrog
+    
+    }
+
+    {
+        - greenhouse_findedCultivables != () && player_somethingStrange hasnt strangeVoice:
+            ~ player_somethingStrangeTalkable += strangeVoice
+            ~ player_somethingStrange += strangeVoice
+    
+    }
+
+    {
+        - grimoire_witch has grimWitchIntro && player_somethingStrange hasnt strangeVase:
+            ~ player_somethingStrangeTalkable += strangeVase
+            ~ player_somethingStrange += strangeVase
+    
+    }
+
+    {
+        - grimoire_witch has grimWitchIntro && player_somethingStrange hasnt strangeGrimoire:
+            ~ player_somethingStrangeTalkable += strangeGrimoire
+            ~ player_somethingStrange += strangeGrimoire
+    
+    }
+
 ->->
 
 
@@ -471,4 +502,5 @@ VAR letters_doggoPause = false
                 ~ kitchen_cookingAloneCoolDown --
         }
 
-->->        
+->-> 
+

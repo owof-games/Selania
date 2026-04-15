@@ -22,7 +22,6 @@
         //E la commissione corrente
     VAR frog_currentMission = ()
 
-
         //Infine, pauso le commissioni speciali
     VAR frog_pauseSpecialMission = 0
     VAR frog_pauseSpecialMissionMax = 1

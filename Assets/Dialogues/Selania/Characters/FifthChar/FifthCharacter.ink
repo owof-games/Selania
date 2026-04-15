@@ -927,10 +927,7 @@
                     ~ fifthChar_ActualName += Violino
         }
         
-        
-        ~ book_BGVariations ++
-        ~ greenhouse_cultivableGrowing ++   
-        
+
         {
         - fifthChar_specialEvent == true:
             -> secret_ending

@@ -37,29 +37,7 @@
            
         - entity_location(PG) == BookPlace:
         
-                {
-                    - book_BGVariations ==  5:
-                        ~ return "bookBGFive"
-                    
-                    - book_BGVariations ==  4:
-                        ~ return "bookBGFour"
-                        
-                    - book_BGVariations ==  3:
-                        ~ return "bookBGThree"
-                
-                    - book_BGVariations ==  2:
-                        ~ return "bookBGTwo"    
-                        
-                    - book_BGVariations ==  1:
-                        ~ return "bookBGOne"          
-                    
-                    - book_BGVariations ==  0:
-                        ~ return "bookBGZero"
-
-                    - else:
-                        ~ return "bookBGFive"
-
-                } 
+            ~ return "bookBGZero"
 
         }
 

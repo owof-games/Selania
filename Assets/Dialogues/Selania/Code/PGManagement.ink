@@ -14,6 +14,7 @@
     
 //Gestione "cose strane" di cui parlare con mentore
     LIST player_somethingStrange = strangeFrog, strangeVoice, strangeGrimoire, strangeVase
+    VAR player_somethingStrangeTalkable = ()
     
 //Tracciamento dei luoghi accessibili alla giocatrice
     VAR player_accessiblePlaces = (Bedroom, TrainStop, Forest, Pond)

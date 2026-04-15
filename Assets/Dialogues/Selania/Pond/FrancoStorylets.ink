@@ -8,10 +8,6 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    ~ player_somethingStrange += strangeFrog
-    ~ book_BGVariations ++
-    ~ grimoire_franco += grimFrancoFirst
-
     {charTag(Franco, "{portrait_Franco()}")}:       Ma dove avevo messo quel.
                                                     Eccola cra!
                                                     No.
@@ -49,6 +45,8 @@
                                                     Livello di confusione: sì.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
         }
 
+    ~ grimoire_franco += grimFrancoFirst
+    
     -> welcoming_frog.top2
 
 
@@ -152,6 +150,6 @@
                                                         Devo ringraziarlo.
                                                         Magari gli compro il prossimo "Starview Galley".
                                 
-    ~ grimoire_franco += grimFrancoAllDocuments
+        ~ grimoire_franco += grimFrancoAllDocuments
     -> welcoming_frog.top2
 
