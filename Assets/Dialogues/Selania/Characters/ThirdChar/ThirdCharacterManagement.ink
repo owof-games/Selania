@@ -35,6 +35,7 @@
     //autonoma
         VAR kitchen_thirdCharIsCooking = false
         VAR kitchen_thirdCharCookingTime = 0
+        VAR kitchen_thirdCharHasCooked = false
         //Tempo che ci impiega a fare la sua ricetta
         VAR kitchen_thirdCharCookingMaxTime = 7
     //Nostro invito

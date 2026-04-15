@@ -1317,6 +1317,7 @@
             ~ move_entity(SecondCharacter, Pond)
             ~ kitchen_secondCharCookingTogetherInvite = false
             ~ kitchen_allChefs += SecondCharacter
+            ~ kitchen_kitchenOccupied = false
         -> update_glyphs(SecondCharacter) ->
         -> achievements_onGame_statusUpdate_GM ->
         -> second_char_closing_storylet ->
@@ -1328,13 +1329,6 @@
    Altri storylets legati alla cucina 
 
  ----------------------------------*/
-
-
-=== second_char_cooking_tracker
-//Lo lascio come knot e non come variabile perché potrebbe essermi utile (es: per attivare un suono che faccia sapere che c'è qualcunx in cucina)
-    {debug: passo per second_char_cooking_tracker. }
-    
-    ->->
 
 
 === second_char_cooking_alone

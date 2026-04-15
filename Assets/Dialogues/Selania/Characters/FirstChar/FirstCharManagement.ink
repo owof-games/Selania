@@ -28,6 +28,7 @@
     //Autonoma
         VAR kitchen_firstCharIsCooking = false
         VAR kitchen_firstCharCookingTime = 0
+        VAR kitchen_firstCharHasCooked = false
         //Tempo che ci impiega a fare la sua ricetta
         VAR kitchen_firstCharCookingMaxTime = 8
     //Nostro invito

@@ -766,6 +766,7 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
                 ~ move_entity(ThirdCharacter, Pond)
                 ~ kitchen_thirdCharCookingTogetherInvite = false
                 ~ kitchen_allChefs += ThirdCharacter
+                ~ kitchen_kitchenOccupied = false
             -> update_glyphs(ThirdCharacter) ->
             -> achievements_onGame_statusUpdate_GM ->
             -> third_char_closing_storylet ->

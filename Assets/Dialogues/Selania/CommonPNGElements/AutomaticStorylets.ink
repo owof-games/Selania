@@ -105,7 +105,7 @@
             -> about_violence_and_peace
         
         //Riccio ha cucinato, e vediamo la scena del dono
-        - are_two_entities_together(SecondCharacter, PG) && are_two_entities_together(Mentor, PG) && second_char_cooking_tracker && kitchen_secondCharIsCooking == false && grimoire_fifthChar has grimSecondCharMentorPeace && grimoire_secondChar hasnt grimSecondCharKitchenAlone:
+        - are_two_entities_together(SecondCharacter, PG) && are_two_entities_together(Mentor, PG) && kitchen_secondCharHasCooked == true && grimoire_fifthChar has grimSecondCharMentorPeace && grimoire_secondChar hasnt grimSecondCharKitchenAlone:
             -> food_gift_second_char        
         
         //Chiacchiere tra Chitarra e Mentore
@@ -157,7 +157,7 @@
 {   
     //Cucina
         //Chitarra ha cucinato, e vediamo la scena del dono (a sé stessa)
-        - are_two_entities_together(FirstCharacter, PG) && first_char_cooking_tracker && kitchen_firstCharIsCooking == false && grimoire_firstChar hasnt grimFirstCharKitchenAlone:
+        - are_two_entities_together(FirstCharacter, PG) && kitchen_firstCharHasCooked == true && kitchen_firstCharIsCooking == false && grimoire_firstChar hasnt grimFirstCharKitchenAlone:
             -> food_gift_first_char
 
     //Racconto di Aza letto
@@ -185,7 +185,7 @@
 //Storylets speciali Third Char
 {
     //Boccale ha cucinato, e vediamo la scena del dono
-        - are_two_entities_together(ThirdCharacter, PG) && third_char_cooking_tracker && kitchen_thirdCharIsCooking == false && grimoire_thirdChar hasnt grimThirdCharKitchenAlone:
+        - are_two_entities_together(ThirdCharacter, PG)  && kitchen_thirdCharHasCooked == true  && kitchen_thirdCharIsCooking == false && grimoire_thirdChar hasnt grimThirdCharKitchenAlone:
             -> food_gift_third_char            
 
     //Lettura Boccale

@@ -381,6 +381,14 @@ VAR letters_doggoPause = false
 {debug_kitchen: passo da on_movement_kitchen_tracker.}
 {debug_kitchen: i contenuti di contentsKitchen sono {contentsKitchen}.}
 
+    //Check zero: se la cucina non è stata sbloccata, skippo. Così poi non devo più chiedermelo.
+    {
+        - player_accessiblePlaces hasnt Kitchen:
+            {debug_kitchen: la cucina non è ancora sbloccata, per cui esco subito da on_movement_kitchen_tracker.}
+            ->->
+    }
+
+
     //Primo check: la cucina è occupata?
     {
         - contentsKitchen has FirstCharacter:
@@ -399,8 +407,10 @@ VAR letters_doggoPause = false
             ~ kitchen_kitchenOccupied = true
 
         - contentsKitchen has Franco:
-            ~ kitchen_kitchenOccupied = true             
+            ~ kitchen_kitchenOccupied = true
 
+        - else:
+            ~ kitchen_kitchenOccupied = false            
     }
 
     //Secondo check: stato personagge
@@ -408,12 +418,12 @@ VAR letters_doggoPause = false
     //Riccio inizia a cucinare. Metto prima di Chitarra giusto perché il suo storylet coinvolge anche Mentore e quindi forse è più interessante.
     
         {
-            - player_accessiblePlaces has Kitchen && (not second_char_cooking_tracker) && kitchen_kitchenOccupied == false && grimoire_secondChar has grimSecondCharOne && (kitchen_cookingAloneCoolDown == 0):
+            - kitchen_secondCharHasCooked == false && kitchen_kitchenOccupied == false && grimoire_secondChar has grimSecondCharOne && (kitchen_cookingAloneCoolDown == 0):
                 {debug_kitchen: le condizioni sono giuste per far cucinare Riccio da solo}
                 ~ kitchen_secondCharIsCooking = true
                 ~ move_entity(SecondCharacter, Kitchen)
                 ~ kitchen_kitchenOccupied = true
-                    -> second_char_cooking_tracker ->
+                
         }            
         
             
@@ -430,6 +440,7 @@ VAR letters_doggoPause = false
                 
                 - else:
                     ~ kitchen_secondCharIsCooking = false
+                    ~ kitchen_secondCharHasCooked = true
                     ~ move_entity(SecondCharacter, Pond)
                     //Attivo il cooldown, così altre png non vanno subito a cucinare da sole
                     ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
@@ -462,12 +473,12 @@ VAR letters_doggoPause = false
 
     //Chitarra
         {
-            - player_accessiblePlaces has Kitchen && (not first_char_cooking_tracker) && kitchen_kitchenOccupied == false && (kitchen_cookingAloneCoolDown == 0):
+            - kitchen_firstCharHasCooked == false && kitchen_kitchenOccupied == false && (kitchen_cookingAloneCoolDown == 0):
             
                     ~ kitchen_firstCharIsCooking = true
                     ~ move_entity(FirstCharacter, Kitchen)
                     ~ kitchen_kitchenOccupied = true
-                        -> first_char_cooking_tracker ->
+                  
         }
         
         //Gestione tempi di cucina autonoma di Chitarra.
@@ -484,6 +495,7 @@ VAR letters_doggoPause = false
                     
                     - else:
                        ~ kitchen_firstCharIsCooking = false
+                       ~ kitchen_firstCharHasCooked = true
                        ~ move_entity(FirstCharacter, Pond)
                        //Attivo il cooldown, così altre png non vanno subito a cucinare da sole
                         ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
@@ -517,12 +529,12 @@ VAR letters_doggoPause = false
 
     //TerzoPNG
         {
-            - player_accessiblePlaces has Kitchen && (not third_char_cooking_tracker) && kitchen_kitchenOccupied == false && grimoire_thirdChar hasnt grimThirdCharOne && (kitchen_cookingAloneCoolDown == 0):
+            - kitchen_thirdCharHasCooked == false && kitchen_kitchenOccupied == false && grimoire_thirdChar hasnt grimThirdCharOne && (kitchen_cookingAloneCoolDown == 0):
                 {debug_kitchen: le condizioni per far cucinare Boccale da solo sono valide.}
                     ~ kitchen_thirdCharIsCooking = true
                     ~ move_entity(ThirdCharacter, Kitchen)
                     ~ kitchen_kitchenOccupied = true
-                        -> third_char_cooking_tracker ->
+                    
         }
         
         //Gestione tempi di cucina autonoma di PNG3.
@@ -539,6 +551,7 @@ VAR letters_doggoPause = false
                     
                     - else:
                        ~ kitchen_thirdCharIsCooking = false
+                       ~ kitchen_thirdCharHasCooked = true
                        ~ move_entity(ThirdCharacter, Pond)
                        //Attivo il cooldown, così altre png non vanno subito a cucinare da sole
                         ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
