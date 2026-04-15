@@ -4,10 +4,12 @@
     //Non mettere cose TW qui
     //Obiettivo: Presentare l’elemento delle bugie. Vengono dette cose sconfessate poi nella terza storia.
     //Contenuto: Compleanno, giochi
-        ~ temp charNameTwo = translator(thirdChar_ActualName)
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
-        ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
         
         Ma tu perché sei qui?#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
             
@@ -97,10 +99,12 @@
    
     = two
     //Non mettere cose TW qui
-    ~ temp charNameTwo = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
     ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 
         Non sai che cosa fighissima!#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
                 {
@@ -155,10 +159,12 @@
             -> options_third_character
 
     = three
-        ~ temp charNameTwo = translator(thirdChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 #speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
         Mica mi hai detto come ti chiami.
   
@@ -208,10 +214,12 @@
 
     
     = four
-        ~ temp charNameTwo = translator(thirdChar_ActualName)
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
-        ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
         
         Cose.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
             
@@ -256,10 +264,12 @@
         -> options_third_character
 
     = five
-        ~ temp charNameTwo = translator(thirdChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
-        ~ temp charNameOne = translator(firstChar_ActualName) 
-        ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
         
 
         Sicuro le piace tantissimo questo posto.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
@@ -296,10 +306,12 @@
     
 
     = six
-        ~ temp charNameTwo = translator(thirdChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 
         Prima, con {mentorName}.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
        
@@ -332,10 +344,12 @@
     
 
     = seven
-        ~ temp charNameTwo = translator(thirdChar_ActualName)
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
-        ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 
         
         Franco prima mi ha detto che tu scrivi storie.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
@@ -378,10 +392,12 @@
             
             
     = eight
-    ~ temp charNameTwo = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
     ~ temp charNameOne = translator(firstChar_ActualName)
-     ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 
         Sai che mio fratello è campione di Karate?#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
 
@@ -414,10 +430,12 @@
     
     
     = nine
-        ~ temp charNameTwo = translator(thirdChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 
         Tu hai sempre voluto fare {player_pronouns has him: il riscrittore|{player_pronouns has her: la riscrittora|lə riscrittorə}} come lavoro?#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
 
@@ -482,10 +500,12 @@
             -> options_third_character
     
     = ten
-        ~ temp charNameTwo = translator(thirdChar_ActualName)
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
-        ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 
         Stavo ripensando a un bambino.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
             {
@@ -524,10 +544,12 @@
             -> options_third_character 
     
     = eleven
-        ~ temp charNameTwo = translator(thirdChar_ActualName)
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
-        ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 
         
         Quando vado da mio fratello e non c'è il suo amico, mi lascia sperimentare con le sue cose.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
@@ -566,10 +588,12 @@
                 -> options_third_character 
     
     = twelve
-        ~ temp charNameTwo = translator(thirdChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
-        ~ temp charNameOne = translator(firstChar_ActualName)
-         ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 
         Mi piace molto passare il tempo in biblioteca.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
 

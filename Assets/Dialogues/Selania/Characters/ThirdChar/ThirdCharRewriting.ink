@@ -13,10 +13,12 @@
     }
     
     = confession
-    ~ temp charNameTwo = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
     ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 
         Da quando nonna è nella casa dei vecchi fa tutto schifo.
         @animation:RewriterBook
@@ -30,7 +32,7 @@
 
 
     = rewriting
-    ~ temp charNameTwo = translator(thirdChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
 
             Va bene.
 
@@ -50,10 +52,12 @@
 
 
     = one
-    ~ temp charNameTwo = translator(thirdChar_ActualName)
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 
 
         Comunque possiamo cominciare quando vuoi.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -126,9 +130,10 @@
     
     = two
         ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(thirdChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
-        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp charNameFour = translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
         A scuola le maestre dicono che sei cattivo, bugiardo, violento, e finisci sempre in punizione.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
@@ -200,7 +205,7 @@
             }
         
     = three
-    ~ temp charNameTwo = translator(thirdChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     //Affrontiamo il mondo. Rabbia, bugie, fantasia, violenza etc.
             Tuo fratello dice che il mondo è orribile e che non si può più aggiustare.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             E hai paura che gli animali possano sparire.
@@ -271,11 +276,12 @@
             }
     
     = four
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(thirdChar_ActualName)
-    ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName) 
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour = translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
 
         Hai detto che i grandi fanno schifo, e che non vuoi diventare grande.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
         
@@ -339,9 +345,12 @@
 
     
     = ending
-    ~ temp charNameTwo = translator(thirdChar_ActualName)
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour = translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
 
         Cfireo di aver compreso quale sia il tuo blocco, perché sei qui.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
         E riguarda gli adulti.
@@ -432,7 +441,7 @@
     
     
     = naming
-    ~ temp charNameTwo = translator(thirdChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     
         {
 
@@ -506,7 +515,7 @@
     
     
     = secret_ending
-    ~ temp charNameTwo = translator(thirdChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
             {
@@ -518,7 +527,7 @@
             -> close
             
      = exit
-     ~ temp charNameTwo = translator(thirdChar_ActualName)
+     ~ temp charNameTwo = translator(secondChar_ActualName)
         {
             - contentsNest hasnt fireGlyph:
             Ah {player_name}, prima ho trovato una cosa in giro.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #portrait:riccio_neutral
@@ -545,6 +554,8 @@
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour = translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
         Me ne vado.

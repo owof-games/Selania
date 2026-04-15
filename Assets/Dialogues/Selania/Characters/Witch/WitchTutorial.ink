@@ -3,6 +3,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
         {charTag(TheWitch, "{witch_state()}")}:   <i>Quando vi siete conosciut3, {mentorName} ha detto a {player_name} che le cose che dice alle persone sono un modo di vedere il mondo.

@@ -530,7 +530,7 @@ VAR letters_doggoPause = false
 
     //TerzoPNG
         {
-            - kitchen_thirdCharHasCooked == false && kitchen_kitchenOccupied == false && grimoire_thirdChar hasnt grimThirdCharOne && (kitchen_cookingAloneCoolDown == 0):
+            - kitchen_thirdCharHasCooked == false && kitchen_kitchenOccupied == false && grimoire_thirdChar has grimThirdCharOne && (kitchen_cookingAloneCoolDown == 0):
                 {debug_kitchen: le condizioni per far cucinare Boccale da solo sono valide.}
                     ~ kitchen_thirdCharIsCooking = true
                     ~ move_entity(ThirdCharacter, Kitchen)

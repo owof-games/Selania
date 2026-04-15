@@ -76,10 +76,11 @@
         
 
 === third_read_story_library
-~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
     Racconto letto in biblioteca.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
@@ -92,10 +93,11 @@
 
 
 === dog_third_char
-~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
    
    Tre ha visto un cane.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental

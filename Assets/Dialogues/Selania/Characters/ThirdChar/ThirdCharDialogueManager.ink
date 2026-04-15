@@ -1,5 +1,5 @@
 === third_character ===
-~ temp charNameTwo = translator(thirdChar_ActualName)
+~ temp charNameTwo = translator(secondChar_ActualName)
 
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
@@ -20,7 +20,7 @@
 
 
 === talk_with_third_character ===
-~ temp charNameTwo = translator(thirdChar_ActualName)
+~ temp charNameTwo = translator(secondChar_ActualName)
         {
 
             - thirdChar_pauseTalking == 0:
@@ -32,7 +32,10 @@
 
 === options_third_character
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(thirdChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 {
     //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
@@ -94,7 +97,10 @@
 
     = ask
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(thirdChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
         {

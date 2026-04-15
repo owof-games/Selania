@@ -127,8 +127,11 @@
 //Abbiamo un feedback da parte della PNG sul suo stato prima di confessare (che brutta parola)        
 === thirdAffinityFeedback
     ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-    ~ temp charNameTwo = translator(thirdChar_ActualName)
 {debug: passo per thirdAffinityFeedback. Lo stato di inchiostro è {thirdChar_InkLevel}.}
 
 
