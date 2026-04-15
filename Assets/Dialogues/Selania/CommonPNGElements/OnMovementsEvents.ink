@@ -13,8 +13,9 @@ VAR letters_doggoPause = false
     ~ story_time_management_for_PNG()
     ~ on_movement_PG_values()
     ~ on_movement_characters_values()
-    -> on_movement_kitchen_tracker ->
+    ~ on_movement_kitchen_tracker()
     -> on_movement_randomize_png_places ->
+    // ~ on_movement_debug_PNG_position()
     ~ on_movement_special_events()
     ~ on_movement_letters_management()
     ~ on_movement_sounds_effects()   
@@ -34,6 +35,16 @@ VAR letters_doggoPause = false
 
 ->->
 
+
+
+=== function on_movement_debug_PNG_position
+~ temp currentPlaceFirstCharacter = entity_location(FirstCharacter)
+~ temp currentPlaceSecondCharacter = entity_location(SecondCharacter)
+~ temp currentPlaceThirdCharacter = entity_location(ThirdCharacter)
+~ temp currentPlaceMentor = entity_location(Mentor)
+~ temp currentPlaceFranco = entity_location(Franco)
+
+<i><b>La posizione di {FirstCharacter} è {currentPlaceFirstCharacter}, di {SecondCharacter} è {currentPlaceSecondCharacter}, di {ThirdCharacter} è {currentPlaceThirdCharacter}, di {Mentor} è {currentPlaceMentor}, di {Franco} è {currentPlaceFranco}
 
 //Raccolta di azioni uniche                
 === function on_movement_special_events()
@@ -378,7 +389,7 @@ VAR letters_doggoPause = false
 
 
 //Gestione della cucina delle PNG
-=== on_movement_kitchen_tracker ===
+=== function on_movement_kitchen_tracker()
 {debug_kitchen: passo da on_movement_kitchen_tracker.}
 {debug_kitchen: i contenuti di contentsKitchen sono {contentsKitchen}.}
 
@@ -386,7 +397,7 @@ VAR letters_doggoPause = false
     {
         - player_accessiblePlaces hasnt Kitchen:
             {debug_kitchen: la cucina non è ancora sbloccata, per cui esco subito da on_movement_kitchen_tracker.}
-            ->->
+            ~ return
     }
 
 
@@ -589,5 +600,5 @@ VAR letters_doggoPause = false
                 ~ kitchen_cookingAloneCoolDown --
         }
 
-->-> 
+
 

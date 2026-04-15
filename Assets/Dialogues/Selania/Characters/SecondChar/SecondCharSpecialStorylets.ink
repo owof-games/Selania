@@ -31,7 +31,7 @@
                 -> that_little_liar_storylet  
 
             - else:
-                ->->           
+                -> main           
         }
                 
 

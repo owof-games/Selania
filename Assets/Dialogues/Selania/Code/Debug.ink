@@ -10,6 +10,7 @@
     VAR debug_frog = false
     VAR debug_horizontalS = false
     VAR debug_achievements = false
+    VAR debug_PNGLocation = false
 
     //per testare i luoghi non subito aperti con calma
     VAR debug_testLibrary = false
