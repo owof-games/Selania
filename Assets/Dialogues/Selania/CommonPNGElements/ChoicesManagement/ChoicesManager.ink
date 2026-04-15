@@ -715,11 +715,14 @@ Recap della logica.
             -> glyph_thereAreOtherTalkers
 
     = glyph_Mentor_reactions
-            //Per ora per Mentore punterei su una serie di reazioni neutre, visto che non abbiamo un contatore della relazion
+            //Mentore ha sempre reazioni neutre, visto che non ha un contatore della relazione esplicitamente attivo.
                 {shuffle:
-                    - Mentor Reazione neutra al glifo.
-                    - Mentor Altra reazione neutra al glifo.
-                    - Mentor RUn'altra ancora reazione neutra al glifo.
+                    - {charTag(Mentor, "neutral")}:         Posso capire.
+                    - {charTag(Mentor, "neutral")}:         Ha senso.
+                    - {charTag(Mentor, "neutral")}:         Risuona.
+                    - {charTag(Mentor, "neutral")}:         Mhm.
+                    - {charTag(Mentor, "neutral")}:         Chiaro.
+                    - {charTag(Mentor, "neutral")}:         Già.
                 }
             -> glyph_thereAreOtherTalkers
 
