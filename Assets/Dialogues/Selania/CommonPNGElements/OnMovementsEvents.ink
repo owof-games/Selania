@@ -105,8 +105,9 @@ VAR letters_doggoPause = false
 
     //Primo sigillo creato
     {
-        - glyph_discoveredSigils >= 4 && contentsSafekeeping has nestOpened:
-    }        ~ move_entity(nestOpened, Bedroom)
+        - LIST_COUNT(glyph_discoveredSigils) >= 4 && contentsSafekeeping has nestOpened:
+            ~ move_entity(nestOpened, Bedroom)
+    }        
 
     //Prima missione Franco completata
     {
