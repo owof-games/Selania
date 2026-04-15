@@ -22,7 +22,7 @@
         VAR openingPlacesMaxPause = 2
 
 
-=== story_time_management_for_PNG
+=== function story_time_management_for_PNG()
 {debug: passo per story_time_management_for_PNG}
 //Questa la uso per far sentire il rumore del treno dove serve
 ~ temp CurrentLocation = entity_location(PG)
@@ -75,7 +75,7 @@
                 //cambiamento asset per mentore, che passa a mostrone
     }
     
-        ->->
+
 
 
 
@@ -136,7 +136,7 @@
             ~ move_entity(FromForestToLibraryBlocked, Safekeeping)
             ~ move_entity(FromForestToLibrary, Forest)
             ~ move_entity(mapLibrary, TrainStop)
-            // ~ movements_randomablePlaces += Library
+            ~ movements_randomablePlaces += Library
             ~ player_accessiblePlaces += Library
             //Attiviamo una pausa per evitare che i luoghi vengano aperti tutti di fila
             ~ openingPlacesPause = openingPlacesMaxPause
@@ -154,6 +154,11 @@
             ~ openingPlacesPause = openingPlacesMaxPause
     }
     
+    //Aggiunta dump ai luoghi randomizzabili
+    {
+        - grimoire_witch has grimWitchIntro && movements_randomablePlaces hasnt Dump:
+            ~ movements_randomablePlaces += Dump
+    }
 
  
 
@@ -321,20 +326,21 @@
                 {debug: i luoghi randomizzabili sono {movements_randomablePlaces}}
                 {debug: il luogo scelto per la randomizzazione è {location}}
                 //Per il pezzo qui sotto, l'idea è di avere unx solx personaggix alla volta in biblioteca e nella discarica, se e solo se comunque lx dovessi sbloccare come aree (e a quel punto mi basta aggiungerle a movements_randomablePlaces)
-                    // {
-                    //     - location == Dump:
-                    //         {
-                    //             - (contentsDump has FirstCharacter) or (contentsDump has SecondCharacter) or (contentsDump has ThirdCharacter) or (contentsDump has Mentor):
-                    //                 ~ location = Forest
-                    //         }
-                    // }
-                    // {
-                    //     - location == Library:
-                    //         {
-                    //             - (contentsLibrary has FirstCharacter) or (contentsLibrary has SecondCharacter) or (contentsLibrary has ThirdCharacter) or (contentsLibrary has Mentor):
-                    //                 ~ location = Pond
-                    //         }
-                    // }
+                    {
+                        - location == Dump:
+                            {
+                                - (contentsDump has FirstCharacter) or (contentsDump has SecondCharacter) or (contentsDump has ThirdCharacter) or (contentsDump has Mentor):
+                                    {debug: il luogo random è Dump, ma visto che c'è già {contentsDump}, mando {character} alla foresta.}
+                                    ~ location = Forest
+                            }
+
+                        - location == Library:
+                            {
+                                - (contentsLibrary has FirstCharacter) or (contentsLibrary has SecondCharacter) or (contentsLibrary has ThirdCharacter) or (contentsLibrary has Mentor):
+                                    {debug: il luogo random è Library, ma visto che c'è già {contentsLibrary}, mando {character} allo stagno.}
+                                    ~ location = Pond
+                            }
+                    }
             //Scelto il luogo e lx PNG, sposto e resetto.
             ~ move_entity(character, location)
             ~ movements_randomizable_characters -= character    

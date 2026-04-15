@@ -10,7 +10,7 @@ VAR letters_doggoPause = false
 === on_movement_events
 {debug: passo da on_movement_events.}
 //Prima aggiorno tutti i valori che possono condizionarne altri
-    -> story_time_management_for_PNG->
+    ~ story_time_management_for_PNG()
     ~ on_movement_PG_values()
     ~ on_movement_characters_values()
     -> on_movement_kitchen_tracker ->
