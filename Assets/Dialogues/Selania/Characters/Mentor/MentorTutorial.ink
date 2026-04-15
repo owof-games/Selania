@@ -251,68 +251,75 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-        Ho visto che ci hai preso gusto a chiacchierare, e la cosa mi fa solo che piacere.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-        Direi quindi che è giunto il momento di spiegarti il tuo lavoro.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Questo non è solo un posto magnifico di per sé, {player_name}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-        È un luogo con uno scopo, uno scopo che riguarda anche te.
-        Soprattutto te.
-        Le persone che incontri qui rimaste bloccate in qualcosa: rimpianti, rimorsi, traumi e tutto lo scibile dell'esperienza umana.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-        E il tuo scopo, {player_name}, è aiutarle a riscrivere il modo in cui raccontano la loro storia, così che possano sbloccarsi.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-        Perché tu {player_pronouns has him:amico mio|{player_pronouns has her:amica mia|amicə miə}} sei <b><i>{player_pronouns has him:un riscrittore|{player_pronouns has her:una riscrittora|unə riscrittorə}}</b></i>!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-        E se farai bene il tuo lavoro, aiuterai moltissime persone a sbloccarsi, e a scegliere un nuovo nome, il segno di un nuovo inizio.
+        {charTag(Mentor, "hurry")}:         Ho visto che ci hai preso gusto a chiacchierare, e la cosa mi fa solo che piacere.
+        {charTag(Mentor, "neutral")}:       Direi quindi che è giunto il momento di spiegarti il tuo lavoro.
+                                            Questo non è solo un posto magnifico di per sé, {player_name}.
+                                            È un luogo con uno scopo, uno scopo che riguarda anche te.
+        {charTag(Mentor, "hurry")}:         Soprattutto te.
+        {charTag(Mentor, "neutral")}:       Le persone che incontri qui rimaste bloccate in qualcosa: rimpianti, rimorsi, traumi e quant'altro.
+                                            E il tuo scopo, {player_name}, è aiutarle a riscrivere il modo in cui raccontano la loro storia, così che possano sbloccarsi.
+        {charTag(Mentor, "hurry")}:         Perché tu {player_pronouns has him:amico mio|{player_pronouns has her:amica mia|amicə miə}} sei <b><i>{player_pronouns has him:un riscrittore|{player_pronouns has her:una riscrittora|unə riscrittorə}}</b></i>!
+        {charTag(Mentor, "neutral")}:       E se farai bene il tuo lavoro, aiuterai moltissime persone a sbloccarsi, e a scegliere un nuovo nome, il segno di un nuovo inizio.
             {
                 - are_two_entities_together(FirstCharacter, PG):
-                    Tipo, un nome diverso da {charNameOne}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed 
-                    Esattamente, {charNameOne}!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry   
+                    {charTag(FirstCharacter, "annoyed")}:       Tipo, un nome diverso da {charNameOne}.
+                    {charTag(Mentor, "hurry")}:                 Esattamente, {charNameOne}!   
             }
-        Quello {player_pronouns has him:del riscrittore|{player_pronouns has her:della riscrittora|dellə riscrittorə}} è un lavoro con pochi strumenti, ma che richiede molta empatia.
-        Come ti dicevo all'inizio, il primo è l'ascolto.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Accogli le loro storie, capisci quale sia la cosa giusta da dire per farle sentire comprese.
-        Conquista la loro fiducia.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-        Così otterrai il secondo strumento: l'<b><i>inchiostro</b></i>.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        L'inchiostro è il premio di una buona relazione.
-        Ogni goccia di inchiostro raccoglie l'essenza della persona che l'ha creato, ed è uno strumento potentissimo per la <b>riscrittura</b>, l'ultimo atto del tuo lavoro.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-        Ma tratteremo meglio la riscrittura più avanti.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+        {charTag(Mentor, "neutral")}:       Quello {player_pronouns has him:del riscrittore|{player_pronouns has her:della riscrittora|dellə riscrittorə}} è un lavoro con pochi strumenti, ma che richiede molta empatia.
+                                            Come ti dicevo all'inizio, il primo è l'ascolto.
+                                            Accogli le loro storie, capisci quale sia la cosa giusta da dire per farle sentire comprese.
+        {charTag(Mentor, "hurry")}:         Conquista la loro fiducia.
+        {charTag(Mentor, "neutral")}:       Così otterrai il secondo strumento: l'<b><i>inchiostro</b></i>.
+                                            L'inchiostro è il premio di una buona relazione.
+                                            Ogni goccia di inchiostro raccoglie l'essenza della persona che l'ha creato, ed è uno strumento potentissimo per la <b>riscrittura</b>, l'ultimo atto del tuo lavoro.
+                                            Ma tratteremo meglio la riscrittura più avanti.
 
-            + \ {charTag(PG, "neutral")}:             Non potrebbe servire a tutt3 un nuovo nome, un nuovo inizio?
+            + \ {charTag(PG, "neutral")}:           Non potrebbe servire a tutt3 un nuovo nome, un nuovo inizio?
                     -> glyph_modifier_variation_management(Mentor, aetherC)->
-                Immagino possa servire a molt3.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                A me no, ad esempio.
-                Questo è stato, è e sarà sempre il mio nome.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Ma alla fine il nome è solo un simbolo, non è l'obiettivo in sé.       
+
+                {charTag(Mentor, "sad")}:           Immagino possa servire a molt3.
+                {charTag(Mentor, "neutral")}:       A me no, ad esempio.
+                                                    Questo è stato, è e sarà sempre il mio nome.
+                                                    Ma alla fine il nome è solo un simbolo, non è l'obiettivo in sé.       
                     
-            + \ {charTag(PG, "neutral")}:             Con l'inchiostro ci posso disegnare?
+            + \ {charTag(PG, "neutral")}:           La fiducia non è una cosa che si conquista, ma che si costruisce. Assieme.
                     -> glyph_modifier_variation_management(Mentor, earthC)->
-                Apprezzo la tua creatività, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Ma tu sei {player_pronouns has him:un riscrittore|{player_pronouns has her:una riscrittora|unə riscrittorə}}, non {player_pronouns has him:un disegnatore|{player_pronouns has her:una disegnatrice|unə disegnatricə}}.
+
+                {charTag(Mentor, "sorry")}:         Credo tu abbia capito cosa intendo, {player_name}.
+                {charTag(Mentor, "neutral")}:       Hai un obiettivo, e per raggiungerlo ti serve uno strumento.
+                                                    E tra te e quello strumento, che è l'inchiostro, c'è di mezzo la fiducia dell'altra persona.
+        
                     
-            + \ {charTag(PG, "neutral")}:             Solo le persone care ci fanno vedere noi stess3 in modo diverso.
+            + \ {charTag(PG, "neutral")}:           Non hanno persone care da cui farsi aiutare?
                     -> glyph_modifier_variation_management(Mentor, waterC)->
-                A volte è più facile aprirsi a chi non si conosce.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                E mentre noi riflettiamo sulle loro difficoltà, impariamo anche qualcosa su di noi.
+
+                {charTag(Mentor, "neutral")}:       A volte è più facile aprirsi a chi non si conosce.
+                                                    E mentre noi riflettiamo sulle loro difficoltà, impariamo anche qualcosa su di noi.
                         
-            + \ {charTag(PG, "neutral")}:             Non avrebbe più senso chiamarla "rilettura" invece di "riscrittura"?
+            + \ {charTag(PG, "neutral")}:           Non avrebbe più senso chiamarla "rilettura" invece di "riscrittura"?
                     -> glyph_modifier_variation_management(Mentor, airC)->
-                Ci ho pensato molte volte anche io, sai?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                La risposta che mi sono data è che "riscrivere" dà un senso di azione, di cambiamento, che "rileggere" non ha.
-                E nel momento in cui una persona si sente bloccata, la cosa di cui ha più bisogno è di sentire la possibilità di poter di nuovo agire sul mondo, su di sé.
-                Ogni tanto questa discrepanza mi urta.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-                Ma alla fine deve funzionare per le persone che aiutiamo, non per noi.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+
+                {charTag(Mentor, "hurry")}:         Ci ho pensato molte volte anche io, sai?
+                {charTag(Mentor, "neutral")}:       La risposta che mi sono data è che "riscrivere" dà un senso di azione, di cambiamento, che "rileggere" non ha.
+                                                    E nel momento in cui una persona si sente bloccata, la cosa di cui ha più bisogno è di sentire la possibilità di poter di nuovo agire sul mondo, su di sé.
+                {charTag(Mentor, "bored")}:         Ogni tanto questa discrepanza mi urta.
+                {charTag(Mentor, "neutral")}:       Ma alla fine deve funzionare per le persone che aiutiamo, non per noi.
   
-            + \ {charTag(PG, "neutral")}:             Un nome è soltanto un nome. A cosa serve cambiarlo?
+            + \ {charTag(PG, "neutral")}:           Un nome è soltanto un nome. A cosa serve cambiarlo?
                     -> glyph_modifier_variation_management(Mentor, fireC)->
-                Un nome è come una magia che carichiamo di volta in volta di significato..#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                A volte quella magia non va più bene, e dobbiamo cercare una nuova formula. 
-                Un nuovo nome.
+
+                {charTag(Mentor, "neutral")}:       Un nome è come una magia che carichiamo di volta in volta di significato..
+                                                    A volte quella magia non va più bene, e dobbiamo cercare una nuova formula. 
+                                                    Un nuovo nome.
             -
-        Un modo per dimostrare a una persona che l'hai compresa, è farle un <b>dono</b>, ed è per questo che ti ho sbloccato la serra.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-        Il dono giusto è un modo per dire "Ehi, ti vedo, ti capisco".#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Migliorare il rapporto.
-        E ottenere più inchiostro.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-        Continua a lavorare sulle relazioni che stai costruendo, e tra un po' ti spiego cos'è la riscrittura.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Ora devo assolutamente spolverare le foglie della foresta.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-        Questo posto collasserebbe senza me.
-        A dopo!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry    
+        {charTag(Mentor, "neutral")}:       Un modo per dimostrare a una persona che l'hai compresa, è farle un <b>dono</b>, ed è per questo che ti ho sbloccato la serra.
+        {charTag(Mentor, "hurry")}:         Il dono giusto è un modo per dire "Ehi, ti vedo, ti capisco".
+                                            Migliorare il rapporto.
+                                            E ottenere più inchiostro.
+        {charTag(Mentor, "neutral")}:       Continua a lavorare sulle relazioni che stai costruendo, e tra un po' ti spiego cos'è la riscrittura.
+        {charTag(Mentor, "sad")}:           Ora devo assolutamente spolverare le foglie della foresta.
+                                            Questo posto collasserebbe senza me.
+        {charTag(Mentor, "neutral")}:       A dopo!    
 
             {
                 - entity_location(Mentor) != Forest:
@@ -330,66 +337,78 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-        {player_name}!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Credo sia giunto il momento di spiegarti le ultime cose importanti per il tuo lavoro di {player_pronouns has him:riscrittore|{player_pronouns has her:riscrittora|riscrittorə}}.
+        {charTag(Mentor, "hurry")}:         {player_name}!
+                                            Credo sia giunto il momento di spiegarti le ultime cose importanti per il tuo lavoro di {player_pronouns has him:riscrittore|{player_pronouns has her:riscrittora|riscrittorə}}.
                 {
                     - are_two_entities_together(SecondCharacter, PG):
-                        Uffi. Sembra di stare a scuola.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
-                    
+                        {charTag(SecondCharacter, "angry")}:            Uffi. Sembra di stare a scuola.
+                
                 }
-        Quando avrai parlato a sufficienza con una persona, sentirai di poterle proporre di rileggere assieme la sua storia.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Se glielo proporrai la persona sarà finalmente capace di condividere con te come si legge, cosa la blocca qui.
-        E a quel punto tu potrai proporre una riscrittura.
-        O meglio: <b><i>delle riscritture</b></i>.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-        Hai presente l'inchiostro di cui parlavamo prima? #speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Ogni goccia di inchiostro è una possibilità in più di proporre una riscrittura di un aspetto della vita della persona.
-        E quindi la logica diventa: più fiducia uguale più inchiostro uguale più riscritture uguale maggiori occasioni di successo!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Ma se anche non dovessi avere una sola goccia di inchiostro, non disperare, perché ogni riscrittorə ha in sé un terzo strumento: lo strumento dell'<b><i>epilogo</b></i>.
-        L'<b><i>epilogo</b></i> è una dichiarazione finale dellə riscrittorə, con l'obiettivo di far mettere alla persona un punto sul suo presente e iniziare a guardare al futuro in modo diverso.
-        Così persona e riscrittorə raggiungeranno il loro obiettivo: un nuovo nome, simbolo di un nuovo inizio.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+        {charTag(Mentor, "hurry")}:         Quando avrai parlato a sufficienza con una persona, sentirai di poterle proporre di rileggere assieme la sua storia.
+        {charTag(Mentor, "neutral")}:       Se glielo proporrai la persona sarà finalmente capace di condividere con te come si legge, cosa la blocca qui.
+                                            E a quel punto tu potrai proporre una riscrittura.
+                                            O meglio: <b><i>delle riscritture</b></i>.
+        {charTag(Mentor, "hurry")}:         Hai presente l'inchiostro di cui parlavamo prima? 
+                                            Ogni goccia di inchiostro è una possibilità in più di proporre una riscrittura di un aspetto della vita della persona.
+        {charTag(Mentor, "neutral")}:       E quindi la logica diventa: più fiducia uguale più inchiostro uguale più riscritture uguale maggiori occasioni di successo!
+                                            Ma se anche non dovessi avere una sola goccia di inchiostro, non disperare, perché ogni riscrittorə ha in sé un terzo strumento: lo strumento dell'<b><i>epilogo</b></i>.
+                                            L'<b><i>epilogo</b></i> è una dichiarazione finale dellə riscrittorə, con l'obiettivo di far mettere alla persona un punto sul suo presente e iniziare a guardare al futuro in modo diverso.
+        {charTag(Mentor, "hurry")}:         Così persona e riscrittorə raggiungeranno il loro obiettivo: un nuovo nome, simbolo di un nuovo inizio.
 
     
-                + \ {charTag(PG, "neutral")}:             Questa cosa di dare un nuovo nome mi spaventa, è invasiva come roba, no?
+                + \ {charTag(PG, "neutral")}:               Questa cosa di dare un nuovo nome mi spaventa, non è invadente?
                         -> glyph_modifier_variation_management(Mentor, waterC)->
-                    No, {player_name}, non sei tu a decidere che nome la persona sceglierà.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                    Né che percorso farà.
-                    Tu aiuti queste persone a rileggere il proprio passato, il loro presente.
-                    A poi starà a loro, e solo a loro, decidere verso quale futuro andare.
 
-                + \ {charTag(PG, "neutral")}:             Ma non posso dire "Ehi tu chiamati così e cosà" e bona?
+                    {charTag(Mentor, "neutral")}:           No, {player_name}, non sei tu a decidere che nome la persona sceglierà.
+                                                            Né che percorso farà.
+                    {charTag(Mentor, "hurry")}:             Tu aiuti queste persone a rileggere il proprio passato, il loro presente.
+                    {charTag(Mentor, "neutral")}:           A poi starà a loro, e solo a loro, decidere verso quale futuro andare.
+
+                + \ {charTag(PG, "neutral")}:               Ma non posso dire "Ehi tu chiamati così e cosà" e bona?
                         -> glyph_modifier_variation_management(Mentor, fireC)->
-                    Un nuovo nome è una nuova esperienza.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                    E l'esperienza viene dal percorso.
-                    Se non c'è percorso, non c'è cambiamento.
-                    E poi sta alla persona decidere il suo nome.
+
+                    {charTag(Mentor, "neutral")}:           Un nuovo nome è una nuova esperienza.
+                                                            E l'esperienza viene dal percorso.
+                    {charTag(Mentor, "sad")}:               Se non c'è percorso, non c'è cambiamento.
+                    {charTag(Mentor, "neutral")}:           E poi sta alla persona decidere il suo nome.
                         
-                + \ {charTag(PG, "neutral")}:              \ {charNameOne} non è una persona razionale. Può farcela?
+                + \ {charTag(PG, "neutral")}:               Creo fiducia, prendo l'inchiostro, aiuto a riscrivere. Matematico.
                         -> glyph_modifier_variation_management(Mentor, airC)->
-                    {player_name}, capisco la tua perplessità, ma con la giusta guida, ogni strada è percorribile.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                    E noi due assieme non possiamo di certo sbagliare!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+
+                    {charTag(Mentor, "neutral")}:           Non è così matematico.
+                                                            Le persone non sono numeri.
+                                                            E le relazioni non si creano con una formula.
+                                                            Ma sì, direi che hai capito il succo.
+                        
+                + \ {charTag(PG, "neutral")}:               Mi son pers{player_pronouns has him:o|{player_pronouns has her:a|ə}} alla terza frase. Succede sempre.
+                        -> glyph_modifier_variation_management(Mentor, earthC)->
+
+                    {charTag(Mentor, "sad")}:               Capita anche a me.
+                    {charTag(Mentor, "hurry")}:             Però non ti far problemi a richiedermi cosa fare, sono sempre qui al tuo servizio!
+                        
+
+
+                + \ {charTag(PG, "neutral")}:               Sembra tutto molto pratico e razionale, per essere un'esperienza così spirituale.
+                        -> glyph_modifier_variation_management(Mentor, aetherC)->
+
                         {
                             - are_two_entities_together(FirstCharacter, PG):
-                                E {charNameOne} è razionale.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-                                A modo suo.     
+                                {charTag(FirstCharacter, "annoyed")}:       Già.
                         }
-                        
-                + \ {charTag(PG, "neutral")}:             Mi son pers{player_pronouns has him:o|{player_pronouns has her:a|ə}} alla terza frase. Succede sempre.
-                        -> glyph_modifier_variation_management(Mentor, earthC)->
-                    Capita anche a me.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                    Forse dovrei scrivere queste cose da qualche parte.
-                    E poi ricorda che hai sempre il Grimorio con te!
-                        
-                + \ {charTag(PG, "neutral")}:             Preferisco darmi i miei obiettivi da sol{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
-                        -> glyph_modifier_variation_management(Mentor, aetherC)->
-                    Il tuo obiettivo <i>qui</i>, perdonami.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                    Non avendo altri luoghi in cui andare, mi dimentico che possono esserci sono altre vite, altri obiettivi da raggiungere. 
+
+                        {charTag(Mentor, "neutral")}:       "Sembra" però è la cosa giusta da dire.
+                                                            Perché non devi ascoltare solo con la testa, ma soprattutto col cuore.
+                                                            Capire cosa desidera una persona.
+                                                            Come ragiona.
+                                                            Che dono farle.
+                                                            Non è solo razionalità, per fortuna.   
                 -
 
-        Ricorda {player_name}: sei una guida, ma sta alla persona decidere alla fine chi è, e di cosa ha bisogno.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Anche per questo non c'è un buon esito o un cattivo esito di una riscrittura.
-        Quando te la senti, affronta questo ultimo passaggio e poi torna da me.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+        {charTag(Mentor, "neutral")}:                       Ricorda {player_name}: sei una guida, ma sta alla persona decidere alla fine chi è, e di cosa ha bisogno.
+                                                            Anche per questo non c'è un buon esito o un cattivo esito di una riscrittura.
+        {charTag(Mentor, "sorry")}:                         Ma mi permetterò comunque di darti dei feedback, per aiutarti nel tuo percorso.                                                    
+        {charTag(Mentor, "neutral")}:                       Quando te la senti, affronta questo ultimo passaggio e poi torna da me.
         
-
                 -> mentor_closing_storylet ->
                 -> main
 
@@ -397,34 +416,34 @@
 //Minitutorial sui minigames
 === about_greenhouse
 
-    Sai {player_name}? La <b><i>serra</b></i> non è solo un bel posto dove rilassarsi.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-    Tra i tanti modi per migliorare un rapporto con una persona, fare il dono giusto è forse il più immediato.
+    {charTag(Mentor, "neutral")}:                           Sai {player_name}? La <b><i>serra</b></i> non è solo un bel posto dove rilassarsi.
+    {charTag(Mentor, "hurry")}:                             Tra i tanti modi per migliorare un rapporto con una persona, fare il dono giusto è forse il più immediato.
             {
-                - firstChar_giftedObject != () or secondChar_giftedObject != ():
-                    E vedo che hai già imparato come fare! Sei sempre un passo avanti.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                - firstChar_giftedObject != () or secondChar_giftedObject != () or thirdChar_giftedObject != ():
+                                                            E vedo che hai già imparato come fare! Sei sempre un passo avanti.
                 
                 - else:
-                    E ti consiglio di farlo, per facilitarti la vita.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                    {charTag(Mentor, "neutral")}:           E ti consiglio di farlo, per facilitarti la vita.
             }
-    Il dono giusto mostra comprensione, è la dimostrazione di aver ascoltato l'altra persona.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-    So chi sei.
+    {charTag(Mentor, "neutral")}:                           Il dono giusto mostra comprensione, è la dimostrazione di aver ascoltato l'altra persona.
+                                                            So chi sei.
             {
                 - are_two_entities_together(SecondCharacter, PG):
-                    Io so di essere una persona che vuole le caramelle.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+                    {charTag(SecondCharacter, "emotional")}:        Io so di essere una persona che vuole le caramelle.
                     
             } 
 
-    Anche per questo esistono doni sbagliati.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-    O mediocri.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+    {charTag(Mentor, "neutral")}:                           Anche per questo esistono doni sbagliati.
+    {charTag(Mentor, "bored")}:                             O mediocri.
             {
                 - are_two_entities_together(FirstCharacter, PG):
-                    Come sa chiunque riceva regali di Natale dai parenti.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed 
+                    {charTag(FirstCharacter, "annoyed")}:   Come sa chiunque riceva regali di Natale dai parenti.
                     
             } 
-    La serra, con le sue piante magnifiche, è personalmente il posto migliore dove coltivare e recuperare doni.
-    Gli effetti dei doni tra l'altro sono immediati e permanenti.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-    Ed è per questo che ogni riscrittorə può darne solo uno a persona.
-    Qualcosa di così forte non può certo essere usato senza coscienza. #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+    {charTag(Mentor, "hurry")}:                             La serra, con le sue piante magnifiche, è personalmente il posto migliore dove coltivare e recuperare doni.
+    {charTag(Mentor, "neutral")}:                           Gli effetti dei doni tra l'altro sono immediati e permanenti.
+                                                            Ed è per questo che ogni riscrittorə può darne solo uno a persona.
+    {charTag(Mentor, "sorry")}:                             Qualcosa di così forte non può certo essere usato senza coscienza.
 
 
         -> mentor_closing_storylet ->
@@ -438,23 +457,23 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    Una cucina su una palude?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-    Non la mia prima scelta.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_bored
-    Non mi fa impazzire che tu vada in luoghi così malmessi.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-    Ma forse non è una così cattiva idea: cucinare assieme è un momento di intimità.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-    E mangiare è uno spazio di bella condivisione.
+    {charTag(Mentor, "bored")}:                             Una cucina su una palude?
+                                                            Non la mia prima scelta.
+    {charTag(Mentor, "sad")}:                               Non mi fa impazzire che tu vada in luoghi così malmessi.
+    {charTag(Mentor, "neutral")}:                           Ma l'idea della cucina non è così cattiva in sé: cucinare assieme è un momento di intimità.
+                                                            E mangiare è uno spazio di bella condivisione.
             {
                 - are_two_entities_together(FirstCharacter, PG):
-                        Ci facciamo una pastasciutta assieme, {mentorName}?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-                        Magari più tardi?
-                        Ho da sverniciare la panchina.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                        {charTag(FirstCharacter, "curious")}:       Ci facciamo una pastasciutta assieme, {mentorName}?
+                        {charTag(Mentor, "hurry")}:                 Magari più tardi?
+                        {charTag(Mentor, "sorry")}:                 Ho da pulire la cera delle candele.
                     
             } 
-    Passare del tempo in cucina con qualcunə può essere un bel modo per conoscervi meglio.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-    E per capire che piega stia prendendo la vostra relazione.
+    {charTag(Mentor, "neutral")}:                           Passare del tempo in cucina con qualcunə può essere un bel modo per conoscervi meglio.
+                                                            E per capire che piega stia prendendo la vostra relazione.
             {
                 - are_two_entities_together(SecondCharacter, PG): 
-                    O per bruciare cose strane e vedere cosa succede!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+                    {charTag(SecondCharacter, "energy")}:   O per bruciare cose strane e vedere cosa succede!
                     
             }
     
@@ -469,14 +488,14 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-    Ho visto che {charNameThree} ha trovato il modo di sbloccarti l'accesso al Nido.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-    Non posso certo dire che le persone qui non si diano da fare, ed è una bella cosa.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-    Ho dei sentimenti contrastanti verso quello che si può fare su quella spiaggia.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-    Da una parte i Sigilli mi danno l'impressione di essere una forma di controllo.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-    Ma la cosa che penso ogni volta che li vedo è che rendano la comunicazione più chiara.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-    È così difficile far capire alle altre persone quello che si prova e si pensa, e sarebbe bello avere uno strumento, un codice, qualcosa che ti faccia sapere sin da subito che verrai capita.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-    Immagino che sarà il modo in cui ne farai uso a definirne il valore.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-    Un giorno mi piacerebbe impararne qualcuno.
+    {charTag(Mentor, "neutral")}:                       Ho visto che {charNameThree} ha trovato il modo di sbloccarti l'accesso al Nido.
+    {charTag(Mentor, "hurry")}:                         Non posso certo dire che le persone qui non si diano da fare, ed è una bella cosa.
+    {charTag(Mentor, "neutral")}:                       Ho dei sentimenti contrastanti verso quello che si può fare su quella spiaggia.
+    {charTag(Mentor, "sad")}:                           Da una parte i Sigilli mi danno l'impressione di essere una forma di controllo.
+    {charTag(Mentor, "neutral")}:                       Ma la cosa che penso ogni volta che li vedo è che rendano la comunicazione più chiara.
+    {charTag(Mentor, "sad")}:                           È così difficile far capire alle altre persone quello che si prova e si pensa, e sarebbe bello avere uno strumento, un codice, qualcosa che ti faccia sapere sin da subito che verrai capita.
+    {charTag(Mentor, "neutral")}:                       Immagino che sarà il modo in cui ne farai uso a definirne il valore.
+    {charTag(Mentor, "hurry")}:                         Un giorno mi piacerebbe impararne qualcuno.
 
             -> mentor_closing_storylet ->
             -> main
@@ -490,27 +509,31 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    Stavo pensando a una cosa, {player_name}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+    {charTag(Mentor, "neutral")}:                       Stavo pensando a una cosa, {player_name}.
         {
             - grimoire_firstChar has grimFirstOpenKitchen:
-                Sono felice che {charNameOne} abbia sistemato la vecchia cucina.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                                                        Sono felice che {charNameOne} abbia sistemato la vecchia cucina.
         }
         {
             - grimoire_secondChar has grimSecondOpenLibrary:
                 {
                     - grimoire_firstChar has grimFirstOpenKitchen:
-                        E mi <>
+                                                        E mi <>
                     
                     - else:
-                        Mi <>
+                                                        Mi <>
                 }
-                fa piacere che {charNameTwo} abbia aperto la strada per la biblioteca.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                                                        fa piacere che {charNameTwo} abbia aperto la strada per la biblioteca.
                 
-        }   
-    Ogni spazio aggiuntivo, inclusa la serra, è un'occasione in più per conoscere meglio le persone che stai aiutando.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-    E alcuni di questi possono anche offrirti qualche strumento che, sinceramente, nemmeno avevo calcolato.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-    Ma ricorda che non sono passaggi obbligatori.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-    Fai sempre e solo quello di cui senti il bisogno.
+        }
+        {
+            - grimoire_thirdChar has grimThirdOpenNest:
+                                                        E anche il nido è disponibile, grazie al lavoro di {charNameThree}.
+        }
+                                                        Ogni spazio aggiuntivo, inclusa la serra, è un'occasione in più per conoscere meglio le persone che stai aiutando.
+                                                        E alcuni di questi possono anche offrirti qualche strumento che, sinceramente, nemmeno avevo calcolato.
+                                                        Ma ricorda che non sono passaggi obbligatori per compiere il tuo lavoro.
+    {charTag(Mentor, "hurry")}:                         Fai sempre e solo quello di cui senti il bisogno.
 
         -> mentor_closing_storylet ->
         -> main
@@ -523,14 +546,16 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-        Sembra che {charNameOne} ti abbia scritto una lettera, {player_name}! #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Che cosa dolce, vero?
+
+
+        {charTag(Mentor, "hurry")}:             Sembra che {charNameOne} ti abbia scritto una lettera, {player_name}! 
+                                                Che cosa dolce, vero?
         {
             - entity_location(PG) == TrainStop:
-                L'ha con sé quella cagnolina!
+                                                L'ha con sé quella cagnolina!
                 
             - else:
-                La trovi alla fermata del treno.
+                                                La trovi alla fermata del treno.
         }
 
         -> main
@@ -543,16 +568,35 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-        Sembra che {charNameTwo} ti abbia scritto una lettera, {player_name}! #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Che cosa dolce, vero?
+        {charTag(Mentor, "hurry")}:             Sembra che {charNameTwo} ti abbia scritto una lettera, {player_name}! 
+                                                Che cosa dolce, vero?
         {
             - entity_location(PG) == TrainStop:
-                L'ha con sé quella cagnolina!
+                                                L'ha con sé quella cagnolina!
                 
             - else:
-                La trovi alla fermata del treno.
+                                                La trovi alla fermata del treno.
         }
 
         -> main
    
+   
+=== third_char_new_mail
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+    
+        {charTag(Mentor, "hurry")}:             Sembra che {charNameThree} ti abbia scritto una lettera, {player_name}! 
+                                                Che cosa dolce, vero?
+        {
+            - entity_location(PG) == TrainStop:
+                                                L'ha con sé quella cagnolina!
+                
+            - else:
+                                                La trovi alla fermata del treno.
+        }
+
+        -> main
    

@@ -70,13 +70,16 @@
             -> about_not_mandatory_work    
             
         //Invito a leggere la posta nuova    
-        - contentsTrainStop has DoggoFirstLetters or contentsTrainStop has DoggoSecondLetters && not first_character_notes && not second_character_notes:
+        - contentsTrainStop has DoggoFirstLetters or contentsTrainStop has DoggoSecondLetters or contentsTrainStop has DoggoThirdLetters && (grimoire_firstChar hasnt grimFirstCharLetterOne && grimoire_secondChar hasnt grimSecondCharLetterOne && grimoire_thirdChar hasnt grimThirdCharLetterOne):
             {
-                - contentsTrainStop has DoggoFirstLetters && not first_character_notes && not first_char_new_mail:
+                - contentsTrainStop has DoggoFirstLetters && grimoire_firstChar hasnt grimFirstCharLetterOne && not first_char_new_mail:
                     -> first_char_new_mail
 
-                - contentsTrainStop has DoggoSecondLetters && not second_character_notes && not second_char_new_mail:
+                - contentsTrainStop has DoggoSecondLetters && grimoire_secondChar hasnt grimSecondCharLetterOne && not second_char_new_mail:
                     -> second_char_new_mail
+
+                - contentsTrainStop has DoggoThirdLetters && grimoire_thirdChar hasnt grimThirdCharLetterOne && not third_char_new_mail:
+                    -> third_char_new_mail    
 
                 - else:
                     -> personal_mentor_storylets    
