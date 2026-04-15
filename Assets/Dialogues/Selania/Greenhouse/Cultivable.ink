@@ -1253,12 +1253,7 @@
                     -> main                              
 
 === ending_cultivation
-    {
-    - ending_cultivation == 1:
-        ~ move_entity(greenhouseOpened, Bedroom)
 
-    }
-    
     {
        - are_two_entities_together(PG,Grimoire):
            @animation:Grimoire

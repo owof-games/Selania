@@ -35,13 +35,34 @@
 === on_movement_special_events
 {debug: passo da on_movement_special_events.}
 ~ temp currentPlace = entity_location(PG)
-//A inizio gioco, mi salvo la lista di tutte le commissioni di Franco.
+//Achievements:
+    //A inizio gioco, mi salvo la lista di tutte le commissioni di Franco.
     {
         - frog_allAvailableMissions == ():
             ~ frog_allAvailableMissions = frog_availableCommonMissions + frog_availableSpecialMissions
             ~ achievements_fullFranco_maxValue = LIST_COUNT(frog_allAvailableMissions)
     }
-    //E aggiorno lo stato dei doni disponibili. Blocco questa cosa dopo il primo discorso con Chitarra, perché è una cosa che devo fare solo una volta.
+    //Idem per i coltivabili
+    {
+        - greenhouse_allCultivables == ():
+            ~ greenhouse_allCultivables += greenhouse_cultivable
+            ~ achievements_fullGreenhouse_maxValue = LIST_COUNT(greenhouse_allCultivables)
+            ~ achievements_fullGreenhouse_maxValue ++
+    }
+    //E per il libri
+    {
+        - library_allAchievementStories == ():
+            ~ library_allAchievementStories += library_unreadStories
+            ~ achievements_goodReader_maxValue = LIST_COUNT(library_allAchievementStories)
+    }
+    //E la lore
+    {
+        - horizontalS_allAchievementDocs == ():
+            ~ horizontalS_allAchievementDocs += horizontalS_allDocs
+            ~ achievements_fullLore_maxValue = LIST_COUNT(horizontalS_allAchievementDocs)
+    }
+
+//Franco: aggiorno lo stato dei doni disponibili. Blocco questa cosa dopo il primo discorso con Chitarra, perché è una cosa che devo fare solo una volta.
     {
         - grimoire_firstChar == ():
             ~ frog_firstCharAchievableGifts += frog_allCharactersGifts
@@ -52,27 +73,80 @@
             ~ frog_otherGifts += frog_uniqueGifts
 
     }
-//Idem per i coltivabili
+
+//Elementi per la camera da letto
+    //Chiusura gioco
     {
-        - greenhouse_allCultivables == ():
-            ~ greenhouse_allCultivables += greenhouse_cultivable
-            ~ achievements_fullGreenhouse_maxValue = LIST_COUNT(greenhouse_allCultivables)
-            ~ achievements_fullGreenhouse_maxValue ++
-    }
-//E per il libri
-    {
-        - library_allAchievementStories == ():
-            ~ library_allAchievementStories += library_unreadStories
-            ~ achievements_goodReader_maxValue = LIST_COUNT(library_allAchievementStories)
-    }
-//E la lore
-    {
-        - horizontalS_allAchievementDocs == ():
-            ~ horizontalS_allAchievementDocs += horizontalS_allDocs
-            ~ achievements_fullLore_maxValue = LIST_COUNT(horizontalS_allAchievementDocs)
+        - grimoire_firstChar != () or grimoire_appendices != () or grimoire_fifthChar != () && contentsSafekeeping has BedClosingGame:
+            ~ move_entity(BedClosingGame, Bedroom)
     }
 
-//A crescita Olobino, cambio asset accesso serra  
+    //Prima pianta coltivata
+    {
+        - greenhouse_findedCultivables != () && contentsSafekeeping has greenhouseOpened:
+            ~ move_entity(greenhouseOpened, Bedroom)
+
+    }
+    //Prima cucinata con qualcunx
+    {
+        - (grimoire_firstChar has grimFirstCharKitchenEnded or grimoire_secondChar has grimSecondCharKitchenEnded or grimoire_thirdChar has grimThirdCharKitchenEnded) && contentsSafekeeping has kitchenOpened:
+            ~ move_entity(kitchenOpened, Bedroom)
+    }
+
+    //Primo libro letto
+    {
+        - library_readStories != () && contentsSafekeeping has libraryOpened:
+            ~ move_entity(libraryOpened, Bedroom)
+    }
+
+    //Primo sigillo creato
+    {
+        - glyph_discoveredSigils >= 4 && contentsSafekeeping has nestOpened:
+    }        ~ move_entity(nestOpened, Bedroom)
+
+    //Prima missione Franco completata
+    {
+        - frog_allMissionsCompleted !=() && contentsSafekeeping has francoOpened:
+            ~ move_entity(francoOpened, Bedroom)
+    }
+
+    //Apertura dump
+    {
+        - grimoire_witch has grimWitchIntro && contentsSafekeeping has dumpOpened:
+            ~ move_entity(dumpOpened, Bedroom)
+    }
+
+    //Ritratti PNG
+    {
+        - firstChar_storyStatus == story_storyEnded && contentsSafekeeping has firstCharPaint:
+            ~ move_entity(firstCharPaint, Bedroom)
+    }
+
+    {
+        - secondChar_storyStatus == story_storyEnded && contentsSafekeeping has secondCharPaint:
+            ~ move_entity(secondCharPaint, Bedroom)
+    }
+
+    {
+        - thirdChar_storyStatus == story_storyEnded && contentsSafekeeping has thirdCharPaint:
+            ~ move_entity(thirdCharPaint, Bedroom)
+    }
+
+    {
+        - fourthChar_storyStatus == story_storyEnded && contentsSafekeeping has fourthCharPaint:
+            ~ move_entity(fourthCharPaint, Bedroom)
+    }
+
+    {
+        - fifthChar_storyStatus == story_storyEnded && contentsSafekeeping has fifthCharPaint:
+            ~ move_entity(fifthCharPaint, Bedroom)
+    }
+
+    
+
+
+//Altri elementi grafici:
+    //A crescita Olobino, cambio asset accesso serra  
     {
         - greenhouse_findedCultivables has Olobino && (entity_location(FromPondToGreenhouseBlooming) == Safekeeping):
             ~ move_entity(FromPondToGreenhouse, Safekeeping)
@@ -80,11 +154,12 @@
     }
 
 
-//Spostamento di libro e inventario se scoperti
+    //Spostamento grimorio se scoperto
     {
         - contentsSafekeeping hasnt Grimoire && currentPlace != Bedroom:
             ~ move_entity(Grimoire, currentPlace)
     }
+
 
 ->->    
            

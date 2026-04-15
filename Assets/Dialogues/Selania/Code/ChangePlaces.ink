@@ -12,10 +12,7 @@
     // + {are_two_entities_together(PG, Grimoire) && debug_stochastic}[Grimoire]
     //        ~ move_entity(PG, BookPlace)
     //    -> main_book    
-        
-    + {are_two_entities_together(PG, MiniGrimoire) && !debug_stochastic} [MiniGrimoire]
-            ~ move_entity(PG, BookPlace)
-        -> main_book      
+         
  
 //Streets to and into the Bedroom
     + {are_two_entities_together(PG, FromTrainStopToBedroom)} [FromTrainStopToBedroom]

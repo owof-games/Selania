@@ -13,8 +13,5 @@
 
 === reading_place
     + (click) {are_two_entities_together(ReadingPlace, PG)} [ReadingPlace]
-        {
-            - click == 1:
-                ~ move_entity(libraryOpened, Bedroom)
-        }
+        
         -> book_test_intro

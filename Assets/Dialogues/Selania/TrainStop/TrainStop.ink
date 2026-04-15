@@ -9,10 +9,6 @@
         {charTag(TheWitch, "{witch_state()}")}:   <i>La stazione profuma di aria nevosa e nuovi arrivi.</i>
 }
     
-{
-    - contentsSafekeeping has BedClosingGame:
-        ~ move_entity (BedClosingGame, Bedroom)
-}
 
 -> main
 

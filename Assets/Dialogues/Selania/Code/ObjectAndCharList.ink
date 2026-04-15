@@ -37,7 +37,7 @@
     
     LIST listBookElements = Grimoire, BookExit, FirstRecap, SecondRecap, ThirdRecap, FourthRecap, FifthRecap, FrogRecap, DogRecap, WitchRecap, GreenhouseRecap, KitchenRecap, NestRecap, RulesRecap, SettingsBookVersion
     
-    LIST listRoomElements = BedClosingGame, FromBedroomToTrainStop, greenhouseOpened,  kitchenOpened, libraryOpened, MiniGrimoire, Settings, firstCharPaint, secondCharPaint, thirdCharPaint, fourthCharPaint, fifthCharPaint
+    LIST listRoomElements = BedClosingGame, FromBedroomToTrainStop, greenhouseOpened,  kitchenOpened, libraryOpened, nestOpened, francoOpened, dumpOpened, Settings, firstCharPaint, secondCharPaint, thirdCharPaint, fourthCharPaint, fifthCharPaint
     
     LIST listSounds = TrainNoiseComing, TrainNoiseGoingAway, BastonSound
     

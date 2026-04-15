@@ -10,11 +10,6 @@
         {charTag(TheWitch, "{witch_state()}")}:   <i>La cucina si apre a nuovi ingredienti e grandi confidenze.</i>
 }    
 
-{
-    - contentsBedroom hasnt kitchenOpened:
-            ~ move_entity(kitchenOpened, Bedroom)
-}
-
 
 -> kitchen_storylets_dispatcher
 
