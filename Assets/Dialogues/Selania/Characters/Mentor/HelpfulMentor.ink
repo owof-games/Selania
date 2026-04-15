@@ -48,13 +48,13 @@
 - (top)
     Come posso esserti utile, {player_pronouns has him: amico mio|{player_pronouns has her: amica mia|amicə miə}}?
     
-        + \ {charTag(PG, "neutral")}:            Avrei bisogno di una mano.
+        + \ {charTag(PG, "neutral")}:                                           Avrei bisogno di una mano.
             -> support
         
-        + \ {charTag(PG, "neutral")}:            {player_somethingStrange != ()} Mi è successa una cosa strana.
+        + {player_somethingStrange != ()}\ {charTag(PG, "neutral")}:            Mi è successa una cosa strana.
             -> little_storylets
     
-        + \ {charTag(PG, "neutral")}:            Ho cambiato idea.
+        + \ {charTag(PG, "neutral")}:                                           Ho cambiato idea.
             -> main
 
 /* ---------------------------------
@@ -68,19 +68,16 @@
     - (top)
     Hai bisogno dei miei consigli?
     
-        + \ {charTag(PG, "neutral")}:            {tutorial_mentorInkAndYouAreARewriter}Mi ripeteresti cosa devo fare?
+        + {tutorial_mentorInkAndYouAreARewriter}\ {charTag(PG, "neutral")}:     Mi ripeteresti cosa devo fare?
             -> to_do
         
-        + \ {charTag(PG, "neutral")}:            Ho una domanda su un luogo.
-            -> mentor_places_comments
-        
-        + \ {charTag(PG, "neutral")}:            C'è una cosa che mi riguarda.
+        + \ {charTag(PG, "neutral")}:                                           C'è una cosa che mi riguarda.
             -> myself
         
-        + \ {charTag(PG, "neutral")}:            Vorrei consigli su come stare meglio.
+        + \ {charTag(PG, "neutral")}:                                           Vorrei consigli su come stare meglio.
             -> mindfulness -> support
     
-        + \ {charTag(PG, "neutral")}:            Vorrei parlare d'altro.
+        + \ {charTag(PG, "neutral")}:                                           Vorrei parlare d'altro.
             -> helping_mentor.top
         -
             -> top   
@@ -89,13 +86,13 @@
     ~ temp mentorName = translator(mentor_ActualName)
         Di cosa senti il bisogno?
             
-            + \ {charTag(PG, "neutral")}:            Vorrei cambiare il mio nome.
+            + \ {charTag(PG, "neutral")}:                                       Vorrei cambiare il mio nome.
                     -> name_choice -> support
             
-            + \ {charTag(PG, "neutral")}:            Vorrei cambiare i miei pronomi.
+            + \ {charTag(PG, "neutral")}:                                       Vorrei cambiare i miei pronomi.
                     -> gender -> support
             
-            + \ {charTag(PG, "neutral")}:            A dire il vero sono a posto così.
+            + \ {charTag(PG, "neutral")}:                                       A dire il vero sono a posto così.
                     -> helping_mentor.top
  
  
@@ -105,116 +102,45 @@
     Mentore utile: contenuti
        
  ----------------------------------*/
-
-=== mentor_places_comments
-~ temp charNameOne = translator(firstChar_ActualName)
-~ temp charNameTwo = translator(secondChar_ActualName)
-~ temp charNameThree = translator(thirdChar_ActualName)
-~ temp charNameFour= translator(fourthChar_ActualName)
-~ temp mentorName = translator(mentor_ActualName)
-
-//Strutturare come wave sintetica?
-    Questi sono i luoghi che conosci.
-    Su quali vorresti avere informazioni?
-
-- (top)
-
-    + \ {charTag(PG, "neutral")}:            Sulla stazione.
-            Intendi il luogo dove passo ore a spalare neve?
-            La stazione, ad est della foresta, è il posto dove approdano le nuove persone.
-            {contentsTrainStop has DoggoFirstLetters or contentsTrainStop has DoggoSecondLetters: E dove arriva la cagnolina postina.}
-            È anche il luogo attraverso cui potrai raggiungerci.
-            O da cui andartene, quando vorrai.
-                -> top
-
-    + \ {charTag(PG, "neutral")}:            {greenhouse_entry_check}Sulla serra.
-            La serra è il mio posto preferito: ho sempre amato coltivare fiori e piante!
-            Anche se lì dentro cresce della roba molto strana.
-            La serra è un piccolo posto di meditazione.
-            Se non sta crescendo nulla, puoi provare a seguire le sue suggestioni.
-            Col tempo qualcosa crescerà, e a quel punto forse avrai anche una risposta a una domanda che non sapevi di doverti fare.
-            Tipo: come fa {mentorName} a tenere i vetri sempre così puliti?
-                -> top
-
-    + \ {charTag(PG, "neutral")}:            {forest}Sulla foresta.
-            La foresta è un po' il nostro posto di passaggio.
-            Non ho idea di chi abbia messo la panchina, sinceramente.
-            E tenerla pulita tutti i giorni è una gran fatica.
-            E quella pianta, quella cosa che è nel mezzo {firstChar_storyStatus == story_storyEnded or secondChar_storyStatus == story_storyEnded: non ho ancora capito come abbia iniziato a crescere.|non ho ancora capito come rimetterla in sesto.}
-            E questo mi lascia molto frustrata.
-            -> top
-    
-    + \ {charTag(PG, "neutral")}:            {pond}Sullo stagno.
-            Lo stagno è un posto umido.
-            E a modo suo rilassante.
-            Serve ad arrivare alla serra.
-            {
-                -player_accessiblePlaces has Kitchen: 
-                    E ad accedere alla cucina.
-            }
-            {
-                - contentsPond has Franco:
-                    E poi c'è quella rana. 
-            }
-            -> top    
-            
-    + \ {charTag(PG, "neutral")}:            {(player_accessiblePlaces has Library) or (player_accessiblePlaces has Kitchen) or (player_accessiblePlaces has Nest)}Sono altri i luoghi di cui vorrei parlare.
-            -> second_top
-    
-    + \ {charTag(PG, "neutral")}:            Voglio parlare d'altro.
-        -> helping_mentor.top  
-
-    
-- (second_top)    
-    + \ {charTag(PG, "neutral")}:            {player_accessiblePlaces has Library}Sulla biblioteca.
-            La biblioteca è un posto... un posto.
-            Ci sono molti racconti, ma chi ha il tempo di leggerli?
-            Con tutta quella polvere che raccolgono, poi.
-            Però un paio di volte ho usato la poltrona per fare del body scan, e non è stato male.
-            Mi sono quasi addormentata.
-            Quasi.
-                -> second_top
-            
-    + \ {charTag(PG, "neutral")}:            {player_accessiblePlaces has Kitchen}Sulla cucina.
-            La cucina è un posto poco igienico.
-            No, ricominciamo.
-            La cucina è un posto dove condividere un po' di intimità con una persona.
-            Provare a conoscerla meglio, provare a farti conoscere meglio, mentre cucinate qualcosa.
-            E, magari, scoprire cosa stai sbagliando a dirle, e riuscire a conquistare prima la sua fiducia.
-                -> second_top
-
-    + \ {charTag(PG, "neutral")}:            {player_accessiblePlaces has Nest}Sul nido.
-            Il nido non mi piace.
-            Quello che accade lì è manipolazione, comunque tu la voglia mettere.
-            E quindi è qualcosa di sbagliato.
-            Non è un caso che sia l'unico luogo senza istruzioni, no?
-                -> second_top
-    
-     + \ {charTag(PG, "neutral")}:            {player_accessiblePlaces has Dump}Sulla discarica.
-            COMMENTO DA CREARE SULLA DISCARICA.
-                -> second_top
-
-    + \ {charTag(PG, "neutral")}:            Vorrei parlare di un altro luogo.
-            -> top
-    
-    + \ {charTag(PG, "neutral")}:            Vorrei parlare di qualcosa di diverso.
-        -> helping_mentor.top
-    -
-
-    -> helping_mentor.top
-
 === to_do
 ~ temp mentorName = translator(mentor_ActualName)
 
-        {tutorial_mentorInkAndYouAreARewriter:La prima cosa da fare è: conquistare la <b><i>fiducia</b></i> della persona che devi aiutare.}
-        {tutorial_mentorInkAndYouAreARewriter:Ci <b><i>parli</b></i>, cerchi di capire di cosa ha bisogno e quali sono le risposte che le piacciono.}
-        {tutorial_mentorInkAndRewriting: Fino a quando non è pronta per una <b><i>riscrittura</b></i>}
-        {tutorial_mentorInkAndRewriting: A quel punto inizi i tuoi <b><i>riscritture</b></i>: riprendi eventi della sua storia e la aiuti a guardarli sotto una luce diversa.}
-        {tutorial_mentorInkAndRewriting: Più inchiostro hai, più riscritture puoi fare.}
-        {about_greenhouse: Per aumentare l'inchiostro puoi fare cose diverse. Come dare il giusto dono. E i doni migliori crescono nella serra.}
-        {about_kitchen: E se mangiate qualcosa assieme, magari riesci anche a capire se stai o meno conquistando la fiducia di quella persona.}
-        {tutorial_mentorInkAndRewriting: Così, a fine riscrittura, in base alle cose che avrai detto, la persona sceglierà il suo <b><i>nuovo nome</b></i>.}
-        {tutorial_mentorInkAndRewriting: E poi si ricomincia.}
+        {
+            - grimoire_appendices has grimChoicesMentor:
+                {charTag(Mentor, "neutral")}:       La prima cosa da fare è: conquistare la <b><i>fiducia</b></i> della persona che devi aiutare.
+                                                    Ci <b><i>parli</b></i>, cerchi di capire di cosa ha bisogno e quali sono le risposte che le piacciono.
+
+        }
+
+        {
+            - grimoire_appendices has grimInkMentor:
+                {charTag(Mentor, "hurry")}:         Fino a quando non è pronta per una <b><i>riscrittura</b></i>
+                {charTag(Mentor, "neutral")}:       A quel punto inizi i tuoi <b><i>riscritture</b></i>: riprendi eventi della sua storia e la aiuti a guardarli sotto una luce diversa.
+                                                    Più inchiostro hai, più riscritture puoi fare.
+
+        }
+
+        {
+            - grimoire_appendices has grimGreenhouseMentor && grimoire_appendices has grimInkMentor:
+                {charTag(Mentor, "hurry")}:         Per aumentare l'inchiostro puoi fare cose diverse.
+                                                    Come dare il giusto dono.
+                                                    E i doni migliori crescono nella serra.
+
+        }
+
+        {
+            - grimoire_appendices has grimKitchenChitarra:
+                {charTag(Mentor, "neutral")}:       E se mangiate qualcosa assieme, magari riesci anche a capire se stai o meno conquistando la fiducia di quella persona.
+                
+        }
+
+        {
+            - grimoire_appendices has grimRewritingMentor:
+                {charTag(Mentor, "hurry")}:         A fine riscrittura, in base alle cose che avrai detto, la persona sceglierà il suo <b><i>nuovo nome</b></i>.
+                {charTag(Mentor, "neutral")}:       E poi si ricomincia.
+                
+        }
+
            -> helping_mentor.top
 
 
@@ -226,87 +152,105 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-    ~ frog_mentorStrangeThings = true
 
-    Vorrei raccontarti una cosa strana.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+    {charTag(PG, "neutral")}:                       Vorrei raccontarti una cosa strana.
 
-        * (voices){player_somethingStrange has strangeVoice}C'è una voce che mi racconta cose.
-            Voce?#
-            Sì.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
-            Ad esempio mi descrive le piante della serra.
-            O i luoghi in cui entro.
-            Riscrivere la storie di altre persone richiede una forte empatia.
-            Sicuramente quella voce è il tuo modo di capire questo luogo.
-            Un intuito latente che ora è più forte.#
-            Meglio della stanchezza dell'essere mentore, fidati.
+        * (voices) {player_somethingStrange has strangeVoice}\ {charTag(PG, "neutral")}:         C'è una voce che mi racconta cose.
+            
+            {charTag(Mentor, "neutral")}:           Voce?
+            {charTag(PG, "neutral")}:               Sì.
+                                                    Ad esempio mi descrive le piante della serra.
+                                                    O i luoghi in cui entro.
+            {charTag(Mentor, "neutral")}:           Riscrivere la storie di altre persone richiede una forte empatia.
+                                                    Sicuramente quella voce è il tuo modo di capire questo luogo.
+            {charTag(Mentor, "hurry")}:             Un intuito latente che ora è più forte.
+            {charTag(Mentor, "sad")}:               Meglio della stanchezza dell'essere mentore, fidati.
 
                 ~ player_somethingStrange -= strangeVoice
                 -> helping_mentor.top
         
-        * (talkingWitch) {player_somethingStrange has strangeVase} Prima ho parlato con un vaso, in una discarica.
-            Sembra che vedan e senta tutto quello che accade qui.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
-            E mi hanno chiesto come stavo dopo aver concluso la prima riscrittura.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
-            {voices:Stellina, di nuovo con questa voce?|Senti le voci, stellina?}#
-            Sono in questo posto da non so quanto e non ho mai parlato con tronchi o rami o radici.#
-            L'unica cosa che ha voce sono le persone che arrivano per chiedere il nostro aiuto.
-            Il tuo aiuto.
-            Se senti ancora una volte delle voci, prenditi un po' di riposo.
+        * (talkingWitch) {player_somethingStrange has strangeVase} \ {charTag(PG, "neutral")}:   Prima ho parlato con un vaso, in una discarica.
+            {charTag(PG, "neutral")}:               Sembra che veda e senta tutto quello che accade qui.
+            {charTag(PG, "neutral")}:               E mi ha, anzi, mi hanno chiesto come stavo dopo aver concluso la prima riscrittura.
+            {
+                - voices:
+                {charTag(Mentor, "sad")}:           Stellina, di nuovo con questa voce?
+                
+                - else:
+                {charTag(Mentor, "sad")}:           Senti le voci, stellina?
+            }
+            {charTag(Mentor, "neutral")}:           Sono in questo posto da non so quanto e non ho mai parlato vasi o altre cose senza occhi e bocca.
+            {charTag(Mentor, "bored")}:             E l'idea che qualcosa mi stia spiando mi indispone molto.
+            {charTag(TheWitch, "{witch_state()}")}: Noi non spiamo, noi siamo.
+            {charTag(Mentor, "neutral")}:           L'unica cosa che ha voce sono le persone che arrivano per chiedere il nostro aiuto.
+                                                    Il tuo aiuto.
+            {charTag(Mentor, "sad")}:               Se senti ancora una volte delle voci, prenditi un po' di riposo.
 
                 ~ player_somethingStrange -= strangeVase
                 -> helping_mentor.top
         
-        * {player_somethingStrange has strangeFrog} C'è una rana blu parlante.
+        * {player_somethingStrange has strangeFrog} \ {charTag(PG, "neutral")}:  C'è una rana blu, e parla.
             {
                 - are_entities_together_in(Mentor, PG, Pond):
-                    Ho notato.
+                {charTag(Mentor, "bored")}:         L'ho notata.
+
                     {
                         - grimoire_fifthChar has grimMentorFranco: 
-                            E dopo averci parlato, non mi ispira molta fiducia.
-                            {
-                                - are_two_entities_together(Franco, PG):
-                                    {charTag(Franco, "{portrait_Franco()}")}:       Hai provata ad espirarla?
-                                                                                    Una volta ho espirato un insetto così grosso che ha fatto un rumore come di botto.
-                                                                                    E mi sono spaventato per il rumore.
-                                                                                    E a quel punto l'insetto si è spaventato a sua volta ed è finito nel naso di Tullio.
-                                                                                    Credo sia ancora lì dentro.
-                                    Appunto.
-                            }
-                    }
-                    Quando me ne ha parlato {charNameTwo}, ho pensato fosse una bugia.
+                                                    E dopo averci parlato, non mi ispira molta fiducia.
                     {
-                        - are_two_entities_together(SecondCharacter, PG):
-                            Ehi!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+                        - are_two_entities_together(Franco, PG):
+                            {charTag(Franco, "{portrait_Franco()}")}:       Hai provata ad espirarla?
+                                                                            Una volta ho espirato un insetto così grosso che ha fatto un rumore come di botto.
+                                                                            E mi sono spaventato per il rumore.
+                                                                            E a quel punto l'insetto si è spaventato a sua volta ed è finito nel naso di Tullio.
+                                                                            Credo sia ancora lì dentro.
+                            {charTag(Mentor, "neutral")}:                   Appunto.
                     }
-                    Invece me ne sono ricreduta.
+                    }
+
+                {charTag(Mentor, "sad")}:           Quando ne ho sentito parlare da {charNameTwo}, ho pensato fosse un'altra bugia.
+                    
+                {
+                    - are_two_entities_together(SecondCharacter, PG):
+                    {charTag(SecondCharacter, "angry")}:     Ehi!
+                }
+
+                {charTag(Mentor, "neutral")}:       Invece me ne sono ricreduta.
                 
                 - else:
                     {
                         - grimoire_fifthChar has grimMentorFranco:
-                            Ci ho parlato prima. E non mi ispira molta fiducia.
+                        {charTag(Mentor, "neutral")}: Ci ho parlato prima. E non mi ispira molta fiducia.
                         - else: 
-                            Ho notato.    
+                        {charTag(Mentor, "neutral")}:  Ho notato.    
                     }
-                    Molte cose qui stanno cambiando dal tuo arrivo.
-                    Immagino che una rana parlante non sia la cosa più assurda che potesse capitarci, vero?  
+                    {charTag(Mentor, "neutral")}:       Molte cose qui stanno cambiando dal tuo arrivo.
+                    {charTag(Mentor, "sad")}:           Immagino che una rana parlante non sia la cosa più assurda che potesse capitarci, vero?  
             }
                 ~ player_somethingStrange -= strangeFrog
                 -> helping_mentor.top
         
-        * {player_somethingStrange has strangeGrimoire} Ho trovato questo libro col mio nome.
-            TODO: Questo diventa un "il libro che mi hai dato si aggiorna da solo"
-            E raccoglie informazioni su questo posto.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
-            E dove l'hai trovato?
-            Interessante.
-                {
-                    - player_accessiblePlaces has Library:
-                        Forse verrà dalla biblioteca?
-                    - else:
-                        Avevo sentito parlare in passato di una biblioteca.
-                        Forse viene da lì?    
-                }
-            Immagino sia comunque utile per il tuo lavoro.
-            Spero solo non parli male di me!#
+        * {player_somethingStrange has strangeGrimoire}\ {charTag(PG, "neutral")}:  Il libro che mi hai dato si aggiorna da solo.
 
+            {charTag(PG, "neutral")}:                   E raccoglie informazioni su questo posto.
+            {
+                - grimoire_witch has grimWitchBook:
+                                                        E {witch_actualName} dice che è per via di una magia.
+                    {
+                        - not talkingWitch:
+                        {charTag(Mentor, "sad")}:       E chi sarebbe {witch_actualName}?
+                        {charTag(Mentor, "bored")}:     No anzi, non voglio saperlo.
+                    } 
+            }
+
+            {charTag(Mentor, "sad")}:                   E cosa dice di me?
+            {charTag(Mentor, "neutral")}:               No, non voglio saperlo.
+                                                        O dovrei?
+            {charTag(Mentor, "bored")}:                 E se sa cosa che io no so?
+            {charTag(Mentor, "sad")}:                   O che non voglio sapere?                                            
+            {charTag(Mentor, "neutral")}:               Usalo con saggezza, {player_name}.
+            {charTag(Mentor, "hurry")}:                 E fidati solo di me.
+            
                 ~ player_somethingStrange -= strangeGrimoire
                 -> helping_mentor.top
         
