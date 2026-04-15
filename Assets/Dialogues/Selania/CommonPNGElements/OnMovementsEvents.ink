@@ -3,20 +3,24 @@
    Aggiornamenti di stato durante gli spostamenti 
 
  ----------------------------------*/
+
+//Variabile per far comparire una lettera alla volta.
+VAR letters_doggoPause = false
+
 === on_movement_events
 {debug: passo da on_movement_events.}
 //Prima aggiorno tutti i valori che possono condizionarne altri
     -> story_time_management_for_PNG->
-    -> on_movement_PG_values ->
-    -> on_movement_characters_values ->
+    ~ on_movement_PG_values()
+    ~ on_movement_characters_values()
     -> on_movement_kitchen_tracker ->
     -> on_movement_randomize_png_places ->
-    -> on_movement_special_events ->
-    -> on_movement_letters_management ->
-    -> on_movement_sounds_effects ->    
+    ~ on_movement_special_events()
+    ~ on_movement_letters_management()
+    ~ on_movement_sounds_effects()   
 
 //Poi gli elementi grafici/estetici
-    -> opening_places ->       
+    ~ opening_places()    
     -> dump_graphic_changer ->
     -> moon_state_management ->
     -> horizontalS_documentDispatcher ->
@@ -32,7 +36,7 @@
 
 
 //Raccolta di azioni uniche                
-=== on_movement_special_events
+=== function on_movement_special_events()
 {debug: passo da on_movement_special_events.}
 ~ temp currentPlace = entity_location(PG)
 //Achievements:
@@ -160,18 +164,16 @@
             ~ move_entity(Grimoire, currentPlace)
     }
 
-
-->->    
+   
            
 
 
 //Gestione della posta 
-=== on_movement_letters_management
+=== function on_movement_letters_management()
 {debug: passo da on_movement_letters_management.}
 ~ temp currentPlace = entity_location(PG)
 
-//Variabile per far comparire una lettera alla volta.
-VAR letters_doggoPause = false
+
 
     {
         - firstChar_storyStatus == story_storyEnded && firstChar_mailPause < 0 && not first_character_notes.three && letters_doggoPause == false:
@@ -224,10 +226,10 @@ VAR letters_doggoPause = false
     ~ fourthChar_mailPause --
     ~ fifthChar_mailPause --
     
-->->
+
 
 //Gestione dei suoni legati agli spostamenti
-=== on_movement_sounds_effects
+=== function on_movement_sounds_effects()
 {debug: passo da on_movement_sounds_effects.}
     
 //Gestione suoni
@@ -243,12 +245,11 @@ VAR letters_doggoPause = false
     }
                  
   
-->->
 
 
 
 //Gestione dei valori delle PNG legati agli spostamenti (pause dialogo, mindfulness etc.)
-=== on_movement_characters_values
+=== function on_movement_characters_values()
 {debug: passo per on_movement_characters_values}
     {
         - png_commonPauseTalking == true:
@@ -333,11 +334,8 @@ VAR letters_doggoPause = false
 
 
 
-->-> 
-
-
 //Contatori della PG
-=== on_movement_PG_values ===
+=== function on_movement_PG_values()
 {debug: passo da on_movement_PG_values.}
     //Contatore spostamenti PG
     ~ player_movementsCounter ++
@@ -375,7 +373,7 @@ VAR letters_doggoPause = false
     
     }
 
-->->
+
 
 
 //Gestione della cucina delle PNG

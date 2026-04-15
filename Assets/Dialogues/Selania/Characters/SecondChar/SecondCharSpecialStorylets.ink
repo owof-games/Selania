@@ -105,7 +105,7 @@
     Chissà se ci sono anche i manga!
 
         -> second_char_closing_storylet ->
-        -> opening_places ->
+        ~ opening_places()
         ->->
         
 

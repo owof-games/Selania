@@ -62,7 +62,7 @@
             ~ nest_newSigilDiscovered = ()
 
         -> third_char_closing_storylet ->
-        -> opening_places ->
+        ~ opening_places()
         //Parte subito lo spiegozzo sui sigilli di Carla
         {
             -  settings_gamerMode == true:

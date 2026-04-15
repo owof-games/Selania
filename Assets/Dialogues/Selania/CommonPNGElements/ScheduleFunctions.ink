@@ -104,7 +104,7 @@
 
 
 //Qui apriamo i luoghi cambiando gli assets di riferimento: serra, cucina, biblioteca, nido, discarica
-=== opening_places
+=== function opening_places()
 {debug: passo da opening_places.}
 
     //Apertura serra
@@ -155,8 +155,7 @@
     }
     
 
-
-->->   
+ 
 
 //Qui aggiorniamo lo stato di randomizzabilità o meno di unx PNG
 === on_movement_randomize_png_places

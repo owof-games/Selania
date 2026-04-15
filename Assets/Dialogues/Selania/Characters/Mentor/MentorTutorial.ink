@@ -234,7 +234,7 @@
                                                 la trovi nei pressi dello stagno.
                                         }
                                                 
-            -> opening_places ->
+            ~ opening_places()
         {charTag(Mentor, "hurry")}:     La serra è un bel posto dove rilassarsi, e non solo.
         {charTag(Mentor, "bored")}:     Ma evita assolutamente tutti gli altri posti bloccati, perché sono pericolosi!
                                         Più tardi ti spiegherò perché sei qui.

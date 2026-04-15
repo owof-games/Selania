@@ -85,7 +85,7 @@
         }
     
         -> first_char_closing_storylet ->
-        -> opening_places ->
+        ~ opening_places()
         ->->
         
 === a_story_of_revenge 
