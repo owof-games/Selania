@@ -156,10 +156,6 @@
             -> about_nest    
 
      //Commenti a situazioni, eventi o altro.
-        //Crescita strega.
-        - player_accessiblePlaces has Dump && not witch_intro && not growing_witch_storylet:
-            -> growing_witch_storylet
-
         //Commento sul cane    
         - first_character_notes.one or second_character_notes.one && not dog_mentor:
             -> dog_mentor

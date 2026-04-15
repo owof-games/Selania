@@ -250,7 +250,7 @@
             {charTag(Mentor, "sad")}:                   O che non voglio sapere?                                            
             {charTag(Mentor, "neutral")}:               Usalo con saggezza, {player_name}.
             {charTag(Mentor, "hurry")}:                 E fidati solo di me.
-            
+
                 ~ player_somethingStrange -= strangeGrimoire
                 -> helping_mentor.top
         
@@ -307,66 +307,66 @@
     = one
      ~ temp mentorName = translator(mentor_ActualName)
      
-        Quando inizio a pensare molto, ma molto molto, una cosa che mi aiuta è concentrarmi su quello che mi circonda.
-        Inizio ad osservare un oggetto e a dirmi dentro la testa cosa è.
-        Una sedia, uno sgabello, un frigorifero, un tostapane, una lavatrice.
-        Se la confusione è molta, cerco di partire con il generico, come <i>elettrodomestico</i>, e poi man mano che divento più concentrata inizio a scendere nel dettaglio.
-        Se ci sono poche cose, provo a descrivere le parti di un oggetto.
-        O del mio corpo.
-        Cosa che evito nei giorni in cui non mi piaccio.
-        Questa cosa funziona benissimo anche con gli odori, o i suoni, o il tatto, o persino il gusto.
-        Ti aiuta a tornare coi piedi per terra.
+        {charTag(Mentor, "neutral")}:           Quando inizio a pensare molto, ma molto molto, una cosa che mi aiuta è concentrarmi su quello che mi circonda.
+                                                Inizio ad osservare un oggetto e a dirmi dentro la testa cosa è.
+                                                Una sedia, uno sgabello, un frigorifero, un tostapane, una lavatrice.
+                                                Se la confusione è molta, cerco di partire con il generico, come <i>elettrodomestico</i>, e poi man mano che divento più concentrata inizio a scendere nel dettaglio.
+                                                Se ci sono poche cose, provo a descrivere le parti di un oggetto.
+                                                O del mio corpo.
+                                                Cosa che evito nei giorni in cui non mi piaccio.
+                                                Questa cosa funziona benissimo anche con gli odori, o i suoni, o il tatto, o persino il gusto.
+                                                Ti aiuta a tornare coi piedi per terra.
             ->->
     
     = two
      ~ temp mentorName = translator(mentor_ActualName)
      
-        Ci sono volte in cui mi focalizzo solo sulle cose che non vanno.
-        Una cosa che mi aiuta in queste situazioni è puntare una sveglia ogni due ore.
-        E quando la sveglia suona provo a chiedermi:
-        Come mi sto sentendo?
-        Cosa sto facendo?
-        Perché mi fa sentire così?
-        Se mi rendo conto di star provando una emozione negativa, posso capire meglio cosa l'ha scatenata.
-        Ma spesso mi rendo conto di essere serena in quel momento, o per lo meno tranquilla.
-        E a quel punto capisco che non è vero che sto male tutto il giorno, ma che ci sono delle cose che non mi fanno stare bene.
+        {charTag(Mentor, "neutral")}:           Ci sono volte in cui mi focalizzo solo sulle cose che non vanno.
+                                                Una cosa che mi aiuta in queste situazioni è puntare una sveglia ogni due ore.
+                                                E quando la sveglia suona provo a chiedermi:
+                                                Come mi sto sentendo?
+                                                Cosa sto facendo?
+                                                Perché mi fa sentire così?
+                                                Se mi rendo conto di star provando una emozione negativa, posso capire meglio cosa l'ha scatenata.
+                                                Ma spesso mi rendo conto di essere serena in quel momento, o per lo meno tranquilla.
+                                                E a quel punto capisco che non è vero che sto male tutto il giorno, ma che ci sono delle cose che non mi fanno stare bene.
         ->->
     
     = three
      ~ temp mentorName = translator(mentor_ActualName)
      
-         Un tempo conoscevo una ragazza che soffriva di attacchi d'ansia e che mi ha dato una dritta che puoi applicare ovunque. 
-         Se il pensiero si inceppa su qualcosa, prova a stringere con forza degli oggetti che hai vicino.
-         Può essere il bracciolo di una sedia.
-         Il tavolo.
-         Il palo sull'autobus.
-         Stringi e concentrati sulla sensazione.
-         Questo ti permette di tornare in contatto col tuo corpo.
+        {charTag(Mentor, "neutral")}:           Un tempo conoscevo una ragazza che soffriva di attacchi d'ansia e che mi ha dato una dritta che puoi applicare ovunque. 
+                                                Se il pensiero si inceppa su qualcosa, prova a stringere con forza degli oggetti che hai vicino.
+                                                Può essere il bracciolo di una sedia.
+                                                Il tavolo.
+                                                Il palo sull'autobus.
+                                                Stringi e concentrati sulla sensazione.
+                                                Questo ti permette di tornare in contatto col tuo corpo.
             ->->
     
     = four
      ~ temp mentorName = translator(mentor_ActualName)
      
-        Il mio migliore amico è il body scan.
-        Lo faccio al risveglio tra gli arbusti della foresta.
-        Prima di tutto mi stendo, comoda, e faccio qualche respiro profondo.
-        Poi inizio a concentrarmi sulla punta di uno dei piedi, e da lì sposto la concentrazione lungo tutto il piede, la caviglia, il polpaccio, il ginocchio, il quadricipite.
-        Poi faccio la stessa cosa con l'altra gamba.
-        E a quel punto mi sposto sul ventre, i glutei, i muscoli lombari, i dorsali, le spalle e via di seguito fino alla testa.
-        Anche se conosco persone che preferiscono partire dalla testa e arrivare ai piedi.
-        L'importante è che per tutto il processo ascolti quella parte del corpo senza giudicare, senza cercare di cambiarla.
-        Respiri, accogli dolori e morbidezze, e quando te la senti, cambi area.
-        Anche solo a parlarne mi sento già più rilassata.
+        {charTag(Mentor, "neutral")}:           Il mio migliore amico è il body scan.
+                                                Lo faccio al risveglio tra gli arbusti della foresta.
+                                                Prima di tutto mi stendo, comoda, e faccio qualche respiro profondo.
+                                                Poi inizio a concentrarmi sulla punta di uno dei piedi, e da lì sposto la concentrazione lungo tutto il piede, la caviglia, il polpaccio, il ginocchio, il quadricipite.
+                                                Poi faccio la stessa cosa con l'altra gamba.
+                                                E a quel punto mi sposto sul ventre, i glutei, i muscoli lombari, i dorsali, le spalle e via di seguito fino alla testa.
+                                                Anche se conosco persone che preferiscono partire dalla testa e arrivare ai piedi.
+                                                L'importante è che per tutto il processo ascolti quella parte del corpo senza giudicare, senza cercare di cambiarla.
+                                                Respiri, accogli dolori e morbidezze, e quando te la senti, cambi area.
+                                                Anche solo a parlarne mi sento già più rilassata.
             ->->
         
     = five
      ~ temp mentorName = translator(mentor_ActualName)
      
-        Non so se ti capita di avere l'addome contratto.
-        Per molte persone quell'area, e il diaframma in particolare, accumula un sacco di tensione e preoccupazione.
-        Un modo per allentarla è prendere un suono che ti piace, una vocale, un <i>Aum</i>, tutte le vocali, e iniziare a ripeterle, con calma.
-        Lasciando che quel suono scenda e scenda e scenda dalla gola al petto, dal petto al diaframma.
-        Aiutandoti così a rilassare l'area.
-        E a respirare meglio.
+        {charTag(Mentor, "neutral")}:           Non so se ti capita di avere l'addome contratto.
+                                                Per molte persone quell'area, e il diaframma in particolare, accumula un sacco di tensione e preoccupazione.
+                                                Un modo per allentarla è prendere un suono che ti piace, una vocale, un <i>Aum</i>, tutte le vocali, e iniziare a ripeterle, con calma.
+                                                Lasciando che quel suono scenda e scenda e scenda dalla gola al petto, dal petto al diaframma.
+                                                Aiutandoti così a rilassare l'area.
+                                                E a respirare meglio.
             ->->     
 

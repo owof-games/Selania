@@ -183,11 +183,6 @@
         }
 
         {
-            - growing_witch_storylet && grimoire_fifthChar hasnt grimMentorWitchTwo:
-                ~ grimoire_fifthChar += grimMentorWitchTwo
-        }
-
-        {
             - that_little_liar_storylet && grimoire_fifthChar hasnt grimMentorLiar:
                 ~ grimoire_fifthChar += grimMentorLiar    
         }
