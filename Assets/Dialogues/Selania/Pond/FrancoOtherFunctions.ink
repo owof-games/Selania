@@ -126,6 +126,7 @@
     @animation:RewriterBook
     ~ frog_allMissionsCompleted += frog_currentMission
     //Levo per sicurezza dalle commissioni update
+    ~ frog_availableCommonMissions -= frog_currentMission
     ~ frog_updatedMissions -= frog_currentMission
     ~ frog_currentMission = ()
     ~ notification_francoQuests = false

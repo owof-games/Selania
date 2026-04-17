@@ -47,7 +47,7 @@
 
 
     //Apertura biblioteca    
-        - are_two_entities_together(SecondCharacter, PG) && grimoire_thirdChar has grimThirdCharTwo && entity_location(PG) == Forest && player_accessiblePlaces hasnt Library && openingPlacesPause <= 0:
+        - are_two_entities_together(SecondCharacter, PG) && grimoire_secondChar has grimSecondCharTwo && entity_location(PG) == Forest && player_accessiblePlaces hasnt Library && openingPlacesPause <= 0:
             -> open_the_library
 
     //Invito in biblioteca per aprire il nido
@@ -64,8 +64,8 @@
                     ~ thirdChar_LibraryWaiting = chars_MaxOpenPlacesWaiting
                     ->->   
 
-    //Apertura biblioteca    
-        - are_two_entities_together(ThirdCharacter, PG) && ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar) + LIST_COUNT(grimoire_thirdChar)) > openingNest_delay) && LIST_COUNT(grimoire_thirdChar) >= 2 && entity_location(PG) == Library && player_accessiblePlaces hasnt Nest && openingPlacesPause <= 0:
+    //Apertura nest    
+        - are_two_entities_together(ThirdCharacter, PG) && LIST_COUNT(grimoire_thirdChar) >= 2 && entity_location(PG) == Library && player_accessiblePlaces hasnt Nest && openingPlacesPause <= 0:
              -> open_the_nest
 
     //Apertura della discarica

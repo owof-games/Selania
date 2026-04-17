@@ -355,7 +355,7 @@
         }
 
         {
-            - third_char_cooking_alone && grimoire_thirdChar hasnt grimThirdCharKitchenAlone:
+            - food_gift_third_char && grimoire_thirdChar hasnt grimThirdCharKitchenAlone:
                 ~ grimoire_thirdChar += grimThirdCharKitchenAlone                
         }
 
