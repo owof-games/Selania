@@ -50,8 +50,8 @@
     Perché {mentorName} non me lo dice mica.
         {
             - are_two_entities_together(Mentor, PG):
-                I posti chiusi sono posti pericolosi, {charNameTwo}.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-                E nemmeno io so cosa c'è dietro.
+                {charTag(Mentor, "sad")}:               I posti chiusi sono posti pericolosi, {charNameTwo}.
+                                                        E nemmeno io so cosa c'è dietro.
                 Va bene va bene va bene.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
         }
     C'è una cosa fighissima lì dietro.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
@@ -99,7 +99,7 @@
     Ora voglio vedere se ci sono delle matite così lascio anche le mie storie!
         {
             - are_two_entities_together(Mentor, PG):
-                Mi raccomando, non macchiare nulla!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                {charTag(Mentor, "neutral")}:           Mi raccomando, non macchiare nulla!
         }
     Ora sposto tutti quei legni così puoi andarci anche tu!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
     Chissà se ci sono anche i manga!
@@ -152,7 +152,7 @@
             Anche io ne ho un po'!
                 {
                     - are_two_entities_together(Mentor, PG): 
-                        {player_name}, non dovresti comportarti da persona adulta? #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                        {charTag(Mentor, "hurry")}:             {player_name}, non dovresti comportarti da persona adulta?
                 }
      
         + Cercherei di capire le loro intenzioni.
@@ -167,7 +167,7 @@
             Così ci lanciamo contro le finestre poi!
                 {
                     - are_two_entities_together(Mentor, PG): 
-                        {player_name}, non credo sia il caso di dare a {charNameTwo} altre idee bislacche. #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                        {charTag(Mentor, "bored")}:            {player_name}, non credo sia il caso di dare a {charNameTwo} altre idee bislacche.
                 }
             
         + Mi sarei pres{player_pronouns has him:o|{player_pronouns has her:a|ə}} cura dell'aragosta.

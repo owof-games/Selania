@@ -36,10 +36,6 @@
         
         Io sono qui perché è il mio compleanno.
 
-            {
-                - are_two_entities_together(Mentor, PG):
-                    Oh povera anima!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-            }
 
         Ma lui mica ci può venire qui.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
             {
@@ -80,17 +76,9 @@
                         Ehm, non so se ti sei visto riflesso amore, ma, ehm.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed 
                     
             }
-            {
-                - are_two_entities_together(Mentor, PG): 
-                        Perché come un riccio hai la faccina tenera ma spini come pochi, ragazzo.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-                    
-            }  
+
         Dove saranno i miei compagni di scuola?#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
         
-            {
-                - are_two_entities_together(Mentor, PG):
-                    Altri bambini? Ma questo posto è pieno di pericoli!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-            }
         - 
 
 
@@ -145,10 +133,7 @@
             + Deve essere una rana molto saggia.
                 -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
                 Non lo so, ha detto le cose in modo buffo.
-                    {
-                        - are_two_entities_together(Mentor, PG): 
-                                Davanti a un bambino?!?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                    }
+
                 Però mi ha anche detto che "tutto è dove deve stare".
 
             - (franco)
@@ -168,12 +153,7 @@
 #speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
         Mica mi hai detto come ti chiami.
   
-            {
-                - are_two_entities_together(Mentor, PG):
-                    Solo io sono abbastanza vecchia da ricordare come va a finire questa storia?#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-            }
-        
-       
+
             
             + Bugia: hai detto di esser pieno di action figures.
                     -> glyph_modifier_variation_management(ThirdCharacter, airC)->
@@ -198,12 +178,6 @@
 
             Forse dietro tutti quei fiori vicino allo stagno trovo qualche regalo!
 
-            {
-                - are_two_entities_together(Mentor, PG): 
-                        Ma perché non sistemi con me i vialetti? #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                        È molto meno pericoloso!
-                        Poi muoio di noia!#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-            }
 
         - 
 
@@ -230,8 +204,8 @@
             + (scherzo) Non era più divertente farle uno scherzo?
                     -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
                         {
-                            - are_two_entities_together(Mentor, PG): Seriamente? 
-                                #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
+                            - are_two_entities_together(Mentor, PG): {charTag(Mentor, "sorry")}:             Seriamente? 
+                               
                         }
                 Perché ero arrabbiato.
                     
@@ -353,12 +327,7 @@
 
         
         Franco prima mi ha detto che tu scrivi storie.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-            {
-                - are_two_entities_together(Mentor, PG):
-                        Qui ogni tanto passa un cane con la posta.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                        Forse potreste diventare amici!
-                        Sarebbe fighissimooooooooooooooooooooooooooooooo!#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
-            }
+
             
             + Obiettivamente conosci tutto degli animali.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
                     -> glyph_modifier_variation_management(ThirdCharacter, airC)->
@@ -485,13 +454,6 @@
                 Sì sì sì!
             -
             
-            {
-                - are_two_entities_together(Mentor, PG):
-                    Nemmeno io chiederei a un bambino di decidere cosa diventare da grande.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                    A questa età dovreste solo giocare.
-                    Ma non nello stagno.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
-                    Già, non nello stagno.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-            }  
 
         - 
 

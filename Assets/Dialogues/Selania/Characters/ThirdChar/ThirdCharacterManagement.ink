@@ -145,7 +145,7 @@
         
         {
             -   are_two_entities_together(Mentor, PG):
-                    Immagino sia giusto lasciarvi la vostra privacy.#speaker:{mentor_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:mentor_neutral
+                    {charTag(Mentor, "neutral")}:             Immagino sia giusto lasciarvi la vostra privacy.
                         ~ change_entity_place(Mentor)
         }
         {

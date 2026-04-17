@@ -21,7 +21,7 @@
     
         {
             - are_two_entities_together(Mentor, PG):
-                Sono felice che apprezzi questi luoghi, {charNameOne}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                {charTag(Mentor, "hurry")}:             Sono felice che apprezzi questi luoghi, {charNameOne}.
         }
         
     Io voglio capire TUTTO di questo posto. Tutto!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
@@ -40,11 +40,11 @@
         
         {
             - are_two_entities_together(Mentor, PG):
-                Fammi vedere se ho dei cerotti da qualche parte.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                E delle garze.
-                Avrò del disinfettante?#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-                Non è mai servito del disinfettante!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                Devo controllare, subito!
+                {charTag(Mentor, "neutral")}:           Fammi vedere se ho dei cerotti da qualche parte.
+                                                        E delle garze.
+                {charTag(Mentor, "sad")}:               Avrò del disinfettante?
+                {charTag(Mentor, "hurry")}:             Non è mai servito del disinfettante!
+                                                        Devo controllare, subito!
                     ~ change_entity_place(Mentor)
         }
         
@@ -99,23 +99,23 @@
     
     Non hai detto "Ti devo chiedere scusa {charNameTwo}?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
     Perché mica l'hai ancora fatto!
-    Sì, ma è importante che anche tu ragioni sulla tua violenza.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
+    {charTag(Mentor, "sad")}:               Sì, ma è importante che anche tu ragioni sulla tua violenza.
     Non sono io che ti ho picchiato.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
-    In realtà.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_bored
-    No.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-    Respira {mentorName}, respira.
-    Hai ragione.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-    Sono qui per chiederti scusa, {charNameTwo}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-    Non avrei dovuto farti male.
-    Mi dispiace.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+    {charTag(Mentor, "bored")}:             In realtà.
+    {charTag(Mentor, "neutral")}:           No.
+                                            Respira {mentorName}, respira.
+    {charTag(Mentor, "sad")}:               Hai ragione.
+    {charTag(Mentor, "neutral")}:           Sono qui per chiederti scusa, {charNameTwo}.
+                                            Non avrei dovuto farti male.
+    {charTag(Mentor, "sorry")}:             Mi dispiace.
     Ok.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-    Ok?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_neutral
+    {charTag(Mentor, "neutral")}:           Ok?
     Sì, non ho mica altro da dirti.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-    Ma io.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
+    {charTag(Mentor, "sad")}:               Ma io.
     I grandi chiedono sempre scusa per tutte le cose ma poi le rifanno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
     Poi piangono e chiedono scusa.
     E poi le rifanno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
-    Ma io ci credo davvero, {charNameTwo}!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+    {charTag(Mentor, "hurry")}:             Ma io ci credo davvero, {charNameTwo}!
     Non ti voglio più far del male.
     Ok.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
     Però va bene così.
@@ -146,54 +146,54 @@
                 {charTag(Franco, "{portrait_Franco()}")}:       La cosa migliore che ti possa capitare è il karaoke di cugina Sputt.
                                                                 Ma è meglio non starle troppo vicino.
         }
-    Anche tu hai uno scopo, {charNameOne}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+    {charTag(Mentor, "hurry")}:             Anche tu hai uno scopo, {charNameOne}.
     Tutti l'abbiamo.
     E quale sarebbe il mio?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-    Un po' lo scoprirai da te, parlando con {player_name}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-    Ma una cosa è certa: se non saprai trovare il bello in ciò che già hai, non sarai felice nemmeno quando avrai un nuovo nome.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-    La felicità non è un luogo da raggiungere, ma qualcosa che si ha dentro.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+    {charTag(Mentor, "hurry")}:             Un po' lo scoprirai da te, parlando con {player_name}.
+    {charTag(Mentor, "neutral")}:           Ma una cosa è certa: se non saprai trovare il bello in ciò che già hai, non sarai felice nemmeno quando avrai un nuovo nome.
+    {charTag(Mentor, "hurry")}:             La felicità non è un luogo da raggiungere, ma qualcosa che si ha dentro.
     Mmm.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
     Certo.
     Scusa {mentorName}, però un po' mi viene da dirti che è facile dirlo, quando fai già quello che ami.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
     È una posizione privilegiata.
-    È un privilegio che mi sono creata, accogliendo il bello anche nelle cose difficili.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+    {charTag(Mentor, "neutral")}:           È un privilegio che mi sono creata, accogliendo il bello anche nelle cose difficili.
     {player_name}, tu cosa pensi?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
     La felicità è questa roba che dice {mentorName}?
     Che te la ritrovi se ti fai andare bene quello che hai?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-    O quello che dice {charNameOne}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-    Qualcosa che è sempre altrove e quindi irraggiungibile?#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
+    {charTag(Mentor, "neutral")}:           O quello che dice {charNameOne}.
+    {charTag(Mentor, "sad")}:               Qualcosa che è sempre altrove e quindi irraggiungibile?
     
         +  \ {mentorName}, tu parli di arrendersi.
             -> glyph_modifier_variation_management(FirstCharacter, fireC)->
-            Non arrendersi, {player_name}, ma accogliere quello che si ha.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+            {charTag(Mentor, "neutral")}:           Non arrendersi, {player_name}, ma accogliere quello che si ha.
             E non vedo differenza, {mentorName}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
             
         +  \ {mentorName}, razionalmente la felicità ha una natura temporanea.
             -> glyph_modifier_variation_management(FirstCharacter, airC)->
             Oh, che bello sentire qualcun{player_pronouns has him:o|{player_pronouns has her:a|ə}} che matcha la mia gioia di vivere.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-            Il fatto che sia temporanea non nega la mia teoria.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+            {charTag(Mentor, "neutral")}:           Il fatto che sia temporanea non nega la mia teoria.
         
         + La felicità ce l'hai se trovi il gioco e l'assurdo ovunque.
             -> glyph_modifier_variation_management(FirstCharacter, earthC)->
             Credo che quello si chiami "abuso di sostanze".#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-            Con un linguaggio meno colorito, direi comunque che sì, ha ragione {charNameOne}.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
+            {charTag(Mentor, "sad")}:               Con un linguaggio meno colorito, direi comunque che sì, ha ragione {charNameOne}.
 
         + Non credo nella felicità, ma credo nel piacere dato dalle persone vicine.
             -> glyph_modifier_variation_management(FirstCharacter, waterC)->    
-            Questa è una lettura che potrei apprezzare.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+            {charTag(Mentor, "neutral")}:           Questa è una lettura che potrei apprezzare.
             Woah!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
             Vuol dire che {player_name} ha trovato un punto di contatto tra noi in questa discussione?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-            Eh sì, mi sa proprio di sì.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+            {charTag(Mentor, "hurry")}:             Eh sì, mi sa proprio di sì.
             
         + La felicità è qualcosa che cresce nelle pieghe del quotidiano.
             -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
-            Sono contenta che la vediamo allo stesso modo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+            {charTag(Mentor, "hurry")}:             Sono contenta che la vediamo allo stesso modo.
             Le cose che crescono nelle pieghe di solito sono sporche.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
             Infestanti.
             E indesiderate.
         -
     Comunque spero tu abbia imparato la lezione, {mentorName}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-    Lezione?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+    {charTag(Mentor, "neutral")}:           Lezione?
     Sì: che se una persona ti dice che ti ammira, è meglio portarsi a casa il complimento e goderselo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
     Non sono vecchia come te, ma so che non sono tanti gli elogi che ci vengono dati in vita.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
 
@@ -208,36 +208,36 @@
 
     TODO: rendere Franco più dubitante della cosa, non ne è così certo.
 
-    Però non ti ho mai visto in giro.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+    {charTag(Mentor, "neutral")}:                   Però non ti ho mai visto in giro.
     {charTag(Franco, "{portrait_Franco()}")}:       Però sono sempre stato cra!
-    Ma non ti ho mai mai visto in giro.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-    E ogni giorno vengo a sistemare il sentiero e pulire la serra.
+    {charTag(Mentor, "neutral")}:                   Ma non ti ho mai mai visto in giro.
+                                                    E ogni giorno vengo a sistemare il sentiero e pulire la serra.
     {charTag(Franco, "{portrait_Franco()}")}:       Forse allora non sei venuta ogni giorno.
-    O forse mi hai scambiato per Tullio? A volte succede.
-    O forse non è che hai proprio proprio proprio tutto sotto il tuo controllo.
-    Un po' come zio Gracco e il suo problema con l'alcool. E i combustibili in generale.
-    Impossibile.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-    Controllo tutto, è il mio lavoro.
+                                                    O forse mi hai scambiato per Tullio? A volte succede.
+                                                    O forse non è che hai proprio proprio proprio tutto sotto il tuo controllo.
+                                                    Un po' come zio Gracco e il suo problema con l'alcool. E i combustibili in generale.
+    {charTag(Mentor, "neutral")}:                   Impossibile.
+                                                    Controllo tutto, è il mio lavoro.
     {charTag(Franco, "{portrait_Franco()}")}:       Eppure eccoci cra, con io che so dove sono stato, e tu mi dici che non ricordo bene.
-    Non ho detto che non ricordi bene.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
+    {charTag(Mentor, "sad")}:                       Non ho detto che non ricordi bene.
     {charTag(Franco, "{portrait_Franco()}")}:       Ma dici che hai tutto sotto il tuo controllo e che non mi hai visto, quindi o non ricordo bene, o mento.
-    E io sono una rana e una rana non ha un collo e quindi non mento.
-    Non mi permetterei mai di dirlo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+                                                    E io sono una rana e una rana non ha un collo e quindi non mento.
+    {charTag(Mentor, "sorry")}:                     Non mi permetterei mai di dirlo.
     {charTag(Franco, "{portrait_Franco()}")}:       Infatti non l'hai detto, l'hai implicato.
-    Questa me l'ha insegnata stamani mio figlio Euforbo.
-    Ma mi ha chiesto di non usare "stazampe" invece di stamani.
-    Non mi piace il tuo tono, rana.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                                                    Questa me l'ha insegnata stamani mio figlio Euforbo.
+                                                    Ma mi ha chiesto di non usare "stazampe" invece di stamani.
+    {charTag(Mentor, "neutral")}:                   Non mi piace il tuo tono, rana.
     {charTag(Franco, "{portrait_Franco()}")}:       Ma non cambia il fatto che mi stai dando o del bugiardo o dello smemorato.
-    Io non l'ho detto!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_bored
+    {charTag(Mentor, "bored")}:                     Io non l'ho detto!
     {charTag(Franco, "{portrait_Franco()}")}:       Ma l'hai implicato.
-    Che non è ampilato, perché i lati non sono ampi.
-    Questo lo dice sempre Euforbo.
-    AAAAAAAARG!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_bored
-    SEI INSOPPORTABILE!
+                                                    Che non è ampilato, perché i lati non sono ampi.
+                                                    Questo lo dice sempre Euforbo.
+    {charTag(Mentor, "bored")}:                     AAAAAAAARG!
+                                                    SEI INSOPPORTABILE!
         ~ change_entity_place(Mentor)
     {charTag(Franco, "{portrait_Franco()}")}:       No, sono Franco La Rana.
-    Non mi ha molto ascoltato.    
-    E comunque non ricordo l'esistenza di nessun mentore da queste parti.
+                                                    Non mi ha molto ascoltato.    
+                                                    E comunque non ricordo l'esistenza di nessun mentore da queste parti.
         {
             - are_two_entities_together(FirstCharacter, PG):
                 In che senso, scusa?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
@@ -261,63 +261,63 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    Quindi puoi parlare con, con questa pianta?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-    Perché mi piacerebbe.
-    Oh, è una cosa vanitosa.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-    Ma mi piacerebbe sapere cosa ne pensa di me.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-    Del mio lavoro.
-    Se sto facendo un buon lavoro.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-    Visto che vede e sente tutto.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+    {charTag(Mentor, "neutral")}:                   Quindi puoi parlare con, con questo vaso?
+                                                    Perché mi piacerebbe.
+    {charTag(Mentor, "sorry")}:                     Oh, è una cosa vanitosa.
+    {charTag(Mentor, "neutral")}:                   Ma mi piacerebbe sapere cosa ne pensa di me.
+                                                    Del mio lavoro.
+    {charTag(Mentor, "hurry")}:                     Se sto facendo un buon lavoro.
+    {charTag(Mentor, "neutral")}:                   Visto che vede e sente tutto.
 
-    {charTag(TheWitch, "{witch_state()}")}:   <i>Crediamo che {mentorName} stia facendo un buon lavoro.</i>
-    <i>Così come l'acqua che si raccoglie tra le mani per dissetarci.</i>
-    <i>Ma così come l'acqua non può essere incendio, così {mentorName} non può essere qualcosa che non è.</i>
-    <i>O portare nomi che non sa.</i>
+    {charTag(TheWitch, "{witch_state()}")}:         <i>Crediamo che {mentorName} stia facendo un buon lavoro.</i>
+                                                    <i>Così come l'acqua che si raccoglie tra le mani per dissetarci.</i>
+                                                    <i>Ma così come l'acqua non può essere incendio, così {mentorName} non può essere qualcosa che non è.</i>
+                                                    <i>O portare nomi che non sa.</i>
 
         + Metà delle cose che la voce dice sono illogiche.
                 -> glyph_modifier_variation_management(Mentor, airC)->
-            {charTag(TheWitch, "{witch_state()}")}:   <i>{player_name} non vede, e quindi decide che qualcosa non esiste.</i>
+            {charTag(TheWitch, "{witch_state()}")}:         <i>{player_name} non vede, e quindi decide che qualcosa non esiste.</i>
             <i>Ma quella cosa esiste anche se {player_name} non vede.</i>
-            Uh, peccato.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-            Ma ci sta: questo luogo è così insolito, immagino sia inevitabile non capirlo fino in fondo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+            {charTag(Mentor, "sad")}:                       Uh, peccato.
+            {charTag(Mentor, "neutral")}:                   Ma ci sta: questo luogo è così insolito, immagino sia inevitabile non capirlo fino in fondo.
             
         + Dice che stai facendo un buon lavoro.
                 -> glyph_modifier_variation_management(Mentor, waterC)->
-            Oh, ma sicuramente esagera.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-            Prendi prima: ho scoperto che per via della mia incuria sta crescendo del muschio sotto la panchina.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-            Però.
-            Ringrazia la voce da parte mia.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-            {charTag(TheWitch, "{witch_state()}")}:   <i>Dire una mezza verità porta su una mezza strada.</i>
+            {charTag(Mentor, "hurry")}:                     Oh, ma sicuramente esagera.
+            {charTag(Mentor, "sad")}:                       Prendi prima: ho scoperto che per via della mia incuria sta crescendo del muschio sotto al suo vaso.
+                                                            Però.
+            {charTag(Mentor, "neutral")}:                   Ringrazia la voce da parte mia.
+            {charTag(TheWitch, "{witch_state()}")}:         <i>Dire una mezza verità porta su una mezza strada.</i>
         
         + Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
                 -> glyph_modifier_variation_management(Mentor, earthC)->
-            Non è che ho lasciato qualcosa di acceso in cucina?#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-            No dai, si vedrebbe il fumo da qui, sicuro.
-            Magari è qualcosa di simbolico.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-            Spero di non aver distrutto nulla.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+            {charTag(Mentor, "sad")}:                       Non è che ho lasciato qualcosa di acceso in cucina?
+                                                            No dai, si vedrebbe il fumo da qui, sicuro.
+            {charTag(Mentor, "neutral")}:                   Magari è qualcosa di simbolico.
+            {charTag(Mentor, "sorry")}:                     Spero di non aver distrutto nulla.
         
         + Non è più importante il tuo di giudizio sul tuo lavoro, {mentorName}?
                 -> glyph_modifier_variation_management(Mentor, aetherC)->
-            Credo di sì.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-            Ma uno sguardo esterno ci può aiutare, immagino.
-            Oh, non lo so.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-            Sì.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-            Credo di star facendo un buon lavoro.
+            {charTag(Mentor, "neutral")}:                   Credo di sì.
+                                                            Ma uno sguardo esterno ci può aiutare, immagino.
+            {charTag(Mentor, "sad")}:                       Oh, non lo so.#
+            {charTag(Mentor, "neutral")}:                   Sì.
+                                                            Credo di star facendo un buon lavoro.
 
         + Ha detto tante cose ma la risposta è: no.
                 -> glyph_modifier_variation_management(Mentor, fireC)->
-            {charTag(TheWitch, "{witch_state()}")}:   <i>La frusta che cade senza motivo non porta alcun insegnamento.</i>
-            Oh.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-            Forse potrei chiedere scusa in qualche modo a...
-            Ma a chi?
-            Come?
-            Ho deciso: pulisco il tronco.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-            Potrebbe apprezzare, immagino.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-            {charTag(TheWitch, "{witch_state()}")}:   <i>Noi non abbiamo bisogno di pulizia, il nostro sporco è nido per funghi e insetti.</i> 
+            {charTag(TheWitch, "{witch_state()}")}:         <i>La frusta che cade senza motivo non porta alcun insegnamento.</i>
+            {charTag(Mentor, "sad")}:                       Oh.#
+                                                            Forse potrei chiedere scusa in qualche modo a...
+                                                            Ma a chi?
+                                                            Come?
+            {charTag(Mentor, "hurry")}:                     Ho deciso: pulisco il tronco.
+            {charTag(Mentor, "neutral")}:                   Potrebbe apprezzare, immagino.
+            {charTag(TheWitch, "{witch_state()}")}:         <i>Noi non abbiamo bisogno di pulizia, il nostro sporco è nido per funghi e insetti.</i> 
         -
-    Immagino sia faticoso, avere una voce in testa, così.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-    O magari ti fa sentire meno {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-    Ho qualcosa su cui riflettere, immagino.
+    {charTag(Mentor, "sad")}:                       Immagino sia faticoso, avere una voce in testa, così.
+    {charTag(Mentor, "neutral")}:                   O magari ti fa sentire meno {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}?
+                                                    Ho qualcosa su cui riflettere, immagino.
 
         -> witch_closing_storylet ->
         -> mentor_closing_storylet ->
@@ -392,7 +392,7 @@
     Tullio dice sempre che nuotano nell'aria.
         {
             - are_two_entities_together(Mentor, PG):
-                Comincio a sospettare che questa rana farà più danni di quanti ne potrò risolvere.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                {charTag(Mentor, "neutral")}:                   Comincio a sospettare che questa rana farà più danni di quanti ne potrò risolvere.
         }
     
         -> second_char_closing_storylet ->

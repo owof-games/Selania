@@ -46,21 +46,21 @@
             { 
                 - (contentsTrainStop has DoggoFirstLetters or contentsTrainStop has DoggoSecondLetters) && (contentsTrainStop hasnt Mentor):
                     {stopping:
-                        - Ma hai visto {player_name} che c'è qualcunə che ti aspetta alla fermata del treno?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                        - Mi sembra di aver sentito un rumore alla fermata prima.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                        - Credo ci sia della posta per te alla fermata, {player_name}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                        - Sono sicura di aver sentito un abbaio alla stazione: tu sai già chi è, vero?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                        - Credo sia arrivata una lettera per te, {player_name}. La trovi come sempre in stazione.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                        - {charTag(Mentor, "hurry")}:             Ma hai visto {player_name} che c'è qualcunə che ti aspetta alla fermata del treno?
+                        - {charTag(Mentor, "hurry")}:             Mi sembra di aver sentito un rumore alla fermata prima.
+                        - {charTag(Mentor, "hurry")}:             Credo ci sia della posta per te alla fermata, {player_name}.
+                        - {charTag(Mentor, "hurry")}:             Sono sicura di aver sentito un abbaio alla stazione: tu sai già chi è, vero?
+                        - {charTag(Mentor, "hurry")}:             Credo sia arrivata una lettera per te, {player_name}. La trovi come sempre in stazione.
                     }
                         ~ mentor_lastTimeTalking = 0
                         ->->
                 
                 - else:
                     {shuffle:
-                        - Ehi {player_name}, spero vada tutto bene.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_hurry
-                        - Ehi {player_name}, è da un po' che non parliamo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_hurry
-                        - {player_name}, se ti vanno due chiacchiere sono qui.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_hurry
-                        - Ciao {player_name}, spero tu non ti stia affaticando troppo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_sad     
+                        - {charTag(Mentor, "hurry")}:             Ehi {player_name}, spero vada tutto bene.
+                        - {charTag(Mentor, "hurry")}:             Ehi {player_name}, è da un po' che non parliamo.
+                        - {charTag(Mentor, "hurry")}:             {player_name}, se ti vanno due chiacchiere sono qui.
+                        - {charTag(Mentor, "hurry")}:             Ciao {player_name}, spero tu non ti stia affaticando troppo.
                     }
                         ~ mentor_lastTimeTalking = 0
                         ->->

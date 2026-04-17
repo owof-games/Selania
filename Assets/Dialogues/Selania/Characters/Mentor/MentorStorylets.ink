@@ -9,17 +9,17 @@
 
     ~ mentor_storyletsForRewritingCount ++           
        
-        Ehi {player_name}!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Stavo pensando a una cosa sciocca.
-        Che forse non è giusto avere delle preferenze, ma la serra è il mio posto preferito.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+        {charTag(Mentor, "neutral")}:           Ehi {player_name}!
+                                                Stavo pensando a una cosa sciocca.
+        {charTag(Mentor, "neutral")}:           Che forse non è giusto avere delle preferenze, ma la serra è il mio posto preferito.
         {
             - LIST_COUNT(greenhouse_backupCultivable) < 12:
-                E immagino piaccia anche te, visto che hai già coltivato diverse piante.
+                                                E immagino piaccia anche te, visto che hai già coltivato diverse piante.
             - else:
-                Forse per te non è lo stesso, perché vedo che non hai coltivato molte piante.
+                                                Forse per te non è lo stesso, perché vedo che non hai coltivato molte piante.
         }
-        C'è qualcosa nel vedere crescere piante, fiori, funghi che mi fa sentire appagata.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-        Non è solo l'odore della terra, o l'umidità nell'aria nei giorni più caldi.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+        {charTag(Mentor, "hurry")}:             C'è qualcosa nel vedere crescere piante, fiori, funghi che mi fa sentire appagata.
+        {charTag(Mentor, "neutral")}:           Non è solo l'odore della terra, o l'umidità nell'aria nei giorni più caldi.
         Ma quella sensazione che con le tue mani puoi permettere a un altro corpo di crescere al meglio.
             {
                 - are_two_entities_together(SecondCharacter, PG): 
@@ -33,54 +33,54 @@
 
             + \ {charTag(PG, "neutral")}:            Preferisco la stazione dei treni, è ordinata e precisa.
                     -> glyph_modifier_variation_management(Mentor, airC)->
-                Sì, ne capisco il fascino.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                {charTag(Mentor, "neutral")}:           Sì, ne capisco il fascino.
                 A volte mi siedo lì e mi godo per qualche istante l'attesa.
                 Il nulla che accade.
                 Ma poi le mani fremono, mi supplicano di sistemare qualcosa.
                 Fatico a stare tranquilla.
                 
-            + \ {charTag(PG, "neutral")}:            Lo stagno è divertente, gli insetti fanno tantissime cose.
+            + \ {charTag(PG, "neutral")}:               Lo stagno è divertente, gli insetti fanno tantissime cose.
                     -> glyph_modifier_variation_management(Mentor, earthC)->
-                Forse ne fanno troppe.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
-                Sembrano non pensare a nulla.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                {charTag(Mentor, "bored")}:             Forse ne fanno troppe.
+                {charTag(Mentor, "neutral")}:           Sembrano non pensare a nulla.
                 E l'acqua è lì e lascia che tutto accada, senza pensare al domani.
                 
             + \ {charTag(PG, "neutral")}:            La foresta domina: è lotta, è potenza!
                     -> glyph_modifier_variation_management(Mentor, fireC)->
-                E disordinata, sporca.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
-                Posso capirne il fascino, ma non è un luogo dove resto con piacere.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+                {charTag(Mentor, "bored")}:             E disordinata, sporca.
+                {charTag(Mentor, "sorry")}:             Posso capirne il fascino, ma non è un luogo dove resto con piacere.
                     {
                         - firstChar_storyStatus == story_storyEnded or secondChar_storyStatus == story_storyEnded:
-                            Però per lo meno ora porta alla biblioteca, che sto imparando ad apprezzare.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                            Però per lo meno ora porta alla biblioteca, che sto imparando ad apprezzare.
                             Anche se è estremamente incasinata.
                         
                         - else:
-                            E quel tronco al centro non vuole saperne né di crescere né di morire.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
-                            Una cosa davvero fastidiosa.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                            {charTag(Mentor, "bored")}:             E tutte quelle foglie da raccogliere!
+                            {charTag(Mentor, "neutral")}:           Una cosa davvero fastidiosa.
                     }
                 
             + \ {charTag(PG, "neutral")}:            Un po' come prendersi cura delle persone qui.
                     -> glyph_modifier_variation_management(Mentor, waterC)->
-                Sì, anche se con meno pressioni.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                {charTag(Mentor, "neutral")}:           Sì, anche se con meno pressioni.
                 Le persone a volte fanno cose che non ci aspettiamo.
                 Un <i>Lichene degli abissi</i> con le giuste condizioni invece cresce sempre allo stesso modo.
   
             + \ {charTag(PG, "neutral")}:            Fortunatamente invece crescono a prescindere da me.
                     -> glyph_modifier_variation_management(Mentor, aetherC)->
-                Senza di te?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-                Dobbiamo bagnare il terreno, prepararlo, seminare.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                Non ci sarebbe nulla senza il nostro lavoro.
-                Non saprebbero resistere alle erbacce, al freddo.
-                No, non sono d'accordo, scusa.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                {charTag(Mentor, "sorry")}:             Senza di te?
+                {charTag(Mentor, "hurry")}:             Dobbiamo bagnare il terreno, prepararlo, seminare.
+                                                        Non ci sarebbe nulla senza il nostro lavoro.
+                                                        Non saprebbero resistere alle erbacce, al freddo.
+                {charTag(Mentor, "neutral")}:           No, non sono d'accordo, scusa.
             -
         {
             - player_accessiblePlaces has Kitchen:
-                Ma ora vorrei pensare un attimo a come rendere più carino l'accesso alla cucina.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                Ma ora vorrei pensare un attimo a come rendere più carino l'accesso alla cucina.
             - else:
-                Ma a proposito di questo posto: mi conviene dare una pulita all'acqua dello stagno.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                {charTag(Mentor, "hurry")}:             Ma a proposito di questo posto: mi conviene dare una pulita all'acqua dello stagno.
         }
 
-        Grazie per la chiacchierata, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+        {charTag(Mentor, "neutral")}:           Grazie per la chiacchierata, {player_name}.
 
             -> mentor_closing_storylet ->
             -> main
@@ -94,62 +94,62 @@
 
     ~ mentor_storyletsForRewritingCount ++           
 
-        La storia di {charNameOne} mi ha colpita.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Così giovane.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-        Così tante possibilità.
-        Eppure invece di vedere la cosa come un vantaggio, si è ritrovata bloccata.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-        Quando avevo la sua età...#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-        No, queste sono frasi da vecchia.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        E forse mi sono dimenticata di quanto possa essere facile perdere sé stesse quando si è giovani.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+        {charTag(Mentor, "neutral")}:           La storia di {charNameOne} mi ha colpita.
+        {charTag(Mentor, "hurry")}:             Così giovane.
+                                                Così tante possibilità.
+        {charTag(Mentor, "sad")}:               Eppure invece di vedere la cosa come un vantaggio, si è ritrovata bloccata.
+        {charTag(Mentor, "hurry")}:             Quando avevo la sua età...
+        {charTag(Mentor, "neutral")}:           No, queste sono frasi da vecchia.
+        {charTag(Mentor, "hurry")}:             E forse mi sono dimenticata di quanto possa essere facile perdere sé stesse quando si è giovani.
             {
                 - are_two_entities_together(FirstCharacter, PG): 
                     Vuol dire che questa confusione prima o poi finisce?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
                     Perché la cosa mi rincuora mooolto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             }
         
-            + \ {charTag(PG, "neutral")}:            Numeri come l'età sono indicatori, non fatti assoluti.
+            + \ {charTag(PG, "neutral")}:               Numeri come l'età sono indicatori, non fatti assoluti.
                     -> glyph_modifier_variation_management(Mentor, airC)->
-                Su questo hai ragione, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Eppure posso assicurarti che i miei cinquanta e rotti anni si portano addosso anche un bel po' di fatti scricchiolanti e ricordi.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
+                                                        Su questo hai ragione, {player_name}.
+                {charTag(Mentor, "sad")}:               Eppure posso assicurarti che i miei cinquanta e rotti anni si portano addosso anche un bel po' di fatti scricchiolanti e ricordi.
                    
-            + \ {charTag(PG, "neutral")}:            Quando un gioco ha tantissime regole non è più divertente.
+            + \ {charTag(PG, "neutral")}:               Quando un gioco ha tantissime regole non è più divertente.
                     -> glyph_modifier_variation_management(Mentor, earthC)->
-                Eppure non sono così tante regole.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_bored
-                Forse è solo una: non puoi avere tutto.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Se vedi la vita come un gioco, ti aspetti di avere almeno un modo per vincere.
-                Ma non credo proprio che funzioni così.
-                Giochi, e il più delle volte perdi senza nemmeno sapere perché.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
+                {charTag(Mentor, "bored")}:             Eppure non sono così tante regole.
+                {charTag(Mentor, "neutral")}:           Forse è solo una: non puoi avere tutto.
+                                                        Se vedi la vita come un gioco, ti aspetti di avere almeno un modo per vincere.
+                                                        Ma non credo proprio che funzioni così.
+                {charTag(Mentor, "sad")}:               Giochi, e il più delle volte perdi senza nemmeno sapere perché.
                 
-            + \ {charTag(PG, "neutral")}:            Nel dubbio si agisce. Fare male è meglio che non fare.
+            + \ {charTag(PG, "neutral")}:               Nel dubbio si agisce. Fare male è meglio che non fare.
                     -> glyph_modifier_variation_management(Mentor, fireC)->
-                Ma con questo principio, non c'è una azione mirata, consapevole.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-                Poi succede che ci feriamo, o feriamo chi amiamo.
-                E a quel punto non siamo nemmeno pronte a capire il perché.
+                {charTag(Mentor, "sad")}:               Ma con questo principio, non c'è una azione mirata, consapevole.
+                                                        Poi succede che ci feriamo, o feriamo chi amiamo.
+                                                        E a quel punto non siamo nemmeno pronte a capire il perché.
                 
-            + \ {charTag(PG, "neutral")}:            E tu sei molto ricettiva verso le altre persone.
+            + \ {charTag(PG, "neutral")}:               E tu sei molto ricettiva verso le altre persone.
                     -> glyph_modifier_variation_management(Mentor, waterC)->
-                Forse non <i>molto</i>.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-                Ma indubbiamente quello che hanno da dire e quello che provano, conta.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Una mentore è una guida, ma per imparare a guidare deve capire chi ha dall'altra parte.
-                Di cosa abbia bisogno.
-                Dove voglia andare.
+                {charTag(Mentor, "sorry")}:             Forse non <i>molto</i>.
+                {charTag(Mentor, "neutral")}:           Ma indubbiamente quello che hanno da dire e quello che provano, conta.
+                                                        Una mentore è una guida, ma per imparare a guidare deve capire chi ha dall'altra parte.
+                                                        Di cosa abbia bisogno.
+                                                        Dove voglia andare.
                 
-            + \ {charTag(PG, "neutral")}:            Per vedere le cose in modo ampio, è importante perdersi.
+            + \ {charTag(PG, "neutral")}:               Per vedere le cose in modo ampio, è importante perdersi.
                     -> glyph_modifier_variation_management(Mentor, aetherC)->
-                E in questo luogo in fondo arrivano solo persone che si sono perse.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                E che se ne vanno più serene.
-                Avrebbero scoperto quella serenità, senza un po' di smarrimento?
+                {charTag(Mentor, "neutral")}:           E in questo luogo in fondo arrivano solo persone che si sono perse.
+                                                        E che se ne vanno più serene.
+                                                        Avrebbero scoperto quella serenità, senza un po' di smarrimento?
                 
             -
 
-        Questo luogo continua a stupirmi.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Sei qui per aiutare le altre persone, e finisci per scoprire cose di te.
-        Ma ora è il momento di svuotare lo stagno dalle sue cose più schifose.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+        {charTag(Mentor, "neutral")}:           Questo luogo continua a stupirmi.
+                                                Sei qui per aiutare le altre persone, e finisci per scoprire cose di te.
+        {charTag(Mentor, "hurry")}:             Ma ora è il momento di svuotare lo stagno dalle sue cose più schifose.
             {
                 - are_two_entities_together(SecondCharacter, PG): 
                     Non togliere i girini però!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             } 
-        Prega per me, {player_name}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+        {charTag(Mentor, "neutral")}:           Prega per me, {player_name}.
 
             -> mentor_closing_storylet ->
             -> main
@@ -163,49 +163,49 @@
     
     ~ mentor_storyletsForRewritingCount ++           
          
-        A volte un po' mi pesa, tutto questo via vai.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-        Ci sono persone a cui mi sono affezionata che non rivedrò più.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Persone che ho aiutato e ora vorrei sentire più spesso.
-        Ma poi le loro lettere non arrivano, o arrivano sempre meno.
-        E allora mi chiedo se ho sbagliato qualcosa.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-        Non mi fraintendere: sono felice di quello che faccio, di quello che ho fatto.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        E per me è una gioia tenere tutto questo in piedi, giorno per giorno.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-        Ma a volte vorresti una conferma esplicita, sapere che stai facendo tutto quello che puoi fare.
-        Che nessuno ce l'ha con te.
+        {charTag(Mentor, "sad")}:               A volte un po' mi pesa, tutto questo via vai.
+        {charTag(Mentor, "neutral")}:           Ci sono persone a cui mi sono affezionata che non rivedrò più.
+                                                Persone che ho aiutato e ora vorrei sentire più spesso.
+                                                Ma poi le loro lettere non arrivano, o arrivano sempre meno.
+        {charTag(Mentor, "sad")}:               E allora mi chiedo se ho sbagliato qualcosa.
+        {charTag(Mentor, "neutral")}:           Non mi fraintendere: sono felice di quello che faccio, di quello che ho fatto.
+        {charTag(Mentor, "hurry")}:             E per me è una gioia tenere tutto questo in piedi, giorno per giorno.
+                                                Ma a volte vorresti una conferma esplicita, sapere che stai facendo tutto quello che puoi fare.
+        {charTag(Mentor, "sad")}:               Che nessuno ce l'ha con te.
 
-            + \ {charTag(PG, "neutral")}:            Ogni lavoro ha la sua quota di sacrificio.
+            + \ {charTag(PG, "neutral")}:               Ogni lavoro ha la sua quota di sacrificio.
                     -> glyph_modifier_variation_management(Mentor, airC)->
-                Vero.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Il valore di qualcosa viene da quanto ci è costata.
-                E la maggior parte delle volte non paghiamo in denaro.
+                {charTag(Mentor, "sad")}:               Vero.
+                {charTag(Mentor, "neutral")}:           Il valore di qualcosa viene da quanto ci è costata.
+                                                        E la maggior parte delle volte non paghiamo in denaro.
                 
-            + \ {charTag(PG, "neutral")}:            Forse le volpi si mangiano le lettere!
+            + \ {charTag(PG, "neutral")}:               Forse le volpi si mangiano le lettere!
                     -> glyph_modifier_variation_management(Mentor, earthC)->
-                La fantasia è un modo piacevole di affrontare la realtà, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Ma alla lunga rende difficile capire cosa sia vero e cosa no.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
+                {charTag(Mentor, "neutral")}:           La fantasia è un modo piacevole di affrontare la realtà, {player_name}.
+                {charTag(Mentor, "sad")}:               Ma alla lunga rende difficile capire cosa sia vero e cosa no.
                     
-            + \ {charTag(PG, "neutral")}:            Fregatene: il mondo è pieno di ingrati.
+            + \ {charTag(PG, "neutral")}:               Fregatene: il mondo è pieno di ingrati.
                     -> glyph_modifier_variation_management(Mentor, fireC)->
-                No.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-                Direi che il mondo è pieno di persone distratte.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Le cose da fare sono infinite, e finiamo per dimenticarci di chi non vediamo tutti i giorni.
-                Non è ingratitudine, è una vita che scorre troppo veloce.
+                {charTag(Mentor, "sorry")}:             No.
+                {charTag(Mentor, "neutral")}:           Direi che il mondo è pieno di persone distratte.
+                                                        Le cose da fare sono infinite, e finiamo per dimenticarci di chi non vediamo tutti i giorni.
+                                                        Non è ingratitudine, è una vita che scorre troppo veloce.
                 
-            + \ {charTag(PG, "neutral")}:            Ti prometto che ti scriverò ogni giorno.
+            + \ {charTag(PG, "neutral")}:               Ti prometto che ti scriverò ogni giorno.
                     -> glyph_modifier_variation_management(Mentor, waterC)->
-                Oh, {player_pronouns has him: caro|{player_pronouns has her: cara|carə}}, è una bella promessa.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Una promessa che ho sentito decine di volte.
+                {charTag(Mentor, "neutral")}:           Oh, {player_pronouns has him: caro|{player_pronouns has her: cara|carə}}, è una bella promessa.
+                                                        Una promessa che ho sentito decine di volte.
                     
-            + \ {charTag(PG, "neutral")}:            Esiste un confine tra {mentorName} e questo luogo?
+            + \ {charTag(PG, "neutral")}:               Esiste un confine tra {mentorName} e questo luogo?
                     -> glyph_modifier_variation_management(Mentor, aetherC)->
-                A volte mi sento <i>solo</i> questo luogo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Non mi chiedo spesso se andarmene o meno.
-                O dove.
+                {charTag(Mentor, "sad")}:               A volte mi sento <i>solo</i> questo luogo.
+                                                        Non mi chiedo spesso se andarmene o meno.
+                                                        O dove.
  
             -
-            Ma basta con questo spirito malinconico!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-            Mi sono appena ricordata che ci sono delle erbacce fastidiose dietro la serra.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-            Devo inventarmi un modo per liberarmene!
+            {charTag(Mentor, "neutral")}:           Ma basta con questo spirito malinconico!
+                                                    Mi sono appena ricordata che ci sono delle erbacce fastidiose dietro la serra.
+                                                    Devo inventarmi un modo per liberarmene!
                 {
                     - are_two_entities_together(SecondCharacter, PG):
                             Chissà se {charNameOne} mi manderà una lettera!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
@@ -229,69 +229,68 @@
 
     ~ mentor_storyletsForRewritingCount ++           
 
-        Mi sto chiedendo se non sia stata troppo dura col piccolo {charNameTwo} appena arrivato qui.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry 
-        Ero sinceramente spaventata, ma forse ho reagito con violenza.
-        Ma questo non è un luogo per un bimbo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Anzi: questo è un luogo dove non dovrebbe <b>mai</b> arrivare un bimbo.
-        Ti immagini cosa possa significare essere un genitore e renderti conto che tuo figlio, così piccolo, ha già perso la strada?
-        Che già non sappia più cosa fare del suo futuro?
-        Che cosa terribile per entrambi.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-        E tutta quella responsabilità.
-        Quella paura per il futuro e per l'ambiente.
-        Non dovrebbe pensare al pallone, a giocare con gli amici, a studiare?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+        {charTag(Mentor, "sorry")}:             Mi sto chiedendo se non sia stata troppo dura col piccolo {charNameTwo} appena arrivato qui.
+        {charTag(Mentor, "neutral")}:           Ma questo non è un luogo per un bimbo.
+                                                Anzi: questo è un luogo dove non dovrebbe <b>mai</b> arrivare un bimbo.
+                                                Ti immagini cosa possa significare essere un genitore e renderti conto che tuo figlio, così piccolo, ha già perso la strada?
+                                                Che già non sappia più cosa fare del suo futuro?
+        {charTag(Mentor, "sad")}:               Che cosa terribile per entrambi.
+                                                E tutta quella responsabilità.
+                                                Quella paura per il futuro e per l'ambiente.
+        {charTag(Mentor, "neutral")}:           Non dovrebbe pensare al pallone, a giocare con gli amici, a studiare?
         
             + \ {charTag(PG, "neutral")}:            \ {charNameTwo} ama studiare, e qui ha trovato il suo posto.
                     -> glyph_modifier_variation_management(Mentor, airC)->
-                No!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
-                Questo è un posto spirituale.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                {charTag(Mentor, "bored")}:             No!
+                {charTag(Mentor, "neutral")}:           Questo è un posto spirituale.
                 Di crescita, di esplorazione.
-                Non un laboratorio.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
+                {charTag(Mentor, "bored")}:             Non un laboratorio.
                 Non il piccolo chimico.
                     
             + \ {charTag(PG, "neutral")}:            Giocare è comunque un modo per capire il mondo, {mentorName}.
                     -> glyph_modifier_variation_management(Mentor, earthC)->
-                Ma un modo controllato, adatto per i bambini.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Con meno violenza possibile.
-                Senza le cose terribili che ci circondano.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
+                {charTag(Mentor, "neutral")}:           Ma un modo controllato, adatto per i bambini.
+                                                        Con meno violenza possibile.
+                {charTag(Mentor, "sad")}:               Senza le cose terribili che ci circondano.
                 Se non voglio vederle io a cinquant'anni, perché deve vederle un bimbo?
                 
             + \ {charTag(PG, "neutral")}:            Alla sua età avevo anche io rabbia e paura. Si è bambini, non idioti.
                     -> glyph_modifier_variation_management(Mentor, fireC)->
-                Non serve che usi quel linguaggio con me, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
-                E non sono d'accordo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Nemmeno a vent'anni puoi sapere davvero cosa vuoi.
+                {charTag(Mentor, "bored")}:             Non serve che usi quel linguaggio con me, {player_name}.
+                {charTag(Mentor, "neutral")}:           E non sono d'accordo.
+                                                        Nemmeno a vent'anni puoi sapere davvero cosa vuoi.
                     {
                         - are_two_entities_together(FirstCharacter, PG):
                            Ehm, confermo.     #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                     } 
-                Cosa conta a questo mondo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Per questo i genitori ci sono.
-                Per proteggerti.
+                {charTag(Mentor, "neutral")}:           Cosa conta a questo mondo.
+                                                        Per questo i genitori ci sono.
+                                                        Per proteggerti.
 
             + \ {charTag(PG, "neutral")}:            Mi spiace che tu ti senta in colpa, {mentorName}.
                     -> glyph_modifier_variation_management(Mentor, waterC)->
-                Ma non hai detto che non ho sbagliato.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-                Scusa, non è quello il tuo ruolo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-                Sennò non sarei io la mentore, ma tu.
-                Spero che almeno lui prima o poi mi perdoni.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                {charTag(Mentor, "sad")}:               Ma non hai detto che non ho sbagliato.
+                {charTag(Mentor, "sorry")}:             Scusa, non è quello il tuo ruolo.
+                                                        Sennò non sarei io la mentore, ma tu.
+                {charTag(Mentor, "neutral")}:           Spero che almeno lui prima o poi mi perdoni.
                     
 
             + \ {charTag(PG, "neutral")}:            Come si dice? Crescere unə figliə dovrebbe essere il lavoro di una comunità.
                     -> glyph_modifier_variation_management(Mentor, aetherC)->
-                Dovrebbe.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Ma non è.
-                E si dovrebbe ragionare con quello che si ha.
-                Due persone.
-                Con vite complesse.
-                E senza il diritto di sbagliare.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
+                {charTag(Mentor, "neutral")}:           Dovrebbe.
+                                                        Ma non è.
+                                                        E si dovrebbe ragionare con quello che si ha.
+                                                        Due persone.
+                                                        Con vite complesse.
+                {charTag(Mentor, "sad")}:               E senza il diritto di sbagliare.
             -
-        
-        Forse mi sono concentrata sulla cosa sbagliata.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Il problema non è quello che è accaduto.
-        Il problema è che mi sono fatta coinvolgere.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-        Una mentore deve mantenere un certo distacco per guidarti.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Non può essere emotiva.
-        Vado a riordinare in ordine di data i libri in biblioteca.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+
+        {charTag(Mentor, "neutral")}:           Forse mi sono concentrata sulla cosa sbagliata.
+                                                Il problema non è quello che è accaduto.
+        {charTag(Mentor, "sorry")}:             Il problema è che mi sono fatta coinvolgere.
+        {charTag(Mentor, "neutral")}:           Una mentore deve mantenere un certo distacco per guidarti.
+                                                Non può essere emotiva.
+        {charTag(Mentor, "hurry")}:             Vado a riordinare in ordine di data i libri in biblioteca.
 
             -> mentor_closing_storylet ->
             -> main
@@ -305,17 +304,13 @@
     
     ~ mentor_storyletsForRewritingCount ++           
 
-        Mi sento più stanca del solito.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-        E fa caldo.
-        Ma l'idea di stendermi non mi piace.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
-        C'è molto da fare.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-            {
-                - are_two_entities_together(PG, FromForestToPond):
-                    Però quella panchina mi ricorda un'altra panchina, sai?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                - else:
-                    Però stavo pensando alla panchina, quella della foresta, che mi ricorda un'altra panchina.    
-            }
-        Dove in un'altra vita ho ricevuto il mio primo bacio.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+        {charTag(Mentor, "sorry")}:             Mi sento più stanca del solito.
+                                                E fa caldo.
+        {charTag(Mentor, "bored")}:             Ma l'idea di stendermi non mi piace.
+                                                C'è molto da fare.
+       
+        {charTag(Mentor, "hurry")}:             Eppure continuo a pensare a una cosa stupida.
+                                                Al mio primo bacio.
             {
                 - are_two_entities_together(FirstCharacter, PG):
                     Uuuuh, sono pronta per il thè, ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
@@ -324,64 +319,64 @@
                 - are_two_entities_together(SecondCharacter, PG):
                     Bleah!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
             }        
-        Dall'uomo che poi ho sposato.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        E a cui ho dedicato il resto dei miei giorni.
-        Fino a quando non sono arrivata qui.
-        Già.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-        Fino a quando non sono arrivata qui.
-        {player_name}: secondo te cosa vuol dire amare un'altra persona?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+        {charTag(Mentor, "neutral")}:           Dall'uomo che poi ho sposato.
+                                                E a cui ho dedicato il resto dei miei giorni.
+                                                Fino a quando non sono arrivata qui.
+        {charTag(Mentor, "sad")}:               Già.
+                                                Fino a quando non sono arrivata qui.
+        {charTag(Mentor, "neutral")}:           {player_name}: secondo te cosa vuol dire amare un'altra persona?
 
             + \ {charTag(PG, "neutral")}:            Logico: progettare assieme, costruire fondamenta, accrescersi.
                     -> glyph_modifier_variation_management(Mentor, airC)->
-                Creare qualcosa che regga alla fine del desiderio.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Quando il corpo perde il suo splendore.
-                E il letto è il luogo della stanchezza e della malattia.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-                Quando invece di chiamarci "amore".
-                Chiamiamo il nome dell'altro per sapere dove sono le chiavi della macchina.
+                {charTag(Mentor, "neutral")}:           Creare qualcosa che regga alla fine del desiderio.
+                                                        Quando il corpo perde il suo splendore.
+                {charTag(Mentor, "sad")}:               E il letto è il luogo della stanchezza e della malattia.
+                                                        Quando invece di chiamarci "amore".
+                                                        Chiamiamo il nome dell'altro per sapere dove sono le chiavi della macchina.
                     
             + \ {charTag(PG, "neutral")}:            Un rifugio di stupore e gioia in un mondo grigio.
                     -> glyph_modifier_variation_management(Mentor, earthC)->
-                Mi piace la tua ingenuità {player_name}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Con questa logica ho amato solo una cosa:
-                il mio giardino.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                Un posto sempre sorprendente, vivo.
-                Pieno di musica.
-                E forse è davvero così.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                {charTag(Mentor, "neutral")}:           Mi piace la tua ingenuità {player_name}.
+                                                        Con questa logica ho amato solo una cosa:
+                                                        il mio giardino.
+                                                        Un posto sempre sorprendente, vivo.
+                                                        Pieno di musica.
+                {charTag(Mentor, "neutral")}:           E forse è davvero così.
                     
             + \ {charTag(PG, "neutral")}:            Fondersi nella passione, a letto come in una protesta.
                     -> glyph_modifier_variation_management(Mentor, fireC)->
-                La passione si spegne, {player_name}.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                E a quel punto cosa rimane?
-                Noia?
-                Rancore?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-                Odio?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
-                Passioni forti chiamano passioni ancora più forti.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                {charTag(Mentor, "neutral")}:           La passione si spegne, {player_name}.
+                                                        E a quel punto cosa rimane?
+                                                        Noia?
+                {charTag(Mentor, "sad")}:               Rancore?
+                {charTag(Mentor, "bored")}:             Odio?
+                {charTag(Mentor, "neutral")}:           Passioni forti chiamano passioni ancora più forti.
                 
             + \ {charTag(PG, "neutral")}:            Cura, ascolto, affetto.
                 -> glyph_modifier_variation_management(Mentor, waterC)->
-                Già, ho pensato la stessa cosa a lungo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Ma a volte la cura diventa un lavoro.
-                L'ascolto un dovere.
-                L'affetto un'abitudine.
-                Eppure resti.
-                Vuol dire che è finito l'amore?
+                {charTag(Mentor, "neutral")}:           Già, ho pensato la stessa cosa a lungo.
+                                                        Ma a volte la cura diventa un lavoro.
+                                                        L'ascolto un dovere.
+                                                        L'affetto un'abitudine.
+                                                        Eppure resti.
+                {charTag(Mentor, "sad")}:               Vuol dire che è finito l'amore?
                     
-            + \ {charTag(PG, "neutral")}:            Raggiungersi l'anima a vicenda, ricercando il divino che è noi.
+            + \ {charTag(PG, "neutral")}:               Raggiungersi l'anima a vicenda, ricercando il divino che è noi.
                 -> glyph_modifier_variation_management(Mentor, aetherC)->
-                Una visione mistica.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                Forse blasfema.
-                Qualcosa che non ho mai conosciuto, se non nei romanzi.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-                O nell'amicizia.
-                E a volte, se resto in silenzio e ferma a lungo, in questo luogo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                {charTag(Mentor, "neutral")}:           Una visione mistica.
+                                                        Forse blasfema.
+                {charTag(Mentor, "sad")}:               Qualcosa che non ho mai conosciuto, se non nei romanzi.
+                                                        O nell'amicizia.
+                {charTag(Mentor, "neutral")}:           E a volte, se resto in silenzio e ferma a lungo, in questo luogo.
             -
              ~ mentor_pauseTalking = mentor_pauseDuration
         
-        Perdonami: a volte sono solo una sciocca romantica.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-        E mi dimentico che l'amore è ovunque.
-        Anche qui.
-        Soprattutto qui.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-        Amore per noi.
-        Vado a recuperare del terriccio dal sottobosco, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+        {charTag(Mentor, "sorry")}:             Perdonami: a volte sono solo una sciocca romantica.
+                                                E mi dimentico che l'amore è ovunque.
+                                                Anche qui.
+                                                Soprattutto qui.
+        {charTag(Mentor, "hurry")}:             Amore per noi.
+        {charTag(Mentor, "neutral")}:           Vado a recuperare del terriccio dal sottobosco, {player_name}.
         Parleremo più tardi.
 
             -> mentor_closing_storylet ->

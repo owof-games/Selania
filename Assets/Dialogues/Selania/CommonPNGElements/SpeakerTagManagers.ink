@@ -236,25 +236,6 @@ LIST nest_speakersForEwWordTag = Influenced, Other
 	    ~ return "Mentore"
 }
 
-=== function mentor_tag
-{
-
-    - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
-	    ~ return "???"
-    - mentor_ActualName == Mentore:
-	    ~ return "Mentore"
-}
-
-
-=== function fifthChar_tag
-{
-
-    - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
-	    ~ return "???"
-    - mentor_ActualName == Mentore:
-	    ~ return "Mentore"
-}
-
     
 === function PG_tag
     {

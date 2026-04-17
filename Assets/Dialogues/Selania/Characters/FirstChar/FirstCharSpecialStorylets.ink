@@ -17,7 +17,7 @@
     E {mentorName} mi sta simpatica, ma adora parlare di lavoro, non la cosa più riposante.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         {
             - are_two_entities_together(Mentor, PG):
-                La mia vita è lavoro, non saprei di cos'altro parlare, {charNameOne}!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sorry           
+                {charTag(Mentor, "sorry")}:             La mia vita è lavoro, non saprei di cos'altro parlare, {charNameOne}!      
         }
     Poi ho trovato qualcosa di inaspettato dietro il pontile: una cucina abbandonata.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
     Mi sono messa a sistemarla, principalmente sperando di trovare qualcosa da bere.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
@@ -33,7 +33,7 @@
             -> glyph_modifier_variation_management(FirstCharacter, airC)->
                 {
                     - are_two_entities_together(Mentor, PG):
-                        Sono felice di venire ascoltata, ogni tanto.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                        {charTag(Mentor, "neutral")}:           Sono felice di venire ascoltata, ogni tanto.
                 }
                 
                 Forse non avevo ricevuto l'appunto, ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
@@ -55,7 +55,7 @@
             -> glyph_modifier_variation_management(FirstCharacter, earthC)->
                 {
                     - are_two_entities_together(Mentor, PG):
-                        Oppure, potremmo gioire in modi non pericolosi.  #speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
+                        {charTag(Mentor, "sad")}:           Oppure, potremmo gioire in modi non rumorosi.
                 }
                 {
                     - are_two_entities_together(SecondCharacter, PG):
@@ -105,7 +105,7 @@
     Le poche volte che l'ho lasciata uscire mi sono vista chiamare isterica, nevrotica, mestruata.
         {
             - are_two_entities_together(Mentor, PG):
-                Uh, è una storia che ho già sentito.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_bored        
+                {charTag(Mentor, "bored")}:             Uh, è una storia che ho già sentito.    
         }
     Sembra che se sono arrabbiata allora sono in automatico nel torto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
     Ma quando sono arrivata in fondo e ho capito che lei si stava trasformando in lupo mannaro, mi sono trovata a digrignare i denti.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious

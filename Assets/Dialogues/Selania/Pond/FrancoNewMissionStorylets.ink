@@ -74,7 +74,7 @@
                                                         Sapevi ad esempio che può respirare fino a due minuti sott'acqua?
             {
                 - are_two_entities_together(Mentor, PG):
-                    Eh?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                    {charTag(Mentor, "hurry")}:             Eh?
             }
             {
                 - are_two_entities_together(FirstCharacter, PG):
@@ -87,14 +87,14 @@
                     IM-POS-SI-BI-LE!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     {
                         - are_two_entities_together(Mentor, PG):
-                            Guarda che sono bravissima a burraco!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                            {charTag(Mentor, "hurry")}:             Guarda che sono bravissima a burraco!
                             Ma è una roba da vecchi!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     }
             }
         {charTag(Franco, "{portrait_Franco()}")}:       E che ha una tasca sotto l'ascella dove conserva le pietre che usa per rompere i gusci?
             {
                 - are_two_entities_together(Mentor, PG):
-                    A dire il vero ne ho anche una in testa, dove raccolgo le sciocchezze dette dalle rane.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                    {charTag(Mentor, "neutral")}:                   A dire il vero ne ho anche una in testa, dove raccolgo le sciocchezze dette dalle rane.
                     {charTag(Franco, "{portrait_Franco()}")}:       Ma le rana sono molto sagge, quindi non hai molto da raccogliere.
             }
                                                         E.
@@ -113,7 +113,7 @@
                                                         E poi torna pure qui.
             {
                 - are_two_entities_together(Mentor, PG):
-                    Uh, che cosa carina, Franco!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                    {charTag(Mentor, "hurry")}:             Uh, che cosa carina, Franco!
             }
         {charTag(Franco, "{portrait_Franco()}")}:       Ma quindi non è {charNameOne} che fa il nido sugli alberi?
             {
@@ -152,7 +152,7 @@
                                                         Sono sicuro che così si diverte, e magari si rilassa un poco.
                 {
                     - are_two_entities_together(Mentor, PG):
-                        In effetti non sarebbe male rilassarmi un poco.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                        {charTag(Mentor, "neutral")}:                   In effetti non sarebbe male rilassarmi un poco.
                 }
 
         {charTag(Franco, "{portrait_Franco()}")}:       Io intanto vado a salutare bisnonno Ninfea.
@@ -246,7 +246,7 @@
 
             {
                 - are_two_entities_together(Mentor, PG):
-                    C'è una discarica?!?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_bored
+                    {charTag(Mentor, "bored")}:             C'è una discarica?!?
                         
             }
         {charTag(Franco, "{portrait_Franco()}")}:       Credo.
