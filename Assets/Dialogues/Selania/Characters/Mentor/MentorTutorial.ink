@@ -256,7 +256,7 @@
                                             Questo non è solo un posto magnifico di per sé, {player_name}.
                                             È un luogo con uno scopo, uno scopo che riguarda anche te.
         {charTag(Mentor, "hurry")}:         Soprattutto te.
-        {charTag(Mentor, "neutral")}:       Le persone che incontri qui rimaste bloccate in qualcosa: rimpianti, rimorsi, traumi e quant'altro.
+        {charTag(Mentor, "neutral")}:       Le persone che incontri qui rimaste bloccate in qualcosa: rimpianti, rimorsi, vecchie ferite e quant'altro.
                                             E il tuo scopo, {player_name}, è aiutarle a riscrivere il modo in cui raccontano la loro storia, così che possano sbloccarsi.
         {charTag(Mentor, "hurry")}:         Perché tu {player_pronouns has him:amico mio|{player_pronouns has her:amica mia|amicə miə}} sei <b><i>{player_pronouns has him:un riscrittore|{player_pronouns has her:una riscrittora|unə riscrittorə}}</b></i>!
         {charTag(Mentor, "neutral")}:       E se farai bene il tuo lavoro, aiuterai moltissime persone a sbloccarsi, e a scegliere un nuovo nome, il segno di un nuovo inizio.
@@ -265,7 +265,7 @@
                     {charTag(FirstCharacter, "annoyed")}:       Tipo, un nome diverso da {charNameOne}.
                     {charTag(Mentor, "hurry")}:                 Esattamente, {charNameOne}!   
             }
-        {charTag(Mentor, "neutral")}:       Quello {player_pronouns has him:del riscrittore|{player_pronouns has her:della riscrittora|dellə riscrittorə}} è un lavoro con pochi strumenti, ma che richiede molta empatia.
+        {charTag(Mentor, "neutral")}:       Quello {player_pronouns has him:del riscrittore|{player_pronouns has her:della riscrittora|dellə riscrittorə}} è un lavoro con pochi strumenti.
                                             Come ti dicevo all'inizio, il primo è l'ascolto.
                                             Accogli le loro storie, capisci quale sia la cosa giusta da dire per farle sentire comprese.
         {charTag(Mentor, "hurry")}:         Conquista la loro fiducia.
@@ -413,7 +413,7 @@
                 -> main
 
 
-//Minitutorial sui minigames
+//Commenti sui minigames
 === about_greenhouse
 
     {charTag(Mentor, "neutral")}:                           Sai {player_name}? La <b><i>serra</b></i> non è solo un bel posto dove rilassarsi.

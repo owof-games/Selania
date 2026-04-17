@@ -23,15 +23,15 @@
     {    
 
         //Dopo le presentazioni con due, scena in cui hanno litigato:
-        - second_char_main_storylets.three && (not that_little_liar_storylet):
+        - (grimoire_secondChar has grimSecondCharThreeHim or grimoire_secondChar has grimSecondCharThreeHer or grimoire_secondChar has grimSecondCharThreeThey) && grimoire_fifthChar hasnt grimMentorLiar:
             -> that_little_liar_storylet
 
         //Storylet dopo lo scambio con Riccio e il fatto che l'ha afferrato
-        - second_char_main_storylets.four && (not addressing_violence):
+        - grimoire_secondChar has grimSecondCharFour && grimoire_fifthChar hasnt grimMentorViolence:
             -> addressing_violence    
 
         //Feedback
-        - not second_character_feedback && secondChar_storyStatus == story_storyEnded:
+        - grimoire_secondChar hasnt grimSecondCharMentorFeedback && secondChar_storyStatus == story_storyEnded:
             -> second_character_feedback
 
     }
@@ -39,46 +39,52 @@
     //First Char
     {   
         //Feedback
-        - not first_character_feedback && firstChar_storyStatus == story_storyEnded:
+        - grimoire_firstChar hasnt grimFirstCharMentorFeedback && firstChar_storyStatus == story_storyEnded:
             -> first_character_feedback           
     }
 
     //Third Char
     {   
         //Feedback
-        - not third_character_feedback && thirdChar_storyStatus == story_storyEnded:
+        - grimoire_thirdChar hasnt grimThirdCharMentorFeedback  && thirdChar_storyStatus == story_storyEnded:
             -> third_character_feedback           
     }
 
     //Fourth Char
     {   
         //Feedback
-        - not fourth_character_feedback && fourthChar_storyStatus == story_storyEnded:
+        - grimoire_fourthChar hasnt grimFourthCharMentorFeedback  && fourthChar_storyStatus == story_storyEnded:
             -> fourth_character_feedback           
     }
 
+    //Fifth Char
+    {   
+        //Feedback
+        - grimoire_fifthChar hasnt grimFifthCharMentorFeedback  && fifthChar_storyStatus == story_storyEnded:
+            -> fifth_character_feedback           
+    }
 
     //Tutorial
     {
         //Questi sono i tutorial che non devono partire in automatico, ma solo se le parliamo
         //Presentazione generale
-        - not tutorial_mentorTalkingChoiceRelationship:
+        - grimoire_appendices hasnt grimChoicesMentor:
             -> tutorial_mentorTalkingChoiceRelationship
         
         //Info sulla non obbligatorietà dei minigames
-        - player_accessiblePlaces has Library or player_accessiblePlaces has Kitchen and not about_not_mandatory_work:
+        - player_accessiblePlaces has Library or player_accessiblePlaces has Kitchen and grimoire_fifthChar hasnt grimMentorNotMandatory:
             -> about_not_mandatory_work    
             
         //Invito a leggere la posta nuova    
         - contentsTrainStop has DoggoFirstLetters or contentsTrainStop has DoggoSecondLetters or contentsTrainStop has DoggoThirdLetters && (grimoire_firstChar hasnt grimFirstCharLetterOne && grimoire_secondChar hasnt grimSecondCharLetterOne && grimoire_thirdChar hasnt grimThirdCharLetterOne):
             {
-                - contentsTrainStop has DoggoFirstLetters && grimoire_firstChar hasnt grimFirstCharLetterOne && not first_char_new_mail:
+                - contentsTrainStop has DoggoFirstLetters && grimoire_firstChar hasnt grimFirstCharLetterOne && grimoire_fifthChar hasnt grimMentorNewMail:
                     -> first_char_new_mail
 
-                - contentsTrainStop has DoggoSecondLetters && grimoire_secondChar hasnt grimSecondCharLetterOne && not second_char_new_mail:
+                - contentsTrainStop has DoggoSecondLetters && grimoire_secondChar hasnt grimSecondCharLetterOne && grimoire_fifthChar hasnt grimMentorNewMail:
                     -> second_char_new_mail
 
-                - contentsTrainStop has DoggoThirdLetters && grimoire_thirdChar hasnt grimThirdCharLetterOne && not third_char_new_mail:
+                - contentsTrainStop has DoggoThirdLetters && grimoire_thirdChar hasnt grimThirdCharLetterOne && grimoire_fifthChar hasnt grimMentorNewMail:
                     -> third_char_new_mail    
 
                 - else:
@@ -100,24 +106,24 @@
     
     {
     //Fine demo
-        - not ending_demo && secondChar_storyStatus == story_storyEnded && firstChar_storyStatus == story_storyEnded:
+        - not ending_demo && LIST_COUNT(story_endedStories) == 3:
             -> ending_demo
             
 
     //Storylets principali
-        - not knowing_mentor_character.one:
+        - grimoire_fifthChar hasnt grimMentorOne:
             -> knowing_mentor_character.one
 
-        - not knowing_mentor_character.two && firstChar_storyStatus == story_storyEnded:
+        - grimoire_fifthChar hasnt grimMentorTwo && firstChar_storyStatus == story_storyEnded:
             -> knowing_mentor_character.two
 
-        - not knowing_mentor_character.three && (firstChar_storyStatus == story_storyEnded or secondChar_storyStatus == story_storyEnded ):
+        - grimoire_fifthChar hasnt grimMentorThree && LIST_COUNT(story_endedStories) > 0:
             -> knowing_mentor_character.three
 
-        - not knowing_mentor_character.four && secondChar_storyStatus == story_storyEnded:
+        - grimoire_fifthChar hasnt grimMentorFour && secondChar_storyStatus == story_storyEnded:
             -> knowing_mentor_character.four
 
-        - not knowing_mentor_character.five && secondChar_storyStatus == story_storyEnded:
+        - grimoire_fifthChar hasnt grimMentorFive && secondChar_storyStatus == story_storyEnded:
             -> knowing_mentor_character.five
 
         // //Forse solo una di queste, perché con la terza storia avremo degli storylets ad hoc.    
@@ -147,37 +153,37 @@
     //Commenti sui luoghi aperti
 
         //Sulla funzione della serra
-        - player_accessiblePlaces has Greenhouse && not about_greenhouse:
+        - player_accessiblePlaces has Greenhouse && grimoire_appendices hasnt grimGreenhouseMentor:
             -> about_greenhouse
             
         //Sulla funzione della cucina
-        - player_accessiblePlaces has Kitchen && not about_kitchen:
+        - player_accessiblePlaces has Kitchen && grimoire_fifthChar hasnt grimKitchenMentor:
             -> about_kitchen
         
         //Sulla funzione del nido    
-        - player_accessiblePlaces has Nest && not about_nest:
+        - player_accessiblePlaces has Nest && grimoire_appendices hasnt grimSigilsMentor:
             -> about_nest    
 
      //Commenti a situazioni, eventi o altro.
         //Commento sul cane    
-        - first_character_notes.one or second_character_notes.one && not dog_mentor:
+        - grimoire_firstChar has grimFirstCharLetterOne && grimoire_secondChar has grimSecondCharLetterOne && grimoire_thirdChar has grimThirdCharLetterOne && grimoire_fifthChar hasnt grimMentorDog:
             -> dog_mentor
         
         //Lettura Mentore
-        - are_two_entities_together(Mentor, PG) && library_readStories has Salvo && not a_story_of_transformation:
+        - are_two_entities_together(Mentor, PG) && library_readStories has Salvo && grimoire_fifthChar hasnt grimMentorNovel:
             -> a_story_of_transformation      
 
     //Scene speciali
         //Crescita olobino
-        - contentsPond has FromPondToGreenhouseBlooming && are_two_entities_together(Mentor, PG) && not about_olobino:
+        - contentsPond has FromPondToGreenhouseBlooming && are_two_entities_together(Mentor, PG) && grimoire_fifthChar hasnt grimMentorOlobinoUno:
             -> about_olobino
 
-        - about_olobino && are_two_entities_together(Mentor, PG) && not again_about_olobino:
+        - about_olobino && are_two_entities_together(Mentor, PG) && grimoire_fifthChar hasnt grimMentorOlobinoDue:
             -> again_about_olobino 
 
         //Mentore esplode
-        - are_two_entities_together(Mentor, PG) && thirdChar_storyStatus == story_storyEnded and not mentor_rage:
-            -> mentor_rage
+        // - are_two_entities_together(Mentor, PG) && LIST_COUNT(story_endedStories) == 3 and grimoire_fifthChar hasnt grimMentorRage:
+        //     -> mentor_rage
 
 
     //Niente da attivare:

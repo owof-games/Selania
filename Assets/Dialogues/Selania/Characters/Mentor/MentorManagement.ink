@@ -110,10 +110,15 @@
         }
 
         {
+            - about_nest && grimoire_fifthChar hasnt grimKitchenMentor:
+                ~ grimoire_appendices += grimKitchenMentor                  
+        }
+
+        {
             - about_nest && grimoire_appendices hasnt grimSigilsMentor:
                 ~ grimoire_appendices += grimSigilsMentor                  
         }
-
+        
         {
 
             //Main storylets
@@ -183,6 +188,12 @@
         }
 
         {
+            - about_not_mandatory_work && grimoire_fifthChar hasnt grimMentorNotMandatory:
+                ~ grimoire_fifthChar += grimMentorNotMandatory    
+        }
+
+
+        {
             - that_little_liar_storylet && grimoire_fifthChar hasnt grimMentorLiar:
                 ~ grimoire_fifthChar += grimMentorLiar    
         }
@@ -220,6 +231,17 @@
             - again_about_olobino && grimoire_fifthChar hasnt grimMentorOlobinoDue:
                 ~ grimoire_fifthChar += grimMentorOlobinoDue    
         }
+
+        {
+            - mentor_rage && grimoire_fifthChar hasnt grimMentorRage:
+                ~ grimoire_fifthChar += grimMentorRage    
+        }
+
+        {
+            - (first_char_new_mail or second_char_new_mail or third_char_new_mail) && grimoire_fifthChar hasnt grimMentorNewMail:
+                ~ grimoire_fifthChar += grimMentorNewMail    
+        }
+
         //Aggiornamento lista di quelli comuni
         -> grimoire_common_storylets_updater ->
         //Gestione crescita piante

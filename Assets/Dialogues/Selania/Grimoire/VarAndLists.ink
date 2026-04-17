@@ -26,7 +26,7 @@ LIST grimoire_allElements =
     grimFifthCharOne, grimFifthCharTwo, grimFifthCharThree, grimFifthCharFour, grimFifthCharFive, grimFifthCharSix, grimFifthCharSeven, grimFifthCharEight, grimFifthCharNine, grimFifthCharTen, grimFifthCharEleven, grimFifthCharTwelve, grimFifthCharNovel, grimFifthCharDog, grimFifthCharKitchenOne, grimFifthCharKitchenTwo, grimFifthCharKitchenThree, grimFifthCharKitchenEnded, grimFifthCharKitchenAlone, grimFifthCharProposal, grimFifthCharNewName, grimFifthCharMentorFeedback, grimFifthCharLetterOne, grimFifthCharLetterTwo, grimFifthCharLetterThree,
 
 //Storylets Mentore
-    grimMentorOne, grimMentorTwo, grimMentorThree, grimMentorFour, grimMentorFive, grimMentorSix, grimMentorSeven, grimMentorEight, grimMentorNine, grimMentorTen, grimMentorEleven, grimMentorTwelve, grimMentorNovel, grimMentorDog, grimMentorLiar, grimMentorViolence, grimMentorOlobinoUno, grimMentorOlobinoDue,
+    grimMentorOne, grimMentorTwo, grimMentorThree, grimMentorFour, grimMentorFive, grimMentorSix, grimMentorSeven, grimMentorEight, grimMentorNine, grimMentorTen, grimMentorEleven, grimMentorTwelve, grimMentorNovel, grimMentorDog, grimMentorLiar, grimMentorViolence, grimMentorOlobinoUno, grimMentorOlobinoDue, grimKitchenMentor, grimMentorRage, grimMentorNotMandatory, grimMentorNewMail, 
 
 //Storylets strega
     grimWitchFirstDebrief, grimWitchSecondDebrief, grimWitchThirdDebrief, grimWitchFourthDebrief, grimWitchFifthDebrief, grimWitchIntro, grimWitchFrog, grimWitchMainOne, grimWitchMainTwo, grimWitchMainThree, grimWitchMainFour, grimWitchMainFive, grimWitchBook, grimWitchOpenDump, grimWitchAllSigilsOpened,
