@@ -388,6 +388,19 @@
                     ~ greenhouse_frog_nextCultivableThree = perfectGift
                     ~ frog_temp_char_ingredient = "{ingredientTranslator(perfectGift)}"
 
+                - greenhouse_frog_nextCultivableFour == () && greenhouse_frog_nextCultivableThree != ():
+                    ~ greenhouse_frog_nextCultivableFour = perfectGift
+                    ~ frog_temp_char_ingredient = "{ingredientTranslator(perfectGift)}"
+
+                - greenhouse_frog_nextCultivableFive == () && greenhouse_frog_nextCultivableFour != ():
+                    ~ greenhouse_frog_nextCultivableFive = perfectGift
+                    ~ frog_temp_char_ingredient = "{ingredientTranslator(perfectGift)}"
+                
+                - greenhouse_frog_nextCultivableSix == () && greenhouse_frog_nextCultivableFive != ():
+                    ~ greenhouse_frog_nextCultivableSix = perfectGift
+                    ~ frog_temp_char_ingredient = "{ingredientTranslator(perfectGift)}"
+            
+            
             }
         //Caso quattro: abbiamo trovato tutti i doni, ma li abbiamo già consumati.
         - else:

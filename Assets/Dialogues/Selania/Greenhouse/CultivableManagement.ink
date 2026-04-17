@@ -111,6 +111,9 @@
     VAR greenhouse_frog_nextCultivableOne = ()
     VAR greenhouse_frog_nextCultivableTwo = ()
     VAR greenhouse_frog_nextCultivableThree = ()
+    VAR greenhouse_frog_nextCultivableFour = ()
+    VAR greenhouse_frog_nextCultivableFive = ()
+    VAR greenhouse_frog_nextCultivableSix = ()
     
     
     
@@ -120,6 +123,24 @@
 //Qui gestiamo la priorità di crescita dettata dalla rana. Se c'è qualcosa in coda, facciamo salire tutto e poi attiviamo il next greenhouse_cultivable iniziale.
 
 //Step uno: riordino delle richieste
+{
+    - greenhouse_frog_nextCultivableSix != () && greenhouse_frog_nextCultivableFive == ():
+        ~ greenhouse_frog_nextCultivableFive = greenhouse_frog_nextCultivableSix
+        ~ greenhouse_frog_nextCultivableSix = ()
+}
+
+{
+    - greenhouse_frog_nextCultivableFive != () && greenhouse_frog_nextCultivableFour == ():
+        ~ greenhouse_frog_nextCultivableFour = greenhouse_frog_nextCultivableFive
+        ~ greenhouse_frog_nextCultivableFive = ()
+}
+
+{
+    - greenhouse_frog_nextCultivableFour != () && greenhouse_frog_nextCultivableThree == ():
+        ~ greenhouse_frog_nextCultivableThree = greenhouse_frog_nextCultivableFour
+        ~ greenhouse_frog_nextCultivableFour = ()
+}
+
 {
     - greenhouse_frog_nextCultivableThree != () && greenhouse_frog_nextCultivableTwo == ():
         ~ greenhouse_frog_nextCultivableTwo = greenhouse_frog_nextCultivableThree
