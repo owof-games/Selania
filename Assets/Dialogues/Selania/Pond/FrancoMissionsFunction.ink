@@ -116,10 +116,22 @@
     }
 
     //Commissione dieci richiede che la cucina sia aperta
+    //Dato che devo essere sicura di darla quando c'è la possibilità di chiuderla in tempi decenti, per evitare di assegnarla nel primo atto (3 png da riscrivere) quando hanno già concluso il loro percorso in cucina, faccio due calcoli separati.
     {
         - frog_allMissionsCompleted hasnt missionTen && player_accessiblePlaces has Kitchen:
-            ~ frog_availableCommonMissions += missionTen
-            {debug_frog: ci sono le condizioni per abilitare missionTen.}
+            {
+
+                //Check per parte Chitarra, Riccio e Boccale   
+                - LIST_COUNT(story_endedStories) <= 3 && (grimoire_firstChar hasnt grimFirstCharKitchenEnded or grimoire_secondChar hasnt grimSecondCharKitchenEnded or grimoire_thirdChar hasnt grimThirdCharKitchenEnded):
+                        ~ frog_updatedMissions += missionTen
+                    {debug_frog: ci sono le condizioni per abilitare missionTen.}
+
+                //Check per parte Nonna e Mentore
+                - LIST_COUNT(story_endedStories) > 3 &&  (grimoire_fourthChar hasnt grimFourthCharKitchenEnded or grimoire_fifthChar hasnt grimFifthCharKitchenEnded):
+                        ~ frog_updatedMissions += missionTen
+                    {debug_frog: ci sono le condizioni per abilitare missionTen.}
+            
+            }
 
         - else:
             ~ frog_availableCommonMissions -= missionTen

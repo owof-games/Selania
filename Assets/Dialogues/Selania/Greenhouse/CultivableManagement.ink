@@ -107,7 +107,7 @@
 //Variabili monitoraggio stato vegetali
     VAR greenhouse_cultivableGrowing = 0 
     
-//Gestione priorità coltivabili
+//Gestione priorità coltivabili -> QUESTA ROBA POTREBBE ESSERE UNA LISTA, CON UN PO' DI CORAGGIO
     VAR greenhouse_frog_nextCultivableOne = ()
     VAR greenhouse_frog_nextCultivableTwo = ()
     VAR greenhouse_frog_nextCultivableThree = ()
