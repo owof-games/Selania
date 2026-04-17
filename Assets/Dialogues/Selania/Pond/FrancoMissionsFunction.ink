@@ -84,7 +84,7 @@
 
     //Commissione sette richiede la presenza di Ursula alla stazione
     {
-        - frog_allMissionsCompleted hasnt missionSeven && (contentsTrainStop has DoggoFirstLetters) or (contentsTrainStop has DoggoSecondLetters) or (contentsTrainStop has DoggoThirdLetters):
+        - frog_allMissionsCompleted hasnt missionSeven && (contentsTrainStop has DoggoFirstLetters) or (contentsTrainStop has DoggoSecondLetters) or (contentsTrainStop has DoggoThirdLetters) && !debug_stochastic:
         {debug_frog: ci sono le condizioni per abilitare missionSeven.}
             ~ frog_availableCommonMissions += missionSeven
 
@@ -122,12 +122,12 @@
             {
 
                 //Check per parte Chitarra, Riccio e Boccale   
-                - LIST_COUNT(story_endedStories) <= 3 && (grimoire_firstChar hasnt grimFirstCharKitchenEnded or grimoire_secondChar hasnt grimSecondCharKitchenEnded or grimoire_thirdChar hasnt grimThirdCharKitchenEnded):
+                - LIST_COUNT(story_endedStories) <= 3 && (grimoire_firstChar hasnt grimFirstCharKitchenEnded or grimoire_secondChar hasnt grimSecondCharKitchenEnded or grimoire_thirdChar hasnt grimThirdCharKitchenEnded) && !debug_stochastic:
                         ~ frog_updatedMissions += missionTen
                     {debug_frog: ci sono le condizioni per abilitare missionTen.}
 
                 //Check per parte Nonna e Mentore
-                - LIST_COUNT(story_endedStories) > 3 &&  (grimoire_fourthChar hasnt grimFourthCharKitchenEnded or grimoire_fifthChar hasnt grimFifthCharKitchenEnded):
+                - LIST_COUNT(story_endedStories) > 3 &&  (grimoire_fourthChar hasnt grimFourthCharKitchenEnded or grimoire_fifthChar hasnt grimFifthCharKitchenEnded) && !debug_stochastic:
                         ~ frog_updatedMissions += missionTen
                     {debug_frog: ci sono le condizioni per abilitare missionTen.}
             
