@@ -10,21 +10,12 @@
     - are_two_entities_together(PG, Franco) && special_mission_one_contents && entity_location(PG) == Pond && grimoire_franco hasnt grimFrancoMissionOneFeedback:
         -> franco_feedback_mission_one_closed
 
-    - are_two_entities_together(PG, Franco) && not franco_open_kitchen && entity_location(PG) == Pond && player_accessiblePlaces has Kitchen:
-        -> franco_open_kitchen
-
-    - are_two_entities_together(PG, Franco) && not franco_open_nest && entity_location(PG) == Pond && player_accessiblePlaces has Nest:
-        -> franco_open_nest
-
-    - are_two_entities_together(PG, Franco) && not franco_open_library && entity_location(PG) == Pond && player_accessiblePlaces has Library:
-        -> franco_open_library    
-
     - are_two_entities_together(PG, Franco) && achievements_fullLore ==  Discovered && grimoire_franco hasnt grimFrancoAllDocuments:
         -> franco_allDocuments
 
     //Commenti speciali
     //Regalo da raccogliere
-    - frog_suspended_gift == true:
+    - frog_suspended_gift == true && frog_giftability == true:
                 
         {charTag(Franco, "{portrait_Franco()}")}:       Ehi girino!
         {shuffle:
@@ -145,6 +136,8 @@
 
     - are_two_entities_together(PG, Franco) && frog_updatedMissions has missionTen && entity_location(PG) == Pond:
         -> franco_missionTen_closed        
+
+    
 
 }
 

@@ -61,7 +61,7 @@
                                                     Che è tipo bellissima, solo più bagnaticcia.
 
 
-    -> welcoming_frog.top2
+    ->->
 
 === franco_open_library
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -75,7 +75,7 @@
                                                     Qui gracchiano tutti molto poco.
                                                     Craack.
 
-    -> welcoming_frog.top2
+    ->->
 
 === franco_open_nest
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -89,7 +89,7 @@
                                                     Uno ce la faccio.
                                                     Poi sono troppo pesanti per le mie zampine.
       
-    -> welcoming_frog.top2
+    ->->
 
 
 === franco_feedback_mission_one_closed ===

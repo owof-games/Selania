@@ -11,7 +11,21 @@
     //Aggiorniamo lo stato delle varie commissioni
         ~ franco_missionsStateUpdater()
     //E quello dei doni
-        ~ franco_giftsStateUpdater()    
+        ~ franco_giftsStateUpdater()
+
+    //Facciamo passare dei commentini speciali
+    {
+        - not franco_open_kitchen && entity_location(PG) == Pond && player_accessiblePlaces has Kitchen:
+            -> franco_open_kitchen ->
+
+        - not franco_open_nest && entity_location(PG) == Pond && player_accessiblePlaces has Nest:
+            -> franco_open_nest ->
+
+        - not franco_open_library && entity_location(PG) == Pond && player_accessiblePlaces has Library:
+            -> franco_open_library ->   
+    }
+
+
     //Vediamo poi se ci sono degli storylets speciali o dei commenti sulle commissioni in corso, concluse o meno che siano
         -> franco_storyletsManagement ->
     //Se supero anche questo nodo, significa che non ho commissioni in corso e non ne ho concluse, per cui arrivano i saluti generali e poi la proposta di una nuova commissione

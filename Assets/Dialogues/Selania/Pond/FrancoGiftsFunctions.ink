@@ -50,6 +50,9 @@
                 - frog_firstCharAchievableGifts == bookGift && player_accessiblePlaces hasnt Library:
                     ~ frog_firstCharGiftable = false
 
+                - frog_firstCharAchievableGifts == (bookGift,ingredientGift) && player_accessiblePlaces hasnt Library && player_accessiblePlaces hasnt Kitchen:
+                    ~ frog_firstCharGiftable = false
+
                 - else:
                     ~ frog_firstCharGiftable = true
             }
@@ -67,6 +70,9 @@
                 - frog_secondCharAchievableGifts == bookGift && player_accessiblePlaces hasnt Library:
                     ~ frog_secondCharGiftable = false
 
+                - frog_secondCharAchievableGifts == (bookGift,ingredientGift) && player_accessiblePlaces hasnt Library && player_accessiblePlaces hasnt Kitchen:
+                    ~ frog_secondCharGiftable = false    
+
                 - else:
                     ~ frog_secondCharGiftable = true
             }
@@ -82,7 +88,10 @@
                     ~ frog_thirdCharGiftable = false
 
                 - frog_thirdCharAchievableGifts == bookGift && player_accessiblePlaces hasnt Library:
-                    ~ frog_thirdCharGiftable = false  
+                    ~ frog_thirdCharGiftable = false
+
+                - frog_thirdCharAchievableGifts == (bookGift,ingredientGift) && player_accessiblePlaces hasnt Library && player_accessiblePlaces hasnt Kitchen:
+                    ~ frog_thirdCharGiftable = false     
 
                 - else:
                     ~ frog_thirdCharGiftable = true
@@ -104,6 +113,9 @@
                     ~ frog_fourthCharGiftable = false
                     //Se la biblioteca non è aperta ora, non si aprirà più
                     ~ frog_fourthCharAchievableGifts -= bookGift
+                
+                - frog_fourthCharAchievableGifts == (bookGift,ingredientGift) && player_accessiblePlaces hasnt Library && player_accessiblePlaces hasnt Kitchen:
+                    ~ frog_fourthCharGiftable = false
 
                 - else:
                     ~ frog_fourthCharGiftable = true
@@ -126,6 +138,9 @@
                     ~ frog_fifthCharGiftable = false
                     //Se la biblioteca non è aperta ora, non si aprirà più
                     ~ frog_fifthCharAchievableGifts -= bookGift
+
+                - frog_fifthCharAchievableGifts == (bookGift,ingredientGift) && player_accessiblePlaces hasnt Library && player_accessiblePlaces hasnt Kitchen:
+                    ~ frog_fifthCharGiftable = false    
 
                 - else:
                     ~ frog_fifthCharGiftable = true
@@ -360,20 +375,20 @@
                 ~ temp perfectGift = LIST_RANDOM(tempChar_favouritesGifts)
             {debug_frog: il dono è stato messo in serra ed è {ingredientTranslator(perfectGift)}. La lista tempChar_favouritesGifts contiene {tempChar_favouritesGifts}.}
 
-                {
-                    - greenhouse_frog_nextCultivableOne == ():
-                        ~ greenhouse_frog_nextCultivableOne = perfectGift
-                        ~ frog_temp_char_ingredient = "{ingredientTranslator(perfectGift)}"
-    
-                    - greenhouse_frog_nextCultivableTwo == () && greenhouse_frog_nextCultivableOne != ():
-                        ~ greenhouse_frog_nextCultivableTwo = perfectGift
-                        ~ frog_temp_char_ingredient = "{ingredientTranslator(perfectGift)}"
-                        
-                    - greenhouse_frog_nextCultivableThree == () && greenhouse_frog_nextCultivableTwo != ():
-                        ~ greenhouse_frog_nextCultivableThree = perfectGift
-                        ~ frog_temp_char_ingredient = "{ingredientTranslator(perfectGift)}"
-    
-                }
+            {
+                - greenhouse_frog_nextCultivableOne == ():
+                    ~ greenhouse_frog_nextCultivableOne = perfectGift
+                    ~ frog_temp_char_ingredient = "{ingredientTranslator(perfectGift)}"
+
+                - greenhouse_frog_nextCultivableTwo == () && greenhouse_frog_nextCultivableOne != ():
+                    ~ greenhouse_frog_nextCultivableTwo = perfectGift
+                    ~ frog_temp_char_ingredient = "{ingredientTranslator(perfectGift)}"
+                    
+                - greenhouse_frog_nextCultivableThree == () && greenhouse_frog_nextCultivableTwo != ():
+                    ~ greenhouse_frog_nextCultivableThree = perfectGift
+                    ~ frog_temp_char_ingredient = "{ingredientTranslator(perfectGift)}"
+
+            }
         //Caso quattro: abbiamo trovato tutti i doni, ma li abbiamo già consumati.
         - else:
 

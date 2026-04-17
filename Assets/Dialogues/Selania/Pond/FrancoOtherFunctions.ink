@@ -9,11 +9,15 @@
     - frog_allMissionsCompleted == ():
         -> franco_missionsDispatcher
 
+    - frog_justPaused == true:
+        -> franco_missionsDispatcher
+
     - frog_tiredValue > 0:
         -> top
         
     - dice == 5:
         ~ frog_tiredValue = frog_maxTiredValue
+        ~ frog_justPaused = true
         -> top
 
     - else:
@@ -126,5 +130,7 @@
     ~ frog_currentMission = ()
     ~ notification_francoQuests = false
     ~ frog_suspended_gift = false
+    //Togliamo la pausa
+    ~ frog_justPaused = false
 
 -> main

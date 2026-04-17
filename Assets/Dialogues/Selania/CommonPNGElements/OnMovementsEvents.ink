@@ -18,7 +18,9 @@ VAR letters_doggoPause = false
     // ~ on_movement_debug_PNG_position()
     ~ on_movement_special_events()
     ~ on_movement_letters_management()
-    ~ on_movement_sounds_effects()   
+    ~ on_movement_sounds_effects() 
+    //Faccio un check sullo stato delle missioni di franco  
+    ~ franco_missionsStateUpdater()
 
 //Poi gli elementi grafici/estetici
     ~ opening_places()    
@@ -321,9 +323,12 @@ VAR letters_doggoPause = false
         - frog_tiredValue > 0:
             ~ frog_tiredValue --
 
-        //Se è nel safekeeping, vuol dire che non è nel nest o in cucina ad aspettarmi
-        - frog_tiredValue == 0 && contentsSafekeeping has Franco && grimoire_secondChar has grimSecondCharTwo:
-            ~ move_entity(Franco, Pond)
+        - else:     
+            //Se è nel safekeeping, vuol dire che non è nel nest o in cucina ad aspettarmi
+            {
+                - contentsSafekeeping has Franco && grimoire_secondChar has grimSecondCharTwo:
+                        ~ move_entity(Franco, Pond)
+            }    
     }
 
 

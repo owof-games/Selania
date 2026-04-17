@@ -9,37 +9,49 @@
 
     //Facciamo un passaggio di aggiornamento degli achievements subito dopo la chiusura di una commissione
     -> achievements_onGame_statusUpdate_GM ->
+    {
+        - frog_giftability == false:
+            {charTag(Franco, "{portrait_Franco()}")}:   Girino!
+                                                        Per ora non ho modo di aiutarti, ma non ti preoccupare: vedo di ricordarmi che ti meriti un premio.
+                                                        E appena la situazione si aggiorna, potrai ritirarlo!
+                                                        ~ frog_suspended_gift = true
 
-    {charTag(Franco, "{portrait_Franco()}")}:       Bene girino, direi che è il momento che Franco ti dia una zampa!
+        - else:
+            {charTag(Franco, "{portrait_Franco()}")}:      Bene girino, direi che è il momento che Franco ti dia una zampa!
+            {
+                - firstChar_storyStatus == story_storyStarted && frog_firstCharAchievableGifts != () && frog_firstCharGiftable == false:
+                                                            Ti dico che per ora non ho consigli utili su {charNameOne}, ma mi sto attivando per aiutarti, parola di Franco! 
+            }
+
+            {
+                - secondChar_storyStatus == story_storyStarted && frog_secondCharAchievableGifts != () && frog_secondCharGiftable == false:
+                                                            Non ho dritte su {charNameTwo}, solo rovesci, ma se torni più avanti sono sicuro che qualcosa di nuovo te lo posso dare.
+            }
+
+            {
+                - thirdChar_storyStatus == story_storyStarted && frog_thirdCharAchievableGifts != () && frog_thirdCharGiftable == false:
+                                                            Ci sono cose di {charNameThree} che per ora mi sono un mistero misterioso, ma se torni più tardi te le posso smisterare.
+                                                            O smistare?
+            }
+     
+    }
+
+
+
     
-    {
-        - firstChar_storyStatus == story_storyStarted && frog_firstCharAchievableGifts != () && frog_firstCharGiftable == false:
-                                                    Ti dico che per ora non ho consigli utili su {charNameOne}, ma mi sto attivando per aiutarti, parola di Franco! 
-    }
-
-    {
-        - secondChar_storyStatus == story_storyStarted && frog_secondCharAchievableGifts != () && frog_secondCharGiftable == false:
-                                                    Non ho dritte su {charNameTwo}, solo rovesci, ma se torni più avanti sono sicuro che qualcosa di nuovo te lo posso dare.
-    }
-
-    {
-        - thirdChar_storyStatus == story_storyStarted && frog_thirdCharAchievableGifts != () && frog_thirdCharGiftable == false:
-                                                    Ci sono cose di {charNameThree} che per ora mi sono un mistero misterioso, ma se torni più tardi te le posso smisterare.
-                                                    O smistare?
-    }
 
     - (top)
-    Come vuoi che ti aiuti?
+    {frog_giftability: Come vuoi che ti aiuti?}
 
         + {frog_firstCharGiftable == true}Mi servirebbe un consiglio su {charNameOne}.
             -> franco_giftsFirstChar
-        + {frog_secondCharGiftable == true}Vorrei una mano con {charNameTwo}.
+        + {frog_secondCharGiftable == true} Vorrei una mano con {charNameTwo}.
             -> franco_giftsSecondChar
-        + {frog_thirdCharGiftable == true}Cosa potresti offrirmi per {charNameThree}?
+        + {frog_thirdCharGiftable == true} Cosa potresti offrirmi per {charNameThree}?
             -> franco_giftsThirdChar
-        + {frog_fourthCharGiftable == true}Apprezzerei un aiuto con {charNameFour}.
+        + {frog_fourthCharGiftable == true} Apprezzerei un aiuto con {charNameFour}.
             -> franco_giftsFourthChar
-        + {frog_fifthCharGiftable == true}Qualche dritta su {charNameFive}?
+        + {frog_fifthCharGiftable == true} Qualche dritta su {charNameFive}?
             -> franco_giftsFifthChar
         + {(frog_recoverableCultivables != ()) && (frog_recoveredCultivables == ())} Puoi aiutarmi a recuperare una pianta che ho già utilizzato?
                 {charTag(Franco, "{portrait_Franco()}")}:       Certo che craack!
@@ -65,7 +77,7 @@
                                                                     + + Mmm, ci ragiono su.
                                                                         -> top
 
-        + Vorrei pensarci ancora un po'.
+        + {frog_giftability} Vorrei pensarci ancora un po'.
             {charTag(Franco, "{portrait_Franco()}")}:       Mi trovi qui girino.
             {shuffle:
                                                         -   Continuo a contare tutte le onde!
@@ -78,6 +90,10 @@
                                                             
                                                                 ~ frog_suspended_gift = true
                                                             -> main
+        
+        + {! frog_giftability} Perfetto, torno dopo allora!
+            -> main
+        
         -
 ->->
 

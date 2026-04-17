@@ -106,23 +106,23 @@
 
     //Commissione nove richiede che almeno una riscrittura sia stata conclusa, così che ci sia il ritratto in camera
     {
-        - frog_allMissionsCompleted hasnt missionNine && LIST_COUNT(story_endedStories) > 0:
-            ~ frog_availableSpecialMissions += missionNine
+        - frog_allMissionsCompleted hasnt missionNine && story_endedStories != ():
+                ~ frog_availableCommonMissions += missionNine
             {debug_frog: ci sono le condizioni per abilitare missionNine.}
 
         - else:
-            ~ frog_availableSpecialMissions -= missionNine
+            ~ frog_availableCommonMissions -= missionNine
             {debug_frog: NON ci sono le condizioni per abilitare missionNine.}  
     }
 
     //Commissione dieci richiede che la cucina sia aperta
     {
         - frog_allMissionsCompleted hasnt missionTen && player_accessiblePlaces has Kitchen:
-            ~ frog_availableSpecialMissions += missionTen
+            ~ frog_availableCommonMissions += missionTen
             {debug_frog: ci sono le condizioni per abilitare missionTen.}
 
         - else:
-            ~ frog_availableSpecialMissions -= missionTen
+            ~ frog_availableCommonMissions -= missionTen
             {debug_frog: NON ci sono le condizioni per abilitare missionTen.}  
     }
 

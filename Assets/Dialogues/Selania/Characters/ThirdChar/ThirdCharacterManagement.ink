@@ -402,6 +402,8 @@
         -> achievements_onGame_statusUpdate_RM ->
         //Gestione crescita piante
         -> growing_check ->
+        //E la situazione delle task di Franco
+        -> notification_system ->
 
 ->->
 

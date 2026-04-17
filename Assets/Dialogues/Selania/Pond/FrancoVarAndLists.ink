@@ -78,5 +78,7 @@
                                      
     VAR frog_tiredValue = 0
     VAR frog_maxTiredValue = 3
+
+    VAR frog_justPaused = false
     
     VAR frog_nameDiscovered = false
