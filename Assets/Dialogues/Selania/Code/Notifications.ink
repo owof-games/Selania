@@ -3,7 +3,6 @@ VAR notification_greenhouseGrown = false
     //Per questa: true == posso riproporre la notifica, cosa che accade solo dopo che ho raccolto la pianta arrivata allo step tre
 VAR notification_greenhouseGrownRepropose = true 
 VAR notification_restingSession = false
-VAR notification_francoQuests = false
 VAR notification_achievement = false
 VAR notification_achievementName = ""
 
@@ -45,21 +44,21 @@ VAR notification_francoUpdatedMissions = ()
             ~ notification_achievement = ""
 }
 
-//Notifiche per le commissioni di Franco
-{
-    - notification_francoQuests == false:
-        //Facciamo un update delle missioni
-        ~ temp newMissionsCompleted = frog_updatedMissions
-        ~ franco_missionsStateUpdater()
+//Notifiche per le commissioni di Franco, che vogliamo vengano notificate SOLO se la missione è stata offerta da Franco
+    //Primo step: aggiorniamo lo stato delle missioni
+    ~ franco_missionsStateUpdater()
 
-        {
-            
-            - notification_francoUpdatedMissions != newMissionsCompleted:
-                {charTag(TheWitch, "{witch_state()}")}:     <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>
-                        ~ notification_francoQuests = true
-                        ~ notification_francoUpdatedMissions = frog_updatedMissions
-        
-        }
-}
+    {
+        //Se c'è una discrepanza tra le missioni ora completate e quelle che avevamo nello storico, aggiorniamo la lista e...
+        - notification_francoUpdatedMissions != frog_updatedMissions:
+                    ~ notification_francoUpdatedMissions = frog_updatedMissions
+                    {
+                        //Se tra le missioni aggiornate c'è quella offerta da Franco, mandiamo la notifica
+                        - frog_updatedMissions has frog_currentMission:
+                            {charTag(TheWitch, "{witch_state()}")}:     <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>
+                    }
+    
+    }
+
 
 ->->

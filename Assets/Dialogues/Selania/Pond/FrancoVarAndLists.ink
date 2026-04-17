@@ -4,9 +4,6 @@
                                     
                                      ----------------------------------*/
 
-    //Lista di tutto ciò che può generare una commissione
-    LIST frog_missionAboutChar = missionCharOne, missionCharTwo, missionCharThree, missionCharFour, missionCharFive, missionObjects, specialDelivery
-    
     //Lista di tutte le commissioni che la rana può offrire, e quelle completate. Nota: missionOne etc son nomi temporanei, che verranno aggiornati man mano che le creo
     LIST frog_allMissions = missionOne, missionTwo, missionThree, missionFour, missionFive, missionSix, missionSeven, missionEight, missionNine, missionTen, specialMissionOne, specialMissionTwo
         //Separo la lista totale da quelle disponibili anche per un discorso di TW

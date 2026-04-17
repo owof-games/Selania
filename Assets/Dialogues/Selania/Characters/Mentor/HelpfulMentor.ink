@@ -55,6 +55,7 @@
             -> little_storylets
     
         + \ {charTag(PG, "neutral")}:                                           Ho cambiato idea.
+            -> notification_system ->
             -> main
 
 /* ---------------------------------

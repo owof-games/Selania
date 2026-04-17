@@ -129,7 +129,6 @@
     ~ frog_availableCommonMissions -= frog_currentMission
     ~ frog_updatedMissions -= frog_currentMission
     ~ frog_currentMission = ()
-    ~ notification_francoQuests = false
     ~ frog_suspended_gift = false
     //Togliamo la pausa
     ~ frog_justPaused = false
