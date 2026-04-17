@@ -188,7 +188,7 @@
     //          ~ mentor_pauseTalking = mentor_pauseDuration
     //          @animation:RewriterBook
              
-    //             -> main
+     -> main
 
 
     

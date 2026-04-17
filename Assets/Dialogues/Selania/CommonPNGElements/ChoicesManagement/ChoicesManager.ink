@@ -371,45 +371,46 @@ Recap della logica.
     {debug_nest: passo per sigil_PNG_reactions. Lo stato di glyph_currentTalker è {glyph_currentTalker}, lo stato di glyph_mainTalker è {glyph_mainTalker} e lo stato sigillo attivo è {glyph_actualActiveSigil}}
     //Qui invece abbiamo le reazioni dellx PNG
     {
+        //Se ho un sigillo attivo, la reazione è anche dell3 main characters, altrimenti no. Ma la reazione è la stessa (perché è sempre dettata dalla logica del rapporto che si sta creando (es: riccio, non valori assoluti ma secondo predominante tipo scelta))
         //Ai sigilli, se attivi
         - glyph_currentTalker == FirstCharacter && glyph_actualActiveSigil != ():
                 ~ firstChar_usedSigilsTracking += glyph_actualActiveSigil
-            -> sigil_FirstCharacter_reactions
+            -> FirstCharacter_reactions
         
         - glyph_currentTalker == SecondCharacter && glyph_actualActiveSigil != ():
                 ~ secondChar_usedSigilsTracking += glyph_actualActiveSigil
-            -> sigil_SecondCharacter_reactions
+            -> SecondCharacter_reactions
 
         - glyph_currentTalker == ThirdCharacter && glyph_actualActiveSigil != ():
                 ~ thirdChar_usedSigilsTracking += glyph_actualActiveSigil
-            -> sigil_ThirdCharacter_reactions
+            -> ThirdCharacter_reactions
 
         - glyph_currentTalker == FourthCharacter && glyph_actualActiveSigil != ():
                 ~ fourthChar_usedSigilsTracking += glyph_actualActiveSigil
-            -> sigil_FourthCharacter_reactions
+            -> FourthCharacter_reactions
 
         - glyph_currentTalker == FifthCharacter  && glyph_actualActiveSigil != ():
                 ~ fifthChar_usedSigilsTracking += glyph_actualActiveSigil
-            -> sigil_FifthCharacter_reactions    
+            -> FifthCharacter_reactions    
 
         //Come guests, se presenti
         - glyph_currentTalker == FirstCharacter && glyph_mainTalker hasnt FirstCharacter:
-            -> glyph_FirstCharacter_reactions
+            -> FirstCharacter_reactions
         
         - glyph_currentTalker == SecondCharacter && glyph_mainTalker hasnt SecondCharacter:
-            -> glyph_SecondCharacter_reactions
+            -> SecondCharacter_reactions
 
         - glyph_currentTalker == ThirdCharacter && glyph_mainTalker hasnt ThirdCharacter:
-            -> glyph_ThirdCharacter_reactions
+            -> ThirdCharacter_reactions
 
         - glyph_currentTalker == FourthCharacter && glyph_mainTalker hasnt FourthCharacter:
-            -> glyph_FourthCharacter_reactions  
+            -> FourthCharacter_reactions  
 
         - glyph_currentTalker == FifthCharacter && glyph_mainTalker hasnt FifthCharacter:
-            -> glyph_FifthCharacter_reactions  
+            -> FifthCharacter_reactions  
 
         - glyph_currentTalker == Mentor && glyph_mainTalker hasnt Mentor:
-            -> glyph_Mentor_reactions              
+            -> Mentor_reactions              
 
         - else:
             {
@@ -424,29 +425,30 @@ Recap della logica.
     }
 
     //Reazione ai sigilli
-            = sigil_FirstCharacter_reactions
+            = FirstCharacter_reactions
             //Qui settiamo le reazioni ad hoc, a seconda delle variazioni 
             {firstChar_relationshipReaction:
 
                 - neutral:
                     {shuffle:
-                        - FirstCharacter Reazione neutra al sigillo.
-                        - FirstCharacter Altra reazione neutra al sigillo.
-                        - FirstCharacter Un'altra ancora reazione neutra al sigillo.
+                        - {charTag(FirstCharacter, "neutral")}:         Già.
+                        - {charTag(FirstCharacter, "neutral")}:         Chiaro.
+                        - {charTag(FirstCharacter, "neutral")}:         Mhm.
                     }
 
                 - positive:
                     {shuffle:
-                        -  FirstCharacter Reazione positiva al sigillo.
-                        -  FirstCharacter Altra reazione positiva al sigillo.
-                        -  FirstCharacter Un'altra ancora reazione positiva al sigillo.
+                        - {charTag(FirstCharacter, "affectionate")}:     Woah!
+                        - {charTag(FirstCharacter, "affectionate")}:     Totale!
+                        - {charTag(FirstCharacter, "curious")}:          Adoro!
+                        - {charTag(FirstCharacter, "curious")}:          Amo!
                     }
 
                 - negative:
                     {shuffle:
-                        -  FirstCharacter Reazione negativa al sigillo.
-                        -  FirstCharacter Altra reazione negativa al sigillo.
-                        -  FirstCharacter Un'altra ancora reazione negativa al sigillo.
+                        - {charTag(FirstCharacter, "sad")}:             Bah.
+                        - {charTag(FirstCharacter, "annoyed")}:         Vabbè.
+                        - {charTag(FirstCharacter, "annoyed")}:         Meh...
                     }
 
             }
@@ -455,28 +457,30 @@ Recap della logica.
             -> glyph_thereAreOtherTalkers
             
             
-            = sigil_SecondCharacter_reactions
+            = SecondCharacter_reactions
             {secondChar_relationshipReaction:
 
                 - neutral:
                     {shuffle:
-                        - SecondCharacter Reazione neutra al sigillo.
-                        - SecondCharacter Altra reazione neutra al sigillo.
-                        - SecondCharacter Un'altra ancora reazione neutra al sigillo.
+                        - {charTag(SecondCharacter, "neutral")}:        Ok.
+                        - {charTag(SecondCharacter, "neutral")}:        Certo.
+                        - {charTag(SecondCharacter, "neutral")}:        Mhm.
                     }
 
                 - positive:
                     {shuffle:
-                        - SecondCharacter Reazione positiva al sigillo.
-                        - SecondCharacter Altra reazione positiva al sigillo.
-                        - SecondCharacter Un'altra ancora reazione positiva al sigillo.
+                        - {charTag(SecondCharacter, "emotional")}:          Uuuuh!
+                        - {charTag(SecondCharacter, "emotional")}:          Oooh!
+                        - {charTag(SecondCharacter, "energy")}:             Wow!
+                        - {charTag(SecondCharacter, "energy")}:             Siii!
                     }
 
                 - negative:
                     {shuffle:
-                        - SecondCharacter Reazione negativa al sigillo.
-                        - SecondCharacter Altra reazione negativa al sigillo.
-                        - SecondCharacter Un'altra ancora reazione negativa al sigillo.
+                        - {charTag(SecondCharacter, "angry")}:              No?
+                        - {charTag(SecondCharacter, "angry")}:              ???
+                        - {charTag(SecondCharacter, "melanchonic")}:         Ah.
+                        - {charTag(SecondCharacter, "melanchonic")}:         Uff.
                     }
 
             }
@@ -485,36 +489,39 @@ Recap della logica.
             -> glyph_thereAreOtherTalkers
 
             
-            = sigil_ThirdCharacter_reactions
+            = ThirdCharacter_reactions
             {thirdChar_relationshipReaction:
 
                 - neutral:
                     {shuffle:
-                        - ThirdCharacter Reazione neutra al sigillo.
-                        - ThirdCharacter Altra reazione neutra al sigillo.
-                        - ThirdCharacter Un'altra ancora reazione neutra al sigillo.
+                        - {charTag(ThirdCharacter, "neutral")}:        Ok.
+                        - {charTag(ThirdCharacter, "neutral")}:        Certo.
+                        - {charTag(ThirdCharacter, "neutral")}:        Mhm.
                     }
 
                 - positive:
                     {shuffle:
-                        - ThirdCharacter Reazione positiva al sigillo.
-                        - ThirdCharacter Altra reazione positiva al sigillo.
-                        - ThirdCharacter Un'altra ancora reazione positiva al sigillo.
+                        - {charTag(ThirdCharacter, "neutral")}:          Uuuuh!
+                        - {charTag(ThirdCharacter, "neutral")}:          Oooh!
+                        - {charTag(ThirdCharacter, "neutral")}:             Wow!
+                        - {charTag(ThirdCharacter, "neutral")}:             Siii!
                     }
 
                 - negative:
                     {shuffle:
-                        - ThirdCharacter Reazione negativa al sigillo.
-                        - ThirdCharacter Altra reazione negativa al sigillo.
-                        - ThirdCharacter Un'altra ancora reazione negativa al sigillo.
+                        - {charTag(ThirdCharacter, "judgmental")}:              No?
+                        - {charTag(ThirdCharacter, "judgmental")}:              ???
+                        - {charTag(ThirdCharacter, "judgmental")}:         Ah.
+                        - {charTag(ThirdCharacter, "judgmental")}:         Uff.
                     }
+
 
             }
 
              @animation: ActiveSigil
             -> glyph_thereAreOtherTalkers
 
-            = sigil_FourthCharacter_reactions
+            = FourthCharacter_reactions
             {fourthChar_relationshipReaction:
 
                 - neutral:
@@ -543,7 +550,7 @@ Recap della logica.
              @animation: ActiveSigil
             -> glyph_thereAreOtherTalkers
 
-            = sigil_FifthCharacter_reactions
+            = FifthCharacter_reactions
             {fifthChar_relationshipReaction:
 
                 - neutral:
@@ -573,153 +580,12 @@ Recap della logica.
             -> glyph_thereAreOtherTalkers
 
 
-    //Reazione ai glifi
-    = glyph_FirstCharacter_reactions
-            //Qui settiamo le reazioni ad hoc, a seconda delle variazioni 
-            {firstChar_relationshipReaction:
-
-                - neutral:
-                    {shuffle:
-                        - FirstCharacter Reazione neutra al glifo.
-                        - FirstCharacter Altra reazione neutra al glifo.
-                        - FirstCharacter Un'altra ancora reazione neutra al glifo.
-                    }
-
-                - positive:
-                    {shuffle:
-                        - FirstCharacter Reazione positiva al glifo.
-                        - FirstCharacter Altra reazione positiva al glifo.
-                        - FirstCharacter Un'altra ancora reazione positiva al glifo.
-                    }
-
-                - negative:
-                    {shuffle:
-                        - FirstCharacter Reazione negativa al glifo.
-                        - FirstCharacter Altra reazione negativa al glifo.
-                        - FirstCharacter Un'altra ancora reazione negativa al glifo.
-                    }
-
-            }
-            -> glyph_thereAreOtherTalkers
-
-    = glyph_SecondCharacter_reactions
-            //Qui settiamo le reazioni ad hoc, a seconda delle variazioni 
-            {secondChar_relationshipReaction:
-
-                - neutral:
-                    {shuffle:
-                        - SecondCharacter Reazione neutra al glifo.
-                        - SecondCharacter Altra reazione neutra al glifo.
-                        - SecondCharacter Un'altra ancora reazione neutra al glifo.
-                    }
-
-                - positive:
-                    {shuffle:
-                        - SecondCharacter Reazione positiva al glifo.
-                        - SecondCharacter Altra reazione positiva al glifo.
-                        - SecondCharacter Un'altra ancora reazione positiva al glifo.
-                    }
-
-                - negative:
-                    {shuffle:
-                        - SecondCharacter Reazione negativa al glifo.
-                        - SecondCharacter Altra reazione negativa al glifo.
-                        - SecondCharacter Un'altra ancora reazione negativa al glifo.
-                    }
-
-            }
-            -> glyph_thereAreOtherTalkers    
-
-    = glyph_ThirdCharacter_reactions
-            //Qui settiamo le reazioni ad hoc, a seconda delle variazioni 
-            {thirdChar_relationshipReaction:
-
-                - neutral:
-                    {shuffle:
-                        - ThirdCharacter Reazione neutra al glifo.
-                        - ThirdCharacter Altra reazione neutra al glifo.
-                        - ThirdCharacter Un'altra ancora reazione neutra al glifo.
-                    }
-
-                - positive:
-                    {shuffle:
-                        - ThirdCharacter Reazione positiva al glifo.
-                        - ThirdCharacter Altra reazione positiva al glifo.
-                        - ThirdCharacter Un'altra ancora reazione positiva al glifo.
-                    }
-
-                - negative:
-                    {shuffle:
-                        - ThirdCharacter Reazione negativa al glifo.
-                        - ThirdCharacter Altra reazione negativa al glifo.
-                        - ThirdCharacter Un'altra ancora reazione negativa al glifo.
-                    }
-
-            }
-            -> glyph_thereAreOtherTalkers
-
-    = glyph_FourthCharacter_reactions
-            //Qui settiamo le reazioni ad hoc, a seconda delle variazioni 
-            {fourthChar_relationshipReaction:
-
-                - neutral:
-                    {shuffle:
-                        - Reazione neutra al glifo.
-                        - Altra reazione neutra al glifo.
-                        - Un'altra ancora reazione neutra al glifo.
-                    }
-
-                - positive:
-                    {shuffle:
-                        - Reazione positiva al glifo.
-                        - Altra reazione positiva al glifo.
-                        - Un'altra ancora reazione positiva al glifo.
-                    }
-
-                - negative:
-                    {shuffle:
-                        - Reazione negativa al glifo.
-                        - Altra reazione negativa al glifo.
-                        - Un'altra ancora reazione negativa al glifo.
-                    }
-
-            }
-            -> glyph_thereAreOtherTalkers
-
-    = glyph_FifthCharacter_reactions
-            //Qui settiamo le reazioni ad hoc, a seconda delle variazioni 
-            {fifthChar_relationshipReaction:
-
-                - neutral:
-                    {shuffle:
-                        - Reazione neutra al glifo.
-                        - Altra reazione neutra al glifo.
-                        - Un'altra ancora reazione neutra al glifo.
-                    }
-
-                - positive:
-                    {shuffle:
-                        - Reazione positiva al glifo.
-                        - Altra reazione positiva al glifo.
-                        - Un'altra ancora reazione positiva al glifo.
-                    }
-
-                - negative:
-                    {shuffle:
-                        - Reazione negativa al glifo.
-                        - Altra reazione negativa al glifo.
-                        - Un'altra ancora reazione negativa al glifo.
-                    }
-
-            }
-            -> glyph_thereAreOtherTalkers
-
-    = glyph_Mentor_reactions
+    = Mentor_reactions
             //Mentore ha sempre reazioni neutre, visto che non ha un contatore della relazione esplicitamente attivo.
                 {shuffle:
-                    - {charTag(Mentor, "neutral")}:         Posso capire.
-                    - {charTag(Mentor, "neutral")}:         Ha senso.
-                    - {charTag(Mentor, "neutral")}:         Risuona.
+                    - {charTag(Mentor, "neutral")}:         Sì sì.
+                    - {charTag(Mentor, "neutral")}:         Ok.
+                    - {charTag(Mentor, "neutral")}:         Eh.
                     - {charTag(Mentor, "neutral")}:         Mhm.
                     - {charTag(Mentor, "neutral")}:         Chiaro.
                     - {charTag(Mentor, "neutral")}:         Già.
