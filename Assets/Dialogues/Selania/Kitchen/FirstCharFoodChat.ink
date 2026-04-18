@@ -1077,9 +1077,20 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             <i>E {player_name} potrebbe capire un po' meglio {charNameOne}.</i>
        
                 + <i>Aggiungo un ingrediente speciale.</i>
-                    -> extra_ingredient_management(FirstCharacter)->
-                    ~ disableNestDialogue()
+                    -> grimoire_greenhouse_gifts_and_ingredient ->
+
+                    //Dopo di che associo la scelta fatta alla PNG
+                    ~ kitchen_firstCharExtraIngredient = grimoire_chosenPlant
+                    //E svuoto la variabile del grimorio
+                    ~ grimoire_chosenPlant = ()
+                    //E poi chiamo la funzione per aggiornare i valori
+                    ~ object_value_for_PNG(kitchen_firstCharExtraIngredient, Kitchen, FirstCharacter)
+                    //E il nome dell'ingrediente
+                    ~ extra_ingredient_name(kitchen_firstCharExtraIngredient)
                     
+                    -> notification_system -> 
+
+            
                 + <i>Non aggiungo altro.</i>
                 -
                 

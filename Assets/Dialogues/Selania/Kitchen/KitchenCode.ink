@@ -143,367 +143,61 @@
 ->->    
 
 
-=== extra_ingredient_management(PNG)
-{debug_kitchen: passo per extra_ingredient_management.}
-//Qui gestiremo la parte di ingredienti che possiamo aggiungere, coi relativi effetti
-    ~ enableNestDialogue()
-    
-    {debug_kitchen: I doni trovati sono {backpack_findedGifts}.}
-    Aggiungo...
-    
-/* ---------------------------------
 
-            Coltivabili
+=== function extra_ingredient_name(Ingredient)
+{Ingredient:
 
- ----------------------------------*/
- //badReaction, mehReaction, goodReaction
-        //Se la lista è vuota
-    + {backpack_findedGifts == ()} <i>Non ho nulla da aggiungere.</i>
-    
-    + <i>Ho cambiato idea.</i>
-        ~ kitchen_recipePP = "esitante"
-        
-    + {backpack_findedGifts has BaccaDellaAddolorata} <i>Una bacca della Addolorata.</i>
-        ~ backpack_findedGifts -= BaccaDellaAddolorata
+    - BaccaDellaAddolorata:
         ~ kitchen_recipePP = "e distillato del primo passo"
-         {
-        - frog_recoveredCultivables hasnt BaccaDellaAddolorata:
-        ~ frog_recoverableCultivables += BaccaDellaAddolorata
-        } 
-            {
-                - PNG == FirstCharacter:
-                    -> object_value_for_PNG(BaccaDellaAddolorata, Kitchen, FirstCharacter) ->
 
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
-                    
-                - PNG == SecondCharacter:
-                    -> object_value_for_PNG(BaccaDellaAddolorata, Kitchen, SecondCharacter) ->
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
-
-                - PNG == ThirdCharacter:
-                    -> object_value_for_PNG(BaccaDellaAddolorata, Kitchen, ThirdCharacter) ->
-        
-            }
-    
-    + {backpack_findedGifts has BarbaDellInciampo} <i>Una spina di Barba dell'Inciampo.</i>
-        ~ backpack_findedGifts -= BarbaDellInciampo
+    - BarbaDellInciampo:
         ~ kitchen_recipePP = "ed essenza della responsabilità"
-         {
-        - frog_recoveredCultivables hasnt BarbaDellInciampo:
-        ~ frog_recoverableCultivables += BarbaDellInciampo
-    } 
-            {
-                - PNG == FirstCharacter:
-                    -> object_value_for_PNG(BarbaDellInciampo, Kitchen, FirstCharacter) ->
 
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
-                    
-                - PNG == SecondCharacter:
-                    -> object_value_for_PNG(BarbaDellInciampo, Kitchen, SecondCharacter) ->
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
+    - BastoneDellOzioso:
+        ~ kitchen_recipePP = "e aroma di ozio"  
 
-                - PNG == ThirdCharacter:
-                    -> object_value_for_PNG(BarbaDellInciampo, Kitchen, ThirdCharacter) ->    
-            }
-            
-    + {backpack_findedGifts has BastoneDellOzioso} <i>Un nodo di Bastone dell'Ozioso.</i>
-        ~ backpack_findedGifts -= BastoneDellOzioso
-         {
-        - frog_recoveredCultivables hasnt BastoneDellOzioso:
-        ~ frog_recoverableCultivables += BastoneDellOzioso
-        } 
-        ~ kitchen_recipePP = "e aroma di ozio"
-            {
-                - PNG == FirstCharacter:
-                    -> object_value_for_PNG(BastoneDellOzioso, Kitchen, FirstCharacter) ->
+    - BrinaDellImpossibile:
+        ~ kitchen_recipePP = "e traccie di ferita"  
 
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
-                    
-                - PNG == SecondCharacter:
-                    -> object_value_for_PNG(BastoneDellOzioso, Kitchen, SecondCharacter) ->
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
-
-                - PNG == ThirdCharacter:
-                    -> object_value_for_PNG(BastoneDellOzioso, Kitchen, ThirdCharacter) ->    
-            }
-        
-    + {backpack_findedGifts has BrinaDellImpossibile} <i>Un frammento di Brina dell'Impossibile.</i>
-        ~ backpack_findedGifts -= BrinaDellImpossibile
-         {
-        - frog_recoveredCultivables hasnt BrinaDellImpossibile:
-        ~ frog_recoverableCultivables += BrinaDellImpossibile
-    } 
-        ~ kitchen_recipePP = "e aroma di trauma"
-            {
-                - PNG == FirstCharacter:
-                    -> object_value_for_PNG(BrinaDellImpossibile, Kitchen, FirstCharacter) ->
-
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
-                    
-                - PNG == SecondCharacter:
-                    -> object_value_for_PNG(BrinaDellImpossibile, Kitchen, SecondCharacter) ->
-
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
-
-                - PNG == ThirdCharacter:
-                    -> object_value_for_PNG(BrinaDellImpossibile, Kitchen, ThirdCharacter) ->    
-            }        
-    
-    + {backpack_findedGifts has CantoDelleCompagne} <i>Una goccia di Canto delle Compagne.</i>
-        ~ backpack_findedGifts -= CantoDelleCompagne
-         {
-        - frog_recoveredCultivables hasnt CantoDelleCompagne:
-        ~ frog_recoverableCultivables += CantoDelleCompagne
-    } 
+    - CantoDelleCompagne:
         ~ kitchen_recipePP = "e profumo di rabbia"
-            {
-                - PNG == FirstCharacter:
-                    -> object_value_for_PNG(CantoDelleCompagne, Kitchen, FirstCharacter) ->
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
-                    
-                - PNG == SecondCharacter:
-                    -> object_value_for_PNG(CantoDelleCompagne, Kitchen, SecondCharacter) ->
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
 
-                - PNG == ThirdCharacter:
-                    -> object_value_for_PNG(CantoDelleCompagne, Kitchen, ThirdCharacter) ->    
-            }        
-    
-    + {backpack_findedGifts has CardoAspinato} <i>Un ciuffo di peli di Cardo Aspinato.</i>
-        ~ backpack_findedGifts -= CardoAspinato
-         {
-        - frog_recoveredCultivables hasnt CardoAspinato:
-        ~ frog_recoverableCultivables += CardoAspinato
-    } 
+    - CardoAspinato:
         ~ kitchen_recipePP = "e copertura di vulnerabilità"
-            {
-                - PNG == FirstCharacter:
-                    -> object_value_for_PNG(CardoAspinato, Kitchen, FirstCharacter) ->
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
-                    
-                - PNG == SecondCharacter:
-                    -> object_value_for_PNG(CardoAspinato, Kitchen, SecondCharacter) ->
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
 
-                - PNG == ThirdCharacter:
-                    -> object_value_for_PNG(CardoAspinato, Kitchen, ThirdCharacter) ->    
-            }        
-            
-    + {backpack_findedGifts has EderaDelleAmanti} <i>Una foglia di Edera delle amanti.</i>
-        ~ backpack_findedGifts -= EderaDelleAmanti
-        {
-        - frog_recoveredCultivables hasnt EderaDelleAmanti:
-        ~ frog_recoverableCultivables += EderaDelleAmanti
-    } 
+    - EderaDelleAmanti:
         ~ kitchen_recipePP = "e glassa di piacere"
-            {
-                - PNG == FirstCharacter:
-                    -> object_value_for_PNG(EderaDelleAmanti, Kitchen, FirstCharacter) ->
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
-                    
-                - PNG == SecondCharacter:
-                    -> object_value_for_PNG(EderaDelleAmanti, Kitchen, SecondCharacter) ->
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
 
-                - PNG == ThirdCharacter:
-                    -> object_value_for_PNG(EderaDelleAmanti, Kitchen, ThirdCharacter) ->    
-            }        
+    - ErbaLiccia:
+        ~ kitchen_recipePP = "e doratura di rinuncia" 
 
-    + {backpack_findedGifts has ErbaLiccia} <i>Un ricordo di Erba Liccia.</i>
-        ~ backpack_findedGifts -= ErbaLiccia
-         {
-        - frog_recoveredCultivables hasnt ErbaLiccia:
-        ~ frog_recoverableCultivables += ErbaLiccia
-    } 
-        ~ kitchen_recipePP = "e doratura di rinuncia"
-            {
-                - PNG == FirstCharacter:
-                    -> object_value_for_PNG(ErbaLiccia, Kitchen, FirstCharacter) ->
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
-                    
-                - PNG == SecondCharacter:
-                   -> object_value_for_PNG(ErbaLiccia, Kitchen, SecondCharacter) ->
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
-
-                - PNG == ThirdCharacter:
-                   -> object_value_for_PNG(ErbaLiccia, Kitchen, ThirdCharacter) ->    
-            }        
-        
-     + {backpack_findedGifts has FalsaPalude} <i>Un petalo di Falsa Palude.</i>
-        ~ backpack_findedGifts -= FalsaPalude
-         {
-        - frog_recoveredCultivables hasnt FalsaPalude:
-        ~ frog_recoverableCultivables += FalsaPalude
-    } 
+    - FalsaPalude:
         ~ kitchen_recipePP = "e ripieno di collaborazione"
-            {
-                - PNG == FirstCharacter:
-                    -> object_value_for_PNG(FalsaPalude, Kitchen, FirstCharacter) ->
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
-                    
-                - PNG == SecondCharacter:
-                    -> object_value_for_PNG(FalsaPalude, Kitchen, SecondCharacter) ->
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
 
-                - PNG == ThirdCharacter:
-                    -> object_value_for_PNG(FalsaPalude, Kitchen, ThirdCharacter) ->    
-            }        
-        
-      + {backpack_findedGifts has LanaNotturna} <i>Il calore della Lana Notturna.</i>
-        ~ backpack_findedGifts -= LanaNotturna
-         {
-        - frog_recoveredCultivables hasnt LanaNotturna:
-        ~ frog_recoverableCultivables += LanaNotturna
-    } 
+    - LanaNotturna:
         ~ kitchen_recipePP = "e polvere di cambiamento"
-            {
-                - PNG == FirstCharacter:
-                    -> object_value_for_PNG(LanaNotturna, Kitchen, FirstCharacter) ->
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
-                    
-                - PNG == SecondCharacter:
-                    -> object_value_for_PNG(LicheneDegliAbissi, Kitchen, SecondCharacter) ->
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
 
-                - PNG == ThirdCharacter:
-                    -> object_value_for_PNG(LicheneDegliAbissi, Kitchen, ThirdCharacter) ->    
-            }        
-        
-    + {backpack_findedGifts has LicheneDegliAbissi} <i>Una traccia dell'odore del Lichene degli Abissi.</i>
-        ~ backpack_findedGifts -= LicheneDegliAbissi
-         {
-        - frog_recoveredCultivables hasnt LicheneDegliAbissi:
-        ~ frog_recoverableCultivables += LicheneDegliAbissi
-    } 
+    - LicheneDegliAbissi:
         ~ kitchen_recipePP = "e panatura di relazione tossica"
-            {
-                - PNG == FirstCharacter:
-                    -> object_value_for_PNG(LicheneDegliAbissi, Kitchen, FirstCharacter) ->
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
-                    
-                - PNG == SecondCharacter:
-                    -> object_value_for_PNG(LicheneDegliAbissi, Kitchen, SecondCharacter) ->
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
 
-                - PNG == ThirdCharacter:
-                    -> object_value_for_PNG(LicheneDegliAbissi, Kitchen, ThirdCharacter) ->    
-            }        
-    
-    + {backpack_findedGifts has NonTiScordarDiTe} <i>L'impronta del Non Ti Scordar di Te.</i>
-        ~ backpack_findedGifts -= NonTiScordarDiTe
-         {
-        - frog_recoveredCultivables hasnt NonTiScordarDiTe:
-        ~ frog_recoverableCultivables += NonTiScordarDiTe
-    } 
+    - NonTiScordarDiTe:
         ~ kitchen_recipePP = "e crosticina dell'eredità"
-            {
-                - PNG == FirstCharacter:
-                    -> object_value_for_PNG(NonTiScordarDiTe, Kitchen, FirstCharacter) ->
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
-                    
-                - PNG == SecondCharacter:
-                    -> object_value_for_PNG(NonTiScordarDiTe, Kitchen, SecondCharacter) ->
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
 
-                - PNG == ThirdCharacter:
-                    -> object_value_for_PNG(NonTiScordarDiTe, Kitchen, ThirdCharacter) ->    
-            }        
-    
-    + {backpack_findedGifts has Olobino} <i>Una cappello di Olobino.</i>
-        ~ backpack_findedGifts -= Olobino
-         {
-        - frog_recoveredCultivables hasnt Olobino:
-        ~ frog_recoverableCultivables += Olobino
-    } 
+    - Olobino:
         ~ kitchen_recipePP = "e marinatura spirituale"
-            {
-                - PNG == FirstCharacter:
-                    -> object_value_for_PNG(Olobino, Kitchen, FirstCharacter) ->
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
-                    
-                - PNG == SecondCharacter:
-                    -> object_value_for_PNG(Olobino, Kitchen, SecondCharacter) ->
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
 
-                - PNG == ThirdCharacter:
-                    -> object_value_for_PNG(Olobino, Kitchen, ThirdCharacter) ->    
-            }        
+    - LaSpazzata:
+        ~ kitchen_recipePP = "e farcitura di comunicazione" 
+
+    - universalIngredient:
+        ~ kitchen_recipePP = "e gratinatura del bel ricordo"
+
+    //Se non ho compiuto scelte
+    - else:
+        ~ kitchen_recipePP = "esitante"    
         
-    + {backpack_findedGifts has LaSpazzata} <i>Un rametto della Spezzata.</i>
-        ~ backpack_findedGifts -= LaSpazzata
-         {
-            - frog_recoveredCultivables hasnt LaSpazzata:
-                ~ frog_recoverableCultivables += LaSpazzata
-        } 
-        ~ kitchen_recipePP = "e farcitura di comunicazione"
-            {
-                - PNG == FirstCharacter:
-                    -> object_value_for_PNG(LaSpazzata, Kitchen, FirstCharacter) ->
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
-                    
-                - PNG == SecondCharacter:
-                    -> object_value_for_PNG(LaSpazzata, Kitchen, SecondCharacter) ->
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
 
-                - PNG == ThirdCharacter:
-                    -> object_value_for_PNG(LaSpazzata, Kitchen, ThirdCharacter) ->    
-            }        
-//Doni insoliti
-    + {backpack_findedGifts has universalIngredient} <i>Un chicco di Zandelia.</i>
-        ~ backpack_findedGifts -= universalIngredient
-        ~ kitchen_recipePP = "e gratinatura del ricordo"
-        
-            {
-                - PNG == FirstCharacter:
-                    -> object_value_for_PNG(universalIngredient, Kitchen, FirstCharacter) ->
-
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
-                    
-                - PNG == SecondCharacter:
-                   -> object_value_for_PNG(universalIngredient, Kitchen, SecondCharacter) ->
-
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
-                    {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
-
-                - PNG == ThirdCharacter:
-                   -> object_value_for_PNG(universalIngredient, Kitchen, ThirdCharacter) ->     
-            }
-    
-    -
-        -> notification_system ->    
-        ~ disableNestDialogue()    
-        ->->
-
-
+}
 
 
 /* ---------------------------------

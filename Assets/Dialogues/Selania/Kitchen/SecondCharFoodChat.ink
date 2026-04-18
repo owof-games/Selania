@@ -1100,8 +1100,18 @@
                 <i>E {player_name} potrebbe capire un po' meglio {charNameTwo}.</i>
 
                     + <i>Voglio aggiungere un ingrediente speciale.</i>
-                        -> extra_ingredient_management(SecondCharacter)->
-                        ~ disableNestDialogue()
+                        -> grimoire_greenhouse_gifts_and_ingredient ->
+
+                        //Dopo di che associo la scelta fatta alla PNG
+                        ~ kitchen_secondCharExtraIngredient = grimoire_chosenPlant
+                        //E svuoto la variabile del grimorio
+                        ~ grimoire_chosenPlant = ()
+                        //E poi chiamo la funzione per aggiornare i valori
+                        ~ object_value_for_PNG(kitchen_secondCharExtraIngredient, Kitchen, SecondCharacter)
+                        //E il nome dell'ingrediente
+                        ~ extra_ingredient_name(kitchen_secondCharExtraIngredient)
+                        
+                        -> notification_system -> 
                     
                     + <i>Non aggiungo altro.</i>
                     -

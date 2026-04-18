@@ -12,7 +12,6 @@
         {
             - comingFrom == Kitchen:
                 {debug: passo dai valori di Kitchen.}
-                ~ kitchen_firstCharExtraIngredient = object
                 
                 {   
                     - object == universalIngredient:
@@ -35,8 +34,7 @@
             
             - comingFrom == Backpack:
                 {debug: passo dai valori dello zaino.}
-                ~ firstChar_giftedObject += object
-                
+
                 {   
                     
                     - firstChar_favouritesGifts has object:
@@ -61,9 +59,8 @@
         {
             - comingFrom == Kitchen:
                 {debug: passo dai valori di Kitchen.}
-                ~ kitchen_secondCharExtraIngredient = object
 
-                
+
                 {   
                     - object == universalIngredient:
                         {debug: oggetto è universalIngredient.}
@@ -85,7 +82,6 @@
             
             - comingFrom == Backpack:
                 {debug: passo dai valori dello zaino.}
-                ~ secondChar_giftedObject += object
                 
                 {   
                     
@@ -109,9 +105,7 @@
         {
             - comingFrom == Kitchen:
                 {debug: passo dai valori di Kitchen.}
-                ~ kitchen_thirdCharExtraIngredient = object
 
-                
                 {   
                     - object == universalIngredient:
                         {debug: oggetto è universalIngredient.}
@@ -133,7 +127,6 @@
             
             - comingFrom == Backpack:
                 {debug: passo dai valori dello zaino.}
-                ~ thirdChar_giftedObject += object
                 
                 {   
                     
