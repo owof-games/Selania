@@ -55,7 +55,7 @@
 
     }
 
-        //Nona commissione: non si può generare in automatico
+    //Nona commissione: non si può generare in automatico
 
     {
        //Decima commissione: aggiungere un ingrediente extra in cucina.
@@ -123,12 +123,12 @@
 
                 //Check per parte Chitarra, Riccio e Boccale   
                 - LIST_COUNT(story_endedStories) <= 3 && (grimoire_firstChar hasnt grimFirstCharKitchenEnded or grimoire_secondChar hasnt grimSecondCharKitchenEnded or grimoire_thirdChar hasnt grimThirdCharKitchenEnded):
-                        ~ frog_updatedMissions += missionTen
+                        ~ frog_availableCommonMissions += missionTen
                     {debug_frog: ci sono le condizioni per abilitare missionTen.}
 
                 //Check per parte Nonna e Mentore
                 - LIST_COUNT(story_endedStories) > 3 &&  (grimoire_fourthChar hasnt grimFourthCharKitchenEnded or grimoire_fifthChar hasnt grimFifthCharKitchenEnded):
-                        ~ frog_updatedMissions += missionTen
+                        ~ frog_availableCommonMissions += missionTen
                     {debug_frog: ci sono le condizioni per abilitare missionTen.}
             
             }

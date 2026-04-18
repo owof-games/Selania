@@ -16,6 +16,7 @@
 
     - LIST_COUNT(story_endedStories) == 1  && frog_allMissionsCompleted hasnt missionNine:
         ~ frog_updatedMissions += missionNine
+            -> notification_system ->
 }
 
 -> main

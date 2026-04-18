@@ -453,7 +453,12 @@ Recap della logica.
 
             }
 
-            @animation: ActiveSigil
+            {
+                - glyph_actualActiveSigil != ():
+                    @animation: ActiveSigil
+            }
+
+            
             -> glyph_thereAreOtherTalkers
             
             
@@ -485,7 +490,10 @@ Recap della logica.
 
             }
 
-             @animation: ActiveSigil
+            {
+                - glyph_actualActiveSigil != ():
+                    @animation: ActiveSigil
+            }
             -> glyph_thereAreOtherTalkers
 
             
@@ -518,7 +526,10 @@ Recap della logica.
 
             }
 
-             @animation: ActiveSigil
+            {
+                - glyph_actualActiveSigil != ():
+                    @animation: ActiveSigil
+            }
             -> glyph_thereAreOtherTalkers
 
             = FourthCharacter_reactions
@@ -547,7 +558,10 @@ Recap della logica.
 
             }
 
-             @animation: ActiveSigil
+            {
+                - glyph_actualActiveSigil != ():
+                    @animation: ActiveSigil
+            }
             -> glyph_thereAreOtherTalkers
 
             = FifthCharacter_reactions
@@ -576,7 +590,10 @@ Recap della logica.
 
             }
 
-             @animation: ActiveSigil
+            {
+                - glyph_actualActiveSigil != ():
+                    @animation: ActiveSigil
+            }
             -> glyph_thereAreOtherTalkers
 
 

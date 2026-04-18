@@ -187,7 +187,7 @@
                                                         Te la immagini, girino?
                                                         Una rana che salta?
                                                         Ma c'è una lettera di Giulio.
-                                                        "Dal{player_pronouns has him:gli|{player_pronouns has her:le|lə}} la commissione, Franco, abbi pietà per quella povera creatura!"
+                                                        "Da{player_pronouns has him:gli|{player_pronouns has her:lle|llə}} la commissione, Franco, abbi pietà per quella povera creatura!"
                                                         Oggi i mariti sono un po' nervosetti.
                                                         Pensavo comunque {player_name}: perché non provi a parlare con due persone quando sono assieme?
                                                         Sono abbastanza sicuro che succederà qualcosa di interessante.

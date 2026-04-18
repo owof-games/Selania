@@ -16,7 +16,7 @@
     VAR debug_testLibrary = false
     VAR debug_testKitchen = false
     VAR debug_testNest = false
-    VAR debug_testFrog = false
+    VAR debug_testFrog = true
     VAR debug_testDump = false
     VAR debug_testGreenhouse = false
     

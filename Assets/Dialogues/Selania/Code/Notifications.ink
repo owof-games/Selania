@@ -55,7 +55,7 @@ VAR notification_francoUpdatedMissions = ()
                     {
                         //Se tra le missioni aggiornate c'è quella offerta da Franco, mandiamo la notifica
                         - frog_updatedMissions has frog_currentMission:
-                            {charTag(TheWitch, "{witch_state()}")}:     <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>
+                            {charTag(TheWitch, "{witch_state()}")}:   <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>
                     }
     
     }

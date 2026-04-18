@@ -1293,6 +1293,7 @@
     ~ greenhouse_growStep = ()
     ~ notification_greenhouseGrown = false
 
+        -> notification_system ->
         -> achievements_onGame_statusUpdate_GM ->
 
     + {greenhouse_backupCultivable != ()}<i>Voglio coltivare qualcosa di nuovo.
