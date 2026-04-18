@@ -22,7 +22,7 @@
                 
             //Per la mentore: dono solo dopo la fine della quarta storia, per questo metto un knot come differenziatore.
             + {knowing_fifth_character.seven && backpack_findedGifts != () && fourthChar_storyStatus == story_storyEnded} Ti vorrei donare questa cosa.
-                    -> second_story_gift
+                    -> fifth_story_gift
         
             //Dono fatto ma non ho avviato la main story
             + {fifth_story_gift.ink_outcome && not main_story_fifth_character} Ti va di riscrivere la tua storia con me?
@@ -627,9 +627,10 @@
 ~ temp charNameFive = translator(fifthChar_ActualName)
     {charTag(TheWitch, "{witch_state()}")}:   Stai per donare qualcosa a {charNameFive}.
         + {backpack_findedGifts != ()} Scelgo il dono.
-            ~ gift_currentReceiver += FifthCharacter
-            -> backpack_management -> ink_outcome 
+            // ~ gift_currentReceiver += FifthCharacter
+            // -> backpack_management -> ink_outcome 
         + {backpack_findedGifts == ()} Il tuo inventario è vuoto.
+        -
             ->main
         
     

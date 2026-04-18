@@ -130,7 +130,7 @@
         Alla prossima lettera.<N><b>{charNameOne}</b>
 }
 {
-    - first_story_gift.ink_outcome: <b><i>Appunti su dono e riscrittura.</b></i><N><>
+    - firstChar_giftedObject != (): <b><i>Appunti su dono e riscrittura.</b></i><N><>
 } 
 {
     - grimoire_firstChar has grimFirstCharMentorFeedback: {mentorName} ha detto a {player_name} che <>
@@ -158,7 +158,7 @@
 
 //Appunto sul dono fatto
 {
-    - first_story_gift.ink_outcome:
+    - firstChar_giftedObject != ():
         {
             - firstChar_favouritesGifts has firstChar_giftedObject:
             {player_name} le ha donato <b><i>{ingredientTranslator(firstChar_giftedObject)}</b></i> ed era entusiasta!

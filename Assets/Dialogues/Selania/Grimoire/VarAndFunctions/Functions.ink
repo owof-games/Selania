@@ -203,22 +203,56 @@
             
     }
 
+=== function ingredientTranslator(ingredient)
 
-=== function grimoire_exitFromGiftsAndIngredients()
-    //Commento
-    {
-        - grimoire_chosenPlant == ():
+    {ingredient:
 
-        - else:
-            {charTag(TheWitch, "{witch_state()}")}:     {player_name} ha deciso di {grimoire_actualPlace == Kitchen:aggiungere|donare} {plantsNameTranslator(grimoire_chosenPlant)}.
+        - BaccaDellaAddolorata: 
+            ~ return "un seme di Bacca della Addolorata"
+        
+        - BarbaDellInciampo:
+            ~ return "una spina di Barba dell'Inciampo"
+            
+        - BastoneDellOzioso:
+            ~ return "un nodo di Bastone dell'Ozioso"
+                
+        - BrinaDellImpossibile:
+            ~ return "un frammento di Brina dell'Impossibile"
+            
+        - CantoDelleCompagne: 
+            ~ return "una goccia di Canto delle Compagne"
 
+        - CardoAspinato:
+            ~ return "un ciuffo di Cardo Aspinato"
+            
+        - EderaDelleAmanti:
+            ~ return "una foglia di Edera delle Amanti"
+    
+        - ErbaLiccia:
+            ~ return "un ricordo di Erba Liccia"
+            
+        - FalsaPalude:
+            ~ return "un petalo di Falsa Palude"
+
+        - LanaNotturna:
+            ~ return "il calore della Lana Notturna"        
+                        
+        - LicheneDegliAbissi:
+            ~ return "una traccia dell'odore del Lichene degli Abissi"
+            
+        - NonTiScordarDiTe:
+            ~ return "l'impronta del Non Ti Scordar di Te"
+
+        - Olobino:
+            ~ return "un cappello di Olobino"
+
+        - LaSpazzata: 
+            ~ return "una foglia della Spezzata"
+        
+        - universalIngredient:
+            ~ return "un pizzico di Ingrediente Universale"
+                        
     }
-
-    //Svuoto le tre variabili
-    ~ grimoire_chosenPlant = ()
-    ~ grimoire_actualReceiver = ()
-    ~ grimoire_actualPlace = ()
-
     
 
 

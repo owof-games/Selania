@@ -111,10 +111,6 @@
     INCLUDE Characters\FifthChar\FifthCharacterManagement.ink
     
 
-//Gestione dell'inventario
-    INCLUDE Backpack\Backpack.ink
-    INCLUDE Backpack\BackpackManagement.ink
-
 //Gestione del libro
     INCLUDE Book\MainBook.ink
     INCLUDE Book\BookFunctions.ink

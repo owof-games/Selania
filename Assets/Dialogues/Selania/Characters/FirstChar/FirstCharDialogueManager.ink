@@ -153,13 +153,45 @@
     
         //Offrire un dono
             + {firstChar_giftedObject == () && backpack_findedGifts != ()} Ti vorrei dare questa cosa.
-                //Imposto luogo e parlante
-                ~   grimoire_actualReceiver = FirstCharacter
-                ~   grimoire_actualPlace = Backpack
+
                 //Prima accedo al grimorio
                 -> grimoire_greenhouse_gifts_and_ingredient ->
-                //E poi al feedback sui doni
-                -> first_story_gift.ink_outcome
+
+                //Dopo di che associo la scelta fatta alla PNG
+                ~ firstChar_giftedObject = grimoire_chosenPlant
+                //E svuoto la variabile del grimorio
+                ~ grimoire_chosenPlant = ()
+
+                //Check effetto del dono, se è stata compiuta una scelta
+                {
+                    - firstChar_giftedObject != ():
+
+                        ~ object_value_for_PNG(firstChar_giftedObject, Backpack, FirstCharacter)
+
+                            {    
+                        
+                                - firstChar_favouritesGifts has firstChar_giftedObject:
+                                    Quello che mi hai dato è qualcosa di più di un regalo: è un gesto di affinità.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+                                    Mi piace stare con te, {player_name}.
+
+                                - firstChar_goodGifts has firstChar_giftedObject:
+                                    I regali mi mettono sempre in imbarazzo, sai?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                                    Ma il tuo dono mi ha fatto sentire ascoltata.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+
+
+                                - else:
+                                    Non mi aspettavo un regalo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                                    Per cui non dovrei nemmeno esserne delusa, giusto?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                            }
+
+                        //Commento    
+                        {charTag(TheWitch, "{witch_state()}")}:   <i>Dopo il dono di {player_name} {inkTranslator(FirstCharacter)}.</i>
+                        -> achievements_onGame_statusUpdate_GM ->    
+                        -> main    
+
+                }
+                
+            
             
         
         //Cucinare assieme    

@@ -1,37 +1,3 @@
- === first_story_gift ===
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    {charTag(TheWitch, "{witch_state()}")}:   <i>{player_name} sta per donare qualcosa a {charNameOne}.</i> 
-            
-            + {backpack_findedGifts != ()} <i>Scelgo il dono.</i>
-                ~ gift_currentReceiver += FirstCharacter
-                    -> backpack_management
-            
-            + -> 
-                {charTag(TheWitch, "{witch_state()}")}:   <i>{player_name} Non ha nulla da donare.</i>
-                ->main
-            
-        
-            = ink_outcome    
-                {
-                    - firstChar_favouritesGifts has firstChar_giftedObject:
-                        Quello che mi hai dato è qualcosa di più di un regalo: è un gesto di affinità.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-                        Mi piace stare con te, {player_name}.
-
-                    - firstChar_goodGifts has firstChar_giftedObject:
-                        I regali mi mettono sempre in imbarazzo, sai?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                        Ma il tuo dono mi ha fatto sentire ascoltata.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-
-                    - else:
-                        Non mi aspettavo un regalo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                        Per cui non dovrei nemmeno esserne delusa, giusto?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-
-                }
-                
-            {charTag(TheWitch, "{witch_state()}")}:   <i>Dopo il dono di {player_name} {inkTranslator(FirstCharacter)}.</i>
-                        -> main
-                
-
-
 === first_character_opinions
 ~ temp charNameOne = translator(firstChar_ActualName) 
     //Le sue opinioni comunque ci fanno capire meglio il modo in cui vede il mondo e parte della sua vita fuori da qui.

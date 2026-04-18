@@ -187,7 +187,43 @@
 
             //Offrire un dono
                 + {secondChar_giftedObject == () && backpack_findedGifts != ()} Ti voglio dare questa cosa.
-                            -> second_story_gift
+                    //Prima accedo al grimorio
+                    -> grimoire_greenhouse_gifts_and_ingredient ->
+
+                    //Dopo di che associo la scelta fatta alla PNG
+                    ~ secondChar_giftedObject = grimoire_chosenPlant
+                    //E svuoto la variabile del grimorio
+                    ~ grimoire_chosenPlant = ()
+
+                    //Check effetto del dono, se è stata compiuta una scelta
+                    {
+                        - secondChar_giftedObject != ():
+
+                            ~ object_value_for_PNG(secondChar_giftedObject, Backpack, SecondCharacter)
+
+                                {    
+                            
+                                   - secondChar_favouritesGifts has secondChar_giftedObject:
+                                        Mi hai regalato una cosa STRA-TOS-FE-RI-CA!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                                        Meglio delle action figures!
+                                        Grazie grazie grazie {player_name}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
+
+                                    - secondChar_goodGifts has secondChar_giftedObject:
+                                        Grazie.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                                        È un regalo carino.
+                                        
+                                    - else:
+                                        Sì. No. Boh.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                                        Grazie.
+                                        Magari poi lo guardo.
+                                }
+
+                            //Commento    
+                            {charTag(TheWitch, "{witch_state()}")}:   <i>Dopo il dono di {player_name} {inkTranslator(SecondCharacter)}.</i>
+                            -> achievements_onGame_statusUpdate_GM ->    
+                            -> main    
+
+                    }
 
 
 

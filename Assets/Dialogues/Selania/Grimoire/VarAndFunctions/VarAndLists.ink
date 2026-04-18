@@ -51,9 +51,10 @@ VAR grimoire_appendices = ()
 LIST grimoire_possibilePortraitsStatus = missing, owned, locked, hidden, selected, consumed, unclickable, default, left, right
 
 //Lista di oggetti creati ad hoc per gestire situazioni particolari (es: ultima pagina del terzo livello delle piante)
-LIST grimoire_specialElements = Hidden
+LIST grimoire_specialElements = Hidden, Backpack
 
 //Variabili per i doni e gli ingredienti
-VAR grimoire_actualReceiver = ()
-VAR grimoire_actualPlace = ()
 VAR grimoire_chosenPlant = ()
+
+//Lista dei doni che si possono trovare in gioco.
+VAR backpack_findedGifts = ()

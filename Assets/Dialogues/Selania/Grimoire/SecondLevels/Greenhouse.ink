@@ -57,6 +57,9 @@
 === grimoire_greenhouse_gifts_and_ingredient
     @grimoireGreenhouse
 
+    //Prima di tutto per sicurezza svuoto la variabile legata alle scelte
+    ~ grimoire_chosenPlant = ()
+
     + {greenhouse_findedCultivables has BaccaDellaAddolorata} [BaccaDellaAddolorata #status:{grimoire_statusPlants(BaccaDellaAddolorata)}]
         -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (BaccaDellaAddolorata, BarbaDellInciampo)
 

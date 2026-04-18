@@ -1,35 +1,3 @@
-=== third_story_gift ===
-    ~ temp charNameTwo = translator(thirdChar_ActualName)
-    {charTag(TheWitch, "{witch_state()}")}:   <i>{player_name} sta per donare qualcosa a {charNameTwo}. 
-            
-            + {backpack_findedGifts != ()} Scelgo il dono.
-                ~ gift_currentReceiver += ThirdCharacter
-                -> backpack_management
-            
-            +->
-                {charTag(TheWitch, "{witch_state()}")}:   <i>L{player_name} non ha nulla da donare.
-                    ->main
-            
-        
-            = ink_outcome
-                {
-                    - thirdChar_favouritesGifts has thirdChar_giftedObject:
-                        Mi hai regalato una cosa STRA-TOS-FE-RI-CA!
-
-                    - thirdChar_goodGifts has thirdChar_giftedObject:
-                        Grazie.
-                        
-                    - else:
-                        Sì. No. Boh.
-
-                }
-
-                {charTag(TheWitch, "{witch_state()}")}:   <i>Dopo il dono di {player_name} {inkTranslator(ThirdCharacter)}. 
-
-                     -> main
-
-
-
 === third_character_opinions
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)

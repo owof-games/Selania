@@ -5,9 +5,8 @@
                                     
                     ----------------------------------*/
                     
-=== object_value_for_PNG(object, comingFrom, PNG)
+=== function object_value_for_PNG(object, comingFrom, PNG)
 {debug: passo per object_value_for_PNG. Il valore di object è {object}, di comingFrom è {comingFrom}, di PNG {PNG}.}
-~ disableNestDialogue()
 {
     - PNG == FirstCharacter:
         {
@@ -33,7 +32,6 @@
                             ~ kitchen_firstCharExtraIngredientReaction = badReaction
                             
                 }
-                ->->
             
             - comingFrom == Backpack:
                 {debug: passo dai valori dello zaino.}
@@ -55,9 +53,6 @@
                         {charTag(TheWitch, "{witch_state()}")}:   <i>{~{translator(firstChar_ActualName)} ignora il dono.|{translator(firstChar_ActualName)} ringrazia {player_name} e si distrae rapidamente.}</i>
                 }
                 
-            
-            ~ gift_currentReceiver = ()
-            -> first_story_gift.ink_outcome    
         
         }
         
@@ -87,7 +82,6 @@
                             ~ kitchen_secondCharExtraIngredientReaction = badReaction
                             
                 }
-                ->->
             
             - comingFrom == Backpack:
                 {debug: passo dai valori dello zaino.}
@@ -109,9 +103,6 @@
                         {charTag(TheWitch, "{witch_state()}")}:   <i>{~{translator(secondChar_ActualName)} insegue una lucertola con lo sguardo.|{translator(secondChar_ActualName)} lascia scivolare il dono a terra.}</i>
                 }
             
-            ~ gift_currentReceiver = ()
-            -> second_story_gift.ink_outcome    
-        
         }  
 
     - PNG == ThirdCharacter:
@@ -139,7 +130,6 @@
                             ~ kitchen_thirdCharExtraIngredientReaction = badReaction
                             
                 }
-                ->->
             
             - comingFrom == Backpack:
                 {debug: passo dai valori dello zaino.}
@@ -161,9 +151,6 @@
                         {charTag(TheWitch, "{witch_state()}")}:   <i>{~{translator(thirdChar_ActualName)} insegue una lucertola con lo sguardo.|{translator(thirdChar_ActualName)} lascia scivolare il dono a terra.}</i>
                 }
             
-            ~ gift_currentReceiver = ()
-            -> third_story_gift.ink_outcome    
-        
         }      
 
     - else: 
@@ -172,4 +159,3 @@
 
 }
 
-->->

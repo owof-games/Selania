@@ -139,7 +139,6 @@
 
         + [{plantsNameTranslator(leftPlant)} #page:{grimoire_statusGiftablePlants(leftPlant, left)}]
             ~ grimoire_chosenPlant = leftPlant
-            ~ grimoire_exitFromGiftsAndIngredients()
             @grimoireClose
         
         ->->
@@ -171,7 +170,6 @@
 
         + [{plantsNameTranslator(rightPlant)} #page:{grimoire_statusGiftablePlants(rightPlant, right)}]
             ~ grimoire_chosenPlant = rightPlant
-            ~ grimoire_exitFromGiftsAndIngredients()
             @grimoireClose
         
         ->->
@@ -228,7 +226,6 @@
         -> grimoire_greenhouse_gifts_and_ingredient
     
     + [Close #bookmark:close]
-        ~ grimoire_exitFromGiftsAndIngredients()
         @grimoireClose
         ->->    
     - 
