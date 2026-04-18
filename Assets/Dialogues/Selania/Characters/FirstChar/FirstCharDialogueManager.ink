@@ -153,7 +153,13 @@
     
         //Offrire un dono
             + {firstChar_giftedObject == () && backpack_findedGifts != ()} Ti vorrei dare questa cosa.
-                -> first_story_gift
+                //Imposto luogo e parlante
+                ~   grimoire_actualReceiver = FirstCharacter
+                ~   grimoire_actualPlace = Backpack
+                //Prima accedo al grimorio
+                -> grimoire_greenhouse_gifts_and_ingredient ->
+                //E poi al feedback sui doni
+                -> first_story_gift.ink_outcome
             
         
         //Cucinare assieme    

@@ -204,6 +204,24 @@
     }
 
 
+=== function grimoire_exitFromGiftsAndIngredients()
+    //Commento
+    {
+        - grimoire_chosenPlant == ():
+
+        - else:
+            {charTag(TheWitch, "{witch_state()}")}:     {player_name} ha deciso di {grimoire_actualPlace == Kitchen:aggiungere|donare} {plantsNameTranslator(grimoire_chosenPlant)}.
+
+    }
+
+    //Svuoto le tre variabili
+    ~ grimoire_chosenPlant = ()
+    ~ grimoire_actualReceiver = ()
+    ~ grimoire_actualPlace = ()
+
+    
+
+
 
 /***********************************
 

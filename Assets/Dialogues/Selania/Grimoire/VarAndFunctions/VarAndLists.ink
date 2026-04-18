@@ -52,3 +52,8 @@ LIST grimoire_possibilePortraitsStatus = missing, owned, locked, hidden, selecte
 
 //Lista di oggetti creati ad hoc per gestire situazioni particolari (es: ultima pagina del terzo livello delle piante)
 LIST grimoire_specialElements = Hidden
+
+//Variabili per i doni e gli ingredienti
+VAR grimoire_actualReceiver = ()
+VAR grimoire_actualPlace = ()
+VAR grimoire_chosenPlant = ()

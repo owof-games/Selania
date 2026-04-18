@@ -138,8 +138,10 @@
     {grimoire_pageSubtitle(leftPlant, Franco, Backpack)}#leftPageSubtitle
 
         + [{plantsNameTranslator(leftPlant)} #page:{grimoire_statusGiftablePlants(leftPlant, left)}]
-        @grimoireClose
-        {charTag(TheWitch, "{witch_state()}")}:     {player_name} ha scelto {plantsNameTranslator(leftPlant)}.
+            ~ grimoire_chosenPlant = leftPlant
+            ~ grimoire_exitFromGiftsAndIngredients()
+            @grimoireClose
+        
         ->->
 
 
@@ -168,60 +170,66 @@
     {grimoire_pageSubtitle(rightPlant, Franco, Backpack)}#rightPageSubtitle
 
         + [{plantsNameTranslator(rightPlant)} #page:{grimoire_statusGiftablePlants(rightPlant, right)}]
-        @grimoireClose
-        {charTag(TheWitch, "{witch_state()}")}:     {player_name} ha scelto {plantsNameTranslator(rightPlant)}.
+            ~ grimoire_chosenPlant = rightPlant
+            ~ grimoire_exitFromGiftsAndIngredients()
+            @grimoireClose
+        
         ->->
 
     //Tasti precedenti
     + {leftPlant == BastoneDellOzioso} [{plantsNameTranslator(BarbaDellInciampo)}#bookmark:previous]
-        -> grimoire_greenhouse_thirdLevel (BaccaDellaAddolorata, BarbaDellInciampo)
+        -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (BaccaDellaAddolorata, BarbaDellInciampo)
     
     + {leftPlant == CantoDelleCompagne} [{plantsNameTranslator(BrinaDellImpossibile)}#bookmark:previous]
-        -> grimoire_greenhouse_thirdLevel (BastoneDellOzioso, BrinaDellImpossibile)
+        -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (BastoneDellOzioso, BrinaDellImpossibile)
     
     + {leftPlant == EderaDelleAmanti} [{plantsNameTranslator(CardoAspinato)}#bookmark:previous]
-        -> grimoire_greenhouse_thirdLevel (CantoDelleCompagne, CardoAspinato)
+        -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (CantoDelleCompagne, CardoAspinato)
     
     + {leftPlant == FalsaPalude} [{plantsNameTranslator(ErbaLiccia)}#bookmark:previous]
-        -> grimoire_greenhouse_thirdLevel (EderaDelleAmanti, ErbaLiccia)
+        -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (EderaDelleAmanti, ErbaLiccia)
     
     + {leftPlant == LicheneDegliAbissi} [{plantsNameTranslator(LanaNotturna)}#bookmark:previous]
-        -> grimoire_greenhouse_thirdLevel (FalsaPalude, LanaNotturna)
+        -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (FalsaPalude, LanaNotturna)
 
     + {leftPlant == Olobino} [{plantsNameTranslator(NonTiScordarDiTe)}#bookmark:previous]
-        -> grimoire_greenhouse_thirdLevel (LicheneDegliAbissi, NonTiScordarDiTe)
+        -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (LicheneDegliAbissi, NonTiScordarDiTe)
 
     + {leftPlant == universalIngredient} [{plantsNameTranslator(LaSpazzata)}#bookmark:previous]
-        -> grimoire_greenhouse_thirdLevel (Olobino, LaSpazzata)
+        -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (Olobino, LaSpazzata)
     
 
 
     //Tasti seguenti
     + {leftPlant == BaccaDellaAddolorata} [{plantsNameTranslator(BastoneDellOzioso)}#bookmark:next]
-        -> grimoire_greenhouse_thirdLevel (BastoneDellOzioso, BrinaDellImpossibile)
+        -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (BastoneDellOzioso, BrinaDellImpossibile)
     
     + {leftPlant == BastoneDellOzioso} [{plantsNameTranslator(CantoDelleCompagne)}#bookmark:next]
-        -> grimoire_greenhouse_thirdLevel (CantoDelleCompagne, CardoAspinato)
+        -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (CantoDelleCompagne, CardoAspinato)
     
     + {leftPlant == CantoDelleCompagne} [{plantsNameTranslator(EderaDelleAmanti)}#bookmark:next]
-       -> grimoire_greenhouse_thirdLevel (EderaDelleAmanti, ErbaLiccia)
+       -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (EderaDelleAmanti, ErbaLiccia)
     
     + {leftPlant == EderaDelleAmanti} [{plantsNameTranslator(FalsaPalude)}#bookmark:next]
-        -> grimoire_greenhouse_thirdLevel (FalsaPalude, LanaNotturna)
+        -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (FalsaPalude, LanaNotturna)
     
     + {leftPlant == FalsaPalude} [{plantsNameTranslator(LicheneDegliAbissi)}#bookmark:next]
-        -> grimoire_greenhouse_thirdLevel (LicheneDegliAbissi, NonTiScordarDiTe)
+        -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (LicheneDegliAbissi, NonTiScordarDiTe)
     
     + {leftPlant == LicheneDegliAbissi} [{plantsNameTranslator(Olobino)}#bookmark:next]
-        -> grimoire_greenhouse_thirdLevel (Olobino, LaSpazzata)
+        -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (Olobino, LaSpazzata)
 
     + {leftPlant == Olobino} [{plantsNameTranslator(universalIngredient)}#bookmark:next]
-        -> grimoire_greenhouse_thirdLevel (universalIngredient, Hidden)
+        -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (universalIngredient, Hidden)
 
 
-    + [Index #bookmark:index]
-        -> grimoire
+
     + [Piante #bookmark:secondLevel]
-        -> grimoire_greenhouse
+        -> grimoire_greenhouse_gifts_and_ingredient
+    
+    + [Close #bookmark:close]
+        ~ grimoire_exitFromGiftsAndIngredients()
+        @grimoireClose
+        ->->    
     - 
         -> top    
