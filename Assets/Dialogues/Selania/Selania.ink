@@ -136,15 +136,28 @@
 //Nota: "BOOK" diventa il repository del vecchio materiale di testo.
 
     INCLUDE Grimoire\FirstLevel.ink
-    INCLUDE Grimoire\SecondLevels.ink
-    INCLUDE Grimoire\ThirdLevels.ink
-    INCLUDE Grimoire\Functions.ink
-    INCLUDE Grimoire\VarAndLists.ink
-    INCLUDE Grimoire\Texts\Appendices.ink
-    INCLUDE Grimoire\Texts\Rules.ink
-    INCLUDE Grimoire\Texts\Plants.ink
-    INCLUDE Grimoire\TextGenerators\Strings.ink
-    INCLUDE Grimoire\TextGenerators\FrancoMissions.ink
+
+    INCLUDE Grimoire\VarAndFunctions\VarAndLists.ink
+    INCLUDE Grimoire\VarAndFunctions\Functions.ink
+    INCLUDE Grimoire\VarAndFunctions\Strings.ink
+    INCLUDE Grimoire\VarAndFunctions\FrancoMissions.ink
+
+ 
+    INCLUDE Grimoire\SecondLevels\Greenhouse.ink
+    INCLUDE Grimoire\SecondLevels\Sigils.ink
+    INCLUDE Grimoire\SecondLevels\Characters.ink
+    INCLUDE Grimoire\SecondLevels\Appendices.ink
+
+
+    INCLUDE Grimoire\ThirdLevels\Greenhouse.ink
+    INCLUDE Grimoire\ThirdLevels\Appendices.ink
+    INCLUDE Grimoire\ThirdLevels\Rules.ink
+    INCLUDE Grimoire\ThirdLevels\Plants.ink
+    INCLUDE Grimoire\ThirdLevels\Sigils.ink
+
+
+    
+    
     
     
     
