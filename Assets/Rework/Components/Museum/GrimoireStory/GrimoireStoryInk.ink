@@ -17,6 +17,9 @@ VAR thirdChar_InkLevel = ink_empty
 VAR fourthChar_InkLevel = ink_empty
 VAR fifthChar_InkLevel = ink_empty
 
+VAR firstChar_relationshipIndicator = 0
+VAR secondChar_relationshipIndicator = 0
+
 /* ---------------------------------
                 
 LISTE COMBINATORIE DEI SIGILLI
@@ -126,14 +129,18 @@ E ora apro la scelta delle piante.
 
 === grimoire
 
-        @grimoire1 #franco:Ho voglia di patatine #achievement:FirstAchievementRM:3:5 #achievement:SecondAchievementRM:0:5 #achievement:ThirdAchievementRM:5:5
-        + [Greenhouse]
+    @grimoire1 #franco:Ho voglia di patatine #achievement:FirstAchievementRM:3:5 #achievement:SecondAchievementRM:0:5 #achievement:ThirdAchievementRM:5:5
+    + [Greenhouse]
         -> grimoire_greenhouse
-        + [Sigils]
+    + [Sigils]
         -> grimoire_sigils
-        -
+    + [FirstCharacter]
+        -> grimoire_first_character
+    + [SecondCharacter]
+        -> grimoire_second_character
+    -
 
--> grimoire
+    -> grimoire
 
 
 === grimoire_greenhouse
@@ -358,3 +365,32 @@ E ora apro la scelta delle piante.
 - else:
     ~ return "false"
 }
+
+
+=== grimoire_first_character
+
+    @grimoireCharacter #character:FirstCharacter #characterName:Chitarra #characterDescription:Una ragazza in cerca della sua melodia
+    Regalale qualcosa che le ricordi il nonno.
+    In cucina aggiungi qualcosa che parli di riposo.
+    Leggi una storia di ribellione.
+    + [Conversation]
+        -> grimoire_first_character
+    + [Present]
+        -> grimoire_first_character
+    + [Kitchen]
+        -> grimoire_first_character
+    + [Index #bookmark:index]
+        -> grimoire
+
+=== grimoire_second_character
+
+    @grimoireCharacter #character:SecondCharacter #characterName:Riccio #characterDescription:Aculei per difendersi dal mondo
+    Portagli qualcosa legato agli animali.
+    Cucina con lui qualcosa di bizzarro.
+    Leggi una storia sulla rabbia.
+    + [Rewrite]
+        -> grimoire_second_character
+    + [Letters]
+        -> grimoire_second_character
+    + [Index #bookmark:index]
+        -> grimoire

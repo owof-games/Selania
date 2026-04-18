@@ -208,7 +208,29 @@ namespace Selania.Rework.Components
 
                 void EmitValue(object value, string _)
                 {
-                    observer.OnNext((T)value);
+                    T result = default!;
+
+                    switch (value)
+                    {
+                        case T tResult:
+                            result = tResult;
+                            break;
+                        case int intValue when typeof(T) == typeof(float):
+                            // there should be a better way, like in https://stackoverflow.com/a/7691918, but to avoid
+                            // runtime reflection and the associated risks in compiled versions:
+                            // (float) => convert int to float, this changes the internal representation
+                            // (object) => box the float, otherwise we can't cast to a generic type
+                            // (T) => finally cast to the desired type (which we _know_ it's float, so the boxing-unboxing
+                            // dance is useless, but necessary for typing reasons)
+                            result = (T)(object)(float)intValue;
+                            break;
+                        default:
+                            logger.ZLogError(
+                                $"Expected values of {variableName} to be of type {typeof(T).Name}, and instead is of type {value.GetType().Name}");
+                            break;
+                    }
+
+                    observer.OnNext(result);
                 }
             });
         }
@@ -1060,6 +1082,13 @@ namespace Selania.Rework.Components
             throw new InvalidOperationException(
                 "Cannot get the second level sigils grimoire page descriptors before initialization");
 
+        private Subject<IStoryGrimoire.SecondLevelCharacterPageDescriptor>? _secondLevelCharacterPageDescriptorsSubject;
+
+        public Observable<IStoryGrimoire.SecondLevelCharacterPageDescriptor> secondLevelCharacterPageDescriptors =>
+            _secondLevelCharacterPageDescriptorsSubject?.AsObservable() ??
+            throw new InvalidOperationException(
+                "Cannot get the second level characters grimoire page descriptors before initialization");
+
         private Subject<IStoryGrimoire.ThirdLevelSigilsGrimoirePageDescriptor>?
             _thirdLevelSigilsGrimoirePageDescriptorsSubject;
 
@@ -1086,6 +1115,8 @@ namespace Selania.Rework.Components
                 new Subject<IStoryGrimoire.SecondLevelGreenhouseGrimoirePageDescriptor>();
             _secondLevelSigilsGrimoirePageDescriptorsSubject =
                 new Subject<IStoryGrimoire.SecondLevelSigilsGrimoirePageDescriptor>();
+            _secondLevelCharacterPageDescriptorsSubject =
+                new Subject<IStoryGrimoire.SecondLevelCharacterPageDescriptor>();
             _thirdLevelSigilsGrimoirePageDescriptorsSubject =
                 new Subject<IStoryGrimoire.ThirdLevelSigilsGrimoirePageDescriptor>();
             _thirdLevelGreenhouseGrimoirePageDescriptorsSubject =
@@ -1096,6 +1127,7 @@ namespace Selania.Rework.Components
         {
             _thirdLevelGreenhouseGrimoirePageDescriptorsSubject?.Dispose();
             _thirdLevelSigilsGrimoirePageDescriptorsSubject?.Dispose();
+            _secondLevelCharacterPageDescriptorsSubject?.Dispose();
             _secondLevelSigilsGrimoirePageDescriptorsSubject?.Dispose();
             _secondLevelGrimoirePageDescriptorsSubject?.Dispose();
             _firstLevelGrimoirePageDescriptorsSubject?.Dispose();
@@ -1136,6 +1168,9 @@ namespace Selania.Rework.Components
                     break;
                 case "@grimoireSigils":
                     EmitSecondLevelSigilsGrimoirePage();
+                    break;
+                case "@grimoireCharacter":
+                    EmitSecondLevelCharacterGrimoirePage();
                     break;
                 case "@grimoireSigilPages":
                     EmitThirdLevelSigilsGrimoirePage();
@@ -1458,6 +1493,80 @@ namespace Selania.Rework.Components
                 // the search brought nothing
                 return null;
             }
+        }
+
+        private void EmitSecondLevelCharacterGrimoirePage()
+        {
+            var story = GetStory();
+
+            // parse the tags
+            var tags = MakeTags(story.currentTags);
+            var inkName = tags.FirstOrDefault(tag => tag.category == "character")?.value;
+            if (inkName == null)
+            {
+                logger.ZLogError($"No tag #character: found for @grimoireCharacter");
+                inkName = "";
+            }
+
+            var characterName = tags.FirstOrDefault(tag => tag.category == "characterName")?.value;
+            if (characterName == null)
+            {
+                logger.ZLogError($"No tag #characterName: found for @grimoireCharacter");
+                characterName = "";
+            }
+
+            var description = tags.FirstOrDefault(tag => tag.category == "characterDescription")?.value;
+            if (description == null)
+            {
+                logger.ZLogError($"No tag #characterDescription: found for @grimoireCharacter");
+                description = "";
+            }
+
+            // parse the tasks
+            var tasks = new List<string>();
+            while (story.currentChoices.Count == 0) tasks.Add(story.Continue());
+
+            // parse choices
+            var choices = story.currentChoices.Where(choice => choice.tags == null || choice.tags.Count == 0)
+                .Select(choice => choice.text)
+                .ToList();
+
+            // navigation
+            GetNavigationChoices(story, out var indexChoice, out var secondLevelChoice, out var previousChoice,
+                out var nextChoice, out var closeChoice);
+            if (indexChoice == null)
+            {
+                logger.ZLogError($"Second level character has not a choice to get back to the first level!");
+                return;
+            }
+
+            if (secondLevelChoice != null)
+                logger.ZLogWarning(
+                    $"Second level character has a choice to get back to the second level ({secondLevelChoice} #{bookmarkTagCategory}:{secondLevelBookmarkTagValue}) that should not be present");
+
+            if (previousChoice != null)
+                logger.ZLogWarning(
+                    $"Second level character has a choice to go to the previous page ({previousChoice} #{bookmarkTagCategory}:{backBookmarkTagValue}) that should not be present");
+
+            if (nextChoice != null)
+                logger.ZLogWarning(
+                    $"Second level character has a choice to go to the next page ({nextChoice} #{bookmarkTagCategory}:{forwardBookmarkTagValue}) that should not be present");
+
+            if (closeChoice != null)
+                logger.ZLogWarning(
+                    $"Second level character has a choice to close the grimoire ({closeChoice} #{bookmarkTagCategory}:{closeBookmarkTagValue}) that should not be present");
+
+            // create descriptor
+            var descriptor = new IStoryGrimoire.SecondLevelCharacterPageDescriptor(
+                inkName,
+                characterName,
+                description,
+                string.Join('\n', tasks),
+                choices,
+                indexChoice);
+
+            // emit
+            _secondLevelCharacterPageDescriptorsSubject!.OnNext(descriptor);
         }
 
         private void EmitThirdLevelSigilsGrimoirePage()

@@ -759,7 +759,8 @@ namespace Selania.Rework.Components.Grimoire
         ///     Name of the portrait (see <see cref="ISettingsBook.GetCharacterPortrait" />,
         ///     <see cref="SelaniaSettings.CharacterInfo.grimoirePortrait" />).
         /// </param>
-        public void SetUpPage(string characterName, string characterDescription, string characterTasks,
+        public void SetUpSecondLevelCharacterPage(string characterName, string characterDescription,
+            string characterTasks,
             string portraitName)
         {
             secondLevelCharactersGrimoire.SetUpPage(characterName, characterDescription, characterTasks, portraitName);

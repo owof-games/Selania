@@ -86,6 +86,11 @@ namespace Selania.Rework.Interfaces
         Observable<SecondLevelSigilsGrimoirePageDescriptor> secondLevelSigilsGrimoirePageDescriptors { get; }
 
         /// <summary>
+        ///     An observable that produces a value whenever a second level characters grimoire page should be displayed.
+        /// </summary>
+        Observable<SecondLevelCharacterPageDescriptor> secondLevelCharacterPageDescriptors { get; }
+
+        /// <summary>
         ///     An observable that produces a value whenever a third level sigils grimoire page should be displayed.
         /// </summary>
         Observable<ThirdLevelSigilsGrimoirePageDescriptor> thirdLevelSigilsGrimoirePageDescriptors { get; }
@@ -204,6 +209,24 @@ namespace Selania.Rework.Interfaces
         record SecondLevelSigilsGrimoirePageDescriptor(
             string? indexText,
             IEnumerable<SigilsGroupDescriptor> sigilsGroupDescriptors)
+            : BaseNavigationDescriptor(indexText, null, null, null, null);
+
+        /// <summary>
+        ///     Descriptor of the second level page of the characters.
+        /// </summary>
+        /// <param name="inkName">Name of the character in ink (FirstCharacter, SecondCharacter, ...).</param>
+        /// <param name="name">Name to display (Chitarra, Riccio, ...).</param>
+        /// <param name="description">Description of this character.</param>
+        /// <param name="task">List of tasks, joined by newlines.</param>
+        /// <param name="choices">List of available choice texts.</param>
+        /// <param name="indexText">Text for the index choice.</param>
+        record SecondLevelCharacterPageDescriptor(
+            string inkName,
+            string name,
+            string description,
+            string tasks,
+            IEnumerable<string> choices,
+            string indexText)
             : BaseNavigationDescriptor(indexText, null, null, null, null);
 
         /// <summary>

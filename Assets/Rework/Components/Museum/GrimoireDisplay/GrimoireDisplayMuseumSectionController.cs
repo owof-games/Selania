@@ -316,7 +316,7 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
 
         public void SetSecondLevelChitarra()
         {
-            grimoireBackground.SetUpPage("Chitarra", "Una ragazza in cerca della sua melodia",
+            grimoireBackground.SetUpSecondLevelCharacterPage("Chitarra", "Una ragazza in cerca della sua melodia",
                 """
                 Regalale qualcosa che le ricordi il nonno.
                 In cucina aggiungi qualcosa che parli di riposo.
@@ -327,7 +327,7 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
 
         public void SetSecondLevelRiccio()
         {
-            grimoireBackground.SetUpPage("Riccio", "Aculei per difendersi dal mondo",
+            grimoireBackground.SetUpSecondLevelCharacterPage("Riccio", "Aculei per difendersi dal mondo",
                 """
                 Portagli qualcosa legato agli animali.
                 Cucina con lui qualcosa di bizzarro.

@@ -26,6 +26,8 @@ namespace Selania.Rework.Components.Grimoire
                 .Subscribe(OnSecondLevelGreenhouseGrimoirePageDescriptors).AddTo(this);
             StoryGrimoire.secondLevelSigilsGrimoirePageDescriptors.Subscribe(OnSecondLevelSigilsGrimoirePageDescriptors)
                 .AddTo(this);
+            StoryGrimoire.secondLevelCharacterPageDescriptors.Subscribe(OnSecondLevelCharacterGrimoirePageDescriptors)
+                .AddTo(this);
             StoryGrimoire.thirdLevelSigilsGrimoirePageDescriptors.Subscribe(OnThirdLevelSigilsGrimoirePageDescriptors)
                 .AddTo(this);
             StoryGrimoire.thirdLevelGreenhouseGrimoirePageDescriptors
@@ -130,6 +132,21 @@ namespace Selania.Rework.Components.Grimoire
                     buttonDescriptor.enabled
                         ? GrimoireBackground.SecondLevelSigilButtonStatus.Enabled
                         : GrimoireBackground.SecondLevelSigilButtonStatus.Shown);
+
+            // set up navigation
+            SetUpNavigation(descriptor);
+        }
+
+        private void OnSecondLevelCharacterGrimoirePageDescriptors(
+            IStoryGrimoire.SecondLevelCharacterPageDescriptor descriptor)
+        {
+            // show the grimoire (second level character)
+            grimoireBackground.ShowGrimoire();
+            grimoireBackground.SwitchToPage(GrimoireBackground.PageType.SecondLevelCharacters);
+
+            // set up the grimoire to show the info described in descriptor
+            grimoireBackground.SetUpSecondLevelCharacterPage(descriptor.name, descriptor.description, descriptor.tasks,
+                descriptor.inkName);
 
             // set up navigation
             SetUpNavigation(descriptor);
