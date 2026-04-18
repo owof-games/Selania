@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e5392e6536a6ba146840ecabb240ca31
+guid: 2a2a1e44961322f4e94d6d4d892a62db
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5432434086336986862
-    second: 01 - FromForestToTrainStop_0
+      213: -5955581103561870038
+    second: 34 - 2- FromForestToTrainStop_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 01 - FromForestToTrainStop_0
+      name: 34 - 2- FromForestToTrainStop_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 125
-        height: 153
+        width: 120
+        height: 148
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 21109221bfd1c94b0800000000000000
-      internalID: -5432434086336986862
+      spriteID: a257a235a86895da0800000000000000
+      internalID: -5955581103561870038
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      01 - FromForestToTrainStop_0: -5432434086336986862
+      34 - 2- FromForestToTrainStop_0: -5955581103561870038
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
