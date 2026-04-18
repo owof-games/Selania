@@ -26,6 +26,9 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
             grimoireBackground.secondLevelGreenhouseButtonClick
                 .Subscribe(buttonName => AppendText($"Clicked on second level greenhouse button '{buttonName}'"))
                 .AddTo(this);
+            grimoireBackground.secondLevelCharactersButtonClick
+                .Subscribe(buttonName => AppendText($"Clicked on second characters button '{buttonName}'"))
+                .AddTo(this);
         }
 
         private void AppendText(string s)
@@ -169,6 +172,11 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
             grimoireBackground.SwitchToPage(GrimoireBackground.PageType.SecondLevelSigils);
         }
 
+        public void SwitchToSecondLevelCharactersPage()
+        {
+            grimoireBackground.SwitchToPage(GrimoireBackground.PageType.SecondLevelCharacters);
+        }
+
         public void SwitchToThirdLevelSigilsPage()
         {
             grimoireBackground.SwitchToPage(GrimoireBackground.PageType.ThirdLevelSigils);
@@ -300,6 +308,28 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
             grimoireBackground.ThirdLevelGreenhouseFillPage(true, "Left", true,
                 ThirdLevelGreenhouseButton.Status.Owned, "BastoneDellOzioso", "descrizione bacca");
             grimoireBackground.ThirdLevelGreenhouseHidePage(false);
+        }
+
+        public void SetSecondLevelChitarra()
+        {
+            grimoireBackground.SetUpPage("Chitarra", "Una ragazza in cerca della sua melodia",
+                """
+                Regalale qualcosa che le ricordi il nonno.
+                In cucina aggiungi qualcosa che parli di riposo.
+                Leggi una storia di ribellione.
+                """,
+                "FirstCharacter");
+        }
+
+        public void SetSecondLevelRiccio()
+        {
+            grimoireBackground.SetUpPage("Riccio", "Aculei per difendersi dal mondo",
+                """
+                Portagli qualcosa legato agli animali.
+                Cucina con lui qualcosa di bizzarro.
+                Leggi una storia sulla rabbia.
+                """,
+                "SecondCharacter");
         }
     }
 }

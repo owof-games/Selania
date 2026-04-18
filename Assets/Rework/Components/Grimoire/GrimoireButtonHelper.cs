@@ -80,7 +80,7 @@ namespace Selania.Rework.Components.Grimoire
             // update the pressed state
             _pressedSubject!
                 .Prepend(false)
-                .CombineLatest(interactableObservable, _logicallyDisabledSubject!,
+                .CombineLatest(interactableObservable, _logicallyDisabledSubject!.Prepend(false),
                     (pressed, interactable, isLogicallyDisabled) => pressed && interactable && !isLogicallyDisabled)
                 .DistinctUntilChanged()
                 .Subscribe(pressed => targetGraphic.color = pressed ? pressedColor : Color.white)

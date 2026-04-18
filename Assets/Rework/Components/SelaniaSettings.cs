@@ -177,6 +177,10 @@ namespace Selania.Rework.Components
             public string inkVariableName { get; private set; } = null!;
 
             [field: SerializeField]
+            [field: Tooltip("Portrait used in the grimoire.")]
+            public Sprite grimoirePortrait { get; private set; } = null!;
+
+            [field: SerializeField]
             [field: Tooltip("All the possible moods of this character.")]
             public CharacterMood[] characterMoods { get; private set; } = null!;
 
@@ -532,14 +536,16 @@ namespace Selania.Rework.Components
         [SerializeField] [Tooltip("List of sprites for each plant")]
         private PlantSprite[] plantSprites = null!;
 
-        /// <summary>
-        ///     Get the sprite corresponding to the given name.
-        /// </summary>
-        /// <param name="plantName">Name of the plant, as present in the ink list.</param>
-        /// <returns>The sprite name.</returns>
+        /// <inheritdoc />
         public Sprite? GetGreenhouseSprite(string plantName)
         {
             return plantSprites.FirstOrDefault(entry => entry.plantName == plantName)?.sprite;
+        }
+
+        /// <inheritdoc />
+        public Sprite? GetCharacterPortrait(string characterName)
+        {
+            return characterInfo.FirstOrDefault(info => info.listName == characterName)?.grimoirePortrait;
         }
 
         #endregion

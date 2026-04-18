@@ -56,6 +56,11 @@ namespace Selania.Rework.Components.Grimoire
             SecondLevelSigils,
 
             /// <summary>
+            ///     Second level page (characters).
+            /// </summary>
+            SecondLevelCharacters,
+
+            /// <summary>
             ///     Third level page (sigils).
             /// </summary>
             ThirdLevelSigils,
@@ -102,6 +107,9 @@ namespace Selania.Rework.Components.Grimoire
 
         [Tooltip("The animator controlling the second level page for the sigils")] [SerializeField]
         private Animator secondLevelAnimatorSigils = null!;
+
+        [Tooltip("The animator controlling the second level page for the characters")] [SerializeField]
+        private Animator secondLevelAnimatorCharacters = null!;
 
         [Tooltip("The animator controlling the third level page for the sigils")] [SerializeField]
         private Animator thirdLevelAnimatorSigils = null!;
@@ -168,6 +176,9 @@ namespace Selania.Rework.Components.Grimoire
 
         [SerializeField] [Tooltip("The third level greenhouse controller")]
         private ThirdLevelGreenhouseGrimoire thirdLevelGreenhouseGrimoire = null!;
+
+        [SerializeField] [Tooltip("The second level characters controller")]
+        private SecondLevelCharactersGrimoire secondLevelCharactersGrimoire = null!;
 
         private Animator _animator = null!;
 
@@ -270,6 +281,11 @@ namespace Selania.Rework.Components.Grimoire
         /// </summary>
         public Observable<bool> thirdLevelGreenhouseButtonClickOnLeft =>
             thirdLevelGreenhouseGrimoire.clickedOnLeft;
+
+        /// <summary>
+        ///     An observable that produces a string with the name of the button each time a button is clicked.
+        /// </summary>
+        public Observable<string> secondLevelCharactersButtonClick => secondLevelCharactersGrimoire.clickObservable;
 
         private void Awake()
         {
@@ -541,6 +557,9 @@ namespace Selania.Rework.Components.Grimoire
                 case PageType.SecondLevelSigils:
                     ShowPage(secondLevelAnimatorSigils);
                     break;
+                case PageType.SecondLevelCharacters:
+                    ShowPage(secondLevelAnimatorCharacters);
+                    break;
                 case PageType.ThirdLevelSigils:
                     ShowPage(thirdLevelAnimatorSigils);
                     break;
@@ -566,8 +585,8 @@ namespace Selania.Rework.Components.Grimoire
             // fill the page animators if necessary.
             _pageAnimators ??= new[]
             {
-                firstLevelAnimator, secondLevelAnimatorGreenhouse, secondLevelAnimatorSigils, thirdLevelAnimatorSigils,
-                thirdLevelAnimatorGreenhouse
+                firstLevelAnimator, secondLevelAnimatorGreenhouse, secondLevelAnimatorSigils,
+                secondLevelAnimatorCharacters, thirdLevelAnimatorSigils, thirdLevelAnimatorGreenhouse
             };
 
             foreach (var animator in _pageAnimators)
@@ -728,6 +747,22 @@ namespace Selania.Rework.Components.Grimoire
             string plantName, string text)
         {
             thirdLevelGreenhouseGrimoire.FillPage(isLeft, title, isOwned, buttonStatus, plantName, text);
+        }
+
+        /// <summary>
+        ///     Set up the page contents.
+        /// </summary>
+        /// <param name="characterName">Name of the character.</param>
+        /// <param name="characterDescription">Description of the character.</param>
+        /// <param name="characterTasks">Tasks of the character.</param>
+        /// <param name="portraitName">
+        ///     Name of the portrait (see <see cref="ISettingsBook.GetCharacterPortrait" />,
+        ///     <see cref="SelaniaSettings.CharacterInfo.grimoirePortrait" />).
+        /// </param>
+        public void SetUpPage(string characterName, string characterDescription, string characterTasks,
+            string portraitName)
+        {
+            secondLevelCharactersGrimoire.SetUpPage(characterName, characterDescription, characterTasks, portraitName);
         }
     }
 }

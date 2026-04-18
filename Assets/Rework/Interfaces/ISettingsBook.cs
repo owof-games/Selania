@@ -23,7 +23,14 @@ namespace Selania.Rework.Interfaces
         ///     Get the sprite corresponding to the given name.
         /// </summary>
         /// <param name="plantName">Name of the plant, as present in the ink list.</param>
-        /// <returns>The sprite name.</returns>
+        /// <returns>The sprite.</returns>
         public Sprite? GetGreenhouseSprite(string plantName);
+
+        /// <summary>
+        ///     Get the sprite corresponding to given portrait, or <c>null</c> if the portrait is not found.
+        /// </summary>
+        /// <param name="characterName">Name of the character.</param>
+        /// <returns>The sprite.</returns>
+        public Sprite? GetCharacterPortrait(string characterName);
     }
 }
