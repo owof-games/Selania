@@ -181,6 +181,29 @@
     }
 
 
+=== function grimoire_statusGiftablePlants(plant, place)
+
+    {
+        //pianta trovata e utilizzata
+        - greenhouse_findedCultivables has plant && (greenhouse_findedCultivables ^ backpack_findedGifts hasnt plant):
+            ~ return
+
+        //pianta non trovata
+        - greenhouse_findedCultivables hasnt plant:
+            ~ return   
+        
+        - else:
+            {
+                - place == left:
+                    ~ return left
+
+                - place == right:
+                    ~ return right
+            }
+            
+    }
+
+
 
 /***********************************
 

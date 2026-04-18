@@ -48,7 +48,7 @@ VAR grimoire_appendices = ()
 
 
 //Liste per gestire i tag
-LIST grimoire_possibilePortraitsStatus = missing, owned, locked, hidden, selected, consumed, unclickable, default
+LIST grimoire_possibilePortraitsStatus = missing, owned, locked, hidden, selected, consumed, unclickable, default, left, right
 
 //Lista di oggetti creati ad hoc per gestire situazioni particolari (es: ultima pagina del terzo livello delle piante)
 LIST grimoire_specialElements = Hidden

@@ -27,7 +27,6 @@
     //Recupero Franco
     {grimoire_pageSubtitle(leftPlant, Franco, Backpack)}#leftPageSubtitle
 
-
     //Descrizione generale pagina destra
     {grimoire_plantsDescription(rightPlant)}#rightPageDescription
 
@@ -138,6 +137,11 @@
     //Recupero Franco
     {grimoire_pageSubtitle(leftPlant, Franco, Backpack)}#leftPageSubtitle
 
+        + [{plantsNameTranslator(leftPlant)} #page:{grimoire_statusGiftablePlants(leftPlant, left)}]
+        @grimoireClose
+        {charTag(TheWitch, "{witch_state()}")}:     {player_name} ha scelto {plantsNameTranslator(leftPlant)}.
+        ->->
+
 
     //Descrizione generale pagina destra
     {grimoire_plantsDescription(rightPlant)}#rightPageDescription
@@ -163,7 +167,10 @@
     //Recupero Franco
     {grimoire_pageSubtitle(rightPlant, Franco, Backpack)}#rightPageSubtitle
 
-
+        + [{plantsNameTranslator(rightPlant)} #page:{grimoire_statusGiftablePlants(rightPlant, right)}]
+        @grimoireClose
+        {charTag(TheWitch, "{witch_state()}")}:     {player_name} ha scelto {plantsNameTranslator(rightPlant)}.
+        ->->
 
     //Tasti precedenti
     + {leftPlant == BastoneDellOzioso} [{plantsNameTranslator(BarbaDellInciampo)}#bookmark:previous]

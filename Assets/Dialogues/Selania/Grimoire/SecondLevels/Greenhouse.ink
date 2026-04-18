@@ -53,6 +53,7 @@
 
 
 
+//Logica per quando aggiungo ingredienti in cucina o faccio un dono
 === grimoire_greenhouse_gifts_and_ingredient
     @grimoireGreenhouse
 
@@ -103,6 +104,6 @@
 
     + [Close #bookmark:close]
         @grimoireClose
-        -> main
+        ->->
     -
-    -> grimoire_greenhouse
+    -> grimoire_greenhouse_gifts_and_ingredient
