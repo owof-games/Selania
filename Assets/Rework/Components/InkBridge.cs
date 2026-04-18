@@ -198,15 +198,13 @@ namespace Selania.Rework.Components
             {
                 var story = GetStory();
 
-                Story.VariableObserver variableObserver = (_, value) => { EmitValue(value, variableName); };
-                story.ObserveVariable(variableName, variableObserver);
-                var currentValue = story.variablesState[variableName];
+                story.ObserveVariable(variableName, EmitValue);
 
-                EmitValue(currentValue, variableName);
+                EmitValue(variableName, story.variablesState[variableName]);
 
-                return Disposable.Create(() => story.RemoveVariableObserver(variableObserver));
+                return Disposable.Create(() => story.RemoveVariableObserver(EmitValue));
 
-                void EmitValue(object value, string _)
+                void EmitValue(string vName, object value)
                 {
                     T result = default!;
 
@@ -226,7 +224,7 @@ namespace Selania.Rework.Components
                             break;
                         default:
                             logger.ZLogError(
-                                $"Expected values of {variableName} to be of type {typeof(T).Name}, and instead is of type {value.GetType().Name}");
+                                $"Expected values of {vName} to be of type {typeof(T).Name}, and instead is of type {value.GetType().Name}");
                             break;
                     }
 
@@ -1524,7 +1522,7 @@ namespace Selania.Rework.Components
 
             // parse the tasks
             var tasks = new List<string>();
-            while (story.currentChoices.Count == 0) tasks.Add(story.Continue());
+            while (story.currentChoices.Count == 0) tasks.Add(story.Continue().Trim());
 
             // parse choices
             var choices = story.currentChoices.Where(choice => choice.tags == null || choice.tags.Count == 0)

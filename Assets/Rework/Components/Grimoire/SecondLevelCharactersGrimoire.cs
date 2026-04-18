@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Extensions.Logging;
 using R3;
@@ -82,8 +83,9 @@ namespace Selania.Rework.Components.Grimoire
         ///     Name of the portrait (see <see cref="ISettingsBook.GetCharacterPortrait" />,
         ///     <see cref="SelaniaSettings.CharacterInfo.grimoirePortrait" />).
         /// </param>
+        /// <param name="enabledButtonNames">The list of buttons enabled, identified by their name (see <see cref="buttonInfo"/>).</param>
         public void SetUpPage(string characterName, string characterDescription, string characterTasks,
-            string portraitName)
+            string portraitName, ICollection<string> enabledButtonNames)
         {
             characterNameTextMeshPro.text = characterName;
             characterDescriptionTextMeshPro.text = characterDescription;
@@ -103,6 +105,18 @@ namespace Selania.Rework.Components.Grimoire
                     StoryCharacterRelationshipStatus.minRelationshipValue,
                     StoryCharacterRelationshipStatus.maxRelationshipValue, value)))
                 .AddTo(this);
+
+            // update buttons
+            foreach (var info in buttonInfo) info.button.interactable = false;
+
+            foreach (var enabledButtonName in enabledButtonNames)
+            {
+                var info = buttonInfo.FirstOrDefault(info => info.clickName == enabledButtonName);
+                if (info == null)
+                    Logger.ZLogError($"Cannot find button with name {enabledButtonName}.");
+                else
+                    info.button.interactable = true;
+            }
         }
 
         /// <summary>

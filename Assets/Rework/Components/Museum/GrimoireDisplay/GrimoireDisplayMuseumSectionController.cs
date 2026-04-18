@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
 using R3;
 using Selania.Rework.Components.Grimoire;
@@ -322,7 +323,8 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
                 In cucina aggiungi qualcosa che parli di riposo.
                 Leggi una storia di ribellione.
                 """,
-                "FirstCharacter");
+                "FirstCharacter",
+                new List<string> { "Conversation", "Present", "Kitchen" });
         }
 
         public void SetSecondLevelRiccio()
@@ -333,7 +335,8 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
                 Cucina con lui qualcosa di bizzarro.
                 Leggi una storia sulla rabbia.
                 """,
-                "SecondCharacter");
+                "SecondCharacter",
+                new List<string> { "Rewrite", "Letters" });
         }
     }
 }

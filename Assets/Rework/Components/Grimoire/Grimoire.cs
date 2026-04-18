@@ -146,7 +146,7 @@ namespace Selania.Rework.Components.Grimoire
 
             // set up the grimoire to show the info described in descriptor
             grimoireBackground.SetUpSecondLevelCharacterPage(descriptor.name, descriptor.description, descriptor.tasks,
-                descriptor.inkName);
+                descriptor.inkName, descriptor.choices.ToList());
 
             // set up navigation
             SetUpNavigation(descriptor);

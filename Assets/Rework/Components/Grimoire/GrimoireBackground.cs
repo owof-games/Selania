@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Extensions.Logging;
 using R3;
@@ -759,11 +760,12 @@ namespace Selania.Rework.Components.Grimoire
         ///     Name of the portrait (see <see cref="ISettingsBook.GetCharacterPortrait" />,
         ///     <see cref="SelaniaSettings.CharacterInfo.grimoirePortrait" />).
         /// </param>
+        /// /// <param name="enabledButtonNames">The list of buttons enabled, identified by their name.</param>
         public void SetUpSecondLevelCharacterPage(string characterName, string characterDescription,
-            string characterTasks,
-            string portraitName)
+            string characterTasks, string portraitName, ICollection<string> enabledButtonNames)
         {
-            secondLevelCharactersGrimoire.SetUpPage(characterName, characterDescription, characterTasks, portraitName);
+            secondLevelCharactersGrimoire.SetUpPage(characterName, characterDescription, characterTasks, portraitName,
+                enabledButtonNames);
         }
     }
 }
