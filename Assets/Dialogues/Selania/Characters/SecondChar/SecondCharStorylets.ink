@@ -129,7 +129,7 @@
             }
                
         -> second_char_closing_storylet ->
-        -> options_second_character
+        -> main
    
     = two
     //Non mettere cose TW qui

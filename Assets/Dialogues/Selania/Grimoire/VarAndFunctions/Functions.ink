@@ -8,7 +8,7 @@
 === function grimoire_statusPlants(plant)
 
     {
-        - greenhouse_findedCultivables has plant && (greenhouse_findedCultivables ^ backpack_findedGifts hasnt plant):
+        - greenhouse_findedCultivables has plant && backpack_findedGifts hasnt plant:
             ~ return missing
         
         - else:
@@ -25,7 +25,7 @@
            ~ return locked
            
         //se è tra le cose trovate ma non risulta nell'intersezione tra cose trovate e cose possedute, vuol dire che l'ho usata
-        - greenhouse_findedCultivables has plant && (greenhouse_findedCultivables ^ backpack_findedGifts hasnt plant):
+        - greenhouse_findedCultivables has plant && backpack_findedGifts hasnt plant:
             ~ return consumed
         
         - else:
@@ -180,28 +180,6 @@
 
     }
 
-
-=== function grimoire_statusGiftablePlants(plant, place)
-
-    {
-        //pianta trovata e utilizzata
-        - greenhouse_findedCultivables has plant && (greenhouse_findedCultivables ^ backpack_findedGifts hasnt plant):
-            ~ return
-
-        //pianta non trovata
-        - greenhouse_findedCultivables hasnt plant:
-            ~ return   
-        
-        - else:
-            {
-                - place == left:
-                    ~ return left
-
-                - place == right:
-                    ~ return right
-            }
-            
-    }
 
 === function ingredientTranslator(ingredient)
 

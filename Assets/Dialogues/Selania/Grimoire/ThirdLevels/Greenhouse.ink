@@ -137,12 +137,7 @@
     //Recupero Franco
     {grimoire_pageSubtitle(leftPlant, Franco, Backpack)}#leftPageSubtitle
 
-        + {backpack_findedGifts has leftPlant}[{plantsNameTranslator(leftPlant)} #page:{grimoire_statusGiftablePlants(leftPlant, left)}]
-            ~ grimoire_chosenPlant = leftPlant
-            ~ backpack_findedGifts -= leftPlant
-            @grimoireClose
         
-        ->->
 
 
     //Descrizione generale pagina destra
@@ -169,7 +164,14 @@
     //Recupero Franco
     {grimoire_pageSubtitle(rightPlant, Franco, Backpack)}#rightPageSubtitle
 
-        + {backpack_findedGifts has rightPlant}[{plantsNameTranslator(rightPlant)} #page:{grimoire_statusGiftablePlants(rightPlant, right)}]
+        + {backpack_findedGifts has leftPlant}[{plantsNameTranslator(leftPlant)} #page:left]
+            ~ grimoire_chosenPlant = leftPlant
+            ~ backpack_findedGifts -= leftPlant
+            @grimoireClose
+        
+        ->->
+
+        + {backpack_findedGifts has rightPlant}[{plantsNameTranslator(rightPlant)} #page:right]
             ~ grimoire_chosenPlant = rightPlant
             ~ backpack_findedGifts -= rightPlant
             @grimoireClose
