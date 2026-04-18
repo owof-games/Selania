@@ -22,7 +22,7 @@ namespace Selania.Rework.Components
     [CreateAssetMenu(fileName = "InkBridge", menuName = "Selania/Create Ink Bridge", order = 0)]
     public class InkBridge : ScriptableObjectSetupSupport, IStoryChangeRoomNotifier, IStoryChoicesSelector,
         IStoryLinear, IStoryChangeRoomContentsNotifier, IStoryStateSerializer, IStoryAudioSupport, IStoryGrimoire,
-        IStoryInkInfo, IStoryGamerMode
+        IStoryInkInfo, IStoryGamerMode, IStoryCharacterRelationshipStatus
     {
         [Header("Ink Settings")] [SerializeField] [Tooltip("The JSON asset containing the story.")]
         private TextAsset? inkAssetJson;
@@ -1753,6 +1753,45 @@ namespace Selania.Rework.Components
                 return (int?)null;
             }).Where(i => i.HasValue).Select(i => i!.Value);
         }
+
+        #endregion
+
+        #region relationship
+
+        public int minRelationshipValue => -9;
+        public int maxRelationshipValue => 9;
+
+        /// <inheritdoc />
+        public Observable<float> GetCharacterObservable(string characterName)
+        {
+            var info = characterInfo.FirstOrDefault(info => info.listName == characterName);
+            return info == null
+                ? throw new InvalidOperationException($"Cannot find a character in InkBridge with name {characterName}")
+                : GetVariableObservable<float>(info.relationshipInkVariableName);
+        }
+
+        #endregion
+
+        #region character info
+
+        /*
+         * NOTE WELL:
+         * there is a huge overlap in functionality and data between InkBridge and SelaniaSettings. All the data should
+         * be in just one place (settings, presumably). There should also be a way for the ink bridge to get injection:
+         * probably by making it possible to use it as a builder of stories, and the build method is registered as
+         * a factory method.
+         */
+
+        [Serializable]
+        public class CharacterInfo
+        {
+            public string listName = null!;
+
+            public string relationshipInkVariableName = null!;
+        }
+
+        [Tooltip("Information about the characters")] [SerializeField]
+        private CharacterInfo[] characterInfo = null!;
 
         #endregion
     }

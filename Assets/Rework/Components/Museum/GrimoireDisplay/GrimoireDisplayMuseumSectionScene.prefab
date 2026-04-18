@@ -2467,7 +2467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Selania::Selania.Rework.Components.Museum.GrimoireDisplay.GrimoireDisplayMuseumSectionController
   grimoireBackground: {fileID: 5126158449596444790}
   output: {fileID: 3573665487416537480}
-  secondLevelCharactersGrimoire: {fileID: 3716718083287152891}
+  sectionScope: {fileID: 355751478477969319}
 --- !u!1 &1256627182407152027
 GameObject:
   m_ObjectHideFlags: 0
@@ -7154,6 +7154,7 @@ MonoBehaviour:
   - {fileID: 1798799710565252297}
   - {fileID: 5414991818071057561}
   - {fileID: 7282750160316468656}
+  - {fileID: 527225141246929549}
   settings: {fileID: 11400000, guid: 8a2b787684fc7fa4e98d37b8b423934e, type: 2}
 --- !u!1 &4388361662997507900
 GameObject:
@@ -12756,7 +12757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 235025022267591236, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -65.505
       objectReference: {fileID: 0}
     - target: {fileID: 242523211686307243, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
       propertyPath: m_AnchorMax.y
@@ -12796,7 +12797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 263793844567036826, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -65.505
       objectReference: {fileID: 0}
     - target: {fileID: 264291347232790031, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
       propertyPath: m_AnchorMax.y
@@ -13060,7 +13061,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1204654546791477955, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -65.505
       objectReference: {fileID: 0}
     - target: {fileID: 1233468988642493020, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
       propertyPath: m_AnchorMax.y
@@ -13112,7 +13113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1326285262402575828, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -65.505
       objectReference: {fileID: 0}
     - target: {fileID: 1456642202735829566, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
       propertyPath: m_AnchorMax.y
@@ -13396,7 +13397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2300553723425690681, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -65.505
       objectReference: {fileID: 0}
     - target: {fileID: 2304703976528232446, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
       propertyPath: m_AnchorMax.y
@@ -13748,7 +13749,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3323271571757215761, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -65.505
       objectReference: {fileID: 0}
     - target: {fileID: 3338662118492569191, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
       propertyPath: m_AnchorMax.y
@@ -13816,7 +13817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3443736570841060848, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -65.505
       objectReference: {fileID: 0}
     - target: {fileID: 3463273744925335305, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
       propertyPath: m_AnchorMax.y
@@ -13980,7 +13981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3932754048256213796, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -65.505
       objectReference: {fileID: 0}
     - target: {fileID: 3995819144100918128, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
       propertyPath: m_AnchorMax.y
@@ -14585,7 +14586,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6467202460460420360, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -65.505
       objectReference: {fileID: 0}
     - target: {fileID: 6498810634060133166, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
       propertyPath: m_AnchorMax.y
@@ -14701,7 +14702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6869986945198079187, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -65.505
       objectReference: {fileID: 0}
     - target: {fileID: 6906591729496947642, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
       propertyPath: m_AnchorMax.y
@@ -14949,7 +14950,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8106908175144363225, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -65.505
       objectReference: {fileID: 0}
     - target: {fileID: 8122585887838328850, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
       propertyPath: m_AnchorMax.y
@@ -15201,7 +15202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8716367868185799576, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -65.505
       objectReference: {fileID: 0}
     - target: {fileID: 8721397738067551640, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
       propertyPath: m_AnchorMax.y
@@ -15400,6 +15401,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+--- !u!1 &527225141246929549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1104108129532359015, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
+  m_PrefabInstance: {fileID: 577445942820084714}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &567579111688081455 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1145025050145033157, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
@@ -15485,17 +15491,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4220763805859490776, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
   m_PrefabInstance: {fileID: 577445942820084714}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3716718083287152891 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4294163969986388753, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}
-  m_PrefabInstance: {fileID: 577445942820084714}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7282750160316468656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51daf66545ff414aa60490b798bf249b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.SecondLevelCharactersGrimoire
 --- !u!1 &4538584953169106947 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3963109335262544873, guid: 8bdcf54149c149d48845aaf99eee1dac, type: 3}

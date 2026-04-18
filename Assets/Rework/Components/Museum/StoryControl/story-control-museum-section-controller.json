@@ -1,1 +1,721 @@
-﻿{"inkVersion":21,"root":[[{"->":"main"},["done",{"#f":5,"#n":"g-0"}],null],"done",{"main":[["^@interact","\n","ev",false,"/ev",{"VAR=":"knowChitarra","re":true},"ev",{"VAR?":"ink_empty"},"/ev",{"VAR=":"firstChar_InkLevel","re":true},"ev",{"VAR?":"FirstCharacter"},"str","^affectionate","/str",{"f()":"charTag"},"out","/ev","^:  Qui parla Chitarra, ma non sai ancora il nome.","\n","^Continuo a parlare, non sono serviti tag e mantengo lo stesso personaggio, immagine, ecc.","\n","ev",true,"/ev",{"VAR=":"knowChitarra","re":true},"ev",{"VAR?":"FirstCharacter"},"str","^affectionate","/str",{"f()":"charTag"},"out","/ev","^:  Qui sono sempre io, ma ora sai il mio nome.","\n","ev",{"VAR?":"FifthCharacter"},"str","^hurry","/str",{"f()":"charTag"},"out","/ev","^:         Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo. Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo. Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo.","\n","ev",{"VAR?":"ink_normal"},"/ev",{"VAR=":"firstChar_InkLevel","re":true},"ev",{"VAR?":"FirstCharacter"},"str","^affectionate","/str",{"f()":"charTag"},"out","/ev","^:  Qui torna a parlare Chitarra, ma ora ha dell'inchiostro.","\n","ev",{"VAR?":"FifthCharacter"},"str","^hurry","/str",{"f()":"charTag"},"out","/ev","^:         Qua invece parla Mentore.","\n","^E ora c'è una scelta.","\n","ev",0,"/ev",{"temp=":"index"},["ev",{"^->":"main.0.76.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-0","flg":2},{"s":["^ ","ev",{"VAR?":"PG"},"str","^neutral","/str",{"f()":"charTag"},"out","/ev","^: Scelta 1",{"->":"$r","var":true},null]}],["ev",{"^->":"main.0.77.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-1","flg":2},{"s":["^ ","ev",{"VAR?":"PG"},"str","^neutral","/str",{"f()":"charTag"},"out","/ev","^: Scelta 2",{"->":"$r","var":true},null]}],["ev",{"^->":"main.0.78.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-2","flg":2},{"s":["^ ","ev",{"VAR?":"PG"},"str","^neutral","/str",{"f()":"charTag"},"out","/ev","^: Scelta 3",{"->":"$r","var":true},null]}],{"c-0":["ev",{"^->":"main.0.c-0.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.76.s"},[{"#n":"$r2"}],"\n","ev",1,"/ev",{"temp=":"index","re":true},{"->":".^.^.g-0"},{"#f":5}],"c-1":["ev",{"^->":"main.0.c-1.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.77.s"},[{"#n":"$r2"}],"\n","ev",2,"/ev",{"temp=":"index","re":true},{"->":".^.^.g-0"},{"#f":5}],"c-2":["ev",{"^->":"main.0.c-2.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.78.s"},[{"#n":"$r2"}],"\n","ev",3,"/ev",{"temp=":"index","re":true},{"->":".^.^.g-0"},{"#f":5}],"g-0":["ev",{"VAR?":"FirstCharacter"},"str","^affectionate","/str",{"f()":"charTag"},"out","/ev","^:  Hai fatto la scelta ","ev",{"VAR?":"index"},"out","/ev","^!","\n",{"->":"main"},{"#f":5}]}],{"#f":1}],"charTag":[{"temp=":"mood"},{"temp=":"character"},"ev",{"VAR?":"character"},{"f()":"charName"},"/ev",{"temp=":"actualCharacterName"},"\n","ev","str","ev",{"VAR?":"character"},"out","/ev","^, ","ev",{"VAR?":"actualCharacterName"},"out","/ev","^, ","ev",{"VAR?":"mood"},"out","/ev","/str","/ev","~ret",{"#f":1}],"charName":[{"temp=":"character"},"ev",{"VAR?":"character"},"/ev",["du","ev",{"VAR?":"PG"},"==","/ev",{"->":".^.b","c":true},{"b":["pop","\n","ev","str","^Marta","/str","/ev","~ret",{"->":".^.^.^.8"},null]}],["du","ev",{"VAR?":"FirstCharacter"},"==","/ev",{"->":".^.b","c":true},{"b":["pop","\n","ev",{"VAR?":"knowChitarra"},"/ev",[{"->":".^.b","c":true},{"b":["\n","ev","str","^Chitarra","/str","/ev","~ret",{"->":".^.^.^.7"},null]}],[{"->":".^.b"},{"b":["\n","ev","str","^???","/str","/ev","~ret",{"->":".^.^.^.7"},null]}],"nop","\n",{"->":".^.^.^.8"},null]}],["du","ev",{"VAR?":"FifthCharacter"},"==","/ev",{"->":".^.b","c":true},{"b":["pop","\n","ev","str","^Mentore","/str","/ev","~ret",{"->":".^.^.^.8"},null]}],[{"->":".^.b"},{"b":["pop","\n","ev","str","^<unknown ","ev",{"VAR?":"character"},"out","/ev","^>","/str","/ev","~ret",{"->":".^.^.^.8"},null]}],"nop","\n",{"#f":1}],"global decl":["ev",{"list":{},"origins":["listCharacters"]},{"VAR=":"listCharacters"},{"list":{},"origins":["ink_possibileLevels"]},{"VAR=":"ink_possibileLevels"},{"VAR?":"ink_empty"},{"VAR=":"firstChar_InkLevel"},{"VAR?":"ink_empty"},{"VAR=":"fifthChar_InkLevel"},{"list":{"listCharacters.PG":2}},{"VAR=":"contentsBedroom"},false,{"VAR=":"knowChitarra"},"/ev","end",null],"#f":1}],"listDefs":{"listCharacters":{"Mentor":1,"PG":2,"FirstCharacter":3,"SecondCharacter":4,"ThirdCharacter":5,"FourthCharacter":6,"TheFrog":7,"FifthCharacter":8,"TheKitchenFrog":9},"ink_possibileLevels":{"ink_empty":1,"ink_low":2,"ink_normal":3,"ink_medium":4,"ink_high":5}}}
+﻿{
+  "inkVersion": 21,
+  "root": [
+    [
+      {
+        "->": "main"
+      },
+      [
+        "done",
+        {
+          "#f": 5,
+          "#n": "g-0"
+        }
+      ],
+      null
+    ],
+    "done",
+    {
+      "main": [
+        [
+          "^@interact",
+          "\n",
+          "ev",
+          false,
+          "/ev",
+          {
+            "VAR=": "knowChitarra",
+            "re": true
+          },
+          "ev",
+          {
+            "VAR?": "ink_empty"
+          },
+          "/ev",
+          {
+            "VAR=": "firstChar_InkLevel",
+            "re": true
+          },
+          "ev",
+          {
+            "VAR?": "FirstCharacter"
+          },
+          "str",
+          "^affectionate",
+          "/str",
+          {
+            "f()": "charTag"
+          },
+          "out",
+          "/ev",
+          "^:  Qui parla Chitarra, ma non sai ancora il nome.",
+          "\n",
+          "^Continuo a parlare, non sono serviti tag e mantengo lo stesso personaggio, immagine, ecc.",
+          "\n",
+          "ev",
+          true,
+          "/ev",
+          {
+            "VAR=": "knowChitarra",
+            "re": true
+          },
+          "ev",
+          {
+            "VAR?": "FirstCharacter"
+          },
+          "str",
+          "^affectionate",
+          "/str",
+          {
+            "f()": "charTag"
+          },
+          "out",
+          "/ev",
+          "^:  Qui sono sempre io, ma ora sai il mio nome.",
+          "\n",
+          "ev",
+          {
+            "VAR?": "FifthCharacter"
+          },
+          "str",
+          "^hurry",
+          "/str",
+          {
+            "f()": "charTag"
+          },
+          "out",
+          "/ev",
+          "^:         Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo. Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo. Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo.",
+          "\n",
+          "ev",
+          {
+            "VAR?": "ink_normal"
+          },
+          "/ev",
+          {
+            "VAR=": "firstChar_InkLevel",
+            "re": true
+          },
+          "ev",
+          {
+            "VAR?": "FirstCharacter"
+          },
+          "str",
+          "^affectionate",
+          "/str",
+          {
+            "f()": "charTag"
+          },
+          "out",
+          "/ev",
+          "^:  Qui torna a parlare Chitarra, ma ora ha dell'inchiostro.",
+          "\n",
+          "ev",
+          {
+            "VAR?": "FifthCharacter"
+          },
+          "str",
+          "^hurry",
+          "/str",
+          {
+            "f()": "charTag"
+          },
+          "out",
+          "/ev",
+          "^:         Qua invece parla Mentore.",
+          "\n",
+          "^E ora c'è una scelta.",
+          "\n",
+          "ev",
+          0,
+          "/ev",
+          {
+            "temp=": "index"
+          },
+          [
+            "ev",
+            {
+              "^->": "main.0.76.$r1"
+            },
+            {
+              "temp=": "$r"
+            },
+            "str",
+            {
+              "->": ".^.s"
+            },
+            [
+              {
+                "#n": "$r1"
+              }
+            ],
+            "/str",
+            "/ev",
+            {
+              "*": ".^.^.c-0",
+              "flg": 2
+            },
+            {
+              "s": [
+                "^ ",
+                "ev",
+                {
+                  "VAR?": "PG"
+                },
+                "str",
+                "^neutral",
+                "/str",
+                {
+                  "f()": "charTag"
+                },
+                "out",
+                "/ev",
+                "^: Scelta 1",
+                {
+                  "->": "$r",
+                  "var": true
+                },
+                null
+              ]
+            }
+          ],
+          [
+            "ev",
+            {
+              "^->": "main.0.77.$r1"
+            },
+            {
+              "temp=": "$r"
+            },
+            "str",
+            {
+              "->": ".^.s"
+            },
+            [
+              {
+                "#n": "$r1"
+              }
+            ],
+            "/str",
+            "/ev",
+            {
+              "*": ".^.^.c-1",
+              "flg": 2
+            },
+            {
+              "s": [
+                "^ ",
+                "ev",
+                {
+                  "VAR?": "PG"
+                },
+                "str",
+                "^neutral",
+                "/str",
+                {
+                  "f()": "charTag"
+                },
+                "out",
+                "/ev",
+                "^: Scelta 2",
+                {
+                  "->": "$r",
+                  "var": true
+                },
+                null
+              ]
+            }
+          ],
+          [
+            "ev",
+            {
+              "^->": "main.0.78.$r1"
+            },
+            {
+              "temp=": "$r"
+            },
+            "str",
+            {
+              "->": ".^.s"
+            },
+            [
+              {
+                "#n": "$r1"
+              }
+            ],
+            "/str",
+            "/ev",
+            {
+              "*": ".^.^.c-2",
+              "flg": 2
+            },
+            {
+              "s": [
+                "^ ",
+                "ev",
+                {
+                  "VAR?": "PG"
+                },
+                "str",
+                "^neutral",
+                "/str",
+                {
+                  "f()": "charTag"
+                },
+                "out",
+                "/ev",
+                "^: Scelta 3",
+                {
+                  "->": "$r",
+                  "var": true
+                },
+                null
+              ]
+            }
+          ],
+          {
+            "c-0": [
+              "ev",
+              {
+                "^->": "main.0.c-0.$r2"
+              },
+              "/ev",
+              {
+                "temp=": "$r"
+              },
+              {
+                "->": ".^.^.76.s"
+              },
+              [
+                {
+                  "#n": "$r2"
+                }
+              ],
+              "\n",
+              "ev",
+              1,
+              "/ev",
+              {
+                "temp=": "index",
+                "re": true
+              },
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-1": [
+              "ev",
+              {
+                "^->": "main.0.c-1.$r2"
+              },
+              "/ev",
+              {
+                "temp=": "$r"
+              },
+              {
+                "->": ".^.^.77.s"
+              },
+              [
+                {
+                  "#n": "$r2"
+                }
+              ],
+              "\n",
+              "ev",
+              2,
+              "/ev",
+              {
+                "temp=": "index",
+                "re": true
+              },
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-2": [
+              "ev",
+              {
+                "^->": "main.0.c-2.$r2"
+              },
+              "/ev",
+              {
+                "temp=": "$r"
+              },
+              {
+                "->": ".^.^.78.s"
+              },
+              [
+                {
+                  "#n": "$r2"
+                }
+              ],
+              "\n",
+              "ev",
+              3,
+              "/ev",
+              {
+                "temp=": "index",
+                "re": true
+              },
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "g-0": [
+              "ev",
+              {
+                "VAR?": "FirstCharacter"
+              },
+              "str",
+              "^affectionate",
+              "/str",
+              {
+                "f()": "charTag"
+              },
+              "out",
+              "/ev",
+              "^:  Hai fatto la scelta ",
+              "ev",
+              {
+                "VAR?": "index"
+              },
+              "out",
+              "/ev",
+              "^!",
+              "\n",
+              {
+                "->": "main"
+              },
+              {
+                "#f": 5
+              }
+            ]
+          }
+        ],
+        {
+          "#f": 1
+        }
+      ],
+      "charTag": [
+        {
+          "temp=": "mood"
+        },
+        {
+          "temp=": "character"
+        },
+        "ev",
+        {
+          "VAR?": "character"
+        },
+        {
+          "f()": "charName"
+        },
+        "/ev",
+        {
+          "temp=": "actualCharacterName"
+        },
+        "\n",
+        "ev",
+        "str",
+        "ev",
+        {
+          "VAR?": "character"
+        },
+        "out",
+        "/ev",
+        "^, ",
+        "ev",
+        {
+          "VAR?": "actualCharacterName"
+        },
+        "out",
+        "/ev",
+        "^, ",
+        "ev",
+        {
+          "VAR?": "mood"
+        },
+        "out",
+        "/ev",
+        "/str",
+        "/ev",
+        "~ret",
+        {
+          "#f": 1
+        }
+      ],
+      "charName": [
+        {
+          "temp=": "character"
+        },
+        "ev",
+        {
+          "VAR?": "character"
+        },
+        "/ev",
+        [
+          "du",
+          "ev",
+          {
+            "VAR?": "PG"
+          },
+          "==",
+          "/ev",
+          {
+            "->": ".^.b",
+            "c": true
+          },
+          {
+            "b": [
+              "pop",
+              "\n",
+              "ev",
+              "str",
+              "^Marta",
+              "/str",
+              "/ev",
+              "~ret",
+              {
+                "->": ".^.^.^.8"
+              },
+              null
+            ]
+          }
+        ],
+        [
+          "du",
+          "ev",
+          {
+            "VAR?": "FirstCharacter"
+          },
+          "==",
+          "/ev",
+          {
+            "->": ".^.b",
+            "c": true
+          },
+          {
+            "b": [
+              "pop",
+              "\n",
+              "ev",
+              {
+                "VAR?": "knowChitarra"
+              },
+              "/ev",
+              [
+                {
+                  "->": ".^.b",
+                  "c": true
+                },
+                {
+                  "b": [
+                    "\n",
+                    "ev",
+                    "str",
+                    "^Chitarra",
+                    "/str",
+                    "/ev",
+                    "~ret",
+                    {
+                      "->": ".^.^.^.7"
+                    },
+                    null
+                  ]
+                }
+              ],
+              [
+                {
+                  "->": ".^.b"
+                },
+                {
+                  "b": [
+                    "\n",
+                    "ev",
+                    "str",
+                    "^???",
+                    "/str",
+                    "/ev",
+                    "~ret",
+                    {
+                      "->": ".^.^.^.7"
+                    },
+                    null
+                  ]
+                }
+              ],
+              "nop",
+              "\n",
+              {
+                "->": ".^.^.^.8"
+              },
+              null
+            ]
+          }
+        ],
+        [
+          "du",
+          "ev",
+          {
+            "VAR?": "FifthCharacter"
+          },
+          "==",
+          "/ev",
+          {
+            "->": ".^.b",
+            "c": true
+          },
+          {
+            "b": [
+              "pop",
+              "\n",
+              "ev",
+              "str",
+              "^Mentore",
+              "/str",
+              "/ev",
+              "~ret",
+              {
+                "->": ".^.^.^.8"
+              },
+              null
+            ]
+          }
+        ],
+        [
+          {
+            "->": ".^.b"
+          },
+          {
+            "b": [
+              "pop",
+              "\n",
+              "ev",
+              "str",
+              "^<unknown ",
+              "ev",
+              {
+                "VAR?": "character"
+              },
+              "out",
+              "/ev",
+              "^>",
+              "/str",
+              "/ev",
+              "~ret",
+              {
+                "->": ".^.^.^.8"
+              },
+              null
+            ]
+          }
+        ],
+        "nop",
+        "\n",
+        {
+          "#f": 1
+        }
+      ],
+      "global decl": [
+        "ev",
+        {
+          "list": {},
+          "origins": [
+            "listCharacters"
+          ]
+        },
+        {
+          "VAR=": "listCharacters"
+        },
+        {
+          "list": {},
+          "origins": [
+            "ink_possibileLevels"
+          ]
+        },
+        {
+          "VAR=": "ink_possibileLevels"
+        },
+        {
+          "VAR?": "ink_empty"
+        },
+        {
+          "VAR=": "firstChar_InkLevel"
+        },
+        {
+          "VAR?": "ink_empty"
+        },
+        {
+          "VAR=": "secondChar_InkLevel"
+        },
+        {
+          "VAR?": "ink_empty"
+        },
+        {
+          "VAR=": "thirdChar_InkLevel"
+        },
+        {
+          "VAR?": "ink_empty"
+        },
+        {
+          "VAR=": "fourthChar_InkLevel"
+        },
+        {
+          "VAR?": "ink_empty"
+        },
+        {
+          "VAR=": "fifthChar_InkLevel"
+        },
+        {
+          "list": {
+            "listCharacters.PG": 2
+          }
+        },
+        {
+          "VAR=": "contentsBedroom"
+        },
+        false,
+        {
+          "VAR=": "knowChitarra"
+        },
+        false,
+        {
+          "VAR=": "settings_gamerMode"
+        },
+        "/ev",
+        "end",
+        null
+      ],
+      "#f": 1
+    }
+  ],
+  "listDefs": {
+    "listCharacters": {
+      "Mentor": 1,
+      "PG": 2,
+      "FirstCharacter": 3,
+      "SecondCharacter": 4,
+      "ThirdCharacter": 5,
+      "FourthCharacter": 6,
+      "TheFrog": 7,
+      "FifthCharacter": 8,
+      "TheKitchenFrog": 9
+    },
+    "ink_possibileLevels": {
+      "ink_empty": 1,
+      "ink_low": 2,
+      "ink_normal": 3,
+      "ink_medium": 4,
+      "ink_high": 5
+    }
+  }
+}

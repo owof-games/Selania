@@ -2,11 +2,17 @@ LIST listCharacters = Mentor, PG, FirstCharacter, SecondCharacter, ThirdCharacte
 
 LIST ink_possibileLevels = ink_empty, ink_low, ink_normal, ink_medium, ink_high
 VAR firstChar_InkLevel = ink_empty
+VAR secondChar_InkLevel = ink_empty
+VAR thirdChar_InkLevel = ink_empty
+VAR fourthChar_InkLevel = ink_empty
 VAR fifthChar_InkLevel = ink_empty
 
 VAR contentsBedroom = (PG)
 
 VAR knowChitarra = false
+
+VAR settings_gamerMode = false
+
 
 -> main
 

@@ -2,6 +2,7 @@
 using System.Linq;
 using Microsoft.Extensions.Logging;
 using R3;
+using Selania.Rework.Components.DialogueBox;
 using Selania.Rework.Interfaces;
 using TMPro;
 using UnityEngine;
@@ -28,13 +29,20 @@ namespace Selania.Rework.Components.Grimoire
         [Tooltip("Image element that shows the character's portrait.")] [SerializeField]
         private Image characterPortraitImage = null!;
 
+        [Tooltip("The relationship status controller")] [SerializeField]
+        private RelationshipStatus relationshipStatus = null!;
+
         /// <summary>
         ///     Subject where the click observable will be sent at Start() time.
         /// </summary>
         private readonly Subject<Observable<string>> _clickObservables = new();
 
+        private IDisposable? _lastCharacterRelationshipStatusSubscription;
+
         [Inject] internal ILogger<SecondLevelCharactersGrimoire> Logger = null!;
         [Inject] internal ISettingsBook SettingsBook = null!;
+        [Inject] internal IStoryCharacterRelationshipStatus StoryCharacterRelationshipStatus = null!;
+        [Inject] internal IStoryGamerMode StoryGamerMode = null!;
 
         /// <summary>
         ///     An observable that produces a string with the name of the button each time a button is clicked. The names
@@ -52,6 +60,16 @@ namespace Selania.Rework.Components.Grimoire
 
             // send the created observable, or the empty observable if we have no buttons (this should not happen)
             _clickObservables.OnNext(observable ?? Observable.Empty<string>());
+
+            // show elements according to the reader/gamer mode
+            StoryGamerMode
+                .gamerMode
+                .Subscribe(gamerMode =>
+                {
+                    if (gamerMode) relationshipStatus.Enable();
+                    else relationshipStatus.Disable();
+                })
+                .AddTo(this);
         }
 
         /// <summary>
@@ -76,6 +94,15 @@ namespace Selania.Rework.Components.Grimoire
                 characterPortraitImage.sprite = foundPortrait;
             else
                 Logger.ZLogError($"Cannot find portrait with name {portraitName}");
+
+            // update relationship status according to the value
+            _lastCharacterRelationshipStatusSubscription?.Dispose();
+            _lastCharacterRelationshipStatusSubscription = StoryCharacterRelationshipStatus
+                .GetCharacterObservable(portraitName)
+                .Subscribe(value => relationshipStatus.SetLevel(Mathf.InverseLerp(
+                    StoryCharacterRelationshipStatus.minRelationshipValue,
+                    StoryCharacterRelationshipStatus.maxRelationshipValue, value)))
+                .AddTo(this);
         }
 
         /// <summary>

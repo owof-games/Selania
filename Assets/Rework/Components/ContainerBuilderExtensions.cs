@@ -43,7 +43,8 @@ namespace Selania.Rework.Components
                 .As<IStoryAudioSupport>()
                 .As<IStoryGrimoire>()
                 .As<IStoryInkInfo>()
-                .As<IStoryGamerMode>();
+                .As<IStoryGamerMode>()
+                .As<IStoryCharacterRelationshipStatus>();
         }
 
         /// <summary>
@@ -125,40 +126,23 @@ namespace Selania.Rework.Components
             var registrationBuilder = containerBuilder
                 .RegisterInstance(settings);
 
-            if (settingsDialogueBox != null)
-                containerBuilder.RegisterInstance(settingsDialogueBox).As<ISettingsDialogueBox>();
-            else
-                registrationBuilder.As<ISettingsDialogueBox>();
+            Register(settingsDialogueBox);
+            Register(settingsLogger);
+            Register(settingsRooms);
+            Register(settingsAudio);
+            Register(settingsSaveSystem);
+            Register(settingsSigils);
+            Register(settingsBook);
 
-            if (settingsLogger != null)
-                containerBuilder.RegisterInstance(settingsLogger).As<ISettingsLogger>();
-            else
-                registrationBuilder.As<ISettingsLogger>();
+            return;
 
-            if (settingsRooms != null)
-                containerBuilder.RegisterInstance(settingsRooms).As<ISettingsRooms>();
-            else
-                registrationBuilder.As<ISettingsRooms>();
-
-            if (settingsAudio != null)
-                containerBuilder.RegisterInstance(settingsAudio).As<ISettingsAudio>();
-            else
-                registrationBuilder.As<ISettingsAudio>();
-
-            if (settingsSaveSystem != null)
-                containerBuilder.RegisterInstance(settingsSaveSystem).As<ISettingsSaveSystem>();
-            else
-                registrationBuilder.As<ISettingsSaveSystem>();
-
-            if (settingsSigils != null)
-                containerBuilder.RegisterInstance(settingsSigils).As<ISettingsSigils>();
-            else
-                registrationBuilder.As<ISettingsSigils>();
-
-            if (settingsBook != null)
-                containerBuilder.RegisterInstance(settingsBook).As<ISettingsBook>();
-            else
-                registrationBuilder.As<ISettingsBook>();
+            void Register<T>(T? t)
+            {
+                if (t != null)
+                    containerBuilder.RegisterInstance(t).As<T>();
+                else
+                    registrationBuilder.As<T>();
+            }
         }
     }
 }

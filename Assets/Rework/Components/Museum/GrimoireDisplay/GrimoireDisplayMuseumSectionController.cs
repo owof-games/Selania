@@ -17,6 +17,8 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
 
         [SerializeField] private TextMeshProUGUI output = null!;
 
+        [SerializeField] private GrimoireDisplayMuseumSectionScope sectionScope = null!;
+
         [Inject] internal ILogger<GrimoireDisplayMuseumSectionController> Logger = null!;
 
         private void Start()
@@ -72,11 +74,13 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
 
         public void SetGamerMode()
         {
+            sectionScope.gamerModeSubject.OnNext(true);
             grimoireBackground.SetGamerMode(true);
         }
 
         public void UnsetGamerMode()
         {
+            sectionScope.gamerModeSubject.OnNext(false);
             grimoireBackground.SetGamerMode(false);
         }
 
