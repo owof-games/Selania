@@ -243,7 +243,7 @@ E ora apro la scelta delle piante.
 
 
 === grimoire_greenhouse_third_in_dialogue
-    @grimoireGreenhousePages #leftPageTitle:Lana Notturna #leftPageStatus:locked #leftPagePlant:LanaNotturna #rightPageTitle:Bacca dell'Addolorata #rightPageStatus:active #rightPagePlant:BaccaDellaAddolorata
+    @grimoireGreenhousePages #leftPageTitle:Lana Notturna #leftPageStatus:locked #leftPagePlant:LanaNotturna #rightPageTitle:Bacca dell'Addolorata #rightPageStatus:owned #rightPagePlant:BaccaDellaAddolorata
     Lorem ipsum. #leftPageDescription
     Altro Lorem. #leftPageDescription
     Donata a Chitarra #leftPageSubtitle
