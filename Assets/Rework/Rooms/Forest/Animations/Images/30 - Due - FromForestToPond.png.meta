@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 12060ef345303e34b9a650a66bc94c56
+guid: ec2bafe4c6b14de4c9917379c3f6e90a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1497296650051429378
-    second: 2 - FromForestToPond_0
-  - first:
-      213: 4901126370344097862
-    second: 2 - FromForestToPond_1
+      213: 8431440696289348877
+    second: 30 - Due - FromForestToPond_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 2 - FromForestToPond_0
+      name: 30 - Due - FromForestToPond_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 81
-        height: 70
+        width: 110
+        height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: efb5d4a31a8883be0800000000000000
-      internalID: -1497296650051429378
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 2 - FromForestToPond_1
-      rect:
-        serializedVersion: 2
-        x: 81
-        y: 5
-        width: 89
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 648d8af677c440440800000000000000
-      internalID: 4901126370344097862
+      spriteID: d0d491f34ae720570800000000000000
+      internalID: 8431440696289348877
       vertices: []
       indices: 
       edges: []
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      2 - FromForestToPond_0: -1497296650051429378
-      2 - FromForestToPond_1: 4901126370344097862
+      30 - Due - FromForestToPond_0: 8431440696289348877
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

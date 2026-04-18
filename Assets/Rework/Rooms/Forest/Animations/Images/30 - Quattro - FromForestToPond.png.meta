@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 154732675aa5900458d149959a25cbe5
+guid: 9edffdb4d8f15af42ba4889826f30f2e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6371646523086948892
-    second: 1 - FromForestToPond_0
-  - first:
-      213: 6447047354601775947
-    second: 1 - FromForestToPond_1
+      213: 4403091698102639741
+    second: 30 - Quattro - FromForestToPond_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 1 - FromForestToPond_0
+      name: 30 - Quattro - FromForestToPond_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 7
         y: 0
-        width: 81
-        height: 72
+        width: 106
+        height: 86
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4e5bc05ee3d5397a0800000000000000
-      internalID: -6371646523086948892
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1 - FromForestToPond_1
-      rect:
-        serializedVersion: 2
-        x: 86
-        y: 5
-        width: 90
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b43292d3963887950800000000000000
-      internalID: 6447047354601775947
+      spriteID: d7c11e2229cea1d30800000000000000
+      internalID: 4403091698102639741
       vertices: []
       indices: 
       edges: []
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      1 - FromForestToPond_0: -6371646523086948892
-      1 - FromForestToPond_1: 6447047354601775947
+      30 - Quattro - FromForestToPond_0: 4403091698102639741
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
