@@ -1,3 +1,6 @@
+//Abilitazione delle notifiche "da gamer". Vengono attivate in automatico col gamer mode
+VAR notification_gamerNotification = false
+
 //Variabili per le notifiche
 VAR notification_greenhouseGrown = false
     //Per questa: true == posso riproporre la notifica, cosa che accade solo dopo che ho raccolto la pianta arrivata allo step tre
@@ -24,7 +27,7 @@ VAR notification_francoUpdatedMissions = ()
 
 
 {
-    - notification_greenhouseGrown == true:
+    - notification_greenhouseGrown == true && notification_gamerNotification == true:
         {charTag(TheWitch, "{witch_state()}")}:   Qualcosa di nuovo è cresciuto in serra. 
             ~ notification_greenhouseGrown = false
             ~ notification_greenhouseGrownRepropose = false
@@ -38,7 +41,7 @@ VAR notification_francoUpdatedMissions = ()
 }
 
 {
-    - notification_achievement == true:
+    - notification_achievement == true && notification_gamerNotification == true::
         {charTag(TheWitch, "{witch_state()}")}:   {player_name} ha completato l'achievement {notification_achievementName}.
             ~ notification_achievement = false
             ~ notification_achievement = ""
@@ -54,7 +57,7 @@ VAR notification_francoUpdatedMissions = ()
                     ~ notification_francoUpdatedMissions = frog_updatedMissions
                     {
                         //Se tra le missioni aggiornate c'è quella offerta da Franco, mandiamo la notifica
-                        - frog_updatedMissions has frog_currentMission:
+                        - frog_updatedMissions has frog_currentMission && notification_gamerNotification == true:
                             {charTag(TheWitch, "{witch_state()}")}:   <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>
                     }
     
