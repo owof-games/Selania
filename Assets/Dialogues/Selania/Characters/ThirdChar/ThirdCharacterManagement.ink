@@ -260,175 +260,20 @@
 
 
 === third_char_closing_storylet ===
-        //Questo evita che venga proposto un altro storylet fino a quando la pausa non è finita
-        ~ thirdChar_pauseTalking = thirdChar_pauseDuration
-        //Questo è per la gestione delle domande
-        ~ thirdChar_justTalked = true
-        //Cooldown comune
-        ~ png_commonPauseTalking = true
-        //L'animazione per via dell'informazione nuova
-        @animation:RewriterBook
+    //Questo evita che venga proposto un altro storylet fino a quando la pausa non è finita
+    ~ thirdChar_pauseTalking = thirdChar_pauseDuration
+    //Questo è per la gestione delle domande
+    ~ thirdChar_justTalked = true
 
-    {
-            //Main storylets
-            - third_char_main_storylets.one && grimoire_thirdChar hasnt grimThirdCharOne:
-                ~ grimoire_thirdChar += grimThirdCharOne
-        }
-
-        {
-            - third_char_main_storylets.two && grimoire_thirdChar hasnt grimThirdCharTwo:
-                ~ grimoire_thirdChar += grimThirdCharTwo
-        }
-
-        {
-            - third_char_main_storylets.three && grimoire_thirdChar hasnt grimThirdCharThree:
-                ~ grimoire_thirdChar += grimThirdCharThree
-        }
-
-        {
-            - third_char_main_storylets.four && grimoire_thirdChar hasnt grimThirdCharFour:
-                ~ grimoire_thirdChar += grimThirdCharFour  
-        }
-
-        {
-            - third_char_main_storylets.five && grimoire_thirdChar hasnt grimThirdCharFive:
-                ~ grimoire_thirdChar += grimThirdCharFive
-        }
-
-        {
-            - third_char_main_storylets.six && grimoire_thirdChar hasnt grimThirdCharSix:
-                ~ grimoire_thirdChar += grimThirdCharSix
-        }
-
-        {
-            - third_char_main_storylets.seven && grimoire_thirdChar hasnt grimThirdCharSeven:
-                ~ grimoire_thirdChar += grimThirdCharSeven
-        }
-
-        {
-            - third_char_main_storylets.eight && grimoire_thirdChar hasnt grimThirdCharEight:
-                ~ grimoire_thirdChar += grimThirdCharEight    
-        }
-
-        {
-            - third_char_main_storylets.nine && grimoire_thirdChar hasnt grimThirdCharNine:
-                ~ grimoire_thirdChar += grimThirdCharNine  
-        }
-
-        {
-            - third_char_main_storylets.ten && grimoire_thirdChar hasnt grimThirdCharTen:
-                ~ grimoire_thirdChar += grimThirdCharTen 
-        }
-
-        {
-            - third_char_main_storylets.eleven && grimoire_thirdChar hasnt grimThirdCharEleven:
-                ~ grimoire_thirdChar += grimThirdCharEleven   
-        }
-
-        {
-            - third_char_main_storylets.twelve && grimoire_thirdChar hasnt grimThirdCharTwelve:
-                ~ grimoire_thirdChar += grimThirdCharTwelve
-        }
-
-
-
-
-        {
-            //Storylets legati alla cucina
-            - cooking_with_third_char.first_theme && grimoire_thirdChar hasnt grimThirdCharKitchenOne:
-                ~ grimoire_thirdChar += grimThirdCharKitchenOne  
-        }
-
-        {
-            - cooking_with_third_char.second_theme && grimoire_thirdChar hasnt grimThirdCharKitchenTwo:
-                ~ grimoire_thirdChar += grimThirdCharKitchenTwo     
-        }
-
-        {
-            - cooking_with_third_char.third_theme && grimoire_thirdChar hasnt grimThirdCharKitchenThree:
-                ~ grimoire_thirdChar += grimThirdCharKitchenThree
-        }
-
-        {
-            - ending_cooking_with_third_char && grimoire_thirdChar hasnt grimThirdCharKitchenEnded:
-                ~ grimoire_thirdChar += grimThirdCharKitchenEnded 
-        }
-
-        {
-            - food_gift_third_char && grimoire_thirdChar hasnt grimThirdCharKitchenAlone:
-                ~ grimoire_thirdChar += grimThirdCharKitchenAlone                
-        }
-
-
-
-
-        {
-            //Riscrittura
-            - rewriting_proposal_third_character.confession && grimoire_thirdChar hasnt grimThirdCharProposal:
-                ~ grimoire_thirdChar += grimThirdCharProposal
-        }
-
-        {
-            - rewriting_proposal_third_character.close && grimoire_thirdChar hasnt grimThirdCharNewName:
-                ~ grimoire_thirdChar += grimThirdCharNewName
-        }
-
-
-
-
-        {        
-            //Storylets speciali
-            - open_the_nest && grimoire_thirdChar hasnt grimThirdOpenNest:
-                ~ grimoire_thirdChar += grimThirdOpenNest
-                ~ grimoire_appendices += grimSigilsBoccale
-                //Spostamenti legati all'evento
-                ~ thirdChar_LibraryInvite = false
-                ~ move_entity(ThirdCharacter, Forest)
-        }
-
-        {
-            - third_read_story_library && grimoire_thirdChar hasnt grimThirdCharNovel:
-                ~ grimoire_thirdChar += grimThirdCharNovel
-        }
-
-        {
-            - dog_third_char && grimoire_thirdChar hasnt grimThirdCharDog:
-                ~ grimoire_thirdChar += grimThirdCharDog
-
-        }
-        //Aggiornamento lista di quelli comuni
-        -> grimoire_common_storylets_updater ->
-        //E check achievement nel caso avessimo finito i dodici storylets principali
-        -> achievements_onGame_statusUpdate_RM ->
-        //Gestione crescita piante
-        -> growing_check ->
-        //E la situazione delle task di Franco
-        -> notification_system ->
+    //Aggiornamento storylets
+    -> grimoire_storylets_updater ->
 
 ->->
 
 === third_char_closing_letters
     ~ thirdChar_mailPause = thirdChar_mailPauseDuration
-    @animation:RewriterBook
 
-    {
-        - third_character_notes.one && grimoire_thirdChar hasnt grimThirdCharLetterOne:
-                ~ grimoire_thirdChar += grimThirdCharLetterOne
-    }
+    //Aggiornamento storylets
+    -> grimoire_storylets_updater ->
 
-    {
-        - third_character_notes.two && grimoire_thirdChar hasnt grimThirdCharLetterTwo:
-                ~ grimoire_thirdChar += grimThirdCharLetterTwo                 
-    }
-
-    {
-        - third_character_notes.three && grimoire_thirdChar hasnt grimThirdCharLetterThree:
-                ~ grimoire_thirdChar += grimThirdCharLetterThree
-    }
-
-    //Aggiornamento lista di quelli comuni
-        -> grimoire_common_storylets_updater ->
-    //E check achievement nel caso avessimo finito i dodici storylets principali
-        -> achievements_onGame_statusUpdate_RM ->
-        -> notification_system ->    
--> main
+->->

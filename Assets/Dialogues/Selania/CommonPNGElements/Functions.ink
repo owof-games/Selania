@@ -85,7 +85,14 @@ VAR thirdChar_LibraryWaiting = 0
 -> main  
         
     
-=== grimoire_common_storylets_updater
+=== grimoire_storylets_updater
+                        /******************************
+
+                                Storylets comuni
+
+                        ********************************/
+
+
         {
             //First Char
             - first_second_chit_chat && grimoire_firstChar hasnt grimFirstSecondChar:
@@ -102,6 +109,7 @@ VAR thirdChar_LibraryWaiting = 0
         {
             - frog_and_first_char_chit_chat && grimoire_firstChar hasnt grimFirstCharFranco:
                 ~ grimoire_firstChar += grimFirstCharFranco
+                ~ grimoire_franco += grimFirstCharFranco
         }
 
         {
@@ -109,10 +117,6 @@ VAR thirdChar_LibraryWaiting = 0
                 ~ grimoire_firstChar += grimFirstThirdChar
                 ~ grimoire_thirdChar += grimFirstThirdChar 
         }
-
-
-
-
 
         {
             //Second Char
@@ -124,6 +128,7 @@ VAR thirdChar_LibraryWaiting = 0
         {
             - frog_and_second_char_chit_chat && grimoire_secondChar hasnt grimSecondCharFranco:
                 ~ grimoire_secondChar += grimSecondCharFranco
+                ~ grimoire_franco += grimSecondCharFranco
         }
 
         {
@@ -131,9 +136,6 @@ VAR thirdChar_LibraryWaiting = 0
                 ~ grimoire_secondChar += grimSecondThirdChar
                 ~ grimoire_thirdChar += grimSecondThirdChar
         }
-
-
-
 
 
         {
@@ -146,24 +148,22 @@ VAR thirdChar_LibraryWaiting = 0
         {
             - frog_and_third_char_chit_chat && grimoire_thirdChar hasnt grimThirdCharFranco:
                 ~ grimoire_thirdChar += grimThirdCharFranco
+                ~ grimoire_franco += grimThirdCharFranco
         }
-
-
-
 
 
         {
             //Mentor
             - the_witch_and_the_mentor && grimoire_fifthChar hasnt grimMentorWitchOne:
                 ~ grimoire_fifthChar += grimMentorWitchOne
+                ~ grimoire_witch += grimMentorWitchOne
         }
 
         {
             - frog_and_mentor_chit_chat && grimoire_fifthChar hasnt grimMentorFranco:
                 ~ grimoire_fifthChar += grimMentorFranco
+                ~ grimoire_franco += grimMentorFranco
         }
-
-
 
 
         {
@@ -192,4 +192,767 @@ VAR thirdChar_LibraryWaiting = 0
                 ~ grimoire_fifthChar += grimFifthCharMentorFeedback    
 
         }
+
+
+
+                        /******************************
+
+                            Storylets FirstCharacter
+
+                        ********************************/
+
+
+         {
+            //Main storylets
+            - first_char_main_storylets.one && grimoire_firstChar hasnt grimFirstCharOne:
+                ~ grimoire_firstChar += grimFirstCharOne
+        }
+
+        {
+            - first_char_main_storylets.two && grimoire_firstChar hasnt grimFirstCharTwo:
+                ~ grimoire_firstChar += grimFirstCharTwo
+        }
+
+        {
+            - first_char_main_storylets.three && grimoire_firstChar hasnt grimFirstCharThree:
+                ~ grimoire_firstChar += grimFirstCharThree    
+        }
+
+        {
+            - first_char_main_storylets.four && grimoire_firstChar hasnt grimFirstCharFour:
+                ~ grimoire_firstChar += grimFirstCharFour  
+        }
+
+        {
+            - first_char_main_storylets.five && grimoire_firstChar hasnt grimFirstCharFive:
+                ~ grimoire_firstChar += grimFirstCharFive
+        }
+
+        {
+            - first_char_main_storylets.six && grimoire_firstChar hasnt grimFirstCharSix:
+                ~ grimoire_firstChar += grimFirstCharSix
+        }
+
+        {
+            - first_char_main_storylets.seven && grimoire_firstChar hasnt grimFirstCharSeven:
+                ~ grimoire_firstChar += grimFirstCharSeven
+        }
+
+        {
+            - first_char_main_storylets.eight && grimoire_firstChar hasnt grimFirstCharEight:
+                ~ grimoire_firstChar += grimFirstCharEight    
+        }
+
+        {
+            - first_char_main_storylets.nine && grimoire_firstChar hasnt grimFirstCharNine:
+                ~ grimoire_firstChar += grimFirstCharNine  
+        }
+
+        {
+            - first_char_main_storylets.ten && grimoire_firstChar hasnt grimFirstCharTen:
+                ~ grimoire_firstChar += grimFirstCharTen 
+        }
+
+        {
+            - first_char_main_storylets.eleven && grimoire_firstChar hasnt grimFirstCharEleven:
+                ~ grimoire_firstChar += grimFirstCharEleven   
+        }
+
+        {
+            - first_char_main_storylets.twelve && grimoire_firstChar hasnt grimFirstCharTwelve:
+                ~ grimoire_firstChar += grimFirstCharTwelve
+        }
+
+
+
+
+        {
+            //Storylets legati alla cucina
+            - cooking_with_first_char.first_theme && grimoire_firstChar hasnt grimFirstCharKitchenOne:
+                ~ grimoire_firstChar += grimFirstCharKitchenOne  
+        }
+
+        {
+            - cooking_with_first_char.second_theme && grimoire_firstChar hasnt grimFirstCharKitchenTwo:
+                ~ grimoire_firstChar += grimFirstCharKitchenTwo     
+        }
+
+        {
+            - cooking_with_first_char.third_theme && grimoire_firstChar hasnt grimFirstCharKitchenThree:
+                ~ grimoire_firstChar += grimFirstCharKitchenThree
+        }
+
+        {
+            - ending_cooking_with_first_char && grimoire_firstChar hasnt grimFirstCharKitchenEnded:
+                ~ grimoire_firstChar += grimFirstCharKitchenEnded 
+        }
+
+        {
+            - food_gift_first_char && grimoire_firstChar hasnt grimFirstCharKitchenAlone:
+                ~ grimoire_firstChar += grimFirstCharKitchenAlone                
+        }
+
+
+
+
+        {
+            //Riscrittura
+            - rewriting_proposal_first_character.confession && grimoire_firstChar hasnt grimFirstCharProposal:
+                ~ grimoire_firstChar += grimFirstCharProposal
+        }
+
+        {
+            - rewriting_proposal_first_character.close && grimoire_firstChar hasnt grimFirstCharNewName:
+                ~ grimoire_firstChar += grimFirstCharNewName
+        }
+
+
+
+
+
+        {    
+            //Storylets speciali
+            - open_the_kitchen && grimoire_firstChar hasnt grimFirstOpenKitchen:
+                ~ grimoire_firstChar += grimFirstOpenKitchen
+                ~ grimoire_appendices += grimKitchenChitarra
+                //Cose legate all'evento
+                ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
+                ~ firstChar_PondInvite = true
+        }
+
+        {
+            - a_story_of_revenge && grimoire_firstChar hasnt grimFirstCharNovel:
+                ~ grimoire_firstChar += grimFirstCharNovel
+        }
+
+        {
+            - dog_first_char && grimoire_firstChar hasnt grimFirstCharDog:
+                ~ grimoire_firstChar += grimFirstCharDog
+        }
+
+
+
+                        /******************************
+
+                            Storylets SecondCharacter
+
+                        ********************************/
+         {
+            //Main storylets
+            - second_char_main_storylets.one && grimoire_secondChar hasnt grimSecondCharOne:
+                ~ grimoire_secondChar += grimSecondCharOne
+                //Dopo la prima chiacchierata lo sposto al pond, così almeno il discorso su Franco ha senso
+                ~ move_entity(SecondCharacter, Pond)
+        }
+
+        {    
+            - second_char_main_storylets.two && grimoire_secondChar hasnt grimSecondCharTwo:
+                ~ grimoire_secondChar += grimSecondCharTwo
+        }
+
+        {
+            - second_char_main_storylets.him_liar && grimoire_secondChar hasnt grimSecondCharThreeHim:
+                ~ grimoire_secondChar += grimSecondCharThreeHim   
+        }
+
+        {
+             - second_char_main_storylets.her_liar && grimoire_secondChar hasnt grimSecondCharThreeHer:
+                ~ grimoire_secondChar += grimSecondCharThreeHer    
+        }
+
+        {
+            - second_char_main_storylets.they_liar && grimoire_secondChar hasnt grimSecondCharThreeThey:
+                ~ grimoire_secondChar += grimSecondCharThreeThey    
+        }
+
+        {
+            - second_char_main_storylets.four && grimoire_secondChar hasnt grimSecondCharFour:
+                ~ grimoire_secondChar += grimSecondCharFour  
+        }
+
+        {
+            - second_char_main_storylets.five && grimoire_secondChar hasnt grimSecondCharFive:
+                ~ grimoire_secondChar += grimSecondCharFive
+        }
+
+        {
+            - second_char_main_storylets.six && grimoire_secondChar hasnt grimSecondCharSix:
+                ~ grimoire_secondChar += grimSecondCharSix
+        }
+
+        {
+            - second_char_main_storylets.seven && grimoire_secondChar hasnt grimSecondCharSeven:
+                ~ grimoire_secondChar += grimSecondCharSeven
+        }
+
+        {
+            - second_char_main_storylets.eight && grimoire_secondChar hasnt grimSecondCharEight:
+                ~ grimoire_secondChar += grimSecondCharEight    
+        }
+
+        {
+            - second_char_main_storylets.nine && grimoire_secondChar hasnt grimSecondCharNine:
+                ~ grimoire_secondChar += grimSecondCharNine  
+        }
+
+        {
+            - second_char_main_storylets.ten && grimoire_secondChar hasnt grimSecondCharTen:
+                ~ grimoire_secondChar += grimSecondCharTen 
+        }
+
+        {
+            - second_char_main_storylets.eleven && grimoire_secondChar hasnt grimSecondCharEleven:
+                ~ grimoire_secondChar += grimSecondCharEleven   
+        }
+
+        {
+            - second_char_main_storylets.twelve && grimoire_secondChar hasnt grimSecondCharTwelve:
+                ~ grimoire_secondChar += grimSecondCharTwelve
+        }
+
+
+
+        {
+            //Storylets legati alla cucina
+            - cooking_with_second_char.second_theme && grimoire_secondChar hasnt grimSecondCharKitchenOne:
+                ~ grimoire_secondChar += grimSecondCharKitchenOne  
+        }
+
+        {
+            - cooking_with_second_char.second_theme && grimoire_secondChar hasnt grimSecondCharKitchenTwo:
+                ~ grimoire_secondChar += grimSecondCharKitchenTwo     
+        }
+
+        {
+            - cooking_with_second_char.third_theme && grimoire_secondChar hasnt grimSecondCharKitchenThree:
+                ~ grimoire_secondChar += grimSecondCharKitchenThree
+        }
+
+        {
+            - ending_cooking_with_second_char && grimoire_secondChar hasnt grimSecondCharKitchenEnded:
+                ~ grimoire_secondChar += grimSecondCharKitchenEnded 
+        }
+
+        {
+            - food_gift_second_char && grimoire_secondChar hasnt grimSecondCharKitchenAlone:
+                ~ grimoire_secondChar += grimSecondCharKitchenAlone                
+        }
+
+
+
+
+        {
+            //Riscrittura
+            - rewriting_proposal_second_character.confession && grimoire_secondChar hasnt grimSecondCharProposal:
+                ~ grimoire_secondChar += grimSecondCharProposal
+        }
+
+        {
+            - rewriting_proposal_second_character.close && grimoire_secondChar hasnt grimSecondCharNewName:
+                ~ grimoire_secondChar += grimSecondCharNewName
+        }
+
+
+
+
+        {    
+            //Storylets speciali
+            - open_the_library && grimoire_secondChar hasnt grimSecondOpenLibrary:
+                ~ grimoire_secondChar += grimSecondOpenLibrary
+                //Così ci aspetta nella foresta
+                ~ secondChar_ForestInvite = true
+        }
+
+        {
+            - a_story_of_rebellion && grimoire_secondChar hasnt grimSecondCharNovel:
+                ~ grimoire_secondChar += grimSecondCharNovel
+        }
+
+        {
+            - dog_second_char && grimoire_secondChar hasnt grimSecondCharDog:
+                ~ grimoire_secondChar += grimSecondCharDog
+        }
+
+        {
+            - about_violence_and_peace && grimoire_secondChar hasnt grimSecondCharMentorPeace:
+                    ~ grimoire_secondChar += grimSecondCharMentorPeace
+        }
+
+        {
+            - carla_and_second_char_chit_chat && grimoire_secondChar hasnt grimSecondCharCarla:
+                    ~ grimoire_secondChar += grimSecondCharCarla
+
+        }
+
+
+                        /******************************
+
+                            Storylets ThirdCharacter
+
+                        ********************************/
+        {
+            //Main storylets
+            - third_char_main_storylets.one && grimoire_thirdChar hasnt grimThirdCharOne:
+                ~ grimoire_thirdChar += grimThirdCharOne
+        }
+
+        {
+            - third_char_main_storylets.two && grimoire_thirdChar hasnt grimThirdCharTwo:
+                ~ grimoire_thirdChar += grimThirdCharTwo
+        }
+
+        {
+            - third_char_main_storylets.three && grimoire_thirdChar hasnt grimThirdCharThree:
+                ~ grimoire_thirdChar += grimThirdCharThree
+        }
+
+        {
+            - third_char_main_storylets.four && grimoire_thirdChar hasnt grimThirdCharFour:
+                ~ grimoire_thirdChar += grimThirdCharFour  
+        }
+
+        {
+            - third_char_main_storylets.five && grimoire_thirdChar hasnt grimThirdCharFive:
+                ~ grimoire_thirdChar += grimThirdCharFive
+        }
+
+        {
+            - third_char_main_storylets.six && grimoire_thirdChar hasnt grimThirdCharSix:
+                ~ grimoire_thirdChar += grimThirdCharSix
+        }
+
+        {
+            - third_char_main_storylets.seven && grimoire_thirdChar hasnt grimThirdCharSeven:
+                ~ grimoire_thirdChar += grimThirdCharSeven
+        }
+
+        {
+            - third_char_main_storylets.eight && grimoire_thirdChar hasnt grimThirdCharEight:
+                ~ grimoire_thirdChar += grimThirdCharEight    
+        }
+
+        {
+            - third_char_main_storylets.nine && grimoire_thirdChar hasnt grimThirdCharNine:
+                ~ grimoire_thirdChar += grimThirdCharNine  
+        }
+
+        {
+            - third_char_main_storylets.ten && grimoire_thirdChar hasnt grimThirdCharTen:
+                ~ grimoire_thirdChar += grimThirdCharTen 
+        }
+
+        {
+            - third_char_main_storylets.eleven && grimoire_thirdChar hasnt grimThirdCharEleven:
+                ~ grimoire_thirdChar += grimThirdCharEleven   
+        }
+
+        {
+            - third_char_main_storylets.twelve && grimoire_thirdChar hasnt grimThirdCharTwelve:
+                ~ grimoire_thirdChar += grimThirdCharTwelve
+        }
+
+
+
+
+        {
+            //Storylets legati alla cucina
+            - cooking_with_third_char.first_theme && grimoire_thirdChar hasnt grimThirdCharKitchenOne:
+                ~ grimoire_thirdChar += grimThirdCharKitchenOne  
+        }
+
+        {
+            - cooking_with_third_char.second_theme && grimoire_thirdChar hasnt grimThirdCharKitchenTwo:
+                ~ grimoire_thirdChar += grimThirdCharKitchenTwo     
+        }
+
+        {
+            - cooking_with_third_char.third_theme && grimoire_thirdChar hasnt grimThirdCharKitchenThree:
+                ~ grimoire_thirdChar += grimThirdCharKitchenThree
+        }
+
+        {
+            - ending_cooking_with_third_char && grimoire_thirdChar hasnt grimThirdCharKitchenEnded:
+                ~ grimoire_thirdChar += grimThirdCharKitchenEnded 
+        }
+
+        {
+            - food_gift_third_char && grimoire_thirdChar hasnt grimThirdCharKitchenAlone:
+                ~ grimoire_thirdChar += grimThirdCharKitchenAlone                
+        }
+
+
+
+
+        {
+            //Riscrittura
+            - rewriting_proposal_third_character.confession && grimoire_thirdChar hasnt grimThirdCharProposal:
+                ~ grimoire_thirdChar += grimThirdCharProposal
+        }
+
+        {
+            - rewriting_proposal_third_character.close && grimoire_thirdChar hasnt grimThirdCharNewName:
+                ~ grimoire_thirdChar += grimThirdCharNewName
+        }
+
+
+
+
+        {        
+            //Storylets speciali
+            - open_the_nest && grimoire_thirdChar hasnt grimThirdOpenNest:
+                ~ grimoire_thirdChar += grimThirdOpenNest
+                ~ grimoire_appendices += grimSigilsBoccale
+                //Spostamenti legati all'evento
+                ~ thirdChar_LibraryInvite = false
+                ~ move_entity(ThirdCharacter, Forest)
+        }
+
+        {
+            - third_read_story_library && grimoire_thirdChar hasnt grimThirdCharNovel:
+                ~ grimoire_thirdChar += grimThirdCharNovel
+        }
+
+        {
+            - dog_third_char && grimoire_thirdChar hasnt grimThirdCharDog:
+                ~ grimoire_thirdChar += grimThirdCharDog
+
+        }
+
+                        /******************************
+
+                            Storylets FourthCharacter
+
+                        ********************************/
+
+                        /******************************
+
+                            Storylets FifthCharacter
+
+                        ********************************/
+        {
+            //Tutorial
+            - tutorial_mentorTalkingChoiceRelationship && grimoire_appendices hasnt grimChoicesMentor:
+                ~ grimoire_appendices += grimChoicesMentor
+                ~ grimoire_fifthChar += grimChoicesMentor
+        }
+
+        {
+            - tutorial_mentorInkAndYouAreARewriter && grimoire_appendices hasnt grimInkMentor:
+                ~ grimoire_appendices += grimInkMentor
+        }
+
+        {
+            - tutorial_mentorInkAndRewriting && grimoire_appendices hasnt grimRewritingMentor:
+                ~ grimoire_appendices += grimRewritingMentor
+        }
+
+        {
+            - about_greenhouse && grimoire_appendices hasnt grimGreenhouseMentor:
+                ~ grimoire_appendices += grimGreenhouseMentor  
+        }
+
+        {
+            - about_nest && grimoire_fifthChar hasnt grimKitchenMentor:
+                ~ grimoire_appendices += grimKitchenMentor                  
+        }
+
+        {
+            - about_nest && grimoire_appendices hasnt grimSigilsMentor:
+                ~ grimoire_appendices += grimSigilsMentor                  
+        }
+        
+        {
+
+            //Main storylets
+            - knowing_mentor_character.one && grimoire_fifthChar hasnt grimMentorOne:
+                ~ grimoire_fifthChar += grimMentorOne
+        }
+
+        {
+            - knowing_mentor_character.two && grimoire_fifthChar hasnt grimMentorTwo:
+                ~ grimoire_fifthChar += grimMentorTwo
+        }
+
+        {
+            - knowing_mentor_character.three && grimoire_fifthChar hasnt grimMentorThree:
+                ~ grimoire_fifthChar += grimMentorThree    
+        }
+
+        {
+            - knowing_mentor_character.four && grimoire_fifthChar hasnt grimMentorFour:
+                ~ grimoire_fifthChar += grimMentorFour  
+        }
+
+        {
+            - knowing_mentor_character.five && grimoire_fifthChar hasnt grimMentorFive:
+                ~ grimoire_fifthChar += grimMentorFive
+
+            - knowing_mentor_character.six && grimoire_fifthChar hasnt grimMentorSix:
+                ~ grimoire_fifthChar += grimMentorSix
+        }
+
+        {
+            - knowing_mentor_character.seven && grimoire_fifthChar hasnt grimMentorSeven:
+                ~ grimoire_fifthChar += grimMentorSeven
+        }
+
+        {
+            - knowing_mentor_character.eight && grimoire_fifthChar hasnt grimMentorEight:
+                ~ grimoire_fifthChar += grimMentorEight    
+        }
+
+        {
+            - knowing_mentor_character.nine && grimoire_fifthChar hasnt grimMentorNine:
+                ~ grimoire_fifthChar += grimMentorNine  
+        }
+
+        {
+            - knowing_mentor_character.ten && grimoire_fifthChar hasnt grimMentorEight:
+                ~ grimoire_fifthChar += grimMentorEight 
+        }
+
+        {
+            - knowing_mentor_character.eleven && grimoire_fifthChar hasnt grimMentorEleven:
+                ~ grimoire_fifthChar += grimMentorEleven   
+        }
+
+        {
+            - knowing_mentor_character.twelve && grimoire_fifthChar hasnt grimMentorTwelve:
+                ~ grimoire_fifthChar += grimMentorTwelve
+        }
+
+
+
+        {        
+            //StoryletsSpeciali
+            - the_witch_and_the_mentor && grimoire_fifthChar hasnt grimMentorWitchOne:
+                ~ grimoire_fifthChar += grimMentorWitchOne
+        }
+
+        {
+            - about_not_mandatory_work && grimoire_fifthChar hasnt grimMentorNotMandatory:
+                ~ grimoire_fifthChar += grimMentorNotMandatory    
+        }
+
+
+        {
+            - that_little_liar_storylet && grimoire_fifthChar hasnt grimMentorLiar:
+                ~ grimoire_fifthChar += grimMentorLiar    
+        }
+
+        {
+            - addressing_violence && grimoire_fifthChar hasnt grimMentorViolence:
+                ~ grimoire_fifthChar += grimMentorViolence
+                //Questo storylet genera uno spostamento di Mentore
+                ~ change_entity_place(Mentor)
+        }
+
+        {
+            - about_violence_and_peace && grimoire_fifthChar hasnt grimSecondCharMentorPeace:
+                    ~ grimoire_fifthChar += grimSecondCharMentorPeace
+                    //A fine discorso, Riccio se ne va
+                    ~ change_entity_place(SecondCharacter)    
+        }
+
+        {
+            - a_story_of_transformation && grimoire_fifthChar hasnt grimMentorNovel:
+                ~ grimoire_fifthChar += grimMentorNovel 
+        }
+
+        {
+            - dog_mentor && grimoire_fifthChar hasnt grimMentorDog:
+                ~ grimoire_fifthChar += grimMentorDog   
+        }
+
+        {
+            - about_olobino && grimoire_fifthChar hasnt grimMentorOlobinoUno:
+                ~ grimoire_fifthChar += grimMentorOlobinoUno
+        }
+
+        {
+            - again_about_olobino && grimoire_fifthChar hasnt grimMentorOlobinoDue:
+                ~ grimoire_fifthChar += grimMentorOlobinoDue    
+        }
+
+        {
+            - mentor_rage && grimoire_fifthChar hasnt grimMentorRage:
+                ~ grimoire_fifthChar += grimMentorRage    
+        }
+
+        {
+            - (first_char_new_mail or second_char_new_mail or third_char_new_mail) && grimoire_fifthChar hasnt grimMentorNewMail:
+                ~ grimoire_fifthChar += grimMentorNewMail    
+        }
+
+                        /******************************
+
+                            Storylets Witch
+
+                        ********************************/
+                        
+        {
+            //Tutorial e supporto
+            - tutorial_witchRelationship && grimoire_appendices hasnt grimChoicesWitch:
+                ~ grimoire_appendices += grimChoicesWitch
+        }
+
+        {
+            - tutorial_witchSigils && grimoire_appendices hasnt grimSigilsWitch:
+                ~ grimoire_appendices += grimSigilsWitch
+        }
+
+        {
+            - witch_allSigils_opening && grimoire_appendices hasnt grimWitchAllSigilsOpened:
+                ~ grimoire_appendices += grimWitchAllSigilsOpened  
+        }
+
+        {
+        
+            //Debrief
+            - witch_first_debrief && grimoire_witch hasnt grimWitchFirstDebrief:
+                ~ grimoire_witch += grimWitchFirstDebrief
+        }
+
+        {
+            - witch_second_debrief && grimoire_witch hasnt grimWitchSecondDebrief:
+                ~ grimoire_witch += grimWitchSecondDebrief
+        }
+
+        {
+            - witch_third_debrief && grimoire_witch hasnt grimWitchThirdDebrief:
+                ~ grimoire_witch += grimWitchThirdDebrief
+        }
+
+        {
+            - witch_fourth_debrief && grimoire_witch hasnt grimWitchFourthDebrief:
+                ~ grimoire_witch += grimWitchFourthDebrief  
+        }
+
+        {
+            - witch_fifth_debrief && grimoire_witch hasnt grimWitchFifthDebrief:
+                ~ grimoire_witch += grimWitchFifthDebrief                  
+        }
+
+        {
+            //Main storylets
+            - open_the_dump && grimoire_witch hasnt grimWitchOpenDump:
+                ~ grimoire_witch += grimWitchOpenDump
+                //Tutte le cose legate all'apertura del dump
+                ~ move_entity(FromForestToDumpBlocked, Safekeeping)
+                ~ move_entity(FromForestToDump, Forest)
+                ~ move_entity(mapDump, TrainStop)
+                ~ player_accessiblePlaces += Dump
+        }
+
+        {
+            - witch_intro && grimoire_witch hasnt grimWitchIntro:
+                ~ grimoire_witch += grimWitchIntro
+        }
+
+        {
+            - the_witch_and_the_frog && grimoire_witch hasnt grimWitchFrog:
+                ~ grimoire_witch += grimWitchFrog
+        }
+
+        {
+            - about_the_book && grimoire_witch hasnt grimWitchBook:
+                ~ grimoire_witch += grimWitchBook    
+        }
+
+        {            
+            //Storia personale strega
+            - witch_first_confession && grimoire_witch hasnt grimWitchMainOne:
+                ~ grimoire_witch += grimWitchMainOne    
+        }
+
+        {
+            - witch_second_confession && grimoire_witch hasnt grimWitchMainTwo:
+                ~ grimoire_witch += grimWitchMainTwo  
+        }
+
+        {
+            - witch_third_confession && grimoire_witch hasnt grimWitchMainThree:
+                ~ grimoire_witch += grimWitchMainThree
+        }
+
+        {
+            - witch_fourth_confession && grimoire_witch hasnt grimWitchMainFour:
+                ~ grimoire_witch += grimWitchMainFour
+        }
+
+        {
+            - witch_fifth_confession && grimoire_witch hasnt grimWitchMainFive:
+                ~ grimoire_witch += grimWitchMainFive
+        }
+
+                        /******************************
+
+                            Storylets Letters
+
+                        ********************************/
+
+    //FirstCharacter    
+    {
+        - first_character_notes.one && grimoire_firstChar hasnt grimFirstCharLetterOne:
+                ~ grimoire_firstChar += grimFirstCharLetterOne
+    }
+
+    {
+        - first_character_notes.two && grimoire_firstChar hasnt grimFirstCharLetterTwo:
+                ~ grimoire_firstChar += grimFirstCharLetterTwo                 
+    }
+
+    {
+        - first_character_notes.three && grimoire_firstChar hasnt grimFirstCharLetterThree:
+                ~ grimoire_firstChar += grimFirstCharLetterThree
+    }
+
+    //SecondCharacter
+    {
+        - second_character_notes.one && grimoire_secondChar hasnt grimSecondCharLetterOne:
+                ~ grimoire_secondChar += grimSecondCharLetterOne
+    }
+
+    {
+        - second_character_notes.two && grimoire_secondChar hasnt grimSecondCharLetterTwo:
+                ~ grimoire_secondChar += grimSecondCharLetterTwo                 
+    }
+
+    {
+        - second_character_notes.three && grimoire_secondChar hasnt grimSecondCharLetterThree:
+                ~ grimoire_secondChar += grimSecondCharLetterThree
+    }                
+
+    //ThirdCharacter 
+    {
+        - third_character_notes.one && grimoire_thirdChar hasnt grimThirdCharLetterOne:
+                ~ grimoire_thirdChar += grimThirdCharLetterOne
+    }
+
+    {
+        - third_character_notes.two && grimoire_thirdChar hasnt grimThirdCharLetterTwo:
+                ~ grimoire_thirdChar += grimThirdCharLetterTwo                 
+    }
+
+    {
+        - third_character_notes.three && grimoire_thirdChar hasnt grimThirdCharLetterThree:
+                ~ grimoire_thirdChar += grimThirdCharLetterThree
+    }
+
+    //FourthCharacter
+
+    //FifthCharacter
+
+    //Azioni condivise
+        //Cooldown storylets comuni, per evitare catena.
+            ~ png_commonPauseTalking = true
+        //L'animazione per via dell'informazione nuova
+            @animation:RewriterBook  
+        //Gestione crescita piante
+            -> growing_check ->
+        //Check stato achievements
+            -> achievements_onGame_statusUpdate_RM ->
+            -> achievements_onGame_statusUpdate_GM ->
+        //E la situazione delle task di Franco
+            -> notification_system ->     
 ->->        

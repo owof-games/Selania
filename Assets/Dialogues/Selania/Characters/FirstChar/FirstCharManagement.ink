@@ -305,173 +305,22 @@
         
 //Formula per la chiusura di uno storylet
 === first_char_closing_storylet
-        //Questo evita che venga proposto un altro storylet fino a quando la pausa non è finita
-        ~ firstChar_pauseTalking = firstChar_pauseDuration
-        //Questo è per la gestione delle domande
-        ~ firstChar_justTalked = true
-        //E cooldown storylets comuni, per evitare catena.
-        ~ png_commonPauseTalking = true
-        //L'animazione per via dell'informazione nuova
-        @animation:RewriterBook
-        //E poi facciamo il check degli storylets.
-        {
-            //Main storylets
-            - first_char_main_storylets.one && grimoire_firstChar hasnt grimFirstCharOne:
-                ~ grimoire_firstChar += grimFirstCharOne
-        }
+    //Questo evita che venga proposto un altro storylet fino a quando la pausa non è finita
+    ~ firstChar_pauseTalking = firstChar_pauseDuration
+    //Questo è per la gestione delle domande
+    ~ firstChar_justTalked = true
 
-        {
-            - first_char_main_storylets.two && grimoire_firstChar hasnt grimFirstCharTwo:
-                ~ grimoire_firstChar += grimFirstCharTwo
-        }
-
-        {
-            - first_char_main_storylets.three && grimoire_firstChar hasnt grimFirstCharThree:
-                ~ grimoire_firstChar += grimFirstCharThree    
-        }
-
-        {
-            - first_char_main_storylets.four && grimoire_firstChar hasnt grimFirstCharFour:
-                ~ grimoire_firstChar += grimFirstCharFour  
-        }
-
-        {
-            - first_char_main_storylets.five && grimoire_firstChar hasnt grimFirstCharFive:
-                ~ grimoire_firstChar += grimFirstCharFive
-        }
-
-        {
-            - first_char_main_storylets.six && grimoire_firstChar hasnt grimFirstCharSix:
-                ~ grimoire_firstChar += grimFirstCharSix
-        }
-
-        {
-            - first_char_main_storylets.seven && grimoire_firstChar hasnt grimFirstCharSeven:
-                ~ grimoire_firstChar += grimFirstCharSeven
-        }
-
-        {
-            - first_char_main_storylets.eight && grimoire_firstChar hasnt grimFirstCharEight:
-                ~ grimoire_firstChar += grimFirstCharEight    
-        }
-
-        {
-            - first_char_main_storylets.nine && grimoire_firstChar hasnt grimFirstCharNine:
-                ~ grimoire_firstChar += grimFirstCharNine  
-        }
-
-        {
-            - first_char_main_storylets.ten && grimoire_firstChar hasnt grimFirstCharTen:
-                ~ grimoire_firstChar += grimFirstCharTen 
-        }
-
-        {
-            - first_char_main_storylets.eleven && grimoire_firstChar hasnt grimFirstCharEleven:
-                ~ grimoire_firstChar += grimFirstCharEleven   
-        }
-
-        {
-            - first_char_main_storylets.twelve && grimoire_firstChar hasnt grimFirstCharTwelve:
-                ~ grimoire_firstChar += grimFirstCharTwelve
-        }
+    //Aggiornamento storylets
+    -> grimoire_storylets_updater ->
 
 
-
-
-        {
-            //Storylets legati alla cucina
-            - cooking_with_first_char.first_theme && grimoire_firstChar hasnt grimFirstCharKitchenOne:
-                ~ grimoire_firstChar += grimFirstCharKitchenOne  
-        }
-
-        {
-            - cooking_with_first_char.second_theme && grimoire_firstChar hasnt grimFirstCharKitchenTwo:
-                ~ grimoire_firstChar += grimFirstCharKitchenTwo     
-        }
-
-        {
-            - cooking_with_first_char.third_theme && grimoire_firstChar hasnt grimFirstCharKitchenThree:
-                ~ grimoire_firstChar += grimFirstCharKitchenThree
-        }
-
-        {
-            - ending_cooking_with_first_char && grimoire_firstChar hasnt grimFirstCharKitchenEnded:
-                ~ grimoire_firstChar += grimFirstCharKitchenEnded 
-        }
-
-        {
-            - food_gift_first_char && grimoire_firstChar hasnt grimFirstCharKitchenAlone:
-                ~ grimoire_firstChar += grimFirstCharKitchenAlone                
-        }
-
-
-
-
-        {
-            //Riscrittura
-            - rewriting_proposal_first_character.confession && grimoire_firstChar hasnt grimFirstCharProposal:
-                ~ grimoire_firstChar += grimFirstCharProposal
-        }
-
-        {
-            - rewriting_proposal_first_character.close && grimoire_firstChar hasnt grimFirstCharNewName:
-                ~ grimoire_firstChar += grimFirstCharNewName
-        }
-
-
-
-
-
-        {    
-            //Storylets speciali
-            - open_the_kitchen && grimoire_firstChar hasnt grimFirstOpenKitchen:
-                ~ grimoire_firstChar += grimFirstOpenKitchen
-                ~ grimoire_appendices += grimKitchenChitarra
-                //Cose legate all'evento
-                ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
-                ~ firstChar_PondInvite = true
-        }
-
-        {
-            - a_story_of_revenge && grimoire_firstChar hasnt grimFirstCharNovel:
-                ~ grimoire_firstChar += grimFirstCharNovel
-        }
-
-        {
-            - dog_first_char && grimoire_firstChar hasnt grimFirstCharDog:
-                ~ grimoire_firstChar += grimFirstCharDog
-        }
-
-
-        //Aggiornamento lista di quelli comuni
-        -> grimoire_common_storylets_updater ->
-        //E check achievement nel caso avessimo finito i dodici storylets principali
-        -> achievements_onGame_statusUpdate_RM ->
-        //Gestione crescita piante
-        -> growing_check ->
-        //E la situazione delle task di Franco
-        -> notification_system ->
-        
 ->->
 
 === first_char_closing_letters
     ~ firstChar_mailPause = firstChar_mailPauseDuration
-    @animation:RewriterBook
 
-    {
-        - first_character_notes.one && grimoire_firstChar hasnt grimFirstCharLetterOne:
-                ~ grimoire_firstChar += grimFirstCharLetterOne
+    //Aggiornamento storylets
+    -> grimoire_storylets_updater ->
 
-        - first_character_notes.two && grimoire_firstChar hasnt grimFirstCharLetterTwo:
-                ~ grimoire_firstChar += grimFirstCharLetterTwo                 
 
-        - first_character_notes.three && grimoire_firstChar hasnt grimFirstCharLetterThree:
-                ~ grimoire_firstChar += grimFirstCharLetterThree
-    }
-
-    //Aggiornamento lista di quelli comuni
-        -> grimoire_common_storylets_updater ->
-    //E check achievement nel caso avessimo finito i dodici storylets principali
-        -> achievements_onGame_statusUpdate_RM ->
-        -> notification_system ->    
--> main
+->->
