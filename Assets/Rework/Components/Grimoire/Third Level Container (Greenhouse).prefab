@@ -50,7 +50,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965648471515830682}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -126,7 +126,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 220.65198, y: -139.10669}
+  m_AnchoredPosition: {x: 220.65198, y: -118}
   m_SizeDelta: {x: 580.348, y: -485.4344}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &5512999813101240786
@@ -157,17 +157,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor
-    sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum
-    dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem
-    ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet,
-    Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit
-    amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor
-    sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, <b>Lorem ipsum</b>
-    dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem
-    ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet,
-    Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit
-    amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, '
+  m_text: "Il cambiamento pu\xF2 essere come ghiaccio nelle vene che blocca le gambe.
+    La strada di fronte, ma non riusciamo a fare il primo passo. La <b><i>Bacca dell'Addolorata</b></i>
+    ci invita a prendere un respiro e iniziare. \xC8 comune trovarla all'incrocio
+    fra pi\xF9 strade, piantata dalle madri quando l3 figli3 diventano grandi, per
+    infondere coraggio. Il nome \xE8 frutto di una falsa credenza: si dice che la
+    bacca cresca solo se una madre soffre. (Per l'editor: posso scrivere <b>cazzate</b>?).\n\n<b>Pianta
+    utilizzata in cucina con Chitarra.</b>\nDopo il dono hai ottenuto 1 inchiostro.\n\n<b>Pianta
+    utilizzata in cucina con Riccio.</b>\nDopo il dono hai ottenuto 2 inchiostro.\n\n<b>Pianta
+    recuperata da Franco.</b>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 68ea6777477fba94da4e0a1f20c20eed, type: 2}
   m_sharedMaterial: {fileID: 5052396341478960677, guid: 68ea6777477fba94da4e0a1f20c20eed, type: 2}
@@ -194,8 +192,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26
-  m_fontSizeBase: 26
+  m_fontSize: 27
+  m_fontSizeBase: 27
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -206,9 +204,9 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -10
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: -20
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
