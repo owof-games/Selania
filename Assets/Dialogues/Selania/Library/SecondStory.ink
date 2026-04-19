@@ -11,7 +11,7 @@
                      -> refresh_book_lists ->
             }  
     -> DarkLibraryModeOn ->
-    ~ enableBigDialogue()
+    
     
     "Io li odio."<N>"Chi non li odia, Alchemilla."<N>"Non li sopporto. Vorrei vederli soffrire, agonizzare, bruciare…"<N>Una prepotente lingua di fuoco si alzò a lambire la pentola di peltro che sobbolliva vivacemente, penzolando sul falò.<N>"Se potessi, Alchemilla" borbottò Bergamotto "li infilzerei allo spiedo io stessa.<N>Le braci si arroventarono, illuminandosi di un rosso cupissimo, per un solo istante. Forsizia le rimestò diligentemente. "Lasciatevi andare, ragazze" le esortò. "Ci serve più fuoco."<N>"Villani, prepotenti…" <N>"Maledetti vigliacchi" rimbrottò Bergamotto.<N>"Sudici, lerci…"
 
@@ -29,11 +29,11 @@
     //Check per achievement racconti
     -> achievements_onGame_statusUpdate_RM ->
 
-        + <i>Vorrei leggere ancora.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Vorrei leggere ancora.
+            
            -> book_test_intro
-        + <i>Me ne vado.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
+            
             -> DarkLibraryModeOff ->
                      
             -> main
@@ -41,7 +41,7 @@
 === francesca_tosca_raimondi
 <b>Trecentotrenta metri.</b> di Francesca Tosca Raimondi (she/her).<N>Trigger warning: rabbia domestica.
         
-            + <i>Inizio la lettura.
+            +  \ {charTag(PG, "neutral")}:       <i>Inizio la lettura.
             //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
                     {
                         - library_unreadStories has FrancescaToscaRaimondi:
@@ -49,14 +49,14 @@
                             ~ library_readStories += FrancescaToscaRaimondi
                              -> refresh_book_lists ->
                     }  
-                + {library_unreadStories has FrancescaToscaRaimondi}<i>Per ora non me la sento di affrontare questo tema.
+                +  \ {charTag(PG, "neutral")}:       {library_unreadStories has FrancescaToscaRaimondi}<i>Per ora non me la sento di affrontare questo tema.
                         -> tempTW -> book_test_intro
-                + {library_unreadStories has FrancescaToscaRaimondi}<i>Non voglio più incontrare questa storia.
+                +  \ {charTag(PG, "neutral")}:       {library_unreadStories has FrancescaToscaRaimondi}<i>Non voglio più incontrare questa storia.
                     ~ library_unreadStories -= FrancescaToscaRaimondi
                         -> refresh_book_lists -> book_test_intro
                 -
             -> DarkLibraryModeOn ->
-            ~ enableBigDialogue()
+            
             
             
         Uno, due, tre, quattro.<N>Quattro per trecentotrenta.<N>A scuola non abbiamo ancora fatto le moltiplicazioni, ma Sara mi ha detto che è così che si capisce dove cadrà il fulmine durante un temporale. <N>Dice che sono “prevedibili”.<N>A me piacciono i lampi perché sembrano pesciolini luminosi tra le nuvole nere. <N>Mi ricordano i fuochi d'artificio.
@@ -76,12 +76,12 @@
         //Check per achievement racconti
         -> achievements_onGame_statusUpdate_RM ->
 
-        + <i>Vorrei leggere ancora.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Vorrei leggere ancora.
+            
            -> book_test_intro
         
-        + <i>Me ne vado.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
+            
             -> DarkLibraryModeOff ->
             -> main
             
@@ -97,7 +97,7 @@
         }  
             
         -> DarkLibraryModeOn ->
-        ~ enableBigDialogue()
+        
         
     Volevo che mia madre fosse forte. La vedevo sprofondare in un matrimonio infelice, in una vita senza orizzonti. La vedevo arrendersi, lei che era sempre stata per me un esempio di determinazione, rigore e autodisciplina. Lo vivevo come un tradimento, e mi arrabbiavo con lei per la persona che non riusciva a essere. <N>Dietro la rabbia c'è sempre una ferita aperta, un dolore che urla per essere visto. Proprio perché le volevo bene, non riuscivo ad accettare che diventasse l'ombra della persona che era stata, della persona che ammiravo.
     
@@ -115,12 +115,12 @@
     //Check per achievement racconti
     -> achievements_onGame_statusUpdate_RM ->        
     
-        + <i>Vorrei leggere ancora.
-                ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Vorrei leggere ancora.
+                
            -> book_test_intro
         
-        + <i>Me ne vado.
-                ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
+                
             -> DarkLibraryModeOff ->
             -> main
             

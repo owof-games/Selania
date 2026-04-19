@@ -10,7 +10,7 @@
                  -> refresh_book_lists ->
         }  
     -> DarkLibraryModeOn ->
-    ~ enableBigDialogue()
+    
     
 
     Il sole stava tramontando ad occidente e illuminava con i suoi raggi obliqui le chiome degli ulivi.<N>Liliana osservava il viale, dritto, che separava la casa dal cancello; al di là la strada era deserta.<N>Silenziosa, come casa sua.<N>Ogni tanto Artù e Marcella miagolavano, cercando la sua attenzione, mentre lei osservava il mondo fuori: era felice quando richiamavano il suo sguardo, era come tornare a respirare. <N>La notte non dormiva più.
@@ -31,11 +31,11 @@
     //Check per achievement racconti
     -> achievements_onGame_statusUpdate_RM ->
 
-        + <i>Vorrei leggere ancora.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Vorrei leggere ancora.
+            
            -> book_test_intro
-        + <i>Me ne vado.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
+            
             -> DarkLibraryModeOff ->
             -> main
 
@@ -43,7 +43,7 @@
 === maura
     <b>Polvere</b> di Maura (she/they).<N>Instagram: @maura_sacca<N>Trigger warning: violenza fisica.
        
-        + <i>Inizio la lettura.
+        +  \ {charTag(PG, "neutral")}:       <i>Inizio la lettura.
     //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has Maura:
@@ -51,14 +51,14 @@
                     ~ library_readStories += Maura
                      -> refresh_book_lists ->
             }  
-        + {library_unreadStories has Maura}<i>Per ora non me la sento di affrontare questo tema.
+        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has Maura}<i>Per ora non me la sento di affrontare questo tema.
                 -> tempTW -> book_test_intro
-        + {library_unreadStories has Maura}<i>Non voglio più incontrare questa storia.
+        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has Maura}<i>Non voglio più incontrare questa storia.
             ~ library_unreadStories -= Maura
                 -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
-    ~ enableBigDialogue()
+    
     
     Me lo chiede per l'ennesima volta, dopo i miei già innumerevoli no.<N>A questo punto faccio uscire tutta la mia rabbia urlando fino a perdere il respiro.<N>Tirando fuori tutte le cose che mi ero tenuta dentro.<N>E come tutte le volte che provo ad alzare la voce e a farmi sentire lui mi guarda come se fossi pazza.<N>E sì, lo sono.<N>Sono pazza.<N>Quella pazzia che quando fuoriesce non puoi più controllare.
 
@@ -71,11 +71,11 @@
     //Check per achievement racconti
     -> achievements_onGame_statusUpdate_RM ->
 
-        + <i>Vorrei leggere ancora.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Vorrei leggere ancora.
+            
            -> book_test_intro
-        + <i>Me ne vado.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
+            
             -> DarkLibraryModeOff ->
                      
             -> main
@@ -83,7 +83,7 @@
 
 === simo
 <b>SCP</b> di Simo (they/he).<N>Instagram: @il_radioattivo<N>Trigger violenza, deadnaming, morte.
-        + <i>Inizio la lettura.
+        +  \ {charTag(PG, "neutral")}:       <i>Inizio la lettura.
 //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has Simo:
@@ -91,14 +91,14 @@
                     ~ library_readStories += Simo
                      -> refresh_book_lists ->
             }        
-        + {library_unreadStories has Simo}<i>Per ora non me la sento di affrontare questo tema.
+        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has Simo}<i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        + {library_unreadStories has Simo}<i>Non voglio più incontrare questa storia.
+        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has Simo}<i>Non voglio più incontrare questa storia.
             ~ library_unreadStories -= Simo
                 -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
-    ~ enableBigDialogue()
+    
 
 
     Da anni studio gli SCP. Avete sicuramente presente, dai, quegli eventi paranormali che in qualche modo connettono il nostro mondo a un mondo alternativo, diverso, alieno - questo in realtà non è molto chiaro.<N>Come appaiono? Come oggetti o luoghi che in qualche modo non si comportano come dovrebbero.<N>Da un rasoio elettrico che si accende automaticamente quando lo si direziona verso nord a una sedia che va in autocombustione quando un sente il suono di un tram.<N>Ecco, in questo mio studio, in realtà, ho sempre finito per imbattermi in SCP legati in qualche modo a specifiche emozioni.
@@ -119,19 +119,19 @@
     //Check per achievement racconti
     -> achievements_onGame_statusUpdate_RM ->
 
-        + <i>Vorrei leggere ancora.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Vorrei leggere ancora.
+            
            -> book_test_intro
         
-        + <i>Me ne vado.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
+            
             -> DarkLibraryModeOff ->
             -> main
             
 
 === letizia_vaccarella
 <b>Dodici stelle</b> di Letizia Vaccarella (she/her).<N>Instagram: @aidoruinquantumland<N>Trigger warning: depressione.
-        + <i>Inizio la lettura.
+        +  \ {charTag(PG, "neutral")}:       <i>Inizio la lettura.
 //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has LetiziaVaccarella:
@@ -139,14 +139,14 @@
                     ~ library_readStories += LetiziaVaccarella
                      -> refresh_book_lists ->
             }        
-        + {library_unreadStories has LetiziaVaccarella}<i>Per ora non me la sento di affrontare questo tema.
+        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has LetiziaVaccarella}<i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        + {library_unreadStories has LetiziaVaccarella}<i>Non voglio più incontrare questa storia.
+        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has LetiziaVaccarella}<i>Non voglio più incontrare questa storia.
             ~ library_unreadStories -= LetiziaVaccarella
                 -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
-    ~ enableBigDialogue()
+    
     
     Jodorowsky diceva che qualsiasi guarigione richiede la disobbedienza perché alla base di ogni malattia c'è un divieto.<N>E se da un lato mi dico ma che cazzo ne sa Jodorowsky, lui leggeva i tarocchi di Marsiglia, io sono da Rider-Waite anzi da Waite-Smith; dall'altra, mentre conto le stelle disegnate sulla corona dell'imperatrice, inizio a pensare alla mia malattia. <N>Credo di averla da sempre, o comunque non mi ricordo di non averla avuta.<N>Di solito i sintomi sono blandi e facili da tenere sotto controllo, per questo guardandomi non diresti mai che sono malata.<N>Ma lei c'è, è sempre lì.
     
@@ -168,12 +168,12 @@
     //Check per achievement racconti
     -> achievements_onGame_statusUpdate_RM ->
 
-        + <i>Vorrei leggere ancora.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Vorrei leggere ancora.
+            
            -> book_test_intro
         
-        + <i>Me ne vado.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
+            
             -> DarkLibraryModeOff ->
             -> main
             
@@ -189,7 +189,7 @@
 //         }
 // <b>Giallo</b> di Queerginia Wolf/Marco Spelgatti (she/he/they).<N>Instagram: @queerginiawolf
 //         -> DarkLibraryModeOn ->
-//         ~ enableBigDialogue()
+//         
 
 //     Non hai fatto nulla di male.<N>Lanciavi i tuoi fiori nell'aria, il polline rendeva il sentiero giallo per settimane.<N>Accoglievi gli uccelli, offrivi i tuoi vecchi rami ai cani felici che correvano sopra le tue radici. <N>Tenevi ferma la terra, assorbivi l'acqua.<N>Trasformavi il sole in ombra, in aria.<N>Stamani sono passata e ti hanno tagliato.<N>Ci hanno messo tre ore e due minuti a cancellare i tuoi decenni.<N>A segare i tuoi rami fioriti, il tuo tronco su cui le formiche scendevano e salivano.
     
@@ -200,11 +200,11 @@
 //Check per achievement racconti
 //    -> achievements_onGame_statusUpdate_RM ->
 
-//         + <i>Vorrei leggere ancora.
-//             ~ disableBigDialogue()
+//         +  \ {charTag(PG, "neutral")}:       <i>Vorrei leggere ancora.
+//             
 //            -> book_test_intro
-//         + <i>Me ne vado.
-//             ~ disableBigDialogue()
+//         +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
+//             
 //             -> DarkLibraryModeOff ->
 //             -> main
     

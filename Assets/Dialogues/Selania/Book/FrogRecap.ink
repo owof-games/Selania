@@ -1,6 +1,6 @@
 === frog_character_recap
 + (check){are_two_entities_together(FrogRecap, PG)} [FrogRecap]
-    ~ enableBigDialogue()
+    
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)

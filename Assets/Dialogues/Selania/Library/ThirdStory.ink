@@ -10,7 +10,7 @@
         }  
         
     -> DarkLibraryModeOn ->
-    ~ enableBigDialogue()
+    
 
 
     È iniziato tutto in una giornata mediocre.<N>Il sole era coperto da nuvole scialbe, e nell'aria ancora si sentiva l'olezzo dei campi fertilizzati di fresco.<N>Tutto è iniziato in una giornata così, anzi, tutto è iniziato nella vasca delle aragoste del ristorante Da Sallustio, in Porta Genova, in una giornata così.<N>Di colpo, uno dei sassolini del fondo dell'acquario ha iniziato a saltare.
@@ -30,11 +30,11 @@
     //Check per achievement racconti
     -> achievements_onGame_statusUpdate_RM ->
 
-        + <i>Vorrei leggere ancora.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Vorrei leggere ancora.
+            
            -> book_test_intro
-        + <i>Me ne vado.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
+            
             -> DarkLibraryModeOff ->
                      
             -> main
@@ -43,7 +43,7 @@
 === loris_casagrandi
 <b>Volevo essere solo cervello</b>, di Loris Casagrandi (he/him - she/her).<N>Instagram: @lorisdesign4exp<N>Trigger warning: riferimento a gesti ti autolesionismo o violenza.
         
-        + <i>Inizio la lettura.
+        +  \ {charTag(PG, "neutral")}:       <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has LorisCasagrandi:
@@ -51,14 +51,14 @@
                     ~ library_readStories += LorisCasagrandi
                      -> refresh_book_lists ->
             }  
-        + {library_unreadStories has LorisCasagrandi}<i>Per ora non me la sento di affrontare questo tema.
+        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has LorisCasagrandi}<i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        + {library_unreadStories has LorisCasagrandi}<i>Non voglio più incontrare questa storia.
+        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has LorisCasagrandi}<i>Non voglio più incontrare questa storia.
             ~ library_unreadStories -= LorisCasagrandi
                 -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
-    ~ enableBigDialogue()
+    
 
     Volevo essere solo cervello, per non assomigliarti, per dimenticare che ti ho avuto come modello. Pilota di un mecha di carne, player di un avatar non scelto. Eppure non ha funzionato perché avevi plasmato i miei percorsi mentali. Per questo ho strappato tutto e sono ripartito da zero, per scoprire che anche in quel vuoto rimaneva la tua veste.<N>Così mi sono ripreso il mio corpo, ho cercato di strapparmi la pelle perché  non la volevo più addosso. Volevo togliere le forme che vi avevi tatuato, I solchi abitudinari che vi avevi tracciato, i modi di cui non mi sono mai liberato.
     
@@ -69,11 +69,11 @@
     //Check per achievement racconti
     -> achievements_onGame_statusUpdate_RM ->
 
-        + <i>Vorrei leggere ancora.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Vorrei leggere ancora.
+            
            -> book_test_intro
-        + <i>Me ne vado.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
+            
             -> DarkLibraryModeOff ->
                      
             -> main
@@ -83,7 +83,7 @@
 === val_fausto_lattanzio
 <b>Home</b>, di Val Fausto Lattanzio (he/they).<N>Instagram: @_whimsival<N>Trigger warning: disforia, dismorfia.
 
-        + <i>Inizio la lettura.
+        +  \ {charTag(PG, "neutral")}:       <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has ValFaustoLattanzio:
@@ -91,14 +91,14 @@
                     ~ library_readStories += ValFaustoLattanzio
                      -> refresh_book_lists ->
             }  
-        + {library_unreadStories has ValFaustoLattanzio}<i>Per ora non me la sento di affrontare questo tema.
+        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has ValFaustoLattanzio}<i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        + {library_unreadStories has ValFaustoLattanzio}<i>Non voglio più incontrare questa storia.
+        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has ValFaustoLattanzio}<i>Non voglio più incontrare questa storia.
             ~ library_unreadStories -= ValFaustoLattanzio
                 -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
-    ~ enableBigDialogue()
+    
     
     I have lived in this house forever, even though I never chose it—it's the house my mother chose for me.<N>The pink walls of my room have witnessed my childhood, then my adolescence, all the way to this moment.<N>This is the right house for you, my mother says, and I lie down on the bed and stare at the ceiling while the man who says he loves me enters my body, pressing onto me dozens of blog posts and newspaper articles:<N>How to Put a Woman in Her Place,<N>Ten Steps to Drive Her Crazy,<N>Why Men Are Good at Dominating —because that's what men who love women do, they get on top, and they push, and they pant into their faces.
 
@@ -109,18 +109,18 @@
     //Check per achievement racconti
     -> achievements_onGame_statusUpdate_RM ->
 
-        + <i>Vorrei leggere ancora.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Vorrei leggere ancora.
+            
            -> book_test_intro
-        + <i>Me ne vado.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
+            
             -> DarkLibraryModeOff ->
                      
             -> main
 
 === romi
 <b>Il principe sbagliato</b> di Sofia Abatangelo alias Romi alias Romi Sofia Abatangelo(any).<N>Instagram: @romiabatangelo<N>Trigger warning: violenza psicologica.
-        + <i>Inizio la lettura.
+        +  \ {charTag(PG, "neutral")}:       <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has Romi:
@@ -128,14 +128,14 @@
                     ~ library_readStories += Romi
                      -> refresh_book_lists ->
             }  
-        + {library_unreadStories has Romi}<i>Per ora non me la sento di affrontare questo tema.
+        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has Romi}<i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        + {library_unreadStories has Romi}<i>Non voglio più incontrare questa storia.
+        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has Romi}<i>Non voglio più incontrare questa storia.
             ~ library_unreadStories -= Romi
                 -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
-    ~ enableBigDialogue()
+    
 
     C'era una volta un principe che non ne faceva mai un giusta.<N>Il suo modo di muoversi era sbagliato, il suo modo di vestirsi era sbagliato, il suo modo di parlare era sbagliato.<N>Anche il suo modo di pensare era completamente sbagliato.<N>Ma la cosa più sbagliata del principe erano le sue emozioni.<N>A volte rideva, piangeva o si arrabbiava per un nonnulla, mentre altre volte il suo volto rimaneva impassibile quando invece avrebbe dovuto animarsi.
     
@@ -155,11 +155,11 @@
     //Check per achievement racconti
     -> achievements_onGame_statusUpdate_RM ->
     
-        + <i>Vorrei leggere ancora.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Vorrei leggere ancora.
+            
            -> book_test_intro
-        + <i>Me ne vado.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
+            
             -> DarkLibraryModeOff ->
                      
             -> main

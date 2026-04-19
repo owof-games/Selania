@@ -1,7 +1,7 @@
 
 === dog_character_recap
 + {are_two_entities_together(DogRecap, PG)} [DogRecap]
-~ enableBigDialogue()
+
 
 dog
 -> rewriter_book_with_flow
@@ -15,7 +15,7 @@ dog
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-    ~ enableBigDialogue()
+    
 
 {
     - grimoire_witch has grimWitchFrog:

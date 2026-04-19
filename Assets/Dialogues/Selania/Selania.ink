@@ -16,7 +16,6 @@
     INCLUDE Code\ChangePlaces.ink
     INCLUDE Code\PlacesContentsAndFunctions.ink
     INCLUDE Code\BackgroundsAndSounds.ink
-    INCLUDE Code\BigDialogue.ink
     INCLUDE Code\NestDialogue.ink
     INCLUDE Code\TextFunctions.ink
     INCLUDE Code\Notifications.ink

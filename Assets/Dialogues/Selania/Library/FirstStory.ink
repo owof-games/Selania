@@ -3,7 +3,7 @@
 === adri_allora
 <b>Il mio bellissimo gatto</b> di Adri Allora (ləi).<N>Trigger warning: violenza psicologica, abusi fisici.
 
-    + <i>Inizio la lettura.
+    +  \ {charTag(PG, "neutral")}:       <i>Inizio la lettura.
     //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
         {
             - library_unreadStories has AdriAllora:
@@ -11,13 +11,13 @@
                 ~ library_readStories += AdriAllora
                  -> refresh_book_lists ->
         }  
-    + {library_unreadStories has AdriAllora}<i>Per ora non me la sento di affrontare questi temi.
+    +  \ {charTag(PG, "neutral")}:       {library_unreadStories has AdriAllora}<i>Per ora non me la sento di affrontare questi temi.
         -> tempTW -> book_test_intro
-    + (rimuovi) {library_unreadStories has AdriAllora} <i>Non voglio più incontrare questa storia.
+    +  \ {charTag(PG, "neutral")}:       (rimuovi) {library_unreadStories has AdriAllora} <i>Non voglio più incontrare questa storia.
         -> permanentTW -> refresh_book_lists -> book_test_intro
     -
 -> DarkLibraryModeOn ->
-~ enableBigDialogue()
+
     
     Mi chiama.<N>La mia rabbia è un gatto che insiste per essere nutrito in continuazione, mi chiama, mi chiama con quell'insistenza che ha costretto sir Isaac Newton a inventare la porticina per i gatti.<N>Ma il mio mi chiama, mi chiama, mi chiama e poi mi ricorda che condivide il novantacinque virgola sei percento del suo DNA con le tigri sopraffacendomi: bevo, disegno, mi drogo, scrivo, mi picchio, dipingo, spacco cose.
     
@@ -38,19 +38,19 @@
     //Check per achievement racconti
     -> achievements_onGame_statusUpdate_RM ->
     
-        + <i>Vorrei leggere ancora.
-        ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Vorrei leggere ancora.
+        
            -> book_test_intro
         
-        + <i>Me ne vado.
-        ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
+        
             -> DarkLibraryModeOff ->
             -> main
 
 === alexias_d_avino
 <b>Il Riflesso</b> di Alexias D'Avino (lui/lei).<N>Instagram: @togetherweread29<N>Trigger warning: lutto, rifiuto da parte della figura genitoriale.
         
-        + <i>Inizio la lettura.
+        +  \ {charTag(PG, "neutral")}:       <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has AlexiasDAvino:
@@ -58,13 +58,13 @@
                     ~ library_readStories += AlexiasDAvino
                      -> refresh_book_lists ->
             }  
-        + {library_unreadStories has AlexiasDAvino}<i>Per ora non me la sento di affrontare questo tema.
+        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has AlexiasDAvino}<i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        + (rimuovi) {library_unreadStories has AlexiasDAvino}<i>Non voglio più incontrare questa storia.
+        +  \ {charTag(PG, "neutral")}:       (rimuovi) {library_unreadStories has AlexiasDAvino}<i>Non voglio più incontrare questa storia.
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
-    ~ enableBigDialogue()
+    
 
     Shmi entrò nell'appartamento trascinandosi dietro lo zaino.<N>Odiava il suo lavoro: la contabilità era una delle cose più noiose sulla faccia della Terra e ci si era buttatə a capofitto per paura di finire in mezzo a una strada.<N>Il suo ex fidanzato glielo aveva detto, si stava scavando la fossa da solə.<N>Dopo una lunga doccia, infilò il suo pigiama preferito, quello con le eroine dei manga che tanto amava leggere.
     
@@ -108,12 +108,12 @@
     //Check per achievement racconti
     -> achievements_onGame_statusUpdate_RM ->
 
-        + <i>Vorrei leggere ancora.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Vorrei leggere ancora.
+            
             -> book_test_intro
         
-        + <i>Me ne vado.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
+            
             -> DarkLibraryModeOff ->
             -> main
 
@@ -121,7 +121,7 @@
 === aza
 <b>Luna vergine</b> di Aza (any).<N>Trigger warning: alcolismo, violenza fisica.
         
-        + <i>Inizio la lettura.
+        +  \ {charTag(PG, "neutral")}:       <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has Aza:
@@ -129,13 +129,13 @@
                     ~ library_readStories += Aza
                      -> refresh_book_lists ->
             }  
-        + {library_unreadStories has Aza}<i>Per ora non me la sento di affrontare questo tema.
+        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has Aza}<i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        + (rimuovi) {library_unreadStories has Aza}<i>Non voglio più incontrare questa storia.
+        +  \ {charTag(PG, "neutral")}:       (rimuovi) {library_unreadStories has Aza}<i>Non voglio più incontrare questa storia.
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
-    ~ enableBigDialogue()
+    
         
     Le caviglie tentennano quando provo a sedermi nella hall dell'hotel, ma in piedi continuerei a fare avanti e indietro col ticchettio dei tacchi che rimbomba, non voglio attirare ulteriormente l'attenzione degli ospiti.<N>La brezza di mare si scaglia dalla porta girevole fino agli ascensori, anche di notte non cede. Un vento medio, di quelli che alza la sabbia ma non gli aquiloni, così da quattro giorni, da quando sono arrivata.<N>Il piano è semplice, ho capito la sua routine, gli ho chiesto se avesse da accendere e abbiamo fatto due chiacchiere, non si è sicuramente accorto di chi sono, non si ricorda di me, la trasformazione ha avuto successo.
     
@@ -161,11 +161,11 @@
     //Check per achievement racconti
     -> achievements_onGame_statusUpdate_RM ->
 
-        + <i>Vorrei leggere ancora.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Vorrei leggere ancora.
+            
            -> book_test_intro
-        + <i>Me ne vado.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
+            
             -> DarkLibraryModeOff ->
                      
             -> main
@@ -174,7 +174,7 @@
 === steno_artico
 <b>Questa rabbia, che mi è stata rubata</b> by StenoArtico (he/him, none).<N>Instagram: @stenoartico<N>Trigger warning: violenza psicologica, abusi fisici, depressione.
         
-        + <i>Inizio la lettura.
+        +  \ {charTag(PG, "neutral")}:       <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has StenoArtico:
@@ -183,13 +183,13 @@
                      -> refresh_book_lists ->
             }  
             -> refresh_book_lists ->
-        + {library_unreadStories has StenoArtico}<i>Per ora non me la sento di affrontare questo tema.
+        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has StenoArtico}<i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        + (rimuovi) {library_unreadStories has StenoArtico}<i>Non voglio più incontrare questa storia.
+        +  \ {charTag(PG, "neutral")}:       (rimuovi) {library_unreadStories has StenoArtico}<i>Non voglio più incontrare questa storia.
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
-    ~ enableBigDialogue()
+    
     
     Arriva sempre,<N>quando sono già a terra,<N>a prendermi a calci nello stomaco<N>quella voce arrabbiata<N>che mi chiama definisce condanna<N>la persona peggiore possibile<N>inutile<N>schifosa.<N>Ma perché ce l'ha a morte con me?
 
@@ -205,11 +205,11 @@
     //Check per achievement racconti
     -> achievements_onGame_statusUpdate_RM ->
 
-        + <i>Vorrei leggere ancora.
-        ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Vorrei leggere ancora.
+        
            -> book_test_intro
-        + <i>Me ne vado.
-        ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
+        
             -> DarkLibraryModeOff ->
                      
             -> main
@@ -218,7 +218,7 @@
 // <b>The touch of anger</b> di K.(she/her).
 <b>Il tocco della rabbia</b> di K.(she/her).<N>Trigger warning: violenza fisica, depressione.
         
-        + <i>Inizio la lettura.
+        +  \ {charTag(PG, "neutral")}:       <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has B:
@@ -226,13 +226,13 @@
                     ~ library_readStories += B
                      -> refresh_book_lists ->
             }  
-        + {library_unreadStories has B}<i>Per ora non me la sento di affrontare questo tema.
+        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has B}<i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        + (rimuovi) {library_unreadStories has B}<i>Non voglio più incontrare questa storia.
+        +  \ {charTag(PG, "neutral")}:       (rimuovi) {library_unreadStories has B}<i>Non voglio più incontrare questa storia.
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
-    ~ enableBigDialogue()
+    
 
     Ricordo ancora nitidamente quanto la rabbia fosse un'emozione che temevo profondamente.<N>Da bambina sono cresciuta subendo gli improvvisi scatti d'ira di mio padre, espressione di un trauma generazionale che non ha mai avuto la possibilità di superare.<N>Naturalmente la rabbia è diventata qualcosa che temevo, e ho modellato la mia vita in modo da evitare di esserne bersaglio.<N>Le persone erano contente di me perché ero una ragazza docile che ascoltava gli insegnanti e gli adulti e che non dava mai preoccupazioni ai suoi genitori.
     
@@ -264,11 +264,11 @@
     //Check per achievement racconti
     -> achievements_onGame_statusUpdate_RM ->
 
-        + <i>Vorrei leggere ancora.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Vorrei leggere ancora.
+            
            -> book_test_intro
-        + <i>Me ne vado.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
+            
             -> DarkLibraryModeOff ->
                      
             -> main
@@ -276,7 +276,7 @@
 === beatrice
 <b>La rete non esiste</b> di Beatrice (she/her).<N>Instagram: @vistadibea<N>Trigger warning: depressione, religione.
         
-        + <i>Inizio la lettura.
+        +  \ {charTag(PG, "neutral")}:       <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has Beatrice:
@@ -284,13 +284,13 @@
                     ~ library_readStories += Beatrice
                      -> refresh_book_lists ->
             }  
-        + {library_unreadStories has Beatrice}<i>Per ora non me la sento di affrontare questo tema.
+        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has Beatrice}<i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        + (rimuovi) {library_unreadStories has Beatrice}<i>Non voglio più incontrare questa storia.
+        +  \ {charTag(PG, "neutral")}:       (rimuovi) {library_unreadStories has Beatrice}<i>Non voglio più incontrare questa storia.
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
-    ~ enableBigDialogue()
+    
     
     Ciao.<N>Ho molte cose che mi frullano dentro ed è molto faticoso mettere ordine.<N>Ma vorrei raccontarti alcune cose che vorrei che tu sapessi.
     
@@ -338,11 +338,11 @@
     //Check per achievement racconti
     -> achievements_onGame_statusUpdate_RM ->
 
-        + <i>Vorrei leggere ancora.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Vorrei leggere ancora.
+            
            -> book_test_intro
-        + <i>Me ne vado.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
+            
             -> DarkLibraryModeOff ->
                      
             -> main
@@ -350,7 +350,7 @@
 === beatrice_y_bottura
 <b>Artigli Rosso Ruggine</b> di Beatrice Y. Bottura (she/it).<N>Trigger warning: violenza psicologica, abusi fisici.
         
-        + <i>Inizio la lettura.
+        +  \ {charTag(PG, "neutral")}:       <i>Inizio la lettura.
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has BeatriceYBottura:
@@ -358,13 +358,13 @@
                     ~ library_readStories += BeatriceYBottura
                      -> refresh_book_lists ->
             }  
-        + {library_unreadStories has BeatriceYBottura}<i>Per ora non me la sento di affrontare questo tema.
+        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has BeatriceYBottura}<i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        + {library_unreadStories has BeatriceYBottura}<i>Non voglio più incontrare questa storia.
+        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has BeatriceYBottura}<i>Non voglio più incontrare questa storia.
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
-    ~ enableBigDialogue()
+    
     
     Da qualche parte esiste un pozzo artificiale profondo centinaia di metri, una scala a spirale in metallo porta alle sue interiora. <N>Sul suo buio fondo si trova un'enorme gabbia, sterile e opprimente.<N>La gabbia è costruita coi materiali più resistenti conosciuti all'uomo: leghe in metalli esotici, violentemente piegate su se stesse infinite volte per creare strati su strati di resistenza.<N>Questa gabbia è costruita per custodire la più terrificante, più feroce di tutte le bestie.<N>Poco più grande di un essere umano, ma abbastanza imponente da sembrare un grattacielo, la bestia giace al centro della sua gabbia, sempre sveglia, sempre affamata.
     
@@ -379,11 +379,11 @@
     //Check per achievement racconti
     -> achievements_onGame_statusUpdate_RM ->
     
-        + <i>Vorrei leggere ancora.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Vorrei leggere ancora.
+            
            -> book_test_intro
-        + <i>Me ne vado.
-            ~ disableBigDialogue()
+        +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
+            
             -> DarkLibraryModeOff ->
                      
             -> main

@@ -43,17 +43,17 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
     
     {charTag(TheWitch, witch_state())}:   <i>La biblioteca mostra le sue storie a {player_name}.</i>
         
-        + {library_readStories != ()} <i>Voglio rileggere qualcosa.</i>
+        + {library_readStories != ()} \ {charTag(PG, "neutral")}:       <i>Voglio rileggere qualcosa.</i>
             {charTag(TheWitch, witch_state())}:   <i>Ad ora {player_name} ha letto {number_translator(library_readStories)} {libro_libri(library_readStories)}.</i>
             -> reread
             
-        + {library_unreadStories != ()} <i>Voglio una nuova storia casuale.</i>
+        + {library_unreadStories != ()} \ {charTag(PG, "neutral")}:        <i>Voglio una nuova storia casuale.</i>
             -> storyRandom
             
-        + {library_unreadStories != ()}<i>Voglio scegliere la mia storia.</i>
+        + {library_unreadStories != ()} \ {charTag(PG, "neutral")}:       <i>Voglio scegliere la mia storia.</i>
             -> storyQuestions
     
-        + <i>Non voglio più leggere.</i>
+        + \ {charTag(PG, "neutral")}:       <i>Non voglio più leggere.</i>
             -> DarkLibraryModeOff ->
             -> main
 
@@ -67,206 +67,126 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
     ->from_list_to_books
 
 
-
-
-
-
 === storyQuestions ===
     //Svuoto il valore del libro
     ~ library_proposedBook = ()
-    -> step_one
+    -> story_duration
 
-    = step_one
+    = story_duration
     {charTag(TheWitch, witch_state())}:   <i>{player_name} desidera una storia veloce come una pulce o lenta come la notte?</i>
-        + {library_shortStories != ()} <i>Qualcosa di brevissimo (max 1500 battute).</i>
+        + {library_shortStories != ()} \ {charTag(PG, "neutral")}:        <i>Qualcosa di brevissimo (max 1500 battute).</i>
         //(1500 battute max)
             ~ library_readingDuration += Short
         
-        + {library_averageStories != ()} <i>Una storia veloce (max 3000 battute).</i>
+        + {library_averageStories != ()} \ {charTag(PG, "neutral")}:        <i>Una storia veloce (max 3000 battute).</i>
         // (3000 battute max)
             ~ library_readingDuration += Average
         
-        + {library_longStories != ()} <i>Un racconto più lungo (max 8000 battute).</i>
+        + {library_longStories != ()} \ {charTag(PG, "neutral")}:        <i>Un racconto più lungo (max 8000 battute).</i>
         // 8000 battute max 
             ~ library_readingDuration += Long
         -
-        -> shuffle
+        -> story_themeChoice
         
     
-    = shuffle
-        {shuffle:
-            - {library_aboutTransformation != (): -> about_transformation| -> shuffle}
-            - {library_aboutQuestions != (): -> about_questions| -> shuffle}
-            - {library_aboutUnprepared != (): -> about_unprepared| -> shuffle}
-            - {library_aboutMonsters != (): -> about_monsters| -> shuffle}
-            - {library_aboutFire != (): -> about_fire| -> shuffle}
-            - {library_aboutRebellion != (): -> about_rebellion| -> shuffle}
-        }
-    
-    
-    
-    = about_transformation
+    = story_themeChoice
+    // transformation
     {charTag(TheWitch, witch_state())}:   <i>La biblioteca offre una storia...</i>
 
-        + {library_readingDuration has Short && library_shortStories^ library_aboutTransformation != ()} <i>Che racconti di qualcosa che si <b>trasforma</b>.</i>
+        + {library_readingDuration has Short && library_shortStories^ library_aboutTransformation != ()} \ {charTag(PG, "neutral")}:        <i>Che racconti di qualcosa che si <b>trasforma</b>.</i>
             ~ library_proposedBook = LIST_RANDOM(library_shortStories^ library_aboutTransformation)
              -> from_list_to_books
  
-        + {library_readingDuration has Average && library_averageStories^ library_aboutTransformation != ()} <i>Che racconti di qualcosa che si <b>trasforma</b>.</i>
+        + {library_readingDuration has Average && library_averageStories^ library_aboutTransformation != ()} \ {charTag(PG, "neutral")}:        <i>Che racconti di qualcosa che si <b>trasforma</b>.</i>
             ~ library_proposedBook = LIST_RANDOM(library_averageStories ^ library_aboutTransformation)
              -> from_list_to_books           
             
-        + {library_readingDuration has Long && library_longStories^ library_aboutTransformation != ()} <i>Che racconti di qualcosa che si <b>trasforma</b>.</i>
+        + {library_readingDuration has Long && library_longStories^ library_aboutTransformation != ()} \ {charTag(PG, "neutral")}:        <i>Che racconti di qualcosa che si <b>trasforma</b>.</i>
             ~ library_proposedBook = LIST_RANDOM(library_longStories ^ library_aboutTransformation)
             -> from_list_to_books
         
-        //Qui vale per ogni scelta: se effettivamente posso scegliere quel tema, posso decidere di andare comunque avanti. Se invece quel tema è vuoto nella intersezione con la lunghezza della storia selezionata, passo avanti.
-        //Questo tasto compare solo se questo tema non è vuoto. Ha senso? sennò non sarei qui, no?
-        + {(library_readingDuration has Short && library_shortStories^ library_aboutTransformation != ()) or (library_readingDuration has Average && library_averageStories^ library_aboutTransformation != ()) or (library_readingDuration has Long && library_longStories^ library_aboutTransformation != ())} <i>No, vorrei un altro tema.</i>
-                -> shuffle
+
         
-        + {(library_readingDuration has Short && library_shortStories^ library_aboutTransformation != ()) or (library_readingDuration has Average && library_averageStories^ library_aboutTransformation != ()) or (library_readingDuration has Long && library_longStories^ library_aboutTransformation != ())} <i>Non ho più voglia di leggere.</i>
-                ~ library_readingDuration = ()
-                -> book_test_intro      
-        
-        + {(library_readingDuration has Short && library_shortStories^ library_aboutTransformation == ()) or (library_readingDuration has Average && library_averageStories^ library_aboutTransformation == ()) or (library_readingDuration has Long && library_longStories^ library_aboutTransformation == ())}
-            -> shuffle
-        
-    = about_questions       
-    {charTag(TheWitch, witch_state())}:   <i>La biblioteca offre una storia...</i>
+    //questions       
     
-        + {library_readingDuration has Short && library_shortStories^ library_aboutQuestions != ()} <i>Che parli di chi <b>si pone domande</b>.</i>
+        + {library_readingDuration has Short && library_shortStories^ library_aboutQuestions != ()} \ {charTag(PG, "neutral")}:        <i>Che parli di chi <b>si pone domande</b>.</i>
             ~ library_proposedBook = LIST_RANDOM(library_shortStories^ library_aboutQuestions)
-             -> from_list_to_books
+            -> from_list_to_books
         
-        + {library_readingDuration has Average && library_averageStories^ library_aboutQuestions != ()} <i>Che parli di chi <b>si pone domande</b>.</i>
+        + {library_readingDuration has Average && library_averageStories^ library_aboutQuestions != ()} \ {charTag(PG, "neutral")}:        <i>Che parli di chi <b>si pone domande</b>.</i>
             ~ library_proposedBook = LIST_RANDOM(library_averageStories ^ library_aboutQuestions)
-         -> from_list_to_books
+            -> from_list_to_books
 
-        + {library_readingDuration has Long && library_longStories^ library_aboutQuestions != ()} <i>Che parli di chi <b>si pone domande</b>.</i>
+        + {library_readingDuration has Long && library_longStories^ library_aboutQuestions != ()} \ {charTag(PG, "neutral")}:        <i>Che parli di chi <b>si pone domande</b>.</i>
             ~ library_proposedBook = LIST_RANDOM(library_longStories ^ library_aboutQuestions)
-         -> from_list_to_books            
-        
-        
-        + {(library_readingDuration has Short && library_shortStories^ library_aboutQuestions != ()) or (library_readingDuration has Average && library_averageStories^ library_aboutQuestions != ()) or (library_readingDuration has Long && library_longStories^ library_aboutQuestions != ())}<i>No, vorrei un altro tema.</i>
-                -> shuffle
-                
-                
-        + {(library_readingDuration has Short && library_shortStories^ library_aboutQuestions != ()) or (library_readingDuration has Average && library_averageStories^ library_aboutQuestions != ()) or (library_readingDuration has Long && library_longStories^ library_aboutQuestions != ())} <i>Non ho più voglia di leggere.</i>
-                ~ library_readingDuration = ()
-                -> book_test_intro           
-        
-        + {(library_readingDuration has Short && library_shortStories^ library_aboutQuestions == ()) or (library_readingDuration has Average && library_averageStories^ library_aboutQuestions == ()) or (library_readingDuration has Long && library_longStories^ library_aboutQuestions == ())}
-                -> shuffle          
+            -> from_list_to_books
+          
             
-            
-    = about_unprepared
-    {charTag(TheWitch, witch_state())}:   <i>La biblioteca offre una storia...</i>
+    // unprepared
     
-        + {library_readingDuration has Short && library_shortStories^ library_aboutUnprepared != ()} <i>Che mi colga<b> {player_pronouns has him:impreparato|{player_pronouns has her:impreparata|impreparatə}}</b></i>
+        + {library_readingDuration has Short && library_shortStories^ library_aboutUnprepared != ()} \ {charTag(PG, "neutral")}:        <i>Che mi colga<b> {player_pronouns has him:impreparato|{player_pronouns has her:impreparata|impreparatə}}</b></i>
             ~ library_proposedBook = LIST_RANDOM(library_shortStories^ library_aboutUnprepared)
-         -> from_list_to_books
+            -> from_list_to_books
 
-        + {library_readingDuration has Average && library_averageStories^ library_aboutUnprepared != ()} <i>Che mi colga<b> {player_pronouns has him:impreparato|{player_pronouns has her:impreparata|impreparatə}}</b>.</i>
+        + {library_readingDuration has Average && library_averageStories^ library_aboutUnprepared != ()} \ {charTag(PG, "neutral")}:        <i>Che mi colga<b> {player_pronouns has him:impreparato|{player_pronouns has her:impreparata|impreparatə}}</b>.</i>
             ~ library_proposedBook = LIST_RANDOM(library_averageStories ^ library_aboutUnprepared)
-        -> from_list_to_books
+            -> from_list_to_books
         </i>
-        + {library_readingDuration has Long && library_longStories^ library_aboutUnprepared != ()} <i>Che mi colga<b> {player_pronouns has him:impreparato|{player_pronouns has her:impreparata|impreparatə}}</b>.
+        + {library_readingDuration has Long && library_longStories^ library_aboutUnprepared != ()} \ {charTag(PG, "neutral")}:        <i>Che mi colga<b> {player_pronouns has him:impreparato|{player_pronouns has her:impreparata|impreparatə}}</b>.
             ~ library_proposedBook = LIST_RANDOM(library_longStories ^ library_aboutUnprepared)
-        -> from_list_to_books            
+            -> from_list_to_books            
         
-        //Scelte di uscita se ho rifiutato tutte le opzioni precedenti.
-        + {(library_readingDuration has Short && library_shortStories^ library_aboutUnprepared != ()) or (library_readingDuration has Average && library_averageStories^ library_aboutUnprepared != ()) or (library_readingDuration has Long && library_longStories^ library_aboutUnprepared != ())}<i>No, vorrei un altro tema.</i>
-                -> shuffle
-                
-                
-        + {(library_readingDuration has Short && library_shortStories^ library_aboutUnprepared != ()) or (library_readingDuration has Average && library_averageStories^ library_aboutUnprepared != ()) or (library_readingDuration has Long && library_longStories^ library_aboutUnprepared != ())} <i>Non ho più voglia di leggere.</i>
-                ~ library_readingDuration = ()
-                -> book_test_intro           
-        
-        + {(library_readingDuration has Short && library_shortStories^ library_aboutUnprepared == ()) or (library_readingDuration has Average && library_averageStories^ library_aboutUnprepared == ()) or (library_readingDuration has Long && library_longStories^ library_aboutUnprepared == ())}
-                -> shuffle 
+       
+    // monsters
 
-    = about_monsters
-    {charTag(TheWitch, witch_state())}:   <i>La biblioteca offre una storia...</i>
     
-        + {library_readingDuration has Short && library_shortStories^ library_aboutMonsters != ()} <i>Che parli di <b>cose mostruose</b>.</i>
+        + {library_readingDuration has Short && library_shortStories^ library_aboutMonsters != ()} \ {charTag(PG, "neutral")}:        <i>Che parli di <b>cose mostruose</b>.</i>
             ~ library_proposedBook = LIST_RANDOM(library_shortStories^ library_aboutMonsters)
-        -> from_list_to_books
+            -> from_list_to_books
 
-        + {library_readingDuration has Average && library_averageStories^ library_aboutMonsters != ()} <i>Che parli di <b>cose mostruose</b>.</i>
+        + {library_readingDuration has Average && library_averageStories^ library_aboutMonsters != ()} \ {charTag(PG, "neutral")}:        <i>Che parli di <b>cose mostruose</b>.</i>
             ~ library_proposedBook = LIST_RANDOM(library_averageStories ^ library_aboutMonsters)
-        -> from_list_to_books
+            -> from_list_to_books
         
-        + {library_readingDuration has Long && library_longStories^ library_aboutMonsters != ()} <i>Che parli di <b>cose mostruose</b>.</i>
+        + {library_readingDuration has Long && library_longStories^ library_aboutMonsters != ()} \ {charTag(PG, "neutral")}:        <i>Che parli di <b>cose mostruose</b>.</i>
             ~ library_proposedBook = LIST_RANDOM(library_longStories ^ library_aboutMonsters)
-        -> from_list_to_books            
+            -> from_list_to_books            
         
-        //Scelte di uscita se ho rifiutato tutte le opzioni precedenti.
-        + {(library_readingDuration has Short && library_shortStories^ library_aboutMonsters != ()) or (library_readingDuration has Average && library_averageStories^ library_aboutMonsters != ()) or (library_readingDuration has Long && library_longStories^ library_aboutMonsters != ())}<i>No, vorrei un altro tema.</i>
-                -> shuffle
-                
-                
-        + {(library_readingDuration has Short && library_shortStories^ library_aboutMonsters != ()) or (library_readingDuration has Average && library_averageStories^ library_aboutMonsters != ()) or (library_readingDuration has Long && library_longStories^ library_aboutMonsters != ())} <i>Non ho più voglia di leggere.</i>
-                ~ library_readingDuration = ()
-                -> book_test_intro           
-        
-        + {(library_readingDuration has Short && library_shortStories^ library_aboutMonsters == ()) or (library_readingDuration has Average && library_averageStories^ library_aboutMonsters == ()) or (library_readingDuration has Long && library_longStories^ library_aboutMonsters == ())}
-                -> shuffle
+    //fire  
 
-    = about_fire  
-    {charTag(TheWitch, witch_state())}:   <i>La biblioteca offre una storia...</i>
     
-        + {library_readingDuration has Short && library_shortStories^ library_aboutFire != ()} <i>Che racconti di <b>cose che bruciano</b>.</i>
+        + {library_readingDuration has Short && library_shortStories^ library_aboutFire != ()} \ {charTag(PG, "neutral")}:        <i>Che racconti di <b>cose che bruciano</b>.</i>
             ~ library_proposedBook = LIST_RANDOM(library_shortStories^ library_aboutFire)
-        -> from_list_to_books
+            -> from_list_to_books
 
-        + {library_readingDuration has Average && library_averageStories^ library_aboutFire != ()} <i>Che racconti di <b>cose che bruciano</b>.</i>
+        + {library_readingDuration has Average && library_averageStories^ library_aboutFire != ()} \ {charTag(PG, "neutral")}:        <i>Che racconti di <b>cose che bruciano</b>.</i>
             ~ library_proposedBook = LIST_RANDOM(library_averageStories ^ library_aboutFire)
-         -> from_list_to_books
+            -> from_list_to_books
         
-        + {library_readingDuration has Long && library_longStories^ library_aboutFire != ()} <i>Che racconti di <b>cose che bruciano</b>.</i>
+        + {library_readingDuration has Long && library_longStories^ library_aboutFire != ()} \ {charTag(PG, "neutral")}:        <i>Che racconti di <b>cose che bruciano</b>.</i>
             ~ library_proposedBook = LIST_RANDOM(library_longStories ^ library_aboutFire)
-         -> from_list_to_books            
+            -> from_list_to_books            
         
-        //Scelte di uscita se ho rifiutato tutte le opzioni precedenti.
-        + {(library_readingDuration has Short && library_shortStories^ library_aboutFire != ()) or (library_readingDuration has Average && library_averageStories^ library_aboutFire != ()) or (library_readingDuration has Long && library_longStories^ library_aboutFire != ())}<i>No, vorrei un altro tema.</i>
-                -> shuffle
-                
-                
-        + {(library_readingDuration has Short && library_shortStories^ library_aboutFire != ()) or (library_readingDuration has Average && library_averageStories^ library_aboutFire != ()) or (library_readingDuration has Long && library_longStories^ library_aboutFire != ())} <i>Non ho più voglia di leggere.</i>
-                ~ library_readingDuration = ()
-                -> book_test_intro           
-        
-        + {(library_readingDuration has Short && library_shortStories^ library_aboutFire == ()) or (library_readingDuration has Average && library_averageStories^ library_aboutFire == ()) or (library_readingDuration has Long && library_longStories^ library_aboutFire == ())}
-                -> shuffle
 
-    = about_rebellion
-    {charTag(TheWitch, witch_state())}:   <i>La biblioteca offre una storia...</i>
+    //rebellion
+
     
-        + {library_readingDuration has Short && library_shortStories^ library_aboutRebellion != ()} <i>Che urli di <b>sogni e ribellioni</b>.</i>
+        + {library_readingDuration has Short && library_shortStories^ library_aboutRebellion != ()} \ {charTag(PG, "neutral")}:        <i>Che urli di <b>sogni e ribellioni</b>.</i>
             ~ library_proposedBook = LIST_RANDOM(library_shortStories^ library_aboutRebellion)
-         -> from_list_to_books
+            -> from_list_to_books
 
-        + {library_readingDuration has Average && library_averageStories^ library_aboutRebellion != ()} <i>Che urli di <b>sogni e ribellioni</b>.</i>
+        + {library_readingDuration has Average && library_averageStories^ library_aboutRebellion != ()} \ {charTag(PG, "neutral")}:        <i>Che urli di <b>sogni e ribellioni</b>.</i>
             ~ library_proposedBook = LIST_RANDOM(library_averageStories ^ library_aboutRebellion)
-        -> from_list_to_books
+            -> from_list_to_books
         
-        + {library_readingDuration has Long && library_longStories^ library_aboutRebellion != ()} <i>Che urli di <b>sogni e ribellioni</b>.</i>
+        + {library_readingDuration has Long && library_longStories^ library_aboutRebellion != ()} \ {charTag(PG, "neutral")}:        <i>Che urli di <b>sogni e ribellioni</b>.</i>
             ~ library_proposedBook = LIST_RANDOM(library_longStories ^ library_aboutRebellion)
-             -> from_list_to_books            
+            -> from_list_to_books            
         
-        //Scelte di uscita se ho rifiutato tutte le opzioni precedenti.
-        + {(library_readingDuration has Short && library_shortStories^ library_aboutRebellion != ()) or (library_readingDuration has Average && library_averageStories^ library_aboutRebellion != ()) or (library_readingDuration has Long && library_longStories^ library_aboutRebellion != ())}<i>No, vorrei un altro tema.</i>
-                -> shuffle
-                
-                
-        + {(library_readingDuration has Short && library_shortStories^ library_aboutRebellion != ()) or (library_readingDuration has Average && library_averageStories^ library_aboutRebellion != ()) or (library_readingDuration has Long && library_longStories^ library_aboutRebellion != ())} <i>Non ho più voglia di leggere.</i>
-                ~ library_readingDuration = ()
-                -> book_test_intro           
-        
-        + {(library_readingDuration has Short && library_shortStories^ library_aboutRebellion == ()) or (library_readingDuration has Average && library_averageStories^ library_aboutRebellion == ()) or (library_readingDuration has Long && library_longStories^ library_aboutRebellion == ())}
-                -> shuffle                 
+
+        + \ {charTag(PG, "neutral")}:        <i>Non ho più voglia di leggere.</i>
+            ~ library_readingDuration = ()
+            -> book_test_intro           
         
 ->->
 
@@ -502,70 +422,70 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
     = reread_adri_allora
     {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
     
-        + <i>Rileggo <b>Il mio bellissimo gatto</b> di Adri Allora(ləi).</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Il mio bellissimo gatto</b> di Adri Allora(ləi).</i>
                 -> adri_allora
-        + {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
-        + <i>Ho cambiato idea, voglio una storia nuova.</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro
     
     = reread_alexias_d_avino
     {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
     
-        + <i>Rileggo <b>Il Riflesso</b> di Alexias D'Avino (lui/lei).</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Il Riflesso</b> di Alexias D'Avino (lui/lei).</i>
                 -> alexias_d_avino
-        + {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
-        + <i>Ho cambiato idea, voglio una storia nuova.</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro            
                 
     = reread_aza
     {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
-        + <i>Rileggo <b>Luna vergine</b> di Aza (any).
+        +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Luna vergine</b> di Aza (any).
                 -> aza
-        + {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
-        + <i>Ho cambiato idea, voglio una storia nuova.</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro                 
     
     = reread_steno_artico
     {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
     
-        + <i>Rileggo <b>Questa rabbia, che mi è stata rubata</b> by StenoArtico (he/him, none).</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Questa rabbia, che mi è stata rubata</b> by StenoArtico (he/him, none).</i>
                 -> steno_artico
-        + {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
-        + <i>Ho cambiato idea, voglio una storia nuova.</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro 
     
     = reread_b
     {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
     
-        + <i>Rileggo <b>Il tocco della rabbia</b> di K.(she/her).</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Il tocco della rabbia</b> di K.(she/her).</i>
                 -> b
-        + {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
-        + <i>Ho cambiato idea, voglio una storia nuova.</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro 
                 
     = reread_beatrice
     {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
     
-        + <i>Rileggo <b>La rete non esiste</b> di Beatrice (she/her).</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>La rete non esiste</b> di Beatrice (she/her).</i>
                 -> beatrice
-        + {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
-        + <i>Ho cambiato idea, voglio una storia nuova.</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro 
                 
     = reread_beatrice_y_bottura
     {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
     
-        + <i>Rileggo <b>Artigli Rosso Ruggine</b> di Beatrice Y. Bottura (she/it).</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Artigli Rosso Ruggine</b> di Beatrice Y. Bottura (she/it).</i>
                 -> beatrice_y_bottura
-        + {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
-        + <i>Ho cambiato idea, voglio una storia nuova.</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro 
 
 
@@ -574,124 +494,124 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
     = reread_cecilia_formicola
     {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
     
-        + <i>Rileggo <b>Fuochino</b> di Cecilia Formicola (she/her).</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Fuochino</b> di Cecilia Formicola (she/her).</i>
                 -> cecilia_formicola
-        + {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
-        + <i>Ho cambiato idea, voglio una storia nuova.</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro 
  
     = reread_francesca_tosca_raimondi
     {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
     
-        + <i>Rileggo <b>Trecentotrenta metri</b> di Francesca Tosca Raimondi (she/her).</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Trecentotrenta metri</b> di Francesca Tosca Raimondi (she/her).</i>
                 -> francesca_tosca_raimondi
-        + {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
-        + <i>Ho cambiato idea, voglio una storia nuova.</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro 
     
     
     = reread_kayleig
     {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
     
-        + <i>Rileggo <b>Volevo che mia madre fosse forte</b> di Kayleig (she/her).</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Volevo che mia madre fosse forte</b> di Kayleig (she/her).</i>
                 -> kayleig
-        + {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
-        + <i>Ho cambiato idea, voglio una storia nuova.</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro  
     
     
     = reread_lamia
     {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
     
-        + <i>Rileggo <b>Il sassolino</b> di Lamia (she/they).</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Il sassolino</b> di Lamia (she/they).</i>
                 -> lamia
-        + {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
-        + <i>Ho cambiato idea, voglio una storia nuova.</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro 
     
     = reread_loris_casagrandi
     {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
     
-        + <i>Rileggo <b>Volevo essere solo cervello</b> di Loris Casagrandi (he/him - she/her).</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Volevo essere solo cervello</b> di Loris Casagrandi (he/him - she/her).</i>
                 -> loris_casagrandi
-        + {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
-        + <i>Ho cambiato idea, voglio una storia nuova.</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro             
     
     = reread_val_lattanzio
     {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
     
-        + <i>Rileggo <b>Home</b> di Val Fausto Lattanzio (he/they).</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Home</b> di Val Fausto Lattanzio (he/they).</i>
                 -> val_fausto_lattanzio
-        + {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
-        + <i>Ho cambiato idea, voglio una storia nuova.</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro        
     
     = reread_romi
     {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
     
-        + <i>Rileggo <b>Il principe sbagliato</b> di Romi (any).</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Il principe sbagliato</b> di Romi (any).</i>
                 -> romi
-        + {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
-        + <i>Ho cambiato idea, voglio una storia nuova.</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro   
  
  
     = reread_salvo
     {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
     
-        + <i>Rileggo <b>Il cancello</b> di Salvo (he/him).</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Il cancello</b> di Salvo (he/him).</i>
                 -> salvo
-        + {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
-        + <i>Ho cambiato idea, voglio una storia nuova.</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro 
                 
     = reread_maura
     {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
     
-        + <i>Rileggo <b>Polvere</b> di Maura (she/they).</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Polvere</b> di Maura (she/they).</i>
                 -> maura
-        + {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
-        + <i>Ho cambiato idea, voglio una storia nuova.</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro        
     
     = reread_simo
     {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
     
-        + <i>Rileggo <b>SCP</b> di Simo (they/he).</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>SCP</b> di Simo (they/he).</i>
                 -> simo
-        + {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
-        + <i>Ho cambiato idea, voglio una storia nuova.</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro 
 
     = reread_letizia_vaccarella
     {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
     
-        + <i>Rileggo <b>Dodici Stelle</b> di Letizia Vaccarella (she/her).</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Dodici Stelle</b> di Letizia Vaccarella (she/her).</i>
                 -> letizia_vaccarella
-        + {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
-        + <i>Ho cambiato idea, voglio una storia nuova.</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro     
     
     // = reread_queerginia_wolf
     // {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
     
-    //     + <i>Rileggo <b>Giallo</b> di Queerginia Wolf/Marco Spelgatti (she/he/they).</i>
+    //     +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Giallo</b> di Queerginia Wolf/Marco Spelgatti (she/he/they).</i>
     //             -> queerginia_wolf
-    //     + {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+    //     +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
     //             -> reread
-    //     + <i>Ho cambiato idea, voglio una storia nuova.</i>
+    //     +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
     //             -> book_test_intro 
     
 
@@ -708,6 +628,19 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
     - LIST_COUNT(list) == 5: cinque
     - LIST_COUNT(list) == 6: sei
     - LIST_COUNT(list) == 7: sette
+    - LIST_COUNT(list) == 8: otto
+    - LIST_COUNT(list) == 9: nove
+    - LIST_COUNT(list) == 10: dieci
+    - LIST_COUNT(list) == 11: undici
+    - LIST_COUNT(list) == 12: dodici
+    - LIST_COUNT(list) == 13: tredici
+    - LIST_COUNT(list) == 14: quattordici
+    - LIST_COUNT(list) == 15: quindici
+    - LIST_COUNT(list) == 16: sedici
+    - LIST_COUNT(list) == 17: diciassette
+    - LIST_COUNT(list) == 18: diciotto
+    - LIST_COUNT(list) == 19: diciannove
+    - LIST_COUNT(list) == 20: venti
     
 }
 
