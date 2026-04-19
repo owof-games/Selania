@@ -269,14 +269,14 @@
     {charTag(Mentor, "hurry")}:                     Se sto facendo un buon lavoro.
     {charTag(Mentor, "neutral")}:                   Visto che vede e sente tutto.
 
-    {charTag(TheWitch, "{witch_state()}")}:         <i>Crediamo che {mentorName} stia facendo un buon lavoro.</i>
+    {charTag(TheWitch, witch_state())}:         <i>Crediamo che {mentorName} stia facendo un buon lavoro.</i>
                                                     <i>Così come l'acqua che si raccoglie tra le mani per dissetarci.</i>
                                                     <i>Ma così come l'acqua non può essere incendio, così {mentorName} non può essere qualcosa che non è.</i>
                                                     <i>O portare nomi che non sa.</i>
 
         + Metà delle cose che la voce dice sono illogiche.
                 -> glyph_modifier_variation_management(Mentor, airC)->
-            {charTag(TheWitch, "{witch_state()}")}:         <i>{player_name} non vede, e quindi decide che qualcosa non esiste.</i>
+            {charTag(TheWitch, witch_state())}:         <i>{player_name} non vede, e quindi decide che qualcosa non esiste.</i>
             <i>Ma quella cosa esiste anche se {player_name} non vede.</i>
             {charTag(Mentor, "sad")}:                       Uh, peccato.
             {charTag(Mentor, "neutral")}:                   Ma ci sta: questo luogo è così insolito, immagino sia inevitabile non capirlo fino in fondo.
@@ -287,7 +287,7 @@
             {charTag(Mentor, "sad")}:                       Prendi prima: ho scoperto che per via della mia incuria sta crescendo del muschio sotto al suo vaso.
                                                             Però.
             {charTag(Mentor, "neutral")}:                   Ringrazia la voce da parte mia.
-            {charTag(TheWitch, "{witch_state()}")}:         <i>Dire una mezza verità porta su una mezza strada.</i>
+            {charTag(TheWitch, witch_state())}:         <i>Dire una mezza verità porta su una mezza strada.</i>
         
         + Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
                 -> glyph_modifier_variation_management(Mentor, earthC)->
@@ -306,14 +306,14 @@
 
         + Ha detto tante cose ma la risposta è: no.
                 -> glyph_modifier_variation_management(Mentor, fireC)->
-            {charTag(TheWitch, "{witch_state()}")}:         <i>La frusta che cade senza motivo non porta alcun insegnamento.</i>
+            {charTag(TheWitch, witch_state())}:         <i>La frusta che cade senza motivo non porta alcun insegnamento.</i>
             {charTag(Mentor, "sad")}:                       Oh.#
                                                             Forse potrei chiedere scusa in qualche modo a...
                                                             Ma a chi?
                                                             Come?
             {charTag(Mentor, "hurry")}:                     Ho deciso: pulisco il tronco.
             {charTag(Mentor, "neutral")}:                   Potrebbe apprezzare, immagino.
-            {charTag(TheWitch, "{witch_state()}")}:         <i>Noi non abbiamo bisogno di pulizia, il nostro sporco è nido per funghi e insetti.</i> 
+            {charTag(TheWitch, witch_state())}:         <i>Noi non abbiamo bisogno di pulizia, il nostro sporco è nido per funghi e insetti.</i> 
         -
     {charTag(Mentor, "sad")}:                       Immagino sia faticoso, avere una voce in testa, così.
     {charTag(Mentor, "neutral")}:                   O magari ti fa sentire meno {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}?

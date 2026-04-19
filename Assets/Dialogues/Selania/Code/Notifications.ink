@@ -18,7 +18,7 @@ VAR notification_francoUpdatedMissions = ()
 //Per ora la struttura è in ordine gerarchico di priorità, poi vediamo se ha senso. Per ora ho messo il tagging della strega, ma poi probabilmente metterò il simbolo più sensato.
 {
     - nest_newSigilDiscovered != ():
-        {charTag(TheWitch, "{witch_state()}")}:   {player_name} ha scoperto {sigils_translator(nest_newSigilDiscovered)}.
+        {charTag(TheWitch, witch_state())}:   {player_name} ha scoperto {sigils_translator(nest_newSigilDiscovered)}.
             ~ nest_newSigilDiscovered = ()
         -> nest_reactivateGliphs ->
         -> achievements_onGame_statusUpdate_GM ->
@@ -28,21 +28,21 @@ VAR notification_francoUpdatedMissions = ()
 
 {
     - notification_greenhouseGrown == true && notification_gamerNotification == true:
-        {charTag(TheWitch, "{witch_state()}")}:   Qualcosa di nuovo è cresciuto in serra. 
+        {charTag(TheWitch, witch_state())}:   Qualcosa di nuovo è cresciuto in serra. 
             ~ notification_greenhouseGrown = false
             ~ notification_greenhouseGrownRepropose = false
 }
 
 {
     - player_lastRestingSession >= player_maxPlayingTime && player_restingSessionNotification == true:
-        {charTag(TheWitch, "{witch_state()}")}:   {player_name} è qui da molto. Perché non si prende una pausa? 
+        {charTag(TheWitch, witch_state())}:   {player_name} è qui da molto. Perché non si prende una pausa? 
             ~ notification_restingSession = false
             ~ player_lastRestingSession = player_notificationRestingReset
 }
 
 {
-    - notification_achievement == true && notification_gamerNotification == true::
-        {charTag(TheWitch, "{witch_state()}")}:   {player_name} ha completato l'achievement {notification_achievementName}.
+    - notification_achievement == true && notification_gamerNotification == true:
+        {charTag(TheWitch, witch_state())}:   {player_name} ha completato l'achievement {notification_achievementName}.
             ~ notification_achievement = false
             ~ notification_achievement = ""
 }
@@ -58,7 +58,7 @@ VAR notification_francoUpdatedMissions = ()
                     {
                         //Se tra le missioni aggiornate c'è quella offerta da Franco, mandiamo la notifica
                         - frog_updatedMissions has frog_currentMission && notification_gamerNotification == true:
-                            {charTag(TheWitch, "{witch_state()}")}:   <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>
+                            {charTag(TheWitch, witch_state())}:   <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>
                     }
     
     }

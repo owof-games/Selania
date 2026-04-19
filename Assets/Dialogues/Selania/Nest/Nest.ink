@@ -6,7 +6,7 @@
 
 {
     - nest == 1:
-        {charTag(TheWitch, "{witch_state()}")}:   <i>Vecchie piogge e onde come monito.</i>
+        {charTag(TheWitch, witch_state())}:   <i>Vecchie piogge e onde come monito.</i>
         {
             - contentsNest has fireGlyph:
                 <i>E un glifo rosso già attende {player_name}, dono di una persona amica dopo la sua riscrittura.</i>

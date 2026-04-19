@@ -182,7 +182,7 @@
             }
             {charTag(Mentor, "neutral")}:           Sono in questo posto da non so quanto e non ho mai parlato vasi o altre cose senza occhi e bocca.
             {charTag(Mentor, "bored")}:             E l'idea che qualcosa mi stia spiando mi indispone molto.
-            {charTag(TheWitch, "{witch_state()}")}: Noi non spiamo, noi siamo.
+            {charTag(TheWitch, witch_state())}: Noi non spiamo, noi siamo.
             {charTag(Mentor, "neutral")}:           L'unica cosa che ha voce sono le persone che arrivano per chiedere il nostro aiuto.
                                                     Il tuo aiuto.
             {charTag(Mentor, "sad")}:               Se senti ancora una volte delle voci, prenditi un po' di riposo.

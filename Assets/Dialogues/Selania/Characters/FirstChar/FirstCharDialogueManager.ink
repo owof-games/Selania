@@ -185,7 +185,7 @@
                             }
 
                         //Commento    
-                        {charTag(TheWitch, "{witch_state()}")}:   <i>Dopo il dono di {player_name} {inkTranslator(FirstCharacter)}.</i>
+                        {charTag(TheWitch, witch_state())}:   <i>Dopo il dono di {player_name} {inkTranslator(FirstCharacter)}.</i>
                         -> achievements_onGame_statusUpdate_GM ->    
                         -> main    
 

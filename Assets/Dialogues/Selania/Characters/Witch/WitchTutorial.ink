@@ -6,7 +6,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-        {charTag(TheWitch, "{witch_state()}")}:   <i>Quando vi siete conosciut3, {mentorName} ha detto a {player_name} che le cose che dice alle persone sono un modo di vedere il mondo.
+        {charTag(TheWitch, witch_state())}:   <i>Quando vi siete conosciut3, {mentorName} ha detto a {player_name} che le cose che dice alle persone sono un modo di vedere il mondo.
         <i>Apprezziamo gli sforzi di {mentorName}, ma non siamo d'accordo con questo aspetto.
         <i>Quando {player_name} compie una scelta su cosa dire, non sta parlando del mondo che vede, ma di come lo vive.
         <i>E crediamo sia importante, perché una visione è qualcosa di contrattabile, ma ciò che si vive è, punto.
@@ -15,34 +15,34 @@
 
                 + Sono sicur{player_pronouns has him:o|{player_pronouns has her:a|ə}} che {mentorName} avesse le migliori intenzioni.
                         -> glyph_modifier_variation_management(PG, waterC)->
-                    {charTag(TheWitch, "{witch_state()}")}:   <i>{player_name} risplende nella sua empatia.
+                    {charTag(TheWitch, witch_state())}:   <i>{player_name} risplende nella sua empatia.
                     <i>E il nostro intento non è creare attrito, ma porre una domanda.
                     <i>Quando il maestro sferza l'alunno, può vedere educazione, può vedere punizione.
                     <i>Ma ciò che vive è comunque violenza.</i>
                     
                 + È ciò che facciamo per l'altrə che conta, non quello che diciamo.
                         -> glyph_modifier_variation_management(PG, fireC)->
-                    {charTag(TheWitch, "{witch_state()}")}:   <i>La falena plana per raggiungere la compagna.
+                    {charTag(TheWitch, witch_state())}:   <i>La falena plana per raggiungere la compagna.
                     <i>Il pipistrello plana per mangiare la falena.
                     <i>L'azione è la stessa-
                     <i>Stesso è il risultato?</i>
                     
                 + Il modo in cui viviamo riflette il mondo per come lo guardiamo.
                         -> glyph_modifier_variation_management(PG, airC)->
-                    {charTag(TheWitch, "{witch_state()}")}:   <i>Il modo in cui {player_name} vive riflette il mondo per come lo guarda.
+                    {charTag(TheWitch, witch_state())}:   <i>Il modo in cui {player_name} vive riflette il mondo per come lo guarda.
                     <i>Ma riflette anche la sua storia, le corazze e le ferite che porta.
                     <i>Così come la rosa decide quando fiorire, ma non può decidere quali petali lasciare al vento.</i>
                     
                 + Ma in concreto, non sono due modi diversi per dire la stessa cosa?
                         -> glyph_modifier_variation_management(PG, earthC)->
-                    {charTag(TheWitch, "{witch_state()}")}:   <i>Il cucciolo affonda i denti nel fratellino.
+                    {charTag(TheWitch, witch_state())}:   <i>Il cucciolo affonda i denti nel fratellino.
                     <i>Alla madre dice che è per pietà, e lei lo abbraccia.
                     <i>Al padre dice che è per dominanza, e lui lo festeggia.
                     <i>Padre e madre hanno visto gli stessi denti?</i>
                     
                 + Siamo uman3, e la nostra crescita prospera nella contraddizione.
                         -> glyph_modifier_variation_management(PG, aetherC)->
-                    {charTag(TheWitch, "{witch_state()}")}:   <i>Ricordo poco della vita umana, ma la natura stessa prospera nel tentativo, nell'errore.
+                    {charTag(TheWitch, witch_state())}:   <i>Ricordo poco della vita umana, ma la natura stessa prospera nel tentativo, nell'errore.
                     <i>E noi parliamo non del prosperare, ma del valore delle azioni di {player_name}.
                     <i>L'azione richiede sempre responsabilità.
                     <i>Il falco torna senza cibo.
@@ -73,7 +73,7 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    {charTag(TheWitch, "{witch_state()}")}:   <i>Il Nido è accessibile, il nostro cuore brucia.
+    {charTag(TheWitch, witch_state())}:   <i>Il Nido è accessibile, il nostro cuore brucia.
     <i>I Sigilli sono instabili, l'instabilità è forza.
     <i>La quercia fruttifica e il cinghiale si accresce. 
     <i>Il cinghiale perisce e la quercia fiorisce.
@@ -87,26 +87,26 @@
 
             + Solo il tempo conosce le risposte.
                     -> glyph_modifier_variation_management(PG, earthC)->
-                {charTag(TheWitch, "{witch_state()}")}:   <i>Il tempo porta le risposte che vogliamo vedere.
+                {charTag(TheWitch, witch_state())}:   <i>Il tempo porta le risposte che vogliamo vedere.
                 <i>E se {player_name} non sa leggere il futuro, su cosa basa le scelte del suo presente?</i>
 
             + Basta chiedersi "questa cosa farà bene all'altrə?".
                     -> glyph_modifier_variation_management(PG, waterC)->
-                {charTag(TheWitch, "{witch_state()}")}:   <i>Il Ministro scatena la guerra per il bene del paese.
+                {charTag(TheWitch, witch_state())}:   <i>Il Ministro scatena la guerra per il bene del paese.
                 <i>In migliaia muoiono al fronte.</i>
                 
             + Ci sono parti di me che mi rimangono ignote.
                     -> glyph_modifier_variation_management(PG, aetherC)->
-                {charTag(TheWitch, "{witch_state()}")}:   <i>La pianta si accresce con lentezza in molteplici direzioni.
+                {charTag(TheWitch, witch_state())}:   <i>La pianta si accresce con lentezza in molteplici direzioni.
                 <i>Il lusso di non rispondere delle proprie azioni.</i>
 
             + La mia volontà è forte, è quello che conta.
                     -> glyph_modifier_variation_management(PG, fireC)->
-                {charTag(TheWitch, "{witch_state()}")}:   <i>La roccia inamovibile, scivola di millimetro in millimetro verso l'abisso.</i>
+                {charTag(TheWitch, witch_state())}:   <i>La roccia inamovibile, scivola di millimetro in millimetro verso l'abisso.</i>
                 
             + La risposta logica risiede nell'intenzione.
                     -> glyph_modifier_variation_management(PG, airC)->
-                {charTag(TheWitch, "{witch_state()}")}:   <i>Con forte intenzione Icaro volò verso il sole.
+                {charTag(TheWitch, witch_state())}:   <i>Con forte intenzione Icaro volò verso il sole.
                 <i>E con altrettanto stupore trovò la morte.</i>
                 
             -
@@ -139,7 +139,7 @@
                     <i>{player_name} cerca di rado risposte tra le pagine del libro.
             }
 
-        {charTag(TheWitch, "{witch_state()}")}:   <i>Un libro è ricordo condiviso.
+        {charTag(TheWitch, witch_state())}:   <i>Un libro è ricordo condiviso.
         <i>Una magia che pronuncia sé stessa.
         <i>Per questo le pagine si popolano man mano che {player_name} vive.
         <i>A volte il libro usa la nostra voce.

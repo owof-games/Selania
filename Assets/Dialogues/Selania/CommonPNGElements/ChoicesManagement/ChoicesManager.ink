@@ -669,7 +669,7 @@ Recap della logica.
     //Se l'utilizzo è arrivato al massimo, a quel punto aggiungiamo il sigillo a quelli utilizzati e svuotiamo la variabile del sigillo attualmente attivo.
     {
         - glyph_actualSigilUses == glyph_maxSigilUses:
-            {charTag(TheWitch, "{witch_state()}")}:   L'effetto di {glyph_actualActiveSigil} si è esaurito.
+            {charTag(TheWitch, witch_state())}:   L'effetto di {glyph_actualActiveSigil} si è esaurito.
             //poi aggiorno le informazioni sul sigillo principale
             ~ glyph_grimoireMainSigilsUpdater()
             //sposto il sigillo su quelli utilizzati

@@ -33,27 +33,27 @@
 
 
     = zero
-        {charTag(TheWitch, "{witch_state()}")}: <i>{~Nebbie sottili e ricordi pesanti|Formiche distanti su macchine arrugginite|Ritmi percussivi e voci silenti.}</i>
+        {charTag(TheWitch, witch_state())}: <i>{~Nebbie sottili e ricordi pesanti|Formiche distanti su macchine arrugginite|Ritmi percussivi e voci silenti.}</i>
             -> main
 
     
     = one
-        {charTag(TheWitch, "{witch_state()}")}:<i>{~Vecchie radici si ancorano nella memoria.|La corteccia tenace resiste alla dimenticanza.|Porcellini di terra rotolano tra radici distese.}</i>
+        {charTag(TheWitch, witch_state())}:<i>{~Vecchie radici si ancorano nella memoria.|La corteccia tenace resiste alla dimenticanza.|Porcellini di terra rotolano tra radici distese.}</i>
             -> main
     
     = two
-        {charTag(TheWitch, "{witch_state()}")}:<i>{~Il tronco chiede di percorrere nuove strade.|Pilastri reggono vecchie facciate.|Formiche inquiete cercano riparo nel vecchio legno.}</i>
+        {charTag(TheWitch, witch_state())}:<i>{~Il tronco chiede di percorrere nuove strade.|Pilastri reggono vecchie facciate.|Formiche inquiete cercano riparo nel vecchio legno.}</i>
             -> main
 
     = three
-        {charTag(TheWitch, "{witch_state()}")}:<i>{~L'aria saggia scalda le foglie.|Una chioma stesa in cerca di risposte.|L'erba si rinfresca ai piedi della nuova ombra.}</i>
+        {charTag(TheWitch, witch_state())}:<i>{~L'aria saggia scalda le foglie.|Una chioma stesa in cerca di risposte.|L'erba si rinfresca ai piedi della nuova ombra.}</i>
             -> main
 
     = four
-        {charTag(TheWitch, "{witch_state()}")}:<i>{~L'aria saggia scalda il petto.|Un braccio steso in cerca di risposte.|Il tronco si torce inquieto.|L'erba si rinfresca ai piedi della nuova ombra.}</i>
+        {charTag(TheWitch, witch_state())}:<i>{~L'aria saggia scalda il petto.|Un braccio steso in cerca di risposte.|Il tronco si torce inquieto.|L'erba si rinfresca ai piedi della nuova ombra.}</i>
             -> main
 
     = five
-        {charTag(TheWitch, "{witch_state()}")}:<i>{~L'aria saggia scalda il petto.|Un braccio steso in cerca di risposte.|Il tronco si torce inquieto.|L'erba si rinfresca ai piedi della nuova ombra.}</i>
+        {charTag(TheWitch, witch_state())}:<i>{~L'aria saggia scalda il petto.|Un braccio steso in cerca di risposte.|Il tronco si torce inquieto.|L'erba si rinfresca ai piedi della nuova ombra.}</i>
             -> main
 

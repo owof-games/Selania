@@ -328,7 +328,7 @@
                                                         È più furbo di un pesce rosso.
                                                         Ma {mentorName}.
                                                         Di cosa aveva bisogno {mentorName}?
-        {charTag(TheWitch, "{witch_state()}")}:         <i>{mentorName} ama dare consigli per far star bene le persone.</i>
+        {charTag(TheWitch, witch_state())}:         <i>{mentorName} ama dare consigli per far star bene le persone.</i>
                                                         <i>{mentorName} crede di potere esistere solo quando si rende utile.</i>
         {charTag(Franco, "{portrait_Franco()}")}:       Esatto.
                                                         Quella roba lì.
@@ -548,7 +548,7 @@
     ~ frog_currentMission = missionSix
 
     {charTag(Franco, "{portrait_Franco()}")}:       Non mi è ancora chiaro perché decida di stare in quella discarica.
-    {charTag(TheWitch, "{witch_state()}")}:         La discarica è un promemoria delle nostre responsabilità.
+    {charTag(TheWitch, witch_state())}:         La discarica è un promemoria delle nostre responsabilità.
     {charTag(Franco, "{portrait_Franco()}")}:       Un po' come quando Tullio mi mette i promemoria sul cellulare.
                                                     Ma poi dimentico il cellulare a casa.
                                                     Ma sono felice che hai parlato con la nostra amica comune!
@@ -568,7 +568,7 @@
                                                     Perché il lavoro che fai è molto delicato.
                                                     Molto.
                                                     Ed è bello avere una guida, un'alleata così saggia.
-    {charTag(TheWitch, "{witch_state()}")}:         <i>La saggezza ha molte facce, e una porta il volto di Franco.</i>
+    {charTag(TheWitch, witch_state())}:         <i>La saggezza ha molte facce, e una porta il volto di Franco.</i>
     {charTag(Franco, "{portrait_Franco()}")}:       E ora quindi è il mio momento di aiutarti.
         
         -> franco_giftsManagement
@@ -841,10 +841,10 @@
         @animation:RewriterBook
 
         {charTag(Franco, "{portrait_Franco()}")}:       Girino, ma che carino questo sigillo!
-        {charTag(TheWitch, "{witch_state()}")}:         {player_name} ha trovato {sigils_translator(nest_francoChosenSigil)}.
+        {charTag(TheWitch, witch_state())}:         {player_name} ha trovato {sigils_translator(nest_francoChosenSigil)}.
         {charTag(Franco, "{portrait_Franco()}")}:       {sigils_translator(nest_francoChosenSigil)}, suona bene.
                                                         Spero che la nostra amica comune ti dia anche le informazioni utili per capire come funzioni.
-        {charTag(TheWitch, "{witch_state()}")}:         {player_name} troverà le informazioni su {sigils_translator(nest_francoChosenSigil)} direttamente nel Grimorio.
+        {charTag(TheWitch, witch_state())}:         {player_name} troverà le informazioni su {sigils_translator(nest_francoChosenSigil)} direttamente nel Grimorio.
 
             //Aggiorno i testi
             ~ glyph_grimoireTripleSigilsUpdater()

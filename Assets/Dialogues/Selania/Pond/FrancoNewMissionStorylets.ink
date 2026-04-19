@@ -105,7 +105,7 @@
                                                         È più furbo di un pesce rosso.
                                                         Ma {mentorName}.
                                                         Di cosa aveva bisogno {mentorName}?
-        {charTag(TheWitch, "{witch_state()}")}:         <i>{mentorName} ama dare consigli per far star bene le persone.</i>
+        {charTag(TheWitch, witch_state())}:         <i>{mentorName} ama dare consigli per far star bene le persone.</i>
                                                         <i>{mentorName} crede di potere esistere solo quando si rende utile.</i>
         {charTag(Franco, "{portrait_Franco()}")}:       Esatto.
                                                         Quella roba lì.
@@ -433,7 +433,7 @@
                                                         E i sassi aprono anche le teste con un po' di forza.
                                                         Ma non voglio metterci le emozioni dentro a Euforbo, voglio che le sappia dire.
                                                         E mi ha detto "crediamo che con questo tipo di glifo all'inizio, {player_name} possa scoprire un sigillo adatto per aiutare Euforbo".
-        {charTag(TheWitch, "{witch_state()}")}:         Confermiamo. 
+        {charTag(TheWitch, witch_state())}:         Confermiamo. 
         {charTag(Franco, "{portrait_Franco()}")}:       Mi fido di lei, non mi ha detto molto altro.
                                                         E non so cosa faranno quei sigilli di preciso, ma mi sono ricordato di quando Euforbo era piccolo e non voleva nuotare.
                                                         Poi l'abbiamo lasciato da solo quando abbiamo traslocato verso la nuova corrente e ha imparato da solo.

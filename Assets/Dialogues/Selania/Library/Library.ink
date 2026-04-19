@@ -6,7 +6,7 @@
     
 {
     -library == 1:
-        {charTag(TheWitch, "{witch_state()}")}:   <i>Nella biblioteca storie non lette cercano cuori accoglienti.
+        {charTag(TheWitch, witch_state())}:   <i>Nella biblioteca storie non lette cercano cuori accoglienti.
 }
 
 -> main
