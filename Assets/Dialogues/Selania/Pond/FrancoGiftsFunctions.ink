@@ -490,59 +490,59 @@
 {debug_frog: passo da cultivable_recovery.}
 Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
 
-    + {frog_recoverableCultivables has BaccaDellaAddolorata} ...{ingredientTranslator(BaccaDellaAddolorata)}.
+    + {frog_recoverableCultivables has BaccaDellaAddolorata}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(BaccaDellaAddolorata)}.
             ~  frog_recoveredCultivables += BaccaDellaAddolorata
             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has BarbaDellInciampo} ...{ingredientTranslator(BarbaDellInciampo)}.
+    + {frog_recoverableCultivables has BarbaDellInciampo}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(BarbaDellInciampo)}.
             ~  frog_recoveredCultivables += BarbaDellInciampo
             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has BastoneDellOzioso} ...{ingredientTranslator(BastoneDellOzioso)}.
+    + {frog_recoverableCultivables has BastoneDellOzioso}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(BastoneDellOzioso)}.
             ~  frog_recoveredCultivables += BastoneDellOzioso
             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has BrinaDellImpossibile} ...{ingredientTranslator(BrinaDellImpossibile)}.
+    + {frog_recoverableCultivables has BrinaDellImpossibile}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(BrinaDellImpossibile)}.
             ~  frog_recoveredCultivables += BrinaDellImpossibile
             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has CantoDelleCompagne}  ...{ingredientTranslator(CantoDelleCompagne)}.
+    + {frog_recoverableCultivables has CantoDelleCompagne}   \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(CantoDelleCompagne)}.
             ~  frog_recoveredCultivables += CantoDelleCompagne
             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has CardoAspinato} ...{ingredientTranslator(CardoAspinato)}.
+    + {frog_recoverableCultivables has CardoAspinato}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(CardoAspinato)}.
             ~  frog_recoveredCultivables += CardoAspinato
             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has EderaDelleAmanti} ...{ingredientTranslator(EderaDelleAmanti)}.
+    + {frog_recoverableCultivables has EderaDelleAmanti}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(EderaDelleAmanti)}.
             ~  frog_recoveredCultivables += EderaDelleAmanti
             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has ErbaLiccia} ...{ingredientTranslator(ErbaLiccia)}.
+    + {frog_recoverableCultivables has ErbaLiccia}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(ErbaLiccia)}.
             ~  frog_recoveredCultivables += ErbaLiccia
             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has FalsaPalude} ...{ingredientTranslator(FalsaPalude)}.
+    + {frog_recoverableCultivables has FalsaPalude}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(FalsaPalude)}.
             ~  frog_recoveredCultivables += FalsaPalude
             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has LanaNotturna} ...{ingredientTranslator(LanaNotturna)}.
+    + {frog_recoverableCultivables has LanaNotturna}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(LanaNotturna)}.
             ~  frog_recoveredCultivables += LanaNotturna
             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has LicheneDegliAbissi} ...{ingredientTranslator(LicheneDegliAbissi)}.
+    + {frog_recoverableCultivables has LicheneDegliAbissi}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(LicheneDegliAbissi)}.
             ~  frog_recoveredCultivables += LicheneDegliAbissi
             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has NonTiScordarDiTe} ...{ingredientTranslator(NonTiScordarDiTe)}.
+    + {frog_recoverableCultivables has NonTiScordarDiTe}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(NonTiScordarDiTe)}.
             ~  frog_recoveredCultivables += NonTiScordarDiTe
             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has Olobino} ...{ingredientTranslator(Olobino)}.
+    + {frog_recoverableCultivables has Olobino}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(Olobino)}.
             ~  frog_recoveredCultivables += Olobino
             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has LaSpazzata} ...{ingredientTranslator(LaSpazzata)}.
+    + {frog_recoverableCultivables has LaSpazzata}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(LaSpazzata)}.
             ~  frog_recoveredCultivables += LaSpazzata
             -> franco_afterRecovery
             

@@ -43,17 +43,17 @@
     - (top)
     {frog_giftability: Come vuoi che ti aiuti?}
 
-        + {frog_firstCharGiftable == true}Mi servirebbe un consiglio su {charNameOne}.
+        + {frog_firstCharGiftable == true} \ {charTag(PG, "neutral")}:              Mi servirebbe un consiglio su {charNameOne}.
             -> franco_giftsFirstChar
-        + {frog_secondCharGiftable == true} Vorrei una mano con {charNameTwo}.
+        + {frog_secondCharGiftable == true}  \ {charTag(PG, "neutral")}:            Vorrei una mano con {charNameTwo}.
             -> franco_giftsSecondChar
-        + {frog_thirdCharGiftable == true} Cosa potresti offrirmi per {charNameThree}?
+        + {frog_thirdCharGiftable == true}  \ {charTag(PG, "neutral")}:             Cosa potresti offrirmi per {charNameThree}?
             -> franco_giftsThirdChar
-        + {frog_fourthCharGiftable == true} Apprezzerei un aiuto con {charNameFour}.
+        + {frog_fourthCharGiftable == true}  \ {charTag(PG, "neutral")}:            Apprezzerei un aiuto con {charNameFour}.
             -> franco_giftsFourthChar
-        + {frog_fifthCharGiftable == true} Qualche dritta su {charNameFive}?
+        + {frog_fifthCharGiftable == true}  \ {charTag(PG, "neutral")}:             Qualche dritta su {charNameFive}?
             -> franco_giftsFifthChar
-        + {(frog_recoverableCultivables != ()) && (frog_recoveredCultivables == ())} Puoi aiutarmi a recuperare una pianta che ho già utilizzato?
+        + {(frog_recoverableCultivables != ()) && (frog_recoveredCultivables == ())}  \ {charTag(PG, "neutral")}:         Puoi aiutarmi a recuperare una pianta che ho già utilizzato?
                 {charTag(Franco, "{portrait_Franco()}")}:       Certo che craack!
                                                                 Ma.
                                                                 Lo posso fare solo una volta.
@@ -62,7 +62,7 @@
                                                                     + + Mmm, ci ragiono su.
                                                                         -> top
 
-        + {frog_recoveredSigil == () && glyph_usedSigils != ()} Puoi aiutarmi a recuperare un sigillo che ho già utilizzato?
+        + {frog_recoveredSigil == () && glyph_usedSigils != ()}  \ {charTag(PG, "neutral")}:         Puoi aiutarmi a recuperare un sigillo che ho già utilizzato?
                 {charTag(Franco, "{portrait_Franco()}")}:       Certo che craack!
                                                                 Ma.
                                                                 Lo posso fare solo una volta.
@@ -77,7 +77,7 @@
                                                                     + + Mmm, ci ragiono su.
                                                                         -> top
 
-        + {frog_giftability} Vorrei pensarci ancora un po'.
+        + {frog_giftability}  \ {charTag(PG, "neutral")}:         Vorrei pensarci ancora un po'.
             {charTag(Franco, "{portrait_Franco()}")}:       Mi trovi qui girino.
             {shuffle:
                                                         -   Continuo a contare tutte le onde!
@@ -91,7 +91,7 @@
                                                                 ~ frog_suspended_gift = true
                                                             -> main
         
-        + {! frog_giftability} Perfetto, torno dopo allora!
+        + {! frog_giftability}  \ {charTag(PG, "neutral")}:         Perfetto, torno dopo allora!
             -> main
         
         -
@@ -122,13 +122,13 @@
         - {charTag(Franco, "{portrait_Franco()}")}:     Ottimamente!                             
     }
     
-    + {frog_firstCharAchievableGifts has cultivableGift} Cosa potrei regalarle?
+    + {frog_firstCharAchievableGifts has cultivableGift}  \ {charTag(PG, "neutral")}:         Cosa potrei regalarle?
         -> franco_giftsPlants(FirstCharacter, Pond)
-    + {frog_firstCharAchievableGifts has ingredientGift && player_accessiblePlaces has Kitchen} Quale ingrediente potrei usare in cucina con lei?
+    + {frog_firstCharAchievableGifts has ingredientGift && player_accessiblePlaces has Kitchen}  \ {charTag(PG, "neutral")}:         Quale ingrediente potrei usare in cucina con lei?
         -> franco_giftsPlants(FirstCharacter, Kitchen)
-    + {frog_firstCharAchievableGifts has bookGift && player_accessiblePlaces has Library} Di quale racconto vorrebbe parlare?
+    + {frog_firstCharAchievableGifts has bookGift && player_accessiblePlaces has Library}  \ {charTag(PG, "neutral")}:         Di quale racconto vorrebbe parlare?
         -> book
-    + Ora che ci penso, potresti aiutarmi in modo diverso?
+    +  \ {charTag(PG, "neutral")}:         Ora che ci penso, potresti aiutarmi in modo diverso?
         -> franco_giftsManagement.top
 
         = book
@@ -203,13 +203,13 @@
         - {charTag(Franco, "{portrait_Franco()}")}:     Ottimamente!                                   
     }
     
-    + {frog_secondCharAchievableGifts has cultivableGift} Cosa potrei regalargli?
+    + {frog_secondCharAchievableGifts has cultivableGift}  \ {charTag(PG, "neutral")}:         Cosa potrei regalargli?
         -> franco_giftsPlants(SecondCharacter, Pond)
-    + {frog_secondCharAchievableGifts has ingredientGift && player_accessiblePlaces has Kitchen} Quale ingrediente potrei usare in cucina con lui?
+    + {frog_secondCharAchievableGifts has ingredientGift && player_accessiblePlaces has Kitchen}  \ {charTag(PG, "neutral")}:         Quale ingrediente potrei usare in cucina con lui?
         -> franco_giftsPlants(SecondCharacter, Kitchen)
-    + {frog_secondCharAchievableGifts has bookGift && player_accessiblePlaces has Library} Di quale racconto vorrebbe parlare?
+    + {frog_secondCharAchievableGifts has bookGift && player_accessiblePlaces has Library}  \ {charTag(PG, "neutral")}:         Di quale racconto vorrebbe parlare?
         -> book
-    + Ora che ci penso, potresti aiutarmi in modo diverso?
+    +  \ {charTag(PG, "neutral")}:         Ora che ci penso, potresti aiutarmi in modo diverso?
         -> franco_giftsManagement.top
     
 
@@ -280,13 +280,13 @@
         - {charTag(Franco, "{portrait_Franco()}")}:     Ottimamente!                                   
     }
     
-    + {frog_thirdCharAchievableGifts has cultivableGift} Cosa potrei regalargli?
+    + {frog_thirdCharAchievableGifts has cultivableGift}  \ {charTag(PG, "neutral")}:         Cosa potrei regalargli?
         -> franco_giftsPlants(ThirdCharacter, Pond)
-    + {frog_thirdCharAchievableGifts has ingredientGift && player_accessiblePlaces has Kitchen} Quale ingrediente potrei usare in cucina con lui?
+    + {frog_thirdCharAchievableGifts has ingredientGift && player_accessiblePlaces has Kitchen}  \ {charTag(PG, "neutral")}:         Quale ingrediente potrei usare in cucina con lui?
         -> franco_giftsPlants(ThirdCharacter, Kitchen)
-    + {frog_thirdCharAchievableGifts has bookGift && player_accessiblePlaces has Library} Di quale racconto vorrebbe parlare?
+    + {frog_thirdCharAchievableGifts has bookGift && player_accessiblePlaces has Library}  \ {charTag(PG, "neutral")}:         Di quale racconto vorrebbe parlare?
         -> book
-    + Ora che ci penso, potresti aiutarmi in modo diverso?
+    +  \ {charTag(PG, "neutral")}:         Ora che ci penso, potresti aiutarmi in modo diverso?
         -> franco_giftsManagement.top
     
 
@@ -323,13 +323,13 @@
         - {charTag(Franco, "{portrait_Franco()}")}:     Ottimamente!                                   
     }
     
-    + {frog_fourthCharAchievableGifts has cultivableGift} Cosa potrei regalarle?
+    + {frog_fourthCharAchievableGifts has cultivableGift}  \ {charTag(PG, "neutral")}:         Cosa potrei regalarle?
         -> franco_giftsPlants(FourthCharacter, Pond)
-    + {frog_fourthCharAchievableGifts has ingredientGift && player_accessiblePlaces has Kitchen} Quale ingrediente potrei usare in cucina con lei?
+    + {frog_fourthCharAchievableGifts has ingredientGift && player_accessiblePlaces has Kitchen}  \ {charTag(PG, "neutral")}:         Quale ingrediente potrei usare in cucina con lei?
         -> franco_giftsPlants(FourthCharacter, Kitchen)
-    + {frog_fourthCharAchievableGifts has bookGift && player_accessiblePlaces has Library} Di quale racconto vorrebbe parlare?
+    + {frog_fourthCharAchievableGifts has bookGift && player_accessiblePlaces has Library}  \ {charTag(PG, "neutral")}:         Di quale racconto vorrebbe parlare?
         -> book
-    + Ora che ci penso, potresti aiutarmi in modo diverso?
+    +  \ {charTag(PG, "neutral")}:         Ora che ci penso, potresti aiutarmi in modo diverso?
         -> franco_giftsManagement.top
 
         = book
@@ -365,13 +365,13 @@
         - {charTag(Franco, "{portrait_Franco()}")}:     Ottimamente!                                   
     }
     
-    + {frog_fifthCharAchievableGifts has cultivableGift} Cosa potrei regalarle?
+    + {frog_fifthCharAchievableGifts has cultivableGift}  \ {charTag(PG, "neutral")}:         Cosa potrei regalarle?
         -> franco_giftsPlants(FifthCharacter, Pond)
-    + {frog_fifthCharAchievableGifts has ingredientGift && player_accessiblePlaces has Kitchen} Quale ingrediente potrei usare in cucina con lei?
+    + {frog_fifthCharAchievableGifts has ingredientGift && player_accessiblePlaces has Kitchen}  \ {charTag(PG, "neutral")}:         Quale ingrediente potrei usare in cucina con lei?
         -> franco_giftsPlants(FifthCharacter, Kitchen)
-    + {frog_fifthCharAchievableGifts has bookGift && player_accessiblePlaces has Library} Di quale racconto vorrebbe parlare?
+    + {frog_fifthCharAchievableGifts has bookGift && player_accessiblePlaces has Library}  \ {charTag(PG, "neutral")}:         Di quale racconto vorrebbe parlare?
         -> book
-    + Ora che ci penso, potresti aiutarmi in modo diverso?
+    +  \ {charTag(PG, "neutral")}:         Ora che ci penso, potresti aiutarmi in modo diverso?
         -> franco_giftsManagement.top
     
 

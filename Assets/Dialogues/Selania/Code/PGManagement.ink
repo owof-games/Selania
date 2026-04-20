@@ -123,23 +123,23 @@
     }
     
     
-    + {gender > 1} [Chiamami coi pronomi {player_pronouns has him:maschili|{player_pronouns has her:femminili|neutri}}.]
+    + {gender > 1} \ {charTag(PG, "neutral")}:         Chiamami coi pronomi {player_pronouns has him:maschili|{player_pronouns has her:femminili|neutri}}.
         ->->
-    + {gender > 1} [<i>Cambio i miei pronomi.]
+    + {gender > 1} \ {charTag(PG, "neutral")}:         <i>Cambio i miei pronomi.
         -> top
     + ->
     
     - (top)
     {charTag(PG, "neutral")}: I miei pronomi sono...
-        + [Mi trovo a mio agio col maschile.]
+        + \ {charTag(PG, "neutral")}:         Mi trovo a mio agio col maschile.
             ~ player_pronouns = ()
             ~ player_pronouns += him
         
-        + [Preferisco i pronomi femminili.]
+        + \ {charTag(PG, "neutral")}:         Preferisco i pronomi femminili.
             ~ player_pronouns = ()
             ~ player_pronouns += her
         
-        + [Vai di neutro.]
+        + \ {charTag(PG, "neutral")}:         Vai di neutro.
             ~ player_pronouns = ()
             ~ player_pronouns += they
         -
@@ -152,31 +152,31 @@
 
     - (top2)
     
-        + {name_choice > 1} [Il mio nome è {player_name}.]
+        + {name_choice > 1} \ {charTag(PG, "neutral")}:         Il mio nome è {player_name}.
             ->->
         
-        + {name_choice > 1}[<i>Voglio cambiare nome.]
+        + {name_choice > 1}\ {charTag(PG, "neutral")}:         <i>Voglio cambiare nome.
             ~ player_nameChosen = false
             -> top
         
         + ->
     
     - (top)
-        {charTag(PG, "neutral")}: Il mio nome è...
+        {charTag(PG, "neutral")}:       Il mio nome è...
         ~ temp random_name1 = get_random_name()
         ~ temp random_name2 = get_random_name()
         ~ temp random_name3 = get_random_name()
         
-        + [<b>{random_name1}</b>]
+        + \ {charTag(PG, "neutral")}:         <b>{random_name1}</b>
             ~ player_name = random_name1
             ~ player_nameChosen = true
-        + [<b>{random_name2}</b>]
+        + \ {charTag(PG, "neutral")}:         <b>{random_name2}</b>
             ~ player_name = random_name2
             ~ player_nameChosen = true
-        + [<b>{random_name3}</b>]
+        + \ {charTag(PG, "neutral")}:         <b>{random_name3}</b>
             ~ player_name = random_name3
             ~ player_nameChosen = true
-        + [<i>No, non è questo il mio nome.]
+        + \ {charTag(PG, "neutral")}:         <i>No, non è questo il mio nome.
             ~ player_nameChosen = false
             -> top
         - 

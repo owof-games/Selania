@@ -22,9 +22,9 @@
 
     - (top1)
     Vuole sentire, la spiegazione?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_neutral
-        + Certo!
+        + \ {charTag(PG, "neutral")}:         Certo!
             Anche meno entusiasmo.
-        + Passo.
+        + \ {charTag(PG, "neutral")}:         Passo.
             Meglio per me.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_happy
             Le ricordo che l'ufficio Incidenti e Svenimenti è chiuso fino a data indefinita.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
                 -> carla_closing_storylet
@@ -40,15 +40,15 @@
     Mio figlio dice che a sessant'anni devo smetterla di farmi la cresta viola.
     Gli ho risposto che ha quarant'anni e che ancora non sa lavarsi le mutande da solo.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_neutral
     Questo fa di me una cattiva madre?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
-        + No.
+        + \ {charTag(PG, "neutral")}:         No.
             ~ tutorial_CarlaRelationshipIndicator ++
-        + Sì.
+        + \ {charTag(PG, "neutral")}:         Sì.
             ~ tutorial_CarlaRelationshipIndicator --
-        + No.
+        + \ {charTag(PG, "neutral")}:         No.
             ~ tutorial_CarlaRelationshipIndicator ++
-        + No.
+        + \ {charTag(PG, "neutral")}:         No.
             ~ tutorial_CarlaRelationshipIndicator ++
-        + No.
+        + \ {charTag(PG, "neutral")}:         No.
             ~ tutorial_CarlaRelationshipIndicator ++
         -
     {
@@ -102,9 +102,9 @@
 
     - (top1)    
     Vuole ascoltare?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_sad
-        + Con piacere!
+        + \ {charTag(PG, "neutral")}:         Con piacere!
             Dubito.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
-        + No, grazie.
+        + \ {charTag(PG, "neutral")}:         No, grazie.
             Saggia scelta.
             Per me per lo meno.
                 -> carla_closing_storylet
@@ -163,10 +163,10 @@
 
     - (top1) 
     Iniziamo?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_sad
-        + Non vedo l'ora.
+        + \ {charTag(PG, "neutral")}:         Non vedo l'ora.
             Buffo.
             Anche io non vedo l'ora che finisca il mio turno.
-        + So già tutto, grazie.
+        + \ {charTag(PG, "neutral")}:         So già tutto, grazie.
             Allora mi spieghi perché a sessant'anni sono ancora in questo ufficio.
             Buona continuazione.
                 -> carla_closing_storylet
@@ -234,9 +234,9 @@
 
     - (top1)     
     Le vuole ascoltare?
-        + Gliene sarei grat{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
+        + \ {charTag(PG, "neutral")}:         Gliene sarei grat{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
             Se sapesse le cose che penso di lei, non mi sarebbe grat{player_pronouns has him:o|{player_pronouns has her:a|ə}} di nulla.
-        + Non importa.
+        + \ {charTag(PG, "neutral")}:         Non importa.
             Siamo in due.
             Sono tenuta giusto a ricordarle che il Ministero la riterrà responsabile di ogni uso sconsiderato del Grimorio.
                 -> carla_closing_storylet
@@ -285,9 +285,9 @@
 
     - (top1)     
     È pront{player_pronouns has him:o|{player_pronouns has her:a|ə}}?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_neutral
-        + Adoro le piante!
+        + \ {charTag(PG, "neutral")}:         Adoro le piante!
             Le assicuro che la cosa non è reciproca.
-        + Non serve, ho il pollice verde.
+        + \ {charTag(PG, "neutral")}:         Non serve, ho il pollice verde.
             Allora dovrebbe fare segnalazione al Ministero per i Malanni Immaginari.
             Ottavo piano, a destra dopo l'ascensore guasto.
                 -> carla_closing_storylet
@@ -356,9 +356,9 @@
 
     - (top1) 
     Accetta di ascoltare la mia spiegazione?#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_neutral
-        + Ne ho proprio bisogno.
+        + \ {charTag(PG, "neutral")}:         Ne ho proprio bisogno.
             È quello che temevo.
-        + Non serve, sono laureat{player_pronouns has him:o|{player_pronouns has her:a|ə}} in Masterchef.
+        + \ {charTag(PG, "neutral")}:         Non serve, sono laureat{player_pronouns has him:o|{player_pronouns has her:a|ə}} in Masterchef.
             Mmm.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_neutral
             Forse mio figlio è più sveglio di lei.#speaker:Carla#inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
             Si ricordi che gli incidenti in cucina non sono coperti dall'assicurazione.
@@ -412,11 +412,11 @@
 
     - (top1) 
     Vuole che le spieghi come funzionano i Sigilli?
-        + Sarebbe magnifico.
+        + \ {charTag(PG, "neutral")}:         Sarebbe magnifico.
             No.
             Magnifica è la pensione.
             Non questa mole immensa di scartoffie.
-        + Preferisco imparare sul campo.
+        + \ {charTag(PG, "neutral")}:         Preferisco imparare sul campo.
             È una scelta.
             Le ricordo che il numero verde per gli incidenti magici e le trasformazioni involontarie è fuori servizio dal millenovecentoottantaquattro.
                 -> carla_closing_storylet
@@ -469,10 +469,10 @@
 
     - (top1) 
     Le spiego i sassi, va bene?
-        + Sassiiiiiiiiiiiiii!
+        + \ {charTag(PG, "neutral")}:         Sassiiiiiiiiiiiiii!
             Anche meno, figliol{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
             Anche meno.
-        + Sassnooooooooooooo!
+        + \ {charTag(PG, "neutral")}:         Sassnooooooooooooo!
             Lei è amic{player_pronouns has him:o|{player_pronouns has her:a|ə}} di Franco, vero?
             Avrebbe dovuto dirmelo prima.
             Avrei evitato di sprecare il mio tempo.

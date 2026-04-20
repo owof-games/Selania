@@ -701,11 +701,11 @@ QUESTIONS
          {debug_cultivable: Entro in first_question. {greenhouse_firstQuest: greenhouse_firstQuest ora = true|greenhouse_firstQuest = false}}
  
         {charTag(TheWitch, witch_state())}:   <i>Le foglie...
-            + [{~Si sfiorano|Si mescolano|Si proteggono le une con le altre}.]
+            + \ {charTag(PG, "neutral")}:         [{~Si sfiorano|Si mescolano|Si proteggono le une con le altre}.]
                     ~ greenhouse_cropsType += relationship
                     ~ greenhouse_firstAnswerTracker = greenhouse_relationshipCrops
                     {debug_cultivable: greenhouse_cropsType contiene ora {greenhouse_cropsType}.}
-            + [{~Si accumulano sulla soglia|Si dispongono in ordine attorno ai vasi|Resistono al vento}.]
+            + \ {charTag(PG, "neutral")}:         [{~Si accumulano sulla soglia|Si dispongono in ordine attorno ai vasi|Resistono al vento}.]
                     ~ greenhouse_cropsType += imagination
                     ~ greenhouse_firstAnswerTracker = greenhouse_understandingCrops
                     {debug_cultivable: greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    

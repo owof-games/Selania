@@ -50,26 +50,26 @@
         
     Tu cosa fai se ci hanno rapito gli alieni?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
     
-            + Dormiamo qualche giorno, siii!
+            + \ {charTag(PG, "neutral")}:         Dormiamo qualche giorno, siii!
                  -> glyph_modifier_variation_management(FirstCharacter, earthC)->
 
                 Voi persone vecchie siete noiose.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Nemmeno la nonna pensa così tanto a dormire!
                 Perché tua nonna è in pensione e non deve pensare costantemente a PRODURRE!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
 
-            + Anche io voglio studiarmi tutto!
+            + \ {charTag(PG, "neutral")}:         Anche io voglio studiarmi tutto!
                 -> glyph_modifier_variation_management(FirstCharacter, airC)->
                  
                 Sìì! E il nostro team batte il team SIAMO NOIOSI E DORMIAMO SEMPRE DI {charNameOne}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 Sarò noiosa, ma tu arriverai ai quindici anni più ansioso di un pinscher, piccoletto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
 
-            + Mi metterei a piangere {player_pronouns has him:terrorizzato|{player_pronouns has her:terrorizzata|terrorizzatə}} in un angolino.
+            + \ {charTag(PG, "neutral")}:         Mi metterei a piangere {player_pronouns has him:terrorizzato|{player_pronouns has her:terrorizzata|terrorizzatə}} in un angolino.
                     -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                     
                 Come i bambini piccoli. No no no.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
                 Mi ci riconosco, totale.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
 
-            + Mentre mi leggono la mente penso a cose assurdissime!
+            + \ {charTag(PG, "neutral")}:         Mentre mi leggono la mente penso a cose assurdissime!
                 -> glyph_modifier_variation_management(FirstCharacter, fireC)->
                
                 Sarebbe divertentissimo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
@@ -77,7 +77,7 @@
                 La mia mente è limpida e innocente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 Non come quella di un bambino, ascoltando le cose che dice il piccoletto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 
-            + Magari conoscono il senso della vita.
+            + \ {charTag(PG, "neutral")}:         Magari conoscono il senso della vita.
                 -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                 
                 Te lo dico io: caramelle!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -126,23 +126,23 @@
                     Però è stato molto coraggioso, vero?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
             }
 
-            + \ {charTag(PG, "neutral")}:               Scelta acqua
+            + \ {charTag(PG, "neutral")}:                    Scelta acqua
                     -> glyph_modifier_variation_management(Mentor, waterC)->
                 
                 
-            + \ {charTag(PG, "neutral")}:               Scelta spirito
+            + \ {charTag(PG, "neutral")}:                      Scelta spirito
                     -> glyph_modifier_variation_management(Mentor, aetherC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Scelta terra
+            + \ {charTag(PG, "neutral")}:                    Scelta terra
                     -> glyph_modifier_variation_management(Mentor, earthC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Scelta aria
+            + \ {charTag(PG, "neutral")}:                   Scelta aria
                     -> glyph_modifier_variation_management(Mentor, airC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Scelta fuoco
+            + \ {charTag(PG, "neutral")}:                  Scelta fuoco
                     -> glyph_modifier_variation_management(Mentor, fireC)-> 
                 
             -
@@ -183,29 +183,29 @@
     {charTag(Mentor, "neutral")}:           O quello che dice {charNameOne}.
     {charTag(Mentor, "sad")}:               Qualcosa che è sempre altrove e quindi irraggiungibile?
     
-        +  \ {mentorName}, tu parli di arrendersi.
+        + \ {charTag(PG, "neutral")}:          {mentorName}, tu parli di arrendersi.
             -> glyph_modifier_variation_management(FirstCharacter, fireC)->
             {charTag(Mentor, "neutral")}:           Non arrendersi, {player_name}, ma accogliere quello che si ha.
             E non vedo differenza, {mentorName}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
             
-        +  \ {mentorName}, razionalmente la felicità ha una natura temporanea.
+        + \ {charTag(PG, "neutral")}:          {mentorName}, razionalmente la felicità ha una natura temporanea.
             -> glyph_modifier_variation_management(FirstCharacter, airC)->
             Oh, che bello sentire qualcun{player_pronouns has him:o|{player_pronouns has her:a|ə}} che matcha la mia gioia di vivere.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
             {charTag(Mentor, "neutral")}:           Il fatto che sia temporanea non nega la mia teoria.
         
-        + La felicità ce l'hai se trovi il gioco e l'assurdo ovunque.
+        + \ {charTag(PG, "neutral")}:         La felicità ce l'hai se trovi il gioco e l'assurdo ovunque.
             -> glyph_modifier_variation_management(FirstCharacter, earthC)->
             Credo che quello si chiami "abuso di sostanze".#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
             {charTag(Mentor, "sad")}:               Con un linguaggio meno colorito, direi comunque che sì, ha ragione {charNameOne}.
 
-        + Non credo nella felicità, ma credo nel piacere dato dalle persone vicine.
+        + \ {charTag(PG, "neutral")}:         Non credo nella felicità, ma credo nel piacere dato dalle persone vicine.
             -> glyph_modifier_variation_management(FirstCharacter, waterC)->    
             {charTag(Mentor, "neutral")}:           Questa è una lettura che potrei apprezzare.
             Woah!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
             Vuol dire che {player_name} ha trovato un punto di contatto tra noi in questa discussione?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
             {charTag(Mentor, "hurry")}:             Eh sì, mi sa proprio di sì.
             
-        + La felicità è qualcosa che cresce nelle pieghe del quotidiano.
+        + \ {charTag(PG, "neutral")}:         La felicità è qualcosa che cresce nelle pieghe del quotidiano.
             -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
             {charTag(Mentor, "hurry")}:             Sono contenta che la vediamo allo stesso modo.
             Le cose che crescono nelle pieghe di solito sono sporche.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
@@ -274,23 +274,23 @@
 
 
         Facciamo domande anche sul "in che senso non hai mai visto nessun mnentore?", con reazione da parte altre png.
-            + \ {charTag(PG, "neutral")}:               Scelta acqua
+            + \ {charTag(PG, "neutral")}:                   Scelta acqua
                     -> glyph_modifier_variation_management(Mentor, waterC)->
                 
                 
-            + \ {charTag(PG, "neutral")}:               Scelta spirito
+            + \ {charTag(PG, "neutral")}:                     Scelta spirito
                     -> glyph_modifier_variation_management(Mentor, aetherC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Scelta terra
+            + \ {charTag(PG, "neutral")}:                    Scelta terra
                     -> glyph_modifier_variation_management(Mentor, earthC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Scelta aria
+            + \ {charTag(PG, "neutral")}:                       Scelta aria
                     -> glyph_modifier_variation_management(Mentor, airC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Scelta fuoco
+            + \ {charTag(PG, "neutral")}:                       Scelta fuoco
                     -> glyph_modifier_variation_management(Mentor, fireC)-> 
                 
             -
@@ -316,14 +316,14 @@
                                                     <i>Ma così come l'acqua non può essere incendio, così {mentorName} non può essere qualcosa che non è.</i>
                                                     <i>O portare nomi che non sa.</i>
 
-        + Metà delle cose che la voce dice sono illogiche.
+        + \ {charTag(PG, "neutral")}:         Metà delle cose che la voce dice sono illogiche.
                 -> glyph_modifier_variation_management(Mentor, airC)->
             {charTag(TheWitch, witch_state())}:         <i>{player_name} non vede, e quindi decide che qualcosa non esiste.</i>
             <i>Ma quella cosa esiste anche se {player_name} non vede.</i>
             {charTag(Mentor, "sad")}:                       Uh, peccato.
             {charTag(Mentor, "neutral")}:                   Ma ci sta: questo luogo è così insolito, immagino sia inevitabile non capirlo fino in fondo.
             
-        + Dice che stai facendo un buon lavoro.
+        + \ {charTag(PG, "neutral")}:         Dice che stai facendo un buon lavoro.
                 -> glyph_modifier_variation_management(Mentor, waterC)->
             {charTag(Mentor, "hurry")}:                     Oh, ma sicuramente esagera.
             {charTag(Mentor, "sad")}:                       Prendi prima: ho scoperto che per via della mia incuria sta crescendo del muschio sotto al suo vaso.
@@ -331,14 +331,14 @@
             {charTag(Mentor, "neutral")}:                   Ringrazia la voce da parte mia.
             {charTag(TheWitch, witch_state())}:         <i>Dire una mezza verità porta su una mezza strada.</i>
         
-        + Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
+        + \ {charTag(PG, "neutral")}:         Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
                 -> glyph_modifier_variation_management(Mentor, earthC)->
             {charTag(Mentor, "sad")}:                       Non è che ho lasciato qualcosa di acceso in cucina?
                                                             No dai, si vedrebbe il fumo da qui, sicuro.
             {charTag(Mentor, "neutral")}:                   Magari è qualcosa di simbolico.
             {charTag(Mentor, "sorry")}:                     Spero di non aver distrutto nulla.
         
-        + Non è più importante il tuo di giudizio sul tuo lavoro, {mentorName}?
+        + \ {charTag(PG, "neutral")}:         Non è più importante il tuo di giudizio sul tuo lavoro, {mentorName}?
                 -> glyph_modifier_variation_management(Mentor, aetherC)->
             {charTag(Mentor, "neutral")}:                   Credo di sì.
                                                             Ma uno sguardo esterno ci può aiutare, immagino.
@@ -346,7 +346,7 @@
             {charTag(Mentor, "neutral")}:                   Sì.
                                                             Credo di star facendo un buon lavoro.
 
-        + Ha detto tante cose ma la risposta è: no.
+        + \ {charTag(PG, "neutral")}:         Ha detto tante cose ma la risposta è: no.
                 -> glyph_modifier_variation_management(Mentor, fireC)->
             {charTag(TheWitch, witch_state())}:         <i>La frusta che cade senza motivo non porta alcun insegnamento.</i>
             {charTag(Mentor, "sad")}:                       Oh.#
@@ -389,23 +389,23 @@
     {charTag(Franco, "{portrait_Franco()}")}:       Piccarda, Perlita, Macrina, Gliceria, Gianbrunilde, Eulalia, Ermenegigia...
 
     Qualcosa tipo "{player_name} dimmi che non sto impazzendo solo io!"
-            + \ {charTag(PG, "neutral")}:               Scelta acqua
+            + \ {charTag(PG, "neutral")}:                     Scelta acqua
                     -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                 
                 
-            + \ {charTag(PG, "neutral")}:               Scelta spirito
+            + \ {charTag(PG, "neutral")}:                     Scelta spirito
                     -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Non sto impazzendo solo io.
+            + \ {charTag(PG, "neutral")}:                      Non sto impazzendo solo io.
                     -> glyph_modifier_variation_management(FirstCharacter, earthC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Scelta aria
+            + \ {charTag(PG, "neutral")}:                     Scelta aria
                     -> glyph_modifier_variation_management(FirstCharacter, airC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Scelta fuoco
+            + \ {charTag(PG, "neutral")}:                       Scelta fuoco
                     -> glyph_modifier_variation_management(FirstCharacter, fireC)-> 
                 
             -
@@ -459,23 +459,23 @@
         }
     
 
-            + \ {charTag(PG, "neutral")}:               Scelta acqua
+            + \ {charTag(PG, "neutral")}:                     Scelta acqua
                     -> glyph_modifier_variation_management(SecondCharacter, waterC)->
                 
                 
-            + \ {charTag(PG, "neutral")}:               Scelta spirito
+            + \ {charTag(PG, "neutral")}:                      Scelta spirito
                     -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Scelta terra
+            + \ {charTag(PG, "neutral")}:                     Scelta terra
                     -> glyph_modifier_variation_management(SecondCharacter, earthC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Scelta aria
+            + \ {charTag(PG, "neutral")}:                      Scelta aria
                     -> glyph_modifier_variation_management(SecondCharacter, airC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Scelta fuoco
+            + \ {charTag(PG, "neutral")}:                      Scelta fuoco
                     -> glyph_modifier_variation_management(SecondCharacter, fireC)-> 
                 
             -
@@ -492,22 +492,22 @@
 
     Chiacchierata Franco e PNG3
 
-        + Metà delle cose che la voce dice sono illogiche.
+        + \ {charTag(PG, "neutral")}:         Metà delle cose che la voce dice sono illogiche.
                 -> glyph_modifier_variation_management(ThirdCharacter, airC)->
             
-        + Dice che stai facendo un buon lavoro.
+        + \ {charTag(PG, "neutral")}:         Dice che stai facendo un buon lavoro.
                 -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
 
         
-        + Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
+        + \ {charTag(PG, "neutral")}:         Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
                 -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
 
 
-        + Non è più importante il tuo di giudizio sul tuo lavoro, {mentorName}?
+        + \ {charTag(PG, "neutral")}:         Non è più importante il tuo di giudizio sul tuo lavoro, {mentorName}?
                 -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
 
 
-        + Ha detto tante cose ma la risposta è: no.
+        + \ {charTag(PG, "neutral")}:         Ha detto tante cose ma la risposta è: no.
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
 
     -
@@ -524,21 +524,21 @@
 
     Chiacchierata Mentore e PNG3
 
-        + Metà delle cose che la voce dice sono illogiche.
+        + \ {charTag(PG, "neutral")}:         Metà delle cose che la voce dice sono illogiche.
                 -> glyph_modifier_variation_management(ThirdCharacter, airC)->
             
-        + Dice che stai facendo un buon lavoro.
+        + \ {charTag(PG, "neutral")}:         Dice che stai facendo un buon lavoro.
                 -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
 
         
-        + Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
+        + \ {charTag(PG, "neutral")}:         Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
                 -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
 
 
-        + Non è più importante il tuo di giudizio sul tuo lavoro, {mentorName}?
+        + \ {charTag(PG, "neutral")}:         Non è più importante il tuo di giudizio sul tuo lavoro, {mentorName}?
                 -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
 
-        + Ha detto tante cose ma la risposta è: no.
+        + \ {charTag(PG, "neutral")}:         Ha detto tante cose ma la risposta è: no.
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
     -
 
@@ -554,24 +554,24 @@
 
     Chiacchierata Riccio e PNG3
     
-         + Metà delle cose che la voce dice sono illogiche.
+         + \ {charTag(PG, "neutral")}:         Metà delle cose che la voce dice sono illogiche.
                 -> glyph_modifier_variation_management(ThirdCharacter, airC)->
 
             
-        + Dice che stai facendo un buon lavoro.
+        + \ {charTag(PG, "neutral")}:         Dice che stai facendo un buon lavoro.
                 -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
 
 
         
-        + Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
+        + \ {charTag(PG, "neutral")}:         Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
                 -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
 
 
-        + Non è più importante il tuo di giudizio sul tuo lavoro?
+        + \ {charTag(PG, "neutral")}:         Non è più importante il tuo di giudizio sul tuo lavoro?
                 -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
 
 
-        + Ha detto tante cose ma la risposta è: no.
+        + \ {charTag(PG, "neutral")}:         Ha detto tante cose ma la risposta è: no.
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
 
     -
@@ -587,20 +587,20 @@
 
     Chiacchierata Chitarra e PNG3
 
-        + Metà delle cose che la voce dice sono illogiche.
+        + \ {charTag(PG, "neutral")}:         Metà delle cose che la voce dice sono illogiche.
                 -> glyph_modifier_variation_management(ThirdCharacter, airC)->
 
-        + Dice che stai facendo un buon lavoro.
+        + \ {charTag(PG, "neutral")}:         Dice che stai facendo un buon lavoro.
                 -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
 
-        + Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
+        + \ {charTag(PG, "neutral")}:         Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
                 -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
 
-        + Non è più importante il tuo di giudizio sul tuo lavoro?
+        + \ {charTag(PG, "neutral")}:         Non è più importante il tuo di giudizio sul tuo lavoro?
                 -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
 
 
-        + Ha detto tante cose ma la risposta è: no.
+        + \ {charTag(PG, "neutral")}:         Ha detto tante cose ma la risposta è: no.
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
 
 

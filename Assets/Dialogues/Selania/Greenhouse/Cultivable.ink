@@ -610,7 +610,7 @@
         <i>La strada è chiara, manca solo il primo passo.
         <i>Qualcosa da ammettere.
         
-            + (colto) <i>Confido le mie paure.
+            + (colto) \ {charTag(PG, "neutral")}:         <i>Confido le mie paure.
                 ~ growthBaccaDellaAddolorata = stepThree
             
             {charTag(TheWitch, witch_state())}:   <i>Rami verso il cielo sostengono un frutto.
@@ -622,7 +622,7 @@
             <i>{player_name} ricorda come camminare.
                     -> ending_cultivation
                     
-            + <i>Ho bisogno di tempo per riflettere.
+            + \ {charTag(PG, "neutral")}:         <i>Ho bisogno di tempo per riflettere.
                     -> main     
 
               
@@ -661,7 +661,7 @@
         {charTag(TheWitch, witch_state())}:   <i>Il muro vacilla.
         <i>Non ricorda più se protegge il fuori dal dentro, o il dentro dal fuori.
 
-        + (colto)<i>Abbasso le mie difese.
+        + (colto)\ {charTag(PG, "neutral")}:         <i>Abbasso le mie difese.
             ~ growthBarbaDellInciampo = stepThree
             
             {charTag(TheWitch, witch_state())}:   <i>Il muro si fa calice.
@@ -676,7 +676,7 @@
                 ~ move_entity(Snail, Greenhouse)            
                 -> ending_cultivation
             
-        + <i>Mi prendo ancora del tempo.
+        + \ {charTag(PG, "neutral")}:         <i>Mi prendo ancora del tempo.
                     -> main     
                     
 === bastone_dell_ozioso
@@ -709,7 +709,7 @@
     = step_tre
         {charTag(TheWitch, witch_state())}:   <i>Il vento tra le canne vuote canta.
         
-        + (colto)<i>E io canto con lui.
+        + (colto)\ {charTag(PG, "neutral")}:         <i>E io canto con lui.
             ~ growthBastoneDellOzioso = stepThree
             
             {charTag(TheWitch, witch_state())}:   <i>Rami come braccia come gambe come festa.
@@ -723,7 +723,7 @@
                 ~ move_entity(BastonSound, Greenhouse)
                     -> ending_cultivation
             
-        + <i>Aspetto.
+        + \ {charTag(PG, "neutral")}:         <i>Aspetto.
                 -> main          
         
         
@@ -758,7 +758,7 @@
         <i>Sostengono il proprio ruolo.
         <i>Si reggono a vecchie ferite.
         
-        + (colto) <i>E io osservo le mie.
+        + (colto) \ {charTag(PG, "neutral")}:         <i>E io osservo le mie.
              ~ growthBrinaDellImpossibile = stepThree
 
             {charTag(TheWitch, witch_state())}:   <i>Baccelli crescono tra le ferite, navi colme di semi.
@@ -771,7 +771,7 @@
                 
                 -> ending_cultivation
         
-        + <i>Per ora ignoro le mie.
+        + \ {charTag(PG, "neutral")}:         <i>Per ora ignoro le mie.
                     -> main              
                     
 === canto_delle_compagne
@@ -802,7 +802,7 @@
         {charTag(TheWitch, witch_state())}:   <i>La serra si muove e si scuote, le travi cigolano nel voler danzare. 
         <i>I piedi di {player_name} battono il ritmo.
         
-        + (colto)<i>Inizio a danzare.
+        + (colto)\ {charTag(PG, "neutral")}:         <i>Inizio a danzare.
             ~ growthCantoDelleCompagne = stepThree
             
             {charTag(TheWitch, witch_state())}:   <i>Ilare, <b>Canto delle compagne</b> turbina e balla riversandosi dal vaso.
@@ -817,7 +817,7 @@
                 ~ move_entity(RedBee, Greenhouse)
                 -> ending_cultivation
         
-        + <i>Preferisco aspettare.
+        + \ {charTag(PG, "neutral")}:         <i>Preferisco aspettare.
                     -> main     
 
               
@@ -848,7 +848,7 @@
     = step_tre
         {charTag(TheWitch, witch_state())}:   La resistenza della pianta si fa sempre più debole.
         
-        + (colto)<i>Offro il mio aiuto.
+        + (colto)\ {charTag(PG, "neutral")}:         <i>Offro il mio aiuto.
             ~ growthCardoAspinato = stepThree
             
             {charTag(TheWitch, witch_state())}:   <i>La piante cede, si stende tra le gambe di {player_name}.
@@ -862,7 +862,7 @@
                 ~ move_entity(BrownBee, Greenhouse)
                 -> ending_cultivation
             
-            + <i>Preferisco aspettare.
+        + \ {charTag(PG, "neutral")}:         <i>Preferisco aspettare.
                     -> main          
 
 
@@ -871,13 +871,13 @@
     = TW
         {charTag(TheWitch, witch_state())}:   <i>Attenzione: questa pianta allude a contenuti erotici.
         <i>{player_name} vuole farla crescere, o preferisce cambiare?
-            + <i>Voglio andare avanti.
+            + \ {charTag(PG, "neutral")}:         <i>Voglio andare avanti.
                 -> step_zero
             
-            + <i>Voglio rimuoverla, ma solo per ora.
+            + \ {charTag(PG, "neutral")}:         <i>Voglio rimuoverla, ma solo per ora.
                 -> tempCultTW_formula
                 
-            + (rimuovi) <i>Voglio rimuoverla per sempre.
+            + (rimuovi) \ {charTag(PG, "neutral")}:         <i>Voglio rimuoverla per sempre.
                 -> remove_proposed_cultivable ->
                     ~ greenhouse_chosenCultivable = ()
                 {
@@ -915,7 +915,7 @@
         <i>Un pezzo di serra è abbracciato da foglie e bisbigli.
         <i>Faticoso è resistere all'idea di tuffarvisi.
         
-            + (colto) <i>Mi tuffo con loro.
+            + (colto) \ {charTag(PG, "neutral")}:         <i>Mi tuffo con loro.
                 ~ growthEderaDelleAmanti = stepThree
                 
                 <i>Per un attimo {player_name} perde i suoi confini.
@@ -929,7 +929,7 @@
                     ~ move_entity(GoldenBee, Greenhouse)
                     -> ending_cultivation
             
-            + <i>Preferisco aspettare.
+            + \ {charTag(PG, "neutral")}:         <i>Preferisco aspettare.
                     -> main        
 
 === erba_liccia
@@ -964,7 +964,7 @@
         <i>Il ricordo si modella sul bisogno del presente.
         <i>Il futuro sboccia nella contraddizione.
         
-        + (colto)<i>E io rifuggo la coerenza.
+        + (colto)\ {charTag(PG, "neutral")}:         <i>E io rifuggo la coerenza.
             ~ growthErbaLiccia = stepThree
             
             {charTag(TheWitch, witch_state())}:   <i>Il vaso brulica di erba verde e fresca.
@@ -973,7 +973,7 @@
             <i>Quando sanno vedere ciò che erano, accogliere ciò che sono, curiosare su ciò che saranno.
                     -> ending_cultivation
         
-        + <i>Preferisco aspettare.
+        + \ {charTag(PG, "neutral")}:         <i>Preferisco aspettare.
                     -> main                                      
 
 === falsa_palude
@@ -1005,7 +1005,7 @@
     = step_tre
         {charTag(TheWitch, witch_state())}:   <i>La separazione è solo illusione.
         
-        + (colto)<i>Voglio vedere oltre l'illusione.
+        + (colto)\ {charTag(PG, "neutral")}:         <i>Voglio vedere oltre l'illusione.
             ~ growthFalsaPalude = stepThree
             
             {charTag(TheWitch, witch_state())}:   <i>Il movimento si è fatto unione, si è fatto gruppo.
@@ -1019,7 +1019,7 @@
             <i>E ciò che sembrava un ostacolo personale, si dimostra un problema strutturale.
                 -> ending_cultivation
         
-        + <i>Preferisco aspettare.
+        + \ {charTag(PG, "neutral")}:         <i>Preferisco aspettare.
                 -> main                                 
 
 === lana_notturna
@@ -1054,7 +1054,7 @@
         {charTag(TheWitch, witch_state())}:   <i>Perché il fiore sbocci, la gemma deve spaccarsi, ferirsi.
         <i>Ma serve attendere il tempo giusto, lasciare che le cose possano maturare.
         
-        + (colto)<i>Ho imparato ad attendere.
+        + (colto)\ {charTag(PG, "neutral")}:         <i>Ho imparato ad attendere.
             ~ growthLanaNotturna = stepThree
             
             {charTag(TheWitch, witch_state())}:   <i>Un unico grande e morbido fiore, i petali soffici si spalancano nella serra.
@@ -1062,7 +1062,7 @@
             <i>Sboccia nelle terre dimenticate, per ricordare che anche quando tutto sembra perduto, da qualche parte cresce il seme del cambiamento.
                 -> ending_cultivation
         
-        + <i>Preferisco aspettare.
+        + \ {charTag(PG, "neutral")}:         <i>Preferisco aspettare.
                 -> main             
                     
 === lichene_degli_abissi
@@ -1095,7 +1095,7 @@
         <i>Ciò che prima era amorevolmente interconnesso ora è imprigionato.
         <i>Ci sono forze da rilasciare.
 
-            + (colto) <i>Ho qualcuno da salutare.
+            + (colto) \ {charTag(PG, "neutral")}:         <i>Ho qualcuno da salutare.
                 ~ growthLicheneDegliAbissi = stepThree
                 
                 {charTag(TheWitch, witch_state())}:   <i><b>Lichene degli abissi</b> offre frutti taglienti.
@@ -1106,7 +1106,7 @@
                 <i>E ferite da risanare.
                     -> ending_cultivation
                     
-             + <i>Preferisco aspettare.
+             + \ {charTag(PG, "neutral")}:         <i>Preferisco aspettare.
                     -> main
                     
 === non_ti_scordar_di_te
@@ -1136,7 +1136,7 @@
     = step_tre
         {charTag(TheWitch, witch_state())}:   <i>Qualcosa di nuovo attende la sua occasione per fiorire.
 
-        + (colto) <i>Penso alle persone che mi compongono.
+        + (colto) \ {charTag(PG, "neutral")}:         <i>Penso alle persone che mi compongono.
             ~ growthNonTiScordarDiTe = stepThree
             
             {charTag(TheWitch, witch_state())}:   <i>{player_name} si sente ramo, si sente radice.
@@ -1148,7 +1148,7 @@
             <i>Del sentirci eredi e messagger3, parte di un percorso intessuto di nomi.
                     -> ending_cultivation
                     
-            + <i>Preferisco aspettare.
+            + \ {charTag(PG, "neutral")}:         <i>Preferisco aspettare.
                     -> main          
                     
                     
@@ -1182,7 +1182,7 @@
         {charTag(TheWitch, witch_state())}:   <i>Il tempo si mescola, ieri è oggidomanimai.
         <i>I confini si sciolgono e un corpo è stanzapiantalucerespiro.
         
-        + (colto)<i>Mi sciolgo nel tempo.
+        + (colto)\ {charTag(PG, "neutral")}:         <i>Mi sciolgo nel tempo.
             ~ growthOlobino = stepThree
             
             {charTag(TheWitch, witch_state())}:   <i>C'è solo amore.
@@ -1196,7 +1196,7 @@
             <i>L'eternità nella collettività.
                     -> ending_cultivation
             
-            + <i>Preferisco aspettare.
+            + \ {charTag(PG, "neutral")}:         <i>Preferisco aspettare.
                     -> main          
                     
                     
@@ -1234,7 +1234,7 @@
         {charTag(TheWitch, witch_state())}:   <i>Il pavimento vuoto scricchiola.
         <i>Tutto sembra in ordine, eppure la testa di {player_name} è pronta ad esplodere.
 
-        + (colto)<i>C'è qualcosa che devo dire da molto tempo.
+        + (colto)\ {charTag(PG, "neutral")}:         <i>C'è qualcosa che devo dire da molto tempo.
             ~ growthLaSpazzata = stepThree
             
            {charTag(TheWitch, witch_state())}:   <i>Odore di autunno, di foglie umide.
@@ -1249,7 +1249,7 @@
             <i>Ma reali, lasciano segni e ferite.
                     -> ending_cultivation
                     
-            + <i>Preferisco aspettare.
+        + \ {charTag(PG, "neutral")}:         <i>Preferisco aspettare.
                     -> main                              
 
 === ending_cultivation
@@ -1296,8 +1296,8 @@
         -> notification_system ->
         -> achievements_onGame_statusUpdate_GM ->
 
-    + {greenhouse_backupCultivable != ()}<i>Voglio coltivare qualcosa di nuovo.
+    + {greenhouse_backupCultivable != ()}\ {charTag(PG, "neutral")}:         <i>Voglio coltivare qualcosa di nuovo.
             -> cultivable_test
     
-    + <i>{~ Mi aggiro per la serra.|Osservo ciò che è in crescita.|Ascolto i rumori della serra.|Mi rilasso un attimo.|Mi perdo nei colori dei vasi.}
+    + \ {charTag(PG, "neutral")}:         <i>{~ Mi aggiro per la serra.|Osservo ciò che è in crescita.|Ascolto i rumori della serra.|Mi rilasso un attimo.|Mi perdo nei colori dei vasi.}
             -> main    

@@ -27,7 +27,7 @@
 
         -> kitchen_moon_feedback ->
 
-            + <i>Setaccio della polenta analitica.</i>
+            + \ {charTag(PG, "neutral")}:         <i>Setaccio della polenta analitica.</i>
                     ~ kitchen_recipeNoun = "Polenta"
                 -> glyph_modifier_variation_management(PG, airC)->
                 {charTag(Franco, "{portrait_Franco()}")}:       Craande!
@@ -36,7 +36,7 @@
                                                                 Uh, ma quella è una mia zampa?
                                                                 Non sapevo di averne quattro!
                
-            + <i>Riscaldo l'acqua per della zuppetta empatica.</i>
+            + \ {charTag(PG, "neutral")}:         <i>Riscaldo l'acqua per della zuppetta empatica.</i>
                     ~ kitchen_recipeNoun = "Zuppetta"
                 -> glyph_modifier_variation_management(PG, waterC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       Ah, come la tosse di zia Graaak!
@@ -45,7 +45,7 @@
                                                                 "Amore, la tosse di tua zia era <i>sintomatica.<i>"
                                                                 "Empatica è quando Graaak dice che gli dispiace per te, ma poi si incazza comunque."
 
-            + <i>Impasto una focaccia decisa.</i>
+            + \ {charTag(PG, "neutral")}:         <i>Impasto una focaccia decisa.</i>
                     ~ kitchen_recipeNoun = "Focaccia"
                 -> glyph_modifier_variation_management(PG, earthC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       Un approccio con una direzione precisa.
@@ -55,7 +55,7 @@
                                                                 Decisamente contro la partita di ananassi.
 
         
-            + <i>Preparo una panzanella caotica.</i>
+            + \ {charTag(PG, "neutral")}:         <i>Preparo una panzanella caotica.</i>
                     ~ kitchen_recipeNoun = "Panzanella"
                 -> glyph_modifier_variation_management(PG, fireC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       Te l'ho mai raccontata la storia di Girino Ir Rosponsabile?
@@ -65,7 +65,7 @@
                                                                 E quella rana si chiama Franco La Rana.
                                                                 Cioè me.
     
-            + <i>Friggo della spirituale cicerchiata.</i>
+            + \ {charTag(PG, "neutral")}:         <i>Friggo della spirituale cicerchiata.</i>
                     ~ kitchen_recipeNoun = "Cicerchiata"
                 -> glyph_modifier_variation_management(PG, aetherC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       Cice.
@@ -93,7 +93,7 @@
                                                         Ma il tuo lavoro invece, {player_name}?
                                                         Sei {player_pronouns has him:soddisfatto|{player_pronouns has her:soddisfatta|soddisfattə}} di quello che stai facendo?
             
-            + <i>Aggiungo con risolutezza della assafetida.</i>
+            + \ {charTag(PG, "neutral")}:         <i>Aggiungo con risolutezza della assafetida.</i>
                     ~ kitchen_recipeAdjective = "risoluta"
                 -> glyph_modifier_variation_management(PG, earthC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       Qui il nostro girino sa dove sta andando!
@@ -103,7 +103,7 @@
                                                                 Ma che ha dimenticato la ricevuta e per questo non mi ha potuto rimandare indietro.
                                                                 Chissà se mi diventano le gambe lunghe anche a me allora?
 
-            + <i>Spargo con insicurezza del sommacco.</i>
+            + \ {charTag(PG, "neutral")}:         <i>Spargo con insicurezza del sommacco.</i>
                     ~ kitchen_recipeAdjective = "insicura"
                 -> glyph_modifier_variation_management(PG, waterC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       Ora, so che potrebbe stupirti, ma a volte anche io non so cosa faccio.
@@ -113,7 +113,7 @@
                                                                 Pensa che Euforbo l'altro giorno mi ha detto che i dinosauri sono esistiti davvero.
                                                                 Povero girino.     
 
-            + <i>Spolvero con disperazione della curcuma.</i>
+            + \ {charTag(PG, "neutral")}:         <i>Spolvero con disperazione della curcuma.</i>
                     ~ kitchen_recipeAdjective = "disperata"
                 -> glyph_modifier_variation_management(PG, fireC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       Conosco quella sensazione, girino.
@@ -126,7 +126,7 @@
                                                                 Mi fa capire che mi posso prendere delle responsabilità.
                                                                 Ma che non posso più prendere dei gatti.    
 
-            + <i>Incorporo con arroganza del cajun.</i>
+            + \ {charTag(PG, "neutral")}:         <i>Incorporo con arroganza del cajun.</i>
                     ~ kitchen_recipeAdjective = "arrogante"
                 -> glyph_modifier_variation_management(PG, earthC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       Questo è il momento per raccontarti la storia di Bavarana.
@@ -138,7 +138,7 @@
                                                                 Perché alla fine non è che si va tanto lontani senza gli altri.
                                                                 Mi slegheresti la lingua?
     
-            + <i>Macino con mediocrità del pepe rosa.</i>
+            + \ {charTag(PG, "neutral")}:         <i>Macino con mediocrità del pepe rosa.</i>
                     ~ kitchen_recipeAdjective = "mediocre"
                 -> glyph_modifier_variation_management(PG, aetherC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       Non è male essere mediocri.
@@ -166,7 +166,7 @@
                                                         Cosa strana, perché ho provato la febbre e non l'ho.
                                                         Ma tu che ci lavori tanto assieme, che idea ti sei fatt{player_pronouns has him:o|{player_pronouns has her:a|ə}} di {mentorName}?
 
-            + <i>Decoro con della granella di affetto.</i>
+            + \ {charTag(PG, "neutral")}:         <i>Decoro con della granella di affetto.</i>
                     ~ kitchen_recipeComplement = "con granella di affetto"
                 -> glyph_modifier_variation_management(PG, waterC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       Eh, ma si vede che tu c'ha il cuore grande.
@@ -176,7 +176,7 @@
                                                                 Non sapevo che la zia avesse un nipote.
                                                                 Per fortuna che ha me.
               
-            + <i>Abbellisco con delle gocce di cioccolato e sospetto.</i>
+            + \ {charTag(PG, "neutral")}:         <i>Abbellisco con delle gocce di cioccolato e sospetto.</i>
                     ~ kitchen_recipeComplement = "con gocce di cioccolato e sospetto"
                 -> glyph_modifier_variation_management(PG, earthC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       Come nei thriller?
@@ -187,7 +187,7 @@
                                                                 E magari del malloppo è del cibo.
                                                                 A Franco piace sempre il cibo.
    
-            + <i>Guarnisco con un battuto di caramello e indifferenza.</i>
+            + \ {charTag(PG, "neutral")}:         <i>Guarnisco con un battuto di caramello e indifferenza.</i>
                     ~ kitchen_recipeComplement = "con battuto di caramello e indifferenza"
                 -> glyph_modifier_variation_management(PG, waterC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       Ah, come quando dividi la spazzatura.
@@ -201,7 +201,7 @@
                                                                 "Ah, amore, hai dimenticato di nuovo di smaltire i residui di alga."
                                                                 Ma perché tocca sempre a me?
 
-            + <i>Addobbo con strisce di pastella e gratitudine.</i>
+            + \ {charTag(PG, "neutral")}:         <i>Addobbo con strisce di pastella e gratitudine.</i>
                     ~ kitchen_recipeComplement = "con strisce di pastella e gratitudine"
                 -> glyph_modifier_variation_management(PG, aetherC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       Mi piace la gratitudine!
@@ -212,7 +212,7 @@
                                                                 Che ragazzino sveglio, Euforbo.
                                                                 Ma devo dirgli di restituire l'intelligenza a Tullio e Giulio: non è carino tenere a lungo le cose prese in prestito.  
 
-            + <i>Rifinisco con semi di zucca e fastidio.</i>
+            + \ {charTag(PG, "neutral")}:         <i>Rifinisco con semi di zucca e fastidio.</i>
                     ~ kitchen_recipeComplement = "con semi di zucca e fastidio"
                 -> glyph_modifier_variation_management(PG, fireC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       Ah, come quel modo di dire.
@@ -240,7 +240,7 @@
                                                         Però è importante una cosa: sapere come stanno i girini.
                                                         E quindi, girino: come stai?
         
-            + <i>Mi verso un bicchiere di succo gioioso.</i>
+            + \ {charTag(PG, "neutral")}:         <i>Mi verso un bicchiere di succo gioioso.</i>
                     ~ kitchen_recipePP = "e contorno di gioia"
                 -> glyph_modifier_variation_management(PG, earthC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       Il mio sentimento preferito!
@@ -251,7 +251,7 @@
                                                                 E allora facevo finta di essere un fantasma.
                                                                 È facile quando la tua casa è fatta d'acqua.
                
-            + <i>Mi preparo una tazza di tisana rilassata.</i>
+            + \ {charTag(PG, "neutral")}:         <i>Mi preparo una tazza di tisana rilassata.</i>
                     ~ kitchen_recipePP = "e contorno di rilassatezza"
                 -> glyph_modifier_variation_management(PG, aetherC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       Lo dico sempre a Tullio e Giulio: amori, la vita va presa con rilassatezza.
@@ -261,7 +261,7 @@
                                                                 E Giulio invece si occupa della casa.
                                                                 E quando sono sul divano e gli dico "beviamo qualcosa e rilassiamoci" si agitano ancora di più.    
    
-            + <i>Mi riempio una tazzina di caffè frenetico.</i>
+            + \ {charTag(PG, "neutral")}:         <i>Mi riempio una tazzina di caffè frenetico.</i>
                     ~ kitchen_recipePP = "e contorno di frenesia"
                 -> glyph_modifier_variation_management(PG, fireC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       C'è una leggenda tra le rane.
@@ -277,7 +277,7 @@
                                                                 Ma ciao {player_name}!
                                                                 Che piacere vederti cra!
 
-            + <i>Mi offro un goccio dil distillato di curiosità.</i>
+            + \ {charTag(PG, "neutral")}:         <i>Mi offro un goccio dil distillato di curiosità.</i>
                     ~ kitchen_recipePP = "e contorno di curiosità"
                 -> glyph_modifier_variation_management(PG, airC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       Euforbo è supercurioso.
@@ -287,7 +287,7 @@
                                                                 E poi mi ha urlato: "Attento alle macchine!"
                                                                 Non so perché siano tutti così tesi nella mia famiglia.
     
-            + <i>Prendo un bicchiere di acqua annoiata.</i>
+            + \ {charTag(PG, "neutral")}:         <i>Prendo un bicchiere di acqua annoiata.</i>
                     ~ kitchen_recipePP = "e contorno di noia"
                 -> glyph_modifier_variation_management(PG, waterC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       Noo, la noia nooo.

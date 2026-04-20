@@ -62,8 +62,8 @@
                                                     Eccoti cra!
                                                     Sei {player_pronouns has him:pronto|{player_pronouns has her:pronta|prontə}} per cucinare assieme?
         
-        + + Ci sto!
+        + + \ {charTag(PG, "neutral")}:                      Ci sto!
             -> cooking_with_frog
 
-        + + Ci penso un attimo.
+        + + \ {charTag(PG, "neutral")}:                      Ci penso un attimo.
             -> main
