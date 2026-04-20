@@ -1554,6 +1554,61 @@ namespace Selania.Rework.Components
                 logger.ZLogWarning(
                     $"Second level character has a choice to close the grimoire ({closeChoice} #{bookmarkTagCategory}:{closeBookmarkTagValue}) that should not be present");
 
+            // create the pentacle descriptor
+            var myCharacterInfo = characterInfo.FirstOrDefault(info => info.listName == inkName);
+            IStoryGrimoire.PentacleDescriptor pentacleDescriptor;
+            if (myCharacterInfo == null)
+            {
+                logger.ZLogError($"Cannot find a character info in the ink bridge with list name '{inkName}'.");
+                pentacleDescriptor = new IStoryGrimoire.PentacleDescriptor(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+            }
+            else
+            {
+                // get the value of the various variables
+                var prefix = myCharacterInfo.choicesValuesVariablePrefix;
+                var values = new float[10];
+                var i = 0;
+                foreach (var suffix2 in new[] { "_aether", "_air", "_fire", "_earth", "_water" })
+                {
+                    foreach (var suffix1 in new[] { "_last", "" })
+                    {
+                        var variableName = prefix + suffix1 + suffix2;
+                        var variableValue = story.variablesState[variableName];
+                        float value;
+                        switch (variableValue)
+                        {
+                            case int intValue:
+                                value = intValue;
+                                break;
+                            case float floatValue:
+                                value = floatValue;
+                                break;
+                            default:
+                                logger.ZLogError(
+                                    $"choices value variable '{variableName}' should be of type int or float, and instead is of type {GetVariableType(variableValue)}");
+                                value = 0;
+                                break;
+                        }
+
+                        values[i++] = value;
+                    }
+                }
+
+                // produce the pentacle descriptor
+                pentacleDescriptor = new IStoryGrimoire.PentacleDescriptor(
+                    values[0],
+                    values[1],
+                    values[2],
+                    values[3],
+                    values[4],
+                    values[5],
+                    values[6],
+                    values[7],
+                    values[8],
+                    values[9]
+                );
+            }
+
             // create descriptor
             var descriptor = new IStoryGrimoire.SecondLevelCharacterPageDescriptor(
                 inkName,
@@ -1561,10 +1616,15 @@ namespace Selania.Rework.Components
                 description,
                 string.Join('\n', tasks),
                 choices,
+                pentacleDescriptor,
                 indexChoice);
 
             // emit
             _secondLevelCharacterPageDescriptorsSubject!.OnNext(descriptor);
+            return;
+
+            string GetVariableType(object? variableValue) =>
+                variableValue == null ? "null" : variableValue.GetType().Name;
         }
 
         private void EmitThirdLevelSigilsGrimoirePage()
@@ -1632,7 +1692,9 @@ namespace Selania.Rework.Components
                 }
                 .Map(position =>
                 {
-                    var sigils = (from entry in positionsAndSigils where entry.Position == position select entry.Sigil)
+                    var sigils = (from entry in positionsAndSigils
+                            where entry.Position == position
+                            select entry.Sigil)
                         .ToList();
                     switch (sigils.Count)
                     {
@@ -1642,7 +1704,8 @@ namespace Selania.Rework.Components
                         case 1:
                             return sigils[0];
                         default:
-                            return new IStoryGrimoire.ThirdLevelSigil(true, "", ISettingsSigils.GlyphType.Aether, "",
+                            return new IStoryGrimoire.ThirdLevelSigil(true, "", ISettingsSigils.GlyphType.Aether,
+                                "",
                                 "",
                                 "", IStoryGrimoire.ThirdLevelSigilStatus.Default);
                     }
@@ -1895,6 +1958,10 @@ namespace Selania.Rework.Components
             public string listName = null!;
 
             public string relationshipInkVariableName = null!;
+
+            [Tooltip(
+                "Prefix for the Ink variable containing the value (with suffix _aether, _earth, etc...) or the previous value (with suffix _last_aether, _last_earth, etc...).")]
+            public string choicesValuesVariablePrefix = null!;
         }
 
         [Tooltip("Information about the characters")] [SerializeField]

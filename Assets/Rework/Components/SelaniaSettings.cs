@@ -548,6 +548,18 @@ namespace Selania.Rework.Components
             return characterInfo.FirstOrDefault(info => info.listName == characterName)?.grimoirePortrait;
         }
 
+        [field: SerializeField]
+        [field: Tooltip("Maximum value for the Ink variables containing choice counters.")]
+        public float maxChoiceVariableValue { get; private set; }
+
+        [field: SerializeField]
+        [field: Tooltip("Minimum value for the Ink variables containing choice counters.")]
+        public float minChoiceVariableValue { get; private set; }
+
+        [field: SerializeField]
+        [field: Tooltip("Duration of a single cycle for the pentacle animation.")]
+        public float choiceVariablePentacleAnimationDuration { get; private set; }
+
         #endregion
 
         #region logger

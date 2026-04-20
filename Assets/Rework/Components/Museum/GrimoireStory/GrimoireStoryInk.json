@@ -19,6 +19,150 @@
       "start": [
         "^Questo è un dialogo.",
         "\n",
+        "ev",
+        5,
+        "/ev",
+        {
+          "VAR=": "firstChar_aether",
+          "re": true
+        },
+        "ev",
+        -2,
+        "/ev",
+        {
+          "VAR=": "firstChar_earth",
+          "re": true
+        },
+        "ev",
+        5,
+        "/ev",
+        {
+          "VAR=": "firstChar_air",
+          "re": true
+        },
+        "ev",
+        9,
+        "/ev",
+        {
+          "VAR=": "firstChar_water",
+          "re": true
+        },
+        "ev",
+        -9,
+        "/ev",
+        {
+          "VAR=": "firstChar_fire",
+          "re": true
+        },
+        "ev",
+        5,
+        "/ev",
+        {
+          "VAR=": "firstChar_last_aether",
+          "re": true
+        },
+        "ev",
+        -2,
+        "/ev",
+        {
+          "VAR=": "firstChar_last_earth",
+          "re": true
+        },
+        "ev",
+        7,
+        "/ev",
+        {
+          "VAR=": "firstChar_last_air",
+          "re": true
+        },
+        "ev",
+        9,
+        "/ev",
+        {
+          "VAR=": "firstChar_last_water",
+          "re": true
+        },
+        "ev",
+        -9,
+        "/ev",
+        {
+          "VAR=": "firstChar_last_fire",
+          "re": true
+        },
+        "^Ho impostato aether=5, earth=-2, air=da 5 a 7, water=9, fire=-9 per Chitarra.",
+        "\n",
+        "ev",
+        -5,
+        "/ev",
+        {
+          "VAR=": "firstChar_aether",
+          "re": true
+        },
+        "ev",
+        2,
+        "/ev",
+        {
+          "VAR=": "firstChar_earth",
+          "re": true
+        },
+        "ev",
+        -5,
+        "/ev",
+        {
+          "VAR=": "firstChar_air",
+          "re": true
+        },
+        "ev",
+        -9,
+        "/ev",
+        {
+          "VAR=": "firstChar_water",
+          "re": true
+        },
+        "ev",
+        9,
+        "/ev",
+        {
+          "VAR=": "firstChar_fire",
+          "re": true
+        },
+        "ev",
+        -5,
+        "/ev",
+        {
+          "VAR=": "firstChar_last_aether",
+          "re": true
+        },
+        "ev",
+        2,
+        "/ev",
+        {
+          "VAR=": "firstChar_last_earth",
+          "re": true
+        },
+        "ev",
+        -7,
+        "/ev",
+        {
+          "VAR=": "firstChar_last_air",
+          "re": true
+        },
+        "ev",
+        -9,
+        "/ev",
+        {
+          "VAR=": "firstChar_last_water",
+          "re": true
+        },
+        "ev",
+        9,
+        "/ev",
+        {
+          "VAR=": "firstChar_last_fire",
+          "re": true
+        },
+        "^Ho invertito tutto di segno tutto per Chitarra.",
+        "\n",
         "^Questa è la seconda riga.",
         "\n",
         "^E ora apro la scelta delle piante.",
@@ -4260,7 +4404,7 @@
         {
           "VAR=": "contentsRoom1"
         },
-        false,
+        true,
         {
           "VAR=": "settings_gamerMode"
         },
@@ -4310,6 +4454,46 @@
         0,
         {
           "VAR=": "secondChar_relationshipIndicator"
+        },
+        0.0,
+        {
+          "VAR=": "firstChar_aether"
+        },
+        0.0,
+        {
+          "VAR=": "firstChar_earth"
+        },
+        0.0,
+        {
+          "VAR=": "firstChar_air"
+        },
+        0.0,
+        {
+          "VAR=": "firstChar_water"
+        },
+        0.0,
+        {
+          "VAR=": "firstChar_fire"
+        },
+        0.0,
+        {
+          "VAR=": "firstChar_last_aether"
+        },
+        0.0,
+        {
+          "VAR=": "firstChar_last_earth"
+        },
+        0.0,
+        {
+          "VAR=": "firstChar_last_air"
+        },
+        0.0,
+        {
+          "VAR=": "firstChar_last_water"
+        },
+        0.0,
+        {
+          "VAR=": "firstChar_last_fire"
         },
         {
           "list": {},

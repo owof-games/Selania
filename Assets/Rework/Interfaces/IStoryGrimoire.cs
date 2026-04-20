@@ -212,13 +212,39 @@ namespace Selania.Rework.Interfaces
             : BaseNavigationDescriptor(indexText, null, null, null, null);
 
         /// <summary>
+        ///     Descriptor for the content of the pentacle.
+        /// </summary>
+        /// <param name="aetherValue1"></param>
+        /// <param name="aetherValue2"></param>
+        /// <param name="airValue1"></param>
+        /// <param name="airValue2"></param>
+        /// <param name="fireValue1"></param>
+        /// <param name="fireValue2"></param>
+        /// <param name="earthValue1"></param>
+        /// <param name="earthValue2"></param>
+        /// <param name="waterValue1"></param>
+        /// <param name="waterValue2"></param>
+        public record PentacleDescriptor(
+            float aetherValue1,
+            float aetherValue2,
+            float airValue1,
+            float airValue2,
+            float fireValue1,
+            float fireValue2,
+            float earthValue1,
+            float earthValue2,
+            float waterValue1,
+            float waterValue2);
+
+        /// <summary>
         ///     Descriptor of the second level page of the characters.
         /// </summary>
         /// <param name="inkName">Name of the character in ink (FirstCharacter, SecondCharacter, ...).</param>
         /// <param name="name">Name to display (Chitarra, Riccio, ...).</param>
         /// <param name="description">Description of this character.</param>
-        /// <param name="task">List of tasks, joined by newlines.</param>
+        /// <param name="tasks">List of tasks, joined by newlines.</param>
         /// <param name="choices">List of available choice texts.</param>
+        /// <param name="pentacleDescriptor">Descriptor for the contents of the pentacle.</param>
         /// <param name="indexText">Text for the index choice.</param>
         record SecondLevelCharacterPageDescriptor(
             string inkName,
@@ -226,6 +252,7 @@ namespace Selania.Rework.Interfaces
             string description,
             string tasks,
             IEnumerable<string> choices,
+            PentacleDescriptor pentacleDescriptor,
             string indexText)
             : BaseNavigationDescriptor(indexText, null, null, null, null);
 

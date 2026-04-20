@@ -20,6 +20,21 @@ namespace Selania.Rework.Interfaces
         public float disabledSigilsSaturationLevel { get; }
 
         /// <summary>
+        /// Maximum value for the Ink variables containing choice counters.
+        /// </summary>
+        public float maxChoiceVariableValue { get; }
+
+        /// <summary>
+        /// Minimum value for the Ink variables containing choice counters.
+        /// </summary>
+        public float minChoiceVariableValue { get; }
+
+        /// <summary>
+        /// Duration of a single cycle for the pentacle animation.
+        /// </summary>
+        public float choiceVariablePentacleAnimationDuration { get; }
+
+        /// <summary>
         ///     Get the sprite corresponding to the given name.
         /// </summary>
         /// <param name="plantName">Name of the plant, as present in the ink list.</param>

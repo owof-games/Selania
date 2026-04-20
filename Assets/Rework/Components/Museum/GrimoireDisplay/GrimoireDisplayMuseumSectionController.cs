@@ -338,5 +338,30 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
                 "SecondCharacter",
                 new List<string> { "Rewrite", "Letters" });
         }
+
+        public void SetPentacleRandomly()
+        {
+            // create 5 couples of values, where only one has a changed value
+            var values = new float[10];
+            var changedIndex = Random.Range(0, 5);
+            // Debug.Log($"Animating index {changedIndex}");
+            for (var i = 0; i < 5; i++)
+            {
+                var startingValue = (float)Random.Range(-9, 10);
+                var endingValue = startingValue;
+                if (changedIndex == i)
+                {
+                    endingValue += Mathf.Sign(endingValue) * Random.Range(1, 3);
+                }
+
+                values[i * 2] = startingValue;
+                values[i * 2 + 1] = endingValue;
+            }
+
+            grimoireBackground.SetUpPentacleValues(
+                values[0], values[1], values[2], values[3], values[4], values[5], values[6], values[7], values[8],
+                values[9]
+            );
+        }
     }
 }

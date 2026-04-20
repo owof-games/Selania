@@ -8,7 +8,7 @@ LIST Items = Item1
 
 VAR contentsRoom1 = (PG, Item1)
 
-VAR settings_gamerMode = false
+VAR settings_gamerMode = true
 
 LIST ink_possibileLevels = ink_empty, ink_low, ink_normal, ink_medium, ink_high
 VAR firstChar_InkLevel = ink_empty
@@ -19,6 +19,18 @@ VAR fifthChar_InkLevel = ink_empty
 
 VAR firstChar_relationshipIndicator = 0
 VAR secondChar_relationshipIndicator = 0
+
+
+VAR firstChar_aether        = 0.00
+VAR firstChar_earth         = 0.00
+VAR firstChar_air           = 0.00
+VAR firstChar_water         = 0.00
+VAR firstChar_fire          = 0.00
+VAR firstChar_last_aether   = 0.00
+VAR firstChar_last_earth    = 0.00
+VAR firstChar_last_air      = 0.00
+VAR firstChar_last_water    = 0.00
+VAR firstChar_last_fire     = 0.00
 
 /* ---------------------------------
                 
@@ -122,6 +134,28 @@ LIST allGlyphs = Fire, Air, Water, Earth, Aether
 
 === start
 Questo è un dialogo.
+~ firstChar_aether        = 5
+~ firstChar_earth         = -2
+~ firstChar_air           = 5
+~ firstChar_water         = 9
+~ firstChar_fire          = -9
+~ firstChar_last_aether   = 5
+~ firstChar_last_earth    = -2
+~ firstChar_last_air      = 7
+~ firstChar_last_water    = 9
+~ firstChar_last_fire     = -9
+Ho impostato aether=5, earth=-2, air=da 5 a 7, water=9, fire=-9 per Chitarra.
+~ firstChar_aether        = -5
+~ firstChar_earth         = 2
+~ firstChar_air           = -5
+~ firstChar_water         = -9
+~ firstChar_fire          = 9
+~ firstChar_last_aether   = -5
+~ firstChar_last_earth    = 2
+~ firstChar_last_air      = -7
+~ firstChar_last_water    = -9
+~ firstChar_last_fire     = 9
+Ho invertito tutto di segno tutto per Chitarra.
 Questa è la seconda riga.
 E ora apro la scelta delle piante.
 -> grimoire_greenhouse_in_dialogue ->

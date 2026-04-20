@@ -148,6 +148,14 @@ namespace Selania.Rework.Components.Grimoire
             grimoireBackground.SetUpSecondLevelCharacterPage(descriptor.name, descriptor.description, descriptor.tasks,
                 descriptor.inkName, descriptor.choices.ToList());
 
+            // set up the pentacle too
+            grimoireBackground.SetUpPentacleValues(
+                descriptor.pentacleDescriptor.aetherValue1, descriptor.pentacleDescriptor.aetherValue2,
+                descriptor.pentacleDescriptor.airValue1, descriptor.pentacleDescriptor.airValue2,
+                descriptor.pentacleDescriptor.fireValue1, descriptor.pentacleDescriptor.fireValue2,
+                descriptor.pentacleDescriptor.earthValue1, descriptor.pentacleDescriptor.earthValue2,
+                descriptor.pentacleDescriptor.waterValue1, descriptor.pentacleDescriptor.waterValue2);
+
             // set up navigation
             SetUpNavigation(descriptor);
         }

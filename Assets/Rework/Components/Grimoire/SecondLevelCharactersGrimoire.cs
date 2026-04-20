@@ -33,6 +33,9 @@ namespace Selania.Rework.Components.Grimoire
         [Tooltip("The relationship status controller")] [SerializeField]
         private RelationshipStatus relationshipStatus = null!;
 
+        [Tooltip("The pentacle controller.")] [SerializeField]
+        private SecondLevelCharactersPentacle pentacle = null!;
+
         /// <summary>
         ///     Subject where the click observable will be sent at Start() time.
         /// </summary>
@@ -69,6 +72,7 @@ namespace Selania.Rework.Components.Grimoire
                 {
                     if (gamerMode) relationshipStatus.Enable();
                     else relationshipStatus.Disable();
+                    pentacle.gameObject.SetActive(gamerMode);
                 })
                 .AddTo(this);
         }
@@ -117,6 +121,35 @@ namespace Selania.Rework.Components.Grimoire
                 else
                     info.button.interactable = true;
             }
+        }
+
+        /// <summary>
+        /// Set up the values for the various elements in the pentacle, showing an animation if the starting and
+        /// ending values are different.
+        /// </summary>
+        /// <param name="aetherValue1"></param>
+        /// <param name="aetherValue2"></param>
+        /// <param name="airValue1"></param>
+        /// <param name="airValue2"></param>
+        /// <param name="fireValue1"></param>
+        /// <param name="fireValue2"></param>
+        /// <param name="earthValue1"></param>
+        /// <param name="earthValue2"></param>
+        /// <param name="waterValue1"></param>
+        /// <param name="waterValue2"></param>
+        public void SetUpPentacleValues(float aetherValue1, float aetherValue2,
+            float airValue1, float airValue2,
+            float fireValue1, float fireValue2,
+            float earthValue1, float earthValue2,
+            float waterValue1, float waterValue2)
+        {
+            Logger.ZLogInformation(
+                $"Setting pentacle to values aether {aetherValue1} => {aetherValue2}, air {airValue1} => {airValue2}, fire {fireValue1} => {fireValue2}, earth {earthValue1} => {earthValue2}, water {waterValue1} => {waterValue2}.");
+            pentacle.SetValues(aetherValue1, aetherValue2,
+                airValue1, airValue2,
+                fireValue1, fireValue2,
+                earthValue1, earthValue2,
+                waterValue1, waterValue2);
         }
 
         /// <summary>

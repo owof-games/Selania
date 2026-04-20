@@ -1,0 +1,10 @@
+Viola positivo: d747ff
+Viola negativo: 812b99
+Giallo positivo: ffd94f
+Giallo negativo: b39837
+Rosso positivo: ff4e47
+Rosso negativo: 992f2b
+Verde positivo: 51ff47
+Verde negativo: 30992b
+Blu positivo: 476fff
+Blu negativo: 2b4399

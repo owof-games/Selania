@@ -94,11 +94,16 @@ MonoBehaviour:
   characterInfo:
   - listName: FirstCharacter
     relationshipInkVariableName: firstChar_relationshipIndicator
+    choicesValuesVariablePrefix: firstChar
   - listName: SecondCharacter
     relationshipInkVariableName: secondChar_relationshipIndicator
+    choicesValuesVariablePrefix: secondChar
   - listName: ThirdCharacter
     relationshipInkVariableName: thirdChar_relationshipIndicator
+    choicesValuesVariablePrefix: thirdChar
   - listName: FourthCharacter
     relationshipInkVariableName: fourthChar_relationshipIndicator
+    choicesValuesVariablePrefix: fourthChar
   - listName: FifthCharacter
     relationshipInkVariableName: fifthChar_relationshipIndicator
+    choicesValuesVariablePrefix: fifthChar

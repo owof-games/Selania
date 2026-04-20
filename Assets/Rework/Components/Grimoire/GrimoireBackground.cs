@@ -760,12 +760,39 @@ namespace Selania.Rework.Components.Grimoire
         ///     Name of the portrait (see <see cref="ISettingsBook.GetCharacterPortrait" />,
         ///     <see cref="SelaniaSettings.CharacterInfo.grimoirePortrait" />).
         /// </param>
-        /// /// <param name="enabledButtonNames">The list of buttons enabled, identified by their name.</param>
+        /// <param name="enabledButtonNames">The list of buttons enabled, identified by their name.</param>
         public void SetUpSecondLevelCharacterPage(string characterName, string characterDescription,
             string characterTasks, string portraitName, ICollection<string> enabledButtonNames)
         {
             secondLevelCharactersGrimoire.SetUpPage(characterName, characterDescription, characterTasks, portraitName,
                 enabledButtonNames);
+        }
+
+        /// <summary>
+        /// Set up the values for the various elements in the pentacle, showing an animation if the starting and
+        /// ending values are different.
+        /// </summary>
+        /// <param name="aetherValue1"></param>
+        /// <param name="aetherValue2"></param>
+        /// <param name="airValue1"></param>
+        /// <param name="airValue2"></param>
+        /// <param name="fireValue1"></param>
+        /// <param name="fireValue2"></param>
+        /// <param name="earthValue1"></param>
+        /// <param name="earthValue2"></param>
+        /// <param name="waterValue1"></param>
+        /// <param name="waterValue2"></param>
+        public void SetUpPentacleValues(float aetherValue1, float aetherValue2,
+            float airValue1, float airValue2,
+            float fireValue1, float fireValue2,
+            float earthValue1, float earthValue2,
+            float waterValue1, float waterValue2)
+        {
+            secondLevelCharactersGrimoire.SetUpPentacleValues(aetherValue1, aetherValue2,
+                airValue1, airValue2,
+                fireValue1, fireValue2,
+                earthValue1, earthValue2,
+                waterValue1, waterValue2);
         }
     }
 }
