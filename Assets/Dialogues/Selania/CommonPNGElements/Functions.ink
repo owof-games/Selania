@@ -163,6 +163,7 @@ VAR thirdChar_LibraryWaiting = 0
             - frog_and_mentor_chit_chat && grimoire_fifthChar hasnt grimMentorFranco:
                 ~ grimoire_fifthChar += grimMentorFranco
                 ~ grimoire_franco += grimMentorFranco
+                ~ player_somethingStrangeTalkable += strangeMentor
         }
 
 

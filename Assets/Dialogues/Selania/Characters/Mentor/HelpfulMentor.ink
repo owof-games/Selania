@@ -254,11 +254,38 @@
 
                 ~ player_somethingStrange -= strangeGrimoire
                 -> helping_mentor.top
-        
-        + \ {charTag(PG, "neutral")}:            Ripensandoci, non ho nulla di nuovo da dire.
-            -> helping_mentor.top
-   
 
+   
+        * (mentor) {player_somethingStrange has strangeMentor}\ {charTag(PG, "neutral")}:         Prima Franco ha detto di non aver mai incontrato nessun mentore da queste parti.
+            
+            {charTag(Mentor, "neutral")}:           Franco?
+                                                    Franco è anche convinto che la luna gli parli!
+                                            {
+                                                - grimoire_fifthChar has grimMentorWitchOne:
+                                                    {charTag(Mentor, "sorry")}:           Cosa che poi non si è rivelata così assurda.
+                                                
+                                                - else:
+                                                        {
+                                                        - are_two_entities_together(Franco, PG):
+                                                            {charTag(Franco, "{portrait_Franco()}")}:      Ma è vero!
+
+                                                            - else:
+                                                            {charTag(TheWitch, "{witch_state()}")}:          <i>E Franco ha ragione.</i>
+                                                        }    
+                                            }            
+            {charTag(PG, "sad")}:                   Non mi fraintendere, ma ricordati chi ti sta aiutando dal tuo arrivo.
+                                                    Chi ti ha aperto la serra.
+                                                    Chi è qui ad ascoltare le cose strane che racconti.
+            {charTag(Mentor, "neutral")}:           Farei tutto questo, se fossi una persona diversa?
+                                                    Se il mio unico scopo non fosse quello di aiutarti?
+            {charTag(Mentor, "sad")}:               Mi prenderei tutta questa stanchezza senza motivo?
+
+                ~ player_somethingStrange -= strangeMentor
+                -> helping_mentor.top
+
+                    
+        + \ {charTag(PG, "neutral")}:            Ripensandoci, non ho nulla di nuovo da dire.
+            -> helping_mentor.top    
 
  === mindfulness
  //Randomizzo i contenuti e nel caso posso usare anche qui i trigger warning.
