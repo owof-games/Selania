@@ -109,27 +109,27 @@
 
         //Azioni legate alla riscrittura
             //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-            + {(grimoire_thirdChar has thirdChar_minStoryletsForRewriting) && not rewriting_proposal_third_character && grimoire_appendices hasnt grimRewritingMentor} Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
+            + {(grimoire_thirdChar has thirdChar_minStoryletsForRewriting) && not rewriting_proposal_third_character && grimoire_appendices hasnt grimRewritingMentor} \ {charTag(PG, "neutral")}:         Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
                     Mi sa che {mentorName} vuole dirti qualcosa prima.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
                    
                             ~ thirdChar_tutorial = true
                                 -> main
 
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
-            + {grimoire_thirdChar has thirdChar_minStoryletsForRewriting && grimoire_thirdChar hasnt grimThirdCharProposal && grimoire_appendices has grimRewritingMentor} Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
+            + {grimoire_thirdChar has thirdChar_minStoryletsForRewriting && grimoire_thirdChar hasnt grimThirdCharProposal && grimoire_appendices has grimRewritingMentor} \ {charTag(PG, "neutral")}:         Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
                     //Incremento le variazioni del libro della Riscrittora
 
                             -> rewriting_proposal_third_character
 
         //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo
-                + {grimoire_thirdChar has grimThirdCharProposal} Iniziamo la riscrittura?
+                + {grimoire_thirdChar has grimThirdCharProposal} \ {charTag(PG, "neutral")}:         Iniziamo la riscrittura?
                         -> rewriting_proposal_third_character
 
 
         //Azioni legate alla costruzione della relazione
 
             //Offrire un dono
-                + {thirdChar_giftedObject == () && backpack_findedGifts != ()} Ti voglio dare questa cosa.
+                + {thirdChar_giftedObject == () && backpack_findedGifts != ()} \ {charTag(PG, "neutral")}:         Ti voglio dare questa cosa.
                 //Prima accedo al grimorio
                 -> grimoire_greenhouse_gifts_and_ingredient ->
 
@@ -170,7 +170,7 @@
 
 
             //Cucinare assieme
-            + {player_accessiblePlaces has Kitchen && grimoire_thirdChar has grimThirdCharOne && grimoire_thirdChar hasnt grimThirdCharKitchenEnded && kitchen_thirdCharIsCooking==false}Ti va di cucinare qualcosa assieme?
+            + {player_accessiblePlaces has Kitchen && grimoire_thirdChar has grimThirdCharOne && grimoire_thirdChar hasnt grimThirdCharKitchenEnded && kitchen_thirdCharIsCooking==false}\ {charTag(PG, "neutral")}:         Ti va di cucinare qualcosa assieme?
 
                 {
                     - kitchen_firstCharIsCooking:
@@ -224,7 +224,7 @@
                 }
 
         //Uscita dalla conversazione
-            + <i>Lascio il dialogo.
+            + \ {charTag(PG, "neutral")}:         <i>Lascio il dialogo.
                 -> main
             -
                 -> talk_with_third_character

@@ -24,7 +24,7 @@
         <i>{player_name} ci ha portato questa gioia.
         <i>C'è qualcosa che {player_name} vorrebbe dirci?
 
-            + Grazie per avermi guidat{player_pronouns has him:o|{player_pronouns has her:a|ə}} dall'inizio.
+            \ {charTag(PG, "neutral")}:         Grazie per avermi guidat{player_pronouns has him:o|{player_pronouns has her:a|ə}} dall'inizio.
                     -> glyph_modifier_variation_management(PG, waterC)->
 
                 {charTag(TheWitch, witch_state())}:   <i>E grazie a {player_name} per aver guidato noi.
@@ -34,7 +34,7 @@
                 <i>E {mentorName} è {player_name}.
                 <i>Che è noi.</i>
                 
-            + Esci dalla mia testa! Subito!
+            + \ {charTag(PG, "neutral")}:         Esci dalla mia testa! Subito!
                     -> glyph_modifier_variation_management(PG, fireC)->
 
                 {charTag(TheWitch, witch_state())}:   <i>Non siamo nella testa di {player_name}.
@@ -43,7 +43,7 @@
                 <i>È come se {player_name} ci chiedesse di non essere.
                 <i>E questa è una cosa che non è e non sarà.</i>
                 
-            + Parli di radici: sei un albero?
+            + \ {charTag(PG, "neutral")}:         Parli di radici: sei un albero?
                     -> glyph_modifier_variation_management(PG, airC)->
 
                 {charTag(TheWitch, witch_state())}:   <i>Le piante raccontano storie da notte a giorno. 
@@ -56,7 +56,7 @@
                 <i>I rami a terra.
                 <i>E il tronco in {player_name}.
                 
-            + Perché non mi hai detto subito di essere reale?
+            + \ {charTag(PG, "neutral")}:         Perché non mi hai detto subito di essere reale?
                     -> glyph_modifier_variation_management(PG, earthC)->
 
                 {charTag(TheWitch, witch_state())}:   <i>{player_name} sente l'odore del Canto delle Compagne.
@@ -64,7 +64,7 @@
                 <i>{player_name} sente il legame che ha con {charNameTwo}, e sa che è reale.
                 <i>Una voce {player_pronouns has him:lo|{player_pronouns has her:la|lə}} accompagna, e non è reale?
         
-            + "Cosa è successo domani": il tempo qui funziona in modo strano?
+            + \ {charTag(PG, "neutral")}:         "Cosa è successo domani": il tempo qui funziona in modo strano?
                     -> glyph_modifier_variation_management(PG, aetherC)->
                 {charTag(TheWitch, witch_state())}:   <i>La mosca vive un'istante, ma per lei il suo tempo è una vita.
                 <i>Noi viviamo nel sempremai, e confondiamo i tempi.
@@ -77,23 +77,23 @@
         <i>Ci hanno chiamate Luna e Parola.
         <i>Con quale nome {player_name} vorrebbe chiamarci?
 
-            + Strega.
+            + \ {charTag(PG, "neutral")}:         Strega.
                 -> glyph_modifier_variation_management(PG, aetherC)->
                 ~ witch_actualName += Strega
 
-            + Luna.
+            + \ {charTag(PG, "neutral")}:         Luna.
                 -> glyph_modifier_variation_management(PG, waterC)->
                 ~ witch_actualName += Luna
 
-            + Parola.
+            + \ {charTag(PG, "neutral")}:         Parola.
                 -> glyph_modifier_variation_management(PG, airC)->
                 ~ witch_actualName += Parola
 
-            + Radice.
+            + \ {charTag(PG, "neutral")}:         Radice.
                 -> glyph_modifier_variation_management(PG, earthC)->
                 ~ witch_actualName += Radice
 
-            + Fiamma.
+            + \ {charTag(PG, "neutral")}:         Fiamma.
                 -> glyph_modifier_variation_management(PG, fireC)->
                 ~ witch_actualName += Fiamma
             - (nameChosen)
@@ -376,11 +376,11 @@
     <i>Ci sono ancora un po' di cose da fare, ma se vuole, prima di continuare, possiamo sbloccare tutte le informazioni mancanti riguardo ai sigilli.
     <i>Per il piacere di condividere la conoscenza.
 
-    + <i>No, preferirei di no.</i>
+    + \ {charTag(PG, "neutral")}:         <i>No, preferirei di no.</i>
         <i>La neve si scioglie al sole.
         <i>E {player_name} si prepara per una nuova primavera.
 
-    + (yes) <i>Certo che sì!</i>
+    + (yes) \ {charTag(PG, "neutral")}:         <i>Certo che sì!</i>
         -> glyph_open_all_sigils ->
         <i>Ora il grimorio è colmo delle descrizioni mancanti.</i>
     -   
@@ -398,19 +398,19 @@
 
     {charTag(TheWitch, witch_state())}:    Cose
     
-        + Scelta verde.
+        + \ {charTag(PG, "neutral")}:         Scelta verde.
             -> glyph_modifier_variation_management(PG, waterC)->
             
-        + SCelta rossa.
+        + \ {charTag(PG, "neutral")}:         SCelta rossa.
             -> glyph_modifier_variation_management(PG, fireC)->
             
-        + Scelta blu.
+        + \ {charTag(PG, "neutral")}:         Scelta blu.
             -> glyph_modifier_variation_management(PG, airC)->
      
-        + Scelta gialla.
+        + \ {charTag(PG, "neutral")}:         Scelta gialla.
             -> glyph_modifier_variation_management(PG, earthC)->
  
-        + Scelta viola.
+        + \ {charTag(PG, "neutral")}:         Scelta viola.
             -> glyph_modifier_variation_management(PG, aetherC)->
         -        
     Cose.
