@@ -1393,5 +1393,27 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
     Spero possa portarti un po' di gioia, {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
     A dopo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
 
+
+            + \ {charTag(PG, "neutral")}:               Scelta acqua
+                    -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+                
+                
+            + \ {charTag(PG, "neutral")}:               Scelta spirito
+                    -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+                
+            
+            + \ {charTag(PG, "neutral")}:               Scelta terra
+                    -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+                
+            
+            + \ {charTag(PG, "neutral")}:               Scelta aria
+                    -> glyph_modifier_variation_management(FirstCharacter, airC)->
+                
+            
+            + \ {charTag(PG, "neutral")}:               Scelta fuoco
+                    -> glyph_modifier_variation_management(FirstCharacter, fireC)-> 
+                
+            -
+
     -> first_char_closing_storylet ->
     ->->

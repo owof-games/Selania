@@ -87,7 +87,26 @@
     A racconto scelto, cambia anche logica in Special Storylets
     Potrebbe aver senso il racconti di Maura, visto che lo percepirebbe come ostile (misandrico?)
     - 
-    
+            + \ {charTag(PG, "neutral")}:               Scelta acqua
+                    -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                
+                
+            + \ {charTag(PG, "neutral")}:               Scelta spirito
+                    -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                
+            
+            + \ {charTag(PG, "neutral")}:               Scelta terra
+                    -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                
+            
+            + \ {charTag(PG, "neutral")}:               Scelta aria
+                    -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                
+            
+            + \ {charTag(PG, "neutral")}:               Scelta fuoco
+                    -> glyph_modifier_variation_management(ThirdCharacter, fireC)-> 
+                
+            -
         -> third_char_closing_storylet ->
         ->->
 

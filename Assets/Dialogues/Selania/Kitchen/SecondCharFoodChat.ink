@@ -45,7 +45,7 @@
             + Parliamo di animali.
                     -> first_theme
 
-            + {second_char_main_storylets.six}Della scuola.
+            + {second_char_main_storylets.six} Della scuola.
                 {
                     - second_char_main_storylets.six:
                         -> storage_glyphs(SecondCharacter)->
@@ -56,7 +56,7 @@
                         -> top
                 }
             
-            + {second_char_main_storylets.eight}Delle bugie.
+            + {second_char_main_storylets.eight} Delle bugie.
                 {
                 
                     - second_char_main_storylets.eight:
@@ -1421,7 +1421,28 @@
     {charTag(Mentor, "neutral")}:                   Posso abbracciarti?
     No.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
     Ma puoi farmi quella torta al cioccolato?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
-- 
+-   
+
+            + \ {charTag(PG, "neutral")}:               Scelta acqua
+                    -> glyph_modifier_variation_management(SecondCharacter, waterC)->
+                
+                
+            + \ {charTag(PG, "neutral")}:               Scelta spirito
+                    -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
+                
+            
+            + \ {charTag(PG, "neutral")}:               Scelta terra
+                    -> glyph_modifier_variation_management(SecondCharacter, earthC)->
+                
+            
+            + \ {charTag(PG, "neutral")}:               Scelta aria
+                    -> glyph_modifier_variation_management(SecondCharacter, airC)->
+                
+            
+            + \ {charTag(PG, "neutral")}:               Scelta fuoco
+                    -> glyph_modifier_variation_management(SecondCharacter, fireC)-> 
+                
+            -
 
     -> second_char_closing_storylet ->
     ->->

@@ -125,7 +125,27 @@
                     Povero piccolo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                     Però è stato molto coraggioso, vero?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
             }
- 
+
+            + \ {charTag(PG, "neutral")}:               Scelta acqua
+                    -> glyph_modifier_variation_management(Mentor, waterC)->
+                
+                
+            + \ {charTag(PG, "neutral")}:               Scelta spirito
+                    -> glyph_modifier_variation_management(Mentor, aetherC)->
+                
+            
+            + \ {charTag(PG, "neutral")}:               Scelta terra
+                    -> glyph_modifier_variation_management(Mentor, earthC)->
+                
+            
+            + \ {charTag(PG, "neutral")}:               Scelta aria
+                    -> glyph_modifier_variation_management(Mentor, airC)->
+                
+            
+            + \ {charTag(PG, "neutral")}:               Scelta fuoco
+                    -> glyph_modifier_variation_management(Mentor, fireC)-> 
+                
+            -
 
         -> mentor_closing_storylet ->
         -> second_char_closing_storylet ->
@@ -252,6 +272,28 @@
                     ~ change_entity_place(FirstCharacter)
         }
 
+
+        Facciamo domande anche sul "in che senso non hai mai visto nessun mnentore?", con reazione da parte altre png.
+            + \ {charTag(PG, "neutral")}:               Scelta acqua
+                    -> glyph_modifier_variation_management(Mentor, waterC)->
+                
+                
+            + \ {charTag(PG, "neutral")}:               Scelta spirito
+                    -> glyph_modifier_variation_management(Mentor, aetherC)->
+                
+            
+            + \ {charTag(PG, "neutral")}:               Scelta terra
+                    -> glyph_modifier_variation_management(Mentor, earthC)->
+                
+            
+            + \ {charTag(PG, "neutral")}:               Scelta aria
+                    -> glyph_modifier_variation_management(Mentor, airC)->
+                
+            
+            + \ {charTag(PG, "neutral")}:               Scelta fuoco
+                    -> glyph_modifier_variation_management(Mentor, fireC)-> 
+                
+            -
         -> mentor_closing_storylet ->
         ->->
 
@@ -346,6 +388,27 @@
         ~ change_entity_place(FirstCharacter)
     {charTag(Franco, "{portrait_Franco()}")}:       Piccarda, Perlita, Macrina, Gliceria, Gianbrunilde, Eulalia, Ermenegigia...
 
+    Qualcosa tipo "{player_name} dimmi che non sto impazzendo solo io!"
+            + \ {charTag(PG, "neutral")}:               Scelta acqua
+                    -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+                
+                
+            + \ {charTag(PG, "neutral")}:               Scelta spirito
+                    -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+                
+            
+            + \ {charTag(PG, "neutral")}:               Non sto impazzendo solo io.
+                    -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+                
+            
+            + \ {charTag(PG, "neutral")}:               Scelta aria
+                    -> glyph_modifier_variation_management(FirstCharacter, airC)->
+                
+            
+            + \ {charTag(PG, "neutral")}:               Scelta fuoco
+                    -> glyph_modifier_variation_management(FirstCharacter, fireC)-> 
+                
+            -
         -> first_char_closing_storylet ->
         ->->
 
@@ -395,6 +458,27 @@
                 {charTag(Mentor, "neutral")}:                   Comincio a sospettare che questa rana farà più danni di quanti ne potrò risolvere.
         }
     
+
+            + \ {charTag(PG, "neutral")}:               Scelta acqua
+                    -> glyph_modifier_variation_management(SecondCharacter, waterC)->
+                
+                
+            + \ {charTag(PG, "neutral")}:               Scelta spirito
+                    -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
+                
+            
+            + \ {charTag(PG, "neutral")}:               Scelta terra
+                    -> glyph_modifier_variation_management(SecondCharacter, earthC)->
+                
+            
+            + \ {charTag(PG, "neutral")}:               Scelta aria
+                    -> glyph_modifier_variation_management(SecondCharacter, airC)->
+                
+            
+            + \ {charTag(PG, "neutral")}:               Scelta fuoco
+                    -> glyph_modifier_variation_management(SecondCharacter, fireC)-> 
+                
+            -
         -> second_char_closing_storylet ->
         ->->
 

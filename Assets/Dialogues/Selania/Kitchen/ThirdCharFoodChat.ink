@@ -853,6 +853,26 @@ Quindi {player_name}, iniziamo a cucinare assieme?#speaker:{firstChar_tag()} #in
     ~ temp mentorName = translator(mentor_ActualName)
     
     Cucinare da sola prima è stato un momento terapeutico.
+            + \ {charTag(PG, "neutral")}:               Scelta acqua
+                    -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                
+                
+            + \ {charTag(PG, "neutral")}:               Scelta spirito
+                    -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                
+            
+            + \ {charTag(PG, "neutral")}:               Scelta terra
+                    -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                
+            
+            + \ {charTag(PG, "neutral")}:               Scelta aria
+                    -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                
+            
+            + \ {charTag(PG, "neutral")}:               Scelta fuoco
+                    -> glyph_modifier_variation_management(ThirdCharacter, fireC)-> 
+                
+            -
     
     -> third_char_closing_storylet ->
     ->->
