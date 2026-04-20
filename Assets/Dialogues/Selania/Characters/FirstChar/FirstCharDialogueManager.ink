@@ -132,27 +132,27 @@
 
     //Azioni legate alla riscrittura
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-            + {grimoire_firstChar has firstChar_minStoryletsForRewriting && not rewriting_proposal_first_character && not tutorial_mentorInkAndRewriting} Vorrei aiutarti a leggere la tua storia diversamente.
+            + {grimoire_firstChar has firstChar_minStoryletsForRewriting && not rewriting_proposal_first_character && not tutorial_mentorInkAndRewriting} \ {charTag(PG, "neutral")}:         Vorrei aiutarti a leggere la tua storia diversamente.
                 
                 Ama, mi sa che conviene che tu parli con la nostra fiorellona qui in giro, così ti dice giusto due cose due importanti.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 Tanto non scappo.
                         -> main
         
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona                    
-            + {grimoire_firstChar has firstChar_minStoryletsForRewriting && grimoire_firstChar hasnt grimFirstCharProposal && tutorial_mentorInkAndRewriting} Ti va di riscrivere la tua storia con me?
+            + {grimoire_firstChar has firstChar_minStoryletsForRewriting && grimoire_firstChar hasnt grimFirstCharProposal && tutorial_mentorInkAndRewriting} \ {charTag(PG, "neutral")}:         Ti va di riscrivere la tua storia con me?
                 
                 //Incremento le variazioni del libro della Riscrittora           
                     -> rewriting_proposal_first_character
     
         //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo          
-            + {grimoire_firstChar has grimFirstCharProposal} Iniziamo la riscrittura?
+            + {grimoire_firstChar has grimFirstCharProposal} \ {charTag(PG, "neutral")}:         Iniziamo la riscrittura?
                     -> rewriting_proposal_first_character
             
         
     //Azioni legate alla costruzione della relazione
     
         //Offrire un dono
-            + {firstChar_giftedObject == () && backpack_findedGifts != ()} Ti vorrei dare questa cosa.
+            + {firstChar_giftedObject == () && backpack_findedGifts != ()} \ {charTag(PG, "neutral")}:         Ti vorrei dare questa cosa.
 
                 //Prima accedo al grimorio
                 -> grimoire_greenhouse_gifts_and_ingredient ->
@@ -195,7 +195,7 @@
             
         
         //Cucinare assieme    
-            + {player_accessiblePlaces has Kitchen && grimoire_firstChar hasnt grimFirstCharKitchenEnded && kitchen_firstCharIsCooking==false}Ti va di cucinare qualcosa assieme?
+            + {player_accessiblePlaces has Kitchen && grimoire_firstChar hasnt grimFirstCharKitchenEnded && kitchen_firstCharIsCooking==false}\ {charTag(PG, "neutral")}:         Ti va di cucinare qualcosa assieme?
             
                 {
                 
@@ -250,7 +250,7 @@
                 }
     
     //Uscita dalla conversazione
-        + <i>Lascio il dialogo.</i>
+        + \ {charTag(PG, "neutral")}:         <i>Lascio il dialogo.</i>
                 -> main
         -
             -> talk_with_first_character

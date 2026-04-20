@@ -49,10 +49,10 @@
         Quanto si può sperare di essere felici, a questo mondo?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
             
 
-            + Che ne dici se riscriviamo assieme la tua storia?
+            + \ {charTag(PG, "neutral")}:         Che ne dici se riscriviamo assieme la tua storia?
                 -> rewriting
             
-            + Capisco il tuo dolore, ma ho bisogno di riflettere un attimo.
+            + \ {charTag(PG, "neutral")}:         Capisco il tuo dolore, ma ho bisogno di riflettere un attimo.
                 -> main
 
 
@@ -92,7 +92,7 @@
         Però possiamo raccontare la tua storia in un altro modo.
         Tu dici che sei un <b>concentrato di rinunce</b>.
 
-            + Ma l'hai detto anche tu: razionalmente, non si può avere tutto.
+            + \ {charTag(PG, "neutral")}:         Ma l'hai detto anche tu: razionalmente, non si può avere tutto.
                 -> glyph_modifier_variation_management(FirstCharacter, airC)->
                 Non è rinuncia quindi: è accogliere la vita adulta.
                 E imparare come compiere delle scelte, dove andare.
@@ -102,20 +102,20 @@
                     E puoi costruire le tue prossime scelte partendo da questo.
                 }
 
-            + Però per la prima volta sei innamorata, innamorata davvero.
+            + \ {charTag(PG, "neutral")}:         Però per la prima volta sei innamorata, innamorata davvero.
                 -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                 Ti sei chiesta se Ennio non sia la tua casa, il tuo rifugio.
                 Non hai certo rinunciato all'amore.
                {first_char_main_storylets.ten: Un amore che hai detto essere come pane appena sfornato.}
             
-            + Però hai abbracciato la lotta, la voglia di cambiare le cose.
+            + \ {charTag(PG, "neutral")}:         Però hai abbracciato la lotta, la voglia di cambiare le cose.
                 -> glyph_modifier_variation_management(FirstCharacter, fireC)->
                 Con le tue colleghe sul lavoro.
                 Con La Rifugia.
                 L'hai detto prima: è stato bello dire "no".
                 Alcune rinunce ti hanno resa potente.
                 
-            + Sorprendi te stessa e fai qualcosa di assurdo, vai da Talco!
+            + \ {charTag(PG, "neutral")}:         Sorprendi te stessa e fai qualcosa di assurdo, vai da Talco!
                 -> glyph_modifier_variation_management(FirstCharacter, earthC)->
                 La cartolina è una porta aperta: Talco ti attende.
                {
@@ -128,12 +128,12 @@
                         E già una volta ti sei ricostruita una vita, quando sei arrivata al nord.
                 }
             
-            + Hai detto che quando rinunci a te creando, trovi tutto.
+            + \ {charTag(PG, "neutral")}:         Hai detto che quando rinunci a te creando, trovi tutto.
                 -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                 E anche se ti incasina scrivere di politica, stai cercando nella musica un modo per cambiare le cose.
                 A volte forse rinunciare è utile per andare avanti.
             -
-                ~ numberQuestion ++   
+                ~ numberQuestion ++      
             
             Io.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             Sì, forse la rinuncia mi spaventa un sacco.
@@ -159,17 +159,17 @@
         E a un certo punto hai iniziato ad aspettarti amicizie eterne, case in campagna e un amore da film.
         Eppure...
        
-            + Talco e un'ondata di cambiamenti ti aspettano in Islanda.
+            + \ {charTag(PG, "neutral")}:         Talco e un'ondata di cambiamenti ti aspettano in Islanda.
                 -> glyph_modifier_variation_management(FirstCharacter, fireC)->
                 Pensavi Ennio fosse noioso, e te ne sei innamorata.
                 La vita ci sorprende sempre quando si tratta di relazioni.
                
-            + Hai di più: hai La Rifugia e le tue coinquiline.
+            + \ {charTag(PG, "neutral")}:         Hai di più: hai La Rifugia e le tue coinquiline.
                 -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                 Le tue relazioni creano cose che rimangono, anche se le relazioni stesse dovessero finire.
                 Con le persone che ami sei trasformazione.
                 
-            + Hai un innamorato che ti ha chiesto di convivere.
+            + \ {charTag(PG, "neutral")}:         Hai un innamorato che ti ha chiesto di convivere.
                 -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                 Un innamorato che ti fa sentire solida.
                 Con cui hai potuto svolazzare, conoscerti al meglio.
@@ -180,7 +180,7 @@
                         Sei piena d'amore, non trovi?
                 }
                 
-            + Ma le aspettative non sono fatti.
+            + \ {charTag(PG, "neutral")}:         Ma le aspettative non sono fatti.
                 -> glyph_modifier_variation_management(FirstCharacter, airC)->
                 Ed essere adulti significa sopravvivere alle proprie aspettative.
                 Ma non è una sconfitta.
@@ -190,7 +190,7 @@
                     Anche da una cosa dolorosa come il tradire le proprie aspettative, tu hai trovato un modo per crescere.
                 }
             
-            + Ma chi ce l'ha un papà con cui suonare e ubriacarsi?!?
+            + \ {charTag(PG, "neutral")}:         Ma chi ce l'ha un papà con cui suonare e ubriacarsi?!?
                 -> glyph_modifier_variation_management(FirstCharacter, earthC)->
                 I tuoi genitori hanno fatto enormi sacrifici per permetterti di studiare.
                 Palese che ti vogliono un bene immenso.
@@ -222,7 +222,7 @@
         Più volte hai parlato del tuo bisogno di fare qualcosa di utile, di grande. #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
         Ti aspettavi di fare qualcosa di buono, di salvare il mondo con le tue canzoni.
     
-            + Ma se il gioco è rotto, l'unica vittoria c'è rompendo le regole.
+            + \ {charTag(PG, "neutral")}:         Ma se il gioco è rotto, l'unica vittoria c'è rompendo le regole.
                     -> glyph_modifier_variation_management(FirstCharacter, earthC)->
                 Il mondo è duro da cambiare, ma l'esempio è una gran cosa.
                 Rompere le aspettative, l'ovvio, è rivoluzionario.
@@ -231,7 +231,7 @@
                         O come hai detto per <b>Luna vergine</b>, puoi abbracciare il tuo essere mostro.
                 }
 
-            + È questione di numeri: nessunə salva il mondo da solə.
+            + \ {charTag(PG, "neutral")}:         È questione di numeri: nessunə salva il mondo da solə.
                     -> glyph_modifier_variation_management(FirstCharacter, airC)->
                 È inevitabile, ma non è un fallimento.
                 {
@@ -240,7 +240,7 @@
                         Così, assieme, evitiamo che le invidie e le insicurezze rendano le nostre lotte fragili.
                 }
             
-            + Con La Rifugia ti sei data uno scopo più grande.
+            + \ {charTag(PG, "neutral")}:         Con La Rifugia ti sei data uno scopo più grande.
                 -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                E anche le tue amiche che sono tornate nei paesini, hanno fatto grandi cose.
                {
@@ -252,14 +252,14 @@
                        Ricordi?
                 }
 
-            + Con le tue colleghe stai portando la lotta grande in qualcosa di piccolo.
+            + \ {charTag(PG, "neutral")}:         Con le tue colleghe stai portando la lotta grande in qualcosa di piccolo.
                 -> glyph_modifier_variation_management(FirstCharacter, fireC)->
                 Pensa a quello che avete fatto contro il dirigente venuto a pranzo.
                 Al tentativo di fare un sindacato.
                 Hai trovato un modo di lottare anche senza la musica.
                 
                     
-            + Ma potresti fare qualcosa di buono anche prendendoti cura dei tuoi genitori.
+            + \ {charTag(PG, "neutral")}:         Ma potresti fare qualcosa di buono anche prendendoti cura dei tuoi genitori.
                 -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                 {
                     -grimoire_firstChar has grimFirstCharKitchenAlone: 
@@ -295,12 +295,12 @@
         ~ temp charNameOne = translator(firstChar_ActualName)
             Ti senti mediocre, e hai paura di rischiare di fare un salto e perdere tutto, di fallire.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
     
-            + Come nei giochi, si può sbagliare e ricominciare.
+            + \ {charTag(PG, "neutral")}:         Come nei giochi, si può sbagliare e ricominciare.
                 -> glyph_modifier_variation_management(FirstCharacter, earthC)->
                 Lo dice Ennio quando gioca.
                 L'hai visto quando Talco ha mollato il Conservatorio, eppure si è fattə la sua vita.
                 
-            + Sei amata da molte persone: anche se cadi, non sarai sola.
+            + \ {charTag(PG, "neutral")}:         Sei amata da molte persone: anche se cadi, non sarai sola.
                 -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                 Le tue amiche, Ennio, Talco, la tua famiglia.
                 Se dovessi cadere, avrai una rete pronta ad aiutarti.
@@ -310,12 +310,12 @@
                         Non sei sola.
                 }
             
-            + La musica e ciò che ti permette di fare saranno sempre con te.
+            + \ {charTag(PG, "neutral")}:         La musica e ciò che ti permette di fare saranno sempre con te.
                 -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                 Puoi raccontare storie mai sentite.
                 Continuare a provare a cambiare il mondo come vorresti.
                
-            + La mediocrità non è una colpa ma un risultato statistico.
+            + \ {charTag(PG, "neutral")}:         La mediocrità non è una colpa ma un risultato statistico.
                 -> glyph_modifier_variation_management(FirstCharacter, airC)->
                 Ennio è felice nel suo non cercare di essere speciale.
                 La mediocrità non è una colpa, ma solo un risultato statistico.
@@ -325,7 +325,7 @@
                         Così da non sentirsi inadeguate.
                 }
             
-            + Talco ha rischiato, parlandoti della sua gravidanza.
+            + \ {charTag(PG, "neutral")}:         Talco ha rischiato, parlandoti della sua gravidanza.
                 -> glyph_modifier_variation_management(FirstCharacter, fireC)->
                E tu lo hai fatto con l'organizzazione sindacale.
                Con La Rifugia.
@@ -369,23 +369,23 @@
             Come avanzare.
             Come uscire da una vita che non senti più tua.
 
-            + (fire) Rivoluziona la tua vita, raggiungi Talco in Islanda.
+            + (fire) \ {charTag(PG, "neutral")}:         Rivoluziona la tua vita, raggiungi Talco in Islanda.
             //me ne vado all'estero da Talco.
                 -> glyph_modifier_variation_management(FirstCharacter, fireC)->
             
-            + (aether) La musica ti dà uno scopo più grande. Seguila.
+            + (aether) \ {charTag(PG, "neutral")}:         La musica ti dà uno scopo più grande. Seguila.
             // mollo il lavoro per la musica, per far qualcosa di buono per le altre persone.
                  -> glyph_modifier_variation_management(FirstCharacter, aetherC)->         
             
-            + (earth) Torna alla tua infanzia, dai tuoi e ricomincia da dove sei cresciuta.
+            + (earth) \ {charTag(PG, "neutral")}:         Torna alla tua infanzia, dai tuoi e ricomincia da dove sei cresciuta.
             //torno al sud, ricomincio al sicuro.
                 -> glyph_modifier_variation_management(FirstCharacter, earthC)->
                 
-            + (water) L'amore e la stabilità di Ennio sono la base per poter cambiare.
+            + (water) \ {charTag(PG, "neutral")}:         L'amore e la stabilità di Ennio sono la base per poter cambiare.
             //me ne vado a vivere col moroso.
                 -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                 
-            + (air) Eppure hai oggettivamente una vita ricca. Goditela.
+            + (air) \ {charTag(PG, "neutral")}:         Eppure hai oggettivamente una vita ricca. Goditela.
             //trovare il bello in quello che si ha (per la gioia di Mentore).
                 -> glyph_modifier_variation_management(FirstCharacter, airC)->   
             - 
