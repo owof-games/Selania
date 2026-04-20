@@ -41,10 +41,10 @@
         // Ma poi mi fanno male.
         // E io non mi fido più di voi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
 
-            + Ti ho ascoltato, {charNameTwo}, e posso aiutarti a riscrivere la tua storia.
+            + \ {charTag(PG, "neutral")}:         Ti ho ascoltato, {charNameTwo}, e posso aiutarti a riscrivere la tua storia.
                 -> rewriting
             
-            + Capisco il tuo dolore, ma ho bisogno di riflettere un attimo.
+            + \ {charTag(PG, "neutral")}:         Capisco il tuo dolore, ma ho bisogno di riflettere un attimo.
                 -> main
 
 
@@ -84,7 +84,7 @@
             Hai detto che da quando nonna è nella casa dei vecchi fa tutto schifo.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             Che tuo papà litiga con tua mamma, e che mamma si arrabbia con te e di non piangere perché nonna è in un posto migliore.
 
-            + Tua nonna ti ha insegnato a lottare: lotta anche tu!
+            + \ {charTag(PG, "neutral")}:         Tua nonna ti ha insegnato a lottare: lotta anche tu!
                 -> glyph_modifier_variation_management(SecondCharacter, fireC)->
                 E ti ha insegnato a barare!
                 E a sputare nel caffè di chi ti fa male.
@@ -95,7 +95,7 @@
                 }
                     
             
-            + I tuoi genitori sono infelici, {charNameTwo}, prova a comprenderli.
+            + \ {charTag(PG, "neutral")}:         I tuoi genitori sono infelici, {charNameTwo}, prova a comprenderli.
                 -> glyph_modifier_variation_management(SecondCharacter, waterC)->
                 Tutti i litigi, la fuga di tuo padre.
                 Il modo in cui si arrabbia per tutto.
@@ -103,7 +103,7 @@
                 Sono cose che puoi capire, che vivi anche tu.
                     
                     
-            + Tuo fratello però ha trovato la gioia anche in questo casino.
+            + \ {charTag(PG, "neutral")}:         Tuo fratello però ha trovato la gioia anche in questo casino.
                 -> glyph_modifier_variation_management(SecondCharacter, earthC)->
                 Ci sono le sue statue, c'è il suo amico.
                 {
@@ -112,7 +112,7 @@
                 }
 
                                 
-            + E la casa dei vecchi è un posto attrezzato, organizzato.
+            + \ {charTag(PG, "neutral")}:         E la casa dei vecchi è un posto attrezzato, organizzato.
                     -> glyph_modifier_variation_management(SecondCharacter, airC)->
                 Una persona anziana ha bisogno di cure, {charNameTwo}.
                 Di persone che le diano quello di cui ha bisogno.
@@ -120,7 +120,7 @@
                 Ma sarebbe la cosa giusta per lei, riportarla a casa?
                     
     
-            + Ma è grazie al pianto che puoi essere diverso da loro.
+            + \ {charTag(PG, "neutral")}:         Ma è grazie al pianto che puoi essere diverso da loro.
                 -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
                 Tu tieni agli animali.
                 A tuo fratello.
@@ -156,7 +156,7 @@
 
         A scuola le maestre dicono che sei cattivo, bugiardo, violento, e finisci sempre in punizione.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
 
-        + Le bugie alla fine sono solo storie. Usale per divertirti.
+        + \ {charTag(PG, "neutral")}:         Le bugie alla fine sono solo storie. Usale per divertirti.
                 -> glyph_modifier_variation_management(SecondCharacter, earthC)->
             {
                 - cooking_with_second_char.third_theme:
@@ -170,14 +170,14 @@
                     Come i racconti che hai trovato in biblioteca!
             }
                    
-        + Tutto a questo mondo cambia. Anche un bambino cocciuto e bugiardo.
+        + \ {charTag(PG, "neutral")}:         Tutto a questo mondo cambia. Anche un bambino cocciuto e bugiardo.
                 -> glyph_modifier_variation_management(SecondCharacter, airC)->
             Quando sei arrivato qui hai litigato con {mentorName}.
             E mi hai detto molte bugie.
             Ma hai anche chiesto scusa.
             Puoi partire da questo per cambiare.
                    
-        + La rabbia è parte della tua vita, della tua famiglia: trasformala.
+        + \ {charTag(PG, "neutral")}:         La rabbia è parte della tua vita, della tua famiglia: trasformala.
                 -> glyph_modifier_variation_management(SecondCharacter, fireC)->
             Come quando ti arrabbi perché gli animali stanno scomparendo.
             O perché papà tratta male nonna.
@@ -188,7 +188,7 @@
                     Ma tu sì, e puoi cambiare tante cose.
             }
                     
-        + Ma non sei solo questo: sei gentile, sei curioso, sei divertente.
+        + \ {charTag(PG, "neutral")}:         Ma non sei solo questo: sei gentile, sei curioso, sei divertente.
                 -> glyph_modifier_variation_management(SecondCharacter, waterC)->
             Hai sviluppato un bel rapporto con {charNameOne}.
             Mi hai raccontato tante cose interessanti sugli animali.
@@ -198,7 +198,7 @@
             E menti.
             Ma sei anche tante altre cose, {charNameTwo}.
                    
-        + Eppure hai trovato il modo di fare pace con {mentorName}.
+        + \ {charTag(PG, "neutral")}:         Eppure hai trovato il modo di fare pace con {mentorName}.
                 -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
             Hai fatto lo sforzo di capirla.
             E mi hai chiesto scusa più volte per le tue bugie.
@@ -263,7 +263,7 @@
             E hai paura che gli animali possano sparire.
             Così è logico vedere il futuro come un posto spaventoso.
     
-        + Eppure ci sono le associazioni che proteggono gli animali.
+        + \ {charTag(PG, "neutral")}:         Eppure ci sono le associazioni che proteggono gli animali.
             -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
             Come quelle di cui ti ha parlato la tua maestra.
             E la sua amica del canile.
@@ -272,14 +272,14 @@
                     E magari da grande studierai davvero come si curano i pesci.
             }
 
-        + Eppure tuo fratello ama il suo ragazzo.
+        + \ {charTag(PG, "neutral")}:         Eppure tuo fratello ama il suo ragazzo.
             -> glyph_modifier_variation_management(SecondCharacter, waterC)->
             E ama te.
             E fa in modo che possiate passare tanto tempo assieme.
             Che tu possa avere uno spazio felice.
             E così rende il mondo un po' meno orribile.
                    
-        + Eppure tuo fratello lotta contro tuo padre perché tu stia meglio.
+        + \ {charTag(PG, "neutral")}:         Eppure tuo fratello lotta contro tuo padre perché tu stia meglio.
             -> glyph_modifier_variation_management(SecondCharacter, fireC)->
             {
                 - second_char_main_storylets.eleven:
@@ -289,7 +289,7 @@
             Non si è fatto mettere i piedi in testa da nessuno.
             E questo lo fai se pensi ci sia un futuro dove andare.
                     
-        + Ma sai anche trovare la fantasia e la giocosità nel mondo.
+        + \ {charTag(PG, "neutral")}:         Ma sai anche trovare la fantasia e la giocosità nel mondo.
             -> glyph_modifier_variation_management(SecondCharacter, earthC)->
             Sei arrivato in questo posto sconosciuto e invece di avere paura, ti sei messo a curiosare.
             Ti sei fatto amico una rana parlante.
@@ -303,7 +303,7 @@
                 }    
             Quando tu giochi non hai paura di nulla.
 
-        + Eppure sistematicamente tuo fratello per lavoro aggiusta le cose.
+        + \ {charTag(PG, "neutral")}:         Eppure sistematicamente tuo fratello per lavoro aggiusta le cose.
             -> glyph_modifier_variation_management(SecondCharacter, airC)->
             Vede le cose rotte e le ripara.
             Quindi ci sono cose che si possono aggiustare.
@@ -336,7 +336,7 @@
 
         Hai detto che i grandi fanno schifo, e che non vuoi diventare grande.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
         
-            + Ma puoi essere un adulto combattente, come tua nonna.
+            + \ {charTag(PG, "neutral")}:         Ma puoi essere un adulto combattente, come tua nonna.
                 -> glyph_modifier_variation_management(SecondCharacter, fireC)->
                 {
                     - cooking_with_second_char.first_theme:
@@ -349,7 +349,7 @@
                 E non farti mettere i piedi in testa da nessuna persona!
                         
         
-            + Ma puoi essere un adulto curioso e studioso, come un po' già sei.
+            + \ {charTag(PG, "neutral")}:         Ma puoi essere un adulto curioso e studioso, come un po' già sei.
                 -> glyph_modifier_variation_management(SecondCharacter, airC)->
                 {
                     - grimoire_firstChar has grimFirstSecondChar:
@@ -359,7 +359,7 @@
                 E tutto quello che ora sai degli animali diventerà mille volte ancora di più.
 
             
-            + Ma puoi essere un adulto in cerca di uno scopo più grande, come {charNameOne}.
+            + \ {charTag(PG, "neutral")}:         Ma puoi essere un adulto in cerca di uno scopo più grande, come {charNameOne}.
                 -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
                 {
                     - cooking_with_second_char.first_theme:
@@ -367,7 +367,7 @@
                 }
                 E trovare modi inaspettati di aiutare le altre persone, gli animali, il mondo.
                     
-            + Ma puoi essere un adulto che si prende cura delle persone, come {mentorName}.
+            + \ {charTag(PG, "neutral")}:          Ma puoi essere un adulto che si prende cura delle persone, come {mentorName}.
                 -> glyph_modifier_variation_management(SecondCharacter, waterC)->
                 E rendere più facile la vita all3 altr3.
                 {
@@ -380,7 +380,7 @@
                         Ma un adulto responsabile, come tuo fratello.
                 }
 
-            + Ma puoi essere un adulto creativo, come tuo fratello.
+            + \ {charTag(PG, "neutral")}:         Ma puoi essere un adulto creativo, come tuo fratello.
                 -> glyph_modifier_variation_management(SecondCharacter, earthC)->
                 E condividere le tue storie e i tuoi esperimenti.
                 Essere felice nel farli.
@@ -417,14 +417,14 @@
                     {charTag(TheWitch, witch_state())}:   <i>Quale <b><i>epilogo</b></i> proporrà {player_name}?</i>   
             }     
      
-        + (fire)Diventa il più forte, il più coraggioso.
+        + (fire)\ {charTag(PG, "neutral")}:         Diventa il più forte, il più coraggioso.
             -> glyph_modifier_variation_management(SecondCharacter, fireC)->
             Sei un testardo, bugiardo, dispettoso.
             Queste cose unite possono renderti indistruttibile.
             E di cosa avrà mai paura un ragazzo indistruttibile?
                     
     
-        + (aether)Tutti abbiamo paura. Condividi questa paura con le altre persone.
+        + (aether)\ {charTag(PG, "neutral")}:         Tutti abbiamo paura. Condividi questa paura con le altre persone.
             -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
             Falle sentire meno sole.
             Meno sbagliate.
@@ -433,20 +433,20 @@
             Assieme.
                    
 
-        + (earth)L'opposto della paura è la curiosità.
+        + (earth)\ {charTag(PG, "neutral")}:         L'opposto della paura è la curiosità.
             -> glyph_modifier_variation_management(SecondCharacter, earthC)->
             E tu sei il ritratto della curiosità.
             Guarda le cose che arriveranno chiedendoti "Chissà se..." o "E se invece..." o "Perché accade questo?".
             E a quel punto ogni paura diventerà solo un problema da risolvere.
                    
                 
-        + (water)I tuoi genitori sono spaventati, aiutatevi a vicenda.
+        + (water)\ {charTag(PG, "neutral")}:         I tuoi genitori sono spaventati, aiutatevi a vicenda.
             -> glyph_modifier_variation_management(SecondCharacter, waterC)->
             Nessuna persona può cambiare il mondo da sola.
             Ma possiamo partire dal cambiare le cose che ci circondano, un pezzo alla volta.
                    
       
-        + (air)Con la tua intelligenza puoi rendere il mondo migliore.
+        + (air)\ {charTag(PG, "neutral")}:         Con la tua intelligenza puoi rendere il mondo migliore.
             -> glyph_modifier_variation_management(SecondCharacter, airC)->
             Puoi aiutare gli adulti a essere meno tristi.
             E gli animali a non morire.
