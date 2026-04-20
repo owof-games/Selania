@@ -17,12 +17,12 @@
     + {are_two_entities_together(DoggoNoLetters, PG)}[DoggoNoLetters]
         
         {shuffle:
-            - waarf!#speaker:Doggo #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:doggo_neutral
-            - bauuu!#speaker:Doggo #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:doggo_neutral
-            - pant pant pant.#speaker:Doggo #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:doggo_neutral
-            - bau bau!#speaker:Doggo #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:doggo_neutral
-            - arf arf!#speaker:Doggo #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:doggo_neutral
-            - awoo! #speaker:Doggo #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:doggo_neutral
+            - {charTag(Doggo, "neutral")}: waarf!
+            - {charTag(Doggo, "neutral")}: bauuu!
+            - {charTag(Doggo, "neutral")}: pant pant pant.
+            - {charTag(Doggo, "neutral")}: bau bau!
+            - {charTag(Doggo, "neutral")}: arf arf!
+            - {charTag(Doggo, "neutral")}: awoo! 
         }
     
     -> main
