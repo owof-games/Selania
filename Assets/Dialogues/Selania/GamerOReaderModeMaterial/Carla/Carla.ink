@@ -4,7 +4,7 @@
 
 
 === questions_Carla
-        {~ Che vuole ora?|Non vede che sto mangiando?|Sono in pausa.|Si rivolga all'ufficio accanto.|Manca la marca da bollo.|Serve una richiesta scritta.|Qui noi non possiamo fare niente.|Dipende dalla sede centrale.|Ci vogliono almeno tre settimane.|La pratica è in lavorazione.|Riceviamo solo su appuntamento.|Gli orari sono sul sito.|Non ci sono richieste a suo nome.|Doveva informarsi prima.|Serve l'autocertificazione.|La firma deve essere originale.|Si rivolga all'ufficio tecnico.|Oggi faccio solo accettazione.|Non mi fa andare avanti.|La connessione è caduta.|Non sono autorizzata.|Bisogna attendere i tecnici.|È cambiata la normativa.|Fino a ieri si faceva, ma ora no.|Si informi meglio.|Faccia come crede.|A volte ripeto ad alta voce le frasi da dire agli utenti, per non dimenticarmele.}#speaker:Carla#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
+       {charTag(Doggo, "bored")}:       {~ Che vuole ora?|Non vede che sto mangiando?|Sono in pausa.|Si rivolga all'ufficio accanto.|Manca la marca da bollo.|Serve una richiesta scritta.|Qui noi non possiamo fare niente.|Dipende dalla sede centrale.|Ci vogliono almeno tre settimane.|La pratica è in lavorazione.|Riceviamo solo su appuntamento.|Gli orari sono sul sito.|Non ci sono richieste a suo nome.|Doveva informarsi prima.|Serve l'autocertificazione.|La firma deve essere originale.|Si rivolga all'ufficio tecnico.|Oggi faccio solo accettazione.|Non mi fa andare avanti.|La connessione è caduta.|Non sono autorizzata.|Bisogna attendere i tecnici.|È cambiata la normativa.|Fino a ieri si faceva, ma ora no.|Si informi meglio.|Faccia come crede.|A volte ripeto ad alta voce le frasi da dire agli utenti, per non dimenticarmele.}
 
         - (top)
 
@@ -54,7 +54,7 @@
 
         //Uscita
         + \ {charTag(PG, "neutral")}:         No, ho cambiato idea.
-                {~ E doveva farmi perdere tempo così?|Non potevo fare la suora di clausura?|Già una più del solito, insomma.}#speaker:Carla#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:carla_bored
+                {charTag(Doggo, "bored")}:       {~ E doveva farmi perdere tempo così?|Non potevo fare la suora di clausura?|Già una più del solito, insomma.}
                 -> main
         -
 
