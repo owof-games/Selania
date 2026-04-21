@@ -75,7 +75,7 @@
                 - not second_char_main_storylets.eight:
                     {shuffle:
                         - {charTag(SecondCharacter, "energy")}:        {grimoire_witch has grimWitchIntro:Ho sentito che hai un'amica magica nella testa, woah!|A un anno sapevo già dire tuuuutto il pi greco!}
-                        - {charTag(SecondCharacter, "energy")}:        Una volta ho salvato un bambino da un incendio e la sua mamma mi ha fatto una torta gigante.
+                        - {charTag(SecondCharacter, "energy")}:        {horizontalS_discoveredDocs != ():Tutti quei bigliettini che trovi sulla panchina, chissà chi te li manda!|Una volta ho salvato un bambino da un incendio e la sua mamma mi ha fatto una torta gigante.}
 
                         - {charTag(SecondCharacter, "neutral")}:        Sai che so volare? Ma solo quando non mi vede nessuno. E quindi non mi credono.
 
@@ -109,9 +109,9 @@
 
                 - else:
                     {shuffle:
-                        - {charTag(SecondCharacter, "neutral")}:        {grimoire_witch has grimWitchIntro:Chissà se quando mi riscrivo posso conoscere l'amica tua e di Franco!|Deve essere bello essere una rana. Ma senza tutti quei gemelli, come Franco.}
+                        - {charTag(SecondCharacter, "neutral")}:            {grimoire_witch has grimWitchIntro:Chissà se quando mi riscrivo posso conoscere l'amica tua e di Franco!|Deve essere bello essere una rana. Ma senza tutti quei gemelli, come Franco.}
 
-                        - {charTag(SecondCharacter, "melanchonic")}:        Non prendermi in giro, ma le tartarughe mi fanno paura.
+                        - {charTag(SecondCharacter, "melanchonic")}:        {horizontalS_discoveredDocs != ():Mi piacerebbe una volta leggere quei documenti che trovi in giro.|Non prendermi in giro, ma le tartarughe mi fanno paura.}
 
                         - {charTag(SecondCharacter, "melanchonic")}:        So che l'amico di mio fratello è un fidanzato, ma papà si arrabbia quando lo dico.
 

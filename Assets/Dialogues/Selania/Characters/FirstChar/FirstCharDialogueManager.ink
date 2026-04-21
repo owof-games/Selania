@@ -62,11 +62,11 @@
             //Stiamo parlando con la PNG, ma non dopo uno storylet, per cui mettiamo del testo
             - firstChar_justTalked == false:   
                 {shuffle:
-                    - {charTag(FirstCharacter, "curious")}: Le farfalle qui giocano per ore! 
+                    - {charTag(FirstCharacter, "curious")}: {horizontalS_discoveredDocs != ():Non capisco perché qualcuno debba lasciare in giro quei bigliettini, invece di darteli direttamente.|Mi piacerebbe una volta leggere quei documenti che trovi in giro.Le farfalle qui giocano per ore!}
 
-                    - {charTag(FirstCharacter, "curious")}: No dai, ma hai visto quanto sono carini gli scoiattoli? 
+                    - {charTag(FirstCharacter, "curious")}: {grimoire_witch has grimWitchIntro:Quindi parli con una tizia nella tua testa. Che sta alla discarica. Utile.|No dai, ma hai visto quanto sono carini gli scoiattoli?}
 
-                    - {charTag(FirstCharacter, "curious")}: Con il rumore dell'acqua dello stagno ci posso fare una base niente male. 
+                    - {charTag(FirstCharacter, "curious")}: {grimoire_witch has grimWitchIntro:Quella tipa con cui parli, boh, non so perché ma mi dà fiducia. Credo di sentirla a volte. Forse anche io sono una riscrittora? Poveri noi.|Con il rumore dell'acqua dello stagno ci posso fare una base niente male.}
 
                     - {charTag(FirstCharacter, "curious")}: Il Conservatorio è un posto terrificante, {player_name}, ipercompetitivo. Ho ancora gli incubi a volte. 
 
@@ -171,17 +171,16 @@
                             {    
                         
                                 - firstChar_favouritesGifts has firstChar_giftedObject:
-                                    {charTag(FirstCharacter, "affectionate")}:      Quello che mi hai dato è qualcosa di più di un regalo: è un gesto di affinità.
-                                    Mi piace stare con te, {player_name}.
+                                    {charTag(FirstCharacter, "affectionate")}:          Quello che mi hai dato è qualcosa di più di un regalo: è un gesto di affinità.
+                                                                                        Mi piace stare con te, {player_name}.
 
                                 - firstChar_goodGifts has firstChar_giftedObject:
-                                    {charTag(FirstCharacter, "neutral")}:         I regali mi mettono sempre in imbarazzo, sai?
-                                    {charTag(FirstCharacter, "affectionate")}:      Ma il tuo dono mi ha fatto sentire ascoltata.
-
-
+                                    {charTag(FirstCharacter, "neutral")}:               I regali mi mettono sempre in imbarazzo, sai?
+                                    {charTag(FirstCharacter, "affectionate")}:          Ma il tuo dono mi ha fatto sentire ascoltata.
+                                    
                                 - else:
-                                    {charTag(FirstCharacter, "neutral")}:         Non mi aspettavo un regalo.
-                                    {charTag(FirstCharacter, "annoyed")}:       Per cui non dovrei nemmeno esserne delusa, giusto?
+                                    {charTag(FirstCharacter, "neutral")}:               Non mi aspettavo un regalo.
+                                    {charTag(FirstCharacter, "annoyed")}:               Per cui non dovrei nemmeno esserne delusa, giusto?
                             }
 
                         //Commento    
