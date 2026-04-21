@@ -1093,7 +1093,9 @@
         Ha senso?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 {
                     - are_two_entities_together(Mentor, PG):
-                        ~ change_entity_place(Mentor)  
+                        ~ change_entity_place(Mentor)
+
+                    {charTag(FirstCharacter, "curious")}:   Com'è che {mentorName} se ne è andata?    
                 }
 
             + \ {charTag(PG, "neutral")}:         Sì, ma sai già cosa vuoi evitare: fallo.

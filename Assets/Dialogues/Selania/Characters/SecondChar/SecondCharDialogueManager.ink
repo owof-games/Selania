@@ -74,21 +74,22 @@
             {
                 - not second_char_main_storylets.eight:
                     {shuffle:
-                        - {charTag(SecondCharacter, "neutral")}:        Una volta ho salvato un bambino da un incendio e la sua mamma mi ha fatto una torta gigante.
+                        - {charTag(SecondCharacter, "energy")}:        {grimoire_witch has grimWitchIntro:Ho sentito che hai un'amica magica nella testa, woah!|A un anno sapevo già dire tuuuutto il pi greco!}
+                        - {charTag(SecondCharacter, "energy")}:        Una volta ho salvato un bambino da un incendio e la sua mamma mi ha fatto una torta gigante.
 
                         - {charTag(SecondCharacter, "neutral")}:        Sai che so volare? Ma solo quando non mi vede nessuno. E quindi non mi credono.
 
-                        - {charTag(SecondCharacter, "neutral")}:        Una volta ho trovato un sasso maledetto e ora i grandi mi danno la colpa anche di tutto ma io non faccio mai niente!
+                        - {charTag(SecondCharacter, "melanchonic")}:        Una volta ho trovato un sasso maledetto e ora i grandi mi danno la colpa anche di tutto ma io non faccio mai niente!
 
                         - {charTag(SecondCharacter, "neutral")}:        I grandi non lo sanno ma tutti gli scivoli sono elefanti che dormono.
 
                         - {charTag(SecondCharacter, "neutral")}:        Mio papà è via sempre perché è un agente segreto, ma non dirlo a nessuno.
 
-                        - {charTag(SecondCharacter, "neutral")}:        Una volta ho sollevato un camion solo perché mi andava.
+                        - {charTag(SecondCharacter, "energy")}:        Una volta ho sollevato un camion solo perché mi andava.
 
                         - {charTag(SecondCharacter, "neutral")}:        So andare in macchina. Ho anche fatto le gare del mondo per adulti.
 
-                        - {charTag(SecondCharacter, "neutral")}:        Io non ho paura di nulla.
+                        - {charTag(SecondCharacter, "energy")}:        Io non ho paura di nulla.
 
                         - {charTag(SecondCharacter, "neutral")}:        Ho letto tutti i libri della scuola e la maestra ora mi usa al posto del computer.
 
@@ -102,49 +103,54 @@
 
                         - {charTag(SecondCharacter, "neutral")}:        Mamma non ci crede ma una volta ho mangiato dieci gelati e non sono stato male ma non me li dà comunque, uffa!
 
-                        - {charTag(SecondCharacter, "neutral")}:        Ho fatto un tema così bello che la maestra l'ha mandato a tutte le mamme per far vedere che sono il bambino più bravo della scuola!
+                        - {charTag(SecondCharacter, "emotional")}:       Ho fatto un tema così bello che la maestra l'ha mandato a tutte le mamme per far vedere che sono il bambino più bravo della scuola!
                     }
                     -> main
 
                 - else:
                     {shuffle:
-                        - {charTag(SecondCharacter, "neutral")}:        Non prendermi in giro, ma le tartarughe mi fanno paura.
+                        - {charTag(SecondCharacter, "neutral")}:        {grimoire_witch has grimWitchIntro:Chissà se quando mi riscrivo posso conoscere l'amica tua e di Franco!|Deve essere bello essere una rana. Ma senza tutti quei gemelli, come Franco.}
 
-                        - {charTag(SecondCharacter, "neutral")}:        So che l'amico di mio fratello è un fidanzato, ma papà si arrabbia quando lo dico.
+                        - {charTag(SecondCharacter, "melanchonic")}:        Non prendermi in giro, ma le tartarughe mi fanno paura.
 
-                        - {charTag(SecondCharacter, "neutral")}:        Papà fa anche cose gentili. E quando è felice mi porta a vedere le partite. Ma mi annoio.
+                        - {charTag(SecondCharacter, "melanchonic")}:        So che l'amico di mio fratello è un fidanzato, ma papà si arrabbia quando lo dico.
 
-                        - Nonna mi portava al Bingo, diceva che le porto fortuna.
+                        - {charTag(SecondCharacter, "neutral")}:            Papà fa anche cose gentili. E quando è felice mi porta a vedere le partite. Ma mi annoio.
 
-                        - {charTag(SecondCharacter, "neutral")}:        Sapevi che ci sono delle formiche che coltivano un fungo e se lo mangiano? Non è fighissimo?!?
+                        - {charTag(SecondCharacter, "energy")}:             Nonna mi portava al Bingo, diceva che le porto fortuna.
 
-                        - {charTag(SecondCharacter, "neutral")}:        Sai che i ghepardi sono così timidi che alcuni zoo gli danno dei cani da supporto?
+                        - {charTag(SecondCharacter, "energy")}:             Sapevi che ci sono delle formiche che coltivano un fungo e se lo mangiano? Non è fighissimo?!?
 
-                        - {charTag(SecondCharacter, "neutral")}:        Un giorno voglio vedere dal vivo il pinguino blu.
+                        - {charTag(SecondCharacter, "energy")}:             Sai che i ghepardi sono così timidi che alcuni zoo gli danno dei cani da supporto?
 
-                        - {charTag(SecondCharacter, "neutral")}:        A volte vorrei solo fare il bambino.
+                        - {charTag(SecondCharacter, "energy")}:             Un giorno voglio vedere dal vivo il pinguino blu.
 
-                        - {charTag(SecondCharacter, "neutral")}:        Mi piacerebbe trovare un opossum qui in giro, sono così buffi!
+                        - {charTag(SecondCharacter, "neutral")}:            A volte vorrei solo fare il bambino.
 
-                        - {charTag(SecondCharacter, "neutral")}:        Ai topi piace un sacco il solletico alla pancia, ma io mi arrabbio se me lo fanno.
+                        - {charTag(SecondCharacter, "energy")}:             Mi piacerebbe trovare un opossum qui in giro, sono così buffi!
 
-                        - {charTag(SecondCharacter, "neutral")}:        Una cosa fastidiosa dei grandi è che ti toccano sempre se sei piccolo, e si arrabbiano se ti arrabbi, ma non mi piace essere toccato!
+                        - {charTag(SecondCharacter, "neutral")}:            Ai topi piace un sacco il solletico alla pancia, ma io mi arrabbio se me lo fanno.
 
-                        - {charTag(SecondCharacter, "neutral")}:        Le mucche imparano un sacco di cose e sono anche felici quando lo fanno.
+                        - {charTag(SecondCharacter, "angry")}:              Una cosa fastidiosa dei grandi è che ti toccano sempre se sei piccolo, e si arrabbiano se ti arrabbi, ma non mi piace essere toccato!
 
-                        - {charTag(SecondCharacter, "neutral")}:        A volte leggo così tanto che mi dimentico del mondo e mi piace tanto tanto.
+                        - {charTag(SecondCharacter, "neutral")}:            Le mucche imparano un sacco di cose e sono anche felici quando lo fanno.
 
-                        - {charTag(SecondCharacter, "neutral")}:        C'è una lumaca che può dormire tre anni di fila. Pensa che noia!
+                        - {charTag(SecondCharacter, "energy")}:             A volte leggo così tanto che mi dimentico del mondo e mi piace tanto tanto.
 
-                        - {charTag(SecondCharacter, "neutral")}:        L'ippopotamo è super aggressivo. E ha la faccia stupida, vero?
+                        - {charTag(SecondCharacter, "neutral")}:            C'è una lumaca che può dormire tre anni di fila. Pensa che noia!
 
-                        - {charTag(SecondCharacter, "neutral")}:        Franco è convinto che {mentorName} non sia di questo posto.
+                        - {charTag(SecondCharacter, "neutral")}:            L'ippopotamo è super aggressivo. E ha la faccia stupida, vero?
+
+                        - {charTag(SecondCharacter, "neutral")}:            Franco è convinto che {mentorName} non sia di questo posto.
                             {
                                 - are_two_entities_together(Mentor, PG):
-                                    {charTag(Mentor, "neutral")}:           Franco è anche convinto che {charNameOne} abbia un nido sugli alberi.
+                                    {charTag(Mentor, "neutral")}:               Franco è anche convinto che {charNameOne} abbia un nido sugli alberi.
                                     {charTag(SecondCharacter, "neutral")}:        Sì no boh.
                                     {charTag(SecondCharacter, "melanchonic")}:    Hai ragione.
-
+                                    {
+                                        - are_two_entities_together(Franco, PG):
+                                        {charTag(Franco, "{portrait_Franco()}")}:   Se è fatta di legno per forza ha un nido! Sennò da dove lo prende il legno?
+                                    }
                             }
                     }
                     -> main
@@ -171,7 +177,7 @@
                 {charTag(SecondCharacter, "energy")}:       Vuoi chiedermi qualcosa {player_name}?
 
             - else:
-                {charTag(SecondCharacter, "neutral")}:        Sì?
+                {charTag(SecondCharacter, "neutral")}:      Sì?
         }
 
         ~ secondChar_justTalked = false
@@ -190,12 +196,11 @@
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
             + {grimoire_secondChar has secondChar_minStoryletsForRewriting && grimoire_secondChar hasnt grimSecondCharProposal && grimoire_appendices has grimRewritingMentor} \ {charTag(PG, "neutral")}:         Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
                     //Incremento le variazioni del libro della Riscrittora
-
-                            -> rewriting_proposal_second_character
+                    -> rewriting_proposal_second_character
 
         //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo
                 + {grimoire_secondChar has grimSecondCharProposal} \ {charTag(PG, "neutral")}:         Iniziamo la riscrittura?
-                        -> rewriting_proposal_second_character
+                    -> rewriting_proposal_second_character
 
 
         //Azioni legate alla costruzione della relazione

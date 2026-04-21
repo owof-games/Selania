@@ -484,8 +484,8 @@ Recap della logica.
                     {shuffle:
                         - {charTag(SecondCharacter, "angry")}:              No?
                         - {charTag(SecondCharacter, "angry")}:              ???
-                        - {charTag(SecondCharacter, "melanchonic")}:         Ah.
-                        - {charTag(SecondCharacter, "melanchonic")}:         Uff.
+                        - {charTag(SecondCharacter, "melanchonic")}:        Ah.
+                        - {charTag(SecondCharacter, "melanchonic")}:        Uff.
                     }
 
             }

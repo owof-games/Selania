@@ -133,7 +133,6 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-        ~ change_entity_place(Mentor)
         {charTag(Franco, "{portrait_Franco()}")}:       Quando ero ancora un girino, mamma Craazia mi diceva sempre:
                                                         "Tuo fratello Clodoveo ha preso la mia intelligenza."
                                                         "Tua sorella Boemonda la bellezza di tuo padre."
@@ -150,10 +149,10 @@
                                                         Il mondo è un po' una grande rana.
                                                         E allora stavo pensando: perché non racconti a {mentorName} qualcosa di strano che hai scoperto?
                                                         Sono sicuro che così si diverte, e magari si rilassa un poco.
-                {
-                    - are_two_entities_together(Mentor, PG):
-                        {charTag(Mentor, "neutral")}:                   In effetti non sarebbe male rilassarmi un poco.
-                }
+    {
+        - are_two_entities_together(Mentor, PG):
+        {charTag(Mentor, "neutral")}:                   In effetti non sarebbe male rilassarmi un poco.
+    }
 
         {charTag(Franco, "{portrait_Franco()}")}:       Io intanto vado a salutare bisnonno Ninfea.
 

@@ -189,9 +189,9 @@
 
     {
         - are_two_entities_together(SecondCharacter, PG):
-            {charTag(SecondCharacter, "energy")}:       Uh, Franco sa tantissime cose di me!
+            {charTag(SecondCharacter, "energy")}:           Uh, Franco sa tantissime cose di me!
             {charTag(SecondCharacter, "emotional")}:        Sicuro che ti aiuta be-nis-si-mo!
-            {charTag(SecondCharacter, "neutral")}:        Ma io vado a fare qualcos'altro.
+            {charTag(SecondCharacter, "neutral")}:          Ma io vado a fare qualcos'altro.
                 ~ move_entity(SecondCharacter, Forest)
     }
 

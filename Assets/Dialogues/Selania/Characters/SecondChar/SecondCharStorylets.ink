@@ -296,11 +296,12 @@
                     - else:
                     {charTag(SecondCharacter, "neutral")}:        {mentorName} è appiccicosa
                 }.
-                {charTag(SecondCharacter, "angry")}:        Vuole fare amicizia a tutti i costi.
-                {charTag(SecondCharacter, "neutral")}:        Che fatica.
+                {charTag(SecondCharacter, "angry")}:            Vuole fare amicizia a tutti i costi.
+                {charTag(SecondCharacter, "neutral")}:          Che fatica.
                         {
                             - are_two_entities_together(Mentor, PG):
                                 ~ change_entity_place(Mentor)
+                           {charTag(SecondCharacter, "neutral")}:   Uh, se ne è andata.     
                         }
                 {charTag(SecondCharacter, "melanchonic")}:    La mamma si è dimenticata di nuovo il mio compleanno.
                 Ma non mi serve anche un'altra nonna.
@@ -461,11 +462,6 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-        {
-            - are_two_entities_together(Mentor, PG):
-               ~ change_entity_place(Mentor)
-        }
-
         {charTag(SecondCharacter, "melanchonic")}:      Mi sono ricordato ora che non ho invitato nessun amico.
         {charTag(SecondCharacter, "melanchonic")}:      Mamma vuole che la festa sia solo per me.
         {charTag(SecondCharacter, "energy")}:           Ma non importa, perché questo posto è PIENO di animali!
@@ -513,7 +509,7 @@
             -> top
 
     - (top)
-        {mentorName} dice che prima le hai dato un calcio.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+        {charTag(PG, "neutral")}:       {mentorName} dice che prima le hai dato un calcio.
             
             + (disciplinato) \ {charTag(PG, "neutral")}:         Pensavo tu fossi più disciplinato, lucido. Che delusione.
                     -> glyph_modifier_variation_management(SecondCharacter, airC)->
@@ -545,33 +541,53 @@
                                                                 quando
                                                                 i grandi
                                                                 mi toccano.
-                    ~ change_entity_place(Mentor)
+                {
+                    - are_two_entities_together(Mentor, PG):
+                        ~ change_entity_place(Mentor)  
+                    {charTag(SecondCharacter, "neutral")}:      Se ne è andata.                                    
+                }                                            
+            
                     
             + (sfigati) \ {charTag(PG, "neutral")}:         Va bene difendersi, ma picchiare una così è stupido.
                     -> glyph_modifier_variation_management(SecondCharacter, fireC)->
-                {charTag(SecondCharacter, "angry")}:        Mi aveva preso il braccio!
-                E continuava a dire che sono un bambino e che i bambini qui non ci devono stare.
-                E che devo tornare a casa e io NON ci voglio tornare a casa.
-                    ~ change_entity_place(Mentor)
-                {charTag(SecondCharacter, "melanchonic")}:    Non volevo picchiarla.
-                Volevo solo spingerla via.
-                Ma mi sono arrabbiato troppo.
+                {charTag(SecondCharacter, "angry")}:            Mi aveva preso il braccio!
+                                                                E continuava a dire che sono un bambino e che i bambini qui non ci devono stare.
+                                                                E che devo tornare a casa e io NON ci voglio tornare a casa.
+                    {
+                    - are_two_entities_together(Mentor, PG):
+                        ~ change_entity_place(Mentor)  
+                    {charTag(SecondCharacter, "neutral")}:      Se ne è andata.                                    
+                    }                                            
+            
+                {charTag(SecondCharacter, "melanchonic")}:      Non volevo picchiarla.
+                                                                Volevo solo spingerla via.
+                                                                Ma mi sono arrabbiato troppo.
 
-            + (male) \ {charTag(PG, "neutral")}:         C'è rimasta male, sai?
+            + (male) \ {charTag(PG, "neutral")}:                C'è rimasta male, sai?
                     -> glyph_modifier_variation_management(SecondCharacter, waterC)->
                 {charTag(SecondCharacter, "angry")}:        E a me che mi importa?
-                Mi ha sgridato perché facevo i salti nello stagno.
-                E poi mi ha detto che i bambini qui non ci devono stare.
-                E mi ha preso per la spalla.
-                Non mi piace quando mi toccano.
-                    ~ change_entity_place(Mentor)
+                                                            Mi ha sgridato perché facevo i salti nello stagno.
+                                                            E poi mi ha detto che i bambini qui non ci devono stare.
+                                                            E mi ha preso per la spalla.
+                                                            Non mi piace quando mi toccano.
+                {
+                    - are_two_entities_together(Mentor, PG):
+                        ~ change_entity_place(Mentor)  
+                    {charTag(SecondCharacter, "neutral")}:      Se ne è andata.                                    
+                }                                            
+            
 
             + (ottenuto) \ {charTag(PG, "neutral")}:         Hai ottenuto quello che volevi?
                     -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
                 {charTag(SecondCharacter, "neutral")}:        Ha smesso di dirmi che non devo stare qui.
                                                             Che devo tornare a casa.
                                                             E ha smesso di stringermi la mia spalla.
-                                                                ~ change_entity_place(Mentor)
+                {
+                    - are_two_entities_together(Mentor, PG):
+                        ~ change_entity_place(Mentor)  
+                    {charTag(SecondCharacter, "neutral")}:      Se ne è andata.                                    
+                }                                            
+            
                                                             Non le volevo fare mica male.
                 {charTag(SecondCharacter, "angry")}:        Ma non mi piace quando i grandi mi toccano.
             -
@@ -604,7 +620,11 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-        ~ change_entity_place(Mentor)
+                {
+                    - are_two_entities_together(Mentor, PG):
+                        ~ change_entity_place(Mentor)                                    
+                }                                            
+            
 
         {charTag(SecondCharacter, "angry")}:        {mentorName} si vuole comportare come la mia nonna.
         {charTag(SecondCharacter, "emotional")}:        Ma la mia nonna non mi tratta mai come un bambino.
@@ -724,23 +744,23 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-        {charTag(SecondCharacter, "neutral")}:        Prima, con {mentorName}.
-        Mi ha fatto male perché mi ha fatto pensare a scuola.
-                {
-                        - are_two_entities_together(Mentor, PG):
-                               ~ change_entity_place(Mentor)
-    
-                } 
-        {charTag(SecondCharacter, "melanchonic")}:    E anche a scuola danno sempre la colpa a me. 
-        {charTag(SecondCharacter, "neutral")}:        Non mi piace mica tanto la scuola.
-        {charTag(SecondCharacter, "melanchonic")}:    I ragazzi più grandi mi fanno male.
-        {charTag(SecondCharacter, "neutral")}:        Ma io non piango.
-        {charTag(SecondCharacter, "angry")}:        Non sono una femmina.
-        {charTag(SecondCharacter, "neutral")}:        E sono più forte di loro.
-        {charTag(SecondCharacter, "melanchonic")}:    Ma non coi pugni.
-        {charTag(SecondCharacter, "neutral")}:        E le ragazze della mia età sono strane.
-        {charTag(SecondCharacter, "melanchonic")}:    E mi dicono che. 
-        {charTag(SecondCharacter, "neutral")}:        No, non te lo dico mica.
+        {charTag(SecondCharacter, "neutral")}:          Prima, con {mentorName}.
+                                                        Mi ha fatto male perché mi ha fatto pensare a scuola.
+            {
+                - are_two_entities_together(Mentor, PG):
+                        ~ change_entity_place(Mentor)
+                                                        Ma è andata via!
+            } 
+        {charTag(SecondCharacter, "melanchonic")}:      Anche a scuola danno sempre la colpa a me. 
+        {charTag(SecondCharacter, "neutral")}:          Non mi piace mica tanto la scuola.
+        {charTag(SecondCharacter, "melanchonic")}:      I ragazzi più grandi mi fanno male.
+        {charTag(SecondCharacter, "neutral")}:          Ma io non piango.
+        {charTag(SecondCharacter, "angry")}:            Non sono una femmina.
+        {charTag(SecondCharacter, "neutral")}:          E sono più forte di loro.
+        {charTag(SecondCharacter, "melanchonic")}:      Ma non coi pugni.
+        {charTag(SecondCharacter, "neutral")}:          E le ragazze della mia età sono strane.
+        {charTag(SecondCharacter, "melanchonic")}:      E mi dicono che. 
+        {charTag(SecondCharacter, "neutral")}:          No, non te lo dico mica.
                 {
                     - are_two_entities_together(FirstCharacter, PG):
                         Strane, non lo so. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
@@ -815,10 +835,10 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
             {
-                - grimoire_fifthChar hasnt grimSecondCharMentorPeace:
-                ~ change_entity_place(Mentor)
+                - grimoire_fifthChar hasnt grimSecondCharMentorPeace && are_two_entities_together(Mentor, PG):
+                    ~ change_entity_place(Mentor)
             }     
-        
+ 
         {charTag(SecondCharacter, "energy")}:       Franco prima mi ha detto che tu scrivi storie.
             {
                 - are_two_entities_together(Franco, PG):
@@ -927,28 +947,29 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-            {
-                - grimoire_fifthChar hasnt grimSecondCharMentorPeace:
+        {
+            - grimoire_fifthChar hasnt grimSecondCharMentorPeace && are_two_entities_together(Mentor, PG):
                 ~ change_entity_place(Mentor)
-            }     
+            {charTag(SecondCharacter, "neutral")}:      Ogni volta che sto per parlare, {mentorName}  se ne va.
+        }     
         
-        {charTag(SecondCharacter, "energy")}:       Sai che mio fratello è campione di Karate?
-        E ha una macchina enorme gialla che fa arrabbiare papà.
-        E hai i muscoli che...
-        {charTag(SecondCharacter, "neutral")}:        Bugia.
-        {charTag(SecondCharacter, "melanchonic")}:    Scusa.
-        {charTag(SecondCharacter, "neutral")}:        Non è proprio campione in realtà.
-        {charTag(SecondCharacter, "energy")}:       Però per me è bravissimo.
-        {charTag(SecondCharacter, "neutral")}:        E la macchina è di papà.
-        {charTag(SecondCharacter, "melanchonic")}:    Che si arrabbia perché prima era nera, e lui l'ha colorata di giallo.
+        {charTag(SecondCharacter, "energy")}:           Sai che mio fratello è campione di Karate?
+                                                        E ha una macchina enorme gialla che fa arrabbiare papà.
+                                                        E hai i muscoli che...
+        {charTag(SecondCharacter, "neutral")}:          Bugia.
+        {charTag(SecondCharacter, "melanchonic")}:      Scusa.
+        {charTag(SecondCharacter, "neutral")}:          Non è proprio campione in realtà.
+        {charTag(SecondCharacter, "energy")}:           Però per me è bravissimo.
+        {charTag(SecondCharacter, "neutral")}:          E la macchina è di papà.
+        {charTag(SecondCharacter, "melanchonic")}:      Che si arrabbia perché prima era nera, e lui l'ha colorata di giallo.
         {charTag(SecondCharacter, "emotional")}:        Mio fratello è super però.
-        {charTag(SecondCharacter, "neutral")}:        Lavora in una officina e nel tempo libero fa delle statue col saldatore e i pezzi rotti delle macchine.
-        E vive in una casa piccola piccola assieme al suo amico.
-        {charTag(SecondCharacter, "melanchonic")}:    Viene a trovarci quando non c'è papà perché non si piacciono.
-        {charTag(SecondCharacter, "neutral")}:        Ma se papà mi fa male allora lo cerca e gli urla addosso tantissime cose.
+        {charTag(SecondCharacter, "neutral")}:          Lavora in una officina e nel tempo libero fa delle statue col saldatore e i pezzi rotti delle macchine.
+                                                        E vive in una casa piccola piccola assieme al suo amico.
+        {charTag(SecondCharacter, "melanchonic")}:      Viene a trovarci quando non c'è papà perché non si piacciono.
+        {charTag(SecondCharacter, "neutral")}:          Ma se papà mi fa male allora lo cerca e gli urla addosso tantissime cose.
         {charTag(SecondCharacter, "emotional")}:        Mi ha promesso che mi porta a pescare una volta.
-        {charTag(SecondCharacter, "neutral")}:        Senza dirlo a mamma perché lei ha paura perché non so nuotare.
-        Ma lui sa fare tutto.
+        {charTag(SecondCharacter, "neutral")}:          Senza dirlo a mamma perché lei ha paura perché non so nuotare.
+                                                        Ma lui sa fare tutto.
                 {
                     - are_two_entities_together(FirstCharacter, PG): 
                         Tuo fratello mi ricorda un po' Talco.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
@@ -1027,10 +1048,10 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-            {
-                - grimoire_fifthChar hasnt grimSecondCharMentorPeace:
+        {
+            - grimoire_fifthChar hasnt grimSecondCharMentorPeace && are_two_entities_together(Mentor, PG):
                 ~ change_entity_place(Mentor)
-            }     
+        }      
         
         {charTag(SecondCharacter, "energy")}:       Tu hai sempre voluto fare {player_pronouns has him: il riscrittore|{player_pronouns has her: la riscrittora|lə riscrittorə}} come lavoro?
         
@@ -1210,28 +1231,30 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-            {
-                - grimoire_fifthChar hasnt grimSecondCharMentorPeace:
+        {
+            - grimoire_fifthChar hasnt grimSecondCharMentorPeace && are_two_entities_together(Mentor, PG):
                 ~ change_entity_place(Mentor)
-            }     
+            {charTag(SecondCharacter, "melanchonic")}:     {mentorName} se ne è andata.
+                                                            Non mi vuole mica conoscere mi sa.
+        }     
         
-        {charTag(SecondCharacter, "melanchonic")}:    Stavo ripensando a un bambino.
-        Uno di seconda.
-        L'ho picchiato perché mi andava.
-        {charTag(SecondCharacter, "angry")}:        Ero DAVVERO arrabbiato quel giorno.
-        {charTag(SecondCharacter, "melanchonic")}:    E lui ha pianto e mi sono arrabbiato ancora di più.
-        {charTag(SecondCharacter, "neutral")}:        La maestra di matematica mi ha messo in castigo.
-        {charTag(SecondCharacter, "melanchonic")}:    Ora quando vedo il bambino mi sento in colpa.
-        Ho provato a chiedergli scusa ma lui scappa.
-        E sua sorella una volta mi ha lanciato una scarpa in faccia.
-        {charTag(SecondCharacter, "neutral")}:        Mio fratello dice che succede.
-        Che tra bambini ci si picchia.
-        E anche tra grandi.
-        {charTag(SecondCharacter, "angry")}:        Penso che i grandi facciano schifo.
-        {charTag(SecondCharacter, "melanchonic")}:    Quando papà mi picchia dice che è colpa mia.
-        Ma a me non piace farmi picchiare.
-        O picchiare.
-        Ma se sono arrabbiato non so cosa fare.
+        {charTag(SecondCharacter, "melanchonic")}:          Stavo ripensando a un bambino.
+                                                            Uno di seconda.
+                                                            L'ho picchiato perché mi andava.
+        {charTag(SecondCharacter, "angry")}:                Ero <b>DAVVERO</b> arrabbiato quel giorno.
+        {charTag(SecondCharacter, "melanchonic")}:          E lui ha pianto e mi sono arrabbiato ancora di più.
+        {charTag(SecondCharacter, "neutral")}:              La maestra di matematica mi ha messo in castigo.
+        {charTag(SecondCharacter, "melanchonic")}:          Ora quando vedo il bambino mi sento in colpa.
+                                                            Ho provato a chiedergli scusa ma lui scappa.
+                                                            E sua sorella una volta mi ha lanciato una scarpa in faccia.
+        {charTag(SecondCharacter, "neutral")}:              Mio fratello dice che succede.
+                                                            Che tra bambini ci si picchia.
+                                                            E anche tra grandi.
+        {charTag(SecondCharacter, "angry")}:                Penso che i grandi facciano schifo.
+        {charTag(SecondCharacter, "melanchonic")}:          Quando papà mi picchia dice che è colpa mia.
+                                                            Ma a me non piace farmi picchiare.
+                                                            O picchiare.
+                                                            Ma se sono arrabbiato non so cosa fare.
             {
                 - are_two_entities_together(FirstCharacter, PG):
                     Mai provato a suonare la batteria?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_affectionate
@@ -1301,7 +1324,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
             {
-                - grimoire_fifthChar hasnt grimSecondCharMentorPeace:
+                - grimoire_fifthChar hasnt grimSecondCharMentorPeace && are_two_entities_together(Mentor, PG):
                 ~ change_entity_place(Mentor)
             }     
         
@@ -1405,8 +1428,9 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
             {
-                - grimoire_fifthChar hasnt grimSecondCharMentorPeace:
+                - grimoire_fifthChar hasnt grimSecondCharMentorPeace && are_two_entities_together(Mentor, PG):
                 ~ change_entity_place(Mentor)
+                {charTag(SecondCharacter, "neutral")}:  Ti ho quasi detto tutto di me, ma {mentorName} continua a evitarmi.
             }     
         
         {charTag(SecondCharacter, "emotional")}:        Mi piace molto passare il tempo in biblioteca.
