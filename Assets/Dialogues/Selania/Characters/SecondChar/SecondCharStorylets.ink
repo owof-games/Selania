@@ -288,7 +288,7 @@
                             - are_two_entities_together(FirstCharacter, PG):
                                 Dio che fatica gli uomini.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                                 Anche quando hanno sei anni.
-                                Non sono <i>così</i> piccolo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)} #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+                                {charTag(SecondCharacter, "angry")}:  Non sono <i>così</i> piccolo!
                         }
                 {
                     - not tutorial_mentorTalkingChoiceRelationship:

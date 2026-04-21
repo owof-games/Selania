@@ -192,31 +192,6 @@ LIST nest_speakersForEwWordTag = Influenced, Other
 
 
 
-=== function secondChar_tag
-{
-    - ! second_char_main_storylets.one.nameSecond:
-        ~ return "???"
-        
-    - secondChar_ActualName == Riccio:
-	    ~ return "Riccio"
-	
-	- secondChar_ActualName == Grizzly:
-	    ~ return "Grizzly"
-	    
-    - secondChar_ActualName == Lupo:
-	    ~ return "Lupo"
-	    
-    - secondChar_ActualName == Delfino:
-	    ~ return "Delfino"
-	    
-    - secondChar_ActualName == Capibara:
-	    ~ return "Capibara"
-	    
-    - secondChar_ActualName == Corvo:
-	    ~ return "Corvo"
-	
-}
-
 === function thirdChar_tag
 {
 

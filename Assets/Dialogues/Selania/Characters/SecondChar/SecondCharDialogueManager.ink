@@ -179,7 +179,7 @@
         //Azioni legate alla riscrittura
             //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
             + {grimoire_secondChar has secondChar_minStoryletsForRewriting && grimoire_appendices hasnt grimRewritingMentor} \ {charTag(PG, "neutral")}:         Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
-                    {charTag(SecondCharacter, "neutral")}:        Mi sa che {mentorName} vuole dirti qualcosa prima.
+                    {charTag(SecondCharacter, "neutral")}:          Mi sa che {mentorName} vuole dirti qualcosa prima.
                         {
                             - are_two_entities_together(Mentor,PG):
                             {charTag(Mentor, "neutral")}:           Sì {player_name}, parliamo un attimo!
@@ -219,18 +219,18 @@
                                 {    
                             
                                    - secondChar_favouritesGifts has secondChar_giftedObject:
-                                        {charTag(SecondCharacter, "energy")}:       Mi hai regalato una cosa STRA-TOS-FE-RI-CA!
-                                        Meglio delle action figures!
+                                        {charTag(SecondCharacter, "energy")}:           Mi hai regalato una cosa STRA-TOS-FE-RI-CA!
+                                                                                        Meglio delle action figures!
                                         {charTag(SecondCharacter, "emotional")}:        Grazie grazie grazie {player_name}!
 
                                     - secondChar_goodGifts has secondChar_giftedObject:
-                                        {charTag(SecondCharacter, "neutral")}:        Grazie.
-                                        È un regalo carino.
+                                        {charTag(SecondCharacter, "neutral")}:          Grazie.
+                                                                                        È un regalo carino.
                                         
                                     - else:
-                                        {charTag(SecondCharacter, "neutral")}:        Sì. No. Boh.
-                                        Grazie.
-                                        Magari poi lo guardo.
+                                        {charTag(SecondCharacter, "neutral")}:          Sì. No. Boh.
+                                                                                        Grazie.
+                                                                                        Magari poi lo guardo.
                                 }
 
                             //Commento    

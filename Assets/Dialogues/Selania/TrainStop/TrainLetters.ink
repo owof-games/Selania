@@ -321,7 +321,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)    
-    Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}.#speaker:{secondChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_secondChar
+        {charTag(Documents, "writer_secondChar")}:      Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}.
         Cioè a te.
         Anche se non ho mica capito come te la mando la lettera.
         Ma come sta la rana?
@@ -406,7 +406,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-    Che strano.#speaker:{secondChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_secondChar
+    {charTag(Documents, "writer_secondChar")}:      Che strano.
         Ho lasciato l'altra lettera sul comodino di notte.
         E poi è sparita.
         Non so mica se ti è arrivata.
@@ -496,7 +496,7 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    Ciao {player_name}.#speaker:{secondChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_secondChar
+    {charTag(Documents, "writer_secondChar")}:      Ciao {player_name}.
                 
                 {
      

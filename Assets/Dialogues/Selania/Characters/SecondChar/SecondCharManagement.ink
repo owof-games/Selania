@@ -233,34 +233,34 @@
             - secondChar_InkLevel == ink_empty:
                     {charTag(SecondCharacter, "angry")}:        Che secondo me mi tratti come un bambino.
                     {charTag(SecondCharacter, "neutral")}:        Tutte le cose che dici cambiano, sono disordinate.
-                    Come i camaleonti che sono verdi sulle foglie e bianchi sul muro.
+                                                                    Come i camaleonti che sono verdi sulle foglie e bianchi sul muro.
                     {charTag(SecondCharacter, "melanchonic")}:    Non mi piace mica come cosa.
-                    Mi sa che mi hai ascoltato, ma non mi hai mica capito!
+                                                                Mi sa che mi hai ascoltato, ma non mi hai mica capito!
             
             
             - secondChar_InkLevel == ink_low:
-                    {charTag(SecondCharacter, "melanchonic")}:    Che io non ho mica capito cosa pensi.
-                    Sei come quando guardo nel terrario e non capisco se c'è l'insetto stecco o sono solo rami.
-                    Magari c'hai provato a capirmi ma boh, mica ci sei {player_pronouns has him:riuscito|{player_pronouns has her:riuscita|riuscitə}}.
+                    {charTag(SecondCharacter, "melanchonic")}:      Che io non ho mica capito cosa pensi.
+                                                                    Sei come quando guardo nel terrario e non capisco se c'è l'insetto stecco o sono solo rami.
+                                                                    Magari c'hai provato a capirmi ma boh, mica ci sei {player_pronouns has him:riuscito|{player_pronouns has her:riuscita|riuscitə}}.
             
             - secondChar_InkLevel == ink_normal:
-                    {charTag(SecondCharacter, "melanchonic")}:    Che si vede che sei grande.
-                    Che a volte non è male, a volte però mi agita.
-                    Mi chiedo sei mi ascolti davvero.
-                    Però per lo meno ti sei {player_pronouns has him:impegnato|{player_pronouns has her:impegnata|impegnatə}}.
+                    {charTag(SecondCharacter, "melanchonic")}:      Che si vede che sei grande.
+                                                                    Che a volte non è male, a volte però mi agita.
+                                                                    Mi chiedo sei mi ascolti davvero.
+                                                                    Però per lo meno ti sei {player_pronouns has him:impegnato|{player_pronouns has her:impegnata|impegnatə}}.
             
             - secondChar_InkLevel == ink_medium:
-                    {charTag(SecondCharacter, "neutral")}:        Che un po' mi fido
-                    Secondo me non dici <i>sempre sempre sempre</i> le cose in modo preciso.
-                    Sembri un po' un gatto.
-                    Ma mi fido.
+                    {charTag(SecondCharacter, "neutral")}:          Che un po' mi fido
+                                                                    Secondo me non dici <i>sempre sempre sempre</i> le cose in modo preciso.
+                                                                    Sembri un po' un gatto.
+                                                                    Ma mi fido.
             
             - secondChar_InkLevel == ink_high:
                     {charTag(SecondCharacter, "emotional")}:        Che non sei mica male per essere grande.
-                    {charTag(SecondCharacter, "neutral")}:        Dici sempre le cose allo stesso modo.
-                    Come un cane che scodinzola se è felice ma abbaia se arrabbiato.
+                    {charTag(SecondCharacter, "neutral")}:          Dici sempre le cose allo stesso modo.
+                                                                    Come un cane che scodinzola se è felice ma abbaia se arrabbiato.
                     {charTag(SecondCharacter, "emotional")}:        E questo mi fa stare al sicuro.
-                    Mi dice che mi hai ascoltato, ed è una cosa bella.
+                                                                    Mi dice che mi hai ascoltato, ed è una cosa bella.
         }
     
 
