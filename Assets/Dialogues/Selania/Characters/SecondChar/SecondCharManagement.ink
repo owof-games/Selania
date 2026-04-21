@@ -224,12 +224,12 @@
                                                                 Di nuovo.     
         }
 
-        Ecco... #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        {charTag(SecondCharacter, "neutral")}:        Ecco...
     
         {
             - secondChar_InkLevel == ink_empty:
                     Che secondo me mi tratti come un bambino.#speaker:{secondChar_tag()} #portrait:riccio_angry
-                    Tutte le cose che dici cambiano, sono disordinate.#speaker:{secondChar_tag()} #portrait:riccio_neutral
+                    {charTag(SecondCharacter, "neutral")}:        Tutte le cose che dici cambiano, sono disordinate.
                     Come i camaleonti che sono verdi sulle foglie e bianchi sul muro.
                     Non mi piace mica come cosa.#speaker:{secondChar_tag()} #portrait:riccio_melanchonic
                     Mi sa che mi hai ascoltato, ma non mi hai mica capito!
@@ -247,16 +247,16 @@
                     Però per lo meno ti sei {player_pronouns has him:impegnato|{player_pronouns has her:impegnata|impegnatə}}.
             
             - secondChar_InkLevel == ink_medium:
-                    Che un po' mi fido#speaker:{secondChar_tag()} #portrait:riccio_neutral
+                    {charTag(SecondCharacter, "neutral")}:        Che un po' mi fido
                     Secondo me non dici <i>sempre sempre sempre</i> le cose in modo preciso.
                     Sembri un po' un gatto.
                     Ma mi fido.
             
             - secondChar_InkLevel == ink_high:
-                    Che non sei mica male per essere grande.#speaker:{secondChar_tag()} #portrait:riccio_emotional
-                    Dici sempre le cose allo stesso modo.#speaker:{secondChar_tag()} #portrait:riccio_neutral
+                    {charTag(SecondCharacter, "emotional")}:        Che non sei mica male per essere grande.
+                    {charTag(SecondCharacter, "neutral")}:        Dici sempre le cose allo stesso modo.
                     Come un cane che scodinzola se è felice ma abbaia se arrabbiato.
-                    E questo mi fa stare al sicuro.#speaker:{secondChar_tag()} #portrait:riccio_emotional
+                    {charTag(SecondCharacter, "emotional")}:        E questo mi fa stare al sicuro.
                     Mi dice che mi hai ascoltato, ed è una cosa bella.
         }
     

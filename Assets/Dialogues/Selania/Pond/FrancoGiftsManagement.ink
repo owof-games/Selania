@@ -190,8 +190,8 @@
     {
         - are_two_entities_together(SecondCharacter, PG):
             Uh, Franco sa tantissime cose di me!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
-            Sicuro che ti aiuta be-nis-si-mo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
-            Ma io vado a fare qualcos'altro.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+            {charTag(SecondCharacter, "emotional")}:        Sicuro che ti aiuta be-nis-si-mo!
+            {charTag(SecondCharacter, "neutral")}:        Ma io vado a fare qualcos'altro.
                 ~ move_entity(SecondCharacter, Forest)
     }
 

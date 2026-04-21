@@ -61,75 +61,75 @@
             {
                 - not second_char_main_storylets.eight:
                     {shuffle:
-                        - Una volta ho salvato un bambino da un incendio e la sua mamma mi ha fatto una torta gigante.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        Una volta ho salvato un bambino da un incendio e la sua mamma mi ha fatto una torta gigante.
 
-                        - Sai che so volare? Ma solo quando non mi vede nessuno. E quindi non mi credono.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        Sai che so volare? Ma solo quando non mi vede nessuno. E quindi non mi credono.
 
-                        - Una volta ho trovato un sasso maledetto e ora i grandi mi danno la colpa anche di tutto ma io non faccio mai niente!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        Una volta ho trovato un sasso maledetto e ora i grandi mi danno la colpa anche di tutto ma io non faccio mai niente!
 
-                        - I grandi non lo sanno ma tutti gli scivoli sono elefanti che dormono.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        I grandi non lo sanno ma tutti gli scivoli sono elefanti che dormono.
 
-                        - Mio papà è via sempre perché è un agente segreto, ma non dirlo a nessuno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        Mio papà è via sempre perché è un agente segreto, ma non dirlo a nessuno.
 
-                        - Una volta ho sollevato un camion solo perché mi andava.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        Una volta ho sollevato un camion solo perché mi andava.
 
-                        - So andare in macchina. Ho anche fatto le gare del mondo per adulti.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        So andare in macchina. Ho anche fatto le gare del mondo per adulti.
 
-                        - Io non ho paura di nulla.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        Io non ho paura di nulla.
 
-                        - Ho letto tutti i libri della scuola e la maestra ora mi usa al posto del computer.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        Ho letto tutti i libri della scuola e la maestra ora mi usa al posto del computer.
 
-                        - Percy Jackson racconta la mia storia. Ma papà non vuole farlo sapere e quindi fingo di essere un bambino normale.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        Percy Jackson racconta la mia storia. Ma papà non vuole farlo sapere e quindi fingo di essere un bambino normale.
 
-                        - So già fare le equazioni, sono più bravo della maestra.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        So già fare le equazioni, sono più bravo della maestra.
 
-                        - A scuola una volta ho fatto un salto altissimo e sono arrivato sul tetto.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        A scuola una volta ho fatto un salto altissimo e sono arrivato sul tetto.
 
-                        - Una volta ho trovato un dinosauro scavando nel parco giochi, ma poi i cani si sono rubati gli ossi!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        Una volta ho trovato un dinosauro scavando nel parco giochi, ma poi i cani si sono rubati gli ossi!
 
-                        - Mamma non ci crede ma una volta ho mangiato dieci gelati e non sono stato male ma non me li dà comunque, uffa!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        Mamma non ci crede ma una volta ho mangiato dieci gelati e non sono stato male ma non me li dà comunque, uffa!
 
-                        - Ho fatto un tema così bello che la maestra l'ha mandato a tutte le mamme per far vedere che sono il bambino più bravo della scuola!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        Ho fatto un tema così bello che la maestra l'ha mandato a tutte le mamme per far vedere che sono il bambino più bravo della scuola!
                     }
                     -> main
 
                 - else:
                     {shuffle:
-                        - Non prendermi in giro, ma le tartarughe mi fanno paura.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        Non prendermi in giro, ma le tartarughe mi fanno paura.
 
-                        - So che l'amico di mio fratello è un fidanzato, ma papà si arrabbia quando lo dico.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        So che l'amico di mio fratello è un fidanzato, ma papà si arrabbia quando lo dico.
 
-                        - Papà fa anche cose gentili. E quando è felice mi porta a vedere le partite. Ma mi annoio.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        Papà fa anche cose gentili. E quando è felice mi porta a vedere le partite. Ma mi annoio.
 
-                        - Nonna mi portava al Bingo, diceva che le porto fortuna.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - Nonna mi portava al Bingo, diceva che le porto fortuna.
 
-                        - Sapevi che ci sono delle formiche che coltivano un fungo e se lo mangiano? Non è fighissimo?!?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        Sapevi che ci sono delle formiche che coltivano un fungo e se lo mangiano? Non è fighissimo?!?
 
-                        - Sai che i ghepardi sono così timidi che alcuni zoo gli danno dei cani da supporto?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        Sai che i ghepardi sono così timidi che alcuni zoo gli danno dei cani da supporto?
 
-                        - Un giorno voglio vedere dal vivo il pinguino blu.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        Un giorno voglio vedere dal vivo il pinguino blu.
 
-                        - A volte vorrei solo fare il bambino.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        A volte vorrei solo fare il bambino.
 
-                        - Mi piacerebbe trovare un opossum qui in giro, sono così buffi!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        Mi piacerebbe trovare un opossum qui in giro, sono così buffi!
 
-                        - Ai topi piace un sacco il solletico alla pancia, ma io mi arrabbio se me lo fanno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        Ai topi piace un sacco il solletico alla pancia, ma io mi arrabbio se me lo fanno.
 
-                        - Una cosa fastidiosa dei grandi è che ti toccano sempre se sei piccolo, e si arrabbiano se ti arrabbi, ma non mi piace essere toccato!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        Una cosa fastidiosa dei grandi è che ti toccano sempre se sei piccolo, e si arrabbiano se ti arrabbi, ma non mi piace essere toccato!
 
-                        - Le mucche imparano un sacco di cose e sono anche felici quando lo fanno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        Le mucche imparano un sacco di cose e sono anche felici quando lo fanno.
 
-                        - A volte leggo così tanto che mi dimentico del mondo e mi piace tanto tanto.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        A volte leggo così tanto che mi dimentico del mondo e mi piace tanto tanto.
 
-                        - C'è una lumaca che può dormire tre anni di fila. Pensa che noia!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        C'è una lumaca che può dormire tre anni di fila. Pensa che noia!
 
-                        - L'ippopotamo è super aggressivo. E ha la faccia stupida, vero?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                        - {charTag(SecondCharacter, "neutral")}:        L'ippopotamo è super aggressivo. E ha la faccia stupida, vero?
 
-                        - Franco è convinto che {mentorName} non sia di questo posto.
+                        - {charTag(SecondCharacter, "neutral")}:        Franco è convinto che {mentorName} non sia di questo posto.
                             {
                                 - are_two_entities_together(Mentor, PG):
                                     {charTag(Mentor, "neutral")}:           Franco è anche convinto che {charNameOne} abbia un nido sugli alberi.
-                                    Sì no boh.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                                    {charTag(SecondCharacter, "neutral")}:        Sì no boh.
                                     Hai ragione.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
 
                             }
@@ -156,7 +156,7 @@
                 Vuoi chiedermi qualcosa {player_name}? #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_energy
 
             - else:
-                Sì? #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral  
+                {charTag(SecondCharacter, "neutral")}:        Sì?
         }
 
         ~ secondChar_justTalked = false
@@ -164,7 +164,7 @@
         //Azioni legate alla riscrittura
             //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
             + {grimoire_secondChar has secondChar_minStoryletsForRewriting && grimoire_appendices hasnt grimRewritingMentor} \ {charTag(PG, "neutral")}:         Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
-                    Mi sa che {mentorName} vuole dirti qualcosa prima.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+                    {charTag(SecondCharacter, "neutral")}:        Mi sa che {mentorName} vuole dirti qualcosa prima.
                         {
                             - are_two_entities_together(Mentor,PG):
                             {charTag(Mentor, "neutral")}:           Sì {player_name}, parliamo un attimo!
@@ -206,14 +206,14 @@
                                    - secondChar_favouritesGifts has secondChar_giftedObject:
                                         Mi hai regalato una cosa STRA-TOS-FE-RI-CA!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                                         Meglio delle action figures!
-                                        Grazie grazie grazie {player_name}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
+                                        {charTag(SecondCharacter, "emotional")}:        Grazie grazie grazie {player_name}!
 
                                     - secondChar_goodGifts has secondChar_giftedObject:
-                                        Grazie.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                                        {charTag(SecondCharacter, "neutral")}:        Grazie.
                                         È un regalo carino.
                                         
                                     - else:
-                                        Sì. No. Boh.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                                        {charTag(SecondCharacter, "neutral")}:        Sì. No. Boh.
                                         Grazie.
                                         Magari poi lo guardo.
                                 }
@@ -236,7 +236,7 @@
                             ->main
 
                     - kitchen_firstCharCookingTogetherInvite:
-                        C'è già {charNameOne} che ti sta aspettando. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:riccio_neutral
+                        {charTag(SecondCharacter, "neutral")}:        C'è già {charNameOne} che ti sta aspettando.
                             ->main
 
                     - kitchen_thirdCharIsCooking:
@@ -244,7 +244,7 @@
                             ->main
 
                     - kitchen_thirdCharCookingTogetherInvite:
-                        C'è già {charNameThree} che ti sta aspettando. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:riccio_neutral
+                        {charTag(SecondCharacter, "neutral")}:        C'è già {charNameThree} che ti sta aspettando.
                             ->main       
 
                     - contentsKitchen has Franco:
@@ -257,7 +257,7 @@
 
                     - kitchen_secondCharCookingTogetherNumberInvite > 0:
                         {stopping:
-                            - Prima ti ho aspettato TANTISSIMO! Vado.  #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:riccio_neutral
+                            - {charTag(SecondCharacter, "neutral")}:        Prima ti ho aspettato TANTISSIMO! Vado.
 
                             - Ancora? E poi non ti vedo? Vado. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:riccio_angry
 
@@ -272,7 +272,7 @@
                                 ->main
 
                     - else:
-                        Yeah! Ci vediamo in cucina! #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:riccio_emotional
+                        {charTag(SecondCharacter, "emotional")}:        Yeah! Ci vediamo in cucina!
                             ~ move_entity(SecondCharacter, Kitchen)
                             ~ kitchen_secondCharCookingTogetherInvite = true
                             ~ kitchen_secondCharCookingTogetherNumberInvite ++

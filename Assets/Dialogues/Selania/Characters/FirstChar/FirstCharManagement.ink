@@ -188,7 +188,7 @@
         {
             -   are_two_entities_together(SecondCharacter, PG):
                 {charNameTwo}, potresti lasciarci un po' da sol3?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-                Certissimamente! A dopo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
+                {charTag(SecondCharacter, "emotional")}:        Certissimamente! A dopo!
                     ~ change_entity_place(SecondCharacter)
         }
         {

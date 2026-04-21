@@ -307,11 +307,11 @@
                                                     E che le piace giocare?
                                                     {
                                                         - are_two_entities_together(SecondCharacter, PG):
-                                                            IM-POS-SI-BI-LE!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                                                            {charTag(SecondCharacter, "neutral")}:        IM-POS-SI-BI-LE!
                                                             {
                                                                 - are_two_entities_together(Mentor, PG):
                                                                     {charTag(Mentor, "hurry")}:             Guarda che sono bravissima a burraco!
-                                                                    Ma è una roba da vecchi!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                                                                    {charTag(SecondCharacter, "neutral")}:        Ma è una roba da vecchi!
                                                             }
                                                     }
         {charTag(Franco, "{portrait_Franco()}")}:       E che ha una tasca sotto l'ascella dove conserva le pietre che usa per rompere i gusci?
@@ -521,7 +521,7 @@
                                                     Però poteva andare peggio, per fortuna ci ha aiutato la nostra amica comune, quella della discarica.
                                                     {
                                                         - are_two_entities_together(SecondCharacter, PG):
-                                                            C'è qualcuno nella discarica?!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
+                                                            {charTag(SecondCharacter, "emotional")}:        C'è qualcuno nella discarica?!
                                                                 
                                                     }
 

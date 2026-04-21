@@ -147,7 +147,7 @@
         {charTag(Mentor, "hurry")}:             Ma ora è il momento di svuotare lo stagno dalle sue cose più schifose.
             {
                 - are_two_entities_together(SecondCharacter, PG): 
-                    Non togliere i girini però!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                    {charTag(SecondCharacter, "neutral")}:        Non togliere i girini però!
             } 
         {charTag(Mentor, "neutral")}:           Prega per me, {player_name}.
 
