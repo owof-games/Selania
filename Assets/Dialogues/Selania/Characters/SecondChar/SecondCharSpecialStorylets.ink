@@ -91,8 +91,8 @@
                                                 Ed è bellissima!  
         {
             - are_two_entities_together(FirstCharacter, PG):
-                Tu sei un bambino davvero strano.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                Molto molto strano.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate   
+                {charTag(FirstCharacter, "neutral")}:         Tu sei un bambino davvero strano.
+                {charTag(FirstCharacter, "affectionate")}:      Molto molto strano.   
         } 
     {charTag(SecondCharacter, "neutral")}:          Ci sono anche i librogame, credo.
                                                     E ho già letto due racconti.

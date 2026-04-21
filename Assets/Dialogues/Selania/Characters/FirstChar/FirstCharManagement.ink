@@ -187,7 +187,7 @@
         }
         {
             -   are_two_entities_together(SecondCharacter, PG):
-                {charNameTwo}, potresti lasciarci un po' da sol3?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+                {charTag(FirstCharacter, "affectionate")}:      {charNameTwo}, potresti lasciarci un po' da sol3?
                 {charTag(SecondCharacter, "emotional")}:        Certissimamente! A dopo!
                     ~ change_entity_place(SecondCharacter)
         }
@@ -211,7 +211,7 @@
                 Ha senso? 
             
             - firstChar_InkLevel == ink_normal:
-                Ci sono stati beni momenti tra noi, sai?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                {charTag(FirstCharacter, "neutral")}:         Ci sono stati beni momenti tra noi, sai?
                 Ma anche momenti no, in cui non mi sono sentita capita.
                 Non è un reato.
                 Ma, insomma, non riesco a fidarmi fino in fondo.
@@ -219,13 +219,13 @@
             
             
             - firstChar_InkLevel == ink_medium:
-                E {player_name}: non pensavo avrei trovato una persona amica, qui.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+                {charTag(FirstCharacter, "affectionate")}:      E {player_name}: non pensavo avrei trovato una persona amica, qui.
                 Mi hai reso l'assenza di Talco, di Ennio, di Valeria moooolto più sopportabile.
                 Grazie.
             
             
             - firstChar_InkLevel == ink_high:
-                E mi chiedevo: ma che ci hanno separat3 alla nascita?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+                {charTag(FirstCharacter, "affectionate")}:      E mi chiedevo: ma che ci hanno separat3 alla nascita?
                 Perché mi sento tipo come se avessimo un unico neurone.
                 Unit3 in tutto.
                 Ed è figa come cosa.

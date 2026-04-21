@@ -212,7 +212,7 @@
 
     {
         - cookingCompanion == FirstCharacter:
-            Visto che è un momento di pausa, facciamo come se non ci fossimo mai conosciut3, senza gioie né rancori passati. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+            {charTag(FirstCharacter, "affectionate")}:      Visto che è un momento di pausa, facciamo come se non ci fossimo mai conosciut3, senza gioie né rancori passati.
             Solo per ora ovviamente.
 
                 ~ kitchen_storageAether = firstChar_aether

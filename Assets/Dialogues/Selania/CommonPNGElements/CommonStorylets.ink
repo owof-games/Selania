@@ -17,10 +17,10 @@
     {charTag(SecondCharacter, "neutral")}:        A un certo punto ero alla stazione.
     E avevo voglia di caramelle.
     {charTag(SecondCharacter, "energy")}:       Ma voglio sempre le caramelle.
-    Pensi ci abbiano rapito?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+    {charTag(FirstCharacter, "neutral")}:         Pensi ci abbiano rapito?
     {charTag(SecondCharacter, "energy")}:       Sarebbe DIVERTENTISSIMO!
     Bimbo, dobbiamo rivedere la tua idea di divertente!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-    E poi che senso ha rapirci e lasciarci in un posto figo, così a caso?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+    {charTag(FirstCharacter, "affectionate")}:      E poi che senso ha rapirci e lasciarci in un posto figo, così a caso?
     
         {
             - are_two_entities_together(Mentor, PG):
@@ -32,8 +32,8 @@
     E dove portano tutti quei posti chiusi.
     E...
     Uh, bimbo, respira!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-    Perché non partiamo da una cosa più tranquilla?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-    Tipo che ne so, dormircela un attimo?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+    {charTag(FirstCharacter, "neutral")}:         Perché non partiamo da una cosa più tranquilla?
+    {charTag(FirstCharacter, "affectionate")}:      Tipo che ne so, dormircela un attimo?
     Sai quante occasioni ti capiteranno per dormire a modo dopo le elementari?
     Zero.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
     {charTag(SecondCharacter, "neutral")}:        No no no.
@@ -70,26 +70,26 @@
                     -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                     
                 {charTag(SecondCharacter, "melanchonic")}:    Come i bambini piccoli. No no no.
-                Mi ci riconosco, totale.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+                {charTag(FirstCharacter, "affectionate")}:      Mi ci riconosco, totale.
 
             + \ {charTag(PG, "neutral")}:         Mentre mi leggono la mente penso a cose assurdissime!
                 -> glyph_modifier_variation_management(FirstCharacter, fireC)->
                
                 {charTag(SecondCharacter, "energy")}:       Sarebbe divertentissimo!
                 Ora provo a pensare tantissimo alla cacca!
-                La mia mente è limpida e innocente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-                Non come quella di un bambino, ascoltando le cose che dice il piccoletto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                {charTag(FirstCharacter, "affectionate")}:      La mia mente è limpida e innocente.
+                {charTag(FirstCharacter, "neutral")}:         Non come quella di un bambino, ascoltando le cose che dice il piccoletto.
                 
             + \ {charTag(PG, "neutral")}:         Magari conoscono il senso della vita.
                 -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                 
                 {charTag(SecondCharacter, "neutral")}:        Te lo dico io: caramelle!
                 E vedere i pinguini.
-                Ma sarebbe una risposta che mi risolverebbe una marea di problemi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+                {charTag(FirstCharacter, "affectionate")}:      Ma sarebbe una risposta che mi risolverebbe una marea di problemi.
 
             -    
-    Bene, direi che abbiamo tutt3 qualcosa a cui pensare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-    Tipo, dove schiacciarmi quel pisolino.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+    {charTag(FirstCharacter, "neutral")}:         Bene, direi che abbiamo tutt3 qualcosa a cui pensare.
+    {charTag(FirstCharacter, "affectionate")}:      Tipo, dove schiacciarmi quel pisolino.
  
         -> second_char_closing_storylet ->
         -> first_char_closing_storylet ->
@@ -129,7 +129,7 @@
             {
                 - are_two_entities_together(FirstCharacter, PG):
                     Povero piccolo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-                    Però è stato molto coraggioso, vero?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+                    {charTag(FirstCharacter, "affectionate")}:      Però è stato molto coraggioso, vero?
             }
 
             + \ {charTag(PG, "neutral")}:                    Scelta acqua
@@ -166,10 +166,10 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-    No, non scherzo, {mentorName}, ti invidio un sacco.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-    Hai uno scopo chiaro.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+    {charTag(FirstCharacter, "affectionate")}:      No, non scherzo, {mentorName}, ti invidio un sacco.
+    {charTag(FirstCharacter, "neutral")}:         Hai uno scopo chiaro.
     E fai qualcosa di buono per le altre persone.
-    Mi sembra la cosa migliore che possa capitare nella vita.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+    {charTag(FirstCharacter, "affectionate")}:      Mi sembra la cosa migliore che possa capitare nella vita.
         {
             - are_two_entities_together(Franco, PG):
                 {charTag(Franco, "{portrait_Franco()}")}:       La cosa migliore che ti possa capitare è il karaoke di cugina Sputt.
@@ -181,7 +181,7 @@
     {charTag(Mentor, "hurry")}:             Un po' lo scoprirai da te, parlando con {player_name}.
     {charTag(Mentor, "neutral")}:           Ma una cosa è certa: se non saprai trovare il bello in ciò che già hai, non sarai felice nemmeno quando avrai un nuovo nome.
     {charTag(Mentor, "hurry")}:             La felicità non è un luogo da raggiungere, ma qualcosa che si ha dentro.
-    Mmm.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+    {charTag(FirstCharacter, "neutral")}:         Mmm.
     Certo.
     Scusa {mentorName}, però un po' mi viene da dirti che è facile dirlo, quando fai già quello che ami.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
     È una posizione privilegiata.
@@ -199,7 +199,7 @@
             
         + \ {charTag(PG, "neutral")}:          {mentorName}, razionalmente la felicità ha una natura temporanea.
             -> glyph_modifier_variation_management(FirstCharacter, airC)->
-            Oh, che bello sentire qualcun{player_pronouns has him:o|{player_pronouns has her:a|ə}} che matcha la mia gioia di vivere.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+            {charTag(FirstCharacter, "affectionate")}:      Oh, che bello sentire qualcun{player_pronouns has him:o|{player_pronouns has her:a|ə}} che matcha la mia gioia di vivere.
             {charTag(Mentor, "neutral")}:           Il fatto che sia temporanea non nega la mia teoria.
         
         + \ {charTag(PG, "neutral")}:         La felicità ce l'hai se trovi il gioco e l'assurdo ovunque.
@@ -211,7 +211,7 @@
             -> glyph_modifier_variation_management(FirstCharacter, waterC)->    
             {charTag(Mentor, "neutral")}:           Questa è una lettura che potrei apprezzare.
             Woah!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
-            Vuol dire che {player_name} ha trovato un punto di contatto tra noi in questa discussione?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+            {charTag(FirstCharacter, "affectionate")}:      Vuol dire che {player_name} ha trovato un punto di contatto tra noi in questa discussione?
             {charTag(Mentor, "hurry")}:             Eh sì, mi sa proprio di sì.
             
         + \ {charTag(PG, "neutral")}:         La felicità è qualcosa che cresce nelle pieghe del quotidiano.
@@ -221,9 +221,9 @@
             Infestanti.
             E indesiderate.
         -
-    Comunque spero tu abbia imparato la lezione, {mentorName}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+    {charTag(FirstCharacter, "neutral")}:         Comunque spero tu abbia imparato la lezione, {mentorName}.
     {charTag(Mentor, "neutral")}:           Lezione?
-    Sì: che se una persona ti dice che ti ammira, è meglio portarsi a casa il complimento e goderselo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+    {charTag(FirstCharacter, "affectionate")}:      Sì: che se una persona ti dice che ti ammira, è meglio portarsi a casa il complimento e goderselo.
     Non sono vecchia come te, ma so che non sono tanti gli elogi che ci vengono dati in vita.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
 
         -> first_char_closing_storylet ->
@@ -279,7 +279,7 @@
                                                                 Però non ho visto dove si è bruciata.
                                                                 O se ti deve bruciare.
                                                                 Non sarebbe molto gentile però, vero?
-                Ooook#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                {charTag(FirstCharacter, "neutral")}:         Ooook
                 No, non è vero: non ce la posso fare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                     ~ change_entity_place(FirstCharacter)
         }
@@ -391,10 +391,10 @@
 
     Credo di avere il mal di testa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
     {charTag(Franco, "{portrait_Franco()}")}:       Lo dice sempre anche Giulio.
-    Che è tuo figlio.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+    {charTag(FirstCharacter, "neutral")}:         Che è tuo figlio.
     {charTag(Franco, "{portrait_Franco()}")}:       No, che è uno dei miei mariti.
                                                     I miei figli sono Abaco, Aimone, Altobrando, Appasilarco, Azzolino, Borci, Clodoveo, Comunardo
-    No aspetta aspetta, ti avevo solo chiesto di.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+    {charTag(FirstCharacter, "neutral")}:         No aspetta aspetta, ti avevo solo chiesto di.
     {charTag(Franco, "{portrait_Franco()}")}:       Emerenzio, Etelbero, Euforbo, Fulco, Matteo.
     Matteo?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
     Un nome così normale?
@@ -469,7 +469,7 @@
     Non sono mica tanto convinto.
         {
             - are_two_entities_together(FirstCharacter, PG):
-                Beeeene!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                {charTag(FirstCharacter, "neutral")}:         Beeeene!
                 E anche questa roba tra qualche anno si trasformerà in un lunghissimo percorso di psicoterapia.
         }
     {charTag(Franco, "{portrait_Franco()}")}:       Però possiamo chiedere alle foglie.

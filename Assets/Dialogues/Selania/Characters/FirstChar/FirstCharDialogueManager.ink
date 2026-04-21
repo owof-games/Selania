@@ -171,16 +171,16 @@
                             {    
                         
                                 - firstChar_favouritesGifts has firstChar_giftedObject:
-                                    Quello che mi hai dato è qualcosa di più di un regalo: è un gesto di affinità.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+                                    {charTag(FirstCharacter, "affectionate")}:      Quello che mi hai dato è qualcosa di più di un regalo: è un gesto di affinità.
                                     Mi piace stare con te, {player_name}.
 
                                 - firstChar_goodGifts has firstChar_giftedObject:
-                                    I regali mi mettono sempre in imbarazzo, sai?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                                    Ma il tuo dono mi ha fatto sentire ascoltata.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+                                    {charTag(FirstCharacter, "neutral")}:         I regali mi mettono sempre in imbarazzo, sai?
+                                    {charTag(FirstCharacter, "affectionate")}:      Ma il tuo dono mi ha fatto sentire ascoltata.
 
 
                                 - else:
-                                    Non mi aspettavo un regalo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                                    {charTag(FirstCharacter, "neutral")}:         Non mi aspettavo un regalo.
                                     Per cui non dovrei nemmeno esserne delusa, giusto?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                             }
 
@@ -212,11 +212,11 @@
                             ->main
                             
                     - kitchen_secondCharCookingTogetherInvite:
-                        Credo che {charNameTwo} ti stia già aspettando, sai?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+                        {charTag(FirstCharacter, "affectionate")}:       Credo che {charNameTwo} ti stia già aspettando, sai?
                             ->main
 
                     - kitchen_thirdCharCookingTogetherInvite:
-                        Credo che {charNameThree} ti stia già aspettando, sai?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+                        {charTag(FirstCharacter, "affectionate")}:      Credo che {charNameThree} ti stia già aspettando, sai?
                             ->main
 
                     - kitchen_kitchenOccupied == true:
@@ -240,7 +240,7 @@
                                 ->main
                         
                     - else:
-                        Volentieri! Ci vediamo in cucina!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+                        {charTag(FirstCharacter, "affectionate")}:      Volentieri! Ci vediamo in cucina!
                             ~ kitchen_firstCharCookingTogetherInvite = true
                             ~ kitchen_firstCharCookingTogetherNumberInvite ++
                             ~ move_entity(FirstCharacter, Kitchen)

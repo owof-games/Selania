@@ -269,7 +269,7 @@
                                                     Mi sembra una buona motivazione.
             {
                 - are_two_entities_together(FirstCharacter, PG):
-                    Il cibo è sempre una motivazione.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+                    {charTag(FirstCharacter, "affectionate")}:      Il cibo è sempre una motivazione.
             }
     {charTag(Franco, "{portrait_Franco()}")}:       E a proposito di cose buone: vediamo come posso aiutarti! 
 
@@ -398,8 +398,8 @@
                                                     Non arriva mai al punto.
                                                     {
                                                     - are_two_entities_together(FirstCharacter, PG):
-                                                        Perché tu arrivi sempre al punto, Franco.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                                                         {charTag(Franco, "{portrait_Franco()}")}:          Sì sì, sempre.
+                                                        {charTag(FirstCharacter, "neutral")}:         Perché tu arrivi sempre al punto, Franco.
+                                                        {charTag(Franco, "{portrait_Franco()}")}:          Sì sì, sempre.
                                                         Preciso cone una mosca.
                                                         Non credo che.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                                                         Ah, lascia perdere.
@@ -704,7 +704,7 @@
                                                     Quando lei lo bacia e le vengono tutte le verruche.
                                                     {
                                                         - are_two_entities_together(FirstCharacter, PG):
-                                                            Onesto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                                                            {charTag(FirstCharacter, "neutral")}:         Onesto.
                                                     }
     {charTag(Franco, "{portrait_Franco()}")}:       Gli umani dovrebbero imparare a lasciarci in pace.
                                                     {

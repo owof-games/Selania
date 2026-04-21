@@ -108,7 +108,7 @@
 
     {
         - are_two_entities_together(FirstCharacter, PG):
-            Se resto mi sembra di barare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+            {charTag(FirstCharacter, "neutral")}:         Se resto mi sembra di barare.
             Anche se non ha senso, visto che lo stai facendo tu, {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
             ~ move_entity(FirstCharacter, Forest)
     }

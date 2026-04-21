@@ -27,7 +27,7 @@
             }
             {
                 - are_two_entities_together(FirstCharacter, PG): 
-                    A me succede quando posso suonare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+                    {charTag(FirstCharacter, "affectionate")}:      A me succede quando posso suonare.
                     E mente e corpo creano qualcosa di nuovo.
             } 
 
@@ -104,7 +104,7 @@
             {
                 - are_two_entities_together(FirstCharacter, PG): 
                     Vuol dire che questa confusione prima o poi finisce?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
-                    Perché la cosa mi rincuora mooolto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                    {charTag(FirstCharacter, "neutral")}:         Perché la cosa mi rincuora mooolto.
             }
         
             + \ {charTag(PG, "neutral")}:               Numeri come l'età sono indicatori, non fatti assoluti.

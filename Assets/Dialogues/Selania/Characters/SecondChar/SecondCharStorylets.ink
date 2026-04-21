@@ -161,7 +161,7 @@
         E se ti guarda e stai male, è mamma.
                 {
                     - are_two_entities_together(FirstCharacter, PG):
-                            Ok, già adoro tua nonna, bimbo!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+                            {charTag(FirstCharacter, "affectionate")}:      Ok, già adoro tua nonna, bimbo!
                 
                 }
         {charTag(SecondCharacter, "energy")}:       E so altre cose sulle rane.
@@ -603,7 +603,7 @@
         {charTag(SecondCharacter, "emotional")}:        Lui è superforte.
                 {
                     - are_two_entities_together(FirstCharacter, PG):
-                        Io.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_neutral
+                        {charTag(FirstCharacter, "neutral")}:         Io.
                         Ma davvero {mentorName} ha.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_annoyed
                         Merda.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
                         Mi ero dimenticata quanto fosse schifoso essere bambini.
@@ -658,7 +658,7 @@
                     Se solo potessi ti porterei alla Rifugia, piccoletto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                     Quello che racconti mi spezza il cuore.
                     {charTag(SecondCharacter, "energy")}:       Al rifugio si mangia?
-                    C'è sempre un piatto di pastasciutta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+                    {charTag(FirstCharacter, "affectionate")}:      C'è sempre un piatto di pastasciutta.
             }        
         {charTag(SecondCharacter, "emotional")}:        Sai {player_name}, vorrei nonna qui. 
         Sicuro le piace tantissimo questo posto.
@@ -931,7 +931,7 @@
                                                                 Sono molto apprezzato alle feste!
                                                                 Ma non mi piace tanto tutta la bava che mi arriva addosso.
                                                                 Però c'è il cibo gratis!
-                Franco, sai che sei appena diventato il mio migliore amico?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+                {charTag(FirstCharacter, "affectionate")}:      Franco, sai che sei appena diventato il mio migliore amico?
             }
 
 
@@ -972,9 +972,9 @@
                                                         Ma lui sa fare tutto.
                 {
                     - are_two_entities_together(FirstCharacter, PG): 
-                        Tuo fratello mi ricorda un po' Talco.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+                        {charTag(FirstCharacter, "affectionate")}:      Tuo fratello mi ricorda un po' Talco.
                         Mi manca sempre di più.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-                        Talco, non tuo fratello.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                        {charTag(FirstCharacter, "neutral")}:         Talco, non tuo fratello.
                 } 
         {charTag(SecondCharacter, "emotional")}:        Il suo amico invece fa dei dolci buonissimi.
         E anche lui non sa nuotare.
@@ -1257,7 +1257,7 @@
                                                             Ma se sono arrabbiato non so cosa fare.
             {
                 - are_two_entities_together(FirstCharacter, PG):
-                    Mai provato a suonare la batteria?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_affectionate
+                    {charTag(FirstCharacter, "affectionate")}:      Mai provato a suonare la batteria?
                     Una delle ragazze della band potrebbe darti qualche lezione di sicuro!
                     {charTag(SecondCharacter, "angry")}:        Poi papà ha un altro motivo per arrabbiarsi.
             }        
@@ -1393,7 +1393,7 @@
                 {charTag(SecondCharacter, "neutral")}:        Ma è durato pochissimo e poi avevo solo tanta sete.
                     {
                         - are_two_entities_together(FirstCharacter, PG):
-                            Il tuo primo trip!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+                            {charTag(FirstCharacter, "affectionate")}:      Il tuo primo trip!
                             Aiuto, il tuo primo trip, dio mio, sei troppo piccolo!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                     }
                         
