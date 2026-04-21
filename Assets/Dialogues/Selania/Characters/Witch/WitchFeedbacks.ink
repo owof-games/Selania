@@ -95,10 +95,14 @@
                 <i>E {player_name} decide di osservare sé nella propria interezza.</i>
             -
 
-        <i>Riconoscere ciò che si prova a volte è un lusso che non tutti conoscono.
+        <i>Riconoscere ciò che si prova a volte è un lusso che non tutti hanno.
         <i>Soprattutto quando c'è qualcosa che fa star male.
         <i>A volte è solo qualcosa di personale.
         <i>A volte è il segno che qualcosa deve bruciare.
+            {
+                - are_two_entities_together(SecondCharacter, PG):
+                {charTag(SecondCharacter, "neutral")}:      Non mi piacciono le cose che bruciano.
+            }
 
             {
                 - sigilUsed > 0:
@@ -107,7 +111,7 @@
             }
 
     
-        <i>Ringraziando ancora {player_name} per ora ci congediamo.
+        {charTag(TheWitch, witch_state())}: <i>Ringraziando ancora {player_name} per ora ci congediamo.
         <i>Senza mai davvero lasciar{player_pronouns has him:lo|{player_pronouns has her:la|lə}}.</i>
     
             -> witch_closing_storylet ->
@@ -195,7 +199,12 @@
         
         <i>Un albero è un albero.
         <i>Quanti alberi fanno una foresta?
-        <i>"Mi è successo questo", racconta qualcuna.
+            {
+                - are_two_entities_together(SecondCharacter, PG):
+                {charTag(SecondCharacter, "neutral")}:      Devono coprire un quinto del terreno.
+            }
+
+        {charTag(TheWitch, witch_state())}: <i>"Mi è successo questo", racconta qualcuna.
         <i>"Anche a me", risponde un'altra.
         <i>Una ferita è una ferita.
         <i>Quante ferite richiedono una protesta?

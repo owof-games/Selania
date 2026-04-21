@@ -19,7 +19,11 @@
     ~ temp mentorName = translator(mentor_ActualName)
 
         {charTag(TheWitch, witch_state())}:   <i>A volte dimentichiamo quando sarà ieri, cos'è successo domani.
-        <i>Ma non dimentichiamo mai {player_name}.
+            {
+                - are_two_entities_together(SecondCharacter, PG):
+                {charTag(SecondCharacter, "energy")}:      Succede anche a me quando trovo un bel libro!
+            }
+        {charTag(TheWitch, witch_state())}:   <i>Ma non dimentichiamo mai {player_name}.
         <i>Le nostre radici vibrano di voci, i nostri crateri si riempiono di storie.
         <i>{player_name} ci ha portato questa gioia.
         <i>C'è qualcosa che {player_name} vorrebbe dirci?
@@ -124,7 +128,10 @@
     <i>Un vecchio detto dice: "Quando la palude piange, la rana ascolta".
     <i>Franco sorride sempre, ma conosce il pianto di tutt3 noi.
     <i>Non ubbidisce ad alcuna autorità, ad alcuna legge, se non quella della cura delle altre persone.</i>
-
+    {
+        - are_two_entities_together(SecondCharacter, PG):
+        {charTag(SecondCharacter, "energy")}:      E delle brutte battute.
+    }
         -> witch_closing_storylet ->
         -> main
 

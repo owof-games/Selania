@@ -52,6 +52,10 @@
         <i>{player_name} cerca un sacchetto, o cerca una finestra?       
         <i>Vorremmo lasciare {player_name} con una informazione importante: ciò che accade durante la riscrittura ha regole diverse dal resto della conversazione.
         <i>{player_name} può immaginarla come una tempesta sulla spiaggia: quando sarà finita, la sabbia sarà la stessa, ma inaspettate le cose che rimangono sulla riva.</i>
+        {
+            - are_two_entities_together(SecondCharacter, PG):
+            {charTag(SecondCharacter, "energy")}:      Tipo tante conchiglie!
+        }
 
         // Vecchio testo su questa parte
         // <i>Anche noi vogliamo aiutare {player_name}, e per questo condividiamo una cosa.
