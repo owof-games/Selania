@@ -42,7 +42,7 @@
                                                     O recuperando una pianta che hai già usato.
         {
             - are_two_entities_together(FirstCharacter, PG):
-                                                    Livello di confusione: sì.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                                                    {charTag(FirstCharacter, "affectionate")}:       Livello di confusione: sì.
         }
 
     ~ grimoire_franco += grimFrancoFirst

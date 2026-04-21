@@ -64,7 +64,7 @@
         {charTag(SecondCharacter, "melanchonic")}:    Mamma dice sempre che non c'è compleanno senza caramelle!
             {
                 - are_two_entities_together(FirstCharacter, PG):
-                    Ho bisogno di bere. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_annoyed
+                    {charTag(FirstCharacter, "annoyed")}:   Ho bisogno di bere. 
                     Troppe energie. 
                     Troppe.
             }
@@ -116,7 +116,7 @@
 
             {
                 - are_two_entities_together(FirstCharacter, PG): 
-                        Ehm, non so se ti sei visto riflesso amore, ma, ehm.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed 
+                        {charTag(FirstCharacter, "annoyed")}:   Ehm, non so se ti sei visto riflesso amore, ma, ehm. 
                     
             }
             {
@@ -255,7 +255,7 @@
                 {charTag(SecondCharacter, "angry")}:        Ah quindi {charNameOne} mi ha detto un nome sbagliato!
                     {
                         - are_two_entities_together(FirstCharacter, PG): 
-                            Oppure banalmente {player_name} l'ha cambiato?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed   
+                            {charTag(FirstCharacter, "annoyed")}:   Oppure banalmente {player_name} l'ha cambiato?   
                     }
     	    -
     	        -> gender ->
@@ -286,7 +286,7 @@
                 Le ragazze sono appiccicose.
                         {
                             - are_two_entities_together(FirstCharacter, PG):
-                                Dio che fatica gli uomini.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                                {charTag(FirstCharacter, "annoyed")}:   Dio che fatica gli uomini.
                                 Anche quando hanno sei anni.
                                 {charTag(SecondCharacter, "angry")}:  Non sono <i>così</i> piccolo!
                         }
@@ -329,7 +329,7 @@
             	  Non ci parlo mica molto con le ragazze, siete strane.
                     {
                         - are_two_entities_together(FirstCharacter, PG):
-                            Disse quello che prima stava studiando le sue stesse caccole.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_annoyed
+                            {charTag(FirstCharacter, "annoyed")}:   Disse quello che prima stava studiando le sue stesse caccole.
                             {charTag(SecondCharacter, "neutral")}:        Per la scienza!
                     }            	  
             	  {charTag(SecondCharacter, "energy")}:       Devo ancora capire se sei strana anche tu, {player_name}.
@@ -604,7 +604,7 @@
                 {
                     - are_two_entities_together(FirstCharacter, PG):
                         {charTag(FirstCharacter, "neutral")}:         Io.
-                        Ma davvero {mentorName} ha.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_annoyed
+                        {charTag(FirstCharacter, "annoyed")}:   Ma davvero {mentorName} ha.
                         Merda.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
                         Mi ero dimenticata quanto fosse schifoso essere bambini.
                 }
@@ -655,7 +655,7 @@
         Mi spiace essere scappato di casa.
             {
                 - are_two_entities_together(FirstCharacter, PG):
-                    Se solo potessi ti porterei alla Rifugia, piccoletto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+                    {charTag(FirstCharacter, "sad")}:              Se solo potessi ti porterei alla Rifugia, piccoletto.
                     Quello che racconti mi spezza il cuore.
                     {charTag(SecondCharacter, "energy")}:       Al rifugio si mangia?
                     {charTag(FirstCharacter, "affectionate")}:      C'è sempre un piatto di pastasciutta.
@@ -763,7 +763,7 @@
         {charTag(SecondCharacter, "neutral")}:          No, non te lo dico mica.
                 {
                     - are_two_entities_together(FirstCharacter, PG):
-                        Strane, non lo so. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                        {charTag(FirstCharacter, "annoyed")}:   Strane, non lo so. 
                         Ma anche le bimbe possono essere crudeli, quello sì.
                 } 
         {charTag(SecondCharacter, "angry")}:        Le maestre mi mettono sempre in castigo.
@@ -855,7 +855,7 @@
         {charTag(SecondCharacter, "emotional")}:        E i miei compagni poi erano miei amici così.
             {
                 - are_two_entities_together(FirstCharacter, PG): 
-                        Mi si è appena rotto il cuore.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+                        {charTag(FirstCharacter, "sad")}:              Mi si è appena rotto il cuore.
             } 
         {charTag(SecondCharacter, "neutral")}:        Una volta ho preso un brutto voto e papà e mamma hanno litigato perché si davano la colpa.
         Ma allora ho corretto tutto e io non prendevo un brutto voto.
@@ -973,7 +973,7 @@
                 {
                     - are_two_entities_together(FirstCharacter, PG): 
                         {charTag(FirstCharacter, "affectionate")}:      Tuo fratello mi ricorda un po' Talco.
-                        Mi manca sempre di più.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+                        {charTag(FirstCharacter, "sad")}:              Mi manca sempre di più.
                         {charTag(FirstCharacter, "neutral")}:         Talco, non tuo fratello.
                 } 
         {charTag(SecondCharacter, "emotional")}:        Il suo amico invece fa dei dolci buonissimi.
@@ -1138,7 +1138,7 @@
         Oppure imparano il cinese e l'inglese.
             {
                 - are_two_entities_together(FirstCharacter, PG):
-                    Sono già stanca solo a sentire tutta questa roba.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_annoyed
+                    {charTag(FirstCharacter, "annoyed")}:   Sono già stanca solo a sentire tutta questa roba.
                     Non dovrebbero, che ne so, fare l3 bambin3 e bona?
             }  
         {charTag(SecondCharacter, "neutral")}:        Loro sanno già cosa vogliono fare come lavoro.
@@ -1350,7 +1350,7 @@
         Chissà se è la rana che fa accadere le cose.
             {
                 - are_two_entities_together(FirstCharacter, PG):
-                    Ti ci vedrei benissimo con mio padre, a fare casini in garage e far spaventare mia madre!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed 
+                    {charTag(FirstCharacter, "annoyed")}:   Ti ci vedrei benissimo con mio padre, a fare casini in garage e far spaventare mia madre! 
             } 
         
             + \ {charTag(PG, "neutral")}:         Hai la mente da scienziato e vuoi verificare tutto.
@@ -1394,7 +1394,7 @@
                     {
                         - are_two_entities_together(FirstCharacter, PG):
                             {charTag(FirstCharacter, "affectionate")}:      Il tuo primo trip!
-                            Aiuto, il tuo primo trip, dio mio, sei troppo piccolo!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                            {charTag(FirstCharacter, "annoyed")}:           Aiuto, il tuo primo trip, dio mio, sei troppo piccolo!
                     }
                         
             + \ {charTag(PG, "neutral")}:         Tuo fratello ti lascia essere te stesso.

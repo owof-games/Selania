@@ -199,12 +199,12 @@
         
         {
             - firstChar_InkLevel == ink_empty:
-                Come direbbe la mia vecchia insegnate di piano: apprezzo lo sforzo, manca il risultato.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                {charTag(FirstCharacter, "annoyed")}:   Come direbbe la mia vecchia insegnate di piano: apprezzo lo sforzo, manca il risultato.
                 Ci sono stati momenti carini, ma ammetto che per lo più non mi sono sentita molto capita da te.
                 Scusa.
 
             - firstChar_InkLevel == ink_low:
-                E, insomma.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                {charTag(FirstCharacter, "annoyed")}:   E, insomma.
                 Non è che ci capiamo molto noi due, sai?
                 È come se io suonassi Chopin e tu la lambada.
                 E la lambada è carina, ma non è roba mia.

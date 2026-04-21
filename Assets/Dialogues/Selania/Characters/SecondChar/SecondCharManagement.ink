@@ -207,7 +207,7 @@
 
         {
             -   are_two_entities_together(FirstCharacter, PG):
-                    E questo è il momento per me di levarmi da qui e lasciarvi in pace. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                    {charTag(FirstCharacter, "curious")}:       E questo è il momento per me di levarmi da qui e lasciarvi in pace. #speaker:{firstChar_tag()} 
                     Anche se sono stracuriosa.
                     Poi non dite che non vi voglio bene!
                             ~ change_entity_place(FirstCharacter)

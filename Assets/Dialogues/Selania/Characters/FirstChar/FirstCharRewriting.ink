@@ -17,37 +17,37 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
 
         {charTag(FirstCharacter, "neutral")}:         Io...
-        Forse ho frainteso tutto il discorso sulla chitarra.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+        {charTag(FirstCharacter, "sad")}:              Forse ho frainteso tutto il discorso sulla chitarra.
         {charTag(FirstCharacter, "neutral")}:         Non è tanto "il piano b", la cosa facile.
         Ma piuttosto la cosa che possono fare tutt3.
-        E non ero pronta ad essere "tutt3".#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+        {charTag(FirstCharacter, "sad")}:              E non ero pronta ad essere "tutt3".
         {charTag(FirstCharacter, "neutral")}:         Mi aspettavo concerti e viaggi nel mondo.
         Mi aspettavo amicizie eterne e una casa in campagna e aiuto reciproco.
         Mi aspettavo un amore folle, di quelli su cui ci fanno i film.
         Mi aspettavo di fare qualcosa di buono, di salvare il mondo con le mie canzoni.
         E non ho ottenuto niente di questo.
-        Sono soltanto mediocre.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-        Un concentrato di rinunce.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
-        Faccio un lavoro di merda che mi ammazza le giornate.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-        Talco, Valeria, Anna, Luigia: le persone a cui voglio bene presto o tardi se ne vanno. E spesso spariscono.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+        {charTag(FirstCharacter, "annoyed")}:   Sono soltanto mediocre.
+        {charTag(FirstCharacter, "sad")}:              Un concentrato di rinunce.
+        {charTag(FirstCharacter, "annoyed")}:   Faccio un lavoro di merda che mi ammazza le giornate.
+        {charTag(FirstCharacter, "sad")}:              Talco, Valeria, Anna, Luigia: le persone a cui voglio bene presto o tardi se ne vanno. E spesso spariscono.
         Non capisco se la relazione con Ennio sia stabile o immobile.
-        E non riesco manco a risparmiare a sufficienza da donare dieci euro per la Palestina, figurarsi salvare il mondo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+        {charTag(FirstCharacter, "annoyed")}:   E non riesco manco a risparmiare a sufficienza da donare dieci euro per la Palestina, figurarsi salvare il mondo.
         {charTag(FirstCharacter, "neutral")}:         {player_name}, cfireo di avere paura.
         Perché l'unica domanda che mi rimane, l'unica spocchiosa domanda è:
         è questo il massimo che posso aspettarmi dalla vita?
-        Andrà sempre peggio?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-        Tra quanto dovrò fare due lavori di merda invece di uno e morire dentro?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+        {charTag(FirstCharacter, "annoyed")}:   Andrà sempre peggio?
+        {charTag(FirstCharacter, "sad")}:              Tra quanto dovrò fare due lavori di merda invece di uno e morire dentro?
         O vedere La Rifugia trasformarsi in un altro airbnb finto local?
         O perdere anche Ennio, e rimanere sola e infelice con gatto e vibratore?
         {charTag(FirstCharacter, "neutral")}:         E non è vero che la chitarra fa schifo, Mark Bowen sposami, ma non è il mio strumento.
         Non sono nel mio strumento.
-        {player_name}: devo continuare a vivere una vita che non è la mia?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-        O fare il salto e rischiare di perdere tutto?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+        {charTag(FirstCharacter, "annoyed")}:   {player_name}: devo continuare a vivere una vita che non è la mia?
+        {charTag(FirstCharacter, "sad")}:              O fare il salto e rischiare di perdere tutto?
         - 
             -> first_char_closing_storylet ->
 
 
-        Quanto si può sperare di essere felici, a questo mondo?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+        {charTag(FirstCharacter, "sad")}:              Quanto si può sperare di essere felici, a questo mondo?
             
 
             + \ {charTag(PG, "neutral")}:         Che ne dici se riscriviamo assieme la tua storia?
@@ -395,9 +395,9 @@
         {charTag(FirstCharacter, "neutral")}:         Grazie, {player_name}.
         Non.
         Uh.
-        Non è facile guardarsi in modo diverso.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+        {charTag(FirstCharacter, "sad")}:              Non è facile guardarsi in modo diverso.
         Alla fine ci raccontiamo tutto il giorno allo stesso modo.
-        E i giorni si fanno mesi e blah blah blah.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+        {charTag(FirstCharacter, "annoyed")}:   E i giorni si fanno mesi e blah blah blah.
         {charTag(FirstCharacter, "neutral")}:         È un po' come le canzoni, che a volte le capisci solo in un modo, fino a quando un'altra persona non te le fa ascoltare in modo diverso.
         O tipo con una cover.
         Eccoci di nuovo con i pipponi.
@@ -406,10 +406,10 @@
         {
             - ending.fire:
                 Hai detto che Talco mi aspetta in Islanda.
-                Non avevo mai davvero guardato fino in fondo alla possibilità di andarmene dall'Italia.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                {charTag(FirstCharacter, "curious")}: Non avevo mai davvero guardato fino in fondo alla possibilità di andarmene dall'Italia.#speaker:{firstChar_tag()} 
             
             - ending.aether:
-                Sentirti dire che la musica mi dà uno scopo è stato diverso dal dirlo io.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                {charTag(FirstCharacter, "curious")}: Sentirti dire che la musica mi dà uno scopo è stato diverso dal dirlo io.#speaker:{firstChar_tag()} 
                 È diventata una cosa vera.
                 {charTag(FirstCharacter, "neutral")}:         Ha senso?
 
@@ -429,7 +429,7 @@
                 Lagnosa.
                 Ma ha senso.
                 Ti ho raccontato così tante cose.
-                Ho davvero motivo di essere così infelice?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                {charTag(FirstCharacter, "curious")}: Ho davvero motivo di essere così infelice?#speaker:{firstChar_tag()} 
                 O come direbbe {mentorName}, bloccata?
 
         }
@@ -472,7 +472,7 @@
                             Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
                     }
 
-                    Rullo di tamburi...#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                    {charTag(FirstCharacter, "curious")}: Rullo di tamburi...#speaker:{firstChar_tag()} 
                     Io sono <b><i>{charNameOne}</b></i>!
                     Signore e signor3 e signori: sono la gioia del cambiamento.
                     Dell'infinita possibilità.
@@ -488,7 +488,7 @@
                             Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
                     }
 
-                    Ho scelto come nome <b><i>{charNameOne}</b></i>.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                    {charTag(FirstCharacter, "curious")}: Ho scelto come nome <b><i>{charNameOne}</b></i>.
                     Che sia quel pezzetto di plastica suonato alle elementari o un pezzo pregiato di un'orchestra, il Flauto ci ricorda che la musica è ovunque.
                     {charTag(FirstCharacter, "neutral")}:         E dove c'è musica, c'è cambiamento.
                     {charTag(FirstCharacter, "affectionate")}:      E metterò al centro di tutto la mia musica, la band, per fare cose che davvero cambino il mondo.
@@ -540,7 +540,7 @@
             }
 
         {charTag(FirstCharacter, "neutral")}:         Vorrei anche dirti una cosa, {player_name}.
-        Cfireo che {mentorName} sia triste per qualcosa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+        {charTag(FirstCharacter, "sad")}:              Credo che {mentorName} sia triste per qualcosa.
         Mi dà l'impressione di mettercela tutta, qui.
         {charTag(FirstCharacter, "neutral")}:         Ma di essere, non so come dire, scomoda?
         Non credo lo ammetterebbe mai, ma credo abbia bisogno di una persona amica.

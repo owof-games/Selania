@@ -78,7 +78,7 @@
             }
             {
                 - are_two_entities_together(FirstCharacter, PG):
-                    Questa me la voglio godere tutta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                    {charTag(FirstCharacter, "curious")}:       Questa me la voglio godere tutta.#speaker:{firstChar_tag()} 
             }
         {charTag(Franco, "{portrait_Franco()}")}:       E che mangia solo pesce?
                                                         E che le piace giocare?
@@ -118,7 +118,7 @@
         {charTag(Franco, "{portrait_Franco()}")}:       Ma quindi non è {charNameOne} che fa il nido sugli alberi?
             {
                 - are_two_entities_together(FirstCharacter, PG):
-                    Esatto!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                    {charTag(FirstCharacter, "curious")}:       Esatto!#speaker:{firstChar_tag()} 
                     E poi ululo alla luna!
                     {charTag(Franco, "{portrait_Franco()}")}:       Devo subito avvisare Euforbo!
             }
@@ -197,7 +197,7 @@
 
             {
                 - are_two_entities_together(FirstCharacter, PG):
-                    Cose metafisiche proprio.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                    {charTag(FirstCharacter, "annoyed")}:   Cose metafisiche proprio.
                         
             }
         {charTag(Franco, "{portrait_Franco()}")}:       Magari anche loro si mettono a nuotare!
@@ -239,7 +239,7 @@
 
             {
                 - are_two_entities_together(FirstCharacter, PG):
-                    C'è un'altra persona qui in giro?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                    {charTag(FirstCharacter, "curious")}:       C'è un'altra persona qui in giro?#speaker:{firstChar_tag()} 
                         
             }
 
@@ -469,7 +469,7 @@
                     - are_two_entities_together(FirstCharacter, PG):
                         {charTag(FirstCharacter, "affectionate")}:      Allora sono una rana.
                         {charTag(Franco, "{portrait_Franco()}")}:       Ma sai nuotare?
-                        No.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+                        {charTag(FirstCharacter, "sad")}:              No.
                         {charTag(Franco, "{portrait_Franco()}")}:       Allora sei una rana, sicuro!
                         
                 }

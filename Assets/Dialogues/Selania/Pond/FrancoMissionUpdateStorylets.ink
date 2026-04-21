@@ -45,7 +45,7 @@
                 Ho tantissimi consigli da dare a {player_name}!
                 {
                     - are_two_entities_together(FirstCharacter, PG):
-                        Non ne dubitavo {mentorName}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                        {charTag(FirstCharacter, "annoyed")}:   Non ne dubitavo {mentorName}.
                 }
         
         }
@@ -90,7 +90,7 @@
                                                     Continuo a studiare questa cosa mentre tu provi a vedere cosa succede se parli con due persone assieme.
         {
             - are_two_entities_together(FirstCharacter, PG):
-                In che senso scusa?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                {charTag(FirstCharacter, "curious")}:       In che senso scusa?#speaker:{firstChar_tag()} 
                 {charTag(Franco, "{portrait_Franco()}")}:       In senso diagonale, vedi?
                                                                 Ora la zampa è dritta.
                                                                 Ora è in acqua ed è spezzata!
@@ -301,7 +301,7 @@
                                                     }
                                                     {
                                                         - are_two_entities_together(FirstCharacter, PG):
-                                                            Questa me la voglio godere tutta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                                                            {charTag(FirstCharacter, "curious")}:       Questa me la voglio godere tutta.#speaker:{firstChar_tag()} 
                                                     }
     {charTag(Franco, "{portrait_Franco()}")}:       E che mangia solo pesce?
                                                     E che le piace giocare?
@@ -336,7 +336,7 @@
         {charTag(Franco, "{portrait_Franco()}")}:       Ma quindi non è {charNameOne} che fa il nido sugli alberi?
                                                     {
                                                         - are_two_entities_together(FirstCharacter, PG):
-                                                            Esatto!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                                                            {charTag(FirstCharacter, "curious")}:       Esatto!#speaker:{firstChar_tag()} 
                                                             E poi ululo alla luna!
                                                             {charTag(Franco, "{portrait_Franco()}")}:       Devo subito avvisare Euforbo!
                                                     }
@@ -401,7 +401,7 @@
                                                         {charTag(FirstCharacter, "neutral")}:         Perché tu arrivi sempre al punto, Franco.
                                                         {charTag(Franco, "{portrait_Franco()}")}:          Sì sì, sempre.
                                                         Preciso cone una mosca.
-                                                        Non credo che.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                                                        {charTag(FirstCharacter, "annoyed")}:   Non credo che.
                                                         Ah, lascia perdere.
                                                         {charTag(Franco, "{portrait_Franco()}")}:           Non perdo mai.
                                                         E Tullio non perde mai la parola.
@@ -527,7 +527,7 @@
 
                                                     {
                                                         - are_two_entities_together(FirstCharacter, PG):
-                                                            C'è un'altra persona qui in giro?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                                                            {charTag(FirstCharacter, "curious")}:       C'è un'altra persona qui in giro?#speaker:{firstChar_tag()} 
                                                                 
                                                     }
 
@@ -632,7 +632,7 @@
                                                     Non ci avevo mai pensato, ma respiro fuori dall'acqua!
                                                     {
                                                         - are_two_entities_together(FirstCharacter, PG):
-                                                            Franco, ma tu come ci sei arrivato all'età adulta?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                                                            {charTag(FirstCharacter, "annoyed")}:   Franco, ma tu come ci sei arrivato all'età adulta?
                                                             {charTag(Franco, "{portrait_Franco()}")}:       Un po' a piedi, un po' col treno.
                                                     }
     {charTag(Franco, "{portrait_Franco()}")}:       E il mondo ora mi sembra così grande.

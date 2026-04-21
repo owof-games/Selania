@@ -103,7 +103,7 @@
         {charTag(Mentor, "hurry")}:             E forse mi sono dimenticata di quanto possa essere facile perdere sé stesse quando si è giovani.
             {
                 - are_two_entities_together(FirstCharacter, PG): 
-                    Vuol dire che questa confusione prima o poi finisce?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                    {charTag(FirstCharacter, "curious")}:       Vuol dire che questa confusione prima o poi finisce?#speaker:{firstChar_tag()} 
                     {charTag(FirstCharacter, "neutral")}:         Perché la cosa mi rincuora mooolto.
             }
         
@@ -213,7 +213,7 @@
                 }
                 {
                     - are_two_entities_together(FirstCharacter, PG):
-                            Quindi {charNameTwo} mi manderà una lettera?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                            {charTag(FirstCharacter, "curious")}:       Quindi {charNameTwo} mi manderà una lettera?#speaker:{firstChar_tag()} 
                         
                 } 
 
@@ -261,7 +261,7 @@
                                                         Nemmeno a vent'anni puoi sapere davvero cosa vuoi.
                     {
                         - are_two_entities_together(FirstCharacter, PG):
-                           Ehm, confermo.     #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                           {charTag(FirstCharacter, "annoyed")}:   Ehm, confermo.     
                     } 
                 {charTag(Mentor, "neutral")}:           Cosa conta a questo mondo.
                                                         Per questo i genitori ci sono.
@@ -313,7 +313,7 @@
                                                 Al mio primo bacio.
             {
                 - are_two_entities_together(FirstCharacter, PG):
-                    Uuuuh, sono pronta per il thè, ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                    {charTag(FirstCharacter, "curious")}:       Uuuuh, sono pronta per il thè, ama.#speaker:{firstChar_tag()} 
             } 
             {
                 - are_two_entities_together(SecondCharacter, PG):
