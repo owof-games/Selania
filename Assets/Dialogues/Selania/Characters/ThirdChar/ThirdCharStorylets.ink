@@ -11,66 +11,43 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
         
-        Ma tu perché sei qui?#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+        {charTag(ThirdCharacter, "neutral")}:       Frase
             
-            + \ {charTag(PG, "neutral")}:         Questo luogo è insolito e voglio studiarlo, capirlo.
+            + \ {charTag(PG, "neutral")}:         Air
                     -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                Anche a me mi piace capire le cose.
+
                 
-            + \ {charTag(PG, "neutral")}:         Perché è pieno di cose buffe!
+            + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                Uh.
                     
-            + \ {charTag(PG, "neutral")}:         Aspetta, prima te: perché <b><i>tu</b></i> sei qui?
+            + \ {charTag(PG, "neutral")}:         Fire
                     -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                Boh, che ne so?
                 
-            + \ {charTag(PG, "neutral")}:         Per aiutare chi è in difficoltà.
+            + \ {charTag(PG, "neutral")}:         Water
                     -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                Come il veterinario?
                     
-            + \ {charTag(PG, "neutral")}:         Per capire meglio chi sono.
+            + \ {charTag(PG, "neutral")}:         Aether
                     -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                Non sai chi sei?
-            -    
-        
-        Io sono qui perché è il mio compleanno.
-
-
-        Ma lui mica ci può venire qui.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-        
-
-            + \ {charTag(PG, "neutral")}:         Il compleanno arriva sempre, a prescindere dalle caramelle.
-                    -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                Forse la data.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-                    
                 
-            + \ {charTag(PG, "neutral")}:          Niente caramelle, ma c'è uno stagno dove nuotare!
+        -    
+        {charTag(ThirdCharacter, "neutral")}:       Ma lui mica ci può venire qui.
+        
+
+            + \ {charTag(PG, "neutral")}:         Air
+                    -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+
+            + \ {charTag(PG, "neutral")}:          Earth
                     -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                WOOOOOOOOOOW!#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
     
-            + \ {charTag(PG, "neutral")}:         E poi ti sei arrabbiato e hai ripreso i giocattoli, giusto?
+            + \ {charTag(PG, "neutral")}:         Fire
                     -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                Non sono mica giocattoli.
                     
-                
-            + \ {charTag(PG, "neutral")}:         Vuoi molto bene alla tua mamma?
+            + \ {charTag(PG, "neutral")}:         Water
                     -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                Sì sì sì.
                     
-  
-            + \ {charTag(PG, "neutral")}:         Quindi, rubandoti i giochi, tuo papà ti ha fatto un favore.
+            + \ {charTag(PG, "neutral")}:         Aether
                     -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                Sì no boh.
             -
-        Ma sai che io non mi ricordo mica il mio nome?#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-        - (nameThird)
-
-
-        Dove saranno i miei compagni di scuola?#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-        
-        - 
-
 
         -> third_char_closing_storylet ->
         -> options_third_character
@@ -84,43 +61,23 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-        Non sai che cosa fighissima!#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-                {
-                    - are_two_entities_together(Mentor, PG): 
-                            Non ci sono rane in questo posto!
-                }
+        {charTag(ThirdCharacter, "neutral")}:      Frase
 
-        So tutto sulle rane.
-
-        E so altre cose sulle rane.
-
-        Gliel'ho detto che è il mio compleanno e che quindi il dono deve essere per me.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
         
-            + \ {charTag(PG, "neutral")}:         Una cosa mai accaduta è comunque ragionevolmente possibile.
+            + \ {charTag(PG, "neutral")}:         Air
                     -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                Quindi mi credi?
 
-            + \ {charTag(PG, "neutral")}:         Speriamo sia il nuovo Super Lario!
+            + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                Posso giocarci anche io?
                     
-            + \ {charTag(PG, "neutral")}:         E se lo senti e prudono le orecchie è una bugia, bimbo.
+            + \ {charTag(PG, "neutral")}:         Fire
                     -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                Non sono sto dicendo bugie!
 
-            + \ {charTag(PG, "neutral")}:         Sembra una rana molto gentile.
+            + \ {charTag(PG, "neutral")}:         Water
                     -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                A me mi sta simpatica
 
-            + \ {charTag(PG, "neutral")}:         Deve essere una rana molto saggia.
+            + \ {charTag(PG, "neutral")}:         Aether
                 -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                Non lo so, ha detto le cose in modo buffo.
-
-                Però mi ha anche detto che "tutto è dove deve stare".
-
-            - (franco)
-                         
-            Su!
             - 
             -> third_char_closing_storylet ->
             -> options_third_character
@@ -132,37 +89,26 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-        Mica mi hai detto come ti chiami.
+
+        {charTag(ThirdCharacter, "neutral")}:       Frase
   
 
             
-            + \ {charTag(PG, "neutral")}:         Bugia: hai detto di esser pieno di action figures.
+            + \ {charTag(PG, "neutral")}:         Air
                     -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                "Pieno" è un modo di dire.
 
-            + \ {charTag(PG, "neutral")}:         Non mi prendere in giro, hai detto che le action le ha rubate papà.
+            + \ {charTag(PG, "neutral")}:         Fire
                     -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                No.
 
-            + \ {charTag(PG, "neutral")}:         Ci stai male, quando mamma dimentica il tuo compleanno?
+            + \ {charTag(PG, "neutral")}:         Water
                     -> glyph_modifier_variation_management(ThirdCharacter, waterC)->    
-                Un po'.
                           
-            + \ {charTag(PG, "neutral")}:         Però non mi hai detto il tuo nome. Sei una spia? Un gatto? Un gatto spia?
+            + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                Sì no boh.
                     
-            + \ {charTag(PG, "neutral")}:         Sembra che tua mamma sia piena di preoccupazioni.
+            + \ {charTag(PG, "neutral")}:         Aether
                     -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                Mamma è sempre preoccupata di tutto.
             -
-
-            Forse dietro tutti quei fiori vicino allo stagno trovo qualche regalo!
-
-
-        - 
-
             
             -> third_char_closing_storylet ->
             -> options_third_character
@@ -177,37 +123,23 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
         
-        Cose.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+        {charTag(ThirdCharacter, "neutral")}:       Frase
             
-            + \ {charTag(PG, "neutral")}:         (disciplinato) Pensavo tu fossi più disciplinato, lucido. Che delusione.
+            + \ {charTag(PG, "neutral")}:         Air
                     -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                Ehi! Mica mi chiedi perché lo formattazione
                     
-            + \ {charTag(PG, "neutral")}:         (scherzo) Non era più divertente farle uno scherzo?
+            + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                        {
-                            - are_two_entities_together(Mentor, PG): {charTag(Mentor, "sorry")}:             Seriamente? 
-                               
-                        }
-                Perché ero arrabbiato.
                     
-            + \ {charTag(PG, "neutral")}:         (sfigati) Va bene difendersi, ma picchiare una così è stupido.
+            + \ {charTag(PG, "neutral")}:         Fire
                     -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                Mi aveva preso il braccio!
 
-            + \ {charTag(PG, "neutral")}:         (male) C'è rimasta male, sai?
+            + \ {charTag(PG, "neutral")}:         Water
                     -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                E a me che mi importa
 
-            + \ {charTag(PG, "neutral")}:         (ottenuto) Hai ottenuto quello che volevi?
+            + \ {charTag(PG, "neutral")}:         Aether
                     -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                Ha smesso di dirmi che non devo stare qui.
             -
-
-        Lui è superforte.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-            
-  
-        
         
         -> third_char_closing_storylet ->
         -> options_third_character
@@ -221,35 +153,24 @@
     ~ temp mentorName = translator(mentor_ActualName)
         
 
-        Sicuro le piace tantissimo questo posto.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+        {charTag(ThirdCharacter, "neutral")}:       Frase
         
-            + \ {charTag(PG, "neutral")}:         Non parli mai di tuo nonno. Deduco che non c'è più?
+            + \ {charTag(PG, "neutral")}:         Air
                     -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                Se ne è andato quando papà era molto piccolo.
-                    
-            + \ {charTag(PG, "neutral")}:         Insegni a barare anche a me?
+
+            + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                Ho una idea!
                     
-            + \ {charTag(PG, "neutral")}:         Tua nonna sembra una tipa forte!
+            + \ {charTag(PG, "neutral")}:         Fire
                     -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                "Forte"?
-                
-            + \ {charTag(PG, "neutral")}:         Ti manca casa? Vorresti tornare?
+        
+            + \ {charTag(PG, "neutral")}:         Water
                     -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                Sì no boh.
                 
-                
-            + \ {charTag(PG, "neutral")}:         Quando i grandi hanno paura, fanno cose cattive.
+            + \ {charTag(PG, "neutral")}:         Aether
                     -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                Papà dice che i grandi non hanno paura.
             -
 
-        Mi spiace, {player_name}.
-
-        - 
-
-            
             -> third_char_closing_storylet ->
             -> options_third_character
     
@@ -262,32 +183,25 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-        Prima, con {mentorName}.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+        {charTag(ThirdCharacter, "neutral")}:       Frase
        
-            + \ {charTag(PG, "neutral")}:         È provato che anche i maschi piangono, e pure gli orsi e gli elefanti.
+            + \ {charTag(PG, "neutral")}:         Air
                     -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                Gli orsi mi piacciono.
                     
-            + \ {charTag(PG, "neutral")}:         La scuola è un posto senza fantasia!
+            + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                Sì no boh.
+
                     
-            + \ {charTag(PG, "neutral")}:         Stringi i denti, lotta, diventa più forte degli altri!
+            + \ {charTag(PG, "neutral")}:         Fire
                     -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                Lo dice anche papà.
 
-            + \ {charTag(PG, "neutral")}:         A me spiace per te, sai?
+            + \ {charTag(PG, "neutral")}:         Water
                     -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                Sì no boh.
 
-            + \ {charTag(PG, "neutral")}:         Hai mai imparato davvero qualcosa dai castighi?
+            + \ {charTag(PG, "neutral")}:        Aether
                     -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                A non farmi scoprire.  
         - 
 
-        Comunque qui non c'è la scuola e quindi è bello.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-                    
-                  
         -> third_char_closing_storylet ->            
         -> options_third_character
     
@@ -301,36 +215,25 @@
     ~ temp mentorName = translator(mentor_ActualName)
 
         
-        Franco prima mi ha detto che tu scrivi storie.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+        {charTag(ThirdCharacter, "neutral")}:       Frase
 
             
-            + \ {charTag(PG, "neutral")}:         Obiettivamente conosci tutto degli animali.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+            + \ {charTag(PG, "neutral")}:         Air
                     -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                Tutto, sì!
 
-            + \ {charTag(PG, "neutral")}:         Hai mai corretto una giornata mettendoci vampiri o zombie?
+            + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                Sì!
                         
-            + \ {charTag(PG, "neutral")}:         Se i grandi ti picchiano devi fare squadra con gli altri!
+            + \ {charTag(PG, "neutral")}:         Fire
                     -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                Una volta ci ho provato.
 
-            + \ {charTag(PG, "neutral")}:         Grazie per la tua fiducia, per esserti confidato.
+            + \ {charTag(PG, "neutral")}:         Water
                     -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                Sì no boh.
 
-            + \ {charTag(PG, "neutral")}:         Come mai se qualcuno ti chiama non rispondi?
-                    -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                Perché se qualcuno mi chiama è arrabbiato con me.
-                    
+            + \ {charTag(PG, "neutral")}:         Aether
+                    -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->      
             -
-            Da quando sono qui però non ho riscritto nulla.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-  
 
-        - 
-
-          
         -> third_char_closing_storylet ->        
         -> options_third_character     
             
@@ -343,32 +246,24 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-        Sai che mio fratello è campione di Karate?#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+        {charTag(ThirdCharacter, "neutral")}:       Frase
 
-            + \ {charTag(PG, "neutral")}:         Obiettivamente pescare è una cosa, nuotare un'altra.
+            + \ {charTag(PG, "neutral")}:         Air
                     -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                Esatto!
 
-            + \ {charTag(PG, "neutral")}:         Le statue di tuo fratello si muovono?
+            + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                Forse quando non ci siamo?
                     
-            + \ {charTag(PG, "neutral")}:          \ {charNameTwo} mannaggia, non dare sempre ragione ai grandi!
+            + \ {charTag(PG, "neutral")}:          Fire
                     -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                Non è mica facile!
                 
-            + \ {charTag(PG, "neutral")}:         Hai chiesto all'amico di tuo fratello cosa prova per te?
+            + \ {charTag(PG, "neutral")}:         Water
                     -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                Scherzi?!?
 
-            + \ {charTag(PG, "neutral")}:         Correggere le tue bugie è stato un gesto maturo.
+            + \ {charTag(PG, "neutral")}:         Aether
                     -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                Sì no boh.
             -
 
-            Forse nello stagno posso imparare a nuotare.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-
-                
                 -> third_char_closing_storylet ->        
                 -> options_third_character 
     
@@ -381,58 +276,24 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-        Tu hai sempre voluto fare {player_pronouns has him: il riscrittore|{player_pronouns has her: la riscrittora|lə riscrittorə}} come lavoro?#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+        {charTag(ThirdCharacter, "neutral")}:       Frase
 
-            + \ {charTag(PG, "neutral")}:         Fino a poco fa non sapevo esistesse questo posto.
+            + \ {charTag(PG, "neutral")}:         Air
                     -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                Figo!
-                
                     
-            + \ {charTag(PG, "neutral")}:         Questo non è il mio lavoro. I lavori sono noiosi.
+            + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                Però ai grandi piace parlare di lavoro.
 
-            + \ {charTag(PG, "neutral")}:         Guarda che non l'ho scelto. Manco mi pagano.
+            + \ {charTag(PG, "neutral")}:         Fire
                     -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                Che fregatura.
    
-            + \ {charTag(PG, "neutral")}:         Mi è sempre piaciuto fare stare bene le persone.
+            + \ {charTag(PG, "neutral")}:         Water
                     -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                Questa è una cosa bella.
                     
-            + \ {charTag(PG, "neutral")}:         Voglio portare un grande cambiamento partendo dal piccolo.
+            + \ {charTag(PG, "neutral")}:         Aether
                     -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                E io sono piccolo.
             -
 
-            
-        I miei compagni fanno tantissime cose.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-            
-            + \ {charTag(PG, "neutral")}:         Ma crescerai comunque, non è una scelta.
-                    -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                Sì no boh.
-                    
-            + \ {charTag(PG, "neutral")}:         E se invece rimanessi sia bambino che adulto?
-                    -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                Nonna dice che è il problema di mamma.
-
-            + \ {charTag(PG, "neutral")}:         Puoi fare il ribelle e salvare gli animali!
-                    -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                Come Greta!
-
-            + \ {charTag(PG, "neutral")}:         Non ti preoccupare: hai tanto tanto tanto tempo per decidere che fare.
-                    -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                Sarà.
-
-            + \ {charTag(PG, "neutral")}:         Potresti diventare uno storico degli animali.
-                    -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                Sì sì sì!
-            -
-            
-
-        - 
-
-            
             -> third_char_closing_storylet ->
             -> options_third_character
     
@@ -444,39 +305,24 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-        Stavo ripensando a un bambino.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-            {
-                - are_two_entities_together(FirstCharacter, PG):
-                    Mai provato a suonare la batteria?
-                    Una delle ragazze della band potrebbe darti qualche lezione di sicuro!
-                    Poi papà ha un altro motivo per arrabbiarsi.
-            }        
-
-            + \ {charTag(PG, "neutral")}:         Solo gli animali non conoscono la disciplina.
+        {charTag(ThirdCharacter, "neutral")}:       Frase
+ 
+            + \ {charTag(PG, "neutral")}:         Air
                     -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                Allora sono un lupo.
 
-            + \ {charTag(PG, "neutral")}:         Immagina di picchiare i mostri invece dei compagni!
+            + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                I mostri mi piacciono.
-                    
-            + \ {charTag(PG, "neutral")}:         Tuo padre ti picchia, e tu hai imparato a picchiare.
-                    -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                NO!
 
-            + \ {charTag(PG, "neutral")}:         Nessuno merita di essere picchiato, né tu né quel bambino.
+            + \ {charTag(PG, "neutral")}:         Fire
+                    -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+
+            + \ {charTag(PG, "neutral")}:         Water
                     -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                Però se papà mi picchia c'è un motivo.
                     
-            + \ {charTag(PG, "neutral")}:         La rabbia della ragazzina ha protetto il fratello.
+            + \ {charTag(PG, "neutral")}:         Aether
                     -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                Ma chi protegge me?
             -
 
-        Essere adulti è terribile.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-        - 
-
-            
             -> third_char_closing_storylet ->
             -> options_third_character 
     
@@ -489,35 +335,23 @@
     ~ temp mentorName = translator(mentor_ActualName)
 
         
-        Quando vado da mio fratello e non c'è il suo amico, mi lascia sperimentare con le sue cose.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+        {charTag(ThirdCharacter, "neutral")}:       Frase.
    
-        
-            + \ {charTag(PG, "neutral")}:         Hai la mente da scienziato e vuoi verificare tutto.
+            + \ {charTag(PG, "neutral")}:         Air
                     -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                Lo dice anche mio fratello.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
 
-            + \ {charTag(PG, "neutral")}:         Proviamo con la lampada della biblioteca!
+            + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                Sì!#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
                 
-            + \ {charTag(PG, "neutral")}:         Sei tosto perché alla fine fai quello che ti va.
+            + \ {charTag(PG, "neutral")}:         Fire
                     -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                Sì no boh.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
                     
-            + \ {charTag(PG, "neutral")}:         Mi prometti che non mangerai nulla di strano? Non voglio tu stia male.
+            + \ {charTag(PG, "neutral")}:         Water
                     -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                Non sei mia mamma.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-         
                         
-            + \ {charTag(PG, "neutral")}:         Tuo fratello ti lascia essere te stesso.
+            + \ {charTag(PG, "neutral")}:         Aether
                     -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                Sì!#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-            -
-
-        Comunque è una fortuna che qui c'è un bambino!
-        - 
-                
-                
+            -   
                 -> third_char_closing_storylet ->
                 -> options_third_character 
     
@@ -529,31 +363,23 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-        Mi piace molto passare il tempo in biblioteca.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+        {charTag(ThirdCharacter, "neutral")}:       Frase
 
-            + \ {charTag(PG, "neutral")}:         I libri ti insegnano tante cose.
+            + \ {charTag(PG, "neutral")}:         Air
                     -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                Sì no boh.
                     
-            + \ {charTag(PG, "neutral")}:         Dobbiamo capire la lingua dei pesci così ci possiamo giocare.
+            + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                Magari è come con le pecore che fanno tanti "bee" diversi.
 
-            + \ {charTag(PG, "neutral")}:         Bimbo, tu devi cambiare casa. Stai al mare dalla nonna!
+            + \ {charTag(PG, "neutral")}:         Fire
                     -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                Mica è così facile!
 
-            + \ {charTag(PG, "neutral")}:         Vorresti che venissero anche mamma e papà?
+            + \ {charTag(PG, "neutral")}:         Water
                     -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                Sì no boh.
                 
-            + \ {charTag(PG, "neutral")}:         Ti piace insegnare le cose all'altra nonna.
+            + \ {charTag(PG, "neutral")}:         Aether
                     -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                Mi aiuta a capirle meglio.
-            -
-
         - 
 
-            
             -> third_char_closing_storylet ->
             -> options_third_character   

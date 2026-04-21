@@ -10,15 +10,13 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-Quindi {player_name}, iniziamo a cucinare assieme?
+{charTag(ThirdCharacter, "neutral")}:       Cuciniamo?
         
         + \ {charTag(PG, "neutral")}:         Sono pront{player_pronouns has him:o|{player_pronouns has her:a|ə}}!
             -> cooking_with_third_char
         
         + \ {charTag(PG, "neutral")}:         Vorrei pensarci un attimo {charNameOne}.
-            Prenditela con calma {player_name}.
-            Intanto cerco qualcosa da sgranocchiare.
-                -> main
+            -> main
  
 
 === cooking_with_third_char
@@ -67,7 +65,7 @@ Quindi {player_name}, iniziamo a cucinare assieme?
             }
             
         + \ {charTag(PG, "neutral")}:         Sai, forse preferirei cucinare più tardi.
-            Nessun problema, prenditi i tuoi tempi {player_name}.
+            {charTag(ThirdCharacter, "neutral")}:       Nessun problema, prenditi i tuoi tempi {player_name}.
                 ~ kitchen_thirdCharCookingTogetherInvite = false
                 ~ kitchen_thirdCharCookingTogetherWaiting = 0
                 ~ move_entity(ThirdCharacter, Pond)
@@ -84,167 +82,150 @@ Quindi {player_name}, iniziamo a cucinare assieme?
     ~ temp mentorName = translator(mentor_ActualName)
 
        
-        Credi abbia senso?
+        {charTag(ThirdCharacter, "neutral")}:       Frase
         
-            + \ {charTag(PG, "neutral")}:         Realisticamente, le relazioni sono compromesso e imprevedibilità.
+            + \ {charTag(PG, "neutral")}:         Aria
                 -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                Che è la roba che mi sento dire da che sono piccola.
 
                
-            + \ {charTag(PG, "neutral")}:         Tuo padre è super! Voglio anche io cose che fanno rumore!
+            + \ {charTag(PG, "neutral")}:         Terra
                 -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                Se ci fossimo incontrat3 da piccol3 avremmo fatto casino assieme.
 
-            + \ {charTag(PG, "neutral")}:         Le relazioni sono passione e uno scopo condiviso.
+            + \ {charTag(PG, "neutral")}:         Fuoco
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                Quando ero più piccola vivevo i rapporti con molta più passione.
 
-            + \ {charTag(PG, "neutral")}:         Credo molto nell'idea di cura, supporto, sostegno reciproco.
+            + \ {charTag(PG, "neutral")}:         Acqua
                 -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
                 Mi suona molto, ama.
     
-            + \ {charTag(PG, "neutral")}:         Una relazione è una foresta, una rete di infinite vite diverse.
+            + \ {charTag(PG, "neutral")}:         Spirito
                 -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                Messa così è più tipo una rete di relazioni, che non una relazione?
             -    
-        No no taglio io, non ti preoccupare, continua a mischiare.
+        {charTag(ThirdCharacter, "neutral")}:       Frase
             
             -> kitchen_moon_feedback -> 
         
 
-            + \ {charTag(PG, "neutral")}:         <i>Soffriggo dei cubetti di grano del rispetto.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeNoun = "Zuppa di grano"
                 -> glyph_modifier_variation_management(PG, earthC)->
-                Uh, credo di capire.
 
-            + \ {charTag(PG, "neutral")}:         <i>Impano delle striscioline di seitan malinconico.
+
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                 ~ kitchen_recipeNoun = "Grigliata di seitan"
                 -> glyph_modifier_variation_management(PG, waterC)->
-                Credo mi dispiaccia, vero?
                 
-            + \ {charTag(PG, "neutral")}:         <i>Sgrano dei fagioli del conflitto.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                ~ kitchen_recipeNoun = "Fagiolata"
                -> glyph_modifier_variation_management(PG, fireC)->
-               Non so se ti possa consolare, ma è una cosa comune.
+
         
-            + \ {charTag(PG, "neutral")}:         <i>Sbollento delle cimette di broccolo della fiducia.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeNoun = "Cimetta di broccolo"
                 -> glyph_modifier_variation_management(PG, aetherC)->
-                Sento anche io questa cosa.
+
     
-            + \ {charTag(PG, "neutral")}:         <i>Schiaccio degli spicchi di aglio del distacco.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                 ~ kitchen_recipeNoun = "Crema d'aglio"
-                -> glyph_modifier_variation_management(PG, earthC)->
-                Merda.
+                -> glyph_modifier_variation_management(PG, airC)->
             -  
         
-        Dove ho messo il sale?
+        {charTag(ThirdCharacter, "neutral")}:       Frase
     
-            + \ {charTag(PG, "neutral")}:         Un'amicizia non è una onlus, e se si sta male ci si divide.
+            + \ {charTag(PG, "neutral")}:        Fuoco
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                Una amicizia è anche una onlus.
+  
             
-            + \ {charTag(PG, "neutral")}:         Avevate concordato delle regole per queste situazioni?
+            + \ {charTag(PG, "neutral")}:         Aria
                 -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                Certo.
-        
-            + \ {charTag(PG, "neutral")}:         Sì: il cuore ha ferite che non si chiuderanno senza un chiarimento.
+ 
+            + \ {charTag(PG, "neutral")}:         Acqua
                 -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                Penso tanto a Luana.
+   
        
-            + \ {charTag(PG, "neutral")}:         Perché parlandole avresti tradito il gruppo? Mi son pers{player_pronouns has him:o|{player_pronouns has her:a|ə}} il nuovo "regole dell'amicizia"?
+            + \ {charTag(PG, "neutral")}:         Terra
                 -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                Ma è ovvio che.
+
              
-            + \ {charTag(PG, "neutral")}:         Cosa succederebbe se litigassero con te?
+            + \ {charTag(PG, "neutral")}:         Spirito
                 -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                In realtà è quello che è successo.
+    
             -
         
-        Buono comunque questo vino rosso.
+        {charTag(ThirdCharacter, "neutral")}:       Frase
         
-            + \ {charTag(PG, "neutral")}:         <i>Tosto del pepe dell'onestà.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeAdjective = "onesta"
                 -> glyph_modifier_variation_management(PG, earthC)->
-                Come Talco.
+    
                
-            + \ {charTag(PG, "neutral")}:         <i>Spargo della curcuma divertente.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                 ~ kitchen_recipeAdjective = "allegra"
                 -> glyph_modifier_variation_management(PG, airC)->
-                L'amicizia da balotta quindi.
+  
              
-            + \ {charTag(PG, "neutral")}:         <i>Aggiungo del cumino empatico.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                ~ kitchen_recipeAdjective = "empatica"
                -> glyph_modifier_variation_management(PG, waterC)->
-               Quel tipo di rapporto che ti fa sentire ascoltata.
+
         
-            + \ {charTag(PG, "neutral")}:         <i>Grattugio della cannella incondizionata.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeAdjective = "incondizionata"
                 -> glyph_modifier_variation_management(PG, aetherC)->
-                Posso capire, ma non mi piace tantissimo come idea.
+
     
-            + \ {charTag(PG, "neutral")}:         <i>Sminuzzo dello zenzero leale.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                 ~ kitchen_recipeAdjective = "leale"
                 -> glyph_modifier_variation_management(PG, fireC)->
-                Essere leali significa essere affidabili, vero?
             -      
         
-        Aspè, aggiungo ancora del brodino.
+        {charTag(ThirdCharacter, "neutral")}:       Frase
 
-            + \ {charTag(PG, "neutral")}:         L'avresti detto se non fossi stata ubriaca?
+            + \ {charTag(PG, "neutral")}:         Spirito
                 -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                Credo di sì.
             
-            + \ {charTag(PG, "neutral")}:         Conta quello che si fa, le parole fanno solo casino.
+            + \ {charTag(PG, "neutral")}:         Fuoco
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                Mmm.
+
             
-            + \ {charTag(PG, "neutral")}:          \ {charNameOne}, basta con "ha senso". Ha senso per voi, no?
+            + \ {charTag(PG, "neutral")}:          Terra
                 -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                Sì.
              
-            + \ {charTag(PG, "neutral")}:         Una lingua esprime ciò che la sua cultura ritiene importante.
+            + \ {charTag(PG, "neutral")}:         Aria
                 -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                Ma una lingua è una roba viva.
                    
-            + \ {charTag(PG, "neutral")}:         I sentimenti non si esauriscono se condivisi con più persone.
+            + \ {charTag(PG, "neutral")}:         Acqua
                 -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                Questo.
             -
         {
             - contentsKitchen has Bat:
-                Questo pipistrello mi sta spaventando.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-                Ma c'è da dire che da quando c'è lui in giro ci sono meno zanzare in giro!#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+                {charTag(ThirdCharacter, "neutral")}:       Questo pipistrello mi sta spaventando.
 
             - else:
-                Carini gli insetti ma vorrei non finissero nel nostro veganissimo piatto.
+                {charTag(ThirdCharacter, "neutral")}:       Carini gli insetti ma vorrei non finissero nel nostro veganissimo piatto.
         }
-        Ecco, questo coperchio ci sta perfettamente.
+
+        {charTag(ThirdCharacter, "neutral")}:       Frase
         
-            + \ {charTag(PG, "neutral")}:         <i>Verso una mestolata di brodo del terrore.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                 ~ kitchen_recipeComplement = "con brodo del terrore"
                 -> glyph_modifier_variation_management(PG, waterC)->
-                Woah, {player_name}.
                
-            + \ {charTag(PG, "neutral")}:         <i>Manteco della noce euforica.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeComplement = "con noce euforica"
                 -> glyph_modifier_variation_management(PG, earthC)->
-                Mi risuona tanto.
              
-            + \ {charTag(PG, "neutral")}:         <i>Condisco con semi dell'"io? no, no è possibile!".
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                ~ kitchen_recipeComplement = "con semi dell'<i>io? no, no è possibile!</i>"
                -> glyph_modifier_variation_management(PG, airC)->
-                Coff Coff.
         
-            + \ {charTag(PG, "neutral")}:         <i>Incorporo una cucchiata di olio delle lusinghe.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeComplement = "con olio delle lusinghe"
                 -> glyph_modifier_variation_management(PG, aetherC)->
-                Uh, a qualcuno piace quando il suo pelo viene lisciato, vero?
     
-            + \ {charTag(PG, "neutral")}:         <i>Sminuzzo una manciata di peperoncini arrapati.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                 ~ kitchen_recipeComplement = "con peperoncini arrapati"
                 -> glyph_modifier_variation_management(PG, fireC)->
-                Questa non me l'aspettavo, ma ci sta.
             -
             -> fourth_ingredient_dispatcher
             
@@ -257,157 +238,130 @@ Quindi {player_name}, iniziamo a cucinare assieme?
         ~ temp mentorName = translator(mentor_ActualName)
 
         
-        Ha senso?
+        {charTag(ThirdCharacter, "neutral")}:       Frase
         
-            + \ {charTag(PG, "neutral")}:         Non è che prima di battere un mostro lo studi, no?
+            + \ {charTag(PG, "neutral")}:         Terra
                 -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                Ehm.
              
-            + \ {charTag(PG, "neutral")}:         È l'unico senso, altrimenti perché siamo viv3?
+            + \ {charTag(PG, "neutral")}:         Fuoco
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                Sì, credo?
 
-            + \ {charTag(PG, "neutral")}:         Le parole grandi hanno anche grandi poteri.
+            + \ {charTag(PG, "neutral")}:         Spirito
                 -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                Forse tutte le prole hanno grandi poteri, non ce ne sono di grandi e piccole.
-        
-            + \ {charTag(PG, "neutral")}:         Quindi ti senti inadeguata?
+
+            + \ {charTag(PG, "neutral")}:         Acqua
                 -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                Bingo.
-            
-            + \ {charTag(PG, "neutral")}:         Razionalmente ha senso cambiare solo ciò che si capisce.
+ 
+            + \ {charTag(PG, "neutral")}:         Aria
                 -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                E quando decidi che cosa hai capito e cosa no?
             -        
         
-        Aspetta, ho visto delle forbici prima.
+        {charTag(ThirdCharacter, "neutral")}:       Frase
         
             -> kitchen_moon_feedback -> 
             
-            + \ {charTag(PG, "neutral")}:         <i>Infarino confusamente delle tagliatelle.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                 ~ kitchen_recipeNoun = "Tagliatelle"
                 -> glyph_modifier_variation_management(PG, airC)->
-                Già.
                
-            + \ {charTag(PG, "neutral")}:         <i>Stendo con decisione delle lasagne.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                 ~ kitchen_recipeNoun = "Lasagne"
                 -> glyph_modifier_variation_management(PG, fireC)->
-                Uh.
-            + \ {charTag(PG, "neutral")}:         <i>Affetto con disinteresse delle bruschette.
+
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                ~ kitchen_recipeNoun = "Bruschette"
                -> glyph_modifier_variation_management(PG, earthC)->
-               Quindi sei più del tipo "Vediamo dove andiamo?
         
-            + \ {charTag(PG, "neutral")}:         <i>Impasto furiosamente delle arancine.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                 ~ kitchen_recipeNoun = "Arancine"
-                -> glyph_modifier_variation_management(PG, fireC)->
-               Immagino che la furia sia un modo per guardare a ciò che non va ora.
+                -> glyph_modifier_variation_management(PG, waterC)->
                
-            + \ {charTag(PG, "neutral")}:         <i>Scaldo disperatamente delle tortillas.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeNoun = "Tortillas"
                 -> glyph_modifier_variation_management(PG, aetherC)->
-                È un sentimento.
             -  
        
-        Mi sa che mi metto ad affettare qualcosa intanto.
+        {charTag(ThirdCharacter, "neutral")}:       Frase
         
-            + \ {charTag(PG, "neutral")}:         Serve del metodo. Se la base non è solida, crolla tutta la casa.
+            + \ {charTag(PG, "neutral")}:         Aria
                 -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                Ma se poi quella base non la costruisce nessunə, perché si perde lo slancio, il coraggio?
             
-            + \ {charTag(PG, "neutral")}:         Dobbiamo farci meno paranoie e agire di più.
+            + \ {charTag(PG, "neutral")}:         Fuoco
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                Non so.
                
-            + \ {charTag(PG, "neutral")}:         Non ho capito molto, ma di sicuro non mi piacciono l3 poliziott3.
+            + \ {charTag(PG, "neutral")}:         Terra
                 -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                Siamo in due.
 
-            + \ {charTag(PG, "neutral")}:         Il perdono è un atto di coraggio, ci rende vulnerabili.
+            + \ {charTag(PG, "neutral")}:         Acqua
                 -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                E la soluzione per me è nella vulnerabilità.
-    
-            + \ {charTag(PG, "neutral")}:         Quello che conta è cosa fai quando ti viene detto che hai sbagliato.
+ 
+            + \ {charTag(PG, "neutral")}:         Spirito
                 -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                Mi suona molto.
             -
         
-        <i>Più gorgonzola, meno poliziott3.</i>
+        {charTag(ThirdCharacter, "neutral")}:       Frase
 
-            + \ {charTag(PG, "neutral")}:         <i>Aggiungo con convinzione delle prugne.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeAdjective = "convinte"
                 -> glyph_modifier_variation_management(PG, earthC)->
                
-            + \ {charTag(PG, "neutral")}:         <i>Spolvero con titubanza del mais.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                 ~ kitchen_recipeAdjective = "titubanti"
                 -> glyph_modifier_variation_management(PG, waterC)->
              
-            + \ {charTag(PG, "neutral")}:         <i>Affetto con autocontrollo delle zucchine.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                ~ kitchen_recipeAdjective = "disciplinate"
                -> glyph_modifier_variation_management(PG, fireC)->
         
-            + \ {charTag(PG, "neutral")}:         <i>Spremo tempestosamente del chinotto.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                 ~ kitchen_recipeAdjective = "tempestose"
                 -> glyph_modifier_variation_management(PG, airC)->
     
-            + \ {charTag(PG, "neutral")}:         <i>Sminuzzo con consapevolezza della cipolla.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeAdjective = "consapevoli"
                 -> glyph_modifier_variation_management(PG, aetherC)->
             -     
         
-        Madonna, che profumino che sta salendo.
-            + \ {charTag(PG, "neutral")}:         Il cuore è caldo quando aiutiamo le altre persone, vero?
+        {charTag(ThirdCharacter, "neutral")}:       Frase
+
+            + \ {charTag(PG, "neutral")}:           Acqua
                 -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                C'è quel momento.
 
-            + \ {charTag(PG, "neutral")}:         Quando tutto è dovere il piacere è rivoluzionario. Saggi{player_pronouns has him:o|{player_pronouns has her:a|ə}}, vero?
+            + \ {charTag(PG, "neutral")}:         Terra
                 -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                Inaspettatamente saggia.
              
-            + \ {charTag(PG, "neutral")}:         La stanchezza migliore è quella di quando hai portato un cambiamento.
+            + \ {charTag(PG, "neutral")}:         Fuoco
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                Sì.
 
-            + \ {charTag(PG, "neutral")}:         Senza distacco finisci per perdere l'obiettivo.
+            + \ {charTag(PG, "neutral")}:         Aria
                 -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                E magari faccio le cose perché mi piacciono, non perché sono utili.
 
-            + \ {charTag(PG, "neutral")}:         Non rischi di mettere il tuo piacere davanti ai bisogni di chi vuoi aiutare?
+            + \ {charTag(PG, "neutral")}:         Spirito
                 -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                Io.
             -
         
-        Ancora due minuti e ci siamo ama.
+        {charTag(ThirdCharacter, "neutral")}:       Frase
 
-            + \ {charTag(PG, "neutral")}:         <i>Trituro con gioia dell'anice stellato.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                 ~ kitchen_recipeComplement = "con anice stellato"
                 -> glyph_modifier_variation_management(PG, airC)->
-                    Gioiaaaaa!
 
-            + \ {charTag(PG, "neutral")}:         <i>Aggiungo {player_pronouns has him:pieno|{player_pronouns has her:piena|pienə}} di terrore esistenziale dell'origano.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                 ~ kitchen_recipeComplement = "con origano"
                 -> glyph_modifier_variation_management(PG, waterC)->
-                    La cosa più millennial che potessi dire, ama.
 
-            + \ {charTag(PG, "neutral")}:         <i>Sbuccio titubante della vaniglia.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                ~ kitchen_recipeComplement = "con vaniglia"
                -> glyph_modifier_variation_management(PG, earthC)->
-                    Già.
         
-            + \ {charTag(PG, "neutral")}:         <i>Tosto {player_pronouns has him:rassegnato|{player_pronouns has her:rassegnata|rassegnatə}} del coriandolo.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeComplement = "con coriandolo"
                 -> glyph_modifier_variation_management(PG, aetherC)->
-                    No no, niente rassegnazione {player_name}!
     
-            + \ {charTag(PG, "neutral")}:         <i>Caramello {player_pronouns has him:sopraffatto|{player_pronouns has her:sopraffatta|sopraffattə}} della salvia.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                 ~ kitchen_recipeComplement = "con salvia"
                 -> glyph_modifier_variation_management(PG, fireC)->
-                    Sentimento comune.
-
             -   
-
-        Che poi è una domanda stupida da farti, vero?
-
             -> fourth_ingredient_dispatcher
                 
                 
@@ -419,167 +373,135 @@ Quindi {player_name}, iniziamo a cucinare assieme?
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-        Cavolo.
+        {charTag(ThirdCharacter, "neutral")}:       Frase
 
-            + \ {charTag(PG, "neutral")}:         Ogni cosa che immagini crea nuove versioni di te.
+            + \ {charTag(PG, "neutral")}:         Spirito
                     -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                Anche se l'idea di un universo pieno di me è terrificante, la frase mi suona molto.
-               
-            + \ {charTag(PG, "neutral")}:         Creare è come viaggiare, è vedere cose inesistenti, è spet-ta-co-la-re!
+
+            + \ {charTag(PG, "neutral")}:         Terra
                     -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                Talco diceva sempre una cosa del genere.
 
-            + \ {charTag(PG, "neutral")}:         Quindi riesci a trovare parti di te che altrimenti non vedresti?
+            + \ {charTag(PG, "neutral")}:         Acqua
                     -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                Esatto.
 
-            + \ {charTag(PG, "neutral")}:         Dipende da cosa ci fai poi, con quel benessere.
+            + \ {charTag(PG, "neutral")}:         Fuoco
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                Un pisolino, vale?
 
-            + \ {charTag(PG, "neutral")}:         Immaginare plasma il cervello, per cui sì, è empiricamente sensato.
+            + \ {charTag(PG, "neutral")}:         Aria
                 -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                Ora facciamo un gioco, {player_name}.
-
             -    
-        Ciotole pulite!
+        {charTag(ThirdCharacter, "neutral")}:       Frase
 
-             -> kitchen_moon_feedback -> 
+                -> kitchen_moon_feedback -> 
 
-            + \ {charTag(PG, "neutral")}:         <i>Lesso sportivamente delle patate.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeNoun = "Patate"
                 -> glyph_modifier_variation_management(PG, earthC)->
-                Ti ci vedo a correre e scaricare il nervo.
 
-            + \ {charTag(PG, "neutral")}:         <i>Friggo con creatività delle mele.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                 ~ kitchen_recipeNoun = "Mele"
-                -> glyph_modifier_variation_management(PG, earthC)->
-                Lo sapevo!
+                -> glyph_modifier_variation_management(PG, fireC)->
 
-            + \ {charTag(PG, "neutral")}:         <i>Arrostisco scientemente delle melanzane.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                ~ kitchen_recipeNoun = "Melanzane"
                -> glyph_modifier_variation_management(PG, airC)->
-                Ennio fa qualcosa di simile.
             
-        
-            + \ {charTag(PG, "neutral")}:         <i>Griglio amichevolmente delle pesche.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                 ~ kitchen_recipeNoun = "Pesche"
                 -> glyph_modifier_variation_management(PG, waterC)->
-                Stare assieme è una cosa che cura molte ferite.
 
-            + \ {charTag(PG, "neutral")}:         <i>Abbrustolisco meditativamente delle bietole.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeNoun = "Bietole"
                 -> glyph_modifier_variation_management(PG, aetherC)->
-                Ci ho provato mille volte.
             -  
         
-        Abbasso la fiamma un attimo.
+        {charTag(ThirdCharacter, "neutral")}:       Frase
 
-            + \ {charTag(PG, "neutral")}:         Il carattere è solo una funzione del tuo cervello.
+            + \ {charTag(PG, "neutral")}:         Aria
                     -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                Questa è una bellissima notizia!
                
             + \ {charTag(PG, "neutral")}:         Sei le relazioni che hai, e per questo non potrai mai perderti.
                     -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                A volte mi rendo conto di usare frasi o modi di fare di chi voglio bene.
 
-            + \ {charTag(PG, "neutral")}:         Sono sicur{player_pronouns has him:o|{player_pronouns has her:a|ə}} che ti farai sempre tan-tis-si-me domande serie.
+            + \ {charTag(PG, "neutral")}:         Terra
                     -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                Ehm.
 
-            + \ {charTag(PG, "neutral")}:         Perdersi non è così male, potresti ritrovarti in modi inaspettati.
+            + \ {charTag(PG, "neutral")}:         Spirito
                     -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                Da piccola mi sono persa nel bosco.
 
-            + \ {charTag(PG, "neutral")}:         Sono i tuoi obiettivi a dirti chi sei, {charNameOne}!
+
+            + \ {charTag(PG, "neutral")}:         Fuoco
                     -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                La maggior parte delle volte il mio obiettivo è "non dover campare a crackers ogni fine mese".
             -
-        Che botta questo vino comunque.
+        {charTag(ThirdCharacter, "neutral")}:       Frase
 
-            + \ {charTag(PG, "neutral")}:         <i>Frullo della zucca camminando in avanti.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                 ~ kitchen_recipeAdjective = "avanzanti"
                 -> glyph_modifier_variation_management(PG, fireC)->
-               C'è anche qualcosa di bello nel sapere che si sta compiendo la propria strada, vero?
 
-            + \ {charTag(PG, "neutral")}:         <i>Pesto dell'ortica con statica soddisfazione.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeAdjective = "soddisfatte"
                 -> glyph_modifier_variation_management(PG, earthC)->
-                Vorrei sapere cosa si prova ad esser al proprio posto.
              
-            + \ {charTag(PG, "neutral")}:         <i>Schiaccio dei rapanelli girando in tondo.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                ~ kitchen_recipeAdjective = "bloccate"
                -> glyph_modifier_variation_management(PG, airC)->
-                Già.
-        
-            + \ {charTag(PG, "neutral")}:         <i>Pulisco dei finferli arretrando.
+
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                 ~ kitchen_recipeAdjective = "arretranti"
                 -> glyph_modifier_variation_management(PG, waterC)->
-                Uh.
     
-            + \ {charTag(PG, "neutral")}:         <i>Sciacquo confusamente della lattuga.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeAdjective = "confuse"
                 -> glyph_modifier_variation_management(PG, aetherC)->
-                A volte è solo questione di tempo, vero?
             -      
     
-        Il sapore è ottimo, aggiusto appena appena di sale.
+        {charTag(ThirdCharacter, "neutral")}:       Frase
 
-            + \ {charTag(PG, "neutral")}:         Tua: chi l'ha fatta la fatica, il lavoro?
+            + \ {charTag(PG, "neutral")}:         Fuoco
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                E la fatica attorno a me?
 
-            + \ {charTag(PG, "neutral")}:         Realisticamente? Tua. È tuo il punto di vista dell'opera.
+            + \ {charTag(PG, "neutral")}:         Aria
                 -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                Avrei di che ridire anche su questo.
 
-            + \ {charTag(PG, "neutral")}:         Di chi la ascolta, la legge, la guarda, creando un rapporto con te.
+            + \ {charTag(PG, "neutral")}:         Acqua
                 -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                Mmm.
 
-            + \ {charTag(PG, "neutral")}:         Dell'acqua, e delle sue infinite storie.
+            + \ {charTag(PG, "neutral")}:         Spirito
                 -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                È una bella visione.
             
-            + \ {charTag(PG, "neutral")}:         Quando giochi ti godi la compagnia, non ti chiedi di chi è chi.
+            + \ {charTag(PG, "neutral")}:         Terra
                 -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                Good point.
             -
         
-        Merda, credo di aver raggiunto dei livelli di pesantezza da record.
+        {charTag(ThirdCharacter, "neutral")}:       Frase
 
-            + \ {charTag(PG, "neutral")}:         <i>Brucio del peperoncino.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeComplement = "con peperoncino"
                 -> glyph_modifier_variation_management(PG, aetherC)->
-                Merda.
 
-            + \ {charTag(PG, "neutral")}:         <i>Spargo ovunque del cardamomo.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                 ~ kitchen_recipeComplement = "con cardamomo"
-                -> glyph_modifier_variation_management(PG, fireC)->
-                Un gesto sicuro, deciso.
+                -> glyph_modifier_variation_management(PG, waterC)->
              
-            + \ {charTag(PG, "neutral")}:         <i>Raggruppo dei chiodi di garofano.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                ~ kitchen_recipeComplement = "con chiodi di garofano"
                -> glyph_modifier_variation_management(PG, earthC)->
-                Anche a me piace condividere solo con la cerchia ristretta di am3.
-
         
-            + \ {charTag(PG, "neutral")}:         <i>Copro dello zenzero.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                 ~ kitchen_recipeComplement = "con zenzero"
                 -> glyph_modifier_variation_management(PG, fireC)->
-                Tieni le tue creature per te.
     
-            + \ {charTag(PG, "neutral")}:         <i>Non faccio nulla.
+            + \ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                 ~ kitchen_recipeComplement = "con essenza del nulla"
                 -> glyph_modifier_variation_management(PG, airC)->
-                Perdonami, do sempre per scontato che le persone creino qualcosa.
             -   
             -> fourth_ingredient_dispatcher
     
     
     //La chiusura è comune, sempre per ridurre il rischio di errori
     = fourth_ingredient_dispatcher
-    Ma {player_name}, qui a me sembra tutto pronto, non trovi?
+    {charTag(ThirdCharacter, "neutral")}:       Ma {player_name}, qui a me sembra tutto pronto, non trovi?
     
         {
             - backpack_findedGifts == (): 
@@ -600,8 +522,8 @@ Quindi {player_name}, iniziamo a cucinare assieme?
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-            {charTag(TheWitch, witch_state())}:   <i>Il giusto ingrediente renderà la ricetta di {player_name} e {charNameOne} musicale.
-            <i>E {player_name} potrebbe capire un po' meglio {charNameOne}.
+            {charTag(TheWitch, witch_state())}:     <i>Il giusto ingrediente renderà la ricetta di {player_name} e {charNameOne} musicale.
+                                                    <i>E {player_name} potrebbe capire un po' meglio {charNameOne}.
        
                 + \ {charTag(PG, "neutral")}:         <i>Aggiunto un ingrediente speciale.
                         -> grimoire_greenhouse_gifts_and_ingredient ->
@@ -620,7 +542,7 @@ Quindi {player_name}, iniziamo a cucinare assieme?
                 + \ {charTag(PG, "neutral")}:         <i>Non aggiungo altro.
                 -
                 
-            Andiamo a mangiare, ama!
+            {charTag(ThirdCharacter, "neutral")}:       Andiamo a mangiare, ama!
                 -> recipe_name_creator ->
                 -> recipe_name_storage(ThirdCharacter) ->
                 -> at_table_with_third_char
@@ -632,21 +554,21 @@ Quindi {player_name}, iniziamo a cucinare assieme?
     ~ move_entity(EatingWithThirdCharOBJ, Kitchen)
     ~ temp piatto = kitchen_tempRecipeName
     
-    È stato divertente cucinare assieme, {player_name}.
+    {charTag(ThirdCharacter, "neutral")}:       È stato divertente cucinare assieme, {player_name}.
 
         {
             -cooking_with_third_char.third_theme:
-                E non mi facevo certe domande da molto.
+                {charTag(ThirdCharacter, "neutral")}:       E non mi facevo certe domande da molto.
 
             -cooking_with_third_char.second_theme:
-                E non avevo mai pensato fino in fondo al discorso del salvare il mondo etc etc.
+                {charTag(ThirdCharacter, "neutral")}:       E non avevo mai pensato fino in fondo al discorso del salvare il mondo etc etc.
             
             -cooking_with_third_char.third_theme:
-                E discutere di creatività.
+                {charTag(ThirdCharacter, "neutral")}:       E discutere di creatività.
 
         }
-    E poi questo {piatto}!
-    Spacca, non trovi?
+    {charTag(ThirdCharacter, "neutral")}:       E poi questo {piatto}!
+    {charTag(ThirdCharacter, "neutral")}:       Spacca, non trovi?
     
         {
             - kitchen_thirdCharExtraIngredientReaction != notReaction:
@@ -689,10 +611,10 @@ Quindi {player_name}, iniziamo a cucinare assieme?
                         
                         -> kitchen_moon_feedback -> 
 
-                    Aggiungere {ingredientTranslator(kitchen_thirdCharExtraIngredient)} è stato un tocco geniale.
+                    {charTag(ThirdCharacter, "neutral")}:       Aggiungere {ingredientTranslator(kitchen_thirdCharExtraIngredient)} è stato un tocco geniale.
                     {
                         - kitchen_firstCharExtraIngredient == universalIngredient:
-                            AGGIUNGI RICORDO IMPORTANTE DI BOCCALE.
+                            {charTag(ThirdCharacter, "neutral")}:       AGGIUNGI RICORDO IMPORTANTE DI BOCCALE.
                     }
                         @animation:RewriterBook
 
@@ -707,7 +629,7 @@ Quindi {player_name}, iniziamo a cucinare assieme?
 
                         -> kitchen_moon_feedback -> 
 
-                    Aggiungere {ingredientTranslator(kitchen_thirdCharExtraIngredient)} è stata una scelta.
+                    {charTag(ThirdCharacter, "neutral")}:       Aggiungere {ingredientTranslator(kitchen_thirdCharExtraIngredient)} è stata una scelta.
         
                         -> relationship_feedback
             
@@ -721,41 +643,38 @@ Quindi {player_name}, iniziamo a cucinare assieme?
                         
                         -> kitchen_moon_feedback -> 
 
-                    L'aggiunta di {ingredientTranslator(kitchen_thirdCharExtraIngredient)} mi ha confusa.
-                        @animation:RewriterBook
-                        
+                    {charTag(ThirdCharacter, "neutral")}:       L'aggiunta di {ingredientTranslator(kitchen_thirdCharExtraIngredient)} mi ha confusa.
+          
                         -> relationship_feedback
             
     
         
     = relationship_feedback
         -> achievements_onGame_statusUpdate_GM ->
-        Comunque {player_name}, stavo pensando alla nostra conversazione qui, assieme.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-        E se basandomi solo su questa chiacchierata in cucina dovessi dire: ho appena conosciuto {player_name}, vorrei farci amicizia?
-        
+        {charTag(ThirdCharacter, "neutral")}:       Comunque {player_name}, stavo pensando alla nostra conversazione qui, assieme.
+
             -> thirdAffinityCalc ->
-            
             
             {
                 - thirdAffinityCalc == 1:
                     {
                         - thirdChar_relationshipStatus == 0:
-                            Credo che la risposta sia no.
+                            {charTag(ThirdCharacter, "neutral")}:       Credo che la risposta sia no.
                     
                         - thirdChar_relationshipStatus == 1:
-                            La risposta è sicuramente "sì".
+                            {charTag(ThirdCharacter, "neutral")}:       La risposta è sicuramente "sì".
                     }
                     
                 - thirdAffinityCalc == 2:
                     {
                         - thirdChar_relationshipStatus == 0:
-                            Credo che la risposta sia no.
+                            {charTag(ThirdCharacter, "neutral")}:       Credo che la risposta sia no.
                             
                         - thirdChar_relationshipStatus == 1:
-                            Credo che la risposta sia "{player_pronouns has him:rimandato|{player_pronouns has her:rimandata|rimandatə}} a settembre".
+                            {charTag(ThirdCharacter, "neutral")}:       Credo che la risposta sia "{player_pronouns has him:rimandato|{player_pronouns has her:rimandata|rimandatə}} a settembre".
                         
                         - thirdChar_relationshipStatus == 2:
-                             La risposta è sicuramente "sì".
+                            {charTag(ThirdCharacter, "neutral")}:       La risposta è sicuramente "sì".
                     }    
         
             }
@@ -770,11 +689,8 @@ Quindi {player_name}, iniziamo a cucinare assieme?
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-    E ora {player_name}, credo mi farò due passi.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-    Mi sento piena e soddisfatta.
-    Grazie ancora per questo tempo assieme.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-    - 
-
+    {charTag(ThirdCharacter, "neutral")}:       Frase
+    
             -> cooking_animations_off ->
                 ~ move_entity(ThirdCharacter, Pond)
                 ~ kitchen_thirdCharCookingTogetherInvite = false
@@ -814,31 +730,31 @@ Quindi {player_name}, iniziamo a cucinare assieme?
     {kitchen_thirdCharCookingTime:
 
         - 0:
-            {Voglio preparare il piatto preferito di mio padre.|Scusami {player_name}, ma sto cucinando.}#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+            {charTag(ThirdCharacter, "neutral")}:       {Voglio preparare il piatto preferito di mio padre.|Scusami {player_name}, ma sto cucinando.}
 
         - 1:
-            {Voglio preparare il piatto preferito di mio padre.|Scusami {player_name}, ma sto cucinando.}#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+            {charTag(ThirdCharacter, "neutral")}:       {Voglio preparare il piatto preferito di mio padre.|Scusami {player_name}, ma sto cucinando.}
             
         - 2:
-            {Potrei sostituire l'aneto con, uh, no, non una buona idea.|Perdonami {player_name}, ma sto cercando qualcosa che non mi avveleni.}#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+            {charTag(ThirdCharacter, "neutral")}:       {Potrei sostituire l'aneto con, uh, no, non una buona idea.|Perdonami {player_name}, ma sto cercando qualcosa che non mi avveleni.}
         
         - 3:
-            {Ricordati ragazza che cucinare non è una scusa per bere. Ma che gioia aver trovato del vinello. |Torna dopo {player_name}, devo, ehm, riflettere.}#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+            {charTag(ThirdCharacter, "neutral")}:       {Ricordati ragazza che cucinare non è una scusa per bere. Ma che gioia aver trovato del vinello. |Torna dopo {player_name}, devo, ehm, riflettere.}
             
         - 4:
-            {Quante possibilità ci sono che se caccio la mano nell'alveare della serra riesco a recuperare del miele?|{player_name}, ho un'idea stupida, torna dopo.}#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+            {charTag(ThirdCharacter, "neutral")}:       {Quante possibilità ci sono che se caccio la mano nell'alveare della serra riesco a recuperare del miele?|{player_name}, ho un'idea stupida, torna dopo.}
         
         - 5:
-            {Uh, questo sughino spacca. Mamma ne sarebbe orgogliosa.|{player_name}, ho bisogno di concentrazione, a dopo.}#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+            {charTag(ThirdCharacter, "neutral")}:       {Uh, questo sughino spacca. Mamma ne sarebbe orgogliosa.|{player_name}, ho bisogno di concentrazione, a dopo.}
     
         - 6:
-            {Sarà una buona idea avere tutti questi coltelli accessibili con il bimbo in giro in giro? Merda, stavo per tagliarmi. Forse sono io il problema, non lui.|{player_name}, faccio danni già da sola, torna tra un po'.}#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+            {charTag(ThirdCharacter, "neutral")}:       {Sarà una buona idea avere tutti questi coltelli accessibili con il bimbo in giro in giro? Merda, stavo per tagliarmi. Forse sono io il problema, non lui.|{player_name}, faccio danni già da sola, torna tra un po'.}
         
         - 7:
-            {Tocco finale, la crema di funghi. E ora lasciamo cuocere un po'. E ci beviamo un altro goccino.|{player_name}, resisti che ho quasi finito!}#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+            {charTag(ThirdCharacter, "neutral")}:       {Tocco finale, la crema di funghi. E ora lasciamo cuocere un po'. E ci beviamo un altro goccino.|{player_name}, resisti che ho quasi finito!}
         
         - else:
-            {Direi che ci siamo. Giusto la fiammata per restringere il brodo, ed è perfetta!|{player_name}, un attimo e ti lascio i fornelli, promesso.}#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+            {charTag(ThirdCharacter, "neutral")}:       {Direi che ci siamo. Giusto la fiammata per restringere il brodo, ed è perfetta!|{player_name}, un attimo e ti lascio i fornelli, promesso.}
     }
     
     -> third_char_closing_storylet ->
@@ -855,7 +771,8 @@ Quindi {player_name}, iniziamo a cucinare assieme?
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-    Cucinare da sola prima è stato un momento terapeutico.
+    {charTag(ThirdCharacter, "neutral")}:       Frase
+   
             + \ {charTag(PG, "neutral")}:         Scelta acqua
                     -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
                 
@@ -872,7 +789,7 @@ Quindi {player_name}, iniziamo a cucinare assieme?
                     -> glyph_modifier_variation_management(ThirdCharacter, airC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Scelta fuoco
+            + \ {charTag(PG, "neutral")}:              Scelta fuoco
                     -> glyph_modifier_variation_management(ThirdCharacter, fireC)-> 
                 
             -

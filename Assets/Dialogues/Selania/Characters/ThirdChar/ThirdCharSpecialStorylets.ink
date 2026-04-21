@@ -6,7 +6,7 @@
     ~ temp mentorName = translator(mentor_ActualName)
 
     //Apertura del nido
-    Dialogo in biblioteca.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+    {charTag(ThirdCharacter, "neutral")}:       Dialogo in biblioteca.
         + [Scelta blu.]
              -> glyph_modifier_variation_management(ThirdCharacter, airC)->
     
@@ -22,9 +22,9 @@
         + [Scelta verde.]
             -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
         -    
-    Ci viene aperto il nido.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
-    E poi {charNameThree} se ne va.
-    E Luna ci dice che ci ha aggiunto tre sigilli random sul libro.
+    {charTag(ThirdCharacter, "neutral")}:       Ci viene aperto il nido.
+                                                E poi {charNameThree} se ne va.
+    E {witch_actualName} ci dice che ci ha aggiunto tre sigilli random sul libro.
 
         //Chiamiamo il primo, notifichiamo, ripetiamo  
         ~ png_random_sigils_opener ()
@@ -83,7 +83,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    Racconto letto in biblioteca.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+    {charTag(ThirdCharacter, "neutral")}:       Racconto letto in biblioteca.
     A racconto scelto, cambia anche logica in Special Storylets
     Potrebbe aver senso il racconti di Maura, visto che lo percepirebbe come ostile (misandrico?)
     - 
@@ -119,7 +119,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
    
-   Tre ha visto un cane.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+   {charTag(ThirdCharacter, "neutral")}:       {charNameThree} ha visto un cane.
 
     -> third_char_closing_storylet ->
     ->->        

@@ -157,39 +157,39 @@
                                                                 Di nuovo.     
         }
 
-        Ecco... #speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        {charTag(ThirdCharacter, "neutral")}:         Ecco... 
     
         {
             - thirdChar_InkLevel == ink_empty:
-                    Che thirdo me mi tratti come un bambino.#speaker:{thirdChar_tag()} #portrait:riccio_angry
-                    Tutte le cose che dici cambiano, sono disordinate.#speaker:{thirdChar_tag()} #portrait:riccio_neutral
+                    {charTag(ThirdCharacter, "neutral")}:         Che thirdo me mi tratti come un bambino.
+                    Tutte le cose che dici cambiano, sono disordinate.
                     Come i camaleonti che sono verdi sulle foglie e bianchi sul muro.
-                    Non mi piace mica come cosa.#speaker:{thirdChar_tag()} #portrait:riccio_melanchonic
+                    Non mi piace mica come cosa.
                     Mi sa che mi hai ascoltato, ma non mi hai mica capito!
             
             
             - thirdChar_InkLevel == ink_low:
-                    Che io non ho mica capito cosa pensi.#speaker:{thirdChar_tag()} #portrait:riccio_melanchonic
+                    {charTag(ThirdCharacter, "neutral")}:         Che io non ho mica capito cosa pensi.
                     Sei come quando guardo nel terrario e non capisco se c'è l'insetto stecco o sono solo rami.
                     Magari c'hai provato a capirmi ma boh, mica ci sei {player_pronouns has him:riuscito|{player_pronouns has her:riuscita|riuscitə}}.
             
             - thirdChar_InkLevel == ink_normal:
-                    Che si vede che sei grande.#speaker:{thirdChar_tag()} #portrait:riccio_melanchonic
+                    {charTag(ThirdCharacter, "neutral")}:         Che si vede che sei grande.
                     Che a volte non è male, a volte però mi agita.
                     Mi chiedo sei mi ascolti davvero.
                     Però per lo meno ti sei {player_pronouns has him:impegnato|{player_pronouns has her:impegnata|impegnatə}}.
             
             - thirdChar_InkLevel == ink_medium:
-                    Che un po' mi fido#speaker:{thirdChar_tag()} #portrait:riccio_neutral
-                    Thirdo me non dici <i>sempre sempre sempre</i> le cose in modo preciso.
+                    {charTag(ThirdCharacter, "neutral")}:         Che un po' mi fido
+                    Secondo me non dici <i>sempre sempre sempre</i> le cose in modo preciso.
                     Sembri un po' un gatto.
                     Ma mi fido.
             
             - thirdChar_InkLevel == ink_high:
-                    Che non sei mica male per essere grande.#speaker:{thirdChar_tag()} #portrait:riccio_emotional
-                    Dici sempre le cose allo stesso modo.#speaker:{thirdChar_tag()} #portrait:riccio_neutral
+                    {charTag(ThirdCharacter, "neutral")}:         Che non sei mica male per essere grande.
+                    Dici sempre le cose allo stesso modo.
                     Come un cane che scodinzola se è felice ma abbaia se arrabbiato.
-                    E questo mi fa stare al sicuro.#speaker:{thirdChar_tag()} #portrait:riccio_emotional
+                    E questo mi fa stare al sicuro.
                     Mi dice che mi hai ascoltato, ed è una cosa bella.
         }
     

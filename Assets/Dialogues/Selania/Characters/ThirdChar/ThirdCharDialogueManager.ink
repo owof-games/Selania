@@ -64,18 +64,18 @@
             {
                 - not third_char_main_storylets.eight:
                     {shuffle:
-                        - Una volta ho salvato un bambino da un incendio e la sua mamma mi ha fatto una torta gigante.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+                        - {charTag(ThirdCharacter, "neutral")}:         Una volta ho salvato un bambino da un incendio e la sua mamma mi ha fatto una torta gigante.
 
-                        - Sai che so volare? Ma solo quando non mi vede nessuno. E quindi non mi credono.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+                        - {charTag(ThirdCharacter, "neutral")}:         Sai che so volare? Ma solo quando non mi vede nessuno. E quindi non mi credono.
 
                     }
                     -> main
 
                 - else:
                     {shuffle:
-                        - Non prendermi in giro, ma le tartarughe mi fanno paura.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+                        - {charTag(ThirdCharacter, "neutral")}:         Non prendermi in giro, ma le tartarughe mi fanno paura.
 
-                        - Franco è convinto che {mentorName} non sia di questo posto.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+                        - {charTag(ThirdCharacter, "neutral")}:         Franco è convinto che {mentorName} non sia di questo posto.
                      
                     }
                     -> main
@@ -99,10 +99,10 @@
 
         {
             - grimoire_thirdChar has grimThirdCharOne:
-                Vuoi chiedermi qualcosa {player_name}? #speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+                {charTag(ThirdCharacter, "neutral")}:         Vuoi chiedermi qualcosa {player_name}? 
 
             - else:
-                Sì? #speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+                {charTag(ThirdCharacter, "neutral")}:         Sì? 
         }
 
         ~ thirdChar_justTalked = false
@@ -110,7 +110,7 @@
         //Azioni legate alla riscrittura
             //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
             + {(grimoire_thirdChar has thirdChar_minStoryletsForRewriting) && not rewriting_proposal_third_character && grimoire_appendices hasnt grimRewritingMentor} \ {charTag(PG, "neutral")}:         Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
-                    Mi sa che {mentorName} vuole dirti qualcosa prima.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+                    {charTag(ThirdCharacter, "neutral")}:         Mi sa che {mentorName} vuole dirti qualcosa prima.
                    
                             ~ thirdChar_tutorial = true
                                 -> main
@@ -174,39 +174,39 @@
 
                 {
                     - kitchen_firstCharIsCooking:
-                        C'è già {charNameOne} che cucina qualcosa.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+                        {charTag(ThirdCharacter, "neutral")}:         C'è già {charNameOne} che cucina qualcosa.
                             ->main
 
                     - kitchen_firstCharCookingTogetherInvite:
-                        C'è già {charNameOne} che ti sta aspettando.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+                        {charTag(ThirdCharacter, "neutral")}:         C'è già {charNameOne} che ti sta aspettando.
                             ->main
 
                     - kitchen_secondCharIsCooking:
-                        C'è già {charNameTwo} che cucina qualcosa.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+                        {charTag(ThirdCharacter, "neutral")}:         C'è già {charNameTwo} che cucina qualcosa.
                             ->main
 
                     - kitchen_secondCharCookingTogetherInvite:
-                        C'è già {charNameTwo} che ti sta aspettando.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+                        {charTag(ThirdCharacter, "neutral")}:         C'è già {charNameTwo} che ti sta aspettando.
                             ->main        
 
                     - contentsKitchen has Franco:
-                        Ma la mia amica rana ti sta aspettando lì!#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+                        {charTag(ThirdCharacter, "neutral")}:         Ma la mia amica rana ti sta aspettando lì!
                             ->main
 
 
                     - kitchen_kitchenOccupied == true:
-                        Sai che ho visto il fumo salire prima? Per cui di sicuro c'è qualcuno!#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+                        {charTag(ThirdCharacter, "neutral")}:         Sai che ho visto il fumo salire prima? Per cui di sicuro c'è qualcuno!
                             ->main         
 
                     - kitchen_thirdCharCookingTogetherNumberInvite > 0:
                         {stopping:
-                            - Prima ti ho aspettato TANTISSIMO! Vado.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+                            - {charTag(ThirdCharacter, "neutral")}:         Prima ti ho aspettato TANTISSIMO! Vado.
 
-                            - Ancora? E poi non ti vedo? Vado.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+                            - {charTag(ThirdCharacter, "neutral")}:         Ancora? E poi non ti vedo? Vado.
 
-                            - Non mi piace quando mi trattano così, {player_name}. Ti aspetto per la penultima volta.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+                            - {charTag(ThirdCharacter, "neutral")}:         Non mi piace quando mi trattano così, {player_name}. Ti aspetto per la penultima volta.
 
-                            - Mmm. Vado.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+                            - {charTag(ThirdCharacter, "neutral")}:         Mmm. Vado.
                         }
                             ~ kitchen_thirdCharCookingTogetherInvite = true
                             ~ kitchen_thirdCharCookingTogetherNumberInvite ++
@@ -215,7 +215,7 @@
                                 ->main
 
                     - else:
-                        Yeah! Ci vediamo in cucina!#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:boccale_judgmental
+                        {charTag(ThirdCharacter, "neutral")}:         Yeah! Ci vediamo in cucina!
                             ~ move_entity(ThirdCharacter, Kitchen)
                             ~ kitchen_thirdCharCookingTogetherInvite = true
                             ~ kitchen_thirdCharCookingTogetherNumberInvite ++

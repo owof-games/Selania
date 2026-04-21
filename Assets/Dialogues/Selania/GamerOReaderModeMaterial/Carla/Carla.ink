@@ -9,41 +9,41 @@
         - (top)
 
         //Tutorial gameplay
-        + {tutorial_CarlaDiscoveredTutorials has tutorialChoicesRelationship} \ {charTag(PG, "neutral")}:         Mi rispiegherebbe la faccenda delle scelte e delle relazioni?
+        + {tutorial_CarlaDiscoveredTutorials has tutorialChoicesRelationship} \ {charTag(PG, "neutral")}:               Mi rispiegherebbe la faccenda delle scelte e delle relazioni?
                 -> tutorial_carlaChoicesRelationshipStorylet -> questions_Carla.top
 
-        + {tutorial_CarlaDiscoveredTutorials has tutorialRereading} \ {charTag(PG, "neutral")}:         Com'era quella cosa della riscrittura?
+        + {tutorial_CarlaDiscoveredTutorials has tutorialRereading} \ {charTag(PG, "neutral")}:                         Com'era quella cosa della riscrittura?
                 -> tutorial_carlaRereadingStorylet -> questions_Carla.top
 
         //Tutorial legati ai luoghi
-        + {tutorial_CarlaDiscoveredTutorials has tutorialGreenhouse} \ {charTag(PG, "neutral")}:         Com'è che si collegavano piante, doni e inchiostro?
+        + {tutorial_CarlaDiscoveredTutorials has tutorialGreenhouse} \ {charTag(PG, "neutral")}:                        Com'è che si collegavano piante, doni e inchiostro?
                 -> tutorial_carlaGreenhouseGiftsInkStorylet -> questions_Carla.top
 
-        + {tutorial_CarlaDiscoveredTutorials has tutorialKitchen} \ {charTag(PG, "neutral")}:         Ho bisogno che mi rispieghi la faccenda della cucina.
+        + {tutorial_CarlaDiscoveredTutorials has tutorialKitchen} \ {charTag(PG, "neutral")}:                           Ho bisogno che mi rispieghi la faccenda della cucina.
                 -> tutorial_carlaKitchenStorylet -> questions_Carla.top
 
-        + {tutorial_CarlaDiscoveredTutorials has tutorialNest} \ {charTag(PG, "neutral")}:         Quindi, con quelle pietre sulla spiaggia che ci devo fare?
+        + {tutorial_CarlaDiscoveredTutorials has tutorialNest} \ {charTag(PG, "neutral")}:                              Quindi, con quelle pietre sulla spiaggia che ci devo fare?
                 -> tutorial_carlaNestStorylet -> questions_Carla.top
 
-        + {tutorial_CarlaDiscoveredTutorials has tutorialSigils} \ {charTag(PG, "neutral")}:         Mi ridice come si utilizzano i sigilli?
+        + {tutorial_CarlaDiscoveredTutorials has tutorialSigils} \ {charTag(PG, "neutral")}:                            Mi ridirebbe come si utilizzano i sigilli?
                 -> tutorial_carlaSigilsActivationStorylet -> questions_Carla.top             
 
         //Tutorial UI
-        + {tutorial_CarlaDiscoveredTutorials has tutorialGrimoire} \ {charTag(PG, "neutral")}:         Un ripassino sulle funzioni del Grimorio?
+        + {tutorial_CarlaDiscoveredTutorials has tutorialGrimoire} \ {charTag(PG, "neutral")}:                          Un ripassino sulle funzioni del Grimorio?
                 -> tutorial_carlaGrimoireStorylet -> questions_Carla.top
 
-        + \ {charTag(PG, "neutral")}:         Come interagisco col mondo?
+        + \ {charTag(PG, "neutral")}:                                                                                   Come dovrei interagire col mondo?
                 -> tutorial_carlaInterfaceStorylets -> questions_Carla.top
 
-        + {!debug_stochastic} \ {charTag(PG, "neutral")}:         Grimorio (solo per test ink!)
+        + {!debug_stochastic} \ {charTag(PG, "neutral")}:                                                               Grimorio (solo per test ink!)
                 -> grimoire -> questions_Carla.top     
 
-        + {!debug_stochastic} \ {charTag(PG, "neutral")}:         Mi sbloccherebbe tutti i sigilli?
+        + {!debug_stochastic} \ {charTag(PG, "neutral")}:                                                               Mi sbloccherebbe tutti i sigilli?
                 -> glyph_open_all_sigils ->
                 Fatto.
                 -> questions_Carla.top
         
-        + {!debug_stochastic}\ {charTag(PG, "neutral")}:         Mi darebbe tutte le piante da coltivare e l'ingrediente universale?
+        + {!debug_stochastic}\ {charTag(PG, "neutral")}:                                                                Mi darebbe tutte le piante da coltivare e l'ingrediente universale?
                 ~ greenhouse_findedCultivables += greenhouse_allCultivables
                 ~ greenhouse_findedCultivables += universalIngredient
                 ~ backpack_findedGifts += greenhouse_allCultivables
@@ -53,8 +53,8 @@
                 -> questions_Carla.top
 
         //Uscita
-        + \ {charTag(PG, "neutral")}:         No, ho cambiato idea.
-                {charTag(Doggo, "bored")}:       {~ E doveva farmi perdere tempo così?|Non potevo fare la suora di clausura?|Già una più del solito, insomma.}
+        + \ {charTag(PG, "neutral")}:                                                                                   No, ho cambiato idea.
+                {charTag(Carla, "bored")}:                                                                              {~ E doveva farmi perdere tempo così?|Non potevo fare la suora di clausura?|Già una più del solito, insomma.}
                 -> main
         -
 

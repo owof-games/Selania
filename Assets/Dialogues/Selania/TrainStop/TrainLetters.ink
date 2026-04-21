@@ -320,7 +320,8 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)    
+        ~ temp mentorName = translator(mentor_ActualName)  
+
         {charTag(Documents, "writer_secondChar")}:      Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}.
         Cioè a te.
         Anche se non ho mica capito come te la mando la lettera.
@@ -655,7 +656,7 @@
         ~ temp charFifthName = translator(fifthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-        {charNameThree}: Lettere random note da parte della personaggia#speaker:{thirdChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_thirdChar
+        {charTag(Documents, "writer_fourthChar")}:      {charNameThree}: Lettere random note da parte della personaggia
         
         {
             - thirdChar_possibleStates has Riccio: 
@@ -674,7 +675,7 @@
         ~ temp charFifthName = translator(fifthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
-        {charNameThree}: Lettere random note da parte della personaggia#speaker:{thirdChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_thirdChar
+        {charTag(Documents, "writer_fourthChar")}:      {charNameThree}: Lettere random note da parte della personaggia
         
         {
             - thirdChar_possibleStates has Riccio: 
@@ -692,8 +693,7 @@
         ~ temp charFifthName = translator(fifthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
-        {charNameThree}: Lettere random note da parte della personaggia#speaker:{thirdChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_thirdChar
-        
+        {charTag(Documents, "writer_fourthChar")}:      {charNameThree}: Lettere random note da parte della personaggia
         {
             - thirdChar_possibleStates has Riccio: 
                 {charNameThree}: xy
@@ -712,7 +712,7 @@
         ~ temp charFifthName = translator(fifthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
-        {charNameThree}: Lettere random note da parte della personaggia#speaker:{thirdChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_thirdChar
+        {charTag(Documents, "writer_fifthChar")}:       {charNameThree}: Lettere random note da parte della personaggia
         
         {
             - thirdChar_possibleStates has Riccio: 
@@ -730,7 +730,7 @@
         ~ temp charFifthName = translator(fifthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
-        {charNameThree}: Lettere random note da parte della personaggia#speaker:{thirdChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_thirdChar
+        {charTag(Documents, "writer_fifthChar")}:       {charNameThree}: Lettere random note da parte della personaggia
         
         {
             - thirdChar_possibleStates has Riccio: 
@@ -748,7 +748,7 @@
         ~ temp charFifthName = translator(fifthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
-        {charNameThree}: Lettere random note da parte della personaggia#speaker:{thirdChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:writer_thirdChar
+        {charTag(Documents, "writer_fifthChar")}:       {charNameThree}: Lettere random note da parte della personaggia
         
         {
             - thirdChar_possibleStates has Riccio: 

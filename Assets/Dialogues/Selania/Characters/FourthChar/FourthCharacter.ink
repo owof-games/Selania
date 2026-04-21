@@ -32,7 +32,7 @@
 = hub
 ~ temp charNameThree = translator(fourthChar_ActualName)
 
-    {~ Ero sicura di aver visto una farfalla.|Non male questo posto, anche se casa mi manca.|Non son sicura di star capendo tutto di questo luogo.} #speaker:{fourthChar_tag()} #inkA:{ink_tag_a(fourthChar_InkLevel)} #inkB:{ink_tag_b(fourthChar_InkLevel)}  #inkC:{ink_tag_c(fourthChar_InkLevel)}  #inkD:{ink_tag_d(fourthChar_InkLevel)} #portrait:fourth_neutral
+    {charTag(FourthCharacter, "neutral")}:      {~ Ero sicura di aver visto una farfalla.|Non male questo posto, anche se casa mi manca.|Non son sicura di star capendo tutto di questo luogo.}
             + [Ti va di raccontarmi qualcosa di te?]
                 -> knowing_fourth_character
                 

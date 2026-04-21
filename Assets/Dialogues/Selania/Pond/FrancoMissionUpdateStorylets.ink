@@ -533,7 +533,7 @@
 
                                                     {
                                                         - are_two_entities_together(ThirdCharacter, PG):
-                                                            Questo posto è pieno di donne.#speaker:{thirdChar_tag()} #portrait:boccale_neutral
+                                                            {charTag(ThirdCharacter, "judgmental")}:  Questo posto è pieno di donne.
                                                                 
                                                     }
 
@@ -548,7 +548,7 @@
     ~ frog_currentMission = missionSix
 
     {charTag(Franco, "{portrait_Franco()}")}:       Non mi è ancora chiaro perché decida di stare in quella discarica.
-    {charTag(TheWitch, witch_state())}:         La discarica è un promemoria delle nostre responsabilità.
+    {charTag(TheWitch, witch_state())}:             La discarica è un promemoria delle nostre responsabilità.
     {charTag(Franco, "{portrait_Franco()}")}:       Un po' come quando Tullio mi mette i promemoria sul cellulare.
                                                     Ma poi dimentico il cellulare a casa.
                                                     Ma sono felice che hai parlato con la nostra amica comune!
