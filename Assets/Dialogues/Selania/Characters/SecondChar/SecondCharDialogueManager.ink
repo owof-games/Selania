@@ -130,7 +130,7 @@
                                 - are_two_entities_together(Mentor, PG):
                                     {charTag(Mentor, "neutral")}:           Franco è anche convinto che {charNameOne} abbia un nido sugli alberi.
                                     {charTag(SecondCharacter, "neutral")}:        Sì no boh.
-                                    Hai ragione.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+                                    {charTag(SecondCharacter, "melanchonic")}:    Hai ragione.
 
                             }
                     }
@@ -153,7 +153,7 @@
 
         {
             - grimoire_secondChar has grimSecondCharOne:
-                Vuoi chiedermi qualcosa {player_name}? #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                {charTag(SecondCharacter, "energy")}:       Vuoi chiedermi qualcosa {player_name}?
 
             - else:
                 {charTag(SecondCharacter, "neutral")}:        Sì?
@@ -204,7 +204,7 @@
                                 {    
                             
                                    - secondChar_favouritesGifts has secondChar_giftedObject:
-                                        Mi hai regalato una cosa STRA-TOS-FE-RI-CA!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                                        {charTag(SecondCharacter, "energy")}:       Mi hai regalato una cosa STRA-TOS-FE-RI-CA!
                                         Meglio delle action figures!
                                         {charTag(SecondCharacter, "emotional")}:        Grazie grazie grazie {player_name}!
 
@@ -232,7 +232,7 @@
 
                 {
                     - kitchen_firstCharIsCooking:
-                        C'è già {charNameOne} che cucina qualcosa. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:riccio_energy
+                        {charTag(SecondCharacter, "energy")}:       C'è già {charNameOne} che cucina qualcosa. 
                             ->main
 
                     - kitchen_firstCharCookingTogetherInvite:
@@ -240,7 +240,7 @@
                             ->main
 
                     - kitchen_thirdCharIsCooking:
-                        C'è già {charNameThree} che cucina qualcosa. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:riccio_energy
+                        {charTag(SecondCharacter, "energy")}:       C'è già {charNameThree} che cucina qualcosa. 
                             ->main
 
                     - kitchen_thirdCharCookingTogetherInvite:
@@ -248,22 +248,22 @@
                             ->main       
 
                     - contentsKitchen has Franco:
-                        Ma la mia amica rana ti sta aspettando lì! #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
+                        {charTag(SecondCharacter, "energy")}:       Ma la mia amica rana ti sta aspettando lì!
                             ->main
 
                     - kitchen_kitchenOccupied == true:
-                        Sai che ho visto il fumo salire prima? Per cui di sicuro c'è qualcuno!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:riccio_melanchonic
+                        {charTag(SecondCharacter, "melanchonic")}:    Sai che ho visto il fumo salire prima? Per cui di sicuro c'è qualcuno!
                             ->main 
 
                     - kitchen_secondCharCookingTogetherNumberInvite > 0:
                         {stopping:
                             - {charTag(SecondCharacter, "neutral")}:        Prima ti ho aspettato TANTISSIMO! Vado.
 
-                            - Ancora? E poi non ti vedo? Vado. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:riccio_angry
+                            - {charTag(SecondCharacter, "angry")}:        Ancora? E poi non ti vedo? Vado. 
 
-                            - Non mi piace quando mi trattano così, {player_name}. Ti aspetto per la penultima volta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:riccio_angry
+                            - {charTag(SecondCharacter, "angry")}:        Non mi piace quando mi trattano così, {player_name}. Ti aspetto per la penultima volta.
 
-                            - Mmm. Vado. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:riccio_angry
+                            - {charTag(SecondCharacter, "angry")}:        Mmm. Vado. 
                         }
                             ~ kitchen_secondCharCookingTogetherInvite = true
                             ~ kitchen_secondCharCookingTogetherNumberInvite ++

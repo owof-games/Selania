@@ -4,7 +4,7 @@
     ~ temp mentorName = translator(mentor_ActualName)
 
     Quindi anche tu non ricordi come sei arrivato qui?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
-    Sì no boh.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+    {charTag(SecondCharacter, "melanchonic")}:    Sì no boh.
     {charTag(SecondCharacter, "neutral")}:        No.
         {
             - are_two_entities_together(Franco, PG):
@@ -13,9 +13,9 @@
         }
     {charTag(SecondCharacter, "neutral")}:        A un certo punto ero alla stazione.
     E avevo voglia di caramelle.
-    Ma voglio sempre le caramelle.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+    {charTag(SecondCharacter, "energy")}:       Ma voglio sempre le caramelle.
     Pensi ci abbiano rapito?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-    Sarebbe DIVERTENTISSIMO!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+    {charTag(SecondCharacter, "energy")}:       Sarebbe DIVERTENTISSIMO!
     Bimbo, dobbiamo rivedere la tua idea di divertente!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
     E poi che senso ha rapirci e lasciarci in un posto figo, così a caso?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
     
@@ -24,7 +24,7 @@
                 {charTag(Mentor, "hurry")}:             Sono felice che apprezzi questi luoghi, {charNameOne}.
         }
         
-    Io voglio capire TUTTO di questo posto. Tutto!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+    {charTag(SecondCharacter, "energy")}:       Io voglio capire TUTTO di questo posto. Tutto!
     Capire cosa si può mangiare e cosa no.
     E dove portano tutti quei posti chiusi.
     E...
@@ -35,7 +35,7 @@
     Zero.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
     {charTag(SecondCharacter, "neutral")}:        No no no.
     Che noia.
-    Forse posso arrampicarmi sugli alberi della foresta e vedere se ci sono scoiattoli!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+    {charTag(SecondCharacter, "energy")}:       Forse posso arrampicarmi sugli alberi della foresta e vedere se ci sono scoiattoli!
     E io inizio a pregare che da qualche parte ci sia un'infermeria.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
         
         {
@@ -48,7 +48,7 @@
                     ~ change_entity_place(Mentor)
         }
         
-    Tu cosa fai se ci hanno rapito gli alieni?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+    {charTag(SecondCharacter, "energy")}:       Tu cosa fai se ci hanno rapito gli alieni?
     
             + \ {charTag(PG, "neutral")}:         Dormiamo qualche giorno, siii!
                  -> glyph_modifier_variation_management(FirstCharacter, earthC)->
@@ -60,19 +60,19 @@
             + \ {charTag(PG, "neutral")}:         Anche io voglio studiarmi tutto!
                 -> glyph_modifier_variation_management(FirstCharacter, airC)->
                  
-                Sìì! E il nostro team batte il team SIAMO NOIOSI E DORMIAMO SEMPRE DI {charNameOne}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                {charTag(SecondCharacter, "energy")}:       Sìì! E il nostro team batte il team SIAMO NOIOSI E DORMIAMO SEMPRE DI {charNameOne}!
                 Sarò noiosa, ma tu arriverai ai quindici anni più ansioso di un pinscher, piccoletto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
 
             + \ {charTag(PG, "neutral")}:         Mi metterei a piangere {player_pronouns has him:terrorizzato|{player_pronouns has her:terrorizzata|terrorizzatə}} in un angolino.
                     -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                     
-                Come i bambini piccoli. No no no.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+                {charTag(SecondCharacter, "melanchonic")}:    Come i bambini piccoli. No no no.
                 Mi ci riconosco, totale.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
 
             + \ {charTag(PG, "neutral")}:         Mentre mi leggono la mente penso a cose assurdissime!
                 -> glyph_modifier_variation_management(FirstCharacter, fireC)->
                
-                Sarebbe divertentissimo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                {charTag(SecondCharacter, "energy")}:       Sarebbe divertentissimo!
                 Ora provo a pensare tantissimo alla cacca!
                 La mia mente è limpida e innocente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 Non come quella di un bambino, ascoltando le cose che dice il piccoletto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -100,7 +100,7 @@
     {charTag(SecondCharacter, "neutral")}:        Non hai detto "Ti devo chiedere scusa {charNameTwo}?
     Perché mica l'hai ancora fatto!
     {charTag(Mentor, "sad")}:               Sì, ma è importante che anche tu ragioni sulla tua violenza.
-    Non sono io che ti ho picchiato.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+    {charTag(SecondCharacter, "angry")}:        Non sono io che ti ho picchiato.
     {charTag(Mentor, "bored")}:             In realtà.
     {charTag(Mentor, "neutral")}:           No.
                                             Respira {mentorName}, respira.
@@ -114,7 +114,7 @@
     {charTag(Mentor, "sad")}:               Ma io.
     {charTag(SecondCharacter, "neutral")}:        I grandi chiedono sempre scusa per tutte le cose ma poi le rifanno.
     Poi piangono e chiedono scusa.
-    E poi le rifanno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+    {charTag(SecondCharacter, "angry")}:        E poi le rifanno.
     {charTag(Mentor, "hurry")}:             Ma io ci credo davvero, {charNameTwo}!
     Non ti voglio più far del male.
     {charTag(SecondCharacter, "neutral")}:        Ok.
@@ -418,9 +418,9 @@
     ~ temp mentorName = translator(mentor_ActualName)
 
     {charTag(Franco, "{portrait_Franco()}")}:       E Franco ti dice che non è vero, {charNameTwo}.
-    Ma è IM-POS-SI-BI-LE!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+    {charTag(SecondCharacter, "angry")}:        Ma è IM-POS-SI-BI-LE!
     {charTag(Franco, "{portrait_Franco()}")}:       No no no, impossibile è un bambino che sa parlare.
-    Ma io so parlare!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+    {charTag(SecondCharacter, "melanchonic")}:    Ma io so parlare!
     {charTag(Franco, "{portrait_Franco()}")}:       E sei un bambino? Dimostralo!
     {charTag(SecondCharacter, "neutral")}:        Sono basso.
     {charTag(Franco, "{portrait_Franco()}")}:       Anche io.
@@ -428,19 +428,19 @@
     {charTag(Franco, "{portrait_Franco()}")}:       Quello lo fanno i girini, non i bambini.
     {charTag(SecondCharacter, "neutral")}:        E non sono un girino?
     {charTag(Franco, "{portrait_Franco()}")}:       Hai delle braccia, i girini non le hanno.
-    Quindi sono una rana?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+    {charTag(SecondCharacter, "energy")}:       Quindi sono una rana?
     {charTag(Franco, "{portrait_Franco()}")}:       Può darsi.
     Sai fare CRAAAAAAC?
-    CRAAAAAAC!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+    {charTag(SecondCharacter, "energy")}:       CRAAAAAAC!
     {charTag(Franco, "{portrait_Franco()}")}:       E sai saltare?
-    Sìì!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+    {charTag(SecondCharacter, "energy")}:       Sìì!
     {charTag(Franco, "{portrait_Franco()}")}:       E hai uno zio che si chiama Gracco?
-    No.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+    {charTag(SecondCharacter, "melanchonic")}:    No.
     {charTag(Franco, "{portrait_Franco()}")}:       Forse però non è così importante.
     Quindi sì: non sei un bambino, sei una rana!
     E sai nuotare?
     {charTag(SecondCharacter, "neutral")}:        Sì no boh.
-    No.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+    {charTag(SecondCharacter, "melanchonic")}:    No.
    {charTag(Franco, "{portrait_Franco()}")}:       Visto?
     Come ti dicevo prima: le rane non sanno nuotare.
     Logico, no?

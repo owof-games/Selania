@@ -228,20 +228,20 @@
     
         {
             - secondChar_InkLevel == ink_empty:
-                    Che secondo me mi tratti come un bambino.#speaker:{secondChar_tag()} #portrait:riccio_angry
+                    {charTag(SecondCharacter, "angry")}:        Che secondo me mi tratti come un bambino.
                     {charTag(SecondCharacter, "neutral")}:        Tutte le cose che dici cambiano, sono disordinate.
                     Come i camaleonti che sono verdi sulle foglie e bianchi sul muro.
-                    Non mi piace mica come cosa.#speaker:{secondChar_tag()} #portrait:riccio_melanchonic
+                    {charTag(SecondCharacter, "melanchonic")}:    Non mi piace mica come cosa.
                     Mi sa che mi hai ascoltato, ma non mi hai mica capito!
             
             
             - secondChar_InkLevel == ink_low:
-                    Che io non ho mica capito cosa pensi.#speaker:{secondChar_tag()} #portrait:riccio_melanchonic
+                    {charTag(SecondCharacter, "melanchonic")}:    Che io non ho mica capito cosa pensi.
                     Sei come quando guardo nel terrario e non capisco se c'è l'insetto stecco o sono solo rami.
                     Magari c'hai provato a capirmi ma boh, mica ci sei {player_pronouns has him:riuscito|{player_pronouns has her:riuscita|riuscitə}}.
             
             - secondChar_InkLevel == ink_normal:
-                    Che si vede che sei grande.#speaker:{secondChar_tag()} #portrait:riccio_melanchonic
+                    {charTag(SecondCharacter, "melanchonic")}:    Che si vede che sei grande.
                     Che a volte non è male, a volte però mi agita.
                     Mi chiedo sei mi ascolti davvero.
                     Però per lo meno ti sei {player_pronouns has him:impegnato|{player_pronouns has her:impegnata|impegnatə}}.

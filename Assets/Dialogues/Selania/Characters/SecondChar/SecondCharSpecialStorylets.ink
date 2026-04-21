@@ -5,7 +5,7 @@
         {not_talk: 
         
             - 1: 
-                Io ODIO {not tutorial_mentorTalkingChoiceRelationship:quella strega coi petali| {mentorName}}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+                {charTag(SecondCharacter, "angry")}:        Io ODIO {not tutorial_mentorTalkingChoiceRelationship:quella strega coi petali| {mentorName}}!
                 E non ci parlerò
                 mai
                 MAI
@@ -14,13 +14,13 @@
             
             - else: 
                 {stopping:
-                    - Non ci parlo con chi è {player_pronouns has him:amico|{player_pronouns has her:amica|amicə}} di quella là!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry   
+                    - {charTag(SecondCharacter, "angry")}:        Non ci parlo con chi è {player_pronouns has him:amico|{player_pronouns has her:amica|amicə}} di quella là!   
                     
-                    - Hai risolto le cose con quella?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry   
+                    - {charTag(SecondCharacter, "angry")}:        Hai risolto le cose con quella?   
                     
-                    - Mi ha fatto male, e tu sei qui a non fare nulla?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry   
+                    - {charTag(SecondCharacter, "angry")}:        Mi ha fatto male, e tu sei qui a non fare nulla?   
                     
-                    - Vai via!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry   
+                    - {charTag(SecondCharacter, "angry")}:        Vai via!   
                 }
                    
         }
@@ -46,20 +46,20 @@
     {charTag(SecondCharacter, "neutral")}:        Ehi {player_name}!
     Prima mi stavo annoiando tanto.
     Ma proprio taaaaaaaaaanto.
-    E ho cercato di capire cosa c'era dietro tutti quei legni.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+    {charTag(SecondCharacter, "energy")}:       E ho cercato di capire cosa c'era dietro tutti quei legni.
     Perché {mentorName} non me lo dice mica.
         {
             - are_two_entities_together(Mentor, PG):
                 {charTag(Mentor, "sad")}:               I posti chiusi sono posti pericolosi, {charNameTwo}.
                                                         E nemmeno io so cosa c'è dietro.
-                Va bene va bene va bene.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+                {charTag(SecondCharacter, "angry")}:        Va bene va bene va bene.
         }
-    C'è una cosa fighissima lì dietro.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+    {charTag(SecondCharacter, "energy")}:       C'è una cosa fighissima lì dietro.
     Prova a immaginare qual è la cosa più bella che puoi trovare.
 
         + \ {charTag(PG, "neutral")}:         Un laboratorio di chimica?
                 -> glyph_modifier_variation_management(SecondCharacter, airC)->
-            Non ci avevo pensato cavolo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+            {charTag(SecondCharacter, "energy")}:       Non ci avevo pensato cavolo!
             Magari!
             {charTag(SecondCharacter, "neutral")}:        Va bene: ho trovato la <i>seconda</i> cosa più bella che puoi trovare!
             E niente può esplodere.
@@ -67,7 +67,7 @@
     
         + \ {charTag(PG, "neutral")}:         Un campetto da calcio!
                 -> glyph_modifier_variation_management(SecondCharacter, fireC)->
-            Ma mi hai ascoltato quando ho parlato?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+            {charTag(SecondCharacter, "angry")}:        Ma mi hai ascoltato quando ho parlato?
             Ti sembro uno che gioca a calcio?!?
      
         + \ {charTag(PG, "neutral")}:         Un luogo dove meditare?
@@ -80,14 +80,14 @@
                 -> glyph_modifier_variation_management(SecondCharacter, earthC)->
             {charTag(SecondCharacter, "neutral")}:        Circa.
                                                         Non c'è un video.
-            Ma con alcuni ci puoi giocare.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+            {charTag(SecondCharacter, "energy")}:       Ma con alcuni ci puoi giocare.
             
         + \ {charTag(PG, "neutral")}:         Una camera con tutti i tuoi amici?
                 -> glyph_modifier_variation_management(SecondCharacter, waterC)->
-            Sarebbe vuota.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
-            No.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+            {charTag(SecondCharacter, "melanchonic")}:    Sarebbe vuota.
+            {charTag(SecondCharacter, "angry")}:        No.
         -
-    {player_name}: ho trovato una <b>biblioteca!</b> #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy    
+    {charTag(SecondCharacter, "energy")}:       {player_name}: ho trovato una <b>biblioteca!</b>     
     Ed è bellissima!  
         {
             - are_two_entities_together(FirstCharacter, PG):
@@ -101,7 +101,7 @@
             - are_two_entities_together(Mentor, PG):
                 {charTag(Mentor, "neutral")}:           Mi raccomando, non macchiare nulla!
         }
-    Ora sposto tutti quei legni così puoi andarci anche tu!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+    {charTag(SecondCharacter, "energy")}:       Ora sposto tutti quei legni così puoi andarci anche tu!
     Chissà se ci sono anche i manga!
 
         -> second_char_closing_storylet ->
@@ -116,15 +116,15 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    {charTag(SecondCharacter, "neutral")}:        Ehi {player_name}!
-    Prima ho letto una storia strana.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+    {charTag(SecondCharacter, "energy")}:       {charTag(SecondCharacter, "neutral")}:        Ehi {player_name}!
+    Prima ho letto una storia strana.
     {charTag(SecondCharacter, "neutral")}:        Non l'ho capita proprio tantissimo.
     {charTag(SecondCharacter, "emotional")}:        Ma quello che ho capito mi piace.
-    C'è un sassolino.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+    {charTag(SecondCharacter, "energy")}:       C'è un sassolino.
     E si ribella.
     Fa le cose che non deve fare.
     {charTag(SecondCharacter, "neutral")}:        E poi mica si ferma lì, ma aiuta altri sassolini.
-    E a una certa uno dice di tagliare la testa all'aragosta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+    {charTag(SecondCharacter, "angry")}:        E a una certa uno dice di tagliare la testa all'aragosta.
     Che non ha senso perché se era una cosa fatta dall'aragosta allora sarebbe uscita lei dalla vasca, no?
     {charTag(SecondCharacter, "neutral")}:        Tu cosa fai se ti capita una cosa del genere?
         
@@ -136,7 +136,7 @@
 
         + \ {charTag(PG, "neutral")}:         Li incollo, come dice Giracollo: i sassi devono stare fermi.
              -> glyph_modifier_variation_management(SecondCharacter, airC)->
-            Non mi piace come idea.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+            {charTag(SecondCharacter, "angry")}:        Non mi piace come idea.
             No.
             Questa è una cosa crudele.
                 {
@@ -147,7 +147,7 @@
     
         + \ {charTag(PG, "neutral")}:         Indicherei loro un paio di case da distruggere.
             -> glyph_modifier_variation_management(SecondCharacter, fireC)->
-            Uuuh, questa è cattiva!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+            {charTag(SecondCharacter, "energy")}:       Uuuh, questa è cattiva!
             Ma mi piace.
             Anche io ne ho un po'!
                 {
@@ -163,7 +163,7 @@
     
         + \ {charTag(PG, "neutral")}:         Inizierei a saltellare in giro con loro. E fare dispetti al sindaco.
             -> glyph_modifier_variation_management(SecondCharacter, earthC)->
-            Ahah sarebbe divertente!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+            {charTag(SecondCharacter, "energy")}:       Ahah sarebbe divertente!
             Così ci lanciamo contro le finestre poi!
                 {
                     - are_two_entities_together(Mentor, PG): 
@@ -174,10 +174,10 @@
             -> glyph_modifier_variation_management(SecondCharacter, waterC)->
             {charTag(SecondCharacter, "emotional")}:        Già.
             Alla fine non ha mica fatto nulla lei.
-            Non capisco perché la vogliono sgozzare.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+            {charTag(SecondCharacter, "angry")}:        Non capisco perché la vogliono sgozzare.
         -    
     {charTag(SecondCharacter, "neutral")}:        A me mi ha fatto pensare tanto tanto alla scuola.
-    Perché alla fine vogliono che ce ne stiamo fermi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+    {charTag(SecondCharacter, "angry")}:        Perché alla fine vogliono che ce ne stiamo fermi.
     E se facciamo qualcosa che non gli piace, allora qualcuno ci vuole sempre legare a terra, come i sassi al pavimento.
     E c'è sempre qualcuno che vuole punirci.
     {charTag(SecondCharacter, "neutral")}:        Ma perché secondo me i grandi non la vedono mica l'aragosta.
@@ -187,7 +187,7 @@
                                                                     O i girini.
                                                                     O l'uomo lucertola.
         }
-    Non vedono mai certi problemi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+    {charTag(SecondCharacter, "melanchonic")}:    Non vedono mai certi problemi.
     {charTag(SecondCharacter, "neutral")}:        Mi sa che dopo mi leggo qualcosa di nuovo!
     
         -> second_char_closing_storylet ->
@@ -195,9 +195,9 @@
 
 
 === dog_second_char
-    {player_name} {player_name} {player_name} {player_name} {player_name} <b>{player_name} </b>!!!speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+    {charTag(SecondCharacter, "energy")}:       {player_name} {player_name} {player_name} {player_name} {player_name} <b>{player_name} </b>!!!speaker:{secondChar_tag()}
     In giro
-    C'è#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+    {charTag(SecondCharacter, "energy")}:       C'è
     In giro
     Un
     CANEEEEE!
@@ -216,12 +216,12 @@
     }
     L'hai visto?
     {charTag(SecondCharacter, "emotional")}:        Uh, è tanto carino.
-    Mi ha abbaiato contro.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+    {charTag(SecondCharacter, "melanchonic")}:    Mi ha abbaiato contro.
     {charTag(SecondCharacter, "emotional")}:        Ma poi son stato fermo e mi ha leccato la mano.
-    Poi si è messo a guardare una lucertola.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+    {charTag(SecondCharacter, "energy")}:       Poi si è messo a guardare una lucertola.
     Ha provato a prenderla, ma ha sbattuto contro l'albero.
     {charTag(SecondCharacter, "emotional")}:        E poi si è messa a fissarmi.
-    C'è un caneeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+    {charTag(SecondCharacter, "energy")}:       C'è un caneeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee!
 
         -> second_char_closing_storylet ->
         ->->       

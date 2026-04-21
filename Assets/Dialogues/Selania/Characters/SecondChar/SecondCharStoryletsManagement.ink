@@ -10,7 +10,7 @@
             - not second_char_main_storylets.two:
                 {
                     - entity_location(PG) == Pond:
-                        C'è una cosa che voglio dirti, ma te la dico quando non sarò allo stagno. #speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                        {charTag(SecondCharacter, "energy")}:       C'è una cosa che voglio dirti, ma te la dico quando non sarò allo stagno.
                             ~ move_entity(SecondCharacter, Forest)
                                 -> main
                     

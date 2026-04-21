@@ -216,7 +216,7 @@
                                                     
         {
             - are_two_entities_together(SecondCharacter, PG):
-                Quasi però!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                {charTag(SecondCharacter, "energy")}:       Quasi però!
                 Perché io sono il più megagrande lettore della scuola!
         }
 
@@ -613,7 +613,7 @@
                                                     E tutto perché Giulio non vuole prendergli un cane.
         {
             - are_two_entities_together(SecondCharacter, PG):
-                Anche io voglio un caneeeeeeeeeeeeee!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                {charTag(SecondCharacter, "energy")}:       Anche io voglio un caneeeeeeeeeeeeee!
                 {charTag(Franco, "{portrait_Franco()}")}:       Allora sciopera coi gemelli!
         }
     {charTag(Franco, "{portrait_Franco()}")}:       Comunque è sempre colpa di Dora l'ape.
@@ -709,7 +709,7 @@
     {charTag(Franco, "{portrait_Franco()}")}:       Gli umani dovrebbero imparare a lasciarci in pace.
                                                     {
                                                         - are_two_entities_together(SecondCharacter, PG):
-                                                            Anche io?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+                                                            {charTag(SecondCharacter, "melanchonic")}:    Anche io?
                                                             {
                                                                 - grimoire_secondChar has grimSecondCharFranco:
                                                                     {charTag(Franco, "{portrait_Franco()}")}:       Ma abbiamo già detto che tu sei una rana, {charNameTwo}!

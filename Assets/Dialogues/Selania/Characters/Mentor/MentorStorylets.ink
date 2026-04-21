@@ -23,7 +23,7 @@
         Ma quella sensazione che con le tue mani puoi permettere a un altro corpo di crescere al meglio.
             {
                 - are_two_entities_together(SecondCharacter, PG): 
-                    Un po' come quando con le mie mani pasticcio con i fili elettrici!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                    {charTag(SecondCharacter, "energy")}:       Un po' come quando con le mie mani pasticcio con i fili elettrici!
             }
             {
                 - are_two_entities_together(FirstCharacter, PG): 
@@ -208,7 +208,7 @@
                                                     Devo inventarmi un modo per liberarmene!
                 {
                     - are_two_entities_together(SecondCharacter, PG):
-                            Chissà se {charNameOne} mi manderà una lettera!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                            {charTag(SecondCharacter, "energy")}:       Chissà se {charNameOne} mi manderà una lettera!
                         
                 }
                 {
@@ -317,7 +317,7 @@
             } 
             {
                 - are_two_entities_together(SecondCharacter, PG):
-                    Bleah!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+                    {charTag(SecondCharacter, "angry")}:        Bleah!
             }        
         {charTag(Mentor, "neutral")}:           Dall'uomo che poi ho sposato.
                                                 E a cui ho dedicato il resto dei miei giorni.

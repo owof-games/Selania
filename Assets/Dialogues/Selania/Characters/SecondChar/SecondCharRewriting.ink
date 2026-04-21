@@ -17,29 +17,29 @@
     ~ temp mentorName = translator(mentor_ActualName)
     ~ temp charNameOne = translator(firstChar_ActualName)
 
-        Da quando nonna è nella casa dei vecchi fa tutto schifo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+        {charTag(SecondCharacter, "melanchonic")}:    Da quando nonna è nella casa dei vecchi fa tutto schifo.
         {charTag(SecondCharacter, "neutral")}:        Papà è tornato ma litiga sempre con mamma.
-        E quando papà non c'è mamma si arrabbia con me.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+        {charTag(SecondCharacter, "angry")}:        E quando papà non c'è mamma si arrabbia con me.
         E l'unica cosa che mi dice è che devo smetterla di piangere e fare il grande.
         {charTag(SecondCharacter, "neutral")}:        Che anche se piango nonna non torna e che è in un posto migliore.
-        E a scuola le maestre sono fastidiose.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+        {charTag(SecondCharacter, "angry")}:        E a scuola le maestre sono fastidiose.
         {charTag(SecondCharacter, "neutral")}:        Dicono che sono cattivo e bugiardo e sono violento, e finisco sempre in punizione.
-        Mio fratello dice che il mondo è un posto orribile e che non si può più aggiustare.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+        {charTag(SecondCharacter, "melanchonic")}:    Mio fratello dice che il mondo è un posto orribile e che non si può più aggiustare.
         Gli animali spariranno tutti e non posso fare nulla.
         Papà dice che devo crescere, non pensare agli animali perché ora sono grande.
-        Ma i grandi fanno schifo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
-        E non voglio fare schifo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
-        E non voglio diventare grande.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+        {charTag(SecondCharacter, "angry")}:        Ma i grandi fanno schifo.
+        {charTag(SecondCharacter, "melanchonic")}:    E non voglio fare schifo.
+        {charTag(SecondCharacter, "angry")}:        E non voglio diventare grande.
         {charTag(SecondCharacter, "neutral")}:        Per questo sono venuto qui.
-        Per stare con gli animali.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
-        E non è il mio compleanno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+        {charTag(SecondCharacter, "energy")}:       Per stare con gli animali.
+        {charTag(SecondCharacter, "melanchonic")}:    E non è il mio compleanno.
         {charTag(SecondCharacter, "neutral")}:        Ma se non mi invento un motivo per le cose nessuno mi ascolta.
-        Scusa per la bugia {player_name}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+        {charTag(SecondCharacter, "melanchonic")}:    Scusa per la bugia {player_name}.
         @animation:RewriterBook
         Io voglio solo fare il bambino.
         // Invece i grandi mi dicono che mi vogliono bene.
         // Ma poi mi fanno male.
-        // E io non mi fido più di voi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+        // E io non mi fido più di voi.
 
             + \ {charTag(PG, "neutral")}:         Ti ho ascoltato, {charNameTwo}, e posso aiutarti a riscrivere la tua storia.
                 -> rewriting
@@ -55,7 +55,7 @@
             Ma stavo pensando una cosa però prima.
             {charTag(SecondCharacter, "emotional")}:        Abbiamo parlato tantissimo noi due.
             Ma davvero TANTISSSSSSIMO!
-            E sai cosa penso di te?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+            {charTag(SecondCharacter, "energy")}:       E sai cosa penso di te?
 
             //Avvio aggiornamento relazione + commento PNG + commento strega
                 -> secondAffinityCalc ->
@@ -461,18 +461,18 @@
 
             {
                 - ending.fire:
-                    Non ci avevo mai pensato, che il fatto che sono bugiardo e dispettoso può rendermi indistruttibile. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+                    {charTag(SecondCharacter, "angry")}:        Non ci avevo mai pensato, che il fatto che sono bugiardo e dispettoso può rendermi indistruttibile. 
                 
                 - ending.aether:
                     Non è che vedo sempre che anche le altre persone hanno paura.
-                    Questa cosa mi ha fatto sentire meno stupido.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+                    {charTag(SecondCharacter, "melanchonic")}:    Questa cosa mi ha fatto sentire meno stupido.
 
                 - ending.earth:
-                    Mi piace quella cosa che hai detto sulla curiosità perché è vera.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                    {charTag(SecondCharacter, "energy")}:       Mi piace quella cosa che hai detto sulla curiosità perché è vera.
                     Curioso sempre, curioso forte!
 
                 - ending.water:
-                    Io non ci avevo mica pensato che anche i miei genitori hanno paura.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+                    {charTag(SecondCharacter, "melanchonic")}:    Io non ci avevo mica pensato che anche i miei genitori hanno paura.
 
                 - ending.air:
                     {charTag(SecondCharacter, "emotional")}:        Hai detto che la mia intelligenza può fare felici le altre persone.
@@ -504,7 +504,7 @@
                         - else:
                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
-                Il mio vero nome è <b><i>{charNameTwo}</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+                {charTag(SecondCharacter, "angry")}:        Il mio vero nome è <b><i>{charNameTwo}</b></i>.
                 Combatterò la mia paura e diventerò il più forte di tutti, imbattibile!
             
             - secondChar_ActualName has Lupo:
@@ -514,10 +514,10 @@
                         - else:
                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
-                Mi chiamerò <b><i>{charNameTwo}</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+                {charTag(SecondCharacter, "angry")}:        Mi chiamerò <b><i>{charNameTwo}</b></i>.
                 {charTag(SecondCharacter, "neutral")}:        E proteggerò il mio branco.
                 Mamma, papà, nonna e mio fratello.
-                Nessuna delle persone a cui voglio bene deve più stare male.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
+                {charTag(SecondCharacter, "energy")}:       Nessuna delle persone a cui voglio bene deve più stare male.
               
             - secondChar_ActualName has Delfino:
                     {
@@ -526,7 +526,7 @@
                         - else:
                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
-                E il mio nome è <b><i>{charNameTwo}</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                {charTag(SecondCharacter, "energy")}:       E il mio nome è <b><i>{charNameTwo}</b></i>.
                 Perché tutto è un gioco.
                 {charTag(SecondCharacter, "emotional")}:        La mia fantasia e le mie bugie aiuteranno le altre persone ad avere meno paura.
                                
@@ -540,7 +540,7 @@
                     }
                 {charTag(SecondCharacter, "emotional")}:        Mi chiamerò <b><i>{charNameTwo}</b></i>.
                 E imparerò ad avere tantissimi amici.
-                Ci sentiremo meno soli!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
+                {charTag(SecondCharacter, "energy")}:       Ci sentiremo meno soli!
                 E così avremo meno paura.
                     
             - secondChar_ActualName has Corvo:
@@ -550,7 +550,7 @@
                         - else:
                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
-                Io sono <b><i>{charNameTwo}</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                {charTag(SecondCharacter, "energy")}:       Io sono <b><i>{charNameTwo}</b></i>.
                 {charTag(SecondCharacter, "neutral")}:        Sono sveglio e posso capire ciò che mi circonda!
                 {charTag(SecondCharacter, "emotional")}:        E posso cambiare le cose che mi fanno paura.
                 {charTag(SecondCharacter, "neutral")}:        Aiutare gli altri.
@@ -578,7 +578,7 @@
 
         {charTag(SecondCharacter, "neutral")}:        Voglio dirti una cosa {player_name}. 
         Su {mentorName}.
-        A me non mi sembra mica felice.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+        {charTag(SecondCharacter, "melanchonic")}:    A me non mi sembra mica felice.
         Mi ricorda mamma quando gira per casa dando consigli e dicendo cose sorridendo.
         E poi si rinchiude in camera e resta in silenzio per ore.
         {charTag(SecondCharacter, "neutral")}:        Ora fa tante cose e parla tanto.
@@ -590,7 +590,7 @@
         {
             - contentsNest hasnt fireGlyph:
             {charTag(SecondCharacter, "neutral")}:        Ah {player_name}, prima ho trovato una cosa in giro.
-            O forse l'ho rubata.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_melanchonic
+            {charTag(SecondCharacter, "melanchonic")}:    O forse l'ho rubata.
             {charTag(SecondCharacter, "neutral")}:        Ma ho pensato che magari tu ci cavi qualcosa.
             Devo iniziare a comportarmi diversamente, mi sa. 
             Vero?
@@ -619,7 +619,7 @@
                                                             Non so cosa mi aspetta.
             {charTag(SecondCharacter, "energy")}:        Spero un po' di dolci.
             {charTag(SecondCharacter, "neutral")}:        Ma te lo farò sapere, promesso!
-            Mi mancherai, sia?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+            {charTag(SecondCharacter, "melanchonic")}:    Mi mancherai, sia?
             Salutami Franco!
             E {mentorName}.
             {

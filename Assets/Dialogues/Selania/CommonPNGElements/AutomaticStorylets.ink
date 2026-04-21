@@ -35,8 +35,8 @@
     - are_two_entities_together(SecondCharacter, PG) && ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar) + LIST_COUNT(grimoire_thirdChar)) > openingLibrary_delay) && contentsForest hasnt PG && contentsKitchen hasnt PG && player_accessiblePlaces hasnt Library && openingPlacesPause <= 0:
         
             {stopping:
-                - Ehi {player_name}! Troviamoci alla foresta. Ho una cosa che devi vedere!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_energy
-                - Uffa, prima c'era una cosa più importante ma ora dobbiamo assolutamente parlare alla foresta, vieni!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                - {charTag(SecondCharacter, "energy")}:       Ehi {player_name}! Troviamoci alla foresta. Ho una cosa che devi vedere!
+                - {charTag(SecondCharacter, "energy")}:       Uffa, prima c'era una cosa più importante ma ora dobbiamo assolutamente parlare alla foresta, vieni!
                 - {charTag(SecondCharacter, "neutral")}:        Vieni alla foresta, che ti dico quella cosa importante, che non c'è mica una quarta volta vero?
                 - {charTag(SecondCharacter, "neutral")}:        Mi arrendo. Vediamoci alla foresta, ho una cosa da farti vedere.
             }

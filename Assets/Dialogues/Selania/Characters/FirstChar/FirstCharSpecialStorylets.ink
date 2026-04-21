@@ -10,7 +10,7 @@
     E immagino che anche il piccoletto avrà i suoi casini da gestire.
         {
             - are_two_entities_together(SecondCharacter, PG):
-                Non sono piccoletto!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+                {charTag(SecondCharacter, "angry")}:        Non sono piccoletto!
                 {charTag(SecondCharacter, "neutral")}:        Sono il secondo meno alto della classe!   
         }
 
@@ -59,7 +59,7 @@
                 }
                 {
                     - are_two_entities_together(SecondCharacter, PG):
-                        Sii!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                        {charTag(SecondCharacter, "energy")}:       Sii!
                         Caramelle!
                         Festeggiamo il mio compleanno!
                 }
