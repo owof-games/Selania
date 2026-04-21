@@ -466,50 +466,50 @@
                ~ change_entity_place(Mentor)
         }
 
-        {charTag(SecondCharacter, "melanchonic")}:    Mi sono ricordato ora che non ho invitato nessun amico.
-        {charTag(SecondCharacter, "melanchonic")}:    Mamma vuole che la festa sia solo per me.
-        {charTag(SecondCharacter, "energy")}:       Ma non importa, perché questo posto è PIENO di animali!
-        {charTag(SecondCharacter, "melanchonic")}:    Ma ho lasciato a casa il tablet.
-        {charTag(SecondCharacter, "energy")}:       Come faccio a capire cosa fanno?
-        Sapevi che gli uccelli vedono dieci colori?
-        DIECI! Mica solo tre come noi!
-        E che l'acso, atso, axotolottoto.
-            {
-                - are_two_entities_together(Franco, PG):
-                    {charTag(Franco, "{portrait_Franco()}")}:       Botto!
-                                                                    Risotto!
-                                                                    Cucciolotto!
-                    {charTag(SecondCharacter, "energy")}:       Franco!
-                    Così mi distraggo!
-            }
+        {charTag(SecondCharacter, "melanchonic")}:      Mi sono ricordato ora che non ho invitato nessun amico.
+        {charTag(SecondCharacter, "melanchonic")}:      Mamma vuole che la festa sia solo per me.
+        {charTag(SecondCharacter, "energy")}:           Ma non importa, perché questo posto è PIENO di animali!
+        {charTag(SecondCharacter, "melanchonic")}:      Ma ho lasciato a casa il tablet.
+        {charTag(SecondCharacter, "energy")}:           Come faccio a capire cosa fanno?
+                                                        Sapevi che gli uccelli vedono dieci colori?
+                                                        DIECI! Mica solo tre come noi!
+                                                        E che l'acso, atso, axotolottoto.
+        {
+            - are_two_entities_together(Franco, PG):
+            {charTag(Franco, "{portrait_Franco()}")}:   Botto!
+                                                        Risotto!
+                                                        Cucciolotto!
+            {charTag(SecondCharacter, "energy")}:       Franco!
+                                                        Così mi distraggo!
+        }
 
-        {charTag(SecondCharacter, "energy")}:       Sapevi che l'axolotl si fa ricrescere le braccia?
+        {charTag(SecondCharacter, "energy")}:           Sapevi che l'axolotl si fa ricrescere le braccia?
 
-            + \ {charTag(PG, "neutral")}:         Perché hai dato un calcio a {mentorName}?
+            + \ {charTag(PG, "neutral")}:               Perché hai dato un calcio a {mentorName}?
                 -> top
-            + \ {charTag(PG, "neutral")}:         <i>Lo lascio continuare.</i>
+            + \ {charTag(PG, "neutral")}:               <i>Lo lascio continuare.</i>
             -
 
-            {
-                - second_char_main_storylets.one.buffe:
-                    {charTag(SecondCharacter, "neutral")}:        E tu prima hai detto che sei qui perché è pieno di cose buffe.
-                    {charTag(SecondCharacter, "energy")}:       Vuoi sapere una cosa buffissima?
+        {
+            - second_char_main_storylets.one.buffe:
+                {charTag(SecondCharacter, "neutral")}:  E tu prima hai detto che sei qui perché è pieno di cose buffe.
+                {charTag(SecondCharacter, "energy")}:   Vuoi sapere una cosa buffissima?
 
-            }    
-        {charTag(SecondCharacter, "energy")}:       Le capre hanno dei loro accenti!
-        Non sono mica tutti dei beeeeeeeeee uguali!
-        Solo i colibrì sanno volare all'indietro!
-        {charTag(SecondCharacter, "neutral")}:        Tu sai camminare indietro? Secondo me no.
-            + \ {charTag(PG, "neutral")}:         Perché hai dato un calcio a {mentorName}?
+        }    
+        {charTag(SecondCharacter, "energy")}:           Le capre hanno dei loro accenti!
+                                                        Non sono mica tutti dei beeeeeeeeee uguali!
+                                                        Solo i colibrì sanno volare all'indietro!
+        {charTag(SecondCharacter, "neutral")}:          Tu sai camminare indietro? Secondo me no.
+            + \ {charTag(PG, "neutral")}:               Perché hai dato un calcio a {mentorName}?
                 -> top
-            + \ {charTag(PG, "neutral")}:         <i>Lo lascio continuare.</i>
+            + \ {charTag(PG, "neutral")}:               <i>Lo lascio continuare.</i>
             -
-        {charTag(SecondCharacter, "energy")}:       I nasi dei cani sotto tutti diversi, non ci sono due cani con lo stesso naso.
-        E...
-        {charTag(SecondCharacter, "melanchonic")}:    Ma mi sa che non mi stai mica ascoltando.
-        Come a scuola.
-        A scuola mi prendono in giro perché parlo solo di animali.
-        {charTag(SecondCharacter, "neutral")}:        Ma sono comunque il più bravo!
+        {charTag(SecondCharacter, "energy")}:           I nasi dei cani sotto tutti diversi, non ci sono due cani con lo stesso naso.
+                                                        E...
+        {charTag(SecondCharacter, "melanchonic")}:      Ma mi sa che non mi stai mica ascoltando.
+                                                        Come a scuola.
+                                                        A scuola mi prendono in giro perché parlo solo di animali.
+        {charTag(SecondCharacter, "neutral")}:          Ma sono comunque il più bravo!
             -> top
 
     - (top)
@@ -518,16 +518,16 @@
             + (disciplinato) \ {charTag(PG, "neutral")}:         Pensavo tu fossi più disciplinato, lucido. Che delusione.
                     -> glyph_modifier_variation_management(SecondCharacter, airC)->
                 {charTag(SecondCharacter, "angry")}:        Ehi! Mica mi chiedi perché lo fatto!
-                Vi odio.
-                Tu e lei.
-                Mi ha tirato il braccio.
-                E continuava a dire che i bambini qui
-                non
-                ci
-                devono
-                stare!
+                                                            Vi odio.
+                                                            Tu e lei.
+                                                            Mi ha tirato il braccio.
+                                                            E continuava a dire che i bambini qui
+                                                            non
+                                                            ci
+                                                            devono
+                                                            stare!
                     ~ change_entity_place(Mentor)
-                Mi ha fatto arrabbiare.
+                                                            Mi ha fatto arrabbiare.
                     
             + (scherzo) \ {charTag(PG, "neutral")}:         Non era più divertente farle uno scherzo?
                     -> glyph_modifier_variation_management(SecondCharacter, earthC)->
@@ -535,16 +535,16 @@
                             - are_two_entities_together(Mentor, PG): {charTag(Mentor, "sad")}:               Seriamente? 
                                 
                         }
-                {charTag(SecondCharacter, "neutral")}:        Perché ero arrabbiato.
-                {charTag(SecondCharacter, "angry")}:        E lei continuava a dire che i bambini qui non ci possono stare.
-                {charTag(SecondCharacter, "melanchonic")}:    Che non potevo saltare nello stagno.
-                {charTag(SecondCharacter, "neutral")}:        E mi ha messo una mano sulla spalla.
-                {charTag(SecondCharacter, "angry")}:        E a me
-                non
-                piace
-                quando
-                i grandi
-                mi toccano.
+                {charTag(SecondCharacter, "neutral")}:          Perché ero arrabbiato.
+                {charTag(SecondCharacter, "angry")}:            E lei continuava a dire che i bambini qui non ci possono stare.
+                {charTag(SecondCharacter, "melanchonic")}:      Che non potevo saltare nello stagno.
+                {charTag(SecondCharacter, "neutral")}:          E mi ha messo una mano sulla spalla.
+                {charTag(SecondCharacter, "angry")}:            E a me
+                                                                non
+                                                                piace
+                                                                quando
+                                                                i grandi
+                                                                mi toccano.
                     ~ change_entity_place(Mentor)
                     
             + (sfigati) \ {charTag(PG, "neutral")}:         Va bene difendersi, ma picchiare una così è stupido.
@@ -697,12 +697,15 @@
                 - second_char_main_storylets.four.sfigati:
                     {charTag(SecondCharacter, "angry")}:        Anche se prima mi hai chiamato sfigato.
             }
-        {charTag(SecondCharacter, "melanchonic")}:    Prima ho detto delle bugie.
-        Non è vero che mamma mi ha mandato qui.
-        Ma volevo così tanto avere un bel compleanno.
-        {charTag(SecondCharacter, "emotional")}:        Questo posto è pieno di animali!
-        {charTag(SecondCharacter, "neutral")}:        E nessuno si arrabbia con me.
-        {charTag(SecondCharacter, "angry")}:        A parte {mentorName}.
+        {charTag(SecondCharacter, "melanchonic")}:      Prima ho detto delle bugie.
+                                                        Non è vero che mamma mi ha mandato qui.
+                                                        Ma volevo così tanto avere un bel compleanno.
+                                                        Uff.
+                                                        Ora capisco perché mi chiamate {charNameTwo}
+        {charTag(SecondCharacter, "emotional")}:        Però adoro stare qui!
+                                                        Questo posto è pieno di animali!
+        {charTag(SecondCharacter, "neutral")}:          E nessuno si arrabbia con me.
+        {charTag(SecondCharacter, "angry")}:            A parte {mentorName}.
             {
                 - second_char_main_storylets.four.male:
                     {charTag(SecondCharacter, "melanchonic")}:    Ma mi spiace che c'è rimasta male prima per la spinta.
@@ -710,8 +713,6 @@
         {charTag(SecondCharacter, "neutral")}:        Ti prometto che non dirò più bugie.
         Ora però lasciami solo.
 
-
-            
             -> second_char_closing_storylet ->
             -> options_second_character
     
@@ -899,17 +900,19 @@
                 O per guardare i cartoni assieme.
                     
             -
-            {charTag(SecondCharacter, "neutral")}:        Da quando sono qui però non ho riscritto nulla.
-            Però ho provato a leccare la rana.
-            Ma mi ha chiesto di non farlo, perché poi sarei stato male.
-                {
-                    - are_two_entities_together(Franco, PG):
-                        {charTag(Franco, "{portrait_Franco()}")}:       Ho un superpotere: se mi lecchi viaggi senza spostarti.
-                                                                        Sono molto apprezzato alle feste!
-                                                                        Ma non mi piace tanto tutta la bava che mi arriva addosso.
-                                                                        Però c'è il cibo gratis!
-                        Franco, sai che sei appena diventato il mio migliore amico?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-                }
+            {charTag(SecondCharacter, "neutral")}:          Da quando sono qui però non ho riscritto nulla.
+                                                            Però so che devo riscrivere il mio nome con uno nuovo.
+            {charTag(SecondCharacter, "energy")}:           E lo inizio a sentire!
+            {charTag(SecondCharacter, "neutral")}:          Forse perché prima ho leccato Franco.
+                                                            Ma mi ha chiesto di non farlo ma più, perché poi sto male.
+            {
+                - are_two_entities_together(Franco, PG):
+                {charTag(Franco, "{portrait_Franco()}")}:       Ho un superpotere: se mi lecchi viaggi senza spostarti.
+                                                                Sono molto apprezzato alle feste!
+                                                                Ma non mi piace tanto tutta la bava che mi arriva addosso.
+                                                                Però c'è il cibo gratis!
+                Franco, sai che sei appena diventato il mio migliore amico?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+            }
 
 
             

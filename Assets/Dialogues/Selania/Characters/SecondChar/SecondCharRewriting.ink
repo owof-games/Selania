@@ -1,5 +1,3 @@
-
-
 === rewriting_proposal_second_character
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -48,6 +46,7 @@
         // Invece i grandi mi dicono che mi vogliono bene.
         // Ma poi mi fanno male.
         // E io non mi fido più di voi.
+            -> second_char_closing_storylet ->
 
             + \ {charTag(PG, "neutral")}:               Ti ho ascoltato, {charNameTwo}, e posso aiutarti a riscrivere la tua storia.
                 -> rewriting
@@ -580,7 +579,10 @@
                                                         E poi si rinchiude in camera e resta in silenzio per ore.
         {charTag(SecondCharacter, "neutral")}:          Ora fa tante cose e parla tanto.
                                                         Ma non mi sembra felice.
-            -> close
+            
+            
+        -> second_char_closing_storylet ->    
+        -> close
             
      = exit
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -637,5 +639,5 @@
 
             }
             
-        
+    -> second_char_closing_storylet ->    
     -> endingPNGstory(SecondCharacter)

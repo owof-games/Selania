@@ -307,7 +307,10 @@ VAR thirdChar_LibraryWaiting = 0
                 ~ grimoire_firstChar += grimFirstCharNewName
         }
 
-
+        {
+            - rewriting_proposal_first_character.secret_ending && grimoire_fifthChar hasnt grimMentorFirstSecretEnding:
+                ~ grimoire_fifthChar += grimMentorFirstSecretEnding
+        }
 
 
 
@@ -453,6 +456,10 @@ VAR thirdChar_LibraryWaiting = 0
                 ~ grimoire_secondChar += grimSecondCharNewName
         }
 
+        {
+            - rewriting_proposal_second_character.secret_ending && grimoire_fifthChar hasnt grimMentorSecondSecretEnding:
+                ~ grimoire_fifthChar += grimMentorSecondSecretEnding
+        }
 
 
 
@@ -595,6 +602,10 @@ VAR thirdChar_LibraryWaiting = 0
                 ~ grimoire_thirdChar += grimThirdCharNewName
         }
 
+        {
+            - rewriting_proposal_third_character.secret_ending && grimoire_fifthChar hasnt grimMentorThirdSecretEnding:
+                ~ grimoire_fifthChar += grimMentorThirdSecretEnding
+        }
 
 
 

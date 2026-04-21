@@ -23,6 +23,7 @@
         Da quando nonna è nella casa dei vecchi fa tutto schifo.
         @animation:RewriterBook
         Io voglio solo fare il bambino.
+        -> third_char_closing_storylet ->
 
             + \ {charTag(PG, "neutral")}:         Ti ho ascoltato, {charNameThree}, e posso aiutarti a riscrivere la tua storia.
                 -> rewriting
@@ -524,7 +525,8 @@
             }
 
         Voglio dirti una cosa {player_name}.
-            -> close
+        -> third_char_closing_storylet ->
+        -> close
             
      = exit
      ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -572,5 +574,5 @@
             }
         
 
-        
+        -> third_char_closing_storylet ->
         -> endingPNGstory(ThirdCharacter)
