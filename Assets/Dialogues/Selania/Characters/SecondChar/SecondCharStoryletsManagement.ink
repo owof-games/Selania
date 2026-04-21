@@ -1,7 +1,10 @@
 === knowing_second_character
-~ temp charNameTwo = translator(secondChar_ActualName)
-~ temp mentorName = translator(mentor_ActualName)
-
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
         //Qui man mano faccio avanzare i temi toccati dalla personaggia
         {
             - not second_char_main_storylets.one:

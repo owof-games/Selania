@@ -1,8 +1,11 @@
 //Storylets sul secondo personaggio
     === that_little_liar_storylet
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
         
         {
         
@@ -93,9 +96,12 @@
             -> main
     
     === addressing_violence
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 
         {
             - mentor_riccioMentoreViciniColpo:
@@ -317,6 +323,9 @@
 === about_olobino
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
         {charTag(Mentor, "bored")}:                             Ma che diavolo è successo alla serra!
@@ -345,6 +354,9 @@
 === again_about_olobino
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
         {charTag(Mentor, "neutral")}:                           Curioso, {player_name}.

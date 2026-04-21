@@ -4,9 +4,12 @@
     //Non mettere cose TW qui
     //Obiettivo: Presentare l’elemento delle bugie. Vengono dette cose sconfessate poi nella terza storia.
     //Contenuto: Compleanno, giochi
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
         
         {charTag(SecondCharacter, "energy")}:       Ma tu perché sei qui?
             
@@ -133,9 +136,12 @@
    
     = two
     //Non mettere cose TW qui
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
     ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 
         {charTag(SecondCharacter, "emotional")}:        Non sai che cosa fighissima!
         Prima ho visto una rana allo stagno.
@@ -227,9 +233,12 @@
             -> options_second_character
 
     = three
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
-        ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 
         {charTag(SecondCharacter, "energy")}:       Mica mi hai detto come ti chiami.
         {charTag(SecondCharacter, "neutral")}:        Cioè: io lo so perché me l'ha detto {charNameOne}.
@@ -266,8 +275,12 @@
                     
     	        
         	  = him_liar
-            	  ~ temp charNameTwo = translator(secondChar_ActualName)
-            	  ~ temp mentorName = translator(mentor_ActualName)
+                ~ temp charNameOne = translator(firstChar_ActualName)
+                ~ temp charNameTwo = translator(secondChar_ActualName)
+                ~ temp charNameThree = translator(thirdChar_ActualName)
+                ~ temp charNameFour = translator(fourthChar_ActualName)
+                ~ temp charNameFive = translator(fifthChar_ActualName)
+                ~ temp mentorName = translator(mentor_ActualName)
             	  
                 {charTag(SecondCharacter, "emotional")}:        Comunque sono contento che sei un maschio.
                 Le ragazze sono appiccicose.
@@ -303,8 +316,12 @@
                     -> three_continue
         	  
         	  = her_liar
-        	  ~ temp charNameTwo = translator(secondChar_ActualName)
-        	  ~ temp charNameOne = translator(firstChar_ActualName)
+                ~ temp charNameOne = translator(firstChar_ActualName)
+                ~ temp charNameTwo = translator(secondChar_ActualName)
+                ~ temp charNameThree = translator(thirdChar_ActualName)
+                ~ temp charNameFour = translator(fourthChar_ActualName)
+                ~ temp charNameFive = translator(fifthChar_ActualName)
+                ~ temp mentorName = translator(mentor_ActualName)
         	  
             	  {charTag(SecondCharacter, "neutral")}:        Ah.
             	  Sei una ragazza quindi.
@@ -326,7 +343,12 @@
         	            -> three_continue
         	  
         	  = they_liar
-        	  ~ temp charNameTwo = translator(secondChar_ActualName)
+                ~ temp charNameOne = translator(firstChar_ActualName)
+                ~ temp charNameTwo = translator(secondChar_ActualName)
+                ~ temp charNameThree = translator(thirdChar_ActualName)
+                ~ temp charNameFour = translator(fourthChar_ActualName)
+                ~ temp charNameFive = translator(fifthChar_ActualName)
+                ~ temp mentorName = translator(mentor_ActualName)
         	        {charTag(SecondCharacter, "neutral")}:        Mmm.
         	        Capito.
         	        {charTag(SecondCharacter, "emotional")}:        Anche io vorrei un pronome strano.
@@ -346,8 +368,12 @@
        
        
         = three_continue 
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp charNameOne = translator(firstChar_ActualName)
+            ~ temp charNameOne = translator(firstChar_ActualName)
+            ~ temp charNameTwo = translator(secondChar_ActualName)
+            ~ temp charNameThree = translator(thirdChar_ActualName)
+            ~ temp charNameFour = translator(fourthChar_ActualName)
+            ~ temp charNameFive = translator(fifthChar_ActualName)
+            ~ temp mentorName = translator(mentor_ActualName)
             //Definire meglio in base ai colori.
             
             + {him_liar} \ {charTag(PG, "neutral")}:         Bugia: hai detto di esser pieno di action figures.
@@ -428,9 +454,12 @@
 
     
     = four
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 
         {
             - are_two_entities_together(Mentor, PG):
@@ -569,9 +598,12 @@
         -> options_second_character
 
     = five
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
-        ~ temp charNameOne = translator(firstChar_ActualName) 
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
         ~ change_entity_place(Mentor)
 
         {charTag(SecondCharacter, "angry")}:        {mentorName} si vuole comportare come la mia nonna.
@@ -685,10 +717,12 @@
     
 
     = six
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
-        ~ temp charNameOne = translator(firstChar_ActualName)
-
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
         {charTag(SecondCharacter, "neutral")}:        Prima, con {mentorName}.
         Mi ha fatto male perché mi ha fatto pensare a scuola.
                 {
@@ -773,9 +807,12 @@
     
 
     = seven
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
             {
                 - grimoire_fifthChar hasnt grimSecondCharMentorPeace:
                 ~ change_entity_place(Mentor)
@@ -881,9 +918,12 @@
             
             
     = eight
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
     ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
             {
                 - grimoire_fifthChar hasnt grimSecondCharMentorPeace:
                 ~ change_entity_place(Mentor)
@@ -978,9 +1018,12 @@
     
     
     = nine
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
-        ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
             {
                 - grimoire_fifthChar hasnt grimSecondCharMentorPeace:
                 ~ change_entity_place(Mentor)
@@ -1158,9 +1201,12 @@
             -> options_second_character
     
     = ten
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
             {
                 - grimoire_fifthChar hasnt grimSecondCharMentorPeace:
                 ~ change_entity_place(Mentor)
@@ -1245,9 +1291,12 @@
             -> options_second_character 
     
     = eleven
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
             {
                 - grimoire_fifthChar hasnt grimSecondCharMentorPeace:
                 ~ change_entity_place(Mentor)
@@ -1346,9 +1395,12 @@
                 -> options_second_character 
     
     = twelve
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
-        ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
             {
                 - grimoire_fifthChar hasnt grimSecondCharMentorPeace:
                 ~ change_entity_place(Mentor)

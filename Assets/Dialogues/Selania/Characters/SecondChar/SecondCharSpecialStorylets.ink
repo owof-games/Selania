@@ -110,7 +110,7 @@
         
 
 === a_story_of_rebellion
-~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
