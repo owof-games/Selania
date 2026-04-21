@@ -34,7 +34,7 @@
 
             Va bene.
 
-            //Avvio aggiornamento relazione + \ {charTag(PG, "neutral")}:         commento PNG + \ {charTag(PG, "neutral")}:         commento strega
+            //Avvio aggiornamento relazione + commento PNG + commento strega
                 -> thirdAffinityCalc ->
                 
             //Vado a svuotare i contatori di colore, così son tranquilla.

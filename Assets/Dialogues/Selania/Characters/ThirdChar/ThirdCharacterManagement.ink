@@ -161,7 +161,7 @@
     
         {
             - thirdChar_InkLevel == ink_empty:
-                    {charTag(ThirdCharacter, "neutral")}:         Che thirdo me mi tratti come un bambino.
+                    {charTag(ThirdCharacter, "neutral")}:         Che secondo me mi tratti come un bambino.
                     Tutte le cose che dici cambiano, sono disordinate.
                     Come i camaleonti che sono verdi sulle foglie e bianchi sul muro.
                     Non mi piace mica come cosa.

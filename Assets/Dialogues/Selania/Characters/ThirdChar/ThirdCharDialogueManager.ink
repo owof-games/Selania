@@ -61,26 +61,15 @@
     - else:
         {
             - thirdChar_justTalked == false:
-            {
-                - not third_char_main_storylets.eight:
-                    {shuffle:
-                        - {charTag(ThirdCharacter, "neutral")}:         Una volta ho salvato un bambino da un incendio e la sua mamma mi ha fatto una torta gigante.
+            {shuffle:
 
-                        - {charTag(ThirdCharacter, "neutral")}:         Sai che so volare? Ma solo quando non mi vede nessuno. E quindi non mi credono.
+                - {charTag(ThirdCharacter, "neutral")}:         Frase
 
-                    }
-                    -> main
+                - {charTag(ThirdCharacter, "neutral")}:         Frase
 
-                - else:
-                    {shuffle:
-                        - {charTag(ThirdCharacter, "neutral")}:         Non prendermi in giro, ma le tartarughe mi fanno paura.
-
-                        - {charTag(ThirdCharacter, "neutral")}:         Franco è convinto che {mentorName} non sia di questo posto.
-                     
-                    }
-                    -> main
             }
 
+             -> main
             - else:
                 ~ thirdChar_justTalked = false
                 -> main
@@ -147,17 +136,14 @@
                             {    
                         
                                 - thirdChar_giftedObject has thirdChar_giftedObject:
-                                    Quello che mi hai dato è qualcosa di più di un regalo: è un gesto di affinità.
-                                    Mi piace stare con te, {player_name}.
+                                    {charTag(ThirdCharacter, "neutral")}:         Frase
 
                                 - thirdChar_giftedObject has thirdChar_giftedObject:
-                                    I regali mi mettono sempre in imbarazzo, sai?
-                                    Ma il tuo dono mi ha fatto sentire ascoltata.
+                                    {charTag(ThirdCharacter, "neutral")}:         Frase
 
 
                                 - else:
-                                    Non mi aspettavo un regalo.
-                                    Per cui non dovrei nemmeno esserne delusa, giusto?
+                                    {charTag(ThirdCharacter, "neutral")}:         Frase
                             }
 
                         //Commento    

@@ -1,5 +1,3 @@
-LIST nest_speakersForEwWordTag = Influenced, Other
-
 /* ---------------------------------
 
    Funzioni per la gestione del tag del nome 
@@ -159,66 +157,7 @@ LIST nest_speakersForEwWordTag = Influenced, Other
 
 }
 
-
-
-=== function thirdChar_tag
-{
-
-    - ! third_char_main_storylets.one:
-	    ~ return "???"
-    - thirdChar_ActualName == Boccale:
-	    ~ return "Boccale"
-}
-
-
-=== function fourthChar_tag
-{
-
-    - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
-	    ~ return "???"
-    - fourthChar_ActualName == Mentore:
-	    ~ return "Mentore"
-}
-
-    
-=== function PG_tag
-    {
-        - player_nameChosen == false:
-            ~ return "???"
-            
-        - else:
-            ~ return "{player_name}"
-    
-    }
-  
-  
-=== function em_state(speaker)
-//Creare esclusione per: strega, PNG, Rana, Mentore non in dialogo personale
-{speaker:
-    - Influenced:
-        {
-            //Se c'è una parola attiva
-            - glyph_actualActiveSigil != ():
-                {
-                    //E ci sono utilizzi multipli a disposizione
-                    - glyph_temporaryWordUsageCounter > 1:
-                        ~ return "{sigils_translator(glyph_actualActiveSigil)}, {glyph_temporaryWordUsageCounter} usi disponibili."
-                    
-                    //Altrimenti:
-                    - glyph_temporaryWordUsageCounter == 1:
-                        ~ return "{sigils_translator(glyph_actualActiveSigil)}, {glyph_temporaryWordUsageCounter} uso disponibile."  
-                }
-            
-            - else:
-                ~ return ""
-        
-        }
-    
-    - Other:
-        ~ return ""
-    
-}    
-    
+ 
 /* ---------------------------------
 
    Funzioni per la gestione del ritratto 

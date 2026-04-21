@@ -200,15 +200,15 @@
                 {
                 
                     - kitchen_secondCharIsCooking:
-                        {charTag(FirstCharacter, "annoyed")}:   Uh, mi sa che la cucina è occupata da {charNameTwo}, sta cucinando qualcosa di strano.
+                        {charTag(FirstCharacter, "annoyed")}:           Uh, mi sa che la cucina è occupata da {charNameTwo}, sta cucinando qualcosa di strano.
                             ->main
 
                     - kitchen_thirdCharIsCooking:
-                        {charTag(FirstCharacter, "annoyed")}:   Mi farebbe piacere ama, ma c'è {charNameThree} a fare non so cosa.
+                        {charTag(FirstCharacter, "annoyed")}:           Mi farebbe piacere ama, ma c'è {charNameThree} a fare non so cosa.
                             ->main        
 
                     - contentsKitchen has Franco:
-                        {charTag(FirstCharacter, "curious")}: C'è già una certa ranocchia che sta aspettando di cucinare con te.  
+                        {charTag(FirstCharacter, "curious")}:           C'è già una certa ranocchia che sta aspettando di cucinare con te.  
                             ->main
                             
                     - kitchen_secondCharCookingTogetherInvite:
@@ -216,11 +216,11 @@
                             ->main
 
                     - kitchen_thirdCharCookingTogetherInvite:
-                        {charTag(FirstCharacter, "affectionate")}:      Credo che {charNameThree} ti stia già aspettando, sai?
+                        {charTag(FirstCharacter, "affectionate")}:          Credo che {charNameThree} ti stia già aspettando, sai?
                             ->main
 
                     - kitchen_kitchenOccupied == true:
-                        {charTag(FirstCharacter, "curious")}: Accetterei volentieri, ma credo che ora sia occupata, {player_name}.
+                        {charTag(FirstCharacter, "curious")}:               Accetterei volentieri, ma credo che ora sia occupata, {player_name}.
                             ->main            
 
                     - kitchen_firstCharCookingTogetherNumberInvite > 0 :

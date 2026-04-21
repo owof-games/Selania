@@ -7,7 +7,9 @@
     ~ temp mentorName = translator(mentor_ActualName)
     //Le sue opinioni comunque ci fanno capire meglio il modo in cui vede il mondo e parte della sua vita fuori da qui.
     {shuffle:
-        - Cose.
+        - {charTag(ThirdCharacter, "neutral")}:         Frase
+        - {charTag(ThirdCharacter, "neutral")}:         Frase
+        - {charTag(ThirdCharacter, "neutral")}:         Frase
     }
             ~ thirdChar_pauseTalking = thirdChar_pauseDuration
             ~ thirdChar_justTalked = true
