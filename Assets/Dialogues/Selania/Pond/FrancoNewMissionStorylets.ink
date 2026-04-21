@@ -78,7 +78,7 @@
             }
             {
                 - are_two_entities_together(FirstCharacter, PG):
-                    {charTag(FirstCharacter, "curious")}:       Questa me la voglio godere tutta.#speaker:{firstChar_tag()} 
+                    {charTag(FirstCharacter, "curious")}:       Questa me la voglio godere tutta. 
             }
         {charTag(Franco, "{portrait_Franco()}")}:       E che mangia solo pesce?
                                                         E che le piace giocare?
@@ -118,7 +118,7 @@
         {charTag(Franco, "{portrait_Franco()}")}:       Ma quindi non è {charNameOne} che fa il nido sugli alberi?
             {
                 - are_two_entities_together(FirstCharacter, PG):
-                    {charTag(FirstCharacter, "curious")}:       Esatto!#speaker:{firstChar_tag()} 
+                    {charTag(FirstCharacter, "curious")}:       Esatto! 
                     E poi ululo alla luna!
                     {charTag(Franco, "{portrait_Franco()}")}:       Devo subito avvisare Euforbo!
             }
@@ -239,7 +239,7 @@
 
             {
                 - are_two_entities_together(FirstCharacter, PG):
-                    {charTag(FirstCharacter, "curious")}:       C'è un'altra persona qui in giro?#speaker:{firstChar_tag()} 
+                    {charTag(FirstCharacter, "curious")}:       C'è un'altra persona qui in giro? 
                         
             }
 

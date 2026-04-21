@@ -1060,7 +1060,7 @@
 //         Sono pronta, {player_name}. Iniziamo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         
         
-//         Prima hai detto che hai il terrore di fare una scelta.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+//         Prima hai detto che hai il terrore di fare una scelta.
             
 //             + [Qui hai accettato il tuo nuovo nome.]
 //                 -> color_variation_management(FirstCharacter, blueC)->
@@ -1113,7 +1113,7 @@
 //         = two
 //         ~ temp charNameOne = translator(firstChar_ActualName)
         
-//         Temi che le persone a cui vuoi bene si sentano tradite dalla scelta che farai.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+//         Temi che le persone a cui vuoi bene si sentano tradite dalla scelta che farai.
     
 //             + [Con Talco puoi litigare, eppure siete legatissim3.]
 //                 -> color_variation_management(FirstCharacter, redC)->
@@ -1163,7 +1163,7 @@
         
 //         = three
 //         ~ temp charNameOne = translator(firstChar_ActualName)
-//         Vedi una scelta come una strada chiusa, qualcosa da cui non poter tornare indietro.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+//         Vedi una scelta come una strada chiusa, qualcosa da cui non poter tornare indietro.
                 
 //             + [Se non tiri nessun dado, non c'è storia da far avanzare.]
 //                 -> color_variation_management(FirstCharacter, yellowC)->
@@ -1214,7 +1214,7 @@
         
 //         = four
 //         ~ temp charNameOne = translator(firstChar_ActualName)
-//             Questo posto ti ha assegnato un nome, e quel nome è Chitarra. Ma tu lo vedi come una rinuncia.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+//             Questo posto ti ha assegnato un nome, e quel nome è Chitarra. Ma tu lo vedi come una rinuncia.
     
 //             + [Giocare è bello perché puoi sempre rinunciare a farlo.]
 //                 -> color_variation_management(FirstCharacter, yellowC)->
@@ -1266,8 +1266,8 @@
         
 //             {
 //                 - firstChar_InkLevel == ink_empty:
-//                     Mi rendo conto di non aver legato molto con te, e hai tutto il diritto di non ascoltarmi. Ma dopo tutta la tua storia, vorrei darti un consiglio:#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
-//                 - else: Per questo ti dico: #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+//                     Mi rendo conto di non aver legato molto con te, e hai tutto il diritto di non ascoltarmi. Ma dopo tutta la tua storia, vorrei darti un consiglio:
+//                 - else: Per questo ti dico: 
 //             } 
         
              

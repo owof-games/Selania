@@ -9,7 +9,7 @@
         ~ temp mentorName = translator(mentor_ActualName)
 
         {charTag(FirstCharacter, "neutral")}:         Ehi, ciao!
-        {charTag(FirstCharacter, "curious")}:       Non è che hai visto in giro la versione umana di un pettirosso, tipo?#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Non è che hai visto in giro la versione umana di un pettirosso, tipo?
         Una persona rossiccia, morbidosa e che sembra sempre un po' pissata col mondo?
         {charTag(FirstCharacter, "neutral")}:         Si chiama Talco.
         E sicuro che nel caso ti ha tirato le pezze contro le AI o qualcosa su Florence and the Machine.
@@ -20,7 +20,7 @@
             + (aether)\ {charTag(PG, "neutral")}:         Ho sempre pensato che Florence fosse una strega.
                     -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                 {charTag(FirstCharacter, "affectionate")}:      Dai, palese!
-                {charTag(FirstCharacter, "curious")}:       Ha una congrega con Kate Bush e Tori Amos.#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Ha una congrega con Kate Bush e Tori Amos.
                 E passano i sabati sera a maledire gli uomini del loro passato.
                 // <i>"Women said, "We've been waiting, Waiting to meet you, it's only a matter of time"."#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             
@@ -45,7 +45,7 @@
 
             + (earth) \ {charTag(PG, "neutral")}:         Vanno bene due uccellini arancioni? Una bacheca? Dei cespugli?
                     -> glyph_modifier_variation_management(FirstCharacter, earthC)->
-                {charTag(FirstCharacter, "curious")}:       Che al mercato mio padre comprò.#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Che al mercato mio padre comprò.
                 Potremmo cavarci una band forse.
                 {charTag(FirstCharacter, "sad")}:              Ma non sono Talco.
         
@@ -67,7 +67,7 @@
         Ehi! Non è mica questo il mio nome!
         {charTag(FirstCharacter, "neutral")}:         <i>{charNameOne}</i>.
         Ma.
-        {charTag(FirstCharacter, "curious")}:       E se lo dico al contrario?#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       E se lo dico al contrario?
         {charTag(FirstCharacter, "annoyed")}:   Arratihc.
         {charTag(FirstCharacter, "neutral")}:         Uh.
         Prova tu.
@@ -104,7 +104,7 @@
                     - one.earth:
                         {charTag(FirstCharacter, "neutral")}:         Ok, allora è un po' una fissa con questi uccellini.
                 }
-                {charTag(FirstCharacter, "curious")}:       Volare potrebbe non essere male.#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Volare potrebbe non essere male.
                 Dall'alto si possono vedere molte cose.
                 {charTag(FirstCharacter, "affectionate")}:      E potrei fare la cacca in testa al mio capo.
                 
@@ -139,7 +139,7 @@
                 Trattengo.
                 Espiro.
                 {charTag(FirstCharacter, "annoyed")}:   Urlo dentro.
-                {charTag(FirstCharacter, "curious")}:       Piacere di nuovo, sono {charNameOne} anche se non è vero.#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Piacere di nuovo, sono {charNameOne} anche se non è vero.
                 Ma potrò prima o poi dire il mio nome.
             -
         
@@ -155,7 +155,7 @@
         {charTag(FirstCharacter, "annoyed")}:   Oook.
         {charTag(FirstCharacter, "neutral")}:         Ok.
         Di nuovo il fiore parlante.
-        {charTag(FirstCharacter, "curious")}:       Quindi è un trip.#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Quindi è un trip.
         {charTag(FirstCharacter, "neutral")}:         Devo idratarmi.
         Devo assolutamente idratarmi.
 
@@ -210,7 +210,7 @@
         {charTag(FirstCharacter, "neutral")}:         Mmm.
             {
                 - one.water2:
-                    {charTag(FirstCharacter, "curious")}:       Cosa mi avevi detto prima?#speaker:{firstChar_tag()} 
+                    {charTag(FirstCharacter, "curious")}:       Cosa mi avevi detto prima?
                     {charTag(FirstCharacter, "neutral")}:         Ah sì, di respirare.
                     Respira, {charNameOne}.
                     Respira.
@@ -226,7 +226,7 @@
             + \ {charTag(PG, "neutral")}:         Naa, una cosa insensata è una rana che non sa nuotare.
                     -> glyph_modifier_variation_management(FirstCharacter, earthC)->
                 {charTag(FirstCharacter, "annoyed")}:   Ehm, come scusa?
-                {charTag(FirstCharacter, "curious")}:       Uh, forse rivaluto l'idea dell'allucinazione.#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Uh, forse rivaluto l'idea dell'allucinazione.
                 {charTag(FirstCharacter, "neutral")}:         Fa che non sia come quando ho chiamato mamma ed ero strafatta.
                 No no no.
                 Non di nuovo!
@@ -245,10 +245,10 @@
                 
             + \ {charTag(PG, "neutral")}:         Un terzo delle persone odia il proprio capo, sei in buona compagnia.
                 -> glyph_modifier_variation_management(FirstCharacter, airC)->
-                {charTag(FirstCharacter, "curious")}:       Bellini i numeri.#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Bellini i numeri.
                 {charTag(FirstCharacter, "annoyed")}:   No, non è vero.
                 {charTag(FirstCharacter, "neutral")}:         Ma per farti felice: bellini i numeri.
-                {charTag(FirstCharacter, "curious")}:       Ma se è un problema di un terzo delle persone, allora bisogna fare qualcosa a monte, no?#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Ma se è un problema di un terzo delle persone, allora bisogna fare qualcosa a monte, no?
 
             + \ {charTag(PG, "neutral")}:         Ti mancano, le amiche della band?
                     -> glyph_modifier_variation_management(FirstCharacter, waterC)->
@@ -306,14 +306,14 @@
         Pensavo che niente salvasse nessunə.
         {charTag(FirstCharacter, "neutral")}:         Poi ho conosciuto Talco.
         Abbiamo iniziato il Conservatorio assieme, ma ləi l'ha lasciato dopo un anno.
-        {charTag(FirstCharacter, "curious")}:       Credo abbia litigato con tutti i professori.#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Credo abbia litigato con tutti i professori.
         E anche i tizi della reception.
         Talco non sopporta le regole che non hanno senso, e il Conservatorio ne è pieno.
         {charTag(FirstCharacter, "sad")}:              Non so se l'avevi già capito {player_name}, ma io invece sono una persona che si tira un sacco di film in testa.
         E quando ho incontrato Talco, ero bloccata in un brutto film che durava dalla fine del liceo.
         {charTag(FirstCharacter, "neutral")}:         E ləi mi ha buttato nel mondo.
         {charTag(FirstCharacter, "annoyed")}:   Non con quelle cagate tipo “cammina nel verde e vedrai che passa tutto”.
-        {charTag(FirstCharacter, "curious")}:       Ma mi ha fatto fare cose piccole che mi hanno aperto la testa.#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Ma mi ha fatto fare cose piccole che mi hanno aperto la testa.
         Come quando ci siamo stes3 in piazza per vedere come le persone reagivano.
         {charTag(FirstCharacter, "affectionate")}:      O quando abbiamo finto di intervistare persone anziane per farle sentire ascoltate.
         {charTag(FirstCharacter, "neutral")}:         O tutte le volte che davanti a una cosa ingiusta ha detto “no”!
@@ -323,7 +323,7 @@
         {charTag(FirstCharacter, "neutral")}:         Io non so se sono davvero bloccata in qualcosa, come dice {mentorName}.
         Ma forse è vero che in qualche modo non mi muovo nella mia vita da un po'.
         Con Talco mi sono messa in situazioni strane perché mi fidavo di ləi.
-        {charTag(FirstCharacter, "curious")}:       E mi chiedevo: secondo te, cosa vuol dire fidarsi?#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       E mi chiedevo: secondo te, cosa vuol dire fidarsi?
         
             + \ {charTag(PG, "neutral")}:         Sapere di poter essere vulnerabili.
                     -> glyph_modifier_variation_management(FirstCharacter, waterC)->
@@ -354,7 +354,7 @@
             
             + \ {charTag(PG, "neutral")}:         La certezza che si può finire nella merda assieme e uscirne assieme.
                     -> glyph_modifier_variation_management(FirstCharacter, fireC)-> 
-                {charTag(FirstCharacter, "curious")}:       Tu devi essere un{player_pronouns has him:o|{player_pronouns has her:a|ə}} che si caccia spesso nei casini, vero?#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Tu devi essere un{player_pronouns has him:o|{player_pronouns has her:a|ə}} che si caccia spesso nei casini, vero?
                 {charTag(FirstCharacter, "neutral")}:         Mi piace come frase.
                 Ma non c'è solo il casino, no?
                 {charTag(FirstCharacter, "sad")}:              Anzi: la parte dura è esserci per le cose più piccole e noiose.
@@ -381,7 +381,7 @@
                 - are_two_entities_together(Mentor, PG):
                     {charTag(Mentor, "neutral")}:           Potremmo evitare le parolacce, {charNameOne}?
                     {charTag(FirstCharacter, "annoyed")}:   Oook.
-                    {charTag(FirstCharacter, "curious")}:       Ano Lombardo.#speaker:{firstChar_tag()} 
+                    {charTag(FirstCharacter, "curious")}:       Ano Lombardo.
                         {
                             - are_two_entities_together(SecondCharacter, PG):
                                 {charTag(SecondCharacter, "energy")}:       Ano.
@@ -411,7 +411,7 @@
         {charTag(FirstCharacter, "annoyed")}:   Una di quelle specializzate in waterwashing e che ti denunciano se solo racconti quello che fanno.
         {charTag(FirstCharacter, "affectionate")}:      Ci siamo rifiutate di servirlo.
         Il caposala era giallo bestia, ma è stata la prima volta che mi sono sentita viva a lavoro.
-        {charTag(FirstCharacter, "curious")}:       Dire “no” è una cosa potentissima.#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Dire “no” è una cosa potentissima.
         Ed è stato bello farlo con le altre.
         {charTag(FirstCharacter, "neutral")}:         Ora stiamo provando di nascosto a tirare su un gruppo sindacale.
         “Di nascosto”, perché coi contrattini da fame che ci ritroviamo fanno alla svelta a lasciarci a casa.
@@ -542,10 +542,10 @@
                     
             + \ {charTag(PG, "neutral")}:         La relazione è un albero con le radici in due terreni.
                     -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
-                {charTag(FirstCharacter, "curious")}:       Quindi intendi tipo una cosa terza?#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Quindi intendi tipo una cosa terza?
                 Che nasce dall'incontro tra le due persone?
                 {charTag(FirstCharacter, "affectionate")}:      Mi piace l'idea dell'albero.
-                {charTag(FirstCharacter, "curious")}:       Alla fine diciamo di curare le relazioni, no?#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Alla fine diciamo di curare le relazioni, no?
                 Coltivarle.
                 {charTag(FirstCharacter, "affectionate")}:      Mi suona molto.
             - 
@@ -577,13 +577,13 @@
         ~ temp mentorName = translator(mentor_ActualName)
 
         
-        {charTag(FirstCharacter, "curious")}:       Ma poi forse non ho sto già davvero vivendo con la mia famiglia?#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Ma poi forse non ho sto già davvero vivendo con la mia famiglia?
         {charTag(FirstCharacter, "neutral")}:         Ah, sì, scusa, sto tornando sul pippone delle case di prima.
         {charTag(FirstCharacter, "sad")}:              Però continuo a pensarci, anche perché ho paura che pensi che sono fredda quando parlo di Ennio.
         {charTag(FirstCharacter, "affectionate")}:      È che dove sto ora non è che è solo una casa, anzi, ed è la cosa più figa.
         {charTag(FirstCharacter, "neutral")}:         Ormai la chiamano “La Rifugia”.
         All'inizio era solo una battuta perché avevamo sempre ospiti in giro per casa, gente che cercava un appoggio o era nei casini.
-        {charTag(FirstCharacter, "curious")}:       Ma a forza di ripetere la battuta ci siamo dette: ma se facessimo qualcosa di buono per una volta?#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Ma a forza di ripetere la battuta ci siamo dette: ma se facessimo qualcosa di buono per una volta?
         {charTag(FirstCharacter, "neutral")}:         Per lo più offriamo un letto o un divano a chi è nella merda.
         {charTag(FirstCharacter, "annoyed")}:   Cosa sempre più frequente con questi affitti assurdi e le case che non ci sono.
         E ci sono gli incontri pubblici con le associazioni di tutela dei coinquilini, con associazioni migranti e altre realtà.
@@ -634,7 +634,7 @@
                 {charTag(FirstCharacter, "affectionate")}:      Esatto ama, esatto.
                 {charTag(FirstCharacter, "neutral")}:         Cioè: bellini i fatti, davvero.
                 Graziosi.
-                {charTag(FirstCharacter, "curious")}:       Ma durante il giorno ascolto quello provo, non quello che <b>è</b>.#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Ma durante il giorno ascolto quello provo, non quello che <b>è</b>.
                 {charTag(FirstCharacter, "neutral")}:         Ha senso?
     
             + \ {charTag(PG, "neutral")}:         "Riempire di calore" i fatti li rende inattendibili.
@@ -883,7 +883,7 @@
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-        {charTag(FirstCharacter, "curious")}:       Ciao {player_name}, e {player_pronouns has him:benvenuto|{player_pronouns has her:benvenuta|benvenutə}} in un nuovo flusso di coscienza di {charNameOne} che non si chiama {charNameOne} e che prima o poi troverà il suo vero nome.#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Ciao {player_name}, e {player_pronouns has him:benvenuto|{player_pronouns has her:benvenuta|benvenutə}} in un nuovo flusso di coscienza di {charNameOne} che non si chiama {charNameOne} e che prima o poi troverà il suo vero nome.
         {charTag(FirstCharacter, "neutral")}:         E forse ci sto prendendo gusto con questi pipponi.
         Mi ricordano quando arriva l'insonnia.
         {charTag(FirstCharacter, "annoyed")}:   Che forse mi piace solo perché è una cosa che mi accade di rado.
@@ -896,7 +896,7 @@
         Ma averla per me, sapendo che tutto dorme, mi offre una pace piena.
         E i brani migliori li ho scritti in quelle situazioni.
         Caffettino e quaderno, mi piace un sacco comporre andando a sentimento prima ancora di mettermi sulla tastiera.
-        {charTag(FirstCharacter, "curious")}:       Ci sono momenti in cui qualcosa clicca, e allora so che ho preso una buona idea.#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Ci sono momenti in cui qualcosa clicca, e allora so che ho preso una buona idea.
         E non ha a che fare col razionale, no no.
         {charTag(FirstCharacter, "affectionate")}:      Ma è tipo come ritrovarsi i piedi in un'acqua antica.
         Che raccoglie tutte le storie del mondo.
@@ -962,7 +962,7 @@
                     {charTag(FirstCharacter, "annoyed")}:   Faccio schifo con le storie.
                     {charTag(FirstCharacter, "affectionate")}:      Ma potremmo cantarla!
                     {charTag(SecondCharacter, "angry")}:        Sono stonato.
-                    {charTag(FirstCharacter, "curious")}:       E chi se ne frega?#speaker:{firstChar_tag()} 
+                    {charTag(FirstCharacter, "curious")}:       E chi se ne frega?
                     {charTag(SecondCharacter, "energy")}:       Allora sìììììììììììì!
                     E voglio metterci le parolacce!       
             }
@@ -997,7 +997,7 @@
         {charTag(FirstCharacter, "neutral")}:         C'è più silenzio quando stiamo assieme.
         {charTag(FirstCharacter, "affectionate")}:      Non mi serve riempire gli spazi di cose intelligenti o parlare di robe fighe per paura che lui si annoi.
         {charTag(FirstCharacter, "neutral")}:         A volte lo osservo giocare al PC mentre coccolo i suoi gatti e mi basta.
-        {charTag(FirstCharacter, "curious")}:       Gli piace un sacco giocare, perché gli ricorda che se anche sbagli, puoi sempre ricominciare.#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Gli piace un sacco giocare, perché gli ricorda che se anche sbagli, puoi sempre ricominciare.
         {charTag(FirstCharacter, "neutral")}:         Ci sono sere in cui parlo più col suo coinquilino che non con lui.
         {charTag(FirstCharacter, "affectionate")}:      Ma è lì che mi tiene la mano o ci guarda, e so che mi ama.
         {charTag(FirstCharacter, "neutral")}:         Il sesso adesso è una coperta calda e non più una spiaggia torrida.
@@ -1045,7 +1045,7 @@
                     -> glyph_modifier_variation_management(FirstCharacter, earthC)->
                 {charTag(FirstCharacter, "neutral")}:         Sì, ma dice che il treno è stato soppresso e ancora non c'è la vettura sostitutiva.
                 Sai com'è con i controllori.
-                {charTag(FirstCharacter, "curious")}:       No {player_name}, anche perché dovrei essere io la capotreno.#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       No {player_name}, anche perché dovrei essere io la capotreno.
                 {charTag(FirstCharacter, "annoyed")}:   E non ho manco idea di dove stiamo andando.  
             
             + \ {charTag(PG, "neutral")}:         Non c'è logica nel tenere un treno fermo.

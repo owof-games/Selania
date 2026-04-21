@@ -64,7 +64,7 @@
         Comunque possiamo cominciare quando vuoi.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         
         //Affrontiamo gli adulti in generale
-            Hai detto che da quando nonna è nella casa dei vecchi fa tutto schifo.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+            {charTag(PG, "neutral")}:      Hai detto che da quando nonna è nella casa dei vecchi fa tutto schifo.
 
             + \ {charTag(PG, "neutral")}:         Tua nonna ti ha insegnato a lottare: lotta anche tu!
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
@@ -137,7 +137,7 @@
         ~ temp charNameFive = translator(fifthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
-        A scuola le maestre dicono che sei cattivo, bugiardo, violento, e finisci sempre in punizione.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+        {charTag(PG, "neutral")}:      A scuola le maestre dicono che sei cattivo, bugiardo, violento, e finisci sempre in punizione.
 
         + \ {charTag(PG, "neutral")}:         Le bugie alla fine sono solo storie. Usale per divertirti.
                 -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
@@ -208,7 +208,7 @@
     = three
     ~ temp charNameTwo = translator(secondChar_ActualName)
     //Affrontiamo il mondo. Rabbia, bugie, fantasia, violenza etc.
-            Tuo fratello dice che il mondo è orribile e che non si può più aggiustare.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+            {charTag(PG, "neutral")}:      Tuo fratello dice che il mondo è orribile e che non si può più aggiustare.
             E hai paura che gli animali possano sparire.
             Così è logico vedere il futuro come un posto spaventoso.
     
@@ -284,7 +284,7 @@
         ~ temp charNameFive = translator(fifthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
-        Hai detto che i grandi fanno schifo, e che non vuoi diventare grande.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+        {charTag(PG, "neutral")}:      Hai detto che i grandi fanno schifo, e che non vuoi diventare grande.
         
             + \ {charTag(PG, "neutral")}:         Ma puoi essere un adulto combattente, come tua nonna.
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
@@ -353,7 +353,7 @@
         ~ temp charNameFive = translator(fifthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
-        Cfireo di aver compreso quale sia il tuo blocco, perché sei qui.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+        {charTag(PG, "neutral")}:      credo di aver compreso quale sia il tuo blocco, perché sei qui.
         E riguarda gli adulti.
         Perché se chi dovrebbe proteggerti ti ha ferito, come fai a fidarti delle persone?
         E per questo ti dico {charNameTwo}:

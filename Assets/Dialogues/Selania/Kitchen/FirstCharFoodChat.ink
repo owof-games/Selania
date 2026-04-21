@@ -17,7 +17,7 @@
         
         + \ {charTag(PG, "neutral")}:         Vorrei pensarci un attimo {charNameOne}.
             {charTag(FirstCharacter, "neutral")}:         Prenditela con calma {player_name}.
-            {charTag(FirstCharacter, "curious")}:       Intanto cerco qualcosa da sgranocchiare.#speaker:{firstChar_tag()} 
+            {charTag(FirstCharacter, "curious")}:       Intanto cerco qualcosa da sgranocchiare. 
                 -> main
  
 
@@ -29,10 +29,10 @@
     ~ temp mentorName = translator(mentor_ActualName)
     
     
-    Sai {charNameOne}, mentre cuciniamo potremmo parlare un po'.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+    {charTag(PG, "neutral")}:      Sai {charNameOne}, mentre cuciniamo potremmo parlare un po'.
 
     - (top)
-    In particolare, ripensando alle nostre conversazioni, mi farebbe piacere parlare di più...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+    {charTag(PG, "neutral")}:      In particolare, ripensando alle nostre conversazioni, mi farebbe piacere parlare di più...
 
         {
             - not first_char_main_storylets.nine:
@@ -86,7 +86,7 @@
     ~ temp mentorName = translator(mentor_ActualName)
 
         {charTag(FirstCharacter, "affectionate")}:      Uh, hai già capito che per me le relazioni sono abbastanza il centro di tutto.
-        {charTag(FirstCharacter, "curious")}:       Vediamo, cosa ti posso raccontare?#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Vediamo, cosa ti posso raccontare? 
         {charTag(FirstCharacter, "sad")}:              Da piccola in realtà ero abbastanza un disastro sociale.
         Timida a bestia, bullizzata perché in carne, e secchiona.
         {charTag(FirstCharacter, "neutral")}:         Non la ragazzina più amata dalla scuola, poco ma sicuro.
@@ -96,7 +96,7 @@
         {charTag(FirstCharacter, "affectionate")}:      Però a casa era un piccolo paradiso.
         {charTag(FirstCharacter, "neutral")}:         I miei sono gente semplice, ma hanno sempre premiato la curiosità.
         {charTag(FirstCharacter, "affectionate")}:      Mamma quando canta ha una voce che scioglie ogni tensione.
-        {charTag(FirstCharacter, "curious")}:       Papà mi ha passato l'amore per la musica.#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Papà mi ha passato l'amore per la musica. 
         {charTag(FirstCharacter, "neutral")}:         È stato lui quello che mi regalava sempre qualcosa che faceva rumore.
         E appena è riuscito a risparmiare a sufficienza, mi ha fatto fare lezioni di piano.
         Credo che i miei mi abbiano insegnato che le relazioni sono cura.
@@ -112,7 +112,7 @@
             + \ {charTag(PG, "neutral")}:         Tuo padre è super! Voglio anche io cose che fanno rumore!
                 -> glyph_modifier_variation_management(FirstCharacter, earthC)->
                 {charTag(FirstCharacter, "affectionate")}:      Se ci fossimo incontrat3 da piccol3 avremmo fatto casino assieme.
-                {charTag(FirstCharacter, "curious")}:       A volte poi lo faccio ancora con papà.#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       A volte poi lo faccio ancora con papà. 
                 {charTag(FirstCharacter, "neutral")}:         Gli piace fare musica con gli oggetti in casa, o le cose che ha nel laboratorio.
                 {charTag(FirstCharacter, "annoyed")}:   Mamma lo chiama "casino".
                 {charTag(FirstCharacter, "affectionate")}:      Ma poi si diverte anche lei.
@@ -133,12 +133,12 @@
     
             + \ {charTag(PG, "neutral")}:         Una relazione è una foresta, una rete di infinite vite diverse.
                 -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
-                {charTag(FirstCharacter, "curious")}:       Messa così è più tipo una rete di relazioni, che non una relazione?#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Messa così è più tipo una rete di relazioni, che non una relazione? 
                 {charTag(FirstCharacter, "neutral")}:         Una cosa tipo che ognunə di noi è legatə a tante persone legate a loro volta ad altre persone.
                 {charTag(FirstCharacter, "affectionate")}:      E così quindi creiamo una foresta?
             -    
         {charTag(FirstCharacter, "neutral")}:         No no taglio io, non ti preoccupare, continua a mischiare.
-        {charTag(FirstCharacter, "curious")}:       Ma invece tu che rapporto hai coi tuoi genitori?#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Ma invece tu che rapporto hai coi tuoi genitori? 
 
                 -> kitchen_moon_feedback -> 
 
@@ -188,7 +188,7 @@
                 {charTag(FirstCharacter, "sad")}:              Mi spiace, davvero.
             -  
         
-        {charTag(FirstCharacter, "curious")}:       Dove ho messo il sale?#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Dove ho messo il sale? 
         {charTag(FirstCharacter, "neutral")}:         Eccolo.
         Però anche se da piccola non avevo amicizie con persone della mia età, l'arrivo al nord ha cambiato tutto.
         È stato come poter ricominciare da capo.
@@ -246,7 +246,7 @@
             -
         
         {charTag(FirstCharacter, "affectionate")}:      Buono comunque questo vino rosso.
-        {charTag(FirstCharacter, "curious")}:       E tu cosa ti aspetti da un'amicizia, {player_name}?#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       E tu cosa ti aspetti da un'amicizia, {player_name}? 
         
             + \ {charTag(PG, "neutral")}:         <i>Tosto del pepe dell'onestà.</i>
                 ~ kitchen_recipeAdjective = "onesta"
@@ -257,7 +257,7 @@
             + \ {charTag(PG, "neutral")}:         <i>Spargo della curcuma divertente.</i>
                 ~ kitchen_recipeAdjective = "allegra"
                 -> glyph_modifier_variation_management(PG, airC)->
-                L'amicizia da balotta quindi.#speaker:{firstChar_tag()} 
+                L'amicizia da balotta quindi. 
                 Da cazzeggio assieme.
                 Da oasi nel casino del mondo.
              
@@ -352,7 +352,7 @@
         }
         {charTag(FirstCharacter, "affectionate")}:      Ecco, questo coperchio ci sta perfettamente.
         {charTag(FirstCharacter, "neutral")}:         Così, a caldo.
-        {charTag(FirstCharacter, "curious")}:       Una persona che ti piace ti dice "Ti amo". Qual è la prima sensazione che provi?#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Una persona che ti piace ti dice "Ti amo". Qual è la prima sensazione che provi? 
         
             + \ {charTag(PG, "neutral")}:         <i>Verso una mestolata di brodo del terrore.</i>
                 ~ kitchen_recipeComplement = "con brodo del terrore"
@@ -379,7 +379,7 @@
             + \ {charTag(PG, "neutral")}:         <i>Incorporo una cucchiata di olio delle lusinghe.</i>
                 ~ kitchen_recipeComplement = "con olio delle lusinghe"
                 -> glyph_modifier_variation_management(PG, aetherC)->
-                {charTag(FirstCharacter, "curious")}:       Uh, a qualcuno piace quando il suo pelo viene lisciato, vero?#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Uh, a qualcuno piace quando il suo pelo viene lisciato, vero? 
                 {charTag(FirstCharacter, "annoyed")}:   Però non rischia di essere una cosa egoista?
                 {charTag(FirstCharacter, "neutral")}:         Più legata a come ti senti che al sentimento che provi per quella persona?
     
@@ -402,7 +402,7 @@
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
-        {charTag(FirstCharacter, "curious")}:       Woah.#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Woah. 
         Qui si va giù leggero.
         {charTag(FirstCharacter, "neutral")}:         E forse "salvare il mondo" è pretenzioso da dire.
         Anche se so bene di averlo detto io.
@@ -440,12 +440,12 @@
                 -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                 {
                     -first_char_main_storylets.four.no:
-                        {charTag(FirstCharacter, "curious")}:       Esatto, come dicevamo prima sui "no" che hanno cambiato la storia, vero?#speaker:{firstChar_tag()} 
+                        {charTag(FirstCharacter, "curious")}:       Esatto, come dicevamo prima sui "no" che hanno cambiato la storia, vero? 
                 }
                 {charTag(FirstCharacter, "affectionate")}:      Forse tutte le parole hanno grandi poteri, non ce ne sono di grandi e piccole.
                 {charTag(FirstCharacter, "neutral")}:         Penso a quando Talco ha deciso di chiamarsi Talco.
                 {charTag(FirstCharacter, "affectionate")}:      E a quel punto, con quella parola, è diventata la persona che è sempre statə.
-                {charTag(FirstCharacter, "curious")}:       Le parole sono sempre enormi.#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Le parole sono sempre enormi. 
                 Ha senso?    
         
             + \ {charTag(PG, "neutral")}:         Quindi ti senti inadeguata?
@@ -471,7 +471,7 @@
         Ora abbiamo alcune cose nel presente.
         {charTag(FirstCharacter, "annoyed")}:   Quelle cose ci fanno cagare.
         Non le vogliamo, o le vogliamo diverse nel futuro.
-        {charTag(FirstCharacter, "curious")}:       Tu {player_name} sai che futuro vuoi vedere?#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Tu {player_name} sai che futuro vuoi vedere? 
         
             -> kitchen_moon_feedback -> 
             
@@ -534,9 +534,9 @@
         {charTag(FirstCharacter, "annoyed")}:   E una parte di me pensa che abbiamo il diritto anche di sbagliare, no?
         {charTag(FirstCharacter, "neutral")}:         In generale, ma soprattutto in queste cose.
         Perché se dobbiamo andare verso futuri che ancora non esistono, sbagliare è inevitabile.
-        {charTag(FirstCharacter, "curious")}:       E ci fa bene, no?#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       E ci fa bene, no? 
         {charTag(FirstCharacter, "neutral")}:         Alla fine cose buonissime sono nate da errori.
-        {charTag(FirstCharacter, "curious")}:       Come il gorgonzola.#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Come il gorgonzola. 
         {charTag(FirstCharacter, "affectionate")}:      Dovremmo fare meno l3 poliziott3, e perdonarci di più.
         
             + \ {charTag(PG, "neutral")}:         Serve del metodo. Se la base non è solida, crolla tutta la casa.
@@ -563,7 +563,7 @@
                 {charTag(FirstCharacter, "neutral")}:         Certa gente prende strade di merda perché ha il terrore di mostrarsi ferita.
                 Feribile.
                 {charTag(FirstCharacter, "affectionate")}:      Ma solo condividendo le vulnerabilità possiamo davvero capirci.
-                {charTag(FirstCharacter, "curious")}:       Dio, che filosofa che sono!#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Dio, che filosofa che sono! 
     
             + \ {charTag(PG, "neutral")}:         Quello che conta è cosa fai quando ti viene detto che hai sbagliato.
                 -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
@@ -578,7 +578,7 @@
         Devo proporlo a Valeria.
         {charTag(FirstCharacter, "neutral")}:         Aspetta, rimestolo un attimo.
         Ottimo.
-        {charTag(FirstCharacter, "curious")}:       Comunque non te l'ho mai chiesto, {player_name}: tu ti senti una persona sicura?#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Comunque non te l'ho mai chiesto, {player_name}: tu ti senti una persona sicura? 
 
             + \ {charTag(PG, "neutral")}:         <i>Aggiungo con convinzione delle prugne.</i>
                 ~ kitchen_recipeAdjective = "convinte"
@@ -602,31 +602,31 @@
             -     
         {
             - (kitchen_storageAether >  kitchen_storageEarth) && (kitchen_storageAether >  kitchen_storageFire) && (kitchen_storageAether >  kitchen_storageWater) && (kitchen_storageAether >  kitchen_storageAir):
-                {charTag(FirstCharacter, "curious")}:       Interessante.#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Interessante. 
                 {charTag(FirstCharacter, "neutral")}:         In queste conversazioni non so perché ma ti ho visto come una persona quasi spirituale.
                 Più attenta al grande insieme delle cose.
                 {charTag(FirstCharacter, "affectionate")}:      Mi dai l'idea di solidità, sai?
 
             - (kitchen_storageEarth >  kitchen_storageAether) && (kitchen_storageEarth >  kitchen_storageFire) && (kitchen_storageEarth >  kitchen_storageWater) && (kitchen_storageEarth >  kitchen_storageAir):
-                {charTag(FirstCharacter, "curious")}:       Interessante.#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Interessante. 
                 {charTag(FirstCharacter, "affectionate")}:      In queste conversazioni non so perché ma ti ho visto come una persona giocosa.
                 Una che trova il piacere, il bello nel mondo, anche quando non è facile.
                 Credo ci voglia tanto equilibrio interiore per farlo.
 
             - (kitchen_storageFire >  kitchen_storageEarth) && (kitchen_storageFire >  kitchen_storageAether) && (kitchen_storageFire >  kitchen_storageWater) && (kitchen_storageFire >  kitchen_storageAir):
-                {charTag(FirstCharacter, "curious")}:       Interessante.#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Interessante. 
                 {charTag(FirstCharacter, "neutral")}:         In queste conversazioni non so perché ma ti ho visto come una persona molto attiva.
                 Più interessata alle cose da fare che non ai grandi ragionamenti.
                 {charTag(FirstCharacter, "annoyed")}:   Ammetto che associo questa cosa all'idea del chaddone tontolotto.
                 {charTag(FirstCharacter, "sad")}:              Ma è un mio pregiudizio, lo so.
 
             - (kitchen_storageWater >  kitchen_storageEarth) && (kitchen_storageWater >  kitchen_storageFire) && (kitchen_storageWater >  kitchen_storageAether) && (kitchen_storageWater >  kitchen_storageAir):
-                {charTag(FirstCharacter, "curious")}:       Interessante.#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Interessante. 
                 {charTag(FirstCharacter, "affectionate")}:      In queste conversazioni non so perché ma ti ho visto come una persona molto legata alle emozioni.
                 Ma a differenza mia, sembra che tu riesca a trovare la tua solidità in questo.
 
             - (kitchen_storageAir >  kitchen_storageEarth) && (kitchen_storageAir >  kitchen_storageFire) && (kitchen_storageAir >  kitchen_storageWater) && (kitchen_storageAir >  kitchen_storageAether):
-                {charTag(FirstCharacter, "curious")}:       Interessante.#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Interessante. 
                 {charTag(FirstCharacter, "neutral")}:         In queste conversazioni non so perché ma ti ho visto come una persona molto razionale.
                 Con uno sguardo analitico sul mondo.
                 {charTag(FirstCharacter, "annoyed")}:   Nella mia testa questa roba è tipo finta sicurezza.
@@ -657,7 +657,7 @@
         {charTag(FirstCharacter, "neutral")}:         Merda, mi sto perdendo, maledetto vino.
         {charTag(FirstCharacter, "affectionate")}:      Insomma: è bello lottare per le cose grandi.
         {charTag(FirstCharacter, "neutral")}:         Ed è bello addormentarsi precarie e con i casini ma sapendo di aver portato un po' di gioia a una persona.
-        {charTag(FirstCharacter, "curious")}:       Ha senso?#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Ha senso? 
         
             + \ {charTag(PG, "neutral")}:         Il cuore è caldo quando aiutiamo le altre persone, vero?
                 -> glyph_modifier_variation_management(FirstCharacter, waterC)->
@@ -670,7 +670,7 @@
 
             + \ {charTag(PG, "neutral")}:         Quando tutto è dovere il piacere è rivoluzionario. Saggi{player_pronouns has him:o|{player_pronouns has her:a|ə}}, vero?
                 -> glyph_modifier_variation_management(FirstCharacter, earthC)->
-                {charTag(FirstCharacter, "curious")}:       Inaspettatamente saggia.#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Inaspettatamente saggia. 
                 {charTag(FirstCharacter, "neutral")}:         Ma è una cosa sensata.
                 {charTag(FirstCharacter, "affectionate")}:      Talco l'avrebbe apprezzata proprio tanto questa cosa.
                 {charTag(FirstCharacter, "neutral")}:         E un poco anche io.
@@ -695,15 +695,15 @@
                 {charTag(FirstCharacter, "annoyed")}:   Cioè, ora mi verrebbe da urlarti e dirti: "Ma che balle {player_name}!"
                 "Devi rovinare tutto così?"
                 {charTag(FirstCharacter, "neutral")}:         Però mi rendo conto che non è una domanda stupida.
-                {charTag(FirstCharacter, "curious")}:       Forse la cosa buona è che siamo una associazione, e quindi ci aiutiamo a non fare questo tipo di casino?#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Forse la cosa buona è che siamo una associazione, e quindi ci aiutiamo a non fare questo tipo di casino? 
                 {charTag(FirstCharacter, "sad")}:              Ha senso?
             -
         
         {charTag(FirstCharacter, "neutral")}:         Ancora due minuti e ci siamo ama.
         Madonna che fame!
-        {charTag(FirstCharacter, "curious")}:       E visto che siamo alla fine, te la butto leggera: sei felice della vita che hai?#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       E visto che siamo alla fine, te la butto leggera: sei felice della vita che hai? 
         {charTag(FirstCharacter, "neutral")}:         Anzi no aspetta che sennò ci prende male di sicuro.
-        {charTag(FirstCharacter, "curious")}:       Ti senti di star partecipando a qualcosa di più grande, di trasformativo, con le cose che fai?#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Ti senti di star partecipando a qualcosa di più grande, di trasformativo, con le cose che fai? 
 
             + \ {charTag(PG, "neutral")}:         <i>Trituro con gioia dell'anice stellato.</i>
                 ~ kitchen_recipeComplement = "con anice stellato"
@@ -731,7 +731,7 @@
                 -> glyph_modifier_variation_management(PG, aetherC)->
                     {charTag(FirstCharacter, "sad")}:              No no, niente rassegnazione {player_name}!
                     {charTag(FirstCharacter, "neutral")}:         Mo mi invento qualcosa per tirarti su.
-                    {charTag(FirstCharacter, "curious")}:       Tipo: vino?#speaker:{firstChar_tag()} 
+                    {charTag(FirstCharacter, "curious")}:       Tipo: vino? 
     
             + \ {charTag(PG, "neutral")}:         <i>Caramello {player_pronouns has him:sopraffatto|{player_pronouns has her:sopraffatta|sopraffattə}} della salvia.</i>
                 ~ kitchen_recipeComplement = "con salvia"
@@ -809,14 +809,14 @@
         {charTag(FirstCharacter, "neutral")}:         Ciotole pulite!
         Do una sciacquata anche ai bicchieri, che ho visto che c'è del vino rosso sotto al lavello.
         O è una bomba o ci avvelena.
-        {charTag(FirstCharacter, "curious")}:       E tu {player_name} hai qualcosa che ti aiuta a star bene con te?#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       E tu {player_name} hai qualcosa che ti aiuta a star bene con te? 
             
             -> kitchen_moon_feedback -> 
 
             + \ {charTag(PG, "neutral")}:         <i>Lesso sportivamente delle patate.</i>
                 ~ kitchen_recipeNoun = "Patate"
                 -> glyph_modifier_variation_management(PG, earthC)->
-                {charTag(FirstCharacter, "curious")}:       Ti ci vedo a correre e scaricare il nervo.#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Ti ci vedo a correre e scaricare il nervo. 
                 O in piscina.
                 O a ballare.
                 {charTag(FirstCharacter, "neutral")}:         Uh, sarà un caso che non ho citato sport di gruppo?
@@ -840,7 +840,7 @@
                 ~ kitchen_recipeNoun = "Pesche"
                 -> glyph_modifier_variation_management(PG, waterC)->
                 {charTag(FirstCharacter, "affectionate")}:      Stare assieme è una cosa che cura molte ferite.
-                Forse a volte ho bisogno però di star da sola.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
+                {charTag(FirstCharacter, "sad")}:              Forse a volte ho bisogno però di star da sola.
                 {charTag(FirstCharacter, "neutral")}:         Ma mi rendo conto che per altre persone la socialità è una medicina.
     
             + \ {charTag(PG, "neutral")}:         <i>Abbrustolisco meditativamente delle bietole.</i>
@@ -908,9 +908,9 @@
                 {charTag(FirstCharacter, "annoyed")}:   Devo metterlo in alto, non vorrei mai che {charNameTwo} provasse a berlo.
             
             - else:
-                {charTag(FirstCharacter, "curious")}:       Dovrei proporre un brindisino a {mentorName}, e farci due chiacchiere in scialleria.#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Dovrei proporre un brindisino a {mentorName}, e farci due chiacchiere in scialleria. 
         }
-        {charTag(FirstCharacter, "curious")}:       Tu {player_name} ti senti te?#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Tu {player_name} ti senti te? 
         {charTag(FirstCharacter, "annoyed")}:   Domanda idiota.
         {charTag(FirstCharacter, "neutral")}:         Ti senti la persona che puoi essere?
         La persona che avresti voluto essere?
@@ -961,13 +961,13 @@
         {charTag(FirstCharacter, "affectionate")}:      Ma è anche un ponte con la storia delle persone che ho conosciuto.
         {charTag(FirstCharacter, "neutral")}:         Quelle legate alla musica, come mio padre o le compagne del conservatorio o le ragazze della band.
         E anche chi con la musica c'ha avuto poco a che fare, come mamma o Ennio o le colleghe di lavoro.
-        {charTag(FirstCharacter, "curious")}:       Creare secondo me significa immaginare nuovi collegamenti.#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Creare secondo me significa immaginare nuovi collegamenti. 
         Anche tra persone che non si conoscono.
         {charTag(FirstCharacter, "affectionate")}:      E fare da testimoni di queste storie.
         {charTag(FirstCharacter, "neutral")}:         Trovare l'universale nel particolare, per non perderci.
         Per ritrovarci.
         E a quel punto mi sale un po' un'altra domanda.
-        {charTag(FirstCharacter, "curious")}:       Perché se ciò che creo viene dagli scambi quotidiani, dai ricordi creati assieme, allora di chi è l'opera che si crea?#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Perché se ciò che creo viene dagli scambi quotidiani, dai ricordi creati assieme, allora di chi è l'opera che si crea? 
 
             + \ {charTag(PG, "neutral")}:         Tua: chi l'ha fatta la fatica, il lavoro?
                 -> glyph_modifier_variation_management(FirstCharacter, fireC)->
@@ -1009,7 +1009,7 @@
         {charTag(FirstCharacter, "neutral")}:         Riposati un secondo, controllo io che non bruci tutto.
         Ma a proposito di scambi quotidiani: quando crei qualcosa, la tieni per te?
         La condividi?
-        {charTag(FirstCharacter, "curious")}:       Che ci fai?#speaker:{firstChar_tag()} 
+        {charTag(FirstCharacter, "curious")}:       Che ci fai? 
 
             + \ {charTag(PG, "neutral")}:         <i>Brucio del peperoncino.</i>
                 ~ kitchen_recipeComplement = "con peperoncino"
@@ -1038,7 +1038,7 @@
                 ~ kitchen_recipeComplement = "con zenzero"
                 -> glyph_modifier_variation_management(PG, fireC)->
                 {charTag(FirstCharacter, "neutral")}:         Tieni le tue creature per te.
-                {charTag(FirstCharacter, "curious")}:       Sarà un gesto di affetto o di insicurezza?#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Sarà un gesto di affetto o di insicurezza? 
                 O una lotta all'idea che tutto debba essere produttivo?
                 {charTag(FirstCharacter, "neutral")}:         Sarei curiosa di scoprirlo.
     
@@ -1109,7 +1109,7 @@
     ~ move_entity(EatingWithFirstCharOBJ, Kitchen)
     ~ temp piatto = kitchen_tempRecipeName
     
-    {charTag(FirstCharacter, "curious")}:       È stato divertente cucinare assieme, {player_name}.#speaker:{firstChar_tag()} 
+    {charTag(FirstCharacter, "curious")}:       È stato divertente cucinare assieme, {player_name}. 
     {charTag(FirstCharacter, "affectionate")}:      Mi ha fatto sentire a casa.
         {
             -cooking_with_first_char.first_theme:
@@ -1270,7 +1270,7 @@
                         - firstChar_relationshipStatus == 1:
                             {charTag(FirstCharacter, "neutral")}:         Credo che la risposta sia "{player_pronouns has him:rimandato|{player_pronouns has her:rimandata|rimandatə}} a settembre".
                             {charTag(FirstCharacter, "sad")}:              Un po' ci capiamo e un po' no.
-                            {charTag(FirstCharacter, "curious")}:       Che poi ci sta, no?#speaker:{firstChar_tag()} 
+                            {charTag(FirstCharacter, "curious")}:       Che poi ci sta, no? 
                             {charTag(FirstCharacter, "neutral")}:         Alla fine ci stiamo conoscendo giusto ora.
                             E abbiamo ancora un bel po' di chiacchierate da farci assieme, e capirci di più.
                             {charTag(FirstCharacter, "annoyed")}:   O di meno.
@@ -1392,7 +1392,7 @@
     Da quando vivo su, ho iniziato a organizzare cenoni con le ame.
     {charTag(FirstCharacter, "affectionate")}:      Credo sia uno dei momenti più belli dell'anno.
     Qui non c'è abbastanza roba per farlo, ma ho pensato di portare un po' di Natale comunque.
-    {charTag(FirstCharacter, "curious")}:       E quindi ti ho lasciato qualcosina su uno degli alberi della cucina.#speaker:{firstChar_tag()} 
+    {charTag(FirstCharacter, "curious")}:       E quindi ti ho lasciato qualcosina su uno degli alberi della cucina. 
     Spero possa portarti un po' di gioia, {player_name}.
     {charTag(FirstCharacter, "neutral")}:         A dopo.
 

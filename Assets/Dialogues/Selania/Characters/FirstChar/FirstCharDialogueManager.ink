@@ -62,37 +62,37 @@
             //Stiamo parlando con la PNG, ma non dopo uno storylet, per cui mettiamo del testo
             - firstChar_justTalked == false:   
                 {shuffle:
-                    - {charTag(FirstCharacter, "curious")}: Le farfalle qui giocano per ore!#speaker:{firstChar_tag()}  
+                    - {charTag(FirstCharacter, "curious")}: Le farfalle qui giocano per ore! 
 
-                    - {charTag(FirstCharacter, "curious")}: No dai, ma hai visto quanto sono carini gli scoiattoli?#speaker:{firstChar_tag()}  
+                    - {charTag(FirstCharacter, "curious")}: No dai, ma hai visto quanto sono carini gli scoiattoli? 
 
-                    - {charTag(FirstCharacter, "curious")}: Con il rumore dell'acqua dello stagno ci posso fare una base niente male.#speaker:{firstChar_tag()}  
+                    - {charTag(FirstCharacter, "curious")}: Con il rumore dell'acqua dello stagno ci posso fare una base niente male. 
 
-                    - {charTag(FirstCharacter, "curious")}: Il Conservatorio è un posto terrificante, {player_name}, ipercompetitivo. Ho ancora gli incubi a volte.#speaker:{firstChar_tag()}  
+                    - {charTag(FirstCharacter, "curious")}: Il Conservatorio è un posto terrificante, {player_name}, ipercompetitivo. Ho ancora gli incubi a volte. 
 
-                    - {charTag(FirstCharacter, "curious")}: Quando avrò un gatto lo chiamerò Bach, e poi metterò su IG le foto del su Bach-ano. Ok, è terribile, ed è di mio padre.#speaker:{firstChar_tag()}  
+                    - {charTag(FirstCharacter, "curious")}: Quando avrò un gatto lo chiamerò Bach, e poi metterò su IG le foto del su Bach-ano. Ok, è terribile, ed è di mio padre. 
 
-                    - {charTag(FirstCharacter, "curious")}: Forse è la fame, ma prima ho sentito odore di lasagna, giuro!#speaker:{firstChar_tag()}  
+                    - {charTag(FirstCharacter, "curious")}: Forse è la fame, ma prima ho sentito odore di lasagna, giuro! 
 
-                    - {charTag(FirstCharacter, "curious")}: Ho voglia di leggere qualcosa. Sono secoli che non leggo per mezz'ora di fila in santa pace.#speaker:{firstChar_tag()}  
+                    - {charTag(FirstCharacter, "curious")}: Ho voglia di leggere qualcosa. Sono secoli che non leggo per mezz'ora di fila in santa pace. 
 
-                    - {charTag(FirstCharacter, "curious")}: Non so perché ma ti ci vedo a suonare la viola. Hai una faccia da viola.#speaker:{firstChar_tag()}  
+                    - {charTag(FirstCharacter, "curious")}: Non so perché ma ti ci vedo a suonare la viola. Hai una faccia da viola. 
 
-                    - {charTag(FirstCharacter, "curious")}: Se questa cosa mi fosse successa alle elementari, sarei già stata avvelenata dai funghi dello stagno.#speaker:{firstChar_tag()}  
+                    - {charTag(FirstCharacter, "curious")}: Se questa cosa mi fosse successa alle elementari, sarei già stata avvelenata dai funghi dello stagno. 
 
-                    - {charTag(FirstCharacter, "curious")}: Prima ho provato a capire come raggiungere la montagna dietro alla stazione ma zero, non c'è un sentiero che uno.#speaker:{firstChar_tag()}  
+                    - {charTag(FirstCharacter, "curious")}: Prima ho provato a capire come raggiungere la montagna dietro alla stazione ma zero, non c'è un sentiero che uno. 
 
-                    - {charTag(FirstCharacter, "curious")}: Chissà cosa starà facendo Ennio in questo momento.#speaker:{firstChar_tag()}  
+                    - {charTag(FirstCharacter, "curious")}: Chissà cosa starà facendo Ennio in questo momento. 
 
-                    - {charTag(FirstCharacter, "curious")}: Valeria avrà dato da mangiare al gatto dei vicini? Ce lo hanno affidato durante le vacanze.#speaker:{firstChar_tag()}  
+                    - {charTag(FirstCharacter, "curious")}: Valeria avrà dato da mangiare al gatto dei vicini? Ce lo hanno affidato durante le vacanze. 
 
-                    - {charTag(FirstCharacter, "curious")}: Forse avrei dovuto rispondere alla cartolina di Talco. Non pensavo avrei avuto paura di una cartolina.#speaker:{firstChar_tag()}  
+                    - {charTag(FirstCharacter, "curious")}: Forse avrei dovuto rispondere alla cartolina di Talco. Non pensavo avrei avuto paura di una cartolina. 
 
-                    - {charTag(FirstCharacter, "curious")}: Prima nello stagno non ho visto il mio riflesso ma quello di una Chitarra e non.voglio.farmi.domande! Né avere risposte.#speaker:{firstChar_tag()} 
+                    - {charTag(FirstCharacter, "curious")}: Prima nello stagno non ho visto il mio riflesso ma quello di una Chitarra e non.voglio.farmi.domande! Né avere risposte.
 
-                    - {charTag(FirstCharacter, "curious")}: Lavorare è sopravvalutato.#speaker:{firstChar_tag()}  
+                    - {charTag(FirstCharacter, "curious")}: Lavorare è sopravvalutato. 
                     
-                    - {charTag(FirstCharacter, "curious")}: Quando esco da qui dovrei dire a Thomas che non lo odio. Spero che non pensi che lo odio, cazzo.#speaker:{firstChar_tag()} 
+                    - {charTag(FirstCharacter, "curious")}: Quando esco da qui dovrei dire a Thomas che non lo odio. Spero che non pensi che lo odio, cazzo.
 
                     - {charTag(FirstCharacter, "sad")}: Ti dicono che se sei la migliore il mondo ti si aprirà davanti, ma poi puoi laurearti in modo grandioso, e finire comunque a fare la cameriera.
 
@@ -119,7 +119,7 @@
     //Se arrivo a options da un dialogo, non mostro commenti da parte della PNG, altrimenti sì.
         {
             - grimoire_firstChar has grimFirstCharOne:
-                {charTag(FirstCharacter, "curious")}: C'è qualcosa che vuoi chiedermi ama?#speaker:{firstChar_tag()}  
+                {charTag(FirstCharacter, "curious")}: C'è qualcosa che vuoi chiedermi ama? 
 
             - else:
                 {charTag(FirstCharacter, "annoyed")}:   Serve qualcosa?    
@@ -208,7 +208,7 @@
                             ->main        
 
                     - contentsKitchen has Franco:
-                        {charTag(FirstCharacter, "curious")}: C'è già una certa ranocchia che sta aspettando di cucinare con te. #speaker:{firstChar_tag()}  
+                        {charTag(FirstCharacter, "curious")}: C'è già una certa ranocchia che sta aspettando di cucinare con te.  
                             ->main
                             
                     - kitchen_secondCharCookingTogetherInvite:

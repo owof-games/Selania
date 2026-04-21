@@ -32,7 +32,7 @@
         {charTag(FirstCharacter, "sad")}:              Talco, Valeria, Anna, Luigia: le persone a cui voglio bene presto o tardi se ne vanno. E spesso spariscono.
         Non capisco se la relazione con Ennio sia stabile o immobile.
         {charTag(FirstCharacter, "annoyed")}:   E non riesco manco a risparmiare a sufficienza da donare dieci euro per la Palestina, figurarsi salvare il mondo.
-        {charTag(FirstCharacter, "neutral")}:         {player_name}, cfireo di avere paura.
+        {charTag(FirstCharacter, "neutral")}:         {player_name}, credo di avere paura.
         Perché l'unica domanda che mi rimane, l'unica spocchiosa domanda è:
         è questo il massimo che posso aspettarmi dalla vita?
         {charTag(FirstCharacter, "annoyed")}:   Andrà sempre peggio?
@@ -88,7 +88,7 @@
             - (top)
         {charTag(FirstCharacter, "neutral")}:         Comunque: cominciamo?
 
-        {charNameOne}, prima hai detto che ti aspettavi concerti e viaggi nel mondo.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+        {charTag(PG, "neutral")}:      {charNameOne}, prima hai detto che ti aspettavi concerti e viaggi nel mondo.
         Ma che ora sei mediocre e hai un lavoro di merda.
         Però possiamo raccontare la tua storia in un altro modo.
         Tu dici che sei un <b>concentrato di rinunce</b>.
@@ -156,7 +156,7 @@
         = two
         ~ temp charNameOne = translator(firstChar_ActualName)
 
-        È evidente quanto siano importanti le relazioni per te.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+        {charTag(PG, "neutral")}:      È evidente quanto siano importanti le relazioni per te.
         E a un certo punto hai iniziato ad aspettarti amicizie eterne, case in campagna e un amore da film.
         Eppure...
        
@@ -220,7 +220,7 @@
         
         = three
         ~ temp charNameOne = translator(firstChar_ActualName)
-        Più volte hai parlato del tuo bisogno di fare qualcosa di utile, di grande. #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+        {charTag(PG, "neutral")}:      Più volte hai parlato del tuo bisogno di fare qualcosa di utile, di grande. 
         Ti aspettavi di fare qualcosa di buono, di salvare il mondo con le tue canzoni.
     
             + \ {charTag(PG, "neutral")}:         Ma se il gioco è rotto, l'unica vittoria c'è rompendo le regole.
@@ -294,7 +294,7 @@
         
         = four
         ~ temp charNameOne = translator(firstChar_ActualName)
-            Ti senti mediocre, e hai paura di rischiare di fare un salto e perdere tutto, di fallire.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+            {charTag(PG, "neutral")}:      Ti senti mediocre, e hai paura di rischiare di fare un salto e perdere tutto, di fallire.
     
             + \ {charTag(PG, "neutral")}:         Come nei giochi, si può sbagliare e ricominciare.
                 -> glyph_modifier_variation_management(FirstCharacter, earthC)->
@@ -360,12 +360,12 @@
         
             {
                 - firstChar_InkLevel == ink_empty:
-                    Mi rendo conto di non aver legato molto con te, e hai tutto il diritto di non ascoltarmi. Ma dopo tutta la tua storia, vorrei darti un consiglio:#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+                    {charTag(PG, "neutral")}:      Mi rendo conto di non aver legato molto con te, e hai tutto il diritto di non ascoltarmi. Ma dopo tutta la tua storia, vorrei darti un consiglio:
                 - else:
-                    Per questo ti dico: #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+                    {charTag(PG, "neutral")}:      Per questo ti dico: 
             } 
 
-            Vedo il tuo blocco, {charNameOne}.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+            {charTag(PG, "neutral")}:      Vedo il tuo blocco, {charNameOne}.
             Sei arrivata qui perché non sai più cosa aspettarti dalla tua vita.
             Come avanzare.
             Come uscire da una vita che non senti più tua.
@@ -406,10 +406,10 @@
         {
             - ending.fire:
                 Hai detto che Talco mi aspetta in Islanda.
-                {charTag(FirstCharacter, "curious")}: Non avevo mai davvero guardato fino in fondo alla possibilità di andarmene dall'Italia.#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}: Non avevo mai davvero guardato fino in fondo alla possibilità di andarmene dall'Italia.
             
             - ending.aether:
-                {charTag(FirstCharacter, "curious")}: Sentirti dire che la musica mi dà uno scopo è stato diverso dal dirlo io.#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}: Sentirti dire che la musica mi dà uno scopo è stato diverso dal dirlo io.
                 È diventata una cosa vera.
                 {charTag(FirstCharacter, "neutral")}:         Ha senso?
 
@@ -429,7 +429,7 @@
                 Lagnosa.
                 Ma ha senso.
                 Ti ho raccontato così tante cose.
-                {charTag(FirstCharacter, "curious")}: Ho davvero motivo di essere così infelice?#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}: Ho davvero motivo di essere così infelice?
                 O come direbbe {mentorName}, bloccata?
 
         }
@@ -472,7 +472,7 @@
                             Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
                     }
 
-                    {charTag(FirstCharacter, "curious")}: Rullo di tamburi...#speaker:{firstChar_tag()} 
+                    {charTag(FirstCharacter, "curious")}: Rullo di tamburi...
                     Io sono <b><i>{charNameOne}</b></i>!
                     Signore e signor3 e signori: sono la gioia del cambiamento.
                     Dell'infinita possibilità.

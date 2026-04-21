@@ -488,7 +488,7 @@
 
 === cultivable_recovery
 {debug_frog: passo da cultivable_recovery.}
-Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+{charTag(PG, "neutral")}:      Vorrei recuperare...
 
     + {frog_recoverableCultivables has BaccaDellaAddolorata}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(BaccaDellaAddolorata)}.
             ~  frog_recoveredCultivables += BaccaDellaAddolorata

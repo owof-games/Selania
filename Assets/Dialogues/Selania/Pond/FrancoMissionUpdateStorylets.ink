@@ -90,7 +90,7 @@
                                                     Continuo a studiare questa cosa mentre tu provi a vedere cosa succede se parli con due persone assieme.
         {
             - are_two_entities_together(FirstCharacter, PG):
-                {charTag(FirstCharacter, "curious")}:       In che senso scusa?#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       In che senso scusa?
                 {charTag(Franco, "{portrait_Franco()}")}:       In senso diagonale, vedi?
                                                                 Ora la zampa è dritta.
                                                                 Ora è in acqua ed è spezzata!
@@ -301,7 +301,7 @@
                                                     }
                                                     {
                                                         - are_two_entities_together(FirstCharacter, PG):
-                                                            {charTag(FirstCharacter, "curious")}:       Questa me la voglio godere tutta.#speaker:{firstChar_tag()} 
+                                                            {charTag(FirstCharacter, "curious")}:       Questa me la voglio godere tutta.
                                                     }
     {charTag(Franco, "{portrait_Franco()}")}:       E che mangia solo pesce?
                                                     E che le piace giocare?
@@ -336,7 +336,7 @@
         {charTag(Franco, "{portrait_Franco()}")}:       Ma quindi non è {charNameOne} che fa il nido sugli alberi?
                                                     {
                                                         - are_two_entities_together(FirstCharacter, PG):
-                                                            {charTag(FirstCharacter, "curious")}:       Esatto!#speaker:{firstChar_tag()} 
+                                                            {charTag(FirstCharacter, "curious")}:       Esatto!
                                                             E poi ululo alla luna!
                                                             {charTag(Franco, "{portrait_Franco()}")}:       Devo subito avvisare Euforbo!
                                                     }
@@ -527,7 +527,7 @@
 
                                                     {
                                                         - are_two_entities_together(FirstCharacter, PG):
-                                                            {charTag(FirstCharacter, "curious")}:       C'è un'altra persona qui in giro?#speaker:{firstChar_tag()} 
+                                                            {charTag(FirstCharacter, "curious")}:       C'è un'altra persona qui in giro?
                                                                 
                                                     }
 

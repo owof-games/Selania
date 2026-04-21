@@ -119,7 +119,7 @@
             {charTag(TheWitch, witch_state())}:   <i>Quali sono i pronomi di {player_name}?</i>
 
         - else:
-            {charTag(PG, "neutral")}   E per quanto riguarda i miei pronomi:#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+            {charTag(PG, "neutral")}:      {charTag(PG, "neutral")}   E per quanto riguarda i miei pronomi:
     }
     
     

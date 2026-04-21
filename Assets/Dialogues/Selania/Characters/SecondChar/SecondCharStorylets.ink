@@ -605,7 +605,7 @@
                     - are_two_entities_together(FirstCharacter, PG):
                         {charTag(FirstCharacter, "neutral")}:         Io.
                         {charTag(FirstCharacter, "annoyed")}:   Ma davvero {mentorName} ha.
-                        Merda.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
+                        {charTag(FirstCharacter, "sad")}:              Merda.
                         Mi ero dimenticata quanto fosse schifoso essere bambini.
                 }
 
@@ -1448,7 +1448,7 @@
         {charTag(SecondCharacter, "neutral")}:        Non devo correggere le giornate.
                     {
                         - are_two_entities_together(FirstCharacter, PG):
-                                Vedi tu se mi devo commuovere per questo piccoletto, mannaggia a me!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
+                                {charTag(FirstCharacter, "sad")}:              Vedi tu se mi devo commuovere per questo piccoletto, mannaggia a me!
                     
                     }
         {charTag(SecondCharacter, "melanchonic")}:    Quando finiscono le vacanze però mi sento triste.

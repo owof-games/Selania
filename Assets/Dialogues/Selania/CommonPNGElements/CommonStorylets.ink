@@ -6,7 +6,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    {charTag(FirstCharacter, "curious")}:       Quindi anche tu non ricordi come sei arrivato qui?#speaker:{firstChar_tag()} 
+    {charTag(FirstCharacter, "curious")}:       Quindi anche tu non ricordi come sei arrivato qui?
     {charTag(SecondCharacter, "melanchonic")}:    Sì no boh.
     {charTag(SecondCharacter, "neutral")}:        No.
         {
@@ -186,7 +186,7 @@
     {charTag(FirstCharacter, "annoyed")}:   Scusa {mentorName}, però un po' mi viene da dirti che è facile dirlo, quando fai già quello che ami.
     È una posizione privilegiata.
     {charTag(Mentor, "neutral")}:           È un privilegio che mi sono creata, accogliendo il bello anche nelle cose difficili.
-    {charTag(FirstCharacter, "curious")}:       {player_name}, tu cosa pensi?#speaker:{firstChar_tag()} 
+    {charTag(FirstCharacter, "curious")}:       {player_name}, tu cosa pensi?
     La felicità è questa roba che dice {mentorName}?
     {charTag(FirstCharacter, "annoyed")}:   Che te la ritrovi se ti fai andare bene quello che hai?
     {charTag(Mentor, "neutral")}:           O quello che dice {charNameOne}.
@@ -210,7 +210,7 @@
         + \ {charTag(PG, "neutral")}:         Non credo nella felicità, ma credo nel piacere dato dalle persone vicine.
             -> glyph_modifier_variation_management(FirstCharacter, waterC)->    
             {charTag(Mentor, "neutral")}:           Questa è una lettura che potrei apprezzare.
-            {charTag(FirstCharacter, "curious")}:       Woah!#speaker:{firstChar_tag()} 
+            {charTag(FirstCharacter, "curious")}:       Woah!
             {charTag(FirstCharacter, "affectionate")}:      Vuol dire che {player_name} ha trovato un punto di contatto tra noi in questa discussione?
             {charTag(Mentor, "hurry")}:             Eh sì, mi sa proprio di sì.
             
@@ -272,7 +272,7 @@
                                                     E comunque non ricordo l'esistenza di nessun mentore da queste parti.
         {
             - are_two_entities_together(FirstCharacter, PG):
-                {charTag(FirstCharacter, "curious")}:       In che senso, scusa?#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       In che senso, scusa?
                 {charTag(Franco, "{portrait_Franco()}")}:       {charNameOne}!
                                                                 Prima è passata zia Graaak e ti voleva parlare!
                                                                 Tullio dice che c'ha una cotta per te.
@@ -396,7 +396,7 @@
                                                     I miei figli sono Abaco, Aimone, Altobrando, Appasilarco, Azzolino, Borci, Clodoveo, Comunardo
     {charTag(FirstCharacter, "neutral")}:         No aspetta aspetta, ti avevo solo chiesto di.
     {charTag(Franco, "{portrait_Franco()}")}:       Emerenzio, Etelbero, Euforbo, Fulco, Matteo.
-    {charTag(FirstCharacter, "curious")}:       Matteo?#speaker:{firstChar_tag()} 
+    {charTag(FirstCharacter, "curious")}:       Matteo?
     Un nome così normale?
     {charTag(Franco, "{portrait_Franco()}")}:       L'abbiamo adottato.
                                                     Poi c'è Giosafatta, Gondio, Grimildo, Pierpietro, Piersabato.

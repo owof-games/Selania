@@ -207,7 +207,7 @@
 
         {
             -   are_two_entities_together(FirstCharacter, PG):
-                    {charTag(FirstCharacter, "curious")}:       E questo è il momento per me di levarmi da qui e lasciarvi in pace. #speaker:{firstChar_tag()} 
+                    {charTag(FirstCharacter, "curious")}:       E questo è il momento per me di levarmi da qui e lasciarvi in pace.
                     Anche se sono stracuriosa.
                     Poi non dite che non vi voglio bene!
                             ~ change_entity_place(FirstCharacter)

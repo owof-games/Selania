@@ -5,7 +5,7 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-    {charTag(FirstCharacter, "curious")}:       Dopo che {mentorName} mi ha detto che sei qui per aiutarci mi sono detta: come posso rendere la vita più facile a {player_name}?#speaker:{firstChar_tag()} 
+    {charTag(FirstCharacter, "curious")}:       Dopo che {mentorName} mi ha detto che sei qui per aiutarci mi sono detta: come posso rendere la vita più facile a {player_name}?
     {charTag(FirstCharacter, "neutral")}:         Alla fine ti stai ascoltando le mie seghe mentali da un bel po'.
     E immagino che anche il piccoletto avrà i suoi casini da gestire.
         {
@@ -19,13 +19,13 @@
             - are_two_entities_together(Mentor, PG):
                 {charTag(Mentor, "sorry")}:             La mia vita è lavoro, non saprei di cos'altro parlare, {charNameOne}!      
         }
-    {charTag(FirstCharacter, "curious")}:       Poi ho trovato qualcosa di inaspettato dietro il pontile: una cucina abbandonata.#speaker:{firstChar_tag()} 
+    {charTag(FirstCharacter, "curious")}:       Poi ho trovato qualcosa di inaspettato dietro il pontile: una cucina abbandonata.
     {charTag(FirstCharacter, "annoyed")}:   Mi sono messa a sistemarla, principalmente sperando di trovare qualcosa da bere.
     {charTag(FirstCharacter, "affectionate")}:      E man mano mi sono ricordata delle belle chiacchiere che mi son fatta a tavola.
     Il cibo apre alle confidenze.
     {charTag(FirstCharacter, "neutral")}:         E quindi, ecco il mio regalo per te, {player_name}: un posto dove cucinare in compagnia, per conoscerci meglio.
     E visto che di solito siamo noi a decidere di cosa parlarti, ho già avvisato {charNameTwo} che a questo giro sarai tu a decidere di cosa parlare.
-    {charTag(FirstCharacter, "curious")}:       Per cui: quando ti butta bene invita qualcunə di noi a cucinare, e vediamo che salta fuori.#speaker:{firstChar_tag()} 
+    {charTag(FirstCharacter, "curious")}:       Per cui: quando ti butta bene invita qualcunə di noi a cucinare, e vediamo che salta fuori.
     Magari scopri anche qualcosa di utile per il tuo lavoro qui.
     {charTag(FirstCharacter, "affectionate")}:      Che ne dici?
 
@@ -47,7 +47,7 @@
 
         + \ {charTag(PG, "neutral")}:         Sentivo il bisogno di un posto dove fare qualcosa assieme.
                 -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
-                {charTag(FirstCharacter, "curious")}:       Me felice.#speaker:{firstChar_tag()} 
+                {charTag(FirstCharacter, "curious")}:       Me felice.
                 {charTag(FirstCharacter, "neutral")}:         Temevo non avresti apprezzato.
                 Non vedo l'ora di cucinare assieme ora!
     
@@ -96,7 +96,7 @@
     ~ temp mentorName = translator(mentor_ActualName)
     
     {charTag(FirstCharacter, "neutral")}:         Ehi {player_name}.
-    {charTag(FirstCharacter, "curious")}:       Ho visto che anche tu hai letto <b>Luna vergine</b> di Aza.#speaker:{firstChar_tag()} 
+    {charTag(FirstCharacter, "curious")}:       Ho visto che anche tu hai letto <b>Luna vergine</b> di Aza.
     {charTag(FirstCharacter, "neutral")}:         Non so come mai ma quella storia mi si è appiccicata in testa.
     Non sono una da vendetta.
     {charTag(FirstCharacter, "sad")}:              Sono troppo cagasotto, sicuro.
@@ -108,17 +108,17 @@
                 {charTag(Mentor, "bored")}:             Uh, è una storia che ho già sentito.    
         }
     {charTag(FirstCharacter, "neutral")}:         Sembra che se sono arrabbiata allora sono in automatico nel torto.
-    {charTag(FirstCharacter, "curious")}:       Ma quando sono arrivata in fondo e ho capito che lei si stava trasformando in lupo mannaro, mi sono trovata a digrignare i denti.#speaker:{firstChar_tag()} 
+    {charTag(FirstCharacter, "curious")}:       Ma quando sono arrivata in fondo e ho capito che lei si stava trasformando in lupo mannaro, mi sono trovata a digrignare i denti.
     Avevo voglia di morsicare quel tizio anche io.
     Di tirare fuori gli artigli.
     {charTag(FirstCharacter, "neutral")}:         E non so, forse è perché qui c'è tanto tempo per ascoltarsi.
     Ma per la prima volta ho visto la rabbia non come una cosa da evitare.
     Ma come una possibilità, ha senso?
-    {charTag(FirstCharacter, "curious")}:       Come un segnale.#speaker:{firstChar_tag()} 
+    {charTag(FirstCharacter, "curious")}:       Come un segnale.
     L'allarme che scatta perché è stato superato un confine invalicabile.
     {charTag(FirstCharacter, "affectionate")}:      Forse vorrei essere mostruosa per una volta.
     {charTag(FirstCharacter, "annoyed")}:   Anche solo per essere lasciata in pace.
-    {charTag(FirstCharacter, "curious")}:       Tu che ne pensi della rabbia della tipa del racconto?#speaker:{firstChar_tag()} 
+    {charTag(FirstCharacter, "curious")}:       Tu che ne pensi della rabbia della tipa del racconto?
     
     //Risposte.    
         + \ {charTag(PG, "neutral")}:         La vendetta non è giustizia. A cosa è servita?
@@ -137,7 +137,7 @@
             
         + \ {charTag(PG, "neutral")}:         Mi è sembrato un gioco: "cosa succede se sono un mostro?".
                 -> glyph_modifier_variation_management(FirstCharacter, earthC)->
-            {charTag(FirstCharacter, "curious")}:       Non è male come gioco, vero?#speaker:{firstChar_tag()} 
+            {charTag(FirstCharacter, "curious")}:       Non è male come gioco, vero?
             Mi piacerebbe farlo una volta.
             {charTag(FirstCharacter, "neutral")}:         Credo mi farebbe sentire parti di me che non cago mai.
             
@@ -158,7 +158,7 @@
         -    
     
     {charTag(FirstCharacter, "neutral")}:         Comunque mi sa che più tardi mi faccio un altro giro tra i racconti.
-    {charTag(FirstCharacter, "curious")}:       Erano mesi che non mi mettevo a leggere qualcosa per più di dieci minuti.#speaker:{firstChar_tag()} 
+    {charTag(FirstCharacter, "curious")}:       Erano mesi che non mi mettevo a leggere qualcosa per più di dieci minuti.
             {
                 - are_two_entities_together(Franco, PG):
                     {charTag(Franco, "{portrait_Franco()}")}:       Certo che voi parlate tantissimo.

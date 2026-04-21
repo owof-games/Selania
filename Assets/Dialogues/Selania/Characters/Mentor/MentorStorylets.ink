@@ -103,7 +103,7 @@
         {charTag(Mentor, "hurry")}:             E forse mi sono dimenticata di quanto possa essere facile perdere sé stesse quando si è giovani.
             {
                 - are_two_entities_together(FirstCharacter, PG): 
-                    {charTag(FirstCharacter, "curious")}:       Vuol dire che questa confusione prima o poi finisce?#speaker:{firstChar_tag()} 
+                    {charTag(FirstCharacter, "curious")}:       Vuol dire che questa confusione prima o poi finisce?
                     {charTag(FirstCharacter, "neutral")}:         Perché la cosa mi rincuora mooolto.
             }
         
@@ -213,8 +213,7 @@
                 }
                 {
                     - are_two_entities_together(FirstCharacter, PG):
-                            {charTag(FirstCharacter, "curious")}:       Quindi {charNameTwo} mi manderà una lettera?#speaker:{firstChar_tag()} 
-                        
+                            {charTag(FirstCharacter, "curious")}:       Quindi {charNameTwo} mi manderà una lettera?
                 } 
 
                 -> mentor_closing_storylet ->
@@ -313,7 +312,7 @@
                                                 Al mio primo bacio.
             {
                 - are_two_entities_together(FirstCharacter, PG):
-                    {charTag(FirstCharacter, "curious")}:       Uuuuh, sono pronta per il thè, ama.#speaker:{firstChar_tag()} 
+                    {charTag(FirstCharacter, "curious")}:       Uuuuh, sono pronta per il thè, ama.
             } 
             {
                 - are_two_entities_together(SecondCharacter, PG):

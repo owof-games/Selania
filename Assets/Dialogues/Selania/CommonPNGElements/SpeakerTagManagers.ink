@@ -161,37 +161,6 @@ LIST nest_speakersForEwWordTag = Influenced, Other
 
 
 
-
-
-
-
-=== function firstChar_tag
-{
-    - !first_char_main_storylets.one.firstPresentation:
-        ~ return "???"
-        
-    - firstChar_ActualName == Chitarra:
-	    ~ return "Chitarra"
-	    
-    - firstChar_ActualName == Triangolo:
-	    ~ return "Triangolo"
-	    
-	- firstChar_ActualName == RagazzaOrchestra:
-	    ~ return "Orchestra"
-	    
-	- firstChar_ActualName == FlautoDolce:
-	    ~ return "Flauto"
-	    
-	- firstChar_ActualName == Ocarina:
-	    ~ return "Ocarina"
-	    
-	- firstChar_ActualName == Violino:
-	    ~ return "Violino"
-	    
-}
-
-
-
 === function thirdChar_tag
 {
 
