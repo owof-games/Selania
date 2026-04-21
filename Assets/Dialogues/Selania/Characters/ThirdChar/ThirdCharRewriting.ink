@@ -1,5 +1,3 @@
-
-
 === rewriting_proposal_third_character
 ~ temp charNameTwo = translator(thirdChar_ActualName)
 //Così se decido di uscire dalla conversazione, posso riprendere da dove eravamo rimaste.
@@ -20,9 +18,8 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-        Da quando nonna è nella casa dei vecchi fa tutto schifo.
-        @animation:RewriterBook
-        Io voglio solo fare il bambino.
+        {charTag(ThirdCharacter, "neutral")}:           Frase.
+
         -> third_char_closing_storylet ->
 
             + \ {charTag(PG, "neutral")}:         Ti ho ascoltato, {charNameThree}, e posso aiutarti a riscrivere la tua storia.
@@ -61,60 +58,36 @@
     ~ temp mentorName = translator(mentor_ActualName)
 
 
-        {charTag(SecondCharacter, "judgmental")}:       Comunque possiamo cominciare quando vuoi.
+        {charTag(ThirdCharacter, "neutral")}:           Frase.
         
         //Affrontiamo gli adulti in generale
             {charTag(PG, "neutral")}:      Hai detto che da quando nonna è nella casa dei vecchi fa tutto schifo.
 
-            + \ {charTag(PG, "neutral")}:         Tua nonna ti ha insegnato a lottare: lotta anche tu!
+            + \ {charTag(PG, "neutral")}:         Fuoco
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                E ti ha insegnato a barare!
-                E a sputare nel caffè di chi ti fa male.
-                {
-                    - about_violence_and_peace:
-                        Pensa a prima, a quando hai convinto {mentorName} a chiederti scusa.
-                        Sapevi di avere ragione, e per questo hai ottenuto quello di cui avevi bisogno.
-                }
-                    
-            
-            + \ {charTag(PG, "neutral")}:         I tuoi genitori sono infelici, {charNameTwo}, prova a comprenderli.
-                -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                Tutti i litigi, la fuga di tuo padre.
-                Il modo in cui si arrabbia per tutto.
-                Le paure di tua mamma.
-                Sono cose che puoi capire, che vivi anche tu.
-                    
-                    
-            + \ {charTag(PG, "neutral")}:         Tuo fratello però ha trovato la gioia anche in questo casino.
-                -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
-                Ci sono le sue statue, c'è il suo amico.
-                {
-                    -third_char_main_storylets.eleven:
-                        E quando sei a casa sua, ti lascia sperimentare con le cose di casa.
-                }
 
-                                
-            + \ {charTag(PG, "neutral")}:         E la casa dei vecchi è un posto attrezzato, organizzato.
-                    -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-                Una persona anziana ha bisogno di cure, {charNameTwo}.
-                Di persone che le diano quello di cui ha bisogno.
-                È giusto che tu senta la sua mancanza.
-                Ma sarebbe la cosa giusta per lei, riportarla a casa?
-                    
-    
-            + \ {charTag(PG, "neutral")}:         Ma è grazie al pianto che puoi essere diverso da loro.
-                -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-                Tu tieni agli animali.
-                A tuo fratello.
-                Alla nonna.
-                E anche a loro.
-                Puoi imparare a fidarti.
-                    
             
+            + \ {charTag(PG, "neutral")}:         Acqua
+                -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+ 
+                    
+                    
+            + \ {charTag(PG, "neutral")}:         Terra
+                -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+   
+                                
+            + \ {charTag(PG, "neutral")}:         Aria
+                    -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+      
+    
+            + \ {charTag(PG, "neutral")}:         Spirito
+                -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+        
         -
+
             ~ numberQuestion ++    
-        {charTag(SecondCharacter, "judgmental")}:       Sì no boh.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #portrait:riccio_neutral
-        Continua.
+        {charTag(ThirdCharacter, "neutral")}:           Frase.
+
         
             {
                 - story_endedStories == ():
@@ -139,31 +112,28 @@
 
         {charTag(PG, "neutral")}:      A scuola le maestre dicono che sei cattivo, bugiardo, violento, e finisci sempre in punizione.
 
-        + \ {charTag(PG, "neutral")}:         Le bugie alla fine sono solo storie. Usale per divertirti.
+        + \ {charTag(PG, "neutral")}:         Terra
                 -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
   
 
-        + \ {charTag(PG, "neutral")}:         Tutto a questo mondo cambia. Anche un bambino cocciuto e bugiardo.
+        + \ {charTag(PG, "neutral")}:         Aria
                 -> glyph_modifier_variation_management(ThirdCharacter, airC)->
 
                    
-        + \ {charTag(PG, "neutral")}:         La rabbia è parte della tua vita, della tua famiglia: trasformala.
+        + \ {charTag(PG, "neutral")}:         Fuoco
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
   
                     
-        + \ {charTag(PG, "neutral")}:         Ma non sei solo questo: sei gentile, sei curioso, sei divertente.
+        + \ {charTag(PG, "neutral")}:         Acqua
                 -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
 
                    
-        + \ {charTag(PG, "neutral")}:         Eppure hai trovato il modo di fare pace con {mentorName}.
+        + \ {charTag(PG, "neutral")}:         Spirito
                 -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
   
-                   
-
         -
         ~ numberQuestion ++     
-        {charTag(ThirdCharacter, "neutral")}:       Non ci avevo pensato, pensato davvero.#speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #portrait:riccio_neutral
-        Che posso fare qualcosa per gli animali.
+        {charTag(ThirdCharacter, "neutral")}:           Frase.
         
             {
                 - story_endedStories == ():
@@ -183,30 +153,29 @@
             {charTag(PG, "neutral")}:      Tuo fratello dice che il mondo è orribile e che non si può più aggiustare.
             
     
-        + \ {charTag(PG, "neutral")}:         Eppure ci sono le associazioni che proteggono gli animali.
+        + \ {charTag(PG, "neutral")}:         Spirito
             -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
             
 
-        + \ {charTag(PG, "neutral")}:         Eppure tuo fratello ama il suo ragazzo.
+        + \ {charTag(PG, "neutral")}:         Acqua
             -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
             
                    
-        + \ {charTag(PG, "neutral")}:         Eppure tuo fratello lotta contro tuo padre perché tu stia meglio.
+        + \ {charTag(PG, "neutral")}:         Fuoco
             -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
             
                     
-        + \ {charTag(PG, "neutral")}:         Ma sai anche trovare la fantasia e la giocosità nel mondo.
+        + \ {charTag(PG, "neutral")}:         Terra
             -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
             
 
-        + \ {charTag(PG, "neutral")}:         Eppure sistematicamente tuo fratello per lavoro aggiusta le cose.
+        + \ {charTag(PG, "neutral")}:         Aria
             -> glyph_modifier_variation_management(ThirdCharacter, airC)->
             
-                   
         -
 
         ~ numberQuestion ++        
-        {charTag(ThirdCharacter, "neutral")}:       Si no boh.
+        {charTag(ThirdCharacter, "neutral")}:           Frase.
         
             {
                 - story_endedStories == ():
@@ -230,34 +199,24 @@
 
         {charTag(PG, "neutral")}:      Hai detto che i grandi fanno schifo, e che non vuoi diventare grande.
         
-            + \ {charTag(PG, "neutral")}:         Ma puoi essere un adulto combattente, come tua nonna.
+            + \ {charTag(PG, "neutral")}:         Fuoco
                 -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-                
-                        
         
-            + \ {charTag(PG, "neutral")}:         Ma puoi essere un adulto curioso e studioso, come un po' già sei.
+            + \ {charTag(PG, "neutral")}:         Aria
                 -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-
-                
-
             
-            + \ {charTag(PG, "neutral")}:         Ma puoi essere un adulto in cerca di uno scopo più grande, come {charNameOne}.
+            + \ {charTag(PG, "neutral")}:         Spirito
                 -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
                 
-                    
-            + \ {charTag(PG, "neutral")}:         Ma puoi essere un adulto che si prende cura delle persone, come {mentorName}.
+            + \ {charTag(PG, "neutral")}:         Acqua
                 -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-                E rendere più facile la vita all3 altr3.
                 
-
-            + \ {charTag(PG, "neutral")}:         Ma puoi essere un adulto creativo, come tuo fratello.
+            + \ {charTag(PG, "neutral")}:         Terra
                 -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
                 
-                        
-
         -
         ~ numberQuestion ++       
-        {charTag(ThirdCharacter, "neutral")}:       Posso essere un adulto buono.
+        {charTag(ThirdCharacter, "neutral")}:           Frase.
         
             {
                 - story_endedStories == ():
@@ -285,56 +244,44 @@
                     {charTag(TheWitch, witch_state())}:   <i>Quale <b><i>epilogo</b></i> proporrà {player_name}?   
             }     
      
-        + (fire)\ {charTag(PG, "neutral")}:         Diventa il più forte, il più coraggioso.
+        + (fire)\ {charTag(PG, "neutral")}:         Fuoco
             -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
-            
-                    
     
-        + (aether)\ {charTag(PG, "neutral")}:         Tutti abbiamo paura. Condividi questa paura con le altre persone.
+        + (aether)\ {charTag(PG, "neutral")}:        Spirito
             -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
-            
-                   
-
-        + (earth)\ {charTag(PG, "neutral")}:         L'opposto della paura è la curiosità.
+        
+        + (earth)\ {charTag(PG, "neutral")}:         Terra
             -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
             
-                   
-                
-        + (water)\ {charTag(PG, "neutral")}:         I tuoi genitori sono spaventati, aiutatevi a vicenda.
+        + (water)\ {charTag(PG, "neutral")}:         Acqua
             -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
-            
-                   
-      
-        + (air)\ {charTag(PG, "neutral")}:         Con la tua intelligenza puoi rendere il mondo migliore.
+                  
+        + (air)\ {charTag(PG, "neutral")}:         Aria
             -> glyph_modifier_variation_management(ThirdCharacter, airC)->
-            
-                   
-    
+
         -
     //Nota: la parte di accettazione del nome è prima dell'aggiornamento, così il nome nuovo compare solo quando viene dichiarato.
     {charTag(ThirdCharacter, "neutral")}:       Sì.
 
             {
                 - ending.fire:
-                    {charTag(ThirdCharacter, "neutral")}:       Non ci avevo mai pensato, che il fatto che sono bugiardo e dispettoso può rendermi indistruttibile.
+                    {charTag(ThirdCharacter, "neutral")}:           Frase.
                 
                 - ending.aether:
-                    {charTag(ThirdCharacter, "neutral")}:       Non è che vedo sempre che anche le altre persone hanno paura.
+                    {charTag(ThirdCharacter, "neutral")}:           Frase.
                     
-
                 - ending.earth:
-                    {charTag(ThirdCharacter, "neutral")}:       Mi piace quella cosa che hai detto sulla curiosità perché è vera.
-                    Curioso sempre, curioso forte!
+                    {charTag(ThirdCharacter, "neutral")}:           Frase.
 
                 - ending.water:
-                    {charTag(ThirdCharacter, "neutral")}:       Io non ci avevo mica pensato che anche i miei genitori hanno paura.
+                    {charTag(ThirdCharacter, "neutral")}:           Frase.
 
                 - ending.air:
-                    {charTag(ThirdCharacter, "neutral")}:       Hai detto che la mia intelligenza può fare felici le altre persone.
-                    
+                    {charTag(ThirdCharacter, "neutral")}:           Frase.
                     
             }
-    {charTag(ThirdCharacter, "neutral")}:       Cavoli, quante parole che ho in testa!     
+
+    {charTag(ThirdCharacter, "neutral")}:           Frase.  
 
             //Prima chiamo il moltiplicatore di colori, così che comunque le scelte fatte qui abbiano un impatto maggiore.
                 -> glyph_modifier(ThirdCharacter, thirdChar_glyphVariation) ->
@@ -423,7 +370,7 @@
                     {charTag(TheWitch, witch_state())}:   <i>{charNameTwo} ripone piena fiducia in {player_name}, ed è pronto a condividere con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} una informazione importante.
             }
 
-        {charTag(ThirdCharacter, "neutral")}:       Voglio dirti una cosa {player_name}.
+        {charTag(ThirdCharacter, "neutral")}:           Frase.
         -> third_char_closing_storylet ->
         -> close
             
@@ -448,7 +395,7 @@
         ~ temp charNameFive = translator(fifthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-        {charTag(ThirdCharacter, "neutral")}:       Me ne vado.
+        {charTag(ThirdCharacter, "neutral")}:           Frase.
         {charTag(ThirdCharacter, "neutral")}:       Salutami
             {
                 - secondChar_storyStatus == story_storyStarted:
