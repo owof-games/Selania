@@ -226,7 +226,7 @@ Recap della logica.
         {
             - glyph_currentTalker == FirstCharacter:
                                 //Levo la PNG dalla lista delle presenti
-                                ~ glyph_allPNGAffectedByChoice -= FirstCharacter
+                                    ~ glyph_allPNGAffectedByChoice -= FirstCharacter
                                 //Aggiorno il record dello stato precedente dei glifi
                                     ~ firstChar_last_aether = firstChar_aether
                                     ~ firstChar_last_earth = firstChar_earth
@@ -722,18 +722,20 @@ Recap della logica.
             }   
         {debug_nest: dopo i conti fatti, il valore di firstCharRelCalculator è {firstCharRelCalculator}.}
 
+            ~ firstChar_relationshipIndicator += firstCharRelCalculator
+
             {
-                - firstCharRelCalculator > 0:
+                - firstChar_relationshipIndicator > 0:
                     ~ firstChar_relationshipReaction = positive
 
-                - firstCharRelCalculator < 0:
+                - firstChar_relationshipIndicator < 0:
                     ~ firstChar_relationshipReaction = negative
 
-                - firstCharRelCalculator == 0:
+                - firstChar_relationshipIndicator == 0:
                     ~ firstChar_relationshipReaction = neutral
             }
             
-            ~ firstChar_relationshipIndicator += firstCharRelCalculator
+            
 
         {debug_nest: dopo l'aggiornamento, il valore di firstChar_relationshipIndicator è {firstChar_relationshipIndicator}.} 
             
@@ -835,35 +837,39 @@ Recap della logica.
     ~ secondChar_relationshipLastDominantGlyphValue = secondChar_relationshipActualDominantGlyphValue
     ~ secondChar_relationshipLastDominantGlyph = secondChar_relationshipActualDominantGlyph
 
+    ~ secondChar_relationshipIndicator += secondCharRelCalculator      
     //E poi le reazioni
         {
-            -secondCharRelCalculator > 0:
+            -secondChar_relationshipIndicator > 0:
                 ~ secondChar_relationshipReaction = positive
 
-            - secondCharRelCalculator < 0:
+            - secondChar_relationshipIndicator < 0:
                 ~ secondChar_relationshipReaction = negative
 
-            -secondCharRelCalculator == 0: 
+            -secondChar_relationshipIndicator == 0: 
                 ~ secondChar_relationshipReaction = neutral
         }
 
-    ~ secondChar_relationshipIndicator += secondCharRelCalculator    
+      
     ~ relationshipIndicator_Adjustments(SecondCharacter)
 
 === function thirdChar_relationship_variation()
 ~ temp thirdCharRelCalculator = 0
+
+
+~ thirdChar_relationshipIndicator += thirdCharRelCalculator
         {
-            - thirdCharRelCalculator > 0:
+            - thirdChar_relationshipIndicator > 0:
                 ~ thirdChar_relationshipReaction = positive
 
-            - thirdCharRelCalculator < 0:
+            - thirdChar_relationshipIndicator < 0:
                 ~ thirdChar_relationshipReaction = negative
 
-            - thirdCharRelCalculator == 0: 
+            - thirdChar_relationshipIndicator == 0: 
                 ~ thirdChar_relationshipReaction = neutral
         }
 
-    ~ thirdChar_relationshipIndicator += thirdCharRelCalculator    
+    
     ~ relationshipIndicator_Adjustments(ThirdCharacter)
 
 
