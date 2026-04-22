@@ -363,5 +363,10 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
                 values[9]
             );
         }
+
+        public void SwitchToThirdLevelCharacters()
+        {
+            grimoireBackground.SwitchToPage(GrimoireBackground.PageType.ThirdLevelCharacter);
+        }
     }
 }

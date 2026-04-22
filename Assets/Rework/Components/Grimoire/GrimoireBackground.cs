@@ -69,7 +69,12 @@ namespace Selania.Rework.Components.Grimoire
             /// <summary>
             ///     Third level page (greenhouse).
             /// </summary>
-            ThirdLevelGreenhouse
+            ThirdLevelGreenhouse,
+
+            /// <summary>
+            ///     Third level page (character).
+            /// </summary>
+            ThirdLevelCharacter
         }
 
         /// <summary>
@@ -117,6 +122,9 @@ namespace Selania.Rework.Components.Grimoire
 
         [Tooltip("The animator controlling the third level page for the greenhouse")] [SerializeField]
         private Animator thirdLevelAnimatorGreenhouse = null!;
+
+        [Tooltip("The animator controlling the third level page for the character")] [SerializeField]
+        private Animator thirdLevelAnimatorCharacter = null!;
 
         [Tooltip("List of top level buttons")] [SerializeField]
         private TopLevelButton[] topLevelButtons = null!;
@@ -567,6 +575,9 @@ namespace Selania.Rework.Components.Grimoire
                 case PageType.ThirdLevelGreenhouse:
                     ShowPage(thirdLevelAnimatorGreenhouse);
                     break;
+                case PageType.ThirdLevelCharacter:
+                    ShowPage(thirdLevelAnimatorCharacter);
+                    break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(pageType), pageType, null);
             }
@@ -587,7 +598,8 @@ namespace Selania.Rework.Components.Grimoire
             _pageAnimators ??= new[]
             {
                 firstLevelAnimator, secondLevelAnimatorGreenhouse, secondLevelAnimatorSigils,
-                secondLevelAnimatorCharacters, thirdLevelAnimatorSigils, thirdLevelAnimatorGreenhouse
+                secondLevelAnimatorCharacters, thirdLevelAnimatorSigils, thirdLevelAnimatorGreenhouse,
+                thirdLevelAnimatorCharacter
             };
 
             foreach (var animator in _pageAnimators)
