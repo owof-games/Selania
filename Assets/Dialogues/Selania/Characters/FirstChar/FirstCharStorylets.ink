@@ -14,7 +14,7 @@
         {charTag(FirstCharacter, "neutral")}:         Si chiama Talco.
         E sicuro che nel caso ti ha tirato le pezze contro le AI o qualcosa su Florence and the Machine.
         {charTag(FirstCharacter, "sad")}:              Sempre che non abbia cambiato fissa in questi mesi.
-        {charTag(FirstCharacter, "neutral")}:         Insomma: l'hai vistə?#
+        {charTag(FirstCharacter, "neutral")}:         Insomma: l'hai vistə?
         
         
             + (aether)\ {charTag(PG, "neutral")}:         Ho sempre pensato che Florence fosse una strega.

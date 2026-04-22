@@ -361,14 +361,14 @@
                 -> glyph_modifier_variation_management(Mentor, aetherC)->
             {charTag(Mentor, "neutral")}:                   Credo di sì.
                                                             Ma uno sguardo esterno ci può aiutare, immagino.
-            {charTag(Mentor, "sad")}:                       Oh, non lo so.#
+            {charTag(Mentor, "sad")}:                       Oh, non lo so.
             {charTag(Mentor, "neutral")}:                   Sì.
                                                             Credo di star facendo un buon lavoro.
 
         + \ {charTag(PG, "neutral")}:         Ha detto tante cose ma la risposta è: no.
                 -> glyph_modifier_variation_management(Mentor, fireC)->
             {charTag(TheWitch, witch_state())}:         <i>La frusta che cade senza motivo non porta alcun insegnamento.</i>
-            {charTag(Mentor, "sad")}:                       Oh.#
+            {charTag(Mentor, "sad")}:                       Oh.
                                                             Forse potrei chiedere scusa in qualche modo a...
                                                             Ma a chi?
                                                             Come?
