@@ -1275,44 +1275,25 @@
                                                                 Non abbiamo mai passato così tanto tempo assieme.
                                                                 E penso che se ti ho conosciuto solo qui in cucina ora e {charNameOne} mi dice: vuoi fare amicizia con {player_name}?
 
-            -> secondAffinityCalc ->
-            
-        {
-            - secondAffinityCalc == 1:
             {
-                - secondChar_relationshipStatus == 0:
-                    {charTag(SecondCharacter, "neutral")}:      Rispondo di no.
-                                                                Perché non so.
-                    {charTag(SecondCharacter, "melanchonic")}:  Non è che mi è piaciuto molto molto come abbiamo parlato.
-
-                - secondChar_relationshipStatus == 1:
-                    {charTag(SecondCharacter, "emotional")}:    Rispondo subito sììììììììì!
-                    {charTag(SecondCharacter, "energy")}:       Mi sono divertito.
-                    {charTag(SecondCharacter, "emotional")}:    E mi è sembrato che mi hai ascoltato davvero.
-                                                                E mi piace questa cosa!
-            }
-                
-            - secondAffinityCalc == 2:
-            {
-                - secondChar_relationshipStatus == 0:
+                - secondChar_relationshipReaction == negative:
                     {charTag(SecondCharacter, "neutral")}:      Rispondo di no.
                                                                 Perché non so.
                     {charTag(SecondCharacter, "melanchonic")}:  Non è che mi è piaciuto molto molto come abbiamo parlato.
                 
-                - secondChar_relationshipStatus == 1:
+                - secondChar_relationshipReaction == neutral:
                     {charTag(SecondCharacter, "neutral")}:      Sì no boh.
                                                                 Devo ancora capirlo.
                     {charTag(SecondCharacter, "emotional")}:    Perché ci sono stati dei momenti in cui ho detto "Ma che figo che è avere qui {player_name}".
                     {charTag(SecondCharacter, "melanchonic")}:  E dei momenti in cui non ti capivo.
                 
-                - secondChar_relationshipStatus == 2:
+                - secondChar_relationshipReaction == positive:
                     {charTag(SecondCharacter, "emotional")}:    Rispondo subito sììììììììì!
                     {charTag(SecondCharacter, "energy")}:       Mi sono divertito.
                     {charTag(SecondCharacter, "emotional")}:    E mi è sembrato che mi hai ascoltato davvero.
                                                                 E mi piace questa cosa!
             }    
-    
-        }
+
 
     {charTag(SecondCharacter, "energy")}:                       Abbiamo ancora tante chiacchierate da fare, vero?        
             

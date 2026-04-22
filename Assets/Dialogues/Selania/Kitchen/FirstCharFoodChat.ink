@@ -40,9 +40,9 @@
         }
     
         + \ {charTag(PG, "neutral")}:         Dei rapporti che hai con le persone che ti sono care.
-                -> storage_glyphs(FirstCharacter)->
-                -> cooking_animations_on ->
-                -> first_theme
+                    -> storage_glyphs(FirstCharacter)->
+                    -> cooking_animations_on ->
+                    -> first_theme
                 
         + {first_char_main_storylets.six}\ {charTag(PG, "neutral")}:          Del bisogno di fare qualcosa che salvi il mondo.
             {
@@ -1232,59 +1232,35 @@
         
     = relationship_feedback
         -> achievements_onGame_statusUpdate_GM ->
-        {charTag(FirstCharacter, "neutral")}:         Comunque {player_name}, stavo pensando alla nostra conversazione qui, assieme.
-        E se basandomi solo su questa chiacchierata in cucina dovessi dire: ho appena conosciuto {player_name}, vorrei farci amicizia?
-        
-            -> firstAffinityCalc ->
+        {charTag(FirstCharacter, "neutral")}:                   Comunque {player_name}, stavo pensando alla nostra conversazione qui, assieme.
+                                                                E se basandomi solo su questa chiacchierata in cucina dovessi dire: ho appena conosciuto {player_name}, vorrei farci amicizia?
+
+        {
+            - firstChar_relationshipReaction == negative:
+                {charTag(FirstCharacter, "annoyed")}:           Credo che la risposta sia no.
+                {charTag(FirstCharacter, "neutral")}:           Non sei tu, sia chiaro.
+                                                                E non sono io.
+                                                                Ma piuttosto, le cose che sono per te importanti non lo sono per me.
+                {charTag(FirstCharacter, "annoyed")}:           È come se guardassimo il mondo con due paia di occhiali molto diversi.
+                {charTag(FirstCharacter, "neutral")}:           Ma non ti preoccupare: abbiamo ancora un sacco di chiacchierate da fare per conoscerci, no?
+                
+            - firstChar_relationshipReaction == neutral:
+                {charTag(FirstCharacter, "neutral")}:           Credo che la risposta sia "{player_pronouns has him:rimandato|{player_pronouns has her:rimandata|rimandatə}} a settembre".
+                {charTag(FirstCharacter, "sad")}:               Un po' ci capiamo e un po' no.
+                {charTag(FirstCharacter, "curious")}:           Che poi ci sta, no? 
+                {charTag(FirstCharacter, "neutral")}:           Alla fine ci stiamo conoscendo giusto ora.
+                                                                E abbiamo ancora un bel po' di chiacchierate da farci assieme, e capirci di più.
+                {charTag(FirstCharacter, "annoyed")}:           O di meno.
             
-            {
-                - firstAffinityCalc == 1:
-                    {
-                        - firstChar_relationshipStatus == 0:
-                            {charTag(FirstCharacter, "annoyed")}:   Credo che la risposta sia no.
-                            {charTag(FirstCharacter, "neutral")}:         Non sei tu, sia chiaro.
-                            E non sono io.
-                            Ma piuttosto, le cose che sono per te importanti non lo sono per me.
-                            {charTag(FirstCharacter, "annoyed")}:   È come se guardassimo il mondo con due paia di occhiali molto diversi.
-                            {charTag(FirstCharacter, "neutral")}:         Ma non ti preoccupare: abbiamo ancora un sacco di chiacchierate da fare per conoscerci, no?
-                    
-                        - firstChar_relationshipStatus == 1:
-                            {charTag(FirstCharacter, "affectionate")}:      La risposta è sicuramente "sì".
-                            {charTag(FirstCharacter, "neutral")}:         Vediamo il mondo in modo simile.
-                            E non credo che l'amicizia debba coincidere con l'essere la stessa persona, assolutamente no.
-                            Però avere gli stessi valori aiuta a capirsi, a costruire cose assieme.
-                            {charTag(FirstCharacter, "affectionate")}:      E posso dirti per ora che sei una persona che mi dà fiducia, {player_name}.
-                            Sono felice di starti conoscendo.
-                    }
-                    
-                - firstAffinityCalc == 2:
-                    {
-                        - firstChar_relationshipStatus == 0:
-                            {charTag(FirstCharacter, "annoyed")}:   Credo che la risposta sia no.
-                            {charTag(FirstCharacter, "neutral")}:         Non sei tu, sia chiaro.
-                            E non sono io.
-                            Ma piuttosto, le cose che sono per te importanti non lo sono per me.
-                            {charTag(FirstCharacter, "annoyed")}:   È come se guardassimo il mondo con due paia di occhiali molto diversi.
-                            {charTag(FirstCharacter, "neutral")}:         Ma non ti preoccupare: abbiamo ancora un sacco di chiacchierate da fare per conoscerci, no?
-                            
-                        - firstChar_relationshipStatus == 1:
-                            {charTag(FirstCharacter, "neutral")}:         Credo che la risposta sia "{player_pronouns has him:rimandato|{player_pronouns has her:rimandata|rimandatə}} a settembre".
-                            {charTag(FirstCharacter, "sad")}:              Un po' ci capiamo e un po' no.
-                            {charTag(FirstCharacter, "curious")}:       Che poi ci sta, no? 
-                            {charTag(FirstCharacter, "neutral")}:         Alla fine ci stiamo conoscendo giusto ora.
-                            E abbiamo ancora un bel po' di chiacchierate da farci assieme, e capirci di più.
-                            {charTag(FirstCharacter, "annoyed")}:   O di meno.
-                        
-                        - firstChar_relationshipStatus == 2:
-                            {charTag(FirstCharacter, "affectionate")}:      La risposta è sicuramente "sì".
-                            {charTag(FirstCharacter, "neutral")}:         Vediamo il mondo in modo simile.
-                            E non credo che l'amicizia debba coincidere con l'essere la stessa persona, assolutamente no.
-                            Però avere gli stessi valori aiuta a capirsi, a costruire cose assieme.
-                            {charTag(FirstCharacter, "affectionate")}:      E posso dirti per ora che sei una persona che mi dà fiducia, {player_name}.
-                            Sono felice di starti conoscendo.
-                    }    
-        
-            }
+            - firstChar_relationshipReaction == positive:
+                {charTag(FirstCharacter, "affectionate")}:      La risposta è sicuramente "sì".
+                {charTag(FirstCharacter, "neutral")}:           Vediamo il mondo in modo simile.
+                                                                E non credo che l'amicizia debba coincidere con l'essere la stessa persona, assolutamente no.
+                                                                Però avere gli stessi valori aiuta a capirsi, a costruire cose assieme.
+                {charTag(FirstCharacter, "affectionate")}:      E posso dirti per ora che sei una persona che mi dà fiducia, {player_name}.
+                                                                Sono felice di starti conoscendo.
+          
+        }
             
             -> ending_cooking_with_first_char
             

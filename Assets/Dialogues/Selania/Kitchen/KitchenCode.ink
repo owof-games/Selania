@@ -20,6 +20,8 @@
     VAR kitchen_storageAir = 0
     VAR kitchen_storageWater = 0
     VAR kitchen_storageFire = 0
+    //e del valore della relazione
+    VAR kitchen_storageRelationshipIndicatore = 0
 
 //Variabile per evitare che le personagge cucinino una di fila all'altra
     VAR kitchen_cookingAloneCoolDown = 0
@@ -213,7 +215,7 @@
     {
         - cookingCompanion == FirstCharacter:
             {charTag(FirstCharacter, "affectionate")}:      Visto che è un momento di pausa, facciamo come se non ci fossimo mai conosciut3, senza gioie né rancori passati.
-            Solo per ora ovviamente.
+                                                            Solo per ora ovviamente.
 
                 ~ kitchen_storageAether = firstChar_aether
                     ~ firstChar_aether = 0
@@ -225,12 +227,15 @@
                     ~ firstChar_water = 0
                 ~ kitchen_storageFire = firstChar_fire
                     ~ firstChar_fire= 0
+                ~ kitchen_storageRelationshipIndicatore = firstChar_relationshipIndicator
+                    ~ firstChar_relationshipIndicator = 0
+
             
             
     
         - cookingCompanion == SecondCharacter:
             {charTag(SecondCharacter, "energy")}:       Cominciamo. E farò finta di non sapere cosa penso di te, così è più facile per tutti e due.
-            Non per sempre, solo adesso che cuciniamo.
+                                                        Non per sempre, solo adesso che cuciniamo.
                 
                 ~ kitchen_storageAether = secondChar_aether
                     ~ secondChar_aether = 0
@@ -242,8 +247,63 @@
                     ~ secondChar_water = 0
                 ~ kitchen_storageFire = secondChar_fire
                     ~ secondChar_fire = 0
+                ~ kitchen_storageRelationshipIndicatore = secondChar_relationshipIndicator
+                    ~ secondChar_relationshipIndicator = 0    
+        
+        - cookingCompanion == ThirdCharacter:
+            {charTag(ThirdCharacter, "neutral")}:       Cominciamo. E farò finta di non sapere cosa penso di te, così è più facile per tutti e due.
+                                                        Non per sempre, solo adesso che cuciniamo.
+                
+                ~ kitchen_storageAether = thirdChar_aether
+                    ~ thirdChar_aether = 0
+                ~ kitchen_storageEarth = thirdChar_earth
+                    ~ thirdChar_earth = 0
+                ~ kitchen_storageAir = thirdChar_air
+                    ~ thirdChar_air = 0
+                ~ kitchen_storageWater = thirdChar_water
+                    ~ thirdChar_water = 0
+                ~ kitchen_storageFire = thirdChar_fire
+                    ~ thirdChar_fire = 0
+                ~ kitchen_storageRelationshipIndicatore = thirdChar_relationshipIndicator
+                    ~ thirdChar_relationshipIndicator = 0 
+
+        - cookingCompanion == FourthCharacter:
+            {charTag(FourthCharacter, "neutral")}:       Cominciamo. E farò finta di non sapere cosa penso di te, così è più facile per tutti e due.
+                                                        Non per sempre, solo adesso che cuciniamo.
+                
+                ~ kitchen_storageAether = fourthChar_aether
+                    ~ fourthChar_aether = 0
+                ~ kitchen_storageEarth = fourthChar_earth
+                    ~ fourthChar_earth = 0
+                ~ kitchen_storageAir = fourthChar_air
+                    ~ fourthChar_air = 0
+                ~ kitchen_storageWater = fourthChar_water
+                    ~ fourthChar_water = 0
+                ~ kitchen_storageFire = fourthChar_fire
+                    ~ fourthChar_fire = 0
+                ~ kitchen_storageRelationshipIndicatore = fourthChar_relationshipIndicator
+                    ~ fourthChar_relationshipIndicator = 0 
+
+        - cookingCompanion == FifthCharacter:
+            {charTag(FifthCharacter, "energy")}:       Cominciamo. E farò finta di non sapere cosa penso di te, così è più facile per tutti e due.
+                                                        Non per sempre, solo adesso che cuciniamo.
+                
+                ~ kitchen_storageAether = fifthChar_aether
+                    ~ fifthChar_aether = 0
+                ~ kitchen_storageEarth = fifthChar_earth
+                    ~ fifthChar_earth = 0
+                ~ kitchen_storageAir = fifthChar_air
+                    ~ fifthChar_air = 0
+                ~ kitchen_storageWater = fifthChar_water
+                    ~ fifthChar_water = 0
+                ~ kitchen_storageFire = fifthChar_fire
+                    ~ fifthChar_fire = 0
+                ~ kitchen_storageRelationshipIndicatore = fifthChar_relationshipIndicator
+                    ~ fifthChar_relationshipIndicator = 0                    
+    
     }
-->->
+    -> kitchen_moon_feedback -> 
+    ->->
 
 
 === update_glyphs(cookingCompanion)
@@ -259,8 +319,10 @@
                 ~ kitchen_storageAir = 0
             ~ firstChar_water = firstChar_water + kitchen_storageWater
                 ~ kitchen_storageWater = 0
-            ~ firstChar_fire= firstChar_fire+ kitchen_storageFire
+            ~ firstChar_fire= firstChar_fire + kitchen_storageFire
                 ~ kitchen_storageFire = 0
+            ~ firstChar_relationshipIndicator = firstChar_relationshipIndicator + kitchen_storageRelationshipIndicatore 
+                ~ kitchen_storageRelationshipIndicatore = 0
     
     - cookingCompanion == SecondCharacter:
             ~ secondChar_aether = secondChar_aether + kitchen_storageAether
@@ -273,7 +335,50 @@
                 ~ kitchen_storageWater = 0
             ~ secondChar_fire = secondChar_fire + kitchen_storageFire
                 ~ kitchen_storageFire = 0
- 
+            ~ secondChar_relationshipIndicator = secondChar_relationshipIndicator + kitchen_storageRelationshipIndicatore 
+                ~ kitchen_storageRelationshipIndicatore = 0
+
+    - cookingCompanion == ThirdCharacter:
+            ~ thirdChar_aether = thirdChar_aether + kitchen_storageAether
+                ~ kitchen_storageAether = 0
+            ~ thirdChar_earth = thirdChar_earth + kitchen_storageEarth
+                ~ kitchen_storageEarth = 0
+            ~ thirdChar_air = thirdChar_air + kitchen_storageAir
+                ~ kitchen_storageAir = 0
+            ~ thirdChar_water = thirdChar_water + kitchen_storageWater
+                ~ kitchen_storageWater = 0
+            ~ thirdChar_fire = thirdChar_fire + kitchen_storageFire
+                ~ kitchen_storageFire = 0
+            ~ thirdChar_relationshipIndicator = thirdChar_relationshipIndicator + kitchen_storageRelationshipIndicatore 
+                ~ kitchen_storageRelationshipIndicatore = 0                  
+
+    - cookingCompanion == FourthCharacter:
+            ~ fourthChar_aether = fourthChar_aether + kitchen_storageAether
+                ~ kitchen_storageAether = 0
+            ~ fourthChar_earth = fourthChar_earth + kitchen_storageEarth
+                ~ kitchen_storageEarth = 0
+            ~ fourthChar_air = fourthChar_air + kitchen_storageAir
+                ~ kitchen_storageAir = 0
+            ~ fourthChar_water = fourthChar_water + kitchen_storageWater
+                ~ kitchen_storageWater = 0
+            ~ fourthChar_fire = fourthChar_fire + kitchen_storageFire
+                ~ kitchen_storageFire = 0
+            ~ fourthChar_relationshipIndicator = fourthChar_relationshipIndicator + kitchen_storageRelationshipIndicatore 
+                ~ kitchen_storageRelationshipIndicatore = 0
+    
+    - cookingCompanion == FifthCharacter:
+            ~ fifthChar_aether = fifthChar_aether + kitchen_storageAether
+                ~ kitchen_storageAether = 0
+            ~ fifthChar_earth = fifthChar_earth + kitchen_storageEarth
+                ~ kitchen_storageEarth = 0
+            ~ fifthChar_air = fifthChar_air + kitchen_storageAir
+                ~ kitchen_storageAir = 0
+            ~ fifthChar_water = fifthChar_water + kitchen_storageWater
+                ~ kitchen_storageWater = 0
+            ~ fifthChar_fire = fifthChar_fire + kitchen_storageFire
+                ~ kitchen_storageFire = 0
+            ~ fifthChar_relationshipIndicator = fifthChar_relationshipIndicator + kitchen_storageRelationshipIndicatore 
+                ~ kitchen_storageRelationshipIndicatore = 0
     
     }
     
@@ -312,6 +417,9 @@
 
 
 {
+//Il commento sul reset del rapporto c'è solo la prima volta.
+    - not reset_indicator:
+        -> reset_indicator
 //Il feedback per il primo ingrediente inserito da sole c'è alla prima volta che si cucina.
 	- not first_time_ingredient:
 		-> first_time_ingredient
@@ -327,31 +435,35 @@
 
     - else:
         ->->    
-}        
+}    
+
+    = reset_indicator
+
+            {charTag(TheWitch, witch_state())}:     <i>La cucina è un momento di ristoro, e per questo, temporaneamente, la relazione tra {kitchen_actualChef} e {player_name} riparte da zero.</i>
+                                                    <i>Quando {kitchen_actualChef} uscirà dalla cucina, si ricorderà sia di com'era la reazione prima dell'ingresso, sia delle cose dette qui.
+        ->->
 
     = first_time_ingredient
 
-
-            {charTag(TheWitch, witch_state())}:   <i>{player_name} prova a parlare, ma le parole rimangono bloccate in gola. Ma gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.</i>
+            {charTag(TheWitch, witch_state())}:     <i>{player_name} prova a parlare, ma le parole rimangono bloccate in gola. Ma gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.</i>
         
         ->->
 
     = first_time_good_reaction
-            {charTag(TheWitch, witch_state())}:   <i>{player_name} ha aggiunto un ingrediente adorato da {kitchen_actualChef}, e quindi riceverà un consiglio su come gestire le conversazioni con {kitchen_actualChefPronouns == him:lui|lei}.</i>
+
+            {charTag(TheWitch, witch_state())}:     <i>{player_name} ha aggiunto un ingrediente adorato da {kitchen_actualChef}, e quindi riceverà un consiglio su come gestire le conversazioni con {kitchen_actualChefPronouns == him:lui|lei}.</i>
         
         ->->
 
-
     = first_time_meh_reaction
 
-
-            {charTag(TheWitch, witch_state())}:   <i>{player_name} ha aggiunto un ingrediente abbastanza apprezzato da {kitchen_actualChef}, e quindi riceverà un consiglio fumoso su cosa fare parlando con {kitchen_actualChefPronouns == him:lui|lei}.</i>
+            {charTag(TheWitch, witch_state())}:     <i>{player_name} ha aggiunto un ingrediente abbastanza apprezzato da {kitchen_actualChef}, e quindi riceverà un consiglio fumoso su cosa fare parlando con {kitchen_actualChefPronouns == him:lui|lei}.</i>
         
         ->->
 
     = first_time_bad_reaction
-            {charTag(TheWitch, witch_state())}:   <i>{player_name} ha aggiunto un ingrediente detestato da {kitchen_actualChef}, e quindi non riceverà alcun consiglio su come gestire le conversazioni con {kitchen_actualChefPronouns == him:lui|lei}.</i>
-        
+
+            {charTag(TheWitch, witch_state())}:     <i>{player_name} ha aggiunto un ingrediente detestato da {kitchen_actualChef}, e quindi non riceverà alcun consiglio su come gestire le conversazioni con {kitchen_actualChefPronouns == him:lui|lei}.</i>
         
         ->->
 

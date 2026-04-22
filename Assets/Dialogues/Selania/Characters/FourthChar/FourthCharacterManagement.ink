@@ -18,7 +18,8 @@
 //Tracciamento della relazione
     VAR fourthChar_relationshipStatus = 0
     VAR fourthChar_relationshipReaction = neutral
-   
+    VAR fourthChar_relationshipIndicator = 0
+
 //Tracciamento cucina
     //Autonoma
         VAR kitchen_fourthCharisCooking = false

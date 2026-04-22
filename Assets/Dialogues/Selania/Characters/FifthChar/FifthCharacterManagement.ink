@@ -15,6 +15,7 @@
 //Tracciamento della relazione
     VAR fifthChar_relationshipStatus = 0
     VAR fifthChar_relationshipReaction = neutral
+    VAR fifthChar_relationshipIndicator = 0
  
  //Tracciamento cucina
     //Autonoma

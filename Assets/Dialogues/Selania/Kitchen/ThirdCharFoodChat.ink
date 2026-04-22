@@ -653,31 +653,19 @@
         -> achievements_onGame_statusUpdate_GM ->
         {charTag(ThirdCharacter, "neutral")}:       Comunque {player_name}, stavo pensando alla nostra conversazione qui, assieme.
 
-            -> thirdAffinityCalc ->
+
+        {
+            - thirdChar_relationshipReaction == negative:
+                {charTag(ThirdCharacter, "neutral")}:       Credo che la risposta sia no.
+                
+            - thirdChar_relationshipReaction == neutral:
+                {charTag(ThirdCharacter, "neutral")}:       Credo che la risposta sia "{player_pronouns has him:rimandato|{player_pronouns has her:rimandata|rimandatə}} a settembre".
             
-            {
-                - thirdAffinityCalc == 1:
-                    {
-                        - thirdChar_relationshipStatus == 0:
-                            {charTag(ThirdCharacter, "neutral")}:       Credo che la risposta sia no.
-                    
-                        - thirdChar_relationshipStatus == 1:
-                            {charTag(ThirdCharacter, "neutral")}:       La risposta è sicuramente "sì".
-                    }
-                    
-                - thirdAffinityCalc == 2:
-                    {
-                        - thirdChar_relationshipStatus == 0:
-                            {charTag(ThirdCharacter, "neutral")}:       Credo che la risposta sia no.
-                            
-                        - thirdChar_relationshipStatus == 1:
-                            {charTag(ThirdCharacter, "neutral")}:       Credo che la risposta sia "{player_pronouns has him:rimandato|{player_pronouns has her:rimandata|rimandatə}} a settembre".
-                        
-                        - thirdChar_relationshipStatus == 2:
-                            {charTag(ThirdCharacter, "neutral")}:       La risposta è sicuramente "sì".
-                    }    
+            - thirdChar_relationshipReaction == positive:
+                {charTag(ThirdCharacter, "neutral")}:       La risposta è sicuramente "sì".
+        }    
         
-            }
+            
             
             -> ending_cooking_with_third_char
             
