@@ -125,39 +125,26 @@
 //Ad ora è chiamata solo in cucina e prima della riscrittura, e solo in riscrittura stampa una informazione.
 //Per la prima personaggia l'importante è che il blu sia bassissimo
 
-    //In questa prima fase di testing, punterò su una soluzione di difficoltà media: basta che o giallo o viola siano maggiori del blu.
-    {
-        - firstChar_aether or firstChar_water > firstChar_air:
-            ~ firstChar_relationshipStatus ++
-            {debug: aumento l'inchiostro della prima personaggia di un livello. Ora è a {~ firstChar_relationshipStatus}}
-    }
+
+    //"Trasformo" la relazione in inchiostro
+        ~ fromRelationshipToInk(FirstCharacter)
     
-    {
+    // Mando ai feedback
+        -> firstAffinityFeedback ->
     
-            //Se vengo dalla pre riscrittura:
-            - rewriting_proposal_first_character.rewriting:
-                {debug: ho cliccato rewriting e quindi faccio gli ultimi passaggi e attivo il feedback.} 
-                //"Trasformo" la relazione in inchiostro
-                    ~ fromRelationshipToInk(FirstCharacter)
-                
-                // Mando ai feedback
-                    -> firstAffinityFeedback ->
-                
-                //Arriva il commento della strega
-                    ~ inkLevel(FirstCharacter)
-                
-                //Salvo il massimo di inchiostro raggiunto con la personaggia
-                    ~ maxInkLevelUpdater(FirstCharacter)    
-                        ->-> 
-            
-            // altrimenti, mando avanti
-            - else:
-                ->->    
+    //Arriva il commento della strega
+        ~ inkLevel(FirstCharacter)
     
-    }
+    //Salvo il massimo di inchiostro raggiunto con la personaggia
+        ~ maxInkLevelUpdater(FirstCharacter)    
+            ->-> 
+
+    // altrimenti, mando avanti
+    - else:
+        ->->    
     
 
-    
+
     //La soluzione più tosta potrebbe essere questa invece.
     
     //{
@@ -165,9 +152,6 @@
     //        ~ firstChar_relationshipStatus ++
     //            ->->
     //}
-
-            ->->
-    
 
 
 

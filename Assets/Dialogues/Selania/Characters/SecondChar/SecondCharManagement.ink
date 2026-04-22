@@ -15,6 +15,7 @@
     VAR secondChar_relationshipGoodPercentage = 66.00
     VAR secondChar_relationshipIndicator = 0
     VAR secondChar_relationshipReaction = neutral
+    
     //Questo lo usiamo per verificare se il valore dell'ultimo glifo è variato. LAST: dato aggiornato dopo la scelta. Actual: dato controllato durante la scelta.
     VAR secondChar_relationshipLastDominantGlyph = ()
     VAR secondChar_relationshipLastDominantGlyphValue = 0
