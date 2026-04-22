@@ -80,7 +80,7 @@
                 {charTag(FirstCharacter, "affectionate")}:      La mia mente è limpida e innocente.
                 {charTag(FirstCharacter, "neutral")}:           Non come quella di un bambino, ascoltando le cose che dice il piccoletto.
                 
-            + \ {charTag(PG, "neutral")}:               Magari conoscono il senso della vita.
+            + \ {charTag(PG, "neutral")}:               Gli chiederei qual'è il senso della vita.
                 -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                 
                 {charTag(SecondCharacter, "neutral")}:          Te lo dico io: caramelle!
@@ -103,60 +103,84 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-        {charTag(SecondCharacter, "neutral")}:              Non hai detto "Ti devo chiedere scusa {charNameTwo}?
+        {charTag(SecondCharacter, "neutral")}:                  Non hai detto "Ti devo chiedere scusa {charNameTwo}?
                                                                 Perché mica l'hai ancora fatto!
-        {charTag(Mentor, "sad")}:                           Sì, ma è importante che anche tu ragioni sulla tua violenza.
-        {charTag(SecondCharacter, "angry")}:                Non sono io che ti ho picchiato.
-        {charTag(Mentor, "bored")}:                         In realtà.
-        {charTag(Mentor, "neutral")}:                       No.
+        {charTag(Mentor, "sad")}:                               Sì, ma è importante che anche tu ragioni sulla tua violenza.
+        {charTag(SecondCharacter, "angry")}:                    Non sono io che ti ho picchiato.
+        {charTag(Mentor, "bored")}:                             In realtà.
+        {charTag(Mentor, "neutral")}:                           No.
                                                                 Respira {mentorName}, respira.
-        {charTag(Mentor, "sad")}:                           Hai ragione.
-        {charTag(Mentor, "neutral")}:                       Sono qui per chiederti scusa, {charNameTwo}.
+        {charTag(Mentor, "sad")}:                               Hai ragione.
+        {charTag(Mentor, "neutral")}:                           Sono qui per chiederti scusa, {charNameTwo}.
                                                                 Non avrei dovuto farti male.
-        {charTag(Mentor, "sorry")}:                         Mi dispiace.
-        {charTag(SecondCharacter, "neutral")}:              Ok.
-        {charTag(Mentor, "neutral")}:                       Ok?
-        {charTag(SecondCharacter, "neutral")}:              Sì, non ho mica altro da dirti.
-        {charTag(Mentor, "sad")}:                           Ma io.
-        {charTag(SecondCharacter, "neutral")}:              I grandi chiedono sempre scusa per tutte le cose ma poi le rifanno.
+        {charTag(Mentor, "sorry")}:                             Mi dispiace.
+        {charTag(SecondCharacter, "neutral")}:                  Ok.
+        {charTag(Mentor, "neutral")}:                           Ok?
+        {charTag(SecondCharacter, "neutral")}:                  Sì, non ho mica altro da dirti.
+        {charTag(Mentor, "sad")}:                               Ma io.
+        {charTag(SecondCharacter, "neutral")}:                  I grandi chiedono sempre scusa per tutte le cose ma poi le rifanno.
                                                                 Poi piangono e chiedono scusa.
-        {charTag(SecondCharacter, "angry")}:                E poi le rifanno.
-        {charTag(Mentor, "hurry")}:                         Ma io ci credo davvero, {charNameTwo}!
+        {charTag(SecondCharacter, "angry")}:                    E poi le rifanno.
+        {charTag(Mentor, "hurry")}:                             Ma io ci credo davvero, {charNameTwo}!
                                                                 Non ti voglio più far del male.
-        {charTag(SecondCharacter, "neutral")}:              Ok.
+        {charTag(SecondCharacter, "neutral")}:                  Ok.
                                                                 Però va bene così.
-        {charTag(SecondCharacter, "neutral")}:              Ora ho voglia solo di cercare qualcosa da mangiare.
+        {charTag(SecondCharacter, "neutral")}:                  Ora ho voglia solo di cercare qualcosa da mangiare.
+                ~ change_entity_place(SecondCharacter)
             {
                 - are_two_entities_together(FirstCharacter, PG):
                     {charTag(FirstCharacter, "sad")}:                   Povero piccolo.
                     {charTag(FirstCharacter, "affectionate")}:          Però è stato molto coraggioso, vero?
             }
-        {charTag(Mentor, "sad")}:                           Non mi perdonerà mai, vero {player_name}?
+        {charTag(Mentor, "sad")}:                               Non mi perdonerà mai, vero {player_name}?
 
-            + \ {charTag(PG, "neutral")}:                    Scelta acqua
+
+            + \ {charTag(PG, "neutral")}:                       Temo che gli adulti non siano la sua cosa preferita.
                     -> glyph_modifier_variation_management(Mentor, waterC)->
+                        {charTag(Mentor, "sad")}:               Lo temo anche io.
+                                                                E questo significa che devo fare il doppio del lavoro per avere la sua fiducia.
+                        {charTag(Mentor, "hurry")}:             Ma la avrò!
+                                                                E capirà che anche gli adulti sono persone di cui potersi fidare.                                               
                 
-                
-            + \ {charTag(PG, "neutral")}:                      Scelta spirito
+            + \ {charTag(PG, "neutral")}:                       Tu ti sei perdonata, per quello che hai fatto?
                     -> glyph_modifier_variation_management(Mentor, aetherC)->
-                
+                    {charTag(Mentor, "sad")}:                   Non.
+                                                                No.
+                                                                Non credo di aver capito ancora fino in fondo cosa è successo.
+                                                                E sono troppo tesa ora per capire cosa mi passi per la testa.
+                                                                Sono una pessima {mentorName}, vero?
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "affectionate")}:       Al massimo sei umana, ama.
+                }
             
-            + \ {charTag(PG, "neutral")}:                    Scelta terra
+            + \ {charTag(PG, "neutral")}:                       Ha bisogno di spazio per sé, {mentorName}.
                     -> glyph_modifier_variation_management(Mentor, earthC)->
+                    {charTag(Mentor, "sad")}:                   Ma io...
+                                                                Uh.
+                                                                Non ci so stare nelle situazioni così.
+                                                                Senza sapere se la persona mi odia o meno.
+                                                                È faticosissimo, {player_name}.
                 
-            
-            + \ {charTag(PG, "neutral")}:                   Scelta aria
+            + \ {charTag(PG, "neutral")}:                       Hai imparato qualcosa, da questa situazione?
                     -> glyph_modifier_variation_management(Mentor, airC)->
-                
+                    {charTag(Mentor, "sad")}:                   Che sono un disastro?
+                                                                Che come provo a fare un passo deciso, ferisco qualcuno?
+                                                                Che forse non sono un granché come {mentorName}?
             
-            + \ {charTag(PG, "neutral")}:                  Scelta fuoco
-                    -> glyph_modifier_variation_management(Mentor, fireC)-> 
-                
+            + \ {charTag(PG, "neutral")}:                       L'hai ferito, cosa ti aspettavi?
+                    -> glyph_modifier_variation_management(Mentor, fireC)->
+                    {charTag(Mentor, "sad")}:                   Un po' di comprensione.
+                                                                Di ascolto.
+                                                                Delle mie ragioni.
+                                                                Oh cavoletti.
+                                                                L'ho fatto per me, vero?
+                                                                Ho chiesto scusa per me, non per lui.
             -
-
-        -> mentor_closing_storylet ->
-        -> second_char_closing_storylet ->
-        ->->
+        {charTag(Mentor, "neutral")}:                           Grazie per le tue parole, {player_name}.
+                -> mentor_closing_storylet ->
+                -> second_char_closing_storylet ->
+                ->->
 
     
 === first_mentor_chit_chat
@@ -239,73 +263,52 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    TODO: rendere Franco più dubitante della cosa, non ne è così certo.
-
-    {charTag(Mentor, "neutral")}:                   Però non ti ho mai visto in giro.
-    {charTag(Franco, "{portrait_Franco()}")}:       Però sono sempre stato cra!
-    {charTag(Mentor, "neutral")}:                   Ma non ti ho mai mai visto in giro.
-                                                    E ogni giorno vengo a sistemare il sentiero e pulire la serra.
-    {charTag(Franco, "{portrait_Franco()}")}:       Forse allora non sei venuta ogni giorno.
-                                                    O forse mi hai scambiato per Tullio? A volte succede.
-                                                    O forse non è che hai proprio proprio proprio tutto sotto il tuo controllo.
-                                                    Un po' come zio Gracco e il suo problema con l'alcool. E i combustibili in generale.
-    {charTag(Mentor, "neutral")}:                   Impossibile.
-                                                    Controllo tutto, è il mio lavoro.
-    {charTag(Franco, "{portrait_Franco()}")}:       Eppure eccoci cra, con io che so dove sono stato, e tu mi dici che non ricordo bene.
-    {charTag(Mentor, "sad")}:                       Non ho detto che non ricordi bene.
-    {charTag(Franco, "{portrait_Franco()}")}:       Ma dici che hai tutto sotto il tuo controllo e che non mi hai visto, quindi o non ricordo bene, o mento.
-                                                    E io sono una rana e una rana non ha un collo e quindi non mento.
-    {charTag(Mentor, "sorry")}:                     Non mi permetterei mai di dirlo.
-    {charTag(Franco, "{portrait_Franco()}")}:       Infatti non l'hai detto, l'hai implicato.
-                                                    Questa me l'ha insegnata stamani mio figlio Euforbo.
-                                                    Ma mi ha chiesto di non usare "stazampe" invece di stamani.
-    {charTag(Mentor, "neutral")}:                   Non mi piace il tuo tono, rana.
-    {charTag(Franco, "{portrait_Franco()}")}:       Ma non cambia il fatto che mi stai dando o del bugiardo o dello smemorato.
-    {charTag(Mentor, "bored")}:                     Io non l'ho detto!
-    {charTag(Franco, "{portrait_Franco()}")}:       Ma l'hai implicato.
-                                                    Che non è ampilato, perché i lati non sono ampi.
-                                                    Questo lo dice sempre Euforbo.
-    {charTag(Mentor, "bored")}:                     AAAAAAAARG!
-                                                    SEI INSOPPORTABILE!
+    {charTag(Mentor, "neutral")}:                       Però non ti ho mai visto in giro.
+    {charTag(Franco, "{portrait_Franco()}")}:           Però sono sempre stato cra!
+    {charTag(Mentor, "neutral")}:                       Ma non ti ho mai mai visto in giro.
+                                                        E ogni giorno vengo a sistemare il sentiero e pulire la serra.
+    {charTag(Franco, "{portrait_Franco()}")}:           Forse allora non sei venuta ogni giorno.
+                                                        O forse mi hai scambiato per Tullio? A volte succede.
+                                                        O forse non è che hai proprio proprio proprio tutto sotto il tuo controllo.
+                                                        Un po' come zio Gracco e il suo problema con l'alcool.
+                                                        E i combustibili in generale.
+    {charTag(Mentor, "neutral")}:                       Impossibile.
+                                                        Controllo tutto, è il mio lavoro.
+    {charTag(Franco, "{portrait_Franco()}")}:           Eppure eccoci cra, con io che so dove sono stato, e tu mi dici che non ricordo bene.
+    {charTag(Mentor, "sad")}:                           Non ho detto che non ricordi bene.
+    {charTag(Franco, "{portrait_Franco()}")}:           Ma dici che hai tutto sotto il tuo controllo e che non mi hai visto, quindi o non ricordo bene, o mento.
+                                                        E io sono una rana e una rana non ha un collo e quindi non mento.
+    {charTag(Mentor, "sorry")}:                         Non mi permetterei mai di dirlo.
+    {charTag(Franco, "{portrait_Franco()}")}:           Infatti non l'hai detto, l'hai implicato.
+                                                        Questa me l'ha insegnata stamani mio figlio Euforbo.
+                                                        Ma mi ha chiesto di non usare "stazampe" invece di stamani.
+    {charTag(Mentor, "neutral")}:                       Non mi piace il tuo tono, rana.
+    {charTag(Franco, "{portrait_Franco()}")}:           Ma non cambia il fatto che mi stai dando o del bugiardo o dello smemorato.
+    {charTag(Mentor, "bored")}:                         Io non l'ho detto!
+    {charTag(Franco, "{portrait_Franco()}")}:           Ma l'hai implicato.
+                                                        Che non è ampilato, perché i lati non sono ampi.
+                                                        Questo lo dice sempre Euforbo.
+    {charTag(Mentor, "bored")}:                         AAAAAAAARG!
+                                                        SEI INSOPPORTABILE!
         ~ change_entity_place(Mentor)
-    {charTag(Franco, "{portrait_Franco()}")}:       No, sono Franco La Rana.
-                                                    Non mi ha molto ascoltato.    
-                                                    E comunque non ricordo l'esistenza di nessun mentore da queste parti.
-        {
-            - are_two_entities_together(FirstCharacter, PG):
-                {charTag(FirstCharacter, "curious")}:       In che senso, scusa?
-                {charTag(Franco, "{portrait_Franco()}")}:       {charNameOne}!
-                                                                Prima è passata zia Graaak e ti voleva parlare!
-                                                                Tullio dice che c'ha una cotta per te.
-                                                                Però non ho visto dove si è bruciata.
-                                                                O se ti deve bruciare.
-                                                                Non sarebbe molto gentile però, vero?
-                {charTag(FirstCharacter, "neutral")}:         Ooook
-                {charTag(FirstCharacter, "annoyed")}:   No, non è vero: non ce la posso fare.
-                    ~ change_entity_place(FirstCharacter)
-        }
+    {charTag(Franco, "{portrait_Franco()}")}:           No, sono Franco La Rana.
+                                                        Non mi ha molto ascoltato.    
+                                                        E comunque io non me lo ricordo un Mentore da queste parti.
+                                                        E neanche un Nasore o un Orecchiore se è per questo.
+{
+        - are_two_entities_together(FirstCharacter, PG):
+        {charTag(FirstCharacter, "curious")}:           In che senso, scusa?
+        {charTag(Franco, "{portrait_Franco()}")}:       {charNameOne}!
+                                                        Prima è passata zia Graaak e ti voleva parlare!
+                                                        Tullio dice che c'ha una cotta per te.
+                                                        Però non ho visto dove si è bruciata.
+                                                        O se ti deve bruciare.
+                                                        Non sarebbe molto gentile però, vero?
+        {charTag(FirstCharacter, "neutral")}:           Ooook
+        {charTag(FirstCharacter, "annoyed")}:           No, non è vero: non ce la posso fare.
+                ~ change_entity_place(FirstCharacter)
+}
 
-
-        Facciamo domande anche sul "in che senso non hai mai visto nessun mnentore?", con reazione da parte altre png.
-            + \ {charTag(PG, "neutral")}:                   Scelta acqua
-                    -> glyph_modifier_variation_management(Mentor, waterC)->
-                
-                
-            + \ {charTag(PG, "neutral")}:                     Scelta spirito
-                    -> glyph_modifier_variation_management(Mentor, aetherC)->
-                
-            
-            + \ {charTag(PG, "neutral")}:                    Scelta terra
-                    -> glyph_modifier_variation_management(Mentor, earthC)->
-                
-            
-            + \ {charTag(PG, "neutral")}:                       Scelta aria
-                    -> glyph_modifier_variation_management(Mentor, airC)->
-                
-            
-            + \ {charTag(PG, "neutral")}:                       Scelta fuoco
-                    -> glyph_modifier_variation_management(Mentor, fireC)-> 
-                
             -
         -> mentor_closing_storylet ->
         ->->
@@ -482,26 +485,55 @@
         
         {charTag(Franco, "{portrait_Franco()}")}:               Secondo te {player_name} come facciamo a capire se {charNameTwo} è una rana?
 
-            + \ {charTag(PG, "neutral")}:                     Scelta acqua
+            + \ {charTag(PG, "neutral")}:                       Vediamo come se la cava a cantare.
                     -> glyph_modifier_variation_management(SecondCharacter, waterC)->
-                
-                
-            + \ {charTag(PG, "neutral")}:                      Scelta spirito
+                {charTag(Franco, "{portrait_Franco()}")}:       Geniale!
+                                                                {charNameTwo}: ti portiamo al karaoke di cugina Sputt.
+                                                                E se sai tutte le parole di <i>(You Drive Me)Craaazy</i> sei una rana!
+                {charTag(SecondCharacter, "neutral")}:          Le parole di cosa?!?
+
+            + \ {charTag(PG, "neutral")}:                       Dato che è un mistero irrisolvibile, sta a {charNameTwo} decidere se lo è o meno.
                     -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
-                
+                {charTag(Franco, "{portrait_Franco()}")}:       E cosa ne pensa {charNameTwo}?
+                {charTag(SecondCharacter, "energy")}:           Mi sembrava una cosa bellissima essere una rana.
+                {charTag(SecondCharacter, "angry")}:            Ma poi ho scoperto che i girini hanno la scuola, BLEAH!
+                {charTag(SecondCharacter, "melanchonic")}:      Però questo è vero anche se resto bambino.
+                {charTag(SecondCharacter, "neutral")}:          Però Franco ricorda tutti i compleanni dei suoi girini.
+                                                                Questo è un punto a favore per dire che sono una rana!
+                                                                Ci devo ancora pensare.
             
-            + \ {charTag(PG, "neutral")}:                     Scelta terra
+            + \ {charTag(PG, "neutral")}:                       Proviamo a fargli piace mangiare i lombrichi.
                     -> glyph_modifier_variation_management(SecondCharacter, earthC)->
-                
+                {charTag(SecondCharacter, "angry")}:            Questa è la cosa più BLEAH che potessi dire!
+                {charTag(Franco, "{portrait_Franco()}")}:       Ma poi non ha senso!
+                                                                Io sono vegetariano per esempio.
+                                                                E sono sempre una rana, no?
+                                                                O non lo sono più?
+                                                                Non è che sono diventato un airone?
+                                                                Forse so volare?
             
-            + \ {charTag(PG, "neutral")}:                      Scelta aria
+            + \ {charTag(PG, "neutral")}:                       Franco: tu non sai nuotare, e nemmeno {charNameTwo}: non è che tu sei un bambino?
                     -> glyph_modifier_variation_management(SecondCharacter, airC)->
-                
+                {charTag(SecondCharacter, "energy")}:           Siii!
+                                                                Ha moooolto più senso!
+                {charTag(Franco, "{portrait_Franco()}")}:       Ma se sono un bambino vuol dire che non devo più lavorare?
+                {charTag(SecondCharacter, "neutral")}:          Perché, tu lavori?
+                {charTag(Franco, "{portrait_Franco()}")}:       Certo! Sono istruttore di nuoto per i girini!
+                {charTag(SecondCharacter, "energy")}:           Ma non sai nuotare!
+                {charTag(Franco, "{portrait_Franco()}")}:       E infatti gli istruisco a non nuotare.
+                                                                Così non annegano.
+                                                                Logico, no?                                      
             
-            + \ {charTag(PG, "neutral")}:                      Scelta fuoco
+            + \ {charTag(PG, "neutral")}:                       La risposta è nel corpo: vediamo quanto salta in alto!
                     -> glyph_modifier_variation_management(SecondCharacter, fireC)-> 
-                
+                {charTag(SecondCharacter, "angry")}:            Io oooooooodio lo sport!
+                                                                E odio saltare!
+                {charTag(Franco, "{portrait_Franco()}")}:       E io non so saltare.
+                                                                Questa cosa non ha senso {player_name}!                                                
             -
+
+            {charTag(Franco, "{portrait_Franco()}")}:           Non ti preoccupare {charNameTwo}, arriveremo a capo di questo mistero!
+        
         -> second_char_closing_storylet ->
         ->->
 
@@ -648,7 +680,25 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    Chiacchierata Riccio e Carla, puramente di colore
+        {charTag(Carla, "neutral")}:                    Per ogni chiarimento richiesto da un minore, è necessaria la presenza di un adulto.
+        {charTag(SecondCharacter, "energy")}:           Ecco ecco, ora c'è qui {player_name}!
+                                                        E {player_name} è un{player_pronouns has her:a|ə} adult{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
+                                                        Quindi ora puoi rispondermi.
+        {charTag(Carla, "neutral")}:                    Mi ripeta la domanda.
+        {charTag(SecondCharacter, "energy")}:           È vero che le capre recitano?
+        {charTag(Carla, "bored")}:                      Decreto legislativo 134/2022, sezione 65.
+        {charTag(Carla, "neutral")}:                    "È previsto che ogni capra svezzata segua un corso di recitazione di anni tre presso la Royal Academy of Dramatic Art."
+                                                        "Il costo è a carico dell'allevatore, o di chi ne fa ne veci."
+                                                        "Il percorso sarà ritenuto concluso quando la suddetta capra avrà mangiato almeno una delle seguenti opere."
+                                                        "<i>Sogno di una capra di mezza estate.</i>"
+                                                        "<i>Gli allegri somari di Windsor.</i>"
+                                                        "<i>Beetello</i>."
+                                                        "Se entro tre anni non verrà consumata nessuna delle tre opere, la capra verrà privata del suo nome."
+                                                        "Da quel momento verrà considerata per sempre da tutte le persone come la cosa più fastidiosa del mondo."
+                                                        "Un riccio."
+        {charTag(SecondCharacter, "melanchonic")}:      Quindi mi stai prendendo in giro?
+        {charTag(Carla, "happy")}:                      Non ho forse recitato benissimo?
+
 
     -> second_char_closing_storylet ->
     ->->
