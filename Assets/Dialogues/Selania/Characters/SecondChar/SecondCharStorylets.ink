@@ -20,15 +20,17 @@
                 {charTag(SecondCharacter, "energy")}:           Perché c'è la neve ma non fa freddo? 
                                                                 Perché c'è una stazione ma non passa nessun treno?
                 {charTag(SecondCharacter, "angry")}:            Perché c'è una porta vicino alla stazione ma non ci posso entrare?
-                
+
+            TODO: più "terra"    
             + (buffe) \ {charTag(PG, "neutral")}:               Perché è pieno di cose buffe!
                     -> glyph_modifier_variation_management(SecondCharacter, earthC)->
                 {charTag(SecondCharacter, "energy")}:           Uh.
                                                                 Per ora ho studiato solo la stazione.
                                                                 E devo capire cos'è quella cosa sul tabellone.
                 {charTag(SecondCharacter, "neutral")}:          E poi ho sentito un treno ma non l'ho visto.
-                    
-            + (tu)\ {charTag(PG, "neutral")}:                    Aspetta, prima te: perché <b><i>tu</b></i> sei qui?
+
+            TODO: più "fuoco"        
+            + (tu)\ {charTag(PG, "neutral")}:                   Aspetta, prima te: perché <b><i>tu</b></i> sei qui?
                     -> glyph_modifier_variation_management(SecondCharacter, fireC)->
                 {charTag(SecondCharacter, "angry")}:            Boh, che ne so? 
                                                                 Era solo una domanda!
@@ -186,7 +188,8 @@
                 O che la serra diventa di cioccolato?
                 O che.
                 {charTag(SecondCharacter, "neutral")}:        Ho finito le idee.
-
+            
+            TODO: più "terra"
             + \ {charTag(PG, "neutral")}:         Speriamo sia il nuovo Super Lario!
                     -> glyph_modifier_variation_management(SecondCharacter, earthC)->
                 {charTag(SecondCharacter, "emotional")}:        Posso giocarci anche io?
@@ -205,22 +208,22 @@
             + \ {charTag(PG, "neutral")}:         Sembra una rana molto gentile.
                     -> glyph_modifier_variation_management(SecondCharacter, waterC)->
                 {charTag(SecondCharacter, "emotional")}:        A me mi sta simpatica.
-                {charTag(SecondCharacter, "neutral")}:        E non credo sia tossica o velenosa.
-                {charTag(SecondCharacter, "melanchonic")}:    Però anche io vorrei un regalo.
-                {charTag(SecondCharacter, "energy")}:       Se non ti piace mi dai quello che ti dà?
-                Spero tanto sia un cucciolo!
+                {charTag(SecondCharacter, "neutral")}:          E non credo sia tossica o velenosa.
+                {charTag(SecondCharacter, "melanchonic")}:      Però anche io vorrei un regalo.
+                {charTag(SecondCharacter, "energy")}:           Se non ti piace mi dai quello che ti dà?
+                                                                Spero tanto sia un cucciolo!
 
-            + \ {charTag(PG, "neutral")}:         Deve essere una rana molto saggia.
+            + \ {charTag(PG, "neutral")}:                       Deve essere una rana molto saggia.
                 -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
-                {charTag(SecondCharacter, "neutral")}:        Non lo so, ha detto le cose in modo buffo.
-                {charTag(SecondCharacter, "energy")}:       Ha anche usato una parolaccia.
+                {charTag(SecondCharacter, "neutral")}:          Non lo so, ha detto le cose in modo buffo.
+                {charTag(SecondCharacter, "energy")}:           Ha anche usato una parolaccia.
                     {
                         - are_two_entities_together(Mentor, PG): 
                                 {charTag(Mentor, "bored")}:             Davanti a un bambino?!?
                     }
-                {charTag(SecondCharacter, "neutral")}:        Però mi ha anche detto che "tutto è dove deve stare".
-                {charTag(SecondCharacter, "melanchonic")}:    Che non mi ha aiutato molto perché gli ho chiesto le caramelle.
-                E dovrebbero stare nella mia pancia, ma non ci sono.   
+                {charTag(SecondCharacter, "neutral")}:          Però mi ha anche detto che "tutto è dove deve stare".
+                {charTag(SecondCharacter, "melanchonic")}:      Che non mi ha aiutato molto perché gli ho chiesto le caramelle.
+                                                                E dovrebbero stare nella mia pancia, ma non ci sono.   
 
             - (franco)
                          
@@ -228,7 +231,6 @@
             Vai a vederla, ora!
          
 
-            
             -> second_char_closing_storylet ->
             -> options_second_character
 
@@ -379,67 +381,69 @@
             
             + {him_liar} \ {charTag(PG, "neutral")}:         Bugia: hai detto di esser pieno di action figures.
                     -> glyph_modifier_variation_management(SecondCharacter, airC)->
-                {charTag(SecondCharacter, "angry")}:        "Pieno" è un modo di dire.
-                {charTag(SecondCharacter, "neutral")}:        Come "Furbo come una volpe".
-                O "Simpatico come {player_name}".
+                {charTag(SecondCharacter, "angry")}:            "Pieno" è un modo di dire.
+                {charTag(SecondCharacter, "neutral")}:          Come "Furbo come una volpe".
+                                                                O "Simpatico come {player_name}".
             
             + {him_liar} \ {charTag(PG, "neutral")}:         Non mi prendere in giro, hai detto che le action le ha rubate papà.
                     -> glyph_modifier_variation_management(SecondCharacter, fireC)->
                 {charTag(SecondCharacter, "angry")}:        No.
-                Ricordi male.
-                Papà è bravo, non fa queste cose. 
+                                                            Ricordi male.
+                                                            Papà è bravo, non fa queste cose. 
             
             + {her_liar} \ {charTag(PG, "neutral")}:         Tua mamma è una che si arrabbia spesso?
                     -> glyph_modifier_variation_management(SecondCharacter, fireC)->
-                {charTag(SecondCharacter, "melanchonic")}:    Un po'.
-                Non è cattiva, è che sono cattivo io.
-                {charTag(SecondCharacter, "neutral")}:        E così perde la pazienza.
-                {charTag(SecondCharacter, "melanchonic")}:    Ma è colpa mia.
+                {charTag(SecondCharacter, "melanchonic")}:      Un po'.
+                                                                Non è cattiva, è che sono cattivo io.
+                {charTag(SecondCharacter, "neutral")}:          E così perde la pazienza.
+                {charTag(SecondCharacter, "melanchonic")}:      Ma è colpa mia.
             
             + {her_liar or they_liar} \ {charTag(PG, "neutral")}:         Avevi detto che questo è il regalo di compleanno di tua mamma.
                     -> glyph_modifier_variation_management(SecondCharacter, airC)->
-                {charTag(SecondCharacter, "neutral")}:        Sì no boh.
-                Anche.
-                {charTag(SecondCharacter, "angry")}:        Uffi, che noia che fai!
+                {charTag(SecondCharacter, "neutral")}:          Sì no boh.
+                                                                Anche.
+                {charTag(SecondCharacter, "angry")}:            Uffi, che noia che fai!
                     
             
             + {they_liar} \ {charTag(PG, "neutral")}:         Ehi bimbo! Avevi detto che questo è il suo regalo di compleanno!
                     -> glyph_modifier_variation_management(SecondCharacter, fireC)->
-                {charTag(SecondCharacter, "neutral")}:        Sì, certo che sì.
-                Si è dimenticata il compleanno, ma poi ha deciso di farmi questo.
-                Per scusarsi.
+                {charTag(SecondCharacter, "neutral")}:          Sì, certo che sì.
+                                                                Si è dimenticata il compleanno, ma poi ha deciso di farmi questo.
+                                                                Per scusarsi.
                 {charTag(SecondCharacter, "emotional")}:        E poi mi prenderà un cane!
                    
                  
             + \ {charTag(PG, "neutral")}:         Ci stai male, quando mamma dimentica il tuo compleanno?
                     -> glyph_modifier_variation_management(SecondCharacter, waterC)->    
-                {charTag(SecondCharacter, "melanchonic")}:    Un po'.
-                Ma solo perché fa tante promesse tutto l'anno.
-                E poi non succede mai niente.
+                {charTag(SecondCharacter, "melanchonic")}:      Un po'.
+                                                                Ma solo perché fa tante promesse tutto l'anno.
+                                                                E poi non succede mai niente.
                 {charTag(SecondCharacter, "emotional")}:        Voglio festeggiarlo con mio fratello.
-                {charTag(SecondCharacter, "melanchonic")}:    Ma poi papà si arrabbia.
-                E così non facciamo mai nulla.
+                {charTag(SecondCharacter, "melanchonic")}:      Ma poi papà si arrabbia.
+                                                                E così non facciamo mai nulla.
                 {charTag(SecondCharacter, "emotional")}:        E allora vado a letto prestissimo e correggo tutta la giornata.
-                          
+
+            TODO: più "terra"              
             + \ {charTag(PG, "neutral")}:         Però non mi hai detto il tuo nome. Sei una spia? Un gatto? Un gatto spia?
                     -> glyph_modifier_variation_management(SecondCharacter, earthC)->
-                {charTag(SecondCharacter, "neutral")}:        Sì no boh.
-                {charTag(SecondCharacter, "energy")}:       Una spia non direbbe mai che è una spia.
-                Oppure ti confonde, così non capisci cosa è vero o cosa no.
-                {charTag(SecondCharacter, "angry")}:        Però tu non puoi mica farlo!
-                    
+                {charTag(SecondCharacter, "neutral")}:          Sì no boh.
+                {charTag(SecondCharacter, "energy")}:           Una spia non direbbe mai che è una spia.
+                                                                Oppure ti confonde, così non capisci cosa è vero o cosa no.
+                {charTag(SecondCharacter, "angry")}:            Però tu non puoi mica farlo!
+            
+            //Renderla più interessante
             + \ {charTag(PG, "neutral")}:         Sembra che tua mamma sia piena di preoccupazioni.
                     -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
-                {charTag(SecondCharacter, "melanchonic")}:    Mamma è sempre preoccupata di tutto.
-                Mio fratello prova ad aiutarla, ma a volte si arrabbia perché lei non vuole.
-                Dice che ce la vuole fare da sola.
-                {charTag(SecondCharacter, "neutral")}:        E anche io ci provo.
-                                                            Lei dice che farsi aiutare è barare.
-                                                            Nonna dice che a volte bisogna barare per andare avanti.
+                {charTag(SecondCharacter, "melanchonic")}:      Mamma è sempre preoccupata di tutto.
+                                                                Mio fratello prova ad aiutarla, ma a volte si arrabbia perché lei non vuole.
+                                                                Dice che ce la vuole fare da sola.
+                {charTag(SecondCharacter, "neutral")}:          E anche io ci provo.
+                                                                Lei dice che farsi aiutare è barare.
+                                                                Nonna dice che a volte bisogna barare per andare avanti.
             -
 
-            {charTag(SecondCharacter, "energy")}:       Forse dietro tutti quei fiori vicino allo stagno trovo qualche regalo!
-            Devo solo capire come andarci.
+            {charTag(SecondCharacter, "energy")}:               Forse dietro tutti quei fiori vicino allo stagno trovo qualche regalo!
+                                                                Devo solo capire come andarci.
             {
                 - are_two_entities_together(Mentor, PG): 
                         {charTag(Mentor, "hurry")}:             Ma perché non sistemi con me i vialetti?
@@ -524,7 +528,8 @@
                                                             stare!
                     ~ change_entity_place(Mentor)
                                                             Mi ha fatto arrabbiare.
-                    
+
+            TODO: più "terra", togli idea dello scherzo 
             + (scherzo) \ {charTag(PG, "neutral")}:         Non era più divertente farle uno scherzo?
                     -> glyph_modifier_variation_management(SecondCharacter, earthC)->
                         {
@@ -548,7 +553,7 @@
                 }                                            
             
                     
-            + (sfigati) \ {charTag(PG, "neutral")}:         Va bene difendersi, ma picchiare una così è stupido.
+            + (sfigati) \ {charTag(PG, "neutral")}:         Va bene difendersi, ma picchiare una vecchia è da stupidi.
                     -> glyph_modifier_variation_management(SecondCharacter, fireC)->
                 {charTag(SecondCharacter, "angry")}:            Mi aveva preso il braccio!
                                                                 E continuava a dire che sono un bambino e che i bambini qui non ci devono stare.
@@ -633,8 +638,8 @@
                     Come hai fatto tu prima quando non mi hai risposto e mi hai chiesto cosa facevo qui.
             }
         {charTag(SecondCharacter, "energy")}:       Mi ha anche insegnato come barare a carte.
-        E come aprire il cassetto dei dolci di mamma.
-        E a sputare nel caffè di chi ti fa male.
+                                                    E come aprire il cassetto dei dolci di mamma.
+                                                    E a sputare nel caffè di chi ti fa male.
             {
                 - second_char_main_storylets.four.disciplinato:
                     {charTag(SecondCharacter, "angry")}:        E non mi dire di nuovo che devo essere più disciplinato, come prima!
@@ -643,16 +648,16 @@
                     {charTag(SecondCharacter, "energy")}:       Forse è questo lo scherzo da fare a {mentorName}!
                     Devo solo trovare il caffè.
             }
-        {charTag(SecondCharacter, "neutral")}:        Quando mamma e papà ci lasciavano a casa da soli mangiavamo sempre cose buone.
-        E guardavamo assieme la tele.
-        {charTag(SecondCharacter, "energy")}:       E potevo scegliere cosa guardare.
-        {charTag(SecondCharacter, "neutral")}:        Quando papà è andato via nonna ha aiutato mamma a stare bene.
-        {charTag(SecondCharacter, "melanchonic")}:    Anche se a mamma mica piace la nonna.
-        {charTag(SecondCharacter, "angry")}:        E quando papà è tornato ha ripreso a trattarla male.
-        Che rabbia.
-        {charTag(SecondCharacter, "neutral")}:        Ma nonna dice che succede.
-        Che i grandi fanno cose cattive senza saperlo.
-        Mi spiace essere scappato di casa.
+        {charTag(SecondCharacter, "neutral")}:          Quando mamma e papà ci lasciavano a casa da soli mangiavamo sempre cose buone.
+                                                        E guardavamo assieme la tele.
+        {charTag(SecondCharacter, "energy")}:           E potevo scegliere cosa guardare.
+        {charTag(SecondCharacter, "neutral")}:          Quando papà è andato via nonna ha aiutato mamma a stare bene.
+        {charTag(SecondCharacter, "melanchonic")}:      Anche se a mamma mica piace la nonna.
+        {charTag(SecondCharacter, "angry")}:            E quando papà è tornato ha ripreso a trattarla male.
+                                                        Che rabbia.
+        {charTag(SecondCharacter, "neutral")}:          Ma nonna dice che succede.
+                                                        Che i grandi fanno cose cattive senza saperlo.
+                                                        Mi spiace essere scappato di casa.
             {
                 - are_two_entities_together(FirstCharacter, PG):
                     {charTag(FirstCharacter, "sad")}:              Se solo potessi ti porterei alla Rifugia, piccoletto.
@@ -766,15 +771,16 @@
                         {charTag(FirstCharacter, "annoyed")}:   Strane, non lo so. 
                         Ma anche le bimbe possono essere crudeli, quello sì.
                 } 
-        {charTag(SecondCharacter, "angry")}:        Le maestre mi mettono sempre in castigo.
-        Se mi nascondo nell'armadio perché ho sonno.
-        Se spingo gli altri per terra.
-        {charTag(SecondCharacter, "melanchonic")}:    Se mi distraggo.
+        {charTag(SecondCharacter, "angry")}:            Le maestre mi mettono sempre in castigo.
+                                                        Se mi nascondo nell'armadio perché ho sonno.
+                                                        Se spingo gli altri per terra.
+        {charTag(SecondCharacter, "melanchonic")}:      Se mi distraggo.
         {charTag(SecondCharacter, "emotional")}:        Una volta nonna, quando stava bene, è venuta e ha urlato a tutte le maestre.
-        {charTag(SecondCharacter, "neutral")}:        Ora sono un po' più gentili.
-        Ma quella di matematica dice sempre che le dispiace per me.
-        {charTag(SecondCharacter, "angry")}:        E non mi piace quando fa così.
-       
+        {charTag(SecondCharacter, "neutral")}:          Ora sono un po' più gentili.
+                                                        Ma quella di matematica dice sempre che le dispiace per me.
+        {charTag(SecondCharacter, "angry")}:            E non mi piace quando fa così.
+
+            //Blu più forte di tutte le altre
             + \ {charTag(PG, "neutral")}:         È provato che anche i maschi piangono, e pure gli orsi e gli elefanti.
                     -> glyph_modifier_variation_management(SecondCharacter, airC)->
                 {charTag(SecondCharacter, "neutral")}:        Gli orsi mi piacciono.
@@ -783,7 +789,8 @@
                 {charTag(SecondCharacter, "energy")}:       Questa è una cosa nuova.
                 {charTag(SecondCharacter, "neutral")}:        E mi piace.
                 Ma non so se mi piace piangere.
-                    
+
+            TODO: più "terra"? rimarrei su questo tono, devo solo capire se cambiare qualcosina        
             + \ {charTag(PG, "neutral")}:         La scuola è un posto senza fantasia!
                     -> glyph_modifier_variation_management(SecondCharacter, earthC)->
                 {charTag(SecondCharacter, "neutral")}:        Sì no boh.
@@ -839,33 +846,33 @@
                     ~ change_entity_place(Mentor)
             }     
  
-        {charTag(SecondCharacter, "energy")}:       Franco prima mi ha detto che tu scrivi storie.
+        {charTag(SecondCharacter, "energy")}:           Franco prima mi ha detto che tu scrivi storie.
             {
                 - are_two_entities_together(Franco, PG):
                     {charTag(Franco, "{portrait_Franco()}")}:       Anche Franco scrive storie.
                                                                     Storie in cui Franco sa nuotare!
             }
-        {charTag(SecondCharacter, "neutral")}:        A me mi piacciono le storie.
-        C'è una cosa che non dico mai a nessuno.
-        Mamma è felice perché vado a letto presto.
+        {charTag(SecondCharacter, "neutral")}:          A me mi piacciono le storie.
+                                                        C'è una cosa che non dico mai a nessuno.
+                                                        Mamma è felice perché vado a letto presto.
         {charTag(SecondCharacter, "emotional")}:        Ma è perché mi piace stare al buio da solo.
-        Così posso pensare alle cose che ho fatto durante il giorno.
-        {charTag(SecondCharacter, "neutral")}:        E correggere quelle che non mi piacciono.
-        {charTag(SecondCharacter, "energy")}:       Quando uno di quinta mi ha picchiato, la sera ho corretto tutto e l'ho picchiato io.
+                                                        Così posso pensare alle cose che ho fatto durante il giorno.
+        {charTag(SecondCharacter, "neutral")}:          E correggere quelle che non mi piacciono.
+        {charTag(SecondCharacter, "energy")}:           Quando uno di quinta mi ha picchiato, la sera ho corretto tutto e l'ho picchiato io.
         {charTag(SecondCharacter, "emotional")}:        E i miei compagni poi erano miei amici così.
             {
                 - are_two_entities_together(FirstCharacter, PG): 
                         {charTag(FirstCharacter, "sad")}:              Mi si è appena rotto il cuore.
             } 
-        {charTag(SecondCharacter, "neutral")}:        Una volta ho preso un brutto voto e papà e mamma hanno litigato perché si davano la colpa.
-        Ma allora ho corretto tutto e io non prendevo un brutto voto.
-        {charTag(SecondCharacter, "energy")}:       E andavamo a prendere un gelato.
+        {charTag(SecondCharacter, "neutral")}:          Una volta ho preso un brutto voto e papà e mamma hanno litigato perché si davano la colpa.
+                                                        Ma allora ho corretto tutto e io non prendevo un brutto voto.
+        {charTag(SecondCharacter, "energy")}:           E andavamo a prendere un gelato.
         {charTag(SecondCharacter, "emotional")}:        E la nonna non era nella casa dei vecchi.
-        {charTag(SecondCharacter, "neutral")}:        E quando papà è tornato dopo essere andato via ed era arrabbiato, invece è tornato con un cane.
-        {charTag(SecondCharacter, "melanchonic")}:    Non ho mai avuto un cane.
-        {charTag(SecondCharacter, "energy")}:       Sai che i cani sentono suoni fino a duecento metri?
-        Se li chiami e non vengono è perché non vogliono.
-        {charTag(SecondCharacter, "neutral")}:        Anche io faccio così.
+        {charTag(SecondCharacter, "neutral")}:          E quando papà è tornato dopo essere andato via ed era arrabbiato, invece è tornato con un cane.
+        {charTag(SecondCharacter, "melanchonic")}:      Non ho mai avuto un cane.
+        {charTag(SecondCharacter, "energy")}:           Sai che i cani sentono suoni fino a duecento metri?
+                                                        Se li chiami e non vengono è perché non vogliono.
+        {charTag(SecondCharacter, "neutral")}:          Anche io faccio così.
             {
                 - are_two_entities_together(Mentor, PG):
                         {charTag(Mentor, "neutral")}:           Qui ogni tanto passa un cane con la posta.
@@ -873,51 +880,53 @@
                         {charTag(SecondCharacter, "energy")}:       Sarebbe fighissimooooooooooooooooooooooooooooooo!
             }
             
+            //Qui la parte acqua ha battuto tutto il resto.
             + \ {charTag(PG, "neutral")}:         Obiettivamente conosci tutto degli animali.
                     -> glyph_modifier_variation_management(SecondCharacter, airC)->
-                {charTag(SecondCharacter, "energy")}:       Tutto, sì!
-                {charTag(SecondCharacter, "neutral")}:        No, non <i>tutto tutto tutto</i>.
-                Ma solo perché sono piccolo.
-                {charTag(SecondCharacter, "energy")}:       Un giorno sapro davvero tutte le cose possibili! 
- 
+                {charTag(SecondCharacter, "energy")}:           Tutto, sì!
+                {charTag(SecondCharacter, "neutral")}:          No, non <i>tutto tutto tutto</i>.
+                                                                Ma solo perché sono piccolo.
+                {charTag(SecondCharacter, "energy")}:           Un giorno sapro davvero tutte le cose possibili! 
+
+            TODO: più "terra"
             + \ {charTag(PG, "neutral")}:         Hai mai corretto una giornata mettendoci vampiri o zombie?
                     -> glyph_modifier_variation_management(SecondCharacter, earthC)->
-                {charTag(SecondCharacter, "energy")}:       Sì!
-                {charTag(SecondCharacter, "neutral")}:        Una volta siamo andati in gita a vedere i Camuni.
-                E la guida diceva tutte queste cose noiose.
-                {charTag(SecondCharacter, "energy")}:       E a casa ho corretto tutto perché ero un camuno.
-                E i disegni sul muro li avevo fatti io.
+                {charTag(SecondCharacter, "energy")}:           Sì!
+                {charTag(SecondCharacter, "neutral")}:          Una volta siamo andati in gita a vedere i Camuni.
+                                                                E la guida diceva tutte queste cose noiose.
+                {charTag(SecondCharacter, "energy")}:           E a casa ho corretto tutto perché ero un camuno.
+                                                                E i disegni sul muro li avevo fatti io.
                 {charTag(SecondCharacter, "emotional")}:        E lottavamo contro i cervombie.
-                Cervi zombie.
-                {charTag(SecondCharacter, "energy")}:       Ho riso tantissimo quella sera!
+                                                                Cervi zombie.
+                {charTag(SecondCharacter, "energy")}:           Ho riso tantissimo quella sera!
                         
             + \ {charTag(PG, "neutral")}:         Se i grandi ti picchiano devi fare squadra con gli altri!
                     -> glyph_modifier_variation_management(SecondCharacter, fireC)->
-                {charTag(SecondCharacter, "neutral")}:        Una volta ci ho provato.
-                {charTag(SecondCharacter, "melanchonic")}:    Ma io non piaccio molto agli altri.
-                {charTag(SecondCharacter, "angry")}:        Mi dicono che sono scemo, per via degli animali.
-                {charTag(SecondCharacter, "melanchonic")}:    O mi dicono che sono strano.
-                {charTag(SecondCharacter, "neutral")}:        Che non capiscono la mia faccia.
-                E che non gli piace quando mi arrabbio.
+                {charTag(SecondCharacter, "neutral")}:          Una volta ci ho provato.
+                {charTag(SecondCharacter, "melanchonic")}:      Ma io non piaccio molto agli altri.
+                {charTag(SecondCharacter, "angry")}:            Mi dicono che sono scemo, per via degli animali.
+                {charTag(SecondCharacter, "melanchonic")}:      O mi dicono che sono strano.
+                {charTag(SecondCharacter, "neutral")}:          Che non capiscono la mia faccia.
+                                                                E che non gli piace quando mi arrabbio.
 
             + \ {charTag(PG, "neutral")}:         Grazie per la tua fiducia, per esserti confidato.
                     -> glyph_modifier_variation_management(SecondCharacter, waterC)->
-                {charTag(SecondCharacter, "neutral")}:        Sì no boh.
-                {charTag(SecondCharacter, "neutral")}:        Non è mica una cosa così grossa comunque.
+                {charTag(SecondCharacter, "neutral")}:          Sì no boh.
+                {charTag(SecondCharacter, "neutral")}:          Non è mica una cosa così grossa comunque.
                 {charTag(SecondCharacter, "emotional")}:        Però mi piace.
-                Non è poi che lo faccio proprio sempre.
-                {charTag(SecondCharacter, "neutral")}:        Solo con le cose brutte.
-                O quando non succede niente, che è peggio.
-                {charTag(SecondCharacter, "melanchonic")}:    Non mi piace annoiarmi.
+                                                                Non è poi che lo faccio proprio sempre.
+                {charTag(SecondCharacter, "neutral")}:          Solo con le cose brutte.
+                                                                O quando non succede niente, che è peggio.
+                {charTag(SecondCharacter, "melanchonic")}:      Non mi piace annoiarmi.
 
             + \ {charTag(PG, "neutral")}:         Come mai se qualcuno ti chiama non rispondi?
                     -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
-                {charTag(SecondCharacter, "neutral")}:        Perché se qualcuno mi chiama è arrabbiato con me.
-                Soprattutto se usa il nome tutto intero.
-                {charTag(SecondCharacter, "angry")}:        E il cognome.
-                {charTag(SecondCharacter, "neutral")}:        Oppure peggio mi chiede di fare qualcosa.
-                {charTag(SecondCharacter, "melanchonic")}:    Se c'è il nome non succede mai che è per una bella sorpresa.
-                O per guardare i cartoni assieme.
+                {charTag(SecondCharacter, "neutral")}:          Perché se qualcuno mi chiama è arrabbiato con me.
+                                                                Soprattutto se usa il nome tutto intero.
+                {charTag(SecondCharacter, "angry")}:            E il cognome.
+                {charTag(SecondCharacter, "neutral")}:          Oppure peggio mi chiede di fare qualcosa.
+                {charTag(SecondCharacter, "melanchonic")}:      Se c'è il nome non succede mai che è per una bella sorpresa.
+                                                                O per guardare i cartoni assieme.
                     
             -
             {charTag(SecondCharacter, "neutral")}:          Da quando sono qui però non ho riscritto nulla.
@@ -988,53 +997,54 @@
             
             + \ {charTag(PG, "neutral")}:         Obiettivamente pescare è una cosa, nuotare un'altra.
                     -> glyph_modifier_variation_management(SecondCharacter, airC)->
-                {charTag(SecondCharacter, "energy")}:       Esatto!
-                {charTag(SecondCharacter, "melanchonic")}:    Ma lei non lo vuole capire.
-                {charTag(SecondCharacter, "neutral")}:        "E se cadi in acqua?"
-                "E se un'onda ti investe?"
-                "E se tuo fratello si distrae?"
-                {charTag(SecondCharacter, "angry")}:        Mamma è davvero pesante.
+                {charTag(SecondCharacter, "energy")}:           Esatto!
+                {charTag(SecondCharacter, "melanchonic")}:      Ma lei non lo vuole capire.
+                {charTag(SecondCharacter, "neutral")}:          "E se cadi in acqua?"
+                                                                "E se un'onda ti investe?"
+                                                                "E se tuo fratello si distrae?"
+                {charTag(SecondCharacter, "angry")}:            Mamma è davvero pesante.
+
 
             + \ {charTag(PG, "neutral")}:         Le statue di tuo fratello si muovono?
                     -> glyph_modifier_variation_management(SecondCharacter, earthC)->
-                {charTag(SecondCharacter, "energy")}:       Forse quando non ci siamo?
-                {charTag(SecondCharacter, "neutral")}:        Mio fratello è superdisordinato.
-                Quindi se si spostano non è che lo capisci con facilità.
-                Però gli serve l'elettricità.
-                {charTag(SecondCharacter, "energy")}:       Voglio costruirne una anche io.
-                Forse in biblioteca c'è una guida!
+                {charTag(SecondCharacter, "energy")}:           Forse quando non ci siamo?
+                {charTag(SecondCharacter, "neutral")}:          Mio fratello è superdisordinato.
+                                                                Quindi se si spostano non è che lo capisci con facilità.
+                                                                Però gli serve l'elettricità.
+                {charTag(SecondCharacter, "energy")}:           Voglio costruirne una anche io.
+                                                                Forse in biblioteca c'è una guida!
                     
             +  \ {charTag(PG, "neutral")}:          {charNameTwo} mannaggia, non dare sempre ragione ai grandi!
                     -> glyph_modifier_variation_management(SecondCharacter, fireC)->
-                {charTag(SecondCharacter, "neutral")}:        Non è mica facile!
-                {charTag(SecondCharacter, "angry")}:        Papà se si arrabbia mi picchia.
-                {charTag(SecondCharacter, "neutral")}:        E se invece parli dell'amico di mio fratello...
+                {charTag(SecondCharacter, "neutral")}:          Non è mica facile!
+                {charTag(SecondCharacter, "angry")}:            Papà se si arrabbia mi picchia.
+                {charTag(SecondCharacter, "neutral")}:          E se invece parli dell'amico di mio fratello...
                 {charTag(SecondCharacter, "emotional")}:        Credo che lui sia buono.
-                {charTag(SecondCharacter, "melanchonic")}:    Ma se poi si arrabbia con me e non mi vuole più lì?
-                Poi non ci posso più stare con mio fratello!
+                {charTag(SecondCharacter, "melanchonic")}:      Ma se poi si arrabbia con me e non mi vuole più lì?
+                                                                Poi non ci posso più stare con mio fratello!
                 
             + \ {charTag(PG, "neutral")}:         Hai chiesto all'amico di tuo fratello cosa prova per te?
                     -> glyph_modifier_variation_management(SecondCharacter, waterC)->
-                {charTag(SecondCharacter, "neutral")}:        Scherzi?!?
-                {charTag(SecondCharacter, "angry")}:        Non sono mica <b><i>così</b></i> strano.
-                {charTag(SecondCharacter, "neutral")}:        Però una volta ho chiesto a mio fratello se gli sto simpatico.
-                E mi ha detto che gli piaccio molto, ma che non sa mica come comportarsi coi bambini.
-                {charTag(SecondCharacter, "angry")}:        Non siamo mica animali, no?
-                {charTag(SecondCharacter, "melanchonic")}:    E poi a quello non gli piacciono proprio i bambini.
-                {charTag(SecondCharacter, "neutral")}:        Una volta hanno litigato per questo.
-                {charTag(SecondCharacter, "melanchonic")}:    Perché è una cosa che rende molto triste mio fratello.
+                {charTag(SecondCharacter, "neutral")}:          Scherzi?!?
+                {charTag(SecondCharacter, "angry")}:            Non sono mica <b><i>così</b></i> strano.
+                {charTag(SecondCharacter, "neutral")}:          Però una volta ho chiesto a mio fratello se gli sto simpatico.
+                                                                E mi ha detto che gli piaccio molto, ma che non sa mica come comportarsi coi bambini.
+                {charTag(SecondCharacter, "angry")}:            Non siamo mica animali, no?
+                {charTag(SecondCharacter, "melanchonic")}:      E poi a quello non gli piacciono proprio i bambini.
+                {charTag(SecondCharacter, "neutral")}:          Una volta hanno litigato per questo.
+                {charTag(SecondCharacter, "melanchonic")}:      Perché è una cosa che rende molto triste mio fratello.
                 
             + \ {charTag(PG, "neutral")}:         Correggere le tue bugie è stato un gesto maturo.
                     -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
-                {charTag(SecondCharacter, "neutral")}:        Sì no boh.
-                Non so ancora se mi piaci.
-                Ma non voglio dire le bugie se riesco.
+                {charTag(SecondCharacter, "neutral")}:          Sì no boh.
+                                                                Non so ancora se mi piaci.
+                                                                Ma non voglio dire le bugie se riesco.
                 {charTag(SecondCharacter, "emotional")}:        Le cose qui sono belle.
-                {charTag(SecondCharacter, "neutral")}:        Le bugie sono meno interessanti.
+                {charTag(SecondCharacter, "neutral")}:          Le bugie sono meno interessanti.
             -
 
-            {charTag(SecondCharacter, "energy")}:       Forse nello stagno posso imparare a nuotare.
-            {charTag(SecondCharacter, "neutral")}:        La rana sembra abbastanza forte da salvarmi nel caso.
+            {charTag(SecondCharacter, "energy")}:               Forse nello stagno posso imparare a nuotare.
+            {charTag(SecondCharacter, "neutral")}:              La rana sembra abbastanza forte da salvarmi nel caso.
 
                 
                 -> second_char_closing_storylet ->        
@@ -1074,135 +1084,135 @@
 
                             }
                 
-                    
-            + \ {charTag(PG, "neutral")}:         Questo non è il mio lavoro. I lavori sono noiosi.
+            TODO: più "terra"?        
+            + \ {charTag(PG, "neutral")}:                       Questo non è il mio lavoro. I lavori sono noiosi.
                     -> glyph_modifier_variation_management(SecondCharacter, earthC)->
-                {charTag(SecondCharacter, "neutral")}:        Però ai grandi piace parlare di lavoro.
-                {charTag(SecondCharacter, "angry")}:        E le maestre parlano sempre del futuro.
-                E dicono che ci devo lavorare con le cose in cui sono bravo.
-                {charTag(SecondCharacter, "energy")}:       Ma io voglio solo imparare cose nuove!
+                {charTag(SecondCharacter, "neutral")}:          Però ai grandi piace parlare di lavoro.
+                {charTag(SecondCharacter, "angry")}:            E le maestre parlano sempre del futuro.
+                                                                E dicono che ci devo lavorare con le cose in cui sono bravo.
+                {charTag(SecondCharacter, "energy")}:           Ma io voglio solo imparare cose nuove!
 
-            + \ {charTag(PG, "neutral")}:         Guarda che non l'ho scelto. Manco mi pagano.
+            + \ {charTag(PG, "neutral")}:                       Guarda che non l'ho scelto. Manco mi pagano.
                     -> glyph_modifier_variation_management(SecondCharacter, fireC)->
-                {charTag(SecondCharacter, "neutral")}:        Che fregatura.
-                {charTag(SecondCharacter, "angry")}:        Nemmeno mamma mi paga per i lavoretti a casa.
-                {charTag(SecondCharacter, "neutral")}:        Dice che è una cosa che devono fare tutti, grandi e piccoli, maschi e femmine.
+                {charTag(SecondCharacter, "neutral")}:          Che fregatura.
+                {charTag(SecondCharacter, "angry")}:            Nemmeno mamma mi paga per i lavoretti a casa.
+                {charTag(SecondCharacter, "neutral")}:          Dice che è una cosa che devono fare tutti, grandi e piccoli, maschi e femmine.
    
-            + \ {charTag(PG, "neutral")}:         Mi è sempre piaciuto fare stare bene le persone.
+            + \ {charTag(PG, "neutral")}:                       Mi è sempre piaciuto fare stare bene le persone.
                     -> glyph_modifier_variation_management(SecondCharacter, waterC)->
                 {charTag(SecondCharacter, "emotional")}:        Questa è una cosa bella.
-                {charTag(SecondCharacter, "melanchonic")}:    Ma difficile.
-                {charTag(SecondCharacter, "neutral")}:        I grandi pensano sempre di sapere cosa fare.
-                Cosa vogliono gli altri.
-                Ma poi sbagliano.
-                {charTag(SecondCharacter, "angry")}:        E se la prendono con la persona che volevano aiutare.
-                {charTag(SecondCharacter, "neutral")}:        Per questo si fa prima a fare da soli.
-                Mica puoi litigare con te stesso, no?
+                {charTag(SecondCharacter, "melanchonic")}:      Ma difficile.
+                {charTag(SecondCharacter, "neutral")}:          I grandi pensano sempre di sapere cosa fare.
+                                                                Cosa vogliono gli altri.
+                                                                Ma poi sbagliano.
+                {charTag(SecondCharacter, "angry")}:            E se la prendono con la persona che volevano aiutare.
+                {charTag(SecondCharacter, "neutral")}:          Per questo si fa prima a fare da soli.
+                                                                Mica puoi litigare con te stesso, no?
                     
-            + \ {charTag(PG, "neutral")}:         Voglio portare un grande cambiamento partendo dal piccolo.
+            + \ {charTag(PG, "neutral")}:                       Voglio portare un grande cambiamento partendo dal piccolo.
                     -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
-                {charTag(SecondCharacter, "neutral")}:        E io sono piccolo.
-                Mi sembra una cosa faticosa.
+                {charTag(SecondCharacter, "neutral")}:          E io sono piccolo.
+                                                                Mi sembra una cosa faticosa.
                 {charTag(SecondCharacter, "emotional")}:        Però la capisco.
-                {charTag(SecondCharacter, "energy")}:       È come l'elettricità.
-                È così piccola che non la vedi.
-                {charTag(SecondCharacter, "energy")}:       Ma fa muovere le cose grandi!
-                {charTag(SecondCharacter, "melanchonic")}:    O bruciare i muri.
+                {charTag(SecondCharacter, "energy")}:           È come l'elettricità.
+                                                                È così piccola che non la vedi.
+                {charTag(SecondCharacter, "energy")}:           Ma fa muovere le cose grandi!
+                {charTag(SecondCharacter, "melanchonic")}:      O bruciare i muri.
             -
         {
             - cooking_with_second_char.third_theme.bugie_innocenti:
-                {charTag(SecondCharacter, "neutral")}:        Chissà se mi hai risposto sinceramente.
-                {charTag(SecondCharacter, "angry")}:        O se è una bugia innocente, visto quello che hai detto in cucina.
+                {charTag(SecondCharacter, "neutral")}:          Chissà se mi hai risposto sinceramente.
+                {charTag(SecondCharacter, "angry")}:            O se è una bugia innocente, visto quello che hai detto in cucina.
 
             - cooking_with_second_char.third_theme.bugie_difensive:
-                {charTag(SecondCharacter, "neutral")}:        Chissà se mi hai risposto sinceramente.
-                {charTag(SecondCharacter, "angry")}:        O se è una bugia difensiva, visto quello che hai detto in cucina.
+                {charTag(SecondCharacter, "neutral")}:          Chissà se mi hai risposto sinceramente.
+                {charTag(SecondCharacter, "angry")}:            O se è una bugia difensiva, visto quello che hai detto in cucina.
 
             - cooking_with_second_char.third_theme.bugie_autoinganno:
-                {charTag(SecondCharacter, "neutral")}:        Chissà se mi hai risposto sinceramente.
-                {charTag(SecondCharacter, "angry")}:        O se è una bugia che ti stai dicendo, visto quello che hai detto in cucina.
+                {charTag(SecondCharacter, "neutral")}:          Chissà se mi hai risposto sinceramente.
+                {charTag(SecondCharacter, "angry")}:            O se è una bugia che ti stai dicendo, visto quello che hai detto in cucina.
 
             - cooking_with_second_char.third_theme.bugie_nessuna:
-                {charTag(SecondCharacter, "neutral")}:        Chissà se mi hai risposto sinceramente.
-                Anche se prima in cucina hai detto che non dici mai bugie.
+                {charTag(SecondCharacter, "neutral")}:          Chissà se mi hai risposto sinceramente.
+                                                                Anche se prima in cucina hai detto che non dici mai bugie.
 
             - cooking_with_second_char.third_theme.bugie_omesse:
-                {charTag(SecondCharacter, "neutral")}:        Chissà se mi hai risposto sinceramente.
-                {charTag(SecondCharacter, "angry")}:        O se è c'è una omissione, visto quello che hai detto in cucina.
+                {charTag(SecondCharacter, "neutral")}:          Chissà se mi hai risposto sinceramente.
+                {charTag(SecondCharacter, "angry")}:            O se è c'è una omissione, visto quello che hai detto in cucina.
 
         }    
             
-        {charTag(SecondCharacter, "neutral")}:        I miei compagni fanno tantissime cose.
-        Calcio. Basket. Pallavolo.
-        Suonano il pianoforte o la chitarra o la batteria.
-        Oppure imparano il cinese e l'inglese.
+        {charTag(SecondCharacter, "neutral")}:                  I miei compagni fanno tantissime cose.
+                                                                Calcio. Basket. Pallavolo.
+                                                                Suonano il pianoforte o la chitarra o la batteria.
+                                                                Oppure imparano il cinese e l'inglese.
             {
                 - are_two_entities_together(FirstCharacter, PG):
                     {charTag(FirstCharacter, "annoyed")}:   Sono già stanca solo a sentire tutta questa roba.
                     Non dovrebbero, che ne so, fare l3 bambin3 e bona?
             }  
-        {charTag(SecondCharacter, "neutral")}:        Loro sanno già cosa vogliono fare come lavoro.
-        A me mi piacciono solo gli animali.
-        {charTag(SecondCharacter, "melanchonic")}:    Ma so anche le cose brutte degli animali.
-        Che molti stanno sparendo per colpa degli uomini.
-        Che gli oceani sono sempre più vuoti.
-        Che gli incendi uccidono un sacco di animali ogni anno.
-        {charTag(SecondCharacter, "angry")}:        E che il futuro sarà sempre peggiore.
-        {charTag(SecondCharacter, "neutral")}:        E quindi non so cosa fare da grande.
-        Non so se ci saranno ancora gli animali quando sarò grande.
-        {charTag(SecondCharacter, "angry")}:        E questa cosa mi fa arrabbiare.
-        {charTag(SecondCharacter, "neutral")}:        Non voglio essere un bambino per sempre.
-        Ma non voglio essere grande.
+        {charTag(SecondCharacter, "neutral")}:              Loro sanno già cosa vogliono fare come lavoro.
+                                                            A me mi piacciono solo gli animali.
+        {charTag(SecondCharacter, "melanchonic")}:          Ma so anche le cose brutte degli animali.
+                                                            Che molti stanno sparendo per colpa degli uomini.
+                                                            Che gli oceani sono sempre più vuoti.
+                                                            Che gli incendi uccidono un sacco di animali ogni anno.
+        {charTag(SecondCharacter, "angry")}:                E che il futuro sarà sempre peggiore.
+        {charTag(SecondCharacter, "neutral")}:              E quindi non so cosa fare da grande.
+                                                            Non so se ci saranno ancora gli animali quando sarò grande.
+        {charTag(SecondCharacter, "angry")}:                E questa cosa mi fa arrabbiare.
+        {charTag(SecondCharacter, "neutral")}:              Non voglio essere un bambino per sempre.
+                                                            Ma non voglio essere grande.
             
             + \ {charTag(PG, "neutral")}:         Ma crescerai comunque, non è una scelta.
                     -> glyph_modifier_variation_management(SecondCharacter, airC)->
-                {charTag(SecondCharacter, "neutral")}:        Sì no boh.
-                Non è detto.
-                Magari resto qui e magari qui il tempo non passa mica.
-                {charTag(SecondCharacter, "emotional")}:        E magari riesco a fare venire qui anche mio fratello.
-                E la nonna.
-                Così siamo tutti felici.
-                    
-            + \ {charTag(PG, "neutral")}:         E se invece rimanessi sia bambino che adulto?
+                {charTag(SecondCharacter, "neutral")}:      Sì no boh.
+                                                            Non è detto.
+                                                            Magari resto qui e magari qui il tempo non passa mica.
+                {charTag(SecondCharacter, "emotional")}:    E magari riesco a fare venire qui anche mio fratello.
+                                                            E la nonna.
+                                                            Così siamo tutti felici.
+ 
+            + \ {charTag(PG, "neutral")}:         E se invece fai come l'axolotl e diventi grande, ma fai anche il bambino se serve?
                     -> glyph_modifier_variation_management(SecondCharacter, earthC)->
-                {charTag(SecondCharacter, "neutral")}:        Nonna dice che è il problema di mamma.
-                Che non si prende le sue responsabilità.
-                A me mica mi dispiacciono le responsabilità.
-                {charTag(SecondCharacter, "melanchonic")}:    Ma tutto il resto mi spaventa.
-                Tutti i litigi.
-                La rabbia.
-                A me non mi piace la mia rabbia.
+                {charTag(SecondCharacter, "neutral")}:      Nonna dice che è il problema di mamma.
+                                                            Che non si prende le sue responsabilità.
+                                                            A me mica mi dispiacciono le responsabilità.
+                {charTag(SecondCharacter, "melanchonic")}:  Ma tutto il resto mi spaventa.
+                                                            Tutti i litigi.
+                                                            La rabbia.
+                                                            A me non mi piace la mia rabbia.
 
             + \ {charTag(PG, "neutral")}:         Puoi fare il ribelle e salvare gli animali!
                     -> glyph_modifier_variation_management(SecondCharacter, fireC)->
                 {charTag(SecondCharacter, "emotional")}:        Come Greta!
-                A mio fratello piace tanto.
-                {charTag(SecondCharacter, "neutral")}:        Però mio fratello dice che bisogna picchiare "quelli". Farli fuori.
-                {charTag(SecondCharacter, "energy")}:       Non ho capito chi sono "quelli".
+                                                                A mio fratello piace tanto.
+                {charTag(SecondCharacter, "neutral")}:          Però mio fratello dice che bisogna picchiare "quelli". Farli fuori.
+                {charTag(SecondCharacter, "energy")}:           Non ho capito chi sono "quelli".
                 {charTag(SecondCharacter, "emotional")}:        Magari posso programmare le statue di mio fratello.
-                E ci pensano loro a far fuori "quelli".
-                Non ho capito mica nemmeno cosa sia "fare fuori".
+                                                                E ci pensano loro a far fuori "quelli".
+                                                                Non ho capito mica nemmeno cosa sia "fare fuori".
 
             + \ {charTag(PG, "neutral")}:         Non ti preoccupare: hai tanto tanto tanto tempo per decidere che fare.
                     -> glyph_modifier_variation_management(SecondCharacter, waterC)->
-                {charTag(SecondCharacter, "neutral")}:        Sarà.
-                {charTag(SecondCharacter, "melanchonic")}:    Ma Lara sa già parlare due lingue.
-                E Jin è appena entrato nella giovanile della Fiorentina.
-                Tommaso legge così tanto che sicuro sicuro diventa un genio.
-                {charTag(SecondCharacter, "angry")}:        Io l'unica cosa che so fare è dire cose stupide sugli animali.
-                E trovare nascondigli in ogni posto.
-                {charTag(SecondCharacter, "melanchonic")}:    E dire bugie.
+                {charTag(SecondCharacter, "neutral")}:          Sarà.
+                {charTag(SecondCharacter, "melanchonic")}:      Ma Lara sa già parlare due lingue.
+                                                                E Jin è appena entrato nella giovanile della Fiorentina.
+                                                                Tommaso legge così tanto che sicuro sicuro diventa un genio.
+                {charTag(SecondCharacter, "angry")}:            Io l'unica cosa che so fare è dire cose stupide sugli animali.
+                                                                E trovare nascondigli in ogni posto.
+                {charTag(SecondCharacter, "melanchonic")}:      E dire bugie.
 
             + \ {charTag(PG, "neutral")}:         Potresti diventare uno storico degli animali.
                     -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
                 {charTag(SecondCharacter, "emotional")}:        Sì sì sì!
-                Qualcuno che racconta le loro storie?
-                {charTag(SecondCharacter, "energy")}:       Come un gioco forse.
-                E anche gli animali giocano.
-                Anche gli insetti!
+                                                                Qualcuno che racconta le loro storie?
+                {charTag(SecondCharacter, "energy")}:           Come un gioco forse.
+                                                                E anche gli animali giocano.
+                                                                Anche gli insetti!
                 {charTag(SecondCharacter, "emotional")}:        Lo fanno perché gli va.
-                {charTag(SecondCharacter, "neutral")}:        E io vorrei sempre fare quello che mi va.
-                {charTag(SecondCharacter, "angry")}:        Il resto è una rottura.
+                {charTag(SecondCharacter, "neutral")}:          E io vorrei sempre fare quello che mi va.
+                {charTag(SecondCharacter, "angry")}:            Il resto è una rottura.
             -
             
             {
@@ -1213,12 +1223,12 @@
                     {charTag(Mentor, "bored")}:             Già, non nello stagno.
             }  
         
-        {charTag(SecondCharacter, "neutral")}:        La maestra di matematica dice che ci sono tante associazioni che aiutano gli animali.
-        {charTag(SecondCharacter, "emotional")}:        E che magari può fare venire una volontaria del canile.
-        {charTag(SecondCharacter, "neutral")}:        Così vedo che ci sono cose anche buone.
-        Ma io non so se bastano.
-        Però una cosa è sicura.
-        {charTag(SecondCharacter, "energy")}:       Mi piacerebbe tanto fare il veterinario.
+        {charTag(SecondCharacter, "neutral")}:              La maestra di matematica dice che ci sono tante associazioni che aiutano gli animali.
+        {charTag(SecondCharacter, "emotional")}:            E che magari può fare venire una volontaria del canile.
+        {charTag(SecondCharacter, "neutral")}:              Così vedo che ci sono cose anche buone.
+                                                            Ma io non so se bastano.
+                                                            Però una cosa è sicura.
+        {charTag(SecondCharacter, "energy")}:               Mi piacerebbe tanto fare il veterinario.
 
             
             -> second_char_closing_storylet ->
@@ -1264,53 +1274,54 @@
 
             + \ {charTag(PG, "neutral")}:         Solo gli animali non conoscono la disciplina.
                     -> glyph_modifier_variation_management(SecondCharacter, airC)->
-                {charTag(SecondCharacter, "angry")}:        Allora sono un lupo.
-                Una giraffa.
-                {charTag(SecondCharacter, "energy")}:       Un coccodrillo.
-                Un serpente.
-                Un riccio.
-                {charTag(SecondCharacter, "angry")}:        E ora ti spino!
+                {charTag(SecondCharacter, "angry")}:            Allora sono un lupo.
+                                                                Una giraffa.
+                {charTag(SecondCharacter, "energy")}:           Un coccodrillo.
+                                                                Un serpente.
+                                                                Un riccio.
+                {charTag(SecondCharacter, "angry")}:            E ora ti spino!
 
-            + \ {charTag(PG, "neutral")}:         Immagina di picchiare i mostri invece dei compagni!
+            TODO: più "terra" -> es trovare uno sfogo diverso
+            + \ {charTag(PG, "neutral")}:                       Immagina di picchiare i mostri invece dei compagni!
                     -> glyph_modifier_variation_management(SecondCharacter, earthC)->
                 {charTag(SecondCharacter, "emotional")}:        I mostri mi piacciono.
-                Ma anche i miei compagni.
-                {charTag(SecondCharacter, "neutral")}:        Però non faccio male a qualcosa che non esiste, no?
-                Ma anche questo posto non doveva esistere, credo.
-                E invece è qui.
-                {charTag(SecondCharacter, "melanchonic")}:    Chi lo dice che non faccio male ai mostri?
+                                                                Ma anche i miei compagni.
+                {charTag(SecondCharacter, "neutral")}:          Però non faccio male a qualcosa che non esiste, no?
+                                                                Ma anche questo posto non doveva esistere, credo.
+                                                                E invece è qui.
+                {charTag(SecondCharacter, "melanchonic")}:      Chi lo dice che non faccio male ai mostri?
                     
-            + \ {charTag(PG, "neutral")}:         Tuo padre ti picchia, e tu hai imparato a picchiare.
+            + \ {charTag(PG, "neutral")}:                       Tuo padre ti picchia, e tu hai imparato a picchiare.
                     -> glyph_modifier_variation_management(SecondCharacter, fireC)->
-                {charTag(SecondCharacter, "angry")}:        NO!
-                No.
-                {charTag(SecondCharacter, "melanchonic")}:    Non lo so.
-                Mi sembra una cosa difficile.
-                {charTag(SecondCharacter, "angry")}:        Ma voglio tanto che non mi picchi più.
-                Non mi piace avere paura di lui.
+                {charTag(SecondCharacter, "angry")}:            NO!
+                                                                No.
+                {charTag(SecondCharacter, "melanchonic")}:      Non lo so.
+                                                                Mi sembra una cosa difficile.
+                {charTag(SecondCharacter, "angry")}:            Ma voglio tanto che non mi picchi più.
+                                                                Non mi piace avere paura di lui.
                     
-            + \ {charTag(PG, "neutral")}:          Nessuno merita di essere picchiato, né tu né quel bambino.
+            + \ {charTag(PG, "neutral")}:                       Nessuno merita di essere picchiato, né tu né quel bambino.
                     -> glyph_modifier_variation_management(SecondCharacter, waterC)->
-                {charTag(SecondCharacter, "neutral")}:        Però se papà mi picchia c'è un motivo.
-                Mamma dice che papà non lascia mai nulla al caso.
-                E per questo è il più bravo a lavoro.
-                {charTag(SecondCharacter, "angry")}:        E quel bambino è davvero fastidioso.
+                {charTag(SecondCharacter, "neutral")}:          Però se papà mi picchia c'è un motivo.
+                                                                Mamma dice che papà non lascia mai nulla al caso.
+                                                                E per questo è il più bravo a lavoro.
+                {charTag(SecondCharacter, "angry")}:            E quel bambino è davvero fastidioso.
                     
-            + \ {charTag(PG, "neutral")}:         La rabbia della ragazzina ha protetto il fratello.
+            + \ {charTag(PG, "neutral")}:                       La rabbia della ragazzina ha protetto il fratello.
                     -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
-                {charTag(SecondCharacter, "angry")}:        Ma chi protegge me?
-                {charTag(SecondCharacter, "melanchonic")}:    Uh, bugia, scusa.
-                Qui sono stato io a fare il cattivo.
-                {charTag(SecondCharacter, "energy")}:       Forse potrei chiedere a lei come fa?
-                {charTag(SecondCharacter, "melanchonic")}:    Ma sarebbe stupido.
+                {charTag(SecondCharacter, "angry")}:            Ma chi protegge me?
+                {charTag(SecondCharacter, "melanchonic")}:      Uh, bugia, scusa.
+                                                                Qui sono stato io a fare il cattivo.
+                {charTag(SecondCharacter, "energy")}:           Forse potrei chiedere a lei come fa?
+                {charTag(SecondCharacter, "melanchonic")}:      Ma sarebbe stupido.
             -
 
-        {charTag(SecondCharacter, "melanchonic")}:    Essere adulti è terribile. 
+        {charTag(SecondCharacter, "melanchonic")}:              Essere adulti è terribile. 
             {
                 - are_two_entities_together(Mentor, PG): 
                         {charTag(Mentor, "hurry")}:             Non sai quanto, ragazzino.
             }
-        {charTag(SecondCharacter, "angry")}:        Però non è bello nemmeno essere bambini.
+        {charTag(SecondCharacter, "angry")}:                    Però non è bello nemmeno essere bambini.
 
             
             -> second_char_closing_storylet ->
@@ -1328,40 +1339,41 @@
                 ~ change_entity_place(Mentor)
             }     
         
-        {charTag(SecondCharacter, "energy")}:       Quando vado da mio fratello e non c'è il suo amico, mi lascia sperimentare con le sue cose.
-        {charTag(SecondCharacter, "neutral")}:        Il suo amico fa il pasticciere.
-        E ha tantissime cose strane in cucina.
-        Mi piace provare le cose, capire.
-        {charTag(SecondCharacter, "angry")}:        Non mi piacciono le cose che non capisco.
-        {charTag(SecondCharacter, "melanchonic")}:    Ma a volte faccio dei casini.
-        {charTag(SecondCharacter, "energy")}:       Una volta ho mischiato le cose per pulire casa e ho vomitato tutto il pomeriggio.
-        Un giorno ho riempito il letto di mamma di sabbia e si è grattata per una settimana.
-        E poi ho provato ad attaccare un mio robot al frullatore dell'amico di mio fratello.
-        {charTag(SecondCharacter, "emotional")}:        E ha fatto una fiammata gigante e un pezzo di muro è diventato nero.
+        {charTag(SecondCharacter, "energy")}:               Quando vado da mio fratello e non c'è il suo amico, mi lascia sperimentare con le sue cose.
+        {charTag(SecondCharacter, "neutral")}:              Il suo amico fa il pasticciere.
+                                                            E ha tantissime cose strane in cucina.
+                                                            Mi piace provare le cose, capire.
+        {charTag(SecondCharacter, "angry")}:                Non mi piacciono le cose che non capisco.
+        {charTag(SecondCharacter, "melanchonic")}:          Ma a volte faccio dei casini.
+        {charTag(SecondCharacter, "energy")}:               Una volta ho mischiato le cose per pulire casa e ho vomitato tutto il pomeriggio.
+                                                            Un giorno ho riempito il letto di mamma di sabbia e si è grattata per una settimana.
+                                                            E poi ho provato ad attaccare un mio robot al frullatore dell'amico di mio fratello.
+        {charTag(SecondCharacter, "emotional")}:            E ha fatto una fiammata gigante e un pezzo di muro è diventato nero.
             {
                 - are_two_entities_together(Mentor, PG): 
                     {charTag(Mentor, "hurry")}:             Sarei già morta d'infarto.
                     {charTag(SecondCharacter, "energy")}:       Anche mio fratello!
             }
-        {charTag(SecondCharacter, "energy")}:       Lui si è spaventato tantissimo.
-        Ma io ero contento perché non sapevo che ci sono dei fili nel muro.
-        E ora so cosa è l'elettricità.
-        {charTag(SecondCharacter, "neutral")}:        Ma qui non c'è.
-        Chissà se è la rana che fa accadere le cose.
+        {charTag(SecondCharacter, "energy")}:               Lui si è spaventato tantissimo.
+                                                            Ma io ero contento perché non sapevo che ci sono dei fili nel muro.
+                                                            E ora so cosa è l'elettricità.
+        {charTag(SecondCharacter, "neutral")}:              Ma qui non c'è.
+                                                            Chissà se è la rana che fa accadere le cose.
             {
                 - are_two_entities_together(FirstCharacter, PG):
                     {charTag(FirstCharacter, "annoyed")}:   Ti ci vedrei benissimo con mio padre, a fare casini in garage e far spaventare mia madre! 
             } 
         
-            + \ {charTag(PG, "neutral")}:         Hai la mente da scienziato e vuoi verificare tutto.
+            + \ {charTag(PG, "neutral")}:                       Hai la mente da scienziato e vuoi verificare tutto.
                     -> glyph_modifier_variation_management(SecondCharacter, airC)->
-                {charTag(SecondCharacter, "neutral")}:        Lo dice anche mio fratello.
-                Per questo mi lascia fare gli esperimenti.
-                {charTag(SecondCharacter, "melanchonic")}:    Ma senza elettricità, dopo l'incidente.
-                {charTag(SecondCharacter, "energy")}:       Però posso usare le batterie.
+                {charTag(SecondCharacter, "neutral")}:          Lo dice anche mio fratello.
+                                                                Per questo mi lascia fare gli esperimenti.
+                {charTag(SecondCharacter, "melanchonic")}:      Ma senza elettricità, dopo l'incidente.
+                {charTag(SecondCharacter, "energy")}:           Però posso usare le batterie.
                 {charTag(SecondCharacter, "emotional")}:        Voglio fargli un regalo con le cose della serra, sai?
 
-            + \ {charTag(PG, "neutral")}:         Proviamo con la lampada della biblioteca!
+            TODO: più "terra"
+            + \ {charTag(PG, "neutral")}:                       Proviamo con la lampada della biblioteca!
                     -> glyph_modifier_variation_management(SecondCharacter, earthC)->
                 {charTag(SecondCharacter, "emotional")}:        Sì!
                 {charTag(SecondCharacter, "energy")}:       Ci possiamo attaccare la stazione.
@@ -1371,50 +1383,50 @@
                 {charTag(SecondCharacter, "neutral")}:        Ma ci serve qualcosa di alto.
                 Forse se prendo tutti i rami del bosco...
                 
-            + \ {charTag(PG, "neutral")}:         Sei tosto perché alla fine fai quello che ti va.
+            + \ {charTag(PG, "neutral")}:                       Sei tosto perché alla fine fai quello che ti va.
                     -> glyph_modifier_variation_management(SecondCharacter, fireC)->
-                {charTag(SecondCharacter, "neutral")}:        Sì no boh.
-                {charTag(SecondCharacter, "melanchonic")}:    Questa cosa agli adulti non piace molto.
-                {charTag(SecondCharacter, "angry")}:        Ma se non posso capire le cose, mi rimangono in testa.
-                Mi danno davvero fastidio.
-                {charTag(SecondCharacter, "energy")}:       A volte mi sveglio presto e faccio tutte le cose che non dovrei fare.
-                Come provare gli attrezzi di papà.
-                O il vecchio respiratore di nonna.
-                Solo per capire.
-                {charTag(SecondCharacter, "neutral")}:        Poi li rimetto a posto prima che si svegliano tutti.
+                {charTag(SecondCharacter, "neutral")}:          Sì no boh.
+                {charTag(SecondCharacter, "melanchonic")}:      Questa cosa agli adulti non piace molto.
+                {charTag(SecondCharacter, "angry")}:            Ma se non posso capire le cose, mi rimangono in testa.
+                                                                Mi danno davvero fastidio.
+                {charTag(SecondCharacter, "energy")}:           A volte mi sveglio presto e faccio tutte le cose che non dovrei fare.
+                                                                Come provare gli attrezzi di papà.
+                                                                O il vecchio respiratore di nonna.
+                                                                Solo per capire.
+                {charTag(SecondCharacter, "neutral")}:          Poi li rimetto a posto prima che si svegliano tutti.
                     
-            + \ {charTag(PG, "neutral")}:         Mi prometti che non mangerai nulla di strano? Non voglio tu stia male.
+            + \ {charTag(PG, "neutral")}:                       Mi prometti che non mangerai nulla di strano? Non voglio tu stia male.
                     -> glyph_modifier_variation_management(SecondCharacter, waterC)->
-                {charTag(SecondCharacter, "neutral")}:        Non sei mia mamma.
+                {charTag(SecondCharacter, "neutral")}:          Non sei mia mamma.
                 {charTag(SecondCharacter, "emotional")}:        E poi è troppo tardi.
-                {charTag(SecondCharacter, "neutral")}:        Ho assaggiato un po' di cose della serra.
-                Ma hanno tutte un sapore fastidioso.
-                {charTag(SecondCharacter, "energy")}:       Però per un attimo una delle piante mi ha fatto vedere le cose con colori strani.
-                {charTag(SecondCharacter, "neutral")}:        Ma è durato pochissimo e poi avevo solo tanta sete.
+                {charTag(SecondCharacter, "neutral")}:          Ho assaggiato un po' di cose della serra.
+                                                                Ma hanno tutte un sapore fastidioso.
+                {charTag(SecondCharacter, "energy")}:           Però per un attimo una delle piante mi ha fatto vedere le cose con colori strani.
+                {charTag(SecondCharacter, "neutral")}:          Ma è durato pochissimo e poi avevo solo tanta sete.
                     {
                         - are_two_entities_together(FirstCharacter, PG):
                             {charTag(FirstCharacter, "affectionate")}:      Il tuo primo trip!
                             {charTag(FirstCharacter, "annoyed")}:           Aiuto, il tuo primo trip, dio mio, sei troppo piccolo!
                     }
                         
-            + \ {charTag(PG, "neutral")}:         Tuo fratello ti lascia essere te stesso.
+            + \ {charTag(PG, "neutral")}:                       Tuo fratello ti lascia essere te stesso.
                     -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
                 {charTag(SecondCharacter, "emotional")}:        Sì!
-                {charTag(SecondCharacter, "neutral")}:        Lui non mi sgrida mai.
-                E se si arrabbia con me, mi spiega il perché.
-                E se non sono d'accordo e glielo dico, mi ascolta.
+                {charTag(SecondCharacter, "neutral")}:          Lui non mi sgrida mai.
+                                                                E se si arrabbia con me, mi spiega il perché.
+                                                                E se non sono d'accordo e glielo dico, mi ascolta.
                 {charTag(SecondCharacter, "emotional")}:        Per questo mi piace stare con lui.
-                {charTag(SecondCharacter, "angry")}:        Non mi fa sentire stupido.
+                {charTag(SecondCharacter, "angry")}:            Non mi fa sentire stupido.
             -
 
-        {charTag(SecondCharacter, "energy")}:       Comunque è una fortuna che qui c'è un bambino!
-        {charTag(SecondCharacter, "neutral")}:        Questo posto è pieno di cose e voi non vi fate le domande.
+        {charTag(SecondCharacter, "energy")}:               Comunque è una fortuna che qui c'è un bambino!
+        {charTag(SecondCharacter, "neutral")}:              Questo posto è pieno di cose e voi non vi fate le domande.
             {
                 - second_char_main_storylets.one.capire:
                     {charTag(SecondCharacter, "angry")}:        Prima avevi anche detto che sei qui per capire questo posto, ma non mi sembra mica.
 
             }
-        {charTag(SecondCharacter, "energy")}:       Tocca a me trovare le risposte!
+        {charTag(SecondCharacter, "energy")}:               Tocca a me trovare le risposte!
                 
                 
                 -> second_char_closing_storylet ->
@@ -1433,42 +1445,49 @@
                 {charTag(SecondCharacter, "neutral")}:  Ti ho quasi detto tutto di me, ma {mentorName} continua a evitarmi.
             }     
         
-        {charTag(SecondCharacter, "emotional")}:        Mi piace molto passare il tempo in biblioteca.
-        {charTag(SecondCharacter, "neutral")}:        Le biblioteche mi ricordano sempre la casa della nonna.
-        L'altra nonna, quella che sta al mare.
-        {charTag(SecondCharacter, "emotional")}:        Ci vado d'estate e mi diverto tantissimo e ci sono tantissimi libri.
-        Lei mi prepara tutte le cose buone.
-        E io le insegno tutte le cose più strane sugli animali.
-        {charTag(SecondCharacter, "neutral")}:        Mamma e papà non vengono mai.
-        {charTag(SecondCharacter, "emotional")}:        Ma mio fratello e il suo amico sì.
-        {charTag(SecondCharacter, "neutral")}:        Una volta mi hanno portato a una festa sulla spiaggia.
-        E mi hanno fatto cantare nel microfono.
-        {charTag(SecondCharacter, "energy")}:       E hanno riso tutti quando ho ruttato fortissimo.
-        Da nonna mi addormento subito.
-        {charTag(SecondCharacter, "neutral")}:        Non devo correggere le giornate.
+        {charTag(SecondCharacter, "emotional")}:            Mi piace molto passare il tempo in biblioteca.
+        {charTag(SecondCharacter, "neutral")}:              Le biblioteche mi ricordano sempre la casa della nonna.
+                                                            L'altra nonna, quella che sta al mare.
+        {charTag(SecondCharacter, "emotional")}:            Ci vado d'estate e mi diverto tantissimo e ci sono tantissimi libri.
+                                                            Lei mi prepara tutte le cose buone.
+                                                            E io le insegno tutte le cose più strane sugli animali.
+        {charTag(SecondCharacter, "neutral")}:              Mamma e papà non vengono mai.
+        {charTag(SecondCharacter, "emotional")}:            Ma mio fratello e il suo amico sì.
+        {charTag(SecondCharacter, "neutral")}:              Una volta mi hanno portato a una festa sulla spiaggia.
+                                                            E mi hanno fatto cantare nel microfono.
+        {charTag(SecondCharacter, "energy")}:               E hanno riso tutti quando ho ruttato fortissimo.
+            {
+                - are_two_entities_together(Franco, PG):
+                    {charTag(Franco, "{portrait_Franco()}")}:       Come alle serate karaoke di cugina Sputt!!
+                    {charTag(SecondCharacter, "melanchonic")}:      Ancora non mi ci hai portato, Franco!
+                    {charTag(Franco, "{portrait_Franco()}")}:       La organizziamo presto, promesso!
+            }
+        {charTag(SecondCharacter, "neutral")}:                      Da nonna mi addormento subito.
+                      Non devo correggere le giornate.
                     {
                         - are_two_entities_together(FirstCharacter, PG):
                                 {charTag(FirstCharacter, "sad")}:              Vedi tu se mi devo commuovere per questo piccoletto, mannaggia a me!
                     
                     }
-        {charTag(SecondCharacter, "melanchonic")}:    Quando finiscono le vacanze però mi sento triste.
-        {charTag(SecondCharacter, "angry")}:        E arrabbiato.
-        {charTag(SecondCharacter, "neutral")}:        Ora che nonna è nella casa dei vecchi, vorrei vivere sempre con l'altra nonna.
-        Tanto so studiare da solo.
-        {charTag(SecondCharacter, "emotional")}:        Magari studio come si curano i pesci.
-        {charTag(SecondCharacter, "melanchonic")}:    Anche se non ci puoi mica giocare con loro.
+        {charTag(SecondCharacter, "melanchonic")}:          Quando finiscono le vacanze però mi sento triste.
+        {charTag(SecondCharacter, "angry")}:                E arrabbiato.
+        {charTag(SecondCharacter, "neutral")}:              Ora che nonna è nella casa dei vecchi, vorrei vivere sempre con l'altra nonna.
+                                                            Tanto so studiare da solo.
+        {charTag(SecondCharacter, "emotional")}:            Magari studio come si curano i pesci.
+        {charTag(SecondCharacter, "melanchonic")}:          Anche se non ci puoi mica giocare con loro.
             
-            + \ {charTag(PG, "neutral")}:         I libri ti insegnano tante cose.
+            + \ {charTag(PG, "neutral")}:                   I libri ti insegnano tante cose.
                     -> glyph_modifier_variation_management(SecondCharacter, airC)->
-                {charTag(SecondCharacter, "neutral")}:        Sì no boh.
-                Anche guardare le cose.
-                E toccarle.
-                {charTag(SecondCharacter, "energy")}:       Ho imparato tantissime cose da quando sono qui.
-                Senza usare un libro.
+                {charTag(SecondCharacter, "neutral")}:          Sì no boh.
+                                                                Anche guardare le cose.
+                                                                E toccarle.
+                {charTag(SecondCharacter, "energy")}:           Ho imparato tantissime cose da quando sono qui.
+                                                                Senza usare un libro.
                 {charTag(SecondCharacter, "emotional")}:        A parte quando ne ho impilati alcuni per raggiungere l'alveare in serra.
-                {charTag(SecondCharacter, "melanchonic")}:    Ma le api si sono arrabbiate.
+                {charTag(SecondCharacter, "melanchonic")}:      Ma le api si sono arrabbiate.
                     
-            + \ {charTag(PG, "neutral")}:         Dobbiamo capire la lingua dei pesci così ci possiamo giocare.
+            TODO: più "terra"        
+            + \ {charTag(PG, "neutral")}:                   Dobbiamo capire la lingua dei pesci così ci possiamo giocare.
                     -> glyph_modifier_variation_management(SecondCharacter, earthC)->
                 {charTag(SecondCharacter, "energy")}:       Magari è come con le pecore che fanno tanti "bee" diversi.
                 {charTag(SecondCharacter, "neutral")}:        Magari hanno tutti i loro dialetti.
@@ -1483,38 +1502,38 @@
             //     Però mi serve della roba frizzante sennò non mi vengono bene.
             //     Ma poi mi scappa tanta pipì.
 
-            + \ {charTag(PG, "neutral")}:         Bimbo, tu devi cambiare casa. Stai al mare dalla nonna!
+            + \ {charTag(PG, "neutral")}:                   Bimbo, tu devi cambiare casa. Stai al mare dalla nonna!
                     -> glyph_modifier_variation_management(SecondCharacter, fireC)->
-                {charTag(SecondCharacter, "melanchonic")}:    Mica è così facile!
-                {charTag(SecondCharacter, "neutral")}:        Una volta però gliel'ho chiesto.
-                E lei mi ha detto "Finisci le elementari, poi ne parliamo".
+                {charTag(SecondCharacter, "melanchonic")}:      Mica è così facile!
+                {charTag(SecondCharacter, "neutral")}:          Una volta però gliel'ho chiesto.
+                                                                E lei mi ha detto "Finisci le elementari, poi ne parliamo".
                 {charTag(SecondCharacter, "emotional")}:        A volte quando sono triste ci penso a questa cosa.
 
-            + \ {charTag(PG, "neutral")}:         Vorresti che venissero anche mamma e papà?
+            + \ {charTag(PG, "neutral")}:                   Vorresti che venissero anche mamma e papà?
                     -> glyph_modifier_variation_management(SecondCharacter, waterC)->
-                {charTag(SecondCharacter, "neutral")}:        Sì no boh.
-                {charTag(SecondCharacter, "melanchonic")}:    Sono cattivo se dico di no?
-                {charTag(SecondCharacter, "neutral")}:        Mi piace un posto dove nessuno litiga.
-                O si arrabbia con me.
+                {charTag(SecondCharacter, "neutral")}:          Sì no boh.
+                {charTag(SecondCharacter, "melanchonic")}:      Sono cattivo se dico di no?
+                {charTag(SecondCharacter, "neutral")}:          Mi piace un posto dove nessuno litiga.
+                                                                O si arrabbia con me.
                 {charTag(SecondCharacter, "emotional")}:        L'altra nonna, quella del mare, non si arrabbia mai con me.
-                Nemmeno quando ho versato tutto il caffè sul divano.
-                {charTag(SecondCharacter, "energy")}:       O quando le ho rubato la grappa.
-                {charTag(SecondCharacter, "melanchonic")}:    Che brutto essere ubriaco!
+                                                                Nemmeno quando ho versato tutto il caffè sul divano.
+                {charTag(SecondCharacter, "energy")}:           O quando le ho rubato la grappa.
+                {charTag(SecondCharacter, "melanchonic")}:       Che brutto essere ubriaco!
                 
-            + \ {charTag(PG, "neutral")}:         Ti piace insegnare le cose all'altra nonna.
+            + \ {charTag(PG, "neutral")}:               Ti piace insegnare le cose all'altra nonna.
                     -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
-                {charTag(SecondCharacter, "neutral")}:        Mi aiuta a capirle meglio.
-                Tante cose ce le ho solo in testa e stanno assieme tutte contemporaneamente.
-                {charTag(SecondCharacter, "energy")}:       E per me hanno senso.
-                Ma quando dico le cose ad alta voce, allora devo metterle in ordine.
-                {charTag(SecondCharacter, "melanchonic")}:    Ed è difficile.
-                Anche per questo a volte dico bugie.
-                {charTag(SecondCharacter, "neutral")}:        Perché le parole sono sbagliate, ma il contenuto è quello che so o sento.
-                Non so se mi sono spiegato.
+                {charTag(SecondCharacter, "neutral")}:          Mi aiuta a capirle meglio.
+                                                                Tante cose ce le ho solo in testa e stanno assieme tutte contemporaneamente.
+                {charTag(SecondCharacter, "energy")}:           E per me hanno senso.
+                                                                Ma quando dico le cose ad alta voce, allora devo metterle in ordine.
+                {charTag(SecondCharacter, "melanchonic")}:      Ed è difficile.
+                                                                Anche per questo a volte dico bugie.
+                {charTag(SecondCharacter, "neutral")}:          Perché le parole sono sbagliate, ma il contenuto è quello che so o sento.
+                                                                Non so se mi sono spiegato.
  
             -
-            {charTag(SecondCharacter, "energy")}:       Da grande comunque avrò una biblioteca con tutti i libri, tutti.
-            {charTag(SecondCharacter, "emotional")}:        E poi mi verrai a trovare e leggeremo assieme!
+            {charTag(SecondCharacter, "energy")}:               Da grande comunque avrò una biblioteca con tutti i libri, tutti.
+            {charTag(SecondCharacter, "emotional")}:            E poi mi verrai a trovare e leggeremo assieme!
                     {
                         - are_two_entities_together(Mentor, PG): 
                                 {charTag(Mentor, "hurry")}:             Ci sarà un posticino anche per me?

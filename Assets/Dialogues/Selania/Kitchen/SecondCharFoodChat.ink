@@ -85,227 +85,227 @@
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
-        {charTag(SecondCharacter, "energy")}:       Animaliiiiiiiiiiii!
-        {charTag(SecondCharacter, "neutral")}:        A casa ho una vecchia enciclopedia, era del papà, che è piena di disegni e cose sugli animali.
-        E poi a un mercatino abbiamo trovato una collezione di riviste sugli insetti.
-        E sul tablet ho tre app per riconoscere gli animali.
-        {charTag(SecondCharacter, "energy")}:       E una me li fa vedere in casa, ed è DI-VER-TEN-TIS-SI-MO quando li faccio andare su cose sbagliate.
-        {charTag(SecondCharacter, "neutral")}:        Come il letto di mamma.
-        O le vecchie videocassette di papà.
-        Poi ho dei modellini di dinosauri.
-        Che però ultimamente non mi piacciono più.
-        {charTag(SecondCharacter, "energy")}:       Mentre mi piace disegnare animali inventati mettendo assieme pezzi diversi.
+        {charTag(SecondCharacter, "energy")}:           Animaliiiiiiiiiiii!
+        {charTag(SecondCharacter, "neutral")}:          A casa ho una vecchia enciclopedia, era del papà, che è piena di disegni e cose sugli animali.
+                                                        E poi a un mercatino abbiamo trovato una collezione di riviste sugli insetti.
+                                                        E sul tablet ho tre app per riconoscere gli animali.
+        {charTag(SecondCharacter, "energy")}:           E una me li fa vedere in casa, ed è DI-VER-TEN-TIS-SI-MO quando li faccio andare su cose sbagliate.
+        {charTag(SecondCharacter, "neutral")}:          Come il letto di mamma.
+                                                        O le vecchie videocassette di papà.
+                                                        Poi ho dei modellini di dinosauri.
+                                                        Che però ultimamente non mi piacciono più.
+        {charTag(SecondCharacter, "energy")}:           Mentre mi piace disegnare animali inventati mettendo assieme pezzi diversi.
         {charTag(SecondCharacter, "emotional")}:        Il mio preferito è il prociorso, che è un po' procione e un po' orso e mangia il miele ma lo puoi abbracciare.
-        {charTag(SecondCharacter, "melanchonic")}:    Perché l'orso ti mangerebbe la mano.
-        {charTag(SecondCharacter, "neutral")}:        Papà dice che sono fissato, ma mio fratello dice che sono molto intelligente e quindi è normale.
+        {charTag(SecondCharacter, "melanchonic")}:      Perché l'orso ti mangerebbe la mano.
+        {charTag(SecondCharacter, "neutral")}:          Papà dice che sono fissato, ma mio fratello dice che sono molto intelligente e quindi è normale.
         {charTag(SecondCharacter, "emotional")}:        Ci mettiamo anche il cioccolato?
-        {charTag(SecondCharacter, "energy")}:       Una volta ho fatto uno spettacolo a casa con il teatrino i disegni e gli animali inventati.
-        {charTag(SecondCharacter, "neutral")}:        Quando faccio queste cose chiamo tutta la famiglia.
-        E mi fanno i complimenti e ridono però non lo so.
-        Mi sembra che i grandi le cose le fanno perché devono.
-        {charTag(SecondCharacter, "melanchonic")}:    Non lo so mica se si divertono davvero.
+        {charTag(SecondCharacter, "energy")}:           Una volta ho fatto uno spettacolo a casa con il teatrino i disegni e gli animali inventati.
+        {charTag(SecondCharacter, "neutral")}:          Quando faccio queste cose chiamo tutta la famiglia.
+                                                        E mi fanno i complimenti e ridono però non lo so.
+                                                        Mi sembra che i grandi le cose le fanno perché devono.
+        {charTag(SecondCharacter, "melanchonic")}:      Non lo so mica se si divertono davvero.
 
-            + \ {charTag(PG, "neutral")}:         Statisticamente sì, solo con cose diverse dai prociorsi.
+
+            + \ {charTag(PG, "neutral")}:                       Un po' meno dei bambini, e con cose diverse dai prociorsi.
                     -> glyph_modifier_variation_management(SecondCharacter, airC)->
-                {charTag(SecondCharacter, "neutral")}:        Anche i prociorsi si divertono con cose diverse dai grandi.
-                {charTag(SecondCharacter, "energy")}:       Una volta un prociorso ha passato due ore a rincorrere un gatto.
-                E poi lui si è buttato in acqua.
+                {charTag(SecondCharacter, "neutral")}:          Anche i prociorsi si divertono con cose diverse dai grandi.
+                {charTag(SecondCharacter, "energy")}:           Una volta un prociorso ha passato due ore a rincorrere un gatto.
+                                                                E poi lui si è buttato in acqua.
                 {charTag(SecondCharacter, "emotional")}:        E il gatto gli è stato sulla pancia, perché non sa nuotare.
                
-            + \ {charTag(PG, "neutral")}:         \ {charNameTwo}: gli adulti devono imparare tanto dai bambini!
+            + \ {charTag(PG, "neutral")}:                       \ {charNameTwo}: gli adulti devono imparare tanto dai bambini!
                 -> glyph_modifier_variation_management(SecondCharacter, earthC)->
-                {charTag(SecondCharacter, "neutral")}:        Si no boh.
-                Io voglio insegnare tante cose agli adulti.
-                Come si fanno gli aerei di carta.
-                {charTag(SecondCharacter, "energy")}:       Perché le caramelle fanno bene.
-                E che Elio aveva ragione sugli alieni da sempre e dovevano ascoltarlo.
+                {charTag(SecondCharacter, "neutral")}:          Si no boh.
+                                                                Io voglio insegnare tante cose agli adulti.
+                                                                Come si fanno gli aerei di carta.
+                {charTag(SecondCharacter, "energy")}:           Perché le caramelle fanno bene.
+                                                                E che Elio aveva ragione sugli alieni da sempre e dovevano ascoltarlo.
     
-            + \ {charTag(PG, "neutral")}:         Però tu stai comunque bene quando fai queste cose, no?
+            + \ {charTag(PG, "neutral")}:                       Però tu stai comunque bene quando fai queste cose, no?
                -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
-               {charTag(SecondCharacter, "energy")}:       Sì!
-               Tantissimissimo!
-               {charTag(SecondCharacter, "neutral")}:        A volte nemmeno mi accorgo del tempo che passa, e di cosa fanno le altre persone.
-               {charTag(SecondCharacter, "emotional")}:        Mi piace!
+               {charTag(SecondCharacter, "energy")}:            Sì!
+                                                                Tantissimissimo!
+               {charTag(SecondCharacter, "neutral")}:           A volte nemmeno mi accorgo del tempo che passa, e di cosa fanno le altre persone.
+               {charTag(SecondCharacter, "emotional")}:         Mi piace!
 
-            + \ {charTag(PG, "neutral")}:         Le cose hanno senso se hanno uno scopo. Fare per fare è inutile.
+            + \ {charTag(PG, "neutral")}:                       Le cose hanno senso se hanno uno scopo. Fare per fare è inutile.
                 -> glyph_modifier_variation_management(SecondCharacter, fireC)->
-                {charTag(SecondCharacter, "neutral")}:        Sì no boh.
-                Che noia.
-                Franco fa tantissimissime cose senza senso.
-                {charTag(SecondCharacter, "energy")}:       Ma sono le più migliori qui!
+                {charTag(SecondCharacter, "neutral")}:          Sì no boh.
+                                                                Che noia.
+                                                                Franco fa tantissimissime cose senza senso.
+                {charTag(SecondCharacter, "energy")}:           Ma sono le più migliori qui!
         
-            + \ {charTag(PG, "neutral")}:         Il cuore degli adulti è molto molto complicato, {charNameTwo}.
+            + \ {charTag(PG, "neutral")}:                       Il cuore degli adulti è molto molto complicato, {charNameTwo}.
                 -> glyph_modifier_variation_management(SecondCharacter, waterC)->
-                {charTag(SecondCharacter, "neutral")}:        Che vuol dire?
-                {charTag(SecondCharacter, "angry")}:        Anche noi abbiamo cose complicate!
-                Tutti i compiti.
-                I bulli.
-                I grandi arrabbiati ma non si capisce mica mai perché. 
+                {charTag(SecondCharacter, "neutral")}:          Che vuol dire?
+                {charTag(SecondCharacter, "angry")}:            Anche noi abbiamo cose complicate!
+                                                                Tutti i compiti.
+                                                                I bulli.
+                                                                I grandi arrabbiati ma non si capisce mica mai perché. 
             -    
         
-        {charTag(SecondCharacter, "energy")}:       Ho una fame!
-        Ho anche trovato del cacao!
-        {charTag(SecondCharacter, "neutral")}:        Ma a te come ti piace divertirti?
+        {charTag(SecondCharacter, "energy")}:                   Ho una fame!
+                                                                Ho anche trovato del cacao!
+        {charTag(SecondCharacter, "neutral")}:                  Ma a te come ti piace divertirti?
 
             -> kitchen_moon_feedback -> 
         
-            + \ {charTag(PG, "neutral")}:         <i>Preparo una base per biscotti sportivi.</i>
+            + \ {charTag(PG, "neutral")}:                       <i>Preparo una base per biscotti sportivi.</i>
                 ~ kitchen_recipeNoun = "Biscotti"
                 -> glyph_modifier_variation_management(PG, fireC)->
-                {charTag(SecondCharacter, "neutral")}:        Bleah.
-                Non i biscotti.
-                Ma lo sport.
-                Bleah!
+                {charTag(SecondCharacter, "neutral")}:          Bleah.
+                                                                Non i biscotti.
+                                                                Ma lo sport.
+                                                                Bleah!
                
-            + \ {charTag(PG, "neutral")}:         <i>Stendo della sfoglia per brioches giocose.</i>
+            + \ {charTag(PG, "neutral")}:                       <i>Stendo della sfoglia per brioches giocose.</i>
                 ~ kitchen_recipeNoun = "Brioches"
                 -> glyph_modifier_variation_management(PG, airC)->
-                {charTag(SecondCharacter, "energy")}:       E a chi giochi?
-                A me piace tantissimo fare quelli di intelligenza ora.
-                Quando sono a casa di mio fratello posso starci tutto il tempo che voglio!
+                {charTag(SecondCharacter, "energy")}:           E a cosa giochi?
+                                                                A me piace tantissimo fare quelli di intelligenza ora.
+                                                                Quando sono a casa di mio fratello posso starci tutto il tempo che voglio!
              
-            + \ {charTag(PG, "neutral")}:         <i>Impasto un preparato per crostate socievoli.</i>
+            + \ {charTag(PG, "neutral")}:                       <i>Impasto un preparato per crostate socievoli.</i>
                ~ kitchen_recipeNoun = "Crostata"
-               -> glyph_modifier_variation_management(PG, earthC)->
-               {charTag(SecondCharacter, "neutral")}:        Nel senso che stai sempre con le persone?
-               Sempre?
-               {charTag(SecondCharacter, "melanchonic")}:    Anche dopo la scuola e il lavoro?
+               -> glyph_modifier_variation_management(PG, waterC)->
+               {charTag(SecondCharacter, "neutral")}:           Nel senso che stai sempre con le persone?
+                                                                Sempre?
+               {charTag(SecondCharacter, "melanchonic")}:       Anche dopo la scuola e il lavoro?
         
-            + \ {charTag(PG, "neutral")}:         <i>Pulisco le formine per gelati artistici.</i>
+            + \ {charTag(PG, "neutral")}:                       <i>Pulisco le formine per gelati artistici.</i>
                 ~ kitchen_recipeNoun = "Gelato"
                 -> glyph_modifier_variation_management(PG, aetherC)->
-                {charTag(SecondCharacter, "neutral")}:        Mmm.
-                So che è roba che piace a {charNameOne}.
-                A me mi piace fare le cose.
-                Ma non so se mi piace guardarle.
+                {charTag(SecondCharacter, "neutral")}:          Mmm.
+                                                                So che è roba che piace a {charNameOne}.
+                                                                A me mi piace fare le cose.
+                                                                Ma non so se mi piace guardarle.
     
-            + \ {charTag(PG, "neutral")}:         <i>Raffreddo la frutta per sorbetti sonnacchiosi.</i>
+            + \ {charTag(PG, "neutral")}:                       <i>Raffreddo la frutta per sorbetti sonnacchiosi.</i>
                 ~ kitchen_recipeNoun = "Sorbetto"
-                -> glyph_modifier_variation_management(PG, waterC)->
+                -> glyph_modifier_variation_management(PG, earthC)->
                 {grimoire_firstChar has grimFirstSecondChar: Ancora con questa cosa del dormire!|Che balle dormire!}
-                {charTag(SecondCharacter, "angry")}:        Ci sono così tante cose da fare!
-                {charTag(SecondCharacter, "neutral")}:        Che noia!
+                {charTag(SecondCharacter, "angry")}:            Ci sono così tante cose da fare!
+                {charTag(SecondCharacter, "neutral")}:          Che noia!
             -
-        {charTag(SecondCharacter, "energy")}:       Posso schiacciare qualcosa?#
-        Mi piace schiacciare le cose perché alcune vanno dappertutto, altre fanno l'olio, altre sembrano dei dischi volanti!    
-        E mi piace prevedere cosa succederà.
-        {charTag(SecondCharacter, "neutral")}:        Mi piacciono le cose che si possono prevedere.
-        Anche per questo mi piacciono gli animali.
-        Non è che un leone all'improvviso fa il ragioniere.
-        O un coniglio diventa campione di videogiochi.
-        {charTag(SecondCharacter, "melanchonic")}:    E poi gli animali non sono cattivi.
-        {charTag(SecondCharacter, "neutral")}:        Fanno le cose che devono fare.
-        E litigano per le cose importanti per loro.
-        {charTag(SecondCharacter, "angry")}:        Ma non fanno male solo perché gli piace fare male.
-        {charTag(SecondCharacter, "neutral")}:        A parte i gatti.
-        {charTag(SecondCharacter, "angry")}:        Che non mi piacciono.
-        {charTag(SecondCharacter, "energy")}:       Però mi piace immaginare le persone come animali.
-        {charTag(SecondCharacter, "neutral")}:        Mi aiuta a capirle.
-        E a prevedere di più cosa faranno.
-        {charTag(SecondCharacter, "energy")}:       {charNameOne} per esempio mi ricorda un quokka perché con me è sempre giocosa.
-        {charTag(SecondCharacter, "neutral")}:        Mentre {mentorName} mi sembra un delfino perché sono simpatici fino a quando non sai cosa fanno davvero.
-        E tu invece.
-        No, dimmelo tu.
-        {charTag(SecondCharacter, "energy")}:       Che animale sei?
+        {charTag(SecondCharacter, "energy")}:                   Posso schiacciare qualcosa?
+                                                                Mi piace schiacciare le cose perché alcune vanno dappertutto, altre fanno l'olio, altre sembrano dei dischi volanti!    
+                                                                E mi piace prevedere cosa succederà.
+        {charTag(SecondCharacter, "neutral")}:                  Mi piacciono le cose che si possono prevedere.
+                                                                Anche per questo mi piacciono gli animali.
+                                                                Non è che un leone all'improvviso fa il ragioniere.
+                                                                O un coniglio diventa campione di videogiochi.
+        {charTag(SecondCharacter, "melanchonic")}:              E poi gli animali non sono cattivi.
+        {charTag(SecondCharacter, "neutral")}:                  Fanno le cose che devono fare.
+                                                                E litigano per le cose importanti per loro.
+        {charTag(SecondCharacter, "angry")}:                    Ma non fanno male solo perché gli piace fare male.
+        {charTag(SecondCharacter, "neutral")}:                  A parte i gatti.
+        {charTag(SecondCharacter, "angry")}:                    Che non mi piacciono.
+        {charTag(SecondCharacter, "energy")}:                   Però mi piace immaginare le persone come animali.
+        {charTag(SecondCharacter, "neutral")}:                  Mi aiuta a capirle.
+                                                                E a prevedere di più cosa faranno.
+        {charTag(SecondCharacter, "energy")}:                   {charNameOne} per esempio mi ricorda un quokka perché con me è sempre giocosa.
+        {charTag(SecondCharacter, "neutral")}:                  Mentre {mentorName} mi sembra un delfino perché sono simpatici fino a quando non sai cosa fanno davvero.
+                                                                E tu invece.
+                                                                No, dimmelo tu.
+        {charTag(SecondCharacter, "energy")}:                   Che animale sei?
 
-            + \ {charTag(PG, "neutral")}:         L'affettuoso cane.
+            + \ {charTag(PG, "neutral")}:                       L'affettuoso cane.
                     -> glyph_modifier_variation_management(SecondCharacter, waterC)->
-                {charTag(SecondCharacter, "energy")}:       I cani copiano tantissime cose degli umani, lo sapevi?
-                {charTag(SecondCharacter, "melanchonic")}:    Quando cammini si muovono al tuo passo.
+                {charTag(SecondCharacter, "energy")}:           I cani copiano tantissime cose degli umani, lo sapevi?
+                {charTag(SecondCharacter, "melanchonic")}:      Quando cammini si muovono al tuo passo.
+                                                                E se stai male stanno male anche loro.
+                {charTag(SecondCharacter, "melanchonic")}:      Ora che ci penso forse è meglio se non ce ne abbiamo uno a casa.
                 
-                E se stai male stanno male anche loro.
-                {charTag(SecondCharacter, "melanchonic")}:    Ora che ci penso forse è meglio se non ce ne abbiamo uno a casa.
-                
-            + \ {charTag(PG, "neutral")}:         Il combattivo leone!
+            + \ {charTag(PG, "neutral")}:                       Il combattivo leone!
                     -> glyph_modifier_variation_management(SecondCharacter, fireC)->
-                {charTag(SecondCharacter, "neutral")}:        Sì no boh.
-                {charTag(SecondCharacter, "angry")}:        I leoni sono noiosi.
-                {charTag(SecondCharacter, "neutral")}:        Dormono tantissimo.
-                Come i gatti.
-                Però da piccoli sono suuuuperincapaci di camminare.
-                {charTag(SecondCharacter, "energy")}:       Quello è divertente.
+                {charTag(SecondCharacter, "neutral")}:          Sì no boh.
+                {charTag(SecondCharacter, "angry")}:            I leoni sono noiosi.
+                {charTag(SecondCharacter, "neutral")}:          Dormono tantissimo.
+                                                                Come i gatti.
+                                                                Però da piccoli sono suuuuperincapaci di camminare.
+                {charTag(SecondCharacter, "energy")}:           Quello è divertente.
         
-            + \ {charTag(PG, "neutral")}:         Il misterico corvo.
+            + \ {charTag(PG, "neutral")}:                       Il misterico corvo.
                     -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
-               {charTag(SecondCharacter, "energy")}:       Sai che i corvi si insegnano tra loro le cose?
-               {charTag(SecondCharacter, "neutral")}:        E che se li fai arrabbiare se lo ricordano per sempre.
-               Una volta un amico di mamma ha spaventato un corvo con la sua moto.
-               {charTag(SecondCharacter, "energy")}:       E ora tutte le volte che viene da noi il corvo gli graffia la moto!
+               {charTag(SecondCharacter, "energy")}:            Sai che i corvi si insegnano tra loro le cose?
+               {charTag(SecondCharacter, "neutral")}:           E che se li fai arrabbiare se lo ricordano per sempre.
+                                                                Una volta un amico di mamma ha spaventato un corvo con la sua moto.
+               {charTag(SecondCharacter, "energy")}:            E ora tutte le volte che viene da noi il corvo gli graffia la moto!
             
             + \ {charTag(PG, "neutral")}:         L'intelligente civetta.
                     -> glyph_modifier_variation_management(SecondCharacter, airC)->
-                {charTag(SecondCharacter, "energy")}:       Sapevi che le civette vedono il calore con le orecchie?
-                E che i piccoli quando piangono sembrano bambini?
-                E poi non hanno.
+                {charTag(SecondCharacter, "energy")}:           Sapevi che le civette vedono il calore con le orecchie?
+                                                                E che i piccoli quando piangono sembrano bambini?
+                                                                E poi non hanno.
                 {charTag(SecondCharacter, "emotional")}:        Non hanno il sedere!
-                {charTag(SecondCharacter, "energy")}:       Chissà se fanno le puzzette.
+                {charTag(SecondCharacter, "energy")}:           Chissà se fanno le puzzette.
                
             + \ {charTag(PG, "neutral")}:         Un{player_pronouns has him:o|{player_pronouns has her:a|ə}} prociors{player_pronouns has him:o|{player_pronouns has her:a|ə}}!
                     -> glyph_modifier_variation_management(SecondCharacter, earthC)->
-                {charTag(SecondCharacter, "energy")}:       Sììììì!!!
-                Possiamo tuffarci nell'acqua ora assieme?
-                Mi insegni a nuotare?
-                Rubiamo il miele alle api della serra?
+                {charTag(SecondCharacter, "energy")}:           Sììììì!!!
+                                                                Possiamo tuffarci nell'acqua ora assieme?
+                                                                Mi insegni a nuotare?
+                                                                Rubiamo il miele alle api della serra?
                 {charTag(SecondCharacter, "emotional")}:        Spaventiamo {charNameOne}?
-                Mi fa ridere tantissimissimo quando urla!   
+                                                                Mi fa ridere tantissimissimo quando urla!   
             -
-        {charTag(SecondCharacter, "energy")}:       Il profumo è buono.
-        Ma quindi mangiamo solo dolce oggi?
-        {charTag(SecondCharacter, "emotional")}:        Questa è una cosa bellissima!
-        {charTag(SecondCharacter, "energy")}:       Ma tu capisci sempre le persone?
+        {charTag(SecondCharacter, "energy")}:                   Il profumo è buono.
+                                                                Ma quindi mangiamo solo dolce oggi?
+        {charTag(SecondCharacter, "emotional")}:                Questa è una cosa bellissima!
+        {charTag(SecondCharacter, "energy")}:                   Ma tu capisci sempre le persone?
         
-            + \ {charTag(PG, "neutral")}:         <i>Aggiungo del caramello della perplessità.</i>
+            + \ {charTag(PG, "neutral")}:                       <i>Aggiungo del caramello della perplessità.</i>
                 ~ kitchen_recipeAdjective = "della perplessità"
                 -> glyph_modifier_variation_management(PG, airC)->
-                {charTag(SecondCharacter, "neutral")}:        Anche io.
-                {charTag(SecondCharacter, "melanchonic")}:    Sono così difficili.
-                {charTag(SecondCharacter, "neutral")}:        È come capire degli animaletti strani.
-                Come l'aye-aye o il rinopiteco.
-                Ma almeno quello so che se piove starnutisce.
-                {charTag(SecondCharacter, "melanchonic")}:    Mentre mamma a volte è felice e a volte si arrabbia.
+                {charTag(SecondCharacter, "neutral")}:          Anche io.
+                {charTag(SecondCharacter, "melanchonic")}:      Sono così difficili.
+                {charTag(SecondCharacter, "neutral")}:          È come capire degli animaletti strani.
+                                                                Come l'aye-aye o il rinopiteco.
+                                                                Ma almeno quello so che se piove starnutisce.
+                {charTag(SecondCharacter, "melanchonic")}:      Mentre mamma a volte è felice e a volte si arrabbia.
 
             + \ {charTag(PG, "neutral")}:         <i>Spolvero del cacao della convinzione.</i>
                 ~ kitchen_recipeAdjective = "della convinzione"
                 -> glyph_modifier_variation_management(PG, aetherC)->
-                {charTag(SecondCharacter, "neutral")}:        Magari mentre siamo assieme capisco qualcosa da te allora.
-                Magari.
+                {charTag(SecondCharacter, "neutral")}:          Magari mentre siamo assieme capisco qualcosa da te allora.
+                                                                Magari.
              
-            + \ {charTag(PG, "neutral")}:         <i>Verso dello sciroppo della negazione.</i>
+            + \ {charTag(PG, "neutral")}:                       <i>Verso dello sciroppo della negazione.</i>
                ~ kitchen_recipeAdjective = "della negazione"
                -> glyph_modifier_variation_management(PG, fireC)->
-                {charTag(SecondCharacter, "neutral")}:        Magari allora puoi provare anche tu con gli animali.
-                O un'altra cosa che ti piace.
-                {charTag(SecondCharacter, "energy")}:       L'amico di mio fratello usa i segni zodiacali.
-                Che non hanno assolutamente senso.
-                {charTag(SecondCharacter, "neutral")}:        Contento lui.
+                {charTag(SecondCharacter, "neutral")}:          Magari allora puoi provare anche tu con gli animali.
+                                                                O un'altra cosa che ti piace.
+                {charTag(SecondCharacter, "energy")}:           L'amico di mio fratello usa i segni zodiacali.
+                                                                Che non hanno assolutamente senso.
+                {charTag(SecondCharacter, "neutral")}:          Contento lui.
                 
-            + \ {charTag(PG, "neutral")}:         <i>Grattugio della noce della vicinanza.</i>
+            + \ {charTag(PG, "neutral")}:                       <i>Grattugio della noce della vicinanza.</i>
                 ~ kitchen_recipeAdjective = "della vicinanza"
                 -> glyph_modifier_variation_management(PG, earthC)->
-                {charTag(SecondCharacter, "neutral")}:        Si no boh.
-                Le persone vicine mi sembrano ancora più incasinate.
-                {charTag(SecondCharacter, "melanchonic")}:    Per loro devo avere almeno tre animali per capirle.
+                {charTag(SecondCharacter, "neutral")}:          Si no boh.
+                                                                Le persone vicine mi sembrano ancora più incasinate.
+                {charTag(SecondCharacter, "melanchonic")}:      Per loro devo avere almeno tre animali per capirle.
     
-            + \ {charTag(PG, "neutral")}:         <i>Mescolo della vaniglia della solitudine.</i>
+            + \ {charTag(PG, "neutral")}:                       <i>Mescolo della vaniglia della solitudine.</i>
                 ~ kitchen_recipeAdjective = "della solitudine"
                 -> glyph_modifier_variation_management(PG, waterC)->
-                {charTag(SecondCharacter, "neutral")}:        Già.
-                Si no boh.
-                Quindi capita anche alle altre persone.
-                Wow.
+                {charTag(SecondCharacter, "neutral")}:          Già.
+                                                                Si no boh.
+                                                                Quindi capita anche alle altre persone.
+                                                                Wow.
             -      
 
-        {charTag(SecondCharacter, "neutral")}:        Intanto preparo del succo.
-        Ma non con le cose della serra, perché fanno cose strane.
-        {charTag(SecondCharacter, "energy")}:       A me piacciono le cose strane.
-        {charTag(SecondCharacter, "melanchonic")}:    Ma le persone mi dicono sempre che sono strano.
-        {charTag(SecondCharacter, "neutral")}:        La cosa che mi dicono di più a casa è "Ma perché fai così?!?!"
-        Con un sacco di gesti delle mani.
-        E io provo a spiegarlo ma mica mi capiscono.
-        {charTag(SecondCharacter, "angry")}:        E poi si arrabbiano perché mi dicono delle cose ma non sono davvero le cose che vogliono.
-        {charTag(SecondCharacter, "neutral")}:        I grandi sono strani.
-        Ti dicono una cosa ma ne vogliono un'altra e quindi tu sbagli sempre alla fine.
-        E dicono a me che sono strano.
+        {charTag(SecondCharacter, "neutral")}:                  Intanto preparo del succo.
+                                                                Ma non con le cose della serra, perché fanno cose strane.
+        {charTag(SecondCharacter, "energy")}:                   A me piacciono le cose strane.
+        {charTag(SecondCharacter, "melanchonic")}:              Ma le persone mi dicono sempre che sono strano.
+        {charTag(SecondCharacter, "neutral")}:                  La cosa che mi dicono di più a casa è "Ma perché fai così?!?!"
+                                                                Con un sacco di gesti delle mani.
+                                                                E io provo a spiegarlo ma mica mi capiscono.
+        {charTag(SecondCharacter, "angry")}:                    E poi si arrabbiano perché mi dicono delle cose ma non sono davvero le cose che vogliono.
+        {charTag(SecondCharacter, "neutral")}:                  I grandi sono strani.
+                                                                Ti dicono una cosa ma ne vogliono un'altra e quindi tu sbagli sempre alla fine.
+                                                                E dicono a me che sono strano.
 
             + \ {charTag(PG, "neutral")}:         Serve metodo e disciplina per comunicare in modo efficace.
                     -> glyph_modifier_variation_management(SecondCharacter, airC)->
@@ -313,7 +313,8 @@
                 Ogni volta che un grande dice "disciplina", è solo perché non c'ha voglia di capirmi.
                 Come le maestre che mi mettono in castigo.
                 {charTag(SecondCharacter, "melanchonic")}:    Tutti mettono in castigo ma nessuno chiede il perché.
-               
+             
+             //Più terra  
             + \ {charTag(PG, "neutral")}:         Le cose strane sono divertenti!
                     -> glyph_modifier_variation_management(SecondCharacter, earthC)->
                 {charTag(SecondCharacter, "energy")}:       Sì!
@@ -441,7 +442,7 @@
                     Ma io mica ci credo.
                     L'altra settimana mi ha messo in castigo otto volte.
                     Mi sa che non le dispiace così tanto.
-
+                 //Più terra  
                 + \ {charTag(PG, "neutral")}:         Allora fai così tante cose sbagliate da rendere le punizioni inutili!
                         -> glyph_modifier_variation_management(SecondCharacter, earthC)->
                     {charTag(SecondCharacter, "neutral")}:        Uhm.
@@ -491,7 +492,8 @@
                     {charTag(SecondCharacter, "neutral")}:        Sulla cima.
                     {charTag(SecondCharacter, "energy")}:       Anche io ci arrivo.
                     Sì sì.
-    
+
+                //Più terra   
             + \ {charTag(PG, "neutral")}:         <i>Controllo una disperata teglia da plumcake.</i>
                 ~ kitchen_recipeNoun = "Plumcake"
                 -> glyph_modifier_variation_management(PG, earthC)->
@@ -500,25 +502,25 @@
                     {charTag(SecondCharacter, "angry")}:        Non capisco.
             -  
 
-            {charTag(SecondCharacter, "neutral")}:        Per un po' a scuola hanno tolto i voti.
-            Le maestre dicono che se guardiamo i voti poi non impariamo, cerchiamo solo di vincere.
-            Cosa non l'ho capito.
-            Però alcune mamme si sono arrabbiate.
-            Anche la mia.
-            {charTag(SecondCharacter, "emotional")}:        Posso assaggiare l'impasto?
-            {charTag(SecondCharacter, "neutral")}:        {charNameOne} ha lasciato solo cose vegane.
-            {charTag(SecondCharacter, "emotional")}:        Però sono buone!
-            {charTag(SecondCharacter, "neutral")}:        Se c'è una cosa che mi fa arrabbiare della mamma, è che quando si tratta di scuola lei sa solo arrabbiarsi.
-            {charTag(SecondCharacter, "melanchonic")}:    Se torno con un bel voto mi dice "Hai fatto il tuo dovere!" e poi torna a fare le sue cose.
-            {charTag(SecondCharacter, "angry")}:        Ma se combino qualcosa, vengo punito.
-            {charTag(SecondCharacter, "neutral")}:        E poi dice a tutti che sono bravo.
-            Quando siamo in giro dice "Come sono orgogliosa di {charNameTwo}, è il più bravo della classe!"
-            E ho visto che se faccio un casino, più è grosso il casino più dice che sono bravo a scuola.
-            {charTag(SecondCharacter, "melanchonic")}:    Ma poi a casa si arrabbia.
-            {charTag(SecondCharacter, "neutral")}:        Mio fratello dice che non devo ascoltare mamma, perché non serve essere i più bravi, ma essere brave persone.
-            {charTag(SecondCharacter, "melanchonic")}:    Mamma dice che lui dice così perché non ha nemmeno finito le superiori.
-            {charTag(SecondCharacter, "energy")}:       Nonna dice che serve essere furbi.
-            {charTag(SecondCharacter, "melanchonic")}:    Io non so mica se posso essere tutte queste cose.
+            {charTag(SecondCharacter, "neutral")}:              Per un po' a scuola hanno tolto i voti.
+                                                                Le maestre dicono che se guardiamo i voti poi non impariamo, cerchiamo solo di vincere.
+                                                                Cosa non l'ho capito.
+                                                                Però alcune mamme si sono arrabbiate.
+                                                                Anche la mia.
+            {charTag(SecondCharacter, "emotional")}:            Posso assaggiare l'impasto?
+            {charTag(SecondCharacter, "neutral")}:              {charNameOne} ha lasciato solo cose vegane.
+            {charTag(SecondCharacter, "emotional")}:            Però sono buone!
+            {charTag(SecondCharacter, "neutral")}:              Se c'è una cosa che mi fa arrabbiare della mamma, è che quando si tratta di scuola lei sa solo arrabbiarsi.
+            {charTag(SecondCharacter, "melanchonic")}:          Se torno con un bel voto mi dice "Hai fatto il tuo dovere!" e poi torna a fare le sue cose.
+            {charTag(SecondCharacter, "angry")}:                Ma se combino qualcosa, vengo punito.
+            {charTag(SecondCharacter, "neutral")}:              E poi dice a tutti che sono bravo.
+                                                                Quando siamo in giro dice "Come sono orgogliosa di {charNameTwo}, è il più bravo della classe!"
+                                                                E ho visto che se faccio un casino, più è grosso il casino più dice che sono bravo a scuola.
+            {charTag(SecondCharacter, "melanchonic")}:          Ma poi a casa si arrabbia.
+            {charTag(SecondCharacter, "neutral")}:              Mio fratello dice che non devo ascoltare mamma, perché non serve essere i più bravi, ma essere brave persone.
+            {charTag(SecondCharacter, "melanchonic")}:          Mamma dice che lui dice così perché non ha nemmeno finito le superiori.
+            {charTag(SecondCharacter, "energy")}:               Nonna dice che serve essere furbi.
+            {charTag(SecondCharacter, "melanchonic")}:          Io non so mica se posso essere tutte queste cose.
 
                 + \ {charTag(PG, "neutral")}:         Essere te stesso vuol dire già essere un intero universo.
                         -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
@@ -542,7 +544,7 @@
                     Anche nonna.
                     Però dicono sempre che la vita è difficile.
                     {charTag(SecondCharacter, "melanchonic")}:    Forse non è così bello essere brave persone.
-
+                //Più terra  
                 + \ {charTag(PG, "neutral")}:         Allora prova ad essere un dinosauro rosa!
                         -> glyph_modifier_variation_management(SecondCharacter, earthC)->
                     {charTag(SecondCharacter, "neutral")}:        Bleah!
@@ -698,6 +700,7 @@
                 {charTag(SecondCharacter, "neutral")}:        In effetti già qui hai fatto tante amicizie, vero?
                 {charTag(SecondCharacter, "emotional")}:        Anche con me.
              
+             //Renderlo più chiaro
             + \ {charTag(PG, "neutral")}:         <i>Non aggiungo nulla.</i>
                ~ kitchen_recipeComplement = "senza guarnizioni"
                -> glyph_modifier_variation_management(PG, earthC)->
@@ -769,6 +772,7 @@
                 {charTag(SecondCharacter, "energy")}:       Anche i labirinti.
                 {charTag(SecondCharacter, "neutral")}:        Io mi perdo invece nei labirinti!
 
+             //Più terra  
             + \ {charTag(PG, "neutral")}:         Naa, al massimo sgridiamo {mentorName}. Ti sembro un{player_pronouns has him:o|{player_pronouns has her:a|ə}} che ti sgrida?!
                     -> glyph_modifier_variation_management(SecondCharacter, earthC)->
                 {charTag(SecondCharacter, "neutral")}:        Sì no boh.
@@ -886,6 +890,7 @@
                 A volte mi accompagna mamma ma poi si mette a fumare fuori con le amiche.
                 {charTag(SecondCharacter, "emotional")}:        Mi piace questo piano, grazie {player_name}!
 
+            //Rendila terra
             + \ {charTag(PG, "neutral")}:         Statisticamente deve esserci una persona con cui poter legare.
                     -> glyph_modifier_variation_management(SecondCharacter, airC)->
                 {charTag(SecondCharacter, "neutral")}:        Si no boh.
@@ -904,8 +909,9 @@
                 Ma a me mi piace stare con gli altri.
                 {charTag(SecondCharacter, "angry")}:        Ma è così difficile.
 
+               
             + \ {charTag(PG, "neutral")}:         Tu amico mio hai tan-tis-si-ma fantasia, e devi condividerla con qualcunə!
-                    -> glyph_modifier_variation_management(SecondCharacter, earthC)->
+                    -> glyph_modifier_variation_management(SecondCharacter, airC)->
                 {charTag(SecondCharacter, "energy")}:       A volte scrivo storie per mio fratello.
                 E a lui piacciono.
                 {charTag(SecondCharacter, "emotional")}:        Una volta ha anche fatto dei disegni dalle mie storie!
@@ -958,7 +964,8 @@
                 Anche a me piace sapere le cose.
                 {charTag(SecondCharacter, "neutral")}:        Ma poi devi trovare le persone a cui piacciono le cose che piacciono a te.
                 O ti dicono che sei strano.
-    
+            
+            //Più terra  
             + \ {charTag(PG, "neutral")}:         <i>Macino del pepe rosa divertito.</i>
                 ~ kitchen_recipeAdjective = "del divertimento"
                 -> glyph_modifier_variation_management(PG, earthC)->
@@ -1394,55 +1401,55 @@
     ~ temp mentorName = translator(mentor_ActualName)
 {debug: passo per food_gift_second_char.}
 
-    {charTag(Mentor, "hurry")}:             E proteggono tutta la biblioteca?
-    {charTag(SecondCharacter, "energy")}:       Sì! Vedi che sono carini?
+    {charTag(Mentor, "hurry")}:                     E proteggono tutta la biblioteca?
+    {charTag(SecondCharacter, "energy")}:           Sì! Vedi che sono carini?
     {charTag(Mentor, "neutral")}:                   Continuo a pensare che non siano carini, ma ora mi fanno un po' meno paura.
-    {charTag(Mentor, "hurry")}:             Ehi {player_name}! {charNameTwo} mi diceva che c'è questa biblioteca in Portogallo dove i pipistrelli proteggono i libri!
-    {charTag(SecondCharacter, "neutral")}:        Sìì! E allora ho pensato di mettere una casetta per pipistrelli in cucina.
-    Così tengono lontani gli insetti fastidiosi!
+    {charTag(Mentor, "hurry")}:                     Ehi {player_name}! {charNameTwo} mi diceva che c'è questa biblioteca in Portogallo dove i pipistrelli proteggono i libri!
+    {charTag(SecondCharacter, "neutral")}:          Sìì! E allora ho pensato di mettere una casetta per pipistrelli in cucina.
+                                                    Così tengono lontani gli insetti fastidiosi!
     {charTag(Mentor, "neutral")}:                   E poi mi ha preparato questo piatto, ehm, curioso.
-    {charTag(SecondCharacter, "neutral")}:        Si chiama PanTutto.
-    {charTag(SecondCharacter, "energy")}:       So cucinare tantissime cose!
+    {charTag(SecondCharacter, "neutral")}:          Si chiama PanTutto.
+    {charTag(SecondCharacter, "energy")}:           So cucinare tantissime cose!
     {charTag(Mentor, "neutral")}:                   Hai imparato dalla tua mamma?
-    {charTag(SecondCharacter, "melanchonic")}:    No.
-    {charTag(SecondCharacter, "neutral")}:        A casa ci sto tanto da solo, e quindi mi invento le cose. 
-    {charTag(SecondCharacter, "energy")}:       Ma cucinare è come un laboratorio.
-    {charTag(SecondCharacter, "neutral")}:        E quindi ho inventato tanti piatti.
-    Sono contento che l'hai assaggiato, {mentorName}!
-    Ma non mi arrabbio se non ti piace.
-    So che i vecchi mangiano solo cose schifose come i broccoli.
-    {charTag(Mentor, "hurry")}:             Dovresti assaggiare la mia sacher, bimbo: ti porta direttamente in paradiso
+    {charTag(SecondCharacter, "melanchonic")}:      No.
+    {charTag(SecondCharacter, "neutral")}:          A casa ci sto tanto da solo, e quindi mi invento le cose. 
+    {charTag(SecondCharacter, "energy")}:           Ma cucinare è come un laboratorio.
+    {charTag(SecondCharacter, "neutral")}:          E quindi ho inventato tanti piatti.
+                                                    Sono contento che l'hai assaggiato, {mentorName}!
+                                                    Ma non mi arrabbio se non ti piace.
+                                                    So che i vecchi mangiano solo cose schifose come i broccoli.
+    {charTag(Mentor, "hurry")}:                     Dovresti assaggiare la mia sacher, bimbo: ti porta direttamente in paradiso
     {charTag(SecondCharacter, "emotional")}:        Ha il cioccolato?
-    {charTag(Mentor, "hurry")}:             Ha il cioccolato, e tanto.
-    {charTag(Mentor, "sorry")}:             {charNameTwo}: abbiamo fatto pace?
-    {charTag(SecondCharacter, "neutral")}:        Mmm.
-    Sì.
-    Ma già da prima.
+    {charTag(Mentor, "hurry")}:                     Ha il cioccolato, e tanto.
+    {charTag(Mentor, "sorry")}:                     {charNameTwo}: abbiamo fatto pace?
+    {charTag(SecondCharacter, "neutral")}:          Mmm.
+                                                    Sì.
+                                                    Ma già da prima.
     {charTag(Mentor, "neutral")}:                   Posso abbracciarti?
-    {charTag(SecondCharacter, "neutral")}:        No.
+    {charTag(SecondCharacter, "neutral")}:          No.
     {charTag(SecondCharacter, "emotional")}:        Ma puoi farmi quella torta al cioccolato?
--   
 
-            + \ {charTag(PG, "neutral")}:          Scelta acqua
-                    -> glyph_modifier_variation_management(SecondCharacter, waterC)->
-                
-                
-            + \ {charTag(PG, "neutral")}:         Scelta spirito
-                    -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
-                
+
+        + \ {charTag(PG, "neutral")}:          Scelta acqua
+                -> glyph_modifier_variation_management(SecondCharacter, waterC)->
             
-            + \ {charTag(PG, "neutral")}:          Scelta terra
-                    -> glyph_modifier_variation_management(SecondCharacter, earthC)->
-                
             
-            + \ {charTag(PG, "neutral")}:         Scelta aria
-                    -> glyph_modifier_variation_management(SecondCharacter, airC)->
-                
+        + \ {charTag(PG, "neutral")}:         Scelta spirito
+                -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
             
-            + \ {charTag(PG, "neutral")}:         Scelta fuoco
-                    -> glyph_modifier_variation_management(SecondCharacter, fireC)-> 
-                
-            -
+        
+        + \ {charTag(PG, "neutral")}:          Scelta terra
+                -> glyph_modifier_variation_management(SecondCharacter, earthC)->
+            
+        
+        + \ {charTag(PG, "neutral")}:         Scelta aria
+                -> glyph_modifier_variation_management(SecondCharacter, airC)->
+            
+        
+        + \ {charTag(PG, "neutral")}:         Scelta fuoco
+                -> glyph_modifier_variation_management(SecondCharacter, fireC)-> 
+            
+        -
 
     -> second_char_closing_storylet ->
     ->->

@@ -76,7 +76,8 @@
                                                     Davvero?
                                                     La cosa più bella per te è un posto dove devi dormire seduto?    
 
-        + \ {charTag(PG, "neutral")}:         La stanza dei videogiochi!
+        TODO: più "terra"
+        + \ {charTag(PG, "neutral")}:               La stanza dei videogiochi!
                 -> glyph_modifier_variation_management(SecondCharacter, earthC)->
             {charTag(SecondCharacter, "neutral")}:  Circa.
                                                     Non c'è un video.
@@ -102,10 +103,10 @@
                 {charTag(Mentor, "neutral")}:           Mi raccomando, non macchiare nulla!
         }
     {charTag(SecondCharacter, "energy")}:       Ora sposto tutti quei legni così puoi andarci anche tu!
-    Chissà se ci sono anche i manga!
+                                                Chissà se ci sono anche i manga!
 
         -> second_char_closing_storylet ->
-        ~ opening_places()
+            ~ opening_places()
         ->->
         
 
@@ -116,7 +117,7 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    {charTag(SecondCharacter, "energy")}:           {charTag(SecondCharacter, "neutral")}:        Ehi {player_name}!
+    {charTag(SecondCharacter, "energy")}:           Ehi {player_name}!
                                                     Prima ho letto una storia strana.
     {charTag(SecondCharacter, "neutral")}:          Non l'ho capita proprio tantissimo.
     {charTag(SecondCharacter, "emotional")}:        Ma quello che ho capito mi piace.
@@ -134,6 +135,7 @@
                 
         }
 
+        TODO: più aria. Qualcosa a che fare col capire, studiare.
         + \ {charTag(PG, "neutral")}:                   Li incollo, come dice Giracollo: i sassi devono stare fermi.
              -> glyph_modifier_variation_management(SecondCharacter, airC)->
             {charTag(SecondCharacter, "angry")}:        Non mi piace come idea.
@@ -145,7 +147,7 @@
                     
                 }
     
-        + \ {charTag(PG, "neutral")}:         Indicherei loro un paio di case da distruggere.
+        + \ {charTag(PG, "neutral")}:                   Indicherei loro un paio di case da distruggere.
             -> glyph_modifier_variation_management(SecondCharacter, fireC)->
             {charTag(SecondCharacter, "energy")}:       Uuuh, questa è cattiva!
                                                         Ma mi piace.
@@ -155,13 +157,14 @@
                         {charTag(Mentor, "hurry")}:             {player_name}, non dovresti comportarti da persona adulta?
                 }
      
-        + \ {charTag(PG, "neutral")}:         Cercherei di capire le loro intenzioni.
+        + \ {charTag(PG, "neutral")}:                   Cercherei di capire le loro intenzioni.
             -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
             {charTag(SecondCharacter, "neutral")}:        Me le sono chieste anche io, sai?
                                                              Perché alla fine il primo è in prigione.
                                                             E se ci pensi proprio bene tutti i sassi sono in prigione, perché non si muovono da soli!
-    
-        + \ {charTag(PG, "neutral")}:         Inizierei a saltellare in giro con loro. E fare dispetti al sindaco.
+
+        TODO: più "terra"
+        + \ {charTag(PG, "neutral")}:                   Inizierei a saltellare in giro con loro. E fare dispetti al sindaco.
             -> glyph_modifier_variation_management(SecondCharacter, earthC)->
             {charTag(SecondCharacter, "energy")}:       Ahah sarebbe divertente!
                                                         Così ci lanciamo contro le finestre poi!
@@ -170,7 +173,7 @@
                         {charTag(Mentor, "bored")}:            {player_name}, non credo sia il caso di dare a {charNameTwo} altre idee bislacche.
                 }
             
-        + \ {charTag(PG, "neutral")}:         Mi sarei pres{player_pronouns has him:o|{player_pronouns has her:a|ə}} cura dell'aragosta.
+        + \ {charTag(PG, "neutral")}:                   Mi sarei pres{player_pronouns has him:o|{player_pronouns has her:a|ə}} cura dell'aragosta.
             -> glyph_modifier_variation_management(SecondCharacter, waterC)->
             {charTag(SecondCharacter, "emotional")}:        Già.
                                                             Alla fine non ha mica fatto nulla lei.

@@ -126,7 +126,7 @@
                                                     E quando sei a casa sua, ti lascia sperimentare con le cose di casa.
                 }
 
-                                
+            //renderla più interessante                    
             + \ {charTag(PG, "neutral")}:           E la casa dei vecchi è un posto attrezzato, organizzato.
                     -> glyph_modifier_variation_management(SecondCharacter, airC)->
                                                     Una persona anziana ha bisogno di cure, {charNameTwo}.
@@ -134,7 +134,7 @@
                                                     È giusto che tu senta la sua mancanza.
                                                     Ma sarebbe la cosa giusta per lei, riportarla a casa?
                     
-    
+            //renderla più interessante  
             + \ {charTag(PG, "neutral")}:           Ma è grazie al pianto che puoi essere diverso da loro.
                 -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
                                                     Tu tieni agli animali.
@@ -246,7 +246,8 @@
             {charTag(PG, "neutral")}:           Tuo fratello dice che il mondo è orribile e che non si può più aggiustare.
                                                 E hai paura che gli animali possano sparire.
                                                 Così è logico vedere il futuro come un posto spaventoso.
-    
+
+        //renderla più interessante  
         + \ {charTag(PG, "neutral")}:           Eppure ci sono le associazioni che proteggono gli animali.
             -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
                                                 Come quelle di cui ti ha parlato la tua maestra.
@@ -262,7 +263,7 @@
                                                 E fa in modo che possiate passare tanto tempo assieme.
                                                 Che tu possa avere uno spazio felice.
                                                 E così rende il mondo un po' meno orribile.
-                   
+        //renderla più interessante             
         + \ {charTag(PG, "neutral")}:           Eppure tuo fratello lotta contro tuo padre perché tu stia meglio.
             -> glyph_modifier_variation_management(SecondCharacter, fireC)->
             {
@@ -286,7 +287,7 @@
                                                 E un giorno avrai uno struzzo!
                 }    
                                                 Quando tu giochi non hai paura di nulla.
-
+        //renderla più interessante  
         + \ {charTag(PG, "neutral")}:           Eppure sistematicamente tuo fratello per lavoro aggiusta le cose.
             -> glyph_modifier_variation_management(SecondCharacter, airC)->
                                                 Vede le cose rotte e le ripara.
