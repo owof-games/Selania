@@ -42,10 +42,10 @@
                 {charTag(TheWitch, witch_state())}:   <i>{charNameTwo} ha altri temi che vorrebbe condividere con {player_name}, ma vorrebbe che {player_name} prima lo conoscesse un po' meglio.</i>
         }
 
-            + \ {charTag(PG, "neutral")}:         Parliamo di animali.
+            + \ {charTag(PG, "neutral")}:                                           Parliamo di animali.
                     -> first_theme
 
-            + \ {second_char_main_storylets.six} {charTag(PG, "neutral")}:         Della scuola.
+            + \ {second_char_main_storylets.six} {charTag(PG, "neutral")}:          Della scuola.
                 {
                     - second_char_main_storylets.six:
                         -> storage_glyphs(SecondCharacter)->
@@ -85,25 +85,25 @@
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
-        {charTag(SecondCharacter, "energy")}:           Animaliiiiiiiiiiii!
-        {charTag(SecondCharacter, "neutral")}:          A casa ho una vecchia enciclopedia, era del papà, che è piena di disegni e cose sugli animali.
-                                                        E poi a un mercatino abbiamo trovato una collezione di riviste sugli insetti.
-                                                        E sul tablet ho tre app per riconoscere gli animali.
-        {charTag(SecondCharacter, "energy")}:           E una me li fa vedere in casa, ed è DI-VER-TEN-TIS-SI-MO quando li faccio andare su cose sbagliate.
-        {charTag(SecondCharacter, "neutral")}:          Come il letto di mamma.
-                                                        O le vecchie videocassette di papà.
-                                                        Poi ho dei modellini di dinosauri.
-                                                        Che però ultimamente non mi piacciono più.
-        {charTag(SecondCharacter, "energy")}:           Mentre mi piace disegnare animali inventati mettendo assieme pezzi diversi.
-        {charTag(SecondCharacter, "emotional")}:        Il mio preferito è il prociorso, che è un po' procione e un po' orso e mangia il miele ma lo puoi abbracciare.
-        {charTag(SecondCharacter, "melanchonic")}:      Perché l'orso ti mangerebbe la mano.
-        {charTag(SecondCharacter, "neutral")}:          Papà dice che sono fissato, ma mio fratello dice che sono molto intelligente e quindi è normale.
-        {charTag(SecondCharacter, "emotional")}:        Ci mettiamo anche il cioccolato?
-        {charTag(SecondCharacter, "energy")}:           Una volta ho fatto uno spettacolo a casa con il teatrino i disegni e gli animali inventati.
-        {charTag(SecondCharacter, "neutral")}:          Quando faccio queste cose chiamo tutta la famiglia.
-                                                        E mi fanno i complimenti e ridono però non lo so.
-                                                        Mi sembra che i grandi le cose le fanno perché devono.
-        {charTag(SecondCharacter, "melanchonic")}:      Non lo so mica se si divertono davvero.
+        {charTag(SecondCharacter, "energy")}:                   Animaliiiiiiiiiiii!
+        {charTag(SecondCharacter, "neutral")}:                  A casa ho una vecchia enciclopedia, era del papà, che è piena di disegni e cose sugli animali.
+                                                                E poi a un mercatino abbiamo trovato una collezione di riviste sugli insetti.
+                                                                E sul tablet ho tre app per riconoscere gli animali.
+        {charTag(SecondCharacter, "energy")}:                   E una me li fa vedere in casa, ed è DI-VER-TEN-TIS-SI-MO quando li faccio andare su cose sbagliate.
+        {charTag(SecondCharacter, "neutral")}:                  Come il letto di mamma.
+                                                                O le vecchie videocassette di papà.
+                                                                Poi ho dei modellini di dinosauri.
+                                                                Che però ultimamente non mi piacciono più.
+        {charTag(SecondCharacter, "energy")}:                   Mentre mi piace disegnare animali inventati mettendo assieme pezzi diversi.
+        {charTag(SecondCharacter, "emotional")}:                Il mio preferito è il prociorso, che è un po' procione e un po' orso e mangia il miele ma lo puoi abbracciare.
+        {charTag(SecondCharacter, "melanchonic")}:              Perché l'orso ti mangerebbe la mano.
+        {charTag(SecondCharacter, "neutral")}:                  Papà dice che sono fissato, ma mio fratello dice che sono molto intelligente e quindi è normale.
+        {charTag(SecondCharacter, "emotional")}:                Ci mettiamo anche il cioccolato?
+        {charTag(SecondCharacter, "energy")}:                   Una volta ho fatto uno spettacolo a casa con il teatrino i disegni e gli animali inventati.
+        {charTag(SecondCharacter, "neutral")}:                  Quando faccio queste cose chiamo tutta la famiglia.
+                                                                E mi fanno i complimenti e ridono però non lo so.
+                                                                Mi sembra che i grandi le cose le fanno perché devono.
+        {charTag(SecondCharacter, "melanchonic")}:              Non lo so mica se si divertono davvero.
 
 
             + \ {charTag(PG, "neutral")}:                       Un po' meno dei bambini, e con cose diverse dai prociorsi.

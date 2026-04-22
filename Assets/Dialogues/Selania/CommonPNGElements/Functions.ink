@@ -85,6 +85,46 @@ VAR thirdChar_LibraryWaiting = 0
 -> main  
         
     
+=== rewriting_witch_feedback(point) ===
+LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
+//Assegnazione parlante
+
+{
+    - point == oneR && story_endedStories == ():
+        {charTag(TheWitch, witch_state())}:   <i>{player_name} ha utilizzato la sua prima goccia di inchiostro per compiere una riscrittura.</i>
+
+    - point == twoR && story_endedStories == ():
+        {charTag(TheWitch, witch_state())}:   <i>{player_name} ha utilizzato la sua seconda goccia di inchiostro per procedere con la riscrittura.</i>
+
+    - point == threeR && story_endedStories == ():
+        {charTag(TheWitch, witch_state())}:   <i>{player_name} ha utilizzato la terza goccia di inchiostro, proponendo una riscrittura.</i>
+
+    - point == fourR && story_endedStories == ():
+        {charTag(TheWitch, witch_state())}:   <i>{player_name} ha utilizzato la quarta e ultima unità di inchiostro, compiendo il massimo di riscritture possibili.</i>
+
+    - point == endR && story_endedStories == ():
+        {
+            - story_endedStories == ():
+                {charTag(TheWitch, witch_state())}:     <i>{player_name} sta per utilizzare per la prima volta il potere dell'<b><i>epilogo</b></i>.
+                                                        <i>Quale epilogo proporrà?
+            
+            - else:
+                {charTag(TheWitch, witch_state())}:     <i>Quale <b><i>epilogo</b></i> proporrà {player_name}?</i>   
+        }    
+
+}
+
+->->
+
+             
+
+
+
+
+
+
+
+
 === grimoire_storylets_updater
                         /******************************
 

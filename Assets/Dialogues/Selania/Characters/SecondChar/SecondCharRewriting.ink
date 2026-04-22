@@ -41,11 +41,8 @@
         {charTag(SecondCharacter, "melanchonic")}:      E non è il mio compleanno.
         {charTag(SecondCharacter, "neutral")}:          Ma se non mi invento un motivo per le cose nessuno mi ascolta.
         {charTag(SecondCharacter, "melanchonic")}:      Scusa per la bugia {player_name}.
-        @animation:RewriterBook
                                                         Io voglio solo fare il bambino.
-        // Invece i grandi mi dicono che mi vogliono bene.
-        // Ma poi mi fanno male.
-        // E io non mi fido più di voi.
+
             -> second_char_closing_storylet ->
 
             + \ {charTag(PG, "neutral")}:               Ti ho ascoltato, {charNameTwo}, e posso aiutarti a riscrivere la tua storia.
@@ -63,11 +60,11 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-            {charTag(SecondCharacter, "neutral")}:          Va bene.
-                                                            Ma stavo pensando una cosa però prima.
-            {charTag(SecondCharacter, "emotional")}:        Abbiamo parlato tantissimo noi due.
-                                                            Ma davvero TANTISSSSSSIMO!
-            {charTag(SecondCharacter, "energy")}:           E sai cosa penso di te?
+        {charTag(SecondCharacter, "neutral")}:          Va bene.
+                                                        Ma stavo pensando una cosa però prima.
+        {charTag(SecondCharacter, "emotional")}:        Abbiamo parlato tantissimo noi due.
+                                                        Ma davvero TANTISSSSSSIMO!
+        {charTag(SecondCharacter, "energy")}:           E sai cosa penso di te?
 
             //Avvio aggiornamento relazione + commento PNG + commento strega
                 -> secondAffinityCalc ->
@@ -93,10 +90,10 @@
     ~ temp mentorName = translator(mentor_ActualName)
 
 
-        {charTag(SecondCharacter, "neutral")}:        Comunque possiamo cominciare quando vuoi.
+    {charTag(SecondCharacter, "neutral")}:          Comunque possiamo cominciare quando vuoi.
         
         //Affrontiamo gli adulti in generale
-            {charTag(PG, "neutral")}:               Hai detto che da quando nonna è nella casa dei vecchi fa tutto schifo.
+        {charTag(PG, "neutral")}:                   Hai detto che da quando nonna è nella casa dei vecchi fa tutto schifo.
                                                     Che tuo papà litiga con tua mamma, e che mamma si arrabbia con te e di non piangere perché nonna è in un posto migliore.
 
             + \ {charTag(PG, "neutral")}:           Tua nonna ti ha insegnato a lottare: lotta anche tu!
@@ -116,18 +113,25 @@
                                                     Il modo in cui si arrabbia per tutto.
                                                     Le paure di tua mamma.
                                                     Sono cose che puoi capire, che vivi anche tu.
+                {
+                - grimoire_secondChar has grimSecondCharKitchenOne:
+                                                    Se hai difficoltà, hai sempre la possibilità di immaginarli come animali, come mi hai raccontato cucinando!
+                }                                     
                     
                     
             + \ {charTag(PG, "neutral")}:           Tuo fratello però ha trovato la gioia anche in questo casino.
                 -> glyph_modifier_variation_management(SecondCharacter, earthC)->
                                                     Ci sono le sue statue, c'è il suo amico.
                 {
-                    -second_char_main_storylets.eleven:
+                    -   grimoire_secondChar has grimSecondCharEleven:
                                                     E quando sei a casa sua, ti lascia sperimentare con le cose di casa.
                 }
-
-            //renderla più interessante                    
-            + \ {charTag(PG, "neutral")}:           E la casa dei vecchi è un posto attrezzato, organizzato.
+                {
+                - grimoire_secondChar has grimSecondCharKitchenOne:
+                                                    E poi hai il prociorso!
+                } 
+                   
+            + \ {charTag(PG, "neutral")}:           Anche se ti manca, la casa dei vecchi è un posto per farla stare bene.
                     -> glyph_modifier_variation_management(SecondCharacter, airC)->
                                                     Una persona anziana ha bisogno di cure, {charNameTwo}.
                                                     Di persone che le diano quello di cui ha bisogno.
@@ -149,10 +153,8 @@
         {charTag(SecondCharacter, "neutral")}:      Sì no boh.
                                                     Continua.
         
-            {
-                - story_endedStories == ():
-                    {charTag(TheWitch, witch_state())}:   <i>{player_name} ha utilizzato la sua prima goccia di inchiostro per compiere una riscrittura.</i>
-            }        
+            //Check per commento strega
+            -> rewriting_witch_feedback(oneR) ->          
 
             {
             - secondChar_InkLevel == ink_low:
@@ -174,7 +176,7 @@
         + \ {charTag(PG, "neutral")}:           Le bugie alla fine sono solo storie. Usale per divertirti.
                 -> glyph_modifier_variation_management(SecondCharacter, earthC)->
             {
-                - cooking_with_second_char.third_theme:
+                - grimoire_secondChar has grimSecondCharKitchenThree:
                                                 L'hai detto anche mentre cucinavamo: non tutte le bugie sono uguali.
                                                 E che sei felice di inventare storie con tuo fratello.
             }    
@@ -223,10 +225,8 @@
         {charTag(SecondCharacter, "neutral")}:  Non ci avevo pensato, pensato davvero.
                                                 Che posso fare qualcosa per gli animali.
         
-            {
-                - story_endedStories == ():
-                    {charTag(TheWitch, witch_state())}:   <i>{player_name} ha utilizzato la sua seconda goccia di inchiostro per procedere con la riscrittura.</i>
-            }         
+            //Check per commento strega
+            -> rewriting_witch_feedback(twoR) ->           
         
             {
             - secondChar_InkLevel == ink_normal:
@@ -253,7 +253,7 @@
                                                 Come quelle di cui ti ha parlato la tua maestra.
                                                 E la sua amica del canile.
             {
-                - second_char_main_storylets.twelve:
+                - grimoire_secondChar has grimSecondCharTwelve:
                                                 E magari da grande studierai davvero come si curano i pesci.
             }
 
@@ -267,7 +267,7 @@
         + \ {charTag(PG, "neutral")}:           Eppure tuo fratello lotta contro tuo padre perché tu stia meglio.
             -> glyph_modifier_variation_management(SecondCharacter, fireC)->
             {
-                - second_char_main_storylets.eleven:
+                - grimoire_secondChar has grimSecondCharEleven:
                                                 E quando sei a casa sua ti fa fare un sacco di esperimenti.
             }
                                                 Si è creato una nuova casa.
@@ -300,10 +300,8 @@
         {charTag(SecondCharacter, "neutral")}:  Si no boh.
                                                 Magari hai ragione.
         
-            {
-                - story_endedStories == ():
-                    {charTag(TheWitch, witch_state())}:   <i>{player_name} ha utilizzato la terza goccia di inchiostro, proponendo una riscrittura.</i>
-            }         
+            //Check per commento strega
+            -> rewriting_witch_feedback(threeR) ->           
         
             {
             - secondChar_InkLevel == ink_medium:
@@ -347,7 +345,7 @@
             + \ {charTag(PG, "neutral")}:       Ma puoi essere un adulto in cerca di uno scopo più grande, come {charNameOne}.
                 -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
                 {
-                    - cooking_with_second_char.first_theme:
+                    - grimoire_secondChar has grimSecondCharKitchenThree:
                                                 Non uno di quegli adulti che fanno le cose perché devono, come raccontavi in cucina.
                 }
                                                 E trovare modi inaspettati di aiutare le altre persone, gli animali, il mondo.
@@ -356,7 +354,7 @@
                 -> glyph_modifier_variation_management(SecondCharacter, waterC)->
                                                 E rendere più facile la vita all3 altr3.
                 {
-                    - cooking_with_second_char.second_theme:
+                    - grimoire_secondChar has grimSecondCharKitchenTwo:
                                                 Una brava persona, come ti ha detto tuo fratello.
                 }
                 {
@@ -373,13 +371,11 @@
 
         -
         ~ numberQuestion ++  
-        {charTag(SecondCharacter, "neutral")}:        Posso essere un adulto buono.
-                                                        Woah.
+        {charTag(SecondCharacter, "neutral")}:      Posso essere un adulto buono.
+                                                    Woah.
         
-            {
-                - story_endedStories == ():
-                    {charTag(TheWitch, witch_state())}:   <i>{player_name} ha utilizzato la quarta e ultima unità di inchiostro, compiendo il massimo di riscritture possibili.</i>
-            }  
+        //Check per commento strega
+            -> rewriting_witch_feedback(fourR) ->     
             
             -> ending
 
@@ -397,13 +393,8 @@
                                         Perché se chi dovrebbe proteggerti ti ha ferito, come fai a fidarti delle persone?
                                         E per questo ti dico {charNameTwo}:
             
-            {
-                - story_endedStories == ():
-                    {charTag(TheWitch, witch_state())}:   <i>{player_name} sta per utilizzare il potere dell'<b><i>epilogo</b></i>.
-                
-                - else:
-                    {charTag(TheWitch, witch_state())}:   <i>Quale <b><i>epilogo</b></i> proporrà {player_name}?</i>   
-            }     
+        //Check per commento strega
+        -> rewriting_witch_feedback(endR) ->    
      
         + (fire)\ {charTag(PG, "neutral")}:         Diventa il più forte, il più coraggioso.
             -> glyph_modifier_variation_management(SecondCharacter, fireC)->
@@ -443,31 +434,31 @@
     
         -
     //Nota: la parte di accettazione del nome è prima dell'aggiornamento, così il nome nuovo compare solo quando viene dichiarato.
-    {charTag(SecondCharacter, "neutral")}:        Sì. 
-                                                No.
-                                                Boh.
+    {charTag(SecondCharacter, "neutral")}:          Sì. 
+                                                    No.
+                                                    Boh.
 
-    {
-        - ending.fire:
-            {charTag(SecondCharacter, "angry")}:        Non ci avevo mai pensato, che il fatto che sono bugiardo e dispettoso può rendermi indistruttibile. 
+{
+    - ending.fire:
+        {charTag(SecondCharacter, "angry")}:        Non ci avevo mai pensato, che il fatto che sono bugiardo e dispettoso può rendermi indistruttibile. 
+    
+    - ending.aether:
+         {charTag(SecondCharacter, "melanchonic")}: Non è che vedo sempre che anche le altre persone hanno paura.
+                                                    Questa cosa mi ha fatto sentire meno stupido.
+
+    - ending.earth:
+        {charTag(SecondCharacter, "energy")}:       Mi piace quella cosa che hai detto sulla curiosità perché è vera.
+                                                    Curioso sempre, curioso forte!
+
+    - ending.water:
+        {charTag(SecondCharacter, "melanchonic")}:  Io non ci avevo mica pensato che anche i miei genitori hanno paura.
+
+    - ending.air:
+        {charTag(SecondCharacter, "emotional")}:    Hai detto che la mia intelligenza può fare felici le altre persone.
+                                                    È una cosa bella, {player_name}.
         
-        - ending.aether:
-            Non è che vedo sempre che anche le altre persone hanno paura.
-            {charTag(SecondCharacter, "melanchonic")}:    Questa cosa mi ha fatto sentire meno stupido.
-
-        - ending.earth:
-            {charTag(SecondCharacter, "energy")}:       Mi piace quella cosa che hai detto sulla curiosità perché è vera.
-            Curioso sempre, curioso forte!
-
-        - ending.water:
-            {charTag(SecondCharacter, "melanchonic")}:    Io non ci avevo mica pensato che anche i miei genitori hanno paura.
-
-        - ending.air:
-            {charTag(SecondCharacter, "emotional")}:        Hai detto che la mia intelligenza può fare felici le altre persone.
-            È una cosa bella, {player_name}.
-            
-    }
-    {charTag(SecondCharacter, "neutral")}:        Cavoli, quante parole che ho in testa!        
+}
+    {charTag(SecondCharacter, "neutral")}:          Cavoli, quante parole che ho in testa!        
 
             //Prima chiamo il moltiplicatore di colori, così che comunque le scelte fatte qui abbiano un impatto maggiore.
                 -> glyph_modifier(SecondCharacter, secondChar_glyphVariation) ->
@@ -488,67 +479,67 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-        {
+{
 
-            - secondChar_ActualName has Grizzly:
-                    {
-                        - ending.fire:
-                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
-                        - else:
-                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
-                    }
-                {charTag(SecondCharacter, "angry")}:        Il mio vero nome è <b><i>{charNameTwo}</b></i>.
-                                                            Combatterò la mia paura e diventerò il più forte di tutti, imbattibile!
+    - secondChar_ActualName has Grizzly:
+    {
+        - ending.fire:
+                                                    E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+        - else:
+                                                    Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+    }
+        {charTag(SecondCharacter, "angry")}:        Il mio vero nome è <b><i>{charNameTwo}</b></i>.
+                                                    Combatterò la mia paura e diventerò il più forte di tutti, imbattibile!
+    
+    - secondChar_ActualName has Lupo:
+    {
+        - ending.water:
+                                                    E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+        - else:
+                                                    Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+    }
+        {charTag(SecondCharacter, "angry")}:        Mi chiamerò <b><i>{charNameTwo}</b></i>.
+        {charTag(SecondCharacter, "neutral")}:      E proteggerò il mio branco.
+                                                    Mamma, papà, nonna e mio fratello.
+        {charTag(SecondCharacter, "energy")}:       Nessuna delle persone a cui voglio bene deve più stare male.
+        
+    - secondChar_ActualName has Delfino:
+    {
+        - ending.earth:
+                                                    E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+        - else:
+                                                    Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+    }
+        {charTag(SecondCharacter, "energy")}:       E il mio nome è <b><i>{charNameTwo}</b></i>.
+                                                    Perché tutto è un gioco.
+        {charTag(SecondCharacter, "emotional")}:    La mia fantasia e le mie bugie aiuteranno le altre persone ad avere meno paura.
+                        
+    
+    - secondChar_ActualName has Capibara:
+    {
+        - ending.aether:
+                                                    E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+        - else:
+                                                    Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+    }
+        {charTag(SecondCharacter, "emotional")}:    Mi chiamerò <b><i>{charNameTwo}</b></i>.
+                                                    E imparerò ad avere tantissimi amici.
+        {charTag(SecondCharacter, "energy")}:       Ci sentiremo meno soli!
+                                                    E così avremo meno paura.
             
-            - secondChar_ActualName has Lupo:
-                    {
-                        - ending.water:
-                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
-                        - else:
-                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
-                    }
-                {charTag(SecondCharacter, "angry")}:        Mi chiamerò <b><i>{charNameTwo}</b></i>.
-                {charTag(SecondCharacter, "neutral")}:      E proteggerò il mio branco.
-                Mamma, papà, nonna e mio fratello.
-                {charTag(SecondCharacter, "energy")}:       Nessuna delle persone a cui voglio bene deve più stare male.
-              
-            - secondChar_ActualName has Delfino:
-                    {
-                        - ending.earth:
-                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
-                        - else:
-                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
-                    }
-                {charTag(SecondCharacter, "energy")}:       E il mio nome è <b><i>{charNameTwo}</b></i>.
-                                                            Perché tutto è un gioco.
-                {charTag(SecondCharacter, "emotional")}:    La mia fantasia e le mie bugie aiuteranno le altre persone ad avere meno paura.
-                               
+    - secondChar_ActualName has Corvo:
+    {
+        - ending.air:
+                                                    E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+        - else:
+                                                    Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+    }
+        {charTag(SecondCharacter, "energy")}:        Io sono <b><i>{charNameTwo}</b></i>.
+        {charTag(SecondCharacter, "neutral")}:       Sono sveglio e posso capire ciò che mi circonda!
+        {charTag(SecondCharacter, "emotional")}:     E posso cambiare le cose che mi fanno paura.
+        {charTag(SecondCharacter, "neutral")}:       Aiutare gli altri.
             
-            - secondChar_ActualName has Capibara:
-                    {
-                        - ending.aether:
-                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
-                        - else:
-                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
-                    }
-                {charTag(SecondCharacter, "emotional")}:    Mi chiamerò <b><i>{charNameTwo}</b></i>.
-                                                            E imparerò ad avere tantissimi amici.
-                {charTag(SecondCharacter, "energy")}:       Ci sentiremo meno soli!
-                                                            E così avremo meno paura.
-                    
-            - secondChar_ActualName has Corvo:
-                    {
-                        - ending.air:
-                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
-                        - else:
-                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
-                    }
-                {charTag(SecondCharacter, "energy")}:           Io sono <b><i>{charNameTwo}</b></i>.
-                {charTag(SecondCharacter, "neutral")}:          Sono sveglio e posso capire ciò che mi circonda!
-                {charTag(SecondCharacter, "emotional")}:        E posso cambiare le cose che mi fanno paura.
-                {charTag(SecondCharacter, "neutral")}:          Aiutare gli altri.
-                    
-        }
+}
         
 
 
@@ -570,7 +561,7 @@
 
             {
                 - not rewriting_proposal_first_character.secret_ending or not rewriting_proposal_third_character.secret_ending:
-                    <i>{charNameTwo} ripone piena fiducia in {player_name}, ed è pronto a condividere con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} una informazione importante.</i>
+                                                        <i>{charNameTwo} ripone piena fiducia in {player_name}, ed è pronto a condividere con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} una informazione importante.</i>
             }
 
         {charTag(SecondCharacter, "neutral")}:          Voglio dirti una cosa {player_name}. 
@@ -592,23 +583,23 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
+    {
+        - contentsNest hasnt fireGlyph:
+        {charTag(SecondCharacter, "neutral")}:          Ah {player_name}, prima ho trovato una cosa in giro.
+        {charTag(SecondCharacter, "melanchonic")}:      O forse l'ho rubata.
+        {charTag(SecondCharacter, "neutral")}:          Ma ho pensato che magari tu ci cavi qualcosa.
+                                                        Devo iniziare a comportarmi diversamente, mi sa. 
+                                                        Vero?
         {
-            - contentsNest hasnt fireGlyph:
-            {charTag(SecondCharacter, "neutral")}:          Ah {player_name}, prima ho trovato una cosa in giro.
-            {charTag(SecondCharacter, "melanchonic")}:      O forse l'ho rubata.
-            {charTag(SecondCharacter, "neutral")}:          Ma ho pensato che magari tu ci cavi qualcosa.
-                                                            Devo iniziare a comportarmi diversamente, mi sa. 
-                                                            Vero?
-            {
-                - player_accessiblePlaces has Nest: 
-                    {charTag(SecondCharacter, "neutral")}:   Ho chiesto a un amico di lasciartela nel nido.
-                
-                - else: 
-                    {charTag(SecondCharacter, "neutral")}:   Stavo per dartela direttamente, ma Franco mi ha detto che te l'avrebbe fatta trovare quando ti sarà servita.
-            }
-            ~ move_entity(fireGlyph, Nest)
-
+            - player_accessiblePlaces has Nest: 
+                {charTag(SecondCharacter, "neutral")}:  Ho chiesto a Franco di lasciartela nel nido.
+            
+            - else: 
+                {charTag(SecondCharacter, "neutral")}:  Stavo per dartela direttamente, ma Franco mi ha detto che te l'avrebbe fatta trovare quando ti sarà servita.
         }
+        ~ move_entity(fireGlyph, Nest)
+
+    }
             
     -> close
 
@@ -622,23 +613,23 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
         
-            {charTag(SecondCharacter, "neutral")}:          Torno a casa, {player_name}.
-                                                            Non so cosa mi aspetta.
-            {charTag(SecondCharacter, "energy")}:           Spero un po' di dolci.
-            {charTag(SecondCharacter, "neutral")}:          Ma te lo farò sapere, promesso!
-            {charTag(SecondCharacter, "melanchonic")}:      Mi mancherai, sia?
-                                                            Salutami Franco!
-                                                            E {mentorName}.
-            {
-                - firstChar_storyStatus == story_storyStarted:
-                                                            E super {charNameOne}.
+        {charTag(SecondCharacter, "neutral")}:          Torno a casa, {player_name}.
+                                                        Non so cosa mi aspetta.
+        {charTag(SecondCharacter, "energy")}:           Spero un po' di dolci.
+        {charTag(SecondCharacter, "neutral")}:          Ma te lo farò sapere, promesso!
+        {charTag(SecondCharacter, "melanchonic")}:      Mi mancherai, sia?
+                                                        Salutami Franco!
+                                                        E {mentorName}.
+        {
+            - firstChar_storyStatus == story_storyStarted:
+                                                        E super {charNameOne}.
 
-            }
-            {
-                - thirdChar_storyStatus == story_storyStarted:
+        }
+        {
+            - thirdChar_storyStatus == story_storyStarted:
                                                         E anche {charNameThree}.
 
-            }
+        }
             
     -> second_char_closing_storylet ->    
     -> endingPNGstory(SecondCharacter)

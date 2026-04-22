@@ -140,10 +140,8 @@
             Sì, forse la rinuncia mi spaventa un sacco.
             Ma forse ora un po' meno.
             
-            {
-                - story_endedStories == ():
-                    {charTag(TheWitch, witch_state())}:   <i>{player_name} ha utilizzato la sua prima goccia di inchiostro per compiere una riscrittura.</i>
-            }
+            //Check per commento strega
+            -> rewriting_witch_feedback(oneR) ->   
             
             
                     {
@@ -205,10 +203,9 @@
             {charTag(FirstCharacter, "neutral")}:         Sì, forse sono un po' una cozzetta. 
             E sono felice solo se sono con le persone a cui voglio bene.
             
-            {
-                - story_endedStories == ():
-                    {charTag(TheWitch, witch_state())}:   <i>{player_name} ha utilizzato la sua seconda goccia di inchiostro per procedere con la riscrittura.</i>
-            }        
+            //Check per commento strega
+            -> rewriting_witch_feedback(twoR) ->           
+               
             
             {
             - firstChar_InkLevel == ink_normal:
@@ -280,10 +277,8 @@
             {charTag(FirstCharacter, "neutral")}:         Credo di capire.
             
             
-                {
-                    - story_endedStories == ():
-                        {charTag(TheWitch, witch_state())}:   <i>{player_name} ha utilizzato la terza goccia di inchiostro, proponendo una riscrittura.</i>
-                }        
+                //Check per commento strega
+                -> rewriting_witch_feedback(threeR) ->          
                 
                 {
                 - firstChar_InkLevel == ink_medium:
@@ -342,10 +337,8 @@
             {charTag(FirstCharacter, "neutral")}:         Forse ho più di quanto veda. 
             
             
-                {
-                    - story_endedStories == ():
-                        {charTag(TheWitch, witch_state())}:   <i>{player_name} ha utilizzato la quarta e ultima unità di inchiostro, compiendo il massimo di riscritture possibili.</i>
-                }   
+            //Check per commento strega
+            -> rewriting_witch_feedback(fourR) ->     
             
             -> ending
     
@@ -353,10 +346,8 @@
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
-            {
-                - story_endedStories == ():
-                    {charTag(TheWitch, witch_state())}:   <i>{player_name} sta per utilizzare il potere dell'<b><i>epilogo</b></i>.
-            }  
+        //Check per commento strega
+        -> rewriting_witch_feedback(endR) -> 
         
             {
                 - firstChar_InkLevel == ink_empty:

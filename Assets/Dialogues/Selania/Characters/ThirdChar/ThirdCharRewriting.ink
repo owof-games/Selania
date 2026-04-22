@@ -88,11 +88,8 @@
             ~ numberQuestion ++    
         {charTag(ThirdCharacter, "neutral")}:           Frase.
 
-        
-            {
-                - story_endedStories == ():
-                    {charTag(TheWitch, witch_state())}:   <i>{player_name} ha utilizzato la sua prima goccia di inchiostro per compiere una riscrittura.
-            }        
+            //Check per commento strega
+            -> rewriting_witch_feedback(oneR) ->       
 
             {
             - thirdChar_InkLevel == ink_low:
@@ -135,10 +132,9 @@
         ~ numberQuestion ++     
         {charTag(ThirdCharacter, "neutral")}:           Frase.
         
-            {
-                - story_endedStories == ():
-                    {charTag(TheWitch, witch_state())}:   <i>{player_name} ha utilizzato la sua thirda goccia di inchiostro per procedere con la riscrittura.
-            }         
+            //Check per commento strega
+            -> rewriting_witch_feedback(twoR) ->           
+                 
         
             {
             - thirdChar_InkLevel == ink_normal:
@@ -177,10 +173,8 @@
         ~ numberQuestion ++        
         {charTag(ThirdCharacter, "neutral")}:           Frase.
         
-            {
-                - story_endedStories == ():
-                    {charTag(TheWitch, witch_state())}:   <i>{player_name} ha utilizzato la terza goccia di inchiostro, proponendo una riscrittura.
-            }         
+            //Check per commento strega
+            -> rewriting_witch_feedback(threeR) ->          
         
             {
             - thirdChar_InkLevel == ink_medium:
@@ -218,10 +212,8 @@
         ~ numberQuestion ++       
         {charTag(ThirdCharacter, "neutral")}:           Frase.
         
-            {
-                - story_endedStories == ():
-                    {charTag(TheWitch, witch_state())}:   <i>{player_name} ha utilizzato la quarta e ultima unità di inchiostro, compiendo il massimo di riscritture possibili.
-            }  
+            //Check per commento strega
+            -> rewriting_witch_feedback(fourR) ->  
             
             -> ending
 
@@ -236,13 +228,8 @@
 
         {charTag(PG, "neutral")}:      credo di aver compreso quale sia il tuo blocco, perché sei qui.
             
-            {
-                - story_endedStories == ():
-                    {charTag(TheWitch, witch_state())}:   <i>{player_name} sta per utilizzare il potere dell'<b><i>epilogo</b></i>.
-                
-                - else:
-                    {charTag(TheWitch, witch_state())}:   <i>Quale <b><i>epilogo</b></i> proporrà {player_name}?   
-            }     
+        //Check per commento strega
+        -> rewriting_witch_feedback(endR) ->     
      
         + (fire)\ {charTag(PG, "neutral")}:         Fuoco
             -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
