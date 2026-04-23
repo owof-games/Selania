@@ -48,55 +48,55 @@
                                                         Ma proprio taaaaaaaaaanto.
     {charTag(SecondCharacter, "energy")}:               E ho cercato di capire cosa c'era dietro tutti quei legni.
                                                         Perché {mentorName} non me lo dice mica.
-        {
-            - are_two_entities_together(Mentor, PG):
-                {charTag(Mentor, "sad")}:               I posti chiusi sono posti pericolosi, {charNameTwo}.
+    {
+        - are_two_entities_together(Mentor, PG):
+        {charTag(Mentor, "sad")}:                       I posti chiusi sono posti pericolosi, {charNameTwo}.
                                                         E nemmeno io so cosa c'è dietro.
-                {charTag(SecondCharacter, "angry")}:    Va bene va bene va bene.
-        }
+        {charTag(SecondCharacter, "angry")}:            Va bene va bene va bene.
+    }
     {charTag(SecondCharacter, "energy")}:               C'è una cosa fighissima lì dietro.
                                                         Prova a immaginare qual è la cosa più bella che puoi trovare.
 
         + \ {charTag(PG, "neutral")}:                   Un laboratorio di chimica?
                 -> glyph_modifier_variation_management(SecondCharacter, airC)->
-            {charTag(SecondCharacter, "energy")}:       Non ci avevo pensato cavolo!
+        {charTag(SecondCharacter, "energy")}:           Non ci avevo pensato cavolo!
                                                         Magari!
-            {charTag(SecondCharacter, "neutral")}:      Va bene: ho trovato la <i>seconda</i> cosa più bella che puoi trovare!
+        {charTag(SecondCharacter, "neutral")}:          Va bene: ho trovato la <i>seconda</i> cosa più bella che puoi trovare!
                                                         E niente può esplodere.
                                                         Credo!
     
         + \ {charTag(PG, "neutral")}:                   Un campetto da calcio!
                 -> glyph_modifier_variation_management(SecondCharacter, fireC)->
-            {charTag(SecondCharacter, "angry")}:        Ma mi hai ascoltato quando ho parlato?
+        {charTag(SecondCharacter, "angry")}:            Ma mi hai ascoltato quando ho parlato?
                                                         Ti sembro uno che gioca a calcio?!?
      
         + \ {charTag(PG, "neutral")}:                   Un luogo dove meditare?
                 -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
-            {charTag(SecondCharacter, "neutral")}:      ...
+        {charTag(SecondCharacter, "neutral")}:          ...
                                                         Davvero?
                                                         La cosa più bella per te è un posto dove devi dormire seduto?    
 
         + \ {charTag(PG, "neutral")}:                   Un posto dove dormire?
                 -> glyph_modifier_variation_management(SecondCharacter, earthC)->
-            {charTag(SecondCharacter, "neutral")}:      Tu e {charNameOne} siete uguali.
-            {
-            - are_two_entities_together(FirstCharacter, PG):
-                {charTag(FirstCharacter, "annoyed")}:   Non c'è vergogna nell'ammettere la propria stanchezza, piccoletto!
-            }           
-            {charTag(SecondCharacter, "neutral")}:      No, è un posto interessante.
-            {charTag(SecondCharacter, "energy")}:       Ma c'è anche una poltrona!
+        {charTag(SecondCharacter, "neutral")}:          Tu e {charNameOne} siete uguali.
+        {
+        - are_two_entities_together(FirstCharacter, PG):
+            {charTag(FirstCharacter, "annoyed")}:       Non c'è vergogna nell'ammettere la propria stanchezza, piccoletto!
+        }           
+        {charTag(SecondCharacter, "neutral")}:          No, è un posto interessante.
+        {charTag(SecondCharacter, "energy")}:           Ma c'è anche una poltrona!
             
         + \ {charTag(PG, "neutral")}:                   Una camera con tutti i tuoi amici?
                 -> glyph_modifier_variation_management(SecondCharacter, waterC)->
-            {charTag(SecondCharacter, "melanchonic")}:  Sarebbe vuota.
-            {charTag(SecondCharacter, "angry")}:        No.
+        {charTag(SecondCharacter, "melanchonic")}:      Sarebbe vuota.
+        {charTag(SecondCharacter, "angry")}:            No.
         -
     {charTag(SecondCharacter, "energy")}:               {player_name}: ho trovato una <b>biblioteca!</b>     
                                                         Ed è bellissima!  
     {
         - are_two_entities_together(FirstCharacter, PG):
-            {charTag(FirstCharacter, "neutral")}:        Tu sei un bambino davvero strano.
-            {charTag(FirstCharacter, "affectionate")}:   Adorabilmente strano.
+        {charTag(FirstCharacter, "neutral")}:           Tu sei un bambino davvero strano.
+        {charTag(FirstCharacter, "affectionate")}:      Adorabilmente strano.
     } 
     {charTag(SecondCharacter, "neutral")}:              Ci sono anche i librogame, credo.
                                                         E ho già letto due racconti.
@@ -132,16 +132,16 @@
                                                         Che non ha senso perché se era una cosa fatta dall'aragosta allora sarebbe uscita lei dalla vasca, no?
     {charTag(SecondCharacter, "neutral")}:              Tu cosa fai se ti capita una cosa del genere?
         
-        {
-            - are_two_entities_together(FirstCharacter, PG): 
-                {charTag(FirstCharacter, "annoyed")}:   Non dire che mangi l'aragosta, non dire che mangi l'aragosta, non dire che mangi l'aragosta. 
-                
-        }
+    {
+        - are_two_entities_together(FirstCharacter, PG): 
+        {charTag(FirstCharacter, "annoyed")}:           Non dire che mangi l'aragosta, non dire che mangi l'aragosta, non dire che mangi l'aragosta. 
+            
+    }
 
 
         + \ {charTag(PG, "neutral")}:                   Li intervisterei, per capire cosa pensano.
              -> glyph_modifier_variation_management(SecondCharacter, airC)->
-            {charTag(Mentor, "hurry")}:                 Sììììììì!
+        {charTag(SecondCharacter, "hurry")}:            Sììììììì!
                                                         Mi piace tantissimo questa cosa!
                                                         Lì nessuno sembra volerli conoscere!
                                                         E il primo è in prigione.
@@ -149,48 +149,49 @@
 
         + \ {charTag(PG, "neutral")}:                   Indicherei loro un paio di case da distruggere.
             -> glyph_modifier_variation_management(SecondCharacter, fireC)->
-            {charTag(SecondCharacter, "energy")}:       Uuuh, questa è cattiva!
+        {charTag(SecondCharacter, "energy")}:           Uuuh, questa è cattiva!
                                                         Ma mi piace.
                                                         Anche io ne ho un po'!
-            {
-                - are_two_entities_together(Mentor, PG): 
-                    {charTag(Mentor, "hurry")}:         {player_name}, non dovresti comportarti da persona adulta?
-            }
+        {
+            - are_two_entities_together(Mentor, PG): 
+            {charTag(Mentor, "hurry")}:                 {player_name}, non dovresti dire cose da persona più adulta?
+        }
      
         + \ {charTag(PG, "neutral")}:                   Guarderei ciò che fanno, per capire di cosa hanno bisogno.
             -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
-            {charTag(SecondCharacter, "neutral")}:      Me le sono chieste anche io, sai?
+        {charTag(SecondCharacter, "neutral")}:          Me le sono chiesto anche io, sai?
+                                                        Non ho capito proprio quello di cui hanno bisogno.
+                                                        A parte essere liberi.
                                                         Perché alla fine il primo è in prigione.
                                                         E se ci pensi proprio bene tutti i sassi sono in prigione, perché non si muovono da soli!
 
-        TODO: più "terra"
         + \ {charTag(PG, "neutral")}:                   Li porterei in braccio dove devono andare, così fanno meno fatica!
             -> glyph_modifier_variation_management(SecondCharacter, earthC)->
-            {charTag(SecondCharacter, "energy")}:       Così poi hanno più energia per rompere le finestre!                          
-            {
-                - are_two_entities_together(Mentor, PG): 
-                    {charTag(Mentor, "bored")}:          {player_name}, non credo sia il caso di dare a {charNameTwo} altre idee bislacche.
-            }
+        {charTag(SecondCharacter, "energy")}:           Così poi hanno più energia per rompere le finestre!                          
+        {
+        - are_two_entities_together(Mentor, PG): 
+        {charTag(Mentor, "bored")}:                     {player_name}, non credo sia il caso di dare a {charNameTwo} altre idee bislacche.
+        }
             
         + \ {charTag(PG, "neutral")}:                   Mi sarei pres{player_pronouns has him:o|{player_pronouns has her:a|ə}} cura dell'aragosta.
             -> glyph_modifier_variation_management(SecondCharacter, waterC)->
-            {charTag(SecondCharacter, "emotional")}:        Già.
-                                                            Alla fine non ha mica fatto nulla lei.
-            {charTag(SecondCharacter, "angry")}:            Non capisco perché la vogliono sgozzare.
+        {charTag(SecondCharacter, "emotional")}:        Già.
+                                                        Alla fine non ha mica fatto nulla lei.
+        {charTag(SecondCharacter, "angry")}:            Non capisco perché la vogliono sgozzare.
         -    
-    {charTag(SecondCharacter, "neutral")}:                  A me mi ha fatto pensare tanto tanto alla scuola.
-    {charTag(SecondCharacter, "angry")}:                    Perché alla fine vogliono che ce ne stiamo fermi.
-                                                            E se facciamo qualcosa che non gli piace, allora qualcuno ci vuole sempre legare a terra, come i sassi al pavimento.
-                                                            E c'è sempre qualcuno che vuole punirci.
-    {charTag(SecondCharacter, "neutral")}:                  Ma perché secondo me i grandi non la vedono mica l'aragosta.
+    {charTag(SecondCharacter, "neutral")}:              A me mi ha fatto pensare tanto tanto alla scuola.
+    {charTag(SecondCharacter, "angry")}:                Perché alla fine vogliono che ce ne stiamo fermi.
+                                                        E se facciamo qualcosa che non gli piace, allora qualcuno ci vuole sempre legare a terra, come i sassi al pavimento.
+                                                        E c'è sempre qualcuno che vuole punirci.
+    {charTag(SecondCharacter, "neutral")}:              Ma perché secondo me i grandi non la vedono mica l'aragosta.
     {
-            - are_two_entities_together(Franco, PG):
-            {charTag(Franco, "{portrait_Franco()}")}:       Spesso non vedono neanche le rane.
-                                                            O i girini.
-                                                            O l'uomo lucertola.
+    - are_two_entities_together(Franco, PG):
+    {charTag(Franco, "{portrait_Franco()}")}:           Spesso non vedono neanche le rane.
+                                                        O i girini.
+                                                        O l'uomo lucertola.
     }
-    {charTag(SecondCharacter, "melanchonic")}:              I grandi non vedono mai certi problemi.
-    {charTag(SecondCharacter, "neutral")}:                  Mi sa che dopo mi leggo qualcosa di nuovo!
+    {charTag(SecondCharacter, "melanchonic")}:          I grandi non vedono mai certi problemi.
+    {charTag(SecondCharacter, "neutral")}:              Mi sa che dopo mi leggo qualcosa di nuovo!
     
         -> second_char_closing_storylet ->
         ->->
