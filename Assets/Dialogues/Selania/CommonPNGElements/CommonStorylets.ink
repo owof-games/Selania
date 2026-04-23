@@ -227,7 +227,8 @@
             {charTag(FirstCharacter, "affectionate")}:      Oh, che bello sentire qualcun{player_pronouns has him:o|{player_pronouns has her:a|ə}} che matcha la mia gioia di vivere.
             {charTag(Mentor, "neutral")}:           Il fatto che sia temporanea non nega la mia teoria.
         
-        + \ {charTag(PG, "neutral")}:         La felicità ce l'hai se trovi il gioco e l'assurdo ovunque.
+        //più terra
+        + \ {charTag(PG, "neutral")}:         La felicità è una coperta morbida dopo una giornata di duro lavoro.
             -> glyph_modifier_variation_management(FirstCharacter, earthC)->
             {charTag(FirstCharacter, "annoyed")}:   Credo che quello si chiami "abuso di sostanze".
             {charTag(Mentor, "sad")}:               Con un linguaggio meno colorito, direi comunque che sì, ha ragione {charNameOne}.
@@ -350,7 +351,7 @@
             {charTag(Mentor, "neutral")}:                   Ringrazia la voce da parte mia.
             {charTag(TheWitch, witch_state())}:         <i>Dire una mezza verità porta su una mezza strada.</i>
         
-        + \ {charTag(PG, "neutral")}:         Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
+        + \ {charTag(PG, "neutral")}:           Ha parlato di incendi e acqua, forse hai bruciato qualcosa?
                 -> glyph_modifier_variation_management(Mentor, earthC)->
             {charTag(Mentor, "sad")}:                       Non è che ho lasciato qualcosa di acceso in cucina?
                                                             No dai, si vedrebbe il fumo da qui, sicuro.
@@ -407,27 +408,27 @@
     {charTag(FirstCharacter, "annoyed")}:   Ti ho solo chiesto dove si trova del vino!
     {charTag(Franco, "{portrait_Franco()}")}:       Zelinda, Veneranda, Uga, Torlonia, Tamatta, Ruslana e Ruslanina.
     {charTag(FirstCharacter, "annoyed")}:   Qualcuno mi soffochi, ora.
-        ~ change_entity_place(FirstCharacter)
     {charTag(Franco, "{portrait_Franco()}")}:       Piccarda, Perlita, Macrina, Gliceria, Gianbrunilde, Eulalia, Ermenegigia...
 
-    Qualcosa tipo "{player_name} dimmi che non sto impazzendo solo io!"
-            + \ {charTag(PG, "neutral")}:                     Scelta acqua
+
+    {charTag(FirstCharacter, "neutral")}:        {player_name} dimmi che non sto impazzendo solo io!
+            + \ {charTag(PG, "neutral")}:                     Franco, sembri davvero legato alla tua famiglia.
                     -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                 
                 
-            + \ {charTag(PG, "neutral")}:                     Scelta spirito
+            + \ {charTag(PG, "neutral")}:                      C'è qualcosa nell'illogicità di Franco che è quasi divina.
                     -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                 
             
-            + \ {charTag(PG, "neutral")}:                      Non sto impazzendo solo io.
+            + \ {charTag(PG, "neutral")}:                      "Non sto impazzendo solo io.""
                     -> glyph_modifier_variation_management(FirstCharacter, earthC)->
                 
             
-            + \ {charTag(PG, "neutral")}:                     Scelta aria
+            + \ {charTag(PG, "neutral")}:                       Mi spieghi da dove vengono tutti questi nomi brutti, Franco?
                     -> glyph_modifier_variation_management(FirstCharacter, airC)->
                 
             
-            + \ {charTag(PG, "neutral")}:                       Scelta fuoco
+            + \ {charTag(PG, "neutral")}:                       Se usasse quella lingua per cose intelligenti, Franco salverebbe il mondo.
                     -> glyph_modifier_variation_management(FirstCharacter, fireC)-> 
                 
             -
