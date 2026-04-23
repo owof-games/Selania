@@ -12,7 +12,14 @@
 
 //Tracciamento della relazione
     VAR thirdChar_relationshipStatus = 0
+
+    //Utilizzato nella funzione XXX per calcolare la variazione del rapporto dopo la singola scelta.
+    VAR thirdChar_RelCalculator = 0
+    //Indicator = il valore di Indicator, riproporzionato per l'indicatore della reazione e chiamato in cucina e in riscrittura per i feedback/inchiostro.
     VAR thirdChar_relationshipIndicator = 0
+    //Absolute = il valore totale della relazione, tenuto per tracciamento
+    VAR thirdChar_relationshipIndicatorAbsolute = 0
+    //Reaction: qui registriamo la reazione che verrà attivata coi sigilli
     VAR thirdChar_relationshipReaction = neutral
 
 //Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.

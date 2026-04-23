@@ -18,8 +18,13 @@
 //Tracciamento della relazione
     //Status = chiamato da cucina e prima della riscrittura per valutare il rapporto creato e il relativo inchiostro
     VAR firstChar_relationshipStatus = 0
-    //Indicator = l'informazione che diamo a Unity per indicare in una scala -x/x quale sia il rapporto con lx PNG
+
+    //Utilizzato nella funzione XXX per calcolare la variazione del rapporto dopo la singola scelta.
+    VAR firstChar_RelCalculator = 0
+    //Indicator = il valore di Indicator, riproporzionato per l'indicatore della reazione e chiamato in cucina e in riscrittura per i feedback/inchiostro.
     VAR firstChar_relationshipIndicator = 0
+    //Absolute = il valore totale della relazione, tenuto per tracciamento
+    VAR firstChar_relationshipIndicatorAbsolute = 0
     //Reaction: qui registriamo la reazione che verrà attivata coi sigilli
     VAR firstChar_relationshipReaction = neutral
 

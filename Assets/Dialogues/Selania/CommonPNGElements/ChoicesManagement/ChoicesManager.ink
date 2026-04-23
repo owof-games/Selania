@@ -662,57 +662,61 @@ Recap della logica.
 
 
 
-//Funzioni per gestire la variazione della relazione, secondo le logiche dellx PNG
+//Funzioni per gestire la variazione della relazione, secondo le logiche dellx PNG, e che genera anche la reazione del ritratto MA NON DA FEEDBACK SUL RAPPORTO
 === function firstChar_relationship_variation()
-    ~ temp firstCharRelCalculator = 0
-        {debug_nest: passo per firstChar_relationship_variation. Il valore di firstCharRelCalculator è {firstCharRelCalculator}.}
+//Prima cosa: calcolo la variazione complessiva 
+        {debug_nest: passo per firstChar_relationship_variation. Il valore di firstChar_RelCalculator è {firstChar_RelCalculator}.}
             {glyph_temporaryAir:
                 --2:
-                    ~ firstCharRelCalculator ++
-                    ~ firstCharRelCalculator ++
+                    ~ firstChar_RelCalculator ++
+                    ~ firstChar_RelCalculator ++
                 - 1:
-                    ~ firstCharRelCalculator --
+                    ~ firstChar_RelCalculator --
                 - 2:
-                    ~ firstCharRelCalculator --
-                    ~ firstCharRelCalculator --
+                    ~ firstChar_RelCalculator --
+                    ~ firstChar_RelCalculator --
             } 
             {glyph_temporaryWater:
                 - -2:
-                    ~ firstCharRelCalculator --
-                    ~ firstCharRelCalculator --
+                    ~ firstChar_RelCalculator --
+                    ~ firstChar_RelCalculator --
                 - 1:
-                    ~ firstCharRelCalculator ++
+                    ~ firstChar_RelCalculator ++
                 - 2:
-                    ~ firstCharRelCalculator ++
-                    ~ firstCharRelCalculator ++
+                    ~ firstChar_RelCalculator ++
+                    ~ firstChar_RelCalculator ++
             }   
 
             {glyph_temporaryAether:
                 - -2:
-                    ~ firstCharRelCalculator --
-                    ~ firstCharRelCalculator --
+                    ~ firstChar_RelCalculator --
+                    ~ firstChar_RelCalculator --
                 - 1:
-                    ~ firstCharRelCalculator ++
+                    ~ firstChar_RelCalculator ++
                 - 2:
-                    ~ firstCharRelCalculator ++
-                    ~ firstCharRelCalculator ++
+                    ~ firstChar_RelCalculator ++
+                    ~ firstChar_RelCalculator ++
             }   
-        {debug_nest: dopo i conti fatti, il valore di firstCharRelCalculator è {firstCharRelCalculator}.}
+        {debug_nest: dopo i conti fatti, il valore di firstChar_RelCalculator è {firstChar_RelCalculator}.}
 
-            ~ firstChar_relationshipIndicator += firstCharRelCalculator
+//Poi faccio il conto per verificare quale è stata la variazione di valore complessiva, e generare la relativa reazione.
 
             {
-                - firstChar_relationshipIndicator > 0:
+                - firstChar_RelCalculator > 0:
                     ~ firstChar_relationshipReaction = positive
 
-                - firstChar_relationshipIndicator < 0:
+                - firstChar_RelCalculator < 0:
                     ~ firstChar_relationshipReaction = negative
 
-                - firstChar_relationshipIndicator == 0:
+                - firstChar_RelCalculator == 0:
                     ~ firstChar_relationshipReaction = neutral
             }
-            
-            
+    {debug_nest: dopo l'aggiornamento, il valore di firstChar_relationshipReaction è {firstChar_relationshipReaction}.} 
+//Poi aggiungo il valore sia a firstChar_relationshipIndicatorAbsolute (per tracciamento) che a firstChar_relationshipIndicator
+        ~ firstChar_relationshipIndicator += firstChar_RelCalculator    
+        ~ firstChar_relationshipIndicatorAbsolute += firstChar_RelCalculator
+//E svuoto firstChar_RelCalculator
+        ~ firstChar_RelCalculator = ()  
 
         {debug_nest: dopo l'aggiornamento, il valore di firstChar_relationshipIndicator è {firstChar_relationshipIndicator}.} 
             
@@ -720,7 +724,6 @@ Recap della logica.
 
 
 === function secondChar_relationship_variation()
-~ temp secondCharRelCalculator = 0
     //Step uno: calcolo qual è il colore dominante.
     {
         - (secondChar_aether > secondChar_water) && (secondChar_aether > secondChar_fire) && (secondChar_aether > secondChar_air) && (secondChar_aether > secondChar_earth):
@@ -789,20 +792,20 @@ Recap della logica.
             {
                 //Se non cambia glifo dominante ma aumenta il valore, cosa buona
                 -secondChar_relationshipActualDominantGlyphValue >= secondChar_relationshipLastDominantGlyphValue:
-                        ~ secondCharRelCalculator ++
+                        ~ secondChar_RelCalculator ++
                 
                 //Se non cambia glifo dominante ma diminuisce il valore, cosa cattiva
                 -secondChar_relationshipActualDominantGlyphValue < secondChar_relationshipLastDominantGlyphValue:
-                        ~ secondCharRelCalculator --        
+                        ~ secondChar_RelCalculator --        
             }
         
         //Eccezione con la prima scelta
         - secondChar_relationshipLastDominantGlyph == ():
-            ~ secondCharRelCalculator ++
+            ~ secondChar_RelCalculator ++
         
         //Se cambia glifo dominante, cosa brutta    
         - secondChar_relationshipActualDominantGlyph != secondChar_relationshipLastDominantGlyph:
-                ~ secondCharRelCalculator --
+                ~ secondChar_RelCalculator --
         
 
         
@@ -814,43 +817,118 @@ Recap della logica.
     ~ secondChar_relationshipLastDominantGlyphValue = secondChar_relationshipActualDominantGlyphValue
     ~ secondChar_relationshipLastDominantGlyph = secondChar_relationshipActualDominantGlyph
 
-    ~ secondChar_relationshipIndicator += secondCharRelCalculator      
-    //E poi le reazioni
-        {
-            -secondChar_relationshipIndicator > 0:
-                ~ secondChar_relationshipReaction = positive
+//Poi faccio il conto per verificare quale è stata la variazione di valore complessiva, e generare la relativa reazione.
 
-            - secondChar_relationshipIndicator < 0:
-                ~ secondChar_relationshipReaction = negative
+            {
+                - secondChar_RelCalculator > 0:
+                    ~ secondChar_relationshipReaction = positive
 
-            -secondChar_relationshipIndicator == 0: 
-                ~ secondChar_relationshipReaction = neutral
-        }
+                - secondChar_RelCalculator < 0:
+                    ~ secondChar_relationshipReaction = negative
 
-      
-    ~ relationshipIndicator_Adjustments(SecondCharacter)
+                - secondChar_RelCalculator == 0:
+                    ~ secondChar_relationshipReaction = neutral
+            }
+
+//Poi aggiungo il valore sia a secondChar_relationshipIndicatorAbsolute (per tracciamento) che a secondChar_relationshipIndicator
+        ~ secondChar_relationshipIndicator += secondChar_RelCalculator    
+        ~ secondChar_relationshipIndicatorAbsolute += secondChar_RelCalculator
+//E svuoto secondChar_RelCalculator
+        ~ secondChar_RelCalculator = ()  
+
+        {debug_nest: dopo l'aggiornamento, il valore di secondChar_relationshipReaction è {secondChar_relationshipReaction}.} 
+            
+        ~ relationshipIndicator_Adjustments(SecondCharacter)
+
 
 === function thirdChar_relationship_variation()
-~ temp thirdCharRelCalculator = 0
+//Prima cosa: calcolo la variazione complessiva a seconda della logica della PNG
+        {debug_nest: passo per firstChar_relationship_variation. Il valore di thirdChar_RelCalculator è {thirdChar_RelCalculator}.}
+
+        {debug_nest: dopo i conti fatti, il valore di thirdChar_RelCalculator è {thirdChar_RelCalculator}.}
+
+//Poi faccio il conto per verificare quale è stata la variazione di valore complessiva, e generare la relativa reazione.
+
+            {
+                - thirdChar_RelCalculator > 0:
+                    ~ thirdChar_relationshipReaction = positive
+
+                - thirdChar_RelCalculator < 0:
+                    ~ thirdChar_relationshipReaction = negative
+
+                - thirdChar_RelCalculator == 0:
+                    ~ thirdChar_relationshipReaction = neutral
+            }
+
+//Poi aggiungo il valore sia a thirdChar_relationshipIndicatorAbsolute (per tracciamento) che a thirdChar_relationshipIndicator
+        ~ thirdChar_relationshipIndicator += thirdChar_RelCalculator    
+        ~ thirdChar_relationshipIndicatorAbsolute += thirdChar_RelCalculator
+//E svuoto thirdChar_RelCalculator
+        ~ thirdChar_RelCalculator = ()  
+
+        {debug_nest: dopo l'aggiornamento, il valore di thirdChar_relationshipReaction è {thirdChar_relationshipReaction}.} 
+            
+        ~ relationshipIndicator_Adjustments(ThirdCharacter)
 
 
-~ thirdChar_relationshipIndicator += thirdCharRelCalculator
-        {
-            - thirdChar_relationshipIndicator > 0:
-                ~ thirdChar_relationshipReaction = positive
 
-            - thirdChar_relationshipIndicator < 0:
-                ~ thirdChar_relationshipReaction = negative
+=== function fourthChar_relationship_variation()
+//Prima cosa: calcolo la variazione complessiva a seconda della logica della PNG
+        {debug_nest: passo per firstChar_relationship_variation. Il valore di fourthChar_RelCalculator è {fourthChar_RelCalculator}.}
 
-            - thirdChar_relationshipIndicator == 0: 
-                ~ thirdChar_relationshipReaction = neutral
-        }
+        {debug_nest: dopo i conti fatti, il valore di fourthChar_RelCalculator è {fourthChar_RelCalculator}.}
 
-    
-    ~ relationshipIndicator_Adjustments(ThirdCharacter)
+//Poi faccio il conto per verificare quale è stata la variazione di valore complessiva, e generare la relativa reazione.
 
+            {
+                - fourthChar_RelCalculator > 0:
+                    ~ fourthChar_relationshipReaction = positive
 
+                - fourthChar_RelCalculator < 0:
+                    ~ fourthChar_relationshipReaction = negative
 
+                - fourthChar_RelCalculator == 0:
+                    ~ fourthChar_relationshipReaction = neutral
+            }
+
+//Poi aggiungo il valore sia a fourthChar_relationshipIndicatorAbsolute (per tracciamento) che a fourthChar_relationshipIndicator
+        ~ fourthChar_relationshipIndicator += fourthChar_RelCalculator    
+        ~ fourthChar_relationshipIndicatorAbsolute += fourthChar_RelCalculator
+//E svuoto fourthChar_RelCalculator
+        ~ fourthChar_RelCalculator = ()  
+
+        {debug_nest: dopo l'aggiornamento, il valore di fourthChar_relationshipReaction è {fourthChar_relationshipReaction}.} 
+            
+        ~ relationshipIndicator_Adjustments(FourthCharacter)
+
+=== function fifthChar_relationship_variation()
+//Prima cosa: calcolo la variazione complessiva a seconda della logica della PNG
+        {debug_nest: passo per firstChar_relationship_variation. Il valore di fifthChar_RelCalculator è {fifthChar_RelCalculator}.}
+
+        {debug_nest: dopo i conti fatti, il valore di fifthChar_RelCalculator è {fifthChar_RelCalculator}.}
+
+//Poi faccio il conto per verificare quale è stata la variazione di valore complessiva, e generare la relativa reazione.
+
+            {
+                - fifthChar_RelCalculator > 0:
+                    ~ fifthChar_relationshipReaction = positive
+
+                - fifthChar_RelCalculator < 0:
+                    ~ fifthChar_relationshipReaction = negative
+
+                - fifthChar_RelCalculator == 0:
+                    ~ fifthChar_relationshipReaction = neutral
+            }
+
+//Poi aggiungo il valore sia a fifthChar_relationshipIndicatorAbsolute (per tracciamento) che a fifthChar_relationshipIndicator
+        ~ fifthChar_relationshipIndicator += fifthChar_RelCalculator    
+        ~ fifthChar_relationshipIndicatorAbsolute += fifthChar_RelCalculator
+//E svuoto fifthChar_RelCalculator
+        ~ fifthChar_RelCalculator = ()  
+
+        {debug_nest: dopo l'aggiornamento, il valore di fifthChar_relationshipReaction è {fifthChar_relationshipReaction}.} 
+            
+        ~ relationshipIndicator_Adjustments(FifthCharacter)
 
 //Questa funzione ci permette al volo di evitare che i valori dell'indicatore sforino i limiti previsti
 === function relationshipIndicator_Adjustments(PNG)
@@ -881,9 +959,23 @@ Recap della logica.
                ~ thirdChar_relationshipIndicator =  relationship_indicator_maxValue
         }
 
-    - else: ERROR, PNG non riscontrato.
-        
+    - PNG == FourthCharacter:
+        {
+            - fourthChar_relationshipIndicator < relationship_indicator_minValue:
+               ~ fourthChar_relationshipIndicator =  relationship_indicator_minValue
 
+            - fourthChar_relationshipIndicator > relationship_indicator_maxValue:
+               ~ fourthChar_relationshipIndicator =  relationship_indicator_maxValue
+        }
+        
+    - PNG == FifthCharacter:
+        {
+            - fifthChar_relationshipIndicator < relationship_indicator_minValue:
+               ~ fifthChar_relationshipIndicator =  relationship_indicator_minValue
+
+            - fifthChar_relationshipIndicator > relationship_indicator_maxValue:
+               ~ fifthChar_relationshipIndicator =  relationship_indicator_maxValue
+        }
 }
 
 

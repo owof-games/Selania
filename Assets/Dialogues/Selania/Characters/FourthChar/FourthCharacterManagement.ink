@@ -17,8 +17,15 @@
 
 //Tracciamento della relazione
     VAR fourthChar_relationshipStatus = 0
-    VAR fourthChar_relationshipReaction = neutral
+
+    //Utilizzato nella funzione XXX per calcolare la variazione del rapporto dopo la singola scelta.
+    VAR fourthChar_RelCalculator = 0
+    //Indicator = il valore di Indicator, riproporzionato per l'indicatore della reazione e chiamato in cucina e in riscrittura per i feedback/inchiostro.
     VAR fourthChar_relationshipIndicator = 0
+    //Absolute = il valore totale della relazione, tenuto per tracciamento
+    VAR fourthChar_relationshipIndicatorAbsolute = 0
+    //Reaction: qui registriamo la reazione che verrà attivata coi sigilli
+    VAR fourthChar_relationshipReaction = neutral
 
 //Tracciamento cucina
     //Autonoma
