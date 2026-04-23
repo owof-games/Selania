@@ -371,45 +371,22 @@ Recap della logica.
     {debug_nest: passo per sigil_PNG_reactions. Lo stato di glyph_currentTalker è {glyph_currentTalker}, lo stato di glyph_mainTalker è {glyph_mainTalker} e lo stato sigillo attivo è {glyph_actualActiveSigil}}
     //Qui invece abbiamo le reazioni dellx PNG
     {
-        //Se ho un sigillo attivo, la reazione è anche dell3 main characters, altrimenti no. Ma la reazione è la stessa (perché è sempre dettata dalla logica del rapporto che si sta creando (es: riccio, non valori assoluti ma secondo predominante tipo scelta))
-        //Ai sigilli, se attivi
-        - glyph_currentTalker == FirstCharacter && glyph_actualActiveSigil != ():
-                ~ firstChar_usedSigilsTracking += glyph_actualActiveSigil
+        - glyph_currentTalker == FirstCharacter:
             -> FirstCharacter_reactions
         
-        - glyph_currentTalker == SecondCharacter && glyph_actualActiveSigil != ():
-                ~ secondChar_usedSigilsTracking += glyph_actualActiveSigil
+        - glyph_currentTalker == SecondCharacter:
             -> SecondCharacter_reactions
 
-        - glyph_currentTalker == ThirdCharacter && glyph_actualActiveSigil != ():
-                ~ thirdChar_usedSigilsTracking += glyph_actualActiveSigil
+        - glyph_currentTalker == ThirdCharacter:
             -> ThirdCharacter_reactions
 
-        - glyph_currentTalker == FourthCharacter && glyph_actualActiveSigil != ():
-                ~ fourthChar_usedSigilsTracking += glyph_actualActiveSigil
-            -> FourthCharacter_reactions
-
-        - glyph_currentTalker == FifthCharacter  && glyph_actualActiveSigil != ():
-                ~ fifthChar_usedSigilsTracking += glyph_actualActiveSigil
-            -> FifthCharacter_reactions    
-
-        //Come guests, se presenti
-        - glyph_currentTalker == FirstCharacter && glyph_mainTalker hasnt FirstCharacter:
-            -> FirstCharacter_reactions
-        
-        - glyph_currentTalker == SecondCharacter && glyph_mainTalker hasnt SecondCharacter:
-            -> SecondCharacter_reactions
-
-        - glyph_currentTalker == ThirdCharacter && glyph_mainTalker hasnt ThirdCharacter:
-            -> ThirdCharacter_reactions
-
-        - glyph_currentTalker == FourthCharacter && glyph_mainTalker hasnt FourthCharacter:
+        - glyph_currentTalker == FourthCharacter:
             -> FourthCharacter_reactions  
 
-        - glyph_currentTalker == FifthCharacter && glyph_mainTalker hasnt FifthCharacter:
+        - glyph_currentTalker == FifthCharacter:
             -> FifthCharacter_reactions  
 
-        - glyph_currentTalker == Mentor && glyph_mainTalker hasnt Mentor:
+        - glyph_currentTalker == Mentor && glyph_actualActiveSigil == () && glyph_mainTalker hasnt Mentor:
             -> Mentor_reactions              
 
         - else:
@@ -511,14 +488,14 @@ Recap della logica.
                     {shuffle:
                         - {charTag(ThirdCharacter, "neutral")}:          Uuuuh!
                         - {charTag(ThirdCharacter, "neutral")}:          Oooh!
-                        - {charTag(ThirdCharacter, "neutral")}:             Wow!
-                        - {charTag(ThirdCharacter, "neutral")}:             Siii!
+                        - {charTag(ThirdCharacter, "neutral")}:          Wow!
+                        - {charTag(ThirdCharacter, "neutral")}:          Siii!
                     }
 
                 - negative:
                     {shuffle:
-                        - {charTag(ThirdCharacter, "judgmental")}:              No?
-                        - {charTag(ThirdCharacter, "judgmental")}:              ???
+                        - {charTag(ThirdCharacter, "judgmental")}:         No?
+                        - {charTag(ThirdCharacter, "judgmental")}:         ???
                         - {charTag(ThirdCharacter, "judgmental")}:         Ah.
                         - {charTag(ThirdCharacter, "judgmental")}:         Uff.
                     }
