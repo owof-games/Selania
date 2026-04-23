@@ -652,16 +652,19 @@
     = relationship_feedback
         -> achievements_onGame_statusUpdate_GM ->
         {charTag(ThirdCharacter, "neutral")}:       Comunque {player_name}, stavo pensando alla nostra conversazione qui, assieme.
-
+        
+        //Prima di tutto chiamo la funzione per il calcolo dello stato della relazione
+        ~ affinity_calc(ThirdCharacter)
+        //Così poi posso dare il feedback
 
         {
-            - thirdChar_relationshipReaction == negative:
+            - thirdChar_relationshipStatus == negative:
                 {charTag(ThirdCharacter, "neutral")}:       Credo che la risposta sia no.
                 
-            - thirdChar_relationshipReaction == neutral:
+            - thirdChar_relationshipStatus == neutral:
                 {charTag(ThirdCharacter, "neutral")}:       Credo che la risposta sia "{player_pronouns has him:rimandato|{player_pronouns has her:rimandata|rimandatə}} a settembre".
             
-            - thirdChar_relationshipReaction == positive:
+            - thirdChar_relationshipStatus == positive:
                 {charTag(ThirdCharacter, "neutral")}:       La risposta è sicuramente "sì".
         }    
         

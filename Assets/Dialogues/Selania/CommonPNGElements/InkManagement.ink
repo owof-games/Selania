@@ -23,14 +23,14 @@
     {Character:
         - FirstCharacter:
                 {
-                    - firstChar_relationshipStatus == 0:
+                    - firstChar_relationshipStatus == negative:
                         {debug: il valore di relazione è 0, e quindi non aumento il valore dell'inchiostro. {firstChar_relationshipStatus}.}
                         
-                    - firstChar_relationshipStatus == 1:
+                    - firstChar_relationshipStatus == neutral:
                         ~ firstChar_InkLevel ++
                         {debug: il valore di relazione è 1, e quindi aumento il valore dell'inchiostro. {firstChar_relationshipStatus}.}
                         
-                    - firstChar_relationshipStatus == 2:
+                    - else:
                         ~ firstChar_InkLevel ++
                         ~ firstChar_InkLevel ++
                         {debug: il valore di relazione è 2, e quindi aumento il valore dell'inchiostro. {firstChar_relationshipStatus}.}
@@ -39,14 +39,14 @@
         
         - SecondCharacter:
                 {
-                    - secondChar_relationshipStatus == 0:
+                    - secondChar_relationshipStatus == negative:
                         {debug: il valore di relazione è 0, e quindi non aumento il valore dell'inchiostro. {secondChar_relationshipStatus}, {Ink}.}
                         
-                    - secondChar_relationshipStatus == 1:
+                    - secondChar_relationshipStatus == neutral:
                         ~ secondChar_InkLevel ++
-                        {debug: il valore di relazione è 1, e quindi aumento il valore dell'inchiostro. {secondChar_relationshipStatus}, {Ink}.}
+                        {debug: il valore di relazione è neutral, e quindi aumento il valore dell'inchiostro. {secondChar_relationshipStatus}, {Ink}.}
                         
-                    - secondChar_relationshipStatus == 2:
+                    - else:
                         ~ secondChar_InkLevel ++
                         ~ secondChar_InkLevel ++
                         {debug: il valore di relazione è 2, e quindi aumento il valore dell'inchiostro. {secondChar_relationshipStatus}, {Ink}.}
@@ -55,14 +55,14 @@
                     
         - ThirdCharacter:
                 {
-                    - thirdChar_relationshipStatus == 0:
+                    - thirdChar_relationshipStatus == negative:
                         {debug: il valore di relazione è 0, e quindi non aumento il valore dell'inchiostro. {thirdChar_relationshipStatus}.}
                         
-                    - thirdChar_relationshipStatus == 1:
+                    - thirdChar_relationshipStatus == neutral:
                         ~ thirdChar_InkLevel ++
-                        {debug: il valore di relazione è 1, e quindi aumento il valore dell'inchiostro. {thirdChar_relationshipStatus}.}
+                        {debug: il valore di relazione è neutral, e quindi aumento il valore dell'inchiostro. {thirdChar_relationshipStatus}.}
                         
-                    - thirdChar_relationshipStatus == 2:
+                    - else:
                         ~ thirdChar_InkLevel ++
                         ~ thirdChar_InkLevel ++
                         {debug: il valore di relazione è 2, e quindi aumento il valore dell'inchiostro. {thirdChar_relationshipStatus}.}
@@ -71,30 +71,30 @@
             
         - FourthCharacter:
                 {
-                    - fourthChar_relationshipStatus == 0:
+                    - fourthChar_relationshipStatus == negative:
                         {debug: il valore di relazione è 0, e quindi non aumento il valore dell'inchiostro. {fourthChar_relationshipStatus}.}
                         
-                    - fourthChar_relationshipStatus == 1:
+                    - fourthChar_relationshipStatus == neutral:
                         ~ fourthChar_InkLevel ++
-                        {debug: il valore di relazione è 1, e quindi aumento il valore dell'inchiostro. {fourthChar_relationshipStatus}.}
+                        {debug: il valore di relazione è neutral, e quindi aumento il valore dell'inchiostro. {fourthChar_relationshipStatus}.}
                         
-                    - fourthChar_relationshipStatus == 2:
+                    - else:
                         ~ fourthChar_InkLevel ++
                         ~ fourthChar_InkLevel ++
-                        {debug: il valore di relazione è 2, e quindi aumento il valore dell'inchiostro. {fourthChar_relationshipStatus}.}
+                        {debug: il valore di relazione è neutral, e quindi aumento il valore dell'inchiostro. {fourthChar_relationshipStatus}.}
                         
                 }            
         
         - FifthCharacter:
             {
-                - fifthChar_relationshipStatus == 0:
+                - fifthChar_relationshipStatus == negative:
                     {debug: il valore di relazione è 0, e quindi non aumento il valore dell'inchiostro. {fifthChar_relationshipStatus}.}
                     
-                - fifthChar_relationshipStatus == 1:
+                - fifthChar_relationshipStatus == neutral:
                     ~ fifthChar_InkLevel ++
                     {debug: il valore di relazione è 1, e quindi aumento il valore dell'inchiostro. {fifthChar_relationshipStatus}.}
                     
-                - fifthChar_relationshipStatus == 2:
+                - else:
                     ~ fifthChar_InkLevel ++
                     ~ fifthChar_InkLevel ++
                     {debug: il valore di relazione è 2, e quindi aumento il valore dell'inchiostro. {fifthChar_relationshipStatus}.}

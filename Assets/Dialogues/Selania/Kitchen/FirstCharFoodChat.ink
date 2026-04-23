@@ -1234,9 +1234,12 @@
         -> achievements_onGame_statusUpdate_GM ->
         {charTag(FirstCharacter, "neutral")}:                   Comunque {player_name}, stavo pensando alla nostra conversazione qui, assieme.
                                                                 E se basandomi solo su questa chiacchierata in cucina dovessi dire: ho appena conosciuto {player_name}, vorrei farci amicizia?
-
+        
+        //Prima di tutto chiamo la funzione per il calcolo dello stato della relazione
+        ~ affinity_calc(FirstCharacter)
+        //Così poi posso dare il feedback
         {
-            - firstChar_relationshipReaction == negative:
+            - firstChar_relationshipStatus == negative:
                 {charTag(FirstCharacter, "annoyed")}:           Credo che la risposta sia no.
                 {charTag(FirstCharacter, "neutral")}:           Non sei tu, sia chiaro.
                                                                 E non sono io.
@@ -1244,7 +1247,7 @@
                 {charTag(FirstCharacter, "annoyed")}:           È come se guardassimo il mondo con due paia di occhiali molto diversi.
                 {charTag(FirstCharacter, "neutral")}:           Ma non ti preoccupare: abbiamo ancora un sacco di chiacchierate da fare per conoscerci, no?
                 
-            - firstChar_relationshipReaction == neutral:
+            - firstChar_relationshipStatus == neutral:
                 {charTag(FirstCharacter, "neutral")}:           Credo che la risposta sia "{player_pronouns has him:rimandato|{player_pronouns has her:rimandata|rimandatə}} a settembre".
                 {charTag(FirstCharacter, "sad")}:               Un po' ci capiamo e un po' no.
                 {charTag(FirstCharacter, "curious")}:           Che poi ci sta, no? 
@@ -1252,7 +1255,7 @@
                                                                 E abbiamo ancora un bel po' di chiacchierate da farci assieme, e capirci di più.
                 {charTag(FirstCharacter, "annoyed")}:           O di meno.
             
-            - firstChar_relationshipReaction == positive:
+            - firstChar_relationshipStatus == positive:
                 {charTag(FirstCharacter, "affectionate")}:      La risposta è sicuramente "sì".
                 {charTag(FirstCharacter, "neutral")}:           Vediamo il mondo in modo simile.
                                                                 E non credo che l'amicizia debba coincidere con l'essere la stessa persona, assolutamente no.

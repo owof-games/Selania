@@ -13,6 +13,73 @@ VAR secondChar_ForestWaiting = 0
 VAR thirdChar_LibraryInvite = false
 VAR thirdChar_LibraryWaiting = 0
 
+
+//Indicatori per le soglie delle relazioni
+// negative:        da -9 a -4 (6 valori)
+// neutral:         da -3 a +3 (7 valori)
+// positive:        da +4 a +7 (4 valori)
+// enthusiastic:    da +8 a +9 (2 valori)
+VAR relationshipIndicatorNegativeValue = -4
+VAR relationshipIndicatorPositiveValue = 4
+VAR relationshipIndicatorEnthusiasticValue = 8
+
+
+=== function affinity_calc(PNG)
+~ temp relationshipIndicator = 0
+~ temp relationshipStatus = neutral
+//prima: check di chi parlo, e assegno il valore della relazione alla variabile temporanea.
+{
+    - PNG == FirstCharacter:
+        ~ relationshipIndicator = firstChar_relationshipIndicator
+    
+    - PNG == SecondCharacter:
+        ~ relationshipIndicator = firstChar_relationshipIndicator
+
+    - PNG == ThirdCharacter:
+        ~ relationshipIndicator = firstChar_relationshipIndicator
+
+    - PNG == FourthCharacter:
+        ~ relationshipIndicator = firstChar_relationshipIndicator
+
+    - PNG == FifthCharacter:
+        ~ relationshipIndicator = firstChar_relationshipIndicator            
+}
+
+//uso la variabile temporanea relationshipIndicator per definire lo stato della relazione
+{
+    - relationshipIndicator <= relationshipIndicatorNegativeValue:
+        ~ relationshipStatus = negative
+
+    - relationshipIndicator >= relationshipIndicatorEnthusiasticValue:
+        ~ relationshipStatus = enthusiastic
+
+    - (relationshipIndicator >= relationshipIndicatorPositiveValue) && (relationshipIndicator < relationshipIndicatorEnthusiasticValue):
+        ~ relationshipStatus = positive
+
+    - else:
+        ~ relationshipStatus = neutral
+}
+
+//attribuisco lo stato della relazione alla persona corretta.
+{
+    - PNG == FirstCharacter:
+        ~ firstChar_relationshipStatus = relationshipStatus
+    
+    - PNG == SecondCharacter:
+        ~ secondChar_relationshipStatus = relationshipStatus
+
+    - PNG == ThirdCharacter:
+        ~ thirdChar_relationshipStatus = relationshipStatus
+
+    - PNG == FourthCharacter:
+        ~ fourthChar_relationshipStatus = relationshipStatus
+
+    - PNG == FifthCharacter:
+        ~ fifthChar_relationshipStatus = relationshipStatus            
+}
+
+
+
 === endingPNGstory(PNG)
 //Chiamiamo questa funzione a fine riscrittura, per fare tutti i passaggi previsti di quando finisce una storia.
 {

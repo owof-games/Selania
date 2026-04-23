@@ -16,9 +16,6 @@
 
 
 //Tracciamento della relazione
-    //Status = chiamato da cucina e prima della riscrittura per valutare il rapporto creato e il relativo inchiostro
-    VAR firstChar_relationshipStatus = 0
-
     //Utilizzato nella funzione XXX per calcolare la variazione del rapporto dopo la singola scelta.
     VAR firstChar_RelCalculator = 0
     //Indicator = il valore di Indicator, riproporzionato per l'indicatore della reazione e chiamato in cucina e in riscrittura per i feedback/inchiostro.
@@ -27,6 +24,9 @@
     VAR firstChar_relationshipIndicatorAbsolute = 0
     //Reaction: qui registriamo la reazione che verrà attivata coi sigilli
     VAR firstChar_relationshipReaction = neutral
+
+    //Status = chiamato da cucina e prima della riscrittura per valutare il rapporto creato e il relativo inchiostro. Ora è un insieme di valori "scritti"
+    VAR firstChar_relationshipStatus = neutral
 
 
 //Tracciamento cucina
@@ -124,12 +124,13 @@
                        Gestione relazione e nomi
                     
                      ----------------------------------*/
-
 === firstAffinityCalc ===
 //Questo mi serve per aggiornare il valore di affinità.
 //Ad ora è chiamata solo in cucina e prima della riscrittura, e solo in riscrittura stampa una informazione.
 //Per la prima personaggia l'importante è che il blu sia bassissimo
 
+    //Prima di tutto chiamo la funzione per il calcolo dello stato della relazione
+        ~ affinity_calc(FirstCharacter)
 
     //"Trasformo" la relazione in inchiostro
         ~ fromRelationshipToInk(FirstCharacter)

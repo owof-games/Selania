@@ -47,12 +47,12 @@
 
         }
         {
-            - firstChar_relationshipStatus == 0:
+            - firstChar_relationshipStatus == negative:
                 {charTag(Mentor, "neutral")}:       Nell'insieme, non hai creato una grande relazione con lei.
                 {charTag(Mentor, "sad")}:           Ecco: forse qui è dove mi sento più in colpa.
                 {charTag(Mentor, "sorry")}:         Perché l'alunno alla fine rispecchia sempre le capacità dell'insegnante.
 
-            - firstChar_relationshipStatus == 1:
+            - firstChar_relationshipStatus == neutral:
                 {charTag(Mentor, "neutral")}:       Nell'insieme hai sviluppato con {charNameOne} una buona fiducia.
                 {
                     - not ending_cooking_with_first_char: 
@@ -60,7 +60,7 @@
                 }
                 {charTag(Mentor, "hurry")}:         Direi: buon lavoro.
 
-            - firstChar_relationshipStatus == 2:
+            - else:
                                                     Nell'insieme la vostra relazione si è rivelata ottima.
                 {charTag(Mentor, "hurry")}:         Credo proprio che tu abbia fatto sentire {charNameOne} ascoltata e capita.   
         }
@@ -161,13 +161,13 @@
 
         }
         {
-            - secondChar_relationshipStatus == 0:
+            - secondChar_relationshipStatus == negative:
                 {charTag(Mentor, "sad")}:           Mi spiace che tu non abbia creato una grande relazione con lui.
                                                     Credo sia inevitabile, soprattutto con un bambino.
                 {charTag(Mentor, "neutral")}:       Sono molto più complessi di un adulto.
                 {charTag(Mentor, "sorry")}:         Avrei dovuto darti degli strumenti migliori.
 
-            - secondChar_relationshipStatus == 1:
+            - secondChar_relationshipStatus == neutral:
                 {charTag(Mentor, "hurry")}:          Sei riuscit{player_pronouns has him:o|{player_pronouns has her:a|ə}} a creare una bella relazione con {charNameTwo}, che si è fidato di te.
                     {
                         - not ending_cooking_with_first_char:
@@ -176,7 +176,7 @@
                                                     Hai fatto un buon lavoro.
                 {charTag(Mentor, "neutral")}:       Non perfetto, ma buono.
 
-            - secondChar_relationshipStatus == 2:
+            - else:
                 {charTag(Mentor, "hurry")}:         Hai creato con lui la migliore relazione pensabile.
                                                     Spero tu possa provare gioia, {player_name}!
                 

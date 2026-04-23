@@ -11,8 +11,6 @@
     VAR thirdChar_storyEndingPosition = ()
 
 //Tracciamento della relazione
-    VAR thirdChar_relationshipStatus = 0
-
     //Utilizzato nella funzione XXX per calcolare la variazione del rapporto dopo la singola scelta.
     VAR thirdChar_RelCalculator = 0
     //Indicator = il valore di Indicator, riproporzionato per l'indicatore della reazione e chiamato in cucina e in riscrittura per i feedback/inchiostro.
@@ -21,6 +19,8 @@
     VAR thirdChar_relationshipIndicatorAbsolute = 0
     //Reaction: qui registriamo la reazione che verrà attivata coi sigilli
     VAR thirdChar_relationshipReaction = neutral
+    //Status = chiamato da cucina e prima della riscrittura per valutare il rapporto creato e il relativo inchiostro. Ora è un insieme di valori "scritti"
+    VAR thirdChar_relationshipStatus = neutral
 
 //Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
     VAR thirdChar_favouritesGifts = (CardoAspinato)
@@ -125,7 +125,30 @@
     //L'obbiettivo è: beccare almeno il 66% delle risposte.
     //Invece di complicarmi la vita posso usare la matematica.
     
-    
+    {
+            //Se vengo dalla preriscrittura:
+            - rewriting_proposal_third_character.rewriting:
+                {debug: ho cliccato rewriting e quindi faccio gli ultimi passaggi e attivo il feedback.} 
+                //Prima di tutto chiamo la funzione per il calcolo dello stato della relazione
+                    ~ affinity_calc(ThirdCharacter)
+
+                //"Trasformo" la relazione in inchiostro
+                    ~ fromRelationshipToInk(ThirdCharacter)
+                   
+                // Mando ai feedback
+                    -> thirdAffinityFeedback ->
+                    
+                //Arriva il commento della strega
+                    ~ inkLevel(ThirdCharacter)
+                                
+                //Salvo il massimo di inchiostro raggiunto con la personaggia
+                    ~ maxInkLevelUpdater(ThirdCharacter)    
+                    ->-> 
+            
+            // altrimenti, mando avanti
+            - else:
+                ->->
+        }
             ->->
 
 

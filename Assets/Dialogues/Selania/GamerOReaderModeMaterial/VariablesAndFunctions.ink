@@ -4,7 +4,7 @@
 VAR relationship_indicator_minValue = -9
 VAR relationship_indicator_maxValue = 9
     //E stati della variazioni e delle relativa reazioni
-LIST relationship_listTypeReactions = neutral, negative, positive
+LIST relationship_listTypeReactions = neutral, negative, positive, enthusiastic
 
 //RECAP DELLE SCELTE PRESE PER SINGOLX PNG
 //Variabili di cap

@@ -1274,20 +1274,22 @@
         {charTag(SecondCharacter, "neutral")}:                  Abbiamo parlato tanto, vero, qui?
                                                                 Non abbiamo mai passato così tanto tempo assieme.
                                                                 E penso che se ti ho conosciuto solo qui in cucina ora e {charNameOne} mi dice: vuoi fare amicizia con {player_name}?
-
+        //Prima di tutto chiamo la funzione per il calcolo dello stato della relazione
+        ~ affinity_calc(SecondCharacter)
+        //Così poi posso dare il feedback
             {
-                - secondChar_relationshipReaction == negative:
+                - secondChar_relationshipStatus == negative:
                     {charTag(SecondCharacter, "neutral")}:      Rispondo di no.
                                                                 Perché non so.
                     {charTag(SecondCharacter, "melanchonic")}:  Non è che mi è piaciuto molto molto come abbiamo parlato.
                 
-                - secondChar_relationshipReaction == neutral:
+                - secondChar_relationshipStatus == neutral:
                     {charTag(SecondCharacter, "neutral")}:      Sì no boh.
                                                                 Devo ancora capirlo.
                     {charTag(SecondCharacter, "emotional")}:    Perché ci sono stati dei momenti in cui ho detto "Ma che figo che è avere qui {player_name}".
                     {charTag(SecondCharacter, "melanchonic")}:  E dei momenti in cui non ti capivo.
                 
-                - secondChar_relationshipReaction == positive:
+                - secondChar_relationshipStatus == positive:
                     {charTag(SecondCharacter, "emotional")}:    Rispondo subito sììììììììì!
                     {charTag(SecondCharacter, "energy")}:       Mi sono divertito.
                     {charTag(SecondCharacter, "emotional")}:    E mi è sembrato che mi hai ascoltato davvero.

@@ -11,9 +11,6 @@
     VAR secondChar_storyEndingPosition = ()
 
 //Tracciamento della relazione
-    VAR secondChar_relationshipStatus = 0
-    VAR secondChar_relationshipGoodPercentage = 66.00
-
     //Utilizzato nella funzione XXX per calcolare la variazione del rapporto dopo la singola scelta.
     VAR secondChar_RelCalculator = 0
     //Indicator = il valore di Indicator, riproporzionato per l'indicatore della reazione e chiamato in cucina e in riscrittura per i feedback/inchiostro.
@@ -22,6 +19,9 @@
     VAR secondChar_relationshipIndicatorAbsolute = 0
     //Reaction: qui registriamo la reazione che verrà attivata coi sigilli
     VAR secondChar_relationshipReaction = neutral
+    //Status = chiamato da cucina e prima della riscrittura per valutare il rapporto creato e il relativo inchiostro. Ora è un insieme di valori "scritti"
+    VAR secondChar_relationshipStatus = neutral
+    VAR secondChar_relationshipGoodPercentage = 66.00
 
     
     //Questo lo usiamo per verificare se il valore dell'ultimo glifo è variato. LAST: dato aggiornato dopo la scelta. Actual: dato controllato durante la scelta.
@@ -180,6 +180,9 @@
             //Se vengo dalla preriscrittura:
             - rewriting_proposal_second_character.rewriting:
                 {debug: ho cliccato rewriting e quindi faccio gli ultimi passaggi e attivo il feedback.} 
+                //Prima di tutto chiamo la funzione per il calcolo dello stato della relazione
+                    ~ affinity_calc(SecondCharacter)
+
                 //"Trasformo" la relazione in inchiostro
                     ~ fromRelationshipToInk(SecondCharacter)
                    
