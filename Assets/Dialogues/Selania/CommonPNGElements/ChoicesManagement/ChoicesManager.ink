@@ -716,7 +716,7 @@ Recap della logica.
         ~ firstChar_relationshipIndicator += firstChar_RelCalculator    
         ~ firstChar_relationshipIndicatorAbsolute += firstChar_RelCalculator
 //E svuoto firstChar_RelCalculator
-        ~ firstChar_RelCalculator = ()  
+        ~ firstChar_RelCalculator = 0  
 
         {debug_nest: dopo l'aggiornamento, il valore di firstChar_relationshipIndicator è {firstChar_relationshipIndicator}.} 
             
@@ -834,7 +834,7 @@ Recap della logica.
         ~ secondChar_relationshipIndicator += secondChar_RelCalculator    
         ~ secondChar_relationshipIndicatorAbsolute += secondChar_RelCalculator
 //E svuoto secondChar_RelCalculator
-        ~ secondChar_RelCalculator = ()  
+        ~ secondChar_RelCalculator = 0
 
         {debug_nest: dopo l'aggiornamento, il valore di secondChar_relationshipReaction è {secondChar_relationshipReaction}.} 
             
@@ -864,7 +864,7 @@ Recap della logica.
         ~ thirdChar_relationshipIndicator += thirdChar_RelCalculator    
         ~ thirdChar_relationshipIndicatorAbsolute += thirdChar_RelCalculator
 //E svuoto thirdChar_RelCalculator
-        ~ thirdChar_RelCalculator = ()  
+        ~ thirdChar_RelCalculator = 0 
 
         {debug_nest: dopo l'aggiornamento, il valore di thirdChar_relationshipReaction è {thirdChar_relationshipReaction}.} 
             
