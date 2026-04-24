@@ -1026,6 +1026,11 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
                 ~ grimoire_firstChar += grimFirstCharLetterThree
     }
 
+    {
+        - first_character_notes.four && grimoire_firstChar hasnt grimFirstCharLetterFour:
+                ~ grimoire_firstChar += grimFirstCharLetterFour
+    }
+
     //SecondCharacter
     {
         - second_character_notes.one && grimoire_secondChar hasnt grimSecondCharLetterOne:
@@ -1041,6 +1046,11 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
         - second_character_notes.three && grimoire_secondChar hasnt grimSecondCharLetterThree:
                 ~ grimoire_secondChar += grimSecondCharLetterThree
     }                
+
+    {
+        - second_character_notes.four && grimoire_secondChar hasnt grimSecondCharLetterFour:
+                ~ grimoire_secondChar += grimSecondCharLetterFour
+    }       
 
     //ThirdCharacter 
     {
@@ -1058,9 +1068,51 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
                 ~ grimoire_thirdChar += grimThirdCharLetterThree
     }
 
-    //FourthCharacter
+    {
+        - third_character_notes.four && grimoire_thirdChar hasnt grimThirdCharLetterFour:
+                ~ grimoire_thirdChar += grimThirdCharLetterFour
+    }
 
+    //FourthCharacter
+    {
+        - fourth_character_notes.one && grimoire_fourthChar hasnt grimFourthCharLetterOne:
+                ~ grimoire_fourthChar += grimFourthCharLetterOne
+    }
+
+    {
+        - fourth_character_notes.two && grimoire_fourthChar hasnt grimFourthCharLetterTwo:
+                ~ grimoire_fourthChar += grimFourthCharLetterTwo                 
+    }
+
+    {
+        - fourth_character_notes.three && grimoire_fourthChar hasnt grimFourthCharLetterThree:
+                ~ grimoire_fourthChar += grimFourthCharLetterThree
+    }
+
+    {
+        - fourth_character_notes.four && grimoire_fourthChar hasnt grimFourthCharLetterFour:
+                ~ grimoire_fourthChar += grimFourthCharLetterFour
+    }
     //FifthCharacter
+    {
+        - fifth_character_notes.one && grimoire_fifthChar hasnt grimFifthCharLetterOne:
+                ~ grimoire_fifthChar += grimFifthCharLetterOne
+    }
+
+    {
+        - fifth_character_notes.two && grimoire_fifthChar hasnt grimFifthCharLetterTwo:
+                ~ grimoire_fifthChar += grimFifthCharLetterTwo                 
+    }
+
+    {
+        - fifth_character_notes.three && grimoire_fifthChar hasnt grimFifthCharLetterThree:
+                ~ grimoire_fifthChar += grimFifthCharLetterThree
+    }
+
+    {
+        - fifth_character_notes.four && grimoire_fifthChar hasnt grimFifthCharLetterFour:
+                ~ grimoire_fifthChar += grimFifthCharLetterFour
+    }
 
     //Azioni condivise
         //Cooldown storylets comuni, per evitare catena.
