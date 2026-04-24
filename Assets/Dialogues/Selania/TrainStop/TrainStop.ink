@@ -114,6 +114,15 @@
                         -> two
                 }
             
+            - not four:
+                {  
+                    - secondChar_mailPause < 0:
+                        -> four
+                    - else:
+                        -> three
+                }
+            
+
             - else:
                 -> three
             
@@ -130,6 +139,10 @@
     = three
         -> letters_secondCharLetters.three ->
         -> second_char_closing_letters
+
+    = four
+        -> letters_secondCharLetters.four ->
+        -> second_char_closing_letters    
     
 === third_character_notes ===
 //Forse le sue lettere saranno scritte da una persona cara, vicina.

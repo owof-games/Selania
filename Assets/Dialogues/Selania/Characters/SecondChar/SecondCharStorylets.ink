@@ -1332,12 +1332,8 @@
                     -> glyph_modifier_variation_management(SecondCharacter, earthC)->
             {charTag(SecondCharacter, "melanchonic")}:      Non ci riesco.
                                                             Quando arriva è fortissima.
-            {charTag(SecondCharacter, "neutral")}:          Papà aveva provato a mandarmi a calcio.
-                                                            "Per farmi le ossa con gli altri maschi."
-                                                            Ma ero ancora più arrabbiato di prima.
-            {charTag(SecondCharacter, "melanchonic")}:      Papà si arrabbiava perché ero sempre in panchina.
-                                                            E allora mamma gli ha ordinato di lasciarmi in pace.
-                                                            E ho smesso.
+            {charTag(SecondCharacter, "neutral")}:          Vorrei picchiare qualcosa e urlare e vomitare assieme.
+                                                            E non so cosa fare.
                   
             + \ {charTag(PG, "neutral")}:                   Non sempre fare a pugni è sbagliato. Fallo coi bulli.
                     -> glyph_modifier_variation_management(SecondCharacter, fireC)->

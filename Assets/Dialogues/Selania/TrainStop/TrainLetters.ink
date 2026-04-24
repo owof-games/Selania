@@ -323,10 +323,10 @@
         ~ temp mentorName = translator(mentor_ActualName)  
 
         {charTag(Documents, "writer_secondChar")}:      Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}.
-        Cioè a te.
-        Anche se non ho mica capito come te la mando la lettera.
-        Ma come sta la rana?
-        Hai scoperto poi se è elettrica?
+                                                        Cioè a te.
+                                                        Anche se non ho mica capito come te la mando la lettera.
+                                                        Ma come sta Franco?
+                                                        Hai scoperto poi se è elettrico?
             {
 
                 - secondChar_ActualName has Grizzly:
@@ -342,10 +342,12 @@
                     Però sono felice perché ho meno paura ora.
                     Mamma mi guarda strano.
                     Ma so che tu mica mi avresti guardato così.
-                    Salutami la rana!
+                    Salutami Franco!
                     
                 - secondChar_ActualName has Lupo:
                     L'altro giorno ho parlato con l'amico di mio fratello.
+                    Il ragazzo di mio fratello.
+                    Che si chiama Matteo.
                     Gli ho detto che per me siamo un branco ma che secondo me lui mica mi ci vede in questo branco.
                     E lui mi ha detto una cosa strana.
                     Che non ce l'ha con me.
@@ -364,7 +366,7 @@
                     Soprattutto per l'inchiostro sulle loro scarpe.
                     Ma non è colpa mia se si sono messe in mezzo!
                     Però mi sono fatto due nuovi amici, e l'altro giorno abbiamo passato mezz'ora in castigo assieme.
-                    Quando la maestra di matematica è tornata e ha trovato la stanza tutta legata con lo spago, ha detto una parolaccia grossa.
+                    Quando la maestra di matematica è tornata e ha trovato la stanza piena di fango, ha detto una parolaccia grossa.
                     Ma grossa grossa.
                     Quando l'ho ridetta a mio fratello è scoppiato a ridere.
                     Ma forse qui non te la scrivo, per ora.
@@ -407,11 +409,13 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-    {charTag(Documents, "writer_secondChar")}:      Che strano.
-        Ho lasciato l'altra lettera sul comodino di notte.
-        E poi è sparita.
-        Non so mica se ti è arrivata.
-        O se papà l'ha buttata.
+
+
+        {charTag(Documents, "writer_secondChar")}:          Che strano.
+                                                            Ho lasciato l'altra lettera sul comodino di notte.
+                                                            E poi è sparita.
+                                                            Non so mica se ti è arrivata.
+                                                            O se papà l'ha buttata.
             
             {
                 - secondChar_ActualName has Grizzly:
@@ -431,8 +435,8 @@
     
                 - secondChar_ActualName has Lupo:
                     Ma non credo: le cose negli ultimi giorni vanno meglio.
-                    Con l'amico di mio fratello ho fatto dei muffin per lui e mamma.
-                    E poi gli ho detto che mi dispiace quando litigano.
+                    Con Matteo ho fatto dei muffin per lui e mamma.
+                    E poi ho detto a mamma e papà che mi dispiace quando litigano.
                     E che ho capito che essere grandi fa schifo, ma che ci sono anche cose belle.
                     Come andare al mare.
                     Mamma si è messa a piangere.
@@ -453,7 +457,7 @@
                     Mio fratello è preoccupato, perché teme che mi metto nei pasticci.
                     Gioco: una di queste cose che ho detto non è vera.
                     Tu lo capisci quale?
-                    Salutami la rana!
+                    Salutami Franco!
                     <b>{charNameTwo}</b>.
                     
                 - secondChar_ActualName has Capibara:
@@ -467,7 +471,7 @@
                     Magari non sono bravo a farmi degli amici, ma sono bravo a parlare degli animali.
                     E forse ci riesco a fare qualcosa così, come mio fratello fa per i suoi amici.
                     Devo solo capire cosa.
-                    Vorrei tanto chiederlo alla rana.
+                    Vorrei tanto chiederlo a Franco.
                     Salutamela!
                 
                 - secondChar_ActualName has Corvo:
@@ -524,7 +528,7 @@
                     A casa le cose vanno bene, ma.
                     Sì no boh.
                     Mica pensavo che è così faticoso.
-                    Mamma e papà sono tranquilli solo se siamo assieme.
+                    Mamma e papà sono tranquilli solo se siamo tutti e tre assieme.
                     Mi sembra un lavoro.
                     E se sono giù si preoccupano tantissimo.
                     E se si preoccupano tornano a litigare.
@@ -564,7 +568,7 @@
                     Non so cosa faremo, però è bello non farlo da solo.
                     E vorrei tanto tu fossi qui con me, ora.
                     Secondo me ci diresti tantissime cose sagge.
-                    Salutami la rana.
+                    Salutami Franco.
                     <b>{charNameTwo}</b>.
                 
                 - secondChar_ActualName has Corvo:
@@ -581,7 +585,7 @@
                     Oggi ho chiesto alla maestra di matematica di darmi dei libri sull'ambiente.
                     Ci sono così tante cose da imparare, {player_name}, così tante!
                     Spero ci vedremo presto.
-                    Salutami la rana!
+                    Salutami Franco!
                     <b>{charNameTwo}</b>.
             }
         
@@ -589,6 +593,76 @@
         PPS: Ho un segreto che riguarda la serra, ma te lo dirò con la prossima lettera! Ciao ciao!
     ->->
 
+    = four
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+    {charTag(Documents, "writer_secondChar")}:      Ciao {player_name}.
+                
+                {
+     
+                - secondChar_ActualName has Grizzly:
+                    Sono giorni che non esco di casa.
+                    Mi hanno sospeso da scuola per una rissa.
+                    Mamma è preoccupata, papà è sparito di nuovo.
+                    Sono in castigo, e ne sono felice: non voglio uscire, perché se esco faccio male a qualcuno.
+                    Alcune cose sono così difficili e non so che fare e non mi piaccio.
+                    Non mi piace arrabbiarmi così tanto, {player_name}.
+                    Mamma ha chiamato un dottore e dice che è la pubertà.
+                    Ho dovuto cercare su internet cosa fosse.
+                    Mio fratello è passato a trovarmi prima, e mi ha portato un nuovo libro sugli animali.
+                    Non l'ho ancora aperto.
+                    
+                - secondChar_ActualName has Lupo:
+                    Papà se ne è andato.
+                    Mamma crede sia per sempre questa volta.
+                    Passa le giornate chiuse in camera.
+                    Matteo passa dopo lavoro per cucinare assieme.
+                    Mio fratello litiga con mamma, dice che è un bene che "quello" se ne è andato, ma che se non esce di casa perderà anche questo lavoro.
+                    Mamma risponde che "quello" è l'unico che la può sopportare.
+                    Lo diceva anche nonna, ma mi spiace vedere mamma che sta così male.
+                    Ieri sera mio fratello e Matteo mi hanno portato un regalo: una bici.
+                    È usata, ma mio fratello l'ha verniciata e riempita di stickers degli animali.
+                    Sembra una cosa da bambino, ma a me non mi importa.
+                    Mi hanno detto di usarla ogni volta che voglio andare da loro, o da qualche parte.
+                    Matteo poi mi ha detto una cosa strana.
+                    "Ricorda {charNameTwo}: quello che succede tra di loro non è colpa tua. Lo sai, vero?"
+                    A me mi sono salite tante cose in quel momento, mi sono arrabbiato e sono scappato.
+                    Ma ora che ti scrivo penso che forse ho pensato (brutto) davvero che era colpa mia.
+                    Perché le cose andavano bene ma poi ho ripreso a studiare bene per le verifiche.
+                    E papà se ne è andato.
+                    Mi mancate.
+        
+                - secondChar_ActualName has Delfino:
+                    Papà se ne è andato.
+                    Mamma non è uscita dalla sua stanza per giorni.
+                    Mio fratello ha paura che lei perde il lavoro.
+                    L'altro ieri mi ha chiesto se voglio andare a stare da loro da un po': vorrei tanto, ma non sono sicuro che il suo amico ne è felice.
+                    E così gli ho detto di non preoccuparsi, che qui ho i miei nuovi amici.
+                    Maaa.
+                    Ma.
+                    Non sono tanto felice, {player_name}.
+                    Quando ho scelto di chiamarmi {charNameTwo}, ho detto che volevo fare felici le persone con le mie storie.
+                    Ma ora vorrei una storia che rende felice me.
+                    Papà se ne è andato per colpa mia, {player_name}?
+                    Magari è venuto lì perché così trova un nuovo nome e diventa felice?
+                    Tra poco vado a dormire e correggo la giornata così, con lui che torna che si chiama Felice.
+                    Mi mancate.
+
+                - secondChar_ActualName has Capibara:
+                    Questo cervellino (il mio cervellino) ha trovato una soluzione.
+                    
+                
+                - secondChar_ActualName has Corvo:
+                    Ieri è successa una cosa bel-lis-si-MAAAAAA!
+                    
+            }
+        
+        
+    ->->
 
 === letters_thirdCharLetters
 
