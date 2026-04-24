@@ -308,7 +308,8 @@
 
 === first_char_closing_letters
     ~ firstChar_mailPause = firstChar_mailPauseDuration
-
+    ~ letters_doggoPause = false
+    
     //Aggiornamento storylets
     -> grimoire_storylets_updater ->
 

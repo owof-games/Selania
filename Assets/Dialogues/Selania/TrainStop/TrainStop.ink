@@ -55,24 +55,15 @@
                 -> one
                 
             - not two:
-                {  
-                    - firstChar_mailPause < 0:
-                        -> two
-                    - else:
-                        -> one
-                }
+                -> two
+        
                 
             - not three:
-                {  
-                    - firstChar_mailPause < 0:
-                        -> three
-                    - else:
-                        -> two
-                }
-            
-            - else:
                 -> three
-            
+
+            - not four:
+                -> four
+
         }
     
     = one
@@ -86,7 +77,11 @@
     = three
         -> letters_firstCharLetters.three ->
         -> first_char_closing_letters
-    
+
+    = four
+        -> letters_firstCharLetters.four ->
+        -> first_char_closing_letters       
+
 === second_character_notes ===
 //Mettere cose sul rapporto con nonna, papà. mamma, fratello, animali, futuro.
     + (check){are_two_entities_together(DoggoSecondLetters, PG)}[DoggoSecondLetters]
@@ -94,38 +89,20 @@
             ~ move_entity(DoggoSecondLetters, Safekeeping)
             ~ move_entity(DoggoNoLetters, TrainStop)
         
-    {
+        {
             - not one:
                 -> one
                 
             - not two:
-                {  
-                    - secondChar_mailPause < 0:
-                        -> two
-                    - else:
-                        -> one
-                }
+                -> two
+        
                 
             - not three:
-                {  
-                    - secondChar_mailPause < 0:
-                        -> three
-                    - else:
-                        -> two
-                }
-            
-            - not four:
-                {  
-                    - secondChar_mailPause < 0:
-                        -> four
-                    - else:
-                        -> three
-                }
-            
-
-            - else:
                 -> three
-            
+
+            - not four:
+                -> four
+                
         }
     
     = one
@@ -149,29 +126,20 @@
     
     + {are_two_entities_together(DoggoThirdLetters, PG)}[DoggoThirdLetters]
     
-        {
+          {
             - not one:
                 -> one
                 
             - not two:
-                {  
-                    - thirdChar_mailPause < 0:
-                        -> two
-                    - else:
-                        -> one
-                }
+                -> two
+        
                 
             - not three:
-                {  
-                    - thirdChar_mailPause < 0:
-                        -> three
-                    - else:
-                        -> two
-                }
-            
-            - else:
                 -> three
-            
+
+            - not four:
+                -> four
+                
         }
         
     = one
@@ -185,6 +153,10 @@
     = three
         -> letters_thirdCharLetters.three ->
         -> third_char_closing_letters
+
+    = four
+        -> letters_thirdCharLetters.four ->
+        -> third_char_closing_letters    
     
 === fourth_character_notes ===
     
@@ -195,37 +167,31 @@
                 -> one
                 
             - not two:
-                {  
-                    - fourthChar_mailPause < 0:
-                        -> two
-                    - else:
-                        -> one
-                }
+                -> two
+        
                 
             - not three:
-                {  
-                    - fourthChar_mailPause < 0:
-                        -> three
-                    - else:
-                        -> two
-                }
-            
-            - else:
                 -> three
-            
+
+            - not four:
+                -> four
+                
         }
      = one
         -> letters_fourthCharLetters.one ->
-        -> third_char_closing_letters
+        -> fourth_char_closing_letters
 
     = two
         -> letters_fourthCharLetters.two ->
-        -> third_char_closing_letters
+        -> fourth_char_closing_letters
     
     = three
         -> letters_fourthCharLetters.three ->
-        -> third_char_closing_letters
+        -> fourth_char_closing_letters
 
+    = four
+        -> letters_fourthCharLetters.four ->
+        -> fourth_char_closing_letters
 
 === fifth_character_notes ===
 
@@ -236,34 +202,29 @@
                 -> one
                 
             - not two:
-                {  
-                    - fifthChar_mailPause < 0:
-                        -> two
-                    - else:
-                        -> one
-                }
+                -> two
+        
                 
             - not three:
-                {  
-                    - fifthChar_mailPause < 0:
-                        -> three
-                    - else:
-                        -> two
-                }
-            
-            - else:
                 -> three
-            
+
+            - not four:
+                -> four
+                
         }
         
      = one
         -> letters_fifthCharLetters.one ->
-        -> third_char_closing_letters
+        -> fifth_char_closing_letters
 
     = two
         -> letters_fifthCharLetters.two ->
-        -> third_char_closing_letters
+        -> fifth_char_closing_letters
     
     = three
         -> letters_fifthCharLetters.three ->
-        -> third_char_closing_letters
+        -> fifth_char_closing_letters
+
+    = four
+        -> letters_fifthCharLetters.four ->
+        -> fifth_char_closing_letters    

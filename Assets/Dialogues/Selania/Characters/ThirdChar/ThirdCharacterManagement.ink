@@ -302,7 +302,8 @@
 
 === third_char_closing_letters
     ~ thirdChar_mailPause = thirdChar_mailPauseDuration
-
+    ~ letters_doggoPause = false
+    
     //Aggiornamento storylets
     -> grimoire_storylets_updater ->
 

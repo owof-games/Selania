@@ -355,6 +355,7 @@
 
 === second_char_closing_letters
     ~ secondChar_mailPause = secondChar_mailPauseDuration
+    ~ letters_doggoPause = false
 
     //Aggiornamento storylets
     -> grimoire_storylets_updater ->

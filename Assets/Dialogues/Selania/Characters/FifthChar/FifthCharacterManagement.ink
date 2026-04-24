@@ -85,6 +85,16 @@
                        Gestione relazione e nomi
                     
                      ----------------------------------*/
+=== fifth_char_closing_letters
+    ~ fifthChar_mailPause = fifthChar_mailPauseDuration
+    ~ letters_doggoPause = false
+    
+    //Aggiornamento storylets
+    -> grimoire_storylets_updater ->
+
+->->
+
+
  === fifthNaming ===
 
 ->->

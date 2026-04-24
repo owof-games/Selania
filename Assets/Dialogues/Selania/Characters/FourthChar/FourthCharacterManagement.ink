@@ -90,6 +90,17 @@
                        Gestione relazione e nomi
                     
                      ----------------------------------*/
+
+=== fourth_char_closing_letters
+    ~ fourthChar_mailPause = fourthChar_mailPauseDuration
+    ~ letters_doggoPause = false
+    
+    //Aggiornamento storylets
+    -> grimoire_storylets_updater ->
+
+->->
+
+
 === fourthAffinityCalc ===
 //Per la prima personaggia l'importante è che il blu sia bassissimo
 

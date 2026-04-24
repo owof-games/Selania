@@ -190,37 +190,87 @@ VAR letters_doggoPause = false
 
 
     {
-        - firstChar_storyStatus == story_storyEnded && firstChar_mailPause < 0 && not first_character_notes.three && letters_doggoPause == false:
+        - firstChar_storyStatus == story_storyEnded && firstChar_mailPause < 0 && grimoire_firstChar hasnt grimFirstCharLetterFour && letters_doggoPause == false:
         
                 ~ move_entity(DoggoFirstLetters, TrainStop)
                 {debug: Ho messo la nota della prima personaggia alla fermata del bus.}
                 ~ letters_doggoPause = true
                 {debug: ho messo in pausa le altre lettere.}
-            
+
+        - else:
+            {
+                - firstChar_storyStatus == story_storyEnded:
+                    ~ firstChar_mailPause --   
+            }
+                 
     }
     
     {
-        - secondChar_storyStatus == story_storyEnded && secondChar_mailPause < 0 && not second_character_notes.three && letters_doggoPause == false:
+        - secondChar_storyStatus == story_storyEnded && secondChar_mailPause < 0 && grimoire_secondChar hasnt grimSecondCharLetterFour && letters_doggoPause == false:
         
                 ~ move_entity(DoggoSecondLetters, TrainStop)
                 {debug: Ho messo la nota del secondo personaggio alla fermata del bus.}
                 ~ letters_doggoPause = true
                 {debug: ho messo in pausa le altre lettere.}
 
+        - else:
+            {
+                - secondChar_storyStatus == story_storyEnded:
+                    ~ secondChar_mailPause --   
+            }
                 
     }
 
     {
-        - thirdChar_storyStatus == story_storyEnded && thirdChar_mailPause < 0 && not third_character_notes.three && letters_doggoPause == false:
+        - thirdChar_storyStatus == story_storyEnded && thirdChar_mailPause < 0 && grimoire_thirdChar hasnt grimThirdCharLetterFour && letters_doggoPause == false:
         
                 ~ move_entity(DoggoThirdLetters, TrainStop)
                 {debug: Ho messo la nota del third personaggio alla fermata del bus.}
                 ~ letters_doggoPause = true
                 {debug: ho messo in pausa le altre lettere.}
 
+        - else:
+            {
+                - thirdChar_storyStatus == story_storyEnded:
+                    ~ thirdChar_mailPause --   
+            }        
+
                 
     }
-    
+
+    {
+        - fourthChar_storyStatus == story_storyEnded && fourthChar_mailPause < 0 && grimoire_fourthChar hasnt grimFourthCharLetterFour  && letters_doggoPause == false:
+        
+                ~ move_entity(DoggoFourthLetters, TrainStop)
+                {debug: Ho messo la nota del fourth personaggio alla fermata del bus.}
+                ~ letters_doggoPause = true
+                {debug: ho messo in pausa le altre lettere.}
+
+        - else:
+            {
+                - fourthChar_storyStatus == story_storyEnded:
+                    ~ fourthChar_mailPause --   
+            }        
+
+                
+    }   
+
+    {
+        - fifthChar_storyStatus == story_storyEnded && fifthChar_mailPause < 0 && grimoire_fifthChar hasnt grimFifthCharLetterFour  && letters_doggoPause == false:
+        
+                ~ move_entity(DoggoFifthLetters, TrainStop)
+                {debug: Ho messo la nota del fifth personaggio alla fermata del bus.}
+                ~ letters_doggoPause = true
+                {debug: ho messo in pausa le altre lettere.}
+
+        - else:
+            {
+                - fifthChar_storyStatus == story_storyEnded:
+                    ~ fifthChar_mailPause --   
+            }        
+
+                
+    }    
     {
         - contentsTrainStop has DoggoNoLetters:
         
@@ -232,13 +282,6 @@ VAR letters_doggoPause = false
     }
 
 
-
-    //Riduzione della pausa tra le lettere
-    ~ firstChar_mailPause --
-    ~ secondChar_mailPause --
-    ~ thirdChar_mailPause --
-    ~ fourthChar_mailPause --
-    ~ fifthChar_mailPause --
     
 
 

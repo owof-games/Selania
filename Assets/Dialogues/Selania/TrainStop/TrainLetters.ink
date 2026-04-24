@@ -311,6 +311,45 @@
     <b>{charNameOne}</b>.
     ->->
 
+    = four
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
+    
+    {charTag(Documents, "writer_firstChar")}:   Ciao ama!
+    
+     {
+            - firstChar_ActualName has Triangolo:
+                Qui...
+                
+
+                
+            - firstChar_ActualName has RagazzaOrchestra:
+                Ti sto scrivendo da... Boston!
+                
+
+                
+            - firstChar_ActualName has FlautoDolce:
+                Stai parlando ufficialmente con la presidentessa di 'sto cazzo de La Rifugia.
+                
+    
+                
+            - firstChar_ActualName has Ocarina:
+                Qui oggi la malinconia imperversa.
+               
+      
+                
+            - firstChar_ActualName has Violino:
+                Sono passati mesi, spero che lì le cose vadano bene.
+                
+                
+        }
+
+    Un saluto.
+    <b>{charNameOne}</b>.
+    ->->
 
 
  === letters_secondCharLetters
@@ -756,6 +795,24 @@
         }
      ->->
 
+     = four
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp charFifthName = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
+
+        {charTag(Documents, "writer_thirdChar")}:      {charNameThree}: Lettere random note da parte della personaggia
+        
+        {
+            - thirdChar_possibleStates has Riccio: 
+                {charNameThree}: xy
+            - thirdChar_possibleStates has Capibara:
+                {charNameThree}: zz
+        }
+     ->->
+
 === letters_fourthCharLetters
 
     = one
@@ -811,6 +868,23 @@
                 {charNameThree}: zz
         }
      ->->
+
+    = four
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp charFifthName = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
+
+        {charTag(Documents, "writer_fourthChar")}:      {charNameThree}: Lettere random note da parte della personaggia
+        {
+            - thirdChar_possibleStates has Riccio: 
+                {charNameThree}: xy
+            - thirdChar_possibleStates has Capibara:
+                {charNameThree}: zz
+        }
+     ->-> 
 
 === letters_fifthCharLetters
 
@@ -868,3 +942,22 @@
         }
 
      ->-> 
+
+    = four
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp charFifthName = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
+
+        {charTag(Documents, "writer_fifthChar")}:       {charNameThree}: Lettere random note da parte della personaggia
+        
+        {
+            - thirdChar_possibleStates has Riccio: 
+                {charNameThree}: xy
+            - thirdChar_possibleStates has Capibara:
+                {charNameThree}: zz
+        }
+
+     ->->  
