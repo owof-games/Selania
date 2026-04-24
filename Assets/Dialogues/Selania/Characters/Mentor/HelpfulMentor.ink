@@ -170,7 +170,7 @@
                 ~ player_somethingStrange -= strangeVoice
                 -> helping_mentor.top
         
-        * (talkingWitch) {player_somethingStrange has strangeVase} \ {charTag(PG, "neutral")}:   Prima ho parlato con un vaso, in una discarica.
+        * (talkingWitch) {player_somethingStrange has strangeVase} \ {charTag(PG, "neutral")}:   Prima ho parlato con un pozzo, in una discarica.
             {charTag(PG, "neutral")}:               Sembra che veda e senta tutto quello che accade qui.
             {charTag(PG, "neutral")}:               E mi ha, anzi, mi hanno chiesto come stavo dopo aver concluso la prima riscrittura.
             {

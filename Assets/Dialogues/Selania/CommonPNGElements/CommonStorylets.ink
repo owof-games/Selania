@@ -316,7 +316,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    {charTag(Mentor, "neutral")}:                   Quindi puoi parlare con, con questo vaso?
+    {charTag(Mentor, "neutral")}:                   Quindi puoi parlare con, con questo pozzo?
                                                     Perché mi piacerebbe.
     {charTag(Mentor, "sorry")}:                     Oh, è una cosa vanitosa.
     {charTag(Mentor, "neutral")}:                   Ma mi piacerebbe sapere cosa ne pensa di me.
@@ -339,7 +339,7 @@
     + \ {charTag(PG, "neutral")}:                   Dice che stai facendo un buon lavoro.
             -> glyph_modifier_variation_management(Mentor, waterC)->
     {charTag(Mentor, "hurry")}:                     Oh, ma sicuramente esagera.
-    {charTag(Mentor, "sad")}:                       Prendi prima: ho scoperto che per via della mia incuria sta crescendo del muschio sotto al suo vaso.
+    {charTag(Mentor, "sad")}:                       Prendi prima: ho scoperto che per via della mia incuria sta crescendo del muschio tra le sue pietre.
                                                     Però.
     {charTag(Mentor, "neutral")}:                   Ringrazia la voce da parte mia.
     {charTag(TheWitch, witch_state())}:             <i>Dire una mezza verità porta su una mezza strada.</i>
