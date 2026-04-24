@@ -41,26 +41,21 @@
     LIST kitchen_extraIngredientPossibleReactions = notReaction, badReaction, mehReaction, goodReaction
 
 
-=== cooking_animations_on
-{debug_kitchen: passo per cooking_animations_on. Prima dell'intervento KitchenFire è in, {entity_location(KitchenFire)} mentre KitchenSmokeOneOne è in {entity_location(KitchenSmokeOne)}.}
+=== function cooking_animations_on()
+{debug_kitchen: passo per cooking_animations_on. Prima dell'intervento KitchenFire è in, {entity_location(KitchenFire)}.}
     ~ move_entity(KitchenFire, Kitchen)
-    ~ move_entity(KitchenSmokeOne, Kitchen)
-    ~ move_entity(KitchenSmokeTwo, Kitchen)
-    ~ move_entity(KitchenSmokeThree, Kitchen)
-{debug_kitchen: Dopo l'intervento KitchenFire è in {entity_location(KitchenFire)}, mentre KitchenSmokeOne è in {entity_location(KitchenSmokeOne)}.}
-->->
+
+{debug_kitchen: Dopo l'intervento KitchenFire è in {entity_location(KitchenFire)}.}
 
 
-=== cooking_animations_off
-{debug_kitchen: passo per cooking_animations_off. Prima dell'intervento KitchenFire è in, {entity_location(KitchenFire)} mentre KitchenSmokeOne è in {entity_location(KitchenSmokeOne)}.}
+
+=== function cooking_animations_off()
+{debug_kitchen: passo per cooking_animations_off. Prima dell'intervento KitchenFire è in, {entity_location(KitchenFire)}.}
     ~ move_entity(KitchenFire, Safekeeping)
-    ~ move_entity(KitchenSmokeOne, Safekeeping)
-    ~ move_entity(KitchenSmokeTwo, Safekeeping)
-    ~ move_entity(KitchenSmokeThree, Safekeeping)
-    
-{debug_kitchen: Dopo l'intervento KitchenFire è in {entity_location(KitchenFire)}, mentre KitchenSmokeOne è in {entity_location(KitchenSmokeOne)}.}    
+ 
+{debug_kitchen: Dopo l'intervento KitchenFire è in {entity_location(KitchenFire)}.}    
 
-->->
+
 
 
 

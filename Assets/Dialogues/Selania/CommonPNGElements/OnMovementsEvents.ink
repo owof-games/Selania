@@ -483,6 +483,7 @@ VAR letters_doggoPause = false
                 ~ kitchen_secondCharIsCooking = true
                 ~ move_entity(SecondCharacter, Kitchen)
                 ~ kitchen_kitchenOccupied = true
+                ~ cooking_animations_on()
                 
         }            
         
@@ -509,6 +510,7 @@ VAR letters_doggoPause = false
                     ~ move_entity(BatHouseRetro, Kitchen)
                     ~ move_entity(Bat, Kitchen)
                     ~ kitchen_kitchenOccupied = false
+                    ~ cooking_animations_off()
                     {debug_kitchen: Riccio ha finito di cucinare.}
             }
         }
@@ -538,6 +540,7 @@ VAR letters_doggoPause = false
                     ~ kitchen_firstCharIsCooking = true
                     ~ move_entity(FirstCharacter, Kitchen)
                     ~ kitchen_kitchenOccupied = true
+                    ~ cooking_animations_on()
                   
         }
         
@@ -562,6 +565,7 @@ VAR letters_doggoPause = false
                        //E poi sposto gli elementi decorativi in cucina
                        ~ move_entity(FirstCharCookingAloneOBJ, Kitchen)
                        ~ kitchen_kitchenOccupied = false
+                       ~ cooking_animations_off()
                        {debug_kitchen: chitarra ha finito di cucinare da sola.}
                 }
 
@@ -594,6 +598,7 @@ VAR letters_doggoPause = false
                     ~ kitchen_thirdCharIsCooking = true
                     ~ move_entity(ThirdCharacter, Kitchen)
                     ~ kitchen_kitchenOccupied = true
+                    ~ cooking_animations_on()
                     
         }
         
@@ -618,6 +623,7 @@ VAR letters_doggoPause = false
                        //E poi sposto gli elementi decorativi in cucina
                        ~ move_entity(ThirdCharCookingAloneOBJ, Kitchen)
                        ~ kitchen_kitchenOccupied = false
+                       ~ cooking_animations_off()
                        {debug_kitchen: boccale ha finito di cucinare da solo}
                 }
 

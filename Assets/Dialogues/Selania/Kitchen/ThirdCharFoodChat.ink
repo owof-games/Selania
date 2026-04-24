@@ -37,15 +37,15 @@
         }
         
         + \ {charTag(PG, "neutral")}:         Dei rapporti che hai con le persone che ti sono care.
+                ~ cooking_animations_on()
                 -> storage_glyphs(ThirdCharacter)->
-                -> cooking_animations_on ->
                 -> third_theme
                 
         + \ {charTag(PG, "neutral")}:         {third_char_main_storylets.six}Del bisogno di fare qualcosa che salvi il mondo.
             {
                 - third_char_main_storylets.six:
+                    ~ cooking_animations_on()
                     -> storage_glyphs(ThirdCharacter)->
-                    -> cooking_animations_on ->
                     -> second_theme
                 
                 - else:
@@ -56,8 +56,8 @@
             {
             
                 - third_char_main_storylets.nine:
+                    ~ cooking_animations_on()
                     -> storage_glyphs(ThirdCharacter)->
-                    -> cooking_animations_on ->
                     -> third_theme
                 
                 - else:
@@ -682,8 +682,9 @@
     
     {charTag(ThirdCharacter, "neutral")}:       Frase
     
-            -> cooking_animations_off ->
+
                 ~ move_entity(ThirdCharacter, Pond)
+                ~ cooking_animations_off()
                 ~ kitchen_thirdCharCookingTogetherInvite = false
                 ~ kitchen_allChefs += ThirdCharacter
                 ~ kitchen_kitchenOccupied = false
@@ -716,7 +717,8 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     {debug: passo per third_char_cooking_alone.}
-        -> cooking_animations_on ->
+    
+        ~ cooking_animations_on()
         
     {kitchen_thirdCharCookingTime:
 

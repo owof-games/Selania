@@ -43,13 +43,15 @@
         }
 
             + \ {charTag(PG, "neutral")}:                                           Parliamo di animali.
+                    ~ cooking_animations_on()
+                    -> storage_glyphs(SecondCharacter)->
                     -> first_theme
 
             + \ {second_char_main_storylets.six} {charTag(PG, "neutral")}:          Della scuola.
                 {
                     - second_char_main_storylets.six:
+                        ~ cooking_animations_on()
                         -> storage_glyphs(SecondCharacter)->
-                        -> cooking_animations_on ->
                         -> second_theme
                     
                     - else:
@@ -60,8 +62,8 @@
                 {
                 
                     - second_char_main_storylets.eight:
+                        ~ cooking_animations_on()
                         -> storage_glyphs(SecondCharacter)->
-                        -> cooking_animations_on ->
                         -> third_theme
                     
                     - else:
@@ -1316,7 +1318,7 @@
     {charTag(SecondCharacter, "neutral")}:                      A dopo {player_name}!
     - 
     
-        -> cooking_animations_off ->
+            ~ cooking_animations_off()
             ~ move_entity(SecondCharacter, Pond)
             ~ kitchen_secondCharCookingTogetherInvite = false
             ~ kitchen_allChefs += SecondCharacter
@@ -1341,7 +1343,7 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 {debug: passo per second_char_cooking_alone.}
--> cooking_animations_on ->
+        ~ cooking_animations_on()
 
 {kitchen_secondCharCookingTime:
         - 0:

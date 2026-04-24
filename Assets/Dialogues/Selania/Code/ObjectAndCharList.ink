@@ -30,7 +30,7 @@
     CloudOne, CloudTwo, CloudThree, 
     RedBee, GoldenBee, BrownBee, Snail,
     NewMoonAnim, FirstQuarterAnim, FullMoonAnim, ThirdQuarterAnim, RedMoonAnim, 
-    FirstRipple, SecondRipple, ThirdRipple, KitchenFire, KitchenSmokeOne, KitchenSmokeTwo, KitchenSmokeThree, Bat,
+    FirstRipple, SecondRipple, ThirdRipple, KitchenFire, Bat,
     lighthouseAnimation
 
     LIST listButtons = MenuSave, MenuQuit, FromTrainStopToBedroom

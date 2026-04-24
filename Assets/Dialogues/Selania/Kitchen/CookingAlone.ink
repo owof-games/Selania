@@ -7,7 +7,7 @@
     ~ temp mentorName = translator(mentor_ActualName)
     ~ temp piatto = kitchen_tempRecipeName
 
-            -> cooking_animations_on ->
+    ~ cooking_animations_on()
     
         {charTag(Franco, "{portrait_Franco()}")}:       Si lo so che è una sorpresa questa cosa del cucinare assieme.
                                                         E tu mi dirai: "Franco, ma io non me la cavo bene quanto te!"
@@ -349,7 +349,7 @@
         //Rimetto a posto i vari assets
         ~ move_entity(Franco, Pond)
         ~ kitchen_kitchenOccupied = false
+        ~ cooking_animations_off()
 
         -> achievements_onGame_statusUpdate_RM ->
-        -> cooking_animations_off ->
         -> main
