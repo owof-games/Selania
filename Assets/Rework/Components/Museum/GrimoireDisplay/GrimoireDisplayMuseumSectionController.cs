@@ -368,5 +368,192 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
         {
             grimoireBackground.SwitchToPage(GrimoireBackground.PageType.ThirdLevelCharacter);
         }
+
+        public void SetSomeLongText()
+        {
+            grimoireBackground.SetThirdLevelCharacterGrimoireText(
+                """
+                FIRST WITCH 
+                When shall we three meet again?
+                In thunder, lightning, or in rain?
+                SECOND WITCH 
+                When the hurly-burly’s done,
+                When the battle’s lost and won.
+                THIRD WITCH 
+                That will be ere the set of sun.
+                FIRST WITCH 
+                Where the place?
+                SECOND WITCH  Upon the heath.
+                THIRD WITCH 
+                There to meet with Macbeth.
+                FIRST WITCH  I come, Graymalkin.
+                SECOND WITCH  Paddock calls.
+                THIRD WITCH  Anon.
+                ALL 
+                Fair is foul, and foul is fair;
+                Hover through the fog and filthy air.
+                They exit.
+
+
+
+                Scene 2
+                Alarum within. Enter King Duncan, Malcolm,
+                Donalbain, Lennox, with Attendants, meeting a bleeding
+                Captain.
+
+                DUNCAN 
+                What bloody man is that? He can report,
+                As seemeth by his plight, of the revolt
+                The newest state.
+                MALCOLM  This is the sergeant
+                Who, like a good and hardy soldier, fought
+                ’Gainst my captivity.—Hail, brave friend!
+                Say to the King the knowledge of the broil
+                As thou didst leave it.
+                CAPTAIN  Doubtful it stood,
+                As two spent swimmers that do cling together
+                And choke their art. The merciless Macdonwald
+                (Worthy to be a rebel, for to that
+                The multiplying villainies of nature
+                Do swarm upon him) from the Western Isles
+                Of kerns and gallowglasses is supplied;
+                And Fortune, on his damnèd quarrel smiling,
+                Showed like a rebel’s whore. But all’s too weak;
+                For brave Macbeth (well he deserves that name),
+                Disdaining Fortune, with his brandished steel,
+                Which smoked with bloody execution,
+                Like Valor’s minion, carved out his passage
+                Till he faced the slave;
+                Which ne’er shook hands, nor bade farewell to him,
+                Till he unseamed him from the nave to th’ chops,
+                And fixed his head upon our battlements.
+                DUNCAN 
+                O valiant cousin, worthy gentleman!
+                CAPTAIN 
+                As whence the sun ’gins his reflection
+                Shipwracking storms and direful thunders break,
+                So from that spring whence comfort seemed to
+                come
+                Discomfort swells. Mark, King of Scotland, mark:
+                No sooner justice had, with valor armed,
+                Compelled these skipping kerns to trust their heels,
+                But the Norweyan lord, surveying vantage,
+                With furbished arms and new supplies of men,
+                Began a fresh assault.
+                DUNCAN 
+                Dismayed not this our captains, Macbeth and
+                Banquo?
+                CAPTAIN 
+                Yes, as sparrows eagles, or the hare the lion.
+                If I say sooth, I must report they were
+                As cannons overcharged with double cracks,
+                So they doubly redoubled strokes upon the foe.
+                Except they meant to bathe in reeking wounds
+                Or memorize another Golgotha,
+                I cannot tell—
+                But I am faint. My gashes cry for help.
+                DUNCAN 
+                So well thy words become thee as thy wounds:
+                They smack of honor both.—Go, get him surgeons.
+                The Captain is led off by Attendants.
+
+                Enter Ross and Angus.
+
+                Who comes here?
+                MALCOLM  The worthy Thane of Ross.
+                LENNOX 
+                What a haste looks through his eyes!
+                So should he look that seems to speak things
+                strange.
+                ROSS  God save the King.
+                DUNCAN  Whence cam’st thou, worthy thane?
+                ROSS  From Fife, great king,
+                Where the Norweyan banners flout the sky
+                And fan our people cold.
+                Norway himself, with terrible numbers,
+                Assisted by that most disloyal traitor,
+                The Thane of Cawdor, began a dismal conflict,
+                Till that Bellona’s bridegroom, lapped in proof,
+                Confronted him with self-comparisons,
+                Point against point, rebellious arm ’gainst arm,
+                Curbing his lavish spirit. And to conclude,
+                The victory fell on us.
+                DUNCAN  Great happiness!
+                ROSS  That now Sweno,
+                The Norways’ king, craves composition.
+                Nor would we deign him burial of his men
+                Till he disbursèd at Saint Colme’s Inch
+                Ten thousand dollars to our general use.
+                DUNCAN 
+                No more that Thane of Cawdor shall deceive
+                Our bosom interest. Go, pronounce his present
+                death,
+                And with his former title greet Macbeth.
+                ROSS  I’ll see it done.
+                DUNCAN 
+                What he hath lost, noble Macbeth hath won.
+                They exit.
+
+
+                Scene 3
+                Thunder. Enter the three Witches.
+
+                FIRST WITCH  Where hast thou been, sister?
+                SECOND WITCH  Killing swine.
+                THIRD WITCH  Sister, where thou?
+                FIRST WITCH 
+                A sailor’s wife had chestnuts in her lap
+                And munched and munched and munched. “Give
+                me,” quoth I.
+                “Aroint thee, witch,” the rump-fed runnion cries.
+                Her husband’s to Aleppo gone, master o’ th’ Tiger;
+                But in a sieve I’ll thither sail,
+                And, like a rat without a tail,
+                I’ll do, I’ll do, and I’ll do.
+                SECOND WITCH 
+                I’ll give thee a wind.
+                FIRST WITCH 
+                Th’ art kind.
+                THIRD WITCH 
+                And I another.
+                FIRST WITCH 
+                I myself have all the other,
+                And the very ports they blow;
+                All the quarters that they know
+                I’ th’ shipman’s card.
+                I’ll drain him dry as hay.
+                Sleep shall neither night nor day
+                Hang upon his penthouse lid.
+                He shall live a man forbid.
+                Weary sev’nnights, nine times nine,
+                Shall he dwindle, peak, and pine.
+                Though his bark cannot be lost,
+                Yet it shall be tempest-tossed.
+                Look what I have.
+                SECOND WITCH  Show me, show me.
+                FIRST WITCH 
+                Here I have a pilot’s thumb,
+                Wracked as homeward he did come.Drum within.
+                THIRD WITCH 
+                A drum, a drum!
+                Macbeth doth come.
+                ALL, dancing in a circle 
+                The Weïrd Sisters, hand in hand,
+                Posters of the sea and land,
+                Thus do go about, about,
+                Thrice to thine and thrice to mine 
+                """
+            );
+        }
+
+        public void ThirdLevelNextPageIfPossible()
+        {
+            grimoireBackground.ThirdLevelCharacterGrimoireNextPage();
+        }
+
+        public void ThirdLevelPreviousPageIfPossible()
+        {
+            grimoireBackground.ThirdLevelCharacterGrimoirePreviousPage();
+        }
     }
 }

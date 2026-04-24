@@ -501,7 +501,7 @@ namespace Selania.Rework.Components
             }
             else if (currentText.StartsWith("@grimoire"))
             {
-                UpdateCurrentTextGrimoire(currentText, tags);
+                UpdateCurrentTextGrimoire(currentText, tags, ref actionsAfterUpdate);
                 actionsAfterUpdate.skipChoices = true;
             }
             else
@@ -1105,6 +1105,28 @@ namespace Selania.Rework.Components
             _thirdLevelGreenhouseGrimoirePageDescriptorsSubject?.AsObservable() ?? throw new InvalidOperationException(
                 "Cannot get the third level greenhouse grimoire page descriptors before initialization");
 
+        private Subject<IStoryGrimoire.ThirdLevelTextGrimoirePageDescriptor>?
+            _thirdLevelTextGrimoirePageDescriptorSubject;
+
+        public Observable<IStoryGrimoire.ThirdLevelTextGrimoirePageDescriptor> thirdLevelTextGrimoirePageDescriptor =>
+            _thirdLevelTextGrimoirePageDescriptorSubject?.AsObservable() ?? throw new InvalidOperationException(
+                "Cannot get the third level text grimoire page descriptors before initialization");
+
+        private Subject<Unit>?
+            _thirdLevelTextPreviousPageSubject;
+
+        public Observable<Unit> thirdLevelTextPreviousPage =>
+            _thirdLevelTextPreviousPageSubject?.AsObservable() ?? throw new InvalidOperationException(
+                "Cannot get the third level text grimoire previous page before initialization");
+
+        private Subject<Unit>?
+            _thirdLevelTextNextPageSubject;
+
+        public Observable<Unit> thirdLevelTextNextPage =>
+            _thirdLevelTextNextPageSubject?.AsObservable() ?? throw new InvalidOperationException(
+                "Cannot get the third level text grimoire next page before initialization");
+
+
         private void SetupGrimoire()
         {
             _closeSubject = new Subject<Unit>();
@@ -1119,10 +1141,17 @@ namespace Selania.Rework.Components
                 new Subject<IStoryGrimoire.ThirdLevelSigilsGrimoirePageDescriptor>();
             _thirdLevelGreenhouseGrimoirePageDescriptorsSubject =
                 new Subject<IStoryGrimoire.ThirdLevelGreenhouseGrimoirePageDescriptor>();
+            _thirdLevelTextGrimoirePageDescriptorSubject =
+                new Subject<IStoryGrimoire.ThirdLevelTextGrimoirePageDescriptor>();
+            _thirdLevelTextPreviousPageSubject = new Subject<Unit>();
+            _thirdLevelTextNextPageSubject = new Subject<Unit>();
         }
 
         private void CleanupGrimoire()
         {
+            _thirdLevelTextNextPageSubject?.Dispose();
+            _thirdLevelTextPreviousPageSubject?.Dispose();
+            _thirdLevelTextGrimoirePageDescriptorSubject?.Dispose();
             _thirdLevelGreenhouseGrimoirePageDescriptorsSubject?.Dispose();
             _thirdLevelSigilsGrimoirePageDescriptorsSubject?.Dispose();
             _secondLevelCharacterPageDescriptorsSubject?.Dispose();
@@ -1151,7 +1180,8 @@ namespace Selania.Rework.Components
         /// </summary>
         /// <param name="currentText"></param>
         /// <param name="tags"></param>
-        private void UpdateCurrentTextGrimoire(string currentText, ICollection<Tag> tags)
+        private void UpdateCurrentTextGrimoire(string currentText, ICollection<Tag> tags,
+            ref ActionsAfterUpdate actionsAfterUpdate)
         {
             switch (currentText)
             {
@@ -1175,6 +1205,15 @@ namespace Selania.Rework.Components
                     break;
                 case "@grimoireGreenhousePages":
                     EmitThirdLevelGreenhouseGrimoirePage();
+                    break;
+                case "@grimoireText":
+                    EmitThirdLevelTextPage();
+                    break;
+                case "@grimoireTextPrevious":
+                    EmitThirdLevelTextPreviousPage(ref actionsAfterUpdate);
+                    break;
+                case "@grimoireTextNext":
+                    EmitThirdLevelTextNextPage(ref actionsAfterUpdate);
                     break;
                 default:
                     logger.ZLogWarning($"Unknown grimoire tag {currentText}");
@@ -1294,9 +1333,12 @@ namespace Selania.Rework.Components
                         $"Number of usages found in variable {numSigilUsagesVariableName} is {numUsages}, whereas it should be 0, 1 or 2.");
 
                 sigilDescriptor = new IStoryGrimoire.SigilDescriptor(glyphs[0], glyphs[1], glyphs[2],
-                    numUsages == 0 ? threeUsagesText :
-                    numUsages == 1 ? twoUsagesText :
-                    oneUsageText
+                    numUsages switch
+                    {
+                        0 => threeUsagesText,
+                        1 => twoUsagesText,
+                        _ => oneUsageText
+                    }
                 );
             }
 
@@ -1902,6 +1944,83 @@ namespace Selania.Rework.Components
 
                 return choice?.text;
             }
+        }
+
+        private void EmitThirdLevelTextPage()
+        {
+            var story = GetStory();
+
+            // extract info from tags
+            var tags = MakeTags(story.currentTags);
+            var style = tags.FirstOrDefault(t => t.category == "style")?.value ?? "character";
+            var icon = tags.FirstOrDefault(t => t.category == "icon")?.value ?? "Chitarra";
+            var title = tags.FirstOrDefault(t => t.category == "title")?.value ?? "Chitarra";
+            var description = tags.FirstOrDefault(t => t.category == "description")?.value ??
+                              "Una ragazza in cerca della sua melodia";
+
+            // collect all textual content
+            var contentsList = new List<string>();
+            do
+            {
+                contentsList.Add(story.Continue().Trim());
+            } while (story.canContinue);
+
+            var contents = string.Join('\n', contentsList);
+
+            // parse navigation choices
+            GetNavigationChoices(story, out var indexChoice, out var secondLevelChoice, out var previousChoice,
+                out var nextChoice, out var closeChoice);
+
+            if (indexChoice == null)
+            {
+                logger.ZLogError($"Third level text has not a choice to get back to the first level!");
+                return;
+            }
+
+            if (secondLevelChoice == null)
+            {
+                logger.ZLogWarning(
+                    $"Third level text has not a choice to get back to the second level!");
+                return;
+            }
+
+            if (previousChoice == null)
+            {
+                logger.ZLogWarning(
+                    $"Third level text has not a choice to get to the previous page!");
+                return;
+            }
+
+            if (nextChoice == null)
+            {
+                logger.ZLogWarning(
+                    $"Third level text has not a choice to get to the next page!");
+                return;
+            }
+
+            if (closeChoice != null)
+            {
+                logger.ZLogWarning(
+                    $"Third level text has a close choice!");
+                return;
+            }
+
+            // emit the descriptor
+            var descriptor = new IStoryGrimoire.ThirdLevelTextGrimoirePageDescriptor(
+                style, icon, title, description, contents, indexChoice, secondLevelChoice, previousChoice, nextChoice);
+            _thirdLevelTextGrimoirePageDescriptorSubject!.OnNext(descriptor);
+        }
+
+        private void EmitThirdLevelTextPreviousPage(ref ActionsAfterUpdate actionsAfterUpdate)
+        {
+            _thirdLevelTextPreviousPageSubject!.OnNext(Unit.Default);
+            actionsAfterUpdate.@continue = true;
+        }
+
+        private void EmitThirdLevelTextNextPage(ref ActionsAfterUpdate actionsAfterUpdate)
+        {
+            _thirdLevelTextNextPageSubject!.OnNext(Unit.Default);
+            actionsAfterUpdate.@continue = true;
         }
 
         #endregion

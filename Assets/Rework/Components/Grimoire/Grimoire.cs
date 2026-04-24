@@ -33,6 +33,15 @@ namespace Selania.Rework.Components.Grimoire
             StoryGrimoire.thirdLevelGreenhouseGrimoirePageDescriptors
                 .Subscribe(OnThirdLevelGreenhouseGrimoirePageDescriptors)
                 .AddTo(this);
+            StoryGrimoire.thirdLevelTextGrimoirePageDescriptor
+                .Subscribe(OnThirdLevelTextGrimoirePageDescriptor)
+                .AddTo(this);
+            StoryGrimoire.thirdLevelTextNextPage
+                .Subscribe(OnThirdLevelTextNextPage)
+                .AddTo(this);
+            StoryGrimoire.thirdLevelTextPreviousPage
+                .Subscribe(OnThirdLevelTextPreviousPage)
+                .AddTo(this);
             // grimoire events: navigation
             grimoireBackground.indexChoiceObservable.Subscribe(PickChoice).AddTo(this);
             grimoireBackground.backToLevelTwoObservable.Subscribe(PickChoice).AddTo(this);
@@ -44,6 +53,7 @@ namespace Selania.Rework.Components.Grimoire
             grimoireBackground.secondLevelSigilsButtonClick.Subscribe(PickSigilChoice).AddTo(this);
             grimoireBackground.thirdLevelSigilsButtonClick.Subscribe(PickChoice).AddTo(this);
             grimoireBackground.secondLevelGreenhouseButtonClick.Subscribe(PickChoice).AddTo(this);
+            grimoireBackground.secondLevelCharactersButtonClick.Subscribe(PickChoice).AddTo(this);
             grimoireBackground.thirdLevelGreenhouseButtonClickOnLeft
                 .Select((isLeft, i) => (isLeft, i))
                 .CombineLatest(
@@ -271,6 +281,37 @@ namespace Selania.Rework.Components.Grimoire
 
             // set up navigation
             SetUpNavigation(descriptor);
+        }
+
+        private void OnThirdLevelTextGrimoirePageDescriptor(
+            IStoryGrimoire.ThirdLevelTextGrimoirePageDescriptor descriptor)
+        {
+            grimoireBackground.SwitchToPage(GrimoireBackground.PageType.ThirdLevelCharacter);
+            // TODO: all the various descriptors and whatnot
+            grimoireBackground.SetThirdLevelCharacterGrimoireText(descriptor.contents);
+
+            // manage navigation, removing navigation choices that are not available
+            if (!grimoireBackground.ThirdLevelCharacterCanTurnToNextPage)
+            {
+                descriptor = descriptor with { nextPageText = null };
+            }
+
+            if (!grimoireBackground.ThirdLevelCharacterCanTurnToPreviousPage)
+            {
+                descriptor = descriptor with { previousPageText = null };
+            }
+
+            SetUpNavigation(descriptor);
+        }
+
+        private void OnThirdLevelTextNextPage(Unit _)
+        {
+            grimoireBackground.ThirdLevelCharacterGrimoireNextPage();
+        }
+
+        private void OnThirdLevelTextPreviousPage(Unit _)
+        {
+            grimoireBackground.ThirdLevelCharacterGrimoirePreviousPage();
         }
 
         /// <summary>

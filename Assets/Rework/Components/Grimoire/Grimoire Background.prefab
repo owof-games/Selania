@@ -298,6 +298,7 @@ MonoBehaviour:
   - {fileID: 7459624796715032355}
   thirdLevelGreenhouseGrimoire: {fileID: 3005770586411306783}
   secondLevelCharactersGrimoire: {fileID: 4294163969986388753}
+  thirdLevelCharacterGrimoire: {fileID: 4832495966200797149}
 --- !u!1 &1236467335700584395
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,8 +894,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -333.0215, y: -13.5729}
-  m_SizeDelta: {x: 507.2459, y: 724.6304}
+  m_AnchoredPosition: {x: -348, y: -110}
+  m_SizeDelta: {x: 507.2459, y: 517.3527}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1874732652351713538
 CanvasRenderer:
@@ -924,17 +925,72 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel velit
-    porttitor, molestie ligula ac, rutrum urna. Vestibulum ut iaculis nulla. Sed
-    iaculis ligula ut efficitur dapibus. Ut sit amet tellus eget sem gravida aliquam
-    quis a nisl. Aenean sodales metus et commodo ultricies.
+  m_text: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ligula
+    nisi, vehicula non facilisis in, mattis at purus. Mauris eu augue metus. Quisque
+    gravida condimentum pharetra.
 
 
-    Duis placerat elementum
-    massa et molestie. Fusce feugiat, eros vitae imperdiet iaculis, arcu quam luctus
-    lorem, quis posuere felis urna vel felis. Interdum et malesuada fames ac ante
-    ipsum primis in faucibus. Donec vulputate nulla at semper malesuada. Nulla ut
-    dignissim arcu.'
+    Nam ornare luctus massa, in porttitor risus
+    semper eu. Suspendisse faucibus fringilla risus, quis ullamcorper dolor fermentum
+    eget. Quisque et dignissim tortor. Praesent id leo id tellus gravida feugiat
+    vitae at sapien. Mauris ultricies quam ac metus posuere vehicula. Praesent venenatis
+    vulputate viverra.
+
+
+    Integer porttitor elementum ex. Mauris laoreet sagittis
+    justo sit amet tincidunt. Suspendisse augue quam, ultricies eget sagittis ac,
+    convallis non arcu. Fusce non lectus interdum, convallis tellus sit amet, luctus
+    lectus. Curabitur eget nisl elit. Pellentesque id arcu ut elit egestas consectetur
+    et at felis.
+
+
+
+    Duis a maximus eros. Vestibulum tincidunt venenatis leo.
+    Maecenas eget faucibus ante, vel laoreet urna. Fusce eget aliquam augue, at varius
+    dolor. Proin id vestibulum erat. Morbi semper tincidunt urna et vestibulum.
+
+
+    Vestibulum
+    ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+    Nulla vitae dolor placerat, venenatis risus in, interdum magna. Donec elementum
+    justo justo, nec scelerisque purus porttitor sit amet. Suspendisse fringilla,
+    dui vel viverra mollis, lorem turpis tempor magna, sed ultrices felis sem non
+    justo.
+
+
+
+    Sed in metus faucibus, varius ex sed, pulvinar erat. Nam ac cursus
+    nibh. Aliquam suscipit nisl euismod sem sagittis, et egestas arcu tempus. Ut
+    fringilla a nisi at ultricies. Quisque rutrum velit ornare aliquet laoreet.
+
+
+    Nulla
+    in erat nec urna sagittis vestibulum. Quisque convallis, diam nec tempor luctus,
+    velit magna ullamcorper neque, eu dapibus elit urna placerat dolor. Proin pellentesque
+    felis ac magna condimentum facilisis. Nullam auctor fringilla risus, eu sollicitudin
+    quam gravida sit amet. Vestibulum eu feugiat lectus. Pellentesque dignissim arcu
+    dolor, sed aliquam erat facilisis et. Nullam vitae tortor faucibus, porta nisi
+    nec, commodo nibh.
+
+
+
+    Praesent quis eleifend dui. Nulla facilisi. Praesent
+    finibus urna lectus, venenatis blandit ligula dictum a. Curabitur bibendum magna
+    vel risus egestas, vitae consequat turpis varius. Pellentesque ac leo nec enim
+    laoreet cursus non dignissim nisi. Vivamus sem libero, luctus eget elementum
+    ac, aliquet et mauris. Aenean rhoncus purus sit amet quam eleifend, ut ultrices
+    odio dignissim. Aliquam ac viverra tellus. Pellentesque rutrum vitae dui vitae
+    lobortis.
+
+
+
+    Vivamus vel tempor odio. Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Donec hendrerit sit amet lectus eget tempor. Morbi interdum
+    ullamcorper nisl. In ac ipsum a dui convallis pretium eu ac libero. Curabitur
+    orci nisi, posuere nec gravida non, eleifend quis nisi. Pellentesque habitant
+    morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed elementum
+    consectetur justo eget venenatis. In facilisis feugiat rutrum. Pellentesque a
+    erat sapien. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 68ea6777477fba94da4e0a1f20c20eed, type: 2}
   m_sharedMaterial: {fileID: 5052396341478960677, guid: 68ea6777477fba94da4e0a1f20c20eed, type: 2}
@@ -979,7 +1035,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 5
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -1500,15 +1556,72 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ut commodo pretium diam, id porta lacus pulvinar rutrum. Suspendisse ullamcorper
-    vel nulla sit amet feugiat. Aenean finibus ex at enim cursus posuere vitae id
-    lacus. Cras ullamcorper vestibulum nulla sagittis facilisis. Nam efficitur libero
-    nibh, vel iaculis quam egestas eget.
+  m_text: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ligula
+    nisi, vehicula non facilisis in, mattis at purus. Mauris eu augue metus. Quisque
+    gravida condimentum pharetra.
 
 
-    Nullam in magna vitae dolor sagittis
-    cursus. Vestibulum ullamcorper porta congue. Nulla eleifend, quam in bibendum
-    efficitur, nibh enim sollicitudin lacus, non consectetur mi neque dictum nisi.'
+    Nam ornare luctus massa, in porttitor risus
+    semper eu. Suspendisse faucibus fringilla risus, quis ullamcorper dolor fermentum
+    eget. Quisque et dignissim tortor. Praesent id leo id tellus gravida feugiat
+    vitae at sapien. Mauris ultricies quam ac metus posuere vehicula. Praesent venenatis
+    vulputate viverra.
+
+
+    Integer porttitor elementum ex. Mauris laoreet sagittis
+    justo sit amet tincidunt. Suspendisse augue quam, ultricies eget sagittis ac,
+    convallis non arcu. Fusce non lectus interdum, convallis tellus sit amet, luctus
+    lectus. Curabitur eget nisl elit. Pellentesque id arcu ut elit egestas consectetur
+    et at felis.
+
+
+
+    Duis a maximus eros. Vestibulum tincidunt venenatis leo.
+    Maecenas eget faucibus ante, vel laoreet urna. Fusce eget aliquam augue, at varius
+    dolor. Proin id vestibulum erat. Morbi semper tincidunt urna et vestibulum.
+
+
+    Vestibulum
+    ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+    Nulla vitae dolor placerat, venenatis risus in, interdum magna. Donec elementum
+    justo justo, nec scelerisque purus porttitor sit amet. Suspendisse fringilla,
+    dui vel viverra mollis, lorem turpis tempor magna, sed ultrices felis sem non
+    justo.
+
+
+
+    Sed in metus faucibus, varius ex sed, pulvinar erat. Nam ac cursus
+    nibh. Aliquam suscipit nisl euismod sem sagittis, et egestas arcu tempus. Ut
+    fringilla a nisi at ultricies. Quisque rutrum velit ornare aliquet laoreet.
+
+
+    Nulla
+    in erat nec urna sagittis vestibulum. Quisque convallis, diam nec tempor luctus,
+    velit magna ullamcorper neque, eu dapibus elit urna placerat dolor. Proin pellentesque
+    felis ac magna condimentum facilisis. Nullam auctor fringilla risus, eu sollicitudin
+    quam gravida sit amet. Vestibulum eu feugiat lectus. Pellentesque dignissim arcu
+    dolor, sed aliquam erat facilisis et. Nullam vitae tortor faucibus, porta nisi
+    nec, commodo nibh.
+
+
+
+    Praesent quis eleifend dui. Nulla facilisi. Praesent
+    finibus urna lectus, venenatis blandit ligula dictum a. Curabitur bibendum magna
+    vel risus egestas, vitae consequat turpis varius. Pellentesque ac leo nec enim
+    laoreet cursus non dignissim nisi. Vivamus sem libero, luctus eget elementum
+    ac, aliquet et mauris. Aenean rhoncus purus sit amet quam eleifend, ut ultrices
+    odio dignissim. Aliquam ac viverra tellus. Pellentesque rutrum vitae dui vitae
+    lobortis.
+
+
+
+    Vivamus vel tempor odio. Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Donec hendrerit sit amet lectus eget tempor. Morbi interdum
+    ullamcorper nisl. In ac ipsum a dui convallis pretium eu ac libero. Curabitur
+    orci nisi, posuere nec gravida non, eleifend quis nisi. Pellentesque habitant
+    morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed elementum
+    consectetur justo eget venenatis. In facilisis feugiat rutrum. Pellentesque a
+    erat sapien. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 68ea6777477fba94da4e0a1f20c20eed, type: 2}
   m_sharedMaterial: {fileID: 5052396341478960677, guid: 68ea6777477fba94da4e0a1f20c20eed, type: 2}
@@ -1553,7 +1666,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 5
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -1572,7 +1685,7 @@ MonoBehaviour:
   m_IsTextObjectScaleStatic: 0
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
+  m_pageToDisplay: 2
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -1680,6 +1793,7 @@ GameObject:
   - component: {fileID: 3929887840764364413}
   - component: {fileID: 6936799597920235910}
   - component: {fileID: 1464449679812827950}
+  - component: {fileID: 4832495966200797149}
   m_Layer: 5
   m_Name: Third Level Container (Characters)
   m_TagString: Untagged
@@ -1717,7 +1831,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7870962082031401362}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -1743,6 +1857,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4832495966200797149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7870962082031401362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fa1bdf5f74e4952a2b91e26c8caf68a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.ThirdLevelCharacterGrimoire
+  leftPageText: {fileID: 4039323802584839624}
+  rightPageText: {fileID: 2155847901582424886}
 --- !u!1 &8728655692825542051
 GameObject:
   m_ObjectHideFlags: 0

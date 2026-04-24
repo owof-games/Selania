@@ -189,6 +189,8 @@ namespace Selania.Rework.Components.Grimoire
         [SerializeField] [Tooltip("The second level characters controller")]
         private SecondLevelCharactersGrimoire secondLevelCharactersGrimoire = null!;
 
+        [SerializeField] private ThirdLevelCharacterGrimoire thirdLevelCharacterGrimoire = null!;
+
         private Animator _animator = null!;
 
         private string? _backToLevelTwoChoice;
@@ -295,6 +297,10 @@ namespace Selania.Rework.Components.Grimoire
         ///     An observable that produces a string with the name of the button each time a button is clicked.
         /// </summary>
         public Observable<string> secondLevelCharactersButtonClick => secondLevelCharactersGrimoire.clickObservable;
+
+        public bool ThirdLevelCharacterCanTurnToNextPage => thirdLevelCharacterGrimoire.canTurnToNextPage;
+
+        public bool ThirdLevelCharacterCanTurnToPreviousPage => thirdLevelCharacterGrimoire.canTurnToPreviousPage;
 
         private void Awake()
         {
@@ -805,6 +811,21 @@ namespace Selania.Rework.Components.Grimoire
                 fireValue1, fireValue2,
                 earthValue1, earthValue2,
                 waterValue1, waterValue2);
+        }
+
+        public void SetThirdLevelCharacterGrimoireText(string text)
+        {
+            thirdLevelCharacterGrimoire.SetText(text);
+        }
+
+        public void ThirdLevelCharacterGrimoireNextPage()
+        {
+            thirdLevelCharacterGrimoire.NextPage();
+        }
+
+        public void ThirdLevelCharacterGrimoirePreviousPage()
+        {
+            thirdLevelCharacterGrimoire.PreviousPage();
         }
     }
 }

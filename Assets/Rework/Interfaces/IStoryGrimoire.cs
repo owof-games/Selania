@@ -101,6 +101,21 @@ namespace Selania.Rework.Interfaces
         Observable<ThirdLevelGreenhouseGrimoirePageDescriptor> thirdLevelGreenhouseGrimoirePageDescriptors { get; }
 
         /// <summary>
+        ///     An observable that produces a value whenever a third level text page should be displayed.
+        /// </summary>
+        Observable<ThirdLevelTextGrimoirePageDescriptor> thirdLevelTextGrimoirePageDescriptor { get; }
+
+        /// <summary>
+        ///     An observable that produces a value whenever a third level text page should go to the previous page.
+        /// </summary>
+        Observable<Unit> thirdLevelTextPreviousPage { get; }
+
+        /// <summary>
+        ///     An observable that produces a value whenever a third level text page should go to the next page.
+        /// </summary>
+        Observable<Unit> thirdLevelTextNextPage { get; }
+
+        /// <summary>
         ///     Switches to the flow of the grimoire.
         /// </summary>
         /// <seealso cref="SwitchFromGrimoire" />
@@ -358,5 +373,29 @@ namespace Selania.Rework.Interfaces
             ThirdLevelGreenhousePageDescriptor leftPage,
             ThirdLevelGreenhousePageDescriptor rightPage
         ) : BaseNavigationDescriptor(indexText, backToLevelTwoText, previousPageText, nextPageText, closeChoice);
+
+        /// <summary>
+        /// Descriptor for the third level page showing text (third level characters, appendices, and second level moon). 
+        /// </summary>
+        /// <param name="style">The page style (defines colors and backgrounds)</param>
+        /// <param name="icon">Icon to use (character, moon, ...)</param>
+        /// <param name="title">The title of the page</param>
+        /// <param name="description">The description of the page</param>
+        /// <param name="contents">The contents of the page</param>
+        /// <param name="indexText">Navigation choice to get back to the index</param>
+        /// <param name="backToLevelTwoText">Navigation choice to get back to level two</param>
+        /// <param name="previousPageText">Navigation choice to get to the previous page</param>
+        /// <param name="nextPageText">Navigation choice to get to the next page</param>
+        record ThirdLevelTextGrimoirePageDescriptor(
+            string style,
+            string icon,
+            string title,
+            string description,
+            string contents,
+            string? indexText,
+            string backToLevelTwoText,
+            string? previousPageText,
+            string? nextPageText
+        ) : BaseNavigationDescriptor(indexText, backToLevelTwoText, previousPageText, nextPageText, null);
     }
 }
