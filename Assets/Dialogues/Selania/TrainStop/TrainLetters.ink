@@ -519,6 +519,7 @@
                     Non sono mica abituato a mio padre così.
                     Ma poi in camera mi è preso male tutto.
                     Mi manca mio fratello.
+                    Mi manca la nonna.
                     Mi mancate voi.
                     Vorrei sapere cosa fare.
                     
@@ -533,6 +534,7 @@
                     E se sono giù si preoccupano tantissimo.
                     E se si preoccupano tornano a litigare.
                     Non so mica cosa fare.
+                    Vorrei che la nonna fosse qui.
                     Forse {mentorName} li può aiutare?
                     Mi mancate.
                     <b>{charNameTwo}</b>.
@@ -549,6 +551,7 @@
                     E allora ti saluto dicendoti quella parolaccia, perché poi non la potrò più scrivere.
                     "Per il catarro del cammello!"
                     Che schifo, {player_name}.
+                    Però alla nonna piace di sicuro come parolaccia!
                     Ma lì ci sono i cammelli?
                     Un saluto.
                     <b>{charNameTwo}</b>.
@@ -619,12 +622,13 @@
                 - secondChar_ActualName has Lupo:
                     Papà se ne è andato.
                     Mamma crede sia per sempre questa volta.
-                    Passa le giornate chiuse in camera.
+                    Passa le giornate chiusa in camera.
                     Matteo passa dopo lavoro per cucinare assieme.
                     Mio fratello litiga con mamma, dice che è un bene che "quello" se ne è andato, ma che se non esce di casa perderà anche questo lavoro.
                     Mamma risponde che "quello" è l'unico che la può sopportare.
                     Lo diceva anche nonna, ma mi spiace vedere mamma che sta così male.
-                    Ieri sera mio fratello e Matteo mi hanno portato un regalo: una bici.
+                    Mio fratello ha anche paura per una sua amica che era a casa sua, è andata a una protesta ed è stata arrestata.
+                    Ieri sera lui e Matteo mi hanno portato un regalo: una bici.
                     È usata, ma mio fratello l'ha verniciata e riempita di stickers degli animali.
                     Sembra una cosa da bambino, ma a me non mi importa.
                     Mi hanno detto di usarla ogni volta che voglio andare da loro, o da qualche parte.
@@ -640,6 +644,7 @@
                     Papà se ne è andato.
                     Mamma non è uscita dalla sua stanza per giorni.
                     Mio fratello ha paura che lei perde il lavoro.
+                    Ha anche paura per una sua amica che era a casa sua, è andata a una protesta ed è stata arrestata.
                     L'altro ieri mi ha chiesto se voglio andare a stare da loro da un po': vorrei tanto, ma non sono sicuro che il suo amico ne è felice.
                     E così gli ho detto di non preoccuparsi, che qui ho i miei nuovi amici.
                     Maaa.
@@ -653,11 +658,42 @@
                     Mi mancate.
 
                 - secondChar_ActualName has Capibara:
-                    Questo cervellino (il mio cervellino) ha trovato una soluzione.
+                    Qui le cose non vanno benissimo.
+                    Mio fratello è stato arrestato assieme a una sua amica dopo una protesta e ancora non sappiamo quando lo faranno uscire.
+                    Aveva solo bloccato una strada assieme ad altre persone!
+                    E non posso andarlo a trovare, anche perché mi devo occupare di mamma.
+                    Papà se ne è andato, dice che non sopporta più noi "branco di froci e disagiati".
+                    E lei non esce più dalla camera da giorni.
+                    L'amico, no, il ragazzo di mio fratello viene qui per aiutarmi a cucinare.
+                    A volte rimaniamo assieme la sera, e ho scoperto che non è che mi odia, ma che non sa come si parla coi bambini.
+                    Così gli ho fatto conoscere i compagni di classe con cui vogliamo fare l'associazione, e si è divertito molto.
+                    Fare queste cose coi compagni è molto bello, mi distrae tanto.
+                    Ho scoperto che non è che è difficile parlare se hai degli interessi in comune.
+                    Ma non tutti i genitori li lasciano venire qui, e io non me la sento di restare tante ore fuori casa.
+                    Ieri Matteo, il fidanzato di mio fratello, ha detto che mio fratello è preoccupato che mamma perde il lavoro.
+                    Forse serve un'associazione per le mamme tristi.
+                    Vorrei che tu fossi qui con me.
+                    Insieme alla nonna.
+                    Non la vedo da tanto, {player_name}.
+                    Mi mancate.
                     
                 
                 - secondChar_ActualName has Corvo:
-                    Ieri è successa una cosa bel-lis-si-MAAAAAA!
+                    Hanno arrestato mio fratello, e la sua amica per una protesta e non so quando li liberano.
+                    C'ero anche io alla protesta e non hanno fatto nulla di male!
+                    Ci siamo seduti per strada, abbiamo iniziato a cantare canzoni stonate.
+                    Alcuni più grandi si sono legati a un cancello, ma mica hanno fatto male a qualcuno.
+                    I poliziotti erano proprio arrabbiati.
+                    Matteo, il fidanzato di mio fratello, mi ha portato via di forza, era arrabbiato con mio fratello perché dice che non è un posto da bambino.
+                    Ma io ero arrabbiato con lui perché non è giusto che ci siano posti da bambino e posti no.
+                    E quando siamo arrivati a casa, papà non c'era più.
+                    Ha detto a mamma che è stanco di questo "branco di froci e disagiati".
+                    Mamma non esce più di camera, e da due giorni mangio solo grazie a Matteo.
+                    Sembra molto triste.
+                    Dice che ama mio fratello, ma che a volte teme che lui ami di più le sue lotte.
+                    Gli ho detto che a una persona possono interessare più cose, tipo a me che interessano tutti gli animali.
+                    Ci siamo messi a guardare <i>Flow</i> ed ha pianto senza farsi vedere.
+                    Mi mancate.
                     
             }
         
