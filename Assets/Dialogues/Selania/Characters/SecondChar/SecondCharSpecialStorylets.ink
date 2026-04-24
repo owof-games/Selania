@@ -49,6 +49,10 @@
     {charTag(SecondCharacter, "energy")}:               E ho cercato di capire cosa c'era dietro tutti quei legni.
                                                         Perché {mentorName} non me lo dice mica.
     {
+            - second_char_main_storylets.eight.ragione:
+            {charTag(SecondCharacter, "emotional")}:    E tu mi hai detto di non dare sempre ragione ai grandi.
+            }                                                     
+    {
         - are_two_entities_together(Mentor, PG):
         {charTag(Mentor, "sad")}:                       I posti chiusi sono posti pericolosi, {charNameTwo}.
                                                         E nemmeno io so cosa c'è dietro.
@@ -130,6 +134,10 @@
     {charTag(SecondCharacter, "neutral")}:              E poi mica si ferma lì, ma aiuta altri sassolini.
     {charTag(SecondCharacter, "angry")}:                E a una certa uno dice di tagliare la testa all'aragosta.
                                                         Che non ha senso perché se era una cosa fatta dall'aragosta allora sarebbe uscita lei dalla vasca, no?
+    {
+        - second_char_main_storylets.six.imparato:
+        {charTag(SecondCharacter, "angry")}:            È proprio come quando prima mi hai detto che i castighi non servono a niente!
+    }                                                     
     {charTag(SecondCharacter, "neutral")}:              Tu cosa fai se ti capita una cosa del genere?
         
     {

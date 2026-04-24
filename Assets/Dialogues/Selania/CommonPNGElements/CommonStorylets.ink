@@ -11,8 +11,8 @@
     {charTag(SecondCharacter, "neutral")}:              No.
     {
         - are_two_entities_together(Franco, PG):
-    {charTag(Franco, "{portrait_Franco()}")}:           Neanche io.
-                                                        Ma so come sono arrivato cra, vale?
+    {charTag(Franco, "{portrait_Franco()}")}:           Neanche io so come sono arrivato qua.
+                                                        Ma so come sono arrivato craaack!
     }
     {charTag(SecondCharacter, "neutral")}:              A un certo punto ero alla stazione.
                                                         E avevo voglia di caramelle.
@@ -480,6 +480,10 @@
     {charTag(SecondCharacter, "neutral")}:              Sono basso.
     {charTag(Franco, "{portrait_Franco()}")}:           Anche io.
     {charTag(SecondCharacter, "neutral")}:              E vado a scuola.
+    {
+        - second_char_main_storylets.six.tortura:
+        {charTag(SecondCharacter, "neutral")}:          Che {player_name} dice che è una tortura.
+    }   
     {charTag(Franco, "{portrait_Franco()}")}:           Quello lo fanno i girini, non i bambini.
     {charTag(SecondCharacter, "neutral")}:              E non sono un girino?
     {charTag(Franco, "{portrait_Franco()}")}:           Hai delle braccia, i girini non le hanno.
