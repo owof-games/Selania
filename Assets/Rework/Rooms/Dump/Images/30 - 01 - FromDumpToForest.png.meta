@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f44da44fb79598949ac3fa3448f1ea76
+guid: 0edf707f3a16a5b4f8273dd038d206bf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5062109599067111890
-    second: 30 - Bacinella_0
+      213: -7300972598828480659
+    second: 30 - 01 - FromDumpToForest_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 30 - Bacinella_0
+      name: 30 - 01 - FromDumpToForest_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 513
-        height: 278
+        width: 186
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e2e728dc326cfb9b0800000000000000
-      internalID: -5062109599067111890
+      spriteID: d67c7f38a1cbdaa90800000000000000
+      internalID: -7300972598828480659
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      30 - Bacinella_0: -5062109599067111890
+      30 - 01 - FromDumpToForest_0: -7300972598828480659
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
