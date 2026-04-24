@@ -72,31 +72,31 @@
                                                         Ecco.
                                                         Mi ha spiegato tante cose su {mentorName}.
                                                         Sapevi ad esempio che può respirare fino a due minuti sott'acqua?
-            {
-                - are_two_entities_together(Mentor, PG):
-                    {charTag(Mentor, "hurry")}:             Eh?
-            }
-            {
-                - are_two_entities_together(FirstCharacter, PG):
-                    {charTag(FirstCharacter, "curious")}:       Questa me la voglio godere tutta. 
-            }
+        {
+            - are_two_entities_together(Mentor, PG):
+                {charTag(Mentor, "hurry")}:             Eh?
+        }
+        {
+            - are_two_entities_together(FirstCharacter, PG):
+            {charTag(FirstCharacter, "curious")}:       Questa me la voglio godere tutta. 
+        }
         {charTag(Franco, "{portrait_Franco()}")}:       E che mangia solo pesce?
                                                         E che le piace giocare?
-            {
-                - are_two_entities_together(SecondCharacter, PG):
-                    {charTag(SecondCharacter, "neutral")}:        IM-POS-SI-BI-LE!
-                    {
-                        - are_two_entities_together(Mentor, PG):
-                            {charTag(Mentor, "hurry")}:             Guarda che sono bravissima a burraco!
-                            {charTag(SecondCharacter, "neutral")}:        Ma è una roba da vecchi!
-                    }
-            }
+        {
+        - are_two_entities_together(SecondCharacter, PG):
+        {charTag(SecondCharacter, "neutral")}:          IM-POS-SI-BI-LE!
+        {
+            - are_two_entities_together(Mentor, PG):
+        {charTag(Mentor, "hurry")}:                     Guarda che sono bravissima a burraco!
+        {charTag(SecondCharacter, "neutral")}:          Ma è una roba da vecchi!
+        }
+        }
         {charTag(Franco, "{portrait_Franco()}")}:       E che ha una tasca sotto l'ascella dove conserva le pietre che usa per rompere i gusci?
-            {
-                - are_two_entities_together(Mentor, PG):
-                    {charTag(Mentor, "neutral")}:                   A dire il vero ne ho anche una in testa, dove raccolgo le sciocchezze dette dalle rane.
-                    {charTag(Franco, "{portrait_Franco()}")}:       Ma le rana sono molto sagge, quindi non hai molto da raccogliere.
-            }
+        {
+        - are_two_entities_together(Mentor, PG):
+        {charTag(Mentor, "neutral")}:                   A dire il vero ne ho anche una in testa, dove raccolgo le sciocchezze dette dalle rane.
+        {charTag(Franco, "{portrait_Franco()}")}:       Ma le rana sono molto sagge, quindi non hai molto da raccogliere.
+        }
                                                         E.
                                                         Uh, una lettera di Euforbo.
                                                         "Papà Franco, quella è la lontra, non {mentorName}."
@@ -105,23 +105,23 @@
                                                         È più furbo di un pesce rosso.
                                                         Ma {mentorName}.
                                                         Di cosa aveva bisogno {mentorName}?
-        {charTag(TheWitch, witch_state())}:         <i>{mentorName} ama dare consigli per far star bene le persone.</i>
+        {charTag(TheWitch, witch_state())}:             <i>{mentorName} ama dare consigli per far star bene le persone.</i>
                                                         <i>{mentorName} crede di potere esistere solo quando si rende utile.</i>
         {charTag(Franco, "{portrait_Franco()}")}:       Esatto.
                                                         Quella roba lì.
                                                         Chiedile un consiglio.
                                                         E poi torna pure qui.
-            {
-                - are_two_entities_together(Mentor, PG):
-                    {charTag(Mentor, "hurry")}:             Uh, che cosa carina, Franco!
-            }
+        {
+        - are_two_entities_together(Mentor, PG):
+            {charTag(Mentor, "hurry")}:                 Uh, che cosa carina, Franco!
+        }
         {charTag(Franco, "{portrait_Franco()}")}:       Ma quindi non è {charNameOne} che fa il nido sugli alberi?
-            {
-                - are_two_entities_together(FirstCharacter, PG):
-                    {charTag(FirstCharacter, "curious")}:       Esatto! 
-                    E poi ululo alla luna!
-                    {charTag(Franco, "{portrait_Franco()}")}:       Devo subito avvisare Euforbo!
-            }
+        {
+        - are_two_entities_together(FirstCharacter, PG):
+        {charTag(FirstCharacter, "curious")}:           Esatto! 
+                                                        E poi ululo alla luna!
+        {charTag(Franco, "{portrait_Franco()}")}:       Devo subito avvisare Euforbo!
+        }
 
 
             @animation:RewriterBook    
@@ -190,16 +190,16 @@
                                                         Oggi i mariti sono un po' nervosetti.
                                                         Pensavo comunque {player_name}: perché non provi a parlare con due persone quando sono assieme?
                                                         Sono abbastanza sicuro che succederà qualcosa di interessante.
-            {
-                - are_two_entities_together(SecondCharacter, PG):
-                    {charTag(SecondCharacter, "energy")}:       Io parlo sempre di cose grandi!
-            }
+    {
+        - are_two_entities_together(SecondCharacter, PG):
+            {charTag(SecondCharacter, "energy")}:       Io parlo sempre di cose grandi!
+    }
 
-            {
-                - are_two_entities_together(FirstCharacter, PG):
-                    {charTag(FirstCharacter, "annoyed")}:   Cose metafisiche proprio.
-                        
-            }
+    {
+        - are_two_entities_together(FirstCharacter, PG):
+            {charTag(FirstCharacter, "annoyed")}:       Cose metafisiche proprio.
+                
+    }
         {charTag(Franco, "{portrait_Franco()}")}:       Magari anche loro si mettono a nuotare!
 
         @animation:RewriterBook    
@@ -231,23 +231,23 @@
                                                         Però poteva andare peggio, per fortuna ci ha aiutato la nostra amica comune.
                                                         E visto che alcune cose sono cambiate, perché non provi a parlarle direttamente?
                                                         La trovi dalle parti della discarica.
-            {
-                - are_two_entities_together(SecondCharacter, PG):
-                    {charTag(SecondCharacter, "emotional")}:        C'è qualcuno nella discarica?!
-                        
-            }
+    {
+    - are_two_entities_together(SecondCharacter, PG):
+        {charTag(SecondCharacter, "emotional")}:        C'è qualcuno nella discarica?!
+                
+    }
 
-            {
-                - are_two_entities_together(FirstCharacter, PG):
-                    {charTag(FirstCharacter, "curious")}:       C'è un'altra persona qui in giro? 
-                        
-            }
+    {
+    - are_two_entities_together(FirstCharacter, PG):
+        {charTag(FirstCharacter, "curious")}:           C'è un'altra persona qui in giro? 
+                
+    }
 
-            {
-                - are_two_entities_together(Mentor, PG):
-                    {charTag(Mentor, "bored")}:             C'è una discarica?!?
-                        
-            }
+    {
+    - are_two_entities_together(Mentor, PG):
+        {charTag(Mentor, "bored")}:                     C'è una discarica?!?
+                
+    }
         {charTag(Franco, "{portrait_Franco()}")}:       Credo.
                                                         Come dice sempre zia Graaak: "Chi va piano non arriva lontano."
                                                         O era qualcosa sulla minestra?
@@ -278,6 +278,12 @@
                                                         "Anche se l'ultima è sparita da qualche giorno."
                                                         Mmm.
                                                         Che cosa strana.
+    {
+    - are_two_entities_together(SecondCharacter, PG):
+        {charTag(SecondCharacter, "emotional")}:        Più strana di Franco?
+                                                        Franco la Rana Strana?
+        {charTag(Franco, "{portrait_Franco()}")}:       Esatto!                                                 
+    }                                                  
                                                         Non dovrebbe essere "Signore Gufo" invece di "Signor Gufo"?
                                                         Sennò è come se dicessi "Ciao, sono la Ran Franco", no?
                                                         Mi devo fidare?
@@ -432,7 +438,7 @@
                                                         E i sassi aprono anche le teste con un po' di forza.
                                                         Ma non voglio metterci le emozioni dentro a Euforbo, voglio che le sappia dire.
                                                         E mi ha detto "crediamo che con questo tipo di glifo all'inizio, {player_name} possa scoprire un sigillo adatto per aiutare Euforbo".
-        {charTag(TheWitch, witch_state())}:         Confermiamo. 
+        {charTag(TheWitch, witch_state())}:             <i>Confermiamo.</i>
         {charTag(Franco, "{portrait_Franco()}")}:       Mi fido di lei, non mi ha detto molto altro.
                                                         E non so cosa faranno quei sigilli di preciso, ma mi sono ricordato di quando Euforbo era piccolo e non voleva nuotare.
                                                         Poi l'abbiamo lasciato da solo quando abbiamo traslocato verso la nuova corrente e ha imparato da solo.
@@ -465,14 +471,14 @@
                                                         Ma nessuno ci è andato.
                                                         Perché nessuna rana vuole davvero bollire.
                                                         E perché poi le rane odiano gli imprenditori.
-                {
-                    - are_two_entities_together(FirstCharacter, PG):
-                        {charTag(FirstCharacter, "affectionate")}:      Allora sono una rana.
-                        {charTag(Franco, "{portrait_Franco()}")}:       Ma sai nuotare?
-                        {charTag(FirstCharacter, "sad")}:              No.
-                        {charTag(Franco, "{portrait_Franco()}")}:       Allora sei una rana, sicuro!
-                        
-                }
+{
+    - are_two_entities_together(FirstCharacter, PG):
+        {charTag(FirstCharacter, "affectionate")}:      Allora sono una rana.
+        {charTag(Franco, "{portrait_Franco()}")}:       Ma sai nuotare?
+        {charTag(FirstCharacter, "sad")}:               No.
+        {charTag(Franco, "{portrait_Franco()}")}:       Allora sei una rana, sicuro!
+        
+}
 
         {charTag(Franco, "{portrait_Franco()}")}:       Ci vediamo in cucina!
 
