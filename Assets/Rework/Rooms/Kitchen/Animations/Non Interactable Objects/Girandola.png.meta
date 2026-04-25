@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 231937e0d8e26df4ca484519c05f6306
+guid: 4e7cba665c6cc5a4d97988109ce49641
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8950567619066726015
-    second: ThirdCharCookingAloneOBJ_0
+      213: -6237250551242960605
+    second: Girandola_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ThirdCharCookingAloneOBJ_0
+      name: Girandola_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 441
-        height: 251
+        width: 109
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 189f96f2c2239c380800000000000000
-      internalID: -8950567619066726015
+      spriteID: 321dd068ba5d079a0800000000000000
+      internalID: -6237250551242960605
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ThirdCharCookingAloneOBJ_0: -8950567619066726015
+      Girandola_0: -6237250551242960605
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
