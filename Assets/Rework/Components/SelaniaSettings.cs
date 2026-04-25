@@ -548,6 +548,47 @@ namespace Selania.Rework.Components
             return characterInfo.FirstOrDefault(info => info.listName == characterName)?.grimoirePortrait;
         }
 
+        [Serializable]
+        public class TextPageIcon
+        {
+            [field: SerializeField] public string iconName { get; private set; } = null!;
+
+            [field: SerializeField] public Sprite sprite { get; private set; } = null!;
+        }
+
+        [SerializeField] [Tooltip("List of sprites for each text page")]
+        private TextPageIcon[] textPageIcons = null!;
+
+        [Serializable]
+        public class TextPageStyle
+        {
+            [field: SerializeField] public string styleName { get; private set; } = null!;
+
+            [field: SerializeField] public Sprite leftPageSprite { get; private set; } = null!;
+
+            [field: SerializeField] public Sprite rightPageSprite { get; private set; } = null!;
+        }
+
+        [SerializeField] [Tooltip("List of left and right background sprites for each style")]
+        private TextPageStyle[] textPageStyles = null!;
+
+        public (Sprite, Sprite)? GetThirdLevelTextLeftRightBackgroundByStyle(string styleName)
+        {
+            var lowerStyleName = styleName.ToLower();
+            var entry = textPageStyles.FirstOrDefault(textPageStyle =>
+                textPageStyle.styleName.ToLower() == lowerStyleName);
+            if (entry == null) return null;
+
+            return (entry.leftPageSprite, entry.rightPageSprite);
+        }
+
+        public Sprite? GetThirdLevelTextIcon(string iconName)
+        {
+            var lowerIconName = iconName.ToLower();
+            return textPageIcons.FirstOrDefault(textPageIcon => textPageIcon.iconName.ToLower() == lowerIconName)
+                ?.sprite;
+        }
+
         [field: SerializeField]
         [field: Tooltip("Maximum value for the Ink variables containing choice counters.")]
         public float maxChoiceVariableValue { get; private set; }

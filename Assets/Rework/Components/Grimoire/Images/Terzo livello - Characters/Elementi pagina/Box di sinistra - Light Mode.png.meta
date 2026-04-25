@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0a6cf246d44b9264d9f6df8eda91f7b7
+guid: a170d7509191e844db37be17d30c7237
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5890834098126027214
-    second: Box di destra - Light Mode_0
+      213: -4494404181922645696
+    second: Box di sinistra - Light Mode_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Box di destra - Light Mode_0
+      name: Box di sinistra - Light Mode_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec97f89b66270c150800000000000000
-      internalID: 5890834098126027214
+      spriteID: 049787b753ba0a1c0800000000000000
+      internalID: -4494404181922645696
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Box di destra - Light Mode_0: 5890834098126027214
+      Box di sinistra - Light Mode_0: -4494404181922645696
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

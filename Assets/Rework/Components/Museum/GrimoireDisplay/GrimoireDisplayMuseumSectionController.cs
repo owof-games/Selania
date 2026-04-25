@@ -371,7 +371,7 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
 
         public void SetSomeLongText()
         {
-            grimoireBackground.SetThirdLevelCharacterGrimoireText(
+            grimoireBackground.SetThirdLevelTextGrimoireText(
                 """
                 FIRST WITCH 
                 When shall we three meet again?
@@ -548,12 +548,12 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
 
         public void ThirdLevelNextPageIfPossible()
         {
-            grimoireBackground.ThirdLevelCharacterGrimoireNextPage();
+            grimoireBackground.ThirdLevelTextGrimoireNextPage();
         }
 
         public void ThirdLevelPreviousPageIfPossible()
         {
-            grimoireBackground.ThirdLevelCharacterGrimoirePreviousPage();
+            grimoireBackground.ThirdLevelTextGrimoirePreviousPage();
         }
     }
 }

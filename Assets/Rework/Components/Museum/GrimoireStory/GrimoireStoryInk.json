@@ -4308,7 +4308,7 @@
           "^description:Una ragazza in cerca della sua melodia",
           "/#",
           "\n",
-          "^FIRST WITCH",
+          "^CHITARRA FIRST WITCH",
           "\n",
           "^When shall we three meet again?",
           "\n",
@@ -4550,7 +4550,7 @@
           "\n",
           "ev",
           "str",
-          "^Rewrite",
+          "^Conversation",
           "/str",
           "/ev",
           {
@@ -4559,11 +4559,20 @@
           },
           "ev",
           "str",
-          "^Letters",
+          "^Rewrite",
           "/str",
           "/ev",
           {
             "*": ".^.c-1",
+            "flg": 4
+          },
+          "ev",
+          "str",
+          "^Letters",
+          "/str",
+          "/ev",
+          {
+            "*": ".^.c-2",
             "flg": 4
           },
           "ev",
@@ -4575,14 +4584,14 @@
           "/str",
           "/ev",
           {
-            "*": ".^.c-2",
+            "*": ".^.c-3",
             "flg": 4
           },
           {
             "c-0": [
               "\n",
               {
-                "->": ".^.^.^"
+                "->": "grimoire_second_character_conversation"
               },
               {
                 "#f": 5
@@ -4600,7 +4609,253 @@
             "c-2": [
               "\n",
               {
+                "->": ".^.^.^"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-3": [
+              "\n",
+              {
                 "->": "grimoire"
+              },
+              {
+                "#f": 5
+              }
+            ]
+          }
+        ],
+        {
+          "#f": 1
+        }
+      ],
+      "grimoire_second_character_conversation": [
+        [
+          "^@grimoireText ",
+          "#",
+          "^style:character ",
+          "/#",
+          "#",
+          "^icon:riccio ",
+          "/#",
+          "#",
+          "^title:Riccio ",
+          "/#",
+          "#",
+          "^description:Aculei per difendersi dal mondo",
+          "/#",
+          "\n",
+          "^RICCIO FIRST WITCH",
+          "\n",
+          "^When shall we three meet again?",
+          "\n",
+          "^In thunder, lightning, or in rain?",
+          "\n",
+          "^SECOND WITCH",
+          "\n",
+          "^When the hurly-burly's done,",
+          "\n",
+          "^When the battle's lost and won.",
+          "\n",
+          "^THIRD WITCH",
+          "\n",
+          "^That will be ere the set of sun.",
+          "\n",
+          "^FIRST WITCH",
+          "\n",
+          "^Where the place?",
+          "\n",
+          "^SECOND WITCH  Upon the heath.",
+          "\n",
+          "^THIRD WITCH",
+          "\n",
+          "^There to meet with Macbeth.",
+          "\n",
+          "^FIRST WITCH  I come, Graymalkin.",
+          "\n",
+          "^SECOND WITCH  Paddock calls.",
+          "\n",
+          "^THIRD WITCH  Anon.",
+          "\n",
+          "^ALL",
+          "\n",
+          "^Fair is foul, and foul is fair;",
+          "\n",
+          "^Hover through the fog and filthy air.",
+          "\n",
+          "^They exit.",
+          "\n",
+          "^Scene 2",
+          "\n",
+          "^Alarum within. Enter King Duncan, Malcolm,",
+          "\n",
+          "^Donalbain, Lennox, with Attendants, meeting a bleeding",
+          "\n",
+          "^Captain.",
+          "\n",
+          "^DUNCAN",
+          "\n",
+          "^What bloody man is that? He can report,",
+          "\n",
+          "^As seemeth by his plight, of the revolt",
+          "\n",
+          "^The newest state.",
+          "\n",
+          "^MALCOLM  This is the sergeant",
+          "\n",
+          "^Who, like a good and hardy soldier, fought",
+          "\n",
+          "^'Gainst my captivity.—Hail, brave friend!",
+          "\n",
+          "^Say to the King the knowledge of the broil",
+          "\n",
+          "^As thou didst leave it.",
+          "\n",
+          "^CAPTAIN  Doubtful it stood,",
+          "\n",
+          "^As two spent swimmers that do cling together",
+          "\n",
+          "^And choke their art. The merciless Macdonwald",
+          "\n",
+          "^(Worthy to be a rebel, for to that",
+          "\n",
+          "^The multiplying villainies of nature",
+          "\n",
+          "^Do swarm upon him) from the Western Isles",
+          "\n",
+          "^Of kerns and gallowglasses is supplied;",
+          "\n",
+          "^And Fortune, on his damnèd quarrel smiling,",
+          "\n",
+          "^Showed like a rebel's whore. But all's too weak;",
+          "\n",
+          "^For brave Macbeth (well he deserves that name),",
+          "\n",
+          "^Disdaining Fortune, with his brandished steel,",
+          "\n",
+          "^Which smoked with bloody execution,",
+          "\n",
+          "^Like Valor's minion, carved out his passage",
+          "\n",
+          "^Till he faced the slave;",
+          "\n",
+          "^Which ne'er shook hands, nor bade farewell to him,",
+          "\n",
+          "^Till he unseamed him from the nave to th' chops,",
+          "\n",
+          "^And fixed his head upon our battlements.",
+          "\n",
+          "^DUNCAN",
+          "\n",
+          "^O valiant cousin, worthy gentleman!",
+          "\n",
+          "^CAPTAIN",
+          "\n",
+          "^As whence the sun 'gins his reflection",
+          "\n",
+          "^Shipwracking storms and direful thunders break,",
+          "\n",
+          "^So from that spring whence comfort seemed to",
+          "\n",
+          "^come",
+          "\n",
+          "^Discomfort swells. Mark, King of Scotland, mark:",
+          "\n",
+          "^No sooner justice had, with valor armed,",
+          "\n",
+          "^Compelled these skipping kerns to trust their heels,",
+          "\n",
+          "^But the Norweyan lord, surveying vantage,",
+          "\n",
+          "^With furbished arms and new supplies of men,",
+          "\n",
+          "^Began a fresh assault.",
+          "\n",
+          "ev",
+          "str",
+          "^Index ",
+          "#",
+          "^bookmark:index",
+          "/#",
+          "/str",
+          "/ev",
+          {
+            "*": ".^.c-0",
+            "flg": 4
+          },
+          "ev",
+          "str",
+          "^Riccio ",
+          "#",
+          "^bookmark:secondLevel",
+          "/#",
+          "/str",
+          "/ev",
+          {
+            "*": ".^.c-1",
+            "flg": 4
+          },
+          "ev",
+          "str",
+          "^precedente ",
+          "#",
+          "^bookmark:previous",
+          "/#",
+          "/str",
+          "/ev",
+          {
+            "*": ".^.c-2",
+            "flg": 4
+          },
+          "ev",
+          "str",
+          "^prossima ",
+          "#",
+          "^bookmark:next",
+          "/#",
+          "/str",
+          "/ev",
+          {
+            "*": ".^.c-3",
+            "flg": 4
+          },
+          {
+            "c-0": [
+              "\n",
+              {
+                "->": "grimoire"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-1": [
+              "\n",
+              {
+                "->": "grimoire_second_character"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-2": [
+              "\n",
+              "^@grimoireTextPrevious",
+              "\n",
+              {
+                "->": ".^.^.^"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-3": [
+              "\n",
+              "^@grimoireTextNext",
+              "\n",
+              {
+                "->": ".^.^.^"
               },
               {
                 "#f": 5
@@ -4731,6 +4986,46 @@
         0.0,
         {
           "VAR=": "firstChar_last_fire"
+        },
+        0.0,
+        {
+          "VAR=": "secondChar_aether"
+        },
+        0.0,
+        {
+          "VAR=": "secondChar_earth"
+        },
+        0.0,
+        {
+          "VAR=": "secondChar_air"
+        },
+        0.0,
+        {
+          "VAR=": "secondChar_water"
+        },
+        0.0,
+        {
+          "VAR=": "secondChar_fire"
+        },
+        0.0,
+        {
+          "VAR=": "secondChar_last_aether"
+        },
+        0.0,
+        {
+          "VAR=": "secondChar_last_earth"
+        },
+        0.0,
+        {
+          "VAR=": "secondChar_last_air"
+        },
+        0.0,
+        {
+          "VAR=": "secondChar_last_water"
+        },
+        0.0,
+        {
+          "VAR=": "secondChar_last_fire"
         },
         {
           "list": {},

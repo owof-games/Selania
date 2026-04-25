@@ -32,6 +32,17 @@ VAR firstChar_last_air      = 0.00
 VAR firstChar_last_water    = 0.00
 VAR firstChar_last_fire     = 0.00
 
+VAR secondChar_aether        = 0.00
+VAR secondChar_earth         = 0.00
+VAR secondChar_air           = 0.00
+VAR secondChar_water         = 0.00
+VAR secondChar_fire          = 0.00
+VAR secondChar_last_aether   = 0.00
+VAR secondChar_last_earth    = 0.00
+VAR secondChar_last_air      = 0.00
+VAR secondChar_last_water    = 0.00
+VAR secondChar_last_fire     = 0.00
+
 /* ---------------------------------
                 
 LISTE COMBINATORIE DEI SIGILLI
@@ -419,7 +430,7 @@ E ora apro la scelta delle piante.
 === grimoire_first_character_conversation
 
     @grimoireText #style:character #icon:Chitarra #title:Chitarra #description:Una ragazza in cerca della sua melodia
-    FIRST WITCH 
+    CHITARRA FIRST WITCH
     When shall we three meet again?
     In thunder, lightning, or in rain?
     SECOND WITCH 
@@ -503,9 +514,92 @@ E ora apro la scelta delle piante.
     Portagli qualcosa legato agli animali.
     Cucina con lui qualcosa di bizzarro.
     Leggi una storia sulla rabbia.
+    + [Conversation]
+        -> grimoire_second_character_conversation
     + [Rewrite]
         -> grimoire_second_character
     + [Letters]
         -> grimoire_second_character
     + [Index #bookmark:index]
         -> grimoire
+
+=== grimoire_second_character_conversation
+
+    @grimoireText #style:character #icon:riccio #title:Riccio #description:Aculei per difendersi dal mondo
+    RICCIO FIRST WITCH 
+    When shall we three meet again?
+    In thunder, lightning, or in rain?
+    SECOND WITCH 
+    When the hurly-burly's done,
+    When the battle's lost and won.
+    THIRD WITCH 
+    That will be ere the set of sun.
+    FIRST WITCH 
+    Where the place?
+    SECOND WITCH  Upon the heath.
+    THIRD WITCH 
+    There to meet with Macbeth.
+    FIRST WITCH  I come, Graymalkin.
+    SECOND WITCH  Paddock calls.
+    THIRD WITCH  Anon.
+    ALL 
+    Fair is foul, and foul is fair;
+    Hover through the fog and filthy air.
+    They exit.
+    
+    
+    
+    Scene 2
+    Alarum within. Enter King Duncan, Malcolm,
+    Donalbain, Lennox, with Attendants, meeting a bleeding
+    Captain.
+    
+    DUNCAN 
+    What bloody man is that? He can report,
+    As seemeth by his plight, of the revolt
+    The newest state.
+    MALCOLM  This is the sergeant
+    Who, like a good and hardy soldier, fought
+    'Gainst my captivity.—Hail, brave friend!
+    Say to the King the knowledge of the broil
+    As thou didst leave it.
+    CAPTAIN  Doubtful it stood,
+    As two spent swimmers that do cling together
+    And choke their art. The merciless Macdonwald
+    (Worthy to be a rebel, for to that
+    The multiplying villainies of nature
+    Do swarm upon him) from the Western Isles
+    Of kerns and gallowglasses is supplied;
+    And Fortune, on his damnèd quarrel smiling,
+    Showed like a rebel's whore. But all's too weak;
+    For brave Macbeth (well he deserves that name),
+    Disdaining Fortune, with his brandished steel,
+    Which smoked with bloody execution,
+    Like Valor's minion, carved out his passage
+    Till he faced the slave;
+    Which ne'er shook hands, nor bade farewell to him,
+    Till he unseamed him from the nave to th' chops,
+    And fixed his head upon our battlements.
+    DUNCAN 
+    O valiant cousin, worthy gentleman!
+    CAPTAIN 
+    As whence the sun 'gins his reflection
+    Shipwracking storms and direful thunders break,
+    So from that spring whence comfort seemed to
+    come
+    Discomfort swells. Mark, King of Scotland, mark:
+    No sooner justice had, with valor armed,
+    Compelled these skipping kerns to trust their heels,
+    But the Norweyan lord, surveying vantage,
+    With furbished arms and new supplies of men,
+    Began a fresh assault.
+    + [Index #bookmark:index]
+        -> grimoire
+    + [Riccio #bookmark:secondLevel]
+        -> grimoire_second_character
+    + [precedente #bookmark:previous]
+        @grimoireTextPrevious
+        -> grimoire_second_character_conversation
+    + [prossima #bookmark:next]
+        @grimoireTextNext
+        -> grimoire_second_character_conversation

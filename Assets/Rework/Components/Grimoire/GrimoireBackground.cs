@@ -813,19 +813,35 @@ namespace Selania.Rework.Components.Grimoire
                 waterValue1, waterValue2);
         }
 
-        public void SetThirdLevelCharacterGrimoireText(string text)
+        public void SetThirdLevelTextGrimoireText(string text)
         {
             thirdLevelCharacterGrimoire.SetText(text);
         }
 
-        public void ThirdLevelCharacterGrimoireNextPage()
+        public void ThirdLevelTextGrimoireNextPage()
         {
             thirdLevelCharacterGrimoire.NextPage();
         }
 
-        public void ThirdLevelCharacterGrimoirePreviousPage()
+        public void ThirdLevelTextGrimoirePreviousPage()
         {
             thirdLevelCharacterGrimoire.PreviousPage();
+        }
+
+        /// <summary>
+        ///     Set the contents of the header.
+        /// </summary>
+        /// <param name="iconName">Name of the icon (see <see cref="ISettingsBook.GetThirdLevelTextIcon" />).</param>
+        /// <param name="styleName">
+        ///     Name of the style (see <see cref="ISettingsBook.GetThirdLevelTextLeftRightBackgroundByStyle" />
+        ///     ).
+        /// </param>
+        /// <param name="title">Title of the page.</param>
+        /// <param name="description">Description of the page.</param>
+        public void SetThirdLevelCharacterGrimoireHeader(string iconName, string styleName, string title,
+            string description)
+        {
+            thirdLevelCharacterGrimoire.SetHeader(iconName, styleName, title, description);
         }
     }
 }

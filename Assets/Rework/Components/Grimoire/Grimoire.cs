@@ -286,9 +286,13 @@ namespace Selania.Rework.Components.Grimoire
         private void OnThirdLevelTextGrimoirePageDescriptor(
             IStoryGrimoire.ThirdLevelTextGrimoirePageDescriptor descriptor)
         {
+            // move to the correct page
             grimoireBackground.SwitchToPage(GrimoireBackground.PageType.ThirdLevelCharacter);
-            // TODO: all the various descriptors and whatnot
-            grimoireBackground.SetThirdLevelCharacterGrimoireText(descriptor.contents);
+
+            // set up text and images
+            grimoireBackground.SetThirdLevelTextGrimoireText(descriptor.contents);
+            grimoireBackground.SetThirdLevelCharacterGrimoireHeader(descriptor.icon, descriptor.style, descriptor.title,
+                descriptor.description);
 
             // manage navigation, removing navigation choices that are not available
             if (!grimoireBackground.ThirdLevelCharacterCanTurnToNextPage)
@@ -306,12 +310,12 @@ namespace Selania.Rework.Components.Grimoire
 
         private void OnThirdLevelTextNextPage(Unit _)
         {
-            grimoireBackground.ThirdLevelCharacterGrimoireNextPage();
+            grimoireBackground.ThirdLevelTextGrimoireNextPage();
         }
 
         private void OnThirdLevelTextPreviousPage(Unit _)
         {
-            grimoireBackground.ThirdLevelCharacterGrimoirePreviousPage();
+            grimoireBackground.ThirdLevelTextGrimoirePreviousPage();
         }
 
         /// <summary>

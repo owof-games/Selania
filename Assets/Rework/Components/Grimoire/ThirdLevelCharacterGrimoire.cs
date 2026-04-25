@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
+using Selania.Rework.Interfaces;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using VContainer;
 
 namespace Selania.Rework.Components.Grimoire
@@ -10,7 +12,14 @@ namespace Selania.Rework.Components.Grimoire
         [SerializeField] private TMP_Text leftPageText = null!;
         [SerializeField] private TMP_Text rightPageText = null!;
 
+        [SerializeField] private Image iconImage = null!;
+        [SerializeField] private Image leftBackground = null!;
+        [SerializeField] private Image rightBackground = null!;
+        [SerializeField] private TMP_Text titleTMPro = null!;
+        [SerializeField] private TMP_Text descriptionTMPro = null!;
+
         [Inject] internal ILogger<ThirdLevelCharacterGrimoire> Logger = null!;
+        [Inject] internal ISettingsBook SettingsBook = null!;
 
         /// <summary>
         /// Whether there's a next page to turn to.
@@ -28,7 +37,7 @@ namespace Selania.Rework.Components.Grimoire
         /// <param name="text">The full text to display</param>
         public void SetText(string text)
         {
-            if (leftPageText.text == text) return; // do not update neither reset if the text didn't change
+            if (leftPageText.text == text) return; // do not update nor reset if the text didn't change
             leftPageText.text = text;
             rightPageText.text = text;
             leftPageText.pageToDisplay = 1; // 1-based!
@@ -53,6 +62,35 @@ namespace Selania.Rework.Components.Grimoire
             if (!canTurnToPreviousPage) return;
             leftPageText.pageToDisplay -= 2;
             rightPageText.pageToDisplay -= 2;
+        }
+
+        /// <summary>
+        ///     Set the contents of the header.
+        /// </summary>
+        /// <param name="iconName">Name of the icon (see <see cref="ISettingsBook.GetThirdLevelTextIcon" />).</param>
+        /// <param name="styleName">
+        ///     Name of the style (see <see cref="ISettingsBook.GetThirdLevelTextLeftRightBackgroundByStyle" />
+        ///     ).
+        /// </param>
+        /// <param name="title">Title of the page.</param>
+        /// <param name="description">Description of the page.</param>
+        public void SetHeader(string iconName, string styleName, string title, string description)
+        {
+            titleTMPro.text = title;
+            descriptionTMPro.text = description;
+            iconImage.sprite = SettingsBook.GetThirdLevelTextIcon(iconName);
+            var leftAndRight = SettingsBook.GetThirdLevelTextLeftRightBackgroundByStyle(styleName);
+            if (leftAndRight == null)
+            {
+                leftBackground.sprite = null;
+                rightBackground.sprite = null;
+            }
+            else
+            {
+                var (left, right) = leftAndRight.Value;
+                leftBackground.sprite = left;
+                rightBackground.sprite = right;
+            }
         }
     }
 }

@@ -47,5 +47,19 @@ namespace Selania.Rework.Interfaces
         /// <param name="characterName">Name of the character.</param>
         /// <returns>The sprite.</returns>
         public Sprite? GetCharacterPortrait(string characterName);
+
+        /// <summary>
+        ///     Get the left and right background sprites for the third level text.
+        /// </summary>
+        /// <param name="styleName">Style name.</param>
+        /// <returns>A couple (left sprite, right sprite) for the backgrounds, or <c>null</c> if the style was not found.</returns>
+        public (Sprite, Sprite)? GetThirdLevelTextLeftRightBackgroundByStyle(string styleName);
+
+        /// <summary>
+        ///     Get the sprite for the icon in the third level text.
+        /// </summary>
+        /// <param name="iconName">The icon name.</param>
+        /// <returns>The corresponding sprite, or <c>null</c> if the sprite was not found.</returns>
+        public Sprite? GetThirdLevelTextIcon(string iconName);
     }
 }
