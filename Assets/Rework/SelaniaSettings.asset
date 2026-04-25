@@ -448,6 +448,23 @@ MonoBehaviour:
     <sprite>k__BackingField: {fileID: 21300000, guid: d13e629153e4172429072cb3c67b947f, type: 3}
   - <plantName>k__BackingField: universalIngredient
     <sprite>k__BackingField: {fileID: 21300000, guid: daa9db06a7459c44a88acc067791adc5, type: 3}
+  textPageIcons:
+  - <iconName>k__BackingField: boccale
+    <sprite>k__BackingField: {fileID: 21300000, guid: 34e5b2c893e96154ab32ad6f40bc6d66, type: 3}
+  - <iconName>k__BackingField: chitarra
+    <sprite>k__BackingField: {fileID: 21300000, guid: 0642fb40c3a703443b229954020b3374, type: 3}
+  - <iconName>k__BackingField: franco
+    <sprite>k__BackingField: {fileID: 21300000, guid: 02caf7a8d0921aa4ba5d5b749a632551, type: 3}
+  - <iconName>k__BackingField: luna
+    <sprite>k__BackingField: {fileID: 21300000, guid: 4e520e9a644e32944bd52b9a7009d869, type: 3}
+  - <iconName>k__BackingField: mentore
+    <sprite>k__BackingField: {fileID: 21300000, guid: 0a6d82c371449ae4e8cde4a54de218d2, type: 3}
+  - <iconName>k__BackingField: riccio
+    <sprite>k__BackingField: {fileID: 21300000, guid: 128ebe1261bc45c468c689535abddd4c, type: 3}
+  textPageStyles:
+  - <styleName>k__BackingField: character
+    <leftPageSprite>k__BackingField: {fileID: 21300000, guid: a170d7509191e844db37be17d30c7237, type: 3}
+    <rightPageSprite>k__BackingField: {fileID: 21300000, guid: 0a6cf246d44b9264d9f6df8eda91f7b7, type: 3}
   <maxChoiceVariableValue>k__BackingField: 9
   <minChoiceVariableValue>k__BackingField: -9
   <choiceVariablePentacleAnimationDuration>k__BackingField: 1
