@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 03b9faa23fba21f42bd2277061a75521
+guid: 3369329e5876b414da4d93f974148367
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5266909524324868422
-    second: CookingWithThirdCharOBJ_0
+      213: -1181966559129663367
+    second: 20 - CookingWithThirdCharOBJ_0
+  - first:
+      213: 3037681662875308363
+    second: 20 - CookingWithThirdCharOBJ_1
+  - first:
+      213: 4446174712964149405
+    second: 20 - CookingWithThirdCharOBJ_2
+  - first:
+      213: -8450130853994529540
+    second: 20 - CookingWithThirdCharOBJ_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CookingWithThirdCharOBJ_0
+      name: 20 - CookingWithThirdCharOBJ_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 269
-        height: 157
+        x: 115
+        y: 224
+        width: 85
+        height: 71
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: abe9e7261bd28e6b0800000000000000
-      internalID: -5266909524324868422
+      spriteID: 9788fa24dafc89fe0800000000000000
+      internalID: -1181966559129663367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20 - CookingWithThirdCharOBJ_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 90
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b419668c063082a20800000000000000
+      internalID: 3037681662875308363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20 - CookingWithThirdCharOBJ_2
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 38
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d907d87385cf3bd30800000000000000
+      internalID: 4446174712964149405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20 - CookingWithThirdCharOBJ_3
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 18
+        width: 36
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfc761e42ca1bba80800000000000000
+      internalID: -8450130853994529540
       vertices: []
       indices: 
       edges: []
@@ -148,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CookingWithThirdCharOBJ_0: -5266909524324868422
+      20 - CookingWithThirdCharOBJ_0: -1181966559129663367
+      20 - CookingWithThirdCharOBJ_1: 3037681662875308363
+      20 - CookingWithThirdCharOBJ_2: 4446174712964149405
+      20 - CookingWithThirdCharOBJ_3: -8450130853994529540
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
