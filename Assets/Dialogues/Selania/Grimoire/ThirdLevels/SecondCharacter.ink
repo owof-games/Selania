@@ -249,7 +249,7 @@
 
     {
         - grimoire_secondChar has grimSecondCharProposal:
-            Prima della riscrittura, {charNameThree} ha detto a {player_name} di.
+            Prima della riscrittura, {charNameTwo} ha detto a {player_name} di.
     } 
     {
         - secondAffinityFeedback:

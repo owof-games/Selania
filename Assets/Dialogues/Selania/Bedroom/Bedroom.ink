@@ -48,17 +48,9 @@
 
             + \ {charTag(PG, "neutral")}:           <i>Sono qui per testare il Grimorio.</i>
                 -> debug_richGrimoire ->
-                {charTag(TheWitch, witch_state())}: <i>Ho riempito il grimorio come se tu avessi finito la prima parte di gioco, ma senza lo sbrocco di Mentore.</i>
-
-                -> glyph_open_all_sigils ->
-                ~ greenhouse_findedCultivables += greenhouse_allCultivables
-                ~ greenhouse_findedCultivables += universalIngredient
-                ~ backpack_findedGifts += greenhouse_allCultivables
-                ~ backpack_findedGifts += universalIngredient
-                ~ greenhouse_backupCultivable = ()
-                
+            {charTag(TheWitch, witch_state())}:     <i>Ho riempito il grimorio come se tu avessi finito la prima parte di gioco, ma senza lo sbrocco di Mentore.</i>
                                                     <i>Hai inoltre sbloccato tutti i sigilli e le piante.</i>
-
+                                                 
             -
 
         {charTag(TheWitch, witch_state())}:     <i>Perfetto.

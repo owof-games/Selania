@@ -106,7 +106,7 @@
 
 ~ grimoire_secondChar += (grimSecondCharOne, grimSecondCharTwo, grimSecondCharThreeHim, grimSecondCharThreeHer, grimSecondCharThreeThey, grimSecondCharFour, grimSecondCharFive, grimSecondCharSix, grimSecondCharSeven, grimSecondCharEight, grimSecondCharNine, grimSecondCharTen, grimSecondCharEleven, grimSecondCharTwelve, grimSecondCharCarla, grimSecondOpenLibrary, grimSecondCharNovel, grimSecondCharDog, grimSecondCharKitchenOne, grimSecondCharKitchenTwo, grimSecondCharKitchenThree, grimSecondCharKitchenEnded, grimSecondCharKitchenPositiveReaction, grimSecondCharKitchenNegativeReaction, grimSecondCharKitchenNeutralReaction,grimSecondCharKitchenAlone, grimSecondCharProposal, grimSecondCharNewName, grimSecondCharMentorFeedback, grimSecondCharLetterOne, grimSecondCharLetterTwo, grimSecondCharLetterThree, grimSecondCharLetterFour, grimFirstSecondChar, grimSecondCharMentorOne, grimSecondCharMentorPeace, grimSecondThirdChar, grimSecondCharFranco)
 
-    ~ firstChar_ActualName = Lupo
+    ~ secondChar_ActualName = Lupo
     ~ kitchen_secondCharExtraIngredient = LIST_RANDOM(greenhouse_backupCultivable)
     ~ secondChar_giftedObject = LIST_RANDOM(greenhouse_backupCultivable)
 
@@ -121,4 +121,17 @@
 ~ grimoire_appendices += (grimChoicesMentor, grimChoicesWitch, grimGreenhouseMentor, grimKitchenChitarra, grimInkMentor, grimRewritingMentor, grimSigilsBoccale, grimSigilsMentor, grimSigilsWitch)
 
 
+    //Sblocco di tutti i coltivabili
+        ~ greenhouse_findedCultivables += greenhouse_backupCultivable
+        ~ greenhouse_findedCultivables += universalIngredient
+        ~ backpack_findedGifts += greenhouse_backupCultivable
+        ~ backpack_findedGifts += universalIngredient
+        ~ greenhouse_backupCultivable = ()
+
+    //Apertura di tutti i sigilli
+    -> glyph_open_all_sigils ->
+
+    //Attivo la gamer mode, o da ink non posso testare nulla
+    -> gamerMode_activation ->   
+                
 ->->

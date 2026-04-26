@@ -72,7 +72,7 @@
         
     - ThirdCharacter:
         {
-            - ! grimoire_thirdChar hasnt grimThirdCharOne:
+            - ! third_char_main_storylets.one:
                 ~ return "???"
             
             - else:

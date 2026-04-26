@@ -115,7 +115,6 @@
     INCLUDE Book\BookFunctions.ink
     INCLUDE Book\RulesRecap.ink
     //Characters recap
-    INCLUDE Book\FirstCharRecap.ink
     INCLUDE Book\SecondCharRecap.ink
     INCLUDE Book\ThirdCharRecap.ink
     INCLUDE Book\FourthCharRecap.ink
