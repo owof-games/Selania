@@ -39,7 +39,7 @@ namespace Selania.Rework.Components.Grimoire
         /// <summary>
         ///     Subject where the click observable will be sent at Start() time.
         /// </summary>
-        private readonly Subject<Observable<string>> _clickObservables = new();
+        private readonly ReplaySubject<Observable<string>> _clickObservables = new(1);
 
         private IDisposable? _lastCharacterRelationshipStatusSubscription;
 
