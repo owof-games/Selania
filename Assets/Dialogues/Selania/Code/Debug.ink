@@ -95,3 +95,30 @@
 ->->
 
 
+
+=== debug_richGrimoire
+//Serve per simulare uno stato in cui ho concluso le prime due png e Mentore non ha sbroccato
+~ grimoire_firstChar += (grimFirstCharOne, grimFirstCharTwo, grimFirstCharThree, grimFirstCharFour, grimFirstCharFive, grimFirstCharSix, grimFirstCharSeven, grimFirstCharEight, grimFirstCharNine, grimFirstCharTen, grimFirstCharEleven, grimFirstCharTwelve, grimFirstOpenKitchen, grimFirstCharNovel, grimFirstCharDog, grimFirstCharKitchenOne, grimFirstCharKitchenTwo, grimFirstCharKitchenThree, grimFirstCharKitchenEnded, grimFirstCharKitchenPositiveReaction, grimFirstCharKitchenNegativeReaction, grimFirstCharKitchenNeutralReaction, grimFirstCharKitchenAlone, grimFirstCharProposal, grimFirstCharNewName, grimFirstCharMentorFeedback, grimFirstCharLetterOne, grimFirstCharLetterTwo, grimFirstCharLetterThree, grimFirstCharLetterFour, grimFirstSecondChar, grimFirstThirdChar, grimFirstCharMentor, grimFirstCharFranco)
+
+    ~ firstChar_ActualName = Ocarina
+    ~ kitchen_firstCharExtraIngredient = LIST_RANDOM(greenhouse_backupCultivable)
+    ~ firstChar_giftedObject = LIST_RANDOM(greenhouse_backupCultivable)
+
+~ grimoire_secondChar += (grimSecondCharOne, grimSecondCharTwo, grimSecondCharThreeHim, grimSecondCharThreeHer, grimSecondCharThreeThey, grimSecondCharFour, grimSecondCharFive, grimSecondCharSix, grimSecondCharSeven, grimSecondCharEight, grimSecondCharNine, grimSecondCharTen, grimSecondCharEleven, grimSecondCharTwelve, grimSecondCharCarla, grimSecondOpenLibrary, grimSecondCharNovel, grimSecondCharDog, grimSecondCharKitchenOne, grimSecondCharKitchenTwo, grimSecondCharKitchenThree, grimSecondCharKitchenEnded, grimSecondCharKitchenPositiveReaction, grimSecondCharKitchenNegativeReaction, grimSecondCharKitchenNeutralReaction,grimSecondCharKitchenAlone, grimSecondCharProposal, grimSecondCharNewName, grimSecondCharMentorFeedback, grimSecondCharLetterOne, grimSecondCharLetterTwo, grimSecondCharLetterThree, grimSecondCharLetterFour, grimFirstSecondChar, grimSecondCharMentorOne, grimSecondCharMentorPeace, grimSecondThirdChar, grimSecondCharFranco)
+
+    ~ firstChar_ActualName = Lupo
+    ~ kitchen_secondCharExtraIngredient = LIST_RANDOM(greenhouse_backupCultivable)
+    ~ secondChar_giftedObject = LIST_RANDOM(greenhouse_backupCultivable)
+
+
+~ grimoire_thirdChar += (grimThirdCharOne, grimThirdCharTwo, grimThirdCharThree, grimThirdCharFour, grimThirdCharFive, grimThirdCharSix, grimThirdCharSeven, grimThirdCharEight, grimThirdCharNine, grimThirdCharTen, grimThirdCharEleven, grimThirdCharTwelve, grimThirdOpenNest, grimThirdCharNovel, grimThirdCharDog, grimThirdCharKitchenOne, grimThirdCharKitchenTwo, grimThirdCharKitchenThree, grimThirdCharKitchenEnded, grimThirdCharKitchenPositiveReaction, grimThirdCharKitchenNegativeReaction, grimThirdCharKitchenNeutralReaction,grimThirdCharKitchenAlone, grimThirdCharProposal, grimThirdCharNewName, grimThirdCharMentorFeedback, grimThirdCharLetterOne, grimThirdCharLetterTwo, grimThirdCharLetterThree, grimThirdCharLetterFour, grimSecondThirdChar, grimFirstThirdChar, grimThirdCharFranco, grimThirdCharMentor)
+
+~ grimoire_fifthChar += (grimMentorOne, grimMentorTwo, grimMentorThree, grimMentorFour, grimMentorFive, grimMentorSix, grimMentorSeven, grimMentorEight, grimMentorNine, grimMentorTen, grimMentorEleven, grimMentorTwelve, grimMentorNovel, grimMentorDog, grimMentorLiar, grimMentorViolence, grimMentorOlobinoUno, grimMentorOlobinoDue, grimKitchenMentor, grimMentorRage, grimMentorNotMandatory, grimMentorNewMail, grimMentorFirstSecretEnding, grimMentorSecondSecretEnding, grimMentorThirdSecretEnding, grimMentorFourthSecretEnding, grimMentorFifthSecretEnding)
+
+
+~ grimoire_witch += (grimWitchFirstDebrief, grimWitchSecondDebrief, grimWitchThirdDebrief, grimWitchFourthDebrief, grimWitchFifthDebrief, grimWitchIntro, grimWitchFrog, grimWitchMainOne, grimWitchMainTwo, grimWitchMainThree, grimWitchMainFour, grimWitchMainFive, grimWitchBook, grimWitchOpenDump, grimWitchAllSigilsOpened)
+
+~ grimoire_appendices += (grimChoicesMentor, grimChoicesWitch, grimGreenhouseMentor, grimKitchenChitarra, grimInkMentor, grimRewritingMentor, grimSigilsBoccale, grimSigilsMentor, grimSigilsWitch)
+
+
+->->
