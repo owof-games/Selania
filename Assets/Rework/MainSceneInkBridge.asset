@@ -81,6 +81,7 @@ MonoBehaviour:
   secondLevelBookmarkTagValue: secondLevel
   backBookmarkTagValue: previous
   forwardBookmarkTagValue: next
+  closeBookmarkTagValue: close
   oneUsageText: Un uso rimanente.
   twoUsagesText: Due usi rimanenti.
   threeUsagesText: Tre usi rimanenti.
@@ -90,3 +91,19 @@ MonoBehaviour:
   - ink_normal
   - ink_medium
   - ink_high
+  characterInfo:
+  - listName: FirstCharacter
+    relationshipInkVariableName: firstChar_relationshipIndicator
+    choicesValuesVariablePrefix: firstChar
+  - listName: SecondCharacter
+    relationshipInkVariableName: secondChar_relationshipIndicator
+    choicesValuesVariablePrefix: secondChar
+  - listName: ThirdCharacter
+    relationshipInkVariableName: thirdChar_relationshipIndicator
+    choicesValuesVariablePrefix: thirdChar
+  - listName: FourthCharacter
+    relationshipInkVariableName: fourthChar_relationshipIndicator
+    choicesValuesVariablePrefix: fourthChar
+  - listName: FifthCharacter
+    relationshipInkVariableName: fifthChar_relationshipIndicator
+    choicesValuesVariablePrefix: fifthChar
