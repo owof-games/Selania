@@ -1,7 +1,7 @@
     VAR debug_seedRandom = false
     
 //Per abilitare o meno i debug
-    VAR debug_openAll = true
+    VAR debug_openAll = false
     VAR debug = false
     VAR debug_cultivable = false
     VAR debug_changeName = false
@@ -21,7 +21,7 @@
     VAR debug_testGreenhouse = false
     
 //Per disabilitare uscite e cose varie in caso di testing con il sistema stocastico    
-    VAR debug_stochastic = true
+    VAR debug_stochastic = false
 
 
 {debug_seedRandom:

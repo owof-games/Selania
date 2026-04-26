@@ -1350,30 +1350,30 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-    {charTag(FirstCharacter, "neutral")}:         Cucinare da sola prima è stato un momento terapeutico.
-    {charTag(FirstCharacter, "affectionate")}:      E non lo dico solo perché mi sono sparata un bel po' di vinello.
-    Per me la tavola è lo spazio più bello di una casa perché amo mangiare con le altre persone.
-    E amo quando mangiano quello che cucino.
-    {charTag(FirstCharacter, "neutral")}:         Credo sia una cosa che ho imparato da mia mamma.
-    {charTag(FirstCharacter, "sad")}:              Mamma non l'ho mai capita fino in fondo.
-    {charTag(FirstCharacter, "neutral")}:         Non è una che parla tantissimo.
-    Però ci tiene molto alle persone, e per fartelo capire fa cose.
-    Come cucinare.
-    {charTag(FirstCharacter, "sad")}:              Da quando vivo al nord è salita solo una volta.
-    {charTag(FirstCharacter, "neutral")}:         Lei e papà hanno dormito nella mia camera, mentre io ho dormito con Valeria.
-    {charTag(FirstCharacter, "annoyed")}:   Le coinqui erano in imbarazzo perché ha pulito tutta casa.
-    {charTag(FirstCharacter, "neutral")}:         E un giorno quando siamo uscite con papà a fargli fare il giro della città, lei è rimasta in casa da sola.
-    Siamo tornate, e aveva preparato praticamente un cenone della vigilia.
-    E ha tenuto conto del fatto che Valeria è vegana, e che a Irene non piacciono le cose rosse e tutta una serie di cose che ha capito in quei pochi giorni con loro.
-    {charTag(FirstCharacter, "affectionate")}:      Credo che mamma sappia dire "Ti voglio bene" solo dietro ai fornelli.
-    {charTag(FirstCharacter, "neutral")}:         Non ti chiedo un'opinione, scusa, voglio tenermi ancorata ancora un po' a questa sensazione.
-    Ma a proposito di cenone della vigilia.
-    Da quando vivo su, ho iniziato a organizzare cenoni con le ame.
-    {charTag(FirstCharacter, "affectionate")}:      Credo sia uno dei momenti più belli dell'anno.
-    Qui non c'è abbastanza roba per farlo, ma ho pensato di portare un po' di Natale comunque.
-    {charTag(FirstCharacter, "curious")}:       E quindi ti ho lasciato qualcosina su uno degli alberi della cucina. 
-    Spero possa portarti un po' di gioia, {player_name}.
-    {charTag(FirstCharacter, "neutral")}:         A dopo.
+    {charTag(FirstCharacter, "neutral")}:               Cucinare da sola prima è stato un momento terapeutico.
+    {charTag(FirstCharacter, "affectionate")}:          E non lo dico solo perché mi sono sparata un bel po' di vinello.
+                                                        Per me la tavola è lo spazio più bello di una casa perché amo mangiare con le altre persone.
+                                                        E amo quando mangiano quello che cucino.
+    {charTag(FirstCharacter, "neutral")}:               Credo sia una cosa che ho imparato da mia mamma.
+    {charTag(FirstCharacter, "sad")}:                   Mamma non l'ho mai capita fino in fondo.
+    {charTag(FirstCharacter, "neutral")}:               Non è una che parla tantissimo.
+                                                        Però ci tiene molto alle persone, e per fartelo capire fa cose.
+                                                        Come cucinare.
+    {charTag(FirstCharacter, "sad")}:                   Da quando vivo al nord è salita solo una volta.
+    {charTag(FirstCharacter, "neutral")}:               Lei e papà hanno dormito nella mia camera, mentre io ho dormito con Valeria.
+    {charTag(FirstCharacter, "annoyed")}:               Le coinqui erano in imbarazzo perché ha pulito tutta casa.
+    {charTag(FirstCharacter, "neutral")}:               E un giorno quando siamo uscite con papà a fargli fare il giro della città, lei è rimasta in casa da sola.
+                                                        Siamo tornate, e aveva preparato praticamente un cenone della vigilia.
+                                                        E ha tenuto conto del fatto che Valeria è vegana, e che a Irene non piacciono le cose rosse e tutta una serie di cose che ha capito in quei pochi giorni con loro.
+    {charTag(FirstCharacter, "affectionate")}:          Credo che mamma sappia dire "Ti voglio bene" solo dietro ai fornelli.
+    {charTag(FirstCharacter, "neutral")}:               Non ti chiedo un'opinione, scusa, voglio tenermi ancorata ancora un po' a questa sensazione.
+                                                        Ma a proposito di cenone della vigilia.
+                                                        Da quando vivo su, ho iniziato a organizzare cenoni con le ame.
+    {charTag(FirstCharacter, "affectionate")}:          Credo sia uno dei momenti più belli dell'anno.
+                                                        Qui non c'è abbastanza roba per farlo, ma ho pensato di portare un po' di Natale comunque.
+    {charTag(FirstCharacter, "curious")}:               E quindi ti ho lasciato qualcosina su uno degli alberi della cucina. 
+                                                        Spero possa portarti un po' di gioia, {player_name}.
+    {charTag(FirstCharacter, "neutral")}:               A dopo.
 
 
             + \ {charTag(PG, "neutral")}:                      Scelta acqua

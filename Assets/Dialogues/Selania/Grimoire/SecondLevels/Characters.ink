@@ -36,14 +36,19 @@
 
     + {grimoire_firstChar != ()}[Conversation]
             -> grimoire_first_character_conversation
+
     + {firstChar_giftedObject != ()}[Present]
             -> grimoire_first_character_present
+
     + {grimoire_firstChar has grimFirstCharKitchenEnded}[Kitchen]
             -> grimoire_first_character_kitchen
-    + {grimoire_firstChar has grimFirstCharNewName}[Rewrite]
+
+    + {grimoire_firstChar has grimFirstCharProposal}[Rewrite]
             -> grimoire_first_character_rewrite
+
     + {grimoire_firstChar has grimFirstCharLetterOne}[Letters]
             -> grimoire_first_character_letters    
+            
     + [Index #bookmark:index]
         -> grimoire
         -
