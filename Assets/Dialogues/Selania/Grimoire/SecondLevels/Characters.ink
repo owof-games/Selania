@@ -92,19 +92,19 @@
 
 
     + {grimoire_secondChar != ()}[Conversation]
-            // -> grimoire_second_character_conversation
+            -> grimoire_second_character_conversation
 
     + {secondChar_giftedObject != ()}[Present]
-            // -> grimoire_second_character_present
+            -> grimoire_second_character_present
 
     + {grimoire_secondChar has grimSecondCharKitchenEnded}[Kitchen]
-            // -> grimoire_second_character_kitchen
+            -> grimoire_second_character_kitchen
 
     + {grimoire_secondChar has grimSecondCharProposal}[Rewrite]
-            // -> grimoire_second_character_rewrite
+            -> grimoire_second_character_rewrite
 
     + {grimoire_secondChar has grimSecondCharLetterOne}[Letters]
-            // -> grimoire_second_character_letters    
+            -> grimoire_second_character_letters    
             
     + [Index #bookmark:index]
         -> grimoire
@@ -150,19 +150,19 @@
 
 
     + {grimoire_thirdChar != ()}[Conversation]
-            // -> grimoire_third_character_conversation
+            -> grimoire_third_character_conversation
 
     + {thirdChar_giftedObject != ()}[Present]
-            // -> grimoire_third_character_present
+            -> grimoire_third_character_present
 
     + {grimoire_thirdChar has grimThirdCharKitchenEnded}[Kitchen]
-            // -> grimoire_third_character_kitchen
+            -> grimoire_third_character_kitchen
 
     + {grimoire_thirdChar has grimThirdCharProposal}[Rewrite]
-            // -> grimoire_third_character_rewrite
+            -> grimoire_third_character_rewrite
 
     + {grimoire_thirdChar has grimThirdCharLetterOne}[Letters]
-            // -> grimoire_third_character_letters    
+            -> grimoire_third_character_letters    
             
     + [Index #bookmark:index]
         -> grimoire
@@ -207,19 +207,19 @@
 
 
     + {grimoire_fourthChar != ()}[Conversation]
-            // -> grimoire_fourth_character_conversation
+            -> grimoire_fourth_character_conversation
 
     + {fourthChar_giftedObject != ()}[Present]
-            // -> grimoire_fourth_character_present
+            -> grimoire_fourth_character_present
 
     + {grimoire_fourthChar has grimFourthCharKitchenEnded}[Kitchen]
-            // -> grimoire_fourth_character_kitchen
+            -> grimoire_fourth_character_kitchen
 
     + {grimoire_fourthChar has grimFourthCharProposal}[Rewrite]
-            // -> grimoire_fourth_character_rewrite
+            -> grimoire_fourth_character_rewrite
 
     + {grimoire_fourthChar has grimFourthCharLetterOne}[Letters]
-            // -> grimoire_fourth_character_letters    
+            -> grimoire_fourth_character_letters    
             
     + [Index #bookmark:index]
         -> grimoire
@@ -265,19 +265,19 @@
 
 
     + {grimoire_fifthChar != ()}[Conversation]
-            // -> grimoire_fifth_character_conversation
+            -> grimoire_fifth_character_conversation
 
     + {fifthChar_giftedObject != ()}[Present]
-            // -> grimoire_fifth_character_present
+            -> grimoire_fifth_character_present
 
     + {grimoire_fifthChar has grimFifthCharKitchenEnded}[Kitchen]
-            // -> grimoire_fifth_character_kitchen
+            -> grimoire_fifth_character_kitchen
 
     + {grimoire_fifthChar has grimFifthCharProposal}[Rewrite]
-            // -> grimoire_fifth_character_rewrite
+            -> grimoire_fifth_character_rewrite
 
     + {grimoire_fifthChar has grimFifthCharLetterOne}[Letters]
-            // -> grimoire_fifth_character_letters    
+            -> grimoire_fifth_character_letters    
             
     + [Index #bookmark:index]
         -> grimoire

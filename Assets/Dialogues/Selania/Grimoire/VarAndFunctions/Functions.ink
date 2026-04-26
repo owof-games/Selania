@@ -8,18 +8,28 @@
 {PNG:
     - FirstCharacter:
         ~ return "Una ragazza in cerca della sua melodia"
+    
     - SecondCharacter:
         ~ return "Frase da scrivere"
+    
     - ThirdCharacter:
         ~ return "Frase da scrivere"
+    
     - FourthCharacter:
         ~ return "Frase da scrivere"
+    
     - FifthCharacter:
+        {
+            - fifthChar_storyStatus != story_storyNotStarted:
+                ~ return "Sono un MOOOOOOOOSTRO!"
+            - else:
+                ~ return "Ogni petalo un consiglio"    
+        }
         ~ return "Frase da scrivere"
+    
     - TheWitch:
         ~ return "Luce dal cielo, guida dalla discarica"
-    - Mentor:
-        ~ return "Ogni petalo un consiglio"
+
     - Franco:
         ~ return "Un concentrato di craaa-ggezza!"
 

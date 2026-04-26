@@ -15,7 +15,15 @@
             -> grimoire_fourthCharacter
 
         + {grimoire_fifthChar != ()}[FifthCharacter]
-            -> grimoire_fifthCharacter
+            //è direttamente il primo livello a fare una differenza d'accesso alle informazioni di PNG5 a seconda che sia come Mentore (e vado quindi solo alle conversation) o Mostro (e allora ho la visualizzazione "normale")
+            {
+                -  fifthChar_storyStatus != story_storyNotStarted:
+                    -> grimoire_fifthCharacter
+
+                - else:
+                    -> grimoire_fifth_character_conversation 
+            }
+            
 
         //PNG supporto
         + {grimoire_witch != ()}[Witch]
