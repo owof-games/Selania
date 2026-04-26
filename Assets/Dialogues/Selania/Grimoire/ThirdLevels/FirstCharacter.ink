@@ -111,7 +111,7 @@
     
     + [Index #bookmark:index]
         -> grimoire
-    + [Chitarra #bookmark:secondLevel]
+    + [{translator(firstChar_ActualName)} #bookmark:secondLevel]
         -> grimoire_firstCharacter
     + [precedente #bookmark:previous]
         @grimoireTextPrevious
@@ -157,7 +157,7 @@
 
     + [Index #bookmark:index]
         -> grimoire
-    + [Chitarra #bookmark:secondLevel]
+    + [{translator(firstChar_ActualName)} #bookmark:secondLevel]
         -> grimoire_firstCharacter
     + [precedente #bookmark:previous]
         @grimoireTextPrevious
@@ -232,7 +232,7 @@
 
     + [Index #bookmark:index]
         -> grimoire
-    + [Chitarra #bookmark:secondLevel]
+    + [{translator(firstChar_ActualName)} #bookmark:secondLevel]
         -> grimoire_firstCharacter
     + [precedente #bookmark:previous]
         @grimoireTextPrevious
@@ -311,7 +311,7 @@
 
     + [Index #bookmark:index]
         -> grimoire
-    + [Chitarra #bookmark:secondLevel]
+    + [{translator(firstChar_ActualName)} #bookmark:secondLevel]
         -> grimoire_firstCharacter
     + [precedente #bookmark:previous]
         @grimoireTextPrevious
@@ -355,7 +355,7 @@
 
     + [Index #bookmark:index]
         -> grimoire
-    + [Chitarra #bookmark:secondLevel]
+    + [{translator(firstChar_ActualName)} #bookmark:secondLevel]
         -> grimoire_firstCharacter
     + [precedente #bookmark:previous]
         @grimoireTextPrevious
