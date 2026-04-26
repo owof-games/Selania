@@ -3,6 +3,7 @@
     Funzioni per pagine personagge
 
 ***********************************/
+//Per le descrizioni delle personagge
 === function grimoire_characterDescription(PNG)
 {PNG:
     - FirstCharacter:
@@ -21,6 +22,66 @@
         ~ return "Ogni petalo un consiglio"
     - Franco:
         ~ return "Un concentrato di craaa-ggezza!"
+
+}
+
+
+//Gestione ad hoc di Mentore/Mostro
+=== function grimoire_characterName(PNG)
+
+{PNG:
+    - FirstCharacter:
+        ~ return translator(firstChar_ActualName)
+
+    - SecondCharacter:
+        {
+            - ! second_char_main_storylets.one.nameSecond:
+                ~ return "???"
+            - else:
+                ~ return translator(secondChar_ActualName)
+        }
+        
+    - ThirdCharacter:
+        {
+            - ! grimoire_thirdChar hasnt grimThirdCharOne:
+                ~ return "???"
+            
+            - else:
+                ~ return translator(thirdChar_ActualName)
+        }
+
+    - FourthCharacter:
+        ~ return translator(fourthChar_ActualName)
+
+    - FifthCharacter:
+        {
+            - fifthChar_storyStatus != story_storyNotStarted:
+                ~ return translator(fifthChar_ActualName)
+
+            - else:
+                {
+                    - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
+                        ~ return "???"
+                    
+                    - mentor_ActualName == Mentore:
+                        ~ return "Mentore"
+                }
+        }
+
+    - Franco:
+        {
+            - frog_nameDiscovered == false:
+                ~ return "???"
+            
+            - are_two_entities_together(PG, Franco) && entity_location(PG) == Kitchen:
+                ~ return "Franco Lo Chef"
+
+            - else:
+                ~ return "Franco La Rana"
+        }
+
+    - TheWitch:
+        ~ return translator(witch_actualName)
 
 }
 

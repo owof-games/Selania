@@ -1,5 +1,5 @@
 === grimoire_firstCharacter
-@grimoireCharacter #character:FirstCharacter #characterName:{translator(firstChar_ActualName)} #characterDescription:{grimoire_characterDescription(FirstCharacter)}
+@grimoireCharacter #character:FirstCharacter #characterName:{grimoire_characterName(FirstCharacter)} #characterDescription:{grimoire_characterDescription(FirstCharacter)}
 
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -56,7 +56,7 @@
 
 
 === grimoire_secondCharacter
-@grimoireCharacter #character:SecondCharacter #characterName:{translator(secondChar_ActualName)} #characterDescription:{grimoire_characterDescription(SecondCharacter)}
+@grimoireCharacter #character:SecondCharacter #characterName:{grimoire_characterName(SecondCharacter)} #characterDescription:{grimoire_characterDescription(SecondCharacter)}
 
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -114,7 +114,7 @@
 
 
 === grimoire_thirdCharacter
-@grimoireCharacter #character:ThirdCharacter #characterName:{translator(thirdChar_ActualName)} #characterDescription:{grimoire_characterDescription(ThirdCharacter)}
+@grimoireCharacter #character:ThirdCharacter #characterName:{grimoire_characterName(ThirdCharacter)} #characterDescription:{grimoire_characterDescription(ThirdCharacter)}
 
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -171,7 +171,7 @@
 
 
 === grimoire_fourthCharacter
-@grimoireCharacter #character:FourthCharacter #characterName:{translator(fourthChar_ActualName)} #characterDescription:{grimoire_characterDescription(FourthCharacter)}
+@grimoireCharacter #character:FourthCharacter #characterName:{grimoire_characterName(FourthCharacter)} #characterDescription:{grimoire_characterDescription(FourthCharacter)}
 
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -229,7 +229,7 @@
 
 
 === grimoire_fifthCharacter
-@grimoireCharacter #character:FifthCharacter #characterName:{translator(fifthChar_ActualName)} #characterDescription:{grimoire_characterDescription(FifthCharacter)}
+@grimoireCharacter #character:FifthCharacter #characterName:{grimoire_characterName(FifthCharacter)} #characterDescription:{grimoire_characterDescription(FifthCharacter)}
 
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
