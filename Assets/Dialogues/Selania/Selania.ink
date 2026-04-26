@@ -151,6 +151,13 @@
     INCLUDE Grimoire\ThirdLevels\Sigils.ink
     //Personagge
     INCLUDE Grimoire\ThirdLevels\FirstCharacter.ink
+    INCLUDE Grimoire\ThirdLevels\SecondCharacter.ink
+    INCLUDE Grimoire\ThirdLevels\ThirdCharacter.ink
+    INCLUDE Grimoire\ThirdLevels\FourthCharacter.ink
+    INCLUDE Grimoire\ThirdLevels\FifthCharacter.ink
+
+    INCLUDE Grimoire\ThirdLevels\Witch.ink
+    INCLUDE Grimoire\ThirdLevels\Franco.ink
 
 
     

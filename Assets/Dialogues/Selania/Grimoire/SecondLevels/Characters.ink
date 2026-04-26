@@ -56,7 +56,56 @@
 
 
 === grimoire_secondCharacter
+@grimoireCharacter #character:SecondCharacter #characterName:{translator(secondChar_ActualName)} #characterDescription:{grimoire_characterDescription(SecondCharacter)}
 
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+    {
+        - frog_second_char_gift != "" && secondChar_giftedObject == ():
+            Regalale <b>{ingredientTranslator(frog_second_char_gift)}</b>.
+
+        - secondChar_giftedObject != ():
+            Le hai regalato <b>{ingredientTranslator(secondChar_giftedObject)}</b>.
+    }
+    
+    {
+        - frog_second_char_ingredient != "" && kitchen_secondCharExtraIngredient == ():
+            In cucina aggiungi <b>{ingredientTranslator(frog_second_char_ingredient)}</b>.
+
+        - kitchen_secondCharExtraIngredient != ():
+            In cucina hai aggiunto <b>{ingredientTranslator(kitchen_secondCharExtraIngredient)}</b>.    
+    }
+    
+    {
+        - frog_second_novel != "" && grimoire_secondChar hasnt grimSecondCharNovel:
+            Il suo racconto preferito è {frog_second_novel}.
+
+        -  grimoire_secondChar has grimSecondCharNovel:
+            Il suo racconto preferito è <b>Luna vergine</b> di Aza.
+    }
+    
+
+
+    + {grimoire_secondChar != ()}[Conversation]
+            // -> grimoire_second_character_conversation
+
+    + {secondChar_giftedObject != ()}[Present]
+            // -> grimoire_second_character_present
+
+    + {grimoire_secondChar has grimSecondCharKitchenEnded}[Kitchen]
+            // -> grimoire_second_character_kitchen
+
+    + {grimoire_secondChar has grimSecondCharProposal}[Rewrite]
+            // -> grimoire_second_character_rewrite
+
+    + {grimoire_secondChar has grimSecondCharLetterOne}[Letters]
+            // -> grimoire_second_character_letters    
+            
     + [Index #bookmark:index]
         -> grimoire
         -
@@ -65,16 +114,113 @@
 
 
 === grimoire_thirdCharacter
+@grimoireCharacter #character:ThirdCharacter #characterName:{translator(thirdChar_ActualName)} #characterDescription:{grimoire_characterDescription(ThirdCharacter)}
 
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+    {
+        - frog_third_char_gift != "" && thirdChar_giftedObject == ():
+            Regalale <b>{ingredientTranslator(frog_third_char_gift)}</b>.
+
+        - thirdChar_giftedObject != ():
+            Le hai regalato <b>{ingredientTranslator(thirdChar_giftedObject)}</b>.
+    }
+    
+    {
+        - frog_third_char_ingredient != "" && kitchen_thirdCharExtraIngredient == ():
+            In cucina aggiungi <b>{ingredientTranslator(frog_third_char_ingredient)}</b>.
+
+        - kitchen_thirdCharExtraIngredient != ():
+            In cucina hai aggiunto <b>{ingredientTranslator(kitchen_thirdCharExtraIngredient)}</b>.    
+    }
+    
+    {
+        - frog_third_novel != "" && grimoire_thirdChar hasnt grimThirdCharNovel:
+            Il suo racconto preferito è {frog_third_novel}.
+
+        -  grimoire_thirdChar has grimThirdCharNovel:
+            Il suo racconto preferito è <b>Luna vergine</b> di Aza.
+    }
+    
+
+
+    + {grimoire_thirdChar != ()}[Conversation]
+            // -> grimoire_third_character_conversation
+
+    + {thirdChar_giftedObject != ()}[Present]
+            // -> grimoire_third_character_present
+
+    + {grimoire_thirdChar has grimThirdCharKitchenEnded}[Kitchen]
+            // -> grimoire_third_character_kitchen
+
+    + {grimoire_thirdChar has grimThirdCharProposal}[Rewrite]
+            // -> grimoire_third_character_rewrite
+
+    + {grimoire_thirdChar has grimThirdCharLetterOne}[Letters]
+            // -> grimoire_third_character_letters    
+            
     + [Index #bookmark:index]
         -> grimoire
         -
         -> grimoire_thirdCharacter
 
 
-
 === grimoire_fourthCharacter
+@grimoireCharacter #character:FourthCharacter #characterName:{translator(fourthChar_ActualName)} #characterDescription:{grimoire_characterDescription(FourthCharacter)}
 
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+    // {
+    //     - frog_fourth_char_gift != "" && fourthChar_giftedObject == ():
+    //         Regalale <b>{ingredientTranslator(frog_fourth_char_gift)}</b>.
+
+    //     - fourthChar_giftedObject != ():
+    //         Le hai regalato <b>{ingredientTranslator(fourthChar_giftedObject)}</b>.
+    // }
+    
+    // {
+    //     - frog_fourth_char_ingredient != "" && kitchen_fourthCharExtraIngredient == ():
+    //         In cucina aggiungi <b>{ingredientTranslator(frog_fourth_char_ingredient)}</b>.
+
+    //     - kitchen_fourthCharExtraIngredient != ():
+    //         In cucina hai aggiunto <b>{ingredientTranslator(kitchen_fourthCharExtraIngredient)}</b>.    
+    // }
+    
+    // {
+    //     - frog_fourth_novel != "" && grimoire_fourthChar hasnt grimFourthCharNovel:
+    //         Il suo racconto preferito è {frog_fourth_novel}.
+
+    //     -  grimoire_fourthChar has grimFourthCharNovel:
+    //         Il suo racconto preferito è <b>Luna vergine</b> di Aza.
+    // }
+    
+
+
+    + {grimoire_fourthChar != ()}[Conversation]
+            // -> grimoire_fourth_character_conversation
+
+    + {fourthChar_giftedObject != ()}[Present]
+            // -> grimoire_fourth_character_present
+
+    + {grimoire_fourthChar has grimFourthCharKitchenEnded}[Kitchen]
+            // -> grimoire_fourth_character_kitchen
+
+    + {grimoire_fourthChar has grimFourthCharProposal}[Rewrite]
+            // -> grimoire_fourth_character_rewrite
+
+    + {grimoire_fourthChar has grimFourthCharLetterOne}[Letters]
+            // -> grimoire_fourth_character_letters    
+            
     + [Index #bookmark:index]
         -> grimoire
         -
@@ -83,26 +229,58 @@
 
 
 === grimoire_fifthCharacter
+@grimoireCharacter #character:FifthCharacter #characterName:{translator(fifthChar_ActualName)} #characterDescription:{grimoire_characterDescription(FifthCharacter)}
 
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+    // {
+    //     - frog_fifth_char_gift != "" && fifthChar_giftedObject == ():
+    //         Regalale <b>{ingredientTranslator(frog_fifth_char_gift)}</b>.
+
+    //     - fifthChar_giftedObject != ():
+    //         Le hai regalato <b>{ingredientTranslator(fifthChar_giftedObject)}</b>.
+    // }
+    
+    // {
+    //     - frog_fifth_char_ingredient != "" && kitchen_fifthCharExtraIngredient == ():
+    //         In cucina aggiungi <b>{ingredientTranslator(frog_fifth_char_ingredient)}</b>.
+
+    //     - kitchen_fifthCharExtraIngredient != ():
+    //         In cucina hai aggiunto <b>{ingredientTranslator(kitchen_fifthCharExtraIngredient)}</b>.    
+    // }
+    
+    // {
+    //     - frog_fifth_novel != "" && grimoire_fifthChar hasnt grimFifthCharNovel:
+    //         Il suo racconto preferito è {frog_fifth_novel}.
+
+    //     -  grimoire_fifthChar has grimFifthCharNovel:
+    //         Il suo racconto preferito è <b>Luna vergine</b> di Aza.
+    // }
+    
+
+
+    + {grimoire_fifthChar != ()}[Conversation]
+            // -> grimoire_fifth_character_conversation
+
+    + {fifthChar_giftedObject != ()}[Present]
+            // -> grimoire_fifth_character_present
+
+    + {grimoire_fifthChar has grimFifthCharKitchenEnded}[Kitchen]
+            // -> grimoire_fifth_character_kitchen
+
+    + {grimoire_fifthChar has grimFifthCharProposal}[Rewrite]
+            // -> grimoire_fifth_character_rewrite
+
+    + {grimoire_fifthChar has grimFifthCharLetterOne}[Letters]
+            // -> grimoire_fifth_character_letters    
+            
     + [Index #bookmark:index]
         -> grimoire
         -
         -> grimoire_fifthCharacter
 
-
-
-=== grimoire_witchRecap
-
-    + [Index #bookmark:index]
-        -> grimoire
-        -
-        -> grimoire_witchRecap
-
-
-
-=== grimoire_francoRecap
-
-    + [Index #bookmark:index]
-        -> grimoire
-        -
-        -> grimoire_francoRecap
