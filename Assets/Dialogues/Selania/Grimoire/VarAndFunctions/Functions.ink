@@ -1,5 +1,34 @@
 /***********************************
 
+    Funzioni per pagine personagge
+
+***********************************/
+=== function grimoire_characterDescription(PNG)
+{PNG:
+    - FirstCharacter:
+        ~ return "Una ragazza in cerca della sua melodia"
+    - SecondCharacter:
+        ~ return "Frase da scrivere"
+    - ThirdCharacter:
+        ~ return "Frase da scrivere"
+    - FourthCharacter:
+        ~ return "Frase da scrivere"
+    - FifthCharacter:
+        ~ return "Frase da scrivere"
+    - TheWitch:
+        ~ return "Luce dal cielo, guida dalla discarica"
+    - Mentor:
+        ~ return "Ogni petalo un consiglio"
+    - Franco:
+        ~ return "Un concentrato di craaa-ggezza!"
+
+}
+
+
+
+
+/***********************************
+
     Funzioni per pagine piante
 
 ***********************************/

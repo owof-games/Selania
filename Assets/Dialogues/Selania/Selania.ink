@@ -149,6 +149,8 @@
     INCLUDE Grimoire\ThirdLevels\Rules.ink
     INCLUDE Grimoire\ThirdLevels\Plants.ink
     INCLUDE Grimoire\ThirdLevels\Sigils.ink
+    //Personagge
+    INCLUDE Grimoire\ThirdLevels\FirstCharacter.ink
 
 
     

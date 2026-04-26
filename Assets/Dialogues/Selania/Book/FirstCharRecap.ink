@@ -178,24 +178,7 @@
     {
         - grimoire_firstChar != (): <b><i>Appunti dalle conversazioni.</b></i><N><>
     }
-    {
-    
-        - frog_first_char_gift != "":
-            {player_name} ha chiesto un consiglio a Franco la Rana su cosa donare a {charNameOne}, e la risposta di Franco è stata: <b>{ingredientTranslator(frog_first_char_gift)}</b>.
-    }
-    
-    {
-    
-        - frog_first_char_ingredient != "":
-            {player_name} ha chiesto un consiglio a Franco la Rana su cosa inserire nel piatto da cucinare con {charNameOne}, e la risposta di Franco è stata: <b>{ingredientTranslator(frog_first_char_ingredient)}</b>.
-    }
-    
-    {
-    
-        - frog_first_novel != "":
-            {player_name} ha chiesto un consiglio a Franco la Rana su un racconto di cui parlare con {charNameOne}, e la risposta di Franco è stata: <b>{frog_first_novel}</b>.
-    }
-    
+ 
     {
         - grimoire_firstChar has grimFirstCharKitchenAlone:
             Dopo aver cucinato da sola, {charNameOne} ha parlato del rapporto che ha con sua madre, e di come lei non la capisca fino in fondo. Ma sa che è una donna che parla poco ma ci tiene tanto alle altre persone. Ha raccontato a {player_name} del cibo che ha preparato quando è salita a trovarla, del riordino della casa, del saper dire "Ti voglio bene" solo coi fornelli. E che da quando {charNameOne} questa cosa un po' l'ha portata con sé, cucinando cenoni con le ame.
