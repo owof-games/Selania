@@ -295,12 +295,12 @@ namespace Selania.Rework.Components.Grimoire
                 descriptor.description);
 
             // manage navigation, removing navigation choices that are not available
-            if (!grimoireBackground.ThirdLevelCharacterCanTurnToNextPage)
+            if (!grimoireBackground.thirdLevelCharacterCanTurnToNextPage)
             {
                 descriptor = descriptor with { nextPageText = null };
             }
 
-            if (!grimoireBackground.ThirdLevelCharacterCanTurnToPreviousPage)
+            if (!grimoireBackground.thirdLevelCharacterCanTurnToPreviousPage)
             {
                 descriptor = descriptor with { previousPageText = null };
             }

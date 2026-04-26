@@ -298,9 +298,9 @@ namespace Selania.Rework.Components.Grimoire
         /// </summary>
         public Observable<string> secondLevelCharactersButtonClick => secondLevelCharactersGrimoire.clickObservable;
 
-        public bool ThirdLevelCharacterCanTurnToNextPage => thirdLevelCharacterGrimoire.canTurnToNextPage;
+        public bool thirdLevelCharacterCanTurnToNextPage => thirdLevelCharacterGrimoire.canTurnToNextPage;
 
-        public bool ThirdLevelCharacterCanTurnToPreviousPage => thirdLevelCharacterGrimoire.canTurnToPreviousPage;
+        public bool thirdLevelCharacterCanTurnToPreviousPage => thirdLevelCharacterGrimoire.canTurnToPreviousPage;
 
         private void Awake()
         {
