@@ -142,6 +142,8 @@
     INCLUDE Grimoire\SecondLevels\Sigils.ink
     INCLUDE Grimoire\SecondLevels\Characters.ink
     INCLUDE Grimoire\SecondLevels\Appendices.ink
+    INCLUDE Grimoire\SecondLevels\Witch.ink
+    INCLUDE Grimoire\SecondLevels\Franco.ink
 
 
     INCLUDE Grimoire\ThirdLevels\Greenhouse.ink
@@ -156,8 +158,7 @@
     INCLUDE Grimoire\ThirdLevels\FourthCharacter.ink
     INCLUDE Grimoire\ThirdLevels\FifthCharacter.ink
 
-    INCLUDE Grimoire\ThirdLevels\Witch.ink
-    INCLUDE Grimoire\ThirdLevels\Franco.ink
+    
 
 
     

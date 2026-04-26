@@ -97,7 +97,7 @@
     
     + [Index #bookmark:index]
         -> grimoire
-    + [{translator(fifthChar_ActualName)} #bookmark:secondLevel]
+    + {fifthChar_storyStatus != story_storyNotStarted}[{translator(fifthChar_ActualName)} #bookmark:secondLevel]
         -> grimoire_fifthCharacter
     + [precedente #bookmark:previous]
         @grimoireTextPrevious

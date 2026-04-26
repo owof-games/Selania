@@ -12,6 +12,7 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
 **************************/
 
 === grimoire_choicesAndRelationships
+@grimoireText #style:character #icon:AppendiceA #title:AppendiceA #description:{grimoire_characterDescription(AppendiceA)}
 ~ temp charNameOne = translator(firstChar_ActualName)
 ~ temp charNameTwo = translator(secondChar_ActualName)
 ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -93,12 +94,22 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     A quel punto non mi vorrà mai più.
     
 
-->->
+    + [Index #bookmark:index]
+        -> grimoire
+    + [Appendici #bookmark:secondLevel]
+        -> grimoire_appendicesCollection
+    + [precedente #bookmark:previous]
+        @grimoireTextPrevious
+        -> grimoire_choicesAndRelationships
+    + [prossima #bookmark:next]
+        @grimoireTextNext
+        -> grimoire_choicesAndRelationships
 
 
 
 
 === grimoire_greenhouseAndGifts
+@grimoireText #style:character #icon:AppendiceB #title:AppendiceB #description:{grimoire_characterDescription(AppendiceB)}
 ~ temp charNameOne = translator(firstChar_ActualName)
 ~ temp charNameTwo = translator(secondChar_ActualName)
 ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -168,10 +179,19 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     Per cui non chiedermi di togliere Franco, non chiedermi di sembrare più "normale", non chiedermi di tradire la memoria di quel povero ragazzo.
     K.
 
-->->
-
+    + [Index #bookmark:index]
+        -> grimoire
+    + [Appendici #bookmark:secondLevel]
+        -> grimoire_appendicesCollection
+    + [precedente #bookmark:previous]
+        @grimoireTextPrevious
+        -> grimoire_greenhouseAndGifts
+    + [prossima #bookmark:next]
+        @grimoireTextNext
+        -> grimoire_greenhouseAndGifts
 
 === grimoire_kitchenAndRelationships
+@grimoireText #style:character #icon:AppendiceC #title:AppendiceC #description:{grimoire_characterDescription(AppendiceC)}
 ~ temp charNameOne = translator(firstChar_ActualName)
 ~ temp charNameTwo = translator(secondChar_ActualName)
 ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -245,10 +265,22 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     <i>Rumore di acqua bevuta.</i>
     E ora lascio la parola a K., che ci racconterà alcuni aneddoti della sua amicizia con O.U.J.
     
-->->
+    + [Index #bookmark:index]
+        -> grimoire
+    + [Appendici #bookmark:secondLevel]
+        -> grimoire_appendicesCollection
+    + [precedente #bookmark:previous]
+        @grimoireTextPrevious
+        -> grimoire_kitchenAndRelationships
+    + [prossima #bookmark:next]
+        @grimoireTextNext
+        -> grimoire_kitchenAndRelationships
+
 
 
 === grimoire_inkAndRewriting
+@grimoireText #style:character #icon:AppendiceD #title:AppendiceD #description:{grimoire_characterDescription(AppendiceD)}
+
 ~ temp charNameOne = translator(firstChar_ActualName)
 ~ temp charNameTwo = translator(secondChar_ActualName)
 ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -327,12 +359,24 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     Y.
 
 
-->->
+    + [Index #bookmark:index]
+        -> grimoire
+    + [Appendici #bookmark:secondLevel]
+        -> grimoire_appendicesCollection
+    + [precedente #bookmark:previous]
+        @grimoireTextPrevious
+        -> grimoire_inkAndRewriting
+    + [prossima #bookmark:next]
+        @grimoireTextNext
+        -> grimoire_inkAndRewriting
+
 
 
 
 
 === grimoire_Sigils
+@grimoireText #style:character #icon:AppendiceE #title:AppendiceE #description:{grimoire_characterDescription(AppendiceE)}
+
 ~ temp charNameOne = translator(firstChar_ActualName)
 ~ temp charNameTwo = translator(secondChar_ActualName)
 ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -417,4 +461,165 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     Ora voglio solo riprendere a dedicarmi alle persone che mi hanno accompagnata fin qui.
     Negli ultimi mesi le ho completamente trascurate.
 
-->->
+    + [Index #bookmark:index]
+        -> grimoire
+    + [Appendici #bookmark:secondLevel]
+        -> grimoire_appendicesCollection
+    + [precedente #bookmark:previous]
+        @grimoireTextPrevious
+        -> grimoire_Sigils
+    + [prossima #bookmark:next]
+        @grimoireTextNext
+        -> grimoire_Sigils
+
+
+=== grimoire_lettersAndDocuments
+@grimoireText #style:character #icon:LettersAndDocuments #title:Documenti #description:{grimoire_characterDescription(LettersAndDocuments)}
+
+~ temp charNameOne = translator(firstChar_ActualName)
+~ temp charNameTwo = translator(secondChar_ActualName)
+~ temp charNameThree = translator(thirdChar_ActualName)
+~ temp charNameFour = translator(fourthChar_ActualName)
+~ temp mentorName = translator(mentor_ActualName)
+
+
+
+    {
+        - horizontalS_discoveredDocs has docOne:
+            -> docOne_storylet ->
+    }
+
+    {
+        - horizontalS_discoveredDocs has docTwo:
+            -> docTwo_storylet ->
+    }
+
+    {
+        - horizontalS_discoveredDocs has docThree:
+            -> docThree_storylet ->
+    }
+
+    {
+        - horizontalS_discoveredDocs has docFour:
+            -> docFour_storylet ->
+    }
+
+    {
+        - horizontalS_discoveredDocs has docFive:
+            -> docFive_storylet ->
+    }
+
+    {
+        - horizontalS_discoveredDocs has docSix:
+            -> docSix_storylet ->
+    }
+
+    {
+        - horizontalS_discoveredDocs has docSeven:
+            -> docSeven_storylet ->
+    }
+
+    {
+        - horizontalS_discoveredDocs has docEight:
+            -> docEight_storylet ->
+    }
+
+    {
+        - horizontalS_discoveredDocs has docNine:
+            -> docNine_storylet ->
+    }
+
+    {
+        - horizontalS_discoveredDocs has docTen:
+            -> docTen_storylet ->
+    }
+
+    {
+        - horizontalS_discoveredDocs has docEleven:
+            -> docEleven_storylet ->
+    }
+
+    {
+        - horizontalS_discoveredDocs has docTwelve:
+            -> docTwelve_storylet ->
+    }
+        
+    {
+        - horizontalS_discoveredDocs has docThirteen:
+            -> docThirteen_storylet ->
+    }
+
+    {
+        - horizontalS_discoveredDocs has docFourteen:
+            -> docFourteen_storylet ->
+    }
+
+    {
+        - horizontalS_discoveredDocs has docFifteen:
+            -> docFifteen_storylet ->
+    }
+
+    {
+        - horizontalS_discoveredDocs has docSixteen:
+            -> docSixteen_storylet ->
+    }
+
+    {
+        - horizontalS_discoveredDocs has docSeventeen:
+            -> docSeventeen_storylet ->
+    }
+
+    {
+        - horizontalS_discoveredDocs has docEighteen:
+            -> docEighteen_storylet ->
+    }
+
+    {
+        - horizontalS_discoveredDocs has docNineteen:
+            -> docNineteen_storylet ->
+    }
+
+    {
+        - horizontalS_discoveredDocs has docTwenty:
+            -> docTwenty_storylet ->
+    }
+
+    {
+        - horizontalS_discoveredDocs has docTwentyOne:
+            -> docTwentyOne_storylet ->
+    }
+
+    {
+        - horizontalS_discoveredDocs has docTwentyTwo:
+            -> docTwentyTwo_storylet ->
+    }
+
+    {
+        - horizontalS_discoveredDocs has docTwentyThree:
+            -> docTwentyThree_storylet ->
+    }
+
+    {
+        - horizontalS_discoveredDocs has docTwentyFour:
+            -> docTwentyFour_storylet ->
+    }
+
+    {
+        - horizontalS_discoveredDocs has docTwentyFive:
+            -> docTwentyFive_storylet ->
+    }
+
+
+
+
+
+    + [Index #bookmark:index]
+        -> grimoire
+    + [Appendici #bookmark:secondLevel]
+        -> grimoire_appendicesCollection
+    + [precedente #bookmark:previous]
+        @grimoireTextPrevious
+        -> grimoire_lettersAndDocuments
+    + [prossima #bookmark:next]
+        @grimoireTextNext
+        -> grimoire_lettersAndDocuments

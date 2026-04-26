@@ -33,6 +33,25 @@
     - Franco:
         ~ return "Un concentrato di craaa-ggezza!"
 
+    //Appendici
+    - AppendiceA:
+        ~ return "Su scelte, dialoghi e relazioni"
+
+    - AppendiceB:
+        ~ return "Sul potere dei doni"
+
+    - AppendiceC:
+        ~ return "Su cucina e affinità"
+
+    - AppendiceD:
+        ~ return "Su scrittura e riscrittura"
+
+    - AppendiceE:
+        ~ return "Sui sigilli"
+
+    - LettersAndDocuments:
+        ~ return "Voci da un altro tempo"
+
 }
 
 

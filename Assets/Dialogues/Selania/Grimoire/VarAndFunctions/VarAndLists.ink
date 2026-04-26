@@ -59,3 +59,7 @@ VAR grimoire_chosenPlant = ()
 
 //Lista dei doni che si possono trovare in gioco.
 VAR backpack_findedGifts = ()
+
+
+//Liste delle appendici per chiamare icone e descrizioni
+LIST grimoire_allAppendixes = AppendiceA, AppendiceB, AppendiceC, AppendiceD, AppendiceE, LettersAndDocuments
