@@ -1284,18 +1284,23 @@
                     {charTag(SecondCharacter, "neutral")}:      Rispondo di no.
                                                                 Perché non so.
                     {charTag(SecondCharacter, "melanchonic")}:  Non è che mi è piaciuto molto molto come abbiamo parlato.
-                
+
+                        ~ grimoire_secondChar += grimSecondCharKitchenNegativeReaction
+
                 - secondChar_relationshipStatus == neutral:
                     {charTag(SecondCharacter, "neutral")}:      Sì no boh.
                                                                 Devo ancora capirlo.
                     {charTag(SecondCharacter, "emotional")}:    Perché ci sono stati dei momenti in cui ho detto "Ma che figo che è avere qui {player_name}".
                     {charTag(SecondCharacter, "melanchonic")}:  E dei momenti in cui non ti capivo.
+
+                    ~ grimoire_secondChar += grimSecondCharKitchenNeutralReaction
                 
                 - secondChar_relationshipStatus == positive:
                     {charTag(SecondCharacter, "emotional")}:    Rispondo subito sììììììììì!
                     {charTag(SecondCharacter, "energy")}:       Mi sono divertito.
                     {charTag(SecondCharacter, "emotional")}:    E mi è sembrato che mi hai ascoltato davvero.
                                                                 E mi piace questa cosa!
+                    ~ grimoire_secondChar += grimSecondCharKitchenPositiveReaction                                            
             }    
 
 

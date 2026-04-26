@@ -91,7 +91,6 @@
         <- franco_inTheNest
 
 //Elementi del libro
-<- first_character_recap
 <- second_character_recap
 <- third_character_recap
 <- fourth_character_recap

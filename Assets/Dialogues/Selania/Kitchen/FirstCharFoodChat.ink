@@ -1246,6 +1246,8 @@
                                                                 Ma piuttosto, le cose che sono per te importanti non lo sono per me.
                 {charTag(FirstCharacter, "annoyed")}:           È come se guardassimo il mondo con due paia di occhiali molto diversi.
                 {charTag(FirstCharacter, "neutral")}:           Ma non ti preoccupare: abbiamo ancora un sacco di chiacchierate da fare per conoscerci, no?
+
+                    ~ grimoire_firstChar += grimFirstCharKitchenNegativeReaction
                 
             - firstChar_relationshipStatus == neutral:
                 {charTag(FirstCharacter, "neutral")}:           Credo che la risposta sia "{player_pronouns has him:rimandato|{player_pronouns has her:rimandata|rimandatə}} a settembre".
@@ -1254,7 +1256,9 @@
                 {charTag(FirstCharacter, "neutral")}:           Alla fine ci stiamo conoscendo giusto ora.
                                                                 E abbiamo ancora un bel po' di chiacchierate da farci assieme, e capirci di più.
                 {charTag(FirstCharacter, "annoyed")}:           O di meno.
-            
+
+                    ~ grimoire_firstChar += grimFirstCharKitchenNeutralReaction
+
             - firstChar_relationshipStatus == positive:
                 {charTag(FirstCharacter, "affectionate")}:      La risposta è sicuramente "sì".
                 {charTag(FirstCharacter, "neutral")}:           Vediamo il mondo in modo simile.
@@ -1262,7 +1266,8 @@
                                                                 Però avere gli stessi valori aiuta a capirsi, a costruire cose assieme.
                 {charTag(FirstCharacter, "affectionate")}:      E posso dirti per ora che sei una persona che mi dà fiducia, {player_name}.
                                                                 Sono felice di starti conoscendo.
-          
+
+                    ~ grimoire_firstChar += grimFirstCharKitchenPositiveReaction
         }
             
             -> ending_cooking_with_first_char

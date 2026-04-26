@@ -87,7 +87,8 @@
 
     {
         - grimoire_firstChar has grimFirstCharKitchenAlone:
-            Cucinando da sola, {charNameOne} si è resa conto che da sua madre ha imparato a dimostrare affetto attraverso la cucina. Ha parlato di una madre non molto capace di comunicare le proprie emozioni, ma ha anche condiviso un ricordo in cui la madre, ospite a casa sua e delle altre ragazze, ha preparato un cenone, ricordandosi anche dei bisogni delle varie coinquiline.
+            Dopo aver cucinato da sola, {charNameOne} ha parlato a {player_name} del rapporto che ha con sua madre, e di come lei non la capisca fino in fondo. Ma sa che è una donna che parla poco ma ci tiene tanto alle altre persone. Ha raccontato a {player_name} del cibo che ha preparato quando è salita a trovarla, del riordino della casa, del saper dire "Ti voglio bene" solo coi fornelli. E che da quando {charNameOne} questa cosa un po' l'ha portata con sé, cucinando cenoni con le ame.
+
     }
 
     //Storylets condivisi
@@ -134,6 +135,26 @@
     ~ temp mentorName = translator(mentor_ActualName)
 
 
+    {
+        - frog_first_char_gift != "":
+            Franco ha consigliato a {player_name} di regalare a {charNameOne} <b>{ingredientTranslator(frog_first_char_gift)}</b>.
+
+    }
+
+
+    {
+        - firstChar_favouritesGifts has firstChar_giftedObject:
+            {player_name} le ha donato <b><i>{ingredientTranslator(firstChar_giftedObject)}</b></i> ed era entusiasta!
+        
+        - firstChar_goodGifts has firstChar_giftedObject:
+            {player_name} le ha donato <b><i>{ingredientTranslator(firstChar_giftedObject)}</b></i> ed ha abbastanza apprezzato.
+        
+        - else:
+            {player_name} le ha donato <b><i>{ingredientTranslator(firstChar_giftedObject)}</b></i> e non ha apprezzato per nulla.
+    
+    }
+        
+
     + [Index #bookmark:index]
         -> grimoire
     + [Chitarra #bookmark:secondLevel]
@@ -157,8 +178,57 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
+    //INSERIRE LOGICA RICETTA
 
 
+    //Recap cose dette
+    {
+        - grimoire_firstChar has grimFirstCharKitchenOne:
+            Durante l'incontro in cucina, {charNameOne} ha parlato delle sue relazione. Ha raccontato di aver avuto un'infanzia senza amici, ma con un forte legame con suo padre, che le ha passato l'amore per la musica. E dai suoi ha imparato che le relazioni sono cura e sacrificio. Con l'arrivo al nord ha fatto molte amicizie in Conservatorio, scoprendo però che nei gruppi si litiga, e questa cosa l'ha riempita di conflitti, soprattutto quando il rapporto con un'amica è stato lasciato morire. Crede anche che non ci sia una differenza vera tra amicizia e amore, e che sia un problema per lo più culturale e linguistico, e le complicazioni che nascono vengono dalle parole che ancora mancano per parlare a modo delle relazioni.
+    }
+    {
+        - grimoire_firstChar has grimFirstCharKitchenTwo:
+            Durante l'incontro in cucina, {charNameOne} ha parlato del suo desiderio di salvare il mondo. E delle sue difficoltà: non si sente brava a parlare di cose politiche, e La Rifugia è nata perché ha potuto vedere un problema concreto e decidere di fare qualcosa, mentre altre parole cariche la fanno sentire inadeguata. E crede che parte di questa inadeguatezza venga dalle dinamiche social e dal giudizio costante. Ritiene che questo tolga la possibilità di sbagliare, ma gli sbagli creano possibilità impreviste. Come il gorgonzola. E poi ha citato la sua amica Valeria, che dice che l'attivismo deve dare piacere, e che a {charNameOne} piace addormentarsi sapendo di aver portato qualcosa di buono nel mondo. E poi: <i>più gorgonzola, meno poliziott3.</i>
+    }
+    {
+        - grimoire_firstChar has grimFirstCharKitchenThree:
+            Durante l'incontro in cucina, {charNameOne} ha parlato del suo rapporto con la creatività. Ha detto che ci sono cose che sa pensare solo quando compone, e per questo è terapeutico. Ma che è preoccupata perché il lavoro la stanca così tanto che a volte non riesce a comporre nulla. E ha paura di non esistere più se dovesse smettere di creare. Creare per lei poi è come gettare un ponte: sia tra le persone che ha conosciuto, sia tra persone che non si conoscono. Trovare l'universale nel particolare, così da potersi ritrovare.
+    }
+
+    //Feedback ingrediente extra
+    {
+        - kitchen_firstCharExtraIngredient == universalIngredient:
+            AGGIUNGI RICORDO IMPORTANTE DI CHITARRA.
+
+    }
+    {
+        - firstChar_favouritesGifts has kitchen_firstCharExtraIngredient:
+                {charNameOne} ha apprezzato l'aggiunta di {ingredientTranslator(kitchen_firstCharExtraIngredient)}, e ha raccontato a {player_name} che sa che non è sempre facilissimo capire come ragiona, ma che alla fine basta non riempirla di commenti rigidini e razionali quando si parla, e che si trova più a suo agio con le cose emotive che non con i dati freddi e distaccati.
+   
+        - firstChar_goodGifts has kitchen_firstCharExtraIngredient:
+                {charNameOne} si è sentita confusa dall'aggiunta di {ingredientTranslator(kitchen_firstCharExtraIngredient)}. Ha detto a {player_name} che ci sono cose che si odiano e si amano quando parli con una persona, ma anche cose che stanno un po' nel mezzo, che non ti fanno né impazzire né le odi. Per esempio per lei è quando una persona dice sempre che si risolve tutto facendo cose, prendendo le cose di petto, o con la rabbia. Oppure quando è tutto molto tangibile, concreto, in un mix di lavoro o riposo.
+
+        - kitchen_firstCharExtraIngredient != ():
+                {charNameOne} ha detestato l'aggiunta di {ingredientTranslator(kitchen_firstCharExtraIngredient)} nel piatto.
+        
+        - else:
+            Cucinando con {charNameOne}, {player_name} ha deciso di non aggiungere alcun ingrediente aggiuntivo.
+
+    }
+
+    //Recap commento a tavola
+    {
+        - grimoire_firstChar has grimFirstCharKitchenPositiveReaction:
+            Dopo aver cucinato assieme, {charNameOne} ha detto a {player_name} che vedono il mondo in modo simile, e che avere gli stessi valori aiuta a capirsi, a costruire cose assieme, ed è felice di aver conosciuto {player_name}.
+
+        - grimoire_firstChar has grimFirstCharKitchenNegativeReaction:
+            Dopo aver cucinato assieme, {charNameOne} ha detto a {player_name} che le cose che sono per lei non sembrano importanti per {player_name}, e viceversa. È come se guardassero il mondo con due paia di occhiali molto diversi.
+
+        - grimoire_firstChar has grimFirstCharKitchenNeutralReaction:
+            Dopo aver cucinato assieme, {charNameOne} ha detto a {player_name} che un po' si capiscono e un po' no, ma che è una cosa che ci sta, perché alla fine si stanno giusto conoscendo.
+
+    }
+    
 
     + [Index #bookmark:index]
         -> grimoire

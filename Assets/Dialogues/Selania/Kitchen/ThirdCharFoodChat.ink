@@ -660,12 +660,19 @@
         {
             - thirdChar_relationshipStatus == negative:
                 {charTag(ThirdCharacter, "neutral")}:       Credo che la risposta sia no.
-                
+
+                    ~ grimoire_thirdChar += grimThirdCharKitchenNegativeReaction
+
             - thirdChar_relationshipStatus == neutral:
                 {charTag(ThirdCharacter, "neutral")}:       Credo che la risposta sia "{player_pronouns has him:rimandato|{player_pronouns has her:rimandata|rimandatə}} a settembre".
-            
+
+                    ~ grimoire_thirdChar += grimThirdCharKitchenNeutralReaction
+
             - thirdChar_relationshipStatus == positive:
                 {charTag(ThirdCharacter, "neutral")}:       La risposta è sicuramente "sì".
+
+                    ~ grimoire_thirdChar += grimThirdCharKitchenPositiveReaction
+
         }    
         
             
