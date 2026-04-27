@@ -2619,7 +2619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5428980059618139193, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
       propertyPath: <buttonName>k__BackingField
-      value: Witch
+      value: TheWitch
       objectReference: {fileID: 0}
     - target: {fileID: 5431039944287200134, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
       propertyPath: m_AnchorMax.y

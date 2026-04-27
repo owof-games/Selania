@@ -4,7 +4,7 @@
                     
                      ----------------------------------*/
 //Possibili nomi:
-    LIST secondChar_possibleStates = Riccio, Grizzly, Lupo, Delfino, Capibara, Corvo
+    LIST secondChar_possibleStates = Riccio, (Grizzly), (Lupo), (Delfino), (Capibara), (Corvo)
     VAR secondChar_ActualName = Riccio
     
     VAR secondChar_storyStatus = story_storyNotStarted

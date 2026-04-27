@@ -453,6 +453,16 @@ MonoBehaviour:
     <sprite>k__BackingField: {fileID: 21300000, guid: 34e5b2c893e96154ab32ad6f40bc6d66, type: 3}
   - <iconName>k__BackingField: chitarra
     <sprite>k__BackingField: {fileID: 21300000, guid: 0642fb40c3a703443b229954020b3374, type: 3}
+  - <iconName>k__BackingField: Triangolo
+    <sprite>k__BackingField: {fileID: 21300000, guid: 0642fb40c3a703443b229954020b3374, type: 3}
+  - <iconName>k__BackingField: RagazzaOrchestra
+    <sprite>k__BackingField: {fileID: 21300000, guid: 0642fb40c3a703443b229954020b3374, type: 3}
+  - <iconName>k__BackingField: FlautoDolce
+    <sprite>k__BackingField: {fileID: 21300000, guid: 0642fb40c3a703443b229954020b3374, type: 3}
+  - <iconName>k__BackingField: Ocarina
+    <sprite>k__BackingField: {fileID: 21300000, guid: 0642fb40c3a703443b229954020b3374, type: 3}
+  - <iconName>k__BackingField: Violino
+    <sprite>k__BackingField: {fileID: 21300000, guid: 0642fb40c3a703443b229954020b3374, type: 3}
   - <iconName>k__BackingField: franco
     <sprite>k__BackingField: {fileID: 21300000, guid: 02caf7a8d0921aa4ba5d5b749a632551, type: 3}
   - <iconName>k__BackingField: witch
@@ -460,6 +470,16 @@ MonoBehaviour:
   - <iconName>k__BackingField: mentore
     <sprite>k__BackingField: {fileID: 21300000, guid: 0a6d82c371449ae4e8cde4a54de218d2, type: 3}
   - <iconName>k__BackingField: riccio
+    <sprite>k__BackingField: {fileID: 21300000, guid: 128ebe1261bc45c468c689535abddd4c, type: 3}
+  - <iconName>k__BackingField: Grizzly
+    <sprite>k__BackingField: {fileID: 21300000, guid: 128ebe1261bc45c468c689535abddd4c, type: 3}
+  - <iconName>k__BackingField: Lupo
+    <sprite>k__BackingField: {fileID: 21300000, guid: 128ebe1261bc45c468c689535abddd4c, type: 3}
+  - <iconName>k__BackingField: Delfino
+    <sprite>k__BackingField: {fileID: 21300000, guid: 128ebe1261bc45c468c689535abddd4c, type: 3}
+  - <iconName>k__BackingField: Capibara
+    <sprite>k__BackingField: {fileID: 21300000, guid: 128ebe1261bc45c468c689535abddd4c, type: 3}
+  - <iconName>k__BackingField: Corvo
     <sprite>k__BackingField: {fileID: 21300000, guid: 128ebe1261bc45c468c689535abddd4c, type: 3}
   - <iconName>k__BackingField: AppendiceA
     <sprite>k__BackingField: {fileID: 21300000, guid: 91cc9779ef09c7e4096f4d17d4c58abc, type: 3}

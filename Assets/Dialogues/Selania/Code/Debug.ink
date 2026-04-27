@@ -98,20 +98,60 @@
 
 === debug_richGrimoire
 //Serve per simulare uno stato in cui ho concluso le prime due png e Mentore non ha sbroccato
+
+~ player_name = get_random_name()
+
 ~ grimoire_firstChar += (grimFirstCharOne, grimFirstCharTwo, grimFirstCharThree, grimFirstCharFour, grimFirstCharFive, grimFirstCharSix, grimFirstCharSeven, grimFirstCharEight, grimFirstCharNine, grimFirstCharTen, grimFirstCharEleven, grimFirstCharTwelve, grimFirstOpenKitchen, grimFirstCharNovel, grimFirstCharDog, grimFirstCharKitchenOne, grimFirstCharKitchenTwo, grimFirstCharKitchenThree, grimFirstCharKitchenEnded, grimFirstCharKitchenPositiveReaction, grimFirstCharKitchenNegativeReaction, grimFirstCharKitchenNeutralReaction, grimFirstCharKitchenAlone, grimFirstCharProposal, grimFirstCharNewName, grimFirstCharMentorFeedback, grimFirstCharLetterOne, grimFirstCharLetterTwo, grimFirstCharLetterThree, grimFirstCharLetterFour, grimFirstSecondChar, grimFirstThirdChar, grimFirstCharMentor, grimFirstCharFranco)
 
-    ~ firstChar_ActualName = Ocarina
+    ~ firstChar_ActualName = LIST_RANDOM(firstChar_possibleStates)
     ~ kitchen_firstCharExtraIngredient = LIST_RANDOM(greenhouse_backupCultivable)
     ~ firstChar_giftedObject = LIST_RANDOM(greenhouse_backupCultivable)
+    ~ firstChar_relationshipIndicator = RANDOM(-9,9)
+    ~ firstChar_aether = RANDOM(-9,9)
+    ~ firstChar_earth = RANDOM(-9,9)
+    ~ firstChar_air = RANDOM(-9,9)
+    ~ firstChar_water = RANDOM(-9,9)
+    ~ firstChar_fire= RANDOM(-9,9)
+    ~ firstChar_last_aether = RANDOM(-9,9)
+    ~ firstChar_last_earth = RANDOM(-9,9)
+    ~ firstChar_last_air = RANDOM(-9,9)
+    ~ firstChar_last_water = RANDOM(-9,9)
+    ~ firstChar_last_fire= RANDOM(-9,9)
+
 
 ~ grimoire_secondChar += (grimSecondCharOne, grimSecondCharTwo, grimSecondCharThreeHim, grimSecondCharThreeHer, grimSecondCharThreeThey, grimSecondCharFour, grimSecondCharFive, grimSecondCharSix, grimSecondCharSeven, grimSecondCharEight, grimSecondCharNine, grimSecondCharTen, grimSecondCharEleven, grimSecondCharTwelve, grimSecondCharCarla, grimSecondOpenLibrary, grimSecondCharNovel, grimSecondCharDog, grimSecondCharKitchenOne, grimSecondCharKitchenTwo, grimSecondCharKitchenThree, grimSecondCharKitchenEnded, grimSecondCharKitchenPositiveReaction, grimSecondCharKitchenNegativeReaction, grimSecondCharKitchenNeutralReaction,grimSecondCharKitchenAlone, grimSecondCharProposal, grimSecondCharNewName, grimSecondCharMentorFeedback, grimSecondCharLetterOne, grimSecondCharLetterTwo, grimSecondCharLetterThree, grimSecondCharLetterFour, grimFirstSecondChar, grimSecondCharMentorOne, grimSecondCharMentorPeace, grimSecondThirdChar, grimSecondCharFranco)
 
-    ~ secondChar_ActualName = Lupo
+    ~ secondChar_ActualName = LIST_RANDOM(secondChar_possibleStates)
     ~ kitchen_secondCharExtraIngredient = LIST_RANDOM(greenhouse_backupCultivable)
     ~ secondChar_giftedObject = LIST_RANDOM(greenhouse_backupCultivable)
-
+    ~ secondChar_relationshipIndicator = RANDOM(-9,9)
+    ~ secondChar_aether = RANDOM(-9,9)
+    ~ secondChar_earth = RANDOM(-9,9)
+    ~ secondChar_air = RANDOM(-9,9)
+    ~ secondChar_water = RANDOM(-9,9)
+    ~ secondChar_fire= RANDOM(-9,9)
+    ~ secondChar_last_aether = RANDOM(-9,9)
+    ~ secondChar_last_earth = RANDOM(-9,9)
+    ~ secondChar_last_air = RANDOM(-9,9)
+    ~ secondChar_last_water = RANDOM(-9,9)
+    ~ secondChar_last_fire= RANDOM(-9,9)
 
 ~ grimoire_thirdChar += (grimThirdCharOne, grimThirdCharTwo, grimThirdCharThree, grimThirdCharFour, grimThirdCharFive, grimThirdCharSix, grimThirdCharSeven, grimThirdCharEight, grimThirdCharNine, grimThirdCharTen, grimThirdCharEleven, grimThirdCharTwelve, grimThirdOpenNest, grimThirdCharNovel, grimThirdCharDog, grimThirdCharKitchenOne, grimThirdCharKitchenTwo, grimThirdCharKitchenThree, grimThirdCharKitchenEnded, grimThirdCharKitchenPositiveReaction, grimThirdCharKitchenNegativeReaction, grimThirdCharKitchenNeutralReaction,grimThirdCharKitchenAlone, grimThirdCharProposal, grimThirdCharNewName, grimThirdCharMentorFeedback, grimThirdCharLetterOne, grimThirdCharLetterTwo, grimThirdCharLetterThree, grimThirdCharLetterFour, grimSecondThirdChar, grimFirstThirdChar, grimThirdCharFranco, grimThirdCharMentor)
+
+    ~ thirdChar_ActualName = Boccale
+    ~ kitchen_thirdCharExtraIngredient = LIST_RANDOM(greenhouse_backupCultivable)
+    ~ thirdChar_giftedObject = LIST_RANDOM(greenhouse_backupCultivable)
+    ~ thirdChar_relationshipIndicator = RANDOM(-9,9)
+    ~ thirdChar_aether = RANDOM(-9,9)
+    ~ thirdChar_earth = RANDOM(-9,9)
+    ~ thirdChar_air = RANDOM(-9,9)
+    ~ thirdChar_water = RANDOM(-9,9)
+    ~ thirdChar_fire= RANDOM(-9,9)
+    ~ thirdChar_last_aether = RANDOM(-9,9)
+    ~ thirdChar_last_earth = RANDOM(-9,9)
+    ~ thirdChar_last_air = RANDOM(-9,9)
+    ~ thirdChar_last_water = RANDOM(-9,9)
+    ~ thirdChar_last_fire= RANDOM(-9,9)
 
 ~ grimoire_fifthChar += (grimMentorOne, grimMentorTwo, grimMentorThree, grimMentorFour, grimMentorFive, grimMentorSix, grimMentorSeven, grimMentorEight, grimMentorNine, grimMentorTen, grimMentorEleven, grimMentorTwelve, grimMentorNovel, grimMentorDog, grimMentorLiar, grimMentorViolence, grimMentorOlobinoUno, grimMentorOlobinoDue, grimKitchenMentor, grimMentorRage, grimMentorNotMandatory, grimMentorNewMail, grimMentorFirstSecretEnding, grimMentorSecondSecretEnding, grimMentorThirdSecretEnding, grimMentorFourthSecretEnding, grimMentorFifthSecretEnding)
 

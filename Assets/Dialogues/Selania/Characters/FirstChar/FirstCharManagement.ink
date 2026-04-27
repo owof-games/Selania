@@ -5,7 +5,7 @@
                      ----------------------------------*/
 
 //Possibili stati Chitarra
-    LIST firstChar_possibleStates = Chitarra, Triangolo, RagazzaOrchestra, FlautoDolce, Ocarina, Violino
+    LIST firstChar_possibleStates = Chitarra, (Triangolo), (RagazzaOrchestra), (FlautoDolce), (Ocarina), (Violino)
     VAR firstChar_ActualName = Chitarra
     
     //Stato della storia (non avviata, avviata, conclusa)

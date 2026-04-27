@@ -11,7 +11,7 @@
     //Main story
     {
         - grimoire_fifthChar has grimFifthCharOne:
-
+        ssss
     }
 
 
