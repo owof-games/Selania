@@ -5,7 +5,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     //Facciamo un passaggio di aggiornamento degli achievements subito dopo la chiusura di una commissione
     -> achievements_onGame_statusUpdate_GM ->
@@ -104,7 +104,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     {
         - are_two_entities_together(FirstCharacter, PG):
@@ -137,7 +137,7 @@
             ~ temp charNameThree = translator(thirdChar_ActualName)
             ~ temp charNameFour = translator(fourthChar_ActualName)
             ~ temp charNameFive = translator(fifthChar_ActualName)
-            ~ temp mentorName = translator(mentor_ActualName)
+        
 
         {
             - library_readStories has Aza:
@@ -185,7 +185,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     {
         - are_two_entities_together(SecondCharacter, PG):
@@ -219,7 +219,7 @@
             ~ temp charNameThree = translator(thirdChar_ActualName)
             ~ temp charNameFour = translator(fourthChar_ActualName)
             ~ temp charNameFive = translator(fifthChar_ActualName)
-            ~ temp mentorName = translator(mentor_ActualName)
+        
 
                 
         {
@@ -264,7 +264,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     {
         - are_two_entities_together(ThirdCharacter, PG):
@@ -296,7 +296,7 @@
             ~ temp charNameThree = translator(thirdChar_ActualName)
             ~ temp charNameFour = translator(fourthChar_ActualName)
             ~ temp charNameFive = translator(fifthChar_ActualName)
-            ~ temp mentorName = translator(mentor_ActualName)
+        
 
         -> closed_exchange 
 
@@ -307,7 +307,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     {
         - are_two_entities_together(FourthCharacter, PG):
@@ -338,7 +338,7 @@
             ~ temp charNameThree = translator(thirdChar_ActualName)
             ~ temp charNameFour = translator(fourthChar_ActualName)
             ~ temp charNameFive = translator(fifthChar_ActualName)
-            ~ temp mentorName = translator(mentor_ActualName)
+        
 
         -> closed_exchange    
 
@@ -349,7 +349,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     {
         - are_two_entities_together(FifthCharacter, PG):
@@ -381,6 +381,6 @@
             ~ temp charNameThree = translator(thirdChar_ActualName)
             ~ temp charNameFour = translator(fourthChar_ActualName)
             ~ temp charNameFive = translator(fifthChar_ActualName)
-            ~ temp mentorName = translator(mentor_ActualName)
+        
 
         -> closed_exchange    

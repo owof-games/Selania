@@ -3,7 +3,7 @@
     ~ temp charNameTwo = translator(thirdChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
     //Apertura del nido
     {charTag(ThirdCharacter, "neutral")}:       Dialogo in biblioteca.
@@ -81,7 +81,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
     {charTag(ThirdCharacter, "neutral")}:       Racconto letto in biblioteca.
     A racconto scelto, cambia anche logica in Special Storylets
@@ -117,7 +117,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
    
    {charTag(ThirdCharacter, "neutral")}:       {charNameThree} ha visto un cane.
 

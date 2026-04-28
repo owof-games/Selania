@@ -6,7 +6,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     //Main story
     {
@@ -21,7 +21,7 @@
 
     {
         - grimoire_secondChar has grimSecondCharThreeHim:
-            {charNameTwo} ha chiesto a {player_name} il suo nome. E quando ha capito che {player_name} è un ragazzo, si è lamentato di {mentorName}. Poi ha tirato fuori di nuovo il discorso delle action figures. La madre sembra faccia storie nel comprargli cose, e non vuole prendere niente che lei lega alla violenza. Il fratello lo fa giocare alla Switch.
+            {charNameTwo} ha chiesto a {player_name} il suo nome. E quando ha capito che {player_name} è un ragazzo, si è lamentato di {charNameFive}. Poi ha tirato fuori di nuovo il discorso delle action figures. La madre sembra faccia storie nel comprargli cose, e non vuole prendere niente che lei lega alla violenza. Il fratello lo fa giocare alla Switch.
 
         - grimoire_secondChar has grimSecondCharThreeHer:
             {charNameTwo} ha chiesto a {player_name} il suo nome. Ma non ha apprezzato che {player_name} sia una ragazza. Dice che le ragazze sono strane. Che sua mamma è strana, ma le vuole bene. Anche se si dimentica le cose, tipo che oggi si è dimenticata il suo compleanno. E non sa che lui è qui.
@@ -32,7 +32,7 @@
 
     {
         - grimoire_secondChar has grimSecondCharFour:
-            {charNameTwo} ha detto a {player_name} che in realtà non ci sono altri bambini, non ne ha invitati. {charNameTwo} è preso bene dagli animali che vivono qui, è una specie di Wikipedia delle bestiole. Ma quando {player_name} gli ha fatto presente che ha picchiato {mentorName}, non l'ha presa bene. E ha detto che se {mentorName} non lo lascia in pace, chiamerà il suo fortissimo fratello.
+            {charNameTwo} ha detto a {player_name} che in realtà non ci sono altri bambini, non ne ha invitati. {charNameTwo} è preso bene dagli animali che vivono qui, è una specie di Wikipedia delle bestiole. Ma quando {player_name} gli ha fatto presente che ha picchiato {charNameFive}, non l'ha presa bene. E ha detto che se {charNameFive} non lo lascia in pace, chiamerà il suo fortissimo fratello.
     } 
 
     {
@@ -139,7 +139,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
 
     {
@@ -183,7 +183,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     //INSERIRE LOGICA RICETTA
 
@@ -261,7 +261,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     {
         - grimoire_secondChar has grimSecondCharProposal:
@@ -296,7 +296,7 @@
 
     {
         - grimoire_secondChar has grimSecondCharMentorFeedback:
-            {mentorName} ha detto a {player_name} che <>
+            {charNameFive} ha detto a {player_name} che <>
 
             {
                 - secondChar_ActualName has Grizzly:
@@ -337,7 +337,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     {
         - grimoire_secondChar has grimSecondCharLetterOne:

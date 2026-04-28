@@ -6,7 +6,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     {
         - frog_first_char_gift != "" && firstChar_giftedObject == ():
@@ -63,7 +63,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     {
         - frog_second_char_gift != "" && secondChar_giftedObject == ():
@@ -121,7 +121,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     {
         - frog_third_char_gift != "" && thirdChar_giftedObject == ():
@@ -178,7 +178,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     // {
     //     - frog_fourth_char_gift != "" && fourthChar_giftedObject == ():
@@ -236,7 +236,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     // {
     //     - frog_fifth_char_gift != "" && fifthChar_giftedObject == ():

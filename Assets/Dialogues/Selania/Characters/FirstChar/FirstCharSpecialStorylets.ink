@@ -3,9 +3,9 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     
-    {charTag(FirstCharacter, "curious")}:           Dopo che {mentorName} mi ha detto che sei qui per aiutarci mi sono detta: come posso rendere la vita più facile a {player_name}?
+    {charTag(FirstCharacter, "curious")}:           Dopo che {charNameFive} mi ha detto che sei qui per aiutarci mi sono detta: come posso rendere la vita più facile a {player_name}?
     {charTag(FirstCharacter, "neutral")}:           Alla fine ti stai ascoltando le mie seghe mentali da un bel po'.
                                                     E immagino che anche il piccoletto avrà i suoi casini da gestire.                                       
     {
@@ -17,10 +17,10 @@
         - thirdChar_storyStatus == story_storyStarted:
         {charTag(FirstCharacter, "annoyed")}:       Per non parlare di quell'altro.                                      
     } 
-    {charTag(FirstCharacter, "neutral")}:           E {mentorName} mi sta simpatica, ma adora parlare di lavoro, non la cosa più riposante.
+    {charTag(FirstCharacter, "neutral")}:           E {charNameFive} mi sta simpatica, ma adora parlare di lavoro, non la cosa più riposante.
     {
         - are_two_entities_together(Mentor, PG):
-            {charTag(Mentor, "sorry")}:             La mia vita è lavoro, non saprei di cos'altro parlare, {charNameOne}!      
+            {charTag(FifthCharacter, "sorry")}:             La mia vita è lavoro, non saprei di cos'altro parlare, {charNameOne}!      
     }
     {charTag(FirstCharacter, "curious")}:           Poi ho trovato qualcosa di inaspettato dietro il pontile: una cucina abbandonata.
     {charTag(FirstCharacter, "annoyed")}:           Mi sono messa a sistemarla, principalmente sperando di trovare qualcosa da bere.
@@ -32,11 +32,11 @@
                                                     Magari scopri anche qualcosa di utile per il tuo lavoro qui.
     {charTag(FirstCharacter, "affectionate")}:      Che ne dici?
 
-        + \ {charTag(PG, "neutral")}:               Ma {mentorName} aveva detto di non andare nei posti chiusi.
+        + \ {charTag(PG, "neutral")}:               Ma {charNameFive} aveva detto di non andare nei posti chiusi.
             -> glyph_modifier_variation_management(FirstCharacter, airC)->
         {
             - are_two_entities_together(Mentor, PG):
-        {charTag(Mentor, "neutral")}:               Sono felice di venire ascoltata, ogni tanto.
+        {charTag(FifthCharacter, "neutral")}:               Sono felice di venire ascoltata, ogni tanto.
         }
         
         {charTag(FirstCharacter, "annoyed")}:       Forse non avevo ricevuto l'appunto, ama.
@@ -58,7 +58,7 @@
             -> glyph_modifier_variation_management(FirstCharacter, earthC)->
         {
             - are_two_entities_together(Mentor, PG):
-            {charTag(Mentor, "sad")}:               Oppure, potremmo gioire in modi non rumorosi.
+            {charTag(FifthCharacter, "sad")}:               Oppure, potremmo gioire in modi non rumorosi.
         }
         {
             - are_two_entities_together(SecondCharacter, PG):
@@ -96,7 +96,8 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
     
     {charTag(FirstCharacter, "neutral")}:           Ehi {player_name}.
     {charTag(FirstCharacter, "curious")}:           Ho visto che anche tu hai letto <b>Luna vergine</b> di Aza.
@@ -108,7 +109,7 @@
                                                     Le poche volte che l'ho lasciata uscire mi sono vista chiamare isterica, nevrotica, mestruata.
     {
         - are_two_entities_together(Mentor, PG):
-            {charTag(Mentor, "bored")}:             Uh, è una storia che ho già sentito.    
+            {charTag(FifthCharacter, "bored")}:             Uh, è una storia che ho già sentito.    
     }
     {charTag(FirstCharacter, "neutral")}:           Sembra che se sono arrabbiata allora sono in automatico nel torto.
     {charTag(FirstCharacter, "curious")}:           Ma quando sono arrivata in fondo e ho capito che lei si stava trasformando in lupo mannaro, mi sono trovata a digrignare i denti.
@@ -156,7 +157,7 @@
         {charTag(FirstCharacter, "annoyed")}:       Non ti ci provare!
             {
                 - are_two_entities_together(Mentor, PG):
-                {charTag(Mentor, "bored")}:         Non è mica colpa sua questa volta.
+                {charTag(FifthCharacter, "bored")}:         Non è mica colpa sua questa volta.
             }
         }
         {charTag(FirstCharacter, "annoyed")}:       Bisogna sempre ingoiare tutto per proteggere le altre persone?
@@ -185,7 +186,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
     
     {charTag(FirstCharacter, "affectionate")}:          C'è un cane!
     {charTag(FirstCharacter, "neutral")}:               Non so perché dovrebbe essere la cosa che più mi stupisce di questo posto.

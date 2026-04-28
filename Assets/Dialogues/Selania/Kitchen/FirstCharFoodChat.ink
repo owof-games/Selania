@@ -8,7 +8,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
     
 {charTag(FirstCharacter, "neutral")}:         Quindi {player_name}, iniziamo a cucinare assieme? 
         
@@ -26,7 +26,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
     
     
     {charTag(PG, "neutral")}:      Sai {charNameOne}, mentre cuciniamo potremmo parlare un po'.
@@ -83,7 +83,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
         {charTag(FirstCharacter, "affectionate")}:      Uh, hai già capito che per me le relazioni sono abbastanza il centro di tutto.
         {charTag(FirstCharacter, "curious")}:       Vediamo, cosa ti posso raccontare? 
@@ -400,7 +400,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+    
 
         {charTag(FirstCharacter, "curious")}:       Woah. 
         Qui si va giù leggero.
@@ -754,7 +754,8 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFive= translator(fifthChar_ActualName)
+
 
         {charTag(FirstCharacter, "neutral")}:         Cavolo.
         {charTag(FirstCharacter, "affectionate")}:      Tu e Talco andreste davvero d'accordo, {player_name}.
@@ -908,7 +909,7 @@
                 {charTag(FirstCharacter, "annoyed")}:   Devo metterlo in alto, non vorrei mai che {charNameTwo} provasse a berlo.
             
             - else:
-                {charTag(FirstCharacter, "curious")}:       Dovrei proporre un brindisino a {mentorName}, e farci due chiacchiere in scialleria. 
+                {charTag(FirstCharacter, "curious")}:       Dovrei proporre un brindisino a {charNameFive}, e farci due chiacchiere in scialleria. 
         }
         {charTag(FirstCharacter, "curious")}:       Tu {player_name} ti senti te? 
         {charTag(FirstCharacter, "annoyed")}:   Domanda idiota.
@@ -1074,7 +1075,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+    
         
             {charTag(TheWitch, witch_state())}:   <i>Il giusto ingrediente renderà la ricetta di {player_name} e {charNameOne} musicale.</i>
             <i>E {player_name} potrebbe capire un po' meglio {charNameOne}.</i>
@@ -1169,7 +1170,7 @@
                 ~ temp charNameTwo = translator(secondChar_ActualName)
                 ~ temp charNameThree = translator(thirdChar_ActualName)
                 ~ temp charNameFour= translator(fourthChar_ActualName)
-                ~ temp mentorName = translator(mentor_ActualName)
+            
                         
                             -> kitchen_moon_feedback -> 
 
@@ -1193,7 +1194,7 @@
                 ~ temp charNameTwo = translator(secondChar_ActualName)
                 ~ temp charNameThree = translator(thirdChar_ActualName)
                 ~ temp charNameFour= translator(fourthChar_ActualName)
-                ~ temp mentorName = translator(mentor_ActualName)  
+              
 
                         -> kitchen_moon_feedback ->  
 
@@ -1209,7 +1210,7 @@
                 ~ temp charNameTwo = translator(secondChar_ActualName)
                 ~ temp charNameThree = translator(thirdChar_ActualName)
                 ~ temp charNameFour= translator(fourthChar_ActualName)
-                ~ temp mentorName = translator(mentor_ActualName)
+            
                         
                         -> kitchen_moon_feedback -> 
 
@@ -1278,7 +1279,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
     
     {charTag(FirstCharacter, "neutral")}:         E ora {player_name}, credo mi farò due passi.
     Mi sento piena e soddisfatta.
@@ -1308,7 +1309,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
     {debug: passo per first_char_cooking_alone.}
     ~ cooking_animations_on()
         
@@ -1353,7 +1354,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
     
     {charTag(FirstCharacter, "neutral")}:               Cucinare da sola prima è stato un momento terapeutico.
     {charTag(FirstCharacter, "affectionate")}:          E non lo dico solo perché mi sono sparata un bel po' di vinello.

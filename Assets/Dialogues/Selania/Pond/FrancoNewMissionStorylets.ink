@@ -6,7 +6,7 @@
 === mission_one
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
     
         {charTag(Franco, "{portrait_Franco()}")}:       Vediamo vediamo vediamo.
                                                         Interessante.
@@ -30,7 +30,7 @@
 === mission_two
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
     
         {charTag(Franco, "{portrait_Franco()}")}:       L'avresti mai detto?
                                                         I girini sono future rane.
@@ -62,7 +62,10 @@
 === mission_three
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
     
         {charTag(Franco, "{portrait_Franco()}")}:       Questa è facile.
                                                         Mi raccomando Franco, non distrarti.
@@ -70,11 +73,11 @@
                                                         Quella che ci spiega le cose.
                                                         La voce.
                                                         Ecco.
-                                                        Mi ha spiegato tante cose su {mentorName}.
+                                                        Mi ha spiegato tante cose su {charNameFive}.
                                                         Sapevi ad esempio che può respirare fino a due minuti sott'acqua?
         {
             - are_two_entities_together(Mentor, PG):
-                {charTag(Mentor, "hurry")}:             Eh?
+                {charTag(FifthCharacter, "hurry")}:             Eh?
         }
         {
             - are_two_entities_together(FirstCharacter, PG):
@@ -87,33 +90,33 @@
         {charTag(SecondCharacter, "neutral")}:          IM-POS-SI-BI-LE!
         {
             - are_two_entities_together(Mentor, PG):
-        {charTag(Mentor, "hurry")}:                     Guarda che sono bravissima a burraco!
+        {charTag(FifthCharacter, "hurry")}:                     Guarda che sono bravissima a burraco!
         {charTag(SecondCharacter, "neutral")}:          Ma è una roba da vecchi!
         }
         }
         {charTag(Franco, "{portrait_Franco()}")}:       E che ha una tasca sotto l'ascella dove conserva le pietre che usa per rompere i gusci?
         {
         - are_two_entities_together(Mentor, PG):
-        {charTag(Mentor, "neutral")}:                   A dire il vero ne ho anche una in testa, dove raccolgo le sciocchezze dette dalle rane.
+        {charTag(FifthCharacter, "neutral")}:                   A dire il vero ne ho anche una in testa, dove raccolgo le sciocchezze dette dalle rane.
         {charTag(Franco, "{portrait_Franco()}")}:       Ma le rana sono molto sagge, quindi non hai molto da raccogliere.
         }
                                                         E.
                                                         Uh, una lettera di Euforbo.
-                                                        "Papà Franco, quella è la lontra, non {mentorName}."
+                                                        "Papà Franco, quella è la lontra, non {charNameFive}."
                                                         Uh.
                                                         Euforbo.
                                                         È più furbo di un pesce rosso.
-                                                        Ma {mentorName}.
-                                                        Di cosa aveva bisogno {mentorName}?
-        {charTag(TheWitch, witch_state())}:             <i>{mentorName} ama dare consigli per far star bene le persone.</i>
-                                                        <i>{mentorName} crede di potere esistere solo quando si rende utile.</i>
+                                                        Ma {charNameFive}.
+                                                        Di cosa aveva bisogno {charNameFive}?
+        {charTag(TheWitch, witch_state())}:             <i>{charNameFive} ama dare consigli per far star bene le persone.</i>
+                                                        <i>{charNameFive} crede di potere esistere solo quando si rende utile.</i>
         {charTag(Franco, "{portrait_Franco()}")}:       Esatto.
                                                         Quella roba lì.
                                                         Chiedile un consiglio.
                                                         E poi torna pure qui.
         {
         - are_two_entities_together(Mentor, PG):
-            {charTag(Mentor, "hurry")}:                 Uh, che cosa carina, Franco!
+            {charTag(FifthCharacter, "hurry")}:                 Uh, che cosa carina, Franco!
         }
         {charTag(Franco, "{portrait_Franco()}")}:       Ma quindi non è {charNameOne} che fa il nido sugli alberi?
         {
@@ -131,7 +134,10 @@
 === mission_four
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
 
         {charTag(Franco, "{portrait_Franco()}")}:       Quando ero ancora un girino, mamma Craazia mi diceva sempre:
                                                         "Tuo fratello Clodoveo ha preso la mia intelligenza."
@@ -147,11 +153,11 @@
                                                         E allora ho capito che noi rane nasciamo girini, diventiamo rane, e poi, quando siamo vecchie, alberi.
                                                         Bello, vero?
                                                         Il mondo è un po' una grande rana.
-                                                        E allora stavo pensando: perché non racconti a {mentorName} qualcosa di strano che hai scoperto?
+                                                        E allora stavo pensando: perché non racconti a {charNameFive} qualcosa di strano che hai scoperto?
                                                         Sono sicuro che così si diverte, e magari si rilassa un poco.
     {
         - are_two_entities_together(Mentor, PG):
-        {charTag(Mentor, "neutral")}:                   In effetti non sarebbe male rilassarmi un poco.
+        {charTag(FifthCharacter, "neutral")}:                   In effetti non sarebbe male rilassarmi un poco.
     }
 
         {charTag(Franco, "{portrait_Franco()}")}:       Io intanto vado a salutare bisnonno Ninfea.
@@ -163,7 +169,9 @@
 === mission_five
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     
         {charTag(Franco, "{portrait_Franco()}")}:       Tra qualche sera c'è il karaoke di cugina Sputt.
                                                         Non hai idea delle cose che accadono durante le sue feste, girino!
@@ -209,7 +217,7 @@
 === mission_six
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
     
         {charTag(Franco, "{portrait_Franco()}")}:       Prima c'è stato l'incontro tra genitori e insegnanti.
                                                         Non è facilissimo quando ci sono così tanti girini in giro.
@@ -245,7 +253,7 @@
 
     {
     - are_two_entities_together(Mentor, PG):
-        {charTag(Mentor, "bored")}:                     C'è una discarica?!?
+        {charTag(FifthCharacter, "bored")}:                     C'è una discarica?!?
                 
     }
         {charTag(Franco, "{portrait_Franco()}")}:       Credo.
@@ -260,7 +268,7 @@
 === mission_seven
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
     
         {charTag(Franco, "{portrait_Franco()}")}:       Mannaggina che sonno, girino.
                                                         Ma sai una cosa?
@@ -305,7 +313,7 @@
 === mission_eight
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
     
         {charTag(Franco, "{portrait_Franco()}")}:       Euforbo ha portato a casa una pulce d'acqua.
                                                         La maestra vuole che imparino a prendersi cura di altre forme di vita.
@@ -336,7 +344,7 @@
 === mission_nine
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
     
         {charTag(Franco, "{portrait_Franco()}")}:       Mi è arrivata una lettera dall'Accademia dei Bei Party.
                                                         "Esimio dottor Franco Lelio Arpagone Romualdo Arcezio Nepomiceno Alcuino."
@@ -371,7 +379,7 @@
 === mission_ten
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
     
         {charTag(Franco, "{portrait_Franco()}")}:       Ti svelo un segreto.
                                                         Sapevi che Franco, questo Franco, non un altro Franco, tipo Franco il postino o Franco il cugino di Pino.
@@ -400,7 +408,7 @@
 === special_mission_one
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
     
         {charTag(Franco, "{portrait_Franco()}")}:       Girino!
                                                         Mi serve un favore enorme, grande almeno quanto il cuore di zia Graaak.
@@ -419,7 +427,7 @@
 === special_mission_one_contents
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
         {charTag(Franco, "{portrait_Franco()}")}:       Eccoti girino!
                                                         Questa è una cosa molto delicata, per cui promettimi che la terrai per te.
@@ -455,7 +463,7 @@
 === special_mission_two
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
         {charTag(Franco, "{portrait_Franco()}")}:       Girino!
                                                         Ho una sorpresa per te!

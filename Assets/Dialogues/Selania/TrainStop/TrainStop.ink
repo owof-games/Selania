@@ -43,7 +43,7 @@
 
 === first_character_notes ===
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
     
     + (check){are_two_entities_together(DoggoFirstLetters, PG)}[DoggoFirstLetters]
             
@@ -68,7 +68,7 @@
     
     = one
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
         {charTag(Documents, "writer_firstChar")}:   Ciao {player_name}, come stai?
 
@@ -77,7 +77,7 @@
     
     = two
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
         {charTag(Documents, "writer_firstChar")}:   Ciao {player_name}, qui è sempre {charNameOne} che ti scrive.
 
@@ -86,7 +86,7 @@
         
     = three
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
         {charTag(Documents, "writer_firstChar")}:   Ciao ama!
 
@@ -95,7 +95,7 @@
 
     = four
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
         {charTag(Documents, "writer_firstChar")}:   Ehi {player_name}.
     

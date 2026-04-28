@@ -161,7 +161,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 {debug: passo per thirdAffinityFeedback. Lo stato di inchiostro è {thirdChar_InkLevel}.}
 
 
@@ -175,7 +175,7 @@
         
         {
             -   are_two_entities_together(Mentor, PG):
-                    {charTag(Mentor, "neutral")}:             Immagino sia giusto lasciarvi la vostra privacy.
+                    {charTag(FifthCharacter, "neutral")}:             Immagino sia giusto lasciarvi la vostra privacy.
                         ~ change_entity_place(Mentor)
         }
         {

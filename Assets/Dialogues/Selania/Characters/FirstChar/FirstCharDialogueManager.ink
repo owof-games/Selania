@@ -35,7 +35,8 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
     {   
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylets, ma non ho fatto il tutorial su come funziona
         - grimoire_firstChar has firstChar_minStoryletsForRewriting && not rewriting_proposal_first_character && not tutorial_mentorInkAndRewriting:
@@ -96,10 +97,10 @@
 
                     - {charTag(FirstCharacter, "sad")}: Ti dicono che se sei la migliore il mondo ti si aprirà davanti, ma poi puoi laurearti in modo grandioso, e finire comunque a fare la cameriera.
 
-                    - {charTag(FirstCharacter, "curious")}: Eppure più ci penso più sono sicura che {mentorName} sia arrivata qui con me.
+                    - {charTag(FirstCharacter, "curious")}: Eppure più ci penso più sono sicura che {charNameFive} sia arrivata qui con me.
                         {
                             - are_two_entities_together(Mentor, PG):
-                                {charTag(Mentor, "bored")}:             Impossibile, è una vita che sto qui.
+                                {charTag(FifthCharacter, "bored")}:             Impossibile, è una vita che sto qui.
                                 {charTag(FirstCharacter, "annoyed")}:   Sicuramente mi confondo.
                         }
                 }
@@ -115,7 +116,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
     //Se arrivo a options da un dialogo, non mostro commenti da parte della PNG, altrimenti sì.
         {
             - grimoire_firstChar has grimFirstCharOne:

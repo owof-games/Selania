@@ -4,16 +4,16 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
-        {charTag(TheWitch, witch_state())}:                 <i>Quando vi siete conosciut3, {mentorName} ha detto a {player_name} che le cose che dice alle persone sono un modo di vedere il mondo.
-                                                            <i>Apprezziamo gli sforzi di {mentorName}, ma non siamo d'accordo con questo aspetto.
+        {charTag(TheWitch, witch_state())}:                 <i>Quando vi siete conosciut3, {charNameFive} ha detto a {player_name} che le cose che dice alle persone sono un modo di vedere il mondo.
+                                                            <i>Apprezziamo gli sforzi di {charNameFive}, ma non siamo d'accordo con questo aspetto.
                                                             <i>Quando {player_name} compie una scelta su cosa dire, non sta parlando del mondo che vede, ma di come lo vive.
                                                             <i>E crediamo sia importante, perché una visione è qualcosa di contrattabile, ma ciò che si vive è, punto.
                                                             <i>Esprimere sé in una relazione è più importante che concordare con l'altra persona.
                                                             <i>Il lichene prospera perché i bisogni si sovrappongono, non perché l'alga è uguale al fungo.</i>
 
-                + \ {charTag(PG, "neutral")}:               Sono sicur{player_pronouns has him:o|{player_pronouns has her:a|ə}} che {mentorName} avesse le migliori intenzioni.
+                + \ {charTag(PG, "neutral")}:               Sono sicur{player_pronouns has him:o|{player_pronouns has her:a|ə}} che {charNameFive} avesse le migliori intenzioni.
                         -> glyph_modifier_variation_management(PG, waterC)->
                     {charTag(TheWitch, witch_state())}:     <i>{player_name} risplende nella sua empatia.
                                                             <i>E il nostro intento non è creare attrito, ma porre una domanda.
@@ -59,7 +59,7 @@
 
         // Vecchio testo su questa parte
         // <i>Anche noi vogliamo aiutare {player_name}, e per questo condividiamo una cosa.
-        // <i>{player_name} può seguire la voce di {mentorName} e scegliere di studiare la persona che ha davanti come un uomo studia la vita attraverso un libro.
+        // <i>{player_name} può seguire la voce di {charNameFive} e scegliere di studiare la persona che ha davanti come un uomo studia la vita attraverso un libro.
         // <i>Oppure {player_name} può decidere di essere sé {player_pronouns has him:stesso|{player_pronouns has her:stessa|stessə}}, anche se questo può creare attrito con l'altra persona.
         // <i>E scoprire che c'è chi ha bisogno di venir contraddettə.
         // <i>A volte l'attrito genera fastidio, o volte genera fuoco.
@@ -75,7 +75,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
     {charTag(TheWitch, witch_state())}:   <i>Il Nido è accessibile, il nostro cuore brucia.
     <i>I Sigilli sono instabili, l'instabilità è forza.
@@ -133,7 +133,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(mentor_ActualName)
+    
 
             {
                 - grimoire_first_character_conversation && grimoire_second_character_conversation && grimoire_greenhouse_thirdLevel:

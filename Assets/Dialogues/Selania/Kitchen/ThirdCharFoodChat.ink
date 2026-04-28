@@ -8,7 +8,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
     
 {charTag(ThirdCharacter, "neutral")}:       Cuciniamo?
         
@@ -24,7 +24,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
     
     
     {charTag(PG, "neutral")}:      Sai {charNameOne}, mentre cuciniamo potremmo parlare un po'.
@@ -79,7 +79,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
        
         {charTag(ThirdCharacter, "neutral")}:       Frase
@@ -235,7 +235,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+    
 
         
         {charTag(ThirdCharacter, "neutral")}:       Frase
@@ -371,7 +371,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
         {charTag(ThirdCharacter, "neutral")}:       Frase
 
@@ -520,7 +520,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+    
         
             {charTag(TheWitch, witch_state())}:     <i>Il giusto ingrediente renderà la ricetta di {player_name} e {charNameOne} musicale.
                                                     <i>E {player_name} potrebbe capire un po' meglio {charNameOne}.
@@ -607,7 +607,7 @@
                 ~ temp charNameTwo = translator(secondChar_ActualName)
                 ~ temp charNameThree = translator(thirdChar_ActualName)
                 ~ temp charNameFour= translator(fourthChar_ActualName)
-                ~ temp mentorName = translator(mentor_ActualName)
+            
                         
                         -> kitchen_moon_feedback -> 
 
@@ -625,7 +625,7 @@
                 ~ temp charNameTwo = translator(secondChar_ActualName)
                 ~ temp charNameThree = translator(thirdChar_ActualName)
                 ~ temp charNameFour= translator(fourthChar_ActualName)
-                ~ temp mentorName = translator(mentor_ActualName)  
+              
 
                         -> kitchen_moon_feedback -> 
 
@@ -639,7 +639,7 @@
                 ~ temp charNameTwo = translator(secondChar_ActualName)
                 ~ temp charNameThree = translator(thirdChar_ActualName)
                 ~ temp charNameFour= translator(fourthChar_ActualName)
-                ~ temp mentorName = translator(mentor_ActualName)
+            
                         
                         -> kitchen_moon_feedback -> 
 
@@ -685,7 +685,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
     
     {charTag(ThirdCharacter, "neutral")}:       Frase
     
@@ -722,7 +722,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
     {debug: passo per third_char_cooking_alone.}
     
         ~ cooking_animations_on()
@@ -769,7 +769,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
     
     {charTag(ThirdCharacter, "neutral")}:       Frase
    

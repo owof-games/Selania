@@ -8,7 +8,8 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
     
     {charTag(SecondCharacter, "neutral")}:        Quando cuciniamo? 
     {charTag(SecondCharacter, "energy")}:       Quando cuciniamo?!?
@@ -30,7 +31,8 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
     
     
     {charTag(PG, "neutral")}:      Sai {charNameTwo}, mentre cuciniamo potremmo parlare un po'.
@@ -81,11 +83,12 @@
 
     
     = first_theme
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp charNameThree = translator(thirdChar_ActualName)
-        ~ temp charNameFour= translator(fourthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+        
 
         {charTag(SecondCharacter, "energy")}:                   Animaliiiiiiiiiiii!
         {charTag(SecondCharacter, "neutral")}:                  A casa ho una vecchia enciclopedia, era del papà, che è piena di disegni e cose sugli animali.
@@ -206,7 +209,7 @@
         {charTag(SecondCharacter, "neutral")}:                  Mi aiuta a capirle.
                                                                 E a prevedere di più cosa faranno.
         {charTag(SecondCharacter, "energy")}:                   {charNameOne} per esempio mi ricorda un quokka perché con me è sempre giocosa.
-        {charTag(SecondCharacter, "neutral")}:                  Mentre {mentorName} mi sembra un delfino perché sono simpatici fino a quando non sai cosa fanno davvero.
+        {charTag(SecondCharacter, "neutral")}:                  Mentre {charNameFive} mi sembra un delfino perché sono simpatici fino a quando non sai cosa fanno davvero.
                                                                 E tu invece.
                                                                 No, dimmelo tu.
         {charTag(SecondCharacter, "energy")}:                   Che animale sei?
@@ -348,7 +351,7 @@
                                                                 Mi fa venire la tosse e poi mi sporco tutto!
                                                                 A me non piace essere strano.
         {charTag(SecondCharacter, "melanchonic")}:              Io voglio essere me.
-                                                                Nessuno dice a {mentorName} che è strana.
+                                                                Nessuno dice a {charNameFive} che è strana.
         {charTag(SecondCharacter, "neutral")}:                  E lo è tanto. 
                                                                 Ma se si preoccupa tantissimo per qualcosa, {charNameOne} dice solo "Che ci vuoi fare, è {charNameTwo}".
                                                                 Voglio solo essere me.
@@ -401,7 +404,8 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
 
             {charTag(SecondCharacter, "angry")}:                Bleah.
                                                                 Ma questa è una punizione!
@@ -588,7 +592,7 @@
                 + \ {charTag(PG, "neutral")}:                   <i>Sbuccio della vaniglia frenetica.</i>
                     ~ kitchen_recipeAdjective = "della frenesia"
                     -> glyph_modifier_variation_management(PG, fireC)->
-                                                                Un po' come {mentorName} allora.
+                                                                Un po' come {charNameFive} allora.
                                                                 Che corre sempre da una parte all'altra.
                 
                 + \ {charTag(PG, "neutral")}:                   <i>Spremo del cedro organizzato.</i>
@@ -743,7 +747,8 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
 
         {charTag(SecondCharacter, "angry")}:                    Mi vuoi sgridare di nuovo?
                                                                 Ti ho già chiesto scusa.
@@ -786,17 +791,17 @@
         {charTag(SecondCharacter, "neutral")}:                  Scusa {player_name}.
         {
             - food_gift_second_char:
-                {charTag(SecondCharacter, "emotional")}:        Sono contento di aver fatto pace con {mentorName}.
+                {charTag(SecondCharacter, "emotional")}:        Sono contento di aver fatto pace con {charNameFive}.
                 {charTag(SecondCharacter, "angry")}:            Ma sono ancora un po' arrabbiato.
                 {charTag(SecondCharacter, "melanchonic")}:      E questo mi fa arrabbiare velocemente.
 
             - grimoire_fifthChar has grimSecondCharMentorPeace:
-                {charTag(SecondCharacter, "angry")}:            Sto ancora cercando di non essere arrabbiato con {mentorName}.
+                {charTag(SecondCharacter, "angry")}:            Sto ancora cercando di non essere arrabbiato con {charNameFive}.
                 {charTag(SecondCharacter, "melanchonic")}:      E non mi piace essere arrabbiato.
                 Mi fa arrabbiare di più.
 
             - else:
-                {charTag(SecondCharacter, "angry")}:            Sono ancora arrabbiato con {mentorName}.
+                {charTag(SecondCharacter, "angry")}:            Sono ancora arrabbiato con {charNameFive}.
                 {charTag(SecondCharacter, "melanchonic")}:      E non mi piace essere arrabbiato.
                                                                 Mi fa arrabbiare di più.
         }
@@ -1101,11 +1106,12 @@
             }
             
                 = add_ingredient
-                ~ temp charNameOne = translator(firstChar_ActualName)
-                ~ temp charNameTwo = translator(secondChar_ActualName)
-                ~ temp charNameThree = translator(thirdChar_ActualName)
-                ~ temp charNameFour= translator(fourthChar_ActualName)
-                ~ temp mentorName = translator(mentor_ActualName)
+                    ~ temp charNameOne = translator(firstChar_ActualName)
+                    ~ temp charNameTwo = translator(secondChar_ActualName)
+                    ~ temp charNameThree = translator(thirdChar_ActualName)
+                    ~ temp charNameFour= translator(fourthChar_ActualName)
+                    ~ temp charNameFive = translator(fifthChar_ActualName)
+                
                 
                 {charTag(TheWitch, witch_state())}:     <i>Il giusto ingrediente renderà la ricetta di {player_name} e {charNameTwo} spaziale.</i>
                 <i>E {player_name} potrebbe capire un po' meglio {charNameTwo}.</i>
@@ -1140,7 +1146,8 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
     ~ move_entity(CookingWithSecondCharOBJ, Kitchen)
     ~ move_entity(EatingWithSecondCharOBJ, Kitchen)
     ~ temp piatto = kitchen_tempRecipeName
@@ -1208,7 +1215,7 @@
                 ~ temp charNameTwo = translator(secondChar_ActualName)
                 ~ temp charNameThree = translator(thirdChar_ActualName)
                 ~ temp charNameFour= translator(fourthChar_ActualName)
-                ~ temp mentorName = translator(mentor_ActualName)
+                
                         
                         -> kitchen_moon_feedback -> 
 
@@ -1233,7 +1240,7 @@
                 ~ temp charNameTwo = translator(secondChar_ActualName)
                 ~ temp charNameThree = translator(thirdChar_ActualName)
                 ~ temp charNameFour= translator(fourthChar_ActualName)
-                ~ temp mentorName = translator(mentor_ActualName)
+                
                         
                         -> kitchen_moon_feedback -> 
 
@@ -1248,7 +1255,7 @@
                 ~ temp charNameTwo = translator(secondChar_ActualName)
                 ~ temp charNameThree = translator(thirdChar_ActualName)
                 ~ temp charNameFour= translator(fourthChar_ActualName)
-                ~ temp mentorName = translator(mentor_ActualName)
+                
                         
                         -> kitchen_moon_feedback -> 
 
@@ -1271,7 +1278,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
 
         {charTag(SecondCharacter, "emotional")}:                Mi sa che sono davvero pieno.
         {charTag(SecondCharacter, "neutral")}:                  Abbiamo parlato tanto, vero, qui?
@@ -1316,7 +1323,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
     {charTag(SecondCharacter, "neutral")}:                      Però ora devo farmi due passi o mi addormento.
                                                                 E non voglio dormire.
@@ -1347,7 +1354,8 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
 {debug: passo per second_char_cooking_alone.}
         ~ cooking_animations_on()
 
@@ -1371,7 +1379,7 @@
             {charTag(SecondCharacter, "energy")}:       {È normale che il pane abbia questo odore?|{player_name} lasciami solo.}
     
         - 6:
-            {charTag(SecondCharacter, "energy")}:       {Se {mentorName} scopre che {charNameOne} ha messo tutti questi coltelli, si arrabbia tantissimo. Ma così posso tagliare le noci.|{player_name}, via o brucio tutto.}
+            {charTag(SecondCharacter, "energy")}:       {Se {charNameFive} scopre che {charNameOne} ha messo tutti questi coltelli, si arrabbia tantissimo. Ma così posso tagliare le noci.|{player_name}, via o brucio tutto.}
         
         - 7:
            {charTag(SecondCharacter, "energy")}:        {Un pezzo di unghia in tutto questo cioccolato grattugiato sparisce, vero?|Due minuti e ho finito, davvero.}
@@ -1392,37 +1400,38 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
 {debug: passo per food_gift_second_char.}
 
-    {charTag(Mentor, "hurry")}:                     E proteggono tutta la biblioteca?
+    {charTag(FifthCharacter, "hurry")}:                     E proteggono tutta la biblioteca?
     {charTag(SecondCharacter, "energy")}:           Sì! Vedi che sono carini?
-    {charTag(Mentor, "neutral")}:                   Continuo a pensare che non siano carini, ma ora mi fanno un po' meno paura.
-    {charTag(Mentor, "hurry")}:                     Ehi {player_name}! {charNameTwo} mi diceva che c'è questa biblioteca in Portogallo dove i pipistrelli proteggono i libri!
+    {charTag(FifthCharacter, "neutral")}:                   Continuo a pensare che non siano carini, ma ora mi fanno un po' meno paura.
+    {charTag(FifthCharacter, "hurry")}:                     Ehi {player_name}! {charNameTwo} mi diceva che c'è questa biblioteca in Portogallo dove i pipistrelli proteggono i libri!
     {charTag(SecondCharacter, "neutral")}:          Sìì! E allora ho pensato di mettere una casetta per pipistrelli in cucina.
                                                     Così tengono lontani gli insetti fastidiosi!
-    {charTag(Mentor, "neutral")}:                   E poi mi ha preparato questo piatto, ehm, curioso.
+    {charTag(FifthCharacter, "neutral")}:                   E poi mi ha preparato questo piatto, ehm, curioso.
     {charTag(SecondCharacter, "neutral")}:          Si chiama PanTutto.
     {charTag(SecondCharacter, "energy")}:           So cucinare tantissime cose!
-    {charTag(Mentor, "neutral")}:                   Hai imparato dalla tua mamma?
+    {charTag(FifthCharacter, "neutral")}:                   Hai imparato dalla tua mamma?
     {charTag(SecondCharacter, "melanchonic")}:      No.
     {charTag(SecondCharacter, "neutral")}:          A casa ci sto tanto da solo, e quindi mi invento le cose. 
     {charTag(SecondCharacter, "energy")}:           Ma cucinare è come un laboratorio.
     {charTag(SecondCharacter, "neutral")}:          E quindi ho inventato tanti piatti.
-                                                    Sono contento che l'hai assaggiato, {mentorName}!
+                                                    Sono contento che l'hai assaggiato, {charNameFive}!
                                                     Ma non mi arrabbio se non ti piace.
                                                     So che i vecchi mangiano solo cose schifose come i broccoli.
-    {charTag(Mentor, "hurry")}:                     Dovresti assaggiare la mia sacher, bimbo: ti porta direttamente in paradiso
+    {charTag(FifthCharacter, "hurry")}:                     Dovresti assaggiare la mia sacher, bimbo: ti porta direttamente in paradiso
     {charTag(SecondCharacter, "emotional")}:        Ha il cioccolato?
-    {charTag(Mentor, "hurry")}:                     Ha il cioccolato, e tanto.
-    {charTag(Mentor, "sorry")}:                     {charNameTwo}: abbiamo fatto pace?
+    {charTag(FifthCharacter, "hurry")}:                     Ha il cioccolato, e tanto.
+    {charTag(FifthCharacter, "sorry")}:                     {charNameTwo}: abbiamo fatto pace?
     {charTag(SecondCharacter, "neutral")}:          Mmm.
                                                     Sì.
                                                     Ma già da prima.
-    {charTag(Mentor, "neutral")}:                   Posso abbracciarti?
+    {charTag(FifthCharacter, "neutral")}:                   Posso abbracciarti?
     {charTag(SecondCharacter, "neutral")}:          No.
     {charTag(SecondCharacter, "emotional")}:        Ma puoi farmi quella torta al cioccolato?
-    {charTag(Mentor, "hurry")}:                     Subito!
+    {charTag(FifthCharacter, "hurry")}:                     Subito!
                         ~ change_entity_place(Mentor)
 
         + \ {charTag(PG, "neutral")}:               Sono felice che abbiate fatto pace.
@@ -1434,7 +1443,7 @@
         + \ {charTag(PG, "neutral")}:               Avete trovato una nuova armonia?
                 -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
             {charTag(SecondCharacter, "neutral")}:  Tipo come quando si canta?
-                                                    Non ce la vedo molto {mentorName} a cantare.
+                                                    Non ce la vedo molto {charNameFive} a cantare.
         {charTag(SecondCharacter, "melanchonic")}:  E io sono stra stonato.                                            
             
 
@@ -1445,7 +1454,7 @@
                                                     E poi prima ha cercato di convincermi che le ninfee sono fatte di formaggio.
                                                     Ed è quasi annegato, per fortuna sono arrivati i suoi mariti ad aiutarlo.
         
-        + \ {charTag(PG, "neutral")}:               Sono curios{player_pronouns has him:o|{player_pronouns has her:a|ə}}: cosa ti ha fatto cambiare idea su {mentorName}?
+        + \ {charTag(PG, "neutral")}:               Sono curios{player_pronouns has him:o|{player_pronouns has her:a|ə}}: cosa ti ha fatto cambiare idea su {charNameFive}?
                 -> glyph_modifier_variation_management(SecondCharacter, airC)->
             {charTag(SecondCharacter, "neutral")}:  Non ho cambiato idea su di lei.
                                                     Ma sono cambiate le cose che fa.

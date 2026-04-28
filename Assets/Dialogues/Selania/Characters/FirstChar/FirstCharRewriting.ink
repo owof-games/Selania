@@ -1,5 +1,6 @@
 === rewriting_proposal_first_character
 ~ temp charNameOne = translator(firstChar_ActualName)
+~ temp charNameFive = translator(fifthChar_ActualName)
 //Così se decido di uscire dalla conversazione, posso riprendere da dove eravamo rimaste.
     {
         - not confession:
@@ -13,8 +14,10 @@
     = confession
         //Per il feedback, temi legati al rapporto, all'amicizia
         ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
 
         {charTag(FirstCharacter, "neutral")}:         Io...
         {charTag(FirstCharacter, "sad")}:              Forse ho frainteso tutto il discorso sulla chitarra.
@@ -58,7 +61,11 @@
 
 
     = rewriting
-    ~ temp charNameOne = translator(firstChar_ActualName)
+            ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
 
             {charTag(FirstCharacter, "neutral")}:         Bene, {player_name}.
             Direi che dopo tutti i pipponi che ti ho tirato, è giunto il momento di fare questa roba.
@@ -83,7 +90,10 @@
         = one
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
+        
 
             - (top)
         {charTag(FirstCharacter, "neutral")}:         Comunque: cominciamo?
@@ -153,6 +163,10 @@
             
         = two
         ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
 
         {charTag(PG, "neutral")}:      È evidente quanto siano importanti le relazioni per te.
         E a un certo punto hai iniziato ad aspettarti amicizie eterne, case in campagna e un amore da film.
@@ -217,6 +231,11 @@
         
         = three
         ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
+
         {charTag(PG, "neutral")}:      Più volte hai parlato del tuo bisogno di fare qualcosa di utile, di grande. 
         Ti aspettavi di fare qualcosa di buono, di salvare il mondo con le tue canzoni.
     
@@ -289,6 +308,12 @@
         
         = four
         ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
+
+
             {charTag(PG, "neutral")}:      Ti senti mediocre, e hai paura di rischiare di fare un salto e perdere tutto, di fallire.
     
             + \ {charTag(PG, "neutral")}:         Come nei giochi, si può sbagliare e ricominciare.
@@ -344,7 +369,11 @@
     
         = ending
         ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
+        
 
         //Check per commento strega
         -> rewriting_witch_feedback(endR) -> 
@@ -421,7 +450,7 @@
                 Ma ha senso.
                 Ti ho raccontato così tante cose.
                 {charTag(FirstCharacter, "curious")}: Ho davvero motivo di essere così infelice?
-                O come direbbe {mentorName}, bloccata?
+                O come direbbe {charNameFive}, bloccata?
 
         }
         {charTag(FirstCharacter, "neutral")}:         Quante cose a cui pensare, ama.
@@ -524,14 +553,18 @@
         
     = secret_ending
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
             {
                 - not rewriting_proposal_second_character.secret_ending or not rewriting_proposal_third_character.secret_ending:
                     {charTag(TheWitch, witch_state())}:   <i>{charNameOne} ripone piena fiducia in {player_name}, ed è pronta a condividere con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} una informazione importante.</i>
             }
 
         {charTag(FirstCharacter, "neutral")}:         Vorrei anche dirti una cosa, {player_name}.
-        {charTag(FirstCharacter, "sad")}:              Credo che {mentorName} sia triste per qualcosa.
+        {charTag(FirstCharacter, "sad")}:              Credo che {charNameFive} sia triste per qualcosa.
         Mi dà l'impressione di mettercela tutta, qui.
         {charTag(FirstCharacter, "neutral")}:         Ma di essere, non so come dire, scomoda?
         Non credo lo ammetterebbe mai, ma credo abbia bisogno di una persona amica.
@@ -564,7 +597,9 @@
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
+        
         
             
             Direi che sono pronta per andarmene, {player_name}.

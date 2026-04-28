@@ -6,12 +6,12 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     //Main story
     {
         - grimoire_firstChar has grimFirstCharOne:
-            C'è questa ragazza, si chiama {charNameOne}. Ha iniziato la conversazione chiedendo a {player_name} dove fosse lə suə migliore amə, Talco. Poi ha accennato al suo ragazzo, Ennio, e a un risotto allucinogeno coi funghi. E quando è {tutorial_mentorTalkingChoiceRelationship: è arrivata {mentorName}|arrivato un fiore parlante} si è convinta che fosse un trip, e se ne è andata a cercare dell'acqua.
+            C'è questa ragazza, si chiama {charNameOne}. Ha iniziato la conversazione chiedendo a {player_name} dove fosse lə suə migliore amə, Talco. Poi ha accennato al suo ragazzo, Ennio, e a un risotto allucinogeno coi funghi. E quando è {tutorial_mentorTalkingChoiceRelationship: è arrivata {charNameFive}|arrivato un fiore parlante} si è convinta che fosse un trip, e se ne è andata a cercare dell'acqua.
     }
 
     {
@@ -132,7 +132,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
 
     {
@@ -176,7 +176,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     //INSERIRE LOGICA RICETTA
 
@@ -251,7 +251,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     {
         - grimoire_firstChar has grimFirstCharProposal:
@@ -290,10 +290,10 @@
 
     {
         - grimoire_firstChar has grimFirstCharMentorFeedback:
-            {mentorName} ha detto a {player_name} che <>
+            {charNameFive} ha detto a {player_name} che <>
 
             {
-                - firstChar_ActualName has Triangolo: ha aiutato {translator(firstChar_ActualName)} a trovare il bello nel quotidiano, cosa che {mentorName} apprezza molto.
+                - firstChar_ActualName has Triangolo: ha aiutato {translator(firstChar_ActualName)} a trovare il bello nel quotidiano, cosa che {charNameFive} apprezza molto.
                     
                 - firstChar_ActualName has RagazzaOrchestra: è rimasta colpita dalla partenza di {translator(firstChar_ActualName)} per l'Islanda, perché ha già vicine persone che le vogliono bene. E che i problemi seguono le persone anche quando se ne vanno.
                                 
@@ -328,7 +328,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     {
         - grimoire_firstChar has grimFirstCharLetterOne:

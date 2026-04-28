@@ -3,7 +3,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
     
         {charTag(TheWitch, witch_state())}:   <i>Crediamo sia giunto il momento di presentarci, {player_name}.
         <i>Aspettiamo {player_name} ai margini della foresta.
@@ -16,7 +16,8 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
 
         {charTag(TheWitch, witch_state())}:                     <i>A volte dimentichiamo quando sarà ieri, cos'è successo domani.
             {
@@ -34,8 +35,8 @@
                 {charTag(TheWitch, witch_state())}:             <i>E grazie a {player_name} per aver guidato noi.
                                                                 <i>La separazione è una illusione.
                                                                 <i>{player_name} è noi, noi siamo {charNameOne}.
-                                                                <i>{charNameOne} è {charNameTwo} che è {charNameThree} che è {mentorName}.
-                                                                <i>E {mentorName} è {player_name}.
+                                                                <i>{charNameOne} è {charNameTwo} che è {charNameThree} che è {charNameFive}.
+                                                                <i>E {charNameFive} è {player_name}.
                                                                 <i>Che è noi.</i>
                 
             + \ {charTag(PG, "neutral")}:                       Esci dalla mia testa! Subito!
@@ -114,7 +115,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
     {charTag(TheWitch, witch_state())}:     <i>Le radici ci raccontano dell'incontro di {player_name} con Franco.
                                             <i>E il nostro tronco porta il ricordo di Franco e di tutte le rane venute prima e dopo di lui.
@@ -144,7 +145,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
     
     {charTag(TheWitch, witch_state())}:     <i>Abbiamo osservato {player_name}.
                                             <i>L'abbiamo vist{player_pronouns has him:o|{player_pronouns has her:a|ə}} accogliere tutte le storie di <>
@@ -196,7 +197,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
     {charTag(TheWitch, witch_state())}:     <i>{player_name} continua a stupirci.
                                             <i>E lo stupore viene da quanto tempo ha dedicato alle parole di <>
@@ -246,7 +247,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
     {charTag(TheWitch, witch_state())}:     <i>Un'altra storia ascoltata fino alla sua foce.
                                             <i>Un altro fiume attraversato da {player_name}.
@@ -294,7 +295,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
 
     {charTag(TheWitch, witch_state())}:     <i>Sono tante le cose che {player_name} ha ascoltato da <>
@@ -336,7 +337,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
     {charTag(TheWitch, witch_state())}:     <i>{player_name} ha ascoltato le storie di tutte, anche di <>
 
@@ -377,7 +378,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(mentor_ActualName)
+    
 
     {charTag(TheWitch, witch_state())}:     <i>{player_name} ha finito le riscritture.
                                             <i>Ci sono ancora un po' di cose da fare, ma se vuole, prima di continuare, possiamo sbloccare tutte le informazioni mancanti riguardo ai sigilli.
@@ -401,7 +402,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(mentor_ActualName)
+    
 
     {charTag(TheWitch, witch_state())}:    Cose
     

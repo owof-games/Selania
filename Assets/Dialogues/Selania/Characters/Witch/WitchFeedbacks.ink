@@ -23,7 +23,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
         ~ temp sigilUsed = false
 
         {charTag(TheWitch, witch_state())}:<i>Le radici ci raccontano che {player_name} ha fatto la sua prima riscrittura.
@@ -123,7 +123,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
         ~ temp sigilUsed = false
 
         {charTag(TheWitch, witch_state())}:<i>Il vento canta di una seconda riscrittura.
@@ -223,7 +223,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
         ~ temp sigilUsed = false
 
         {charTag(TheWitch, witch_state())}:<i>La cagnolina della posta è sorpresa da questa terza riscrittura.
@@ -296,7 +296,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
 
         {charTag(TheWitch, witch_state())}: Descriviamo il vantaggio personale e collettivo di un gruppo rispetto all'esperienza della personaggia. Le scappatoie di questo gruppo, le irresponsabilità. Stesso gesto, scelte diverse.
         E poi chiediamo alla giocatrice qualcosa sulla sua posizione di vantaggio, di privilegio.
@@ -344,7 +344,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
 
         {charTag(TheWitch, witch_state())}: Parliamo della necessità di lottare assieme per il cambiamento.
         Il dolore e le fatiche personali rimangono, e serve trovare modi per stare bene. Ma nel mentre devono cambiare le leggi, i poteri, le culture che permettono l'oppressione.

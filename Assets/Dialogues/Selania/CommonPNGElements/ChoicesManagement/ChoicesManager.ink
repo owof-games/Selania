@@ -577,12 +577,12 @@ Recap della logica.
     = Mentor_reactions
             //Mentore ha sempre reazioni neutre, visto che non ha un contatore della relazione esplicitamente attivo.
                 {shuffle:
-                    - {charTag(Mentor, "neutral")}:         Sì sì.
-                    - {charTag(Mentor, "neutral")}:         Ok.
-                    - {charTag(Mentor, "neutral")}:         Eh.
-                    - {charTag(Mentor, "neutral")}:         Mhm.
-                    - {charTag(Mentor, "neutral")}:         Chiaro.
-                    - {charTag(Mentor, "neutral")}:         Già.
+                    - {charTag(FifthCharacter, "neutral")}:         Sì sì.
+                    - {charTag(FifthCharacter, "neutral")}:         Ok.
+                    - {charTag(FifthCharacter, "neutral")}:         Eh.
+                    - {charTag(FifthCharacter, "neutral")}:         Mhm.
+                    - {charTag(FifthCharacter, "neutral")}:         Chiaro.
+                    - {charTag(FifthCharacter, "neutral")}:         Già.
                 }
             -> glyph_thereAreOtherTalkers
 

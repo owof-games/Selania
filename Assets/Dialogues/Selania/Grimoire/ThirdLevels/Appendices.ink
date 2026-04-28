@@ -11,11 +11,12 @@ La logica di comparsa delle appendici è:
 
 === grimoire_choicesAndRelationships
 @grimoireText #style:character #icon:AppendiceA #title:AppendiceA #description:{grimoire_characterDescription(AppendiceA)}
-~ temp charNameOne = translator(firstChar_ActualName)
-~ temp charNameTwo = translator(secondChar_ActualName)
-~ temp charNameThree = translator(thirdChar_ActualName)
-~ temp charNameFour = translator(fourthChar_ActualName)
-~ temp charNameFive = translator(mentor_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
 
 
 /*************************
@@ -117,11 +118,12 @@ La logica di comparsa delle appendici è:
 
 === grimoire_greenhouseAndGifts
 @grimoireText #style:character #icon:AppendiceB #title:AppendiceB #description:{grimoire_characterDescription(AppendiceB)}
-~ temp charNameOne = translator(firstChar_ActualName)
-~ temp charNameTwo = translator(secondChar_ActualName)
-~ temp charNameThree = translator(thirdChar_ActualName)
-~ temp charNameFour = translator(fourthChar_ActualName)
-~ temp charNameFive = translator(mentor_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
 
 
 /*************************
@@ -207,11 +209,12 @@ La logica di comparsa delle appendici è:
 
 === grimoire_kitchenAndRelationships
 @grimoireText #style:character #icon:AppendiceC #title:AppendiceC #description:{grimoire_characterDescription(AppendiceC)}
-~ temp charNameOne = translator(firstChar_ActualName)
-~ temp charNameTwo = translator(secondChar_ActualName)
-~ temp charNameThree = translator(thirdChar_ActualName)
-~ temp charNameFour = translator(fourthChar_ActualName)
-~ temp charNameFive = translator(mentor_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
 
 /*************************
 
@@ -311,11 +314,12 @@ La logica di comparsa delle appendici è:
 === grimoire_inkAndRewriting
 @grimoireText #style:character #icon:AppendiceD #title:AppendiceD #description:{grimoire_characterDescription(AppendiceD)}
 
-~ temp charNameOne = translator(firstChar_ActualName)
-~ temp charNameTwo = translator(secondChar_ActualName)
-~ temp charNameThree = translator(thirdChar_ActualName)
-~ temp charNameFour = translator(fourthChar_ActualName)
-~ temp charNameFive = translator(mentor_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
 
 
 /*************************
@@ -417,11 +421,11 @@ La logica di comparsa delle appendici è:
 === grimoire_Sigils
 @grimoireText #style:character #icon:AppendiceE #title:AppendiceE #description:{grimoire_characterDescription(AppendiceE)}
 
-~ temp charNameOne = translator(firstChar_ActualName)
-~ temp charNameTwo = translator(secondChar_ActualName)
-~ temp charNameThree = translator(thirdChar_ActualName)
-~ temp charNameFour = translator(fourthChar_ActualName)
-~ temp charNameFive = translator(mentor_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
 //Da aprire con un LIST_COUNT > 2, perché i fogli sparsi danno molte informazioni.
 
 /*************************
@@ -529,11 +533,11 @@ La logica di comparsa delle appendici è:
 === grimoire_lettersAndDocuments
 @grimoireText #style:character #icon:LettersAndDocuments #title:Documenti #description:{grimoire_characterDescription(LettersAndDocuments)}
 
-~ temp charNameOne = translator(firstChar_ActualName)
-~ temp charNameTwo = translator(secondChar_ActualName)
-~ temp charNameThree = translator(thirdChar_ActualName)
-~ temp charNameFour = translator(fourthChar_ActualName)
-~ temp charNameFive = translator(mentor_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
 
     {
         - horizontalS_discoveredDocs has docOne:

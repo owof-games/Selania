@@ -4,7 +4,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 //Così se decido di uscire dalla conversazione, posso riprendere da dove eravamo rimaste.
     {
         - not confession:
@@ -21,7 +21,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
     {charTag(SecondCharacter, "melanchonic")}:      Da quando nonna è nella casa dei vecchi fa tutto schifo.
     {charTag(SecondCharacter, "neutral")}:          Papà è tornato ma litiga sempre con mamma.
@@ -58,7 +58,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
     {charTag(SecondCharacter, "neutral")}:          Va bene.
                                                     Ma stavo pensando una cosa però prima.
@@ -87,7 +87,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
 
     {charTag(SecondCharacter, "neutral")}:      Comunque possiamo cominciare quando vuoi.
@@ -102,7 +102,7 @@
                                                 E a sputare nel caffè di chi ti fa male.
         {
             - grimoire_fifthChar has grimSecondCharMentorPeace:
-                                                Pensa a prima, a quando hai convinto {mentorName} a chiederti scusa.
+                                                Pensa a prima, a quando hai convinto {charNameFive} a chiederti scusa.
                                                 Sapevi di avere ragione, e per questo hai ottenuto quello di cui avevi bisogno.
         }
                 
@@ -179,7 +179,8 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
+        
 
     {charTag(PG, "neutral")}:                   A scuola le maestre dicono che sei cattivo, bugiardo, violento, e finisci sempre in punizione.
 
@@ -199,13 +200,13 @@
                 
     + \ {charTag(PG, "neutral")}:               Tutto a questo mondo cambia. Anche un bambino cocciuto e bugiardo.
             -> glyph_modifier_variation_management(SecondCharacter, airC)->
-                                                Quando sei arrivato qui hai litigato con {mentorName}.
+                                                Quando sei arrivato qui hai litigato con {charNameFive}.
                                                 E mi hai detto molte bugie.
                                                 Ma hai anche chiesto scusa.
                                                 Puoi partire da questo per cambiare.
     {
     - grimoire_fifthChar has grimSecondCharMentorPeace:
-                                                Anche {mentorName} è cambiata, e ha capito quanto ti ha ferito.
+                                                Anche {charNameFive} è cambiata, e ha capito quanto ti ha ferito.
                                                 Tutti possono cambiare.
     }                                            
                 
@@ -227,14 +228,14 @@
                                                 Hai fatto amicizia con Franco.
      {
     - grimoire_fifthChar has grimSecondCharMentorPeace:
-                                                Hai fatto pace con {mentorName}.
+                                                Hai fatto pace con {charNameFive}.
     }                                             
                                                 Ti sei preso le tue responsabilità.
                                                 Forse a volte sei violento.
                                                 E menti.
                                                 Ma sei anche tante altre cose, {charNameTwo}.
                 
-    + \ {charTag(PG, "neutral")}:               Eppure hai trovato il modo di fare pace con {mentorName}.
+    + \ {charTag(PG, "neutral")}:               Eppure hai trovato il modo di fare pace con {charNameFive}.
             -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
                                                 Hai fatto lo sforzo di capirla.
                                                 E mi hai chiesto scusa più volte per le tue bugie.
@@ -260,7 +261,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
     //Affrontiamo il mondo. Rabbia, bugie, fantasia, violenza etc.
     {charTag(PG, "neutral")}:                   Tuo fratello dice che il mondo è orribile e che non si può più aggiustare.
                                                 E hai paura che gli animali possano sparire.
@@ -333,7 +334,8 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName) 
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+     
 
     {charTag(PG, "neutral")}:                   Hai detto che i grandi fanno schifo, e che non vuoi diventare grande.
     
@@ -368,7 +370,7 @@
         }
                                                 E trovare modi inaspettati di aiutare le altre persone, gli animali, il mondo.
                 
-        + \ {charTag(PG, "neutral")}:           Ma puoi essere un adulto che si prende cura delle persone, come {mentorName}.
+        + \ {charTag(PG, "neutral")}:           Ma puoi essere un adulto che si prende cura delle persone, come {charNameFive}.
             -> glyph_modifier_variation_management(SecondCharacter, waterC)->
                                                 E rendere più facile la vita all3 altr3.
         {
@@ -377,7 +379,7 @@
         }
         {
             - grimoire_fifthChar has grimSecondCharMentorPeace:
-                                                Non uno di quei grandi che chiedono sempre scusa per tutte le cose ma poi le rifanno, come hai detto a {mentorName}.
+                                                Non uno di quei grandi che chiedono sempre scusa per tutte le cose ma poi le rifanno, come hai detto a {charNameFive}.
                                                 Ma un adulto responsabile, come tuo fratello.
         }
 
@@ -404,7 +406,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
     {charTag(PG, "neutral")}:                   Credo di aver compreso quale sia il tuo blocco, perché sei qui.
                                                 E riguarda gli adulti.
@@ -493,7 +495,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
     
 {
 
@@ -573,7 +575,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
     {
         - grimoire_firstChar hasnt grimMentorFirstSecretEnding && grimoire_thirdChar hasnt grimMentorThirdSecretEnding :
@@ -581,7 +583,7 @@
     }
 
         {charTag(SecondCharacter, "neutral")}:          Voglio dirti una cosa {player_name}. 
-                                                        Su {mentorName}.
+                                                        Su {charNameFive}.
         {charTag(SecondCharacter, "melanchonic")}:      A me non mi sembra mica felice.
                                                         Mi ricorda mamma quando gira per casa dando consigli e dicendo cose sorridendo.
                                                         E poi si rinchiude in camera e resta in silenzio per ore.
@@ -598,7 +600,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
     {
         - contentsNest hasnt fireGlyph:
         {charTag(SecondCharacter, "neutral")}:          Ah {player_name}, prima ho trovato una cosa in giro.
@@ -627,7 +629,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
         
         {charTag(SecondCharacter, "neutral")}:          Torno a casa, {player_name}.
                                                         Non so cosa mi aspetta.
@@ -635,7 +637,7 @@
         {charTag(SecondCharacter, "neutral")}:          Ma te lo farò sapere, promesso!
         {charTag(SecondCharacter, "melanchonic")}:      Mi mancherai, sia?
                                                         Salutami Franco!
-                                                        E {mentorName}.
+                                                        E {charNameFive}.
         {
             - firstChar_storyStatus == story_storyStarted:
                                                         E super {charNameOne}.

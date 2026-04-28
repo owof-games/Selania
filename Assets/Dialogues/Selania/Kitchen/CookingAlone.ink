@@ -4,7 +4,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
     ~ temp piatto = kitchen_tempRecipeName
 
     ~ cooking_animations_on()
@@ -155,7 +155,7 @@
             -
 
         {charTag(Franco, "{portrait_Franco()}")}:       Mi sembra che stia sobbollendo benissimo.
-                                                        Questa parola me l'ha insegnata {mentorName}.
+                                                        Questa parola me l'ha insegnata {charNameFive}.
                                                         Prova a insegnarmi tantissime parole lei.
                                                         Ma quando ho provato a spiegarle come fare le bolle col naso, si è allontanata disgustata.
                                                         <i>Disgustata</i> me l'ha insegnata Tullio.
@@ -165,9 +165,9 @@
                                                         Come si dice?
                                                         "Chi più cuce, più sbaglia."
                                                         E visto che non cucio, non sbaglio mai, vero?
-                                                        Però {mentorName} dice che potrei essere una pessima influenza per {charNameTwo}.
+                                                        Però {charNameFive} dice che potrei essere una pessima influenza per {charNameTwo}.
                                                         Cosa strana, perché ho provato la febbre e non l'ho.
-                                                        Ma tu che ci lavori tanto assieme, che idea ti sei fatt{player_pronouns has him:o|{player_pronouns has her:a|ə}} di {mentorName}?
+                                                        Ma tu che ci lavori tanto assieme, che idea ti sei fatt{player_pronouns has him:o|{player_pronouns has her:a|ə}} di {charNameFive}?
 
             + \ {charTag(PG, "neutral")}:         <i>Decoro con della granella di affetto.</i>
                     ~ kitchen_recipeComplement = "con granella di affetto"
@@ -184,7 +184,7 @@
                 -> glyph_modifier_variation_management(PG, earthC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       Come nei thriller?
                                                                 Quindi c'è un crimine?
-                                                                E {mentorName} è sospettata?
+                                                                E {charNameFive} è sospettata?
                                                                 Ora le chiediamo a sorpresa: "Dov'è il malloppo?"
                                                                 E lei allora avrà la coda di carpa e si tradirà.
                                                                 E magari del malloppo è del cibo.

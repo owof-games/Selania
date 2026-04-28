@@ -36,7 +36,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 {
     //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
         - grimoire_thirdChar has thirdChar_minStoryletsForRewriting && not rewriting_proposal_third_character && grimoire_appendices hasnt grimRewritingMentor:
@@ -84,7 +84,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
         {
             - grimoire_thirdChar has grimThirdCharOne:
@@ -99,7 +99,7 @@
         //Azioni legate alla riscrittura
             //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
             + {(grimoire_thirdChar has thirdChar_minStoryletsForRewriting) && not rewriting_proposal_third_character && grimoire_appendices hasnt grimRewritingMentor} \ {charTag(PG, "neutral")}:         Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
-                    {charTag(ThirdCharacter, "neutral")}:         Mi sa che {mentorName} vuole dirti qualcosa prima.
+                    {charTag(ThirdCharacter, "neutral")}:         Mi sa che {charNameFive} vuole dirti qualcosa prima.
                    
                             ~ thirdChar_tutorial = true
                                 -> main

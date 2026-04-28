@@ -85,21 +85,16 @@
                 ~ return "Nonna Molotov"
         }    
     
-    - Mentor:
-        {
-            - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
-                ~ return "???"
-            
-            - mentor_ActualName == Mentore:
-                ~ return "Mentore"
-        }
-    
+
     - FifthCharacter:
         {
             - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
                 ~ return "???"
+
+            - fifthChar_ActualName == Mentore:
+                ~ return "Mentore"    
             
-            - mentor_ActualName == Mostro:
+            - fifthChar_ActualName == Mostro:
                 ~ return "Mostro"
         }
     

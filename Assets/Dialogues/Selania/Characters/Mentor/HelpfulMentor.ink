@@ -4,10 +4,10 @@
 ~ temp charNameTwo = translator(secondChar_ActualName)
 ~ temp charNameThree = translator(thirdChar_ActualName)
 ~ temp charNameFour= translator(fourthChar_ActualName)
-~ temp mentorName = translator(mentor_ActualName)
 
 
-{charTag(Mentor, "neutral")}:                  {player_name}!
+
+{charTag(FifthCharacter, "neutral")}:                  {player_name}!
 - (saluto)
 {shuffle:
     //Sulla cucina
@@ -65,7 +65,7 @@
  ----------------------------------*/
  
  === support
-    ~ temp mentorName = translator(mentor_ActualName)
+    
     - (top)
     Hai bisogno dei miei consigli?
     
@@ -84,7 +84,7 @@
             -> top   
 
     = myself
-    ~ temp mentorName = translator(mentor_ActualName)
+    
         Di cosa senti il bisogno?
             
             + \ {charTag(PG, "neutral")}:                                       Vorrei cambiare il mio nome.
@@ -104,26 +104,26 @@
        
  ----------------------------------*/
 === to_do
-~ temp mentorName = translator(mentor_ActualName)
+
 
         {
             - grimoire_appendices has grimChoicesMentor:
-                {charTag(Mentor, "neutral")}:       La prima cosa da fare è: conquistare la <b><i>fiducia</b></i> della persona che devi aiutare.
+                {charTag(FifthCharacter, "neutral")}:       La prima cosa da fare è: conquistare la <b><i>fiducia</b></i> della persona che devi aiutare.
                                                     Ci <b><i>parli</b></i>, cerchi di capire di cosa ha bisogno e quali sono le risposte che le piacciono.
 
         }
 
         {
             - grimoire_appendices has grimInkMentor:
-                {charTag(Mentor, "hurry")}:         Fino a quando non è pronta per una <b><i>riscrittura</b></i>
-                {charTag(Mentor, "neutral")}:       A quel punto inizi i tuoi <b><i>riscritture</b></i>: riprendi eventi della sua storia e la aiuti a guardarli sotto una luce diversa.
+                {charTag(FifthCharacter, "hurry")}:         Fino a quando non è pronta per una <b><i>riscrittura</b></i>
+                {charTag(FifthCharacter, "neutral")}:       A quel punto inizi i tuoi <b><i>riscritture</b></i>: riprendi eventi della sua storia e la aiuti a guardarli sotto una luce diversa.
                                                     Più inchiostro hai, più riscritture puoi fare.
 
         }
 
         {
             - grimoire_appendices has grimGreenhouseMentor && grimoire_appendices has grimInkMentor:
-                {charTag(Mentor, "hurry")}:         Per aumentare l'inchiostro puoi fare cose diverse.
+                {charTag(FifthCharacter, "hurry")}:         Per aumentare l'inchiostro puoi fare cose diverse.
                                                     Come dare il giusto dono.
                                                     E i doni migliori crescono nella serra.
 
@@ -131,14 +131,14 @@
 
         {
             - grimoire_appendices has grimFirstOpenKitchen:
-                {charTag(Mentor, "neutral")}:       E se mangiate qualcosa assieme, magari riesci anche a capire se stai o meno conquistando la fiducia di quella persona.
+                {charTag(FifthCharacter, "neutral")}:       E se mangiate qualcosa assieme, magari riesci anche a capire se stai o meno conquistando la fiducia di quella persona.
                 
         }
 
         {
             - grimoire_appendices has grimRewritingMentor:
-                {charTag(Mentor, "hurry")}:         A fine riscrittura, in base alle cose che avrai detto, la persona sceglierà il suo <b><i>nuovo nome</b></i>.
-                {charTag(Mentor, "neutral")}:       E poi si ricomincia.
+                {charTag(FifthCharacter, "hurry")}:         A fine riscrittura, in base alle cose che avrai detto, la persona sceglierà il suo <b><i>nuovo nome</b></i>.
+                {charTag(FifthCharacter, "neutral")}:       E poi si ricomincia.
                 
         }
 
@@ -151,21 +151,21 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
     
 
     {charTag(PG, "neutral")}:                       Vorrei raccontarti una cosa strana.
 
         * (voices) {player_somethingStrange has strangeVoice}\ {charTag(PG, "neutral")}:         C'è una voce che mi racconta cose.
             
-            {charTag(Mentor, "neutral")}:           Voce?
+            {charTag(FifthCharacter, "neutral")}:           Voce?
             {charTag(PG, "neutral")}:               Sì.
                                                     Ad esempio mi descrive le piante della serra.
                                                     O i luoghi in cui entro.
-            {charTag(Mentor, "neutral")}:           Riscrivere la storie di altre persone richiede una forte empatia.
+            {charTag(FifthCharacter, "neutral")}:           Riscrivere la storie di altre persone richiede una forte empatia.
                                                     Sicuramente quella voce è il tuo modo di capire questo luogo.
-            {charTag(Mentor, "hurry")}:             Un intuito latente che ora è più forte.
-            {charTag(Mentor, "sad")}:               Meglio della stanchezza dell'essere mentore, fidati.
+            {charTag(FifthCharacter, "hurry")}:             Un intuito latente che ora è più forte.
+            {charTag(FifthCharacter, "sad")}:               Meglio della stanchezza dell'essere mentore, fidati.
 
                 ~ player_somethingStrange -= strangeVoice
                 -> helping_mentor.top
@@ -175,17 +175,17 @@
             {charTag(PG, "neutral")}:               E mi ha, anzi, mi hanno chiesto come stavo dopo aver concluso la prima riscrittura.
             {
                 - voices:
-                {charTag(Mentor, "sad")}:           Stellina, di nuovo con questa voce?
+                {charTag(FifthCharacter, "sad")}:           Stellina, di nuovo con questa voce?
                 
                 - else:
-                {charTag(Mentor, "sad")}:           Senti le voci, stellina?
+                {charTag(FifthCharacter, "sad")}:           Senti le voci, stellina?
             }
-            {charTag(Mentor, "neutral")}:           Sono in questo posto da non so quanto e non ho mai parlato vasi o altre cose senza occhi e bocca.
-            {charTag(Mentor, "bored")}:             E l'idea che qualcosa mi stia spiando mi indispone molto.
+            {charTag(FifthCharacter, "neutral")}:           Sono in questo posto da non so quanto e non ho mai parlato vasi o altre cose senza occhi e bocca.
+            {charTag(FifthCharacter, "bored")}:             E l'idea che qualcosa mi stia spiando mi indispone molto.
             {charTag(TheWitch, witch_state())}: Noi non spiamo, noi siamo.
-            {charTag(Mentor, "neutral")}:           L'unica cosa che ha voce sono le persone che arrivano per chiedere il nostro aiuto.
+            {charTag(FifthCharacter, "neutral")}:           L'unica cosa che ha voce sono le persone che arrivano per chiedere il nostro aiuto.
                                                     Il tuo aiuto.
-            {charTag(Mentor, "sad")}:               Se senti ancora una volte delle voci, prenditi un po' di riposo.
+            {charTag(FifthCharacter, "sad")}:               Se senti ancora una volte delle voci, prenditi un po' di riposo.
 
                 ~ player_somethingStrange -= strangeVase
                 -> helping_mentor.top
@@ -193,7 +193,7 @@
         * {player_somethingStrange has strangeFrog} \ {charTag(PG, "neutral")}:  C'è una rana blu, e parla.
             {
                 - are_entities_together_in(Mentor, PG, Pond):
-                {charTag(Mentor, "bored")}:         L'ho notata.
+                {charTag(FifthCharacter, "bored")}:         L'ho notata.
 
                     {
                         - grimoire_fifthChar has grimMentorFranco: 
@@ -205,28 +205,28 @@
                                                                             E mi sono spaventato per il rumore.
                                                                             E a quel punto l'insetto si è spaventato a sua volta ed è finito nel naso di Tullio.
                                                                             Credo sia ancora lì dentro.
-                            {charTag(Mentor, "neutral")}:                   Appunto.
+                            {charTag(FifthCharacter, "neutral")}:                   Appunto.
                     }
                     }
 
-                {charTag(Mentor, "sad")}:           Quando ne ho sentito parlare da {charNameTwo}, ho pensato fosse un'altra bugia.
+                {charTag(FifthCharacter, "sad")}:           Quando ne ho sentito parlare da {charNameTwo}, ho pensato fosse un'altra bugia.
                     
                 {
                     - are_two_entities_together(SecondCharacter, PG):
                     {charTag(SecondCharacter, "angry")}:     Ehi!
                 }
 
-                {charTag(Mentor, "neutral")}:       Invece me ne sono ricreduta.
+                {charTag(FifthCharacter, "neutral")}:       Invece me ne sono ricreduta.
                 
                 - else:
                     {
                         - grimoire_fifthChar has grimMentorFranco:
-                        {charTag(Mentor, "neutral")}: Ci ho parlato prima. E non mi ispira molta fiducia.
+                        {charTag(FifthCharacter, "neutral")}: Ci ho parlato prima. E non mi ispira molta fiducia.
                         - else: 
-                        {charTag(Mentor, "neutral")}:  Ho notato.    
+                        {charTag(FifthCharacter, "neutral")}:  Ho notato.    
                     }
-                    {charTag(Mentor, "neutral")}:       Molte cose qui stanno cambiando dal tuo arrivo.
-                    {charTag(Mentor, "sad")}:           Immagino che una rana parlante non sia la cosa più assurda che potesse capitarci, vero?  
+                    {charTag(FifthCharacter, "neutral")}:       Molte cose qui stanno cambiando dal tuo arrivo.
+                    {charTag(FifthCharacter, "sad")}:           Immagino che una rana parlante non sia la cosa più assurda che potesse capitarci, vero?  
             }
                 ~ player_somethingStrange -= strangeFrog
                 -> helping_mentor.top
@@ -239,18 +239,18 @@
                                                         E {witch_actualName} dice che è per via di una magia.
                     {
                         - not talkingWitch:
-                        {charTag(Mentor, "sad")}:       E chi sarebbe {witch_actualName}?
-                        {charTag(Mentor, "bored")}:     No anzi, non voglio saperlo.
+                        {charTag(FifthCharacter, "sad")}:       E chi sarebbe {witch_actualName}?
+                        {charTag(FifthCharacter, "bored")}:     No anzi, non voglio saperlo.
                     } 
             }
 
-            {charTag(Mentor, "sad")}:                   E cosa dice di me?
-            {charTag(Mentor, "neutral")}:               No, non voglio saperlo.
+            {charTag(FifthCharacter, "sad")}:                   E cosa dice di me?
+            {charTag(FifthCharacter, "neutral")}:               No, non voglio saperlo.
                                                         O dovrei?
-            {charTag(Mentor, "bored")}:                 E se sa cosa che io no so?
-            {charTag(Mentor, "sad")}:                   O che non voglio sapere?                                            
-            {charTag(Mentor, "neutral")}:               Usalo con saggezza, {player_name}.
-            {charTag(Mentor, "hurry")}:                 E fidati solo di me.
+            {charTag(FifthCharacter, "bored")}:                 E se sa cosa che io no so?
+            {charTag(FifthCharacter, "sad")}:                   O che non voglio sapere?                                            
+            {charTag(FifthCharacter, "neutral")}:               Usalo con saggezza, {player_name}.
+            {charTag(FifthCharacter, "hurry")}:                 E fidati solo di me.
 
                 ~ player_somethingStrange -= strangeGrimoire
                 -> helping_mentor.top
@@ -258,11 +258,11 @@
    
         * (mentor) {player_somethingStrange has strangeMentor}\ {charTag(PG, "neutral")}:         Prima Franco ha detto di non aver mai incontrato nessun mentore da queste parti.
             
-            {charTag(Mentor, "neutral")}:           Franco?
+            {charTag(FifthCharacter, "neutral")}:           Franco?
                                                     Franco è anche convinto che la luna gli parli!
                                             {
                                                 - grimoire_fifthChar has grimMentorWitchOne:
-                                                    {charTag(Mentor, "sorry")}:           Cosa che poi non si è rivelata così assurda.
+                                                    {charTag(FifthCharacter, "sorry")}:           Cosa che poi non si è rivelata così assurda.
                                                 
                                                 - else:
                                                         {
@@ -276,9 +276,9 @@
             {charTag(PG, "sad")}:                   Non mi fraintendere, ma ricordati chi ti sta aiutando dal tuo arrivo.
                                                     Chi ti ha aperto la serra.
                                                     Chi è qui ad ascoltare le cose strane che racconti.
-            {charTag(Mentor, "neutral")}:           Farei tutto questo, se fossi una persona diversa?
+            {charTag(FifthCharacter, "neutral")}:           Farei tutto questo, se fossi una persona diversa?
                                                     Se il mio unico scopo non fosse quello di aiutarti?
-            {charTag(Mentor, "sad")}:               Mi prenderei tutta questa stanchezza senza motivo?
+            {charTag(FifthCharacter, "sad")}:               Mi prenderei tutta questa stanchezza senza motivo?
 
                 ~ player_somethingStrange -= strangeMentor
                 -> helping_mentor.top
@@ -333,9 +333,9 @@
  }
  
     = one
-     ~ temp mentorName = translator(mentor_ActualName)
      
-        {charTag(Mentor, "neutral")}:           Quando inizio a pensare molto, ma molto molto, una cosa che mi aiuta è concentrarmi su quello che mi circonda.
+     
+        {charTag(FifthCharacter, "neutral")}:           Quando inizio a pensare molto, ma molto molto, una cosa che mi aiuta è concentrarmi su quello che mi circonda.
                                                 Inizio ad osservare un oggetto e a dirmi dentro la testa cosa è.
                                                 Una sedia, uno sgabello, un frigorifero, un tostapane, una lavatrice.
                                                 Se la confusione è molta, cerco di partire con il generico, come <i>elettrodomestico</i>, e poi man mano che divento più concentrata inizio a scendere nel dettaglio.
@@ -347,9 +347,9 @@
             ->->
     
     = two
-     ~ temp mentorName = translator(mentor_ActualName)
      
-        {charTag(Mentor, "neutral")}:           Ci sono volte in cui mi focalizzo solo sulle cose che non vanno.
+     
+        {charTag(FifthCharacter, "neutral")}:           Ci sono volte in cui mi focalizzo solo sulle cose che non vanno.
                                                 Una cosa che mi aiuta in queste situazioni è puntare una sveglia ogni due ore.
                                                 E quando la sveglia suona provo a chiedermi:
                                                 Come mi sto sentendo?
@@ -361,9 +361,9 @@
         ->->
     
     = three
-     ~ temp mentorName = translator(mentor_ActualName)
      
-        {charTag(Mentor, "neutral")}:           Un tempo conoscevo una ragazza che soffriva di attacchi d'ansia e che mi ha dato una dritta che puoi applicare ovunque. 
+     
+        {charTag(FifthCharacter, "neutral")}:           Un tempo conoscevo una ragazza che soffriva di attacchi d'ansia e che mi ha dato una dritta che puoi applicare ovunque. 
                                                 Se il pensiero si inceppa su qualcosa, prova a stringere con forza degli oggetti che hai vicino.
                                                 Può essere il bracciolo di una sedia.
                                                 Il tavolo.
@@ -373,9 +373,9 @@
             ->->
     
     = four
-     ~ temp mentorName = translator(mentor_ActualName)
      
-        {charTag(Mentor, "neutral")}:           Il mio migliore amico è il body scan.
+     
+        {charTag(FifthCharacter, "neutral")}:           Il mio migliore amico è il body scan.
                                                 Lo faccio al risveglio tra gli arbusti della foresta.
                                                 Prima di tutto mi stendo, comoda, e faccio qualche respiro profondo.
                                                 Poi inizio a concentrarmi sulla punta di uno dei piedi, e da lì sposto la concentrazione lungo tutto il piede, la caviglia, il polpaccio, il ginocchio, il quadricipite.
@@ -388,9 +388,9 @@
             ->->
         
     = five
-     ~ temp mentorName = translator(mentor_ActualName)
      
-        {charTag(Mentor, "neutral")}:           Non so se ti capita di avere l'addome contratto.
+     
+        {charTag(FifthCharacter, "neutral")}:           Non so se ti capita di avere l'addome contratto.
                                                 Per molte persone quell'area, e il diaframma in particolare, accumula un sacco di tensione e preoccupazione.
                                                 Un modo per allentarla è prendere un suono che ti piace, una vocale, un <i>Aum</i>, tutte le vocali, e iniziare a ripeterle, con calma.
                                                 Lasciando che quel suono scenda e scenda e scenda dalla gola al petto, dal petto al diaframma.

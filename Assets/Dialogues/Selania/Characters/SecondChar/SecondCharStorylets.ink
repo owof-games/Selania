@@ -8,7 +8,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
         
         {charTag(SecondCharacter, "energy")}:                   Ma tu perché sei qui?
             
@@ -57,7 +57,7 @@
 
             {
                 - are_two_entities_together(Mentor, PG):
-                    {charTag(Mentor, "sad")}:                   Oh povera anima!
+                    {charTag(FifthCharacter, "sad")}:                   Oh povera anima!
             }
 
         {charTag(SecondCharacter, "energy")}:                   Ma lui mica ci può venire qui.
@@ -111,7 +111,7 @@
             {charTag(SecondCharacter, "neutral")}:              Detesto quando fa così.
             -
         {charTag(SecondCharacter, "angry")}:                    Ma sai che io non mi ricordo mica il mio nome?
-        {charTag(SecondCharacter, "neutral")}:                  Però non so come mai ma {not tutorial_mentorTalkingChoiceRelationship:il fiore parlante|{mentorName}} e {charNameOne} mi chiamano {charNameTwo}.
+        {charTag(SecondCharacter, "neutral")}:                  Però non so come mai ma {not tutorial_mentorTalkingChoiceRelationship:il fiore parlante|{charNameFive}} e {charNameOne} mi chiamano {charNameTwo}.
         - (nameSecond)
 
             {
@@ -120,13 +120,13 @@
             }
             {
                 - are_two_entities_together(Mentor, PG): 
-                        {charTag(Mentor, "sad")}:               Perché come un riccio hai la faccina tenera ma spini come pochi, ragazzo.
+                        {charTag(FifthCharacter, "sad")}:               Perché come un riccio hai la faccina tenera ma spini come pochi, ragazzo.
             }  
         {charTag(SecondCharacter, "energy")}:                   Dove saranno i miei compagni di scuola?
                                                                 Devi assolutamente trovarli!
             {
                 - are_two_entities_together(Mentor, PG):
-                    {charTag(Mentor, "sad")}:                   Altri bambini? Ma questo posto è pieno di pericoli!
+                    {charTag(FifthCharacter, "sad")}:                   Altri bambini? Ma questo posto è pieno di pericoli!
             }
                
         -> second_char_closing_storylet ->
@@ -139,7 +139,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
         {charTag(SecondCharacter, "emotional")}:            Non sai che cosa fighissima!
                                                             Prima ho visto una rana allo stagno.
@@ -150,9 +150,9 @@
 
         {
             - are_two_entities_together(Mentor, PG): 
-            {charTag(Mentor, "bored")}:                     Non ci sono rane in questo posto!
+            {charTag(FifthCharacter, "bored")}:                     Non ci sono rane in questo posto!
             {charTag(SecondCharacter, "angry")}:            Però io lo vista, e non dico mica bugie!
-            {charTag(Mentor, "neutral")}:                   Ma come Mentore di dico che.
+            {charTag(FifthCharacter, "neutral")}:                   Ma come Mentore di dico che.
             {charTag(SecondCharacter, "angry")}:            Devi mentorare meno e andare a vedere!
                     ~ move_entity(Mentor, Pond)
         }
@@ -223,7 +223,7 @@
             {charTag(SecondCharacter, "energy")}:           Ha anche usato una parolaccia.
             {
                 - are_two_entities_together(Mentor, PG): 
-                {charTag(Mentor, "bored")}:                 Davanti a un bambino?!?
+                {charTag(FifthCharacter, "bored")}:                 Davanti a un bambino?!?
             }
             {charTag(SecondCharacter, "neutral")}:          Però mi ha anche detto che "tutto è dove deve stare".
             {charTag(SecondCharacter, "melanchonic")}:      Che non mi ha aiutato molto perché gli ho chiesto le caramelle.
@@ -244,7 +244,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
         {charTag(SecondCharacter, "energy")}:               Mica mi hai detto come ti chiami.
         {charTag(SecondCharacter, "neutral")}:              Cioè: io lo so perché me l'ha detto {charNameOne}.
@@ -280,7 +280,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
             
         {charTag(SecondCharacter, "emotional")}:            Comunque sono contento che sei un maschio.
                                                             Le ragazze sono appiccicose.
@@ -294,7 +294,7 @@
             -grimoire_appendices hasnt grimChoicesMentor:
             {charTag(SecondCharacter, "neutral")}:          il fiore parlante è appiccicoso.
             - else:
-            {charTag(SecondCharacter, "neutral")}:          {mentorName} è appiccicosa.
+            {charTag(SecondCharacter, "neutral")}:          {charNameFive} è appiccicosa.
         }
         {charTag(SecondCharacter, "angry")}:                Vuole fare amicizia a tutti i costi.
         {charTag(SecondCharacter, "neutral")}:              Che fatica.
@@ -322,7 +322,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
         
         {charTag(SecondCharacter, "neutral")}:              Ah.
                                                             Sei una ragazza quindi.
@@ -349,7 +349,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
 
         {charTag(SecondCharacter, "neutral")}:              Mmm.
                                                             Capito.
@@ -364,7 +364,7 @@
         {charTag(SecondCharacter, "energy")}:               Non ho mai visto un coccodrillo.
         {
             - are_two_entities_together(Mentor, PG):
-            {charTag(Mentor, "sad")}:                       Solo io sono abbastanza vecchia da ricordare come va a finire questa storia?
+            {charTag(FifthCharacter, "sad")}:                       Solo io sono abbastanza vecchia da ricordare come va a finire questa storia?
         }
             -> three_continue
        
@@ -375,7 +375,7 @@
             ~ temp charNameThree = translator(thirdChar_ActualName)
             ~ temp charNameFour = translator(fourthChar_ActualName)
             ~ temp charNameFive = translator(fifthChar_ActualName)
-            ~ temp mentorName = translator(mentor_ActualName)
+            
             //Definire meglio in base ai colori.
             
             + {him_liar} \ {charTag(PG, "neutral")}:        Prima hai detto di essere pieno di action figures.
@@ -443,7 +443,7 @@
                                                             Devo solo capire come andarci.
             {
                 - are_two_entities_together(Mentor, PG): 
-                {charTag(Mentor, "hurry")}:                 Ma perché non sistemi con me i vialetti?
+                {charTag(FifthCharacter, "hurry")}:                 Ma perché non sistemi con me i vialetti?
                                                             È molto meno pericoloso!
                 {charTag(SecondCharacter, "neutral")}:      Poi muoio di noia!
             }
@@ -458,7 +458,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
         {charTag(SecondCharacter, "melanchonic")}:          Mi sono ricordato ora che non ho invitato nessun amico.
         {charTag(SecondCharacter, "melanchonic")}:          Mamma vuole che la festa sia solo per me.
@@ -479,7 +479,7 @@
 
         {charTag(SecondCharacter, "energy")}:               Sapevi che l'axolotl si fa ricrescere le braccia?
 
-            + \ {charTag(PG, "neutral")}:                   Perché hai dato un calcio a {mentorName}?
+            + \ {charTag(PG, "neutral")}:                   Perché hai dato un calcio a {charNameFive}?
                 -> top
             + \ {charTag(PG, "neutral")}:                   <i>Lo lascio continuare.</i>
             -
@@ -496,7 +496,7 @@
                                                             Solo i colibrì sanno volare all'indietro!
         {charTag(SecondCharacter, "neutral")}:              Tu sai camminare indietro? Secondo me no.
 
-            + \ {charTag(PG, "neutral")}:                   Perché hai dato un calcio a {mentorName}?
+            + \ {charTag(PG, "neutral")}:                   Perché hai dato un calcio a {charNameFive}?
                 -> top
             + \ {charTag(PG, "neutral")}:                   <i>Lo lascio continuare.</i>
             -
@@ -509,7 +509,7 @@
             -> top
 
     - (top)
-        {charTag(PG, "neutral")}:                           {mentorName} dice che prima le hai dato un calcio.
+        {charTag(PG, "neutral")}:                           {charNameFive} dice che prima le hai dato un calcio.
             
             + (razionale) \ {charTag(PG, "neutral")}:       Pensavo che uno scienziato come te fosse più razionale.
                     -> glyph_modifier_variation_management(SecondCharacter, airC)->
@@ -598,7 +598,7 @@
                                                             Non le volevo fare mica male.
             {charTag(SecondCharacter, "angry")}:            Ma non mi piace quando i grandi mi toccano.
             -
-        {charTag(SecondCharacter, "melanchonic")}:          {mentorName} è stata prepotente con me.
+        {charTag(SecondCharacter, "melanchonic")}:          {charNameFive} è stata prepotente con me.
         {charTag(SecondCharacter, "angry")}:                Non mi piacciono gli adulti prepotenti.
         {
             - second_char_main_storylets.one.difficoltà:
@@ -606,12 +606,12 @@
                                                             Io ora sto male.
                                                             Aiutami.
         }
-        {charTag(SecondCharacter, "angry")}:                Se {mentorName} non mi lascia in pace chiamo mio fratello.
+        {charTag(SecondCharacter, "angry")}:                Se {charNameFive} non mi lascia in pace chiamo mio fratello.
         {charTag(SecondCharacter, "emotional")}:            Lui è superforte.
         {
             - are_two_entities_together(FirstCharacter, PG):
             {charTag(FirstCharacter, "neutral")}:           Io.
-            {charTag(FirstCharacter, "annoyed")}:           Ma davvero {mentorName} ha.
+            {charTag(FirstCharacter, "annoyed")}:           Ma davvero {charNameFive} ha.
             {charTag(FirstCharacter, "sad")}:               Merda.
                                                             Mi ero dimenticata quanto fosse schifoso essere bambini.
         }
@@ -625,13 +625,13 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
         {
             - are_two_entities_together(Mentor, PG):
                 ~ change_entity_place(Mentor)                                    
         }                                            
             
-        {charTag(SecondCharacter, "angry")}:                {mentorName} si vuole comportare come la mia nonna.
+        {charTag(SecondCharacter, "angry")}:                {charNameFive} si vuole comportare come la mia nonna.
         {charTag(SecondCharacter, "emotional")}:            Ma la mia nonna non mi tratta mai come un bambino.
         {
             - second_char_main_storylets.one.tu:
@@ -645,7 +645,7 @@
             {charTag(SecondCharacter, "angry")}:            E non mi dire di nuovo che devo essere più razionale, come prima!
             
             - second_char_main_storylets.four.scherzo:
-            {charTag(SecondCharacter, "energy")}:           Forse è questo lo scherzo da fare a {mentorName}!
+            {charTag(SecondCharacter, "energy")}:           Forse è questo lo scherzo da fare a {charNameFive}!
                                                             Devo solo trovare il caffè.
         }
         {charTag(SecondCharacter, "neutral")}:              Quando mamma e papà ci lasciavano a casa da soli mangiavamo sempre cose buone.
@@ -682,7 +682,7 @@
             {charTag(SecondCharacter, "energy")}:           Ho una idea!
                                                             Troviamo delle carte.
                                                             Ti insegno come si bara.
-                                                            E poi stracciamo {mentorName}.
+                                                            E poi stracciamo {charNameFive}.
             {charTag(SecondCharacter, "angry")}:            Così la smette di dirmi cosa non devo fare.
                     
             + (ciabatta) \ {charTag(PG, "neutral")}:        Tua nonna sembra una tipa forte!
@@ -733,7 +733,7 @@
         {charTag(SecondCharacter, "emotional")}:            Però adoro stare qui!
                                                             Questo posto è pieno di animali!
         {charTag(SecondCharacter, "neutral")}:              E nessuno si arrabbia con me.
-        {charTag(SecondCharacter, "angry")}:                A parte {mentorName}.
+        {charTag(SecondCharacter, "angry")}:                A parte {charNameFive}.
         {
             - second_char_main_storylets.four.male:
         {charTag(SecondCharacter, "melanchonic")}:          Ma mi spiace che c'è rimasta male prima per la spinta.
@@ -750,8 +750,8 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
-        {charTag(SecondCharacter, "neutral")}:              Prima, con {mentorName}.
+    
+        {charTag(SecondCharacter, "neutral")}:              Prima, con {charNameFive}.
                                                             Mi ha fatto male perché mi ha fatto pensare a scuola.
         {
             - are_two_entities_together(Mentor, PG):
@@ -852,7 +852,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
     {
         - grimoire_fifthChar hasnt grimSecondCharMentorPeace && are_two_entities_together(Mentor, PG):
             ~ change_entity_place(Mentor)
@@ -887,7 +887,7 @@
         {charTag(SecondCharacter, "neutral")}:              Anche io faccio così.
         {
             - are_two_entities_together(Mentor, PG):
-                    {charTag(Mentor, "neutral")}:           Qui ogni tanto passa un cane con la posta.
+                    {charTag(FifthCharacter, "neutral")}:           Qui ogni tanto passa un cane con la posta.
                                                             Forse potreste diventare amici!
                     {charTag(SecondCharacter, "energy")}:   Sarebbe fighissimooooooooooooooooooooooooooooooo!
         }
@@ -962,11 +962,11 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
         {
             - grimoire_fifthChar hasnt grimSecondCharMentorPeace && are_two_entities_together(Mentor, PG):
                 ~ change_entity_place(Mentor)
-            {charTag(SecondCharacter, "neutral")}:          Ogni volta che sto per parlare, {mentorName}  se ne va.
+            {charTag(SecondCharacter, "neutral")}:          Ogni volta che sto per parlare, {charNameFive}  se ne va.
         }     
         
         {charTag(SecondCharacter, "energy")}:               Sai che mio fratello è campione di Karate?
@@ -1010,7 +1010,7 @@
         {charTag(SecondCharacter, "neutral")}:              Ma non mi sembra felice quando vado da loro e quindi ci vado poco.
         {
             - are_two_entities_together(Mentor, PG): 
-            {charTag(Mentor, "hurry")}:                     Potrebbe essere carino se provaste a imparare assieme, no?
+            {charTag(FifthCharacter, "hurry")}:                     Potrebbe essere carino se provaste a imparare assieme, no?
             {charTag(SecondCharacter, "neutral")}:          E se poi mi vuole annegare?
             {charTag(SecondCharacter, "neutral")}:          Poi la mamma mi risuscita solo per ammazzarmi di nuovo.
         }
@@ -1080,7 +1080,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
         {
             - grimoire_fifthChar hasnt grimSecondCharMentorPeace && are_two_entities_together(Mentor, PG):
                 ~ change_entity_place(Mentor)
@@ -1092,10 +1092,10 @@
                     -> glyph_modifier_variation_management(SecondCharacter, airC)->
             {charTag(SecondCharacter, "energy")}:           Figo!
                                                             Quindi non sono l'unico.
-            {charTag(SecondCharacter, "neutral")}:          Quando chiedo le cose a {mentorName} mi fa sentire stupido.
+            {charTag(SecondCharacter, "neutral")}:          Quando chiedo le cose a {charNameFive} mi fa sentire stupido.
             {
                 - are_two_entities_together(Mentor, PG): 
-                {charTag(Mentor, "hurry")}:                 Cerco solo di spiegartele per bene.
+                {charTag(FifthCharacter, "hurry")}:                 Cerco solo di spiegartele per bene.
                 {charTag(SecondCharacter, "neutral")}:      Prima mi hai spiegato le cose separando tutte le parole.
                                                             Mica sono un bambino!
                 {charTag(SecondCharacter, "angry")}:        So fare le frazioni!
@@ -1257,10 +1257,10 @@
             -
             {
                 - are_two_entities_together(Mentor, PG):
-                {charTag(Mentor, "neutral")}:               Nemmeno io chiederei a un bambino di decidere cosa diventare da grande.
+                {charTag(FifthCharacter, "neutral")}:               Nemmeno io chiederei a un bambino di decidere cosa diventare da grande.
                                                             A questa età dovreste solo giocare.
                 {charTag(SecondCharacter, "energy")}:       Ma non nello stagno.
-                {charTag(Mentor, "bored")}:                 Già, non nello stagno.
+                {charTag(FifthCharacter, "bored")}:                 Già, non nello stagno.
             }  
         
         {charTag(SecondCharacter, "neutral")}:              La maestra di matematica dice che ci sono tante associazioni che aiutano gli animali.
@@ -1279,11 +1279,11 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
         {
             - grimoire_fifthChar hasnt grimSecondCharMentorPeace && are_two_entities_together(Mentor, PG):
                 ~ change_entity_place(Mentor)
-            {charTag(SecondCharacter, "melanchonic")}:      {mentorName} se ne è andata.
+            {charTag(SecondCharacter, "melanchonic")}:      {charNameFive} se ne è andata.
                                                             Non mi vuole mica conoscere mi sa.
         }     
         
@@ -1361,7 +1361,7 @@
         {charTag(SecondCharacter, "melanchonic")}:          Essere adulti è terribile. 
         {
             - are_two_entities_together(Mentor, PG): 
-                    {charTag(Mentor, "hurry")}:             Non sai quanto, ragazzino.
+                    {charTag(FifthCharacter, "hurry")}:             Non sai quanto, ragazzino.
         }
         {charTag(SecondCharacter, "angry")}:                Però non è bello nemmeno essere bambini.
         {
@@ -1377,7 +1377,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
             {
                 - grimoire_fifthChar hasnt grimSecondCharMentorPeace && are_two_entities_together(Mentor, PG):
                 ~ change_entity_place(Mentor)
@@ -1395,7 +1395,7 @@
         {charTag(SecondCharacter, "emotional")}:            E ha fatto una fiammata gigante e un pezzo di muro è diventato nero.
         {
             - are_two_entities_together(Mentor, PG): 
-            {charTag(Mentor, "hurry")}:                     Sarei già morta d'infarto.
+            {charTag(FifthCharacter, "hurry")}:                     Sarei già morta d'infarto.
             {charTag(SecondCharacter, "energy")}:           Anche mio fratello!
         }
         {charTag(SecondCharacter, "energy")}:               Lui si è spaventato tantissimo.
@@ -1483,11 +1483,11 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
     {
         - grimoire_fifthChar hasnt grimSecondCharMentorPeace && are_two_entities_together(Mentor, PG):
         ~ change_entity_place(Mentor)
-        {charTag(SecondCharacter, "neutral")}:              Ti ho quasi detto tutto di me, ma {mentorName} continua a evitarmi.
+        {charTag(SecondCharacter, "neutral")}:              Ti ho quasi detto tutto di me, ma {charNameFive} continua a evitarmi.
     }     
         {charTag(SecondCharacter, "emotional")}:            Mi piace molto passare il tempo nella biblioteca.
         {charTag(SecondCharacter, "neutral")}:              Le biblioteche mi ricordano sempre la casa della nonna.
@@ -1577,7 +1577,7 @@
             } 
             {
                 - are_two_entities_together(Mentor, PG): 
-                {charTag(Mentor, "hurry")}:                 Ci sarà un posticino anche per me?
+                {charTag(FifthCharacter, "hurry")}:                 Ci sarà un posticino anche per me?
                                                             Sì!
                 {charTag(SecondCharacter, "emotional")}:    E poi sono sicuro che tu e nonna Paola vi piacete proprio subito subito!
             }

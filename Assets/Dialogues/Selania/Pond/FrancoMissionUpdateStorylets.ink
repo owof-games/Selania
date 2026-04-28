@@ -7,7 +7,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
     {charTag(Franco, "{portrait_Franco()}")}:           Ehi girino!
                                                         Ricordati di leggere un po' dal tuo libro magico.
@@ -22,7 +22,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
     {charTag(Franco, "{portrait_Franco()}")}:           {player_name}!
                                                         Come sta andando con le piante della serra?
@@ -35,17 +35,19 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
 
     {charTag(Franco, "{portrait_Franco()}")}:           Ma ecco di nuovo qui il mio girino preferito!
-                                                        Hai poi chiesto a {mentorName} come stare bene?
+                                                        Hai poi chiesto a {charNameFive} come stare bene?
         {
             - are_two_entities_together(Mentor, PG):
-                {charTag(Mentor, "hurry")}:             Ma grazie Franco!
+                {charTag(FifthCharacter, "hurry")}:             Ma grazie Franco!
                 Ho tantissimi consigli da dare a {player_name}!
                 {
                     - are_two_entities_together(FirstCharacter, PG):
-                        {charTag(FirstCharacter, "annoyed")}:   Non ne dubitavo {mentorName}.
+                        {charTag(FirstCharacter, "annoyed")}:   Non ne dubitavo {charNameFive}.
                 }
         
         }
@@ -61,13 +63,15 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
 
     {charTag(Franco, "{portrait_Franco()}")}:           {player_name}!
-                                                        Le mie spie mi hanno detto che ancora non hai raccontato stranezze a {mentorName}!
+                                                        Le mie spie mi hanno detto che ancora non hai raccontato stranezze a {charNameFive}!
         {
             - are_two_entities_together(Mentor, PG):
-                {charTag(Mentor, "hurry")}:             Stranezze?
+                {charTag(FifthCharacter, "hurry")}:             Stranezze?
         }
     {charTag(Franco, "{portrait_Franco()}")}:           Uh, non ho davvero delle spie.
                                                         Giusto qualche girino.
@@ -81,7 +85,9 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
 
     {charTag(Franco, "{portrait_Franco()}")}:       Girino, sapevi che se metto la zampa nell'acqua si spezza?
                                                     Ma se poi la tiro fuori, è intera!
@@ -105,7 +111,9 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
 
     {charTag(Franco, "{portrait_Franco()}")}:       Parla con la nostra amica comune, girino.
                                                     Intanto resterò qui a scrivere una lettera di scuse a Tullio e Giulio.
@@ -118,7 +126,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
 {charTag(Franco, "{portrait_Franco()}")}:           Girino!
                                                     Come diceva Gambusia de Filippi: c'è fitoplancton per te.
@@ -132,7 +140,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
     {charTag(Franco, "{portrait_Franco()}")}:       {player_name}, continuano ad arrivarmi lettere dai topi della biblioteca.
                                                     Non è che riesci a farci un salto e smuovere qualche racconto?
@@ -147,7 +155,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
     {charTag(Franco, "{portrait_Franco()}")}:       "E mi rendo conto che le rane non piacciono a tutte le persone."
                                                     "Ma se per questo nemmeno le persone piacciono a tutte le rane."
@@ -164,7 +172,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
     {charTag(Franco, "{portrait_Franco()}")}:       {player_name}, quelli del MENSA mi stanno dicendo che li ho diffamati.
                                                     Solo perché ho scritto sotto un loro post che non è vero che se c'è internet allora uno è tenuto a sapere che la noce moscata non vola.
@@ -185,7 +193,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
@@ -229,7 +237,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
@@ -279,12 +287,14 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
 
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
         - frog_currentMission has missionThree:
-        {charTag(Franco, "{portrait_Franco()}")}:   Hai parlato con {mentorName}!
+        {charTag(Franco, "{portrait_Franco()}")}:   Hai parlato con {charNameFive}!
 
         - else:
         {charTag(Franco, "{portrait_Franco()}")}:   Questa è facile.
@@ -293,11 +303,11 @@
                                                     Quella che ci spiega le cose.
                                                     La voce.
                                                     Ecco.
-                                                    Mi ha spiegato tante cose su {mentorName}.
+                                                    Mi ha spiegato tante cose su {charNameFive}.
                                                     Sapevi ad esempio che può respirare fino a due minuti sott'acqua?
                                                     {
                                                         - are_two_entities_together(Mentor, PG):
-                                                            {charTag(Mentor, "hurry")}:             Eh?
+                                                            {charTag(FifthCharacter, "hurry")}:             Eh?
                                                     }
                                                     {
                                                         - are_two_entities_together(FirstCharacter, PG):
@@ -310,26 +320,26 @@
                                                             {charTag(SecondCharacter, "neutral")}:        IM-POS-SI-BI-LE!
                                                             {
                                                                 - are_two_entities_together(Mentor, PG):
-                                                                    {charTag(Mentor, "hurry")}:             Guarda che sono bravissima a burraco!
+                                                                    {charTag(FifthCharacter, "hurry")}:             Guarda che sono bravissima a burraco!
                                                                     {charTag(SecondCharacter, "neutral")}:        Ma è una roba da vecchi!
                                                             }
                                                     }
         {charTag(Franco, "{portrait_Franco()}")}:       E che ha una tasca sotto l'ascella dove conserva le pietre che usa per rompere i gusci?
                                                     {
                                                         - are_two_entities_together(Mentor, PG):
-                                                            {charTag(Mentor, "neutral")}:                   A dire il vero ne ho anche una in testa, dove raccolgo le sciocchezze dette dalle rane.
+                                                            {charTag(FifthCharacter, "neutral")}:                   A dire il vero ne ho anche una in testa, dove raccolgo le sciocchezze dette dalle rane.
                                                             {charTag(Franco, "{portrait_Franco()}")}:       Ma le rana sono molto sagge, quindi non hai molto da raccogliere.
                                                     }
                                                         E.
                                                         Uh, una lettera di Euforbo.
-                                                        "Papà Franco, quella è la lontra, non {mentorName}."
+                                                        "Papà Franco, quella è la lontra, non {charNameFive}."
                                                         Uh.
                                                         Euforbo.
                                                         È più furbo di un pesce rosso.
-                                                        Ma {mentorName}.
-                                                        Di cosa aveva bisogno {mentorName}?
-        {charTag(TheWitch, witch_state())}:         <i>{mentorName} ama dare consigli per far star bene le persone.</i>
-                                                        <i>{mentorName} crede di potere esistere solo quando si rende utile.</i>
+                                                        Ma {charNameFive}.
+                                                        Di cosa aveva bisogno {charNameFive}?
+        {charTag(TheWitch, witch_state())}:         <i>{charNameFive} ama dare consigli per far star bene le persone.</i>
+                                                        <i>{charNameFive} crede di potere esistere solo quando si rende utile.</i>
         {charTag(Franco, "{portrait_Franco()}")}:       Esatto.
                                                         Quella roba lì.
                                                         E tu l'hai fatta felice chiedendole un consiglio su come stare bene!
@@ -349,10 +359,10 @@
                                                     Gli ho chiesto quali fossero le due domande, e lui mi ha baciato sulla testa.
                                                     E poi mi ha detto "Per fortuna che sei simpatico."
                                                     Ci amiamo così tanto.
-                                                    Però ora {mentorName} è più felice.
+                                                    Però ora {charNameFive} è più felice.
                                                      {
                                                         - are_two_entities_together(Mentor, PG):
-                                                            {charTag(Mentor, "neutral")}:                   Vero.
+                                                            {charTag(FifthCharacter, "neutral")}:                   Vero.
                                                     }
     {charTag(Franco, "{portrait_Franco()}")}:       E questo posto è un po' più felice.
                                                     E allora io ti rendo un po' più felice: dimmi come posso aiutarti.
@@ -363,7 +373,9 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
 
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
@@ -419,7 +431,7 @@
                                                     Ma io dovevo dirti qualcosa.
                                                     Cosa?
                                                     Ah sì: che il gossip è importante.
-                                                    Per cui grazie per aver parlato con {mentorName} delle cose insolite che hai incontrato.
+                                                    Per cui grazie per aver parlato con {charNameFive} delle cose insolite che hai incontrato.
                                                     Non sai quanto abbia bisogno quella donna di uscire dal suo guscio.
                                                     Per cui: vediamo come posso aiutarti!
         
@@ -429,7 +441,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
@@ -493,7 +505,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
@@ -539,7 +551,7 @@
 
                                                     {
                                                         - are_two_entities_together(Mentor, PG):
-                                                            {charTag(Mentor, "bored")}:             C'è una discarica?!?
+                                                            {charTag(FifthCharacter, "bored")}:             C'è una discarica?!?
                                                                 
                                                     }
     }
@@ -577,7 +589,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
@@ -648,7 +660,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
@@ -731,7 +743,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
@@ -783,7 +795,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
@@ -834,7 +846,7 @@
 === special_mission_one_closed
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
         //Associo ~ glyph_actualActiveSigil al sigillo di Franco
         ~ glyph_actualActiveSigil = nest_francoChosenSigil

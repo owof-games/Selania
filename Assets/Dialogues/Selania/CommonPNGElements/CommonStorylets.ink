@@ -4,7 +4,6 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
 
     {charTag(FirstCharacter, "curious")}:               Quindi anche tu non ricordi come sei arrivato qui?
     {charTag(SecondCharacter, "melanchonic")}:          Sì no boh.
@@ -23,7 +22,7 @@
     {charTag(FirstCharacter, "affectionate")}:          E poi che senso ha rapirci e lasciarci in un posto figo, così a caso?
     {
         - are_two_entities_together(Mentor, PG):
-        {charTag(Mentor, "hurry")}:                     Sono felice che apprezzi questi luoghi, {charNameOne}.
+        {charTag(FifthCharacter, "hurry")}:                     Sono felice che apprezzi questi luoghi, {charNameOne}.
     }
     {charTag(SecondCharacter, "energy")}:               Io voglio capire TUTTO di questo posto. Tutto!
                                                         Capire cosa si può mangiare e cosa no.
@@ -41,10 +40,10 @@
         
     {
         - are_two_entities_together(Mentor, PG):
-        {charTag(Mentor, "neutral")}:                   Fammi vedere se ho dei cerotti da qualche parte.
+        {charTag(FifthCharacter, "neutral")}:                   Fammi vedere se ho dei cerotti da qualche parte.
                                                         E delle garze.
-        {charTag(Mentor, "sad")}:                       Avrò del disinfettante?
-        {charTag(Mentor, "hurry")}:                     Non è mai servito del disinfettante!
+        {charTag(FifthCharacter, "sad")}:                       Avrò del disinfettante?
+        {charTag(FifthCharacter, "hurry")}:                     Non è mai servito del disinfettante!
                                                         Devo controllare, subito!
         ~ change_entity_place(Mentor)
     }
@@ -93,27 +92,27 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
     
     {charTag(SecondCharacter, "neutral")}:              Non hai detto "Ti devo chiedere scusa {charNameTwo}?
                                                         Perché mica l'hai ancora fatto!
-    {charTag(Mentor, "sad")}:                           Sì, ma è importante che anche tu ragioni sulla tua violenza.
+    {charTag(FifthCharacter, "sad")}:                           Sì, ma è importante che anche tu ragioni sulla tua violenza.
     {charTag(SecondCharacter, "angry")}:                Non sono io che ti ho picchiato.
-    {charTag(Mentor, "bored")}:                         In realtà.
-    {charTag(Mentor, "neutral")}:                       No.
-                                                        Respira {mentorName}, respira.
-    {charTag(Mentor, "sad")}:                           Hai ragione.
-    {charTag(Mentor, "neutral")}:                       Sono qui per chiederti scusa, {charNameTwo}.
+    {charTag(FifthCharacter, "bored")}:                         In realtà.
+    {charTag(FifthCharacter, "neutral")}:                       No.
+                                                        Respira {charNameFive}, respira.
+    {charTag(FifthCharacter, "sad")}:                           Hai ragione.
+    {charTag(FifthCharacter, "neutral")}:                       Sono qui per chiederti scusa, {charNameTwo}.
                                                         Non avrei dovuto farti male.
-    {charTag(Mentor, "sorry")}:                         Mi dispiace.
+    {charTag(FifthCharacter, "sorry")}:                         Mi dispiace.
     {charTag(SecondCharacter, "neutral")}:              Ok.
-    {charTag(Mentor, "neutral")}:                       Ok?
+    {charTag(FifthCharacter, "neutral")}:                       Ok?
     {charTag(SecondCharacter, "neutral")}:              Sì, non ho mica altro da dirti.
-    {charTag(Mentor, "sad")}:                           Ma io.
+    {charTag(FifthCharacter, "sad")}:                           Ma io.
     {charTag(SecondCharacter, "neutral")}:              I grandi chiedono sempre scusa per tutte le cose ma poi le rifanno.
                                                         Poi piangono e chiedono scusa.
     {charTag(SecondCharacter, "angry")}:                E poi le rifanno.
-    {charTag(Mentor, "hurry")}:                         Ma io ci credo davvero, {charNameTwo}!
+    {charTag(FifthCharacter, "hurry")}:                         Ma io ci credo davvero, {charNameTwo}!
                                                         Non ti voglio più far del male.
     {charTag(SecondCharacter, "neutral")}:              Ok.
                                                         Però va bene così.
@@ -124,14 +123,14 @@
     {charTag(FirstCharacter, "sad")}:                   Povero piccolo.
     {charTag(FirstCharacter, "affectionate")}:          Però è stato molto coraggioso, vero?
     }
-    {charTag(Mentor, "sad")}:                           Non mi perdonerà mai, vero {player_name}?
+    {charTag(FifthCharacter, "sad")}:                           Non mi perdonerà mai, vero {player_name}?
 
 
         + \ {charTag(PG, "neutral")}:                   Temo che gli adulti non siano la sua cosa preferita.
                 -> glyph_modifier_variation_management(Mentor, waterC)->
-        {charTag(Mentor, "sad")}:                       Lo temo anche io.
+        {charTag(FifthCharacter, "sad")}:                       Lo temo anche io.
                                                         E questo significa che devo fare il doppio del lavoro per avere la sua  fiducia.
-        {charTag(Mentor, "hurry")}:                     Ma la avrò!
+        {charTag(FifthCharacter, "hurry")}:                     Ma la avrò!
                                                         E capirà che anche gli adulti sono persone di cui potersi fidare.                                               
         {
             - are_two_entities_together(FirstCharacter, PG):
@@ -140,19 +139,19 @@
 
         + \ {charTag(PG, "neutral")}:                   Tu ti sei perdonata, per quello che hai fatto?
                 -> glyph_modifier_variation_management(Mentor, aetherC)->
-        {charTag(Mentor, "sad")}:                       Non.
+        {charTag(FifthCharacter, "sad")}:                       Non.
                                                         No.
                                                         Non credo di aver capito ancora fino in fondo cosa è successo.
                                                         E sono troppo tesa ora per capire cosa mi passi per la testa.
-                                                        Sono una pessima {mentorName}, vero?
+                                                        Sono una pessima {charNameFive}, vero?
         {
         - are_two_entities_together(FirstCharacter, PG):
         {charTag(FirstCharacter, "affectionate")}:       Al massimo sei umana, ama.
         }
         
-        + \ {charTag(PG, "neutral")}:                    Ha bisogno di spazio per sé, {mentorName}.
+        + \ {charTag(PG, "neutral")}:                    Ha bisogno di spazio per sé, {charNameFive}.
                 -> glyph_modifier_variation_management(Mentor, earthC)->
-        {charTag(Mentor, "sad")}:                       Ma io...
+        {charTag(FifthCharacter, "sad")}:                       Ma io...
                                                         Uh.
                                                         Non ci so stare nelle situazioni così.
                                                         Senza sapere se la persona mi odia o meno.
@@ -160,20 +159,20 @@
             
         + \ {charTag(PG, "neutral")}:                   Hai imparato qualcosa, da questa situazione?
                 -> glyph_modifier_variation_management(Mentor, airC)->
-        {charTag(Mentor, "sad")}:                       Che sono un disastro?
+        {charTag(FifthCharacter, "sad")}:                       Che sono un disastro?
                                                         Che come provo a fare un passo deciso, ferisco qualcuno?
-                                                        Che forse non sono un granché come {mentorName}?
+                                                        Che forse non sono un granché come {charNameFive}?
         
         + \ {charTag(PG, "neutral")}:                    L'hai ferito, cosa ti aspettavi?
                 -> glyph_modifier_variation_management(Mentor, fireC)->
-        {charTag(Mentor, "sad")}:                       Un po' di comprensione.
+        {charTag(FifthCharacter, "sad")}:                       Un po' di comprensione.
                                                         Di ascolto.
                                                         Delle mie ragioni.
                                                         Oh cavoletti.
                                                         L'ho fatto per me, vero?
                                                         Ho chiesto scusa per me, non per lui.
         -
-    {charTag(Mentor, "neutral")}:                       Grazie per le tue parole, {player_name}.
+    {charTag(FifthCharacter, "neutral")}:                       Grazie per le tue parole, {player_name}.
             -> mentor_closing_storylet ->
             -> second_char_closing_storylet ->
             ->->
@@ -184,9 +183,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
     
-    {charTag(FirstCharacter, "affectionate")}:          No, non scherzo, {mentorName}, ti invidio un sacco.
+    {charTag(FirstCharacter, "affectionate")}:          No, non scherzo, {charNameFive}, ti invidio un sacco.
     {charTag(FirstCharacter, "neutral")}:               Hai uno scopo chiaro.
                                                         E fai qualcosa di buono per le altre persone.
     {charTag(FirstCharacter, "affectionate")}:          Mi sembra la cosa migliore che possa capitare nella vita.
@@ -195,55 +194,55 @@
         {charTag(Franco, "{portrait_Franco()}")}:       La cosa migliore che ti possa capitare è il karaoke di cugina Sputt.
                                                         Ma è meglio non starle troppo vicino.
     }
-    {charTag(Mentor, "hurry")}:                         Anche tu hai uno scopo, {charNameOne}.
+    {charTag(FifthCharacter, "hurry")}:                         Anche tu hai uno scopo, {charNameOne}.
                                                         Tutti l'abbiamo.
     {charTag(FirstCharacter, "sad")}:                   E quale sarebbe il mio?
-    {charTag(Mentor, "hurry")}:                         Un po' lo scoprirai da te, parlando con {player_name}.
-    {charTag(Mentor, "neutral")}:                       Ma una cosa è certa: se non saprai trovare il bello in ciò che già hai, non sarai felice nemmeno quando avrai un nuovo nome.
-    {charTag(Mentor, "hurry")}:                         La felicità non è un luogo da raggiungere, ma qualcosa che si ha dentro.
+    {charTag(FifthCharacter, "hurry")}:                         Un po' lo scoprirai da te, parlando con {player_name}.
+    {charTag(FifthCharacter, "neutral")}:                       Ma una cosa è certa: se non saprai trovare il bello in ciò che già hai, non sarai felice nemmeno quando avrai un nuovo nome.
+    {charTag(FifthCharacter, "hurry")}:                         La felicità non è un luogo da raggiungere, ma qualcosa che si ha dentro.
     {charTag(FirstCharacter, "neutral")}:               Mmm.
                                                         Certo.
-    {charTag(FirstCharacter, "annoyed")}:               Scusa {mentorName}, però un po' mi viene da dirti che è facile dirlo, quando fai già quello che ami.
+    {charTag(FirstCharacter, "annoyed")}:               Scusa {charNameFive}, però un po' mi viene da dirti che è facile dirlo, quando fai già quello che ami.
                                                         È una posizione privilegiata.
-    {charTag(Mentor, "neutral")}:                       È un privilegio che mi sono creata, accogliendo il bello anche nelle cose difficili.
+    {charTag(FifthCharacter, "neutral")}:                       È un privilegio che mi sono creata, accogliendo il bello anche nelle cose difficili.
     {charTag(FirstCharacter, "curious")}:               {player_name}, tu cosa pensi?
-                                                        La felicità è questa roba che dice {mentorName}?
+                                                        La felicità è questa roba che dice {charNameFive}?
     {charTag(FirstCharacter, "annoyed")}:               Che te la ritrovi se ti fai andare bene quello che hai?
-    {charTag(Mentor, "neutral")}:                       O quello che dice {charNameOne}.
-    {charTag(Mentor, "sad")}:                           Qualcosa che è sempre altrove e quindi irraggiungibile?
+    {charTag(FifthCharacter, "neutral")}:                       O quello che dice {charNameOne}.
+    {charTag(FifthCharacter, "sad")}:                           Qualcosa che è sempre altrove e quindi irraggiungibile?
     
-        + \ {charTag(PG, "neutral")}:                   {mentorName}, tu parli di arrendersi.
+        + \ {charTag(PG, "neutral")}:                   {charNameFive}, tu parli di arrendersi.
             -> glyph_modifier_variation_management(FirstCharacter, fireC)->
-        {charTag(Mentor, "neutral")}:                   Non arrendersi, {player_name}, ma accogliere quello che si ha.
-        {charTag(FirstCharacter, "sad")}:               E non vedo differenza, {mentorName}.
+        {charTag(FifthCharacter, "neutral")}:                   Non arrendersi, {player_name}, ma accogliere quello che si ha.
+        {charTag(FirstCharacter, "sad")}:               E non vedo differenza, {charNameFive}.
             
-        + \ {charTag(PG, "neutral")}:                   {mentorName}, razionalmente la felicità ha una natura temporanea.
+        + \ {charTag(PG, "neutral")}:                   {charNameFive}, razionalmente la felicità ha una natura temporanea.
             -> glyph_modifier_variation_management(FirstCharacter, airC)->
         {charTag(FirstCharacter, "affectionate")}:      Oh, che bello sentire qualcun{player_pronouns has him:o|{player_pronouns has her:a|ə}} che matcha la mia gioia di vivere.
-        {charTag(Mentor, "neutral")}:                   Il fatto che sia temporanea non nega la mia teoria.
+        {charTag(FifthCharacter, "neutral")}:                   Il fatto che sia temporanea non nega la mia teoria.
         
         //più terra
         + \ {charTag(PG, "neutral")}:                   La felicità è una coperta morbida dopo una giornata di duro lavoro.
             -> glyph_modifier_variation_management(FirstCharacter, earthC)->
         {charTag(FirstCharacter, "annoyed")}:           Credo che quello si chiami "abuso di sostanze".
-        {charTag(Mentor, "sad")}:                       Con un linguaggio meno colorito, direi comunque che sì, ha ragione {charNameOne}.
+        {charTag(FifthCharacter, "sad")}:                       Con un linguaggio meno colorito, direi comunque che sì, ha ragione {charNameOne}.
 
         + \ {charTag(PG, "neutral")}:               Non credo nella felicità, ma credo nel piacere dato dalle persone vicine.
             -> glyph_modifier_variation_management(FirstCharacter, waterC)->    
-        {charTag(Mentor, "neutral")}:               Questa è una lettura che potrei apprezzare.
+        {charTag(FifthCharacter, "neutral")}:               Questa è una lettura che potrei apprezzare.
         {charTag(FirstCharacter, "curious")}:       Woah!
         {charTag(FirstCharacter, "affectionate")}:  Vuol dire che {player_name} ha trovato un punto di contatto tra noi in questa discussione?
-        {charTag(Mentor, "hurry")}:                 Eh sì, mi sa proprio di sì.
+        {charTag(FifthCharacter, "hurry")}:                 Eh sì, mi sa proprio di sì.
             
         + \ {charTag(PG, "neutral")}:               La felicità è qualcosa che cresce nelle pieghe del quotidiano.
             -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
-            {charTag(Mentor, "hurry")}:             Sono contenta che la vediamo allo stesso modo.
+            {charTag(FifthCharacter, "hurry")}:             Sono contenta che la vediamo allo stesso modo.
             {charTag(FirstCharacter, "annoyed")}:   Le cose che crescono nelle pieghe di solito sono sporche.
                                                     Infestanti.
                                                     E indesiderate.
         -
-    {charTag(FirstCharacter, "neutral")}:           Comunque spero tu abbia imparato la lezione, {mentorName}.
-    {charTag(Mentor, "neutral")}:                   Lezione?
+    {charTag(FirstCharacter, "neutral")}:           Comunque spero tu abbia imparato la lezione, {charNameFive}.
+    {charTag(FifthCharacter, "neutral")}:                   Lezione?
     {charTag(FirstCharacter, "affectionate")}:      Sì: che se una persona ti dice che ti ammira, è meglio portarsi a casa il complimento e goderselo.
     {charTag(FirstCharacter, "annoyed")}:           Non sono vecchia come te, ma so che non sono tanti gli elogi che ci vengono dati in vita.
         -> first_char_closing_storylet ->
@@ -256,34 +255,34 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
 
-    {charTag(Mentor, "neutral")}:                   Però non ti ho mai visto in giro.
+
+    {charTag(FifthCharacter, "neutral")}:                   Però non ti ho mai visto in giro.
     {charTag(Franco, "{portrait_Franco()}")}:       Però sono sempre stato cra!
-    {charTag(Mentor, "neutral")}:                   Ma non ti ho mai mai visto in giro.
+    {charTag(FifthCharacter, "neutral")}:                   Ma non ti ho mai mai visto in giro.
                                                     E ogni giorno vengo a sistemare il sentiero e pulire la serra.
     {charTag(Franco, "{portrait_Franco()}")}:       Forse allora non sei venuta ogni giorno.
                                                     O forse mi hai scambiato per Tullio? A volte succede.
                                                     O forse non è che hai proprio proprio proprio tutto sotto il tuo controllo.
                                                     Un po' come zio Gracco e il suo problema con l'alcool.
                                                     E i combustibili in generale.
-    {charTag(Mentor, "neutral")}:                   Impossibile.
+    {charTag(FifthCharacter, "neutral")}:                   Impossibile.
                                                     Controllo tutto, è il mio lavoro.
     {charTag(Franco, "{portrait_Franco()}")}:       Eppure eccoci cra, con io che so dove sono stato, e tu mi dici che non ricordo bene.
-    {charTag(Mentor, "sad")}:                       Non ho detto che non ricordi bene.
+    {charTag(FifthCharacter, "sad")}:                       Non ho detto che non ricordi bene.
     {charTag(Franco, "{portrait_Franco()}")}:       Ma dici che hai tutto sotto il tuo controllo e che non mi hai visto, quindi o non ricordo bene, o mento.
                                                     E io sono una rana e una rana non ha un collo e quindi non mento.
-    {charTag(Mentor, "sorry")}:                     Non mi permetterei mai di dirlo.
+    {charTag(FifthCharacter, "sorry")}:                     Non mi permetterei mai di dirlo.
     {charTag(Franco, "{portrait_Franco()}")}:       Infatti non l'hai detto, l'hai implicato.
                                                     Questa me l'ha insegnata stamani mio figlio Euforbo.
                                                     Ma mi ha chiesto di non usare "stazampe" invece di stamani.
-    {charTag(Mentor, "neutral")}:                   Non mi piace il tuo tono, rana.
+    {charTag(FifthCharacter, "neutral")}:                   Non mi piace il tuo tono, rana.
     {charTag(Franco, "{portrait_Franco()}")}:       Ma non cambia il fatto che mi stai dando o del bugiardo o dello smemorato.
-    {charTag(Mentor, "bored")}:                     Io non l'ho detto!
+    {charTag(FifthCharacter, "bored")}:                     Io non l'ho detto!
     {charTag(Franco, "{portrait_Franco()}")}:       Ma l'hai implicato.
                                                     Che non è ampilato, perché i lati non sono ampi.
                                                     Questo lo dice sempre Euforbo.
-    {charTag(Mentor, "bored")}:                     AAAAAAAARG!
+    {charTag(FifthCharacter, "bored")}:                     AAAAAAAARG!
                                                     SEI INSOPPORTABILE!
         ~ change_entity_place(Mentor)
     {charTag(Franco, "{portrait_Franco()}")}:       No, sono Franco La Rana.
@@ -314,64 +313,64 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
 
-    {charTag(Mentor, "neutral")}:                   Quindi puoi parlare con, con questo pozzo?
+
+    {charTag(FifthCharacter, "neutral")}:                   Quindi puoi parlare con, con questo pozzo?
                                                     Perché mi piacerebbe.
-    {charTag(Mentor, "sorry")}:                     Oh, è una cosa vanitosa.
-    {charTag(Mentor, "neutral")}:                   Ma mi piacerebbe sapere cosa ne pensa di me.
+    {charTag(FifthCharacter, "sorry")}:                     Oh, è una cosa vanitosa.
+    {charTag(FifthCharacter, "neutral")}:                   Ma mi piacerebbe sapere cosa ne pensa di me.
                                                     Del mio lavoro.
-    {charTag(Mentor, "hurry")}:                     Se sto facendo un buon lavoro.
-    {charTag(Mentor, "neutral")}:                   Visto che vede e sente tutto.
+    {charTag(FifthCharacter, "hurry")}:                     Se sto facendo un buon lavoro.
+    {charTag(FifthCharacter, "neutral")}:                   Visto che vede e sente tutto.
 
-    {charTag(TheWitch, witch_state())}:             <i>Crediamo che {mentorName} stia facendo un buon lavoro.</i>
+    {charTag(TheWitch, witch_state())}:             <i>Crediamo che {charNameFive} stia facendo un buon lavoro.</i>
                                                     <i>Così come l'acqua che si raccoglie tra le mani per dissetarci.</i>
-                                                    <i>Ma così come l'acqua non può essere incendio, così {mentorName} non può essere qualcosa che non è.</i>
+                                                    <i>Ma così come l'acqua non può essere incendio, così {charNameFive} non può essere qualcosa che non è.</i>
                                                     <i>O portare nomi che non sa.</i>
 
     + \ {charTag(PG, "neutral")}:                   Metà delle cose che la voce dice sono illogiche.
             -> glyph_modifier_variation_management(Mentor, airC)->
     {charTag(TheWitch, witch_state())}:             <i>{player_name} non vede, e quindi decide che qualcosa non esiste.</i>
                                                     <i>Ma quella cosa esiste anche se {player_name} non vede.</i>
-    {charTag(Mentor, "sad")}:                       Uh, peccato.
-    {charTag(Mentor, "neutral")}:                   Ma ci sta: questo luogo è così insolito, immagino sia inevitabile non capirlo fino in fondo.
+    {charTag(FifthCharacter, "sad")}:                       Uh, peccato.
+    {charTag(FifthCharacter, "neutral")}:                   Ma ci sta: questo luogo è così insolito, immagino sia inevitabile non capirlo fino in fondo.
         
     + \ {charTag(PG, "neutral")}:                   Dice che stai facendo un buon lavoro.
             -> glyph_modifier_variation_management(Mentor, waterC)->
-    {charTag(Mentor, "hurry")}:                     Oh, ma sicuramente esagera.
-    {charTag(Mentor, "sad")}:                       Prendi prima: ho scoperto che per via della mia incuria sta crescendo del muschio tra le sue pietre.
+    {charTag(FifthCharacter, "hurry")}:                     Oh, ma sicuramente esagera.
+    {charTag(FifthCharacter, "sad")}:                       Prendi prima: ho scoperto che per via della mia incuria sta crescendo del muschio tra le sue pietre.
                                                     Però.
-    {charTag(Mentor, "neutral")}:                   Ringrazia la voce da parte mia.
+    {charTag(FifthCharacter, "neutral")}:                   Ringrazia la voce da parte mia.
     {charTag(TheWitch, witch_state())}:             <i>Dire una mezza verità porta su una mezza strada.</i>
     
     + \ {charTag(PG, "neutral")}:                   Ha parlato di incendi e acqua, forse hai bruciato qualcosa?
             -> glyph_modifier_variation_management(Mentor, earthC)->
-    {charTag(Mentor, "sad")}:                       Non è che ho lasciato qualcosa di acceso in cucina?
+    {charTag(FifthCharacter, "sad")}:                       Non è che ho lasciato qualcosa di acceso in cucina?
                                                     No dai, si vedrebbe il fumo da qui, sicuro.
-    {charTag(Mentor, "neutral")}:                   Magari è qualcosa di simbolico.
-    {charTag(Mentor, "sorry")}:                     Spero di non aver distrutto nulla.
+    {charTag(FifthCharacter, "neutral")}:                   Magari è qualcosa di simbolico.
+    {charTag(FifthCharacter, "sorry")}:                     Spero di non aver distrutto nulla.
     
-    + \ {charTag(PG, "neutral")}:                   Non è più importante il tuo di giudizio sul tuo lavoro, {mentorName}?
+    + \ {charTag(PG, "neutral")}:                   Non è più importante il tuo di giudizio sul tuo lavoro, {charNameFive}?
             -> glyph_modifier_variation_management(Mentor, aetherC)->
-    {charTag(Mentor, "neutral")}:                   Credo di sì.
+    {charTag(FifthCharacter, "neutral")}:                   Credo di sì.
                                                     Ma uno sguardo esterno ci può aiutare, immagino.
-    {charTag(Mentor, "sad")}:                       Oh, non lo so.
-    {charTag(Mentor, "neutral")}:                   Sì.
+    {charTag(FifthCharacter, "sad")}:                       Oh, non lo so.
+    {charTag(FifthCharacter, "neutral")}:                   Sì.
                                                     Credo di star facendo un buon lavoro.
 
     + \ {charTag(PG, "neutral")}:                   Ha detto tante cose ma la risposta è: no.
             -> glyph_modifier_variation_management(Mentor, fireC)->
     {charTag(TheWitch, witch_state())}:             <i>La frusta che cade senza motivo non porta alcun insegnamento.</i>
-    {charTag(Mentor, "sad")}:                       Oh.
+    {charTag(FifthCharacter, "sad")}:                       Oh.
                                                     Forse potrei chiedere scusa in qualche modo a...
                                                     Ma a chi?
                                                     Come?
-    {charTag(Mentor, "hurry")}:                     Ho deciso: pulisco il tronco.
-    {charTag(Mentor, "neutral")}:                   Potrebbe apprezzare, immagino.
+    {charTag(FifthCharacter, "hurry")}:                     Ho deciso: pulisco il tronco.
+    {charTag(FifthCharacter, "neutral")}:                   Potrebbe apprezzare, immagino.
     {charTag(TheWitch, witch_state())}:             <i>Noi non abbiamo bisogno di pulizia, il nostro sporco è nido per funghi e insetti.</i> 
     -
-    {charTag(Mentor, "sad")}:                       Immagino sia faticoso, avere una voce in testa, così.
-    {charTag(Mentor, "neutral")}:                   O magari ti fa sentire meno {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}?
+    {charTag(FifthCharacter, "sad")}:                       Immagino sia faticoso, avere una voce in testa, così.
+    {charTag(FifthCharacter, "neutral")}:                   O magari ti fa sentire meno {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}?
                                                     Ho qualcosa su cui riflettere, immagino.
 
         -> witch_closing_storylet ->
@@ -385,7 +384,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     {charTag(FirstCharacter, "annoyed")}:           Credo di avere il mal di testa.
     {charTag(Franco, "{portrait_Franco()}")}:       Lo dice sempre anche Giulio.
@@ -470,7 +469,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     {charTag(Franco, "{portrait_Franco()}")}:           E Franco ti dice che non è vero, {charNameTwo}.
     {charTag(SecondCharacter, "angry")}:                Ma è IM-POS-SI-BI-LE!
@@ -514,7 +513,7 @@
                                                         Tullio dice sempre che nuotano nell'aria.
     {
     - are_two_entities_together(Mentor, PG):
-    {charTag(Mentor, "neutral")}:                       Comincio a sospettare che questa rana farà più danni di quanti ne potrò risolvere.
+    {charTag(FifthCharacter, "neutral")}:                       Comincio a sospettare che questa rana farà più danni di quanti ne potrò risolvere.
     }
     
     {charTag(Franco, "{portrait_Franco()}")}:           Secondo te {player_name} come facciamo a capire se {charNameTwo} è una rana?
@@ -579,7 +578,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     Chiacchierata Franco e PNG3
 
@@ -594,7 +593,7 @@
                 -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
 
 
-        + \ {charTag(PG, "neutral")}:         Non è più importante il tuo di giudizio sul tuo lavoro, {mentorName}?
+        + \ {charTag(PG, "neutral")}:         Non è più importante il tuo di giudizio sul tuo lavoro, {charNameFive}?
                 -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
 
 
@@ -613,7 +612,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
     Chiacchierata Mentore e PNG3
 
         + \ {charTag(PG, "neutral")}:         Metà delle cose che la voce dice sono illogiche.
@@ -627,7 +626,7 @@
                 -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
 
 
-        + \ {charTag(PG, "neutral")}:         Non è più importante il tuo di giudizio sul tuo lavoro, {mentorName}?
+        + \ {charTag(PG, "neutral")}:         Non è più importante il tuo di giudizio sul tuo lavoro, {charNameFive}?
                 -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
 
         + \ {charTag(PG, "neutral")}:         Ha detto tante cose ma la risposta è: no.
@@ -644,7 +643,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     Chiacchierata Riccio e PNG3
     
@@ -679,7 +678,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     Chiacchierata Chitarra e PNG3
 
@@ -712,7 +711,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
         {charTag(Carla, "neutral")}:                    Per ogni chiarimento richiesto da un minore, è necessaria la presenza di un adulto.
         {charTag(SecondCharacter, "energy")}:           Ecco ecco, ora c'è qui {player_name}!

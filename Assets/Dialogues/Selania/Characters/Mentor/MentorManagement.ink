@@ -1,7 +1,3 @@
-//Possibili nomi
-    LIST mentor_possibleStates = Mentore
-    VAR mentor_ActualName = Mentore
-    
 //Per mentore, fifthChar_storyStatus sarà la parte di riscrittura, mentorChar_storyStatus tutta la parte di interazione come Mentore
     VAR mentorChar_storyStatus = story_storyNotStarted
     VAR mentor_storyletsForRewritingCount = 0
@@ -46,21 +42,21 @@
             { 
                 - (contentsTrainStop has DoggoFirstLetters or contentsTrainStop has DoggoSecondLetters) && (contentsTrainStop hasnt Mentor):
                     {stopping:
-                        - {charTag(Mentor, "hurry")}:             Ma hai visto {player_name} che c'è qualcunə che ti aspetta alla fermata del treno?
-                        - {charTag(Mentor, "hurry")}:             Mi sembra di aver sentito un rumore alla fermata prima.
-                        - {charTag(Mentor, "hurry")}:             Credo ci sia della posta per te alla fermata, {player_name}.
-                        - {charTag(Mentor, "hurry")}:             Sono sicura di aver sentito un abbaio alla stazione: tu sai già chi è, vero?
-                        - {charTag(Mentor, "hurry")}:             Credo sia arrivata una lettera per te, {player_name}. La trovi come sempre in stazione.
+                        - {charTag(FifthCharacter, "hurry")}:             Ma hai visto {player_name} che c'è qualcunə che ti aspetta alla fermata del treno?
+                        - {charTag(FifthCharacter, "hurry")}:             Mi sembra di aver sentito un rumore alla fermata prima.
+                        - {charTag(FifthCharacter, "hurry")}:             Credo ci sia della posta per te alla fermata, {player_name}.
+                        - {charTag(FifthCharacter, "hurry")}:             Sono sicura di aver sentito un abbaio alla stazione: tu sai già chi è, vero?
+                        - {charTag(FifthCharacter, "hurry")}:             Credo sia arrivata una lettera per te, {player_name}. La trovi come sempre in stazione.
                     }
                         ~ mentor_lastTimeTalking = 0
                         ->->
                 
                 - else:
                     {shuffle:
-                        - {charTag(Mentor, "hurry")}:             Ehi {player_name}, spero vada tutto bene.
-                        - {charTag(Mentor, "hurry")}:             Ehi {player_name}, è da un po' che non parliamo.
-                        - {charTag(Mentor, "hurry")}:             {player_name}, se ti vanno due chiacchiere sono qui.
-                        - {charTag(Mentor, "hurry")}:             Ciao {player_name}, spero tu non ti stia affaticando troppo.
+                        - {charTag(FifthCharacter, "hurry")}:             Ehi {player_name}, spero vada tutto bene.
+                        - {charTag(FifthCharacter, "hurry")}:             Ehi {player_name}, è da un po' che non parliamo.
+                        - {charTag(FifthCharacter, "hurry")}:             {player_name}, se ti vanno due chiacchiere sono qui.
+                        - {charTag(FifthCharacter, "hurry")}:             Ciao {player_name}, spero tu non ti stia affaticando troppo.
                     }
                         ~ mentor_lastTimeTalking = 0
                         ->->

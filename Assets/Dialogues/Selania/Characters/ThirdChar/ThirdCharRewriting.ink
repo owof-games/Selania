@@ -16,7 +16,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
         {charTag(ThirdCharacter, "neutral")}:           Frase.
 
@@ -55,7 +55,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
 
         {charTag(ThirdCharacter, "neutral")}:           Frase.
@@ -105,7 +105,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
 
         {charTag(PG, "neutral")}:      A scuola le maestre dicono che sei cattivo, bugiardo, violento, e finisci sempre in punizione.
 
@@ -189,7 +189,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
 
         {charTag(PG, "neutral")}:      Hai detto che i grandi fanno schifo, e che non vuoi diventare grande.
         
@@ -224,7 +224,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
 
         {charTag(PG, "neutral")}:      credo di aver compreso quale sia il tuo blocco, perché sei qui.
             
@@ -287,7 +287,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
     
         {
 
@@ -350,7 +350,7 @@
     
     = secret_ending
     ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
             {
                 - not rewriting_proposal_second_character.secret_ending or not rewriting_proposal_first_character.secret_ending:
@@ -380,7 +380,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
         
         {charTag(ThirdCharacter, "neutral")}:           Frase.
         {charTag(ThirdCharacter, "neutral")}:       Salutami

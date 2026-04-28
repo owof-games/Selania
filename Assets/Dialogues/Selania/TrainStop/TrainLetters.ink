@@ -3,7 +3,8 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
     
         
             Qui, questi primi giorni qui sono stati strani.
@@ -85,10 +86,11 @@
 
 ===  function letters_firstCharLetters_second()
     ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp charNameThree = translator(thirdChar_ActualName)
-        ~ temp charNameFour= translator(fourthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+        
     
 
        
@@ -182,11 +184,12 @@
 
 
 === function letters_firstCharLetters_third()
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp charNameThree = translator(thirdChar_ActualName)
-        ~ temp charNameFour= translator(fourthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+        
     
 
      {
@@ -233,7 +236,7 @@
                 E tu?
                 Come stai?
                 Come sta {charNameTwo}?
-                E {mentorName}?
+                E {charNameFive}?
                 Mi mancate.
 
                 
@@ -309,11 +312,12 @@
 
 
 === function letters_firstCharLetters_fourth()
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp charNameThree = translator(thirdChar_ActualName)
-        ~ temp charNameFour= translator(fourthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+        
     
 
      {
@@ -349,11 +353,12 @@
 
 
  === function letters_secondCharLetters_first()
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp charNameThree = translator(thirdChar_ActualName)
-        ~ temp charNameFour= translator(fourthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)  
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+          
 
 
             Cioè a te.
@@ -432,7 +437,7 @@
                     Ti scriverò appena scopro qual è quella giusta e quale è quella sbagliata.
             }
 
-            PS: come sta {mentorName}? Mi spiace per come l'ho trattata mentre ero lì, sai?
+            PS: come sta {charNameFive}? Mi spiace per come l'ho trattata mentre ero lì, sai?
             Ma non dirglielo. Per ora per lo meno.
             Ciao!
 
@@ -441,7 +446,8 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
 
 
         
@@ -532,7 +538,8 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
 
     Ciao {player_name}.
                 
@@ -568,7 +575,7 @@
                     E se si preoccupano tornano a litigare.
                     Non so mica cosa fare.
                     Vorrei che la nonna fosse qui.
-                    Forse {mentorName} li può aiutare?
+                    Forse {charNameFive} li può aiutare?
                     Mi mancate.
                     <b>{charNameTwo}</b>.
                     
@@ -634,7 +641,8 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
 
     Ehi.
                 
@@ -734,12 +742,12 @@
 
 
 === function letters_thirdCharLetters_first()
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp charNameThree = translator(thirdChar_ActualName)
-        ~ temp charNameFour= translator(fourthChar_ActualName)
-        ~ temp charFifthName = translator(fifthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+        
 
         {charTag(Documents, "writer_thirdChar")}:      {charNameThree}: Lettere random note da parte della personaggia
         
@@ -757,7 +765,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charFifthName = translator(fifthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
 
         {charTag(Documents, "writer_thirdChar")}:      {charNameThree}: Lettere random note da parte della personaggia
         
@@ -775,7 +783,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charFifthName = translator(fifthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
 
         {charTag(Documents, "writer_thirdChar")}:      {charNameThree}: Lettere random note da parte della personaggia
         
@@ -793,7 +801,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charFifthName = translator(fifthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
 
         {charTag(Documents, "writer_thirdChar")}:      {charNameThree}: Lettere random note da parte della personaggia
         
@@ -811,7 +819,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charFifthName = translator(fifthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
         
         {charTag(Documents, "writer_fourthChar")}:      {charNameThree}: Lettere random note da parte della personaggia
         
@@ -829,7 +837,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charFifthName = translator(fifthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
 
         {charTag(Documents, "writer_fourthChar")}:      {charNameThree}: Lettere random note da parte della personaggia
         
@@ -846,7 +854,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charFifthName = translator(fifthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
 
         {charTag(Documents, "writer_fourthChar")}:      {charNameThree}: Lettere random note da parte della personaggia
         {
@@ -862,7 +870,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charFifthName = translator(fifthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
 
         {charTag(Documents, "writer_fourthChar")}:      {charNameThree}: Lettere random note da parte della personaggia
         {
@@ -879,7 +887,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charFifthName = translator(fifthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
 
         {charTag(Documents, "writer_fifthChar")}:       {charNameThree}: Lettere random note da parte della personaggia
         
@@ -896,7 +904,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charFifthName = translator(fifthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
 
         {charTag(Documents, "writer_fifthChar")}:       {charNameThree}: Lettere random note da parte della personaggia
         
@@ -913,7 +921,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charFifthName = translator(fifthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
 
         {charTag(Documents, "writer_fifthChar")}:       {charNameThree}: Lettere random note da parte della personaggia
         
@@ -930,7 +938,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charFifthName = translator(fifthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+        
 
         {charTag(Documents, "writer_fifthChar")}:       {charNameThree}: Lettere random note da parte della personaggia
         

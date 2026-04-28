@@ -186,17 +186,13 @@
 
     - FifthCharacter:
         {
-            - fifthChar_storyStatus != story_storyNotStarted:
+
+            - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
+                ~ return "???"
+            
+            - else:
                 ~ return translator(fifthChar_ActualName)
 
-            - else:
-                {
-                    - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
-                        ~ return "???"
-                    
-                    - mentor_ActualName == Mentore:
-                        ~ return "Mentore"
-                }
         }
 
     - Franco:

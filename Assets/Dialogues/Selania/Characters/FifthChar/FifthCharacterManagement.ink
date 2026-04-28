@@ -5,7 +5,7 @@
                      ----------------------------------*/
  
  //Possibili nomi
-    LIST fifthChar_possibleStates= Mostro
+    LIST fifthChar_possibleStates= Mostro, Mentore
     VAR fifthChar_ActualName= Mentore
     
 //Per mentore, fifthChar_storyStatus sarà la parte di riscrittura, mentorChar_storyStatus tutta la parte di interazione come Mentore

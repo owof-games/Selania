@@ -6,7 +6,7 @@
 === franco_intro
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
     {charTag(Franco, "{portrait_Franco()}")}:       Ma dove avevo messo quel.
                                                     Eccola cra!
@@ -53,7 +53,7 @@
 === franco_open_kitchen
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
     {charTag(Franco, "{portrait_Franco()}")}:       Girino!
                                                     Ora che {charNameOne} ti ha aperto la cucina, posso darti delle dritte anche su quale ingrediente aggiungere quando cucini con una persona!
@@ -66,7 +66,7 @@
 === franco_open_library
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
     {charTag(Franco, "{portrait_Franco()}")}:       Girino!
                                                     {charNameTwo} ti ha aperto la biblioteca, e io ora ti apro la possibilità di conoscere quale racconto amano le persone che vuoi aiutare!
@@ -80,7 +80,7 @@
 === franco_open_nest
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
     {charTag(Franco, "{portrait_Franco()}")}:       Girino!
                                                     Ho saputo che {charNameThree} ha aperto il nido.
@@ -96,7 +96,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
         {charTag(Franco, "{portrait_Franco()}")}:       Ehi girino, grazie ancora per prima.
                                                         Euforbo all'inizio era confuso, si è portato il sigillo in camera.
@@ -124,7 +124,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
     {charTag(Franco, "{portrait_Franco()}")}:           Girino!
                                                         Hai trovato tutti i documenti della vecchia congrega!

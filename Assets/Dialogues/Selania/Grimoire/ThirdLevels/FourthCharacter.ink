@@ -6,7 +6,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     //Main story
     {
@@ -118,7 +118,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
 
     // {
@@ -162,7 +162,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     //INSERIRE LOGICA RICETTA
 
@@ -237,7 +237,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     {
         - grimoire_fourthChar has grimFourthCharProposal:
@@ -272,7 +272,7 @@
 
     {
         - grimoire_fourthChar has grimFourthCharMentorFeedback:
-            {mentorName} ha detto a {player_name} che <>
+            {charNameFive} ha detto a {player_name} che <>
 
             {
                 - fourthChar_ActualName has Triangolo:
@@ -310,7 +310,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+
 
     {
         - grimoire_fourthChar has grimFourthCharLetterOne:

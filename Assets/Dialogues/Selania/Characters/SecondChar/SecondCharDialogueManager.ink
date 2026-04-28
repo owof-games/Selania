@@ -4,7 +4,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
@@ -30,7 +30,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
         {
 
             - secondChar_pauseTalking == 0:
@@ -46,7 +46,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 {
     //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylets, ma non ho fatto il tutorial su come funziona
         - grimoire_secondChar has secondChar_minStoryletsForRewriting && grimoire_appendices hasnt grimRewritingMentor:
@@ -141,10 +141,10 @@
 
                         - {charTag(SecondCharacter, "neutral")}:            L'ippopotamo è super aggressivo. E ha la faccia stupida, vero?
 
-                        - {charTag(SecondCharacter, "neutral")}:            Franco è convinto che {mentorName} non sia di questo posto.
+                        - {charTag(SecondCharacter, "neutral")}:            Franco è convinto che {charNameFive} non sia di questo posto.
                             {
                                 - are_two_entities_together(Mentor, PG):
-                                    {charTag(Mentor, "neutral")}:               Franco è anche convinto che {charNameOne} abbia un nido sugli alberi.
+                                    {charTag(FifthCharacter, "neutral")}:               Franco è anche convinto che {charNameOne} abbia un nido sugli alberi.
                                     {charTag(SecondCharacter, "neutral")}:        Sì no boh.
                                     {charTag(SecondCharacter, "melanchonic")}:    Hai ragione.
                                     {
@@ -170,7 +170,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
 
         {
             - grimoire_secondChar has grimSecondCharOne:
@@ -185,10 +185,10 @@
         //Azioni legate alla riscrittura
             //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
             + {grimoire_secondChar has secondChar_minStoryletsForRewriting && grimoire_appendices hasnt grimRewritingMentor} \ {charTag(PG, "neutral")}:         Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
-                    {charTag(SecondCharacter, "neutral")}:          Mi sa che {mentorName} vuole dirti qualcosa prima.
+                    {charTag(SecondCharacter, "neutral")}:          Mi sa che {charNameFive} vuole dirti qualcosa prima.
                         {
                             - are_two_entities_together(Mentor,PG):
-                            {charTag(Mentor, "neutral")}:           Sì {player_name}, parliamo un attimo!
+                            {charTag(FifthCharacter, "neutral")}:           Sì {player_name}, parliamo un attimo!
                         }
                             ~ secondChar_tutorial = true
                                 -> main

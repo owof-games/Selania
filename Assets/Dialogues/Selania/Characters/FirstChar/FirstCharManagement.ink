@@ -164,7 +164,7 @@
 
 === firstAffinityFeedback
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
     ~ temp charNameTwo = translator(secondChar_ActualName)
 {debug: passo per firstAffinityFeedback. Lo stato di inchiostro è {firstChar_InkLevel}.}
 
@@ -172,7 +172,7 @@
             
         {
             -   are_two_entities_together(Mentor, PG):
-                {charTag(Mentor, "neutral")}:           Vi lascio un po' di privacy. In bocca al lupo {player_name} e {charNameOne}.
+                {charTag(FifthCharacter, "neutral")}:           Vi lascio un po' di privacy. In bocca al lupo {player_name} e {charNameOne}.
                     ~ change_entity_place(Mentor)
         }
         {

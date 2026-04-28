@@ -1,11 +1,11 @@
 //Questi storylets speciali non tornano sulle opzioni di dialogo, ma sul main        
     === not_talk
-        ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)    
         
     {not_talk: 
     
         - 1: 
-            {charTag(SecondCharacter, "angry")}:        Io ODIO {not tutorial_mentorTalkingChoiceRelationship:quella strega coi petali| {mentorName}}!
+            {charTag(SecondCharacter, "angry")}:        Io ODIO {not tutorial_mentorTalkingChoiceRelationship:quella strega coi petali| {charNameFive}}!
                                                         E non ci parlerò
                                                         mai
                                                         MAI
@@ -41,20 +41,21 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
 
     {charTag(SecondCharacter, "neutral")}:              Ehi {player_name}!
                                                         Prima mi stavo annoiando tanto.
                                                         Ma proprio taaaaaaaaaanto.
     {charTag(SecondCharacter, "energy")}:               E ho cercato di capire cosa c'era dietro tutti quei legni.
-                                                        Perché {mentorName} non me lo dice mica.
+                                                        Perché {charNameFive} non me lo dice mica.
     {
             - second_char_main_storylets.eight.ragione:
             {charTag(SecondCharacter, "emotional")}:    E tu mi hai detto di non dare sempre ragione ai grandi.
             }                                                     
     {
         - are_two_entities_together(Mentor, PG):
-        {charTag(Mentor, "sad")}:                       I posti chiusi sono posti pericolosi, {charNameTwo}.
+        {charTag(FifthCharacter, "sad")}:                       I posti chiusi sono posti pericolosi, {charNameTwo}.
                                                         E nemmeno io so cosa c'è dietro.
         {charTag(SecondCharacter, "angry")}:            Va bene va bene va bene.
     }
@@ -107,7 +108,7 @@
                                                         Ora voglio vedere se ci sono delle matite così lascio anche le mie storie!
         {
             - are_two_entities_together(Mentor, PG):
-                {charTag(Mentor, "neutral")}:           Mi raccomando, non macchiare nulla!
+                {charTag(FifthCharacter, "neutral")}:           Mi raccomando, non macchiare nulla!
         }
     {charTag(SecondCharacter, "energy")}:               Ora sposto tutti quei legni così puoi andarci anche tu!
                                                         Chissà se ci sono anche i manga!
@@ -122,7 +123,8 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
 
     {charTag(SecondCharacter, "energy")}:               Ehi {player_name}!
                                                         Prima ho letto una storia strana.
@@ -162,7 +164,7 @@
                                                         Anche io ne ho un po'!
         {
             - are_two_entities_together(Mentor, PG): 
-            {charTag(Mentor, "hurry")}:                 {player_name}, non dovresti dire cose da persona più adulta?
+            {charTag(FifthCharacter, "hurry")}:                 {player_name}, non dovresti dire cose da persona più adulta?
         }
      
         + \ {charTag(PG, "neutral")}:                   Guarderei ciò che fanno, per capire di cosa hanno bisogno.
@@ -178,7 +180,7 @@
         {charTag(SecondCharacter, "energy")}:           Così poi hanno più energia per rompere le finestre!                          
         {
         - are_two_entities_together(Mentor, PG): 
-        {charTag(Mentor, "bored")}:                     {player_name}, non credo sia il caso di dare a {charNameTwo} altre idee bislacche.
+        {charTag(FifthCharacter, "bored")}:                     {player_name}, non credo sia il caso di dare a {charNameTwo} altre idee bislacche.
         }
             
         + \ {charTag(PG, "neutral")}:                   Mi sarei pres{player_pronouns has him:o|{player_pronouns has her:a|ə}} cura dell'aragosta.

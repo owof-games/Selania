@@ -4,7 +4,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+    
     
 + {are_two_entities_together(Franco, PG) && entity_location(PG) == Pond} [Franco]
     

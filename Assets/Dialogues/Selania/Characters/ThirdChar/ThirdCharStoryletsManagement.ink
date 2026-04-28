@@ -1,6 +1,6 @@
 === knowing_third_character
 ~ temp charNameTwo = translator(thirdChar_ActualName)
-~ temp mentorName = translator(mentor_ActualName)
+
 
         //Qui man mano faccio avanzare i temi toccati dalla personaggia
         {
