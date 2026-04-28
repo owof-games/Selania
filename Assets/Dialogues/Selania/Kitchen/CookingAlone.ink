@@ -310,8 +310,10 @@
 
         {charTag(Franco, "{portrait_Franco()}")}:       Girino, come vola il tempo quando ci si diverte!
         E il nostro piatto è pronto!
-            -> recipe_name_creator ->
-            -> recipe_name_storage(PG) ->
+
+        ~ recipe_name_creator()
+        ~ recipe_name_storage(PG)
+
         {charTag(Franco, "{portrait_Franco()}")}:       Pesciolini?
                                                         Ehi, pesciolini.
                                                         Eccovi qui un bel piatto di {kitchen_PGCharRecipe}.

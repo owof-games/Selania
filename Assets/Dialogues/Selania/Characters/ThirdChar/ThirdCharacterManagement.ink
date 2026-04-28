@@ -35,7 +35,7 @@
 //Tracciamento del racconto
     VAR frog_third_novel = ""    
     
-//Tracciamento attivazione thirdo elemento tutorial
+//Tracciamento attivazione secondo elemento tutorial
     VAR thirdChar_tutorial = true
     
 //Tracciamento cucina
@@ -60,7 +60,10 @@
         VAR frog_third_char_ingredient = ""
         VAR frog_third_temp_growing_ingredient = false
     
-    //Valore quarto ingrediente
+        //Valore ingredienti
+        VAR kitchen_thirdCharRecipeNoun = ""
+        VAR kitchen_thirdCharRecipeAdjective = ""
+        VAR kitchen_thirdCharRecipeComplement = ""
         VAR kitchen_thirdCharExtraIngredient = ()
         VAR kitchen_thirdCharExtraIngredientReaction = notReaction   
 

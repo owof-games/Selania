@@ -32,7 +32,7 @@
 
     VAR secondChar_relationshipActualDominantGlyph = ()
     VAR secondChar_relationshipActualDominantGlyphValue = 0
-     VAR secondChar_relationshipActualSecondDominantGlyph = ()
+    VAR secondChar_relationshipActualSecondDominantGlyph = ()
     VAR secondChar_relationshipActualSecondDominantGlyphValue = 0
 
     VAR secondChar_relationshipTrackingChoise = ()
@@ -84,7 +84,10 @@
         VAR frog_second_char_ingredient = ""
         VAR frog_second_temp_growing_ingredient = false
     
-    //Valore quarto ingrediente
+        //Valore ingredienti
+        VAR kitchen_secondCharRecipeNoun = ""
+        VAR kitchen_secondCharRecipeAdjective = ""
+        VAR kitchen_secondCharRecipeComplement = ""
         VAR kitchen_secondCharExtraIngredient = ()
         VAR kitchen_secondCharExtraIngredientReaction = notReaction   
 

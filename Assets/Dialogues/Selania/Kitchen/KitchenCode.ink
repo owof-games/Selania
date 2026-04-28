@@ -59,85 +59,56 @@
 
 
 
-=== recipe_name_creator ===
+=== function recipe_name_creator()
 {debug_kitchen: passo per recipeNameCreator.}
 
 ~  kitchen_tempRecipeName = "{kitchen_recipeNoun} {kitchen_recipeAdjective} {kitchen_recipeComplement} {kitchen_recipePP}"
 
     {charTag(TheWitch, witch_state())}:   <i>La cucina si riempie del profumo di <b>{kitchen_tempRecipeName}</b>.</i>
-        ->->
-
+  
 //Lo chiamo da recipeNameCreator, non mi serve chiamarlo altrove
-=== recipe_name_storage(Character)
+=== function recipe_name_storage(Character)
 {debug_kitchen: passo per recipe_name_storage.}
     {Character:
         - FirstCharacter:
             ~ kitchen_firstCharRecipe = kitchen_tempRecipeName
+            ~ kitchen_firstCharRecipeNoun = kitchen_recipeNoun
+            ~ kitchen_firstCharRecipeAdjective = kitchen_recipeAdjective
+            ~ kitchen_firstCharRecipeComplement = kitchen_recipeComplement
         
         - SecondCharacter:
             ~ kitchen_secondCharRecipe = kitchen_tempRecipeName
+            ~ kitchen_secondCharRecipeNoun = kitchen_recipeNoun
+            ~ kitchen_secondCharRecipeAdjective = kitchen_recipeAdjective
+            ~ kitchen_secondCharRecipeComplement = kitchen_recipeComplement
         
         - ThirdCharacter:
             ~ kitchen_thirdCharRecipe = kitchen_tempRecipeName
+            ~ kitchen_thirdCharRecipeNoun = kitchen_recipeNoun
+            ~ kitchen_thirdCharRecipeAdjective = kitchen_recipeAdjective
+            ~ kitchen_thirdCharRecipeComplement = kitchen_recipeComplement
         
-        - FourthCharacter:
-            ~ kitchen_fourthCharRecipe = kitchen_tempRecipeName
+        // - FourthCharacter:
+        //     ~ kitchen_fourthCharRecipe = kitchen_tempRecipeName
+        //     ~ kitchen_fourthCharRecipeNoun = kitchen_recipeNoun
+        //     ~ kitchen_fourthCharRecipeAdjective = kitchen_recipeAdjective
+        //     ~ kitchen_fourthCharRecipeComplement = kitchen_recipeComplement
 
-        - FifthCharacter:
-            ~ kitchen_fifthCharRecipe = kitchen_tempRecipeName
+        // - FifthCharacter:
+        //     ~ kitchen_fifthCharRecipe = kitchen_tempRecipeName
+        //     ~ kitchen_fifthCharRecipeNoun = kitchen_recipeNoun
+        //     ~ kitchen_fifthCharRecipeAdjective = kitchen_recipeAdjective
+        //     ~ kitchen_fifthCharRecipeComplement = kitchen_recipeComplement
 
         - PG:
-            ~ kitchen_PGCharRecipe = kitchen_tempRecipeName     
+            ~ kitchen_PGCharRecipe = kitchen_tempRecipeName
+            ~ kitchen_PGCharRecipeNoun = kitchen_recipeNoun
+            ~ kitchen_PGCharRecipeAdjective = kitchen_recipeAdjective
+            ~ kitchen_PGCharRecipeComplement = kitchen_recipeComplement 
                 
     }
 
-
-    {
-        - kitchen_firstRecipe == "":
-            {debug_kitchen: il valore di kitchen_firstRecipe è {kitchen_firstRecipe} e quindi lo aggiorno.}
-            
-                ~ kitchen_firstRecipe = kitchen_tempRecipeName
-            {debug_kitchen: il valore di kitchen_firstRecipe ora è {kitchen_firstRecipe}.}
-
-                ->->
-        - kitchen_secondRecipe == "":
-            {debug_kitchen: il valore di kitchen_firstRecipe è {kitchen_firstRecipe} e quindi non lo aggiorno.}
-            {debug_kitchen: il valore di kitchen_secondRecipe è {kitchen_secondRecipe} e quindi lo aggiorno.}
-            
-                ~ kitchen_secondRecipe = kitchen_tempRecipeName
-            {debug_kitchen: il valore di kitchen_secondRecipe ora è {kitchen_secondRecipe}.}
-            
-                ->->
-        
-        - kitchen_thirdRecipe == "":
-            {debug_kitchen: il valore di kitchen_firstRecipe è {kitchen_firstRecipe} e quindi non lo aggiorno.}
-            {debug_kitchen: il valore di kitchen_secondRecipe è {kitchen_secondRecipe} e quindi non lo aggiorno.}
-            {debug_kitchen: il valore di kitchen_thirdRecipe è {kitchen_thirdRecipe} è quindi non lo aggiorno.}
-            
-                ~ kitchen_thirdRecipe = kitchen_tempRecipeName
-            {debug_kitchen: il valore di kitchen_thirdRecipe ora è {kitchen_thirdRecipe}.}
-            
-                ->-> 
-        
-        - kitchen_fourthRecipe == "":
-            ~ kitchen_fourthRecipe = kitchen_tempRecipeName
-                ->-> 
-        
-        - kitchen_fifthRecipe == "":
-            ~ kitchen_fifthRecipe = kitchen_tempRecipeName 
-                ->-> 
-        
-        - kitchen_sixthRecipe == "":
-            ~ kitchen_sixthRecipe = kitchen_tempRecipeName
-                ->-> 
-        
-        - else:
-            {debug_kitchen:ERROR: non ci sono ricette a disposizione per salvare l'informazione.}
-                ->->
-    
-    }
-
-->->    
+ 
 
 
 

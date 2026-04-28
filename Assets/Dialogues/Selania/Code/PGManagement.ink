@@ -20,7 +20,11 @@
     VAR player_accessiblePlaces = (Bedroom, TrainStop, Forest, Pond)
 
 //Ricetta cucinata con la rana
-    VAR kitchen_PGCharRecipe = ""   
+    VAR kitchen_PGCharRecipe = ""
+        //Valore ingredienti
+        VAR kitchen_PGCharRecipeNoun = ""
+        VAR kitchen_PGCharRecipeAdjective = ""
+        VAR kitchen_PGCharRecipeComplement = ""   
 
 //Tracciamento colori giocatrice
     //Colori con cui traccio le scelte che riguardano "solo" me

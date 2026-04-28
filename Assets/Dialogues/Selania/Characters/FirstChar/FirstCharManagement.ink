@@ -51,7 +51,10 @@
         VAR frog_first_char_ingredient = ""
         VAR frog_first_temp_growing_ingredient = false
             
-    //Valore quarto ingrediente
+    //Valore ingredienti
+        VAR kitchen_firstCharRecipeNoun = ""
+        VAR kitchen_firstCharRecipeAdjective = ""
+        VAR kitchen_firstCharRecipeComplement = ""
         VAR kitchen_firstCharExtraIngredient = ()
         VAR kitchen_firstCharExtraIngredientReaction = notReaction
 

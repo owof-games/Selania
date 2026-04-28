@@ -1061,8 +1061,6 @@
         {
             - backpack_findedGifts == (): 
                 {charTag(TheWitch, witch_state())}:   <i>{player_name} non ha ingredienti da aggiungere.</i>
-                    -> recipe_name_creator ->
-                    -> recipe_name_storage(FirstCharacter) ->
                     -> at_table_with_first_char
                 
             - else:
@@ -1075,6 +1073,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp charNameFive= translator(fifthChar_ActualName)
     
         
             {charTag(TheWitch, witch_state())}:   <i>Il giusto ingrediente renderà la ricetta di {player_name} e {charNameOne} musicale.</i>
@@ -1099,16 +1098,23 @@
                 -
                 
             {charTag(FirstCharacter, "neutral")}:         Andiamo a mangiare, ama!
-                -> recipe_name_creator ->
-                -> recipe_name_storage(FirstCharacter) ->
                 -> at_table_with_first_char
 
 
 
 === at_table_with_first_char
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive= translator(fifthChar_ActualName)
+
     ~ move_entity(CookingWithFirstCharOBJ, Kitchen)
     ~ move_entity(EatingWithFirstCharOBJ, Kitchen)
     ~ temp piatto = kitchen_tempRecipeName
+    
+    ~ recipe_name_creator()
+    ~ recipe_name_storage(FirstCharacter)
     
     {charTag(FirstCharacter, "curious")}:       È stato divertente cucinare assieme, {player_name}. 
     {charTag(FirstCharacter, "affectionate")}:      Mi ha fatto sentire a casa.

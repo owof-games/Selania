@@ -506,8 +506,6 @@
         {
             - backpack_findedGifts == (): 
                 {charTag(TheWitch, witch_state())}:   <i>{player_name} non possiede alcun ingrediente speciale.</i>
-                    -> recipe_name_creator ->
-                    -> recipe_name_storage(ThirdCharacter) ->
                     -> at_table_with_third_char
                 
             - else:
@@ -543,17 +541,24 @@
                 -
                 
             {charTag(ThirdCharacter, "neutral")}:       Andiamo a mangiare, ama!
-                -> recipe_name_creator ->
-                -> recipe_name_storage(ThirdCharacter) ->
+
                 -> at_table_with_third_char
 
 
 
 === at_table_with_third_char
+    ~ temp charNameOne = translator(thirdChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive= translator(fifthChar_ActualName)
+
     ~ move_entity(CookingWithThirdCharOBJ, Kitchen)
     ~ move_entity(EatingWithThirdCharOBJ, Kitchen)
     ~ temp piatto = kitchen_tempRecipeName
-    
+    ~ recipe_name_creator()
+    ~ recipe_name_storage(ThirdCharacter)
+
     {charTag(ThirdCharacter, "neutral")}:       È stato divertente cucinare assieme, {player_name}.
 
         {

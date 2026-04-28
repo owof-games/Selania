@@ -1096,8 +1096,7 @@
             {
                 - backpack_findedGifts == ():
                     {charTag(TheWitch, witch_state())}:   <i>{player_name} non ha niente da aggiungere alla ricetta.</i>
-                    -> recipe_name_creator ->
-                    -> recipe_name_storage(SecondCharacter) ->
+
                     -> at_table_with_second_char
                 
                 - else:
@@ -1135,8 +1134,7 @@
             {charTag(SecondCharacter, "emotional")}:    A tavola!
             Ho tantissima aquilina!
             
-                    -> recipe_name_creator ->
-                    -> recipe_name_storage(SecondCharacter) ->
+
                     -> at_table_with_second_char
     
 
@@ -1147,10 +1145,12 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-
     ~ move_entity(CookingWithSecondCharOBJ, Kitchen)
     ~ move_entity(EatingWithSecondCharOBJ, Kitchen)
     ~ temp piatto = kitchen_tempRecipeName
+
+    ~ recipe_name_creator()
+    ~ recipe_name_storage(SecondCharacter)
     
     {charTag(SecondCharacter, "emotional")}:            Hai visto che pancia grande che ho ora?
                                                         Grazie {player_name}, era buonissimo!
