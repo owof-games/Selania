@@ -110,16 +110,7 @@
     INCLUDE Characters\FifthChar\FifthCharacterManagement.ink
     
 
-//Gestione del libro
-    INCLUDE Book\MainBook.ink
-    INCLUDE Book\BookFunctions.ink
-    //Characters recap
-    INCLUDE Book\OtherCharsRecap.ink
- 
-
 //Gestione del Grimorio
-//Nota: "BOOK" diventa il repository del vecchio materiale di testo.
-
     INCLUDE Grimoire\FirstLevel.ink
 
     INCLUDE Grimoire\VarAndFunctions\VarAndLists.ink

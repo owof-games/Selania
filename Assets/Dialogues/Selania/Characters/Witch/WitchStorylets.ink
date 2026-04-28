@@ -18,91 +18,91 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-        {charTag(TheWitch, witch_state())}:   <i>A volte dimentichiamo quando sarà ieri, cos'è successo domani.
+        {charTag(TheWitch, witch_state())}:                     <i>A volte dimentichiamo quando sarà ieri, cos'è successo domani.
             {
                 - are_two_entities_together(SecondCharacter, PG):
-                {charTag(SecondCharacter, "energy")}:      Succede anche a me quando trovo un bel libro!
+                {charTag(SecondCharacter, "energy")}:           Succede anche a me quando trovo un bel libro!
             }
-        {charTag(TheWitch, witch_state())}:   <i>Ma non dimentichiamo mai {player_name}.
-        <i>Le nostre radici vibrano di voci, i nostri crateri si riempiono di storie.
-        <i>{player_name} ci ha portato questa gioia.
-        <i>C'è qualcosa che {player_name} vorrebbe dirci?
+        {charTag(TheWitch, witch_state())}:                     <i>Ma non dimentichiamo mai {player_name}.
+                                                                <i>Le nostre radici vibrano di voci, le nostre pietre si riempiono di storie.
+                                                                <i>{player_name} ci ha portato questa gioia.
+                                                                <i>C'è qualcosa che {player_name} vorrebbe dirci?
 
-            + \ {charTag(PG, "neutral")}:         Grazie per avermi guidat{player_pronouns has him:o|{player_pronouns has her:a|ə}} dall'inizio.
+            + \ {charTag(PG, "neutral")}:                       Grazie per avermi guidat{player_pronouns has him:o|{player_pronouns has her:a|ə}} dall'inizio.
                     -> glyph_modifier_variation_management(PG, waterC)->
 
-                {charTag(TheWitch, witch_state())}:   <i>E grazie a {player_name} per aver guidato noi.
-                <i>La separazione è una illusione.
-                <i>{player_name} è noi, noi siamo {charNameOne}.
-                <i>{charNameOne} è {charNameTwo} che è {charNameThree} che è {mentorName}.
-                <i>E {mentorName} è {player_name}.
-                <i>Che è noi.</i>
+                {charTag(TheWitch, witch_state())}:             <i>E grazie a {player_name} per aver guidato noi.
+                                                                <i>La separazione è una illusione.
+                                                                <i>{player_name} è noi, noi siamo {charNameOne}.
+                                                                <i>{charNameOne} è {charNameTwo} che è {charNameThree} che è {mentorName}.
+                                                                <i>E {mentorName} è {player_name}.
+                                                                <i>Che è noi.</i>
                 
-            + \ {charTag(PG, "neutral")}:         Esci dalla mia testa! Subito!
+            + \ {charTag(PG, "neutral")}:                       Esci dalla mia testa! Subito!
                     -> glyph_modifier_variation_management(PG, fireC)->
 
-                {charTag(TheWitch, witch_state())}:   <i>Non siamo nella testa di {player_name}.
-                <i>Non più di quanto {player_name} sia nella sua stessa testa.
-                <i>Non meno di quanto {player_name} sia nella nostra.
-                <i>È come se {player_name} ci chiedesse di non essere.
-                <i>E questa è una cosa che non è e non sarà.</i>
+                {charTag(TheWitch, witch_state())}:             <i>Non siamo nella testa di {player_name}.
+                                                                <i>Non più di quanto {player_name} sia nella sua stessa testa.
+                                                                <i>Non meno di quanto {player_name} sia nella nostra.
+                                                                <i>È come se {player_name} ci chiedesse di non essere.
+                                                                <i>E questa è una cosa che non è e non sarà.</i>
                 
-            + \ {charTag(PG, "neutral")}:         Parli di radici: sei un albero?
+            + \ {charTag(PG, "neutral")}:                       Parli di radici: sei un albero?
                     -> glyph_modifier_variation_management(PG, airC)->
 
-                {charTag(TheWitch, witch_state())}:   <i>Le piante raccontano storie da notte a giorno. 
-                <i>E noi non siamo una pianta.
-                <i>Ma siamo una pianta.
-                <i>E non parliamo.
-                <i>Eppure accade.
-                <i>E ascoltiamo.
-                <i>Con le radici nel cielo.
-                <i>I rami a terra.
-                <i>E il tronco in {player_name}.
+                {charTag(TheWitch, witch_state())}:             <i>Le piante raccontano storie da notte a giorno. 
+                                                                <i>E noi non siamo una pianta.
+                                                                <i>Ma siamo una pianta.
+                                                                <i>E non parliamo.
+                                                                <i>Eppure accade.
+                                                                <i>E ascoltiamo.
+                                                                <i>Con le radici nel cielo.
+                                                                <i>I rami a terra.
+                                                                <i>E il tronco in {player_name}.
                 
-            + \ {charTag(PG, "neutral")}:         Perché non mi hai detto subito di essere reale?
+            + \ {charTag(PG, "neutral")}:                       Perché non mi hai detto subito di essere reale?
                     -> glyph_modifier_variation_management(PG, earthC)->
 
-                {charTag(TheWitch, witch_state())}:   <i>{player_name} sente l'odore del Canto delle Compagne.
-                <i>E sa che è reale.
-                \ <i>{player_name} sente il legame che ha con {charNameTwo}, e sa che è reale.
-                <i>Una voce {player_pronouns has him:lo|{player_pronouns has her:la|lə}} accompagna, e non è reale?
+                {charTag(TheWitch, witch_state())}:             <i>{player_name} sente l'odore del Canto delle Compagne.
+                                                                <i>E sa che è reale.
+                                                                <i>{player_name} sente il legame che ha con {charNameTwo}, e sa che è reale.
+                                                                <i>Una voce {player_pronouns has him:lo|{player_pronouns has her:la|lə}} accompagna, e non è reale?
         
-            + \ {charTag(PG, "neutral")}:         "Cosa è successo domani": il tempo qui funziona in modo strano?
+            + \ {charTag(PG, "neutral")}:                   "Cosa è successo domani": il tempo qui funziona in modo strano?
                     -> glyph_modifier_variation_management(PG, aetherC)->
-                {charTag(TheWitch, witch_state())}:   <i>La mosca vive un'istante, ma per lei il suo tempo è una vita.
-                <i>Noi viviamo nel sempremai, e confondiamo i tempi.
-                <i>Ma il tempo di {player_name} è quello giusto per {player_name}.
+                {charTag(TheWitch, witch_state())}:         <i>La mosca vive un'istante, ma per lei il suo tempo è una vita.
+                                                            <i>Noi viviamo nel sempremai, e confondiamo i tempi.
+                                                            <i>Ma il tempo di {player_name} è quello giusto per {player_name}.
             -
-        <i>Noi siamo sussurro e siamo ascolto. 
-        <i>Un sorriso attento ai bisogni di {player_name}.
-        <i>Ricordiamo il tempo in cui un nome era importante anche per noi.
-        <i>Ci hanno chiamate Strega, Radice e Fiamma.
-        <i>Ci hanno chiamate Luna e Parola.
-        <i>Con quale nome {player_name} vorrebbe chiamarci?
+                                                            <i>Noi siamo sussurro e siamo ascolto. 
+                                                            <i>Un sorriso attento ai bisogni di {player_name}.
+                                                            <i>Ricordiamo il tempo in cui un nome era importante anche per noi.
+                                                            <i>Ci hanno chiamate Strega, Radice e Fiamma.
+                                                            <i>Ci hanno chiamate Luna e Parola.
+                                                            <i>Con quale nome {player_name} vorrebbe chiamarci?
 
-            + \ {charTag(PG, "neutral")}:         Strega.
+            + \ {charTag(PG, "neutral")}:                   Strega.
                 -> glyph_modifier_variation_management(PG, aetherC)->
                 ~ witch_actualName += Strega
 
-            + \ {charTag(PG, "neutral")}:         Luna.
+            + \ {charTag(PG, "neutral")}:                   Luna.
                 -> glyph_modifier_variation_management(PG, waterC)->
                 ~ witch_actualName += Luna
 
-            + \ {charTag(PG, "neutral")}:         Parola.
+            + \ {charTag(PG, "neutral")}:                   Parola.
                 -> glyph_modifier_variation_management(PG, airC)->
                 ~ witch_actualName += Parola
 
-            + \ {charTag(PG, "neutral")}:         Radice.
+            + \ {charTag(PG, "neutral")}:                   Radice.
                 -> glyph_modifier_variation_management(PG, earthC)->
                 ~ witch_actualName += Radice
 
-            + \ {charTag(PG, "neutral")}:         Fiamma.
+            + \ {charTag(PG, "neutral")}:                   Fiamma.
                 -> glyph_modifier_variation_management(PG, fireC)->
                 ~ witch_actualName += Fiamma
             - (nameChosen)
-        <i>E {witch_actualName} saremo.
-        <i>Ora altre voci ci chiamano, ma aspetteremo {player_name} per quando ne avrà bisogno.
+                                                            <i>E {witch_actualName} saremo.
+                                                            <i>Ora altre voci ci chiamano, ma aspetteremo {player_name} per quando ne avrà bisogno.
     
             -> witch_closing_storylet ->
             -> main

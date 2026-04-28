@@ -28,12 +28,6 @@
         {charTag(TheWitch, witch_state())}:   <i>Qui in futuro si potranno modificare le impostazioni.</i>
             -> main
             
-    + {are_two_entities_together(PG, SettingsBookVersion)} [SettingsBookVersion]
-
-        {charTag(TheWitch, witch_state())}:   <i>Qui in futuro si potranno modificare le impostazioni.</i>
-            -> rewriter_book_with_flow
-
-
 
 === gm_rm_activation
 
