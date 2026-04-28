@@ -67,19 +67,39 @@
         }
     
     = one
-        -> letters_firstCharLetters.one ->
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+        {charTag(Documents, "writer_firstChar")}:   Ciao {player_name}, come stai?
+
+        ~ letters_firstCharLetters_first()
         -> first_char_closing_letters
     
     = two
-        -> letters_firstCharLetters.two ->
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+        {charTag(Documents, "writer_firstChar")}:   Ciao {player_name}, qui è sempre {charNameOne} che ti scrive.
+
+        ~ letters_firstCharLetters_second()
         -> first_char_closing_letters
         
     = three
-        -> letters_firstCharLetters.three ->
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+        {charTag(Documents, "writer_firstChar")}:   Ciao ama!
+
+        ~ letters_firstCharLetters_third()
         -> first_char_closing_letters
 
     = four
-        -> letters_firstCharLetters.four ->
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+        {charTag(Documents, "writer_firstChar")}:   Ehi {player_name}.
+    
+        ~ letters_firstCharLetters_fourth()
         -> first_char_closing_letters       
 
 === second_character_notes ===

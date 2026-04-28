@@ -1,18 +1,15 @@
-=== letters_firstCharLetters
-
-    = one
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp charNameThree = translator(thirdChar_ActualName)
-        ~ temp charNameFour= translator(fourthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
+===  function letters_firstCharLetters_first()
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
     
-    
-        {charTag(Documents, "writer_firstChar")}:   Ciao {player_name}, come stai?
-                                                    Qui, questi primi giorni qui sono stati strani.
-                                                    A quanto pare la mia assenza è stata solo per qualche ora.
-                                                    E nessunə mi ha fatto domande su nulla.
-                                                    Eppure io vedo i cambiamenti, i cambiamenti in me.
+        
+            Qui, questi primi giorni qui sono stati strani.
+            A quanto pare la mia assenza è stata solo per qualche ora.
+            E nessunə mi ha fatto domande su nulla.
+            Eppure io vedo i cambiamenti, i cambiamenti in me.
            
            {
                 - firstChar_ActualName has Triangolo:
@@ -84,16 +81,16 @@
             }
         Alla prossima lettera.
         <b>{charNameOne}</b>
-        ->->
 
-    = two
+
+===  function letters_firstCharLetters_second()
     ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
     
-    {charTag(Documents, "writer_firstChar")}:   Ciao {player_name}, qui è sempre {charNameOne} che ti scrive.
+
        
        {
             - firstChar_ActualName has Triangolo:
@@ -182,17 +179,16 @@
     Sono arrivate nuove persone interessanti?
     Sicuro, nessunə più interessante di me!
     A presto, <b>{charNameOne}</b>.
-    ->->
 
-    = three
+
+=== function letters_firstCharLetters_third()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
     
-    {charTag(Documents, "writer_firstChar")}:   Ciao ama!
-    
+
      {
             - firstChar_ActualName has Triangolo:
                 Qui...
@@ -310,17 +306,16 @@
 
     Un saluto.
     <b>{charNameOne}</b>.
-    ->->
 
-    = four
+
+=== function letters_firstCharLetters_fourth()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
     
-    {charTag(Documents, "writer_firstChar")}:   Ciao ama!
-    
+
      {
             - firstChar_ActualName has Triangolo:
                 Qui...
@@ -350,7 +345,7 @@
 
     Un saluto.
     <b>{charNameOne}</b>.
-    ->->
+
 
 
  === letters_secondCharLetters

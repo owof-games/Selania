@@ -334,22 +334,30 @@
 
     {
         - grimoire_firstChar has grimFirstCharLetterOne:
-            -> letters_firstCharLetters.one ->
+        
+            Ciao {player_name}, come stai?
+            ~ letters_firstCharLetters_first()
     }
     
     {
         - grimoire_firstChar has grimFirstCharLetterTwo:
-            -> letters_firstCharLetters.two ->
+        
+            Ciao {player_name}, qui è sempre {charNameOne} che ti scrive.
+            ~ letters_firstCharLetters_second()
     }
 
     {
         - grimoire_firstChar has grimFirstCharLetterThree:
-            -> letters_firstCharLetters.three ->
+
+            Ciao ama!
+            ~ letters_firstCharLetters_third()
     }
 
     {
         - grimoire_firstChar has grimFirstCharLetterFour:
-            -> letters_firstCharLetters.four ->
+            
+            Ehi {player_name}.
+            ~ letters_firstCharLetters_fourth()
     }
     
 
