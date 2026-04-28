@@ -126,19 +126,23 @@
         }
     
     = one
-        -> letters_secondCharLetters.one ->
+        {charTag(Documents, "writer_secondChar")}:      Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}.
+        ~ letters_secondCharLetters_first()
         -> second_char_closing_letters
     
     = two
-        -> letters_secondCharLetters.two ->
+        {charTag(Documents, "writer_secondChar")}:          Che strano.
+        ~ letters_secondCharLetters_second()
         -> second_char_closing_letters
     
     = three
-        -> letters_secondCharLetters.three ->
+        {charTag(Documents, "writer_secondChar")}:      Ciao {player_name}.
+        ~ letters_secondCharLetters_third()
         -> second_char_closing_letters
 
     = four
-        -> letters_secondCharLetters.four ->
+        {charTag(Documents, "writer_secondChar")}:     Ehi.
+        ~ letters_secondCharLetters_fourth()
         -> second_char_closing_letters    
     
 === third_character_notes ===
@@ -163,19 +167,19 @@
         }
         
     = one
-        -> letters_thirdCharLetters.one ->
+        ~ letters_thirdCharLetters_first()
         -> third_char_closing_letters
 
     = two
-        -> letters_thirdCharLetters.two ->
+        ~ letters_thirdCharLetters_second()
         -> third_char_closing_letters
     
     = three
-        -> letters_thirdCharLetters.three ->
+        ~ letters_thirdCharLetters_third()
         -> third_char_closing_letters
 
     = four
-        -> letters_thirdCharLetters.four ->
+        ~ letters_thirdCharLetters_fourth()
         -> third_char_closing_letters    
     
 === fourth_character_notes ===
@@ -198,19 +202,19 @@
                 
         }
      = one
-        -> letters_fourthCharLetters.one ->
+        ~ letters_fourthCharLetters_first()
         -> fourth_char_closing_letters
 
     = two
-        -> letters_fourthCharLetters.two ->
+        ~ letters_fourthCharLetters_second()
         -> fourth_char_closing_letters
     
     = three
-        -> letters_fourthCharLetters.three ->
+        ~ letters_fourthCharLetters_third()
         -> fourth_char_closing_letters
 
     = four
-        -> letters_fourthCharLetters.four ->
+        ~ letters_fourthCharLetters_fourth()
         -> fourth_char_closing_letters
 
 === fifth_character_notes ===
@@ -234,17 +238,17 @@
         }
         
      = one
-        -> letters_fifthCharLetters.one ->
+        ~ letters_fifthCharLetters_first()
         -> fifth_char_closing_letters
 
     = two
-        -> letters_fifthCharLetters.two ->
+        ~ letters_fifthCharLetters_second()
         -> fifth_char_closing_letters
     
     = three
-        -> letters_fifthCharLetters.three ->
+        ~ letters_fifthCharLetters_third()
         -> fifth_char_closing_letters
 
     = four
-        -> letters_fifthCharLetters.four ->
+        ~ letters_fifthCharLetters_fourth()
         -> fifth_char_closing_letters    

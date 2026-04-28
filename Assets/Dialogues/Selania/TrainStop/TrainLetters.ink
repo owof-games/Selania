@@ -348,20 +348,19 @@
 
 
 
- === letters_secondCharLetters
-
-    = one
+ === function letters_secondCharLetters_first()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)  
 
-        {charTag(Documents, "writer_secondChar")}:      Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}.
-                                                        Cioè a te.
-                                                        Anche se non ho mica capito come te la mando la lettera.
-                                                        Ma come sta Franco?
-                                                        Hai scoperto poi se è elettrico?
+
+            Cioè a te.
+            Anche se non ho mica capito come te la mando la lettera.
+            Ma come sta Franco?
+            Hai scoperto poi se è elettrico?
+
             {
 
                 - secondChar_ActualName has Grizzly:
@@ -436,9 +435,8 @@
             PS: come sta {mentorName}? Mi spiace per come l'ho trattata mentre ero lì, sai?
             Ma non dirglielo. Per ora per lo meno.
             Ciao!
-        ->->
 
-    = two
+=== function letters_secondCharLetters_second()
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -446,11 +444,11 @@
     ~ temp mentorName = translator(mentor_ActualName)
 
 
-        {charTag(Documents, "writer_secondChar")}:          Che strano.
-                                                            Ho lasciato l'altra lettera sul comodino di notte.
-                                                            E poi è sparita.
-                                                            Non so mica se ti è arrivata.
-                                                            O se papà l'ha buttata.
+        
+            Ho lasciato l'altra lettera sul comodino di notte.
+            E poi è sparita.
+            Non so mica se ti è arrivata.
+            O se papà l'ha buttata.
             
             {
                 - secondChar_ActualName has Grizzly:
@@ -527,16 +525,16 @@
             }
             PS: mi piace mettere i PS, su internet non ci sono.
             PPS: ma sono arrivate persone nuove poi? Qualcuna con dei dolci magari?
-        ->->
 
-    = three
+
+=== function letters_secondCharLetters_third()
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    {charTag(Documents, "writer_secondChar")}:      Ciao {player_name}.
+    Ciao {player_name}.
                 
                 {
      
@@ -629,16 +627,16 @@
         
         PS: Ma poi hai scoperto cos'è quel tronco nella foresta? 
         PPS: Ho un segreto che riguarda la serra, ma te lo dirò con la prossima lettera! Ciao ciao!
-    ->->
 
-    = four
+
+=== function letters_secondCharLetters_fourth()
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    {charTag(Documents, "writer_secondChar")}:      Ciao {player_name}.
+    Ehi.
                 
                 {
      
@@ -733,11 +731,9 @@
             }
         
         
-    ->->
 
-=== letters_thirdCharLetters
 
-    = one
+=== function letters_thirdCharLetters_first()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -753,9 +749,9 @@
             - thirdChar_possibleStates has Capibara:
                 {charNameThree}: zz
         }
-    ->->
+    
 
-    = two
+=== function letters_thirdCharLetters_second()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -771,9 +767,9 @@
             - thirdChar_possibleStates has Capibara:
                 {charNameThree}: zz
         }
-    ->->
+    
 
-    = three
+=== function letters_thirdCharLetters_third()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -789,9 +785,9 @@
             - thirdChar_possibleStates has Capibara:
                 {charNameThree}: zz
         }
-     ->->
+     
 
-     = four
+=== function letters_thirdCharLetters_fourth()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -807,11 +803,9 @@
             - thirdChar_possibleStates has Capibara:
                 {charNameThree}: zz
         }
-     ->->
+     
 
-=== letters_fourthCharLetters
-
-    = one
+=== function letters_fourthCharLetters_first()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -828,9 +822,8 @@
                 {charNameThree}: zz
         }
         
-    ->->
-
-    = two
+    
+=== function letters_fourthCharLetters_second()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -846,9 +839,8 @@
             - thirdChar_possibleStates has Capibara:
                 {charNameThree}: zz
         }
-    ->->
 
-    = three
+=== function letters_fourthCharLetters_third()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -863,9 +855,8 @@
             - thirdChar_possibleStates has Capibara:
                 {charNameThree}: zz
         }
-     ->->
 
-    = four
+=== function letters_fourthCharLetters_fourth()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -880,47 +871,9 @@
             - thirdChar_possibleStates has Capibara:
                 {charNameThree}: zz
         }
-     ->-> 
 
-=== letters_fifthCharLetters
 
-    = one
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp charNameThree = translator(thirdChar_ActualName)
-        ~ temp charNameFour= translator(fourthChar_ActualName)
-        ~ temp charFifthName = translator(fifthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
-
-        {charTag(Documents, "writer_fifthChar")}:       {charNameThree}: Lettere random note da parte della personaggia
-        
-        {
-            - thirdChar_possibleStates has Riccio: 
-                {charNameThree}: xy
-            - thirdChar_possibleStates has Capibara:
-                {charNameThree}: zz
-        }
-    ->->
-
-    = two
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp charNameThree = translator(thirdChar_ActualName)
-        ~ temp charNameFour= translator(fourthChar_ActualName)
-        ~ temp charFifthName = translator(fifthChar_ActualName)
-        ~ temp mentorName = translator(mentor_ActualName)
-
-        {charTag(Documents, "writer_fifthChar")}:       {charNameThree}: Lettere random note da parte della personaggia
-        
-        {
-            - thirdChar_possibleStates has Riccio: 
-                {charNameThree}: xy
-            - thirdChar_possibleStates has Capibara:
-                {charNameThree}: zz
-        }
-    ->->
-
-    = three
+=== function letters_fifthCharLetters_first()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -937,9 +890,7 @@
                 {charNameThree}: zz
         }
 
-     ->-> 
-
-    = four
+=== function letters_fifthCharLetters_second()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -956,4 +907,36 @@
                 {charNameThree}: zz
         }
 
-     ->->  
+=== function letters_fifthCharLetters_third()
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp charFifthName = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
+
+        {charTag(Documents, "writer_fifthChar")}:       {charNameThree}: Lettere random note da parte della personaggia
+        
+        {
+            - thirdChar_possibleStates has Riccio: 
+                {charNameThree}: xy
+            - thirdChar_possibleStates has Capibara:
+                {charNameThree}: zz
+        }
+
+=== function letters_fifthCharLetters_fourth()
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp charFifthName = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
+
+        {charTag(Documents, "writer_fifthChar")}:       {charNameThree}: Lettere random note da parte della personaggia
+        
+        {
+            - thirdChar_possibleStates has Riccio: 
+                {charNameThree}: xy
+            - thirdChar_possibleStates has Capibara:
+                {charNameThree}: zz
+        }

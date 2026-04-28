@@ -316,22 +316,22 @@
 
     {
         - grimoire_fourthChar has grimFourthCharLetterOne:
-            -> letters_fourthCharLetters.one ->
+            ~ letters_fourthCharLetters_first()
     }
     
     {
         - grimoire_fourthChar has grimFourthCharLetterTwo:
-            -> letters_fourthCharLetters.two ->
+            ~ letters_fourthCharLetters_second()
     }
 
     {
         - grimoire_fourthChar has grimFourthCharLetterThree:
-            -> letters_fourthCharLetters.three ->
+            ~ letters_fourthCharLetters_third()
     }
 
     {
         - grimoire_fourthChar has grimFourthCharLetterFour:
-            -> letters_fourthCharLetters.four ->
+            ~ letters_fourthCharLetters_fourth()
     }
     
 

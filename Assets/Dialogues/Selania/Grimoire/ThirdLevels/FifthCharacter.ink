@@ -435,22 +435,22 @@
 
     {
         - grimoire_fifthChar has grimFifthCharLetterOne:
-            -> letters_fifthCharLetters.one ->
+            ~ letters_fifthCharLetters_first()
     }
     
     {
         - grimoire_fifthChar has grimFifthCharLetterTwo:
-            -> letters_fifthCharLetters.two ->
+            ~ letters_fifthCharLetters_second()
     }
 
     {
         - grimoire_fifthChar has grimFifthCharLetterThree:
-            -> letters_fifthCharLetters.three ->
+             ~ letters_fifthCharLetters_third()
     }
 
     {
         - grimoire_fifthChar has grimFifthCharLetterFour:
-            -> letters_fifthCharLetters.four ->
+            ~ letters_fifthCharLetters_fourth()
     }
     
 

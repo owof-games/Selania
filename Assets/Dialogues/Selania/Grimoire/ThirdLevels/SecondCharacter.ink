@@ -321,22 +321,26 @@
 
     {
         - grimoire_secondChar has grimSecondCharLetterOne:
-            -> letters_secondCharLetters.one ->
+            Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}.
+            ~ letters_secondCharLetters_first()
     }
     
     {
         - grimoire_secondChar has grimSecondCharLetterTwo:
-            -> letters_secondCharLetters.two ->
+            Che strano.
+            ~ letters_secondCharLetters_second()
     }
 
     {
         - grimoire_secondChar has grimSecondCharLetterThree:
-            -> letters_secondCharLetters.three ->
+            Ciao {player_name}.
+            ~ letters_secondCharLetters_third()
     }
 
     {
         - grimoire_secondChar has grimSecondCharLetterFour:
-            -> letters_secondCharLetters.four ->
+            Ehi.
+            ~ letters_secondCharLetters_fourth()
     }
     
 
