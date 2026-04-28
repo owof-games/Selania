@@ -62,6 +62,11 @@ namespace Selania.Rework.Components.Grimoire
             SecondLevelCharacters,
 
             /// <summary>
+            ///     Second level page (franco).
+            /// </summary>
+            SecondLevelFranco,
+
+            /// <summary>
             ///     Third level page (sigils).
             /// </summary>
             ThirdLevelSigils,
@@ -116,6 +121,9 @@ namespace Selania.Rework.Components.Grimoire
 
         [Tooltip("The animator controlling the second level page for the characters")] [SerializeField]
         private Animator secondLevelAnimatorCharacters = null!;
+
+        [Tooltip("The animator controlling the second level page for Franco")] [SerializeField]
+        private Animator secondLevelAnimatorFranco = null!;
 
         [Tooltip("The animator controlling the third level page for the sigils")] [SerializeField]
         private Animator thirdLevelAnimatorSigils = null!;
@@ -190,6 +198,8 @@ namespace Selania.Rework.Components.Grimoire
         private SecondLevelCharactersGrimoire secondLevelCharactersGrimoire = null!;
 
         [SerializeField] private ThirdLevelCharacterGrimoire thirdLevelCharacterGrimoire = null!;
+
+        [SerializeField] private SecondLevelFrancoGrimoire secondLevelFrancoGrimoire = null!;
 
         private Animator _animator = null!;
 
@@ -575,6 +585,9 @@ namespace Selania.Rework.Components.Grimoire
                 case PageType.SecondLevelCharacters:
                     ShowPage(secondLevelAnimatorCharacters);
                     break;
+                case PageType.SecondLevelFranco:
+                    ShowPage(secondLevelAnimatorFranco);
+                    break;
                 case PageType.ThirdLevelSigils:
                     ShowPage(thirdLevelAnimatorSigils);
                     break;
@@ -604,8 +617,8 @@ namespace Selania.Rework.Components.Grimoire
             _pageAnimators ??= new[]
             {
                 firstLevelAnimator, secondLevelAnimatorGreenhouse, secondLevelAnimatorSigils,
-                secondLevelAnimatorCharacters, thirdLevelAnimatorSigils, thirdLevelAnimatorGreenhouse,
-                thirdLevelAnimatorCharacter
+                secondLevelAnimatorCharacters, secondLevelAnimatorFranco, thirdLevelAnimatorSigils,
+                thirdLevelAnimatorGreenhouse, thirdLevelAnimatorCharacter
             };
 
             foreach (var animator in _pageAnimators)
@@ -842,6 +855,26 @@ namespace Selania.Rework.Components.Grimoire
             string description)
         {
             thirdLevelCharacterGrimoire.SetHeader(iconName, styleName, title, description);
+        }
+
+        /// <summary>
+        ///     Hide the recipe of second level Franco page and show the lock.
+        /// </summary>
+        public void SecondLevelFrancoGrimoireLockRecipe()
+        {
+            secondLevelFrancoGrimoire.LockRecipe();
+        }
+
+        /// <summary>
+        ///     Hide the lock of second level Franco page and show the recipe.
+        /// </summary>
+        /// <param name="recipeTitle">The recipe title.</param>
+        /// <param name="recipeDescription">The recipe description / subtitle.</param>
+        /// <param name="recipeContents">The contents of the recipe.</param>
+        public void SecondLevelFrancoGrimoireShowRecipe(string recipeTitle, string recipeDescription,
+            string recipeContents)
+        {
+            secondLevelFrancoGrimoire.ShowRecipe(recipeTitle, recipeDescription, recipeContents);
         }
     }
 }

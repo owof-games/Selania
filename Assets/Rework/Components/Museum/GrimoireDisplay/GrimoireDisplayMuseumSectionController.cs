@@ -555,5 +555,20 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
         {
             grimoireBackground.ThirdLevelTextGrimoirePreviousPage();
         }
+
+        public void SwitchToSecondLevelFranco()
+        {
+            grimoireBackground.SwitchToPage(GrimoireBackground.PageType.SecondLevelFranco);
+        }
+
+        public void SecondLevelFrancoGrimoireLockRecipe()
+        {
+            grimoireBackground.SecondLevelFrancoGrimoireLockRecipe();
+        }
+
+        public void SecondLevelFrancoGrimoireShowRecipe()
+        {
+            grimoireBackground.SecondLevelFrancoGrimoireShowRecipe("Titolo", "Descrizione", "Contenuti");
+        }
     }
 }
