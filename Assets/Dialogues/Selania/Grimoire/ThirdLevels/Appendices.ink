@@ -486,127 +486,127 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
 
     {
         - horizontalS_discoveredDocs has docOne:
-            -> docOne_storylet ->
+            ~ docOne_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docTwo:
-            -> docTwo_storylet ->
+            ~ docTwo_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docThree:
-            -> docThree_storylet ->
+            ~ docThree_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docFour:
-            -> docFour_storylet ->
+            ~ docFour_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docFive:
-            -> docFive_storylet ->
+            ~ docFive_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docSix:
-            -> docSix_storylet ->
+            ~ docSix_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docSeven:
-            -> docSeven_storylet ->
+            ~ docSeven_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docEight:
-            -> docEight_storylet ->
+            ~ docEight_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docNine:
-            -> docNine_storylet ->
+            ~ docNine_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docTen:
-            -> docTen_storylet ->
+            ~ docTen_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docEleven:
-            -> docEleven_storylet ->
+            ~ docEleven_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docTwelve:
-            -> docTwelve_storylet ->
+            ~ docTwelve_storylet()
     }
         
     {
         - horizontalS_discoveredDocs has docThirteen:
-            -> docThirteen_storylet ->
+            ~ docThirteen_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docFourteen:
-            -> docFourteen_storylet ->
+            ~ docFourteen_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docFifteen:
-            -> docFifteen_storylet ->
+            ~ docFifteen_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docSixteen:
-            -> docSixteen_storylet ->
+            ~ docSixteen_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docSeventeen:
-            -> docSeventeen_storylet ->
+            ~ docSeventeen_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docEighteen:
-            -> docEighteen_storylet ->
+            ~ docEighteen_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docNineteen:
-            -> docNineteen_storylet ->
+            ~ docNineteen_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docTwenty:
-            -> docTwenty_storylet ->
+            ~ docTwenty_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docTwentyOne:
-            -> docTwentyOne_storylet ->
+            ~ docTwentyOne_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docTwentyTwo:
-            -> docTwentyTwo_storylet ->
+            ~ docTwentyTwo_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docTwentyThree:
-            -> docTwentyThree_storylet ->
+            ~ docTwentyThree_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docTwentyFour:
-            -> docTwentyFour_storylet ->
+            ~ docTwentyFour_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docTwentyFive:
-            -> docTwentyFive_storylet ->
+            ~ docTwentyFive_storylet()
     }
 
 

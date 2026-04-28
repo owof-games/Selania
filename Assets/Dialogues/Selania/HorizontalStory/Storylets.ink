@@ -1,4 +1,4 @@
-=== docOne_storylet ===
+=== function docOne_storylet
 //GM
 
     {charTag(Documents, "docDump")}:            Le altre stanno finendo di sistemarsi.
@@ -19,10 +19,10 @@
                                                 Se butta male, posso sempre tornare.
                                                 G.M.
 
-    ->->
+    
 
 
-=== docTwo_storylet ===
+=== function docTwo_storylet
 //OUJ
 
     {charTag(Documents, "docKitchen")}:         Cinque aprile '72
@@ -43,10 +43,10 @@
                                                 A presto.
                                                 O.U.J.
 
-    ->->
+    
 
 
-=== docThree_storylet ===
+=== function docThree_storylet
 //SC
 
     {charTag(Documents, "docNest")}:            Osman Spare disse "I grandi pensieri si oppongono a tutte le dottrine del conformismo".
@@ -62,11 +62,11 @@
                                                 Chiederò all'acqua di donarmi visioni con una bella nuotata.
                                                 S.C.
 
-    ->->
+    
     
 
 
-=== docFour_storylet ===
+=== function docFour_storylet
 //K.
 
     {charTag(Documents, "docGreenhouse")}:      Ora: nonna ha giurato fino alla fine che fosse una mia invenzione.
@@ -88,10 +88,10 @@
                                                 PS: S.C. ha chiesto a tutte di non lasciare in giro nomi e cognomi su diari e appunti perché "non si sa mai".
                                                 Ho l'impressione che ci sia qualcosa che non ci sta dicendo, ma ancora non riesco a capire cosa.
 
-    ->->
+    
 
 
-=== docFive_storylet ===
+=== function docFive_storylet
 //WR.
     {charTag(Documents, "docLibrary")}:         Sì spostano!
                                                 Non ha senso, ma si spostano!
@@ -115,10 +115,10 @@
 
                                                 Mmm, come se a qualcun altra interessassero così tanto i libri.
 
-    ->->
+    
     
 
-=== docSix_storylet ===
+=== function docSix_storylet
 //K.
     {charTag(Documents, "docGreenhouse")}:      A distanza di un mese posso dire con certezza solo una cosa: non sto capendo nulla di questo posto.
                                                 L'idea era quella di sviluppare uno sguardo di insieme sul rapporto tra ambiente e piante, così da iniziare a fare un po' di prove, magari coltivare in serra qualcosa di queste magnifiche erbe, e capirne il portato magico.
@@ -144,10 +144,10 @@
                                                 Perché se non lo capisco, di cosa dovrei parlare?
                                                 K.
 
-    ->->
+    
     
 
-=== docSeven_storylet ===
+=== function docSeven_storylet
 //S.C.
     {charTag(Documents, "docNest")}:            Cosa ha imparato S.C. a distanza di quattro mesi?
                                                 Che questo posto non cambia, per lo meno non in modo permanente.
@@ -160,10 +160,10 @@
                                                 E se posso capire qual è, posso anche controllarlo.
                                                 S.C.
 
-    ->->
+    
     
 
-=== docEight_storylet ===
+=== function docEight_storylet
 //W.R.
     {charTag(Documents, "docLibrary")}:         O.U.J. ha deciso di fare una festa per i primi sei mesi qui.
                                                 E mi sono accorta che non vedevo S.C. e G.M. da giorni.
@@ -186,10 +186,10 @@
                                                 Ed è grazie ai libri che ho avuto un'idea: usare le energie di questo luogo per far rileggere alle persone in modo diverso le cose.
                                                 Come ad esempio fare rileggere a K. i miei comportamenti per quello che sono: il mio modo di trovare soluzioni per salvare il mondo.
 
-    ->->
+    
     
 
-=== docNine_storylet ===
+=== function docNine_storylet
 //G.M.
     {charTag(Documents, "docDump")}:            Non mi aspettavo di fare una grossa scoperta, ma forse ora anche K. crederà che posso essere una strega.
                                                 O uno strego? Non mi piace l'idea dello stregone.
@@ -216,11 +216,11 @@
                                                 Devo ancora capire se è una presa in giro, o se è un modo per dire "Benvenuto nella congrega".
                                                 Comunque sia, la adoro.
 
-    ->->
+    
     
 
 
-=== docTen_storylet ===
+=== function docTen_storylet
 //K.
     {charTag(Documents, "docGreenhouse")}:      Se mesi fa ero basita da un pino che si riscalda, ora quell'evento mi sembra una sciocchezza rispetto a quello che sto per scrivere.
                                                 Sono diventata la migliore amica di una rana.
@@ -245,10 +245,10 @@
                                                 Vado a farle un po' di compagnia.
                                                 K.
 
-    ->->
+    
     
 
-=== docEleven_storylet ===
+=== function docEleven_storylet
 //W.R.
     {charTag(Documents, "docLibrary")}:         Ho sedici cose che mi corrono in testa assieme e se non le metto giù ora URLO.
                                                 G.M., quel genio di G.M., è venuto da me verso Natale dicendomi che uno dei pappagallini gli ha dato dell'inchiostro.
@@ -280,11 +280,11 @@
                                                 Il gufo torna ad essere un pappagallino.
                                                 La mia testa esplode.
 
-    ->->
+    
     
 
 
-=== docTwelve_storylet ===
+=== function docTwelve_storylet
 //S.C.
     {charTag(Documents, "docNest")}:            Woolf ha scritto "Dicendole, non si rovinano forse le cose?"
                                                 Forse ho trovato il modo di non dirle, e migliorarle.
@@ -307,11 +307,11 @@
                                                 Quando si è addormentato al mio fianco, il glifo a croce ha brillato per ore.
                                                 S.C.
 
-    ->->
+    
     
 
 
-=== docThirteen_storylet ===
+=== function docThirteen_storylet
 //K.
     {charTag(Documents, "docGreenhouse")}:      Franco ed io siamo ufficialmente migliori amici e compagni di esplorazioni.
                                                 Anche perché O.U.J. è sempre presa dalla cucina e dal farti domande.
@@ -336,11 +336,11 @@
                                                 Non voglio sapere cosa ci combinerà.
                                                 K.
 
-    ->->
+    
     
 
 
-=== docFourteen_storylet ===
+=== function docFourteen_storylet
 //Y.
 
     {charTag(Documents, "docLibrary")}:         Qualcosa non va.
@@ -373,11 +373,11 @@
                                                 C'è un'ultima cosa: il mio nome mi sta stretto, non suona più giusto.
                                                 Da ora mi chiamerò Y.
 
-    ->->
+    
     
 
 
-=== docFifteen_storylet ===
+=== function docFifteen_storylet
 //OUJ
 
     {charTag(Documents, "docKitchen")}:         Diciassette agosto '73
@@ -410,11 +410,11 @@
                                                 Mi rimetto ai fornelli.
                                                 O.U.J.
 
-    ->->
+    
     
 
 
-=== docSixteen_storylet ===
+=== function docSixteen_storylet
 //G.M. 
 
     {charTag(Documents, "docDump")}:            Contro di questa esperienza.
@@ -439,11 +439,11 @@
                                                 Abbiamo le compagne rimaste in città, quelle che non sanno della congrega. Mi riunirò a loro.
     G.M.
 
-    ->->
+    
     
 
 
-=== docSeventeen_storylet ===
+=== function docSeventeen_storylet
 //SC
     {charTag(Documents, "docNest")}:            Inizio a sentire il peso della situazione.
                                                 O.U.J. e K. ce l'hanno con me per il rapporto con G.M., dicono che la differenza di età è troppa, che è minorenne, che abbiamo bisogni diversi e capacità diverse di gestire la cosa.
@@ -463,11 +463,11 @@
                                                 Noi cinque faremo la storia.
                                                 S.C.
 
-    ->->
+    
     
 
 
-=== docEighteen_storylet ===
+=== function docEighteen_storylet
 //K.
     {charTag(Documents, "docGreenhouse")}:      Oggi Franco mi ha portato alla fontana.
                                                 Non ci andavo da quando siamo arrivate qui, perché vedere il mondo fuori, quel tipo di mondo fuori con fabbriche e casermoni, mi mette tristezza.
@@ -496,11 +496,11 @@
                                                 Non sono mai stata così forte come strega, non sono mai stata così debole come essere umano.
                                                 K.
 
-    ->->
+    
     
 
 
-=== docNineteen_storylet ===
+=== function docNineteen_storylet
 //GM
     {charTag(Documents, "docDump")}:            Ho riparlato con S.C., per la prima volta dopo quello che mi ha fatto.
                                                 Volevo capire il perché, e invece le sue tristi scuse sono scomparse sotto la luce dell'entusiasmo del <i>come</i>.
@@ -521,11 +521,11 @@
                                                 Non credo di volerle più parlare.
                                                 G.M.
 
-    ->->
+    
     
 
 
-=== docTwenty_storylet ===
+=== function docTwenty_storylet
 //OUJ
     {charTag(Documents, "docKitchen")}:         Otto gennaio '74
                                                 Caro odiato diario.
@@ -552,11 +552,11 @@
                                                 Tua.
                                                 O.U.J.
 
-    ->->
+    
     
 
 
-=== docTwentyOne_storylet ===
+=== function docTwentyOne_storylet
 //GM
     {charTag(Documents, "docDump")}:            O.U.J. ha proposto una festa per festeggiare il 25 aprile.
                                                 Per la prima volta da mesi ci siamo ritrovate tutte al tavolo.
@@ -575,11 +575,11 @@
                                                 Era buio e così ho pianto.
                                                 E poi ci siamo ubriacate sul prato.
 
-    ->->
+    
     
 
 
-=== docTwentyTwo_storylet ===
+=== function docTwentyTwo_storylet
 //OUJ
     {charTag(Documents, "docKitchen")}:         Otto maggio '74
                                                 Caro diario.
@@ -605,11 +605,11 @@
                                                 A presto.
                                                 O.U.J.
 
-    ->->
+    
     
 
 
-=== docTwentyThree_storylet ===
+=== function docTwentyThree_storylet
 //OUJ
     {charTag(Documents, "docKitchen")}:         Ventinove maggio '74
                                                 Caro diario, siamo solo tu e io ormai.
@@ -637,18 +637,18 @@
                                                 tua.
                                                 O.U.J.
 
-    ->->
+    
     
 
-=== docTwentyFour_storylet ===
+=== function docTwentyFour_storylet
 //S.C.
     {charTag(Documents, "docNest")}:            Ora che so come fargli del bene, lui non è più qui con me.
 
-    ->->
+    
     
 
 
- === docTwentyFive_storylet ===
+ === function docTwentyFive_storylet
 //OUJ
    {charTag(Documents, "docKitchen")}:          Non so quando leggerai questo biglietto, visto che non ti allontani dalla spiaggia da giorni.
                                                 Starai mangiando?
@@ -664,5 +664,5 @@
                                                 Ti voglio bene.
                                                 O.U.J.
 
-    ->->
+    
        
