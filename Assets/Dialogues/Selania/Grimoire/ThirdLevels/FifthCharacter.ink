@@ -8,9 +8,128 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    //Main story
+    //Main story come Mentore
+    {
+        - grimoire_fifthChar has grimMentorOne:
+            Blah blah blah
+
+    }
+
+    {
+        - grimoire_fifthChar has grimMentorTwo:
+
+    }
+
+    {
+        - grimoire_fifthChar has grimMentorThree:
+
+    }
+
+    {
+        - grimoire_fifthChar has grimMentorFour:
+
+    } 
+
+    {
+        - grimoire_fifthChar has grimMentorFive:
+
+    } 
+
+    {
+        - grimoire_fifthChar has grimMentorSix:
+
+    }
+
+    {
+        - grimoire_fifthChar has grimMentorSeven:
+ 
+    } 
+
+    {
+        - grimoire_fifthChar has grimMentorEight:
+
+    }
+
+    {
+        - grimoire_fifthChar has grimMentorNine:
+ 
+    }
+
+    {
+        - grimoire_fifthChar has grimMentorTen:
+
+    }
+
+    {
+        - grimoire_fifthChar has grimMentorEleven:
+
+    }
+    
+    {
+        - grimoire_fifthChar has grimMentorTwelve:
+
+    }
+
+    //Storylets speciali come Mentor
+    {
+        - grimoire_fifthChar has grimMentorLiar:
+ 
+    } 
+
+    {
+        - grimoire_fifthChar has grimMentorViolence:
+
+    }
+
+    {
+        - grimoire_fifthChar has grimMentorOlobinoUno:
+ 
+    }
+
+    {
+        - grimoire_fifthChar has grimMentorOlobinoDue:
+
+    }
+
+    {
+        - grimoire_fifthChar has grimMentorRage:
+
+    }
+
+    //Secret endings delle personagge
+    
+    {
+        - grimoire_fifthChar has grimMentorFirstSecretEnding:
+
+    }
+
+    {
+        - grimoire_fifthChar has grimMentorSecondSecretEnding:
+
+    }
+
+
+    {
+        - grimoire_fifthChar has grimMentorThirdSecretEnding:
+
+    }
+
+
+    {
+        - grimoire_fifthChar has grimMentorFourthSecretEnding:
+
+    }
+
+    {
+        - grimoire_fifthChar has grimMentorFifthSecretEnding:
+
+    }
+
+
+    //Main story come Mostro
     {
         - grimoire_fifthChar has grimFifthCharOne:
+            Blah blah blah
 
     }
 
@@ -41,7 +160,7 @@
 
     {
         - grimoire_fifthChar has grimFifthCharSeven:
- .
+ 
     } 
 
     {
@@ -72,7 +191,7 @@
     //Storylets speciali
     {
         - grimoire_fifthChar has grimFifthCharNovel:
-.
+
     }
 
     {

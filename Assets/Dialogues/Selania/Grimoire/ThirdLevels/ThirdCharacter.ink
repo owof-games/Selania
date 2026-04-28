@@ -41,7 +41,7 @@
 
     {
         - grimoire_thirdChar has grimThirdCharSeven:
- .
+ 
     } 
 
     {
@@ -72,7 +72,7 @@
     //Storylets speciali
     {
         - grimoire_thirdChar has grimThirdCharNovel:
-.
+
     }
 
     {

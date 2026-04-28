@@ -10,7 +10,7 @@
 
     //Main story
     {
-        - grimoire_fifthChar has grimFifthCharOne:
+        - grimoire_witch has grimWitchIntro:
         ssss
     }
 
@@ -22,9 +22,9 @@
         -> grimoire
     + [precedente #bookmark:previous]
         @grimoireTextPrevious
-        -> grimoire_fifth_character_conversation
+        -> grimoire_witchRecap
     + [prossima #bookmark:next]
         @grimoireTextNext
-        -> grimoire_fifth_character_conversation
+        -> grimoire_witchRecap
 
 ->->

@@ -16,7 +16,7 @@
     VAR witch_timeForChangingMoonPhase = 13
     
 //E possibili nomi
-    LIST witch_possibleNames = Luna, Strega, Radice, Fiamma, Parola
+    LIST witch_possibleNames = (Luna), (Strega), (Radice), (Fiamma), (Parola)
     VAR witch_actualName = ()
 
 
