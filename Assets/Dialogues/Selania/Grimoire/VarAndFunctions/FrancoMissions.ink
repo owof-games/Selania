@@ -8,7 +8,7 @@
 
     {frog_currentMission:
         - missionOne:
-            ~ return "Franco ha invitato {player_name} a leggere altre pagine di questo libro."
+            ~ return "Franco ha invitato {player_name} a leggere altre pagine di questo grimorio."
             
         - missionTwo:
             ~ return "Franco ha chiesto a {player_name} di coltivare almeno tre piante alla serra."

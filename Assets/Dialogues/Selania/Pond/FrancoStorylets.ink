@@ -116,7 +116,7 @@
                                                         Per il resto della serata l'ho visto più sereno.
                                                         Ha anche riso a una mia battuta!
         
-    ~ grimoire_franco += grimFrancoMissionOneFeedback
+    ~ grimoire_franco += grimFrancoSpecialMissionOneFeedback
     -> welcoming_frog.top2
 
 

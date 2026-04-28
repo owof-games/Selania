@@ -7,7 +7,7 @@
     - are_two_entities_together(PG, Franco) && grimoire_franco hasnt grimFrancoFirst:
         -> franco_intro
     
-    - are_two_entities_together(PG, Franco) && special_mission_one_contents && entity_location(PG) == Pond && grimoire_franco hasnt grimFrancoMissionOneFeedback:
+    - are_two_entities_together(PG, Franco) && special_mission_one_contents && entity_location(PG) == Pond && grimoire_franco hasnt grimFrancoSpecialMissionOneFeedback:
         -> franco_feedback_mission_one_closed
 
     - are_two_entities_together(PG, Franco) && achievements_fullLore ==  Discovered && grimoire_franco hasnt grimFrancoAllDocuments:

@@ -33,7 +33,7 @@ LIST grimoire_allElements =
     grimWitchFirstDebrief, grimWitchSecondDebrief, grimWitchThirdDebrief, grimWitchFourthDebrief, grimWitchFifthDebrief, grimWitchIntro, grimWitchFrog, grimWitchMainOne, grimWitchMainTwo, grimWitchMainThree, grimWitchMainFour, grimWitchMainFive, grimWitchBook, grimWitchOpenDump, grimWitchAllSigilsOpened,
 
 //Storylets Franco
-    grimFrancoFirst, grimFrancoAllDocuments, grimFrancoMissionOneFeedback,
+    grimFrancoFirst, grimFrancoAllDocuments, grimFrancoSpecialMissionOneFeedback,
 
 //Common Storylets
     grimFirstSecondChar, grimFirstThirdChar, grimFirstCharMentor, grimFirstCharFranco, grimSecondCharMentorOne, grimSecondCharMentorPeace, grimSecondThirdChar, grimSecondCharFranco, grimThirdCharFranco, grimThirdCharMentor, grimMentorFranco, grimMentorWitchOne, grimFourthFifthChar, grimFourthCharFranco, grimFifthCharFranco

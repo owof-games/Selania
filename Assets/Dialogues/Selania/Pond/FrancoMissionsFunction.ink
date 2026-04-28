@@ -3,7 +3,7 @@
 //La logica qui è quella di avere un unico canale per vedere se le condizioni per una commissione sono state raggiunte o meno.
     {  
         //Prima commissione: leggere.
-        - grimoire_first_character_conversation && second_character_recap.check && greenhouse_recap.check && frog_allMissionsCompleted hasnt missionOne:
+        - grimoire_firstCharacter && grimoire_secondCharacter && greenhouse_recap.check && grimoire_greenhouse:
             ~ frog_updatedMissions += missionOne
     }
 

@@ -4,7 +4,7 @@
                                     
                                      ----------------------------------*/
 
-    //Lista di tutte le commissioni che la rana può offrire, e quelle completate. Nota: missionOne etc son nomi temporanei, che verranno aggiornati man mano che le creo
+    //Lista di tutte le commissioni che la rana può offrire, e quelle completate.
     LIST frog_allMissions = missionOne, missionTwo, missionThree, missionFour, missionFive, missionSix, missionSeven, missionEight, missionNine, missionTen, specialMissionOne, specialMissionTwo
         //Separo la lista totale da quelle disponibili anche per un discorso di TW
     VAR frog_availableCommonMissions = (missionOne, missionTwo, missionThree, missionFour, missionSix, missionSeven, missionEight, missionNine, missionTen)
