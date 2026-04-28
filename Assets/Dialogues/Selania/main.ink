@@ -90,11 +90,6 @@
         <- nest_Franco_aetherGlyph_button
         <- franco_inTheNest
 
-//Elementi del libro
-<- fifth_character_recap
-<- dog_character_recap
-<- witch_character_recap
-<- book_exit_node
 
 //Impostazioni
 <- settings_management

@@ -28,6 +28,9 @@
 
 
 
+
+
+
 === function grimSecondCharMentorOne_text()
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -58,3 +61,22 @@
 
 
 
+
+
+=== function grimThirdCharMentor_text()
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+
+
+=== function grimMentorWitchOne_text()
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+    {mentorName} ha chiesto a {player_name} di intercedere con noi, per sapere cosa noi pensiamo di {mentorName}. Noi abbiamo risposto a {player_name} che {mentorName} sta facendo un buon lavoro, ma che così come l'acqua non può essere incendio, così {mentorName} non può essere qualcosa che non è. Dopo uno scambio con {player_name}, {mentorName} ha detto che deve essere difficile avere una voce in testa, ma che magari fa sentire meno solə.

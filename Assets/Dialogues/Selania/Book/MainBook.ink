@@ -31,7 +31,6 @@
 #ambientSounds: {tag_ambientSounds()}
 
 @interact
-<- fifth_character_recap
 <- witch_character_recap
 + [BookExit]
     -> book_tracking_arrive

@@ -6,33 +6,31 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
 
     //Main story come Mentore
     {
         - grimoire_fifthChar has grimMentorOne:
-            Blah blah blah
-
+        Durante una chiacchierata, {charNameFive} ha raccontato a {player_name} che il suo posto preferito è la serra, perché vedere crescere le cose la fa sentire appagata, la sensazione di permettere con le proprie mani a un altro corpo di crescere al meglio.
     }
 
     {
         - grimoire_fifthChar has grimMentorTwo:
-
+        {charNameFive} è rimasta colpita da come {charNameOne} sia rimasta così bloccata da tutte le possibilità che ha avuto davanti a sé. Però poi ha aggiunto che forse si è dimenticata di quanto possa essere facile perdere sé stesse quando si è giovani.
     }
 
     {
         - grimoire_fifthChar has grimMentorThree:
-
+        {charNameFive} ha raccontato a {player_name} che a volte ci sono persone, persone passate da qui, che vorrebbe sentire più spesso. Ma le loro lettere non arrivano, o arrivano sempre più di rado E allora si chiede se ha sbagliato qualcosa.
     }
 
     {
         - grimoire_fifthChar has grimMentorFour:
-
+        Ora che {charNameTwo} ha trovato il suo nome, {charNameFive} si chiede se non sia stata troppo severa con lui. Dice che era spaventata, e forse ha reagito con violenza. Si è chiesta cosa possa significare essere un genitore che si rende conto che suo figlio, così piccolo, ha già perso la sua strada. E perché non pensa al pallone, o allo studio, invece che al futuro e all'ambiente.
     } 
 
     {
         - grimoire_fifthChar has grimMentorFive:
-
+        Da quando {player_name} è qui, per la prima volta {charNameFive} ha ammesso di essere stanca. E di sentire caldo. E poi si è lasciata andare ai ricordi: il suo primo bacio, l'uomo che ha sposato. A cui ha dedicato il resto dei suoi giorni, fino a quando non è arrivata qui. Ha chiesto a {player_name} cosa significa per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} amare un'altra persona. Per poi definirsi una "sciocca romantica", e dirmi che l'amore è ovunque, anche qui. Amore per noi.
     } 
 
     {
@@ -70,42 +68,77 @@
 
     }
 
-    //Storylets speciali come Mentor
+    //Storylets speciali come Mentore
     {
         - grimoire_fifthChar has grimMentorLiar:
- 
+            Dopo l'arrivo di {charNameTwo}, la prima cosa che {charNameFive} ha chiesto a {player_name} è se è {player_pronouns has him:riuscito|{player_pronouns has her:riuscita|riuscitə}} a mandarlo a casa. Dice che qui non è sicuro per i bambini, che lui le ha tirato un calcio. Ma che le fa tenerezza, e per questo le sembra un riccio.
     } 
 
     {
         - grimoire_fifthChar has grimMentorViolence:
+            {charNameFive} ha ripreso la conversazione sulla stretta che ha dato al braccio di {charNameTwo}. Ha iniziato dicendo a {player_name} che non le piace arrabbiarsi, ma poi ha tentennato per un po'. E dopo uno scambio con {player_name} ha deciso di chiedere scusa a {charNameTwo}.
+    }
+    
+    {
+        - grimoire_fifthChar has grimSecondCharMentorOne:
+            ~ grimSecondCharMentorOne_text()
+    }
 
+    {
+        - grimoire_secondChar has grimSecondCharKitchenAlone:
+            ~ grimSecondCharKitchenAlone_text()
+    }
+    
+    {
+        - grimoire_fifthChar has grimMentorFranco:
+            {charNameFive} e Franco La Rana hanno discusso. E quando {charNameFive} si è allontanata, Franco ha aggiunto di non ricordare l'esistenza di alcun mentore da queste parti.
+    }
+
+    {
+        - grimoire_fifthChar has grimMentorWitchOne:
+            ~ grimMentorWitchOne_text()
     }
 
     {
         - grimoire_fifthChar has grimMentorOlobinoUno:
- 
+            Dopo aver visto il cambiamento alla serra portato dall'Olobino, {charNameFive} si è arrabbiata, perché ci sono troppi cambiamenti per lei.
+            {
+                - grimoire_fifthChar has grimMentorOlobinoDue:
+                    Ma dopo alcune considerazioni, ha realizzato che l'Olobino ha reso la serra più stabile. Non è ancora convinta, ma lo apprezza un po' di più.
+            }
     }
 
-    {
-        - grimoire_fifthChar has grimMentorOlobinoDue:
-
-    }
 
     {
         - grimoire_fifthChar has grimMentorRage:
 
     }
+    {
+        - grimoire_fifthChar has grimMentorNovel:
+            Dopo aver letto il racconto <b>Il cancello</b>, {charNameFive} ha chiesto a {player_name} se non si è mai sentit{player_pronouns has him:o|{player_pronouns has her:a|ə}} così stanc{player_pronouns has him:o|{player_pronouns has her:a|ə}} da volere sparire per un po' dal mondo.
+    }
+
+    //Storylets condivisi
+    {
+        - grimoire_firstChar has grimFirstCharMentor:
+            ~ grimFirstCharMentor_text()
+    }
+
+    {
+        - grimoire_thirdChar has grimThirdCharMentor:
+            ~ grimThirdCharMentor_text()
+    }  
 
     //Secret endings delle personagge
     
     {
         - grimoire_fifthChar has grimMentorFirstSecretEnding:
-
+            A fine riscrittura, {charNameOne} ha detto a {player_name} che crede che {charNameFive} sia triste per qualcosa. Le dà l'impressione di mettercela tutta, qui, ma le sembra in qualche modo scomoda. E crede che abbia bisogno di una persona amica.
     }
 
     {
         - grimoire_fifthChar has grimMentorSecondSecretEnding:
-
+            Prima di salutare {player_name}, {charNameTwo} ha detto che secondo lui {charNameFive} non mica felice. Gli ricorda mamma quando gira per casa dando consigli e dicendo cose sorridendo. E poi si rinchiude in camera e resta in silenzio per ore. Anche {charNameFive}, ma secondo {charNameTwo} non sta bene.
     }
 
 
@@ -237,7 +270,6 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
 
 
     // {
@@ -281,7 +313,6 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
 
     //INSERIRE LOGICA RICETTA
 
@@ -356,7 +387,6 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
 
     {
         - grimoire_fifthChar has grimFifthCharProposal:
@@ -391,7 +421,7 @@
 
     {
         - grimoire_fifthChar has grimFifthCharMentorFeedback:
-            {mentorName} ha detto a {player_name} che <>
+            {charNameFive} ha detto a {player_name} che <>
 
             {
                 - fifthChar_ActualName has Triangolo:
@@ -429,7 +459,6 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
 
     {
         - grimoire_fifthChar has grimFifthCharLetterOne:

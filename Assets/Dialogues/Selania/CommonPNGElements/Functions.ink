@@ -546,7 +546,8 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
 
         {
             - food_gift_second_char && grimoire_secondChar hasnt grimSecondCharKitchenAlone:
-                ~ grimoire_secondChar += grimSecondCharKitchenAlone                
+                ~ grimoire_secondChar += grimSecondCharKitchenAlone
+                ~ grimoire_fifthChar += grimSecondCharKitchenAlone                
         }
 
 

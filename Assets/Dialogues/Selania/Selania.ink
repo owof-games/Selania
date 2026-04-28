@@ -114,7 +114,6 @@
     INCLUDE Book\MainBook.ink
     INCLUDE Book\BookFunctions.ink
     //Characters recap
-    INCLUDE Book\FifthCharRecap.ink
     INCLUDE Book\OtherCharsRecap.ink
  
 
