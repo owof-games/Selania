@@ -1121,6 +1121,7 @@ MonoBehaviour:
   recipeDescriptionTextMeshPro: {fileID: 6868509907902272971}
   recipeContentsTextMeshPro: {fileID: 7298832372795988697}
   lockImage: {fileID: 3604136532669512190}
+  favourDemandedTextMeshPro: {fileID: 6329427177710575706}
 --- !u!1 &4004385980586674046
 GameObject:
   m_ObjectHideFlags: 0

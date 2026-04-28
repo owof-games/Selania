@@ -570,5 +570,10 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
         {
             grimoireBackground.SecondLevelFrancoGrimoireShowRecipe("Titolo", "Descrizione", "Contenuti");
         }
+
+        public void SecondLevelFrancoGrimoireSetFavour()
+        {
+            grimoireBackground.SecondLevelFrancoGrimoireSetFavourDemanded("Un favore diverso dal solito.");
+        }
     }
 }

@@ -876,5 +876,14 @@ namespace Selania.Rework.Components.Grimoire
         {
             secondLevelFrancoGrimoire.ShowRecipe(recipeTitle, recipeDescription, recipeContents);
         }
+
+        /// <summary>
+        ///     Set the favor currently asked by Franco.
+        /// </summary>
+        /// <param name="favor">The favor asked.</param>
+        public void SecondLevelFrancoGrimoireSetFavourDemanded(string favor)
+        {
+            secondLevelFrancoGrimoire.SetFavourDemanded(favor);
+        }
     }
 }

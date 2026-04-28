@@ -10,6 +10,7 @@ namespace Selania.Rework.Components.Grimoire
         [SerializeField] private TMP_Text recipeDescriptionTextMeshPro = null!;
         [SerializeField] private TMP_Text recipeContentsTextMeshPro = null!;
         [SerializeField] private Image lockImage = null!;
+        [SerializeField] private TMP_Text favourDemandedTextMeshPro = null!;
 
         /// <summary>
         ///     Hide the recipe and show the lock.
@@ -37,6 +38,15 @@ namespace Selania.Rework.Components.Grimoire
             recipeDescriptionTextMeshPro.text = recipeDescription;
             recipeContentsTextMeshPro.gameObject.SetActive(true);
             recipeContentsTextMeshPro.text = recipeContents;
+        }
+
+        /// <summary>
+        ///     Set the favor currently asked by Franco.
+        /// </summary>
+        /// <param name="favor">The favor asked.</param>
+        public void SetFavourDemanded(string favor)
+        {
+            favourDemandedTextMeshPro.text = favor;
         }
     }
 }
