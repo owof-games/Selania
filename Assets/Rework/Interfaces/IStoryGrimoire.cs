@@ -91,6 +91,11 @@ namespace Selania.Rework.Interfaces
         Observable<SecondLevelCharacterPageDescriptor> secondLevelCharacterPageDescriptors { get; }
 
         /// <summary>
+        ///     An observable that produces a value whenever a second level Franco grimoire page should be displayed.
+        /// </summary>
+        Observable<SecondLevelFrancoPageDescriptor> secondLevelFrancoPageDescriptors { get; }
+
+        /// <summary>
         ///     An observable that produces a value whenever a third level sigils grimoire page should be displayed.
         /// </summary>
         Observable<ThirdLevelSigilsGrimoirePageDescriptor> thirdLevelSigilsGrimoirePageDescriptors { get; }
@@ -268,6 +273,22 @@ namespace Selania.Rework.Interfaces
             string tasks,
             IEnumerable<string> choices,
             PentacleDescriptor pentacleDescriptor,
+            string indexText)
+            : BaseNavigationDescriptor(indexText, null, null, null, null);
+
+        /// <summary>
+        ///     Descriptor of the second level page for Franco.
+        /// </summary>
+        /// <param name="favour">The favor requested.</param>
+        /// <param name="recipeTitle">The title of the recipe, or <c>null</c> if the recipe is locked.</param>
+        /// <param name="recipeDescription">The recipe description (ignored if <paramref name="recipeTitle"/> is <c>null</c>).</param>
+        /// <param name="recipeContents">The recipe contents (ignored if <paramref name="recipeTitle"/> is <c>null</c>)</param>
+        /// <param name="indexText">Text for the index choice.</param>
+        record SecondLevelFrancoPageDescriptor(
+            string favour,
+            string? recipeTitle,
+            string recipeDescription,
+            string recipeContents,
             string indexText)
             : BaseNavigationDescriptor(indexText, null, null, null, null);
 

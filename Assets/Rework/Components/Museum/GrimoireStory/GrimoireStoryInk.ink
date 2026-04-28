@@ -183,6 +183,8 @@ E ora apro la scelta delle piante.
         -> grimoire_first_character
     + [SecondCharacter]
         -> grimoire_second_character
+    + [Franco]
+        -> grimoire_franco
     -
 
     -> grimoire
@@ -603,3 +605,13 @@ E ora apro la scelta delle piante.
     + [prossima #bookmark:next]
         @grimoireTextNext
         -> grimoire_second_character_conversation
+
+
+=== grimoire_franco
+
+    @grimoireFranco #favour:Favore richiesto. #recipeTitle:Titolo della ricetta #recipeDescription:Descrizione della ricetta
+    Inizio della ricetta.
+    Continuo della ricetta.
+    La ricetta va ancora avanti.
+    + [Index #bookmark:index]
+        -> grimoire

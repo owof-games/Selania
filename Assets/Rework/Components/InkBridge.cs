@@ -1087,6 +1087,13 @@ namespace Selania.Rework.Components
             throw new InvalidOperationException(
                 "Cannot get the second level characters grimoire page descriptors before initialization");
 
+        private Subject<IStoryGrimoire.SecondLevelFrancoPageDescriptor>? _secondLevelFrancoPageDescriptorsSubject;
+
+        public Observable<IStoryGrimoire.SecondLevelFrancoPageDescriptor> secondLevelFrancoPageDescriptors =>
+            _secondLevelFrancoPageDescriptorsSubject?.AsObservable() ??
+            throw new InvalidOperationException(
+                "Cannot get the second level Franco grimoire page descriptors before initialization");
+
         private Subject<IStoryGrimoire.ThirdLevelSigilsGrimoirePageDescriptor>?
             _thirdLevelSigilsGrimoirePageDescriptorsSubject;
 
@@ -1137,6 +1144,8 @@ namespace Selania.Rework.Components
                 new Subject<IStoryGrimoire.SecondLevelSigilsGrimoirePageDescriptor>();
             _secondLevelCharacterPageDescriptorsSubject =
                 new Subject<IStoryGrimoire.SecondLevelCharacterPageDescriptor>();
+            _secondLevelFrancoPageDescriptorsSubject =
+                new Subject<IStoryGrimoire.SecondLevelFrancoPageDescriptor>();
             _thirdLevelSigilsGrimoirePageDescriptorsSubject =
                 new Subject<IStoryGrimoire.ThirdLevelSigilsGrimoirePageDescriptor>();
             _thirdLevelGreenhouseGrimoirePageDescriptorsSubject =
@@ -1154,6 +1163,7 @@ namespace Selania.Rework.Components
             _thirdLevelTextGrimoirePageDescriptorSubject?.Dispose();
             _thirdLevelGreenhouseGrimoirePageDescriptorsSubject?.Dispose();
             _thirdLevelSigilsGrimoirePageDescriptorsSubject?.Dispose();
+            _secondLevelFrancoPageDescriptorsSubject?.Dispose();
             _secondLevelCharacterPageDescriptorsSubject?.Dispose();
             _secondLevelSigilsGrimoirePageDescriptorsSubject?.Dispose();
             _secondLevelGrimoirePageDescriptorsSubject?.Dispose();
@@ -1199,6 +1209,9 @@ namespace Selania.Rework.Components
                     break;
                 case "@grimoireCharacter":
                     EmitSecondLevelCharacterGrimoirePage();
+                    break;
+                case "@grimoireFranco":
+                    EmitSecondLevelFrancoGrimoirePage();
                     break;
                 case "@grimoireSigilPages":
                     EmitThirdLevelSigilsGrimoirePage();
@@ -1667,6 +1680,57 @@ namespace Selania.Rework.Components
 
             string GetVariableType(object? variableValue) =>
                 variableValue == null ? "null" : variableValue.GetType().Name;
+        }
+
+        private void EmitSecondLevelFrancoGrimoirePage()
+        {
+            // get the current story
+            var story = GetStory();
+
+            // extract info from tags
+            var tags = MakeTags(story.currentTags);
+            var favour = tags.FirstOrDefault(tag => tag.category == "favour")?.value ?? "";
+            var recipeTitle = tags.FirstOrDefault(tag => tag.category == "recipeTitle")?.value;
+            if (string.IsNullOrWhiteSpace(recipeTitle)) recipeTitle = null;
+            var recipeDescription = tags.FirstOrDefault(tag => tag.category == "recipeDescription")?.value ?? "";
+
+            // extract info from following text
+            var contentsList = new List<string>();
+            while (story.canContinue) contentsList.Add(story.Continue().Trim());
+            var contents = string.Join('\n', contentsList);
+
+            // navigation
+            GetNavigationChoices(story, out var indexChoice, out var secondLevelChoice, out var previousChoice,
+                out var nextChoice, out var closeChoice);
+            if (indexChoice == null)
+            {
+                logger.ZLogError($"Second level Franco page has not a choice to get back to the first level!");
+                return;
+            }
+
+            if (secondLevelChoice != null)
+                logger.ZLogWarning(
+                    $"Second level Franco page has a choice to get back to the second level ({secondLevelChoice} #{bookmarkTagCategory}:{secondLevelBookmarkTagValue}) that should not be present");
+
+            if (previousChoice != null)
+                logger.ZLogWarning(
+                    $"Second level Franco page has a choice to go to the previous page ({previousChoice} #{bookmarkTagCategory}:{backBookmarkTagValue}) that should not be present");
+
+            if (nextChoice != null)
+                logger.ZLogWarning(
+                    $"Second level Franco page has a choice to go to the next page ({nextChoice} #{bookmarkTagCategory}:{forwardBookmarkTagValue}) that should not be present");
+
+            if (closeChoice != null)
+                logger.ZLogWarning(
+                    $"Second level Franco page has a choice to close the grimoire ({closeChoice} #{bookmarkTagCategory}:{closeBookmarkTagValue}) that should not be present");
+
+            // create the descriptor
+            var descriptor =
+                new IStoryGrimoire.SecondLevelFrancoPageDescriptor(favour, recipeTitle, recipeDescription, contents,
+                    indexChoice);
+
+            // emit
+            _secondLevelFrancoPageDescriptorsSubject!.OnNext(descriptor);
         }
 
         private void EmitThirdLevelSigilsGrimoirePage()

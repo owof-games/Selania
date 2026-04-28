@@ -28,6 +28,8 @@ namespace Selania.Rework.Components.Grimoire
                 .AddTo(this);
             StoryGrimoire.secondLevelCharacterPageDescriptors.Subscribe(OnSecondLevelCharacterGrimoirePageDescriptors)
                 .AddTo(this);
+            StoryGrimoire.secondLevelFrancoPageDescriptors.Subscribe(OnSecondLevelFrancoGrimoirePageDescriptors)
+                .AddTo(this);
             StoryGrimoire.thirdLevelSigilsGrimoirePageDescriptors.Subscribe(OnThirdLevelSigilsGrimoirePageDescriptors)
                 .AddTo(this);
             StoryGrimoire.thirdLevelGreenhouseGrimoirePageDescriptors
@@ -165,6 +167,25 @@ namespace Selania.Rework.Components.Grimoire
                 descriptor.pentacleDescriptor.fireValue1, descriptor.pentacleDescriptor.fireValue2,
                 descriptor.pentacleDescriptor.earthValue1, descriptor.pentacleDescriptor.earthValue2,
                 descriptor.pentacleDescriptor.waterValue1, descriptor.pentacleDescriptor.waterValue2);
+
+            // set up navigation
+            SetUpNavigation(descriptor);
+        }
+
+        private void OnSecondLevelFrancoGrimoirePageDescriptors(
+            IStoryGrimoire.SecondLevelFrancoPageDescriptor descriptor)
+        {
+            // show the grimoire (second level Franco)
+            grimoireBackground.ShowGrimoire();
+            grimoireBackground.SwitchToPage(GrimoireBackground.PageType.SecondLevelFranco);
+
+            // set up the grimoire to show the info described in the descriptor
+            grimoireBackground.SecondLevelFrancoGrimoireSetFavourDemanded(descriptor.favour);
+            if (descriptor.recipeTitle == null)
+                grimoireBackground.SecondLevelFrancoGrimoireLockRecipe();
+            else
+                grimoireBackground.SecondLevelFrancoGrimoireShowRecipe(descriptor.recipeTitle,
+                    descriptor.recipeDescription, descriptor.recipeContents);
 
             // set up navigation
             SetUpNavigation(descriptor);
