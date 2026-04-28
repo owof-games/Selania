@@ -36,6 +36,9 @@
     //Nostro invito
         VAR kitchen_fourthCharCookingTogetherInvite = false
     //Valore quarto ingrediente
+        VAR kitchen_fourthCharRecipeNoun = ""
+        VAR kitchen_fourthCharRecipeAdjective = ""
+        VAR kitchen_fourthCharRecipeComplement = ""
         VAR kitchen_fourthCharExtraIngredient = ()
         VAR kitchen_fourthCharExtraIngredientReaction = notReaction
     //Ricetta creata

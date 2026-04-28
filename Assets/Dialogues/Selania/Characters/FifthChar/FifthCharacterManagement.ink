@@ -35,6 +35,10 @@
     //Valore quarto ingrediente
         VAR kitchen_fifthCharExtraIngredient = ()
         VAR kitchen_fifthCharExtraIngredientReaction = notReaction
+            //Valore ingredienti
+        VAR kitchen_fifthCharRecipeNoun = ""
+        VAR kitchen_fifthCharRecipeAdjective = ""
+        VAR kitchen_fifthCharRecipeComplement = ""
     //Ricetta creata
         VAR kitchen_fifthCharRecipe = ""    
     

@@ -1,11 +1,3 @@
-//Tracciamento nome ricette
-    VAR kitchen_firstRecipe = ""
-    VAR kitchen_secondRecipe = ""
-    VAR kitchen_thirdRecipe = ""
-    VAR kitchen_fourthRecipe = ""
-    VAR kitchen_fifthRecipe = ""
-    VAR kitchen_sixthRecipe = ""
-
 //Tracciamento elementi che compongono il nome delle ricette
     VAR kitchen_recipeNoun = ""
     VAR kitchen_recipeAdjective = ""
@@ -88,17 +80,17 @@
             ~ kitchen_thirdCharRecipeAdjective = kitchen_recipeAdjective
             ~ kitchen_thirdCharRecipeComplement = kitchen_recipeComplement
         
-        // - FourthCharacter:
-        //     ~ kitchen_fourthCharRecipe = kitchen_tempRecipeName
-        //     ~ kitchen_fourthCharRecipeNoun = kitchen_recipeNoun
-        //     ~ kitchen_fourthCharRecipeAdjective = kitchen_recipeAdjective
-        //     ~ kitchen_fourthCharRecipeComplement = kitchen_recipeComplement
+        - FourthCharacter:
+            ~ kitchen_fourthCharRecipe = kitchen_tempRecipeName
+            ~ kitchen_fourthCharRecipeNoun = kitchen_recipeNoun
+            ~ kitchen_fourthCharRecipeAdjective = kitchen_recipeAdjective
+            ~ kitchen_fourthCharRecipeComplement = kitchen_recipeComplement
 
-        // - FifthCharacter:
-        //     ~ kitchen_fifthCharRecipe = kitchen_tempRecipeName
-        //     ~ kitchen_fifthCharRecipeNoun = kitchen_recipeNoun
-        //     ~ kitchen_fifthCharRecipeAdjective = kitchen_recipeAdjective
-        //     ~ kitchen_fifthCharRecipeComplement = kitchen_recipeComplement
+        - FifthCharacter:
+            ~ kitchen_fifthCharRecipe = kitchen_tempRecipeName
+            ~ kitchen_fifthCharRecipeNoun = kitchen_recipeNoun
+            ~ kitchen_fifthCharRecipeAdjective = kitchen_recipeAdjective
+            ~ kitchen_fifthCharRecipeComplement = kitchen_recipeComplement
 
         - PG:
             ~ kitchen_PGCharRecipe = kitchen_tempRecipeName

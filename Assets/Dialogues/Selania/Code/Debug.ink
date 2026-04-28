@@ -1,7 +1,7 @@
     VAR debug_seedRandom = false
     
 //Per abilitare o meno i debug
-    VAR debug_openAll = true
+    VAR debug_openAll = false
     VAR debug = false
     VAR debug_cultivable = false
     VAR debug_changeName = false
@@ -117,6 +117,9 @@
     ~ firstChar_last_air = RANDOM(-9,9)
     ~ firstChar_last_water = RANDOM(-9,9)
     ~ firstChar_last_fire= RANDOM(-9,9)
+    ~ kitchen_firstCharRecipeNoun = "Pizzette"
+    ~ kitchen_firstCharRecipeAdjective = "incoerenza"
+    ~ kitchen_firstCharRecipeComplement = "ruggine biondina"
 
 
 ~ grimoire_secondChar += (grimSecondCharOne, grimSecondCharTwo, grimSecondCharThreeHim, grimSecondCharThreeHer, grimSecondCharThreeThey, grimSecondCharFour, grimSecondCharFive, grimSecondCharSix, grimSecondCharSeven, grimSecondCharEight, grimSecondCharNine, grimSecondCharTen, grimSecondCharEleven, grimSecondCharTwelve, grimSecondCharCarla, grimSecondOpenLibrary, grimSecondCharNovel, grimSecondCharDog, grimSecondCharKitchenOne, grimSecondCharKitchenTwo, grimSecondCharKitchenThree, grimSecondCharKitchenEnded, grimSecondCharKitchenPositiveReaction, grimSecondCharKitchenNegativeReaction, grimSecondCharKitchenNeutralReaction,grimSecondCharKitchenAlone, grimSecondCharProposal, grimSecondCharNewName, grimSecondCharMentorFeedback, grimSecondCharLetterOne, grimSecondCharLetterTwo, grimSecondCharLetterThree, grimSecondCharLetterFour, grimFirstSecondChar, grimSecondCharMentorOne, grimSecondCharMentorPeace, grimSecondThirdChar, grimSecondCharFranco)
@@ -135,6 +138,9 @@
     ~ secondChar_last_air = RANDOM(-9,9)
     ~ secondChar_last_water = RANDOM(-9,9)
     ~ secondChar_last_fire= RANDOM(-9,9)
+    ~ kitchen_secondCharRecipeNoun = "Pesche"
+    ~ kitchen_secondCharRecipeAdjective = "discordia"
+    ~ kitchen_secondCharRecipeComplement = "cioccolato al latte"
 
 ~ grimoire_thirdChar += (grimThirdCharOne, grimThirdCharTwo, grimThirdCharThree, grimThirdCharFour, grimThirdCharFive, grimThirdCharSix, grimThirdCharSeven, grimThirdCharEight, grimThirdCharNine, grimThirdCharTen, grimThirdCharEleven, grimThirdCharTwelve, grimThirdOpenNest, grimThirdCharNovel, grimThirdCharDog, grimThirdCharKitchenOne, grimThirdCharKitchenTwo, grimThirdCharKitchenThree, grimThirdCharKitchenEnded, grimThirdCharKitchenPositiveReaction, grimThirdCharKitchenNegativeReaction, grimThirdCharKitchenNeutralReaction,grimThirdCharKitchenAlone, grimThirdCharProposal, grimThirdCharNewName, grimThirdCharMentorFeedback, grimThirdCharLetterOne, grimThirdCharLetterTwo, grimThirdCharLetterThree, grimThirdCharLetterFour, grimSecondThirdChar, grimFirstThirdChar, grimThirdCharFranco, grimThirdCharMentor)
 
@@ -152,6 +158,9 @@
     ~ thirdChar_last_air = RANDOM(-9,9)
     ~ thirdChar_last_water = RANDOM(-9,9)
     ~ thirdChar_last_fire= RANDOM(-9,9)
+    ~ kitchen_thirdCharRecipeNoun = "Crostata"
+    ~ kitchen_thirdCharRecipeAdjective = "machista"
+    ~ kitchen_thirdCharRecipeComplement = "acqua di rose"
 
 ~ grimoire_fifthChar += (grimMentorOne, grimMentorTwo, grimMentorThree, grimMentorFour, grimMentorFive, grimMentorSix, grimMentorSeven, grimMentorEight, grimMentorNine, grimMentorTen, grimMentorEleven, grimMentorTwelve, grimMentorNovel, grimMentorDog, grimMentorLiar, grimMentorViolence, grimMentorOlobinoUno, grimMentorOlobinoDue, grimKitchenMentor, grimMentorRage, grimMentorNotMandatory, grimMentorNewMail, grimMentorFirstSecretEnding, grimMentorSecondSecretEnding, grimMentorThirdSecretEnding, grimMentorFourthSecretEnding, grimMentorFifthSecretEnding)
 
@@ -175,5 +184,8 @@
 
     //Attivo la gamer mode, o da ink non posso testare nulla
     -> gamerMode_activation ->   
+
+    //Aggiungiamo con chi abbiamo cucinato
+    ~  kitchen_allChefs += (FirstCharacter, SecondCharacter, ThirdCharacter)
                 
 ->->
