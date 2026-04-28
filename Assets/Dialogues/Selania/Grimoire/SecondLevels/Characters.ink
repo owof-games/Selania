@@ -67,10 +67,10 @@
 
     {
         - frog_second_char_gift != "" && secondChar_giftedObject == ():
-            Regalale <b>{ingredientTranslator(frog_second_char_gift)}</b>.
+            Regalagli <b>{ingredientTranslator(frog_second_char_gift)}</b>.
 
         - secondChar_giftedObject != ():
-            Le hai regalato <b>{ingredientTranslator(secondChar_giftedObject)}</b>.
+            Gli hai regalato <b>{ingredientTranslator(secondChar_giftedObject)}</b>.
     }
     
     {
@@ -86,7 +86,7 @@
             Il suo racconto preferito è {frog_second_novel}.
 
         -  grimoire_secondChar has grimSecondCharNovel:
-            Il suo racconto preferito è <b>Luna vergine</b> di Aza.
+            Il suo racconto preferito è <b>Il sassolino</b> di Lamia
     }
     
 
@@ -125,10 +125,10 @@
 
     {
         - frog_third_char_gift != "" && thirdChar_giftedObject == ():
-            Regalale <b>{ingredientTranslator(frog_third_char_gift)}</b>.
+            Regalagli <b>{ingredientTranslator(frog_third_char_gift)}</b>.
 
         - thirdChar_giftedObject != ():
-            Le hai regalato <b>{ingredientTranslator(thirdChar_giftedObject)}</b>.
+            Gli hai regalato <b>{ingredientTranslator(thirdChar_giftedObject)}</b>.
     }
     
     {
@@ -144,7 +144,7 @@
             Il suo racconto preferito è {frog_third_novel}.
 
         -  grimoire_thirdChar has grimThirdCharNovel:
-            Il suo racconto preferito è <b>Luna vergine</b> di Aza.
+            Il suo racconto preferito è <b>Polvere</b> di Maura.
     }
     
 
@@ -201,7 +201,7 @@
     //         Il suo racconto preferito è {frog_fourth_novel}.
 
     //     -  grimoire_fourthChar has grimFourthCharNovel:
-    //         Il suo racconto preferito è <b>Luna vergine</b> di Aza.
+    //         Il suo racconto preferito è <b>Fuochino</b> di Cecilia Formicola.
     // }
     
 
