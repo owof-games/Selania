@@ -1223,6 +1223,7 @@
                 {charTag(SecondCharacter, "neutral")}:          Lo vuoi sapere un segreto?
                 {charTag(SecondCharacter, "energy")}:           Alla fine non sono <i>così</i> strano.
                                                                 Ma mi piace quando le persone sono <b>coerenti</b>.
+                                                                Quando pensano le cose in un modo preciso.
                 {charTag(SecondCharacter, "angry")}:            Sennò mi sembra che vuoi avere ragione, non che mi vuoi parlare davvero.
                
                         -> relationship_feedback

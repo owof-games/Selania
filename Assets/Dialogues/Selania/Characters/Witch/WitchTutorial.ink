@@ -136,7 +136,7 @@
     ~ temp charNameFive = translator(mentor_ActualName)
 
             {
-                - grimoire_first_character_conversation && second_character_recap.check && greenhouse_recap.check:
+                - grimoire_first_character_conversation && grimoire_second_character_conversation && grimoire_greenhouse_thirdLevel:
                     <i>{player_name} cerca spesso risposte tra le pagine del libro.
                 
                 - else:

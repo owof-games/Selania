@@ -305,8 +305,6 @@
         - kitchen_fifthCharExtraIngredient == universalIngredient:
             AGGIUNGI RICORDO IMPORTANTE.
 
-    }
-    {
         - fifthChar_favouritesGifts has kitchen_fifthCharExtraIngredient:
 
    

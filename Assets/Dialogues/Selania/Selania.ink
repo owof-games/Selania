@@ -113,18 +113,10 @@
 //Gestione del libro
     INCLUDE Book\MainBook.ink
     INCLUDE Book\BookFunctions.ink
-    INCLUDE Book\RulesRecap.ink
     //Characters recap
-    INCLUDE Book\SecondCharRecap.ink
-    INCLUDE Book\ThirdCharRecap.ink
-    INCLUDE Book\FourthCharRecap.ink
     INCLUDE Book\FifthCharRecap.ink
     INCLUDE Book\OtherCharsRecap.ink
-    //Minigames informations
-    INCLUDE Book\FrogRecap.ink
-    INCLUDE Book\GreenhouseRecap.ink
-    INCLUDE Book\KitchenRecap.ink
-    INCLUDE Book\NestRecap.ink
+ 
 
 //Gestione del Grimorio
 //Nota: "BOOK" diventa il repository del vecchio materiale di testo.

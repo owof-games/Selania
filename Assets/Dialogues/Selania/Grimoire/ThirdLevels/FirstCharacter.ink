@@ -95,20 +95,20 @@
 
     {
         - grimoire_firstChar has grimFirstThirdChar:
-            {grimFirstThirdChar_text}
+            ~ grimFirstThirdChar_text()
     }
 
     {
         - grimoire_firstChar has grimFirstSecondChar:
-            {grimFirstSecondChar_text}
+            ~ grimFirstSecondChar_text()
     }
     
     {
         - grimoire_firstChar has grimFirstCharMentor:
-            {grimFirstCharMentor_text}
+            ~ grimFirstCharMentor_text()
     }
-    
-    
+
+
     + [Index #bookmark:index]
         -> grimoire
     + [{translator(firstChar_ActualName)} #bookmark:secondLevel]
@@ -200,8 +200,6 @@
         - kitchen_firstCharExtraIngredient == universalIngredient:
             AGGIUNGI RICORDO IMPORTANTE DI CHITARRA.
 
-    }
-    {
         - firstChar_favouritesGifts has kitchen_firstCharExtraIngredient:
                 {charNameOne} ha apprezzato l'aggiunta di {ingredientTranslator(kitchen_firstCharExtraIngredient)}, e ha raccontato a {player_name} che sa che non è sempre facilissimo capire come ragiona, ma che alla fine basta non riempirla di commenti rigidini e razionali quando si parla, e che si trova più a suo agio con le cose emotive che non con i dati freddi e distaccati.
    

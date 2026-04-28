@@ -31,18 +31,8 @@
 #ambientSounds: {tag_ambientSounds()}
 
 @interact
-<- second_character_recap
-<- third_character_recap
-<- fourth_character_recap
 <- fifth_character_recap
-<- frog_character_recap
-<- dog_character_recap
 <- witch_character_recap
-<- greenhouse_recap
-<- kitchen_recap
-<- nest_recap
-<- rules_recap
-<- settings_management
 + [BookExit]
     -> book_tracking_arrive
 

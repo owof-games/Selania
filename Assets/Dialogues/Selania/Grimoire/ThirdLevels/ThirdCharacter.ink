@@ -186,8 +186,6 @@
         - kitchen_thirdCharExtraIngredient == universalIngredient:
             AGGIUNGI RICORDO IMPORTANTE.
 
-    }
-    {
         - thirdChar_favouritesGifts has kitchen_thirdCharExtraIngredient:
 
    
