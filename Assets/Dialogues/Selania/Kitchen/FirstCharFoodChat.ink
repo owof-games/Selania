@@ -249,28 +249,28 @@
         {charTag(FirstCharacter, "curious")}:       E tu cosa ti aspetti da un'amicizia, {player_name}? 
         
             + \ {charTag(PG, "neutral")}:         <i>Tosto del pepe dell'onestà.</i>
-                ~ kitchen_recipeAdjective = "onesta"
+                ~ kitchen_recipeAdjective = "onestà"
                 -> glyph_modifier_variation_management(PG, earthC)->
                 {charTag(FirstCharacter, "affectionate")}:      Come Talco.
                 Quel tipo di persona che se fai una cagata, te la dice.
                
             + \ {charTag(PG, "neutral")}:         <i>Spargo della curcuma divertente.</i>
-                ~ kitchen_recipeAdjective = "allegra"
+                ~ kitchen_recipeAdjective = "allegria"
                 -> glyph_modifier_variation_management(PG, airC)->
                 L'amicizia da balotta quindi. 
                 Da cazzeggio assieme.
                 Da oasi nel casino del mondo.
              
             + \ {charTag(PG, "neutral")}:         <i>Aggiungo del cumino empatico.</i>
-               ~ kitchen_recipeAdjective = "empatica"
+               ~ kitchen_recipeAdjective = "empatia"
                -> glyph_modifier_variation_management(PG, waterC)->
                {charTag(FirstCharacter, "affectionate")}:      Quel tipo di rapporto che ti fa sentire ascoltata.
                Capita.
                Dove puoi essere te stessa.
                {charTag(FirstCharacter, "sad")}:              Spero tanto di essere quel tipo di amica, sai?
         
-            + \ {charTag(PG, "neutral")}:         <i>Grattugio della cannella incondizionata.</i>
-                ~ kitchen_recipeAdjective = "incondizionata"
+            + \ {charTag(PG, "neutral")}:         <i>Grattugio della cannella completa.</i>
+                ~ kitchen_recipeAdjective = "completezza"
                 -> glyph_modifier_variation_management(PG, aetherC)->
                 {charTag(FirstCharacter, "neutral")}:         Posso capire, ma non mi piace tantissimo come idea.
                 Mi piace che le amicizie ci siano anche nel conflitto.
@@ -280,7 +280,7 @@
                 Terribile.
     
             + \ {charTag(PG, "neutral")}:         <i>Sminuzzo dello zenzero leale.</i>
-                ~ kitchen_recipeAdjective = "leale"
+                ~ kitchen_recipeAdjective = "lealtà"
                 -> glyph_modifier_variation_management(PG, fireC)->
                 {charTag(FirstCharacter, "neutral")}:         Essere leali significa essere affidabili, vero?
                 Quel tipo di persona che non va in giro a dire i tuoi segreti.
@@ -355,20 +355,20 @@
         {charTag(FirstCharacter, "curious")}:       Una persona che ti piace ti dice "Ti amo". Qual è la prima sensazione che provi? 
         
             + \ {charTag(PG, "neutral")}:         <i>Verso una mestolata di brodo del terrore.</i>
-                ~ kitchen_recipeComplement = "con brodo del terrore"
+                ~ kitchen_recipeComplement = "brodo del terrore"
                 -> glyph_modifier_variation_management(PG, waterC)->
                 {charTag(FirstCharacter, "neutral")}:         Woah, {player_name}.
                 Questa è intensa.
                 Anche se effettivamente l'amore può far cagare addosso.
                
             + \ {charTag(PG, "neutral")}:         <i>Manteco della noce euforica.</i>
-                ~ kitchen_recipeComplement = "con noce euforica"
+                ~ kitchen_recipeComplement = "noce euforica"
                 -> glyph_modifier_variation_management(PG, earthC)->
                 {charTag(FirstCharacter, "neutral")}:         Mi risuona tanto.
                 {charTag(FirstCharacter, "affectionate")}:      Detta dalla persona giusta è una parola che ti fa volare, vero?
              
             + \ {charTag(PG, "neutral")}:         <i>Condisco con semi dell'"io? no, no è possibile!".</i>
-               ~ kitchen_recipeComplement = "con semi dell'<i>io? no, no è possibile!</i>"
+               ~ kitchen_recipeComplement = "semi dell'<i>io? no, no è possibile!</i>"
                -> glyph_modifier_variation_management(PG, airC)->
                 {charTag(FirstCharacter, "neutral")}:         Coff Coff.
                 La sento.
@@ -377,14 +377,14 @@
                 {charTag(FirstCharacter, "sad")}:              E a volte mi succede ancora.
         
             + \ {charTag(PG, "neutral")}:         <i>Incorporo una cucchiata di olio delle lusinghe.</i>
-                ~ kitchen_recipeComplement = "con olio delle lusinghe"
+                ~ kitchen_recipeComplement = "olio delle lusinghe"
                 -> glyph_modifier_variation_management(PG, aetherC)->
                 {charTag(FirstCharacter, "curious")}:       Uh, a qualcuno piace quando il suo pelo viene lisciato, vero? 
                 {charTag(FirstCharacter, "annoyed")}:   Però non rischia di essere una cosa egoista?
                 {charTag(FirstCharacter, "neutral")}:         Più legata a come ti senti che al sentimento che provi per quella persona?
     
             + \ {charTag(PG, "neutral")}:         <i>Sminuzzo una manciata di peperoncini arrapati.</i>
-                ~ kitchen_recipeComplement = "con peperoncini arrapati"
+                ~ kitchen_recipeComplement = "peperoncini arrapati"
                 -> glyph_modifier_variation_management(PG, fireC)->
                 {charTag(FirstCharacter, "neutral")}:         Questa non me l'aspettavo, ma ci sta.
                 {charTag(FirstCharacter, "affectionate")}:      Sentirsi amatə è indubbiamente sexy.
@@ -581,23 +581,23 @@
         {charTag(FirstCharacter, "curious")}:       Comunque non te l'ho mai chiesto, {player_name}: tu ti senti una persona sicura? 
 
             + \ {charTag(PG, "neutral")}:         <i>Aggiungo con convinzione delle prugne.</i>
-                ~ kitchen_recipeAdjective = "convinte"
+                ~ kitchen_recipeAdjective = "convinzione"
                 -> glyph_modifier_variation_management(PG, earthC)->
                
             + \ {charTag(PG, "neutral")}:         <i>Spolvero con titubanza del mais.</i>
-                ~ kitchen_recipeAdjective = "titubanti"
+                ~ kitchen_recipeAdjective = "titubanza"
                 -> glyph_modifier_variation_management(PG, waterC)->
              
             + \ {charTag(PG, "neutral")}:         <i>Affetto con autocontrollo delle zucchine.</i>
-               ~ kitchen_recipeAdjective = "disciplinate"
+               ~ kitchen_recipeAdjective = "disciplina"
                -> glyph_modifier_variation_management(PG, fireC)->
         
             + \ {charTag(PG, "neutral")}:         <i>Spremo tempestosamente del chinotto.</i>
-                ~ kitchen_recipeAdjective = "tempestose"
+                ~ kitchen_recipeAdjective = "tempestosità"
                 -> glyph_modifier_variation_management(PG, airC)->
     
             + \ {charTag(PG, "neutral")}:         <i>Sminuzzo con consapevolezza della cipolla.</i>
-                ~ kitchen_recipeAdjective = "consapevoli"
+                ~ kitchen_recipeAdjective = "consapevolezza"
                 -> glyph_modifier_variation_management(PG, aetherC)->
             -     
         {
@@ -706,20 +706,20 @@
         {charTag(FirstCharacter, "curious")}:       Ti senti di star partecipando a qualcosa di più grande, di trasformativo, con le cose che fai? 
 
             + \ {charTag(PG, "neutral")}:         <i>Trituro con gioia dell'anice stellato.</i>
-                ~ kitchen_recipeComplement = "con anice stellato"
+                ~ kitchen_recipeComplement = "anice stellato"
                 -> glyph_modifier_variation_management(PG, airC)->
                     {charTag(FirstCharacter, "affectionate")}:      Gioiaaaaa!
                     Sì, la gioia è qualcosa che manca tanto in questo mondo ama.
                     Sono così felice per te!
 
             + \ {charTag(PG, "neutral")}:         <i>Aggiungo {player_pronouns has him:pieno|{player_pronouns has her:piena|pienə}} di terrore esistenziale dell'origano.</i>
-                ~ kitchen_recipeComplement = "con origano"
+                ~ kitchen_recipeComplement = "origano"
                 -> glyph_modifier_variation_management(PG, waterC)->
                     {charTag(FirstCharacter, "annoyed")}:   La cosa più millennial che potessi dire, ama.
                     {charTag(FirstCharacter, "affectionate")}:      Ma posso capire.
 
             + \ {charTag(PG, "neutral")}:         <i>Sbuccio titubante della vaniglia.</i>
-               ~ kitchen_recipeComplement = "con vaniglia"
+               ~ kitchen_recipeComplement = "vaniglia"
                -> glyph_modifier_variation_management(PG, earthC)->
                     {charTag(FirstCharacter, "neutral")}:         Già.
                     {charTag(FirstCharacter, "annoyed")}:   A volte non è così facile capire, vero?
@@ -727,14 +727,14 @@
                     {charTag(FirstCharacter, "sad")}:              E nel mentre il dubbio ti rimane: avrà senso tutta 'sta roba?
         
             + \ {charTag(PG, "neutral")}:         <i>Tosto {player_pronouns has him:rassegnato|{player_pronouns has her:rassegnata|rassegnatə}} del coriandolo.</i>
-                ~ kitchen_recipeComplement = "con coriandolo"
+                ~ kitchen_recipeComplement = "coriandolo"
                 -> glyph_modifier_variation_management(PG, aetherC)->
                     {charTag(FirstCharacter, "sad")}:              No no, niente rassegnazione {player_name}!
                     {charTag(FirstCharacter, "neutral")}:         Mo mi invento qualcosa per tirarti su.
                     {charTag(FirstCharacter, "curious")}:       Tipo: vino? 
     
             + \ {charTag(PG, "neutral")}:         <i>Caramello {player_pronouns has him:sopraffatto|{player_pronouns has her:sopraffatta|sopraffattə}} della salvia.</i>
-                ~ kitchen_recipeComplement = "con salvia"
+                ~ kitchen_recipeComplement = "salvia"
                 -> glyph_modifier_variation_management(PG, fireC)->
                     {charTag(FirstCharacter, "sad")}:              Sentimento comune.
                     {charTag(FirstCharacter, "neutral")}:         Però può consolare un po'?
@@ -919,26 +919,26 @@
         {charTag(FirstCharacter, "annoyed")}:   E sì, se ripeto ancora "essere" puoi mandarmi a sbucciare patate per tutto il giorno.
 
             + \ {charTag(PG, "neutral")}:         <i>Frullo della zucca camminando in avanti.</i>
-                ~ kitchen_recipeAdjective = "avanzanti"
+                ~ kitchen_recipeAdjective = "progressità"
                 -> glyph_modifier_variation_management(PG, fireC)->
                {charTag(FirstCharacter, "affectionate")}:      C'è anche qualcosa di bello nel sapere che si sta compiendo la propria strada, vero?
 
             + \ {charTag(PG, "neutral")}:         <i>Pesto dell'ortica con statica soddisfazione.</i>
-                ~ kitchen_recipeAdjective = "soddisfatte"
+                ~ kitchen_recipeAdjective = "soddisfazione"
                 -> glyph_modifier_variation_management(PG, earthC)->
                 {charTag(FirstCharacter, "sad")}:              Vorrei sapere cosa si prova ad esser al proprio posto.
                 {charTag(FirstCharacter, "neutral")}:         Ti guardo e mi sembri una persona equilibrata.
                 Deve essere bello.
              
             + \ {charTag(PG, "neutral")}:         <i>Schiaccio dei rapanelli girando in tondo.</i>
-               ~ kitchen_recipeAdjective = "bloccate"
+               ~ kitchen_recipeAdjective = "blocchità"
                -> glyph_modifier_variation_management(PG, airC)->
                 {charTag(FirstCharacter, "annoyed")}:   Già.
                 Ne hanno voglia a dire "conosci te stessə" e tutte quelle robe lì.
                 {charTag(FirstCharacter, "sad")}:              Ma alla fine il più delle volte invece di avanzare, continui a girare su te stessə.
         
             + \ {charTag(PG, "neutral")}:         <i>Pulisco dei finferli arretrando.</i>
-                ~ kitchen_recipeAdjective = "arretranti"
+                ~ kitchen_recipeAdjective = "retrocessione"
                 -> glyph_modifier_variation_management(PG, waterC)->
                 {charTag(FirstCharacter, "neutral")}:         Uh.
                 Spero tu non viva male questa cosa.
@@ -946,7 +946,7 @@
                 Almeno sai dove non vuoi andare.
     
             + \ {charTag(PG, "neutral")}:         <i>Sciacquo confusamente della lattuga.</i>
-                ~ kitchen_recipeAdjective = "confuse"
+                ~ kitchen_recipeAdjective = "confusione"
                 -> glyph_modifier_variation_management(PG, aetherC)->
                 {charTag(FirstCharacter, "neutral")}:         A volte è solo questione di tempo, vero?
                 Prima di capire dove andare.
@@ -1013,14 +1013,14 @@
         {charTag(FirstCharacter, "curious")}:       Che ci fai? 
 
             + \ {charTag(PG, "neutral")}:         <i>Brucio del peperoncino.</i>
-                ~ kitchen_recipeComplement = "con peperoncino"
+                ~ kitchen_recipeComplement = "peperoncino"
                 -> glyph_modifier_variation_management(PG, aetherC)->
                 {charTag(FirstCharacter, "sad")}:              Merda.
                 {charTag(FirstCharacter, "neutral")}:         Spero non per insoddisfazione.
                 {charTag(FirstCharacter, "sad")}:              Perché non so te, ma è dura essere soddisfattə di quello che si crea.
 
             + \ {charTag(PG, "neutral")}:         <i>Spargo ovunque del cardamomo.</i>
-                ~ kitchen_recipeComplement = "con cardamomo"
+                ~ kitchen_recipeComplement = "cardamomo"
                 -> glyph_modifier_variation_management(PG, fireC)->
                 {charTag(FirstCharacter, "neutral")}:         Un gesto sicuro, deciso.
                 Che alla fine immagino ci stia.
@@ -1028,7 +1028,7 @@
                 Credo.
              
             + \ {charTag(PG, "neutral")}:         <i>Raggruppo dei chiodi di garofano.</i>
-               ~ kitchen_recipeComplement = "con chiodi di garofano"
+               ~ kitchen_recipeComplement = "chiodi di garofano"
                -> glyph_modifier_variation_management(PG, earthC)->
                 Anche a me piace condividere solo con la cerchia ristretta di am3.
                 {charTag(FirstCharacter, "neutral")}:         Mi fa sentire al sicuro.
@@ -1036,7 +1036,7 @@
                 {charTag(FirstCharacter, "neutral")}:         Anche solo per La Rifugia.
         
             + \ {charTag(PG, "neutral")}:         <i>Copro dello zenzero.</i>
-                ~ kitchen_recipeComplement = "con zenzero"
+                ~ kitchen_recipeComplement = "zenzero"
                 -> glyph_modifier_variation_management(PG, fireC)->
                 {charTag(FirstCharacter, "neutral")}:         Tieni le tue creature per te.
                 {charTag(FirstCharacter, "curious")}:       Sarà un gesto di affetto o di insicurezza? 
@@ -1044,7 +1044,7 @@
                 {charTag(FirstCharacter, "neutral")}:         Sarei curiosa di scoprirlo.
     
             + \ {charTag(PG, "neutral")}:         <i>Non faccio nulla.</i>
-                ~ kitchen_recipeComplement = "con essenza del nulla"
+                ~ kitchen_recipeComplement = "essenza del nulla"
                 -> glyph_modifier_variation_management(PG, airC)->
                 {charTag(FirstCharacter, "sad")}:              Perdonami, do sempre per scontato che le persone creino qualcosa.
                 {charTag(FirstCharacter, "neutral")}:         Che poi in parte credo sia vero.
