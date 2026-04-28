@@ -528,7 +528,7 @@
     }
         {charTag(SecondCharacter, "energy")}:       E il mio nome è <b><i>{charNameTwo}</b></i>.
                                                     Perché tutto è un gioco.
-        {charTag(SecondCharacter, "emotional")}:    La mia fantasia e le mie bugie aiuteranno le altre persone ad avere meno paura.
+        {charTag(SecondCharacter, "emotional")}:    La mia fantasia e qualche piccola bugia aiuteranno le altre persone ad avere meno paura.
                         
     
     - secondChar_ActualName has Capibara:

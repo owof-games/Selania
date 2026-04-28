@@ -7,25 +7,127 @@
 === function grimoire_characterDescription(PNG)
 {PNG:
     - FirstCharacter:
-        ~ return "Una ragazza in cerca della sua melodia"
+        {   
+            - grimoire_firstChar hasnt grimFirstCharTwo:
+                ~ return ""
+
+            - firstChar_ActualName has Chitarra:
+                ~ return "Una ragazza in cerca della sua melodia"
+
+            - firstChar_ActualName has Triangolo:
+                ~ return "Ha ritrovato il bello nelle cose quotidiane"
+
+            - firstChar_ActualName has RagazzaOrchestra:
+                ~ return "Ha abbracciato la gioia del cambiamento" 
+
+            - firstChar_ActualName has FlautoDolce:
+                ~ return "Vive la musica come cambiamento"
+
+            - firstChar_ActualName has Ocarina:
+                ~ return "Ha deciso di curare le proprie radici"
+
+            - firstChar_ActualName has Violino:
+                ~ return "Ha trovato nell'amore il cambiamento"
+        }
+        
     
     - SecondCharacter:
-        ~ return "Frase da scrivere"
+       {    
+            - grimoire_secondChar hasnt grimSecondCharFour:
+                ~ return ""
+
+            - secondChar_ActualName has Riccio:
+                ~ return "Un insieme di aculei, rabbia e curiosità"
+
+            - secondChar_ActualName has Grizzly:
+                ~ return "Ha ritrovato nella lotta la sua strada"
+
+            - secondChar_ActualName has Lupo:
+                ~ return "Pronto a proteggere tutta la sua famiglia" 
+
+            - secondChar_ActualName has Delfino:
+                ~ return "Fantasia e piccole bugie per vincere assieme la paura"
+
+            - secondChar_ActualName has Capibara:
+                ~ return "Stare assieme per combattere la paura"
+
+            - secondChar_ActualName has Corvo:
+                ~ return "La conoscenza come mezzo per cambiare le cose e far del bene"
+        }
     
     - ThirdCharacter:
-        ~ return "Frase da scrivere"
+        {   
+            - grimoire_thirdChar hasnt grimThirdCharFour:
+                ~ return ""
+
+            - thirdChar_ActualName has Boccale:
+                ~ return "frase"
+
+            - thirdChar_ActualName has Grizzly:
+                ~ return "frase"
+
+            - thirdChar_ActualName has Lupo:
+                ~ return "frase"
+
+            - thirdChar_ActualName has Delfino:
+                ~ return "frase"
+
+            - thirdChar_ActualName has Capibara:
+                ~ return "frase"
+
+            - thirdChar_ActualName has Corvo:
+                ~ return "frase"
+        }
     
     - FourthCharacter:
-        ~ return "Frase da scrivere"
+        {   
+            - grimoire_fourthChar hasnt grimFourthCharFour:
+                ~ return ""
+            
+            - fourthChar_ActualName has NonnaMolotov:
+                ~ return "frase"
+
+            - fourthChar_ActualName has Grizzly:
+                ~ return "frase"
+
+            - fourthChar_ActualName has Lupo:
+                ~ return "frase"
+
+            - fourthChar_ActualName has Delfino:
+                ~ return "frase"
+
+            - fourthChar_ActualName has Capibara:
+                ~ return "frase"
+
+            - fourthChar_ActualName has Corvo:
+                ~ return "frase"
+        }
     
     - FifthCharacter:
         {
-            - fifthChar_storyStatus != story_storyNotStarted:
-                ~ return "Sono un MOOOOOOOOSTRO!"
-            - else:
-                ~ return "Ogni petalo un consiglio"    
+            
+            - fifthChar_storyStatus has Mentor:
+                ~ return "Ogni petalo un consiglio"
+
+            - fifthChar_storyStatus has Mostro:
+                ~ return "frase"
+
+            - fifthChar_storyStatus has Lupo:
+                ~ return "frase"
+
+            - fifthChar_storyStatus has Delfino:
+                ~ return "frase"
+
+            - fifthChar_storyStatus has Capibara:
+                ~ return "frase"
+
+            - fifthChar_storyStatus has Corvo:
+                ~ return "frase"
+
+            - fifthChar_storyStatus has Corvo:
+                ~ return "frase"    
         }
-        ~ return "Frase da scrivere"
+
     
     - TheWitch:
         ~ return "Luce dal cielo, guida dalla discarica"
