@@ -462,6 +462,7 @@
     {charTag(Mentor, "sad")}:                               Non mi fa impazzire che tu vada in luoghi così malmessi.
     {charTag(Mentor, "neutral")}:                           Ma l'idea della cucina non è così cattiva in sé: cucinare assieme è un momento di intimità.
                                                             E mangiare è uno spazio di bella condivisione.
+                                                            E magari puoi aggiungere anche l'ingrediente giusto, e far felice la persona con cui stai ai fornelli.
             {
                 - are_two_entities_together(FirstCharacter, PG):
                         {charTag(FirstCharacter, "curious")}:       Ci facciamo una pastasciutta assieme, {mentorName}?

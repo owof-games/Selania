@@ -425,7 +425,7 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
             //Storylets speciali
             - open_the_kitchen && grimoire_firstChar hasnt grimFirstOpenKitchen:
                 ~ grimoire_firstChar += grimFirstOpenKitchen
-                ~ grimoire_appendices += grimKitchenChitarra
+                ~ grimoire_appendices += grimFirstOpenKitchen
                 //Cose legate all'evento
                 ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
                 ~ firstChar_PondInvite = true
@@ -721,7 +721,7 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
             //Storylets speciali
             - open_the_nest && grimoire_thirdChar hasnt grimThirdOpenNest:
                 ~ grimoire_thirdChar += grimThirdOpenNest
-                ~ grimoire_appendices += grimSigilsBoccale
+                ~ grimoire_appendices += grimThirdOpenNest
                 //Spostamenti legati all'evento
                 ~ thirdChar_LibraryInvite = false
                 ~ move_entity(ThirdCharacter, Forest)

@@ -1,5 +1,4 @@
 /*************************
-
 La logica di comparsa delle appendici è:
     * grimoire_choicesAndRelationships: sbloccata quando ce ne parlano o Mentore o Strega.
     * grimoire_greenhouseAndGifts: sbloccata dopo la prima pianta raccolta (backpack_findedGifts != ()) o dopo il commento di Mentore.
@@ -7,7 +6,6 @@ La logica di comparsa delle appendici è:
     * grimoire_inkAndRewriting: dopo il commento di Mentore sulla riscrittura.
     * grimoire_Sigils: dopo che ce ne parlano Mentore o Strega (l'idea è comunque di non condividerlo subito).
 
-Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché potrebbe aver senso vedere i libri prima dei commenti, più per impaginazione che altro.
 
 **************************/
 
@@ -17,19 +15,8 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
 ~ temp charNameTwo = translator(secondChar_ActualName)
 ~ temp charNameThree = translator(thirdChar_ActualName)
 ~ temp charNameFour = translator(fourthChar_ActualName)
-~ temp mentorName = translator(mentor_ActualName)
+~ temp charNameFive = translator(mentor_ActualName)
 
-/*************************
-
-    Commento Mentore se sbloccato
-
-**************************/
-
-/*************************
-
-    Commento Strega se sbloccato
-
-**************************/
 
 /*************************
 
@@ -94,6 +81,26 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     A quel punto non mi vorrà mai più.
     
 
+    /*************************
+
+        Commento Mentore se sbloccato
+
+    **************************/
+    {
+        - grimoire_appendices has grimChoicesMentor:
+            All'arrivo di {player_name}, {charNameFive} ha spiegato che la maggior parte delle cose che {player_name} dirà in questo luogo influenzeranno il rapporto che ha con le persone che incontrerà. Che ogni frase in fondo rappresenta un modo di vedere il mondo, e non tutte le visioni vanno d'accordo. Ha poi portato un esempio della prima cosa che le ha detto {player_name} appena si sono incontrate, e dei vari modo in cui le persone possono reagire a quel tipo di commento. Per {charNameFive} capire come funzionano le persone è fondamentale per conquistare la loro fiducia, che è lo strumento principale per il lavoro che deve fare.
+    }
+
+    /*************************
+
+        Commento Strega se sbloccato
+
+    **************************/
+    {
+        - grimoire_appendices has grimChoicesWitch:
+            Abbiamo deciso di condividere con {player_name} la nostra visione sul tema: noi crediamo che quando {player_name} compie una scelta su cosa dire, non sta parlando del mondo che vede, ma di come lo vive. E crediamo sia importante, perché una visione è qualcosa di contrattabile, ma ciò che si vive è, punto. Esprimere sé in una relazione è più importante che concordare con l'altra persona. Il dialogo può essere un sacchetto per accumulare fiducia, o una finestra per far conoscere {player_name} all'altrə.
+    }
+
     + [Index #bookmark:index]
         -> grimoire
     + [Appendici #bookmark:secondLevel]
@@ -114,13 +121,9 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
 ~ temp charNameTwo = translator(secondChar_ActualName)
 ~ temp charNameThree = translator(thirdChar_ActualName)
 ~ temp charNameFour = translator(fourthChar_ActualName)
-~ temp mentorName = translator(mentor_ActualName)
+~ temp charNameFive = translator(mentor_ActualName)
 
-/*************************
 
-    Commento Mentore se sbloccato
-
-**************************/
 /*************************
 
     Testo scritto da K.
@@ -179,6 +182,18 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     Per cui non chiedermi di togliere Franco, non chiedermi di sembrare più "normale", non chiedermi di tradire la memoria di quel povero ragazzo.
     K.
 
+
+    /*************************
+
+    Commento Mentore se sbloccato
+
+    **************************/
+    {
+        - grimoire_appendices has grimGreenhouseMentor:
+            {charNameFive} ha informato {player_name} sul fatto che, tra i tanti modi per migliorare un rapporto con una persona, fare il dono giusto è forse il più immediato. La serra, con le sue piante magnifiche, è secondo {charNameFive} il posto migliore dove coltivare e recuperare doni. Gli effetti dei doni sono immediati e permanenti. Ed è per questo che ogni riscrittorə può darne solo uno a persona, poiché qualcosa di così forte non può certo essere usato senza coscienza.
+    }
+
+
     + [Index #bookmark:index]
         -> grimoire
     + [Appendici #bookmark:secondLevel]
@@ -196,13 +211,7 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
 ~ temp charNameTwo = translator(secondChar_ActualName)
 ~ temp charNameThree = translator(thirdChar_ActualName)
 ~ temp charNameFour = translator(fourthChar_ActualName)
-~ temp mentorName = translator(mentor_ActualName)
-
-/*************************
-
-    Commento Chitarra
-
-**************************/
+~ temp charNameFive = translator(mentor_ActualName)
 
 /*************************
 
@@ -265,6 +274,27 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     <i>Rumore di acqua bevuta.</i>
     E ora lascio la parola a K., che ci racconterà alcuni aneddoti della sua amicizia con O.U.J.
     
+    
+/*************************
+
+    Commento Chitarra
+
+**************************/
+    {
+        - grimoire_appendices has grimFirstOpenKitchen:
+            {charNameOne} ha deciso di sistemare la vecchia cucina per aiutare {player_name} col suo lavoro. L'esperienza ha insegnato a {charNameOne} che il cibo apre alle confidenze, e visto che di solito sono le persone a decidere di cosa parlare con {player_name},{charNameOne} ha già avvisato tutti che a questo giro sarà {player_name} ha decidere di cosa parlare. Poiché ha trovato poche cose in giro, è possibile cucinare con solo una persona per volta.
+    }
+
+/*************************
+
+    Commento Mentore
+
+**************************/
+    {
+        - grimoire_appendices has grimKitchenMentor:
+            {charNameFive} ha condiviso la sua saggezza con {player_name}, dicendo che cucinare assieme è un momento di intimità, e che con l'ingrediente giusto, può far felice la persona con cui sta ai fornelli. Secondo {charNameFive}, passare del tempo in cucina con qualcunə può essere un bel modo per conoscersi meglio, e capire che piega stia prendendo la relazione.
+    }
+
     + [Index #bookmark:index]
         -> grimoire
     + [Appendici #bookmark:secondLevel]
@@ -285,13 +315,7 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
 ~ temp charNameTwo = translator(secondChar_ActualName)
 ~ temp charNameThree = translator(thirdChar_ActualName)
 ~ temp charNameFour = translator(fourthChar_ActualName)
-~ temp mentorName = translator(mentor_ActualName)
-
-/*************************
-
-    Commento Mentore se sbloccato
-
-**************************/
+~ temp charNameFive = translator(mentor_ActualName)
 
 
 /*************************
@@ -359,6 +383,22 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     Y.
 
 
+/*************************
+
+    Commento Mentore se sbloccato
+
+**************************/
+    {
+        - grimoire_appendices has grimInkMentor:
+            {charNameFive} ha spiegato a {player_name} qual è il suo lavoro, ovvero quello di {player_pronouns has him:riscrittore|{player_pronouns has her:riscrittora|riscrittorə}}, la persona che si occupa di aiutare persone bloccate a raccontare in modo diverso la propria storia, così che possano sbloccarsi. Arrivando a scegliere un nuovo nome, segno di un nuovo inizio. Ha anche detto a {player_name} che il suo è un lavoro con pochi strumenti, e quello centrale è l'ascolto, che permette di conquistare la fiducia. Fiducia che genera il secondo strumento: l'inchiostro, elemento fondamentale per la riscrittura. Per {charNameFive} un modo efficace per migliorare la relazione è fare un buon dono, che significa dire "Ehi, ti vedo, ti capisco."
+    }
+
+    {
+        - grimoire_appendices has grimRewritingMentor:
+            {charNameFive} ha offerto un'ultima guida a {player_name}, spiegando la funzione della riscrittura. Arriverà il momento in cui {player_name} potrà proporre alla persona di rileggere assieme la sua storia. A proposta fatta, la persona confiderà cosa la tiene bloccata, e a quel punto {player_name} potrà procedere con le riscritture: per ogni goccia di inchiostro ottenuta durante la relazione, {player_name} potrà proporre una rilettura di un aspetto della vita di quella persona.
+            E infine {charNameFive} ha spiegato lo strumento dell'epilogo: una dichiarazione finale dellə riscrittorə, con l'obiettivo di far mettere alla persona un punto sul suo presente e iniziare a guardare al futuro in modo diverso. Così persona e riscrittorə raggiungeranno il loro obiettivo: un nuovo nome, simbolo di un nuovo inizio. {charNameFive} ha detto a {player_name} che non c'è un esito buono o cattivo per la riscrittura, ma che comunque lei come mentore si permetterà di dare dei feedback d'aiuto.
+    }
+
     + [Index #bookmark:index]
         -> grimoire
     + [Appendici #bookmark:secondLevel]
@@ -381,26 +421,9 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
 ~ temp charNameTwo = translator(secondChar_ActualName)
 ~ temp charNameThree = translator(thirdChar_ActualName)
 ~ temp charNameFour = translator(fourthChar_ActualName)
-~ temp mentorName = translator(mentor_ActualName)
+~ temp charNameFive = translator(mentor_ActualName)
 //Da aprire con un LIST_COUNT > 2, perché i fogli sparsi danno molte informazioni.
-/*************************
 
-    Commento Boccale
-
-**************************/
-
-
-/*************************
-
-    Commento Mentore se sbloccato
-
-**************************/
-
-/*************************
-
-    Commento Strega se sbloccato
-
-**************************/
 /*************************
 
     Testo scritto da S.C.
@@ -461,6 +484,36 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
     Ora voglio solo riprendere a dedicarmi alle persone che mi hanno accompagnata fin qui.
     Negli ultimi mesi le ho completamente trascurate.
 
+
+/*************************
+
+    Commento Boccale
+
+**************************/
+    {
+        - grimoire_appendices has grimThirdOpenNest:
+    }
+
+/*************************
+
+    Commento Mentore se sbloccato
+
+**************************/
+    {
+        - grimoire_appendices has grimSigilsMentor:
+            {charNameFive} si è mostrata indecisa sul valore dei sigilli. Da una parte le danno l'impressione di essere una forma di controllo. Dall'altra crede che rendano la comunicazione più chiara. Li vede com un codice, qualcosa che offre la garanzia di essere capita.
+    }
+
+/*************************
+
+    Commento Strega se sbloccato
+
+**************************/
+    {
+        - grimoire_appendices has grimSigilsWitch:
+            Abbiamo condiviso con {player_name} la nostra conoscenza sui sigilli, che sono uno strumento che sembra complesso ma è molto semplice, ma abbiamo anche espresso la timore che il confine tra sostegno e manipolazione sia sottile. E abbiamo suggerito a {player_name} di comprendere a fondo la natura dei glifi che compongono i sigilli. Perché ogni glifo, come ogni scelta, è una strada. Un vicolo di curiosità e conoscenza. Un sentiero di azione e passione. Un cammino di praticità e radicamento. Un viottolo di affetto e cura. Una calle di saggezza e spiritualità.
+    }
+
     + [Index #bookmark:index]
         -> grimoire
     + [Appendici #bookmark:secondLevel]
@@ -480,9 +533,7 @@ Lato informazioni, da capire con Mattia come strutturiamo le pagine, perché pot
 ~ temp charNameTwo = translator(secondChar_ActualName)
 ~ temp charNameThree = translator(thirdChar_ActualName)
 ~ temp charNameFour = translator(fourthChar_ActualName)
-~ temp mentorName = translator(mentor_ActualName)
-
-
+~ temp charNameFive = translator(mentor_ActualName)
 
     {
         - horizontalS_discoveredDocs has docOne:

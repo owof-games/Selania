@@ -8,7 +8,7 @@
 
 LIST grimoire_allElements = 
 //Appendici
-    grimChoicesMentor, grimChoicesWitch, grimGreenhouseMentor, grimKitchenChitarra, grimInkMentor, grimRewritingMentor, grimSigilsBoccale, grimSigilsMentor, grimSigilsWitch,
+    grimChoicesMentor, grimChoicesWitch, grimGreenhouseMentor, grimInkMentor, grimRewritingMentor, grimSigilsMentor, grimSigilsWitch,
 
 //Storylets Chitarra
     grimFirstCharOne, grimFirstCharTwo, grimFirstCharThree, grimFirstCharFour, grimFirstCharFive, grimFirstCharSix, grimFirstCharSeven, grimFirstCharEight, grimFirstCharNine, grimFirstCharTen, grimFirstCharEleven, grimFirstCharTwelve, grimFirstOpenKitchen, grimFirstCharNovel, grimFirstCharDog, grimFirstCharKitchenOne, grimFirstCharKitchenTwo, grimFirstCharKitchenThree, grimFirstCharKitchenEnded, grimFirstCharKitchenPositiveReaction, grimFirstCharKitchenNegativeReaction, grimFirstCharKitchenNeutralReaction, grimFirstCharKitchenAlone, grimFirstCharProposal, grimFirstCharNewName, grimFirstCharMentorFeedback, grimFirstCharLetterOne, grimFirstCharLetterTwo, grimFirstCharLetterThree, grimFirstCharLetterFour,

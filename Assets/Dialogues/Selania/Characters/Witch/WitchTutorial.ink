@@ -6,52 +6,52 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-        {charTag(TheWitch, witch_state())}:   <i>Quando vi siete conosciut3, {mentorName} ha detto a {player_name} che le cose che dice alle persone sono un modo di vedere il mondo.
-        <i>Apprezziamo gli sforzi di {mentorName}, ma non siamo d'accordo con questo aspetto.
-        <i>Quando {player_name} compie una scelta su cosa dire, non sta parlando del mondo che vede, ma di come lo vive.
-        <i>E crediamo sia importante, perché una visione è qualcosa di contrattabile, ma ciò che si vive è, punto.
-        <i>Esprimere sé in una relazione è più importante che concordare con l'altra persona.
-        <i>Il lichene prospera perché i bisogni si sovrappongono, non perché l'alga è uguale al fungo.</i>
+        {charTag(TheWitch, witch_state())}:                 <i>Quando vi siete conosciut3, {mentorName} ha detto a {player_name} che le cose che dice alle persone sono un modo di vedere il mondo.
+                                                            <i>Apprezziamo gli sforzi di {mentorName}, ma non siamo d'accordo con questo aspetto.
+                                                            <i>Quando {player_name} compie una scelta su cosa dire, non sta parlando del mondo che vede, ma di come lo vive.
+                                                            <i>E crediamo sia importante, perché una visione è qualcosa di contrattabile, ma ciò che si vive è, punto.
+                                                            <i>Esprimere sé in una relazione è più importante che concordare con l'altra persona.
+                                                            <i>Il lichene prospera perché i bisogni si sovrappongono, non perché l'alga è uguale al fungo.</i>
 
-                + \ {charTag(PG, "neutral")}:         Sono sicur{player_pronouns has him:o|{player_pronouns has her:a|ə}} che {mentorName} avesse le migliori intenzioni.
+                + \ {charTag(PG, "neutral")}:               Sono sicur{player_pronouns has him:o|{player_pronouns has her:a|ə}} che {mentorName} avesse le migliori intenzioni.
                         -> glyph_modifier_variation_management(PG, waterC)->
-                    {charTag(TheWitch, witch_state())}:   <i>{player_name} risplende nella sua empatia.
-                    <i>E il nostro intento non è creare attrito, ma porre una domanda.
-                    <i>Quando il maestro sferza l'alunno, può vedere educazione, può vedere punizione.
-                    <i>Ma ciò che vive è comunque violenza.</i>
+                    {charTag(TheWitch, witch_state())}:     <i>{player_name} risplende nella sua empatia.
+                                                            <i>E il nostro intento non è creare attrito, ma porre una domanda.
+                                                            <i>Quando il maestro sferza l'alunno, può vedere educazione, può vedere punizione.
+                                                            <i>Ma ciò che vive è comunque violenza.</i>
                     
-                + \ {charTag(PG, "neutral")}:         È ciò che facciamo per l'altrə che conta, non quello che diciamo.
+                + \ {charTag(PG, "neutral")}:               È ciò che facciamo per l'altrə che conta, non quello che diciamo.
                         -> glyph_modifier_variation_management(PG, fireC)->
-                    {charTag(TheWitch, witch_state())}:   <i>La falena plana per raggiungere la compagna.
-                    <i>Il pipistrello plana per mangiare la falena.
-                    <i>L'azione è la stessa-
-                    <i>Stesso è il risultato?</i>
+                    {charTag(TheWitch, witch_state())}:     <i>La falena plana per raggiungere la compagna.
+                                                            <i>Il pipistrello plana per mangiare la falena.
+                                                            <i>L'azione è la stessa-
+                                                            <i>Stesso è il risultato?</i>
                     
-                + \ {charTag(PG, "neutral")}:         Il modo in cui viviamo riflette il mondo per come lo guardiamo.
+                + \ {charTag(PG, "neutral")}:               Il modo in cui viviamo riflette il mondo per come lo guardiamo.
                         -> glyph_modifier_variation_management(PG, airC)->
-                    {charTag(TheWitch, witch_state())}:   <i>Il modo in cui {player_name} vive riflette il mondo per come lo guarda.
-                    <i>Ma riflette anche la sua storia, le corazze e le ferite che porta.
-                    <i>Così come la rosa decide quando fiorire, ma non può decidere quali petali lasciare al vento.</i>
+                    {charTag(TheWitch, witch_state())}:     <i>Il modo in cui {player_name} vive riflette il mondo per come lo guarda.
+                                                            <i>Ma riflette anche la sua storia, le corazze e le ferite che porta.
+                                                            <i>Così come la rosa decide quando fiorire, ma non può decidere quali petali lasciare al vento.</i>
                     
-                + \ {charTag(PG, "neutral")}:         Ma in concreto, non sono due modi diversi per dire la stessa cosa?
+                + \ {charTag(PG, "neutral")}:               Ma in concreto, non sono due modi diversi per dire la stessa cosa?
                         -> glyph_modifier_variation_management(PG, earthC)->
-                    {charTag(TheWitch, witch_state())}:   <i>Il cucciolo affonda i denti nel fratellino.
-                    <i>Alla madre dice che è per pietà, e lei lo abbraccia.
-                    <i>Al padre dice che è per dominanza, e lui lo festeggia.
-                    <i>Padre e madre hanno visto gli stessi denti?</i>
+                    {charTag(TheWitch, witch_state())}:     <i>Il cucciolo affonda i denti nel fratellino.
+                                                            <i>Alla madre dice che è per pietà, e lei lo abbraccia.
+                                                            <i>Al padre dice che è per dominanza, e lui lo festeggia.
+                                                            <i>Padre e madre hanno visto gli stessi denti?</i>
                     
-                + \ {charTag(PG, "neutral")}:         Siamo uman3, e la nostra crescita prospera nella contraddizione.
+                + \ {charTag(PG, "neutral")}:               Siamo uman3, e la nostra crescita prospera nella contraddizione.
                         -> glyph_modifier_variation_management(PG, aetherC)->
-                    {charTag(TheWitch, witch_state())}:   <i>Ricordo poco della vita umana, ma la natura stessa prospera nel tentativo, nell'errore.
-                    <i>E noi parliamo non del prosperare, ma del valore delle azioni di {player_name}.
-                    <i>L'azione richiede sempre responsabilità.
-                    <i>Il falco torna senza cibo.
-                    <i>I pulli periscono.</i>
+                    {charTag(TheWitch, witch_state())}:     <i>Ricordo poco della vita umana, ma la natura stessa prospera nel tentativo, nell'errore.
+                                                            <i>E noi parliamo non del prosperare, ma del valore delle azioni di {player_name}.
+                                                            <i>L'azione richiede sempre responsabilità.
+                                                            <i>Il falco torna senza cibo.
+                                                            <i>I pulli periscono.</i>
                 -
-        <i>Il dialogo può essere un sacchetto per accumulare fiducia, o una finestra per far conoscere {player_name} all'altrə.
-        <i>{player_name} cerca un sacchetto, o cerca una finestra?       
-        <i>Vorremmo lasciare {player_name} con una informazione importante: ciò che accade durante la riscrittura ha regole diverse dal resto della conversazione.
-        <i>{player_name} può immaginarla come una tempesta sulla spiaggia: quando sarà finita, la sabbia sarà la stessa, ma inaspettate le cose che rimangono sulla riva.</i>
+                                                            <i>Il dialogo può essere un sacchetto per accumulare fiducia, o una finestra per far conoscere {player_name} all'altrə.
+                                                            <i>{player_name} cerca un sacchetto, o cerca una finestra?       
+                                                            <i>Vorremmo lasciare {player_name} con una informazione importante: ciò che accade durante la riscrittura ha regole diverse dal resto della conversazione.
+                                                            <i>{player_name} può immaginarla come una tempesta sulla spiaggia: quando sarà finita, la sabbia sarà la stessa, ma inaspettate le cose che rimangono sulla riva.</i>
         {
             - are_two_entities_together(SecondCharacter, PG):
             {charTag(SecondCharacter, "energy")}:      Tipo tante conchiglie!
@@ -87,7 +87,7 @@
     <i>Il nostro ammonimento per {player_name}.
     <i>Il bimbo piange, il padre lo soccorre.
     <i>Il gatto osserva, e imita il pianto.
-    <i>{player_name} conosce il confine tra strumento e manipolazione?</i>
+    <i>{player_name} conosce il confine tra sostegno e manipolazione?</i>
 
             + \ {charTag(PG, "neutral")}:         Solo il tempo conosce le risposte.
                     -> glyph_modifier_variation_management(PG, earthC)->

@@ -130,7 +130,7 @@
         }
 
         {
-            - grimoire_appendices has grimKitchenChitarra:
+            - grimoire_appendices has grimFirstOpenKitchen:
                 {charTag(Mentor, "neutral")}:       E se mangiate qualcosa assieme, magari riesci anche a capire se stai o meno conquistando la fiducia di quella persona.
                 
         }
