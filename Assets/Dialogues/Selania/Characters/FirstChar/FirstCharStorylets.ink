@@ -587,7 +587,7 @@
         {charTag(FirstCharacter, "annoyed")}:                   Puoi tipo raccontare tutti i femminicidi del mondo e un uomo smonterà ogni dato e movente.
         {charTag(FirstCharacter, "affectionate")}:              Oppure scrivere <b>“Un violador en tu camino”</b> e riempire una piazza di forza e rabbia.
         {charTag(FirstCharacter, "sad")}:                       Ma io non credo proprio di saper scrivere canzoni sulle storie di altre persone.                                                        
-        {charTag(FirstCharacter, "neutral")}:                   Anche se poi sogno di creare qualcosa di così forte da spazzare tutta questa merda.
+        {charTag(FirstCharacter, "neutral")}:                   Anche se poi sogno arrogantemente di creare qualcosa di così forte da spazzare tutta questa merda.
                                                                 Qualcosa che salvi il mondo.
         {
             - are_two_entities_together(Mentor, PG):
@@ -595,69 +595,69 @@
                                                                 Che vita difficile vuoi sceglierti!             
         }
         
-            + \ {charTag(PG, "neutral")}:         Non è arrogante: è nostro dovere cambiare quello che non va!
-                    -> glyph_modifier_variation_management(FirstCharacter, fireC)-> 
-                {charTag(FirstCharacter, "neutral")}:         Ehm, uh.
-                Ok.
-                Credo abbia senso.
-                {charTag(FirstCharacter, "annoyed")}:   Ma sei davvero intens{player_pronouns has him:o|{player_pronouns has her:a|ə}} {player_name}.
-                {charTag(FirstCharacter, "sad")}:              Intens{player_pronouns has him:o|{player_pronouns has her:a|ə}} per me intendo.
-                    
-            + \ {charTag(PG, "neutral")}:         <i>Resto in meditativo silenzio.</i>
-                    -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
-                {charTag(FirstCharacter, "neutral")}:         Forse se è la seconda volta che ci torno è perché è importante.
-                Importante per me.
-                Ha senso, vero?
-        
-            + \ {charTag(PG, "neutral")}:         Anche la fantasia salva il mondo, e ti fa sentire potente.
-                    -> glyph_modifier_variation_management(FirstCharacter, earthC)->
-                {charTag(FirstCharacter, "annoyed")}:   Ma non è che mi interessa la potenza.
-                {charTag(FirstCharacter, "neutral")}:         Mi interessa più sapere che le cose sono giuste.
-                {charTag(FirstCharacter, "affectionate")}:      Però la fantasia è bella.
-            
-            + \ {charTag(PG, "neutral")}:         Credo che siamo pien3 di emozioni, non di fatti.
-                    -> glyph_modifier_variation_management(FirstCharacter, waterC)->
-                {charTag(FirstCharacter, "affectionate")}:      Esatto ama, esatto.
-                {charTag(FirstCharacter, "neutral")}:         Cioè: bellini i fatti, davvero.
-                Graziosi.
-                {charTag(FirstCharacter, "curious")}:       Ma durante il giorno ascolto quello provo, non quello che <b>è</b>.
-                {charTag(FirstCharacter, "neutral")}:         Ha senso?
-    
-            + \ {charTag(PG, "neutral")}:         "Riempire di calore" i fatti li rende inattendibili.
-                    -> glyph_modifier_variation_management(FirstCharacter, airC)->
-                {charTag(FirstCharacter, "annoyed")}:   Però se rimangono attendibili e incagabili non servono a nulla.
-                {charTag(FirstCharacter, "sad")}:              Messa così è una sconfitta a prescindere.
-                {
-                    - are_two_entities_together(SecondCharacter, PG):
-                        {charTag(SecondCharacter, "energy")}:       Mi piace incagabile!
-                        In-ca-ga-bi-le!
-                        In-ca-ga-bi-leeeeeeeee!
-                        {
-                            - are_two_entities_together(Mentor, PG):
-                                {charTag(FifthCharacter, "bored")}:             {charNameTwo}!
-                                {charTag(FifthCharacter, "sorry")}:             Anzi, non è colpa tua.
-                                {charTag(FifthCharacter, "bored")}:             {charNameOne}, le parolacce!
-                                {charTag(FifthCharacter, "neutral")}:           Oh povera me, povera me!
-                                {charTag(SecondCharacter, "emotional")}:        Si può dire inpisciabile?!?
-                                {charTag(FirstCharacter, "annoyed")}:   Me la sono cercata.
-                        }
-                }
-            -
-        {charTag(FirstCharacter, "sad")}:              Tra qualche mese Valeria si laureerà e anche lei tornerà dai suoi, e a quel punto non so cosa resterà della Rifugia, della band.      
-        {charTag(FirstCharacter, "neutral")}:         A volte mi chiedo se non abbia senso lasciare il lavoro e dedicarmi solo alla musica.
-        Per evitare che la band muoia.
-        Per avere tempo e testa per creare buona musica.
-        {charTag(FirstCharacter, "sad")}:              Per fare concerti che salvino almeno una persona.    
-            {
-                - are_two_entities_together(Franco, PG):
-                    {charTag(Franco, "{portrait_Franco()}")}:       Ma se i concerti sono in compagnia, allora da solə sono i solcerti?
-                                                                    Soncerti?
-                                                                    Sorcerti?
-                                                                    Che cosa strana la lingua.
-                                                                    Ma anche le dita sono strane.
-            }
-
+        + \ {charTag(PG, "neutral")}:                           Non è arrogante: è nostro dovere cambiare quello che non va!
+                -> glyph_modifier_variation_management(FirstCharacter, fireC)-> 
+            {charTag(FirstCharacter, "neutral")}:               Ehm, uh.
+                                                                Ok.
+                                                                Credo abbia senso.
+            {charTag(FirstCharacter, "annoyed")}:               Ma sei davvero intens{player_pronouns has him:o|{player_pronouns has her:a|ə}} {player_name}.
+            {charTag(FirstCharacter, "sad")}:                   Intens{player_pronouns has him:o|{player_pronouns has her:a|ə}} per me intendo.
                 
+        + \ {charTag(PG, "neutral")}:                           <i>Resto in meditativo silenzio.</i>
+                -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+            {charTag(FirstCharacter, "affectionate")}:          È la seconda volta che torno su questo discorso del salvare il mondo.    
+            {charTag(FirstCharacter, "neutral")}:               Forse perché è importante.
+                                                                Importante per me?
+                                                                Ha senso, vero?
+        //Quasi quasi potrei provare a invertire aria e terra come obiettivo della domanda qui come altrove.
+        + \ {charTag(PG, "neutral")}:                           Anche la fantasia salva il mondo, e ti fa sentire potente.
+                -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+            {charTag(FirstCharacter, "annoyed")}:               Ma non è che mi interessa la potenza.
+            {charTag(FirstCharacter, "neutral")}:               Mi interessa più sapere che le cose sono giuste.
+            {charTag(FirstCharacter, "affectionate")}:          Però la fantasia è bella.
+        
+        + \ {charTag(PG, "neutral")}:                           Credo che siamo pien3 di emozioni, non di fatti.
+                -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+            {charTag(FirstCharacter, "affectionate")}:          Esatto ama, esatto.
+            {charTag(FirstCharacter, "neutral")}:               Cioè: bellini i fatti, davvero.
+                                                                Graziosi.
+            {charTag(FirstCharacter, "curious")}:               Ma durante il giorno ascolto quello provo, non quello che <b>è</b>.
+            {charTag(FirstCharacter, "neutral")}:               Ha senso?
+
+        + \ {charTag(PG, "neutral")}:                           "Riempire di calore" i fatti li rende inattendibili.
+                -> glyph_modifier_variation_management(FirstCharacter, airC)->
+            {charTag(FirstCharacter, "annoyed")}:               Però se rimangono attendibili e incagabili non servono a nulla.
+            {charTag(FirstCharacter, "sad")}:                   Messa così è una sconfitta a prescindere.
+            {
+            - are_two_entities_together(SecondCharacter, PG):
+            {charTag(SecondCharacter, "energy")}:               Mi piace incagabile!
+                                                                In-ca-ga-bi-le!
+                                                                In-ca-ga-bi-leeeeeeeee!
+            {
+                - are_two_entities_together(Mentor, PG):
+                {charTag(FifthCharacter, "bored")}:             {charNameTwo}!
+                {charTag(FifthCharacter, "sorry")}:             Anzi, non è colpa tua.
+                {charTag(FifthCharacter, "bored")}:             {charNameOne}, le parolacce!
+                {charTag(FifthCharacter, "neutral")}:           Oh povera me, povera me!
+                {charTag(SecondCharacter, "emotional")}:        Si può dire inpisciabile?!?
+                {charTag(FirstCharacter, "annoyed")}:           Me la sono cercata.
+            }
+            }
+        -
+        {charTag(FirstCharacter, "sad")}:                       Tra qualche mese Valeria si laureerà e tornerà dai suoi, e a quel punto non so cosa resterà della band.      
+        {charTag(FirstCharacter, "neutral")}:                   A volte mi chiedo se non abbia senso lasciare il lavoro e dedicarmi solo alla musica.
+                                                                Per evitare che la band muoia.
+                                                                Per avere tempo e testa per creare buona musica.
+        {charTag(FirstCharacter, "sad")}:                       Per fare concerti che salvino almeno una persona.
+        {
+            - are_two_entities_together(Franco, PG):
+                {charTag(Franco, "{portrait_Franco()}")}:       Ma se i concerti si ascoltano in compagnia, allora da solə sono i solcerti?
+                                                                Soncerti?
+                                                                Sorcerti?
+                                                                Che cosa strana la lingua.
+                                                                Ma anche le dita sono strane.
+        }
+
                 -> first_char_closing_storylet ->
                 -> options_first_character
         
@@ -671,118 +671,116 @@
         
 
         
-        {charTag(FirstCharacter, "annoyed")}:   Ammettiamolo: ci sto girando attorno da un bel po' ormai.
-        {charTag(FirstCharacter, "neutral")}:         Continuo a parlare al passato di Talco, l'avrai notato.
-        {charTag(FirstCharacter, "sad")}:              Ed è perché non ci sentiamo da mesi.
-        E ora ti racconterò il perché e tu mi giudicherai una stronza epocale, e me lo merito.
-        {charTag(FirstCharacter, "neutral")}:         Quindi.
-        {charTag(FirstCharacter, "affectionate")}:      Un anno fa Talco mi scrive per fare un aperitivo solo tra noi, “come ai vecchi tempi”.
-        {charTag(FirstCharacter, "annoyed")}:   Tra lavori e fidanzati e il resto non ci vedevamo da settimane.
-        {charTag(FirstCharacter, "affectionate")}:      Abbiamo trovato un incrocio sui calendari, e la sera che l'ho rivistə mi si è spalancato il cuore.
-        {charTag(FirstCharacter, "affectionate")}:      E tra una battuta e un lamento sul lavoro continuavo a pensare: e se riprendessimo in mano il vecchio progetto?
-        E se andassimo a vivere tutt3 assieme in campagna?
-        Talco, io, le ragazze del gruppo?
-        {charTag(FirstCharacter, "neutral")}:         Sicuro Ennio non apprezzerebbe molto, ma alla peggio potrebbe venire a trovarci nel fine settimana, no?
-        Quando Talco mi ha detto “devo dirti qualcosa di importante”, ero già nel pieno del mio film.
-        {charTag(FirstCharacter, "neutral")}:         Mi ha preso la mano, tesə a bestia come non l'avevo mai vistə.
-        “Aspetto un bambino”.
-            {
-            - are_two_entities_together(Mentor, PG):
-                {charTag(FifthCharacter, "hurry")}:             Ma che cosa adorabile!   
-            }
-        {charTag(FirstCharacter, "sad")}:              E {player_name}, tutto è diventato grigio.
-        {charTag(FirstCharacter, "neutral")}:         Zero, il vuoto nella testa.
-        Ci eravamo ripromess3 mille volte che non sarebbe successo.
-        {charTag(FirstCharacter, "annoyed")}:   Niente figli.
-            {
-                - are_two_entities_together(SecondCharacter, PG):
-                    {charTag(SecondCharacter, "melanchonic")}:          Perché?
-                    {charTag(FirstCharacter, "neutral")}:         Perché.
-                    {charTag(FirstCharacter, "affectionate")}:      Perché non sono tutti carini come te.
-                    {charTag(SecondCharacter, "angry")}:        Io non sono "carino".
-                    {charTag(FirstCharacter, "affectionate")}:      Ma hai le guanciottine adorabili!
-                    Vieni qui, fattele strizzare.
-                    {charTag(SecondCharacter, "neutral")}:        No, no, no!
-                        ~ change_entity_place(SecondCharacter)
-                    {charTag(FirstCharacter, "sad")}:              Povero piccoletto.    
-                    {charTag(FirstCharacter, "neutral")}:         Dov'ero?
-                    {charTag(FirstCharacter, "annoyed")}:   Ah sì: niente figli.              
-            }
-        Niente partner gelosi.
-        {charTag(FirstCharacter, "neutral")}:         Niente a frapporsi tra noi.
-        {charTag(FirstCharacter, "annoyed")}:   E stava già succedendo comunque col lavoro e con Ennio e il suo Thomas ma cazzo, questa roba!
-        Non abbiamo manco trent'anni, cazzo!
-        {charTag(FirstCharacter, "sad")}:              E l'ha visto, sulla mia faccia.
-        Non ho detto nulla ma già aveva capito tutto.
-        {charTag(FirstCharacter, "neutral")}:         E non si è manco arrabbiatə.
-        Mi ha solo detto che era un passo importante per ləi.
-        Perché anche se è una cosa inaspettata, ama Thomas, e sa che è l'uomo giusto.
-        E poi il colpo finale.
-        “Mi trasferisco da lui a Reykjavík. Qui non mi rimane nulla, nulla a parte te.”
-        “E per questo, voglio che ti trasferisci con noi.”
-        “Voglio crescerla con te, questa creaturina. Con le persone che amo. Con te e Thomas.”
-        E…
-        {charTag(FirstCharacter, "annoyed")}:   Madonna, quanto vorrei del vino ora.
-        {charTag(FirstCharacter, "neutral")}:         Tu come ti saresti {player_pronouns has him:sentito|{player_pronouns has her:sentita|sentitə}} al mio posto?
+        {charTag(FirstCharacter, "annoyed")}:                   Ci sto girando attorno da un bel po' ormai.
+        {charTag(FirstCharacter, "neutral")}:                   Continuo a parlare al passato di Talco, l'avrai notato.
+        {charTag(FirstCharacter, "sad")}:                       Ed è perché non ci sentiamo da mesi.
+                                                                E ora ti racconterò il perché e tu mi giudicherai una stronza epocale, e me lo merito.
+        {charTag(FirstCharacter, "affectionate")}:              Un anno fa Talco mi scrive per fare un aperitivo solo tra noi, “come ai vecchi tempi”.
+        {charTag(FirstCharacter, "annoyed")}:                   Tra lavori e fidanzati e il resto non ci vedevamo da settimane.
+        {charTag(FirstCharacter, "affectionate")}:              Abbiamo trovato un incrocio sui calendari, e la sera che l'ho rivistə mi si è spalancato il cuore.
+        {charTag(FirstCharacter, "affectionate")}:              E tra una battuta e un lamento sul lavoro continuavo a pensare: e se riprendessimo in mano il vecchio progetto?
+                                                                E se andassimo a vivere tutt3 assieme in campagna?
+                                                                Talco, io, le ragazze della band?
+        {charTag(FirstCharacter, "neutral")}:                   Sicuro Ennio non apprezzerebbe molto, ma alla peggio potrebbe venire a trovarci nel fine settimana, no?
+                                                                Quando Talco mi ha detto “devo dirti qualcosa di importante”, ero già nel pieno del mio film.
+        {charTag(FirstCharacter, "neutral")}:                   Mi ha preso la mano, tesə a bestia come non l'avevo mai vistə.
+                                                                “Aspetto un bambino”.
+        {
+        - are_two_entities_together(Mentor, PG):
+            {charTag(FifthCharacter, "hurry")}:                 Ma che cosa adorabile!   
+        }
+        {charTag(FirstCharacter, "sad")}:                       E {player_name}, tutto è diventato grigio.
+        {charTag(FirstCharacter, "neutral")}:                   Zero, il vuoto nella testa.
+                                                                Ci eravamo ripromess3 mille volte che non sarebbe successo.
+        {charTag(FirstCharacter, "annoyed")}:                   Niente figli.
+        {
+            - are_two_entities_together(SecondCharacter, PG):
+            {charTag(SecondCharacter, "melanchonic")}:          Perché?
+            {charTag(FirstCharacter, "neutral")}:               Perché.
+            {charTag(FirstCharacter, "affectionate")}:          Perché non sono tutti carini come te.
+            {charTag(SecondCharacter, "angry")}:                Io non sono "carino".
+            {charTag(FirstCharacter, "affectionate")}:          Ma hai le guanciottine adorabili!
+                                                                Vieni qui, fattele strizzare.
+            {charTag(SecondCharacter, "neutral")}:              No, no, no!
+                ~ change_entity_place(SecondCharacter)
+            {charTag(FirstCharacter, "sad")}:                   Povero piccoletto.    
+            {charTag(FirstCharacter, "neutral")}:               Dov'ero?
+            {charTag(FirstCharacter, "annoyed")}:               Ah sì: niente figli.              
+        }
+                                                                Niente partner gelosi.
+        {charTag(FirstCharacter, "neutral")}:                   Niente a frapporsi tra noi.
+        {charTag(FirstCharacter, "annoyed")}:                   E stava già succedendo comunque col lavoro e con Ennio e il suo Thomas ma cazzo, questa roba!
+                                                                Non abbiamo manco trent'anni!
+        {charTag(FirstCharacter, "sad")}:                       Talco ha capito subito cosa stavo pensando.
+        {charTag(FirstCharacter, "neutral")}:                   E non si è manco arrabbiatə.
+                                                                Mi ha solo detto che era un passo importante per ləi.
+                                                                Perché anche se è una cosa inaspettata, ama Thomas, e sa che è l'uomo giusto.
+                                                                E poi il colpo finale.
+                                                                “Mi trasferisco da lui a Reykjavík. Qui non mi rimane nulla, nulla a parte te.”
+                                                                “E per questo, voglio che ti trasferisci con noi.”
+                                                                “Voglio crescerla con te, questa creaturina. Con le persone che amo. Con te e Thomas.”
+                                                                E…
+        {charTag(FirstCharacter, "annoyed")}:                   Madonna, quanto vorrei del vino ora.
+        {charTag(FirstCharacter, "neutral")}:                   Tu come ti saresti {player_pronouns has him:sentito|{player_pronouns has her:sentita|sentitə}} al mio posto?
        
-            + \ {charTag(PG, "neutral")}:         Tradit{player_pronouns has him:o|{player_pronouns has her:a|ə}}. E arrabbiat{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
-                    -> glyph_modifier_variation_management(FirstCharacter, fireC)->
-                {charTag(FirstCharacter, "neutral")}:         Uh.
-                Scusa per il sospirone.
-                Ma credo sia stata la prima emozione che mi ha colta.
-                {charTag(FirstCharacter, "sad")}:              E mi ha fatto un male boia, {player_name}.
-                Un male boia.
-                
-            + \ {charTag(PG, "neutral")}:         Incuriosit{player_pronouns has him:o|{player_pronouns has her:a|ə}} dall'idea di qualcosa di nuovo.
-                    -> glyph_modifier_variation_management(FirstCharacter, earthC)->
-                {charTag(FirstCharacter, "annoyed")}:   Qualcosa di nuovo con un tizio che ho visto tre volte.
-                In una città diversa in un altro continente.
-                Eppure.
-                {charTag(FirstCharacter, "sad")}:              Eppure anche qualcosa di diverso da tutto quello che avevo.
-                Dalla stasi della mia vita.
-                
-            + \ {charTag(PG, "neutral")}:         Forse spaventat{player_pronouns has him:o|{player_pronouns has her:a|ə}}, ma anche felice di questa nuova famiglia con Talco.
-                    -> glyph_modifier_variation_management(FirstCharacter, waterC)->
-                {charTag(FirstCharacter, "sad")}:              Sei una persona migliore di me allora, {player_name}.
-                Perché le emozioni che ho provato erano davvero tante, ma non felicità.
-                {charTag(FirstCharacter, "neutral")}:         Per nessuna delle persone coinvolte.
-                {charTag(FirstCharacter, "annoyed")}:   E per questo mi sento una stronza.
-                {charTag(FirstCharacter, "neutral")}:         Talco era felice di questa novità.
-                {charTag(FirstCharacter, "sad")}:              Io non son stata capace di essere felice per ləi.
-                
-            + \ {charTag(PG, "neutral")}:         Una situazione assurda può farmi conoscere cose assurde di me.
-                    -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
-                {charTag(FirstCharacter, "neutral")}:         Possibile.
-                {charTag(FirstCharacter, "annoyed")}:   E la cosa più assurda sarebbe scoprire che è vero che non mi piacciono i bambini.
-                A migliaia di chilometri da tutto quello che conosco.
-                Col mio inglese terribile.
-                Dipendendo totalmente da una persona che deve prendersi cura di un infante.
+        + \ {charTag(PG, "neutral")}:                           Tradit{player_pronouns has him:o|{player_pronouns has her:a|ə}}. E arrabbiat{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
+                -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+            {charTag(FirstCharacter, "neutral")}:               Uh.
+                                                                Scusa per il sospirone.
+                                                                Ma credo sia stata la prima emozione che mi ha colta.
+            {charTag(FirstCharacter, "sad")}:                   E mi ha fatto un male boia, {player_name}.
+                                                                Un male boia.
             
-            + \ {charTag(PG, "neutral")}:         Confus{player_pronouns has him:o|{player_pronouns has her:a|ə}} dall'irrazionalità di questa situazione.
-                    -> glyph_modifier_variation_management(FirstCharacter, airC)->
-                {charTag(FirstCharacter, "neutral")}:         Con Talco è tutto irrazionale.
-                O razionale secondo gli standard di Talco.
-                Ma <i>confusione</i> è una parola che mi ritorna, quando ripenso a quella sera.
-                {charTag(FirstCharacter, "sad")}:              Perché la quantità di cose che ho provato è stata immensa.
-            -
-    
-        {charTag(FirstCharacter, "sad")}:              Quella sera ho scoperto che la persona in me che sa fare cose, le sa fare solo se sa che Talco è dalla sua parte.
-        {charTag(FirstCharacter, "neutral")}:         Un intero film mi è partito in testa.
-        {charTag(FirstCharacter, "sad")}:              Una roba con Margherita Buy piena di solitudine abbandono e perdita.
-        {charTag(FirstCharacter, "neutral")}:         Ho lasciato il tavolo in silenzio, ho chiamato Ennio e l'ho raggiunto a casa sua.
-        Abbiamo scopato senza preservativo, l'ho cacciato fuori di forza quando stava per venire.
-        {charTag(FirstCharacter, "sad")}:              Ho pianto tutta la notte.
-        {charTag(FirstCharacter, "neutral")}:         Un mese dopo Talco è partitə, e non ci siamo più sentite fino a qualche settimana fa, quando mi ha mandato una cartolina.
-        Una foto dellə bimbə.
-        “Ora siamo in due ad aspettare un tuo abbraccio.”
+        + \ {charTag(PG, "neutral")}:                           Incuriosit{player_pronouns has him:o|{player_pronouns has her:a|ə}} dall'idea di qualcosa di nuovo.
+                -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+            {charTag(FirstCharacter, "annoyed")}:               Qualcosa di nuovo con un tizio che ho visto tre volte.
+                                                                In una città diversa in un altro continente.
+                                                                Eppure.
+            {charTag(FirstCharacter, "sad")}:                   Eppure anche qualcosa di diverso da tutto quello che avevo.
+                                                                Dalla stasi della mia vita.
+            
+        + \ {charTag(PG, "neutral")}:                           Forse spaventat{player_pronouns has him:o|{player_pronouns has her:a|ə}}, ma anche felice di questa nuova famiglia con Talco.
+                -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+            {charTag(FirstCharacter, "sad")}:                   Sei una persona migliore di me allora, {player_name}.
+                                                                Perché le emozioni che ho provato erano davvero tante, ma non felicità.
+            {charTag(FirstCharacter, "neutral")}:               Per nessuna delle persone coinvolte.
+            {charTag(FirstCharacter, "annoyed")}:               E per questo mi sento una stronza.
+            {charTag(FirstCharacter, "neutral")}:               Talco era felice di questa novità.
+            {charTag(FirstCharacter, "sad")}:                   Io non son stata capace di essere felice per ləi.
+            
+        + \ {charTag(PG, "neutral")}:                           Una situazione assurda può farmi conoscere cose assurde di me.
+                -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+            {charTag(FirstCharacter, "neutral")}:               Possibile.
+            {charTag(FirstCharacter, "annoyed")}:               E la cosa più assurda sarebbe scoprire che è vero che non mi piacciono i bambini.
+                                                                A migliaia di chilometri da tutto quello che conosco.
+                                                                Col mio inglese terribile.
+                                                                Dipendendo totalmente da una persona che deve prendersi cura di un infante.
+        
+        + \ {charTag(PG, "neutral")}:                           Confus{player_pronouns has him:o|{player_pronouns has her:a|ə}} dall'irrazionalità di questa situazione.
+                -> glyph_modifier_variation_management(FirstCharacter, airC)->
+            {charTag(FirstCharacter, "neutral")}:               Con Talco è tutto irrazionale.
+                                                                O razionale secondo gli standard di Talco.
+                                                                Ma <i>confusione</i> è una parola che mi ritorna, quando ripenso a quella sera.
+            {charTag(FirstCharacter, "sad")}:                   Perché la quantità di cose che ho provato è stata immensa.
+        
+        -
 
-            
+        {charTag(FirstCharacter, "sad")}:                       Quella sera ho scoperto che la persona in me che sa fare cose, le sa fare solo se sa che Talco è dalla sua parte.
+        {charTag(FirstCharacter, "neutral")}:                   Un intero film mi è partito in testa. 
+        {charTag(FirstCharacter, "sad")}:                       Una roba piena di solitudine abbandono e perdita.
+        {charTag(FirstCharacter, "neutral")}:                   Ho lasciato il tavolo in silenzio, ho chiamato Ennio e l'ho raggiunto a casa sua.
+                                                                Abbiamo scopato senza preservativo, ma poi l'ho cacciato fuori di forza quando stava per venire.
+        {charTag(FirstCharacter, "sad")}:                       Ho pianto tutta la notte.
+        {charTag(FirstCharacter, "neutral")}:                   Un mese dopo Talco è partitə, e non ci siamo più sentite fino a qualche settimana fa, quando mi ha mandato una cartolina.
+                                                                Una foto dellə bimbə.
+                                                                “Ora siamo in due ad aspettare un tuo abbraccio.”
+
             -> first_char_closing_storylet ->
             -> options_first_character          
     
     = eight
         //Riferimenti per la riscrittura: mediocrità e fallimento, un poco "affetti"
-        //Brano: Back in Town, Florence + \ {charTag(PG, "neutral")}:         The Machine.
+        //Brano: Back in Town, Florence + The Machine.
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -790,81 +788,85 @@
         ~ temp charNameFive = translator(fifthChar_ActualName)
         
 
-        {charTag(FirstCharacter, "neutral")}:         Tornare dai miei è come un viaggio nel tempo.
-        {charTag(FirstCharacter, "affectionate")}:      Scendo, e mi sembra che tutto sia fermo, e questa cosa è rassicurante.
-        {charTag(FirstCharacter, "annoyed")}:   Ma passano i giorni e mi rendo conto della bugia.
-        {charTag(FirstCharacter, "neutral")}:         Chi sta via pensa sempre che il posto che lascia sia immutabile, che non cambino mai le persone che restano.
-        Ma quei cambiamenti arrivano spesso tra le righe.
-        Come quando scopri che un amico di famiglia non c'è più.
-        {charTag(FirstCharacter, "annoyed")}:   O che c'è una discussione tra i fratelli di tuo padre che va avanti da due anni e non ne sapevi niente.
-        {charTag(FirstCharacter, "neutral")}:         Alcune delle amiche che sono tornate a vivere giù hanno trovato un altro modo di far parte di quel cambiamento.
-        {charTag(FirstCharacter, "affectionate")}:      Anna, che studiava jazz, ha tirato su assieme ad altre persone un festival locale che sta iniziando a ingranare.
-        E Luigia, una ex di Valeria, ora si occupa di recupero e, come dice lei, "riterronizzazione" della storia del suo paesino sul Coghinas.
-        {charTag(FirstCharacter, "annoyed")}:   Altre, che qui facevano occupazioni e proteste e litigavano con la polizia ora sono sposate e raccontano vite che.
-        {charTag(FirstCharacter, "neutral")}:         Io.
-        Io.
-        Merda.
-        Tornare giù è un'opzione.
-        {charTag(FirstCharacter, "affectionate")}:      Voglio molto bene ai miei.
-        Conosco poche persone che possono dire “Scendo a casa e sono felice di suonare e ubriacarmi con mio padre”.
+        {charTag(FirstCharacter, "neutral")}:                   Tornare dai miei è come un viaggio nel tempo.
+        {charTag(FirstCharacter, "affectionate")}:              Scendo, e mi sembra che tutto sia fermo, e questa cosa è rassicurante.
+        {charTag(FirstCharacter, "annoyed")}:                   Ma passano i giorni e mi rendo conto della bugia.
+        {charTag(FirstCharacter, "neutral")}:                   Chi sta via pensa sempre che il posto che lascia sia immutabile, che non cambino mai le persone che restano.
+                                                                Ma quei cambiamenti arrivano spesso tra le righe.
+                                                                Come quando scopri che un amico di famiglia non c'è più.
+        {charTag(FirstCharacter, "annoyed")}:                   O che c'è una lite tra i fratelli di tuo padre che va avanti da due anni e non ne sapevi niente.
+        {charTag(FirstCharacter, "neutral")}:                   Alcune delle amiche che sono tornate a vivere giù hanno trovato un altro modo di far parte di quel cambiamento.
+        {charTag(FirstCharacter, "affectionate")}:              Anna, che studiava jazz, ha tirato su assieme ad altre persone un festival locale che sta iniziando a ingranare.
+                                                                E Luigia, una ex di Valeria, ora si occupa di recupero e, come dice lei, "riterronizzazione" della storia del suo paesino sul Coghinas.
+        {charTag(FirstCharacter, "annoyed")}:                   Altre, che qui facevano occupazioni e proteste e litigavano con la polizia ora sono sposate e raccontano vite che.
+        {charTag(FirstCharacter, "neutral")}:                   Io.
+                                                                Io.
+                                                                Merda.
+                                                                Tornare giù è un'opzione.
+        {charTag(FirstCharacter, "affectionate")}:              Voglio molto bene ai miei.
+                                                                Conosco poche persone che possono dire “Scendo a casa e sono felice di suonare e ubriacarmi con mio padre”.
+        {
+            - are_two_entities_together(SecondCharacter, PG):
+                ~change_entity_place(SecondCharacter)
+                {charTag(FirstCharacter, "sad")}:               Perché il bimbetto se ne è andato?
                 {
-                    - are_two_entities_together(SecondCharacter, PG):
-                        ~change_entity_place(SecondCharacter)            
-                }
-        {charTag(FirstCharacter, "neutral")}:         Farmi salire e studiare è stato uno sforzo enorme per loro.
-        E ora che sono sempre più vecchi, tornare potrebbe significare restituire il favore.
-        Prendermi cura di loro.
-        {charTag(FirstCharacter, "sad")}:              Ma una parte di me ha paura che tornare voglia dire “Ok, ho sbagliato tutto”.
-        {charTag(FirstCharacter, "neutral")}:         E ho paura di finire in un certo tipo di gruppo.
-        {charTag(FirstCharacter, "annoyed")}:   Quello delle amiche sposate.
-        {charTag(FirstCharacter, "neutral")}:         Non è un crimine contro l'umanità, lo so.
-        Ma so anche che a volte sono la persona che il contesto mi permette di essere.
-        {charTag(FirstCharacter, "affectionate")}:      E mi piace la persona che sono ora.
-        {charTag(FirstCharacter, "annoyed")}:   Ma non so se mi piacerebbe la persona che sarei tornando dai miei, tornando al paesino.
-        {charTag(FirstCharacter, "sad")}:              Credi abbia senso?
+                    - are_two_entities_together(Mentor, PG):
+                        {charTag(FifthCharacter, "sad")}:       Forse perché non è felice con suo padre?        
+                }         
+        }
+        {charTag(FirstCharacter, "neutral")}:                   Farmi salire e studiare è stato uno sforzo enorme per loro.
+                                                                E ora che sono sempre più vecchi, tornare potrebbe significare restituire il favore.
+                                                                Prendermi cura di loro.
+        {charTag(FirstCharacter, "sad")}:                       Ma una parte di me ha paura che tornare voglia dire “Ok, ho sbagliato tutto”.
+        {charTag(FirstCharacter, "neutral")}:                   E ho paura di finire in un certo tipo di gruppo.
+        {charTag(FirstCharacter, "annoyed")}:                   Quello delle amiche sposate.
+        {charTag(FirstCharacter, "neutral")}:                   Non è un crimine contro l'umanità, lo so.
+                                                                Ma so anche che a volte sono la persona che il contesto mi permette di essere.
+        {charTag(FirstCharacter, "affectionate")}:              E mi piace la persona che sono ora.
+        {charTag(FirstCharacter, "annoyed")}:                   Ma non so se mi piacerebbe la persona che sarei tornando dai miei, tornando al paesino.
+        {charTag(FirstCharacter, "sad")}:                       Credi abbia senso?
             
-            + \ {charTag(PG, "neutral")}:         È come un gioco: se non lo provi non sai se ti piace.
-                    -> glyph_modifier_variation_management(FirstCharacter, earthC)->
-                {charTag(FirstCharacter, "neutral")}:         Può darsi.
-                Ma un gioco lo fermo se non mi va.
-                Mentre tornare su potrebbe essere mooolto più difficile.
-            
-            + \ {charTag(PG, "neutral")}:         Datti uno scopo e saprai per cosa lottare, come non perderti.
-                    -> glyph_modifier_variation_management(FirstCharacter, fireC)->
-                {charTag(FirstCharacter, "neutral")}:         Un po' come Luigia e Anna, immagino.
-                Si può fare.
-                {charTag(FirstCharacter, "annoyed")}:   Ma sono una che si perde spesso per strada, ama.
-            
-            + (air)\ {charTag(PG, "neutral")}:         Scientificamente, sì: siamo bestie sociali, le persone ci influenzano.
-                    -> glyph_modifier_variation_management(FirstCharacter, airC)->
-                {charTag(FirstCharacter, "neutral")}:         Sei una brava persona, non mi fraintendere.
-                {charTag(FirstCharacter, "annoyed")}:   Ma riesci a rendere fredda anche una cosa bella come la socialità, {player_name}.
-                {charTag(FirstCharacter, "sad")}:              E sei riuscit{player_pronouns has him:o|{player_pronouns has her:a|ə}} pure a farmi preoccupare ancora di più.
-            
-            + \ {charTag(PG, "neutral")}:         Potresti confidare queste paure ai tuoi?
-                    -> glyph_modifier_variation_management(FirstCharacter, waterC)->
-                {charTag(FirstCharacter, "neutral")}:         Non ci avevo pensato.
-                Non so se capirebbero.
-                {charTag(FirstCharacter, "sad")}:              Forse direbbero che non devo scendere, che ce la fanno da soli.
-                Non so.
-                {charTag(FirstCharacter, "neutral")}:         Potrei provarci.
-                    
-            + \ {charTag(PG, "neutral")}:         Luigia e Anna trovando le loro radici sono sbocciate.
-                    -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
-                {charTag(FirstCharacter, "neutral")}:         Questa è una cosa a cui penso spesso.
-                Al nord sto bene, ma.
-                {charTag(FirstCharacter, "sad")}:              Ma non mi sento mai davvero <b>a casa</b>.
-                {charTag(FirstCharacter, "neutral")}:         E anche se sono una bestiola ansiosa e guardo sempre al peggio, il dubbio mi viene spesso.
-                E se anche io come loro potessi in realtà fiorire, scendendo?
-            -
-
-            
+        + \ {charTag(PG, "neutral")}:                           È come un gioco: se non lo provi non sai se ti piace.
+                -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+            {charTag(FirstCharacter, "neutral")}:               Può darsi.
+                                                                Ma un gioco lo fermo se non mi va.
+                                                                Mentre tornare su potrebbe essere mooolto più difficile.
+        
+        + \ {charTag(PG, "neutral")}:                           Datti uno scopo e saprai per cosa lottare, come non perderti.
+                -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+            {charTag(FirstCharacter, "neutral")}:               Un po' come Luigia e Anna, immagino.
+                                                                Si può fare.
+            {charTag(FirstCharacter, "annoyed")}:               Ma sono una che si perde spesso per strada, ama.
+        
+        //solito discorso aria/terra
+        + (air)\ {charTag(PG, "neutral")}:                      Scientificamente, sì: siamo bestie sociali, le persone ci influenzano.
+                -> glyph_modifier_variation_management(FirstCharacter, airC)->
+            {charTag(FirstCharacter, "neutral")}:               Sei una brava persona, non mi fraintendere.
+            {charTag(FirstCharacter, "annoyed")}:               Ma riesci a rendere fredda anche una cosa bella come la socialità, {player_name}.
+            {charTag(FirstCharacter, "sad")}:                   E sei riuscit{player_pronouns has him:o|{player_pronouns has her:a|ə}} pure a farmi preoccupare ancora di più.
+        
+        + \ {charTag(PG, "neutral")}:                           Potresti confidare queste paure ai tuoi?
+                -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+            {charTag(FirstCharacter, "neutral")}:               Non ci avevo pensato.
+                                                                Non so se capirebbero.
+            {charTag(FirstCharacter, "sad")}:                   Forse direbbero che non devo scendere, che ce la fanno da soli.
+                                                                Non so.
+            {charTag(FirstCharacter, "neutral")}:               Potrei provarci.
+                
+        + \ {charTag(PG, "neutral")}:                           Luigia e Anna trovando le loro radici sono sbocciate.
+                -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+            {charTag(FirstCharacter, "neutral")}:               Questa è una cosa a cui penso spesso.
+                                                                Al nord sto bene, ma.
+            {charTag(FirstCharacter, "sad")}:                   Ma non mi sento mai davvero <b>a casa</b>.
+            {charTag(FirstCharacter, "neutral")}:               E anche se sono una bestiola ansiosa e guardo sempre al peggio, il dubbio mi viene spesso.
+                                                                E se anche io come loro potessi in realtà fiorire, scendendo?
+        -
             -> first_char_closing_storylet ->
             -> options_first_character
     
     = nine
         //Riferimenti per la riscrittura: forse il "fare qualcosa di buono", ma ha a che fare molto con la creatività.
-        //Brano: Third Eye, Florence + \ {charTag(PG, "neutral")}:         The Machine.
+        //Brano: Third Eye, Florence + The Machine.
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -872,98 +874,101 @@
         ~ temp charNameFive = translator(fifthChar_ActualName)
         
         
-        {charTag(FirstCharacter, "curious")}:       Ciao {player_name}, e {player_pronouns has him:benvenuto|{player_pronouns has her:benvenuta|benvenutə}} in un nuovo flusso di coscienza di {charNameOne} che non si chiama {charNameOne} e che prima o poi troverà il suo vero nome.
-        {charTag(FirstCharacter, "neutral")}:         E forse ci sto prendendo gusto con questi pipponi.
-        Mi ricordano quando arriva l'insonnia.
-        {charTag(FirstCharacter, "annoyed")}:   Che forse mi piace solo perché è una cosa che mi accade di rado.
-        {charTag(FirstCharacter, "neutral")}:         A volte si traduce in un rigirarsi nel letto guardando il cellulare, scorrendo video e articoli che ti dicono che il mondo è fottuto.
-        {charTag(FirstCharacter, "annoyed")}:   E può essere stupido addormentarsi con queste cose, ma boh.
-        {charTag(FirstCharacter, "sad")}:              Forse sapere che non puoi fare nulla è più rassicurante che sapere che puoi fare qualcosa ma non sai cosa.
-        {charTag(FirstCharacter, "neutral")}:         Ma queste conversazioni con te sono più come l'altra cosa che faccio quando mi viene l'insonnia.
-        Mi alzo, e vado in cucina.
-        {charTag(FirstCharacter, "affectionate")}:      La cucina a casa è sempre piena di vita, abbiamo ospiti praticamente da pranzo a notte fonda.
-        Ma averla per me, sapendo che tutto dorme, mi offre una pace piena.
-        E i brani migliori li ho scritti in quelle situazioni.
-        Caffettino e quaderno, mi piace un sacco comporre andando a sentimento prima ancora di mettermi sulla tastiera.
-        {charTag(FirstCharacter, "curious")}:       Ci sono momenti in cui qualcosa clicca, e allora so che ho preso una buona idea.
-        E non ha a che fare col razionale, no no.
-        {charTag(FirstCharacter, "affectionate")}:      Ma è tipo come ritrovarsi i piedi in un'acqua antica.
-        Che raccoglie tutte le storie del mondo.
-        Per un attimo rinuncio a me, e allora trovo il tutto.
-        E allora sento che anche se uso parole di oggi e suoni di oggi sto parlando del <i>sempre</i>.
-        {charTag(FirstCharacter, "neutral")}:         Di un certo tipo di sempre.
-        {charTag(FirstCharacter, "affectionate")}:      E allora quella roba può far qualcosa di buono, di davvero buono.
-        {charTag(FirstCharacter, "annoyed")}:   Però ora ci arrivo di rado in quell'acqua.
-        L'insonnia ha più a che fare ora con la caga di perdere il lavoro e altre para.
-        {charTag(FirstCharacter, "sad")}:              Mi fa sentire minacciata.
-        {charTag(FirstCharacter, "neutral")}:         Però a volte torno a immergermi, e a quel punto non ho paura.
-        Non perché sono coraggiosa o che di punto in bianco, figurati.
-        Ma perché ho la sensazione che anche questi problemi, tutti i problemi, siano parte di quell'enorme storia.
-        E sono cose che noi persone abbiamo già affrontato miliardi di volte.
-        Eppure siamo ancora qui.
-        {charTag(FirstCharacter, "affectionate")}:      E c'è ancora speranza.
-            {
-                - are_two_entities_together(Mentor, PG):
-                    {charTag(FifthCharacter, "hurry")}:             Sono parole piene di conforto, {charNameOne}.
-                    Grazie.       
-            }
-            
-            + \ {charTag(PG, "neutral")}:         Non so cosa dire, non trovo il filo logico del discorso.
-                    -> glyph_modifier_variation_management(FirstCharacter, airC)->
-                {charTag(FirstCharacter, "neutral")}:         E probabilmente non c'è.
-                Alla fine sono solo emozioni.
-                {charTag(FirstCharacter, "annoyed")}:   Non il tuo forte, mi sembra.
-            
-            + \ {charTag(PG, "neutral")}:         Fa sentire meno sol3, e più parte di una lunga rete di storie.
-                    -> glyph_modifier_variation_management(FirstCharacter, waterC)->
-                {charTag(FirstCharacter, "affectionate")}:      Sì!
-                E dà sicurezza, fiducia.
-                {charTag(FirstCharacter, "neutral")}:         Non si tratta nemmeno più di fare qualcosa di stravolgente.
-                Ma di continuare un percorso che avanza da millenni.
-                    
-            + \ {charTag(PG, "neutral")}:         C'è molto coraggio nel riconoscersi parte di qualcosa di così grande.
-                    -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
-                {charTag(FirstCharacter, "neutral")}:         Ehm.
-                Non so se sia coraggio.
-                Forse è più un bisogno, {player_name}.
-                {charTag(FirstCharacter, "affectionate")}:      Ma mi piace l'idea di sentirmi coraggiosa per una volta, per cui me la porto a casa.
-            
-            + \ {charTag(PG, "neutral")}:         L'unione genera speranza, e la speranza porta cambiamento.
-                    -> glyph_modifier_variation_management(FirstCharacter, fireC)->
-                {charTag(FirstCharacter, "neutral")}:         La speranza è una gran cosa.
-                {charTag(FirstCharacter, "sad")}:              Anche se non la conosco molto bene.
-                {charTag(FirstCharacter, "neutral")}:         Non so se si era visto, ma tendo a vedere il peggio nelle cose.
-                {charTag(FirstCharacter, "sad")}:              Cosa che spesso non mi permette di cambiare nulla.
-            
-            + \ {charTag(PG, "neutral")}:         Immaginare è bello perché ci si stupisce, e stupirci ci rende viv3.
-                    -> glyph_modifier_variation_management(FirstCharacter, earthC)->
-                {charTag(FirstCharacter, "neutral")}:         Sai {player_name}?
-                {charTag(FirstCharacter, "sad")}:              A volte ho l'impressione che l'unica cosa che ci rende adulti è la perdita dello stupore.
-                Tutto è prevedibile.
-                E corri corri guardando solo quello che ti serve.
-                Ed è una cosa grigia.
-                E triste.
-                {charTag(FirstCharacter, "neutral")}:         Ha senso?
-            -
-            {
-                - are_two_entities_together(SecondCharacter, PG):
-                    {charTag(SecondCharacter, "energy")}:       Scriviamo una storia assieme {charNameOne}?
-                    {charTag(FirstCharacter, "annoyed")}:   Faccio schifo con le storie.
-                    {charTag(FirstCharacter, "affectionate")}:      Ma potremmo cantarla!
-                    {charTag(SecondCharacter, "angry")}:        Sono stonato.
-                    {charTag(FirstCharacter, "curious")}:       E chi se ne frega?
-                    {charTag(SecondCharacter, "energy")}:       Allora sìììììììììììì!
-                    E voglio metterci le parolacce!       
-            }
+        {charTag(FirstCharacter, "curious")}:               Ciao {player_name}, e benvenut{player_pronouns has him:o|{player_pronouns has her:a|ə}} in un nuovo flusso di coscienza di {charNameOne} che non si chiama {charNameOne} e che prima o poi troverà il suo vero nome.
+        {charTag(FirstCharacter, "neutral")}:               Stavo pensando a quando mi viene l'insonnia.
+        {charTag(FirstCharacter, "neutral")}:               A volte si traduce in un rigirarsi nel letto guardando il cellulare, scorrendo video e articoli che ti dicono che il mondo è fottuto.
+        {charTag(FirstCharacter, "annoyed")}:               E può essere stupido addormentarsi con queste cose, ma boh.
+        {charTag(FirstCharacter, "sad")}:                   Forse sapere che non puoi fare nulla è più rassicurante che sapere che puoi fare qualcosa ma non sai cosa.
+        {charTag(FirstCharacter, "neutral")}:               Ma queste conversazioni con te sono più come l'altra cosa che faccio quando mi viene l'insonnia.
+                                                            Mi alzo, e vado in cucina.
+        {charTag(FirstCharacter, "affectionate")}:          La cucina a casa è sempre piena di vita, abbiamo ospiti praticamente da pranzo a notte fonda.
+                                                            Ma averla per me, sapendo che tutto dorme, mi offre una pace piena.
+                                                            E i brani migliori li ho scritti in quelle situazioni.
+                                                            Caffettino e quaderno, mi piace comporre andando a sentimento prima ancora di mettermi sulla tastiera.
+        {charTag(FirstCharacter, "curious")}:               Ci sono momenti in cui qualcosa clicca, e allora so che ho preso una buona idea.
+                                                            E non ha a che fare col razionale, no no.
+        {charTag(FirstCharacter, "affectionate")}:          Ma è tipo come ritrovarsi i piedi in un'acqua antica.
+                                                            Che raccoglie tutte le storie del mondo.
+                                                            Per un attimo rinuncio a me, e allora trovo il tutto.
+                                                            E allora sento che anche se uso parole di oggi e suoni di oggi sto parlando del <i>sempre</i>.
+        {charTag(FirstCharacter, "neutral")}:               Di un certo tipo di sempre.
+        {charTag(FirstCharacter, "affectionate")}:          E allora quella roba può far qualcosa di buono, di davvero buono.
+        {charTag(FirstCharacter, "annoyed")}:               Però ora ci arrivo di rado in quell'acqua.
+                                                            L'insonnia ha più a che fare ora con la caga di perdere il lavoro e altre para.
+        {charTag(FirstCharacter, "sad")}:                   Mi fa sentire minacciata.
+        {charTag(FirstCharacter, "neutral")}:               Però a volte torno a immergermi, e a quel punto non ho paura.
+                                                            Non perché sono coraggiosa o che di punto in bianco, figurati.
+                                                            Ma perché ho la sensazione che anche questi problemi, tutti i problemi, siano parte di quell'enorme storia.
+                                                            E sono cose che noi persone abbiamo già affrontato miliardi di volte.
+                                                            Eppure siamo ancora qui.
+        {charTag(FirstCharacter, "affectionate")}:          E c'è ancora speranza.
+        {
+            - are_two_entities_together(Mentor, PG):
+            {charTag(FifthCharacter, "hurry")}:             Sono parole piene di conforto, {charNameOne}.
+                                                            Grazie.       
+        }
 
-            
+        //Sistemare    
+        + \ {charTag(PG, "neutral")}:                       Non so cosa dire, non trovo il filo logico del discorso.
+                -> glyph_modifier_variation_management(FirstCharacter, airC)->
+            {charTag(FirstCharacter, "neutral")}:           E probabilmente non c'è.
+                                                            Alla fine sono solo emozioni.
+            {charTag(FirstCharacter, "annoyed")}:           Non il tuo forte, mi sembra.
+        
+        + \ {charTag(PG, "neutral")}:                       Fa sentire meno sol3, e più parte di una lunga rete di storie.
+                -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+            {charTag(FirstCharacter, "affectionate")}:      Sì!
+                                                            E dà sicurezza, fiducia.
+            {charTag(FirstCharacter, "neutral")}:           Non si tratta nemmeno più di fare qualcosa di stravolgente.
+                                                            Ma di continuare un percorso che avanza da millenni.
+                
+        + \ {charTag(PG, "neutral")}:                       C'è molto coraggio nel riconoscersi parte di qualcosa di così grande.
+                -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+            {charTag(FirstCharacter, "neutral")}:           Ehm.
+                                                            Non so se sia coraggio.
+                                                            Forse è più un bisogno, {player_name}.
+            {charTag(FirstCharacter, "affectionate")}:      Ma mi piace l'idea di sentirmi coraggiosa per una volta, per cui me la porto a casa.
+        
+        + \ {charTag(PG, "neutral")}:                       L'unione genera speranza, e la speranza porta cambiamento.
+                -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+            {charTag(FirstCharacter, "neutral")}:           La speranza è una gran cosa.
+            {charTag(FirstCharacter, "sad")}:               Anche se non la conosco molto bene.
+            {charTag(FirstCharacter, "neutral")}:           Non so se si era visto, ma tendo a vedere il peggio nelle cose.
+            {charTag(FirstCharacter, "sad")}:               Cosa che spesso non mi permette di cambiare nulla.
+        
+        + \ {charTag(PG, "neutral")}:                       Immaginare è bello perché ci si stupisce, e stupirci ci rende viv3.
+                -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+            {charTag(FirstCharacter, "neutral")}:           Sai {player_name}?
+            {charTag(FirstCharacter, "sad")}:               A volte ho l'impressione che l'unica cosa che ci rende adulti è la perdita dello stupore.
+                                                            Tutto è prevedibile.
+                                                            E corri corri guardando solo quello che ti serve.
+                                                            Ed è una cosa grigia.
+                                                            E triste.
+            {charTag(FirstCharacter, "neutral")}:           Ha senso?
+        -
+        {charTag(FirstCharacter, "neutral")}:               Visto che sono qui a pensare e basta, potrei mettermi a scrivere qualcosa di nuovo.
+        {
+            - are_two_entities_together(SecondCharacter, PG):
+            {charTag(SecondCharacter, "energy")}:           Scriviamo una storia assieme {charNameOne}?
+            {charTag(FirstCharacter, "annoyed")}:           Faccio schifo con le storie.
+            {charTag(FirstCharacter, "affectionate")}:      Ma potremmo cantarla!
+            {charTag(SecondCharacter, "angry")}:            Sono stonato.
+            {charTag(FirstCharacter, "curious")}:           E chi se ne frega?
+            {charTag(SecondCharacter, "energy")}:           Allora sìììììììììììì!
+                                                            E voglio metterci le parolacce!
+            {
+            - are_two_entities_together(Mentor, PG):
+            {charTag(FifthCharacter, "sad")}:               Cosa ho fatto di male?
+            }
+        }
+
             -> first_char_closing_storylet ->
             -> options_first_character 
     
     
     = ten
         //Riferimenti per la riscrittura: affetti e rinunce
-        //Reference musicale: And Love/No Choir di Florence + \ {charTag(PG, "neutral")}:         the Machine
+        //Reference musicale: And Love/No Choir di Florence the Machine
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -971,83 +976,82 @@
         ~ temp charNameFive = translator(fifthChar_ActualName)
         
         
+        {charTag(FirstCharacter, "neutral")}:               Sai, {player_name}, l'amore non è come me l'aspettavo.
+        {
+            - are_two_entities_together(Mentor, PG):
+            {charTag(FifthCharacter, "sad")}:               Temo sia sempre vero.    
+        }
+        {charTag(FirstCharacter, "neutral")}:               Sono una di quelle che dice "Ti amo" dopo due incontri.
+        {charTag(FirstCharacter, "annoyed")}:               Lo puoi dire, è cringe.
+        {charTag(FirstCharacter, "neutral")}:               Ma quando l'ho detto ad Ennio, è stato diverso dalle altre volte.
+                                                            Aveva proprio un altro sapore in bocca, non di entusiasmo ma di qualcosa di dolce.
+        {charTag(FirstCharacter, "affectionate")}:          Di promessa.
+        {charTag(FirstCharacter, "neutral")}:               E poi la routine ha trasformato col tempo quel sapore.
+        {charTag(FirstCharacter, "affectionate")}:          Ora sa di pane caldo, una cosa semplice ma magica.
+        {charTag(FirstCharacter, "neutral")}:               C'è più silenzio quando stiamo assieme.
+        {charTag(FirstCharacter, "affectionate")}:          Non mi serve riempire gli spazi di cose intelligenti o parlare di robe fighe per paura che lui si annoi.
+        {charTag(FirstCharacter, "neutral")}:               A volte lo osservo giocare al PC mentre coccolo i suoi gatti e mi basta.
+        {charTag(FirstCharacter, "curious")}:               Gli piace un sacco giocare, perché gli ricorda che se anche sbagli, puoi sempre ricominciare.
+        {charTag(FirstCharacter, "neutral")}:               Ci sono sere in cui parlo più col suo coinquilino che non con lui.
+        {charTag(FirstCharacter, "affectionate")}:          Ma è lì che mi tiene la mano o ci guarda, e so che mi ama.
+        {charTag(FirstCharacter, "neutral")}:               Il sesso adesso è una coperta calda e non più una spiaggia torrida.
+        {charTag(FirstCharacter, "affectionate")}:          Qualcosa che rassicura, che fa dormire bene.
+        {charTag(FirstCharacter, "neutral")}:               Non so sempre cosa provo davanti a tutto questo.
+                                                            Mi sento un po' come quando sei su un treno in stazione, e ne hai un altro fuori dal finestrino.
+        {charTag(FirstCharacter, "annoyed")}:               E tu guardi fuori e c'è movimento ma non riesci proprio a capire se stai riprendendo a viaggiare, o se è l'altro treno che si sta spostando.
+        {charTag(FirstCharacter, "sad")}:                   Ultimamente Ennio mi sembra insofferente, dice che ha il bisogno di passare più tempo assieme.
+        {charTag(FirstCharacter, "neutral")}:               Non mi dice mai “Devi rinunciare a qualcosa per stare con me”.
+                                                            Ma è lì, negli sbuffi quando gli dico che quel fine settimana faccio doppio turno.
+                                                            O che farò tardi perché Valeria è stata di nuovo lasciata e ha bisogno di supporto.
+        {charTag(FirstCharacter, "sad")}:                   Sono mesi che non viene manco a vedere un nostro concerto.
+        {charTag(FirstCharacter, "annoyed")}:               Per dargli più tempo non posso di certo smollare il lavoro, no?
+                                                            E quindi c'è solo una cosa che posso togliere dalla mia vita.
+        {charTag(FirstCharacter, "sad")}:                   E a quel punto, ripartirà mai il treno dalla mia stazione?
 
-        {charTag(FirstCharacter, "neutral")}:         Sai, {player_name}, l'amore non è come me l'aspettavo.
-            {
-                - are_two_entities_together(Mentor, PG):
-                    {charTag(FifthCharacter, "sad")}:           Temo sia sempre vero.    
-            }
-        {charTag(FirstCharacter, "neutral")}:         Sono una di quelle che dice "Ti amo" dopo due incontri.
-        {charTag(FirstCharacter, "annoyed")}:   Lo puoi dire, è cringe.
-        {charTag(FirstCharacter, "neutral")}:         Ma quando l'ho detto ad Ennio, è stato diverso dalle altre volte.
-        Aveva proprio un altro sapore in bocca, non di entusiasmo ma di qualcosa di dolce.
-        {charTag(FirstCharacter, "affectionate")}:      Di promessa.
-        {charTag(FirstCharacter, "neutral")}:         E poi la routine ha trasformato col tempo quel sapore.
-        {charTag(FirstCharacter, "affectionate")}:      Ora sa di pane caldo, una cosa semplice ma magica.
-        {charTag(FirstCharacter, "neutral")}:         C'è più silenzio quando stiamo assieme.
-        {charTag(FirstCharacter, "affectionate")}:      Non mi serve riempire gli spazi di cose intelligenti o parlare di robe fighe per paura che lui si annoi.
-        {charTag(FirstCharacter, "neutral")}:         A volte lo osservo giocare al PC mentre coccolo i suoi gatti e mi basta.
-        {charTag(FirstCharacter, "curious")}:       Gli piace un sacco giocare, perché gli ricorda che se anche sbagli, puoi sempre ricominciare.
-        {charTag(FirstCharacter, "neutral")}:         Ci sono sere in cui parlo più col suo coinquilino che non con lui.
-        {charTag(FirstCharacter, "affectionate")}:      Ma è lì che mi tiene la mano o ci guarda, e so che mi ama.
-        {charTag(FirstCharacter, "neutral")}:         Il sesso adesso è una coperta calda e non più una spiaggia torrida.
-        {charTag(FirstCharacter, "affectionate")}:      Qualcosa che rassicura, che fa dormire bene.
-        {charTag(FirstCharacter, "neutral")}:         Non so sempre cosa provo davanti a tutto questo.
-        Mi sento un po' come quando sei su un treno in stazione, e ne hai un altro fuori dal finestrino.
-        {charTag(FirstCharacter, "annoyed")}:   E tu guardi fuori e c'è movimento ma non riesci proprio a capire se stai riprendendo a viaggiare, o se è l'altro treno che si sta spostando.
-        {charTag(FirstCharacter, "sad")}:              Ultimamente Ennio mi sembra insofferente, dice che ha il bisogno di passare più tempo assieme.
-        {charTag(FirstCharacter, "neutral")}:         Non mi dice mai “Devi rinunciare a qualcosa per stare con me”.
-        Ma è lì, negli sbuffi quando gli dico che quel fine settimana suoniamo per qualche associazione.
-        O che farò tardi perché siamo a una protesta.
-        {charTag(FirstCharacter, "sad")}:              Sono mesi che non viene manco a vedere le cose che facciamo con la Rifugia.
-        {charTag(FirstCharacter, "annoyed")}:   Per dargli più tempo non posso di certo smollare il lavoro, no?
-        E quindi c'è solo una cosa che posso togliere dalla mia vita.
-        {charTag(FirstCharacter, "sad")}:              E a quel punto, ripartirà mai il treno dalla mia stazione?
+        + \ {charTag(PG, "neutral")}:                       E se Ennio fosse la tua stazione, il tuo arrivo?
+                -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+            {charTag(FirstCharacter, "neutral")}:           Sarebbe una scoperta.
+                                                            Una bella scoperta.
+            {charTag(FirstCharacter, "sad")}:               Forse non ho mai davvero considerato la possibilità di fermarmi.
+            {charTag(FirstCharacter, "neutral")}:           Alla fine ci ho messo tanto anche a capire che ero in viaggio con lui.
+            {charTag(FirstCharacter, "affectionate")}:      Innamorata.
+        
+        + \ {charTag(PG, "neutral")}:                       Nel dubbio prendi il controllo del treno e parti.
+                -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+            {charTag(FirstCharacter, "neutral")}:           Ehm.
+                                                            Senza sapere come funziona il treno?
+                                                            E con tutt3 l3 altr3 passegger3 che magari devono andare in altri luoghi?
+                                                            O non andare via affatto?
+            {charTag(FirstCharacter, "annoyed")}:           Non è egoista?
+                
+        + \ {charTag(PG, "neutral")}:                       Cosa vuoi promettergli quando gli dici "ti amo"? E a cosa rinunci?
+                -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+            {charTag(FirstCharacter, "neutral")}:           Merda.
+                                                            Io.
+            {charTag(FirstCharacter, "sad")}:               Io.
+            {charTag(FirstCharacter, "affectionate")}:      Credo di volergli promettere presenza.
+                                                            Di esserci quando starà male, quando avrà bisogno di me.
+            {charTag(FirstCharacter, "neutral")}:           E credo di poter rinunciare a.
+            {charTag(FirstCharacter, "annoyed")}:           Al decidere sempre da sola?
+            {charTag(FirstCharacter, "neutral")}:           A cosa dovrei rinunciare?
+        
+        //sistemare terra e aria, un passaggio da senso logico a senso pratico
+        + \ {charTag(PG, "neutral")}:                       Hai provato a chiedere al capotreno quando ripartite?
+                -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+            {charTag(FirstCharacter, "neutral")}:           Sì, ma dice che il treno è stato soppresso e ancora non c'è la vettura sostitutiva.
+                                                            Sai com'è con i controllori.
+            {charTag(FirstCharacter, "curious")}:           No {player_name}, anche perché dovrei essere io la capotreno.
+            {charTag(FirstCharacter, "annoyed")}:           E non ho manco idea di dove stiamo andando.  
+        
+        + \ {charTag(PG, "neutral")}:                       Non c'è logica nel tenere un treno fermo.
+                -> glyph_modifier_variation_management(FirstCharacter, airC)->
+            {charTag(FirstCharacter, "annoyed")}:           Non è vero!
+            {charTag(FirstCharacter, "neutral")}:           Per una manutenzione.
+                                                            Per la pulizia.
+                                                            Per scioperare.
+            {charTag(FirstCharacter, "annoyed")}:           Per dare fastidio alla logica di {player_name}.    
+        -
 
-            + \ {charTag(PG, "neutral")}:         E se Ennio fosse la tua stazione, il tuo arrivo?
-                    -> glyph_modifier_variation_management(FirstCharacter, waterC)->
-                {charTag(FirstCharacter, "neutral")}:         Sarebbe una scoperta.
-                Una bella scoperta.
-                {charTag(FirstCharacter, "sad")}:              Forse non ho mai davvero considerato la possibilità di fermarmi.
-                {charTag(FirstCharacter, "neutral")}:         Alla fine ci ho messo tanto anche a capire che ero in viaggio con lui.
-                {charTag(FirstCharacter, "affectionate")}:      Innamorata.
-            
-            + \ {charTag(PG, "neutral")}:         Nel dubbio prendi il controllo del treno e parti.
-                    -> glyph_modifier_variation_management(FirstCharacter, fireC)->
-                {charTag(FirstCharacter, "neutral")}:         Ehm.
-                Senza sapere come funziona il treno?
-                E con tutt3 l3 altr3 passegger3 che magari devono andare in altri luoghi?
-                O non andare via affatto?
-                {charTag(FirstCharacter, "annoyed")}:   Non è egoista?
-                    
-            + \ {charTag(PG, "neutral")}:         Cosa vuoi promettergli quando gli dici "ti amo"? E a cosa rinunci?
-                    -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
-                {charTag(FirstCharacter, "neutral")}:         Merda.
-                Io.
-                {charTag(FirstCharacter, "sad")}:              Io.
-                {charTag(FirstCharacter, "affectionate")}:      Credo di volergli promettere presenza.
-                Di esserci quando starà male, quando avrà bisogno di me.
-                {charTag(FirstCharacter, "neutral")}:         E credo di poter rinunciare a.
-                {charTag(FirstCharacter, "annoyed")}:   Al decidere sempre da sola?
-                {charTag(FirstCharacter, "neutral")}:         A cosa dovrei rinunciare?
-            
-            + \ {charTag(PG, "neutral")}:         Hai provato a chiedere al capotreno quando ripartite?
-                    -> glyph_modifier_variation_management(FirstCharacter, earthC)->
-                {charTag(FirstCharacter, "neutral")}:         Sì, ma dice che il treno è stato soppresso e ancora non c'è la vettura sostitutiva.
-                Sai com'è con i controllori.
-                {charTag(FirstCharacter, "curious")}:       No {player_name}, anche perché dovrei essere io la capotreno.
-                {charTag(FirstCharacter, "annoyed")}:   E non ho manco idea di dove stiamo andando.  
-            
-            + \ {charTag(PG, "neutral")}:         Non c'è logica nel tenere un treno fermo.
-                    -> glyph_modifier_variation_management(FirstCharacter, airC)->
-                {charTag(FirstCharacter, "annoyed")}:   Non è vero!
-                {charTag(FirstCharacter, "neutral")}:         Per una manutenzione.
-                Per la pulizia.
-                Per scioperare.
-                {charTag(FirstCharacter, "annoyed")}:   Per dare fastidio alla logica di {player_name}.    
-            -
-
-            
             -> first_char_closing_storylet ->
             -> options_first_character
     
@@ -1059,103 +1063,102 @@
         ~ temp charNameFive = translator(fifthChar_ActualName)
         
 
-        {charTag(FirstCharacter, "neutral")}:         C'è questa cosa che mi stupisce sempre.
-        Puoi passare anni con una persona, vederla quasi tutti i giorni.
-        Studiarci, farci festa, finire nei casini.
-        {charTag(FirstCharacter, "sad")}:              Poi cambierà città e a quel punto vi sentirete di rado o mai.
-        {charTag(FirstCharacter, "affectionate")}:      Da una parte è bello quando ci si ritrova, perché ci si sente a casa.
-        {charTag(FirstCharacter, "annoyed")}:   Ma poi accade qualcosa di grosso, come un matrimonio, come l'avere figli e non vi capite più.
-        {charTag(FirstCharacter, "neutral")}:         Una cosa che non mi aspettavo della vita adulta, è di poter dimenticare le altre persone.
-        {charTag(FirstCharacter, "annoyed")}:   Mi fa sentire una merda.
-        {charTag(FirstCharacter, "neutral")}:         Ma ti svegli, vai a lavoro, torni, cerchi di tenere in piedi le relazioni che hai qui, di lavarti e dormire, di prenderti cura dei tuoi interessi.
-        {charTag(FirstCharacter, "sad")}:              E ti dici “Cazzo, devo scrivere a Cristina” oppure il calendario ti ricorda che è il compleanno di Stefano.
-        {charTag(FirstCharacter, "neutral")}:         E allora magari vi sentite per uno, due giorni ma poi gli audio rimangono lì appesi.
-        E un po' ti senti una merda, ti senti in colpa, e alla fine non scrivi fino a quando non riaccade qualcosa che sia una scusa per farlo.
-        {charTag(FirstCharacter, "sad")}:              Molte delle ame che sono tornare giù sono diventate “amiche da ricorrenza”.
-        E forse c'è questa cosa che mi spaventa, all'idea di scegliere di andare da Talco, o di finire per tornare dai miei.
-        Di diventare anche per Valeria e le altre ragazze, per le colleghe, una “amica da ricorrenza”.
-        {charTag(FirstCharacter, "neutral")}:         Per non parlare di Ennio.
-        {charTag(FirstCharacter, "sad")}:              Credo che mi lascerebbe prima.
-        {charTag(FirstCharacter, "neutral")}:         E non è solo questo.
-        Vedo le colleghe più grandi, e la difficoltà che hanno a fare nuove amicizie.
-        Il senso di mancanza che si sente mentre parlano di persone che non vedono quasi più.
-        {charTag(FirstCharacter, "annoyed")}:   Mi sembra che più si è grandi, più si finisce per essere soli.
-        E io non voglio stare sola.
-        {charTag(FirstCharacter, "neutral")}:         Ha senso?
-                {
-                    - are_two_entities_together(Mentor, PG):
-                        ~ change_entity_place(Mentor)
+        {charTag(FirstCharacter, "neutral")}:               C'è questa cosa che mi stupisce sempre.
+                                                            Puoi passare anni con una persona, vederla quasi tutti i giorni.
+                                                            Studiarci, farci festa, finire nei casini.
+        {charTag(FirstCharacter, "sad")}:                   Poi cambierà città e a quel punto vi sentirete di rado o mai.
+        {charTag(FirstCharacter, "affectionate")}:          Da una parte è bello quando ci si ritrova, perché ci si sente a casa.
+        {charTag(FirstCharacter, "annoyed")}:               Ma poi accade qualcosa di grosso, come un matrimonio, come l'avere figli e non vi capite più.
+        {charTag(FirstCharacter, "neutral")}:               Una cosa che non mi aspettavo della vita adulta, è di poter dimenticare le altre persone.
+        {charTag(FirstCharacter, "annoyed")}:               Mi fa sentire una merda.
+        {charTag(FirstCharacter, "neutral")}:               Ma ti svegli, vai a lavoro, torni, cerchi di tenere in piedi le relazioni che hai qui, di lavarti e dormire, di prenderti cura dei tuoi interessi.
+        {charTag(FirstCharacter, "sad")}:                   E ti dici “Cazzo, devo scrivere a Cristina” oppure il calendario ti ricorda che è il compleanno di Stefano.
+        {charTag(FirstCharacter, "neutral")}:               E allora magari vi sentite per uno, due giorni ma poi gli audio rimangono lì appesi.
+                                                            E un po' ti senti una merda, ti senti in colpa, e alla fine non scrivi fino a quando non riaccade qualcosa che sia una scusa per farlo.
+        {charTag(FirstCharacter, "sad")}:                   Molte delle ame che sono tornare giù sono diventate “amiche da ricorrenza”.
+                                                            E forse c'è questa cosa che mi spaventa, all'idea di scegliere di andare da Talco, o di finire per tornare dai miei.
+                                                            Di diventare anche per Valeria e le altre ragazze, per le colleghe, una “amica da ricorrenza”.
+        {charTag(FirstCharacter, "neutral")}:               Per non parlare di Ennio.
+        {charTag(FirstCharacter, "sad")}:                   Credo che mi lascerebbe prima.
+        {charTag(FirstCharacter, "neutral")}:               E non è solo questo.
+                                                            Vedo le colleghe più grandi, e la difficoltà che hanno a fare nuove amicizie.
+                                                            Il senso di mancanza che si sente mentre parlano di persone che non vedono quasi più.
+        {charTag(FirstCharacter, "annoyed")}:               Mi sembra che più si è grandi, più si finisce per essere soli.
+                                                            E io non voglio stare sola.
+        {charTag(FirstCharacter, "neutral")}:               Ha senso?
+        {
+            - are_two_entities_together(Mentor, PG):
+                ~ change_entity_place(Mentor)
+            {charTag(FirstCharacter, "curious")}:           Com'è che {charNameFive} se ne è andata?    
+        }
 
-                    {charTag(FirstCharacter, "curious")}:   Com'è che {charNameFive} se ne è andata?    
-                }
-
-            + \ {charTag(PG, "neutral")}:         Sì, ma sai già cosa vuoi evitare: fallo.
-                    -> glyph_modifier_variation_management(FirstCharacter, fireC)->
-                {charTag(FirstCharacter, "annoyed")}:   Ma tu hai sempre questa visione così chiara del mondo?
-                Di ciò che sei e fai?
-                {charTag(FirstCharacter, "neutral")}:         Perché quasi quasi te la invidio.
-                
-            + \ {charTag(PG, "neutral")}:         Talco ti vuole bene anche nella distanza e nel conflitto: non resterai sola.
-                    -> glyph_modifier_variation_management(FirstCharacter, waterC)->
-                {charTag(FirstCharacter, "neutral")}:         Questo.
-                Questo è vero.
-                Mi suona molto, seppur a fatica.
-                {charTag(FirstCharacter, "sad")}:              Ammetterlo è una cosa grossa.
-                {charTag(FirstCharacter, "neutral")}:         Bella.
-                {charTag(FirstCharacter, "sad")}:              Ma grossa.    
-                    
-            + \ {charTag(PG, "neutral")}:         Hai paura di stare sola, o di sentirti sola?
-                    -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
-                {charTag(FirstCharacter, "neutral")}:         Merda.
-                {charTag(FirstCharacter, "annoyed")}:   Ora come ora forse di non sapere stare da sola.
-                {charTag(FirstCharacter, "sad")}:              Non so come si faccia, {player_name}.
-                La solitudine mi manda nel panico.
-                {charTag(FirstCharacter, "neutral")}:         Anche se poi la compagnia a volte è davvero faticosa.
-                Dovrei imparare a godermi il tempo con me.
-             
-            + \ {charTag(PG, "neutral")}:          {charNameOne}, tu devi pensare meno e fare più casino.
-                    -> glyph_modifier_variation_management(FirstCharacter, earthC)-> 
-                {charTag(FirstCharacter, "neutral")}:         Guarda {player_name}, sarei strafelice se ci riuscissi.
-                Ci ho provato anche con la terapia.
-                {charTag(FirstCharacter, "annoyed")}:   Almeno fintanto che la copriva il bonus psicologo.
-                {charTag(FirstCharacter, "neutral")}:         Ma non so, non riesco a non farmi i pipponi.
-                {charTag(FirstCharacter, "sad")}:              Scusa.
-                
-            + {not eight.air}  \ {charTag(PG, "neutral")}:         Razionalmente ci sono decine di modi per non restare solə.
-                -> glyph_modifier_variation_management(FirstCharacter, airC)->
-                    {charTag(FirstCharacter, "neutral")}:         Eppure ora sento l'urgenza di andarmene via di qui.
-                    {charTag(FirstCharacter, "annoyed")}:   Lontana da queste frasi da scienziat{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
-                    {charTag(FirstCharacter, "neutral")}:         Pensa un po'.
-
-            + {eight.air} \ {charTag(PG, "neutral")}:         Te l'ho detto prima: siamo bestie sociali, è inevitabile.
-                    -> glyph_modifier_variation_management(FirstCharacter, airC)->
-                {charTag(FirstCharacter, "annoyed")}:   E come ti ho detto prima, è una cosa molto fredda..
-                {charTag(FirstCharacter, "neutral")}:         E io non riesco a ragionare in quel modo.
-                Immagino sia bello, {player_name}.
-                Bello questo distacco.
-                Rassicurante.
-                {charTag(FirstCharacter, "annoyed")}:   Ma non è roba mia.
-                {charTag(FirstCharacter, "sad")}:              Scusa.
-            -
-        {charTag(FirstCharacter, "neutral")}:         Dopo il nostro primo litigio, Talco mi ha detto che una buona relazione è una relazione scomoda.
-        Che abbiamo delle teste pigre, e che le relazioni sane ci fanno uscire dalla pigrizia.
-        {charTag(FirstCharacter, "annoyed")}:   Forse allora il problema della distanza è che può diventare una scusa per abbracciare quella pigrizia.
-        {charTag(FirstCharacter, "neutral")}:         Mentre nei rapporti di tutti i giorni questa cosa non la puoi evitare.
-        Ha senso?
-                {
-                    - are_two_entities_together(SecondCharacter, PG):
-                        {charTag(SecondCharacter, "neutral")}:        Te te lo chiedi tante volte {charNameOne}.
-                        {charTag(FirstCharacter, "neutral")}:         Cosa?
-                        {charTag(SecondCharacter, "neutral")}:        "Ha senso?"
-                        Lo chiedi sempre.
-                        {charTag(FirstCharacter, "annoyed")}:   Lo so piccoletto. Ti dà fastidio?
-                        {charTag(SecondCharacter, "neutral")}:        Mmm.
-                        No.
-                        {charTag(SecondCharacter, "melanchonic")}:          Ma mi dispiace per te.
-                        {charTag(FirstCharacter, "sad")}:              Anche a me.      
-                }
-
+        + \ {charTag(PG, "neutral")}:                       Sì, ma sai già cosa vuoi evitare: fallo.
+                -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+            {charTag(FirstCharacter, "annoyed")}:           Ma tu hai sempre questa visione così chiara del mondo?
+                                                            Di ciò che sei e fai?
+            {charTag(FirstCharacter, "neutral")}:           Perché quasi quasi te la invidio.
             
+        + \ {charTag(PG, "neutral")}:                       Talco ti vuole bene anche nella distanza e nel conflitto: non resterai sola.
+                -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+            {charTag(FirstCharacter, "neutral")}:           Questo.
+                                                            Questo è vero.
+                                                            Mi suona molto, seppur a fatica.
+            {charTag(FirstCharacter, "sad")}:               Ammetterlo è una cosa grossa.
+            {charTag(FirstCharacter, "neutral")}:           Bella.
+            {charTag(FirstCharacter, "sad")}:               Ma grossa.    
+                
+        + \ {charTag(PG, "neutral")}:                       Hai paura di stare sola, o di sentirti sola?
+                -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+            {charTag(FirstCharacter, "neutral")}:           Merda.
+            {charTag(FirstCharacter, "annoyed")}:           Ora come ora forse di non sapere stare da sola.
+            {charTag(FirstCharacter, "sad")}:               Non so come si faccia, {player_name}.
+                                                            La solitudine mi manda nel panico.
+            {charTag(FirstCharacter, "neutral")}:           Anche se poi la compagnia a volte è davvero faticosa.
+                                                            Dovrei imparare a godermi il tempo con me.
+
+        //solita sistemazione aria/terra    
+        + \ {charTag(PG, "neutral")}:                       {charNameOne}, tu devi pensare meno e fare più casino.
+                -> glyph_modifier_variation_management(FirstCharacter, earthC)-> 
+            {charTag(FirstCharacter, "neutral")}:           Guarda {player_name}, sarei strafelice se ci riuscissi.
+                                                            Ci ho provato anche con la terapia.
+            {charTag(FirstCharacter, "annoyed")}:           Almeno fintanto che la copriva il bonus psicologo.
+            {charTag(FirstCharacter, "neutral")}:           Ma non so, non riesco a non farmi i pipponi.
+            {charTag(FirstCharacter, "sad")}:               Scusa.
+            
+        + {not eight.air}  \ {charTag(PG, "neutral")}:      Razionalmente ci sono decine di modi per non restare solə.
+            -> glyph_modifier_variation_management(FirstCharacter, airC)->
+            {charTag(FirstCharacter, "neutral")}:           Eppure ora sento l'urgenza di andarmene via di qui.
+            {charTag(FirstCharacter, "annoyed")}:           Lontana da queste frasi da scienziat{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
+            {charTag(FirstCharacter, "neutral")}:           Pensa un po'.
+
+        + {eight.air} \ {charTag(PG, "neutral")}:           Te l'ho detto prima: siamo bestie sociali, è inevitabile.
+                -> glyph_modifier_variation_management(FirstCharacter, airC)->
+        {charTag(FirstCharacter, "annoyed")}:               E come ti ho detto prima, è una cosa molto fredda..
+        {charTag(FirstCharacter, "neutral")}:               E io non riesco a ragionare in quel modo.
+                                                            Immagino sia bello, {player_name}.
+                                                            Bello questo distacco.
+                                                            Rassicurante.
+        {charTag(FirstCharacter, "annoyed")}:               Ma non è roba mia.
+        {charTag(FirstCharacter, "sad")}:                   Scusa.
+            -
+        {charTag(FirstCharacter, "neutral")}:               Dopo il nostro primo litigio, Talco mi ha detto che una buona relazione è una relazione scomoda.
+                                                            Che abbiamo delle teste pigre, e che le relazioni sane ci fanno uscire dalla pigrizia.
+        {charTag(FirstCharacter, "annoyed")}:               Forse allora il problema della distanza è che può diventare una scusa per abbracciare quella pigrizia.
+        {charTag(FirstCharacter, "neutral")}:               Mentre nei rapporti di tutti i giorni questa cosa non la puoi evitare.
+                                                            Ha senso?
+        {
+            - are_two_entities_together(SecondCharacter, PG):
+            {charTag(SecondCharacter, "neutral")}:          Te te lo chiedi tante volte {charNameOne}.
+            {charTag(FirstCharacter, "neutral")}:           Cosa?
+            {charTag(SecondCharacter, "neutral")}:          "Ha senso?"
+                                                            Lo chiedi sempre.
+            {charTag(FirstCharacter, "annoyed")}:           Lo so piccoletto. Ti dà fastidio?
+            {charTag(SecondCharacter, "neutral")}:          Mmm.
+                                                            No.
+            {charTag(SecondCharacter, "melanchonic")}:      Ma mi dispiace per te.
+            {charTag(FirstCharacter, "sad")}:               Anche a me.      
+        }
+
             -> first_char_closing_storylet ->
             -> options_first_character
             
@@ -1168,90 +1171,86 @@
         ~ temp charNameFive = translator(fifthChar_ActualName)
         
         
+        {charTag(FirstCharacter, "neutral")}:               Sai perché litigo tantissimo con mamma?
+        {charTag(FirstCharacter, "annoyed")}:               È perché dice che non so mai accontentarmi.
+                                                            Detto da quella che mi ha spedito in quell'inferno di ipercompetitività che il Conservatorio.
+                                                            Per fortuna l'ho scagata e non ho fatto classica o a quest'ora starei avvelenando gente per un assolo alla Carnegie.
+        {charTag(FirstCharacter, "annoyed")}:               Ma la cosa che mi ferisce è che dice che sono pretenziosa, quando invece quello che continuo a pensare è di non essere abbastanza.
+                                                            Di non essere all'altezza.
+        {charTag(FirstCharacter, "sad")}:                   Se c'è un'ultima cosa da ammettere con te, qualcosa che magari ci fa capire come uscire da qui, è questa: la persona che sono non è all'altezza delle mie aspettative.
+        {charTag(FirstCharacter, "neutral")}:               Prendi le relazioni: non sono stata capace di tenermi vicina la persona a cui voglio più bene.
+                                                            E non so godermi la solidità che mi regala Ennio.
+                                                            Ma la cosa peggiore è tutta la roba che dico quando parlo di salvare il mondo e delle canzoni che scrivo.
+                                                            Perché sai qual è il sentimento che provo più spesso?
+        {charTag(FirstCharacter, "annoyed")}:               Invidia.
+        {charTag(FirstCharacter, "neutral")}:               Quando scrollo sui social e vedo vecchie compagne del Conservatorio avere successo, mi rode il culo.
+        {charTag(FirstCharacter, "sad")}:                   Quando le vedo a fare viaggi fighi con tizi fighi e senza la paura di perdere la casa, senza dover fare lavori di merda, muoio dentro.
+        {charTag(FirstCharacter, "neutral")}:               Dio, darei tutto a volte per la loro vita.
+                                                            E so che non è vero, non è vero fino in fondo.
+                                                            So che in un certo senso quella roba è parte di un problema più grande.
+        {charTag(FirstCharacter, "annoyed")}:               Lo so, ma non lo “capisco” davvero.
+        {charTag(FirstCharacter, "sad")}:                   Non lo sento fino in fondo.
+                                                            Vorrei solo essere loro.
+                                                            Per un po' almeno.
+        {charTag(FirstCharacter, "affectionate")}:          Provare un po' di pace, di sicurezza economica.
+                                                            Forse anche di riconoscimento sociale.
+        {charTag(FirstCharacter, "annoyed")}:               Sono una merda, {player_name}, vero?
+        {
+            - are_two_entities_together(SecondCharacter, PG):
+            {charTag(SecondCharacter, "energy")}:           La cacca fa cose suuuuperutili!
+                                                            Le cose crescono grazie alla cacca.
+                                                            E la cacca degli uccelli fa fare tanti soldi.
+                                                            E.
+            {charTag(FirstCharacter, "annoyed")}:           Non ora piccoletto, per favore.
+            {charTag(SecondCharacter, "neutral")}:          Uh.
+            {charTag(SecondCharacter, "melanchonic")}:      Scusa.
+            {charTag(FirstCharacter, "annoyed")}:           Insomma: mi sento una <i>inutile merda</i>.
+                                                            Di quelle umane inutili e tossiche e piene di antibiotici e conservanti.
+        }                
+                                                            Una delusione.
+        {
+            - are_two_entities_together(Mentor, PG):
+            {charTag(FifthCharacter, "neutral")}:           Non essere così severa con te, {charNameOne}.
+                                                            Essere adulte significa capire quanto siamo fallibili.
+        }
         
-        {charTag(FirstCharacter, "neutral")}:         Sai perché litigo tantissimo con mamma?
-        {charTag(FirstCharacter, "annoyed")}:   È perché dice che non so mai accontentarmi.
-        Detto da quella che mi ha spedito in quell'inferno di ipercompetitività che il Conservatorio.
-        Per fortuna l'ho scagata e non ho fatto classica o a quest'ora starei avvelenando gente per un assolo alla {charTag(FirstCharacter, "neutral")}:         Carnegie.
-        {charTag(FirstCharacter, "annoyed")}:   Ma la cosa che mi ferisce è che dice che sono pretenziosa, quando invece quello che continuo a pensare è di non essere abbastanza.
-        Di non essere all'altezza.
-        {charTag(FirstCharacter, "neutral")}:         Se c'è un'ultima cosa da ammettere con te, qualcosa che magari ci fa capire come uscire da qui, è questa:
-        {charTag(FirstCharacter, "annoyed")}:   la persona che sono non è all'altezza delle mie aspettative.
-        {charTag(FirstCharacter, "neutral")}:         Prendi le relazioni: non sono stata capace di tenermi vicina la persona a cui voglio più bene.
-        E non so godermi la solidità che mi regala Ennio.
-        Ma la cosa peggiore è tutta la roba che dico quando parlo di attivismo e della Rifugia e le canzoni che scrivo.
-        Perché sai qual è il sentimento che provo più spesso?
-        {charTag(FirstCharacter, "annoyed")}:   Invidia.
-        {charTag(FirstCharacter, "neutral")}:         Quando scrollo sui social e vedo vecchie compagne del Conservatorio avere successo, mi rode il culo.
-        {charTag(FirstCharacter, "sad")}:              Quando le vedo a fare viaggi fighi con tizi fighi e senza la paura di perdere la casa, senza dover fare lavori di merda, muoio dentro.
-        {charTag(FirstCharacter, "neutral")}:         Dio, darei tutto a volte per la loro vita.
-        E so che non è vero, non è vero fino in fondo.
-        So che in un certo senso quella roba è parte di un problema più grande.
-        {charTag(FirstCharacter, "annoyed")}:   Lo so, ma non lo “capisco” davvero.
-        {charTag(FirstCharacter, "sad")}:              Non lo sento fino in fondo.
-        Vorrei solo essere loro, a volte.
-        {charTag(FirstCharacter, "affectionate")}:      Provare per una volta un po' di pace, di sicurezza economica.
-        Forse anche di riconoscimento sociale.
-        {charTag(FirstCharacter, "annoyed")}:   Sono una merda, {player_name}, vero?
-            {
-                - are_two_entities_together(SecondCharacter, PG):
-                    {charTag(SecondCharacter, "energy")}:       La cacca fa cose suuuuperutili!
-                    Le cose crescono grazie alla cacca.
-                    E la cacca degli uccelli fa fare tanti soldi.
-                    E.
-                    {charTag(FirstCharacter, "annoyed")}:   Non ora piccoletto, per favore.
-                    {charTag(SecondCharacter, "neutral")}:        Uh.
-                    {charTag(SecondCharacter, "melanchonic")}:          Scusa.
-                    {charTag(FirstCharacter, "annoyed")}:   Insomma: mi sento una <i>inutile merda</i>.
-                    Di quelle umane piene di antibiotici e conservanti.
-            }                
-
-        Una delusione.
-            {
-                - are_two_entities_together(Mentor, PG):
-                    {charTag(FifthCharacter, "neutral")}:           Non essere così severa con te, {charNameOne}.
-                    Essere adulte significa capire quanto siamo fallibili.
-            }
-        
-            + \ {charTag(PG, "neutral")}:         Non accontentarsi è fondamentale, o le lotte poi si spengono.
-                    -> glyph_modifier_variation_management(FirstCharacter, fireC)->
-                {charTag(FirstCharacter, "neutral")}:         Già.
-                {charTag(FirstCharacter, "sad")}:              Anche se non sarebbe male riposare ogni tanto, credo.
-                {charTag(FirstCharacter, "neutral")}:         No?
-                
-            + \ {charTag(PG, "neutral")}:         Guardiamo i fatti, {charNameOne}: l'erba del vicino è...?
-                    -> glyph_modifier_variation_management(FirstCharacter, airC)->
-                {charTag(FirstCharacter, "annoyed")}:   Inesistente?
-                {charTag(FirstCharacter, "neutral")}:         Perché chi ce l'ha una casa in centro col giardino?
-                {charTag(FirstCharacter, "annoyed")}:   E prima che mi rispondi che ho frainteso: no, non ho frainteso.
-                E ho bisogno di bere.
-        
-            + \ {charTag(PG, "neutral")}:         Anche tu sembrerai felice sui social, è un gioco senza vincitor3.
-                    -> glyph_modifier_variation_management(FirstCharacter, earthC)->
-                {charTag(FirstCharacter, "neutral")}:         Uh.
-                No.
-                {charTag(FirstCharacter, "annoyed")}:   Cioè: se unə si ingelosisce per la mia vita è messə male male.
-                No?
-                {charTag(FirstCharacter, "sad")}:              O esagero?
-                {charTag(FirstCharacter, "annoyed")}:   Aiuto.
-        
-            + \ {charTag(PG, "neutral")}:         Non colpevolizzarti per ciò che provi, {charNameOne}. Sii gentile con te.
-                    -> glyph_modifier_variation_management(FirstCharacter, waterC)->
-                {charTag(FirstCharacter, "neutral")}:         Io.
-                {charTag(FirstCharacter, "sad")}:              Già.
-                {charTag(FirstCharacter, "neutral")}:         Potrebbe essere una cosa carina da fare.
-                Non darmi della merda ogni volta che non provo quello che vorrei provare.
-                {charTag(FirstCharacter, "affectionate")}:      Grazie, {player_name}.
+        + \ {charTag(PG, "neutral")}:                       Non accontentarsi è fondamentale, o le lotte poi si spengono.
+                -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+            {charTag(FirstCharacter, "neutral")}:           Già.
+            {charTag(FirstCharacter, "sad")}:               Anche se non sarebbe male riposare ogni tanto, credo.
+            {charTag(FirstCharacter, "neutral")}:           No?
             
-            + \ {charTag(PG, "neutral")}:         Sei responsabile di ciò che fai, non ciò che provi.
-                    -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
-                {charTag(FirstCharacter, "affectionate")}:      Tu e Talco andreste davvero d'accordo.
-                Questa è una cosa che mi dice spesso.
-                {charTag(FirstCharacter, "neutral")}:         E poi alla fine non faccio mai nulla di crudele o che.
-                Al massimo mi intristisco in un angolino e bona.
-                {charTag(FirstCharacter, "sad")}:              Credi sia una cosa neutra? Non è da persona cattiva?
-            -
-
-            
+        + \ {charTag(PG, "neutral")}:                       {charNameOne}, lo sai già che l'erba del vicino è...?
+                -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+            {charTag(FirstCharacter, "annoyed")}:           Inesistente?
+            {charTag(FirstCharacter, "neutral")}:           Perché chi ce l'ha una casa in centro col giardino?
+            {charTag(FirstCharacter, "annoyed")}:           E prima che mi rispondi che ho frainteso: no, non ho frainteso.
+                                                            E ho bisogno di bere.
+    
+        + \ {charTag(PG, "neutral")}:                       Anche tu sembrerai felice sui social, è un gioco senza vincitor3.
+                -> glyph_modifier_variation_management(FirstCharacter, airC)->
+            {charTag(FirstCharacter, "neutral")}:           Uh.
+                                                            No.
+            {charTag(FirstCharacter, "annoyed")}:           Cioè: se unə si ingelosisce per la mia vita è messə male male.
+                                                            No?
+            {charTag(FirstCharacter, "sad")}:               O esagero?
+            {charTag(FirstCharacter, "annoyed")}:           Aiuto.
+    
+        + \ {charTag(PG, "neutral")}:                       Non colpevolizzarti per ciò che provi, {charNameOne}. Sii gentile con te stessa.
+                -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+            {charTag(FirstCharacter, "neutral")}:           Io.
+            {charTag(FirstCharacter, "sad")}:               Già.
+            {charTag(FirstCharacter, "neutral")}:           Potrebbe essere una cosa carina da fare.
+                                                            Non darmi della merda ogni volta che non provo quello che vorrei provare.
+            {charTag(FirstCharacter, "affectionate")}:      Grazie, {player_name}.
+        
+        + \ {charTag(PG, "neutral")}:                       Sei responsabile di ciò che fai, non ciò che provi.
+                -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+            {charTag(FirstCharacter, "affectionate")}:      Tu e Talco andreste davvero d'accordo.
+                                                            Questa è una cosa che mi dice spesso.
+            {charTag(FirstCharacter, "neutral")}:           E poi alla fine non faccio mai nulla di crudele o che.
+                                                            Al massimo mi intristisco in un angolino e bona.
+            {charTag(FirstCharacter, "sad")}:               Credi sia una cosa neutra? Non è da persona cattiva?
+        -
             -> first_char_closing_storylet ->
             -> options_first_character
