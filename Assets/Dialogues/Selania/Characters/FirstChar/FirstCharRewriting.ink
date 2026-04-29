@@ -1,6 +1,10 @@
 === rewriting_proposal_first_character
-~ temp charNameOne = translator(firstChar_ActualName)
-~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
 //Così se decido di uscire dalla conversazione, posso riprendere da dove eravamo rimaste.
     {
         - not confession:
@@ -61,7 +65,7 @@
 
 
     = rewriting
-            ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
@@ -465,7 +469,12 @@
                 -> firstNaming -> naming
                 
             = naming
-            ~ temp charNameOne = translator(firstChar_ActualName)
+                ~ temp charNameOne = translator(firstChar_ActualName)
+                ~ temp charNameTwo = translator(secondChar_ActualName)
+                ~ temp charNameThree = translator(thirdChar_ActualName)
+                ~ temp charNameFour= translator(fourthChar_ActualName)
+                ~ temp charNameFive = translator(fifthChar_ActualName)
+
             
             {
                 - firstChar_ActualName has Triangolo:

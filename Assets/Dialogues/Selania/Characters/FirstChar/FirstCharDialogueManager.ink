@@ -116,6 +116,9 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
     
     //Se arrivo a options da un dialogo, non mostro commenti da parte della PNG, altrimenti sì.
         {

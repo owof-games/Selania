@@ -1,5 +1,5 @@
 === knowing_first_character
-        ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)

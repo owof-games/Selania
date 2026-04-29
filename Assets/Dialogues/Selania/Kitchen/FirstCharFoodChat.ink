@@ -8,6 +8,8 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
 
     
 {charTag(FirstCharacter, "neutral")}:         Quindi {player_name}, iniziamo a cucinare assieme? 
@@ -26,6 +28,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
 
     
     
@@ -81,7 +84,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
 
@@ -396,10 +399,11 @@
             
     
     = second_theme
-        ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp charNameThree = translator(thirdChar_ActualName)
-        ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     
 
         {charTag(FirstCharacter, "curious")}:       Woah. 
@@ -754,7 +758,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp charNameFive= translator(fifthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
 
 
         {charTag(FirstCharacter, "neutral")}:         Cavolo.
@@ -1056,6 +1060,12 @@
     
     //La chiusura è comune, sempre per ridurre il rischio di errori
     = fourth_ingredient_dispatcher
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
     {charTag(FirstCharacter, "affectionate")}:      Ma {player_name}, qui a me sembra tutto pronto, non trovi?
     
         {
@@ -1172,11 +1182,11 @@
 
         
                 = good_reaction
-                ~ temp charNameOne = translator(firstChar_ActualName)
-                ~ temp charNameTwo = translator(secondChar_ActualName)
-                ~ temp charNameThree = translator(thirdChar_ActualName)
-                ~ temp charNameFour= translator(fourthChar_ActualName)
-            
+                    ~ temp charNameOne = translator(firstChar_ActualName)
+                    ~ temp charNameTwo = translator(secondChar_ActualName)
+                    ~ temp charNameThree = translator(thirdChar_ActualName)
+                    ~ temp charNameFour= translator(fourthChar_ActualName)
+                    ~ temp charNameFive = translator(fifthChar_ActualName)
                         
                             -> kitchen_moon_feedback -> 
 
@@ -1196,10 +1206,11 @@
                         -> relationship_feedback
                 
                 = bad_reaction
-                ~ temp charNameOne = translator(firstChar_ActualName)
-                ~ temp charNameTwo = translator(secondChar_ActualName)
-                ~ temp charNameThree = translator(thirdChar_ActualName)
-                ~ temp charNameFour= translator(fourthChar_ActualName)
+                    ~ temp charNameOne = translator(firstChar_ActualName)
+                    ~ temp charNameTwo = translator(secondChar_ActualName)
+                    ~ temp charNameThree = translator(thirdChar_ActualName)
+                    ~ temp charNameFour= translator(fourthChar_ActualName)
+                    ~ temp charNameFive = translator(fifthChar_ActualName)
               
 
                         -> kitchen_moon_feedback ->  
@@ -1212,10 +1223,11 @@
             
                 
                 = meh_reaction
-                ~ temp charNameOne = translator(firstChar_ActualName)
-                ~ temp charNameTwo = translator(secondChar_ActualName)
-                ~ temp charNameThree = translator(thirdChar_ActualName)
-                ~ temp charNameFour= translator(fourthChar_ActualName)
+                    ~ temp charNameOne = translator(firstChar_ActualName)
+                    ~ temp charNameTwo = translator(secondChar_ActualName)
+                    ~ temp charNameThree = translator(thirdChar_ActualName)
+                    ~ temp charNameFour= translator(fourthChar_ActualName)
+                    ~ temp charNameFive = translator(fifthChar_ActualName)
             
                         
                         -> kitchen_moon_feedback -> 
@@ -1238,6 +1250,12 @@
     
         
     = relationship_feedback
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
+
         -> achievements_onGame_statusUpdate_GM ->
         {charTag(FirstCharacter, "neutral")}:                   Comunque {player_name}, stavo pensando alla nostra conversazione qui, assieme.
                                                                 E se basandomi solo su questa chiacchierata in cucina dovessi dire: ho appena conosciuto {player_name}, vorrei farci amicizia?
@@ -1285,6 +1303,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
 
     
     {charTag(FirstCharacter, "neutral")}:         E ora {player_name}, credo mi farò due passi.
@@ -1315,6 +1334,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
 
     {debug: passo per first_char_cooking_alone.}
     ~ cooking_animations_on()
@@ -1360,6 +1380,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
 
     
     {charTag(FirstCharacter, "neutral")}:               Cucinare da sola prima è stato un momento terapeutico.
