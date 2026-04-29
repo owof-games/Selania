@@ -316,7 +316,7 @@
 
         {charTag(Franco, "{portrait_Franco()}")}:       Pesciolini?
                                                         Ehi, pesciolini.
-                                                        Eccovi qui un bel piatto di {kitchen_PGCharRecipe}.
+                                                        Eccovi qui un bel piatto di {kitchen_PGRecipe}.
                                                         Piano, piano.
                                                         Ehi Marinio, come sta andando poi con quel corso da pilota?
                                                         Sai {player_name}, Marinio ha sempre voluto volare.

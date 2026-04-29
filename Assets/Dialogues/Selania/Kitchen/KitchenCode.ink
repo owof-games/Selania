@@ -93,10 +93,10 @@
             ~ kitchen_fifthCharRecipeComplement = kitchen_recipeComplement
 
         - PG:
-            ~ kitchen_PGCharRecipe = kitchen_tempRecipeName
-            ~ kitchen_PGCharRecipeNoun = kitchen_recipeNoun
-            ~ kitchen_PGCharRecipeAdjective = kitchen_recipeAdjective
-            ~ kitchen_PGCharRecipeComplement = kitchen_recipeComplement 
+            ~ kitchen_PGRecipe = kitchen_tempRecipeName
+            ~ kitchen_PGRecipeNoun = kitchen_recipeNoun
+            ~ kitchen_PGRecipeAdjective = kitchen_recipeAdjective
+            ~ kitchen_PGRecipeComplement = kitchen_recipeComplement 
                 
     }
 

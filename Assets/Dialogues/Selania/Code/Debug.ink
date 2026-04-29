@@ -99,7 +99,13 @@
 === debug_richGrimoire
 //Serve per simulare uno stato in cui ho concluso le prime due png e Mentore non ha sbroccato
 
-~ player_name = get_random_name()
+    ~ player_name = get_random_name()
+    ~ kitchen_PGRecipeNoun = "Pane"
+    ~ kitchen_PGRecipeAdjective = "disperazione"
+    ~ kitchen_PGRecipeComplement = "codice caotico"
+    ~ kitchen_PGRecipe = "Pane della disperazione con codice caotico"
+    ~ frog_currentMission = LIST_RANDOM(frog_availableCommonMissions)
+    ~ grimoire_franco += grimFrancoFirst
 
 ~ grimoire_firstChar += (grimFirstCharOne, grimFirstCharTwo, grimFirstCharThree, grimFirstCharFour, grimFirstCharFive, grimFirstCharSix, grimFirstCharSeven, grimFirstCharEight, grimFirstCharNine, grimFirstCharTen, grimFirstCharEleven, grimFirstCharTwelve, grimFirstOpenKitchen, grimFirstCharNovel, grimFirstCharDog, grimFirstCharKitchenOne, grimFirstCharKitchenTwo, grimFirstCharKitchenThree, grimFirstCharKitchenEnded, grimFirstCharKitchenPositiveReaction, grimFirstCharKitchenNegativeReaction, grimFirstCharKitchenNeutralReaction, grimFirstCharKitchenAlone, grimFirstCharProposal, grimFirstCharNewName, grimFirstCharMentorFeedback, grimFirstCharLetterOne, grimFirstCharLetterTwo, grimFirstCharLetterThree, grimFirstCharLetterFour, grimFirstSecondChar, grimFirstThirdChar, grimFirstCharMentor, grimFirstCharFranco)
 
@@ -120,6 +126,7 @@
     ~ kitchen_firstCharRecipeNoun = "Pizzette"
     ~ kitchen_firstCharRecipeAdjective = "incoerenza"
     ~ kitchen_firstCharRecipeComplement = "ruggine biondina"
+    ~ kitchen_firstCharRecipe = "Pizzette della incoerenza con ruggine biondina"
 
 
 ~ grimoire_secondChar += (grimSecondCharOne, grimSecondCharTwo, grimSecondCharThreeHim, grimSecondCharThreeHer, grimSecondCharThreeThey, grimSecondCharFour, grimSecondCharFive, grimSecondCharSix, grimSecondCharSeven, grimSecondCharEight, grimSecondCharNine, grimSecondCharTen, grimSecondCharEleven, grimSecondCharTwelve, grimSecondCharCarla, grimSecondOpenLibrary, grimSecondCharNovel, grimSecondCharDog, grimSecondCharKitchenOne, grimSecondCharKitchenTwo, grimSecondCharKitchenThree, grimSecondCharKitchenEnded, grimSecondCharKitchenPositiveReaction, grimSecondCharKitchenNegativeReaction, grimSecondCharKitchenNeutralReaction,grimSecondCharKitchenAlone, grimSecondCharProposal, grimSecondCharNewName, grimSecondCharMentorFeedback, grimSecondCharLetterOne, grimSecondCharLetterTwo, grimSecondCharLetterThree, grimSecondCharLetterFour, grimFirstSecondChar, grimSecondCharMentorOne, grimSecondCharMentorPeace, grimSecondThirdChar, grimSecondCharFranco)
@@ -141,6 +148,7 @@
     ~ kitchen_secondCharRecipeNoun = "Pesche"
     ~ kitchen_secondCharRecipeAdjective = "discordia"
     ~ kitchen_secondCharRecipeComplement = "cioccolato al latte"
+    ~ kitchen_secondCharRecipe = "Pesche della discordia con cioccolato al latte"
 
 ~ grimoire_thirdChar += (grimThirdCharOne, grimThirdCharTwo, grimThirdCharThree, grimThirdCharFour, grimThirdCharFive, grimThirdCharSix, grimThirdCharSeven, grimThirdCharEight, grimThirdCharNine, grimThirdCharTen, grimThirdCharEleven, grimThirdCharTwelve, grimThirdOpenNest, grimThirdCharNovel, grimThirdCharDog, grimThirdCharKitchenOne, grimThirdCharKitchenTwo, grimThirdCharKitchenThree, grimThirdCharKitchenEnded, grimThirdCharKitchenPositiveReaction, grimThirdCharKitchenNegativeReaction, grimThirdCharKitchenNeutralReaction,grimThirdCharKitchenAlone, grimThirdCharProposal, grimThirdCharNewName, grimThirdCharMentorFeedback, grimThirdCharLetterOne, grimThirdCharLetterTwo, grimThirdCharLetterThree, grimThirdCharLetterFour, grimSecondThirdChar, grimFirstThirdChar, grimThirdCharFranco, grimThirdCharMentor)
 
@@ -159,8 +167,9 @@
     ~ thirdChar_last_water = RANDOM(-9,9)
     ~ thirdChar_last_fire= RANDOM(-9,9)
     ~ kitchen_thirdCharRecipeNoun = "Crostata"
-    ~ kitchen_thirdCharRecipeAdjective = "machista"
+    ~ kitchen_thirdCharRecipeAdjective = "machistitudine"
     ~ kitchen_thirdCharRecipeComplement = "acqua di rose"
+    ~ kitchen_thirdCharRecipe = "Crostata della machistitudine con acqua di rose"
 
 ~ grimoire_fifthChar += (grimMentorOne, grimMentorTwo, grimMentorThree, grimMentorFour, grimMentorFive, grimMentorSix, grimMentorSeven, grimMentorEight, grimMentorNine, grimMentorTen, grimMentorEleven, grimMentorTwelve, grimMentorNovel, grimMentorDog, grimMentorLiar, grimMentorViolence, grimMentorOlobinoUno, grimMentorOlobinoDue, grimKitchenMentor, grimMentorRage, grimMentorNotMandatory, grimMentorNewMail, grimMentorFirstSecretEnding, grimMentorSecondSecretEnding, grimMentorThirdSecretEnding, grimMentorFourthSecretEnding, grimMentorFifthSecretEnding)
 
