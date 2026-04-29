@@ -127,7 +127,8 @@
                 {charTag(FirstCharacter, "neutral")}:         Lo scopo condiviso invece.
                 {charTag(FirstCharacter, "affectionate")}:      Uh, ce l'ho con le ame.
                 {charTag(FirstCharacter, "sad")}:              Ma con Ennio?
-        
+
+            //MAGGIOR PARTE DELLE SCELTE: ACQUA
             + \ {charTag(PG, "neutral")}:         Credo molto nell'idea di cura, supporto, sostegno reciproco.
                 -> glyph_modifier_variation_management(FirstCharacter, waterC)->
                 {charTag(FirstCharacter, "affectionate")}:      Mi suona molto, ama.
@@ -206,7 +207,8 @@
         {charTag(FirstCharacter, "sad")}:              Mi sembrava che farlo avrebbe significato tradire il gruppo, che invece si era più ancorato all'idea di lasciare cadere le cose.
         {charTag(FirstCharacter, "annoyed")}:   Anche se Luana si è comportata da stronza.
         {charTag(FirstCharacter, "neutral")}:         Ha senso?
-    
+
+            //DA RAFFORZARE SCELTA FUOCO
             + \ {charTag(PG, "neutral")}:         Un'amicizia non è una onlus, e se si sta male ci si divide.
                 -> glyph_modifier_variation_management(FirstCharacter, fireC)->
                 {charTag(FirstCharacter, "annoyed")}:   Una amicizia è anche una onlus.
@@ -307,7 +309,7 @@
         Perché dietro quella parola c'è una botta infinita di aspettative.
         {charTag(FirstCharacter, "affectionate")}:      Però per fortuna Talco è Talco e ne abbiamo parlato e ci siamo capit3.
         {charTag(FirstCharacter, "neutral")}:         Ha senso vero?
-
+        
             + \ {charTag(PG, "neutral")}:         L'avresti detto se non fossi stata ubriaca?
                 -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
                 {charTag(FirstCharacter, "neutral")}:         Credo di sì.

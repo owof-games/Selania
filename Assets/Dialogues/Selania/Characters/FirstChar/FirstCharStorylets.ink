@@ -17,7 +17,7 @@
         {charTag(FirstCharacter, "sad")}:                       Sempre che non abbia cambiato fissa in questi mesi.
         {charTag(FirstCharacter, "neutral")}:                   Insomma: l'hai vistə?
         
-        
+        //MAGGIOR PARTE DELLE SCELTE: ACQUA
         + (aether)\ {charTag(PG, "neutral")}:                   Ho sempre pensato che Florence fosse una strega.
                 -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
         {charTag(FirstCharacter, "affectionate")}:              Pa-le-se!
@@ -81,10 +81,11 @@
                                                                 Ha senso?
                                                                 Forse mi sono di nuovo addormentata a lavoro?
         {charTag(FirstCharacter, "annoyed")}:                   Merda, il capo mi farà il culo.
-        {charTag(FirstCharacter, "neutral")}:                   Quindi, {player_name}, qual è il messaggio nascosto di questo trip o sogno o quel che è?
             ~ move_entity(Mentor, TrainStop)
-                                                                fai il tuo dovere da inconscio, così mi ripiglio e vedo di non mandare in merda il lavoro.
-        
+                                                                Ed ecco di nuovo quel fiore parlante!
+        {charTag(FirstCharacter, "neutral")}:                   {player_name}, qual è il messaggio nascosto di questo trip o sogno o quel che è?
+                                                                Fai il tuo dovere da inconscio, così mi ripiglio e vedo di non mandare in merda il lavoro.
+        //MAGGIOR PARTE DELLE SCELTE: ARIA, ACQUA
         + \ {charTag(PG, "neutral")}:                           Sono una persona, non il tuo inconscio.
             -> glyph_modifier_variation_management(FirstCharacter, airC)->
         {
@@ -153,8 +154,6 @@
             
         {charTag(FirstCharacter, "annoyed")}:                   Oook.
         {charTag(FirstCharacter, "neutral")}:                   Ok.
-                                                                Di nuovo il fiore parlante.
-        {charTag(FirstCharacter, "curious")}:                   Quindi è un trip.
         {charTag(FirstCharacter, "neutral")}:                   Devo idratarmi.
                                                                 Devo assolutamente idratarmi.
         ~ move_entity(FirstCharacter, Pond)
@@ -218,7 +217,7 @@
         {charTag(FirstCharacter, "neutral")}:                   Vorrei giusto avere carta e penna, e pensare a un pezzo su questa situazione.
         {charTag(FirstCharacter, "sad")}:                       Sono settimane che non ho le energie per crearne uno che uno, manco mezzo accordo.
         {charTag(FirstCharacter, "neutral")}:                   Ma sto dicendo cose senza senso, vero {player_name}?
-
+        //TERRA E FUOCO POCO PRESE COME SCELTE
         //più terra?
         + \ {charTag(PG, "neutral")}:                           Naa, una cosa insensata è una rana che non sa nuotare.
                 -> glyph_modifier_variation_management(FirstCharacter, earthC)->
@@ -316,7 +315,7 @@
                                                                 Ma forse è vero che in qualche modo non mi muovo nella mia vita da un po'.
         {charTag(FirstCharacter, "affectionate")}:              Con Talco mi sono messa in situazioni strane perché mi fidavo di ləi.
         {charTag(FirstCharacter, "curious")}:                   E mi chiedevo: secondo te, cosa vuol dire fidarsi?
-        
+        //MAGGIOR PARTE DELLE SCELTE: ACQUA
         + \ {charTag(PG, "neutral")}:                           Sapere di poter essere vulnerabili.
                 -> glyph_modifier_variation_management(FirstCharacter, waterC)->
             {charTag(FirstCharacter, "affectionate")}:          Questa è una cosa che mi tocca il cuore, {player_name}.
@@ -418,7 +417,7 @@
                                                                 E "no" sicuramente è magica.
         {charTag(FirstCharacter, "sad")}:                       A volte mi fa una paura tremenda, {player_name}.                                                        
         
-        //anche qui è un'aria che sembra più terra
+        //anche qui è un'aria che sembra più terra. è STATA ANCHE LA SCELTA MENO PRESA
         + \ {charTag(PG, "neutral")}:                           Le energie sono sprecate solo se non le indirizzi.
                 -> glyph_modifier_variation_management(FirstCharacter, airC)->
             {charTag(FirstCharacter, "neutral")}:               Mmm.
@@ -494,6 +493,7 @@
                                                                 Avrei potuto fare qualsiasi cazzata, sicura di avere una persona a cui tornare.
         {charTag(FirstCharacter, "sad")}:                       Col tempo però ho smesso di svolazzare.
                                                                 E non so se è perché sto crescendo, o se perché il suo peso mi tiene a terra.
+                                                                Forse capisco sempre di più perché mi chiamo {charNameOne}.
         {charTag(FirstCharacter, "neutral")}:                   Mi ripeto che essere adulta significa riconoscere che bisogna fare delle scelte, che non si può avere tutto.
                                                                 Forse però non sono capace di prevedere le conseguenze delle mie scelte.
         {charTag(FirstCharacter, "annoyed")}:                   Faccio sempre schifo col pianificare le cose.
@@ -802,6 +802,7 @@
         {charTag(FirstCharacter, "neutral")}:                   Io.
                                                                 Io.
                                                                 Merda.
+        {charTag(FirstCharacter, "sad")}:                       Non è che è per questo che mi chiamo {charNameOne}?                                                        
                                                                 Tornare giù è un'opzione.
         {charTag(FirstCharacter, "affectionate")}:              Voglio molto bene ai miei.
                                                                 Conosco poche persone che possono dire “Scendo a casa e sono felice di suonare e ubriacarmi con mio padre”.

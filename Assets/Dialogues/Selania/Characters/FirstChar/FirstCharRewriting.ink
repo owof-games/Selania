@@ -175,7 +175,8 @@
         {charTag(PG, "neutral")}:      È evidente quanto siano importanti le relazioni per te.
         E a un certo punto hai iniziato ad aspettarti amicizie eterne, case in campagna e un amore da film.
         Eppure...
-       
+
+            //RAFFORZARE FUOCO E ACQUA
             + \ {charTag(PG, "neutral")}:         Talco e un'ondata di cambiamenti ti aspettano in Islanda.
                 -> glyph_modifier_variation_management(FirstCharacter, fireC)->
                 Pensavi Ennio fosse noioso, e te ne sei innamorata.
