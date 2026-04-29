@@ -24,7 +24,7 @@
             ~ return "Franco ha chiesto a {player_name} di vedere cosa succede quando due persone parlano tra loro."
             
         - missionSix:
-            ~ return "Franco ha chiesto a {player_name} di parlare all'albero al centro della foresta."
+            ~ return "Franco ha chiesto a {player_name} di parlare con qualcuno che sta alla discarica."
             
         - missionSeven:
             ~ return "Franco ha chiesto a {player_name} di leggere la lettera che è arrivata in stazione."
