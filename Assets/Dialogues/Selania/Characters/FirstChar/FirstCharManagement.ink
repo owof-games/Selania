@@ -175,54 +175,54 @@
             
         {
             -   are_two_entities_together(Mentor, PG):
-                {charTag(FifthCharacter, "neutral")}:           Vi lascio un po' di privacy. In bocca al lupo {player_name} e {charNameOne}.
+                {charTag(FifthCharacter, "neutral")}:               Vi lascio un po' di privacy. In bocca al lupo {player_name} e {charNameOne}.
                     ~ change_entity_place(Mentor)
         }
         {
             -   are_two_entities_together(SecondCharacter, PG):
-                {charTag(FirstCharacter, "affectionate")}:      {charNameTwo}, potresti lasciarci un po' da sol3?
-                {charTag(SecondCharacter, "emotional")}:        Certissimamente! A dopo!
+                {charTag(FirstCharacter, "affectionate")}:          {charNameTwo}, potresti lasciarci un po' da sol3?
+                {charTag(SecondCharacter, "emotional")}:            Certissimamente! A dopo!
                     ~ change_entity_place(SecondCharacter)
         }
         {
             - are_two_entities_together(Franco, PG):
-                {charTag(Franco, "{portrait_Franco()}")}:       Non fate caso a me, sto provando a raccogliere tutte le bolle in un unico posto, ma continuano a scappare.     
+                {charTag(Franco, "{portrait_Franco()}")}:           Non fate caso a me, sto provando a raccogliere tutte le bolle in un unico posto, ma continuano a scappare.     
         }
 
         
         {
             - firstChar_InkLevel == ink_empty:
-                {charTag(FirstCharacter, "annoyed")}:   Come direbbe la mia vecchia insegnate di piano: apprezzo lo sforzo, manca il risultato.
-                Ci sono stati momenti carini, ma ammetto che per lo più non mi sono sentita molto capita da te.
-                Scusa.
+                {charTag(FirstCharacter, "annoyed")}:               Come direbbe la mia vecchia insegnate di piano: apprezzo lo sforzo, manca il risultato.
+                                                                    Ci sono stati momenti carini, ma ammetto che per lo più non mi sono sentita molto capita da te.
+                                                                    Scusa.
 
             - firstChar_InkLevel == ink_low:
-                {charTag(FirstCharacter, "annoyed")}:   E, insomma.
-                Non è che ci capiamo molto noi due, sai?
-                È come se io suonassi Chopin e tu la lambada.
-                E la lambada è carina, ma non è roba mia.
-                Ha senso? 
-            
+                {charTag(FirstCharacter, "annoyed")}:               E, insomma.
+                                                                    Non è che ci capiamo molto noi due, sai?
+                                                                    È come se io suonassi Chopin e tu la lambada.
+                                                                    E la lambada è carina, ma non è roba mia.
+                                                                    Ha senso? 
+                                                                
             - firstChar_InkLevel == ink_normal:
-                {charTag(FirstCharacter, "neutral")}:         Ci sono stati beni momenti tra noi, sai?
-                Ma anche momenti no, in cui non mi sono sentita capita.
-                Non è un reato.
-                Ma, insomma, non riesco a fidarmi fino in fondo.
-                Scusa.
+                {charTag(FirstCharacter, "neutral")}:               Ci sono stati beni momenti tra noi, sai?
+                                                                    Ma anche momenti no, in cui non mi sono sentita capita.
+                                                                    Non è un reato.
+                                                                    Ma, insomma, non riesco a fidarmi fino in fondo.
+                                                                    Scusa.
             
             
             - firstChar_InkLevel == ink_medium:
-                {charTag(FirstCharacter, "affectionate")}:      E {player_name}: non pensavo avrei trovato una persona amica, qui.
-                Mi hai reso l'assenza di Talco, di Ennio, di Valeria moooolto più sopportabile.
-                Grazie.
+                {charTag(FirstCharacter, "affectionate")}:          E {player_name}: non pensavo avrei trovato una persona amica, qui.
+                                                                    Mi hai reso l'assenza di Talco, di Ennio, di Valeria moooolto più sopportabile.
+                                                                    Grazie.
             
             
             - firstChar_InkLevel == ink_high:
-                {charTag(FirstCharacter, "affectionate")}:      E mi chiedevo: ma che ci hanno separat3 alla nascita?
-                Perché mi sento tipo come se avessimo un unico neurone.
-                Unit3 in tutto.
-                Ed è figa come cosa.
-                Talco continua a mancarmi, ma con te mi sento come se fossimo parte da sempre della stessa band.
+                {charTag(FirstCharacter, "affectionate")}:          E mi chiedevo: ma che ci hanno separat3 alla nascita?
+                                                                    Perché mi sento tipo come se avessimo un unico neurone.
+                                                                    Unit3 in tutto.
+                                                                    Ed è figa come cosa.
+                                                                    Talco continua a mancarmi, ma con te mi sento come se fossimo parte da sempre della stessa band.
         }
 
 
