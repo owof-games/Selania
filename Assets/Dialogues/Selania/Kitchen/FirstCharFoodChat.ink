@@ -12,15 +12,15 @@
 
 
     
-{charTag(FirstCharacter, "neutral")}:         Quindi {player_name}, iniziamo a cucinare assieme? 
+{charTag(FirstCharacter, "neutral")}:                   {player_name}, iniziamo a cucinare assieme? 
         
-        + \ {charTag(PG, "neutral")}:         Sono pront{player_pronouns has him:o|{player_pronouns has her:a|ə}}!
-            -> cooking_with_first_char
-        
-        + \ {charTag(PG, "neutral")}:         Vorrei pensarci un attimo {charNameOne}.
-            {charTag(FirstCharacter, "neutral")}:         Prenditela con calma {player_name}.
-            {charTag(FirstCharacter, "curious")}:       Intanto cerco qualcosa da sgranocchiare. 
-                -> main
+    + \ {charTag(PG, "neutral")}:                       Sono pront{player_pronouns has him:o|{player_pronouns has her:a|ə}}!
+        -> cooking_with_first_char
+    
+    + \ {charTag(PG, "neutral")}:                       Vorrei pensarci un attimo {charNameOne}.
+        {charTag(FirstCharacter, "neutral")}:           Prenditela con calma {player_name}.
+        {charTag(FirstCharacter, "curious")}:           Intanto cerco qualcosa da sgranocchiare. 
+            -> main
  
 
 === cooking_with_first_char
@@ -32,54 +32,42 @@
 
     
     
-    {charTag(PG, "neutral")}:      Sai {charNameOne}, mentre cuciniamo potremmo parlare un po'.
+    {charTag(PG, "neutral")}:                           Mi stavo chiedendo di cosa potremmo parlare mentre cuciniamo.
 
     - (top)
-    {charTag(PG, "neutral")}:      In particolare, ripensando alle nostre conversazioni, mi farebbe piacere parlare di più...
+    {charTag(PG, "neutral")}:                           In particolare, ripensando alle nostre conversazioni, mi farebbe piacere parlare di più...
 
-        {
-            - not first_char_main_storylets.nine:
-                {charTag(TheWitch, witch_state())}:   <i>{charNameOne} ha ancora spunti di conversazione da offrire a {player_name}, se {player_name} deciderà di parlarle ancora un po'.</i>
-        }
+    {
+        - grimoire_firstChar hasnt grimFirstCharNine:
+        {charTag(TheWitch, witch_state())}:             <i>{charNameOne} ha ancora spunti di conversazione da offrire a {player_name}, se {player_name} deciderà di conoscerla meglio.</i>
+    }
     
-        + \ {charTag(PG, "neutral")}:         Dei rapporti che hai con le persone che ti sono care.
-                    ~ cooking_animations_on()
-                    -> storage_glyphs(FirstCharacter)->
-                    -> first_theme
-                
-        + {first_char_main_storylets.six}\ {charTag(PG, "neutral")}:          Del bisogno di fare qualcosa che salvi il mondo.
-            {
-                - first_char_main_storylets.six:
-                    ~ cooking_animations_on()
-                    -> storage_glyphs(FirstCharacter)->
-                    -> second_theme
-                
-                - else:
-                    -> top
-            }
-
-
-        + {first_char_main_storylets.nine}\ {charTag(PG, "neutral")}:         Della tua creatività.
-            {
+    + \ {charTag(PG, "neutral")}:                       Del rapporto che hai con le persone care.
+        ~ cooking_animations_on()
+        -> storage_glyphs(FirstCharacter)->
+        -> first_theme
             
-                - first_char_main_storylets.nine:
-                    ~ cooking_animations_on()
-                    -> storage_glyphs(FirstCharacter)->
-                    -> third_theme
-                
-                - else:
-                    -> top
-            }
+    + {grimoire_firstChar has grimFirstCharSix}\ {charTag(PG, "neutral")}:          Del bisogno di fare qualcosa che salvi il mondo.
+        ~ cooking_animations_on()
+        -> storage_glyphs(FirstCharacter)->
+        -> second_theme
+
+    + {grimoire_firstChar has grimFirstCharNine}\ {charTag(PG, "neutral")}:         Della tua creatività.
+        ~ cooking_animations_on()
+        -> storage_glyphs(FirstCharacter)->
+        -> third_theme
             
-        + \ {charTag(PG, "neutral")}:         Sai, forse preferirei cucinare più tardi.
-            {charTag(FirstCharacter, "neutral")}:         Nessun problema, prenditi i tuoi tempi {player_name}.
-                ~ kitchen_firstCharCookingTogetherInvite = false
-                ~ kitchen_firstCharCookingTogetherWaiting = 0
-                ~ move_entity(FirstCharacter, Pond)
-            ->->
+
+        
+    + \ {charTag(PG, "neutral")}:                           Anzi, preferisco cucinare più tardi.
+        {charTag(FirstCharacter, "neutral")}:               Nessun problema, prenditi i tuoi tempi {player_name}.
+                                                            Io vado a farmi due passi.
+            ~ kitchen_firstCharCookingTogetherInvite = false
+            ~ kitchen_firstCharCookingTogetherWaiting = 0
+            ~ move_entity(FirstCharacter, Pond)
+        ->->
 
 
-    
     = first_theme
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -87,317 +75,318 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
-
-        {charTag(FirstCharacter, "affectionate")}:      Uh, hai già capito che per me le relazioni sono abbastanza il centro di tutto.
-        {charTag(FirstCharacter, "curious")}:       Vediamo, cosa ti posso raccontare? 
-        {charTag(FirstCharacter, "sad")}:              Da piccola in realtà ero abbastanza un disastro sociale.
-        Timida a bestia, bullizzata perché in carne, e secchiona.
-        {charTag(FirstCharacter, "neutral")}:         Non la ragazzina più amata dalla scuola, poco ma sicuro.
-        Ora sono meno timida, più in carne, e molto meno secchiona.
-        Uh, aspetta che abbasso la fiamma.
-        Meglio.
-        {charTag(FirstCharacter, "affectionate")}:      Però a casa era un piccolo paradiso.
-        {charTag(FirstCharacter, "neutral")}:         I miei sono gente semplice, ma hanno sempre premiato la curiosità.
-        {charTag(FirstCharacter, "affectionate")}:      Mamma quando canta ha una voce che scioglie ogni tensione.
-        {charTag(FirstCharacter, "curious")}:       Papà mi ha passato l'amore per la musica. 
-        {charTag(FirstCharacter, "neutral")}:         È stato lui quello che mi regalava sempre qualcosa che faceva rumore.
-        E appena è riuscito a risparmiare a sufficienza, mi ha fatto fare lezioni di piano.
-        Credo che i miei mi abbiano insegnato che le relazioni sono cura.
-        E sacrificio.
-        {charTag(FirstCharacter, "neutral")}:         Credi abbia senso?
-        
-            + \ {charTag(PG, "neutral")}:         Realisticamente, le relazioni sono compromesso e imprevedibilità.
-                -> glyph_modifier_variation_management(FirstCharacter, airC)->
-                Che è la roba che mi sento dire da che sono piccola.
-                {charTag(FirstCharacter, "annoyed")}:   Ma posso anche dire "no"?
-                {charTag(FirstCharacter, "neutral")}:         Papà dice sempre "un compromesso crea due infelicità".
-               
-            + \ {charTag(PG, "neutral")}:         Tuo padre è super! Voglio anche io cose che fanno rumore!
-                -> glyph_modifier_variation_management(FirstCharacter, earthC)->
-                {charTag(FirstCharacter, "affectionate")}:      Se ci fossimo incontrat3 da piccol3 avremmo fatto casino assieme.
-                {charTag(FirstCharacter, "curious")}:       A volte poi lo faccio ancora con papà. 
-                {charTag(FirstCharacter, "neutral")}:         Gli piace fare musica con gli oggetti in casa, o le cose che ha nel laboratorio.
-                {charTag(FirstCharacter, "annoyed")}:   Mamma lo chiama "casino".
-                {charTag(FirstCharacter, "affectionate")}:      Ma poi si diverte anche lei.
-             
-            + \ {charTag(PG, "neutral")}:         Le relazioni sono passione e uno scopo condiviso.
-                -> glyph_modifier_variation_management(FirstCharacter, fireC)->
-                {charTag(FirstCharacter, "neutral")}:         Quando ero più piccola vivevo i rapporti con molta più passione.
-                {charTag(FirstCharacter, "annoyed")}:   E molti più casini.
-                {charTag(FirstCharacter, "neutral")}:         Lo scopo condiviso invece.
-                {charTag(FirstCharacter, "affectionate")}:      Uh, ce l'ho con le ame.
-                {charTag(FirstCharacter, "sad")}:              Ma con Ennio?
-
-            //MAGGIOR PARTE DELLE SCELTE: ACQUA
-            + \ {charTag(PG, "neutral")}:         Credo molto nell'idea di cura, supporto, sostegno reciproco.
-                -> glyph_modifier_variation_management(FirstCharacter, waterC)->
-                {charTag(FirstCharacter, "affectionate")}:      Mi suona molto, ama.
-                Fare la strada assieme, aiutandosi.
-                Totale.
+    {charTag(FirstCharacter, "affectionate")}:              Quindi hai già capito che per me le relazioni sono il centro di tutto.
+    {charTag(FirstCharacter, "curious")}:                   Vediamo, cosa ti posso raccontare? 
+    {charTag(FirstCharacter, "sad")}:                       Da piccola ero un disastro sociale.
+                                                            Timida a bestia, bullizzata perché "grassa" e secchiona.
+    {charTag(FirstCharacter, "neutral")}:                   Ora sono meno timida, più in carne, e molto meno secchiona.
+                                                            Aspetta che abbasso la fiamma.
+    {charTag(FirstCharacter, "affectionate")}:              Però a casa era un piccolo paradiso.
+    {charTag(FirstCharacter, "neutral")}:                   I miei sono gente semplice, e hanno sempre premiato la curiosità.
+    {charTag(FirstCharacter, "affectionate")}:              Mamma quando canta ha una voce che scioglie il cuore.
+    {charTag(FirstCharacter, "curious")}:                   Papà mi ha passato l'amore per la musica. 
+    {charTag(FirstCharacter, "neutral")}:                   È stato lui quello che mi regalava sempre qualcosa che faceva rumore.
+                                                            E appena è riuscito a risparmiare a sufficienza, mi ha fatto fare lezioni di piano.
+                                                            Credo che i miei mi abbiano insegnato che le relazioni sono cura.
+                                                            E sacrificio.
+    {charTag(FirstCharacter, "neutral")}:                   Credi abbia senso?
     
-            + \ {charTag(PG, "neutral")}:         Una relazione è una foresta, una rete di infinite vite diverse.
-                -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
-                {charTag(FirstCharacter, "curious")}:       Messa così è più tipo una rete di relazioni, che non una relazione? 
-                {charTag(FirstCharacter, "neutral")}:         Una cosa tipo che ognunə di noi è legatə a tante persone legate a loro volta ad altre persone.
-                {charTag(FirstCharacter, "affectionate")}:      E così quindi creiamo una foresta?
-            -    
-        {charTag(FirstCharacter, "neutral")}:         No no taglio io, non ti preoccupare, continua a mischiare.
-        {charTag(FirstCharacter, "curious")}:       Ma invece tu che rapporto hai coi tuoi genitori? 
+        //Meno "freddo" ma mantieni la logica. 
+        + \ {charTag(PG, "neutral")}:                       Realisticamente, le relazioni sono compromesso e imprevedibilità.
+            -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+                                                            Che è la roba che mi sento dire da che sono piccola.
+        {charTag(FirstCharacter, "annoyed")}:               Ma posso anche dire "no"?
+        {charTag(FirstCharacter, "neutral")}:               Papà dice sempre "un compromesso crea due infelicità".
+        //Rendilo aria    
+        + \ {charTag(PG, "neutral")}:                       Tuo padre è super! Voglio anche io cose che fanno rumore!
+            -> glyph_modifier_variation_management(FirstCharacter, airC)->
+        {charTag(FirstCharacter, "affectionate")}:          Se ci fossimo incontrat3 da piccol3 avremmo fatto casino assieme.
+        {charTag(FirstCharacter, "curious")}:               A volte poi lo faccio ancora con papà. 
+        {charTag(FirstCharacter, "neutral")}:               Gli piace fare musica con gli oggetti in casa, o le cose che ha nel laboratorio.
+        {charTag(FirstCharacter, "annoyed")}:               Mamma lo chiama "casino".
+        {charTag(FirstCharacter, "affectionate")}:          Ma secondo me si diverte anche lei.
+            
+        + \ {charTag(PG, "neutral")}:                       Le relazioni sono passione e uno scopo condiviso.
+            -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+            {charTag(FirstCharacter, "neutral")}:           Quando ero più piccola vivevo i rapporti con molta più passione.
+            {charTag(FirstCharacter, "annoyed")}:           E molti più casini.
+            {charTag(FirstCharacter, "neutral")}:           Lo scopo condiviso invece.
+            {charTag(FirstCharacter, "affectionate")}:      Uh, ce l'ho con le ame.
+            {charTag(FirstCharacter, "sad")}:               Ma con Ennio?
 
-                -> kitchen_moon_feedback -> 
+        //MAGGIOR PARTE DELLE SCELTE: ACQUA
+        + \ {charTag(PG, "neutral")}:                       Credo molto nell'idea di cura, supporto, sostegno reciproco.
+            -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+            {charTag(FirstCharacter, "affectionate")}:      Mi suona molto, ama.
+                                                            Fare la strada assieme, aiutandosi.
+                                                            Totale.
+        //Mi piace l'immagine, in generale c'è da capire meglio come focalizzare le scelte spirito
+        + \ {charTag(PG, "neutral")}:                       Una relazione è una foresta, una rete di infinite vite diverse.
+            -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+            {charTag(FirstCharacter, "curious")}:           Messa così è più tipo una rete di relazioni, che non una relazione? 
+            {charTag(FirstCharacter, "neutral")}:           Una cosa tipo che ognunə di noi è legatə a tante persone legate a loro volta ad altre persone.
+            {charTag(FirstCharacter, "affectionate")}:      E così quindi creiamo una foresta?
+        -    
+    {charTag(FirstCharacter, "neutral")}:                   No no taglio io, non ti preoccupare, continua a mischiare.
+    {charTag(FirstCharacter, "curious")}:                   Ma invece tu che rapporto hai coi tuoi genitori? 
 
-            + \ {charTag(PG, "neutral")}:         <i>Soffriggo dei cubetti di grano del rispetto.</i>
-                ~ kitchen_recipeNoun = "Zuppa di grano"
-                -> glyph_modifier_variation_management(PG, earthC)->
-                {charTag(FirstCharacter, "neutral")}:         Uh, credo di capire.
-                Il rispetto è una bella cosa coi genitori.
-                Il trattarsi reciprocamente da adulti etc etc, giusto?
-                {charTag(FirstCharacter, "affectionate")}:      Una forma di affetto.
-               
-            + \ {charTag(PG, "neutral")}:         <i>Impano delle striscioline di seitan malinconico.</i>
-                ~ kitchen_recipeNoun = "Grigliata di seitan"
-                -> glyph_modifier_variation_management(PG, waterC)->
-                {charTag(FirstCharacter, "sad")}:              Credo mi dispiaccia, vero?
-                {charTag(FirstCharacter, "neutral")}:         Insomma.
-                Qualcosa che manca, che non è come dovrebbe essere.
-                O che non è più.
-                {charTag(FirstCharacter, "sad")}:              Mi spiace, {player_name}, davvero.
+            -> kitchen_moon_feedback -> 
+
+        + (earth1)\ {charTag(PG, "neutral")}:               <i>Soffriggo dei cubetti di grano del rispetto.</i>
+            ~ kitchen_recipeNoun = "Zuppa di grano"
+            -> glyph_modifier_variation_management(PG, earthC)->
+            {charTag(FirstCharacter, "neutral")}:           Uh, credo di capire.
+                                                            Il rispetto è una bella cosa coi genitori.
+                                                            Il trattarsi reciprocamente da adulti etc etc, giusto?
+            {charTag(FirstCharacter, "affectionate")}:      Una forma di affetto.
+            
+        + (water1)\ {charTag(PG, "neutral")}:               <i>Impano delle striscioline di seitan malinconico.</i>
+            ~ kitchen_recipeNoun = "Grigliata di seitan"
+            -> glyph_modifier_variation_management(PG, waterC)->
+            {charTag(FirstCharacter, "sad")}:               Credo mi dispiaccia, vero?
+            {charTag(FirstCharacter, "neutral")}:           Insomma.
+                                                            Qualcosa che manca, che non è come dovrebbe essere.
+                                                            O che non è più.
+            {charTag(FirstCharacter, "sad")}:               Mi spiace, {player_name}, davvero.
+            
+        + (fire1)\ {charTag(PG, "neutral")}:                <i>Sgrano dei fagioli del conflitto.</i>
+            ~ kitchen_recipeNoun = "Fagiolata"
+            -> glyph_modifier_variation_management(PG, fireC)->
+            {charTag(FirstCharacter, "neutral")}:           Non so se ti possa consolare, ma è una cosa comune.
+                                                            Molte delle mie amiche hanno un rapporto di merda coi genitori.
+                                                            Talco pensa sia un passaggio necessario per diventare adulti.
+            {charTag(FirstCharacter, "annoyed")}:           E poi mi chiama "Cocca di papà".
+            {charTag(FirstCharacter, "affectionate")}:      Stronzə.
+    
+        + (aether1)\ {charTag(PG, "neutral")}:              <i>Sbollento delle cimette di broccolo della fiducia.</i>
+            ~ kitchen_recipeNoun = "Cimetta di broccolo"
+            -> glyph_modifier_variation_management(PG, aetherC)->
+            {charTag(FirstCharacter, "affectionate")}:      Sento anche io questa cosa.
+                                                            Questa fiducia reciproca.
+                                                            Credo sia la cosa più bella da creare coi propri genitori.
+                                                            Un segno totale d'amore.
+
+        + (air1)\ {charTag(PG, "neutral")}:                 <i>Schiaccio degli spicchi di aglio del distacco.</i>
+            ~ kitchen_recipeNoun = "Crema d'aglio"
+            -> glyph_modifier_variation_management(PG, airC)->
+            {charTag(FirstCharacter, "neutral")}:           Merda.
+            {charTag(FirstCharacter, "sad")}:               Mi spiace {player_name}.
+            {charTag(FirstCharacter, "neutral")}:           Non so se ha senso, ma la distanza mi sembra peggio del litigio, del conflitto.
+                                                            Perché dal conflitto può nascere un cambiamento.
+                                                            Ed è comunque un rapporto.
+                                                            Insomma.
+            {charTag(FirstCharacter, "sad")}:               Mi spiace ama.
+        -  
+    
+    {charTag(FirstCharacter, "curious")}:                   Dove ho messo il sale? 
+    {charTag(FirstCharacter, "neutral")}:                   Eccolo.
+                                                            Lato amicizie, l'arrivo al nord è stato un reset.
+                                                            In pochi mesi avevo il mio giro del Conservatorio.
+    {charTag(FirstCharacter, "affectionate")}:              All'inizio è stato magnifico: confidenze, feste, studio di gruppo e casini di cuore.
+    {charTag(FirstCharacter, "annoyed")}:                   Ma dopo un anno ho scoperto una cosa: nei gruppi si litiga.
+    {charTag(FirstCharacter, "sad")}:                       A una certa Luana, una ragazza del gruppo, si è allontanata.
+                                                            Quel tipo di rapporto per cui ci si saluta, "Ehi, come stai?", "Bene" e poi ognuna per la sua strada.
+                                                            Io.
+    {charTag(FirstCharacter, "neutral")}:                   Boh.
+                                                            Sentivo il bisogno di chiarire, ma non sapevo come fare.
+    {charTag(FirstCharacter, "sad")}:                       Mi sembrava che farlo avrebbe significato tradire il gruppo.
+    {charTag(FirstCharacter, "sad")}:                       Perché le altre non la sopportavano più.
+    {charTag(FirstCharacter, "annoyed")}:                   Anche se Luana si è comportata da stronza.
+    {charTag(FirstCharacter, "neutral")}:                   Ho sbagliato?
+
+        //DA RAFFORZARE SCELTA FUOCO
+        + \ {charTag(PG, "neutral")}:                       Un'amicizia non è volontariato: se si sta male, ci si divide.
+            -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+            {charTag(FirstCharacter, "annoyed")}:           Una amicizia è anche volontariato, in un certo senso.
+                                                            Non è che te ne vai quando le cose non vanno bene, no?
+        
+        + \ {charTag(PG, "neutral")}:                       Avevate concordato delle regole per queste situazioni?
+            -> glyph_modifier_variation_management(FirstCharacter, airC)->
+            {charTag(FirstCharacter, "neutral")}:           Certo.
+                                                            Vidimate dalla notaia.
+                                                            Fammi vedere se le ho lasciate nello zainetto del "Ma che diavolo dice {player_name}?"
+                                                            Mmm.
+                                                            No.
+                                                            Non c'è.
+    
+        + \ {charTag(PG, "neutral")}:                       Senza chiarirsi, certe ferite rimarranno per sempre.
+            -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+            {charTag(FirstCharacter, "sad")}:               Penso tanto a Luana.
+                                                            A volte mi manca.
+            {charTag(FirstCharacter, "neutral")}:           A volte vorrei capire cosa è successo.
+                                                            Se le cose potrebbero andare diversamente.
+            {charTag(FirstCharacter, "sad")}:               E tutte queste domande fanno un male boia.
+    
+        + \ {charTag(PG, "neutral")}:                       Perché parlandole avresti tradito il gruppo? Mi son pers{player_pronouns has him:o|{player_pronouns has her:a|ə}} il nuovo "regole dell'amicizia"?
+            -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+            {charTag(FirstCharacter, "neutral")}:           Ma è ovvio che.
+                                                            Che no.
+            {charTag(FirstCharacter, "sad")}:               Non lo so.
+                                                            Ci sono tutte queste cose che non si dicono nelle relazioni.
+                                                            Ma puoi comunque romperle.
+            {charTag(FirstCharacter, "neutral")}:           Ha senso?
+            
+        + \ {charTag(PG, "neutral")}:                       Cosa succederebbe se litigassero con te?
+            -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+            {charTag(FirstCharacter, "sad")}:               In realtà è quello che è successo.
+            {charTag(FirstCharacter, "neutral")}:           Anni dopo, per una cavolata.
+                                                            Però mi è stato detto "Quando è troppo è troppo."
+            {charTag(FirstCharacter, "sad")}:               E sono tutte sparite.
+                                                            E non ho mai capito cosa sia successo di troppo.
+                                                            Continuo a non saperlo.
+        -
+    
+    {charTag(FirstCharacter, "affectionate")}:              Buono comunque questo vino rosso.
+    {charTag(FirstCharacter, "curious")}:                   E tu cosa ti aspetti da un'amicizia, {player_name}? 
+    
+        + (air2)\ {charTag(PG, "neutral")}:                 <i>Tosto del pepe dell'onestà.</i>
+            ~ kitchen_recipeAdjective = "onestà"
+            -> glyph_modifier_variation_management(PG, earthC)->
+            {charTag(FirstCharacter, "affectionate")}:      Come Talco.
+                                                            Quel tipo di persona che se fai una cagata, te la dice.
+            
+        + (earth2)\ {charTag(PG, "neutral")}:               <i>Spargo della curcuma divertente.</i>
+            ~ kitchen_recipeAdjective = "allegria"
+            -> glyph_modifier_variation_management(PG, airC)->
+                                                            L'amicizia da balotta quindi. 
+                                                            Da cazzeggio assieme.
+                                                            Da oasi nel casino del mondo.
+            
+        + (water2)\ {charTag(PG, "neutral")}:               <i>Aggiungo del cumino empatico.</i>
+            ~ kitchen_recipeAdjective = "empatia"
+            -> glyph_modifier_variation_management(PG, waterC)->
+            {charTag(FirstCharacter, "affectionate")}:      Quel tipo di rapporto che ti fa sentire ascoltata.
+                                                            Capita.
+                                                            Dove puoi essere te stessa.
+            {charTag(FirstCharacter, "sad")}:               Spero tanto di essere quel tipo di amica, sai?
+    
+        + (aether2)\ {charTag(PG, "neutral")}:              <i>Grattugio della cannella completa.</i>
+            ~ kitchen_recipeAdjective = "completezza"
+            -> glyph_modifier_variation_management(PG, aetherC)->
+            {charTag(FirstCharacter, "neutral")}:           Posso capire, ma non mi piace tantissimo come idea.
+                                                            Mi piace che le amicizie ci siano anche nel conflitto.
+                                                            Non mi preoccupa che le amicizie finiscano.
+            {charTag(FirstCharacter, "sad")}:               Mi preoccupa il <i>come</i>.
+                                                            Tipo se finisce la stima.
+                                                            Terribile.
+
+        + (fire2)\ {charTag(PG, "neutral")}:                <i>Sminuzzo dello zenzero leale.</i>
+            ~ kitchen_recipeAdjective = "lealtà"
+            -> glyph_modifier_variation_management(PG, fireC)->
+            {charTag(FirstCharacter, "neutral")}:           Essere leali significa essere affidabili, vero?
+                                                            Quel tipo di persona che non va in giro a dire i tuoi segreti.
+                                                            E che cerca sempre di darti il consiglio giusto, non quello che le torna comodo.
+        -      
+    
+    {charTag(FirstCharacter, "neutral")}:                   Aspè, aggiungo ancora del brodino.
+    {charTag(FirstCharacter, "affectionate")}:              Il profumo è magnifico ama.
+    {charTag(FirstCharacter, "neutral")}:                   Comunque, unpopular opinion che non è poi molto unpopular: non è che c'è tutta 'sta differenza tra amore e amicizia.
+                                                            Vedo lə tiziə che chiamiamo "amore" solo come unə amicə con cui è anche bello scopare.
+                                                            Ma va bene anche non scoparci.
+    {charTag(FirstCharacter, "annoyed")}:                   Vedi il casino con 'ste parole?
+    {charTag(FirstCharacter, "neutral")}:                   E di certo non me la sento di dire che una persona viene prima dell'altra solo per questo tipo di cose.
+    {charTag(FirstCharacter, "affectionate")}:              Tipo che Talco ed Ennio per me sono i miei due grandi amori.
+                                                            Punto.
+    {charTag(FirstCharacter, "neutral")}:                   E forse mi contraddico con altre cose che ho detto ma è un casino.
+                                                            Perché quando parli devi parlare con il linguaggio di chi hai davanti, o non ci si capisce.
+                                                            E non c'è molto linguaggio per raccontare con vulnerabilità queste cose.
+    {charTag(FirstCharacter, "sad")}:                       Quando ho detto "Ti amo" a Talco una volta, ubriaca, per un poco le cose si sono fatte strane.
+                                                            Perché dietro quella parola c'è una botta infinita di aspettative.
+    {charTag(FirstCharacter, "affectionate")}:              Per fortuna Talco è Talco e ne abbiamo parlato e ci siamo capit3.
+    {charTag(FirstCharacter, "neutral")}:                   Ha senso vero?
+    
+        + \ {charTag(PG, "neutral")}:                       L'avresti detto se non fossi stata ubriaca?
+            -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+            {charTag(FirstCharacter, "neutral")}:           Credo di sì.
+                                                            Prima o poi sì.
+                                                            Perché l'ho pensato a lungo.
+                                                            Non ho più avuto il coraggio di dirlo di nuovo.
+                                                            E non l'ho di certo dimostrato, dopo il modo in cui l'ho traditə.
+        
+        + \ {charTag(PG, "neutral")}:                       Contano le azioni, le parole creano solo confusione.
+            -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+            {charTag(FirstCharacter, "neutral")}:           Mmm.
+                                                            Non credo.
+            {charTag(FirstCharacter, "annoyed")}:           Non è che conta tipo il <i>perchè</i> fai le cose, invece?
+            {charTag(FirstCharacter, "neutral")}:           Cioè: ti posso dare uno schiaffo per difendermi o per attaccarti.
+                                                            E sono due schiaffi proprio diversi, no?
+        
+        + \ {charTag(PG, "neutral")}:                       {charNameOne}, basta con "ha senso". Ha senso per voi, no?
+            -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+            {charTag(FirstCharacter, "neutral")}:           Sì.
+                                                            Ma a volte qualcosa che abbia senso, che sia chiara serve.
+                                                            Sennò non sai dove stai andando.
+                                                            Ha senso?
+            
+        + \ {charTag(PG, "neutral")}:                       Una lingua esprime ciò che la sua cultura ritiene importante.
+            -> glyph_modifier_variation_management(FirstCharacter, airC)->
+            {charTag(FirstCharacter, "annoyed")}:           Ma una lingua è una roba viva.
+                                                            La cultura, pure.
+            {charTag(FirstCharacter, "neutral")}:           E quando le cose cambiano, cambiano entrambe, no?
+            {charTag(FirstCharacter, "annoyed")}:           Mica viviamo in un museo a cielo aperto, tipo.
                 
-            + \ {charTag(PG, "neutral")}:         <i>Sgrano dei fagioli del conflitto.</i>
-               ~ kitchen_recipeNoun = "Fagiolata"
-               -> glyph_modifier_variation_management(PG, fireC)->
-               {charTag(FirstCharacter, "neutral")}:         Non so se ti possa consolare, ma è una cosa comune.
-               Molte delle mie amiche hanno un rapporto conflittuale coi genitori.
-               Talco pensa sia un passaggio necessario per diventare adulti.
-               {charTag(FirstCharacter, "annoyed")}:   E poi mi chiama "Cocca di papà".
-               {charTag(FirstCharacter, "affectionate")}:      Stronzə.
-        
-            + \ {charTag(PG, "neutral")}:         <i>Sbollento delle cimette di broccolo della fiducia.</i>
-                ~ kitchen_recipeNoun = "Cimetta di broccolo"
-                -> glyph_modifier_variation_management(PG, aetherC)->
-                {charTag(FirstCharacter, "affectionate")}:      Sento anche io questa cosa.
-                Questa fiducia reciproca.
-                Credo sia la cosa più bella da creare coi propri genitori.
-                Un segno totale d'amore.
-    
-            + \ {charTag(PG, "neutral")}:         <i>Schiaccio degli spicchi di aglio del distacco.</i>
-                ~ kitchen_recipeNoun = "Crema d'aglio"
-                -> glyph_modifier_variation_management(PG, earthC)->
-                {charTag(FirstCharacter, "neutral")}:         Merda.
-                {charTag(FirstCharacter, "sad")}:              Mi spiace {player_name}.
-                {charTag(FirstCharacter, "neutral")}:         Non so se ha senso, ma la distanza mi sembra peggio del litigio, del conflitto.
-                Perché dal conflitto può nascere un cambiamento.
-                Ed è comunque un rapporto.
-                Insomma.
-                {charTag(FirstCharacter, "sad")}:              Mi spiace, davvero.
-            -  
-        
-        {charTag(FirstCharacter, "curious")}:       Dove ho messo il sale? 
-        {charTag(FirstCharacter, "neutral")}:         Eccolo.
-        Però anche se da piccola non avevo amicizie con persone della mia età, l'arrivo al nord ha cambiato tutto.
-        È stato come poter ricominciare da capo.
-        Nel giro di pochi mesi avevo il mio giro del Conservatorio.
-        {charTag(FirstCharacter, "affectionate")}:      I primi mesi sono stati magnifici.
-        {charTag(FirstCharacter, "annoyed")}:   Poi, dopo un anno ho scoperto una cosa: nei gruppi si litiga.
-        {charTag(FirstCharacter, "sad")}:              E a una certa Luana, una ragazza del gruppo, si è allontanata.
-        Quel tipo di rapporto per cui ci si saluta etc, ma non si parla più.
-        Io.
-        {charTag(FirstCharacter, "neutral")}:         Boh.
-        Credo sentissi il bisogno di chiarire, ma non sapevo come fare.
-        {charTag(FirstCharacter, "sad")}:              Mi sembrava che farlo avrebbe significato tradire il gruppo, che invece si era più ancorato all'idea di lasciare cadere le cose.
-        {charTag(FirstCharacter, "annoyed")}:   Anche se Luana si è comportata da stronza.
-        {charTag(FirstCharacter, "neutral")}:         Ha senso?
+        + \ {charTag(PG, "neutral")}:                       I sentimenti non si esauriscono se condivisi con più persone.
+            -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+            {charTag(FirstCharacter, "neutral")}:           Questo.
+                                                            Sì.
+            {charTag(FirstCharacter, "affectionate")}:      Questo è vero.
+            {charTag(FirstCharacter, "neutral")}:           Non facilissimo da far capire, sai?
+            {charTag(FirstCharacter, "affectionate")}:      Ma vero.
+        -
+    {
+        - contentsKitchen has Bat:
+        {charTag(FirstCharacter, "annoyed")}:               Questo pipistrello mi sta spaventando.
+        {charTag(FirstCharacter, "affectionate")}:          Ma c'è da dire che da quando c'è lui in giro ci sono meno zanzare in giro!
 
-            //DA RAFFORZARE SCELTA FUOCO
-            + \ {charTag(PG, "neutral")}:         Un'amicizia non è una onlus, e se si sta male ci si divide.
-                -> glyph_modifier_variation_management(FirstCharacter, fireC)->
-                {charTag(FirstCharacter, "annoyed")}:   Una amicizia è anche una onlus.
-                Non è che te ne vai quando le cose non vanno bene, no?
+        - else:
+        {charTag(FirstCharacter, "annoyed")}:               Carini gli insetti ma vorrei non finissero nel nostro veganissimo piatto.
+    }
+    {charTag(FirstCharacter, "affectionate")}:              Ecco, questo coperchio ci sta perfettamente.
+    {charTag(FirstCharacter, "neutral")}:                   Così, a caldo.
+    {charTag(FirstCharacter, "curious")}:                   Una persona che ti piace ti dice "Ti amo". Qual è la prima sensazione che provi? 
+        
+        //Trasforma la domanda in aria
+        + (air3)\ {charTag(PG, "neutral")}:               <i>Verso una mestolata di brodo del terrore.</i>
+            ~ kitchen_recipeComplement = "brodo del terrore"
+            -> glyph_modifier_variation_management(PG, airC)->
+            {charTag(FirstCharacter, "neutral")}:           Woah, {player_name}.
+                                                            Questa è intensa.
+                                                            Anche se effettivamente l'amore può far cagare addosso.
             
-            + \ {charTag(PG, "neutral")}:         Avevate concordato delle regole per queste situazioni?
-                -> glyph_modifier_variation_management(FirstCharacter, airC)->
-                {charTag(FirstCharacter, "neutral")}:         Certo.
-                Vidimate dalla notaia.
-                Fammi vedere se le ho lasciate nello zainetto del "Ma che diavolo dice {player_name}?"
-                Mmm.
-                No.
-                Non c'è.
-        
-            + \ {charTag(PG, "neutral")}:         Sì: il cuore ha ferite che non si chiuderanno senza un chiarimento.
-                -> glyph_modifier_variation_management(FirstCharacter, waterC)->
-                {charTag(FirstCharacter, "sad")}:              Penso tanto a Luana.
-                A volte mi manca.
-                {charTag(FirstCharacter, "neutral")}:         A volte vorrei capire cosa è successo.
-                Se le cose potrebbero andare diversamente.
-                {charTag(FirstCharacter, "sad")}:              E tutte queste domande fanno un male boia.
-       
-            + \ {charTag(PG, "neutral")}:         Perché parlandole avresti tradito il gruppo? Mi son pers{player_pronouns has him:o|{player_pronouns has her:a|ə}} il nuovo "regole dell'amicizia"?
-                -> glyph_modifier_variation_management(FirstCharacter, earthC)->
-                {charTag(FirstCharacter, "neutral")}:         Ma è ovvio che.
-                Che no.
-                {charTag(FirstCharacter, "sad")}:              Non lo so.
-                Ci sono tutte queste cose che non si dicono nelle relazioni.
-                Ma puoi comunque romperle.
-                {charTag(FirstCharacter, "neutral")}:         Ha senso?
-             
-            + \ {charTag(PG, "neutral")}:         Cosa succederebbe se litigassero con te?
-                -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
-                {charTag(FirstCharacter, "sad")}:              In realtà è quello che è successo.
-                {charTag(FirstCharacter, "neutral")}:         Anni dopo, per una cavolata.
-                Però mi è stato detto "Quando è troppo è troppo."
-                {charTag(FirstCharacter, "sad")}:              E sono tutte sparite.
-                E non ho mai capito cosa sia successo di troppo.
-                Continuo a non sapere.
-            -
-        
-        {charTag(FirstCharacter, "affectionate")}:      Buono comunque questo vino rosso.
-        {charTag(FirstCharacter, "curious")}:       E tu cosa ti aspetti da un'amicizia, {player_name}? 
-        
-            + \ {charTag(PG, "neutral")}:         <i>Tosto del pepe dell'onestà.</i>
-                ~ kitchen_recipeAdjective = "onestà"
-                -> glyph_modifier_variation_management(PG, earthC)->
-                {charTag(FirstCharacter, "affectionate")}:      Come Talco.
-                Quel tipo di persona che se fai una cagata, te la dice.
-               
-            + \ {charTag(PG, "neutral")}:         <i>Spargo della curcuma divertente.</i>
-                ~ kitchen_recipeAdjective = "allegria"
-                -> glyph_modifier_variation_management(PG, airC)->
-                L'amicizia da balotta quindi. 
-                Da cazzeggio assieme.
-                Da oasi nel casino del mondo.
-             
-            + \ {charTag(PG, "neutral")}:         <i>Aggiungo del cumino empatico.</i>
-               ~ kitchen_recipeAdjective = "empatia"
-               -> glyph_modifier_variation_management(PG, waterC)->
-               {charTag(FirstCharacter, "affectionate")}:      Quel tipo di rapporto che ti fa sentire ascoltata.
-               Capita.
-               Dove puoi essere te stessa.
-               {charTag(FirstCharacter, "sad")}:              Spero tanto di essere quel tipo di amica, sai?
-        
-            + \ {charTag(PG, "neutral")}:         <i>Grattugio della cannella completa.</i>
-                ~ kitchen_recipeAdjective = "completezza"
-                -> glyph_modifier_variation_management(PG, aetherC)->
-                {charTag(FirstCharacter, "neutral")}:         Posso capire, ma non mi piace tantissimo come idea.
-                Mi piace che le amicizie ci siano anche nel conflitto.
-                Non mi preoccupa che le amicizie finiscano.
-                {charTag(FirstCharacter, "sad")}:              Mi preoccupa il <i>come</i>.
-                Tipo se finisce la stima.
-                Terribile.
-    
-            + \ {charTag(PG, "neutral")}:         <i>Sminuzzo dello zenzero leale.</i>
-                ~ kitchen_recipeAdjective = "lealtà"
-                -> glyph_modifier_variation_management(PG, fireC)->
-                {charTag(FirstCharacter, "neutral")}:         Essere leali significa essere affidabili, vero?
-                Quel tipo di persona che non va in giro a dire i tuoi segreti.
-                E che cerca sempre di darti il consiglio giusto, non quello che le torna comodo.
-            -      
-        
-        {charTag(FirstCharacter, "neutral")}:         Aspè, aggiungo ancora del brodino.
-        Ecco.
-        Si stava addensando troppo.
-        {charTag(FirstCharacter, "affectionate")}:      Ma il profumo è magnifico.
-        {charTag(FirstCharacter, "neutral")}:         Comunque, unpopular opinion che non è poi molto unpopular: non è che c'è tutta 'sta differenza tra amore e amicizia.
-        Credo che una parte di me veda lə tiziə che chiami "amore" solo come unə amicə con cui è anche bello scopare.
-        O anche senza sesso.
-        {charTag(FirstCharacter, "annoyed")}:   Però vedi il casino con 'ste parole?
-        {charTag(FirstCharacter, "neutral")}:         E di certo non me la sento di dire che una persona viene prima dell'altra solo per questo tipo di cose.
-        {charTag(FirstCharacter, "affectionate")}:      Tipo che Talco ed Ennio per me sono i miei due grandi amori.
-        Punto.
-        {charTag(FirstCharacter, "neutral")}:         E forse mi contraddico con altre cose che ho detto ma è un casino perché quando parli devi parlare con il linguaggio di chi hai davanti.
-        E non c'è molto linguaggio per dire queste cose.
-        {charTag(FirstCharacter, "sad")}:              Quando ho detto "Ti amo" a Talco una volta, ubriaca, per un poco le cose si sono fatte strane.
-        Perché dietro quella parola c'è una botta infinita di aspettative.
-        {charTag(FirstCharacter, "affectionate")}:      Però per fortuna Talco è Talco e ne abbiamo parlato e ci siamo capit3.
-        {charTag(FirstCharacter, "neutral")}:         Ha senso vero?
-        
-            + \ {charTag(PG, "neutral")}:         L'avresti detto se non fossi stata ubriaca?
-                -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
-                {charTag(FirstCharacter, "neutral")}:         Credo di sì.
-                Prima o poi sì.
-                Perché l'ho pensato a lungo.
-                Non ho più avuto il coraggio di dirlo di nuovo.
-                Ma resta vero comunque, no?
+        + (earth3)\ {charTag(PG, "neutral")}:               <i>Manteco della noce euforica.</i>
+            ~ kitchen_recipeComplement = "noce euforica"
+            -> glyph_modifier_variation_management(PG, earthC)->
+            {charTag(FirstCharacter, "neutral")}:           Mi risuona tanto.
+                                                            Anche se mi è successo solo due volte.
+            {charTag(FirstCharacter, "affectionate")}:      Detta dalla persona giusta è una parola che ti fa volare, vero?
             
-            + \ {charTag(PG, "neutral")}:         Conta quello che si fa, le parole fanno solo casino.
-                -> glyph_modifier_variation_management(FirstCharacter, fireC)->
-                {charTag(FirstCharacter, "neutral")}:         Mmm.
-                Non credo.
-                {charTag(FirstCharacter, "annoyed")}:   Non è che conta tipo <>iperchè</i> fai le cose, invece?
-                {charTag(FirstCharacter, "neutral")}:         Cioè: ti posso dare uno schiaffo per difendermi o per attaccarti.
-                E sono due schiaffi proprio diversi, no?
-            
-            + \ {charTag(PG, "neutral")}:         \ {charNameOne}, basta con "ha senso". Ha senso per voi, no?
-                -> glyph_modifier_variation_management(FirstCharacter, earthC)->
-                {charTag(FirstCharacter, "neutral")}:         Sì.
-                Ma a volte due cose con un senso ti servono, anche solo per capire dove stai andando.
-                Ha senso?
-             
-            + \ {charTag(PG, "neutral")}:         Una lingua esprime ciò che la sua cultura ritiene importante.
-                -> glyph_modifier_variation_management(FirstCharacter, airC)->
-                {charTag(FirstCharacter, "annoyed")}:   Ma una lingua è una roba viva.
-                La cultura, pure.
-                {charTag(FirstCharacter, "neutral")}:         E quando le cose cambiano, cambiano entrambe, no?
-                {charTag(FirstCharacter, "annoyed")}:   Mica viviamo in un museo a cielo aperto, tipo.
-                   
-            + \ {charTag(PG, "neutral")}:         I sentimenti non si esauriscono se condivisi con più persone.
-                -> glyph_modifier_variation_management(FirstCharacter, waterC)->
-                {charTag(FirstCharacter, "neutral")}:         Questo.
-                Sì.
-                {charTag(FirstCharacter, "affectionate")}:      Questo è vero.
-                {charTag(FirstCharacter, "neutral")}:         Non facilissimo da far capire, sai?
-                {charTag(FirstCharacter, "affectionate")}:      Ma vero.
-            -
-        {
-            - contentsKitchen has Bat:
-                {charTag(FirstCharacter, "annoyed")}:   Questo pipistrello mi sta spaventando.
-                {charTag(FirstCharacter, "affectionate")}:      Ma c'è da dire che da quando c'è lui in giro ci sono meno zanzare in giro!
+        + (water3)\ {charTag(PG, "neutral")}:               <i>Condisco con semi dell'"io? no, no è possibile!".</i>
+            ~ kitchen_recipeComplement = "semi dell'<i>io? no, no è possibile!</i>"
+            -> glyph_modifier_variation_management(PG, waterC)->
+            {charTag(FirstCharacter, "neutral")}:           Coff Coff.
+                                                            La sento.
+                                                            Madonna se la sento.
+                                                            Mi è successo anche con Ennio.
+            {charTag(FirstCharacter, "sad")}:               E a volte mi succede ancora.
 
-            - else:
-                {charTag(FirstCharacter, "annoyed")}:   Carini gli insetti ma vorrei non finissero nel nostro veganissimo piatto.
-        }
-        {charTag(FirstCharacter, "affectionate")}:      Ecco, questo coperchio ci sta perfettamente.
-        {charTag(FirstCharacter, "neutral")}:         Così, a caldo.
-        {charTag(FirstCharacter, "curious")}:       Una persona che ti piace ti dice "Ti amo". Qual è la prima sensazione che provi? 
-        
-            + \ {charTag(PG, "neutral")}:         <i>Verso una mestolata di brodo del terrore.</i>
-                ~ kitchen_recipeComplement = "brodo del terrore"
-                -> glyph_modifier_variation_management(PG, waterC)->
-                {charTag(FirstCharacter, "neutral")}:         Woah, {player_name}.
-                Questa è intensa.
-                Anche se effettivamente l'amore può far cagare addosso.
-               
-            + \ {charTag(PG, "neutral")}:         <i>Manteco della noce euforica.</i>
-                ~ kitchen_recipeComplement = "noce euforica"
-                -> glyph_modifier_variation_management(PG, earthC)->
-                {charTag(FirstCharacter, "neutral")}:         Mi risuona tanto.
-                {charTag(FirstCharacter, "affectionate")}:      Detta dalla persona giusta è una parola che ti fa volare, vero?
-             
-            + \ {charTag(PG, "neutral")}:         <i>Condisco con semi dell'"io? no, no è possibile!".</i>
-               ~ kitchen_recipeComplement = "semi dell'<i>io? no, no è possibile!</i>"
-               -> glyph_modifier_variation_management(PG, airC)->
-                {charTag(FirstCharacter, "neutral")}:         Coff Coff.
-                La sento.
-                Madonna se la sento.
-                Mi è successo anche con Ennio.
-                {charTag(FirstCharacter, "sad")}:              E a volte mi succede ancora.
-        
-            + \ {charTag(PG, "neutral")}:         <i>Incorporo una cucchiata di olio delle lusinghe.</i>
-                ~ kitchen_recipeComplement = "olio delle lusinghe"
-                -> glyph_modifier_variation_management(PG, aetherC)->
-                {charTag(FirstCharacter, "curious")}:       Uh, a qualcuno piace quando il suo pelo viene lisciato, vero? 
-                {charTag(FirstCharacter, "annoyed")}:   Però non rischia di essere una cosa egoista?
-                {charTag(FirstCharacter, "neutral")}:         Più legata a come ti senti che al sentimento che provi per quella persona?
+        //è poco spirito. comunione? viaggio assieme?
+        + (aether3)\ {charTag(PG, "neutral")}:              <i>Incorporo una cucchiata di olio delle lusinghe.</i>
+            ~ kitchen_recipeComplement = "olio delle lusinghe"
+            -> glyph_modifier_variation_management(PG, aetherC)->
+            {charTag(FirstCharacter, "curious")}:           Uh, a qualcuno piace quando il suo pelo viene lisciato, vero? 
+            {charTag(FirstCharacter, "annoyed")}:           Però non rischia di essere una cosa egoista?
+            {charTag(FirstCharacter, "neutral")}:           Più legata a come ti senti che al sentimento che provi per quella persona?
+
+        + (fire3)\ {charTag(PG, "neutral")}:                <i>Sminuzzo una manciata di peperoncini arrapati.</i>
+            ~ kitchen_recipeComplement = "peperoncini arrapati"
+            -> glyph_modifier_variation_management(PG, fireC)->
+            {charTag(FirstCharacter, "neutral")}:           Questa non me l'aspettavo, ma ci sta.
+            {charTag(FirstCharacter, "affectionate")}:      Sentirsi amatə è indubbiamente sexy.
+            {charTag(FirstCharacter, "neutral")}:           Anni fa confondevo a manetta arrapamento e amore.
+            {charTag(FirstCharacter, "annoyed")}:           Puoi immaginare i casini che ho combinato.
+        -  
     
-            + \ {charTag(PG, "neutral")}:         <i>Sminuzzo una manciata di peperoncini arrapati.</i>
-                ~ kitchen_recipeComplement = "peperoncini arrapati"
-                -> glyph_modifier_variation_management(PG, fireC)->
-                {charTag(FirstCharacter, "neutral")}:         Questa non me l'aspettavo, ma ci sta.
-                {charTag(FirstCharacter, "affectionate")}:      Sentirsi amatə è indubbiamente sexy.
-                {charTag(FirstCharacter, "neutral")}:         Anni fa confondevo a manetta arrapamento e amore.
-                {charTag(FirstCharacter, "annoyed")}:   Puoi immaginare i casini che ho combinato.
-            -  
-        
-            -> fourth_ingredient_dispatcher
+        -> fourth_ingredient_dispatcher
             
     
     = second_theme
@@ -408,118 +397,123 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
 
-        {charTag(FirstCharacter, "curious")}:       Woah. 
-        Qui si va giù leggero.
-        {charTag(FirstCharacter, "neutral")}:         E forse "salvare il mondo" è pretenzioso da dire.
-        Anche se so bene di averlo detto io.
-        Credo.
-        {charTag(FirstCharacter, "neutral")}:         Perché poi, da cosa dovrei salvarlo?
-        {charTag(FirstCharacter, "sad")}:              Nel senso: non sono una brava con le cose politiche.
-        {charTag(FirstCharacter, "neutral")}:         La Rifugia è nata perché c'è un bisogno che vedo: per vivere ci servono le case.
-        E le case non ci sono.
-        {charTag(FirstCharacter, "annoyed")}:   O meglio, ci sono, ma solo per far fare vacanze a persone che poi alla fin fine della tua città non gliene frega niente.
-        {charTag(FirstCharacter, "neutral")}:         E quindi non so dire bene "salvare da cosa".
-        Faccio fatica a usare le parole grandi.
-        Patriarcato.
-        Fascismo.
-        Crisi climatica.
-        Gaza, Darfur, genocidio.
-        {charTag(FirstCharacter, "annoyed")}:   Sarebbe come mettermi in bocca concetti che non conosco bene.
-        {charTag(FirstCharacter, "neutral")}:         Ma anche se non so che nome dare alle cose, le vedo.
-        E le voglio cambiare.
-        {charTag(FirstCharacter, "sad")}:              Ha senso?
+        {charTag(FirstCharacter, "neutral")}:               Woah, pesa.
+                                                            Forse "salvare il mondo" è pretenzioso da dire.
+        {charTag(FirstCharacter, "sad")}:                   Anche se so bene di averlo detto io.
+                                                            Credo.
+        {charTag(FirstCharacter, "neutral")}:               Perché poi, da cosa dovrei salvarlo?
+                                                            E come?
+                                                            Respira {charNameOne}, respira.
+        {charTag(FirstCharacter, "sad")}:                   Non sono una brava con le cose politiche, ama.
+        {charTag(FirstCharacter, "neutral")}:               Prendi la Rifugia, quella associazione per cui abbiamo suonato.
+        {charTag(FirstCharacter, "neutral")}:               Perché è nata?
+                                                            Perché per vivere ci servono le case.
+                                                            E le case non ci sono.
+        {charTag(FirstCharacter, "annoyed")}:               O meglio, ci sono, ma solo per far fare vacanze a persone che poi alla fin fine della tua città non gliene frega niente.
+        {charTag(FirstCharacter, "neutral")}:               Ma poi metà del loro lavoro è inseguire l'Assessora XYZ o fare gli incontri con altre associazioni.
+                                                            E quando sono stata alle loro riunioni.
+                                                            Aiuto.
+        {charTag(FirstCharacter, "sad")}:                   Non le so usare le parole grandi come fanno loro.
+                                                            Patriarcato.
+                                                            Fascismo.
+                                                            Razzismo.
+                                                            Crisi climatica.
+                                                            Gaza, Darfur, genocidio.
+        {charTag(FirstCharacter, "annoyed")}:               Sarebbe come mettermi in bocca concetti che non conosco bene.
+        {charTag(FirstCharacter, "neutral")}:               Ma anche se non so che nome dare alle cose, le vedo.
+                                                            E le voglio cambiare.
+        {charTag(FirstCharacter, "sad")}:                   Questo è ufficialmente il discorso più sconclusionato che abbia mai fatto.
         
-            + \ {charTag(PG, "neutral")}:         Non è che prima di battere un mostro lo studi, no?
+            + \ {charTag(PG, "neutral")}:                   Non è che prima di battere un mostro lo studi, no?
                 -> glyph_modifier_variation_management(FirstCharacter, earthC)->
-                {charTag(FirstCharacter, "neutral")}:         Ehm.
-                Dovresti chiedere a Ennio, è lui quello bravo coi videogiochi.
-                Ma un po' sì, no?
-                Nel senso, me lo ricordo su <i>Hollow Knight</i> a studiarsi i pattern dei mostri col coinquilino.
+            {charTag(FirstCharacter, "neutral")}:           Ehm.
+                                                            Dovresti chiedere a Ennio, è lui quello bravo coi videogiochi.
+                                                            Ma un po' sì, no?
+                                                            Nel senso, me lo ricordo su <i>Hollow Knight</i> a studiarsi i pattern dei mostri col coinquilino.
              
-            + \ {charTag(PG, "neutral")}:         È l'unico senso, altrimenti perché siamo viv3?
+            + \ {charTag(PG, "neutral")}:                   Non è sconclusionato: lottare ci rende viv3!
                 -> glyph_modifier_variation_management(FirstCharacter, fireC)->
-                {charTag(FirstCharacter, "neutral")}:         Sì, credo?
-                Però non sempre sei prontə ad agire.
-                {charTag(FirstCharacter, "sad")}:              Quindi se non fai cose, se non cambi cose, non sei viva?
+            {charTag(FirstCharacter, "neutral")}:           Sì, credo?
+                                                            Però non sempre sei prontə ad agire.
+            {charTag(FirstCharacter, "sad")}:               Quindi se non fai cose, se non cambi cose, non sei viva?
 
-            + \ {charTag(PG, "neutral")}:         Le parole grandi hanno anche grandi poteri.
+            + \ {charTag(PG, "neutral")}:                   Le parole grandi hanno anche grandi poteri.
                 -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
-                {
-                    -first_char_main_storylets.four.no:
-                        {charTag(FirstCharacter, "curious")}:       Esatto, come dicevamo prima sui "no" che hanno cambiato la storia, vero? 
-                }
-                {charTag(FirstCharacter, "affectionate")}:      Forse tutte le parole hanno grandi poteri, non ce ne sono di grandi e piccole.
-                {charTag(FirstCharacter, "neutral")}:         Penso a quando Talco ha deciso di chiamarsi Talco.
-                {charTag(FirstCharacter, "affectionate")}:      E a quel punto, con quella parola, è diventata la persona che è sempre statə.
-                {charTag(FirstCharacter, "curious")}:       Le parole sono sempre enormi. 
-                Ha senso?    
-        
-            + \ {charTag(PG, "neutral")}:         Quindi ti senti inadeguata?
+            {
+                -first_char_main_storylets.four.no:
+                {charTag(FirstCharacter, "curious")}:       Esatto, come dicevamo prima sui "no" che hanno cambiato la storia, vero? 
+            }
+            {charTag(FirstCharacter, "affectionate")}:      Forse tutte le parole hanno grandi poteri, non ce ne sono di grandi e piccole.
+            {charTag(FirstCharacter, "neutral")}:           Penso a quando Talco ha deciso di chiamarsi Talco.
+            {charTag(FirstCharacter, "affectionate")}:      E a quel punto, con quella parola, è diventata la persona che è sempre statə.
+            {charTag(FirstCharacter, "curious")}:           Le parole sono sempre enormi. 
+                                                            Ha senso?    
+    
+            + \ {charTag(PG, "neutral")}:                   Quindi ti senti inadeguata?
                 -> glyph_modifier_variation_management(FirstCharacter, waterC)->
-                {charTag(FirstCharacter, "neutral")}:         Bingo.
-                {charTag(FirstCharacter, "sad")}:              Già.
-                Totale.
-                {charTag(FirstCharacter, "neutral")}:         Lo so che è una cosa comune.
-                Ma non è che mi fa stare proprio meglio.
+            {charTag(FirstCharacter, "neutral")}:           Bingo.
+            {charTag(FirstCharacter, "sad")}:               Già.
+                                                            Totale.
+            {charTag(FirstCharacter, "neutral")}:           Lo so che è una cosa comune.
+                                                            Ma non è che mi fa stare proprio meglio.
             
-            + \ {charTag(PG, "neutral")}:         Razionalmente ha senso cambiare solo ciò che si capisce.
+            + \ {charTag(PG, "neutral")}:                   Ha senso cambiare ciò che si capisce.
                 -> glyph_modifier_variation_management(FirstCharacter, airC)->
-                {charTag(FirstCharacter, "annoyed")}:   E quando decidi che cosa hai capito e cosa no?
-                {charTag(FirstCharacter, "sad")}:              Perché tutto è un gran casino.
-                {charTag(FirstCharacter, "neutral")}:         E tante cose cambiano di significato col tempo.
-                E quindi cosa facciamo?
-                {charTag(FirstCharacter, "annoyed")}:   Non cambiamo nulla? 
+            {charTag(FirstCharacter, "annoyed")}:           E quando decidi che cosa hai capito e cosa no?
+            {charTag(FirstCharacter, "sad")}:               Perché tutto è un gran casino.
+            {charTag(FirstCharacter, "neutral")}:           E tante cose cambiano di significato col tempo.
+                                                            E quindi cosa facciamo?
+            {charTag(FirstCharacter, "annoyed")}:           Non cambiamo nulla? 
             -        
         
-        {charTag(FirstCharacter, "annoyed")}:   Aspetta, ho visto delle forbici prima.
-        Sempre che ci serva qualcosa da aprire o tagliuzzare.
-        Comunque è una questione di futuro, no?
-        Ora abbiamo alcune cose nel presente.
-        {charTag(FirstCharacter, "annoyed")}:   Quelle cose ci fanno cagare.
-        Non le vogliamo, o le vogliamo diverse nel futuro.
-        {charTag(FirstCharacter, "curious")}:       Tu {player_name} sai che futuro vuoi vedere? 
+        {charTag(FirstCharacter, "annoyed")}:               Aspetta, stagliuzzo io.
+                                                            Comunque è una questione di futuro, no?
+                                                            Ora abbiamo alcune cose nel presente.
+        {charTag(FirstCharacter, "annoyed")}:               Quelle cose ci fanno cagare.
+                                                            Non le vogliamo, o le vogliamo diverse nel futuro.
+        {charTag(FirstCharacter, "curious")}:               Tu {player_name} sai che futuro vuoi vedere? 
         
             -> kitchen_moon_feedback -> 
             
-            + \ {charTag(PG, "neutral")}:         <i>Infarino confusamente delle tagliatelle.</i>
+            + (air1)\ {charTag(PG, "neutral")}:             <i>Infarino confusamente delle tagliatelle.</i>
                 ~ kitchen_recipeNoun = "Tagliatelle"
                 -> glyph_modifier_variation_management(PG, airC)->
-                {charTag(FirstCharacter, "sad")}:              Già.
-                Anche perché sembra sempre che puoi salvare una sola cosa alla volta.
-                {charTag(FirstCharacter, "neutral")}:         Anche se Valeria dice che non è vero, che i problemi sono tutti collegati.
+            {charTag(FirstCharacter, "sad")}:               Già.
+                                                            Anche perché sembra sempre che puoi salvare una sola cosa alla volta.
+            {charTag(FirstCharacter, "neutral")}:           Anche se Valeria dice che non è vero, che i problemi sono tutti collegati.
                
-            + \ {charTag(PG, "neutral")}:         <i>Stendo con decisione delle lasagne.</i>
+            + (earth1)\ {charTag(PG, "neutral")}:            <i>Stendo con decisione delle lasagne.</i>
                 ~ kitchen_recipeNoun = "Lasagne"
-                -> glyph_modifier_variation_management(PG, fireC)->
-                {charTag(FirstCharacter, "neutral")}:         Uh.
-                Ha senso dire che ti invidio per questa tua chiarezza?
-                {charTag(FirstCharacter, "sad")}:              Deve essere bello sapere dove si vuole andare.
-             
-            + \ {charTag(PG, "neutral")}:         <i>Affetto con disinteresse delle bruschette.</i>
+                -> glyph_modifier_variation_management(PG, earthC)->
+                {charTag(FirstCharacter, "neutral")}:       Uh.
+                                                            Ha senso dire che ti invidio per questa tua chiarezza?
+                {charTag(FirstCharacter, "sad")}:           Deve essere bello sapere dove si vuole andare.
+            //Trasformare in spirito 
+            + (aether1)\ {charTag(PG, "neutral")}:           <i>Affetto con disinteresse delle bruschette.</i>
                ~ kitchen_recipeNoun = "Bruschette"
-               -> glyph_modifier_variation_management(PG, earthC)->
-               {charTag(FirstCharacter, "neutral")}:         Quindi sei più del tipo "Vediamo dove andiamo?"
-               Che ha senso magari a livello personale.
-               {charTag(FirstCharacter, "annoyed")}:   Ma per le grandi cose, boh.
+               -> glyph_modifier_variation_management(PG, aetherC)->
+               {charTag(FirstCharacter, "neutral")}:        Quindi sei più del tipo "Vediamo dove andiamo?"
+                                                            Che ha senso magari a livello personale.
+               {charTag(FirstCharacter, "annoyed")}:        Ma per le grandi cose, boh.
         
-            + \ {charTag(PG, "neutral")}:         <i>Impasto furiosamente delle arancine.</i>
+            + (fire1)\ {charTag(PG, "neutral")}:            <i>Impasto furiosamente delle arancine.</i>
                 ~ kitchen_recipeNoun = "Arancine"
                 -> glyph_modifier_variation_management(PG, fireC)->
-               {charTag(FirstCharacter, "neutral")}:         Immagino che la furia sia un modo per guardare a ciò che non va ora.
-               A volte mi piacerebbe sapermi arrabbiare.
-                {
-                    - secondChar_storyStatus == story_storyStarted:
-                        {charTag(FirstCharacter, "affectionate")}:      Dovrei imparare da {charNameTwo}.
-                    
-                    - else:
-                        {charTag(FirstCharacter, "affectionate")}:      Avrei dovuto imparare da {charNameTwo}.
-                }
+               {charTag(FirstCharacter, "neutral")}:        Immagino che la furia sia un modo per guardare a ciò che non va ora.
+                                                            A volte mi piacerebbe sapermi arrabbiare.
+            {
+                - secondChar_storyStatus == story_storyStarted:
+                {charTag(FirstCharacter, "affectionate")}:   Dovrei imparare da {charNameTwo}.
+                
+                - else:
+                {charTag(FirstCharacter, "affectionate")}:   Avrei dovuto imparare da {charNameTwo}.
+            }
                
-            + \ {charTag(PG, "neutral")}:         <i>Scaldo disperatamente delle tortillas.</i>
+            + (water1)\ {charTag(PG, "neutral")}:           <i>Scaldo disperatamente delle tortillas.</i>
                 ~ kitchen_recipeNoun = "Tortillas"
-                -> glyph_modifier_variation_management(PG, aetherC)->
-                {charTag(FirstCharacter, "neutral")}:         È un sentimento.
-                Non so se sia peggio la confusione o la disperazione.
+                -> glyph_modifier_variation_management(PG, waterC)->
+                {charTag(FirstCharacter, "neutral")}:       È un sentimento.
+                                                            Non so se sia peggio la confusione o la disperazione.
             -  
        
         {charTag(FirstCharacter, "neutral")}:         Mi sa che mi metto ad affettare qualcosa intanto.
