@@ -183,14 +183,7 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
 
 ->->
 
-             
-
-
-
-
-
-
-
+            
 
 === grimoire_storylets_updater
                         /******************************

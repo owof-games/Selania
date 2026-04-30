@@ -534,8 +534,6 @@
                         ~ object_value_for_PNG(kitchen_thirdCharExtraIngredient, Kitchen, ThirdCharacter)
                         //E il nome dell'ingrediente
                         ~ extra_ingredient_name(kitchen_thirdCharExtraIngredient)
-                        
-                        -> notification_system -> 
                     
                 + \ {charTag(PG, "neutral")}:         <i>Non aggiungo altro.
                 -
@@ -547,6 +545,8 @@
 
 
 === at_table_with_third_char
+    -> grimoire_storylets_updater -> 
+
     ~ temp charNameOne = translator(thirdChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)

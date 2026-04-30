@@ -95,7 +95,7 @@
     //Storylets condivisi
     
     {
-        - grimoire_firstChar has grimFirstSecondChar:
+        - grimoire_secondChar has grimFirstSecondChar:
             ~ grimFirstSecondChar_text()
     }
 
@@ -216,19 +216,19 @@
     //Feedback ingrediente extra
     {
         - kitchen_secondCharExtraIngredient == universalIngredient:
-            L'aggiunta di {ingredientTranslator(kitchen_firstCharExtraIngredient)} ha ricordato a {charNameTwo} la torta che sua nonna gli ha fatto per un compleanno in cui tutti erano a casa felici e non arrabbiati.
+            L'aggiunta di {ingredientTranslator(kitchen_secondCharExtraIngredient)} ha ricordato a {charNameTwo} la torta che sua nonna gli ha fatto per un compleanno in cui tutti erano a casa felici e non arrabbiati.
             Per questo ha confidato a {player_name} che a lui piacciono le persone coerenti, che pensano in un modo preciso. Altrimenti gli sembra che le persone vogliono solo avere ragione.
 
 
         - secondChar_favouritesGifts has kitchen_secondCharExtraIngredient:
-            {charNameTwo} ha adorato l'aggiunta di {ingredientTranslator(kitchen_firstCharExtraIngredient)}, e per questo ha confidato a {player_name} che a lui piacciono le persone coerenti, che pensano in un modo preciso. Altrimenti gli sembra che le persone vogliono solo avere ragione.
+            {charNameTwo} ha adorato l'aggiunta di {ingredientTranslator(kitchen_secondCharExtraIngredient)}, e per questo ha confidato a {player_name} che a lui piacciono le persone coerenti, che pensano in un modo preciso. Altrimenti gli sembra che le persone vogliono solo avere ragione.
 
    
         - secondChar_goodGifts has kitchen_secondCharExtraIngredient:
-            {charNameTwo} ha apprezzato l'aggiunta di {ingredientTranslator(kitchen_firstCharExtraIngredient)}, anche se non è la sua cosa preferita, e ha detto a {player_name} che gli piacciono i cani, ma non quando fanno le cose a caso, come correre da una parte all'altra. E la stessa cosa vale per le conversazioni.
+            {charNameTwo} ha apprezzato l'aggiunta di {ingredientTranslator(kitchen_secondCharExtraIngredient)}, anche se non è la sua cosa preferita, e ha detto a {player_name} che gli piacciono i cani, ma non quando fanno le cose a caso, come correre da una parte all'altra. E la stessa cosa vale per le conversazioni.
 
         - kitchen_secondCharExtraIngredient != ():
-            {charNameTwo} ha detestato l'aggiunta di {ingredientTranslator(kitchen_firstCharExtraIngredient)} nella ricetta.
+            {charNameTwo} ha detestato l'aggiunta di {ingredientTranslator(kitchen_secondCharExtraIngredient)} nella ricetta.
         
         - else:
             Cucinando con {charNameThree}, {player_name} ha deciso di non aggiungere alcun ingrediente aggiuntivo.

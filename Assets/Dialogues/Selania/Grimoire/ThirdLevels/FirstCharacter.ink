@@ -209,7 +209,7 @@
     //Feedback ingrediente extra
     {
         - kitchen_firstCharExtraIngredient == universalIngredient:
-            AGGIUNGI RICORDO IMPORTANTE DI CHITARRA.
+            L'aggiunta di {ingredientTranslator(kitchen_firstCharExtraIngredient)} ha ricordato a {charNameOne} i cenoni di Natale quando era piccola e poteva cucinare con sua madre, presa dall'attesa dei regali il giorno dopo.
 
         - firstChar_favouritesGifts has kitchen_firstCharExtraIngredient:
                 {charNameOne} ha apprezzato l'aggiunta di {ingredientTranslator(kitchen_firstCharExtraIngredient)}, e ha raccontato a {player_name} che sa che non è sempre facilissimo capire come ragiona, ma che alla fine basta non riempirla di commenti rigidini e razionali quando si parla, e che si trova più a suo agio con le cose emotive che non con i dati freddi e distaccati.
