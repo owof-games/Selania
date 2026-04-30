@@ -40,7 +40,7 @@
     
     {charTag(PG, "neutral")}:      In particolare, ripensando alle nostre conversazioni, mi farebbe piacere parlare di più... 
         {
-            - not first_char_main_storylets.nine:
+            - grimoire_secondChar hasnt grimSecondCharEight:
                 {charTag(TheWitch, witch_state())}:   <i>{charNameTwo} ha altri temi che vorrebbe condividere con {player_name}, ma vorrebbe che {player_name} prima lo conoscesse un po' meglio.</i>
         }
 
@@ -49,32 +49,19 @@
                     -> storage_glyphs(SecondCharacter)->
                     -> first_theme
 
-            + \ {second_char_main_storylets.six} {charTag(PG, "neutral")}:          Della scuola.
-                {
-                    - second_char_main_storylets.six:
-                        ~ cooking_animations_on()
-                        -> storage_glyphs(SecondCharacter)->
-                        -> second_theme
+            + \ {grimoire_secondChar has grimSecondCharSix} {charTag(PG, "neutral")}:          Della scuola.
+                    ~ cooking_animations_on()
+                    -> storage_glyphs(SecondCharacter)->
+                    -> second_theme
+    
+            + \ {grimoire_secondChar has grimSecondCharEight} {charTag(PG, "neutral")}:         Delle bugie.
+                    ~ cooking_animations_on()
+                    -> storage_glyphs(SecondCharacter)->
+                    -> third_theme
                     
-                    - else:
-                        -> top
-                }
-            
-            + \ {second_char_main_storylets.eight} {charTag(PG, "neutral")}:         Delle bugie.
-                {
-                
-                    - second_char_main_storylets.eight:
-                        ~ cooking_animations_on()
-                        -> storage_glyphs(SecondCharacter)->
-                        -> third_theme
-                    
-                    - else:
-                        -> top
-                }
-            
-            + \ {charTag(PG, "neutral")}:         Ho cambiato idea.
-                {charTag(SecondCharacter, "neutral")}:        Sì no boh.
-                Allora vado a salutare la rana.
+            + \ {charTag(PG, "neutral")}:                       Ho cambiato idea.
+                {charTag(SecondCharacter, "neutral")}:          Sì no boh.
+                                                                Allora vado a salutare la rana.
 
                     ~ kitchen_secondCharCookingTogetherInvite = false
                     ~ kitchen_secondCharCookingTogetherWaiting = 0
@@ -155,38 +142,38 @@
 
             -> kitchen_moon_feedback -> 
         
-            + \ {charTag(PG, "neutral")}:                       <i>Preparo una base per biscotti sportivi.</i>
-                ~ kitchen_recipeNoun = "Biscotti"
+            + (fire1)\ {charTag(PG, "neutral")}:                <i>Preparo una base per una torta sportiva.</i>
+                ~ kitchen_recipeNoun = "Torta"
                 -> glyph_modifier_variation_management(PG, fireC)->
                 {charTag(SecondCharacter, "neutral")}:          Bleah.
-                                                                Non i biscotti.
+                                                                Non la torta.
                                                                 Ma lo sport.
                                                                 Bleah!
                
-            + \ {charTag(PG, "neutral")}:                       <i>Stendo della sfoglia per brioches giocose.</i>
-                ~ kitchen_recipeNoun = "Brioches"
+            + (air1)\ {charTag(PG, "neutral")}:                 <i>Stendo della sfoglia per una brioche giocosa.</i>
+                ~ kitchen_recipeNoun = "Brioche"
                 -> glyph_modifier_variation_management(PG, airC)->
                 {charTag(SecondCharacter, "energy")}:           E a cosa giochi?
                                                                 A me piace tantissimo fare quelli di intelligenza ora.
                                                                 Quando sono a casa di mio fratello posso starci tutto il tempo che voglio!
              
-            + \ {charTag(PG, "neutral")}:                       <i>Impasto un preparato per crostate socievoli.</i>
+            + (water1)\ {charTag(PG, "neutral")}:               <i>Impasto un preparato per crostate socievoli.</i>
                ~ kitchen_recipeNoun = "Crostata"
                -> glyph_modifier_variation_management(PG, waterC)->
                {charTag(SecondCharacter, "neutral")}:           Nel senso che stai sempre con le persone?
                                                                 Sempre?
                {charTag(SecondCharacter, "melanchonic")}:       Anche dopo la scuola e il lavoro?
         
-            + \ {charTag(PG, "neutral")}:                       <i>Pulisco le formine per gelati artistici.</i>
-                ~ kitchen_recipeNoun = "Gelato"
+            + (aether1)\ {charTag(PG, "neutral")}:              <i>Pulisco le formine per una mousse artistica.</i>
+                ~ kitchen_recipeNoun = "Mousse"
                 -> glyph_modifier_variation_management(PG, aetherC)->
                 {charTag(SecondCharacter, "neutral")}:          Mmm.
                                                                 So che è roba che piace a {charNameOne}.
                                                                 A me mi piace fare le cose.
                                                                 Ma non so se mi piace guardarle.
     
-            + \ {charTag(PG, "neutral")}:                       <i>Raffreddo la frutta per sorbetti sonnacchiosi.</i>
-                ~ kitchen_recipeNoun = "Sorbetto"
+            + (earth1)\ {charTag(PG, "neutral")}:               <i>Raffreddo la frutta per una granita sonnacchiosa.</i>
+                ~ kitchen_recipeNoun = "Granita"
                 -> glyph_modifier_variation_management(PG, earthC)->
                 {grimoire_firstChar has grimFirstSecondChar: Ancora con questa cosa del dormire!|Che balle dormire!}
                 {charTag(SecondCharacter, "angry")}:            Ci sono così tante cose da fare!
@@ -259,7 +246,7 @@
         {charTag(SecondCharacter, "emotional")}:                Questa è una cosa bellissima!
         {charTag(SecondCharacter, "energy")}:                   Ma tu capisci sempre le persone?
         
-            + \ {charTag(PG, "neutral")}:                       <i>Aggiungo del caramello della perplessità.</i>
+            + (air2)\ {charTag(PG, "neutral")}:                 <i>Aggiungo del caramello della perplessità.</i>
                 ~ kitchen_recipeAdjective = "perplessità"
                 -> glyph_modifier_variation_management(PG, airC)->
                 {charTag(SecondCharacter, "neutral")}:          Anche io.
@@ -269,13 +256,13 @@
                                                                 Ma almeno quello so che se piove starnutisce.
                 {charTag(SecondCharacter, "melanchonic")}:      Mentre mamma a volte è felice e a volte si arrabbia.
 
-            + \ {charTag(PG, "neutral")}:                       <i>Spolvero del cacao della convinzione.</i>
+            + (aether2) \ {charTag(PG, "neutral")}:             <i>Spolvero del cacao della convinzione.</i>
                 ~ kitchen_recipeAdjective = "convinzione"
                 -> glyph_modifier_variation_management(PG, aetherC)->
                 {charTag(SecondCharacter, "neutral")}:          Magari mentre siamo assieme capisco qualcosa da te allora.
                                                                 Magari.
              
-            + \ {charTag(PG, "neutral")}:                       <i>Verso dello sciroppo della negazione.</i>
+            + (fire2)\ {charTag(PG, "neutral")}:                <i>Verso dello sciroppo della negazione.</i>
                ~ kitchen_recipeAdjective = "negazione"
                -> glyph_modifier_variation_management(PG, fireC)->
                 {charTag(SecondCharacter, "neutral")}:          Magari allora puoi provare anche tu con gli animali.
@@ -284,14 +271,14 @@
                                                                 Che non hanno assolutamente senso.
                 {charTag(SecondCharacter, "neutral")}:          Contento lui.
                 
-            + \ {charTag(PG, "neutral")}:                       <i>Grattugio della noce della vicinanza.</i>
+            + (earth2)\ {charTag(PG, "neutral")}:               <i>Grattugio della noce della vicinanza.</i>
                 ~ kitchen_recipeAdjective = "vicinanza"
                 -> glyph_modifier_variation_management(PG, earthC)->
                 {charTag(SecondCharacter, "neutral")}:          Si no boh.
                                                                 Le persone vicine mi sembrano ancora più incasinate.
                 {charTag(SecondCharacter, "melanchonic")}:      Per loro devo avere almeno tre animali per capirle.
     
-            + \ {charTag(PG, "neutral")}:                       <i>Mescolo della vaniglia della solitudine.</i>
+            + (water2)\ {charTag(PG, "neutral")}:               <i>Mescolo della vaniglia della solitudine.</i>
                 ~ kitchen_recipeAdjective = "solitudine"
                 -> glyph_modifier_variation_management(PG, waterC)->
                 {charTag(SecondCharacter, "neutral")}:          Già.
@@ -357,7 +344,7 @@
                                                                 Voglio solo essere me.
                                                                 A te ti piace come ti trattano le altre persone?
 
-            + \ {charTag(PG, "neutral")}:                       <i>Guarnisco con delle ciliege deluse.</i>
+            + (air3)\ {charTag(PG, "neutral")}:                 <i>Guarnisco con delle ciliege deluse.</i>
                 ~ kitchen_recipeComplement = "ciliege deluse"
                 -> glyph_modifier_variation_management(PG, airC)->
                 {charTag(SecondCharacter, "neutral")}:          A mamma piace tanto quella parola.
@@ -367,20 +354,20 @@
                                                                 Te le ricordi più buone.
                                                                 Poi le mangi e bleah!
                
-            + \ {charTag(PG, "neutral")}:                       <i>Decoro con della granella soddisfatta.</i>
+            + (earth3)\ {charTag(PG, "neutral")}:               <i>Decoro con della granella soddisfatta.</i>
                 ~ kitchen_recipeComplement = "granella soddisfatta"
                 -> glyph_modifier_variation_management(PG, earthC)->
                 {charTag(SecondCharacter, "neutral")}:          Deve essere bello.
                                                                 Come l'amico di mio fratello.
                 {charTag(SecondCharacter, "emotional")}:        Mio fratello dice che ha un cuore grande e gli vogliono tutti bene.
              
-            + \ {charTag(PG, "neutral")}:                       <i>Rifinisco con della glassa sofferente.</i>
+            + (water3)\ {charTag(PG, "neutral")}:               <i>Rifinisco con della glassa sofferente.</i>
                ~ kitchen_recipeComplement = "glassa sofferente"
                -> glyph_modifier_variation_management(PG, waterC)->
                 {charTag(SecondCharacter, "neutral")}:          Mmm.
                                                                 Mi dispiace.
         
-            + \ {charTag(PG, "neutral")}:                       <i>Aggiungo delle crema migliorante.</i>
+            + (fire3)\ {charTag(PG, "neutral")}:                <i>Aggiungo delle crema migliorante.</i>
                 ~ kitchen_recipeComplement = "con crema migliorante"
                 -> glyph_modifier_variation_management(PG, fireC)->
                 {charTag(SecondCharacter, "neutral")}:          Nonna dice che tutto migliora, sempre.
@@ -388,7 +375,7 @@
                                                                 Mica puoi migliorare all'infinito.
                                                                 Non c'ha senso.
     
-            + \ {charTag(PG, "neutral")}:                       <i>Spalmo della confettura altalenante.</i>
+            + (aether3)\ {charTag(PG, "neutral")}:              <i>Spalmo della confettura altalenante.</i>
                 ~ kitchen_recipeComplement = "confettura altalenante"
                 -> glyph_modifier_variation_management(PG, aetherC)->
                 {charTag(SecondCharacter, "neutral")}:          Cioè che dipende dalle persone?
@@ -474,19 +461,19 @@
 
                 -> kitchen_moon_feedback -> 
             
-            + \ {charTag(PG, "neutral")}:                       <i>Preparo un mediocre stampo da cupcake.</i>
+            +(air1) \ {charTag(PG, "neutral")}:                 <i>Preparo un mediocre stampo da cupcake.</i>
                 ~ kitchen_recipeNoun = "Cupcake"
                 -> glyph_modifier_variation_management(PG, airC)->
                     {charTag(SecondCharacter, "neutral")}:      Nonna dice sempre che la virtù sta a metà.
                                                                 Mamma dice che è una frase da perdenti.
 
-            + \ {charTag(PG, "neutral")}:                       <i>Pulisco le migliori formine da muffin.</i>
+            + (fire1)\ {charTag(PG, "neutral")}:                <i>Pulisco le migliori formine da muffin.</i>
                 ~ kitchen_recipeNoun = "Muffin"
                 -> glyph_modifier_variation_management(PG, fireC)->
                     {charTag(SecondCharacter, "energy")}:       Sii.
                                                                 Tra migliori ci capiamo!!!
              
-            + \ {charTag(PG, "neutral")}:                       <i>Infarino la peggior teglia per tartellette.</i>
+            + (water1)\ {charTag(PG, "neutral")}:               <i>Infarino la peggior teglia per tartellette.</i>
                ~ kitchen_recipeNoun = "Tartellette "
                -> glyph_modifier_variation_management(PG, waterC)->
                     {charTag(SecondCharacter, "neutral")}:      Uh.
@@ -494,7 +481,7 @@
                                                                 Solo Lara è peggio di me.
                     {charTag(SecondCharacter, "melanchonic")}:  Ma mi batte a inglese.
         
-            + \ {charTag(PG, "neutral")}:                       <i>Riscaldo l'unica piastra da waffle.</i>
+            +(aeterh1) \ {charTag(PG, "neutral")}:              <i>Riscaldo l'unica piastra da waffle.</i>
                 ~ kitchen_recipeNoun = "Waffle"
                 -> glyph_modifier_variation_management(PG, aetherC)->
                     {charTag(SecondCharacter, "neutral")}:      Sulla cima.
@@ -502,7 +489,7 @@
                                                                 Sì sì.
 
                 //Più terra   
-            + \ {charTag(PG, "neutral")}:                       <i>Controllo una disperata teglia da plumcake.</i>
+            +(earth1) \ {charTag(PG, "neutral")}:               <i>Controllo una disperata teglia da plumcake.</i>
                 ~ kitchen_recipeNoun = "Plumcake"
                 -> glyph_modifier_variation_management(PG, earthC)->
                     {charTag(SecondCharacter, "neutral")}:      Mi sembra piena di buchi, {player_name}.
@@ -582,20 +569,20 @@
                                                                 E te?
             {charTag(SecondCharacter, "melanchonic")}:          Magari poi io parlo tanto e tu cucini e ti agiti?
         
-                + \ {charTag(PG, "neutral")}:                   <i>Trito della menta isolata.</i>
+                + (water2)\ {charTag(PG, "neutral")}:           <i>Trito della menta isolata.</i>
                     ~ kitchen_recipeAdjective = "solitudine"
                     -> glyph_modifier_variation_management(PG, waterC)->
                     {charTag(SecondCharacter, "neutral")}:      Deve essere difficile questo lavoro allora.
                                                                 Perché c'è sempre gente in giro.
                                                                 E devi parlare con noi.
                 
-                + \ {charTag(PG, "neutral")}:                   <i>Sbuccio della vaniglia frenetica.</i>
+                + (fire2)\ {charTag(PG, "neutral")}:            <i>Sbuccio della vaniglia frenetica.</i>
                     ~ kitchen_recipeAdjective = "frenesia"
                     -> glyph_modifier_variation_management(PG, fireC)->
                                                                 Un po' come {charNameFive} allora.
                                                                 Che corre sempre da una parte all'altra.
                 
-                + \ {charTag(PG, "neutral")}:                   <i>Spremo del cedro organizzato.</i>
+                + (earth2)\ {charTag(PG, "neutral")}:           <i>Spremo del cedro organizzato.</i>
                     ~ kitchen_recipeAdjective = "organizzazione"
                     -> glyph_modifier_variation_management(PG, earthC)->
                     {charTag(SecondCharacter, "neutral")}:      Io ci provo a organizzarmi.
@@ -603,7 +590,7 @@
                                                                 Voglio fare le cose con calma.
                     {charTag(SecondCharacter, "melanchonic")}:  Ma poi finisco nel caos.
             
-                + \ {charTag(PG, "neutral")}:                   <i>Setaccio della cannella ritardataria.</i>
+                + (air2)\ {charTag(PG, "neutral")}:             <i>Setaccio della cannella ritardataria.</i>
                     ~ kitchen_recipeAdjective = "procrastinazione"
                     -> glyph_modifier_variation_management(PG, airC)->
                     {charTag(SecondCharacter, "neutral")}:      Lara in classe fa sempre così.
@@ -611,7 +598,7 @@
                     {charTag(SecondCharacter, "energy")}:       La maestra dice che Lara si dimenticherà la testa a casa un giorno.
                                                                 Sarebbe suuuuuuperdivertente!
         
-                + \ {charTag(PG, "neutral")}:                   <i>Frullo del caffè caotico.</i>
+                + (aether2)\ {charTag(PG, "neutral")}:          <i>Frullo del caffè caotico.</i>
                     ~ kitchen_recipeAdjective = "caoticità"
                     -> glyph_modifier_variation_management(PG, aetherC)->
                     {charTag(SecondCharacter, "angry")}:        Io non posso bere il caffè.
@@ -695,28 +682,28 @@
         {charTag(SecondCharacter, "energy")}:                   Magari con te capisco come fare?
         {charTag(SecondCharacter, "neutral")}:                  Tu ti senti {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}?
 
-            + \ {charTag(PG, "neutral")}:                       <i>Do una spolverata di moltissimo cacao.</i>
+            + (water3)\ {charTag(PG, "neutral")}:                <i>Do una spolverata di moltissimo cacao.</i>
                 ~ kitchen_recipeComplement = "moltissimo cacao"
                 -> glyph_modifier_variation_management(PG, waterC)->
                 {charTag(SecondCharacter, "energy")}:           Però ora hai me!
                 {charTag(SecondCharacter, "emotional")}:        E {charNameOne}!
                 {charTag(SecondCharacter, "energy")}:           E me!
                 
-            + \ {charTag(PG, "neutral")}:                       <i>Incorporo un poco di marmellata.</i>
+            + (air3)\ {charTag(PG, "neutral")}:                 <i>Incorporo un poco di marmellata.</i>
                 ~ kitchen_recipeComplement = "poca marmellata"
                 -> glyph_modifier_variation_management(PG, airC)->
                 {charTag(SecondCharacter, "neutral")}:          In effetti già qui hai fatto tante amicizie, vero?
                 {charTag(SecondCharacter, "emotional")}:        Anche con me.
              
 
-            + \ {charTag(PG, "neutral")}:                       <i>Non aggiungo nulla: è tutto perfetto così.</i>
-               ~ kitchen_recipeComplement = "aria"
+            + (earth3)\ {charTag(PG, "neutral")}:               <i>Non aggiungo nulla: è tutto perfetto così.</i>
+               ~ kitchen_recipeComplement = "aria perfetta"
                -> glyph_modifier_variation_management(PG, earthC)->
                 {charTag(SecondCharacter, "energy")}:           Woah.
                                                                 Deve essere bello.
                 {charTag(SecondCharacter, "melanchonic")}:      Spero di essere anche io tuo amico!
         
-            + \ {charTag(PG, "neutral")}:                       <i>Spennello della glassa solitaria.</i>
+            + (fire3)\ {charTag(PG, "neutral")}:                <i>Spennello della glassa solitaria.</i>
                 ~ kitchen_recipeComplement = "glassa solitaria"
                 -> glyph_modifier_variation_management(PG, fireC)->
                 {charTag(SecondCharacter, "neutral")}:          Mio fratello è uno solitario.
@@ -725,7 +712,7 @@
                                                                 E poi ridono.
                 {charTag(SecondCharacter, "angry")}:            Non capisco mai perché.
     
-            + \ {charTag(PG, "neutral")}:                       <i>Farcisco con pochi ma affidabili pezzetti di cioccolato.</i>
+            + (aether3)\ {charTag(PG, "neutral")}:              <i>Farcisco con pochi ma affidabili pezzetti di cioccolato.</i>
                 ~ kitchen_recipeComplement = "affidabili pezzetti di cioccolato"
                 -> glyph_modifier_variation_management(PG, aetherC)->
                 {charTag(SecondCharacter, "emotional")}:        Come nonna.
@@ -946,41 +933,41 @@
                                                                 E ha la piscina e tantissimi giochi.
         {charTag(SecondCharacter, "energy")}:                   A te cosa ti rende interessante?
 
-            + \ {charTag(PG, "neutral")}:                       <i>Shakero un bicchiere vuoto.</i>
+            + (aether2)\ {charTag(PG, "neutral")}:              <i>Shakero un bicchiere vuoto.</i>
                 ~ kitchen_recipeAdjective = "assenza"
                 -> glyph_modifier_variation_management(PG, aetherC)->
-                {charTag(SecondCharacter, "neutral")}:           Non è vero!
+                {charTag(SecondCharacter, "neutral")}:          Non è vero!
                                                                 Abbiamo già parlato tantissimo!
                
-            + \ {charTag(PG, "neutral")}:                       <i>Aggiungo della lavanda empatica.</i>
+            + (water2)\ {charTag(PG, "neutral")}:               <i>Aggiungo della lavanda empatica.</i>
                 ~ kitchen_recipeAdjective = "empatia"
                 -> glyph_modifier_variation_management(PG, waterC)->
                 {charTag(SecondCharacter, "neutral")}:          Come quando io mi faccio male e tu senti dolore?
                                                                 Deve essere faticoso!
              
-            + \ {charTag(PG, "neutral")}:                       <i>Grattugio della scorza di chinotto sportivo.</i>
+            + (earth2)\ {charTag(PG, "neutral")}:                <i>Grattugio della scorza di chinotto sportivo.</i>
                ~ kitchen_recipeAdjective = "sportività"
-               -> glyph_modifier_variation_management(PG, fireC)->
+               -> glyph_modifier_variation_management(PG, earthC)->
                 {charTag(SecondCharacter, "melanchonic")}:      Magari conosci Jin.
                                                                 O suo fratello.
                 {charTag(SecondCharacter, "neutral")}:          Il fratello di Jin è ENORME!
                                                                 È campione di sollevamento pesi.
                 {charTag(SecondCharacter, "energy")}:           Una volta mi ha alzato con una sola mano!
         
-            + \ {charTag(PG, "neutral")}:                       <i>Misuro dell'acqua di rose erudita.</i>
+            + (air2)\ {charTag(PG, "neutral")}:                 <i>Misuro dell'acqua di rose erudita.</i>
                 ~ kitchen_recipeAdjective = "erudizione"
                 -> glyph_modifier_variation_management(PG, airC)->
-                {charTag(SecondCharacter, "energy")}:         Anche a me piace sapere le cose.
-                {charTag(SecondCharacter, "neutral")}:        Ma poi devi trovare le persone a cui piacciono le cose che piacciono a te.
-                {charTag(SecondCharacter, "melanchonic")}:    O ti dicono che sei strano.
+                {charTag(SecondCharacter, "energy")}:           Anche a me piace sapere le cose.
+                {charTag(SecondCharacter, "neutral")}:          Ma poi devi trovare le persone a cui piacciono le cose che piacciono a te.
+                {charTag(SecondCharacter, "melanchonic")}:      O ti dicono che sei strano.
             
-            //Più terra  
-            + \ {charTag(PG, "neutral")}:                   <i>Macino del pepe rosa pratico.</i>
+
+            + (fire2)\ {charTag(PG, "neutral")}:                <i>Macino del pepe rosa pratico.</i>
                 ~ kitchen_recipeAdjective = "praticità"
-                -> glyph_modifier_variation_management(PG, earthC)->
-                {charTag(SecondCharacter, "energy")}:       Tipo che sai come si sistemano i treni?
-                                                            E come creare l'elettricità?
-                                                            E attirare un prociorso?      
+                -> glyph_modifier_variation_management(PG, fireC)->
+                {charTag(SecondCharacter, "energy")}:           Tipo che sai come si sistemano i treni?
+                                                                E come creare l'elettricità?
+                                                                E attirare un prociorso?      
             -      
     
         {charTag(SecondCharacter, "neutral")}:              Bleah.
@@ -1040,13 +1027,13 @@
                                                             Come dire bugie quando sei un bambino.
         {charTag(SecondCharacter, "energy")}:               Per te cosa significa essere grande?
         
-            + \ {charTag(PG, "neutral")}:                   <i>Unisco della cioccolata angosciata.</i>
+            + (water3)\ {charTag(PG, "neutral")}:           <i>Unisco della cioccolata angosciata.</i>
                 ~ kitchen_recipeComplement = "cioccolata angosciata"
                 -> glyph_modifier_variation_management(PG, waterC)->
                 {charTag(SecondCharacter, "angry")}:        Vedi?
                                                             Perché dovrei diventare grande?!?
                
-            + \ {charTag(PG, "neutral")}:                   <i>Caramello delle scorze di limone indipendente.</i>
+            + (fire3)\ {charTag(PG, "neutral")}:            <i>Caramello delle scorze di limone indipendente.</i>
                 ~ kitchen_recipeComplement = "limone indipendente"
                 -> glyph_modifier_variation_management(PG, fireC)->
                 {charTag(SecondCharacter, "neutral")}:      Perché fai quello che vuoi?
@@ -1056,20 +1043,20 @@
                                                             E una lontra.
                 {charTag(SecondCharacter, "neutral")}:      I grandi possono avere uno zoo?
              
-            + \ {charTag(PG, "neutral")}:                   <i>Guarnisco con marshmallow responsabili.</i>
+            + (earth3)\ {charTag(PG, "neutral")}:           <i>Guarnisco con marshmallow responsabili.</i>
                ~ kitchen_recipeComplement = "marshmallow responsabili"
                -> glyph_modifier_variation_management(PG, earthC)->
                {charTag(SecondCharacter, "neutral")}:       Sì no boh.
                                                             Anche i bambini sono responsabili.
                                                             Quindi non è tanto diverso no?
         
-            + \ {charTag(PG, "neutral")}:                   <i>Spolvero dello zenzero fallito.</i>
+            + (aether3)\ {charTag(PG, "neutral")}:          <i>Spolvero dello zenzero fallito.</i>
                 ~ kitchen_recipeComplement = "zenzero fallito"
                 -> glyph_modifier_variation_management(PG, aetherC)->
                 {charTag(SecondCharacter, "melanchonic")}:  Non voglio diventare grandeeeeeee.
                                                             Non vogliooooo!
     
-            + \ {charTag(PG, "neutral")}:                   <i>Verso del succo d'ananas esplorativo.</i>
+            + (air3)\ {charTag(PG, "neutral")}:             <i>Verso del succo d'ananas esplorativo.</i>
                 ~ kitchen_recipeComplement = "ananas esplorativo"
                 -> glyph_modifier_variation_management(PG, airC)->
                 {charTag(SecondCharacter, "neutral")}:      Non ci avevo pensato.
