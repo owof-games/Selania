@@ -2,7 +2,7 @@
 ~ temp charNameTwo = translator(thirdChar_ActualName)
 //Così se decido di uscire dalla conversazione, posso riprendere da dove eravamo rimaste.
     {
-        - not confession:
+        - grimoire_thirdChar hasnt grimThirdCharProposal:
             -> confession
             
         - else:
@@ -353,7 +353,7 @@
     
 
             {
-                - not rewriting_proposal_second_character.secret_ending or not rewriting_proposal_first_character.secret_ending:
+                - grimoire_fifthChar hasnt grimMentorSecondSecretEnding && grimoire_fifthChar hasnt grimMentorFirstSecretEnding:
                     {charTag(TheWitch, witch_state())}:   <i>{charNameTwo} ripone piena fiducia in {player_name}, ed è pronto a condividere con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} una informazione importante.
             }
 

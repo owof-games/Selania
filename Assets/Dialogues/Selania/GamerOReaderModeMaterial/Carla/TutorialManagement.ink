@@ -98,10 +98,10 @@ VAR tutorial_rereadingActive = false
 
 //E uno per la strega
 {
-    - are_two_entities_together(TheWitch, PG) && entity_location(PG) == Dump && witch_intro && tutorial_mentorTalkingChoiceRelationship && not tutorial_witchRelationship:
+    - are_two_entities_together(TheWitch, PG) && entity_location(PG) == Dump && witch_intro && tutorial_mentorTalkingChoiceRelationship && grimoire_appendices hasnt grimChoicesWitch:
         -> tutorial_witchRelationship
 
-    - are_two_entities_together(TheWitch, PG) && entity_location(PG) == Dump && player_accessiblePlaces has Nest && tutorial_witchRelationship && not tutorial_witchSigils:
+    - are_two_entities_together(TheWitch, PG) && entity_location(PG) == Dump && player_accessiblePlaces has Nest && grimoire_appendices has grimChoicesWitch && grimoire_appendices hasnt grimSigilsWitch:
         -> tutorial_witchSigils
 
 }

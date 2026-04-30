@@ -9,40 +9,40 @@
         
     //Storylets principali 
         {
-            - not first_char_main_storylets.one:
+            - grimoire_firstChar hasnt grimFirstCharOne:
                 -> first_char_main_storylets.one
         
-            - not first_char_main_storylets.two:
+            - grimoire_firstChar hasnt grimFirstCharTwo:
                 -> first_char_main_storylets.two
                 
-            - not first_char_main_storylets.three:
+            - grimoire_firstChar hasnt grimFirstCharThree:
                 -> first_char_main_storylets.three
                 
-            - not first_char_main_storylets.four:
+            - grimoire_firstChar hasnt grimFirstCharFour:
                 -> first_char_main_storylets.four
                 
-            - not first_char_main_storylets.five:
+            - grimoire_firstChar hasnt grimFirstCharFive:
                 -> first_char_main_storylets.five
                 
-            - not first_char_main_storylets.six:
+            - grimoire_firstChar hasnt grimFirstCharSix:
                 -> first_char_main_storylets.six
                 
-            - not first_char_main_storylets.seven:
+            - grimoire_firstChar hasnt grimFirstCharSeven:
                 -> first_char_main_storylets.seven
                 
-            - not first_char_main_storylets.eight:
+            - grimoire_firstChar hasnt grimFirstCharEight:
                 -> first_char_main_storylets.eight
                 
-            - not first_char_main_storylets.nine:
+            - grimoire_firstChar hasnt grimFirstCharNine:
                 -> first_char_main_storylets.nine
                 
-            - not first_char_main_storylets.ten:
+            - grimoire_firstChar hasnt grimFirstCharTen:
                 -> first_char_main_storylets.ten
                 
-            - not first_char_main_storylets.eleven:
+            - grimoire_firstChar hasnt grimFirstCharEleven:
                 -> first_char_main_storylets.eleven
                 
-            - not first_char_main_storylets.twelve:
+            - grimoire_firstChar hasnt grimFirstCharTwelve:
                 -> first_char_main_storylets.twelve
                 
             - else:

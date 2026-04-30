@@ -49,7 +49,7 @@
     
 {
     //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylets, ma non ho fatto il tutorial su come funziona
-        - grimoire_secondChar has secondChar_minStoryletsForRewriting && grimoire_appendices hasnt grimRewritingMentor:
+        - grimoire_secondChar has secondChar_minStoryletsForRewriting && grimoire_secondChar hasnt grimSecondCharProposal  && grimoire_appendices hasnt grimRewritingMentor:
                 -> ask
         
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylets, e ho fatto il tutorial su come funziona                    
@@ -72,7 +72,7 @@
         {
             - secondChar_justTalked == false:
             {
-                - not second_char_main_storylets.eight:
+                - grimoire_secondChar hasnt grimSecondCharEight:
                     {shuffle:
                         - {charTag(SecondCharacter, "energy")}:        {grimoire_witch has grimWitchIntro:Ho sentito che hai un'amica magica nella testa, woah!|A un anno sapevo già dire tuuuutto il pi greco!}
                         - {charTag(SecondCharacter, "energy")}:        {horizontalS_discoveredDocs != ():Tutti quei bigliettini che trovi sulla panchina, chissà chi te li manda!|Una volta ho salvato un bambino da un incendio e la sua mamma mi ha fatto una torta gigante.}

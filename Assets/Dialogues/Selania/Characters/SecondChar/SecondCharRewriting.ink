@@ -7,7 +7,7 @@
     
 //Così se decido di uscire dalla conversazione, posso riprendere da dove eravamo rimaste.
     {
-        - not confession:
+        - grimoire_secondChar hasnt grimSecondCharProposal:
             -> confession
             
         - else:

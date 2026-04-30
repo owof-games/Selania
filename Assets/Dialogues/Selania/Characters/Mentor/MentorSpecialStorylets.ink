@@ -10,13 +10,13 @@
         {
         
             - mentor_riccioMentoreViciniColpo == true:
-                {charTag(FifthCharacter, "sad")}:                   {not tutorial_mentorTalkingChoiceRelationship: Ti prego|{player_name}}, almeno tu sii ragionevole. Non ho fatto male a nessuno.
+                {charTag(FifthCharacter, "sad")}:                   {grimoire_appendices hasnt grimChoicesMentor: Ti prego|{player_name}}, almeno tu sii ragionevole. Non ho fatto male a nessuno.
                 {charTag(SecondCharacter, "angry")}:        Bugiarda!
                                                             Sei vecchia e cattiva e bugiarda!
                         ~ change_entity_place(SecondCharacter)
             
             - else:
-                {charTag(FifthCharacter, "neutral")}:                  {not tutorial_mentorTalkingChoiceRelationship: Perdonami,|{player_name}}, hai rispedito quel bambino a casa?
+                {charTag(FifthCharacter, "neutral")}:                  {grimoire_appendices hasnt grimChoicesMentor: Perdonami,|{player_name}}, hai rispedito quel bambino a casa?
                     {
                         - are_two_entities_together(SecondCharacter, PG):
                         {charTag(FifthCharacter, "bored")}:             A quanto vedo no.

@@ -51,17 +51,17 @@
             ~ move_entity(DoggoNoLetters, TrainStop)
                     
         {
-            - not one:
+            - grimoire_firstChar hasnt grimFirstCharLetterOne:
                 -> one
                 
-            - not two:
+            - grimoire_firstChar hasnt grimFirstCharLetterTwo:
                 -> two
         
                 
-            - not three:
+            - grimoire_firstChar hasnt grimFirstCharLetterThree:
                 -> three
 
-            - not four:
+            - grimoire_firstChar hasnt grimFirstCharLetterFour:
                 -> four
 
         }
@@ -110,19 +110,19 @@
             ~ move_entity(DoggoNoLetters, TrainStop)
         
         {
-            - not one:
+            - grimoire_secondChar hasnt grimSecondCharLetterOne:
                 -> one
                 
-            - not two:
+            - grimoire_secondChar hasnt grimSecondCharLetterTwo:
                 -> two
         
                 
-            - not three:
+            - grimoire_secondChar hasnt grimSecondCharLetterThree:
                 -> three
 
-            - not four:
+            - grimoire_secondChar hasnt grimSecondCharLetterFour:
                 -> four
-                
+
         }
     
     = one
@@ -150,20 +150,21 @@
     
     + {are_two_entities_together(DoggoThirdLetters, PG)}[DoggoThirdLetters]
     
-          {
-            - not one:
+        
+        {
+            - grimoire_thirdChar hasnt grimThirdCharLetterOne:
                 -> one
                 
-            - not two:
+            - grimoire_thirdChar hasnt grimThirdCharLetterTwo:
                 -> two
         
                 
-            - not three:
+            - grimoire_thirdChar hasnt grimThirdCharLetterThree:
                 -> three
 
-            - not four:
+            - grimoire_thirdChar hasnt grimThirdCharLetterFour:
                 -> four
-                
+
         }
         
     = one
@@ -186,20 +187,21 @@
     
     + {are_two_entities_together(DoggoFourthLetters, PG)}[DoggoFourthLetters]
         
+         
         {
-            - not one:
+            - grimoire_fourthChar hasnt grimFourthCharLetterOne:
                 -> one
                 
-            - not two:
+            - grimoire_fourthChar hasnt grimFourthCharLetterTwo:
                 -> two
         
                 
-            - not three:
+            - grimoire_fourthChar hasnt grimFourthCharLetterThree:
                 -> three
 
-            - not four:
+            - grimoire_fourthChar hasnt grimFourthCharLetterFour:
                 -> four
-                
+
         }
      = one
         ~ letters_fourthCharLetters_first()
@@ -221,20 +223,21 @@
 
     + {are_two_entities_together(DoggoFifthLetters, PG)}[DoggoFifthLetters]
     
+        
         {
-            - not one:
+            - grimoire_fifthChar hasnt grimFifthCharLetterOne:
                 -> one
                 
-            - not two:
+            - grimoire_fifthChar hasnt grimFifthCharLetterTwo:
                 -> two
         
                 
-            - not three:
+            - grimoire_fifthChar hasnt grimFifthCharLetterThree:
                 -> three
 
-            - not four:
+            - grimoire_fifthChar hasnt grimFifthCharLetterFour:
                 -> four
-                
+
         }
         
      = one

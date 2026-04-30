@@ -39,7 +39,7 @@
     
 {
     //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-        - grimoire_thirdChar has thirdChar_minStoryletsForRewriting && not rewriting_proposal_third_character && grimoire_appendices hasnt grimRewritingMentor:
+        - grimoire_thirdChar has thirdChar_minStoryletsForRewriting && grimoire_thirdChar hasnt grimThirdCharProposal && grimoire_appendices hasnt grimRewritingMentor:
                 -> ask
 
     //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
@@ -98,7 +98,7 @@
 
         //Azioni legate alla riscrittura
             //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-            + {(grimoire_thirdChar has thirdChar_minStoryletsForRewriting) && not rewriting_proposal_third_character && grimoire_appendices hasnt grimRewritingMentor} \ {charTag(PG, "neutral")}:         Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
+            + {(grimoire_thirdChar has thirdChar_minStoryletsForRewriting) && grimoire_thirdChar hasnt grimThirdCharProposal && grimoire_appendices hasnt grimRewritingMentor} \ {charTag(PG, "neutral")}:         Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
                     {charTag(ThirdCharacter, "neutral")}:         Mi sa che {charNameFive} vuole dirti qualcosa prima.
                    
                             ~ thirdChar_tutorial = true

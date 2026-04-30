@@ -39,11 +39,11 @@
     
     {   
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylets, ma non ho fatto il tutorial su come funziona
-        - grimoire_firstChar has firstChar_minStoryletsForRewriting && not rewriting_proposal_first_character && not tutorial_mentorInkAndRewriting:
+        - grimoire_firstChar has firstChar_minStoryletsForRewriting && grimoire_firstChar hasnt grimFirstCharProposal && grimoire_appendices hasnt grimRewritingMentor:
                 -> ask
         
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylets, e ho fatto il tutorial su come funziona                    
-        - grimoire_firstChar has firstChar_minStoryletsForRewriting && grimoire_firstChar hasnt grimFirstCharProposal && tutorial_mentorInkAndRewriting:
+        - grimoire_firstChar has firstChar_minStoryletsForRewriting && grimoire_firstChar hasnt grimFirstCharProposal && grimoire_appendices has grimRewritingMentor:
                 -> ask
         
         //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo         
@@ -136,14 +136,14 @@
 
     //Azioni legate alla riscrittura
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-            + {grimoire_firstChar has firstChar_minStoryletsForRewriting && not rewriting_proposal_first_character && not tutorial_mentorInkAndRewriting} \ {charTag(PG, "neutral")}:         Vorrei aiutarti a leggere la tua storia diversamente.
+            + {grimoire_firstChar has firstChar_minStoryletsForRewriting && grimoire_firstChar hasnt grimFirstCharProposal && grimoire_appendices hasnt grimRewritingMentor} \ {charTag(PG, "neutral")}:         Vorrei aiutarti a leggere la tua storia diversamente.
                 
                 {charTag(FirstCharacter, "annoyed")}:   Ama, mi sa che conviene che tu parli con la nostra fiorellona qui in giro, così ti dice giusto due cose due importanti.
                 Tanto non scappo.
                         -> main
         
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona                    
-            + {grimoire_firstChar has firstChar_minStoryletsForRewriting && grimoire_firstChar hasnt grimFirstCharProposal && tutorial_mentorInkAndRewriting} \ {charTag(PG, "neutral")}:         Ti va di riscrivere la tua storia con me?
+            + {grimoire_firstChar has firstChar_minStoryletsForRewriting && grimoire_firstChar hasnt grimFirstCharProposal && grimoire_appendices has grimRewritingMentor} \ {charTag(PG, "neutral")}:         Ti va di riscrivere la tua storia con me?
                 
                 //Incremento le variazioni del libro della Riscrittora           
                     -> rewriting_proposal_first_character

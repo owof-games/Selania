@@ -70,14 +70,14 @@
                                             Lo troverà sotto il ritratto di ogni personaggia con cui dovrà lavorare.
                                             Tiene traccia dell'ultima e penultima scelta fatte, così può monitorare da sé le variazioni, senza stressare me.
     {
-        - not tutorial_mentorTalkingChoiceRelationship:
-            {charTag(Carla, "sad")}:                Non ha ancora il suo libro?
+        - grimoire_appendices hasnt grimChoicesMentor:
+            {charTag(Carla, "sad")}:                Ma non ha ancora un grimoiro?
             {charTag(Carla, "neutral")}:            Strano, di solito lo consegnano in automatico all'arrivo.
             {charTag(Carla, "bored")}:              Ma qui non possiamo fare niente per aiutarla.  
     }
 
-    E ora sono in pausa.
-    Vada a fare le sue cose.
+                                            E ora sono in pausa.
+                                            Vada a fare le sue cose.
 
     -> carla_closing_storylet
 

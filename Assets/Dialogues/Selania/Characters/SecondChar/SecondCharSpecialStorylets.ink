@@ -5,7 +5,7 @@
     {not_talk: 
     
         - 1: 
-            {charTag(SecondCharacter, "angry")}:        Io ODIO {not tutorial_mentorTalkingChoiceRelationship:quella strega coi petali| {charNameFive}}!
+            {charTag(SecondCharacter, "angry")}:        Io ODIO {grimoire_appendices hasnt grimChoicesMentor:quella strega coi petali| {charNameFive}}!
                                                         E non ci parlerò
                                                         mai
                                                         MAI

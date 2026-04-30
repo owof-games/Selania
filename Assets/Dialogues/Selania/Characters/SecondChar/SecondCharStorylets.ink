@@ -111,7 +111,7 @@
             {charTag(SecondCharacter, "neutral")}:              Detesto quando fa così.
             -
         {charTag(SecondCharacter, "angry")}:                    Ma sai che io non mi ricordo mica il mio nome?
-        {charTag(SecondCharacter, "neutral")}:                  Però non so come mai ma {not tutorial_mentorTalkingChoiceRelationship:il fiore parlante|{charNameFive}} e {charNameOne} mi chiamano {charNameTwo}.
+        {charTag(SecondCharacter, "neutral")}:                  Però non so come mai ma {grimoire_appendices hasnt grimChoicesMentor:il fiore parlante|{charNameFive}} e {charNameOne} mi chiamano {charNameTwo}.
         - (nameSecond)
 
             {

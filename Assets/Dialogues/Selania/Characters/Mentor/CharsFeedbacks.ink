@@ -56,7 +56,7 @@
             - firstChar_relationshipStatus == neutral:
                 {charTag(FifthCharacter, "neutral")}:       Nell'insieme hai sviluppato con {charNameOne} una buona fiducia.
                 {
-                    - not ending_cooking_with_first_char: 
+                    - grimoire_firstChar hasnt grimFirstCharKitchenEnded: 
                                                     Forse cucinare con lei avrebbe aperto qualche altra occasione di chiarimento? Chi lo sa.
                 }
                 {charTag(FifthCharacter, "hurry")}:         Direi: buon lavoro.
@@ -172,7 +172,7 @@
             - secondChar_relationshipStatus == neutral:
                 {charTag(FifthCharacter, "hurry")}:          Sei riuscit{player_pronouns has him:o|{player_pronouns has her:a|ə}} a creare una bella relazione con {charNameTwo}, che si è fidato di te.
                     {
-                        - not ending_cooking_with_first_char:
+                        - grimoire_secondChar hasnt grimSecondCharKitchenEnded::
                                                     Non so se l'hai tenuto lontano dalla cucina per non fare disastri, ma magari avrebbe apprezzato.
                     }
                                                     Hai fatto un buon lavoro.
