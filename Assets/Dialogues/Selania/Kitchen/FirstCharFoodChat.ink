@@ -246,7 +246,7 @@
                                                             Quel tipo di persona che se fai una cagata, te la dice.
             
         + (earth2)\ {charTag(PG, "neutral")}:               <i>Spargo della curcuma divertente.</i>
-            ~ kitchen_recipeAdjective = "allegria"
+            ~ kitchen_recipeAdjective = "comicità"
             -> glyph_modifier_variation_management(PG, airC)->
                                                             L'amicizia da balotta quindi. 
                                                             Da cazzeggio assieme.
@@ -710,14 +710,14 @@
 
             //Risistemare aria e terra
             +(air3) \ {charTag(PG, "neutral")}:             <i>Trituro con gioia dell'anice stellato.</i>
-                ~ kitchen_recipeComplement = "anice stellato"
+                ~ kitchen_recipeComplement = "anice gioioso"
                 -> glyph_modifier_variation_management(PG, airC)->
             {charTag(FirstCharacter, "affectionate")}:      Gioiaaaaa!
                                                             Sì, la gioia è qualcosa che manca tanto in questo mondo ama.
                                                             Sono così felice per te!
             //acqua sempre molto triste
             + (water3)\ {charTag(PG, "neutral")}:           <i>Aggiungo {player_pronouns has him:pieno|{player_pronouns has her:piena|pienə}} di terrore esistenziale dell'origano.</i>
-                ~ kitchen_recipeComplement = "origano"
+                ~ kitchen_recipeComplement = "origano terrorizzato"
                 -> glyph_modifier_variation_management(PG, waterC)->
             {charTag(FirstCharacter, "annoyed")}:           La cosa più millennial che potessi dire, ama.
             {charTag(FirstCharacter, "affectionate")}:      Ma posso capire.
@@ -731,14 +731,14 @@
             {charTag(FirstCharacter, "sad")}:               E nel mentre il dubbio ti rimane: avrà senso tutta 'sta roba?
         
             +(aether3) \ {charTag(PG, "neutral")}:          <i>Tosto {player_pronouns has him:rassegnato|{player_pronouns has her:rassegnata|rassegnatə}} del coriandolo.</i>
-                ~ kitchen_recipeComplement = "coriandolo"
+                ~ kitchen_recipeComplement = "coriandolo rassegnato"
                 -> glyph_modifier_variation_management(PG, aetherC)->
             {charTag(FirstCharacter, "sad")}:               No no, niente rassegnazione {player_name}!
             {charTag(FirstCharacter, "neutral")}:           Mo mi invento qualcosa per tirarti su.
             {charTag(FirstCharacter, "curious")}:           Tipo: vino? 
     
             + (fire3)\ {charTag(PG, "neutral")}:            <i>Caramello {player_pronouns has him:sopraffatto|{player_pronouns has her:sopraffatta|sopraffattə}} della salvia.</i>
-                ~ kitchen_recipeComplement = "salvia"
+                ~ kitchen_recipeComplement = "salvia sopraffatta"
                 -> glyph_modifier_variation_management(PG, fireC)->
             {charTag(FirstCharacter, "sad")}:               Sentimento comune.
             {charTag(FirstCharacter, "neutral")}:           Però può consolare un po'?
@@ -1018,20 +1018,20 @@
 
 
             + (fire3)\ {charTag(PG, "neutral")}:            <i>Brucio del peperoncino.</i>
-                ~ kitchen_recipeComplement = "peperoncino"
+                ~ kitchen_recipeComplement = "peperoncino bruciato"
                 -> glyph_modifier_variation_management(PG, fireC)->
             {charTag(FirstCharacter, "sad")}:               Merda.
             {charTag(FirstCharacter, "neutral")}:           Spero non per insoddisfazione.
             {charTag(FirstCharacter, "sad")}:               Perché non so te, ma è dura essere soddisfattə di quello che si crea.
 
             + (aether3)\ {charTag(PG, "neutral")}:         <i>Spargo ovunque del cardamomo.</i>
-                ~ kitchen_recipeComplement = "cardamomo"
+                ~ kitchen_recipeComplement = "cardamomo sparso"
                 -> glyph_modifier_variation_management(PG, aetherC)->
             {charTag(FirstCharacter, "neutral")}:           Hai creato qualcosa, vuoi che lo conoscano più persone possibile.
                                                             Credo.
              
             + (earth3)\ {charTag(PG, "neutral")}:           <i>Seleziono dei chiodi di garofano.</i>
-               ~ kitchen_recipeComplement = "chiodi di garofano"
+               ~ kitchen_recipeComplement = "chiodi di garofano selezionati"
                -> glyph_modifier_variation_management(PG, earthC)->
             {charTag(FirstCharacter, "neutral")}:           Anche a me piace condividere solo con la cerchia ristretta di am3.
             {charTag(FirstCharacter, "neutral")}:           Mi fa sentire al sicuro.
@@ -1039,7 +1039,7 @@
                                                             O finisce per essere una conversazione privata.
         
             + (water3)\ {charTag(PG, "neutral")}:           <i>Copro dello zenzero.</i>
-                ~ kitchen_recipeComplement = "zenzero"
+                ~ kitchen_recipeComplement = "zenzero coperto"
                 -> glyph_modifier_variation_management(PG, waterC)->
             {charTag(FirstCharacter, "neutral")}:           Tieni le tue creature per te.
             {charTag(FirstCharacter, "curious")}:           Sarà un gesto di affetto o di insicurezza? 
@@ -1048,7 +1048,7 @@
 
             //non è proprio una risposta da aria, se è una cosa creativa
             + (air3)\ {charTag(PG, "neutral")}:             <i>Aggiungo con disinteresse del cumino.</i>
-                ~ kitchen_recipeComplement = "cumino"
+                ~ kitchen_recipeComplement = "cumino disinteressato"
                 -> glyph_modifier_variation_management(PG, airC)->
             {charTag(FirstCharacter, "neutral")}:           Quello che conta è creare e basta per te, quindi?
                                                             Ha senso.
@@ -1402,28 +1402,6 @@
     {charTag(FirstCharacter, "curious")}:               E quindi ti ho lasciato qualcosina su uno degli alberi della cucina. 
                                                         Spero possa portarti un po' di gioia, {player_name}.
     {charTag(FirstCharacter, "neutral")}:               A dopo.
-
-
-            + \ {charTag(PG, "neutral")}:                      Scelta acqua
-                    -> glyph_modifier_variation_management(FirstCharacter, waterC)->
-                
-                
-            + \ {charTag(PG, "neutral")}:                     Scelta spirito
-                    -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
-                
-            
-            + \ {charTag(PG, "neutral")}:                      Scelta terra
-                    -> glyph_modifier_variation_management(FirstCharacter, earthC)->
-                
-            
-            + \ {charTag(PG, "neutral")}:                    Scelta aria
-                    -> glyph_modifier_variation_management(FirstCharacter, airC)->
-                
-            
-            + \ {charTag(PG, "neutral")}:                      Scelta fuoco
-                    -> glyph_modifier_variation_management(FirstCharacter, fireC)-> 
-                
-            -
 
     -> first_char_closing_storylet ->
     ->->
