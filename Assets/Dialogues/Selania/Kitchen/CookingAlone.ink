@@ -170,7 +170,7 @@
                                                         Ma tu che ci lavori tanto assieme, che idea ti sei fatt{player_pronouns has him:o|{player_pronouns has her:a|ə}} di {charNameFive}?
 
             + \ {charTag(PG, "neutral")}:         <i>Decoro con della granella di affetto.</i>
-                    ~ kitchen_recipeComplement = "con granella di affetto"
+                    ~ kitchen_recipeComplement = "granella di affetto"
                 -> glyph_modifier_variation_management(PG, waterC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       Eh, ma si vede che tu c'ha il cuore grande.
                                                                 Come zia Graaak.
@@ -180,7 +180,7 @@
                                                                 Per fortuna che ha me.
               
             + \ {charTag(PG, "neutral")}:         <i>Abbellisco con delle gocce di cioccolato e sospetto.</i>
-                    ~ kitchen_recipeComplement = "con gocce di cioccolato e sospetto"
+                    ~ kitchen_recipeComplement = "gocce di cioccolato sospettoso"
                 -> glyph_modifier_variation_management(PG, earthC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       Come nei thriller?
                                                                 Quindi c'è un crimine?
@@ -191,7 +191,7 @@
                                                                 A Franco piace sempre il cibo.
    
             + \ {charTag(PG, "neutral")}:         <i>Guarnisco con un battuto di caramello e indifferenza.</i>
-                    ~ kitchen_recipeComplement = "con battuto di caramello e indifferenza"
+                    ~ kitchen_recipeComplement = "battuto di caramello indifferente"
                 -> glyph_modifier_variation_management(PG, waterC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       Ah, come quando dividi la spazzatura.
                                                                 Uh, una lettera di Giulio.
@@ -205,7 +205,7 @@
                                                                 Ma perché tocca sempre a me?
 
             + \ {charTag(PG, "neutral")}:         <i>Addobbo con strisce di pastella e gratitudine.</i>
-                    ~ kitchen_recipeComplement = "con strisce di pastella e gratitudine"
+                    ~ kitchen_recipeComplement = "strisce di pastella grate"
                 -> glyph_modifier_variation_management(PG, aetherC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       Mi piace la gratitudine!
                                                                 Anche se a volte mi si brucia un poco.
@@ -216,7 +216,7 @@
                                                                 Ma devo dirgli di restituire l'intelligenza a Tullio e Giulio: non è carino tenere a lungo le cose prese in prestito.  
 
             + \ {charTag(PG, "neutral")}:         <i>Rifinisco con semi di zucca e fastidio.</i>
-                    ~ kitchen_recipeComplement = "con semi di zucca e fastidio"
+                    ~ kitchen_recipeComplement = "semi di zucca infastiditi"
                 -> glyph_modifier_variation_management(PG, fireC)->    
                 {charTag(Franco, "{portrait_Franco()}")}:       Ah, come quel modo di dire.
                                                                 "Essere una spina nel Franco."
