@@ -22,7 +22,8 @@
     firstDumpOBJ, secondDumpOBJ, thirdDumpOBJ, fourthDumpOBJ, fifthDumpOBJ,
     temporaryGrimoire, 
     mapDump, mapKitchen, mapGreenhouse, mapLibrary, mapNest, 
-    docDump, docKitchen, docGreenhouse, docNest, docLibrary, Clothespin
+    docDump, docKitchen, docGreenhouse, docNest, docLibrary, Clothespin,
+    Owl
     
     LIST listAnimations = 
     Birds,

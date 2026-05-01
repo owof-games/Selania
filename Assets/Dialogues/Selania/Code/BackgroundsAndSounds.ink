@@ -46,7 +46,8 @@
     #ambientSounds: nightLibrarySounds
     
     ~ move_entity(NightMode, Library)
-    
+    ~ move_entity(Owl, Safekeeping)
+
     {
         - witch_moonState == NewMoon:
             ~ move_entity(NewMoonAnim, Library)
@@ -70,6 +71,7 @@
     #ambientSounds: librarySounds
  
     ~ move_entity(NightMode, Safekeeping)
+    ~ move_entity(Owl, Library)
     
     {
         - contentsLibrary has NewMoonAnim:

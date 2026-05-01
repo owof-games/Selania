@@ -9,7 +9,7 @@
 
     VAR contentsGreenhouse = (FromGreenhouseToPond,  BaccaDellaAddolorata, BarbaDellInciampo, BastoneDellOzioso, BrinaDellImpossibile, CantoDelleCompagne, CardoAspinato, EderaDelleAmanti, ErbaLiccia, FalsaPalude, LanaNotturna, LicheneDegliAbissi, NonTiScordarDiTe, Olobino, LaSpazzata)
 
-    VAR contentsLibrary = (FromLibraryToForest, FromLibraryToNestBlocked, ReadingPlace)
+    VAR contentsLibrary = (FromLibraryToForest, FromLibraryToNestBlocked, ReadingPlace, Owl)
 
     VAR contentsNest = (FromNestToLibrary, airGlyph, waterGlyph, aetherGlyph)
 
