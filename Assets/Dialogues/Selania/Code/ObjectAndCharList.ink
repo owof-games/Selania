@@ -9,7 +9,7 @@
     FromForestToTrainStop, FromForestToPond, FromForestToLibraryBlocked, FromForestToLibrary, FromForestToDumpBlocked, FromForestToDump,
     FromPondToForest, FromPondToGreenhouse, FromPondToGreenhouseBlooming, FromPondToNest, FromPondToKitchen, FromPondToKitchenBlocked, FromPondToGreenhouseBlocked,
     FromGreenhouseToPond, 
-    FromLibraryToForest, FromLibraryToNest, FromLibraryToNestBlocked, FromLibraryToNestNight, FromLibraryToNestBlockedNight,
+    FromLibraryToForest, FromLibraryToNest, FromLibraryToNestBlocked,
     FromNestToLibrary, 
     FromKitchenToPond,
     FromDumpToForest

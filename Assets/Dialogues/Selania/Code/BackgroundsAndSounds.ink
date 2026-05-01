@@ -44,14 +44,6 @@
 === DarkLibraryModeOn
     #background: backNightLibrary
     #ambientSounds: nightLibrarySounds
-    {
-        - player_accessiblePlaces has Nest:
-            ~ move_entity(FromLibraryToNestNight, Library)
-            ~ move_entity(FromLibraryToNest, Safekeeping)
-        - else:
-            ~ move_entity(FromLibraryToNestBlockedNight, Library)
-            ~ move_entity(FromLibraryToNestBlocked, Safekeeping)
-    }
     
     ~ move_entity(NightMode, Library)
     
@@ -76,16 +68,7 @@
 === DarkLibraryModeOff    
     #background: backLibrary
     #ambientSounds: librarySounds
-    {
-        - player_accessiblePlaces has Nest:
-            ~ move_entity(FromLibraryToNestNight, Safekeeping)
-            ~ move_entity(FromLibraryToNest, Library)
-        - else:
-            ~ move_entity(FromLibraryToNestBlockedNight, Safekeeping)
-            ~ move_entity(FromLibraryToNestBlocked, Library)
-    
-    }
-    
+ 
     ~ move_entity(NightMode, Safekeeping)
     
     {
