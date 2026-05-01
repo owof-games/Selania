@@ -155,6 +155,7 @@
                 Ha anche iniziato a recuperare il vecchio orto dei miei, che mia mamma ora con la schiena a pezzi non riesce a starci dietro.
                 E quando sistema le piante mi racconta cose per ore, cose che non avevo mai sentito.
                 C'è anche un gatto che girella qui e che lui ha deciso di adottare, e l'ha chiamato Shinji.
+                È tenero e diffidente come lo era {charNameTwo} quando è arrivato lì (sai che ci siamo scritte un paio di lettere?).
                 E l'altra sera eravamo nella mia cameretta abbracciati, con Shinji che faceva avanti e indietro dalla portafinestra socchiusa.
                 La pancia piena del cibo che ho cucinato con mia madre.
                 Mi sono sentita completa.
@@ -249,13 +250,16 @@
                 E ora sto imparando a fare lo stesso con loro.
                 Sto diventando una persona adulta?
                 Cringe.
+                E cringe: ho scritto due volte a Talco, raccontando quello che sto facendo, e non mi ha risposto.
+                Sono triste, e arrabbiata.
+                Perché fa così?
                 Ma intanto di mando un abbraccio giganterrimo.
     
                 
             - firstChar_ActualName has Ocarina:
                 Qui oggi la malinconia imperversa.
                 Mi manca Valeria, mi mancano le ragazze.
-                La Rifugia continua anche senza di me e una piccola piccola parte di me che è vanitosa, si è sentita subito dimenticabile.
+                La band continua anche senza di me e una piccola piccola parte di me che è vanitosa, si è sentita subito dimenticabile.
                 Ma sono felice perché hanno fatto il primo concerto grandicello di beneficenza.
                 Grandi!
                 E ho riscritto a Talco, raccontandolə quello che sto combinando qui.
@@ -265,7 +269,7 @@
                 Per un po' Ennio mi ha detto che avrebbe potuto fare avanti e indietro lui per portarmi a un ipotetico lavoro.
                 Ma poi papà ha fatto un giro di telefonate e mi ha recuperato questo motorino che sicuro sicuro è più vecchio di me.
                 E ora provo a farci avanti e indietro per il cortile dei miei e mi sento come quando ho imparato ad usare la bici da piccola.
-                Ma con più lividi e graffi perché solo la Madonna sa quante volte sono cascata.
+                Ma con più lividi e graffi perché non so quante volte sono cascata.
                 L'altra sera, dolorante e un po' alticcia, stavo per raccontare di te, del posto.
                 Ma poi le parole non sono venute.
                 Come se fosse proprio un'altra lingua.
@@ -388,7 +392,19 @@
     
                 
             - firstChar_ActualName has Ocarina:
-                Qui oggi la malinconia imperversa.
+                La malinconia è diventata frustrazione.
+                Mamma mi chiama "Pentola di fagioli". Forse abbiamo sbagliato qualcosa con la mia riscrittura?
+                Quando l'abbiamo fatta mi sono detta: torno giù per prendermi cura dei miei, della mia terra. E per fare in modo che altre persone non debbano andarsene.
+                A distanza di mesi posso dire che i miei genitori non hanno bisogno di aiuto. Quando papà me lo diceva non era per orgoglio, sono estremamente autonomi. Sono felici della compagnia, ma è un discorso diverso.
+                E per quanto riguarda il mio paese... non so che fare, {player_name}.
+                La maggior parte dei miei compagni e compagne di scuola se ne è andato da tempo, e comunque non è che ci andassi d'accordo: non so come ho pensato fosse possibile arrivare qui, suonare ai loro campanelli e dire "Ehi, non ci siamo mai piaciuti, ma ti va di salvare questo posto assieme?".
+                Ci sono un po' di associazioni del territorio, ma non riesco a cliccare con le persone, né coi loro obiettivi.
+                Mi sento persa, ama. Persa, distante.
+                Forse continuo a cercare il mondo in cui sono cresciuta, ma anche qui le cose sono cambiate, e non riesco a capire il come.
+                Tra un paio di giorni avrò una call con Luigia e Anna, quelle due ame di cui ti avevo parlato che quando son tornate al paese hanno fatto cose magnifiche.
+                Vediamo se viene fuori qualche idea interessante.
+                Un abbraccio dalla tua pentola di fagioli.
+                PS: spero che lì le cose vadano bene. E che tu ti stia riposando.
                
       
                 
