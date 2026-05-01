@@ -500,7 +500,10 @@
     {charTag(FirstCharacter, "affectionate")}:      Sono quella che attende che le altre facciano casino, per mettere un accento, un colore.
                                                     Che ritrova il bello nelle cose quotidiane.
     {charTag(FirstCharacter, "neutral")}:           Apprezzando quello che ha.
-    Sì.
+    {
+    - grimoire_firstChar has grimFirstCharMentor:   Dopo quella conversazione, {charNameFive} sarà contenta di aver avuto ragione.
+    - else:                                         Sì
+    }
     {charTag(FirstCharacter, "affectionate")}:      Ho trovato il mio nome.
             
     - firstChar_ActualName has RagazzaOrchestra:

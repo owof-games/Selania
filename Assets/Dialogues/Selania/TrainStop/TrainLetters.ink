@@ -8,8 +8,8 @@
     
         
             Qui, questi primi giorni qui sono stati strani.
-            A quanto pare la mia assenza è stata solo per qualche ora.
-            E nessunə mi ha fatto domande su nulla.
+            A quanto pare sono stata via un paio di ore.
+            E nessunə mi ha fatto domande su niente.
             Eppure io vedo i cambiamenti, i cambiamenti in me.
            
            {
@@ -92,7 +92,6 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
         
     
-
        
        {
             - firstChar_ActualName has Triangolo:
@@ -102,7 +101,7 @@
                 Ma ultimamente ci sono molti silenzi.
                 Ləi mi racconta le sue giornate, ma mi rendo conto che le mie sono piccoline.
                 La cosa più grossa è anche la meno bella: ci sono dei casini sul lavoro.
-                Hanno scoperto il tentativo di fare sindacato, e c'è aria di vendetta.
+                Qualcuno ha detto al capo che abbiamo parlato di sindacato, e c'è aria di vendetta.
                 Cerco di non cagarmi addosso, ma non è facilissimo.
                 
             - firstChar_ActualName has RagazzaOrchestra:
@@ -199,7 +198,7 @@
                 Continua a piacermi questa cosa di essere {charNameOne}, ma non è facilissima.
                 Talco ha rimandato per due volte i nostri incontri, e credo sia una scusa.
                 E a lavoro sembra che non rinnoveranno i contratti a nessunə.
-                Hanno già fatto arrivare tre persone nuove, e Luca sta facendo di tutto per tenercele lontane.
+                Hanno già fatto arrivare tre persone nuove, e il capo sta facendo di tutto per tenercele lontane.
                 Ho questa sensazione strana.
                 Che sia facile dire "goditi le piccole cose" quando tutto va bene.
                 Ma ora è.
@@ -208,7 +207,6 @@
                 È come se ci fossimo risintonizzat3.
                 E le sere assieme sono tranquillizzanti.
 
-                
             - firstChar_ActualName has RagazzaOrchestra:
                 Ti sto scrivendo da... Boston!
                 Ok no, questa battuta fa ridere solo una volta.
@@ -322,7 +320,26 @@
 
      {
             - firstChar_ActualName has Triangolo:
-                Qui...
+                Sono incinta.
+                Forse dovevo prenderla più larga questa cosa ma.
+                Sono incinta.
+                Da quando l'ho detto a Talco, ci sentiamo tutti i giorni.
+                Mi sembra di esser tornata ai tempi dell'Accademia, quando eravamo inseparabili.
+                E mi ha già detto che arriverà qui appena so con certezza la data del parto.
+                Ennio è E-SAL-TA-TO.
+                Non me l'aspettavo, anche vista la situazione in cui ci troviamo.
+                Abbiamo deciso di andare a vivere assieme, cosa che significa andare a vivere da lui, col suo coinquilino.
+                Che sembra averla presa meno bene.
+                Ma Ennio passa le ore a fare piani, sogni, progetti.
+                Non l'ho mai visto così.
+                Papà è su di giri, mentre mamma...
+                Mamma mi ha chiamato pochi minuti dopo che li ho informati, e mi ha chiesto se era quello che davvero volevo.
+                E qui c'è una cosa grossa {player_name}: non lo so.
+                E lei l'ha capito.
+                Non lo so perché credo di averlo cercato questo bambino, ma per rompere questo senso di inutilità che mi si è attaccato addosso negli ultimi mesi.
+                E quindi ho paura, ama.
+                Paura di aver fatto una scelta enorme per riempire un vuoto, e questa scelta avrà un effetto su di me, su Ennio, sulla persona nella mia pancia.
+                Ho paura.
                 
 
                 

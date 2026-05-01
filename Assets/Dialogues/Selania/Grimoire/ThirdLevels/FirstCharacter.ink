@@ -365,7 +365,7 @@
     {
         - grimoire_firstChar has grimFirstCharLetterFour:
             
-            Ehi {player_name}.
+            Rieccomi ama.
             ~ letters_firstCharLetters_fourth()
     }
     

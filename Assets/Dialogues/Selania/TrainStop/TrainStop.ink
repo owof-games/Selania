@@ -70,7 +70,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     
 
-        {charTag(Documents, "writer_firstChar")}:   Ciao {player_name}, come stai?
+        {charTag(Documents, "writer_firstChar")}:           Ciao {player_name}, come stai?
 
         ~ letters_firstCharLetters_first()
         -> first_char_closing_letters
@@ -79,7 +79,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     
 
-        {charTag(Documents, "writer_firstChar")}:   Ciao {player_name}, qui è sempre {charNameOne} che ti scrive.
+        {charTag(Documents, "writer_firstChar")}:           Ciao {player_name}, qui è sempre {charNameOne} che ti scrive.
 
         ~ letters_firstCharLetters_second()
         -> first_char_closing_letters
@@ -88,7 +88,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     
 
-        {charTag(Documents, "writer_firstChar")}:   Ciao ama!
+        {charTag(Documents, "writer_firstChar")}:           Ciao ama!
 
         ~ letters_firstCharLetters_third()
         -> first_char_closing_letters
@@ -97,7 +97,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     
 
-        {charTag(Documents, "writer_firstChar")}:   Ehi {player_name}.
+        {charTag(Documents, "writer_firstChar")}:           Rieccomi ama.
     
         ~ letters_firstCharLetters_fourth()
         -> first_char_closing_letters       
@@ -126,7 +126,7 @@
         }
     
     = one
-        {charTag(Documents, "writer_secondChar")}:      Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}.
+        {charTag(Documents, "writer_secondChar")}:          Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}.
         ~ letters_secondCharLetters_first()
         -> second_char_closing_letters
     
@@ -136,12 +136,12 @@
         -> second_char_closing_letters
     
     = three
-        {charTag(Documents, "writer_secondChar")}:      Ciao {player_name}.
+        {charTag(Documents, "writer_secondChar")}:          Ciao {player_name}.
         ~ letters_secondCharLetters_third()
         -> second_char_closing_letters
 
     = four
-        {charTag(Documents, "writer_secondChar")}:     Ehi.
+        {charTag(Documents, "writer_secondChar")}:          Ehi.
         ~ letters_secondCharLetters_fourth()
         -> second_char_closing_letters    
     
