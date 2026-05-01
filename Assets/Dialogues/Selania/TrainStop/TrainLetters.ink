@@ -38,7 +38,7 @@
                     Prima ne ho parlato con Valeria, e ci siamo organizzate per una cosa sgamosa che, coff coff, chiameremo subaffitto, circa.
                     Insomma: divido camera con un'altra figliola, e per ora non pago l'affitto, ma mi occupo della gestione della casa.
                     Perché?
-                    Perché così posso dedicarmi totalmente sia alla Rifugia, sia alla musica.
+                    Perché così posso dedicarmi totalmente sia alla musica.
                     E non hai idea di quanto abbia scritto da quando sono tornata.
                     E non solo: ho un po' meno paura.
                     Paura di dire cosa penso sulle cose politiche.
@@ -129,9 +129,8 @@
                 Il mio primo concerto sold out.
                 E ok, è facile fare sold out in un buco di culo come quello in cui eravamo.
                 Ma le persone hanno cantato i nostri brani, {player_name}!
-                I soldi sono andati in parte a La Rifugia, in parte a un'associazione migranti.
-                E con Valeria abbiamo deciso che è il caso di tirare su una associazione anche noi, a modo.
-                Sia per non finire nei casini sia perché, boh, sembra che il nostro progetto possa davvero funzionare.
+                Abbiamo raccolto anche fondi con la Rifugia, ormai siamo entità gemelle.
+                Con Valeria ci stiamo chiedendo se si possa fare qualcosa di più grosso, coinvolgendo altre band.
                 E questa gioia mi aiuta ad affrontare la terza "prima volta".
                 Ennio mi ha lasciato.
                 E non mi sono mai sentita così disperata.
@@ -142,7 +141,7 @@
                 In cui non debba aspettare ogni giorno per sapere se mi ricorderò di lui.
                 Sinceramente è stata una cosa crudele da dirmi.
                 Ma vera, forse.
-                Perché musica e associazione si stanno mangiando le mie giornate.
+                Perché la musica e tutto quello che le sta attorno si stanno mangiando le mie giornate.
                 Ma {player_name}: mi sento viva come non mi è mai successo.
                 
             - firstChar_ActualName has Ocarina:
@@ -240,9 +239,8 @@
                 
             - firstChar_ActualName has FlautoDolce:
                 Stai parlando ufficialmente con la presidentessa di 'sto cazzo de La Rifugia.
-                Siamo una associazione a modino.
-                Ed anche se è una cosa piccola, ne sono felice.
-                E tra le varie, stiamo tirando su un sistema di finanziamento per cantanti emergenti senza cittadinanza.
+                Ruolo pomposo per un gruppo di sognatric3 disagiat3.
+                Tra le varie, stiamo tirando su un sistema di finanziamento per cantanti emergenti senza cittadinanza.
                 Ed è un casino burocratico che aiuto.
                 Ma la musica che stanno portando quest3 figliol3, non ne hai idea.
                 Per la prima volta ci sono storie e cose che proprio non capisco.
@@ -371,7 +369,21 @@
 
                 
             - firstChar_ActualName has FlautoDolce:
-                Stai parlando ufficialmente con la presidentessa di 'sto cazzo de La Rifugia.
+                Qui c'è una {charNameOne} un po' sfavata.
+                Mi sembra di essere finita in una situazione di stallo.
+                Ogni volta che otteniamo qualcosina di piccolo con l'associazione, emerge un nuovo problema.
+                Tipo: abbiamo convinto il Comune a collaborare al progetto favorendo la diffusione del progetto e contribuendo economicamente in parte alle spese vive.
+                Il risultato? Si sono fatti pubblicità col nostro lavoro, dicendo che stanno combattendo il problema del caro affitti con soluzioni "moderne" (moderne: è praticamente il couchsurfing quello che facciamo).
+                E quando l'opposizione ci ha attaccate pubblicamente dicendo che "favoriamo i clandestini" e che "portiamo in casa delle persone normali dei criminali", siamo stat3 lasciat3 da sol3.
+                Durante un incontro tra associazioni, alcune realtà "veterane" ci hanno detto che siamo stat3 ingenu3 a fidarci dei politici.
+                E lì mi sono incazzata.
+                Ho urlato tantissimo ma ero solo piena di vergogna perché dentro di me sapevano che avevano ragione.
+                Ma mi pesa aver commesso un errore, visto che ho spinto io per questa cosa, e con un costo personale alto.
+                Non scrivo e non suono da settimane, presa dalle cose burocratiche della Rifugia.
+                E.
+                È stupido, ma pensavo che qualcosa sarebbe cambiato, cambiato più velocemente. Invece mi sento come ne Il giorno della Marmotta.
+                Sono frustrata, {player_name}.
+                Sono enormemente frustrata.
                 
     
                 
