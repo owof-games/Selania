@@ -353,25 +353,25 @@
     {
         - grimoire_secondChar has grimSecondCharLetterOne:
             Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}.
-            ~ letters_secondCharLetters_first()
+            ~ letters_secondCharLetters_one()
     }
     
     {
         - grimoire_secondChar has grimSecondCharLetterTwo:
             Che strano.
-            ~ letters_secondCharLetters_second()
+            ~ letters_secondCharLetters_two()
     }
 
     {
         - grimoire_secondChar has grimSecondCharLetterThree:
             Ciao {player_name}.
-            ~ letters_secondCharLetters_third()
+            ~ letters_secondCharLetters_three()
     }
 
     {
         - grimoire_secondChar has grimSecondCharLetterFour:
             Ehi.
-            ~ letters_secondCharLetters_fourth()
+            ~ letters_secondCharLetters_four()
     }
     
 

@@ -323,22 +323,22 @@
 
     {
         - grimoire_thirdChar has grimThirdCharLetterOne:
-            letters_thirdCharLetters_first
+            letters_thirdCharLetters_one
     }
     
     {
         - grimoire_thirdChar has grimThirdCharLetterTwo:
-            ~ letters_thirdCharLetters_second()
+            ~ letters_thirdCharLetters_two()
     }
 
     {
         - grimoire_thirdChar has grimThirdCharLetterThree:
-            ~ letters_thirdCharLetters_third()
+            ~ letters_thirdCharLetters_three()
     }
 
     {
         - grimoire_thirdChar has grimThirdCharLetterFour:
-            ~ letters_thirdCharLetters_fourth()
+            ~ letters_thirdCharLetters_four()
     }
     
 

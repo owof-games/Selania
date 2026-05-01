@@ -1,4 +1,4 @@
-===  function letters_firstCharLetters_first()
+===  function letters_firstCharLetters_one()
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -83,7 +83,7 @@
         <b>{charNameOne}</b>
 
 
-===  function letters_firstCharLetters_second()
+===  function letters_firstCharLetters_two()
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -181,7 +181,7 @@
     A presto, <b>{charNameOne}</b>.
 
 
-=== function letters_firstCharLetters_third()
+=== function letters_firstCharLetters_three()
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -309,7 +309,7 @@
     <b>{charNameOne}</b>.
 
 
-=== function letters_firstCharLetters_fourth()
+=== function letters_firstCharLetters_four()
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -420,7 +420,7 @@
 
 
 
- === function letters_secondCharLetters_first()
+ === function letters_secondCharLetters_one()
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -509,7 +509,7 @@
             Ma non dirglielo. Per ora per lo meno.
             Ciao!
 
-=== function letters_secondCharLetters_second()
+=== function letters_secondCharLetters_two()
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -601,7 +601,7 @@
             PPS: ma sono arrivate persone nuove poi? Qualcuna con dei dolci magari?
 
 
-=== function letters_secondCharLetters_third()
+=== function letters_secondCharLetters_three()
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -704,7 +704,7 @@
         PPS: Ho un segreto che riguarda la serra, ma te lo dirò con la prossima lettera! Ciao ciao!
 
 
-=== function letters_secondCharLetters_fourth()
+=== function letters_secondCharLetters_four()
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -809,7 +809,7 @@
         
 
 
-=== function letters_thirdCharLetters_first()
+=== function letters_thirdCharLetters_one()
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -827,7 +827,7 @@
         }
     
 
-=== function letters_thirdCharLetters_second()
+=== function letters_thirdCharLetters_two()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -845,7 +845,7 @@
         }
     
 
-=== function letters_thirdCharLetters_third()
+=== function letters_thirdCharLetters_three()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -863,7 +863,7 @@
         }
      
 
-=== function letters_thirdCharLetters_fourth()
+=== function letters_thirdCharLetters_four()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -881,7 +881,7 @@
         }
      
 
-=== function letters_fourthCharLetters_first()
+=== function letters_fourthCharLetters_one()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -899,7 +899,7 @@
         }
         
     
-=== function letters_fourthCharLetters_second()
+=== function letters_fourthCharLetters_two()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -916,7 +916,7 @@
                 {charNameThree}: zz
         }
 
-=== function letters_fourthCharLetters_third()
+=== function letters_fourthCharLetters_three()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -932,7 +932,7 @@
                 {charNameThree}: zz
         }
 
-=== function letters_fourthCharLetters_fourth()
+=== function letters_fourthCharLetters_four()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -949,7 +949,7 @@
         }
 
 
-=== function letters_fifthCharLetters_first()
+=== function letters_fifthCharLetters_one()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -966,7 +966,7 @@
                 {charNameThree}: zz
         }
 
-=== function letters_fifthCharLetters_second()
+=== function letters_fifthCharLetters_two()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -983,7 +983,7 @@
                 {charNameThree}: zz
         }
 
-=== function letters_fifthCharLetters_third()
+=== function letters_fifthCharLetters_three()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -1000,7 +1000,7 @@
                 {charNameThree}: zz
         }
 
-=== function letters_fifthCharLetters_fourth()
+=== function letters_fifthCharLetters_four()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)

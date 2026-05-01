@@ -345,28 +345,28 @@
         - grimoire_firstChar has grimFirstCharLetterOne:
         
             Ciao {player_name}, come stai?
-            ~ letters_firstCharLetters_first()
+            ~ letters_firstCharLetters_one()
     }
     
     {
         - grimoire_firstChar has grimFirstCharLetterTwo:
         
             Ciao {player_name}, qui è sempre {charNameOne} che ti scrive.
-            ~ letters_firstCharLetters_second()
+            ~ letters_firstCharLetters_two()
     }
 
     {
         - grimoire_firstChar has grimFirstCharLetterThree:
 
             Ciao ama!
-            ~ letters_firstCharLetters_third()
+            ~ letters_firstCharLetters_three()
     }
 
     {
         - grimoire_firstChar has grimFirstCharLetterFour:
             
             Rieccomi ama.
-            ~ letters_firstCharLetters_fourth()
+            ~ letters_firstCharLetters_four()
     }
     
 

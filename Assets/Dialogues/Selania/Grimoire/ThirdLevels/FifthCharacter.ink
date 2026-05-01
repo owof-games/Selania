@@ -473,22 +473,22 @@
 
     {
         - grimoire_fifthChar has grimFifthCharLetterOne:
-            ~ letters_fifthCharLetters_first()
+            ~ letters_fifthCharLetters_one()
     }
     
     {
         - grimoire_fifthChar has grimFifthCharLetterTwo:
-            ~ letters_fifthCharLetters_second()
+            ~ letters_fifthCharLetters_two()
     }
 
     {
         - grimoire_fifthChar has grimFifthCharLetterThree:
-             ~ letters_fifthCharLetters_third()
+             ~ letters_fifthCharLetters_three()
     }
 
     {
         - grimoire_fifthChar has grimFifthCharLetterFour:
-            ~ letters_fifthCharLetters_fourth()
+            ~ letters_fifthCharLetters_four()
     }
     
 

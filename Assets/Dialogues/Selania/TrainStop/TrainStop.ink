@@ -72,7 +72,7 @@
 
         {charTag(Documents, "writer_firstChar")}:           Ciao {player_name}, come stai?
 
-        ~ letters_firstCharLetters_first()
+        ~ letters_firstCharLetters_one()
         -> first_char_closing_letters
     
     = two
@@ -81,7 +81,7 @@
 
         {charTag(Documents, "writer_firstChar")}:           Ciao {player_name}, qui è sempre {charNameOne} che ti scrive.
 
-        ~ letters_firstCharLetters_second()
+        ~ letters_firstCharLetters_two()
         -> first_char_closing_letters
         
     = three
@@ -90,7 +90,7 @@
 
         {charTag(Documents, "writer_firstChar")}:           Ciao ama!
 
-        ~ letters_firstCharLetters_third()
+        ~ letters_firstCharLetters_three()
         -> first_char_closing_letters
 
     = four
@@ -99,7 +99,7 @@
 
         {charTag(Documents, "writer_firstChar")}:           Rieccomi ama.
     
-        ~ letters_firstCharLetters_fourth()
+        ~ letters_firstCharLetters_four()
         -> first_char_closing_letters       
 
 === second_character_notes ===
@@ -127,22 +127,22 @@
     
     = one
         {charTag(Documents, "writer_secondChar")}:          Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}.
-        ~ letters_secondCharLetters_first()
+        ~ letters_secondCharLetters_one()
         -> second_char_closing_letters
     
     = two
         {charTag(Documents, "writer_secondChar")}:          Che strano.
-        ~ letters_secondCharLetters_second()
+        ~ letters_secondCharLetters_two()
         -> second_char_closing_letters
     
     = three
         {charTag(Documents, "writer_secondChar")}:          Ciao {player_name}.
-        ~ letters_secondCharLetters_third()
+        ~ letters_secondCharLetters_three()
         -> second_char_closing_letters
 
     = four
         {charTag(Documents, "writer_secondChar")}:          Ehi.
-        ~ letters_secondCharLetters_fourth()
+        ~ letters_secondCharLetters_four()
         -> second_char_closing_letters    
     
 === third_character_notes ===
@@ -168,19 +168,19 @@
         }
         
     = one
-        ~ letters_thirdCharLetters_first()
+        ~ letters_thirdCharLetters_one()
         -> third_char_closing_letters
 
     = two
-        ~ letters_thirdCharLetters_second()
+        ~ letters_thirdCharLetters_two()
         -> third_char_closing_letters
     
     = three
-        ~ letters_thirdCharLetters_third()
+        ~ letters_thirdCharLetters_three()
         -> third_char_closing_letters
 
     = four
-        ~ letters_thirdCharLetters_fourth()
+        ~ letters_thirdCharLetters_four()
         -> third_char_closing_letters    
     
 === fourth_character_notes ===
@@ -204,19 +204,19 @@
 
         }
      = one
-        ~ letters_fourthCharLetters_first()
+        ~ letters_fourthCharLetters_one()
         -> fourth_char_closing_letters
 
     = two
-        ~ letters_fourthCharLetters_second()
+        ~ letters_fourthCharLetters_two()
         -> fourth_char_closing_letters
     
     = three
-        ~ letters_fourthCharLetters_third()
+        ~ letters_fourthCharLetters_three()
         -> fourth_char_closing_letters
 
     = four
-        ~ letters_fourthCharLetters_fourth()
+        ~ letters_fourthCharLetters_four()
         -> fourth_char_closing_letters
 
 === fifth_character_notes ===
@@ -241,17 +241,17 @@
         }
         
      = one
-        ~ letters_fifthCharLetters_first()
+        ~ letters_fifthCharLetters_one()
         -> fifth_char_closing_letters
 
     = two
-        ~ letters_fifthCharLetters_second()
+        ~ letters_fifthCharLetters_two()
         -> fifth_char_closing_letters
     
     = three
-        ~ letters_fifthCharLetters_third()
+        ~ letters_fifthCharLetters_three()
         -> fifth_char_closing_letters
 
     = four
-        ~ letters_fifthCharLetters_fourth()
+        ~ letters_fifthCharLetters_four()
         -> fifth_char_closing_letters    
