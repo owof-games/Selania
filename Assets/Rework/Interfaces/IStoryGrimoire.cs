@@ -414,7 +414,7 @@ namespace Selania.Rework.Interfaces
             string description,
             string contents,
             string? indexText,
-            string backToLevelTwoText,
+            string? backToLevelTwoText,
             string? previousPageText,
             string? nextPageText
         ) : BaseNavigationDescriptor(indexText, backToLevelTwoText, previousPageText, nextPageText, null);
