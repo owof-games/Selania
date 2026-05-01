@@ -53,7 +53,7 @@
             ~ move_entity(FromLibraryToNestBlocked, Safekeeping)
     }
     
-    ~ move_entity(MoonTrees, Library)
+    ~ move_entity(NightMode, Library)
     
     {
         - witch_moonState == NewMoon:
@@ -86,7 +86,7 @@
     
     }
     
-    ~ move_entity(MoonTrees, Safekeeping)
+    ~ move_entity(NightMode, Safekeeping)
     
     {
         - contentsLibrary has NewMoonAnim:

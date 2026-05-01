@@ -14,7 +14,7 @@
     FromKitchenToPond,
     FromDumpToForest
     
-    LIST listStaticObjects = TheWitch, ReadingPlace, StartingNote, Arbustini, MoonTrees,  DoggoNoLetters
+    LIST listStaticObjects = TheWitch, ReadingPlace, StartingNote, Arbustini, NightMode,  DoggoNoLetters
     
     LIST listConditionalObjects =  
     DoggoFirstLetters, DoggoSecondLetters, DoggoThirdLetters, DoggoFourthLetters, DoggoFifthLetters,

@@ -442,7 +442,7 @@
             } 
     {charTag(FifthCharacter, "hurry")}:                             La serra, con le sue piante magnifiche, è personalmente il posto migliore dove coltivare e recuperare doni.
     {charTag(FifthCharacter, "neutral")}:                           Gli effetti dei doni tra l'altro sono immediati e permanenti.
-                                                            Ed è per questo che ogni riscrittorə può darne solo uno a persona.
+                                                                    Ed è per questo che ogni riscrittorə può darne solo uno a persona.
     {charTag(FifthCharacter, "sorry")}:                             Qualcosa di così forte non può certo essere usato senza coscienza.
 
 
@@ -459,23 +459,23 @@
     
 
     {charTag(FifthCharacter, "bored")}:                             Una cucina su una palude?
-                                                            Non la mia prima scelta.
+                                                                    Non la mia prima scelta.
     {charTag(FifthCharacter, "sad")}:                               Non mi fa impazzire che tu vada in luoghi così malmessi.
     {charTag(FifthCharacter, "neutral")}:                           Ma l'idea della cucina non è così cattiva in sé: cucinare assieme è un momento di intimità.
-                                                            E mangiare è uno spazio di bella condivisione.
-                                                            E magari puoi aggiungere anche l'ingrediente giusto, e far felice la persona con cui stai ai fornelli.
-            {
-                - are_two_entities_together(FirstCharacter, PG):
-                        {charTag(FirstCharacter, "curious")}:       Ci facciamo una pastasciutta assieme, {charNameFive}?
-                        {charTag(FifthCharacter, "hurry")}:                 Magari più tardi?
-                        {charTag(FifthCharacter, "sorry")}:                 Ho da pulire la cera delle candele.
-                    
-            } 
+                                                                    E mangiare è uno spazio di bella condivisione.
+                                                                    E magari puoi aggiungere anche l'ingrediente giusto, e far felice la persona con cui stai ai fornelli.
+{
+    - are_two_entities_together(FirstCharacter, PG):
+            {charTag(FirstCharacter, "curious")}:                   Ci facciamo una pastasciutta assieme, {charNameFive}?
+            {charTag(FifthCharacter, "hurry")}:                     Magari più tardi?
+            {charTag(FifthCharacter, "sorry")}:                     Ho da pulire la cera delle candele.
+        
+} 
     {charTag(FifthCharacter, "neutral")}:                           Passare del tempo in cucina con qualcunə può essere un bel modo per conoscervi meglio.
-                                                            E per capire che piega stia prendendo la vostra relazione.
+                                                                    E per capire che piega stia prendendo la vostra relazione.
             {
                 - are_two_entities_together(SecondCharacter, PG): 
-                    {charTag(SecondCharacter, "energy")}:   O per bruciare cose strane e vedere cosa succede!
+                    {charTag(SecondCharacter, "energy")}:           O per bruciare cose strane e vedere cosa succede!
                     
             }
     
