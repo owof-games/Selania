@@ -52,10 +52,6 @@
                                                             <i>{player_name} cerca un sacchetto, o cerca una finestra?       
                                                             <i>Vorremmo lasciare {player_name} con una informazione importante: ciò che accade durante la riscrittura ha regole diverse dal resto della conversazione.
                                                             <i>{player_name} può immaginarla come una tempesta sulla spiaggia: quando sarà finita, la sabbia sarà la stessa, ma inaspettate le cose che rimangono sulla riva.</i>
-        {
-            - are_two_entities_together(SecondCharacter, PG):
-            {charTag(SecondCharacter, "energy")}:      Tipo tante conchiglie!
-        }
 
         // Vecchio testo su questa parte
         // <i>Anche noi vogliamo aiutare {player_name}, e per questo condividiamo una cosa.
@@ -77,52 +73,52 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     
 
-    {charTag(TheWitch, witch_state())}:   <i>Il Nido è accessibile, il nostro cuore brucia.
-    <i>I Sigilli sono instabili, l'instabilità è forza.
-    <i>La quercia fruttifica e il cinghiale si accresce. 
-    <i>Il cinghiale perisce e la quercia fiorisce.
-    <i>La natura dei Sigilli sembra complessa, ma è semplice.
-    <i>La natura delle relazioni sembra semplice, ma è complessa.
-    <i>Quando {player_name} usa i Sigilli, cambia la percezione di ciò che dice, ma la scelta rimane.
-    <i>Il nostro ammonimento per {player_name}.
-    <i>Il bimbo piange, il padre lo soccorre.
-    <i>Il gatto osserva, e imita il pianto.
-    <i>{player_name} conosce il confine tra sostegno e manipolazione?</i>
+    {charTag(TheWitch, witch_state())}:                     <i>Il Nido è accessibile, il nostro cuore brucia.
+                                                            <i>I Sigilli sono instabili, l'instabilità è forza.
+                                                            <i>La quercia fruttifica e il cinghiale si accresce. 
+                                                            <i>Il cinghiale perisce e la quercia fiorisce.
+                                                            <i>La natura dei Sigilli sembra complessa, ma è semplice.
+                                                            <i>La natura delle relazioni sembra semplice, ma è complessa.
+                                                            <i>Quando {player_name} usa i Sigilli, cambia la percezione di ciò che dice, ma la scelta rimane.
+                                                            <i>Il nostro ammonimento per {player_name}.
+                                                            <i>Il bimbo piange, il padre lo soccorre.
+                                                            <i>Il gatto osserva, e imita il pianto.
+                                                            <i>{player_name} conosce il confine tra sostegno e manipolazione?</i>
 
-            + \ {charTag(PG, "neutral")}:         Solo il tempo conosce le risposte.
+            + \ {charTag(PG, "neutral")}:                   Solo il tempo conosce le risposte.
                     -> glyph_modifier_variation_management(PG, earthC)->
-                {charTag(TheWitch, witch_state())}:   <i>Il tempo porta le risposte che vogliamo vedere.
-                <i>E se {player_name} non sa leggere il futuro, su cosa basa le scelte del suo presente?</i>
+                {charTag(TheWitch, witch_state())}:         <i>Il tempo porta le risposte che vogliamo vedere.
+                                                            <i>E se {player_name} non sa leggere il futuro, su cosa basa le scelte del suo presente?</i>
 
-            + \ {charTag(PG, "neutral")}:         Basta chiedersi "questa cosa farà bene all'altrə?".
+            + \ {charTag(PG, "neutral")}:                   Basta chiedersi "questa cosa farà bene all'altrə?".
                     -> glyph_modifier_variation_management(PG, waterC)->
-                {charTag(TheWitch, witch_state())}:   <i>Il Ministro scatena la guerra per il bene del paese.
-                <i>In migliaia muoiono al fronte.</i>
+                {charTag(TheWitch, witch_state())}:         <i>Il Ministro scatena la guerra per il bene del paese.
+                                                            <i>In migliaia muoiono al fronte.</i>
                 
-            + \ {charTag(PG, "neutral")}:         Ci sono parti di me che mi rimangono ignote.
+            + \ {charTag(PG, "neutral")}:                   Ci sono parti di me che mi rimangono ignote.
                     -> glyph_modifier_variation_management(PG, aetherC)->
-                {charTag(TheWitch, witch_state())}:   <i>La pianta si accresce con lentezza in molteplici direzioni.
-                <i>Il lusso di non rispondere delle proprie azioni.</i>
+                {charTag(TheWitch, witch_state())}:         <i>La pianta si accresce con lentezza in molteplici direzioni.
+                                                            <i>Il lusso di non rispondere delle proprie azioni.</i>
 
-            + \ {charTag(PG, "neutral")}:         La mia volontà è forte, è quello che conta.
+            + \ {charTag(PG, "neutral")}:                   La mia volontà è forte, è quello che conta.
                     -> glyph_modifier_variation_management(PG, fireC)->
-                {charTag(TheWitch, witch_state())}:   <i>La roccia inamovibile, scivola di millimetro in millimetro verso l'abisso.</i>
+                {charTag(TheWitch, witch_state())}:         <i>La roccia inamovibile, scivola di millimetro in millimetro verso l'abisso.</i>
                 
-            + \ {charTag(PG, "neutral")}:         La risposta logica risiede nell'intenzione.
+            + \ {charTag(PG, "neutral")}:                   La risposta logica risiede nell'intenzione.
                     -> glyph_modifier_variation_management(PG, airC)->
-                {charTag(TheWitch, witch_state())}:   <i>Con forte intenzione Icaro volò verso il sole.
-                <i>E con altrettanto stupore trovò la morte.</i>
+                {charTag(TheWitch, witch_state())}:         <i>Con forte intenzione Icaro volò verso il sole.
+                                                            <i>E con altrettanto stupore trovò la morte.</i>
                 
             -
-    <i>Non è nella nostra natura il proibire.
-    <i>Ma se {player_name} vuole conoscere la natura dei sigilli, {player_pronouns has him:gli|{player_pronouns has her:le|lə}} consigliamo per prima cosa di comprendere la logica dei glifi.
-    <i>Perché ogni glifo, come ogni scelta, è una strada.
-    <i>Un vicolo di curiosità e conoscenza.
-    <i>Un sentiero di azione e passione.
-    <i>Un cammino di praticità e radicamento.
-    <i>Un viottolo di affetto e cura.
-    <i>Una calle di saggezza e spiritualità.
-    <i>E se la strada si dovesse fare buia, {player_name} sappia che il nostro sguardo vigila sempre su di {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.</i>
+                                                            <i>Non è nella nostra natura il proibire.
+                                                            <i>Ma se {player_name} vuole conoscere la natura dei sigilli, {player_pronouns has him:gli|{player_pronouns has her:le|lə}} consigliamo per prima cosa di comprendere la logica dei glifi.
+                                                            <i>Perché ogni glifo, come ogni scelta, è una strada.
+                                                            <i>Un vicolo di curiosità e conoscenza.
+                                                            <i>Un sentiero di azione e passione.
+                                                            <i>Un cammino di praticità e radicamento.
+                                                            <i>Un viottolo di affetto e cura.
+                                                            <i>Una calle di saggezza e spiritualità.
+                                                            <i>E se la strada si dovesse fare buia, {player_name} sappia che il nostro sguardo vigila sempre su di {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.</i>
 
     -> witch_closing_storylet ->
     -> main
@@ -135,20 +131,20 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     
 
-            {
-                - grimoire_first_character_conversation && grimoire_second_character_conversation && grimoire_greenhouse_thirdLevel:
-                    <i>{player_name} cerca spesso risposte tra le pagine del libro.
-                
-                - else:
-                    <i>{player_name} cerca di rado risposte tra le pagine del libro.
-            }
+                                                        {
+                                                            - grimoire_first_character_conversation && grimoire_second_character_conversation && grimoire_greenhouse_thirdLevel:
+                                                            <i>{player_name} cerca spesso risposte tra le pagine del libro.
+                                                            
+                                                            - else:
+                                                            <i>{player_name} cerca di rado risposte tra le pagine del libro.
+                                                        }
 
-        {charTag(TheWitch, witch_state())}:   <i>Un libro è ricordo condiviso.
-        <i>Una magia che pronuncia sé stessa.
-        <i>Per questo le pagine si popolano man mano che {player_name} vive.
-        <i>A volte il libro usa la nostra voce.
-        <i>A volte ritrova altri nomi e parole.
-        <i>In una canzone collettiva che guida {player_name} alla comprensione.</i>
+                                                            {charTag(TheWitch, witch_state())}:   <i>Un libro è ricordo condiviso.
+                                                            <i>Una magia che pronuncia sé stessa.
+                                                            <i>Per questo le pagine si popolano man mano che {player_name} vive.
+                                                            <i>A volte il libro usa la nostra voce.
+                                                            <i>A volte ritrova altri nomi e parole.
+                                                            <i>In una canzone collettiva che guida {player_name} alla comprensione.</i>
 
             -> witch_closing_storylet ->
             -> main

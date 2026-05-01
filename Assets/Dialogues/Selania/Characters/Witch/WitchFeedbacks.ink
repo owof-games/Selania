@@ -26,87 +26,82 @@
         
         ~ temp sigilUsed = false
 
-        {charTag(TheWitch, witch_state())}:<i>Le radici ci raccontano che {player_name} ha fatto la sua prima riscrittura.
-        <i>E un nuovo tronco cresce. Questo ci porta gioia.
+        {charTag(TheWitch, witch_state())}:                     <i>Le radici ci raccontano che {player_name} ha fatto la sua prima riscrittura.
+                                                                <i>E un nuovo tronco cresce. Questo ci porta gioia.
 
         {
         //Frasi sulle PNG
             - firstChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt FirstCharacter:
-                <i>Siamo contente che {charNameOne} abbia trovato un nuovo nome, e un nuovo modo di vedere il proprio presente.
-                <i>{charNameOne} è così giovane, eppure faticava a immaginare un futuro.
-                <i>La gemma per crescere deve già contenere la foglia.
-                <i>{charNameOne} ora ha trovato la sua forma.
+                                                                <i>Siamo contente che {charNameOne} abbia trovato un nuovo nome, e un nuovo modo di vedere il proprio presente.
+                                                                <i>{charNameOne} è così giovane, eppure faticava a immaginare un futuro.
+                                                                <i>La gemma per crescere deve già contenere la foglia.
+                                                                <i>{charNameOne} ora ha trovato la sua forma.
                     ~ witch_debriefPNG += FirstCharacter
                     ~ witch_sigilsComment += FirstCharacter   
                     ~ sigilUsed = firstChar_usedSigil
             
             - secondChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt SecondCharacter:
-                <i>Il piccolo {charNameTwo} ora ha un nuovo nome da gridare.
-                <i>La sua rabbia l'ha inzuppato di problemi.
-                <i>L'ha protetto da cose peggiori.
+                                                                <i>Il piccolo {charNameTwo} ora ha un nuovo nome da gridare.
+                                                                <i>La sua rabbia l'ha inzuppato di problemi.
+                                                                <i>L'ha protetto da cose peggiori.
                     ~ witch_debriefPNG += SecondCharacter
                     ~ witch_sigilsComment += SecondCharacter
                     ~ sigilUsed = secondChar_usedSigil 
 
             - thirdChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt ThirdCharacter:
-                Testo:
+                                                                AGGIUNGERE TESTO:
                     ~ witch_debriefPNG += ThirdCharacter
                     ~ witch_sigilsComment += ThirdCharacter
                     ~ sigilUsed = thirdChar_usedSigil   
         }
 
-        <i>Un problema personale è un masso lungo il sentiero.
-        <i>Il terreno può essere pulito.
-        <i>La vista magnifica.
-        <i>L'aria fresca.
-        <i>Ma è comunque impossibile proseguire.
-        <i>Cosa c'è nel petto di {player_name} dopo questa prima riscrittura?
+                                                                <i>Un problema personale è un masso lungo il sentiero.
+                                                                <i>Il terreno può essere pulito.
+                                                                <i>La vista magnifica.
+                                                                <i>L'aria fresca.
+                                                                <i>Ma è comunque impossibile proseguire.
+                                                                <i>Cosa c'è nel petto di {player_name} dopo questa prima riscrittura?
         
-            + (water) \ {charTag(PG, "neutral")}:         La gioia di aver aiutato qualcuno.
+            + (water) \ {charTag(PG, "neutral")}:               La gioia di aver aiutato qualcuno.
                     -> glyph_modifier_variation_management(PG, waterC)->
-                {charTag(TheWitch, witch_state())}:<i>Aiutato chi {player_name} ha riscritto?
-                <i>O aiutato l{player_pronouns has him:o|{player_pronouns has her:a|ə}} stess{player_pronouns has him:o|{player_pronouns has her:a|ə}} {player_name}?
-                <i>Ma anche noi sentiamo questa gioia.
-                <i>La serra è tiepida, la stazione attende, e le nubi dicono che {player_name} è dove deve essere.</i>
+                {charTag(TheWitch, witch_state())}:             <i>Aiutato chi {player_name} ha riscritto?
+                                                                <i>O aiutato l{player_pronouns has him:o|{player_pronouns has her:a|ə}} stess{player_pronouns has him:o|{player_pronouns has her:a|ə}} {player_name}?
+                                                                <i>Ma anche noi sentiamo questa gioia.
+                                                                <i>La serra è tiepida, la stazione attende, e le nubi dicono che {player_name} è dove deve essere.</i>
                 
-            + (fire) \ {charTag(PG, "neutral")}:         L'energia della voglia di fare, fare, fare ancora.
+            + (fire) \ {charTag(PG, "neutral")}:                L'energia della voglia di fare, fare, fare ancora.
                     -> glyph_modifier_variation_management(PG, fireC)->
-                {charTag(TheWitch, witch_state())}:<i>Il vulcano si carica di energia.
-                <i>Il suo fare scivola lungo la collina.
-                <i>Il terreno si fa fertile.
-                <i>Fertile è la volontà di {player_name}.
+                {charTag(TheWitch, witch_state())}:             <i>Il vulcano si carica di energia.
+                                                                <i>Il suo fare scivola lungo la collina.
+                                                                <i>Il terreno si fa fertile.
+                                                                <i>Fertile è la volontà di {player_name}.
                 
-            + (air) \ {charTag(PG, "neutral")}:         La curiosità di scoprire quali nuove cose accadranno.
+            + (air) \ {charTag(PG, "neutral")}:                 La curiosità di scoprire quali nuove cose accadranno.
                    -> glyph_modifier_variation_management(PG, airC)->
-                {charTag(TheWitch, witch_state())}:<i>La curiosità del falco lo spinge verso l'alto.
-                <i>Quella della talpa verso il basso.
-                <i>Abbiamo l'impressione che quella di {player_name} sappia seguire ogni direzione.</i>
+                {charTag(TheWitch, witch_state())}:             <i>La curiosità del falco lo spinge verso l'alto.
+                                                                <i>Quella della talpa verso il basso.
+                                                                <i>Abbiamo l'impressione che quella di {player_name} sappia seguire ogni direzione.</i>
                 
-            + (earth) \ {charTag(PG, "neutral")}:         La soddisfazione di aver raggiunto un obbiettivo.
+            + (earth) \ {charTag(PG, "neutral")}:               La soddisfazione di aver raggiunto un obbiettivo.
                     -> glyph_modifier_variation_management(PG, earthC)->
-                {charTag(TheWitch, witch_state())}:<i>Il leoncino salta di fosso in fosso, senza mai trovare pace.
-                <i>La leonessa si stende per ore dopo la caccia.
-                <i>Crogiolarsi nella soddisfazione è una dote che siamo liete {player_name} sappia coltivare.
+                {charTag(TheWitch, witch_state())}:             <i>Il leoncino salta di fosso in fosso, senza mai trovare pace.
+                                                                <i>La leonessa si stende per ore dopo la caccia.
+                                                                <i>Crogiolarsi nella soddisfazione è una dote che siamo liete {player_name} sappia coltivare.
             
-            + (aether) \ {charTag(PG, "neutral")}:         La sorpresa di aver scoperto cose nuove su di me.
+            + (aether) \ {charTag(PG, "neutral")}:              La sorpresa di aver scoperto cose nuove su di me.
                     -> glyph_modifier_variation_management(PG, aetherC)->
-                {charTag(TheWitch, witch_state())}:<i>La luna distante sposta oceani.
-                <i>Il vento invisibile sradica alberi.
-                <i>E {player_name} decide di osservare sé nella propria interezza.</i>
+                {charTag(TheWitch, witch_state())}:             <i>La luna distante sposta oceani.
+                                                                <i>Il vento invisibile sradica alberi.
+                                                                <i>E {player_name} decide di osservare sé nella propria interezza.</i>
             -
 
-        <i>Riconoscere ciò che si prova a volte è un lusso che non tutti hanno.
-        <i>Soprattutto quando c'è qualcosa che fa star male.
-        <i>A volte è solo qualcosa di personale.
-        <i>A volte è il segno che qualcosa deve bruciare.
-            {
-                - are_two_entities_together(SecondCharacter, PG):
-                {charTag(SecondCharacter, "neutral")}:      Non mi piacciono le cose che bruciano.
-            }
-
+                                                                <i>Riconoscere ciò che si prova a volte è un lusso che non tutti hanno.
+                                                                <i>Soprattutto quando c'è qualcosa che fa star male.
+                                                                <i>A volte è solo qualcosa di personale.
+                                                                <i>A volte è il segno che qualcosa deve bruciare.
             {
                 - sigilUsed > 0:
-                    <i>Prima di congedarci, vorremo dire una cosa a {player_name}.
+                                                                <i>Prima di congedarci, vorremo dire una cosa a {player_name}.
                     -> witch_sigilsUsedComment -> 
             }
 
@@ -126,92 +121,87 @@
         
         ~ temp sigilUsed = false
 
-        {charTag(TheWitch, witch_state())}:<i>Il vento canta di una seconda riscrittura.
-        <i>I rami si riempiono di storie.
-        <i>E {player_name} conosce ormai il proprio valore.
+        {charTag(TheWitch, witch_state())}:                     <i>Il vento canta di una seconda riscrittura.
+                                                                <i>I rami si riempiono di storie.
+                                                                <i>E {player_name} conosce ormai il proprio valore.
 
         {
         //Frasi sulle PNG
             - firstChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt FirstCharacter:
-                <i>{charNameOne} racconta la storia di una generazione.
-                <i>Del peso del capire troppo, e del non sapere che fare.
-                <i>E del non poter accettare che le cose non possano cambiare.
+                                                                <i>{charNameOne} racconta la storia di una generazione.
+                                                                <i>Del peso del capire troppo, e del non sapere che fare.
+                                                                <i>E del non poter accettare che le cose non possano cambiare.
                     ~ witch_debriefPNG += FirstCharacter
                     ~ witch_sigilsComment += FirstCharacter
                     ~ sigilUsed = firstChar_usedSigil
 
             - secondChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt SecondCharacter:
-                <i>La famiglia di {charNameTwo} è come una slavina.
-                <i>Fiocco sulla vetta.
-                <i>Valanga a valle.
-                <i>Ma forse {charNameTwo} può trasformare la neve in pupazzo. 
+                                                                <i>La famiglia di {charNameTwo} è come una slavina.
+                                                                <i>Fiocco sulla vetta.
+                                                                <i>Valanga a valle.
+                                                                <i>Ma forse {charNameTwo} può trasformare la neve in pupazzo. 
                     ~ witch_debriefPNG += SecondCharacter
                     ~ witch_sigilsComment += SecondCharacter
                     ~ sigilUsed = secondChar_usedSigil
 
             - thirdChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt ThirdCharacter:
-                Testo:
+                                                                AGGIUNGERE TESTO:
                 ~ witch_debriefPNG += ThirdCharacter
                 ~ witch_sigilsComment += ThirdCharacter
                 ~ sigilUsed = thirdChar_usedSigil
         }
 
-        <i>Ci sono problemi che restano personali.
-        <i>E altri che sono condivisi.
-        <i>Come nubi scure che adombrano intere vallate.
-        <i>Quale nube condivide {player_name} con le persone qui incontrate?
+                                                                <i>Ci sono problemi che restano personali.
+                                                                <i>E altri che sono condivisi.
+                                                                <i>Come nubi scure che adombrano intere vallate.
+                                                                <i>Quale nube condivide {player_name} con le persone qui incontrate?
         
-            + (water) \ {charTag(PG, "neutral")}:         Penso a {charNameTwo} e mi chiedo chi sarei ora, con una famiglia diversa alle spalle.
+            + (water) \ {charTag(PG, "neutral")}:               Penso a {charNameTwo} e mi chiedo chi sarei ora, con una famiglia diversa alle spalle.
                     -> glyph_modifier_variation_management(PG, waterC)->
-                {charTag(TheWitch, witch_state())}:<i>La gemma sul ramo ignora il tronco, eppure cresce.
-                <i>Il girino nuota, non importa la dimensione dello stagno.
-                <i>{player_name} prova a riscrivere il passato.
-                <i>La sua voce può forse cercare nuovi modi di guardarlo?</i>
-     
-            + (aether) \ {charTag(PG, "neutral")}:         Come {charNameOne} ho bisogno di uno scopo per vivere davvero, ma non lo trovo.
+                {charTag(TheWitch, witch_state())}:             <i>La gemma sul ramo ignora il tronco, eppure cresce.
+                                                                <i>Il girino nuota, non importa la dimensione dello stagno.
+                                                                <i>{player_name} prova a riscrivere il passato.
+                                                                <i>La sua voce può forse cercare nuovi modi di guardarlo?</i>
+        
+            + (aether) \ {charTag(PG, "neutral")}:              Come {charNameOne} ho bisogno di uno scopo per vivere davvero, ma non lo trovo.
                     -> glyph_modifier_variation_management(PG, aetherC)->
-                {charTag(TheWitch, witch_state())}:<i>La rondine crea un nido di paglia.
-                <i>E quando l'inverno arriva il nido cade sul terreno.
-                <i>I funghi lo trasformano in cibo per il terreno.
-                <i>In primavera l'erba ricresce, il caldo la secca.
-                <i>La rondine crea un nido di paglia.</i>
+                {charTag(TheWitch, witch_state())}:             <i>La rondine crea un nido di paglia.
+                                                                <i>E quando l'inverno arriva il nido cade sul terreno.
+                                                                <i>I funghi lo trasformano in cibo per il terreno.
+                                                                <i>In primavera l'erba ricresce, il caldo la secca.
+                                                                <i>La rondine crea un nido di paglia.</i>
                             
-            + (fire) \ {charTag(PG, "neutral")}:         Ho la sensazione che Mentore si senta viva solo se utile, e lo stesso è per me.
+            + (fire) \ {charTag(PG, "neutral")}:                Ho la sensazione che Mentore si senta viva solo se utile, e lo stesso è per me.
                     -> glyph_modifier_variation_management(PG, fireC)->
-                {charTag(TheWitch, witch_state())}:<i>Il colibrì vola ansioso di fiore in fiore.
-                <i>Se non mangia spesso, muore.
-                <i>Migliaia sono le piante nate dalla sua fatica.
-                <i>In quante ricordano il suo nome?
+                {charTag(TheWitch, witch_state())}:             <i>Il colibrì vola ansioso di fiore in fiore.
+                                                                <i>Se non mangia spesso, muore.
+                                                                <i>Migliaia sono le piante nate dalla sua fatica.
+                                                                <i>In quante ricordano il suo nome?
 
-            + (air) \ {charTag(PG, "neutral")}:         COMMENTO LEGATO A PNG3.
+            + (air) \ {charTag(PG, "neutral")}:                 COMMENTO LEGATO A PNG3.
                     -> glyph_modifier_variation_management(PG, airC)->
-                {charTag(TheWitch, witch_state())}:<i>Il sapere è una luce.
-                <i>Il sapere è un rifugio.
-                <i>Una luce troppo forte confonde strada e burrone.
-                <i>Un rifugio col tempo può diventare prigione.</i>
+                {charTag(TheWitch, witch_state())}:             <i>Il sapere è una luce.
+                                                                <i>Il sapere è un rifugio.
+                                                                <i>Una luce troppo forte confonde strada e burrone.
+                                                                <i>Un rifugio col tempo può diventare prigione.</i>
          
-            + (earth) \ {charTag(PG, "neutral")}:         Franco è sempre iperattivo. Forse lui ed io dovremmo imparare a riposare.
+            + (earth) \ {charTag(PG, "neutral")}:               Franco è sempre iperattivo. Forse lui ed io dovremmo imparare a riposare.
                     -> glyph_modifier_variation_management(PG, earthC)->
-                {charTag(TheWitch, witch_state())}:<i>Le radici si rilassano nel tepore del terreno.
-                <i>Le foglie ridono quando il vento le sfiora.
-                <i>L'albero cresce, l'albero riposa.
+                {charTag(TheWitch, witch_state())}:             <i>Le radici si rilassano nel tepore del terreno.
+                                                                <i>Le foglie ridono quando il vento le sfiora.
+                                                                <i>L'albero cresce, l'albero riposa.
             -
         
-        <i>Un albero è un albero.
-        <i>Quanti alberi fanno una foresta?
-            {
-                - are_two_entities_together(SecondCharacter, PG):
-                {charTag(SecondCharacter, "neutral")}:      Devono coprire un quinto del terreno.
-            }
-
-        {charTag(TheWitch, witch_state())}: <i>"Mi è successo questo", racconta qualcuna.
-        <i>"Anche a me", risponde un'altra.
-        <i>Una ferita è una ferita.
-        <i>Quante ferite richiedono una protesta?
+                                                                <i>Un albero è un albero.
+                                                                <i>Quanti alberi fanno una foresta?
+                                                                <i>"Mi è successo questo", racconta qualcuna.
+                                                                <i>"Anche a me", risponde un'altra.
+                                                                <i>Una ferita è una ferita.
+                                                                <i>Quante ferite richiedono una protesta?
         
             {
                 - sigilUsed > 0:
-                    <i>Prima di congedarci, vorremo dire una cosa a {player_name}.
+                                                                <i>Prima di congedarci, vorremo dire una cosa a {player_name}.
                     -> witch_sigilsUsedComment -> 
             }
         
@@ -226,42 +216,42 @@
         
         ~ temp sigilUsed = false
 
-        {charTag(TheWitch, witch_state())}:<i>La cagnolina della posta è sorpresa da questa terza riscrittura.
-        <i>La nuova chioma raccoglie i suoi dubbi.
-        Se vive una oppressione?
+        {charTag(TheWitch, witch_state())}:                     <i>La cagnolina della posta è sorpresa da questa terza riscrittura.
+                                                                <i>La nuova chioma raccoglie i suoi dubbi.
+                                                                <i>Se vive una oppressione?
 
         {
         //Frasi sulle PNG
             - firstChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt FirstCharacter:
-                    <i>{charNameOne} le ha insegnato che non tutt3 hanno una casa.
-                    <i>E che alcun3 ne hanno ancora meno di altr3.
-                    <i>E la cagnolina non comprende, perché il mondo per lei è una grande tana.
+                                                                <i>{charNameOne} le ha insegnato che non tutt3 hanno una casa.
+                                                                <i>E che alcun3 ne hanno ancora meno di altr3.
+                                                                <i>E la cagnolina non comprende, perché il mondo per lei è una grande tana.
                         ~ witch_debriefPNG += FirstCharacter
                         ~ witch_sigilsComment += FirstCharacter
                         ~ sigilUsed = firstChar_usedSigil    
 
             - secondChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt SecondCharacter:
-                    <i>Con {charNameTwo} ha scoperto che esistono i bambini.
-                    <i>E che i bambini come i cuccioli vivono e fanno cose.
-                    <i>Ma non possono decidere le cose che li riguardano.
-                    <i>Il cucciolo cresce facendo i suoi errori.
-                    <i>Ai bambini si chiede di crescere sembrano piccoli adulti.
+                                                                <i>Con {charNameTwo} ha scoperto che esistono i bambini.
+                                                                <i>E che i bambini come i cuccioli vivono e fanno cose.
+                                                                <i>Ma non possono decidere le cose che li riguardano.
+                                                                <i>Il cucciolo cresce facendo i suoi errori.
+                                                                <i>Ai bambini si chiede di crescere sembrano piccoli adulti.
                         ~ witch_debriefPNG += SecondCharacter
                         ~ witch_sigilsComment += SecondCharacter
                         ~ sigilUsed = secondChar_usedSigil
 
             - thirdChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt ThirdCharacter:
-                Testo:
+                                                                AGGIUNGERE TESTO:
                         ~ witch_debriefPNG += ThirdCharacter
                         ~ witch_sigilsComment += ThirdCharacter
                         ~ sigilUsed = thirdChar_usedSigil  
         }
         
-        <i>La cagnolina non può pensare quello che non conosce.
-        <i>La cagnolina si vede per quello che crede di essere, e vede il mondo allo stesso modo.
-        <i>Chi ci insegna a vederci come siamo?
+                                                                <i>La cagnolina non può pensare quello che non conosce.
+                                                                <i>La cagnolina si vede per quello che crede di essere, e vede il mondo allo stesso modo.
+                                                                <i>Chi ci insegna a vederci come siamo?
 
-        Domanda: chi mi ha insegnato a vedermi così? cosa me l'ha insegnato? In generale: da dove vengono le credenze su di sé, queste riscritture che dobbiamo poi andare a fare?
+                                                                Domanda: chi mi ha insegnato a vedermi così? cosa me l'ha insegnato? In generale: da dove vengono le credenze su di sé, queste riscritture che dobbiamo poi andare a fare?
 
         
             
