@@ -12,7 +12,7 @@ Funzione di traduzione da variabile a stringa
             ~ return "Chitarra"
         - Triangolo:
             ~ return "Triangolo"
-        - RagazzaOrchestra:
+        - Orchestra:
             ~ return "Orchestra"
         - FlautoDolce:
             ~ return "Flauto Dolce"

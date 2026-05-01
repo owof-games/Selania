@@ -291,7 +291,7 @@
         - secondChar_ActualName has Grizzly:
             Ha deciso che combatterà la sua paura e diventerà il più forte di tutti, imbattibile.
             
-        - secondChar_ActualName has RagazzaOrchestra:
+        - secondChar_ActualName has Orchestra:
             Ha deciso che proteggerà il suo branco: madre,padre, nonna e fratello. E che nessuna delle persone a cui vuole bene dovrà mai più stare male.
                 
         - secondChar_ActualName has FlautoDolce:

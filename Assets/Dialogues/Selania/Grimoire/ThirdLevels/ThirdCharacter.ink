@@ -266,7 +266,7 @@
         - thirdChar_ActualName has Triangolo:
             
         
-        - thirdChar_ActualName has RagazzaOrchestra:
+        - thirdChar_ActualName has Orchestra:
 .
                 
         - thirdChar_ActualName has FlautoDolce:
@@ -286,7 +286,7 @@
             {
                 - thirdChar_ActualName has Triangolo:
                     
-                - thirdChar_ActualName has RagazzaOrchestra:
+                - thirdChar_ActualName has Orchestra:
 
                 - thirdChar_ActualName has FlautoDolce: 
                                 

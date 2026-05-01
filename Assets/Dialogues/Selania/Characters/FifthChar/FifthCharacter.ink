@@ -907,10 +907,10 @@
                     ~ fifthChar_ActualName = ()
                     ~ fifthChar_ActualName += Triangolo
             
-            - firstChar_possibleStates has RagazzaOrchestra:
-                Mi chiamerò <b><i>Ragazza Orchestra</b></i>: nel non saper Chitarrare sono diventata l'ornitorinco della musica.
+            - firstChar_possibleStates has Orchestra:
+                Mi chiamerò <b><i>Orchestra</b></i>: nel non saper Chitarrare sono diventata l'ornitorinco della musica.
                     ~ fifthChar_ActualName = ()
-                    ~ fifthChar_ActualName += RagazzaOrchestra
+                    ~ fifthChar_ActualName += Orchestra
             
             - firstChar_possibleStates has FlautoDolce:
                 Il mio nome è <b><i>Flauto Dolce</b></i>: perché semplice, elementare, ma apprezzata da chi ha buon cuore.

@@ -26,7 +26,7 @@
             - firstChar_ActualName == Triangolo:
                 ~ return "Triangolo"
                 
-            - firstChar_ActualName == RagazzaOrchestra:
+            - firstChar_ActualName == Orchestra:
                 ~ return "Orchestra"
                 
             - firstChar_ActualName == FlautoDolce:

@@ -281,7 +281,7 @@
         - firstChar_ActualName has Triangolo:
             L'ha definito lo strumento semplice, eppure fondamentale. Quello che attende che le altre facciano casino, per mettere un accento, un colore. Che ritrova il bello nelle cose quotidiane. Apprezzando quello che ha.
         
-        - firstChar_ActualName has RagazzaOrchestra:
+        - firstChar_ActualName has Orchestra:
 
             L'ha definito la gioia del cambiamento. Dell'infinita possibilità. Ciò che può provare tutto. Incluso il cambiare paese. Che nulla teme, perché tutto è.
                 
@@ -306,7 +306,7 @@
             {
                 - firstChar_ActualName has Triangolo: ha aiutato {translator(firstChar_ActualName)} a trovare il bello nel quotidiano, cosa che {charNameFive} apprezza molto.
                     
-                - firstChar_ActualName has RagazzaOrchestra: è rimasta colpita dalla partenza di {translator(firstChar_ActualName)} per l'Islanda, perché ha già vicine persone che le vogliono bene. E che i problemi seguono le persone anche quando se ne vanno.
+                - firstChar_ActualName has Orchestra: è rimasta colpita dalla partenza di {translator(firstChar_ActualName)} per l'Islanda, perché ha già vicine persone che le vogliono bene. E che i problemi seguono le persone anche quando se ne vanno.
                                 
                 - firstChar_ActualName has FlautoDolce: mettere al centro della propria vita la propria passione, come ha fatto {translator(firstChar_ActualName)} non è cosa da tutt3.
                                 

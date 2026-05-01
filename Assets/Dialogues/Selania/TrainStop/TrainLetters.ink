@@ -21,7 +21,7 @@
                     Spero mi risponda presto.
                     Intanto ti mando un grande abbraccio.
                     
-                - firstChar_ActualName has RagazzaOrchestra:
+                - firstChar_ActualName has Orchestra:
                     L'altra sera ho mandato un messaggio a Talco.
                     "Ci sto."
                     E mi ha chiamata dopo dieci minuti dieci.
@@ -104,7 +104,7 @@
                 Qualcuno ha detto al capo che abbiamo parlato di sindacato, e c'è aria di vendetta.
                 Cerco di non cagarmi addosso, ma non è facilissimo.
                 
-            - firstChar_ActualName has RagazzaOrchestra:
+            - firstChar_ActualName has Orchestra:
                 Anche se dovrei chiamarmi "La piagnona".
                 Mentre le cose pratiche per trasferirmi vanno avanti, ho iniziato a dirlo all3 altr3.
                 Con Valeria abbiamo passato una serata a bere e fare progetti.
@@ -207,7 +207,7 @@
                 È come se ci fossimo risintonizzat3.
                 E le sere assieme sono tranquillizzanti.
 
-            - firstChar_ActualName has RagazzaOrchestra:
+            - firstChar_ActualName has Orchestra:
                 Ti sto scrivendo da... Boston!
                 Ok no, questa battuta fa ridere solo una volta.
                 Ti sto scrivendo in realtà <i>dal</i> Boston.
@@ -225,7 +225,7 @@
                 Per la seconda volta nella mia vita posso fare un reset.
                 Posso provare a essere me stessa.
                 Ma con una consapevolezza che non avevo a diciannove anni.
-                Forse anche per questo sfacciatamente mi sono proposta per suonare in una band locale.
+                Forse anche per questo sfacciatamente mi sono proposta di sostituire il pianista in una band locale.
                 E tra qualche sera porteremo due pezzi a un festival jazz.
                 Io.
                 Jazz.
@@ -340,11 +340,33 @@
                 E quindi ho paura, ama.
                 Paura di aver fatto una scelta enorme per riempire un vuoto, e questa scelta avrà un effetto su di me, su Ennio, sulla persona nella mia pancia.
                 Ho paura.
-                
+                Di alla tua amica magica di mandarmi buone energie.
+                {charNameOne}.
 
                 
-            - firstChar_ActualName has RagazzaOrchestra:
-                Ti sto scrivendo da... Boston!
+            - firstChar_ActualName has Orchestra:
+                Qui la primavera è finita.
+                Non tanto fuori (devo ancora abituarmi al clima islandese) quanto in casa.
+                Thomas ha fatto capire abbastanza esplicitamente che sì, sono simpatica ed apprezza l'aiuto in casa, ma che sente il peso della mia presenza.
+                Non gliene faccio una colpa: siamo in quattro in un bilocale, è impossibile avere spazio per sé.
+                E forse anche Talco sta diventando più insofferente di quanto voglia ammettere.
+                Ieri per la prima volta da quando sono arrivata abbiamo litigato, ma litigato brutto, in un modo che non ci era mai successo.
+                Non ricordo nemmeno cosa ho detto, era qualcosa sullə bimbə, perché Talco mi ha detto "È mia figlia, decido io".
+                E io ho risposto ridendo che ero la zia, ed era mio dovere viziarla, ma lei ha preso infante e passeggino e se ne è andata per due ore.
+                Ora non so se condividere con lei la novità sarà una cosa buona o cattiva, per cui sarai tu la prima persona a saperlo: parto in tour.
+                Non questo tour gigantesco, sono alcune tappe in giro per il nord Europa.
+                Ma la band ha una fanbase più solida di quanto potessi immaginare, e al festival jazz di qualche settimana fa (ricordi l'ultima lettera?) abbiamo spaccato.
+                Da una parte sono salita per Talco, e temo possa arrabbiarsi o rimanerci male.
+                Dall'altra credo potrebbe farci bene, viste le ultime tensioni.
+                Magari riesco anche a darmi quel minimo di stabilità per vivere poi da sola.
+                Ma.
+                Voglio essere sincera con {player_pronouns has him:il|{player_pronouns has her:la|lə}} mi{player_pronouns has him:o|{player_pronouns has her:a|ə}} Riscrittor{player_pronouns has him:o|{player_pronouns has her:a|ə}} preferit{player_pronouns has him:o|{player_pronouns has her:a|ə}}: forse ci ho preso gusto a viaggiare, {player_name}.
+                Vedere posti nuovi, gente nuova, cibi nuovi, musiche nuove.
+                Forse ho voglia e bisogno di avere questo cervellino sempre stimolato e sorpreso.
+                Mia madre direbbe che sono immatura.
+                Io inizio a sospettare che sia la mia natura.
+                Ti mando un abbraccio gigantissimo, spero tu ti sia pres{player_pronouns has him:o|{player_pronouns has her:a|ə}} del tempo per riposare!
+                {charNameOne}.
                 
 
                 

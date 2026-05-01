@@ -735,10 +735,10 @@ Stai per donare qualcosa a {charNameThree}.
                     ~ fourthChar_ActualName = ()
                     ~ fourthChar_ActualName += Triangolo
             
-            - firstChar_possibleStates has RagazzaOrchestra:
-                Mi chiamerò <b>Ragazza Orchestra</b>: nel non saper Chitarrare sono diventata l'ornitorinco della musica.
+            - firstChar_possibleStates has Orchestra:
+                Mi chiamerò <b>Orchestra</b>: nel non saper Chitarrare sono diventata l'ornitorinco della musica.
                     ~ fourthChar_ActualName = ()
-                    ~ fourthChar_ActualName += RagazzaOrchestra
+                    ~ fourthChar_ActualName += Orchestra
             
             - firstChar_possibleStates has FlautoDolce:
                 Il mio nome è <b>Flauto Dolce</b>: perché semplice, elementare, ma apprezzata da chi ha buon cuore.

@@ -128,7 +128,7 @@
                 ->->
                 
         - (fourthChar_fire > fourthChar_water) && (fourthChar_fire > fourthChar_air) && (fourthChar_fire > fourthChar_earth) && (fourthChar_fire > fourthChar_aether):
-            ~ fourthChar_possibleStates += RagazzaOrchestra
+            ~ fourthChar_possibleStates += Orchestra
                 ->->
                 
         - (fourthChar_water > fourthChar_air) && (fourthChar_water > fourthChar_fire) && (fourthChar_water > fourthChar_earth) && (fourthChar_water > fourthChar_aether):

@@ -17,7 +17,7 @@
             - firstChar_ActualName has Triangolo:
                 ~ return "Ha ritrovato il bello nelle cose quotidiane"
 
-            - firstChar_ActualName has RagazzaOrchestra:
+            - firstChar_ActualName has Orchestra:
                 ~ return "Ha abbracciato la gioia del cambiamento" 
 
             - firstChar_ActualName has FlautoDolce:

@@ -5,7 +5,7 @@
                      ----------------------------------*/
 
 //Possibili stati Chitarra
-    LIST firstChar_possibleStates = Chitarra, (Triangolo), (RagazzaOrchestra), (FlautoDolce), (Ocarina), (Violino)
+    LIST firstChar_possibleStates = Chitarra, (Triangolo), (Orchestra), (FlautoDolce), (Ocarina), (Violino)
     VAR firstChar_ActualName = Chitarra
     
     //Stato della storia (non avviata, avviata, conclusa)
@@ -247,7 +247,7 @@
         
         //Rosso colore più usato        
         - (firstChar_fire> firstChar_water) && (firstChar_fire> firstChar_air) && (firstChar_fire> firstChar_earth) && (firstChar_fire> firstChar_aether):
-            ~ firstChar_ActualName += RagazzaOrchestra
+            ~ firstChar_ActualName += Orchestra
             {debug: passo per Orchestra e il nome è : {firstChar_ActualName}.}
                 ->->
         
@@ -289,7 +289,7 @@
                         ~ firstChar_ActualName += Ocarina 
                             ->->
                 - else:
-                        ~ firstChar_ActualName += RagazzaOrchestra
+                        ~ firstChar_ActualName += Orchestra
                             {debug: passo per Orchestra e il nome è : {firstChar_ActualName}.}
                             ->->
             }

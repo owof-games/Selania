@@ -79,7 +79,7 @@
                                                     {charNameOne} forse ora è capace di vedere quanta bellezza e quante soddisfazioni ha nella vita.
                                                     Grazie a te.
                 
-            - firstChar_ActualName ==  RagazzaOrchestra:
+            - firstChar_ActualName ==  Orchestra:
                 {charTag(FifthCharacter, "neutral")}:       E ora {charNameOne} è pronta per cambiare città, provare qualcosa di nuovo.
                                                     Con una persona a cui vuole bene.
                 {charTag(FifthCharacter, "sad")}:           Ammetto che un po' mi ha colpita questa scelta, ma perché {charNameOne} ha già vicine persone che le vogliono molto bene.

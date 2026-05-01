@@ -506,7 +506,7 @@
     }
     {charTag(FirstCharacter, "affectionate")}:      Ho trovato il mio nome.
             
-    - firstChar_ActualName has RagazzaOrchestra:
+    - firstChar_ActualName has Orchestra:
     {
         - ending.fire:
                                                     E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
@@ -517,7 +517,7 @@
     {charTag(FirstCharacter, "curious")}:           Rullo di tamburi...
                                                     Io sono <b><i>{charNameOne}</b></i>!
                                                     Signore e signor3 e signori: sono la gioia del cambiamento.
-                                                    Dell'infinita possibilità.
+                                                    Le infinite possibilità.
     {charTag(FirstCharacter, "neutral")}:           Sono colei che può provare tutto.
                                                     Incluso il cambiare paese.
                                                     Colei che nulla teme, perché tutto è.
