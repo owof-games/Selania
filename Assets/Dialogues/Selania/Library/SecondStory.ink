@@ -10,7 +10,7 @@
                     ~ library_readStories += CeciliaFormicola
                      -> refresh_book_lists ->
             }  
-    -> DarkLibraryModeOn ->
+    
     
     
     "Io li odio."<N>"Chi non li odia, Alchemilla."<N>"Non li sopporto. Vorrei vederli soffrire, agonizzare, bruciare…"<N>Una prepotente lingua di fuoco si alzò a lambire la pentola di peltro che sobbolliva vivacemente, penzolando sul falò.<N>"Se potessi, Alchemilla" borbottò Bergamotto "li infilzerei allo spiedo io stessa.<N>Le braci si arroventarono, illuminandosi di un rosso cupissimo, per un solo istante. Forsizia le rimestò diligentemente. "Lasciatevi andare, ragazze" le esortò. "Ci serve più fuoco."<N>"Villani, prepotenti…" <N>"Maledetti vigliacchi" rimbrottò Bergamotto.<N>"Sudici, lerci…"
@@ -55,7 +55,7 @@
                     ~ library_unreadStories -= FrancescaToscaRaimondi
                         -> refresh_book_lists -> book_test_intro
                 -
-            -> DarkLibraryModeOn ->
+            
             
             
             
@@ -96,7 +96,7 @@
                  -> refresh_book_lists ->
         }  
             
-        -> DarkLibraryModeOn ->
+        
         
         
     Volevo che mia madre fosse forte. La vedevo sprofondare in un matrimonio infelice, in una vita senza orizzonti. La vedevo arrendersi, lei che era sempre stata per me un esempio di determinazione, rigore e autodisciplina. Lo vivevo come un tradimento, e mi arrabbiavo con lei per la persona che non riusciva a essere. <N>Dietro la rabbia c'è sempre una ferita aperta, un dolore che urla per essere visto. Proprio perché le volevo bene, non riuscivo ad accettare che diventasse l'ombra della persona che era stata, della persona che ammiravo.

@@ -14,4 +14,5 @@
 === reading_place
     + (click) {are_two_entities_together(ReadingPlace, PG)} [ReadingPlace]
         
+        -> DarkLibraryModeOn ->
         -> book_test_intro

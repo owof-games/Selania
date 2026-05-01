@@ -9,7 +9,7 @@
                 ~ library_readStories += Salvo
                  -> refresh_book_lists ->
         }  
-    -> DarkLibraryModeOn ->
+    
     
     
 
@@ -36,7 +36,7 @@
            -> book_test_intro
         +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
             
-            -> DarkLibraryModeOff ->
+
             -> main
 
 
@@ -57,7 +57,7 @@
             ~ library_unreadStories -= Maura
                 -> refresh_book_lists -> book_test_intro
         -
-    -> DarkLibraryModeOn ->
+    
     
     
     Me lo chiede per l'ennesima volta, dopo i miei già innumerevoli no.<N>A questo punto faccio uscire tutta la mia rabbia urlando fino a perdere il respiro.<N>Tirando fuori tutte le cose che mi ero tenuta dentro.<N>E come tutte le volte che provo ad alzare la voce e a farmi sentire lui mi guarda come se fossi pazza.<N>E sì, lo sono.<N>Sono pazza.<N>Quella pazzia che quando fuoriesce non puoi più controllare.
@@ -76,7 +76,7 @@
            -> book_test_intro
         +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
             
-            -> DarkLibraryModeOff ->
+
                      
             -> main
 
@@ -97,7 +97,7 @@
             ~ library_unreadStories -= Simo
                 -> refresh_book_lists -> book_test_intro
         -
-    -> DarkLibraryModeOn ->
+    
     
 
 
@@ -125,7 +125,7 @@
         
         +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
             
-            -> DarkLibraryModeOff ->
+
             -> main
             
 
@@ -145,7 +145,7 @@
             ~ library_unreadStories -= LetiziaVaccarella
                 -> refresh_book_lists -> book_test_intro
         -
-    -> DarkLibraryModeOn ->
+    
     
     
     Jodorowsky diceva che qualsiasi guarigione richiede la disobbedienza perché alla base di ogni malattia c'è un divieto.<N>E se da un lato mi dico ma che cazzo ne sa Jodorowsky, lui leggeva i tarocchi di Marsiglia, io sono da Rider-Waite anzi da Waite-Smith; dall'altra, mentre conto le stelle disegnate sulla corona dell'imperatrice, inizio a pensare alla mia malattia. <N>Credo di averla da sempre, o comunque non mi ricordo di non averla avuta.<N>Di solito i sintomi sono blandi e facili da tenere sotto controllo, per questo guardandomi non diresti mai che sono malata.<N>Ma lei c'è, è sempre lì.
@@ -174,7 +174,7 @@
         
         +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
             
-            -> DarkLibraryModeOff ->
+
             -> main
             
     
@@ -188,7 +188,7 @@
 //                  -> refresh_book_lists ->
 //         }
 // <b>Giallo</b> di Queerginia Wolf/Marco Spelgatti (she/he/they).<N>Instagram: @queerginiawolf
-//         -> DarkLibraryModeOn ->
+//         
 //         
 
 //     Non hai fatto nulla di male.<N>Lanciavi i tuoi fiori nell'aria, il polline rendeva il sentiero giallo per settimane.<N>Accoglievi gli uccelli, offrivi i tuoi vecchi rami ai cani felici che correvano sopra le tue radici. <N>Tenevi ferma la terra, assorbivi l'acqua.<N>Trasformavi il sole in ombra, in aria.<N>Stamani sono passata e ti hanno tagliato.<N>Ci hanno messo tre ore e due minuti a cancellare i tuoi decenni.<N>A segare i tuoi rami fioriti, il tuo tronco su cui le formiche scendevano e salivano.
@@ -205,7 +205,7 @@
 //            -> book_test_intro
 //         +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
 //             
-//             -> DarkLibraryModeOff ->
+// 
 //             -> main
     
     

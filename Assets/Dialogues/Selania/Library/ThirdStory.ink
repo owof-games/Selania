@@ -9,7 +9,7 @@
                  -> refresh_book_lists ->
         }  
         
-    -> DarkLibraryModeOn ->
+    
     
 
 
@@ -57,7 +57,7 @@
             ~ library_unreadStories -= LorisCasagrandi
                 -> refresh_book_lists -> book_test_intro
         -
-    -> DarkLibraryModeOn ->
+    
     
 
     Volevo essere solo cervello, per non assomigliarti, per dimenticare che ti ho avuto come modello. Pilota di un mecha di carne, player di un avatar non scelto. Eppure non ha funzionato perché avevi plasmato i miei percorsi mentali. Per questo ho strappato tutto e sono ripartito da zero, per scoprire che anche in quel vuoto rimaneva la tua veste.<N>Così mi sono ripreso il mio corpo, ho cercato di strapparmi la pelle perché  non la volevo più addosso. Volevo togliere le forme che vi avevi tatuato, I solchi abitudinari che vi avevi tracciato, i modi di cui non mi sono mai liberato.
@@ -97,7 +97,7 @@
             ~ library_unreadStories -= ValFaustoLattanzio
                 -> refresh_book_lists -> book_test_intro
         -
-    -> DarkLibraryModeOn ->
+    
     
     
     I have lived in this house forever, even though I never chose it—it's the house my mother chose for me.<N>The pink walls of my room have witnessed my childhood, then my adolescence, all the way to this moment.<N>This is the right house for you, my mother says, and I lie down on the bed and stare at the ceiling while the man who says he loves me enters my body, pressing onto me dozens of blog posts and newspaper articles:<N>How to Put a Woman in Her Place,<N>Ten Steps to Drive Her Crazy,<N>Why Men Are Good at Dominating —because that's what men who love women do, they get on top, and they push, and they pant into their faces.
@@ -134,7 +134,7 @@
             ~ library_unreadStories -= Romi
                 -> refresh_book_lists -> book_test_intro
         -
-    -> DarkLibraryModeOn ->
+    
     
 
     C'era una volta un principe che non ne faceva mai un giusta.<N>Il suo modo di muoversi era sbagliato, il suo modo di vestirsi era sbagliato, il suo modo di parlare era sbagliato.<N>Anche il suo modo di pensare era completamente sbagliato.<N>Ma la cosa più sbagliata del principe erano le sue emozioni.<N>A volte rideva, piangeva o si arrabbiava per un nonnulla, mentre altre volte il suo volto rimaneva impassibile quando invece avrebbe dovuto animarsi.

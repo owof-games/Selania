@@ -16,7 +16,7 @@
     + {library_unreadStories has AdriAllora}  \ {charTag(PG, "neutral")}:         <i>Non voglio più incontrare questa storia.
         -> permanentTW -> refresh_book_lists -> book_test_intro
     -
--> DarkLibraryModeOn ->
+
 
     
     Mi chiama.<N>La mia rabbia è un gatto che insiste per essere nutrito in continuazione, mi chiama, mi chiama con quell'insistenza che ha costretto sir Isaac Newton a inventare la porticina per i gatti.<N>Ma il mio mi chiama, mi chiama, mi chiama e poi mi ricorda che condivide il novantacinque virgola sei percento del suo DNA con le tigri sopraffacendomi: bevo, disegno, mi drogo, scrivo, mi picchio, dipingo, spacco cose.
@@ -63,7 +63,7 @@
         +  {library_unreadStories has AlexiasDAvino}\ {charTag(PG, "neutral")}:       <i>Non voglio più incontrare questa storia.
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
-    -> DarkLibraryModeOn ->
+    
     
 
     Shmi entrò nell'appartamento trascinandosi dietro lo zaino.<N>Odiava il suo lavoro: la contabilità era una delle cose più noiose sulla faccia della Terra e ci si era buttatə a capofitto per paura di finire in mezzo a una strada.<N>Il suo ex fidanzato glielo aveva detto, si stava scavando la fossa da solə.<N>Dopo una lunga doccia, infilò il suo pigiama preferito, quello con le eroine dei manga che tanto amava leggere.
@@ -134,7 +134,7 @@
         + {library_unreadStories has Aza} \ {charTag(PG, "neutral")}:       <i>Non voglio più incontrare questa storia.
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
-    -> DarkLibraryModeOn ->
+    
     
         
     Le caviglie tentennano quando provo a sedermi nella hall dell'hotel, ma in piedi continuerei a fare avanti e indietro col ticchettio dei tacchi che rimbomba, non voglio attirare ulteriormente l'attenzione degli ospiti.<N>La brezza di mare si scaglia dalla porta girevole fino agli ascensori, anche di notte non cede. Un vento medio, di quelli che alza la sabbia ma non gli aquiloni, così da quattro giorni, da quando sono arrivata.<N>Il piano è semplice, ho capito la sua routine, gli ho chiesto se avesse da accendere e abbiamo fatto due chiacchiere, non si è sicuramente accorto di chi sono, non si ricorda di me, la trasformazione ha avuto successo.
@@ -188,7 +188,7 @@
         +  {library_unreadStories has StenoArtico}\ {charTag(PG, "neutral")}:       <i>Non voglio più incontrare questa storia.
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
-    -> DarkLibraryModeOn ->
+    
     
     
     Arriva sempre,<N>quando sono già a terra,<N>a prendermi a calci nello stomaco<N>quella voce arrabbiata<N>che mi chiama definisce condanna<N>la persona peggiore possibile<N>inutile<N>schifosa.<N>Ma perché ce l'ha a morte con me?
@@ -231,7 +231,7 @@
         +  {library_unreadStories has B}\ {charTag(PG, "neutral")}:       <i>Non voglio più incontrare questa storia.
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
-    -> DarkLibraryModeOn ->
+    
     
 
     Ricordo ancora nitidamente quanto la rabbia fosse un'emozione che temevo profondamente.<N>Da bambina sono cresciuta subendo gli improvvisi scatti d'ira di mio padre, espressione di un trauma generazionale che non ha mai avuto la possibilità di superare.<N>Naturalmente la rabbia è diventata qualcosa che temevo, e ho modellato la mia vita in modo da evitare di esserne bersaglio.<N>Le persone erano contente di me perché ero una ragazza docile che ascoltava gli insegnanti e gli adulti e che non dava mai preoccupazioni ai suoi genitori.
@@ -289,7 +289,7 @@
         + {library_unreadStories has Beatrice} \ {charTag(PG, "neutral")}:       <i>Non voglio più incontrare questa storia.
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
-    -> DarkLibraryModeOn ->
+    
     
     
     Ciao.<N>Ho molte cose che mi frullano dentro ed è molto faticoso mettere ordine.<N>Ma vorrei raccontarti alcune cose che vorrei che tu sapessi.
@@ -363,7 +363,7 @@
         + {library_unreadStories has BeatriceYBottura} \ {charTag(PG, "neutral")}:          <i>Non voglio più incontrare questa storia.
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
-    -> DarkLibraryModeOn ->
+    
     
     
     Da qualche parte esiste un pozzo artificiale profondo centinaia di metri, una scala a spirale in metallo porta alle sue interiora. <N>Sul suo buio fondo si trova un'enorme gabbia, sterile e opprimente.<N>La gabbia è costruita coi materiali più resistenti conosciuti all'uomo: leghe in metalli esotici, violentemente piegate su se stesse infinite volte per creare strati su strati di resistenza.<N>Questa gabbia è costruita per custodire la più terrificante, più feroce di tutte le bestie.<N>Poco più grande di un essere umano, ma abbastanza imponente da sembrare un grattacielo, la bestia giace al centro della sua gabbia, sempre sveglia, sempre affamata.
