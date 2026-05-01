@@ -73,12 +73,12 @@
                                                         Quella che ci spiega le cose.
                                                         La voce.
                                                         Ecco.
-                                                        Mi ha spiegato tante cose su {charNameFive}.
+                                                        Mi ha raccontato tante cose su {charNameFive}.
                                                         Sapevi ad esempio che può respirare fino a due minuti sott'acqua?
-        {
-            - are_two_entities_together(Mentor, PG):
-                {charTag(FifthCharacter, "hurry")}:             Eh?
-        }
+    {
+        - are_two_entities_together(Mentor, PG):
+            {charTag(FifthCharacter, "hurry")}:         Eh?
+    }
         {
             - are_two_entities_together(FirstCharacter, PG):
             {charTag(FirstCharacter, "curious")}:       Questa me la voglio godere tutta. 
@@ -90,14 +90,14 @@
         {charTag(SecondCharacter, "neutral")}:          IM-POS-SI-BI-LE!
         {
             - are_two_entities_together(Mentor, PG):
-        {charTag(FifthCharacter, "hurry")}:                     Guarda che sono bravissima a burraco!
+        {charTag(FifthCharacter, "hurry")}:             Guarda che sono bravissima a burraco!
         {charTag(SecondCharacter, "neutral")}:          Ma è una roba da vecchi!
         }
         }
         {charTag(Franco, "{portrait_Franco()}")}:       E che ha una tasca sotto l'ascella dove conserva le pietre che usa per rompere i gusci?
         {
         - are_two_entities_together(Mentor, PG):
-        {charTag(FifthCharacter, "neutral")}:                   A dire il vero ne ho anche una in testa, dove raccolgo le sciocchezze dette dalle rane.
+        {charTag(FifthCharacter, "neutral")}:           A dire il vero ne ho anche una in testa, dove raccolgo le sciocchezze dette dalle rane.
         {charTag(Franco, "{portrait_Franco()}")}:       Ma le rana sono molto sagge, quindi non hai molto da raccogliere.
         }
                                                         E.
@@ -112,11 +112,12 @@
                                                         <i>{charNameFive} crede di potere esistere solo quando si rende utile.</i>
         {charTag(Franco, "{portrait_Franco()}")}:       Esatto.
                                                         Quella roba lì.
-                                                        Chiedile un consiglio.
+                                                        La farà felice.
+                                                        Fallo.
                                                         E poi torna pure qui.
         {
         - are_two_entities_together(Mentor, PG):
-            {charTag(FifthCharacter, "hurry")}:                 Uh, che cosa carina, Franco!
+            {charTag(FifthCharacter, "hurry")}:         Fai cosa? Fai cosa, {player_name}?
         }
         {charTag(Franco, "{portrait_Franco()}")}:       Ma quindi non è {charNameOne} che fa il nido sugli alberi?
         {
@@ -157,10 +158,10 @@
                                                         Sono sicuro che così si diverte, e magari si rilassa un poco.
     {
         - are_two_entities_together(Mentor, PG):
-        {charTag(FifthCharacter, "neutral")}:                   In effetti non sarebbe male rilassarmi un poco.
+        {charTag(FifthCharacter, "neutral")}:           In effetti non sarebbe male rilassarmi un poco.
     }
 
-        {charTag(Franco, "{portrait_Franco()}")}:       Io intanto vado a salutare bisnonno Ninfea.
+        {charTag(Franco, "{portrait_Franco()}")}:       Io intanto vado a salutare bisnonno Ninfeo.
 
             @animation:RewriterBook
                 -> main
@@ -198,6 +199,7 @@
                                                         Oggi i mariti sono un po' nervosetti.
                                                         Pensavo comunque {player_name}: perché non provi a parlare con due persone quando sono assieme?
                                                         Sono abbastanza sicuro che succederà qualcosa di interessante.
+                                                        E a volte, quando non c'è comprensione, una voce esterna può essere di grande aiuto.
     {
         - are_two_entities_together(SecondCharacter, PG):
             {charTag(SecondCharacter, "energy")}:       Io parlo sempre di cose grandi!
@@ -230,8 +232,7 @@
                                                         "Ah."
                                                         O è meglio "Yeah"?
                                                         Ah no, stavo parlando dell'incontro con gli insegnanti.
-                                                        Ci sono anni in cui un incontro dura settimane.
-                                                        Una volta c'erano così tanti girini che abbiamo avuto più tempo speso all'incontro che non con le lezioni.
+                                                        Ci sono anni in cui un incontro dura settimane..
                                                         Ora però ci sono classi più piccole.
                                                         Soprattutto dopo <b>quel</b> fattaccio con l'airone.
                                                         Glielo avevano detto tutti a zio Gracco che non aveva davvero la faccia da critico gastronomico.
@@ -239,6 +240,7 @@
                                                         Però poteva andare peggio, per fortuna ci ha aiutato la nostra amica comune.
                                                         E visto che alcune cose sono cambiate, perché non provi a parlarle direttamente?
                                                         La trovi dalle parti della discarica.
+                                                        Credo potrebbe farti del bene conoscerla direttamente.
     {
     - are_two_entities_together(SecondCharacter, PG):
         {charTag(SecondCharacter, "emotional")}:        C'è qualcuno nella discarica?!
@@ -253,7 +255,7 @@
 
     {
     - are_two_entities_together(Mentor, PG):
-        {charTag(FifthCharacter, "bored")}:                     C'è una discarica?!?
+        {charTag(FifthCharacter, "bored")}:             C'è una discarica?!?
                 
     }
         {charTag(Franco, "{portrait_Franco()}")}:       Credo.
@@ -272,7 +274,7 @@
     
         {charTag(Franco, "{portrait_Franco()}")}:       Mannaggina che sonno, girino.
                                                         Ma sai una cosa?
-                                                        Mi diceva Dora che c'è della posta per te in stazione.
+                                                        Mi diceva Dora l'ape che c'è della posta per te in stazione.
                                                         Perché non vai a vedere, e poi torni da me?
                                                         Intanto mi faccio un pisolino.
                                                         Uh, una lettera di zio Gracco!
@@ -353,10 +355,10 @@
                                                         "E ripetiamo NON"
                                                         "Un'accademia di pittura."
                                                         "Per cui NO, non abbiamo borse di studio per il signor Giulio Il Rospo e"
-                                                        "NO, non doniamo blocchi di marmo di Craackrara"
+                                                        "NO, non doniamo blocchi di marmo di Craackara"
                                                         "E NO, non è che escludiamo il signor Giulio Il Rospo dai nostri corsi per un pregiudizio contro le rane."
                                                         "Ma noi non facciamo corsi di alcun tipo perché noi siamo una AGENZIA DI VIAGGI!"
-                                                        "Se le interessa, abbiamo un pacchetto famiglia molto conveniente per l'isola dei serpenti."
+                                                        "Se le interessa, abbiamo un pacchetto famiglia molto conveniente per l'Isola dei Serpenti."
                                                         "Cordialmente."
                                                         "Lo staff ABP."
                                                         "PS: e comunque i ritratti del signor Giulio Il Rospo sono brutti."
@@ -387,7 +389,7 @@
                                                         No no, questo Franco che vedi qui davanti a te, lo sapevi che è un socio MENSA?
                                                         Non è che la cosa mi rende molto orgoglioso: è un po' snob come posto.
                                                         E poi non penso capiscano proprio proprio bene che il test per entrare è pieno di limiti.
-                                                        E che magari non è che una rana non ce la fa ad entrarci perché è stupida, ma perché è una poveraccia.
+                                                        E che magari non è che una rana non ce la fa a superare il test perché è stupida, ma perché è una poveraccia.
                                                         Però l'ho fatto perché zio Gracco insisteva.
                                                         Dice che è fondamentale per trovare certi tipi di lavoro.
                                                         E io continuo a dirglielo che non voglio lavorare.
@@ -400,6 +402,7 @@
                                                         Però so che tu sai fare le scelte giuste, {player_name}.
                                                         Per cui la tua prossima commissione è: quando sarai in cucina con un'altra persona, aggiungi un ingrediente extra.
                                                         E poi torna da me.
+                                                        Potresti fare molto felice la persona che cucina con te.
 
             @animation:RewriterBook  
                 -> main
