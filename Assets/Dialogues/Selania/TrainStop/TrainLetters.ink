@@ -72,12 +72,11 @@
                     Tipo che vivo già con Ennio da due giorni.
                     Il suo coinquilino non l'ha presa benissimo, ma ci stiamo guardando in giro per cercare un posto solo per noi.
                     A casa vecchia hanno trovato una coinquilina in quindici secondi.
-                    Però sono spesso lì per le cose de La Rifugia.
+                    Però sono spesso lì per fare le prove della band.
                     Ogni tanto guardo la cartolina di Talco, e mi chiedo cosa scriverlə.
                     Ho l'impressione che non apprezzerebbe molto questa versione di me.
                     Mentre a lavoro le colleghe più anziane hanno già iniziato a chiedermi: a quando un figlio?
                     Credo che prima o poi ne inforchetto una, così la piantano.
-
                     
             }
         Alla prossima lettera.
@@ -166,7 +165,7 @@
                 Ma non riusciamo a trovare una casa che una, soprattutto coi nostri stipendi.
                 L'alternativa è spostarci fuori dalla città.
                 E di molto.
-                E questo significherebbe mettere una croce sulla band, e sul La Rifugia.
+                E questo significherebbe mettere una croce sulla band.
                 Già ora Valeria mi scrive spesso che le manco.
                 Ma quando dico ad Ennio che esco, il suo sguardo è sempre più distaccato, quasi ferito.
                 L'altra sera stavamo guardando un film a letto e mi ha detto: "Non ti basto, vero?"
@@ -303,8 +302,7 @@
                 Ora le cose sono più calme.
                 E l'altra sera dopo giorni abbiamo fatto di nuovo l'amore.
                 Ma ho fatto una piccola valigia, con le cose essenziali, e l'ho nascosta nello studiolo.
-                Mi serve qualcosa che mi ricordi che posso sempre andarmene.
-                
+                Mi serve qualcosa che mi ricordi che posso sempre andarmene. 
         }
 
     Un saluto.
@@ -409,8 +407,11 @@
       
                 
             - firstChar_ActualName has Violino:
-                Sono passati mesi, spero che lì le cose vadano bene.
-                
+                Non parlo con Ennio da tre giorni.
+                Ha trovato la valigia, e ha pianto disperato.
+                Senza dire una parola.
+                Sono infelice, e non so perché.
+                Sono infelice, e non voglio vedere il perché.
                 
         }
 
