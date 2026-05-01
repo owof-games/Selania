@@ -49,9 +49,9 @@
                             ~ library_readStories += FrancescaToscaRaimondi
                              -> refresh_book_lists ->
                     }  
-                +  \ {charTag(PG, "neutral")}:       {library_unreadStories has FrancescaToscaRaimondi}<i>Per ora non me la sento di affrontare questo tema.
+                +  {library_unreadStories has FrancescaToscaRaimondi}\ {charTag(PG, "neutral")}:       <i>Per ora non me la sento di affrontare questo tema.
                         -> tempTW -> book_test_intro
-                +  \ {charTag(PG, "neutral")}:       {library_unreadStories has FrancescaToscaRaimondi}<i>Non voglio più incontrare questa storia.
+                + {library_unreadStories has FrancescaToscaRaimondi} \ {charTag(PG, "neutral")}:       <i>Non voglio più incontrare questa storia.
                     ~ library_unreadStories -= FrancescaToscaRaimondi
                         -> refresh_book_lists -> book_test_intro
                 -

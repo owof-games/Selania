@@ -51,9 +51,9 @@
                     ~ library_readStories += Maura
                      -> refresh_book_lists ->
             }  
-        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has Maura}<i>Per ora non me la sento di affrontare questo tema.
+        + {library_unreadStories has Maura} \ {charTag(PG, "neutral")}:       <i>Per ora non me la sento di affrontare questo tema.
                 -> tempTW -> book_test_intro
-        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has Maura}<i>Non voglio più incontrare questa storia.
+        + {library_unreadStories has Maura} \ {charTag(PG, "neutral")}:       <i>Non voglio più incontrare questa storia.
             ~ library_unreadStories -= Maura
                 -> refresh_book_lists -> book_test_intro
         -
@@ -91,9 +91,9 @@
                     ~ library_readStories += Simo
                      -> refresh_book_lists ->
             }        
-        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has Simo}<i>Per ora non me la sento di affrontare questo tema.
+        + {library_unreadStories has Simo} \ {charTag(PG, "neutral")}:       <i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has Simo}<i>Non voglio più incontrare questa storia.
+        +  {library_unreadStories has Simo}\ {charTag(PG, "neutral")}:       <i>Non voglio più incontrare questa storia.
             ~ library_unreadStories -= Simo
                 -> refresh_book_lists -> book_test_intro
         -
@@ -139,9 +139,9 @@
                     ~ library_readStories += LetiziaVaccarella
                      -> refresh_book_lists ->
             }        
-        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has LetiziaVaccarella}<i>Per ora non me la sento di affrontare questo tema.
+        + {library_unreadStories has LetiziaVaccarella} \ {charTag(PG, "neutral")}:       <i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has LetiziaVaccarella}<i>Non voglio più incontrare questa storia.
+        + {library_unreadStories has LetiziaVaccarella} \ {charTag(PG, "neutral")}:       <i>Non voglio più incontrare questa storia.
             ~ library_unreadStories -= LetiziaVaccarella
                 -> refresh_book_lists -> book_test_intro
         -

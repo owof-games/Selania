@@ -11,9 +11,9 @@
                 ~ library_readStories += AdriAllora
                  -> refresh_book_lists ->
         }  
-    +  \ {charTag(PG, "neutral")}:       {library_unreadStories has AdriAllora}<i>Per ora non me la sento di affrontare questi temi.
+    + {library_unreadStories has AdriAllora} \ {charTag(PG, "neutral")}:                    <i>Per ora non me la sento di affrontare questi temi.
         -> tempTW -> book_test_intro
-    +  \ {charTag(PG, "neutral")}:       (rimuovi) {library_unreadStories has AdriAllora} <i>Non voglio più incontrare questa storia.
+    + {library_unreadStories has AdriAllora}  \ {charTag(PG, "neutral")}:         <i>Non voglio più incontrare questa storia.
         -> permanentTW -> refresh_book_lists -> book_test_intro
     -
 -> DarkLibraryModeOn ->
@@ -58,9 +58,9 @@
                     ~ library_readStories += AlexiasDAvino
                      -> refresh_book_lists ->
             }  
-        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has AlexiasDAvino}<i>Per ora non me la sento di affrontare questo tema.
+        +  {library_unreadStories has AlexiasDAvino} \ {charTag(PG, "neutral")}:       <i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        +  \ {charTag(PG, "neutral")}:       (rimuovi) {library_unreadStories has AlexiasDAvino}<i>Non voglio più incontrare questa storia.
+        +  {library_unreadStories has AlexiasDAvino}\ {charTag(PG, "neutral")}:       <i>Non voglio più incontrare questa storia.
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
@@ -129,9 +129,9 @@
                     ~ library_readStories += Aza
                      -> refresh_book_lists ->
             }  
-        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has Aza}<i>Per ora non me la sento di affrontare questo tema.
+        +  {library_unreadStories has Aza}\ {charTag(PG, "neutral")}:       <i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        +  \ {charTag(PG, "neutral")}:       (rimuovi) {library_unreadStories has Aza}<i>Non voglio più incontrare questa storia.
+        + {library_unreadStories has Aza} \ {charTag(PG, "neutral")}:       <i>Non voglio più incontrare questa storia.
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
@@ -183,9 +183,9 @@
                      -> refresh_book_lists ->
             }  
             -> refresh_book_lists ->
-        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has StenoArtico}<i>Per ora non me la sento di affrontare questo tema.
+        + {library_unreadStories has StenoArtico} \ {charTag(PG, "neutral")}:       <i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        +  \ {charTag(PG, "neutral")}:       (rimuovi) {library_unreadStories has StenoArtico}<i>Non voglio più incontrare questa storia.
+        +  {library_unreadStories has StenoArtico}\ {charTag(PG, "neutral")}:       <i>Non voglio più incontrare questa storia.
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
@@ -226,9 +226,9 @@
                     ~ library_readStories += B
                      -> refresh_book_lists ->
             }  
-        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has B}<i>Per ora non me la sento di affrontare questo tema.
+        +  {library_unreadStories has B}\ {charTag(PG, "neutral")}:       <i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        +  \ {charTag(PG, "neutral")}:       (rimuovi) {library_unreadStories has B}<i>Non voglio più incontrare questa storia.
+        +  {library_unreadStories has B}\ {charTag(PG, "neutral")}:       <i>Non voglio più incontrare questa storia.
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
@@ -284,9 +284,9 @@
                     ~ library_readStories += Beatrice
                      -> refresh_book_lists ->
             }  
-        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has Beatrice}<i>Per ora non me la sento di affrontare questo tema.
+        + {library_unreadStories has Beatrice} \ {charTag(PG, "neutral")}:       <i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        +  \ {charTag(PG, "neutral")}:       (rimuovi) {library_unreadStories has Beatrice}<i>Non voglio più incontrare questa storia.
+        + {library_unreadStories has Beatrice} \ {charTag(PG, "neutral")}:       <i>Non voglio più incontrare questa storia.
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
@@ -358,9 +358,9 @@
                     ~ library_readStories += BeatriceYBottura
                      -> refresh_book_lists ->
             }  
-        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has BeatriceYBottura}<i>Per ora non me la sento di affrontare questo tema.
+        + {library_unreadStories has BeatriceYBottura} \ {charTag(PG, "neutral")}:       <i>Per ora non me la sento di affrontare questo tema.
             -> tempTW -> book_test_intro
-        +  \ {charTag(PG, "neutral")}:       {library_unreadStories has BeatriceYBottura}<i>Non voglio più incontrare questa storia.
+        + {library_unreadStories has BeatriceYBottura} \ {charTag(PG, "neutral")}:          <i>Non voglio più incontrare questa storia.
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
