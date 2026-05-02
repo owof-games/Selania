@@ -72,6 +72,11 @@ namespace Selania.Rework.Components.Grimoire
             SecondLevelRules,
 
             /// <summary>
+            ///     Second level page (appendix).
+            /// </summary>
+            SecondLevelAppendix,
+
+            /// <summary>
             ///     Third level page (sigils).
             /// </summary>
             ThirdLevelSigils,
@@ -132,6 +137,9 @@ namespace Selania.Rework.Components.Grimoire
 
         [Tooltip("The animator controlling the second level page for rules")] [SerializeField]
         private Animator secondLevelAnimatorRules = null!;
+
+        [Tooltip("The animator controlling the second level page for the appendix")] [SerializeField]
+        private Animator secondLevelAnimatorAppendix = null!;
 
         [Tooltip("The animator controlling the third level page for the sigils")] [SerializeField]
         private Animator thirdLevelAnimatorSigils = null!;
@@ -204,6 +212,9 @@ namespace Selania.Rework.Components.Grimoire
 
         [SerializeField] [Tooltip("The second level characters controller")]
         private SecondLevelCharactersGrimoire secondLevelCharactersGrimoire = null!;
+
+        [SerializeField] [Tooltip("The second level appendix controller")]
+        private SecondLevelAppendixGrimoire secondLevelAppendixGrimoire = null!;
 
         [SerializeField] private ThirdLevelCharacterGrimoire thirdLevelCharacterGrimoire = null!;
 
@@ -317,6 +328,11 @@ namespace Selania.Rework.Components.Grimoire
         ///     An observable that produces a string with the name of the button each time a button is clicked.
         /// </summary>
         public Observable<string> secondLevelCharactersButtonClick => secondLevelCharactersGrimoire.clickObservable;
+
+        /// <summary>
+        ///     An observable that produces a string with the name of the button each time a button is clicked.
+        /// </summary>
+        public Observable<string> secondLevelAppendixButtonClick => secondLevelAppendixGrimoire.clickObservable;
 
         public bool thirdLevelCharacterCanTurnToNextPage => thirdLevelCharacterGrimoire.canTurnToNextPage;
 
@@ -601,6 +617,9 @@ namespace Selania.Rework.Components.Grimoire
                 case PageType.SecondLevelRules:
                     ShowPage(secondLevelAnimatorRules);
                     break;
+                case PageType.SecondLevelAppendix:
+                    ShowPage(secondLevelAnimatorAppendix);
+                    break;
                 case PageType.ThirdLevelSigils:
                     ShowPage(thirdLevelAnimatorSigils);
                     break;
@@ -631,7 +650,8 @@ namespace Selania.Rework.Components.Grimoire
             {
                 firstLevelAnimator, secondLevelAnimatorGreenhouse, secondLevelAnimatorSigils,
                 secondLevelAnimatorCharacters, secondLevelAnimatorFranco, secondLevelAnimatorRules,
-                thirdLevelAnimatorSigils, thirdLevelAnimatorGreenhouse, thirdLevelAnimatorCharacter
+                secondLevelAnimatorAppendix, thirdLevelAnimatorSigils, thirdLevelAnimatorGreenhouse,
+                thirdLevelAnimatorCharacter
             };
 
             foreach (var animator in _pageAnimators)

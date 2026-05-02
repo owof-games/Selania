@@ -32,6 +32,9 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
             grimoireBackground.secondLevelCharactersButtonClick
                 .Subscribe(buttonName => AppendText($"Clicked on second characters button '{buttonName}'"))
                 .AddTo(this);
+            grimoireBackground.secondLevelAppendixButtonClick
+                .Subscribe(buttonName => AppendText($"Clicked on second appendix button '{buttonName}'"))
+                .AddTo(this);
         }
 
         private void AppendText(string s)
@@ -185,6 +188,11 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
         public void SwitchToSecondLevelRulesPage()
         {
             grimoireBackground.SwitchToPage(GrimoireBackground.PageType.SecondLevelRules);
+        }
+
+        public void SwitchToSecondLevelAppendixPage()
+        {
+            grimoireBackground.SwitchToPage(GrimoireBackground.PageType.SecondLevelAppendix);
         }
 
         public void SwitchToThirdLevelSigilsPage()
