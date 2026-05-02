@@ -1101,6 +1101,13 @@ namespace Selania.Rework.Components
             throw new InvalidOperationException(
                 "Cannot get the second level rules grimoire page descriptors before initialization");
 
+        private Subject<IStoryGrimoire.SecondLevelAppendixPageDescriptor>? _secondLevelAppendixPageDescriptorsSubject;
+
+        public Observable<IStoryGrimoire.SecondLevelAppendixPageDescriptor> secondLevelAppendixPageDescriptors =>
+            _secondLevelAppendixPageDescriptorsSubject?.AsObservable() ??
+            throw new InvalidOperationException(
+                "Cannot get the second level appendix grimoire page descriptors before initialization");
+
         private Subject<IStoryGrimoire.ThirdLevelSigilsGrimoirePageDescriptor>?
             _thirdLevelSigilsGrimoirePageDescriptorsSubject;
 
@@ -1154,6 +1161,8 @@ namespace Selania.Rework.Components
             _secondLevelFrancoPageDescriptorsSubject =
                 new Subject<IStoryGrimoire.SecondLevelFrancoPageDescriptor>();
             _secondLevelRulesPageDescriptorsSubject = new Subject<IStoryGrimoire.SecondLevelRulesPageDescriptor>();
+            _secondLevelAppendixPageDescriptorsSubject =
+                new Subject<IStoryGrimoire.SecondLevelAppendixPageDescriptor>();
             _thirdLevelSigilsGrimoirePageDescriptorsSubject =
                 new Subject<IStoryGrimoire.ThirdLevelSigilsGrimoirePageDescriptor>();
             _thirdLevelGreenhouseGrimoirePageDescriptorsSubject =
@@ -1171,6 +1180,7 @@ namespace Selania.Rework.Components
             _thirdLevelTextGrimoirePageDescriptorSubject?.Dispose();
             _thirdLevelGreenhouseGrimoirePageDescriptorsSubject?.Dispose();
             _thirdLevelSigilsGrimoirePageDescriptorsSubject?.Dispose();
+            _secondLevelAppendixPageDescriptorsSubject?.Dispose();
             _secondLevelRulesPageDescriptorsSubject?.Dispose();
             _secondLevelFrancoPageDescriptorsSubject?.Dispose();
             _secondLevelCharacterPageDescriptorsSubject?.Dispose();
@@ -1199,6 +1209,7 @@ namespace Selania.Rework.Components
         /// </summary>
         /// <param name="currentText"></param>
         /// <param name="tags"></param>
+        /// <param name="actionsAfterUpdate"></param>
         private void UpdateCurrentTextGrimoire(string currentText, ICollection<Tag> tags,
             ref ActionsAfterUpdate actionsAfterUpdate)
         {
@@ -1224,6 +1235,9 @@ namespace Selania.Rework.Components
                     break;
                 case "@grimoireRules":
                     EmitSecondLevelRulesGrimoirePage();
+                    break;
+                case "@grimoireAppendix":
+                    EmitSecondLevelAppendixGrimoirePage();
                     break;
                 case "@grimoireSigilPages":
                     EmitThirdLevelSigilsGrimoirePage();
@@ -1782,6 +1796,47 @@ namespace Selania.Rework.Components
 
             // emit event
             _secondLevelRulesPageDescriptorsSubject?.OnNext(descriptor);
+        }
+
+        private void EmitSecondLevelAppendixGrimoirePage()
+        {
+            var story = GetStory();
+
+            // parse choices
+            var choices = story.currentChoices.Where(choice => choice.tags == null || choice.tags.Count == 0)
+                .Select(choice => choice.text)
+                .ToList();
+
+            // navigation
+            GetNavigationChoices(story, out var indexChoice, out var secondLevelChoice, out var previousChoice,
+                out var nextChoice, out var closeChoice);
+            if (indexChoice == null)
+            {
+                logger.ZLogError($"Second level appendix has not a choice to get back to the first level!");
+                return;
+            }
+
+            if (secondLevelChoice != null)
+                logger.ZLogWarning(
+                    $"Second level appendix has a choice to get back to the second level ({secondLevelChoice} #{bookmarkTagCategory}:{secondLevelBookmarkTagValue}) that should not be present");
+
+            if (previousChoice != null)
+                logger.ZLogWarning(
+                    $"Second level appendix has a choice to go to the previous page ({previousChoice} #{bookmarkTagCategory}:{backBookmarkTagValue}) that should not be present");
+
+            if (nextChoice != null)
+                logger.ZLogWarning(
+                    $"Second level appendix has a choice to go to the next page ({nextChoice} #{bookmarkTagCategory}:{forwardBookmarkTagValue}) that should not be present");
+
+            if (closeChoice != null)
+                logger.ZLogWarning(
+                    $"Second level appendix has a choice to close the grimoire ({closeChoice} #{bookmarkTagCategory}:{closeBookmarkTagValue}) that should not be present");
+
+            // produce descriptor
+            var descriptor = new IStoryGrimoire.SecondLevelAppendixPageDescriptor(choices, indexChoice);
+
+            // emit the signal
+            _secondLevelAppendixPageDescriptorsSubject!.OnNext(descriptor);
         }
 
         private static string GetContentsUntilChoices(Story story)

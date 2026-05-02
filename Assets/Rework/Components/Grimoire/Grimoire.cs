@@ -32,6 +32,8 @@ namespace Selania.Rework.Components.Grimoire
                 .AddTo(this);
             StoryGrimoire.secondLevelRulesPageDescriptors.Subscribe(OnSecondLevelRulesGrimoirePageDescriptors)
                 .AddTo(this);
+            StoryGrimoire.secondLevelAppendixPageDescriptors.Subscribe(OnSecondLevelAppendixGrimoirePageDescriptors)
+                .AddTo(this);
             StoryGrimoire.thirdLevelSigilsGrimoirePageDescriptors.Subscribe(OnThirdLevelSigilsGrimoirePageDescriptors)
                 .AddTo(this);
             StoryGrimoire.thirdLevelGreenhouseGrimoirePageDescriptors
@@ -58,6 +60,7 @@ namespace Selania.Rework.Components.Grimoire
             grimoireBackground.thirdLevelSigilsButtonClick.Subscribe(PickChoice).AddTo(this);
             grimoireBackground.secondLevelGreenhouseButtonClick.Subscribe(PickChoice).AddTo(this);
             grimoireBackground.secondLevelCharactersButtonClick.Subscribe(PickChoice).AddTo(this);
+            grimoireBackground.secondLevelAppendixButtonClick.Subscribe(PickChoice).AddTo(this);
             grimoireBackground.thirdLevelGreenhouseButtonClickOnLeft
                 .Select((isLeft, i) => (isLeft, i))
                 .CombineLatest(
@@ -201,6 +204,17 @@ namespace Selania.Rework.Components.Grimoire
 
             // set up the grimoire to show the info
             grimoireBackground.SecondLevelRulesGrimoireSetText(descriptor.rules);
+
+            // set up navigation
+            SetUpNavigation(descriptor);
+        }
+
+        private void OnSecondLevelAppendixGrimoirePageDescriptors(
+            IStoryGrimoire.SecondLevelAppendixPageDescriptor descriptor)
+        {
+            // show the grimoire (second level appendix)
+            grimoireBackground.ShowGrimoire();
+            grimoireBackground.SwitchToPage(GrimoireBackground.PageType.SecondLevelAppendix);
 
             // set up navigation
             SetUpNavigation(descriptor);

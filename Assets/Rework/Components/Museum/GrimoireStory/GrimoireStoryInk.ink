@@ -187,6 +187,8 @@ E ora apro la scelta delle piante.
         -> grimoire_franco
     + [Rules]
         -> grimoire_rules
+    + [Appendix]
+        -> grimoire_appendix
     -
 
     -> grimoire
@@ -634,5 +636,22 @@ E ora apro la scelta delle piante.
     E quando saranno pronte, decidi se continuare a conoscerle, o aiutarle a rileggere il loro passato.
     _
     A scegliere un nuovo nome.
+    + [Index #bookmark:index]
+        -> grimoire
+
+=== grimoire_appendix
+    @grimoireAppendix
+    + [Conversation]
+        -> grimoire_appendix
+    + [Present]
+        -> grimoire_appendix
+    + [Kitchen]
+        -> grimoire_appendix
+    + [Rewrite]
+        -> grimoire_appendix
+    + [Nest]
+        -> grimoire_appendix
+    + [Letters]
+        -> grimoire_appendix
     + [Index #bookmark:index]
         -> grimoire
