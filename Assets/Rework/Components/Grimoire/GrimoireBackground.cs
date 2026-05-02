@@ -67,6 +67,16 @@ namespace Selania.Rework.Components.Grimoire
             SecondLevelFranco,
 
             /// <summary>
+            ///     Second level page (rules).
+            /// </summary>
+            SecondLevelRules,
+
+            /// <summary>
+            ///     Second level page (appendix).
+            /// </summary>
+            SecondLevelAppendix,
+
+            /// <summary>
             ///     Third level page (sigils).
             /// </summary>
             ThirdLevelSigils,
@@ -124,6 +134,12 @@ namespace Selania.Rework.Components.Grimoire
 
         [Tooltip("The animator controlling the second level page for Franco")] [SerializeField]
         private Animator secondLevelAnimatorFranco = null!;
+
+        [Tooltip("The animator controlling the second level page for rules")] [SerializeField]
+        private Animator secondLevelAnimatorRules = null!;
+
+        [Tooltip("The animator controlling the second level page for the appendix")] [SerializeField]
+        private Animator secondLevelAnimatorAppendix = null!;
 
         [Tooltip("The animator controlling the third level page for the sigils")] [SerializeField]
         private Animator thirdLevelAnimatorSigils = null!;
@@ -197,9 +213,14 @@ namespace Selania.Rework.Components.Grimoire
         [SerializeField] [Tooltip("The second level characters controller")]
         private SecondLevelCharactersGrimoire secondLevelCharactersGrimoire = null!;
 
+        [SerializeField] [Tooltip("The second level appendix controller")]
+        private SecondLevelAppendixGrimoire secondLevelAppendixGrimoire = null!;
+
         [SerializeField] private ThirdLevelCharacterGrimoire thirdLevelCharacterGrimoire = null!;
 
         [SerializeField] private SecondLevelFrancoGrimoire secondLevelFrancoGrimoire = null!;
+
+        [SerializeField] private SecondLevelRulesGrimoire secondLevelRulesGrimoire = null!;
 
         private Animator _animator = null!;
 
@@ -307,6 +328,11 @@ namespace Selania.Rework.Components.Grimoire
         ///     An observable that produces a string with the name of the button each time a button is clicked.
         /// </summary>
         public Observable<string> secondLevelCharactersButtonClick => secondLevelCharactersGrimoire.clickObservable;
+
+        /// <summary>
+        ///     An observable that produces a string with the name of the button each time a button is clicked.
+        /// </summary>
+        public Observable<string> secondLevelAppendixButtonClick => secondLevelAppendixGrimoire.clickObservable;
 
         public bool thirdLevelCharacterCanTurnToNextPage => thirdLevelCharacterGrimoire.canTurnToNextPage;
 
@@ -588,6 +614,12 @@ namespace Selania.Rework.Components.Grimoire
                 case PageType.SecondLevelFranco:
                     ShowPage(secondLevelAnimatorFranco);
                     break;
+                case PageType.SecondLevelRules:
+                    ShowPage(secondLevelAnimatorRules);
+                    break;
+                case PageType.SecondLevelAppendix:
+                    ShowPage(secondLevelAnimatorAppendix);
+                    break;
                 case PageType.ThirdLevelSigils:
                     ShowPage(thirdLevelAnimatorSigils);
                     break;
@@ -617,8 +649,9 @@ namespace Selania.Rework.Components.Grimoire
             _pageAnimators ??= new[]
             {
                 firstLevelAnimator, secondLevelAnimatorGreenhouse, secondLevelAnimatorSigils,
-                secondLevelAnimatorCharacters, secondLevelAnimatorFranco, thirdLevelAnimatorSigils,
-                thirdLevelAnimatorGreenhouse, thirdLevelAnimatorCharacter
+                secondLevelAnimatorCharacters, secondLevelAnimatorFranco, secondLevelAnimatorRules,
+                secondLevelAnimatorAppendix, thirdLevelAnimatorSigils, thirdLevelAnimatorGreenhouse,
+                thirdLevelAnimatorCharacter
             };
 
             foreach (var animator in _pageAnimators)
@@ -884,6 +917,11 @@ namespace Selania.Rework.Components.Grimoire
         public void SecondLevelFrancoGrimoireSetFavourDemanded(string favor)
         {
             secondLevelFrancoGrimoire.SetFavourDemanded(favor);
+        }
+
+        public void SecondLevelRulesGrimoireSetText(string text)
+        {
+            secondLevelRulesGrimoire.SetRulesText(text);
         }
     }
 }

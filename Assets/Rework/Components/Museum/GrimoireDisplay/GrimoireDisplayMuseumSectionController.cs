@@ -32,6 +32,9 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
             grimoireBackground.secondLevelCharactersButtonClick
                 .Subscribe(buttonName => AppendText($"Clicked on second characters button '{buttonName}'"))
                 .AddTo(this);
+            grimoireBackground.secondLevelAppendixButtonClick
+                .Subscribe(buttonName => AppendText($"Clicked on second appendix button '{buttonName}'"))
+                .AddTo(this);
         }
 
         private void AppendText(string s)
@@ -180,6 +183,16 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
         public void SwitchToSecondLevelCharactersPage()
         {
             grimoireBackground.SwitchToPage(GrimoireBackground.PageType.SecondLevelCharacters);
+        }
+
+        public void SwitchToSecondLevelRulesPage()
+        {
+            grimoireBackground.SwitchToPage(GrimoireBackground.PageType.SecondLevelRules);
+        }
+
+        public void SwitchToSecondLevelAppendixPage()
+        {
+            grimoireBackground.SwitchToPage(GrimoireBackground.PageType.SecondLevelAppendix);
         }
 
         public void SwitchToThirdLevelSigilsPage()
@@ -574,6 +587,25 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
         public void SecondLevelFrancoGrimoireSetFavour()
         {
             grimoireBackground.SecondLevelFrancoGrimoireSetFavourDemanded("Un favore diverso dal solito.");
+        }
+
+        public void SecondLevelRulesSetText()
+        {
+            grimoireBackground.SecondLevelRulesGrimoireSetText("""
+                                                               Parla con le persone che incontri.
+
+                                                               Impara a conoscerle.
+
+                                                               Compi delle scelte.
+
+                                                               Se ti va, fai loro doni.
+
+                                                               Fate cose assieme.
+
+                                                               E quando saranno pronte, decidi se continuare a conoscerle, o aiutarle a rileggere il loro passato.
+
+                                                               A scegliere un nuovo nome.
+                                                               """);
         }
     }
 }
