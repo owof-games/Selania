@@ -2041,13 +2041,6 @@ namespace Selania.Rework.Components
                 return;
             }
 
-            if (secondLevelChoice == null)
-            {
-                logger.ZLogWarning(
-                    $"Third level text has not a choice to get back to the second level!");
-                return;
-            }
-
             if (previousChoice == null)
             {
                 logger.ZLogWarning(
