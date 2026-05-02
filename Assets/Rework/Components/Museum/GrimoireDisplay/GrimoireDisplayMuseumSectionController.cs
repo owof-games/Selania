@@ -182,6 +182,11 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
             grimoireBackground.SwitchToPage(GrimoireBackground.PageType.SecondLevelCharacters);
         }
 
+        public void SwitchToSecondLevelRulesPage()
+        {
+            grimoireBackground.SwitchToPage(GrimoireBackground.PageType.SecondLevelRules);
+        }
+
         public void SwitchToThirdLevelSigilsPage()
         {
             grimoireBackground.SwitchToPage(GrimoireBackground.PageType.ThirdLevelSigils);
@@ -574,6 +579,25 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
         public void SecondLevelFrancoGrimoireSetFavour()
         {
             grimoireBackground.SecondLevelFrancoGrimoireSetFavourDemanded("Un favore diverso dal solito.");
+        }
+
+        public void SecondLevelRulesSetText()
+        {
+            grimoireBackground.SecondLevelRulesGrimoireSetText("""
+                                                               Parla con le persone che incontri.
+
+                                                               Impara a conoscerle.
+
+                                                               Compi delle scelte.
+
+                                                               Se ti va, fai loro doni.
+
+                                                               Fate cose assieme.
+
+                                                               E quando saranno pronte, decidi se continuare a conoscerle, o aiutarle a rileggere il loro passato.
+
+                                                               A scegliere un nuovo nome.
+                                                               """);
         }
     }
 }

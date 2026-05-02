@@ -206,6 +206,7 @@ MonoBehaviour:
   secondLevelAnimatorSigils: {fileID: 7577056092533575052}
   secondLevelAnimatorCharacters: {fileID: 1475920499476034790}
   secondLevelAnimatorFranco: {fileID: 6011513600405290626}
+  secondLevelAnimatorRules: {fileID: 55502789014185209}
   thirdLevelAnimatorSigils: {fileID: 3582885329405426736}
   thirdLevelAnimatorGreenhouse: {fileID: 5521151217004374019}
   thirdLevelAnimatorCharacter: {fileID: 1464449679812827950}
@@ -307,6 +308,7 @@ MonoBehaviour:
   secondLevelCharactersGrimoire: {fileID: 4294163969986388753}
   thirdLevelCharacterGrimoire: {fileID: 4832495966200797149}
   secondLevelFrancoGrimoire: {fileID: 2567733122114956529}
+  secondLevelRulesGrimoire: {fileID: 835128271251548334}
 --- !u!1 &1236467335700584395
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,7 +1713,7 @@ GameObject:
   - component: {fileID: 2458453491882228138}
   - component: {fileID: 8418243913546845777}
   - component: {fileID: 55502789014185209}
-  - component: {fileID: 8073383004653188746}
+  - component: {fileID: 835128271251548334}
   m_Layer: 5
   m_Name: Second Level Container (Rules)
   m_TagString: Untagged
@@ -1748,7 +1750,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8767571725607667269}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -1774,7 +1776,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8073383004653188746
+--- !u!114 &835128271251548334
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1783,14 +1785,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8767571725607667269}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efb0925993d54be6b94cba9b5fb768a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 175e4a2ca5c142c5b9fccd1b9c1e5f86, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.SecondLevelFrancoGrimoire
-  recipeTitleTextMeshPro: {fileID: 0}
-  recipeDescriptionTextMeshPro: {fileID: 0}
-  recipeContentsTextMeshPro: {fileID: 0}
-  lockImage: {fileID: 0}
-  favourDemandedTextMeshPro: {fileID: 0}
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.SecondLevelRulesGrimoire
+  rulesText: {fileID: 8184481285332119201}
 --- !u!1 &9119904497941863320
 GameObject:
   m_ObjectHideFlags: 0
