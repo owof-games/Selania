@@ -25,7 +25,7 @@ Recap della logica.
 **********/
 
 //Step zero: capire chi è in scena e se ci sono condizioni in cui ci sono più main talker
-    -> glyph_talkersAndMainsChecker -> 
+    ~ glyph_talkersAndMainsChecker()
 
 //E un remind della scelta fatta
     {GlyphC:
@@ -979,7 +979,7 @@ Recap della logica.
 }
 
 
-=== glyph_talkersAndMainsChecker
+=== function glyph_talkersAndMainsChecker()
 //Prima cosa: chi è in scena?
     {
         - are_two_entities_together(PG, FirstCharacter):
@@ -1086,4 +1086,3 @@ Recap della logica.
     }
 
 {debug_nest: dopo il check zero sui presenti, glyph_allPNGAffectedByChoice contiene {glyph_allPNGAffectedByChoice}, mentre glyph_mainTalker è {glyph_mainTalker}.}
-->->
