@@ -185,6 +185,8 @@ E ora apro la scelta delle piante.
         -> grimoire_second_character
     + [Franco]
         -> grimoire_franco
+    + [Rules]
+        -> grimoire_rules
     -
 
     -> grimoire
@@ -613,5 +615,24 @@ E ora apro la scelta delle piante.
     Inizio della ricetta.
     Continuo della ricetta.
     La ricetta va ancora avanti.
+    + [Index #bookmark:index]
+        -> grimoire
+
+
+=== grimoire_rules
+    @grimoireRules
+    Parla con le persone che incontri.
+    _
+    Impara a conoscerle.
+    _
+    Compi delle scelte.
+    _
+    Se ti va, fai loro doni.
+    _
+    Fate cose assieme.
+    _
+    E quando saranno pronte, decidi se continuare a conoscerle, o aiutarle a rileggere il loro passato.
+    _
+    A scegliere un nuovo nome.
     + [Index #bookmark:index]
         -> grimoire

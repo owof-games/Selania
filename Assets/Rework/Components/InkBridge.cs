@@ -1094,6 +1094,13 @@ namespace Selania.Rework.Components
             throw new InvalidOperationException(
                 "Cannot get the second level Franco grimoire page descriptors before initialization");
 
+        private Subject<IStoryGrimoire.SecondLevelRulesPageDescriptor>? _secondLevelRulesPageDescriptorsSubject;
+
+        public Observable<IStoryGrimoire.SecondLevelRulesPageDescriptor> secondLevelRulesPageDescriptors =>
+            _secondLevelRulesPageDescriptorsSubject?.AsObservable() ??
+            throw new InvalidOperationException(
+                "Cannot get the second level rules grimoire page descriptors before initialization");
+
         private Subject<IStoryGrimoire.ThirdLevelSigilsGrimoirePageDescriptor>?
             _thirdLevelSigilsGrimoirePageDescriptorsSubject;
 
@@ -1146,6 +1153,7 @@ namespace Selania.Rework.Components
                 new Subject<IStoryGrimoire.SecondLevelCharacterPageDescriptor>();
             _secondLevelFrancoPageDescriptorsSubject =
                 new Subject<IStoryGrimoire.SecondLevelFrancoPageDescriptor>();
+            _secondLevelRulesPageDescriptorsSubject = new Subject<IStoryGrimoire.SecondLevelRulesPageDescriptor>();
             _thirdLevelSigilsGrimoirePageDescriptorsSubject =
                 new Subject<IStoryGrimoire.ThirdLevelSigilsGrimoirePageDescriptor>();
             _thirdLevelGreenhouseGrimoirePageDescriptorsSubject =
@@ -1163,6 +1171,7 @@ namespace Selania.Rework.Components
             _thirdLevelTextGrimoirePageDescriptorSubject?.Dispose();
             _thirdLevelGreenhouseGrimoirePageDescriptorsSubject?.Dispose();
             _thirdLevelSigilsGrimoirePageDescriptorsSubject?.Dispose();
+            _secondLevelRulesPageDescriptorsSubject?.Dispose();
             _secondLevelFrancoPageDescriptorsSubject?.Dispose();
             _secondLevelCharacterPageDescriptorsSubject?.Dispose();
             _secondLevelSigilsGrimoirePageDescriptorsSubject?.Dispose();
@@ -1212,6 +1221,9 @@ namespace Selania.Rework.Components
                     break;
                 case "@grimoireFranco":
                     EmitSecondLevelFrancoGrimoirePage();
+                    break;
+                case "@grimoireRules":
+                    EmitSecondLevelRulesGrimoirePage();
                     break;
                 case "@grimoireSigilPages":
                     EmitThirdLevelSigilsGrimoirePage();
@@ -1731,6 +1743,58 @@ namespace Selania.Rework.Components
 
             // emit
             _secondLevelFrancoPageDescriptorsSubject!.OnNext(descriptor);
+        }
+
+        private void EmitSecondLevelRulesGrimoirePage()
+        {
+            var story = GetStory();
+
+            // extract info from following text
+            var contents = GetContentsUntilChoices(story);
+
+            // navigation
+            GetNavigationChoices(story, out var indexChoice, out var secondLevelChoice, out var previousChoice,
+                out var nextChoice, out var closeChoice);
+            if (indexChoice == null)
+            {
+                logger.ZLogError($"Second level rules page has not a choice to get back to the first level!");
+                return;
+            }
+
+            if (secondLevelChoice != null)
+                logger.ZLogWarning(
+                    $"Second level rules page has a choice to get back to the second level ({secondLevelChoice} #{bookmarkTagCategory}:{secondLevelBookmarkTagValue}) that should not be present");
+
+            if (previousChoice != null)
+                logger.ZLogWarning(
+                    $"Second level rules page has a choice to go to the previous page ({previousChoice} #{bookmarkTagCategory}:{backBookmarkTagValue}) that should not be present");
+
+            if (nextChoice != null)
+                logger.ZLogWarning(
+                    $"Second level rules page has a choice to go to the next page ({nextChoice} #{bookmarkTagCategory}:{forwardBookmarkTagValue}) that should not be present");
+
+            if (closeChoice != null)
+                logger.ZLogWarning(
+                    $"Second level rules page has a choice to close the grimoire ({closeChoice} #{bookmarkTagCategory}:{closeBookmarkTagValue}) that should not be present");
+
+            // create descriptor
+            var descriptor = new IStoryGrimoire.SecondLevelRulesPageDescriptor(contents, indexChoice);
+
+            // emit event
+            _secondLevelRulesPageDescriptorsSubject?.OnNext(descriptor);
+        }
+
+        private static string GetContentsUntilChoices(Story story)
+        {
+            var contentsList = new List<string>();
+            while (story.canContinue)
+            {
+                var trimmedText = story.Continue().Trim();
+                contentsList.Add(trimmedText == "_" ? "" : trimmedText);
+            }
+
+            var contents = string.Join('\n', contentsList);
+            return contents;
         }
 
         private void EmitThirdLevelSigilsGrimoirePage()

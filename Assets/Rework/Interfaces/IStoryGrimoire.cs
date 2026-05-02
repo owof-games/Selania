@@ -96,6 +96,11 @@ namespace Selania.Rework.Interfaces
         Observable<SecondLevelFrancoPageDescriptor> secondLevelFrancoPageDescriptors { get; }
 
         /// <summary>
+        ///     An observable that produces a value whenever a second level rules grimoire page should be displayed.
+        /// </summary>
+        Observable<SecondLevelRulesPageDescriptor> secondLevelRulesPageDescriptors { get; }
+
+        /// <summary>
         ///     An observable that produces a value whenever a third level sigils grimoire page should be displayed.
         /// </summary>
         Observable<ThirdLevelSigilsGrimoirePageDescriptor> thirdLevelSigilsGrimoirePageDescriptors { get; }
@@ -290,6 +295,14 @@ namespace Selania.Rework.Interfaces
             string recipeDescription,
             string recipeContents,
             string indexText)
+            : BaseNavigationDescriptor(indexText, null, null, null, null);
+
+        /// <summary>
+        ///     Descriptor of the second leve page for the rules.
+        /// </summary>
+        /// <param name="rules">The rules.</param>
+        /// <param name="indexText">Text for the index choice.</param>
+        record SecondLevelRulesPageDescriptor(string rules, string indexText)
             : BaseNavigationDescriptor(indexText, null, null, null, null);
 
         /// <summary>

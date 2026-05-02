@@ -30,6 +30,8 @@ namespace Selania.Rework.Components.Grimoire
                 .AddTo(this);
             StoryGrimoire.secondLevelFrancoPageDescriptors.Subscribe(OnSecondLevelFrancoGrimoirePageDescriptors)
                 .AddTo(this);
+            StoryGrimoire.secondLevelRulesPageDescriptors.Subscribe(OnSecondLevelRulesGrimoirePageDescriptors)
+                .AddTo(this);
             StoryGrimoire.thirdLevelSigilsGrimoirePageDescriptors.Subscribe(OnThirdLevelSigilsGrimoirePageDescriptors)
                 .AddTo(this);
             StoryGrimoire.thirdLevelGreenhouseGrimoirePageDescriptors
@@ -186,6 +188,19 @@ namespace Selania.Rework.Components.Grimoire
             else
                 grimoireBackground.SecondLevelFrancoGrimoireShowRecipe(descriptor.recipeTitle,
                     descriptor.recipeDescription, descriptor.recipeContents);
+
+            // set up navigation
+            SetUpNavigation(descriptor);
+        }
+
+        private void OnSecondLevelRulesGrimoirePageDescriptors(IStoryGrimoire.SecondLevelRulesPageDescriptor descriptor)
+        {
+            // show the grimoire (second level rules)
+            grimoireBackground.ShowGrimoire();
+            grimoireBackground.SwitchToPage(GrimoireBackground.PageType.SecondLevelRules);
+
+            // set up the grimoire to show the info
+            grimoireBackground.SecondLevelRulesGrimoireSetText(descriptor.rules);
 
             // set up navigation
             SetUpNavigation(descriptor);
