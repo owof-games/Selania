@@ -40,6 +40,7 @@
     INCLUDE CommonPNGElements\ChoicesManagement\SigilsTranslator.ink
     INCLUDE CommonPNGElements\ChoicesManagement\GlyphsVarAndLists.ink
     INCLUDE CommonPNGElements\ChoicesManagement\ChoicesManager.ink
+    INCLUDE CommonPNGElements\ChoicesManagement\ChoicesManager2ElectricBoogaloo.ink
     INCLUDE CommonPNGElements\ChoicesManagement\Glyph&SigilsFunctions.ink
     
 
