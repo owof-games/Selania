@@ -82,6 +82,15 @@
     VAR fifthChar_water = 0.00
     VAR fifthChar_fire = 0.00                    
                      
+    VAR fifthChar_totalChoices = 0
+    
+        //Storage precedente valore
+    VAR fifthChar_last_aether = 0.00
+    VAR fifthChar_last_earth = 0.00
+    VAR fifthChar_last_air = 0.00
+    VAR fifthChar_last_water = 0.00
+    VAR fifthChar_last_fire= 0.00
+                 
                      
 
                      

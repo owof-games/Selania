@@ -89,6 +89,15 @@
     VAR fourthChar_air = 0.00
     VAR fourthChar_water = 0.00
     VAR fourthChar_fire = 0.00
+
+    VAR fourthChar_totalChoices = 0
+
+    //Storage precedente valore
+    VAR fourthChar_last_aether = 0.00
+    VAR fourthChar_last_earth = 0.00
+    VAR fourthChar_last_air = 0.00
+    VAR fourthChar_last_water = 0.00
+    VAR fourthChar_last_fire= 0.00
                     /* ---------------------------------
                     
                        Gestione relazione e nomi

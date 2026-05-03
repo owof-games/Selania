@@ -1,9 +1,3 @@
-
-
-
-
-
-
 === glyph_choice_manager(isPG, GlyphC)
 {isPG:
     -> updatePGCounters(GlyphC)
@@ -161,7 +155,18 @@
 {currentCharacter:
     - FirstCharacter:
         ~ firstChar_lastRelationshipIndicator = firstChar_relationshipIndicator
-    // ...
+    
+    - SecondCharacter:
+        ~ secondChar_lastRelationshipIndicator = secondChar_relationshipIndicator
+    
+    - ThirdCharacter:
+        ~ thirdChar_lastRelationshipIndicator = thirdChar_relationshipIndicator
+    
+    - FourthCharacter:
+        ~ fourthChar_lastRelationshipIndicator = fourthChar_relationshipIndicator
+    
+    - FifthCharacter:
+        ~ fifthChar_lastRelationshipIndicator = fifthChar_relationshipIndicator
 }
 // Salva contatore glifi in contatore glifi precedente
 {currentCharacter:
@@ -171,7 +176,34 @@
         ~ firstChar_last_air = firstChar_air
         ~ firstChar_last_water = firstChar_water
         ~ firstChar_last_fire = firstChar_fire
-    // ...
+
+    - SecondCharacter:
+        ~ secondChar_last_aether = secondChar_aether
+        ~ secondChar_last_earth = secondChar_earth
+        ~ secondChar_last_air = secondChar_air
+        ~ secondChar_last_water = secondChar_water
+        ~ secondChar_last_fire = secondChar_fire    
+    
+    - ThirdCharacter:
+        ~ thirdChar_last_aether = thirdChar_aether
+        ~ thirdChar_last_earth = thirdChar_earth
+        ~ thirdChar_last_air = thirdChar_air
+        ~ thirdChar_last_water = thirdChar_water
+        ~ thirdChar_last_fire = thirdChar_fire
+
+    - FourthCharacter:
+        ~ fourthChar_last_aether = fourthChar_aether
+        ~ fourthChar_last_earth = fourthChar_earth
+        ~ fourthChar_last_air = fourthChar_air
+        ~ fourthChar_last_water = fourthChar_water
+        ~ fourthChar_last_fire = fourthChar_fire
+
+    - FifthCharacter:
+        ~ fifthChar_last_aether = fifthChar_aether
+        ~ fifthChar_last_earth = fifthChar_earth
+        ~ fifthChar_last_air = fifthChar_air
+        ~ fifthChar_last_water = fifthChar_water
+        ~ fifthChar_last_fire = fifthChar_fire        
 }
 // Aggiorna contatore pulito
 {currentCharacter:
@@ -188,25 +220,126 @@
             -aetherC:
                 ~ player_aether_first_char ++
         }
-    // ...
+
+     - SecondCharacter:
+        {GlyphC:
+            -fireC:
+                ~ player_fire_second_char ++
+            -earthC:
+                ~ player_earth_second_char ++
+            -airC:
+                ~ player_air_second_char ++
+            -waterC:
+                ~ player_water_second_char ++   
+            -aetherC:
+                ~ player_aether_second_char ++
+        }  
+
+    - ThirdCharacter:
+        {GlyphC:
+            -fireC:
+                ~ player_fire_third_char ++
+            -earthC:
+                ~ player_earth_third_char ++
+            -airC:
+                ~ player_air_third_char ++
+            -waterC:
+                ~ player_water_third_char ++   
+            -aetherC:
+                ~ player_aether_third_char ++
+        }
+
+    - FourthCharacter:
+        {GlyphC:
+            -fireC:
+                ~ player_fire_fourth_char ++
+            -earthC:
+                ~ player_earth_fourth_char ++
+            -airC:
+                ~ player_air_fourth_char ++
+            -waterC:
+                ~ player_water_fourth_char ++   
+            -aetherC:
+                ~ player_aether_fourth_char ++
+        }
+
+    - FifthCharacter:
+        {GlyphC:
+            -fireC:
+                ~ player_fire_fifth_char ++
+            -earthC:
+                ~ player_earth_fifth_char ++
+            -airC:
+                ~ player_air_fifth_char ++
+            -waterC:
+                ~ player_water_fifth_char ++   
+            -aetherC:
+                ~ player_aether_fifth_char ++
+        }        
 }
 // Aggiorna contatore scelte
 {currentCharacter:
     - FirstCharacter:
-        ~ firstChar_totalChoices++
-    // ...
+        ~ firstChar_totalChoices ++
+
+    - SecondCharacter:
+        ~ secondChar_totalChoices ++
+
+    - ThirdCharacter:
+        ~ thirdChar_totalChoices ++
+
+   - FourthCharacter:
+        ~ fourthChar_totalChoices ++
+
+    - FifthCharacter:
+        ~ fifthChar_totalChoices ++
+
+    - Mentor:
+        ~ mentor_totalChoices ++             
 }
 // Aggiorna contatore glifi con valore sigillo
 {currentCharacter:
     - FirstCharacter:
-    OOOOOOOOOOOOOOOOO Aggiorna contatore glifi con valore sigilloOOOOOOOOOOOOOOOOO 
-    variationFire è {variationFire}
         ~ firstChar_fire += variationFire 
         ~ firstChar_earth += variationEarth
         ~ firstChar_air += variationAir
         ~ firstChar_water += variationWater
         ~ firstChar_aether += variationAether
-    // ...
+    
+    - SecondCharacter:
+        ~ secondChar_fire += variationFire 
+        ~ secondChar_earth += variationEarth
+        ~ secondChar_air += variationAir
+        ~ secondChar_water += variationWater
+        ~ secondChar_aether += variationAether
+    
+    - ThirdCharacter:
+        ~ thirdChar_fire += variationFire 
+        ~ thirdChar_earth += variationEarth
+        ~ thirdChar_air += variationAir
+        ~ thirdChar_water += variationWater
+        ~ thirdChar_aether += variationAether
+
+    - FourthCharacter:
+        ~ fourthChar_fire += variationFire 
+        ~ fourthChar_earth += variationEarth
+        ~ fourthChar_air += variationAir
+        ~ fourthChar_water += variationWater
+        ~ fourthChar_aether += variationAether
+
+    - FifthCharacter:
+        ~ fifthChar_fire += variationFire 
+        ~ fifthChar_earth += variationEarth
+        ~ fifthChar_air += variationAir
+        ~ fifthChar_water += variationWater
+        ~ fifthChar_aether += variationAether
+
+    - Mentor:
+        ~ mentor_fire += variationFire 
+        ~ mentor_earth += variationEarth
+        ~ mentor_air += variationAir
+        ~ mentor_water += variationWater
+        ~ mentor_aether += variationAether            
 }
 // Aggiorna contatore sigilli
 {glyph_actualActiveSigil:
@@ -231,14 +364,36 @@
 {currentCharacter:
     - FirstCharacter:
         ~ updateFirstCharacterRelation()
-    //
+    
+    - SecondCharacter:
+        ~ updateSecondCharacterRelation()
+    
+    - ThirdCharacter:
+        ~ updateThirdCharacterRelation()
+    
+    - FourthCharacter:
+        ~ updateFourthCharacterRelation()
+    
+    - FifthCharacter:
+        ~ updateFifthCharacterRelation()            
 }
 // Calcolo valore di reazione da relazione e relazione precedente
 ~ temp relationshipChange = 0
 {currentCharacter:
     - FirstCharacter:
         ~ relationshipChange = firstChar_relationshipIndicator - firstChar_lastRelationshipIndicator
-    // ...
+    
+    - SecondCharacter:
+        ~ relationshipChange = secondChar_relationshipIndicator - secondChar_lastRelationshipIndicator
+
+    - ThirdCharacter:
+        ~ relationshipChange = thirdChar_relationshipIndicator - thirdChar_lastRelationshipIndicator
+
+    - FourthCharacter:
+        ~ relationshipChange = fourthChar_relationshipIndicator - fourthChar_lastRelationshipIndicator
+
+    - FifthCharacter:
+        ~ relationshipChange = fifthChar_relationshipIndicator - fifthChar_lastRelationshipIndicator            
 }
 ~ temp reaction = positive
 {
@@ -277,7 +432,129 @@
                     - {charTag(FirstCharacter, "annoyed")}:         Meh...
                 }
         }
-    // ...
+
+    - SecondCharacter:
+        {reaction:
+
+            - neutral:
+                {shuffle:
+                    - {charTag(SecondCharacter, "neutral")}:        Ok.
+                    - {charTag(SecondCharacter, "neutral")}:        Certo.
+                    - {charTag(SecondCharacter, "neutral")}:        Mhm.
+                }
+
+            - positive:
+                {shuffle:
+                    - {charTag(SecondCharacter, "emotional")}:          Uuuuh!
+                    - {charTag(SecondCharacter, "emotional")}:          Oooh!
+                    - {charTag(SecondCharacter, "energy")}:             Wow!
+                    - {charTag(SecondCharacter, "energy")}:             Siii!
+                }
+
+            - negative:
+                {shuffle:
+                    - {charTag(SecondCharacter, "angry")}:              No?
+                    - {charTag(SecondCharacter, "angry")}:              ???
+                    - {charTag(SecondCharacter, "melanchonic")}:        Ah.
+                    - {charTag(SecondCharacter, "melanchonic")}:        Uff.
+                }
+
+        }
+
+    - ThirdCharacter:
+        {reaction:
+
+            - neutral:
+                {shuffle:
+                    - {charTag(ThirdCharacter, "neutral")}:        Ok.
+                    - {charTag(ThirdCharacter, "neutral")}:        Certo.
+                    - {charTag(ThirdCharacter, "neutral")}:        Mhm.
+                }
+
+            - positive:
+                {shuffle:
+                    - {charTag(ThirdCharacter, "neutral")}:          Uuuuh!
+                    - {charTag(ThirdCharacter, "neutral")}:          Oooh!
+                    - {charTag(ThirdCharacter, "neutral")}:          Wow!
+                    - {charTag(ThirdCharacter, "neutral")}:          Siii!
+                }
+
+            - negative:
+                {shuffle:
+                    - {charTag(ThirdCharacter, "judgmental")}:         No?
+                    - {charTag(ThirdCharacter, "judgmental")}:         ???
+                    - {charTag(ThirdCharacter, "judgmental")}:         Ah.
+                    - {charTag(ThirdCharacter, "judgmental")}:         Uff.
+                }
+
+
+        }
+
+    - FourthCharacter:
+        {reaction:
+
+            - neutral:
+                {shuffle:
+                    - Reazione neutra al sigillo.
+                    - Altra reazione neutra al sigillo.
+                    - Un'altra ancora reazione neutra al sigillo.
+                }
+
+            - positive:
+                {shuffle:
+                    - Reazione positiva al sigillo.
+                    - Altra reazione positiva al sigillo.
+                    - Un'altra ancora reazione positiva al sigillo.
+                }
+
+            - negative:
+                {shuffle:
+                    - Reazione negativa al sigillo.
+                    - Altra reazione negativa al sigillo.
+                    - Un'altra ancora reazione negativa al sigillo.
+                }
+    }     
+
+    - FifthCharacter:
+        {reaction:
+
+            - neutral:
+                {shuffle:
+                    - Reazione neutra al sigillo.
+                    - Altra reazione neutra al sigillo.
+                    - Un'altra ancora reazione neutra al sigillo.
+                }
+
+            - positive:
+                {shuffle:
+                    - Reazione positiva al sigillo.
+                    - Altra reazione positiva al sigillo.
+                    - Un'altra ancora reazione positiva al sigillo.
+                }
+
+            - negative:
+                {shuffle:
+                    - Reazione negativa al sigillo.
+                    - Altra reazione negativa al sigillo.
+                    - Un'altra ancora reazione negativa al sigillo.
+                }
+    }
+
+    - Mentor:
+    {shuffle:
+        - {charTag(FifthCharacter, "neutral")}:         Sì sì.
+        - {charTag(FifthCharacter, "neutral")}:         Ok.
+        - {charTag(FifthCharacter, "neutral")}:         Eh.
+        - {charTag(FifthCharacter, "neutral")}:         Mhm.
+        - {charTag(FifthCharacter, "neutral")}:         Chiaro.
+        - {charTag(FifthCharacter, "neutral")}:         Già.
+    }  
+}
+
+//Animazione utilizzo sigillo
+{
+    - glyph_actualActiveSigil != ():
+        @animation: ActiveSigil
 }
 ->->
 
@@ -304,6 +581,26 @@
 === function updateFirstCharacterRelation()
 // TODO
 ~ firstChar_relationshipIndicator = firstChar_aether + firstChar_water - firstChar_air
+
+
+
+=== function updateSecondCharacterRelation()
+// DA CREARE
+~ secondChar_relationshipIndicator = secondChar_aether + secondChar_water - secondChar_air
+
+
+=== function updateThirdCharacterRelation()
+// DA CREARE
+~ thirdChar_relationshipIndicator = thirdChar_aether + thirdChar_water - thirdChar_air
+
+=== function updateFourthCharacterRelation()
+// DA CREARE
+~ secondChar_relationshipIndicator = secondChar_aether + secondChar_water - secondChar_air
+
+=== function updateFifthCharacterRelation()
+// DA CREARE
+~ secondChar_relationshipIndicator = secondChar_aether + secondChar_water - secondChar_air
+
 
 
 /*
