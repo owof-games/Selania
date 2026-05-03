@@ -30,7 +30,7 @@
             
 
 === gm_rm_activation
-//Tutto questo primo bloccone me lo tengo se serve testare di nuovo il nuovo sistema di scelte
+// Tutto questo primo bloccone me lo tengo se serve testare di nuovo il nuovo sistema di scelte
 // - (top)
 // ~ move_entity(FirstCharacter, Bedroom)
 // Chitarra ci dice qualcosa.
@@ -76,19 +76,19 @@
 //         firstChar_lastRelationshipIndicator è {firstChar_lastRelationshipIndicator}
 //         firstChar_relationshipIndicator è {firstChar_relationshipIndicator}
 
-//         // player_fire è {player_fire}
-//         // player_earth è {player_earth}
-//         // player_air è {player_air}
-//         // player_water è {player_water}  
-//         // player_aether è {player_aether}
+//         player_fire è {player_fire}
+//         player_earth è {player_earth}
+//         player_air è {player_air}
+//         player_water è {player_water}  
+//         player_aether è {player_aether}
 // IL SIGILLO ATTUALE è {glyph_actualActiveSigil}
 // UTILIZZI RIMASTI = {glyph_actualSigilUses}
 
 // + Rifaccio una domanda a Chitarra.
-// + Attivo un sigillo random
-//     -> glyph_open_all_sigils ->
+// + Attivo un sigillo di prova
 //     ~ glyph_actualActiveSigil = AirFireWater
 //     ~ glyph_actualSigilUses = glyph_maxSigilUses
+
 // + Scelta PG fire
 //     -> glyph_modifier_variation_management2(true, fireC) -> top2 
 // + Scelta PG air
