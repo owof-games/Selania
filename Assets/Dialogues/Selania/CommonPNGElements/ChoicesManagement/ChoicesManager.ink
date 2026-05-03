@@ -1,730 +1,592 @@
-//Check se ridurre o meno il valore del sigillo
-LIST glyph_decreaseSigilsStatus = decreaseYes, decreaseNo
-LIST glyph_guestStarPossibileStatus= guestYes, guestNo
-//Variabile per decidere se decrementare o meno il valore
-VAR glyph_decreaseSigil = true
-//Lista delle persone in scena in quel momento
-VAR glyph_allPNGAffectedByChoice = ()
-VAR glyph_actualGlyphChoice = ()
-//Tracciamo anche la "main talker", che non deve generare reazioni.
-VAR glyph_mainTalker = ()
-
-//Per la parte di animazione o meno dell'effetto del sigillo invece
-
-
-//Funzione di dispatch comune (sigillo attivo o meno)
-=== glyph_xxxchoice_manager(PNG, GlyphC)
-{debug_nest: passo per glyph_choice_manager. Il valore di PNG è {PNG}, il valore di GlyphCe è {GlyphC}. Lo stato della parola attiva è {glyph_actualActiveSigil}.}
-/***********
-Recap della logica.
-    Ogni volta che chiamo una scelta:
-    verifico chi è in scena (con glyph_talkersAndMainsChecker)
-    verifico eventuali condizioni speciali (es: conversazioni con due personagge, o un mix di effetti dei sigilli, come Mentore e Chitarra)
-    da lì avvio un loop che è gestito guardando la lista di glyph_allPNGAffectedByChoice e che verifica se ci sono o meno sigilli attivi, applicandone o meno gli effetti, e generando poi delle reazioni (tranne per la PNG che parlerà sicuramente dopo la scelta, tracciata in mainTalker).)
-    poi se il sigillo è attivo vado a ridurne il valore, o lo spengo.
-**********/
-
-//Step zero: capire chi è in scena e se ci sono condizioni in cui ci sono più main talker
-    ~ glyph_talkersAndMainsChecker()
-
-//E un remind della scelta fatta
-    {GlyphC:
-        -fireC:
-            ~ glyph_actualGlyphChoice = fireC
-    
-        -earthC:
-            ~ glyph_actualGlyphChoice = earthC
-        
-        -airC:
-            ~ glyph_actualGlyphChoice = airC
-        
-        -waterC:
-            ~ glyph_actualGlyphChoice = waterC
-        
-        -aetherC:
-            ~ glyph_actualGlyphChoice = aetherC
-    }
-{debug_nest: dopo il check zero sul glifo, glyph_actualGlyphChoice è {glyph_actualGlyphChoice}.}
+=== glyph_choice_manager(isPG, GlyphC)
+{isPG:
+    -> updatePGCounters(GlyphC)
+- else:
+    ~ temp variationAir = 0
+    ~ temp variationWater = 0
+    ~ temp variationAether = 0
+    ~ temp variationFire = 0
+    ~ temp variationEarth = 0
+    ~ updateVariationVariables(GlyphC, variationAir, variationWater, variationAether, variationFire, variationEarth)
+    ~ temp charactersInScene = getCharactersInScene()
+    -> updatePNGInSceneCounters(charactersInScene, GlyphC, variationAir, variationWater, variationAether, variationFire, variationEarth)
+}
 
 
-
-//Primo step: capiamo di chi si parla.
-//
-    {
-        - PNG == FirstCharacter:
-            //Per le reazioni aggiorno il current talker
-            ~ glyph_currentTalker = FirstCharacter
-            ~ glyph_mainTalker += FirstCharacter
-            {debug_nest: dopo l'operazione il parlante attuale {glyph_currentTalker}, mentre glyph_mainTalker è {glyph_mainTalker}.}
-                
-        - PNG == SecondCharacter:
-            //Per le reazioni aggiorno il current talker
-            ~ glyph_currentTalker = SecondCharacter
-            ~ glyph_mainTalker += SecondCharacter
-            {debug_nest: dopo l'operazione il parlante attuale {glyph_currentTalker}, mentre glyph_mainTalker è {glyph_mainTalker}.}
-                
-        - PNG == ThirdCharacter:
-            //Per le reazioni aggiorno il current talker
-            ~ glyph_currentTalker = ThirdCharacter
-            ~ glyph_mainTalker += ThirdCharacter
-            {debug_nest: dopo l'operazione il parlante attuale {glyph_currentTalker}, mentre glyph_mainTalker è {glyph_mainTalker}.}
-                
-        - PNG == Mentor:
-            //Per le reazioni aggiorno il current talker
-            ~ glyph_currentTalker = Mentor
-            ~ glyph_mainTalker += Mentor
-            {debug_nest: dopo l'operazione il parlante attuale {glyph_currentTalker}, mentre glyph_mainTalker è {glyph_mainTalker}.}
-    
-        - PNG == PG:
-        //Nel caso dellx PG, non attivo mai le parole magiche, per cui esco direttamente dalla funzione
-            {GlyphC:
-                -fireC:
-                    ~ player_fire ++
-            
-                -earthC:
-                    ~ player_earth ++
-                
-                -airC:
-                    ~ player_air ++
-                
-                -waterC:
-                    ~ player_water ++   
-                
-                -aetherC:
-                    ~ player_aether ++
-            }
-            ->->
-                
-        - else: ERROR: sono in GlyphC_variation_management ma non trovo lx PNG indicatx
-    }
-
-
-    //
-    //Secondo step: aggiorno le variabili che dipendono dall'argomento passato alla funzione
-    //Situazione dei sigilli
-    {
-        //Se sigillo attivo, andiamo a formula ad hoc
-        - glyph_actualActiveSigil != ():
-            -> sigil_glyph_updater
-            
-        //Altrimenti aumentiamo di uno come sempre il valore per lx PNG
-        - else:
-            {glyph_actualGlyphChoice:
-                -fireC:
-                    ~ glyph_temporaryFire ++
-        
-                -earthC:
-                    ~ glyph_temporaryEarth ++
-                
-                -airC:
-                    ~ glyph_temporaryAir ++
-                
-                -waterC:
-                    ~ glyph_temporaryWater ++   
-                
-                -aetherC:
-                    ~ glyph_temporaryAether ++
-            }
-            {debug_nest: non è attivo alcun sigillo per cui mi aumento di uno i valori e basta. glyph_temporaryFire == {glyph_temporaryFire}, glyph_temporaryEarth == {glyph_temporaryEarth}, glyph_temporaryAir == {glyph_temporaryAir}, glyph_temporaryWater == {glyph_temporaryWater}, glyph_temporaryAether == {glyph_temporaryAether}.}
-            //E poi aggiorniamo i dettagli, con una funzione comune ai glifi
-                -> update_PNG_glyph_values
-        
-    }
-
-
-    = sigil_glyph_updater
-    //Terzo step: calcolo la variazione di GlyphC generata dal sigillo.
+=== function updateVariationVariables(GlyphC, ref variationAir, ref variationWater, ref variationAether, ref variationFire, ref variationEarth)
+{glyph_actualActiveSigil:
     {
         //Calcolo del primo livello
         - glyph_firstFire has glyph_actualActiveSigil:
-               ~ glyph_temporaryFire ++
-               ~ glyph_temporaryFire ++
+            ~ variationFire += 2
 
         - glyph_firstEarth has glyph_actualActiveSigil:
-               ~ glyph_temporaryEarth ++
-               ~ glyph_temporaryEarth ++
+            ~ variationEarth += 2
 
         - glyph_firstAir has glyph_actualActiveSigil:
-               ~ glyph_temporaryAir ++
-               ~ glyph_temporaryAir ++
+            ~ variationAir += 2
 
         - glyph_firstWater has glyph_actualActiveSigil:
-               ~ glyph_temporaryWater ++
-               ~ glyph_temporaryWater ++
+            ~ variationWater += 2
 
         - glyph_firstAether has glyph_actualActiveSigil:
-               ~ glyph_temporaryAether ++
-               ~ glyph_temporaryAether ++              
+            ~ variationAether += 2
     }
 
     {
         //Calcolo del secondo livello
         - glyph_secondFire has glyph_actualActiveSigil:
-               ~ glyph_temporaryFire ++
+            ~ variationFire += 1
 
         - glyph_secondEarth has glyph_actualActiveSigil:
-               ~ glyph_temporaryEarth ++
+            ~ variationEarth += 1
 
         - glyph_secondAir has glyph_actualActiveSigil:
-               ~ glyph_temporaryAir ++
+            ~ variationAir += 1
 
         - glyph_secondWater has glyph_actualActiveSigil:
-               ~ glyph_temporaryWater ++
+            ~ variationWater += 1
 
         - glyph_secondAether has glyph_actualActiveSigil:
-               ~ glyph_temporaryAether ++            
+            ~ variationAether += 1            
     }
 
     {
         //Calcolo del terzo livello
         - glyph_thirdFire has glyph_actualActiveSigil:
-               ~ glyph_temporaryFire --
-               ~ glyph_temporaryFire --
+            ~ variationFire -= 2
 
         - glyph_thirdEarth has glyph_actualActiveSigil:
-               ~ glyph_temporaryEarth --
-               ~ glyph_temporaryEarth --
+            ~ variationEarth -= 2
 
         - glyph_thirdAir has glyph_actualActiveSigil:
-               ~ glyph_temporaryAir --
-               ~ glyph_temporaryAir --
+            ~ variationAir -= 2
 
         - glyph_thirdWater has glyph_actualActiveSigil:
-               ~ glyph_temporaryWater --
-               ~ glyph_temporaryWater --
+            ~ variationWater -= 2
 
         - glyph_thirdAether has glyph_actualActiveSigil:
-               ~ glyph_temporaryAether --
-               ~ glyph_temporaryAether --             
+            ~ variationAether -= 2
     }
+- else:
+       {GlyphC:
+        - fireC:
+            ~ variationFire += 1
+        - airC:
+            ~ variationAir += 1
+        - waterC:
+            ~ variationWater += 1
+        - aetherC:
+            ~ variationAether += 1
+        - earthC:
+            ~ variationEarth += 1            
 
-    //E su chi l'ho utilizzato
+       } 
+}
+
+
+=== function getCharactersInScene()
+~ temp characters = ()
+// calcola le personagge in scena in una variabile temporanea e la ritorna
     {
-        - glyph_currentTalker == FirstCharacter:
-            ~ firstChar_usedSigil ++
-        
-        - glyph_currentTalker == SecondCharacter:
-            ~ secondChar_usedSigil ++
-        
-        - glyph_currentTalker == ThirdCharacter:
-            ~ thirdChar_usedSigil ++
-        
-        - glyph_currentTalker == FourthCharacter:
-            ~ fourthChar_usedSigil ++
-        
-        - glyph_currentTalker == FifthCharacter:
-            ~ fifthChar_usedSigil ++
+        - are_two_entities_together(PG, FirstCharacter):
+            ~ characters += FirstCharacter
     }
+    {
+        - are_two_entities_together(PG, SecondCharacter):
+            ~ characters += SecondCharacter
+    }
+    {
+        - are_two_entities_together(PG, ThirdCharacter):
+            ~ characters += ThirdCharacter
+    }
+    {
+        - are_two_entities_together(PG, FourthCharacter):
+            ~ characters += FourthCharacter
+    }
+    {
+        - are_two_entities_together(PG, FifthCharacter):
+            ~ characters += FifthCharacter
+    }
+    {
+        - are_two_entities_together(PG, Mentor):
+            ~ characters += Mentor                    
+    }
+~ return characters
 
-    -> update_PNG_glyph_values
 
-//Quarto step: aggiorno i valori dei glifi dell3 PNG e lo stato della relazione, a prescindere che il sigillo sia o meno attivo.
-    = update_PNG_glyph_values
-        {debug_nest: entro in update_PNG_glyph_values.}
-        {debug_nest: prima dell'operazione il parlante attuale è {glyph_currentTalker}.}
-        //Prima aggiorniamo i dati a seconda dei parlanti
-        {
-            - glyph_currentTalker == FirstCharacter:
-                                //Levo la PNG dalla lista delle presenti
-                                    ~ glyph_allPNGAffectedByChoice -= FirstCharacter
-                                //Aggiorno il record dello stato precedente dei glifi
-                                    ~ firstChar_last_aether = firstChar_aether
-                                    ~ firstChar_last_earth = firstChar_earth
-                                    ~ firstChar_last_air = firstChar_air
-                                    ~ firstChar_last_water = firstChar_water
-                                    ~ firstChar_last_fire = firstChar_fire
+=== updatePGCounters(GlyphC)
+// aggiorna il contatore glifi di PG basandosi su GlyphC
+{GlyphC:
+    -fireC:
+        ~ player_fire ++
 
-                                //E il contatore delle scelte prese
-                                    ~ firstChar_totalChoices ++
-                                //Aggiorno i corrispettivi valori lato rapporto PNG/PG (ovvero: non cambio il valore dei dati dellx PNG)
-                                    {glyph_actualGlyphChoice:
-                                        -fireC:
-                                            ~ player_fire_first_char ++
-                                        -earthC:
-                                            ~ player_earth_first_char ++
-                                        -airC:
-                                            ~ player_air_first_char ++
-                                        -waterC:
-                                            ~ player_water_first_char ++   
-                                        -aetherC:
-                                            ~ player_aether_first_char ++
-                                    }
-                                //E a questo punto, aggiorno i valori della PNG
-                                    ~ firstChar_fire += glyph_temporaryFire 
-                                    ~ firstChar_earth += glyph_temporaryEarth
-                                    ~ firstChar_air += glyph_temporaryAir
-                                    ~ firstChar_water += glyph_temporaryWater
-                                    ~ firstChar_aether += glyph_temporaryAether
-                                //E calcolo la variazione della relazione    
-                                    ~ firstChar_relationship_variation()
-            
-            - glyph_currentTalker == SecondCharacter:
-                                //Levo il PNG dalla lista delle presenti
-                                    ~ glyph_allPNGAffectedByChoice -= SecondCharacter
-                                //Aggiorno il record dello stato precedente dei glifi
-                                    ~ secondChar_last_aether = secondChar_aether
-                                    ~ secondChar_last_earth = secondChar_earth
-                                    ~ secondChar_last_air = secondChar_air
-                                    ~ secondChar_last_water = secondChar_water
-                                    ~ secondChar_last_fire = secondChar_fire
-                                //E il contatore delle scelte prese
-                                    ~ secondChar_totalChoices ++       
+    -earthC:
+        ~ player_earth ++
+    
+    -airC:
+        ~ player_air ++
+    
+    -waterC:
+        ~ player_water ++   
+    
+    -aetherC:
+        ~ player_aether ++
+}
+->->
 
-                                //Aggiorno i corrispettivi valori lato rapporto PNG/PG (ovvero: non cambio il valore dei dati dellx PNG)
-                                {glyph_actualGlyphChoice:
-                                    -fireC:
-                                        ~ player_fire_second_char ++
-                                        ~ secondChar_relationshipTrackingChoise = fireC
-                                    -earthC:
-                                        ~ player_earth_second_char ++
-                                        ~ secondChar_relationshipTrackingChoise = earthC
-                                    -airC:
-                                        ~ player_air_second_char ++
-                                        ~ secondChar_relationshipTrackingChoise = airC
-                                    -waterC:
-                                        ~ player_water_second_char ++ 
-                                        ~ secondChar_relationshipTrackingChoise = waterC
-                                    -aetherC:
-                                        ~ player_aether_second_char ++
-                                        ~ secondChar_relationshipTrackingChoise = aetherC
-                                }
-                                //E a questo punto, aggiorno i valori del PNG
-                                ~ secondChar_fire += glyph_temporaryFire 
-                                ~ secondChar_earth += glyph_temporaryEarth
-                                ~ secondChar_air += glyph_temporaryAir
-                                ~ secondChar_water += glyph_temporaryWater
-                                ~ secondChar_aether += glyph_temporaryAether
-                                //E lo stato della relazione
-                                ~ secondChar_relationship_variation()
 
-            - glyph_currentTalker == ThirdCharacter:
-                                //Levo il PNG dalla lista delle presenti
-                                ~ glyph_allPNGAffectedByChoice -= ThirdCharacter
-                                //Aggiorno il record dello stato precedente dei glifi
-                                ~ thirdChar_last_aether = thirdChar_aether
-                                ~ thirdChar_last_earth = thirdChar_earth
-                                ~ thirdChar_last_air = thirdChar_air
-                                ~ thirdChar_last_water = thirdChar_water
-                                ~ thirdChar_last_fire = thirdChar_fire
-                                //E il contatore delle scelte prese
-                                ~ thirdChar_totalChoices ++   
+=== updatePNGInSceneCounters(charactersInScene, GlyphC, variationAir, variationWater, variationAether, variationFire, variationEarth)
+{
+- charactersInScene:
+    ~ temp currentCharacter = LIST_RANDOM(charactersInScene)
+    ~ charactersInScene -= currentCharacter
+    -> updatePNGCounters(currentCharacter, GlyphC, variationAir, variationWater, variationAether, variationFire, variationEarth) ->
+    -> updatePNGInSceneCounters(charactersInScene, GlyphC, variationAir, variationWater, variationAether, variationFire, variationEarth)
+- glyph_actualActiveSigil:
+    -> sigilUpdates
+- else:
+    ->->
+}
 
-                                //Aggiorno i corrispettivi valori lato rapporto PNG/PG (ovvero: non cambio il valore dei dati dellx PNG)
-                                {glyph_actualGlyphChoice:
-                                        -fireC:
-                                            ~ player_fire_third_char ++
-                                        -earthC:
-                                            ~ player_earth_third_char ++
-                                        -airC:
-                                            ~ player_air_third_char ++
-                                        -waterC:
-                                            ~ player_water_third_char ++   
-                                        -aetherC:
-                                            ~ player_aether_third_char ++
-                                }  
-                                //E a questo punto, aggiorno i valori del PNG
-                                ~ thirdChar_fire += glyph_temporaryFire 
-                                ~ thirdChar_earth += glyph_temporaryEarth
-                                ~ thirdChar_air += glyph_temporaryAir
-                                ~ thirdChar_water += glyph_temporaryWater
-                                ~ thirdChar_aether += glyph_temporaryAether
-                                //E lo stato della relazione
-                                ~ thirdChar_relationship_variation()
 
-            - glyph_currentTalker == Mentor:
-                                //Non ho bisogno di aggiornare lo stato dei glifi, perché non vengono tracciati
-                                //Levo la PNG dalla lista delle presenti
-                                ~ glyph_allPNGAffectedByChoice -= Mentor
-                                
-                                //Aumento il contatore delle scelte prese
-                                    ~ mentor_totalChoices ++   
+=== updatePNGCounters(currentCharacter, GlyphC, variationAir, variationWater, variationAether, variationFire, variationEarth)
+// Salva valore di relazione in valore di relazione precedente
+{currentCharacter:
+    - FirstCharacter:
+        ~ firstChar_lastRelationshipIndicator = firstChar_relationshipIndicator
+    
+    - SecondCharacter:
+        ~ secondChar_lastRelationshipIndicator = secondChar_relationshipIndicator
+    
+    - ThirdCharacter:
+        ~ thirdChar_lastRelationshipIndicator = thirdChar_relationshipIndicator
+    
+    - FourthCharacter:
+        ~ fourthChar_lastRelationshipIndicator = fourthChar_relationshipIndicator
+    
+    - FifthCharacter:
+        ~ fifthChar_lastRelationshipIndicator = fifthChar_relationshipIndicator
+}
+// Salva contatore glifi in contatore glifi precedente
+{currentCharacter:
+    - FirstCharacter:
+        ~ firstChar_last_aether = firstChar_aether
+        ~ firstChar_last_earth = firstChar_earth
+        ~ firstChar_last_air = firstChar_air
+        ~ firstChar_last_water = firstChar_water
+        ~ firstChar_last_fire = firstChar_fire
 
-                                //Aggiorno i corrispettivi valori lato rapporto PNG/PG (ovvero: non cambio il valore dei dati dellx PNG)
-                                {glyph_actualGlyphChoice:
-                                        -fireC:
-                                            ~ player_fire_mentor ++
-                                    
-                                        -earthC:
-                                            ~ player_earth_mentor ++
-                                        
-                                        -airC:
-                                            ~ player_air_mentor ++
-                                        
-                                        -waterC:
-                                            ~ player_water_mentor ++   
-                                        
-                                        -aetherC:
-                                            ~ player_aether_mentor ++
-                                }
-                                //E a questo punto, aggiorno i valori del PNG
-                                ~ mentor_fire += glyph_temporaryFire 
-                                ~ mentor_earth += glyph_temporaryEarth
-                                ~ mentor_air += glyph_temporaryAir
-                                ~ mentor_water += glyph_temporaryWater
-                                ~ mentor_aether += glyph_temporaryAether
-                                //Per Mentore non mi serve un contatore del cambio di relazione
+    - SecondCharacter:
+        ~ secondChar_last_aether = secondChar_aether
+        ~ secondChar_last_earth = secondChar_earth
+        ~ secondChar_last_air = secondChar_air
+        ~ secondChar_last_water = secondChar_water
+        ~ secondChar_last_fire = secondChar_fire    
+    
+    - ThirdCharacter:
+        ~ thirdChar_last_aether = thirdChar_aether
+        ~ thirdChar_last_earth = thirdChar_earth
+        ~ thirdChar_last_air = thirdChar_air
+        ~ thirdChar_last_water = thirdChar_water
+        ~ thirdChar_last_fire = thirdChar_fire
+
+    - FourthCharacter:
+        ~ fourthChar_last_aether = fourthChar_aether
+        ~ fourthChar_last_earth = fourthChar_earth
+        ~ fourthChar_last_air = fourthChar_air
+        ~ fourthChar_last_water = fourthChar_water
+        ~ fourthChar_last_fire = fourthChar_fire
+
+    - FifthCharacter:
+        ~ fifthChar_last_aether = fifthChar_aether
+        ~ fifthChar_last_earth = fifthChar_earth
+        ~ fifthChar_last_air = fifthChar_air
+        ~ fifthChar_last_water = fifthChar_water
+        ~ fifthChar_last_fire = fifthChar_fire        
+}
+// Aggiorna contatore pulito
+{currentCharacter:
+    - FirstCharacter:
+        {GlyphC:
+            -fireC:
+                ~ player_fire_first_char ++
+            -earthC:
+                ~ player_earth_first_char ++
+            -airC:
+                ~ player_air_first_char ++
+            -waterC:
+                ~ player_water_first_char ++   
+            -aetherC:
+                ~ player_aether_first_char ++
         }
 
-    -> sigil_PNG_reactions
+     - SecondCharacter:
+        {GlyphC:
+            -fireC:
+                ~ player_fire_second_char ++
+            -earthC:
+                ~ player_earth_second_char ++
+            -airC:
+                ~ player_air_second_char ++
+            -waterC:
+                ~ player_water_second_char ++   
+            -aetherC:
+                ~ player_aether_second_char ++
+        }  
 
-    = sigil_PNG_reactions
-    {debug_nest: passo per sigil_PNG_reactions. Lo stato di glyph_currentTalker è {glyph_currentTalker}, lo stato di glyph_mainTalker è {glyph_mainTalker} e lo stato sigillo attivo è {glyph_actualActiveSigil}}
-    //Qui invece abbiamo le reazioni dellx PNG
-    {
-        - glyph_currentTalker == FirstCharacter:
-            -> FirstCharacter_reactions
-        
-        - glyph_currentTalker == SecondCharacter:
-            -> SecondCharacter_reactions
+    - ThirdCharacter:
+        {GlyphC:
+            -fireC:
+                ~ player_fire_third_char ++
+            -earthC:
+                ~ player_earth_third_char ++
+            -airC:
+                ~ player_air_third_char ++
+            -waterC:
+                ~ player_water_third_char ++   
+            -aetherC:
+                ~ player_aether_third_char ++
+        }
 
-        - glyph_currentTalker == ThirdCharacter:
-            -> ThirdCharacter_reactions
+    - FourthCharacter:
+        {GlyphC:
+            -fireC:
+                ~ player_fire_fourth_char ++
+            -earthC:
+                ~ player_earth_fourth_char ++
+            -airC:
+                ~ player_air_fourth_char ++
+            -waterC:
+                ~ player_water_fourth_char ++   
+            -aetherC:
+                ~ player_aether_fourth_char ++
+        }
 
-        - glyph_currentTalker == FourthCharacter:
-            -> FourthCharacter_reactions  
+    - FifthCharacter:
+        {GlyphC:
+            -fireC:
+                ~ player_fire_fifth_char ++
+            -earthC:
+                ~ player_earth_fifth_char ++
+            -airC:
+                ~ player_air_fifth_char ++
+            -waterC:
+                ~ player_water_fifth_char ++   
+            -aetherC:
+                ~ player_aether_fifth_char ++
+        }        
+}
+// Aggiorna contatore scelte
+{currentCharacter:
+    - FirstCharacter:
+        ~ firstChar_totalChoices ++
 
-        - glyph_currentTalker == FifthCharacter:
-            -> FifthCharacter_reactions  
+    - SecondCharacter:
+        ~ secondChar_totalChoices ++
 
-        - glyph_currentTalker == Mentor && glyph_actualActiveSigil == () && glyph_mainTalker hasnt Mentor:
-            -> Mentor_reactions              
+    - ThirdCharacter:
+        ~ thirdChar_totalChoices ++
 
-        - else:
-            {
-                - glyph_allPNGAffectedByChoice != ():
-                    -> glyph_thereAreOtherTalkers
-                
-                - else:
-                    -> closing_function       
-            }
-             
+   - FourthCharacter:
+        ~ fourthChar_totalChoices ++
 
-    }
+    - FifthCharacter:
+        ~ fifthChar_totalChoices ++
 
-    //Reazione ai sigilli
-            = FirstCharacter_reactions
-            //Qui settiamo le reazioni ad hoc, a seconda delle variazioni 
-            {firstChar_relationshipReaction:
-
-                - neutral:
-                    {shuffle:
-                        - {charTag(FirstCharacter, "neutral")}:         Già.
-                        - {charTag(FirstCharacter, "neutral")}:         Chiaro.
-                        - {charTag(FirstCharacter, "neutral")}:         Mhm.
-                    }
-
-                - positive:
-                    {shuffle:
-                        - {charTag(FirstCharacter, "affectionate")}:     Woah!
-                        - {charTag(FirstCharacter, "affectionate")}:     Totale!
-                        - {charTag(FirstCharacter, "curious")}:          Adoro!
-                        - {charTag(FirstCharacter, "curious")}:          Amo!
-                    }
-
-                - negative:
-                    {shuffle:
-                        - {charTag(FirstCharacter, "sad")}:             Bah.
-                        - {charTag(FirstCharacter, "annoyed")}:         Vabbè.
-                        - {charTag(FirstCharacter, "annoyed")}:         Meh...
-                    }
-
-            }
-
-            {
-                - glyph_actualActiveSigil != ():
-                    @animation: ActiveSigil
-            }
-
-            
-            -> glyph_thereAreOtherTalkers
-            
-            
-            = SecondCharacter_reactions
-            {secondChar_relationshipReaction:
-
-                - neutral:
-                    {shuffle:
-                        - {charTag(SecondCharacter, "neutral")}:        Ok.
-                        - {charTag(SecondCharacter, "neutral")}:        Certo.
-                        - {charTag(SecondCharacter, "neutral")}:        Mhm.
-                    }
-
-                - positive:
-                    {shuffle:
-                        - {charTag(SecondCharacter, "emotional")}:          Uuuuh!
-                        - {charTag(SecondCharacter, "emotional")}:          Oooh!
-                        - {charTag(SecondCharacter, "energy")}:             Wow!
-                        - {charTag(SecondCharacter, "energy")}:             Siii!
-                    }
-
-                - negative:
-                    {shuffle:
-                        - {charTag(SecondCharacter, "angry")}:              No?
-                        - {charTag(SecondCharacter, "angry")}:              ???
-                        - {charTag(SecondCharacter, "melanchonic")}:        Ah.
-                        - {charTag(SecondCharacter, "melanchonic")}:        Uff.
-                    }
-
-            }
-
-            {
-                - glyph_actualActiveSigil != ():
-                    @animation: ActiveSigil
-            }
-            -> glyph_thereAreOtherTalkers
-
-            
-            = ThirdCharacter_reactions
-            {thirdChar_relationshipReaction:
-
-                - neutral:
-                    {shuffle:
-                        - {charTag(ThirdCharacter, "neutral")}:        Ok.
-                        - {charTag(ThirdCharacter, "neutral")}:        Certo.
-                        - {charTag(ThirdCharacter, "neutral")}:        Mhm.
-                    }
-
-                - positive:
-                    {shuffle:
-                        - {charTag(ThirdCharacter, "neutral")}:          Uuuuh!
-                        - {charTag(ThirdCharacter, "neutral")}:          Oooh!
-                        - {charTag(ThirdCharacter, "neutral")}:          Wow!
-                        - {charTag(ThirdCharacter, "neutral")}:          Siii!
-                    }
-
-                - negative:
-                    {shuffle:
-                        - {charTag(ThirdCharacter, "judgmental")}:         No?
-                        - {charTag(ThirdCharacter, "judgmental")}:         ???
-                        - {charTag(ThirdCharacter, "judgmental")}:         Ah.
-                        - {charTag(ThirdCharacter, "judgmental")}:         Uff.
-                    }
-
-
-            }
-
-            {
-                - glyph_actualActiveSigil != ():
-                    @animation: ActiveSigil
-            }
-            -> glyph_thereAreOtherTalkers
-
-            = FourthCharacter_reactions
-            {fourthChar_relationshipReaction:
-
-                - neutral:
-                    {shuffle:
-                        - Reazione neutra al sigillo.
-                        - Altra reazione neutra al sigillo.
-                        - Un'altra ancora reazione neutra al sigillo.
-                    }
-
-                - positive:
-                    {shuffle:
-                        - Reazione positiva al sigillo.
-                        - Altra reazione positiva al sigillo.
-                        - Un'altra ancora reazione positiva al sigillo.
-                    }
-
-                - negative:
-                    {shuffle:
-                        - Reazione negativa al sigillo.
-                        - Altra reazione negativa al sigillo.
-                        - Un'altra ancora reazione negativa al sigillo.
-                    }
-
-            }
-
-            {
-                - glyph_actualActiveSigil != ():
-                    @animation: ActiveSigil
-            }
-            -> glyph_thereAreOtherTalkers
-
-            = FifthCharacter_reactions
-            {fifthChar_relationshipReaction:
-
-                - neutral:
-                    {shuffle:
-                        - Reazione neutra al sigillo.
-                        - Altra reazione neutra al sigillo.
-                        - Un'altra ancora reazione neutra al sigillo.
-                    }
-
-                - positive:
-                    {shuffle:
-                        - Reazione positiva al sigillo.
-                        - Altra reazione positiva al sigillo.
-                        - Un'altra ancora reazione positiva al sigillo.
-                    }
-
-                - negative:
-                    {shuffle:
-                        - Reazione negativa al sigillo.
-                        - Altra reazione negativa al sigillo.
-                        - Un'altra ancora reazione negativa al sigillo.
-                    }
-
-            }
-
-            {
-                - glyph_actualActiveSigil != ():
-                    @animation: ActiveSigil
-            }
-            -> glyph_thereAreOtherTalkers
-
-
-    = Mentor_reactions
-            //Mentore ha sempre reazioni neutre, visto che non ha un contatore della relazione esplicitamente attivo.
-                {shuffle:
-                    - {charTag(FifthCharacter, "neutral")}:         Sì sì.
-                    - {charTag(FifthCharacter, "neutral")}:         Ok.
-                    - {charTag(FifthCharacter, "neutral")}:         Eh.
-                    - {charTag(FifthCharacter, "neutral")}:         Mhm.
-                    - {charTag(FifthCharacter, "neutral")}:         Chiaro.
-                    - {charTag(FifthCharacter, "neutral")}:         Già.
-                }
-            -> glyph_thereAreOtherTalkers
-
-
-    = glyph_thereAreOtherTalkers
-    //Funzione per capire se rimane qualcuno con cui parlare o meno
-    {debug_nest: passo per glyph_thereAreOtherTalkers}
-        {
-            - glyph_allPNGAffectedByChoice != ():
-                {debug_nest: glyph_allPNGAffectedByChoice contiene {glyph_allPNGAffectedByChoice}, per cui faccio un check di un altro personaggix.}
-                 ~ glyph_currentTalker = ()
-                {debug_nest: Dopo il reset, il valore di glyph_currentTalker è {glyph_currentTalker}.}
-                ~ temp newSpeaker = LIST_RANDOM(glyph_allPNGAffectedByChoice)
-                {debug_nest: il valore di newSpeaker è {newSpeaker}.}
-                ~ glyph_currentTalker += newSpeaker
-                {debug_nest: glyph_currentTalker ora è {glyph_currentTalker}}
-                // ~ glyph_allPNGAffectedByChoice -= newSpeaker
-                // {debug_nest: tolto newSpeaker {newSpeaker} dalla lista glyph_allPNGAffectedByChoice, che ora contiene {glyph_allPNGAffectedByChoice}.}
-                    -> update_PNG_glyph_values
-           
-           - else:
-                {debug_nest: glyph_allPNGAffectedByChoice contiene {glyph_allPNGAffectedByChoice}, e in quanto vuota, vado a closing_function.}
-                -> closing_function        
-        }   
-
-    ->->
-
-
-    = closing_function
-    {debug_nest: passo per closing_function.}
-    //Azzeriamo i valori temporanei
-        ~ glyph_currentTalker = ()
-        ~ glyph_temporaryFire  = 0
-        ~ glyph_temporaryEarth = 0
-        ~ glyph_temporaryAir= 0
-        ~ glyph_temporaryWater= 0
-        ~ glyph_temporaryAether = 0
-        ~ glyph_mainTalker = ()
-        ~ glyph_actualGlyphChoice = ()
-        
-    {debug_nest: dopo l'operazione il parlante attuale {glyph_currentTalker}.}
-
-    //Infine: se il valore di DecreaseS è su sì, diminuiamo il valore del sigillo, altrimenti no
-    {
-        - glyph_decreaseSigil == true && glyph_actualActiveSigil != ():
-        {debug_nest: il valore di glyph_decreaseSigil è {glyph_decreaseSigil} e quindi vado a ridurre il contatore del sigillo.}
-            -> update_sigil_value
-        - else: 
-            ->->   
-    }
-
-
-    = update_sigil_value
-    //Qui aggiorniamo un po' di cose attorno al sigillo
-    //Prima chiamo l'updater delle informazioni sul grimorio per il sigillo a tre
-        ~ glyph_grimoireTripleSigilsUpdater()
-        
-    //Poi aumentiamo il valore di utilizzo
-        ~ glyph_actualSigilUses ++
+    - Mentor:
+        ~ mentor_totalChoices ++             
+}
+// Aggiorna contatore glifi con valore sigillo
+{currentCharacter:
+    - FirstCharacter:
+        ~ firstChar_fire += variationFire 
+        ~ firstChar_earth += variationEarth
+        ~ firstChar_air += variationAir
+        ~ firstChar_water += variationWater
+        ~ firstChar_aether += variationAether
     
-    //Se l'utilizzo è arrivato al massimo, a quel punto aggiungiamo il sigillo a quelli utilizzati e svuotiamo la variabile del sigillo attualmente attivo.
-    {
-        - glyph_actualSigilUses == glyph_maxSigilUses:
-            {charTag(TheWitch, witch_state())}:   L'effetto di {glyph_actualActiveSigil} si è esaurito.
-            //poi aggiorno le informazioni sul sigillo principale
-            ~ glyph_grimoireMainSigilsUpdater()
-            //sposto il sigillo su quelli utilizzati
-            ~ glyph_usedSigils += glyph_actualActiveSigil
-            //e svuoto il sigillo attivo
-            ~ glyph_actualActiveSigil = ()
-            
-    }    
-    //L'intersezione tra glyph_usedSigils e glyph_discoveredSigils indicherà la presenza di questo sigillo, che sarà quindi tracciato come utilizzato sul libro.
+    - SecondCharacter:
+        ~ secondChar_fire += variationFire 
+        ~ secondChar_earth += variationEarth
+        ~ secondChar_air += variationAir
+        ~ secondChar_water += variationWater
+        ~ secondChar_aether += variationAether
+    
+    - ThirdCharacter:
+        ~ thirdChar_fire += variationFire 
+        ~ thirdChar_earth += variationEarth
+        ~ thirdChar_air += variationAir
+        ~ thirdChar_water += variationWater
+        ~ thirdChar_aether += variationAether
 
-    ->->
+    - FourthCharacter:
+        ~ fourthChar_fire += variationFire 
+        ~ fourthChar_earth += variationEarth
+        ~ fourthChar_air += variationAir
+        ~ fourthChar_water += variationWater
+        ~ fourthChar_aether += variationAether
+
+    - FifthCharacter:
+        ~ fifthChar_fire += variationFire 
+        ~ fifthChar_earth += variationEarth
+        ~ fifthChar_air += variationAir
+        ~ fifthChar_water += variationWater
+        ~ fifthChar_aether += variationAether
+
+    - Mentor:
+        ~ mentor_fire += variationFire 
+        ~ mentor_earth += variationEarth
+        ~ mentor_air += variationAir
+        ~ mentor_water += variationWater
+        ~ mentor_aether += variationAether            
+}
+// Aggiorna contatore sigilli
+{glyph_actualActiveSigil:
+    {currentCharacter:
+        - FirstCharacter:
+            ~ firstChar_usedSigil ++
+        
+        - SecondCharacter:
+            ~ secondChar_usedSigil ++
+        
+        - ThirdCharacter:
+            ~ thirdChar_usedSigil ++
+        
+        - FourthCharacter:
+            ~ fourthChar_usedSigil ++
+        
+        - FifthCharacter:
+            ~ fifthChar_usedSigil ++
+    }
+}
+// Aggiorno valore di relazione
+{currentCharacter:
+    - FirstCharacter:
+        ~ updateFirstCharacterRelation()
+    
+    - SecondCharacter:
+        ~ updateSecondCharacterRelation()
+    
+    - ThirdCharacter:
+        ~ updateThirdCharacterRelation()
+    
+    - FourthCharacter:
+        ~ updateFourthCharacterRelation()
+    
+    - FifthCharacter:
+        ~ updateFifthCharacterRelation()            
+}
+// Calcolo valore di reazione da relazione e relazione precedente
+~ temp relationshipChange = 0
+{currentCharacter:
+    - FirstCharacter:
+        ~ relationshipChange = firstChar_relationshipIndicator - firstChar_lastRelationshipIndicator
+    
+    - SecondCharacter:
+        ~ relationshipChange = secondChar_relationshipIndicator - secondChar_lastRelationshipIndicator
+
+    - ThirdCharacter:
+        ~ relationshipChange = thirdChar_relationshipIndicator - thirdChar_lastRelationshipIndicator
+
+    - FourthCharacter:
+        ~ relationshipChange = fourthChar_relationshipIndicator - fourthChar_lastRelationshipIndicator
+
+    - FifthCharacter:
+        ~ relationshipChange = fifthChar_relationshipIndicator - fifthChar_lastRelationshipIndicator            
+}
+~ temp reaction = positive
+{
+    - relationshipChange > 0:
+        ~ reaction = positive
+
+    - relationshipChange < 0:
+        ~ reaction = negative
+
+    - relationshipChange == 0:
+        ~ reaction = neutral
+}
+// Genero reazione
+{currentCharacter:
+    - FirstCharacter:
+        {reaction:
+            - neutral:
+                {shuffle:
+                    - {charTag(FirstCharacter, "neutral")}:         Già.
+                    - {charTag(FirstCharacter, "neutral")}:         Chiaro.
+                    - {charTag(FirstCharacter, "neutral")}:         Mhm.
+                }
+
+            - positive:
+                {shuffle:
+                    - {charTag(FirstCharacter, "affectionate")}:     Woah!
+                    - {charTag(FirstCharacter, "affectionate")}:     Totale!
+                    - {charTag(FirstCharacter, "curious")}:          Adoro!
+                    - {charTag(FirstCharacter, "curious")}:          Amo!
+                }
+
+            - negative:
+                {shuffle:
+                    - {charTag(FirstCharacter, "sad")}:             Bah.
+                    - {charTag(FirstCharacter, "annoyed")}:         Vabbè.
+                    - {charTag(FirstCharacter, "annoyed")}:         Meh...
+                }
+        }
+
+    - SecondCharacter:
+        {reaction:
+
+            - neutral:
+                {shuffle:
+                    - {charTag(SecondCharacter, "neutral")}:        Ok.
+                    - {charTag(SecondCharacter, "neutral")}:        Certo.
+                    - {charTag(SecondCharacter, "neutral")}:        Mhm.
+                }
+
+            - positive:
+                {shuffle:
+                    - {charTag(SecondCharacter, "emotional")}:          Uuuuh!
+                    - {charTag(SecondCharacter, "emotional")}:          Oooh!
+                    - {charTag(SecondCharacter, "energy")}:             Wow!
+                    - {charTag(SecondCharacter, "energy")}:             Siii!
+                }
+
+            - negative:
+                {shuffle:
+                    - {charTag(SecondCharacter, "angry")}:              No?
+                    - {charTag(SecondCharacter, "angry")}:              ???
+                    - {charTag(SecondCharacter, "melanchonic")}:        Ah.
+                    - {charTag(SecondCharacter, "melanchonic")}:        Uff.
+                }
+
+        }
+
+    - ThirdCharacter:
+        {reaction:
+
+            - neutral:
+                {shuffle:
+                    - {charTag(ThirdCharacter, "neutral")}:        Ok.
+                    - {charTag(ThirdCharacter, "neutral")}:        Certo.
+                    - {charTag(ThirdCharacter, "neutral")}:        Mhm.
+                }
+
+            - positive:
+                {shuffle:
+                    - {charTag(ThirdCharacter, "neutral")}:          Uuuuh!
+                    - {charTag(ThirdCharacter, "neutral")}:          Oooh!
+                    - {charTag(ThirdCharacter, "neutral")}:          Wow!
+                    - {charTag(ThirdCharacter, "neutral")}:          Siii!
+                }
+
+            - negative:
+                {shuffle:
+                    - {charTag(ThirdCharacter, "judgmental")}:         No?
+                    - {charTag(ThirdCharacter, "judgmental")}:         ???
+                    - {charTag(ThirdCharacter, "judgmental")}:         Ah.
+                    - {charTag(ThirdCharacter, "judgmental")}:         Uff.
+                }
+
+
+        }
+
+    - FourthCharacter:
+        {reaction:
+
+            - neutral:
+                {shuffle:
+                    - Reazione neutra al sigillo.
+                    - Altra reazione neutra al sigillo.
+                    - Un'altra ancora reazione neutra al sigillo.
+                }
+
+            - positive:
+                {shuffle:
+                    - Reazione positiva al sigillo.
+                    - Altra reazione positiva al sigillo.
+                    - Un'altra ancora reazione positiva al sigillo.
+                }
+
+            - negative:
+                {shuffle:
+                    - Reazione negativa al sigillo.
+                    - Altra reazione negativa al sigillo.
+                    - Un'altra ancora reazione negativa al sigillo.
+                }
+    }     
+
+    - FifthCharacter:
+        {reaction:
+
+            - neutral:
+                {shuffle:
+                    - Reazione neutra al sigillo.
+                    - Altra reazione neutra al sigillo.
+                    - Un'altra ancora reazione neutra al sigillo.
+                }
+
+            - positive:
+                {shuffle:
+                    - Reazione positiva al sigillo.
+                    - Altra reazione positiva al sigillo.
+                    - Un'altra ancora reazione positiva al sigillo.
+                }
+
+            - negative:
+                {shuffle:
+                    - Reazione negativa al sigillo.
+                    - Altra reazione negativa al sigillo.
+                    - Un'altra ancora reazione negativa al sigillo.
+                }
+    }
+
+    - Mentor:
+    {shuffle:
+        - {charTag(FifthCharacter, "neutral")}:         Sì sì.
+        - {charTag(FifthCharacter, "neutral")}:         Ok.
+        - {charTag(FifthCharacter, "neutral")}:         Eh.
+        - {charTag(FifthCharacter, "neutral")}:         Mhm.
+        - {charTag(FifthCharacter, "neutral")}:         Chiaro.
+        - {charTag(FifthCharacter, "neutral")}:         Già.
+    }  
+}
+
+//Animazione utilizzo sigillo
+{
+    - glyph_actualActiveSigil != ():
+        @animation: ActiveSigil
+}
+->->
+
+
+=== sigilUpdates
+// Aggiornare contatori utilizzo sigillo
+~ glyph_actualSigilUses --
+// Aggiornare descrizione grimorio sigillo a tre glifi
+~ glyph_grimoireTripleSigilsUpdater()
+// C'era un sigillo attivo e l'ho consumato completamente?
+{glyph_actualSigilUses == 0:
+    // Messaggio di Luna
+    {charTag(TheWitch, witch_state())}:   L'effetto di {glyph_actualActiveSigil} si è esaurito.
+    //poi aggiorno le informazioni sul sigillo principale
+    ~ glyph_grimoireMainSigilsUpdater()
+    //sposto il sigillo su quelli utilizzati
+    ~ glyph_usedSigils += glyph_actualActiveSigil
+    //e svuoto il sigillo attivo
+    ~ glyph_actualActiveSigil = ()
+}
+->->
+
+
+=== function updateFirstCharacterRelation()
+// TODO
+~ firstChar_relationshipIndicator = firstChar_aether + firstChar_water - firstChar_air
 
 
 
-
-//Funzioni per gestire la variazione della relazione, secondo le logiche dellx PNG, e che genera anche la reazione del ritratto MA NON DA FEEDBACK SUL RAPPORTO
-=== function firstChar_relationship_variation()
-//Prima cosa: calcolo la variazione complessiva 
-        {debug_nest: passo per firstChar_relationship_variation. Il valore di firstChar_RelCalculator è {firstChar_RelCalculator}.}
-            {glyph_temporaryAir:
-                --2:
-                    ~ firstChar_RelCalculator ++
-                    ~ firstChar_RelCalculator ++
-                - 1:
-                    ~ firstChar_RelCalculator --
-                - 2:
-                    ~ firstChar_RelCalculator --
-                    ~ firstChar_RelCalculator --
-            } 
-            {glyph_temporaryWater:
-                - -2:
-                    ~ firstChar_RelCalculator --
-                    ~ firstChar_RelCalculator --
-                - 1:
-                    ~ firstChar_RelCalculator ++
-                - 2:
-                    ~ firstChar_RelCalculator ++
-                    ~ firstChar_RelCalculator ++
-            }   
-
-            {glyph_temporaryAether:
-                - -2:
-                    ~ firstChar_RelCalculator --
-                    ~ firstChar_RelCalculator --
-                - 1:
-                    ~ firstChar_RelCalculator ++
-                - 2:
-                    ~ firstChar_RelCalculator ++
-                    ~ firstChar_RelCalculator ++
-            }   
-        {debug_nest: dopo i conti fatti, il valore di firstChar_RelCalculator è {firstChar_RelCalculator}.}
-
-//Poi faccio il conto per verificare quale è stata la variazione di valore complessiva, e generare la relativa reazione.
-
-            {
-                - firstChar_RelCalculator > 0:
-                    ~ firstChar_relationshipReaction = positive
-
-                - firstChar_RelCalculator < 0:
-                    ~ firstChar_relationshipReaction = negative
-
-                - firstChar_RelCalculator == 0:
-                    ~ firstChar_relationshipReaction = neutral
-            }
-    {debug_nest: dopo l'aggiornamento, il valore di firstChar_relationshipReaction è {firstChar_relationshipReaction}.} 
-//Poi aggiungo il valore sia a firstChar_relationshipIndicatorAbsolute (per tracciamento) che a firstChar_relationshipIndicator
-        ~ firstChar_relationshipIndicator += firstChar_RelCalculator    
-        ~ firstChar_relationshipIndicatorAbsolute += firstChar_RelCalculator
-//E svuoto firstChar_RelCalculator
-        ~ firstChar_RelCalculator = 0  
-
-        {debug_nest: dopo l'aggiornamento, il valore di firstChar_relationshipIndicator è {firstChar_relationshipIndicator}.} 
-            
-        ~ relationshipIndicator_Adjustments(FirstCharacter)
-
-
-=== function secondChar_relationship_variation()
-    //Step uno: calcolo qual è il colore dominante.
+=== function updateSecondCharacterRelation()
+// DA CREARE
+//Step uno: calcolo qual è il colore dominante.
     {
         - (secondChar_aether > secondChar_water) && (secondChar_aether > secondChar_fire) && (secondChar_aether > secondChar_air) && (secondChar_aether > secondChar_earth):
                 ~ secondChar_relationshipActualDominantGlyphValue = secondChar_aether
@@ -754,32 +616,6 @@ Recap della logica.
             //questa cosa crea due problemi: se faccio all'inizio cinque scelte diverse, se vado avanti a due colori dominanti.
             ~ secondChar_relationshipLastDominantGlyphValue = secondChar_relationshipActualDominantGlyphValue
                     ~ secondChar_relationshipLastDominantGlyph = secondChar_relationshipActualDominantGlyph
-            // {
-            //     - secondChar_relationshipLastDominantGlyph == 1.00:
-            //     //Risolto il problema dell'inizio, ma non quelli successivi
-            //         {
-            //             - secondChar_relationshipTrackingChoise == aetherC:
-            //                 ~ secondChar_relationshipActualDominantGlyphValue = secondChar_aether
-            //                 ~ secondChar_relationshipActualDominantGlyph  = aetherC
-            //             - secondChar_relationshipTrackingChoise == waterC:
-            //                  ~ secondChar_relationshipActualDominantGlyphValue = secondChar_water
-            //                 ~ secondChar_relationshipActualDominantGlyph  = waterC
-            //             - secondChar_relationshipTrackingChoise == fireC:
-            //                 ~ secondChar_relationshipActualDominantGlyphValue = secondChar_fire
-            //                 ~ secondChar_relationshipActualDominantGlyph  = fireC
-            //             - secondChar_relationshipTrackingChoise == earthC:
-            //                 ~ secondChar_relationshipActualDominantGlyphValue = secondChar_earth
-            //                 ~ secondChar_relationshipActualDominantGlyph  = earthC
-            //             - secondChar_relationshipTrackingChoise == airC:
-            //                 ~ secondChar_relationshipActualDominantGlyphValue = secondChar_air
-            //                 ~ secondChar_relationshipActualDominantGlyph  = airC
-            //         }
-
-            //     - else:
-            //         ~ secondChar_relationshipLastDominantGlyphValue = secondChar_relationshipActualDominantGlyphValue
-            //         ~ secondChar_relationshipLastDominantGlyph = secondChar_relationshipActualDominantGlyph
-            // }
-            
               
     }
 
@@ -792,22 +628,20 @@ Recap della logica.
             {
                 //Se non cambia glifo dominante ma aumenta il valore, cosa buona
                 -secondChar_relationshipActualDominantGlyphValue >= secondChar_relationshipLastDominantGlyphValue:
-                        ~ secondChar_RelCalculator ++
+                        ~ secondChar_relationshipIndicator ++
                 
                 //Se non cambia glifo dominante ma diminuisce il valore, cosa cattiva
                 -secondChar_relationshipActualDominantGlyphValue < secondChar_relationshipLastDominantGlyphValue:
-                        ~ secondChar_RelCalculator --        
+                        ~ secondChar_relationshipIndicator --        
             }
         
         //Eccezione con la prima scelta
         - secondChar_relationshipLastDominantGlyph == ():
-            ~ secondChar_RelCalculator ++
+            ~ secondChar_relationshipIndicator = 0
         
         //Se cambia glifo dominante, cosa brutta    
         - secondChar_relationshipActualDominantGlyph != secondChar_relationshipLastDominantGlyph:
-                ~ secondChar_RelCalculator --
-        
-
+            ~ secondChar_RelCalculator --
         
         //Il resto è neutro        
 
@@ -817,118 +651,51 @@ Recap della logica.
     ~ secondChar_relationshipLastDominantGlyphValue = secondChar_relationshipActualDominantGlyphValue
     ~ secondChar_relationshipLastDominantGlyph = secondChar_relationshipActualDominantGlyph
 
-//Poi faccio il conto per verificare quale è stata la variazione di valore complessiva, e generare la relativa reazione.
-
-            {
-                - secondChar_RelCalculator > 0:
-                    ~ secondChar_relationshipReaction = positive
-
-                - secondChar_RelCalculator < 0:
-                    ~ secondChar_relationshipReaction = negative
-
-                - secondChar_RelCalculator == 0:
-                    ~ secondChar_relationshipReaction = neutral
-            }
-
-//Poi aggiungo il valore sia a secondChar_relationshipIndicatorAbsolute (per tracciamento) che a secondChar_relationshipIndicator
-        ~ secondChar_relationshipIndicator += secondChar_RelCalculator    
-        ~ secondChar_relationshipIndicatorAbsolute += secondChar_RelCalculator
-//E svuoto secondChar_RelCalculator
-        ~ secondChar_RelCalculator = 0
-
-        {debug_nest: dopo l'aggiornamento, il valore di secondChar_relationshipReaction è {secondChar_relationshipReaction}.} 
-            
-        ~ relationshipIndicator_Adjustments(SecondCharacter)
-
-
-=== function thirdChar_relationship_variation()
-//Prima cosa: calcolo la variazione complessiva a seconda della logica della PNG
-        {debug_nest: passo per firstChar_relationship_variation. Il valore di thirdChar_RelCalculator è {thirdChar_RelCalculator}.}
-
-        {debug_nest: dopo i conti fatti, il valore di thirdChar_RelCalculator è {thirdChar_RelCalculator}.}
-
-//Poi faccio il conto per verificare quale è stata la variazione di valore complessiva, e generare la relativa reazione.
-
-            {
-                - thirdChar_RelCalculator > 0:
-                    ~ thirdChar_relationshipReaction = positive
-
-                - thirdChar_RelCalculator < 0:
-                    ~ thirdChar_relationshipReaction = negative
-
-                - thirdChar_RelCalculator == 0:
-                    ~ thirdChar_relationshipReaction = neutral
-            }
-
-//Poi aggiungo il valore sia a thirdChar_relationshipIndicatorAbsolute (per tracciamento) che a thirdChar_relationshipIndicator
-        ~ thirdChar_relationshipIndicator += thirdChar_RelCalculator    
-        ~ thirdChar_relationshipIndicatorAbsolute += thirdChar_RelCalculator
-//E svuoto thirdChar_RelCalculator
-        ~ thirdChar_RelCalculator = 0 
-
-        {debug_nest: dopo l'aggiornamento, il valore di thirdChar_relationshipReaction è {thirdChar_relationshipReaction}.} 
-            
-        ~ relationshipIndicator_Adjustments(ThirdCharacter)
 
 
 
-=== function fourthChar_relationship_variation()
-//Prima cosa: calcolo la variazione complessiva a seconda della logica della PNG
-        {debug_nest: passo per firstChar_relationship_variation. Il valore di fourthChar_RelCalculator è {fourthChar_RelCalculator}.}
+=== function updateThirdCharacterRelation()
+// DA CREARE
+~ thirdChar_relationshipIndicator = thirdChar_aether + thirdChar_water - thirdChar_air
 
-        {debug_nest: dopo i conti fatti, il valore di fourthChar_RelCalculator è {fourthChar_RelCalculator}.}
+=== function updateFourthCharacterRelation()
+// DA CREARE
+~ secondChar_relationshipIndicator = secondChar_aether + secondChar_water - secondChar_air
 
-//Poi faccio il conto per verificare quale è stata la variazione di valore complessiva, e generare la relativa reazione.
+=== function updateFifthCharacterRelation()
+// DA CREARE
+~ secondChar_relationshipIndicator = secondChar_aether + secondChar_water - secondChar_air
 
-            {
-                - fourthChar_RelCalculator > 0:
-                    ~ fourthChar_relationshipReaction = positive
 
-                - fourthChar_RelCalculator < 0:
-                    ~ fourthChar_relationshipReaction = negative
 
-                - fourthChar_RelCalculator == 0:
-                    ~ fourthChar_relationshipReaction = neutral
-            }
+/*
+=== function getCleanCharacterGlyphCounter(character, glyph)
+{character:
+    - FirstCharacter:
+        {glyph:
+            - fireC:
+                ~ return player_fire_first_char
+            // ...
+        }
+    // ...
+}
 
-//Poi aggiungo il valore sia a fourthChar_relationshipIndicatorAbsolute (per tracciamento) che a fourthChar_relationshipIndicator
-        ~ fourthChar_relationshipIndicator += fourthChar_RelCalculator    
-        ~ fourthChar_relationshipIndicatorAbsolute += fourthChar_RelCalculator
-//E svuoto fourthChar_RelCalculator
-        ~ fourthChar_RelCalculator = ()  
+=== function setCleanCharacterGlyphCounter(character, glyph, value)
+{character:
+    - FirstCharacter:
+        {glyph:
+            - fireC:
+                ~ player_fire_first_char = value
+            // ...
+        }
+    // ...
+}
+*/
 
-        {debug_nest: dopo l'aggiornamento, il valore di fourthChar_relationshipReaction è {fourthChar_relationshipReaction}.} 
-            
-        ~ relationshipIndicator_Adjustments(FourthCharacter)
 
-=== function fifthChar_relationship_variation()
-//Prima cosa: calcolo la variazione complessiva a seconda della logica della PNG
-        {debug_nest: passo per firstChar_relationship_variation. Il valore di fifthChar_RelCalculator è {fifthChar_RelCalculator}.}
 
-        {debug_nest: dopo i conti fatti, il valore di fifthChar_RelCalculator è {fifthChar_RelCalculator}.}
 
-//Poi faccio il conto per verificare quale è stata la variazione di valore complessiva, e generare la relativa reazione.
 
-            {
-                - fifthChar_RelCalculator > 0:
-                    ~ fifthChar_relationshipReaction = positive
-
-                - fifthChar_RelCalculator < 0:
-                    ~ fifthChar_relationshipReaction = negative
-
-                - fifthChar_RelCalculator == 0:
-                    ~ fifthChar_relationshipReaction = neutral
-            }
-
-//Poi aggiungo il valore sia a fifthChar_relationshipIndicatorAbsolute (per tracciamento) che a fifthChar_relationshipIndicator
-        ~ fifthChar_relationshipIndicator += fifthChar_RelCalculator    
-        ~ fifthChar_relationshipIndicatorAbsolute += fifthChar_RelCalculator
-//E svuoto fifthChar_RelCalculator
-        ~ fifthChar_RelCalculator = ()  
-
-        {debug_nest: dopo l'aggiornamento, il valore di fifthChar_relationshipReaction è {fifthChar_relationshipReaction}.} 
-            
-        ~ relationshipIndicator_Adjustments(FifthCharacter)
 
 //Questa funzione ci permette al volo di evitare che i valori dell'indicatore sforino i limiti previsti
 === function relationshipIndicator_Adjustments(PNG)
@@ -978,111 +745,3 @@ Recap della logica.
         }
 }
 
-
-=== function glyph_talkersAndMainsChecker()
-//Prima cosa: chi è in scena?
-    {
-        - are_two_entities_together(PG, FirstCharacter):
-            ~ glyph_allPNGAffectedByChoice += FirstCharacter
-    }
-    {
-        - are_two_entities_together(PG, SecondCharacter):
-            ~ glyph_allPNGAffectedByChoice += SecondCharacter
-    }
-    {
-        - are_two_entities_together(PG, ThirdCharacter):
-            ~ glyph_allPNGAffectedByChoice += ThirdCharacter
-    }
-    {
-        - are_two_entities_together(PG, FourthCharacter):
-            ~ glyph_allPNGAffectedByChoice += FourthCharacter
-    }
-    {
-        - are_two_entities_together(PG, FifthCharacter):
-            ~ glyph_allPNGAffectedByChoice += FifthCharacter
-    }
-    {
-        - are_two_entities_together(PG, Mentor):
-            ~ glyph_allPNGAffectedByChoice += Mentor                    
-    }
-
-//Seconda cosa: quali sono le condizioni in cui possono esserci più main talker? Sono gli storylets comuni, dove la logica è: se ho visitato il nodo MA non ho ancora nella lista del grimorio l'oggetto che è legato a quel nodo di storylets, allora sono nel mezzo del dialogo, e quindi aggiungo a maintalker tutte le png previste.
-{
-    //Chiacchiere tra Riccio e Chitarra
-        - first_second_chit_chat && grimoire_firstChar hasnt grimFirstSecondChar:
-            {debug_nest: questa eccezione è valida: first_second_chit_chat && grimoire_firstChar hasnt grimFirstSecondChar. grimoire_firstChar {grimoire_firstChar}.} 
-            ~ glyph_mainTalker += FirstCharacter
-            ~ glyph_mainTalker += SecondCharacter
-
-    //Chiacchiere tra Riccio e PNG3
-        - third_second_chit_chat && grimoire_secondChar hasnt grimSecondThirdChar:
-        {debug_nest: questa eccezione è valida: third_mentor_chit_chat && grimoire_thirdChar hasnt grimThirdCharMentor. grimoire_thirdChar {grimoire_thirdChar}.} 
-            ~ glyph_mainTalker += SecondCharacter
-            ~ glyph_mainTalker += ThirdCharacter     
-
-    //Chiacchiere tra Chitarra e PNG3
-        - third_first_chit_chat && grimoire_firstChar hasnt grimFirstThirdChar:
-        {debug_nest: questa eccezione è valida: third_first_chit_chat && grimoire_firstChar hasnt grimFirstThirdChar. grimoire_firstChar {grimoire_firstChar}.} 
-            ~ glyph_mainTalker += FirstCharacter
-            ~ glyph_mainTalker += ThirdCharacter
-        {debug_nest: le glyph_mainTalker sono {glyph_mainTalker}.}     
-
-    //Mentore e Riccio parlano dopo il litigio. Parte fintanto che riccio non ha cucinato da solo.
-        - about_violence_and_peace && grimoire_fifthChar hasnt grimSecondCharMentorPeace:
-        {debug_nest: about_violence_and_peace && grimoire_fifthChar hasnt grimSecondCharMentorPeace. grimoire_fifthChar {grimoire_thirdChar}.} 
-            ~ glyph_mainTalker += SecondCharacter
-            ~ glyph_mainTalker += Mentor
-    
-    //Riccio ha cucinato, e vediamo la scena del dono
-        - food_gift_second_char && grimoire_secondChar hasnt grimSecondCharKitchenAlone:
-        {debug_nest: about_violence_and_peace && grimoire_fifthChar hasnt grimSecondCharMentorPeace. grimoire_fifthChar {grimoire_thirdChar}.} 
-            ~ glyph_mainTalker += SecondCharacter
-            ~ glyph_mainTalker += Mentor    
-    
-    //Chiacchiere tra Chitarra e Mentore
-        - first_mentor_chit_chat && grimoire_firstChar hasnt grimFirstCharMentor:
-        {debug_nest: questa eccezione è valida: first_mentor_chit_chat && grimoire_firstChar hasnt grimFirstCharMentor. grimoire_firstChar {grimoire_firstChar}.} 
-            ~ glyph_mainTalker += FirstCharacter
-            ~ glyph_mainTalker += Mentor
-    
-    
-    //Chiacchiera tra PNG3 e Mentore
-        - third_mentor_chit_chat && grimoire_thirdChar hasnt grimThirdCharMentor:
-        {debug_nest: questa eccezione è valida: third_mentor_chit_chat && grimoire_thirdChar hasnt grimThirdCharMentor. grimoire_thirdChar {grimoire_thirdChar}.} 
-            ~ glyph_mainTalker += ThirdCharacter
-            ~ glyph_mainTalker += Mentor
-
-    }
-
-//Terzo: in cucina, con gli ingredienti, non vogliamo le reazioni delle PNG, perché commenteranno già in automatico, ma il codice attuale non le fermerebbe, perché non sono considertate main talk, per cui devo apportare una correzione.
-{
-    - glyph_mainTalker == (PG) && entity_location(PG) == Kitchen:
-        ~ glyph_allPNGAffectedByChoice = ()
-           {debug_nest: siamo in cucina e stiamo per mettere un ingrediente, per cui svuoto glyph_allPNGAffectedByChoice, il cui valore è {glyph_allPNGAffectedByChoice}.} 
-}
-
-
-//Quarto: verifichiamo se il sigillo è o meno da consumare.
-    {
-        //In teoria è un confronto di lista preciso, per cui se c'è mentore E un'altra persona, a quel punto la condizione non vale
-        - glyph_allPNGAffectedByChoice == (Mentor):
-            ~ glyph_decreaseSigil = false
-        {debug_nest: glyph_allPNGAffectedByChoice == (Mentor), per cui blocco la decrescita del sigillo. glyph_allPNGAffectedByChoice == {glyph_allPNGAffectedByChoice}, glyph_decreaseSigil == {glyph_decreaseSigil}.}     
-
-        - glyph_mainTalker == (PG):
-            ~ glyph_decreaseSigil = false
-            {debug_nest: glyph_mainTalker == (PG), per cui blocco la decrescita del sigillo. glyph_mainTalker == {glyph_mainTalker}, glyph_decreaseSigil == {glyph_decreaseSigil}.}   
-
-        - else:
-            {
-                - glyph_actualActiveSigil != ():
-                {debug_nest: glyph_actualActiveSigil != (), per cui poi riduco gli usi del sigillo. glyph_actualActiveSigil = {glyph_actualActiveSigil}.}  
-                    ~ glyph_decreaseSigil = true
-
-                - else:
-                {debug_nest: glyph_actualActiveSigil è vuoto, per cui NON riduco gli usi del sigillo. glyph_actualActiveSigil = {glyph_actualActiveSigil}.}  
-                    ~ glyph_decreaseSigil = false    
-            }
-    }
-
-{debug_nest: dopo il check zero sui presenti, glyph_allPNGAffectedByChoice contiene {glyph_allPNGAffectedByChoice}, mentre glyph_mainTalker è {glyph_mainTalker}.}
