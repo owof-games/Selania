@@ -74,17 +74,71 @@ VAR fifthChar_lastRelationshipIndicator = 0
         - glyph_thirdAether has glyph_actualActiveSigil:
             ~ variationAether -= 2
     }
+- else:
+       {GlyphC:
+        - fireC:
+            ~ variationFire += 1
+        - airC:
+            ~ variationAir += 1
+        - waterC:
+            ~ variationWater += 1
+        - aetherC:
+            ~ variationAether += 1
+        - earthC:
+            ~ variationEarth += 1            
+
+       } 
 }
 
 
 === function getCharactersInScene()
 ~ temp characters = ()
 // calcola le personagge in scena in una variabile temporanea e la ritorna
+    {
+        - are_two_entities_together(PG, FirstCharacter):
+            ~ characters += FirstCharacter
+    }
+    {
+        - are_two_entities_together(PG, SecondCharacter):
+            ~ characters += SecondCharacter
+    }
+    {
+        - are_two_entities_together(PG, ThirdCharacter):
+            ~ characters += ThirdCharacter
+    }
+    {
+        - are_two_entities_together(PG, FourthCharacter):
+            ~ characters += FourthCharacter
+    }
+    {
+        - are_two_entities_together(PG, FifthCharacter):
+            ~ characters += FifthCharacter
+    }
+    {
+        - are_two_entities_together(PG, Mentor):
+            ~ characters += Mentor                    
+    }
 ~ return characters
 
 
 === updatePGCounters(GlyphC)
 // aggiorna il contatore glifi di PG basandosi su GlyphC
+{GlyphC:
+    -fireC:
+        ~ player_fire ++
+
+    -earthC:
+        ~ player_earth ++
+    
+    -airC:
+        ~ player_air ++
+    
+    -waterC:
+        ~ player_water ++   
+    
+    -aetherC:
+        ~ player_aether ++
+}
 ->->
 
 
@@ -145,6 +199,8 @@ VAR fifthChar_lastRelationshipIndicator = 0
 // Aggiorna contatore glifi con valore sigillo
 {currentCharacter:
     - FirstCharacter:
+    OOOOOOOOOOOOOOOOO Aggiorna contatore glifi con valore sigilloOOOOOOOOOOOOOOOOO 
+    variationFire è {variationFire}
         ~ firstChar_fire += variationFire 
         ~ firstChar_earth += variationEarth
         ~ firstChar_air += variationAir
