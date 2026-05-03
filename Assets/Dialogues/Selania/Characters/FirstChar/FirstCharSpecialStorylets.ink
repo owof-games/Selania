@@ -34,7 +34,7 @@
 
     //questa è da rifare, è bruttina
     + \ {charTag(PG, "neutral")}:                       Ma {charNameFive} aveva detto di non andare nei posti chiusi.
-        -> glyph_modifier_variation_management(FirstCharacter, airC)->
+        -> glyph_choice_manager(false, airC)->
     {
         - are_two_entities_together(Mentor, PG):
     {charTag(FifthCharacter, "neutral")}:               Sono felice di venire ascoltata, ogni tanto.
@@ -43,19 +43,19 @@
                                                     Pensavo di aver fatto una cosa buona.
 
     + \ {charTag(PG, "neutral")}:                   Grande! Mai stare con le mani in mano!
-        -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+        -> glyph_choice_manager(false, fireC)->
     {charTag(FirstCharacter, "annoyed")}:           Non esageriamo.
     {charTag(FirstCharacter, "affectionate")}:      Diciamo che ero motivata dalla fame.
     {charTag(FirstCharacter, "sad")}:               E dalla nostalgia.
 
     + \ {charTag(PG, "neutral")}:                   Sentivo il bisogno di un posto dove fare qualcosa assieme.
-            -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+            -> glyph_choice_manager(false, aetherC)->
     {charTag(FirstCharacter, "curious")}:           Me felice.
     {charTag(FirstCharacter, "neutral")}:           Temevo non avresti apprezzato.
                                                     Non vedo l'ora di cucinare assieme ora!
 
     + \ {charTag(PG, "neutral")}:                   Che dovremmo inaugurarla con una festa!
-        -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+        -> glyph_choice_manager(false, earthC)->
     {
         - are_two_entities_together(Mentor, PG):
         {charTag(FifthCharacter, "sad")}:            Oppure, potremmo gioire in modi non rumorosi.
@@ -71,7 +71,7 @@
     {charTag(FirstCharacter, "affectionate")}:      Magari con chiacchiere e vino.
         
     + \ {charTag(PG, "neutral")}:                   Cibo, chiacchiere e intimità: mi piace molto, grazie {charNameOne}.
-        -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+        -> glyph_choice_manager(false, waterC)->
     {charTag(FirstCharacter, "affectionate")}:      Sono felice che ci capiamo {player_name}.
                                                     Ho davvero bisogno di sentire un po' di casa.
     {charTag(FirstCharacter, "neutral")}:           Cucinare assieme potrà aiutarmi.
@@ -127,7 +127,7 @@
     {charTag(FirstCharacter, "curious")}:           Tu che ne pensi del racconto?
     
     + \ {charTag(PG, "neutral")}:                   La vendetta non è giustizia. A cosa è servita?
-            -> glyph_modifier_variation_management(FirstCharacter, airC)->
+            -> glyph_choice_manager(false, airC)->
     {charTag(FirstCharacter, "annoyed")}:           A volte le cose non devono "servire", ama.
                                                     E nemmeno la giustizia è giustizia, {player_name}.
     {charTag(FirstCharacter, "neutral")}:           Io non so cosa ha scatenato la tipa del racconto.
@@ -135,19 +135,19 @@
                                                     Per cui almeno è servita a farla stare meglio, credo.
         
     + \ {charTag(PG, "neutral")}:                   Lui è ricco, ho pensato parlasse di lotta di classe.
-            -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+            -> glyph_choice_manager(false, aetherC)->
     {charTag(FirstCharacter, "neutral")}:           Quindi dici tipo che la rabbia è giustificata che per un progetto più grande?
                                                     Però se è ricco ma lei si vendica perché stronzo?
                                                     O magari è stronzo <i>anche</i> perché è ricco?
     //solita sistemazione    
     + \ {charTag(PG, "neutral")}:                   Mi è sembrato un gioco: "cosa succede se sono un mostro?".
-            -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+            -> glyph_choice_manager(false, earthC)->
     {charTag(FirstCharacter, "curious")}:           Non è male come gioco, vero?
                                                     Mi piacerebbe farlo una volta.
     {charTag(FirstCharacter, "neutral")}:           Credo mi farebbe sentire parti di me che non cago mai.
         
     + \ {charTag(PG, "neutral")}:                   Posso capirla, ma non ha pensato a Irene, generando altro dolore.
-            -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+            -> glyph_choice_manager(false, waterC)->
     {charTag(FirstCharacter, "sad")}:               Ed è una cosa che capisco, ma.
     {charTag(FirstCharacter, "neutral")}:           Lui non si è posto questa domanda mi sa, qualsiasi cosa abbia fatto.
                                                     Perché la protagonista è palesemente strapissata.
@@ -165,7 +165,7 @@
     {charTag(FirstCharacter, "annoyed")}:           Bisogna sempre ingoiare tutto per proteggere le altre persone?
         
     + \ {charTag(PG, "neutral")}:                   La sua non è vendetta, ma ribellione e autodifesa.
-            -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+            -> glyph_choice_manager(false, fireC)->
     {charTag(FirstCharacter, "neutral")}:           Non credo reggerebbe in un processo, ma mi suona.
                                                     A volte quando ti viene detto che non puoi arrabbiarti, ci metti molto per capire che sei arrabbiata.
                                                     Quindi è un po' come se avesse reagito con ventitré anni di ritardo a quello che Jacopo le ha fatto.

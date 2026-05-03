@@ -8,19 +8,19 @@
     //Apertura del nido
     {charTag(ThirdCharacter, "neutral")}:       Dialogo in biblioteca.
         + [Scelta blu.]
-             -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+             -> glyph_choice_manager(false, airC)->
     
         + [Scelta rossa.]
-            -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+            -> glyph_choice_manager(false, fireC)->
      
         + [Scelta viola.]
-            -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+            -> glyph_choice_manager(false, aetherC)->
     
         + [Scelta gialla.]
-            -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+            -> glyph_choice_manager(false, earthC)->
             
         + [Scelta verde.]
-            -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+            -> glyph_choice_manager(false, waterC)->
         -    
     {charTag(ThirdCharacter, "neutral")}:       Ci viene aperto il nido.
                                                 E poi {charNameThree} se ne va.
@@ -88,23 +88,23 @@
     Potrebbe aver senso il racconti di Maura, visto che lo percepirebbe come ostile (misandrico?)
     - 
             + \ {charTag(PG, "neutral")}:               Scelta acqua
-                    -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
                 
                 
             + \ {charTag(PG, "neutral")}:               Scelta spirito
-                    -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
                 
             
             + \ {charTag(PG, "neutral")}:               Scelta terra
-                    -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
                 
             
             + \ {charTag(PG, "neutral")}:               Scelta aria
-                    -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
                 
             
             + \ {charTag(PG, "neutral")}:               Scelta fuoco
-                    -> glyph_modifier_variation_management(ThirdCharacter, fireC)-> 
+                    -> glyph_choice_manager(false, fireC)-> 
                 
             -
         -> third_char_closing_storylet ->

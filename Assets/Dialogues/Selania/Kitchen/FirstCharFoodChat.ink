@@ -93,13 +93,13 @@
     
         //Meno "freddo" ma mantieni la logica. 
         + \ {charTag(PG, "neutral")}:                       Realisticamente, le relazioni sono compromesso e imprevedibilità.
-            -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+            -> glyph_choice_manager(false, earthC)->
                                                             Che è la roba che mi sento dire da che sono piccola.
         {charTag(FirstCharacter, "annoyed")}:               Ma posso anche dire "no"?
         {charTag(FirstCharacter, "neutral")}:               Papà dice sempre "un compromesso crea due infelicità".
         //Rendilo aria    
         + \ {charTag(PG, "neutral")}:                       Tuo padre è super! Voglio anche io cose che fanno rumore!
-            -> glyph_modifier_variation_management(FirstCharacter, airC)->
+            -> glyph_choice_manager(false, airC)->
         {charTag(FirstCharacter, "affectionate")}:          Se ci fossimo incontrat3 da piccol3 avremmo fatto casino assieme.
         {charTag(FirstCharacter, "curious")}:               A volte poi lo faccio ancora con papà. 
         {charTag(FirstCharacter, "neutral")}:               Gli piace fare musica con gli oggetti in casa, o le cose che ha nel laboratorio.
@@ -107,7 +107,7 @@
         {charTag(FirstCharacter, "affectionate")}:          Ma secondo me si diverte anche lei.
             
         + \ {charTag(PG, "neutral")}:                       Le relazioni sono passione e uno scopo condiviso.
-            -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+            -> glyph_choice_manager(false, fireC)->
             {charTag(FirstCharacter, "neutral")}:           Quando ero più piccola vivevo i rapporti con molta più passione.
             {charTag(FirstCharacter, "annoyed")}:           E molti più casini.
             {charTag(FirstCharacter, "neutral")}:           Lo scopo condiviso invece.
@@ -116,13 +116,13 @@
 
         //MAGGIOR PARTE DELLE SCELTE: ACQUA
         + \ {charTag(PG, "neutral")}:                       Credo molto nell'idea di cura, supporto, sostegno reciproco.
-            -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+            -> glyph_choice_manager(false, waterC)->
             {charTag(FirstCharacter, "affectionate")}:      Mi suona molto, ama.
                                                             Fare la strada assieme, aiutandosi.
                                                             Totale.
         //Mi piace l'immagine, in generale c'è da capire meglio come focalizzare le scelte spirito
         + \ {charTag(PG, "neutral")}:                       Una relazione è una foresta, una rete di infinite vite diverse.
-            -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+            -> glyph_choice_manager(false, aetherC)->
             {charTag(FirstCharacter, "curious")}:           Messa così è più tipo una rete di relazioni, che non una relazione? 
             {charTag(FirstCharacter, "neutral")}:           Una cosa tipo che ognunə di noi è legatə a tante persone legate a loro volta ad altre persone.
             {charTag(FirstCharacter, "affectionate")}:      E così quindi creiamo una foresta?
@@ -134,7 +134,7 @@
 
         + (earth1)\ {charTag(PG, "neutral")}:               <i>Soffriggo dei cubetti di grano del rispetto.</i>
             ~ kitchen_recipeNoun = "Zuppa di grano"
-            -> glyph_modifier_variation_management(PG, earthC)->
+            -> glyph_choice_manager(true, earthC)->
             {charTag(FirstCharacter, "neutral")}:           Uh, credo di capire.
                                                             Il rispetto è una bella cosa coi genitori.
                                                             Il trattarsi reciprocamente da adulti etc etc, giusto?
@@ -142,7 +142,7 @@
             
         + (water1)\ {charTag(PG, "neutral")}:               <i>Impano delle striscioline di seitan malinconico.</i>
             ~ kitchen_recipeNoun = "Grigliata di seitan"
-            -> glyph_modifier_variation_management(PG, waterC)->
+            -> glyph_choice_manager(true, waterC)->
             {charTag(FirstCharacter, "sad")}:               Credo mi dispiaccia, vero?
             {charTag(FirstCharacter, "neutral")}:           Insomma.
                                                             Qualcosa che manca, che non è come dovrebbe essere.
@@ -151,7 +151,7 @@
             
         + (fire1)\ {charTag(PG, "neutral")}:                <i>Sgrano dei fagioli del conflitto.</i>
             ~ kitchen_recipeNoun = "Fagiolata"
-            -> glyph_modifier_variation_management(PG, fireC)->
+            -> glyph_choice_manager(true, fireC)->
             {charTag(FirstCharacter, "neutral")}:           Non so se ti possa consolare, ma è una cosa comune.
                                                             Molte delle mie amiche hanno un rapporto di merda coi genitori.
                                                             Talco pensa sia un passaggio necessario per diventare adulti.
@@ -160,7 +160,7 @@
     
         + (aether1)\ {charTag(PG, "neutral")}:              <i>Sbollento delle cimette di broccolo della fiducia.</i>
             ~ kitchen_recipeNoun = "Cimetta di broccolo"
-            -> glyph_modifier_variation_management(PG, aetherC)->
+            -> glyph_choice_manager(true, aetherC)->
             {charTag(FirstCharacter, "affectionate")}:      Sento anche io questa cosa.
                                                             Questa fiducia reciproca.
                                                             Credo sia la cosa più bella da creare coi propri genitori.
@@ -168,7 +168,7 @@
 
         + (air1)\ {charTag(PG, "neutral")}:                 <i>Schiaccio degli spicchi di aglio del distacco.</i>
             ~ kitchen_recipeNoun = "Crema d'aglio"
-            -> glyph_modifier_variation_management(PG, airC)->
+            -> glyph_choice_manager(true, airC)->
             {charTag(FirstCharacter, "neutral")}:           Merda.
             {charTag(FirstCharacter, "sad")}:               Mi spiace {player_name}.
             {charTag(FirstCharacter, "neutral")}:           Non so se ha senso, ma la distanza mi sembra peggio del litigio, del conflitto.
@@ -196,12 +196,12 @@
 
         //DA RAFFORZARE SCELTA FUOCO
         + \ {charTag(PG, "neutral")}:                       Un'amicizia non è volontariato: se si sta male, ci si divide.
-            -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+            -> glyph_choice_manager(false, fireC)->
             {charTag(FirstCharacter, "annoyed")}:           Una amicizia è anche volontariato, in un certo senso.
                                                             Non è che te ne vai quando le cose non vanno bene, no?
         
         + \ {charTag(PG, "neutral")}:                       Avevate concordato delle regole per queste situazioni?
-            -> glyph_modifier_variation_management(FirstCharacter, airC)->
+            -> glyph_choice_manager(false, airC)->
             {charTag(FirstCharacter, "neutral")}:           Certo.
                                                             Vidimate dalla notaia.
                                                             Fammi vedere se le ho lasciate nello zainetto del "Ma che diavolo dice {player_name}?"
@@ -210,7 +210,7 @@
                                                             Non c'è.
     
         + \ {charTag(PG, "neutral")}:                       Senza chiarirsi, certe ferite rimarranno per sempre.
-            -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+            -> glyph_choice_manager(false, waterC)->
             {charTag(FirstCharacter, "sad")}:               Penso tanto a Luana.
                                                             A volte mi manca.
             {charTag(FirstCharacter, "neutral")}:           A volte vorrei capire cosa è successo.
@@ -218,7 +218,7 @@
             {charTag(FirstCharacter, "sad")}:               E tutte queste domande fanno un male boia.
     
         + \ {charTag(PG, "neutral")}:                       Perché parlandole avresti tradito il gruppo? Mi son pers{player_pronouns has him:o|{player_pronouns has her:a|ə}} il nuovo "regole dell'amicizia"?
-            -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+            -> glyph_choice_manager(false, earthC)->
             {charTag(FirstCharacter, "neutral")}:           Ma è ovvio che.
                                                             Che no.
             {charTag(FirstCharacter, "sad")}:               Non lo so.
@@ -227,7 +227,7 @@
             {charTag(FirstCharacter, "neutral")}:           Ha senso?
             
         + \ {charTag(PG, "neutral")}:                       Cosa succederebbe se litigassero con te?
-            -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+            -> glyph_choice_manager(false, aetherC)->
             {charTag(FirstCharacter, "sad")}:               In realtà è quello che è successo.
             {charTag(FirstCharacter, "neutral")}:           Anni dopo, per una cavolata.
                                                             Però mi è stato detto "Quando è troppo è troppo."
@@ -241,20 +241,20 @@
     
         + (air2)\ {charTag(PG, "neutral")}:                 <i>Tosto del pepe dell'onestà.</i>
             ~ kitchen_recipeAdjective = "onestà"
-            -> glyph_modifier_variation_management(PG, earthC)->
+            -> glyph_choice_manager(true, earthC)->
             {charTag(FirstCharacter, "affectionate")}:      Come Talco.
                                                             Quel tipo di persona che se fai una cagata, te la dice.
             
         + (earth2)\ {charTag(PG, "neutral")}:               <i>Spargo della curcuma divertente.</i>
             ~ kitchen_recipeAdjective = "comicità"
-            -> glyph_modifier_variation_management(PG, airC)->
+            -> glyph_choice_manager(true, airC)->
                                                             L'amicizia da balotta quindi. 
                                                             Da cazzeggio assieme.
                                                             Da oasi nel casino del mondo.
             
         + (water2)\ {charTag(PG, "neutral")}:               <i>Aggiungo del cumino empatico.</i>
             ~ kitchen_recipeAdjective = "empatia"
-            -> glyph_modifier_variation_management(PG, waterC)->
+            -> glyph_choice_manager(true, waterC)->
             {charTag(FirstCharacter, "affectionate")}:      Quel tipo di rapporto che ti fa sentire ascoltata.
                                                             Capita.
                                                             Dove puoi essere te stessa.
@@ -262,7 +262,7 @@
     
         + (aether2)\ {charTag(PG, "neutral")}:              <i>Grattugio della cannella completa.</i>
             ~ kitchen_recipeAdjective = "completezza"
-            -> glyph_modifier_variation_management(PG, aetherC)->
+            -> glyph_choice_manager(true, aetherC)->
             {charTag(FirstCharacter, "neutral")}:           Posso capire, ma non mi piace tantissimo come idea.
                                                             Mi piace che le amicizie ci siano anche nel conflitto.
                                                             Non mi preoccupa che le amicizie finiscano.
@@ -272,7 +272,7 @@
 
         + (fire2)\ {charTag(PG, "neutral")}:                <i>Sminuzzo dello zenzero leale.</i>
             ~ kitchen_recipeAdjective = "lealtà"
-            -> glyph_modifier_variation_management(PG, fireC)->
+            -> glyph_choice_manager(true, fireC)->
             {charTag(FirstCharacter, "neutral")}:           Essere leali significa essere affidabili, vero?
                                                             Quel tipo di persona che non va in giro a dire i tuoi segreti.
                                                             E che cerca sempre di darti il consiglio giusto, non quello che le torna comodo.
@@ -296,7 +296,7 @@
     {charTag(FirstCharacter, "neutral")}:                   Ha senso vero?
     
         + \ {charTag(PG, "neutral")}:                       L'avresti detto se non fossi stata ubriaca?
-            -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+            -> glyph_choice_manager(false, aetherC)->
             {charTag(FirstCharacter, "neutral")}:           Credo di sì.
                                                             Prima o poi sì.
                                                             Perché l'ho pensato a lungo.
@@ -304,7 +304,7 @@
                                                             E non l'ho di certo dimostrato, dopo il modo in cui l'ho traditə.
         
         + \ {charTag(PG, "neutral")}:                       Contano le azioni, le parole creano solo confusione.
-            -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+            -> glyph_choice_manager(false, fireC)->
             {charTag(FirstCharacter, "neutral")}:           Mmm.
                                                             Non credo.
             {charTag(FirstCharacter, "annoyed")}:           Non è che conta tipo il <i>perchè</i> fai le cose, invece?
@@ -312,21 +312,21 @@
                                                             E sono due schiaffi proprio diversi, no?
         
         + \ {charTag(PG, "neutral")}:                       {charNameOne}, basta con "ha senso". Ha senso per voi, no?
-            -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+            -> glyph_choice_manager(false, earthC)->
             {charTag(FirstCharacter, "neutral")}:           Sì.
                                                             Ma a volte qualcosa che abbia senso, che sia chiara serve.
                                                             Sennò non sai dove stai andando.
                                                             Ha senso?
             
         + \ {charTag(PG, "neutral")}:                       Una lingua esprime ciò che la sua cultura ritiene importante.
-            -> glyph_modifier_variation_management(FirstCharacter, airC)->
+            -> glyph_choice_manager(false, airC)->
             {charTag(FirstCharacter, "annoyed")}:           Ma una lingua è una roba viva.
                                                             La cultura, pure.
             {charTag(FirstCharacter, "neutral")}:           E quando le cose cambiano, cambiano entrambe, no?
             {charTag(FirstCharacter, "annoyed")}:           Mica viviamo in un museo a cielo aperto, tipo.
                 
         + \ {charTag(PG, "neutral")}:                       I sentimenti non si esauriscono se condivisi con più persone.
-            -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+            -> glyph_choice_manager(false, waterC)->
             {charTag(FirstCharacter, "neutral")}:           Questo.
                                                             Sì.
             {charTag(FirstCharacter, "affectionate")}:      Questo è vero.
@@ -348,21 +348,21 @@
         //Trasforma la domanda in aria
         + (air3)\ {charTag(PG, "neutral")}:               <i>Verso una mestolata di brodo del terrore.</i>
             ~ kitchen_recipeComplement = "brodo del terrore"
-            -> glyph_modifier_variation_management(PG, airC)->
+            -> glyph_choice_manager(true, airC)->
             {charTag(FirstCharacter, "neutral")}:           Woah, {player_name}.
                                                             Questa è intensa.
                                                             Anche se effettivamente l'amore può far cagare addosso.
             
         + (earth3)\ {charTag(PG, "neutral")}:               <i>Manteco della noce euforica.</i>
             ~ kitchen_recipeComplement = "noce euforica"
-            -> glyph_modifier_variation_management(PG, earthC)->
+            -> glyph_choice_manager(true, earthC)->
             {charTag(FirstCharacter, "neutral")}:           Mi risuona tanto.
                                                             Anche se mi è successo solo due volte.
             {charTag(FirstCharacter, "affectionate")}:      Detta dalla persona giusta è una parola che ti fa volare, vero?
             
         + (water3)\ {charTag(PG, "neutral")}:               <i>Condisco con semi dell'"io? no, no è possibile!".</i>
             ~ kitchen_recipeComplement = "semi dell'<i>io? no, no è possibile!</i>"
-            -> glyph_modifier_variation_management(PG, waterC)->
+            -> glyph_choice_manager(true, waterC)->
             {charTag(FirstCharacter, "neutral")}:           Coff Coff.
                                                             La sento.
                                                             Madonna se la sento.
@@ -372,14 +372,14 @@
         //è poco spirito. comunione? viaggio assieme?
         + (aether3)\ {charTag(PG, "neutral")}:              <i>Incorporo una cucchiata di olio delle lusinghe.</i>
             ~ kitchen_recipeComplement = "olio delle lusinghe"
-            -> glyph_modifier_variation_management(PG, aetherC)->
+            -> glyph_choice_manager(true, aetherC)->
             {charTag(FirstCharacter, "curious")}:           Uh, a qualcuno piace quando il suo pelo viene lisciato, vero? 
             {charTag(FirstCharacter, "annoyed")}:           Però non rischia di essere una cosa egoista?
             {charTag(FirstCharacter, "neutral")}:           Più legata a come ti senti che al sentimento che provi per quella persona?
 
         + (fire3)\ {charTag(PG, "neutral")}:                <i>Sminuzzo una manciata di peperoncini arrapati.</i>
             ~ kitchen_recipeComplement = "peperoncini arrapati"
-            -> glyph_modifier_variation_management(PG, fireC)->
+            -> glyph_choice_manager(true, fireC)->
             {charTag(FirstCharacter, "neutral")}:           Questa non me l'aspettavo, ma ci sta.
             {charTag(FirstCharacter, "affectionate")}:      Sentirsi amatə è indubbiamente sexy.
             {charTag(FirstCharacter, "neutral")}:           Anni fa confondevo a manetta arrapamento e amore.
@@ -425,20 +425,20 @@
         {charTag(FirstCharacter, "sad")}:                   Questo è ufficialmente il discorso più sconclusionato che abbia mai fatto.
         
             + \ {charTag(PG, "neutral")}:                   Non è che prima di battere un mostro lo studi, no?
-                -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
             {charTag(FirstCharacter, "neutral")}:           Ehm.
                                                             Dovresti chiedere a Ennio, è lui quello bravo coi videogiochi.
                                                             Ma un po' sì, no?
                                                             Nel senso, me lo ricordo su <i>Hollow Knight</i> a studiarsi i pattern dei mostri col coinquilino.
              
             + \ {charTag(PG, "neutral")}:                   Non è sconclusionato: lottare ci rende viv3!
-                -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
             {charTag(FirstCharacter, "neutral")}:           Sì, credo?
                                                             Però non sempre sei prontə ad agire.
             {charTag(FirstCharacter, "sad")}:               Quindi se non fai cose, se non cambi cose, non sei viva?
 
             + \ {charTag(PG, "neutral")}:                   Le parole grandi hanno anche grandi poteri.
-                -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
             {
                 -first_char_main_storylets.four.no:
                 {charTag(FirstCharacter, "curious")}:       Esatto, come dicevamo prima sui "no" che hanno cambiato la storia, vero? 
@@ -450,7 +450,7 @@
                                                             Ha senso?    
     
             + \ {charTag(PG, "neutral")}:                   Quindi ti senti inadeguata?
-                -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
             {charTag(FirstCharacter, "neutral")}:           Bingo.
             {charTag(FirstCharacter, "sad")}:               Già.
                                                             Totale.
@@ -458,7 +458,7 @@
                                                             Ma non è che mi fa stare proprio meglio.
             
             + \ {charTag(PG, "neutral")}:                   Ha senso cambiare ciò che si capisce.
-                -> glyph_modifier_variation_management(FirstCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
             {charTag(FirstCharacter, "annoyed")}:           E quando decidi che cosa hai capito e cosa no?
             {charTag(FirstCharacter, "sad")}:               Perché tutto è un gran casino.
             {charTag(FirstCharacter, "neutral")}:           E tante cose cambiano di significato col tempo.
@@ -477,28 +477,28 @@
             
             + (air1)\ {charTag(PG, "neutral")}:             <i>Infarino confusamente delle tagliatelle.</i>
                 ~ kitchen_recipeNoun = "Tagliatelle"
-                -> glyph_modifier_variation_management(PG, airC)->
+                -> glyph_choice_manager(true, airC)->
             {charTag(FirstCharacter, "sad")}:               Già.
                                                             Anche perché sembra sempre che puoi salvare una sola cosa alla volta.
             {charTag(FirstCharacter, "neutral")}:           Anche se Valeria dice che non è vero, che i problemi sono tutti collegati.
                
             + (earth1)\ {charTag(PG, "neutral")}:            <i>Stendo con decisione delle lasagne.</i>
                 ~ kitchen_recipeNoun = "Lasagne"
-                -> glyph_modifier_variation_management(PG, earthC)->
+                -> glyph_choice_manager(true, earthC)->
                 {charTag(FirstCharacter, "neutral")}:       Uh.
                                                             Ha senso dire che ti invidio per questa tua chiarezza?
                 {charTag(FirstCharacter, "sad")}:           Deve essere bello sapere dove si vuole andare.
             //Trasformare in spirito 
             + (aether1)\ {charTag(PG, "neutral")}:           <i>Affetto con disinteresse delle bruschette.</i>
                ~ kitchen_recipeNoun = "Bruschette"
-               -> glyph_modifier_variation_management(PG, aetherC)->
+               -> glyph_choice_manager(true, aetherC)->
                {charTag(FirstCharacter, "neutral")}:        Quindi sei più del tipo "Vediamo dove andiamo?"
                                                             Che ha senso magari a livello personale.
                {charTag(FirstCharacter, "annoyed")}:        Ma per le grandi cose, boh.
         
             + (fire1)\ {charTag(PG, "neutral")}:            <i>Impasto furiosamente delle arancine.</i>
                 ~ kitchen_recipeNoun = "Arancine"
-                -> glyph_modifier_variation_management(PG, fireC)->
+                -> glyph_choice_manager(true, fireC)->
                {charTag(FirstCharacter, "neutral")}:        Immagino che la furia sia un modo per guardare a ciò che non va ora.
                                                             A volte mi piacerebbe sapermi arrabbiare.
             {
@@ -511,7 +511,7 @@
                
             + (water1)\ {charTag(PG, "neutral")}:           <i>Scaldo disperatamente delle tortillas.</i>
                 ~ kitchen_recipeNoun = "Tortillas"
-                -> glyph_modifier_variation_management(PG, waterC)->
+                -> glyph_choice_manager(true, waterC)->
                 {charTag(FirstCharacter, "neutral")}:       È un sentimento.
                                                             Non so se sia peggio la confusione o la disperazione.
             -  
@@ -539,12 +539,12 @@
         {charTag(FirstCharacter, "affectionate")}:          Dovremmo fare meno l3 poliziott3, e perdonarci di più.
         
             + \ {charTag(PG, "neutral")}:                   Serve del metodo. Se la base non è solida, crolla tutta la casa.
-                -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
             {charTag(FirstCharacter, "annoyed")}:           Ma se poi quella base non la costruisce nessunə, perché si perde lo slancio, il coraggio?
                                                             Cosa ci abbiamo guadagnato?
             
             + \ {charTag(PG, "neutral")}:                   Dobbiamo farci meno paranoie e agire di più.
-                -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
             {charTag(FirstCharacter, "annoyed")}:           Non so.
                                                             Fare per fare non porta molto lontano.
             {charTag(FirstCharacter, "neutral")}:           O meglio: magari porta lontano.
@@ -552,13 +552,13 @@
 
             //trasforma in aria   
             + \ {charTag(PG, "neutral")}:                   Non ho capito molto, ma di sicuro non mi piacciono l3 poliziott3.
-                -> glyph_modifier_variation_management(FirstCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
             {charTag(FirstCharacter, "affectionate")}:      Siamo in due.
                                                             Non può diventare tutto una punizione, no?
             {charTag(FirstCharacter, "sad")}:               No?
 
             + \ {charTag(PG, "neutral")}:                   Il perdono è un atto di coraggio, ci rende vulnerabili.
-                -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
             {charTag(FirstCharacter, "affectionate")}:      E la soluzione per me è nella vulnerabilità.
             {charTag(FirstCharacter, "neutral")}:           Certa gente prende strade di merda perché ha il terrore di mostrarsi ferita.
                                                             Feribile.
@@ -566,7 +566,7 @@
             {charTag(FirstCharacter, "curious")}:           Woah, che filosofa che sono! 
     
             + \ {charTag(PG, "neutral")}:                   Quello che conta è cosa fai quando ti viene detto che hai sbagliato.
-                -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
             {charTag(FirstCharacter, "affectionate")}:      Mi suona molto.
             {charTag(FirstCharacter, "sad")}:               Anche se è difficile, ama.
             {charTag(FirstCharacter, "neutral")}:           Madonna se è difficile.
@@ -581,23 +581,23 @@
 
             + (earth2)\ {charTag(PG, "neutral")}:           <i>Aggiungo con convinzione delle prugne.</i>
                 ~ kitchen_recipeAdjective = "convinzione"
-                -> glyph_modifier_variation_management(PG, earthC)->
+                -> glyph_choice_manager(true, earthC)->
                
             + (water2)\ {charTag(PG, "neutral")}:           <i>Spolvero con titubanza del mais.</i>
                 ~ kitchen_recipeAdjective = "titubanza"
-                -> glyph_modifier_variation_management(PG, waterC)->
+                -> glyph_choice_manager(true, waterC)->
              
             + (fire2)\ {charTag(PG, "neutral")}:            <i>Affetto con autocontrollo delle zucchine.</i>
                ~ kitchen_recipeAdjective = "disciplina"
-               -> glyph_modifier_variation_management(PG, fireC)->
+               -> glyph_choice_manager(true, fireC)->
         
             + (air2)\ {charTag(PG, "neutral")}:             <i>Spremo tempestosamente del chinotto.</i>
                 ~ kitchen_recipeAdjective = "tempestosità"
-                -> glyph_modifier_variation_management(PG, airC)->
+                -> glyph_choice_manager(true, airC)->
     
             + (aether2)\ {charTag(PG, "neutral")}:          <i>Sminuzzo con consapevolezza della cipolla.</i>
                 ~ kitchen_recipeAdjective = "consapevolezza"
-                -> glyph_modifier_variation_management(PG, aetherC)->
+                -> glyph_choice_manager(true, aetherC)->
             -     
         {
             - (kitchen_storageAether >  kitchen_storageEarth) && (kitchen_storageAether >  kitchen_storageFire) && (kitchen_storageAether >  kitchen_storageWater) && (kitchen_storageAether >  kitchen_storageAir):
@@ -663,7 +663,7 @@
         {charTag(FirstCharacter, "curious")}:               Ha senso? 
         
             + \ {charTag(PG, "neutral")}:                   Il cuore è caldo quando aiutiamo le altre persone, vero?
-                -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
             {charTag(FirstCharacter, "affectionate")}:      C'è quel momento.
             {charTag(FirstCharacter, "neutral")}:           Tipo quando una è indecisa su cosa ordinare e tu le fai una battuta buffa, e le ti fa un sorriso sincero.
                                                             E tu sei lì stanca a bestia e incazzata con mezzo mondo.
@@ -671,14 +671,14 @@
                                                             Ed è tutto così vivo.
 
             + \ {charTag(PG, "neutral")}:                   Quando tutto è dovere il piacere è rivoluzionario. Saggi{player_pronouns has him:o|{player_pronouns has her:a|ə}}, vero?
-                -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
             {charTag(FirstCharacter, "curious")}:           Inaspettatamente saggia. 
             {charTag(FirstCharacter, "neutral")}:           Ma è una cosa sensata.
             {charTag(FirstCharacter, "affectionate")}:      Talco l'avrebbe apprezzata proprio tanto questa cosa.
             {charTag(FirstCharacter, "neutral")}:           E un po' anche io.
              
             + \ {charTag(PG, "neutral")}:                   La stanchezza migliore è quella di quando hai portato un cambiamento.
-                -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
             {charTag(FirstCharacter, "neutral")}:           Sì.
                                                             Ma.
                                                             No, non so che altro dire.
@@ -686,12 +686,12 @@
 
             //Troppo distaccata
             + \ {charTag(PG, "neutral")}:                   Senza distacco finisci per perdere l'obiettivo.
-                -> glyph_modifier_variation_management(FirstCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
             {charTag(FirstCharacter, "neutral")}:           E magari faccio le cose perché mi piacciono, non perché sono utili.
                                                             Me lo dice anche Talco.
 
             + \ {charTag(PG, "neutral")}:                   Non rischi di mettere il tuo piacere davanti ai bisogni di chi vuoi aiutare?
-                -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
             {charTag(FirstCharacter, "annoyed")}:           Io.
             {charTag(FirstCharacter, "neutral")}:           Uh.
             {charTag(FirstCharacter, "sad")}:               Non ci avevo pensato.
@@ -711,20 +711,20 @@
             //Risistemare aria e terra
             +(air3) \ {charTag(PG, "neutral")}:             <i>Trituro con gioia dell'anice stellato.</i>
                 ~ kitchen_recipeComplement = "anice gioioso"
-                -> glyph_modifier_variation_management(PG, airC)->
+                -> glyph_choice_manager(true, airC)->
             {charTag(FirstCharacter, "affectionate")}:      Gioiaaaaa!
                                                             Sì, la gioia è qualcosa che manca tanto in questo mondo ama.
                                                             Sono così felice per te!
             //acqua sempre molto triste
             + (water3)\ {charTag(PG, "neutral")}:           <i>Aggiungo {player_pronouns has him:pieno|{player_pronouns has her:piena|pienə}} di terrore esistenziale dell'origano.</i>
                 ~ kitchen_recipeComplement = "origano terrorizzato"
-                -> glyph_modifier_variation_management(PG, waterC)->
+                -> glyph_choice_manager(true, waterC)->
             {charTag(FirstCharacter, "annoyed")}:           La cosa più millennial che potessi dire, ama.
             {charTag(FirstCharacter, "affectionate")}:      Ma posso capire.
 
             + (earth3) \ {charTag(PG, "neutral")}:         <i>Sbuccio titubante della vaniglia.</i>
                ~ kitchen_recipeComplement = "vaniglia"
-               -> glyph_modifier_variation_management(PG, earthC)->
+               -> glyph_choice_manager(true, earthC)->
             {charTag(FirstCharacter, "neutral")}:           Già.
             {charTag(FirstCharacter, "annoyed")}:           A volte non è così facile capire, vero?
             {charTag(FirstCharacter, "neutral")}:           Serve del tempo anche solo per vedere i risultati.
@@ -732,14 +732,14 @@
         
             +(aether3) \ {charTag(PG, "neutral")}:          <i>Tosto {player_pronouns has him:rassegnato|{player_pronouns has her:rassegnata|rassegnatə}} del coriandolo.</i>
                 ~ kitchen_recipeComplement = "coriandolo rassegnato"
-                -> glyph_modifier_variation_management(PG, aetherC)->
+                -> glyph_choice_manager(true, aetherC)->
             {charTag(FirstCharacter, "sad")}:               No no, niente rassegnazione {player_name}!
             {charTag(FirstCharacter, "neutral")}:           Mo mi invento qualcosa per tirarti su.
             {charTag(FirstCharacter, "curious")}:           Tipo: vino? 
     
             + (fire3)\ {charTag(PG, "neutral")}:            <i>Caramello {player_pronouns has him:sopraffatto|{player_pronouns has her:sopraffatta|sopraffattə}} della salvia.</i>
                 ~ kitchen_recipeComplement = "salvia sopraffatta"
-                -> glyph_modifier_variation_management(PG, fireC)->
+                -> glyph_choice_manager(true, fireC)->
             {charTag(FirstCharacter, "sad")}:               Sentimento comune.
             {charTag(FirstCharacter, "neutral")}:           Però può consolare un po'?
             {charTag(FirstCharacter, "affectionate")}:      Poco poco?
@@ -776,31 +776,31 @@
         {charTag(FirstCharacter, "neutral")}:               Ha senso?
 
             + \ {charTag(PG, "neutral")}:                   Ogni cosa che immagini crea nuove versioni di te.
-                    -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
             {charTag(FirstCharacter, "neutral")}:           Anche se l'idea di un universo pieno di me è terrificante, la frase mi suona molto.
                                                             Un po' come se provassi a vedere quello che non ho, non sono, non sono stata.
                                                             Così poi posso anche fare cose nel mondo, fuori, diverse.
                
             + \ {charTag(PG, "neutral")}:                   Creare è come viaggiare, è vedere cose inesistenti, è spet-ta-co-la-re!
-                    -> glyph_modifier_variation_management(FirstCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
             {charTag(FirstCharacter, "neutral")}:           Talco diceva sempre una cosa del genere.
                                                             "Sono poverə ma viaggio più di te."
                                                             E poi toccava un libro o un quadro o che e, insomma, si capisce vero?
 
             + \ {charTag(PG, "neutral")}:                   Quindi riesci a trovare parti di te che altrimenti non vedresti?
-                    -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
             {charTag(FirstCharacter, "neutral")}:           Esatto.
             {charTag(FirstCharacter, "sad")}:               Non sono proprio bravissima a vedermi.
             {charTag(FirstCharacter, "annoyed")}:           Per quanto mi tiri un sacco di pipponi, lo so.
             {charTag(FirstCharacter, "neutral")}:           Ma mentre creo, mi vedo davvero.
 
             + \ {charTag(PG, "neutral")}:                   Dipende da cosa ci fai poi, con quel benessere.
-                -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
             {charTag(FirstCharacter, "neutral")}:           Un pisolino?
 
             //più terra
             + \ {charTag(PG, "neutral")}:                   Immaginare plasma il cervello, per cui sì, è empiricamente sensato.
-                -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
             {charTag(FirstCharacter, "neutral")}:           Ora facciamo un gioco, {player_name}.
             {charTag(FirstCharacter, "affectionate")}:      Prova a immaginare di essere una persona affettuosa, gentile.
                                                             Empatica.
@@ -816,7 +816,7 @@
 
             + (earth1)\ {charTag(PG, "neutral")}:           <i>Lesso sportivamente delle patate.</i>
                 ~ kitchen_recipeNoun = "Patate"
-                -> glyph_modifier_variation_management(PG, earthC)->
+                -> glyph_choice_manager(true, earthC)->
             {charTag(FirstCharacter, "curious")}:           Ti ci vedo a correre e scaricare il nervo. 
                                                             O in piscina.
                                                             O a ballare.
@@ -824,7 +824,7 @@
 
             + (air1)\ {charTag(PG, "neutral")}:             <i>Friggo con creatività delle mele.</i>
                 ~ kitchen_recipeNoun = "Mele"
-                -> glyph_modifier_variation_management(PG, airC)->
+                -> glyph_choice_manager(true, airC)->
             {charTag(FirstCharacter, "affectionate")}:      Lo sapevo!
             {charTag(FirstCharacter, "neutral")}:           Ecco perché mi sento capita da te.
                                                             {player_pronouns has her:unite|unit3} dalla creatività!
@@ -832,7 +832,7 @@
             //rendi più fuoco
             + (fire1)\ {charTag(PG, "neutral")}:            <i>Arrostisco scientemente delle melanzane.</i>
                ~ kitchen_recipeNoun = "Melanzane"
-               -> glyph_modifier_variation_management(PG, airC)->
+               -> glyph_choice_manager(true, airC)->
             {charTag(FirstCharacter, "neutral")}:           Ennio fa qualcosa di simile.
                                                             Quando è teso si mette a studiare qualcosa che ama.
                                                             O a fare esercizi di fisica.
@@ -840,14 +840,14 @@
         
             +(water1) \ {charTag(PG, "neutral")}:           <i>Griglio amichevolmente delle pesche.</i>
                 ~ kitchen_recipeNoun = "Pesche"
-                -> glyph_modifier_variation_management(PG, waterC)->
+                -> glyph_choice_manager(true, waterC)->
             {charTag(FirstCharacter, "affectionate")}:      Stare assieme è una cosa che cura molte ferite.
             {charTag(FirstCharacter, "sad")}:               Forse a volte ho bisogno però di star da sola.
             {charTag(FirstCharacter, "neutral")}:           Ma mi rendo conto che per altre persone la socialità è una medicina.
     
             +(aether1) \ {charTag(PG, "neutral")}:          <i>Abbrustolisco meditativamente delle bietole.</i>
                 ~ kitchen_recipeNoun = "Bietole"
-                -> glyph_modifier_variation_management(PG, aetherC)->
+                -> glyph_choice_manager(true, aetherC)->
             {charTag(FirstCharacter, "neutral")}:           Ci ho provato mille volte.
             {charTag(FirstCharacter, "annoyed")}:           Ma non so, non riesco a starmene ferma.
             {charTag(FirstCharacter, "neutral")}:           Però gli "ohm" mi piacciono.
@@ -871,14 +871,14 @@
                                                             Puoi essere ancora te se perdi qualcosa che ti ha sempre caratterizzatə?
         //Rendi terra
             + \ {charTag(PG, "neutral")}:                   Il carattere è solo una funzione del tuo cervello.
-                    -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
             {charTag(FirstCharacter, "affectionate")}:      Questa è una bellissima notizia!
             {charTag(FirstCharacter, "annoyed")}:           Perché a questo punto posso smettere di essere un disastro ansioso.
             {charTag(FirstCharacter, "affectionate")}:      Dai, dimmi come fare {player_name}!
                                                             Dimmi come resettarmi il cervello!
                
             + \ {charTag(PG, "neutral")}:                   Sei le relazioni che hai, e per questo non potrai mai perderti.
-                    -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
             {charTag(FirstCharacter, "affectionate")}:      A volte mi rendo conto di usare frasi o modi di fare di chi voglio bene.
             {charTag(FirstCharacter, "neutral")}:           Mi sento composta anche dalle persone che amo.
             {charTag(FirstCharacter, "sad")}:               Quando l'ho detto a Talco mi ha detto che è spaventoso, che è come perdersi.
@@ -887,13 +887,13 @@
 
             //rendi aria
             + \ {charTag(PG, "neutral")}:                   Sono sicur{player_pronouns has him:o|{player_pronouns has her:a|ə}} che ti farai sempre tan-tis-si-me domande serie.
-                    -> glyph_modifier_variation_management(FirstCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
                 {charTag(FirstCharacter, "neutral")}:       Ehm.
                 {charTag(FirstCharacter, "annoyed")}:       Colpita e affondata.
                                                             Però te l'avevo detto dall'inizio, che mi tiro un sacco di pipponi, no?
 
             + \ {charTag(PG, "neutral")}:                   Perdersi non è così male, potresti ritrovarti in modi inaspettati.
-                    -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
             {charTag(FirstCharacter, "neutral")}:           Da piccola mi sono persa nel bosco.
                                                             La cosa sarà durata tre ore.
             {charTag(FirstCharacter, "affectionate")}:      E ho imparato una cosa assurda: che sono meno fifona di quanto penso.
@@ -901,7 +901,7 @@
             {charTag(FirstCharacter, "neutral")}:           Per cui sì, mi suona tantissimo quello che hai detto.
 
             + \ {charTag(PG, "neutral")}:                   Sono i tuoi obiettivi a dirti chi sei, {charNameOne}!
-                    -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
             {charTag(FirstCharacter, "annoyed")}:           La maggior parte delle volte il mio obiettivo è "non dover campare a crackers ogni fine mese".
                                                             O "pagare in qualche modo la bolletta dell'acqua".
                                                             O "non piangere in bagno a lavoro".
@@ -924,12 +924,12 @@
 
             +(fire2) \ {charTag(PG, "neutral")}:            <i>Frullo della zucca camminando in avanti.</i>
                 ~ kitchen_recipeAdjective = "progressità"
-                -> glyph_modifier_variation_management(PG, fireC)->
+                -> glyph_choice_manager(true, fireC)->
             {charTag(FirstCharacter, "affectionate")}:      C'è anche qualcosa di bello nel sapere che si sta compiendo la propria strada, vero?
 
             + (earth2)\ {charTag(PG, "neutral")}:           <i>Pesto dell'ortica con statica soddisfazione.</i>
                 ~ kitchen_recipeAdjective = "soddisfazione"
-                -> glyph_modifier_variation_management(PG, earthC)->
+                -> glyph_choice_manager(true, earthC)->
                 {charTag(FirstCharacter, "sad")}:           Vorrei sapere cosa si prova ad esser al proprio posto.
                 {charTag(FirstCharacter, "neutral")}:       Ti guardo e mi sembri una persona equilibrata.
                                                             Deve essere bello.
@@ -937,14 +937,14 @@
             //più aria? 
             + (air2)\ {charTag(PG, "neutral")}:             <i>Schiaccio dei rapanelli girando in tondo.</i>
                ~ kitchen_recipeAdjective = "blocchità"
-               -> glyph_modifier_variation_management(PG, airC)->
+               -> glyph_choice_manager(true, airC)->
                 {charTag(FirstCharacter, "annoyed")}:       Già.
                                                             Ne hanno voglia a dire "conosci te stessə" e tutte quelle robe lì.
                 {charTag(FirstCharacter, "sad")}:           Ma alla fine il più delle volte invece di avanzare, continui a girare su te stessə.
         
             + (water2)\ {charTag(PG, "neutral")}:           <i>Pulisco dei finferli arretrando.</i>
                 ~ kitchen_recipeAdjective = "retrocessione"
-                -> glyph_modifier_variation_management(PG, waterC)->
+                -> glyph_choice_manager(true, waterC)->
             {charTag(FirstCharacter, "neutral")}:           Uh.
                                                             Spero tu non viva male questa cosa.
             {charTag(FirstCharacter, "neutral")}:           Per quanto può valere, tornare sui propri passi credo sia sempre un segno del conoscersi meglio.
@@ -953,7 +953,7 @@
             //più spirito?
             + (aether2)\ {charTag(PG, "neutral")}:         <i>Sciacquo confusamente della lattuga.</i>
                 ~ kitchen_recipeAdjective = "confusione"
-                -> glyph_modifier_variation_management(PG, aetherC)->
+                -> glyph_choice_manager(true, aetherC)->
             {charTag(FirstCharacter, "neutral")}:           A volte è solo questione di tempo, vero?
                                                             Prima di capire dove andare.
                                                             O magari è un momento per fermarsi e riposare.
@@ -976,7 +976,7 @@
         {charTag(FirstCharacter, "curious")}:               Perché se ciò che creo viene dagli scambi quotidiani, dai ricordi creati assieme, allora di chi è l'opera che si crea? 
 
             + \ {charTag(PG, "neutral")}:                   Tua: chi l'ha fatta la fatica, il lavoro?
-                -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
             {charTag(FirstCharacter, "annoyed")}:           E la fatica attorno a me?
                                                             Pensa ai vicini che si sentono le prove fino a tardi?
                                                             Le sere in cui ho dato buca ad Ennio perché presa dalla creazione.
@@ -984,12 +984,12 @@
                                                             Non è fatica la loro? Non è lavoro? 
 
             + \ {charTag(PG, "neutral")}:                   È comunque il tuo punto di vista sul mondo, non di altri.
-                -> glyph_modifier_variation_management(FirstCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
                 {charTag(FirstCharacter, "annoyed")}:       Avrei di che ridire anche su questo.
                                                             Perché è un punto di vista creato con le altre persone, no?
 
             + \ {charTag(PG, "neutral")}:                   Di chi la ascolta, la legge, la guarda, creando un rapporto con te.
-                -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
             {charTag(FirstCharacter, "neutral")}:           Mmm.
                                                             Ci sta.
                                                             Anche se è un po' sempre quella roba "separare l'opera dall'autorə".
@@ -997,13 +997,13 @@
             {charTag(FirstCharacter, "affectionate")}:      Però l'idea del rapporto con chi mi ascolta mi piace molto molto molto.
 
             + \ {charTag(PG, "neutral")}:                   Dell'acqua, e delle sue infinite storie.
-                -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
             {charTag(FirstCharacter, "affectionate")}:      È una bella visione.
                                                             Così mi inserisco in una lunga conversazione, che non è né l'inizio né la fine.
             {charTag(FirstCharacter, "neutral")}:           E fa meno paura ogni prova, ogni rischio.
             
             + \ {charTag(PG, "neutral")}:                   Quando ti diverti con qualcuno, non ti chiedi di chi è cosa.
-                -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
                 {charTag(FirstCharacter, "neutral")}:       Good point.
                 {charTag(FirstCharacter, "annoyed")}:       Ma {player_name}, hai visto anche tu che non so stare senza farmi domande complicate, vero?
             -
@@ -1019,20 +1019,20 @@
 
             + (fire3)\ {charTag(PG, "neutral")}:            <i>Brucio del peperoncino.</i>
                 ~ kitchen_recipeComplement = "peperoncino bruciato"
-                -> glyph_modifier_variation_management(PG, fireC)->
+                -> glyph_choice_manager(true, fireC)->
             {charTag(FirstCharacter, "sad")}:               Merda.
             {charTag(FirstCharacter, "neutral")}:           Spero non per insoddisfazione.
             {charTag(FirstCharacter, "sad")}:               Perché non so te, ma è dura essere soddisfattə di quello che si crea.
 
             + (aether3)\ {charTag(PG, "neutral")}:         <i>Spargo ovunque del cardamomo.</i>
                 ~ kitchen_recipeComplement = "cardamomo sparso"
-                -> glyph_modifier_variation_management(PG, aetherC)->
+                -> glyph_choice_manager(true, aetherC)->
             {charTag(FirstCharacter, "neutral")}:           Hai creato qualcosa, vuoi che lo conoscano più persone possibile.
                                                             Credo.
              
             + (earth3)\ {charTag(PG, "neutral")}:           <i>Seleziono dei chiodi di garofano.</i>
                ~ kitchen_recipeComplement = "chiodi di garofano selezionati"
-               -> glyph_modifier_variation_management(PG, earthC)->
+               -> glyph_choice_manager(true, earthC)->
             {charTag(FirstCharacter, "neutral")}:           Anche a me piace condividere solo con la cerchia ristretta di am3.
             {charTag(FirstCharacter, "neutral")}:           Mi fa sentire al sicuro.
             {charTag(FirstCharacter, "sad")}:               Ma a volte da quella bolla ci devo uscire.
@@ -1040,7 +1040,7 @@
         
             + (water3)\ {charTag(PG, "neutral")}:           <i>Copro dello zenzero.</i>
                 ~ kitchen_recipeComplement = "zenzero coperto"
-                -> glyph_modifier_variation_management(PG, waterC)->
+                -> glyph_choice_manager(true, waterC)->
             {charTag(FirstCharacter, "neutral")}:           Tieni le tue creature per te.
             {charTag(FirstCharacter, "curious")}:           Sarà un gesto di affetto o di insicurezza? 
                                                             O una lotta all'idea che tutto debba essere produttivo?
@@ -1049,7 +1049,7 @@
             //non è proprio una risposta da aria, se è una cosa creativa
             + (air3)\ {charTag(PG, "neutral")}:             <i>Aggiungo con disinteresse del cumino.</i>
                 ~ kitchen_recipeComplement = "cumino disinteressato"
-                -> glyph_modifier_variation_management(PG, airC)->
+                -> glyph_choice_manager(true, airC)->
             {charTag(FirstCharacter, "neutral")}:           Quello che conta è creare e basta per te, quindi?
                                                             Ha senso.
                                                             Dovrei farlo anche io ogni tanto.

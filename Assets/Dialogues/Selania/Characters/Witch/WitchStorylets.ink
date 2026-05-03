@@ -26,7 +26,7 @@
                                                                 <i>C'è qualcosa che {player_name} vorrebbe dirci?
 
             + \ {charTag(PG, "neutral")}:                       Grazie per avermi guidat{player_pronouns has him:o|{player_pronouns has her:a|ə}} dall'inizio.
-                    -> glyph_modifier_variation_management(PG, waterC)->
+                    -> glyph_choice_manager(true, waterC)->
 
                 {charTag(TheWitch, witch_state())}:             <i>E grazie a {player_name} per aver guidato noi.
                                                                 <i>La separazione è una illusione.
@@ -36,7 +36,7 @@
                                                                 <i>Che è noi.</i>
                 
             + \ {charTag(PG, "neutral")}:                       Esci dalla mia testa! Subito!
-                    -> glyph_modifier_variation_management(PG, fireC)->
+                    -> glyph_choice_manager(true, fireC)->
 
                 {charTag(TheWitch, witch_state())}:             <i>Non siamo nella testa di {player_name}.
                                                                 <i>Non più di quanto {player_name} sia nella sua stessa testa.
@@ -45,7 +45,7 @@
                                                                 <i>E questa è una cosa che non è e non sarà.</i>
                 
             + \ {charTag(PG, "neutral")}:                       Parli di radici: sei un albero?
-                    -> glyph_modifier_variation_management(PG, airC)->
+                    -> glyph_choice_manager(true, airC)->
 
                 {charTag(TheWitch, witch_state())}:             <i>Le piante raccontano storie da notte a giorno. 
                                                                 <i>E noi non siamo una pianta.
@@ -58,7 +58,7 @@
                                                                 <i>E il tronco in {player_name}.
                 
             + \ {charTag(PG, "neutral")}:                       Perché non mi hai detto subito di essere reale?
-                    -> glyph_modifier_variation_management(PG, earthC)->
+                    -> glyph_choice_manager(true, earthC)->
 
                 {charTag(TheWitch, witch_state())}:             <i>{player_name} sente l'odore del Canto delle Compagne.
                                                                 <i>E sa che è reale.
@@ -66,7 +66,7 @@
                                                                 <i>Una voce {player_pronouns has him:lo|{player_pronouns has her:la|lə}} accompagna, e non è reale?
         
             + \ {charTag(PG, "neutral")}:                       "Cosa è successo domani": il tempo qui funziona in modo strano?
-                    -> glyph_modifier_variation_management(PG, aetherC)->
+                    -> glyph_choice_manager(true, aetherC)->
                 {charTag(TheWitch, witch_state())}:             <i>La mosca vive un'istante, ma per lei il suo tempo è una vita.
                                                                 <i>Noi viviamo nel sempremai, e confondiamo i tempi.
                                                                 <i>Ma il tempo di {player_name} è quello giusto per {player_name}.
@@ -79,23 +79,23 @@
                                                                 <i>Con quale nome {player_name} vorrebbe chiamarci?
 
             + \ {charTag(PG, "neutral")}:                   Strega.
-                -> glyph_modifier_variation_management(PG, aetherC)->
+                -> glyph_choice_manager(true, aetherC)->
                 ~ witch_actualName += Strega
 
             + \ {charTag(PG, "neutral")}:                   Luna.
-                -> glyph_modifier_variation_management(PG, waterC)->
+                -> glyph_choice_manager(true, waterC)->
                 ~ witch_actualName += Luna
 
             + \ {charTag(PG, "neutral")}:                   Parola.
-                -> glyph_modifier_variation_management(PG, airC)->
+                -> glyph_choice_manager(true, airC)->
                 ~ witch_actualName += Parola
 
             + \ {charTag(PG, "neutral")}:                   Radice.
-                -> glyph_modifier_variation_management(PG, earthC)->
+                -> glyph_choice_manager(true, earthC)->
                 ~ witch_actualName += Radice
 
             + \ {charTag(PG, "neutral")}:                   Fiamma.
-                -> glyph_modifier_variation_management(PG, fireC)->
+                -> glyph_choice_manager(true, fireC)->
                 ~ witch_actualName += Fiamma
             - (nameChosen)
                                                                 <i>E {witch_actualName} saremo.
@@ -398,19 +398,19 @@
     {charTag(TheWitch, witch_state())}:    Cose
     
         + \ {charTag(PG, "neutral")}:         Scelta verde.
-            -> glyph_modifier_variation_management(PG, waterC)->
+            -> glyph_choice_manager(true, waterC)->
             
         + \ {charTag(PG, "neutral")}:         SCelta rossa.
-            -> glyph_modifier_variation_management(PG, fireC)->
+            -> glyph_choice_manager(true, fireC)->
             
         + \ {charTag(PG, "neutral")}:         Scelta blu.
-            -> glyph_modifier_variation_management(PG, airC)->
+            -> glyph_choice_manager(true, airC)->
      
         + \ {charTag(PG, "neutral")}:         Scelta gialla.
-            -> glyph_modifier_variation_management(PG, earthC)->
+            -> glyph_choice_manager(true, earthC)->
  
         + \ {charTag(PG, "neutral")}:         Scelta viola.
-            -> glyph_modifier_variation_management(PG, aetherC)->
+            -> glyph_choice_manager(true, aetherC)->
         -        
     Cose.
     -> witch_closing_storylet ->

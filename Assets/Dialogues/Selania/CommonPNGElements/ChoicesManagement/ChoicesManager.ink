@@ -13,8 +13,8 @@ VAR glyph_mainTalker = ()
 
 
 //Funzione di dispatch comune (sigillo attivo o meno)
-=== glyph_modifier_variation_management(PNG, GlyphC)
-{debug_nest: passo per glyph_modifier_variation_management. Il valore di PNG è {PNG}, il valore di GlyphCe è {GlyphC}. Lo stato della parola attiva è {glyph_actualActiveSigil}.}
+=== glyph_xxxchoice_manager(PNG, GlyphC)
+{debug_nest: passo per glyph_choice_manager. Il valore di PNG è {PNG}, il valore di GlyphCe è {GlyphC}. Lo stato della parola attiva è {glyph_actualActiveSigil}.}
 /***********
 Recap della logica.
     Ogni volta che chiamo una scelta:

@@ -63,33 +63,33 @@
                                                                 <i>Cosa c'è nel petto di {player_name} dopo questa prima riscrittura?
         
             + (water) \ {charTag(PG, "neutral")}:               La gioia di aver aiutato qualcuno.
-                    -> glyph_modifier_variation_management(PG, waterC)->
+                    -> glyph_choice_manager(true, waterC)->
                 {charTag(TheWitch, witch_state())}:             <i>Aiutato chi {player_name} ha riscritto?
                                                                 <i>O aiutato l{player_pronouns has him:o|{player_pronouns has her:a|ə}} stess{player_pronouns has him:o|{player_pronouns has her:a|ə}} {player_name}?
                                                                 <i>Ma anche noi sentiamo questa gioia.
                                                                 <i>La serra è tiepida, la stazione attende, e le nubi dicono che {player_name} è dove deve essere.</i>
                 
             + (fire) \ {charTag(PG, "neutral")}:                L'energia della voglia di fare, fare, fare ancora.
-                    -> glyph_modifier_variation_management(PG, fireC)->
+                    -> glyph_choice_manager(true, fireC)->
                 {charTag(TheWitch, witch_state())}:             <i>Il vulcano si carica di energia.
                                                                 <i>Il suo fare scivola lungo la collina.
                                                                 <i>Il terreno si fa fertile.
                                                                 <i>Fertile è la volontà di {player_name}.
                 
             + (air) \ {charTag(PG, "neutral")}:                 La curiosità di scoprire quali nuove cose accadranno.
-                   -> glyph_modifier_variation_management(PG, airC)->
+                   -> glyph_choice_manager(true, airC)->
                 {charTag(TheWitch, witch_state())}:             <i>La curiosità del falco lo spinge verso l'alto.
                                                                 <i>Quella della talpa verso il basso.
                                                                 <i>Abbiamo l'impressione che quella di {player_name} sappia seguire ogni direzione.</i>
                 
             + (earth) \ {charTag(PG, "neutral")}:               La soddisfazione di aver raggiunto un obbiettivo.
-                    -> glyph_modifier_variation_management(PG, earthC)->
+                    -> glyph_choice_manager(true, earthC)->
                 {charTag(TheWitch, witch_state())}:             <i>Il leoncino salta di fosso in fosso, senza mai trovare pace.
                                                                 <i>La leonessa si stende per ore dopo la caccia.
                                                                 <i>Crogiolarsi nella soddisfazione è una dote che siamo liete {player_name} sappia coltivare.
             
             + (aether) \ {charTag(PG, "neutral")}:              La sorpresa di aver scoperto cose nuove su di me.
-                    -> glyph_modifier_variation_management(PG, aetherC)->
+                    -> glyph_choice_manager(true, aetherC)->
                 {charTag(TheWitch, witch_state())}:             <i>La luna distante sposta oceani.
                                                                 <i>Il vento invisibile sradica alberi.
                                                                 <i>E {player_name} decide di osservare sé nella propria interezza.</i>
@@ -157,14 +157,14 @@
                                                                 <i>Quale nube condivide {player_name} con le persone qui incontrate?
         
             + (water) \ {charTag(PG, "neutral")}:               Penso a {charNameTwo} e mi chiedo chi sarei ora, con una famiglia diversa alle spalle.
-                    -> glyph_modifier_variation_management(PG, waterC)->
+                    -> glyph_choice_manager(true, waterC)->
                 {charTag(TheWitch, witch_state())}:             <i>La gemma sul ramo ignora il tronco, eppure cresce.
                                                                 <i>Il girino nuota, non importa la dimensione dello stagno.
                                                                 <i>{player_name} prova a riscrivere il passato.
                                                                 <i>La sua voce può forse cercare nuovi modi di guardarlo?</i>
         
             + (aether) \ {charTag(PG, "neutral")}:              Come {charNameOne} ho bisogno di uno scopo per vivere davvero, ma non lo trovo.
-                    -> glyph_modifier_variation_management(PG, aetherC)->
+                    -> glyph_choice_manager(true, aetherC)->
                 {charTag(TheWitch, witch_state())}:             <i>La rondine crea un nido di paglia.
                                                                 <i>E quando l'inverno arriva il nido cade sul terreno.
                                                                 <i>I funghi lo trasformano in cibo per il terreno.
@@ -172,21 +172,21 @@
                                                                 <i>La rondine crea un nido di paglia.</i>
                             
             + (fire) \ {charTag(PG, "neutral")}:                Ho la sensazione che Mentore si senta viva solo se utile, e lo stesso è per me.
-                    -> glyph_modifier_variation_management(PG, fireC)->
+                    -> glyph_choice_manager(true, fireC)->
                 {charTag(TheWitch, witch_state())}:             <i>Il colibrì vola ansioso di fiore in fiore.
                                                                 <i>Se non mangia spesso, muore.
                                                                 <i>Migliaia sono le piante nate dalla sua fatica.
                                                                 <i>In quante ricordano il suo nome?
 
             + (air) \ {charTag(PG, "neutral")}:                 COMMENTO LEGATO A PNG3.
-                    -> glyph_modifier_variation_management(PG, airC)->
+                    -> glyph_choice_manager(true, airC)->
                 {charTag(TheWitch, witch_state())}:             <i>Il sapere è una luce.
                                                                 <i>Il sapere è un rifugio.
                                                                 <i>Una luce troppo forte confonde strada e burrone.
                                                                 <i>Un rifugio col tempo può diventare prigione.</i>
          
             + (earth) \ {charTag(PG, "neutral")}:               Franco è sempre iperattivo. Forse lui ed io dovremmo imparare a riposare.
-                    -> glyph_modifier_variation_management(PG, earthC)->
+                    -> glyph_choice_manager(true, earthC)->
                 {charTag(TheWitch, witch_state())}:             <i>Le radici si rilassano nel tepore del terreno.
                                                                 <i>Le foglie ridono quando il vento le sfiora.
                                                                 <i>L'albero cresce, l'albero riposa.
@@ -256,19 +256,19 @@
         
             
         + (fire) \ {charTag(PG, "neutral")}:         SCelta rossa.
-            -> glyph_modifier_variation_management(PG, fireC)->
+            -> glyph_choice_manager(true, fireC)->
             
         + (air) \ {charTag(PG, "neutral")}:         Scelta blu.
-            -> glyph_modifier_variation_management(PG, airC)->
+            -> glyph_choice_manager(true, airC)->
 
         + (aether) \ {charTag(PG, "neutral")}:         Scelta viola.
-            -> glyph_modifier_variation_management(PG, aetherC)->    
+            -> glyph_choice_manager(true, aetherC)->    
 
         + (water) \ {charTag(PG, "neutral")}:         Scelta verde.
-            -> glyph_modifier_variation_management(PG, waterC)->    
+            -> glyph_choice_manager(true, waterC)->    
      
         + (earth) \ {charTag(PG, "neutral")}:         Scelta gialla.
-            -> glyph_modifier_variation_management(PG, earthC)->
+            -> glyph_choice_manager(true, earthC)->
         - 
 
             {
@@ -312,19 +312,19 @@
 
             
         + (air) \ {charTag(PG, "neutral")}:         Scelta blu.
-            -> glyph_modifier_variation_management(PG, airC)->
+            -> glyph_choice_manager(true, airC)->
 
         + (water) \ {charTag(PG, "neutral")}:         Scelta verde.
-            -> glyph_modifier_variation_management(PG, waterC)->
+            -> glyph_choice_manager(true, waterC)->
 
         + (earth) \ {charTag(PG, "neutral")}:         Scelta gialla.
-            -> glyph_modifier_variation_management(PG, earthC)->
+            -> glyph_choice_manager(true, earthC)->
  
         + (aether) \ {charTag(PG, "neutral")}:         Scelta viola.
-            -> glyph_modifier_variation_management(PG, aetherC)-> 
+            -> glyph_choice_manager(true, aetherC)-> 
 
         + (fire) \ {charTag(PG, "neutral")}:         SCelta rossa.
-            -> glyph_modifier_variation_management(PG, fireC)->            
+            -> glyph_choice_manager(true, fireC)->            
         -        
         -> witch_closing_storylet ->
         -> main  
@@ -357,19 +357,19 @@
         }
 
         + (earth) \ {charTag(PG, "neutral")}:         Scelta gialla.
-            -> glyph_modifier_variation_management(PG, earthC)->
+            -> glyph_choice_manager(true, earthC)->
  
         + (aether) \ {charTag(PG, "neutral")}:         Scelta viola.
-            -> glyph_modifier_variation_management(PG, aetherC)->
+            -> glyph_choice_manager(true, aetherC)->
         
         + (fire) \ {charTag(PG, "neutral")}:         SCelta rossa.
-            -> glyph_modifier_variation_management(PG, fireC)->
+            -> glyph_choice_manager(true, fireC)->
 
         + (water) \ {charTag(PG, "neutral")}:         Scelta verde.
-            -> glyph_modifier_variation_management(PG, waterC)->
+            -> glyph_choice_manager(true, waterC)->
     
         + (air) \ {charTag(PG, "neutral")}:         Scelta blu.
-            -> glyph_modifier_variation_management(PG, airC)->
+            -> glyph_choice_manager(true, airC)->
      
 
         -        

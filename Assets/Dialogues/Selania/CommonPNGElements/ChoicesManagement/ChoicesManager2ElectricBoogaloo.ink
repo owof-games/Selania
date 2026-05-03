@@ -1,10 +1,10 @@
-VAR firstChar_lastRelationshipIndicator = 0
-VAR secondChar_lastRelationshipIndicator = 0
-VAR thirdChar_lastRelationshipIndicator = 0
-VAR fourthChar_lastRelationshipIndicator = 0
-VAR fifthChar_lastRelationshipIndicator = 0
 
-=== glyph_modifier_variation_management2(isPG, GlyphC)
+
+
+
+
+
+=== glyph_choice_manager(isPG, GlyphC)
 {isPG:
     -> updatePGCounters(GlyphC)
 - else:

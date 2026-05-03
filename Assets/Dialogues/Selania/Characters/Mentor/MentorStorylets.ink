@@ -32,7 +32,7 @@
             } 
 
             + \ {charTag(PG, "neutral")}:            Preferisco la stazione dei treni, è ordinata e precisa.
-                    -> glyph_modifier_variation_management(Mentor, airC)->
+                    -> glyph_choice_manager(Mentor, airC)->
                 {charTag(FifthCharacter, "neutral")}:           Sì, ne capisco il fascino.
                 A volte mi siedo lì e mi godo per qualche istante l'attesa.
                 Il nulla che accade.
@@ -40,13 +40,13 @@
                 Fatico a stare tranquilla.
                 
             + \ {charTag(PG, "neutral")}:               Lo stagno è divertente, gli insetti fanno tantissime cose.
-                    -> glyph_modifier_variation_management(Mentor, earthC)->
+                    -> glyph_choice_manager(Mentor, earthC)->
                 {charTag(FifthCharacter, "bored")}:             Forse ne fanno troppe.
                 {charTag(FifthCharacter, "neutral")}:           Sembrano non pensare a nulla.
                 E l'acqua è lì e lascia che tutto accada, senza pensare al domani.
                 
             + \ {charTag(PG, "neutral")}:            La foresta domina: è lotta, è potenza!
-                    -> glyph_modifier_variation_management(Mentor, fireC)->
+                    -> glyph_choice_manager(Mentor, fireC)->
                 {charTag(FifthCharacter, "bored")}:             E disordinata, sporca.
                 {charTag(FifthCharacter, "sorry")}:             Posso capirne il fascino, ma non è un luogo dove resto con piacere.
                     {
@@ -60,13 +60,13 @@
                     }
                 
             + \ {charTag(PG, "neutral")}:            Un po' come prendersi cura delle persone qui.
-                    -> glyph_modifier_variation_management(Mentor, waterC)->
+                    -> glyph_choice_manager(Mentor, waterC)->
                 {charTag(FifthCharacter, "neutral")}:           Sì, anche se con meno pressioni.
                 Le persone a volte fanno cose che non ci aspettiamo.
                 Un <i>Lichene degli abissi</i> con le giuste condizioni invece cresce sempre allo stesso modo.
   
             + \ {charTag(PG, "neutral")}:            Fortunatamente invece crescono a prescindere da me.
-                    -> glyph_modifier_variation_management(Mentor, aetherC)->
+                    -> glyph_choice_manager(Mentor, aetherC)->
                 {charTag(FifthCharacter, "sorry")}:             Senza di te?
                 {charTag(FifthCharacter, "hurry")}:             Dobbiamo bagnare il terreno, prepararlo, seminare.
                                                         Non ci sarebbe nulla senza il nostro lavoro.
@@ -108,12 +108,12 @@
             }
         
             + \ {charTag(PG, "neutral")}:               Numeri come l'età sono indicatori, non fatti assoluti.
-                    -> glyph_modifier_variation_management(Mentor, airC)->
+                    -> glyph_choice_manager(Mentor, airC)->
                                                         Su questo hai ragione, {player_name}.
                 {charTag(FifthCharacter, "sad")}:               Eppure posso assicurarti che i miei cinquanta e rotti anni si portano addosso anche un bel po' di fatti scricchiolanti e ricordi.
                    
             + \ {charTag(PG, "neutral")}:               Quando un gioco ha tantissime regole non è più divertente.
-                    -> glyph_modifier_variation_management(Mentor, earthC)->
+                    -> glyph_choice_manager(Mentor, earthC)->
                 {charTag(FifthCharacter, "bored")}:             Eppure non sono così tante regole.
                 {charTag(FifthCharacter, "neutral")}:           Forse è solo una: non puoi avere tutto.
                                                         Se vedi la vita come un gioco, ti aspetti di avere almeno un modo per vincere.
@@ -121,13 +121,13 @@
                 {charTag(FifthCharacter, "sad")}:               Giochi, e il più delle volte perdi senza nemmeno sapere perché.
                 
             + \ {charTag(PG, "neutral")}:               Nel dubbio si agisce. Fare male è meglio che non fare.
-                    -> glyph_modifier_variation_management(Mentor, fireC)->
+                    -> glyph_choice_manager(Mentor, fireC)->
                 {charTag(FifthCharacter, "sad")}:               Ma con questo principio, non c'è una azione mirata, consapevole.
                                                         Poi succede che ci feriamo, o feriamo chi amiamo.
                                                         E a quel punto non siamo nemmeno pronte a capire il perché.
                 
             + \ {charTag(PG, "neutral")}:               E tu sei molto ricettiva verso le altre persone.
-                    -> glyph_modifier_variation_management(Mentor, waterC)->
+                    -> glyph_choice_manager(Mentor, waterC)->
                 {charTag(FifthCharacter, "sorry")}:             Forse non <i>molto</i>.
                 {charTag(FifthCharacter, "neutral")}:           Ma indubbiamente quello che hanno da dire e quello che provano, conta.
                                                         Una mentore è una guida, ma per imparare a guidare deve capire chi ha dall'altra parte.
@@ -135,7 +135,7 @@
                                                         Dove voglia andare.
                 
             + \ {charTag(PG, "neutral")}:               Per vedere le cose in modo ampio, è importante perdersi.
-                    -> glyph_modifier_variation_management(Mentor, aetherC)->
+                    -> glyph_choice_manager(Mentor, aetherC)->
                 {charTag(FifthCharacter, "neutral")}:           E in questo luogo in fondo arrivano solo persone che si sono perse.
                                                         E che se ne vanno più serene.
                                                         Avrebbero scoperto quella serenità, senza un po' di smarrimento?
@@ -175,30 +175,30 @@
         {charTag(FifthCharacter, "sad")}:               Che nessuno ce l'ha con te.
 
             + \ {charTag(PG, "neutral")}:               Ogni lavoro ha la sua quota di sacrificio.
-                    -> glyph_modifier_variation_management(Mentor, airC)->
+                    -> glyph_choice_manager(Mentor, airC)->
                 {charTag(FifthCharacter, "sad")}:               Vero.
                 {charTag(FifthCharacter, "neutral")}:           Il valore di qualcosa viene da quanto ci è costata.
                                                         E la maggior parte delle volte non paghiamo in denaro.
                 
             + \ {charTag(PG, "neutral")}:               Forse le volpi si mangiano le lettere!
-                    -> glyph_modifier_variation_management(Mentor, earthC)->
+                    -> glyph_choice_manager(Mentor, earthC)->
                 {charTag(FifthCharacter, "neutral")}:           La fantasia è un modo piacevole di affrontare la realtà, {player_name}.
                 {charTag(FifthCharacter, "sad")}:               Ma alla lunga rende difficile capire cosa sia vero e cosa no.
                     
             + \ {charTag(PG, "neutral")}:               Fregatene: il mondo è pieno di ingrati.
-                    -> glyph_modifier_variation_management(Mentor, fireC)->
+                    -> glyph_choice_manager(Mentor, fireC)->
                 {charTag(FifthCharacter, "sorry")}:             No.
                 {charTag(FifthCharacter, "neutral")}:           Direi che il mondo è pieno di persone distratte.
                                                         Le cose da fare sono infinite, e finiamo per dimenticarci di chi non vediamo tutti i giorni.
                                                         Non è ingratitudine, è una vita che scorre troppo veloce.
                 
             + \ {charTag(PG, "neutral")}:               Ti prometto che ti scriverò ogni giorno.
-                    -> glyph_modifier_variation_management(Mentor, waterC)->
+                    -> glyph_choice_manager(Mentor, waterC)->
                 {charTag(FifthCharacter, "neutral")}:           Oh, {player_pronouns has him: caro|{player_pronouns has her: cara|carə}}, è una bella promessa.
                                                         Una promessa che ho sentito decine di volte.
                     
             + \ {charTag(PG, "neutral")}:               Esiste un confine tra {charNameFive} e questo luogo?
-                    -> glyph_modifier_variation_management(Mentor, aetherC)->
+                    -> glyph_choice_manager(Mentor, aetherC)->
                 {charTag(FifthCharacter, "sad")}:               A volte mi sento <i>solo</i> questo luogo.
                                                         Non mi chiedo spesso se andarmene o meno.
                                                         O dove.
@@ -241,7 +241,7 @@
         {charTag(FifthCharacter, "neutral")}:           Non dovrebbe pensare al pallone, a giocare con gli amici, a studiare?
         
             + \ {charTag(PG, "neutral")}:            \ {charNameTwo} ama studiare, e qui ha trovato il suo posto.
-                    -> glyph_modifier_variation_management(Mentor, airC)->
+                    -> glyph_choice_manager(Mentor, airC)->
                 {charTag(FifthCharacter, "bored")}:             No!
                 {charTag(FifthCharacter, "neutral")}:           Questo è un posto spirituale.
                 Di crescita, di esplorazione.
@@ -249,14 +249,14 @@
                 Non il piccolo chimico.
                     
             + \ {charTag(PG, "neutral")}:            Giocare è comunque un modo per capire il mondo, {charNameFive}.
-                    -> glyph_modifier_variation_management(Mentor, earthC)->
+                    -> glyph_choice_manager(Mentor, earthC)->
                 {charTag(FifthCharacter, "neutral")}:           Ma un modo controllato, adatto per i bambini.
                                                         Con meno violenza possibile.
                 {charTag(FifthCharacter, "sad")}:               Senza le cose terribili che ci circondano.
                 Se non voglio vederle io a cinquant'anni, perché deve vederle un bimbo?
                 
             + \ {charTag(PG, "neutral")}:            Alla sua età avevo anche io rabbia e paura. Si è bambini, non idioti.
-                    -> glyph_modifier_variation_management(Mentor, fireC)->
+                    -> glyph_choice_manager(Mentor, fireC)->
                 {charTag(FifthCharacter, "bored")}:             Non serve che usi quel linguaggio con me, {player_name}.
                 {charTag(FifthCharacter, "neutral")}:           E non sono d'accordo.
                                                         Nemmeno a vent'anni puoi sapere davvero cosa vuoi.
@@ -269,7 +269,7 @@
                                                         Per proteggerti.
 
             + \ {charTag(PG, "neutral")}:            Mi spiace che tu ti senta in colpa, {charNameFive}.
-                    -> glyph_modifier_variation_management(Mentor, waterC)->
+                    -> glyph_choice_manager(Mentor, waterC)->
                 {charTag(FifthCharacter, "sad")}:               Ma non hai detto che non ho sbagliato.
                 {charTag(FifthCharacter, "sorry")}:             Scusa, non è quello il tuo ruolo.
                                                         Sennò non sarei io la mentore, ma tu.
@@ -277,7 +277,7 @@
                     
 
             + \ {charTag(PG, "neutral")}:            Come si dice? Crescere unə figliə dovrebbe essere il lavoro di una comunità.
-                    -> glyph_modifier_variation_management(Mentor, aetherC)->
+                    -> glyph_choice_manager(Mentor, aetherC)->
                 {charTag(FifthCharacter, "neutral")}:           Dovrebbe.
                                                         Ma non è.
                                                         E si dovrebbe ragionare con quello che si ha.
@@ -328,7 +328,7 @@
         {charTag(FifthCharacter, "neutral")}:           {player_name}: secondo te cosa vuol dire amare un'altra persona?
 
             + \ {charTag(PG, "neutral")}:            Logico: progettare assieme, costruire fondamenta, accrescersi.
-                    -> glyph_modifier_variation_management(Mentor, airC)->
+                    -> glyph_choice_manager(Mentor, airC)->
                 {charTag(FifthCharacter, "neutral")}:           Creare qualcosa che regga alla fine del desiderio.
                                                         Quando il corpo perde il suo splendore.
                 {charTag(FifthCharacter, "sad")}:               E il letto è il luogo della stanchezza e della malattia.
@@ -336,7 +336,7 @@
                                                         Chiamiamo il nome dell'altro per sapere dove sono le chiavi della macchina.
                     
             + \ {charTag(PG, "neutral")}:            Un rifugio di stupore e gioia in un mondo grigio.
-                    -> glyph_modifier_variation_management(Mentor, earthC)->
+                    -> glyph_choice_manager(Mentor, earthC)->
                 {charTag(FifthCharacter, "neutral")}:           Mi piace la tua ingenuità {player_name}.
                                                         Con questa logica ho amato solo una cosa:
                                                         il mio giardino.
@@ -345,7 +345,7 @@
                 {charTag(FifthCharacter, "neutral")}:           E forse è davvero così.
                     
             + \ {charTag(PG, "neutral")}:            Fondersi nella passione, a letto come in una protesta.
-                    -> glyph_modifier_variation_management(Mentor, fireC)->
+                    -> glyph_choice_manager(Mentor, fireC)->
                 {charTag(FifthCharacter, "neutral")}:           La passione si spegne, {player_name}.
                                                         E a quel punto cosa rimane?
                                                         Noia?
@@ -354,7 +354,7 @@
                 {charTag(FifthCharacter, "neutral")}:           Passioni forti chiamano passioni ancora più forti.
                 
             + \ {charTag(PG, "neutral")}:            Cura, ascolto, affetto.
-                -> glyph_modifier_variation_management(Mentor, waterC)->
+                -> glyph_choice_manager(Mentor, waterC)->
                 {charTag(FifthCharacter, "neutral")}:           Già, ho pensato la stessa cosa a lungo.
                                                         Ma a volte la cura diventa un lavoro.
                                                         L'ascolto un dovere.
@@ -363,7 +363,7 @@
                 {charTag(FifthCharacter, "sad")}:               Vuol dire che è finito l'amore?
                     
             + \ {charTag(PG, "neutral")}:               Raggiungersi l'anima a vicenda, ricercando il divino che è noi.
-                -> glyph_modifier_variation_management(Mentor, aetherC)->
+                -> glyph_choice_manager(Mentor, aetherC)->
                 {charTag(FifthCharacter, "neutral")}:           Una visione mistica.
                                                         Forse blasfema.
                 {charTag(FifthCharacter, "sad")}:               Qualcosa che non ho mai conosciuto, se non nei romanzi.
@@ -394,21 +394,21 @@
         
         Non è che hai visto passare di qui una persona?
             + \ {charTag(PG, "neutral")}:            Dammi dettagli più concreti.
-                    -> glyph_modifier_variation_management(Mentor, airC)->
+                    -> glyph_choice_manager(Mentor, airC)->
                 
             + \ {charTag(PG, "neutral")}:            Sicuro che il violino ha bisogno di un tamburo per tornare.
-                    -> glyph_modifier_variation_management(Mentor, earthC)->
+                    -> glyph_choice_manager(Mentor, earthC)->
                 
             + \ {charTag(PG, "neutral")}:            Seguiamo le sue tracce! Fiutiamo il suo odore.
-                -> glyph_modifier_variation_management(Mentor, fireC)->
+                -> glyph_choice_manager(Mentor, fireC)->
 
                 
             + \ {charTag(PG, "neutral")}:            Se ti senti sola, sono qui ad ascoltarti.
-                -> glyph_modifier_variation_management(Mentor, waterC)->
+                -> glyph_choice_manager(Mentor, waterC)->
   
         
             + \ {charTag(PG, "neutral")}:            Tu sei sempre con ləi, ləi è sempre con te.
-                -> glyph_modifier_variation_management(Mentor, aetherC)->
+                -> glyph_choice_manager(Mentor, aetherC)->
  
             -
 
@@ -425,21 +425,21 @@
         
         Non è che hai visto passare di qui una persona?
             + \ {charTag(PG, "neutral")}:            Dammi dettagli più concreti.
-                    -> glyph_modifier_variation_management(Mentor, airC)->
+                    -> glyph_choice_manager(Mentor, airC)->
                 
             + \ {charTag(PG, "neutral")}:            Sicuro che il violino ha bisogno di un tamburo per tornare.
-                    -> glyph_modifier_variation_management(Mentor, earthC)->
+                    -> glyph_choice_manager(Mentor, earthC)->
                 
             + \ {charTag(PG, "neutral")}:            Seguiamo le sue tracce! Fiutiamo il suo odore.
-                -> glyph_modifier_variation_management(Mentor, fireC)->
+                -> glyph_choice_manager(Mentor, fireC)->
 
                 
             + \ {charTag(PG, "neutral")}:            Se ti senti sola, sono qui ad ascoltarti.
-                -> glyph_modifier_variation_management(Mentor, waterC)->
+                -> glyph_choice_manager(Mentor, waterC)->
   
                 
             + \ {charTag(PG, "neutral")}:            Tu sei sempre con ləi, ləi è sempre con te.
-                -> glyph_modifier_variation_management(Mentor, aetherC)->
+                -> glyph_choice_manager(Mentor, aetherC)->
  
             -
             
@@ -455,21 +455,21 @@
         
         Non è che hai visto passare di qui una persona?
             + \ {charTag(PG, "neutral")}:            Dammi dettagli più concreti.
-                    -> glyph_modifier_variation_management(Mentor, airC)->
+                    -> glyph_choice_manager(Mentor, airC)->
                 
             + \ {charTag(PG, "neutral")}:            Sicuro che il violino ha bisogno di un tamburo per tornare.
-                    -> glyph_modifier_variation_management(Mentor, earthC)->
+                    -> glyph_choice_manager(Mentor, earthC)->
                 
             + \ {charTag(PG, "neutral")}:            Seguiamo le sue tracce! Fiutiamo il suo odore.
-                -> glyph_modifier_variation_management(Mentor, fireC)->
+                -> glyph_choice_manager(Mentor, fireC)->
 
                 
             + \ {charTag(PG, "neutral")}:            Se ti senti sola, sono qui ad ascoltarti.
-                -> glyph_modifier_variation_management(Mentor, waterC)->
+                -> glyph_choice_manager(Mentor, waterC)->
   
                 
             + \ {charTag(PG, "neutral")}:            Tu sei sempre con ləi, ləi è sempre con te.
-                -> glyph_modifier_variation_management(Mentor, aetherC)->
+                -> glyph_choice_manager(Mentor, aetherC)->
  
             -
 
@@ -485,21 +485,21 @@
         
         Non è che hai visto passare di qui una persona?
             + \ {charTag(PG, "neutral")}:            Dammi dettagli più concreti.
-                    -> glyph_modifier_variation_management(Mentor, airC)->
+                    -> glyph_choice_manager(Mentor, airC)->
                 
             + \ {charTag(PG, "neutral")}:            Sicuro che il violino ha bisogno di un tamburo per tornare.
-                    -> glyph_modifier_variation_management(Mentor, earthC)->
+                    -> glyph_choice_manager(Mentor, earthC)->
                 
             + \ {charTag(PG, "neutral")}:            Seguiamo le sue tracce! Fiutiamo il suo odore.
-                -> glyph_modifier_variation_management(Mentor, fireC)->
+                -> glyph_choice_manager(Mentor, fireC)->
 
                 
             + \ {charTag(PG, "neutral")}:            Se ti senti sola, sono qui ad ascoltarti.
-                -> glyph_modifier_variation_management(Mentor, waterC)->
+                -> glyph_choice_manager(Mentor, waterC)->
   
                 
             + \ {charTag(PG, "neutral")}:            Tu sei sempre con ləi, ləi è sempre con te.
-                -> glyph_modifier_variation_management(Mentor, aetherC)->
+                -> glyph_choice_manager(Mentor, aetherC)->
  
             -
 
@@ -514,21 +514,21 @@
         
         Non è che hai visto passare di qui una persona?
             + \ {charTag(PG, "neutral")}:            Dammi dettagli più concreti.
-                    -> glyph_modifier_variation_management(Mentor, airC)->
+                    -> glyph_choice_manager(Mentor, airC)->
                 
             + \ {charTag(PG, "neutral")}:            Sicuro che il violino ha bisogno di un tamburo per tornare.
-                    -> glyph_modifier_variation_management(Mentor, earthC)->
+                    -> glyph_choice_manager(Mentor, earthC)->
                 
             + \ {charTag(PG, "neutral")}:            Seguiamo le sue tracce! Fiutiamo il suo odore.
-                -> glyph_modifier_variation_management(Mentor, fireC)->
+                -> glyph_choice_manager(Mentor, fireC)->
 
                 
             + \ {charTag(PG, "neutral")}:            Se ti senti sola, sono qui ad ascoltarti.
-                -> glyph_modifier_variation_management(Mentor, waterC)->
+                -> glyph_choice_manager(Mentor, waterC)->
   
                 
             + \ {charTag(PG, "neutral")}:            Tu sei sempre con ləi, ləi è sempre con te.
-                -> glyph_modifier_variation_management(Mentor, aetherC)->
+                -> glyph_choice_manager(Mentor, aetherC)->
  
             -
 
@@ -543,21 +543,21 @@
         
         Non è che hai visto passare di qui una persona?
             + \ {charTag(PG, "neutral")}:            Dammi dettagli più concreti.
-                    -> glyph_modifier_variation_management(Mentor, airC)->
+                    -> glyph_choice_manager(Mentor, airC)->
                 
             + \ {charTag(PG, "neutral")}:            Sicuro che il violino ha bisogno di un tamburo per tornare.
-                    -> glyph_modifier_variation_management(Mentor, earthC)->
+                    -> glyph_choice_manager(Mentor, earthC)->
                 
             + \ {charTag(PG, "neutral")}:            Seguiamo le sue tracce! Fiutiamo il suo odore.
-                -> glyph_modifier_variation_management(Mentor, fireC)->
+                -> glyph_choice_manager(Mentor, fireC)->
 
                 
             + \ {charTag(PG, "neutral")}:            Se ti senti sola, sono qui ad ascoltarti.
-                -> glyph_modifier_variation_management(Mentor, waterC)->
+                -> glyph_choice_manager(Mentor, waterC)->
   
                 
             + \ {charTag(PG, "neutral")}:            Tu sei sempre con ləi, ləi è sempre con te.
-                -> glyph_modifier_variation_management(Mentor, aetherC)->
+                -> glyph_choice_manager(Mentor, aetherC)->
  
             -
 
@@ -572,21 +572,21 @@
         
         Non è che hai visto passare di qui una persona?
             + \ {charTag(PG, "neutral")}:            Dammi dettagli più concreti.
-                    -> glyph_modifier_variation_management(Mentor, airC)->
+                    -> glyph_choice_manager(Mentor, airC)->
                 
             + \ {charTag(PG, "neutral")}:            Sicuro che il violino ha bisogno di un tamburo per tornare.
-                    -> glyph_modifier_variation_management(Mentor, earthC)->
+                    -> glyph_choice_manager(Mentor, earthC)->
                 
             + \ {charTag(PG, "neutral")}:            Seguiamo le sue tracce! Fiutiamo il suo odore.
-                -> glyph_modifier_variation_management(Mentor, fireC)->
+                -> glyph_choice_manager(Mentor, fireC)->
 
                 
             + \ {charTag(PG, "neutral")}:            Se ti senti sola, sono qui ad ascoltarti.
-                -> glyph_modifier_variation_management(Mentor, waterC)->
+                -> glyph_choice_manager(Mentor, waterC)->
   
                 
             + \ {charTag(PG, "neutral")}:            Tu sei sempre con ləi, ləi è sempre con te.
-                -> glyph_modifier_variation_management(Mentor, aetherC)->
+                -> glyph_choice_manager(Mentor, aetherC)->
  
             -
 

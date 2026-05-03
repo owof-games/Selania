@@ -21,7 +21,7 @@
     {charTag(FifthCharacter, "hurry")}:                     Avrai un milione di domande, vero?
         
         + (airChoice) \ {charTag(PG, "neutral")}: Anche più di un milione, ma la prima è: dove mi trovo?
-            -> glyph_modifier_variation_management(Mentor, airC) ->
+            -> glyph_choice_manager(Mentor, airC) ->
 
             {
                 - contentsTrainStop has PG:
@@ -43,7 +43,7 @@
             {charTag(FifthCharacter, "hurry")}:             Non male, no?
         
         + (waterChoice) \ {charTag(PG, "neutral")}: Che cosa tenera e gentile da dire! Perché sei felice che sono qui?
-            -> glyph_modifier_variation_management(Mentor, waterC) ->
+            -> glyph_choice_manager(Mentor, waterC) ->
 
             {charTag(FifthCharacter, "neutral")}:           Perché io sono <b><i>{charNameFive}</b></i>.
                                                             La tua {charNameFive}.
@@ -51,7 +51,7 @@
 
 
         + (aetherChoice) \ {charTag(PG, "neutral")}: Siamo in un luogo misterico, vero?
-            -> glyph_modifier_variation_management(Mentor, aetherC) ->
+            -> glyph_choice_manager(Mentor, aetherC) ->
 
             {charTag(FifthCharacter, "neutral")}:           Io.
             {charTag(FifthCharacter, "sorry")}:             Uh, è una domanda inaspettata.
@@ -61,7 +61,7 @@
 
                 
         + (fireChoice) \ {charTag(PG, "neutral")}: <i>Cerco un modo per tornare a casa.</i>
-            -> glyph_modifier_variation_management(Mentor, fireC) ->
+            -> glyph_choice_manager(Mentor, fireC) ->
 
             {charTag(FifthCharacter, "sad")}:               Vuoi già andartene?
                                                     Forse devo rivedere il mio benvenuto.
@@ -81,7 +81,7 @@
             {charTag(FifthCharacter, "hurry")}:             Prima però lascia che ti rubi giusto un secondo!
             
         + (earthChoice) \ {charTag(PG, "neutral")}: Non sai quanto mi mancava tutta questa natura!
-            -> glyph_modifier_variation_management(Mentor, earthC) ->
+            -> glyph_choice_manager(Mentor, earthC) ->
 
             {charTag(FifthCharacter, "hurry")}:             È pace per il cuore, vero?
             {charTag(FifthCharacter, "neutral")}:           Ogni angolo di questo spazio mi rasserena, anche quando mi sento fuori fuoco.
@@ -122,20 +122,20 @@
 
      
         + \ {charTag(PG, "neutral")}:           <i>Annuisco: non c'è altro da aggiungere.</i>
-            -> glyph_modifier_variation_management(Mentor, aetherC) ->
+            -> glyph_choice_manager(Mentor, aetherC) ->
 
             {charTag(FifthCharacter, "sad")}:           Mi sento una gran chiacchierona, davanti al tuo silenzio.
             {charTag(FifthCharacter, "neutral")}:       Ma ci sta: alla fine sono io quella che deve spiegare le cose, vero?
         
         +  \ {charTag(PG, "neutral")}:          Faccio sempre a fatica a distanziarmi dal dolore delle altre persone.
-            -> glyph_modifier_variation_management(Mentor, waterC) ->
+            -> glyph_choice_manager(Mentor, waterC) ->
             
             {charTag(FifthCharacter, "sad")}:           Ti capisco, {player_name}.
             {charTag(FifthCharacter, "neutral")}:       Proprio per questo è importante prendersi i propri tempi.
 
             
         + \ {charTag(PG, "neutral")}:            Ci si può fare forza nelle reciproche sofferenze.
-            -> glyph_modifier_variation_management(Mentor, earthC) ->
+            -> glyph_choice_manager(Mentor, earthC) ->
 
             {charTag(FifthCharacter, "hurry")}:          Mi piace questo approccio!
             {charTag(FifthCharacter, "neutral")}:        La cosa bella del lavoro che farai qui, è che puoi anche imparare molto su di te.
@@ -143,7 +143,7 @@
 
 
         + \ {charTag(PG, "neutral")}:           Quindi: se la situazione è pesante, mi faccio una pausa.
-            -> glyph_modifier_variation_management(Mentor, airC) ->
+            -> glyph_choice_manager(Mentor, airC) ->
 
             {charTag(FifthCharacter, "neutral")}:       Sintetic{player_pronouns has him:o|{player_pronouns has her:a|ə}} e puntuale.
                                                 Ma è esattamente quello il punto.
@@ -151,7 +151,7 @@
 
             
         + \ {charTag(PG, "neutral")}:           Sono una persona pratica, so affrontare tutto!
-            -> glyph_modifier_variation_management(Mentor, fireC) ->
+            -> glyph_choice_manager(Mentor, fireC) ->
 
             {charTag(FifthCharacter, "sad")}:           Però non è un discorso di praticità o meno, amic{player_pronouns has him:o|{player_pronouns has her:a|ə}} mi{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
             {charTag(FifthCharacter, "neutral")}:       Anche la persona più pratica al mondo ha i suoi limiti.
@@ -273,7 +273,7 @@
                                             Ma tratteremo meglio la riscrittura più avanti.
 
             + \ {charTag(PG, "neutral")}:           Non potrebbe servire a tutt3 un nuovo nome, un nuovo inizio?
-                    -> glyph_modifier_variation_management(Mentor, aetherC)->
+                    -> glyph_choice_manager(Mentor, aetherC)->
 
                 {charTag(FifthCharacter, "sad")}:           Immagino possa servire a molt3.
                 {charTag(FifthCharacter, "neutral")}:       A me no, ad esempio.
@@ -281,7 +281,7 @@
                                                     Ma alla fine il nome è solo un simbolo, non è l'obiettivo in sé.       
                     
             + \ {charTag(PG, "neutral")}:           La fiducia non è una cosa che si conquista, ma che si costruisce. Assieme.
-                    -> glyph_modifier_variation_management(Mentor, earthC)->
+                    -> glyph_choice_manager(Mentor, earthC)->
 
                 {charTag(FifthCharacter, "sorry")}:         Credo tu abbia capito cosa intendo, {player_name}.
                 {charTag(FifthCharacter, "neutral")}:       Hai un obiettivo, e per raggiungerlo ti serve uno strumento.
@@ -289,13 +289,13 @@
         
                     
             + \ {charTag(PG, "neutral")}:           Non hanno persone care da cui farsi aiutare?
-                    -> glyph_modifier_variation_management(Mentor, waterC)->
+                    -> glyph_choice_manager(Mentor, waterC)->
 
                 {charTag(FifthCharacter, "neutral")}:       A volte è più facile aprirsi a chi non si conosce.
                                                     E mentre noi riflettiamo sulle loro difficoltà, impariamo anche qualcosa su di noi.
                         
             + \ {charTag(PG, "neutral")}:           Non avrebbe più senso chiamarla "rilettura" invece di "riscrittura"?
-                    -> glyph_modifier_variation_management(Mentor, airC)->
+                    -> glyph_choice_manager(Mentor, airC)->
 
                 {charTag(FifthCharacter, "hurry")}:         Ci ho pensato molte volte anche io, sai?
                 {charTag(FifthCharacter, "neutral")}:       La risposta che mi sono data è che "riscrivere" dà un senso di azione, di cambiamento, che "rileggere" non ha.
@@ -304,7 +304,7 @@
                 {charTag(FifthCharacter, "neutral")}:       Ma alla fine deve funzionare per le persone che aiutiamo, non per noi.
   
             + \ {charTag(PG, "neutral")}:           Un nome è soltanto un nome. A cosa serve cambiarlo?
-                    -> glyph_modifier_variation_management(Mentor, fireC)->
+                    -> glyph_choice_manager(Mentor, fireC)->
 
                 {charTag(FifthCharacter, "neutral")}:       Un nome è come una magia che carichiamo di volta in volta di significato..
                                                     A volte quella magia non va più bene, e dobbiamo cercare una nuova formula. 
@@ -356,7 +356,7 @@
 
     
                 + \ {charTag(PG, "neutral")}:               Questa cosa di dare un nuovo nome mi spaventa, non è invadente?
-                        -> glyph_modifier_variation_management(Mentor, waterC)->
+                        -> glyph_choice_manager(Mentor, waterC)->
 
                     {charTag(FifthCharacter, "neutral")}:           No, {player_name}, non sei tu a decidere che nome la persona sceglierà.
                                                             Né che percorso farà.
@@ -364,7 +364,7 @@
                     {charTag(FifthCharacter, "neutral")}:           A poi starà a loro, e solo a loro, decidere verso quale futuro andare.
 
                 + \ {charTag(PG, "neutral")}:               Ma non posso dire "Ehi tu chiamati così e cosà" e bona?
-                        -> glyph_modifier_variation_management(Mentor, fireC)->
+                        -> glyph_choice_manager(Mentor, fireC)->
 
                     {charTag(FifthCharacter, "neutral")}:           Un nuovo nome è una nuova esperienza.
                                                             E l'esperienza viene dal percorso.
@@ -372,7 +372,7 @@
                     {charTag(FifthCharacter, "neutral")}:           E poi sta alla persona decidere il suo nome.
                         
                 + \ {charTag(PG, "neutral")}:               Creo fiducia, prendo l'inchiostro, aiuto a riscrivere. Matematico.
-                        -> glyph_modifier_variation_management(Mentor, airC)->
+                        -> glyph_choice_manager(Mentor, airC)->
 
                     {charTag(FifthCharacter, "neutral")}:           Non è così matematico.
                                                             Le persone non sono numeri.
@@ -380,7 +380,7 @@
                                                             Ma sì, direi che hai capito il succo.
                         
                 + \ {charTag(PG, "neutral")}:               Mi son pers{player_pronouns has him:o|{player_pronouns has her:a|ə}} alla terza frase. Succede sempre.
-                        -> glyph_modifier_variation_management(Mentor, earthC)->
+                        -> glyph_choice_manager(Mentor, earthC)->
 
                     {charTag(FifthCharacter, "sad")}:               Capita anche a me.
                     {charTag(FifthCharacter, "hurry")}:             Però non ti far problemi a richiedermi cosa fare, sono sempre qui al tuo servizio!
@@ -388,7 +388,7 @@
 
 
                 + \ {charTag(PG, "neutral")}:               Sembra tutto molto pratico e razionale, per essere un'esperienza così spirituale.
-                        -> glyph_modifier_variation_management(Mentor, aetherC)->
+                        -> glyph_choice_manager(Mentor, aetherC)->
 
                         {
                             - are_two_entities_together(FirstCharacter, PG):

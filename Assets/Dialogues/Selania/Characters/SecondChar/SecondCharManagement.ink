@@ -11,10 +11,13 @@
     VAR secondChar_storyEndingPosition = ()
 
 //Tracciamento della relazione
-    //Utilizzato nella funzione XXX per calcolare la variazione del rapporto dopo la singola scelta.
-    VAR secondChar_RelCalculator = 0
     //Indicator = il valore di Indicator, riproporzionato per l'indicatore della reazione e chiamato in cucina e in riscrittura per i feedback/inchiostro.
     VAR secondChar_relationshipIndicator = 0
+    VAR secondChar_lastRelationshipIndicator = 0
+    
+    //Utilizzato nella funzione XXX per calcolare la variazione del rapporto dopo la singola scelta.
+    VAR secondChar_RelCalculator = 0
+    
     //Absolute = il valore totale della relazione, tenuto per tracciamento
     VAR secondChar_relationshipIndicatorAbsolute = 0
     //Reaction: qui registriamo la reazione che verrà attivata coi sigilli

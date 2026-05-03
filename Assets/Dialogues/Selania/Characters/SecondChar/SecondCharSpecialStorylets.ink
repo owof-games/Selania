@@ -63,7 +63,7 @@
                                                         Prova a immaginare qual è la cosa più bella che puoi trovare.
 
         + \ {charTag(PG, "neutral")}:                   Un laboratorio di chimica?
-                -> glyph_modifier_variation_management(SecondCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
         {charTag(SecondCharacter, "energy")}:           Non ci avevo pensato cavolo!
                                                         Magari!
         {charTag(SecondCharacter, "neutral")}:          Va bene: ho trovato la <i>seconda</i> cosa più bella che puoi trovare!
@@ -71,18 +71,18 @@
                                                         Credo!
     
         + \ {charTag(PG, "neutral")}:                   Un campetto da calcio!
-                -> glyph_modifier_variation_management(SecondCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
         {charTag(SecondCharacter, "angry")}:            Ma mi hai ascoltato quando ho parlato?
                                                         Ti sembro uno che gioca a calcio?!?
      
         + \ {charTag(PG, "neutral")}:                   Un luogo dove meditare?
-                -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
         {charTag(SecondCharacter, "neutral")}:          ...
                                                         Davvero?
                                                         La cosa più bella per te è un posto dove devi dormire seduto?    
 
         + \ {charTag(PG, "neutral")}:                   Un posto dove dormire?
-                -> glyph_modifier_variation_management(SecondCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
         {charTag(SecondCharacter, "neutral")}:          Tu e {charNameOne} siete uguali.
         {
         - are_two_entities_together(FirstCharacter, PG):
@@ -92,7 +92,7 @@
         {charTag(SecondCharacter, "energy")}:           Ma c'è anche una poltrona!
             
         + \ {charTag(PG, "neutral")}:                   Una camera con tutti i tuoi amici?
-                -> glyph_modifier_variation_management(SecondCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
         {charTag(SecondCharacter, "melanchonic")}:      Sarebbe vuota.
         {charTag(SecondCharacter, "angry")}:            No.
         -
@@ -150,7 +150,7 @@
 
 
         + \ {charTag(PG, "neutral")}:                   Li intervisterei, per capire cosa pensano.
-             -> glyph_modifier_variation_management(SecondCharacter, airC)->
+             -> glyph_choice_manager(false, airC)->
         {charTag(SecondCharacter, "hurry")}:            Sììììììì!
                                                         Mi piace tantissimo questa cosa!
                                                         Lì nessuno sembra volerli conoscere!
@@ -158,7 +158,7 @@
                                                         E se ci pensi proprio bene tutti i sassi sono in prigione, perché non si muovono da soli!
 
         + \ {charTag(PG, "neutral")}:                   Indicherei loro un paio di case da distruggere.
-            -> glyph_modifier_variation_management(SecondCharacter, fireC)->
+            -> glyph_choice_manager(false, fireC)->
         {charTag(SecondCharacter, "energy")}:           Uuuh, questa è cattiva!
                                                         Ma mi piace.
                                                         Anche io ne ho un po'!
@@ -168,7 +168,7 @@
         }
      
         + \ {charTag(PG, "neutral")}:                   Guarderei ciò che fanno, per capire di cosa hanno bisogno.
-            -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
+            -> glyph_choice_manager(false, aetherC)->
         {charTag(SecondCharacter, "neutral")}:          Me le sono chiesto anche io, sai?
                                                         Non ho capito proprio quello di cui hanno bisogno.
                                                         A parte essere liberi.
@@ -176,7 +176,7 @@
                                                         E se ci pensi proprio bene tutti i sassi sono in prigione, perché non si muovono da soli!
 
         + \ {charTag(PG, "neutral")}:                   Li porterei in braccio dove devono andare, così fanno meno fatica!
-            -> glyph_modifier_variation_management(SecondCharacter, earthC)->
+            -> glyph_choice_manager(false, earthC)->
         {charTag(SecondCharacter, "energy")}:           Così poi hanno più energia per rompere le finestre!                          
         {
         - are_two_entities_together(Mentor, PG): 
@@ -184,7 +184,7 @@
         }
             
         + \ {charTag(PG, "neutral")}:                   Mi sarei pres{player_pronouns has him:o|{player_pronouns has her:a|ə}} cura dell'aragosta.
-            -> glyph_modifier_variation_management(SecondCharacter, waterC)->
+            -> glyph_choice_manager(false, waterC)->
         {charTag(SecondCharacter, "emotional")}:        Già.
                                                         Alla fine non ha mica fatto nulla lei.
         {charTag(SecondCharacter, "angry")}:            Non capisco perché la vogliono sgozzare.

@@ -140,7 +140,7 @@
                                                                 Non me la sento.
         
         +\ {charTag(PG, "neutral")}:                             Che razionalmente sai che è sbagliato?
-                -> glyph_modifier_variation_management(Mentor, airC)->
+                -> glyph_choice_manager(Mentor, airC)->
 
             {charTag(FifthCharacter, "neutral")}:                       Mi sento potente.
                                                                 Forte.
@@ -154,7 +154,7 @@
             }
 
         +\ {charTag(PG, "neutral")}:                             Che è bello perdere il controllo, ribellarsi.
-                -> glyph_modifier_variation_management(Mentor, fireC)->
+                -> glyph_choice_manager(Mentor, fireC)->
 
             {charTag(FifthCharacter, "sorry")}:                         Peggio.
             {charTag(FifthCharacter, "neutral")}:                       Il controllo non si perde, {player_name}.
@@ -170,7 +170,7 @@
                 }
             
         +\ {charTag(PG, "neutral")}:                             Arrabbiarsi è umano, il problema è la violenza.
-                -> glyph_modifier_variation_management(Mentor, waterC)->
+                -> glyph_choice_manager(Mentor, waterC)->
 
             {charTag(FifthCharacter, "bored")}:                         Arrabbiarsi è da deboli.
             {charTag(FifthCharacter, "neutral")}:                       Lo fai quando non comprendi le tue emozioni.
@@ -185,14 +185,14 @@
                 }
             
         +\ {charTag(PG, "neutral")}:                             Sei stata crudele, e hai rovinato la festa per {charNameTwo}.
-                -> glyph_modifier_variation_management(Mentor, earthC)->
+                -> glyph_choice_manager(Mentor, earthC)->
 
             {charTag(FifthCharacter, "bored")}:                         Essere {player_pronouns has him:riscrittore|{player_pronouns has her:riscrittora|riscrittorə}} chiede empatia, {player_name}.
             {charTag(FifthCharacter, "sad")}:                           Ma sì.
                                                                 Sono stata crudele, punto.
             
         +\ {charTag(PG, "neutral")}:                             <i>Resto in silenzio.</i>
-                -> glyph_modifier_variation_management(Mentor, aetherC)->
+                -> glyph_choice_manager(Mentor, aetherC)->
 
             {charTag(FifthCharacter, "sad")}:                           La cosa peggiore è che non mi piace arrabbiarmi, ma mi fa sentire potente.
             {charTag(FifthCharacter, "neutral")}:                       Visibile.
@@ -236,7 +236,7 @@
     {charTag(FifthCharacter, "sorry")}:                                 Ti senti mai così {player_pronouns has him:stanco|{player_pronouns has her:stanca|stancə}} che vorresti sparire per un po' dal mondo, e basta?
 
         +\ {charTag(PG, "neutral")}:                             Non si può sparire, per cui è un pensiero abbastanza inutile.
-                -> glyph_modifier_variation_management(Mentor, airC)->
+                -> glyph_choice_manager(Mentor, airC)->
 
             {charTag(FifthCharacter, "bored")}:                         Un pensiero non è inutile.
             {charTag(FifthCharacter, "neutral")}:                       Un pensiero è solo un pensiero.
@@ -247,7 +247,7 @@
                 }
     
         +\ {charTag(PG, "neutral")}:                            Ma Liliana è stanca dell'ingiustizia, non del mondo. E ha reagito.
-                -> glyph_modifier_variation_management(Mentor, fireC)->
+                -> glyph_choice_manager(Mentor, fireC)->
 
             {charTag(FifthCharacter, "neutral")}:                       Ma una magari a volte ha voglia di non reagire e basta.
             {charTag(FifthCharacter, "hurry")}:                         E di agire.
@@ -256,7 +256,7 @@
             {charTag(FifthCharacter, "bored")}:                         E non solo rispondere a quello che ha attorno.
      
         +\ {charTag(PG, "neutral")}:                            Vorresti sparire dal mondo, o da te?
-                -> glyph_modifier_variation_management(Mentor, aetherC)->
+                -> glyph_choice_manager(Mentor, aetherC)->
 
             {charTag(FifthCharacter, "sorry")}:                         Cambierebbe poi così tanto?
             {charTag(FifthCharacter, "sad")}:                           No, è una cosa stupida da dire.
@@ -264,7 +264,7 @@
                                                                 Lascia perdere.
     
         +\ {charTag(PG, "neutral")}:                            No, però mi capita di fare dei grandiosi pisolini.
-                -> glyph_modifier_variation_management(Mentor, earthC)->
+                -> glyph_choice_manager(Mentor, earthC)->
 
             {charTag(FifthCharacter, "neutral")}:                       Pensavo a qualcosa di più impegnativo.
                                                                 Qualcosa che non si risolve dormendo.
@@ -276,7 +276,7 @@
             } 
             
         +\ {charTag(PG, "neutral")}:                            A volte vorrei solo diventare invisibile.
-                -> glyph_modifier_variation_management(Mentor, waterC)->
+                -> glyph_choice_manager(Mentor, waterC)->
 
             {charTag(FifthCharacter, "neutral")}:                       Esatto, {player_name}.
             {charTag(FifthCharacter, "sad")}:                           So che è una scelta egoista.

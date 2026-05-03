@@ -51,30 +51,30 @@
     {charTag(SecondCharacter, "energy")}:               E tu cosa fai se ci hanno rapito gli alieni?
     
         + \ {charTag(PG, "neutral")}:                   Dormiamo qualche giorno, siii!
-                -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
         {charTag(SecondCharacter, "neutral")}:          Voi persone vecchie siete noiose.
                                                         Nemmeno la nonna pensa così tanto a dormire!
         {charTag(FirstCharacter, "annoyed")}:           Perché tua nonna è in pensione e non deve pensare costantemente a PRODURRE!
 
         + \ {charTag(PG, "neutral")}:                   Anche io voglio studiarmi tutto!
-            -> glyph_modifier_variation_management(FirstCharacter, airC)->
+            -> glyph_choice_manager(false, airC)->
         {charTag(SecondCharacter, "energy")}:           Sìì! E il nostro team batte il team SIAMO NOIOSI E DORMIAMO SEMPRE DI {charNameOne}!
         {charTag(FirstCharacter, "annoyed")}:           Sarò noiosa, ma tu arriverai ai quindici anni più ansioso di un pinscher, piccoletto.
 
         + \ {charTag(PG, "neutral")}:                   Mi metterei a piangere {player_pronouns has him:terrorizzato|{player_pronouns has her:terrorizzata|terrorizzatə}} in un angolino.
-                -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
         {charTag(SecondCharacter, "melanchonic")}:      Come i bambini piccoli. No no no.
         {charTag(FirstCharacter, "affectionate")}:      Mi ci riconosco, totale.
 
         + \ {charTag(PG, "neutral")}:                   Mentre mi leggono la mente penso a cose assurdissime!
-            -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+            -> glyph_choice_manager(false, fireC)->
         {charTag(SecondCharacter, "energy")}:           Sarebbe divertentissimo!
                                                         Ora provo a pensare tantissimo alla cacca!
         {charTag(FirstCharacter, "affectionate")}:      La mia mente è limpida e innocente.
         {charTag(FirstCharacter, "neutral")}:           Non come quella di un bambino, ascoltando le cose che dice il piccoletto.
             
         + \ {charTag(PG, "neutral")}:                   Gli chiederei qual'è il senso della vita.
-            -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+            -> glyph_choice_manager(false, aetherC)->
         {charTag(SecondCharacter, "neutral")}:          Te lo dico io: caramelle!
                                                         E vedere i pinguini.
         {charTag(FirstCharacter, "affectionate")}:      Ma sarebbe una risposta che mi risolverebbe una marea di problemi.
@@ -127,7 +127,7 @@
 
 
         + \ {charTag(PG, "neutral")}:                   Temo che gli adulti non siano la sua cosa preferita.
-                -> glyph_modifier_variation_management(Mentor, waterC)->
+                -> glyph_choice_manager(Mentor, waterC)->
         {charTag(FifthCharacter, "sad")}:               Lo temo anche io.
                                                         E questo significa che devo fare il doppio del lavoro per avere la sua  fiducia.
         {charTag(FifthCharacter, "hurry")}:             Ma la avrò!
@@ -138,7 +138,7 @@
         }
 
         + \ {charTag(PG, "neutral")}:                   Tu ti sei perdonata, per quello che hai fatto?
-                -> glyph_modifier_variation_management(Mentor, aetherC)->
+                -> glyph_choice_manager(Mentor, aetherC)->
         {charTag(FifthCharacter, "sad")}:               Non.
                                                         No.
                                                         Non credo di aver capito ancora fino in fondo cosa è successo.
@@ -150,7 +150,7 @@
         }
         
         + \ {charTag(PG, "neutral")}:                    Ha bisogno di spazio per sé, {charNameFive}.
-                -> glyph_modifier_variation_management(Mentor, earthC)->
+                -> glyph_choice_manager(Mentor, earthC)->
         {charTag(FifthCharacter, "sad")}:               Ma io...
                                                         Uh.
                                                         Non ci so stare nelle situazioni così.
@@ -158,13 +158,13 @@
                                                         È faticosissimo, {player_name}.
             
         + \ {charTag(PG, "neutral")}:                   Hai imparato qualcosa, da questa situazione?
-                -> glyph_modifier_variation_management(Mentor, airC)->
+                -> glyph_choice_manager(Mentor, airC)->
         {charTag(FifthCharacter, "sad")}:               Che sono un disastro?
                                                         Che come provo a fare un passo deciso, ferisco qualcuno?
                                                         Che forse non sono un granché come {charNameFive}?
         
         + \ {charTag(PG, "neutral")}:                    L'hai ferito, cosa ti aspettavi?
-                -> glyph_modifier_variation_management(Mentor, fireC)->
+                -> glyph_choice_manager(Mentor, fireC)->
         {charTag(FifthCharacter, "sad")}:               Un po' di comprensione.
                                                         Di ascolto.
                                                         Delle mie ragioni.
@@ -212,30 +212,30 @@
     {charTag(FifthCharacter, "sad")}:                   Qualcosa che è sempre altrove e quindi irraggiungibile?
     
         + \ {charTag(PG, "neutral")}:                   {charNameFive}, tu parli di arrendersi.
-            -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+            -> glyph_choice_manager(false, fireC)->
         {charTag(FifthCharacter, "neutral")}:           Non arrendersi, {player_name}, ma accogliere quello che si ha.
         {charTag(FirstCharacter, "sad")}:               E non vedo differenza, {charNameFive}.
             
         + \ {charTag(PG, "neutral")}:                   {charNameFive}, razionalmente la felicità ha una natura temporanea.
-            -> glyph_modifier_variation_management(FirstCharacter, airC)->
+            -> glyph_choice_manager(false, airC)->
         {charTag(FirstCharacter, "affectionate")}:      Oh, che bello sentire qualcun{player_pronouns has him:o|{player_pronouns has her:a|ə}} che matcha la mia gioia di vivere.
         {charTag(FifthCharacter, "neutral")}:           Il fatto che sia temporanea non nega la mia teoria.
         
         //più terra
         + \ {charTag(PG, "neutral")}:                   La felicità è una coperta morbida dopo una giornata di duro lavoro.
-            -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+            -> glyph_choice_manager(false, earthC)->
         {charTag(FirstCharacter, "annoyed")}:           Credo che quello si chiami "abuso di sostanze".
         {charTag(FifthCharacter, "sad")}:               Con un linguaggio meno colorito, direi comunque che sì, ha ragione {charNameOne}.
 
         + \ {charTag(PG, "neutral")}:                   Non credo nella felicità, ma credo nel piacere dato dalle persone vicine.
-            -> glyph_modifier_variation_management(FirstCharacter, waterC)->    
+            -> glyph_choice_manager(false, waterC)->    
         {charTag(FifthCharacter, "neutral")}:           Questa è una lettura che potrei apprezzare.
         {charTag(FirstCharacter, "curious")}:           Woah!
         {charTag(FirstCharacter, "affectionate")}:      Vuol dire che {player_name} ha trovato un punto di contatto tra noi in questa discussione?
         {charTag(FifthCharacter, "hurry")}:             Eh sì, mi sa proprio di sì.
             
         + \ {charTag(PG, "neutral")}:                   La felicità è qualcosa che cresce nelle pieghe del quotidiano.
-            -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+            -> glyph_choice_manager(false, aetherC)->
             {charTag(FifthCharacter, "hurry")}:         Sono contenta che la vediamo allo stesso modo.
             {charTag(FirstCharacter, "annoyed")}:       Le cose che crescono nelle pieghe di solito sono sporche.
                                                         Infestanti.
@@ -330,14 +330,14 @@
                                                         <i>O portare nomi che non sa.</i>
 
     + \ {charTag(PG, "neutral")}:                       Metà delle cose che la voce dice sono illogiche.
-            -> glyph_modifier_variation_management(Mentor, airC)->
+            -> glyph_choice_manager(Mentor, airC)->
     {charTag(TheWitch, witch_state())}:                 <i>{player_name} non vede, e quindi decide che qualcosa non esiste.</i>
                                                         <i>Ma quella cosa esiste anche se {player_name} non vede.</i>
     {charTag(FifthCharacter, "sad")}:                   Uh, peccato.
     {charTag(FifthCharacter, "neutral")}:               Ma ci sta: questo luogo è così insolito, immagino sia inevitabile non capirlo fino in fondo.
         
     + \ {charTag(PG, "neutral")}:                       Dice che stai facendo un buon lavoro.
-            -> glyph_modifier_variation_management(Mentor, waterC)->
+            -> glyph_choice_manager(Mentor, waterC)->
     {charTag(FifthCharacter, "hurry")}:                 Oh, ma sicuramente esagera.
     {charTag(FifthCharacter, "sad")}:                   Prendi prima: ho scoperto che per via della mia incuria sta crescendo del muschio tra le pietre del pozzo.
                                                         Però.
@@ -345,14 +345,14 @@
     {charTag(TheWitch, witch_state())}:                 <i>Dire una mezza verità porta su una mezza strada.</i>
     
     + \ {charTag(PG, "neutral")}:                       Ha parlato di incendi e acqua, forse hai bruciato qualcosa?
-            -> glyph_modifier_variation_management(Mentor, earthC)->
+            -> glyph_choice_manager(Mentor, earthC)->
     {charTag(FifthCharacter, "sad")}:                   Non è che ho lasciato qualcosa di acceso in cucina?
                                                         No dai, si vedrebbe il fumo da qui, sicuro.
     {charTag(FifthCharacter, "neutral")}:               Magari è qualcosa di simbolico.
     {charTag(FifthCharacter, "sorry")}:                 Spero di non aver distrutto nulla.
     
     + \ {charTag(PG, "neutral")}:                       Non è più importante il tuo di giudizio sul tuo lavoro, {charNameFive}?
-            -> glyph_modifier_variation_management(Mentor, aetherC)->
+            -> glyph_choice_manager(Mentor, aetherC)->
     {charTag(FifthCharacter, "neutral")}:               Credo di sì.
                                                         Ma uno sguardo esterno ci può aiutare, immagino.
     {charTag(FifthCharacter, "sad")}:                   Oh, non lo so.
@@ -360,7 +360,7 @@
                                                         Credo di star facendo un buon lavoro.
 
     + \ {charTag(PG, "neutral")}:                       Ha detto tante cose ma la risposta è: no.
-            -> glyph_modifier_variation_management(Mentor, fireC)->
+            -> glyph_choice_manager(Mentor, fireC)->
     {charTag(TheWitch, witch_state())}:                 <i>La frusta che cade senza motivo non porta alcun insegnamento.</i>
     {charTag(FifthCharacter, "sad")}:                   Oh.
                                                         Forse potrei chiedere scusa in qualche modo a...
@@ -405,7 +405,7 @@
     {charTag(FirstCharacter, "neutral")}:               {player_name} dimmi che non sto impazzendo solo io!
 
         + \ {charTag(PG, "neutral")}:                   Franco, sembri davvero legato alla tua famiglia.
-                -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
         {charTag(Franco, "{portrait_Franco()}")}:       No, non legato.
                                                         Quello è successo solo alla festa di laurea di zio Gracco.
                                                         Ma ho ripetuto tutto il tempo che non era colpa mia.
@@ -417,7 +417,7 @@
                                                         E da lì a tutte le altre rane.    
             
         + \ {charTag(PG, "neutral")}:                   C'è qualcosa nell'illogicità di Franco che è quasi divina.
-                -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
         {charTag(Franco, "{portrait_Franco()}")}:       Quindi posso esaudire i desideri delle persone?
                                                         {charNameOne}!
                                                         Che cosa desideri?
@@ -427,7 +427,7 @@
                                                         C-Ra.                                                
         
         + \ {charTag(PG, "neutral")}:                   "Non sto impazzendo solo io.""
-                -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
         {charTag(FirstCharacter, "annoyed")}:           Questa sarebbe stata brutta anche in bocca a Franco.
         {charTag(Franco, "{portrait_Franco()}")}:       Cosa ho in bocca?
                                                         Cos'è questa cosa?
@@ -436,7 +436,7 @@
                                                         La mia lingua.
         
         + \ {charTag(PG, "neutral")}:                   Mi spieghi da dove vengono tutti questi nomi brutti, Franco?
-                -> glyph_modifier_variation_management(FirstCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
         {charTag(Franco, "{portrait_Franco()}")}:       Non sono brutti, sono nomi di famiglia.
                                                         Li abbiamo iniziati ad usare sei generazioni fa.
                                                         Perché chiamarci "Ehi tu!" era davvero scomodo.
@@ -448,7 +448,7 @@
         {charTag(FirstCharacter, "annoyed")}:           BASTAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!
 
         + \ {charTag(PG, "neutral")}:                   Se usasse quella lingua per cose intelligenti, Franco salverebbe il mondo.
-            -> glyph_modifier_variation_management(FirstCharacter, fireC)-> 
+            -> glyph_choice_manager(false, fireC)-> 
         {charTag(FirstCharacter, "annoyed")}:           Non esageriamo.
         {charTag(FirstCharacter, "curious")}:           Però i suoi delirii hanno del fascino.
                                                         Se presi a piccole dosi.
@@ -520,14 +520,14 @@
     {charTag(Franco, "{portrait_Franco()}")}:           Secondo te {player_name} come facciamo a capire se {charNameTwo} è una rana?
 
         + \ {charTag(PG, "neutral")}:                   Vediamo come se la cava a cantare.
-                -> glyph_modifier_variation_management(SecondCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
         {charTag(Franco, "{portrait_Franco()}")}:       Geniale!
                                                         {charNameTwo}: ti portiamo al karaoke di cugina Sputt.
                                                         E se sai tutte le parole di <i>(You Drive Me)Craaazy</i> sei una rana!
         {charTag(SecondCharacter, "neutral")}:          Le parole di cosa?!?
 
         + \ {charTag(PG, "neutral")}:                   Dato che è un mistero irrisolvibile, sta a {charNameTwo} decidere se lo è o meno.
-                -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
         {charTag(Franco, "{portrait_Franco()}")}:       E cosa ne pensa {charNameTwo}?
         {charTag(SecondCharacter, "energy")}:           Mi sembrava una cosa bellissima essere una rana.
         {charTag(SecondCharacter, "angry")}:            Ma poi ho scoperto che i girini hanno la scuola, BLEAH!
@@ -537,7 +537,7 @@
                                                         Ci devo ancora pensare.
     
         + \ {charTag(PG, "neutral")}:                    Proviamo a fargli piace mangiare i lombrichi.
-                -> glyph_modifier_variation_management(SecondCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
         {charTag(SecondCharacter, "angry")}:            Questa è la cosa più BLEAH che potessi dire!
         {charTag(Franco, "{portrait_Franco()}")}:       Ma poi non ha senso!
                                                         Io sono vegetariano per esempio.
@@ -547,7 +547,7 @@
                                                         Forse so volare?
         
         + \ {charTag(PG, "neutral")}:                    Franco: tu non sai nuotare, e nemmeno {charNameTwo}: non è che tu sei un bambino?
-                -> glyph_modifier_variation_management(SecondCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
         {charTag(SecondCharacter, "energy")}:           Siii!
                                                         Ha moooolto più senso!
         {charTag(Franco, "{portrait_Franco()}")}:       Ma se sono un bambino vuol dire che non devo più lavorare?
@@ -559,7 +559,7 @@
                                                         Logico, no?                                      
         
         + \ {charTag(PG, "neutral")}:                   La risposta è nel corpo: vediamo quanto salta in alto!
-                -> glyph_modifier_variation_management(SecondCharacter, fireC)-> 
+                -> glyph_choice_manager(false, fireC)-> 
         {charTag(SecondCharacter, "angry")}:            Io oooooooodio lo sport!
                                                         E odio saltare!
         {charTag(Franco, "{portrait_Franco()}")}:       E io non so saltare.
@@ -584,22 +584,22 @@
     Chiacchierata Franco e PNG3
 
         + \ {charTag(PG, "neutral")}:         Metà delle cose che la voce dice sono illogiche.
-                -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
             
         + \ {charTag(PG, "neutral")}:         Dice che stai facendo un buon lavoro.
-                -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
 
         
         + \ {charTag(PG, "neutral")}:         Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
-                -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
 
 
         + \ {charTag(PG, "neutral")}:         Non è più importante il tuo di giudizio sul tuo lavoro, {charNameFive}?
-                -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
 
 
         + \ {charTag(PG, "neutral")}:         Ha detto tante cose ma la risposta è: no.
-                -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
 
     -
     -> third_char_closing_storylet ->
@@ -617,21 +617,21 @@
     Chiacchierata Mentore e PNG3
 
         + \ {charTag(PG, "neutral")}:         Metà delle cose che la voce dice sono illogiche.
-                -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
             
         + \ {charTag(PG, "neutral")}:         Dice che stai facendo un buon lavoro.
-                -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
 
         
         + \ {charTag(PG, "neutral")}:         Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
-                -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
 
 
         + \ {charTag(PG, "neutral")}:         Non è più importante il tuo di giudizio sul tuo lavoro, {charNameFive}?
-                -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
 
         + \ {charTag(PG, "neutral")}:         Ha detto tante cose ma la risposta è: no.
-                -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
     -
 
     -> mentor_closing_storylet ->
@@ -649,24 +649,24 @@
     Chiacchierata Riccio e PNG3
     
          + \ {charTag(PG, "neutral")}:         Metà delle cose che la voce dice sono illogiche.
-                -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
 
             
         + \ {charTag(PG, "neutral")}:         Dice che stai facendo un buon lavoro.
-                -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
 
 
         
         + \ {charTag(PG, "neutral")}:         Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
-                -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
 
 
         + \ {charTag(PG, "neutral")}:         Non è più importante il tuo di giudizio sul tuo lavoro?
-                -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
 
 
         + \ {charTag(PG, "neutral")}:         Ha detto tante cose ma la risposta è: no.
-                -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
 
     -
     -> second_char_closing_storylet ->
@@ -684,20 +684,20 @@
     Chiacchierata Chitarra e PNG3
 
         + \ {charTag(PG, "neutral")}:         Metà delle cose che la voce dice sono illogiche.
-                -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
 
         + \ {charTag(PG, "neutral")}:         Dice che stai facendo un buon lavoro.
-                -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
 
         + \ {charTag(PG, "neutral")}:         Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
-                -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
 
         + \ {charTag(PG, "neutral")}:         Non è più importante il tuo di giudizio sul tuo lavoro?
-                -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
 
 
         + \ {charTag(PG, "neutral")}:         Ha detto tante cose ma la risposta è: no.
-                -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
 
 
     -

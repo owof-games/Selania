@@ -36,19 +36,19 @@
 // Chitarra ci dice qualcosa.
 
 // + Risposta fuoco.
-// -> glyph_modifier_variation_management2(false, fireC) ->          
+// -> glyph_choice_manager2(false, fireC) ->          
 
 // + Risposta aria.
-// -> glyph_modifier_variation_management2(false, airC) ->          
+// -> glyph_choice_manager2(false, airC) ->          
 
 // + Risposta terra.
-// -> glyph_modifier_variation_management2(false, earthC) ->          
+// -> glyph_choice_manager2(false, earthC) ->          
 
 // + Risposta acqua.
-// -> glyph_modifier_variation_management2(false, waterC) ->          
+// -> glyph_choice_manager2(false, waterC) ->          
 
 // + Risposta spirito.
-// -> glyph_modifier_variation_management2(false, aetherC) ->          
+// -> glyph_choice_manager2(false, aetherC) ->          
 // - (top2)
 // METTO IN EVIDENZA
 // Dopo la scelta:
@@ -90,15 +90,15 @@
 //     ~ glyph_actualSigilUses = glyph_maxSigilUses
 
 // + Scelta PG fire
-//     -> glyph_modifier_variation_management2(true, fireC) -> top2 
+//     -> glyph_choice_manager2(true, fireC) -> top2 
 // + Scelta PG air
-//     -> glyph_modifier_variation_management2(true, airC) ->  top2 
+//     -> glyph_choice_manager2(true, airC) ->  top2 
 // + Scelta PG water
-//     -> glyph_modifier_variation_management2(true, waterC) -> top2 
+//     -> glyph_choice_manager2(true, waterC) -> top2 
 // + Scelta PG earth
-//     -> glyph_modifier_variation_management2(true, earthC) ->  top2
+//     -> glyph_choice_manager2(true, earthC) ->  top2
 // + Scelta PG aether
-//     -> glyph_modifier_variation_management2(true, aetherC) ->  top2
+//     -> glyph_choice_manager2(true, aetherC) ->  top2
 // -
 // -> top
 

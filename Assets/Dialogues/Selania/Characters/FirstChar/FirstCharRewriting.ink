@@ -105,7 +105,7 @@
                                                     Tu dici che sei un <b>concentrato di rinunce</b>.
 
             + \ {charTag(PG, "neutral")}:           Ma l'hai detto anche tu: razionalmente, non si può avere tutto.
-                -> glyph_modifier_variation_management(FirstCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
                                                     Non è rinuncia quindi: è accogliere la vita adulta.
                                                     E imparare come compiere delle scelte, dove andare.
                 {
@@ -115,7 +115,7 @@
                 }
 
             + \ {charTag(PG, "neutral")}:           Però per la prima volta sei innamorata, innamorata davvero.
-                -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
                                                     Ti sei chiesta se Ennio non sia la tua casa, il tuo rifugio.
                                                     Non hai certo rinunciato all'amore.
                                                     
@@ -125,14 +125,14 @@
                 }
             
             + \ {charTag(PG, "neutral")}:           Però stai sentendo la voglia di lottare, di cambiare le cose.
-                -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
                                                     Con le tue colleghe sul lavoro.
                                                     Con la tua musica.
                                                     L'hai detto prima: è stato bello dire "no".
                                                     Certe rinunce rendono potenti.
                 
             + \ {charTag(PG, "neutral")}:           Forse perché la tua stabilità è altrove: è con Talco.
-                -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
                                                     La cartolina è una porta aperta: Talco ti attende.
                {
                     - grimoire_firstChar has grimFirstCharEleven: 
@@ -145,7 +145,7 @@
                 }
             
             + \ {charTag(PG, "neutral")}:           Hai detto che quando rinunci a te creando, trovi tutto.
-                -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
                                                     E anche se ti incasina scrivere di politica, stai cercando nella musica un modo per cambiare le cose.
                                                     A volte forse rinunciare è utile per andare avanti.
             -
@@ -178,12 +178,12 @@
                                                     
             //RAFFORZARE FUOCO E ACQUA
             + \ {charTag(PG, "neutral")}:           Talco e un'ondata di cambiamenti ti aspettano in Islanda.
-                -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
                                                     Pensavi Ennio fosse noioso, e te ne sei innamorata.
                                                     La vita ci sorprende sempre quando si tratta di relazioni.
                
             + \ {charTag(PG, "neutral")}:           Hai di più: hai la musica, Valeria, le tue coinquiline.
-                -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
                                                     Le tue relazioni creano cose che rimangono, anche se le relazioni stesse dovessero finire.
                                                     Con le persone che ami sei trasformazione.
             {
@@ -192,7 +192,7 @@
             }                                    
                 
             + \ {charTag(PG, "neutral")}:           Hai un innamorato che ti ha chiesto di convivere.
-                -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
                                                     Un innamorato che ti fa sentire solida.
                                                     Con cui hai potuto svolazzare, conoscerti al meglio.
                 {
@@ -211,7 +211,7 @@
                 }
                 
             + \ {charTag(PG, "neutral")}:           Ma le aspettative non sono fatti.
-                -> glyph_modifier_variation_management(FirstCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
                                                     Ed essere adulti significa sopravvivere alle proprie aspettative.
                                                     Ma non è una sconfitta.
                {
@@ -221,7 +221,7 @@
                 }
             
             + \ {charTag(PG, "neutral")}:           Ma chi ce l'ha un papà con cui suonare e ubriacarsi?!?
-                -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
                                                     I tuoi genitori hanno fatto enormi sacrifici per permetterti di studiare.
                                                     Palese che ti vogliono un bene immenso.
                {
@@ -257,7 +257,7 @@
                                                     Ti aspettavi di fare qualcosa di buono, di salvare il mondo con le tue canzoni.
     
             + \ {charTag(PG, "neutral")}:           Ma se il gioco è rotto, l'unica vittoria c'è rompendo le regole.
-                    -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
                                                     Il mondo è duro da cambiare, ma l'esempio è una gran cosa.
                                                     Rompere le aspettative, l'ovvio, è rivoluzionario.
                 {
@@ -266,7 +266,7 @@
                 }
 
             + \ {charTag(PG, "neutral")}:           È questione di numeri: nessunə salva il mondo da solə.
-                    -> glyph_modifier_variation_management(FirstCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
                                                     È inevitabile, ma non è un fallimento.
                 {
                     - grimoire_firstChar has grimFirstCharTwelve:
@@ -275,7 +275,7 @@
                 }
             
             + \ {charTag(PG, "neutral")}:           Con la band ti sei data uno scopo più grande.
-                -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
                                                     E anche le tue amiche che sono tornate nei paesini, hanno fatto grandi cose.
                {
                     - grimoire_firstChar has grimFirstCharKitchenTwo:
@@ -287,13 +287,13 @@
                 }
 
             + \ {charTag(PG, "neutral")}:           Con le tue colleghe potreste iniziare una piccola rivoluzione.
-                -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
                                                     C'è la rabbia.
                                                     C'è la voglia di creare un sindacato.
                                                     Hai trovato un modo di lottare anche senza la musica.
                 
             + \ {charTag(PG, "neutral")}:           Ma potresti fare qualcosa di buono anche prendendoti cura dei tuoi genitori.
-                -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
                 {
                     -   grimoire_firstChar has grimFirstCharKitchenAlone: 
                                                     Magari scoprendo come capire tua madre cucinando assieme.
@@ -333,12 +333,12 @@
             {charTag(PG, "neutral")}:               Ti senti mediocre, e hai paura di rischiare di fare un salto e perdere tutto, di fallire.
     
             + \ {charTag(PG, "neutral")}:           Come nei giochi, si può sbagliare e ricominciare.
-                -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
                                                     Lo dice Ennio quando gioca.
                                                     L'hai visto quando Talco ha mollato il Conservatorio, eppure si è fattə la sua vita.
                 
             + \ {charTag(PG, "neutral")}:           Sei amata da molte persone: anche se cadi, non sarai sola.
-                -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
                                                     Le tue amiche, Ennio, Talco, la tua famiglia.
                                                     Se dovessi cadere, avrai una rete pronta ad aiutarti.
                 {
@@ -348,12 +348,12 @@
                 }
             
             + \ {charTag(PG, "neutral")}:           La musica e ciò che ti permette di fare saranno sempre con te.
-                -> glyph_modifier_variation_management(FirstCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
                                                     Puoi raccontare storie mai sentite.
                                                     Continuare a provare a cambiare il mondo come vorresti.
                
             + \ {charTag(PG, "neutral")}:           La mediocrità non è una colpa ma un risultato statistico.
-                -> glyph_modifier_variation_management(FirstCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
                                                     Ennio è felice nel suo non cercare di essere speciale.
                                                     La mediocrità non è una colpa, ma solo un risultato statistico.
                 {
@@ -363,7 +363,7 @@
                 }
             
             + \ {charTag(PG, "neutral")}:           Talco ha rischiato, parlandoti della sua gravidanza.
-                -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
                                                     Ed è servito, perché ha smosso in te domande.
                                                     Su di te, sul tuo futuro.
                                                     Il rischio porta cambiamento.
@@ -407,23 +407,23 @@
 
             + (fire) \ {charTag(PG, "neutral")}:        Rivoluziona la tua vita, raggiungi Talco in Islanda.
             //me ne vado all'estero da Talco.
-                -> glyph_modifier_variation_management(FirstCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
             
             + (aether) \ {charTag(PG, "neutral")}:      La musica ti dà uno scopo più grande. Seguila.
             // mollo il lavoro per la musica, per far qualcosa di buono per le altre persone.
-                 -> glyph_modifier_variation_management(FirstCharacter, aetherC)->         
+                 -> glyph_choice_manager(false, aetherC)->         
             
             + (earth) \ {charTag(PG, "neutral")}:       Torna alla tua infanzia, dai tuoi e ricomincia da dove sei cresciuta.
             //torno al sud, ricomincio al sicuro.
-                -> glyph_modifier_variation_management(FirstCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
                 
             + (water) \ {charTag(PG, "neutral")}:       L'amore e la stabilità di Ennio sono la base per poter cambiare.
             //me ne vado a vivere col moroso.
-                -> glyph_modifier_variation_management(FirstCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
                 
             + (air) \ {charTag(PG, "neutral")}:         Hai una vita ricca. Goditela.
             //trovare il bello in quello che si ha (per la gioia di Mentore).
-                -> glyph_modifier_variation_management(FirstCharacter, airC)->   
+                -> glyph_choice_manager(false, airC)->   
             - 
 
         //Nota: la parte di accettazione del nome è prima dell'aggiornamento, così il nome nuovo compare solo quando viene dichiarato.    

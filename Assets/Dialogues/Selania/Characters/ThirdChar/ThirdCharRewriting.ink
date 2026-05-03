@@ -64,24 +64,24 @@
             {charTag(PG, "neutral")}:      Hai detto che da quando nonna è nella casa dei vecchi fa tutto schifo.
 
             + \ {charTag(PG, "neutral")}:         Fuoco
-                -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
 
             
             + \ {charTag(PG, "neutral")}:         Acqua
-                -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
  
                     
                     
             + \ {charTag(PG, "neutral")}:         Terra
-                -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
    
                                 
             + \ {charTag(PG, "neutral")}:         Aria
-                    -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
       
     
             + \ {charTag(PG, "neutral")}:         Spirito
-                -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
         
         -
 
@@ -110,23 +110,23 @@
         {charTag(PG, "neutral")}:      A scuola le maestre dicono che sei cattivo, bugiardo, violento, e finisci sempre in punizione.
 
         + \ {charTag(PG, "neutral")}:         Terra
-                -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
   
 
         + \ {charTag(PG, "neutral")}:         Aria
-                -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
 
                    
         + \ {charTag(PG, "neutral")}:         Fuoco
-                -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
   
                     
         + \ {charTag(PG, "neutral")}:         Acqua
-                -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
 
                    
         + \ {charTag(PG, "neutral")}:         Spirito
-                -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
   
         -
         ~ numberQuestion ++     
@@ -150,23 +150,23 @@
             
     
         + \ {charTag(PG, "neutral")}:         Spirito
-            -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+            -> glyph_choice_manager(false, aetherC)->
             
 
         + \ {charTag(PG, "neutral")}:         Acqua
-            -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+            -> glyph_choice_manager(false, waterC)->
             
                    
         + \ {charTag(PG, "neutral")}:         Fuoco
-            -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+            -> glyph_choice_manager(false, fireC)->
             
                     
         + \ {charTag(PG, "neutral")}:         Terra
-            -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+            -> glyph_choice_manager(false, earthC)->
             
 
         + \ {charTag(PG, "neutral")}:         Aria
-            -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+            -> glyph_choice_manager(false, airC)->
             
         -
 
@@ -194,19 +194,19 @@
         {charTag(PG, "neutral")}:      Hai detto che i grandi fanno schifo, e che non vuoi diventare grande.
         
             + \ {charTag(PG, "neutral")}:         Fuoco
-                -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
         
             + \ {charTag(PG, "neutral")}:         Aria
-                -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
             
             + \ {charTag(PG, "neutral")}:         Spirito
-                -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
                 
             + \ {charTag(PG, "neutral")}:         Acqua
-                -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
                 
             + \ {charTag(PG, "neutral")}:         Terra
-                -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
                 
         -
         ~ numberQuestion ++       
@@ -232,19 +232,19 @@
         -> rewriting_witch_feedback(endR) ->     
      
         + (fire)\ {charTag(PG, "neutral")}:         Fuoco
-            -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+            -> glyph_choice_manager(false, fireC)->
     
         + (aether)\ {charTag(PG, "neutral")}:        Spirito
-            -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+            -> glyph_choice_manager(false, aetherC)->
         
         + (earth)\ {charTag(PG, "neutral")}:         Terra
-            -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+            -> glyph_choice_manager(false, earthC)->
             
         + (water)\ {charTag(PG, "neutral")}:         Acqua
-            -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+            -> glyph_choice_manager(false, waterC)->
                   
         + (air)\ {charTag(PG, "neutral")}:         Aria
-            -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+            -> glyph_choice_manager(false, airC)->
 
         -
     //Nota: la parte di accettazione del nome è prima dell'aggiornamento, così il nome nuovo compare solo quando viene dichiarato.

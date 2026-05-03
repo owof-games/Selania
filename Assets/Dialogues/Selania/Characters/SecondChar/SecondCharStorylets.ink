@@ -13,7 +13,7 @@
         {charTag(SecondCharacter, "energy")}:                   Ma tu perché sei qui?
             
             + (capire) \ {charTag(PG, "neutral")}:              Questo luogo è insolito e voglio studiarlo, capirlo.
-                    -> glyph_modifier_variation_management(SecondCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
             {charTag(SecondCharacter, "energy")}:               Anche a me mi piace capire le cose.
             {charTag(SecondCharacter, "melanchonic")}:          I grandi si arrabbiano se faccio troppe domande. 
             {charTag(SecondCharacter, "energy")}:               Perché c'è la neve ma non fa freddo? 
@@ -21,7 +21,7 @@
             {charTag(SecondCharacter, "angry")}:                Perché c'è una porta vicino alla stazione ma non ci posso entrare?
 
             + (rilassante)\ {charTag(PG, "neutral")}:           C'è qualcosa di rilassante, non trovi?
-                    -> glyph_modifier_variation_management(SecondCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
             {charTag(SecondCharacter, "neutral")}:              Sì no boh.
                                                                 Mi annoiano le cose rilassanti.
             {charTag(SecondCharacter, "energy")}:               Mentre ti aspettavo ho studiato la stazione.
@@ -29,20 +29,20 @@
             {charTag(SecondCharacter, "neutral")}:              E la porta nell'albero, non mi ci fa mica entrare!
      
             + (tu)\ {charTag(PG, "neutral")}:                   Bimbo, sta a me chiedertelo: perché sei qui?
-                    -> glyph_modifier_variation_management(SecondCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
             {charTag(SecondCharacter, "angry")}:                Boh, che ne so? 
             {charTag(SecondCharacter, "neutral")}:              Ero a scuola, ed era l'ora di ginnastica.
                                                                 Mi sono chiuso a leggere in bagno.
                                                                 Non mi sarà mica addormentato?                                                
                 
             + (difficoltà)\ {charTag(PG, "neutral")}:           Qui posso aiutare chi è in difficoltà.
-                    -> glyph_modifier_variation_management(SecondCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
             {charTag(SecondCharacter, "emotional")}:            Come il veterinario?
             {charTag(SecondCharacter, "neutral")}:              O come la maestra di ginnastica che dice di aiutarmi.
             {charTag(SecondCharacter, "angry")}:                Ma poi mi sgrida se sbaglio?
                     
             + (me)\ {charTag(PG, "neutral")}:                   Per capire meglio chi sono.
-                    -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
             {charTag(SecondCharacter, "energy")}:               Non sai chi sei?
             {charTag(SecondCharacter, "melanchonic")}:          A me mi piacerebbe essere un'altra persona a volte.
             {charTag(SecondCharacter, "neutral")}:              O un labrador, così se mi rotolo nel fango tutti ridono e non si arrabbiano.
@@ -72,7 +72,7 @@
             }
 
             + (twoAir) \ {charTag(PG, "neutral")}:              Però il compleanno arriva sempre, a prescindere dalle caramelle.
-                    -> glyph_modifier_variation_management(SecondCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
             {charTag(SecondCharacter, "neutral")}:              Forse la data. 
                                                                 Quella sì.
             {charTag(SecondCharacter, "energy")}:               Ma il compleanno è un'altra cosa.
@@ -81,7 +81,7 @@
                     
                 
             + (stagno) \ {charTag(PG, "neutral")}:              Niente caramelle, ma c'è uno stagno dove nuotare!
-                    -> glyph_modifier_variation_management(SecondCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
             {charTag(SecondCharacter, "energy")}:               WOOOOOOOOOOW!
             {charTag(SecondCharacter, "melanchonic")}:          Non avevo mai visto uno stagno!
             {charTag(SecondCharacter, "emotional")}:            Però questa estate ho visto un mare gigantesco.
@@ -90,7 +90,7 @@
                                                                 Ma era comunque freddo e mamma aveva paura che ci annegavo.    
     
             + (ripreso) \ {charTag(PG, "neutral")}:             Giustamente ti sei arrabbiato e hai ripreso i giocattoli, vero?
-                    -> glyph_modifier_variation_management(SecondCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
             {charTag(SecondCharacter, "angry")}:                Non sono mica giocattoli.
                                                                 Sono AC-TION-FI-GU-RE-S!
             {charTag(SecondCharacter, "melanchonic")}:          E non me le sono riprese.
@@ -98,13 +98,13 @@
             {charTag(SecondCharacter, "melanchonic")}:          E non voglio farlo arrabbiare.
                     
             + (mamma) \ {charTag(PG, "neutral")}:               Vuoi molto bene alla tua mamma?
-                    -> glyph_modifier_variation_management(SecondCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
             {charTag(SecondCharacter, "emotional")}:            Sì sì sì. 
             {charTag(SecondCharacter, "neutral")}:              Lei è la mamma migliore del pianeta.
                                                                 Dell'universo.
                     
             + (twoAether) \ {charTag(PG, "neutral")}:           Quindi, rubandoti i giochi, tuo papà ti ha fatto un favore.
-                    -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
             {charTag(SecondCharacter, "neutral")}:              Sì no boh.
             {charTag(SecondCharacter, "angry")}:                Non ha mica senso quello che dici.
                                                                 Papà non mi deve prendere mica le mie cose.
@@ -182,7 +182,7 @@
         {charTag(SecondCharacter, "melanchonic")}:          Saranno broccoli?
         
             + \ {charTag(PG, "neutral")}:                   Una cosa mai accaduta è comunque ragionevolmente possibile.
-                    -> glyph_modifier_variation_management(SecondCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
             {charTag(SecondCharacter, "emotional")}:        Quindi mi credi?
                                                             Quindi tutto è possibile?
             {charTag(SecondCharacter, "energy")}:           Anche che salto e volo?
@@ -191,7 +191,7 @@
             {charTag(SecondCharacter, "neutral")}:          Ho finito le idee.
             
             + \ {charTag(PG, "neutral")}:                   Magari è qualcosa di buono da mangiare!
-                    -> glyph_modifier_variation_management(SecondCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
             {charTag(SecondCharacter, "emotional")}:        Posso mangiarlo anche io?!?
             {charTag(SecondCharacter, "energy")}:           Magari è una torta di cioccolato.
             {charTag(SecondCharacter, "neutral")}:          Ma senza liquore!
@@ -203,14 +203,14 @@
             }      
 
             + \ {charTag(PG, "neutral")}:                   E se lo senti e prudono le orecchie è una bugia.
-                    -> glyph_modifier_variation_management(SecondCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
             {charTag(SecondCharacter, "angry")}:            Non sono sto dicendo bugie!
                                                             Mi piacciono gli animali.
                                                             Non mi serve inventare altri animali perché quelli che ci sono mi piacciono già.
             {charTag(SecondCharacter, "neutral")}:          E la rana c'è, vai a vedere!
                     
             + \ {charTag(PG, "neutral")}:                   Sembra una rana molto gentile.
-                    -> glyph_modifier_variation_management(SecondCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
             {charTag(SecondCharacter, "emotional")}:        A me mi sta simpatica.
             {charTag(SecondCharacter, "neutral")}:          E non credo sia tossica o velenosa.
             {charTag(SecondCharacter, "melanchonic")}:      Però anche io vorrei un regalo.
@@ -218,7 +218,7 @@
                                                             Spero tanto sia un cucciolo!
 
             + \ {charTag(PG, "neutral")}:                   Deve essere una rana molto saggia.
-                -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
             {charTag(SecondCharacter, "neutral")}:          Non lo so, ha detto le cose in modo buffo.
             {charTag(SecondCharacter, "energy")}:           Ha anche usato una parolaccia.
             {
@@ -379,33 +379,33 @@
             //Definire meglio in base ai colori.
             
             + {him_liar} \ {charTag(PG, "neutral")}:        Prima hai detto di essere pieno di action figures.
-                    -> glyph_modifier_variation_management(SecondCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
             {charTag(SecondCharacter, "angry")}:            "Pieno" è un modo di dire.
             {charTag(SecondCharacter, "neutral")}:          Come "Furbo come una volpe".
                                                             O "Simpatico come {player_name}".
             
             + {him_liar} \ {charTag(PG, "neutral")}:        Non mi prendere in giro, hai detto che le action le ha rubate papà.
-                    -> glyph_modifier_variation_management(SecondCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
             {charTag(SecondCharacter, "angry")}:            No.
                                                             Ricordi male.
                                                             Papà è bravo, non fa queste cose. 
             
             + {her_liar} \ {charTag(PG, "neutral")}:        Tua mamma è una che si arrabbia spesso?
-                    -> glyph_modifier_variation_management(SecondCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
             {charTag(SecondCharacter, "melanchonic")}:      Un po'.
                                                             Non è cattiva, è che sono cattivo io.
             {charTag(SecondCharacter, "neutral")}:          E così perde la pazienza.
             {charTag(SecondCharacter, "melanchonic")}:      Ma è colpa mia.
             
             + {her_liar or they_liar} \ {charTag(PG, "neutral")}: Avevi detto che questo è il regalo di compleanno di tua mamma.
-                    -> glyph_modifier_variation_management(SecondCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
             {charTag(SecondCharacter, "neutral")}:          Sì no boh.
                                                             Anche.
             {charTag(SecondCharacter, "angry")}:            Uffi, che noia che fai!
                     
             
             + {they_liar} \ {charTag(PG, "neutral")}:       Ehi bimbo! Avevi detto che questo è il suo regalo di compleanno!
-                    -> glyph_modifier_variation_management(SecondCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
             {charTag(SecondCharacter, "neutral")}:          Sì, certo che sì.
                                                             Si è dimenticata il compleanno, ma poi ha deciso di farmi questo.
                                                             Per scusarsi.
@@ -413,7 +413,7 @@
                    
                  
             + \ {charTag(PG, "neutral")}:                   Ci stai male quando mamma dimentica il tuo compleanno?
-                    -> glyph_modifier_variation_management(SecondCharacter, waterC)->    
+                    -> glyph_choice_manager(false, waterC)->    
             {charTag(SecondCharacter, "melanchonic")}:      Un po'.
                                                             Ma solo perché fa tante promesse tutto l'anno.
                                                             E poi non succede mai niente.
@@ -424,14 +424,14 @@
 
 
             + \ {charTag(PG, "neutral")}:                   Però non mi hai detto il tuo nome. Sei una spia? Un gatto? Un gatto spia?
-                    -> glyph_modifier_variation_management(SecondCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
             {charTag(SecondCharacter, "neutral")}:          Sì no boh.
             {charTag(SecondCharacter, "energy")}:           Una spia non direbbe mai che è una spia.
                                                             Oppure ti confonde, così non capisci cosa è vero o cosa no.
             {charTag(SecondCharacter, "angry")}:            Però tu non puoi mica farlo!
             
             + \ {charTag(PG, "neutral")}:                   Sembra che tua mamma ha tante preoccupazioni.
-                    -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
             {charTag(SecondCharacter, "melanchonic")}:      Mamma è sempre preoccupata di tutto.
                                                             Mio fratello prova ad aiutarla, ma a volte si arrabbia perché lei non vuole.
                                                             Dice che ce la vuole fare da sola.
@@ -512,7 +512,7 @@
         {charTag(PG, "neutral")}:                           {charNameFive} dice che prima le hai dato un calcio.
             
             + (razionale) \ {charTag(PG, "neutral")}:       Pensavo che uno scienziato come te fosse più razionale.
-                    -> glyph_modifier_variation_management(SecondCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
             {charTag(SecondCharacter, "angry")}:            Ehi! Mica mi chiedi perché lo fatto!
                                                             Vi odio.
                                                             Tu e lei.
@@ -530,7 +530,7 @@
 
 
             + (scherzo) \ {charTag(PG, "neutral")}:         Non c'erano modi più solidi per far valere le tue ragioni?
-                    -> glyph_modifier_variation_management(SecondCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
 
             {charTag(SecondCharacter, "neutral")}:          Sì no boh.
                                                             Non ho pensato molto.
@@ -551,7 +551,7 @@
             }                                            
             
             + (stupido) \ {charTag(PG, "neutral")}:         Va bene difendersi, ma picchiare una vecchia è da stupidi.
-                    -> glyph_modifier_variation_management(SecondCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
             {
                 -are_two_entities_together(FirstCharacter, PG):
             {charTag(FirstCharacter, "annoyed")}:           Quindi se menava me andava bene?    
@@ -570,7 +570,7 @@
                                                             Ma mi sono arrabbiato troppo.
 
             + (male) \ {charTag(PG, "neutral")}:            Si è sentita ferita, lo sai?
-                    -> glyph_modifier_variation_management(SecondCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
 
                 {charTag(SecondCharacter, "angry")}:        E a me che mi importa?
                                                             Mi ha sgridato perché facevo i salti nello stagno.
@@ -585,7 +585,7 @@
         
 
             + (ottenuto) \ {charTag(PG, "neutral")}:        Hai ottenuto quello che volevi?
-                    -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
 
             {charTag(SecondCharacter, "neutral")}:          Ha smesso di dirmi che non devo stare qui.
                                                             Che devo tornare a casa.
@@ -669,7 +669,7 @@
                                                             Sicuro le piace tantissimo questo posto.
         
             + (nonno) \ {charTag(PG, "neutral")}:           Non parli mai di tuo nonno. Deduco che non c'è più?
-                    -> glyph_modifier_variation_management(SecondCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
             {charTag(SecondCharacter, "neutral")}:          Se ne è andato quando papà era molto piccolo.
                                                             Più di me.
             {charTag(SecondCharacter, "melanchonic")}:      Ogni tanto scriveva delle lettere che facevano arrabbiare mamma.
@@ -678,7 +678,7 @@
                                                             Ma papà tiene tutte le sue lettere nascoste nel garage.
                     
             + (barare) \ {charTag(PG, "neutral")}:          Insegni a barare anche a me?
-                    -> glyph_modifier_variation_management(SecondCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
             {charTag(SecondCharacter, "energy")}:           Ho una idea!
                                                             Troviamo delle carte.
                                                             Ti insegno come si bara.
@@ -686,7 +686,7 @@
             {charTag(SecondCharacter, "angry")}:            Così la smette di dirmi cosa non devo fare.
                     
             + (ciabatta) \ {charTag(PG, "neutral")}:        Tua nonna sembra una tipa forte!
-                    -> glyph_modifier_variation_management(SecondCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
             {charTag(SecondCharacter, "neutral")}:          "Forte"?
             {charTag(SecondCharacter, "energy")}:           Quanto sei {player_pronouns has him:vecchio|{player_pronouns has her:vecchia|vecchiə}}?
             {charTag(SecondCharacter, "emotional")}:        Però sì, lei spacca proprio.
@@ -697,7 +697,7 @@
                     
                 
             + (casa) \ {charTag(PG, "neutral")}:            Ti manca casa? Vorresti tornarci?
-                    -> glyph_modifier_variation_management(SecondCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
             {charTag(SecondCharacter, "neutral")}:          Sì no boh.
                                                             Voglio tornare.
             {charTag(SecondCharacter, "melanchonic")}:      Ma se poi mamma si arrabbia?
@@ -707,7 +707,7 @@
             {charTag(SecondCharacter, "melanchonic")}:      Ma non piaccio al suo amico.
                 
             + (paura)\ {charTag(PG, "neutral")}:            Quando i grandi hanno paura, fanno cose cattive.
-                    -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
             {charTag(SecondCharacter, "neutral")}:          Papà dice che i grandi non hanno paura.
                                                             Ma non gli credo.
             {charTag(SecondCharacter, "emotional")}:        Mio fratello a volte ha paura che l'amico lo lascia.
@@ -795,7 +795,7 @@
                                                             Ma a me piace barare solo quando gioco a carte.
         }
             + (piangono) \ {charTag(PG, "neutral")}:        È provato che anche i maschi piangono, e pure gli orsi e gli elefanti.
-                    -> glyph_modifier_variation_management(SecondCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
             {charTag(SecondCharacter, "neutral")}:          Gli orsi mi piacciono.
                                                             Sono forti.
                                                             Ma comunque piangono.
@@ -804,7 +804,7 @@
                                                             Ma non so se mi piace piangere.
     
             + (tortura)\ {charTag(PG, "neutral")}:          Un posto in cui star seduti tutte quelle ore è una tortura.
-                    -> glyph_modifier_variation_management(SecondCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
             {charTag(SecondCharacter, "energy")}:           ESATTO!
             {charTag(SecondCharacter, "melanchonic")}:      Io muoio lì dentro.
                                                             Fermo e in silenzio ad ascoltare cose noiose.                                                
@@ -816,14 +816,14 @@
                                                             E se mi annoio comunque finisco in castigo.
                     
             + (lottare)\ {charTag(PG, "neutral")}:          Per sopravvivere devi stringere i denti e lottare!
-                    -> glyph_modifier_variation_management(SecondCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
             {charTag(SecondCharacter, "neutral")}:          Lo dice anche papà.
                                                             Ma a me non mi interessa mica tanto.
             {charTag(SecondCharacter, "energy")}:           Voglio solo studiare gli animali.
             {charTag(SecondCharacter, "angry")}:            E che mi lascino in pace.
 
             + (duro)\ {charTag(PG, "neutral")}:             Mi spiace {charNameTwo}, sembra tutto molto duro.
-                    -> glyph_modifier_variation_management(SecondCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
             {charTag(SecondCharacter, "neutral")}:          Sì no boh.
             {charTag(SecondCharacter, "angry")}:            Non dirlo.
                                                             Mi viene da piangere se dici che ti dispiace.
@@ -831,7 +831,7 @@
             {charTag(SecondCharacter, "neutral")}:          Quindi non dirlo più.
 
             + (imparato) \ {charTag(PG, "neutral")}:        Hai mai imparato davvero qualcosa dai castighi?
-                    -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
             {charTag(SecondCharacter, "energy")}:           A non farmi scoprire.
             {charTag(SecondCharacter, "neutral")}:          I castighi sono proprio brutti.
                                                             Sentire tutti che giocano e si divertono.
@@ -893,14 +893,14 @@
         }
             
             + \ {charTag(PG, "neutral")}:                   Obiettivamente conosci tutto degli animali.
-                    -> glyph_modifier_variation_management(SecondCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
             {charTag(SecondCharacter, "energy")}:           Tutto, sì!
             {charTag(SecondCharacter, "neutral")}:          No, non <i>tutto tutto tutto</i>.
                                                             Ma solo perché sono piccolo.
             {charTag(SecondCharacter, "energy")}:           Un giorno sapro davvero tutte le cose possibili! 
 
             + \ {charTag(PG, "neutral")}:                   Hai mai provato a fare le cose che correggi nel mondo reale?
-                    -> glyph_modifier_variation_management(SecondCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
             {charTag(SecondCharacter, "energy")}:           Sì!
             {charTag(SecondCharacter, "neutral")}:          Ma non è finita benissimo.
                                                             Ho detto delle cose a un bullo.
@@ -911,7 +911,7 @@
                                                             Ho cercato per tutta la gita di nascondermi nelle grotte.
                         
             + \ {charTag(PG, "neutral")}:                   I bulli si battono facendo squadra, non coi sogni.
-                    -> glyph_modifier_variation_management(SecondCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
             {charTag(SecondCharacter, "neutral")}:          Una volta ci ho provato.
             {charTag(SecondCharacter, "melanchonic")}:      Ma io non piaccio molto agli altri.
                                                             E non vogliono fare squadra con me.
@@ -921,7 +921,7 @@
                                                             E che non gli piace quando mi arrabbio.
             
             + \ {charTag(PG, "neutral")}:                   Grazie per la tua fiducia, per esserti confidato.
-                    -> glyph_modifier_variation_management(SecondCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
             {charTag(SecondCharacter, "neutral")}:          Sì no boh.
             {charTag(SecondCharacter, "neutral")}:          Non è mica una cosa così grossa comunque.
             {charTag(SecondCharacter, "emotional")}:        Però mi piace.
@@ -931,7 +931,7 @@
             {charTag(SecondCharacter, "melanchonic")}:      Non mi piace annoiarmi.
 
             + \ {charTag(PG, "neutral")}:                   E quando correggi le cose, come sono i tuoi sogni?
-                    -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
             {charTag(SecondCharacter, "energy")}:           Suuuuperincasinati!
                                                             Una volta ho sognato che venivo inseguito da me stesso dentro una scuola.
                                                             E la scuola era infinita.
@@ -1016,7 +1016,7 @@
         }
             
             + \ {charTag(PG, "neutral")}:                   Oggettivamente pescare è una cosa, nuotare un'altra.
-                    -> glyph_modifier_variation_management(SecondCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
             {charTag(SecondCharacter, "energy")}:           Esatto!
             {charTag(SecondCharacter, "melanchonic")}:      Ma lei non lo vuole capire.
             {charTag(SecondCharacter, "neutral")}:          "E se cadi in acqua?"
@@ -1025,7 +1025,7 @@
             {charTag(SecondCharacter, "angry")}:            Mamma è davvero pesante.
 
             + \ {charTag(PG, "neutral")}:                   Le statue di tuo fratello si muovono?
-                    -> glyph_modifier_variation_management(SecondCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
             {charTag(SecondCharacter, "energy")}:           Forse quando non ci siamo?
             {charTag(SecondCharacter, "neutral")}:          Mio fratello è superdisordinato.
                                                             Quindi se si spostano non è che lo capisci con facilità.
@@ -1034,7 +1034,7 @@
                                                             Forse in biblioteca c'è una guida!
                     
             + (ragione)\ {charTag(PG, "neutral")}:         {charNameTwo} mannaggia, non dare sempre ragione ai grandi!
-                    -> glyph_modifier_variation_management(SecondCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
             {charTag(SecondCharacter, "neutral")}:          Non è mica facile!
             {charTag(SecondCharacter, "angry")}:            Papà se si arrabbia mi picchia.
             {charTag(SecondCharacter, "neutral")}:          E se invece parli dell'amico di mio fratello...
@@ -1043,7 +1043,7 @@
                                                             Poi non ci posso più stare con mio fratello!
                 
             + \ {charTag(PG, "neutral")}:                   Hai chiesto all'amico di tuo fratello cosa prova per te?
-                    -> glyph_modifier_variation_management(SecondCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
             {charTag(SecondCharacter, "neutral")}:          Scherzi?!?
             {charTag(SecondCharacter, "angry")}:            Non sono mica <b><i>così</b></i> strano.
             {charTag(SecondCharacter, "neutral")}:          Però una volta ho chiesto a mio fratello se gli sto simpatico.
@@ -1054,7 +1054,7 @@
             {charTag(SecondCharacter, "melanchonic")}:      Perché è una cosa che rende molto triste mio fratello.
                 
             + (maturo) \ {charTag(PG, "neutral")}:          Correggere le tue bugie è stato un gesto maturo.
-                    -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
             {charTag(SecondCharacter, "neutral")}:          Sì no boh.
                                                             Non so ancora se mi piaci.
                                                             Ma non voglio dire le bugie se riesco.
@@ -1089,7 +1089,7 @@
         {charTag(SecondCharacter, "energy")}:               Tu hai sempre voluto fare {player_pronouns has him: il riscrittore|{player_pronouns has her: la riscrittora|lə riscrittorə}} come lavoro?
         
             + \ {charTag(PG, "neutral")}:                   Fino a poco fa non sapevo nemmeno dell'esistenza di questo posto.
-                    -> glyph_modifier_variation_management(SecondCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
             {charTag(SecondCharacter, "energy")}:           Figo!
                                                             Quindi non sono l'unico.
             {charTag(SecondCharacter, "neutral")}:          Quando chiedo le cose a {charNameFive} mi fa sentire stupido.
@@ -1107,7 +1107,7 @@
             }
                     
             + \ {charTag(PG, "neutral")}:                    Mi piace tenermi impegnat{player_pronouns has him:o|{player_pronouns has her:a|ə}}, non mi importa molto il come.
-                    -> glyph_modifier_variation_management(SecondCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
             {charTag(SecondCharacter, "neutral")}:          Ah.        
                                                             Ai grandi piace parlare di lavoro.
             {charTag(SecondCharacter, "angry")}:            E le maestre parlano sempre del futuro.
@@ -1115,7 +1115,7 @@
             {charTag(SecondCharacter, "energy")}:           Ma io voglio solo imparare cose nuove!
 
             + \ {charTag(PG, "neutral")}:                   Guarda che non l'ho scelto. Manco mi pagano.
-                    -> glyph_modifier_variation_management(SecondCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
             {charTag(SecondCharacter, "neutral")}:          Che fregatura.
             {charTag(SecondCharacter, "angry")}:            Nemmeno mamma mi paga per i lavoretti a casa.
             {charTag(SecondCharacter, "neutral")}:          Dice che è una cosa che devono fare tutti, grandi e piccoli, maschi e femmine.
@@ -1126,7 +1126,7 @@
             {charTag(SecondCharacter, "angry")}:            Ma papà non fa mai niente in casa.
 
             + \ {charTag(PG, "neutral")}:                   Mi è sempre piaciuto fare stare bene le persone.
-                    -> glyph_modifier_variation_management(SecondCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
             {
             - second_char_main_storylets.one.difficoltà:
                 {charTag(SecondCharacter, "neutral")}:      Lo dicevi anche quando ci siamo conosciuti.
@@ -1141,7 +1141,7 @@
                                                             Mica puoi litigare con te stesso, no?
                     
             + \ {charTag(PG, "neutral")}:                   Voglio portare un grande cambiamento partendo dal piccolo.
-                    -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
             {charTag(SecondCharacter, "neutral")}:          E io sono piccolo.
                                                             Mi sembra una cosa faticosa.
             {charTag(SecondCharacter, "emotional")}:        Però la capisco.
@@ -1205,7 +1205,7 @@
                                                             Ma non voglio essere grande.
             
             + \ {charTag(PG, "neutral")}:                   Ma crescerai comunque, non è una scelta.
-                    -> glyph_modifier_variation_management(SecondCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
             {charTag(SecondCharacter, "neutral")}:          Sì no boh.
                                                             Non è detto.
                                                             Magari resto qui e magari qui il tempo non passa mica.
@@ -1214,7 +1214,7 @@
                                                             Così siamo tutti felici.
  
             + \ {charTag(PG, "neutral")}:                   E se invece fai come l'axolotl e diventi grande, ma fai anche il bambino se serve?
-                    -> glyph_modifier_variation_management(SecondCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
             {charTag(SecondCharacter, "neutral")}:          Nonna dice che è il problema di mamma.
                                                             Che non si prende le sue responsabilità.
                                                             A me mica mi dispiacciono le responsabilità.
@@ -1224,7 +1224,7 @@
                                                             A me non mi piace la mia rabbia.
 
             + \ {charTag(PG, "neutral")}:                   Puoi fare il ribelle che salva gli animali!
-                    -> glyph_modifier_variation_management(SecondCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
             {charTag(SecondCharacter, "emotional")}:        Come Greta!
                                                             A mio fratello piace tanto.
             {charTag(SecondCharacter, "neutral")}:          Però mio fratello dice che bisogna picchiare "quelli".
@@ -1235,7 +1235,7 @@
                                                             Non ho capito mica nemmeno cosa sia "fare fuori".
 
             + \ {charTag(PG, "neutral")}:                   Non ti preoccupare: hai tanto tanto tanto tempo per decidere che fare.
-                    -> glyph_modifier_variation_management(SecondCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
             {charTag(SecondCharacter, "neutral")}:          Sarà.
             {charTag(SecondCharacter, "melanchonic")}:      Ma Lara sa già parlare due lingue.
                                                             E Jin è appena entrato nella giovanile della Fiorentina.
@@ -1245,7 +1245,7 @@
             {charTag(SecondCharacter, "melanchonic")}:      E dire bugie.
 
             + (storico)\ {charTag(PG, "neutral")}:          Potresti diventare uno storico degli animali.
-                    -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
             {charTag(SecondCharacter, "emotional")}:        Sì sì sì!
                                                             Qualcuno che racconta le loro storie?
             {charTag(SecondCharacter, "energy")}:           Come un gioco forse.
@@ -1320,7 +1320,7 @@
         }        
 
             + \ {charTag(PG, "neutral")}:                   Potresti studiare la tua rabbia, come se fosse un animale.
-                    -> glyph_modifier_variation_management(SecondCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
             {charTag(SecondCharacter, "angry")}:            Mi agito quando provo a capirla.
             {charTag(SecondCharacter, "melanchonic")}:      Ma voglio capirla.
             {charTag(SecondCharacter, "energy")}:           Mi piace che sia un animale.
@@ -1329,28 +1329,28 @@
             {charTag(SecondCharacter, "melanchonic")}:      Un riccio.     
 
             + \ {charTag(PG, "neutral")}:                   Hai pensato a qualcosa da fare per sfogare la rabbia?
-                    -> glyph_modifier_variation_management(SecondCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
             {charTag(SecondCharacter, "melanchonic")}:      Non ci riesco.
                                                             Quando arriva è fortissima.
             {charTag(SecondCharacter, "neutral")}:          Vorrei picchiare qualcosa e urlare e vomitare assieme.
                                                             E non so cosa fare.
                   
             + \ {charTag(PG, "neutral")}:                   Non sempre fare a pugni è sbagliato. Fallo coi bulli.
-                    -> glyph_modifier_variation_management(SecondCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
             {charTag(SecondCharacter, "angry")}:            Così le prendo ancora di più?
                                                             No.
             {charTag(SecondCharacter, "melanchonic")}:      Non lo so.
             {charTag(SecondCharacter, "neutral")}:          No.                                                
                     
             + \ {charTag(PG, "neutral")}:                   Nessuno merita di essere picchiato, né tu né quel bambino.
-                    -> glyph_modifier_variation_management(SecondCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
             {charTag(SecondCharacter, "neutral")}:          Però se papà mi picchia c'è un motivo.
                                                             Mamma dice che papà non lascia mai nulla al caso.
                                                             E per questo è il più bravo a lavoro.
             {charTag(SecondCharacter, "angry")}:            E quel bambino è davvero fastidioso.
                     
             + \ {charTag(PG, "neutral")}:                   La rabbia della ragazzina ha protetto il fratello.
-                    -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
             {charTag(SecondCharacter, "angry")}:            Ma chi protegge me?
             {charTag(SecondCharacter, "melanchonic")}:      Uh, bugia, scusa.
                                                             Qui sono stato io a fare il cattivo.
@@ -1410,7 +1410,7 @@
         } 
         
             + \ {charTag(PG, "neutral")}:                   Hai la mente da scienziato e vuoi verificare tutto.
-                    -> glyph_modifier_variation_management(SecondCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
             {charTag(SecondCharacter, "neutral")}:          Lo dice anche mio fratello.
                                                             Per questo mi lascia fare gli esperimenti.
             {charTag(SecondCharacter, "melanchonic")}:      Ma senza elettricità, dopo l'incidente.
@@ -1419,7 +1419,7 @@
 
 
             + \ {charTag(PG, "neutral")}:                   C'è un momento in cui ti riposi, {charNameTwo}?
-                    -> glyph_modifier_variation_management(SecondCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
             {charTag(SecondCharacter, "neutral")}:          Mi annoio.
                                                             No!
             {charTag(SecondCharacter, "emotional")}:        Però quando leggo mi riposo.
@@ -1427,7 +1427,7 @@
                                                             Mi piace.                                                
                 
             + \ {charTag(PG, "neutral")}:                   Sei tosto perché alla fine fai quello che ti va.
-                    -> glyph_modifier_variation_management(SecondCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
             {charTag(SecondCharacter, "neutral")}:          Sì no boh.
             {charTag(SecondCharacter, "melanchonic")}:      Questa cosa agli adulti non piace molto.
             {charTag(SecondCharacter, "angry")}:            Ma se non posso capire le cose, mi rimangono in testa.
@@ -1439,7 +1439,7 @@
             {charTag(SecondCharacter, "neutral")}:          Poi li rimetto a posto prima che si svegliano tutti.
                     
             + \ {charTag(PG, "neutral")}:                   Prometti che non mangerai nulla di strano? Non voglio tu stia male.
-                    -> glyph_modifier_variation_management(SecondCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
             {charTag(SecondCharacter, "neutral")}:          Non sei mia mamma.
             {charTag(SecondCharacter, "emotional")}:        E poi è troppo tardi.
             {charTag(SecondCharacter, "neutral")}:          Ho assaggiato un po' di cose della serra.
@@ -1453,7 +1453,7 @@
             }
                         
             + \ {charTag(PG, "neutral")}:                   Tuo fratello ti lascia essere te stesso.
-                    -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
             {charTag(SecondCharacter, "emotional")}:        Sì!
             {charTag(SecondCharacter, "neutral")}:          Lui non mi sgrida mai.
                                                             E se si arrabbia con me, mi spiega il perché.
@@ -1524,7 +1524,7 @@
         {charTag(SecondCharacter, "melanchonic")}:          Anche se non ci puoi mica giocare con loro.
             
             + \ {charTag(PG, "neutral")}:                   I libri ti insegnano tante cose.
-                    -> glyph_modifier_variation_management(SecondCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
             {charTag(SecondCharacter, "neutral")}:          Sì no boh.
                                                             Anche guardare le cose.
                                                             E toccarle.
@@ -1534,21 +1534,21 @@
             {charTag(SecondCharacter, "melanchonic")}:      Ma le api si sono arrabbiate.
                                          
             + \ {charTag(PG, "neutral")}:                    Facciamo una gara di rutti?!
-                    -> glyph_modifier_variation_management(SecondCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
             {charTag(SecondCharacter, "energy")}:           Ci sto!
                                                             Però mi serve della roba frizzante sennò non mi vengono bene.
             {charTag(SecondCharacter, "melanchonic")}:      Ma poi mi scappa tanta pipì.
                                                             E non ho ancora capito dove sia il bagno qui.
 
             + \ {charTag(PG, "neutral")}:                   Bimbo, tu devi cambiare casa. Stai al mare dalla nonna!
-                    -> glyph_modifier_variation_management(SecondCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
             {charTag(SecondCharacter, "melanchonic")}:      Mica è così facile!
             {charTag(SecondCharacter, "neutral")}:          Una volta però gliel'ho chiesto.
                                                             E lei mi ha detto "Finisci le elementari, poi ne parliamo".
             {charTag(SecondCharacter, "emotional")}:        A volte quando sono triste ci penso a questa cosa.
 
             + \ {charTag(PG, "neutral")}:                   Vorresti che venissero anche mamma e papà?
-                    -> glyph_modifier_variation_management(SecondCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
             {charTag(SecondCharacter, "neutral")}:          Sì no boh.
             {charTag(SecondCharacter, "melanchonic")}:      Sono cattivo se dico di no?
             {charTag(SecondCharacter, "neutral")}:          Mi piace un posto dove nessuno litiga.
@@ -1559,7 +1559,7 @@
             {charTag(SecondCharacter, "melanchonic")}:      Che brutto essere ubriaco!
                 
             + \ {charTag(PG, "neutral")}:                   Ti piace insegnare le cose all'altra nonna.
-                    -> glyph_modifier_variation_management(SecondCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
             {charTag(SecondCharacter, "neutral")}:          Mi aiuta a capirle meglio.
                                                             Tante cose ce le ho solo in testa e stanno assieme tutte contemporaneamente.
             {charTag(SecondCharacter, "energy")}:           E per me hanno senso.

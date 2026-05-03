@@ -14,39 +14,39 @@
         {charTag(ThirdCharacter, "neutral")}:       Frase
             
             + \ {charTag(PG, "neutral")}:         Air
-                    -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
 
                 
             + \ {charTag(PG, "neutral")}:         Earth
-                    -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
                     
             + \ {charTag(PG, "neutral")}:         Fire
-                    -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
                 
             + \ {charTag(PG, "neutral")}:         Water
-                    -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
                     
             + \ {charTag(PG, "neutral")}:         Aether
-                    -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
                 
         -    
         {charTag(ThirdCharacter, "neutral")}:       Ma lui mica ci può venire qui.
         
 
             + \ {charTag(PG, "neutral")}:         Air
-                    -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
 
             + \ {charTag(PG, "neutral")}:          Earth
-                    -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
     
             + \ {charTag(PG, "neutral")}:         Fire
-                    -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
                     
             + \ {charTag(PG, "neutral")}:         Water
-                    -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
                     
             + \ {charTag(PG, "neutral")}:         Aether
-                    -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
             -
 
         -> third_char_closing_storylet ->
@@ -65,19 +65,19 @@
 
         
             + \ {charTag(PG, "neutral")}:         Air
-                    -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
 
             + \ {charTag(PG, "neutral")}:         Earth
-                    -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
                     
             + \ {charTag(PG, "neutral")}:         Fire
-                    -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
 
             + \ {charTag(PG, "neutral")}:         Water
-                    -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
 
             + \ {charTag(PG, "neutral")}:         Aether
-                -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
             - 
             -> third_char_closing_storylet ->
             -> options_third_character
@@ -95,19 +95,19 @@
 
             
             + \ {charTag(PG, "neutral")}:         Air
-                    -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
 
             + \ {charTag(PG, "neutral")}:         Fire
-                    -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
 
             + \ {charTag(PG, "neutral")}:         Water
-                    -> glyph_modifier_variation_management(ThirdCharacter, waterC)->    
+                    -> glyph_choice_manager(false, waterC)->    
                           
             + \ {charTag(PG, "neutral")}:         Earth
-                    -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
                     
             + \ {charTag(PG, "neutral")}:         Aether
-                    -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
             -
             
             -> third_char_closing_storylet ->
@@ -126,19 +126,19 @@
         {charTag(ThirdCharacter, "neutral")}:       Frase
             
             + \ {charTag(PG, "neutral")}:         Air
-                    -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
                     
             + \ {charTag(PG, "neutral")}:         Earth
-                    -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
                     
             + \ {charTag(PG, "neutral")}:         Fire
-                    -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
 
             + \ {charTag(PG, "neutral")}:         Water
-                    -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
 
             + \ {charTag(PG, "neutral")}:         Aether
-                    -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
             -
         
         -> third_char_closing_storylet ->
@@ -156,19 +156,19 @@
         {charTag(ThirdCharacter, "neutral")}:       Frase
         
             + \ {charTag(PG, "neutral")}:         Air
-                    -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
 
             + \ {charTag(PG, "neutral")}:         Earth
-                    -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
                     
             + \ {charTag(PG, "neutral")}:         Fire
-                    -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
         
             + \ {charTag(PG, "neutral")}:         Water
-                    -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
                 
             + \ {charTag(PG, "neutral")}:         Aether
-                    -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
             -
 
             -> third_char_closing_storylet ->
@@ -186,20 +186,20 @@
         {charTag(ThirdCharacter, "neutral")}:       Frase
        
             + \ {charTag(PG, "neutral")}:         Air
-                    -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
                     
             + \ {charTag(PG, "neutral")}:         Earth
-                    -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
 
                     
             + \ {charTag(PG, "neutral")}:         Fire
-                    -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
 
             + \ {charTag(PG, "neutral")}:         Water
-                    -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
 
             + \ {charTag(PG, "neutral")}:        Aether
-                    -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
         - 
 
         -> third_char_closing_storylet ->            
@@ -219,19 +219,19 @@
 
             
             + \ {charTag(PG, "neutral")}:         Air
-                    -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
 
             + \ {charTag(PG, "neutral")}:         Earth
-                    -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
                         
             + \ {charTag(PG, "neutral")}:         Fire
-                    -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
 
             + \ {charTag(PG, "neutral")}:         Water
-                    -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
 
             + \ {charTag(PG, "neutral")}:         Aether
-                    -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->      
+                    -> glyph_choice_manager(false, aetherC)->      
             -
 
         -> third_char_closing_storylet ->        
@@ -249,19 +249,19 @@
         {charTag(ThirdCharacter, "neutral")}:       Frase
 
             + \ {charTag(PG, "neutral")}:         Air
-                    -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
 
             + \ {charTag(PG, "neutral")}:         Earth
-                    -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
                     
             + \ {charTag(PG, "neutral")}:          Fire
-                    -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
                 
             + \ {charTag(PG, "neutral")}:         Water
-                    -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
 
             + \ {charTag(PG, "neutral")}:         Aether
-                    -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
             -
 
                 -> third_char_closing_storylet ->        
@@ -279,19 +279,19 @@
         {charTag(ThirdCharacter, "neutral")}:       Frase
 
             + \ {charTag(PG, "neutral")}:         Air
-                    -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
                     
             + \ {charTag(PG, "neutral")}:         Earth
-                    -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
 
             + \ {charTag(PG, "neutral")}:         Fire
-                    -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
    
             + \ {charTag(PG, "neutral")}:         Water
-                    -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
                     
             + \ {charTag(PG, "neutral")}:         Aether
-                    -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
             -
 
             -> third_char_closing_storylet ->
@@ -308,19 +308,19 @@
         {charTag(ThirdCharacter, "neutral")}:       Frase
  
             + \ {charTag(PG, "neutral")}:         Air
-                    -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
 
             + \ {charTag(PG, "neutral")}:         Earth
-                    -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
 
             + \ {charTag(PG, "neutral")}:         Fire
-                    -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
 
             + \ {charTag(PG, "neutral")}:         Water
-                    -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
                     
             + \ {charTag(PG, "neutral")}:         Aether
-                    -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
             -
 
             -> third_char_closing_storylet ->
@@ -338,19 +338,19 @@
         {charTag(ThirdCharacter, "neutral")}:       Frase.
    
             + \ {charTag(PG, "neutral")}:         Air
-                    -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
 
             + \ {charTag(PG, "neutral")}:         Earth
-                    -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
                 
             + \ {charTag(PG, "neutral")}:         Fire
-                    -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
                     
             + \ {charTag(PG, "neutral")}:         Water
-                    -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
                         
             + \ {charTag(PG, "neutral")}:         Aether
-                    -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
             -   
                 -> third_char_closing_storylet ->
                 -> options_third_character 
@@ -366,19 +366,19 @@
         {charTag(ThirdCharacter, "neutral")}:       Frase
 
             + \ {charTag(PG, "neutral")}:         Air
-                    -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
                     
             + \ {charTag(PG, "neutral")}:         Earth
-                    -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
 
             + \ {charTag(PG, "neutral")}:         Fire
-                    -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
 
             + \ {charTag(PG, "neutral")}:         Water
-                    -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
                 
             + \ {charTag(PG, "neutral")}:         Aether
-                    -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
         - 
 
             -> third_char_closing_storylet ->

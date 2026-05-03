@@ -73,21 +73,21 @@
         {charTag(ThirdCharacter, "neutral")}:       Frase
         
             + \ {charTag(PG, "neutral")}:         Aria
-                -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
 
                
             + \ {charTag(PG, "neutral")}:         Terra
-                -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
 
             + \ {charTag(PG, "neutral")}:         Fuoco
-                -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
 
             + \ {charTag(PG, "neutral")}:         Acqua
-                -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
                 Mi suona molto, ama.
     
             + \ {charTag(PG, "neutral")}:         Spirito
-                -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
             -    
         {charTag(ThirdCharacter, "neutral")}:       Frase
             
@@ -96,47 +96,47 @@
 
             + (earth1)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeNoun = "Zuppa di grano"
-                -> glyph_modifier_variation_management(PG, earthC)->
+                -> glyph_choice_manager(true, earthC)->
 
 
             + (water1)\ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                 ~ kitchen_recipeNoun = "Grigliata di seitan"
-                -> glyph_modifier_variation_management(PG, waterC)->
+                -> glyph_choice_manager(true, waterC)->
                 
             + (fire1)\ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                ~ kitchen_recipeNoun = "Fagiolata"
-               -> glyph_modifier_variation_management(PG, fireC)->
+               -> glyph_choice_manager(true, fireC)->
 
         
             + (aether1)\ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeNoun = "Cimetta di broccolo"
-                -> glyph_modifier_variation_management(PG, aetherC)->
+                -> glyph_choice_manager(true, aetherC)->
 
     
             + (air1)\ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                 ~ kitchen_recipeNoun = "Crema d'aglio"
-                -> glyph_modifier_variation_management(PG, airC)->
+                -> glyph_choice_manager(true, airC)->
             -  
         
         {charTag(ThirdCharacter, "neutral")}:       Frase
     
             + \ {charTag(PG, "neutral")}:        Fuoco
-                -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
   
             
             + \ {charTag(PG, "neutral")}:         Aria
-                -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
  
             + \ {charTag(PG, "neutral")}:         Acqua
-                -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
    
        
             + \ {charTag(PG, "neutral")}:         Terra
-                -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
 
              
             + \ {charTag(PG, "neutral")}:         Spirito
-                -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
     
             -
         
@@ -144,46 +144,46 @@
         
             + (earth2)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeAdjective = "onesta"
-                -> glyph_modifier_variation_management(PG, earthC)->
+                -> glyph_choice_manager(true, earthC)->
     
                
             + (air2)\ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                 ~ kitchen_recipeAdjective = "allegra"
-                -> glyph_modifier_variation_management(PG, airC)->
+                -> glyph_choice_manager(true, airC)->
   
              
             + (water2)\ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                ~ kitchen_recipeAdjective = "empatica"
-               -> glyph_modifier_variation_management(PG, waterC)->
+               -> glyph_choice_manager(true, waterC)->
 
         
             + (aether2)\ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeAdjective = "incondizionata"
-                -> glyph_modifier_variation_management(PG, aetherC)->
+                -> glyph_choice_manager(true, aetherC)->
 
     
             + (fire2)\ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                 ~ kitchen_recipeAdjective = "leale"
-                -> glyph_modifier_variation_management(PG, fireC)->
+                -> glyph_choice_manager(true, fireC)->
             -      
         
         {charTag(ThirdCharacter, "neutral")}:       Frase
 
             + \ {charTag(PG, "neutral")}:         Spirito
-                -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
             
             + \ {charTag(PG, "neutral")}:         Fuoco
-                -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
 
             
             + \ {charTag(PG, "neutral")}:          Terra
-                -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
              
             + \ {charTag(PG, "neutral")}:         Aria
-                -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
                    
             + \ {charTag(PG, "neutral")}:         Acqua
-                -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
             -
         {
             - contentsKitchen has Bat:
@@ -197,23 +197,23 @@
         
             + (water3)\ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                 ~ kitchen_recipeComplement = "con brodo del terrore"
-                -> glyph_modifier_variation_management(PG, waterC)->
+                -> glyph_choice_manager(true, waterC)->
                
             + (earth3)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeComplement = "con noce euforica"
-                -> glyph_modifier_variation_management(PG, earthC)->
+                -> glyph_choice_manager(true, earthC)->
              
             + (air3)\ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                ~ kitchen_recipeComplement = "con semi dell'<i>io? no, no è possibile!</i>"
-               -> glyph_modifier_variation_management(PG, airC)->
+               -> glyph_choice_manager(true, airC)->
         
             + (aether3)\ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeComplement = "con olio delle lusinghe"
-                -> glyph_modifier_variation_management(PG, aetherC)->
+                -> glyph_choice_manager(true, aetherC)->
     
             + (fire3)\ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                 ~ kitchen_recipeComplement = "con peperoncini arrapati"
-                -> glyph_modifier_variation_management(PG, fireC)->
+                -> glyph_choice_manager(true, fireC)->
             -
             -> fourth_ingredient_dispatcher
             
@@ -227,21 +227,21 @@
         {charTag(ThirdCharacter, "neutral")}:       Frase
         
             + \ {charTag(PG, "neutral")}:         Aria
-                -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
 
                
             + \ {charTag(PG, "neutral")}:         Terra
-                -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
 
             + \ {charTag(PG, "neutral")}:         Fuoco
-                -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
 
             + \ {charTag(PG, "neutral")}:         Acqua
-                -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
                 Mi suona molto, ama.
     
             + \ {charTag(PG, "neutral")}:         Spirito
-                -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
             -    
         {charTag(ThirdCharacter, "neutral")}:       Frase
             
@@ -250,47 +250,47 @@
 
             + (earth1)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeNoun = "Zuppa di grano"
-                -> glyph_modifier_variation_management(PG, earthC)->
+                -> glyph_choice_manager(true, earthC)->
 
 
             + (water1)\ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                 ~ kitchen_recipeNoun = "Grigliata di seitan"
-                -> glyph_modifier_variation_management(PG, waterC)->
+                -> glyph_choice_manager(true, waterC)->
                 
             + (fire1)\ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                ~ kitchen_recipeNoun = "Fagiolata"
-               -> glyph_modifier_variation_management(PG, fireC)->
+               -> glyph_choice_manager(true, fireC)->
 
         
             + (aether1)\ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeNoun = "Cimetta di broccolo"
-                -> glyph_modifier_variation_management(PG, aetherC)->
+                -> glyph_choice_manager(true, aetherC)->
 
     
             + (air1)\ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                 ~ kitchen_recipeNoun = "Crema d'aglio"
-                -> glyph_modifier_variation_management(PG, airC)->
+                -> glyph_choice_manager(true, airC)->
             -  
         
         {charTag(ThirdCharacter, "neutral")}:       Frase
     
             + \ {charTag(PG, "neutral")}:        Fuoco
-                -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
   
             
             + \ {charTag(PG, "neutral")}:         Aria
-                -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
  
             + \ {charTag(PG, "neutral")}:         Acqua
-                -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
    
        
             + \ {charTag(PG, "neutral")}:         Terra
-                -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
 
              
             + \ {charTag(PG, "neutral")}:         Spirito
-                -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
     
             -
         
@@ -298,46 +298,46 @@
         
             + (earth2)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeAdjective = "onesta"
-                -> glyph_modifier_variation_management(PG, earthC)->
+                -> glyph_choice_manager(true, earthC)->
     
                
             + (air2)\ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                 ~ kitchen_recipeAdjective = "allegra"
-                -> glyph_modifier_variation_management(PG, airC)->
+                -> glyph_choice_manager(true, airC)->
   
              
             + (water2)\ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                ~ kitchen_recipeAdjective = "empatica"
-               -> glyph_modifier_variation_management(PG, waterC)->
+               -> glyph_choice_manager(true, waterC)->
 
         
             + (aether2)\ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeAdjective = "incondizionata"
-                -> glyph_modifier_variation_management(PG, aetherC)->
+                -> glyph_choice_manager(true, aetherC)->
 
     
             + (fire2)\ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                 ~ kitchen_recipeAdjective = "leale"
-                -> glyph_modifier_variation_management(PG, fireC)->
+                -> glyph_choice_manager(true, fireC)->
             -      
         
         {charTag(ThirdCharacter, "neutral")}:       Frase
 
             + \ {charTag(PG, "neutral")}:         Spirito
-                -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
             
             + \ {charTag(PG, "neutral")}:         Fuoco
-                -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
 
             
             + \ {charTag(PG, "neutral")}:          Terra
-                -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
              
             + \ {charTag(PG, "neutral")}:         Aria
-                -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
                    
             + \ {charTag(PG, "neutral")}:         Acqua
-                -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
             -
         {
             - contentsKitchen has Bat:
@@ -351,23 +351,23 @@
         
             + (water3)\ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                 ~ kitchen_recipeComplement = "con brodo del terrore"
-                -> glyph_modifier_variation_management(PG, waterC)->
+                -> glyph_choice_manager(true, waterC)->
                
             + (earth3)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeComplement = "con noce euforica"
-                -> glyph_modifier_variation_management(PG, earthC)->
+                -> glyph_choice_manager(true, earthC)->
              
             + (air3)\ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                ~ kitchen_recipeComplement = "con semi dell'<i>io? no, no è possibile!</i>"
-               -> glyph_modifier_variation_management(PG, airC)->
+               -> glyph_choice_manager(true, airC)->
         
             + (aether3)\ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeComplement = "con olio delle lusinghe"
-                -> glyph_modifier_variation_management(PG, aetherC)->
+                -> glyph_choice_manager(true, aetherC)->
     
             + (fire3)\ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                 ~ kitchen_recipeComplement = "con peperoncini arrapati"
-                -> glyph_modifier_variation_management(PG, fireC)->
+                -> glyph_choice_manager(true, fireC)->
             -
             -> fourth_ingredient_dispatcher
             
@@ -383,21 +383,21 @@
                 {charTag(ThirdCharacter, "neutral")}:       Frase
         
             + \ {charTag(PG, "neutral")}:         Aria
-                -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
 
                
             + \ {charTag(PG, "neutral")}:         Terra
-                -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
 
             + \ {charTag(PG, "neutral")}:         Fuoco
-                -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
 
             + \ {charTag(PG, "neutral")}:         Acqua
-                -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
                 Mi suona molto, ama.
     
             + \ {charTag(PG, "neutral")}:         Spirito
-                -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
             -    
         {charTag(ThirdCharacter, "neutral")}:       Frase
             
@@ -406,47 +406,47 @@
 
             + (earth1)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeNoun = "Zuppa di grano"
-                -> glyph_modifier_variation_management(PG, earthC)->
+                -> glyph_choice_manager(true, earthC)->
 
 
             + (water1)\ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                 ~ kitchen_recipeNoun = "Grigliata di seitan"
-                -> glyph_modifier_variation_management(PG, waterC)->
+                -> glyph_choice_manager(true, waterC)->
                 
             + (fire1)\ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                ~ kitchen_recipeNoun = "Fagiolata"
-               -> glyph_modifier_variation_management(PG, fireC)->
+               -> glyph_choice_manager(true, fireC)->
 
         
             + (aether1)\ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeNoun = "Cimetta di broccolo"
-                -> glyph_modifier_variation_management(PG, aetherC)->
+                -> glyph_choice_manager(true, aetherC)->
 
     
             + (air1)\ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                 ~ kitchen_recipeNoun = "Crema d'aglio"
-                -> glyph_modifier_variation_management(PG, airC)->
+                -> glyph_choice_manager(true, airC)->
             -  
         
         {charTag(ThirdCharacter, "neutral")}:       Frase
     
             + \ {charTag(PG, "neutral")}:        Fuoco
-                -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
   
             
             + \ {charTag(PG, "neutral")}:         Aria
-                -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
  
             + \ {charTag(PG, "neutral")}:         Acqua
-                -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
    
        
             + \ {charTag(PG, "neutral")}:         Terra
-                -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
 
              
             + \ {charTag(PG, "neutral")}:         Spirito
-                -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
     
             -
         
@@ -454,46 +454,46 @@
         
             + (earth2)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeAdjective = "onesta"
-                -> glyph_modifier_variation_management(PG, earthC)->
+                -> glyph_choice_manager(true, earthC)->
     
                
             + (air2)\ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                 ~ kitchen_recipeAdjective = "allegra"
-                -> glyph_modifier_variation_management(PG, airC)->
+                -> glyph_choice_manager(true, airC)->
   
              
             + (water2)\ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                ~ kitchen_recipeAdjective = "empatica"
-               -> glyph_modifier_variation_management(PG, waterC)->
+               -> glyph_choice_manager(true, waterC)->
 
         
             + (aether2)\ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeAdjective = "incondizionata"
-                -> glyph_modifier_variation_management(PG, aetherC)->
+                -> glyph_choice_manager(true, aetherC)->
 
     
             + (fire2)\ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                 ~ kitchen_recipeAdjective = "leale"
-                -> glyph_modifier_variation_management(PG, fireC)->
+                -> glyph_choice_manager(true, fireC)->
             -      
         
         {charTag(ThirdCharacter, "neutral")}:       Frase
 
             + \ {charTag(PG, "neutral")}:         Spirito
-                -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                -> glyph_choice_manager(false, aetherC)->
             
             + \ {charTag(PG, "neutral")}:         Fuoco
-                -> glyph_modifier_variation_management(ThirdCharacter, fireC)->
+                -> glyph_choice_manager(false, fireC)->
 
             
             + \ {charTag(PG, "neutral")}:          Terra
-                -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                -> glyph_choice_manager(false, earthC)->
              
             + \ {charTag(PG, "neutral")}:         Aria
-                -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                -> glyph_choice_manager(false, airC)->
                    
             + \ {charTag(PG, "neutral")}:         Acqua
-                -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                -> glyph_choice_manager(false, waterC)->
             -
         {
             - contentsKitchen has Bat:
@@ -507,23 +507,23 @@
         
             + (water3)\ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                 ~ kitchen_recipeComplement = "con brodo del terrore"
-                -> glyph_modifier_variation_management(PG, waterC)->
+                -> glyph_choice_manager(true, waterC)->
                
             + (earth3)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeComplement = "con noce euforica"
-                -> glyph_modifier_variation_management(PG, earthC)->
+                -> glyph_choice_manager(true, earthC)->
              
             + (air3)\ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                ~ kitchen_recipeComplement = "con semi dell'<i>io? no, no è possibile!</i>"
-               -> glyph_modifier_variation_management(PG, airC)->
+               -> glyph_choice_manager(true, airC)->
         
             + (aether3)\ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeComplement = "con olio delle lusinghe"
-                -> glyph_modifier_variation_management(PG, aetherC)->
+                -> glyph_choice_manager(true, aetherC)->
     
             + (fire3)\ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                 ~ kitchen_recipeComplement = "con peperoncini arrapati"
-                -> glyph_modifier_variation_management(PG, fireC)->
+                -> glyph_choice_manager(true, fireC)->
             -
             -> fourth_ingredient_dispatcher
             
@@ -809,23 +809,23 @@
     {charTag(ThirdCharacter, "neutral")}:       Frase
    
             + \ {charTag(PG, "neutral")}:         Scelta acqua
-                    -> glyph_modifier_variation_management(ThirdCharacter, waterC)->
+                    -> glyph_choice_manager(false, waterC)->
                 
                 
             + \ {charTag(PG, "neutral")}:         Scelta spirito
-                    -> glyph_modifier_variation_management(ThirdCharacter, aetherC)->
+                    -> glyph_choice_manager(false, aetherC)->
                 
             
             + \ {charTag(PG, "neutral")}:         Scelta terra
-                    -> glyph_modifier_variation_management(ThirdCharacter, earthC)->
+                    -> glyph_choice_manager(false, earthC)->
                 
             
             + \ {charTag(PG, "neutral")}:         Scelta aria
-                    -> glyph_modifier_variation_management(ThirdCharacter, airC)->
+                    -> glyph_choice_manager(false, airC)->
                 
             
             + \ {charTag(PG, "neutral")}:              Scelta fuoco
-                    -> glyph_modifier_variation_management(ThirdCharacter, fireC)-> 
+                    -> glyph_choice_manager(false, fireC)-> 
                 
             -
     
