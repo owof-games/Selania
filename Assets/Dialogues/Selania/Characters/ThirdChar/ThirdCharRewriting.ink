@@ -293,7 +293,7 @@
     
         {
 
-            - thirdChar_ActualName has ThirdB:
+            - thirdChar_ActualName has ThirdE:
                     {
                         - ending.fire:
                             {charTag(ThirdCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
@@ -321,7 +321,7 @@
                 {charTag(ThirdCharacter, "neutral")}:       E il mio nome è <b><i>{charNameThree}</b></i>.
                                
             
-            - thirdChar_ActualName has ThirdE:
+            - thirdChar_ActualName has ThirdF:
                     {
                         - ending.aether:
                             {charTag(ThirdCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
@@ -330,7 +330,7 @@
                     }
                 {charTag(ThirdCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameThree}</b></i>.  
                     
-            - thirdChar_ActualName has ThirdF:
+            - thirdChar_ActualName has ThirdB:
                     {
                         - ending.air:
                             {charTag(ThirdCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.

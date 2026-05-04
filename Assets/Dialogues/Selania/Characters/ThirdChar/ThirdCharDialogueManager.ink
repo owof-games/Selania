@@ -10,13 +10,6 @@
         + {are_two_entities_together(ThirdCharacter, PG) && thirdChar_storyStatus == story_storyStarted && entity_location(PG) == Kitchen} [ThirdCharacter]
             -> kitchen_storylets_dispatcher  
 
-        // //Chiacchiera a fine storia
-        // + {are_two_entities_together(ThirdCharacter, PG) && thirdChar_storyStatus == story_storyEnded} [ThirdCharacter]
-        //     -> third_char_story_ended
-
-        // + ->
-
-        // -> DONE
 
 
 === talk_with_third_character ===
