@@ -80,28 +80,47 @@
                 
         - else:
             //In caso di pareggio cerco di assegnare un nome randomico da quelli più plausibili, sempre secondo la logica qui sopra elemento == nome.
-            //Qui ragiono per percentuali: prima di tutto calcolo la quantità totale del valore dei glifi
-            ~ temp allGlyphsValue = temporaryFire + temporaryAir + temporaryWater + temporaryEarth + temporaryAether
-            //Poi faccio un conto del valore medio delle scelte
-            ~ temp mediumValue = allGlyphsValue/5
+            //Prima di tutto cerco di capire qual è il valore più alto comune.
+            ~ temp maxValue = 0
+                {
+                    - temporaryAether >= maxValue:
+                        ~ maxValue = temporaryAether
+                }
+                {
+                    - temporaryWater >= maxValue:
+                        ~ maxValue = waterC
+                }
+                {
+                    - temporaryFire >= maxValue:
+                        ~ maxValue = fireC
+                }
+                {
+                    - temporaryAir >= maxValue:
+                        ~ maxValue =  airC
+                }
+                {
+                    - temporaryEarth >= maxValue:
+                        ~ maxValue = earthC
 
-            {debug: La somma delle scelte glifo di {secondChar_ActualName} è {allGlyphsValue}, e la media è {mediumValue}.}
+                }
+
+            {debug: Il valore massimo raggijnto dai glifi è {maxValue}.}
 
             //Poi aggiungo alla lista dei potenziali generatori di nomi solo quei glifi che superano il valore medio delle scelte. 
             {
-                - temporaryAether >= mediumValue:
+                - temporaryAether >= maxValue:
                         ~ possiblesMainGlyphs += aetherC
 
-                - temporaryWater >= mediumValue:
+                - temporaryWater >= maxValue:
                         ~ possiblesMainGlyphs += waterC
 
-                - temporaryFire >= mediumValue:
+                - temporaryFire >= maxValue:
                         ~ possiblesMainGlyphs += fireC
 
-                - temporaryAir >= mediumValue:
+                - temporaryAir >= maxValue:
                         ~ possiblesMainGlyphs = airC
 
-                - temporaryEarth >= mediumValue:
+                - temporaryEarth >= maxValue:
                         ~ possiblesMainGlyphs += earthC
 
                 {debug: La lista di possibili nomi in caso di pareggio è {possiblesMainGlyphs}.}
