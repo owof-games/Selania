@@ -13,7 +13,6 @@
 
 === talk_with_fourth_character ===
         {
-
             - fourthChar_pauseTalking == 0:
                 -> knowing_fourth_character
 

@@ -12,7 +12,6 @@
 
 === talk_with_third_character ===
         {
-
             - thirdChar_pauseTalking == 0:
                 -> knowing_third_character
 

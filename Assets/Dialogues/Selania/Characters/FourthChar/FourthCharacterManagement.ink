@@ -148,22 +148,13 @@
 
     Prima però ci terrei a dirti come sono andate le cose tra noi, qui.
             
+
         {
-            -   are_two_entities_together(Mentor, PG):
-                {charTag(FifthCharacter, "neutral")}:               Vi lascio un po' di privacy. In bocca al lupo {player_name} e {charNameOne}.
-                    ~ change_entity_place(Mentor)
+            -   are_two_entities_together(FifthCharacter, PG):
+                {charTag(FifthCharacter, "neutral")}:               Mi levo dalle scatole.
+                    ~ change_entity_place(FifthCharacter)
         }
-        {
-            -   are_two_entities_together(FirstCharacter, PG):
-                {charTag(FirstCharacter, "neutral")}:               Mi levo dalle scatole.
-                    ~ change_entity_place(FirstCharacter)
-        }
-        {
-            -   are_two_entities_together(SecondCharacter, PG):
-                {charTag(FourthCharacter, "affectionate")}:          {charNameTwo}, potresti lasciarci un po' da sol3?
-                {charTag(SecondCharacter, "emotional")}:            Certissimamente! A dopo!
-                    ~ change_entity_place(SecondCharacter)
-        }
+ 
         {
             - are_two_entities_together(Franco, PG):
                 {charTag(Franco, "{portrait_Franco()}")}:           Non fate caso a me, sto provando a raccogliere tutte le bolle in un unico posto, ma continuano a scappare.     

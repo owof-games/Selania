@@ -1,129 +1,220 @@
-                    /* ---------------------------------
-                    
-                      Gestione timing e valori della storia
-                    
-                     ----------------------------------*/
- 
- //Possibili nomi
-    LIST fifthChar_possibleStates= Mostro, Mentore
-    VAR fifthChar_ActualName= Mentore
-    
-//Per mentore, fifthChar_storyStatus sarà la parte di riscrittura, mentorChar_storyStatus tutta la parte di interazione come Mentore
-    VAR fifthChar_storyStatus = story_storyNotStarted
-    VAR fifthChar_storyEndingPosition = ()
-    
-//Tracciamento della relazione
-    VAR fifthChar_relationshipStatus = 0
+                                                        /* ---------------------------------
+                                                        
+                                                                LISTE E VARIABILI
+                                                        
+                                                        ----------------------------------*/
 
-    //Utilizzato nella funzione XXX per calcolare la variazione del rapporto dopo la singola scelta.
-    VAR fifthChar_RelCalculator = 0
-    //Indicator = il valore di Indicator, riproporzionato per l'indicatore della reazione e chiamato in cucina e in riscrittura per i feedback/inchiostro.
-    VAR fifthChar_relationshipIndicator = 0
-    VAR fifthChar_lastRelationshipIndicator = 0
-    //Absolute = il valore totale della relazione, tenuto per tracciamento
-    VAR fifthChar_relationshipIndicatorAbsolute = 0
-    //Reaction: qui registriamo la reazione che verrà attivata coi sigilli
-    VAR fifthChar_relationshipReaction = neutral
- 
- //Tracciamento cucina
-    //Autonoma
-        VAR kitchen_fifthCharIsCooking = false
-        VAR kitchen_fifthCharCookingTime = 0
-        //Tempo che ci impiega a fare la sua ricetta
-        VAR kitchen_fifthCharCookingMaxTime = 8
-    //Nostro invito
-        VAR kitchen_fifthCharCookingTogetherInvite = false
-    //Valore quarto ingrediente
-        VAR kitchen_fifthCharExtraIngredient = ()
-        VAR kitchen_fifthCharExtraIngredientReaction = notReaction
-            //Valore ingredienti
-        VAR kitchen_fifthCharRecipeNoun = ""
-        VAR kitchen_fifthCharRecipeAdjective = ""
-        VAR kitchen_fifthCharRecipeComplement = ""
-    //Ricetta creata
-        VAR kitchen_fifthCharRecipe = ""    
-    
-//Tracciamento del dono
-    VAR fifthChar_giftedObject = ()
-    VAR fifthChar_favouritesGifts = (NonTiScordarDiTe, BaccaDellaAddolorata, CantoDelleCompagne)
-    VAR fifthChar_goodGifts = (ErbaLiccia, Olobino, BastoneDellOzioso, LanaNotturna)
 
-//Tracciamento apprezzamento glifi. Tutto ciò che è fuori da questa lista = reazione neutrale.
-    VAR fifthChar_positiveGlyphs = ()
-    VAR fifthChar_negativeGlyphs = ()
-    
-//Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
-    VAR fifthChar_storyletsForRewritingCount = 0
-    VAR fifthChar_minStoryletsForRewriting = 8
-    VAR fifthChar_specialEvent = false
+//Gestione del ritmo della storia
+    //Stato della storia 
+        //Non avviata, avviata, conclusa
+        VAR fifthChar_storyStatus = story_storyNotStarted
+        //Ordine di conclusione della riscrittura (prima storia conclusa, seconda storia conclusa)
+        VAR fifthChar_storyEndingPosition = ()
+        //Quantità di storylets letti dalla giocatrice prima di accedere alla riscrittura
+        VAR fifthChar_minStoryletsForRewriting = grimFifthCharNine
+        //Abbiamo l'info speciale su Mentore? Se le condizioni sono corrette, viene messa su true dalla funzione inkLevel(Character)
+        VAR fifthChar_specialEvent = false
+        //Cconteggio totale delle scelte prese con la PNG
+        VAR fifthChar_totalChoices = 0
 
-//Variabili per mettere in pausa la conversazione. Plausibilmente per mentore sarà molto alta all'inizio.
-    VAR fifthChar_pauseTalking = 0
-    VAR fifthChar_pauseDuration = 10
-//Questa variabile verifica se abbiamo appena parlato con unx PNG, in modo tale da presentarci in modo diverso le possibili proposte che possiamo farle.
-    VAR fifthChar_justTalked = false    
-    
-//Variabile per il countdown per la sua uscita di scena
-    VAR fifthChar_exitCounter = 0    
+    //Ritmo della storia    
+        //Variabili per mettere in pausa la conversazione
+        VAR fifthChar_pauseTalking = 0
+        VAR fifthChar_pauseDuration = 1
+        //Questa variabile verifica se abbiamo appena parlato con unx PNG, in modo tale da presentarci in modo diverso le possibili proposte che possiamo farle.
+        VAR fifthChar_justTalked = false
+        //Variabile per il tempo di attesa tra una lettera e l'altra
+        VAR fifthChar_mailPause = 0
+        VAR fifthChar_mailPauseDuration = 5
 
-//Variabile per il tempo di attesa tra una lettera e l'altra
-    VAR fifthChar_mailPause = 0
-    VAR fifthChar_mailPauseDuration = 5    
-    
-//Calcolo utilizzo sigilli su png
-    VAR fifthChar_usedSigil = 0
-    VAR fifthChar_usedSigilsTracking = () 
 
-//STATI UP: ???
-//STATI DOWN: ???
+//Stato della PNG
+    //Gestione nomi
+    LIST fifthChar_possibleStates = Mentore, Mostro, (FifthB), (FifthC), (FifthD), (FifthE), (FifthF)
+    VAR fifthChar_ActualName = Mentore
+
+    //Registro delle scelte prese
     VAR fifthChar_aether = 0.00
     VAR fifthChar_earth = 0.00
     VAR fifthChar_air = 0.00
     VAR fifthChar_water = 0.00
-    VAR fifthChar_fire = 0.00                    
-                     
-    VAR fifthChar_totalChoices = 0
+    VAR fifthChar_fire= 0.00
     
-        //Storage precedente valore
-    VAR fifthChar_last_aether = 0.00
-    VAR fifthChar_last_earth = 0.00
-    VAR fifthChar_last_air = 0.00
-    VAR fifthChar_last_water = 0.00
-    VAR fifthChar_last_fire= 0.00
-                 
-                     
+        //Storage del valore precedente
+        VAR fifthChar_last_aether = 0.00
+        VAR fifthChar_last_earth = 0.00
+        VAR fifthChar_last_air = 0.00
+        VAR fifthChar_last_water = 0.00
+        VAR fifthChar_last_fire= 0.00
 
+    //Utilizzo dei sigilli
+    VAR fifthChar_usedSigil = 0
+    VAR fifthChar_usedSigilsTracking = ()
+
+    //Moltiplicatore per la riscrittura
+    VAR fifthChar_glyphVariation = 3.0 
+
+//Tracciamento della relazione
+    //Indicatore della relazione
+    VAR fifthChar_relationshipIndicator = 0
+    VAR fifthChar_lastRelationshipIndicator = 0
+    //Status = chiamato da cucina e prima della riscrittura per valutare il rapporto creato e il relativo inchiostro. Ora è un insieme di valori "scritti"
+    VAR fifthChar_relationshipStatus = neutral
+    //Reaction: qui registriamo la reazione che verrà attivata coi sigilli
+    VAR fifthChar_relationshipReaction = neutral
+
+//Gestione dei doni
+    //Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
+    VAR fifthChar_favouritesGifts = (NonTiScordarDiTe, BaccaDellaAddolorata, CantoDelleCompagne)
+    VAR fifthChar_goodGifts = (ErbaLiccia, Olobino, BastoneDellOzioso, LanaNotturna)
+    //Dono consigliato dalla rana
+    VAR frog_fifth_char_gift = ""
+    VAR frog_fifth_temp_growing_gift = false
+    //Dono effettuato
+    VAR fifthChar_giftedObject = ()
+
+
+//Tracciamento cucina
+    //Autonoma
+        VAR kitchen_fifthCharIsCooking = false
+        VAR kitchen_fifthCharCookingTime = 0
+        VAR kitchen_fifthCharHasCooked = false
+        //Tempo che ci impiega a fare la sua ricetta
+        VAR kitchen_fifthCharCookingMaxTime = 8
+    //Nostro invito
+        //l'abbiamo invitata
+        VAR kitchen_fifthCharCookingTogetherInvite = false
+        //Quante volte l'abbiamo invitata
+        VAR kitchen_fifthCharCookingTogetherNumberInvite = 0
+        //Da quanto ci sta aspettando
+        VAR kitchen_fifthCharCookingTogetherWaiting = 0
+        //Quanta pazienza ha ad aspettarci
+        VAR kitchen_fifthCharCookingMAXTogetherWaiting = 8
+        //Ricetta creata
+        VAR kitchen_fifthCharRecipe = ""
+        //Suggerimento rana
+        VAR frog_fifth_char_ingredient = ""
+        VAR frog_fifth_temp_growing_ingredient = false
+            
+    //Valore ingredienti
+        VAR kitchen_fifthCharRecipeNoun = ""
+        VAR kitchen_fifthCharRecipeAdjective = ""
+        VAR kitchen_fifthCharRecipeComplement = ""
+        VAR kitchen_fifthCharExtraIngredient = ()
+        VAR kitchen_fifthCharExtraIngredientReaction = notReaction
+
+//Tracciamento del racconto
+    VAR frog_fifth_novel = ""
                      
-                    /* ---------------------------------
-                    
-                       Gestione relazione e nomi
-                    
-                     ----------------------------------*/
+                                                        /* ---------------------------------
+                                                        
+                                                            FUNZIONI PER AFFINITA' E NOME
+                                                        
+                                                        ----------------------------------*/
+=== fifthAffinityCalc ===
+{debug: passo per fifthAffinityCalc.}
+//Questo mi serve per aggiornare il valore di affinità.
+//Viene chiamato a ridosso della riscrittura per definire lo stato di inchiostro
+
+    //Prima di tutto chiamo la funzione per il calcolo dello stato della relazione
+        ~ affinity_calc(FifthCharacter)
+
+    //"Trasformo" la relazione in inchiostro
+        ~ fromRelationshipToInk(FifthCharacter)
+    
+    //Mando ai feedback
+        -> fifthAffinityFeedback ->
+    
+    //Arriva il commento della strega
+        ~ inkLevel(FifthCharacter)
+    
+    //Salvo il massimo di inchiostro raggiunto con la personaggia
+        ~ maxInkLevelUpdater(FifthCharacter)
+
+    //Esco dal flusso 
+    ->-> 
+
+
+
+=== fifthAffinityFeedback
+{debug: passo per fifthAffinityFeedback. Lo stato di inchiostro è {fifthChar_InkLevel}.}
+//Utilizziamo questa funzione per far fare alla PNG un commento esplicito sullo stato della relazione.
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
+    Prima però ci terrei a dirti come sono andate le cose tra noi, qui.
+            
+
+        {
+            -   are_two_entities_together(FourthCharacter, PG):
+                {charTag(FourthCharacter, "neutral")}:               Mi levo dalle scatole.
+                    ~ change_entity_place(FourthCharacter)
+        }
+
+        {
+            - are_two_entities_together(Franco, PG):
+                {charTag(Franco, "{portrait_Franco()}")}:           Non fate caso a me, sto provando a raccogliere tutte le bolle in un unico posto, ma continuano a scappare.     
+        }
+
+        
+        {
+            - fifthChar_InkLevel == ink_empty:
+                {charTag(FifthCharacter, "annoyed")}:               Come direbbe la mia vecchia insegnate di piano: apprezzo lo sforzo, manca il risultato.
+                                                                    Ci sono stati momenti carini, ma ammetto che per lo più non mi sono sentita molto capita da te.
+                                                                    Scusa.
+
+            - fifthChar_InkLevel == ink_low:
+                {charTag(FifthCharacter, "annoyed")}:               E, insomma.
+                                                                    Non è che ci capiamo molto noi due, sai?
+                                                                    È come se io suonassi Chopin e tu la lambada.
+                                                                    E la lambada è carina, ma non è roba mia.
+                                                                    Ha senso? 
+                                                                
+            - fifthChar_InkLevel == ink_normal:
+                {charTag(FifthCharacter, "neutral")}:               Ci sono stati beni momenti tra noi, sai?
+                                                                    Ma anche momenti no, in cui non mi sono sentita capita.
+                                                                    Non è un reato.
+                                                                    Ma, insomma, non riesco a fidarmi fino in fondo.
+                                                                    Scusa.
+            
+            
+            - fifthChar_InkLevel == ink_medium:
+                {charTag(FifthCharacter, "affectionate")}:          E {player_name}: non pensavo avrei trovato una persona amica, qui.
+                                                                    Mi hai reso l'assenza di Talco, di Ennio, di Valeria moooolto più sopportabile.
+                                                                    Grazie.
+            
+            
+            - fifthChar_InkLevel == ink_high:
+                {charTag(FifthCharacter, "affectionate")}:          E mi chiedevo: ma che ci hanno separat3 alla nascita?
+                                                                    Perché mi sento tipo come se avessimo un unico neurone.
+                                                                    Unit3 in tutto.
+                                                                    Ed è figa come cosa.
+                                                                    Talco continua a mancarmi, ma con te mi sento come se fossimo parte da sempre della stessa band.
+        }
+
+->->
+
+
+=== fifth_char_closing_storylet ===
+    //Questo evita che venga proposto un altro storylet fino a quando la pausa non è finita
+    ~ fifthChar_pauseTalking = fifthChar_pauseDuration
+    //Questo è per la gestione delle domande
+    ~ fifthChar_justTalked = true
+
+    //Aggiornamento storylets
+    -> grimoire_storylets_updater ->
+
+->->
+
 === fifth_char_closing_letters
     ~ fifthChar_mailPause = fifthChar_mailPauseDuration
     ~ letters_doggoPause = false
     
     //Aggiornamento storylets
     -> grimoire_storylets_updater ->
-
-->->
-
-
- === fifthNaming ===
-
-->->
-
-
-
-//Formula per la chiusura di uno storylet
-=== fifth_char_closing_storylet
-        //Gestione crescita piante
-        -> growing_check ->
-        //Questo evita che venga proposto un altro storylet fino a quando la pausa non è finita
-        ~ fifthChar_pauseTalking = fourthChar_pauseDuration
-        //Questo è per la gestione delle domande
-        ~ fifthChar_justTalked = true
-        //L'animazione per via dell'informazione nuova
-        @animation:RewriterBook
 
 ->->

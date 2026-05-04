@@ -1,7 +1,7 @@
-=== rewriting_proposal_fourth_character
+=== rewriting_proposal_fifth_character
 //Così se decido di uscire dalla conversazione, posso riprendere da dove eravamo rimaste.
     {
-        - grimoire_fourthChar hasnt grimFourthCharProposal:
+        - grimoire_fifthChar hasnt grimFifthCharProposal:
             -> confession
             
         - else:
@@ -17,11 +17,11 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
 
-        {charTag(FourthCharacter, "neutral")}:           Frase.
+        {charTag(FifthCharacter, "neutral")}:           Frase.
 
-        -> fourth_char_closing_storylet ->
+        -> fifth_char_closing_storylet ->
 
-            + \ {charTag(PG, "neutral")}:         Ti ho ascoltato, {charNameFour}, e posso aiutarti a riscrivere la tua storia.
+            + \ {charTag(PG, "neutral")}:         Ti ho ascoltato, {charNameFive}, e posso aiutarti a riscrivere la tua storia.
                 -> rewriting
             
             + \ {charTag(PG, "neutral")}:         Capisco il tuo dolore, ma ho bisogno di riflettere un attimo.
@@ -38,14 +38,14 @@
             Va bene.
 
             //Avvio aggiornamento relazione + commento PNG + commento strega
-                -> fourthAffinityCalc ->
+                -> fifthAffinityCalc ->
                 
             //Vado a svuotare i contatori di colore, così son tranquilla.
-                -> storage_glyphs(FourthCharacter) ->
+                -> storage_glyphs(FifthCharacter) ->
             
-            //E poi a fourtha dello stato di inchiostro, mi sposto sulla domanda prevista      
+            //E poi a fiftha dello stato di inchiostro, mi sposto sulla domanda prevista      
                 {
-                    - fourthChar_InkLevel == ink_empty:
+                    - fifthChar_InkLevel == ink_empty:
                         -> ending
                     - else: 
                         -> one
@@ -61,7 +61,7 @@
     
 
 
-        {charTag(FourthCharacter, "neutral")}:           Frase.
+        {charTag(FifthCharacter, "neutral")}:           Frase.
         
         //Affrontiamo gli adulti in generale
             {charTag(PG, "neutral")}:      Hai detto che da quando nonna è nella casa dei vecchi fa tutto schifo.
@@ -89,12 +89,12 @@
         -
 
             ~ numberQuestion ++    
-        {charTag(FourthCharacter, "neutral")}:           Frase.
+        {charTag(FifthCharacter, "neutral")}:           Frase.
 
  
 
             {
-            - fourthChar_InkLevel == ink_low:
+            - fifthChar_InkLevel == ink_low:
                 -> ending
             - else: 
                 -> two
@@ -132,14 +132,14 @@
   
         -
         ~ numberQuestion ++     
-        {charTag(FourthCharacter, "neutral")}:           Frase.
+        {charTag(FifthCharacter, "neutral")}:           Frase.
         
             //Check per commento strega
             -> rewriting_witch_feedback(twoR) ->           
                  
         
             {
-            - fourthChar_InkLevel == ink_normal:
+            - fifthChar_InkLevel == ink_normal:
                 -> ending
             - else: 
                 -> three
@@ -177,13 +177,13 @@
         -
 
         ~ numberQuestion ++        
-        {charTag(FourthCharacter, "neutral")}:           Frase.
+        {charTag(FifthCharacter, "neutral")}:           Frase.
         
             //Check per commento strega
             -> rewriting_witch_feedback(threeR) ->          
         
             {
-            - fourthChar_InkLevel == ink_medium:
+            - fifthChar_InkLevel == ink_medium:
                 -> ending
             - else: 
                 -> four
@@ -216,7 +216,7 @@
                 
         -
         ~ numberQuestion ++       
-        {charTag(FourthCharacter, "neutral")}:           Frase.
+        {charTag(FifthCharacter, "neutral")}:           Frase.
         
             //Check per commento strega
             -> rewriting_witch_feedback(fourR) ->  
@@ -254,36 +254,36 @@
 
         -
     //Nota: la parte di accettazione del nome è prima dell'aggiornamento, così il nome nuovo compare solo quando viene dichiarato.
-    {charTag(FourthCharacter, "neutral")}:       Sì.
+    {charTag(FifthCharacter, "neutral")}:       Sì.
 
             {
                 - ending.fire:
-                    {charTag(FourthCharacter, "neutral")}:           Frase.
+                    {charTag(FifthCharacter, "neutral")}:           Frase.
                 
                 - ending.aether:
-                    {charTag(FourthCharacter, "neutral")}:           Frase.
+                    {charTag(FifthCharacter, "neutral")}:           Frase.
                     
                 - ending.earth:
-                    {charTag(FourthCharacter, "neutral")}:           Frase.
+                    {charTag(FifthCharacter, "neutral")}:           Frase.
 
                 - ending.water:
-                    {charTag(FourthCharacter, "neutral")}:           Frase.
+                    {charTag(FifthCharacter, "neutral")}:           Frase.
 
                 - ending.air:
-                    {charTag(FourthCharacter, "neutral")}:           Frase.
+                    {charTag(FifthCharacter, "neutral")}:           Frase.
                     
             }
 
-    {charTag(FourthCharacter, "neutral")}:           Frase.  
+    {charTag(FifthCharacter, "neutral")}:           Frase.  
 
             //Prima chiamo il moltiplicatore di colori, così che comunque le scelte fatte qui abbiano un impatto maggiore.
-                -> glyph_modifier(FourthCharacter, fourthChar_glyphVariation) ->
+                -> glyph_modifier(FifthCharacter, fifthChar_glyphVariation) ->
             
             //Poi aggiorniamo i colori, così il valore complessivo conta per la scelta del nome
-                -> update_glyphs(FourthCharacter) ->     
+                -> update_glyphs(FifthCharacter) ->     
      
             //E infine genero il nome
-                ~ newName(FourthCharacter)
+                ~ newName(FifthCharacter)
 
             ->naming
                 
@@ -299,57 +299,57 @@
     
         {
 
-            - fourthChar_ActualName has FourthE:
+            - fifthChar_ActualName has FifthE:
                     {
                         - ending.fire:
-                            {charTag(FourthCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                            {charTag(FifthCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            {charTag(FourthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                            {charTag(FifthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
-                Il mio vero nome è <b><i>{charNameFour}</b></i>.
+                Il mio vero nome è <b><i>{charNameFive}</b></i>.
             
-            - fourthChar_ActualName has FourthC:
+            - fifthChar_ActualName has FifthC:
                     {
                         - ending.water:
-                            {charTag(FourthCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                            {charTag(FifthCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            {charTag(FourthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                            {charTag(FifthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
-                {charTag(FourthCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameFour}</b></i>.
+                {charTag(FifthCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameFive}</b></i>.
               
-            - fourthChar_ActualName has FourthD:
+            - fifthChar_ActualName has FifthD:
                     {
                         - ending.earth:
-                            {charTag(FourthCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                            {charTag(FifthCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            {charTag(FourthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                            {charTag(FifthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
-                {charTag(FourthCharacter, "neutral")}:       E il mio nome è <b><i>{charNameFour}</b></i>.
+                {charTag(FifthCharacter, "neutral")}:       E il mio nome è <b><i>{charNameFive}</b></i>.
                                
             
-            - fourthChar_ActualName has FourthF:
+            - fifthChar_ActualName has FifthF:
                     {
                         - ending.aether:
-                            {charTag(FourthCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                            {charTag(FifthCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            {charTag(FourthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                            {charTag(FifthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
-                {charTag(FourthCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameFour}</b></i>.  
+                {charTag(FifthCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameFive}</b></i>.  
                     
-            - fourthChar_ActualName has FourthB:
+            - fifthChar_ActualName has FifthB:
                     {
                         - ending.air:
-                            {charTag(FourthCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                            {charTag(FifthCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            {charTag(FourthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                            {charTag(FifthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
-                {charTag(FourthCharacter, "neutral")}:       Io sono <b><i>{charNameFour}</b></i>.
+                {charTag(FifthCharacter, "neutral")}:       Io sono <b><i>{charNameFive}</b></i>.
                     
         }
         
 
             {
-            - fourthChar_specialEvent == true:
+            - fifthChar_specialEvent == true:
                 -> secret_ending
             - else:
                 -> exit
@@ -364,8 +364,8 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
 
-        {charTag(FourthCharacter, "neutral")}:           Frase.
-        -> fourth_char_closing_storylet ->
+        {charTag(FifthCharacter, "neutral")}:           Frase.
+        -> fifth_char_closing_storylet ->
         -> close
             
      = exit
@@ -389,15 +389,13 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
         
         
-        {charTag(FourthCharacter, "neutral")}:           Frase.
-        {charTag(FourthCharacter, "neutral")}:       Salutami
+        {charTag(FifthCharacter, "neutral")}:           Frase.
             {
-                - fifthChar_storyStatus == story_storyStarted:
+                - fourthChar_storyStatus == story_storyStarted:
                     Salutami {charNameFour}.
-
             }
 
         
 
-        -> fourth_char_closing_storylet ->
-        -> endingPNGstory(FourthCharacter)
+        -> fifth_char_closing_storylet ->
+        -> endingPNGstory(FifthCharacter)

@@ -106,11 +106,14 @@
     INCLUDE Characters\FourthChar\FourthCharStoryletsManagement.ink
     INCLUDE Characters\FourthChar\FourthCharRewriting.ink
  
-    
-
-    INCLUDE Characters\FifthChar\FifthCharacter.ink
-    INCLUDE Characters\FifthChar\FifthCharStorylets.ink
+    INCLUDE Characters\FifthChar\FifthChar.ink
     INCLUDE Characters\FifthChar\FifthCharacterManagement.ink
+    INCLUDE Characters\FifthChar\FifthCharStorylets.ink
+    INCLUDE Characters\FifthChar\FifthCharSpecialStorylets.ink
+    INCLUDE Characters\FifthChar\FifthCharDialogueManager.ink
+    INCLUDE Characters\FifthChar\FifthCharStoryletsManagement.ink
+    INCLUDE Characters\FifthChar\FifthCharRewriting.ink
+
     
 
 //Gestione del Grimorio
