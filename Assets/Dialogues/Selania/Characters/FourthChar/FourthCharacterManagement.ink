@@ -1,108 +1,223 @@
-                    /* ---------------------------------
-                    
-                      Gestione timing e valori della storia
-                    
-                     ----------------------------------*/
+                                                        /* ---------------------------------
+                                                        
+                                                                LISTE E VARIABILI
+                                                        
+                                                        ----------------------------------*/
 
-//Possibili nomi
-    LIST fourthChar_possibleStates = NonnaMolotov
+
+//Gestione del ritmo della storia
+    //Stato della storia 
+        //Non avviata, avviata, conclusa
+        VAR fourthChar_storyStatus = story_storyNotStarted
+        //Ordine di conclusione della riscrittura (prima storia conclusa, seconda storia conclusa)
+        VAR fourthChar_storyEndingPosition = ()
+        //Quantità di storylets letti dalla giocatrice prima di accedere alla riscrittura
+        VAR fourthChar_minStoryletsForRewriting = grimFourthCharNine
+        //Abbiamo l'info speciale su Mentore? Se le condizioni sono corrette, viene messa su true dalla funzione inkLevel(Character)
+        VAR fourthChar_specialEvent = false
+        //Cconteggio totale delle scelte prese con la PNG
+        VAR fourthChar_totalChoices = 0
+
+    //Ritmo della storia    
+        //Variabili per mettere in pausa la conversazione
+        VAR fourthChar_pauseTalking = 0
+        VAR fourthChar_pauseDuration = 1
+        //Questa variabile verifica se abbiamo appena parlato con unx PNG, in modo tale da presentarci in modo diverso le possibili proposte che possiamo farle.
+        VAR fourthChar_justTalked = false
+        //Variabile per il tempo di attesa tra una lettera e l'altra
+        VAR fourthChar_mailPause = 0
+        VAR fourthChar_mailPauseDuration = 5
+
+
+//Stato della PNG
+    //Gestione nomi
+    LIST fourthChar_possibleStates = NonnaMolotov, (FourthB), (FourthC), (FourthD), (FourthE), (FourthF)
     VAR fourthChar_ActualName = NonnaMolotov
+
+    //Registro delle scelte prese
+    VAR fourthChar_aether = 0.00
+    VAR fourthChar_earth = 0.00
+    VAR fourthChar_air = 0.00
+    VAR fourthChar_water = 0.00
+    VAR fourthChar_fire= 0.00
     
-    
-    VAR fourthChar_storyStatus = story_storyNotStarted
-    VAR fourthChar_storyEndingPosition = ()
-    
-//Attesa comparsa quarta personaggia
-    VAR fourthChar_delay = 4    
+        //Storage del valore precedente
+        VAR fourthChar_last_aether = 0.00
+        VAR fourthChar_last_earth = 0.00
+        VAR fourthChar_last_air = 0.00
+        VAR fourthChar_last_water = 0.00
+        VAR fourthChar_last_fire= 0.00
+
+    //Utilizzo dei sigilli
+    VAR fourthChar_usedSigil = 0
+    VAR fourthChar_usedSigilsTracking = ()
+
+    //Moltiplicatore per la riscrittura
+    VAR fourthChar_glyphVariation = 3.0 
 
 //Tracciamento della relazione
-    VAR fourthChar_relationshipStatus = 0
-
-    //Utilizzato nella funzione XXX per calcolare la variazione del rapporto dopo la singola scelta.
-    VAR fourthChar_RelCalculator = 0
-    //Indicator = il valore di Indicator, riproporzionato per l'indicatore della reazione e chiamato in cucina e in riscrittura per i feedback/inchiostro.
+    //Indicatore della relazione
     VAR fourthChar_relationshipIndicator = 0
     VAR fourthChar_lastRelationshipIndicator = 0
-    //Absolute = il valore totale della relazione, tenuto per tracciamento
-    VAR fourthChar_relationshipIndicatorAbsolute = 0
+    //Status = chiamato da cucina e prima della riscrittura per valutare il rapporto creato e il relativo inchiostro. Ora è un insieme di valori "scritti"
+    VAR fourthChar_relationshipStatus = neutral
     //Reaction: qui registriamo la reazione che verrà attivata coi sigilli
     VAR fourthChar_relationshipReaction = neutral
 
+//Gestione dei doni
+    //Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
+    VAR fourthChar_favouritesGifts = (NonTiScordarDiTe, BaccaDellaAddolorata, CantoDelleCompagne)
+    VAR fourthChar_goodGifts = (ErbaLiccia, Olobino, BastoneDellOzioso, LanaNotturna)
+    //Dono consigliato dalla rana
+    VAR frog_fourth_char_gift = ""
+    VAR frog_fourth_temp_growing_gift = false
+    //Dono effettuato
+    VAR fourthChar_giftedObject = ()
+
+
 //Tracciamento cucina
     //Autonoma
-        VAR kitchen_fourthCharisCooking = false
+        VAR kitchen_fourthCharIsCooking = false
         VAR kitchen_fourthCharCookingTime = 0
+        VAR kitchen_fourthCharHasCooked = false
         //Tempo che ci impiega a fare la sua ricetta
         VAR kitchen_fourthCharCookingMaxTime = 8
     //Nostro invito
+        //l'abbiamo invitata
         VAR kitchen_fourthCharCookingTogetherInvite = false
-    //Valore quarto ingrediente
+        //Quante volte l'abbiamo invitata
+        VAR kitchen_fourthCharCookingTogetherNumberInvite = 0
+        //Da quanto ci sta aspettando
+        VAR kitchen_fourthCharCookingTogetherWaiting = 0
+        //Quanta pazienza ha ad aspettarci
+        VAR kitchen_fourthCharCookingMAXTogetherWaiting = 8
+        //Ricetta creata
+        VAR kitchen_fourthCharRecipe = ""
+        //Suggerimento rana
+        VAR frog_fourth_char_ingredient = ""
+        VAR frog_fourth_temp_growing_ingredient = false
+            
+    //Valore ingredienti
         VAR kitchen_fourthCharRecipeNoun = ""
         VAR kitchen_fourthCharRecipeAdjective = ""
         VAR kitchen_fourthCharRecipeComplement = ""
         VAR kitchen_fourthCharExtraIngredient = ()
         VAR kitchen_fourthCharExtraIngredientReaction = notReaction
-    //Ricetta creata
-        VAR kitchen_fourthCharRecipe = ""    
 
-//Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
-    VAR fourthChar_favouritesGifts = ()
-    VAR fourthChar_goodGifts = ()
-   
-//Tracciamento del dono
-    VAR fourthChar_giftedObject = ()
+//Tracciamento del racconto
+    VAR frog_fourth_novel = ""
+                     
+                                                        /* ---------------------------------
+                                                        
+                                                            FUNZIONI PER AFFINITA' E NOME
+                                                        
+                                                        ----------------------------------*/
+=== fourthAffinityCalc ===
+{debug: passo per fourthAffinityCalc.}
+//Questo mi serve per aggiornare il valore di affinità.
+//Viene chiamato a ridosso della riscrittura per definire lo stato di inchiostro
 
-//Tracciamento apprezzamento glifi. Tutto ciò che è fuori da questa lista = reazione neutrale.
-    VAR fourthChar_positiveGlyphs = ()
-    VAR fourthChar_negativeGlyphs = ()    
+    //Prima di tutto chiamo la funzione per il calcolo dello stato della relazione
+        ~ affinity_calc(FourthCharacter)
+
+    //"Trasformo" la relazione in inchiostro
+        ~ fromRelationshipToInk(FourthCharacter)
     
-//Tengo conto delle interazioni avute per aprire la possibilità di avviare la riscrittura
-    VAR fourthChar_storyletsForRewritingCount = 0
-//Quantità di storylets letti dalla giocatrice prima di accedere alla riscrittura
-    VAR fourthChar_minStoryletsForRewriting = 7    
-    VAR fourthChar_specialEvent = false
+    //Mando ai feedback
+        -> fourthAffinityFeedback ->
     
-//Variabili per mettere in pausa la conversazione
-    VAR fourthChar_pauseTalking = 0
-    VAR fourthChar_pauseDuration = 1
-    //Questa variabile verifica se abbiamo appena parlato con unx PNG, in modo tale da presentarci in modo diverso le possibili proposte che possiamo farle.
-    VAR fourthChar_justTalked = false
+    //Arriva il commento della strega
+        ~ inkLevel(FourthCharacter)
     
-//Variabile per il countdown per la sua uscita di scena
-    VAR fourthChar_exitCounter = 0
-    VAR fourthChar_startingValueExitCounter = 4    
+    //Salvo il massimo di inchiostro raggiunto con la personaggia
+        ~ maxInkLevelUpdater(FourthCharacter)
 
-//Variabile per il tempo di attesa tra una lettera e l'altra
-    VAR fourthChar_mailPause = 0
-    VAR fourthChar_mailPauseDuration = 5
-    
-//Moltiplicatore del colore per il personaggio
-    VAR fourthChar_glyphVariation = 3.0    
-//Calcolo utilizzo sigilli su png
-    VAR fourthChar_usedSigil = 0  
-    VAR fourthChar_usedSigilsTracking = () 
+    //Esco dal flusso 
+    ->-> 
 
-//UP: ???
-//DOWN: ???
-    VAR fourthChar_aether = 0.00
-    VAR fourthChar_earth = 0.00
-    VAR fourthChar_air = 0.00
-    VAR fourthChar_water = 0.00
-    VAR fourthChar_fire = 0.00
 
-    VAR fourthChar_totalChoices = 0
 
-    //Storage precedente valore
-    VAR fourthChar_last_aether = 0.00
-    VAR fourthChar_last_earth = 0.00
-    VAR fourthChar_last_air = 0.00
-    VAR fourthChar_last_water = 0.00
-    VAR fourthChar_last_fire= 0.00
-                    /* ---------------------------------
-                    
-                       Gestione relazione e nomi
-                    
-                     ----------------------------------*/
+=== fourthAffinityFeedback
+{debug: passo per fourthAffinityFeedback. Lo stato di inchiostro è {fourthChar_InkLevel}.}
+//Utilizziamo questa funzione per far fare alla PNG un commento esplicito sullo stato della relazione.
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
+    Prima però ci terrei a dirti come sono andate le cose tra noi, qui.
+            
+        {
+            -   are_two_entities_together(Mentor, PG):
+                {charTag(FifthCharacter, "neutral")}:               Vi lascio un po' di privacy. In bocca al lupo {player_name} e {charNameOne}.
+                    ~ change_entity_place(Mentor)
+        }
+        {
+            -   are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "neutral")}:               Mi levo dalle scatole.
+                    ~ change_entity_place(FirstCharacter)
+        }
+        {
+            -   are_two_entities_together(SecondCharacter, PG):
+                {charTag(FourthCharacter, "affectionate")}:          {charNameTwo}, potresti lasciarci un po' da sol3?
+                {charTag(SecondCharacter, "emotional")}:            Certissimamente! A dopo!
+                    ~ change_entity_place(SecondCharacter)
+        }
+        {
+            - are_two_entities_together(Franco, PG):
+                {charTag(Franco, "{portrait_Franco()}")}:           Non fate caso a me, sto provando a raccogliere tutte le bolle in un unico posto, ma continuano a scappare.     
+        }
+
+        
+        {
+            - fourthChar_InkLevel == ink_empty:
+                {charTag(FourthCharacter, "annoyed")}:               Come direbbe la mia vecchia insegnate di piano: apprezzo lo sforzo, manca il risultato.
+                                                                    Ci sono stati momenti carini, ma ammetto che per lo più non mi sono sentita molto capita da te.
+                                                                    Scusa.
+
+            - fourthChar_InkLevel == ink_low:
+                {charTag(FourthCharacter, "annoyed")}:               E, insomma.
+                                                                    Non è che ci capiamo molto noi due, sai?
+                                                                    È come se io suonassi Chopin e tu la lambada.
+                                                                    E la lambada è carina, ma non è roba mia.
+                                                                    Ha senso? 
+                                                                
+            - fourthChar_InkLevel == ink_normal:
+                {charTag(FourthCharacter, "neutral")}:               Ci sono stati beni momenti tra noi, sai?
+                                                                    Ma anche momenti no, in cui non mi sono sentita capita.
+                                                                    Non è un reato.
+                                                                    Ma, insomma, non riesco a fidarmi fino in fondo.
+                                                                    Scusa.
+            
+            
+            - fourthChar_InkLevel == ink_medium:
+                {charTag(FourthCharacter, "affectionate")}:          E {player_name}: non pensavo avrei trovato una persona amica, qui.
+                                                                    Mi hai reso l'assenza di Talco, di Ennio, di Valeria moooolto più sopportabile.
+                                                                    Grazie.
+            
+            
+            - fourthChar_InkLevel == ink_high:
+                {charTag(FourthCharacter, "affectionate")}:          E mi chiedevo: ma che ci hanno separat3 alla nascita?
+                                                                    Perché mi sento tipo come se avessimo un unico neurone.
+                                                                    Unit3 in tutto.
+                                                                    Ed è figa come cosa.
+                                                                    Talco continua a mancarmi, ma con te mi sento come se fossimo parte da sempre della stessa band.
+        }
+
+->->
+
+
+=== fourth_char_closing_storylet ===
+    //Questo evita che venga proposto un altro storylet fino a quando la pausa non è finita
+    ~ fourthChar_pauseTalking = fourthChar_pauseDuration
+    //Questo è per la gestione delle domande
+    ~ fourthChar_justTalked = true
+
+    //Aggiornamento storylets
+    -> grimoire_storylets_updater ->
+
+->->
 
 === fourth_char_closing_letters
     ~ fourthChar_mailPause = fourthChar_mailPauseDuration
@@ -110,67 +225,5 @@
     
     //Aggiornamento storylets
     -> grimoire_storylets_updater ->
-
-->->
-
-
-=== fourthAffinityCalc ===
-//Per la prima personaggia l'importante è che il blu sia bassissimo
-
-    {
-        - fourthChar_aether && fourthChar_earth > fourthChar_air:
-            ~ fourthChar_InkLevel ++
-            ~ fourthChar_InkLevel ++
-                ->->
-        - fourthChar_aether or fourthChar_earth > fourthChar_air:
-            ~ fourthChar_InkLevel ++
-                ->->
-    }
-
-->->
-    
-    
-//Settaggio nome quando partiamo con la discussione
-=== fourthNaming ===
-    {
-        - (fourthChar_air > fourthChar_water) && (fourthChar_air > fourthChar_fire) && (fourthChar_air > fourthChar_earth) && (fourthChar_air > fourthChar_aether):
-            ~ fourthChar_possibleStates += Triangolo
-                ->->
-                
-        - (fourthChar_fire > fourthChar_water) && (fourthChar_fire > fourthChar_air) && (fourthChar_fire > fourthChar_earth) && (fourthChar_fire > fourthChar_aether):
-            ~ fourthChar_possibleStates += Orchestra
-                ->->
-                
-        - (fourthChar_water > fourthChar_air) && (fourthChar_water > fourthChar_fire) && (fourthChar_water > fourthChar_earth) && (fourthChar_water > fourthChar_aether):
-            ~ fourthChar_possibleStates += FlautoDolce    
-                ->->
-                
-        - (fourthChar_earth > fourthChar_water) && (fourthChar_earth > fourthChar_fire) && (fourthChar_earth > fourthChar_air) && (fourthChar_earth > fourthChar_aether):
-            ~ fourthChar_possibleStates += Ocarina   
-                ->->
-                
-        - (fourthChar_aether > fourthChar_water) && (fourthChar_aether > fourthChar_fire) && (fourthChar_aether > fourthChar_earth) && (fourthChar_aether > fourthChar_air):
-            ~ fourthChar_possibleStates += Violino    
-                ->->
-                
-        - else:
-            ~ fourthChar_possibleStates += Chitarra 
-            ->->
-                
-    }
-
-->-> 
-
-
-//Formula per la chiusura di uno storylet
-=== fourth_char_closing_storylet
-        //Gestione crescita piante
-        -> growing_check ->
-        //Questo evita che venga proposto un altro storylet fino a quando la pausa non è finita
-        ~ fourthChar_pauseTalking = fourthChar_pauseDuration
-        //Questo è per la gestione delle domande
-        ~ fourthChar_justTalked = true
-        //L'animazione per via dell'informazione nuova
-        @animation:RewriterBook
 
 ->->

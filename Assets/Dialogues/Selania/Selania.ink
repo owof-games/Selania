@@ -55,6 +55,7 @@
                      ----------------------------------*/
 
 //Personagge
+    //Di supporto/non riscrivibili
     INCLUDE Characters\Mentor\Mentor.ink
     INCLUDE Characters\Mentor\MentorManagement.ink
     INCLUDE Characters\Mentor\StoryletsManagement.ink
@@ -63,8 +64,7 @@
     INCLUDE Characters\Mentor\MentorTutorial.ink
     INCLUDE Characters\Mentor\CharsFeedbacks.ink
     INCLUDE Characters\Mentor\MentorSpecialStorylets.ink
-    
-    
+
     INCLUDE Characters\Witch\Witch.ink
     INCLUDE Characters\Witch\WitchManagement.ink
     INCLUDE Characters\Witch\WitchStoryletsManagement.ink
@@ -72,6 +72,7 @@
     INCLUDE Characters\Witch\WitchTutorial.ink
     INCLUDE Characters\Witch\WitchFeedbacks.ink
    
+    //Riscrivibili
     INCLUDE Characters\FirstChar\FirstCharDialogueManager.ink
     INCLUDE Characters\FirstChar\FirstChar.ink
     INCLUDE Characters\FirstChar\FirstCharManagement.ink
@@ -81,8 +82,6 @@
     INCLUDE Characters\FirstChar\FirstCharRewriting.ink
     INCLUDE Characters\FirstChar\FirstCharArchive.ink
     
-
-
     INCLUDE Characters\SecondChar\SecondCharDialogueManager.ink
     INCLUDE Characters\SecondChar\SecondChar.ink
     INCLUDE Characters\SecondChar\SecondCharManagement.ink
@@ -90,7 +89,6 @@
     INCLUDE Characters\SecondChar\SecondCharStorylets.ink
     INCLUDE Characters\SecondChar\SecondCharSpecialStorylets.ink
     INCLUDE Characters\SecondChar\SecondCharRewriting.ink
-    
     
     INCLUDE Characters\ThirdChar\ThirdChar.ink
     INCLUDE Characters\ThirdChar\ThirdCharacterManagement.ink
@@ -100,9 +98,14 @@
     INCLUDE Characters\ThirdChar\ThirdCharStoryletsManagement.ink
     INCLUDE Characters\ThirdChar\ThirdCharRewriting.ink
  
-    INCLUDE Characters\FourthChar\FourthCharacter.ink
-    INCLUDE Characters\FourthChar\FourthCharStorylets.ink
+    INCLUDE Characters\FourthChar\FourthChar.ink
     INCLUDE Characters\FourthChar\FourthCharacterManagement.ink
+    INCLUDE Characters\FourthChar\FourthCharStorylets.ink
+    INCLUDE Characters\FourthChar\FourthCharSpecialStorylets.ink
+    INCLUDE Characters\FourthChar\FourthCharDialogueManager.ink
+    INCLUDE Characters\FourthChar\FourthCharStoryletsManagement.ink
+    INCLUDE Characters\FourthChar\FourthCharRewriting.ink
+ 
     
 
     INCLUDE Characters\FifthChar\FifthCharacter.ink

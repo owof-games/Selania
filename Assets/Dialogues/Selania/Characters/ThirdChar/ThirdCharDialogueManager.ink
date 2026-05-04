@@ -1,6 +1,4 @@
 === third_character ===
-~ temp charNameTwo = translator(secondChar_ActualName)
-
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
         + {are_two_entities_together(ThirdCharacter, PG) && thirdChar_storyStatus == story_storyStarted && entity_location(PG) != Kitchen} [ThirdCharacter]
@@ -13,7 +11,6 @@
 
 
 === talk_with_third_character ===
-~ temp charNameTwo = translator(secondChar_ActualName)
         {
 
             - thirdChar_pauseTalking == 0:
