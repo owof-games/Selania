@@ -33,6 +33,8 @@
     //Gestione nomi
     LIST thirdChar_possibleStates = Boccale, (ThirdB), (ThirdC), (ThirdD), (ThirdE), (ThirdF)
     VAR thirdChar_ActualName = Boccale
+    //Questa è una lista che utilizzo in caso di spareggio dei potenziali nomi
+    VAR thirdChar_randomPossibileNames = ()
 
     //Registro delle scelte prese
     VAR thirdChar_aether = 0.00
@@ -225,55 +227,68 @@
  {debug: svuoto thirdChar_ActualName : {thirdChar_ActualName}.}
  
     {
-        //Blu colore più usato
+        //Aria elemento più usato    
         - (thirdChar_air > thirdChar_water) && (thirdChar_air > thirdChar_fire) && (thirdChar_air > thirdChar_earth) && (thirdChar_air > thirdChar_aether):
             ~ thirdChar_ActualName += ThirdB
             {debug: passo per ThirdB e il nome è : {thirdChar_ActualName}.}
         
-        //Rosso colore più usato        
+        //Fuoco elemento più usato          
         - (thirdChar_fire> thirdChar_water) && (thirdChar_fire> thirdChar_air) && (thirdChar_fire> thirdChar_earth) && (thirdChar_fire> thirdChar_aether):
             ~ thirdChar_ActualName += ThirdC
             {debug: passo per ThirdC e il nome è : {thirdChar_ActualName}.}
         
-        //Verde colore più usato        
+        //Acqua elemento più usato       
         - (thirdChar_water > thirdChar_air) && (thirdChar_water > thirdChar_fire) && (thirdChar_water > thirdChar_earth) && (thirdChar_water > thirdChar_aether):
             ~ thirdChar_ActualName += ThirdD
             {debug: passo per ThirdD e il nome è : {thirdChar_ActualName}.}
 
-        //Giallo colore più usato        
+        //Terra elemento più usato           
         - (thirdChar_earth > thirdChar_water) && (thirdChar_earth > thirdChar_fire) && (thirdChar_earth > thirdChar_air) && (thirdChar_earth > thirdChar_aether):
             ~ thirdChar_ActualName += ThirdE
             {debug: passo per ThirdE e il nome è : {thirdChar_ActualName}.}
 
-        //Viola colore più usato        
+        //Spirito elemento più usato          
         - (thirdChar_aether > thirdChar_water) && (thirdChar_aether > thirdChar_fire) && (thirdChar_aether > thirdChar_earth) && (thirdChar_aether > thirdChar_air):
         {debug: passo per ThirdF e il nome è : {thirdChar_ActualName}.}
             ~ thirdChar_ActualName += ThirdF    
 
                 
         - else:
-        //In caso di pareggio tengono conto della natura della PNG per fare uno "spareggio" (mi piacerebbe trovare però qualcosa di più efficace, come le scelte fatte in cucina, che non possono creare pareggi, ma deve essere una cosa coerente.)
+            //In caso di pareggio cerco di assegnare un nome randomico da quelli più plausibili, sempre secondo la logica qui sopra elemento == nome.
+            //Qui ragiono per percentuali: prima di tutto calcolo la quantità totale del valore dei glifi
+            ~ temp allGlyphsValue = secondChar_fire + secondChar_air + secondChar_water + secondChar_earth + secondChar_aether
+            //Poi faccio un conto del valore medio delle scelte
+            ~ temp mediumValue = allGlyphsValue/5
+
+            {debug: La somma delle scelte glifo di {secondChar_ActualName} è {allGlyphsValue}, e la media è {mediumValue}.}
+
+            //Poi aggiungo alla lista dei potenziali generatori di nomi solo quei glifi che superano il valore medio delle scelte. 
             {
-                - (thirdChar_aether < thirdChar_air) && (thirdChar_water < thirdChar_air):
-                        ~ thirdChar_ActualName += ThirdB
-                        {debug: passo per ThirdB e il nome è : {thirdChar_ActualName}.}
+                - thirdChar_aether >= mediumValue:
+                        ~ thirdChar_randomPossibileNames += Capibara
 
-                - thirdChar_aether && thirdChar_water > thirdChar_air:
-                        ~ thirdChar_ActualName += ThirdF
-                            {debug: passo per ThirdF e il nome è : {thirdChar_ActualName}.}
+                - thirdChar_water >= mediumValue:
+                        ~ thirdChar_randomPossibileNames += Lupo
 
-                - (thirdChar_water > thirdChar_air) && (not thirdChar_aether > thirdChar_air):
-                        ~ thirdChar_ActualName += ThirdD
-                        {debug: passo per ThirdD e il nome è : {thirdChar_ActualName}.}
+                - thirdChar_fire >= mediumValue:
+                        ~ thirdChar_randomPossibileNames += Grizzly
 
-                - (thirdChar_aether > thirdChar_air) && (not thirdChar_water > thirdChar_air):
-                    {debug: passo per ThirdE e il nome è : {thirdChar_ActualName}.}
-                        ~ thirdChar_ActualName += ThirdE 
+                - thirdChar_air >= mediumValue:
+                        ~ thirdChar_randomPossibileNames += Corvo
+
+                - thirdChar_earth >= mediumValue:
+                        ~ thirdChar_randomPossibileNames += Delfino
+
+                {debug: La lista di possibili nomi in caso di pareggio è {thirdChar_randomPossibileNames}.}
+            } 
+            
+            //E infine ne prendo uno randomico dalla lista. Se dovesse essere vuota, ne assegno uno che ha senso con una cattiva relazione creata con lx png.
+            {
+                - thirdChar_randomPossibileNames == ():
+                    ~ thirdChar_ActualName += Grizzly
 
                 - else:
-                        ~ thirdChar_ActualName += ThirdC
-                            {debug: passo per ThirdC e il nome è : {thirdChar_ActualName}.}
-
+                    ~ thirdChar_ActualName = LIST_RANDOM(thirdChar_randomPossibileNames)
             }
         }
 

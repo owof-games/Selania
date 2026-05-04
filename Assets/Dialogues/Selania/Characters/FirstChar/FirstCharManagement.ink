@@ -33,6 +33,8 @@
     //Gestione nomi
     LIST firstChar_possibleStates = Chitarra, (Triangolo), (Orchestra), (FlautoDolce), (Ocarina), (Violino)
     VAR firstChar_ActualName = Chitarra
+    //Questa è una lista che utilizzo in caso di spareggio dei potenziali nomi
+    VAR firstChar_randomPossibileNames = ()
 
     //Registro delle scelte prese
     VAR firstChar_aether = 0.00
@@ -226,55 +228,68 @@
  {debug: svuoto firstChar_ActualName : {firstChar_ActualName}.}
  
     {
-        //Blu colore più usato
+        //Aria elemento più usato    
         - (firstChar_air > firstChar_water) && (firstChar_air > firstChar_fire) && (firstChar_air > firstChar_earth) && (firstChar_air > firstChar_aether):
             ~ firstChar_ActualName += Triangolo
             {debug: passo per Triangolo e il nome è : {firstChar_ActualName}.}
         
-        //Rosso colore più usato        
+        //Fuoco elemento più usato          
         - (firstChar_fire> firstChar_water) && (firstChar_fire> firstChar_air) && (firstChar_fire> firstChar_earth) && (firstChar_fire> firstChar_aether):
             ~ firstChar_ActualName += Orchestra
             {debug: passo per Orchestra e il nome è : {firstChar_ActualName}.}
         
-        //Verde colore più usato        
+        //Acqua elemento più usato        
         - (firstChar_water > firstChar_air) && (firstChar_water > firstChar_fire) && (firstChar_water > firstChar_earth) && (firstChar_water > firstChar_aether):
             ~ firstChar_ActualName += Violino
             {debug: passo per Violino e il nome è : {firstChar_ActualName}.}
 
-        //Giallo colore più usato        
+        //Terra elemento più usato        
         - (firstChar_earth > firstChar_water) && (firstChar_earth > firstChar_fire) && (firstChar_earth > firstChar_air) && (firstChar_earth > firstChar_aether):
             ~ firstChar_ActualName += Ocarina
             {debug: passo per Ocarina e il nome è : {firstChar_ActualName}.}
 
-        //Viola colore più usato        
+        //Spirito elemento più usato          
         - (firstChar_aether > firstChar_water) && (firstChar_aether > firstChar_fire) && (firstChar_aether > firstChar_earth) && (firstChar_aether > firstChar_air):
         {debug: passo per FlautoDolce e il nome è : {firstChar_ActualName}.}
             ~ firstChar_ActualName += FlautoDolce    
 
                 
         - else:
-        //In caso di pareggio tengono conto della natura della PNG per fare uno "spareggio" (mi piacerebbe trovare però qualcosa di più efficace, come le scelte fatte in cucina, che non possono creare pareggi, ma deve essere una cosa coerente.)
+            //In caso di pareggio cerco di assegnare un nome randomico da quelli più plausibili, sempre firsto la logica qui sopra elemento == nome.
+            //Qui ragiono per percentuali: prima di tutto calcolo la quantità totale del valore dei glifi
+            ~ temp allGlyphsValue = firstChar_fire + firstChar_air + firstChar_water + firstChar_earth + firstChar_aether
+            //Poi faccio un conto del valore medio delle scelte
+            ~ temp mediumValue = allGlyphsValue/5
+
+            {debug: La somma delle scelte glifo di {firstChar_ActualName} è {allGlyphsValue}, e la media è {mediumValue}.}
+
+            //Poi aggiungo alla lista dei potenziali generatori di nomi solo quei glifi che superano il valore medio delle scelte. 
             {
-                - (firstChar_aether < firstChar_air) && (firstChar_water < firstChar_air):
-                        ~ firstChar_ActualName += Triangolo
-                        {debug: passo per Triangolo e il nome è : {firstChar_ActualName}.}
+                - firstChar_aether >= mediumValue:
+                        ~ firstChar_randomPossibileNames += Capibara
 
-                - firstChar_aether && firstChar_water > firstChar_air:
-                        ~ firstChar_ActualName += FlautoDolce
-                            {debug: passo per FlautoDolce e il nome è : {firstChar_ActualName}.}
+                - firstChar_water >= mediumValue:
+                        ~ firstChar_randomPossibileNames += Lupo
 
-                - (firstChar_water > firstChar_air) && (not firstChar_aether > firstChar_air):
-                        ~ firstChar_ActualName += Violino
-                        {debug: passo per Violino e il nome è : {firstChar_ActualName}.}
+                - firstChar_fire >= mediumValue:
+                        ~ firstChar_randomPossibileNames += Grizzly
 
-                - (firstChar_aether > firstChar_air) && (not firstChar_water > firstChar_air):
-                    {debug: passo per Ocarina e il nome è : {firstChar_ActualName}.}
-                        ~ firstChar_ActualName += Ocarina 
+                - firstChar_air >= mediumValue:
+                        ~ firstChar_randomPossibileNames += Corvo
+
+                - firstChar_earth >= mediumValue:
+                        ~ firstChar_randomPossibileNames += Delfino
+
+                {debug: La lista di possibili nomi in caso di pareggio è {firstChar_randomPossibileNames}.}
+            } 
+            
+            //E infine ne prendo uno randomico dalla lista. Se dovesse essere vuota, ne assegno uno che ha senso con una cattiva relazione creata con lx png.
+            {
+                - firstChar_randomPossibileNames == ():
+                    ~ firstChar_ActualName += Grizzly
 
                 - else:
-                        ~ firstChar_ActualName += Orchestra
-                            {debug: passo per Orchestra e il nome è : {firstChar_ActualName}.}
-
+                    ~ firstChar_ActualName = LIST_RANDOM(firstChar_randomPossibileNames)
             }
         }
 

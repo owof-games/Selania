@@ -190,7 +190,6 @@
                             - are_two_entities_together(Mentor,PG):
                             {charTag(FifthCharacter, "neutral")}:           Sì {player_name}, parliamo un attimo!
                         }
-                            ~ secondChar_tutorial = true
                                 -> main
 
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona

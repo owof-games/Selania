@@ -1,77 +1,115 @@
-                    /* ---------------------------------
-                    
-                      Gestione timing e valori della storia
-                    
-                     ----------------------------------*/
-//Possibili nomi:
+                                                        /* ---------------------------------
+                                                        
+                                                                LISTE E VARIABILI
+                                                        
+                                                        ----------------------------------*/
+
+//Gestione del ritmo della storia
+    //Stato della storia 
+        //Non avviata, avviata, conclusa
+        VAR secondChar_storyStatus = story_storyNotStarted
+        //Ordine di conclusione della riscrittura (prima storia conclusa, seconda storia conclusa)
+        VAR secondChar_storyEndingPosition = ()
+        //Quantità di storylets letti dalla giocatrice prima di accedere alla riscrittura
+        VAR secondChar_minStoryletsForRewriting = grimSecondCharNine
+        //Abbiamo l'info speciale su Mentore? Se le condizioni sono corrette, viene messa su true dalla funzione inkLevel(Character)
+        VAR secondChar_specialEvent = false
+        //Cconteggio totale delle scelte prese con la PNG
+        VAR secondChar_totalChoices = 0
+
+    //Ritmo della storia    
+        //Variabili per mettere in pausa la conversazione
+        VAR secondChar_pauseTalking = 0
+        VAR secondChar_pauseDuration = 1
+        //Questa variabile verifica se abbiamo appena parlato con unx PNG, in modo tale da presentarci in modo diverso le possibili proposte che possiamo farle.
+        VAR secondChar_justTalked = false
+        //Variabile per il tempo di attesa tra una lettera e l'altra
+        VAR secondChar_mailPause = 0
+        VAR secondChar_mailPauseDuration = 5
+
+
+//Stato della PNG
+    //Gestione nomi
     LIST secondChar_possibleStates = Riccio, (Grizzly), (Lupo), (Delfino), (Capibara), (Corvo)
     VAR secondChar_ActualName = Riccio
+    //Questa è una lista che utilizzo in caso di spareggio dei potenziali nomi
+    VAR secondChar_randomPossibileNames = ()
+
+    //Registro delle scelte prese
+    VAR secondChar_aether = 0.00
+    VAR secondChar_earth = 0.00
+    VAR secondChar_air = 0.00
+    VAR secondChar_water = 0.00
+    VAR secondChar_fire= 0.00
     
-    VAR secondChar_storyStatus = story_storyNotStarted
-    VAR secondChar_storyEndingPosition = ()
+        //Storage del valore precedente
+        VAR secondChar_last_aether = 0.00
+        VAR secondChar_last_earth = 0.00
+        VAR secondChar_last_air = 0.00
+        VAR secondChar_last_water = 0.00
+        VAR secondChar_last_fire= 0.00
+
+    //Utilizzo dei sigilli
+    VAR secondChar_usedSigil = 0
+    VAR secondChar_usedSigilsTracking = ()
+
+    //Moltiplicatore per la riscrittura
+    VAR secondChar_glyphVariation = 3.0 
 
 //Tracciamento della relazione
-    //Indicator = il valore di Indicator, riproporzionato per l'indicatore della reazione e chiamato in cucina e in riscrittura per i feedback/inchiostro.
+    //Indicatore della relazione
     VAR secondChar_relationshipIndicator = 0
     VAR secondChar_lastRelationshipIndicator = 0
-    
-    //Utilizzato nella funzione XXX per calcolare la variazione del rapporto dopo la singola scelta.
-    VAR secondChar_RelCalculator = 0
-    
-    //Absolute = il valore totale della relazione, tenuto per tracciamento
-    VAR secondChar_relationshipIndicatorAbsolute = 0
-    //Reaction: qui registriamo la reazione che verrà attivata coi sigilli
-    VAR secondChar_relationshipReaction = neutral
     //Status = chiamato da cucina e prima della riscrittura per valutare il rapporto creato e il relativo inchiostro. Ora è un insieme di valori "scritti"
     VAR secondChar_relationshipStatus = neutral
-    VAR secondChar_relationshipGoodPercentage = 66.00
-
+    //Reaction: qui registriamo la reazione che verrà attivata coi sigilli
+    VAR secondChar_relationshipReaction = neutral
     
-    //Questo lo usiamo per verificare se il valore dell'ultimo glifo è variato. LAST: dato aggiornato dopo la scelta. Actual: dato controllato durante la scelta.
-    VAR secondChar_relationshipLastDominantGlyph = ()
-    VAR secondChar_relationshipLastDominantGlyphValue = 0
-    VAR secondChar_relationshipLastSecondDominantGlyph = ()
-    VAR secondChar_relationshipLastSecondDominantGlyphValue = 0
+    //VALORI SPECIALI PER RICCIO
+    //Valori per definire l'esito del nome
+        //Valore medio per indicare una buona relazione. PROBABILMENTE NON MI SERVE PIU' A NULLA
+        VAR secondChar_relationshipGoodPercentage = 66.00
+        
+        //come minimo, otteniamo 20% (prendo esattamente la stessa quantità di risposte per ogni colore)
+        //quindi divido l'intervallo 20% - 100% in cinque blocchi, a distanza uniforme: 20%-36%, 36%-52%,
+        //ecc ecc... NOTA: PROBABILMENTE NON MI SERVONO PIU' A NULLA
+        VAR secondChar_crowPercentage = 84.00
+        VAR secondChar_capibaraPercentage = 68.00
+        VAR secondChar_dolphinePercentage = 52.00
+        VAR secondChar_wolfPercentage = 36.00
 
-    VAR secondChar_relationshipActualDominantGlyph = ()
-    VAR secondChar_relationshipActualDominantGlyphValue = 0
-    VAR secondChar_relationshipActualSecondDominantGlyph = ()
-    VAR secondChar_relationshipActualSecondDominantGlyphValue = 0
+        //Questi li usiamo per verificare se il valore dell'ultimo glifo è variato. LAST: dato aggiornato dopo la scelta. Actual: dato controllato durante la scelta.
+        VAR secondChar_relationshipLastDominantGlyph = ()
+        VAR secondChar_relationshipLastDominantGlyphValue = 0
+        VAR secondChar_relationshipLastSecondDominantGlyph = ()
+        VAR secondChar_relationshipLastSecondDominantGlyphValue = 0
 
-    VAR secondChar_relationshipTrackingChoise = ()
+        VAR secondChar_relationshipActualDominantGlyph = ()
+        VAR secondChar_relationshipActualDominantGlyphValue = 0
+        VAR secondChar_relationshipActualSecondDominantGlyph = ()
+        VAR secondChar_relationshipActualSecondDominantGlyphValue = 0
 
-//Valori per definire l'esito del nome
-//come minimo, otteniamo 20% (prendo esattamente la stessa quantità di risposte per ogni colore)
-//quindi divido l'intervallo 20% - 100% in cinque blocchi, a distanza uniforme: 20%-36%, 36%-52%,
-//ecc ecc...
-    VAR secondChar_crowPercentage = 84.00
-    VAR secondChar_capibaraPercentage = 68.00
-    VAR secondChar_dolphinePercentage = 52.00
-    VAR secondChar_wolfPercentage = 36.00
+        VAR secondChar_relationshipTrackingChoise = ()
 
-//Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
+//Gestione dei doni
+    //Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
     VAR secondChar_favouritesGifts = (BrinaDellImpossibile, BastoneDellOzioso, LicheneDegliAbissi)
     VAR secondChar_goodGifts = (CantoDelleCompagne, LanaNotturna, LaSpazzata, NonTiScordarDiTe)
     //Dono consigliato dalla rana
     VAR frog_second_char_gift = ""
     VAR frog_second_temp_growing_gift = false
-
-//Tracciamento del dono
+    //Dono effettuato
     VAR secondChar_giftedObject = ()
-    
-//Tracciamento del racconto
-    VAR frog_second_novel = ""    
-    
-//Tracciamento attivazione secondo elemento tutorial
-    VAR secondChar_tutorial = true
-    
+
+
+
 //Tracciamento cucina
-    //autonoma
+    //Autonoma
         VAR kitchen_secondCharIsCooking = false
         VAR kitchen_secondCharCookingTime = 0
-        //Tempo che ci impiega a fare la sua ricetta
-        VAR kitchen_secondCharCookingMaxTime = 7
         VAR kitchen_secondCharHasCooked = false
+        //Tempo che ci impiega a fare la sua ricetta
+        VAR kitchen_secondCharCookingMaxTime = 8
     //Nostro invito
         //l'abbiamo invitata
         VAR kitchen_secondCharCookingTogetherInvite = false
@@ -80,136 +118,55 @@
         //Da quanto ci sta aspettando
         VAR kitchen_secondCharCookingTogetherWaiting = 0
         //Quanta pazienza ha ad aspettarci
-        VAR kitchen_secondCharCookingMAXTogetherWaiting = 5
+        VAR kitchen_secondCharCookingMAXTogetherWaiting = 8
         //Ricetta creata
         VAR kitchen_secondCharRecipe = ""
-         //Suggerimento rana
+        //Suggerimento rana
         VAR frog_second_char_ingredient = ""
         VAR frog_second_temp_growing_ingredient = false
-    
-        //Valore ingredienti
+            
+    //Valore ingredienti
         VAR kitchen_secondCharRecipeNoun = ""
         VAR kitchen_secondCharRecipeAdjective = ""
         VAR kitchen_secondCharRecipeComplement = ""
         VAR kitchen_secondCharExtraIngredient = ()
-        VAR kitchen_secondCharExtraIngredientReaction = notReaction   
+        VAR kitchen_secondCharExtraIngredientReaction = notReaction
 
-//Tracciamento apprezzamento glifi. Tutto ciò che è fuori da questa lista = reazione neutrale.
-    VAR secondChar_positiveGlyphs = ()
-    VAR secondChar_negativeGlyphs = ()
-    
-//Tengo conto delle interazioni avute per aprire la possibilità della riscrittura
-    VAR secondChar_minStoryletsForRewriting = grimSecondCharNine   
-    VAR secondChar_specialEvent = false
-    VAR secondChar_justTalked = false
-
-//Questo è per il conteggio totale delle scelte prese con la PNG
-    VAR secondChar_totalChoices = 0    
+//Tracciamento del racconto
+    VAR frog_second_novel = ""
 
 
-//Variabili per mettere in pausa la conversazione
-    VAR secondChar_pauseTalking = 0
-    VAR secondChar_pauseDuration = 1
-    
-//Variabile per il countdown per la sua uscita di scena
-    VAR secondChar_exitCounter = 0
-    VAR secondChar_startingValueExitCounter = 4
 
-//Variabile per il tempo di attesa tra una lettera e l'altra
-    VAR secondChar_mailPause = 0
-    VAR secondChar_mailPauseDuration = 5
-    
-//Moltiplicatore del colore per il personaggio
-    VAR secondChar_glyphVariation = 3.0
-//Check se ho utilizzato almeno un sigillo col personaggio
-    VAR secondChar_usedSigil = 0
-    VAR secondChar_usedSigilsTracking = ()
-    
-//UP: coerenza.
-//DOWN: incoerenza, cose random
-    VAR secondChar_aether = 0.00
-    VAR secondChar_earth = 0.00
-    VAR secondChar_air = 0.00
-    VAR secondChar_water = 0.00
-    VAR secondChar_fire = 0.00
 
-    //Storage precedente valore
-    VAR secondChar_last_aether = 0.00
-    VAR secondChar_last_earth = 0.00
-    VAR secondChar_last_air = 0.00
-    VAR secondChar_last_water = 0.00
-    VAR secondChar_last_fire= 0.00           
-                     
-                    /* ---------------------------------
-                    
-                       Gestione relazione e nomi
-                    
-                     ----------------------------------*/
-
-//Aggiorniamo lo stato relazionale                     
-=== secondAffinityCalc ===
-{debug: passo da secondAffinityCalc}
-//Per il secondo personaggio la cosa che conta è coerenza. Ha bisogno di stabilità. A manoni la logica sarà: tengo conto di un greenhouse_questionsCounter delle domande a cui ha risposto la giocatrice e se un determinato valore è >= di greenhouse_questionsCounter - x allora ++, se >= greenhouse_questionsCounter -x-1 allora +. Probabilmente da bilanciare.
-
-    //In questa prima fase di testing, punterò su una soluzione di difficoltà media.
-    //L'obbiettivo è: beccare almeno il 66% delle risposte.
-    //Invece di complicarmi la vita posso usare la matematica.
-    
-    ~ temp allColorsValue = secondChar_fire + secondChar_air + secondChar_water + secondChar_earth + secondChar_aether
-    ~ temp minimumPercentValue = ((allColorsValue/100.00)*secondChar_relationshipGoodPercentage)
-    
-        {debug: La percentuale di risposte coerenti per una buona relazione è di {secondChar_relationshipGoodPercentage}. Il {secondChar_relationshipGoodPercentage}% di tutta la somma dei colori di Riccio (che è {allColorsValue}) è {minimumPercentValue}.}
-        {debug: Il valore di viola è: {FLOAT(secondChar_aether)}, di verde è: {FLOAT(secondChar_water)}, di rosso è: {FLOAT(secondChar_fire)}, di blu è: {FLOAT(secondChar_air)}, di giallo è: {FLOAT(secondChar_earth)}}
         
-        {
-            - secondChar_aether > minimumPercentValue:
-                    ~ secondChar_relationshipStatus ++
+                                                        /* ---------------------------------
+                                                        
+                                                            FUNZIONI PER AFFINITA' E NOME
+                                                        
+                                                        ----------------------------------*/
 
-            - secondChar_water > minimumPercentValue:
-                    ~ secondChar_relationshipStatus ++  
+=== secondAffinityCalc ===
+{debug: passo per secondAffinityCalc.}
+//Questo mi serve per aggiornare il valore di affinità.
+//Viene chiamato a ridosso della riscrittura per definire lo stato di inchiostro
 
-            - secondChar_fire > minimumPercentValue:
-                    ~ secondChar_relationshipStatus ++ 
+    //Prima di tutto chiamo la funzione per il calcolo dello stato della relazione
+        ~ affinity_calc(SecondCharacter)
 
-            - secondChar_air > minimumPercentValue:
-                    ~ secondChar_relationshipStatus ++
-
-            - secondChar_earth > minimumPercentValue:
-                    ~ secondChar_relationshipStatus ++
-
-            {debug: Una risposta supera il 66 per cento delle scelte e quindi aumento l'inchiostro del secondo personaggio di un livello. Ora è a {secondChar_relationshipStatus}}
-        }    
-
+    //"Trasformo" la relazione in inchiostro
+        ~ fromRelationshipToInk(SecondCharacter)
     
+    //Mando ai feedback
+        -> secondAffinityFeedback ->
     
-        {
-            //Se vengo dalla preriscrittura:
-            - rewriting_proposal_second_character.rewriting:
-                {debug: ho cliccato rewriting e quindi faccio gli ultimi passaggi e attivo il feedback.} 
-                //Prima di tutto chiamo la funzione per il calcolo dello stato della relazione
-                    ~ affinity_calc(SecondCharacter)
-
-                //"Trasformo" la relazione in inchiostro
-                    ~ fromRelationshipToInk(SecondCharacter)
-                   
-                // Mando ai feedback
-                    -> secondAffinityFeedback ->
-                    
-                //Arriva il commento della strega
-                    ~ inkLevel(SecondCharacter)
-                                
-                //Salvo il massimo di inchiostro raggiunto con la personaggia
-                    ~ maxInkLevelUpdater(SecondCharacter)    
-                    ->-> 
-            
-            // altrimenti, mando avanti
-            - else:
-                ->->
-        }
+    //Arriva il commento della strega
+        ~ inkLevel(SecondCharacter)
     
-            ->->
+    //Salvo il massimo di inchiostro raggiunto con la personaggia
+        ~ maxInkLevelUpdater(SecondCharacter)
 
-
+    //Esco dal flusso 
+    ->-> 
 
 
 //Abbiamo un feedback da parte della PNG sul suo stato prima di confessare (che brutta parola)        
@@ -225,125 +182,153 @@
 
         {
             -   are_two_entities_together(FirstCharacter, PG):
-                    {charTag(FirstCharacter, "curious")}:       E questo è il momento per me di levarmi da qui e lasciarvi in pace.
+                    {charTag(FirstCharacter, "curious")}:                   E questo è il momento per me di levarmi da qui e lasciarvi in pace.
                     Anche se sono stracuriosa.
                     Poi non dite che non vi voglio bene!
                             ~ change_entity_place(FirstCharacter)
         }
+        {
+            -   are_two_entities_together(ThirdCharacter, PG):
+                {charTag(ThirdCharacter, "neutral")}:                       In bocca al lupo ragazzo!
+                    ~ change_entity_place(ThirdCharacter)
+        }
         
         {
             -   are_two_entities_together(Mentor, PG):
-                    {charTag(FifthCharacter, "neutral")}:               Immagino sia giusto lasciarvi la vostra privacy.
+                    {charTag(FifthCharacter, "neutral")}:                   Immagino sia giusto lasciarvi la vostra privacy.
                         ~ change_entity_place(Mentor)
         }
         {
             - are_two_entities_together(Franco, PG):
-                {charTag(Franco, "{portrait_Franco()}")}:       Io sto cra buono buono.
-                                                                In silenzio.
-                                                                A ricordarmi il numero della scuola dei girini.
-                                                                Che non ricordo a che ora chiude.
-                                                                Di nuovo.     
+                    {charTag(Franco, "{portrait_Franco()}")}:               Io sto cra buono buono.
+                                                                            In silenzio.
+                                                                            A ricordarmi il numero della scuola dei girini.
+                                                                            Che non ricordo a che ora chiude.
+                                                                            Di nuovo.     
         }
 
-        {charTag(SecondCharacter, "neutral")}:        Ecco...
+        {charTag(SecondCharacter, "neutral")}:                              Ecco...
     
         {
             - secondChar_InkLevel == ink_empty:
-                    {charTag(SecondCharacter, "angry")}:        Che secondo me mi tratti come un bambino.
-                    {charTag(SecondCharacter, "neutral")}:        Tutte le cose che dici cambiano, sono disordinate.
-                                                                    Come i camaleonti che sono verdi sulle foglie e bianchi sul muro.
-                    {charTag(SecondCharacter, "melanchonic")}:    Non mi piace mica come cosa.
-                                                                Mi sa che mi hai ascoltato, ma non mi hai mica capito!
+                    {charTag(SecondCharacter, "angry")}:                    Che secondo me mi tratti come un bambino.
+                    {charTag(SecondCharacter, "neutral")}:                  Tutte le cose che dici cambiano, sono disordinate.
+                                                                            Come i camaleonti che sono verdi sulle foglie e bianchi sul muro.
+                    {charTag(SecondCharacter, "melanchonic")}:              Non mi piace mica come cosa.
+                                                                            Mi sa che mi hai ascoltato, ma non mi hai mica capito!
             
             
             - secondChar_InkLevel == ink_low:
-                    {charTag(SecondCharacter, "melanchonic")}:      Che io non ho mica capito cosa pensi.
-                                                                    Sei come quando guardo nel terrario e non capisco se c'è l'insetto stecco o sono solo rami.
-                                                                    Magari c'hai provato a capirmi ma boh, mica ci sei {player_pronouns has him:riuscito|{player_pronouns has her:riuscita|riuscitə}}.
+                    {charTag(SecondCharacter, "melanchonic")}:              Che io non ho mica capito cosa pensi.
+                                                                            Sei come quando guardo nel terrario e non capisco se c'è l'insetto stecco o sono solo rami.
+                                                                            Magari c'hai provato a capirmi ma boh, mica ci sei {player_pronouns has him:riuscito|{player_pronouns has her:riuscita|riuscitə}}.
             
             - secondChar_InkLevel == ink_normal:
-                    {charTag(SecondCharacter, "melanchonic")}:      Che si vede che sei grande.
-                                                                    Che a volte non è male, a volte però mi agita.
-                                                                    Mi chiedo sei mi ascolti davvero.
-                                                                    Però per lo meno ti sei {player_pronouns has him:impegnato|{player_pronouns has her:impegnata|impegnatə}}.
+                    {charTag(SecondCharacter, "melanchonic")}:              Che si vede che sei grande.
+                                                                            Che a volte non è male, a volte però mi agita.
+                                                                            Mi chiedo sei mi ascolti davvero.
+                                                                            Però per lo meno ti sei {player_pronouns has him:impegnato|{player_pronouns has her:impegnata|impegnatə}}.
             
             - secondChar_InkLevel == ink_medium:
-                    {charTag(SecondCharacter, "neutral")}:          Che un po' mi fido
-                                                                    Secondo me non dici <i>sempre sempre sempre</i> le cose in modo preciso.
-                                                                    Sembri un po' un gatto.
-                                                                    Ma mi fido.
+                    {charTag(SecondCharacter, "neutral")}:                  Che un po' mi fido
+                                                                            Secondo me non dici <i>sempre sempre sempre</i> le cose in modo preciso.
+                                                                            Sembri un po' un gatto.
+                                                                            Ma mi fido.
             
             - secondChar_InkLevel == ink_high:
-                    {charTag(SecondCharacter, "emotional")}:        Che non sei mica male per essere grande.
-                    {charTag(SecondCharacter, "neutral")}:          Dici sempre le cose allo stesso modo.
-                                                                    Come un cane che scodinzola se è felice ma abbaia se arrabbiato.
-                    {charTag(SecondCharacter, "emotional")}:        E questo mi fa stare al sicuro.
-                                                                    Mi dice che mi hai ascoltato, ed è una cosa bella.
+                    {charTag(SecondCharacter, "emotional")}:                Che non sei mica male per essere grande.
+                    {charTag(SecondCharacter, "neutral")}:                  Dici sempre le cose allo stesso modo.
+                                                                            Come un cane che scodinzola se è felice ma abbaia se arrabbiato.
+                    {charTag(SecondCharacter, "emotional")}:                E questo mi fa stare al sicuro.
+                                                                            Mi dice che mi hai ascoltato, ed è una cosa bella.
         }
     
 
 ->->        
         
+//Settaggio nome quando partiamo con la discussione (non finale quindi)
+=== function secondNaming()
 
-=== secondNaming ==
-//Selezione nome prima della riscrittura
-//Grizzly è il livello "più basso" per Riccio
-//Riutilizziamo la stessa logica prodotta dall'affinity calculator, ma con impatti diversi: > 90, >70, >60, > 40
+                                                                                                        /********************
+                                                                        Per la riscrittura non si tratta più di creare una relazione, ma di mostrare un mondo. 
+                                                                        Per cui non ragioniamo più con le funzioni di relazione ma semplicemente tracciamo il colore delle scelte, ed è quello a definire il nome. 
+                                                                        In questo modo non è più un discorso di esito positivo/negativo, ma di espressione.
+                                                                        PERO', per non rendere inutile tutta la conversazione precedente, terremo conto anche di tutte le scelte fatte fino a quel momento.
+                                                                        In questo modo avere più scelte (e quindi più inchiostro) o utilizzare il giusto sigillo sono cose che creano effettivamente un vantaggio perché per (es) spostare da una visione "fire" a 12 a una "water" che parte da un 6 ho bisogno di più scelte possibile (e qui interviene comunque anche il vantaggio del modificatore.) 
+                                                                                                        ********************/
 {debug: passo per secondNaming.}
-
-    ~ temp allColorsValue = secondChar_fire + secondChar_air + secondChar_water + secondChar_earth + secondChar_aether
-    ~ temp minimumPercentValue = (allColorsValue/100.00)
-    ~ temp winnerColor = 0
-
-{debug: Il valore di secondChar_fire è {secondChar_fire} , di secondChar_air è {secondChar_air}, di secondChar_water è {secondChar_water}, di secondChar_earth è {secondChar_earth} e di secondChar_aether è {secondChar_aether}. La somma di tutti i colori è {allColorsValue}. Il valore di minimumPercentValue è {minimumPercentValue}.}
-
-//Resetto il valore del nome di Riccio
-    ~ secondChar_ActualName = ()
-
-    //Verifico quale sia il valore "vincente"
+{debug: prima di operare,il valore del nome è: {secondChar_ActualName}.}
+ //Svuoto il valore per sicurezza
+ ~ secondChar_ActualName = ()
+ {debug: svuoto secondChar_ActualName : {secondChar_ActualName}.}
+ 
     {
-        - (secondChar_aether > secondChar_water) && (secondChar_aether > secondChar_fire) && (secondChar_aether > secondChar_air) && (secondChar_aether > secondChar_earth):
-                 ~ winnerColor = secondChar_aether
-                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_aether, che è {secondChar_aether}.}
-    
-        - (secondChar_water > secondChar_aether) && (secondChar_water > secondChar_fire) && (secondChar_water > secondChar_air) && (secondChar_water > secondChar_earth):
-                 ~ winnerColor = secondChar_water
-                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_water, che è {secondChar_water}.}
-        
-        - (secondChar_fire > secondChar_water) && (secondChar_fire > secondChar_aether) && (secondChar_fire > secondChar_air) && (secondChar_fire > secondChar_earth):
-                 ~ winnerColor = secondChar_fire
-                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_fire, che è {secondChar_fire}.}
-        
-        - (secondChar_earth > secondChar_water) && (secondChar_earth > secondChar_aether) && (secondChar_earth > secondChar_air) && (secondChar_earth > secondChar_fire):
-                 ~ winnerColor = secondChar_earth
-                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_earth, che è {secondChar_earth}.}
-        
-        - (secondChar_air > secondChar_water) && (secondChar_air > secondChar_aether) && (secondChar_air > secondChar_earth) && (secondChar_air > secondChar_fire):
-                 ~ winnerColor = secondChar_air
-                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_air, che è {secondChar_air}.}
-    
-    }
-
-    {debug:Il valore da superare per corvo è {minimumPercentValue * secondChar_crowPercentage}; il valore da superare per capibara è {minimumPercentValue * secondChar_capibaraPercentage}; Il valore da superare per delfino è {minimumPercentValue * secondChar_dolphinePercentage}; il valore da superare per lupo è {minimumPercentValue * secondChar_wolfPercentage}}
-    
-    {
-        - winnerColor >= (minimumPercentValue * secondChar_crowPercentage):
+        //Aria elemento più usato     
+        - (secondChar_air > secondChar_water) && (secondChar_air > secondChar_fire) && (secondChar_air > secondChar_earth) && (secondChar_air > secondChar_aether):
             ~ secondChar_ActualName += Corvo
+            {debug: passo per Corvo e il nome è : {secondChar_ActualName}.}
         
-        - winnerColor >= (minimumPercentValue * secondChar_capibaraPercentage):
-            ~ secondChar_ActualName += Capibara   
-        
-        - winnerColor >= (minimumPercentValue * secondChar_dolphinePercentage):
-            ~ secondChar_ActualName += Delfino    
-        
-        - winnerColor >= (minimumPercentValue * secondChar_wolfPercentage):
-            ~ secondChar_ActualName += Lupo
-        
-        - else:
+        //Fuoco elemento più usato         
+        - (secondChar_fire> secondChar_water) && (secondChar_fire> secondChar_air) && (secondChar_fire> secondChar_earth) && (secondChar_fire> secondChar_aether):
             ~ secondChar_ActualName += Grizzly
-    }
-    
-    ->-> 
+            {debug: passo per Grizzly e il nome è : {secondChar_ActualName}.}
+        
+        //Acqua elemento più usato     
+        - (secondChar_water > secondChar_air) && (secondChar_water > secondChar_fire) && (secondChar_water > secondChar_earth) && (secondChar_water > secondChar_aether):
+            ~ secondChar_ActualName += Lupo
+            {debug: passo per Lupo e il nome è : {secondChar_ActualName}.}
+
+        //Terra elemento più usato           
+        - (secondChar_earth > secondChar_water) && (secondChar_earth > secondChar_fire) && (secondChar_earth > secondChar_air) && (secondChar_earth > secondChar_aether):
+            ~ secondChar_ActualName += Delfino
+            {debug: passo per Delfino e il nome è : {secondChar_ActualName}.}
+
+        //Spirito elemento più usato        
+        - (secondChar_aether > secondChar_water) && (secondChar_aether > secondChar_fire) && (secondChar_aether > secondChar_earth) && (secondChar_aether > secondChar_air):
+        {debug: passo per Capibara e il nome è : {secondChar_ActualName}.}
+            ~ secondChar_ActualName += Capibara    
+
+                
+        - else:
+            //In caso di pareggio cerco di assegnare un nome randomico da quelli più plausibili, sempre secondo la logica qui sopra elemento == nome.
+            //Qui ragiono per percentuali: prima di tutto calcolo la quantità totale del valore dei glifi
+            ~ temp allGlyphsValue = secondChar_fire + secondChar_air + secondChar_water + secondChar_earth + secondChar_aether
+            //Poi faccio un conto del valore medio delle scelte
+            ~ temp mediumValue = allGlyphsValue/5
+
+            {debug: La somma delle scelte glifo di {secondChar_ActualName} è {allGlyphsValue}, e la media è {mediumValue}.}
+
+            //Poi aggiungo alla lista dei potenziali generatori di nomi solo quei glifi che superano il valore medio delle scelte. 
+            {
+                - secondChar_aether >= mediumValue:
+                        ~ secondChar_randomPossibileNames += Capibara
+
+                - secondChar_water >= mediumValue:
+                        ~ secondChar_randomPossibileNames += Lupo
+
+                - secondChar_fire >= mediumValue:
+                        ~ secondChar_randomPossibileNames += Grizzly
+
+                - secondChar_air >= mediumValue:
+                        ~ secondChar_randomPossibileNames += Corvo
+
+                - secondChar_earth >= mediumValue:
+                        ~ secondChar_randomPossibileNames += Delfino
+
+                {debug: La lista di possibili nomi in caso di pareggio è {secondChar_randomPossibileNames}.}
+            } 
+            
+            //E infine ne prendo uno randomico dalla lista. Se dovesse essere vuota, ne assegno uno che ha senso con una cattiva relazione creata con lx png.
+            {
+                - secondChar_randomPossibileNames == ():
+                    ~ secondChar_ActualName += Grizzly
+
+                - else:
+                    ~ secondChar_ActualName = LIST_RANDOM(secondChar_randomPossibileNames)
+            }
+        
+        }
+
 
 
 

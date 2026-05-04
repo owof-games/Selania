@@ -485,7 +485,8 @@
                 -> update_glyphs(SecondCharacter) ->     
      
             //E infine genero il nome
-                -> secondNaming ->naming
+                ~ secondNaming()
+                ->naming
                 
     
     

@@ -641,7 +641,7 @@
         
         //Se cambia glifo dominante, cosa brutta    
         - secondChar_relationshipActualDominantGlyph != secondChar_relationshipLastDominantGlyph:
-            ~ secondChar_RelCalculator --
+            ~ secondChar_relationshipIndicator --
         
         //Il resto è neutro        
 

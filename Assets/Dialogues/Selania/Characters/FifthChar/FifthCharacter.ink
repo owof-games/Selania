@@ -709,7 +709,7 @@
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(secondChar_InkLevel)
         + Voglio cominciare la riscrittura.
-            -> secondNaming -> 
+            // -> secondNaming -> 
             -> one
         + Preferisco prendermi del tempo.
             -> main
