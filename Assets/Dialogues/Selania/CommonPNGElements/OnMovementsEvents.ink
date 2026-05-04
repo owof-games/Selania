@@ -375,24 +375,6 @@ VAR letters_doggoPause = false
     }
 
 
-    //Avvio dialoghi di chiusura
-    {
-        - firstChar_storyStatus == story_storyEnded:
-	        ~ firstChar_exitCounter ++
-	}
-	
-	{
-	    - secondChar_storyStatus == story_storyEnded:
-	        ~ secondChar_exitCounter ++     
-    }
-
-    {
-	    - thirdChar_storyStatus == story_storyEnded:
-	        ~ thirdChar_exitCounter ++     
-    }
-
-
-
 
 //Contatori della PG
 === function on_movement_PG_values()

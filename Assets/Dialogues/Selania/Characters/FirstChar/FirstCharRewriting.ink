@@ -476,7 +476,8 @@
                 -> update_glyphs(FirstCharacter) ->     
      
             //E infine genero il nome
-                -> firstNaming -> naming
+                ~ firstNaming()
+                -> naming
                 
     = naming
         ~ temp charNameOne = translator(firstChar_ActualName)

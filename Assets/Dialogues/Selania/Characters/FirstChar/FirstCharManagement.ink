@@ -1,35 +1,78 @@
-                    /* ---------------------------------
-                    
-                      Gestione timing e valori della storia
-                    
-                     ----------------------------------*/
+                                                        /* ---------------------------------
+                                                        
+                                                                LISTE E VARIABILI
+                                                        
+                                                        ----------------------------------*/
 
-//Possibili stati Chitarra
+
+//Gestione del ritmo della storia
+    //Stato della storia 
+        //Non avviata, avviata, conclusa
+        VAR firstChar_storyStatus = story_storyNotStarted
+        //Ordine di conclusione della riscrittura (prima storia conclusa, seconda storia conclusa)
+        VAR firstChar_storyEndingPosition = ()
+        //Quantità di storylets letti dalla giocatrice prima di accedere alla riscrittura
+        VAR firstChar_minStoryletsForRewriting = grimFirstCharNine
+        //Abbiamo l'info speciale su Mentore? Se le condizioni sono corrette, viene messa su true dalla funzione inkLevel(Character)
+        VAR firstChar_specialEvent = false
+        //Cconteggio totale delle scelte prese con la PNG
+        VAR firstChar_totalChoices = 0
+
+    //Ritmo della storia    
+        //Variabili per mettere in pausa la conversazione
+        VAR firstChar_pauseTalking = 0
+        VAR firstChar_pauseDuration = 1
+        //Questa variabile verifica se abbiamo appena parlato con unx PNG, in modo tale da presentarci in modo diverso le possibili proposte che possiamo farle.
+        VAR firstChar_justTalked = false
+        //Variabile per il tempo di attesa tra una lettera e l'altra
+        VAR firstChar_mailPause = 0
+        VAR firstChar_mailPauseDuration = 5
+
+
+//Stato della PNG
+    //Gestione nomi
     LIST firstChar_possibleStates = Chitarra, (Triangolo), (Orchestra), (FlautoDolce), (Ocarina), (Violino)
     VAR firstChar_ActualName = Chitarra
-    
-    //Stato della storia (non avviata, avviata, conclusa)
-    VAR firstChar_storyStatus = story_storyNotStarted
-    
-    //Ordine di conclusione della riscrittura (prima storia conclusa, seconda storia conclusa)
-    VAR firstChar_storyEndingPosition = ()
 
+    //Registro delle scelte prese
+    VAR firstChar_aether = 0.00
+    VAR firstChar_earth = 0.00
+    VAR firstChar_air = 0.00
+    VAR firstChar_water = 0.00
+    VAR firstChar_fire= 0.00
+    
+        //Storage del valore precedente
+        VAR firstChar_last_aether = 0.00
+        VAR firstChar_last_earth = 0.00
+        VAR firstChar_last_air = 0.00
+        VAR firstChar_last_water = 0.00
+        VAR firstChar_last_fire= 0.00
+
+    //Utilizzo dei sigilli
+    VAR firstChar_usedSigil = 0
+    VAR firstChar_usedSigilsTracking = ()
+
+    //Moltiplicatore per la riscrittura
+    VAR firstChar_glyphVariation = 3.0 
 
 //Tracciamento della relazione
-    //Indicator = il valore di Indicator, riproporzionato per l'indicatore della reazione e chiamato in cucina e in riscrittura per i feedback/inchiostro.
+    //Indicatore della relazione
     VAR firstChar_relationshipIndicator = 0
     VAR firstChar_lastRelationshipIndicator = 0
-    
-    //Utilizzato nella funzione XXX per calcolare la variazione del rapporto dopo la singola scelta.
-    VAR firstChar_RelCalculator = 0.00
-    
-    //Absolute = il valore totale della relazione, tenuto per tracciamento
-    VAR firstChar_relationshipIndicatorAbsolute = 0
+    //Status = chiamato da cucina e prima della riscrittura per valutare il rapporto creato e il relativo inchiostro. Ora è un insieme di valori "scritti"
+    VAR firstChar_relationshipStatus = neutral
     //Reaction: qui registriamo la reazione che verrà attivata coi sigilli
     VAR firstChar_relationshipReaction = neutral
 
-    //Status = chiamato da cucina e prima della riscrittura per valutare il rapporto creato e il relativo inchiostro. Ora è un insieme di valori "scritti"
-    VAR firstChar_relationshipStatus = neutral
+//Gestione dei doni
+    //Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
+    VAR firstChar_favouritesGifts = (NonTiScordarDiTe, BaccaDellaAddolorata, CantoDelleCompagne)
+    VAR firstChar_goodGifts = (ErbaLiccia, Olobino, BastoneDellOzioso, LanaNotturna)
+    //Dono consigliato dalla rana
+    VAR frog_first_char_gift = ""
+    VAR frog_first_temp_growing_gift = false
+    //Dono effettuato
+    VAR firstChar_giftedObject = ()
 
 
 //Tracciamento cucina
@@ -61,79 +104,19 @@
         VAR kitchen_firstCharExtraIngredient = ()
         VAR kitchen_firstCharExtraIngredientReaction = notReaction
 
-//Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
-    VAR firstChar_favouritesGifts = (NonTiScordarDiTe, BaccaDellaAddolorata, CantoDelleCompagne)
-    VAR firstChar_goodGifts = (ErbaLiccia, Olobino, BastoneDellOzioso, LanaNotturna)
-    //Dono consigliato dalla rana
-    VAR frog_first_char_gift = ""
-    VAR frog_first_temp_growing_gift = false
-    
-//Tracciamento del dono
-    VAR firstChar_giftedObject = ()
-
-//Tracciamento apprezzamento glifi. Tutto ciò che è fuori da questa lista = reazione neutrale.
-    // VAR firstChar_positiveGlyphs = ()
-    // VAR firstChar_negativeGlyphs = ()
-
 //Tracciamento del racconto
     VAR frog_first_novel = ""
 
-//Quantità di storylets letti dalla giocatrice prima di accedere alla riscrittura
-    VAR firstChar_minStoryletsForRewriting = grimFirstCharNine   
-    VAR firstChar_specialEvent = false
 
-//Questo è per il conteggio totale delle scelte prese con la PNG
-    VAR firstChar_totalChoices = 0    
-    
-//Variabili per mettere in pausa la conversazione
-    VAR firstChar_pauseTalking = 0
-    VAR firstChar_pauseDuration = 1
-    //Questa variabile verifica se abbiamo appena parlato con unx PNG, in modo tale da presentarci in modo diverso le possibili proposte che possiamo farle.
-    VAR firstChar_justTalked = false
-    
-//Variabile per il countdown per la sua uscita di scena
-    VAR firstChar_exitCounter = 0
-    VAR firstChar_startingValueExitCounter = 6
-    
-//Variabile per il tempo di attesa tra una lettera e l'altra
-    VAR firstChar_mailPause = 0
-    VAR firstChar_mailPauseDuration = 5
-    
-//Moltiplicatore del colore per il personaggio
-    VAR firstChar_glyphVariation = 3.0 
-//Check se ho utilizzato almeno un sigillo col personaggio
-    VAR firstChar_usedSigil = 0
-    VAR firstChar_usedSigilsTracking = ()
-    
-//STATI UP: water & aether.
-//STATI DOWN: Air.
-    VAR firstChar_aether = 0.00
-    VAR firstChar_earth = 0.00
-    VAR firstChar_air = 0.00
-    VAR firstChar_water = 0.00
-    VAR firstChar_fire= 0.00
-
-    //Storage precedente valore
-    VAR firstChar_last_aether = 0.00
-    VAR firstChar_last_earth = 0.00
-    VAR firstChar_last_air = 0.00
-    VAR firstChar_last_water = 0.00
-    VAR firstChar_last_fire= 0.00
-
-
-
-
-
-
-                    /* ---------------------------------
-                    
-                       Gestione relazione e nomi
-                    
-                     ----------------------------------*/
+                                                        /* ---------------------------------
+                                                        
+                                                            FUNZIONI PER AFFINITA' E NOME
+                                                        
+                                                        ----------------------------------*/
 === firstAffinityCalc ===
+{debug: passo per firstAffinityCalc.}
 //Questo mi serve per aggiornare il valore di affinità.
-//Ad ora è chiamata solo in cucina e prima della riscrittura, e solo in riscrittura stampa una informazione.
-//Per la prima personaggia l'importante è che il blu sia bassissimo
+//Viene chiamato a ridosso della riscrittura per definire lo stato di inchiostro
 
     //Prima di tutto chiamo la funzione per il calcolo dello stato della relazione
         ~ affinity_calc(FirstCharacter)
@@ -141,38 +124,28 @@
     //"Trasformo" la relazione in inchiostro
         ~ fromRelationshipToInk(FirstCharacter)
     
-    // Mando ai feedback
+    //Mando ai feedback
         -> firstAffinityFeedback ->
     
     //Arriva il commento della strega
         ~ inkLevel(FirstCharacter)
     
     //Salvo il massimo di inchiostro raggiunto con la personaggia
-        ~ maxInkLevelUpdater(FirstCharacter)    
-            ->-> 
+        ~ maxInkLevelUpdater(FirstCharacter)
 
-    // altrimenti, mando avanti
-    - else:
-        ->->    
-    
+    //Esco dal flusso 
+    ->-> 
 
-
-    //La soluzione più tosta potrebbe essere questa invece.
-    
-    //{
-    //    - firstChar_aether && firstChar_earth > firstChar_air:
-    //        ~ firstChar_relationshipStatus ++
-    //            ->->
-    //}
-
-
-
+  
 
 === firstAffinityFeedback
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    
-    ~ temp charNameTwo = translator(secondChar_ActualName)
 {debug: passo per firstAffinityFeedback. Lo stato di inchiostro è {firstChar_InkLevel}.}
+//Utilizziamo questa funzione per far fare alla PNG un commento esplicito sullo stato della relazione.
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
 
     Prima però ci terrei a dirti come sono andate le cose tra noi, qui.
             
@@ -180,6 +153,11 @@
             -   are_two_entities_together(Mentor, PG):
                 {charTag(FifthCharacter, "neutral")}:               Vi lascio un po' di privacy. In bocca al lupo {player_name} e {charNameOne}.
                     ~ change_entity_place(Mentor)
+        }
+        {
+            -   are_two_entities_together(ThirdCharacter, PG):
+                {charTag(ThirdCharacter, "neutral")}:               Mi levo dalle scatole.
+                    ~ change_entity_place(ThirdCharacter)
         }
         {
             -   are_two_entities_together(SecondCharacter, PG):
@@ -228,13 +206,19 @@
                                                                     Talco continua a mancarmi, ma con te mi sento come se fossimo parte da sempre della stessa band.
         }
 
-
 ->->
 
 
 //Settaggio nome quando partiamo con la discussione (non finale quindi)
+=== function firstNaming()
 
-=== firstNaming ===
+                                                                                                        /********************
+                                                                        Per la riscrittura non si tratta più di creare una relazione, ma di mostrare un mondo. 
+                                                                        Per cui non ragioniamo più con le funzioni di relazione ma semplicemente tracciamo il colore delle scelte, ed è quello a definire il nome. 
+                                                                        In questo modo non è più un discorso di esito positivo/negativo, ma di espressione.
+                                                                        PERO', per non rendere inutile tutta la conversazione precedente, terremo conto anche di tutte le scelte fatte fino a quel momento.
+                                                                        In questo modo avere più scelte (e quindi più inchiostro) o utilizzare il giusto sigillo sono cose che creano effettivamente un vantaggio perché per (es) spostare da una visione "fire" a 12 a una "water" che parte da un 6 ho bisogno di più scelte possibile (e qui interviene comunque anche il vantaggio del modificatore.) 
+                                                                                                        ********************/
 {debug: passo per firstNaming.}
 {debug: prima di operare,il valore del nome è: {firstChar_ActualName}.}
  //Svuoto il valore per sicurezza
@@ -246,58 +230,54 @@
         - (firstChar_air > firstChar_water) && (firstChar_air > firstChar_fire) && (firstChar_air > firstChar_earth) && (firstChar_air > firstChar_aether):
             ~ firstChar_ActualName += Triangolo
             {debug: passo per Triangolo e il nome è : {firstChar_ActualName}.}
-                ->->
         
         //Rosso colore più usato        
         - (firstChar_fire> firstChar_water) && (firstChar_fire> firstChar_air) && (firstChar_fire> firstChar_earth) && (firstChar_fire> firstChar_aether):
             ~ firstChar_ActualName += Orchestra
             {debug: passo per Orchestra e il nome è : {firstChar_ActualName}.}
-                ->->
         
         //Verde colore più usato        
         - (firstChar_water > firstChar_air) && (firstChar_water > firstChar_fire) && (firstChar_water > firstChar_earth) && (firstChar_water > firstChar_aether):
             ~ firstChar_ActualName += Violino
             {debug: passo per Violino e il nome è : {firstChar_ActualName}.}
-                ->->
-        
+
         //Giallo colore più usato        
         - (firstChar_earth > firstChar_water) && (firstChar_earth > firstChar_fire) && (firstChar_earth > firstChar_air) && (firstChar_earth > firstChar_aether):
             ~ firstChar_ActualName += Ocarina
             {debug: passo per Ocarina e il nome è : {firstChar_ActualName}.}
-                ->->
-        
+
         //Viola colore più usato        
         - (firstChar_aether > firstChar_water) && (firstChar_aether > firstChar_fire) && (firstChar_aether > firstChar_earth) && (firstChar_aether > firstChar_air):
         {debug: passo per FlautoDolce e il nome è : {firstChar_ActualName}.}
             ~ firstChar_ActualName += FlautoDolce    
-                ->->
+
                 
         - else:
+        //In caso di pareggio tengono conto della natura della PNG per fare uno "spareggio" (mi piacerebbe trovare però qualcosa di più efficace, come le scelte fatte in cucina, che non possono creare pareggi, ma deve essere una cosa coerente.)
             {
                 - (firstChar_aether < firstChar_air) && (firstChar_water < firstChar_air):
                         ~ firstChar_ActualName += Triangolo
                         {debug: passo per Triangolo e il nome è : {firstChar_ActualName}.}
-                        ->->
-                
+
                 - firstChar_aether && firstChar_water > firstChar_air:
                         ~ firstChar_ActualName += FlautoDolce
                             {debug: passo per FlautoDolce e il nome è : {firstChar_ActualName}.}
-                        ->->
+
                 - (firstChar_water > firstChar_air) && (not firstChar_aether > firstChar_air):
                         ~ firstChar_ActualName += Violino
                         {debug: passo per Violino e il nome è : {firstChar_ActualName}.}
-                            ->->
+
                 - (firstChar_aether > firstChar_air) && (not firstChar_water > firstChar_air):
                     {debug: passo per Ocarina e il nome è : {firstChar_ActualName}.}
                         ~ firstChar_ActualName += Ocarina 
-                            ->->
+
                 - else:
                         ~ firstChar_ActualName += Orchestra
                             {debug: passo per Orchestra e il nome è : {firstChar_ActualName}.}
-                            ->->
+
             }
         }
-        ->->
+
         
 //Formula per la chiusura di uno storylet
 === first_char_closing_storylet
