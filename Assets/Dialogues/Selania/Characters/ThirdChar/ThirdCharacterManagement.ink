@@ -33,8 +33,6 @@
     //Gestione nomi
     LIST thirdChar_possibleStates = Boccale, (ThirdB), (ThirdC), (ThirdD), (ThirdE), (ThirdF)
     VAR thirdChar_ActualName = Boccale
-    //Questa è una lista che utilizzo in caso di spareggio dei potenziali nomi
-    VAR thirdChar_randomPossibileNames = ()
 
     //Registro delle scelte prese
     VAR thirdChar_aether = 0.00
@@ -208,90 +206,6 @@
         }
 
 ->->
-
-
- //Settaggio nome quando partiamo con la discussione (non finale quindi)
-=== function thirdNaming()
-
-                                                                                                        /********************
-                                                                        Per la riscrittura non si tratta più di creare una relazione, ma di mostrare un mondo. 
-                                                                        Per cui non ragioniamo più con le funzioni di relazione ma semplicemente tracciamo il colore delle scelte, ed è quello a definire il nome. 
-                                                                        In questo modo non è più un discorso di esito positivo/negativo, ma di espressione.
-                                                                        PERO', per non rendere inutile tutta la conversazione precedente, terremo conto anche di tutte le scelte fatte fino a quel momento.
-                                                                        In questo modo avere più scelte (e quindi più inchiostro) o utilizzare il giusto sigillo sono cose che creano effettivamente un vantaggio perché per (es) spostare da una visione "fire" a 12 a una "water" che parte da un 6 ho bisogno di più scelte possibile (e qui interviene comunque anche il vantaggio del modificatore.) 
-                                                                                                        ********************/
-{debug: passo per thirdNaming.}
-{debug: prima di operare,il valore del nome è: {thirdChar_ActualName}.}
- //Svuoto il valore per sicurezza
- ~ thirdChar_ActualName = ()
- {debug: svuoto thirdChar_ActualName : {thirdChar_ActualName}.}
- 
-    {
-        //Aria elemento più usato    
-        - (thirdChar_air > thirdChar_water) && (thirdChar_air > thirdChar_fire) && (thirdChar_air > thirdChar_earth) && (thirdChar_air > thirdChar_aether):
-            ~ thirdChar_ActualName += ThirdB
-            {debug: passo per ThirdB e il nome è : {thirdChar_ActualName}.}
-        
-        //Fuoco elemento più usato          
-        - (thirdChar_fire> thirdChar_water) && (thirdChar_fire> thirdChar_air) && (thirdChar_fire> thirdChar_earth) && (thirdChar_fire> thirdChar_aether):
-            ~ thirdChar_ActualName += ThirdC
-            {debug: passo per ThirdC e il nome è : {thirdChar_ActualName}.}
-        
-        //Acqua elemento più usato       
-        - (thirdChar_water > thirdChar_air) && (thirdChar_water > thirdChar_fire) && (thirdChar_water > thirdChar_earth) && (thirdChar_water > thirdChar_aether):
-            ~ thirdChar_ActualName += ThirdD
-            {debug: passo per ThirdD e il nome è : {thirdChar_ActualName}.}
-
-        //Terra elemento più usato           
-        - (thirdChar_earth > thirdChar_water) && (thirdChar_earth > thirdChar_fire) && (thirdChar_earth > thirdChar_air) && (thirdChar_earth > thirdChar_aether):
-            ~ thirdChar_ActualName += ThirdE
-            {debug: passo per ThirdE e il nome è : {thirdChar_ActualName}.}
-
-        //Spirito elemento più usato          
-        - (thirdChar_aether > thirdChar_water) && (thirdChar_aether > thirdChar_fire) && (thirdChar_aether > thirdChar_earth) && (thirdChar_aether > thirdChar_air):
-        {debug: passo per ThirdF e il nome è : {thirdChar_ActualName}.}
-            ~ thirdChar_ActualName += ThirdF    
-
-                
-        - else:
-            //In caso di pareggio cerco di assegnare un nome randomico da quelli più plausibili, sempre secondo la logica qui sopra elemento == nome.
-            //Qui ragiono per percentuali: prima di tutto calcolo la quantità totale del valore dei glifi
-            ~ temp allGlyphsValue = secondChar_fire + secondChar_air + secondChar_water + secondChar_earth + secondChar_aether
-            //Poi faccio un conto del valore medio delle scelte
-            ~ temp mediumValue = allGlyphsValue/5
-
-            {debug: La somma delle scelte glifo di {secondChar_ActualName} è {allGlyphsValue}, e la media è {mediumValue}.}
-
-            //Poi aggiungo alla lista dei potenziali generatori di nomi solo quei glifi che superano il valore medio delle scelte. 
-            {
-                - thirdChar_aether >= mediumValue:
-                        ~ thirdChar_randomPossibileNames += Capibara
-
-                - thirdChar_water >= mediumValue:
-                        ~ thirdChar_randomPossibileNames += Lupo
-
-                - thirdChar_fire >= mediumValue:
-                        ~ thirdChar_randomPossibileNames += Grizzly
-
-                - thirdChar_air >= mediumValue:
-                        ~ thirdChar_randomPossibileNames += Corvo
-
-                - thirdChar_earth >= mediumValue:
-                        ~ thirdChar_randomPossibileNames += Delfino
-
-                {debug: La lista di possibili nomi in caso di pareggio è {thirdChar_randomPossibileNames}.}
-            } 
-            
-            //E infine ne prendo uno randomico dalla lista. Se dovesse essere vuota, ne assegno uno che ha senso con una cattiva relazione creata con lx png.
-            {
-                - thirdChar_randomPossibileNames == ():
-                    ~ thirdChar_ActualName += Grizzly
-
-                - else:
-                    ~ thirdChar_ActualName = LIST_RANDOM(thirdChar_randomPossibileNames)
-            }
-        }
-
 
 
 === third_char_closing_storylet ===

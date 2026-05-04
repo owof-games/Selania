@@ -277,7 +277,7 @@
                 -> update_glyphs(ThirdCharacter) ->     
      
             //E infine genero il nome
-                ~ thirdNaming()
+                ~ newName(ThirdCharacter)
 
             ->naming
                 
@@ -293,7 +293,7 @@
     
         {
 
-            - thirdChar_ActualName has Grizzly:
+            - thirdChar_ActualName has ThirdB:
                     {
                         - ending.fire:
                             {charTag(ThirdCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
@@ -302,7 +302,7 @@
                     }
                 Il mio vero nome è <b><i>{charNameThree}</b></i>.
             
-            - thirdChar_ActualName has Lupo:
+            - thirdChar_ActualName has ThirdC:
                     {
                         - ending.water:
                             {charTag(ThirdCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
@@ -311,7 +311,7 @@
                     }
                 {charTag(ThirdCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameThree}</b></i>.
               
-            - thirdChar_ActualName has Delfino:
+            - thirdChar_ActualName has ThirdD:
                     {
                         - ending.earth:
                             {charTag(ThirdCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
@@ -321,7 +321,7 @@
                 {charTag(ThirdCharacter, "neutral")}:       E il mio nome è <b><i>{charNameThree}</b></i>.
                                
             
-            - thirdChar_ActualName has Capibara:
+            - thirdChar_ActualName has ThirdE:
                     {
                         - ending.aether:
                             {charTag(ThirdCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
@@ -330,7 +330,7 @@
                     }
                 {charTag(ThirdCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameThree}</b></i>.  
                     
-            - thirdChar_ActualName has Corvo:
+            - thirdChar_ActualName has ThirdF:
                     {
                         - ending.air:
                             {charTag(ThirdCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.

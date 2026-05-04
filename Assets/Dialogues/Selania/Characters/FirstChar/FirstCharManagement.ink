@@ -33,8 +33,6 @@
     //Gestione nomi
     LIST firstChar_possibleStates = Chitarra, (Triangolo), (Orchestra), (FlautoDolce), (Ocarina), (Violino)
     VAR firstChar_ActualName = Chitarra
-    //Questa è una lista che utilizzo in caso di spareggio dei potenziali nomi
-    VAR firstChar_randomPossibileNames = ()
 
     //Registro delle scelte prese
     VAR firstChar_aether = 0.00
@@ -209,89 +207,6 @@
         }
 
 ->->
-
-
-//Settaggio nome quando partiamo con la discussione (non finale quindi)
-=== function firstNaming()
-
-                                                                                                        /********************
-                                                                        Per la riscrittura non si tratta più di creare una relazione, ma di mostrare un mondo. 
-                                                                        Per cui non ragioniamo più con le funzioni di relazione ma semplicemente tracciamo il colore delle scelte, ed è quello a definire il nome. 
-                                                                        In questo modo non è più un discorso di esito positivo/negativo, ma di espressione.
-                                                                        PERO', per non rendere inutile tutta la conversazione precedente, terremo conto anche di tutte le scelte fatte fino a quel momento.
-                                                                        In questo modo avere più scelte (e quindi più inchiostro) o utilizzare il giusto sigillo sono cose che creano effettivamente un vantaggio perché per (es) spostare da una visione "fire" a 12 a una "water" che parte da un 6 ho bisogno di più scelte possibile (e qui interviene comunque anche il vantaggio del modificatore.) 
-                                                                                                        ********************/
-{debug: passo per firstNaming.}
-{debug: prima di operare,il valore del nome è: {firstChar_ActualName}.}
- //Svuoto il valore per sicurezza
- ~ firstChar_ActualName = ()
- {debug: svuoto firstChar_ActualName : {firstChar_ActualName}.}
- 
-    {
-        //Aria elemento più usato    
-        - (firstChar_air > firstChar_water) && (firstChar_air > firstChar_fire) && (firstChar_air > firstChar_earth) && (firstChar_air > firstChar_aether):
-            ~ firstChar_ActualName += Triangolo
-            {debug: passo per Triangolo e il nome è : {firstChar_ActualName}.}
-        
-        //Fuoco elemento più usato          
-        - (firstChar_fire> firstChar_water) && (firstChar_fire> firstChar_air) && (firstChar_fire> firstChar_earth) && (firstChar_fire> firstChar_aether):
-            ~ firstChar_ActualName += Orchestra
-            {debug: passo per Orchestra e il nome è : {firstChar_ActualName}.}
-        
-        //Acqua elemento più usato        
-        - (firstChar_water > firstChar_air) && (firstChar_water > firstChar_fire) && (firstChar_water > firstChar_earth) && (firstChar_water > firstChar_aether):
-            ~ firstChar_ActualName += Violino
-            {debug: passo per Violino e il nome è : {firstChar_ActualName}.}
-
-        //Terra elemento più usato        
-        - (firstChar_earth > firstChar_water) && (firstChar_earth > firstChar_fire) && (firstChar_earth > firstChar_air) && (firstChar_earth > firstChar_aether):
-            ~ firstChar_ActualName += Ocarina
-            {debug: passo per Ocarina e il nome è : {firstChar_ActualName}.}
-
-        //Spirito elemento più usato          
-        - (firstChar_aether > firstChar_water) && (firstChar_aether > firstChar_fire) && (firstChar_aether > firstChar_earth) && (firstChar_aether > firstChar_air):
-        {debug: passo per FlautoDolce e il nome è : {firstChar_ActualName}.}
-            ~ firstChar_ActualName += FlautoDolce    
-
-                
-        - else:
-            //In caso di pareggio cerco di assegnare un nome randomico da quelli più plausibili, sempre firsto la logica qui sopra elemento == nome.
-            //Qui ragiono per percentuali: prima di tutto calcolo la quantità totale del valore dei glifi
-            ~ temp allGlyphsValue = firstChar_fire + firstChar_air + firstChar_water + firstChar_earth + firstChar_aether
-            //Poi faccio un conto del valore medio delle scelte
-            ~ temp mediumValue = allGlyphsValue/5
-
-            {debug: La somma delle scelte glifo di {firstChar_ActualName} è {allGlyphsValue}, e la media è {mediumValue}.}
-
-            //Poi aggiungo alla lista dei potenziali generatori di nomi solo quei glifi che superano il valore medio delle scelte. 
-            {
-                - firstChar_aether >= mediumValue:
-                        ~ firstChar_randomPossibileNames += Capibara
-
-                - firstChar_water >= mediumValue:
-                        ~ firstChar_randomPossibileNames += Lupo
-
-                - firstChar_fire >= mediumValue:
-                        ~ firstChar_randomPossibileNames += Grizzly
-
-                - firstChar_air >= mediumValue:
-                        ~ firstChar_randomPossibileNames += Corvo
-
-                - firstChar_earth >= mediumValue:
-                        ~ firstChar_randomPossibileNames += Delfino
-
-                {debug: La lista di possibili nomi in caso di pareggio è {firstChar_randomPossibileNames}.}
-            } 
-            
-            //E infine ne prendo uno randomico dalla lista. Se dovesse essere vuota, ne assegno uno che ha senso con una cattiva relazione creata con lx png.
-            {
-                - firstChar_randomPossibileNames == ():
-                    ~ firstChar_ActualName += Grizzly
-
-                - else:
-                    ~ firstChar_ActualName = LIST_RANDOM(firstChar_randomPossibileNames)
-            }
-        }
 
         
 //Formula per la chiusura di uno storylet

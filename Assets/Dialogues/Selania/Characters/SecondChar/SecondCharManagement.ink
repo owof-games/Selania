@@ -32,8 +32,6 @@
     //Gestione nomi
     LIST secondChar_possibleStates = Riccio, (Grizzly), (Lupo), (Delfino), (Capibara), (Corvo)
     VAR secondChar_ActualName = Riccio
-    //Questa è una lista che utilizzo in caso di spareggio dei potenziali nomi
-    VAR secondChar_randomPossibileNames = ()
 
     //Registro delle scelte prese
     VAR secondChar_aether = 0.00
@@ -245,90 +243,6 @@
     
 
 ->->        
-        
-//Settaggio nome quando partiamo con la discussione (non finale quindi)
-=== function secondNaming()
-
-                                                                                                        /********************
-                                                                        Per la riscrittura non si tratta più di creare una relazione, ma di mostrare un mondo. 
-                                                                        Per cui non ragioniamo più con le funzioni di relazione ma semplicemente tracciamo il colore delle scelte, ed è quello a definire il nome. 
-                                                                        In questo modo non è più un discorso di esito positivo/negativo, ma di espressione.
-                                                                        PERO', per non rendere inutile tutta la conversazione precedente, terremo conto anche di tutte le scelte fatte fino a quel momento.
-                                                                        In questo modo avere più scelte (e quindi più inchiostro) o utilizzare il giusto sigillo sono cose che creano effettivamente un vantaggio perché per (es) spostare da una visione "fire" a 12 a una "water" che parte da un 6 ho bisogno di più scelte possibile (e qui interviene comunque anche il vantaggio del modificatore.) 
-                                                                                                        ********************/
-{debug: passo per secondNaming.}
-{debug: prima di operare,il valore del nome è: {secondChar_ActualName}.}
- //Svuoto il valore per sicurezza
- ~ secondChar_ActualName = ()
- {debug: svuoto secondChar_ActualName : {secondChar_ActualName}.}
- 
-    {
-        //Aria elemento più usato     
-        - (secondChar_air > secondChar_water) && (secondChar_air > secondChar_fire) && (secondChar_air > secondChar_earth) && (secondChar_air > secondChar_aether):
-            ~ secondChar_ActualName += Corvo
-            {debug: passo per Corvo e il nome è : {secondChar_ActualName}.}
-        
-        //Fuoco elemento più usato         
-        - (secondChar_fire> secondChar_water) && (secondChar_fire> secondChar_air) && (secondChar_fire> secondChar_earth) && (secondChar_fire> secondChar_aether):
-            ~ secondChar_ActualName += Grizzly
-            {debug: passo per Grizzly e il nome è : {secondChar_ActualName}.}
-        
-        //Acqua elemento più usato     
-        - (secondChar_water > secondChar_air) && (secondChar_water > secondChar_fire) && (secondChar_water > secondChar_earth) && (secondChar_water > secondChar_aether):
-            ~ secondChar_ActualName += Lupo
-            {debug: passo per Lupo e il nome è : {secondChar_ActualName}.}
-
-        //Terra elemento più usato           
-        - (secondChar_earth > secondChar_water) && (secondChar_earth > secondChar_fire) && (secondChar_earth > secondChar_air) && (secondChar_earth > secondChar_aether):
-            ~ secondChar_ActualName += Delfino
-            {debug: passo per Delfino e il nome è : {secondChar_ActualName}.}
-
-        //Spirito elemento più usato        
-        - (secondChar_aether > secondChar_water) && (secondChar_aether > secondChar_fire) && (secondChar_aether > secondChar_earth) && (secondChar_aether > secondChar_air):
-        {debug: passo per Capibara e il nome è : {secondChar_ActualName}.}
-            ~ secondChar_ActualName += Capibara    
-
-                
-        - else:
-            //In caso di pareggio cerco di assegnare un nome randomico da quelli più plausibili, sempre secondo la logica qui sopra elemento == nome.
-            //Qui ragiono per percentuali: prima di tutto calcolo la quantità totale del valore dei glifi
-            ~ temp allGlyphsValue = secondChar_fire + secondChar_air + secondChar_water + secondChar_earth + secondChar_aether
-            //Poi faccio un conto del valore medio delle scelte
-            ~ temp mediumValue = allGlyphsValue/5
-
-            {debug: La somma delle scelte glifo di {secondChar_ActualName} è {allGlyphsValue}, e la media è {mediumValue}.}
-
-            //Poi aggiungo alla lista dei potenziali generatori di nomi solo quei glifi che superano il valore medio delle scelte. 
-            {
-                - secondChar_aether >= mediumValue:
-                        ~ secondChar_randomPossibileNames += Capibara
-
-                - secondChar_water >= mediumValue:
-                        ~ secondChar_randomPossibileNames += Lupo
-
-                - secondChar_fire >= mediumValue:
-                        ~ secondChar_randomPossibileNames += Grizzly
-
-                - secondChar_air >= mediumValue:
-                        ~ secondChar_randomPossibileNames += Corvo
-
-                - secondChar_earth >= mediumValue:
-                        ~ secondChar_randomPossibileNames += Delfino
-
-                {debug: La lista di possibili nomi in caso di pareggio è {secondChar_randomPossibileNames}.}
-            } 
-            
-            //E infine ne prendo uno randomico dalla lista. Se dovesse essere vuota, ne assegno uno che ha senso con una cattiva relazione creata con lx png.
-            {
-                - secondChar_randomPossibileNames == ():
-                    ~ secondChar_ActualName += Grizzly
-
-                - else:
-                    ~ secondChar_ActualName = LIST_RANDOM(secondChar_randomPossibileNames)
-            }
-        
-        }
-
 
 
 

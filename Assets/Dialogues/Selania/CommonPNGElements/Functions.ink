@@ -78,6 +78,228 @@ VAR relationshipIndicatorEnthusiasticValue = 8
         ~ fifthChar_relationshipStatus = relationshipStatus            
 }
 
+//Settaggio nome finale
+=== function newName(PNG)
+/********************
+                                                                        Per la riscrittura non si tratta più di creare una relazione, ma di mostrare un mondo. 
+                                                                        Per cui non ragioniamo più con le funzioni di relazione ma semplicemente tracciamo il colore delle scelte, ed è quello a definire il nome. 
+                                                                        In questo modo non è più un discorso di esito positivo/negativo, ma di espressione.
+                                                                        PERO', per non rendere inutile tutta la conversazione precedente, terremo conto anche di tutte le scelte fatte fino a quel momento.
+                                                                        In questo modo avere più scelte (e quindi più inchiostro) o utilizzare il giusto sigillo sono cose che creano effettivamente un vantaggio perché per (es) spostare da una visione "fire" a 12 a una "water" che parte da un 6 ho bisogno di più scelte possibile (e qui interviene comunque anche il vantaggio del modificatore.) 
+                                                                                                        ********************/
+
+//Primo step: associo i glifi temporanei alla PNG di riferimento
+~ temp temporaryAir = 0
+~ temp temporaryWater = 0
+~ temp temporaryAether = 0
+~ temp temporaryFire = 0
+~ temp temporaryEarth = 0
+~ temp mainGlyph = ()
+~ temp possiblesMainGlyphs = ()
+
+{PNG:
+    - FirstCharacter:
+        ~ temporaryAir = firstChar_air
+        ~ temporaryWater = firstChar_water
+        ~ temporaryAether = firstChar_aether
+        ~ temporaryFire = firstChar_fire
+        ~ temporaryEarth = firstChar_earth
+
+    - SecondCharacter:
+        ~ temporaryAir = secondChar_air
+        ~ temporaryWater = secondChar_water
+        ~ temporaryAether = secondChar_aether
+        ~ temporaryFire = secondChar_fire
+        ~ temporaryEarth = secondChar_earth
+
+    - ThirdCharacter:
+        ~ temporaryAir = thirdChar_air
+        ~ temporaryWater = thirdChar_water
+        ~ temporaryAether = thirdChar_aether
+        ~ temporaryFire = thirdChar_fire
+        ~ temporaryEarth = thirdChar_earth
+
+    - FourthCharacter:
+        ~ temporaryAir = fourthChar_air
+        ~ temporaryWater = fourthChar_water
+        ~ temporaryAether = fourthChar_aether
+        ~ temporaryFire = fourthChar_fire
+        ~ temporaryEarth = fourthChar_earth
+
+    - FifthCharacter:
+        ~ temporaryAir = fifthChar_air
+        ~ temporaryWater = fifthChar_water
+        ~ temporaryAether = fifthChar_aether
+        ~ temporaryFire = fifthChar_fire
+        ~ temporaryEarth = fifthChar_earth       
+
+}
+
+//Secondo step: calcolo il valore dominante.
+    {
+        //Aria elemento più usato     
+        - (temporaryAir > temporaryWater) && (temporaryAir > temporaryFire) && (temporaryAir > temporaryEarth) && (temporaryAir > temporaryAether):
+            ~ mainGlyph = airC
+            {debug: passo per Corvo e il nome è : {secondChar_ActualName}.}
+        
+        //Fuoco elemento più usato         
+        - (temporaryFire> temporaryWater) && (temporaryFire> temporaryAir) && (temporaryFire> temporaryEarth) && (temporaryFire> temporaryAether):
+            ~ mainGlyph = fireC
+            {debug: passo per Grizzly e il nome è : {secondChar_ActualName}.}
+        
+        //Acqua elemento più usato     
+        - (temporaryWater > temporaryAir) && (temporaryWater > temporaryFire) && (temporaryWater > temporaryEarth) && (temporaryWater > temporaryAether):
+            ~ mainGlyph = waterC
+            {debug: passo per Lupo e il nome è : {secondChar_ActualName}.}
+
+        //Terra elemento più usato           
+        - (temporaryEarth > temporaryWater) && (temporaryEarth > temporaryFire) && (temporaryEarth > temporaryAir) && (temporaryEarth > temporaryAether):
+            ~ mainGlyph = earthC
+            {debug: passo per Delfino e il nome è : {secondChar_ActualName}.}
+
+        //Spirito elemento più usato        
+        - (temporaryAether > temporaryWater) && (temporaryAether > temporaryFire) && (temporaryAether > temporaryEarth) && (temporaryAether > temporaryAir):
+        {debug: passo per Capibara e il nome è : {secondChar_ActualName}.}
+            ~ mainGlyph = aetherC   
+
+                
+        - else:
+            //In caso di pareggio cerco di assegnare un nome randomico da quelli più plausibili, sempre secondo la logica qui sopra elemento == nome.
+            //Qui ragiono per percentuali: prima di tutto calcolo la quantità totale del valore dei glifi
+            ~ temp allGlyphsValue = temporaryFire + temporaryAir + temporaryWater + temporaryEarth + temporaryAether
+            //Poi faccio un conto del valore medio delle scelte
+            ~ temp mediumValue = allGlyphsValue/5
+
+            {debug: La somma delle scelte glifo di {secondChar_ActualName} è {allGlyphsValue}, e la media è {mediumValue}.}
+
+            //Poi aggiungo alla lista dei potenziali generatori di nomi solo quei glifi che superano il valore medio delle scelte. 
+            {
+                - temporaryAether >= mediumValue:
+                        ~ possiblesMainGlyphs += aetherC
+
+                - temporaryWater >= mediumValue:
+                        ~ possiblesMainGlyphs += waterC
+
+                - temporaryFire >= mediumValue:
+                        ~ possiblesMainGlyphs += fireC
+
+                - temporaryAir >= mediumValue:
+                        ~ possiblesMainGlyphs = airC
+
+                - temporaryEarth >= mediumValue:
+                        ~ possiblesMainGlyphs += earthC
+
+                {debug: La lista di possibili nomi in caso di pareggio è {possiblesMainGlyphs}.}
+            } 
+            
+            //E infine ne prendo uno randomico dalla lista. Se dovesse essere vuota, ne assegno uno che ha senso con una cattiva relazione creata con lx png.
+            {
+                - possiblesMainGlyphs != ():
+                    ~ mainGlyph = LIST_RANDOM(possiblesMainGlyphs)
+            }
+        
+        }
+
+//Infine vado ad associare i nomi
+{PNG:
+    - FirstCharacter:
+        ~ firstChar_ActualName = ()
+        {mainGlyph:
+            - airC:
+                ~ firstChar_ActualName += Triangolo
+            - waterC:
+                ~ firstChar_ActualName += Violino
+            - earthC:
+                ~ firstChar_ActualName += Ocarina
+            - fireC:
+                ~ firstChar_ActualName += Orchestra
+            - aetherC:
+                ~ firstChar_ActualName += FlautoDolce
+            - else:
+                //La lettura negativa per Chitarra probabilmente è quella romantica.
+                ~ firstChar_ActualName += Violino
+        }
+
+    - SecondCharacter:
+        ~ secondChar_ActualName = ()
+        {mainGlyph:
+            - airC:
+                ~ secondChar_ActualName += Corvo
+            - waterC:
+                ~ secondChar_ActualName += Lupo
+            - earthC:
+                ~ secondChar_ActualName += Ocarina
+            - fireC:
+                ~ secondChar_ActualName += Grizzly
+            - aetherC:
+                ~ secondChar_ActualName += Delfino
+            - else:
+                //La lettura negativa per Riccio è quella violenta.
+                ~ secondChar_ActualName += Grizzly
+        }
+
+    - ThirdCharacter:
+        ~ thirdChar_ActualName = ()
+        {mainGlyph:
+            - airC:
+                ~ thirdChar_ActualName += ThirdB
+            - waterC:
+                ~ thirdChar_ActualName += ThirdC
+            - earthC:
+                ~ thirdChar_ActualName += ThirdD
+            - fireC:
+                ~ thirdChar_ActualName += ThirdE
+            - aetherC:
+                ~ thirdChar_ActualName += ThirdF
+            - else:
+                //Definire e assegnare il negativo
+                ~ thirdChar_ActualName += ThirdB
+        }
+
+
+    // - FourthCharacter:
+    //      ~ fourthChar_ActualName = ()
+    //     {mainGlyph:
+    //         - airC:
+    //             ~ fourthChar_ActualName += FourthB
+    //         - waterC:
+    //             ~ fourthChar_ActualName += FourthC
+    //         - earthC:
+    //             ~ fourthChar_ActualName += FourthD
+    //         - fireC:
+    //             ~ fourthChar_ActualName += FourthE
+    //         - aetherC:
+    //             ~ fourthChar_ActualName += FourthF
+    //         - else:
+    //             //Definire e assegnare il negativo
+    //             ~ fourthChar_ActualName += FourthB
+    //     }
+
+
+    // - FifthCharacter:
+    //      ~ fifthChar_ActualName = ()
+    //     {mainGlyph:
+    //         - airC:
+    //             ~ fifthChar_ActualName += FifthB
+    //         - waterC:
+    //             ~ fifthChar_ActualName += FifthC
+    //         - earthC:
+    //             ~ fifthChar_ActualName += FifthD
+    //         - fireC:
+    //             ~ fifthChar_ActualName += FifthE
+    //         - aetherC:
+    //             ~ fifthChar_ActualName += FifthF
+    //         - else:
+    //             //Definire e assegnare il negativo
+    //             ~ fifthChar_ActualName += FifthB
+    //     }
+    
+
+}
+
+
+
+
 
 
 === endingPNGstory(PNG)
