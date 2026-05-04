@@ -1,54 +1,87 @@
-                    /* ---------------------------------
-                    
-                      Gestione timing e valori della storia
-                    
-                     ----------------------------------*/
-//Possibili nomi:
-    LIST thirdChar_possibleStates = Prova, Provata, Provatina, Boccale
+                                                        /* ---------------------------------
+                                                        
+                                                                LISTE E VARIABILI
+                                                        
+                                                        ----------------------------------*/
+
+
+//Gestione del ritmo della storia
+    //Stato della storia 
+        //Non avviata, avviata, conclusa
+        VAR thirdChar_storyStatus = story_storyNotStarted
+        //Ordine di conclusione della riscrittura (prima storia conclusa, seconda storia conclusa)
+        VAR thirdChar_storyEndingPosition = ()
+        //Quantità di storylets letti dalla giocatrice prima di accedere alla riscrittura
+        VAR thirdChar_minStoryletsForRewriting = grimThirdCharNine
+        //Abbiamo l'info speciale su Mentore? Se le condizioni sono corrette, viene messa su true dalla funzione inkLevel(Character)
+        VAR thirdChar_specialEvent = false
+        //Cconteggio totale delle scelte prese con la PNG
+        VAR thirdChar_totalChoices = 0
+
+    //Ritmo della storia    
+        //Variabili per mettere in pausa la conversazione
+        VAR thirdChar_pauseTalking = 0
+        VAR thirdChar_pauseDuration = 1
+        //Questa variabile verifica se abbiamo appena parlato con unx PNG, in modo tale da presentarci in modo diverso le possibili proposte che possiamo farle.
+        VAR thirdChar_justTalked = false
+        //Variabile per il tempo di attesa tra una lettera e l'altra
+        VAR thirdChar_mailPause = 0
+        VAR thirdChar_mailPauseDuration = 5
+
+
+//Stato della PNG
+    //Gestione nomi
+    LIST thirdChar_possibleStates = Boccale, (ThirdB), (ThirdC), (ThirdD), (ThirdE), (ThirdF)
     VAR thirdChar_ActualName = Boccale
+
+    //Registro delle scelte prese
+    VAR thirdChar_aether = 0.00
+    VAR thirdChar_earth = 0.00
+    VAR thirdChar_air = 0.00
+    VAR thirdChar_water = 0.00
+    VAR thirdChar_fire= 0.00
     
-    VAR thirdChar_storyStatus = story_storyNotStarted
-    VAR thirdChar_storyEndingPosition = ()
+        //Storage del valore precedente
+        VAR thirdChar_last_aether = 0.00
+        VAR thirdChar_last_earth = 0.00
+        VAR thirdChar_last_air = 0.00
+        VAR thirdChar_last_water = 0.00
+        VAR thirdChar_last_fire= 0.00
+
+    //Utilizzo dei sigilli
+    VAR thirdChar_usedSigil = 0
+    VAR thirdChar_usedSigilsTracking = ()
+
+    //Moltiplicatore per la riscrittura
+    VAR thirdChar_glyphVariation = 3.0 
 
 //Tracciamento della relazione
-    //Indicator = il valore di Indicator, riproporzionato per l'indicatore della reazione e chiamato in cucina e in riscrittura per i feedback/inchiostro.
+    //Indicatore della relazione
     VAR thirdChar_relationshipIndicator = 0
     VAR thirdChar_lastRelationshipIndicator = 0
-    //Absolute = il valore totale della relazione, tenuto per tracciamento
-    VAR thirdChar_relationshipIndicatorAbsolute = 0
-
-    //Utilizzato nella funzione XXX per calcolare la variazione del rapporto dopo la singola scelta.
-    VAR thirdChar_RelCalculator = 0
-    
-    
-    //Reaction: qui registriamo la reazione che verrà attivata coi sigilli
-    VAR thirdChar_relationshipReaction = neutral
     //Status = chiamato da cucina e prima della riscrittura per valutare il rapporto creato e il relativo inchiostro. Ora è un insieme di valori "scritti"
     VAR thirdChar_relationshipStatus = neutral
+    //Reaction: qui registriamo la reazione che verrà attivata coi sigilli
+    VAR thirdChar_relationshipReaction = neutral
 
-//Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
-    VAR thirdChar_favouritesGifts = (CardoAspinato)
-    VAR thirdChar_goodGifts = ()
+//Gestione dei doni
+    //Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
+    VAR thirdChar_favouritesGifts = (NonTiScordarDiTe, BaccaDellaAddolorata, CantoDelleCompagne)
+    VAR thirdChar_goodGifts = (ErbaLiccia, Olobino, BastoneDellOzioso, LanaNotturna)
     //Dono consigliato dalla rana
     VAR frog_third_char_gift = ""
     VAR frog_third_temp_growing_gift = false
-
-//Tracciamento del dono
+    //Dono effettuato
     VAR thirdChar_giftedObject = ()
-    
-//Tracciamento del racconto
-    VAR frog_third_novel = ""    
-    
-//Tracciamento attivazione secondo elemento tutorial
-    VAR thirdChar_tutorial = true
-    
+
+
 //Tracciamento cucina
-    //autonoma
+    //Autonoma
         VAR kitchen_thirdCharIsCooking = false
         VAR kitchen_thirdCharCookingTime = 0
         VAR kitchen_thirdCharHasCooked = false
         //Tempo che ci impiega a fare la sua ricetta
-        VAR kitchen_thirdCharCookingMaxTime = 7
+        VAR kitchen_thirdCharCookingMaxTime = 8
     //Nostro invito
         //l'abbiamo invitata
         VAR kitchen_thirdCharCookingTogetherInvite = false
@@ -57,242 +90,192 @@
         //Da quanto ci sta aspettando
         VAR kitchen_thirdCharCookingTogetherWaiting = 0
         //Quanta pazienza ha ad aspettarci
-        VAR kitchen_thirdCharCookingMAXTogetherWaiting = 5
+        VAR kitchen_thirdCharCookingMAXTogetherWaiting = 8
         //Ricetta creata
         VAR kitchen_thirdCharRecipe = ""
-         //Suggerimento rana
+        //Suggerimento rana
         VAR frog_third_char_ingredient = ""
         VAR frog_third_temp_growing_ingredient = false
-    
-        //Valore ingredienti
+            
+    //Valore ingredienti
         VAR kitchen_thirdCharRecipeNoun = ""
         VAR kitchen_thirdCharRecipeAdjective = ""
         VAR kitchen_thirdCharRecipeComplement = ""
         VAR kitchen_thirdCharExtraIngredient = ()
-        VAR kitchen_thirdCharExtraIngredientReaction = notReaction   
+        VAR kitchen_thirdCharExtraIngredientReaction = notReaction
 
-//Tracciamento apprezzamento glifi. Tutto ciò che è fuori da questa lista = reazione neutrale.
-    VAR thirdChar_positiveGlyphs = ()
-    VAR thirdChar_negativeGlyphs = ()
-    
-//Tengo conto delle interazioni avute per aprire la possibilità della riscrittura
-    VAR thirdChar_minStoryletsForRewriting = grimThirdCharNine 
-    VAR thirdChar_specialEvent = false
-    VAR thirdChar_justTalked = false
-
-//Questo è per il conteggio totale delle scelte prese con la PNG
-    VAR thirdChar_totalChoices = 0    
-
-//Variabili per mettere in pausa la conversazione
-    VAR thirdChar_pauseTalking = 0
-    VAR thirdChar_pauseDuration = 1
-    
-//Variabile per il countdown per la sua uscita di scena
-    VAR thirdChar_exitCounter = 0
-    VAR thirdChar_startingValueExitCounter = 4
-
-//Variabile per il tempo di attesa tra una lettera e l'altra
-    VAR thirdChar_mailPause = 0
-    VAR thirdChar_mailPauseDuration = 5
-    
-//Moltiplicatore del colore per il personaggio
-    VAR thirdChar_glyphVariation = 3.0
-
-//Check se ho utilizzato almeno un sigillo col personaggio
-    VAR thirdChar_usedSigil = 0
-    VAR thirdChar_usedSigilsTracking = () 
-    
-//UP: coerenza.
-//DOWN: incoerenza, cose random
-    VAR thirdChar_aether = 0.00
-    VAR thirdChar_earth = 0.00
-    VAR thirdChar_air = 0.00
-    VAR thirdChar_water = 0.00
-    VAR thirdChar_fire = 0.00
-
-    //Storage precedente valore
-    VAR thirdChar_last_aether = 0.00
-    VAR thirdChar_last_earth = 0.00
-    VAR thirdChar_last_air = 0.00
-    VAR thirdChar_last_water = 0.00
-    VAR thirdChar_last_fire= 0.00       
+//Tracciamento del racconto
+    VAR frog_third_novel = ""
                      
-                    /* ---------------------------------
-                    
-                       Gestione relazione e nomi
-                    
-                     ----------------------------------*/
-
-//Aggiorniamo lo stato relazionale                     
+                                                        /* ---------------------------------
+                                                        
+                                                            FUNZIONI PER AFFINITA' E NOME
+                                                        
+                                                        ----------------------------------*/
 === thirdAffinityCalc ===
-{debug: passo da thirdAffinityCalc}
-//Per il thirdo personaggio la cosa che conta è coerenza. Ha bisogno di stabilità. A manoni la logica sarà: tengo conto di un greenhouse_questionsCounter delle domande a cui ha risposto la giocatrice e se un determinato valore è >= di greenhouse_questionsCounter - x allora ++, se >= greenhouse_questionsCounter -x-1 allora +. Probabilmente da bilanciare.
+{debug: passo per thirdAffinityCalc.}
+//Questo mi serve per aggiornare il valore di affinità.
+//Viene chiamato a ridosso della riscrittura per definire lo stato di inchiostro
 
-    //In questa prima fase di testing, punterò su una soluzione di difficoltà media.
-    //L'obbiettivo è: beccare almeno il 66% delle risposte.
-    //Invece di complicarmi la vita posso usare la matematica.
+    //Prima di tutto chiamo la funzione per il calcolo dello stato della relazione
+        ~ affinity_calc(ThirdCharacter)
+
+    //"Trasformo" la relazione in inchiostro
+        ~ fromRelationshipToInk(ThirdCharacter)
     
-    {
-            //Se vengo dalla preriscrittura:
-            - rewriting_proposal_third_character.rewriting:
-                {debug: ho cliccato rewriting e quindi faccio gli ultimi passaggi e attivo il feedback.} 
-                //Prima di tutto chiamo la funzione per il calcolo dello stato della relazione
-                    ~ affinity_calc(ThirdCharacter)
+    //Mando ai feedback
+        -> thirdAffinityFeedback ->
+    
+    //Arriva il commento della strega
+        ~ inkLevel(ThirdCharacter)
+    
+    //Salvo il massimo di inchiostro raggiunto con la personaggia
+        ~ maxInkLevelUpdater(ThirdCharacter)
 
-                //"Trasformo" la relazione in inchiostro
-                    ~ fromRelationshipToInk(ThirdCharacter)
-                   
-                // Mando ai feedback
-                    -> thirdAffinityFeedback ->
-                    
-                //Arriva il commento della strega
-                    ~ inkLevel(ThirdCharacter)
-                                
-                //Salvo il massimo di inchiostro raggiunto con la personaggia
-                    ~ maxInkLevelUpdater(ThirdCharacter)    
-                    ->-> 
-            
-            // altrimenti, mando avanti
-            - else:
-                ->->
-        }
-            ->->
+    //Esco dal flusso 
+    ->-> 
 
 
 
-
-//Abbiamo un feedback da parte della PNG sul suo stato prima di confessare (che brutta parola)        
 === thirdAffinityFeedback
+{debug: passo per thirdAffinityFeedback. Lo stato di inchiostro è {thirdChar_InkLevel}.}
+//Utilizziamo questa funzione per far fare alla PNG un commento esplicito sullo stato della relazione.
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    
-{debug: passo per thirdAffinityFeedback. Lo stato di inchiostro è {thirdChar_InkLevel}.}
 
-
-        {
-            -   are_two_entities_together(FirstCharacter, PG):
-                    E questo è il momento per me di levarmi da qui e lasciarvi in pace.
-                    Anche se sono stracuriosa.
-                    Poi non dite che non vi voglio bene!
-                            ~ change_entity_place(FirstCharacter)
-        }
-        
+    Prima però ci terrei a dirti come sono andate le cose tra noi, qui.
+            
         {
             -   are_two_entities_together(Mentor, PG):
-                    {charTag(FifthCharacter, "neutral")}:             Immagino sia giusto lasciarvi la vostra privacy.
-                        ~ change_entity_place(Mentor)
+                {charTag(FifthCharacter, "neutral")}:               Vi lascio un po' di privacy. In bocca al lupo {player_name} e {charNameOne}.
+                    ~ change_entity_place(Mentor)
+        }
+        {
+            -   are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "neutral")}:               Mi levo dalle scatole.
+                    ~ change_entity_place(FirstCharacter)
+        }
+        {
+            -   are_two_entities_together(SecondCharacter, PG):
+                {charTag(ThirdCharacter, "affectionate")}:          {charNameTwo}, potresti lasciarci un po' da sol3?
+                {charTag(SecondCharacter, "emotional")}:            Certissimamente! A dopo!
+                    ~ change_entity_place(SecondCharacter)
         }
         {
             - are_two_entities_together(Franco, PG):
-                {charTag(Franco, "{portrait_Franco()}")}:       Io sto cra buono buono.
-                                                                In silenzio.
-                                                                A ricordarmi il numero della scuola dei girini.
-                                                                Che non ricordo a che ora chiude.
-                                                                Di nuovo.     
+                {charTag(Franco, "{portrait_Franco()}")}:           Non fate caso a me, sto provando a raccogliere tutte le bolle in un unico posto, ma continuano a scappare.     
         }
 
-        {charTag(ThirdCharacter, "neutral")}:         Ecco... 
-    
+        
         {
             - thirdChar_InkLevel == ink_empty:
-                    {charTag(ThirdCharacter, "neutral")}:         Che secondo me mi tratti come un bambino.
-                    Tutte le cose che dici cambiano, sono disordinate.
-                    Come i camaleonti che sono verdi sulle foglie e bianchi sul muro.
-                    Non mi piace mica come cosa.
-                    Mi sa che mi hai ascoltato, ma non mi hai mica capito!
-            
-            
+                {charTag(ThirdCharacter, "annoyed")}:               Come direbbe la mia vecchia insegnate di piano: apprezzo lo sforzo, manca il risultato.
+                                                                    Ci sono stati momenti carini, ma ammetto che per lo più non mi sono sentita molto capita da te.
+                                                                    Scusa.
+
             - thirdChar_InkLevel == ink_low:
-                    {charTag(ThirdCharacter, "neutral")}:         Che io non ho mica capito cosa pensi.
-                    Sei come quando guardo nel terrario e non capisco se c'è l'insetto stecco o sono solo rami.
-                    Magari c'hai provato a capirmi ma boh, mica ci sei {player_pronouns has him:riuscito|{player_pronouns has her:riuscita|riuscitə}}.
-            
+                {charTag(ThirdCharacter, "annoyed")}:               E, insomma.
+                                                                    Non è che ci capiamo molto noi due, sai?
+                                                                    È come se io suonassi Chopin e tu la lambada.
+                                                                    E la lambada è carina, ma non è roba mia.
+                                                                    Ha senso? 
+                                                                
             - thirdChar_InkLevel == ink_normal:
-                    {charTag(ThirdCharacter, "neutral")}:         Che si vede che sei grande.
-                    Che a volte non è male, a volte però mi agita.
-                    Mi chiedo sei mi ascolti davvero.
-                    Però per lo meno ti sei {player_pronouns has him:impegnato|{player_pronouns has her:impegnata|impegnatə}}.
+                {charTag(ThirdCharacter, "neutral")}:               Ci sono stati beni momenti tra noi, sai?
+                                                                    Ma anche momenti no, in cui non mi sono sentita capita.
+                                                                    Non è un reato.
+                                                                    Ma, insomma, non riesco a fidarmi fino in fondo.
+                                                                    Scusa.
+            
             
             - thirdChar_InkLevel == ink_medium:
-                    {charTag(ThirdCharacter, "neutral")}:         Che un po' mi fido
-                    Secondo me non dici <i>sempre sempre sempre</i> le cose in modo preciso.
-                    Sembri un po' un gatto.
-                    Ma mi fido.
+                {charTag(ThirdCharacter, "affectionate")}:          E {player_name}: non pensavo avrei trovato una persona amica, qui.
+                                                                    Mi hai reso l'assenza di Talco, di Ennio, di Valeria moooolto più sopportabile.
+                                                                    Grazie.
+            
             
             - thirdChar_InkLevel == ink_high:
-                    {charTag(ThirdCharacter, "neutral")}:         Che non sei mica male per essere grande.
-                    Dici sempre le cose allo stesso modo.
-                    Come un cane che scodinzola se è felice ma abbaia se arrabbiato.
-                    E questo mi fa stare al sicuro.
-                    Mi dice che mi hai ascoltato, ed è una cosa bella.
+                {charTag(ThirdCharacter, "affectionate")}:          E mi chiedevo: ma che ci hanno separat3 alla nascita?
+                                                                    Perché mi sento tipo come se avessimo un unico neurone.
+                                                                    Unit3 in tutto.
+                                                                    Ed è figa come cosa.
+                                                                    Talco continua a mancarmi, ma con te mi sento come se fossimo parte da sempre della stessa band.
         }
-    
 
-->->        
-        
+->->
 
-=== thirdNaming ==
-//Selezione nome prima della riscrittura
-//Grizzly è il livello "più basso" per Riccio
-//Riutilizziamo la stessa logica prodotta dall'affinity calculator, ma con impatti diversi: > 90, >70, >60, > 40
+
+ //Settaggio nome quando partiamo con la discussione (non finale quindi)
+=== function thirdNaming()
+
+                                                                                                        /********************
+                                                                        Per la riscrittura non si tratta più di creare una relazione, ma di mostrare un mondo. 
+                                                                        Per cui non ragioniamo più con le funzioni di relazione ma semplicemente tracciamo il colore delle scelte, ed è quello a definire il nome. 
+                                                                        In questo modo non è più un discorso di esito positivo/negativo, ma di espressione.
+                                                                        PERO', per non rendere inutile tutta la conversazione precedente, terremo conto anche di tutte le scelte fatte fino a quel momento.
+                                                                        In questo modo avere più scelte (e quindi più inchiostro) o utilizzare il giusto sigillo sono cose che creano effettivamente un vantaggio perché per (es) spostare da una visione "fire" a 12 a una "water" che parte da un 6 ho bisogno di più scelte possibile (e qui interviene comunque anche il vantaggio del modificatore.) 
+                                                                                                        ********************/
 {debug: passo per thirdNaming.}
-
-    ~ temp allColorsValue = thirdChar_fire + thirdChar_air + thirdChar_water + thirdChar_earth + thirdChar_aether
-    ~ temp minimumPercentValue = (allColorsValue/100.00)
-    ~ temp winnerColor = 0
-
-{debug: Il valore di thirdChar_fire è {thirdChar_fire} , di thirdChar_air è {thirdChar_air}, di thirdChar_water è {thirdChar_water}, di thirdChar_earth è {thirdChar_earth} e di thirdChar_aether è {thirdChar_aether}. La somma di tutti i colori è {allColorsValue}. Il valore di minimumPercentValue è {minimumPercentValue}.}
-
-//Resetto il valore del nome di Riccio
-    ~ thirdChar_ActualName = ()
-
-    //Verifico quale sia il valore "vincente"
+{debug: prima di operare,il valore del nome è: {thirdChar_ActualName}.}
+ //Svuoto il valore per sicurezza
+ ~ thirdChar_ActualName = ()
+ {debug: svuoto thirdChar_ActualName : {thirdChar_ActualName}.}
+ 
     {
-        - (thirdChar_aether > thirdChar_water) && (thirdChar_aether > thirdChar_fire) && (thirdChar_aether > thirdChar_air) && (thirdChar_aether > thirdChar_earth):
-                 ~ winnerColor = thirdChar_aether
-                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di thirdChar_aether, che è {thirdChar_aether}.}
-    
-        - (thirdChar_water > thirdChar_aether) && (thirdChar_water > thirdChar_fire) && (thirdChar_water > thirdChar_air) && (thirdChar_water > thirdChar_earth):
-                 ~ winnerColor = thirdChar_water
-                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di thirdChar_water, che è {thirdChar_water}.}
+        //Blu colore più usato
+        - (thirdChar_air > thirdChar_water) && (thirdChar_air > thirdChar_fire) && (thirdChar_air > thirdChar_earth) && (thirdChar_air > thirdChar_aether):
+            ~ thirdChar_ActualName += ThirdB
+            {debug: passo per ThirdB e il nome è : {thirdChar_ActualName}.}
         
-        - (thirdChar_fire > thirdChar_water) && (thirdChar_fire > thirdChar_aether) && (thirdChar_fire > thirdChar_air) && (thirdChar_fire > thirdChar_earth):
-                 ~ winnerColor = thirdChar_fire
-                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di thirdChar_fire, che è {thirdChar_fire}.}
+        //Rosso colore più usato        
+        - (thirdChar_fire> thirdChar_water) && (thirdChar_fire> thirdChar_air) && (thirdChar_fire> thirdChar_earth) && (thirdChar_fire> thirdChar_aether):
+            ~ thirdChar_ActualName += ThirdC
+            {debug: passo per ThirdC e il nome è : {thirdChar_ActualName}.}
         
-        - (thirdChar_earth > thirdChar_water) && (thirdChar_earth > thirdChar_aether) && (thirdChar_earth > thirdChar_air) && (thirdChar_earth > thirdChar_fire):
-                 ~ winnerColor = thirdChar_earth
-                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di thirdChar_earth, che è {thirdChar_earth}.}
-        
-        - (thirdChar_air > thirdChar_water) && (thirdChar_air > thirdChar_aether) && (thirdChar_air > thirdChar_earth) && (thirdChar_air > thirdChar_fire):
-                 ~ winnerColor = thirdChar_air
-                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di thirdChar_air, che è {thirdChar_air}.}
-    
-    }
+        //Verde colore più usato        
+        - (thirdChar_water > thirdChar_air) && (thirdChar_water > thirdChar_fire) && (thirdChar_water > thirdChar_earth) && (thirdChar_water > thirdChar_aether):
+            ~ thirdChar_ActualName += ThirdD
+            {debug: passo per ThirdD e il nome è : {thirdChar_ActualName}.}
 
-    // {debug:Il valore da superare per corvo è {minimumPercentValue * thirdChar_crowPercentage}; il valore da superare per capibara è {minimumPercentValue * thirdChar_capibaraPercentage}; Il valore da superare per delfino è {minimumPercentValue * thirdChar_dolphinePercentage}; il valore da superare per lupo è {minimumPercentValue * thirdChar_wolfPercentage}}
-    
-    // {
-    //     - winnerColor >= (minimumPercentValue * thirdChar_crowPercentage):
-    //         ~ thirdChar_ActualName += Corvo
-        
-    //     - winnerColor >= (minimumPercentValue * thirdChar_capibaraPercentage):
-    //         ~ thirdChar_ActualName += Capibara   
-        
-    //     - winnerColor >= (minimumPercentValue * thirdChar_dolphinePercentage):
-    //         ~ thirdChar_ActualName += Delfino    
-        
-    //     - winnerColor >= (minimumPercentValue * thirdChar_wolfPercentage):
-    //         ~ thirdChar_ActualName += Lupo
-        
-    //     - else:
-    //         ~ thirdChar_ActualName += Grizzly
-    // }
-    
-    ->-> 
+        //Giallo colore più usato        
+        - (thirdChar_earth > thirdChar_water) && (thirdChar_earth > thirdChar_fire) && (thirdChar_earth > thirdChar_air) && (thirdChar_earth > thirdChar_aether):
+            ~ thirdChar_ActualName += ThirdE
+            {debug: passo per ThirdE e il nome è : {thirdChar_ActualName}.}
+
+        //Viola colore più usato        
+        - (thirdChar_aether > thirdChar_water) && (thirdChar_aether > thirdChar_fire) && (thirdChar_aether > thirdChar_earth) && (thirdChar_aether > thirdChar_air):
+        {debug: passo per ThirdF e il nome è : {thirdChar_ActualName}.}
+            ~ thirdChar_ActualName += ThirdF    
+
+                
+        - else:
+        //In caso di pareggio tengono conto della natura della PNG per fare uno "spareggio" (mi piacerebbe trovare però qualcosa di più efficace, come le scelte fatte in cucina, che non possono creare pareggi, ma deve essere una cosa coerente.)
+            {
+                - (thirdChar_aether < thirdChar_air) && (thirdChar_water < thirdChar_air):
+                        ~ thirdChar_ActualName += ThirdB
+                        {debug: passo per ThirdB e il nome è : {thirdChar_ActualName}.}
+
+                - thirdChar_aether && thirdChar_water > thirdChar_air:
+                        ~ thirdChar_ActualName += ThirdF
+                            {debug: passo per ThirdF e il nome è : {thirdChar_ActualName}.}
+
+                - (thirdChar_water > thirdChar_air) && (not thirdChar_aether > thirdChar_air):
+                        ~ thirdChar_ActualName += ThirdD
+                        {debug: passo per ThirdD e il nome è : {thirdChar_ActualName}.}
+
+                - (thirdChar_aether > thirdChar_air) && (not thirdChar_water > thirdChar_air):
+                    {debug: passo per ThirdE e il nome è : {thirdChar_ActualName}.}
+                        ~ thirdChar_ActualName += ThirdE 
+
+                - else:
+                        ~ thirdChar_ActualName += ThirdC
+                            {debug: passo per ThirdC e il nome è : {thirdChar_ActualName}.}
+
+            }
+        }
 
 
 

@@ -277,7 +277,9 @@
                 -> update_glyphs(ThirdCharacter) ->     
      
             //E infine genero il nome
-                -> thirdNaming ->naming
+                ~ thirdNaming()
+
+            ->naming
                 
     
     
