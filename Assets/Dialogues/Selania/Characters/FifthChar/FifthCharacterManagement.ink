@@ -53,7 +53,7 @@
     VAR fifthChar_usedSigilsTracking = ()
 
     //Moltiplicatore per la riscrittura
-    VAR fifthChar_glyphVariation = 3.0 
+    VAR fifthChar_glyphVariation = 2
 
 //Tracciamento della relazione
     //Indicatore della relazione

@@ -53,7 +53,7 @@
     VAR fourthChar_usedSigilsTracking = ()
 
     //Moltiplicatore per la riscrittura
-    VAR fourthChar_glyphVariation = 3.0 
+    VAR fourthChar_glyphVariation = 2
 
 //Tracciamento della relazione
     //Indicatore della relazione

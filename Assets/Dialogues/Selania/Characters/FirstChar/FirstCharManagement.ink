@@ -53,7 +53,7 @@
     VAR firstChar_usedSigilsTracking = ()
 
     //Moltiplicatore per la riscrittura
-    VAR firstChar_glyphVariation = 3.0 
+    VAR firstChar_glyphVariation = 2
 
 //Tracciamento della relazione
     //Indicatore della relazione

@@ -52,7 +52,7 @@
     VAR secondChar_usedSigilsTracking = ()
 
     //Moltiplicatore per la riscrittura
-    VAR secondChar_glyphVariation = 3.0 
+    VAR secondChar_glyphVariation = 2
 
 //Tracciamento della relazione
     //Indicatore della relazione
