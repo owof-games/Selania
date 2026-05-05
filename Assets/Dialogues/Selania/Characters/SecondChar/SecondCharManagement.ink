@@ -34,18 +34,18 @@
     VAR secondChar_ActualName = Riccio
 
     //Registro delle scelte prese
-    VAR secondChar_aether = 0.00
-    VAR secondChar_earth = 0.00
-    VAR secondChar_air = 0.00
-    VAR secondChar_water = 0.00
-    VAR secondChar_fire= 0.00
+    VAR secondChar_aether = 0
+    VAR secondChar_earth = 0
+    VAR secondChar_air = 0
+    VAR secondChar_water = 0
+    VAR secondChar_fire= 0
     
         //Storage del valore precedente
-        VAR secondChar_last_aether = 0.00
-        VAR secondChar_last_earth = 0.00
-        VAR secondChar_last_air = 0.00
-        VAR secondChar_last_water = 0.00
-        VAR secondChar_last_fire= 0.00
+        VAR secondChar_last_aether = 0
+        VAR secondChar_last_earth = 0
+        VAR secondChar_last_air = 0
+        VAR secondChar_last_water = 0
+        VAR secondChar_last_fire= 0
 
     //Utilizzo dei sigilli
     VAR secondChar_usedSigil = 0
@@ -261,6 +261,9 @@
 === second_char_closing_letters
     ~ secondChar_mailPause = secondChar_mailPauseDuration
     ~ letters_doggoPause = false
+
+    ~ move_entity(DoggoSecondLetters, Safekeeping)
+    ~ move_entity(DoggoNoLetters, TrainStop)
 
     //Aggiornamento storylets
     -> grimoire_storylets_updater ->

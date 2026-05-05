@@ -119,7 +119,7 @@ UTILIZZI RIMASTI = {glyph_actualSigilUses}
 
 
 = witch
-
+    - (top2)
         {charTag(TheWitch, witch_state())}:         <i>(testo temporaneo per il testing interno) Prima di iniziare, ci chiediamo in che modalità giocare.</i>
                                                     <i>La modalità Reader Mode è come il gioco è stato pensato: <i>ogni scelta si deve appoggiare al tuo intuito, alla comprensione delle persone con cui interagisci.
                                                     <i>La modalità Gamer Mode ti offre maggiore supporto con indicatori di diverso tipo, oltre a un tutorial extra ad hoc.</i>
@@ -134,9 +134,21 @@ UTILIZZI RIMASTI = {glyph_actualSigilUses}
             {charTag(TheWitch, witch_state())}:     <i>Ho riempito il grimorio come se tu avessi finito la prima parte di gioco, ma senza lo sbrocco di Mentore.</i>
                                                     <i>Hai inoltre sbloccato tutti i sigilli e le piante.</i>
 
+            +  \ {charTag(PG, "neutral")}:          <i>Impostami le prime 3 png come pronte per la riscrittura.
+                                                    ~ debugRewriting()
+
+            +  \ {charTag(PG, "neutral")}:          <i>Aprimi tutti i luoghi del gioco.
+                                                    ~ debug_places_open()
+                                   
             -
 
-        {charTag(TheWitch, witch_state())}:     <i>Perfetto.
+    {charTag(TheWitch, witch_state())}:             <i>Serve altro?
+            + \ {charTag(PG, "neutral")}:           <i>Sì.
+                -> top2
+            + \ {charTag(PG, "neutral")}:           <i>No.
+            -
+
+        {charTag(TheWitch, witch_state())}:         <i>Perfetto.
                                                     <i>Buon inizio di questo tuo viaggio.</i>
 
 -> main

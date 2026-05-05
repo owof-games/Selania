@@ -233,7 +233,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
         
 
-        {charTag(PG, "neutral")}:      credo di aver compreso quale sia il tuo blocco, perché sei qui.
+        {charTag(PG, "neutral")}:      Credo di aver compreso quale sia il tuo blocco, perché sei qui.
             
         //Check per commento strega
         -> rewriting_witch_feedback(endR) ->     

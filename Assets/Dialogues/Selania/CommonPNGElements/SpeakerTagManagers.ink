@@ -73,6 +73,21 @@
             
             - thirdChar_ActualName == Boccale:
                 ~ return "Boccale"
+
+            - thirdChar_ActualName == ThirdB:
+                ~ return "ThirdB"
+
+            - thirdChar_ActualName == ThirdC:
+                ~ return "ThirdC"
+
+            - thirdChar_ActualName == ThirdD:
+                ~ return "ThirdD"
+
+            - thirdChar_ActualName == ThirdE:
+                ~ return "ThirdE"
+
+            - thirdChar_ActualName == ThirdF:
+                ~ return "ThirdF"                     
         }
 
     - FourthCharacter:
@@ -83,6 +98,21 @@
             
             - fourthChar_ActualName == NonnaMolotov:
                 ~ return "Nonna Molotov"
+            
+            - fourthChar_ActualName == FourthB:
+                ~ return "FourthB"
+
+            - fourthChar_ActualName == FourthC:
+                ~ return "FourthC"
+
+            - fourthChar_ActualName == FourthD:
+                ~ return "FourthD"
+
+            - fourthChar_ActualName == FourthE:
+                ~ return "FourthE"
+
+            - fourthChar_ActualName == FourthF:
+                ~ return "FourthF"      
         }    
     
 
@@ -96,6 +126,21 @@
             
             - fifthChar_ActualName == Mostro:
                 ~ return "Mostro"
+            
+            - fifthChar_ActualName == FifthB:
+                ~ return "FifthB"
+
+            - fifthChar_ActualName == FifthC:
+                ~ return "FifthC"
+
+            - fifthChar_ActualName == FifthD:
+                ~ return "FifthD"
+
+            - fifthChar_ActualName == FifthE:
+                ~ return "FifthE"
+
+            - fifthChar_ActualName == FifthF:
+                ~ return "FifthF"      
         }
     
     - TheWitch:

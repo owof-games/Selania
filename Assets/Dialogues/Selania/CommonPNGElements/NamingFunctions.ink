@@ -84,48 +84,51 @@
             ~ temp maxValue = 0
                 {
                     - temporaryAether >= maxValue:
-                        ~ maxValue = temporaryAether
+                        ~ mainGlyph = aetherC
                 }
                 {
                     - temporaryWater >= maxValue:
-                        ~ maxValue = waterC
+                        ~ mainGlyph = waterC
                 }
                 {
                     - temporaryFire >= maxValue:
-                        ~ maxValue = fireC
+                        ~ mainGlyph = fireC
                 }
                 {
                     - temporaryAir >= maxValue:
-                        ~ maxValue =  airC
+                        ~ mainGlyph =  airC
                 }
                 {
                     - temporaryEarth >= maxValue:
-                        ~ maxValue = earthC
+                        ~ mainGlyph = earthC
 
                 }
 
-            {debug: Il valore massimo raggijnto dai glifi è {maxValue}.}
+            {debug: Il valore massimo raggiunto dai glifi è {maxValue}.}
 
             //Poi aggiungo alla lista dei potenziali generatori di nomi solo quei glifi che superano il valore medio delle scelte. 
             {
                 - temporaryAether >= maxValue:
                         ~ possiblesMainGlyphs += aetherC
-
+            }
+            {
                 - temporaryWater >= maxValue:
                         ~ possiblesMainGlyphs += waterC
-
+            }
+            {
                 - temporaryFire >= maxValue:
                         ~ possiblesMainGlyphs += fireC
-
+            }
+            {
                 - temporaryAir >= maxValue:
                         ~ possiblesMainGlyphs = airC
-
+            }
+            {
                 - temporaryEarth >= maxValue:
                         ~ possiblesMainGlyphs += earthC
 
-                {debug: La lista di possibili nomi in caso di pareggio è {possiblesMainGlyphs}.}
             } 
-            
+            debug: La lista di possibili nomi in caso di pareggio è {possiblesMainGlyphs}.
             //E infine ne prendo uno randomico dalla lista. Se dovesse essere vuota, ne assegno uno che ha senso con una cattiva relazione creata con lx png.
             {
                 - possiblesMainGlyphs != ():
@@ -271,16 +274,48 @@ Funzione di traduzione da variabile a stringa
     //Personaggio Tre
         - Boccale:
             ~ return "Boccale"
+        - ThirdB:
+            ~ return "ThirdB"
+        - ThirdC:
+            ~ return "ThirdC"
+        - ThirdD:
+            ~ return "ThirdD"
+        - ThirdE:
+            ~ return "ThirdE"
+        - ThirdF:
+            ~ return "ThirdF"                   
     
     //Personaggia Quattro        
         - NonnaMolotov:
             ~ return "Nonna Molotov"
+        - FourthB:
+            ~ return "FourthB"
+        - FourthC:
+            ~ return "FourthC"
+        - FourthD:
+            ~ return "FourthD"
+        - FourthE:
+            ~ return "FourthE"
+        - FourthF:
+            ~ return "FourthF"                   
+        
 
     //Personaggia Cinque        
         - Mentore:
             ~ return "Mentore"
         - Mostro:
-            ~ return "Mostro"   
+            ~ return "Mostro"
+        - FifthB:
+            ~ return "FifthB"
+        - FifthC:
+            ~ return "FifthC"
+        - FifthD:
+            ~ return "FifthD"
+        - FifthE:
+            ~ return "FifthE"
+        - FifthF:
+            ~ return "FifthF"                   
+        
 
     }
 

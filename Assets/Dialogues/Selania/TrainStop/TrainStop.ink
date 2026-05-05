@@ -73,7 +73,7 @@
         {charTag(Documents, "writer_firstChar")}:           Ciao {player_name}, come stai?
 
         ~ letters_firstCharLetters_one()
-        -> first_char_closing_letters
+        -> first_char_closing_letters -> main
     
     = two
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -82,7 +82,7 @@
         {charTag(Documents, "writer_firstChar")}:           Ciao {player_name}, qui è sempre {charNameOne} che ti scrive.
 
         ~ letters_firstCharLetters_two()
-        -> first_char_closing_letters
+        -> first_char_closing_letters -> main
         
     = three
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -91,7 +91,7 @@
         {charTag(Documents, "writer_firstChar")}:           Ciao ama!
 
         ~ letters_firstCharLetters_three()
-        -> first_char_closing_letters
+        -> first_char_closing_letters -> main
 
     = four
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -100,7 +100,7 @@
         {charTag(Documents, "writer_firstChar")}:           Rieccomi ama.
     
         ~ letters_firstCharLetters_four()
-        -> first_char_closing_letters       
+        -> first_char_closing_letters -> main       
 
 === second_character_notes ===
 //Mettere cose sul rapporto con nonna, papà. mamma, fratello, animali, futuro.
@@ -128,22 +128,22 @@
     = one
         {charTag(Documents, "writer_secondChar")}:          Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}.
         ~ letters_secondCharLetters_one()
-        -> second_char_closing_letters
+        -> second_char_closing_letters -> main
     
     = two
         {charTag(Documents, "writer_secondChar")}:          Che strano.
         ~ letters_secondCharLetters_two()
-        -> second_char_closing_letters
+        -> second_char_closing_letters -> main
     
     = three
         {charTag(Documents, "writer_secondChar")}:          Ciao {player_name}.
         ~ letters_secondCharLetters_three()
-        -> second_char_closing_letters
+        -> second_char_closing_letters -> main
 
     = four
         {charTag(Documents, "writer_secondChar")}:          Ehi.
         ~ letters_secondCharLetters_four()
-        -> second_char_closing_letters    
+        -> second_char_closing_letters -> main    
     
 === third_character_notes ===
 //Forse le sue lettere saranno scritte da una persona cara, vicina.
@@ -169,19 +169,19 @@
         
     = one
         ~ letters_thirdCharLetters_one()
-        -> third_char_closing_letters
+        -> third_char_closing_letters -> main
 
     = two
         ~ letters_thirdCharLetters_two()
-        -> third_char_closing_letters
+        -> third_char_closing_letters -> main
     
     = three
         ~ letters_thirdCharLetters_three()
-        -> third_char_closing_letters
+        -> third_char_closing_letters -> main
 
     = four
         ~ letters_thirdCharLetters_four()
-        -> third_char_closing_letters    
+        -> third_char_closing_letters -> main
     
 === fourth_character_notes ===
     
@@ -205,19 +205,19 @@
         }
      = one
         ~ letters_fourthCharLetters_one()
-        -> fourth_char_closing_letters
+        -> fourth_char_closing_letters -> main
 
     = two
         ~ letters_fourthCharLetters_two()
-        -> fourth_char_closing_letters
+        -> fourth_char_closing_letters -> main
     
     = three
         ~ letters_fourthCharLetters_three()
-        -> fourth_char_closing_letters
+        -> fourth_char_closing_letters -> main
 
     = four
         ~ letters_fourthCharLetters_four()
-        -> fourth_char_closing_letters
+        -> fourth_char_closing_letters -> main
 
 === fifth_character_notes ===
 
@@ -242,16 +242,16 @@
         
      = one
         ~ letters_fifthCharLetters_one()
-        -> fifth_char_closing_letters
+        -> fifth_char_closing_letters -> main
 
     = two
         ~ letters_fifthCharLetters_two()
-        -> fifth_char_closing_letters
+        -> fifth_char_closing_letters -> main
     
     = three
         ~ letters_fifthCharLetters_three()
-        -> fifth_char_closing_letters
+        -> fifth_char_closing_letters -> main
 
     = four
         ~ letters_fifthCharLetters_four()
-        -> fifth_char_closing_letters    
+        -> fifth_char_closing_letters -> main    

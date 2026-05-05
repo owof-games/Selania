@@ -2,7 +2,7 @@
     VAR Ink = ()
 
 //Stato inchiostro
-    LIST ink_possibileLevels = ink_empty, ink_low, ink_normal, ink_medium, ink_high
+    LIST ink_possibileLevels = (ink_empty), (ink_low), (ink_normal), (ink_medium), (ink_high)
     VAR firstChar_InkLevel = ink_empty
     VAR secondChar_InkLevel = ink_empty
     VAR thirdChar_InkLevel = ink_empty

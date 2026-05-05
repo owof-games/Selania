@@ -35,18 +35,18 @@
     VAR thirdChar_ActualName = Boccale
 
     //Registro delle scelte prese
-    VAR thirdChar_aether = 0.00
-    VAR thirdChar_earth = 0.00
-    VAR thirdChar_air = 0.00
-    VAR thirdChar_water = 0.00
-    VAR thirdChar_fire= 0.00
+    VAR thirdChar_aether = 0
+    VAR thirdChar_earth = 0
+    VAR thirdChar_air = 0
+    VAR thirdChar_water = 0
+    VAR thirdChar_fire= 0
     
         //Storage del valore precedente
-        VAR thirdChar_last_aether = 0.00
-        VAR thirdChar_last_earth = 0.00
-        VAR thirdChar_last_air = 0.00
-        VAR thirdChar_last_water = 0.00
-        VAR thirdChar_last_fire= 0.00
+        VAR thirdChar_last_aether = 0
+        VAR thirdChar_last_earth = 0
+        VAR thirdChar_last_air = 0
+        VAR thirdChar_last_water = 0
+        VAR thirdChar_last_fire= 0
 
     //Utilizzo dei sigilli
     VAR thirdChar_usedSigil = 0
@@ -222,6 +222,9 @@
 === third_char_closing_letters
     ~ thirdChar_mailPause = thirdChar_mailPauseDuration
     ~ letters_doggoPause = false
+
+    ~ move_entity(DoggoThirdLetters, Safekeeping)
+    ~ move_entity(DoggoNoLetters, TrainStop)
     
     //Aggiornamento storylets
     -> grimoire_storylets_updater ->

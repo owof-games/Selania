@@ -85,7 +85,7 @@
 
         //Azioni legate alla riscrittura
             //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
-                + {grimoire_fifthChar has fifthChar_minStoryletsForRewriting && grimoire_fifthChar hasnt grimFifthCharProposal && grimoire_appendices has grimRewritingMentor} \ {charTag(PG, "neutral")}:         Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
+                + {grimoire_fifthChar has fifthChar_minStoryletsForRewriting && grimoire_fifthChar hasnt grimFifthCharProposal && grimoire_appendices has grimRewritingMentor} \ {charTag(PG, "neutral")}:         Ehi {charNameFive}, ti va di rileggere assieme le cose in modo diverso?
                         -> rewriting_proposal_fifth_character
 
             //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo

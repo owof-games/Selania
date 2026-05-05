@@ -1,7 +1,6 @@
     VAR debug_seedRandom = false
     
 //Per abilitare o meno i debug
-    VAR debug_openAll = false
     VAR debug = false
     VAR debug_cultivable = false
     VAR debug_changeName = false
@@ -11,6 +10,7 @@
     VAR debug_horizontalS = false
     VAR debug_achievements = false
     VAR debug_PNGLocation = false
+
 
     //per testare i luoghi non subito aperti con calma
     VAR debug_testLibrary = false
@@ -30,20 +30,36 @@
 }
 
 
-=== debug_places_open ===
+=== function debugRewriting()
 
-{
-    - debug_openAll == true:
+    ~ grimoire_firstChar += grimFirstCharNine
+    ~ grimoire_secondChar += grimSecondCharNine
+    ~ grimoire_thirdChar += grimThirdCharNine
 
-            ~ debug_testLibrary = true
-            ~ debug_testKitchen = true
-            ~ debug_testNest = true
-            ~ debug_testDump = true
-            ~ debug_testGreenhouse = true
-            ~ debug_testFrog = true
+    ~ thirdChar_storyStatus = story_storyStarted
+    ~ secondChar_storyStatus = story_storyStarted
+    ~ firstChar_storyStatus = story_storyStarted
+
+    ~ firstChar_InkLevel = LIST_RANDOM(ink_possibileLevels)
+    ~ secondChar_InkLevel = LIST_RANDOM(ink_possibileLevels)
+    ~ thirdChar_InkLevel = LIST_RANDOM(ink_possibileLevels)
+
+    ~ grimoire_appendices += (grimChoicesMentor, grimChoicesWitch, grimGreenhouseMentor, grimFirstOpenKitchen, grimInkMentor, grimRewritingMentor, grimThirdOpenNest, grimSigilsMentor, grimSigilsWitch)
+
+
+
+
+
+
+=== function debug_places_open()
+
+    ~ debug_testLibrary = true
+    ~ debug_testKitchen = true
+    ~ debug_testNest = true
+    ~ debug_testDump = true
+    ~ debug_testGreenhouse = true
+    ~ debug_testFrog = true
         
-}
-
 
 {
     - debug_testDump == true && (entity_location(FromForestToDump) == Safekeeping):
@@ -93,7 +109,7 @@
     - debug_stochastic == false:
         ~ move_entity(BedClosingGame, Bedroom)
 }
-->->
+
 
 
 

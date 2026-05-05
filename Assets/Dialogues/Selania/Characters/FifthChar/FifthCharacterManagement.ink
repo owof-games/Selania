@@ -214,6 +214,9 @@
     ~ fifthChar_mailPause = fifthChar_mailPauseDuration
     ~ letters_doggoPause = false
     
+    ~ move_entity(DoggoFifthLetters, Safekeeping)
+    ~ move_entity(DoggoNoLetters, TrainStop)
+    
     //Aggiornamento storylets
     -> grimoire_storylets_updater ->
 

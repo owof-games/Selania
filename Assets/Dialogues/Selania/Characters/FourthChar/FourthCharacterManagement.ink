@@ -213,6 +213,9 @@
 === fourth_char_closing_letters
     ~ fourthChar_mailPause = fourthChar_mailPauseDuration
     ~ letters_doggoPause = false
+
+    ~ move_entity(DoggoFourthLetters, Safekeeping)
+    ~ move_entity(DoggoNoLetters, TrainStop)
     
     //Aggiornamento storylets
     -> grimoire_storylets_updater ->

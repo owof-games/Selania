@@ -35,18 +35,18 @@
     VAR firstChar_ActualName = Chitarra
 
     //Registro delle scelte prese
-    VAR firstChar_aether = 0.00
-    VAR firstChar_earth = 0.00
-    VAR firstChar_air = 0.00
-    VAR firstChar_water = 0.00
-    VAR firstChar_fire= 0.00
+    VAR firstChar_aether = 0
+    VAR firstChar_earth = 0
+    VAR firstChar_air = 0
+    VAR firstChar_water = 0
+    VAR firstChar_fire= 0
     
         //Storage del valore precedente
-        VAR firstChar_last_aether = 0.00
-        VAR firstChar_last_earth = 0.00
-        VAR firstChar_last_air = 0.00
-        VAR firstChar_last_water = 0.00
-        VAR firstChar_last_fire= 0.00
+        VAR firstChar_last_aether = 0
+        VAR firstChar_last_earth = 0
+        VAR firstChar_last_air = 0
+        VAR firstChar_last_water = 0
+        VAR firstChar_last_fire= 0
 
     //Utilizzo dei sigilli
     VAR firstChar_usedSigil = 0
@@ -225,6 +225,9 @@
 === first_char_closing_letters
     ~ firstChar_mailPause = firstChar_mailPauseDuration
     ~ letters_doggoPause = false
+
+    ~ move_entity(DoggoFirstLetters, Safekeeping)
+    ~ move_entity(DoggoNoLetters, TrainStop)
     
     //Aggiornamento storylets
     -> grimoire_storylets_updater ->
