@@ -508,8 +508,8 @@
                                                     Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
     }
         {charTag(SecondCharacter, "angry")}:        Il mio vero nome è <b><i>{charNameTwo}</b></i>.
-            ~  characterChangingPortrait(SecondCharacter)
-                                                    Combatterò la mia paura e diventerò il più forte di tutti, imbattibile!
+            ~  characterChangingObjects(SecondCharacter)
+    {charTag(SecondCharacter, characterPortraitsManagement(SecondCharacter))}:                                                 Combatterò la mia paura e diventerò il più forte di tutti, imbattibile!
     
     - secondChar_ActualName has Lupo:
     {
@@ -519,10 +519,10 @@
                                                     Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
     }
         {charTag(SecondCharacter, "angry")}:        Mi chiamerò <b><i>{charNameTwo}</b></i>.
-            ~  characterChangingPortrait(SecondCharacter)
-        {charTag(SecondCharacter, "neutral")}:      E proteggerò il mio branco.
-                                                    Mamma, papà, nonna e mio fratello.
-        {charTag(SecondCharacter, "energy")}:       Nessuna delle persone a cui voglio bene deve più stare male.
+            ~  characterChangingObjects(SecondCharacter)
+    {charTag(SecondCharacter, characterPortraitsManagement(SecondCharacter))}:        E proteggerò il mio branco.
+                                                                                    Mamma, papà, nonna e mio fratello.
+                                                                                    Nessuna delle persone a cui voglio bene deve più stare male.
         
     - secondChar_ActualName has Delfino:
     {
@@ -532,9 +532,9 @@
                                                     Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
     }
         {charTag(SecondCharacter, "energy")}:       E il mio nome è <b><i>{charNameTwo}</b></i>.
-            ~  characterChangingPortrait(SecondCharacter)
-                                                    Perché tutto è un gioco.
-        {charTag(SecondCharacter, "emotional")}:    La mia fantasia e qualche piccola bugia aiuteranno le altre persone ad avere meno paura.
+            ~  characterChangingObjects(SecondCharacter)
+    {charTag(SecondCharacter, characterPortraitsManagement(SecondCharacter))}:        Perché tutto è un gioco.
+                                                                                    La mia fantasia e qualche piccola bugia aiuteranno le altre persone ad avere meno paura.
                         
     
     - secondChar_ActualName has Capibara:
@@ -545,10 +545,10 @@
                                                     Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
     }
         {charTag(SecondCharacter, "emotional")}:    Mi chiamerò <b><i>{charNameTwo}</b></i>.
-            ~  characterChangingPortrait(SecondCharacter)
-                                                    E imparerò ad avere tantissimi amici.
-        {charTag(SecondCharacter, "energy")}:       Ci sentiremo meno soli!
-                                                    E così avremo meno paura.
+            ~  characterChangingObjects(SecondCharacter)
+    {charTag(SecondCharacter, characterPortraitsManagement(SecondCharacter))}: E imparerò ad avere tantissimi amici.
+                                                                            Ci sentiremo meno soli!
+                                                                            E così avremo meno paura.
             
     - secondChar_ActualName has Corvo:
     {
@@ -558,10 +558,10 @@
                                                     Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
     }
         {charTag(SecondCharacter, "energy")}:        Io sono <b><i>{charNameTwo}</b></i>.
-            ~  characterChangingPortrait(SecondCharacter)
-        {charTag(SecondCharacter, "neutral")}:       Sono sveglio e posso capire ciò che mi circonda!
-        {charTag(SecondCharacter, "emotional")}:     E posso cambiare le cose che mi fanno paura.
-        {charTag(SecondCharacter, "neutral")}:       Aiutare gli altri.
+            ~  characterChangingObjects(SecondCharacter)
+        {charTag(SecondCharacter, characterPortraitsManagement(SecondCharacter))}:                    Sono sveglio e posso capire ciò che mi circonda!
+                                                                                                    E posso cambiare le cose che mi fanno paura.
+                                                                                                    Aiutare gli altri.
             
 }
         
@@ -588,13 +588,13 @@
                                                         <i>{charNameTwo} ripone piena fiducia in {player_name}, ed è pronto a condividere con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} una informazione importante.</i>
     }
 
-        {charTag(SecondCharacter, "neutral")}:          Voglio dirti una cosa {player_name}. 
-                                                        Su {charNameFive}.
-        {charTag(SecondCharacter, "melanchonic")}:      A me non mi sembra mica felice.
-                                                        Mi ricorda mamma quando gira per casa dando consigli e dicendo cose sorridendo.
-                                                        E poi si rinchiude in camera e resta in silenzio per ore.
-        {charTag(SecondCharacter, "neutral")}:          Ora fa tante cose e parla tanto.
-                                                        Ma non mi sembra felice.
+        {charTag(SecondCharacter, characterPortraitsManagement(SecondCharacter))}:                    Voglio dirti una cosa {player_name}. 
+                                                                                                    Su {charNameFive}.
+                                                                                                    A me non mi sembra mica felice.
+                                                                                                    Mi ricorda mamma quando gira per casa dando consigli e dicendo cose sorridendo.
+                                                                                                    E poi si rinchiude in camera e resta in silenzio per ore.
+                                                                                                    Ora fa tante cose e parla tanto.
+                                                                                                    Ma non mi sembra felice.
             
             
         -> second_char_closing_storylet ->    
@@ -609,17 +609,17 @@
     
     {
         - contentsNest hasnt fireGlyph:
-        {charTag(SecondCharacter, "neutral")}:          Ah {player_name}, prima ho trovato una cosa in giro.
-        {charTag(SecondCharacter, "melanchonic")}:      O forse l'ho rubata.
-        {charTag(SecondCharacter, "neutral")}:          Ma ho pensato che magari tu ci cavi qualcosa.
-                                                        Devo iniziare a comportarmi diversamente, mi sa. 
-                                                        Vero?
+        {charTag(SecondCharacter, characterPortraitsManagement(SecondCharacter))}:    Ah {player_name}, prima ho trovato una cosa in giro.
+                                                                                    O forse l'ho rubata.
+                                                                                    Ma ho pensato che magari tu ci cavi qualcosa.
+                                                                                    Devo iniziare a comportarmi diversamente, mi sa. 
+                                                                                    Vero?
         {
             - player_accessiblePlaces has Nest: 
-                {charTag(SecondCharacter, "neutral")}:  Ho chiesto a Franco di lasciartela nel nido.
+                Ho chiesto a Franco di lasciartela nel nido.
             
             - else: 
-                {charTag(SecondCharacter, "neutral")}:  Stavo per dartela direttamente, ma Franco mi ha detto che te l'avrebbe fatta trovare quando ti sarà servita.
+                Stavo per dartela direttamente, ma Franco mi ha detto che te l'avrebbe fatta trovare quando ti sarà servita.
         }
         ~ move_entity(fireGlyph, Nest)
 
@@ -637,13 +637,13 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
         
-        {charTag(SecondCharacter, "neutral")}:          Torno a casa, {player_name}.
-                                                        Non so cosa mi aspetta.
-        {charTag(SecondCharacter, "energy")}:           Spero un po' di dolci.
-        {charTag(SecondCharacter, "neutral")}:          Ma te lo farò sapere, promesso!
-        {charTag(SecondCharacter, "melanchonic")}:      Mi mancherai, sia?
-                                                        Salutami Franco!
-                                                        E {charNameFive}.
+        {charTag(SecondCharacter, characterPortraitsManagement(SecondCharacter))}:                Torno a casa, {player_name}.
+                                                                                                Non so cosa mi aspetta.
+                                                                                                Spero un po' di dolci.
+                                                                                                Ma te lo farò sapere, promesso!
+                                                                                                Mi mancherai, sia?
+                                                                                                Salutami Franco!
+                                                                                                E {charNameFive}.
         {
             - firstChar_storyStatus == story_storyStarted:
                                                         E super {charNameOne}.

@@ -307,7 +307,8 @@
                             {charTag(FifthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 Il mio vero nome è <b><i>{charNameFive}</b></i>.
-                    ~  characterChangingPortrait(FifthCharacter)
+                    ~  characterChangingObjects(FifthCharacter)
+                {charTag(FifthCharacter, characterPortraitsManagement(FifthCharacter))}:    Frase    
             
             - fifthChar_ActualName has FifthC:
                     {
@@ -317,7 +318,8 @@
                             {charTag(FifthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 {charTag(FifthCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameFive}</b></i>.
-                    ~  characterChangingPortrait(FifthCharacter)
+                    ~  characterChangingObjects(FifthCharacter)
+                {charTag(FifthCharacter, characterPortraitsManagement(FifthCharacter))}:    Frase       
               
             - fifthChar_ActualName has FifthD:
                     {
@@ -327,7 +329,8 @@
                             {charTag(FifthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 {charTag(FifthCharacter, "neutral")}:       E il mio nome è <b><i>{charNameFive}</b></i>.
-                    ~  characterChangingPortrait(FifthCharacter)
+                    ~  characterChangingObjects(FifthCharacter)
+                {charTag(FifthCharacter, characterPortraitsManagement(FifthCharacter))}:    Frase        
                                
             
             - fifthChar_ActualName has FifthF:
@@ -338,7 +341,8 @@
                             {charTag(FifthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 {charTag(FifthCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameFive}</b></i>.
-                    ~  characterChangingPortrait(FifthCharacter)
+                    ~  characterChangingObjects(FifthCharacter)
+                {charTag(FifthCharacter, characterPortraitsManagement(FifthCharacter))}:    Frase       
                     
             - fifthChar_ActualName has FifthB:
                     {
@@ -348,7 +352,8 @@
                             {charTag(FifthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 {charTag(FifthCharacter, "neutral")}:       Io sono <b><i>{charNameFive}</b></i>.
-                    ~  characterChangingPortrait(FifthCharacter)
+                    ~  characterChangingObjects(FifthCharacter)
+                {charTag(FifthCharacter, characterPortraitsManagement(FifthCharacter))}:    Frase       
                     
         }
         
@@ -369,7 +374,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
 
-        {charTag(FifthCharacter, "neutral")}:           Frase.
+        {charTag(FifthCharacter, characterPortraitsManagement(FifthCharacter))}:    Frase.
         -> fifth_char_closing_storylet ->
         -> close
             
@@ -394,7 +399,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
         
         
-        {charTag(FifthCharacter, "neutral")}:           Frase.
+        {charTag(FifthCharacter, characterPortraitsManagement(FifthCharacter))}:    Frase.
             {
                 - fourthChar_storyStatus == story_storyStarted:
                     Salutami {charNameFour}.

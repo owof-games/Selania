@@ -498,17 +498,17 @@
         
     {charTag(FirstCharacter, "neutral")}:           Io sono <b><i>{charNameOne}</b></i>.
 
-        ~  characterChangingPortrait(FirstCharacter)
+        ~  characterChangingObjects(FirstCharacter)
 
-                                                    Sono lo strumento semplice, eppure fondamentale.
-    {charTag(FirstCharacter, "affectionate")}:      Sono quella che attende che le altre facciano casino, per mettere un accento, un colore.
-                                                    Che ritrova il bello nelle cose quotidiane.
-    {charTag(FirstCharacter, "neutral")}:           Apprezzando quello che ha.
+    {charTag(FirstCharacter, characterPortraitsManagement(FirstCharacter))}:                                                      Sono lo strumento semplice, eppure fondamentale.
+                                                        Sono quella che attende che le altre facciano casino, per mettere un accento, un colore.
+                                                        Che ritrova il bello nelle cose quotidiane.
+                                                        Apprezzando quello che ha.
     {
     - grimoire_firstChar has grimFirstCharMentor:   Dopo quella conversazione, {charNameFive} sarà contenta di aver avuto ragione.
     - else:                                         Sì
     }
-    {charTag(FirstCharacter, "affectionate")}:      Ho trovato il mio nome.
+                                                    Ho trovato il mio nome.
             
     - firstChar_ActualName has Orchestra:
     {
@@ -520,10 +520,10 @@
 
     {charTag(FirstCharacter, "curious")}:           Rullo di tamburi...
                                                     Io sono <b><i>{charNameOne}</b></i>!
-        ~  characterChangingPortrait(FirstCharacter)                                            
-                                                    Signore e signor3 e signori: sono la gioia del cambiamento.
+        ~  characterChangingObjects(FirstCharacter)                                            
+    {charTag(FirstCharacter, characterPortraitsManagement(FirstCharacter))}: Signore e signor3 e signori: sono la gioia del cambiamento.
                                                     Le infinite possibilità.
-    {charTag(FirstCharacter, "neutral")}:           Sono colei che può provare tutto.
+                                                    Sono colei che può provare tutto.
                                                     Incluso il cambiare paese.
                                                     Colei che nulla teme, perché tutto è.
             
@@ -536,10 +536,10 @@
     }
 
     {charTag(FirstCharacter, "curious")}:           Ho scelto come nome <b><i>{charNameOne}</b></i>.
-        ~  characterChangingPortrait(FirstCharacter)
-                                                    Che sia quel pezzetto di plastica suonato alle elementari o un pezzo pregiato di un'orchestra, il Flauto ci ricorda che la musica è ovunque.
-    {charTag(FirstCharacter, "neutral")}:           E dove c'è musica, c'è cambiamento.
-    {charTag(FirstCharacter, "affectionate")}:      E metterò al centro di tutto la mia musica, la band, per fare cose che davvero cambino il mondo.
+        ~  characterChangingObjects(FirstCharacter)
+    {charTag(FirstCharacter, characterPortraitsManagement(FirstCharacter))}:   Che sia quel pezzetto di plastica suonato alle elementari o un pezzo pregiato di un'orchestra, il Flauto ci ricorda che la musica è ovunque.
+                                                    E dove c'è musica, c'è cambiamento.
+                                                    E metterò al centro di tutto la mia musica, la band, per fare cose che davvero cambino il mondo.
         
             
     - firstChar_ActualName has Ocarina:
@@ -550,9 +550,9 @@
                                                     Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
     }
     {charTag(FirstCharacter, "affectionate")}:      Il mio nome è <b><i>{charNameOne}</b></i>.
-        ~  characterChangingPortrait(FirstCharacter)
-                                                    E riabbraccio la mia infanzia, gli spazi in cui sono cresciuta.
-    {charTag(FirstCharacter, "neutral")}:           Per ricominciare a giocare, a esplorare quello che già conosco.
+        ~  characterChangingObjects(FirstCharacter)
+    {charTag(FirstCharacter, characterPortraitsManagement(FirstCharacter))}:                                                 E riabbraccio la mia infanzia, gli spazi in cui sono cresciuta.
+                                                    Per ricominciare a giocare, a esplorare quello che già conosco.
                                                     Per prendermi cura dei miei e della mia terra.
                                                     Per permettere ad altr3 di non doversene andare.
 
@@ -565,10 +565,10 @@
     }
 
     {charTag(FirstCharacter, "affectionate")}:      Io sono <b><i>{charNameOne}</b></i>.
-        ~  characterChangingPortrait(FirstCharacter)
-                                                    Lo strumento romantico.
+        ~  characterChangingObjects(FirstCharacter)
+    {charTag(FirstCharacter, characterPortraitsManagement(FirstCharacter))}:  Lo strumento romantico.
                                                     Lo strumento divino.
-    {charTag(FirstCharacter, "neutral")}:           Abbraccio l'amore come motore del cambiamento.
+                                                    Abbraccio l'amore come motore del cambiamento.
                                                     Smuovendo le sue acque sicure per trovare la mia felicità.
     }
     
@@ -592,10 +592,10 @@
             {charTag(TheWitch, witch_state())}:   <i>{charNameOne} ripone piena fiducia in {player_name}, ed è pronta a condividere con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} una informazione importante.</i>
     }
 
-    {charTag(FirstCharacter, "neutral")}:           Vorrei anche dirti una cosa, {player_name}.
-    {charTag(FirstCharacter, "sad")}:               Credo che {charNameFive} sia triste per qualcosa.
-    Mi dà l'impressione di mettercela tutta, qui.
-    {charTag(FirstCharacter, "neutral")}:           Ma di essere, non so come dire, scomoda?
+    {charTag(FirstCharacter, characterPortraitsManagement(FirstCharacter))}:    Vorrei anche dirti una cosa, {player_name}.
+                                                    Credo che {charNameFive} sia triste per qualcosa.
+                                                    Mi dà l'impressione di mettercela tutta, qui.
+                                                    Ma di essere, non so come dire, scomoda?
                                                     Non credo lo ammetterebbe mai, ma credo abbia bisogno di una persona amica.
                                                     Portale del bene.
         
@@ -611,10 +611,10 @@
                                                     Volevo lasciarti qualcosa di buono di me, prima di andarmene, e ho pensato di donarti un glifo.
         {
         - player_accessiblePlaces has Nest: 
-            {charTag(FirstCharacter, "neutral")}:   Lo troverai al nido, e son sicura che saprai già cosa farne.
+                                                    Lo troverai al nido, e son sicura che saprai già cosa farne.
         
         - else: 
-        {charTag(FirstCharacter, "neutral")}:       Una certa voce mi ha detto che presto saprai cosa farne. E te lo farà trovare dove ne avrai più bisogno.
+                                                Una certa voce mi ha detto che presto saprai cosa farne. E te lo farà trovare dove ne avrai più bisogno.
         }
         ~ move_entity(fireGlyph, Nest)
 
@@ -631,20 +631,20 @@
         
         
             
-        {charTag(FirstCharacter, "neutral")}:           Direi che sono pronta per andarmene, {player_name}.
-                                                        Abbiamo fatto un viaggio enorme assieme, ora è giunto il tempo per me di riprendere in mano la mia vita.
-        {charTag(FirstCharacter, "affectionate")}:      Grazie di tutto, davvero.
-                                                        Grazie di tutto.
-                                                        Salutami {charNameFive}, e dille di riposarsi.
+        {charTag(FirstCharacter, characterPortraitsManagement(FirstCharacter))}:            Direi che sono pronta per andarmene, {player_name}.
+                                                                                            Abbiamo fatto un viaggio enorme assieme, ora è giunto il tempo per me di riprendere in mano la mia vita.
+                                                                                            Grazie di tutto, davvero.
+                                                                                            Grazie di tutto.
+                                                                                            Salutami {charNameFive}, e dille di riposarsi.
         {
             - secondChar_storyStatus == story_storyStarted:
-                                                        Salutami anche quella bestiola di {charNameTwo}.
+                                                                                            Salutami anche quella bestiola di {charNameTwo}.
 
         }
         {
             - thirdChar_storyStatus == story_storyStarted:
-        {charTag(FirstCharacter, "neutral")}:           E persino {charNameThree}.
-                                                        Come sono magnanima.
+                                                                                            E persino {charNameThree}.
+                                                                                            Come sono magnanima.
 
         }
             

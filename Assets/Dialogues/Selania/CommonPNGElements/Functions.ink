@@ -182,7 +182,127 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
 
 
 
-=== function characterChangingPortrait(PNG)
+=== function characterPortraitsManagement(PNG)
+{PNG:
+    
+    - FirstCharacter:
+
+        ~ move_entity(FirstCharacter, Safekeeping)
+
+        { 
+            - firstChar_ActualName == Triangolo:
+                ~ return "triangolo"
+                
+            - firstChar_ActualName == Orchestra:
+                ~ return "orchestra"
+                
+            - firstChar_ActualName == FlautoDolce:
+                ~ return "flautoDolce"
+                
+            - firstChar_ActualName == Ocarina:
+                ~ return "ocarina"
+                
+            - firstChar_ActualName == Violino:
+                ~ return "violino"
+                
+        }  
+
+    - SecondCharacter:
+
+        ~ move_entity(SecondCharacter, Safekeeping)
+
+        {
+            - secondChar_ActualName == Grizzly:
+                ~ return "grizzly"
+
+            - secondChar_ActualName == Lupo:
+                ~ return "lupo"
+                
+            - secondChar_ActualName == Delfino:
+                ~ return "delfino"
+                
+            - secondChar_ActualName == Capibara:
+                ~ return "capibara"
+                
+            - secondChar_ActualName == Corvo:
+                ~ return "corvo"
+        
+        }
+
+    - ThirdCharacter:
+
+        ~ move_entity(ThirdCharacter, Safekeeping)
+
+        {
+            - thirdChar_ActualName == ThirdB:
+                ~ return "ThirdB"
+
+            - thirdChar_ActualName == ThirdC:
+                ~ return "ThirdC"
+
+            - thirdChar_ActualName == ThirdD:
+                ~ return "ThirdD"
+
+            - thirdChar_ActualName == ThirdE:
+                ~ return "ThirdE"
+
+            - thirdChar_ActualName == ThirdF:
+                ~ return "ThirdF"                     
+        }
+
+    - FourthCharacter:
+
+        ~ move_entity(FourthCharacter, Safekeeping)
+
+        {
+            - fourthChar_ActualName == FourthB:
+                ~ return "FourthB"
+
+            - fourthChar_ActualName == FourthC:
+                ~ return "FourthC"
+
+            - fourthChar_ActualName == FourthD:
+                ~ return "FourthD"
+
+            - fourthChar_ActualName == FourthE:
+                ~ return "FourthE"
+
+            - fourthChar_ActualName == FourthF:
+                ~ return "FourthF"      
+        }    
+    
+
+    - FifthCharacter:
+
+        ~ move_entity(FifthCharacter, Safekeeping)
+
+        {
+            - fifthChar_ActualName == Mostro:
+                ~ return "Mostro"
+            
+            - fifthChar_ActualName == FifthB:
+                ~ return "FifthB"
+
+            - fifthChar_ActualName == FifthC:
+                ~ return "FifthC"
+
+            - fifthChar_ActualName == FifthD:
+                ~ return "FifthD"
+
+            - fifthChar_ActualName == FifthE:
+                ~ return "FifthE"
+
+            - fifthChar_ActualName == FifthF:
+                ~ return "FifthF"      
+        }
+
+}
+
+
+
+
+
+=== function characterChangingObjects(PNG)
 ~ temp currentLocation = entity_location(PG)
 {PNG:
     

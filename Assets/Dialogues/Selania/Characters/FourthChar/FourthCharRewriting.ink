@@ -307,7 +307,8 @@
                             {charTag(FourthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 Il mio vero nome è <b><i>{charNameFour}</b></i>.
-                    ~  characterChangingPortrait(FourthCharacter)
+                    ~  characterChangingObjects(FourthCharacter)
+                {charTag(FourthCharacter, characterPortraitsManagement(FourthCharacter))}:    Frase    
             
             - fourthChar_ActualName has FourthC:
                     {
@@ -317,7 +318,8 @@
                             {charTag(FourthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 {charTag(FourthCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameFour}</b></i>.
-                    ~  characterChangingPortrait(FourthCharacter)
+                    ~  characterChangingObjects(FourthCharacter)
+                {charTag(FourthCharacter, characterPortraitsManagement(FourthCharacter))}:    Frase        
               
             - fourthChar_ActualName has FourthD:
                     {
@@ -327,7 +329,8 @@
                             {charTag(FourthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 {charTag(FourthCharacter, "neutral")}:       E il mio nome è <b><i>{charNameFour}</b></i>.
-                    ~  characterChangingPortrait(FourthCharacter)
+                    ~  characterChangingObjects(FourthCharacter)
+                {charTag(FourthCharacter, characterPortraitsManagement(FourthCharacter))}:    Frase        
                                
             
             - fourthChar_ActualName has FourthF:
@@ -338,7 +341,8 @@
                             {charTag(FourthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 {charTag(FourthCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameFour}</b></i>.
-                    ~  characterChangingPortrait(FourthCharacter)
+                    ~  characterChangingObjects(FourthCharacter)
+                {charTag(FourthCharacter, characterPortraitsManagement(FourthCharacter))}:    Frase        
                     
             - fourthChar_ActualName has FourthB:
                     {
@@ -348,7 +352,8 @@
                             {charTag(FourthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 {charTag(FourthCharacter, "neutral")}:       Io sono <b><i>{charNameFour}</b></i>.
-                    ~  characterChangingPortrait(FourthCharacter)
+                    ~  characterChangingObjects(FourthCharacter)
+                {charTag(FourthCharacter, characterPortraitsManagement(FourthCharacter))}:    Frase        
                     
         }
         
@@ -369,7 +374,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
 
-        {charTag(FourthCharacter, "neutral")}:           Frase.
+        {charTag(FourthCharacter, characterPortraitsManagement(FourthCharacter))}:    Frase.
         -> fourth_char_closing_storylet ->
         -> close
             
@@ -394,8 +399,8 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
         
         
-        {charTag(FourthCharacter, "neutral")}:           Frase.
-        {charTag(FourthCharacter, "neutral")}:       Salutami
+        {charTag(FourthCharacter, characterPortraitsManagement(FourthCharacter))}:    Frase.
+
             {
                 - fifthChar_storyStatus == story_storyStarted:
                     Salutami {charNameFour}.
