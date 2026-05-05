@@ -460,7 +460,7 @@ VAR letters_doggoPause = false
     //Riccio inizia a cucinare. Metto prima di Chitarra giusto perché il suo storylet coinvolge anche Mentore e quindi forse è più interessante.
     
         {
-            - kitchen_secondCharHasCooked == false && kitchen_kitchenOccupied == false && grimoire_secondChar has grimSecondCharOne && (kitchen_cookingAloneCoolDown == 0) && secondChar_ForestInvite == false:
+            - kitchen_secondCharHasCooked == false && kitchen_kitchenOccupied == false && grimoire_secondChar has grimSecondCharOne && (kitchen_cookingAloneCoolDown == 0) && secondChar_ForestInvite == false && secondChar_storyStatus == story_storyStarted:
                 {debug_kitchen: le condizioni sono giuste per far cucinare Riccio da solo}
                 ~ kitchen_secondCharIsCooking = true
                 ~ move_entity(SecondCharacter, Kitchen)
@@ -517,7 +517,7 @@ VAR letters_doggoPause = false
 
     //Chitarra
         {
-            - kitchen_firstCharHasCooked == false && kitchen_kitchenOccupied == false && (kitchen_cookingAloneCoolDown == 0):
+            - kitchen_firstCharHasCooked == false && kitchen_kitchenOccupied == false && (kitchen_cookingAloneCoolDown == 0) && firstChar_storyStatus == story_storyStarted:
             
                     ~ kitchen_firstCharIsCooking = true
                     ~ move_entity(FirstCharacter, Kitchen)
@@ -575,7 +575,7 @@ VAR letters_doggoPause = false
 
     //TerzoPNG
         {
-            - kitchen_thirdCharHasCooked == false && kitchen_kitchenOccupied == false && grimoire_thirdChar has grimThirdCharOne && (kitchen_cookingAloneCoolDown == 0) && thirdChar_LibraryInvite == false:
+            - kitchen_thirdCharHasCooked == false && kitchen_kitchenOccupied == false && grimoire_thirdChar has grimThirdCharOne && (kitchen_cookingAloneCoolDown == 0) && thirdChar_LibraryInvite == false && thirdChar_storyStatus == story_storyStarted:
                 {debug_kitchen: le condizioni per far cucinare Boccale da solo sono valide.}
                     ~ kitchen_thirdCharIsCooking = true
                     ~ move_entity(ThirdCharacter, Kitchen)

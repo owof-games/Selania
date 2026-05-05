@@ -172,7 +172,7 @@
             ~ movements_randomizable_characters += Mentor
         
         - mentorChar_storyStatus == story_storyEnded:  
-            ~ movements_randomizable_characters -= Mentor 
+            ~ movements_randomizable_characters -= Mentor
     }
 
 
@@ -200,13 +200,15 @@
                 - else:
                     ~ movements_randomizable_characters += FirstCharacter
             }
+
+        - else:
+            ~ movements_randomizable_characters -= FirstCharacter     
         
         
     }
 
     {
         - secondChar_storyStatus == story_storyStarted:
-        
         //Evitiamo che venga tolto dalla cucina se sta cucinando o se ci sta aspettando in cucina, o se non gli abbiamo mai parlato
             {
                 - grimoire_secondChar == ():
@@ -231,15 +233,15 @@
 
                 - else:
                     ~ movements_randomizable_characters += SecondCharacter
-                    
             }
+        - else:
+            ~ movements_randomizable_characters -= SecondCharacter 
 
     }
 
 
     {
         - thirdChar_storyStatus == story_storyStarted:
-        
         //Evitiamo che venga tolto dalla cucina se sta cucinando o se ci sta aspettando in cucina
             {
                 - grimoire_thirdChar == ():
@@ -260,14 +262,14 @@
                         - else:
                             ~ thirdChar_LibraryInvite = false
                             ~ movements_randomizable_characters += ThirdCharacter 
-
                     }
                     
-
                 - else:
-                    ~ movements_randomizable_characters += ThirdCharacter
-                    
+                    ~ movements_randomizable_characters += ThirdCharacter   
             }
+
+        - else:
+            ~ movements_randomizable_characters -= ThirdCharacter     
 
     }
   
