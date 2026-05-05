@@ -470,10 +470,10 @@
         {charTag(FirstCharacter, "neutral")}:           Quante cose a cui pensare, ama.
 
             //Prima chiamo il moltiplicatore di colori, così che comunque le scelte fatte qui abbiano un impatto maggiore.
-                -> glyph_modifier(FirstCharacter, firstChar_glyphVariation) ->
+                ~  glyph_modifier(FirstCharacter, firstChar_glyphVariation)
             
             //Poi aggiorniamo i colori, così il valore complessivo conta per la scelta del nome
-                -> update_glyphs(FirstCharacter) ->     
+                ~ update_glyphs(FirstCharacter)     
      
             //E infine genero il nome
                 ~ newName(FirstCharacter)

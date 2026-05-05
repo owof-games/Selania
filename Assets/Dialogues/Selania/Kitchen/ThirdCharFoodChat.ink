@@ -730,7 +730,7 @@
                 ~ kitchen_thirdCharCookingTogetherInvite = false
                 ~ kitchen_allChefs += ThirdCharacter
                 ~ kitchen_kitchenOccupied = false
-            -> update_glyphs(ThirdCharacter) ->
+            ~ update_glyphs(ThirdCharacter)
             -> achievements_onGame_statusUpdate_GM ->
             -> third_char_closing_storylet ->
             -> main

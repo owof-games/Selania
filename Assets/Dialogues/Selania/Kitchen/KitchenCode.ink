@@ -159,7 +159,7 @@
 
 /* ---------------------------------
 
-   Gestione colori durante la cucina e la riscrittura (reset e ripristino) 
+   Gestione glifi durante la cucina e la riscrittura (reset e ripristino) 
 
  ----------------------------------*/
 
@@ -169,8 +169,6 @@
 
     {
         - cookingCompanion == FirstCharacter:
-            {charTag(FirstCharacter, "affectionate")}:      Visto che è un momento di pausa, facciamo come se non ci fossimo mai conosciut3, senza gioie né rancori passati.
-                                                            Solo per ora ovviamente.
 
                 ~ kitchen_storageAether = firstChar_aether
                     ~ firstChar_aether = 0
@@ -189,8 +187,6 @@
             
     
         - cookingCompanion == SecondCharacter:
-            {charTag(SecondCharacter, "energy")}:       Cominciamo. E farò finta di non sapere cosa penso di te, così è più facile per tutti e due.
-                                                        Non per sempre, solo adesso che cuciniamo.
                 
                 ~ kitchen_storageAether = secondChar_aether
                     ~ secondChar_aether = 0
@@ -206,8 +202,7 @@
                     ~ secondChar_relationshipIndicator = 0    
         
         - cookingCompanion == ThirdCharacter:
-            {charTag(ThirdCharacter, "neutral")}:       Cominciamo. E farò finta di non sapere cosa penso di te, così è più facile per tutti e due.
-                                                        Non per sempre, solo adesso che cuciniamo.
+
                 
                 ~ kitchen_storageAether = thirdChar_aether
                     ~ thirdChar_aether = 0
@@ -223,8 +218,6 @@
                     ~ thirdChar_relationshipIndicator = 0 
 
         - cookingCompanion == FourthCharacter:
-            {charTag(FourthCharacter, "neutral")}:       Cominciamo. E farò finta di non sapere cosa penso di te, così è più facile per tutti e due.
-                                                        Non per sempre, solo adesso che cuciniamo.
                 
                 ~ kitchen_storageAether = fourthChar_aether
                     ~ fourthChar_aether = 0
@@ -240,9 +233,7 @@
                     ~ fourthChar_relationshipIndicator = 0 
 
         - cookingCompanion == FifthCharacter:
-            {charTag(FifthCharacter, "energy")}:       Cominciamo. E farò finta di non sapere cosa penso di te, così è più facile per tutti e due.
-                                                        Non per sempre, solo adesso che cuciniamo.
-                
+
                 ~ kitchen_storageAether = fifthChar_aether
                     ~ fifthChar_aether = 0
                 ~ kitchen_storageEarth = fifthChar_earth
@@ -261,7 +252,7 @@
     ->->
 
 
-=== update_glyphs(cookingCompanion)
+=== function update_glyphs(cookingCompanion)
 {debug_kitchen or debug: update_glyphs.}
 {debug_kitchen: prima di aggiornare i valori, il valore di kitchen_storageAether è {kitchen_storageAether}, di kitchen_storageEarth {kitchen_storageEarth}, kitchen_storageAir è {kitchen_storageAir}, di kitchen_storageWater {kitchen_storageWater}, di kitchen_storageFire {kitchen_storageFire}. cookingCompanion è {cookingCompanion}.}
     {
@@ -347,25 +338,25 @@
 
 
 {debug_kitchen: dopo aver aggiornato i valori, il valore di kitchen_storageAether è {kitchen_storageAether}, di kitchen_storageEarth {kitchen_storageEarth}, kitchen_storageAir è {kitchen_storageAir}, di kitchen_storageWater {kitchen_storageWater}, di kitchen_storageFire {kitchen_storageFire}. cookingCompanion è {cookingCompanion}.} 
-->->
+
 
 === kitchen_moon_feedback ===
 
 //Assegnazione parlante
 {
-    - are_two_entities_together(FirstCharacter,PG):
+    - are_two_entities_together(FirstCharacter,PG) && entity_location(PG) == Kitchen:
         ~ kitchen_actualChef = translator(firstChar_ActualName)
         ~ kitchen_actualChefPronouns = her
 
-    - are_two_entities_together(SecondCharacter,PG):
+    - are_two_entities_together(SecondCharacter,PG) && entity_location(PG) == Kitchen:
         ~ kitchen_actualChef = translator(secondChar_ActualName)
         ~ kitchen_actualChefPronouns = him
 
-    - are_two_entities_together(ThirdCharacter,PG):
+    - are_two_entities_together(ThirdCharacter,PG) && entity_location(PG) == Kitchen:
         ~ kitchen_actualChef = translator(thirdChar_ActualName)
         ~ kitchen_actualChefPronouns = him
 
-    - are_two_entities_together(Franco,PG):
+    - are_two_entities_together(Franco,PG) && entity_location(PG) == Kitchen:
         ~ kitchen_actualChef = Franco
         ~ kitchen_actualChefPronouns = him
 }

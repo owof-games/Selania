@@ -464,13 +464,13 @@
     {charTag(FifthCharacter, "neutral")}:                           Ma l'idea della cucina non è così cattiva in sé: cucinare assieme è un momento di intimità.
                                                                     E mangiare è uno spazio di bella condivisione.
                                                                     E magari puoi aggiungere anche l'ingrediente giusto, e far felice la persona con cui stai ai fornelli.
-{
-    - are_two_entities_together(FirstCharacter, PG):
-            {charTag(FirstCharacter, "curious")}:                   Ci facciamo una pastasciutta assieme, {charNameFive}?
-            {charTag(FifthCharacter, "hurry")}:                     Magari più tardi?
-            {charTag(FifthCharacter, "sorry")}:                     Ho da pulire la cera delle candele.
-        
-} 
+    {
+        - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "curious")}:                   Ci facciamo una pastasciutta assieme, {charNameFive}?
+                {charTag(FifthCharacter, "hurry")}:                     Magari più tardi?
+                {charTag(FifthCharacter, "sorry")}:                     Ho da pulire la cera delle candele.
+            
+    } 
     {charTag(FifthCharacter, "neutral")}:                           Passare del tempo in cucina con qualcunə può essere un bel modo per conoscervi meglio.
                                                                     E per capire che piega stia prendendo la vostra relazione.
             {

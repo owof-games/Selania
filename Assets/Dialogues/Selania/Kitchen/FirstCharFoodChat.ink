@@ -1311,7 +1311,7 @@
                 ~ kitchen_firstCharCookingTogetherInvite = false
                 ~ kitchen_allChefs += FirstCharacter
                 ~ kitchen_kitchenOccupied = false
-            -> update_glyphs(FirstCharacter) ->
+            ~ update_glyphs(FirstCharacter)
             -> first_char_closing_storylet ->
             -> achievements_onGame_statusUpdate_GM ->
             -> main

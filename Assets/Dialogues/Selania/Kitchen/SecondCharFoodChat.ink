@@ -1323,7 +1323,7 @@
             ~ kitchen_secondCharCookingTogetherInvite = false
             ~ kitchen_allChefs += SecondCharacter
             ~ kitchen_kitchenOccupied = false
-        -> update_glyphs(SecondCharacter) ->
+        ~ update_glyphs(SecondCharacter)
         -> achievements_onGame_statusUpdate_GM ->
         -> second_char_closing_storylet ->
         -> main

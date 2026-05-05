@@ -479,10 +479,10 @@
     {charTag(SecondCharacter, "neutral")}:      Cavoli, quante parole che ho in testa!        
 
             //Prima chiamo il moltiplicatore di colori, così che comunque le scelte fatte qui abbiano un impatto maggiore.
-                -> glyph_modifier(SecondCharacter, secondChar_glyphVariation) ->
+                ~ glyph_modifier(SecondCharacter, secondChar_glyphVariation)
             
             //Poi aggiorniamo i colori, così il valore complessivo conta per la scelta del nome
-                -> update_glyphs(SecondCharacter) ->     
+                ~ update_glyphs(SecondCharacter)   
      
             //E infine genero il nome
                 ~ newName(SecondCharacter)

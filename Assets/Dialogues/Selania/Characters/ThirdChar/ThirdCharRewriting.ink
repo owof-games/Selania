@@ -278,10 +278,10 @@
     {charTag(ThirdCharacter, "neutral")}:           Frase.  
 
             //Prima chiamo il moltiplicatore di colori, così che comunque le scelte fatte qui abbiano un impatto maggiore.
-                -> glyph_modifier(ThirdCharacter, thirdChar_glyphVariation) ->
+                ~  glyph_modifier(ThirdCharacter, thirdChar_glyphVariation)
             
             //Poi aggiorniamo i colori, così il valore complessivo conta per la scelta del nome
-                -> update_glyphs(ThirdCharacter) ->     
+                ~ update_glyphs(ThirdCharacter)   
      
             //E infine genero il nome
                 ~ newName(ThirdCharacter)
