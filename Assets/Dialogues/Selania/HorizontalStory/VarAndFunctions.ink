@@ -251,108 +251,129 @@ VAR horizontalS_libraryThirdTier = 5
 {debug_horizontalS: passo per horizontalS_storyletsDispatcher}    
     {horizontalS_currentDoc:
         - docOne:
+            {charTag(Documents, "docDump")}:            Le altre stanno finendo di sistemarsi.
             ~ docOne_storylet()
             -> horizontalSEndingStorylet 
 
         - docTwo:
+            {charTag(Documents, "docKitchen")}:         Cinque aprile '72
             ~ docTwo_storylet()
             -> horizontalSEndingStorylet 
 
         - docThree:
+            {charTag(Documents, "docNest")}:            Osman Spare disse "I grandi pensieri si oppongono a tutte le dottrine del conformismo".
             ~ docThree_storylet()
             -> horizontalSEndingStorylet 
 
         - docFour:
+            {charTag(Documents, "docGreenhouse")}:      Ora: nonna ha giurato fino alla fine che fosse una mia invenzione.
             ~ docFour_storylet()
             -> horizontalSEndingStorylet 
 
         - docFive:
+            {charTag(Documents, "docLibrary")}:         Sì spostano!
             ~ docFive_storylet()
             -> horizontalSEndingStorylet 
 
         - docSix:
+            {charTag(Documents, "docGreenhouse")}:      A distanza di un mese posso dire con certezza solo una cosa: non sto capendo nulla di questo posto.
             ~ docSix_storylet()
             -> horizontalSEndingStorylet 
 
         - docSeven:
+            {charTag(Documents, "docNest")}:            Cosa ha imparato S.C. a distanza di quattro mesi?
             ~ docSeven_storylet()
             -> horizontalSEndingStorylet 
         
         - docEight:
+            {charTag(Documents, "docLibrary")}:         O.U.J. ha deciso di fare una festa per i primi sei mesi qui.
             ~ docEight_storylet()
             -> horizontalSEndingStorylet 
         
         - docNine:
+            {charTag(Documents, "docDump")}:            Non mi aspettavo di fare una grossa scoperta, ma forse ora anche K. crederà che posso essere una strega.
             ~ docNine_storylet()
             -> horizontalSEndingStorylet 
         
         - docTen:
+            {charTag(Documents, "docGreenhouse")}:      Se mesi fa ero basita da un pino che si riscalda, ora quell'evento mi sembra una sciocchezza rispetto a quello che sto per scrivere.
             ~ docTen_storylet()
             -> horizontalSEndingStorylet 
         
         - docEleven:
+            {charTag(Documents, "docLibrary")}:         Ho sedici cose che mi corrono in testa assieme e se non le metto giù ora URLO.
             ~ docEleven_storylet()
             -> horizontalSEndingStorylet 
 
         - docTwelve:
+            {charTag(Documents, "docNest")}:            Woolf ha scritto "Dicendole, non si rovinano forse le cose?"
             ~ docTwelve_storylet()
             -> horizontalSEndingStorylet 
          
         - docThirteen:
+            {charTag(Documents, "docGreenhouse")}:      Franco ed io siamo ufficialmente migliori amici e compagni di esplorazioni.
             ~ docThirteen_storylet()
             -> horizontalSEndingStorylet 
         
         - docFourteen:
+            {charTag(Documents, "docLibrary")}:         Qualcosa non va.
             ~ docFourteen_storylet()
             -> horizontalSEndingStorylet 
         
         - docFifteen:
+            {charTag(Documents, "docKitchen")}:         Diciassette agosto '73
             ~ docFifteen_storylet()
             -> horizontalSEndingStorylet 
         
         - docSixteen:
+            {charTag(Documents, "docDump")}:            Contro di questa esperienza.
             ~ docSixteen_storylet()
             -> horizontalSEndingStorylet 
         
         - docSeventeen:
+            {charTag(Documents, "docNest")}:            Inizio a sentire il peso della situazione.
             ~ docSeventeen_storylet()
             -> horizontalSEndingStorylet 
         
         - docEighteen:
+            {charTag(Documents, "docGreenhouse")}:      Oggi Franco mi ha portato alla fontana.
             ~ docEighteen_storylet()
             -> horizontalSEndingStorylet 
         
         - docNineteen:
+            {charTag(Documents, "docDump")}:            Ho riparlato con S.C., per la prima volta dopo quello che mi ha fatto.
             ~ docNineteen_storylet()
             -> horizontalSEndingStorylet 
 
         - docTwenty:
+            {charTag(Documents, "docKitchen")}:         Otto gennaio '74
             ~ docTwenty_storylet()
             -> horizontalSEndingStorylet 
 
         - docTwentyOne:
+            {charTag(Documents, "docDump")}:            O.U.J. ha proposto una festa per festeggiare il 25 aprile.
             ~ docTwentyOne_storylet()
             -> horizontalSEndingStorylet 
         
         - docTwentyTwo:
+            {charTag(Documents, "docKitchen")}:         Otto maggio '74
             ~ docTwentyTwo_storylet()
             -> horizontalSEndingStorylet 
         
         - docTwentyThree:
+            {charTag(Documents, "docKitchen")}:         Ventinove maggio '74
             ~ docTwentyThree_storylet()
             -> horizontalSEndingStorylet 
         
         - docTwentyFour:
+            {charTag(Documents, "docNest")}:            Ora che so come fargli del bene,<>
             ~ docTwentyFour_storylet()
             -> horizontalSEndingStorylet 
         
         - docTwentyFive:
+            {charTag(Documents, "docKitchen")}:          Non so quando leggerai questo biglietto, visto che non ti allontani dalla spiaggia da giorni.
             ~ docTwentyFive_storylet()
             -> horizontalSEndingStorylet 
-
-        - else:
-            ERROR: non ci sono valori validi per  horizontalS_currentDoc, che è uguale a {horizontalS_currentDoc}.   
-            -> END
 
     }
 

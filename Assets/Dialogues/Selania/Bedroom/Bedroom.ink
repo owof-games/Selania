@@ -120,10 +120,7 @@ UTILIZZI RIMASTI = {glyph_actualSigilUses}
 
 = witch
     - (top2)
-        {charTag(TheWitch, witch_state())}:         <i>(testo temporaneo per il testing interno) Prima di iniziare, ci chiediamo in che modalità giocare.</i>
-                                                    <i>La modalità Reader Mode è come il gioco è stato pensato: <i>ogni scelta si deve appoggiare al tuo intuito, alla comprensione delle persone con cui interagisci.
-                                                    <i>La modalità Gamer Mode ti offre maggiore supporto con indicatori di diverso tipo, oltre a un tutorial extra ad hoc.</i>
-
+        {charTag(TheWitch, witch_state())}:         <i>Cosa serve?</i>
             + \ {charTag(PG, "neutral")}:           <i>Voglio la modalità Gamer Mode.</i>
                 -> gamerMode_activation ->
 

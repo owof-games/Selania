@@ -1,7 +1,7 @@
 === function docOne_storylet
 //GM
 
-    {charTag(Documents, "docDump")}:            Le altre stanno finendo di sistemarsi.
+
                                                 W.R. è su di giri, si è già persa due volte.
                                                 E poi sarei io quello piccolo del gruppo.
                                                 Beh: quello piccolo continua a pensare che sia un'idea idiota, e che dobbiamo andare a menarli quelli là, non cercare le magie.
@@ -25,7 +25,7 @@
 === function docTwo_storylet
 //OUJ
 
-    {charTag(Documents, "docKitchen")}:         Cinque aprile '72
+
                                                 Caro diario.
                                                 L'unica cosa che mi ero ripromessa era di non scrivere più "Caro diario" come se avessi dodici e non cinquantasei anni.
                                                 Ma non sai quanto mi sento viva e giovane!
@@ -49,7 +49,7 @@
 === function docThree_storylet
 //SC
 
-    {charTag(Documents, "docNest")}:            Osman Spare disse "I grandi pensieri si oppongono a tutte le dottrine del conformismo".
+    
                                                 Ho passato gli ultimi mesi a credere di aver perso completamente il senno, ma ora che siamo qui in questa testimonianza vivente del magico, credo di essere stata guidata sin da subito da un unico grande pensiero.
                                                 Non credo se ne siano ancora accorte, ma le compagne stanno tutte brillando, levitando come se fossero fatte d'aria, di leggerezza. Ognuna sta sbocciando nella forma migliore di sé.
                                                 Anche G.M., spegnendo così alcuni dei miei dubbi.
@@ -69,7 +69,7 @@
 === function docFour_storylet
 //K.
 
-    {charTag(Documents, "docGreenhouse")}:      Ora: nonna ha giurato fino alla fine che fosse una mia invenzione.
+    
                                                 Eppure ricordo di aver sfogliato per anni quando ero piccola una sua guida: "Fitomanzia ed erboristeria esoterica".
                                                 Probabilmente non voleva che mamma ci allontanasse di nuovo.
                                                 Una delle mie piante preferite era il Ranuncolo di sabbia: un fiore che sboccia solo quando in casa va tutto bene.
@@ -93,7 +93,7 @@
 
 === function docFive_storylet
 //WR.
-    {charTag(Documents, "docLibrary")}:         Sì spostano!
+    
                                                 Non ha senso, ma si spostano!
                                                 L'ho detto a S.C. e mi ha detto di numerare le copertine.
                                                 Come se fossi arrivata qui con un pennarello e.
@@ -120,7 +120,7 @@
 
 === function docSix_storylet
 //K.
-    {charTag(Documents, "docGreenhouse")}:      A distanza di un mese posso dire con certezza solo una cosa: non sto capendo nulla di questo posto.
+    
                                                 L'idea era quella di sviluppare uno sguardo di insieme sul rapporto tra ambiente e piante, così da iniziare a fare un po' di prove, magari coltivare in serra qualcosa di queste magnifiche erbe, e capirne il portato magico.
                                                 E le piante di per sé fanno cose da piante: i cespugli della foresta sono un universo di vita, le loro foglie sono pungenti ma ricche di oli profumati.
                                                 Il pino della stazione (credo sia un pino) ha i suoi aghetti, e la sua forma è quella di una pianta esposta a un forte vento costante.
@@ -149,7 +149,7 @@
 
 === function docSeven_storylet
 //S.C.
-    {charTag(Documents, "docNest")}:            Cosa ha imparato S.C. a distanza di quattro mesi?
+    
                                                 Che questo posto non cambia, per lo meno non in modo permanente.
                                                 Ogni area ha la sua stagione, i suoi ritmi, i suoi movimenti.
                                                 Mi sento come se fossi nelle prime pagine di "Gita al faro", e tutto fosse in un movimento costante e sospeso.
@@ -165,7 +165,7 @@
 
 === function docEight_storylet
 //W.R.
-    {charTag(Documents, "docLibrary")}:         O.U.J. ha deciso di fare una festa per i primi sei mesi qui.
+    
                                                 E mi sono accorta che non vedevo S.C. e G.M. da giorni.
                                                 Forse devo darmi una calmata coi miei libri.
                                                 La luce delle candele è molto bella, ma di questo passo avrò bisogno degli occhiali entro fine mese.
@@ -191,7 +191,7 @@
 
 === function docNine_storylet
 //G.M.
-    {charTag(Documents, "docDump")}:            Non mi aspettavo di fare una grossa scoperta, ma forse ora anche K. crederà che posso essere una strega.
+    
                                                 O uno strego? Non mi piace l'idea dello stregone.
                                                 Qualche mese fa l'ho aiutata con gli uccellini della stazione, e da lì mi sono affezionato a loro, a quel posto.
                                                 Ho anche iniziato anche a sistemare la vecchia pensilina, la mappa, forse sperando che arrivi qualcuno di nuovo, per rompere questa routine. 
@@ -222,7 +222,7 @@
 
 === function docTen_storylet
 //K.
-    {charTag(Documents, "docGreenhouse")}:      Se mesi fa ero basita da un pino che si riscalda, ora quell'evento mi sembra una sciocchezza rispetto a quello che sto per scrivere.
+    
                                                 Sono diventata la migliore amica di una rana.
                                                 Si fa chiamare Franco, e dico "si fa" perché è l'acronimo di un nome infinito.
                                                 L'ho incontrato mentre girellavo fuori dalla serra, cercando di capire perché non riesco a farci crescere nulla di commestibile, e lui mi ha visto, e mi ha chiesto se fosse passata la carpa della sera, che doveva mandare una lettera a sua madre.
@@ -250,7 +250,7 @@
 
 === function docEleven_storylet
 //W.R.
-    {charTag(Documents, "docLibrary")}:         Ho sedici cose che mi corrono in testa assieme e se non le metto giù ora URLO.
+    
                                                 G.M., quel genio di G.M., è venuto da me verso Natale dicendomi che uno dei pappagallini gli ha dato dell'inchiostro.
                                                 L'ha raccolto in una boccetta, era una goccia soltanto.
                                                 Abbiamo passato più di due mesi a chiederci che farne.
@@ -286,7 +286,7 @@
 
 === function docTwelve_storylet
 //S.C.
-    {charTag(Documents, "docNest")}:            Woolf ha scritto "Dicendole, non si rovinano forse le cose?"
+    
                                                 Forse ho trovato il modo di non dirle, e migliorarle.
                                                 Marzo è passato, aprile pure.
                                                 Le ricerche di W.R. e G.M. sembrano essere arrivate a uno stallo: hanno trovato cinque simboli, cinque glifi.
@@ -313,7 +313,7 @@
 
 === function docThirteen_storylet
 //K.
-    {charTag(Documents, "docGreenhouse")}:      Franco ed io siamo ufficialmente migliori amici e compagni di esplorazioni.
+    
                                                 Anche perché O.U.J. è sempre presa dalla cucina e dal farti domande.
                                                 W.R. crede di poter generare una magia enorme dalle emozioni dei racconti della biblioteca.
                                                 Mentre G.M. e S.C. sono spesso assieme.
@@ -343,7 +343,7 @@
 === function docFourteen_storylet
 //Y.
 
-    {charTag(Documents, "docLibrary")}:         Qualcosa non va.
+    
                                                 Qualcosa di grosso e no, me lo ripeto anche ora, non è colpa del viaggio con l'Olobino.
                                                 Cavolo, non me ne facevo uno così dai tempi della vecchia congrega.
                                                 Chissà se Marzio fa ancora quell'idromele potenziato?
@@ -380,7 +380,7 @@
 === function docFifteen_storylet
 //OUJ
 
-    {charTag(Documents, "docKitchen")}:         Diciassette agosto '73
+    
                                                 Caro diario.
                                                 Oggi ho passato una giornata a cucinare con K., e abbiamo utilizzato alcune delle piante che sta facendo crescere nella serra.
                                                 Fortunatamente non è successo più quello che è accaduto quando mi ha donato quel bel <i>Non ti scordar di te</i>.
@@ -417,7 +417,7 @@
 === function docSixteen_storylet
 //G.M. 
 
-    {charTag(Documents, "docDump")}:            Contro di questa esperienza.
+    
                                                 1. O.U.J. mi ha fatto una paternale dicendomi che "la differenza d'età è un coltello in amore, e non sono io dalla parte del manico".
                                                 2. Non sto imparando niente di nuovo su glifi o che, e tutte le mie intuizioni sono servite solo a Y. ed S.C..
                                                 3. Mi sento isolato. Solo. Inascoltato.
@@ -445,7 +445,7 @@
 
 === function docSeventeen_storylet
 //SC
-    {charTag(Documents, "docNest")}:            Inizio a sentire il peso della situazione.
+    
                                                 O.U.J. e K. ce l'hanno con me per il rapporto con G.M., dicono che la differenza di età è troppa, che è minorenne, che abbiamo bisogni diversi e capacità diverse di gestire la cosa.
                                                 Ne ho parlato con lui, e sappiamo entrambi che è solo sesso.
                                                 Ma vuole andarsene.
@@ -469,7 +469,7 @@
 
 === function docEighteen_storylet
 //K.
-    {charTag(Documents, "docGreenhouse")}:      Oggi Franco mi ha portato alla fontana.
+    
                                                 Non ci andavo da quando siamo arrivate qui, perché vedere il mondo fuori, quel tipo di mondo fuori con fabbriche e casermoni, mi mette tristezza.
                                                 Mi ha offerto una talea e mi ha ascoltato mentre scavavo, fertilizzavo, coprivo.
                                                 Abbiamo cacciato S.C. dalla camera comune.
@@ -502,7 +502,7 @@
 
 === function docNineteen_storylet
 //GM
-    {charTag(Documents, "docDump")}:            Ho riparlato con S.C., per la prima volta dopo quello che mi ha fatto.
+    
                                                 Volevo capire il perché, e invece le sue tristi scuse sono scomparse sotto la luce dell'entusiasmo del <i>come</i>.
                                                 Dice che ha usato un sigillo che ha chiamato <i>Altare</i>, che fa parte di un Tempio (ha senso solo per lei questa cosa).
                                                 E che Tempio è lo spazio della famiglia scelta, del crescere spiritualmente assieme.
@@ -527,7 +527,7 @@
 
 === function docTwenty_storylet
 //OUJ
-    {charTag(Documents, "docKitchen")}:         Otto gennaio '74
+    
                                                 Caro odiato diario.
                                                 Caro perché mi sopporti, odiato perché parlo più con te che con le altre.
                                                 Y. se ne è andata.
@@ -558,7 +558,7 @@
 
 === function docTwentyOne_storylet
 //GM
-    {charTag(Documents, "docDump")}:            O.U.J. ha proposto una festa per festeggiare il 25 aprile.
+    
                                                 Per la prima volta da mesi ci siamo ritrovate tutte al tavolo.
                                                 Tutte, tranne Y.
                                                 Che a quanto pare prima di andarsene ha lanciato un incantesimo di pioggia permanente sulla spiaggia per far desistere o punire S.C., non ne ho idea.
@@ -581,7 +581,7 @@
 
 === function docTwentyTwo_storylet
 //OUJ
-    {charTag(Documents, "docKitchen")}:         Otto maggio '74
+    
                                                 Caro diario.
                                                 Sto per dirti cose così private che mi sembra di fare un torto anche solo a scrivertele qui.
                                                 Ci sono dei modi amari di sapere di avere ragione.
@@ -611,7 +611,7 @@
 
 === function docTwentyThree_storylet
 //OUJ
-    {charTag(Documents, "docKitchen")}:         Ventinove maggio '74
+    
                                                 Caro diario, siamo solo tu e io ormai.
                                                 Tu, io e S.C., se trovo il coraggio di andare a trovarla sulla spiaggia.
                                                 Y. è stata gravemente ferita a Brescia.
@@ -642,7 +642,7 @@
 
 === function docTwentyFour_storylet
 //S.C.
-    {charTag(Documents, "docNest")}:            Ora che so come fargli del bene, lui non è più qui con me.
+    lui non è più qui con me.
 
     
     
@@ -650,7 +650,7 @@
 
  === function docTwentyFive_storylet
 //OUJ
-   {charTag(Documents, "docKitchen")}:          Non so quando leggerai questo biglietto, visto che non ti allontani dalla spiaggia da giorni.
+  
                                                 Starai mangiando?
                                                 So che sei viva perché l'altro ieri sono passata lungo la riva ed eri a prendere appunti sotto la tua tenda improvvisata.
                                                 Questo biglietto è qui per dirti che me ne vado, come le altre.

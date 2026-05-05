@@ -22,7 +22,7 @@
     VAR debug_dialogues = false
     
 //Per disabilitare uscite e cose varie in caso di testing con il sistema stocastico    
-    VAR debug_stochastic = true
+    VAR debug_stochastic = false
 
 
 {debug_seedRandom:
@@ -213,5 +213,9 @@
 
     //Aggiungiamo con chi abbiamo cucinato
     ~  kitchen_allChefs += (FirstCharacter, SecondCharacter, ThirdCharacter)
-                
+
+    //E poi i documenti
+    ~  horizontalS_discoveredDocs += horizontalS_allDocs
+
+
 ->->

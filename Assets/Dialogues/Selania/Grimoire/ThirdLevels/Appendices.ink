@@ -1,9 +1,9 @@
 /*************************
 La logica di comparsa delle appendici è:
     * grimoire_choicesAndRelationships: sbloccata quando ce ne parlano o Mentore o Strega.
-    * grimoire_greenhouseAndGifts: sbloccata dopo la prima pianta raccolta (backpack_findedGifts != ()) o dopo il commento di Mentore.
+    * grimoire_greenhouseAndGifts: sbloccata dopo la prima pianta raccolta (greenhouse_findedCultivables != ()) o dopo il Commento di  Mentore.
     * grimoire_kitchenAndRelationships: dopo l'apertura della cucina da parte di Chitarra.
-    * grimoire_inkAndRewriting: dopo il commento di Mentore sulla riscrittura.
+    * grimoire_inkAndRewriting: dopo il Commento di  Mentore sulla riscrittura.
     * grimoire_Sigils: dopo che ce ne parlano Mentore o Strega (l'idea è comunque di non condividerlo subito).
 
 
@@ -89,6 +89,7 @@ La logica di comparsa delle appendici è:
     **************************/
     {
         - grimoire_appendices has grimChoicesMentor:
+        <i><b>Commento di {charNameFive}.</i></b>
             All'arrivo di {player_name}, {charNameFive} ha spiegato che la maggior parte delle cose che {player_name} dirà in questo luogo influenzeranno il rapporto che ha con le persone che incontrerà. Che ogni frase in fondo rappresenta un modo di vedere il mondo, e non tutte le visioni vanno d'accordo. Ha poi portato un esempio della prima cosa che le ha detto {player_name} appena si sono incontrate, e dei vari modo in cui le persone possono reagire a quel tipo di commento. Per {charNameFive} capire come funzionano le persone è fondamentale per conquistare la loro fiducia, che è lo strumento principale per il lavoro che deve fare.
     }
 
@@ -99,6 +100,7 @@ La logica di comparsa delle appendici è:
     **************************/
     {
         - grimoire_appendices has grimChoicesWitch:
+        <i><b>Commento di {witch_actualName}.</i></b>
             Abbiamo deciso di condividere con {player_name} la nostra visione sul tema: noi crediamo che quando {player_name} compie una scelta su cosa dire, non sta parlando del mondo che vede, ma di come lo vive. E crediamo sia importante, perché una visione è qualcosa di contrattabile, ma ciò che si vive è, punto. Esprimere sé in una relazione è più importante che concordare con l'altra persona. Il dialogo può essere un sacchetto per accumulare fiducia, o una finestra per far conoscere {player_name} all'altrə.
     }
 
@@ -192,6 +194,7 @@ La logica di comparsa delle appendici è:
     **************************/
     {
         - grimoire_appendices has grimGreenhouseMentor:
+        <i><b>Commento di {charNameFive}.</i></b>
             {charNameFive} ha informato {player_name} sul fatto che, tra i tanti modi per migliorare un rapporto con una persona, fare il dono giusto è forse il più immediato. La serra, con le sue piante magnifiche, è secondo {charNameFive} il posto migliore dove coltivare e recuperare doni. Gli effetti dei doni sono immediati e permanenti. Ed è per questo che ogni riscrittorə può darne solo uno a persona, poiché qualcosa di così forte non può certo essere usato senza coscienza.
     }
 
@@ -285,6 +288,7 @@ La logica di comparsa delle appendici è:
 **************************/
     {
         - grimoire_appendices has grimFirstOpenKitchen:
+        <i><b>Commento di {charNameOne}.</i></b>
             {charNameOne} ha deciso di sistemare la vecchia cucina per aiutare {player_name} col suo lavoro. L'esperienza ha insegnato a {charNameOne} che il cibo apre alle confidenze, e visto che di solito sono le persone a decidere di cosa parlare con {player_name},{charNameOne} ha già avvisato tutti che a questo giro sarà {player_name} ha decidere di cosa parlare. Poiché ha trovato poche cose in giro, è possibile cucinare con solo una persona per volta.
     }
 
@@ -295,6 +299,7 @@ La logica di comparsa delle appendici è:
 **************************/
     {
         - grimoire_appendices has grimKitchenMentor:
+        <i><b>Commento di {charNameFive}.</i></b>
             {charNameFive} ha condiviso la sua saggezza con {player_name}, dicendo che cucinare assieme è un momento di intimità, e che con l'ingrediente giusto, può far felice la persona con cui sta ai fornelli. Secondo {charNameFive}, passare del tempo in cucina con qualcunə può essere un bel modo per conoscersi meglio, e capire che piega stia prendendo la relazione.
     }
 
@@ -394,11 +399,13 @@ La logica di comparsa delle appendici è:
 **************************/
     {
         - grimoire_appendices has grimInkMentor:
+        <i><b>Commento di {charNameFive}.</i></b>
             {charNameFive} ha spiegato a {player_name} qual è il suo lavoro, ovvero quello di {player_pronouns has him:riscrittore|{player_pronouns has her:riscrittora|riscrittorə}}, la persona che si occupa di aiutare persone bloccate a raccontare in modo diverso la propria storia, così che possano sbloccarsi. Arrivando a scegliere un nuovo nome, segno di un nuovo inizio. Ha anche detto a {player_name} che il suo è un lavoro con pochi strumenti, e quello centrale è l'ascolto, che permette di conquistare la fiducia. Fiducia che genera il secondo strumento: l'inchiostro, elemento fondamentale per la riscrittura. Per {charNameFive} un modo efficace per migliorare la relazione è fare un buon dono, che significa dire "Ehi, ti vedo, ti capisco."
     }
 
     {
         - grimoire_appendices has grimRewritingMentor:
+        <i><b>Commento di {charNameFive}.</i></b>
             {charNameFive} ha offerto un'ultima guida a {player_name}, spiegando la funzione della riscrittura. Arriverà il momento in cui {player_name} potrà proporre alla persona di rileggere assieme la sua storia. A proposta fatta, la persona confiderà cosa la tiene bloccata, e a quel punto {player_name} potrà procedere con le riscritture: per ogni goccia di inchiostro ottenuta durante la relazione, {player_name} potrà proporre una rilettura di un aspetto della vita di quella persona.
             E infine {charNameFive} ha spiegato lo strumento dell'epilogo: una dichiarazione finale dellə riscrittorə, con l'obiettivo di far mettere alla persona un punto sul suo presente e iniziare a guardare al futuro in modo diverso. Così persona e riscrittorə raggiungeranno il loro obiettivo: un nuovo nome, simbolo di un nuovo inizio. {charNameFive} ha detto a {player_name} che non c'è un esito buono o cattivo per la riscrittura, ma che comunque lei come mentore si permetterà di dare dei feedback d'aiuto.
     }
@@ -496,6 +503,7 @@ La logica di comparsa delle appendici è:
 **************************/
     {
         - grimoire_appendices has grimThirdOpenNest:
+        <i><b>Commento di {charNameThree}.</i></b>
     }
 
 /*************************
@@ -505,6 +513,7 @@ La logica di comparsa delle appendici è:
 **************************/
     {
         - grimoire_appendices has grimSigilsMentor:
+        <i><b>Commento di {charNameFive}.</i></b>
             {charNameFive} si è mostrata indecisa sul valore dei sigilli. Da una parte le danno l'impressione di essere una forma di controllo. Dall'altra crede che rendano la comunicazione più chiara. Li vede com un codice, qualcosa che offre la garanzia di essere capita.
     }
 
@@ -515,6 +524,7 @@ La logica di comparsa delle appendici è:
 **************************/
     {
         - grimoire_appendices has grimSigilsWitch:
+        <i><b>Commento di {witch_actualName}.</i></b>
             Abbiamo condiviso con {player_name} la nostra conoscenza sui sigilli, che sono uno strumento che sembra complesso ma è molto semplice, ma abbiamo anche espresso la timore che il confine tra sostegno e manipolazione sia sottile. E abbiamo suggerito a {player_name} di comprendere a fondo la natura dei glifi che compongono i sigilli. Perché ogni glifo, come ogni scelta, è una strada. Un vicolo di curiosità e conoscenza. Un sentiero di azione e passione. Un cammino di praticità e radicamento. Un viottolo di affetto e cura. Una calle di saggezza e spiritualità.
     }
 
@@ -541,126 +551,152 @@ La logica di comparsa delle appendici è:
 
     {
         - horizontalS_discoveredDocs has docOne:
+            <i><b>Le altre stanno finendo di sistemarsi.</i></b>
             ~ docOne_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docTwo:
+            <i><b>Cinque aprile '72.</i></b>
             ~ docTwo_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docThree:
+            <i><b>Osman Spare disse: "I grandi pensieri si oppongono a tutte le dottrine del conformismo".</i></b>
             ~ docThree_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docFour:
+            <i><b>Ora: nonna ha giurato fino alla fine che fosse una mia invenzione.</i></b>
             ~ docFour_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docFive:
+            <i><b>Sì spostano!</i></b>
             ~ docFive_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docSix:
+            <i><b>A distanza di un mese posso dire con certezza solo una cosa: non sto capendo nulla di questo posto.</i></b>
             ~ docSix_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docSeven:
+            <i><b>Cosa ha imparato S.C. a distanza di quattro mesi?</i></b>
             ~ docSeven_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docEight:
+            <i><b>O.U.J. ha deciso di fare una festa per i primi sei mesi qui.</i></b>
             ~ docEight_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docNine:
+            <i><b>Non mi aspettavo di fare una grossa scoperta, ma forse ora anche K. crederà che posso essere una strega.</i></b>
             ~ docNine_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docTen:
+            <i><b>Se mesi fa ero basita da un pino che si riscalda.
+            Ora quell'evento mi sembra una sciocchezza rispetto a quello che sto per scrivere.</i></b>
             ~ docTen_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docEleven:
+            <i><b>Ho sedici cose che mi corrono in testa assieme e se non le metto giù ora URLO.</i></b>
             ~ docEleven_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docTwelve:
+            <i><b>Woolf ha scritto "Dicendole, non si rovinano forse le cose?".</i></b>
             ~ docTwelve_storylet()
     }
         
     {
         - horizontalS_discoveredDocs has docThirteen:
+            <i><b>Franco ed io siamo ufficialmente migliori amici e compagni di esplorazioni.</i></b>
             ~ docThirteen_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docFourteen:
+            <i><b>Qualcosa non va.</i></b>
             ~ docFourteen_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docFifteen:
+            <i><b>Diciassette agosto '73.</i></b>
             ~ docFifteen_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docSixteen:
+            <i><b>Contro di questa esperienza.</i></b>
             ~ docSixteen_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docSeventeen:
+            <i><b>Inizio a sentire il peso della situazione.</i></b>
             ~ docSeventeen_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docEighteen:
+            <i><b>Oggi Franco mi ha portato alla fontana.</i></b>
             ~ docEighteen_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docNineteen:
+            <i><b>Ho riparlato con S.C., per la prima volta dopo quello che mi ha fatto.</i></b>
             ~ docNineteen_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docTwenty:
+            <i><b>Otto gennaio '74.</i></b>
             ~ docTwenty_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docTwentyOne:
+            <i><b>O.U.J. ha proposto una festa per festeggiare il 25 aprile.</i></b>
             ~ docTwentyOne_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docTwentyTwo:
+            <i><b>Otto maggio '74.</i></b>
             ~ docTwentyTwo_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docTwentyThree:
+            <i><b>Ventinove maggio '74.</i></b>
             ~ docTwentyThree_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docTwentyFour:
+            <i><b>Ora che so come fargli del bene, <>
             ~ docTwentyFour_storylet()
     }
 
     {
         - horizontalS_discoveredDocs has docTwentyFive:
+            <i><b>Non so quando leggerai questo biglietto, visto che non ti allontani dalla spiaggia da giorni.</i></b>
             ~ docTwentyFive_storylet()
     }
 
