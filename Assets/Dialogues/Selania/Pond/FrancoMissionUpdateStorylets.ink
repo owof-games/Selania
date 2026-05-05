@@ -15,7 +15,7 @@
                                                         Ma hai visto che bella che è questa rana riflessa nell'acqua?
                                                         Ciao bellezza!
 
--> main
+->->
 
 
 === franco_missionTwo_solicit
@@ -28,7 +28,7 @@
                                                         Come sta andando con le piante della serra?
                                                         Torna qui quando ce ne saranno abbastanza per le formiche!
 
--> main
+->->
 
 
 === franco_missionThree_solicit
@@ -56,7 +56,7 @@
                                                         Però non si muove.
                                                         Forse è quindi "posta fermata"?
 
--> main
+->->
 
 
 === franco_missionFour_solicit
@@ -78,7 +78,7 @@
                                                         E Dora l'ape.
                                                         E la nostra amica che a volte mi aiuta a capire meglio le cose.
 
--> main
+->->
 
 
 === franco_missionFive_solicit
@@ -104,7 +104,7 @@
     {charTag(Franco, "{portrait_Franco()}")}:       Se scopro come succede potrei cambiare il mondo!
                                                     E tutti un giorno parleranno di Franco la rana!
 
--> main
+->->
 
 
 === franco_missionSix_solicit
@@ -119,7 +119,7 @@
                                                     Intanto resterò qui a scrivere una lettera di scuse a Tullio e Giulio.
                                                     "Cari miei amori. Prometto di non dimenticare mai mai più i gemelli al nido..."
 
--> main
+->->
 
 
 === franco_missionSeven_solicit
@@ -133,7 +133,7 @@
                                                     Uh, forse non c'entra molto.
                                                     Fammi sapere quando hai letto la lettera che ti aspetta alla stazione dei treni.
 
--> main
+->->
 
 
 === franco_missionEight_solicit
@@ -149,7 +149,7 @@
                                                     O "Craande, Craande, Craande".
                                                     Oppure ripasso anche il balletto con Tullio e Giulio e ci rifacciamo "Craak!... I did it again".
 
--> main
+->->
 
 === franco_missionNine_solicit
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -166,7 +166,7 @@
                                                     La trovi in camera tua!
                                                     "PS: ma il vostro campus ha ninfee singole o condivise?"
                                                     
--> main
+->->
 
 === franco_missionTen_solicit
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -181,7 +181,7 @@
                                                     Ma mi sa invece che tu non hai ancora aggiunto un ingrediente extra in cucina, vero?
                                                     
 
--> main
+->->
 
 /*****************************
 

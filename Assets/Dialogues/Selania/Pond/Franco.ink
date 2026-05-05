@@ -54,7 +54,7 @@
     +  \ {charTag(PG, "neutral")}:         Per ora me ne vado.
         -> main
         
-    + {entity_location(PG) == Pond} \ {charTag(PG, "neutral")}:         Franco, {dimmi cosa devo fare.|hai qualcosa da farmi fare?}
+    + {entity_location(PG) == Pond && frog_currentMission == ()} \ {charTag(PG, "neutral")}:         Franco, {dimmi cosa devo fare.|hai qualcosa da farmi fare?}
 
         //Prima di tutto: check stanchezza!
         -> tired_frog

@@ -1,7 +1,7 @@
 //Nome giocatrice e player_pronouns
     VAR player_name = ""
     VAR player_nameChosen = false
-    LIST player_pronouns = him, her, they
+    LIST player_pronouns = (him), (her), (they)
 
 //Tracciamento del riposo.
     //Dalle impostazioni può abilitare/disabilitare le notifiche per il riposo
@@ -28,63 +28,63 @@
 
 //Tracciamento colori giocatrice
     //Colori con cui traccio le scelte che riguardano "solo" me
-    VAR player_aether = 0.00
-    VAR player_earth = 0.00
-    VAR player_air = 0.00
-    VAR player_water = 0.00
-    VAR player_fire = 0.00
+    VAR player_aether = 0
+    VAR player_earth = 0
+    VAR player_air = 0
+    VAR player_water = 0
+    VAR player_fire = 0
     
     //Scelte prima pg
-    VAR player_aether_first_char = 0.00
-    VAR player_earth_first_char = 0.00
-    VAR player_air_first_char = 0.00
-    VAR player_water_first_char = 0.00
-    VAR player_fire_first_char = 0.00
+    VAR player_aether_first_char = 0
+    VAR player_earth_first_char = 0
+    VAR player_air_first_char = 0
+    VAR player_water_first_char = 0
+    VAR player_fire_first_char = 0
     
     //Scelte secondo pg
-    VAR player_aether_second_char = 0.00
-    VAR player_earth_second_char = 0.00
-    VAR player_air_second_char = 0.00
-    VAR player_water_second_char = 0.00
-    VAR player_fire_second_char = 0.00
+    VAR player_aether_second_char = 0
+    VAR player_earth_second_char = 0
+    VAR player_air_second_char = 0
+    VAR player_water_second_char = 0
+    VAR player_fire_second_char = 0
     
     //Scelte mentore
-    VAR player_aether_mentor = 0.00
-    VAR player_earth_mentor = 0.00
-    VAR player_air_mentor = 0.00
-    VAR player_water_mentor = 0.00
-    VAR player_fire_mentor = 0.00
+    VAR player_aether_mentor = 0
+    VAR player_earth_mentor = 0
+    VAR player_air_mentor = 0
+    VAR player_water_mentor = 0
+    VAR player_fire_mentor = 0
     
     //Scelte terzo pg
-    VAR player_aether_third_char = 0.00
-    VAR player_earth_third_char = 0.00
-    VAR player_air_third_char = 0.00
-    VAR player_water_third_char = 0.00
-    VAR player_fire_third_char = 0.00
+    VAR player_aether_third_char = 0
+    VAR player_earth_third_char = 0
+    VAR player_air_third_char = 0
+    VAR player_water_third_char = 0
+    VAR player_fire_third_char = 0
 
    //Scelte quarta pg
-    VAR player_aether_fourth_char = 0.00
-    VAR player_earth_fourth_char = 0.00
-    VAR player_air_fourth_char = 0.00
-    VAR player_water_fourth_char = 0.00
-    VAR player_fire_fourth_char = 0.00
+    VAR player_aether_fourth_char = 0
+    VAR player_earth_fourth_char = 0
+    VAR player_air_fourth_char = 0
+    VAR player_water_fourth_char = 0
+    VAR player_fire_fourth_char = 0
 
 
     //Scelte quinta pg
-    VAR player_aether_fifth_char = 0.00
-    VAR player_earth_fifth_char = 0.00
-    VAR player_air_fifth_char = 0.00
-    VAR player_water_fifth_char = 0.00
-    VAR player_fire_fifth_char = 0.00 
+    VAR player_aether_fifth_char = 0
+    VAR player_earth_fifth_char = 0
+    VAR player_air_fifth_char = 0
+    VAR player_water_fifth_char = 0
+    VAR player_fire_fifth_char = 0 
     
     
     
 //Per funzione aggiornamento colore: tengono conto del valore di quel colore dellx PNG la cui storia è stata appena conclusa
-    VAR temp_PGFire= 0.00
-    VAR temp_PGWater = 0.00
-    VAR temp_PGAir = 0.00
-    VAR temp_PGEarth = 0.00
-    VAR temp_PGAether  = 0.00    
+    VAR temp_PGFire= 0
+    VAR temp_PGWater = 0
+    VAR temp_PGAir = 0
+    VAR temp_PGEarth = 0
+    VAR temp_PGAether  = 0    
     
 
 // Lista che indica i possibli esiti delle varie sezioni dell'albero

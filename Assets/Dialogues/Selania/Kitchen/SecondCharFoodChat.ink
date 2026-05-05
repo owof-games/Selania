@@ -66,7 +66,7 @@
                     ~ kitchen_secondCharCookingTogetherInvite = false
                     ~ kitchen_secondCharCookingTogetherWaiting = 0
                     ~ move_entity(SecondCharacter, Pond)
-            ->->
+            -> main
 
     
     = first_theme

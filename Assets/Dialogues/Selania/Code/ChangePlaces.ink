@@ -23,14 +23,14 @@
     
     //Solo scelta per l'amico stocastico
     //Uscita solo se ho chiuso tre riscritture
-    // + {are_two_entities_together(PG, BedClosingGame) && (debug_stochastic == true) && LIST_COUNT(story_endedStories) >= 3} [BedClosingGame]
-    //         @quit
-    //             -> END
+    + {are_two_entities_together(PG, BedClosingGame) && (debug_stochastic == true) && LIST_COUNT(story_endedStories) >= 3} [BedClosingGame]
+            @quit
+                -> END
 
     //Uscita solo se sono state concluse tutte le missioni di Franco
-    + {are_two_entities_together(PG, BedClosingGame) && (debug_stochastic == true) && story_endedStories != () && frog_allMissionsCompleted == ()} [BedClosingGame]
-            @quit
-                -> END            
+    // + {are_two_entities_together(PG, BedClosingGame) && (debug_stochastic == true) && story_endedStories != () && frog_allMissionsCompleted == ()} [BedClosingGame]
+    //         @quit
+    //             -> END            
 
 
 //Streets to Train Stop

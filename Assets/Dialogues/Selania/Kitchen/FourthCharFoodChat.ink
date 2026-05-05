@@ -57,7 +57,7 @@
                 ~ kitchen_fourthCharCookingTogetherInvite = false
                 ~ kitchen_fourthCharCookingTogetherWaiting = 0
                 ~ move_entity(FourthCharacter, Pond)
-            ->->
+            -> main
 
 
     
