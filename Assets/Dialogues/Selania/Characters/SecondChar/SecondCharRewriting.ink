@@ -508,6 +508,7 @@
                                                     Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
     }
         {charTag(SecondCharacter, "angry")}:        Il mio vero nome è <b><i>{charNameTwo}</b></i>.
+            ~  characterChangingPortrait(SecondCharacter)
                                                     Combatterò la mia paura e diventerò il più forte di tutti, imbattibile!
     
     - secondChar_ActualName has Lupo:
@@ -518,6 +519,7 @@
                                                     Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
     }
         {charTag(SecondCharacter, "angry")}:        Mi chiamerò <b><i>{charNameTwo}</b></i>.
+            ~  characterChangingPortrait(SecondCharacter)
         {charTag(SecondCharacter, "neutral")}:      E proteggerò il mio branco.
                                                     Mamma, papà, nonna e mio fratello.
         {charTag(SecondCharacter, "energy")}:       Nessuna delle persone a cui voglio bene deve più stare male.
@@ -530,6 +532,7 @@
                                                     Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
     }
         {charTag(SecondCharacter, "energy")}:       E il mio nome è <b><i>{charNameTwo}</b></i>.
+            ~  characterChangingPortrait(SecondCharacter)
                                                     Perché tutto è un gioco.
         {charTag(SecondCharacter, "emotional")}:    La mia fantasia e qualche piccola bugia aiuteranno le altre persone ad avere meno paura.
                         
@@ -542,6 +545,7 @@
                                                     Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
     }
         {charTag(SecondCharacter, "emotional")}:    Mi chiamerò <b><i>{charNameTwo}</b></i>.
+            ~  characterChangingPortrait(SecondCharacter)
                                                     E imparerò ad avere tantissimi amici.
         {charTag(SecondCharacter, "energy")}:       Ci sentiremo meno soli!
                                                     E così avremo meno paura.
@@ -554,6 +558,7 @@
                                                     Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
     }
         {charTag(SecondCharacter, "energy")}:        Io sono <b><i>{charNameTwo}</b></i>.
+            ~  characterChangingPortrait(SecondCharacter)
         {charTag(SecondCharacter, "neutral")}:       Sono sveglio e posso capire ciò che mi circonda!
         {charTag(SecondCharacter, "emotional")}:     E posso cambiare le cose che mi fanno paura.
         {charTag(SecondCharacter, "neutral")}:       Aiutare gli altri.

@@ -497,7 +497,10 @@
         }
         
     {charTag(FirstCharacter, "neutral")}:           Io sono <b><i>{charNameOne}</b></i>.
-    Sono lo strumento semplice, eppure fondamentale.
+
+        ~  characterChangingPortrait(FirstCharacter)
+
+                                                    Sono lo strumento semplice, eppure fondamentale.
     {charTag(FirstCharacter, "affectionate")}:      Sono quella che attende che le altre facciano casino, per mettere un accento, un colore.
                                                     Che ritrova il bello nelle cose quotidiane.
     {charTag(FirstCharacter, "neutral")}:           Apprezzando quello che ha.
@@ -517,6 +520,7 @@
 
     {charTag(FirstCharacter, "curious")}:           Rullo di tamburi...
                                                     Io sono <b><i>{charNameOne}</b></i>!
+        ~  characterChangingPortrait(FirstCharacter)                                            
                                                     Signore e signor3 e signori: sono la gioia del cambiamento.
                                                     Le infinite possibilità.
     {charTag(FirstCharacter, "neutral")}:           Sono colei che può provare tutto.
@@ -532,6 +536,7 @@
     }
 
     {charTag(FirstCharacter, "curious")}:           Ho scelto come nome <b><i>{charNameOne}</b></i>.
+        ~  characterChangingPortrait(FirstCharacter)
                                                     Che sia quel pezzetto di plastica suonato alle elementari o un pezzo pregiato di un'orchestra, il Flauto ci ricorda che la musica è ovunque.
     {charTag(FirstCharacter, "neutral")}:           E dove c'è musica, c'è cambiamento.
     {charTag(FirstCharacter, "affectionate")}:      E metterò al centro di tutto la mia musica, la band, per fare cose che davvero cambino il mondo.
@@ -545,6 +550,7 @@
                                                     Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
     }
     {charTag(FirstCharacter, "affectionate")}:      Il mio nome è <b><i>{charNameOne}</b></i>.
+        ~  characterChangingPortrait(FirstCharacter)
                                                     E riabbraccio la mia infanzia, gli spazi in cui sono cresciuta.
     {charTag(FirstCharacter, "neutral")}:           Per ricominciare a giocare, a esplorare quello che già conosco.
                                                     Per prendermi cura dei miei e della mia terra.
@@ -559,6 +565,7 @@
     }
 
     {charTag(FirstCharacter, "affectionate")}:      Io sono <b><i>{charNameOne}</b></i>.
+        ~  characterChangingPortrait(FirstCharacter)
                                                     Lo strumento romantico.
                                                     Lo strumento divino.
     {charTag(FirstCharacter, "neutral")}:           Abbraccio l'amore come motore del cambiamento.

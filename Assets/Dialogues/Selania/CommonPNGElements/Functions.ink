@@ -93,7 +93,6 @@ VAR relationshipIndicatorEnthusiasticValue = 8
         ~ move_entity(FirstCharacter, Safekeeping)
         ~ firstChar_InkLevel = ink_empty
         ~ firstChar_mailPause = firstChar_mailPauseDuration
-        ~ move_entity(firstCharPaint, Bedroom)
         ~ tree_advance_management(FirstCharacter)
 
     - PNG == SecondCharacter:
@@ -104,7 +103,6 @@ VAR relationshipIndicatorEnthusiasticValue = 8
         ~ move_entity(SecondCharacter, Safekeeping)
         ~ secondChar_InkLevel = ink_empty
         ~ secondChar_mailPause = secondChar_mailPauseDuration
-        ~ move_entity(secondCharPaint, Bedroom)
         ~ tree_advance_management(SecondCharacter)
 
     - PNG == ThirdCharacter:
@@ -116,7 +114,6 @@ VAR relationshipIndicatorEnthusiasticValue = 8
         ~ thirdChar_InkLevel = ink_empty
         ~ thirdChar_mailPause = thirdChar_mailPauseDuration
         //Il ritratto ha senso che compaia solo quando è stato davvero riscritto, praticamente quando lo vediamo a fine gioco
-        ~ move_entity(thirdCharPaint, Bedroom)
         ~ tree_advance_management(ThirdCharacter)    
 
     - PNG == FourthCharacter:
@@ -127,7 +124,6 @@ VAR relationshipIndicatorEnthusiasticValue = 8
         ~ move_entity(FourthCharacter, Safekeeping)
         ~ fourthChar_InkLevel = ink_empty
         ~ fourthChar_mailPause = fourthChar_mailPauseDuration
-        ~ move_entity(fourthCharPaint, Bedroom)
         ~ tree_advance_management(FourthCharacter)
 
     - PNG == FifthCharacter:
@@ -138,7 +134,6 @@ VAR relationshipIndicatorEnthusiasticValue = 8
         ~ move_entity(FifthCharacter, Safekeeping)
         ~ fifthChar_InkLevel = ink_empty
         ~ fifthChar_mailPause = fifthChar_mailPauseDuration
-        ~ move_entity(fifthCharPaint, Bedroom)
         ~ tree_advance_management(FifthCharacter)    
         
 }
@@ -185,6 +180,134 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
 
 ->->
 
+
+
+=== function characterChangingPortrait(PNG)
+~ temp currentLocation = entity_location(PG)
+{PNG:
+    
+    - FirstCharacter:
+
+        ~ move_entity(FirstCharacter, Safekeeping)
+
+        { 
+            - firstChar_ActualName == Triangolo:
+                ~ move_entity(FirstCharacterTriangolo, currentLocation)
+                ~ move_entity(PaintTriangolo, Bedroom)
+                
+            - firstChar_ActualName == Orchestra:
+                ~ move_entity(FirstCharacterOrchestra, currentLocation)
+                ~ move_entity(PaintOrchestra, Bedroom)
+                
+            - firstChar_ActualName == FlautoDolce:
+                ~ move_entity(FirstCharacterFlautoDolce, currentLocation)
+                ~ move_entity(PaintFlautoDolce, Bedroom)
+                
+            - firstChar_ActualName == Ocarina:
+                ~ move_entity(FirstCharacterOcarina, currentLocation)
+                ~ move_entity(PaintOcarina, Bedroom)
+                
+            - firstChar_ActualName == Violino:
+                ~ move_entity(FirstCharacterViolino, currentLocation)
+                ~ move_entity(PaintViolino, Bedroom)
+                
+        }  
+
+    - SecondCharacter:
+
+        ~ move_entity(SecondCharacter, Safekeeping)
+
+        {
+            - secondChar_ActualName == Grizzly:
+                ~ move_entity(SecondCharacterGrizzly, currentLocation)
+                ~ move_entity(PaintGrizzly, Bedroom)
+                
+            - secondChar_ActualName == Lupo:
+                ~ move_entity(SecondCharacterLupo, currentLocation)
+                ~ move_entity(PaintLupo, Bedroom)
+                
+            - secondChar_ActualName == Delfino:
+                ~ move_entity(SecondCharacterDelfino, currentLocation)
+                ~ move_entity(PaintDelfino, Bedroom)
+                
+            - secondChar_ActualName == Capibara:
+                ~ move_entity(SecondCharacterCapibara, currentLocation)
+                ~ move_entity(PaintCapibara, Bedroom)
+                
+            - secondChar_ActualName == Corvo:
+                ~ move_entity(SecondCharacterCorvo, currentLocation)
+                ~ move_entity(PaintCorvo, Bedroom)
+        
+        }
+
+    - ThirdCharacter:
+
+        ~ move_entity(ThirdCharacter, Safekeeping)
+
+        {
+            - thirdChar_ActualName == ThirdB:
+                ~ return "ThirdB"
+
+            - thirdChar_ActualName == ThirdC:
+                ~ return "ThirdC"
+
+            - thirdChar_ActualName == ThirdD:
+                ~ return "ThirdD"
+
+            - thirdChar_ActualName == ThirdE:
+                ~ return "ThirdE"
+
+            - thirdChar_ActualName == ThirdF:
+                ~ return "ThirdF"                     
+        }
+
+    - FourthCharacter:
+
+        ~ move_entity(FourthCharacter, Safekeeping)
+
+        {
+            - fourthChar_ActualName == FourthB:
+                ~ return "FourthB"
+
+            - fourthChar_ActualName == FourthC:
+                ~ return "FourthC"
+
+            - fourthChar_ActualName == FourthD:
+                ~ return "FourthD"
+
+            - fourthChar_ActualName == FourthE:
+                ~ return "FourthE"
+
+            - fourthChar_ActualName == FourthF:
+                ~ return "FourthF"      
+        }    
+    
+
+    - FifthCharacter:
+
+        ~ move_entity(FifthCharacter, Safekeeping)
+
+        {
+            - fifthChar_ActualName == Mostro:
+                ~ return "Mostro"
+            
+            - fifthChar_ActualName == FifthB:
+                ~ return "FifthB"
+
+            - fifthChar_ActualName == FifthC:
+                ~ return "FifthC"
+
+            - fifthChar_ActualName == FifthD:
+                ~ return "FifthD"
+
+            - fifthChar_ActualName == FifthE:
+                ~ return "FifthE"
+
+            - fifthChar_ActualName == FifthF:
+                ~ return "FifthF"      
+        }
+
+}
             
 
 === grimoire_storylets_updater

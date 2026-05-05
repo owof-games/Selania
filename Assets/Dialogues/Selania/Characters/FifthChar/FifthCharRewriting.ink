@@ -307,6 +307,7 @@
                             {charTag(FifthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 Il mio vero nome è <b><i>{charNameFive}</b></i>.
+                    ~  characterChangingPortrait(FifthCharacter)
             
             - fifthChar_ActualName has FifthC:
                     {
@@ -316,6 +317,7 @@
                             {charTag(FifthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 {charTag(FifthCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameFive}</b></i>.
+                    ~  characterChangingPortrait(FifthCharacter)
               
             - fifthChar_ActualName has FifthD:
                     {
@@ -325,6 +327,7 @@
                             {charTag(FifthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 {charTag(FifthCharacter, "neutral")}:       E il mio nome è <b><i>{charNameFive}</b></i>.
+                    ~  characterChangingPortrait(FifthCharacter)
                                
             
             - fifthChar_ActualName has FifthF:
@@ -334,7 +337,8 @@
                         - else:
                             {charTag(FifthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
-                {charTag(FifthCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameFive}</b></i>.  
+                {charTag(FifthCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameFive}</b></i>.
+                    ~  characterChangingPortrait(FifthCharacter)
                     
             - fifthChar_ActualName has FifthB:
                     {
@@ -344,6 +348,7 @@
                             {charTag(FifthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 {charTag(FifthCharacter, "neutral")}:       Io sono <b><i>{charNameFive}</b></i>.
+                    ~  characterChangingPortrait(FifthCharacter)
                     
         }
         

@@ -37,8 +37,15 @@
     
     LIST listBookElements = Grimoire, BookExit, FirstRecap, SecondRecap, ThirdRecap, FourthRecap, FifthRecap, FrogRecap, DogRecap, WitchRecap, GreenhouseRecap, KitchenRecap, NestRecap, RulesRecap, SettingsBookVersion
     
-    LIST listRoomElements = BedClosingGame, FromBedroomToTrainStop, greenhouseOpened,  kitchenOpened, libraryOpened, nestOpened, francoOpened, dumpOpened, Settings, firstCharPaint, secondCharPaint, thirdCharPaint, fourthCharPaint, fifthCharPaint
+    LIST listRoomElements = BedClosingGame, FromBedroomToTrainStop, greenhouseOpened,  kitchenOpened, libraryOpened, nestOpened, francoOpened, dumpOpened, Settings
     
     LIST listSounds = TrainNoiseComing, TrainNoiseGoingAway, BastonSound
     
     LIST listColoredGlyphs  = fireGlyph, earthGlyph, airGlyph, waterGlyph, aetherGlyph, aetherGlyph_off, airGlyph_off, fireGlyph_off, earthGlyph_off, waterGlyph_off
+
+
+    LIST listCharactersVariations = 
+    FirstCharacterTriangolo, FirstCharacterOrchestra, FirstCharacterFlautoDolce, FirstCharacterOcarina, FirstCharacterViolino,
+    PaintTriangolo, PaintOrchestra, PaintFlautoDolce, PaintOcarina, PaintViolino, 
+    SecondCharacterGrizzly, SecondCharacterLupo, SecondCharacterDelfino, SecondCharacterCapibara, SecondCharacterCorvo,
+    PaintGrizzly, PaintLupo, PaintDelfino, PaintCapibara, PaintCorvo

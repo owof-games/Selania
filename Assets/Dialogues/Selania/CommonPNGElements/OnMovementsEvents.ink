@@ -135,30 +135,30 @@ VAR letters_doggoPause = false
     }
 
     //Ritratti PNG
-    {
-        - firstChar_storyStatus == story_storyEnded && contentsSafekeeping has firstCharPaint:
-            ~ move_entity(firstCharPaint, Bedroom)
-    }
+    // {
+    //     - firstChar_storyStatus == story_storyEnded && contentsSafekeeping has firstCharPaint:
+    //         ~ move_entity(firstCharPaint, Bedroom)
+    // }
 
-    {
-        - secondChar_storyStatus == story_storyEnded && contentsSafekeeping has secondCharPaint:
-            ~ move_entity(secondCharPaint, Bedroom)
-    }
+    // {
+    //     - secondChar_storyStatus == story_storyEnded && contentsSafekeeping has secondCharPaint:
+    //         ~ move_entity(secondCharPaint, Bedroom)
+    // }
 
-    {
-        - thirdChar_storyStatus == story_storyEnded && contentsSafekeeping has thirdCharPaint:
-            ~ move_entity(thirdCharPaint, Bedroom)
-    }
+    // {
+    //     - thirdChar_storyStatus == story_storyEnded && contentsSafekeeping has thirdCharPaint:
+    //         ~ move_entity(thirdCharPaint, Bedroom)
+    // }
 
-    {
-        - fourthChar_storyStatus == story_storyEnded && contentsSafekeeping has fourthCharPaint:
-            ~ move_entity(fourthCharPaint, Bedroom)
-    }
+    // {
+    //     - fourthChar_storyStatus == story_storyEnded && contentsSafekeeping has fourthCharPaint:
+    //         ~ move_entity(fourthCharPaint, Bedroom)
+    // }
 
-    {
-        - fifthChar_storyStatus == story_storyEnded && contentsSafekeeping has fifthCharPaint:
-            ~ move_entity(fifthCharPaint, Bedroom)
-    }
+    // {
+    //     - fifthChar_storyStatus == story_storyEnded && contentsSafekeeping has fifthCharPaint:
+    //         ~ move_entity(fifthCharPaint, Bedroom)
+    // }
 
     
 

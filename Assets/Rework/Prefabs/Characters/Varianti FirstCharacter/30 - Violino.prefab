@@ -290,4 +290,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4e223ff05b1452799510e6e5b64e422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Selania::Selania.Rework.Components.RoomObject
-  inkName: FirstCharacter
+  inkName: FirstCharacterViolino
