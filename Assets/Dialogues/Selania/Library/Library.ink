@@ -12,7 +12,7 @@
 -> main
 
 === reading_place
-    + (click) {are_two_entities_together(ReadingPlace, PG)} [ReadingPlace]
+    + (click) {are_two_entities_together(ReadingPlace, PG) && not debug_stochastic} [ReadingPlace]
         
         -> DarkLibraryModeOn ->
         -> book_test_intro

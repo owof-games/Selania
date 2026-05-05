@@ -12,6 +12,13 @@
         {debug: rimuovo missionOne da frog_availableCommonMissions perché in debug stocastico. frog_availableCommonMissions == {frog_availableCommonMissions}.}
 }
 
+{
+//disabilito missione rana con passaggio da biblioteca, visto che è bloccata
+    - debug_stochastic && frog_availableCommonMissions has missionEight:
+        ~ frog_availableCommonMissions -= missionEight
+        {debug: rimuovo missionOne da frog_availableCommonMissions perché in debug stocastico. frog_availableCommonMissions == {frog_availableCommonMissions}.}
+}
+
 
 {
     - not gm_rm_activation:
