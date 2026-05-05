@@ -3,23 +3,23 @@
    Cucina con Chitarra
 
  ----------------------------------*/
-=== pre_start_cooking_with_third_char
+=== pre_start_cooking_with_fourth_char
     ~ temp charNameOne = translator(thirdChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
 
     
-{charTag(ThirdCharacter, "neutral")}:       Cuciniamo?
+{charTag(FourthCharacter, "neutral")}:       Cuciniamo?
         
         + \ {charTag(PG, "neutral")}:         Sono pront{player_pronouns has him:o|{player_pronouns has her:a|ə}}!
-            -> cooking_with_third_char
+            -> cooking_with_fourth_char
         
         + \ {charTag(PG, "neutral")}:         Vorrei pensarci un attimo {charNameOne}.
             -> main
  
 
-=== cooking_with_third_char
+=== cooking_with_fourth_char
     ~ temp charNameOne = translator(thirdChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -32,31 +32,31 @@
     - (top)
     {charTag(PG, "neutral")}:      In particolare, ripensando alle nostre conversazioni, mi farebbe piacere parlare di più...
         {
-            - grimoire_thirdChar hasnt grimThirdCharNine:
+            - grimoire_fourthChar hasnt grimFourthCharNine:
                 {charTag(TheWitch, witch_state())}:   <i>{charNameTwo} ha ancora spunti di conversazione da offrire a {player_name}, se {player_name} deciderà di parlarle ancora un po'.
         }
         
         + \ {charTag(PG, "neutral")}:         Dei rapporti che hai con le persone che ti sono care.
                 ~ cooking_animations_on()
-                -> storage_glyphs(ThirdCharacter)->
+                -> storage_glyphs(FourthCharacter)->
                 -> first_theme
                 
-        + {grimoire_thirdChar has grimThirdCharFive}\ {charTag(PG, "neutral")}:        Del bisogno di fare qualcosa che salvi il mondo.
+        + {grimoire_fourthChar has grimFourthCharFive}\ {charTag(PG, "neutral")}:        Del bisogno di fare qualcosa che salvi il mondo.
                 ~ cooking_animations_on()
-                -> storage_glyphs(ThirdCharacter)->
+                -> storage_glyphs(FourthCharacter)->
                 -> second_theme
   
-        + {grimoire_thirdChar has grimThirdCharNine}\ {charTag(PG, "neutral")}:         Della tua creatività.
+        + {grimoire_fourthChar has grimFourthCharNine}\ {charTag(PG, "neutral")}:         Della tua creatività.
                 ~ cooking_animations_on()
-                -> storage_glyphs(ThirdCharacter)->
+                -> storage_glyphs(FourthCharacter)->
                 -> third_theme
        
             
         + \ {charTag(PG, "neutral")}:         Sai, forse preferirei cucinare più tardi.
-            {charTag(ThirdCharacter, "neutral")}:       Nessun problema, prenditi i tuoi tempi {player_name}.
-                ~ kitchen_thirdCharCookingTogetherInvite = false
-                ~ kitchen_thirdCharCookingTogetherWaiting = 0
-                ~ move_entity(ThirdCharacter, Pond)
+            {charTag(FourthCharacter, "neutral")}:       Nessun problema, prenditi i tuoi tempi {player_name}.
+                ~ kitchen_fourthCharCookingTogetherInvite = false
+                ~ kitchen_fourthCharCookingTogetherWaiting = 0
+                ~ move_entity(FourthCharacter, Pond)
             ->->
 
 
@@ -70,7 +70,7 @@
 
 
        
-        {charTag(ThirdCharacter, "neutral")}:       Frase
+        {charTag(FourthCharacter, "neutral")}:       Frase
         
             + \ {charTag(PG, "neutral")}:         Aria
                 -> glyph_choice_manager(false, airC)->
@@ -89,9 +89,9 @@
             + \ {charTag(PG, "neutral")}:         Spirito
                 -> glyph_choice_manager(false, aetherC)->
             -    
-        {charTag(ThirdCharacter, "neutral")}:       Frase
+        {charTag(FourthCharacter, "neutral")}:       Frase
             
-            -> kitchen_moon_feedback -> 
+
         
 
             + (earth1)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
@@ -118,7 +118,7 @@
                 -> glyph_choice_manager(true, airC)->
             -  
         
-        {charTag(ThirdCharacter, "neutral")}:       Frase
+        {charTag(FourthCharacter, "neutral")}:       Frase
     
             + \ {charTag(PG, "neutral")}:        Fuoco
                 -> glyph_choice_manager(false, fireC)->
@@ -140,7 +140,7 @@
     
             -
         
-        {charTag(ThirdCharacter, "neutral")}:       Frase
+        {charTag(FourthCharacter, "neutral")}:       Frase
         
             + (earth2)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeAdjective = "onesta"
@@ -167,7 +167,7 @@
                 -> glyph_choice_manager(true, fireC)->
             -      
         
-        {charTag(ThirdCharacter, "neutral")}:       Frase
+        {charTag(FourthCharacter, "neutral")}:       Frase
 
             + \ {charTag(PG, "neutral")}:         Spirito
                 -> glyph_choice_manager(false, aetherC)->
@@ -187,13 +187,13 @@
             -
         {
             - contentsKitchen has Bat:
-                {charTag(ThirdCharacter, "neutral")}:       Questo pipistrello mi sta spaventando.
+                {charTag(FourthCharacter, "neutral")}:       Questo pipistrello mi sta spaventando.
 
             - else:
-                {charTag(ThirdCharacter, "neutral")}:       Carini gli insetti ma vorrei non finissero nel nostro veganissimo piatto.
+                {charTag(FourthCharacter, "neutral")}:       Carini gli insetti ma vorrei non finissero nel nostro veganissimo piatto.
         }
 
-        {charTag(ThirdCharacter, "neutral")}:       Frase
+        {charTag(FourthCharacter, "neutral")}:       Frase
         
             + (water3)\ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                 ~ kitchen_recipeComplement = "con brodo del terrore"
@@ -224,7 +224,7 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
     
-        {charTag(ThirdCharacter, "neutral")}:       Frase
+        {charTag(FourthCharacter, "neutral")}:       Frase
         
             + \ {charTag(PG, "neutral")}:         Aria
                 -> glyph_choice_manager(false, airC)->
@@ -243,9 +243,9 @@
             + \ {charTag(PG, "neutral")}:         Spirito
                 -> glyph_choice_manager(false, aetherC)->
             -    
-        {charTag(ThirdCharacter, "neutral")}:       Frase
+        {charTag(FourthCharacter, "neutral")}:       Frase
             
-            -> kitchen_moon_feedback -> 
+
         
 
             + (earth1)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
@@ -272,7 +272,7 @@
                 -> glyph_choice_manager(true, airC)->
             -  
         
-        {charTag(ThirdCharacter, "neutral")}:       Frase
+        {charTag(FourthCharacter, "neutral")}:       Frase
     
             + \ {charTag(PG, "neutral")}:        Fuoco
                 -> glyph_choice_manager(false, fireC)->
@@ -294,7 +294,7 @@
     
             -
         
-        {charTag(ThirdCharacter, "neutral")}:       Frase
+        {charTag(FourthCharacter, "neutral")}:       Frase
         
             + (earth2)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeAdjective = "onesta"
@@ -321,7 +321,7 @@
                 -> glyph_choice_manager(true, fireC)->
             -      
         
-        {charTag(ThirdCharacter, "neutral")}:       Frase
+        {charTag(FourthCharacter, "neutral")}:       Frase
 
             + \ {charTag(PG, "neutral")}:         Spirito
                 -> glyph_choice_manager(false, aetherC)->
@@ -341,13 +341,13 @@
             -
         {
             - contentsKitchen has Bat:
-                {charTag(ThirdCharacter, "neutral")}:       Questo pipistrello mi sta spaventando.
+                {charTag(FourthCharacter, "neutral")}:       Questo pipistrello mi sta spaventando.
 
             - else:
-                {charTag(ThirdCharacter, "neutral")}:       Carini gli insetti ma vorrei non finissero nel nostro veganissimo piatto.
+                {charTag(FourthCharacter, "neutral")}:       Carini gli insetti ma vorrei non finissero nel nostro veganissimo piatto.
         }
 
-        {charTag(ThirdCharacter, "neutral")}:       Frase
+        {charTag(FourthCharacter, "neutral")}:       Frase
         
             + (water3)\ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                 ~ kitchen_recipeComplement = "con brodo del terrore"
@@ -380,7 +380,7 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
 
 
-                {charTag(ThirdCharacter, "neutral")}:       Frase
+                {charTag(FourthCharacter, "neutral")}:       Frase
         
             + \ {charTag(PG, "neutral")}:         Aria
                 -> glyph_choice_manager(false, airC)->
@@ -399,9 +399,9 @@
             + \ {charTag(PG, "neutral")}:         Spirito
                 -> glyph_choice_manager(false, aetherC)->
             -    
-        {charTag(ThirdCharacter, "neutral")}:       Frase
+        {charTag(FourthCharacter, "neutral")}:       Frase
             
-            -> kitchen_moon_feedback -> 
+
         
 
             + (earth1)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
@@ -428,7 +428,7 @@
                 -> glyph_choice_manager(true, airC)->
             -  
         
-        {charTag(ThirdCharacter, "neutral")}:       Frase
+        {charTag(FourthCharacter, "neutral")}:       Frase
     
             + \ {charTag(PG, "neutral")}:        Fuoco
                 -> glyph_choice_manager(false, fireC)->
@@ -450,7 +450,7 @@
     
             -
         
-        {charTag(ThirdCharacter, "neutral")}:       Frase
+        {charTag(FourthCharacter, "neutral")}:       Frase
         
             + (earth2)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeAdjective = "onesta"
@@ -477,7 +477,7 @@
                 -> glyph_choice_manager(true, fireC)->
             -      
         
-        {charTag(ThirdCharacter, "neutral")}:       Frase
+        {charTag(FourthCharacter, "neutral")}:       Frase
 
             + \ {charTag(PG, "neutral")}:         Spirito
                 -> glyph_choice_manager(false, aetherC)->
@@ -497,13 +497,13 @@
             -
         {
             - contentsKitchen has Bat:
-                {charTag(ThirdCharacter, "neutral")}:       Questo pipistrello mi sta spaventando.
+                {charTag(FourthCharacter, "neutral")}:       Questo pipistrello mi sta spaventando.
 
             - else:
-                {charTag(ThirdCharacter, "neutral")}:       Carini gli insetti ma vorrei non finissero nel nostro veganissimo piatto.
+                {charTag(FourthCharacter, "neutral")}:       Carini gli insetti ma vorrei non finissero nel nostro veganissimo piatto.
         }
 
-        {charTag(ThirdCharacter, "neutral")}:       Frase
+        {charTag(FourthCharacter, "neutral")}:       Frase
         
             + (water3)\ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                 ~ kitchen_recipeComplement = "con brodo del terrore"
@@ -531,12 +531,12 @@
     
     //La chiusura è comune, sempre per ridurre il rischio di errori
     = fourth_ingredient_dispatcher
-    {charTag(ThirdCharacter, "neutral")}:       Ma {player_name}, qui a me sembra tutto pronto, non trovi?
+    {charTag(FourthCharacter, "neutral")}:       Ma {player_name}, qui a me sembra tutto pronto, non trovi?
     
         {
             - backpack_findedGifts == (): 
                 {charTag(TheWitch, witch_state())}:   <i>{player_name} non possiede alcun ingrediente speciale.</i>
-                    -> at_table_with_third_char
+                    -> at_table_with_fourth_char
                 
             - else:
                 -> add_ingredient
@@ -557,24 +557,24 @@
                         -> grimoire_greenhouse_gifts_and_ingredient ->
 
                         //Dopo di che associo la scelta fatta alla PNG
-                        ~ kitchen_thirdCharExtraIngredient = grimoire_chosenPlant
+                        ~ kitchen_fourthCharExtraIngredient = grimoire_chosenPlant
                         //E svuoto la variabile del grimorio
                         ~ grimoire_chosenPlant = ()
                         //E poi chiamo la funzione per aggiornare i valori
-                        ~ object_value_for_PNG(kitchen_thirdCharExtraIngredient, Kitchen, ThirdCharacter)
+                        ~ object_value_for_PNG(kitchen_fourthCharExtraIngredient, Kitchen, FourthCharacter)
                         //E il nome dell'ingrediente
-                        ~ extra_ingredient_name(kitchen_thirdCharExtraIngredient)
+                        ~ extra_ingredient_name(kitchen_fourthCharExtraIngredient)
                     
                 + \ {charTag(PG, "neutral")}:         <i>Non aggiungo altro.
                 -
                 
-            {charTag(ThirdCharacter, "neutral")}:       Andiamo a mangiare, ama!
+            {charTag(FourthCharacter, "neutral")}:       Andiamo a mangiare, ama!
 
-                -> at_table_with_third_char
+                -> at_table_with_fourth_char
 
 
 
-=== at_table_with_third_char
+=== at_table_with_fourth_char
     -> grimoire_storylets_updater -> 
 
     ~ temp charNameOne = translator(thirdChar_ActualName)
@@ -583,30 +583,30 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive= translator(fifthChar_ActualName)
 
-    ~ move_entity(CookingWithThirdCharOBJ, Kitchen)
-    ~ move_entity(EatingWithThirdCharOBJ, Kitchen)
+    ~ move_entity(CookingWithFourthCharOBJ, Kitchen)
+    ~ move_entity(EatingWithFourthCharOBJ, Kitchen)
     ~ temp piatto = kitchen_tempRecipeName
     ~ recipe_name_creator()
-    ~ recipe_name_storage(ThirdCharacter)
+    ~ recipe_name_storage(FourthCharacter)
 
-    {charTag(ThirdCharacter, "neutral")}:       È stato divertente cucinare assieme, {player_name}.
+    {charTag(FourthCharacter, "neutral")}:       È stato divertente cucinare assieme, {player_name}.
 
         {
-            -cooking_with_third_char.third_theme:
-                {charTag(ThirdCharacter, "neutral")}:       E non mi facevo certe domande da molto.
+            -cooking_with_fourth_char.first_theme:
+                {charTag(FourthCharacter, "neutral")}:       E non mi facevo certe domande da molto.
 
-            -cooking_with_third_char.second_theme:
-                {charTag(ThirdCharacter, "neutral")}:       E non avevo mai pensato fino in fondo al discorso del salvare il mondo etc etc.
+            -cooking_with_fourth_char.second_theme:
+                {charTag(FourthCharacter, "neutral")}:       E non avevo mai pensato fino in fondo al discorso del salvare il mondo etc etc.
             
-            -cooking_with_third_char.third_theme:
-                {charTag(ThirdCharacter, "neutral")}:       E discutere di creatività.
+            -cooking_with_fourth_char.third_theme:
+                {charTag(FourthCharacter, "neutral")}:       E discutere di creatività.
 
         }
-    {charTag(ThirdCharacter, "neutral")}:       E poi questo {piatto}!
-    {charTag(ThirdCharacter, "neutral")}:       Spacca, non trovi?
+    {charTag(FourthCharacter, "neutral")}:       E poi questo {piatto}!
+    {charTag(FourthCharacter, "neutral")}:       Spacca, non trovi?
     
         {
-            - kitchen_thirdCharExtraIngredientReaction != notReaction:
+            - kitchen_fourthCharExtraIngredientReaction != notReaction:
                 -> extra_ing_feedback
             
             - else:
@@ -623,17 +623,17 @@
         
         // Qui verranno fatti commenti diversi a seconda che l'ingrediente sarà apprezzato o meno.
             {
-                - kitchen_thirdCharExtraIngredientReaction == goodReaction:
+                - kitchen_fourthCharExtraIngredientReaction == goodReaction:
                     -> good_reaction
                 
-                - kitchen_thirdCharExtraIngredientReaction == badReaction:
+                - kitchen_fourthCharExtraIngredientReaction == badReaction:
                     -> bad_reaction
                 
-                - kitchen_thirdCharExtraIngredientReaction == mehReaction:
+                - kitchen_fourthCharExtraIngredientReaction == mehReaction:
                     -> meh_reaction
                 
                 - else:
-                    ERROR: non abbiamo un valore valido di kitchen_thirdCharExtraIngredientReaction, che è uguale a {kitchen_thirdCharExtraIngredientReaction}.
+                    ERROR: non abbiamo un valore valido di kitchen_fourthCharExtraIngredientReaction, che è uguale a {kitchen_fourthCharExtraIngredientReaction}.
             }
 
         
@@ -644,12 +644,12 @@
                 ~ temp charNameFour= translator(fourthChar_ActualName)
             
                         
-                        -> kitchen_moon_feedback -> 
+            
 
-                    {charTag(ThirdCharacter, "neutral")}:       Aggiungere {ingredientTranslator(kitchen_thirdCharExtraIngredient)} è stato un tocco geniale.
+                    {charTag(FourthCharacter, "neutral")}:       Aggiungere {ingredientTranslator(kitchen_fourthCharExtraIngredient)} è stato un tocco geniale.
                     {
                         - kitchen_firstCharExtraIngredient == universalIngredient:
-                            {charTag(ThirdCharacter, "neutral")}:       AGGIUNGI RICORDO IMPORTANTE DI BOCCALE.
+                            {charTag(FourthCharacter, "neutral")}:       AGGIUNGI RICORDO IMPORTANTE DI BOCCALE.
                     }
                         @animation:RewriterBook
 
@@ -662,9 +662,9 @@
                 ~ temp charNameFour= translator(fourthChar_ActualName)
               
 
-                        -> kitchen_moon_feedback -> 
+            
 
-                    {charTag(ThirdCharacter, "neutral")}:       Aggiungere {ingredientTranslator(kitchen_thirdCharExtraIngredient)} è stata una scelta.
+                    {charTag(FourthCharacter, "neutral")}:       Aggiungere {ingredientTranslator(kitchen_fourthCharExtraIngredient)} è stata una scelta.
         
                         -> relationship_feedback
             
@@ -676,9 +676,9 @@
                 ~ temp charNameFour= translator(fourthChar_ActualName)
             
                         
-                        -> kitchen_moon_feedback -> 
+            
 
-                    {charTag(ThirdCharacter, "neutral")}:       L'aggiunta di {ingredientTranslator(kitchen_thirdCharExtraIngredient)} mi ha confusa.
+                    {charTag(FourthCharacter, "neutral")}:       L'aggiunta di {ingredientTranslator(kitchen_fourthCharExtraIngredient)} mi ha confusa.
           
                         -> relationship_feedback
             
@@ -686,53 +686,53 @@
         
     = relationship_feedback
         -> achievements_onGame_statusUpdate_GM ->
-        {charTag(ThirdCharacter, "neutral")}:       Comunque {player_name}, stavo pensando alla nostra conversazione qui, assieme.
+        {charTag(FourthCharacter, "neutral")}:       Comunque {player_name}, stavo pensando alla nostra conversazione qui, assieme.
         
         //Prima di tutto chiamo la funzione per il calcolo dello stato della relazione
-        ~ affinity_calc(ThirdCharacter)
+        ~ affinity_calc(FourthCharacter)
         //Così poi posso dare il feedback
 
         {
-            - thirdChar_relationshipStatus == negative:
-                {charTag(ThirdCharacter, "neutral")}:       Credo che la risposta sia no.
+            - fourthChar_relationshipStatus == negative:
+                {charTag(FourthCharacter, "neutral")}:       Credo che la risposta sia no.
 
-                    ~ grimoire_thirdChar += grimThirdCharKitchenNegativeReaction
+                    ~ grimoire_fourthChar += grimFourthCharKitchenNegativeReaction
 
-            - thirdChar_relationshipStatus == neutral:
-                {charTag(ThirdCharacter, "neutral")}:       Credo che la risposta sia "{player_pronouns has him:rimandato|{player_pronouns has her:rimandata|rimandatə}} a settembre".
+            - fourthChar_relationshipStatus == neutral:
+                {charTag(FourthCharacter, "neutral")}:       Credo che la risposta sia "{player_pronouns has him:rimandato|{player_pronouns has her:rimandata|rimandatə}} a settembre".
 
-                    ~ grimoire_thirdChar += grimThirdCharKitchenNeutralReaction
+                    ~ grimoire_fourthChar += grimFourthCharKitchenNeutralReaction
 
-            - thirdChar_relationshipStatus == positive:
-                {charTag(ThirdCharacter, "neutral")}:       La risposta è sicuramente "sì".
+            - fourthChar_relationshipStatus == positive:
+                {charTag(FourthCharacter, "neutral")}:       La risposta è sicuramente "sì".
 
-                    ~ grimoire_thirdChar += grimThirdCharKitchenPositiveReaction
+                    ~ grimoire_fourthChar += grimFourthCharKitchenPositiveReaction
 
         }    
         
             
             
-            -> ending_cooking_with_third_char
+            -> ending_cooking_with_fourth_char
             
         
-=== ending_cooking_with_third_char
+=== ending_cooking_with_fourth_char
     ~ temp charNameOne = translator(thirdChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
 
     
-    {charTag(ThirdCharacter, "neutral")}:       Frase
+    {charTag(FourthCharacter, "neutral")}:       Frase
     
 
-                ~ move_entity(ThirdCharacter, Pond)
+                ~ move_entity(FourthCharacter, Pond)
                 ~ cooking_animations_off()
-                ~ kitchen_thirdCharCookingTogetherInvite = false
-                ~ kitchen_allChefs += ThirdCharacter
+                ~ kitchen_fourthCharCookingTogetherInvite = false
+                ~ kitchen_allChefs += FourthCharacter
                 ~ kitchen_kitchenOccupied = false
-            ~ update_glyphs(ThirdCharacter)
+            ~ update_glyphs(FourthCharacter)
             -> achievements_onGame_statusUpdate_GM ->
-            -> third_char_closing_storylet ->
+            -> fourth_char_closing_storylet ->
             -> main
 
 
@@ -745,60 +745,60 @@
  ----------------------------------*/
 
 
-=== third_char_cooking_tracker
+=== fourth_char_cooking_tracker
 //Lo lascio come knot e non come variabile perché potrebbe essermi utile (es: per attivare un suono che faccia sapere che c'è qualcunə in cucina)
-    {debug: passo per third_char_cooking_tracker.}
+    {debug: passo per fourth_char_cooking_tracker.}
     
     ->->
 
 
-=== third_char_cooking_alone
+=== fourth_char_cooking_alone
     ~ temp charNameOne = translator(thirdChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
 
-    {debug: passo per third_char_cooking_alone.}
+    {debug: passo per fourth_char_cooking_alone.}
     
         ~ cooking_animations_on()
         
-    {kitchen_thirdCharCookingTime:
+    {kitchen_fourthCharCookingTime:
 
         - 0:
-            {charTag(ThirdCharacter, "neutral")}:       {Voglio preparare il piatto preferito di mio padre.|Scusami {player_name}, ma sto cucinando.}
+            {charTag(FourthCharacter, "neutral")}:       {Voglio preparare il piatto preferito di mio padre.|Scusami {player_name}, ma sto cucinando.}
 
         - 1:
-            {charTag(ThirdCharacter, "neutral")}:       {Voglio preparare il piatto preferito di mio padre.|Scusami {player_name}, ma sto cucinando.}
+            {charTag(FourthCharacter, "neutral")}:       {Voglio preparare il piatto preferito di mio padre.|Scusami {player_name}, ma sto cucinando.}
             
         - 2:
-            {charTag(ThirdCharacter, "neutral")}:       {Potrei sostituire l'aneto con, uh, no, non una buona idea.|Perdonami {player_name}, ma sto cercando qualcosa che non mi avveleni.}
+            {charTag(FourthCharacter, "neutral")}:       {Potrei sostituire l'aneto con, uh, no, non una buona idea.|Perdonami {player_name}, ma sto cercando qualcosa che non mi avveleni.}
         
         - 3:
-            {charTag(ThirdCharacter, "neutral")}:       {Ricordati ragazza che cucinare non è una scusa per bere. Ma che gioia aver trovato del vinello. |Torna dopo {player_name}, devo, ehm, riflettere.}
+            {charTag(FourthCharacter, "neutral")}:       {Ricordati ragazza che cucinare non è una scusa per bere. Ma che gioia aver trovato del vinello. |Torna dopo {player_name}, devo, ehm, riflettere.}
             
         - 4:
-            {charTag(ThirdCharacter, "neutral")}:       {Quante possibilità ci sono che se caccio la mano nell'alveare della serra riesco a recuperare del miele?|{player_name}, ho un'idea stupida, torna dopo.}
+            {charTag(FourthCharacter, "neutral")}:       {Quante possibilità ci sono che se caccio la mano nell'alveare della serra riesco a recuperare del miele?|{player_name}, ho un'idea stupida, torna dopo.}
         
         - 5:
-            {charTag(ThirdCharacter, "neutral")}:       {Uh, questo sughino spacca. Mamma ne sarebbe orgogliosa.|{player_name}, ho bisogno di concentrazione, a dopo.}
+            {charTag(FourthCharacter, "neutral")}:       {Uh, questo sughino spacca. Mamma ne sarebbe orgogliosa.|{player_name}, ho bisogno di concentrazione, a dopo.}
     
         - 6:
-            {charTag(ThirdCharacter, "neutral")}:       {Sarà una buona idea avere tutti questi coltelli accessibili con il bimbo in giro in giro? Merda, stavo per tagliarmi. Forse sono io il problema, non lui.|{player_name}, faccio danni già da sola, torna tra un po'.}
+            {charTag(FourthCharacter, "neutral")}:       {Sarà una buona idea avere tutti questi coltelli accessibili con il bimbo in giro in giro? Merda, stavo per tagliarmi. Forse sono io il problema, non lui.|{player_name}, faccio danni già da sola, torna tra un po'.}
         
         - 7:
-            {charTag(ThirdCharacter, "neutral")}:       {Tocco finale, la crema di funghi. E ora lasciamo cuocere un po'. E ci beviamo un altro goccino.|{player_name}, resisti che ho quasi finito!}
+            {charTag(FourthCharacter, "neutral")}:       {Tocco finale, la crema di funghi. E ora lasciamo cuocere un po'. E ci beviamo un altro goccino.|{player_name}, resisti che ho quasi finito!}
         
         - else:
-            {charTag(ThirdCharacter, "neutral")}:       {Direi che ci siamo. Giusto la fiammata per restringere il brodo, ed è perfetta!|{player_name}, un attimo e ti lascio i fornelli, promesso.}
+            {charTag(FourthCharacter, "neutral")}:       {Direi che ci siamo. Giusto la fiammata per restringere il brodo, ed è perfetta!|{player_name}, un attimo e ti lascio i fornelli, promesso.}
     }
     
-    -> third_char_closing_storylet ->
+    -> fourth_char_closing_storylet ->
     -> main
 
 
 
 
-=== food_gift_third_char
+=== food_gift_fourth_char
 {debug: passo per food_gift_third_char.}
     ~ temp charNameOne = translator(thirdChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -806,7 +806,7 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
 
     
-    {charTag(ThirdCharacter, "neutral")}:       Frase
+    {charTag(FourthCharacter, "neutral")}:       Frase
    
             + \ {charTag(PG, "neutral")}:         Scelta acqua
                     -> glyph_choice_manager(false, waterC)->
@@ -829,5 +829,5 @@
                 
             -
     
-    -> third_char_closing_storylet ->
+    -> fourth_char_closing_storylet ->
     ->->

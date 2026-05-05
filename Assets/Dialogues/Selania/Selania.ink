@@ -146,12 +146,6 @@
     INCLUDE Grimoire\ThirdLevels\FifthCharacter.ink
 
     
-
-
-    
-    
-    
-    
     
 //Bedroom
     INCLUDE Bedroom\Bedroom.ink
@@ -194,6 +188,8 @@
     INCLUDE Kitchen\FirstCharFoodChat.ink
     INCLUDE Kitchen\SecondCharFoodChat.ink
     INCLUDE Kitchen\ThirdCharFoodChat.ink
+    INCLUDE Kitchen\FourthCharFoodChat.ink
+    INCLUDE Kitchen\FifthCharFoodChat.ink
 
 //Library
     INCLUDE Library\Library.ink

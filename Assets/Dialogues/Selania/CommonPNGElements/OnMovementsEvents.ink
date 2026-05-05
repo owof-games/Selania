@@ -638,3 +638,129 @@ VAR letters_doggoPause = false
 
 
 
+    //QuartaPNG
+        {
+            - kitchen_fourthCharHasCooked == false && kitchen_kitchenOccupied == false && grimoire_fourthChar has grimFourthCharOne && (kitchen_cookingAloneCoolDown == 0) && fourthChar_storyStatus == story_storyStarted:
+                {debug_kitchen: le condizioni per far cucinare Nonna da sola sono valide.}
+                    ~ kitchen_fourthCharIsCooking = true
+                    ~ move_entity(FourthCharacter, Kitchen)
+                    ~ kitchen_kitchenOccupied = true
+                    ~ cooking_animations_on()
+                    
+        }
+        
+        //Gestione tempi di cucina autonoma di PNG3.
+        {debug: il valore di kitchen_fourthCharCookingTime è {kitchen_fourthCharCookingTime}}
+        {debug: il valore di kitchen_fourthCharIsCooking è {kitchen_fourthCharIsCooking}}
+        {
+            - kitchen_fourthCharIsCooking == true:
+            {debug_kitchen: Nonna sta cucinando da solo.}
+                {
+                
+                    - kitchen_fourthCharCookingTime < kitchen_fourthCharCookingMaxTime:
+                        ~ kitchen_fourthCharCookingTime ++
+                        {debug_kitchen: Nonna cucina da sola da {kitchen_fourthCharCookingTime}.}
+                    
+                    - else:
+                       ~ kitchen_fourthCharIsCooking = false
+                       ~ kitchen_fourthCharHasCooked = true
+                       ~ move_entity(FourthCharacter, Pond)
+                       //Attivo il cooldown, così altre png non vanno subito a cucinare da sole
+                        ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
+                       //E poi sposto gli elementi decorativi in cucina
+                       ~ move_entity(FourthCharCookingAloneOBJ, Kitchen)
+                       ~ kitchen_kitchenOccupied = false
+                       ~ cooking_animations_off()
+                       {debug_kitchen: Nonna ha finito di cucinare da solo}
+                }
+
+        }
+
+        //Gestione attesa in cucina di PNG3 se invitato a cucinare
+        {   
+            - kitchen_fourthCharCookingTogetherInvite == true:
+            {debug_kitchen: Nonna ci aspetta in cucina}
+            
+            {
+                - kitchen_fourthCharCookingTogetherWaiting < kitchen_fourthCharCookingMAXTogetherWaiting:
+                    ~ kitchen_fourthCharCookingTogetherWaiting ++
+                     {debug_kitchen: Nonna ci aspetta in cucina da {kitchen_fourthCharCookingTogetherWaiting}.}
+                
+                - else:
+                   ~ kitchen_fourthCharCookingTogetherInvite = false
+                   ~ kitchen_fourthCharCookingTogetherWaiting = 0
+                   ~ move_entity(FourthCharacter, Pond)
+                   ~ kitchen_kitchenOccupied = false
+                   {debug_kitchen: Nonna ha smesso di aspettarci in cucina.}
+            }
+        }
+        
+        //Diminuzione del cooldown 
+        {
+            - kitchen_cookingAloneCoolDown > 0:
+                ~ kitchen_cookingAloneCoolDown --
+        }
+
+
+     //QuintaPNG
+        {
+            - kitchen_fifthCharHasCooked == false && kitchen_kitchenOccupied == false && grimoire_fifthChar has grimFifthCharOne && (kitchen_cookingAloneCoolDown == 0) && fifthChar_storyStatus == story_storyStarted:
+                {debug_kitchen: le condizioni per far cucinare Boccale da solo sono valide.}
+                    ~ kitchen_fifthCharIsCooking = true
+                    ~ move_entity(FifthCharacter, Kitchen)
+                    ~ kitchen_kitchenOccupied = true
+                    ~ cooking_animations_on()
+                    
+        }
+        
+        //Gestione tempi di cucina autonoma di PNG3.
+        {debug: il valore di kitchen_fifthCharCookingTime è {kitchen_fifthCharCookingTime}}
+        {debug: il valore di kitchen_fifthCharIsCooking è {kitchen_fifthCharIsCooking}}
+        {
+            - kitchen_fifthCharIsCooking == true:
+            {debug_kitchen: Boccale sta cucinando da solo.}
+                {
+                
+                    - kitchen_fifthCharCookingTime < kitchen_fifthCharCookingMaxTime:
+                        ~ kitchen_fifthCharCookingTime ++
+                        {debug_kitchen: boccale cucina da solo da {kitchen_fifthCharCookingTime}.}
+                    
+                    - else:
+                       ~ kitchen_fifthCharIsCooking = false
+                       ~ kitchen_fifthCharHasCooked = true
+                       ~ move_entity(FifthCharacter, Pond)
+                       //Attivo il cooldown, così altre png non vanno subito a cucinare da sole
+                        ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
+                       //E poi sposto gli elementi decorativi in cucina
+                       ~ move_entity(FifthCharCookingAloneOBJ, Kitchen)
+                       ~ kitchen_kitchenOccupied = false
+                       ~ cooking_animations_off()
+                       {debug_kitchen: boccale ha finito di cucinare da solo}
+                }
+
+        }
+
+        //Gestione attesa in cucina di PNG3 se invitato a cucinare
+        {   
+            - kitchen_fifthCharCookingTogetherInvite == true:
+            {debug_kitchen: boccale ci aspetta in cucina}
+            
+            {
+                - kitchen_fifthCharCookingTogetherWaiting < kitchen_fifthCharCookingMAXTogetherWaiting:
+                    ~ kitchen_fifthCharCookingTogetherWaiting ++
+                     {debug_kitchen: boccale ci aspetta in cucina da {kitchen_fifthCharCookingTogetherWaiting}.}
+                
+                - else:
+                   ~ kitchen_fifthCharCookingTogetherInvite = false
+                   ~ kitchen_fifthCharCookingTogetherWaiting = 0
+                   ~ move_entity(FifthCharacter, Pond)
+                   ~ kitchen_kitchenOccupied = false
+                   {debug_kitchen: boccale ha smesso di aspettarci in cucina.}
+            }
+        }
+        
+        //Diminuzione del cooldown 
+        {
+            - kitchen_cookingAloneCoolDown > 0:
+                ~ kitchen_cookingAloneCoolDown --
+        }
