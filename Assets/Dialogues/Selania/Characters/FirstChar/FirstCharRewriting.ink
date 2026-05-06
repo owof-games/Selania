@@ -52,7 +52,7 @@
         - 
             -> first_char_closing_storylet ->
 
-        {charTag(FirstCharacter, "sad")}:               Quanto si può sperare di essere felici, a questo mondo?
+        {charTag(FirstCharacter, "sad")}:               A volte vorrei lasciare che il mondo scegliesse al posto mio.
 
             + \ {charTag(PG, "neutral")}:               Che ne dici se riscriviamo assieme la tua storia?
                 -> rewriting
