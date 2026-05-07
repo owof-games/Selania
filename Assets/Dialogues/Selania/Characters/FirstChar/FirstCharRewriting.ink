@@ -72,19 +72,10 @@
                                                         Direi che dopo tutti i pipponi che ti ho tirato, è giunto il momento di fare questa roba.
                                                         Chissà cosa accadrà!
 
-        //PASSAGGI DI PREPARAZIONE
-            //Prima di tutto chiamo la funzione per il calcolo dello stato della relazione
-                ~ affinity_calc(FirstCharacter)
-            //"Trasformo" la relazione in inchiostro
-                ~ fromRelationshipToInk(FirstCharacter)
-            //Mando ai feedback
-                ~ firstAffinityFeedback()
-            //Arriva il commento della strega
-                ~ inkLevel(FirstCharacter)
-            //Salvo il massimo di inchiostro raggiunto con la personaggia
-                ~ maxInkLevelUpdater(FirstCharacter)
-            //Vado a svuotare i contatori di colore, così son tranquilla.
-                ~ storage_glyphs(FirstCharacter)
+            //Funzione di preparazione alla riscrittura
+            ~  rewriting_prep(FirstCharacter)
+
+            
             //E poi a seconda dello stato di inchiostro, mi sposto sulla domanda prevista    
                 {
                     - firstChar_InkLevel == ink_empty:
@@ -476,14 +467,12 @@
         }
         {charTag(FirstCharacter, "neutral")}:           Quante cose a cui pensare, ama.
 
-            //Prima chiamo il moltiplicatore di colori, così che comunque le scelte fatte qui abbiano un impatto maggiore.
-                ~  glyph_modifier(FirstCharacter, firstChar_glyphVariation)
             
-            //Poi aggiorniamo i colori, così il valore complessivo conta per la scelta del nome
-                ~ update_glyphs(FirstCharacter)     
-     
-            //E infine genero il nome
-                ~ newName(FirstCharacter)
+            
+            //E andiamo a cambiare il nome
+                ~ rewriting_end(FirstCharacter)
+
+
                 -> naming
                 
     = naming

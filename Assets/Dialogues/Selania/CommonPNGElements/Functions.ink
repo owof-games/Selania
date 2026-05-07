@@ -24,6 +24,8 @@ VAR relationshipIndicatorPositiveValue = 4
 VAR relationshipIndicatorEnthusiasticValue = 8
 
 
+
+//Funzione di calcolo dell'affinità tra PNG e PG
 === function affinity_calc(PNG)
 ~ temp relationshipIndicator = 0
 ~ temp relationshipStatus = neutral
@@ -79,7 +81,70 @@ VAR relationshipIndicatorEnthusiasticValue = 8
 }
 
 
+//Preparazione alla riscrittura
+=== function rewriting_prep(PNG)
+{debug: passo per rewriting_prep.}
 
+            //Prima di tutto chiamo la funzione per il calcolo dello stato della relazione
+                ~ affinity_calc(PNG)
+            //"Trasformo" la relazione in inchiostro
+                ~ fromRelationshipToInk(PNG)
+            //Mando ai feedback
+            {PNG:
+                - FirstCharacter:
+                    ~ firstAffinityFeedback()
+
+                - SecondCharacter:
+                    ~ secondAffinityFeedback()
+
+                - ThirdCharacter:
+                    ~ thirdAffinityFeedback()
+
+                - FourthCharacter:
+                     ~ fourthAffinityFeedback()
+
+                - FifthCharacter:
+                     ~ fifthAffinityFeedback()               
+
+            }
+
+            //Arriva il commento della strega
+                ~ inkLevel(PNG)
+            //Salvo il massimo di inchiostro raggiunto con la personaggia
+                ~ maxInkLevelUpdater(PNG)
+            //Vado a svuotare i contatori di colore, così son tranquilla.
+                ~ storage_glyphs(PNG)
+
+
+
+=== function rewriting_end(PNG)
+~ temp char_glyphVariation = 0
+    {PNG:
+        - FirstCharacter:
+            ~ char_glyphVariation = firstChar_glyphVariation
+
+        - SecondCharacter:
+            ~ char_glyphVariation = secondChar_glyphVariation
+
+        - ThirdCharacter:
+            ~ char_glyphVariation = thirdChar_glyphVariation
+
+        - FourthCharacter:
+            ~ char_glyphVariation = fourthChar_glyphVariation
+
+        - FifthCharacter:
+            ~ char_glyphVariation = fifthChar_glyphVariation
+
+    }
+
+        //Prima chiamo il moltiplicatore di colori, così che comunque le scelte fatte qui abbiano un impatto maggiore.
+            ~ glyph_modifier(PNG, char_glyphVariation)
+        
+        //Poi aggiorniamo i colori, così il valore complessivo conta per la scelta del nome
+            ~ update_glyphs(PNG)
+    
+        //E infine genero il nome
+            ~ newName(PNG)
 
 
 === endingPNGstory(PNG)

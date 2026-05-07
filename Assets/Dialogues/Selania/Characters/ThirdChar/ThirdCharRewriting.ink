@@ -37,13 +37,10 @@
 
             Va bene.
 
-            //Avvio aggiornamento relazione + commento PNG + commento strega
-                -> thirdAffinityCalc ->
-                
-            //Vado a svuotare i contatori di colore, così son tranquilla.
-                ~ storage_glyphs(ThirdCharacter)
+            //Funzione di preparazione alla riscrittura
+                ~  rewriting_prep(ThirdCharacter)
             
-            //E poi a thirda dello stato di inchiostro, mi sposto sulla domanda prevista      
+            //E poi a seconda dello stato di inchiostro, mi sposto sulla domanda prevista      
                 {
                     - thirdChar_InkLevel == ink_empty:
                         -> ending
@@ -277,14 +274,8 @@
 
     {charTag(ThirdCharacter, "neutral")}:           Frase.  
 
-            //Prima chiamo il moltiplicatore di colori, così che comunque le scelte fatte qui abbiano un impatto maggiore.
-                ~ glyph_modifier(ThirdCharacter, thirdChar_glyphVariation)
-            
-            //Poi aggiorniamo i colori, così il valore complessivo conta per la scelta del nome
-                ~ update_glyphs(ThirdCharacter)   
-     
-            //E infine genero il nome
-                ~ newName(ThirdCharacter)
+            //E andiamo a cambiare il nome
+                ~ rewriting_end(ThirdCharacter)
 
             -> naming
                 

@@ -1029,7 +1029,7 @@
 //     = rewriting
 //     ~ temp charNameOne = translator(firstChar_ActualName)
 //             //Valuto lo stato della relazione 
-//                 -> firstAffinityCalc ->
+//                 -> firstrewriting_prep ->
             
 //             //Vado a svuotare i contatori di colore, così son tranquilla.
 //                 -> storage_colors(FirstCharacter) ->

@@ -66,11 +66,8 @@
                                                     Ma davvero TANTISSSSSSIMO!
     {charTag(SecondCharacter, "energy")}:           E sai cosa penso di te?
 
-        //Avvio aggiornamento relazione + commento PNG + commento strega
-            -> secondAffinityCalc ->
-            
-        //Vado a svuotare i contatori di colore, così son tranquilla.
-            ~ storage_glyphs(SecondCharacter)
+        //Funzione di preparazione alla riscrittura
+            ~  rewriting_prep(SecondCharacter)
         
         //E poi a seconda dello stato di inchiostro, mi sposto sulla domanda prevista      
             {
@@ -478,14 +475,9 @@
 }
     {charTag(SecondCharacter, "neutral")}:      Cavoli, quante parole che ho in testa!        
 
-            //Prima chiamo il moltiplicatore di colori, così che comunque le scelte fatte qui abbiano un impatto maggiore.
-                ~ glyph_modifier(SecondCharacter, secondChar_glyphVariation)
-            
-            //Poi aggiorniamo i colori, così il valore complessivo conta per la scelta del nome
-                ~ update_glyphs(SecondCharacter)   
-     
-            //E infine genero il nome
-                ~ newName(SecondCharacter)
+            //E andiamo a cambiare il nome
+                ~ rewriting_end(SecondCharacter)
+                
                 ->naming
                 
     

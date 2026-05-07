@@ -143,32 +143,8 @@
                                                         
                                                         ----------------------------------*/
 
-=== secondAffinityCalc ===
-{debug: passo per secondAffinityCalc.}
-//Questo mi serve per aggiornare il valore di affinità.
-//Viene chiamato a ridosso della riscrittura per definire lo stato di inchiostro
-
-    //Prima di tutto chiamo la funzione per il calcolo dello stato della relazione
-        ~ affinity_calc(SecondCharacter)
-
-    //"Trasformo" la relazione in inchiostro
-        ~ fromRelationshipToInk(SecondCharacter)
-    
-    //Mando ai feedback
-        -> secondAffinityFeedback ->
-    
-    //Arriva il commento della strega
-        ~ inkLevel(SecondCharacter)
-    
-    //Salvo il massimo di inchiostro raggiunto con la personaggia
-        ~ maxInkLevelUpdater(SecondCharacter)
-
-    //Esco dal flusso 
-    ->-> 
-
-
 //Abbiamo un feedback da parte della PNG sul suo stato prima di confessare (che brutta parola)        
-=== secondAffinityFeedback
+=== function secondAffinityFeedback()
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -241,8 +217,7 @@
                                                                             Mi dice che mi hai ascoltato, ed è una cosa bella.
         }
     
-
-->->        
+ 
 
 
 

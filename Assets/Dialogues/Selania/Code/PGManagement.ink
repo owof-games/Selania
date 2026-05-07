@@ -559,14 +559,14 @@
             }
             {
                 - temp_PGAir >= maxValue:
-                        ~ possibileTreeStatus = airStatus
+                        ~ possibileTreeStatus += airStatus
             }
             {
                 - temp_PGEarth >= maxValue:
                         ~ possibileTreeStatus += earthStatus
 
             } 
-            debug: La lista di possibili status in caso di pareggio è {possibileTreeStatus}.
+            {debug: La lista di possibili status in caso di pareggio è {possibileTreeStatus}.}
             //E infine ne prendo uno randomico dalla lista. 
                 
                 ~ chosenTreeStatus = LIST_RANDOM(possibileTreeStatus)

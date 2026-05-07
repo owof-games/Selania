@@ -112,28 +112,8 @@
                                                             FUNZIONI PER AFFINITA' E NOME
                                                         
                                                         ----------------------------------*/
-=== thirdAffinityCalc ===
-{debug: passo per thirdAffinityCalc.}
-//Questo mi serve per aggiornare il valore di affinità.
-//Viene chiamato a ridosso della riscrittura per definire lo stato di inchiostro
 
-    //Prima di tutto chiamo la funzione per il calcolo dello stato della relazione
-        ~ affinity_calc(ThirdCharacter)
 
-    //"Trasformo" la relazione in inchiostro
-        ~ fromRelationshipToInk(ThirdCharacter)
-    
-    //Mando ai feedback
-        ~ thirdAffinityFeedback()
-    
-    //Arriva il commento della strega
-        ~ inkLevel(ThirdCharacter)
-    
-    //Salvo il massimo di inchiostro raggiunto con la personaggia
-        ~ maxInkLevelUpdater(ThirdCharacter)
-
-    //Esco dal flusso 
-    ->-> 
 
 
 

@@ -112,32 +112,7 @@
                                                             FUNZIONI PER AFFINITA' E NOME
                                                         
                                                         ----------------------------------*/
-=== fourthAffinityCalc ===
-{debug: passo per fourthAffinityCalc.}
-//Questo mi serve per aggiornare il valore di affinità.
-//Viene chiamato a ridosso della riscrittura per definire lo stato di inchiostro
-
-    //Prima di tutto chiamo la funzione per il calcolo dello stato della relazione
-        ~ affinity_calc(FourthCharacter)
-
-    //"Trasformo" la relazione in inchiostro
-        ~ fromRelationshipToInk(FourthCharacter)
-    
-    //Mando ai feedback
-        -> fourthAffinityFeedback ->
-    
-    //Arriva il commento della strega
-        ~ inkLevel(FourthCharacter)
-    
-    //Salvo il massimo di inchiostro raggiunto con la personaggia
-        ~ maxInkLevelUpdater(FourthCharacter)
-
-    //Esco dal flusso 
-    ->-> 
-
-
-
-=== fourthAffinityFeedback
+=== function fourthAffinityFeedback()
 {debug: passo per fourthAffinityFeedback. Lo stato di inchiostro è {fourthChar_InkLevel}.}
 //Utilizziamo questa funzione per far fare alla PNG un commento esplicito sullo stato della relazione.
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -196,7 +171,7 @@
                                                                     Talco continua a mancarmi, ma con te mi sento come se fossimo parte da sempre della stessa band.
         }
 
-->->
+
 
 
 === fourth_char_closing_storylet ===

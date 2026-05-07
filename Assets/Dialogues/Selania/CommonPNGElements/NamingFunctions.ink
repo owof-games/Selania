@@ -107,27 +107,32 @@
             {debug: Il valore massimo raggiunto dai glifi è {maxValue}.}
 
             //Poi aggiungo alla lista dei potenziali generatori di nomi solo quei glifi che superano il valore medio delle scelte. 
+
             {
                 - temporaryAether >= maxValue:
-                        ~ possiblesMainGlyphs += aetherC
+                    ~ possiblesMainGlyphs += aetherC
             }
+
             {
                 - temporaryWater >= maxValue:
-                        ~ possiblesMainGlyphs += waterC
+                    ~ possiblesMainGlyphs += waterC
             }
+
             {
                 - temporaryFire >= maxValue:
-                        ~ possiblesMainGlyphs += fireC
+                    ~ possiblesMainGlyphs += fireC
             }
+
             {
                 - temporaryAir >= maxValue:
-                        ~ possiblesMainGlyphs = airC
+                    ~ possiblesMainGlyphs += airC
             }
+
             {
                 - temporaryEarth >= maxValue:
-                        ~ possiblesMainGlyphs += earthC
-
+                    ~ possiblesMainGlyphs += earthC
             } 
+
             {debug: La lista di possibili nomi in caso di pareggio è {possiblesMainGlyphs}.}
             //E infine ne prendo uno randomico dalla lista. Se dovesse essere vuota, ne assegno uno che ha senso con una cattiva relazione creata con lx png.
             {

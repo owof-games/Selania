@@ -37,11 +37,8 @@
 
             Va bene.
 
-            //Avvio aggiornamento relazione + commento PNG + commento strega
-                -> fourthAffinityCalc ->
-                
-            //Vado a svuotare i contatori di colore, così son tranquilla.
-                ~ storage_glyphs(FourthCharacter)
+            //Funzione di preparazione alla riscrittura
+                ~  rewriting_prep(FourthCharacter)
             
             //E poi a seconda dello stato di inchiostro, mi sposto sulla domanda prevista      
                 {
@@ -276,14 +273,8 @@
 
     {charTag(FourthCharacter, "neutral")}:           Frase.  
 
-            //Prima chiamo il moltiplicatore di colori, così che comunque le scelte fatte qui abbiano un impatto maggiore.
-                ~ glyph_modifier(FourthCharacter, fourthChar_glyphVariation)
-            
-            //Poi aggiorniamo i colori, così il valore complessivo conta per la scelta del nome
-                ~ update_glyphs(FourthCharacter)  
-     
-            //E infine genero il nome
-                ~ newName(FourthCharacter)
+            //E andiamo a cambiare il nome
+                ~ rewriting_end(FourthCharacter)
 
             ->naming
                 

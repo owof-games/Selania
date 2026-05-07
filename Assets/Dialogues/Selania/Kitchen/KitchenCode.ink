@@ -291,7 +291,7 @@
             ~ thirdChar_fire = thirdChar_fire + kitchen_storageFire
                 ~ kitchen_storageFire = 0
             ~ thirdChar_relationshipIndicator = thirdChar_relationshipIndicator + kitchen_storageRelationshipIndicatore 
-                ~ kitchen_storageRelationshipIndicatore = 0                  
+                ~ kitchen_storageRelationshipIndicatore = 0               
 
     - cookingCompanion == FourthCharacter:
             ~ fourthChar_aether = fourthChar_aether + kitchen_storageAether
