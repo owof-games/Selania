@@ -1,7 +1,7 @@
 //Cognome/alias S - Z
 
 === salvo
-<b>Il cancello</b> di Salvo (he/him).<N>Instagram: @about_to_tore.
+<b>Il cancello</b> di Salvo (he/him).Instagram: @about_to_tore.
     //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
         {
             - library_unreadStories has Salvo:
@@ -13,20 +13,20 @@
     
     
 
-    Il sole stava tramontando ad occidente e illuminava con i suoi raggi obliqui le chiome degli ulivi.<N>Liliana osservava il viale, dritto, che separava la casa dal cancello; al di là la strada era deserta.<N>Silenziosa, come casa sua.<N>Ogni tanto Artù e Marcella miagolavano, cercando la sua attenzione, mentre lei osservava il mondo fuori: era felice quando richiamavano il suo sguardo, era come tornare a respirare. <N>La notte non dormiva più.
+    Il sole stava tramontando ad occidente e illuminava con i suoi raggi obliqui le chiome degli ulivi.Liliana osservava il viale, dritto, che separava la casa dal cancello; al di là la strada era deserta.Silenziosa, come casa sua.Ogni tanto Artù e Marcella miagolavano, cercando la sua attenzione, mentre lei osservava il mondo fuori: era felice quando richiamavano il suo sguardo, era come tornare a respirare. La notte non dormiva più.
     
-    Era arrabbiata, le mani le tremavano sul telefono, i pensieri non smettevano mai di tormentarla.<N>Era arrabbiata con la vita, con Dio.<N>Aveva paura.<N>Era da sola e tutti, tutti lo sapevano e se ne approfittavano: suo fratello, che era stato presente solo nei giorni subito dopo la morte di Alfredo e che poi era tornato alla sua vita di piaceri; suo zio, che aveva blaterato e blaterato di quanto fosse speciale Alfredo e poi aveva cercato di fregarla falciando l'erba e potando gli ulivi facendosi pagare almeno il doppio.<N>Chi te lo può fare sennò?
-    
-    
-    Aveva sputato e lei aveva ingoiato quella verità ed era rimasta in silenzio.<N>Era settembre e la notte non riusciva a interrompere i ricordi dell'ultimo anno con Alfredo, morto a gennaio: la malattia, il suo volto pallido, che avvizziva come una mela al sole, la paura di rimanere da sola, del futuro.<N>Di nuovo, dopo mesi, era comparso al cancello suo zio, le mani appoggiate alle barre di metallo.<N>Di suo fratello nemmeno l'ombra.<N>L'erba doveva essere falciata di nuovo e Liliana avrebbe voluto rispondere di no, ma lo lasciò fare e di nuovo pagò troppo. Ne aveva parlato con sua zia, la sorella di lui: è un porco, le aveva detto, dovresti chiudergli il cancello in faccia.
+    Era arrabbiata, le mani le tremavano sul telefono, i pensieri non smettevano mai di tormentarla.Era arrabbiata con la vita, con Dio.Aveva paura.Era da sola e tutti, tutti lo sapevano e se ne approfittavano: suo fratello, che era stato presente solo nei giorni subito dopo la morte di Alfredo e che poi era tornato alla sua vita di piaceri; suo zio, che aveva blaterato e blaterato di quanto fosse speciale Alfredo e poi aveva cercato di fregarla falciando l'erba e potando gli ulivi facendosi pagare almeno il doppio.Chi te lo può fare sennò?
     
     
-    Cosa avrebbe dovuto fare? Facile a dirsi, pensava, mentre la notte rimuginava.<N>Era sempre più stanca, sempre più arrabbiata e la rabbia sembrava attaccarsi alle pareti di casa, come la luce del sole e le ombre degli ulivi.<N>Aveva iniziato ad uscire e, lontano da casa, le sembrava come di vivere piccole parentesi di tranquillità, si sentiva leggera.<N>Il cimitero dove era sepolto Alfredo e la sua vita di prima erano un orizzonte non esplorato.<N>Era da sola.<N>A volte non più sola.<N>Durante i mesi invernali suo zio non venne: meglio così.
+    Aveva sputato e lei aveva ingoiato quella verità ed era rimasta in silenzio.Era settembre e la notte non riusciva a interrompere i ricordi dell'ultimo anno con Alfredo, morto a gennaio: la malattia, il suo volto pallido, che avvizziva come una mela al sole, la paura di rimanere da sola, del futuro.Di nuovo, dopo mesi, era comparso al cancello suo zio, le mani appoggiate alle barre di metallo.Di suo fratello nemmeno l'ombra.L'erba doveva essere falciata di nuovo e Liliana avrebbe voluto rispondere di no, ma lo lasciò fare e di nuovo pagò troppo. Ne aveva parlato con sua zia, la sorella di lui: è un porco, le aveva detto, dovresti chiudergli il cancello in faccia.
     
     
-    Vennero l'idraulico però e l'elettricista e lei si sentiva presa in giro, una donna sola incapace di fare ciò che voleva, un peso le si chiudeva sul petto. Perché non riusciva ad essere indipendente?<N>Un giorno suo zio tornò.<N>Lei ne aveva parlato con le sue amiche – le nuove, le vecchie -, ne aveva parlato con la casa.<N>Avrebbe fatto da sola.<N>Avrebbe detto di no, “No”, disse a suo zio quel giorno, “farò da sola, troverò qualcun altro”.<N>Gli occhi di suo zio divennero due fessure, “Chi ti aiuterebbe?” ringhiò “Non c'è nessuno qua!”.
+    Cosa avrebbe dovuto fare? Facile a dirsi, pensava, mentre la notte rimuginava.Era sempre più stanca, sempre più arrabbiata e la rabbia sembrava attaccarsi alle pareti di casa, come la luce del sole e le ombre degli ulivi.Aveva iniziato ad uscire e, lontano da casa, le sembrava come di vivere piccole parentesi di tranquillità, si sentiva leggera.Il cimitero dove era sepolto Alfredo e la sua vita di prima erano un orizzonte non esplorato.Era da sola.A volte non più sola.Durante i mesi invernali suo zio non venne: meglio così.
     
-    Ma Liliana non voleva cedere: No, ripeteva, No, scelgo io da sola.<N>Lo zio stava per aprire il cancello.<N>Liliana tremava: storie di famiglia raccontavano del passato violento di quell'uomo.<N>Liliana era stanca, tremava di rabbia, urlo di nuovo e più forte “NO” mentre lui apriva il cancello che di scatto si chiuse, tranciando di netto le mani dello zio.<N>Qualche giorno dopo Liliana andò al cimitero. Era una giornata di sole: in lontananza la casa sua e di Alfredo brillava sulle chiome degli ulivi. 
+    
+    Vennero l'idraulico però e l'elettricista e lei si sentiva presa in giro, una donna sola incapace di fare ciò che voleva, un peso le si chiudeva sul petto. Perché non riusciva ad essere indipendente?Un giorno suo zio tornò.Lei ne aveva parlato con le sue amiche – le nuove, le vecchie -, ne aveva parlato con la casa.Avrebbe fatto da sola.Avrebbe detto di no, “No”, disse a suo zio quel giorno, “farò da sola, troverò qualcun altro”.Gli occhi di suo zio divennero due fessure, “Chi ti aiuterebbe?” ringhiò “Non c'è nessuno qua!”.
+    
+    Ma Liliana non voleva cedere: No, ripeteva, No, scelgo io da sola.Lo zio stava per aprire il cancello.Liliana tremava: storie di famiglia raccontavano del passato violento di quell'uomo.Liliana era stanca, tremava di rabbia, urlo di nuovo e più forte “NO” mentre lui apriva il cancello che di scatto si chiuse, tranciando di netto le mani dello zio.Qualche giorno dopo Liliana andò al cimitero. Era una giornata di sole: in lontananza la casa sua e di Alfredo brillava sulle chiome degli ulivi. 
 
     //Check per achievement racconti
     -> achievements_onGame_statusUpdate_RM ->
@@ -41,7 +41,7 @@
 
 
 === maura
-    <b>Polvere</b> di Maura (she/they).<N>Instagram: @maura_sacca<N>Trigger warning: violenza fisica.
+    <b>Polvere</b> di Maura (she/they).Instagram: @maura_sacca Trigger warning: violenza fisica.
        
         +  \ {charTag(PG, "neutral")}:       <i>Inizio la lettura.
     //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
@@ -60,13 +60,13 @@
     
     
     
-    Me lo chiede per l'ennesima volta, dopo i miei già innumerevoli no.<N>A questo punto faccio uscire tutta la mia rabbia urlando fino a perdere il respiro.<N>Tirando fuori tutte le cose che mi ero tenuta dentro.<N>E come tutte le volte che provo ad alzare la voce e a farmi sentire lui mi guarda come se fossi pazza.<N>E sì, lo sono.<N>Sono pazza.<N>Quella pazzia che quando fuoriesce non puoi più controllare.
+    Me lo chiede per l'ennesima volta, dopo i miei già innumerevoli no.A questo punto faccio uscire tutta la mia rabbia urlando fino a perdere il respiro.Tirando fuori tutte le cose che mi ero tenuta dentro.E come tutte le volte che provo ad alzare la voce e a farmi sentire lui mi guarda come se fossi pazza.E sì, lo sono.Sono pazza.Quella pazzia che quando fuoriesce non puoi più controllare.
 
-    Tutte le frasi che avevo cercato di dire con calma, a mezza bocca in quegli anni passati, adesso mi fanno bruciare i polmoni, mi rompono la voce.<N>Pur non avendo più fiato continuo a urlare cercando di prendere il respiro per non morire di asfissia <N>Ad ogni urlo divento sempre più grande mentre lui si rimpicciolisce.<N>Sono enorme mentre lui è diventato piccolo, così piccolo che posso stringerlo nel palmo della mia mano.<N>Sento che ha paura della mia pazzia.
+    Tutte le frasi che avevo cercato di dire con calma, a mezza bocca in quegli anni passati, adesso mi fanno bruciare i polmoni, mi rompono la voce.Pur non avendo più fiato continuo a urlare cercando di prendere il respiro per non morire di asfissia Ad ogni urlo divento sempre più grande mentre lui si rimpicciolisce.Sono enorme mentre lui è diventato piccolo, così piccolo che posso stringerlo nel palmo della mia mano.Sento che ha paura della mia pazzia.
     
-    E fa bene.<N>La mia mano comincia a stringersi attorno a lui, facendo attenzione a non coprirgli la faccia perché non voglio perdermi neanche un secondo della sua sofferenza.<N>Prova a parlare, a chiedermi pietà, e io rido.<N>La malvagità stampata sul mio volto - Perché non provi a chiedermelo di nuovo? -.
+    E fa bene.La mia mano comincia a stringersi attorno a lui, facendo attenzione a non coprirgli la faccia perché non voglio perdermi neanche un secondo della sua sofferenza.Prova a parlare, a chiedermi pietà, e io rido.La malvagità stampata sul mio volto - Perché non provi a chiedermelo di nuovo? -.
     
-    Lui apre la bocca.<N>Urlo più forte - CHIEDIMELO ANCORA! -<N>Nel momento in cui prova di nuovo a prendere fiato lo stringo con entrambe le mani e lo faccio diventare polvere.<N>Raccolgo il cumulo rimasto nella conca della mia mano e lo soffio al vento.<N>Lo guardo volare via con il sorriso sul volto mentre ritorno alle mie dimensioni normali.<N>Mi accorgo che anche la mia pazzia sta volando via.<N>La riacciuffo immediatamente “Tu resti qua con me.
+    Lui apre la bocca.Urlo più forte - CHIEDIMELO ANCORA! -Nel momento in cui prova di nuovo a prendere fiato lo stringo con entrambe le mani e lo faccio diventare polvere.Raccolgo il cumulo rimasto nella conca della mia mano e lo soffio al vento.Lo guardo volare via con il sorriso sul volto mentre ritorno alle mie dimensioni normali.Mi accorgo che anche la mia pazzia sta volando via.La riacciuffo immediatamente “Tu resti qua con me.
 
     //Check per achievement racconti
     -> achievements_onGame_statusUpdate_RM ->
@@ -82,7 +82,7 @@
 
 
 === simo
-<b>SCP</b> di Simo (they/he).<N>Instagram: @il_radioattivo<N>Trigger violenza, deadnaming, morte.
+<b>SCP</b> di Simo (they/he).Instagram: @il_radioattivo Trigger warning: violenza, deadnaming, morte.
         +  \ {charTag(PG, "neutral")}:       <i>Inizio la lettura.
 //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
@@ -101,20 +101,20 @@
     
 
 
-    Da anni studio gli SCP. Avete sicuramente presente, dai, quegli eventi paranormali che in qualche modo connettono il nostro mondo a un mondo alternativo, diverso, alieno - questo in realtà non è molto chiaro.<N>Come appaiono? Come oggetti o luoghi che in qualche modo non si comportano come dovrebbero.<N>Da un rasoio elettrico che si accende automaticamente quando lo si direziona verso nord a una sedia che va in autocombustione quando un sente il suono di un tram.<N>Ecco, in questo mio studio, in realtà, ho sempre finito per imbattermi in SCP legati in qualche modo a specifiche emozioni.
+    Da anni studio gli SCP. Avete sicuramente presente, dai, quegli eventi paranormali che in qualche modo connettono il nostro mondo a un mondo alternativo, diverso, alieno - questo in realtà non è molto chiaro.Come appaiono? Come oggetti o luoghi che in qualche modo non si comportano come dovrebbero.Da un rasoio elettrico che si accende automaticamente quando lo si direziona verso nord a una sedia che va in autocombustione quando un sente il suono di un tram.Ecco, in questo mio studio, in realtà, ho sempre finito per imbattermi in SCP legati in qualche modo a specifiche emozioni.
 
-    Tipo lo specchio in grado di percepire se chi lo osserva prova amore(facendone sparire il riflesso), oppure lo stereo che suonava La Cucaracha quando percepiva invidia nell'aria.<N>Però, senza dubbio, l'SCP più strano che ho incontrato è stata una porta. Fra l'altro è stato l'unico<N>SCP con cui ho avuto a che fare in grado di parlare.<N>"<i>Ciao.</i>"<N>"Uh, ciao. Chi sei?"<N>"<i>Io.</i>"<N>"Io chi?"<N>"<i>La porta.</i>"<N>"In che senso “la porta”?"
+    Tipo lo specchio in grado di percepire se chi lo osserva prova amore(facendone sparire il riflesso), oppure lo stereo che suonava La Cucaracha quando percepiva invidia nell'aria.Però, senza dubbio, l'SCP più strano che ho incontrato è stata una porta. Fra l'altro è stato l'unicoSCP con cui ho avuto a che fare in grado di parlare."<i>Ciao.</i>""Uh, ciao. Chi sei?""<i>Io.</i>""Io chi?""<i>La porta.</i>""In che senso “la porta”?"
 
-    "<i>La porta. La porta. Vedi molte altre porte di fronte a te o nel resto di questo corridoio?</i>"<N>"Beh, ehm, no, cioè, nel senso."<N>"<i>Ti ricordo che dovresti essere tu l'umanoide in grado di parlare, non io. Io teoricamente dovrei essere solo una porta di legno massello.</i>"<N>"Hai ragione, scusami."<N>"<i>Ahahah! Assurdo. È la prima volta che chiedi scusa a una porta, vero?</i>"<N>"Sì. Oddio, beh, in realtà no."<N>"<i>No?</i>"<N>"No. Ero a casa di mia nonna. Un pugno, aveva di nuovo sbagliato a chiamarmi per nome."<N>"<i>Capisco.</i>"
+    "<i>La porta. La porta. Vedi molte altre porte di fronte a te o nel resto di questo corridoio?</i>""Beh, ehm, no, cioè, nel senso.""<i>Ti ricordo che dovresti essere tu l'umanoide in grado di parlare, non io. Io teoricamente dovrei essere solo una porta di legno massello.</i>""Hai ragione, scusami.""<i>Ahahah! Assurdo. È la prima volta che chiedi scusa a una porta, vero?</i>""Sì. Oddio, beh, in realtà no.""<i>No?</i>""No. Ero a casa di mia nonna. Un pugno, aveva di nuovo sbagliato a chiamarmi per nome.""<i>Capisco.</i>"
 
-    "Curioso." <N>"<i>Che cosa?</i>"<N>"Non ho mai chiesto scusa a mia nonna per la porta."<N>"<i>C'è da capire se si meritava le tue scuse.</i>"<N>"No. Ma non importa. Credo. Dopo quella volta l'ho rivista solo una volta. Al suo funerale."<N>"<i>Capisco. Ma hai chiesto scusa alla porta.</i>"<N>"Sì. Non c'entrava nulla, si era solo trovata davanti a me nel momento sbagliato."<N>"<i>Eh, ogni tanto noi porte lo facciamo.</i>"<N>"Di mettervi nel mezzo."
+    "Curioso." "<i>Che cosa?</i>""Non ho mai chiesto scusa a mia nonna per la porta.""<i>C'è da capire se si meritava le tue scuse.</i>""No. Ma non importa. Credo. Dopo quella volta l'ho rivista solo una volta. Al suo funerale.""<i>Capisco. Ma hai chiesto scusa alla porta.</i>""Sì. Non c'entrava nulla, si era solo trovata davanti a me nel momento sbagliato.""<i>Eh, ogni tanto noi porte lo facciamo.</i>""Di mettervi nel mezzo."
 
-    "<i>Sì, ma non soltanto.</i>"<N>"Che intendi?"<N>"<i>Intendo che siamo custodi. Non di oggetti, tesori, averi, persone. Nah.</i>"<N>"Ok. Custodi di cosa, allora?"<N>"<i>Pensaci: com'eri prima di quel pugno alla porta? No, non rispondere, lo so già: fuggivi dal mondo, dalle persone, dal giudizio e da chissà che altro.</i>"<N>"Già."
+    "<i>Sì, ma non soltanto.</i>""Che intendi?""<i>Intendo che siamo custodi. Non di oggetti, tesori, averi, persone. Nah.</i>""Ok. Custodi di cosa, allora?""<i>Pensaci: com'eri prima di quel pugno alla porta? No, non rispondere, lo so già: fuggivi dal mondo, dalle persone, dal giudizio e da chissà che altro.</i>""Già."
     
     
-    "<i>Poi hai incontrato quella porta. Un pugno, un singolo pugno. Da allora tutto è cambiato, vero?</i>"<N>"Già."<N>"<i>Ecco di cosa siamo custodi. Del vostro io, della vostra realtà, della vostra identità. Della vostra rabbia."<N>"Rabbia? È questo che sei?"<N>"<i>Cos'è? Percepisco forse della delusione?</i>"<N>"No, no, anzi. Solo che, boh, ti immaginavo più violenta."<N>"<i>Sì, sì, ci credo, guarda. Magari ti immaginavi che la rabbia fosse, che so, un fucile d'assalto, vero?"
+    "<i>Poi hai incontrato quella porta. Un pugno, un singolo pugno. Da allora tutto è cambiato, vero?</i>""Già.""<i>Ecco di cosa siamo custodi. Del vostro io, della vostra realtà, della vostra identità. Della vostra rabbia.""Rabbia? È questo che sei?""<i>Cos'è? Percepisco forse della delusione?</i>""No, no, anzi. Solo che, boh, ti immaginavo più violenta.""<i>Sì, sì, ci credo, guarda. Magari ti immaginavi che la rabbia fosse, che so, un fucile d'assalto, vero?"
     
-    "E invece..."<N>"E invece sei una porta decisamente pacata."<N>"<i>Ma sì, che senso avrebbe che io urlassi, strepitassi, sbattessi? Cambierebbe forse qualcosa del mio essere porta? Nah, per nulla.</i>"<N>"Invece..."<N>"<i>Invece se ad aprirmi, sbattermi, rompermi, sfondarmi, sei tu...</i>"<N>"Cosa troverò al di là?"<N>"<i>Al di là di me?</i>"<N>"Sì."<N>"<i>Dai un'occhiata.</i>"
+    "E invece...""E invece sei una porta decisamente pacata.""<i>Ma sì, che senso avrebbe che io urlassi, strepitassi, sbattessi? Cambierebbe forse qualcosa del mio essere porta? Nah, per nulla.</i>""Invece...""<i>Invece se ad aprirmi, sbattermi, rompermi, sfondarmi, sei tu...</i>""Cosa troverò al di là?""<i>Al di là di me?</i>""Sì.""<i>Dai un'occhiata.</i>"
 
     //Check per achievement racconti
     -> achievements_onGame_statusUpdate_RM ->
@@ -130,7 +130,7 @@
             
 
 === letizia_vaccarella
-<b>Dodici stelle</b> di Letizia Vaccarella (she/her).<N>Instagram: @aidoruinquantumland<N>Trigger warning: depressione.
+<b>Dodici stelle</b> di Letizia Vaccarella (she/her).Instagram: @aidoruinquantumland Trigger warning: depressione.
         +  \ {charTag(PG, "neutral")}:       <i>Inizio la lettura.
 //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
@@ -148,22 +148,22 @@
     
     
     
-    Jodorowsky diceva che qualsiasi guarigione richiede la disobbedienza perché alla base di ogni malattia c'è un divieto.<N>E se da un lato mi dico ma che cazzo ne sa Jodorowsky, lui leggeva i tarocchi di Marsiglia, io sono da Rider-Waite anzi da Waite-Smith; dall'altra, mentre conto le stelle disegnate sulla corona dell'imperatrice, inizio a pensare alla mia malattia. <N>Credo di averla da sempre, o comunque non mi ricordo di non averla avuta.<N>Di solito i sintomi sono blandi e facili da tenere sotto controllo, per questo guardandomi non diresti mai che sono malata.<N>Ma lei c'è, è sempre lì.
+    Jodorowsky diceva che qualsiasi guarigione richiede la disobbedienza perché alla base di ogni malattia c'è un divieto.E se da un lato mi dico ma che cazzo ne sa Jodorowsky, lui leggeva i tarocchi di Marsiglia, io sono da Rider-Waite anzi da Waite-Smith; dall'altra, mentre conto le stelle disegnate sulla corona dell'imperatrice, inizio a pensare alla mia malattia. Credo di averla da sempre, o comunque non mi ricordo di non averla avuta.Di solito i sintomi sono blandi e facili da tenere sotto controllo, per questo guardandomi non diresti mai che sono malata.Ma lei c'è, è sempre lì.
     
     
-    Sottopelle, come un fiume nero che scorre in profondità, nascosto agli occhi del mondo, anche a quelli che provano a vedermi per davvero anzi, sopratutto a quelli.<N>A volte si manifesta con un peso nel petto, altre con un tremore nelle mani, ma il sintomo più frequente è il silenzio.<N>Il silenzio che mi avvolge e mi soffoca, che mi impone di abbassare lo sguardo, di sorridere quando non voglio, di accettare tutto con pacata rassegnazione.<N>Osservo la carta tra le dita.<N>L'Imperatrice mi fissa con il suo volto sereno, la corona di stelle che le adorna il capo.<N>Conta le stelle, mi dico.<N>Una, due, tre… Dodici.
+    Sottopelle, come un fiume nero che scorre in profondità, nascosto agli occhi del mondo, anche a quelli che provano a vedermi per davvero anzi, sopratutto a quelli.A volte si manifesta con un peso nel petto, altre con un tremore nelle mani, ma il sintomo più frequente è il silenzio.Il silenzio che mi avvolge e mi soffoca, che mi impone di abbassare lo sguardo, di sorridere quando non voglio, di accettare tutto con pacata rassegnazione.Osservo la carta tra le dita.L'Imperatrice mi fissa con il suo volto sereno, la corona di stelle che le adorna il capo.Conta le stelle, mi dico.Una, due, tre… Dodici.
     
-    Come i mesi dell'anno, come le ore di un orologio che segna l'eterno sospeso che è la mia vita.<N>Lei è la creatrice, la Demetra risolta, la dea feconda. <N>Ma io? Io mi sento sterile di parole, di possibilità, soffocata da una prigione senza sbarre.<N>Di nuovo da un medico che non sa dirmi cosa ho.<N>“È stress,” dice. “Forse ansia, forse un problema psicosomatico. Ha provato a perdere qualche chilo?”.<N>Non può vedere il veleno che mi scorre dentro, che si accumula in ogni “sì” detto quando volevo dire “no”, in ogni “va tutto bene”, mi ripeto che dovrei andare da una medica.
+    Come i mesi dell'anno, come le ore di un orologio che segna l'eterno sospeso che è la mia vita.Lei è la creatrice, la Demetra risolta, la dea feconda. Ma io? Io mi sento sterile di parole, di possibilità, soffocata da una prigione senza sbarre.Di nuovo da un medico che non sa dirmi cosa ho.“È stress,” dice. “Forse ansia, forse un problema psicosomatico. Ha provato a perdere qualche chilo?”.Non può vedere il veleno che mi scorre dentro, che si accumula in ogni “sì” detto quando volevo dire “no”, in ogni “va tutto bene”, mi ripeto che dovrei andare da una medica.
     
-    Torno a casa dai tarocchi, Waite-Smith naturalmente, mescolo le carte 7 volte, le divido per 3 volte in 3 mazzi e per tre volte ne rifaccio un mazzo unico.<N>Chiudo gli occhi, faccio scorrere il mazzo sotto le dita, il pollice accarezza ogni singola lama, cercando di leggere ogni fibra della carta.<N>Non ho una domanda precisa in testa, solo un vago sentire ma so che ormai io e loro ci capiamo anche senza parlare.<N>Lo sento, quel brivido leggero e quel tremore nella pancia, le dita si bloccano su una carta, la giro, la Forza.
-    
-    
-    La donna accarezza il leone, la sua mano sfiora le fauci aperte, ma non c'è paura nel suo volto.<N>Mi domando se anche lei abbia trattenuto la rabbia, per quanto tempo? Avrà dovuto imparare a domarla<N>?Giro una carta, il Diavolo, la lancio via. Non voglio più domarla. Voglio lasciarla uscire.<N>Un'altra carta, la Morte.<N>Inizio a sperimentare un nuovo sintomo: il calore.<N>Un fuoco che mi cresce dentro, che mi riempie il petto e le mani.
+    Torno a casa dai tarocchi, Waite-Smith naturalmente, mescolo le carte 7 volte, le divido per 3 volte in 3 mazzi e per tre volte ne rifaccio un mazzo unico.Chiudo gli occhi, faccio scorrere il mazzo sotto le dita, il pollice accarezza ogni singola lama, cercando di leggere ogni fibra della carta.Non ho una domanda precisa in testa, solo un vago sentire ma so che ormai io e loro ci capiamo anche senza parlare.Lo sento, quel brivido leggero e quel tremore nella pancia, le dita si bloccano su una carta, la giro, la Forza.
     
     
-    Non è febbre, non è dolore.<N>È qualcosa di diverso, qualcosa che non ho mai sentito prima.<N>E allora faccio qualcosa che non ho mai fatto: urlo.<N>Non un grido di paura, non un lamento, ma un urlo vero.<N>Forte, vibrante, un'onda che rompe il silenzio e spazza via anni di obbedienza.<N>E mentre urlo, sento che qualcosa dentro di me cambia.
+    La donna accarezza il leone, la sua mano sfiora le fauci aperte, ma non c'è paura nel suo volto.Mi domando se anche lei abbia trattenuto la rabbia, per quanto tempo? Avrà dovuto imparare a domarla?Giro una carta, il Diavolo, la lancio via. Non voglio più domarla. Voglio lasciarla uscire.Un'altra carta, la Morte.Inizio a sperimentare un nuovo sintomo: il calore.Un fuoco che mi cresce dentro, che mi riempie il petto e le mani.
     
-    Il fiume nero smette di scorrere in segreto e si trasforma in un incendio che mi brucia, ma non mi distrugge. Mi purifica.<N>Giro il mazzo, l'ultima carta, il Matto.<N>Il viaggiatore con il fagotto sulla spalla, il piede sospeso sull'orlo del precipizio.<N>Un salto nel vuoto, un atto di fede.<N>Lo guardo e sorrido, per la prima volta da mesi, da anni o forse da sempre, è un sorriso che è tutto mio ed è solo per me.
+    
+    Non è febbre, non è dolore.È qualcosa di diverso, qualcosa che non ho mai sentito prima.E allora faccio qualcosa che non ho mai fatto: urlo.Non un grido di paura, non un lamento, ma un urlo vero.Forte, vibrante, un'onda che rompe il silenzio e spazza via anni di obbedienza.E mentre urlo, sento che qualcosa dentro di me cambia.
+    
+    Il fiume nero smette di scorrere in segreto e si trasforma in un incendio che mi brucia, ma non mi distrugge. Mi purifica.Giro il mazzo, l'ultima carta, il Matto.Il viaggiatore con il fagotto sulla spalla, il piede sospeso sull'orlo del precipizio.Un salto nel vuoto, un atto di fede.Lo guardo e sorrido, per la prima volta da mesi, da anni o forse da sempre, è un sorriso che è tutto mio ed è solo per me.
 
     //Check per achievement racconti
     -> achievements_onGame_statusUpdate_RM ->
@@ -187,15 +187,15 @@
 //                 ~ library_readStories += QueerginiaWolf
 //                  -> refresh_book_lists ->
 //         }
-// <b>Giallo</b> di Queerginia Wolf/Marco Spelgatti (she/he/they).<N>Instagram: @queerginiawolf
+// <b>Giallo</b> di Queerginia Wolf/Marco Spelgatti (she/he/they).Instagram: @queerginiawolf
 //         
 //         
 
-//     Non hai fatto nulla di male.<N>Lanciavi i tuoi fiori nell'aria, il polline rendeva il sentiero giallo per settimane.<N>Accoglievi gli uccelli, offrivi i tuoi vecchi rami ai cani felici che correvano sopra le tue radici. <N>Tenevi ferma la terra, assorbivi l'acqua.<N>Trasformavi il sole in ombra, in aria.<N>Stamani sono passata e ti hanno tagliato.<N>Ci hanno messo tre ore e due minuti a cancellare i tuoi decenni.<N>A segare i tuoi rami fioriti, il tuo tronco su cui le formiche scendevano e salivano.
+//     Non hai fatto nulla di male.Lanciavi i tuoi fiori nell'aria, il polline rendeva il sentiero giallo per settimane.Accoglievi gli uccelli, offrivi i tuoi vecchi rami ai cani felici che correvano sopra le tue radici. Tenevi ferma la terra, assorbivi l'acqua.Trasformavi il sole in ombra, in aria.Stamani sono passata e ti hanno tagliato.Ci hanno messo tre ore e due minuti a cancellare i tuoi decenni.A segare i tuoi rami fioriti, il tuo tronco su cui le formiche scendevano e salivano.
     
-//     Nel parco è rimasto un vuoto più ampio dello spazio che hai mai occupato.<N>L'ho fatto senza pensarci: ho posato la mano a terra.<N>Ho pregato.<N>E tutto quello che vedevo ha bruciato.<N>Ma.<N>Stasera, tornando niente fuoco, niente fuliggine. <N>Ma vicino alla tua carcassa il cane e io abbiamo notato un pollone.<N>Tenace e piccolino teso verso l'alto, i rami ancora gemme, la corteccia morbida e rigata.
+//     Nel parco è rimasto un vuoto più ampio dello spazio che hai mai occupato.L'ho fatto senza pensarci: ho posato la mano a terra.Ho pregato.E tutto quello che vedevo ha bruciato.Ma.Stasera, tornando niente fuoco, niente fuliggine. Ma vicino alla tua carcassa il cane e io abbiamo notato un pollone.Tenace e piccolino teso verso l'alto, i rami ancora gemme, la corteccia morbida e rigata.
     
-//     Le macchine che ti hanno tagliato moriranno.<N>Spariranno gli uomini che le hanno comandate.<N>Ma tu, di notte in notte, riprenderai a lanciare i tuoi fiori nell'aria.<N>A rendere gialla la strada verso casa.
+//     Le macchine che ti hanno tagliato moriranno.Spariranno gli uomini che le hanno comandate.Ma tu, di notte in notte, riprenderai a lanciare i tuoi fiori nell'aria.A rendere gialla la strada verso casa.
 
 //Check per achievement racconti
 //    -> achievements_onGame_statusUpdate_RM ->
@@ -209,3 +209,42 @@
 //             -> main
     
     
+
+    === jae
+    <b>Chiarirsi, divertirsi</b> di Jae (she/they).Instagram: @just.anearthling Content warning: afobia, unicorn
+       
+        +  \ {charTag(PG, "neutral")}:       <i>Inizio la lettura.
+    //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
+            {
+                - library_unreadStories has Jae:
+                    ~ library_unreadStories -= Jae
+                    ~ library_readStories += Jae
+                     -> refresh_book_lists ->
+            }  
+        + {library_unreadStories has Jae} \ {charTag(PG, "neutral")}:       <i>Per ora non me la sento di affrontare questo tema.
+                -> tempTW -> book_test_intro
+        + {library_unreadStories has Jae} \ {charTag(PG, "neutral")}:       <i>Non voglio più incontrare questa storia.
+            ~ library_unreadStories -= Jae
+                -> refresh_book_lists -> book_test_intro
+        -
+    
+    Il fumo delle nostre sigarette si mischia ai nostri baci, sul balcone della casa in cui abito in quel momento. Credo sia ottobre. Dopo avermi baciata ancora una volta mi guardi negli occhi. Una pausa, e poi: “Ok, dobbiamo chiarire un attimo”.
+    Io vado sempre nel panico quando c’è bisogno di chiarire. È giusto e utile e necessario, ma inevitabilmente una voce dentro di me mi prende la spalla e con occhi sgranati e una freddezza marmorea mi dice: “Ecco, hai visto? Hai sbagliato. Questa persona è a disagio, ti odia, ora ti dirà che sei stata una persona di merda, che le hai rovinato la vita, che non vuole più vederti”. Ma appunto, è utile e giusto e necessario chiarirsi, quindi tengo chiusi i lembi del buco che mi si è aperto nello stomaco e rispondo: “Certo, dimmi pure”.
+    “Allora, questa cosa, tra di noi, bisogna un attimo inquadrarla. Io forse, con le altre relazioni che ho in questo momento, sono pieno”. Una pausa. “Non me la sento di iniziare qualcosa di nuovo”. Perdo quasi la presa. “E poi, a prescindere, l’amore per me è al centro, se ho una relazione è perché mi innamoro. Forse tu non puoi capirlo, sicuramente non potresti darmi quello che mi serve, quindi ecco, meglio di no”.
+    Le mani lasciano andare i lembi, e le mie interiora si spargono sulle mattonelle del balcone. La voce mi dà una pacca sulla spalla: “Dai, dai, dai, ci è andata bene, ci è andata proprio bene. Non ci odia, non abbiamo fatto cazzate. Lo capisci: se è polisaturo è polisaturo. E se ha bisogno di una persona capace di provare le cose in un certo modo, beh, che ci puoi fare?”. No, no, ma certo, la polisaturazione, sacrosanta, anzi, riconoscerla è maturità. E sul mio essere aromantica c’è poco da dire, provo le cose in maniera diversa, e anche se io non mi sento in difetto, ci sta che sia così per l’altro, che non sia abbastanza.
+    Riesco quindi solo a dire: “Certo, capisco”. 
+    “Dai, dai, dai, è andata bene”. Lui sorride. “Sono contento che siamo riusciti a chiarirci. Poi ecco possiamo continuare ad interagire così, come ora. Te se vuoi esci con il mio ragazzo, e io posso giocare con te quando siamo tutti e tre assieme, ci divertiamo!”. 
+    Mi ci trovo bene con il suo ragazzo, siamo usciti una volta. Sono stata felice quando, un paio di settimane fa, in una notte fiorentina, è successa per la prima volta una cosa tra noi tre. Mi sono sentita parte di qualcosa che stava iniziando, che poteva andare da qualche parte, con lui. E con il suo ragazzo, che mi piace, ma forse non mi piace quanto lui, solo che, a maggior ragione ora, come faccio a dirlo?
+    Potrei esprimermi, dire come tutto questo mi faccia sentire un accessorio, un giocattolo, un mezzo per loro per sperimentare e validarsi. Ma le parole non le ho ancora trovate. Le troverò solo molto tempo dopo, quando sarò rimasta sola. Rientriamo, per raggiungere il suo ragazzo e per divertirci un’ultima volta assieme.
+
+    //Check per achievement racconti
+    -> achievements_onGame_statusUpdate_RM ->
+
+        +  \ {charTag(PG, "neutral")}:       <i>Vorrei leggere ancora.
+            
+           -> book_test_intro
+        +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
+            
+
+                     
+            -> main

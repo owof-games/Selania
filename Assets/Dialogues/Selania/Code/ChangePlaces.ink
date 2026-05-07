@@ -5,7 +5,7 @@
     + {are_two_entities_together(PG, FromTrainStopToBedroom)} [FromTrainStopToBedroom]
             ~ move_entity(PG, Bedroom)
             -> on_movement_events ->
-            -> bedroom
+                -> bedroom
     
     + {are_two_entities_together(PG, BedClosingGame) && (not debug_stochastic)} [BedClosingGame]
     

@@ -64,11 +64,13 @@ VAR letters_doggoPause = false
         - greenhouse_allCultivables == ():
             ~ greenhouse_allCultivables += greenhouse_cultivable
             ~ achievements_fullGreenhouse_maxValue = LIST_COUNT(greenhouse_allCultivables)
+            //ne aggiungo uno perché considero nel conteggio anche la pianta donata da Franco
             ~ achievements_fullGreenhouse_maxValue ++
     }
     //E per il libri
     {
         - library_allAchievementStories == ():
+            ~ library_unreadStories += library_allStories
             ~ library_allAchievementStories += library_unreadStories
             ~ achievements_goodReader_maxValue = LIST_COUNT(library_allAchievementStories)
     }
