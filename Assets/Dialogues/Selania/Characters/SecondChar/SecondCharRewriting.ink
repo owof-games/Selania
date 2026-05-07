@@ -95,7 +95,7 @@
 
         + \ {charTag(PG, "neutral")}:           Tua nonna ti ha insegnato a lottare: lotta anche tu!
             -> glyph_choice_manager(false, fireC)->
-                                                E ti ha insegnato a barare!
+        {charTag(PG, "neutral")}:           E ti ha insegnato a barare!
                                                 E a sputare nel caffè di chi ti fa male.
         {
             - grimoire_fifthChar has grimSecondCharMentorPeace:
@@ -106,7 +106,7 @@
         
         + \ {charTag(PG, "neutral")}:           I tuoi genitori sono infelici, {charNameTwo}, prova a comprenderli.
             -> glyph_choice_manager(false, waterC)->
-                                                Tutti i litigi, la fuga di tuo padre.
+        {charTag(PG, "neutral")}:               Tutti i litigi, la fuga di tuo padre.
                                                 Il modo in cui si arrabbia per tutto.
                                                 Le paure di tua mamma.
                                                 Sono cose che puoi capire, che vivi anche tu.                                                                    
@@ -118,7 +118,7 @@
                 
         + \ {charTag(PG, "neutral")}:           Tuo fratello però ha trovato qualcosa di bello anche in questo casino.
             -> glyph_choice_manager(false, earthC)->
-                                                Ci sono le sue statue, c'è il suo compagno.
+        {charTag(PG, "neutral")}:               Ci sono le sue statue, c'è il suo compagno.
         {
             -   grimoire_secondChar has grimSecondCharEleven:
                                                 E quando sei a casa sua, ti lascia sperimentare con le cose di casa.
@@ -130,7 +130,7 @@
                 
         + \ {charTag(PG, "neutral")}:           Anche se ti manca, la casa dei vecchi è un posto per farla stare bene.
                 -> glyph_choice_manager(false, airC)->
-                                                Una persona anziana ha bisogno di cure, {charNameTwo}.
+        {charTag(PG, "neutral")}:               Una persona anziana ha bisogno di cure, {charNameTwo}.
                                                 Di persone che le diano quello di cui ha bisogno.
                                                 È giusto che tu senta la sua mancanza.
                                                 Ma sarebbe la cosa giusta per lei, riportarla a casa?
@@ -141,7 +141,7 @@
 
         + \ {charTag(PG, "neutral")}:           Saper piangere ti rende forte, {charNameTwo}.
             -> glyph_choice_manager(false, aetherC)->
-                                                Tu tieni agli animali.
+        {charTag(PG, "neutral")}:               Tu tieni agli animali.
                                                 A tuo fratello.
                                                 Alla nonna.
         {
@@ -185,10 +185,10 @@
             -> glyph_choice_manager(false, earthC)->
     {
         - grimoire_secondChar has grimSecondCharKitchenThree:
-                                                L'hai detto anche mentre cucinavamo: non tutte le bugie sono uguali.
+    {charTag(PG, "neutral")}:                   L'hai detto anche mentre cucinavamo: non tutte le bugie sono uguali.
                                                 E che sei felice di inventare storie con tuo fratello.
     }    
-                                                Ti piace immaginare giornate diverse: prova a condividere questa cosa con nuove persone, facendoti nuovi amici.
+    {charTag(PG, "neutral")}:                   Ti piace immaginare giornate diverse: prova a condividere questa cosa con nuove persone, facendoti nuovi amici.
                                                 La tua testa è un bellissimo parco giochi: perché non condividerla con gli altri?
     {
         - grimoire_secondChar has grimSecondOpenLibrary:
@@ -197,7 +197,7 @@
                 
     + \ {charTag(PG, "neutral")}:               Tutto a questo mondo cambia. Anche un bambino cocciuto e bugiardo.
             -> glyph_choice_manager(false, airC)->
-                                                Quando sei arrivato qui hai litigato con {charNameFive}.
+        {charTag(PG, "neutral")}:               Quando sei arrivato qui hai litigato con {charNameFive}.
                                                 E mi hai detto molte bugie.
                                                 Ma hai anche chiesto scusa.
                                                 Puoi partire da questo per cambiare.
@@ -209,7 +209,7 @@
                 
     + \ {charTag(PG, "neutral")}:               La rabbia è parte della tua vita, della tua famiglia: trasformala.
             -> glyph_choice_manager(false, fireC)->
-                                                Come quando ti arrabbi perché gli animali stanno scomparendo.
+        {charTag(PG, "neutral")}:               Come quando ti arrabbi perché gli animali stanno scomparendo.
                                                 O perché papà tratta male nonna.
                                                 Puoi prendere quello che senti a farci qualcosa di buono per te e le persone che ami.
     {
@@ -220,12 +220,12 @@
                 
     + \ {charTag(PG, "neutral")}:               Ma non sei solo questo: sei gentile, sei curioso, sei divertente.
             -> glyph_choice_manager(false, waterC)->
-                                                Hai sviluppato un bel rapporto con {charNameOne}.
+        {charTag(PG, "neutral")}:               Hai sviluppato un bel rapporto con {charNameOne}.
                                                 Mi hai raccontato tante cose interessanti sugli animali.
                                                 Hai fatto amicizia con Franco.
      {
     - grimoire_fifthChar has grimSecondCharMentorPeace:
-                                                Hai fatto pace con {charNameFive}.
+        {charTag(PG, "neutral")}:               Hai fatto pace con {charNameFive}.
     }                                             
                                                 Ti sei preso le tue responsabilità.
                                                 Forse a volte sei violento.
@@ -234,7 +234,7 @@
                 
     + \ {charTag(PG, "neutral")}:               Eppure hai trovato il modo di fare pace con {charNameFive}.
             -> glyph_choice_manager(false, aetherC)->
-                                                Hai fatto lo sforzo di capirla.
+        {charTag(PG, "neutral")}:               Hai fatto lo sforzo di capirla.
                                                 E mi hai chiesto scusa più volte per le tue bugie.
                                                 Stai già cambiando, {charNameTwo}!
     -
@@ -267,7 +267,7 @@
     //renderla più interessante  
     + \ {charTag(PG, "neutral")}:               Eppure ci sono le associazioni che proteggono gli animali.
         -> glyph_choice_manager(false, aetherC)->
-                                                Come quelle di cui ti ha parlato la tua maestra.
+        {charTag(PG, "neutral")}:               Come quelle di cui ti ha parlato la tua maestra.
                                                 E la sua amica del canile.
     {
         - grimoire_secondChar has grimSecondCharTwelve:
@@ -276,7 +276,7 @@
 
     + \ {charTag(PG, "neutral")}:               Eppure tuo fratello ama il suo ragazzo.
         -> glyph_choice_manager(false, waterC)->
-                                                E ama te.
+        {charTag(PG, "neutral")}:               E ama te.
                                                 E fa in modo che possiate passare tanto tempo assieme.
                                                 Che tu possa avere uno spazio felice.
                                                 E così rende il mondo un po' meno orribile.
@@ -285,15 +285,15 @@
         -> glyph_choice_manager(false, fireC)->
         {
             - grimoire_secondChar has grimSecondCharEleven:
-                                                E quando sei a casa sua ti fa fare un sacco di esperimenti.
+            {charTag(PG, "neutral")}:           E quando sei a casa sua ti fa fare un sacco di esperimenti.
         }
-                                                Si è creato una nuova casa.
+            {charTag(PG, "neutral")}:           Si è creato una nuova casa.
                                                 Non si è fatto mettere i piedi in testa da nessuno.
                                                 E questo lo fai se pensi ci sia un futuro dove andare.
                 
     + \ {charTag(PG, "neutral")}:               Ma sai anche trovare la fantasia e la giocosità nel mondo.
         -> glyph_choice_manager(false, earthC)->
-                                                Sei arrivato in questo posto sconosciuto e invece di avere paura, ti sei messo a curiosare.
+         {charTag(PG, "neutral")}:              Sei arrivato in questo posto sconosciuto e invece di avere paura, ti sei messo a curiosare.
                                                 Ti sei fatto amico una rana parlante.
             {
                 - grimoire_secondChar has grimSecondCharDog:
@@ -307,7 +307,7 @@
     //renderla più interessante  
     + \ {charTag(PG, "neutral")}:               Tuo fratello ha scelto di aggiustare le cose che non vanno.
         -> glyph_choice_manager(false, airC)->
-                                                Vede le cose rotte e le ripara.
+        {charTag(PG, "neutral")}:               Vede le cose rotte e le ripara.
                                                 Quindi ci sono cose che si possono aggiustare.
                                                 Serve solo un meccanico per le cose che lo spaventano.
     -
@@ -340,36 +340,36 @@
             -> glyph_choice_manager(false, fireC)->
         {
             - grimoire_secondChar has grimSecondCharKitchenOne:
-                                                Un adulto che dice le cose come sono, come mi raccontavi cucinando.
+            {charTag(PG, "neutral")}:          Un adulto che dice le cose come sono, come mi raccontavi cucinando.
         }
         {
             - grimoire_secondChar has grimSecondCharKitchenTwo:
-                                                Essere furbo, come ti ha detto lei.
+            {charTag(PG, "neutral")}:               Essere furbo, come ti ha detto lei.
         }
-                                                E non farti mettere i piedi in testa da nessuna persona!
+            {charTag(PG, "neutral")}:               E non farti mettere i piedi in testa da nessuna persona!
                     
     
-        + \ {charTag(PG, "neutral")}:           Ma puoi essere un adulto curioso e studioso, come un po' già sei.
+        + \ {charTag(PG, "neutral")}:               Ma puoi essere un adulto curioso e studioso, come un po' già sei.
             -> glyph_choice_manager(false, airC)->
         {
             - grimoire_firstChar has grimFirstSecondChar:
-                                                Come quando hai detto a {charNameOne} che volevi scoprire dove vanno tutti i posti chiusi qui.
-                                                E come trovare le caramelle.
+            {charTag(PG, "neutral")}:               Come quando hai detto a {charNameOne} che volevi scoprire dove vanno tutti i posti chiusi qui.
+                                                    E come trovare le caramelle.
         }
-                                                E tutto quello che ora sai degli animali diventerà mille volte ancora di più.
+            {charTag(PG, "neutral")}:               E tutto quello che ora sai degli animali diventerà mille volte ancora di più.
 
         
         + \ {charTag(PG, "neutral")}:            Ma puoi essere un adulto in cerca di uno scopo più grande, come {charNameOne}.
             -> glyph_choice_manager(false, aetherC)->
         {
             - grimoire_secondChar has grimSecondCharKitchenThree:
-                                                Non uno di quegli adulti che fanno le cose perché devono, come raccontavi in cucina.
+            {charTag(PG, "neutral")}:               Non uno di quegli adulti che fanno le cose perché devono, come raccontavi in cucina.
         }
-                                                E trovare modi inaspettati di aiutare le altre persone, gli animali, il mondo.
+            {charTag(PG, "neutral")}:               E trovare modi inaspettati di aiutare le altre persone, gli animali, il mondo.
                 
         + \ {charTag(PG, "neutral")}:           Ma puoi essere un adulto che si prende cura delle persone, come {charNameFive}.
             -> glyph_choice_manager(false, waterC)->
-                                                E rendere più facile la vita all3 altr3.
+           {charTag(PG, "neutral")}:               E rendere più facile la vita all3 altr3.
         {
             - grimoire_secondChar has grimSecondCharKitchenTwo:
                                                 Una brava persona, come ti ha detto tuo fratello.
@@ -382,7 +382,7 @@
 
         + \ {charTag(PG, "neutral")}:           Ma puoi essere un adulto creativo, come tuo fratello.
             -> glyph_choice_manager(false, earthC)->
-                                                E condividere le tue storie e i tuoi esperimenti.
+        {charTag(PG, "neutral")}:               E condividere le tue storie e i tuoi esperimenti.
                                                 Essere felice nel farli.
                     
 
@@ -415,14 +415,14 @@
     
         + (fire)\ {charTag(PG, "neutral")}:     Diventa il più forte, il più coraggioso.
         -> glyph_choice_manager(false, fireC)->
-                                                Sei testardo, bugiardo, dispettoso.
+        {charTag(PG, "neutral")}:               Sei testardo, bugiardo, dispettoso.
                                                 Queste cose unite possono renderti indistruttibile.
                                                 E di cosa avrà mai paura un ragazzo indistruttibile?
                 
 
         + (aether)\ {charTag(PG, "neutral")}:   Tutti abbiamo paura. Condividi questa paura con le altre persone.
         -> glyph_choice_manager(false, aetherC)->
-                                                Falle sentire meno sole.
+        {charTag(PG, "neutral")}:               Falle sentire meno sole.
                                                 Meno sbagliate.
                                                 A quel punto saranno pronte a fare il passo.
                                                 A cambiare le cose a loro volta.
@@ -431,20 +431,20 @@
 
         + (earth)\ {charTag(PG, "neutral")}:    L'opposto della paura è la curiosità.
         -> glyph_choice_manager(false, earthC)->
-                                                E tu sei il ritratto della curiosità.
+        {charTag(PG, "neutral")}:               E tu sei il ritratto della curiosità.
                                                 Guarda le cose che arriveranno chiedendoti "Chissà se..." o "E se invece..." o "Perché accade questo?".
                                                 E a quel punto ogni paura diventerà solo un problema da risolvere.
                 
             
         + (water)\ {charTag(PG, "neutral")}:    I tuoi genitori sono spaventati, aiutatevi a vicenda.
         -> glyph_choice_manager(false, waterC)->
-                                                Nessuna persona può cambiare il mondo da sola.
+        {charTag(PG, "neutral")}:               Nessuna persona può cambiare il mondo da sola.
                                                 Ma possiamo partire dal cambiare le cose che ci circondano, un pezzo alla volta.
                 
     
         + (air)\ {charTag(PG, "neutral")}:      Con la tua intelligenza puoi rendere il mondo migliore.
         -> glyph_choice_manager(false, airC)->
-                                                Puoi aiutare gli adulti a essere meno tristi.
+        {charTag(PG, "neutral")}:               Puoi aiutare gli adulti a essere meno tristi.
                                                 E gli animali a non morire.
                                                 E tua nonna a uscire dalla casa dei vecchi.
         -

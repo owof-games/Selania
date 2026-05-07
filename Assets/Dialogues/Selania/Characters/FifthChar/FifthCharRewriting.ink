@@ -60,28 +60,28 @@
 
         {charTag(FifthCharacter, "neutral")}:           Frase.
         
-        //Affrontiamo gli adulti in generale
-            {charTag(PG, "neutral")}:      Hai detto che da quando nonna è nella casa dei vecchi fa tutto schifo.
+
+            {charTag(PG, "neutral")}:      Frase
 
             + \ {charTag(PG, "neutral")}:         Fuoco
                 -> glyph_choice_manager(false, fireC)->
+                 {charTag(PG, "neutral")}:      Frase
 
-            
             + \ {charTag(PG, "neutral")}:         Acqua
                 -> glyph_choice_manager(false, waterC)->
+                 {charTag(PG, "neutral")}:      Frase
  
-                    
-                    
             + \ {charTag(PG, "neutral")}:         Terra
                 -> glyph_choice_manager(false, earthC)->
-   
+                 {charTag(PG, "neutral")}:      Frase
                                 
             + \ {charTag(PG, "neutral")}:         Aria
                     -> glyph_choice_manager(false, airC)->
-      
+                     {charTag(PG, "neutral")}:      Frase
     
             + \ {charTag(PG, "neutral")}:         Spirito
                 -> glyph_choice_manager(false, aetherC)->
+                 {charTag(PG, "neutral")}:      Frase
         
         -
 
@@ -106,27 +106,30 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
         
 
-        {charTag(PG, "neutral")}:      A scuola le maestre dicono che sei cattivo, bugiardo, violento, e finisci sempre in punizione.
+        {charTag(FifthCharacter, "neutral")}:           Frase.
+        
 
-        + \ {charTag(PG, "neutral")}:         Terra
-                -> glyph_choice_manager(false, earthC)->
-  
+            {charTag(PG, "neutral")}:      Frase
 
-        + \ {charTag(PG, "neutral")}:         Aria
-                -> glyph_choice_manager(false, airC)->
-
-                   
-        + \ {charTag(PG, "neutral")}:         Fuoco
+            + \ {charTag(PG, "neutral")}:         Fuoco
                 -> glyph_choice_manager(false, fireC)->
-  
-                    
-        + \ {charTag(PG, "neutral")}:         Acqua
-                -> glyph_choice_manager(false, waterC)->
+                 {charTag(PG, "neutral")}:      Frase
 
-                   
-        + \ {charTag(PG, "neutral")}:         Spirito
+            + \ {charTag(PG, "neutral")}:         Acqua
+                -> glyph_choice_manager(false, waterC)->
+                 {charTag(PG, "neutral")}:      Frase
+ 
+            + \ {charTag(PG, "neutral")}:         Terra
+                -> glyph_choice_manager(false, earthC)->
+                 {charTag(PG, "neutral")}:      Frase
+                                
+            + \ {charTag(PG, "neutral")}:         Aria
+                    -> glyph_choice_manager(false, airC)->
+                     {charTag(PG, "neutral")}:      Frase
+    
+            + \ {charTag(PG, "neutral")}:         Spirito
                 -> glyph_choice_manager(false, aetherC)->
-  
+                 {charTag(PG, "neutral")}:      Frase
         -
         ~ numberQuestion ++     
         {charTag(FifthCharacter, "neutral")}:           Frase.
@@ -148,28 +151,32 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    //Affrontiamo il mondo. Rabbia, bugie, fantasia, violenza etc.
-            {charTag(PG, "neutral")}:      Tuo fratello dice che il mondo è orribile e che non si può più aggiustare.
-            
+
+
+            {charTag(FifthCharacter, "neutral")}:           Frase.
+        
+
+            {charTag(PG, "neutral")}:      Frase
+
+            + \ {charTag(PG, "neutral")}:         Fuoco
+                -> glyph_choice_manager(false, fireC)->
+                 {charTag(PG, "neutral")}:      Frase
+
+            + \ {charTag(PG, "neutral")}:         Acqua
+                -> glyph_choice_manager(false, waterC)->
+                 {charTag(PG, "neutral")}:      Frase
+ 
+            + \ {charTag(PG, "neutral")}:         Terra
+                -> glyph_choice_manager(false, earthC)->
+                 {charTag(PG, "neutral")}:      Frase
+                                
+            + \ {charTag(PG, "neutral")}:         Aria
+                    -> glyph_choice_manager(false, airC)->
+                     {charTag(PG, "neutral")}:      Frase
     
-        + \ {charTag(PG, "neutral")}:         Spirito
-            -> glyph_choice_manager(false, aetherC)->
-            
-
-        + \ {charTag(PG, "neutral")}:         Acqua
-            -> glyph_choice_manager(false, waterC)->
-            
-                   
-        + \ {charTag(PG, "neutral")}:         Fuoco
-            -> glyph_choice_manager(false, fireC)->
-            
-                    
-        + \ {charTag(PG, "neutral")}:         Terra
-            -> glyph_choice_manager(false, earthC)->
-            
-
-        + \ {charTag(PG, "neutral")}:         Aria
-            -> glyph_choice_manager(false, airC)->
+            + \ {charTag(PG, "neutral")}:         Spirito
+                -> glyph_choice_manager(false, aetherC)->
+                 {charTag(PG, "neutral")}:      Frase
             
         -
 
@@ -194,22 +201,30 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
         
 
-        {charTag(PG, "neutral")}:      Hai detto che i grandi fanno schifo, e che non vuoi diventare grande.
+                {charTag(FifthCharacter, "neutral")}:           Frase.
         
+
+            {charTag(PG, "neutral")}:      Frase
+
             + \ {charTag(PG, "neutral")}:         Fuoco
                 -> glyph_choice_manager(false, fireC)->
-        
-            + \ {charTag(PG, "neutral")}:         Aria
-                -> glyph_choice_manager(false, airC)->
-            
-            + \ {charTag(PG, "neutral")}:         Spirito
-                -> glyph_choice_manager(false, aetherC)->
-                
+                 {charTag(PG, "neutral")}:      Frase
+
             + \ {charTag(PG, "neutral")}:         Acqua
                 -> glyph_choice_manager(false, waterC)->
-                
+                 {charTag(PG, "neutral")}:      Frase
+ 
             + \ {charTag(PG, "neutral")}:         Terra
                 -> glyph_choice_manager(false, earthC)->
+                 {charTag(PG, "neutral")}:      Frase
+                                
+            + \ {charTag(PG, "neutral")}:         Aria
+                    -> glyph_choice_manager(false, airC)->
+                     {charTag(PG, "neutral")}:      Frase
+    
+            + \ {charTag(PG, "neutral")}:         Spirito
+                -> glyph_choice_manager(false, aetherC)->
+                 {charTag(PG, "neutral")}:      Frase
                 
         -
         ~ numberQuestion ++       
@@ -229,25 +244,30 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
         
 
-        {charTag(PG, "neutral")}:      credo di aver compreso quale sia il tuo blocco, perché sei qui.
+        {charTag(FifthCharacter, "neutral")}:           Frase.
             
         //Check per commento strega
         -> rewriting_witch_feedback(endR) ->     
      
         + (fire)\ {charTag(PG, "neutral")}:         Fuoco
             -> glyph_choice_manager(false, fireC)->
+            {charTag(FifthCharacter, "neutral")}:           Frase.
     
         + (aether)\ {charTag(PG, "neutral")}:        Spirito
             -> glyph_choice_manager(false, aetherC)->
+            {charTag(FifthCharacter, "neutral")}:           Frase.
         
         + (earth)\ {charTag(PG, "neutral")}:         Terra
             -> glyph_choice_manager(false, earthC)->
+            {charTag(FifthCharacter, "neutral")}:           Frase.
             
         + (water)\ {charTag(PG, "neutral")}:         Acqua
             -> glyph_choice_manager(false, waterC)->
+            {charTag(FifthCharacter, "neutral")}:           Frase.
                   
         + (air)\ {charTag(PG, "neutral")}:         Aria
             -> glyph_choice_manager(false, airC)->
+            {charTag(FifthCharacter, "neutral")}:           Frase.
 
         -
     //Nota: la parte di accettazione del nome è prima dell'aggiornamento, così il nome nuovo compare solo quando viene dichiarato.
