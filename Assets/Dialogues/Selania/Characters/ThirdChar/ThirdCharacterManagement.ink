@@ -124,7 +124,7 @@
         ~ fromRelationshipToInk(ThirdCharacter)
     
     //Mando ai feedback
-        -> thirdAffinityFeedback ->
+        ~ thirdAffinityFeedback()
     
     //Arriva il commento della strega
         ~ inkLevel(ThirdCharacter)
@@ -137,7 +137,7 @@
 
 
 
-=== thirdAffinityFeedback
+=== function thirdAffinityFeedback()
 {debug: passo per thirdAffinityFeedback. Lo stato di inchiostro è {thirdChar_InkLevel}.}
 //Utilizziamo questa funzione per far fare alla PNG un commento esplicito sullo stato della relazione.
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -205,7 +205,7 @@
                                                                     Talco continua a mancarmi, ma con te mi sento come se fossimo parte da sempre della stessa band.
         }
 
-->->
+
 
 
 === third_char_closing_storylet ===

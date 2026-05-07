@@ -9,7 +9,7 @@
     LIST story_endedStories = story_firstCharStoryEnded, story_secondCharStoryEnded, story_thirdCharStoryEnded, story_fourthCharStoryEnded, story_fifthCharStoryEnded
     
     //Lista che tiene conto in ordine progressivo della quantità di storie concluse
-    LIST story_endingOrders = story_oneStoryClosed, story_twoStoriesClosed, story_threeStoriesClosed, story_fourStoriesClosed, story_fifthStoriesClosed
+    LIST story_endingOrders = story_oneStoryClosed, story_twoStoriesClosed, story_threeStoriesClosed, story_fourStoriesClosed, story_fiveStoriesClosed
 
     //Variabili per far comparire i personaggi in scena.
         VAR firstChar_delay = 2

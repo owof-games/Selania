@@ -84,23 +84,23 @@
             ~ temp maxValue = 0
                 {
                     - temporaryAether >= maxValue:
-                        ~ mainGlyph = aetherC
+                        ~ maxValue = temporaryAether
                 }
                 {
                     - temporaryWater >= maxValue:
-                        ~ mainGlyph = waterC
+                        ~ maxValue = temporaryWater
                 }
                 {
                     - temporaryFire >= maxValue:
-                        ~ mainGlyph = fireC
+                        ~ maxValue = temporaryFire
                 }
                 {
                     - temporaryAir >= maxValue:
-                        ~ mainGlyph =  airC
+                        ~ maxValue =  temporaryAir
                 }
                 {
                     - temporaryEarth >= maxValue:
-                        ~ mainGlyph = earthC
+                        ~ maxValue = temporaryEarth
 
                 }
 
@@ -128,7 +128,7 @@
                         ~ possiblesMainGlyphs += earthC
 
             } 
-            debug: La lista di possibili nomi in caso di pareggio è {possiblesMainGlyphs}.
+            {debug: La lista di possibili nomi in caso di pareggio è {possiblesMainGlyphs}.}
             //E infine ne prendo uno randomico dalla lista. Se dovesse essere vuota, ne assegno uno che ha senso con una cattiva relazione creata con lx png.
             {
                 - possiblesMainGlyphs != ():

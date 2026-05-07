@@ -44,17 +44,20 @@
     
     + \ {charTag(PG, "neutral")}:                       Del rapporto che hai con le persone care.
         ~ cooking_animations_on()
-        -> storage_glyphs(FirstCharacter)->
+        ~ storage_glyphs(FirstCharacter)
+        -> kitchen_moon_feedback -> 
         -> first_theme
             
     + {grimoire_firstChar has grimFirstCharSix}\ {charTag(PG, "neutral")}:          Del bisogno di fare qualcosa che salvi il mondo.
         ~ cooking_animations_on()
-        -> storage_glyphs(FirstCharacter)->
+        ~ storage_glyphs(FirstCharacter)
+        -> kitchen_moon_feedback -> 
         -> second_theme
 
     + {grimoire_firstChar has grimFirstCharNine}\ {charTag(PG, "neutral")}:         Della tua creatività.
         ~ cooking_animations_on()
-        -> storage_glyphs(FirstCharacter)->
+        ~ storage_glyphs(FirstCharacter)
+        -> kitchen_moon_feedback -> 
         -> third_theme
             
 

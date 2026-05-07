@@ -232,7 +232,7 @@
 		}		
 		
 		
-	 - LIST_COUNT(story_endedStories) == 3:
+	- LIST_COUNT(story_endedStories) == 3:
 		{
 			- charES == FirstCharacter:
 				~ firstChar_storyEndingPosition = story_threeStoriesClosed
@@ -242,9 +242,25 @@
 			
 			- charES == ThirdCharacter:
 				~ thirdChar_storyEndingPosition = story_threeStoriesClosed	
+		}
+    
+    - LIST_COUNT(story_endedStories) == 4:
+		{
+			- charES == FourthCharacter:
+				~ fourthChar_storyEndingPosition = story_fourStoriesClosed
+			
+			- charES == FifthCharacter:
+				~ fifthChar_storyEndingPosition = story_fiveStoriesClosed
+		}	    	 
+		 
+	- LIST_COUNT(story_endedStories) == 5:
+		{
+			- charES == FourthCharacter:
+				~ fourthChar_storyEndingPosition = story_fourStoriesClosed
+			
+			- charES == FifthCharacter:
+				~ fifthChar_storyEndingPosition = story_fiveStoriesClosed
 		}		 
-		 
-		 
 		 
 }
 
@@ -295,8 +311,16 @@
     		~ player_orderGrowingTreeUpdater = player_secondStepClosed
     	
     		
-    	 - LIST_COUNT(story_endedStories) == 3:
+    	- LIST_COUNT(story_endedStories) == 3:
     		~ player_orderGrowingTreeUpdater = player_thirdStepClosed
+
+
+        - LIST_COUNT(story_endedStories) == 4:
+    		~ player_orderGrowingTreeUpdater = player_fourthStepClosed
+
+
+        - LIST_COUNT(story_endedStories) == 5:
+    		~ player_orderGrowingTreeUpdater = player_fifthStepClosed        
     
     }
 
@@ -357,23 +381,21 @@
                     ~ player_secondStepStatus += waterStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}    
                 
-                - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
-                    ~ player_secondStepStatus = ()
-                    ~ player_secondStepStatus += waterStatus
+                - player_orderGrowingTreeUpdater == player_thirdStepClosed:
+                    ~ player_thirdStepStatus = ()
+                    ~ player_thirdStepStatus += waterStatus
+                    {debug: Lo status di player_thirdStepStatus è {player_thirdStepStatus}}   
+                
+                - player_orderGrowingTreeUpdater == player_fourthStepClosed:
+                    ~ player_fourthStepStatus = ()
+                    ~ player_fourthStepStatus += waterStatus
+                    {debug: Lo status di player_fourthStepStatus è {player_fourthStepStatus}}   
+                
+                - player_orderGrowingTreeUpdater == player_fifthStepClosed:
+                    ~ player_fifthStepStatus = ()
+                    ~ player_fifthStepStatus += waterStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}   
                 
-                - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
-                    ~ player_secondStepStatus = ()
-                    ~ player_secondStepStatus += waterStatus
-                    {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}   
-                
-                - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
-                    ~ player_secondStepStatus = ()
-                    ~ player_secondStepStatus += waterStatus
-                    {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}   
-                
-                - else:
-                    ERRORE
             }
         
         - (temp_PGAir > temp_PGWater) && (temp_PGAir > temp_PGFire) && (temp_PGAir > temp_PGEarth) && (temp_PGAir > temp_PGAether):
@@ -388,23 +410,21 @@
                     ~ player_secondStepStatus += airStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
                 
-                - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
-                    ~ player_secondStepStatus = ()
-                    ~ player_secondStepStatus += airStatus
-                    {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
+                - player_orderGrowingTreeUpdater == player_thirdStepClosed:
+                    ~ player_thirdStepStatus = ()
+                    ~ player_thirdStepStatus += airStatus
+                    {debug: Lo status di player_thirdStepStatus è {player_thirdStepStatus}}     
 
-                - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
-                    ~ player_secondStepStatus = ()
-                    ~ player_secondStepStatus += airStatus
-                    {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
+                - player_orderGrowingTreeUpdater == player_fourthStepClosed:
+                    ~ player_fourthStepStatus = ()
+                    ~ player_fourthStepStatus += airStatus
+                    {debug: Lo status di player_fourthStepStatus è {player_fourthStepStatus}}  
 
-                - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
-                    ~ player_secondStepStatus = ()
-                    ~ player_secondStepStatus += airStatus
-                    {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
+                - player_orderGrowingTreeUpdater == player_fifthStepClosed:
+                    ~ player_fifthStepStatus = ()
+                    ~ player_fifthStepStatus += airStatus
+                    {debug: Lo status di player_fifthStepStatus è {player_fifthStepStatus}}  
 
-                - else:
-                    ERRORE
             }        
         
         - (temp_PGFire> temp_PGWater) && (temp_PGFire> temp_PGAir) && (temp_PGFire> temp_PGEarth) && (temp_PGFire> temp_PGAether):
@@ -419,23 +439,20 @@
                     ~ player_secondStepStatus += fireStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
                 
-                - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
-                    ~ player_firstStepStatus = ()
-                    ~ player_firstStepStatus += fireStatus
-                    {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
+                - player_orderGrowingTreeUpdater == player_thirdStepClosed:
+                    ~ player_thirdStepStatus = ()
+                    ~ player_thirdStepStatus += fireStatus
+                    {debug: Lo status di player_thirdStepStatus è {player_thirdStepStatus}}   
 
-                - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
-                    ~ player_firstStepStatus = ()
-                    ~ player_firstStepStatus += fireStatus
-                    {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
+                - player_orderGrowingTreeUpdater == player_fourthStepClosed:
+                    ~ player_fourthStepStatus = ()
+                    ~ player_fourthStepStatus += fireStatus
+                    {debug: Lo status di player_fourthStepStatus è {player_fourthStepStatus}} 
 
-                - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
-                    ~ player_firstStepStatus = ()
-                    ~ player_firstStepStatus += fireStatus
-                    {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
-
-                - else:
-                    ERRORE
+                - player_orderGrowingTreeUpdater == player_fifthStepClosed:
+                    ~ player_fifthStepStatus = ()
+                    ~ player_fifthStepStatus += fireStatus
+                    {debug: Lo status di player_fifthStepStatus è {player_fifthStepStatus}}
             }    
         
         - (temp_PGEarth > temp_PGWater) && (temp_PGEarth > temp_PGAir) && (temp_PGEarth > temp_PGFire) && (temp_PGEarth > temp_PGAether):
@@ -450,23 +467,21 @@
                     ~ player_secondStepStatus += earthStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
                 
-                - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
-                     ~ player_firstStepStatus = ()
-                    ~ player_firstStepStatus += earthStatus
-                    {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
+                - player_orderGrowingTreeUpdater == player_thirdStepClosed:
+                    ~ player_thirdStepStatus = ()
+                    ~ player_thirdStepStatus += earthStatus
+                    {debug: Lo status di player_thirdStepStatus è {player_thirdStepStatus}}   
                 
-                - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
-                     ~ player_firstStepStatus = ()
-                    ~ player_firstStepStatus += earthStatus
-                    {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
+                - player_orderGrowingTreeUpdater == player_fourthStepClosed:
+                    ~ player_fourthStepStatus = ()
+                    ~ player_fourthStepStatus += earthStatus
+                    {debug: Lo status di player_fourthStepStatus è {player_fourthStepStatus}} 
                 
-                - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
-                     ~ player_firstStepStatus = ()
-                    ~ player_firstStepStatus += earthStatus
-                    {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
+                - player_orderGrowingTreeUpdater == player_fifthStepClosed:
+                    ~ player_fifthStepStatus = ()
+                    ~ player_fifthStepStatus += earthStatus
+                    {debug: Lo status di player_fifthStepStatus è {player_fifthStepStatus}}
                 
-                - else:
-                        ERRORE
             }    
         
         - (temp_PGAether > temp_PGWater) && (temp_PGAether > temp_PGAir) && (temp_PGAether > temp_PGFire) && (temp_PGAether > temp_PGEarth):
@@ -474,6 +489,7 @@
                 - player_orderGrowingTreeUpdater == player_firstStepClosed:
                     ~ player_firstStepStatus = ()
                     ~ player_firstStepStatus += aetherStatus
+   
                     {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
                 
                 - player_orderGrowingTreeUpdater == player_secondStepClosed:
@@ -481,44 +497,112 @@
                     ~ player_secondStepStatus += aetherStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
                 
-                - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
-                    ~ player_firstStepStatus = ()
-                    ~ player_firstStepStatus += aetherStatus
+                - player_orderGrowingTreeUpdater == player_thirdStepClosed:
+                    ~ player_thirdStepStatus = ()
+                    ~ player_thirdStepStatus += aetherStatus
+                    {debug: Lo status di player_thirdStepStatus è {player_thirdStepStatus}}   
                 
-                - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
-                    ~ player_firstStepStatus = ()
-                    ~ player_firstStepStatus += aetherStatus
-                
-                - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
-                    ~ player_firstStepStatus = ()
-                    ~ player_firstStepStatus += aetherStatus
-                
-                - else:
-                    ERRORE
+                - player_orderGrowingTreeUpdater == player_fourthStepClosed:
+                    ~ player_fourthStepStatus = ()
+                    ~ player_fourthStepStatus += aetherStatus
+                    {debug: Lo status di player_fourthStepStatus è {player_fourthStepStatus}}
+
+                - player_orderGrowingTreeUpdater == player_fifthStepClosed:
+                    ~ player_fifthStepStatus = ()
+                    ~ player_fifthStepStatus += aetherStatus
+                    {debug: Lo status di player_fifthStepStatus è {player_fifthStepStatus}} 
             }
         
-        // - else:
-        //     {
-        //         - player_orderGrowingTreeUpdater == player_firstStepClosed:
-        //             ~ player_firstStepStatus = ()
-        //             ~ player_thirdStepStatus += mixedStatus
-        //             {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
-                    
-        //         - player_orderGrowingTreeUpdater == player_secondStepClosed:
-        //             ~ player_secondStepStatus = ()
-        //             ~ player_thirdStepStatus += mixedStatus
-        //             {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
-                    
-        //         // - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
-        //         //     ~ player_thirdStepStatus += mixedStatus
-        //         // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
-        //         //     ~ player_fourthStepStatus += mixedStatus
-        //         // - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
-        //         //     ~ player_fifthStepStatus += mixedStatus
-        //              - else:
-        //                 ERRORE
-        //     }    
+        - else:
+        //In caso di pareggio cerco di assegnare un nome randomico da quelli più plausibili, sempre secondo la logica qui sopra elemento == nome.
+            //Prima di tutto cerco di capire qual è il valore più alto comune.
+            ~ temp maxValue = 0
+            ~ temp possibileTreeStatus = ()
+            ~ temp chosenTreeStatus = ()
+            {debug: siamo in un pareggio, passo per la fase successiva} 
+                {
+                    - temp_PGAether >= maxValue:
+                        ~ maxValue = temp_PGAether
+                }
+                {
+                    - temp_PGWater >= maxValue:
+                        ~ maxValue = temp_PGWater
+                }
+                {
+                    - temp_PGFire >= maxValue:
+                        ~ maxValue = temp_PGFire
+                }
+                {
+                    - temp_PGAir >= maxValue:
+                        ~ maxValue =  temp_PGAir
+                }
+                {
+                    - temp_PGEarth >= maxValue:
+                        ~ maxValue = temp_PGEarth
+
+                }
+
+            {debug: Il valore massimo raggiunto dai glifi è {maxValue}.}
+
+            //Poi aggiungo alla lista dei potenziali generatori di nomi solo quei glifi che superano il valore medio delle scelte. 
+            {
+                - temp_PGAether >= maxValue:
+                        ~ possibileTreeStatus += aetherStatus
+            }
+            {
+                - temp_PGWater >= maxValue:
+                        ~ possibileTreeStatus += waterStatus
+            }
+            {
+                - temp_PGFire >= maxValue:
+                        ~ possibileTreeStatus += fireStatus
+            }
+            {
+                - temp_PGAir >= maxValue:
+                        ~ possibileTreeStatus = airStatus
+            }
+            {
+                - temp_PGEarth >= maxValue:
+                        ~ possibileTreeStatus += earthStatus
+
+            } 
+            debug: La lista di possibili status in caso di pareggio è {possibileTreeStatus}.
+            //E infine ne prendo uno randomico dalla lista. 
+                
+                ~ chosenTreeStatus = LIST_RANDOM(possibileTreeStatus)
+
+            //E lo associo alla persona
+                        {
+                - player_orderGrowingTreeUpdater == player_firstStepClosed:
+                    ~ player_firstStepStatus = ()
+                    ~ player_firstStepStatus += chosenTreeStatus
+                    {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
+                
+                - player_orderGrowingTreeUpdater == player_secondStepClosed:
+                    ~ player_secondStepStatus = ()
+                    ~ player_secondStepStatus += chosenTreeStatus
+                    {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
+                
+                - player_orderGrowingTreeUpdater == player_thirdStepClosed:
+                    ~ player_thirdStepStatus = ()
+                    ~ player_thirdStepStatus += chosenTreeStatus
+                    {debug: Lo status di player_thirdStepStatus è {player_thirdStepStatus}}   
+                
+                - player_orderGrowingTreeUpdater == player_fourthStepClosed:
+                    ~ player_fourthStepStatus = ()
+                    ~ player_fourthStepStatus += chosenTreeStatus
+                    {debug: Lo status di player_fourthStepStatus è {player_fourthStepStatus}} 
+                
+                - player_orderGrowingTreeUpdater == player_fifthStepClosed:
+                    ~ player_fifthStepStatus = ()
+                    ~ player_fifthStepStatus += chosenTreeStatus
+                    {debug: Lo status di player_fifthStepStatus è {player_fifthStepStatus}} 
+
+            }
+
+        
+        }
     
-    }
+
 
 

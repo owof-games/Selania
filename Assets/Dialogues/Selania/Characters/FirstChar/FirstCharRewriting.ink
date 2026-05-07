@@ -72,12 +72,19 @@
                                                         Direi che dopo tutti i pipponi che ti ho tirato, è giunto il momento di fare questa roba.
                                                         Chissà cosa accadrà!
 
-            //Valuto lo stato della relazione 
-                -> firstAffinityCalc ->
-            
+        //PASSAGGI DI PREPARAZIONE
+            //Prima di tutto chiamo la funzione per il calcolo dello stato della relazione
+                ~ affinity_calc(FirstCharacter)
+            //"Trasformo" la relazione in inchiostro
+                ~ fromRelationshipToInk(FirstCharacter)
+            //Mando ai feedback
+                ~ firstAffinityFeedback()
+            //Arriva il commento della strega
+                ~ inkLevel(FirstCharacter)
+            //Salvo il massimo di inchiostro raggiunto con la personaggia
+                ~ maxInkLevelUpdater(FirstCharacter)
             //Vado a svuotare i contatori di colore, così son tranquilla.
-                -> storage_glyphs(FirstCharacter) ->
-            
+                ~ storage_glyphs(FirstCharacter)
             //E poi a seconda dello stato di inchiostro, mi sposto sulla domanda prevista    
                 {
                     - firstChar_InkLevel == ink_empty:
@@ -518,8 +525,7 @@
                                                     Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
     }
 
-    {charTag(FirstCharacter, "curious")}:           Rullo di tamburi...
-                                                    Io sono <b><i>{charNameOne}</b></i>!
+    {charTag(FirstCharacter, "curious")}:           Rullo di tamburi: io sono <b><i>{charNameOne}</b></i>!
         ~  characterChangingObjects(FirstCharacter)                                            
     {charTag(FirstCharacter, characterPortraitsManagement(FirstCharacter))}: Signore e signor3 e signori: sono la gioia del cambiamento.
                                                     Le infinite possibilità.

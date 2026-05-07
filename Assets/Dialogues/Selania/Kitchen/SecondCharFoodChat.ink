@@ -46,17 +46,20 @@
 
             + \ {charTag(PG, "neutral")}:                                           Parliamo di animali.
                     ~ cooking_animations_on()
-                    -> storage_glyphs(SecondCharacter)->
+                    ~ storage_glyphs(SecondCharacter)
+                    -> kitchen_moon_feedback -> 
                     -> first_theme
 
             + \ {grimoire_secondChar has grimSecondCharSix} {charTag(PG, "neutral")}:          Della scuola.
                     ~ cooking_animations_on()
-                    -> storage_glyphs(SecondCharacter)->
+                    ~ storage_glyphs(SecondCharacter)
+                    -> kitchen_moon_feedback -> 
                     -> second_theme
     
             + \ {grimoire_secondChar has grimSecondCharEight} {charTag(PG, "neutral")}:         Delle bugie.
                     ~ cooking_animations_on()
-                    -> storage_glyphs(SecondCharacter)->
+                    ~ storage_glyphs(SecondCharacter)
+                    -> kitchen_moon_feedback -> 
                     -> third_theme
                     
             + \ {charTag(PG, "neutral")}:                       Ho cambiato idea.

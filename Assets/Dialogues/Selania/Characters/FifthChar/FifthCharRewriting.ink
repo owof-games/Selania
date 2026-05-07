@@ -41,7 +41,7 @@
                 -> fifthAffinityCalc ->
                 
             //Vado a svuotare i contatori di colore, così son tranquilla.
-                -> storage_glyphs(FifthCharacter) ->
+                ~ storage_glyphs(FifthCharacter)
             
             //E poi a fiftha dello stato di inchiostro, mi sposto sulla domanda prevista      
                 {
@@ -302,9 +302,9 @@
             - fifthChar_ActualName has FifthE:
                     {
                         - ending.fire:
-                            {charTag(FifthCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            {charTag(FifthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 Il mio vero nome è <b><i>{charNameFive}</b></i>.
                     ~  characterChangingObjects(FifthCharacter)
@@ -313,9 +313,9 @@
             - fifthChar_ActualName has FifthC:
                     {
                         - ending.water:
-                            {charTag(FifthCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            {charTag(FifthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 {charTag(FifthCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameFive}</b></i>.
                     ~  characterChangingObjects(FifthCharacter)
@@ -324,9 +324,9 @@
             - fifthChar_ActualName has FifthD:
                     {
                         - ending.earth:
-                            {charTag(FifthCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            {charTag(FifthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 {charTag(FifthCharacter, "neutral")}:       E il mio nome è <b><i>{charNameFive}</b></i>.
                     ~  characterChangingObjects(FifthCharacter)
@@ -336,9 +336,9 @@
             - fifthChar_ActualName has FifthF:
                     {
                         - ending.aether:
-                            {charTag(FifthCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            {charTag(FifthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 {charTag(FifthCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameFive}</b></i>.
                     ~  characterChangingObjects(FifthCharacter)
@@ -347,9 +347,9 @@
             - fifthChar_ActualName has FifthB:
                     {
                         - ending.air:
-                            {charTag(FifthCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            {charTag(FifthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 {charTag(FifthCharacter, "neutral")}:       Io sono <b><i>{charNameFive}</b></i>.
                     ~  characterChangingObjects(FifthCharacter)

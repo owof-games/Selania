@@ -18,7 +18,12 @@
     - FirstCharacter:
         {
             - !first_char_main_storylets.one.firstPresentation:
-                ~ return "???"
+                {
+                    - gm_rm_activation.witch.riscrittura:
+                        ~ return "Chitarra"
+                    - else:
+                        ~ return "???"
+                }
                 
             - firstChar_ActualName == Chitarra:
                 ~ return "Chitarra"
@@ -43,7 +48,12 @@
     - SecondCharacter:
         {
             - ! second_char_main_storylets.one.nameSecond:
-                ~ return "???"
+                {
+                    - gm_rm_activation.witch.riscrittura:
+                        ~ return "Riccio"
+                    - else:
+                        ~ return "???"
+                }
                 
             - secondChar_ActualName == Riccio:
                 ~ return "Riccio"
@@ -67,9 +77,13 @@
 
     - ThirdCharacter:
         {
-
             - ! third_char_main_storylets.one:
-                ~ return "???"
+                {
+                    - gm_rm_activation.witch.riscrittura:
+                        ~ return "Chitarra"
+                    - else:
+                        ~ return "Boccale"
+                }
             
             - thirdChar_ActualName == Boccale:
                 ~ return "Boccale"
@@ -119,7 +133,13 @@
     - FifthCharacter:
         {
             - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
-                ~ return "???"
+                {
+                    - gm_rm_activation.witch.riscrittura:
+                        ~ return "Mentore"
+                    - else:
+                        ~ return "???"
+                }
+                
 
             - fifthChar_ActualName == Mentore:
                 ~ return "Mentore"    
@@ -167,7 +187,13 @@
     - Franco:
         {
             - frog_nameDiscovered == false:
-                ~ return "???"
+                {
+                    - gm_rm_activation.witch.riscrittura:
+                        ~ return "Franco La Rana"
+                    - else:
+                        ~ return "???"
+                }
+                
             
             - are_two_entities_together(PG, Franco) && entity_location(PG) == Kitchen:
                 ~ return "Franco Lo Chef"
@@ -185,7 +211,13 @@
                 ~ return "Carla"
 
             - else:
-                ~ return "???"
+                {
+                    - gm_rm_activation.witch.riscrittura:
+                        ~ return "Carla"
+                    - else:
+                        ~ return "???"
+                }
+                
         }
         
 

@@ -70,7 +70,7 @@
             -> secondAffinityCalc ->
             
         //Vado a svuotare i contatori di colore, così son tranquilla.
-            -> storage_glyphs(SecondCharacter) ->
+            ~ storage_glyphs(SecondCharacter)
         
         //E poi a seconda dello stato di inchiostro, mi sposto sulla domanda prevista      
             {

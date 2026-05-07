@@ -131,7 +131,7 @@ UTILIZZI RIMASTI = {glyph_actualSigilUses}
             {charTag(TheWitch, witch_state())}:     <i>Ho riempito il grimorio come se tu avessi finito la prima parte di gioco, ma senza lo sbrocco di Mentore.</i>
                                                     <i>Hai inoltre sbloccato tutti i sigilli e le piante.</i>
 
-            +  \ {charTag(PG, "neutral")}:          <i>Impostami le prime 3 png come pronte per la riscrittura.
+            + (riscrittura) \ {charTag(PG, "neutral")}:          <i>Impostami le prime 3 png come pronte per la riscrittura.
                                                     ~ debugRewriting()
 
             +  \ {charTag(PG, "neutral")}:          <i>Aprimi tutti i luoghi del gioco.

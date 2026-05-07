@@ -41,9 +41,9 @@
                 -> fourthAffinityCalc ->
                 
             //Vado a svuotare i contatori di colore, così son tranquilla.
-                -> storage_glyphs(FourthCharacter) ->
+                ~ storage_glyphs(FourthCharacter)
             
-            //E poi a fourtha dello stato di inchiostro, mi sposto sulla domanda prevista      
+            //E poi a seconda dello stato di inchiostro, mi sposto sulla domanda prevista      
                 {
                     - fourthChar_InkLevel == ink_empty:
                         -> ending
@@ -302,9 +302,9 @@
             - fourthChar_ActualName has FourthE:
                     {
                         - ending.fire:
-                            {charTag(FourthCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            {charTag(FourthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 Il mio vero nome è <b><i>{charNameFour}</b></i>.
                     ~  characterChangingObjects(FourthCharacter)
@@ -313,9 +313,9 @@
             - fourthChar_ActualName has FourthC:
                     {
                         - ending.water:
-                            {charTag(FourthCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            {charTag(FourthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 {charTag(FourthCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameFour}</b></i>.
                     ~  characterChangingObjects(FourthCharacter)
@@ -324,9 +324,9 @@
             - fourthChar_ActualName has FourthD:
                     {
                         - ending.earth:
-                            {charTag(FourthCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            {charTag(FourthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 {charTag(FourthCharacter, "neutral")}:       E il mio nome è <b><i>{charNameFour}</b></i>.
                     ~  characterChangingObjects(FourthCharacter)
@@ -336,9 +336,9 @@
             - fourthChar_ActualName has FourthF:
                     {
                         - ending.aether:
-                            {charTag(FourthCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            {charTag(FourthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 {charTag(FourthCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameFour}</b></i>.
                     ~  characterChangingObjects(FourthCharacter)
@@ -347,9 +347,9 @@
             - fourthChar_ActualName has FourthB:
                     {
                         - ending.air:
-                            {charTag(FourthCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            {charTag(FourthCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 {charTag(FourthCharacter, "neutral")}:       Io sono <b><i>{charNameFour}</b></i>.
                     ~  characterChangingObjects(FourthCharacter)

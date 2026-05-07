@@ -164,7 +164,7 @@
  ----------------------------------*/
 
 
-=== storage_glyphs(cookingCompanion)
+=== function storage_glyphs(cookingCompanion)
 {debug_kitchen or debug: storage_glyphs.}
 
     {
@@ -182,9 +182,6 @@
                     ~ firstChar_fire= 0
                 ~ kitchen_storageRelationshipIndicatore = firstChar_relationshipIndicator
                     ~ firstChar_relationshipIndicator = 0
-
-            
-            
     
         - cookingCompanion == SecondCharacter:
                 
@@ -202,7 +199,6 @@
                     ~ secondChar_relationshipIndicator = 0    
         
         - cookingCompanion == ThirdCharacter:
-
                 
                 ~ kitchen_storageAether = thirdChar_aether
                     ~ thirdChar_aether = 0
@@ -248,8 +244,7 @@
                     ~ fifthChar_relationshipIndicator = 0                    
     
     }
-    -> kitchen_moon_feedback -> 
-    ->->
+    
 
 
 === function update_glyphs(cookingCompanion)
@@ -341,7 +336,6 @@
 
 
 === kitchen_moon_feedback ===
-
 //Assegnazione parlante
 {
     - are_two_entities_together(FirstCharacter,PG) && entity_location(PG) == Kitchen:

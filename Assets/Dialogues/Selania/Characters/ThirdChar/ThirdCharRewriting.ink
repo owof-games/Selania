@@ -41,7 +41,7 @@
                 -> thirdAffinityCalc ->
                 
             //Vado a svuotare i contatori di colore, così son tranquilla.
-                -> storage_glyphs(ThirdCharacter) ->
+                ~ storage_glyphs(ThirdCharacter)
             
             //E poi a thirda dello stato di inchiostro, mi sposto sulla domanda prevista      
                 {
@@ -278,7 +278,7 @@
     {charTag(ThirdCharacter, "neutral")}:           Frase.  
 
             //Prima chiamo il moltiplicatore di colori, così che comunque le scelte fatte qui abbiano un impatto maggiore.
-                ~  glyph_modifier(ThirdCharacter, thirdChar_glyphVariation)
+                ~ glyph_modifier(ThirdCharacter, thirdChar_glyphVariation)
             
             //Poi aggiorniamo i colori, così il valore complessivo conta per la scelta del nome
                 ~ update_glyphs(ThirdCharacter)   
@@ -286,7 +286,7 @@
             //E infine genero il nome
                 ~ newName(ThirdCharacter)
 
-            ->naming
+            -> naming
                 
     
     
@@ -303,9 +303,9 @@
             - thirdChar_ActualName has ThirdE:
                     {
                         - ending.fire:
-                            {charTag(ThirdCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            {charTag(ThirdCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 Il mio vero nome è <b><i>{charNameThree}</b></i>.
                     ~  characterChangingObjects(ThirdCharacter)
@@ -314,9 +314,9 @@
             - thirdChar_ActualName has ThirdC:
                     {
                         - ending.water:
-                            {charTag(ThirdCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            {charTag(ThirdCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 {charTag(ThirdCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameThree}</b></i>.
                     ~  characterChangingObjects(ThirdCharacter)
@@ -325,9 +325,9 @@
             - thirdChar_ActualName has ThirdD:
                     {
                         - ending.earth:
-                            {charTag(ThirdCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            {charTag(ThirdCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 {charTag(ThirdCharacter, "neutral")}:       E il mio nome è <b><i>{charNameThree}</b></i>.
                     ~  characterChangingObjects(ThirdCharacter)
@@ -337,9 +337,9 @@
             - thirdChar_ActualName has ThirdF:
                     {
                         - ending.aether:
-                            {charTag(ThirdCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            {charTag(ThirdCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 {charTag(ThirdCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameThree}</b></i>.
                     ~  characterChangingObjects(ThirdCharacter)
@@ -348,9 +348,9 @@
             - thirdChar_ActualName has ThirdB:
                     {
                         - ending.air:
-                            {charTag(ThirdCharacter, "neutral")}:       E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            {charTag(ThirdCharacter, "neutral")}:       Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 {charTag(ThirdCharacter, "neutral")}:       Io sono <b><i>{charNameThree}</b></i>.
                     ~  characterChangingObjects(ThirdCharacter)
