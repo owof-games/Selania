@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2248f72339a0f1149a58c7fbf5496f05
+guid: 889ff5402abc92545826d92dbdbc64bc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8877715050028248264
-    second: Chitarra idle - Tre_0
+      213: 359612091875979151
+    second: Violino 5_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chitarra idle - Tre_0
+      name: Violino 5_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 124
-        height: 345
+        width: 174
+        height: 375
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8cca2164dcaf33b70800000000000000
-      internalID: 8877715050028248264
+      spriteID: f8fe331da499df400800000000000000
+      internalID: 359612091875979151
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Chitarra idle - Tre_0: 8877715050028248264
+      Violino 5_0: 359612091875979151
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

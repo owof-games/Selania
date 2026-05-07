@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 16cc728d07a63eb4bab7b50494a71122
+guid: b5fc19c0e8d806c4a908201ada49d039
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3793493017824546614
-    second: Chitarra idle - Uno_0
+      213: -6921667909532151278
+    second: Chitarra 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chitarra idle - Uno_0
+      name: Chitarra 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 124
-        height: 349
+        width: 125
+        height: 350
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ac0b4a6f23eca5bc0800000000000000
-      internalID: -3793493017824546614
+      spriteID: 2129d1775bb41ff90800000000000000
+      internalID: -6921667909532151278
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Chitarra idle - Uno_0: -3793493017824546614
+      Chitarra 1_0: -6921667909532151278
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
