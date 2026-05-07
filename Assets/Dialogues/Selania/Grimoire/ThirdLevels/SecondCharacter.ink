@@ -291,17 +291,16 @@
         - secondChar_ActualName has Grizzly:
             Ha deciso che combatterà la sua paura e diventerà il più forte di tutti, imbattibile.
             
-        - secondChar_ActualName has Orchestra:
+        - secondChar_ActualName has Lupo:
             Ha deciso che proteggerà il suo branco: madre,padre, nonna e fratello. E che nessuna delle persone a cui vuole bene dovrà mai più stare male.
                 
-        - secondChar_ActualName has FlautoDolce:
+        - secondChar_ActualName has Delfino:
             Ha deciso che tutto è un gioco, e che la sua fantasia e qualche piccola bugia potranno aiutare altre persone ad avere meno paura.
 
-    
-        - secondChar_ActualName has Ocarina:
+        - secondChar_ActualName has Capibara:
             Ha deciso che imparerà ad avere tantissimi amici, e che questo aiuterà tutti a sentirsi meno soli e meno impauriti.
 
-        - secondChar_ActualName has Violino:
+        - secondChar_ActualName has Corvo:
             Ha deciso che visto che è sveglio può capire il mondo, e cambiare le cose che fanno paura, aiutando così gli altri.
     }
 
