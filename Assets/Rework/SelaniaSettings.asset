@@ -187,6 +187,8 @@ MonoBehaviour:
       <sprite>k__BackingField: {fileID: 21300000, guid: a1c6ea0b7672f1f4b9a4c4c4fc9c4873, type: 3}
     - <name>k__BackingField: triangolo
       <sprite>k__BackingField: {fileID: 21300000, guid: 78cb948e72048fd478a74f3cac8eb88e, type: 3}
+    - <name>k__BackingField: orchestra
+      <sprite>k__BackingField: {fileID: 21300000, guid: aae861801def3854d8009c983044a978, type: 3}
   - <listName>k__BackingField: SecondCharacter
     <dialogueColor>k__BackingField: {r: 0.078431375, g: 0.17254902, b: 0.19607843, a: 1}
     <inkVariableName>k__BackingField: secondChar_InkLevel
