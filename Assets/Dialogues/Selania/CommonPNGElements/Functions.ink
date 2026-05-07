@@ -154,54 +154,74 @@ VAR relationshipIndicatorEnthusiasticValue = 8
         
         ~ story_endedStories += story_firstCharStoryEnded
         ~ firstChar_storyStatus = story_storyEnded
-        ~ state_ending_stories(FirstCharacter)
-        ~ move_entity(FirstCharacter, Safekeeping)
         ~ firstChar_InkLevel = ink_empty
         ~ firstChar_mailPause = firstChar_mailPauseDuration
-        ~ tree_advance_management(FirstCharacter)
+            //Spostiamo poi le varianti della PNG
+            ~ move_entity(FirstCharacterTriangolo, Safekeeping)
+            ~ move_entity(FirstCharacterFlautoDolce, Safekeeping)
+            ~ move_entity(FirstCharacterOrchestra, Safekeeping)
+            ~ move_entity(FirstCharacterViolino, Safekeeping)
+            ~ move_entity(FirstCharacterOcarina, Safekeeping)
+
 
     - PNG == SecondCharacter:
         
         ~ story_endedStories += story_secondCharStoryEnded
         ~ secondChar_storyStatus = story_storyEnded
-        ~ state_ending_stories(SecondCharacter)
-        ~ move_entity(SecondCharacter, Safekeeping)
         ~ secondChar_InkLevel = ink_empty
         ~ secondChar_mailPause = secondChar_mailPauseDuration
-        ~ tree_advance_management(SecondCharacter)
+            //Spostiamo poi le varianti della PNG
+            ~ move_entity(SecondCharacterGrizzly, Safekeeping)
+            ~ move_entity(SecondCharacterDelfino, Safekeeping)
+            ~ move_entity(SecondCharacterLupo, Safekeeping)
+            ~ move_entity(SecondCharacterCapibara, Safekeeping)
+            ~ move_entity(SecondCharacterCorvo, Safekeeping)
 
     - PNG == ThirdCharacter:
         
         ~ story_endedStories += story_thirdCharStoryEnded
         ~ thirdChar_storyStatus = story_storyEnded
-        ~ state_ending_stories(ThirdCharacter)
-        ~ move_entity(ThirdCharacter, Safekeeping)
         ~ thirdChar_InkLevel = ink_empty
         ~ thirdChar_mailPause = thirdChar_mailPauseDuration
         //Il ritratto ha senso che compaia solo quando è stato davvero riscritto, praticamente quando lo vediamo a fine gioco
-        ~ tree_advance_management(ThirdCharacter)    
+            //Spostiamo poi le varianti della PNG
+            // ~ move_entity(SecondCharacterGrizzly, Safekeeping)
+            // ~ move_entity(SecondCharacterDelfino, Safekeeping)
+            // ~ move_entity(SecondCharacterLupo, Safekeeping)
+            // ~ move_entity(SecondCharacterCapibara, Safekeeping)
+            // ~ move_entity(SecondCharacterCorvo, Safekeeping)  
 
     - PNG == FourthCharacter:
         
         ~ story_endedStories += story_fourthCharStoryEnded
         ~ fourthChar_storyStatus = story_storyEnded
-        ~ state_ending_stories(FourthCharacter)
-        ~ move_entity(FourthCharacter, Safekeeping)
         ~ fourthChar_InkLevel = ink_empty
         ~ fourthChar_mailPause = fourthChar_mailPauseDuration
-        ~ tree_advance_management(FourthCharacter)
+            //Spostiamo poi le varianti della PNG
+            // ~ move_entity(SecondCharacterGrizzly, Safekeeping)
+            // ~ move_entity(SecondCharacterDelfino, Safekeeping)
+            // ~ move_entity(SecondCharacterLupo, Safekeeping)
+            // ~ move_entity(SecondCharacterCapibara, Safekeeping)
+            // ~ move_entity(SecondCharacterCorvo, Safekeeping)  
 
     - PNG == FifthCharacter:
         
         ~ story_endedStories += story_fifthCharStoryEnded
         ~ fifthChar_storyStatus = story_storyEnded
-        ~ state_ending_stories(FifthCharacter)
-        ~ move_entity(FifthCharacter, Safekeeping)
         ~ fifthChar_InkLevel = ink_empty
         ~ fifthChar_mailPause = fifthChar_mailPauseDuration
-        ~ tree_advance_management(FifthCharacter)    
+            //Spostiamo poi le varianti della PNG
+            // ~ move_entity(SecondCharacterGrizzly, Safekeeping)
+            // ~ move_entity(SecondCharacterDelfino, Safekeeping)
+            // ~ move_entity(SecondCharacterLupo, Safekeeping)
+            // ~ move_entity(SecondCharacterCapibara, Safekeeping)
+            // ~ move_entity(SecondCharacterCorvo, Safekeeping)  
         
 }
+
+//Cose comuni
+    ~ state_ending_stories(PNG)
+    ~ tree_advance_management(PNG)
 
 
 //Elementi non dipendenti dallx PNG
