@@ -22,23 +22,23 @@
 
     ~ cooking_animations_on()
     
-        {charTag(Franco, "{portrait_Franco()}")}:       Si lo so che è una sorpresa questa cosa del cucinare assieme.
-                                                        E tu mi dirai: "Franco, ma io non me la cavo bene quanto te!"
-                                                        E io ti dirò: "Vero, ma i pesci hanno bisogno di noi."
+        {charTag(Franco, "party")}:                     Si lo so che è una sorpresa questa cosa del cucinare assieme.
+        {charTag(Franco, "question")}:                  E tu mi dirai: "Franco, ma io non me la cavo bene quanto te!"
+        {charTag(Franco, "neutral")}:                   E io ti dirò: "Vero, ma i pesci hanno bisogno di noi."
                                                         E poi ti dirò: "E anche zio Gracco."
-                                                        E tu mi dirai: "Ma non è un cuoco famoso lui?"
-                                                        E io ti dirò: "Sì, ma gli hanno revocato la licenza dopo che ha invitato a cena una volpe."
-                                                        E tu mi chiederai: "E cosa c'entrano i pesci?"
-                                                        E a quel punto ti spiegherò che con tutto il via vai di persone che passano da qui, i pesci sono stressati.
+        {charTag(Franco, "question")}:                  E tu mi dirai: "Ma non è un cuoco famoso lui?"
+        {charTag(Franco, "neutral")}:                   E io ti dirò: "Sì, ma gli hanno revocato la licenza dopo che ha invitato a cena una volpe."
+        {charTag(Franco, "question")}:                  E tu mi chiederai: "E cosa c'entrano i pesci?"
+        {charTag(Franco, "neutral")}:                   E a quel punto ti spiegherò che con tutto il via vai di persone che passano da qui, i pesci sono stressati.
                                                         E se sono stressati non mangiano.
                                                         E tu sai bene che brutto è il mondo senza cibo.
-                                                        Ma apprezzano sempre un buon piatto fatto con amore.
-                                                        O per lo meno, con un po' di alghe.
+        {charTag(Franco, "party")}:                     Ma apprezzano sempre un buon piatto fatto con amore.
+        {charTag(Franco, "neutral")}:                   O per lo meno, con un po' di alghe.
                                                         E poi è un modo carino per ringraziarli per lo spazio che hanno offerto a {charNameOne} e a noi, per avere questa cucina.
                                                         Quindi: zampe in spalla e gambe di pasta frolla e cominciamo!
                                                         Uh, l'estintore.
-                                                        Tullio mi ha detto di portarmi l'estintore.
-                                                        Ma mentre cuciniamo, mi dici un po' come stai approcciando questo posto?
+        {charTag(Franco, "question")}:                  Tullio mi ha detto di portarmi l'estintore.
+        {charTag(Franco, "neutral")}:                   Ma mentre cuciniamo, mi dici un po' come stai approcciando questo posto?
                                                         Vai col caos come il famoso Girino Ir Rosponsabile, o sei più una persona ranalitica?
 
         -> kitchen_moon_feedback ->

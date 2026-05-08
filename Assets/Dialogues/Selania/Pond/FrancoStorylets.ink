@@ -8,38 +8,38 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     
 
-    {charTag(Franco, "{portrait_Franco()}")}:       Ma dove avevo messo quel.
-                                                    Eccola cra!
-                                                    No.
+    {charTag(Franco, "question")}:                  Ma dove avevo messo quel.
+    {charTag(Franco, "party")}:                     Eccola cra!
+    {charTag(Franco, "neutral")}:                   No.
                                                     No no no questo è disgustoso.
                                                     Eppure.
-                                                    Ehi!
+    {charTag(Franco, "party")}:                     Ehi!
                                                     Tu devi essere {player_name}!
-                                                    Io sono Franco La Rana!
+    {charTag(Franco, "neutral")}:                   Io sono Franco La Rana!
                                                         ~ frog_nameDiscovered = true
-                                                    {charNameTwo} mi ha parlato di te.
+    {charTag(Franco, "party")}:                     {charNameTwo} mi ha parlato di te.
                                                     Ha una bella testolina quel girino!
     {
         - are_two_entities_together(SecondCharacter, PG):
                                                     {charTag(SecondCharacter, "energy")}:       Anche la tua mi piace, Franco!
     }
-    {charTag(Franco, "{portrait_Franco()}")}:       Sei qui sicuramente qui per il dono.
-                                                    Come si dice: chi dorme non piglia lombrichi.
-                                                    Dovrei averlo qui.
-                                                    No.
+    {charTag(Franco, "neutral")}:                   Sei qui sicuramente qui per il dono.
+    {charTag(Franco, "party")}:                     Come si dice: chi dorme non piglia lombrichi.
+    {charTag(Franco, "neutral")}:                   Dovrei averlo qui.
+    {charTag(Franco, "question")}:                  No.
                                                     Dove l'ho messo?
                                                     L'avranno preso i gemelli?
-                                                    Facciamo così: mentre lo cerco ti do qualcosa da fare.
+    {charTag(Franco, "neutral")}:                   Facciamo così: mentre lo cerco ti do qualcosa da fare.
                                                     Ma non una cosa da fare qualsiasi.
-                                                    Qualcosa di utile per chi vive questo posto.
-                                                    Come dice zia Graaak: una zampa vale l'altra.
-                                                    Non che zia Graaak sia particolarmente brava negli affari.
+    {charTag(Franco, "party")}:                     Qualcosa di utile per chi vive questo posto.
+    {charTag(Franco, "neutral")}:                   Come dice zia Graaak: una zampa vale l'altra.
+    {charTag(Franco, "question")}:                  Non che zia Graaak sia particolarmente brava negli affari.
                                                     Ma sempre meglio di mio cugino Braaak, che ha venduto una foglia di loto intera per una biscia.
-                                                    Al funerale erano tutti molto molto imbarazzati.
+    {charTag(Franco, "neutral")}:                   Al funerale erano tutti molto molto imbarazzati.
                                                     Tranne la biscia: quella aveva ancora fame.
-                                                    Insomma: tu aiuti me, e io aiuto te.
+    {charTag(Franco, "party")}:                     Insomma: tu aiuti me, e io aiuto te.
                                                     Ad esempio dandoti dei consigli sulle cose da donare a una persona.
-                                                    O recuperando una pianta che hai già usato.
+    {charTag(Franco, "neutral")}:                   O recuperando una pianta che hai già usato.
         {
             - are_two_entities_together(FirstCharacter, PG):
                                                     {charTag(FirstCharacter, "affectionate")}:       Livello di confusione: sì.
@@ -55,9 +55,9 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     
 
-    {charTag(Franco, "{portrait_Franco()}")}:       Girino!
-                                                    Ora che {charNameOne} ti ha aperto la cucina, posso darti delle dritte anche su quale ingrediente aggiungere quando cucini con una persona!
-                                                    Non è una cosa francosissima?!?
+    {charTag(Franco, "party")}:                     Girino!
+    {charTag(Franco, "neutral")}:                   Ora che {charNameOne} ti ha aperto la cucina, posso darti delle dritte anche su quale ingrediente aggiungere quando cucini con una persona!
+    {charTag(Franco, "party")}:                     Non è una cosa francosissima?!?
                                                     Che è tipo bellissima, solo più bagnaticcia.
 
 
@@ -68,12 +68,12 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     
 
-    {charTag(Franco, "{portrait_Franco()}")}:       Girino!
-                                                    {charNameTwo} ti ha aperto la biblioteca, e io ora ti apro la possibilità di conoscere quale racconto amano le persone che vuoi aiutare!
+    {charTag(Franco, "party")}:                     Girino!
+    {charTag(Franco, "neutral")}:                   {charNameTwo} ti ha aperto la biblioteca, e io ora ti apro la possibilità di conoscere quale racconto amano le persone che vuoi aiutare!
                                                     Così ne potete parlare.
                                                     O gracchiare.
-                                                    Qui gracchiano tutti molto poco.
-                                                    Craack.
+    {charTag(Franco, "question")}:                  Qui gracchiano tutti molto poco.
+    {charTag(Franco, "party")}:                     Craack.
 
     ->->
 
@@ -82,11 +82,11 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     
 
-    {charTag(Franco, "{portrait_Franco()}")}:       Girino!
-                                                    Ho saputo che {charNameThree} ha aperto il nido.
+    {charTag(Franco, "party")}:                     Girino!
+    {charTag(Franco, "neutral")}:                   Ho saputo che {charNameThree} ha aperto il nido.
                                                     Qui non posso fare miracoli, perché quei sigilli sono un graaaack casino.
-                                                    Ma posso recuperartene uno che hai utilizzato.
-                                                    Uno ce la faccio.
+    {charTag(Franco, "party")}:                     Ma posso recuperartene uno che hai utilizzato.
+    {charTag(Franco, "neutral")}:                   Uno ce la faccio.
                                                     Poi sono troppo pesanti per le mie zampine.
       
     ->->
@@ -98,8 +98,8 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     
 
-        {charTag(Franco, "{portrait_Franco()}")}:       Ehi girino, grazie ancora per prima.
-                                                        Euforbo all'inizio era confuso, si è portato il sigillo in camera.
+        {charTag(Franco, "party")}:                     Ehi girino, grazie ancora per prima.
+        {charTag(Franco, "neutral")}:                   Euforbo all'inizio era confuso, si è portato il sigillo in camera.
                                                         Poi è venuto in soggiorno a fare le sue cose, e quando i suoi fratelli gli hanno dato noia <>
 
         {
@@ -114,7 +114,7 @@
         }
 
                                                         Per il resto della serata l'ho visto più sereno.
-                                                        Ha anche riso a una mia battuta!
+        {charTag(Franco, "party")}:                     Ha anche riso a una mia battuta!
         
     ~ grimoire_franco += grimFrancoSpecialMissionOneFeedback
     -> welcoming_frog.top2
@@ -126,29 +126,29 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     
 
-    {charTag(Franco, "{portrait_Franco()}")}:           Girino!
+    {charTag(Franco, "party")}:                         Girino!
                                                         Hai trovato tutti i documenti della vecchia congrega!
-                                                        E tu mi dirai: "Come fai a saperlo, Franco?"
-                                                        E io ti dirò: "Perché Franco sa tutto! Tranne nuotare."
+    {charTag(Franco, "question")}:                      E tu mi dirai: "Come fai a saperlo, Franco?"
+    {charTag(Franco, "neutral")}:                       E io ti dirò: "Perché Franco sa tutto! Tranne nuotare."
                                                         Soprattutto se è Franco a fare le cose.
-                                                        Anche se non me le ricordo proprio tutte tutte.
+    {charTag(Franco, "question")}:                      Anche se non me le ricordo proprio tutte tutte.
                                                         Tipo come quando apro il frigo e poi non ricordo perché l'ho aperto.
                                                         E poi ci trovo dentro la tessera della palestra a cui non sono mai andato.
                                                         E zia Graaak che si fa un pisolino.
-                                                        Una volta ha dormito così tanto che quando si è svegliata aveva altri centoquindici nipotini!
+    {charTag(Franco, "neutral")}:                       Una volta ha dormito così tanto che quando si è svegliata aveva altri centoquindici nipotini!
                                                         Mia sorella è molto pratica, e quindi li ha chiamati per numero.
                                                         Uh, una lettera di Euforbo!
                                                         "Papà, devi dire a {player_name} che abbiamo messo in giro noi i documenti!"
-                                                        Giusto!
-                                                        Ero lì che mi dicevo: "Mmm, quando mi spiegano le cose tutte assieme mi distraggo, e a quel punto non capisco proprio nulla."
+    {charTag(Franco, "party")}:                         Giusto!
+    {charTag(Franco, "neutral")}:                       Ero lì che mi dicevo: "Mmm, quando mi spiegano le cose tutte assieme mi distraggo, e a quel punto non capisco proprio nulla."
                                                         Ma ho pensato fosse importante per te conoscere quella storia.
-                                                        E a quel punto mi son detto: "Ok Franco, facciamo un gioco. Ogni volta che {player_name} fa certe cose, metti un nuovo documento sulla panchina."
+    {charTag(Franco, "question")}:                      E a quel punto mi son detto: "Ok Franco, facciamo un gioco. Ogni volta che {player_name} fa certe cose, metti un nuovo documento sulla panchina."
                                                         E ho fatto anche uno schema molto colorato che spiegava quando dovevo darti i documenti.
-                                                        Ma poi me lo sono dimenticato.
+    {charTag(Franco, "neutral")}:                       Ma poi me lo sono dimenticato.
                                                         Fino a quando poco fa Euforbo non mi ha detto "Ehi papà, ho trovato una logica per dare quei vecchi appunti a {player_name}".
                                                         E visto che sa che a volte mi distraggo, ha fatto tutto lui il lavoro.
                                                         Devo ringraziarlo.
-                                                        Magari gli compro il prossimo "Starview Galley".
+    {charTag(Franco, "party")}:                         Magari gli compro il prossimo "Starview Galley".
                                 
         ~ grimoire_franco += grimFrancoAllDocuments
     -> welcoming_frog.top2
