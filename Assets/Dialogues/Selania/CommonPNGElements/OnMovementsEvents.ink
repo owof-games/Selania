@@ -465,7 +465,8 @@ VAR letters_doggoPause = false
             - kitchen_secondCharHasCooked == false && kitchen_kitchenOccupied == false && grimoire_secondChar has grimSecondCharOne && (kitchen_cookingAloneCoolDown == 0) && secondChar_ForestInvite == false && secondChar_storyStatus == story_storyStarted:
                 {debug_kitchen: le condizioni sono giuste per far cucinare Riccio da solo}
                 ~ kitchen_secondCharIsCooking = true
-                ~ move_entity(SecondCharacter, Kitchen)
+                ~ move_entity(SecondCharacterCucina, Kitchen)
+                ~ move_entity(SecondCharacter, Safekeeping)
                 ~ kitchen_kitchenOccupied = true
                 ~ cooking_animations_on()
                 
@@ -487,6 +488,7 @@ VAR letters_doggoPause = false
                     ~ kitchen_secondCharIsCooking = false
                     ~ kitchen_secondCharHasCooked = true
                     ~ move_entity(SecondCharacter, Pond)
+                    ~ move_entity(SecondCharacterCucina, Safekeeping)
                     //Attivo il cooldown, così altre png non vanno subito a cucinare da sole
                     ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
                     //E poi sposto gli elementi decorativi in cucina
@@ -509,10 +511,12 @@ VAR letters_doggoPause = false
                     {debug_kitchen: Riccio ci sta aspettando in cucina, kitchen_secondCharCookingTogetherWaiting è {kitchen_secondCharCookingTogetherWaiting}.}
                 
                 - else:
-                   ~ kitchen_secondCharCookingTogetherInvite = false
-                   ~ kitchen_secondCharCookingTogetherWaiting = 0
-                   ~ move_entity(SecondCharacter, Pond)
-                   ~ kitchen_kitchenOccupied = false
+                    ~ kitchen_secondCharCookingTogetherInvite = false
+                    ~ kitchen_secondCharCookingTogetherWaiting = 0
+                    ~ move_entity(SecondCharacter, Pond)
+                    ~ move_entity(SecondCharacter, Pond)
+                    ~ move_entity(SecondCharacterCucina, Safekeeping)
+                    ~ kitchen_kitchenOccupied = false
                    {debug_kitchen: Riccio cha smesso di aspettarci in cucina.}
             }
         }
@@ -522,7 +526,8 @@ VAR letters_doggoPause = false
             - kitchen_firstCharHasCooked == false && kitchen_kitchenOccupied == false && (kitchen_cookingAloneCoolDown == 0) && firstChar_storyStatus == story_storyStarted:
             
                     ~ kitchen_firstCharIsCooking = true
-                    ~ move_entity(FirstCharacter, Kitchen)
+                    ~ move_entity(FirstCharacterCucina, Kitchen)
+                    ~ move_entity(FirstCharacter, Safekeeping)
                     ~ kitchen_kitchenOccupied = true
                     ~ cooking_animations_on()
                   
@@ -544,6 +549,7 @@ VAR letters_doggoPause = false
                        ~ kitchen_firstCharIsCooking = false
                        ~ kitchen_firstCharHasCooked = true
                        ~ move_entity(FirstCharacter, Pond)
+                       ~ move_entity(FirstCharacterCucina, Safekeeping)
                        //Attivo il cooldown, così altre png non vanno subito a cucinare da sole
                         ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
                        //E poi sposto gli elementi decorativi in cucina
@@ -568,6 +574,7 @@ VAR letters_doggoPause = false
                    ~ kitchen_firstCharCookingTogetherInvite = false
                    ~ kitchen_firstCharCookingTogetherWaiting = 0
                    ~ move_entity(FirstCharacter, Pond)
+                   ~ move_entity(FirstCharacterCucina, Safekeeping)
                    ~ kitchen_kitchenOccupied = false
                    {debug_kitchen: chitarra ha smesso di aspettarci in cucina.}
             }
@@ -580,7 +587,8 @@ VAR letters_doggoPause = false
             - kitchen_thirdCharHasCooked == false && kitchen_kitchenOccupied == false && grimoire_thirdChar has grimThirdCharOne && (kitchen_cookingAloneCoolDown == 0) && thirdChar_LibraryInvite == false && thirdChar_storyStatus == story_storyStarted:
                 {debug_kitchen: le condizioni per far cucinare Boccale da solo sono valide.}
                     ~ kitchen_thirdCharIsCooking = true
-                    ~ move_entity(ThirdCharacter, Kitchen)
+                    ~ move_entity(ThirdCharacter, Safekeeping)
+                    ~ move_entity(ThirdCharacterCucina, Kitchen)
                     ~ kitchen_kitchenOccupied = true
                     ~ cooking_animations_on()
                     
@@ -602,6 +610,7 @@ VAR letters_doggoPause = false
                        ~ kitchen_thirdCharIsCooking = false
                        ~ kitchen_thirdCharHasCooked = true
                        ~ move_entity(ThirdCharacter, Pond)
+                       ~ move_entity(ThirdCharacterCucina, Safekeeping)
                        //Attivo il cooldown, così altre png non vanno subito a cucinare da sole
                         ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
                        //E poi sposto gli elementi decorativi in cucina
@@ -627,6 +636,7 @@ VAR letters_doggoPause = false
                    ~ kitchen_thirdCharCookingTogetherInvite = false
                    ~ kitchen_thirdCharCookingTogetherWaiting = 0
                    ~ move_entity(ThirdCharacter, Pond)
+                   ~ move_entity(ThirdCharacterCucina, Safekeeping)
                    ~ kitchen_kitchenOccupied = false
                    {debug_kitchen: boccale ha smesso di aspettarci in cucina.}
             }
@@ -645,7 +655,8 @@ VAR letters_doggoPause = false
             - kitchen_fourthCharHasCooked == false && kitchen_kitchenOccupied == false && grimoire_fourthChar has grimFourthCharOne && (kitchen_cookingAloneCoolDown == 0) && fourthChar_storyStatus == story_storyStarted:
                 {debug_kitchen: le condizioni per far cucinare Nonna da sola sono valide.}
                     ~ kitchen_fourthCharIsCooking = true
-                    ~ move_entity(FourthCharacter, Kitchen)
+                    ~ move_entity(FourthCharacter, Safekeeping)
+                    ~ move_entity(FourthCharacterCucina, Kitchen)
                     ~ kitchen_kitchenOccupied = true
                     ~ cooking_animations_on()
                     
@@ -667,6 +678,7 @@ VAR letters_doggoPause = false
                        ~ kitchen_fourthCharIsCooking = false
                        ~ kitchen_fourthCharHasCooked = true
                        ~ move_entity(FourthCharacter, Pond)
+                       ~ move_entity(FourthCharacterCucina, Safekeeping)
                        //Attivo il cooldown, così altre png non vanno subito a cucinare da sole
                         ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
                        //E poi sposto gli elementi decorativi in cucina
@@ -692,6 +704,7 @@ VAR letters_doggoPause = false
                    ~ kitchen_fourthCharCookingTogetherInvite = false
                    ~ kitchen_fourthCharCookingTogetherWaiting = 0
                    ~ move_entity(FourthCharacter, Pond)
+                   ~ move_entity(FourthCharacterCucina, Safekeeping)
                    ~ kitchen_kitchenOccupied = false
                    {debug_kitchen: Nonna ha smesso di aspettarci in cucina.}
             }
@@ -709,7 +722,8 @@ VAR letters_doggoPause = false
             - kitchen_fifthCharHasCooked == false && kitchen_kitchenOccupied == false && grimoire_fifthChar has grimFifthCharOne && (kitchen_cookingAloneCoolDown == 0) && fifthChar_storyStatus == story_storyStarted:
                 {debug_kitchen: le condizioni per far cucinare Boccale da solo sono valide.}
                     ~ kitchen_fifthCharIsCooking = true
-                    ~ move_entity(FifthCharacter, Kitchen)
+                    ~ move_entity(FifthCharacter, Safekeeping)
+                    ~ move_entity(FifthCharacterCucina, Kitchen)
                     ~ kitchen_kitchenOccupied = true
                     ~ cooking_animations_on()
                     
@@ -731,6 +745,7 @@ VAR letters_doggoPause = false
                        ~ kitchen_fifthCharIsCooking = false
                        ~ kitchen_fifthCharHasCooked = true
                        ~ move_entity(FifthCharacter, Pond)
+                       ~ move_entity(FifthCharacterCucina, Safekeeping)
                        //Attivo il cooldown, così altre png non vanno subito a cucinare da sole
                         ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
                        //E poi sposto gli elementi decorativi in cucina
@@ -756,6 +771,7 @@ VAR letters_doggoPause = false
                    ~ kitchen_fifthCharCookingTogetherInvite = false
                    ~ kitchen_fifthCharCookingTogetherWaiting = 0
                    ~ move_entity(FifthCharacter, Pond)
+                   ~ move_entity(FifthCharacterCucina, Safekeeping)
                    ~ kitchen_kitchenOccupied = false
                    {debug_kitchen: boccale ha smesso di aspettarci in cucina.}
             }

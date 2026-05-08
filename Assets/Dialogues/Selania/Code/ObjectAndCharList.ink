@@ -45,7 +45,8 @@
 
 
     LIST listCharactersVariations = 
-    FirstCharacterTriangolo, FirstCharacterOrchestra, FirstCharacterFlautoDolce, FirstCharacterOcarina, FirstCharacterViolino,
-    PaintTriangolo, PaintOrchestra, PaintFlautoDolce, PaintOcarina, PaintViolino, 
-    SecondCharacterGrizzly, SecondCharacterLupo, SecondCharacterDelfino, SecondCharacterCapibara, SecondCharacterCorvo,
-    PaintGrizzly, PaintLupo, PaintDelfino, PaintCapibara, PaintCorvo
+    FirstCharacterTriangolo, FirstCharacterOrchestra, FirstCharacterFlautoDolce, FirstCharacterOcarina, FirstCharacterViolino, FirstCharacterCucina,
+    PaintTriangolo, PaintOrchestra, PaintFlautoDolce, PaintOcarina, PaintViolino, SecondCharacterCucina,
+    SecondCharacterGrizzly, SecondCharacterLupo, SecondCharacterDelfino, SecondCharacterCapibara, SecondCharacterCorvo, 
+    PaintGrizzly, PaintLupo, PaintDelfino, PaintCapibara, PaintCorvo,
+    ThirdCharacterCucina, FourthCharacterCucina, FifthCharacterCucina
