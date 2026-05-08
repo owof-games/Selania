@@ -149,7 +149,7 @@
                                     {charTag(SecondCharacter, "melanchonic")}:    Hai ragione.
                                     {
                                         - are_two_entities_together(Franco, PG):
-                                        {charTag(Franco, "{portrait_Franco()}")}:   Se è fatta di legno per forza ha un nido! Sennò da dove lo prende il legno?
+                                        {charTag(Franco, "question")}:  Se è fatta di legno per forza ha un nido! Sennò da dove lo prende il legno?
                                     }
                             }
                     }

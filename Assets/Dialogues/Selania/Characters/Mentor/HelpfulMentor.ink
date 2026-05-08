@@ -200,12 +200,12 @@
                                                     E dopo averci parlato, non mi ispira molta fiducia.
                     {
                         - are_two_entities_together(Franco, PG):
-                            {charTag(Franco, "{portrait_Franco()}")}:       Hai provata ad espirarla?
+                            {charTag(Franco, "neutral")}:                   Hai provata ad espirarla?
                                                                             Una volta ho espirato un insetto così grosso che ha fatto un rumore come di botto.
                                                                             E mi sono spaventato per il rumore.
                                                                             E a quel punto l'insetto si è spaventato a sua volta ed è finito nel naso di Tullio.
-                                                                            Credo sia ancora lì dentro.
-                            {charTag(FifthCharacter, "neutral")}:                   Appunto.
+                            {charTag(Franco, "question")}:                  Credo sia ancora lì dentro.
+                            {charTag(FifthCharacter, "neutral")}:           Appunto.
                     }
                     }
 
@@ -267,7 +267,7 @@
                                                 - else:
                                                         {
                                                         - are_two_entities_together(Franco, PG):
-                                                            {charTag(Franco, "{portrait_Franco()}")}:      Ma è vero!
+                                                            {charTag(Franco, "neutral")}:                   Ma è vero!
 
                                                             - else:
                                                             {charTag(TheWitch, "{witch_state()}")}:          <i>E Franco ha ragione.</i>

@@ -652,11 +652,11 @@
         {charTag(FirstCharacter, "sad")}:                       Per fare concerti che salvino almeno una persona.
         {
             - are_two_entities_together(Franco, PG):
-                {charTag(Franco, "{portrait_Franco()}")}:       Ma se i concerti si ascoltano in compagnia, allora da solə sono i solcerti?
+                {charTag(Franco, "question")}:                  Ma se i concerti si ascoltano in compagnia, allora da solə sono i solcerti?
                                                                 Soncerti?
                                                                 Sorcerti?
-                                                                Che cosa strana la lingua.
-                                                                Ma anche le dita sono strane.
+                {charTag(Franco, "neutral")}:                   Che cosa strana la lingua.
+                {charTag(Franco, "party")}:                     Ma anche le dita sono strane.
         }
 
                 -> first_char_closing_storylet ->

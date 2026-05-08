@@ -146,7 +146,7 @@
         }
         {
             - are_two_entities_together(Franco, PG):
-                {charTag(Franco, "{portrait_Franco()}")}:           Non fate caso a me, sto provando a raccogliere tutte le bolle in un unico posto, ma continuano a scappare.     
+                {charTag(Franco, "neutral")}:                       Non fate caso a me, sto provando a raccogliere tutte le bolle in un unico posto, ma continuano a scappare.     
         }
 
         

@@ -470,7 +470,7 @@
                                                             E che l'acso, atso, axotolottoto.
         {
             - are_two_entities_together(Franco, PG):
-            {charTag(Franco, "{portrait_Franco()}")}:       Botto!
+            {charTag(Franco, "party")}:                     Botto!
                                                             Risotto!
                                                             Cucciolotto!
             {charTag(SecondCharacter, "energy")}:           Franco!
@@ -861,7 +861,7 @@
         {charTag(SecondCharacter, "energy")}:               Franco prima mi ha detto che tu scrivi storie.
         {
             - are_two_entities_together(Franco, PG):
-            {charTag(Franco, "{portrait_Franco()}")}:       Anche Franco scrive storie.
+            {charTag(Franco, "neutral")}:                   Anche Franco scrive storie.
                                                             Storie in cui Franco sa nuotare!
         }
         {charTag(SecondCharacter, "neutral")}:              A me mi piacciono le storie.
@@ -946,10 +946,10 @@
                                                             Ma mi ha chiesto di non farlo ma più, perché poi sto male.
             {
                 - are_two_entities_together(Franco, PG):
-            {charTag(Franco, "{portrait_Franco()}")}:       Ho un superpotere: se mi lecchi viaggi senza spostarti.
+            {charTag(Franco, "party")}:                     Ho un superpotere: se mi lecchi viaggi senza spostarti.
                                                             Sono molto apprezzato alle feste!
-                                                            Ma non mi piace tanto tutta la bava che mi arriva addosso.
-                                                            Però c'è il cibo gratis!
+            {charTag(Franco, "neutral")}:                   Ma non mi piace tanto tutta la bava che mi arriva addosso.
+            {charTag(Franco, "party")}:                     Però c'è il cibo gratis!
             {charTag(FirstCharacter, "affectionate")}:      Franco, sai che sei appena diventato il mio migliore amico?
             }
 
@@ -1002,7 +1002,7 @@
             {charTag(FirstCharacter, "annoyed")}:           Sto iniziando a ragionare come Franco?
             {
             - are_two_entities_together(Franco, PG):
-            {charTag(Franco, "{portrait_Franco()}")}:       Sono una rana, non un ragioniere, quindi no.
+            {charTag(Franco, "neutral")}:                   Sono una rana, non un ragioniere, quindi no.
             }                                              
         } 
         {charTag(SecondCharacter, "emotional")}:            Il suo amico invece fa dei dolci buonissimi.
@@ -1066,8 +1066,8 @@
             {charTag(SecondCharacter, "neutral")}:          Franco sembra abbastanza forte e mi salva lui se succede qualcosa.
             {
                 -are_two_entities_together(Franco, PG):
-            {charTag(Franco, "{portrait_Franco()}")}:       Non so nuotare, {charNameTwo}.
-                                                            Però posso urlare tantissimo mentre anneghi!    
+            {charTag(Franco, "neutral")}:                   Non so nuotare, {charNameTwo}.
+            {charTag(Franco, "party")}:                     Però posso urlare tantissimo mentre anneghi!    
             }
 
                 -> second_char_closing_storylet ->        
@@ -1506,9 +1506,9 @@
         {charTag(SecondCharacter, "energy")}:               E hanno riso tutti quando ho ruttato fortissimo.
         {
             - are_two_entities_together(Franco, PG):
-            {charTag(Franco, "{portrait_Franco()}")}:       Come alle serate karaoke di cugina Sputt!!
+            {charTag(Franco, "party")}:                     Come alle serate karaoke di cugina Sputt!!
             {charTag(SecondCharacter, "melanchonic")}:      Ci voglio venire!
-            {charTag(Franco, "{portrait_Franco()}")}:       La organizziamo presto, promesso!
+            {charTag(Franco, "party")}:                     La organizziamo presto, promesso!
         }
         {charTag(SecondCharacter, "neutral")}:              Da nonna mi addormento subito.
                                                             Non devo correggere le giornate.

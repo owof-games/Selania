@@ -38,15 +38,15 @@
                                                                 Ho perso il conto delle bugie che mi ha detto da quando è arrivato.
             {
                 - are_two_entities_together(Franco, PG):
-                {charTag(Franco, "{portrait_Franco()}")}:       Sono bugie solo se hanno le gambe corte.
+                {charTag(Franco, "neutral")}:                   Sono bugie solo se hanno le gambe corte.
                                                                 Ma {charNameTwo} ha quattro zampette.
                                                                 Quindi al massimo sono...
-                                                                Cosa sono?
+                {charTag(Franco, "question")}:                  Cosa sono?
                 {
                     - are_two_entities_together(FirstCharacter, PG):
                         {charTag(FirstCharacter, "curious")}:   Se due gambe fanno una bugia, il doppio fa una duogia?
-                    {charTag(Franco, "{portrait_Franco()}")}:   Esatto!
-                                                                Sono sicuro che è il termine scientifico!
+                        {charTag(Franco, "party")}:             Esatto!
+                        {charTag(Franco, "neutral")}:           Sono sicuro che è il termine scientifico!
                                                                 Quindi {charNameTwo} non può dire bugie, ma solo duogie!
                         {charTag(FifthCharacter, "bored")}:             Basta!
                         {charTag(FifthCharacter, "neutral")}:           Quel bambino è inaffidabile!
@@ -61,7 +61,7 @@
         
             {
                 -not_talk:
-                    {charTag(PG, "neutral")}:                   Gli hai fatto male? Perché lui ne è convinto.
+                    {charTag(PG, "neutral")}:                           Gli hai fatto male? Perché lui ne è convinto.
                     {charTag(FifthCharacter, "neutral")}:               L'ho afferrato perché faceva i salti nello stagno.
                     {charTag(FifthCharacter, "sad")}:                   Ma non so cosa c'è in quell'acqua lurida.
                     {charTag(FifthCharacter, "sorry")}:                 Forse l'ho stretto più di quanto volessi.
@@ -69,10 +69,10 @@
                 
                 - else:
                     {charTag(FifthCharacter, "sorry")}:                 Stavo solo cercando di fermarlo.
-                                                                Continuava a saltare nello stagno, e non ho idea di cosa possa esserci in quell'acqua lurida e limacciosa.
+                                                                        Continuava a saltare nello stagno, e non ho idea di cosa possa esserci in quell'acqua lurida e limacciosa.
                     {
                         - are_two_entities_together(Franco, PG):
-                            {charTag(Franco, "{portrait_Franco()}")}:       I miei figli.
+                           {charTag(Franco, "neutral")}:                I miei figli.
                     }
             } 
 
@@ -208,11 +208,11 @@
     {charTag(FifthCharacter, "neutral")}:                               Comunque c'è una sola cosa sensata da fare.
         {
             - are_two_entities_together(Franco, PG):
-                {charTag(Franco, "{portrait_Franco()}")}:       Insegnarmi a nuotare?
+                {charTag(Franco, "question")}:                          Insegnarmi a nuotare?
         }
     {charTag(FifthCharacter, "neutral")}:                               Chiedere scusa a {charNameTwo}.
-                                                                E vedere se avrà voglia di perdonarmi.
-                                                                Grazie per l'ascolto, {player_name}.
+                                                                        E vedere se avrà voglia di perdonarmi.
+                                                                        Grazie per l'ascolto, {player_name}.
     {charTag(FifthCharacter, "hurry")}:                                 Sono sicura che diventerai {player_pronouns has him:un ottimo riscrittore|{player_pronouns has her:un'ottima riscrittora| unə ottimə riscrittorə}}.
 
         
@@ -344,8 +344,8 @@
 
                 {
                     - are_two_entities_together(Franco, PG):
-                    {charTag(Franco, "{portrait_Franco()}")}:   Urlare non è già fare qualcosa?
-                                                                Zia Graaak lo dice sempre, che non è vero che non fa nulla, perché ci sgrida tutto il giorno.
+                    {charTag(Franco, "question")}:              Urlare non è già fare qualcosa?
+                    {charTag(Franco, "neutral")}:               Zia Graaak lo dice sempre, che non è vero che non fa nulla, perché ci sgrida tutto il giorno.
                 }
     
     -> mentor_closing_storylet ->
@@ -378,8 +378,8 @@
             }
             {
                 - are_two_entities_together(Franco, PG):
-                    {charTag(Franco, "{portrait_Franco()}")}:       La mia famiglia lo mangia da anni e va tutto bene.
-                                                                    A parte quella volta che mamma Craazia ha iniziato a cantare in melanzanese.
+                    {charTag(Franco, "neutral")}:                       La mia famiglia lo mangia da anni e va tutto bene.
+                    {charTag(Franco, "party")}:                         A parte quella volta che mamma Craazia ha iniziato a cantare in melanzanese.
             }
 
     

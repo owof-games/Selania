@@ -196,9 +196,9 @@
     {charTag(SecondCharacter, "neutral")}:              Ma perché secondo me i grandi non la vedono mica l'aragosta.
     {
     - are_two_entities_together(Franco, PG):
-    {charTag(Franco, "{portrait_Franco()}")}:           Spesso non vedono neanche le rane.
+    {charTag(Franco, "neutral")}:                       Spesso non vedono neanche le rane.
                                                         O i girini.
-                                                        O l'uomo lucertola.
+    {charTag(Franco, "question")}:                      O l'uomo lucertola.
     }
     {charTag(SecondCharacter, "melanchonic")}:          I grandi non vedono mai certi problemi.
     {charTag(SecondCharacter, "neutral")}:              Mi sa che dopo mi leggo qualcosa di nuovo!

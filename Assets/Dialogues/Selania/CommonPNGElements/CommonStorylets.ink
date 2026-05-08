@@ -10,8 +10,8 @@
     {charTag(SecondCharacter, "neutral")}:              No.
     {
         - are_two_entities_together(Franco, PG):
-        {charTag(Franco, "{portrait_Franco()}")}:       Neanche io so come sono arrivato qua.
-                                                        Ma so come sono arrivato craaack!
+        {charTag(Franco, "neutral")}:                   Neanche io so come sono arrivato qua.
+        {charTag(Franco, "party")}:                     Ma so come sono arrivato craaack!
     }
     {charTag(SecondCharacter, "neutral")}:              A un certo punto ero alla stazione.
                                                         E avevo voglia di caramelle.
@@ -191,8 +191,8 @@
     {charTag(FirstCharacter, "affectionate")}:          Mi sembra la cosa migliore che possa capitare nella vita.
     {
         - are_two_entities_together(Franco, PG):
-        {charTag(Franco, "{portrait_Franco()}")}:       La cosa migliore che ti possa capitare è il karaoke di cugina Sputt.
-                                                        Ma è meglio non starle troppo vicino.
+        {charTag(Franco, "party")}:                     La cosa migliore che ti possa capitare è il karaoke di cugina Sputt.
+        {charTag(Franco, "neutral")}:                   Ma è meglio non starle troppo vicino.
     }
     {charTag(FifthCharacter, "hurry")}:                 Anche tu hai uno scopo, {charNameOne}.
                                                         Tutti l'abbiamo.
@@ -260,46 +260,46 @@
 
 
     {charTag(FifthCharacter, "neutral")}:               Però non ti ho mai visto in giro.
-    {charTag(Franco, "{portrait_Franco()}")}:           Però sono sempre stato cra!
+    {charTag(Franco, "neutral")}:                       Però sono sempre stato cra!
     {charTag(FifthCharacter, "neutral")}:               Ma non ti ho mai mai visto in giro.
                                                         E ogni giorno vengo a sistemare il sentiero e pulire la serra.
-    {charTag(Franco, "{portrait_Franco()}")}:           Forse allora non sei venuta ogni giorno.
+    {charTag(Franco, "neutral")}:                       Forse allora non sei venuta ogni giorno.
                                                         O forse mi hai scambiato per Tullio? A volte succede.
-                                                        O forse non è che hai proprio proprio proprio tutto sotto il tuo controllo.
+     {charTag(Franco, "question")}:                     O forse non è che hai proprio proprio proprio tutto sotto il tuo controllo.
                                                         Un po' come zio Gracco e il suo problema con l'alcool.
                                                         E i combustibili in generale.
     {charTag(FifthCharacter, "neutral")}:               Impossibile.
                                                         Controllo tutto, è il mio lavoro.
-    {charTag(Franco, "{portrait_Franco()}")}:           Eppure eccoci cra, con io che so dove sono stato, e tu mi dici che non ricordo bene.
+    {charTag(Franco, "neutral")}:                       Eppure eccoci cra, con io che so dove sono stato, e tu mi dici che non ricordo bene.
     {charTag(FifthCharacter, "sad")}:                   Non ho detto che non ricordi bene.
-    {charTag(Franco, "{portrait_Franco()}")}:           Ma dici che hai tutto sotto il tuo controllo e che non mi hai visto, quindi o non ricordo bene, o mento.
+    {charTag(Franco, "neutral")}:                       Ma dici che hai tutto sotto il tuo controllo e che non mi hai visto, quindi o non ricordo bene, o mento.
                                                         E io sono una rana e una rana non ha un collo e quindi non mento.
     {charTag(FifthCharacter, "sorry")}:                 Non mi permetterei mai di dirlo.
-    {charTag(Franco, "{portrait_Franco()}")}:           Infatti non l'hai detto, l'hai implicato.
-                                                        Questa me l'ha insegnata stamani mio figlio Euforbo.
-                                                        Ma mi ha chiesto di non usare "stazampe" invece di stamani.
+    {charTag(Franco, "neutral")}:                       Infatti non l'hai detto, l'hai implicato.
+    {charTag(Franco, "question")}:                      Questa me l'ha insegnata stamani mio figlio Euforbo.
+    {charTag(Franco, "neutral")}:                       Ma mi ha chiesto di non usare "stazampe" invece di stamani.
     {charTag(FifthCharacter, "neutral")}:               Non mi piace il tuo tono, rana.
-    {charTag(Franco, "{portrait_Franco()}")}:           Ma non cambia il fatto che mi stai dando o del bugiardo o dello smemorato.
+    {charTag(Franco, "neutral")}:                       Ma non cambia il fatto che mi stai dando o del bugiardo o dello smemorato.
     {charTag(FifthCharacter, "bored")}:                 Io non l'ho detto!
-    {charTag(Franco, "{portrait_Franco()}")}:           Ma l'hai implicato.
+    {charTag(Franco, "neutral")}:                       Ma l'hai implicato.
                                                         Che non è ampilato, perché i lati non sono ampi.
-                                                        Questo lo dice sempre Euforbo.
+     {charTag(Franco, "party")}:                        Questo lo dice sempre Euforbo.
     {charTag(FifthCharacter, "bored")}:                 AAAAAAAARG!
                                                         SEI INSOPPORTABILE!
         ~ change_entity_place(Mentor)
-    {charTag(Franco, "{portrait_Franco()}")}:           No, sono Franco La Rana.
+    {charTag(Franco, "neutral")}:                       No, sono Franco La Rana.
                                                         Non mi ha molto ascoltato.    
-                                                        E comunque io non me lo ricordo un Mentore da queste parti.
+     {charTag(Franco, "question")}:                     E comunque io non me lo ricordo un Mentore da queste parti.
                                                         E neanche un Nasore o un Orecchiore se è per questo.
     {
     - are_two_entities_together(FirstCharacter, PG):
     {charTag(FirstCharacter, "curious")}:               In che senso, scusa?
-    {charTag(Franco, "{portrait_Franco()}")}:           {charNameOne}!
+    {charTag(Franco, "party")}:                         {charNameOne}!
                                                         Prima è passata zia Graaak e ti voleva parlare!
-                                                        Tullio dice che c'ha una cotta per te.
+    {charTag(Franco, "neutral")}:                       Tullio dice che c'ha una cotta per te.
                                                         Però non ho visto dove si è bruciata.
-                                                        O se ti deve bruciare.
-                                                        Non sarebbe molto gentile però, vero?
+    {charTag(Franco, "question")}:                      O se ti deve bruciare.
+    {charTag(Franco, "neutral")}:                       Non sarebbe molto gentile però, vero?
     {charTag(FirstCharacter, "neutral")}:               Ooook
     {charTag(FirstCharacter, "annoyed")}:               No, non è vero: non ce la posso fare.
             ~ change_entity_place(FirstCharacter)
@@ -388,63 +388,63 @@
 
 
     {charTag(FirstCharacter, "annoyed")}:               Credo di avere il mal di testa.
-    {charTag(Franco, "{portrait_Franco()}")}:           Lo dice sempre anche Giulio.
+    {charTag(Franco, "neutral")}:                       Lo dice sempre anche Giulio.
     {charTag(FirstCharacter, "neutral")}:               Che è tuo figlio.
-    {charTag(Franco, "{portrait_Franco()}")}:           No, che è uno dei miei mariti.
+    {charTag(Franco, "neutral")}:                       No, che è uno dei miei mariti.
                                                         I miei figli sono Abaco, Aimone, Altobrando, Appasilarco, Azzolino, Borci, Clodoveo, Comunardo
     {charTag(FirstCharacter, "neutral")}:               No aspetta aspetta, ti avevo solo chiesto di.
-    {charTag(Franco, "{portrait_Franco()}")}:           Emerenzio, Etelbero, Euforbo, Fulco, Matteo.
+    {charTag(Franco, "neutral")}:                       Emerenzio, Etelbero, Euforbo, Fulco, Matteo.
     {charTag(FirstCharacter, "curious")}:               Matteo?
                                                         Un nome così normale?
-    {charTag(Franco, "{portrait_Franco()}")}:           L'abbiamo adottato.
+    {charTag(Franco, "neutral")}:                       L'abbiamo adottato.
                                                         Poi c'è Giosafatta, Gondio, Grimildo, Pierpietro, Piersabato.
     {charTag(FirstCharacter, "annoyed")}:               Ti ho solo chiesto dove si trova del vino!
-    {charTag(Franco, "{portrait_Franco()}")}:           Zelinda, Veneranda, Uga, Torlonia, Tamatta, Ruslana e Ruslanina.
+    {charTag(Franco, "neutral")}:                       Zelinda, Veneranda, Uga, Torlonia, Tamatta, Ruslana e Ruslanina.
     {charTag(FirstCharacter, "annoyed")}:               Qualcuno mi soffochi, ora.
-    {charTag(Franco, "{portrait_Franco()}")}:           Piccarda, Perlita, Macrina, Gliceria, Gianbrunilde, Eulalia,    Ermenegigia...
+    {charTag(Franco, "neutral")}:                       Piccarda, Perlita, Macrina, Gliceria, Gianbrunilde, Eulalia,    Ermenegigia...
     {charTag(FirstCharacter, "neutral")}:               {player_name} dimmi che non sto impazzendo solo io!
 
         + \ {charTag(PG, "neutral")}:                   Franco, sembri davvero legato alla tua famiglia.
                 -> glyph_choice_manager(false, waterC)->
-        {charTag(Franco, "{portrait_Franco()}")}:       No, non legato.
-                                                        Quello è successo solo alla festa di laurea di zio Gracco.
+        {charTag(Franco, "neutral")}:                   No, non legato.
+        {charTag(Franco, "party")}:                     Quello è successo solo alla festa di laurea di zio Gracco.
                                                         Ma ho ripetuto tutto il tempo che non era colpa mia.
                                                         E non mi hanno creduto.
-                                                        Mi era solo rimasta una spoletta di filo nella tasca.
+        {charTag(Franco, "neutral")}:                   Mi era solo rimasta una spoletta di filo nella tasca.
                                                         Che si è attaccata alla porta.
                                                         E poi al lavandino.
                                                         E poi a zia Graaak.
-                                                        E da lì a tutte le altre rane.    
+        {charTag(Franco, "party")}:                     E da lì a tutte le altre rane.    
             
         + \ {charTag(PG, "neutral")}:                   C'è qualcosa nell'illogicità di Franco che è quasi divina.
                 -> glyph_choice_manager(false, aetherC)->
-        {charTag(Franco, "{portrait_Franco()}")}:       Quindi posso esaudire i desideri delle persone?
-                                                        {charNameOne}!
+        {charTag(Franco, "party")}:                     Quindi posso esaudire i desideri delle persone?
+        {charTag(Franco, "neutral")}:                   {charNameOne}!
                                                         Che cosa desideri?
         {charTag(FirstCharacter, "annoyed")}:           Che questa conversazione finisca?
-        {charTag(Franco, "{portrait_Franco()}")}:       Fatto!
+        {charTag(Franco, "neutral")}:                   Fatto!
                                                         Chiamatemi come il dio egiziano.
-                                                        C-Ra.                                                
+        {charTag(Franco, "party")}:                     C-Ra.                                                
         
         + \ {charTag(PG, "neutral")}:                   "Non sto impazzendo solo io.""
                 -> glyph_choice_manager(false, earthC)->
         {charTag(FirstCharacter, "annoyed")}:           Questa sarebbe stata brutta anche in bocca a Franco.
-        {charTag(Franco, "{portrait_Franco()}")}:       Cosa ho in bocca?
+        {charTag(Franco, "question")}:                  Cosa ho in bocca?
                                                         Cos'è questa cosa?
                                                         Aargh.
-                                                        Ah.
+        {charTag(Franco, "neutral")}:                   Ah.
                                                         La mia lingua.
         
         + \ {charTag(PG, "neutral")}:                   Mi spieghi da dove vengono tutti questi nomi brutti, Franco?
                 -> glyph_choice_manager(false, airC)->
-        {charTag(Franco, "{portrait_Franco()}")}:       Non sono brutti, sono nomi di famiglia.
+        {charTag(Franco, "neutral")}:                   Non sono brutti, sono nomi di famiglia.
                                                         Li abbiamo iniziati ad usare sei generazioni fa.
-                                                        Perché chiamarci "Ehi tu!" era davvero scomodo.
-                                                        Il primo nome che abbiamo scoperto è stato Franco.
+        {charTag(Franco, "question")}:                  Perché chiamarci "Ehi tu!" era davvero scomodo.
+        {charTag(Franco, "neutral")}:                   Il primo nome che abbiamo scoperto è stato Franco.
                                                         E per un po' ci siamo chiamati tutti Franco.
-                                                        Ma questo creava un po' di confusione.
+        {charTag(Franco, "question")}:                  Ma questo creava un po' di confusione.
                                                         Ti svegli la mattina e ti dici: ma sarò io-Franco oggi, o cugino-Franco?
-                                                        E così.    
+        {charTag(Franco, "neutral")}:                   E così.    
         {charTag(FirstCharacter, "annoyed")}:           BASTAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!
 
         + \ {charTag(PG, "neutral")}:                   Se usasse quella lingua per cose intelligenti, Franco salverebbe il mondo.
@@ -452,12 +452,12 @@
         {charTag(FirstCharacter, "annoyed")}:           Non esageriamo.
         {charTag(FirstCharacter, "curious")}:           Però i suoi delirii hanno del fascino.
                                                         Se presi a piccole dosi.
-        {charTag(Franco, "{portrait_Franco()}")}:       Un po' come i pollini.
+        {charTag(Franco, "neutral")}:                   Un po' come i pollini.
         {charTag(FirstCharacter, "curious")}:           In che senso?
-        {charTag(Franco, "{portrait_Franco()}")}:       A piccole dosi ti commuovono.
-                                                        Ma a grandi dosi voli via.
+        {charTag(Franco, "neutral")}:                   A piccole dosi ti commuovono.
+        {charTag(Franco, "party")}:                     Ma a grandi dosi voli via.
         {charTag(FirstCharacter, "annoyed")}:           Eh?!?                                            
-        {charTag(Franco, "{portrait_Franco()}")}:       Ehi {charNameOne}! Che bello vederti!
+        {charTag(Franco, "party")}:                     Ehi {charNameOne}! Che bello vederti!
                                                         Ti ho mai parlato degli studi al Conservatorio di Etelbero?
         {charTag(FirstCharacter, "annoyed")}:           Uccidetemi.        
         -
@@ -472,37 +472,37 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
 
-    {charTag(Franco, "{portrait_Franco()}")}:           E Franco ti dice che non è vero, {charNameTwo}.
+    {charTag(Franco, "neutral")}:                       E Franco ti dice che non è vero, {charNameTwo}.
     {charTag(SecondCharacter, "angry")}:                Ma è IM-POS-SI-BI-LE!
-    {charTag(Franco, "{portrait_Franco()}")}:           No no no, impossibile è un bambino che sa parlare.
+    {charTag(Franco, "neutral")}:                       No no no, impossibile è un bambino che sa parlare.
     {charTag(SecondCharacter, "melanchonic")}:          Ma io so parlare!
-    {charTag(Franco, "{portrait_Franco()}")}:           E sei un bambino? Dimostralo!
+    {charTag(Franco, "neutral")}:                       E sei un bambino? Dimostralo!
     {charTag(SecondCharacter, "neutral")}:              Sono basso.
-    {charTag(Franco, "{portrait_Franco()}")}:           Anche io.
+    {charTag(Franco, "party")}:                         Anche io.
     {charTag(SecondCharacter, "neutral")}:              E vado a scuola.
     {
         - second_char_main_storylets.six.tortura:
         {charTag(SecondCharacter, "neutral")}:          Che {player_name} dice che è una tortura.
     }   
-    {charTag(Franco, "{portrait_Franco()}")}:           Quello lo fanno i girini, non i bambini.
+    {charTag(Franco, "question")}:                      Quello lo fanno i girini, non i bambini.
     {charTag(SecondCharacter, "neutral")}:              E non sono un girino?
-    {charTag(Franco, "{portrait_Franco()}")}:           Hai delle braccia, i girini non le hanno.
+    {charTag(Franco, "neutral")}:                       Hai delle braccia, i girini non le hanno.
     {charTag(SecondCharacter, "energy")}:               Quindi sono una rana?
-    {charTag(Franco, "{portrait_Franco()}")}:           Può darsi.
+    {charTag(Franco, "question")}:                      Può darsi.
                                                         Sai fare CRAAAAAAC?
     {charTag(SecondCharacter, "energy")}:               CRAAAAAAC!
-    {charTag(Franco, "{portrait_Franco()}")}:           E sai saltare?
+    {charTag(Franco, "question")}:                      E sai saltare?
     {charTag(SecondCharacter, "energy")}:               Sìì!
-    {charTag(Franco, "{portrait_Franco()}")}:           E hai uno zio che si chiama Gracco?
+    {charTag(Franco, "question")}:                      E hai uno zio che si chiama Gracco?
     {charTag(SecondCharacter, "melanchonic")}:          No.
-    {charTag(Franco, "{portrait_Franco()}")}:           Forse però non è così importante.
+    {charTag(Franco, "neutral")}:                       Forse però non è così importante.
                                                         Quindi sì: non sei un bambino, sei una rana!
-                                                        E sai nuotare?
+    {charTag(Franco, "question")}:                      E sai nuotare?
     {charTag(SecondCharacter, "neutral")}:              Sì no boh.
     {charTag(SecondCharacter, "melanchonic")}:          No.
-    {charTag(Franco, "{portrait_Franco()}")}:           Visto?
+    {charTag(Franco, "neutral")}:                       Visto?
                                                         Come ti dicevo prima: le rane non sanno nuotare.
-                                                        Logico, no?
+    {charTag(Franco, "party")}:                         Logico, no?
     {charTag(SecondCharacter, "neutral")}:              Mmm.
                                                         Non sono mica tanto convinto.
     {
@@ -510,25 +510,25 @@
     {charTag(FirstCharacter, "neutral")}:               Beeeene!
                                                         E anche questa roba tra qualche anno si trasformerà in un lunghissimo percorso di psicoterapia.
     }
-    {charTag(Franco, "{portrait_Franco()}")}:           Però possiamo chiedere alle foglie.
+    {charTag(Franco, "party")}:                         Però possiamo chiedere alle foglie.
                                                         Tullio dice sempre che nuotano nell'aria.
     {
     - are_two_entities_together(Mentor, PG):
     {charTag(FifthCharacter, "neutral")}:                       Comincio a sospettare che questa rana farà più danni di quanti ne potrò risolvere.
     }
     
-    {charTag(Franco, "{portrait_Franco()}")}:           Secondo te {player_name} come facciamo a capire se {charNameTwo} è una rana?
+    {charTag(Franco, "question")}:                      Secondo te {player_name} come facciamo a capire se {charNameTwo} è una rana?
 
         + \ {charTag(PG, "neutral")}:                   Vediamo come se la cava a cantare.
                 -> glyph_choice_manager(false, waterC)->
-        {charTag(Franco, "{portrait_Franco()}")}:       Geniale!
+        {charTag(Franco, "party")}:                     Geniale!
                                                         {charNameTwo}: ti portiamo al karaoke di cugina Sputt.
                                                         E se sai tutte le parole di <i>(You Drive Me)Craaazy</i> sei una rana!
         {charTag(SecondCharacter, "neutral")}:          Le parole di cosa?!?
 
         + \ {charTag(PG, "neutral")}:                   Dato che è un mistero irrisolvibile, sta a {charNameTwo} decidere se lo è o meno.
                 -> glyph_choice_manager(false, aetherC)->
-        {charTag(Franco, "{portrait_Franco()}")}:       E cosa ne pensa {charNameTwo}?
+        {charTag(Franco, "question")}:                  E cosa ne pensa {charNameTwo}?
         {charTag(SecondCharacter, "energy")}:           Mi sembrava una cosa bellissima essere una rana.
         {charTag(SecondCharacter, "angry")}:            Ma poi ho scoperto che i girini hanno la scuola, BLEAH!
         {charTag(SecondCharacter, "melanchonic")}:      Però questo è vero anche se resto bambino.
@@ -539,34 +539,34 @@
         + \ {charTag(PG, "neutral")}:                    Proviamo a fargli piace mangiare i lombrichi.
                 -> glyph_choice_manager(false, earthC)->
         {charTag(SecondCharacter, "angry")}:            Questa è la cosa più BLEAH che potessi dire!
-        {charTag(Franco, "{portrait_Franco()}")}:       Ma poi non ha senso!
+        {charTag(Franco, "neutral")}:                   Ma poi non ha senso!
                                                         Io sono vegetariano per esempio.
-                                                        E sono sempre una rana, no?
+        {charTag(Franco, "question")}:                  E sono sempre una rana, no?
                                                         O non lo sono più?
                                                         Non è che sono diventato un airone?
-                                                        Forse so volare?
+        {charTag(Franco, "party")}:                     Forse so volare?
         
         + \ {charTag(PG, "neutral")}:                    Franco: tu non sai nuotare, e nemmeno {charNameTwo}: non è che tu sei un bambino?
                 -> glyph_choice_manager(false, airC)->
         {charTag(SecondCharacter, "energy")}:           Siii!
                                                         Ha moooolto più senso!
-        {charTag(Franco, "{portrait_Franco()}")}:       Ma se sono un bambino vuol dire che non devo più lavorare?
+        {charTag(Franco, "question")}:                  Ma se sono un bambino vuol dire che non devo più lavorare?
         {charTag(SecondCharacter, "neutral")}:          Perché, tu lavori?
-        {charTag(Franco, "{portrait_Franco()}")}:       Certo! Sono istruttore di nuoto per i girini!
+        {charTag(Franco, "neutral")}:                   Certo! Sono istruttore di nuoto per i girini!
         {charTag(SecondCharacter, "energy")}:           Ma non sai nuotare!
-        {charTag(Franco, "{portrait_Franco()}")}:       E infatti gli istruisco a non nuotare.
+        {charTag(Franco, "neutral")}:                   E infatti li istruisco a non nuotare.
                                                         Così non annegano.
-                                                        Logico, no?                                      
+        {charTag(Franco, "party")}:                     Logico, no?                                      
         
         + \ {charTag(PG, "neutral")}:                   La risposta è nel corpo: vediamo quanto salta in alto!
                 -> glyph_choice_manager(false, fireC)-> 
         {charTag(SecondCharacter, "angry")}:            Io oooooooodio lo sport!
                                                         E odio saltare!
-        {charTag(Franco, "{portrait_Franco()}")}:       E io non so saltare.
+        {charTag(Franco, "neutral")}:                   E io non so saltare.
                                                         Questa cosa non ha senso {player_name}!                                                
         -
 
-        {charTag(Franco, "{portrait_Franco()}")}:       Non ti preoccupare {charNameTwo}, arriveremo a capo di questo mistero!
+        {charTag(Franco, "party")}:                     Non ti preoccupare {charNameTwo}, arriveremo a capo di questo mistero!
     
     -> second_char_closing_storylet ->
     ->->

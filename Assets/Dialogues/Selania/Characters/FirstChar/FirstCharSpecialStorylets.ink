@@ -85,8 +85,8 @@
     {charTag(FirstCharacter, "affectionate")}:      E non sono esattamente un falegname: le cose stanno in piedi con l'amore.
     {
         - are_two_entities_together(Franco, PG):
-        {charTag(Franco, "{portrait_Franco()}")}:   Zio Gracco sa fare una lasagna di pulci d'acqua che è la morte.
-                                                    Delle pulci d'acqua, per lo più.     
+        {charTag(Franco, "neutral")}:                 Zio Gracco sa fare una lasagna di pulci d'acqua che è la morte.
+        {charTag(Franco, "question")}:                Delle pulci d'acqua, per lo più.     
     }
     
         -> first_char_closing_storylet ->
@@ -175,7 +175,7 @@
     {charTag(FirstCharacter, "curious")}:           Erano mesi che non mi mettevo a leggere qualcosa per più di dieci minuti.
     {
         - are_two_entities_together(Franco, PG):
-        {charTag(Franco, "{portrait_Franco()}")}:   Certo che voi parlate tantissimo.
+        {charTag(Franco, "neutral")}:               Certo che voi parlate tantissimo.
                                                     Quasi quanto Tullio.  
     }
         -> first_char_closing_storylet ->
@@ -212,8 +212,8 @@
     {charTag(FirstCharacter, "neutral")}:           La adoro.
     {
     - are_two_entities_together(Franco, PG):
-    {charTag(Franco, "{portrait_Franco()}")}:       Promemoria.
-                                                    Chiedere a Euforbo cosa significa toeletta.
+    {charTag(Franco, "neutral")}:                   Promemoria.
+    {charTag(Franco, "question")}:                  Chiedere a Euforbo cosa significa toeletta.
                                                     E se i cani sanno cucinare cose milanesi.
     }
     

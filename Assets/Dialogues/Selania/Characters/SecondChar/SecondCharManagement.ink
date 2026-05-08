@@ -174,11 +174,11 @@
         }
         {
             - are_two_entities_together(Franco, PG):
-                    {charTag(Franco, "{portrait_Franco()}")}:               Io sto cra buono buono.
+                    {charTag(Franco, "neutral")}:                           Io sto cra buono buono.
                                                                             In silenzio.
                                                                             A ricordarmi il numero della scuola dei girini.
-                                                                            Che non ricordo a che ora chiude.
-                                                                            Di nuovo.     
+                    {charTag(Franco, "question")}:                          Che non ricordo a che ora chiude.
+                    {charTag(Franco, "neutral")}:                           Di nuovo.     
         }
 
         {charTag(SecondCharacter, "neutral")}:                              Ecco...
