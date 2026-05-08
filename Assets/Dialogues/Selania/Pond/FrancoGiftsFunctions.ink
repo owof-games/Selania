@@ -228,26 +228,26 @@
         //Caso uno: il dono è in crescita:
         - tempChar_favouritesGifts has greenhouse_chosenCultivable:
 
-            {charTag(Franco, "{portrait_Franco()}")}:       Girino!
+            {charTag(Franco, "party")}:                                                             Girino!
             {stopping:
-                                                        -   Tu c'hai i superportieri!
-                                                            Come zia Graaak, che sa sempre quando sto per respirare.
-                                                            La pianta che ti serve sta già crescendo in serra.
+                                                        -                                           Tu c'hai i superportieri!
+                                                                                                    Come zia Graaak, che sa sempre quando sto per respirare.
+                                                            {charTag(Franco, "neutral")}:           La pianta che ti serve sta già crescendo in serra.
 
-                                                        -   Quello che ti serve sta crescendo proprio ora in serra!
-                                                            Sento l'odore fino a qui.
-                                                            O forse è solo zia Graaak che non si è ancora lavata.
+                                                        -                                           Quello che ti serve sta crescendo proprio ora in serra!
+                                                                                                    Sento l'odore fino a qui.
+                                                            {charTag(Franco, "question")}:          O forse è solo zia Graaak che non si è ancora lavata.
                                                         
-                                                        -   Non so come fai, ma di nuovo quello che ti serve sta crescendo in serra.
-                                                            Forse sai parlare con le formiche?
-                                                            Nel caso chiedi loro di restituirmi il giroscopio?
-                                                            Mi serve per girare i girini quando sono a pancia all'aria.
+                                                        -                                           Non so come fai, ma di nuovo quello che ti serve sta crescendo in serra.
+                                                            {charTag(Franco, "question")}:          Forse sai parlare con le formiche?
+                                                                                                    Nel caso chiedi loro di restituirmi il giroscopio?
+                                                            {charTag(Franco, "neutral")}:           Mi serve per girare i girini quando sono a pancia all'aria.
                                                         
-                                                        -   Ma che te lo dico a fare: quello che ti serve sta crescendo in serra.
-                                                            Di nuovo.
-                                                            Povero Franco.
-                                                            Ormai non serve più nemmeno a piantare le piante.
-                                                            Forse potrei fiorare i fiori?
+                                                        -                                           Ma che te lo dico a fare: quello che ti serve sta crescendo in serra.
+                                                            {charTag(Franco, "neutral")}:           Di nuovo.
+                                                                                                    Povero Franco.
+                                                                                                    Ormai non serve più nemmeno a piantare le piante.
+                                                            {charTag(Franco, "party")}:             Forse potrei fiorare i fiori?
 
             }    
                 ~ frog_temp_char_gift = "sta crescendo ora in serra!"
@@ -260,9 +260,9 @@
             ~ temp backGift = LIST_RANDOM(findedFavouriteNotUsed)
             {debug_frog: il dono è nello zaino ed è {backGift}.}
 
-            {charTag(Franco, "{portrait_Franco()}")}:       Girino!
+            {charTag(Franco, "party")}:                     Girino!
                                                             Sai che hai già la pianta giusta?
-                                                            Ti do un indizio.
+            {charTag(Franco, "neutral")}:                   Ti do un indizio.
 
                 {backGift:
                     - BaccaDellaAddolorata:
@@ -328,47 +328,47 @@
         //Caso tre: non abbiamo mai trovato il dono
         - tempChar_favouritesGifts ^ greenhouse_findedCultivables == ():
 
-            {charTag(Franco, "{portrait_Franco()}")}:       Girino!
+            {charTag(Franco, "party")}:                     Girino!
                                                             
             {stopping:                                                
-                                                        -   Scusa se ho spiato tra le tue cose ma no, non hai niente di utile.
-                                                            Ma ora ci penso io.
-                                                            "Care formiche."
-                                                            "Come avrete visto, ora sono vegetariano."
-                                                            "E in onore di questa nostra nuova amicizia vi chiederei un favore: potreste coltivare qualcosa di utile per {player_name}?"
-                                                            "Grazie mille."
-                                                            "PS.: Vi allego un po' del miele di Dora."
-                                                            Ottimo.
-                                                            La prossima volta che coltivi qualcosa in serra vedrai che sarà la pianta giusta!
+                                                        -   {charTag(Franco, "neutral")}:   Scusa se ho spiato tra le tue cose ma no, non hai niente di utile.
+                                                                                            Ma ora ci penso io.
+                                                                                            "Care formiche."
+                                                            {charTag(Franco, "party")}:     "Come avrete visto, ora sono vegetariano."
+                                                            {charTag(Franco, "neutral")}:"  E in onore di questa nostra nuova amicizia vi chiederei un favore: potreste coltivare qualcosa di utile per {player_name}?"
+                                                                                            "Grazie mille."
+                                                            {charTag(Franco, "party")}:     "PS.: Vi allego un po' del miele di Dora."
+                                                            {charTag(Franco, "neutral")}:   Ottimo.
+                                                                                            La prossima volta che coltivi qualcosa in serra vedrai che sarà la pianta giusta!
 
-                                                        -   Di nuovo non hai niente di utile tra le tue cose.
-                                                            Mando una lettera alle amiche formiche.
-                                                            "Care formiche, qui è sempre Franco che vi scrive."
-                                                            "Mi diceva Dora che avete passato un periodo difficile."
-                                                            "Vi mando quindi un po' di terriccio per il nido e l'ultimo libro di zio Gracco."
-                                                            "Così magari il passato vi sembra migliore."
-                                                            "Non è che potreste inoltre aiutare {player_name}, e coltivare qualcosa che {translator(speaker)} possa apprezzare?"
-                                                            "Cordialmente."
-                                                            "Franco La Rana (non Franco Il Rospo, quello non si vede da mesi)."
-                                                            Perfetto: la prossima volta che coltiverai qualcosa, ti arriverà la pianta perfetta.        
+                                                        -   {charTag(Franco, "neutral")}:   Di nuovo non hai niente di utile tra le tue cose.
+                                                                                            Mando una lettera alle amiche formiche.
+                                                                                            "Care formiche, qui è sempre Franco che vi scrive."
+                                                                                            "Mi diceva Dora che avete passato un periodo difficile."
+                                                                                            "Vi mando quindi un po' di terriccio per il nido e l'ultimo libro di zio Gracco."
+                                                            {charTag(Franco, "party")}:     "Così magari il passato vi sembra migliore."
+                                                            {charTag(Franco, "question")}:  "Non è che potreste inoltre aiutare {player_name}, e coltivare qualcosa che {translator(speaker)} possa apprezzare?"
+                                                            {charTag(Franco, "neutral")}:    "Cordialmente."
+                                                                                            "Franco La Rana (non Franco Il Rospo, quello non si vede da mesi)."
+                                                                                            Perfetto: la prossima volta che coltiverai qualcosa, ti arriverà la pianta perfetta.        
 
-                                                        -   Mi sa che devi coltivare più piante, sennò le formiche poi si arrabbiano con me.
-                                                            Perché ancora non hai nulla di utile.
-                                                            "Care formiche, sono qui a chiedervi di nuovo di aiutare {player_name}."
-                                                            "In cambio a questo giro vi invito alla serata karaoke di cugina Sputt."
-                                                            "Ma vi chiedo di non portare di nuovo "Tintarella di muta", che poi attirate tutti i serpenti."
-                                                            "E nemmeno "È l'uovo per me", che poi i girini si spaventano."
-                                                            "Però mi piacerebbe sentire "La canzone di Raganella", se vi va."
-                                                            "Grazie mille."
-                                                            "Franco."
-                                                            Bene: la prossima volta che coltivi qualcosa, ti arriverà la pianta giusta per {translator(speaker)}.
+                                                        -   {charTag(Franco, "neutral")}:   Mi sa che devi coltivare più piante, sennò le formiche poi si arrabbiano con me.
+                                                                                            Perché ancora non hai nulla di utile.
+                                                                                            "Care formiche, sono qui a chiedervi di nuovo di aiutare {player_name}."
+                                                                                            "In cambio a questo giro vi invito alla serata karaoke di cugina Sputt."
+                                                            {charTag(Franco, "question")}:   "Ma vi chiedo di non portare di nuovo "<i>Tintarella di muta</i>", che poi attirate tutti i serpenti."
+                                                                                            "E nemmeno "<i>È l'uovo per me</i>", che poi i girini si spaventano."
+                                                            {charTag(Franco, "party")}:     "Però mi piacerebbe sentire "<i>La canzone di Raganella</i>", se vi va."
+                                                            {charTag(Franco, "neutral")}    "Grazie mille."
+                                                                                            "Franco."
+                                                                                            Bene: la prossima volta che coltivi qualcosa, ti arriverà la pianta giusta per {translator(speaker)}.
 
-                                                        -   Di nuovo senza la pianta giusta.
-                                                            "Care formiche, la solita richiesta."
-                                                            "Una pianta che aiuti {player_name} con {translator(speaker)}."
-                                                            "Ho finito le cose che vi posso offrire, ma spero avrete pazienza con me."
-                                                            Sai già come funziona, girino.
-                                                            Ma come fai ad essere sempre senza piante?    
+                                                        -   {charTag(Franco, "neutral")}    Di nuovo senza la pianta giusta.
+                                                                                            "Care formiche, la solita richiesta."
+                                                                                            "Una pianta che aiuti {player_name} con {translator(speaker)}."
+                                                                                            "Ho finito le cose che vi posso offrire, ma spero avrete pazienza con me."
+                                                                                            Sai già come funziona, girino.
+                                                            {charTag(Franco, "question")}:  Ma come fai ad essere sempre senza piante?    
 
             }                                                
 
@@ -407,18 +407,18 @@
 
             ~ temp perfectGiftTwo = LIST_RANDOM(tempChar_favouritesGifts)
 
-            {charTag(Franco, "{portrait_Franco()}")}:       Girino!
+            {charTag(Franco, "party")}:                     Girino!
                                                             Credo tu abbia fatto l'impossibile: c'erano un sacchissimo di piante a disposizione, ma le hai già consumate tutte in altre situazioni.
             {
                 - frog_recoverableCultivables!= () && frog_recoveredCultivables == ():
-                                                            Però non mi hai ancora chiesto di recuperarne una tra quelle che hai già utilizzato.
+                {charTag(Franco, "neutral")}:               Però non mi hai ancora chiesto di recuperarne una tra quelle che hai già utilizzato.
                                                             Ti consiglio di recuperare {ingredientTranslator(perfectGiftTwo)}.
-                                                            Ricorda però che posso fare un solo recupero!
+                {charTag(Franco, "question")}:              Ricorda però che posso fare un solo recupero!
                                                                 -> cultivable_recovery
 
                 - else:
-                                                            Hai già anche utilizzato il mio superpotere del recupero.
-                                                            Però posso dirti una cosa: ho fiducia in te, davvero.
+                {charTag(Franco, "neutral")}:              Hai già anche utilizzato il mio superpotere del recupero.
+                {charTag(Franco, "party")}:                Però posso dirti una cosa: ho fiducia in te, davvero.
                                                             E so già che riuscirai a trovare altri modi per dimostrare quanto tieni a {translator(speaker)}.
             }
 
@@ -560,7 +560,7 @@
     //Levo la possibilità di recuperare il sigillo
         ~ frog_otherGifts -= sigilRecovery
     
-    {charTag(Franco, "{portrait_Franco()}")}:       E allora girino, eccoti di nuovo a disposizione {sigils_translator(sigil)}!
+    {charTag(Franco, "party")}:                     E allora girino, eccoti di nuovo a disposizione {sigils_translator(sigil)}!
                                                     Fanne buon uso!
 
 
@@ -573,7 +573,7 @@
         
     ~ temp recoveredCultivable = LIST_RANDOM(frog_recoveredCultivables)
 
-        {charTag(Franco, "{portrait_Franco()}")}:       Signori e signore e signor3, ecco quanto richiesto dal girino: {ingredientTranslator(recoveredCultivable)}!
+        {charTag(Franco, "party")}:                     Signori e signore e signor3, ecco quanto richiesto dal girino: {ingredientTranslator(recoveredCultivable)}!
                                                         Direttamente nella collezione di {player_name}!
 
             ~ backpack_findedGifts += recoveredCultivable
