@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: df4f26c132dd4e245ba6d2bb3b0efc4a
+guid: 344b55a4297f12044ab6983a41244542
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5834109421124400582
-    second: frog_kitchen_0
+      213: 7351193867451086215
+    second: franco_question_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: frog_kitchen_0
+      name: franco_question_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a3ace155464190fa0800000000000000
-      internalID: -5834109421124400582
+      spriteID: 785b378cfdfa40660800000000000000
+      internalID: 7351193867451086215
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      frog_kitchen_0: -5834109421124400582
+      franco_question_0: 7351193867451086215
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
