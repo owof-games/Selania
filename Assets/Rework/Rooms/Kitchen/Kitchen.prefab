@@ -6644,6 +6644,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1903747096102757810, guid: a6d68fefa5b561047b77f409f1af330b, type: 3}
+      propertyPath: choiceText
+      value: FirstCharacter
+      objectReference: {fileID: 0}
     - target: {fileID: 4449773367406173467, guid: a6d68fefa5b561047b77f409f1af330b, type: 3}
       propertyPath: m_Name
       value: 30 - ChitarraCucina

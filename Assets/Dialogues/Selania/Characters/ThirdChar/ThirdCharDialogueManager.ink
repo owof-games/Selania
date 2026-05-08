@@ -5,7 +5,7 @@
             -> talk_with_third_character
 
         //Chiacchierata in cucina
-        + {are_two_entities_together(ThirdCharacter, PG) && thirdChar_storyStatus == story_storyStarted && entity_location(PG) == Kitchen} [ThirdCharacter]
+        + {are_two_entities_together(ThirdCharacterCucina, PG) && thirdChar_storyStatus == story_storyStarted && entity_location(PG) == Kitchen} [ThirdCharacter]
             -> kitchen_storylets_dispatcher  
 
 

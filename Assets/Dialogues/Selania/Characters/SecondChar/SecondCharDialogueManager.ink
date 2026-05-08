@@ -12,7 +12,7 @@
             -> talk_with_second_character
 
         //Chiacchierata in cucina
-        + {are_two_entities_together(SecondCharacter, PG) && secondChar_storyStatus == story_storyStarted && entity_location(PG) == Kitchen} [SecondCharacter]
+        + {are_two_entities_together(SecondCharacterCucina, PG) && secondChar_storyStatus == story_storyStarted && entity_location(PG) == Kitchen} [SecondCharacter]
             -> kitchen_storylets_dispatcher    
 
         // //Chiacchiera a fine storia
