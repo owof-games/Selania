@@ -293,9 +293,11 @@ MonoBehaviour:
     <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: 4e76ff89aef44064db41ededf92898f7, type: 3}
     <characterMoods>k__BackingField:
     - <name>k__BackingField: neutral
-      <sprite>k__BackingField: {fileID: 21300000, guid: cc33664b5b30d2449bdc61ee164f9ea2, type: 3}
-    - <name>k__BackingField: kitchen
-      <sprite>k__BackingField: {fileID: 21300000, guid: df4f26c132dd4e245ba6d2bb3b0efc4a, type: 3}
+      <sprite>k__BackingField: {fileID: 21300000, guid: 0383c1ace5e7cfd42b7fe8be66a63175, type: 3}
+    - <name>k__BackingField: party
+      <sprite>k__BackingField: {fileID: 21300000, guid: 776af525cbd1bc04386d662120d506c9, type: 3}
+    - <name>k__BackingField: question
+      <sprite>k__BackingField: {fileID: 21300000, guid: 344b55a4297f12044ab6983a41244542, type: 3}
   - <listName>k__BackingField: TheWitch
     <dialogueColor>k__BackingField: {r: 0.40784314, g: 0.5176471, b: 0.56078434, a: 1}
     <inkVariableName>k__BackingField: 
