@@ -49,4 +49,5 @@
     PaintTriangolo, PaintOrchestra, PaintFlautoDolce, PaintOcarina, PaintViolino, SecondCharacterCucina,
     SecondCharacterGrizzly, SecondCharacterLupo, SecondCharacterDelfino, SecondCharacterCapibara, SecondCharacterCorvo, 
     PaintGrizzly, PaintLupo, PaintDelfino, PaintCapibara, PaintCorvo,
-    ThirdCharacterCucina, FourthCharacterCucina, FifthCharacterCucina
+    ThirdCharacterCucina, FourthCharacterCucina, FifthCharacterCucina,
+    FrancoCucina

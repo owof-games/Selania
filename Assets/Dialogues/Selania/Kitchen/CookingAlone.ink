@@ -1,3 +1,16 @@
+=== cooking_alone ===
+    + {are_two_entities_together(FrancoCucina, PG) && entity_location(PG) == Kitchen} [Franco] 
+    
+    {charTag(Franco, "{portrait_Franco()}")}:       Girino!
+                                                    Eccoti cra!
+                                                    Sei {player_pronouns has him:pronto|{player_pronouns has her:pronta|prontə}} per cucinare assieme?
+        
+        + + \ {charTag(PG, "neutral")}:                      Ci sto!
+            -> cooking_with_frog
+
+        + + \ {charTag(PG, "neutral")}:                      Ci penso un attimo.
+            -> main
+
 === cooking_with_frog
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -350,6 +363,7 @@
         ~ kitchen_allChefs += PG
         //Rimetto a posto i vari assets
         ~ move_entity(Franco, Pond)
+        ~ move_entity(FrancoCucina, Safekeeping)
         ~ kitchen_kitchenOccupied = false
         ~ cooking_animations_off()
 

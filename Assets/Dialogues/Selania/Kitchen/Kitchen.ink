@@ -64,7 +64,7 @@
             -> pre_start_cooking_with_fifth_char
 
     //Scena in cui cuciniamo da solx
-        - are_two_entities_together(Franco, PG) && not cooking_alone && (kitchen_secondCharIsCooking == false) && (kitchen_firstCharIsCooking == false):
+        - are_two_entities_together(FrancoCucina, PG) && not cooking_alone && (kitchen_secondCharIsCooking == false) && (kitchen_firstCharIsCooking == false):
             -> cooking_alone
     
     - else:
@@ -72,15 +72,3 @@
 
 }
 
-=== cooking_alone ===
-    + {are_two_entities_together(Franco, PG) && entity_location(PG) == Kitchen} [Franco] 
-    
-    {charTag(Franco, "{portrait_Franco()}")}:       Girino!
-                                                    Eccoti cra!
-                                                    Sei {player_pronouns has him:pronto|{player_pronouns has her:pronta|prontə}} per cucinare assieme?
-        
-        + + \ {charTag(PG, "neutral")}:                      Ci sto!
-            -> cooking_with_frog
-
-        + + \ {charTag(PG, "neutral")}:                      Ci penso un attimo.
-            -> main

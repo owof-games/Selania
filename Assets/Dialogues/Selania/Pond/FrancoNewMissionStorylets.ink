@@ -493,7 +493,8 @@
 
         {charTag(Franco, "{portrait_Franco()}")}:       Ci vediamo in cucina!
 
-        ~ move_entity(Franco, Kitchen)
+        ~ move_entity(Franco, Safekeeping)
+        ~ move_entity(FrancoCucina, Kitchen)
         ~ kitchen_kitchenOccupied = true
         @animation:RewriterBook    
         -> main

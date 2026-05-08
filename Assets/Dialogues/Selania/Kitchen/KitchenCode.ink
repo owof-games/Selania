@@ -350,7 +350,7 @@
         ~ kitchen_actualChef = translator(thirdChar_ActualName)
         ~ kitchen_actualChefPronouns = him
 
-    - are_two_entities_together(Franco,PG) && entity_location(PG) == Kitchen:
+    - are_two_entities_together(FrancoCucina,PG) && entity_location(PG) == Kitchen:
         ~ kitchen_actualChef = Franco
         ~ kitchen_actualChefPronouns = him
 }

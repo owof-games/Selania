@@ -194,8 +194,7 @@
                         ~ return "???"
                 }
                 
-            
-            - are_two_entities_together(PG, Franco) && entity_location(PG) == Kitchen:
+            - are_two_entities_together(PG, FrancoCucina) && entity_location(PG) == Kitchen:
                 ~ return "Franco Lo Chef"
 
             - else:
