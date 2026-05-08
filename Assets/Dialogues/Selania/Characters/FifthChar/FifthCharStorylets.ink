@@ -17,10 +17,10 @@
             + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_choice_manager(false, earthC)->
                     
-            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
                 
-            + \ {charTag(PG, "neutral")}:         Water
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
                     
             + \ {charTag(PG, "neutral")}:         Aether
@@ -36,10 +36,10 @@
             + \ {charTag(PG, "neutral")}:          Earth
                     -> glyph_choice_manager(false, earthC)->
     
-            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
                     
-            + \ {charTag(PG, "neutral")}:         Water
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
                     
             + \ {charTag(PG, "neutral")}:         Aether
@@ -66,10 +66,10 @@
             + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_choice_manager(false, earthC)->
                     
-            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
 
-            + \ {charTag(PG, "neutral")}:         Water
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
 
             + \ {charTag(PG, "neutral")}:         Aether
@@ -93,10 +93,10 @@
             + \ {charTag(PG, "neutral")}:         Air
                     -> glyph_choice_manager(false, airC)->
 
-            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
 
-            + \ {charTag(PG, "neutral")}:         Water
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->    
                           
             + \ {charTag(PG, "neutral")}:         Earth
@@ -127,10 +127,10 @@
             + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_choice_manager(false, earthC)->
                     
-            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
 
-            + \ {charTag(PG, "neutral")}:         Water
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
 
             + \ {charTag(PG, "neutral")}:         Aether
@@ -157,10 +157,10 @@
             + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_choice_manager(false, earthC)->
                     
-            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
         
-            + \ {charTag(PG, "neutral")}:         Water
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
                 
             + \ {charTag(PG, "neutral")}:         Aether
@@ -188,10 +188,10 @@
                     -> glyph_choice_manager(false, earthC)->
 
                     
-            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
 
-            + \ {charTag(PG, "neutral")}:         Water
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
 
             + \ {charTag(PG, "neutral")}:        Aether
@@ -220,10 +220,10 @@
             + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_choice_manager(false, earthC)->
                         
-            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
 
-            + \ {charTag(PG, "neutral")}:         Water
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
 
             + \ {charTag(PG, "neutral")}:         Aether
@@ -250,10 +250,10 @@
             + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_choice_manager(false, earthC)->
                     
-            + \ {charTag(PG, "neutral")}:          Come posso cambiare questa situazione?
+            + \ {charTag(PG, "neutral")}:          Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
                 
-            + \ {charTag(PG, "neutral")}:         Water
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
 
             + \ {charTag(PG, "neutral")}:         Aether
@@ -280,10 +280,10 @@
             + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_choice_manager(false, earthC)->
 
-            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
    
-            + \ {charTag(PG, "neutral")}:         Water
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
                     
             + \ {charTag(PG, "neutral")}:         Aether
@@ -309,10 +309,10 @@
             + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_choice_manager(false, earthC)->
 
-            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
 
-            + \ {charTag(PG, "neutral")}:         Water
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
                     
             + \ {charTag(PG, "neutral")}:         Aether
@@ -339,10 +339,10 @@
             + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_choice_manager(false, earthC)->
                 
-            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
                     
-            + \ {charTag(PG, "neutral")}:         Water
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
                         
             + \ {charTag(PG, "neutral")}:         Aether
@@ -367,10 +367,10 @@
             + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_choice_manager(false, earthC)->
 
-            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
 
-            + \ {charTag(PG, "neutral")}:         Water
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
                 
             + \ {charTag(PG, "neutral")}:         Aether

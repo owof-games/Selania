@@ -24,12 +24,13 @@
         {charTag(FirstCharacter, "curious")}:                   Ha una congrega con Bjork e Tori Amos.
                                                                 E passano il sabato sera a maledire gli uomini del loro passato.
 
-        //più fuoco
-        + (fire) \ {charTag(PG, "neutral")}:                    <i>Attendo impazientemente che dica altro.</i>
+
+        + (fire) \ {charTag(PG, "neutral")}:                    Mi piace Talco, sembra una persona piena di passioni!
                 -> glyph_choice_manager(false, fireC)->
-        {charTag(FirstCharacter, "annoyed")}:                   Ehm, tutto bene ama?
-        {charTag(FirstCharacter, "neutral")}:                   O non l'hai vistə?
-                                                                O ti stai ancora riprendendo dalle pezze?
+        {charTag(FirstCharacter, "affectionate")}:              Lo è!
+        {charTag(FirstCharacter, "neutral")}:                   Anche se a volte è davvero davvero difficile starlə dietro.
+                                                                Il tempo che hai iniziato a capire meglio un suo nuovo interesse, ed eccolə che è già su altro.
+        {charTag(FirstCharacter, "affectionate")}:              Ma lə voglio bene per questo, perché è una botta di energia anche nei momenti peggiori.                                                     
         //più aria
         + (air)\ {charTag(PG, "neutral")}:                      Una persona non può essere un uccello.
                 -> glyph_choice_manager(false, airC)->
@@ -37,7 +38,7 @@
         {charTag(FirstCharacter, "annoyed")}:                   Tu devi essere la persona simpatica della festa, vero?
                                                                 E non chiedermi quale festa per favore. 
                 
-        + (water) \ {charTag(PG, "neutral")}:                   È una persona a cui tieni?
+        + (water) \ {charTag(PG, "neutral")}:                   È una persona a cui tieni molto?
                 -> glyph_choice_manager(false, waterC)->
         {charTag(FirstCharacter, "sad")}:                       Talco è.
         {charTag(FirstCharacter, "neutral")}:                   Sì.

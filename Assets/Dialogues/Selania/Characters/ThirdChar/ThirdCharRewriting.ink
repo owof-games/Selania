@@ -62,11 +62,11 @@
         
             {charTag(PG, "neutral")}:      Frase
 
-            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                 -> glyph_choice_manager(false, fireC)->
             {charTag(PG, "neutral")}:               Commento
             
-            + \ {charTag(PG, "neutral")}:         Acqua
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
                 -> glyph_choice_manager(false, waterC)->
             {charTag(PG, "neutral")}:               Commento    
                     
@@ -107,11 +107,11 @@
 
         {charTag(PG, "neutral")}:      Frase
 
-            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                 -> glyph_choice_manager(false, fireC)->
             {charTag(PG, "neutral")}:               Commento
             
-            + \ {charTag(PG, "neutral")}:         Acqua
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
                 -> glyph_choice_manager(false, waterC)->
             {charTag(PG, "neutral")}:               Commento    
                     
@@ -150,11 +150,11 @@
     //Affrontiamo il mondo. Rabbia, bugie, fantasia, violenza etc.
          {charTag(PG, "neutral")}:      Frase
 
-            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                 -> glyph_choice_manager(false, fireC)->
             {charTag(PG, "neutral")}:               Commento
             
-            + \ {charTag(PG, "neutral")}:         Acqua
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
                 -> glyph_choice_manager(false, waterC)->
             {charTag(PG, "neutral")}:               Commento    
                     
@@ -194,11 +194,11 @@
 
          {charTag(PG, "neutral")}:      Frase
 
-            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                 -> glyph_choice_manager(false, fireC)->
             {charTag(PG, "neutral")}:               Commento
             
-            + \ {charTag(PG, "neutral")}:         Acqua
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
                 -> glyph_choice_manager(false, waterC)->
             {charTag(PG, "neutral")}:               Commento    
                     
@@ -237,7 +237,7 @@
         //Check per commento strega
         -> rewriting_witch_feedback(endR) ->     
      
-        + (fire)\ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
+        + (fire)\ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
             -> glyph_choice_manager(false, fireC)->
         {charTag(PG, "neutral")}:               Commento    
 
@@ -249,7 +249,7 @@
             -> glyph_choice_manager(false, earthC)->
         {charTag(PG, "neutral")}:               Commento       
 
-        + (water)\ {charTag(PG, "neutral")}:         Acqua
+        + (water)\ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
             -> glyph_choice_manager(false, waterC)->
         {charTag(PG, "neutral")}:               Commento    
 
