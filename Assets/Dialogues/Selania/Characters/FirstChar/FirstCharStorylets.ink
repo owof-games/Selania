@@ -32,7 +32,7 @@
                                                                 Il tempo che hai iniziato a capire meglio un suo nuovo interesse, ed eccolə che è già su altro.
         {charTag(FirstCharacter, "affectionate")}:              Ma lə voglio bene per questo, perché è una botta di energia anche nei momenti peggiori.                                                     
         //più aria
-        + (air)\ {charTag(PG, "neutral")}:                      Una persona non può essere un uccello.
+        + (air)\ {charTag(PG, "neutral")}:                      Una persona non può essere un uccello. 
                 -> glyph_choice_manager(false, airC)->
         {charTag(FirstCharacter, "neutral")}:                   Aspè.
         {charTag(FirstCharacter, "annoyed")}:                   Tu devi essere la persona simpatica della festa, vero?

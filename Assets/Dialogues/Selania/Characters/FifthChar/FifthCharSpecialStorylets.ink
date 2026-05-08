@@ -22,7 +22,7 @@
                     -> glyph_choice_manager(false, earthC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Scelta aria
+            + \ {charTag(PG, "neutral")}:               Cosa pensi? qual è la verità dietro questa cosa? cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
                 
             

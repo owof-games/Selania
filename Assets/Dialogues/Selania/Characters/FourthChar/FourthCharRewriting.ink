@@ -75,7 +75,7 @@
                 -> glyph_choice_manager(false, earthC)->
             {charTag(PG, "neutral")}:               Commento    
                                 
-            + \ {charTag(PG, "neutral")}:         Aria
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
             {charTag(PG, "neutral")}:               Commento    
     
@@ -119,7 +119,7 @@
                 -> glyph_choice_manager(false, earthC)->
             {charTag(PG, "neutral")}:               Commento    
                                 
-            + \ {charTag(PG, "neutral")}:         Aria
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
             {charTag(PG, "neutral")}:               Commento    
     
@@ -163,7 +163,7 @@
                 -> glyph_choice_manager(false, earthC)->
             {charTag(PG, "neutral")}:               Commento    
                                 
-            + \ {charTag(PG, "neutral")}:         Aria
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
             {charTag(PG, "neutral")}:               Commento    
     
@@ -207,7 +207,7 @@
                 -> glyph_choice_manager(false, earthC)->
             {charTag(PG, "neutral")}:               Commento    
                                 
-            + \ {charTag(PG, "neutral")}:         Aria
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
             {charTag(PG, "neutral")}:               Commento    
     
@@ -253,7 +253,7 @@
             -> glyph_choice_manager(false, waterC)->
         {charTag(PG, "neutral")}:               Commento    
 
-        + (air)\ {charTag(PG, "neutral")}:         Aria
+        + (air)\ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
             -> glyph_choice_manager(false, airC)->
         {charTag(PG, "neutral")}:               Commento    
         

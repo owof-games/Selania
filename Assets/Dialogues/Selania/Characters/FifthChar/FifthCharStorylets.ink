@@ -10,7 +10,7 @@
         
         {charTag(FifthCharacter, "neutral")}:       Frase
             
-            + \ {charTag(PG, "neutral")}:         Air
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
 
                 
@@ -30,7 +30,7 @@
         {charTag(FifthCharacter, "neutral")}:       Ma lui mica ci può venire qui.
         
 
-            + \ {charTag(PG, "neutral")}:         Air
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
 
             + \ {charTag(PG, "neutral")}:          Earth
@@ -60,7 +60,7 @@
         {charTag(FifthCharacter, "neutral")}:      Frase
 
         
-            + \ {charTag(PG, "neutral")}:         Air
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
 
             + \ {charTag(PG, "neutral")}:         Earth
@@ -90,7 +90,7 @@
   
 
             
-            + \ {charTag(PG, "neutral")}:         Air
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
 
             + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
@@ -121,7 +121,7 @@
         
         {charTag(FifthCharacter, "neutral")}:       Frase
             
-            + \ {charTag(PG, "neutral")}:         Air
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
                     
             + \ {charTag(PG, "neutral")}:         Earth
@@ -151,7 +151,7 @@
 
         {charTag(FifthCharacter, "neutral")}:       Frase
         
-            + \ {charTag(PG, "neutral")}:         Air
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
 
             + \ {charTag(PG, "neutral")}:         Earth
@@ -181,7 +181,7 @@
 
         {charTag(FifthCharacter, "neutral")}:       Frase
        
-            + \ {charTag(PG, "neutral")}:         Air
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
                     
             + \ {charTag(PG, "neutral")}:         Earth
@@ -214,7 +214,7 @@
         {charTag(FifthCharacter, "neutral")}:       Frase
 
             
-            + \ {charTag(PG, "neutral")}:         Air
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
 
             + \ {charTag(PG, "neutral")}:         Earth
@@ -244,7 +244,7 @@
 
         {charTag(FifthCharacter, "neutral")}:       Frase
 
-            + \ {charTag(PG, "neutral")}:         Air
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
 
             + \ {charTag(PG, "neutral")}:         Earth
@@ -274,7 +274,7 @@
 
         {charTag(FifthCharacter, "neutral")}:       Frase
 
-            + \ {charTag(PG, "neutral")}:         Air
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
                     
             + \ {charTag(PG, "neutral")}:         Earth
@@ -303,7 +303,7 @@
 
         {charTag(FifthCharacter, "neutral")}:       Frase
  
-            + \ {charTag(PG, "neutral")}:         Air
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
 
             + \ {charTag(PG, "neutral")}:         Earth
@@ -333,7 +333,7 @@
         
         {charTag(FifthCharacter, "neutral")}:       Frase.
    
-            + \ {charTag(PG, "neutral")}:         Air
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
 
             + \ {charTag(PG, "neutral")}:         Earth
@@ -361,7 +361,7 @@
 
         {charTag(FifthCharacter, "neutral")}:       Frase
 
-            + \ {charTag(PG, "neutral")}:         Air
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
                     
             + \ {charTag(PG, "neutral")}:         Earth
