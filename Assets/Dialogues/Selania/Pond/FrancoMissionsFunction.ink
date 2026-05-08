@@ -180,7 +180,7 @@
         - else:
             {
                 - LIST_COUNT(frog_allMissionsCompleted) < LIST_COUNT(frog_allAvailableMissions):
-                    {charTag(Franco, "{portrait_Franco()}")}:           Girino!
+                    {charTag(Franco, "party")}:                         Girino!
                     {shuffle:
                                                                     -   Per ora non ho commissioni da offrirti, ma non ti preoccupare, qualcosa poi me lo invento! Torna più tardi.
                                                                     -   Sono in attesa della carpa che mi porta le commissioni, torna più tardi!
@@ -191,7 +191,7 @@
                         -> main
 
                 - else:
-                    {charTag(Franco, "{portrait_Franco()}")}:       Girino!
+                    {charTag(Franco, "party")}:                     Girino!
                                                                     Ma sai che hai fatto tuuuuuuutte le commissioni che potevo offrirti?
                                                                     Però possiamo rilassarci assieme!
                         -> main

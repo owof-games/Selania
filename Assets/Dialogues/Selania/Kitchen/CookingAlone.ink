@@ -1,7 +1,7 @@
 === cooking_alone ===
     + {are_two_entities_together(FrancoCucina, PG) && entity_location(PG) == Kitchen} [Franco] 
     
-    {charTag(Franco, "{portrait_Franco()}")}:       Girino!
+    {charTag(Franco, "party")}:                     Girino!
                                                     Eccoti cra!
                                                     Sei {player_pronouns has him:pronto|{player_pronouns has her:pronta|prontə}} per cucinare assieme?
         

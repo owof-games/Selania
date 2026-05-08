@@ -17,7 +17,7 @@
     //Regalo da raccogliere
     - frog_suspended_gift == true && frog_giftability == true:
                 
-        {charTag(Franco, "{portrait_Franco()}")}:       Ehi girino!
+        {charTag(Franco, "party")}:                     Ehi girino!
         {shuffle:
                                                         - Hai ancora quel dono di prima da prendere!
                                                         - Devo ancora darti quel dono!
@@ -32,9 +32,9 @@
     - are_two_entities_together(PG, Franco) && entity_location(PG) == Nest && frog_currentMission has specialMissionOne: 
         
         {shuffle stopping:
-           - {charTag(Franco, "{portrait_Franco()}")}:       Girino, continua a divertirti con quei sassi!
-           - {charTag(Franco, "{portrait_Franco()}")}:       Che fastidio la pioggia sulla testa.
-           - {charTag(Franco, "{portrait_Franco()}")}:       Son qui che aspetto.
+           - {charTag(Franco, "party")}:                        Girino, continua a divertirti con quei sassi!
+           - {charTag(Franco, "neutral")}:                      Che fastidio la pioggia sulla testa.
+           - {charTag(Franco, "question")}:                     Ma il faro è una cosa che accadra?
         }
         
         ->->                    
