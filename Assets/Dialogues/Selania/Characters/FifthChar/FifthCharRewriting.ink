@@ -63,7 +63,7 @@
 
             {charTag(PG, "neutral")}:      Frase
 
-            + \ {charTag(PG, "neutral")}:         Fuoco
+            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
                 -> glyph_choice_manager(false, fireC)->
                  {charTag(PG, "neutral")}:      Frase
 
@@ -111,7 +111,7 @@
 
             {charTag(PG, "neutral")}:      Frase
 
-            + \ {charTag(PG, "neutral")}:         Fuoco
+            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
                 -> glyph_choice_manager(false, fireC)->
                  {charTag(PG, "neutral")}:      Frase
 
@@ -158,7 +158,7 @@
 
             {charTag(PG, "neutral")}:      Frase
 
-            + \ {charTag(PG, "neutral")}:         Fuoco
+            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
                 -> glyph_choice_manager(false, fireC)->
                  {charTag(PG, "neutral")}:      Frase
 
@@ -206,7 +206,7 @@
 
             {charTag(PG, "neutral")}:      Frase
 
-            + \ {charTag(PG, "neutral")}:         Fuoco
+            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
                 -> glyph_choice_manager(false, fireC)->
                  {charTag(PG, "neutral")}:      Frase
 
@@ -249,7 +249,7 @@
         //Check per commento strega
         -> rewriting_witch_feedback(endR) ->     
      
-        + (fire)\ {charTag(PG, "neutral")}:         Fuoco
+        + (fire)\ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
             -> glyph_choice_manager(false, fireC)->
             {charTag(FifthCharacter, "neutral")}:           Frase.
     

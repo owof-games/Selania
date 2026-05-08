@@ -103,7 +103,7 @@
                     -> glyph_choice_manager(false, airC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Scelta fuoco
+            + \ {charTag(PG, "neutral")}:               Come posso cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)-> 
                 
             -

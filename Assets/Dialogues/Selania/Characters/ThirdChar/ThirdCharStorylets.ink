@@ -20,7 +20,7 @@
             + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_choice_manager(false, earthC)->
                     
-            + \ {charTag(PG, "neutral")}:         Fire
+            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
                 
             + \ {charTag(PG, "neutral")}:         Water
@@ -39,7 +39,7 @@
             + \ {charTag(PG, "neutral")}:          Earth
                     -> glyph_choice_manager(false, earthC)->
     
-            + \ {charTag(PG, "neutral")}:         Fire
+            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
                     
             + \ {charTag(PG, "neutral")}:         Water
@@ -70,7 +70,7 @@
             + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_choice_manager(false, earthC)->
                     
-            + \ {charTag(PG, "neutral")}:         Fire
+            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
 
             + \ {charTag(PG, "neutral")}:         Water
@@ -97,7 +97,7 @@
             + \ {charTag(PG, "neutral")}:         Air
                     -> glyph_choice_manager(false, airC)->
 
-            + \ {charTag(PG, "neutral")}:         Fire
+            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
 
             + \ {charTag(PG, "neutral")}:         Water
@@ -131,7 +131,7 @@
             + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_choice_manager(false, earthC)->
                     
-            + \ {charTag(PG, "neutral")}:         Fire
+            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
 
             + \ {charTag(PG, "neutral")}:         Water
@@ -161,7 +161,7 @@
             + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_choice_manager(false, earthC)->
                     
-            + \ {charTag(PG, "neutral")}:         Fire
+            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
         
             + \ {charTag(PG, "neutral")}:         Water
@@ -192,7 +192,7 @@
                     -> glyph_choice_manager(false, earthC)->
 
                     
-            + \ {charTag(PG, "neutral")}:         Fire
+            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
 
             + \ {charTag(PG, "neutral")}:         Water
@@ -224,7 +224,7 @@
             + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_choice_manager(false, earthC)->
                         
-            + \ {charTag(PG, "neutral")}:         Fire
+            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
 
             + \ {charTag(PG, "neutral")}:         Water
@@ -254,7 +254,7 @@
             + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_choice_manager(false, earthC)->
                     
-            + \ {charTag(PG, "neutral")}:          Fire
+            + \ {charTag(PG, "neutral")}:          Come posso cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
                 
             + \ {charTag(PG, "neutral")}:         Water
@@ -284,7 +284,7 @@
             + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_choice_manager(false, earthC)->
 
-            + \ {charTag(PG, "neutral")}:         Fire
+            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
    
             + \ {charTag(PG, "neutral")}:         Water
@@ -313,7 +313,7 @@
             + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_choice_manager(false, earthC)->
 
-            + \ {charTag(PG, "neutral")}:         Fire
+            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
 
             + \ {charTag(PG, "neutral")}:         Water
@@ -343,7 +343,7 @@
             + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_choice_manager(false, earthC)->
                 
-            + \ {charTag(PG, "neutral")}:         Fire
+            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
                     
             + \ {charTag(PG, "neutral")}:         Water
@@ -371,7 +371,7 @@
             + \ {charTag(PG, "neutral")}:         Earth
                     -> glyph_choice_manager(false, earthC)->
 
-            + \ {charTag(PG, "neutral")}:         Fire
+            + \ {charTag(PG, "neutral")}:         Come posso cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
 
             + \ {charTag(PG, "neutral")}:         Water
