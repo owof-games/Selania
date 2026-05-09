@@ -43,11 +43,13 @@
 
         - {charTag(Franco, "neutral")}:                 {player_name}: quando la carpa non c'è, le pulci d'acqua ballano. Anche se non sono molto brave.
 
+        - {charTag(Franco, "neutral")}:                 Storicamente tutte le lettere sono approvate dalle rane, per questo c'è il Franco Bollo.
+
         - {charTag(Franco, "question")}:                Magari se trattengo il fiato a lungo posso volare.
 
         - {charTag(Franco, "party")}:                   Il mio nome completo è Franco Lelio Arpagone Romualdo Arcezio Nepomiceno Alcuino. Franco La Rana è più facile.
 
-        - {charTag(Franco, "question")}:                "Gentile signor La Rana, le chiediamo di desistere dal chiederci altre cose assurde sulle lontre. Associazione Mondiale delle Dighe."
+        - {charTag(Franco, "reading")}:	                "Gentile signor La Rana, le chiediamo di desistere dal chiederci altre cose assurde sulle lontre. Associazione Mondiale delle Dighe."
     }
     - (top2)
     

@@ -138,7 +138,7 @@
     {charTag(Franco, "neutral")}:                       Una volta ha dormito così tanto che quando si è svegliata aveva altri centoquindici nipotini!
                                                         Mia sorella è molto pratica, e quindi li ha chiamati per numero.
                                                         Uh, una lettera di Euforbo!
-                                                        "Papà, devi dire a {player_name} che abbiamo messo in giro noi i documenti!"
+    {charTag(Franco, "reading")}:	                    "Papà, devi dire a {player_name} che abbiamo messo in giro noi i documenti!"
     {charTag(Franco, "party")}:                         Giusto!
     {charTag(Franco, "neutral")}:                       Ero lì che mi dicevo: "Mmm, quando mi spiegano le cose tutte assieme mi distraggo, e a quel punto non capisco proprio nulla."
                                                         Ma ho pensato fosse importante per te conoscere quella storia.

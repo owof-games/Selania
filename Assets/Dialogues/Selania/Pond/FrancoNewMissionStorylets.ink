@@ -40,7 +40,7 @@
                                                         A quel punto è arrivato zio Gracco, che mi ha detto: "Non ti azzardare a rifare la algonara con la panna!"
                                                         E mi ha ributtato in acqua.
         {charTag(Franco, "party")}:                     Ma c'è una lettera delle formiche!
-        {charTag(Franco, "neutral")}:                   "Ci servono più piante in serra, è di vitale importanza!"
+        {charTag(Franco, "reading")}:	                "Ci servono più piante in serra, è di vitale importanza!"
         {charTag(Franco, "neutral")}:                   Ah, le formiche.
                                                         Il rapporto tra me e loro è un po' complicato perché.
                                                         Insomma.
@@ -181,7 +181,7 @@
         {charTag(Franco, "neutral")}:                   No, non posso dirlo.
                                                         Una cosa così stupida.
         {charTag(Franco, "party")}:                     Ehi, una lettera di Tullio!
-                                                        "Diglielo amore, ti supplico, diglielo e lascial{player_pronouns has him:o|{player_pronouns has her:a|ə}} andare."
+        {charTag(Franco, "reading")}:	                "Diglielo amore, ti supplico, diglielo e lascial{player_pronouns has him:o|{player_pronouns has her:a|ə}} andare."
         {charTag(Franco, "neutral")}:                   Uh.
                                                         Insomma, {player_name}!
         {charTag(Franco, "party")}:                     Ho <b>nuotato</b>!
@@ -195,8 +195,8 @@
         {charTag(Franco, "question")}:                  Te la immagini, girino?
                                                         Una rana che salta?
         {charTag(Franco, "neutral")}:                   Ma c'è una lettera di Giulio.
-                                                        "Da{player_pronouns has him:gli|{player_pronouns has her:lle|llə}} la commissione, Franco, abbi pietà per quella povera creatura!"
-                                                        Oggi i mariti sono un po' nervosetti.
+        {charTag(Franco, "reading")}:	                "Da{player_pronouns has him:gli|{player_pronouns has her:lle|llə}} la commissione, Franco, abbi pietà per quella povera creatura!"
+        {charTag(Franco, "question")}:	                Oggi i mariti sono un po' nervosetti.
         {charTag(Franco, "neutral")}:                   Pensavo comunque {player_name}: perché non provi a parlare con due persone quando sono assieme?
                                                         Sono abbastanza sicuro che succederà qualcosa di interessante.
                                                         E a volte, quando non c'è comprensione, una voce esterna può essere di grande aiuto.
@@ -278,7 +278,7 @@
                                                         Perché non vai a vedere, e poi torni da me?
                                                         Intanto mi faccio un pisolino.
                                                         Uh, una lettera di zio Gracco!
-                                                        "Franco, c'è questo tizio che sembra un recensore magnifico!"
+        {charTag(Franco, "reading")}:	                "Franco, c'è questo tizio che sembra un recensore magnifico!"
                                                         "E ha definito i miei lombrichi all'amatriciana "sublimi"!"
                                                         "Deve avere ovviamente buon gusto."
                                                         "Avrebbe bisogno di un po' di spazio per dormire, ma qui stiamo attendendo una nuova schiusa."
@@ -286,7 +286,7 @@
                                                         "Si firma Signor Gufo de Predatoris."
                                                         "Puoi contattarlo tramite la carpa della sera."
                                                         "Anche se l'ultima è sparita da qualche giorno."
-                                                        Mmm.
+        {charTag(Franco, "neutral")}:	                Mmm.
         {charTag(Franco, "question")}:                  Che cosa strana.
     {
     - are_two_entities_together(SecondCharacter, PG):
@@ -349,7 +349,7 @@
     
     
         {charTag(Franco, "neutral")}:                   Mi è arrivata una lettera dall'Accademia dei Bei Party.
-                                                        "Esimio dottor Franco Lelio Arpagone Romualdo Arcezio Nepomiceno Alcuino."
+        {charTag(Franco, "reading")}:	                "Esimio dottor Franco Lelio Arpagone Romualdo Arcezio Nepomiceno Alcuino."
                                                         "Le scriviamo in merito alla sua applicazione fatta per le veci del signor Giulio Igidio Liutprando Rigoberto Odovilio Sulpicio Policarpo Oruccio."
                                                         "E per l'ottava volta le ripetiamo che, per quanto apprezziamo gli sforzi del signor Giulio Il Rospo, noi siamo un'agenzia di viaggi e NON"
                                                         "E ripetiamo NON"
@@ -362,7 +362,7 @@
                                                         "Cordialmente."
                                                         "Lo staff ABP."
                                                         "PS: e comunque i ritratti del signor Giulio Il Rospo sono brutti."
-                                                        {player_name}, questa Accademia è così esclusiva!
+        {charTag(Franco, "neutral")}:	                {player_name}, questa Accademia è così esclusiva!
         {charTag(Franco, "party")}:                     Sono due anni che provo a coronare il sogno di Giulio di diventare pittore.
         {charTag(Franco, "neutral")}:                   Tutto questo è crudele.
         {charTag(Franco, "question")}:                  Potrei forse andare a parlare loro di persona?

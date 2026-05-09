@@ -333,38 +333,38 @@
             {stopping:                                                
                                                         -   {charTag(Franco, "neutral")}:   Scusa se ho spiato tra le tue cose ma no, non hai niente di utile.
                                                                                             Ma ora ci penso io.
-                                                                                            "Care formiche."
-                                                            {charTag(Franco, "party")}:     "Come avrete visto, ora sono vegetariano."
-                                                            {charTag(Franco, "neutral")}:"  E in onore di questa nostra nuova amicizia vi chiederei un favore: potreste coltivare qualcosa di utile per {player_name}?"
+                                                            {charTag(Franco, "reading")}:	"Care formiche."
+                                                                                            "Come avrete visto, ora sono vegetariano."
+                                                                                            E in onore di questa nostra nuova amicizia vi chiederei un favore: potreste coltivare qualcosa di utile per {player_name}?"
                                                                                             "Grazie mille."
-                                                            {charTag(Franco, "party")}:     "PS.: Vi allego un po' del miele di Dora."
+                                                                                            "PS.: Vi allego un po' del miele di Dora."
                                                             {charTag(Franco, "neutral")}:   Ottimo.
-                                                                                            La prossima volta che coltivi qualcosa in serra vedrai che sarà la pianta giusta!
+                                                            {charTag(Franco, "party")}:	    La prossima volta che coltivi qualcosa in serra vedrai che sarà la pianta giusta!
 
                                                         -   {charTag(Franco, "neutral")}:   Di nuovo non hai niente di utile tra le tue cose.
                                                                                             Mando una lettera alle amiche formiche.
-                                                                                            "Care formiche, qui è sempre Franco che vi scrive."
+                                                            {charTag(Franco, "reading")}:	"Care formiche, qui è sempre Franco che vi scrive."
                                                                                             "Mi diceva Dora che avete passato un periodo difficile."
                                                                                             "Vi mando quindi un po' di terriccio per il nido e l'ultimo libro di zio Gracco."
-                                                            {charTag(Franco, "party")}:     "Così magari il passato vi sembra migliore."
-                                                            {charTag(Franco, "question")}:  "Non è che potreste inoltre aiutare {player_name}, e coltivare qualcosa che {translator(speaker)} possa apprezzare?"
-                                                            {charTag(Franco, "neutral")}:    "Cordialmente."
+                                                                                            "Così magari il passato vi sembra migliore."
+                                                                                            "Non è che potreste inoltre aiutare {player_name}, e coltivare qualcosa che {translator(speaker)} possa apprezzare?"
+                                                                                            "Cordialmente."
                                                                                             "Franco La Rana (non Franco Il Rospo, quello non si vede da mesi)."
-                                                                                            Perfetto: la prossima volta che coltiverai qualcosa, ti arriverà la pianta perfetta.        
+                                                           {charTag(Franco, "party")}:	    Perfetto: la prossima volta che coltiverai qualcosa, ti arriverà la pianta perfetta.        
 
                                                         -   {charTag(Franco, "neutral")}:   Mi sa che devi coltivare più piante, sennò le formiche poi si arrabbiano con me.
                                                                                             Perché ancora non hai nulla di utile.
-                                                                                            "Care formiche, sono qui a chiedervi di nuovo di aiutare {player_name}."
+                                                            {charTag(Franco, "reading")}:	"Care formiche, sono qui a chiedervi di nuovo di aiutare {player_name}."
                                                                                             "In cambio a questo giro vi invito alla serata karaoke di cugina Sputt."
-                                                            {charTag(Franco, "question")}:   "Ma vi chiedo di non portare di nuovo "<i>Tintarella di muta</i>", che poi attirate tutti i serpenti."
+                                                                                            "Ma vi chiedo di non portare di nuovo "<i>Tintarella di muta</i>", che poi attirate tutti i serpenti."
                                                                                             "E nemmeno "<i>È l'uovo per me</i>", che poi i girini si spaventano."
-                                                            {charTag(Franco, "party")}:     "Però mi piacerebbe sentire "<i>La canzone di Raganella</i>", se vi va."
-                                                            {charTag(Franco, "neutral")}    "Grazie mille."
+                                                                                            "Però mi piacerebbe sentire "<i>La canzone di Raganella</i>", se vi va."
+                                                                                            "Grazie mille."
                                                                                             "Franco."
-                                                                                            Bene: la prossima volta che coltivi qualcosa, ti arriverà la pianta giusta per {translator(speaker)}.
+                                                            {charTag(Franco, "neutral")}:	Bene: la prossima volta che coltivi qualcosa, ti arriverà la pianta giusta per {translator(speaker)}.
 
                                                         -   {charTag(Franco, "neutral")}    Di nuovo senza la pianta giusta.
-                                                                                            "Care formiche, la solita richiesta."
+                                                           {charTag(Franco, "reading")}:	"Care formiche, la solita richiesta."
                                                                                             "Una pianta che aiuti {player_name} con {translator(speaker)}."
                                                                                             "Ho finito le cose che vi posso offrire, ma spero avrete pazienza con me."
                                                                                             Sai già come funziona, girino.

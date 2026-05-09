@@ -166,7 +166,7 @@
 
             - else:
                 {charTag(Franco, "neutral")}:                   C'è una lettera dei topi della biblioteca.
-                                                                "Parola chiave: trasformazione".
+                 {charTag(Franco, "reading")}:	                "Parola chiave: trasformazione".
                                                                 Ah, e dietro c'è scritto: "Lunga".
                 {charTag(Franco, "question")}:                  Forse vogliono diventare zucche?
                 {charTag(Franco, "neutral")}:                   Ma magari tu ci capisci qualcosa e allora trovi il racconto che ti serve!
@@ -276,7 +276,7 @@
         - {charTag(Franco, "party")}:                     Mi piace {charNameTwo}! Mi ha insegnato tantissime cose!
         - {charTag(Franco, "party")}:                     Sì! Voglio chiedere a {charNameTwo} se facciamo lezioni di nuoto assieme!
         - {charTag(Franco, "party")}:                     {charNameTwo} mi sta tanto simpatico.
-                                                        Anche se non ho ancora capito quella cosa della elettricità.
+                                                            Anche se non ho ancora capito quella cosa della elettricità.
         - {charTag(Franco, "party")}:                     Ottimamente!                                   
     }
     

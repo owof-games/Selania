@@ -62,19 +62,19 @@
                                                     Tranne il pino.
                                                     Non dovrebbe chiamarsi "pone"?
     {charTag(Franco, "neutral")}                    Ma non Pino il girino, che è grosso come, uh, una lettera da zia Graaak.
-                                                    "Dice Pino di dire a {player_name} quella faccenda delle commissioni finite."
+    {charTag(Franco, "reading")}:	                "Dice Pino di dire a {player_name} quella faccenda delle commissioni finite."
                                                     "E poi se gli riporti la sua crema solare."
-                                                    Vero!
+    {charTag(Franco, "neutral")}:	                Vero!
                                                     La crema!
                                                     Anche per noi è importante proteggere la nostra pelle.
                                                     Poi ci vengono le bolle.
     {charTag(Franco, "party")}:                     Anche se alcune rane le apprezzano.
     {charTag(Franco, "neutral")}:                   Uh, una lettera di zia Graaak.
-                                                    "LE COMMISSIONI! DEVI DIRE CHE NON SONO INFINITE!"
+    {charTag(Franco, "reading")}:	                "LE COMMISSIONI! DEVI DIRE CHE NON SONO INFINITE!"
                                                     "SENNO' POI COME FA UNA PERSONA A DECIDERE QUALE AIUTO VUOLE DA TE?!?"
                                                     "E QUINDI DEVI SOLO DIRE "NE HO ALCUNE SPECIALI CHE HANNO LE LORO REGOLE, MA LE COMMISSIONI A DISPOSIZIONE ORA SONO SOLO DIECI!"
                                                     "E SE LE COMMISSIONI SONO SOLO DIECI, QUANTE VOLTE PUOI AIUTARE QUELLA POVERA ANIMA, FRANCO? QUANTE?"
-                                                    Perdonami {player_name}, ma nella mia famiglia tutti si agitano così velocemente.
+    {charTag(Franco, "question")}:	                Perdonami {player_name}, ma nella mia famiglia tutti si agitano così velocemente.
                                                     Sai che quasi quasi mi faccio un pisolino ora?
 
     - else:
@@ -101,7 +101,7 @@
                                                                                             Forse perché da piccolo soffiavo tantissimo.
                                                                                             E una volta ho avuto un raffreddore che faceva piovere ovunque.
                                                                                             Uh, una lettera di Tullio.
-                                                                                            "Quella è la tormenta, Franco."
+                                                        {charTag(Franco, "reading")}:	    "Quella è la tormenta, Franco."
                                                                                             "Tu sei un tormento di coccole."
                                                         {charTag(Franco, "party")}:         Quanto è carino?
                                                                                             Devo assolutamente spupazzarlo.

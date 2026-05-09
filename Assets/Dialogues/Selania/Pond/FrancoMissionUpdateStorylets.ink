@@ -117,7 +117,7 @@
 
     {charTag(Franco, "neutral")}:                       Parla con la nostra amica comune, girino.
                                                         Intanto resterò qui a scrivere una lettera di scuse a Tullio e Giulio.
-                                                        "Cari miei amori. Prometto di non dimenticare mai mai più i gemelli al nido..."
+    {charTag(Franco, "reading")}:	                    "Cari miei amori. Prometto di non dimenticare mai mai più i gemelli al nido..."
 
 ->->
 
@@ -157,14 +157,14 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     
 
-    {charTag(Franco, "neutral")}:                       "E mi rendo conto che le rane non piacciono a tutte le persone."
+    {charTag(Franco, "reading")}:	                    "E mi rendo conto che le rane non piacciono a tutte le persone."
                                                         "Ma se per questo nemmeno le persone piacciono a tutte le rane."
                                                         "E quindi vi chiedo di accogliere mio marito nella vostra Accademia."
                                                         "Ma senza serpenti."
                                                         "Quelli ci mangiano."
     {charTag(Franco, "question")}:                      {player_name}, mi sa che ancora non hai guardato la nuova opera di Giulio, vero?
     {charTag(Franco, "neutral")}:                       La trovi in camera tua!
-                                                        "PS: ma il vostro campus ha ninfee singole o condivise?"
+    {charTag(Franco, "reading")}:	                    "PS: ma il vostro campus ha ninfee singole o condivise?"
                                                     
 ->->
 
@@ -253,8 +253,8 @@
                                                     A quel punto è arrivato zio Gracco, che mi ha detto: "Non ti azzardare a rifare la algonara con la panna!"
                                                     E mi ha ributtato in acqua.
         {charTag(Franco, "party")}:                 Ma c'è una lettera delle formiche!
-        {charTag(Franco, "neutral")}:               "Ci servivano  più piante in serra, era urgente, e {player_name} ci ha aiutate!"
-                                                    Ah, le formiche.
+        {charTag(Franco, "reading")}:	            "Ci servivano  più piante in serra, era urgente, e {player_name} ci ha aiutate!"
+        {charTag(Franco, "neutral")}:	            Ah, le formiche.
                                                     Il rapporto tra me e loro è un po' complicato perché.
                                                     Insomma.
                                                     Di solito le rane mangiano le formiche.
@@ -273,7 +273,7 @@
 
     {charTag(Franco, "question")}:                  Ma chissà come mai le formiche avevano bisogno di nuove piante.
     {charTag(Franco, "neutral")}:                   Ah, ecco una loro lettera.
-                                                    "Avevamo fame."
+    {charTag(Franco, "reading")}:	                "Avevamo fame."
     {charTag(Franco, "party")}:                     Mi sembra una buona motivazione.
             {
                 - are_two_entities_together(FirstCharacter, PG):
@@ -332,8 +332,8 @@
                                                     }
         {charTag(Franco, "neutral")}:               E.
                                                     Uh, una lettera di Euforbo.
-                                                    "Papà Franco, quella è la lontra, non {charNameFive}."
-                                                    Uh.
+        {charTag(Franco, "reading")}:	            "Papà Franco, quella è la lontra, non {charNameFive}."
+        {charTag(Franco, "neutral")}:	            Uh.
                                                     Euforbo.
         {charTag(Franco, "party")}:                 È più furbo di un pesce rosso.
         {charTag(Franco, "neutral")}:               Ma {charNameFive}.
@@ -420,11 +420,11 @@
                                                     }
         {charTag(Franco, "neutral")}:               Nemmeno sui bigliettini.
                                                     Ah, ecco qui.
-                                                    "Ricordati di recuperare i gemelli al nido."
-                                                    No, non era questo.
-                                                    "Ricordati <b>davvero</b> di recuperare i gemelli al nido. Non come quella volta che sono tornati con l'anatra delle otto da soli."
+        {charTag(Franco, "reading")}:	            "Ricordati di recuperare i gemelli al nido."
+        {charTag(Franco, "neutral")}:               No, non era questo.
+        {charTag(Franco, "reading")}:	            "Ricordati <b>davvero</b> di recuperare i gemelli al nido. Non come quella volta che sono tornati con l'anatra delle otto da soli."
                                                     "A proposito di anatre: le sorelle Qualqui vengono per cena. Mi prendi due etti di termiti e qualche seme? Ti amo."
-                                                    Dall'arrivo dei gemelli ha un tritone per capello.
+        {charTag(Franco, "neutral")}:               Dall'arrivo dei gemelli ha un tritone per capello.
                                                     Avere centosedici figli non è una passeggiata.
                                                     Sempre meglio di zia Graaak, che ormai va per il migliaio.
         {charTag(Franco, "neutral")}:               Non hai idea del casino del ricordare tutti i compleanni, {player_name}!
@@ -456,8 +456,8 @@
                                                     No, non posso dirlo.
                                                     Una cosa così stupida.
                                                     Ehi, una lettera di Tullio!
-                                                    "Diglielo amore, ti supplico, diglielo e lascial{player_pronouns has him:o|{player_pronouns has her:a|ə}} andare."
-                                                    Uh.
+        {charTag(Franco, "reading")}:	            "Diglielo amore, ti supplico, diglielo e lascial{player_pronouns has him:o|{player_pronouns has her:a|ə}} andare."
+        {charTag(Franco, "neutral")}:               Uh.
                                                     Insomma, {player_name}!
         {charTag(Franco, "party")}:                 Ho <b>nuotato</b>!
         {charTag(Franco, "question")}:              Non è assurdo?
@@ -471,8 +471,8 @@
         {charTag(Franco, "question")}:              Te la immagini, girino?
                                                     Una rana che salta?
         {charTag(Franco, "neutral")}:               Ma c'è una lettera di Giulio.
-                                                    "Di{player_pronouns has him:gli|{player_pronouns has her:lle|llə}} della commissione, Franco, abbi pietà per quella povera creatura!"
-                                                    Oggi i mariti sono un po' nervosetti.
+        {charTag(Franco, "reading")}:	            "Di{player_pronouns has him:gli|{player_pronouns has her:lle|llə}} della commissione, Franco, abbi pietà per quella povera creatura!"
+        {charTag(Franco, "question")}:              Oggi i mariti sono un po' nervosetti.
     }
 
 //Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
@@ -573,7 +573,7 @@
         {charTag(Franco, "neutral")}:               Lui mi ha detto: "Meow!"
         {charTag(Franco, "party")}:                 I gatti sono così saggi.
         {charTag(Franco, "neutral")}:               Ma zia Graaak dice sempre: tanto va la gatta allo stagno, che ci rimette il girino.
-                                                    Uh, una lettera di Tullio.
+        {charTag(Franco, "reading")}:	            Uh, una lettera di Tullio.
                                                     "Franco, di a quel{player_pronouns has her:la|lə} pover{player_pronouns has him:o|{player_pronouns has her:a|ə}} {player_name} quello che devi dir{player_pronouns has him:gli|{player_pronouns has her:le|lə}}!"
         {charTag(Franco, "question")}:              Uh, è sempre così teso.
         {charTag(Franco, "party")}:                 Comunque {player_name}: sono felice che hai parlato con lei.
@@ -603,7 +603,7 @@
         {charTag(Franco, "neutral")}:               E che hai letto una lettera.
         {charTag(Franco, "question")}:              Non è ora di frasi un pisolino assieme, che ne dici?
         {charTag(Franco, "neutral")}:               Uh, una lettera di zio Gracco!
-                                                    "Franco, c'è questo tizio che sembra un recensore magnifico!"
+        {charTag(Franco, "reading")}:	            "Franco, c'è questo tizio che sembra un recensore magnifico!"
                                                     "E ha definito i miei lombrichi all'amatriciana "sublimi"!"
                                                     "Deve avere ovviamente buon gusto."
                                                     "Avrebbe bisogno di un po' di spazio per dormire, ma qui stiamo attendendo una nuova schiusa."
@@ -611,7 +611,7 @@
                                                     "Si firma Signor Gufo de Predatoris."
                                                     "Puoi contattarlo tramite la carpa della sera."
                                                     "Anche se l'ultima è sparita da qualche giorno."
-                                                    Mmm.
+        {charTag(Franco, "neutral")}:               Mmm.
         {charTag(Franco, "question")}:              Che cosa strana.
                                                     Non dovrebbe essere "Signore Gufo" invece di "Signor Gufo"?
                                                     Sennò è come se dicessi "Ciao, sono la Ran Franco", no?
@@ -695,13 +695,13 @@
     ~ frog_currentMission = missionEight
 
         {charTag(Franco, "neutral")}:               Devo rispondere allo zio!
-        {charTag(Franco, "neutral")}:               "Caro zio Gracco."
+        {charTag(Franco, "reading")}:	            "Caro zio Gracco."
                                                     "La algonara è stata inventata nemmeno cento schiuse fa."
                                                     "Quindi se ci metto la panna no, non è un crimine contro lo stagno."
                                                     "Tuo nipote Franco."
                                                     "PS: potresti tenere i gemelli sabato? Vorrei andare alla seconda partita degli ananassi con Tullio e Giulio. Grazie mille."
                                                     "PPS: non è che mi passeresti anche la ricetta per la frittura di opilione? Grazie mille!"
-                                                    Fatto.
+        {charTag(Franco, "neutral")}:               Fatto.
                                                     Mi passa tra poco la carpa del pomeriggio, e quella è pignola con la posta.
         {charTag(Franco, "question")}:              Come si dice? Cerca sempre la squama nel batterio.
                                                     O era il batterio nella salamandra?
@@ -752,7 +752,7 @@
 
         - else:
         {charTag(Franco, "neutral")}:               Mi è arrivata una lettera dall'Accademia dei Bei Party.
-                                                    "Esimio dottor Franco Lelio Arpagone Romualdo Arcezio Nepomiceno Alcuino."
+        {charTag(Franco, "reading")}:	            "Esimio dottor Franco Lelio Arpagone Romualdo Arcezio Nepomiceno Alcuino."
                                                     "Le scriviamo in merito alla sua applicazione fatta per le veci del signor Giulio Igidio Liutprando Rigoberto Odovilio Sulpicio Policarpo Oruccio."
                                                     "E per l'ottava volta le ripetiamo che, per quanto apprezziamo gli sforzi del signor Giulio Il Rospo, noi siamo un'agenzia di viaggi e NON"
                                                     "E ripetiamo NON"

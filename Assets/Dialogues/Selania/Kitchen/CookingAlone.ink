@@ -58,7 +58,7 @@
                 {charTag(Franco, "neutral")}:                   Ah, come la tosse di zia Graaak!
                                                                 Povera, faceva di quelle bolle sott'acqua.
                                                                 Uh, una lettera di Giulio.
-                                                                "Amore, la tosse di tua zia era <i>sintomatica.<i>"
+                {charTag(Franco, "reading")}:	                "Amore, la tosse di tua zia era <i>sintomatica.<i>"
                                                                 "Empatica è quando Graaak dice che gli dispiace per te, ma poi si incazza comunque."
 
             + \ {charTag(PG, "neutral")}:                       <i>Impasto una focaccia decisa.</i>
@@ -209,13 +209,13 @@
                 -> glyph_choice_manager(true, waterC)->    
                 {charTag(Franco, "neutral")}:                   Ah, come quando dividi la spazzatura.
                                                                 Uh, una lettera di Giulio.
-                                                                "Amore, indifferenza è come quando mamma Craazia è così arrabbiata che fa finta che non esisti."
+                {charTag(Franco, "reading")}:	                "Amore, indifferenza è come quando mamma Craazia è così arrabbiata che fa finta che non esisti."
                 {charTag(Franco, "question")}:                  Ah, quella indifferenza.
                 {charTag(Franco, "party")}:                     Come quando si gioca a nascondino!
                                                                 O a un due tre stella.
                 {charTag(Franco, "neutral")}:                   Interessante, girino, interessante.
                                                                 Un'altra lettera di Giulio!
-                                                                "Ah, amore, hai dimenticato di nuovo di smaltire i residui di alga."
+                {charTag(Franco, "reading")}:	                "Ah, amore, hai dimenticato di nuovo di smaltire i residui di alga."
                 {charTag(Franco, "question")}:                  Ma perché tocca sempre a me?
 
             + \ {charTag(PG, "neutral")}:                       <i>Addobbo con strisce di pastella e gratitudine.</i>
@@ -225,8 +225,8 @@
                 {charTag(Franco, "neutral")}:                   Anche se a volte mi si brucia un poco.
                 {charTag(Franco, "party")}:                     Per fortuna ho uno stomaco di feltro.
                 {charTag(Franco, "neutral")}:                   Uh, una lettera di Euforbo.
-                                                                "Papà, quella è la <i>gratinatura</i>. La gratitudine è quando dico "Per fortuna l'intelligenza l'ho presa dagli altri papà"!"
-                                                                Che ragazzino sveglio, Euforbo.
+                {charTag(Franco, "reading")}:	                "Papà, quella è la <i>gratinatura</i>. La gratitudine è quando dico "Per fortuna l'intelligenza l'ho presa dagli altri papà"!"
+                {charTag(Franco, "neutral")}:                   Che ragazzino sveglio, Euforbo.
                 {charTag(Franco, "question")}:                  Ma devo dirgli di restituire l'intelligenza a Tullio e Giulio: non è carino tenere a lungo le cose prese in prestito.  
 
             + \ {charTag(PG, "neutral")}:                       <i>Rifinisco con semi di zucca e fastidio.</i>
@@ -313,7 +313,7 @@
                                                                 E prude tutto.
                                                                 Eh.
                                                                 Uh, una lettera di Tullio.
-                                                                "Amore, quella è la processionaria."
+                {charTag(Franco, "reading")}:	                "Amore, quella è la processionaria."
                                                                 "E non capisco come tu sia arrivato da <i>noia</i> a <i>processionaria</i>."
                                                                 "Per fortuna la visita dall'otorino è domani."
                                                                 "PS: Ti amo."
