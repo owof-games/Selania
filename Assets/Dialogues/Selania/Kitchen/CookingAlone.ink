@@ -332,6 +332,7 @@
 
         ~ recipe_name_creator()
         ~ recipe_name_storage(PG)
+        ~ move_entity(CookingWithFranco, Pond)
 
         {charTag(Franco, "party")}:                             Pesciolini?
                                                                 Ehi, pesciolini.
