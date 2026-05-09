@@ -66,6 +66,11 @@ namespace Selania.Rework.Interfaces
         }
 
         /// <summary>
+        ///     An observable that says whether the grimoire is enabled.
+        /// </summary>
+        public Observable<bool> IsGrimoireEnabled { get; }
+
+        /// <summary>
         ///     An observable that produces a <c>Unit.Default</c> whenever a @grimoireClose command is raised.
         /// </summary>
         Observable<Unit> close { get; }

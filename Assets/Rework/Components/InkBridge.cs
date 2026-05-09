@@ -2263,5 +2263,15 @@ namespace Selania.Rework.Components
         private CharacterInfo[] characterInfo = null!;
 
         #endregion
+
+        #region grimoire enabled
+
+        [SerializeField] [Tooltip("Name of the boolean Ink variable that is true if the grimoire is open.")]
+        private string grimoireIsOpenVariableName = "grimoire_isEnabled";
+
+        /// <inheritdoc />
+        public Observable<bool> IsGrimoireEnabled => GetVariableObservable<bool>(grimoireIsOpenVariableName);
+
+        #endregion
     }
 }

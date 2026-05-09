@@ -140,11 +140,18 @@ LIST allGlyphs = Fire, Air, Water, Earth, Aether
     VAR glyph_actualActiveSigil = (WaterEarthFire)
     VAR glyph_actualSigilUses = 1
 
+// grimoire open/close
+
+VAR grimoire_isEnabled = false
+
 
 -> start
 
 === start
 Questo è un dialogo.
+Abilito il grimorio.
+~ grimoire_isEnabled = true
+Il grimorio è abilitato.
 ~ firstChar_aether        = 5
 ~ firstChar_earth         = -2
 ~ firstChar_air           = 5

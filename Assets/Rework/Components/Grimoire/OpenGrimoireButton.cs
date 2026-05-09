@@ -16,6 +16,9 @@ namespace Selania.Rework.Components.Grimoire
 
         private Animator? _animator;
         private Button? _button;
+        private bool _isGrimoireEnabled;
+
+        private bool _isGrimoireOpened;
 
         [Inject] internal ILogger<OpenGrimoireButton> Logger = null!;
 
@@ -26,15 +29,25 @@ namespace Selania.Rework.Components.Grimoire
             _animator = GetComponent<Animator>();
             _button = GetComponent<Button>();
 
-            // when the button is clicked, disable it and ask to switch to the grimoire
-            _button.OnClickAsObservable().Subscribe(_ =>
-            {
-                Logger.ZLogInformation($"Open grimoire button clicked.");
-                if (_button != null) _button.interactable = false;
-                StoryGrimoire.SwitchToGrimoire();
-            }).AddTo(this);
+            // when the button is clicked, disable it and ask Ink to switch to the grimoire
+            _button.OnClickAsObservable().Subscribe(OnGrimoireOpenButtonClick).AddTo(this);
 
-            StoryGrimoire.firstLevelGrimoirePageDescriptors.Subscribe(OnFirstLevelGrimoirePageDescriptors).AddTo(this);
+            // whenever any grimoire page is displayed, set the grimoire as visible
+            StoryGrimoire.firstLevelGrimoirePageDescriptors.Select(ToUnit)
+                .Merge(StoryGrimoire.secondLevelAppendixPageDescriptors.Select(ToUnit))
+                .Merge(StoryGrimoire.secondLevelCharacterPageDescriptors.Select(ToUnit))
+                .Merge(StoryGrimoire.secondLevelFrancoPageDescriptors.Select(ToUnit))
+                .Merge(StoryGrimoire.secondLevelGreenhouseGrimoirePageDescriptors.Select(ToUnit))
+                .Merge(StoryGrimoire.secondLevelRulesPageDescriptors.Select(ToUnit))
+                .Merge(StoryGrimoire.secondLevelSigilsGrimoirePageDescriptors.Select(ToUnit))
+                .Merge(StoryGrimoire.thirdLevelGreenhouseGrimoirePageDescriptors.Select(ToUnit))
+                .Merge(StoryGrimoire.thirdLevelSigilsGrimoirePageDescriptors.Select(ToUnit))
+                .Merge(StoryGrimoire.thirdLevelTextGrimoirePageDescriptor.Select(ToUnit))
+                .Subscribe(OnGrimoireDisplayed)
+                .AddTo(this);
+
+            // whenever the enable status of the grimoire changes, update it
+            StoryGrimoire.IsGrimoireEnabled.Subscribe(OnGrimoireEnabled).AddTo(this);
         }
 
         public void OnPointerEnter(PointerEventData eventData)
@@ -51,13 +64,38 @@ namespace Selania.Rework.Components.Grimoire
             _animator?.SetBool(Hovered, false);
         }
 
-        /// <summary>
-        ///     Method invoked when the first level page of the grimoire is displayed.
-        /// </summary>
-        /// <param name="descriptor">Descriptor of the page.</param>
-        private void OnFirstLevelGrimoirePageDescriptors(IStoryGrimoire.FirstLevelGrimoirePageDescriptor descriptor)
+        private static Unit ToUnit<T>(T _)
         {
-            _animator?.SetBool(Disabled, true);
+            return Unit.Default;
+        }
+
+        private void OnGrimoireDisplayed(Unit _)
+        {
+            _isGrimoireOpened = true;
+            UpdateAnimationAndStatus();
+        }
+
+        private void OnGrimoireEnabled(bool isEnabled)
+        {
+            _isGrimoireEnabled = isEnabled;
+            UpdateAnimationAndStatus();
+        }
+
+        private void UpdateAnimationAndStatus()
+        {
+            // the grimoire button is disabled if Ink says the grimoire is still disabled, or if the grimoire is opened
+            var isDisabled = !_isGrimoireEnabled || _isGrimoireOpened;
+            _animator?.SetBool(Disabled, isDisabled);
+            if (_button != null) _button.interactable = !isDisabled;
+        }
+
+        /// <summary>
+        ///     Callback method invoked when the grimoire button is clicked to request the grimoire to open.
+        /// </summary>
+        private void OnGrimoireOpenButtonClick(Unit _)
+        {
+            Logger.ZLogInformation($"Open grimoire button clicked.");
+            StoryGrimoire.SwitchToGrimoire();
         }
 
         /// <summary>
@@ -66,9 +104,9 @@ namespace Selania.Rework.Components.Grimoire
         /// <seealso cref="Grimoire.OnGrimoireCloseButtonClick" />
         public void OnGrimoireCloseButtonClick()
         {
-            Logger.ZLogInformation($"Re-enable grimoire button.");
-            if (_button != null) _button.interactable = true;
-            _animator?.SetBool(Disabled, false);
+            Logger.ZLogInformation($"Close grimoire request.");
+            _isGrimoireOpened = false;
+            UpdateAnimationAndStatus();
         }
     }
 }
