@@ -1,9 +1,6 @@
 //Lista di tutti i luoghi del gioco
     LIST listPlaces = Forest, TrainStop, Greenhouse, Library, Nest, Kitchen, Safekeeping, Pond, Bedroom, BookPlace, Dump
-
-//Lista delle personagge del gioco (quelle che hanno elementi di variabilità
-    LIST listCharacters = Mentor, PG, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, Franco, FifthCharacter, Carla, Documents, Doggo
-
+ 
     LIST listTransitions = 
     FromTrainStopToForest, 
     FromForestToTrainStop, FromForestToPond, FromForestToLibraryBlocked, FromForestToLibrary, FromForestToDumpBlocked, FromForestToDump,
@@ -17,7 +14,6 @@
     LIST listStaticObjects = TheWitch, ReadingPlace, StartingNote, Arbustini, NightMode,  DoggoNoLetters
     
     LIST listConditionalObjects =  
-    DoggoFirstLetters, DoggoSecondLetters, DoggoThirdLetters, DoggoFourthLetters, DoggoFifthLetters,
     CookingWithFirstCharOBJ, CookingWithSecondCharOBJ, FirstCharCookingAloneOBJ, BatHouseFront, BatHouseRetro, EatingWithSecondCharOBJ, EatingWithFirstCharOBJ, CookingWithThirdCharOBJ, EatingWithThirdCharOBJ, ThirdCharCookingAloneOBJ,
     firstDumpOBJ, secondDumpOBJ, thirdDumpOBJ, fourthDumpOBJ, fifthDumpOBJ, CookingWithFourthCharOBJ, EatingWithFourthCharOBJ, CookingWithFifthCharOBJ, EatingWithFifthCharOBJ, FourthCharCookingAloneOBJ, FifthCharCookingAloneOBJ, CookingWithFranco,
     mapDump, mapKitchen, mapGreenhouse, mapLibrary, mapNest, 
@@ -44,10 +40,17 @@
     LIST listColoredGlyphs  = fireGlyph, earthGlyph, airGlyph, waterGlyph, aetherGlyph, aetherGlyph_off, airGlyph_off, fireGlyph_off, earthGlyph_off, waterGlyph_off
 
 
-    LIST listCharactersVariations = 
-    FirstCharacterTriangolo, FirstCharacterOrchestra, FirstCharacterFlautoDolce, FirstCharacterOcarina, FirstCharacterViolino, FirstCharacterCucina,
+
+    LIST listCharactersAndVariations = 
+    FirstCharacter, FirstCharacterTriangolo, FirstCharacterOrchestra, FirstCharacterFlautoDolce, FirstCharacterOcarina, FirstCharacterViolino, FirstCharacterCucina,
     PaintTriangolo, PaintOrchestra, PaintFlautoDolce, PaintOcarina, PaintViolino, SecondCharacterCucina,
-    SecondCharacterGrizzly, SecondCharacterLupo, SecondCharacterDelfino, SecondCharacterCapibara, SecondCharacterCorvo, 
+    SecondCharacter, SecondCharacterGrizzly, SecondCharacterLupo, SecondCharacterDelfino, SecondCharacterCapibara, SecondCharacterCorvo, 
     PaintGrizzly, PaintLupo, PaintDelfino, PaintCapibara, PaintCorvo,
-    ThirdCharacterCucina, FourthCharacterCucina, FifthCharacterCucina,
-    FrancoCucina
+    ThirdCharacter, ThirdCharacterCucina, 
+    FourthCharacter, FourthCharacterCucina, 
+    FifthCharacter, Mentor, FifthCharacterCucina,
+    Franco, FrancoCucina,
+    Carla,
+    Doggo, DoggoFirstLetters, DoggoSecondLetters, DoggoThirdLetters, DoggoFourthLetters, DoggoFifthLetters,
+    PG,
+    Documents
