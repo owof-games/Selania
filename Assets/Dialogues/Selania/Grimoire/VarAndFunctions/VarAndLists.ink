@@ -6,6 +6,9 @@
 // Se ha almeno un elemento invece il bottone si attiva.
 // I bottoni di secondo livello invece vanno a vedere cosa c'è nella lista, così come i testi del terzo livello.
 
+// in
+VAR grimoire_isEnabled = true
+
 LIST grimoire_allElements = 
 //Appendici
     grimChoicesMentor, grimChoicesWitch, grimGreenhouseMentor, grimInkMentor, grimRewritingMentor, grimSigilsMentor, grimSigilsWitch,
