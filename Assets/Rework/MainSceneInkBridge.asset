@@ -22,7 +22,7 @@ MonoBehaviour:
   - debug_nest
   - debug_frog
   - debug_stochastic
-  pgListName: listCharacters
+  pgListName: listCharactersAndVariations
   pgListItemName: PG
   roomListPrefix: contents
   grimoireInkNodeName: grimoire
@@ -107,3 +107,4 @@ MonoBehaviour:
   - listName: FifthCharacter
     relationshipInkVariableName: fifthChar_relationshipIndicator
     choicesValuesVariablePrefix: fifthChar
+  grimoireIsOpenVariableName: grimoire_isEnabled
