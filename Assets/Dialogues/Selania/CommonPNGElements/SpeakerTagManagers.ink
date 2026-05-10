@@ -6,9 +6,53 @@
 
 === function charTag(PNG, mood)
 ~ temp displayName = charName(PNG)
-TODO: invece di stampare solo {mood}, aggiungiamo un prefisso con il nome attuale del personaggio.
-// ~ return "{PNG}, {displayName}, {displayName}_{mood}"
-~ return "{PNG}, {displayName}, {mood}"
+{PNG:
+    - FirstCharacter:
+        {
+            - !first_char_main_storylets.one.firstPresentation:
+                ~ return "{PNG}, {displayName}, Chitarra_{mood}"
+            - else:
+                ~ return "{PNG}, {displayName}, {displayName}_{mood}"        
+        }        
+
+    - SecondCharacter:
+        {
+            - !second_char_main_storylets.one.nameSecond:
+                ~ return "{PNG}, {displayName}, Riccio_{mood}"
+            - else:
+                ~ return "{PNG}, {displayName}, {displayName}_{mood}"        
+        }
+
+    - ThirdCharacter:
+        {
+            - ! third_char_main_storylets.one:
+                ~ return "{PNG}, {displayName}, Boccale_{mood}"
+            - else:
+                ~ return "{PNG}, {displayName}, {displayName}_{mood}"        
+        }
+
+    - FourthCharacter:
+        {
+            - ! fourth_char_main_storylets.one:
+                ~ return "{PNG}, {displayName}, NonnaMolotov_{mood}"
+            - else:
+                ~ return "{PNG}, {displayName}, {displayName}_{mood}"        
+        } 
+
+    - FifthCharacter:
+        {
+            - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
+                ~ return "{PNG}, {displayName}, Mentore_{mood}"
+            - else:
+                ~ return "{PNG}, {displayName}, {displayName}_{mood}"        
+        }             
+
+    - else:
+        ~ return "{PNG}, {displayName}, {mood}"  
+
+}
+
+
 {debug: entro in charTag(PNG, mood). Il valore di PNG è {PNG}, di displayName {displayName}, di mood {mood}.}
 
 === function charName(PNG)
@@ -82,7 +126,7 @@ TODO: invece di stampare solo {mood}, aggiungiamo un prefisso con il nome attual
             - ! third_char_main_storylets.one:
                 {
                     - gm_rm_activation.witch.riscrittura:
-                        ~ return "Chitarra"
+                        ~ return "Boccale"
                     - else:
                         ~ return "Boccale"
                 }
