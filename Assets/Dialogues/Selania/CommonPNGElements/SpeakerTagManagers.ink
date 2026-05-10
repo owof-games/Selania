@@ -6,6 +6,8 @@
 
 === function charTag(PNG, mood)
 ~ temp displayName = charName(PNG)
+TODO: invece di stampare solo {mood}, aggiungiamo un prefisso con il nome attuale del personaggio.
+// ~ return "{PNG}, {displayName}, {displayName}_{mood}"
 ~ return "{PNG}, {displayName}, {mood}"
 {debug: entro in charTag(PNG, mood). Il valore di PNG è {PNG}, di displayName {displayName}, di mood {mood}.}
 
