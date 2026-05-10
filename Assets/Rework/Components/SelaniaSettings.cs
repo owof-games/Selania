@@ -248,7 +248,8 @@ namespace Selania.Rework.Components
         {
             var characterMoods = _characterSpritesProvider.Get(characterInfo);
             return characterMoods.TryGetValue(character, out var moods) &&
-                   moods.TryFirst(m => m.name.ToLower() == mood, out var matchingMood)
+                   moods.TryFirst(m => string.Equals(m.name, mood, StringComparison.CurrentCultureIgnoreCase),
+                       out var matchingMood)
                 ? matchingMood.sprite
                 : defaultCharacterTagSprite;
         }
@@ -257,8 +258,8 @@ namespace Selania.Rework.Components
         public bool VerifyCharacterData(string character, string moodTag)
         {
             var characterSprites = _characterSpritesProvider.Get(characterInfo);
-            return characterSprites.TryGetValue(character, out var moods) &&
-                   moods.Any(m => m.name.ToLower() == moodTag);
+            return characterSprites.TryGetValue(character, out var moods) && moods.Any(m =>
+                string.Equals(m.name, moodTag, StringComparison.CurrentCultureIgnoreCase));
         }
 
         /// <inheritdoc />
