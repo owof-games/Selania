@@ -185,8 +185,8 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
 
-    <b>{kitchen_secondCharRecipe}</b>
-    Ranacronaca a cura di Franco Lo Chef.
+    <b>{kitchen_secondCharRecipe}.</b>
+    <i>Ranacronaca a cura di Franco Lo Chef.</i>
 
     {kitchen_secondCharRecipeNoun}: senza, non si chiamerebbe {kitchen_secondCharRecipe}! Che è anche il motivo per cui sono Franco e mi chiamo Franco e non, che ne so, Acuto. Anche perché poi la mia voce è bassa e, uh, una lettera di Tullio "Rimani concentrato amore ti prego è solo una ricetta!". Povero amore, sempre così stressato. Torniamo a noi. La storia della {kitchen_secondCharRecipe} è vecchia quanto zia Graaack, che a occhio croce sono venti generazioni di rane. Non tanto. Forse per questo {player_name} e {charNameOne} non si sono fatti problemi nell'aggiungere della {kitchen_secondCharRecipeAdjective}, cosa che non pensavo nemmeno fosse commestibile, che è diverso da combustibile, perché una la mangi e l'altra la usi contro, uh una lettera di Giulio "Non scriverlo o ti denunciano!", ah, quanto è teso. Dicevamo. Per qualche strano motivo {charNameTwo} ha riempito il lavello di piatti anche non sporchi, per poi spolverare mezza cucina con {kitchen_secondCharRecipeComplement}, cosa che attirerà qui le formiche per i prossimi otto giorni (e quindi dovrò mettere di nuovo la museruola a zio Gracco). <>
     {
@@ -351,26 +351,30 @@
 
     {
         - grimoire_secondChar has grimSecondCharLetterOne:
-            Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}.
-            ~ letters_secondCharLetters_one()
+            <b>Prima lettera</b>
+            Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}. <>
+                ~ letters_secondCharLetters_one()
     }
     
     {
         - grimoire_secondChar has grimSecondCharLetterTwo:
-            Che strano.
-            ~ letters_secondCharLetters_two()
+            <b>Seconda lettera</b>
+            Che strano. <>
+                ~ letters_secondCharLetters_two()
     }
 
     {
         - grimoire_secondChar has grimSecondCharLetterThree:
-            Ciao {player_name}.
-            ~ letters_secondCharLetters_three()
+            <b>Terza lettera</b>
+            Ciao {player_name}. <>
+                ~ letters_secondCharLetters_three()
     }
 
     {
         - grimoire_secondChar has grimSecondCharLetterFour:
-            Ehi.
-            ~ letters_secondCharLetters_four()
+            <b>Quarta lettera</b>
+            Ehi. <>
+                ~ letters_secondCharLetters_four()
     }
     
 

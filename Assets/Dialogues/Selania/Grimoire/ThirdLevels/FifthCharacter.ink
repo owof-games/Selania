@@ -314,8 +314,8 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
-    <b>{kitchen_fifthCharRecipe}</b>
-    Ranacronaca a cura di Franco Lo Chef.
+    <b>{kitchen_fifthCharRecipe}.</b>
+    <i>Ranacronaca a cura di Franco Lo Chef.</i>
 
     {kitchen_fifthCharRecipeNoun}: l'elemento centrale di questa ricetta. La preparazione richiede una buona dose di manualità, cosa non facile per {charNameOne}, che ha solo delle vibrisse. Il piatto tradizionalmente prevede anche l'aggiunta di olio invernale, ma {player_name} ha optato per della {kitchen_fifthCharRecipeAdjective}, rompendo gli schemi e il cuore di zio Gracco. Nel mentre {charNameOne} ha rovesciato una prima bottiglia di vino, cosa non prevista dalla ricetta, per poi riempirla con delle spighe raccolte dalla palude, cosa non prevista dai pesci della palude. Quando ormai il piatto ha iniziato ad addensarsi, il duo ha deciso di rafforzarne il sapore aggiungendo {kitchen_fifthCharRecipeComplement}, cosa che i più definirebbero coraggiosa, ma non {player_name}, che ha avuto la capacità di seguire la conversazione con {charNameOne}, e anche di preparare un piatto irripetibile (Tullio dice che è importante che sia irripetibile o a qualcuno viene il mal di pancia). <>
     {
@@ -471,25 +471,35 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
+
     {
         - grimoire_fifthChar has grimFifthCharLetterOne:
-            ~ letters_fifthCharLetters_one()
+            <b>Prima lettera</b>
+            Saluto. <>
+                ~ letters_fifthCharLetters_one()
     }
     
     {
         - grimoire_fifthChar has grimFifthCharLetterTwo:
-            ~ letters_fifthCharLetters_two()
+            <b>Seconda lettera</b>
+            Saluto. <>
+                ~ letters_fifthCharLetters_two()
     }
 
     {
         - grimoire_fifthChar has grimFifthCharLetterThree:
-             ~ letters_fifthCharLetters_three()
+            <b>Terza lettera</b>
+            Saluto. <>
+                ~ letters_fifthCharLetters_three()
     }
 
     {
         - grimoire_fifthChar has grimFifthCharLetterFour:
-            ~ letters_fifthCharLetters_four()
+            <b>Quarta lettera</b>
+            Saluto. <>
+                ~ letters_fifthCharLetters_four()
     }
+    
     
 
     + [Index #bookmark:index]

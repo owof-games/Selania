@@ -69,13 +69,11 @@ MonoBehaviour:
     nisi, vehicula non facilisis in, mattis at purus. Mauris eu augue metus. Quisque
     gravida condimentum pharetra.
 
-
     Nam ornare luctus massa, in porttitor risus
     semper eu. Suspendisse faucibus fringilla risus, quis ullamcorper dolor fermentum
     eget. Quisque et dignissim tortor. Praesent id leo id tellus gravida feugiat
     vitae at sapien. Mauris ultricies quam ac metus posuere vehicula. Praesent venenatis
     vulputate viverra.
-
 
     Integer porttitor elementum ex. Mauris laoreet sagittis
     justo sit amet tincidunt. Suspendisse augue quam, ultricies eget sagittis ac,
@@ -83,12 +81,9 @@ MonoBehaviour:
     lectus. Curabitur eget nisl elit. Pellentesque id arcu ut elit egestas consectetur
     et at felis.
 
-
-
-    Duis a maximus eros. Vestibulum tincidunt venenatis leo.
-    Maecenas eget faucibus ante, vel laoreet urna. Fusce eget aliquam augue, at varius
-    dolor. Proin id vestibulum erat. Morbi semper tincidunt urna et vestibulum.
-
+    Duis a maximus eros. Vestibulum tincidunt venenatis leo. Maecenas
+    eget faucibus ante, vel laoreet urna. Fusce eget aliquam augue, at varius dolor.
+    Proin id vestibulum erat. Morbi semper tincidunt urna et vestibulum.
 
     Vestibulum
     ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
@@ -97,12 +92,9 @@ MonoBehaviour:
     dui vel viverra mollis, lorem turpis tempor magna, sed ultrices felis sem non
     justo.
 
-
-
     Sed in metus faucibus, varius ex sed, pulvinar erat. Nam ac cursus
     nibh. Aliquam suscipit nisl euismod sem sagittis, et egestas arcu tempus. Ut
     fringilla a nisi at ultricies. Quisque rutrum velit ornare aliquet laoreet.
-
 
     Nulla
     in erat nec urna sagittis vestibulum. Quisque convallis, diam nec tempor luctus,
@@ -112,8 +104,6 @@ MonoBehaviour:
     dolor, sed aliquam erat facilisis et. Nullam vitae tortor faucibus, porta nisi
     nec, commodo nibh.
 
-
-
     Praesent quis eleifend dui. Nulla facilisi. Praesent
     finibus urna lectus, venenatis blandit ligula dictum a. Curabitur bibendum magna
     vel risus egestas, vitae consequat turpis varius. Pellentesque ac leo nec enim
@@ -121,8 +111,6 @@ MonoBehaviour:
     ac, aliquet et mauris. Aenean rhoncus purus sit amet quam eleifend, ut ultrices
     odio dignissim. Aliquam ac viverra tellus. Pellentesque rutrum vitae dui vitae
     lobortis.
-
-
 
     Vivamus vel tempor odio. Lorem ipsum dolor sit amet, consectetur
     adipiscing elit. Donec hendrerit sit amet lectus eget tempor. Morbi interdum
@@ -171,7 +159,7 @@ MonoBehaviour:
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: 120
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
@@ -496,10 +484,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ligula
+  m_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ligula
     nisi, vehicula non facilisis in, mattis at purus. Mauris eu augue metus. Quisque
     gravida condimentum pharetra.
-
 
     Nam ornare luctus massa, in porttitor risus
     semper eu. Suspendisse faucibus fringilla risus, quis ullamcorper dolor fermentum
@@ -507,19 +494,15 @@ MonoBehaviour:
     vitae at sapien. Mauris ultricies quam ac metus posuere vehicula. Praesent venenatis
     vulputate viverra.
 
-
     Integer porttitor elementum ex. Mauris laoreet sagittis
     justo sit amet tincidunt. Suspendisse augue quam, ultricies eget sagittis ac,
     convallis non arcu. Fusce non lectus interdum, convallis tellus sit amet, luctus
     lectus. Curabitur eget nisl elit. Pellentesque id arcu ut elit egestas consectetur
     et at felis.
 
-
-
-    Duis a maximus eros. Vestibulum tincidunt venenatis leo.
-    Maecenas eget faucibus ante, vel laoreet urna. Fusce eget aliquam augue, at varius
-    dolor. Proin id vestibulum erat. Morbi semper tincidunt urna et vestibulum.
-
+    Duis a maximus eros. Vestibulum tincidunt venenatis leo. Maecenas
+    eget faucibus ante, vel laoreet urna. Fusce eget aliquam augue, at varius dolor.
+    Proin id vestibulum erat. Morbi semper tincidunt urna et vestibulum.
 
     Vestibulum
     ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
@@ -528,12 +511,9 @@ MonoBehaviour:
     dui vel viverra mollis, lorem turpis tempor magna, sed ultrices felis sem non
     justo.
 
-
-
     Sed in metus faucibus, varius ex sed, pulvinar erat. Nam ac cursus
     nibh. Aliquam suscipit nisl euismod sem sagittis, et egestas arcu tempus. Ut
     fringilla a nisi at ultricies. Quisque rutrum velit ornare aliquet laoreet.
-
 
     Nulla
     in erat nec urna sagittis vestibulum. Quisque convallis, diam nec tempor luctus,
@@ -543,8 +523,6 @@ MonoBehaviour:
     dolor, sed aliquam erat facilisis et. Nullam vitae tortor faucibus, porta nisi
     nec, commodo nibh.
 
-
-
     Praesent quis eleifend dui. Nulla facilisi. Praesent
     finibus urna lectus, venenatis blandit ligula dictum a. Curabitur bibendum magna
     vel risus egestas, vitae consequat turpis varius. Pellentesque ac leo nec enim
@@ -552,8 +530,6 @@ MonoBehaviour:
     ac, aliquet et mauris. Aenean rhoncus purus sit amet quam eleifend, ut ultrices
     odio dignissim. Aliquam ac viverra tellus. Pellentesque rutrum vitae dui vitae
     lobortis.
-
-
 
     Vivamus vel tempor odio. Lorem ipsum dolor sit amet, consectetur
     adipiscing elit. Donec hendrerit sit amet lectus eget tempor. Morbi interdum
@@ -602,7 +578,7 @@ MonoBehaviour:
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: 120
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
@@ -992,7 +968,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 39, y: 0}
+  m_AnchoredPosition: {x: 39, y: -20}
   m_SizeDelta: {x: 231, y: 281}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &3709692036724132986

@@ -179,8 +179,8 @@
 
 
     //Ricetta
-    <b>{kitchen_firstCharRecipe}</b>
-    Ranacronaca a cura di Franco Lo Chef.
+    <b>{kitchen_firstCharRecipe}.</b>
+    <i>Ranacronaca a cura di Franco Lo Chef.</i>
 
     {kitchen_firstCharRecipeNoun}: l'elemento centrale di questa ricetta. La preparazione richiede una buona dose di manualità, cosa non facile per {charNameOne}, che ha solo delle vibrisse. Il piatto tradizionalmente prevede anche l'aggiunta di olio invernale, ma {player_name} ha optato per della {kitchen_firstCharRecipeAdjective}, rompendo gli schemi e il cuore di zio Gracco. Nel mentre {charNameOne} ha rovesciato una prima bottiglia di vino, cosa non prevista dalla ricetta, per poi riempirla con delle spighe raccolte dalla palude, cosa non prevista dai pesci della palude. Quando ormai il piatto ha iniziato ad addensarsi, il duo ha deciso di rafforzarne il sapore aggiungendo {kitchen_firstCharRecipeComplement}, cosa che i più definirebbero coraggiosa, ma non {player_name}, che ha avuto la capacità di seguire la conversazione con {charNameOne}, e anche di preparare un piatto irripetibile (Tullio dice che è importante che sia irripetibile o a qualcuno viene il mal di pancia). <>
     {
@@ -343,30 +343,30 @@
 
     {
         - grimoire_firstChar has grimFirstCharLetterOne:
-        
-            Ciao {player_name}, come stai?
-            ~ letters_firstCharLetters_one()
+            <b>Prima lettera</b>
+            Ciao {player_name}, come stai? <>
+                ~ letters_firstCharLetters_one()
     }
     
     {
         - grimoire_firstChar has grimFirstCharLetterTwo:
-        
-            Ciao {player_name}, qui è sempre {charNameOne} che ti scrive.
-            ~ letters_firstCharLetters_two()
+            <b>Seconda lettera</b>
+            Ciao {player_name}, qui è sempre {charNameOne} che ti scrive. <>
+                ~ letters_firstCharLetters_two()
     }
 
     {
         - grimoire_firstChar has grimFirstCharLetterThree:
-
-            Ciao ama!
-            ~ letters_firstCharLetters_three()
+            <b>Terza lettera</b>
+            Ciao ama! <>
+                ~ letters_firstCharLetters_three()
     }
 
     {
         - grimoire_firstChar has grimFirstCharLetterFour:
-            
-            Rieccomi ama.
-            ~ letters_firstCharLetters_four()
+            <b>Quarta lettera</b>
+            Rieccomi ama. <>
+                ~ letters_firstCharLetters_four()
     }
     
 
