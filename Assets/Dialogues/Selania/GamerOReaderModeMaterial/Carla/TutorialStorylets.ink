@@ -105,7 +105,7 @@
             {charTag(Carla, "bored")}:                  Dubito.
         + \ {charTag(PG, "neutral")}:                   No, grazie.
             {charTag(Carla, "neutral")}:                Saggia scelta.
-            {charTag(Carla, "neutral")}:            P   er me per lo meno.
+            {charTag(Carla, "neutral")}:                Per me per lo meno.
                 -> carla_closing_storylet
         -
 

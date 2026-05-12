@@ -582,6 +582,7 @@
 
 
     Chiacchierata Franco e PNG3
+    NOTA: una di queste scelte deve essere inutilmente e ridicolmente lunga.
 
             + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->

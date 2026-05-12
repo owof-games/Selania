@@ -40,11 +40,19 @@
         } 
 
     - FifthCharacter:
-        {
-            - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
-                ~ return "{PNG}, {displayName}, Mentore_{mood}"
-            - else:
-                ~ return "{PNG}, {displayName}, {displayName}_{mood}"        
+        {   
+            //Chiamo sempre FifthCharacter, senza separazione da Mentore, ma faccio un check a seconda che la storia come Mostro sia partita o meno.
+            - fifthChar_storyStatus == story_storyStarted:
+                {
+                    - ! fifth_char_main_storylets.one:
+                        ~ return "{PNG}, {displayName}, Mostro_{mood}"
+                    - else:
+                        ~ return "{PNG}, {displayName}, {displayName}_{mood}"
+                }
+                
+            - else: 
+                    ~ return "Mentor, {displayName}, Mentore_{mood}"
+
         }             
 
     - else:
@@ -185,7 +193,6 @@
                     - else:
                         ~ return "???"
                 }
-                
 
             - fifthChar_ActualName == Mentore:
                 ~ return "Mentore"    
