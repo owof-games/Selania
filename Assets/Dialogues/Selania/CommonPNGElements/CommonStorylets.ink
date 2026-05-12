@@ -583,23 +583,20 @@
 
     Chiacchierata Franco e PNG3
 
-        + \ {charTag(PG, "neutral")}:         Metà delle cose che la voce dice sono illogiche.
-                -> glyph_choice_manager(false, airC)->
-            
-        + \ {charTag(PG, "neutral")}:         Dice che stai facendo un buon lavoro.
-                -> glyph_choice_manager(false, waterC)->
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+                    -> glyph_choice_manager(false, airC)->
 
-        
-        + \ {charTag(PG, "neutral")}:         Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
-                -> glyph_choice_manager(false, earthC)->
-
-
-        + \ {charTag(PG, "neutral")}:         Non è più importante il tuo di giudizio sul tuo lavoro, {charNameFive}?
-                -> glyph_choice_manager(false, aetherC)->
-
-
-        + \ {charTag(PG, "neutral")}:         Ha detto tante cose ma la risposta è: no.
-                -> glyph_choice_manager(false, fireC)->
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
+                    -> glyph_choice_manager(false, earthC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
+                    -> glyph_choice_manager(false, fireC)->
+                
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+                    -> glyph_choice_manager(false, waterC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+                    -> glyph_choice_manager(false, aetherC)->
 
     -
     -> third_char_closing_storylet ->
@@ -616,22 +613,20 @@
 
     Chiacchierata Mentore e PNG3
 
-        + \ {charTag(PG, "neutral")}:         Metà delle cose che la voce dice sono illogiche.
-                -> glyph_choice_manager(false, airC)->
-            
-        + \ {charTag(PG, "neutral")}:         Dice che stai facendo un buon lavoro.
-                -> glyph_choice_manager(false, waterC)->
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+                    -> glyph_choice_manager(false, airC)->
 
-        
-        + \ {charTag(PG, "neutral")}:         Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
-                -> glyph_choice_manager(false, earthC)->
-
-
-        + \ {charTag(PG, "neutral")}:         Non è più importante il tuo di giudizio sul tuo lavoro, {charNameFive}?
-                -> glyph_choice_manager(false, aetherC)->
-
-        + \ {charTag(PG, "neutral")}:         Ha detto tante cose ma la risposta è: no.
-                -> glyph_choice_manager(false, fireC)->
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
+                    -> glyph_choice_manager(false, earthC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
+                    -> glyph_choice_manager(false, fireC)->
+                
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+                    -> glyph_choice_manager(false, waterC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+                    -> glyph_choice_manager(false, aetherC)->
     -
 
     -> mentor_closing_storylet ->
@@ -648,25 +643,20 @@
 
     Chiacchierata Riccio e PNG3
     
-         + \ {charTag(PG, "neutral")}:         Metà delle cose che la voce dice sono illogiche.
-                -> glyph_choice_manager(false, airC)->
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+                    -> glyph_choice_manager(false, airC)->
 
-            
-        + \ {charTag(PG, "neutral")}:         Dice che stai facendo un buon lavoro.
-                -> glyph_choice_manager(false, waterC)->
-
-
-        
-        + \ {charTag(PG, "neutral")}:         Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
-                -> glyph_choice_manager(false, earthC)->
-
-
-        + \ {charTag(PG, "neutral")}:         Non è più importante il tuo di giudizio sul tuo lavoro?
-                -> glyph_choice_manager(false, aetherC)->
-
-
-        + \ {charTag(PG, "neutral")}:         Ha detto tante cose ma la risposta è: no.
-                -> glyph_choice_manager(false, fireC)->
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
+                    -> glyph_choice_manager(false, earthC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
+                    -> glyph_choice_manager(false, fireC)->
+                
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+                    -> glyph_choice_manager(false, waterC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+                    -> glyph_choice_manager(false, aetherC)->
 
     -
     -> second_char_closing_storylet ->
@@ -683,23 +673,20 @@
 
     Chiacchierata Chitarra e PNG3
 
-        + \ {charTag(PG, "neutral")}:         Metà delle cose che la voce dice sono illogiche.
-                -> glyph_choice_manager(false, airC)->
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+                    -> glyph_choice_manager(false, airC)->
 
-        + \ {charTag(PG, "neutral")}:         Dice che stai facendo un buon lavoro.
-                -> glyph_choice_manager(false, waterC)->
-
-        + \ {charTag(PG, "neutral")}:         Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?
-                -> glyph_choice_manager(false, earthC)->
-
-        + \ {charTag(PG, "neutral")}:         Non è più importante il tuo di giudizio sul tuo lavoro?
-                -> glyph_choice_manager(false, aetherC)->
-
-
-        + \ {charTag(PG, "neutral")}:         Ha detto tante cose ma la risposta è: no.
-                -> glyph_choice_manager(false, fireC)->
-
-
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
+                    -> glyph_choice_manager(false, earthC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
+                    -> glyph_choice_manager(false, fireC)->
+                
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+                    -> glyph_choice_manager(false, waterC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+                    -> glyph_choice_manager(false, aetherC)->
     -
     -> first_char_closing_storylet ->
     -> third_char_closing_storylet ->

@@ -75,22 +75,20 @@
        
         {charTag(FourthCharacter, "neutral")}:       Frase
         
-            + \ {charTag(PG, "neutral")}:         Aria
-                -> glyph_choice_manager(false, airC)->
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+                    -> glyph_choice_manager(false, airC)->
 
-               
-            + \ {charTag(PG, "neutral")}:         Terra
-                -> glyph_choice_manager(false, earthC)->
-
-            + \ {charTag(PG, "neutral")}:         Fuoco
-                -> glyph_choice_manager(false, fireC)->
-
-            + \ {charTag(PG, "neutral")}:         Acqua
-                -> glyph_choice_manager(false, waterC)->
-                Mi suona molto, ama.
-    
-            + \ {charTag(PG, "neutral")}:         Spirito
-                -> glyph_choice_manager(false, aetherC)->
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
+                    -> glyph_choice_manager(false, earthC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
+                    -> glyph_choice_manager(false, fireC)->
+                
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+                    -> glyph_choice_manager(false, waterC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+                    -> glyph_choice_manager(false, aetherC)->
             -    
         {charTag(FourthCharacter, "neutral")}:       Frase
             
@@ -123,24 +121,20 @@
         
         {charTag(FourthCharacter, "neutral")}:       Frase
     
-            + \ {charTag(PG, "neutral")}:        Fuoco
-                -> glyph_choice_manager(false, fireC)->
-  
-            
-            + \ {charTag(PG, "neutral")}:         Aria
-                -> glyph_choice_manager(false, airC)->
- 
-            + \ {charTag(PG, "neutral")}:         Acqua
-                -> glyph_choice_manager(false, waterC)->
-   
-       
-            + \ {charTag(PG, "neutral")}:         Terra
-                -> glyph_choice_manager(false, earthC)->
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+                    -> glyph_choice_manager(false, airC)->
 
-             
-            + \ {charTag(PG, "neutral")}:         Spirito
-                -> glyph_choice_manager(false, aetherC)->
-    
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
+                    -> glyph_choice_manager(false, earthC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
+                    -> glyph_choice_manager(false, fireC)->
+                
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+                    -> glyph_choice_manager(false, waterC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+                    -> glyph_choice_manager(false, aetherC)->
             -
         
         {charTag(FourthCharacter, "neutral")}:       Frase
@@ -172,21 +166,20 @@
         
         {charTag(FourthCharacter, "neutral")}:       Frase
 
-            + \ {charTag(PG, "neutral")}:         Spirito
-                -> glyph_choice_manager(false, aetherC)->
-            
-            + \ {charTag(PG, "neutral")}:         Fuoco
-                -> glyph_choice_manager(false, fireC)->
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+                    -> glyph_choice_manager(false, airC)->
 
-            
-            + \ {charTag(PG, "neutral")}:          Terra
-                -> glyph_choice_manager(false, earthC)->
-             
-            + \ {charTag(PG, "neutral")}:         Aria
-                -> glyph_choice_manager(false, airC)->
-                   
-            + \ {charTag(PG, "neutral")}:         Acqua
-                -> glyph_choice_manager(false, waterC)->
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
+                    -> glyph_choice_manager(false, earthC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
+                    -> glyph_choice_manager(false, fireC)->
+                
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+                    -> glyph_choice_manager(false, waterC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+                    -> glyph_choice_manager(false, aetherC)->
             -
         {
             - contentsKitchen has Bat:
@@ -229,22 +222,20 @@
     
         {charTag(FourthCharacter, "neutral")}:       Frase
         
-            + \ {charTag(PG, "neutral")}:         Aria
-                -> glyph_choice_manager(false, airC)->
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+                    -> glyph_choice_manager(false, airC)->
 
-               
-            + \ {charTag(PG, "neutral")}:         Terra
-                -> glyph_choice_manager(false, earthC)->
-
-            + \ {charTag(PG, "neutral")}:         Fuoco
-                -> glyph_choice_manager(false, fireC)->
-
-            + \ {charTag(PG, "neutral")}:         Acqua
-                -> glyph_choice_manager(false, waterC)->
-                Mi suona molto, ama.
-    
-            + \ {charTag(PG, "neutral")}:         Spirito
-                -> glyph_choice_manager(false, aetherC)->
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
+                    -> glyph_choice_manager(false, earthC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
+                    -> glyph_choice_manager(false, fireC)->
+                
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+                    -> glyph_choice_manager(false, waterC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+                    -> glyph_choice_manager(false, aetherC)->
             -    
         {charTag(FourthCharacter, "neutral")}:       Frase
             
@@ -277,24 +268,20 @@
         
         {charTag(FourthCharacter, "neutral")}:       Frase
     
-            + \ {charTag(PG, "neutral")}:        Fuoco
-                -> glyph_choice_manager(false, fireC)->
-  
-            
-            + \ {charTag(PG, "neutral")}:         Aria
-                -> glyph_choice_manager(false, airC)->
- 
-            + \ {charTag(PG, "neutral")}:         Acqua
-                -> glyph_choice_manager(false, waterC)->
-   
-       
-            + \ {charTag(PG, "neutral")}:         Terra
-                -> glyph_choice_manager(false, earthC)->
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+                    -> glyph_choice_manager(false, airC)->
 
-             
-            + \ {charTag(PG, "neutral")}:         Spirito
-                -> glyph_choice_manager(false, aetherC)->
-    
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
+                    -> glyph_choice_manager(false, earthC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
+                    -> glyph_choice_manager(false, fireC)->
+                
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+                    -> glyph_choice_manager(false, waterC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+                    -> glyph_choice_manager(false, aetherC)->
             -
         
         {charTag(FourthCharacter, "neutral")}:       Frase
@@ -326,21 +313,20 @@
         
         {charTag(FourthCharacter, "neutral")}:       Frase
 
-            + \ {charTag(PG, "neutral")}:         Spirito
-                -> glyph_choice_manager(false, aetherC)->
-            
-            + \ {charTag(PG, "neutral")}:         Fuoco
-                -> glyph_choice_manager(false, fireC)->
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+                    -> glyph_choice_manager(false, airC)->
 
-            
-            + \ {charTag(PG, "neutral")}:          Terra
-                -> glyph_choice_manager(false, earthC)->
-             
-            + \ {charTag(PG, "neutral")}:         Aria
-                -> glyph_choice_manager(false, airC)->
-                   
-            + \ {charTag(PG, "neutral")}:         Acqua
-                -> glyph_choice_manager(false, waterC)->
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
+                    -> glyph_choice_manager(false, earthC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
+                    -> glyph_choice_manager(false, fireC)->
+                
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+                    -> glyph_choice_manager(false, waterC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+                    -> glyph_choice_manager(false, aetherC)->
             -
         {
             - contentsKitchen has Bat:
@@ -385,22 +371,20 @@
 
                 {charTag(FourthCharacter, "neutral")}:       Frase
         
-            + \ {charTag(PG, "neutral")}:         Aria
-                -> glyph_choice_manager(false, airC)->
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+                    -> glyph_choice_manager(false, airC)->
 
-               
-            + \ {charTag(PG, "neutral")}:         Terra
-                -> glyph_choice_manager(false, earthC)->
-
-            + \ {charTag(PG, "neutral")}:         Fuoco
-                -> glyph_choice_manager(false, fireC)->
-
-            + \ {charTag(PG, "neutral")}:         Acqua
-                -> glyph_choice_manager(false, waterC)->
-                Mi suona molto, ama.
-    
-            + \ {charTag(PG, "neutral")}:         Spirito
-                -> glyph_choice_manager(false, aetherC)->
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
+                    -> glyph_choice_manager(false, earthC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
+                    -> glyph_choice_manager(false, fireC)->
+                
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+                    -> glyph_choice_manager(false, waterC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+                    -> glyph_choice_manager(false, aetherC)->
             -    
         {charTag(FourthCharacter, "neutral")}:       Frase
             
@@ -433,24 +417,20 @@
         
         {charTag(FourthCharacter, "neutral")}:       Frase
     
-            + \ {charTag(PG, "neutral")}:        Fuoco
-                -> glyph_choice_manager(false, fireC)->
-  
-            
-            + \ {charTag(PG, "neutral")}:         Aria
-                -> glyph_choice_manager(false, airC)->
- 
-            + \ {charTag(PG, "neutral")}:         Acqua
-                -> glyph_choice_manager(false, waterC)->
-   
-       
-            + \ {charTag(PG, "neutral")}:         Terra
-                -> glyph_choice_manager(false, earthC)->
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+                    -> glyph_choice_manager(false, airC)->
 
-             
-            + \ {charTag(PG, "neutral")}:         Spirito
-                -> glyph_choice_manager(false, aetherC)->
-    
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
+                    -> glyph_choice_manager(false, earthC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
+                    -> glyph_choice_manager(false, fireC)->
+                
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+                    -> glyph_choice_manager(false, waterC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+                    -> glyph_choice_manager(false, aetherC)->
             -
         
         {charTag(FourthCharacter, "neutral")}:       Frase
@@ -482,21 +462,20 @@
         
         {charTag(FourthCharacter, "neutral")}:       Frase
 
-            + \ {charTag(PG, "neutral")}:         Spirito
-                -> glyph_choice_manager(false, aetherC)->
-            
-            + \ {charTag(PG, "neutral")}:         Fuoco
-                -> glyph_choice_manager(false, fireC)->
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+                    -> glyph_choice_manager(false, airC)->
 
-            
-            + \ {charTag(PG, "neutral")}:          Terra
-                -> glyph_choice_manager(false, earthC)->
-             
-            + \ {charTag(PG, "neutral")}:         Aria
-                -> glyph_choice_manager(false, airC)->
-                   
-            + \ {charTag(PG, "neutral")}:         Acqua
-                -> glyph_choice_manager(false, waterC)->
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
+                    -> glyph_choice_manager(false, earthC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
+                    -> glyph_choice_manager(false, fireC)->
+                
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+                    -> glyph_choice_manager(false, waterC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+                    -> glyph_choice_manager(false, aetherC)->
             -
         {
             - contentsKitchen has Bat:
@@ -811,25 +790,20 @@
     
     {charTag(FourthCharacter, "neutral")}:       Frase
    
-            + \ {charTag(PG, "neutral")}:         Scelta acqua
-                    -> glyph_choice_manager(false, waterC)->
-                
-                
-            + \ {charTag(PG, "neutral")}:         Scelta spirito
-                    -> glyph_choice_manager(false, aetherC)->
-                
-            
-            + \ {charTag(PG, "neutral")}:         Scelta terra
-                    -> glyph_choice_manager(false, earthC)->
-                
-            
-            + \ {charTag(PG, "neutral")}:         Scelta aria
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
+
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
+                    -> glyph_choice_manager(false, earthC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
+                    -> glyph_choice_manager(false, fireC)->
                 
-            
-            + \ {charTag(PG, "neutral")}:              Scelta fuoco
-                    -> glyph_choice_manager(false, fireC)-> 
-                
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+                    -> glyph_choice_manager(false, waterC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+                    -> glyph_choice_manager(false, aetherC)->
             -
     
     -> fourth_char_closing_storylet ->

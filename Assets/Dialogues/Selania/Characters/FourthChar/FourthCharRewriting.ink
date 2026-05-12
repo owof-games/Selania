@@ -75,11 +75,11 @@
                 -> glyph_choice_manager(false, earthC)->
             {charTag(PG, "neutral")}:               Commento    
                                 
-            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
             {charTag(PG, "neutral")}:               Commento    
     
-            + \ {charTag(PG, "neutral")}:         Spirito
+            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                 -> glyph_choice_manager(false, aetherC)->
         
         -
@@ -119,11 +119,11 @@
                 -> glyph_choice_manager(false, earthC)->
             {charTag(PG, "neutral")}:               Commento    
                                 
-            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
             {charTag(PG, "neutral")}:               Commento    
     
-            + \ {charTag(PG, "neutral")}:         Spirito
+            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                 -> glyph_choice_manager(false, aetherC)->
   
         -
@@ -163,11 +163,11 @@
                 -> glyph_choice_manager(false, earthC)->
             {charTag(PG, "neutral")}:               Commento    
                                 
-            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
             {charTag(PG, "neutral")}:               Commento    
     
-            + \ {charTag(PG, "neutral")}:         Spirito
+            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                 -> glyph_choice_manager(false, aetherC)->
             
         -
@@ -207,11 +207,11 @@
                 -> glyph_choice_manager(false, earthC)->
             {charTag(PG, "neutral")}:               Commento    
                                 
-            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
             {charTag(PG, "neutral")}:               Commento    
     
-            + \ {charTag(PG, "neutral")}:         Spirito
+            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                 -> glyph_choice_manager(false, aetherC)->
                 
         -
@@ -241,7 +241,7 @@
             -> glyph_choice_manager(false, fireC)->
         {charTag(PG, "neutral")}:               Commento    
 
-        + (aether)\ {charTag(PG, "neutral")}:        Spirito
+        + (aether)\ {charTag(PG, "neutral")}:        Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
             -> glyph_choice_manager(false, aetherC)->
         {charTag(PG, "neutral")}:               Commento    
 
@@ -253,7 +253,7 @@
             -> glyph_choice_manager(false, waterC)->
         {charTag(PG, "neutral")}:               Commento    
 
-        + (air)\ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
+        + (air)\ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
             -> glyph_choice_manager(false, airC)->
         {charTag(PG, "neutral")}:               Commento    
         

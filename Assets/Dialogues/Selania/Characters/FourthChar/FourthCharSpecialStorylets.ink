@@ -14,7 +14,7 @@
                     -> glyph_choice_manager(false, waterC)->
                 
                 
-            + \ {charTag(PG, "neutral")}:               Scelta spirito
+            + \ {charTag(PG, "neutral")}:               Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                     -> glyph_choice_manager(false, aetherC)->
                 
             
@@ -22,7 +22,7 @@
                     -> glyph_choice_manager(false, earthC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
+            + \ {charTag(PG, "neutral")}:               Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
                 
             
