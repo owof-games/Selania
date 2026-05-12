@@ -245,7 +245,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -42.800415, y: -161.41}
+  m_AnchoredPosition: {x: -42.800415, y: -130}
   m_SizeDelta: {x: 520.2043, y: 131.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3673498104718434248
@@ -381,7 +381,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -97.89783, y: -58.000122}
+  m_AnchoredPosition: {x: -97.89783, y: -30}
   m_SizeDelta: {x: 410.0094, y: 75.234}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1072607874182775606
@@ -674,7 +674,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -56.878784, y: 25}
+  m_AnchoredPosition: {x: -56.878784, y: 40}
   m_SizeDelta: {x: 466.742, y: 93.1494}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1289623397509359197
@@ -738,7 +738,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 2
+  m_fontStyle: 3
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -946,7 +946,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -49.701508, y: -402.0705}
+  m_AnchoredPosition: {x: -47.4, y: -377}
   m_SizeDelta: {x: 530.595, y: 611.2903}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8433429863708689938
@@ -977,7 +977,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum e poi altre cose giusto per andare a capo.
+  m_text: "Fagiolini: la cosa preferita dai Franco che scrivono ricette!  Edoardo
+    l'ha scelto come primo ingrediente e ho apprezzato molto ma senza metterci il
+    prezzo perch\xE9 non ho fatto niente. Edoardo ha messo della disperazione e poi
+    abbiamo insaporito il tutto aggiungendo dellla domenica nebbiosa. Abbiamo donato
+    il piatto ai pesci perch\xE9 li disturbiamo quando si cucina. Per\xF2 sono molto
+    profondi, sanno arrivare fino al fondo dello stagno, che \xE8 grande circa quanto,
+    uh, un post it di Euforbo, che \xE8 diverso dal postino perch\xE9 non scappa
+    quando lo saluto: \"Ho fame!\". Come non detto. Per\xF2 ho regalato a Edoardo
+    un ingrediente speciale. Cos\xEC pu\xF2 fare una cucinata perfetta perfetta con
+    una persona.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 68ea6777477fba94da4e0a1f20c20eed, type: 2}
   m_sharedMaterial: {fileID: 5052396341478960677, guid: 68ea6777477fba94da4e0a1f20c20eed, type: 2}
@@ -1004,7 +1013,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
+  m_fontSize: 32.25
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1157,7 +1166,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -56.878784, y: -74}
+  m_AnchoredPosition: {x: -56.878784, y: -60}
   m_SizeDelta: {x: 466.742, y: 93.1494}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &675761147382064575
@@ -1221,7 +1230,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 2
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1345,7 +1354,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8431590668544434488}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0

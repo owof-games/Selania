@@ -445,7 +445,7 @@
             ~ return "una foglia della Spezzata"
         
         - universalIngredient:
-            ~ return "un pizzico di Ingrediente Universale"
+            ~ return "un pizzico di Zandelia"
                         
     }
     
