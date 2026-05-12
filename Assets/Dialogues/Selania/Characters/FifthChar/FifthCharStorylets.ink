@@ -14,7 +14,7 @@
                     -> glyph_choice_manager(false, airC)->
 
                 
-            + \ {charTag(PG, "neutral")}:         Earth
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
                     -> glyph_choice_manager(false, earthC)->
                     
             + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
@@ -33,7 +33,7 @@
             + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
 
-            + \ {charTag(PG, "neutral")}:          Earth
+            + \ {charTag(PG, "neutral")}:          Cosa ti renderà più stabile? Da quali fondamenta parti?
                     -> glyph_choice_manager(false, earthC)->
     
             + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
@@ -63,7 +63,7 @@
             + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
 
-            + \ {charTag(PG, "neutral")}:         Earth
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
                     -> glyph_choice_manager(false, earthC)->
                     
             + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
@@ -99,7 +99,7 @@
             + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->    
                           
-            + \ {charTag(PG, "neutral")}:         Earth
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
                     -> glyph_choice_manager(false, earthC)->
                     
             + \ {charTag(PG, "neutral")}:         Aether
@@ -124,7 +124,7 @@
             + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
                     
-            + \ {charTag(PG, "neutral")}:         Earth
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
                     -> glyph_choice_manager(false, earthC)->
                     
             + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
@@ -154,7 +154,7 @@
             + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
 
-            + \ {charTag(PG, "neutral")}:         Earth
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
                     -> glyph_choice_manager(false, earthC)->
                     
             + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
@@ -184,7 +184,7 @@
             + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
                     
-            + \ {charTag(PG, "neutral")}:         Earth
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
                     -> glyph_choice_manager(false, earthC)->
 
                     
@@ -217,7 +217,7 @@
             + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
 
-            + \ {charTag(PG, "neutral")}:         Earth
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
                     -> glyph_choice_manager(false, earthC)->
                         
             + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
@@ -247,7 +247,7 @@
             + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
 
-            + \ {charTag(PG, "neutral")}:         Earth
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
                     -> glyph_choice_manager(false, earthC)->
                     
             + \ {charTag(PG, "neutral")}:          Cosa vuoi? Come puoi cambiare questa situazione?
@@ -277,7 +277,7 @@
             + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
                     
-            + \ {charTag(PG, "neutral")}:         Earth
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
                     -> glyph_choice_manager(false, earthC)->
 
             + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
@@ -306,7 +306,7 @@
             + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
 
-            + \ {charTag(PG, "neutral")}:         Earth
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
                     -> glyph_choice_manager(false, earthC)->
 
             + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
@@ -336,7 +336,7 @@
             + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
 
-            + \ {charTag(PG, "neutral")}:         Earth
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
                     -> glyph_choice_manager(false, earthC)->
                 
             + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
@@ -364,7 +364,7 @@
             + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
                     
-            + \ {charTag(PG, "neutral")}:         Earth
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
                     -> glyph_choice_manager(false, earthC)->
 
             + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?

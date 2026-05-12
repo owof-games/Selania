@@ -70,7 +70,7 @@
                 -> glyph_choice_manager(false, waterC)->
             {charTag(PG, "neutral")}:               Commento    
                     
-            + \ {charTag(PG, "neutral")}:         Terra
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
                 -> glyph_choice_manager(false, earthC)->
             {charTag(PG, "neutral")}:               Commento   
                                 
@@ -115,7 +115,7 @@
                 -> glyph_choice_manager(false, waterC)->
             {charTag(PG, "neutral")}:               Commento    
                     
-            + \ {charTag(PG, "neutral")}:         Terra
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
                 -> glyph_choice_manager(false, earthC)->
             {charTag(PG, "neutral")}:               Commento   
                                 
@@ -158,7 +158,7 @@
                 -> glyph_choice_manager(false, waterC)->
             {charTag(PG, "neutral")}:               Commento    
                     
-            + \ {charTag(PG, "neutral")}:         Terra
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
                 -> glyph_choice_manager(false, earthC)->
             {charTag(PG, "neutral")}:               Commento   
                                 
@@ -202,7 +202,7 @@
                 -> glyph_choice_manager(false, waterC)->
             {charTag(PG, "neutral")}:               Commento    
                     
-            + \ {charTag(PG, "neutral")}:         Terra
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
                 -> glyph_choice_manager(false, earthC)->
             {charTag(PG, "neutral")}:               Commento   
                                 
@@ -245,7 +245,7 @@
             -> glyph_choice_manager(false, aetherC)->
         {charTag(PG, "neutral")}:               Commento    
 
-        + (earth)\ {charTag(PG, "neutral")}:         Terra
+        + (earth)\ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
             -> glyph_choice_manager(false, earthC)->
         {charTag(PG, "neutral")}:               Commento       
 

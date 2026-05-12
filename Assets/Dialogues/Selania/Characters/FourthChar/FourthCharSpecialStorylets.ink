@@ -18,7 +18,7 @@
                     -> glyph_choice_manager(false, aetherC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Scelta terra
+            + \ {charTag(PG, "neutral")}:               Cosa ti renderà più stabile? da quali fondamenta parti?
                     -> glyph_choice_manager(false, earthC)->
                 
             
