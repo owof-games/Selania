@@ -10,7 +10,7 @@ La logica di comparsa delle appendici è:
 **************************/
 
 === grimoire_choicesAndRelationships
-@grimoireText #style:character #icon:AppendiceA #title:AppendiceA #description:{grimoire_characterDescription(AppendiceA)}
+@grimoireText #style:character #icon:AppendiceA #title:Appendice A #description:{grimoire_characterDescription(AppendiceA)}
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -71,7 +71,7 @@ La logica di comparsa delle appendici è:
 
 
 === grimoire_greenhouseAndGifts
-@grimoireText #style:character #icon:AppendiceB #title:AppendiceB #description:{grimoire_characterDescription(AppendiceB)}
+@grimoireText #style:character #icon:AppendiceB #title:Appendice B #description:{grimoire_characterDescription(AppendiceB)}
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -114,7 +114,7 @@ La logica di comparsa delle appendici è:
         -> grimoire_greenhouseAndGifts
 
 === grimoire_kitchenAndRelationships
-@grimoireText #style:character #icon:AppendiceC #title:AppendiceC #description:{grimoire_characterDescription(AppendiceC)}
+@grimoireText #style:character #icon:AppendiceC #title:Appendice C #description:{grimoire_characterDescription(AppendiceC)}
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -178,7 +178,7 @@ La logica di comparsa delle appendici è:
 
 
 === grimoire_inkAndRewriting
-@grimoireText #style:character #icon:AppendiceD #title:AppendiceD #description:{grimoire_characterDescription(AppendiceD)}
+@grimoireText #style:character #icon:AppendiceD #title:Appendice D #description:{grimoire_characterDescription(AppendiceD)}
 
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -233,7 +233,7 @@ La logica di comparsa delle appendici è:
 
 
 === grimoire_Sigils
-@grimoireText #style:character #icon:AppendiceE #title:AppendiceE #description:{grimoire_characterDescription(AppendiceE)}
+@grimoireText #style:character #icon:AppendiceE #title:Appendice E #description:{grimoire_characterDescription(AppendiceE)}
 
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
