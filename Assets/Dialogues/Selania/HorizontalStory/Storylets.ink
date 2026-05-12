@@ -2,22 +2,13 @@
 //GM
 
 
-                                                W.R. è su di giri, si è già persa due volte.
-                                                E poi sarei io quello piccolo del gruppo.
-                                                Beh: quello piccolo continua a pensare che sia un'idea idiota, e che dobbiamo andare a menarli quelli là, non cercare le magie.
-                                                O.U.J. mi ha detto che se non penso alle cose belle, rimanere qui sarà faticoso.
-                                                Quindi: pro di questa esperienza.
+                                                W.R. è su di giri, si è già persa due volte. E poi sarei io quello piccolo del gruppo. Beh: quello piccolo continua a pensare che sia un'idea idiota, e che dobbiamo andare a menarli quelli là, non cercare le magie. O.U.J. mi ha detto che se non penso alle cose belle, rimanere qui sarà faticoso. Quindi: pro di questa esperienza.
                                                 1. Sono lontano da mia madre e dalle sue rotture per ogni cosa.
                                                 2. Niente scuola, niente teste di merda come Matteo, niente battute del cazzo.
                                                 3. Le ragazze mi vogliono bene, anche se non sono sicuro che mi vogliano tutte qui.
                                                 4. In particolare K.: un ragazzo in una congrega non le va giù.
                                                 5. Però forse qui posso provare che anche io so fare magie. Spero.
-                                                Ci sono le cose che lasciamo dietro, però.
-                                                Tipo le altre a lottare contro le teste di merda.
-                                                A me questa cosa non mi va giù.
-                                                Ma sono troppo testone per darla vinta a K.
-                                                Se butta male, posso sempre tornare.
-                                                G.M.
+                                                Ci sono le cose che lasciamo dietro, però. Tipo le altre a lottare contro le teste di merda. A me questa cosa non mi va giù. Ma sono troppo testone per darla vinta a K. Se butta male, posso sempre tornare. G.M.
 
     
 
