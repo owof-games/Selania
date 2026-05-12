@@ -753,6 +753,10 @@ MonoBehaviour:
       Ogni volta che si chiude il grimorio e lo si ri-apre, viene visualizzata una
       nuova scelta di bookmark di navigazione (primo livello, poi secondo, poi terzo,
       poi riscrittura, e a quel punto cicla)
+  - prefab: {fileID: 5900152936520379775, guid: 8496ef3fc73f3bf45873f2b99d5f7b00, type: 3}
+    title: Evolving Object
+    description: "Mostra come utilizzare un oggetto che pu\xF2 cambiare immagine
+      nel tempo."
 --- !u!4 &1073972271
 Transform:
   m_ObjectHideFlags: 0

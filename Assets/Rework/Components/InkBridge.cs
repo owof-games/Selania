@@ -22,7 +22,7 @@ namespace Selania.Rework.Components
     [CreateAssetMenu(fileName = "InkBridge", menuName = "Selania/Create Ink Bridge", order = 0)]
     public class InkBridge : ScriptableObjectSetupSupport, IStoryChangeRoomNotifier, IStoryChoicesSelector,
         IStoryLinear, IStoryChangeRoomContentsNotifier, IStoryStateSerializer, IStoryAudioSupport, IStoryGrimoire,
-        IStoryInkInfo, IStoryGamerMode, IStoryCharacterRelationshipStatus
+        IStoryInkInfo, IStoryGamerMode, IStoryCharacterRelationshipStatus, IStoryVariableValues
     {
         [Header("Ink Settings")] [SerializeField] [Tooltip("The JSON asset containing the story.")]
         private TextAsset? inkAssetJson;
@@ -63,6 +63,51 @@ namespace Selania.Rework.Components
 
         /// <inheritdoc />
         public Observable<bool> gamerMode => GetVariableObservable<bool>(gamerModeVariableName);
+
+        #endregion
+
+        #region common
+
+        public Observable<T> GetVariableObservable<T>(string variableName)
+        {
+            return Observable.Create<T>(observer =>
+            {
+                var story = GetStory();
+
+                story.ObserveVariable(variableName, EmitValue);
+
+                EmitValue(variableName, story.variablesState[variableName]);
+
+                return Disposable.Create(() => story.RemoveVariableObserver(EmitValue));
+
+                void EmitValue(string vName, object value)
+                {
+                    T result = default!;
+
+                    switch (value)
+                    {
+                        case T tResult:
+                            result = tResult;
+                            break;
+                        case int intValue when typeof(T) == typeof(float):
+                            // there should be a better way, like in https://stackoverflow.com/a/7691918, but to avoid
+                            // runtime reflection and the associated risks in compiled versions:
+                            // (float) => convert int to float, this changes the internal representation
+                            // (object) => box the float, otherwise we can't cast to a generic type
+                            // (T) => finally cast to the desired type (which we _know_ it's float, so the boxing-unboxing
+                            // dance is useless, but necessary for typing reasons)
+                            result = (T)(object)(float)intValue;
+                            break;
+                        default:
+                            logger.ZLogError(
+                                $"Expected values of {vName} to be of type {typeof(T).Name}, and instead is of type {value.GetType().Name}");
+                            break;
+                    }
+
+                    observer.OnNext(result);
+                }
+            });
+        }
 
         #endregion
 
@@ -189,51 +234,6 @@ namespace Selania.Rework.Components
             CleanupAudio();
             CleanupGrimoire();
         }
-
-        #region common
-
-        private Observable<T> GetVariableObservable<T>(string variableName)
-        {
-            return Observable.Create<T>(observer =>
-            {
-                var story = GetStory();
-
-                story.ObserveVariable(variableName, EmitValue);
-
-                EmitValue(variableName, story.variablesState[variableName]);
-
-                return Disposable.Create(() => story.RemoveVariableObserver(EmitValue));
-
-                void EmitValue(string vName, object value)
-                {
-                    T result = default!;
-
-                    switch (value)
-                    {
-                        case T tResult:
-                            result = tResult;
-                            break;
-                        case int intValue when typeof(T) == typeof(float):
-                            // there should be a better way, like in https://stackoverflow.com/a/7691918, but to avoid
-                            // runtime reflection and the associated risks in compiled versions:
-                            // (float) => convert int to float, this changes the internal representation
-                            // (object) => box the float, otherwise we can't cast to a generic type
-                            // (T) => finally cast to the desired type (which we _know_ it's float, so the boxing-unboxing
-                            // dance is useless, but necessary for typing reasons)
-                            result = (T)(object)(float)intValue;
-                            break;
-                        default:
-                            logger.ZLogError(
-                                $"Expected values of {vName} to be of type {typeof(T).Name}, and instead is of type {value.GetType().Name}");
-                            break;
-                    }
-
-                    observer.OnNext(result);
-                }
-            });
-        }
-
-        #endregion
 
         #region room location / contents
 
