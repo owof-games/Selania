@@ -93,6 +93,14 @@ VAR letters_doggoPause = false
 
     }
 
+//Cose legate allx PNG.
+    //Se ho fatto almeno una riscrittura, sposto thirdChar_pauseDuration da 2 a 1.
+   {
+        - LIST_COUNT(story_endedStories) >= 1 && thirdChar_pauseDuration != 1:
+            ~ thirdChar_pauseDuration = 1
+   } 
+
+
 //Elementi per la camera da letto
     //Chiusura gioco
     {

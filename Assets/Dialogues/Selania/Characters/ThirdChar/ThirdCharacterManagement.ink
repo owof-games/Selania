@@ -15,13 +15,13 @@
         VAR thirdChar_minStoryletsForRewriting = grimThirdCharNine
         //Abbiamo l'info speciale su Mentore? Se le condizioni sono corrette, viene messa su true dalla funzione inkLevel(Character)
         VAR thirdChar_specialEvent = false
-        //Cconteggio totale delle scelte prese con la PNG
+        //Conteggio totale delle scelte prese con la PNG
         VAR thirdChar_totalChoices = 0
 
     //Ritmo della storia    
         //Variabili per mettere in pausa la conversazione
         VAR thirdChar_pauseTalking = 0
-        VAR thirdChar_pauseDuration = 1
+        VAR thirdChar_pauseDuration = 2
         //Questa variabile verifica se abbiamo appena parlato con unx PNG, in modo tale da presentarci in modo diverso le possibili proposte che possiamo farle.
         VAR thirdChar_justTalked = false
         //Variabile per il tempo di attesa tra una lettera e l'altra
