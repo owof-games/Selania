@@ -116,6 +116,10 @@
 === debug_richGrimoire
 //Serve per simulare uno stato in cui ho concluso le prime due png e Mentore non ha sbroccato
 
+    //Caricamento grimorio
+         ~ grimoire_isEnabled = true
+
+    //Settaggio dati PNG
     ~ player_name = get_random_name()
     ~ kitchen_PGRecipeNoun = "Pane"
     ~ kitchen_PGRecipeAdjective = "disperazione"

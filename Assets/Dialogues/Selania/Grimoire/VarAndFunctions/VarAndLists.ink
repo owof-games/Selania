@@ -7,7 +7,7 @@
 // I bottoni di secondo livello invece vanno a vedere cosa c'è nella lista, così come i testi del terzo livello.
 
 // in
-VAR grimoire_isEnabled = true
+VAR grimoire_isEnabled = false
 
 LIST grimoire_allElements = 
 //Appendici
