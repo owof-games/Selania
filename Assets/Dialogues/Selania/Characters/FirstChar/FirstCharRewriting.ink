@@ -635,20 +635,20 @@
             
         {charTag(FirstCharacter, characterPortraitsManagement(FirstCharacter))}:            
         
-                                                                    Direi che sono pronta per andarmene, {player_name}.
-                                                                    Abbiamo fatto un viaggio enorme assieme, ora è giunto il tempo per me di riprendere in mano la mia vita.
-                                                                    Grazie di tutto, davvero.
-                                                                    Grazie di tutto.
-                                                                    Salutami {charNameFive}, e dille di riposarsi.
+                                                                Direi che sono pronta per andarmene, {player_name}.
+                                                                Abbiamo fatto un viaggio enorme assieme, ora è giunto il tempo per me di riprendere in mano la mia vita.
+                                                                Grazie di tutto, davvero.
+                                                                Grazie di tutto.
+                                                                Salutami {charNameFive}, e dille di riposarsi.
         {
             - secondChar_storyStatus == story_storyStarted:
-                                                                    Salutami anche quella bestiola di {charNameTwo}.
+                                                                Salutami anche quella bestiola di {charNameTwo}.
 
         }
         {
             - thirdChar_storyStatus == story_storyStarted:
-                                                                    E persino {charNameThree}.
-                                                                    Come sono magnanima.
+                                                                E persino {charNameThree}.
+                                                                Come sono magnanima.
 
         }
             
