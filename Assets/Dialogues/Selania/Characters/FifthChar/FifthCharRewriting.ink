@@ -319,7 +319,7 @@
                     }
                 Il mio vero nome è <b><i>{charNameFive}</b></i>.
                     ~  characterChangingObjects(FifthCharacter)
-                {charTag(FifthCharacter, characterPortraitsManagement(FifthCharacter))}:    Frase    
+                {charTag(FifthCharacter, "neutral")}:    Frase    
             
             - fifthChar_ActualName has FifthC:
                     {
@@ -330,7 +330,7 @@
                     }
                 {charTag(FifthCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameFive}</b></i>.
                     ~  characterChangingObjects(FifthCharacter)
-                {charTag(FifthCharacter, characterPortraitsManagement(FifthCharacter))}:    Frase       
+                {charTag(FifthCharacter, "neutral")}:    Frase       
               
             - fifthChar_ActualName has FifthD:
                     {
@@ -341,7 +341,7 @@
                     }
                 {charTag(FifthCharacter, "neutral")}:       E il mio nome è <b><i>{charNameFive}</b></i>.
                     ~  characterChangingObjects(FifthCharacter)
-                {charTag(FifthCharacter, characterPortraitsManagement(FifthCharacter))}:    Frase        
+                {charTag(FifthCharacter, "neutral")}:    Frase        
                                
             
             - fifthChar_ActualName has FifthF:
@@ -353,7 +353,7 @@
                     }
                 {charTag(FifthCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameFive}</b></i>.
                     ~  characterChangingObjects(FifthCharacter)
-                {charTag(FifthCharacter, characterPortraitsManagement(FifthCharacter))}:    Frase       
+                {charTag(FifthCharacter, "neutral")}:    Frase       
                     
             - fifthChar_ActualName has FifthB:
                     {
@@ -364,7 +364,7 @@
                     }
                 {charTag(FifthCharacter, "neutral")}:       Io sono <b><i>{charNameFive}</b></i>.
                     ~  characterChangingObjects(FifthCharacter)
-                {charTag(FifthCharacter, characterPortraitsManagement(FifthCharacter))}:    Frase       
+                {charTag(FifthCharacter, "neutral")}:    Frase       
                     
         }
         
@@ -385,7 +385,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
 
-        {charTag(FifthCharacter, characterPortraitsManagement(FifthCharacter))}:    Frase.
+        {charTag(FifthCharacter, "neutral")}:    Frase.
         -> fifth_char_closing_storylet ->
         -> close
             
@@ -410,7 +410,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
         
         
-        {charTag(FifthCharacter, characterPortraitsManagement(FifthCharacter))}:    Frase.
+        {charTag(FifthCharacter, "neutral")}:    Frase.
             {
                 - fourthChar_storyStatus == story_storyStarted:
                     Salutami {charNameFour}.

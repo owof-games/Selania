@@ -501,7 +501,7 @@
     }
         {charTag(SecondCharacter, "angry")}:        Il mio vero nome è <b><i>{charNameTwo}</b></i>.
             ~  characterChangingObjects(SecondCharacter)
-    {charTag(SecondCharacter, characterPortraitsManagement(SecondCharacter))}:                                                 Combatterò la mia paura e diventerò il più forte di tutti, imbattibile!
+    {charTag(SecondCharacter, "neutral")}:                                                 Combatterò la mia paura e diventerò il più forte di tutti, imbattibile!
     
     - secondChar_ActualName has Lupo:
     {
@@ -512,7 +512,7 @@
     }
         {charTag(SecondCharacter, "angry")}:        Mi chiamerò <b><i>{charNameTwo}</b></i>.
             ~  characterChangingObjects(SecondCharacter)
-    {charTag(SecondCharacter, characterPortraitsManagement(SecondCharacter))}:        E proteggerò il mio branco.
+    {charTag(SecondCharacter, "neutral")}:        E proteggerò il mio branco.
                                                                                     Mamma, papà, nonna e mio fratello.
                                                                                     Nessuna delle persone a cui voglio bene deve più stare male.
         
@@ -525,7 +525,7 @@
     }
         {charTag(SecondCharacter, "energy")}:       E il mio nome è <b><i>{charNameTwo}</b></i>.
             ~  characterChangingObjects(SecondCharacter)
-    {charTag(SecondCharacter, characterPortraitsManagement(SecondCharacter))}:        Perché tutto è un gioco.
+    {charTag(SecondCharacter, "neutral")}:        Perché tutto è un gioco.
                                                                                     La mia fantasia e qualche piccola bugia aiuteranno le altre persone ad avere meno paura.
                         
     
@@ -538,7 +538,7 @@
     }
         {charTag(SecondCharacter, "emotional")}:    Mi chiamerò <b><i>{charNameTwo}</b></i>.
             ~  characterChangingObjects(SecondCharacter)
-    {charTag(SecondCharacter, characterPortraitsManagement(SecondCharacter))}: E imparerò ad avere tantissimi amici.
+    {charTag(SecondCharacter, "neutral")}: E imparerò ad avere tantissimi amici.
                                                                             Ci sentiremo meno soli!
                                                                             E così avremo meno paura.
             
@@ -551,7 +551,7 @@
     }
         {charTag(SecondCharacter, "energy")}:        Io sono <b><i>{charNameTwo}</b></i>.
             ~  characterChangingObjects(SecondCharacter)
-        {charTag(SecondCharacter, characterPortraitsManagement(SecondCharacter))}:                    Sono sveglio e posso capire ciò che mi circonda!
+        {charTag(SecondCharacter, "neutral")}:                    Sono sveglio e posso capire ciò che mi circonda!
                                                                                                     E posso cambiare le cose che mi fanno paura.
                                                                                                     Aiutare gli altri.
             
@@ -580,7 +580,7 @@
                                                         <i>{charNameTwo} ripone piena fiducia in {player_name}, ed è pronto a condividere con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} una informazione importante.</i>
     }
 
-        {charTag(SecondCharacter, characterPortraitsManagement(SecondCharacter))}:                    Voglio dirti una cosa {player_name}. 
+        {charTag(SecondCharacter, "neutral")}:                    Voglio dirti una cosa {player_name}. 
                                                                                                     Su {charNameFive}.
                                                                                                     A me non mi sembra mica felice.
                                                                                                     Mi ricorda mamma quando gira per casa dando consigli e dicendo cose sorridendo.
@@ -601,7 +601,7 @@
     
     {
         - contentsNest hasnt fireGlyph:
-        {charTag(SecondCharacter, characterPortraitsManagement(SecondCharacter))}:    Ah {player_name}, prima ho trovato una cosa in giro.
+        {charTag(SecondCharacter, "neutral")}:    Ah {player_name}, prima ho trovato una cosa in giro.
                                                                                     O forse l'ho rubata.
                                                                                     Ma ho pensato che magari tu ci cavi qualcosa.
                                                                                     Devo iniziare a comportarmi diversamente, mi sa. 
@@ -629,7 +629,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
         
-        {charTag(SecondCharacter, characterPortraitsManagement(SecondCharacter))}:                Torno a casa, {player_name}.
+        {charTag(SecondCharacter, "neutral")}:                Torno a casa, {player_name}.
                                                                                                 Non so cosa mi aspetta.
                                                                                                 Spero un po' di dolci.
                                                                                                 Ma te lo farò sapere, promesso!

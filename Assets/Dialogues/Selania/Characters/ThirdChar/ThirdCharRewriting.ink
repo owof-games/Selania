@@ -306,7 +306,7 @@
                     }
                 Il mio vero nome è <b><i>{charNameThree}</b></i>.
                     ~  characterChangingObjects(ThirdCharacter)
-                 {charTag(ThirdCharacter, characterPortraitsManagement(ThirdCharacter))}:    Frase
+                 {charTag(ThirdCharacter, "neutral")}:     Frase
             
             - thirdChar_ActualName has ThirdC:
                     {
@@ -317,7 +317,7 @@
                     }
                 {charTag(ThirdCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameThree}</b></i>.
                     ~  characterChangingObjects(ThirdCharacter)
-                    {charTag(ThirdCharacter, characterPortraitsManagement(ThirdCharacter))}:    Frase
+                    {charTag(ThirdCharacter, "neutral")}:     Frase
 
             - thirdChar_ActualName has ThirdD:
                     {
@@ -328,7 +328,7 @@
                     }
                 {charTag(ThirdCharacter, "neutral")}:       E il mio nome è <b><i>{charNameThree}</b></i>.
                     ~  characterChangingObjects(ThirdCharacter)
-            {charTag(ThirdCharacter, characterPortraitsManagement(ThirdCharacter))}:    Frase
+            {charTag(ThirdCharacter, "neutral")}:     Frase
                                
             
             - thirdChar_ActualName has ThirdF:
@@ -340,7 +340,7 @@
                     }
                 {charTag(ThirdCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameThree}</b></i>.
                     ~  characterChangingObjects(ThirdCharacter)
-                {charTag(ThirdCharacter, characterPortraitsManagement(ThirdCharacter))}:    Frase    
+                {charTag(ThirdCharacter, "neutral")}:     Frase    
                     
             - thirdChar_ActualName has ThirdB:
                     {
@@ -351,7 +351,7 @@
                     }
                 {charTag(ThirdCharacter, "neutral")}:       Io sono <b><i>{charNameThree}</b></i>.
                     ~  characterChangingObjects(ThirdCharacter)
-                {charTag(ThirdCharacter, characterPortraitsManagement(ThirdCharacter))}:    Frase    
+                {charTag(ThirdCharacter, "neutral")}:     Frase    
                     
         }
         
@@ -377,7 +377,7 @@
                     {charTag(TheWitch, witch_state())}:   <i>{charNameTwo} ripone piena fiducia in {player_name}, ed è pronto a condividere con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} una informazione importante.
             }
 
-        {charTag(ThirdCharacter, characterPortraitsManagement(ThirdCharacter))}:    Frase.
+        {charTag(ThirdCharacter, "neutral")}:     Frase.
         -> third_char_closing_storylet ->
         -> close
             
@@ -389,7 +389,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
         {
             - contentsNest hasnt fireGlyph:
-            {charTag(ThirdCharacter, characterPortraitsManagement(ThirdCharacter))}:    Ah {player_name}, prima ho trovato una cosa in giro.
+            {charTag(ThirdCharacter, "neutral")}:     Ah {player_name}, prima ho trovato una cosa in giro.
             ~ move_entity(fireGlyph, Nest)
 
         }
@@ -406,7 +406,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
         
         
-        {charTag(ThirdCharacter, characterPortraitsManagement(ThirdCharacter))}:    Frase.
+        {charTag(ThirdCharacter, "neutral")}:     Frase.
                                                                                     Salutami
             {
                 - secondChar_storyStatus == story_storyStarted:

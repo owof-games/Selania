@@ -497,7 +497,7 @@
 
         ~  characterChangingObjects(FirstCharacter)
 
-    {charTag(FirstCharacter, characterPortraitsManagement(FirstCharacter))}:
+    {charTag(FirstCharacter, "neutral")}: 
                                                                 Sono lo strumento semplice, eppure fondamentale.
                                                                 Sono quella che attende che le altre facciano casino, per mettere un accento, un colore.
                                                                 Che ritrova il bello nelle cose quotidiane.
@@ -518,7 +518,7 @@
 
     {charTag(FirstCharacter, "curious")}:                       Rullo di tamburi: io sono <b><i>{charNameOne}</b></i>!
         ~  characterChangingObjects(FirstCharacter)                                            
-    {charTag(FirstCharacter, characterPortraitsManagement(FirstCharacter))}:
+    {charTag(FirstCharacter, "neutral")}: 
                                                                 Signore e signor3 e signori: sono la gioia del cambiamento.
                                                                 Le infinite possibilità.
                                                                 Sono colei che può provare tutto.
@@ -535,7 +535,7 @@
 
     {charTag(FirstCharacter, "curious")}:                       Ho scelto come nome <b><i>{charNameOne}</b></i>.
         ~  characterChangingObjects(FirstCharacter)
-    {charTag(FirstCharacter, characterPortraitsManagement(FirstCharacter))}: 
+    {charTag(FirstCharacter, "neutral")}: 
                                                                 Che sia quel pezzetto di plastica suonato alle elementari o un pezzo pregiato di un'orchestra, il Flauto ci ricorda che la musica è ovunque.
                                                                 E dove c'è musica, c'è cambiamento.
                                                                 E metterò al centro di tutto la mia musica, la band, per fare cose che davvero cambino il mondo.
@@ -550,7 +550,7 @@
     }
     {charTag(FirstCharacter, "affectionate")}:                  Il mio nome è <b><i>{charNameOne}</b></i>.
         ~  characterChangingObjects(FirstCharacter)
-    {charTag(FirstCharacter, characterPortraitsManagement(FirstCharacter))}:                                                 
+    {charTag(FirstCharacter, "neutral")}:                                                 
                                                                 E riabbraccio la mia infanzia, gli spazi in cui sono cresciuta.
                                                                 Per ricominciare a giocare, a esplorare quello che già conosco.
                                                                 Per prendermi cura dei miei e della mia terra.
@@ -566,7 +566,7 @@
 
     {charTag(FirstCharacter, "affectionate")}:                  Io sono <b><i>{charNameOne}</b></i>.
         ~  characterChangingObjects(FirstCharacter)
-    {charTag(FirstCharacter, characterPortraitsManagement(FirstCharacter))}:  
+    {charTag(FirstCharacter, "neutral")}:  
                                                                 Lo strumento romantico.
                                                                 Lo strumento divino.
                                                                 Abbraccio l'amore come motore del cambiamento.
@@ -593,7 +593,7 @@
             {charTag(TheWitch, witch_state())}:                 <i>{charNameOne} ripone piena fiducia in {player_name}, ed è pronta a condividere con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} una informazione importante.</i>
     }
 
-    {charTag(FirstCharacter, characterPortraitsManagement(FirstCharacter))}:    
+    {charTag(FirstCharacter, "neutral")}:    
                                                                 Vorrei anche dirti una cosa, {player_name}.
                                                                 Credo che {charNameFive} sia triste per qualcosa.
                                                                 Mi dà l'impressione di mettercela tutta, qui.
@@ -633,7 +633,7 @@
         
         
             
-        {charTag(FirstCharacter, characterPortraitsManagement(FirstCharacter))}:            
+        {charTag(FirstCharacter, "neutral")}:            
         
                                                                 Direi che sono pronta per andarmene, {player_name}.
                                                                 Abbiamo fatto un viaggio enorme assieme, ora è giunto il tempo per me di riprendere in mano la mia vita.
