@@ -23,6 +23,8 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
+    
         
         ~ temp sigilUsed = false
 
@@ -62,21 +64,21 @@
                                                                 <i>Ma è comunque impossibile proseguire.
                                                                 <i>Cosa c'è nel petto di {player_name} dopo questa prima riscrittura?
         
-            + (water) \ {charTag(PG, "neutral")}:               La gioia di aver aiutato qualcuno.
+            + (water) \ {charTag(PG, "neutral")}:               Non so se è giusto dirlo, ma la gioia di aver aiutato qualcuno.
                     -> glyph_choice_manager(true, waterC)->
                 {charTag(TheWitch, witch_state())}:             <i>Aiutato chi {player_name} ha riscritto?
                                                                 <i>O aiutato l{player_pronouns has him:o|{player_pronouns has her:a|ə}} stess{player_pronouns has him:o|{player_pronouns has her:a|ə}} {player_name}?
                                                                 <i>Ma anche noi sentiamo questa gioia.
                                                                 <i>La serra è tiepida, la stazione attende, e le nubi dicono che {player_name} è dove deve essere.</i>
                 
-            + (fire) \ {charTag(PG, "neutral")}:                L'energia della voglia di fare, fare, fare ancora.
+            + (fire) \ {charTag(PG, "neutral")}:                Ho voglia di fare, fare, fare ancora!
                     -> glyph_choice_manager(true, fireC)->
                 {charTag(TheWitch, witch_state())}:             <i>Il vulcano si carica di energia.
                                                                 <i>Il suo fare scivola lungo la collina.
                                                                 <i>Il terreno si fa fertile.
                                                                 <i>Fertile è la volontà di {player_name}.
                 
-            + (air) \ {charTag(PG, "neutral")}:                 La curiosità di scoprire quali nuove cose accadranno.
+            + (air) \ {charTag(PG, "neutral")}:                 Mi chiedo: quali cose nuove scoprirò ancora?
                    -> glyph_choice_manager(true, airC)->
                 {charTag(TheWitch, witch_state())}:             <i>La curiosità del falco lo spinge verso l'alto.
                                                                 <i>Quella della talpa verso il basso.
@@ -118,6 +120,8 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
+    
         
         ~ temp sigilUsed = false
 
@@ -171,7 +175,7 @@
                                                                 <i>In primavera l'erba ricresce, il caldo la secca.
                                                                 <i>La rondine crea un nido di paglia.</i>
                             
-            + (fire) \ {charTag(PG, "neutral")}:                Ho la sensazione che Mentore si senta viva solo se utile, e lo stesso è per me.
+            + (fire) \ {charTag(PG, "neutral")}:                {charNameFive} si sente viva solo se fa qualcosa, e anche io!
                     -> glyph_choice_manager(true, fireC)->
                 {charTag(TheWitch, witch_state())}:             <i>Il colibrì vola ansioso di fiore in fiore.
                                                                 <i>Se non mangia spesso, muore.
@@ -185,7 +189,7 @@
                                                                 <i>Una luce troppo forte confonde strada e burrone.
                                                                 <i>Un rifugio col tempo può diventare prigione.</i>
          
-            + (earth) \ {charTag(PG, "neutral")}:               Franco è sempre iperattivo. Forse lui ed io dovremmo imparare a riposare.
+            + (earth) \ {charTag(PG, "neutral")}:               Franco è sempre iperattivo. Forse entrambi dobbiamo imparare a fermarci, a respirare.
                     -> glyph_choice_manager(true, earthC)->
                 {charTag(TheWitch, witch_state())}:             <i>Le radici si rilassano nel tepore del terreno.
                                                                 <i>Le foglie ridono quando il vento le sfiora.
@@ -255,19 +259,19 @@
 
         
             
-        + (fire) \ {charTag(PG, "neutral")}:         SCelta rossa.
+        + (fire) \ {charTag(PG, "neutral")}:         Scelta fuoco
             -> glyph_choice_manager(true, fireC)->
             
-        + (air) \ {charTag(PG, "neutral")}:         Scelta blu.
+        + (air) \ {charTag(PG, "neutral")}:         Scelta aria
             -> glyph_choice_manager(true, airC)->
 
-        + (aether) \ {charTag(PG, "neutral")}:         Scelta viola.
+        + (aether) \ {charTag(PG, "neutral")}:         Scelta spirito
             -> glyph_choice_manager(true, aetherC)->    
 
-        + (water) \ {charTag(PG, "neutral")}:         Scelta verde.
+        + (water) \ {charTag(PG, "neutral")}:         Scelta acqua
             -> glyph_choice_manager(true, waterC)->    
      
-        + (earth) \ {charTag(PG, "neutral")}:         Scelta gialla.
+        + (earth) \ {charTag(PG, "neutral")}:         Scelta terra
             -> glyph_choice_manager(true, earthC)->
         - 
 
@@ -311,19 +315,19 @@
 
 
             
-        + (air) \ {charTag(PG, "neutral")}:         Scelta blu.
+        + (air) \ {charTag(PG, "neutral")}:         Scelta aria
             -> glyph_choice_manager(true, airC)->
 
-        + (water) \ {charTag(PG, "neutral")}:         Scelta verde.
+        + (water) \ {charTag(PG, "neutral")}:         Scelta acqua
             -> glyph_choice_manager(true, waterC)->
 
-        + (earth) \ {charTag(PG, "neutral")}:         Scelta gialla.
+        + (earth) \ {charTag(PG, "neutral")}:         Scelta terra
             -> glyph_choice_manager(true, earthC)->
  
-        + (aether) \ {charTag(PG, "neutral")}:         Scelta viola.
+        + (aether) \ {charTag(PG, "neutral")}:         Scelta spirito
             -> glyph_choice_manager(true, aetherC)-> 
 
-        + (fire) \ {charTag(PG, "neutral")}:         SCelta rossa.
+        + (fire) \ {charTag(PG, "neutral")}:         Scelta fuoco
             -> glyph_choice_manager(true, fireC)->            
         -        
         -> witch_closing_storylet ->
@@ -356,19 +360,19 @@
                  ~ witch_debriefPNG += FifthCharacter 
         }
 
-        + (earth) \ {charTag(PG, "neutral")}:         Scelta gialla.
+        + (earth) \ {charTag(PG, "neutral")}:         Scelta terra
             -> glyph_choice_manager(true, earthC)->
  
-        + (aether) \ {charTag(PG, "neutral")}:         Scelta viola.
+        + (aether) \ {charTag(PG, "neutral")}:         Scelta spirito
             -> glyph_choice_manager(true, aetherC)->
         
-        + (fire) \ {charTag(PG, "neutral")}:         SCelta rossa.
+        + (fire) \ {charTag(PG, "neutral")}:         Scelta fuoco
             -> glyph_choice_manager(true, fireC)->
 
-        + (water) \ {charTag(PG, "neutral")}:         Scelta verde.
+        + (water) \ {charTag(PG, "neutral")}:         Scelta acqua
             -> glyph_choice_manager(true, waterC)->
     
-        + (air) \ {charTag(PG, "neutral")}:         Scelta blu.
+        + (air) \ {charTag(PG, "neutral")}:         Scelta aria
             -> glyph_choice_manager(true, airC)->
      
 

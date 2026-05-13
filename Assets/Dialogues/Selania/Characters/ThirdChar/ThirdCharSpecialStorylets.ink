@@ -7,19 +7,19 @@
 
     //Apertura del nido
     {charTag(ThirdCharacter, "neutral")}:       Dialogo in biblioteca.
-        + [Scelta blu.]
+        + [Scelta aria]
              -> glyph_choice_manager(false, airC)->
     
-        + [Scelta rossa.]
+        + [Scelta fuoco]
             -> glyph_choice_manager(false, fireC)->
      
-        + [Scelta viola.]
+        + [Scelta spirito]
             -> glyph_choice_manager(false, aetherC)->
     
-        + [Scelta gialla.]
+        + [Scelta terra]
             -> glyph_choice_manager(false, earthC)->
             
-        + [Scelta verde.]
+        + [Scelta acqua]
             -> glyph_choice_manager(false, waterC)->
         -    
     {charTag(ThirdCharacter, "neutral")}:       Ci viene aperto il nido.
