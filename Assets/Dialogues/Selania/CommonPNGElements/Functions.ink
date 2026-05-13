@@ -587,6 +587,11 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
             - the_witch_and_the_mentor && grimoire_fifthChar hasnt grimMentorWitchOne:
                 ~ grimoire_fifthChar += grimMentorWitchOne
                 ~ grimoire_witch += grimMentorWitchOne
+                {
+                    - player_somethingStrange has strangeVase:
+                        ~ player_somethingStrange -= strangeVase
+
+                }
         }
 
         {
