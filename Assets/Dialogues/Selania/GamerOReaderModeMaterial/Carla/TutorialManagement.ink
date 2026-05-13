@@ -41,7 +41,7 @@ VAR tutorial_rereadingActive = false
                 -> tutorial_carlaRereadingStorylet
 
         //parte dopo che mi è stato dato il libro da Mentore
-        - are_two_entities_together(PG, Carla) && grimoire_appendices has grimChoicesMentor && not tutorial_carlaGrimoireStorylet && settings_gamerMode == true:
+        - are_two_entities_together(PG, Carla) && grimoire_isEnabled == true && not tutorial_carlaGrimoireStorylet && settings_gamerMode == true:
                 -> tutorial_carlaGrimoireStorylet        
 
         - tutorial_ActivateTutorial == true && entity_location(PG) == Greenhouse && not tutorial_carlaGreenhouseGiftsInkStorylet && settings_gamerMode == true:

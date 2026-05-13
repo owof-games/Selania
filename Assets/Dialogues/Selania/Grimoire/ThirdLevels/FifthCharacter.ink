@@ -9,6 +9,10 @@
 
     //Main story come Mentore
     {
+        - grimoire_appendices has grimChoicesMentor:
+        Al suo arrivo {player_name} ha conosciuto {charNameFive}, che ha iniziato a raccontare a {player_name} un po' del funzionamento di questo luogo.
+    }
+    {
         - grimoire_fifthChar has grimMentorOne:
         Durante una chiacchierata, {charNameFive} ha raccontato a {player_name} che il suo posto preferito è la serra, perché vedere crescere le cose la fa sentire appagata, la sensazione di permettere con le proprie mani a un altro corpo di crescere al meglio.
     }
