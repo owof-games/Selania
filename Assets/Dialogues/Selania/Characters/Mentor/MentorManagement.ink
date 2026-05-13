@@ -1,7 +1,6 @@
 //Per mentore, fifthChar_storyStatus sarà la parte di riscrittura, mentorChar_storyStatus tutta la parte di interazione come Mentore
     VAR mentorChar_storyStatus = story_storyNotStarted
-    VAR mentor_storyletsForRewritingCount = 0
-    
+
 //Variabili per mettere in pausa la conversazione. Plausibilmente per mentore sarà molto alta all'inizio.
     VAR mentor_pauseTalking = 0
     VAR mentor_pauseDuration = 1
