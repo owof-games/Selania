@@ -195,9 +195,10 @@
             {charTag(FifthCharacter, "sad")}:                           L'ho ferito, ed è la parte centrale di questa faccenda.
 
             
-        +\ {charTag(PG, "neutral")}:                                    <i>Resto in silenzio.</i>
+        +\ {charTag(PG, "neutral")}:                                    Se sei davvero qui per proteggerci serve che affronti le tue difficoltà, {charNameFive}.
                 -> glyph_choice_manager(Mentor, aetherC)->
 
+            {charTag(FifthCharacter, "sorry")}:                         Hai ragione, {player_name}.
             {charTag(FifthCharacter, "sad")}:                           La cosa peggiore è che non mi piace arrabbiarmi, ma mi fa sentire potente.
             {charTag(FifthCharacter, "neutral")}:                       Visibile.
             {charTag(FifthCharacter, "hurry")}:                         Per pochi secondi mi sembra di potermi far rispettare.
@@ -262,7 +263,7 @@
             {charTag(FifthCharacter, "neutral")}:                       Di fare quello che vuole.
             {charTag(FifthCharacter, "bored")}:                         E non solo rispondere a quello che ha attorno.
      
-        +\ {charTag(PG, "neutral")}:                                    Vorresti sparire dal mondo, o da te?
+        +\ {charTag(PG, "neutral")}:                                    Mi chiedo se senti il bisogno di sparire dal mondo, o da te stessa.
                 -> glyph_choice_manager(Mentor, aetherC)->
 
             {charTag(FifthCharacter, "sorry")}:                         Cambierebbe poi così tanto?

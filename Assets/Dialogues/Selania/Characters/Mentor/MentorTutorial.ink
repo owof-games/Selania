@@ -51,13 +51,14 @@
                                                                 E ora che sei qui, ho uno scopo.
 
 
-        + (aetherChoice) \ {charTag(PG, "neutral")}:            Siamo in un luogo misterico, vero?
+        + (aetherChoice) \ {charTag(PG, "neutral")}:            C'è qualcosa che non stiamo vedendo, vero?
             -> glyph_choice_manager(Mentor, aetherC) ->
 
             {charTag(FifthCharacter, "neutral")}:               Io.
             {charTag(FifthCharacter, "sorry")}:                 Uh, è una domanda inaspettata.
             {charTag(FifthCharacter, "hurry")}:                 Sicuramente c'è qualcosa di magico.
             {charTag(FifthCharacter, "neutral")}:               Ma nulla viene tenuto nascosto.
+                                                                Nulla.
             {charTag(FifthCharacter, "hurry")}:                 Al contrario: hai in me una guida.
 
                 
@@ -273,11 +274,14 @@
                                                                 Ogni goccia di inchiostro raccoglie l'essenza della persona che l'ha creato, ed è uno strumento potentissimo per la <b>riscrittura</b>, l'ultimo atto del tuo lavoro.
                                                                 Ma tratteremo meglio la riscrittura più avanti.
 
-            + \ {charTag(PG, "neutral")}:                       Non potrebbe servire a tutt3 un nuovo nome, un nuovo inizio?
+            + \ {charTag(PG, "neutral")}:                       Chi decide chi ha bisogno di un nuovo nome e chi no?
                     -> glyph_choice_manager(Mentor, aetherC)->
 
-                {charTag(FifthCharacter, "sad")}:               Immagino possa servire a molt3.
-                {charTag(FifthCharacter, "neutral")}:           A me no, ad esempio.
+                {charTag(FifthCharacter, "neutral")}:           Non c'è un'autorità, se è quello che mi stai chiedendo.
+                                                                C'è qualcosa in questo luogo che chiama chi ne ha il bisogno.
+                {charTag(FifthCharacter, "sad")}:               Forse poche persone si rendono conto dell'importanza di un nuovo nome?
+                {charTag(FifthCharacter, "neutral")}:           Non serve a tutt3, comunque.
+                                                                Non a me per esempio.
                                                                 Questo è stato, è e sarà sempre il mio nome.
                                                                 Ma alla fine il nome è solo un simbolo, non è l'obiettivo in sé.       
                     
@@ -307,7 +311,6 @@
                 {charTag(FifthCharacter, "neutral")}:           Ma alla fine deve funzionare per le persone che aiutiamo, non per noi.
   
 
-
             + \ {charTag(PG, "neutral")}:                       Capito: brucio il passato così cresce qualcosa di nuovo.
                     -> glyph_choice_manager(Mentor, fireC)->
 
@@ -317,6 +320,7 @@
                                                                 Non di far finta che non sia esistita.
                 {charTag(FifthCharacter, "sad")}:               O è garantito che si ripresenteranno gli stessi problemi.                                                
             -
+
         {charTag(FifthCharacter, "neutral")}:                   Un modo per dimostrare a una persona che l'hai compresa, è farle un <b>dono</b>, ed è per questo che ti ho sbloccato la serra.
         {charTag(FifthCharacter, "hurry")}:                     Il dono giusto è un modo per dire "Ehi, ti vedo, ti capisco".
                                                                 Migliorare il rapporto.
@@ -362,7 +366,7 @@
         {charTag(FifthCharacter, "hurry")}:                     Così persona e riscrittorə raggiungeranno il loro obiettivo: un nuovo nome, simbolo di un nuovo inizio.
 
     
-            + \ {charTag(PG, "neutral")}:                       Questa cosa di dare un nuovo nome mi spaventa, non è invadente?
+            + \ {charTag(PG, "neutral")}:                       Questa cosa di dare un nuovo nome mi spaventa, mi sembra invadente.
                     -> glyph_choice_manager(Mentor, waterC)->
 
                 {charTag(FifthCharacter, "neutral")}:           No, {player_name}, non sei tu a decidere che nome la persona sceglierà.
@@ -395,20 +399,23 @@
                     
 
 
-            + \ {charTag(PG, "neutral")}:                       Sembra tutto molto pratico e razionale, per essere un'esperienza così spirituale.//è mai capitato che qualcuno non fosse pronto?
+            + \ {charTag(PG, "neutral")}:                       Una persona bloccata potrebbe non aver voglia di cambiare, e a quel punto non potrei aiutarla.
                     -> glyph_choice_manager(Mentor, aetherC)->
 
             {
                 - are_two_entities_together(FirstCharacter, PG):
-                {charTag(FirstCharacter, "annoyed")}:           Già.
+                {charTag(FirstCharacter, "annoyed")}:           Non mettermi ansie che non sapevo di avere, {player_name}!
             }
-
-                {charTag(FifthCharacter, "neutral")}:           "Sembra" però è la cosa giusta da dire.
-                                                                Perché non devi ascoltare solo con la testa, ma soprattutto col cuore.
-                                                                Capire cosa desidera una persona.
-                                                                Come ragiona.
-                                                                Che dono farle.
-                                                                Non è solo razionalità, per fortuna.   
+                {charTag(FifthCharacter, "bored")}:             IMPOSSIBILE!
+                {charTag(FifthCharacter, "sad")}:               Scusami, ma non è possibile.
+                {charTag(FifthCharacter, "neutral")}:           Questa cosa non è possibile.
+                                                                Se qualcuno arriva qui è perché ha bisogno di cambiare.
+                                                                E prima o poi tutti arrivano al cambiamento, anche se tu dovessi fare un lavoro mediocre.
+            {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:           Qualcuno ha dell'ansiolitico per {charNameFive}?
+                                                                Un'altra domanda di questo tipo da parte di {player_name} e mi muore di infarto.
+            }                                                    
             -
 
         {charTag(FifthCharacter, "neutral")}:                   Ricorda {player_name}: sei una guida, ma sta alla persona decidere alla fine chi è, e di cosa ha bisogno.
