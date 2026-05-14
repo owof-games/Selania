@@ -142,16 +142,16 @@
                         - {charTag(SecondCharacter, "neutral")}:            L'ippopotamo è super aggressivo. E ha la faccia stupida, vero?
 
                         - {charTag(SecondCharacter, "neutral")}:            Franco è convinto che {charNameFive} non sia di questo posto.
+                        {
+                            - are_two_entities_together(Mentor, PG):
+                            {charTag(FifthCharacter, "neutral")}:           Franco è anche convinto che {charNameOne} abbia un nido sugli alberi.
+                            {charTag(SecondCharacter, "neutral")}:          Sì no boh.
+                            {charTag(SecondCharacter, "melanchonic")}:      Hai ragione.
                             {
-                                - are_two_entities_together(Mentor, PG):
-                                    {charTag(FifthCharacter, "neutral")}:               Franco è anche convinto che {charNameOne} abbia un nido sugli alberi.
-                                    {charTag(SecondCharacter, "neutral")}:        Sì no boh.
-                                    {charTag(SecondCharacter, "melanchonic")}:    Hai ragione.
-                                    {
-                                        - are_two_entities_together(Franco, PG):
-                                        {charTag(Franco, "question")}:  Se è fatta di legno per forza ha un nido! Sennò da dove lo prende il legno?
-                                    }
+                                - are_two_entities_together(Franco, PG):
+                                {charTag(Franco, "question")}:              Se è fatta di legno per forza ha un nido! Sennò da dove lo prende il legno?
                             }
+                        }
                     }
                     -> main
             }
@@ -174,10 +174,10 @@
 
         {
             - grimoire_secondChar has grimSecondCharOne:
-                {charTag(SecondCharacter, "energy")}:       Vuoi chiedermi qualcosa {player_name}?
+                {charTag(SecondCharacter, "energy")}:                       Vuoi chiedermi qualcosa {player_name}?
 
             - else:
-                {charTag(SecondCharacter, "neutral")}:      Sì?
+                {charTag(SecondCharacter, "neutral")}:                      Sì?
         }
 
         ~ secondChar_justTalked = false
@@ -185,7 +185,7 @@
         //Azioni legate alla riscrittura
             //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
             + {grimoire_secondChar has secondChar_minStoryletsForRewriting && grimoire_appendices hasnt grimRewritingMentor} \ {charTag(PG, "neutral")}:         Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
-                    {charTag(SecondCharacter, "neutral")}:          Mi sa che {charNameFive} vuole dirti qualcosa prima.
+                    {charTag(SecondCharacter, "neutral")}:                  Mi sa che {charNameFive} vuole dirti qualcosa prima.
                         {
                             - are_two_entities_together(Mentor,PG):
                             {charTag(FifthCharacter, "neutral")}:           Sì {player_name}, parliamo un attimo!
