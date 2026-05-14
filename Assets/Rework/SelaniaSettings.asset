@@ -180,15 +180,17 @@ MonoBehaviour:
     - <name>k__BackingField: Chitarra_sad
       <sprite>k__BackingField: {fileID: 21300000, guid: 64f6f4f498b084d42b1b3f585e68dedc, type: 3}
     - <name>k__BackingField: Violino_neutral
-      <sprite>k__BackingField: {fileID: 21300000, guid: 64f6f4f498b084d42b1b3f585e68dedc, type: 3}
+      <sprite>k__BackingField: {fileID: 21300000, guid: 8839972c8d2fe3847a82accf0b9f4b52, type: 3}
     - <name>k__BackingField: Ocarina_neutral
       <sprite>k__BackingField: {fileID: 21300000, guid: 5a7f216d56739f443956712579da6a19, type: 3}
-    - <name>k__BackingField: FlautoDolce_neutral
+    - <name>k__BackingField: Flauto_neutral
       <sprite>k__BackingField: {fileID: 21300000, guid: a1c6ea0b7672f1f4b9a4c4c4fc9c4873, type: 3}
     - <name>k__BackingField: Triangolo_neutral
       <sprite>k__BackingField: {fileID: 21300000, guid: 78cb948e72048fd478a74f3cac8eb88e, type: 3}
     - <name>k__BackingField: Orchestra_neutral
       <sprite>k__BackingField: {fileID: 21300000, guid: aae861801def3854d8009c983044a978, type: 3}
+    - <name>k__BackingField: writer
+      <sprite>k__BackingField: {fileID: 21300000, guid: ec66ede0725cf4b4ea7a55054d6f173a, type: 3}
   - <listName>k__BackingField: SecondCharacter
     <dialogueColor>k__BackingField: {r: 0.078431375, g: 0.17254902, b: 0.19607843, a: 1}
     <inkVariableName>k__BackingField: secondChar_InkLevel
@@ -204,6 +206,8 @@ MonoBehaviour:
       <sprite>k__BackingField: {fileID: 21300000, guid: 39e5076576781fc4090031e03d9d5125, type: 3}
     - <name>k__BackingField: Riccio_melanchonic
       <sprite>k__BackingField: {fileID: 21300000, guid: a99c384555c81f54da771c22909e1fcc, type: 3}
+    - <name>k__BackingField: writer
+      <sprite>k__BackingField: {fileID: 21300000, guid: f91cce7b796be9d40974c557780df581, type: 3}
   - <listName>k__BackingField: ThirdCharacter
     <dialogueColor>k__BackingField: {r: 0.47058824, g: 0.12941177, b: 0.08235294, a: 1}
     <inkVariableName>k__BackingField: thirdChar_InkLevel
@@ -213,6 +217,8 @@ MonoBehaviour:
       <sprite>k__BackingField: {fileID: 21300000, guid: 347adc9fe8805054ab6b8006759dc15f, type: 3}
     - <name>k__BackingField: Boccale_neutral
       <sprite>k__BackingField: {fileID: 21300000, guid: 2285801924b45234985b9da66eac5415, type: 3}
+    - <name>k__BackingField: writer
+      <sprite>k__BackingField: {fileID: 21300000, guid: 6c8cd130e36dde64c9da6468156a9d2c, type: 3}
   - <listName>k__BackingField: FourthCharacter
     <dialogueColor>k__BackingField: {r: 0.84705883, g: 0.2, b: 0.07450981, a: 1}
     <inkVariableName>k__BackingField: fourthChar_InkLevel
@@ -228,6 +234,8 @@ MonoBehaviour:
       <sprite>k__BackingField: {fileID: 21300000, guid: 39e5076576781fc4090031e03d9d5125, type: 3}
     - <name>k__BackingField: melanchonic
       <sprite>k__BackingField: {fileID: 21300000, guid: a99c384555c81f54da771c22909e1fcc, type: 3}
+    - <name>k__BackingField: writer
+      <sprite>k__BackingField: {fileID: 21300000, guid: 8920199c1974c79408b7298c293ea8e3, type: 3}
   - <listName>k__BackingField: Mentor
     <dialogueColor>k__BackingField: {r: 0.36078432, g: 0.3529412, b: 0.29411766, a: 1}
     <inkVariableName>k__BackingField: 
@@ -250,6 +258,8 @@ MonoBehaviour:
     <characterMoods>k__BackingField:
     - <name>k__BackingField: Mostro_neutral
       <sprite>k__BackingField: {fileID: 21300000, guid: 6e9ab649598c61249a56275663efe151, type: 3}
+    - <name>k__BackingField: writer
+      <sprite>k__BackingField: {fileID: 21300000, guid: ee961e7afa221454ba8fd53b2ea5b5f1, type: 3}
   - <listName>k__BackingField: PG
     <dialogueColor>k__BackingField: {r: 0.84313726, g: 0.14901961, b: 0.3019608, a: 1}
     <inkVariableName>k__BackingField: 
@@ -322,16 +332,6 @@ MonoBehaviour:
       <sprite>k__BackingField: {fileID: 21300000, guid: 4bb6984829bc4b5468eca356c4830059, type: 3}
     - <name>k__BackingField: docGreenhouse
       <sprite>k__BackingField: {fileID: 21300000, guid: f3b0a6ad80511d0478eb0fabbc2bff20, type: 3}
-    - <name>k__BackingField: writer_firstChar
-      <sprite>k__BackingField: {fileID: 21300000, guid: ec66ede0725cf4b4ea7a55054d6f173a, type: 3}
-    - <name>k__BackingField: writer_secondChar
-      <sprite>k__BackingField: {fileID: 21300000, guid: f91cce7b796be9d40974c557780df581, type: 3}
-    - <name>k__BackingField: writer_thirdChar
-      <sprite>k__BackingField: {fileID: 21300000, guid: 6c8cd130e36dde64c9da6468156a9d2c, type: 3}
-    - <name>k__BackingField: writer_fourthChar
-      <sprite>k__BackingField: {fileID: 21300000, guid: 8920199c1974c79408b7298c293ea8e3, type: 3}
-    - <name>k__BackingField: writer_fifthChar
-      <sprite>k__BackingField: {fileID: 21300000, guid: ee961e7afa221454ba8fd53b2ea5b5f1, type: 3}
   <badRelationshipStatusBarColor>k__BackingField: {r: 0.25882354, g: 0.09803922, b: 0.8627451, a: 1}
   <normalRelationshipStatusBarColor>k__BackingField: {r: 0.8627451, g: 0.74509805, b: 0.09803922, a: 1}
   <goodRelationshipStatusBarColor>k__BackingField: {r: 0.96862745, g: 0.3764706, b: 0.60784316, a: 1}

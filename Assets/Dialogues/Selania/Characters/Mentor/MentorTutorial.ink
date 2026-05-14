@@ -47,7 +47,8 @@
 
             {charTag(FifthCharacter, "hurry")}:                 Certo che sono felice!
             {charTag(FifthCharacter, "neutral")}:               Perché io sono <b><i>{charNameFive}</b></i>.
-                                                                La tua {charNameFive}.
+                ~ grimoire_fifthChar += grimMentorPresentation
+            {charTag(FifthCharacter, "hurry")}:                 La tua {charNameFive}.
                                                                 E ora che sei qui, ho uno scopo.
 
 
@@ -102,6 +103,7 @@
         {
             - not waterChoice:
         {charTag(FifthCharacter, "neutral")}:                   Ah, che sbadata. Mi chiamo <b><i>{charNameFive}</b></i>, e il mio obiettivo è farti stare bene.
+                ~ grimoire_fifthChar += grimMentorPresentation
             - else:
         {charTag(FifthCharacter, "neutral")}:                   Come mentore, il mio unico obiettivo è farti stare bene.
         }

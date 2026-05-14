@@ -162,11 +162,17 @@
 
 {PNG:
     - FirstCharacter:
-        ~ return translator(firstChar_ActualName)
+        {
+            - grimoire_firstChar hasnt grimFirstCharPresentation:
+                ~ return "???"
+            - else:
+                ~ return translator(firstChar_ActualName)
+        }
+        
 
     - SecondCharacter:
         {
-            - ! second_char_main_storylets.one.nameSecond:
+            - grimoire_secondChar hasnt grimSecondCharPresentation:
                 ~ return "???"
             - else:
                 ~ return translator(secondChar_ActualName)
@@ -174,7 +180,7 @@
         
     - ThirdCharacter:
         {
-            - ! third_char_main_storylets.one:
+            - grimoire_thirdChar hasnt grimThirdCharPresentation:
                 ~ return "???"
             
             - else:
@@ -182,12 +188,17 @@
         }
 
     - FourthCharacter:
-        ~ return translator(fourthChar_ActualName)
+        {
+            - grimoire_fourthChar hasnt grimFourthCharPresentation:
+                ~ return "???"
+            - else:
+                ~ return translator(fourthChar_ActualName)
+        }
 
     - FifthCharacter:
         {
 
-            - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
+            - grimoire_fifthChar hasnt grimMentorPresentation:
                 ~ return "???"
             
             - else:

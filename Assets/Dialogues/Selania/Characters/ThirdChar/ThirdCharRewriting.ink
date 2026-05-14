@@ -304,9 +304,9 @@
                         - else:
                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
-                Il mio vero nome è <b><i>{charNameThree}</b></i>.
+                                                                        Il mio vero nome è...
                     ~  characterChangingObjects(ThirdCharacter)
-                 {charTag(ThirdCharacter, "neutral")}:     Frase
+                 {charTag(ThirdCharacter, "neutral")}:     <b><i>{charNameThree}</b></i>.
             
             - thirdChar_ActualName has ThirdC:
                     {
@@ -315,9 +315,9 @@
                         - else:
                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
-                {charTag(ThirdCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameThree}</b></i>.
+                                                            Mi chiamerò...
                     ~  characterChangingObjects(ThirdCharacter)
-                    {charTag(ThirdCharacter, "neutral")}:     Frase
+                    {charTag(ThirdCharacter, "neutral")}:     <b><i>{charNameThree}</b></i>.
 
             - thirdChar_ActualName has ThirdD:
                     {
@@ -326,9 +326,9 @@
                         - else:
                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
-                {charTag(ThirdCharacter, "neutral")}:       E il mio nome è <b><i>{charNameThree}</b></i>.
+                                                        E il mio nome è...
                     ~  characterChangingObjects(ThirdCharacter)
-            {charTag(ThirdCharacter, "neutral")}:     Frase
+            {charTag(ThirdCharacter, "neutral")}:     <b><i>{charNameThree}</b></i>.
                                
             
             - thirdChar_ActualName has ThirdF:
@@ -338,9 +338,9 @@
                         - else:
                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
-                {charTag(ThirdCharacter, "neutral")}:       Mi chiamerò <b><i>{charNameThree}</b></i>.
+                                                                                Mi chiamerò...
                     ~  characterChangingObjects(ThirdCharacter)
-                {charTag(ThirdCharacter, "neutral")}:     Frase    
+                {charTag(ThirdCharacter, "neutral")}:     <b><i>{charNameThree}</b></i>.    
                     
             - thirdChar_ActualName has ThirdB:
                     {
@@ -349,9 +349,9 @@
                         - else:
                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
-                {charTag(ThirdCharacter, "neutral")}:       Io sono <b><i>{charNameThree}</b></i>.
+                                                                Io sono...
                     ~  characterChangingObjects(ThirdCharacter)
-                {charTag(ThirdCharacter, "neutral")}:     Frase    
+                {charTag(ThirdCharacter, "neutral")}:     <b><i>{charNameThree}</b></i>.    
                     
         }
         

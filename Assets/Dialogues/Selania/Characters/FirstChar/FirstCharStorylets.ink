@@ -62,6 +62,7 @@
         {charTag(FirstCharacter, "affectionate")}:              Ma manco mi sono presentata.
                                                                 Mi chiamo {charNameOne}.
             - (firstPresentation)
+            ~ grimoire_firstChar += grimFirstCharPresentation
         
         {charTag(FirstCharacter, "annoyed")}:                   No no aspetta io sono <b><i>{charNameOne}</b></i>.
                                                                 Ehi! Non è mica questo il mio nome!

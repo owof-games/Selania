@@ -18,7 +18,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
 
-    {charNameOne} e {second_char_main_storylets.one.nameSecond:{charNameTwo}|il bimbo} si sono presentat3, discutendo di alieni e pisolini.
+    {charNameOne} e {grimoire_secondChar has grimSecondCharPresentation:{charNameTwo}|il bimbo} si sono presentat3, discutendo di alieni e pisolini.
 
 === function grimFirstThirdChar_text()
     ~ temp charNameOne = translator(firstChar_ActualName)

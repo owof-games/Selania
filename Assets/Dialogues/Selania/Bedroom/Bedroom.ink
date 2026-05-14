@@ -133,6 +133,7 @@ UTILIZZI RIMASTI = {glyph_actualSigilUses}
 
             + (riscrittura) \ {charTag(PG, "neutral")}:          <i>Impostami le prime 3 png come pronte per la riscrittura.
                                                     ~ debugRewriting()
+                                                    
 
             +  \ {charTag(PG, "neutral")}:          <i>Aprimi tutti i luoghi del gioco.
                                                     ~ debug_places_open()

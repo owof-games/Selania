@@ -502,9 +502,10 @@
         - else:
                                                         Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
     }
-        {charTag(SecondCharacter, "angry")}:            Il mio vero nome è <b><i>{charNameTwo}</b></i>.
+                                                        Il mio vero nome è...
             ~  characterChangingObjects(SecondCharacter)
-    {charTag(SecondCharacter, "neutral")}:              Combatterò la mia paura e diventerò il più forte di tutti, imbattibile!
+    {charTag(SecondCharacter, "neutral")}:              <b><i>{charNameTwo}</b></i>.
+                                                        Combatterò la mia paura e diventerò il più forte di tutti, imbattibile!
     
     - secondChar_ActualName has Lupo:
     {
@@ -513,9 +514,10 @@
         - else:
                                                         Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
     }
-        {charTag(SecondCharacter, "angry")}:            Mi chiamerò <b><i>{charNameTwo}</b></i>.
+        {charTag(SecondCharacter, "angry")}:            Mi chiamerò...
             ~  characterChangingObjects(SecondCharacter)
-    {charTag(SecondCharacter, "neutral")}:              E proteggerò il mio branco.
+    {charTag(SecondCharacter, "neutral")}:              <b><i>{charNameTwo}</b></i>.
+                                                        E proteggerò il mio branco.
                                                         Mamma, papà, nonna e mio fratello.
                                                         Nessuna delle persone a cui voglio bene deve più stare male.
         
@@ -526,9 +528,10 @@
         - else:
                                                         Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
     }
-        {charTag(SecondCharacter, "energy")}:           E il mio nome è <b><i>{charNameTwo}</b></i>.
+        {charTag(SecondCharacter, "energy")}:           E il mio nome è...
             ~  characterChangingObjects(SecondCharacter)
-    {charTag(SecondCharacter, "neutral")}:              Perché tutto è un gioco.
+    {charTag(SecondCharacter, "neutral")}:              <b><i>{charNameTwo}</b></i>.
+                                                        Perché tutto è un gioco.
                                                         La mia fantasia e qualche piccola bugia aiuteranno le altre persone ad avere meno paura.
                         
     
@@ -539,9 +542,10 @@
         - else:
                                                         Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
     }
-        {charTag(SecondCharacter, "emotional")}:        Mi chiamerò <b><i>{charNameTwo}</b></i>.
+        {charTag(SecondCharacter, "emotional")}:        Mi chiamerò...
             ~  characterChangingObjects(SecondCharacter)
-    {charTag(SecondCharacter, "neutral")}:              E imparerò ad avere tantissimi amici.
+    {charTag(SecondCharacter, "neutral")}:              <b><i>{charNameTwo}</b></i>.
+                                                        E imparerò ad avere tantissimi amici.
                                                         Ci sentiremo meno soli!
                                                         E così avremo meno paura.
             
@@ -552,9 +556,10 @@
         - else:
                                                         Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
     }
-        {charTag(SecondCharacter, "energy")}:           Io sono <b><i>{charNameTwo}</b></i>.
+        {charTag(SecondCharacter, "energy")}:           Io sono...
             ~  characterChangingObjects(SecondCharacter)
-        {charTag(SecondCharacter, "neutral")}:          Sono sveglio e curioso e posso capire ciò che mi circonda!
+        {charTag(SecondCharacter, "neutral")}:          <b><i>{charNameTwo}</b></i>.
+                                                        Sono sveglio e curioso e posso capire ciò che mi circonda!
                                                         E posso cambiare le cose che mi fanno paura.
                                                         Aiutare gli altri.
             

@@ -654,6 +654,11 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
         }
 
         {
+            - first_char_main_storylets.one.firstPresentation:
+                ~ grimoire_firstChar += grimFirstCharPresentation
+        }
+
+        {
             - first_char_main_storylets.two && grimoire_firstChar hasnt grimFirstCharTwo:
                 ~ grimoire_firstChar += grimFirstCharTwo
         }
@@ -792,6 +797,12 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
                 //Dopo la prima chiacchierata lo sposto al pond, così almeno il discorso su Franco ha senso
                 ~ move_entity(SecondCharacter, Pond)
         }
+
+        {
+            - second_char_main_storylets.one.nameSecond:
+                ~ grimoire_secondChar += grimSecondCharPresentation
+        }
+
 
         {    
             - second_char_main_storylets.two && grimoire_secondChar hasnt grimSecondCharTwo:

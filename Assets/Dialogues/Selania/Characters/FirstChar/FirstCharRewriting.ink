@@ -493,11 +493,11 @@
                                                                 Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
         }
         
-    {charTag(FirstCharacter, "neutral")}:                       Io sono <b><i>{charNameOne}</b></i>.
+                                                                Io sono...
 
         ~  characterChangingObjects(FirstCharacter)
 
-    {charTag(FirstCharacter, "neutral")}: 
+    {charTag(FirstCharacter, "neutral")}:                       <b><i>{charNameOne}</b></i>.
                                                                 Sono lo strumento semplice, eppure fondamentale.
                                                                 Sono quella che attende che le altre facciano casino, per mettere un accento, un colore.
                                                                 Che ritrova il bello nelle cose quotidiane.
@@ -516,9 +516,9 @@
                                                                 Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
     }
 
-    {charTag(FirstCharacter, "curious")}:                       Rullo di tamburi: io sono <b><i>{charNameOne}</b></i>!
+                                                                Rullo di tamburi: io sono...
         ~  characterChangingObjects(FirstCharacter)                                            
-    {charTag(FirstCharacter, "neutral")}: 
+    {charTag(FirstCharacter, "neutral")}:                       <b><i>{charNameOne}</b></i>!
                                                                 Signore e signor3 e signori: sono la gioia del cambiamento.
                                                                 Le infinite possibilità.
                                                                 Sono colei che può provare tutto.
@@ -533,9 +533,9 @@
                                                                 Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
     }
 
-    {charTag(FirstCharacter, "curious")}:                       Ho scelto come nome <b><i>{charNameOne}</b></i>.
+                                                                Ho scelto come nome...
         ~  characterChangingObjects(FirstCharacter)
-    {charTag(FirstCharacter, "neutral")}: 
+    {charTag(FirstCharacter, "neutral")}:                       <b><i>{charNameOne}</b></i>.
                                                                 Che sia quel pezzetto di plastica suonato alle elementari o un pezzo pregiato di un'orchestra, il Flauto ci ricorda che la musica è ovunque.
                                                                 E dove c'è musica, c'è cambiamento.
                                                                 E metterò al centro di tutto la mia musica, la band, per fare cose che davvero cambino il mondo.
@@ -548,9 +548,9 @@
         - else:
                                                                 Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
     }
-    {charTag(FirstCharacter, "affectionate")}:                  Il mio nome è <b><i>{charNameOne}</b></i>.
+                                                                Il mio nome è...
         ~  characterChangingObjects(FirstCharacter)
-    {charTag(FirstCharacter, "neutral")}:                                                 
+    {charTag(FirstCharacter, "neutral")}:                       <b><i>{charNameOne}</b></i>.                          
                                                                 E riabbraccio la mia infanzia, gli spazi in cui sono cresciuta.
                                                                 Per ricominciare a giocare, a esplorare quello che già conosco.
                                                                 Per prendermi cura dei miei e della mia terra.
@@ -564,9 +564,9 @@
                                                                 Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
     }
 
-    {charTag(FirstCharacter, "affectionate")}:                  Io sono <b><i>{charNameOne}</b></i>.
+                                                                Io sono...
         ~  characterChangingObjects(FirstCharacter)
-    {charTag(FirstCharacter, "neutral")}:  
+    {charTag(FirstCharacter, "neutral")}:                       <b><i>{charNameOne}</b></i>.
                                                                 Lo strumento romantico.
                                                                 Lo strumento divino.
                                                                 Abbraccio l'amore come motore del cambiamento.

@@ -12,7 +12,7 @@
             - firstChar_storyStatus == story_storyPostal:
                 ~ return "{PNG}, {displayName}, {mood}"
             
-            - !first_char_main_storylets.one.firstPresentation:
+            - grimoire_firstChar hasnt grimFirstCharPresentation:
                 ~ return "{PNG}, {displayName}, Chitarra_{mood}"
         
             - else:
@@ -24,7 +24,7 @@
             - secondChar_storyStatus == story_storyPostal:
                 ~ return "{PNG}, {displayName}, {mood}"
 
-            - !second_char_main_storylets.one.nameSecond:
+            - grimoire_secondChar hasnt grimSecondCharPresentation:
                 ~ return "{PNG}, {displayName}, Riccio_{mood}"
             
             - else:
@@ -36,7 +36,7 @@
             - thirdChar_storyStatus == story_storyPostal:
                 ~ return "{PNG}, {displayName}, {mood}"
 
-            - ! third_char_main_storylets.one:
+            - grimoire_thirdChar hasnt grimThirdCharPresentation:
                 ~ return "{PNG}, {displayName}, Boccale_{mood}"
             
             - else:
@@ -48,7 +48,7 @@
             - fourthChar_storyStatus == story_storyPostal:
                 ~ return "{PNG}, {displayName}, {mood}"
                 
-            - ! fourth_char_main_storylets.one:
+            - grimoire_fourthChar hasnt grimFourthCharPresentation:
                 ~ return "{PNG}, {displayName}, NonnaMolotov_{mood}"
             
             - else:
@@ -63,7 +63,7 @@
             //Chiamo sempre FifthCharacter, senza separazione da Mentore, ma faccio un check a seconda che la storia come Mostro sia partita o meno.
             - fifthChar_storyStatus == story_storyStarted:
                 {
-                    - ! fifth_char_main_storylets.one:
+                    - grimoire_fifthChar hasnt grimFifthCharPresentation:
                         ~ return "{PNG}, {displayName}, Mostro_{mood}"
                     - else:
                         ~ return "{PNG}, {displayName}, {displayName}_{mood}"
@@ -90,7 +90,7 @@
     
     - FirstCharacter:
         {
-            - !first_char_main_storylets.one.firstPresentation:
+            - grimoire_firstChar hasnt grimFirstCharPresentation:
                 {
                     - gm_rm_activation.witch.riscrittura:
                         ~ return "Chitarra"
