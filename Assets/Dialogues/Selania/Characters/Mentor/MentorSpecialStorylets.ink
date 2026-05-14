@@ -154,7 +154,7 @@
                                                                         L'importante è che non sia l'unico.
             }
 
-        +\ {charTag(PG, "neutral")}:                                    Che è bello perdere il controllo, ribellarsi.
+        +\ {charTag(PG, "neutral")}:                                    Ammettilo: perdere il controllo a volte è liberatorio.
                 -> glyph_choice_manager(Mentor, fireC)->
 
             {charTag(FifthCharacter, "sorry")}:                         Peggio.
@@ -253,7 +253,7 @@
                         {charTag(FirstCharacter, "curious")}:           Il livello di gaslighting che ti stai facendo da sola è da Nobel.
                 }
     
-        +\ {charTag(PG, "neutral")}:                                    Ma Liliana è stanca dell'ingiustizia, non del mondo. E ha reagito.
+        +\ {charTag(PG, "neutral")}:                                    Liliana è stanca dell'ingiustizia, non del mondo. E ha deciso di reagire.
                 -> glyph_choice_manager(Mentor, fireC)->
 
             {charTag(FifthCharacter, "neutral")}:                       Ma una magari a volte ha voglia di non reagire e basta.

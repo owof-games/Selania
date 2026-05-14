@@ -61,7 +61,7 @@
             {charTag(FifthCharacter, "hurry")}:                 Al contrario: hai in me una guida.
 
                 
-        + (fireChoice) \ {charTag(PG, "neutral")}:              <i>Cerco un modo per tornare a casa.</i>
+        + (fireChoice) \ {charTag(PG, "neutral")}:              Dimmi come torno a casa.
             -> glyph_choice_manager(Mentor, fireC) ->
 
             {charTag(FifthCharacter, "sad")}:                   Vuoi già andartene?
@@ -155,13 +155,12 @@
                                                                 Per cui riposa anche per me {player_name}!
 
             
-        + \ {charTag(PG, "neutral")}:                           Sono una persona pratica, so affrontare tutto!
+        + \ {charTag(PG, "neutral")}:                           Non mi pesa correre qualche rischio!
             -> glyph_choice_manager(Mentor, fireC) ->
 
-            {charTag(FifthCharacter, "sad")}:                   Però non è un discorso di praticità o meno, amic{player_pronouns has him:o|{player_pronouns has her:a|ə}} mi{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
-            {charTag(FifthCharacter, "neutral")}:               Anche la persona più pratica al mondo ha i suoi limiti.
-                                                                E quando li raggiunge, deve saper riposare.
-            {charTag(FifthCharacter, "hurry")}:                 Cosa non vera se hai il carico di tutto un luogo sulle tue spalle.
+            {charTag(FifthCharacter, "sad")}:                   Non si tratta di correre dei rischi o meno, amic{player_pronouns has him:o|{player_pronouns has her:a|ə}} mi{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
+            {charTag(FifthCharacter, "neutral")}:               Anche la persona più scavezzacollo al mondo a un certo punto può spezzarsi.
+                                                                E per questo è importante capire quali siano i propri confini prima di farsi male.
 
         -
 
@@ -307,12 +306,16 @@
                 {charTag(FifthCharacter, "bored")}:             Ogni tanto questa discrepanza mi urta.
                 {charTag(FifthCharacter, "neutral")}:           Ma alla fine deve funzionare per le persone che aiutiamo, non per noi.
   
-            + \ {charTag(PG, "neutral")}:                       Un nome è soltanto un nome. A cosa serve cambiarlo?
+
+
+            + \ {charTag(PG, "neutral")}:                       Capito: brucio il passato così cresce qualcosa di nuovo.
                     -> glyph_choice_manager(Mentor, fireC)->
 
-                {charTag(FifthCharacter, "neutral")}:           Un nome è come una magia che carichiamo di volta in volta di significato..
-                                                                A volte quella magia non va più bene, e dobbiamo cercare una nuova formula. 
-                                                                Un nuovo nome.
+                {charTag(FifthCharacter, "sad")}:               No niente fuoco, grazie!
+                {charTag(FifthCharacter, "neutral")}:           Ma soprattutto, non buttiamo via il passato!
+                                                                L'obbiettivo è quello di accogliere la propria storia, ma di guardarla in modo diverso.
+                                                                Non di far finta che non sia esistita.
+                {charTag(FifthCharacter, "sad")}:               O è garantito che si ripresenteranno gli stessi problemi.                                                
             -
         {charTag(FifthCharacter, "neutral")}:                   Un modo per dimostrare a una persona che l'hai compresa, è farle un <b>dono</b>, ed è per questo che ti ho sbloccato la serra.
         {charTag(FifthCharacter, "hurry")}:                     Il dono giusto è un modo per dire "Ehi, ti vedo, ti capisco".
@@ -367,13 +370,12 @@
                 {charTag(FifthCharacter, "hurry")}:             Tu aiuti queste persone a rileggere il proprio passato, il loro presente.
                 {charTag(FifthCharacter, "neutral")}:           A poi starà a loro, e solo a loro, decidere verso quale futuro andare.
 
-            + \ {charTag(PG, "neutral")}:                       Ma non posso dire "Ehi tu chiamati così e cosà" e bona?
+            + \ {charTag(PG, "neutral")}:                       È un bel po' di lavoro per una sola persona.
                     -> glyph_choice_manager(Mentor, fireC)->
 
-                {charTag(FifthCharacter, "neutral")}:           Un nuovo nome è una nuova esperienza.
-                                                                E l'esperienza viene dal percorso.
-                {charTag(FifthCharacter, "sad")}:               Se non c'è percorso, non c'è cambiamento.
-                {charTag(FifthCharacter, "neutral")}:           E poi sta alla persona decidere il suo nome.
+                {charTag(FifthCharacter, "neutral")}:           Ma non sei sol{player_pronouns has him:o|{player_pronouns has her:a|ə}}: hai me.
+                                                                E l'esperienza che man mano accumulerai.
+                {charTag(FifthCharacter, "neutral")}:           Ma soprattutto me.                                                
                     
             + \ {charTag(PG, "neutral")}:                       Ma da dove viene l'inchiostro? Ce lo porta qualcuno? Ce lo dona la persona da riscrivere?
                     -> glyph_choice_manager(Mentor, airC)->
@@ -393,7 +395,7 @@
                     
 
 
-            + \ {charTag(PG, "neutral")}:                       Sembra tutto molto pratico e razionale, per essere un'esperienza così spirituale.
+            + \ {charTag(PG, "neutral")}:                       Sembra tutto molto pratico e razionale, per essere un'esperienza così spirituale.//è mai capitato che qualcuno non fosse pronto?
                     -> glyph_choice_manager(Mentor, aetherC)->
 
             {
