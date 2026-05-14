@@ -170,7 +170,7 @@
                                                                         Non la meglio cosa, non trovi?
                 }
             
-        +\ {charTag(PG, "neutral")}:                                    Arrabbiarsi è umano, il problema è la violenza.
+        +\ {charTag(PG, "neutral")}:                                    Credo che arrabbiarsi sia un'emozione e non è sbagliata in sé, se non diventa violenza.
                 -> glyph_choice_manager(Mentor, waterC)->
 
             {charTag(FifthCharacter, "bored")}:                         Arrabbiarsi è da deboli.
@@ -278,13 +278,14 @@
                                                                         Zero proprio.
 
             
-        +\ {charTag(PG, "neutral")}:                                    A volte vorrei solo diventare invisibile.
+        +\ {charTag(PG, "neutral")}:                                    Ora vorrei tanto stringerti e dirti che andrà tutto bene.
                 -> glyph_choice_manager(Mentor, waterC)->
 
-            {charTag(FifthCharacter, "neutral")}:                       Esatto, {player_name}.
-            {charTag(FifthCharacter, "sad")}:                           So che è una scelta egoista.
+            {charTag(FifthCharacter, "neutral")}:                       Grazie, {player_name}, è una cosa molto tenera.
+                                                                        Ma non serve.
+            {charTag(FifthCharacter, "sorry")}:                         So che voler sparire è una scelta egoista.
                                                                         Perché abbiamo una responsabilità verso il mondo.
-                                                                        Ma questo mondo a volte sa essere davvero <b>troppo</b>.
+            {charTag(FifthCharacter, "sad")}:                           Ma questo mondo a volte sa essere davvero <b>troppo</b>.
         -    
     {charTag(FifthCharacter, "hurry")}:                                 Comunque alla fine Liliana con la sua rabbia trova un modo per cambiare.
                                                                         E quando riesce a vedere la sua casa come uno spazio brillante, mi ha fatto pensare: questa è l'essenza stessa della riscrittura.

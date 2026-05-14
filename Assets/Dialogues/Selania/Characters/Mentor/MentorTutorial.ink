@@ -42,9 +42,10 @@
                                                                 Un posto dove prenderti cura di te.
             {charTag(FifthCharacter, "hurry")}:                 Non male, no?
         
-        + (waterChoice) \ {charTag(PG, "neutral")}:             Che cosa tenera e gentile da dire! Perché sei felice che sono qui?
+        + (waterChoice) \ {charTag(PG, "neutral")}:             Davvero sei felice che sono qui? È una cosa dolcissima!
             -> glyph_choice_manager(Mentor, waterC) ->
 
+            {charTag(FifthCharacter, "hurry")}:                 Certo che sono felice!
             {charTag(FifthCharacter, "neutral")}:               Perché io sono <b><i>{charNameFive}</b></i>.
                                                                 La tua {charNameFive}.
                                                                 E ora che sei qui, ho uno scopo.
@@ -127,11 +128,12 @@
             {charTag(FifthCharacter, "sad")}:                   Mi sento una gran chiacchierona, davanti al tuo silenzio.
             {charTag(FifthCharacter, "neutral")}:               Ma ci sta: alla fine sono io quella che deve spiegare le cose, vero?
         
-        +  \ {charTag(PG, "neutral")}:                          Faccio sempre a fatica a distanziarmi dal dolore delle altre persone.
+        +  \ {charTag(PG, "neutral")}:                          Faccio tanta fatica a non sentirmi addosso il dolore degli altri.
             -> glyph_choice_manager(Mentor, waterC) ->
             
             {charTag(FifthCharacter, "sad")}:                   Ti capisco, {player_name}.
-            {charTag(FifthCharacter, "neutral")}:               Proprio per questo è importante prendersi i propri tempi.
+            {charTag(FifthCharacter, "neutral")}:               Proprio per questo è importante prendersi i propri tempi, staccare.
+                                                                E capire quando è il caso di fermarsi.
 
             
         + \ {charTag(PG, "neutral")}:                           Capita che qualcunə se ne vada e non torni più?
@@ -198,7 +200,7 @@
                                                                 Qualcunə con cui passare le ore a chiacchierare.
 
             - waterChoice:
-                {charTag(FifthCharacter, "neutral")}:           La prima cosa che mi hai detto è stata parlare di dolcezza e tenerezza.
+                {charTag(FifthCharacter, "neutral")}:           La prima cosa che mi hai detto è stata parlare di dolcezza, e l'hai fatto con un sacco di gioia.
                 {charTag(FifthCharacter, "hurry")}:             L'emotività attrae molte persone, perché in tant3 abbiamo bisogno di parlare di ciò che proviamo, di condividere gli aspetti profondi del nostro cuore.
                 {charTag(FifthCharacter, "sad")}:               Ma allontana altrettante persone, vuoi perché quello non è il loro linguaggio, vuoi perché non se la sentono di parlarne con chi non conoscono.
         }
@@ -288,11 +290,13 @@
                                                                 E tra te e quello strumento, che è l'inchiostro, c'è di mezzo la fiducia dell'altra persona.
         
                     
-            + \ {charTag(PG, "neutral")}:                       Non hanno persone care da cui farsi aiutare?
+            + \ {charTag(PG, "neutral")}:                       Preparo la mia spalla per farl3 piangere, e l'orecchio per ascoltarl3.
                     -> glyph_choice_manager(Mentor, waterC)->
 
-                {charTag(FifthCharacter, "neutral")}:           A volte è più facile aprirsi a chi non si conosce.
-                                                                E mentre noi riflettiamo sulle loro difficoltà, impariamo anche qualcosa su di noi.
+                {charTag(FifthCharacter, "neutral")}:           Ottima attitudine.
+                                                                Anche se per fortuna non ci saranno solo pianti, ma anche risate.
+                {charTag(FifthCharacter, "sad")}:               E momenti di rabbia.
+                                                                Non so perché ma le persone si arrabbiano tantissimo quando cercano di lasciare andare qualcosa.
                         
             + \ {charTag(PG, "neutral")}:                       Perché si chiama riscrittura, se le aiutiamo a rileggersi?
                     -> glyph_choice_manager(Mentor, airC)->
