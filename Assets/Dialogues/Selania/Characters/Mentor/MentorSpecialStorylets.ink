@@ -310,14 +310,14 @@
                 - else:
                     {charTag(FifthCharacter, "hurry")}:                 Ehi {player_name}!
                                                                         Hai visto quella cagnolina prima?
-                    {charTag(FifthCharacter, "neutral")}:               Era lì sotto il tabellone.
+                    {charTag(FifthCharacter, "neutral")}:               Era lì sotto alla fermata.
                     {charTag(FifthCharacter, "hurry")}:                 Con un musino adorabile.
                     {charTag(FifthCharacter, "sorry")}:                 Ho provato a giocarci, ma si è allontanata.
             }
         - else:
             {charTag(FifthCharacter, "hurry")}:                         Ehi {player_name}!
                                                                         Hai visto quella cagnolina prima?
-            {charTag(FifthCharacter, "neutral")}:                       Era lì sotto il tabellone della stazione.
+            {charTag(FifthCharacter, "neutral")}:                       Era alla fermata della stazione.
             {charTag(FifthCharacter, "hurry")}:                         Con un musino adorabile.
             {charTag(FifthCharacter, "sorry")}:                         Ho provato a giocarci, ma si è allontanata.
     }

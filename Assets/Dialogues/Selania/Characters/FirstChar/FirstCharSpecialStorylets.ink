@@ -213,10 +213,10 @@
     {
     - contentsTrainStop has DoggoNoLetters:
     {charTag(FirstCharacter, "affectionate")}:              Hai visto com'è carina? 
-                                                            Lì, sotto il tabellone?
+                                                            Lì vicino alla panchina!
     - else:
     {charTag(FirstCharacter, "affectionate")}:              Hai visto com'è carina? 
-                                                            Era lì, sotto il tabellone! 
+                                                            Era lì, vicino alla panchina! 
     }
     - else:
     {charTag(FirstCharacter, "affectionate")}:              Era alla stazione dei treni, con degli occhioni enormi.    
