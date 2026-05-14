@@ -57,7 +57,6 @@
             - grimoire_firstChar hasnt grimFirstCharLetterTwo:
                 -> two
         
-                
             - grimoire_firstChar hasnt grimFirstCharLetterThree:
                 -> three
 
@@ -69,8 +68,8 @@
     = one
     ~ temp charNameOne = translator(firstChar_ActualName)
     
-
-        {charTag(Documents, "writer_firstChar")}:           Ciao {player_name}, come stai?
+        
+        {charTag(FirstCharacter, "writer")}:           Ciao {player_name}, come stai?
 
         ~ letters_firstCharLetters_one()
         -> first_char_closing_letters -> main
@@ -79,7 +78,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     
 
-        {charTag(Documents, "writer_firstChar")}:           Ciao {player_name}, qui è sempre {charNameOne} che ti scrive.
+        {charTag(FirstCharacter, "writer")}:           Ciao {player_name}, qui è sempre {charNameOne} che ti scrive.
 
         ~ letters_firstCharLetters_two()
         -> first_char_closing_letters -> main
@@ -88,7 +87,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     
 
-        {charTag(Documents, "writer_firstChar")}:           Ciao ama!
+        {charTag(FirstCharacter, "writer")}:           Ciao ama!
 
         ~ letters_firstCharLetters_three()
         -> first_char_closing_letters -> main
@@ -97,7 +96,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     
 
-        {charTag(Documents, "writer_firstChar")}:           Rieccomi ama.
+        {charTag(FirstCharacter, "writer")}:           Rieccomi ama.
     
         ~ letters_firstCharLetters_four()
         -> first_char_closing_letters -> main       
@@ -126,22 +125,22 @@
         }
     
     = one
-        {charTag(Documents, "writer_secondChar")}:          Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}.
+        {charTag(SecondCharacter, "writer")}:          Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}.
         ~ letters_secondCharLetters_one()
         -> second_char_closing_letters -> main
     
     = two
-        {charTag(Documents, "writer_secondChar")}:          Che strano.
+        {charTag(SecondCharacter, "writer")}:          Che strano.
         ~ letters_secondCharLetters_two()
         -> second_char_closing_letters -> main
     
     = three
-        {charTag(Documents, "writer_secondChar")}:          Ciao {player_name}.
+        {charTag(SecondCharacter, "writer")}:          Ciao {player_name}.
         ~ letters_secondCharLetters_three()
         -> second_char_closing_letters -> main
 
     = four
-        {charTag(Documents, "writer_secondChar")}:          Ehi.
+        {charTag(SecondCharacter, "writer")}:          Ehi.
         ~ letters_secondCharLetters_four()
         -> second_char_closing_letters -> main    
     

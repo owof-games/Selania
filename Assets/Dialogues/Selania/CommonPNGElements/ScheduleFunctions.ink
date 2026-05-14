@@ -3,7 +3,8 @@
    Gestione avvio e chiusura storie personagge 
 
  ----------------------------------*/
-    LIST story_storyStatus = story_storyNotStarted, story_storyStarted, story_storyEnded
+ //storyRemote è per PNG, per le scelte a distanza. storyPostal è per differenziare la conversazione via posta da quella dal vivo dopo la riscrittura.
+    LIST story_storyStatus = story_storyNotStarted, story_storyStarted, story_storyEnded, story_storyPostal, story_storyRemote
     
     //Lista che tiene conto di quali storie sono state concluse
     LIST story_endedStories = story_firstCharStoryEnded, story_secondCharStoryEnded, story_thirdCharStoryEnded, story_fourthCharStoryEnded, story_fifthCharStoryEnded
@@ -37,7 +38,7 @@
                 ~ firstChar_storyStatus = story_storyStarted
 
         //Dopo essere arrivata per la prima volta allo stagno, compare mentore, e attivo la sua storia
-        - (pond == true or talk_with_first_character) && (mentorChar_storyStatus != story_storyStarted):
+        - (pond == true or talk_with_first_character) && (mentorChar_storyStatus == story_storyNotStarted):
         {debug: introduco mentore in scena.}
                 ~ move_entity(Mentor, Forest)
                 ~ mentorChar_storyStatus = story_storyStarted
@@ -171,7 +172,7 @@
         - mentorChar_storyStatus == story_storyStarted:
             ~ movements_randomizable_characters += Mentor
         
-        - mentorChar_storyStatus == story_storyEnded:  
+        - mentorChar_storyStatus != story_storyStarted:  
             ~ movements_randomizable_characters -= Mentor
     }
 
@@ -278,7 +279,7 @@
         - fourthChar_storyStatus == story_storyStarted:
             ~ movements_randomizable_characters += FourthCharacter    
         
-         - fourthChar_storyStatus == story_storyEnded:
+         - else:
             ~ movements_randomizable_characters -= FourthCharacter 
     }
     
@@ -286,7 +287,7 @@
         - fifthChar_storyStatus == story_storyStarted:
             ~ movements_randomizable_characters += Mentor
         
-        -   fifthChar_storyStatus == story_storyEnded:  
+        - else:  
             ~ movements_randomizable_characters -= Mentor
     }
     

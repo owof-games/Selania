@@ -153,7 +153,7 @@ VAR relationshipIndicatorEnthusiasticValue = 8
     - PNG == FirstCharacter:
         
         ~ story_endedStories += story_firstCharStoryEnded
-        ~ firstChar_storyStatus = story_storyEnded
+        ~ firstChar_storyStatus = story_storyPostal
         ~ firstChar_InkLevel = ink_empty
         ~ firstChar_mailPause = firstChar_mailPauseDuration
             //Spostiamo poi le varianti della PNG
@@ -167,7 +167,7 @@ VAR relationshipIndicatorEnthusiasticValue = 8
     - PNG == SecondCharacter:
         
         ~ story_endedStories += story_secondCharStoryEnded
-        ~ secondChar_storyStatus = story_storyEnded
+        ~ secondChar_storyStatus = story_storyPostal
         ~ secondChar_InkLevel = ink_empty
         ~ secondChar_mailPause = secondChar_mailPauseDuration
             //Spostiamo poi le varianti della PNG
@@ -178,23 +178,32 @@ VAR relationshipIndicatorEnthusiasticValue = 8
             ~ move_entity(SecondCharacterCorvo, Safekeeping)
 
     - PNG == ThirdCharacter:
+        {
+            - thirdChar_storyStatus == story_storyStarted:
+                ~ thirdChar_storyStatus = story_storyRemote
+                ~ thirdChar_mailPause = thirdChar_mailPauseDuration
+
+            - else:
+                ~ story_endedStories += story_thirdCharStoryEnded
+                ~ thirdChar_storyStatus = story_storyEnded
+                ~ thirdChar_InkLevel = ink_empty
+                //Il ritratto ha senso che compaia solo quando è stato davvero riscritto, praticamente quando lo vediamo a fine gioco
+                //Spostiamo poi le varianti della PNG
+                // ~ move_entity(SecondCharacterGrizzly, Safekeeping)
+                // ~ move_entity(SecondCharacterDelfino, Safekeeping)
+                // ~ move_entity(SecondCharacterLupo, Safekeeping)
+                // ~ move_entity(SecondCharacterCapibara, Safekeeping)
+                // ~ move_entity(SecondCharacterCorvo, Safekeeping)  
+        }
         
-        ~ story_endedStories += story_thirdCharStoryEnded
-        ~ thirdChar_storyStatus = story_storyEnded
-        ~ thirdChar_InkLevel = ink_empty
-        ~ thirdChar_mailPause = thirdChar_mailPauseDuration
-        //Il ritratto ha senso che compaia solo quando è stato davvero riscritto, praticamente quando lo vediamo a fine gioco
-            //Spostiamo poi le varianti della PNG
-            // ~ move_entity(SecondCharacterGrizzly, Safekeeping)
-            // ~ move_entity(SecondCharacterDelfino, Safekeeping)
-            // ~ move_entity(SecondCharacterLupo, Safekeeping)
-            // ~ move_entity(SecondCharacterCapibara, Safekeeping)
-            // ~ move_entity(SecondCharacterCorvo, Safekeeping)  
+        
+        
+        
 
     - PNG == FourthCharacter:
         
         ~ story_endedStories += story_fourthCharStoryEnded
-        ~ fourthChar_storyStatus = story_storyEnded
+        ~ fourthChar_storyStatus = story_storyPostal
         ~ fourthChar_InkLevel = ink_empty
         ~ fourthChar_mailPause = fourthChar_mailPauseDuration
             //Spostiamo poi le varianti della PNG
@@ -207,7 +216,7 @@ VAR relationshipIndicatorEnthusiasticValue = 8
     - PNG == FifthCharacter:
         
         ~ story_endedStories += story_fifthCharStoryEnded
-        ~ fifthChar_storyStatus = story_storyEnded
+        ~ fifthChar_storyStatus = story_storyPostal
         ~ fifthChar_InkLevel = ink_empty
         ~ fifthChar_mailPause = fifthChar_mailPauseDuration
             //Spostiamo poi le varianti della PNG
@@ -1034,12 +1043,12 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
         }
 
         {
-            - rewriting_proposal_third_character.close && grimoire_thirdChar hasnt grimThirdCharNewName:
+            - first_rewriting.close && grimoire_thirdChar hasnt grimThirdCharNewName:
                 ~ grimoire_thirdChar += grimThirdCharNewName
         }
 
         {
-            - rewriting_proposal_third_character.secret_ending && grimoire_fifthChar hasnt grimMentorThirdSecretEnding:
+            - first_rewriting.secret_ending && grimoire_fifthChar hasnt grimMentorThirdSecretEnding:
                 ~ grimoire_fifthChar += grimMentorThirdSecretEnding
         }
 

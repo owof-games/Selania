@@ -31,7 +31,7 @@
             -> addressing_violence    
 
         //Feedback
-        - grimoire_secondChar hasnt grimSecondCharMentorFeedback && secondChar_storyStatus == story_storyEnded:
+        - grimoire_secondChar hasnt grimSecondCharMentorFeedback && secondChar_storyStatus == story_storyPostal:
             -> second_character_feedback
 
     }
@@ -39,28 +39,28 @@
     //First Char
     {   
         //Feedback
-        - grimoire_firstChar hasnt grimFirstCharMentorFeedback && firstChar_storyStatus == story_storyEnded:
+        - grimoire_firstChar hasnt grimFirstCharMentorFeedback && firstChar_storyStatus == story_storyPostal:
             -> first_character_feedback           
     }
 
     //Third Char
     {   
         //Feedback
-        - grimoire_thirdChar hasnt grimThirdCharMentorFeedback  && thirdChar_storyStatus == story_storyEnded:
+        - grimoire_thirdChar hasnt grimThirdCharMentorFeedback  && thirdChar_storyStatus == story_storyPostal:
             -> third_character_feedback           
     }
 
     //Fourth Char
     {   
         //Feedback
-        - grimoire_fourthChar hasnt grimFourthCharMentorFeedback  && fourthChar_storyStatus == story_storyEnded:
+        - grimoire_fourthChar hasnt grimFourthCharMentorFeedback  && fourthChar_storyStatus == story_storyPostal:
             -> fourth_character_feedback           
     }
 
     //Fifth Char
     {   
         //Feedback
-        - grimoire_fifthChar hasnt grimFifthCharMentorFeedback  && fifthChar_storyStatus == story_storyEnded:
+        - grimoire_fifthChar hasnt grimFifthCharMentorFeedback  && fifthChar_storyStatus == story_storyPostal:
             -> fifth_character_feedback           
     }
 
@@ -114,16 +114,16 @@
         - grimoire_fifthChar hasnt grimMentorOne:
             -> knowing_mentor_character.one
 
-        - grimoire_fifthChar hasnt grimMentorTwo && firstChar_storyStatus == story_storyEnded:
+        - grimoire_fifthChar hasnt grimMentorTwo && firstChar_storyStatus == story_storyPostal:
             -> knowing_mentor_character.two
 
         - grimoire_fifthChar hasnt grimMentorThree && LIST_COUNT(story_endedStories) > 0:
             -> knowing_mentor_character.three
 
-        - grimoire_fifthChar hasnt grimMentorFour && secondChar_storyStatus == story_storyEnded:
+        - grimoire_fifthChar hasnt grimMentorFour && secondChar_storyStatus == story_storyPostal:
             -> knowing_mentor_character.four
 
-        - grimoire_fifthChar hasnt grimMentorFive && secondChar_storyStatus == story_storyEnded:
+        - grimoire_fifthChar hasnt grimMentorFive && secondChar_storyStatus == story_storyPostal:
             -> knowing_mentor_character.five
 
         // //Forse solo una di queste, perché con la terza storia avremo degli storylets ad hoc.    
@@ -131,10 +131,10 @@
         //     -> knowing_mentor_character.six
 
 
-        // - not knowing_mentor_character.seven && thirdChar_storyStatus == story_storyEnded && mentor_tutorialPauses == false:
+        // - not knowing_mentor_character.seven && thirdChar_storyStatus == story_storyPostal && mentor_tutorialPauses == false:
         //     -> knowing_mentor_character.seven
 
-        // - not knowing_mentor_character.eight && fifthChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
+        // - not knowing_mentor_character.eight && fifthChar_storyStatus == story_storyPostal && mentor_tutorialPauses == false:
         //     -> knowing_mentor_character.eight
 
         // - not knowing_mentor_character.nine && fifthChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:

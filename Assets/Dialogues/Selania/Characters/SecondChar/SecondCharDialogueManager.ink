@@ -16,7 +16,7 @@
             -> kitchen_storylets_dispatcher    
 
         // //Chiacchiera a fine storia
-        // + {are_two_entities_together(SecondCharacter, PG) && secondChar_storyStatus == story_storyEnded} [SecondCharacter]
+        // + {are_two_entities_together(SecondCharacter, PG) && secondChar_storyStatus == story_storyPostal} [SecondCharacter]
         //     -> second_char_story_ended
 
         // + ->

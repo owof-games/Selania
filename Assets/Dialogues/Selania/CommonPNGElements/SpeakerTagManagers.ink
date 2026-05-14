@@ -9,38 +9,57 @@
 {PNG:
     - FirstCharacter:
         {
+            - firstChar_storyStatus == story_storyPostal:
+                ~ return "{PNG}, {displayName}, {mood}"
+            
             - !first_char_main_storylets.one.firstPresentation:
                 ~ return "{PNG}, {displayName}, Chitarra_{mood}"
+        
             - else:
                 ~ return "{PNG}, {displayName}, {displayName}_{mood}"        
         }        
 
     - SecondCharacter:
-        {
+        {   
+            - secondChar_storyStatus == story_storyPostal:
+                ~ return "{PNG}, {displayName}, {mood}"
+
             - !second_char_main_storylets.one.nameSecond:
                 ~ return "{PNG}, {displayName}, Riccio_{mood}"
+            
             - else:
                 ~ return "{PNG}, {displayName}, {displayName}_{mood}"        
         }
 
     - ThirdCharacter:
-        {
+        {   
+            - thirdChar_storyStatus == story_storyPostal:
+                ~ return "{PNG}, {displayName}, {mood}"
+
             - ! third_char_main_storylets.one:
                 ~ return "{PNG}, {displayName}, Boccale_{mood}"
+            
             - else:
                 ~ return "{PNG}, {displayName}, {displayName}_{mood}"        
         }
 
     - FourthCharacter:
-        {
+        {   
+            - fourthChar_storyStatus == story_storyPostal:
+                ~ return "{PNG}, {displayName}, {mood}"
+                
             - ! fourth_char_main_storylets.one:
                 ~ return "{PNG}, {displayName}, NonnaMolotov_{mood}"
+            
             - else:
                 ~ return "{PNG}, {displayName}, {displayName}_{mood}"        
         } 
 
     - FifthCharacter:
         {   
+            - firstChar_storyStatus == story_storyPostal:
+                ~ return "{PNG}, {displayName}, {mood}"
+
             //Chiamo sempre FifthCharacter, senza separazione da Mentore, ma faccio un check a seconda che la storia come Mostro sia partita o meno.
             - fifthChar_storyStatus == story_storyStarted:
                 {

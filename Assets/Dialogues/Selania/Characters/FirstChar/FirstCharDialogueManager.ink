@@ -10,7 +10,7 @@
 
 
             // //Chiacchiera a fine storia
-            // + {are_two_entities_together(FirstCharacter, PG) && firstChar_storyStatus == story_storyEnded} [FirstCharacter]
+            // + {are_two_entities_together(FirstCharacter, PG) && firstChar_storyStatus == story_storyPostal} [FirstCharacter]
             //     -> first_char_story_ended
             // + ->
             //     -> DONE

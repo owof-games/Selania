@@ -33,7 +33,7 @@
 
         {
         //Frasi sulle PNG
-            - firstChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt FirstCharacter:
+            - firstChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt FirstCharacter:
                                                                 <i>Siamo contente che {charNameOne} abbia trovato un nuovo nome, e un nuovo modo di vedere il proprio presente.
                                                                 <i>{charNameOne} è così giovane, eppure faticava a immaginare un futuro.
                                                                 <i>La gemma per crescere deve già contenere la foglia.
@@ -42,7 +42,7 @@
                     ~ witch_sigilsComment += FirstCharacter   
                     ~ sigilUsed = firstChar_usedSigil
             
-            - secondChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt SecondCharacter:
+            - secondChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt SecondCharacter:
                                                                 <i>Il piccolo {charNameTwo} ora ha un nuovo nome da gridare.
                                                                 <i>La sua rabbia l'ha inzuppato di problemi.
                                                                 <i>L'ha protetto da cose peggiori.
@@ -50,7 +50,7 @@
                     ~ witch_sigilsComment += SecondCharacter
                     ~ sigilUsed = secondChar_usedSigil 
 
-            - thirdChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt ThirdCharacter:
+            - thirdChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt ThirdCharacter:
                                                                 AGGIUNGERE TESTO:
                     ~ witch_debriefPNG += ThirdCharacter
                     ~ witch_sigilsComment += ThirdCharacter
@@ -131,7 +131,7 @@
 
         {
         //Frasi sulle PNG
-            - firstChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt FirstCharacter:
+            - firstChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt FirstCharacter:
                                                                 <i>{charNameOne} racconta la storia di una generazione.
                                                                 <i>Del peso del capire troppo, e del non sapere che fare.
                                                                 <i>E del non poter accettare che le cose non possano cambiare.
@@ -139,7 +139,7 @@
                     ~ witch_sigilsComment += FirstCharacter
                     ~ sigilUsed = firstChar_usedSigil
 
-            - secondChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt SecondCharacter:
+            - secondChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt SecondCharacter:
                                                                 <i>La famiglia di {charNameTwo} è come una slavina.
                                                                 <i>Fiocco sulla vetta.
                                                                 <i>Valanga a valle.
@@ -148,7 +148,7 @@
                     ~ witch_sigilsComment += SecondCharacter
                     ~ sigilUsed = secondChar_usedSigil
 
-            - thirdChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt ThirdCharacter:
+            - thirdChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt ThirdCharacter:
                                                                 AGGIUNGERE TESTO:
                 ~ witch_debriefPNG += ThirdCharacter
                 ~ witch_sigilsComment += ThirdCharacter
@@ -226,7 +226,7 @@
 
         {
         //Frasi sulle PNG
-            - firstChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt FirstCharacter:
+            - firstChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt FirstCharacter:
                                                                 <i>{charNameOne} le ha insegnato che non tutt3 hanno una casa.
                                                                 <i>E che alcun3 ne hanno ancora meno di altr3.
                                                                 <i>E la cagnolina non comprende, perché il mondo per lei è una grande tana.
@@ -234,7 +234,7 @@
                         ~ witch_sigilsComment += FirstCharacter
                         ~ sigilUsed = firstChar_usedSigil    
 
-            - secondChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt SecondCharacter:
+            - secondChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt SecondCharacter:
                                                                 <i>Con {charNameTwo} ha scoperto che esistono i bambini.
                                                                 <i>E che i bambini come i cuccioli vivono e fanno cose.
                                                                 <i>Ma non possono decidere le cose che li riguardano.
@@ -244,7 +244,7 @@
                         ~ witch_sigilsComment += SecondCharacter
                         ~ sigilUsed = secondChar_usedSigil
 
-            - thirdChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt ThirdCharacter:
+            - thirdChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt ThirdCharacter:
                                                                 AGGIUNGERE TESTO:
                         ~ witch_debriefPNG += ThirdCharacter
                         ~ witch_sigilsComment += ThirdCharacter
@@ -297,11 +297,11 @@
 
         {
         //Frasi sulle PNG
-            - fourthChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt FourthCharacter:
+            - fourthChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt FourthCharacter:
                 Testo:
                  ~ witch_debriefPNG += FourthCharacter       
 
-            - fifthChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt FifthCharacter:
+            - fifthChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt FifthCharacter:
                     Personale e sociale non sono scollegati. E la rilettura di Mentore diventa la presenza di una doppia strada: prendersi cura di sé, cambiare il mondo.
                     Con gli altri.
                     Mentore stava di merda perché cercava di essere qualcosa che non era.
@@ -347,11 +347,11 @@
 
         {
         //Frasi sulle PNG
-            - fourthChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt FourthCharacter:
+            - fourthChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt FourthCharacter:
                 Testo:
                  ~ witch_debriefPNG += FourthCharacter       
 
-            - fifthChar_storyStatus == story_storyEnded && witch_debriefPNG hasnt FifthCharacter:
+            - fifthChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt FifthCharacter:
                     Personale e sociale non sono scollegati. E la rilettura di Mentore diventa la presenza di una doppia strada: prendersi cura di sé, cambiare il mondo.
                     Con gli altri.
                     Mentore stava di merda perché cercava di essere qualcosa che non era.

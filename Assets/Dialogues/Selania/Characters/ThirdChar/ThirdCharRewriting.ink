@@ -5,7 +5,7 @@
             -> confession
             
         - else:
-            -> rewriting
+            -> first_rewriting
 
     }
     
@@ -22,13 +22,13 @@
         -> third_char_closing_storylet ->
 
             + \ {charTag(PG, "neutral")}:         Ti ho ascoltato, {charNameThree}, e posso aiutarti a riscrivere la tua storia.
-                -> rewriting
+                -> first_rewriting
             
             + \ {charTag(PG, "neutral")}:         Capisco il tuo dolore, ma ho bisogno di riflettere un attimo.
                 -> main
 
 
-    = rewriting
+=== first_rewriting
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
