@@ -187,12 +187,13 @@
                 {charTag(FifthCharacter, "sad")}:                       L'ho già fatto.
             }
             
-        +\ {charTag(PG, "neutral")}:                                    Sei stata crudele, e hai rovinato la festa per {charNameTwo}.
+        +\ {charTag(PG, "neutral")}:                                    Bene, non ti piace arrabbiarti. Però hai ferito {charNameTwo}.
                 -> glyph_choice_manager(Mentor, earthC)->
 
             {charTag(FifthCharacter, "bored")}:                         Essere {player_pronouns has him:riscrittore|{player_pronouns has her:riscrittora|riscrittorə}} chiede empatia, {player_name}.
-            {charTag(FifthCharacter, "sad")}:                           Ma sì.
-                                                                        Sono stata crudele, punto.
+            {charTag(Mentor, "sorry")}:                                 Scusa, hai ragione.
+            {charTag(FifthCharacter, "sad")}:                           L'ho ferito, ed è la parte centrale di questa faccenda.
+
             
         +\ {charTag(PG, "neutral")}:                                    <i>Resto in silenzio.</i>
                 -> glyph_choice_manager(Mentor, aetherC)->
@@ -269,17 +270,13 @@
             {charTag(FifthCharacter, "neutral")}:                       Ed è stato stupido dire di voler sparire.
                                                                         Lascia perdere.
     
-        +\ {charTag(PG, "neutral")}:                                    No, però mi capita di fare dei grandiosi pisolini.
+        +\ {charTag(PG, "neutral")}:                                    Se capita è perché ho perso il mio centro, e cerco di prendermi cura di me.
                 -> glyph_choice_manager(Mentor, earthC)->
 
-            {charTag(FifthCharacter, "neutral")}:                       Pensavo a qualcosa di più impegnativo.
-                                                                        Qualcosa che non si risolve dormendo.
-            {charTag(FifthCharacter, "sad")}:                           Ma comunque tempo per dormire non l'ho mai.
-            {
-                - are_two_entities_together(SecondCharacter, PG): 
-                    {charTag(SecondCharacter, "angry")}:                Lo dico sempre: i pisolini sono no-io-si!
-                    
-            } 
+            {charTag(FifthCharacter, "neutral")}:                       Per prendersi cura di sé però bisogna sapere di che cosa si ha bisogno, non trovi?
+            {charTag(FifthCharacter, "sad")}:                           E io non ne ho idea.
+                                                                        Zero proprio.
+
             
         +\ {charTag(PG, "neutral")}:                                    A volte vorrei solo diventare invisibile.
                 -> glyph_choice_manager(Mentor, waterC)->
@@ -402,17 +399,16 @@ Mentore sbrocca
  
 //Fine della demo
     === ending_demo
-    
 
-        {charTag(FifthCharacter, "neutral")}:                       Sembra che la demo sia finita qui, {player_name}.
-                                                                    Potrai girare ancora per gli spazi aperti.
-                                                                    Continuare a leggere le storie della <b><i>biblioteca</b></i>.
-                                                                    Coltivare cosa rimane da coltivare nella <b><i>serra</b></i>.
-                                                                    Creare nuovi sigilli.
-                                                                    Ma non compariranno nuove persone bisognose.
-                                                                    Se te la senti, dopo aver chiuso l'esperienza potrai rispondere a qualche domanda su <i>Selanìa</i>.
-                                                                    E aggiungere in wishlist su Steam il gioco.
-                                                                    Un gesto semplice che aiuta i giochi indie a essere più visibili.
-                                                                    Grazie di cuore, e buona vita.
-                                                                    A presto!
+        {charTag(FifthCharacter, "neutral")}:                           Sembra che la demo sia finita qui, {player_name}.
+                                                                        Potrai girare ancora per gli spazi aperti.
+                                                                        Continuare a leggere le storie della <b><i>biblioteca</b></i>.
+                                                                        Coltivare cosa rimane da coltivare nella <b><i>serra</b></i>.
+                                                                        Creare nuovi sigilli.
+                                                                        Ma non compariranno nuove persone bisognose.
+                                                                        Se te la senti, dopo aver chiuso l'esperienza potrai rispondere a qualche domanda su <i>Selanìa</i>.
+                                                                        E aggiungere in wishlist su Steam il gioco.
+                                                                        Un gesto semplice che aiuta i giochi indie a essere più visibili.
+                                                                        Grazie di cuore, e buona vita.
+                                                                        A presto!
     -> main

@@ -80,10 +80,10 @@
                                                                 E se deciderai di tornare, troverai tutto nello stato in cui l'hai lasciato.
             {charTag(FifthCharacter, "hurry")}:                 Prima però lascia che ti rubi giusto un secondo!
             
-        + (earthChoice) \ {charTag(PG, "neutral")}:             Non sai quanto mi mancava tutta questa natura!
+        + (earthChoice) \ {charTag(PG, "neutral")}:             <i>Mi godo la tranquillità della natura che mi circonda.</i>
             -> glyph_choice_manager(Mentor, earthC) ->
 
-            {charTag(FifthCharacter, "hurry")}:                 È pace per il cuore, vero?
+            {charTag(FifthCharacter, "hurry")}:                 È una pace per il cuore, vero?
             {charTag(FifthCharacter, "neutral")}:               Ogni angolo di questo spazio mi rasserena, anche quando mi sento fuori fuoco.
             {charTag(FifthCharacter, "hurry")}:                 Continua a stupirmi, giorno per giorno.
         
@@ -106,9 +106,9 @@
         - (selfName)
                                                                 Tra poco ti spiegherò anche il tuo lavoro, {player_name}.
         {
-            - are_two_entities_together(FirstCharacter, PG):
-                {charTag(FirstCharacter, "annoyed")}:           Cioè, {player_pronouns has him:uno|{player_pronouns has her:una|unə}} deve ritrovarsi a lavorare anche in una allucinazione?
-                {charTag(FifthCharacter, "neutral")}:           Allucinazione?
+            - are_two_entities_together(FirstCharacter, PG) && grimoire_firstChar hasnt grimFirstCharTwo:
+            {charTag(FirstCharacter, "annoyed")}:               Cioè, {player_pronouns has him:uno|{player_pronouns has her:una|unə}} deve lavorare anche in una allucinazione?
+            {charTag(FifthCharacter, "neutral")}:               Allucinazione?
         }
         {charTag(FifthCharacter, "neutral")}:                   Prima però una cosa importante: qui avrai a che fare con cose viventi piene di storie.
                                                                 E ogni storia ha le sue complessità.
@@ -144,12 +144,13 @@
                                                                 Alla fine non esiste una cosa che possa andare bene a tutte le persone, no?                                                   
 
 
-        + \ {charTag(PG, "neutral")}:                           Quindi: se la situazione è pesante, mi faccio una pausa.
+        + \ {charTag(PG, "neutral")}:                           Quando si tratta di farsi una pausa, non serve dirmelo due volte.
             -> glyph_choice_manager(Mentor, earthC) ->
 
-            {charTag(FifthCharacter, "neutral")}:               Sintetic{player_pronouns has him:o|{player_pronouns has her:a|ə}} e puntuale.
-                                                                Ma è esattamente quello il punto.
-                                                                Non strafare, e prenditi cura di te.
+            {charTag(FifthCharacter, "neutral")}:               La cosa mi fa piacere.
+            {charTag(FifthCharacter, "sad")}:                   Vorrei poter dire lo stesso.
+            {charTag(FifthCharacter, "hurry")}:                 Ma se mi fermassi crollerebbe tutto, no?
+                                                                Per cui riposa anche per me {player_name}!
 
             
         + \ {charTag(PG, "neutral")}:                           Sono una persona pratica, so affrontare tutto!
@@ -185,7 +186,7 @@
                 {charTag(FifthCharacter, "neutral")}:           Oppure potrebbero ritrovare in te un{player_pronouns has him:o|{player_pronouns has her:a|ə}} compagn{player_pronouns has him:o|{player_pronouns has her:a|ə}} con cui confidare le esperienze più insolite.
 
             - earthChoice:
-                {charTag(FifthCharacter, "hurry")}:             Quando prima hai detto che ti mancava tutta questa natura, ho scoperto di aver già un punto di contatto con te.
+                {charTag(FifthCharacter, "hurry")}:             Quando prima ti sei abbandotat{player_pronouns has him:o|{player_pronouns has her:a|ə}} a tutta questa natura, ho scoperto di aver già un punto di contatto con te.
                 {charTag(FifthCharacter, "sad")}:               Non tutte le persone potrebbero trovarsi d'accordo: c'è chi ama gli spazi urbani e chi ha paura dell'imprevedibilità di un bosco.
                 {charTag(FifthCharacter, "neutral")}:           Oppure potresti trovare qualcunə che non aspettava altro che di parlarti di tutti i suoi animali preferiti.
 
@@ -253,7 +254,7 @@
         {charTag(FifthCharacter, "neutral")}:                   Direi quindi che è giunto il momento di spiegarti il tuo lavoro.
                                                                 Questo non è solo un posto magnifico di per sé, {player_name}.
         {charTag(FifthCharacter, "hurry")}:                     È un luogo con uno scopo, uno scopo che riguarda soprattutto te.
-        {charTag(FifthCharacter, "neutral")}:                   Le persone che incontri qui rimaste bloccate in qualcosa: rimpianti, rimorsi, vecchie ferite e quant'altro.
+        {charTag(FifthCharacter, "neutral")}:                   Le persone che incontrerai qui sono rimaste bloccate in qualcosa: rimpianti, rimorsi, vecchie ferite e quant'altro.
                                                                 E il tuo scopo, {player_name}, è aiutarle a riscrivere il modo in cui raccontano la loro storia, così che possano sbloccarsi.
         {charTag(FifthCharacter, "hurry")}:                     Perché tu {player_pronouns has him:amico mio|{player_pronouns has her:amica mia|amicə miə}} sei <b><i>{player_pronouns has him:un riscrittore|{player_pronouns has her:una riscrittora|unə riscrittorə}}</b></i>!
         {charTag(FifthCharacter, "neutral")}:                   E se farai bene il tuo lavoro, aiuterai moltissime persone a sbloccarsi, e a scegliere un nuovo nome, il segno di un nuovo inizio.
@@ -279,7 +280,7 @@
                                                                 Questo è stato, è e sarà sempre il mio nome.
                                                                 Ma alla fine il nome è solo un simbolo, non è l'obiettivo in sé.       
                     
-            + \ {charTag(PG, "neutral")}:                       La fiducia non è una cosa che si conquista, ma che si costruisce. Assieme.
+            + \ {charTag(PG, "neutral")}:                       Sento la fiducia come qualcosa che si costruisce, non che si conquista.
                     -> glyph_choice_manager(Mentor, earthC)->
 
                 {charTag(FifthCharacter, "sorry")}:             Credo tu abbia capito cosa intendo, {player_name}.
@@ -380,10 +381,11 @@
                                                                 E si lascia capire un po' meglio.
                 {charTag(FifthCharacter, "sad")}:               Sempre che tu sappia guardare le persone negli occhi.
                     
-            + \ {charTag(PG, "neutral")}:                       Mi son pers{player_pronouns has him:o|{player_pronouns has her:a|ə}} alla terza frase. Succede sempre.
+            + \ {charTag(PG, "neutral")}:                       Tutto chiaro. Sicuramente mi approccerò a tutto questo in modo meno serioso.
                     -> glyph_choice_manager(Mentor, earthC)->
-                {charTag(FifthCharacter, "sad")}:               Capita anche a me.
-                {charTag(FifthCharacter, "hurry")}:             Però non ti far problemi a richiedermi cosa fare, sono sempre qui al tuo servizio!
+                {charTag(FifthCharacter, "sad")}:               Mi sembra una scelta legittima.
+                {charTag(FifthCharacter, "neutral")}:           Non mi fraintendere: è giusto che sia chi riscrive a trovare la sua modalità.                                                
+                {charTag(FifthCharacter, "sad")}:               Voglio solo essere sicura che tu non sottovaluti l'importanza del tuo lavoro.
                     
 
 
