@@ -514,7 +514,7 @@ MonoBehaviour:
     <minimumLogLevel>k__BackingField: 0
   _consoleProviderSettings:
     categorySettingsArray:
-    - <categoryPrefix>k__BackingField: Selania.Rework.Components
+    - <categoryPrefix>k__BackingField: Selania.Rework.Components.EvolvingObjectComponent
       <minimumLogLevel>k__BackingField: 0
     <minimumLogLevel>k__BackingField: 2
   x: '-'

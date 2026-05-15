@@ -20,7 +20,7 @@ namespace Selania.Rework.Components.Museum.HoverInteractable
 
         private class StoryChangeRoomContentsNotifier : IStoryChangeRoomContentsNotifier
         {
-            public Observable<IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo> roomContentsObservable =>
+            public Observable<IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo> RoomContentsObservable =>
                 Observable.Empty<IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo>();
         }
 

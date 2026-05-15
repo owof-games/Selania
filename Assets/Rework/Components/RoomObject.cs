@@ -27,10 +27,15 @@ namespace Selania.Rework.Components
         /// </summary>
         [Inject] internal IStoryChangeRoomContentsNotifier StoryChangeRoomContentsNotifier = null!;
 
+        /// <summary>
+        ///     The name of the object in ink (list item).
+        /// </summary>
+        public string InkName => inkName;
+
         private void Start()
         {
             StoryChangeRoomContentsNotifier
-                .roomContentsObservable
+                .RoomContentsObservable
                 .Subscribe(OnChangeRoomContents)
                 .AddTo(gameObject);
         }
@@ -41,7 +46,7 @@ namespace Selania.Rework.Components
         /// <param name="info">Info regarding the room contents change.</param>
         private void OnChangeRoomContents(IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo info)
         {
-            var isInRoom = info.roomContents.Contains(inkName);
+            var isInRoom = info.RoomContents.Contains(inkName);
             if (gameObject.activeSelf == isInRoom) return;
             Logger.ZLogTrace($"Changed presence of object '{inkName}' to {isInRoom}");
             gameObject.SetActive(isInRoom);

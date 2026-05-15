@@ -27,15 +27,19 @@ namespace Selania.Rework.Interfaces
         /// <summary>
         ///     An observable providing the contents of the room the PG is in. If the PG is already in a room when the
         ///     observer subscribes, the room contents are immediately sent (with the latest
-        ///     <see cref="ChangeRoomContentsInfo.reason"/> emitted).
+        ///     <see cref="ChangeRoomContentsInfo.Reason"/> emitted).
         /// </summary>
-        Observable<ChangeRoomContentsInfo> roomContentsObservable { get; }
+        Observable<ChangeRoomContentsInfo> RoomContentsObservable { get; }
 
         /// <summary>
         ///     Information about changes to the contents of the room the main character is in.
         /// </summary>
-        /// <param name="reason">The reason why the contents of the room have changed.</param>
-        /// <param name="roomContents">The current contents of the room.</param>
-        record struct ChangeRoomContentsInfo(RoomContentsChangeReason reason, IReadOnlyCollection<string> roomContents);
+        /// <param name="Reason">The reason why the contents of the room have changed.</param>
+        /// <param name="RoomContents">The current contents of the room.</param>
+        /// <param name="CurrentRoomName">The name of the current room.</param>
+        record struct ChangeRoomContentsInfo(
+            RoomContentsChangeReason Reason,
+            IReadOnlyCollection<string> RoomContents,
+            string CurrentRoomName);
     }
 }

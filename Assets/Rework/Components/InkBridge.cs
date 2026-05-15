@@ -420,12 +420,12 @@ namespace Selania.Rework.Components
             _roomNamesSubject!.AsObservable();
 
         /// <summary>
-        ///     The backing subject for <see cref="roomContentsObservable" />.
+        ///     The backing subject for <see cref="RoomContentsObservable" />.
         /// </summary>
         private ReplaySubject<IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo>? _roomContentsSubject;
 
         /// <inheritdoc />
-        public Observable<IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo> roomContentsObservable =>
+        public Observable<IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo> RoomContentsObservable =>
             _roomContentsSubject!.AsObservable();
 
         /// <summary>
@@ -436,8 +436,10 @@ namespace Selania.Rework.Components
             IStoryChangeRoomContentsNotifier.RoomContentsChangeReason reason)
         {
             System.Diagnostics.Debug.Assert(_roomContents != null, nameof(_roomContents) + " != null");
+            System.Diagnostics.Debug.Assert(_currentRoomName != null, nameof(_currentRoomName) + " != null");
             _roomContentsSubject!.OnNext(
-                new IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo(reason, _roomContents.AsReadOnly()));
+                new IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo(reason, _roomContents.AsReadOnly(),
+                    _currentRoomName));
         }
 
         #endregion

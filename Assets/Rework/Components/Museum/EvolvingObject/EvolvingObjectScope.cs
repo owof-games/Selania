@@ -33,7 +33,12 @@ namespace Selania.Rework.Components.Museum.EvolvingObject
 
         public class EvolvingObjectStoryVariableValues : IStoryVariableValues
         {
-            private readonly Subject<int> _values = new();
+            private readonly ReplaySubject<int> _values = new(1);
+
+            public EvolvingObjectStoryVariableValues()
+            {
+                SetState(0);
+            }
 
             public Observable<T> GetVariableObservable<T>(string variableName)
             {
@@ -57,19 +62,21 @@ namespace Selania.Rework.Components.Museum.EvolvingObject
                 EnterRoomB();
             }
 
-            public Observable<IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo> roomContentsObservable =>
+            public Observable<IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo> RoomContentsObservable =>
                 _roomContentsSubject.AsObservable();
 
             public void EnterRoomA()
             {
                 _roomContentsSubject.OnNext(new IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo(
-                    IStoryChangeRoomContentsNotifier.RoomContentsChangeReason.CharacterMoved, new[] { "object" }));
+                    IStoryChangeRoomContentsNotifier.RoomContentsChangeReason.CharacterMoved, new[] { "object" },
+                    "RoomA"));
             }
 
             public void EnterRoomB()
             {
                 _roomContentsSubject.OnNext(new IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo(
-                    IStoryChangeRoomContentsNotifier.RoomContentsChangeReason.CharacterMoved, Array.Empty<string>()));
+                    IStoryChangeRoomContentsNotifier.RoomContentsChangeReason.CharacterMoved, Array.Empty<string>(),
+                    "RoomB"));
             }
         }
     }
