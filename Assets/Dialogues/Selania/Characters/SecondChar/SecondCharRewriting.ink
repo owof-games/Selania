@@ -157,19 +157,22 @@
                                                             Puoi imparare a fidarti.
                 
     -
-        ~ numberQuestion ++  
+        
     {charTag(SecondCharacter, "neutral")}:                  Sì no boh.
                                                             Continua.
-    
+
+        //Riduco di uno il livello di inchiostro
+            ~ secondChar_InkLevel --
+
         //Check per commento strega
         -> rewriting_witch_feedback(oneR) ->          
 
-        {
-        - secondChar_InkLevel == ink_low:
-            -> ending
-        - else: 
-            -> two
-        }        
+            {
+                - secondChar_InkLevel == ink_empty:
+                    -> ending
+                - else: 
+                    -> two
+            }        
         
     
     = two
@@ -239,18 +242,21 @@
                                                             E mi hai chiesto scusa più volte per le tue bugie.
                                                             Stai già cambiando, {charNameTwo}!
     -
-    ~ numberQuestion ++  
+    
     {charTag(SecondCharacter, "neutral")}:                  Non ci avevo pensato.
                                                             Che le cose possono cambiare.
-    
+        
+        //Riduco di uno il livello di inchiostro
+            ~ secondChar_InkLevel --
+
         //Check per commento strega
         -> rewriting_witch_feedback(twoR) ->           
     
         {
-        - secondChar_InkLevel == ink_normal:
-            -> ending
-        - else: 
-            -> three
+            - secondChar_InkLevel == ink_empty:
+                -> ending
+            - else: 
+                -> three
         }
         
     = three
@@ -313,18 +319,20 @@
                                                             Serve solo un meccanico per le cose che lo spaventano.
     -
 
-    ~ numberQuestion ++ 
     {charTag(SecondCharacter, "neutral")}:                  Si no boh.
                                                             Magari hai ragione.
-    
+
+        //Riduco di uno il livello di inchiostro
+            ~ secondChar_InkLevel --
+
         //Check per commento strega
         -> rewriting_witch_feedback(threeR) ->           
     
         {
-        - secondChar_InkLevel == ink_medium:
-            -> ending
-        - else: 
-            -> four
+            - secondChar_InkLevel == ink_empty:
+                -> ending
+            - else: 
+                -> four
         }
     
     = four
@@ -389,11 +397,14 @@
                     
 
     -
-    ~ numberQuestion ++  
+    
     {charTag(SecondCharacter, "neutral")}:                  Posso essere un adulto buono.
                                                             Uh.
     
-    //Check per commento strega
+        //Riduco di uno il livello di inchiostro
+            ~ secondChar_InkLevel --
+                
+        //Check per commento strega
         -> rewriting_witch_feedback(fourR) ->     
         
         -> ending

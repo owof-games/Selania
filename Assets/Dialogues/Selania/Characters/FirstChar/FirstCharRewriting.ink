@@ -146,19 +146,22 @@
                 -> glyph_choice_manager(false, aetherC)->
             {charTag(PG, "neutral")}:                           E anche se ti incasina scrivere di politica, stai cercando nella musica un modo per cambiare le cose.
                                                                 A volte forse rinunciare è utile per andare avanti.
-            -
-                ~ numberQuestion ++      
+            -    
             
             {charTag(FirstCharacter, "neutral")}:               Io.
                                                                 Sì, forse la rinuncia mi spaventa un sacco.
                                                                 Ma forse ora un po' meno.
             
+
+            //Riduco di uno il livello di inchiostro
+            ~ firstChar_InkLevel --
+
             //Check per commento strega
             -> rewriting_witch_feedback(oneR) ->   
-            
+
             
                     {
-                    - firstChar_InkLevel == ink_low:
+                    - firstChar_InkLevel == ink_empty:
                         -> ending
                     - else: 
                         -> two
@@ -227,21 +230,23 @@
                                                                 Anche se confondono la tua insicurezza con pretenziosità.
                 }
             -
-                ~ numberQuestion ++
             
             {charTag(FirstCharacter, "neutral")}:               Sì, forse sono un po' una cozzetta. 
                                                                 E sono felice solo se sono con le persone a cui voglio bene.
+            
+            //Riduco di uno il livello di inchiostro
+            ~ firstChar_InkLevel --
             
             //Check per commento strega
             -> rewriting_witch_feedback(twoR) ->           
                
             
-            {
-            - firstChar_InkLevel == ink_normal:
-                -> ending
-            - else:
-                -> three
-            }
+                    {
+                    - firstChar_InkLevel == ink_empty:
+                        -> ending
+                    - else:
+                        -> three
+                    }
             
         
         = three
@@ -305,19 +310,22 @@
                                                                 Partendo dal piccolo, dalle cose che vedi come raccontavi in cucina.
                 }
             -
-                ~ numberQuestion ++
+                
             
         {charTag(FirstCharacter, "neutral")}:                   Credo di capire.
             
-            
+
+                //Riduco di uno il livello di inchiostro
+                ~ firstChar_InkLevel --
+                
                 //Check per commento strega
                 -> rewriting_witch_feedback(threeR) ->          
                 
                 {
-                - firstChar_InkLevel == ink_medium:
-                    -> ending
-                - else:
-                    -> four
+                    - firstChar_InkLevel == ink_empty:
+                        -> ending
+                    - else:
+                        -> four
                 }
         
         = four
@@ -373,10 +381,11 @@
                                                                 Sei coraggiosa, {charNameOne}.
                                                                 Non avere paura.
             -
-                ~ numberQuestion ++
             
         {charTag(FirstCharacter, "neutral")}:                   Forse ho più di quanto veda. 
             
+            //Riduco di uno il livello di inchiostro
+            ~ firstChar_InkLevel --
             
             //Check per commento strega
             -> rewriting_witch_feedback(fourR) ->     

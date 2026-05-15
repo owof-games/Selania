@@ -84,16 +84,17 @@
         
         -
 
-            ~ numberQuestion ++    
+              
         {charTag(FourthCharacter, "neutral")}:           Frase.
 
- 
+            //Riduco di uno il livello di inchiostro
+                ~ fourthChar_InkLevel --
 
             {
-            - fourthChar_InkLevel == ink_low:
-                -> ending
-            - else: 
-                -> two
+                - fourthChar_InkLevel == ink_empty:
+                    -> ending
+                - else: 
+                    -> two
             }        
         
     
@@ -127,18 +128,17 @@
                 -> glyph_choice_manager(false, aetherC)->
   
         -
-        ~ numberQuestion ++     
+           
         {charTag(FourthCharacter, "neutral")}:           Frase.
         
-            //Check per commento strega
-            -> rewriting_witch_feedback(twoR) ->           
+            //Riduco di uno il livello di inchiostro
+                ~ fourthChar_InkLevel --       
                  
-        
             {
-            - fourthChar_InkLevel == ink_normal:
-                -> ending
-            - else: 
-                -> three
+                - fourthChar_InkLevel == ink_empty:
+                    -> ending
+                - else: 
+                    -> three
             }
         
     = three
@@ -172,17 +172,17 @@
             
         -
 
-        ~ numberQuestion ++        
+              
         {charTag(FourthCharacter, "neutral")}:           Frase.
         
-            //Check per commento strega
-            -> rewriting_witch_feedback(threeR) ->          
+            //Riduco di uno il livello di inchiostro
+                ~ fourthChar_InkLevel --         
         
             {
-            - fourthChar_InkLevel == ink_medium:
-                -> ending
-            - else: 
-                -> four
+                - fourthChar_InkLevel == ink_empty:
+                    -> ending
+                - else: 
+                    -> four
             }
     
     = four
@@ -215,11 +215,11 @@
                 -> glyph_choice_manager(false, aetherC)->
                 
         -
-        ~ numberQuestion ++       
+             
         {charTag(FourthCharacter, "neutral")}:           Frase.
         
-            //Check per commento strega
-            -> rewriting_witch_feedback(fourR) ->  
+            //Riduco di uno il livello di inchiostro
+                ~ fourthChar_InkLevel --
             
             -> ending
 

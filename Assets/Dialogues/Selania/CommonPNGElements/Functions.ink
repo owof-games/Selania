@@ -154,7 +154,6 @@ VAR relationshipIndicatorEnthusiasticValue = 8
         
         ~ story_endedStories += story_firstCharStoryEnded
         ~ firstChar_storyStatus = story_storyPostal
-        ~ firstChar_InkLevel = ink_empty
         ~ firstChar_mailPause = firstChar_mailPauseDuration
             //Spostiamo poi le varianti della PNG
             ~ move_entity(FirstCharacterTriangolo, Safekeeping)
@@ -168,7 +167,6 @@ VAR relationshipIndicatorEnthusiasticValue = 8
         
         ~ story_endedStories += story_secondCharStoryEnded
         ~ secondChar_storyStatus = story_storyPostal
-        ~ secondChar_InkLevel = ink_empty
         ~ secondChar_mailPause = secondChar_mailPauseDuration
             //Spostiamo poi le varianti della PNG
             ~ move_entity(SecondCharacterGrizzly, Safekeeping)
@@ -186,7 +184,6 @@ VAR relationshipIndicatorEnthusiasticValue = 8
             - else:
                 ~ story_endedStories += story_thirdCharStoryEnded
                 ~ thirdChar_storyStatus = story_storyEnded
-                ~ thirdChar_InkLevel = ink_empty
                 //Il ritratto ha senso che compaia solo quando è stato davvero riscritto, praticamente quando lo vediamo a fine gioco
                 //Spostiamo poi le varianti della PNG
                 // ~ move_entity(SecondCharacterGrizzly, Safekeeping)
@@ -204,7 +201,6 @@ VAR relationshipIndicatorEnthusiasticValue = 8
         
         ~ story_endedStories += story_fourthCharStoryEnded
         ~ fourthChar_storyStatus = story_storyPostal
-        ~ fourthChar_InkLevel = ink_empty
         ~ fourthChar_mailPause = fourthChar_mailPauseDuration
             //Spostiamo poi le varianti della PNG
             // ~ move_entity(SecondCharacterGrizzly, Safekeeping)
@@ -217,7 +213,6 @@ VAR relationshipIndicatorEnthusiasticValue = 8
         
         ~ story_endedStories += story_fifthCharStoryEnded
         ~ fifthChar_storyStatus = story_storyPostal
-        ~ fifthChar_InkLevel = ink_empty
         ~ fifthChar_mailPause = fifthChar_mailPauseDuration
             //Spostiamo poi le varianti della PNG
             // ~ move_entity(SecondCharacterGrizzly, Safekeeping)
@@ -236,7 +231,6 @@ VAR relationshipIndicatorEnthusiasticValue = 8
 //Elementi non dipendenti dallx PNG
 ~ temp currentPlace = entity_location(PG)
 ~ move_entity(TrainNoiseGoingAway, currentPlace)
-~ numberQuestion = 0
 @animation:RewriterBook
 
 -> achievements_onGame_statusUpdate_GM ->        

@@ -83,17 +83,20 @@
             {charTag(PG, "neutral")}:               Commento        
         -
 
-            ~ numberQuestion ++    
+              
         {charTag(ThirdCharacter, "neutral")}:           Frase.
+
+            //Riduco di uno il livello di inchiostro
+                ~ thirdChar_InkLevel --
 
             //Check per commento strega
             -> rewriting_witch_feedback(oneR) ->       
 
             {
-            - thirdChar_InkLevel == ink_low:
-                -> ending
-            - else: 
-                -> two
+                - thirdChar_InkLevel == ink_empty:
+                    -> ending
+                - else: 
+                    -> two
             }        
         
     
@@ -127,18 +130,21 @@
                 -> glyph_choice_manager(false, aetherC)->
             {charTag(PG, "neutral")}:               Commento        
         -
-        ~ numberQuestion ++     
+           
         {charTag(ThirdCharacter, "neutral")}:           Frase.
+
+            //Riduco di uno il livello di inchiostro
+                ~ thirdChar_InkLevel --
         
             //Check per commento strega
             -> rewriting_witch_feedback(twoR) ->           
                  
         
             {
-            - thirdChar_InkLevel == ink_normal:
-                -> ending
-            - else: 
-                -> three
+                - thirdChar_InkLevel == ink_empty:
+                    -> ending
+                - else: 
+                    -> three
             }
         
     = three
@@ -171,17 +177,20 @@
             {charTag(PG, "neutral")}:               Commento        
         -
 
-        ~ numberQuestion ++        
+              
         {charTag(ThirdCharacter, "neutral")}:           Frase.
+
+            //Riduco di uno il livello di inchiostro
+                ~ thirdChar_InkLevel --
         
             //Check per commento strega
             -> rewriting_witch_feedback(threeR) ->          
         
             {
-            - thirdChar_InkLevel == ink_medium:
-                -> ending
-            - else: 
-                -> four
+                - thirdChar_InkLevel == ink_empty:
+                    -> ending
+                - else: 
+                    -> four
             }
     
     = four
@@ -215,8 +224,11 @@
             {charTag(PG, "neutral")}:               Commento        
                 
         -
-        ~ numberQuestion ++       
+             
         {charTag(ThirdCharacter, "neutral")}:           Frase.
+
+            //Riduco di uno il livello di inchiostro
+                ~ thirdChar_InkLevel --
         
             //Check per commento strega
             -> rewriting_witch_feedback(fourR) ->  
