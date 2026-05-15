@@ -37,7 +37,7 @@
 }
 
 = dialogue
-// Tutto questo primo bloccone me lo tengo se serve testare di nuovo il nuovo sistema di scelte
+// Tutto questo primo blocco me lo tengo se serve testare di nuovo il nuovo sistema di scelte
 - (top)
 ~ move_entity(FirstCharacter, Bedroom)
 Chitarra ci dice qualcosa.

@@ -881,7 +881,7 @@
         ~ franco_pauseSpecialStorylets()
         ~ nest_francoUsedEarth = false
         //Riattivo poi i tasti se posseduti
-        -> nest_reactivateGliphs ->
+        -> nest_reactivateGlyphs ->
         
         -> main
             

@@ -206,7 +206,7 @@
 }
 
 //Infine:
-//Check frasina ansiosa di Mentore
+//Check frase ansiosa di Mentore
     -> talk_to_me
 
 ->->

@@ -93,7 +93,7 @@ VAR letters_doggoPause = false
 
     }
 
-//Cose legate allx PNG.
+//Cose legate alle PNG.
     //Se ho fatto almeno una riscrittura, sposto thirdChar_pauseDuration da 2 a 1.
    {
         - LIST_COUNT(story_endedStories) >= 1 && thirdChar_pauseDuration != 1:
@@ -114,7 +114,7 @@ VAR letters_doggoPause = false
             ~ move_entity(greenhouseOpened, Bedroom)
 
     }
-    //Prima cucinata con qualcunx
+    //Prima cucinata con qualcuno
     {
         - (grimoire_firstChar has grimFirstCharKitchenEnded or grimoire_secondChar has grimSecondCharKitchenEnded or grimoire_thirdChar has grimThirdCharKitchenEnded) && contentsSafekeeping has kitchenOpened:
             ~ move_entity(kitchenOpened, Bedroom)
@@ -285,7 +285,7 @@ VAR letters_doggoPause = false
         - contentsTrainStop has DoggoNoLetters:
         
                 ~ move_entity(DoggoNoLetters, Safekeeping)
-                {debug: Ho spostato la dogga nel safekeeping.}
+                {debug: Ho spostato la cagnolina nel safekeeping.}
                 ~ letters_doggoPause = false
                 {debug: ho tolto dalla pausa le altre lettere.}
     
@@ -433,7 +433,7 @@ VAR letters_doggoPause = false
 {debug_kitchen: passo da on_movement_kitchen_tracker.}
 {debug_kitchen: i contenuti di contentsKitchen sono {contentsKitchen}.}
 
-    //Check zero: se la cucina non è stata sbloccata, skippo. Così poi non devo più chiedermelo.
+    //Check zero: se la cucina non è stata sbloccata, salto. Così poi non devo più chiedermelo.
     {
         - player_accessiblePlaces hasnt Kitchen:
             {debug_kitchen: la cucina non è ancora sbloccata, per cui esco subito da on_movement_kitchen_tracker.}

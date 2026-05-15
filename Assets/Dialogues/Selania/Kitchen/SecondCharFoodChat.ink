@@ -493,7 +493,7 @@
                                                                 Solo Lara è peggio di me.
                     {charTag(SecondCharacter, "melanchonic")}:  Ma mi batte a inglese.
         
-            +(aeterh1) \ {charTag(PG, "neutral")}:              <i>Riscaldo l'unica piastra da waffle.</i>
+            +(aether1) \ {charTag(PG, "neutral")}:              <i>Riscaldo l'unica piastra da waffle.</i>
                 ~ kitchen_recipeNoun = "Waffle"
                 -> glyph_choice_manager(true, aetherC)->
                     {charTag(SecondCharacter, "neutral")}:      Sulla cima.
@@ -891,7 +891,7 @@
                                                                 Io non so cosa dire.
                                                                 E quindi o sto da solo, o devo dire bugie.
 
-            + \ {charTag(PG, "neutral")}:                       Ma perché non guardi i cartoni di nascosto? O prendi i fumetti in biblio?
+            + \ {charTag(PG, "neutral")}:                       Ma perché non guardi i cartoni di nascosto? O prendi i fumetti in biblioteca?
                     -> glyph_choice_manager(false, fireC)->
                 {charTag(SecondCharacter, "melanchonic")}:      La televisione la controlla mamma.
                 {charTag(SecondCharacter, "energy")}:           Però non ci avevo pensato alla biblioteca.
@@ -1424,7 +1424,7 @@
                                                             Sono contento che l'hai assaggiato, {charNameFive}!
                                                             Ma non mi arrabbio se non ti piace.
                                                             So che i vecchi mangiano solo cose schifose come i broccoli.
-    {charTag(FifthCharacter, "hurry")}:                     Dovresti assaggiare la mia sacher, bimbo: ti porta direttamente in paradiso
+    {charTag(FifthCharacter, "hurry")}:                     Dovresti assaggiare la mia Sacher, bimbo: ti porta direttamente in paradiso
     {charTag(SecondCharacter, "emotional")}:                Ha il cioccolato?
     {charTag(FifthCharacter, "hurry")}:                     Ha il cioccolato, e tanto.
     {charTag(FifthCharacter, "sorry")}:                     {charNameTwo}: abbiamo fatto pace?

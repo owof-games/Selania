@@ -353,7 +353,7 @@
                                                                 Credo sia giunto il momento di spiegarti le ultime cose importanti per il tuo lavoro di {player_pronouns has him:riscrittore|{player_pronouns has her:riscrittora|riscrittorə}}.
         {
             - are_two_entities_together(SecondCharacter, PG):
-            {charTag(SecondCharacter, "angry")}:                Uffi. Sembra di stare a scuola.
+            {charTag(SecondCharacter, "angry")}:                Uffa. Sembra di stare a scuola.
         
         }
         {charTag(FifthCharacter, "hurry")}:                     Quando avrai parlato a sufficienza con una persona, sentirai di poterle proporre di rileggere assieme la sua storia.

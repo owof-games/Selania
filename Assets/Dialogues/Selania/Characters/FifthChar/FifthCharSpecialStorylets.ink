@@ -8,7 +8,6 @@
 
     {charTag(FifthCharacter, "neutral")}:       Racconto letto in biblioteca.
     A racconto scelto, cambia anche logica in Special Storylets
-    Potrebbe aver senso il racconti di Maura, visto che lo percepirebbe come ostile (misandrico?)
     - 
             + \ {charTag(PG, "neutral")}:               Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->

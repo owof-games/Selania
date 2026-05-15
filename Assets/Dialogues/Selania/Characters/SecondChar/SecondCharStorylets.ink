@@ -398,7 +398,7 @@
                     -> glyph_choice_manager(false, airC)->
             {charTag(SecondCharacter, "neutral")}:              Sì no boh.
                                                                 Anche.
-            {charTag(SecondCharacter, "angry")}:                Uffi, che noia che fai!
+            {charTag(SecondCharacter, "angry")}:                Uffa, che noia che fai!
 
 
             //Scelte fuoco

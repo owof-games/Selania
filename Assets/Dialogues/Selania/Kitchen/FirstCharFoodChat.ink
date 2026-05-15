@@ -311,7 +311,7 @@
             -> glyph_choice_manager(false, fireC)->
             {charTag(FirstCharacter, "neutral")}:               Mmm.
                                                                 Non credo.
-            {charTag(FirstCharacter, "annoyed")}:               Non è che conta tipo il <i>perchè</i> fai le cose, invece?
+            {charTag(FirstCharacter, "annoyed")}:               Non è che conta tipo il <i>perché</i> fai le cose, invece?
             {charTag(FirstCharacter, "neutral")}:               Cioè: ti posso dare uno schiaffo per difendermi o per attaccarti.
                                                                 E sono due schiaffi proprio diversi, no?
         

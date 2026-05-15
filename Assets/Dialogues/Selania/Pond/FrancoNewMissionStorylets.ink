@@ -416,7 +416,7 @@
         {charTag(Franco, "party")}:                     Girino!
                                                         Mi serve un favore enorme, grande almeno quanto il cuore di zia Graaak.
         {charTag(Franco, "neutral")}:                   Che il medico dice che è un problema.
-                                                        Il cuore, non zia Graak.
+                                                        Il cuore, non zia Graaak.
         {charTag(Franco, "party")}:                     Lei è adorabile, quando non mi sgrida.
         {charTag(Franco, "neutral")}:                   E ora mi sgriderebbe perché ho perso il filo.
         {charTag(Franco, "party")}:                     Vediamoci sulla spiaggia!

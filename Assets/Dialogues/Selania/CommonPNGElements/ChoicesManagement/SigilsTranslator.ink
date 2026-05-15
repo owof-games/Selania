@@ -281,7 +281,7 @@
     VAR glyph_textFireEarthWaterTwo = "Osso levigato,"
     VAR glyph_textFireEarthWaterThree = "cernia sull’arpione."
 
-    VAR glyph_textFireEarthAetherOne = "Si spoglia la pecora, si essica il cardo."
+    VAR glyph_textFireEarthAetherOne = "Si spoglia la pecora, si essicca il cardo."
     VAR glyph_textFireEarthAetherTwo = "Dalla stalla al filatoio,"
     VAR glyph_textFireEarthAetherThree = "dal filatoio alla torre."
 

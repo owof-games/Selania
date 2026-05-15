@@ -452,7 +452,7 @@
         + \ {charTag(PG, "neutral")}:                                   Se usasse quella lingua per cose intelligenti, Franco salverebbe il mondo.
             -> glyph_choice_manager(false, fireC)-> 
         {charTag(FirstCharacter, "annoyed")}:                           Non esageriamo.
-        {charTag(FirstCharacter, "curious")}:                           Però i suoi delirii hanno del fascino.
+        {charTag(FirstCharacter, "curious")}:                           Però i suoi deliri hanno del fascino.
                                                                         Se presi a piccole dosi.
         {charTag(Franco, "neutral")}:                                   Un po' come i pollini.
         {charTag(FirstCharacter, "curious")}:                           In che senso?

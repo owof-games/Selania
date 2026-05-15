@@ -15,7 +15,7 @@
         VAR fourthChar_minStoryletsForRewriting = grimFourthCharNine
         //Abbiamo l'info speciale su Mentore? Se le condizioni sono corrette, viene messa su true dalla funzione inkLevel(Character)
         VAR fourthChar_specialEvent = false
-        //Cconteggio totale delle scelte prese con la PNG
+        //Conteggio totale delle scelte prese con la PNG
         VAR fourthChar_totalChoices = 0
 
     //Ritmo della storia    

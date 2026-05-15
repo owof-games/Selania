@@ -40,7 +40,7 @@
             //Funzione di preparazione alla riscrittura
                 ~  rewriting_prep(FifthCharacter)
             
-            //E poi a fiftha dello stato di inchiostro, mi sposto sulla domanda prevista      
+            //E poi a seconda dello stato di inchiostro, mi sposto sulla domanda prevista      
                 {
                     - fifthChar_InkLevel == ink_empty:
                         -> ending

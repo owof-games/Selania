@@ -166,7 +166,7 @@ VAR nest_francoChosenSigil = ()
 
 
 
-=== nest_reactivateGliphs ===
+=== nest_reactivateGlyphs ===
 
 {
     - contentsNest has fireGlyph_off:

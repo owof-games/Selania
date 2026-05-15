@@ -79,7 +79,7 @@
 
                 
         - else:
-            //In caso di pareggio cerco di assegnare un nome randomico da quelli più plausibili, sempre secondo la logica qui sopra elemento == nome.
+            //In caso di pareggio cerco di assegnare un nome casuale da quelli più plausibili, sempre secondo la logica qui sopra elemento == nome.
             //Prima di tutto cerco di capire qual è il valore più alto comune.
             ~ temp maxValue = 0
                 {
@@ -134,7 +134,7 @@
             } 
 
             {debug: La lista di possibili nomi in caso di pareggio è {possiblesMainGlyphs}.}
-            //E infine ne prendo uno randomico dalla lista. Se dovesse essere vuota, ne assegno uno che ha senso con una cattiva relazione creata con lx png.
+            //E infine ne prendo uno casuale dalla lista. Se dovesse essere vuota, ne assegno uno che ha senso con una cattiva relazione creata con lx png.
             {
                 - possiblesMainGlyphs != ():
                     ~ mainGlyph = LIST_RANDOM(possiblesMainGlyphs)

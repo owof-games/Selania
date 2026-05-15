@@ -784,7 +784,7 @@ QUESTIONS
                     
     = sixth_question
      ~ greenhouse_sixthQuest = true
-    {debug_cultivable: Entro in sixfthQuest. {greenhouse_sixthQuest: sixfthQuest ora = true|sixfthQuest = false}.}
+    {debug_cultivable: Entro in sixthQuest. {greenhouse_sixthQuest: sixthQuest ora = true|sixthQuest = false}.}
     
         {charTag(TheWitch, witch_state())}:   <i>I sassi... 
             + [{~Creano scale verso il cielo|Si fanno mura, protezione|Si scaldano fregandosi lentamente l'un l'altro}.]

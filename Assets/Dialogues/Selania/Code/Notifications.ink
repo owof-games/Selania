@@ -20,7 +20,7 @@ VAR notification_francoUpdatedMissions = ()
     - nest_newSigilDiscovered != ():
         {charTag(TheWitch, witch_state())}:   {player_name} ha scoperto {sigils_translator(nest_newSigilDiscovered)}.
             ~ nest_newSigilDiscovered = ()
-        -> nest_reactivateGliphs ->
+        -> nest_reactivateGlyphs ->
         -> achievements_onGame_statusUpdate_GM ->
         -> main
 }

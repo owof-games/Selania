@@ -63,7 +63,7 @@
 
         -> third_char_closing_storylet ->
         ~ opening_places()
-        //Parte subito lo spiegozzo sui sigilli di Carla
+        //Parte subito la spiegazione sui sigilli di Carla
         {
             -  settings_gamerMode == true:
                 ~ move_entity(Carla, Library)

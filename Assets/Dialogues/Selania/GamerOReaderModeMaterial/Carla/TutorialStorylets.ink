@@ -71,7 +71,7 @@
                                             Tiene traccia dell'ultima e penultima scelta fatte, così può monitorare da sé le variazioni, senza stressare me.
     {
         - grimoire_appendices hasnt grimChoicesMentor:
-            {charTag(Carla, "sad")}:                Ma non ha ancora un grimoiro?
+            {charTag(Carla, "sad")}:                Ma non ha ancora un grimorio?
             {charTag(Carla, "neutral")}:            Strano, di solito lo consegnano in automatico all'arrivo.
             {charTag(Carla, "bored")}:              Ma qui non possiamo fare niente per aiutarla.  
     }
@@ -362,7 +362,7 @@
     {charTag(Carla, "neutral")}:                    Accetta di ascoltare la mia spiegazione?
         + \ {charTag(PG, "neutral")}:               Ne ho proprio bisogno.
             {charTag(Carla, "bored")}:              È quello che temevo.
-        + \ {charTag(PG, "neutral")}:               Non serve, sono laureat{player_pronouns has him:o|{player_pronouns has her:a|ə}} in Masterchef.
+        + \ {charTag(PG, "neutral")}:               Non serve, sono laureat{player_pronouns has him:o|{player_pronouns has her:a|ə}} in MasterChef.
             {charTag(Carla, "neutral")}:            Mmm.
             {charTag(Carla, "bored")}:              Forse mio figlio è più sveglio di lei.
                                                     Si ricordi che gli incidenti in cucina non sono coperti dall'assicurazione.

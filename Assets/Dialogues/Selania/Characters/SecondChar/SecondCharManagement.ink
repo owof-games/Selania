@@ -14,7 +14,7 @@
         VAR secondChar_minStoryletsForRewriting = grimSecondCharNine
         //Abbiamo l'info speciale su Mentore? Se le condizioni sono corrette, viene messa su true dalla funzione inkLevel(Character)
         VAR secondChar_specialEvent = false
-        //Cconteggio totale delle scelte prese con la PNG
+        //Conteggio totale delle scelte prese con la PNG
         VAR secondChar_totalChoices = 0
 
     //Ritmo della storia    
@@ -87,7 +87,7 @@
         VAR secondChar_relationshipActualSecondDominantGlyph = ()
         VAR secondChar_relationshipActualSecondDominantGlyphValue = 0
 
-        VAR secondChar_relationshipTrackingChoise = ()
+        VAR secondChar_relationshipTrackingChoice = ()
 
 //Gestione dei doni
     //Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.

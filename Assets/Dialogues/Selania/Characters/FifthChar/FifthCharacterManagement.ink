@@ -15,7 +15,7 @@
         VAR fifthChar_minStoryletsForRewriting = grimFifthCharNine
         //Abbiamo l'info speciale su Mentore? Se le condizioni sono corrette, viene messa su true dalla funzione inkLevel(Character)
         VAR fifthChar_specialEvent = false
-        //Cconteggio totale delle scelte prese con la PNG
+        //Conteggio totale delle scelte prese con la PNG
         VAR fifthChar_totalChoices = 0
 
     //Ritmo della storia    

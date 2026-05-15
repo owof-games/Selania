@@ -119,10 +119,10 @@ GESTIONE DELLO STATO DEI SIGILLI
 
 
 //Tracciamento delle scelte fatte durante la composizione
-    LIST glyph_keysColour = fireKey, airKey, WatereKey, earthKey, aetherKey
-    VAR glyph_firstKeyColour = ()
-    VAR glyph_secondKeyColour = ()
-    VAR glyph_thirdKeyColour = ()
+    LIST glyph_keysColor = fireKey, airKey, WaterKey, earthKey, aetherKey
+    VAR glyph_firstKeyColor = ()
+    VAR glyph_secondKeyColor = ()
+    VAR glyph_thirdKeyColor = ()
 
 
 /* ---------------------------------

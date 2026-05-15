@@ -201,7 +201,7 @@
 //Controllo quante sono le storie concluse, in modo da poter inserire quella personaggia nell'ordine di conclusione delle storie previsto (es: se c'è già una storia chiusa in story_endedStories e ho chiuso player_firstStepClosed, allora metterò firstChar_storyEndingPosition come story_twoStoriesClosed.
 {
 	- LIST_COUNT(story_endedStories) == 1:
-	   {debug: <i>L'elenco di oggetti nella lista endendStories è {story_endedStories}, pari a 1. Per questo vado ad assegnare il valore di prima storia finita a {charES}.}
+	   {debug: <i>L'elenco di oggetti nella lista endedStories è {story_endedStories}, pari a 1. Per questo vado ad assegnare il valore di prima storia finita a {charES}.}
 		{
 			- charES == FirstCharacter:
 				~ firstChar_storyEndingPosition = story_oneStoryClosed
@@ -270,13 +270,13 @@
 {debug: passo per png_random_sigils_opener}
 //L'idea è: valuto i tre glifi meno usati (togliendo da una lista i due più usati), e apro un glifo random per ognuno di loro.
 //La realtà: è un gran casino e mi rompo i coglioni.
-//Quello che facciamo è per tre volte prendere in modo randomico un sigillo dalla lista di quelli disponibili, spostarlo nei discovered e bona.
+//Quello che facciamo è per tre volte prendere in modo casuale un sigillo dalla lista di quelli disponibili, spostarlo nei discovered e bona.
 
     //Lista temporanea == lista di tutti i sigilli del gioco
     ~ temp allSigils = LIST_ALL(glyph_allSigils)
     //A cui tolgo poi quelli già scoperti
     ~ allSigils -= glyph_discoveredSigils
-    //Prendo un sigillo randomico
+    //Prendo un sigillo casuale
     ~ temp chosenSigil = LIST_RANDOM(allSigils)
     //Aggiungo il sigillo a quelli scoperti
     ~ glyph_discoveredSigils += chosenSigil
@@ -303,7 +303,7 @@
 //Seconda cosa: aggiorno lo step di 
     {
     	- LIST_COUNT(story_endedStories) == 1:
-    	   {debug: <i>L'elenco di oggetti nella lista endendStories è {story_endedStories}, pari a 1. Per questo vado ad assegnare il valore di prima storia finita a {charES}.}
+    	   {debug: <i>L'elenco di oggetti nella lista endedStories è {story_endedStories}, pari a 1. Per questo vado ad assegnare il valore di prima storia finita a {charES}.}
     		~ player_orderGrowingTreeUpdater = player_firstStepClosed
     
     		
@@ -365,7 +365,6 @@
 			
 		}
 
-//TODO: risolvere codice per problema mixed status
 //E poi confronto quella che è la storia della personaggia, la progressione delle sue scelte: di fatto per ora basta che non ci siano pareggi tra colori per evitare il marrone. A quel punto emerge il colore dominante.
     {
         - (temp_PGWater > temp_PGAir) && (temp_PGWater > temp_PGFire) && (temp_PGWater > temp_PGEarth) && (temp_PGWater > temp_PGAether):
@@ -514,7 +513,7 @@
             }
         
         - else:
-        //In caso di pareggio cerco di assegnare un nome randomico da quelli più plausibili, sempre secondo la logica qui sopra elemento == nome.
+        //In caso di pareggio cerco di assegnare un nome casuale da quelli più plausibili, sempre secondo la logica qui sopra elemento == nome.
             //Prima di tutto cerco di capire qual è il valore più alto comune.
             ~ temp maxValue = 0
             ~ temp possibileTreeStatus = ()
@@ -567,7 +566,7 @@
 
             } 
             {debug: La lista di possibili status in caso di pareggio è {possibileTreeStatus}.}
-            //E infine ne prendo uno randomico dalla lista. 
+            //E infine ne prendo uno casuale dalla lista. 
                 
                 ~ chosenTreeStatus = LIST_RANDOM(possibileTreeStatus)
 
