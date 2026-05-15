@@ -1,4 +1,5 @@
-﻿using R3;
+﻿using System;
+using R3;
 using Selania.Rework.Interfaces;
 using UnityEngine;
 using VContainer;
@@ -11,6 +12,11 @@ namespace Selania.Rework.Components.Museum.EvolvingObject
 
         public EvolvingObjectStoryVariableValues EvolvingObjectStoryVariableValuesInstance { get; } = new();
 
+        public EvolvingObjectStoryChangeRoomContentsNotifier EvolvingObjectStoryChangeRoomContentsNotifierInstance
+        {
+            get;
+        } = new();
+
         protected override void Configure(IContainerBuilder builder)
         {
             // IStoryChangeRoomContentsNotifier
@@ -19,9 +25,10 @@ namespace Selania.Rework.Components.Museum.EvolvingObject
             base.Configure(builder);
             builder.RegisterSettings(selaniaSettings);
             builder.RegisterLogger();
+            builder.RegisterRoomContents();
             builder.RegisterInstance<IStoryVariableValues>(EvolvingObjectStoryVariableValuesInstance);
             builder.RegisterInstance<IStoryChangeRoomContentsNotifier>(
-                new EvolvingObjectStoryChangeRoomContentsNotifier());
+                EvolvingObjectStoryChangeRoomContentsNotifierInstance);
         }
 
         public class EvolvingObjectStoryVariableValues : IStoryVariableValues
@@ -33,18 +40,37 @@ namespace Selania.Rework.Components.Museum.EvolvingObject
                 return _values.OfType<int, T>();
             }
 
-            public void EmitValue(int value)
+            public void SetState(int value)
             {
                 _values.OnNext(value);
             }
         }
 
-        private class EvolvingObjectStoryChangeRoomContentsNotifier : IStoryChangeRoomContentsNotifier
+        public class EvolvingObjectStoryChangeRoomContentsNotifier : IStoryChangeRoomContentsNotifier
         {
-            public Observable<IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo> roomContentsObservable { get; } =
-                Observable.Return(new IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo(
-                    IStoryChangeRoomContentsNotifier.RoomContentsChangeReason.ContentsChanged,
-                    new[] { "object" }));
+            private readonly ReplaySubject<IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo>
+                _roomContentsSubject =
+                    new(1);
+
+            public EvolvingObjectStoryChangeRoomContentsNotifier()
+            {
+                EnterRoomB();
+            }
+
+            public Observable<IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo> roomContentsObservable =>
+                _roomContentsSubject.AsObservable();
+
+            public void EnterRoomA()
+            {
+                _roomContentsSubject.OnNext(new IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo(
+                    IStoryChangeRoomContentsNotifier.RoomContentsChangeReason.CharacterMoved, new[] { "object" }));
+            }
+
+            public void EnterRoomB()
+            {
+                _roomContentsSubject.OnNext(new IStoryChangeRoomContentsNotifier.ChangeRoomContentsInfo(
+                    IStoryChangeRoomContentsNotifier.RoomContentsChangeReason.CharacterMoved, Array.Empty<string>()));
+            }
         }
     }
 }

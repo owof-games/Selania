@@ -9,7 +9,7 @@ using ZLogger;
 
 namespace Selania.Rework.Components
 {
-    public class EvolvingObject : MonoBehaviour, IAutomaticEditorInject
+    public class EvolvingObjectComponent : MonoBehaviour, IAutomaticEditorInject
     {
         [SerializeField] [Tooltip("Ink variable name (number) that contains the state of the object")]
         private string inkVariableName = null!;
@@ -17,7 +17,7 @@ namespace Selania.Rework.Components
         [SerializeField] [Tooltip("Definition of the sprites to use for the various possible values of the variable")]
         private SpriteDefinition[] spriteDefinitions = Array.Empty<SpriteDefinition>();
 
-        [Inject] internal ILogger<EvolvingObject> Logger = null!;
+        [Inject] internal ILogger<EvolvingObjectComponent> Logger = null!;
 
         [Inject] internal IStoryVariableValues StoryVariableValues = null!;
 
