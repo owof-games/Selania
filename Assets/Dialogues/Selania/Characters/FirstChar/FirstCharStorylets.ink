@@ -22,7 +22,7 @@
                 -> glyph_choice_manager(false, aetherC)->
         {charTag(FirstCharacter, "affectionate")}:              Pa-le-se!
         {charTag(FirstCharacter, "curious")}:                   Ha una congrega con Bjork e Tori Amos.
-                                                                E passano il sabato sera a maledire gli uomini del loro passato.
+                                                                E passano il sabato sera a maledire gli uomini potenti.
 
 
         + (fire) \ {charTag(PG, "neutral")}:                    Mi piace Talco, sembra una persona piena di passioni!
@@ -240,13 +240,13 @@
                                                                 Potrei iniziare buttandoti nello stagno per esempio, no?
         //più spirito? questa è quasi terra: fisica, concreta    
         + \ {charTag(PG, "neutral")}:                           Respirare è un punto di partenza. L'aria qui è buona.
-                -> glyph_choice_manager(false, aetherC)->
+                -> glyph_choice_manager(false, earthC)->
             {charTag(FirstCharacter, "neutral")}:               Già, e non è solo quello, ama.
             {charTag(FirstCharacter, "affectionate")}:          C'è qualcosa di <i>concreto</i> in quest'aria.
             {charTag(FirstCharacter, "neutral")}:               Come se lentamente mi pulisse via cose che mi appesantiscono.
             
         + \ {charTag(PG, "neutral")}:                           Hai detto così tante cose che mi sono pers{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
-            -> glyph_choice_manager(false, earthC)->
+            -> glyph_choice_manager(false, aetherC)->
             //Da finire di sistemare
             {charTag(FirstCharacter, "curious")}:               Bellini i numeri.
             {charTag(FirstCharacter, "annoyed")}:               No, non è vero.
