@@ -114,6 +114,7 @@ namespace Selania.Rework.Components
         /// <param name="settingsSaveSystem">An optional replacement object to register for the <see cref="ISettingsSaveSystem"/> interface.</param>
         /// <param name="settingsSigils">An optional replacement object to register for the <see cref="ISettingsSigils"/> interface.</param>
         /// <param name="settingsBook">An optional replacement object to register for the <see cref="ISettingsBook"/> interface.</param>
+        /// <param name="settings2D">An optional replacement object to register for the <see cref="ISettings2D"/> interface.</param>
         public static void RegisterSettings(this IContainerBuilder containerBuilder, SelaniaSettings settings,
             ISettingsDialogueBox? settingsDialogueBox = null,
             ISettingsLogger? settingsLogger = null,
@@ -121,7 +122,8 @@ namespace Selania.Rework.Components
             ISettingsAudio? settingsAudio = null,
             ISettingsSaveSystem? settingsSaveSystem = null,
             ISettingsSigils? settingsSigils = null,
-            ISettingsBook? settingsBook = null
+            ISettingsBook? settingsBook = null,
+            ISettings2D? settings2D = null
         )
         {
             var registrationBuilder = containerBuilder
@@ -134,6 +136,7 @@ namespace Selania.Rework.Components
             Register(settingsSaveSystem);
             Register(settingsSigils);
             Register(settingsBook);
+            Register(settings2D);
 
             return;
 

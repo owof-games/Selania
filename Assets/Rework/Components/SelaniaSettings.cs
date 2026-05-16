@@ -12,7 +12,7 @@ namespace Selania.Rework.Components
     [CreateAssetMenu(fileName = "Settings", menuName = "Selania/Settings")]
     [NoReorder]
     public class SelaniaSettings : ScriptableObject, ISettingsDialogueBox, ISettingsLogger, ISettingsRooms,
-        ISettingsAudio, ISettingsSaveSystem, ISettingsSigils, ISettingsBook
+        ISettingsAudio, ISettingsSaveSystem, ISettingsSigils, ISettingsBook, ISettings2D
     {
         #region dialogue box - text
 
@@ -647,6 +647,17 @@ namespace Selania.Rework.Components
 
             public IEnumerable<ISettingsLogger.ICategorySettings> categorySettings => categorySettingsArray;
         }
+
+        #endregion
+
+        #region 2D settings
+
+        [field: Title("2D Settings")]
+        [field: SerializeField]
+        [field:
+            Tooltip(
+                "The duration (in seconds) of the cross-fade for when an evolving object cross-fades between two different states.")]
+        public float CrossFadeAnimationDurationForEvolvingObjects { get; private set; } = 1f;
 
         #endregion
 

@@ -517,4 +517,5 @@ MonoBehaviour:
     - <categoryPrefix>k__BackingField: Selania.Rework.Components.EvolvingObjectComponent
       <minimumLogLevel>k__BackingField: 0
     <minimumLogLevel>k__BackingField: 2
+  <CrossFadeAnimationDurationForEvolvingObjects>k__BackingField: 1
   x: '-'

@@ -33,6 +33,8 @@ namespace Selania.Rework.Components
 
         [Inject] internal IRoomContentMemory RoomContentMemory = null!;
 
+        [Inject] internal ISettings2D Settings2D = null!;
+
         [Inject] internal IStoryChangeRoomContentsNotifier StoryChangeRoomContentsNotifier = null!;
 
         [Inject] internal IStoryVariableValues StoryVariableValues = null!;
@@ -96,10 +98,11 @@ namespace Selania.Rework.Components
                     usingOriginalSpriteRenderer = !usingOriginalSpriteRenderer;
 
                     // animate both fades to create a cross-fade, and wait for it to complete
+                    var duration = Settings2D.CrossFadeAnimationDurationForEvolvingObjects;
                     await LSequence.Create()
-                        .Join(LMotion.Create(targetSpriteRenderer.color, Color.white, 1)
+                        .Join(LMotion.Create(targetSpriteRenderer.color, Color.white, duration)
                             .BindToColor(targetSpriteRenderer))
-                        .Join(LMotion.Create(currentSpriteRenderer.color, _transparentColor, 1)
+                        .Join(LMotion.Create(currentSpriteRenderer.color, _transparentColor, duration)
                             .BindToColor(currentSpriteRenderer))
                         .Run()
                         .ToValueTask(cancellationToken);
