@@ -596,7 +596,7 @@
 
     {
         - grimoire_firstChar hasnt grimMentorFirstSecretEnding && grimoire_thirdChar hasnt grimMentorThirdSecretEnding :
-                                                    <i>{charNameTwo} ripone piena fiducia in {player_name}, ed è pronto a condividere con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} una informazione importante.</i>
+                                                    <i>{charNameTwo} ripone piena fiducia in {player_name}, ed è pronto a condividere con {player_pronoun has him:lui|{player_pronoun has her:lei|ləi}} una informazione importante.</i>
     }
 
         {charTag(SecondCharacter, "neutral")}:      Voglio dirti una cosa {player_name}. 

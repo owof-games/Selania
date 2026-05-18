@@ -385,7 +385,7 @@
 
     = first_time_ingredient
 
-            {charTag(TheWitch, witch_state())}:     <i>{player_name} prova a parlare, ma le parole rimangono bloccate in gola. Ma gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.</i>
+            {charTag(TheWitch, witch_state())}:     <i>{player_name} prova a parlare, ma le parole rimangono bloccate in gola. Ma gli ingredienti possono parlare per {player_pronoun has him:lui|{player_pronoun has her:lei|ləi}}.</i>
         
         ->->
 

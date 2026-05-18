@@ -1,7 +1,8 @@
-//Nome giocatrice e player_pronouns
+//Nome giocatrice e player_pronoun
     VAR player_name = ""
     VAR player_nameChosen = false
-    LIST player_pronouns = (him), (her), (they)
+    LIST possibile_player_pronouns = (him), (her), (they)
+    VAR player_pronoun = ()
 
 //Tracciamento del riposo.
     //Dalle impostazioni può abilitare/disabilitare le notifiche per il riposo
@@ -116,7 +117,7 @@
  ----------------------------------*/
 
 
-//Per assegnare/cambiare player_pronouns di riferimento
+//Per assegnare/cambiare player_pronoun di riferimento
 === gender ===
     {
         - gender == 1:
@@ -127,7 +128,7 @@
     }
     
     
-    + {gender > 1} \ {charTag(PG, "neutral")}:         Chiamami coi pronomi {player_pronouns has him:maschili|{player_pronouns has her:femminili|neutri}}.
+    + {gender > 1} \ {charTag(PG, "neutral")}:         Chiamami coi pronomi {player_pronoun has him:maschili|{player_pronoun has her:femminili|neutri}}.
         ->->
     + {gender > 1} \ {charTag(PG, "neutral")}:         <i>Cambio i miei pronomi.
         -> top
@@ -136,16 +137,16 @@
     - (top)
     {charTag(PG, "neutral")}: I miei pronomi sono...
         + \ {charTag(PG, "neutral")}:         Mi trovo a mio agio col maschile.
-            ~ player_pronouns = ()
-            ~ player_pronouns += him
+            ~ player_pronoun = ()
+            ~ player_pronoun += him
         
         + \ {charTag(PG, "neutral")}:         Preferisco i pronomi femminili.
-            ~ player_pronouns = ()
-            ~ player_pronouns += her
+            ~ player_pronoun = ()
+            ~ player_pronoun += her
         
         + \ {charTag(PG, "neutral")}:         Vai di neutro.
-            ~ player_pronouns = ()
-            ~ player_pronouns += they
+            ~ player_pronoun = ()
+            ~ player_pronoun += they
         -
         ->->
 

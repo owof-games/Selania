@@ -579,7 +579,6 @@
 
 
 === function updateFirstCharacterRelation()
-// TODO
 ~ firstChar_relationshipIndicator = firstChar_aether + firstChar_water - firstChar_air
 
 
@@ -655,7 +654,13 @@
 
 
 === function updateThirdCharacterRelation()
-// DA CREARE
+//Prima di tutto facciamo un check per vedere se thirdChar_recordedPlayerPronoun ha un valore assegnato. Questo perché Boccale ci leggerà in base alla prima interazione che ascolterà passivamente, nel caso in cui non abbiamo avuto lo storylet di presentazione con lui.
+{
+    - thirdChar_recordedPlayerPronoun == ():
+        ~ thirdChar_recordedPlayerPronoun += player_pronoun
+}
+
+
 ~ thirdChar_relationshipIndicator = thirdChar_aether + thirdChar_water - thirdChar_air
 
 === function updateFourthCharacterRelation()

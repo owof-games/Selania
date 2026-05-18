@@ -599,7 +599,7 @@
     
     {
         - grimoire_fifthChar hasnt grimMentorSecondSecretEnding && grimoire_fifthChar hasnt grimMentorThirdSecretEnding:
-            {charTag(TheWitch, witch_state())}:                 <i>{charNameOne} ripone piena fiducia in {player_name}, ed è pronta a condividere con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} una informazione importante.</i>
+            {charTag(TheWitch, witch_state())}:                 <i>{charNameOne} ripone piena fiducia in {player_name}, ed è pronta a condividere con {player_pronoun has him:lui|{player_pronoun has her:lei|ləi}} una informazione importante.</i>
     }
 
     {charTag(FirstCharacter, "neutral")}:    

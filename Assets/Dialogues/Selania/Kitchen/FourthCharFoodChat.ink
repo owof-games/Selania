@@ -12,7 +12,7 @@
     
 {charTag(FourthCharacter, "neutral")}:       Cuciniamo?
         
-        + \ {charTag(PG, "neutral")}:         Sono pront{player_pronouns has him:o|{player_pronouns has her:a|ə}}!
+        + \ {charTag(PG, "neutral")}:         Sono pront{player_pronoun has him:o|{player_pronoun has her:a|ə}}!
             -> cooking_with_fourth_char
         
         + \ {charTag(PG, "neutral")}:         Vorrei pensarci un attimo {charNameOne}.
@@ -681,7 +681,7 @@
                     ~ grimoire_fourthChar += grimFourthCharKitchenNegativeReaction
 
             - fourthChar_relationshipStatus == neutral:
-                {charTag(FourthCharacter, "neutral")}:       Credo che la risposta sia "{player_pronouns has him:rimandato|{player_pronouns has her:rimandata|rimandatə}} a settembre".
+                {charTag(FourthCharacter, "neutral")}:       Credo che la risposta sia "{player_pronoun has him:rimandato|{player_pronoun has her:rimandata|rimandatə}} a settembre".
 
                     ~ grimoire_fourthChar += grimFourthCharKitchenNeutralReaction
 

@@ -14,7 +14,7 @@
         
         - else: 
         {stopping:
-            - {charTag(SecondCharacter, "angry")}:              Non ci parlo con chi è {player_pronouns has him:amico|{player_pronouns has her:amica|amicə}} di quella là!   
+            - {charTag(SecondCharacter, "angry")}:              Non ci parlo con chi è {player_pronoun has him:amico|{player_pronoun has her:amica|amicə}} di quella là!   
             
             - {charTag(SecondCharacter, "angry")}:              Hai risolto le cose con quella?   
             
@@ -183,7 +183,7 @@
         {charTag(FifthCharacter, "bored")}:                     {player_name}, non credo sia il caso di dare a {charNameTwo} altre idee bislacche.
         }
             
-        + \ {charTag(PG, "neutral")}:                           Mi sarei pres{player_pronouns has him:o|{player_pronouns has her:a|ə}} cura dell'aragosta.
+        + \ {charTag(PG, "neutral")}:                           Mi sarei pres{player_pronoun has him:o|{player_pronoun has her:a|ə}} cura dell'aragosta.
             -> glyph_choice_manager(false, waterC)->
         {charTag(SecondCharacter, "emotional")}:                Già.
                                                                 Alla fine non ha mica fatto nulla lei.

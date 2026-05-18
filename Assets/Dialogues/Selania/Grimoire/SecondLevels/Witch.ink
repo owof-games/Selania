@@ -60,7 +60,7 @@
     //Altro
     {
         - grimoire_witch has grimWitchBook:
-            Abbiamo anche informato {player_name} che il libro che stringe ora in mano viene aggiornato da noi mano a mano che le cose accadono, anche con ricerche altrui. E speriamo la cosa non {player_pronouns has him:gli|{player_pronouns has her:le|lə}} crei dispiacere, ma la memoria è come neve in primavera.
+            Abbiamo anche informato {player_name} che il libro che stringe ora in mano viene aggiornato da noi mano a mano che le cose accadono, anche con ricerche altrui. E speriamo la cosa non {player_pronoun has him:gli|{player_pronoun has her:le|lə}} crei dispiacere, ma la memoria è come neve in primavera.
     }
 
     {

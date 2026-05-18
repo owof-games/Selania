@@ -39,7 +39,7 @@
                                                                             Poteva esserci qualcosa di meglio?
                 {charTag(FifthCharacter, "sad")}:                           Sicuramente sì.
                 {charTag(FifthCharacter, "neutral")}:                       Era quello l'obiettivo?
-                                                                            No, se sei {player_pronouns has him:soddisfatto|{player_pronouns has her:soddisfatta|soddisfattə}} di com'è andata la riscrittura.
+                                                                            No, se sei {player_pronoun has him:soddisfatto|{player_pronoun has her:soddisfatta|soddisfattə}} di com'è andata la riscrittura.
 
             - firstChar_giftedObject != () && (firstChar_favouritesGifts hasnt firstChar_giftedObject) && (firstChar_goodGifts hasnt firstChar_giftedObject):
                 {charTag(FifthCharacter, "sad")}:                           Innanzitutto, hai donato qualcosa che {charNameOne} non desiderava.
@@ -107,7 +107,7 @@
         }
         
         
-        {charTag(FifthCharacter, "hurry")}:                                 Non ti conosco ancora abbastanza, ma ci tengo a dirtelo: sentiti {player_pronouns has him:soddisfatto|{player_pronouns has her:soddisfatta|soddisfattə}}!
+        {charTag(FifthCharacter, "hurry")}:                                 Non ti conosco ancora abbastanza, ma ci tengo a dirtelo: sentiti {player_pronoun has him:soddisfatto|{player_pronoun has her:soddisfatta|soddisfattə}}!
         {charTag(FifthCharacter, "neutral")}:                               Questo è un lavoro complesso, ma vedrai che col tempo sarà tutto più facile.
         {charTag(FifthCharacter, "hurry")}:                                 Comunque sia, direi che ti ho dato tutti gli strumenti per far sì che tu possa riscrivere storie in autonomia. 
                                                                             Ma se avrai bisogno di aiuto o un po' di supporto personale, sono sempre qui.
@@ -177,7 +177,7 @@
                     }
 
             - secondChar_relationshipStatus == neutral:
-                {charTag(FifthCharacter, "hurry")}:                         Sei riuscit{player_pronouns has him:o|{player_pronouns has her:a|ə}} a creare una bella relazione con {charNameTwo}, che si è fidato di te.
+                {charTag(FifthCharacter, "hurry")}:                         Sei riuscit{player_pronoun has him:o|{player_pronoun has her:a|ə}} a creare una bella relazione con {charNameTwo}, che si è fidato di te.
                     {
                         - grimoire_secondChar hasnt grimSecondCharKitchenEnded::
                                                                             Non so se l'hai tenuto lontano dalla cucina per non fare disastri, ma magari avrebbe apprezzato.
@@ -235,7 +235,7 @@
         
     {charTag(FifthCharacter, "neutral")}:                                   Spero di cuore che tu sia felice di quello che stai facendo.
                                                                             A prescindere dal risultato.
-    {charTag(FifthCharacter, "hurry")}:                                     E un giorno potrai fare questo lavoro da {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}.
+    {charTag(FifthCharacter, "hurry")}:                                     E un giorno potrai fare questo lavoro da {player_pronoun has him:solo|{player_pronoun has her:sola|solə}}.
     {charTag(FifthCharacter, "sad")}:                                       E a quel punto forse anche io potrò un poco riposare.
     
         -> mentor_closing_storylet ->

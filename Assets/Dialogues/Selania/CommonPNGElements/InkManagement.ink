@@ -161,7 +161,7 @@
                         - fifthChar_giftedObject != (): e il dono consegnato<>
                     }
             }
-            , {player_name} si ritrova {player_pronouns has him:privo|{player_pronouns has her:priva|privə}} di inchiostro. 
+            , {player_name} si ritrova {player_pronoun has him:privo|{player_pronoun has her:priva|privə}} di inchiostro. 
             <i>Potrà solo usare il potere dell'epilogo.
         
         - ink_low:

@@ -192,7 +192,7 @@
                 
             + \ {charTag(PG, "neutral")}:                                   Ti prometto che ti scriverò ogni giorno.
                     -> glyph_choice_manager(Mentor, waterC)->
-                {charTag(FifthCharacter, "neutral")}:                       Oh, {player_pronouns has him: caro|{player_pronouns has her: cara|carə}}, è una bella promessa.
+                {charTag(FifthCharacter, "neutral")}:                       Oh, {player_pronoun has him: caro|{player_pronoun has her: cara|carə}}, è una bella promessa.
                                                                             Una promessa che ho sentito decine di volte.
                     
             + \ {charTag(PG, "neutral")}:                                   Esiste un confine tra {charNameFive} e questo luogo?

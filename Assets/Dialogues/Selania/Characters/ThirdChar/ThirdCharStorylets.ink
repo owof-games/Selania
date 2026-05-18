@@ -9,7 +9,34 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    
+
+        {
+                - thirdChar_recordedPlayerPronoun == ():
+                {charTag(ThirdCharacter, "neutral")}:       Immagino che si debba partire con le presentazioni, giusto? Chi sei?
+                        -> name_choice.top2 ->
+                        -> gender.top ->
+                        ~ thirdChar_recordedPlayerPronoun += player_pronoun     
+        }
+
+        {
+                - player_pronoun == him:
+                {charTag(PG, "neutral")}:               Prima ho sentito che ti chiami {player_name} e che sei un ragazzo!
+                                                        Detto tra noi, meno male, perché tra {charNameOne} e {charNameFive} serve un po' di testosterone a compensare!
+
+                - player_pronoun == her:
+                {charTag(PG, "neutral")}:               Prima ho sentito che ti chiami {player_name} e che sei una ragazza.
+                                                        Immagino che tra la presenza di {charNameOne} e quella di {charNameFive}, tu sia felice di trovare un po' di varietà.
+                - player_pronoun == they:
+                {charTag(PG, "neutral")}:               Prima ho sentito che ti chiami {player_name} e che sei una persona non binaria.
+                                                        Spero di non sbagliare cose tipo pronomi o così via, giuro che ci provo!
+
+        }   
+
+        {charTag(PG, "neutral")}:                       Comunque io sono {charNameThree}.
+                                                        Cioè, non sono davvero {charNameThree}.
+                                                        Ma è da quando sono arrivato che se penso a me stesso mi sento questo nome in testa.
+                                                        Non ho ancora avuto il coraggio di guardare che aspetto ho.
+
         
         {charTag(ThirdCharacter, "neutral")}:       Frase
             

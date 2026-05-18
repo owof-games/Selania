@@ -62,7 +62,7 @@
         {charTag(SecondCharacter, "energy")}:                   Sìì! E il nostro team batte il team SIAMO NOIOSI E DORMIAMO SEMPRE DI {charNameOne}!
         {charTag(FirstCharacter, "annoyed")}:                   Sarò noiosa, ma tu arriverai ai quindici anni più ansioso di un pinscher, piccoletto.
 
-        + \ {charTag(PG, "neutral")}:                           Alieni? Mi metto a piangere {player_pronouns has him:terrorizzato|{player_pronouns has her:terrorizzata|terrorizzatə}} in un angolino.
+        + \ {charTag(PG, "neutral")}:                           Alieni? Mi metto a piangere {player_pronoun has him:terrorizzato|{player_pronoun has her:terrorizzata|terrorizzatə}} in un angolino.
                 -> glyph_choice_manager(false, waterC)->
         {charTag(SecondCharacter, "melanchonic")}:              Come i bambini piccoli. No no no.
         {charTag(FirstCharacter, "affectionate")}:              Mi ci riconosco, totale.
@@ -219,7 +219,7 @@
             
         + \ {charTag(PG, "neutral")}:                                   Non è qualcosa di temporaneo per definizione?
             -> glyph_choice_manager(false, airC)->
-        {charTag(FirstCharacter, "affectionate")}:                      Oh, che bello sentire qualcun{player_pronouns has him:o|{player_pronouns has her:a|ə}} che matcha la mia gioia di vivere.
+        {charTag(FirstCharacter, "affectionate")}:                      Oh, che bello sentire qualcun{player_pronoun has him:o|{player_pronoun has her:a|ə}} che matcha la mia gioia di vivere.
         {charTag(FifthCharacter, "neutral")}:                           Il fatto che sia temporanea non nega la mia teoria.
         
         //più terra
@@ -373,7 +373,7 @@
     {charTag(TheWitch, witch_state())}:                                 <i>Noi non abbiamo bisogno di pulizia, il nostro sporco è nido per funghi e insetti.</i> 
     -
     {charTag(FifthCharacter, "sad")}:                                   Immagino sia faticoso, avere una voce in testa, così.
-    {charTag(FifthCharacter, "neutral")}:                               O magari ti fa sentire meno {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}?
+    {charTag(FifthCharacter, "neutral")}:                               O magari ti fa sentire meno {player_pronoun has him:solo|{player_pronoun has her:sola|solə}}?
                                                                         Ho qualcosa su cui riflettere, immagino.
 
         -> witch_closing_storylet ->
@@ -706,7 +706,7 @@
 
         {charTag(Carla, "neutral")}:                                    Per ogni chiarimento richiesto da un minore, è necessaria la presenza di un adulto.
         {charTag(SecondCharacter, "energy")}:                           Ecco ecco, ora c'è qui {player_name}!
-                                                                        E {player_name} è un{player_pronouns has her:a|ə} adult{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
+                                                                        E {player_name} è un{player_pronoun has her:a|ə} adult{player_pronoun has him:o|{player_pronoun has her:a|ə}}.
                                                                         Quindi ora puoi rispondermi.
         {charTag(Carla, "neutral")}:                                    Mi ripeta la domanda.
         {charTag(SecondCharacter, "energy")}:                           È vero che le capre recitano?

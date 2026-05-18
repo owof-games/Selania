@@ -234,8 +234,8 @@
 
     - (top1)     
     Le vuole ascoltare?
-        + \ {charTag(PG, "neutral")}:               Gliene sarei grat{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
-            {charTag(Carla, "bored")}:              Se sapesse le cose che penso di lei, non mi sarebbe grat{player_pronouns has him:o|{player_pronouns has her:a|ə}} di nulla.
+        + \ {charTag(PG, "neutral")}:               Gliene sarei grat{player_pronoun has him:o|{player_pronoun has her:a|ə}}.
+            {charTag(Carla, "bored")}:              Se sapesse le cose che penso di lei, non mi sarebbe grat{player_pronoun has him:o|{player_pronoun has her:a|ə}} di nulla.
         + \ {charTag(PG, "neutral")}:               Non importa.
             {charTag(Carla, "neutral")}:            Siamo in due.
             {charTag(Carla, "bored")}:              Sono tenuta giusto a ricordarle che il Ministero la riterrà responsabile di ogni uso sconsiderato del Grimorio.
@@ -283,7 +283,7 @@
         }
 
     - (top1)     
-    {charTag(Carla, "neutral")}:                    È pront{player_pronouns has him:o|{player_pronouns has her:a|ə}}?
+    {charTag(Carla, "neutral")}:                    È pront{player_pronoun has him:o|{player_pronoun has her:a|ə}}?
         + \ {charTag(PG, "neutral")}:               Adoro le piante!
             {charTag(Carla, "bored")}:              Le assicuro che la cosa non è reciproca.
         + \ {charTag(PG, "neutral")}:               Non serve, ho il pollice verde.
@@ -350,7 +350,7 @@
         }
 
     {charTag(Carla, "happy")}:              Sono qui per spiegarle come funziona questa cucina.
-    {charTag(Carla, "bored")}:              Sperando sia più svegli{player_pronouns has him:o|{player_pronouns has her:a|ə}} di mio figlio.
+    {charTag(Carla, "bored")}:              Sperando sia più svegli{player_pronoun has him:o|{player_pronoun has her:a|ə}} di mio figlio.
         {
             - tutorial_CarlaDiscoveredTutorials has tutorialKitchen:
                 -> top2
@@ -362,7 +362,7 @@
     {charTag(Carla, "neutral")}:                    Accetta di ascoltare la mia spiegazione?
         + \ {charTag(PG, "neutral")}:               Ne ho proprio bisogno.
             {charTag(Carla, "bored")}:              È quello che temevo.
-        + \ {charTag(PG, "neutral")}:               Non serve, sono laureat{player_pronouns has him:o|{player_pronouns has her:a|ə}} in MasterChef.
+        + \ {charTag(PG, "neutral")}:               Non serve, sono laureat{player_pronoun has him:o|{player_pronoun has her:a|ə}} in MasterChef.
             {charTag(Carla, "neutral")}:            Mmm.
             {charTag(Carla, "bored")}:              Forse mio figlio è più sveglio di lei.
                                                     Si ricordi che gli incidenti in cucina non sono coperti dall'assicurazione.
@@ -475,10 +475,10 @@
     - (top1) 
     Le spiego i sassi, va bene?
         + \ {charTag(PG, "neutral")}:               Sassiiiiiiiiiiiiii!
-            {charTag(Carla, "bored")}:              Anche meno, figliol{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
+            {charTag(Carla, "bored")}:              Anche meno, figliol{player_pronoun has him:o|{player_pronoun has her:a|ə}}.
             {charTag(Carla, "neutral")}:            Anche meno.
         + \ {charTag(PG, "neutral")}:               Sassnooooooooooooo!
-            {charTag(Carla, "bored")}:              Lei è amic{player_pronouns has him:o|{player_pronouns has her:a|ə}} di Franco, vero?
+            {charTag(Carla, "bored")}:              Lei è amic{player_pronoun has him:o|{player_pronoun has her:a|ə}} di Franco, vero?
             {charTag(Carla, "neutral")}:            Avrebbe dovuto dirmelo prima.
             {charTag(Carla, "bored")}:              Avrei evitato di sprecare il mio tempo.
                 -> carla_closing_storylet

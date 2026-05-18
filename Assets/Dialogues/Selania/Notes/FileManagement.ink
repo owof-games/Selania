@@ -4,9 +4,9 @@
 //contenuto variabili: ScritteCosi
 
 
-//{player_pronouns has him:benvenuto|{player_pronouns has her:benvenuta|benvenutə}}
-//{player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}
-//{player_pronouns has him:lo|{player_pronouns has her:la|lə}}
-//{player_pronouns has him:o|{player_pronouns has her:a|ə}}
-//{player_pronouns has him:gli|{player_pronouns has her:le|lə}}
+//{player_pronoun has him:benvenuto|{player_pronoun has her:benvenuta|benvenutə}}
+//{player_pronoun has him:lui|{player_pronoun has her:lei|ləi}}
+//{player_pronoun has him:lo|{player_pronoun has her:la|lə}}
+//{player_pronoun has him:o|{player_pronoun has her:a|ə}}
+//{player_pronoun has him:gli|{player_pronoun has her:le|lə}}
 // È 

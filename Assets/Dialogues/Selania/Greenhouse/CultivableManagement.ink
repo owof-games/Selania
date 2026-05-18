@@ -906,7 +906,7 @@ QUESTIONS
      ~ greenhouse_thirteenthQuest = true
     {debug_cultivable: Entro in greenhouse_thirteenthQuest. {greenhouse_thirteenthQuest: greenhouse_thirteenthQuest ora = true|greenhouse_thirteenthQuest = false}.}
     
-        {charTag(TheWitch, witch_state())}:   <i>{player_pronouns has him: Il riscrittore...|{player_pronouns has her:La riscrittora...|Lə riscrittorə...}}
+        {charTag(TheWitch, witch_state())}:   <i>{player_pronoun has him: Il riscrittore...|{player_pronoun has her:La riscrittora...|Lə riscrittorə...}}
         
             + [{~Assapora sulla lingua il sapore del cambiamento|Sente sulle mani un accesso di futuro|Freme nel lanciarsi verso ciò che arriverà}.]
                     ~ greenhouse_cropsType += understanding

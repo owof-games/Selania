@@ -124,15 +124,15 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
             
     // unprepared
     
-        + {library_readingDuration has Short && library_shortStories^ library_aboutUnprepared != ()} \ {charTag(PG, "neutral")}:        <i>Che mi colga<b> {player_pronouns has him:impreparato|{player_pronouns has her:impreparata|impreparatə}}</b></i>
+        + {library_readingDuration has Short && library_shortStories^ library_aboutUnprepared != ()} \ {charTag(PG, "neutral")}:        <i>Che mi colga<b> {player_pronoun has him:impreparato|{player_pronoun has her:impreparata|impreparatə}}</b></i>
             ~ library_proposedBook = LIST_RANDOM(library_shortStories^ library_aboutUnprepared)
             -> from_list_to_books
 
-        + {library_readingDuration has Average && library_averageStories^ library_aboutUnprepared != ()} \ {charTag(PG, "neutral")}:        <i>Che mi colga<b> {player_pronouns has him:impreparato|{player_pronouns has her:impreparata|impreparatə}}</b>.</i>
+        + {library_readingDuration has Average && library_averageStories^ library_aboutUnprepared != ()} \ {charTag(PG, "neutral")}:        <i>Che mi colga<b> {player_pronoun has him:impreparato|{player_pronoun has her:impreparata|impreparatə}}</b>.</i>
             ~ library_proposedBook = LIST_RANDOM(library_averageStories ^ library_aboutUnprepared)
             -> from_list_to_books
         </i>
-        + {library_readingDuration has Long && library_longStories^ library_aboutUnprepared != ()} \ {charTag(PG, "neutral")}:        <i>Che mi colga<b> {player_pronouns has him:impreparato|{player_pronouns has her:impreparata|impreparatə}}</b>.
+        + {library_readingDuration has Long && library_longStories^ library_aboutUnprepared != ()} \ {charTag(PG, "neutral")}:        <i>Che mi colga<b> {player_pronoun has him:impreparato|{player_pronoun has her:impreparata|impreparatə}}</b>.
             ~ library_proposedBook = LIST_RANDOM(library_longStories ^ library_aboutUnprepared)
             -> from_list_to_books            
         

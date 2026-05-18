@@ -67,7 +67,7 @@
             + (water) \ {charTag(PG, "neutral")}:               Non so se è giusto dirlo, ma la gioia di aver aiutato qualcuno.
                     -> glyph_choice_manager(true, waterC)->
                 {charTag(TheWitch, witch_state())}:             <i>Aiutato chi {player_name} ha riscritto?
-                                                                <i>O aiutato l{player_pronouns has him:o|{player_pronouns has her:a|ə}} stess{player_pronouns has him:o|{player_pronouns has her:a|ə}} {player_name}?
+                                                                <i>O aiutato l{player_pronoun has him:o|{player_pronoun has her:a|ə}} stess{player_pronoun has him:o|{player_pronoun has her:a|ə}} {player_name}?
                                                                 <i>Ma anche noi sentiamo questa gioia.
                                                                 <i>La serra è tiepida, la stazione attende, e le nubi dicono che {player_name} è dove deve essere.</i>
                 
@@ -109,7 +109,7 @@
 
     
         {charTag(TheWitch, witch_state())}: <i>Ringraziando ancora {player_name} per ora ci congediamo.
-        <i>Senza mai davvero lasciar{player_pronouns has him:lo|{player_pronouns has her:la|lə}}.</i>
+        <i>Senza mai davvero lasciar{player_pronoun has him:lo|{player_pronoun has her:la|lə}}.</i>
     
             -> witch_closing_storylet ->
             -> main

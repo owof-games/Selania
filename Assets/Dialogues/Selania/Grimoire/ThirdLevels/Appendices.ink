@@ -207,7 +207,7 @@ La logica di comparsa delle appendici è:
     {
         - grimoire_appendices has grimInkMentor:
         <i><b>Commento di {charNameFive}</i></b>
-            {charNameFive} ha spiegato a {player_name} qual è il suo lavoro, ovvero quello di {player_pronouns has him:riscrittore|{player_pronouns has her:riscrittora|riscrittorə}}, la persona che si occupa di aiutare persone bloccate a raccontare in modo diverso la propria storia, così che possano sbloccarsi. Arrivando a scegliere un nuovo nome, segno di un nuovo inizio. Ha anche detto a {player_name} che il suo è un lavoro con pochi strumenti, e quello centrale è l'ascolto, che permette di conquistare la fiducia. Fiducia che genera il secondo strumento: l'inchiostro, elemento fondamentale per la riscrittura. Per {charNameFive} un modo efficace per migliorare la relazione è fare un buon dono, che significa dire "Ehi, ti vedo, ti capisco."
+            {charNameFive} ha spiegato a {player_name} qual è il suo lavoro, ovvero quello di {player_pronoun has him:riscrittore|{player_pronoun has her:riscrittora|riscrittorə}}, la persona che si occupa di aiutare persone bloccate a raccontare in modo diverso la propria storia, così che possano sbloccarsi. Arrivando a scegliere un nuovo nome, segno di un nuovo inizio. Ha anche detto a {player_name} che il suo è un lavoro con pochi strumenti, e quello centrale è l'ascolto, che permette di conquistare la fiducia. Fiducia che genera il secondo strumento: l'inchiostro, elemento fondamentale per la riscrittura. Per {charNameFive} un modo efficace per migliorare la relazione è fare un buon dono, che significa dire "Ehi, ti vedo, ti capisco."
     }
 
     {

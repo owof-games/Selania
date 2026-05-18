@@ -46,7 +46,7 @@
 
 
 - (top)
-    Come posso esserti utile, {player_pronouns has him: amico mio|{player_pronouns has her: amica mia|amicə miə}}?
+    Come posso esserti utile, {player_pronoun has him: amico mio|{player_pronoun has her: amica mia|amicə miə}}?
     
         + \ {charTag(PG, "neutral")}:                                           Avrei bisogno di una mano.
             -> support

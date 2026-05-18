@@ -77,7 +77,7 @@
             -> name_choice.top2 ->
             -> gender.top ->
 
-        {charTag(FirstCharacter, "neutral")}:                   {player_pronouns has her:Anche io uso i pronomi femminili!|Invece io uso i femminili.}
+        {charTag(FirstCharacter, "neutral")}:                   {player_pronoun has her:Anche io uso i pronomi femminili!|Invece io uso i femminili.}
         {charTag(FirstCharacter, "annoyed")}:                   Anche se continuo a non chiamarmi {charNameOne}.
         {charTag(FirstCharacter, "neutral")}:                   Ora: la cosa più sensata è pensare che questa roba sia un'allucinazione.
                                                                 Ha senso?
@@ -245,7 +245,7 @@
             {charTag(FirstCharacter, "affectionate")}:          C'è qualcosa di <i>concreto</i> in quest'aria.
             {charTag(FirstCharacter, "neutral")}:               Come se lentamente mi pulisse via cose che mi appesantiscono.
             
-        + \ {charTag(PG, "neutral")}:                           Hai detto così tante cose che mi sono pers{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
+        + \ {charTag(PG, "neutral")}:                           Hai detto così tante cose che mi sono pers{player_pronoun has him:o|{player_pronoun has her:a|ə}}.
             -> glyph_choice_manager(false, aetherC)->
             //Da finire di sistemare
             {charTag(FirstCharacter, "curious")}:               Bellini i numeri.
@@ -293,7 +293,7 @@
                 {charTag(FifthCharacter, "sorry")}:             Non l'ho messa esattamente così.
                                                                 Ma va bene, immagino.             
         }    
-        {charTag(FirstCharacter, "sad")}:                       {player_pronouns has him:Povero|{player_pronouns has her:Povera|Poverə}}.
+        {charTag(FirstCharacter, "sad")}:                       {player_pronoun has him:Povero|{player_pronoun has her:Povera|Poverə}}.
         {charTag(FirstCharacter, "neutral")}:                   Dice che c'è qualcosa che mi blocca.
                                                                 E che quando mi fiderò di te potrò chiederti aiuto e sbloccarmi e tornare a casa.
         {charTag(FirstCharacter, "annoyed")}:                   Tipo una versione emo di Dungeons & Dragons.
@@ -347,13 +347,13 @@
         + \ {charTag(PG, "neutral")}:                           Concordare delle regole e vederle rispettate.
                 -> glyph_choice_manager(false, earthC)->
             {charTag(FirstCharacter, "neutral")}:               Uh.
-            {charTag(FirstCharacter, "annoyed")}:               Ma ti hanno spedit{player_pronouns has him:o|{player_pronouns has her:a|ə}} qui per caso col manuale delle istruzioni?
+            {charTag(FirstCharacter, "annoyed")}:               Ma ti hanno spedit{player_pronoun has him:o|{player_pronoun has her:a|ə}} qui per caso col manuale delle istruzioni?
                                                                 Che così ti resetto.
                                                                 Che noia.
         
         + \ {charTag(PG, "neutral")}:                           La certezza che si può finire nella merda assieme e uscirne assieme.
                 -> glyph_choice_manager(false, fireC)-> 
-            {charTag(FirstCharacter, "curious")}:               Tu devi essere un{player_pronouns has him:o|{player_pronouns has her:a|ə}} che si caccia spesso nei casini, vero?
+            {charTag(FirstCharacter, "curious")}:               Tu devi essere un{player_pronoun has him:o|{player_pronoun has her:a|ə}} che si caccia spesso nei casini, vero?
             {charTag(FirstCharacter, "neutral")}:               Mi piace come frase.
                                                                 Ma non c'è solo il casino, no?
             {charTag(FirstCharacter, "sad")}:                   Anzi: la parte dura è esserci per le cose più piccole e noiose.
@@ -537,7 +537,7 @@
         //di nuovo forse più terra che aria    
         + \ {charTag(PG, "neutral")}:                           Non esiste un "chi siamo davvero".
                 -> glyph_choice_manager(false, earthC)->
-            {charTag(FirstCharacter, "neutral")}:               Beh: sono abbastanza sicura che tu sia davvero pragmatic{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
+            {charTag(FirstCharacter, "neutral")}:               Beh: sono abbastanza sicura che tu sia davvero pragmatic{player_pronoun has him:o|{player_pronoun has her:a|ə}}.
                                                                 Con o senza relazioni.
                                                                 Non deve essere male tutta questa sicurezza.
             {charTag(FirstCharacter, "annoyed")}:               Credo.
@@ -617,8 +617,8 @@
             {charTag(FirstCharacter, "neutral")}:               Ehm, uh.
                                                                 Ok.
                                                                 Credo abbia senso.
-            {charTag(FirstCharacter, "annoyed")}:               Ma sei davvero intens{player_pronouns has him:o|{player_pronouns has her:a|ə}} {player_name}.
-            {charTag(FirstCharacter, "sad")}:                   Intens{player_pronouns has him:o|{player_pronouns has her:a|ə}} per me intendo.
+            {charTag(FirstCharacter, "annoyed")}:               Ma sei davvero intens{player_pronoun has him:o|{player_pronoun has her:a|ə}} {player_name}.
+            {charTag(FirstCharacter, "sad")}:                   Intens{player_pronoun has him:o|{player_pronoun has her:a|ə}} per me intendo.
                 
         + \ {charTag(PG, "neutral")}:                           <i>Resto in meditativo silenzio.</i>
                 -> glyph_choice_manager(false, aetherC)->
@@ -742,9 +742,9 @@
                                                                 “Voglio crescerla con te, questa creaturina. Con le persone che amo. Con te e Thomas.”
                                                                 E…
         {charTag(FirstCharacter, "annoyed")}:                   Madonna, quanto vorrei del vino ora.
-        {charTag(FirstCharacter, "neutral")}:                   Tu come ti saresti {player_pronouns has him:sentito|{player_pronouns has her:sentita|sentitə}} al mio posto?
+        {charTag(FirstCharacter, "neutral")}:                   Tu come ti saresti {player_pronoun has him:sentito|{player_pronoun has her:sentita|sentitə}} al mio posto?
        
-        + \ {charTag(PG, "neutral")}:                           Tradit{player_pronouns has him:o|{player_pronouns has her:a|ə}}. E arrabbiat{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
+        + \ {charTag(PG, "neutral")}:                           Tradit{player_pronoun has him:o|{player_pronoun has her:a|ə}}. E arrabbiat{player_pronoun has him:o|{player_pronoun has her:a|ə}}.
                 -> glyph_choice_manager(false, fireC)->
             {charTag(FirstCharacter, "neutral")}:               Uh.
                                                                 Scusa per il sospirone.
@@ -752,7 +752,7 @@
             {charTag(FirstCharacter, "sad")}:                   E mi ha fatto un male boia, {player_name}.
                                                                 Un male boia.
             
-        + \ {charTag(PG, "neutral")}:                           Incuriosit{player_pronouns has him:o|{player_pronouns has her:a|ə}} dall'idea di qualcosa di nuovo.
+        + \ {charTag(PG, "neutral")}:                           Incuriosit{player_pronoun has him:o|{player_pronoun has her:a|ə}} dall'idea di qualcosa di nuovo.
                 -> glyph_choice_manager(false, airC)->
             {charTag(FirstCharacter, "annoyed")}:               Qualcosa di nuovo con un tizio che ho visto tre volte.
                                                                 In una città diversa in un altro continente.
@@ -760,7 +760,7 @@
             {charTag(FirstCharacter, "sad")}:                   Eppure anche qualcosa di diverso da tutto quello che avevo.
                                                                 Dalla stasi della mia vita.
             
-        + \ {charTag(PG, "neutral")}:                           Forse spaventat{player_pronouns has him:o|{player_pronouns has her:a|ə}}, ma anche felice di questa nuova famiglia con Talco.
+        + \ {charTag(PG, "neutral")}:                           Forse spaventat{player_pronoun has him:o|{player_pronoun has her:a|ə}}, ma anche felice di questa nuova famiglia con Talco.
                 -> glyph_choice_manager(false, waterC)->
             {charTag(FirstCharacter, "sad")}:                   Sei una persona migliore di me allora, {player_name}.
                                                                 Perché le emozioni che ho provato erano davvero tante, ma non felicità.
@@ -871,7 +871,7 @@
                 -> glyph_choice_manager(false, earthC)->
             {charTag(FirstCharacter, "neutral")}:               Sei una brava persona, non mi fraintendere.
             {charTag(FirstCharacter, "annoyed")}:               Ma riesci a rendere fredda anche una cosa bella come la socialità, {player_name}.
-            {charTag(FirstCharacter, "sad")}:                   E sei riuscit{player_pronouns has him:o|{player_pronouns has her:a|ə}} pure a farmi preoccupare ancora di più.
+            {charTag(FirstCharacter, "sad")}:                   E sei riuscit{player_pronoun has him:o|{player_pronoun has her:a|ə}} pure a farmi preoccupare ancora di più.
         
         + \ {charTag(PG, "neutral")}:                           Potresti confidare queste paure ai tuoi?
                 -> glyph_choice_manager(false, waterC)->
@@ -902,7 +902,7 @@
         ~ temp charNameFive = translator(fifthChar_ActualName)
         
         
-        {charTag(FirstCharacter, "curious")}:               Ciao {player_name}, e benvenut{player_pronouns has him:o|{player_pronouns has her:a|ə}} in un nuovo flusso di coscienza di {charNameOne} che non si chiama {charNameOne} e che prima o poi troverà il suo vero nome.
+        {charTag(FirstCharacter, "curious")}:               Ciao {player_name}, e benvenut{player_pronoun has him:o|{player_pronoun has her:a|ə}} in un nuovo flusso di coscienza di {charNameOne} che non si chiama {charNameOne} e che prima o poi troverà il suo vero nome.
         {charTag(FirstCharacter, "neutral")}:               Stavo pensando a quando mi viene l'insonnia.
         {charTag(FirstCharacter, "neutral")}:               A volte si traduce in un rigirarsi nel letto guardando il cellulare, scorrendo video e articoli che ti dicono che il mondo è fottuto.
         {charTag(FirstCharacter, "annoyed")}:               E può essere stupido addormentarsi con queste cose, ma boh.

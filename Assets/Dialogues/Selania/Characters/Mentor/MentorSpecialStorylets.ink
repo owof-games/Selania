@@ -190,7 +190,7 @@
         +\ {charTag(PG, "neutral")}:                                    Bene, non ti piace arrabbiarti. Però hai ferito {charNameTwo}.
                 -> glyph_choice_manager(Mentor, earthC)->
 
-            {charTag(FifthCharacter, "bored")}:                         Essere {player_pronouns has him:riscrittore|{player_pronouns has her:riscrittora|riscrittorə}} chiede empatia, {player_name}.
+            {charTag(FifthCharacter, "bored")}:                         Essere {player_pronoun has him:riscrittore|{player_pronoun has her:riscrittora|riscrittorə}} chiede empatia, {player_name}.
             {charTag(Mentor, "sorry")}:                                 Scusa, hai ragione.
             {charTag(FifthCharacter, "sad")}:                           L'ho ferito, ed è la parte centrale di questa faccenda.
 
@@ -218,7 +218,7 @@
     {charTag(FifthCharacter, "neutral")}:                               Chiedere scusa a {charNameTwo}.
                                                                         E vedere se avrà voglia di perdonarmi.
                                                                         Grazie per l'ascolto, {player_name}.
-    {charTag(FifthCharacter, "hurry")}:                                 Sono sicura che diventerai {player_pronouns has him:un ottimo riscrittore|{player_pronouns has her:un'ottima riscrittora| unə ottimə riscrittorə}}.
+    {charTag(FifthCharacter, "hurry")}:                                 Sono sicura che diventerai {player_pronoun has him:un ottimo riscrittore|{player_pronoun has her:un'ottima riscrittora| unə ottimə riscrittorə}}.
 
         
         -> mentor_closing_storylet ->
@@ -238,7 +238,7 @@
                                                                         Liliana mi ricorda la persona che sono stata.
     {charTag(FifthCharacter, "sad")}:                                   La persona che poteva anche arrabbiarsi.
                                                                         E la sua stanchezza.
-    {charTag(FifthCharacter, "sorry")}:                                 Ti senti mai così {player_pronouns has him:stanco|{player_pronouns has her:stanca|stancə}} che vorresti sparire per un po' dal mondo, e basta?
+    {charTag(FifthCharacter, "sorry")}:                                 Ti senti mai così {player_pronoun has him:stanco|{player_pronoun has her:stanca|stancə}} che vorresti sparire per un po' dal mondo, e basta?
 
         +\ {charTag(PG, "neutral")}:                                    Quando hai smesso di poterti arrabbiare?
                 -> glyph_choice_manager(Mentor, airC)->

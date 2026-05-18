@@ -181,7 +181,7 @@
         {charTag(Franco, "neutral")}:                   No, non posso dirlo.
                                                         Una cosa così stupida.
         {charTag(Franco, "party")}:                     Ehi, una lettera di Tullio!
-        {charTag(Franco, "reading")}:	                "Diglielo amore, ti supplico, diglielo e lascial{player_pronouns has him:o|{player_pronouns has her:a|ə}} andare."
+        {charTag(Franco, "reading")}:	                "Diglielo amore, ti supplico, diglielo e lascial{player_pronoun has him:o|{player_pronoun has her:a|ə}} andare."
         {charTag(Franco, "neutral")}:                   Uh.
                                                         Insomma, {player_name}!
         {charTag(Franco, "party")}:                     Ho <b>nuotato</b>!
@@ -195,7 +195,7 @@
         {charTag(Franco, "question")}:                  Te la immagini, girino?
                                                         Una rana che salta?
         {charTag(Franco, "neutral")}:                   Ma c'è una lettera di Giulio.
-        {charTag(Franco, "reading")}:	                "Da{player_pronouns has him:gli|{player_pronouns has her:lle|llə}} la commissione, Franco, abbi pietà per quella povera creatura!"
+        {charTag(Franco, "reading")}:	                "Da{player_pronoun has him:gli|{player_pronoun has her:lle|llə}} la commissione, Franco, abbi pietà per quella povera creatura!"
         {charTag(Franco, "question")}:	                Oggi i mariti sono un po' nervosetti.
         {charTag(Franco, "neutral")}:                   Pensavo comunque {player_name}: perché non provi a parlare con due persone quando sono assieme?
                                                         Sono abbastanza sicuro che succederà qualcosa di interessante.
@@ -304,7 +304,7 @@
                                                             +  \ {charTag(PG, "neutral")}:         Franco, per fortuna che sei divertente. Ma no.
                                                             -
         {charTag(Franco, "question")}:                  Come dice il detto?
-                                                        "{player_pronouns has him:Il riscrittore|{player_pronouns has her:La riscrittora|Lə riscrittorə}} ha sempre ragione!"
+                                                        "{player_pronoun has him:Il riscrittore|{player_pronoun has her:La riscrittora|Lə riscrittorə}} ha sempre ragione!"
         {charTag(Franco, "neutral")}:                   Povero zio Gracco.
                                                         Spera sempre di diventare famoso.
                                                         A dopo {player_name}!

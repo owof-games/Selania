@@ -141,7 +141,7 @@
     
     
     {charTag(TheWitch, witch_state())}:                             <i>Abbiamo osservato {player_name}.
-                                                                    <i>L'abbiamo vist{player_pronouns has him:o|{player_pronouns has her:a|ə}} accogliere tutte le storie di <>
+                                                                    <i>L'abbiamo vist{player_pronoun has him:o|{player_pronoun has her:a|ə}} accogliere tutte le storie di <>
                                                                 {
                                                                     - listDumpCharActivators has FirstCharacter:
                                                                             ~ witch_mainStoryPNG += FirstCharacter
@@ -300,7 +300,7 @@
                                                                             ~ witch_mainStoryPNG += FifthCharacter
                                                                             {charNameFive},<>
                                                                 }
-                                                                    e poche le cose che vorremmo ancora raccontar{player_pronouns has him:gli|{player_pronouns has her:le|lə}}.
+                                                                    e poche le cose che vorremmo ancora raccontar{player_pronoun has him:gli|{player_pronoun has her:le|lə}}.
                                                                     <i>Per un cucciolo ogni bastone è un nuovo gioco.
                                                                     <i>Ma per un cane adulto un bastone è solo un bastone.
                                                                     <i>Al cambiamento bisognerebbe arrivare come cuccioli.

@@ -14,7 +14,7 @@
     
 {charTag(FirstCharacter, "neutral")}:                   {player_name}, iniziamo a cucinare assieme? 
         
-    + \ {charTag(PG, "neutral")}:                       Sono pront{player_pronouns has him:o|{player_pronouns has her:a|ə}}!
+    + \ {charTag(PG, "neutral")}:                       Sono pront{player_pronoun has him:o|{player_pronoun has her:a|ə}}!
         -> cooking_with_first_char
     
     + \ {charTag(PG, "neutral")}:                       Vorrei pensarci un attimo {charNameOne}.
@@ -221,7 +221,7 @@
                                                                 Se le cose potrebbero andare diversamente.
             {charTag(FirstCharacter, "sad")}:                   E tutte queste domande fanno un male boia.
     
-        + \ {charTag(PG, "neutral")}:                           Perché parlandole avresti tradito il gruppo? Mi son pers{player_pronouns has him:o|{player_pronouns has her:a|ə}} il nuovo "regole dell'amicizia"?
+        + \ {charTag(PG, "neutral")}:                           Perché parlandole avresti tradito il gruppo? Mi son pers{player_pronoun has him:o|{player_pronoun has her:a|ə}} il nuovo "regole dell'amicizia"?
             -> glyph_choice_manager(false, earthC)->
             {charTag(FirstCharacter, "neutral")}:               Ma è ovvio che.
                                                                 Che no.
@@ -647,7 +647,7 @@
 
             - else:
             {charTag(FirstCharacter, "curious")}:               Interessante.
-            {charTag(FirstCharacter, "neutral")}:               Ammetto di non averti ancora inquadrat{player_pronouns has him:o|{player_pronouns has her:a|ə}} molto.
+            {charTag(FirstCharacter, "neutral")}:               Ammetto di non averti ancora inquadrat{player_pronoun has him:o|{player_pronoun has her:a|ə}} molto.
                                                                 Ma siamo qui anche per conoscerci, giusto?        
         }
 
@@ -683,7 +683,7 @@
             {charTag(FirstCharacter, "affectionate")}:          E ti sciogli.
                                                                 Ed è tutto così vivo.
 
-            + \ {charTag(PG, "neutral")}:                       Quando tutto è dovere il piacere è rivoluzionario. Saggi{player_pronouns has him:o|{player_pronouns has her:a|ə}}, vero?
+            + \ {charTag(PG, "neutral")}:                       Quando tutto è dovere il piacere è rivoluzionario. Saggi{player_pronoun has him:o|{player_pronoun has her:a|ə}}, vero?
                 -> glyph_choice_manager(false, earthC)->
             {charTag(FirstCharacter, "curious")}:               Inaspettatamente saggia. 
             {charTag(FirstCharacter, "neutral")}:               Ma è una cosa sensata.
@@ -732,7 +732,7 @@
                                                                 Sì, la gioia è qualcosa che manca tanto in questo mondo ama.
                                                                 Sono così felice per te!
             //acqua sempre molto triste
-            + (water3)\ {charTag(PG, "neutral")}:               <i>Aggiungo {player_pronouns has him:pieno|{player_pronouns has her:piena|pienə}} di terrore esistenziale dell'origano.</i>
+            + (water3)\ {charTag(PG, "neutral")}:               <i>Aggiungo {player_pronoun has him:pieno|{player_pronoun has her:piena|pienə}} di terrore esistenziale dell'origano.</i>
                 ~ kitchen_recipeComplement = "origano terrorizzato"
                 -> glyph_choice_manager(true, waterC)->
             {charTag(FirstCharacter, "annoyed")}:               La cosa più millennial che potessi dire, ama.
@@ -746,14 +746,14 @@
             {charTag(FirstCharacter, "neutral")}:               Serve del tempo anche solo per vedere i risultati.
             {charTag(FirstCharacter, "sad")}:                   E nel mentre il dubbio ti rimane: avrà senso tutta 'sta roba?
         
-            +(aether3) \ {charTag(PG, "neutral")}:              <i>Tosto {player_pronouns has him:rassegnato|{player_pronouns has her:rassegnata|rassegnatə}} del coriandolo.</i>
+            +(aether3) \ {charTag(PG, "neutral")}:              <i>Tosto {player_pronoun has him:rassegnato|{player_pronoun has her:rassegnata|rassegnatə}} del coriandolo.</i>
                 ~ kitchen_recipeComplement = "coriandolo rassegnato"
                 -> glyph_choice_manager(true, aetherC)->
             {charTag(FirstCharacter, "sad")}:                   No no, niente rassegnazione {player_name}!
             {charTag(FirstCharacter, "neutral")}:               Mo mi invento qualcosa per tirarti su.
             {charTag(FirstCharacter, "curious")}:               Tipo: vino? 
     
-            + (fire3)\ {charTag(PG, "neutral")}:                <i>Caramello {player_pronouns has him:sopraffatto|{player_pronouns has her:sopraffatta|sopraffattə}} della salvia.</i>
+            + (fire3)\ {charTag(PG, "neutral")}:                <i>Caramello {player_pronoun has him:sopraffatto|{player_pronoun has her:sopraffatta|sopraffattə}} della salvia.</i>
                 ~ kitchen_recipeComplement = "salvia sopraffatta"
                 -> glyph_choice_manager(true, fireC)->
             {charTag(FirstCharacter, "sad")}:                   Sentimento comune.
@@ -762,7 +762,7 @@
 
             -   
         {charTag(FirstCharacter, "annoyed")}:                   Che poi è una domanda stupida da farti, vero?
-                                                                Sei {player_pronouns has him:un riscrittore|{player_pronouns has her: una riscrittora|unə riscrittorə}}, e stai facendo un lavorone anche solo con me.
+                                                                Sei {player_pronoun has him:un riscrittore|{player_pronoun has her: una riscrittora|unə riscrittorə}}, e stai facendo un lavorone anche solo con me.
         {charTag(FirstCharacter, "affectionate")}:              Grazie per questo, {player_name}!
 
             -> fourth_ingredient_dispatcher
@@ -847,7 +847,7 @@
                 -> glyph_choice_manager(true, airC)->
             {charTag(FirstCharacter, "affectionate")}:          Lo sapevo!
             {charTag(FirstCharacter, "neutral")}:               Ecco perché mi sento capita da te.
-                                                                {player_pronouns has her:unite|unit3} dalla creatività!
+                                                                {player_pronoun has her:unite|unit3} dalla creatività!
 
             //rendi più fuoco
             + (fire1)\ {charTag(PG, "neutral")}:                <i>Arrostisco scientemente delle melanzane.</i>
@@ -1294,7 +1294,7 @@
                 ~ grimoire_firstChar += grimFirstCharKitchenNegativeReaction
             
         - firstChar_relationshipStatus == neutral:
-            {charTag(FirstCharacter, "neutral")}:               Credo che la risposta sia "{player_pronouns has him:rimandato|{player_pronouns has her:rimandata|rimandatə}} a settembre".
+            {charTag(FirstCharacter, "neutral")}:               Credo che la risposta sia "{player_pronoun has him:rimandato|{player_pronoun has her:rimandata|rimandatə}} a settembre".
             {charTag(FirstCharacter, "sad")}:                   Un po' ci capiamo e un po' no.
             {charTag(FirstCharacter, "curious")}:               Che poi ci sta, no? 
             {charTag(FirstCharacter, "neutral")}:               Alla fine ci stiamo conoscendo giusto ora.

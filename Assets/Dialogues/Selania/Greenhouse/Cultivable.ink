@@ -807,7 +807,7 @@
             
             {charTag(TheWitch, witch_state())}:   <i>Ilare, <b>Canto delle compagne</b> turbina e balla riversandosi dal vaso.
             <i>In un altro tempo questo cespuglio veniva chiamato "Canto delle streghe".
-            <i>L'euforia riempie i polmoni di {player_name}, sente la gioia di sapere che non è mai stata davvero {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}.
+            <i>L'euforia riempie i polmoni di {player_name}, sente la gioia di sapere che non è mai stata davvero {player_pronoun has him:solo|{player_pronoun has her:sola|solə}}.
             <i>I piedi spingono il suo corpo nella stanza.
             <i>La sua voce si alza e canta, chiama l3 compagn3.
             <i>Si uniscono in una festa, un sabba, rendendo il mondo intero il loro palcoscenico.
@@ -837,7 +837,7 @@
     
     = step_uno
         {charTag(TheWitch, witch_state())}:   <i>Rumore di passi, qualcosa che corre, che fugge, che non arriva mai.
-        <i>I peli del fusto vibrano, si sollevano quando {player_name} si avvicina, {player_pronouns has him:lo|{player_pronouns has her:la|lə}} tengono distante.
+        <i>I peli del fusto vibrano, si sollevano quando {player_name} si avvicina, {player_pronoun has him:lo|{player_pronoun has her:la|lə}} tengono distante.
                 -> main
     
     = step_due
@@ -942,7 +942,7 @@
         ~ growthErbaLiccia = stepZero
         
         {charTag(TheWitch, witch_state())}:   <i>Dal vaso due cespuglietti erbosi.
-        <i>Da {player_name} due pensieri spinosi: quando ho smesso di essere ciò che ero, e sono diventat{player_pronouns has him:o|{player_pronouns has her:a|ə}} ciò che sono?
+        <i>Da {player_name} due pensieri spinosi: quando ho smesso di essere ciò che ero, e sono diventat{player_pronoun has him:o|{player_pronoun has her:a|ə}} ciò che sono?
             -> main
     
     = step_uno
@@ -999,7 +999,7 @@
        {charTag(TheWitch, witch_state())}:   <i>Nella calma della serra il pavimento sembra vivo.
        <i>Foglie e fiori e pistilli avanzano l3 un3 verso l3 altr3.
        <i>Il sentimento si è fatto movimento.
-       <i>Forse {player_name} non è {player_pronouns has him:solo|{player_pronouns has her:sola|solə}} nel vivere certe emozioni?
+       <i>Forse {player_name} non è {player_pronoun has him:solo|{player_pronoun has her:sola|solə}} nel vivere certe emozioni?
             -> main
     
     = step_tre
@@ -1032,7 +1032,7 @@
         ~ growthLanaNotturna = stepZero
         
         {charTag(TheWitch, witch_state())}:   <i>Ha quella sensazione, {player_name}.
-        <i>Quella di quando la notte {player_pronouns has him:lo|{player_pronouns has her:la|lə}} afferra nel letto, svegliandola, ributtandola in incubi e pensieri quotidiani soffocanti.
+        <i>Quella di quando la notte {player_pronoun has him:lo|{player_pronoun has her:la|lə}} afferra nel letto, svegliandola, ributtandola in incubi e pensieri quotidiani soffocanti.
         <i>Di quando si agita tra le coperte, in trappola.
         {debug: growthLanaNotturna è {growthLanaNotturna}, greenhouse_chosenCultivable è {greenhouse_chosenCultivable}, greenhouse_cultivableGrowing è {greenhouse_cultivableGrowing},greenhouse_growStep è {greenhouse_growStep} }
                 -> main
@@ -1046,7 +1046,7 @@
     = step_due
         {charTag(TheWitch, witch_state())}:   <i>Fare un passo fuori dal letto è come una corsa.
         <i>Aprire la porta, accendere una luce.
-        <i>Il mondo fuori dorme, ma {player_name} è {player_pronouns has him:sveglio|{player_pronouns has her:sveglia|svegliə}}.
+        <i>Il mondo fuori dorme, ma {player_name} è {player_pronoun has him:sveglio|{player_pronoun has her:sveglia|svegliə}}.
         <i>Qualcosa si appoggia sulle sue labbra, sulla sua coscienza.
             -> main
     
@@ -1125,7 +1125,7 @@
     = step_uno
         {charTag(TheWitch, witch_state())}:   <i>L'unione ha portato a una fioritura.
         <i>Le radici cespugliose sono sbocciate in qualcosa di nuovo.
-        <i>{player_name} pensa a chi da tempo cammina con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.
+        <i>{player_name} pensa a chi da tempo cammina con {player_pronoun has him:lui|{player_pronoun has her:lei|ləi}}.
             -> main
           
     = step_due
@@ -1140,8 +1140,8 @@
             ~ growthNonTiScordarDiTe = stepThree
             
             {charTag(TheWitch, witch_state())}:   <i>{player_name} si sente ramo, si sente radice.
-            <i>Si sente le persone che è {player_pronouns has him:stato|{player_pronouns has her:stata|statə}} e quelle che sarà.
-            <i>Le persone che l'hanno {player_pronouns has him:accompagnato|{player_pronouns has her:accompagnata|accompagnatə}} nella sua vita.
+            <i>Si sente le persone che è {player_pronoun has him:stato|{player_pronoun has her:stata|statə}} e quelle che sarà.
+            <i>Le persone che l'hanno {player_pronoun has him:accompagnato|{player_pronoun has her:accompagnata|accompagnatə}} nella sua vita.
             <i><b>Non ti scordar di te</b> è la pianta del ricordo.
             <i>E del costruire.
             <i>Del celebrare le parti di chi abbiamo incontrato, che continuano a vivere in noi.

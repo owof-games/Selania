@@ -34,7 +34,7 @@
 
     {
         - grimoire_fifthChar has grimMentorFive:
-        Da quando {player_name} è qui, per la prima volta {charNameFive} ha ammesso di essere stanca. E di sentire caldo. E poi si è lasciata andare ai ricordi: il suo primo bacio, l'uomo che ha sposato. A cui ha dedicato il resto dei suoi giorni, fino a quando non è arrivata qui. Ha chiesto a {player_name} cosa significa per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} amare un'altra persona. Per poi definirsi una "sciocca romantica", e dirmi che l'amore è ovunque, anche qui. Amore per noi.
+        Da quando {player_name} è qui, per la prima volta {charNameFive} ha ammesso di essere stanca. E di sentire caldo. E poi si è lasciata andare ai ricordi: il suo primo bacio, l'uomo che ha sposato. A cui ha dedicato il resto dei suoi giorni, fino a quando non è arrivata qui. Ha chiesto a {player_name} cosa significa per {player_pronoun has him:lui|{player_pronoun has her:lei|ləi}} amare un'altra persona. Per poi definirsi una "sciocca romantica", e dirmi che l'amore è ovunque, anche qui. Amore per noi.
     } 
 
     {
@@ -75,7 +75,7 @@
     //Storylets speciali come Mentore
     {
         - grimoire_fifthChar has grimMentorLiar:
-            Dopo l'arrivo di {charNameTwo}, la prima cosa che {charNameFive} ha chiesto a {player_name} è se è {player_pronouns has him:riuscito|{player_pronouns has her:riuscita|riuscitə}} a mandarlo a casa. Dice che qui non è sicuro per i bambini, che lui le ha tirato un calcio. Ma che le fa tenerezza, e per questo le sembra un riccio.
+            Dopo l'arrivo di {charNameTwo}, la prima cosa che {charNameFive} ha chiesto a {player_name} è se è {player_pronoun has him:riuscito|{player_pronoun has her:riuscita|riuscitə}} a mandarlo a casa. Dice che qui non è sicuro per i bambini, che lui le ha tirato un calcio. Ma che le fa tenerezza, e per questo le sembra un riccio.
     } 
 
     {
@@ -119,7 +119,7 @@
     }
     {
         - grimoire_fifthChar has grimMentorNovel:
-            Dopo aver letto il racconto <b>Il cancello</b>, {charNameFive} ha chiesto a {player_name} se non si è mai sentit{player_pronouns has him:o|{player_pronouns has her:a|ə}} così stanc{player_pronouns has him:o|{player_pronouns has her:a|ə}} da volere sparire per un po' dal mondo.
+            Dopo aver letto il racconto <b>Il cancello</b>, {charNameFive} ha chiesto a {player_name} se non si è mai sentit{player_pronoun has him:o|{player_pronoun has her:a|ə}} così stanc{player_pronoun has him:o|{player_pronoun has her:a|ə}} da volere sparire per un po' dal mondo.
     }
 
     //Storylets condivisi

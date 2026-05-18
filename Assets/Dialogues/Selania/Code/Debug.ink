@@ -59,7 +59,7 @@
 
     ~ grimoire_appendices += (grimChoicesMentor, grimChoicesWitch, grimGreenhouseMentor, grimFirstOpenKitchen, grimInkMentor, grimRewritingMentor, grimThirdOpenNest, grimSigilsMentor, grimSigilsWitch)
 
-    ~ player_pronouns = LIST_RANDOM(player_pronouns)
+    ~ player_pronoun = LIST_RANDOM(possibile_player_pronouns)
     ~ player_name = get_random_name()
 
 

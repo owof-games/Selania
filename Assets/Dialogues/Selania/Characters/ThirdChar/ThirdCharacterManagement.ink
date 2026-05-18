@@ -56,6 +56,8 @@
     VAR thirdChar_glyphVariation = 2
 
 //Tracciamento della relazione
+    //Genere registrato dellx giocatricx.
+    VAR thirdChar_recordedPlayerPronoun = ()
     //Indicatore della relazione
     VAR thirdChar_relationshipIndicator = 0
     VAR thirdChar_lastRelationshipIndicator = 0

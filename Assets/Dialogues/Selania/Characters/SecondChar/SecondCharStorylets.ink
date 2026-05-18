@@ -272,11 +272,11 @@
         {charTag(SecondCharacter, "neutral")}:                  Ma non so mica se voglio essere uno di loro.
     	        
             {
-                - player_pronouns has him:
+                - player_pronoun has him:
                     -> him_liar
-                - player_pronouns has her:
+                - player_pronoun has her:
                     -> her_liar
-                - player_pronouns has they:
+                - player_pronoun has they:
                     -> they_liar
             }       
                     
@@ -704,7 +704,7 @@
             + (ciabatta) \ {charTag(PG, "neutral")}:            Tua nonna sembra una tipa forte!
                     -> glyph_choice_manager(false, fireC)->
             {charTag(SecondCharacter, "neutral")}:              "Forte"?
-            {charTag(SecondCharacter, "energy")}:               Quanto sei {player_pronouns has him:vecchio|{player_pronouns has her:vecchia|vecchiə}}?
+            {charTag(SecondCharacter, "energy")}:               Quanto sei {player_pronoun has him:vecchio|{player_pronoun has her:vecchia|vecchiə}}?
             {charTag(SecondCharacter, "emotional")}:            Però sì, lei spacca proprio.
                                                                 Una volta ha lanciato una ciabatta in faccia a papà perché l'ha chiamata strega.
                                                                 E poi gli ha sputato di nascosto nel caffè.
@@ -1105,7 +1105,7 @@
                 ~ change_entity_place(Mentor)
         }      
         
-        {charTag(SecondCharacter, "energy")}:                   Tu hai sempre voluto fare {player_pronouns has him: il riscrittore|{player_pronouns has her: la riscrittora|lə riscrittorə}} come lavoro?
+        {charTag(SecondCharacter, "energy")}:                   Tu hai sempre voluto fare {player_pronoun has him: il riscrittore|{player_pronoun has her: la riscrittora|lə riscrittorə}} come lavoro?
         
             + \ {charTag(PG, "neutral")}:                       Sei curioso di sapere come funziona? Perché siamo in due.
                     -> glyph_choice_manager(false, airC)->
@@ -1125,7 +1125,7 @@
                 {charTag(SecondCharacter, "angry")}:            Io so fare le frazioni!
             }
                     
-            + \ {charTag(PG, "neutral")}:                       Mi piace tenermi impegnat{player_pronouns has him:o|{player_pronouns has her:a|ə}}, non mi importa molto il come.
+            + \ {charTag(PG, "neutral")}:                       Mi piace tenermi impegnat{player_pronoun has him:o|{player_pronoun has her:a|ə}}, non mi importa molto il come.
                     -> glyph_choice_manager(false, earthC)->
             {charTag(SecondCharacter, "neutral")}:              Ah.        
                                                                 Ai grandi piace parlare di lavoro.

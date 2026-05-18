@@ -446,7 +446,7 @@
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
         - frog_currentMission has missionFive:
-        {charTag(Franco, "party")}:                 Ma ciao chiacchieron{player_pronouns has him:e|{player_pronouns has her:a|ə}}!
+        {charTag(Franco, "party")}:                 Ma ciao chiacchieron{player_pronoun has him:e|{player_pronoun has her:a|ə}}!
 
         - else:
         {charTag(Franco, "party")}:                 Tra qualche sera c'è il karaoke di cugina Sputt.
@@ -456,7 +456,7 @@
                                                     No, non posso dirlo.
                                                     Una cosa così stupida.
                                                     Ehi, una lettera di Tullio!
-        {charTag(Franco, "reading")}:	            "Diglielo amore, ti supplico, diglielo e lascial{player_pronouns has him:o|{player_pronouns has her:a|ə}} andare."
+        {charTag(Franco, "reading")}:	            "Diglielo amore, ti supplico, diglielo e lascial{player_pronoun has him:o|{player_pronoun has her:a|ə}} andare."
         {charTag(Franco, "neutral")}:               Uh.
                                                     Insomma, {player_name}!
         {charTag(Franco, "party")}:                 Ho <b>nuotato</b>!
@@ -471,7 +471,7 @@
         {charTag(Franco, "question")}:              Te la immagini, girino?
                                                     Una rana che salta?
         {charTag(Franco, "neutral")}:               Ma c'è una lettera di Giulio.
-        {charTag(Franco, "reading")}:	            "Di{player_pronouns has him:gli|{player_pronouns has her:lle|llə}} della commissione, Franco, abbi pietà per quella povera creatura!"
+        {charTag(Franco, "reading")}:	            "Di{player_pronoun has him:gli|{player_pronoun has her:lle|llə}} della commissione, Franco, abbi pietà per quella povera creatura!"
         {charTag(Franco, "question")}:              Oggi i mariti sono un po' nervosetti.
     }
 
@@ -574,7 +574,7 @@
         {charTag(Franco, "party")}:                 I gatti sono così saggi.
         {charTag(Franco, "neutral")}:               Ma zia Graaak dice sempre: tanto va la gatta allo stagno, che ci rimette il girino.
         {charTag(Franco, "reading")}:	            Uh, una lettera di Tullio.
-                                                    "Franco, di a quel{player_pronouns has her:la|lə} pover{player_pronouns has him:o|{player_pronouns has her:a|ə}} {player_name} quello che devi dir{player_pronouns has him:gli|{player_pronouns has her:le|lə}}!"
+                                                    "Franco, di a quel{player_pronoun has her:la|lə} pover{player_pronoun has him:o|{player_pronoun has her:a|ə}} {player_name} quello che devi dir{player_pronoun has him:gli|{player_pronoun has her:le|lə}}!"
         {charTag(Franco, "question")}:              Uh, è sempre così teso.
         {charTag(Franco, "party")}:                 Comunque {player_name}: sono felice che hai parlato con lei.
                                                     Perché il lavoro che fai è molto delicato.
@@ -665,7 +665,7 @@
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
         - frog_currentMission has missionEight:
-        {charTag(Franco, "party")}:                 Ecco qui {player_pronouns has him:il|{player_pronouns has her:la|lə}} campion{player_pronouns has him:e|{player_pronouns has her:essa|essə}} di bibliotecosità!
+        {charTag(Franco, "party")}:                 Ecco qui {player_pronoun has him:il|{player_pronoun has her:la|lə}} campion{player_pronoun has him:e|{player_pronoun has her:essa|essə}} di bibliotecosità!
 
         - else:
         {charTag(Franco, "neutral")}:               Euforbo ha portato a casa una pulce d'acqua.

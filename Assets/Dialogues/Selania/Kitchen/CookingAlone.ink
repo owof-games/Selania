@@ -3,7 +3,7 @@
     
     {charTag(Franco, "party")}:                     Girino!
                                                     Eccoti cra!
-                                                    Sei {player_pronouns has him:pronto|{player_pronouns has her:pronta|prontə}} per cucinare assieme?
+                                                    Sei {player_pronoun has him:pronto|{player_pronoun has her:pronta|prontə}} per cucinare assieme?
         
         + + \ {charTag(PG, "neutral")}:                      Ci sto!
             -> cooking_with_frog
@@ -107,7 +107,7 @@
         {charTag(Franco, "party")}:                             Anche se noi rane non lavoriamo.
         {charTag(Franco, "neutral")}:                           È un'occupazione molto stupida.
         {charTag(Franco, "question")}:                          Ma il tuo lavoro invece, {player_name}?
-                                                                Sei {player_pronouns has him:soddisfatto|{player_pronouns has her:soddisfatta|soddisfattə}} di quello che stai facendo?
+                                                                Sei {player_pronoun has him:soddisfatto|{player_pronoun has her:soddisfatta|soddisfattə}} di quello che stai facendo?
             
             + \ {charTag(PG, "neutral")}:                       <i>Aggiungo con risolutezza della assafetida.</i>
                     ~ kitchen_recipeAdjective = "risoluta"
@@ -181,7 +181,7 @@
         {charTag(Franco, "party")}:                             E visto che non cucio, non sbaglio mai, vero?
         {charTag(Franco, "neutral")}:                           Però {charNameFive} dice che potrei essere una pessima influenza per {charNameTwo}.
         {charTag(Franco, "question")}:                          Cosa strana, perché ho provato la febbre e non l'ho.
-                                                                Ma tu che ci lavori tanto assieme, che idea ti sei fatt{player_pronouns has him:o|{player_pronouns has her:a|ə}} di {charNameFive}?
+                                                                Ma tu che ci lavori tanto assieme, che idea ti sei fatt{player_pronoun has him:o|{player_pronoun has her:a|ə}} di {charNameFive}?
 
             + \ {charTag(PG, "neutral")}:                       <i>Decoro con della granella di affetto.</i>
                     ~ kitchen_recipeComplement = "granella di affetto"

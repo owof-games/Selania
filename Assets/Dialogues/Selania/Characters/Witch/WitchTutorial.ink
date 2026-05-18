@@ -14,7 +14,7 @@
                                                                     <i>Il lichene prospera perché i bisogni si sovrappongono, non perché l'alga è uguale al fungo.
                                                                     <i>Cosa ne pensa {player_name}?</i>
 
-                + \ {charTag(PG, "neutral")}:                       Non sono sicur{player_pronouns has him:o|{player_pronouns has her:a|ə}}, ma forse {charNameFive} ha le migliori intenzioni.
+                + \ {charTag(PG, "neutral")}:                       Non sono sicur{player_pronoun has him:o|{player_pronoun has her:a|ə}}, ma forse {charNameFive} ha le migliori intenzioni.
                         -> glyph_choice_manager(true, waterC)->
                     {charTag(TheWitch, witch_state())}:             <i>{player_name} risplende nella sua empatia.
                                                                     <i>E il nostro intento non è creare attrito, ma porre una domanda.
@@ -56,7 +56,7 @@
         // Vecchio testo su questa parte
         // <i>Anche noi vogliamo aiutare {player_name}, e per questo condividiamo una cosa.
         // <i>{player_name} può seguire la voce di {charNameFive} e scegliere di studiare la persona che ha davanti come un uomo studia la vita attraverso un libro.
-        // <i>Oppure {player_name} può decidere di essere sé {player_pronouns has him:stesso|{player_pronouns has her:stessa|stessə}}, anche se questo può creare attrito con l'altra persona.
+        // <i>Oppure {player_name} può decidere di essere sé {player_pronoun has him:stesso|{player_pronoun has her:stessa|stessə}}, anche se questo può creare attrito con l'altra persona.
         // <i>E scoprire che c'è chi ha bisogno di venir contraddettə.
         // <i>A volte l'attrito genera fastidio, o volte genera fuoco.
         // <i>A volte brucia il vecchio, permettendo al nuovo di crescere.
@@ -111,14 +111,14 @@
                 
             -
                                                                     <i>Non è nella nostra natura il proibire.
-                                                                    <i>Ma se {player_name} vuole conoscere la natura dei sigilli, {player_pronouns has him:gli|{player_pronouns has her:le|lə}} consigliamo per prima cosa di comprendere la logica dei glifi.
+                                                                    <i>Ma se {player_name} vuole conoscere la natura dei sigilli, {player_pronoun has him:gli|{player_pronoun has her:le|lə}} consigliamo per prima cosa di comprendere la logica dei glifi.
                                                                     <i>Perché ogni glifo, come ogni scelta, è una strada.
                                                                     <i>Un vicolo di curiosità e conoscenza.
                                                                     <i>Un sentiero di azione e passione.
                                                                     <i>Un cammino di praticità e radicamento.
                                                                     <i>Un viottolo di affetto e cura.
                                                                     <i>Una calle di saggezza e spiritualità.
-                                                                    <i>E se la strada si dovesse fare buia, {player_name} sappia che il nostro sguardo vigila sempre su di {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.</i>
+                                                                    <i>E se la strada si dovesse fare buia, {player_name} sappia che il nostro sguardo vigila sempre su di {player_pronoun has him:lui|{player_pronoun has her:lei|ləi}}.</i>
 
     -> witch_closing_storylet ->
     -> main

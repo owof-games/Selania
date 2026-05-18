@@ -98,7 +98,7 @@
             -> name_choice.top2 ->
             -> gender.top ->
         {charTag(FifthCharacter, "hurry")}:                     Piacere di conoscerti, {player_name}.
-                                                                E {player_pronouns has him:benvenuto|{player_pronouns has her:benvenuta|benvenutə}}.
+                                                                E {player_pronoun has him:benvenuto|{player_pronoun has her:benvenuta|benvenutə}}.
                                                                 Con me usa pure i pronomi femminili.
         {
             - not waterChoice:
@@ -111,7 +111,7 @@
                                                                 Tra poco ti spiegherò anche il tuo lavoro, {player_name}.
         {
             - are_two_entities_together(FirstCharacter, PG) && grimoire_firstChar hasnt grimFirstCharTwo:
-            {charTag(FirstCharacter, "annoyed")}:               Cioè, {player_pronouns has him:uno|{player_pronouns has her:una|unə}} deve lavorare anche in una allucinazione?
+            {charTag(FirstCharacter, "annoyed")}:               Cioè, {player_pronoun has him:uno|{player_pronoun has her:una|unə}} deve lavorare anche in una allucinazione?
             {charTag(FifthCharacter, "neutral")}:               Allucinazione?
         }
         {charTag(FifthCharacter, "neutral")}:                   Prima però una cosa importante: qui avrai a che fare con cose viventi piene di storie.
@@ -120,7 +120,7 @@
         {charTag(FifthCharacter, "neutral")}:                   Ci saranno occasioni in cui potrai evitarle e non ti perderai nulla di questa esperienza.
                                                                 Ma quando si tratta delle persone, accogliere le loro ferite farà parte del tuo lavoro.
                                                                 Sono sicura che parleranno di cose delicate nel modo migliore, ma ricorda: fermarsi o rinunciare non è un fallimento.
-                                                                Se senti il bisogno di staccare puoi tornare in camera, il posto da cui sei {player_pronouns has him:arrivato|{player_pronouns has her:arrivata|arrivatə}} e stenderti sul letto.
+                                                                Se senti il bisogno di staccare puoi tornare in camera, il posto da cui sei {player_pronoun has him:arrivato|{player_pronoun has her:arrivata|arrivatə}} e stenderti sul letto.
                                                                 Al risveglio, troverai tutto come l'hai lasciato.
         {charTag(FifthCharacter, "hurry")}:                     E se non vorrai più tornare, ci saranno sicuramente altre persone pronte ad aiutare chi viene qui in cerca di risposte.
 
@@ -161,7 +161,7 @@
         + \ {charTag(PG, "neutral")}:                           Non mi pesa correre qualche rischio!
             -> glyph_choice_manager(Mentor, fireC) ->
 
-            {charTag(FifthCharacter, "sad")}:                   Non si tratta di correre dei rischi o meno, amic{player_pronouns has him:o|{player_pronouns has her:a|ə}} mi{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
+            {charTag(FifthCharacter, "sad")}:                   Non si tratta di correre dei rischi o meno, amic{player_pronoun has him:o|{player_pronoun has her:a|ə}} mi{player_pronoun has him:o|{player_pronoun has her:a|ə}}.
             {charTag(FifthCharacter, "neutral")}:               Anche la persona più scavezzacollo al mondo a un certo punto può spezzarsi.
                                                                 E per questo è importante capire quali siano i propri confini prima di farsi male.
 
@@ -186,11 +186,11 @@
             - aetherChoice:
                 {charTag(FifthCharacter, "neutral")}:           Quando prima mi hai chiesto se questo sia un luogo misterico, hai mostrato con tranquillità un interesse verso l'occulto e le cose spirituali.
                 {charTag(FifthCharacter, "hurry")}:             Ed è una cosa che mi risuona molto.
-                {charTag(FifthCharacter, "sad")}:               Altre persone potrebbero giudicarti poco razionale, scollegat{player_pronouns has him:o|{player_pronouns has her:a|ə}} dalla realtà.
-                {charTag(FifthCharacter, "neutral")}:           Oppure potrebbero ritrovare in te un{player_pronouns has him:o|{player_pronouns has her:a|ə}} compagn{player_pronouns has him:o|{player_pronouns has her:a|ə}} con cui confidare le esperienze più insolite.
+                {charTag(FifthCharacter, "sad")}:               Altre persone potrebbero giudicarti poco razionale, scollegat{player_pronoun has him:o|{player_pronoun has her:a|ə}} dalla realtà.
+                {charTag(FifthCharacter, "neutral")}:           Oppure potrebbero ritrovare in te un{player_pronoun has him:o|{player_pronoun has her:a|ə}} compagn{player_pronoun has him:o|{player_pronoun has her:a|ə}} con cui confidare le esperienze più insolite.
 
             - earthChoice:
-                {charTag(FifthCharacter, "hurry")}:             Quando prima ti sei abbandotat{player_pronouns has him:o|{player_pronouns has her:a|ə}} a tutta questa natura, ho scoperto di aver già un punto di contatto con te.
+                {charTag(FifthCharacter, "hurry")}:             Quando prima ti sei abbandotat{player_pronoun has him:o|{player_pronoun has her:a|ə}} a tutta questa natura, ho scoperto di aver già un punto di contatto con te.
                 {charTag(FifthCharacter, "sad")}:               Non tutte le persone potrebbero trovarsi d'accordo: c'è chi ama gli spazi urbani e chi ha paura dell'imprevedibilità di un bosco.
                 {charTag(FifthCharacter, "neutral")}:           Oppure potresti trovare qualcunə che non aspettava altro che di parlarti di tutti i suoi animali preferiti.
 
@@ -260,14 +260,14 @@
         {charTag(FifthCharacter, "hurry")}:                     È un luogo con uno scopo, uno scopo che riguarda soprattutto te.
         {charTag(FifthCharacter, "neutral")}:                   Le persone che incontrerai qui sono rimaste bloccate in qualcosa: rimpianti, rimorsi, vecchie ferite e quant'altro.
                                                                 E il tuo scopo, {player_name}, è aiutarle a riscrivere il modo in cui raccontano la loro storia, così che possano sbloccarsi.
-        {charTag(FifthCharacter, "hurry")}:                     Perché tu {player_pronouns has him:amico mio|{player_pronouns has her:amica mia|amicə miə}} sei <b><i>{player_pronouns has him:un riscrittore|{player_pronouns has her:una riscrittora|unə riscrittorə}}</b></i>!
+        {charTag(FifthCharacter, "hurry")}:                     Perché tu {player_pronoun has him:amico mio|{player_pronoun has her:amica mia|amicə miə}} sei <b><i>{player_pronoun has him:un riscrittore|{player_pronoun has her:una riscrittora|unə riscrittorə}}</b></i>!
         {charTag(FifthCharacter, "neutral")}:                   E se farai bene il tuo lavoro, aiuterai moltissime persone a sbloccarsi, e a scegliere un nuovo nome, il segno di un nuovo inizio.
             {
                 - are_two_entities_together(FirstCharacter, PG):
                 {charTag(FirstCharacter, "annoyed")}:           Tipo, un nome diverso da {charNameOne}.
                 {charTag(FifthCharacter, "hurry")}:             Esattamente, {charNameOne}!   
             }
-        {charTag(FifthCharacter, "neutral")}:                   Quello {player_pronouns has him:del riscrittore|{player_pronouns has her:della riscrittora|dellə riscrittorə}} è un lavoro con pochi strumenti.
+        {charTag(FifthCharacter, "neutral")}:                   Quello {player_pronoun has him:del riscrittore|{player_pronoun has her:della riscrittora|dellə riscrittorə}} è un lavoro con pochi strumenti.
                                                                 Come ti dicevo all'inizio, il primo è l'ascolto.
                                                                 Accogli le loro storie, capisci quale sia la cosa giusta da dire per farle sentire comprese.
         {charTag(FifthCharacter, "hurry")}:                     Conquista la loro fiducia.
@@ -350,7 +350,7 @@
     
 
         {charTag(FifthCharacter, "hurry")}:                     {player_name}!
-                                                                Credo sia giunto il momento di spiegarti le ultime cose importanti per il tuo lavoro di {player_pronouns has him:riscrittore|{player_pronouns has her:riscrittora|riscrittorə}}.
+                                                                Credo sia giunto il momento di spiegarti le ultime cose importanti per il tuo lavoro di {player_pronoun has him:riscrittore|{player_pronoun has her:riscrittora|riscrittorə}}.
         {
             - are_two_entities_together(SecondCharacter, PG):
             {charTag(SecondCharacter, "angry")}:                Uffa. Sembra di stare a scuola.
@@ -379,7 +379,7 @@
             + \ {charTag(PG, "neutral")}:                       È un bel po' di lavoro per una sola persona.
                     -> glyph_choice_manager(Mentor, fireC)->
 
-                {charTag(FifthCharacter, "neutral")}:           Ma non sei sol{player_pronouns has him:o|{player_pronouns has her:a|ə}}: hai me.
+                {charTag(FifthCharacter, "neutral")}:           Ma non sei sol{player_pronoun has him:o|{player_pronoun has her:a|ə}}: hai me.
                                                                 E l'esperienza che man mano accumulerai.
                 {charTag(FifthCharacter, "neutral")}:           Ma soprattutto me.                                                
                     

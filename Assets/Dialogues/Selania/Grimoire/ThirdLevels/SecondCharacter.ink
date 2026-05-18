@@ -67,7 +67,7 @@
 
     {
         - grimoire_secondChar has grimSecondCharEleven:
-            Il piccolo chimico {charNameTwo} ama fare pasticci: si è intossicato mischiando prodotti per la pulizia; ha riempito il letto della madre di sabbia; ha distrutto il frullatore dell'amico del fratello. Però ha scoperto cos'è l'elettricità e i fili elettrici nel muro, e questo l'ha reso felice. Ritiene che "loro" (non abbiamo capito se anche {player_name} è inclus{player_pronouns has him:o|{player_pronouns has her:a|ə}} e se anche noi lo siamo) non si fanno abbastanza domande su questo posto, e che quindi tocchi a lui trovare le risposte.
+            Il piccolo chimico {charNameTwo} ama fare pasticci: si è intossicato mischiando prodotti per la pulizia; ha riempito il letto della madre di sabbia; ha distrutto il frullatore dell'amico del fratello. Però ha scoperto cos'è l'elettricità e i fili elettrici nel muro, e questo l'ha reso felice. Ritiene che "loro" (non abbiamo capito se anche {player_name} è inclus{player_pronoun has him:o|{player_pronoun has her:a|ə}} e se anche noi lo siamo) non si fanno abbastanza domande su questo posto, e che quindi tocchi a lui trovare le risposte.
     }
     
     {
@@ -78,7 +78,7 @@
     //Storylets speciali
     {
         - grimoire_secondChar has grimSecondCharNovel:
-            Dopo la lettura de <b>Il sassolino</b> di Lamia, {charNameTwo} ha chiesto esaltato che cosa avrebbe fatto {player_name} in quella situazione. E poi {player_pronouns has him:gli|{player_pronouns has her:le|lə}} ha detto che gli ricorda molto la scuola, che le maestre vogliono che i bambini stiano sempre fermi, e che gli adulti non vedono mai certi problemi.
+            Dopo la lettura de <b>Il sassolino</b> di Lamia, {charNameTwo} ha chiesto esaltato che cosa avrebbe fatto {player_name} in quella situazione. E poi {player_pronoun has him:gli|{player_pronoun has her:le|lə}} ha detto che gli ricorda molto la scuola, che le maestre vogliono che i bambini stiano sempre fermi, e che gli adulti non vedono mai certi problemi.
     }
 
     {
@@ -191,7 +191,7 @@
     {kitchen_secondCharRecipeNoun}: senza, non si chiamerebbe {kitchen_secondCharRecipe}! Che è anche il motivo per cui sono Franco e mi chiamo Franco e non, che ne so, Acuto. Anche perché poi la mia voce è bassa e, uh, una lettera di Tullio "Rimani concentrato amore ti prego è solo una ricetta!". Povero amore, sempre così stressato. Torniamo a noi. La storia della {kitchen_secondCharRecipe} è vecchia quanto zia Graaak, che a occhio croce sono venti generazioni di rane. Non tanto. Forse per questo {player_name} e {charNameOne} non si sono fatti problemi nell'aggiungere della {kitchen_secondCharRecipeAdjective}, cosa che non pensavo nemmeno fosse commestibile, che è diverso da combustibile, perché una la mangi e l'altra la usi contro, uh una lettera di Giulio "Non scriverlo o ti denunciano!", ah, quanto è teso. Dicevamo. Per qualche strano motivo {charNameTwo} ha riempito il lavello di piatti anche non sporchi, per poi spolverare mezza cucina con {kitchen_secondCharRecipeComplement}, cosa che attirerà qui le formiche per i prossimi otto giorni (e quindi dovrò mettere di nuovo la museruola a zio Gracco). <>
     {
         - kitchen_secondCharExtraIngredient != ():
-            Non pag{player_pronouns has him:o|{player_pronouns has her:a|ə}} e nemmeno pagur{player_pronouns has him:o|{player_pronouns has her:a|ə}}, {player_name} ha concluso con l'aggiunta di un ingrediente speciale: {ingredientTranslator(kitchen_secondCharExtraIngredient)}, perché al girino piace rischiare. <>
+            Non pag{player_pronoun has him:o|{player_pronoun has her:a|ə}} e nemmeno pagur{player_pronoun has him:o|{player_pronoun has her:a|ə}}, {player_name} ha concluso con l'aggiunta di un ingrediente speciale: {ingredientTranslator(kitchen_secondCharExtraIngredient)}, perché al girino piace rischiare. <>
 
         - else:
             Per il bene dell'umanità e sicuramente per quello di {charNameTwo}, {player_name} ha deciso di non aggiungere altro. <>
@@ -202,15 +202,15 @@
     //Recap cose dette
     {
         - grimoire_secondChar has grimSecondCharKitchenOne:
-            Durante l'incontro in cucina, {charNameTwo} e {player_name} hanno parlato di animali. {charNameTwo} ha raccontato che gli piace inventare animali unendo pezzi diversi, e poi si è lamentato perché gli adulti non si divertono davvero. E dopo aver chiesto a {player_name} come gli piaccia divertirsi, {player_pronouns has him:gli|{player_pronouns has her:le|lə}} ha detto che per capire meglio le persone, le associa agli animali. E ha chiesto a {player_name} che animale si sente, e se {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} capisce le persone. E poi, frustrato, ha detto che i grandi lo ritengono strano, ma lui li trova strani, e ha chiesto a {player_name} se {player_pronouns has him:gli|{player_pronouns has her:le|lə}} piace come le altre persone l{player_pronouns has him:o|{player_pronouns has her:a|ə}} trattano. 
+            Durante l'incontro in cucina, {charNameTwo} e {player_name} hanno parlato di animali. {charNameTwo} ha raccontato che gli piace inventare animali unendo pezzi diversi, e poi si è lamentato perché gli adulti non si divertono davvero. E dopo aver chiesto a {player_name} come gli piaccia divertirsi, {player_pronoun has him:gli|{player_pronoun has her:le|lə}} ha detto che per capire meglio le persone, le associa agli animali. E ha chiesto a {player_name} che animale si sente, e se {player_pronoun has him:lui|{player_pronoun has her:lei|ləi}} capisce le persone. E poi, frustrato, ha detto che i grandi lo ritengono strano, ma lui li trova strani, e ha chiesto a {player_name} se {player_pronoun has him:gli|{player_pronoun has her:le|lə}} piace come le altre persone l{player_pronoun has him:o|{player_pronoun has her:a|ə}} trattano. 
     }
     {
         - grimoire_secondChar has grimSecondCharKitchenTwo:
-            Durante l'incontro in cucina, {charNameTwo} e {player_name} hanno parlato di scuola. {charNameTwo} all'inizio non l'ha presa bene, e si è molto lamentato delle punizioni, per poi voler sapere come se la cava {player_name} nelle cose che fa. Ha raccontato di come la madre dia per scontate le cose giuste che fa a scuola ma si arrabbia se lui sbaglia, e che lei gli dice che deve essere bravo a scuola, il fratello buono, la nonna furbo, e lui non sa chi essere. Ha chiesto a {player_name} come {player_pronouns has him:gli|{player_pronouns has her:le|lə}} piace lavorare, per poi confidar{player_pronouns has him:gli|{player_pronouns has her:le|lə}} che si nasconde a scuola in un posto segreto per leggere. E ha chiesto a {player_name} se non si sente mai sol{player_pronouns has him:o|{player_pronouns has her:a|ə}}.  
+            Durante l'incontro in cucina, {charNameTwo} e {player_name} hanno parlato di scuola. {charNameTwo} all'inizio non l'ha presa bene, e si è molto lamentato delle punizioni, per poi voler sapere come se la cava {player_name} nelle cose che fa. Ha raccontato di come la madre dia per scontate le cose giuste che fa a scuola ma si arrabbia se lui sbaglia, e che lei gli dice che deve essere bravo a scuola, il fratello buono, la nonna furbo, e lui non sa chi essere. Ha chiesto a {player_name} come {player_pronoun has him:gli|{player_pronoun has her:le|lə}} piace lavorare, per poi confidar{player_pronoun has him:gli|{player_pronoun has her:le|lə}} che si nasconde a scuola in un posto segreto per leggere. E ha chiesto a {player_name} se non si sente mai sol{player_pronoun has him:o|{player_pronoun has her:a|ə}}.  
     }
     {
         - grimoire_secondChar has grimSecondCharKitchenThree:
-            Durante l'incontro in cucina, {charNameTwo} e {player_name} hanno parlato di bugie. {charNameTwo} ha temuto che {player_name} volesse sgridarlo di nuovo, per poi chiedere scusa e domandare se tutte le bugie sono sbagliate. Ha raccontato che a scuola dice molte bugie e che per questo ha un soprannome, ma che è l'unico modo per farsi amici. E che suo fratello gli ha detto che le storie sono delle bugie per affrontare le cose schifose. Ha concluso chiedendo a {player_name} cosa significhi per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} essere grande.
+            Durante l'incontro in cucina, {charNameTwo} e {player_name} hanno parlato di bugie. {charNameTwo} ha temuto che {player_name} volesse sgridarlo di nuovo, per poi chiedere scusa e domandare se tutte le bugie sono sbagliate. Ha raccontato che a scuola dice molte bugie e che per questo ha un soprannome, ma che è l'unico modo per farsi amici. E che suo fratello gli ha detto che le storie sono delle bugie per affrontare le cose schifose. Ha concluso chiedendo a {player_name} cosa significhi per {player_pronoun has him:lui|{player_pronoun has her:lei|ləi}} essere grande.
     }
 
     //Feedback ingrediente extra
@@ -244,7 +244,7 @@
             Dopo aver cucinato assieme, {charNameTwo} ha detto a {player_name} che non gli è piaciuto molto il modo in cui hanno parlato.
 
         - grimoire_secondChar has grimSecondCharKitchenNeutralReaction:
-            Dopo aver cucinato assieme, {charNameThree} ha detto a {player_name} che deve ancora capire se vuole fare o meno amicizia con {player_name}, perché c'erano dei momenti di gioia e dei momenti in cui non {player_pronouns has him:lo|{player_pronouns has her:la|lə}} capiva.
+            Dopo aver cucinato assieme, {charNameThree} ha detto a {player_name} che deve ancora capire se vuole fare o meno amicizia con {player_name}, perché c'erano dei momenti di gioia e dei momenti in cui non {player_pronoun has him:lo|{player_pronoun has her:la|lə}} capiva.
 
     }
     

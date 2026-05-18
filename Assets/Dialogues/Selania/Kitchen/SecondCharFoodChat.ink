@@ -469,7 +469,7 @@
                                                                 Mi piace tanto grattugiare le cose!    
         {charTag(SecondCharacter, "neutral")}:                  Mi puniscono, ma poi sono il più bravo.
         {charTag(SecondCharacter, "angry")}:                    Che è una cosa ancora più stupida.
-        {charTag(SecondCharacter, "energy")}:                   Tu sei {player_pronouns has him:il più bravo|{player_pronouns has her:la più brava|lə più bravə}} in quello che fai?
+        {charTag(SecondCharacter, "energy")}:                   Tu sei {player_pronoun has him:il più bravo|{player_pronoun has her:la più brava|lə più bravə}} in quello che fai?
 
                 -> kitchen_moon_feedback -> 
             
@@ -694,7 +694,7 @@
         {charTag(SecondCharacter, "neutral")}:                  E boh.
                                                                 Forse sono qui perché mi sento solo.
         {charTag(SecondCharacter, "energy")}:                   Magari con te capisco come fare?
-        {charTag(SecondCharacter, "neutral")}:                  Tu ti senti {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}?
+        {charTag(SecondCharacter, "neutral")}:                  Tu ti senti {player_pronoun has him:solo|{player_pronoun has her:sola|solə}}?
 
             + (water3)\ {charTag(PG, "neutral")}:                <i>Do una spolverata di moltissimo cacao.</i>
                 ~ kitchen_recipeComplement = "moltissimo cacao"
@@ -755,7 +755,7 @@
                                                                 Ti ho già chiesto scusa.
         {charTag(SecondCharacter, "melanchonic")}:              Ho imparato la lezione.
             
-            + \ {charTag(PG, "neutral")}:                       Bimbo, rilassati, non sono un{player_pronouns has her:a|ə} professor{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
+            + \ {charTag(PG, "neutral")}:                       Bimbo, rilassati, non sono un{player_pronoun has her:a|ə} professor{player_pronoun has him:o|{player_pronoun has her:a|ə}}.
                     -> glyph_choice_manager(false, fireC)->
                 {charTag(SecondCharacter, "neutral")}:          Però sei qui per lavorare.
                 {charTag(SecondCharacter, "angry")}:            E alle persone che lavorano i bambini danno fastidio.
@@ -1457,7 +1457,7 @@
                                                             E poi prima ha cercato di convincermi che le ninfee sono fatte di formaggio.
                                                             Ed è quasi annegato, per fortuna sono arrivati i suoi mariti ad aiutarlo.
         
-        + \ {charTag(PG, "neutral")}:                       Sono curios{player_pronouns has him:o|{player_pronouns has her:a|ə}}: cosa ti ha fatto cambiare idea su {charNameFive}?
+        + \ {charTag(PG, "neutral")}:                       Sono curios{player_pronoun has him:o|{player_pronoun has her:a|ə}}: cosa ti ha fatto cambiare idea su {charNameFive}?
                 -> glyph_choice_manager(false, airC)->
             {charTag(SecondCharacter, "neutral")}:          Non ho cambiato idea su di lei.
                                                             Ma sono cambiate le cose che fa.
