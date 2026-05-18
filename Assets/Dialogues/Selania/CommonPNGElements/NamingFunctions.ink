@@ -195,7 +195,7 @@
                 ~ thirdChar_ActualName += ThirdF
             - else:
                 //Definire e assegnare il negativo
-                ~ thirdChar_ActualName += ThirdB
+                ~ thirdChar_ActualName += ThirdE
         }
 
 

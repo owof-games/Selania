@@ -221,13 +221,18 @@
 
 
     {
-        - grimoire_thirdChar has grimThirdCharProposal:
+        - grimoire_thirdChar has grimThirdCharFirstProposal:
             Prima della riscrittura, {charNameThree} ha detto a {player_name} di.
     } 
     {
         - thirdAffinityFeedback:
             Il valore di inchiostro che {player_name} ha raggiunto con {charNameThree} prima della riscrittura è stato: <b>{fromInkToNumbers(ThirdCharacter)}</b>.<>
     }
+
+    {
+        - grimoire_thirdChar has grimThirdCharSecondProposal:
+            Prima della riscrittura, la seconda, {charNameThree} ha detto a {player_name} di.
+    } 
 
     {
         - grimoire_thirdChar has grimThirdCharNewName:

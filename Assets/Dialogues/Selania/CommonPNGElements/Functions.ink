@@ -181,9 +181,9 @@ VAR relationshipIndicatorEnthusiasticValue = 8
                 ~ thirdChar_storyStatus = story_storyRemote
                 ~ thirdChar_mailPause = thirdChar_mailPauseDuration
 
-            - else:
+            - thirdChar_storyStatus == story_storyRemote:
                 ~ story_endedStories += story_thirdCharStoryEnded
-                ~ thirdChar_storyStatus = story_storyEnded
+                ~ thirdChar_storyStatus = story_storyPostal
                 //Il ritratto ha senso che compaia solo quando è stato davvero riscritto, praticamente quando lo vediamo a fine gioco
                 //Spostiamo poi le varianti della PNG
                 // ~ move_entity(SecondCharacterGrizzly, Safekeeping)
@@ -192,8 +192,6 @@ VAR relationshipIndicatorEnthusiasticValue = 8
                 // ~ move_entity(SecondCharacterCapibara, Safekeeping)
                 // ~ move_entity(SecondCharacterCorvo, Safekeeping)  
         }
-        
-        
         
         
 
@@ -1008,20 +1006,24 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
 
 
 
-
+        //Riscrittura
         {
-            //Riscrittura
-            - rewriting_proposal_third_character.confession && grimoire_thirdChar hasnt grimThirdCharProposal:
-                ~ grimoire_thirdChar += grimThirdCharProposal
+            - rewriting_proposal_third_character.confession && grimoire_thirdChar hasnt grimThirdCharFirstProposal:
+                ~ grimoire_thirdChar += grimThirdCharFirstProposal
         }
 
         {
-            - first_rewriting.close && grimoire_thirdChar hasnt grimThirdCharNewName:
+            - third_character_notes.seven && grimoire_thirdChar hasnt grimThirdCharSecondProposal:
+                    ~ grimoire_thirdChar += grimThirdCharSecondProposal
+        }
+
+        {
+            - third_char_post_rewriting.close && grimoire_thirdChar hasnt grimThirdCharNewName:
                 ~ grimoire_thirdChar += grimThirdCharNewName
         }
 
         {
-            - first_rewriting.secret_ending && grimoire_fifthChar hasnt grimMentorThirdSecretEnding:
+            - third_char_post_rewriting.secret_ending && grimoire_fifthChar hasnt grimMentorThirdSecretEnding:
                 ~ grimoire_fifthChar += grimMentorThirdSecretEnding
         }
 
@@ -1392,6 +1394,11 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
     {
         - third_character_notes.six && grimoire_thirdChar hasnt grimThirdCharLetterSix:
                 ~ grimoire_thirdChar += grimThirdCharLetterSix
+    }
+
+    {
+        - third_character_notes.seven && grimoire_thirdChar hasnt grimThirdCharLetterSeven:
+                ~ grimoire_thirdChar += grimThirdCharLetterSeven
     }
 
     {

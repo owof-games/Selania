@@ -158,7 +158,7 @@
     + {grimoire_thirdChar has grimThirdCharKitchenEnded}[Kitchen]
             -> grimoire_third_character_kitchen
 
-    + {grimoire_thirdChar has grimThirdCharProposal}[Rewrite]
+    + {grimoire_thirdChar has grimThirdCharFirstProposal}[Rewrite]
             -> grimoire_third_character_rewrite
 
     + {grimoire_thirdChar has grimThirdCharLetterOne}[Letters]
