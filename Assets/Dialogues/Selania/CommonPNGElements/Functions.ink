@@ -177,7 +177,7 @@ VAR relationshipIndicatorEnthusiasticValue = 8
 
     - PNG == ThirdCharacter:
         {
-            - thirdChar_storyStatus == story_storyStarted:
+            -  == story_storyStarted:
                 ~ thirdChar_storyStatus = story_storyRemote
                 ~ thirdChar_mailPause = thirdChar_mailPauseDuration
 

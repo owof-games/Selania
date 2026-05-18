@@ -660,8 +660,27 @@
         ~ thirdChar_recordedPlayerPronoun += player_pronoun
 }
 
+//Poi si fa il check legato al genere a seconda dello stato della storia.
+{
+    //Se siamo nella prima fase:
+    - thirdChar_storyStatus == story_storyStarted:
+        {
+            - thirdChar_recordedPlayerPronoun == him:
+                ~ thirdChar_relationshipIndicator = thirdChar_air + thirdChar_fire + thirdChar_earth - thirdChar_aether - thirdChar_water
+            
+            - thirdChar_recordedPlayerPronoun == her:
+                ~ thirdChar_relationshipIndicator = thirdChar_water - thirdChar_fire - thirdChar_earth - thirdChar_aether - thirdChar_air
 
-~ thirdChar_relationshipIndicator = thirdChar_aether + thirdChar_water - thirdChar_air
+            - thirdChar_recordedPlayerPronoun == they:
+                ~ thirdChar_relationshipIndicator = thirdChar_aether - thirdChar_fire - thirdChar_earth - thirdChar_water - thirdChar_air     
+
+        }
+    //Se siamo nella seconda fase:
+    - thirdChar_storyStatus == story_storyRemote:
+        ~ thirdChar_relationshipIndicator = thirdChar_water + thirdChar_aether - thirdChar_earth - thirdChar_fire - thirdChar_air
+
+}
+
 
 === function updateFourthCharacterRelation()
 // DA CREARE
