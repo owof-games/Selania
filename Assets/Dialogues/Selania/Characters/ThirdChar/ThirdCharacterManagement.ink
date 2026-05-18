@@ -212,3 +212,19 @@
     -> grimoire_storylets_updater ->
 
 ->->
+
+
+//Funzione per la trasformazione della relazione tra prima e seconda fase
+=== function third_char_relationshipFromLiveToLetters()
+//Il passaggio è un ribaltamento dello stato relazionale precedente: se all'inizio verremo premiat3 per l'uso per esempio del fuoco, ora deve essere al contrario la cosa.
+//Tengo conto delle soglie espresse per gestire affinity_calc e le ribalto (ovvero: se thirdChar_relationshipIndicator è minore uguale del valore negativo, ora lo porto al valore entusiasta)
+{
+    - thirdChar_relationshipIndicator <= relationshipIndicatorNegativeValue:
+        ~ thirdChar_relationshipIndicator = relationshipIndicatorEnthusiasticValue
+
+    - thirdChar_relationshipIndicator >= relationshipIndicatorPositiveValue:
+        ~ thirdChar_relationshipIndicator = relationshipIndicatorNegativeValue
+
+    - else:
+        ~ thirdChar_relationshipIndicator = 0
+}

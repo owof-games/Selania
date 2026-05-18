@@ -320,6 +320,7 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
+    NOTA: a seconda che la sua sia la prima o seconda lettera, ricordarsi di mettere qui un commento alla parte di "rivalutazione del rapporto" (ovvero quando si passa dal valore relazione dal vivo a quello a remoto) perché se lo lascio nella lettera verrà riconteggiato ogni volta e non ha senso.
 
     {
         - grimoire_thirdChar has grimThirdCharLetterOne:

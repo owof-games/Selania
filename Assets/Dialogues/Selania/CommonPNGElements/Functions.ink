@@ -35,16 +35,16 @@ VAR relationshipIndicatorEnthusiasticValue = 8
         ~ relationshipIndicator = firstChar_relationshipIndicator
     
     - PNG == SecondCharacter:
-        ~ relationshipIndicator = firstChar_relationshipIndicator
+        ~ relationshipIndicator = secondChar_relationshipIndicator
 
     - PNG == ThirdCharacter:
-        ~ relationshipIndicator = firstChar_relationshipIndicator
+        ~ relationshipIndicator = thirdChar_relationshipIndicator
 
     - PNG == FourthCharacter:
-        ~ relationshipIndicator = firstChar_relationshipIndicator
+        ~ relationshipIndicator = fourthChar_relationshipIndicator
 
     - PNG == FifthCharacter:
-        ~ relationshipIndicator = firstChar_relationshipIndicator            
+        ~ relationshipIndicator = fifthChar_relationshipIndicator            
 }
 
 //uso la variabile temporanea relationshipIndicator per definire lo stato della relazione
@@ -177,7 +177,7 @@ VAR relationshipIndicatorEnthusiasticValue = 8
 
     - PNG == ThirdCharacter:
         {
-            -  == story_storyStarted:
+            - thirdChar_storyStatus == story_storyStarted:
                 ~ thirdChar_storyStatus = story_storyRemote
                 ~ thirdChar_mailPause = thirdChar_mailPauseDuration
 

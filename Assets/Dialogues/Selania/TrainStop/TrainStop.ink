@@ -88,6 +88,8 @@
     
 
         {charTag(FirstCharacter, "writer")}:           Ciao ama!
+        Dopo la prima o seconda lettera (verificare), viene chiamato il ricalcolo del feedback relazione e riceviamo un commento.
+        ~ third_char_relationshipFromLiveToLetters()
 
         ~ letters_firstCharLetters_three()
         -> first_char_closing_letters -> main
