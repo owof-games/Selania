@@ -39,35 +39,6 @@
 
     }
 
-    {
-        - grimoire_thirdChar has grimThirdCharSeven:
- 
-    } 
-
-    {
-        - grimoire_thirdChar has grimThirdCharEight:
-
-    }
-
-    {
-        - grimoire_thirdChar has grimThirdCharNine:
- 
-    }
-
-    {
-        - grimoire_thirdChar has grimThirdCharTen:
-
-    }
-
-    {
-        - grimoire_thirdChar has grimThirdCharEleven:
-
-    }
-    
-    {
-        - grimoire_thirdChar has grimThirdCharTwelve:
-
-    }
     
     //Storylets speciali
     {
@@ -348,6 +319,27 @@
             <b>Quarta lettera</b>
             Saluto. <>
                 ~ letters_thirdCharLetters_four()
+    }
+
+    {
+        - grimoire_thirdChar has grimThirdCharLetterFive:
+            <b>Quinta lettera</b>
+            Saluto. <>
+                ~ letters_thirdCharLetters_five()
+    }
+
+    {
+        - grimoire_thirdChar has grimThirdCharLetterSix:
+            <b>Sesta lettera</b>
+            Saluto. <>
+                ~ letters_thirdCharLetters_six()
+    }
+
+    {
+        - grimoire_thirdChar has grimThirdCharLetterSeven:
+            <b>Settima lettera</b>
+            Saluto. <>
+                ~ letters_thirdCharLetters_seven()
     }
     
 

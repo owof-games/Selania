@@ -46,7 +46,7 @@
 
     ~ grimoire_firstChar += (grimFirstCharNine, grimFirstCharPresentation)
     ~ grimoire_secondChar += (grimSecondCharNine, grimSecondCharPresentation)
-    ~ grimoire_thirdChar += (grimThirdCharNine, grimThirdCharPresentation)
+    ~ grimoire_thirdChar += (grimThirdCharSix, grimThirdCharPresentation)
     ~ grimoire_fifthChar += grimMentorPresentation
 
     ~ thirdChar_storyStatus = story_storyStarted
@@ -184,7 +184,7 @@
     ~ kitchen_secondCharRecipeComplement = "cioccolato al latte"
     ~ kitchen_secondCharRecipe = "Pesche della discordia con cioccolato al latte"
 
-~ grimoire_thirdChar += (grimThirdCharOne, grimThirdCharTwo, grimThirdCharThree, grimThirdCharFour, grimThirdCharFive, grimThirdCharSix, grimThirdCharSeven, grimThirdCharEight, grimThirdCharNine, grimThirdCharTen, grimThirdCharEleven, grimThirdCharTwelve, grimThirdOpenNest, grimThirdCharNovel, grimThirdCharDog, grimThirdCharKitchenOne, grimThirdCharKitchenTwo, grimThirdCharKitchenThree, grimThirdCharKitchenEnded, grimThirdCharKitchenPositiveReaction, grimThirdCharKitchenNegativeReaction, grimThirdCharKitchenNeutralReaction,grimThirdCharKitchenAlone, grimThirdCharProposal, grimThirdCharNewName, grimThirdCharMentorFeedback, grimThirdCharLetterOne, grimThirdCharLetterTwo, grimThirdCharLetterThree, grimThirdCharLetterFour, grimSecondThirdChar, grimFirstThirdChar, grimThirdCharFranco, grimThirdCharMentor, grimThirdCharPresentation)
+~ grimoire_thirdChar += (grimThirdCharOne, grimThirdCharTwo, grimThirdCharThree, grimThirdCharFour, grimThirdCharFive, grimThirdCharSix,  grimThirdOpenNest, grimThirdCharNovel, grimThirdCharDog, grimThirdCharKitchenOne, grimThirdCharKitchenTwo, grimThirdCharKitchenThree, grimThirdCharKitchenEnded, grimThirdCharKitchenPositiveReaction, grimThirdCharKitchenNegativeReaction, grimThirdCharKitchenNeutralReaction,grimThirdCharKitchenAlone, grimThirdCharProposal, grimThirdCharNewName, grimThirdCharMentorFeedback, grimThirdCharLetterOne, grimThirdCharLetterTwo, grimThirdCharLetterThree, grimThirdCharLetterFour, grimThirdCharLetterFive, grimThirdCharLetterSix, grimThirdCharLetterSeven, grimSecondThirdChar, grimFirstThirdChar, grimThirdCharFranco, grimThirdCharMentor, grimThirdCharPresentation)
 
     ~ thirdChar_ActualName = Boccale
     ~ kitchen_thirdCharExtraIngredient = LIST_RANDOM(greenhouse_backupCultivable)

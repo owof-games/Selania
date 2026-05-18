@@ -243,13 +243,7 @@
 
         {charTag(Documents, "writer_thirdChar")}:      {charNameThree}: Lettere random note da parte della personaggia <>
         
-        {
-            - thirdChar_possibleStates has Riccio: 
-                {charNameThree}: xy
-            - thirdChar_possibleStates has Capibara:
-                {charNameThree}: zz
-        }
-    
+
 
 === function letters_thirdCharLetters_two()
         ~ temp charNameOne = translator(firstChar_ActualName)
@@ -260,13 +254,27 @@
         
 
         {charTag(Documents, "writer_thirdChar")}:      {charNameThree}: Lettere random note da parte della personaggia <>
-        
+
+        Dopo che mi hai risposto questa cosa nella lettera precedente:
         {
-            - thirdChar_possibleStates has Riccio: 
-                {charNameThree}: xy
-            - thirdChar_possibleStates has Capibara:
-                {charNameThree}: zz
+            - third_char_letters_choices.one.air: 
+                Una cosa aria, mi sono sentito...
+
+            - third_char_letters_choices.one.fire: 
+                Una cosa fuoco, mi sono sentito...
+
+            - third_char_letters_choices.one.earth: 
+                Una cosa terra , mi sono sentito...
+
+            - third_char_letters_choices.one.aether: 
+                Una cosa spirito, mi sono sentito...
+
+            - third_char_letters_choices.one.water: 
+                Una cosa acqua, mi sono sentito...
+
         }
+        
+
     
 
 === function letters_thirdCharLetters_three()
@@ -278,13 +286,26 @@
         
 
         {charTag(Documents, "writer_thirdChar")}:      {charNameThree}: Lettere random note da parte della personaggia <>
-        
+
+        Dopo che mi hai risposto questa cosa nella lettera precedente:
         {
-            - thirdChar_possibleStates has Riccio: 
-                {charNameThree}: xy
-            - thirdChar_possibleStates has Capibara:
-                {charNameThree}: zz
+            - third_char_letters_choices.two.air: 
+                Una cosa aria, mi sono sentito...
+
+            - third_char_letters_choices.two.fire: 
+                Una cosa fuoco, mi sono sentito...
+
+            - third_char_letters_choices.two.earth: 
+                Una cosa terra , mi sono sentito...
+
+            - third_char_letters_choices.two.aether: 
+                Una cosa spirito, mi sono sentito...
+
+            - third_char_letters_choices.two.water: 
+                Una cosa acqua, mi sono sentito...
+
         }
+        
      
 
 === function letters_thirdCharLetters_four()
@@ -297,13 +318,119 @@
 
         {charTag(Documents, "writer_thirdChar")}:      {charNameThree}: Lettere random note da parte della personaggia <>
         
+        Dopo che mi hai risposto questa cosa nella lettera precedente:
         {
-            - thirdChar_possibleStates has Riccio: 
-                {charNameThree}: xy
-            - thirdChar_possibleStates has Capibara:
-                {charNameThree}: zz
+            - third_char_letters_choices.three.air: 
+                Una cosa aria, mi sono sentito...
+
+            - third_char_letters_choices.three.fire: 
+                Una cosa fuoco, mi sono sentito...
+
+            - third_char_letters_choices.three.earth: 
+                Una cosa terra , mi sono sentito...
+
+            - third_char_letters_choices.three.aether: 
+                Una cosa spirito, mi sono sentito...
+
+            - third_char_letters_choices.three.water: 
+                Una cosa acqua, mi sono sentito...
+
         }
      
+=== function letters_thirdCharLetters_five()
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp charFifthName = translator(fifthChar_ActualName)
+        
+
+        {charTag(Documents, "writer_thirdChar")}:      {charNameThree}: Lettere random note da parte della personaggia <>
+        
+        Dopo che mi hai risposto questa cosa nella lettera precedente:
+        {
+            - third_char_letters_choices.four.air: 
+                Una cosa aria, mi sono sentito...
+
+            - third_char_letters_choices.four.fire: 
+                Una cosa fuoco, mi sono sentito...
+
+            - third_char_letters_choices.four.earth: 
+                Una cosa terra , mi sono sentito...
+
+            - third_char_letters_choices.four.aether: 
+                Una cosa spirito, mi sono sentito...
+
+            - third_char_letters_choices.four.water: 
+                Una cosa acqua, mi sono sentito...
+
+        }
+
+ === function letters_thirdCharLetters_six()
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp charFifthName = translator(fifthChar_ActualName)
+        
+
+        {charTag(Documents, "writer_thirdChar")}:      {charNameThree}: Lettere random note da parte della personaggia <>
+        
+        Dopo che mi hai risposto questa cosa nella lettera precedente:
+        {
+            - third_char_letters_choices.five.air: 
+                Una cosa aria, mi sono sentito...
+
+            - third_char_letters_choices.five.fire: 
+                Una cosa fuoco, mi sono sentito...
+
+            - third_char_letters_choices.five.earth: 
+                Una cosa terra , mi sono sentito...
+
+            - third_char_letters_choices.five.aether: 
+                Una cosa spirito, mi sono sentito...
+
+            - third_char_letters_choices.five.water: 
+                Una cosa acqua, mi sono sentito...
+
+        }
+
+    
+
+=== function letters_thirdCharLetters_seven()
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp charFifthName = translator(fifthChar_ActualName)
+        
+
+        {charTag(Documents, "writer_thirdChar")}:      {charNameThree}: Lettere random note da parte della personaggia <>
+        
+        Dopo che mi hai risposto questa cosa nella lettera precedente:
+        {
+            - third_char_letters_choices.six.air: 
+                Una cosa aria, mi sono sentito...
+
+            - third_char_letters_choices.six.fire: 
+                Una cosa fuoco, mi sono sentito...
+
+            - third_char_letters_choices.six.earth: 
+                Una cosa terra , mi sono sentito...
+
+            - third_char_letters_choices.six.aether: 
+                Una cosa spirito, mi sono sentito...
+
+            - third_char_letters_choices.six.water: 
+                Una cosa acqua, mi sono sentito...
+
+        }
+
+        Mi sento pronto per la riscrittura, e per questo ti dico questo.
+        //Secondo check relazione e inchiostro
+        //Confessione      
+
+
 
 === function letters_fourthCharLetters_one()
         ~ temp charNameOne = translator(firstChar_ActualName)

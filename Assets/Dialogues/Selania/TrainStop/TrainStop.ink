@@ -170,19 +170,39 @@
         
     = one
         ~ letters_thirdCharLetters_one()
+        -> third_char_letters_choices.one ->
         -> third_char_closing_letters -> main
 
     = two
         ~ letters_thirdCharLetters_two()
+        -> third_char_letters_choices.two ->
         -> third_char_closing_letters -> main
     
     = three
         ~ letters_thirdCharLetters_three()
+        -> third_char_letters_choices.three ->
         -> third_char_closing_letters -> main
 
     = four
         ~ letters_thirdCharLetters_four()
+        -> third_char_letters_choices.four ->
         -> third_char_closing_letters -> main
+
+    = five
+        ~ letters_thirdCharLetters_five()
+        -> third_char_letters_choices.five ->
+        -> third_char_closing_letters -> main
+
+    = six
+        ~ letters_thirdCharLetters_six()
+        -> third_char_letters_choices.six ->
+        -> third_char_closing_letters -> main
+
+    = seven
+        ~ letters_thirdCharLetters_seven()
+        -> third_char_letters_choices.seven ->
+        -> third_char_closing_letters -> main
+
     
 === fourth_character_notes ===
     

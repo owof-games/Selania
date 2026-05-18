@@ -20,24 +20,6 @@
         - grimoire_thirdChar hasnt grimThirdCharSix:
             -> third_char_main_storylets.six
             
-        - grimoire_thirdChar hasnt grimThirdCharSeven:
-            -> third_char_main_storylets.seven
-            
-        - grimoire_thirdChar hasnt grimThirdCharEight:
-            -> third_char_main_storylets.eight
-            
-        - grimoire_thirdChar hasnt grimThirdCharNine:
-            -> third_char_main_storylets.nine
-            
-        - grimoire_thirdChar hasnt grimThirdCharTen:
-            -> third_char_main_storylets.ten
-            
-        - grimoire_thirdChar hasnt grimThirdCharEleven:
-            -> third_char_main_storylets.eleven
-            
-        - grimoire_thirdChar hasnt grimThirdCharTwelve:
-            -> third_char_main_storylets.twelve
-            
         - else:
             -> third_character_opinions
     }

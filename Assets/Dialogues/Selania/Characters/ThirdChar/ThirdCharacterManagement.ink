@@ -12,7 +12,7 @@
         //Ordine di conclusione della riscrittura (prima storia conclusa, seconda storia conclusa)
         VAR thirdChar_storyEndingPosition = ()
         //Quantità di storylets letti dalla giocatrice prima di accedere alla riscrittura
-        VAR thirdChar_minStoryletsForRewriting = grimThirdCharNine
+        VAR thirdChar_minStoryletsForRewriting = grimThirdCharSix
         //Abbiamo l'info speciale su Mentore? Se le condizioni sono corrette, viene messa su true dalla funzione inkLevel(Character)
         VAR thirdChar_specialEvent = false
         //Conteggio totale delle scelte prese con la PNG
@@ -228,3 +228,6 @@
     - else:
         ~ thirdChar_relationshipIndicator = 0
 }
+
+
+

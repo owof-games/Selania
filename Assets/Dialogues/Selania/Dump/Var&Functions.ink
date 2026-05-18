@@ -23,8 +23,9 @@ VAR listDumpCharActivators = ()
             {debug: il valore di grimoire_secondChar ha grimSecondCharTwelve{grimoire_secondChar}, e per questo ho aumentato il valore di listDumpGraphics e aggiunto SecondCharacter a listDumpCharActivators. listDumpGraphics contiene {listDumpGraphics}, mentre listDumpCharActivators contiene {listDumpCharActivators}}
     }
 
+    TODO: vedere se sono sette le lettere (quindi una della sorella) o sei
     {
-        - grimoire_thirdChar has grimThirdCharTwelve && listDumpCharActivators hasnt ThirdCharacter:
+        - grimoire_thirdChar has grimThirdCharLetterSeven && listDumpCharActivators hasnt ThirdCharacter:
             ~ listDumpGraphics ++
             ~ listDumpCharActivators += ThirdCharacter
             {debug: il valore di grimoire_thirdChar ha grimThirdCharTwelve {grimoire_thirdChar}, e per questo ho aumentato il valore di listDumpGraphics e aggiunto ThirdCharacter a listDumpCharActivators. listDumpGraphics contiene {listDumpGraphics}, mentre listDumpCharActivators contiene {listDumpCharActivators}}

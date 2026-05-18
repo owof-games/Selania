@@ -232,180 +232,169 @@
         -> options_third_character
     
 
+
+    ///Scelte legate alle lettere
+    === third_char_letters_choices
+
+
+
+    = one
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour = translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
+        
+        TODO: linkare se necessario nuovo sistema di variazione glifo, anche sotto
+
+        + (air)\ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+                -> glyph_choice_manager(false, airC)->
+                
+        + (earth)\ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
+                -> glyph_choice_manager(false, earthC)->
+
+        + (fire)\ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
+                -> glyph_choice_manager(false, fireC)->
+
+        + (water)\ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+                -> glyph_choice_manager(false, waterC)->
+
+        + (aether)\ {charTag(PG, "neutral")}:        Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+                -> glyph_choice_manager(false, aetherC)->
+        -
+
+        ->->
+
+    = two
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour = translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        + (air)\ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+                -> glyph_choice_manager(false, airC)->
+                
+        + (earth)\ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
+                -> glyph_choice_manager(false, earthC)->
+
+        + (fire)\ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
+                -> glyph_choice_manager(false, fireC)->
+
+        + (water)\ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+                -> glyph_choice_manager(false, waterC)->
+
+        + (aether)\ {charTag(PG, "neutral")}:        Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+                -> glyph_choice_manager(false, aetherC)->
+        -
+        ->->
+
+
+    = three
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour = translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        + (air)\ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+                -> glyph_choice_manager(false, airC)->
+                
+        + (earth)\ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
+                -> glyph_choice_manager(false, earthC)->
+
+        + (fire)\ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
+                -> glyph_choice_manager(false, fireC)->
+
+        + (water)\ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+                -> glyph_choice_manager(false, waterC)->
+
+        + (aether)\ {charTag(PG, "neutral")}:        Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+                -> glyph_choice_manager(false, aetherC)->
+        -
+        ->->
+
+
+    = four
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour = translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        + (air)\ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+                -> glyph_choice_manager(false, airC)->
+                
+        + (earth)\ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
+                -> glyph_choice_manager(false, earthC)->
+
+        + (fire)\ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
+                -> glyph_choice_manager(false, fireC)->
+
+        + (water)\ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+                -> glyph_choice_manager(false, waterC)->
+
+        + (aether)\ {charTag(PG, "neutral")}:        Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+                -> glyph_choice_manager(false, aetherC)->
+        -
+        ->->
+
+
+    = five
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour = translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        + (air)\ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+                -> glyph_choice_manager(false, airC)->
+                
+        + (earth)\ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
+                -> glyph_choice_manager(false, earthC)->
+
+        + (fire)\ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
+                -> glyph_choice_manager(false, fireC)->
+
+        + (water)\ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+                -> glyph_choice_manager(false, waterC)->
+
+        + (aether)\ {charTag(PG, "neutral")}:        Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+                -> glyph_choice_manager(false, aetherC)->
+        -
+        ->->
+
+    = six
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour = translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
+        
+        + (air)\ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+                -> glyph_choice_manager(false, airC)->
+                
+        + (earth)\ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
+                -> glyph_choice_manager(false, earthC)->
+
+        + (fire)\ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
+                -> glyph_choice_manager(false, fireC)->
+
+        + (water)\ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+                -> glyph_choice_manager(false, waterC)->
+
+        + (aether)\ {charTag(PG, "neutral")}:        Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+                -> glyph_choice_manager(false, aetherC)->
+        -
+        ->->
+
     = seven
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
-    
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour = translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
 
-        
-        {charTag(ThirdCharacter, "neutral")}:       Frase
+        //Seconda riscrittura
 
-            
-            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
-                    -> glyph_choice_manager(false, airC)->
-
-            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
-                    -> glyph_choice_manager(false, earthC)->
-                        
-            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
-                    -> glyph_choice_manager(false, fireC)->
-
-            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
-                    -> glyph_choice_manager(false, waterC)->
-
-            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
-                    -> glyph_choice_manager(false, aetherC)->      
-            -
-
-        -> third_char_closing_storylet ->        
-        -> options_third_character     
-            
-            
-    = eight
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
-    
-
-        {charTag(ThirdCharacter, "neutral")}:       Frase
-
-            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
-                    -> glyph_choice_manager(false, airC)->
-
-            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
-                    -> glyph_choice_manager(false, earthC)->
-                    
-            + \ {charTag(PG, "neutral")}:          Cosa vuoi? Come puoi cambiare questa situazione?
-                    -> glyph_choice_manager(false, fireC)->
-                
-            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
-                    -> glyph_choice_manager(false, waterC)->
-
-            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
-                    -> glyph_choice_manager(false, aetherC)->
-            -
-
-                -> third_char_closing_storylet ->        
-                -> options_third_character 
-    
-    
-    = nine
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
-    
-
-        {charTag(ThirdCharacter, "neutral")}:       Frase
-
-            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
-                    -> glyph_choice_manager(false, airC)->
-                    
-            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
-                    -> glyph_choice_manager(false, earthC)->
-
-            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
-                    -> glyph_choice_manager(false, fireC)->
-   
-            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
-                    -> glyph_choice_manager(false, waterC)->
-                    
-            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
-                    -> glyph_choice_manager(false, aetherC)->
-            -
-
-            -> third_char_closing_storylet ->
-            -> options_third_character
-    
-    = ten
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
-    
-
-        {charTag(ThirdCharacter, "neutral")}:       Frase
- 
-            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
-                    -> glyph_choice_manager(false, airC)->
-
-            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
-                    -> glyph_choice_manager(false, earthC)->
-
-            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
-                    -> glyph_choice_manager(false, fireC)->
-
-            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
-                    -> glyph_choice_manager(false, waterC)->
-                    
-            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
-                    -> glyph_choice_manager(false, aetherC)->
-            -
-
-            -> third_char_closing_storylet ->
-            -> options_third_character 
-    
-    = eleven
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
-    
-
-        
-        {charTag(ThirdCharacter, "neutral")}:       Frase.
-   
-            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
-                    -> glyph_choice_manager(false, airC)->
-
-            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
-                    -> glyph_choice_manager(false, earthC)->
-                
-            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
-                    -> glyph_choice_manager(false, fireC)->
-                    
-            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
-                    -> glyph_choice_manager(false, waterC)->
-                        
-            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
-                    -> glyph_choice_manager(false, aetherC)->
-            -   
-                -> third_char_closing_storylet ->
-                -> options_third_character 
-    
-    = twelve
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
-    
-
-        {charTag(ThirdCharacter, "neutral")}:       Frase
-
-            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
-                    -> glyph_choice_manager(false, airC)->
-                    
-            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
-                    -> glyph_choice_manager(false, earthC)->
-
-            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
-                    -> glyph_choice_manager(false, fireC)->
-
-            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
-                    -> glyph_choice_manager(false, waterC)->
-                
-            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
-                    -> glyph_choice_manager(false, aetherC)->
-        - 
-
-            -> third_char_closing_storylet ->
-            -> options_third_character   
+        ->->

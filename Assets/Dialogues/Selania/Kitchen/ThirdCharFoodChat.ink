@@ -32,7 +32,7 @@
     - (top)
     {charTag(PG, "neutral")}:      In particolare, ripensando alle nostre conversazioni, mi farebbe piacere parlare di più...
         {
-            - grimoire_thirdChar hasnt grimThirdCharNine:
+            - grimoire_thirdChar hasnt grimThirdCharTwo:
                 {charTag(TheWitch, witch_state())}:   <i>{charNameTwo} ha ancora spunti di conversazione da offrire a {player_name}, se {player_name} deciderà di parlarle ancora un po'.
         }
         
@@ -48,7 +48,7 @@
                 -> kitchen_moon_feedback -> 
                 -> second_theme
   
-        + {grimoire_thirdChar has grimThirdCharNine}\ {charTag(PG, "neutral")}:         Della tua creatività.
+        + {grimoire_thirdChar has grimThirdCharTwo}\ {charTag(PG, "neutral")}:         Della tua creatività.
                 ~ cooking_animations_on()
                 ~ storage_glyphs(ThirdCharacter)
                 -> kitchen_moon_feedback -> 

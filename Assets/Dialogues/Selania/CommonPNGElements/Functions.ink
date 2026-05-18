@@ -979,38 +979,6 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
                 ~ grimoire_thirdChar += grimThirdCharSix
         }
 
-        {
-            - third_char_main_storylets.seven && grimoire_thirdChar hasnt grimThirdCharSeven:
-                ~ grimoire_thirdChar += grimThirdCharSeven
-        }
-
-        {
-            - third_char_main_storylets.eight && grimoire_thirdChar hasnt grimThirdCharEight:
-                ~ grimoire_thirdChar += grimThirdCharEight    
-        }
-
-        {
-            - third_char_main_storylets.nine && grimoire_thirdChar hasnt grimThirdCharNine:
-                ~ grimoire_thirdChar += grimThirdCharNine  
-        }
-
-        {
-            - third_char_main_storylets.ten && grimoire_thirdChar hasnt grimThirdCharTen:
-                ~ grimoire_thirdChar += grimThirdCharTen 
-        }
-
-        {
-            - third_char_main_storylets.eleven && grimoire_thirdChar hasnt grimThirdCharEleven:
-                ~ grimoire_thirdChar += grimThirdCharEleven   
-        }
-
-        {
-            - third_char_main_storylets.twelve && grimoire_thirdChar hasnt grimThirdCharTwelve:
-                ~ grimoire_thirdChar += grimThirdCharTwelve
-        }
-
-
-
 
         {
             //Storylets legati alla cucina
@@ -1414,6 +1382,21 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
     {
         - third_character_notes.four && grimoire_thirdChar hasnt grimThirdCharLetterFour:
                 ~ grimoire_thirdChar += grimThirdCharLetterFour
+    }
+
+    {
+        - third_character_notes.five && grimoire_thirdChar hasnt grimThirdCharLetterFive:
+                ~ grimoire_thirdChar += grimThirdCharLetterFive
+    }
+
+    {
+        - third_character_notes.six && grimoire_thirdChar hasnt grimThirdCharLetterSix:
+                ~ grimoire_thirdChar += grimThirdCharLetterSix
+    }
+
+    {
+        - third_character_notes.seven && grimoire_thirdChar hasnt grimThirdCharLetterSeven:
+                ~ grimoire_thirdChar += grimThirdCharLetterSeven
     }
 
     //FourthCharacter
