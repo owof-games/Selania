@@ -1,5 +1,5 @@
 //Lista coltivabili e stati possibili    
-    LIST greenhouse_cultivable = (BaccaDellaAddolorata), (BarbaDellInciampo), (BastoneDellOzioso), (BrinaDellImpossibile), (CantoDelleCompagne), (CardoAspinato), (EderaDelleAmanti),  (ErbaLiccia), (FalsaPalude), (LanaNotturna), (LicheneDegliAbissi), (NonTiScordarDiTe), (Olobino), (LaSpazzata)
+    LIST greenhouse_cultivable = (BaccaDellaAddolorata), (BarbaDellInciampo), (BastoneDellOzioso), (BrinaDellImpossibile), (CantoDelleCompagne), (CardoAspinato), (EderaDelleAmanti),  (ErbaLiccia), (FalsaPalude), (LanaNotturna), (LicheneDegliAbissi), (NonTiScordarDiTe), (Olobino), (Spazzata)
 
 
     //Costanti per leggere lo stato della pianta, da comunicare poi a Unity per gli assets.
@@ -21,7 +21,7 @@
 
 
 //QUESTA LISTA LA USO PER GESTIRE LA PESCATA O MENO DEI COLTIVABILI
-    VAR greenhouse_backupCultivable = (BaccaDellaAddolorata, BarbaDellInciampo, BastoneDellOzioso, BrinaDellImpossibile, CantoDelleCompagne, CardoAspinato, EderaDelleAmanti, ErbaLiccia, FalsaPalude, LanaNotturna, LicheneDegliAbissi, NonTiScordarDiTe, Olobino, LaSpazzata)
+    VAR greenhouse_backupCultivable = (BaccaDellaAddolorata, BarbaDellInciampo, BastoneDellOzioso, BrinaDellImpossibile, CantoDelleCompagne, CardoAspinato, EderaDelleAmanti, ErbaLiccia, FalsaPalude, LanaNotturna, LicheneDegliAbissi, NonTiScordarDiTe, Olobino, Spazzata)
     //E questo è il recap di tutto quello che ho trovato
     VAR greenhouse_findedCultivables = ()
     //E come per Franco, faccio un conto di tutte le cose coltivabili sin dall'inizio.
@@ -41,7 +41,7 @@
     VAR growthLicheneDegliAbissi = notStarted
     VAR growthNonTiScordarDiTe = notStarted
     VAR growthOlobino = notStarted
-    VAR growthLaSpazzata = notStarted
+    VAR growthSpazzata = notStarted
     
 //LISTA PER FAR AVANZARE GLI ELEMENTI TESTUALI
     VAR narrativeGrowthBaccaDellaAddolorata = notStarted
@@ -57,7 +57,7 @@
     VAR narrativeGrowthLicheneDegliAbissi = notStarted
     VAR narrativeGrowthNonTiScordarDiTe = notStarted
     VAR narrativeGrowthOlobino = notStarted
-    VAR narrativeGrowthLaSpazzata = notStarted
+    VAR narrativeGrowthSpazzata = notStarted
 
 //GESTIONE DEL TW TEMPORANEO
     VAR greenhouse_relationshipCrops_tempTriggerWarning = ()
@@ -73,13 +73,13 @@
 //QUESTE LISTE HANNO UN VALORE CATALOGATIVO E PER LA GESTIONE DELLE DOMANDE
 
     //Relazione: con sé e con gli altri, anche con l'ambiente.
-    VAR greenhouse_relationshipCrops = (BaccaDellaAddolorata, CantoDelleCompagne, EderaDelleAmanti, FalsaPalude, LicheneDegliAbissi, Olobino, LaSpazzata)
+    VAR greenhouse_relationshipCrops = (BaccaDellaAddolorata, CantoDelleCompagne, EderaDelleAmanti, FalsaPalude, LicheneDegliAbissi, Olobino, Spazzata)
     //Mutamento: capacità di generare e accogliere il cambiamento.
-    VAR greenhouse_shiftCrops = (BaccaDellaAddolorata, BarbaDellInciampo, BrinaDellImpossibile, CantoDelleCompagne, CardoAspinato, ErbaLiccia, FalsaPalude, LanaNotturna, LaSpazzata)
+    VAR greenhouse_shiftCrops = (BaccaDellaAddolorata, BarbaDellInciampo, BrinaDellImpossibile, CantoDelleCompagne, CardoAspinato, ErbaLiccia, FalsaPalude, LanaNotturna, Spazzata)
     //Comprensione: cercare il senso, capire il perché.
     VAR greenhouse_understandingCrops = (BarbaDellInciampo, BrinaDellImpossibile, CardoAspinato, ErbaLiccia, LicheneDegliAbissi, NonTiScordarDiTe, Olobino)
     //Autodeterminazione: definire la mia vita per come la voglio, o la vita della mia comunità.
-    VAR greenhouse_selfdeterminationCrops = (BarbaDellInciampo, BastoneDellOzioso, ErbaLiccia, LanaNotturna, LicheneDegliAbissi, LaSpazzata)
+    VAR greenhouse_selfdeterminationCrops = (BarbaDellInciampo, BastoneDellOzioso, ErbaLiccia, LanaNotturna, LicheneDegliAbissi, Spazzata)
     //Stupore, meraviglia: sorprendermi, scoprire cose nuove, scoprire cose inaspettate. Vedere la vita come qualcosa di non prevedibile e godere di questo.
     VAR greenhouse_wonderCrops = (BaccaDellaAddolorata, BastoneDellOzioso, CardoAspinato, EderaDelleAmanti, NonTiScordarDiTe, Olobino)
     //Immaginazione e creazione: sono due parole legate ma non sinonimi, ma mi viene istintivo unirle. Da una parte abbiamo la possibilità di pensare a ciò che non c'è, dall'altra di generarlo. In parte immaginazione si collega a stupore (una nuova idea), in parte a comprensione (quando capisco qualcosa e provo ad applicarlo in realtà immaginate). Creatività invece è sia un processo di mutamento (creando porto cambiamento, con tutte le sue conseguenze) che di autodeterminazione (creo ciò che voglio, ciò che penso possa servire, portare piacere, ristorare la mia comunità).
@@ -1353,7 +1353,7 @@ QUESTIONS
         -> non_ti_scordar_di_te.TW
     - Olobino:
         -> olobino.TW                        
-    - LaSpazzata:
+    - Spazzata:
         -> la_spazzata.TW  
 
 }       
@@ -1548,7 +1548,7 @@ QUESTIONS
             - Olobino:
                 ~ return "Olobino"
 
-            - LaSpazzata: 
+            - Spazzata: 
                 ~ return "Spezzata"
             
             - universalIngredient:

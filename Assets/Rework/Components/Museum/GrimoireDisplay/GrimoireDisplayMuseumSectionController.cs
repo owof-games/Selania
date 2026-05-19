@@ -211,7 +211,7 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
             {
                 "BaccaDellaAddolorata", "BarbaDellInciampo", "BastoneDellOzioso", "BrinaDellImpossibile",
                 "CantoDelleCompagne", "CardoAspinato", "EderaDelleAmanti", "ErbaLiccia", "FalsaPalude", "LanaNotturna",
-                "LicheneDegliAbissi", "NonTiScordarDiTe", "Olobino", "LaSpazzata"
+                "LicheneDegliAbissi", "NonTiScordarDiTe", "Olobino", "Spazzata"
             };
             var statuses =
                 (GrimoireBackground.GreenhouseButtonStatus[])Enum.GetValues(

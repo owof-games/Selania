@@ -38,10 +38,10 @@
         -> grimoire_greenhouse_thirdLevel (LicheneDegliAbissi, NonTiScordarDiTe)
 
     + {greenhouse_findedCultivables has Olobino} [Olobino #status:{grimoire_statusPlants(Olobino)}]
-        -> grimoire_greenhouse_thirdLevel (Olobino, LaSpazzata)
+        -> grimoire_greenhouse_thirdLevel (Olobino, Spazzata)
 
-    + {greenhouse_findedCultivables has LaSpazzata} [LaSpazzata #status:{grimoire_statusPlants(LaSpazzata)}]
-        -> grimoire_greenhouse_thirdLevel (Olobino, LaSpazzata)
+    + {greenhouse_findedCultivables has Spazzata} [Spazzata #status:{grimoire_statusPlants(Spazzata)}]
+        -> grimoire_greenhouse_thirdLevel (Olobino, Spazzata)
 
     + {greenhouse_findedCultivables has universalIngredient} [universalIngredient #status:{grimoire_statusPlants(universalIngredient)}]
         -> grimoire_greenhouse_thirdLevel (universalIngredient, Hidden)
@@ -97,10 +97,10 @@
         -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (LicheneDegliAbissi, NonTiScordarDiTe)
 
     + {greenhouse_findedCultivables has Olobino} [Olobino #status:{grimoire_statusPlants(Olobino)}]
-        -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (Olobino, LaSpazzata)
+        -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (Olobino, Spazzata)
 
-    + {greenhouse_findedCultivables has LaSpazzata} [LaSpazzata #status:{grimoire_statusPlants(LaSpazzata)}]
-        -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (Olobino, LaSpazzata)
+    + {greenhouse_findedCultivables has Spazzata} [Spazzata #status:{grimoire_statusPlants(Spazzata)}]
+        -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (Olobino, Spazzata)
 
     + {greenhouse_findedCultivables has universalIngredient} [universalIngredient #status:{grimoire_statusPlants(universalIngredient)}]
         -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (universalIngredient, Hidden)

@@ -817,9 +817,9 @@ public class DialogueManagerSingleInk : MonoBehaviour
         return (InkList)story.variablesState["growthCantoDelleCompagne"];
     }
 
-    public InkList GetEffettivoStatoLaSpazzata()
+    public InkList GetEffettivoStatoSpazzata()
     {
-        return (InkList)story.variablesState["growthLaSpazzata"];
+        return (InkList)story.variablesState["growthSpazzata"];
     }
 
     public InkList GetEffettivoStatoLicheneDegliAbissi()

@@ -317,7 +317,7 @@
                         C'è una pianta che ha tantissimi nomi, difficile da spiegare, e che chiede di essere provata. Quella è la pianta giusta.
                              ~ frog_temp_char_ingredient = "qualcosa che ha tantissimi nomi e che è difficile da spiegare."
 
-                    - LaSpazzata: 
+                    - Spazzata: 
                         Quella pianta che cresce quando hai tanti pensieri che ti sommergono e feriscono. Quella.
                              ~ frog_temp_char_ingredient = "qualcosa che cresce quando hai tanti pensieri che ti sommergono e ti fanno male."           
 
@@ -542,8 +542,8 @@
             ~  frog_recoveredCultivables += Olobino
             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has LaSpazzata}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(LaSpazzata)}.
-            ~  frog_recoveredCultivables += LaSpazzata
+    + {frog_recoverableCultivables has Spazzata}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(Spazzata)}.
+            ~  frog_recoveredCultivables += Spazzata
             -> franco_afterRecovery
             
     

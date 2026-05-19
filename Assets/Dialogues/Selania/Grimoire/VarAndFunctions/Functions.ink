@@ -452,7 +452,7 @@
         - Olobino:
             ~ return "un cappello di Olobino"
 
-        - LaSpazzata: 
+        - Spazzata: 
             ~ return "una foglia della Spezzata"
         
         - universalIngredient:

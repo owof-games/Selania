@@ -72,8 +72,8 @@
     + {leftPlant == Olobino} [{plantsNameTranslator(NonTiScordarDiTe)}#bookmark:previous]
         -> grimoire_greenhouse_thirdLevel (LicheneDegliAbissi, NonTiScordarDiTe)
 
-    + {leftPlant == universalIngredient} [{plantsNameTranslator(LaSpazzata)}#bookmark:previous]
-        -> grimoire_greenhouse_thirdLevel (Olobino, LaSpazzata)
+    + {leftPlant == universalIngredient} [{plantsNameTranslator(Spazzata)}#bookmark:previous]
+        -> grimoire_greenhouse_thirdLevel (Olobino, Spazzata)
     
 
 
@@ -94,7 +94,7 @@
         -> grimoire_greenhouse_thirdLevel (LicheneDegliAbissi, NonTiScordarDiTe)
     
     + {leftPlant == LicheneDegliAbissi} [{plantsNameTranslator(Olobino)}#bookmark:next]
-        -> grimoire_greenhouse_thirdLevel (Olobino, LaSpazzata)
+        -> grimoire_greenhouse_thirdLevel (Olobino, Spazzata)
 
     + {leftPlant == Olobino} [{plantsNameTranslator(universalIngredient)}#bookmark:next]
         -> grimoire_greenhouse_thirdLevel (universalIngredient, Hidden)
@@ -197,8 +197,8 @@
     + {leftPlant == Olobino} [{plantsNameTranslator(NonTiScordarDiTe)}#bookmark:previous]
         -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (LicheneDegliAbissi, NonTiScordarDiTe)
 
-    + {leftPlant == universalIngredient} [{plantsNameTranslator(LaSpazzata)}#bookmark:previous]
-        -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (Olobino, LaSpazzata)
+    + {leftPlant == universalIngredient} [{plantsNameTranslator(Spazzata)}#bookmark:previous]
+        -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (Olobino, Spazzata)
     
 
 
@@ -219,7 +219,7 @@
         -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (LicheneDegliAbissi, NonTiScordarDiTe)
     
     + {leftPlant == LicheneDegliAbissi} [{plantsNameTranslator(Olobino)}#bookmark:next]
-        -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (Olobino, LaSpazzata)
+        -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (Olobino, Spazzata)
 
     + {leftPlant == Olobino} [{plantsNameTranslator(universalIngredient)}#bookmark:next]
         -> grimoire_greenhouse_thirdLevel_gifts_and_ingredients (universalIngredient, Hidden)

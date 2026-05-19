@@ -2,7 +2,7 @@ using UnityEngine;
 using Ink.Runtime;
 using UnityEngine.UI;
 
-public class LaSpazzata : MonoBehaviour
+public class Spazzata : MonoBehaviour
 {
 [SerializeField] DialogueManagerSingleInk dialogueManager; //qui su unity gli associo il dialogue
 [SerializeField] Image image; //Questa cosa la imposto da editor, ed è l'immagine della prima personaggia
@@ -26,7 +26,7 @@ public class LaSpazzata : MonoBehaviour
     //Chiamo poi in ogni update
     {
         //Chiamare il dialogue manager e fargli eseguire questa riga di codice
-        var step = dialogueManager.GetEffettivoStatoLaSpazzata();
+        var step = dialogueManager.GetEffettivoStatoSpazzata();
         if (step.ContainsItemNamed("notStarted"))
         {
             image.sprite = NotStarted;

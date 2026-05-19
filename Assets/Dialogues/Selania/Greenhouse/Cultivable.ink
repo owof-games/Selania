@@ -368,26 +368,26 @@
                  -> olobino.step_four
         }
 
-    - greenhouse_chosenCultivable has LaSpazzata:
+    - greenhouse_chosenCultivable has Spazzata:
         {
             - greenhouse_growStep has stepOne:
-                ~ growthLaSpazzata = stepOne
-                ~ narrativeGrowthLaSpazzata = stepOne
+                ~ growthSpazzata = stepOne
+                ~ narrativeGrowthSpazzata = stepOne
                 -> la_spazzata.step_one
 
             - greenhouse_growStep has stepTwo:
-                ~ growthLaSpazzata = stepTwo
-                ~ narrativeGrowthLaSpazzata = stepTwo
+                ~ growthSpazzata = stepTwo
+                ~ narrativeGrowthSpazzata = stepTwo
                 -> la_spazzata.step_two
 
             - greenhouse_growStep has stepThree:
-                ~ growthLaSpazzata = stepThree
-                ~ narrativeGrowthLaSpazzata = stepThree
+                ~ growthSpazzata = stepThree
+                ~ narrativeGrowthSpazzata = stepThree
                 -> la_spazzata.step_three
 
             - greenhouse_growStep has stepFour:
-                 ~ growthLaSpazzata = stepThree
-                 ~ narrativeGrowthLaSpazzata = stepFour
+                 ~ growthSpazzata = stepThree
+                 ~ narrativeGrowthSpazzata = stepFour
                  -> la_spazzata.step_four
         }
     ->->
@@ -1022,7 +1022,7 @@
         
     = step_one
         -> remove_proposed_cultivable ->
-        ~ growthLaSpazzata = stepOne
+        ~ growthSpazzata = stepOne
         
         {charTag(TheWitch, witch_state())}:   <i>Il pavimento della serra si è spezzato, riempiendosi dell'acqua che viene dallo stagno.
         <i>Una singola piccola fogliolina galleggia morbidamente.
@@ -1048,7 +1048,7 @@
         <i>Tutto sembra in ordine, eppure la testa di {player_name} è pronta ad esplodere.
 
         + (colto)\ {charTag(PG, "neutral")}:         <i>C'è qualcosa che devo dire da molto tempo.
-            ~ growthLaSpazzata = stepFour
+            ~ growthSpazzata = stepFour
             
            {charTag(TheWitch, witch_state())}:   <i>Odore di autunno, di foglie umide.
             <i>Ai piedi di {player_name} resta il foro della <b>Spazzata</b>.

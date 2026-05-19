@@ -143,7 +143,7 @@
     - Olobino:
         ~ kitchen_recipePP = "e marinatura spirituale"
 
-    - LaSpazzata:
+    - Spazzata:
         ~ kitchen_recipePP = "e farcitura di comunicazione" 
 
     - universalIngredient:

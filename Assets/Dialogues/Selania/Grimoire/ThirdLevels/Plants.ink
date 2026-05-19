@@ -45,7 +45,7 @@
             - Olobino:
                 ~ return "(Nota: è legare spiegare come coltivarlo?). Questo fungo grigiastro, anonimo, è il miglior compagno per un risveglio spirituale. Compagno di mille culture, ha avuto infiniti nomi: Guida d'Oro, Occhio del Saggio, Lingua della Dea, Amorino, Terrore del Prete. Credo che chiunque dovrebbe provare l'<i><b>Olobino</i></b> almeno una volta per vedersi con un amore incondizionato, per amare il mondo incondizionatamente. Per comprendere cosa si intende per <i>dissoluzione dell'ego</i>."
 
-            - LaSpazzata: 
+            - Spazzata: 
                 ~ return "Ci sono pensieri che feriscono. Che alimentano sé stessi fino a diventare terremoti, valanghe, diluvi, travolgendo tutto ciò che incontrano, senza distinzione. <b><i>Spazzata</b></i> è dolorosa, ma come ogni dolore ci invita a prestare attenzione. A capire cosa liberare, prima che una piccola goccia si trasformi in valanga. (Nota: specificare che La<b><i>Spazzata</b></i> non è l'insieme di foglie, ma il micelio che sgretola e distrugge rocce e muri. Le foglie sono solo organismi simbionti.)"
             
             - universalIngredient:
