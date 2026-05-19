@@ -25,6 +25,7 @@ namespace Selania.Rework.Components
             builder.RegisterSettings(settings);
             builder.RegisterLogger();
             builder.RegisterInstance(audioSystem).As<IAudioSystem>();
+            builder.RegisterRoomContentMemory();
         }
     }
 }

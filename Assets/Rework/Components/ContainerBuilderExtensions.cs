@@ -153,7 +153,7 @@ namespace Selania.Rework.Components
         ///     Add a singleton room content memory to the builder.
         /// </summary>
         /// <param name="builder">The builder.</param>
-        public static void RegisterRoomContents(this IContainerBuilder builder)
+        public static void RegisterRoomContentMemory(this IContainerBuilder builder)
         {
             builder.RegisterInstance<IRoomContentMemory>(new RoomContentMemory());
         }
