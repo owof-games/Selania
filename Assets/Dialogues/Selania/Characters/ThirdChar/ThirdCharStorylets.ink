@@ -397,6 +397,4 @@
 
         //Seconda riscrittura
         -> second_rewriting ->
-        // E aggiornamento nome, anche se non avremo feedback sul momento
-        ~ rewriting_end(ThirdCharacter)
         ->->
