@@ -59,24 +59,24 @@
 {debug: passo per growing_updater}
 {
 
-    - greenhouse_chosenCultivable has BaccaDellaAddolorata:
+    - greenhouse_chosenCultivable == BaccaDellaAddolorata:
         {
-            - greenhouse_growStep has stepOne:
+            - greenhouse_growStep == stepOne:
                 ~ growthBaccaDellaAddolorata = stepOne
                 ~ narrativeGrowthBaccaDellaAddolorata = stepOne
                 -> bacca_della_addolorata.step_one
 
-            - greenhouse_growStep has stepTwo:
+            - greenhouse_growStep == stepTwo:
                 ~ growthBaccaDellaAddolorata = stepTwo
                 ~ narrativeGrowthBaccaDellaAddolorata = stepTwo
                 -> bacca_della_addolorata.step_two
             
-            - greenhouse_growStep has stepThree:
+            - greenhouse_growStep == stepThree:
                 ~ growthBaccaDellaAddolorata = stepThree
                 ~ narrativeGrowthBaccaDellaAddolorata = stepThree
                 -> bacca_della_addolorata.step_three
 
-            - greenhouse_growStep has stepFour:
+            - greenhouse_growStep == stepFour:
                  ~ growthBaccaDellaAddolorata = stepThree
                  ~ narrativeGrowthBaccaDellaAddolorata = stepFour
                  -> bacca_della_addolorata.step_four
@@ -84,191 +84,191 @@
 
 
 
-    - greenhouse_chosenCultivable has BarbaDellInciampo:
+    - greenhouse_chosenCultivable == BarbaDellInciampo:
         {
-            - greenhouse_growStep has stepOne:
+            - greenhouse_growStep == stepOne:
                 ~ growthBarbaDellInciampo = stepOne
                 ~ narrativeGrowthBarbaDellInciampo = stepOne
                 -> barba_dell_inciampo.step_one
 
-            - greenhouse_growStep has stepTwo:
+            - greenhouse_growStep == stepTwo:
                 ~ growthBarbaDellInciampo = stepTwo
                 ~ narrativeGrowthBarbaDellInciampo = stepTwo
                 -> barba_dell_inciampo.step_two
 
-            - greenhouse_growStep has stepThree:
+            - greenhouse_growStep == stepThree:
                 ~ growthBarbaDellInciampo = stepThree
                 ~ narrativeGrowthBarbaDellInciampo = stepThree
                 -> barba_dell_inciampo.step_three
 
-            - greenhouse_growStep has stepFour:
+            - greenhouse_growStep == stepFour:
                  ~ growthBarbaDellInciampo = stepThree
                  ~ narrativeGrowthBarbaDellInciampo = stepFour
                 -> barba_dell_inciampo.step_four
         }
 
-    - greenhouse_chosenCultivable has BastoneDellOzioso:
+    - greenhouse_chosenCultivable == BastoneDellOzioso:
         {
-            - greenhouse_growStep has stepOne:
+            - greenhouse_growStep == stepOne:
                 ~ growthBastoneDellOzioso = stepOne
                 ~ narrativeGrowthBastoneDellOzioso = stepOne
                     -> bastone_dell_ozioso.step_one
 
-            - greenhouse_growStep has stepTwo:
+            - greenhouse_growStep == stepTwo:
                 ~ growthBastoneDellOzioso = stepTwo
                 ~ narrativeGrowthBastoneDellOzioso = stepTwo
                     -> bastone_dell_ozioso.step_two
 
-            - greenhouse_growStep has stepThree:
+            - greenhouse_growStep == stepThree:
                 ~ growthBastoneDellOzioso = stepThree
                 ~ narrativeGrowthBastoneDellOzioso = stepThree
                     -> bastone_dell_ozioso.step_three
 
-            - greenhouse_growStep has stepFour:
+            - greenhouse_growStep == stepFour:
                  ~ growthBastoneDellOzioso = stepThree
                  ~ narrativeGrowthBastoneDellOzioso = stepFour
                     -> bastone_dell_ozioso.step_four
         } 
     
-    - greenhouse_chosenCultivable has BrinaDellImpossibile:
+    - greenhouse_chosenCultivable == BrinaDellImpossibile:
         {
-            - greenhouse_growStep has stepOne:
+            - greenhouse_growStep == stepOne:
                 ~ growthBrinaDellImpossibile = stepOne
                 ~ narrativeGrowthBrinaDellImpossibile = stepOne
                     -> brina_dell_impossibile.step_one
 
-            - greenhouse_growStep has stepTwo:
+            - greenhouse_growStep == stepTwo:
                 ~ growthBrinaDellImpossibile = stepTwo
                 ~ narrativeGrowthBrinaDellImpossibile = stepTwo
                     -> brina_dell_impossibile.step_two
 
-            - greenhouse_growStep has stepThree:
+            - greenhouse_growStep == stepThree:
                 ~ growthBrinaDellImpossibile = stepThree
                 ~ narrativeGrowthBrinaDellImpossibile = stepThree
                     -> brina_dell_impossibile.step_three
 
-            - greenhouse_growStep has stepFour:
+            - greenhouse_growStep == stepFour:
                  ~ growthBrinaDellImpossibile = stepThree
                  ~ narrativeGrowthBrinaDellImpossibile = stepFour
                  -> brina_dell_impossibile.step_four
         }
 
-    - greenhouse_chosenCultivable has CantoDelleCompagne:
+    - greenhouse_chosenCultivable == CantoDelleCompagne:
         {
-            - greenhouse_growStep has stepOne:
+            - greenhouse_growStep == stepOne:
                 ~ growthCantoDelleCompagne = stepOne
                 ~ narrativeGrowthCantoDelleCompagne = stepOne
                     -> canto_delle_compagne.step_one
 
-            - greenhouse_growStep has stepTwo:
+            - greenhouse_growStep == stepTwo:
                 ~ growthCantoDelleCompagne = stepTwo
                 ~ narrativeGrowthCantoDelleCompagne = stepTwo
                     -> canto_delle_compagne.step_two
 
-            - greenhouse_growStep has stepThree:
+            - greenhouse_growStep == stepThree:
                 ~ growthCantoDelleCompagne = stepThree
                 ~ narrativeGrowthCantoDelleCompagne = stepThree
                     -> canto_delle_compagne.step_three
 
-            - greenhouse_growStep has stepFour:
+            - greenhouse_growStep == stepFour:
                  ~ growthCantoDelleCompagne = stepThree
                  ~ narrativeGrowthCantoDelleCompagne = stepFour
                     -> canto_delle_compagne.step_four
         }
     
-    - greenhouse_chosenCultivable has CardoAspinato:
+    - greenhouse_chosenCultivable == CardoAspinato:
         {
-            - greenhouse_growStep has stepOne:
+            - greenhouse_growStep == stepOne:
                 ~ growthCardoAspinato = stepOne
                 ~ narrativeGrowthCardoAspinato = stepOne
                     -> cardo_aspinato.step_one
 
-            - greenhouse_growStep has stepTwo:
+            - greenhouse_growStep == stepTwo:
                 ~ growthCardoAspinato = stepTwo
                 ~ narrativeGrowthCardoAspinato = stepTwo
                     -> cardo_aspinato.step_two
 
-            - greenhouse_growStep has stepThree:
+            - greenhouse_growStep == stepThree:
                 ~ growthCardoAspinato = stepThree
                 ~ narrativeGrowthCardoAspinato = stepThree
                     -> cardo_aspinato.step_three
 
-            - greenhouse_growStep has stepFour:
+            - greenhouse_growStep == stepFour:
                  ~ growthCardoAspinato = stepThree
                  ~ narrativeGrowthCardoAspinato = stepFour
                     -> cardo_aspinato.step_four
         }     
 
-    - greenhouse_chosenCultivable has EderaDelleAmanti:
+    - greenhouse_chosenCultivable == EderaDelleAmanti:
         {
-            - greenhouse_growStep has stepOne:
+            - greenhouse_growStep == stepOne:
                 ~ growthEderaDelleAmanti = stepOne
                 ~ narrativeGrowthEderaDelleAmanti= stepOne
                 -> edera_delle_amanti.step_one
 
-            - greenhouse_growStep has stepTwo:
+            - greenhouse_growStep == stepTwo:
                 ~ growthEderaDelleAmanti = stepTwo
                 ~ narrativeGrowthEderaDelleAmanti= stepTwo
                 -> edera_delle_amanti.step_two
 
-            - greenhouse_growStep has stepThree:
+            - greenhouse_growStep == stepThree:
                 ~ growthEderaDelleAmanti = stepThree
                 ~ narrativeGrowthEderaDelleAmanti= stepThree
                 -> edera_delle_amanti.step_three
 
-            - greenhouse_growStep has stepFour:
+            - greenhouse_growStep == stepFour:
                  ~ growthEderaDelleAmanti = stepThree
                  ~ narrativeGrowthEderaDelleAmanti= stepFour
                  -> edera_delle_amanti.step_four
         }
     
-    - greenhouse_chosenCultivable has ErbaLiccia:
+    - greenhouse_chosenCultivable == ErbaLiccia:
         {
-            - greenhouse_growStep has stepOne:
+            - greenhouse_growStep == stepOne:
                 ~ growthErbaLiccia = stepOne
                 ~ narrativeGrowthErbaLiccia = stepOne
                 -> erba_liccia.step_one
 
-            - greenhouse_growStep has stepTwo:
+            - greenhouse_growStep == stepTwo:
                 ~ growthErbaLiccia = stepTwo
                 ~ narrativeGrowthErbaLiccia = stepTwo
                 -> erba_liccia.step_two
 
-            - greenhouse_growStep has stepThree:
+            - greenhouse_growStep == stepThree:
                 ~ growthErbaLiccia = stepThree
                 ~ narrativeGrowthErbaLiccia = stepThree
                 -> erba_liccia.step_three
 
-            - greenhouse_growStep has stepFour:
+            - greenhouse_growStep == stepFour:
                  ~ growthErbaLiccia = stepThree
                  ~ narrativeGrowthErbaLiccia = stepFour
                  -> erba_liccia.step_four
         }
     
-    - greenhouse_chosenCultivable has FalsaPalude:
+    - greenhouse_chosenCultivable == FalsaPalude:
         {
-            - greenhouse_growStep has stepOne:
+            - greenhouse_growStep == stepOne:
                 ~ growthFalsaPalude = stepOne
                 ~ narrativeGrowthFalsaPalude = stepOne
                         {debug: greenhouse_chosenCultivable = {greenhouse_chosenCultivable}, greenhouse_growStep = {greenhouse_growStep}, narrativeGrowthFalsaPalude = {narrativeGrowthFalsaPalude}.}
                         {debug: vado a falsa_palude.step_one}
                 -> falsa_palude.step_one
 
-            - greenhouse_growStep has stepTwo:
+            - greenhouse_growStep == stepTwo:
                 ~ growthFalsaPalude = stepTwo
                 ~ narrativeGrowthFalsaPalude = stepTwo
                     {debug: greenhouse_chosenCultivable = {greenhouse_chosenCultivable}, greenhouse_growStep = {greenhouse_growStep}, narrativeGrowthFalsaPalude = {narrativeGrowthFalsaPalude}.} 
                     {debug: vado a falsa_palude.step_two} 
                 -> falsa_palude.step_two
 
-            - greenhouse_growStep has stepThree:
+            - greenhouse_growStep == stepThree:
                 ~ growthFalsaPalude = stepThree
                 ~ narrativeGrowthFalsaPalude = stepThree
                      {debug: greenhouse_chosenCultivable = {greenhouse_chosenCultivable}, greenhouse_growStep = {greenhouse_growStep}, narrativeGrowthFalsaPalude = {narrativeGrowthFalsaPalude}.}
                      {debug: vado a falsa_palude.step_three}
                 -> falsa_palude.step_three
 
-            - greenhouse_growStep has stepFour:
+            - greenhouse_growStep == stepFour:
                  ~ growthFalsaPalude = stepThree
                  ~ narrativeGrowthFalsaPalude = stepFour
                         {debug: greenhouse_chosenCultivable = {greenhouse_chosenCultivable}, greenhouse_growStep = {greenhouse_growStep}, narrativeGrowthFalsaPalude = {narrativeGrowthFalsaPalude}.}
@@ -276,116 +276,116 @@
                 -> falsa_palude.step_four                
         }     
     
-    - greenhouse_chosenCultivable has LanaNotturna:
+    - greenhouse_chosenCultivable == LanaNotturna:
         {
-            - greenhouse_growStep has stepOne:
+            - greenhouse_growStep == stepOne:
                 ~ growthLanaNotturna = stepOne
                 ~ narrativeGrowthLanaNotturna = stepOne
                 -> lana_notturna.step_one
 
-            - greenhouse_growStep has stepTwo:
+            - greenhouse_growStep == stepTwo:
                 ~ growthLanaNotturna = stepTwo
                 ~ narrativeGrowthLanaNotturna = stepTwo
                 -> lana_notturna.step_two
 
-            - greenhouse_growStep has stepThree:
+            - greenhouse_growStep == stepThree:
                 ~ growthLanaNotturna = stepThree
                 ~ narrativeGrowthLanaNotturna = stepThree
                 -> lana_notturna.step_three
 
-            - greenhouse_growStep has stepFour:
+            - greenhouse_growStep == stepFour:
                  ~ growthLanaNotturna = stepThree
                  ~ narrativeGrowthLanaNotturna = stepFour
                  -> lana_notturna.step_four
         }
         
-    - greenhouse_chosenCultivable has LicheneDegliAbissi:
+    - greenhouse_chosenCultivable == LicheneDegliAbissi:
         {
-            - greenhouse_growStep has stepOne:
+            - greenhouse_growStep == stepOne:
                 ~ growthLicheneDegliAbissi = stepOne
                 ~ narrativeGrowthLicheneDegliAbissi = stepOne
                 -> lichene_degli_abissi.step_one
 
-            - greenhouse_growStep has stepTwo:
+            - greenhouse_growStep == stepTwo:
                 ~ growthLicheneDegliAbissi = stepTwo
                 ~ narrativeGrowthLicheneDegliAbissi = stepTwo
                 -> lichene_degli_abissi.step_two
 
-            - greenhouse_growStep has stepThree:
+            - greenhouse_growStep == stepThree:
                 ~ growthLicheneDegliAbissi = stepThree
                 ~ narrativeGrowthLicheneDegliAbissi = stepThree
                 -> lichene_degli_abissi.step_three
 
-            - greenhouse_growStep has stepFour:
+            - greenhouse_growStep == stepFour:
                 ~ growthLicheneDegliAbissi = stepThree
                 ~ narrativeGrowthLicheneDegliAbissi = stepFour
                 -> lichene_degli_abissi.step_four
         }
     
-    - greenhouse_chosenCultivable has NonTiScordarDiTe:
+    - greenhouse_chosenCultivable == NonTiScordarDiTe:
         {
-            - greenhouse_growStep has stepOne:
+            - greenhouse_growStep == stepOne:
                 ~ growthNonTiScordarDiTe = stepOne
                 ~ narrativeGrowthNonTiScordarDiTe = stepOne
                 -> non_ti_scordar_di_te.step_one
 
-            - greenhouse_growStep has stepTwo:
+            - greenhouse_growStep == stepTwo:
                 ~ growthNonTiScordarDiTe = stepTwo
                 ~ narrativeGrowthNonTiScordarDiTe = stepTwo
                 -> non_ti_scordar_di_te.step_two
 
-            - greenhouse_growStep has stepThree:
+            - greenhouse_growStep == stepThree:
                 ~ growthNonTiScordarDiTe = stepThree
                 ~ narrativeGrowthNonTiScordarDiTe = stepThree
                 -> non_ti_scordar_di_te.step_three
 
-            - greenhouse_growStep has stepFour:
+            - greenhouse_growStep == stepFour:
                  ~ growthNonTiScordarDiTe = stepThree
                  ~ narrativeGrowthNonTiScordarDiTe = stepFour
                  -> non_ti_scordar_di_te.step_four
         }
     
-    - greenhouse_chosenCultivable has Olobino:
+    - greenhouse_chosenCultivable == Olobino:
         {
-            - greenhouse_growStep has stepOne:
+            - greenhouse_growStep == stepOne:
                 ~ growthOlobino = stepOne
                 ~ narrativeGrowthOlobino = stepOne
                 -> olobino.step_one
 
-            - greenhouse_growStep has stepTwo:
+            - greenhouse_growStep == stepTwo:
                 ~ growthOlobino = stepTwo
                 ~ narrativeGrowthOlobino = stepTwo
                 -> olobino.step_two
 
-            - greenhouse_growStep has stepThree:
+            - greenhouse_growStep == stepThree:
                 ~ growthOlobino = stepThree
                 ~ narrativeGrowthOlobino = stepThree
                 -> olobino.step_three
 
-            - greenhouse_growStep has stepFour:
+            - greenhouse_growStep == stepFour:
                  ~ growthOlobino = stepThree
                  ~ narrativeGrowthOlobino = stepFour
                  -> olobino.step_four
         }
 
-    - greenhouse_chosenCultivable has Spazzata:
+    - greenhouse_chosenCultivable == Spazzata:
         {
-            - greenhouse_growStep has stepOne:
+            - greenhouse_growStep == stepOne:
                 ~ growthSpazzata = stepOne
                 ~ narrativeGrowthSpazzata = stepOne
                 -> la_spazzata.step_one
 
-            - greenhouse_growStep has stepTwo:
+            - greenhouse_growStep == stepTwo:
                 ~ growthSpazzata = stepTwo
                 ~ narrativeGrowthSpazzata = stepTwo
                 -> la_spazzata.step_two
 
-            - greenhouse_growStep has stepThree:
+            - greenhouse_growStep == stepThree:
                 ~ growthSpazzata = stepThree
                 ~ narrativeGrowthSpazzata = stepThree
                 -> la_spazzata.step_three
 
-            - greenhouse_growStep has stepFour:
+            - greenhouse_growStep == stepFour:
                  ~ growthSpazzata = stepThree
                  ~ narrativeGrowthSpazzata = stepFour
                  -> la_spazzata.step_four
@@ -1103,7 +1103,7 @@
     ~ greenhouse_findedCultivables += greenhouse_chosenCultivable
     ~ greenhouse_cultivableGrowing = 0
     ~ greenhouse_chosenCultivable = ()
-    ~ greenhouse_growStep = ()
+    ~ greenhouse_growStep = 0
     ~ notification_greenhouseGrown = false
 
         -> notification_system ->
