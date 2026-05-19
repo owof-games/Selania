@@ -1,12 +1,23 @@
 //Lista coltivabili e stati possibili    
     LIST greenhouse_cultivable = (BaccaDellaAddolorata), (BarbaDellInciampo), (BastoneDellOzioso), (BrinaDellImpossibile), (CantoDelleCompagne), (CardoAspinato), (EderaDelleAmanti),  (ErbaLiccia), (FalsaPalude), (LanaNotturna), (LicheneDegliAbissi), (NonTiScordarDiTe), (Olobino), (LaSpazzata)
 
-    LIST greenhouse_growStep = notStarted, stepZero, stepOne, stepTwo, stepThree
+
+    //Costanti per leggere lo stato della pianta, da comunicare poi a Unity per gli assets.
+    CONST notStarted = 0
+    CONST stepOne = 1
+    CONST stepTwo = 2
+    CONST stepThree = 3
+    CONST stepFour = 4
 
     //Valori per far crescere la singola pianta
-    VAR greenhouse_growingValueStepZero = 2
-    VAR greenhouse_growingValueStepOne = 3
-    VAR greenhouse_growingValueStepTwo = 4
+        //Valore della pianta in crescita
+        VAR greenhouse_growStep = ()
+
+        //Valori per tracciare i vari steps
+        VAR greenhouse_growingValueStepOne = 2
+        VAR greenhouse_growingValueStepTwo = 3
+        VAR greenhouse_growingValueStepThree = 4
+
 
 
 //QUESTA LISTA LA USO PER GESTIRE LA PESCATA O MENO DEI COLTIVABILI

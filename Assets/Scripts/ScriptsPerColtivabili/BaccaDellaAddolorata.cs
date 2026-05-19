@@ -7,10 +7,10 @@ public class BaccaDellaAddolorata : MonoBehaviour
 [SerializeField] DialogueManagerSingleInk dialogueManager; //qui su unity gli associo il dialogue
 [SerializeField] Image image; //Questa cosa la imposto da editor, ed è l'immagine della prima personaggia
 [SerializeField] Sprite NotStarted;
-[SerializeField] Sprite StepZero;
 [SerializeField] Sprite StepOne;
 [SerializeField] Sprite StepTwo;
 [SerializeField] Sprite StepThree;
+[SerializeField] Sprite StepFour;
 
 
     // Update is called once per frame
@@ -31,25 +31,25 @@ public class BaccaDellaAddolorata : MonoBehaviour
         {
             image.sprite = NotStarted;
         }
-        else if (step.ContainsItemNamed("stepZero"))
-
-        {   
-            image.sprite = StepZero;
-        }
         else if (step.ContainsItemNamed("stepOne"))
 
         {   
             image.sprite = StepOne;
         }
         else if (step.ContainsItemNamed("stepTwo"))
+
         {   
-           
             image.sprite = StepTwo;
         }
         else if (step.ContainsItemNamed("stepThree"))
+        {   
+           
+            image.sprite = StepThree;
+        }
+        else if (step.ContainsItemNamed("stepFour"))
         {
             
-            image.sprite = StepThree;
+            image.sprite = StepFour;
         }
     }
 }
