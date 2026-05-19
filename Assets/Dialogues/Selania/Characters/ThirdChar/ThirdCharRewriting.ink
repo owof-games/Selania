@@ -447,32 +447,29 @@
 
 === third_char_post_rewriting
 
-
     //Nota: la parte di accettazione del nome è prima dell'aggiornamento, così il nome nuovo compare solo quando viene dichiarato.
-    {charTag(ThirdCharacter, "neutral")}:       Saluto.
+    {charTag(ThirdCharacter, "neutral")}:       Ehi {player_name}!
+                                                Spero mi riconosci!
+                                                Sono, ero Boccale.
+                                                Ho riflettuto a lungo sulle cose che mi hai detto, sai, e in particolare <>
 
             {
                 - second_rewriting.ending.fire:
-                    {charTag(ThirdCharacter, "neutral")}:           Frase.
+                    {charTag(ThirdCharacter, "neutral")}:           Alla cosa fuoco.
                 
                 - second_rewriting.ending.aether:
-                    {charTag(ThirdCharacter, "neutral")}:           Frase.
+                    {charTag(ThirdCharacter, "neutral")}:           Alla cosa spirito.
                     
                 - second_rewriting.ending.earth:
-                    {charTag(ThirdCharacter, "neutral")}:           Frase.
+                    {charTag(ThirdCharacter, "neutral")}:           Alla cosa terra.
 
                 - second_rewriting.ending.water:
-                    {charTag(ThirdCharacter, "neutral")}:           Frase.
+                    {charTag(ThirdCharacter, "neutral")}:           Alla cosa acqua.
 
                 - second_rewriting.ending.air:
-                    {charTag(ThirdCharacter, "neutral")}:           Frase.
+                    {charTag(ThirdCharacter, "neutral")}:           Alla cosa aria.
                     
             }
-
-    {charTag(ThirdCharacter, "neutral")}:           Frase.  
-
-            //E andiamo a cambiare il nome
-                ~ rewriting_end(ThirdCharacter)
 
             -> naming
                 
@@ -485,7 +482,7 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
-    
+    //non taggare il nome fino a quando non è stato dichiarato, sennò viene cambiato prima
         {
 
             - thirdChar_ActualName has ThirdE:
@@ -496,7 +493,6 @@
                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                                                                         Il mio vero nome è...
-                    ~  characterChangingObjects(ThirdCharacter)
                  {charTag(ThirdCharacter, "neutral")}:     <b><i>{charNameThree}</b></i>.
             
             - thirdChar_ActualName has ThirdC:
@@ -507,7 +503,6 @@
                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                                                             Mi chiamerò...
-                    ~  characterChangingObjects(ThirdCharacter)
                     {charTag(ThirdCharacter, "neutral")}:     <b><i>{charNameThree}</b></i>.
 
             - thirdChar_ActualName has ThirdD:
@@ -518,7 +513,6 @@
                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                                                         E il mio nome è...
-                    ~  characterChangingObjects(ThirdCharacter)
             {charTag(ThirdCharacter, "neutral")}:     <b><i>{charNameThree}</b></i>.
                                
             
@@ -530,7 +524,6 @@
                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                                                                                 Mi chiamerò...
-                    ~  characterChangingObjects(ThirdCharacter)
                 {charTag(ThirdCharacter, "neutral")}:     <b><i>{charNameThree}</b></i>.    
                     
             - thirdChar_ActualName has ThirdB:
@@ -541,19 +534,16 @@
                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                                                                 Io sono...
-                    ~  characterChangingObjects(ThirdCharacter)
                 {charTag(ThirdCharacter, "neutral")}:     <b><i>{charNameThree}</b></i>.    
                     
         }
         
-
             {
             - thirdChar_specialEvent == true:
                 -> secret_ending
             - else:
-                -> exit
+                -> close
             }
-    
     
     = secret_ending
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -571,22 +561,6 @@
         {charTag(ThirdCharacter, "neutral")}:     Frase.
         -> third_char_closing_storylet ->
         -> close
-            
-     = exit
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
-        {
-            - contentsNest hasnt fireGlyph:
-            {charTag(ThirdCharacter, "neutral")}:     Ah {player_name}, prima ho trovato una cosa in giro.
-            ~ move_entity(fireGlyph, Nest)
-
-        }
-            
-    -> close
-
 
 
     = close
@@ -597,20 +571,8 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
         
         
-        {charTag(ThirdCharacter, "neutral")}:     Frase.
-                                                                                    Salutami
-            {
-                - secondChar_storyStatus == story_storyStarted:
-                    E {charNameTwo}.
-
-            }
-            {
-                - firstChar_storyStatus == story_storyStarted:
-                    E anche {charNameOne}.
-
-            }
-        
-        E mentore o altro.
-
+        {charTag(ThirdCharacter, "neutral")}:       Che viaggione, vero?
+                                                    Ora mi sa che faccio due chiacchiere con le altre!
+                                                                    
         -> third_char_closing_storylet ->
         -> endingPNGstory(ThirdCharacter)        

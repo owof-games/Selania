@@ -185,12 +185,7 @@ VAR relationshipIndicatorEnthusiasticValue = 8
                 ~ story_endedStories += story_thirdCharStoryEnded
                 ~ thirdChar_storyStatus = story_storyPostal
                 //Il ritratto ha senso che compaia solo quando è stato davvero riscritto, praticamente quando lo vediamo a fine gioco
-                //Spostiamo poi le varianti della PNG
-                // ~ move_entity(SecondCharacterGrizzly, Safekeeping)
-                // ~ move_entity(SecondCharacterDelfino, Safekeeping)
-                // ~ move_entity(SecondCharacterLupo, Safekeeping)
-                // ~ move_entity(SecondCharacterCapibara, Safekeeping)
-                // ~ move_entity(SecondCharacterCorvo, Safekeeping)  
+                //Le sue varianti sono già state gestite prima
         }
         
         
@@ -1404,6 +1399,11 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
     {
         - third_character_notes.seven && grimoire_thirdChar hasnt grimThirdCharLetterSeven:
                 ~ grimoire_thirdChar += grimThirdCharLetterSeven
+    }
+
+    {
+        - third_character_notes.eight && grimoire_thirdChar hasnt grimThirdCharLetterEight:
+                ~ grimoire_thirdChar += grimThirdCharLetterEight
     }
 
     //FourthCharacter

@@ -346,6 +346,13 @@
             Saluto. <>
                 ~ letters_thirdCharLetters_seven()
     }
+
+    {
+        - grimoire_thirdChar has grimThirdCharLetterEight:
+            <b>Ottava lettera</b>
+            Saluto. <>
+                ~ letters_thirdCharLetters_eight()
+    }
     
 
     + [Index #bookmark:index]

@@ -432,6 +432,19 @@
 
 
 
+=== function letters_thirdCharLetters_eight()
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp charFifthName = translator(fifthChar_ActualName)
+        
+
+        {charTag(Documents, "writer_thirdChar")}:      Grazie per quello che mi hai detto, ora ci ragiono un poco sopra e poi ti scrivo.
+        
+
+
+
 === function letters_fourthCharLetters_one()
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)

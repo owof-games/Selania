@@ -34,8 +34,15 @@
     - ThirdCharacter:
         {   
             - thirdChar_storyStatus == story_storyPostal:
-                ~ return "{PNG}, {displayName}, {mood}"
+            {
+                //Torna alla festa e non ci ha ancora detto il suo nome nuovo
+                - ! third_char_post_rewriting.naming:
+                    ~ return "{PNG}, ???, {displayName}_{mood}"
 
+                - else:
+                    ~ return "{PNG}, {displayName}, {mood}"
+            }
+                
             - grimoire_thirdChar hasnt grimThirdCharPresentation:
                 ~ return "{PNG}, {displayName}, Boccale_{mood}"
             

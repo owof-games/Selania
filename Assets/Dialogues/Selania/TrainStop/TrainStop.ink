@@ -159,12 +159,23 @@
             - grimoire_thirdChar hasnt grimThirdCharLetterTwo:
                 -> two
         
-                
             - grimoire_thirdChar hasnt grimThirdCharLetterThree:
                 -> three
 
             - grimoire_thirdChar hasnt grimThirdCharLetterFour:
                 -> four
+
+            - grimoire_thirdChar hasnt grimThirdCharLetterFive:
+                -> five
+
+            - grimoire_thirdChar hasnt grimThirdCharLetterSix:
+                -> six
+
+            - grimoire_thirdChar hasnt grimThirdCharLetterSeven:
+                -> seven
+
+            - grimoire_thirdChar hasnt grimThirdCharLetterEight:
+                -> eight       
 
         }
         
@@ -203,6 +214,9 @@
         -> third_char_letters_choices.seven ->
         -> third_char_closing_letters -> main
 
+    = eight
+        ~ letters_thirdCharLetters_eight()
+        -> third_char_closing_letters -> main
     
 === fourth_character_notes ===
     
