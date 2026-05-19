@@ -126,22 +126,22 @@ UTILIZZI RIMASTI = {glyph_actualSigilUses}
 
             + \ {charTag(PG, "neutral")}:           <i>Voglio la modalità Reader Mode.</i>
 
-            + \ {charTag(PG, "neutral")}:           <i>Sono qui per testare il Grimorio.</i>
+            + {!debug_stochastic} \ {charTag(PG, "neutral")}:           <i>Sono qui per testare il Grimorio.</i>
                 -> debug_richGrimoire ->
             {charTag(TheWitch, witch_state())}:     <i>Ho riempito il grimorio come se tu avessi finito la prima parte di gioco, ma senza lo sbrocco di Mentore.</i>
                                                     <i>Hai inoltre sbloccato tutti i sigilli e le piante.</i>
 
-            + (riscrittura) \ {charTag(PG, "neutral")}:          <i>Impostami le prime 3 png come pronte per la riscrittura.
+            + (riscrittura) {!debug_stochastic}\ {charTag(PG, "neutral")}:          <i>Impostami le prime 3 png come pronte per la riscrittura.
                                                     ~ debugRewriting()
                                                     
 
-            +  \ {charTag(PG, "neutral")}:          <i>Aprimi tutti i luoghi del gioco.
+            + {!debug_stochastic} \ {charTag(PG, "neutral")}:          <i>Aprimi tutti i luoghi del gioco.
                                                     ~ debug_places_open()
                                    
             -
 
     {charTag(TheWitch, witch_state())}:             <i>Serve altro?
-            + \ {charTag(PG, "neutral")}:           <i>Sì.
+            + {!debug_stochastic}\ {charTag(PG, "neutral")}:           <i>Sì.
                 -> top2
             + \ {charTag(PG, "neutral")}:           <i>No.
             -

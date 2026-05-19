@@ -11,7 +11,7 @@
 
     //Valori per far crescere la singola pianta
         //Valore della pianta in crescita
-        VAR greenhouse_growStep = ()
+        VAR greenhouse_growStep = 0
 
         //Valori per tracciare i vari steps
         VAR greenhouse_growingValueStepOne = 2

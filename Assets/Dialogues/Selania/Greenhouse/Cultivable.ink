@@ -3,7 +3,7 @@
 === growing_check
 {
     //Aumentiamo il valore solo se greenhouse_growStep non ha stepFour
-    - greenhouse_growStep hasnt stepFour && greenhouse_chosenCultivable != ():
+    - greenhouse_growStep <= greenhouse_growingValueStepThree && greenhouse_chosenCultivable != ():
         ~ greenhouse_cultivableGrowing ++
 }
 -> growing_value_updater
@@ -12,24 +12,24 @@
 === growing_value_updater
 {
     - greenhouse_cultivableGrowing < greenhouse_growingValueStepOne:
-        ~ greenhouse_growStep = ()
-        ~ greenhouse_growStep += stepOne
+        ~ greenhouse_growStep = 0
+        ~ greenhouse_growStep = stepOne
         {debug: passo da step zero check greenhouse_cultivableGrowing. Il valore di greenhouse_cultivableGrowing è {greenhouse_cultivableGrowing}. Imposto greenhouse_growStep come {greenhouse_growStep}. Il coltivabile selezionato è {greenhouse_chosenCultivable}.}
     
     - greenhouse_cultivableGrowing < greenhouse_growingValueStepTwo:
-        ~ greenhouse_growStep = ()
-        ~ greenhouse_growStep += stepTwo
+        ~ greenhouse_growStep = 0
+        ~ greenhouse_growStep = stepTwo
         {debug: passo da primo check greenhouse_cultivableGrowing. Il valore di greenhouse_cultivableGrowing è {greenhouse_cultivableGrowing}.  Imposto greenhouse_growStep come {greenhouse_growStep}. Il coltivabile selezionato è {greenhouse_chosenCultivable}.}
     
     - greenhouse_cultivableGrowing < greenhouse_growingValueStepThree:
-        ~ greenhouse_growStep = ()
-        ~ greenhouse_growStep += stepThree
+        ~ greenhouse_growStep = 0
+        ~ greenhouse_growStep = stepThree
         {debug: passo da secondo step check greenhouse_cultivableGrowing.  Il valore di greenhouse_cultivableGrowing è {greenhouse_cultivableGrowing}. Imposto greenhouse_growStep come {greenhouse_growStep}. Il coltivabile selezionato è {greenhouse_chosenCultivable}.}
     
     - else:
         {
-            - greenhouse_growStep hasnt stepFour:
-                ~ greenhouse_growStep = ()
+            - greenhouse_growStep != stepFour:
+                ~ greenhouse_growStep = 0
                 ~ greenhouse_growStep += stepFour
         {debug: passo da terzo step check greenhouse_cultivableGrowing. Imposto greenhouse_growStep come {greenhouse_growStep}.}            
         }
@@ -42,7 +42,7 @@
     
     - entity_location(PG) != Greenhouse:
         {
-            - greenhouse_growStep has stepFour && notification_greenhouseGrownRepropose == true:
+            - greenhouse_growStep == stepFour && notification_greenhouseGrownRepropose == true:
                 ~ notification_greenhouseGrown = true
                 ->->
             - else:
