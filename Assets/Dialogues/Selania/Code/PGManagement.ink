@@ -88,9 +88,15 @@
     VAR temp_PGAether  = 0    
     
 
-// Lista che indica i possibli esiti delle varie sezioni dell'albero
-    LIST player_possibleStepsStatus = emptyStatus, airStatus, aetherStatus, waterStatus, earthStatus, fireStatus
-    
+    //Rapporto tra possibili status della crescita dell'albero e valore numerico, per gestire il cambio di assets in ink
+    CONST emptyStatus = 0
+    CONST airStatus = 1
+    CONST earthStatus = 2
+    CONST fireStatus = 3
+    CONST aetherStatus = 4
+    CONST waterStatus = 5
+
+
     //E tracciamento dei vari status delle singole storie
     VAR player_firstStepStatus = emptyStatus
     VAR player_secondStepStatus = emptyStatus
@@ -372,27 +378,27 @@
             
             {
                 - player_orderGrowingTreeUpdater == player_firstStepClosed:
-                    ~ player_firstStepStatus = ()
+                    ~ player_firstStepStatus = 0
                     ~ player_firstStepStatus += waterStatus
                    {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
                 
                 - player_orderGrowingTreeUpdater == player_secondStepClosed:
-                    ~ player_secondStepStatus = ()
+                    ~ player_secondStepStatus = 0
                     ~ player_secondStepStatus += waterStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}    
                 
                 - player_orderGrowingTreeUpdater == player_thirdStepClosed:
-                    ~ player_thirdStepStatus = ()
+                    ~ player_thirdStepStatus = 0
                     ~ player_thirdStepStatus += waterStatus
                     {debug: Lo status di player_thirdStepStatus è {player_thirdStepStatus}}   
                 
                 - player_orderGrowingTreeUpdater == player_fourthStepClosed:
-                    ~ player_fourthStepStatus = ()
+                    ~ player_fourthStepStatus = 0
                     ~ player_fourthStepStatus += waterStatus
                     {debug: Lo status di player_fourthStepStatus è {player_fourthStepStatus}}   
                 
                 - player_orderGrowingTreeUpdater == player_fifthStepClosed:
-                    ~ player_fifthStepStatus = ()
+                    ~ player_fifthStepStatus = 0
                     ~ player_fifthStepStatus += waterStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}   
                 
@@ -401,27 +407,27 @@
         - (temp_PGAir > temp_PGWater) && (temp_PGAir > temp_PGFire) && (temp_PGAir > temp_PGEarth) && (temp_PGAir > temp_PGAether):
             {
                 - player_orderGrowingTreeUpdater == player_firstStepClosed:
-                    ~ player_firstStepStatus = ()
+                    ~ player_firstStepStatus = 0
                     ~ player_firstStepStatus += airStatus
                     {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
                 
                 - player_orderGrowingTreeUpdater == player_secondStepClosed:
-                    ~ player_secondStepStatus = ()
+                    ~ player_secondStepStatus = 0
                     ~ player_secondStepStatus += airStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
                 
                 - player_orderGrowingTreeUpdater == player_thirdStepClosed:
-                    ~ player_thirdStepStatus = ()
+                    ~ player_thirdStepStatus = 0
                     ~ player_thirdStepStatus += airStatus
                     {debug: Lo status di player_thirdStepStatus è {player_thirdStepStatus}}     
 
                 - player_orderGrowingTreeUpdater == player_fourthStepClosed:
-                    ~ player_fourthStepStatus = ()
+                    ~ player_fourthStepStatus = 0
                     ~ player_fourthStepStatus += airStatus
                     {debug: Lo status di player_fourthStepStatus è {player_fourthStepStatus}}  
 
                 - player_orderGrowingTreeUpdater == player_fifthStepClosed:
-                    ~ player_fifthStepStatus = ()
+                    ~ player_fifthStepStatus = 0
                     ~ player_fifthStepStatus += airStatus
                     {debug: Lo status di player_fifthStepStatus è {player_fifthStepStatus}}  
 
@@ -430,27 +436,27 @@
         - (temp_PGFire> temp_PGWater) && (temp_PGFire> temp_PGAir) && (temp_PGFire> temp_PGEarth) && (temp_PGFire> temp_PGAether):
             {
                 - player_orderGrowingTreeUpdater == player_firstStepClosed:
-                    ~ player_firstStepStatus = ()
+                    ~ player_firstStepStatus = 0
                     ~ player_firstStepStatus += fireStatus
                     {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
                 
                 - player_orderGrowingTreeUpdater == player_secondStepClosed:
-                    ~ player_secondStepStatus = ()
+                    ~ player_secondStepStatus = 0
                     ~ player_secondStepStatus += fireStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
                 
                 - player_orderGrowingTreeUpdater == player_thirdStepClosed:
-                    ~ player_thirdStepStatus = ()
+                    ~ player_thirdStepStatus = 0
                     ~ player_thirdStepStatus += fireStatus
                     {debug: Lo status di player_thirdStepStatus è {player_thirdStepStatus}}   
 
                 - player_orderGrowingTreeUpdater == player_fourthStepClosed:
-                    ~ player_fourthStepStatus = ()
+                    ~ player_fourthStepStatus = 0
                     ~ player_fourthStepStatus += fireStatus
                     {debug: Lo status di player_fourthStepStatus è {player_fourthStepStatus}} 
 
                 - player_orderGrowingTreeUpdater == player_fifthStepClosed:
-                    ~ player_fifthStepStatus = ()
+                    ~ player_fifthStepStatus = 0
                     ~ player_fifthStepStatus += fireStatus
                     {debug: Lo status di player_fifthStepStatus è {player_fifthStepStatus}}
             }    
@@ -458,27 +464,27 @@
         - (temp_PGEarth > temp_PGWater) && (temp_PGEarth > temp_PGAir) && (temp_PGEarth > temp_PGFire) && (temp_PGEarth > temp_PGAether):
             {
                 - player_orderGrowingTreeUpdater == player_firstStepClosed:
-                    ~ player_firstStepStatus = ()
+                    ~ player_firstStepStatus = 0
                     ~ player_firstStepStatus += earthStatus
                     {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
                 
                 - player_orderGrowingTreeUpdater == player_secondStepClosed:
-                    ~ player_secondStepStatus = ()
+                    ~ player_secondStepStatus = 0
                     ~ player_secondStepStatus += earthStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
                 
                 - player_orderGrowingTreeUpdater == player_thirdStepClosed:
-                    ~ player_thirdStepStatus = ()
+                    ~ player_thirdStepStatus = 0
                     ~ player_thirdStepStatus += earthStatus
                     {debug: Lo status di player_thirdStepStatus è {player_thirdStepStatus}}   
                 
                 - player_orderGrowingTreeUpdater == player_fourthStepClosed:
-                    ~ player_fourthStepStatus = ()
+                    ~ player_fourthStepStatus = 0
                     ~ player_fourthStepStatus += earthStatus
                     {debug: Lo status di player_fourthStepStatus è {player_fourthStepStatus}} 
                 
                 - player_orderGrowingTreeUpdater == player_fifthStepClosed:
-                    ~ player_fifthStepStatus = ()
+                    ~ player_fifthStepStatus = 0
                     ~ player_fifthStepStatus += earthStatus
                     {debug: Lo status di player_fifthStepStatus è {player_fifthStepStatus}}
                 
@@ -487,28 +493,28 @@
         - (temp_PGAether > temp_PGWater) && (temp_PGAether > temp_PGAir) && (temp_PGAether > temp_PGFire) && (temp_PGAether > temp_PGEarth):
             {
                 - player_orderGrowingTreeUpdater == player_firstStepClosed:
-                    ~ player_firstStepStatus = ()
+                    ~ player_firstStepStatus = 0
                     ~ player_firstStepStatus += aetherStatus
    
                     {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
                 
                 - player_orderGrowingTreeUpdater == player_secondStepClosed:
-                    ~ player_secondStepStatus = ()
+                    ~ player_secondStepStatus = 0
                     ~ player_secondStepStatus += aetherStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
                 
                 - player_orderGrowingTreeUpdater == player_thirdStepClosed:
-                    ~ player_thirdStepStatus = ()
+                    ~ player_thirdStepStatus = 0
                     ~ player_thirdStepStatus += aetherStatus
                     {debug: Lo status di player_thirdStepStatus è {player_thirdStepStatus}}   
                 
                 - player_orderGrowingTreeUpdater == player_fourthStepClosed:
-                    ~ player_fourthStepStatus = ()
+                    ~ player_fourthStepStatus = 0
                     ~ player_fourthStepStatus += aetherStatus
                     {debug: Lo status di player_fourthStepStatus è {player_fourthStepStatus}}
 
                 - player_orderGrowingTreeUpdater == player_fifthStepClosed:
-                    ~ player_fifthStepStatus = ()
+                    ~ player_fifthStepStatus = 0
                     ~ player_fifthStepStatus += aetherStatus
                     {debug: Lo status di player_fifthStepStatus è {player_fifthStepStatus}} 
             }
@@ -517,8 +523,8 @@
         //In caso di pareggio cerco di assegnare un nome casuale da quelli più plausibili, sempre secondo la logica qui sopra elemento == nome.
             //Prima di tutto cerco di capire qual è il valore più alto comune.
             ~ temp maxValue = 0
-            ~ temp possibileTreeStatus = ()
-            ~ temp chosenTreeStatus = ()
+            ~ temp possibileTreeStatus = 0
+            ~ temp chosenTreeStatus = 0
             {debug: siamo in un pareggio, passo per la fase successiva} 
                 {
                     - temp_PGAether >= maxValue:
@@ -574,27 +580,27 @@
             //E lo associo alla persona
                         {
                 - player_orderGrowingTreeUpdater == player_firstStepClosed:
-                    ~ player_firstStepStatus = ()
+                    ~ player_firstStepStatus = 0
                     ~ player_firstStepStatus += chosenTreeStatus
                     {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
                 
                 - player_orderGrowingTreeUpdater == player_secondStepClosed:
-                    ~ player_secondStepStatus = ()
+                    ~ player_secondStepStatus = 0
                     ~ player_secondStepStatus += chosenTreeStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
                 
                 - player_orderGrowingTreeUpdater == player_thirdStepClosed:
-                    ~ player_thirdStepStatus = ()
+                    ~ player_thirdStepStatus = 0
                     ~ player_thirdStepStatus += chosenTreeStatus
                     {debug: Lo status di player_thirdStepStatus è {player_thirdStepStatus}}   
                 
                 - player_orderGrowingTreeUpdater == player_fourthStepClosed:
-                    ~ player_fourthStepStatus = ()
+                    ~ player_fourthStepStatus = 0
                     ~ player_fourthStepStatus += chosenTreeStatus
                     {debug: Lo status di player_fourthStepStatus è {player_fourthStepStatus}} 
                 
                 - player_orderGrowingTreeUpdater == player_fifthStepClosed:
-                    ~ player_fifthStepStatus = ()
+                    ~ player_fifthStepStatus = 0
                     ~ player_fifthStepStatus += chosenTreeStatus
                     {debug: Lo status di player_fifthStepStatus è {player_fifthStepStatus}} 
 

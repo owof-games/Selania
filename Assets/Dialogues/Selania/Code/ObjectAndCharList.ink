@@ -39,8 +39,6 @@
     
     LIST listColoredGlyphs  = fireGlyph, earthGlyph, airGlyph, waterGlyph, aetherGlyph, aetherGlyph_off, airGlyph_off, fireGlyph_off, earthGlyph_off, waterGlyph_off
 
-
-
     LIST listCharactersAndVariations = 
     FirstCharacter, FirstCharacterTriangolo, FirstCharacterOrchestra, FirstCharacterFlautoDolce, FirstCharacterOcarina, FirstCharacterViolino, FirstCharacterCucina,
     PaintTriangolo, PaintOrchestra, PaintFlautoDolce, PaintOcarina, PaintViolino, SecondCharacterCucina,
@@ -54,3 +52,6 @@
     Doggo, DoggoFirstLetters, DoggoSecondLetters, DoggoThirdLetters, DoggoFourthLetters, DoggoFifthLetters,
     PG,
     Documents
+
+    //Tutte le cose legate all'albero principale
+    LIST listTreeParts = treeTrunk, treeBranches
