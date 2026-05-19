@@ -294,7 +294,7 @@ MonoBehaviour:
   - <listName>k__BackingField: Franco
     <dialogueColor>k__BackingField: {r: 0.08627451, g: 0.07058824, b: 0.6745098, a: 1}
     <inkVariableName>k__BackingField: 
-    <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: 4e76ff89aef44064db41ededf92898f7, type: 3}
+    <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: 0c56c4884d759af4f81afd67c5682603, type: 3}
     <characterMoods>k__BackingField:
     - <name>k__BackingField: neutral
       <sprite>k__BackingField: {fileID: 21300000, guid: 0383c1ace5e7cfd42b7fe8be66a63175, type: 3}
@@ -457,27 +457,27 @@ MonoBehaviour:
   - <plantName>k__BackingField: universalIngredient
     <sprite>k__BackingField: {fileID: 21300000, guid: daa9db06a7459c44a88acc067791adc5, type: 3}
   textPageIcons:
-  - <iconName>k__BackingField: boccale
+  - <iconName>k__BackingField: Boccale
     <sprite>k__BackingField: {fileID: 21300000, guid: 34e5b2c893e96154ab32ad6f40bc6d66, type: 3}
-  - <iconName>k__BackingField: chitarra
+  - <iconName>k__BackingField: Chitarra
     <sprite>k__BackingField: {fileID: 21300000, guid: 0642fb40c3a703443b229954020b3374, type: 3}
   - <iconName>k__BackingField: Triangolo
-    <sprite>k__BackingField: {fileID: 21300000, guid: 0642fb40c3a703443b229954020b3374, type: 3}
-  - <iconName>k__BackingField: RagazzaOrchestra
-    <sprite>k__BackingField: {fileID: 21300000, guid: 0642fb40c3a703443b229954020b3374, type: 3}
-  - <iconName>k__BackingField: FlautoDolce
-    <sprite>k__BackingField: {fileID: 21300000, guid: 0642fb40c3a703443b229954020b3374, type: 3}
+    <sprite>k__BackingField: {fileID: 21300000, guid: fa87188807dbce2489a29224cc55e9ce, type: 3}
+  - <iconName>k__BackingField: Orchestra
+    <sprite>k__BackingField: {fileID: 21300000, guid: 58b467d57830e2d40a528eb12f1edfd5, type: 3}
+  - <iconName>k__BackingField: Flauto
+    <sprite>k__BackingField: {fileID: 21300000, guid: 3641e835bf5801647b46b5d12b0e9d90, type: 3}
   - <iconName>k__BackingField: Ocarina
-    <sprite>k__BackingField: {fileID: 21300000, guid: 0642fb40c3a703443b229954020b3374, type: 3}
+    <sprite>k__BackingField: {fileID: 21300000, guid: e23cd553f32779248a81b69a63ed7033, type: 3}
   - <iconName>k__BackingField: Violino
-    <sprite>k__BackingField: {fileID: 21300000, guid: 0642fb40c3a703443b229954020b3374, type: 3}
-  - <iconName>k__BackingField: franco
+    <sprite>k__BackingField: {fileID: 21300000, guid: 136ccddc8a2d9bb49902ad025b27ab72, type: 3}
+  - <iconName>k__BackingField: Franco
     <sprite>k__BackingField: {fileID: 21300000, guid: 02caf7a8d0921aa4ba5d5b749a632551, type: 3}
   - <iconName>k__BackingField: witch
     <sprite>k__BackingField: {fileID: 21300000, guid: 4e520e9a644e32944bd52b9a7009d869, type: 3}
-  - <iconName>k__BackingField: mentore
+  - <iconName>k__BackingField: Mentore
     <sprite>k__BackingField: {fileID: 21300000, guid: 0a6d82c371449ae4e8cde4a54de218d2, type: 3}
-  - <iconName>k__BackingField: riccio
+  - <iconName>k__BackingField: Riccio
     <sprite>k__BackingField: {fileID: 21300000, guid: 128ebe1261bc45c468c689535abddd4c, type: 3}
   - <iconName>k__BackingField: Grizzly
     <sprite>k__BackingField: {fileID: 21300000, guid: 128ebe1261bc45c468c689535abddd4c, type: 3}
