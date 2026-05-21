@@ -952,6 +952,7 @@
                 -> glyph_choice_manager(true, aetherC)->
                 {charTag(SecondCharacter, "neutral")}:          Non è vero!
                                                                 Abbiamo già parlato tantissimo!
+                                                                E sono sicuro che anche le altre ti adorano!
                
             + (water2)\ {charTag(PG, "neutral")}:               <i>Aggiungo della lavanda empatica.</i>
                 ~ kitchen_recipeAdjective = "empatia"
