@@ -92,7 +92,7 @@
 //Gestione dei doni
     //Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
     VAR secondChar_favouritesGifts = (BrinaDellImpossibile, BastoneDellOzioso, LicheneDegliAbissi)
-    VAR secondChar_goodGifts = (CantoDelleCompagne, LanaNotturna, Spazzata, NonTiScordarDiTe)
+    VAR secondChar_goodGifts = (Spazzata, NonTiScordarDiTe)
     //Dono consigliato dalla rana
     VAR frog_second_char_gift = ""
     VAR frog_second_temp_growing_gift = false

@@ -68,8 +68,8 @@
 
 //Gestione dei doni
     //Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
-    VAR thirdChar_favouritesGifts = (NonTiScordarDiTe, BaccaDellaAddolorata, CantoDelleCompagne)
-    VAR thirdChar_goodGifts = (ErbaLiccia, Olobino, BastoneDellOzioso, LanaNotturna)
+    VAR thirdChar_favouritesGifts = (CardoAspinato, FalsaPalude)
+    VAR thirdChar_goodGifts = (BastoneDellOzioso, EderaDelleAmanti, Olobino)
     //Dono consigliato dalla rana
     VAR frog_third_char_gift = ""
     VAR frog_third_temp_growing_gift = false
