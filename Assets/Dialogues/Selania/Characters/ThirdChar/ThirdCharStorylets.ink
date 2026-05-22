@@ -196,6 +196,16 @@
             + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                     -> glyph_choice_manager(false, aetherC)->
             -
+            {
+                - are_two_entities_together(FirstCharacter, PG):
+                {
+                    - grimoire_firstChar has grimFirstThirdChar:
+                        {charTag(FirstCharacter, "annoyed")}:                   Commento infastidito di Chitarra.
+
+                    - else:
+                        {charTag(FirstCharacter, "neutral")}:                   Commento empatico di Chitarra.    
+                }
+            }
 
             -> third_char_closing_storylet ->
             -> options_third_character
@@ -226,8 +236,18 @@
 
             + \ {charTag(PG, "neutral")}:        Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                     -> glyph_choice_manager(false, aetherC)->
-        - 
+                - 
 
+                {
+                        - are_two_entities_together(FirstCharacter, PG):
+                        {
+                        - grimoire_firstChar has grimFirstThirdChar:
+                                {charTag(FirstCharacter, "annoyed")}:                   Commento infastidito di Chitarra.
+
+                        - else:
+                                {charTag(FirstCharacter, "neutral")}:                   Commento empatico di Chitarra.    
+                        }
+                }
         -> third_char_closing_storylet ->            
         -> options_third_character
     

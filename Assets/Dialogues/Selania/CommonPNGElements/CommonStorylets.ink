@@ -82,6 +82,17 @@
         -    
     {charTag(FirstCharacter, "neutral")}:                       Bene, direi che abbiamo tutt3 qualcosa a cui pensare.
     {charTag(FirstCharacter, "affectionate")}:                  Tipo, dove schiacciarmi quel pisolino.
+
+        {
+                - are_two_entities_together(ThirdCharacter, PG):
+                {
+                - grimoire_thirdChar has grimFirstThirdChar:
+                        {charTag(ThirdCharacter, "angry")}:                     Commento infastidito di Boccale.
+
+                - else:
+                        {charTag(ThirdCharacter, "neutral")}:                   Commento neutro/positivo di Boccale.    
+                }
+        }    
  
         -> second_char_closing_storylet ->
         -> first_char_closing_storylet ->
@@ -127,7 +138,7 @@
     {charTag(FifthCharacter, "sad")}:                                   Non mi perdonerà mai, vero {player_name}?
 
 
-        + \ {charTag(PG, "neutral")}:                   T               emo che gli adulti non siano la sua cosa preferita.
+        + \ {charTag(PG, "neutral")}:                                   Temo che gli adulti non siano la sua cosa preferita.
                 -> glyph_choice_manager(Mentor, waterC)->
         {charTag(FifthCharacter, "sad")}:                               Lo temo anche io.
                                                                         E questo significa che devo fare il doppio del lavoro per avere la sua  fiducia.
@@ -246,6 +257,16 @@
     {charTag(FifthCharacter, "neutral")}:                               Lezione?
     {charTag(FirstCharacter, "affectionate")}:                          Sì: che se una persona ti dice che ti ammira, è meglio portarsi a casa il complimento e goderselo.
     {charTag(FirstCharacter, "annoyed")}:                               Non sono vecchia come te, ma so che non sono tanti gli elogi che ci vengono dati in vita.
+            {
+                - are_two_entities_together(ThirdCharacter, PG):
+                {
+                - grimoire_thirdChar has grimFirstThirdChar:
+                        {charTag(ThirdCharacter, "angry")}:                     Commento infastidito di Boccale.
+
+                - else:
+                        {charTag(ThirdCharacter, "neutral")}:                   Commento neutro/positivo di Boccale.    
+                }
+        }  
 
 
         -> first_char_closing_storylet ->
@@ -461,7 +482,18 @@
         {charTag(FirstCharacter, "annoyed")}:                           Eh?!?                                            
         {charTag(Franco, "party")}:                                     Ehi {charNameOne}! Che bello vederti!
                                                                         Ti ho mai parlato degli studi al Conservatorio di Etelbero?
-        {charTag(FirstCharacter, "annoyed")}:                           Uccidetemi.        
+        {charTag(FirstCharacter, "annoyed")}:                           Uccidetemi.
+
+        {
+                - are_two_entities_together(ThirdCharacter, PG):
+                {
+                - grimoire_thirdChar has grimFirstThirdChar:
+                        {charTag(ThirdCharacter, "angry")}:                     Commento infastidito di Boccale.
+
+                - else:
+                        {charTag(ThirdCharacter, "neutral")}:                   Commento neutro/positivo di Boccale.    
+                }
+        }        
         -
         -> first_char_closing_storylet ->
         ->->
@@ -602,6 +634,16 @@
                     -> glyph_choice_manager(false, aetherC)->
 
     -
+        {
+                - are_two_entities_together(FirstCharacter, PG):
+                {
+                - grimoire_firstChar has grimFirstThirdChar:
+                        {charTag(FirstCharacter, "annoyed")}:                   Commento infastidito di Chitarra.
+
+                - else:
+                        {charTag(FirstCharacter, "neutral")}:                   Commento empatico di Chitarra.    
+                }
+        }
     -> third_char_closing_storylet ->
     ->->
 
@@ -630,7 +672,17 @@
                     
             + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                     -> glyph_choice_manager(false, aetherC)->
-    -
+        -
+        {
+                - are_two_entities_together(FirstCharacter, PG):
+                {
+                - grimoire_firstChar has grimFirstThirdChar:
+                        {charTag(FirstCharacter, "annoyed")}:                   Commento infastidito di Chitarra.
+
+                - else:
+                        {charTag(FirstCharacter, "neutral")}:                   Commento empatico di Chitarra.    
+                }
+        }   
 
     -> mentor_closing_storylet ->
     -> third_char_closing_storylet ->
@@ -661,7 +713,17 @@
             + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                     -> glyph_choice_manager(false, aetherC)->
 
-    -
+        -
+        {
+                - are_two_entities_together(FirstCharacter, PG):
+                {
+                - grimoire_firstChar has grimFirstThirdChar:
+                        {charTag(FirstCharacter, "annoyed")}:                   Commento infastidito di Chitarra.
+
+                - else:
+                        {charTag(FirstCharacter, "neutral")}:                   Commento empatico di Chitarra.    
+                }
+        }
     -> second_char_closing_storylet ->
     -> third_char_closing_storylet ->
     ->->

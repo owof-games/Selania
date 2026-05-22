@@ -37,7 +37,7 @@
             -> glyph_choice_manager(false, waterC)->
         -    
     {charTag(ThirdCharacter, "neutral")}:           E poi {charNameThree} se ne va.
-    
+
         -> third_char_closing_storylet ->
 
     E {witch_actualName} ci dice che ci ha aggiunto tre sigilli random sul libro.
@@ -122,6 +122,16 @@
                     -> glyph_choice_manager(false, fireC)-> 
                 
             -
+            {
+                    - are_two_entities_together(FirstCharacter, PG):
+                    {
+                    - grimoire_firstChar has grimFirstThirdChar:
+                            {charTag(FirstCharacter, "annoyed")}:                   Commento infastidito di Chitarra.
+
+                    - else:
+                            {charTag(FirstCharacter, "neutral")}:                   Commento empatico di Chitarra.    
+                    }
+            }    
         -> third_char_closing_storylet ->
         ->->
 

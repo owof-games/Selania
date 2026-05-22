@@ -123,6 +123,17 @@
     {charTag(FirstCharacter, "annoyed")}:                   Non ho un buon rapporto con la rabbia.
                                                             Le poche volte che l'ho lasciata uscire mi sono vista chiamare isterica, nevrotica, mestruata.
     {
+        - are_two_entities_together(ThirdCharacter, PG):
+        {
+        - grimoire_thirdChar has grimFirstThirdChar:
+                {charTag(ThirdCharacter, "angry")}:                     Commento infastidito di Boccale.
+
+        - else:
+                {charTag(ThirdCharacter, "neutral")}:                   Commento neutro/positivo di Boccale.    
+        }
+    }  
+
+    {
         - are_two_entities_together(Mentor, PG):
         {charTag(FifthCharacter, "bored")}:                 È una storia che ho già sentito.    
     }

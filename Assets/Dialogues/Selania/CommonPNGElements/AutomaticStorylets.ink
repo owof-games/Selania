@@ -96,11 +96,11 @@
             -> first_second_chit_chat
 
         //Chiacchiere tra Riccio e PNG3
-        - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(SecondCharacter, PG) && grimoire_secondChar hasnt grimSecondThirdChar:
+        - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(SecondCharacter, PG) && grimoire_secondChar hasnt grimSecondThirdChar && grimoire_thirdChar has grimThirdCharTwo:
             -> third_second_chit_chat        
 
         //Chiacchiere tra Chitarra e PNG3
-        - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(FirstCharacter, PG) && grimoire_firstChar hasnt grimFirstThirdChar:
+        - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(FirstCharacter, PG) && grimoire_firstChar hasnt grimFirstThirdChar && grimoire_thirdChar has grimThirdCharFour:
             -> third_first_chit_chat 
 
     
