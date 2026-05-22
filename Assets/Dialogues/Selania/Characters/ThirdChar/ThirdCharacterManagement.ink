@@ -231,3 +231,28 @@
 
 
 
+// === function third_char_trust_for_letters(Letter)
+// //Funzione che chiamiamo solo nel treno per capire come reagirà Boccale alle nostre proposte.
+// //Step uno: verifica dello stato della relazione.
+// ~  temp trust = false
+// {
+//     - thirdChar_relationshipIndicator > relationshipIndicatorNeutralValue:
+//         ~ trust = true
+    
+//     - else:
+//         ~ trust = false    
+// }
+// //Step successivo
+
+// {Letter:
+//     - grimThirdCharLetterTwo:
+
+//     - grimThirdCharLetterThree:
+
+//     - grimThirdCharLetterFour:
+
+//     - grimThirdCharLetterFive:
+
+//     - grimThirdCharLetterSix:
+
+// }

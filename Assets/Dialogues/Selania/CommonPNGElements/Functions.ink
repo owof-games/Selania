@@ -22,7 +22,7 @@ VAR thirdChar_LibraryWaiting = 0
 VAR relationshipIndicatorNegativeValue = -4
 VAR relationshipIndicatorPositiveValue = 4
 VAR relationshipIndicatorEnthusiasticValue = 8
-
+VAR relationshipIndicatorNeutralValue = 0
 
 
 //Funzione di calcolo dell'affinità tra PNG e PG
