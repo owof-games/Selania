@@ -1,4 +1,18 @@
 //Questi storylets speciali non tornano sulle opzioni di dialogo, ma sul main        
+    === pre_open_the_nest
+        ~ temp charNameTwo = translator(thirdChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+
+    {charTag(ThirdCharacter, "neutral")}:       Arriviamo in biblioteca e ci dice "Ora ti porto in un posto fighissimo!" e ci invita a seguirlo e viene aperto il nido.
+        
+    -> third_char_closing_storylet ->
+        ~ opening_places()
+        ~ move_entity(ThirdCharacter, Nest)
+
+    ->->    
+
+    
     === open_the_nest
     ~ temp charNameTwo = translator(thirdChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -6,7 +20,7 @@
     
 
     //Apertura del nido
-    {charTag(ThirdCharacter, "neutral")}:       Dialogo in biblioteca.
+    {charTag(ThirdCharacter, "neutral")}:       Dialogo al nido.
         + [Scelta aria]
              -> glyph_choice_manager(false, airC)->
     
@@ -22,8 +36,10 @@
         + [Scelta acqua]
             -> glyph_choice_manager(false, waterC)->
         -    
-    {charTag(ThirdCharacter, "neutral")}:       Ci viene aperto il nido.
-                                                E poi {charNameThree} se ne va.
+    {charTag(ThirdCharacter, "neutral")}:           E poi {charNameThree} se ne va.
+    
+        -> third_char_closing_storylet ->
+
     E {witch_actualName} ci dice che ci ha aggiunto tre sigilli random sul libro.
 
         //Chiamiamo il primo, notifichiamo, ripetiamo  
@@ -61,8 +77,7 @@
             //E poi svuoto il nuovo sigillo
             ~ nest_newSigilDiscovered = ()
 
-        -> third_char_closing_storylet ->
-        ~ opening_places()
+        
         //Parte subito la spiegazione sui sigilli di Carla
         {
             -  settings_gamerMode == true:

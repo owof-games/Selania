@@ -64,9 +64,14 @@
                     ~ thirdChar_LibraryWaiting = chars_MaxOpenPlacesWaiting
                     ->->   
 
-    //Apertura nest    
-        - are_two_entities_together(ThirdCharacter, PG) && LIST_COUNT(grimoire_thirdChar) >= 2 && entity_location(PG) == Library && player_accessiblePlaces hasnt Nest && openingPlacesPause <= 0:
-             -> open_the_nest
+    //Apertura nest
+        //Preparazione
+        - are_two_entities_together(ThirdCharacter, PG) && LIST_COUNT(grimoire_thirdChar) >= 2 && entity_location(PG) == Library && player_accessiblePlaces hasnt Nest && openingPlacesPause <= 0 && grimoire_thirdChar hasnt grimThirdPreOpenNest:
+            -> pre_open_the_nest
+
+        //Apertura effettiva    
+        - are_two_entities_together(ThirdCharacter, PG) && entity_location(PG) == Nest  && grimoire_thirdChar hasnt grimThirdOpenNest:
+            -> open_the_nest
 
     //Apertura della discarica
         - grimoire_thirdChar has grimThirdCharOne && (entity_location(FromForestToDump) == Safekeeping) && (entity_location(PG) != Forest) && grimoire_witch hasnt grimWitchOpenDump && openingPlacesPause <= 0:

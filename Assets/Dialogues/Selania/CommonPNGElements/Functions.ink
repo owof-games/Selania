@@ -1022,10 +1022,15 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
                 ~ grimoire_fifthChar += grimMentorThirdSecretEnding
         }
 
+        //Storylets speciali
 
+        {
+            - pre_open_the_nest && grimoire_thirdChar hasnt grimThirdPreOpenNest:
+                ~ grimoire_thirdChar += grimThirdPreOpenNest
+        }
 
         {        
-            //Storylets speciali
+            
             - open_the_nest && grimoire_thirdChar hasnt grimThirdOpenNest:
                 ~ grimoire_thirdChar += grimThirdOpenNest
                 ~ grimoire_appendices += grimThirdOpenNest
