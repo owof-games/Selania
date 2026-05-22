@@ -1,0 +1,68 @@
+{
+    "version": 1,
+    "name": "InputActionsDebuggingWindow",
+    "maps": [
+        {
+            "name": "DebuggingMap",
+            "id": "ef83f0c0-4953-496c-813d-4aa917cea0c0",
+            "actions": [
+                {
+                    "name": "Toggle Debug Panel",
+                    "type": "Button",
+                    "id": "25291e0e-4860-447c-b2c4-892296687645",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "Two Modifiers",
+                    "id": "cbde5c5b-6b09-4b53-881c-c14e273e8e4f",
+                    "path": "TwoModifiers",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Toggle Debug Panel",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier1",
+                    "id": "50b3c9d7-f5e7-45c8-9a90-ea25758f71f8",
+                    "path": "<Keyboard>/ctrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Toggle Debug Panel",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "modifier2",
+                    "id": "2c41a966-0089-4cf0-b6f7-91f33a502a3f",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Toggle Debug Panel",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "binding",
+                    "id": "a9262829-8858-46f2-b0b8-744a2edbd4c1",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Toggle Debug Panel",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

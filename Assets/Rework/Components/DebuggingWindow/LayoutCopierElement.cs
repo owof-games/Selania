@@ -4,9 +4,11 @@ using UnityEngine.UI;
 
 namespace Selania.Rework.Components.DebuggingWindow
 {
+    [ExecuteAlways]
+    [RequireComponent(typeof(RectTransform))]
     public class LayoutCopierElement : UIBehaviour, ILayoutElement
     {
-        [SerializeField] private LayoutGroup _copiedLayoutElement;
+        [SerializeField] private LayoutGroup copiedLayoutElement = null!;
 
         [SerializeField] private float verticalPadding;
 
@@ -47,21 +49,21 @@ namespace Selania.Rework.Components.DebuggingWindow
 
         public void CalculateLayoutInputHorizontal()
         {
-            _copiedLayoutElement.CalculateLayoutInputHorizontal();
+            copiedLayoutElement.CalculateLayoutInputHorizontal();
         }
 
         public void CalculateLayoutInputVertical()
         {
-            _copiedLayoutElement.CalculateLayoutInputVertical();
+            copiedLayoutElement.CalculateLayoutInputVertical();
         }
 
-        public float minWidth => _copiedLayoutElement.minWidth;
-        public float preferredWidth => _copiedLayoutElement.preferredWidth;
-        public float flexibleWidth => _copiedLayoutElement.flexibleWidth;
-        public float minHeight => _copiedLayoutElement.minHeight + verticalPadding;
-        public float preferredHeight => _copiedLayoutElement.preferredHeight + verticalPadding;
-        public float flexibleHeight => _copiedLayoutElement.flexibleHeight + verticalPadding;
-        public int layoutPriority => _copiedLayoutElement.layoutPriority;
+        public float minWidth => copiedLayoutElement.minWidth;
+        public float preferredWidth => copiedLayoutElement.preferredWidth;
+        public float flexibleWidth => copiedLayoutElement.flexibleWidth;
+        public float minHeight => copiedLayoutElement.minHeight + verticalPadding;
+        public float preferredHeight => copiedLayoutElement.preferredHeight + verticalPadding;
+        public float flexibleHeight => copiedLayoutElement.flexibleHeight + verticalPadding;
+        public int layoutPriority => copiedLayoutElement.layoutPriority;
 
         /// <summary>
         ///     Mark the LayoutElement as dirty.
