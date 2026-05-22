@@ -118,7 +118,7 @@
             -> first_mentor_chit_chat
         
         //Chiacchiere tra Franco e Mentore
-        - are_two_entities_together(Mentor, PG) && grimoire_appendices has grimChoicesMentor && are_two_entities_together (Franco, PG) && grimoire_fifthChar hasnt grimMentorFranco:
+        - are_two_entities_together(Mentor, PG) && grimoire_appendices has grimChoicesMentor && are_two_entities_together (Franco, PG) && grimoire_fifthChar hasnt grimMentorFranco && frog_commonStoryletsPause == 0:
             -> frog_and_mentor_chit_chat
         
         //Chiacchiera tra PNG3 e Mentore
@@ -127,15 +127,15 @@
 
     //Con PNG e Franco
         //Chiacchiera tra Chitarra e Franco                
-        - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(Franco, PG) && grimoire_firstChar hasnt grimFirstCharFranco:
+        - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(Franco, PG) && grimoire_firstChar hasnt grimFirstCharFranco && frog_commonStoryletsPause == 0:
             -> frog_and_first_char_chit_chat
 
         //Chiacchiera tra Riccio e Franco
-        - are_two_entities_together(SecondCharacter, PG) && are_two_entities_together(Franco, PG) && grimoire_secondChar hasnt grimSecondCharFranco:
+        - are_two_entities_together(SecondCharacter, PG) && are_two_entities_together(Franco, PG) && grimoire_secondChar hasnt grimSecondCharFranco && frog_commonStoryletsPause == 0:
             -> frog_and_second_char_chit_chat
 
-        //Chiacchiera tra Tre e Franco
-        - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(Franco, PG) && grimoire_thirdChar hasnt grimThirdCharFranco:
+        //Chiacchiera tra Boccale e Franco
+        - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(Franco, PG) && grimoire_thirdChar hasnt grimThirdCharFranco && frog_commonStoryletsPause == 0:
             -> frog_and_third_char_chit_chat
     
     //Altre

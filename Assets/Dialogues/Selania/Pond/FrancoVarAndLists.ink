@@ -79,3 +79,7 @@
     VAR frog_justPaused = false
     
     VAR frog_nameDiscovered = false
+
+    //pausa dialoghi tra PNG e Franco, così da non farli arrivare tutti assieme
+    VAR frog_commonStoryletsPause = 0
+    VAR frog_commonStoryletsPauseMaxValue = 8

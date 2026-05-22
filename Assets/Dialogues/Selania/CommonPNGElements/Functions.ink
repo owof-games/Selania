@@ -536,6 +536,8 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
             - frog_and_first_char_chit_chat && grimoire_firstChar hasnt grimFirstCharFranco:
                 ~ grimoire_firstChar += grimFirstCharFranco
                 ~ grimoire_franco += grimFirstCharFranco
+                //Mettiamo in pausa gli storylets con Franco
+                ~ frog_commonStoryletsPause = frog_commonStoryletsPauseMaxValue
         }
 
         {
@@ -555,6 +557,8 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
             - frog_and_second_char_chit_chat && grimoire_secondChar hasnt grimSecondCharFranco:
                 ~ grimoire_secondChar += grimSecondCharFranco
                 ~ grimoire_franco += grimSecondCharFranco
+                //Mettiamo in pausa gli storylets con Franco
+                ~ frog_commonStoryletsPause = frog_commonStoryletsPauseMaxValue
         }
 
         {
@@ -575,6 +579,8 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
             - frog_and_third_char_chit_chat && grimoire_thirdChar hasnt grimThirdCharFranco:
                 ~ grimoire_thirdChar += grimThirdCharFranco
                 ~ grimoire_franco += grimThirdCharFranco
+                //Mettiamo in pausa gli storylets con Franco
+                ~ frog_commonStoryletsPause = frog_commonStoryletsPauseMaxValue
         }
 
 
@@ -595,6 +601,8 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
                 ~ grimoire_fifthChar += grimMentorFranco
                 ~ grimoire_franco += grimMentorFranco
                 ~ player_somethingStrangeTalkable += strangeMentor
+                //Mettiamo in pausa gli storylets con Franco
+                ~ frog_commonStoryletsPause = frog_commonStoryletsPauseMaxValue
         }
 
 

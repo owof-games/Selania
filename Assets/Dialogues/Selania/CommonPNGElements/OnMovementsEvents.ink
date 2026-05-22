@@ -383,7 +383,11 @@ VAR letters_doggoPause = false
                         ~ move_entity(Franco, Pond)
             }    
     }
-
+    {
+        //Pausa storylets comuni con Franco
+        -   frog_commonStoryletsPause > 0:
+                ~ frog_commonStoryletsPause --
+    }
 
 
 //Contatori della PG
