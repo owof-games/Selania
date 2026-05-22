@@ -110,5 +110,12 @@ namespace Selania.Rework.Interfaces
         /// <param name="moodTag">The mood tag (neutral, bored, ...)</param>
         /// <returns><c>true</c> if the couple character + mood is known, <c>false</c> otherwise.</returns>
         bool VerifyCharacterData(string character, string moodTag);
+
+        /// <summary>
+        ///     Get the sprite that corresponds to the given name. This is used for images inserted in the dialogue.
+        /// </summary>
+        /// <param name="spriteName">Name of the sprite.</param>
+        /// <returns>Sprite to use, or <c>null</c> if no sprite with the given name was found.</returns>
+        Sprite? GetDialogueSprite(string spriteName);
     }
 }

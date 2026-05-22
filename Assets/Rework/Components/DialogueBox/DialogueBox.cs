@@ -24,6 +24,9 @@ namespace Selania.Rework.Components.DialogueBox
         [SerializeField] [Tooltip("The prefab that creates a set of choices once instantiated.")]
         private GameObject dialogueChoicesPrefab = null!;
 
+        [SerializeField] [Tooltip("The prefab that creates an image in the dialogue.")]
+        private GameObject dialogueImagePrefab = null!;
+
         [SerializeField] [Tooltip("The container where all the text lines are added to.")]
         private RectTransform textLinesContainer = null!;
 
@@ -194,6 +197,28 @@ namespace Selania.Rework.Components.DialogueBox
                 var textLine = textLineGameObject.GetComponent<TextLine>();
                 textLine.SetText(speaker, text);
                 _latestTextLine = textLine;
+            }
+
+            ScrollToBottom();
+        }
+
+        /// <summary>
+        ///     Add an image to the dialogue box.
+        /// </summary>
+        /// <param name="spriteName">
+        ///     Name of the sprite to show. See <see cref="ISettingsDialogueBox.GetDialogueSprite" /> and
+        ///     <see cref="SelaniaSettings.dialogueSpriteInfo" />.
+        /// </param>
+        public void AddImage(string spriteName)
+        {
+            SlideInIfNecessary();
+
+            using (LifetimeScope.EnqueueParent(Scope))
+            {
+                _inputActionsDialogueBox?.ContinueMap.Enable();
+                var dialogueImageGameObject = Instantiate(dialogueImagePrefab, textLinesContainer);
+                var dialogueImage = dialogueImageGameObject.GetComponent<DialogueImage>();
+                dialogueImage.SetImage(spriteName);
             }
 
             ScrollToBottom();

@@ -40,6 +40,11 @@ namespace Selania.Rework.Components.Museum.Dialogue
             dialogueBox.AddTextLine(("FirstCharacter", "Chitarra"), text);
         }
 
+        public void AddImage(string spriteName)
+        {
+            dialogueBox.AddImage(spriteName);
+        }
+
         public void AddDialogueChoices()
         {
             dialogueBox.AddChoices(new DialogueChoices.Choice[]

@@ -53,6 +53,42 @@ namespace Selania.Rework.Components
         private readonly DerivedDictionaryProvider<string, Color, CharacterInfo> _characterColorsProvider =
             new(info => info.listName, info => info.dialogueColor, CharacterInfo.DefaultComparer);
 
+
+        [Serializable]
+        public class DialogueSpriteInfo : IEqualityComparer<DialogueSpriteInfo>
+        {
+            public string spriteName = "";
+            public Sprite sprite = null!;
+
+            public bool Equals(DialogueSpriteInfo? x, DialogueSpriteInfo? y)
+            {
+                if (ReferenceEquals(x, y)) return true;
+                if (x is null) return false;
+                if (y is null) return false;
+                if (x.GetType() != y.GetType()) return false;
+                return x.spriteName == y.spriteName && x.sprite.Equals(y.sprite);
+            }
+
+            public int GetHashCode(DialogueSpriteInfo obj)
+            {
+                return HashCode.Combine(obj.spriteName, obj.sprite);
+            }
+        }
+
+        [SerializeField] [Tooltip("Sprites that can appear in the dialogue")] [TabGroup("Dialogue Box", "Text")]
+        private DialogueSpriteInfo[] dialogueSpriteInfo = Array.Empty<DialogueSpriteInfo>();
+
+        private readonly DerivedDictionaryProvider<string, Sprite, DialogueSpriteInfo> _dialogueSpriteInfoProvider =
+            new(info => info.spriteName, info => info.sprite);
+
+        /// <inheritdoc />
+        public Sprite? GetDialogueSprite(string spriteName)
+        {
+            return _dialogueSpriteInfoProvider.Get(dialogueSpriteInfo).TryGetValue(spriteName, out var sprite)
+                ? sprite
+                : null;
+        }
+
         #endregion
 
         #region dialogue box - choices
