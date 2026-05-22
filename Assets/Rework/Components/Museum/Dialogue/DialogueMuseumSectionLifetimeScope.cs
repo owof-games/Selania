@@ -59,6 +59,8 @@ namespace Selania.Rework.Components.Museum.Dialogue
             public Observable<IStoryLinear.CurrentTextInfo> currentTextObservable =>
                 Observable.Empty<IStoryLinear.CurrentTextInfo>();
 
+            public Observable<string> imageObservable => Observable.Empty<string>();
+
             public Observable<bool> conversationInProgressObservable =>
                 Observable.Return(true);
 

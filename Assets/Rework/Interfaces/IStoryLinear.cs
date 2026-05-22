@@ -19,6 +19,11 @@ namespace Selania.Rework.Interfaces
         Observable<CurrentTextInfo> currentTextObservable { get; }
 
         /// <summary>
+        ///     An observable producing sprite names that must be shown in the dialogue.
+        /// </summary>
+        Observable<string> imageObservable { get; }
+
+        /// <summary>
         ///     An observable that emits whether there is a conversation going on or not.
         /// </summary>
         Observable<bool> conversationInProgressObservable { get; }

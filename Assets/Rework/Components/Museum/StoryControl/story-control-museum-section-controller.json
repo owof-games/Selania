@@ -52,6 +52,10 @@
           "\n",
           "^Continuo a parlare, non sono serviti tag e mantengo lo stesso personaggio, immagine, ecc.",
           "\n",
+          "^@sprite:museum1",
+          "\n",
+          "^Subito sopra c'è lo sprite 'museum1'",
+          "\n",
           "ev",
           true,
           "/ev",
@@ -135,7 +139,7 @@
           [
             "ev",
             {
-              "^->": "main.0.76.$r1"
+              "^->": "main.0.80.$r1"
             },
             {
               "temp=": "$r"
@@ -182,7 +186,7 @@
           [
             "ev",
             {
-              "^->": "main.0.77.$r1"
+              "^->": "main.0.81.$r1"
             },
             {
               "temp=": "$r"
@@ -229,7 +233,7 @@
           [
             "ev",
             {
-              "^->": "main.0.78.$r1"
+              "^->": "main.0.82.$r1"
             },
             {
               "temp=": "$r"
@@ -284,7 +288,7 @@
                 "temp=": "$r"
               },
               {
-                "->": ".^.^.76.s"
+                "->": ".^.^.80.s"
               },
               [
                 {
@@ -316,7 +320,7 @@
                 "temp=": "$r"
               },
               {
-                "->": ".^.^.77.s"
+                "->": ".^.^.81.s"
               },
               [
                 {
@@ -348,7 +352,7 @@
                 "temp=": "$r"
               },
               {
-                "->": ".^.^.78.s"
+                "->": ".^.^.82.s"
               },
               [
                 {

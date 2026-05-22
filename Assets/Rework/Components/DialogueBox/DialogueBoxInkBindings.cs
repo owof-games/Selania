@@ -53,6 +53,8 @@ namespace Selania.Rework.Components.DialogueBox
 
             StoryLinear.conversationInProgressObservable.Subscribe(ConversationInProgress).AddTo(this);
 
+            StoryLinear.imageObservable.Subscribe(OnImage).AddTo(this);
+
             StoryChoicesSelector.choicesObservable.Subscribe(ChoicesChanged).AddTo(this);
 
             dialogueBox.continueRequestsObservable.Subscribe(ContinueActionOnPerformed).AddTo(this);
@@ -95,6 +97,15 @@ namespace Selania.Rework.Components.DialogueBox
             _lastSpeakingCharacter.Value = null;
             // no need to explicitly handle the show part: adding a line of text or a choice automatically shows the
             // dialogue panel
+        }
+
+        /// <summary>
+        ///     Invoked whenever there's an image to display.
+        /// </summary>
+        /// <param name="spriteName">Name of the sprite to add.</param>
+        private void OnImage(string spriteName)
+        {
+            dialogueBox.AddImage(spriteName);
         }
 
         /// <summary>

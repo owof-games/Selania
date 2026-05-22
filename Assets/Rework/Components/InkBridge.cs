@@ -506,6 +506,11 @@ namespace Selania.Rework.Components
                 UpdateCurrentTextGrimoire(currentText, tags, ref actionsAfterUpdate);
                 actionsAfterUpdate.skipChoices = true;
             }
+            else if (currentText.StartsWith("@sprite"))
+            {
+                UpdateSprite(currentText);
+                actionsAfterUpdate.@continue = true;
+            }
             else
             {
                 // Lines starting with "@" have a special handling, and are never about dialogue
@@ -2273,6 +2278,38 @@ namespace Selania.Rework.Components
 
         /// <inheritdoc />
         public Observable<bool> IsGrimoireEnabled => GetVariableObservable<bool>(grimoireIsOpenVariableName);
+
+        #endregion
+
+        #region dialogue sprites
+
+        /// <summary>
+        ///     The backing subject behind <see cref="imageObservable" />.
+        /// </summary>
+        private readonly Subject<string> _imageSubject = new();
+
+        /// <inheritdoc />
+        public Observable<string> imageObservable => _imageSubject.AsObservable();
+
+        /// <summary>
+        ///     Update <see cref="imageObservable" /> by sending the sprite name found in the given command text (if any).
+        /// </summary>
+        /// <param name="currentText">The current text.</param>
+        private void UpdateSprite(string currentText)
+        {
+            // try to split the command in "@sprite" and the sprite name
+            var parts = currentText.Split(':');
+            if (parts is not { Length: 2 })
+            {
+                logger.ZLogError(
+                    $"Tag @sprite expected to be in the form '@sprite:spriteName', but instead was {currentText}");
+                return;
+            }
+
+            // if successful, send the sprite name
+            var spriteName = parts[1];
+            _imageSubject.OnNext(spriteName);
+        }
 
         #endregion
     }

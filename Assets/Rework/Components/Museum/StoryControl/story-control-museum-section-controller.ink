@@ -24,6 +24,8 @@ VAR settings_gamerMode = false
 ~ firstChar_InkLevel = ink_empty
 {charTag(FirstCharacter, "affectionate")}:  Qui parla Chitarra, ma non sai ancora il nome.
                                             Continuo a parlare, non sono serviti tag e mantengo lo stesso personaggio, immagine, ecc.
+                                            @sprite:museum1
+                                            Subito sopra c'è lo sprite 'museum1'
 ~ knowChitarra = true
 {charTag(FirstCharacter, "affectionate")}:  Qui sono sempre io, ma ora sai il mio nome.
 {charTag(Mentor, "hurry")}:                 Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo. Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo. Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo.
