@@ -25,7 +25,7 @@ namespace Selania.Rework.Components.Museum.EvolvingObject
             base.Configure(builder);
             builder.RegisterSettings(selaniaSettings);
             builder.RegisterLogger();
-            builder.RegisterRoomContents();
+            builder.RegisterRoomContentMemory();
             builder.RegisterInstance<IStoryVariableValues>(EvolvingObjectStoryVariableValuesInstance);
             builder.RegisterInstance<IStoryChangeRoomContentsNotifier>(
                 EvolvingObjectStoryChangeRoomContentsNotifierInstance);
