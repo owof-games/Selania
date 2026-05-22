@@ -545,7 +545,7 @@
 
                                                     {
                                                         - are_two_entities_together(ThirdCharacter, PG):
-                                                            {charTag(ThirdCharacter, "judgmental")}:  Questo posto è pieno di donne.
+                                                            {charTag(ThirdCharacter, "bored")}:  Questo posto è pieno di donne.
                                                                 
                                                     }
 

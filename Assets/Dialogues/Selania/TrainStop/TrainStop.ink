@@ -69,7 +69,20 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     
         
-        {charTag(FirstCharacter, "writer")}:           Ciao {player_name}, come stai?
+        {charTag(FirstCharacter, "writer")}:            Ciao {player_name}, come stai?
+                                                        Viene chiamato il ricalcolo del feedback relazione e riceviamo un commento.
+                                                        Lo facciamo durante la lettera così si vede la variazione (se decidiamo di caricare l'indicatore di relazione sotto alla lettera)
+            ~ third_char_relationshipFromLiveToLetters()
+        {
+            - thirdChar_relationshipIndicator <= relationshipIndicatorNegativeValue:
+                Commento negativo
+
+            - thirdChar_relationshipIndicator >= relationshipIndicatorPositiveValue:
+                Commento positivo
+
+            - else:
+                Commento neutro
+        }
 
         ~ letters_firstCharLetters_one()
         -> first_char_closing_letters -> main
@@ -88,8 +101,7 @@
     
 
         {charTag(FirstCharacter, "writer")}:           Ciao ama!
-        Dopo la prima o seconda lettera (verificare), viene chiamato il ricalcolo del feedback relazione e riceviamo un commento.
-        ~ third_char_relationshipFromLiveToLetters()
+        
 
         ~ letters_firstCharLetters_three()
         -> first_char_closing_letters -> main
