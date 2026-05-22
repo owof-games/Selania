@@ -26,10 +26,10 @@ VAR settings_gamerMode = false
                                             Continuo a parlare, non sono serviti tag e mantengo lo stesso personaggio, immagine, ecc.
 ~ knowChitarra = true
 {charTag(FirstCharacter, "affectionate")}:  Qui sono sempre io, ma ora sai il mio nome.
-{charTag(FifthCharacter, "hurry")}:         Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo. Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo. Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo.
+{charTag(Mentor, "hurry")}:                 Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo. Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo. Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo.
 ~ firstChar_InkLevel = ink_normal
 {charTag(FirstCharacter, "affectionate")}:  Qui torna a parlare Chitarra, ma ora ha dell'inchiostro.
-{charTag(FifthCharacter, "hurry")}:         Qua invece parla Mentore.
+{charTag(Mentor, "hurry")}:                 Qua invece parla Mentore.
                                             E ora c'è una scelta.
 ~ temp index = 0
 + \ {charTag(PG, "neutral")}: Scelta 1
@@ -50,7 +50,14 @@ VAR settings_gamerMode = false
 === function charTag(character, mood)
 // questa variabile invece è il nome realmente mostrato nell'interfaccia ("???" appena conosci la personaggia, "Chitarra" quando la conosci, ecc ecc)
 ~ temp actualCharacterName = charName(character)
-~ return "{character}, {actualCharacterName}, {mood}"
+~ temp prefix = ""
+{character:
+    - FirstCharacter:
+        ~ prefix = "Chitarra_"
+    - Mentor:
+        ~ prefix = "Mentore_"
+}
+~ return "{character}, {actualCharacterName}, {prefix}{mood}"
 
 === function charName(character)
 {character:
@@ -62,7 +69,7 @@ VAR settings_gamerMode = false
         - else:
             ~ return "???"
         }
-    - FifthCharacter:
+    - Mentor:
         ~ return "Mentore"
     - else:
         ~ return "<unknown {character}>"
