@@ -97,6 +97,10 @@
     CONST waterStatus = 5
 
 
+    //Lista per gestire la fase intermedia della funzione, quando passo da numeri a "oggetti"
+    LIST list_intermediateTreeStatus = airTree, earthTree, fireTree, waterTree, aetherTree
+
+
     //E tracciamento dei vari status delle singole storie
     VAR player_firstStepStatus = emptyStatus
     VAR player_secondStepStatus = emptyStatus
@@ -523,7 +527,7 @@
         //In caso di pareggio cerco di assegnare un nome casuale da quelli più plausibili, sempre secondo la logica qui sopra elemento == nome.
             //Prima di tutto cerco di capire qual è il valore più alto comune.
             ~ temp maxValue = 0
-            ~ temp possibileTreeStatus = 0
+            ~ temp possibileTreeStatus = ()
             ~ temp chosenTreeStatus = 0
             {debug: siamo in un pareggio, passo per la fase successiva} 
                 {
@@ -553,29 +557,56 @@
             //Poi aggiungo alla lista dei potenziali generatori di nomi solo quei glifi che superano il valore medio delle scelte. 
             {
                 - temp_PGAether >= maxValue:
-                        ~ possibileTreeStatus += aetherStatus
+                        ~ possibileTreeStatus += aetherTree
             }
             {
                 - temp_PGWater >= maxValue:
-                        ~ possibileTreeStatus += waterStatus
+                        ~ possibileTreeStatus += waterTree
             }
             {
                 - temp_PGFire >= maxValue:
-                        ~ possibileTreeStatus += fireStatus
+                        ~ possibileTreeStatus += fireTree
             }
             {
                 - temp_PGAir >= maxValue:
-                        ~ possibileTreeStatus += airStatus
+                        ~ possibileTreeStatus += airTree
             }
             {
                 - temp_PGEarth >= maxValue:
-                        ~ possibileTreeStatus += earthStatus
+                        ~ possibileTreeStatus += earthTree
 
             } 
             {debug: La lista di possibili status in caso di pareggio è {possibileTreeStatus}.}
+            
+            // !!!!!!!!!! temp_PGWater = {temp_PGWater}
+            // !!!!!!!!!! temp_PGAir = {temp_PGAir}
+            // !!!!!!!!!! temp_PGFire= {temp_PGFire}
+            // !!!!!!!!!! temp_PGEarth = {temp_PGEarth}
+            // !!!!!!!!!! temp_PGAether = {temp_PGAether}
+            // !!!!!!!!!! maxValue = {maxValue}
+            // !!!!!!!!!! possibileTreeStatus = {possibileTreeStatus}
+            
             //E infine ne prendo uno casuale dalla lista. 
-                
-                ~ chosenTreeStatus = LIST_RANDOM(possibileTreeStatus)
+            ~ temp random_chosenTreeStatus = LIST_RANDOM(possibileTreeStatus)
+            //E lo "traduco" nel valore da comunicare a Unity
+            {random_chosenTreeStatus:
+                - earthTree:
+                    ~ chosenTreeStatus = earthStatus
+
+                - airTree:
+                    ~ chosenTreeStatus = airStatus
+
+                - fireTree:
+                    ~ chosenTreeStatus = fireStatus
+
+                - waterTree:
+                    ~ chosenTreeStatus = waterStatus
+
+                - aetherTree:
+                    ~ chosenTreeStatus = aetherStatus
+
+
+            }
 
             //E lo associo alla persona
                         {
