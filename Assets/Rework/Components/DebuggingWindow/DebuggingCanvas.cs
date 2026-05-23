@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using LitMotion;
 using UnityEngine;
 using UnityEngine.Events;
@@ -25,12 +26,10 @@ namespace Selania.Rework.Components.DebuggingWindow
 
         private void Start()
         {
-            var first = true;
             foreach (var debuggingSection in debuggingSections)
             {
-                debuggingSection.container.SetActive(first);
+                debuggingSection.container.SetActive(false);
                 debuggingSection.button.onClick.AddListener(CreateClickListener(debuggingSection));
-                first = false;
             }
 
             _activeSection = debuggingSections[0];
@@ -56,12 +55,27 @@ namespace Selania.Rework.Components.DebuggingWindow
         public void OnToggleDebugPanel(InputAction.CallbackContext context)
         {
             if (!context.performed) return;
+            StartCoroutine(ToggleDebugPanel());
+        }
+
+        private IEnumerator ToggleDebugPanel()
+        {
+            // turn on the selected panel and wait for the layout to be performed
+            _activeSection.container.SetActive(true);
+            yield return null;
+
+            // animate the enter/exit
             float newY = Mathf.Approximately(rootTransform.pivot.y, 0) ? 1 : 0;
-            LMotion
+            yield return LMotion
                 .Create(rootTransform.pivot.y, newY, 0.3f)
                 .WithEase(newY > 0 ? Ease.OutBounce : Ease.Linear)
                 .Bind(y => rootTransform.pivot = rootTransform.pivot with { y = y })
-                .AddTo(rootTransform);
+                .AddTo(rootTransform)
+                .ToYieldInstruction();
+
+            if (newY == 0)
+                // this was an exit animation: turn off component
+                _activeSection.container.SetActive(false);
         }
 
         private UnityAction CreateClickListener(DebuggingSection debuggingSection)
