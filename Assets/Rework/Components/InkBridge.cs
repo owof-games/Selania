@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.IO.Enumeration;
 using System.Linq;
@@ -128,6 +129,8 @@ namespace Selania.Rework.Components
 
             if (inkAssetJson == null) throw new InvalidOperationException("inkAssetJson has not been set");
             _story = new Story(inkAssetJson.text);
+
+            OnStartDebugging();
 
             DisableDebugVariables();
         }
@@ -2318,6 +2321,16 @@ namespace Selania.Rework.Components
 
         private const string DebugFlowName = "DEBUG";
 
+        private void OnStartDebugging()
+        {
+            // create the VariablesChanged observable
+            var story = GetStory();
+            VariablesChanged = Observable.FromEvent<VariablesState.VariableChanged>(
+                action => (_, _) => action(),
+                handler => story.variablesState.variableChangedEvent += handler,
+                handler => story.variablesState.variableChangedEvent -= handler);
+        }
+
         public IStoryDebugSupport.DebugKnotChoice[]? GetDebugKnotChoices(string debugKnot)
         {
             using var debugFlow = new DebugFlow(this);
@@ -2352,6 +2365,37 @@ namespace Selania.Rework.Components
             }
 
             return sb.ToString().Trim();
+        }
+
+        public Observable<Unit> VariablesChanged { get; private set; } = null!;
+
+        public IEnumerable<(string, string)> GetVariableValues()
+        {
+            var story = GetStory();
+            return story.variablesState.Select(variableName =>
+            {
+                var variable = story.variablesState[variableName];
+                var result = variable switch
+                {
+                    bool boolValue => boolValue ? "true" : "false",
+                    int intValue => intValue.ToString(),
+                    float floatValue => floatValue.ToString(CultureInfo.InvariantCulture),
+                    string stringValue => "\"" + stringValue + "\"",
+                    Ink.Runtime.Path divertTargetValue => "-> " + divertTargetValue,
+                    // VariablePointerValue variablePointerValue => "ref " + variablePointerValue.variableName,
+                    InkList listValue => GetListValueRepresentation(listValue),
+                    _ => "<unknown>"
+                };
+
+                return (variableName, result);
+            });
+        }
+
+        private static string GetListValueRepresentation(InkList listValue)
+        {
+            var commonSource = listValue.Keys.Select(inkListItem => inkListItem.originName).Distinct().Count() == 1;
+            return "(" + string.Join(", ",
+                listValue.Keys.Select(inkListItem => commonSource ? inkListItem.itemName : inkListItem.fullName)) + ")";
         }
 
         private class DebugFlow : IDisposable
