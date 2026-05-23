@@ -519,7 +519,7 @@ MonoBehaviour:
     <minimumLogLevel>k__BackingField: 0
   _consoleProviderSettings:
     categorySettingsArray:
-    - <categoryPrefix>k__BackingField: Selania.Rework.Components.EvolvingObjectComponent
+    - <categoryPrefix>k__BackingField: Selania.Rework.Components.DebuggingWindow
       <minimumLogLevel>k__BackingField: 0
     <minimumLogLevel>k__BackingField: 2
   <CrossFadeAnimationDurationForEvolvingObjects>k__BackingField: 1

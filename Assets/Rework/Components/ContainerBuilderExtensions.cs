@@ -45,7 +45,8 @@ namespace Selania.Rework.Components
                 .As<IStoryInkInfo>()
                 .As<IStoryGamerMode>()
                 .As<IStoryCharacterRelationshipStatus>()
-                .As<IStoryVariableValues>();
+                .As<IStoryVariableValues>()
+                .As<IStoryDebugSupport>();
         }
 
         /// <summary>

@@ -5,6 +5,7 @@
                      ----------------------------------*/
     
     INCLUDE main.ink
+    INCLUDE DebugKnot.ink
 
 //File con gli appunti di gestione del progetto, la formattazione etc.
     INCLUDE Notes\FileManagement.ink

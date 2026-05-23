@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Enumeration;
 using System.Linq;
+using System.Text;
 using Alchemy.Inspector;
 using Cysharp.Threading.Tasks;
 using Ink.Runtime;
@@ -22,7 +23,7 @@ namespace Selania.Rework.Components
     [CreateAssetMenu(fileName = "InkBridge", menuName = "Selania/Create Ink Bridge", order = 0)]
     public class InkBridge : ScriptableObjectSetupSupport, IStoryChangeRoomNotifier, IStoryChoicesSelector,
         IStoryLinear, IStoryChangeRoomContentsNotifier, IStoryStateSerializer, IStoryAudioSupport, IStoryGrimoire,
-        IStoryInkInfo, IStoryGamerMode, IStoryCharacterRelationshipStatus, IStoryVariableValues
+        IStoryInkInfo, IStoryGamerMode, IStoryCharacterRelationshipStatus, IStoryVariableValues, IStoryDebugSupport
     {
         [Header("Ink Settings")] [SerializeField] [Tooltip("The JSON asset containing the story.")]
         private TextAsset? inkAssetJson;
@@ -2309,6 +2310,79 @@ namespace Selania.Rework.Components
             // if successful, send the sprite name
             var spriteName = parts[1];
             _imageSubject.OnNext(spriteName);
+        }
+
+        #endregion
+
+        #region debug
+
+        private const string DebugFlowName = "DEBUG";
+
+        public IStoryDebugSupport.DebugKnotChoice[]? GetDebugKnotChoices(string debugKnot)
+        {
+            using var debugFlow = new DebugFlow(this);
+            var story = debugFlow.Story;
+
+            if (!CheckDebugKnot(debugKnot, story)) return null;
+
+            GetToDebugKnotChoices(debugKnot, story);
+
+            return story
+                .currentChoices
+                .Select(choice => new IStoryDebugSupport.DebugKnotChoice(debugKnot, choice.index, choice.text.Trim()))
+                .ToArray();
+        }
+
+        public string PickDebugKnotChoice(IStoryDebugSupport.DebugKnotChoice debugKnotChoice)
+        {
+            var sb = new StringBuilder();
+
+            using var debugFlow = new DebugFlow(this);
+            var story = debugFlow.Story;
+
+            GetToDebugKnotChoices(debugKnotChoice.DebugKnot, story);
+
+            story.ChooseChoiceIndex(debugKnotChoice.ChoiceIndex);
+            while (story.canContinue)
+            {
+                story.Continue();
+                var line = story.currentText.Trim();
+                if (line == "@") continue;
+                sb.AppendLine(line);
+            }
+
+            return sb.ToString().Trim();
+        }
+
+        private class DebugFlow : IDisposable
+        {
+            private readonly string _initialFlowName;
+
+            public DebugFlow(InkBridge inkBridge)
+            {
+                Story = inkBridge.GetStory();
+
+                _initialFlowName = Story.currentFlowName;
+                Story.SwitchFlow(DebugFlowName);
+            }
+
+            public Story Story { get; }
+
+            public void Dispose()
+            {
+                Story.SwitchFlow(_initialFlowName);
+            }
+        }
+
+        private static void GetToDebugKnotChoices(string debugKnot, Story story)
+        {
+            story.ChoosePathString(debugKnot);
+            while (story.canContinue) story.Continue();
+        }
+
+        private static bool CheckDebugKnot(string debugKnot, Story story)
+        {
+            return story.KnotContainerWithName(debugKnot) != null;
         }
 
         #endregion
