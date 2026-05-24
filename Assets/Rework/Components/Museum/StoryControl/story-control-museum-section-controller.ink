@@ -24,6 +24,24 @@ VAR settings_gamerMode = false
 ~ firstChar_InkLevel = ink_empty
 {charTag(FirstCharacter, "affectionate")}:  Qui parla Chitarra, ma non sai ancora il nome.
                                             Continuo a parlare, non sono serviti tag e mantengo lo stesso personaggio, immagine, ecc.
+                                            Ora ci sono quindici scelte:
+    + \ {charTag(FirstCharacter, "affectionate")}: Prima scelta
+    + \ {charTag(FirstCharacter, "affectionate")}: Seconda scelta
+    + \ {charTag(FirstCharacter, "affectionate")}: Terza scelta
+    + \ {charTag(FirstCharacter, "affectionate")}: Quarta scelta
+    + \ {charTag(FirstCharacter, "affectionate")}: Quinta scelta
+    + \ {charTag(FirstCharacter, "affectionate")}: Sesta scelta
+    + \ {charTag(FirstCharacter, "affectionate")}: Settima scelta
+    + \ {charTag(FirstCharacter, "affectionate")}: Ottava scelta
+    + \ {charTag(FirstCharacter, "affectionate")}: Nona scelta
+    + \ {charTag(FirstCharacter, "affectionate")}: Decima scelta
+    + \ {charTag(FirstCharacter, "affectionate")}: Undicesima scelta
+    + \ {charTag(FirstCharacter, "affectionate")}: Dodicesima scelta
+    + \ {charTag(FirstCharacter, "affectionate")}: Tredicesima scelta
+    + \ {charTag(FirstCharacter, "affectionate")}: Quattordicesima scelta
+    + \ {charTag(FirstCharacter, "affectionate")}: Quindicesima scelta
+    + \ {charTag(FirstCharacter, "affectionate")}: Sedicesima scelta
+    -
                                             @sprite:museum1
                                             Subito sopra c'è lo sprite 'museum1'
 ~ knowChitarra = true

@@ -224,6 +224,69 @@ namespace Selania.Rework.Components.DialogueBox
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""0"",
+                    ""type"": ""Button"",
+                    ""id"": ""d497b45e-757f-4f73-b393-4f2bce0a52b3"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""a"",
+                    ""type"": ""Button"",
+                    ""id"": ""072efaad-a962-4ebd-a926-21cd4c085a15"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""b"",
+                    ""type"": ""Button"",
+                    ""id"": ""7ef455a8-cefc-418c-b534-e3b255fe91d2"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""c"",
+                    ""type"": ""Button"",
+                    ""id"": ""a9908e6b-fd35-4a76-85d2-37677e6df0b2"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""d"",
+                    ""type"": ""Button"",
+                    ""id"": ""d2108839-9c8a-4e39-8247-8f8a2a7728ac"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""e"",
+                    ""type"": ""Button"",
+                    ""id"": ""c274a234-899f-45e9-b796-c78f9504f13e"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""f"",
+                    ""type"": ""Button"",
+                    ""id"": ""7b81eea2-9835-43fe-9f7d-972ac5bdddbe"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -424,6 +487,94 @@ namespace Selania.Rework.Components.DialogueBox
                     ""action"": ""9"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""50337f8c-7887-4fb1-9019-0ffdb90a4031"",
+                    ""path"": ""<Keyboard>/0"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""0"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""055d48f9-83ed-477b-b356-37fa8ddc4063"",
+                    ""path"": ""<Keyboard>/numpad0"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""0"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""316f85b2-a519-4eba-98fa-669d4ab7b887"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""a"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a44287e2-149b-441e-9f15-789a1f42f52f"",
+                    ""path"": ""<Keyboard>/b"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""b"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1298e403-25ae-4753-a27c-62d62f9faab4"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""c"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""391db7b7-79ac-47c4-93af-5c552fa90a44"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""d"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""45e182a6-87d2-40c4-9437-5ab0f88ebafd"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""e"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8ed0f5e8-1618-47ab-8ded-1b779f1361a0"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""f"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -444,6 +595,13 @@ namespace Selania.Rework.Components.DialogueBox
             m_ChoicesSelectionMap__7 = m_ChoicesSelectionMap.FindAction("7", throwIfNotFound: true);
             m_ChoicesSelectionMap__8 = m_ChoicesSelectionMap.FindAction("8", throwIfNotFound: true);
             m_ChoicesSelectionMap__9 = m_ChoicesSelectionMap.FindAction("9", throwIfNotFound: true);
+            m_ChoicesSelectionMap__0 = m_ChoicesSelectionMap.FindAction("0", throwIfNotFound: true);
+            m_ChoicesSelectionMap_a = m_ChoicesSelectionMap.FindAction("a", throwIfNotFound: true);
+            m_ChoicesSelectionMap_b = m_ChoicesSelectionMap.FindAction("b", throwIfNotFound: true);
+            m_ChoicesSelectionMap_c = m_ChoicesSelectionMap.FindAction("c", throwIfNotFound: true);
+            m_ChoicesSelectionMap_d = m_ChoicesSelectionMap.FindAction("d", throwIfNotFound: true);
+            m_ChoicesSelectionMap_e = m_ChoicesSelectionMap.FindAction("e", throwIfNotFound: true);
+            m_ChoicesSelectionMap_f = m_ChoicesSelectionMap.FindAction("f", throwIfNotFound: true);
         }
 
         ~@InputActionsDialogueBox()
@@ -630,6 +788,13 @@ namespace Selania.Rework.Components.DialogueBox
         private readonly InputAction m_ChoicesSelectionMap__7;
         private readonly InputAction m_ChoicesSelectionMap__8;
         private readonly InputAction m_ChoicesSelectionMap__9;
+        private readonly InputAction m_ChoicesSelectionMap__0;
+        private readonly InputAction m_ChoicesSelectionMap_a;
+        private readonly InputAction m_ChoicesSelectionMap_b;
+        private readonly InputAction m_ChoicesSelectionMap_c;
+        private readonly InputAction m_ChoicesSelectionMap_d;
+        private readonly InputAction m_ChoicesSelectionMap_e;
+        private readonly InputAction m_ChoicesSelectionMap_f;
         /// <summary>
         /// Provides access to input actions defined in input action map "ChoicesSelectionMap".
         /// </summary>
@@ -677,6 +842,34 @@ namespace Selania.Rework.Components.DialogueBox
             /// Provides access to the underlying input action "ChoicesSelectionMap/_9".
             /// </summary>
             public InputAction @_9 => m_Wrapper.m_ChoicesSelectionMap__9;
+            /// <summary>
+            /// Provides access to the underlying input action "ChoicesSelectionMap/_0".
+            /// </summary>
+            public InputAction @_0 => m_Wrapper.m_ChoicesSelectionMap__0;
+            /// <summary>
+            /// Provides access to the underlying input action "ChoicesSelectionMap/a".
+            /// </summary>
+            public InputAction @a => m_Wrapper.m_ChoicesSelectionMap_a;
+            /// <summary>
+            /// Provides access to the underlying input action "ChoicesSelectionMap/b".
+            /// </summary>
+            public InputAction @b => m_Wrapper.m_ChoicesSelectionMap_b;
+            /// <summary>
+            /// Provides access to the underlying input action "ChoicesSelectionMap/c".
+            /// </summary>
+            public InputAction @c => m_Wrapper.m_ChoicesSelectionMap_c;
+            /// <summary>
+            /// Provides access to the underlying input action "ChoicesSelectionMap/d".
+            /// </summary>
+            public InputAction @d => m_Wrapper.m_ChoicesSelectionMap_d;
+            /// <summary>
+            /// Provides access to the underlying input action "ChoicesSelectionMap/e".
+            /// </summary>
+            public InputAction @e => m_Wrapper.m_ChoicesSelectionMap_e;
+            /// <summary>
+            /// Provides access to the underlying input action "ChoicesSelectionMap/f".
+            /// </summary>
+            public InputAction @f => m_Wrapper.m_ChoicesSelectionMap_f;
             /// <summary>
             /// Provides access to the underlying input action map instance.
             /// </summary>
@@ -730,6 +923,27 @@ namespace Selania.Rework.Components.DialogueBox
                 @_9.started += instance.On_9;
                 @_9.performed += instance.On_9;
                 @_9.canceled += instance.On_9;
+                @_0.started += instance.On_0;
+                @_0.performed += instance.On_0;
+                @_0.canceled += instance.On_0;
+                @a.started += instance.OnA;
+                @a.performed += instance.OnA;
+                @a.canceled += instance.OnA;
+                @b.started += instance.OnB;
+                @b.performed += instance.OnB;
+                @b.canceled += instance.OnB;
+                @c.started += instance.OnC;
+                @c.performed += instance.OnC;
+                @c.canceled += instance.OnC;
+                @d.started += instance.OnD;
+                @d.performed += instance.OnD;
+                @d.canceled += instance.OnD;
+                @e.started += instance.OnE;
+                @e.performed += instance.OnE;
+                @e.canceled += instance.OnE;
+                @f.started += instance.OnF;
+                @f.performed += instance.OnF;
+                @f.canceled += instance.OnF;
             }
 
             /// <summary>
@@ -768,6 +982,27 @@ namespace Selania.Rework.Components.DialogueBox
                 @_9.started -= instance.On_9;
                 @_9.performed -= instance.On_9;
                 @_9.canceled -= instance.On_9;
+                @_0.started -= instance.On_0;
+                @_0.performed -= instance.On_0;
+                @_0.canceled -= instance.On_0;
+                @a.started -= instance.OnA;
+                @a.performed -= instance.OnA;
+                @a.canceled -= instance.OnA;
+                @b.started -= instance.OnB;
+                @b.performed -= instance.OnB;
+                @b.canceled -= instance.OnB;
+                @c.started -= instance.OnC;
+                @c.performed -= instance.OnC;
+                @c.canceled -= instance.OnC;
+                @d.started -= instance.OnD;
+                @d.performed -= instance.OnD;
+                @d.canceled -= instance.OnD;
+                @e.started -= instance.OnE;
+                @e.performed -= instance.OnE;
+                @e.canceled -= instance.OnE;
+                @f.started -= instance.OnF;
+                @f.performed -= instance.OnF;
+                @f.canceled -= instance.OnF;
             }
 
             /// <summary>
@@ -886,6 +1121,55 @@ namespace Selania.Rework.Components.DialogueBox
             /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
             /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
             void On_9(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "0" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void On_0(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "a" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnA(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "b" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnB(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "c" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnC(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "d" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnD(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "e" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnE(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "f" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnF(InputAction.CallbackContext context);
         }
     }
 }

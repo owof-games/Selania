@@ -21,6 +21,30 @@ namespace Selania.Rework.Components.DialogueBox
         InputActionsDialogueBox.IChoicesSelectionMapActions
     {
         /// <summary>
+        ///     The letters used to invoke the choices. Must have a one-to-one correspondence with the actions in the input action
+        ///     map.
+        /// </summary>
+        private static readonly char[] ChoiceKeys =
+        {
+            '1',
+            '2',
+            '3',
+            '4',
+            '5',
+            '6',
+            '7',
+            '8',
+            '9',
+            '0',
+            'A',
+            'B',
+            'C',
+            'D',
+            'E',
+            'F'
+        };
+
+        /// <summary>
         ///     The text mesh pro that handles the choices
         /// </summary>
         [SerializeField] private TextMeshProUGUI textMeshProUGUI = null!;
@@ -128,6 +152,55 @@ namespace Selania.Rework.Components.DialogueBox
         }
 
         /// <inheritdoc />
+        public void On_0(InputAction.CallbackContext context)
+        {
+            if (!context.performed) return;
+            ChoiceSelected(9);
+        }
+
+        /// <inheritdoc />
+        public void OnA(InputAction.CallbackContext context)
+        {
+            if (!context.performed) return;
+            ChoiceSelected(10);
+        }
+
+        /// <inheritdoc />
+        public void OnB(InputAction.CallbackContext context)
+        {
+            if (!context.performed) return;
+            ChoiceSelected(11);
+        }
+
+        /// <inheritdoc />
+        public void OnC(InputAction.CallbackContext context)
+        {
+            if (!context.performed) return;
+            ChoiceSelected(12);
+        }
+
+        /// <inheritdoc />
+        public void OnD(InputAction.CallbackContext context)
+        {
+            if (!context.performed) return;
+            ChoiceSelected(13);
+        }
+
+        /// <inheritdoc />
+        public void OnE(InputAction.CallbackContext context)
+        {
+            if (!context.performed) return;
+            ChoiceSelected(14);
+        }
+
+        /// <inheritdoc />
+        public void OnF(InputAction.CallbackContext context)
+        {
+            if (!context.performed) return;
+            ChoiceSelected(15);
+        }
+
+        /// <inheritdoc />
         public void OnPointerClick(PointerEventData eventData)
         {
             // if we click while hovering a choice, select the choice and destroy this object
@@ -204,7 +277,7 @@ namespace Selania.Rework.Components.DialogueBox
                 $"Redrawing choices: isSelected={_isSelected}, selectedIndex={_selectedIndex}, hoveredIndex={_hoveredIndex}");
 
             var sb = new StringBuilder();
-            var i = 1;
+            var i = 0;
             foreach (var choice in _choices)
             {
                 Color color;
@@ -220,7 +293,7 @@ namespace Selania.Rework.Components.DialogueBox
                 sb.Append("><link=\"");
                 sb.Append(choice.index);
                 sb.Append("\">");
-                sb.Append(i++);
+                sb.Append(ChoiceKeys[i++]);
                 sb.Append(".<indent=");
                 sb.Append(SettingsDialogueBox.choiceIndentationPercentage);
                 sb.Append("%>");
