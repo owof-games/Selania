@@ -376,203 +376,72 @@
 			
 		}
 
+    ~ temp glyphStatus = -1
 //E poi confronto quella che è la storia della personaggia, la progressione delle sue scelte: di fatto per ora basta che non ci siano pareggi tra colori per evitare il marrone. A quel punto emerge il colore dominante.
     {
         - (temp_PGWater > temp_PGAir) && (temp_PGWater > temp_PGFire) && (temp_PGWater > temp_PGEarth) && (temp_PGWater > temp_PGAether):
-            
-            {
-                - player_orderGrowingTreeUpdater == player_firstStepClosed:
-                    ~ player_firstStepStatus = 0
-                    ~ player_firstStepStatus += waterStatus
-                   {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
-                
-                - player_orderGrowingTreeUpdater == player_secondStepClosed:
-                    ~ player_secondStepStatus = 0
-                    ~ player_secondStepStatus += waterStatus
-                    {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}    
-                
-                - player_orderGrowingTreeUpdater == player_thirdStepClosed:
-                    ~ player_thirdStepStatus = 0
-                    ~ player_thirdStepStatus += waterStatus
-                    {debug: Lo status di player_thirdStepStatus è {player_thirdStepStatus}}   
-                
-                - player_orderGrowingTreeUpdater == player_fourthStepClosed:
-                    ~ player_fourthStepStatus = 0
-                    ~ player_fourthStepStatus += waterStatus
-                    {debug: Lo status di player_fourthStepStatus è {player_fourthStepStatus}}   
-                
-                - player_orderGrowingTreeUpdater == player_fifthStepClosed:
-                    ~ player_fifthStepStatus = 0
-                    ~ player_fifthStepStatus += waterStatus
-                    {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}   
-                
-            }
+            ~ glyphStatus = waterStatus
         
         - (temp_PGAir > temp_PGWater) && (temp_PGAir > temp_PGFire) && (temp_PGAir > temp_PGEarth) && (temp_PGAir > temp_PGAether):
-            {
-                - player_orderGrowingTreeUpdater == player_firstStepClosed:
-                    ~ player_firstStepStatus = 0
-                    ~ player_firstStepStatus += airStatus
-                    {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
-                
-                - player_orderGrowingTreeUpdater == player_secondStepClosed:
-                    ~ player_secondStepStatus = 0
-                    ~ player_secondStepStatus += airStatus
-                    {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
-                
-                - player_orderGrowingTreeUpdater == player_thirdStepClosed:
-                    ~ player_thirdStepStatus = 0
-                    ~ player_thirdStepStatus += airStatus
-                    {debug: Lo status di player_thirdStepStatus è {player_thirdStepStatus}}     
-
-                - player_orderGrowingTreeUpdater == player_fourthStepClosed:
-                    ~ player_fourthStepStatus = 0
-                    ~ player_fourthStepStatus += airStatus
-                    {debug: Lo status di player_fourthStepStatus è {player_fourthStepStatus}}  
-
-                - player_orderGrowingTreeUpdater == player_fifthStepClosed:
-                    ~ player_fifthStepStatus = 0
-                    ~ player_fifthStepStatus += airStatus
-                    {debug: Lo status di player_fifthStepStatus è {player_fifthStepStatus}}  
-
-            }        
+            ~ glyphStatus = airStatus
         
         - (temp_PGFire> temp_PGWater) && (temp_PGFire> temp_PGAir) && (temp_PGFire> temp_PGEarth) && (temp_PGFire> temp_PGAether):
-            {
-                - player_orderGrowingTreeUpdater == player_firstStepClosed:
-                    ~ player_firstStepStatus = 0
-                    ~ player_firstStepStatus += fireStatus
-                    {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
-                
-                - player_orderGrowingTreeUpdater == player_secondStepClosed:
-                    ~ player_secondStepStatus = 0
-                    ~ player_secondStepStatus += fireStatus
-                    {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
-                
-                - player_orderGrowingTreeUpdater == player_thirdStepClosed:
-                    ~ player_thirdStepStatus = 0
-                    ~ player_thirdStepStatus += fireStatus
-                    {debug: Lo status di player_thirdStepStatus è {player_thirdStepStatus}}   
-
-                - player_orderGrowingTreeUpdater == player_fourthStepClosed:
-                    ~ player_fourthStepStatus = 0
-                    ~ player_fourthStepStatus += fireStatus
-                    {debug: Lo status di player_fourthStepStatus è {player_fourthStepStatus}} 
-
-                - player_orderGrowingTreeUpdater == player_fifthStepClosed:
-                    ~ player_fifthStepStatus = 0
-                    ~ player_fifthStepStatus += fireStatus
-                    {debug: Lo status di player_fifthStepStatus è {player_fifthStepStatus}}
-            }    
+            ~ glyphStatus = fireStatus
         
         - (temp_PGEarth > temp_PGWater) && (temp_PGEarth > temp_PGAir) && (temp_PGEarth > temp_PGFire) && (temp_PGEarth > temp_PGAether):
-            {
-                - player_orderGrowingTreeUpdater == player_firstStepClosed:
-                    ~ player_firstStepStatus = 0
-                    ~ player_firstStepStatus += earthStatus
-                    {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
-                
-                - player_orderGrowingTreeUpdater == player_secondStepClosed:
-                    ~ player_secondStepStatus = 0
-                    ~ player_secondStepStatus += earthStatus
-                    {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
-                
-                - player_orderGrowingTreeUpdater == player_thirdStepClosed:
-                    ~ player_thirdStepStatus = 0
-                    ~ player_thirdStepStatus += earthStatus
-                    {debug: Lo status di player_thirdStepStatus è {player_thirdStepStatus}}   
-                
-                - player_orderGrowingTreeUpdater == player_fourthStepClosed:
-                    ~ player_fourthStepStatus = 0
-                    ~ player_fourthStepStatus += earthStatus
-                    {debug: Lo status di player_fourthStepStatus è {player_fourthStepStatus}} 
-                
-                - player_orderGrowingTreeUpdater == player_fifthStepClosed:
-                    ~ player_fifthStepStatus = 0
-                    ~ player_fifthStepStatus += earthStatus
-                    {debug: Lo status di player_fifthStepStatus è {player_fifthStepStatus}}
-                
-            }    
+            ~ glyphStatus = earthStatus
         
         - (temp_PGAether > temp_PGWater) && (temp_PGAether > temp_PGAir) && (temp_PGAether > temp_PGFire) && (temp_PGAether > temp_PGEarth):
-            {
-                - player_orderGrowingTreeUpdater == player_firstStepClosed:
-                    ~ player_firstStepStatus = 0
-                    ~ player_firstStepStatus += aetherStatus
-   
-                    {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
-                
-                - player_orderGrowingTreeUpdater == player_secondStepClosed:
-                    ~ player_secondStepStatus = 0
-                    ~ player_secondStepStatus += aetherStatus
-                    {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
-                
-                - player_orderGrowingTreeUpdater == player_thirdStepClosed:
-                    ~ player_thirdStepStatus = 0
-                    ~ player_thirdStepStatus += aetherStatus
-                    {debug: Lo status di player_thirdStepStatus è {player_thirdStepStatus}}   
-                
-                - player_orderGrowingTreeUpdater == player_fourthStepClosed:
-                    ~ player_fourthStepStatus = 0
-                    ~ player_fourthStepStatus += aetherStatus
-                    {debug: Lo status di player_fourthStepStatus è {player_fourthStepStatus}}
-
-                - player_orderGrowingTreeUpdater == player_fifthStepClosed:
-                    ~ player_fifthStepStatus = 0
-                    ~ player_fifthStepStatus += aetherStatus
-                    {debug: Lo status di player_fifthStepStatus è {player_fifthStepStatus}} 
-            }
+            ~ glyphStatus = aetherStatus
         
         - else:
-        //In caso di pareggio cerco di assegnare un nome casuale da quelli più plausibili, sempre secondo la logica qui sopra elemento == nome.
+            //In caso di pareggio cerco di assegnare un nome casuale da quelli più plausibili, sempre secondo la logica qui sopra elemento == nome.
             //Prima di tutto cerco di capire qual è il valore più alto comune.
             ~ temp maxValue = 0
             ~ temp possibileTreeStatus = ()
-            ~ temp chosenTreeStatus = 0
             {debug: siamo in un pareggio, passo per la fase successiva} 
                 {
-                    - temp_PGAether >= maxValue:
+                    - temp_PGAether > maxValue:
                         ~ maxValue = temp_PGAether
                 }
                 {
-                    - temp_PGWater >= maxValue:
+                    - temp_PGWater > maxValue:
                         ~ maxValue = temp_PGWater
                 }
                 {
-                    - temp_PGFire >= maxValue:
+                    - temp_PGFire > maxValue:
                         ~ maxValue = temp_PGFire
                 }
                 {
-                    - temp_PGAir >= maxValue:
+                    - temp_PGAir > maxValue:
                         ~ maxValue =  temp_PGAir
                 }
                 {
-                    - temp_PGEarth >= maxValue:
+                    - temp_PGEarth > maxValue:
                         ~ maxValue = temp_PGEarth
-
                 }
 
             {debug: Il valore massimo raggiunto dai glifi è {maxValue}.}
 
             //Poi aggiungo alla lista dei potenziali generatori di nomi solo quei glifi che superano il valore medio delle scelte. 
             {
-                - temp_PGAether >= maxValue:
+                - temp_PGAether == maxValue:
                         ~ possibileTreeStatus += aetherTree
             }
             {
-                - temp_PGWater >= maxValue:
+                - temp_PGWater == maxValue:
                         ~ possibileTreeStatus += waterTree
             }
             {
-                - temp_PGFire >= maxValue:
+                - temp_PGFire == maxValue:
                         ~ possibileTreeStatus += fireTree
             }
             {
-                - temp_PGAir >= maxValue:
+                - temp_PGAir == maxValue:
                         ~ possibileTreeStatus += airTree
             }
             {
-                - temp_PGEarth >= maxValue:
+                - temp_PGEarth == maxValue:
                         ~ possibileTreeStatus += earthTree
 
             } 
@@ -591,54 +460,50 @@
             //E lo "traduco" nel valore da comunicare a Unity
             {random_chosenTreeStatus:
                 - earthTree:
-                    ~ chosenTreeStatus = earthStatus
+                    ~ glyphStatus = earthStatus
 
                 - airTree:
-                    ~ chosenTreeStatus = airStatus
+                    ~ glyphStatus = airStatus
 
                 - fireTree:
-                    ~ chosenTreeStatus = fireStatus
+                    ~ glyphStatus = fireStatus
 
                 - waterTree:
-                    ~ chosenTreeStatus = waterStatus
+                    ~ glyphStatus = waterStatus
 
                 - aetherTree:
-                    ~ chosenTreeStatus = aetherStatus
+                    ~ glyphStatus = aetherStatus
 
 
             }
 
-            //E lo associo alla persona
-                        {
-                - player_orderGrowingTreeUpdater == player_firstStepClosed:
-                    ~ player_firstStepStatus = 0
-                    ~ player_firstStepStatus += chosenTreeStatus
-                    {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
-                
-                - player_orderGrowingTreeUpdater == player_secondStepClosed:
-                    ~ player_secondStepStatus = 0
-                    ~ player_secondStepStatus += chosenTreeStatus
-                    {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
-                
-                - player_orderGrowingTreeUpdater == player_thirdStepClosed:
-                    ~ player_thirdStepStatus = 0
-                    ~ player_thirdStepStatus += chosenTreeStatus
-                    {debug: Lo status di player_thirdStepStatus è {player_thirdStepStatus}}   
-                
-                - player_orderGrowingTreeUpdater == player_fourthStepClosed:
-                    ~ player_fourthStepStatus = 0
-                    ~ player_fourthStepStatus += chosenTreeStatus
-                    {debug: Lo status di player_fourthStepStatus è {player_fourthStepStatus}} 
-                
-                - player_orderGrowingTreeUpdater == player_fifthStepClosed:
-                    ~ player_fifthStepStatus = 0
-                    ~ player_fifthStepStatus += chosenTreeStatus
-                    {debug: Lo status di player_fifthStepStatus è {player_fifthStepStatus}} 
-
-            }
-
-        
         }
+
+
+        // associamo il valore calcolato al personaggio corretto
+        {
+            - player_orderGrowingTreeUpdater == player_firstStepClosed:
+                ~ player_firstStepStatus = glyphStatus
+                {debug: Lo status di player_firstStepStatus è {player_firstStepStatus}}
+            
+            - player_orderGrowingTreeUpdater == player_secondStepClosed:
+                ~ player_secondStepStatus = glyphStatus
+                {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}    
+            
+            - player_orderGrowingTreeUpdater == player_thirdStepClosed:
+                ~ player_thirdStepStatus = glyphStatus
+                {debug: Lo status di player_thirdStepStatus è {player_thirdStepStatus}}   
+            
+            - player_orderGrowingTreeUpdater == player_fourthStepClosed:
+                ~ player_fourthStepStatus = glyphStatus
+                {debug: Lo status di player_fourthStepStatus è {player_fourthStepStatus}}   
+            
+            - player_orderGrowingTreeUpdater == player_fifthStepClosed:
+                ~ player_fifthStepStatus = glyphStatus
+                {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}   
+            
+        }
+
     
 
 
