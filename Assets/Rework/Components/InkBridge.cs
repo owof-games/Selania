@@ -1378,15 +1378,15 @@ namespace Selania.Rework.Components
                 }
 
                 var numUsages = (int)story.variablesState[numSigilUsagesVariableName];
-                if (numUsages is < 0 or > 2)
+                if (numUsages is < 1 or > 3)
                     logger.ZLogError(
                         $"Number of usages found in variable {numSigilUsagesVariableName} is {numUsages}, whereas it should be 0, 1 or 2.");
 
                 sigilDescriptor = new IStoryGrimoire.SigilDescriptor(glyphs[0], glyphs[1], glyphs[2],
                     numUsages switch
                     {
-                        0 => threeUsagesText,
-                        1 => twoUsagesText,
+                        3 => threeUsagesText,
+                        2 => twoUsagesText,
                         _ => oneUsageText
                     }
                 );
