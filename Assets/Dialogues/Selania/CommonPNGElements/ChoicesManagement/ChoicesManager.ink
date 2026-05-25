@@ -86,6 +86,12 @@
 
 
 === function getCharactersInScene()
+TODO: nel caso di boccale seconda fase, mettere codice qua tipo:
+/*
+{ BoccaleSecondaFase:
+    ~ return ()
+}
+*/
 ~ temp characters = ()
 // calcola le personagge in scena in una variabile temporanea e la ritorna
     {
