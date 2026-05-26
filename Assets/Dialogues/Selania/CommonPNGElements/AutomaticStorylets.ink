@@ -14,7 +14,7 @@
 *******************************************/
 {
     //Invito allo stagno per aprire la cucina
-    - are_two_entities_together(FirstCharacter, PG) && ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar) + LIST_COUNT(grimoire_thirdChar)) > openingKitchen_delay) && contentsPond hasnt PG && player_accessiblePlaces hasnt Kitchen && openingPlacesPause <= 0:
+    - are_two_entities_together(FirstCharacter, PG) && ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar) + LIST_COUNT(grimoire_thirdChar)) > openingKitchen_delay) && entity_location(PG) != Pond && player_accessiblePlaces hasnt Kitchen && openingPlacesPause <= 0:
 
             {stopping:
                 - {charTag(FirstCharacter, "curious")}:       Ehi {player_name}! Vediamoci allo stagno. Ho una cosa da mostrarti!
@@ -32,7 +32,7 @@
         -> open_the_kitchen
 
     //Invito alla foresta per aprire la biblioteca
-    - are_two_entities_together(SecondCharacter, PG) && ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar) + LIST_COUNT(grimoire_thirdChar)) > openingLibrary_delay) && contentsForest hasnt PG && contentsKitchen hasnt PG && player_accessiblePlaces hasnt Library && openingPlacesPause <= 0:
+    - are_two_entities_together(SecondCharacter, PG) && grimoire_secondChar has grimSecondCharTwo && entity_location(PG) != Forest && entity_location(PG) != Kitchen && player_accessiblePlaces hasnt Library && openingPlacesPause <= 0:
         
             {stopping:
                 - {charTag(SecondCharacter, "energy")}:       Ehi {player_name}! Troviamoci alla foresta. Ho una cosa che devi vedere!
@@ -51,7 +51,7 @@
             -> open_the_library
 
     //Invito in biblioteca per aprire il nido
-        - are_two_entities_together(ThirdCharacter, PG) && grimoire_thirdChar has grimThirdCharTwo && contentsLibrary hasnt PG && contentsKitchen hasnt PG && player_accessiblePlaces hasnt Nest && player_accessiblePlaces has Library && openingPlacesPause <= 0:
+        - are_two_entities_together(ThirdCharacter, PG) && grimoire_thirdChar has grimThirdCharTwo && entity_location(PG) != Library && entity_location(PG) != Kitchen && player_accessiblePlaces hasnt Nest && player_accessiblePlaces has Library && openingPlacesPause <= 0:
             
                 {stopping:
                 - {charTag(ThirdCharacter, "neutral")}:       Ehi {player_name}! Troviamoci alla biblioteca. Ho una cosa che devi vedere!
@@ -70,7 +70,7 @@
             -> pre_open_the_nest
 
         //Apertura effettiva    
-        - are_two_entities_together(ThirdCharacter, PG) && entity_location(PG) == Nest  && grimoire_thirdChar hasnt grimThirdOpenNest:
+        - are_two_entities_together(ThirdCharacter, PG) && entity_location(PG) == Nest && grimoire_thirdChar hasnt grimThirdOpenNest:
             -> open_the_nest
 
     //Apertura della discarica
