@@ -771,8 +771,8 @@ Transform:
   m_GameObject: {fileID: 1875625751813047741}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: -9, z: 0}
-  m_LocalScale: {x: 1.03, y: 1.03, z: 1.03}
+  m_LocalPosition: {x: -5.7051, y: -8.3279, z: 0}
+  m_LocalScale: {x: 1.0348322, y: 1.0287001, z: 1.03}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8393524010075692985}
@@ -1455,7 +1455,7 @@ GameObject:
   - component: {fileID: 3759215574504302977}
   - component: {fileID: 4840016924791496702}
   m_Layer: 0
-  m_Name: 25 - TheTree
+  m_Name: 26 - TheTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1522,7 +1522,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 25
+  m_SortingOrder: 26
   m_Sprite: {fileID: 21300000, guid: 8ad8b7e94b4fdc647a93c14d0c6c933c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3168,8 +3168,8 @@ Transform:
   m_GameObject: {fileID: 5694586434524802436}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20, y: -227, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -34.7937, y: -240.5072, z: 0}
+  m_LocalScale: {x: 1.0157, y: 1.0411, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4449035067283256756}
@@ -6527,7 +6527,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1131149654844477419, guid: 98fe7859b20b9d8469064aca865d982f, type: 3}
       propertyPath: m_Name
-      value: 25 - Rami
+      value: 26 - Rami
       objectReference: {fileID: 0}
     - target: {fileID: 3508706997804986245, guid: 98fe7859b20b9d8469064aca865d982f, type: 3}
       propertyPath: inkVariableName
@@ -6643,7 +6643,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 4489ec558598e21468199be6c580cdda, type: 3}
     - target: {fileID: 8374637844626219255, guid: 98fe7859b20b9d8469064aca865d982f, type: 3}
       propertyPath: m_SortingOrder
-      value: 25
+      value: 26
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7005,7 +7005,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1131149654844477419, guid: 98fe7859b20b9d8469064aca865d982f, type: 3}
       propertyPath: m_Name
-      value: 26 - Tronco
+      value: 27 - Tronco
       objectReference: {fileID: 0}
     - target: {fileID: 3508706997804986245, guid: 98fe7859b20b9d8469064aca865d982f, type: 3}
       propertyPath: inkVariableName
@@ -7121,7 +7121,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 5fa9dc4adc3d3b34eacd3997fa1831ee, type: 3}
     - target: {fileID: 8374637844626219255, guid: 98fe7859b20b9d8469064aca865d982f, type: 3}
       propertyPath: m_SortingOrder
-      value: 26
+      value: 27
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

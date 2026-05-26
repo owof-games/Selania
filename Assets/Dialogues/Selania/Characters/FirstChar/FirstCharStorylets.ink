@@ -267,9 +267,9 @@
             - are_two_entities_together(SecondCharacter, PG):
             {charTag(SecondCharacter, "melanchonic")}:          E la mia?
                                                                 Non ti piace la mia?
-                                                                Certo piccoletto.
+            {charTag(FirstCharacter, "affectionate")}:          Certo piccoletto.
             {charTag(FirstCharacter, "annoyed")}:               A parte quando hai passato venti minuti a spiegarmi perché sono gli scarafaggi sono fighi.
-                                                                Avevi detto che ti fanno schifo!
+            {charTag(SecondCharacter, "angry")}:                Avevi detto che ti fanno schifo!
             {charTag(FirstCharacter, "neutral")}:               E non ho cambiato idea.               
         }
 

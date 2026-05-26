@@ -26,7 +26,7 @@
             
 
         //PNG supporto
-        + {grimoire_witch != ()}[TheWitch]
+        + {grimoire_witch has grimWitchIntro}[TheWitch]
             -> grimoire_witchRecap
 
         + {grimoire_franco != ()}[Franco]
