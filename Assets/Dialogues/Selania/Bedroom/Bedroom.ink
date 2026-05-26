@@ -119,7 +119,14 @@ UTILIZZI RIMASTI = {glyph_actualSigilUses}
 
 
 = witch
+    {charTag(TheWitch, witch_state())}:              Il testing è in ink?
+            + \ {charTag(PG, "neutral")}:           <i>Sì.</i>
+                -> top2
+            + \ {charTag(PG, "neutral")}:           <i>No.</i>
+                -> main
+
     - (top2)
+
         {charTag(TheWitch, witch_state())}:         <i>Cosa serve?</i>
             + \ {charTag(PG, "neutral")}:           <i>Voglio la modalità Gamer Mode.</i>
                 -> gamerMode_activation ->
@@ -132,11 +139,11 @@ UTILIZZI RIMASTI = {glyph_actualSigilUses}
                                                     <i>Hai inoltre sbloccato tutti i sigilli e le piante.</i>
 
             + (riscrittura) {!debug_stochastic}\ {charTag(PG, "neutral")}:          <i>Impostami le prime 3 png come pronte per la riscrittura.
-                                                    ~ debugRewriting()
+                ~ debugRewriting()
                                                     
 
             + {!debug_stochastic} \ {charTag(PG, "neutral")}:          <i>Aprimi tutti i luoghi del gioco.
-                                                    ~ debug_places_open()
+                ~ debug_places_open()
                                    
             -
 

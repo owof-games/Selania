@@ -5,9 +5,12 @@
     ~ debug_places_open()
     ~ grimoire_isEnabled = true
     -> debug_knot
-+ [Action 1]
-    Output of action 1
+
++ [Popola tutti gli elementi del grimorio]
+    -> debug_richGrimoire ->
     -> debug_knot
-+ [Action 2]
-    Output of action 2
-    -> debug_knot
+
++ [Imposta l3 prim3 3 PNG come pront3 per la riscrittura]
+    ~ debugRewriting()
+   -> debug_knot 
+    

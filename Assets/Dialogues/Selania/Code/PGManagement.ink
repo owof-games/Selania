@@ -447,13 +447,6 @@
             } 
             {debug: La lista di possibili status in caso di pareggio è {possibileTreeStatus}.}
             
-            // !!!!!!!!!! temp_PGWater = {temp_PGWater}
-            // !!!!!!!!!! temp_PGAir = {temp_PGAir}
-            // !!!!!!!!!! temp_PGFire= {temp_PGFire}
-            // !!!!!!!!!! temp_PGEarth = {temp_PGEarth}
-            // !!!!!!!!!! temp_PGAether = {temp_PGAether}
-            // !!!!!!!!!! maxValue = {maxValue}
-            // !!!!!!!!!! possibileTreeStatus = {possibileTreeStatus}
             
             //E infine ne prendo uno casuale dalla lista. 
             ~ temp random_chosenTreeStatus = LIST_RANDOM(possibileTreeStatus)
