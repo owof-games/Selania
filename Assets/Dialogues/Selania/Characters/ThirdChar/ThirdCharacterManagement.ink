@@ -31,7 +31,7 @@
 
 //Stato della PNG
     //Gestione nomi
-    LIST thirdChar_possibleStates = Boccale, (ThirdB), (ThirdC), (ThirdD), (ThirdE), (ThirdF)
+    LIST thirdChar_possibleStates = Boccale, (Forum), (Canovaccio), (Sigaro), (Guantone), (Pallone)
     VAR thirdChar_ActualName = Boccale
 
     //Registro delle scelte prese

@@ -485,7 +485,7 @@
     //non taggare il nome fino a quando non è stato dichiarato, sennò viene cambiato prima
         {
 
-            - thirdChar_ActualName has ThirdE:
+            - thirdChar_ActualName has Guantone:
                     {
                         - second_rewriting.ending.fire:
                             E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
@@ -495,7 +495,7 @@
                                                                         Il mio vero nome è...
                  {charTag(ThirdCharacter, "neutral")}:     <b><i>{charNameThree}</b></i>.
             
-            - thirdChar_ActualName has ThirdC:
+            - thirdChar_ActualName has Canovaccio:
                     {
                         - second_rewriting.ending.water:
                             E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
@@ -505,7 +505,7 @@
                                                             Mi chiamerò...
                     {charTag(ThirdCharacter, "neutral")}:     <b><i>{charNameThree}</b></i>.
 
-            - thirdChar_ActualName has ThirdD:
+            - thirdChar_ActualName has Sigaro:
                     {
                         - second_rewriting.ending.earth:
                             E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
@@ -516,7 +516,7 @@
             {charTag(ThirdCharacter, "neutral")}:     <b><i>{charNameThree}</b></i>.
                                
             
-            - thirdChar_ActualName has ThirdF:
+            - thirdChar_ActualName has Pallone:
                     {
                         - second_rewriting.ending.aether:
                             E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
@@ -526,7 +526,7 @@
                                                                                 Mi chiamerò...
                 {charTag(ThirdCharacter, "neutral")}:     <b><i>{charNameThree}</b></i>.    
                     
-            - thirdChar_ActualName has ThirdB:
+            - thirdChar_ActualName has Forum:
                     {
                         - second_rewriting.ending.air:
                             E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.

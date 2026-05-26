@@ -184,18 +184,18 @@
         ~ thirdChar_ActualName = ()
         {mainGlyph:
             - airC:
-                ~ thirdChar_ActualName += ThirdB
+                ~ thirdChar_ActualName += Forum
             - waterC:
-                ~ thirdChar_ActualName += ThirdC
+                ~ thirdChar_ActualName += Canovaccio
             - earthC:
-                ~ thirdChar_ActualName += ThirdD
+                ~ thirdChar_ActualName += Sigaro
             - fireC:
-                ~ thirdChar_ActualName += ThirdE
+                ~ thirdChar_ActualName += Guantone
             - aetherC:
-                ~ thirdChar_ActualName += ThirdF
+                ~ thirdChar_ActualName += Pallone
             - else:
                 //Definire e assegnare il negativo
-                ~ thirdChar_ActualName += ThirdE
+                ~ thirdChar_ActualName += Guantone
         }
 
 
@@ -279,16 +279,16 @@ Funzione di traduzione da variabile a stringa
     //Personaggio Tre
         - Boccale:
             ~ return "Boccale"
-        - ThirdB:
-            ~ return "ThirdB"
-        - ThirdC:
-            ~ return "ThirdC"
-        - ThirdD:
-            ~ return "ThirdD"
-        - ThirdE:
-            ~ return "ThirdE"
-        - ThirdF:
-            ~ return "ThirdF"                   
+        - Forum:
+            ~ return "Forum"
+        - Canovaccio:
+            ~ return "Canovaccio"
+        - Sigaro:
+            ~ return "Sigaro"
+        - Guantone:
+            ~ return "Guantone"
+        - Pallone:
+            ~ return "Pallone"                   
     
     //Personaggia Quattro        
         - NonnaMolotov:

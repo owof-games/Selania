@@ -168,20 +168,20 @@
             - thirdChar_ActualName == Boccale:
                 ~ return "Boccale"
 
-            - thirdChar_ActualName == ThirdB:
-                ~ return "ThirdB"
+            - thirdChar_ActualName == Forum:
+                ~ return "Forum"
 
-            - thirdChar_ActualName == ThirdC:
-                ~ return "ThirdC"
+            - thirdChar_ActualName == Canovaccio:
+                ~ return "Canovaccio"
 
-            - thirdChar_ActualName == ThirdD:
-                ~ return "ThirdD"
+            - thirdChar_ActualName == Sigaro:
+                ~ return "Sigaro"
 
-            - thirdChar_ActualName == ThirdE:
-                ~ return "ThirdE"
+            - thirdChar_ActualName == Guantone:
+                ~ return "Guantone"
 
-            - thirdChar_ActualName == ThirdF:
-                ~ return "ThirdF"                     
+            - thirdChar_ActualName == Pallone:
+                ~ return "Pallone"                     
         }
 
     - FourthCharacter:
