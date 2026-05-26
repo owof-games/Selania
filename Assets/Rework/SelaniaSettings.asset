@@ -49,6 +49,36 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 653080bda57a62d42bb12e7ffdca6e6a, type: 3}
   - spriteName: tutorial_carlaRereadingStorylet_1
     sprite: {fileID: 21300000, guid: 1bd31ca82fe2acf458620a93d0612fcd, type: 3}
+  - spriteName: tutorial_carlaGreenhouseGiftsInkStorylet_1
+    sprite: {fileID: 21300000, guid: d892d83b1024bcd44bebe5570fe49071, type: 3}
+  - spriteName: tutorial_carlaGrimoireStorylet_1
+    sprite: {fileID: 21300000, guid: b781a32902a800840bdf8c58732d02fe, type: 3}
+  - spriteName: tutorial_carlaGrimoireStorylet_2
+    sprite: {fileID: 21300000, guid: b5136e1ebb5c14f4a86421a1b17ec2ec, type: 3}
+  - spriteName: tutorial_carlaGrimoireStorylet_3
+    sprite: {fileID: 21300000, guid: b08d3388a5a4f0741834072099865170, type: 3}
+  - spriteName: tutorial_carlaInterfaceStorylets_1
+    sprite: {fileID: 21300000, guid: 1dbbe34297da2bf4493f451c3efa9de5, type: 3}
+  - spriteName: tutorial_carlaInterfaceStorylets_2
+    sprite: {fileID: 21300000, guid: a0a71eaa7179a5c43976743ed08c9397, type: 3}
+  - spriteName: tutorial_carlaInterfaceStorylets_3
+    sprite: {fileID: 21300000, guid: 236fecec80794134284c124a081b9dd2, type: 3}
+  - spriteName: tutorial_carlaInterfaceStorylets_4
+    sprite: {fileID: 21300000, guid: 25d3b56eb57b6bb498c0e26fef7b0fb4, type: 3}
+  - spriteName: tutorial_carlaInterfaceStorylets_5
+    sprite: {fileID: 21300000, guid: 71cb3b853dab3aa418b4b9e59ba78738, type: 3}
+  - spriteName: tutorial_carlaInterfaceStorylets_6
+    sprite: {fileID: 21300000, guid: 54c86787d04d7b940b97364d038abcf5, type: 3}
+  - spriteName: tutorial_carlaKitchenStorylet_1
+    sprite: {fileID: 21300000, guid: b03d4ae79c45a054a94c47aaa6866d71, type: 3}
+  - spriteName: tutorial_carlaNestStorylet_1
+    sprite: {fileID: 21300000, guid: 419b53034a902b640bb7822a1a4773d6, type: 3}
+  - spriteName: tutorial_carlaNestStorylet_2
+    sprite: {fileID: 21300000, guid: 04c048b6eb3faa949ae08fbce610e4d6, type: 3}
+  - spriteName: tutorial_carlaSigilsActivationStorylet_1
+    sprite: {fileID: 21300000, guid: 302ca60def0482941ab5b9b68663ab08, type: 3}
+  - spriteName: tutorial_carlaSigilsActivationStorylet_2
+    sprite: {fileID: 21300000, guid: b4f5d4de0f4d6d248b6a5ff009600b57, type: 3}
   <choiceIndentationPercentage>k__BackingField: 8
   <defaultChoiceColor>k__BackingField: {r: 0.254539, g: 0.3228934, b: 0.9811321, a: 1}
   <selectedChoiceColor>k__BackingField: {r: 0.41037738, g: 0.5451931, b: 1, a: 1}
