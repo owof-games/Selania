@@ -402,6 +402,7 @@ TODO: nel caso di boccale seconda fase, mettere codice qua tipo:
         ~ relationshipChange = fifthChar_relationshipIndicator - fifthChar_lastRelationshipIndicator            
 }
 ~ temp reaction = positive
+// °°°°°° relationshipChange {relationshipChange}
 {
     - relationshipChange > 0:
         ~ reaction = positive

@@ -80,6 +80,7 @@
         ~  player_air_first_char = firstChar_air
         ~  player_water_first_char = firstChar_water
         ~  player_fire_first_char = firstChar_fire
+        ~ updateFirstCharacterRelation()
 
 
     ~ secondChar_aether = RANDOM(-9,9)
@@ -98,6 +99,7 @@
         ~  player_air_second_char = secondChar_air
         ~  player_water_second_char = secondChar_water
         ~  player_fire_second_char = secondChar_fire
+        ~ updateSecondCharacterRelation()
 
 
     ~ thirdChar_aether = RANDOM(-9,9)
@@ -116,6 +118,7 @@
         ~  player_air_third_char = thirdChar_air
         ~  player_water_third_char = thirdChar_water
         ~  player_fire_third_char = thirdChar_fire
+        ~ updateThirdCharacterRelation()
 
 === function debug_places_open()
 

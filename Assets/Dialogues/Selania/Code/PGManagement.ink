@@ -377,6 +377,13 @@
 		}
 
     ~ temp glyphStatus = -1
+    // °°°°° VALORI TEMPORANEI
+    // temp_PGWater {temp_PGWater}
+    // temp_PGAir {temp_PGAir}
+    // temp_PGFire {temp_PGFire}
+    // temp_PGEarth {temp_PGEarth}
+    // temp_PGAether {temp_PGAether}
+
 //E poi confronto quella che è la storia della personaggia, la progressione delle sue scelte: di fatto per ora basta che non ci siano pareggi tra colori per evitare il marrone. A quel punto emerge il colore dominante.
     {
         - (temp_PGWater > temp_PGAir) && (temp_PGWater > temp_PGFire) && (temp_PGWater > temp_PGEarth) && (temp_PGWater > temp_PGAether):
@@ -447,7 +454,9 @@
             } 
             {debug: La lista di possibili status in caso di pareggio è {possibileTreeStatus}.}
             
-            
+            // °°°°° VALORI TEMPORANEI
+            // possibileTreeStatus {possibileTreeStatus}
+
             //E infine ne prendo uno casuale dalla lista. 
             ~ temp random_chosenTreeStatus = LIST_RANDOM(possibileTreeStatus)
             //E lo "traduco" nel valore da comunicare a Unity
@@ -472,6 +481,8 @@
 
         }
 
+        // °°°°° VALORE DEFINITIVO
+        // glyphStatus {glyphStatus}
 
         // associamo il valore calcolato al personaggio corretto
         {
