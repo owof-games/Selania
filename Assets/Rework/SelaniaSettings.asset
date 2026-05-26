@@ -174,15 +174,15 @@ MonoBehaviour:
     <inkVariableName>k__BackingField: firstChar_InkLevel
     <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: c9ee8c9277009394984894fc40aeb107, type: 3}
     <characterMoods>k__BackingField:
-    - <name>k__BackingField: Chitarra_affectionate
+    - <name>k__BackingField: Chitarra_morePositive
       <sprite>k__BackingField: {fileID: 21300000, guid: 2db91d165dd198c4391ba68eeed07c33, type: 3}
-    - <name>k__BackingField: Chitarra_annoyed
+    - <name>k__BackingField: Chitarra_negative
       <sprite>k__BackingField: {fileID: 21300000, guid: db1adbf7e8b0d85479c0ece3584ef0c3, type: 3}
-    - <name>k__BackingField: Chitarra_curious
+    - <name>k__BackingField: Chitarra_positive
       <sprite>k__BackingField: {fileID: 21300000, guid: 197e039deba4a1b4ea84d6ae7ba9a1e2, type: 3}
     - <name>k__BackingField: Chitarra_neutral
       <sprite>k__BackingField: {fileID: 21300000, guid: be263273257eb3247941fd5f3d9e78cf, type: 3}
-    - <name>k__BackingField: Chitarra_sad
+    - <name>k__BackingField: Chitarra_moreNegative
       <sprite>k__BackingField: {fileID: 21300000, guid: 64f6f4f498b084d42b1b3f585e68dedc, type: 3}
     - <name>k__BackingField: Violino_neutral
       <sprite>k__BackingField: {fileID: 21300000, guid: 8839972c8d2fe3847a82accf0b9f4b52, type: 3}

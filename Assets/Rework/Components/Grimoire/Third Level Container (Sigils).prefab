@@ -51,7 +51,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 0
   m_Interactable: 0
-  m_BlocksRaycasts: 0
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!95 &2429280244333685932
 Animator:
@@ -813,9 +813,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8155491995396113839}
     m_Modifications:
+    - target: {fileID: 128561155837326888, guid: 455299974330c5944815f779ed5f2a63, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2206714555263459300, guid: 455299974330c5944815f779ed5f2a63, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -210
+      objectReference: {fileID: 0}
+    - target: {fileID: 2721473423952696280, guid: 455299974330c5944815f779ed5f2a63, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3167389214816515460, guid: 455299974330c5944815f779ed5f2a63, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -828,6 +836,10 @@ PrefabInstance:
     - target: {fileID: 4202622604287074369, guid: 455299974330c5944815f779ed5f2a63, type: 3}
       propertyPath: m_Name
       value: Header Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267576242312892493, guid: 455299974330c5944815f779ed5f2a63, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5409509004665567438, guid: 455299974330c5944815f779ed5f2a63, type: 3}
       propertyPath: m_Sprite
@@ -912,6 +924,10 @@ PrefabInstance:
     - target: {fileID: 6628953435717285397, guid: 455299974330c5944815f779ed5f2a63, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8267489152213181778, guid: 455299974330c5944815f779ed5f2a63, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
