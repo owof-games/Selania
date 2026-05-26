@@ -26,13 +26,20 @@ namespace Selania.Rework.Components.Grimoire
         private string? _title;
 
         /// <summary>
-        ///     An observable that produces the title of this row whenever the button is clicked.
+        ///     An observable that produces the title of this row whenever the button is clicked (or empty string if
+        ///     the title is not set, see <see cref="SetUp"/>).
         /// </summary>
-        public Observable<string> click => button.GetComponent<Button>()
-            .OnClickAsObservable()
-            .CombineLatest(button.GetComponent<GrimoireButtonHelper>().logicallyDisabled, (_, disabled) => disabled)
-            .Where(disabled => !disabled)
-            .Select(_ => _title ?? "");
+        public Observable<string> Click
+        {
+            get
+            {
+                var grimoireButtonHelper = button.GetComponent<GrimoireButtonHelper>();
+                return button.GetComponent<Button>()
+                    .OnClickAsObservable()
+                    .Where(_ => grimoireButtonHelper.Interactable && !grimoireButtonHelper.LogicallyDisabled)
+                    .Select(_ => _title ?? "");
+            }
+        }
 
         /// <summary>
         ///     Set up the row.

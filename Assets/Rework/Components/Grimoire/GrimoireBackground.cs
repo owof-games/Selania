@@ -316,7 +316,7 @@ namespace Selania.Rework.Components.Grimoire
         ///     An observable that produces the name of a third level sigil whenever it's clicked.
         /// </summary>
         public Observable<string> thirdLevelSigilsButtonClick =>
-            thirdLevelSigilsRows.Select(row => row.click).Merge();
+            thirdLevelSigilsRows.Select(row => row.Click).Merge();
 
         /// <summary>
         /// An observable producing "true" when the left button on third level greenhouse is clicked, "false" when the right button is clicked.
