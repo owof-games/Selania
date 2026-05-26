@@ -285,10 +285,10 @@
     
     {
         - fifthChar_storyStatus == story_storyStarted:
-            ~ movements_randomizable_characters += Mentor
+            ~ movements_randomizable_characters += FifthCharacter
         
         - else:  
-            ~ movements_randomizable_characters -= Mentor
+            ~ movements_randomizable_characters -= FifthCharacter
     }
     
     //Comparsa della rana
@@ -297,23 +297,23 @@
            ~  move_entity(Franco, Pond)
     }
     
-    
+    {debug: esco da on_movement_randomize_png_places. movements_randomizable_characters contiene {movements_randomizable_characters}}
     -> randomize_png_location
     
 
 //Qui randomizziamo chi può essere randomizzatx.    
 === randomize_png_location    
-{debug_PNGLocation: randomize_png_location.}
+{debug: passo da randomize_png_location.}
 
     {
         //se ho raggiunto il tempo trigger, resetto il valore, e poi vado avanti.
-        - movements_changeLocationTimer >= movements_changeLocationTrigger:
-        {debug_PNGLocation: <i> Il valore del Timer è {movements_changeLocationTimer} e quindi randomizzo il luogo.}
+        - movements_changeLocationTimer >= movements_changeLocationTrigger && movements_randomizable_characters != ():
+        {debug: <i> Il valore del Timer è {movements_changeLocationTimer} e quindi randomizzo il luogo.}
             -> top
 
         //altrimenti, aumento il valore e skippo
         - else:
-        {debug_PNGLocation: <i>il valore del Timer è {movements_changeLocationTimer} e quindi lo aumento.}
+        {debug: <i>il valore del Timer è {movements_changeLocationTimer} e quindi lo aumento.}
             ~ movements_changeLocationTimer ++
             ->->
     }
@@ -322,25 +322,25 @@
             ~ movements_changeLocationTimer = 0
             //~ temp list_character = movements_randomizable_characters
             ~ temp character = LIST_RANDOM(movements_randomizable_characters)
-                {debug_PNGLocation: le personagge randomizzabili sono {movements_randomizable_characters}}
+                {debug: le personagge randomizzabili sono {movements_randomizable_characters}}
                 //{debug: le personagge nella lista temporanea sono {movements_randomizable_characters}}
-                {debug_PNGLocation: la personaggia randomizzata è {character}}
+                {debug: la personaggia randomizzata è {character}}
             ~ temp location = LIST_RANDOM(movements_randomablePlaces)
-                {debug_PNGLocation: i luoghi randomizzabili sono {movements_randomablePlaces}}
-                {debug_PNGLocation: il luogo scelto per la randomizzazione è {location}}
+                {debug: i luoghi randomizzabili sono {movements_randomablePlaces}}
+                {debug: il luogo scelto per la randomizzazione è {location}}
                 //Per il pezzo qui sotto, l'idea è di avere unx solx personaggix alla volta in biblioteca e nella discarica, se e solo se comunque lx dovessi sbloccare come aree (e a quel punto mi basta aggiungerle a movements_randomablePlaces)
                     {
                         - location == Dump:
                             {
                                 - (contentsDump has FirstCharacter) or (contentsDump has SecondCharacter) or (contentsDump has ThirdCharacter) or (contentsDump has Mentor):
-                                    {debug_PNGLocation: il luogo random è Dump, ma visto che c'è già {contentsDump}, mando {character} alla foresta.}
+                                    {debug: il luogo random è Dump, ma visto che c'è già {contentsDump}, mando {character} alla foresta.}
                                     ~ location = Forest
                             }
 
                         - location == Library:
                             {
                                 - (contentsLibrary has FirstCharacter) or (contentsLibrary has SecondCharacter) or (contentsLibrary has ThirdCharacter) or (contentsLibrary has Mentor):
-                                    {debug_PNGLocation: il luogo random è Library, ma visto che c'è già {contentsLibrary}, mando {character} allo stagno.}
+                                    {debug: il luogo random è Library, ma visto che c'è già {contentsLibrary}, mando {character} allo stagno.}
                                     ~ location = Pond
                             }
                     }
@@ -348,16 +348,17 @@
             ~ move_entity(character, location)
             ~ movements_randomizable_characters -= character    
             
-            {debug_PNGLocation: <i>{character} si trova in {location}.}       
+            {debug: <i>{character} si trova in {location}.}       
             
             {
                - movements_randomizable_characters != ():
-               {debug_PNGLocation: movements_randomizable_characters ha ancora {movements_randomizable_characters} e quindi ripeto.} 
+               {debug: movements_randomizable_characters ha ancora {movements_randomizable_characters} e quindi ripeto.} 
                     -> top
                - else:
                     ->->
             }
     
+    {debug: esco da randomize_png_location.}
     ->->
     
  

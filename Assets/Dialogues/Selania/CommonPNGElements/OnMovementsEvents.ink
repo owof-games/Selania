@@ -532,7 +532,6 @@ VAR letters_doggoPause = false
                     ~ kitchen_secondCharCookingTogetherInvite = false
                     ~ kitchen_secondCharCookingTogetherWaiting = 0
                     ~ move_entity(SecondCharacter, Pond)
-                    ~ move_entity(SecondCharacter, Pond)
                     ~ move_entity(SecondCharacterCucina, Safekeeping)
                     ~ kitchen_kitchenOccupied = false
                    {debug_kitchen: Riccio cha smesso di aspettarci in cucina.}
