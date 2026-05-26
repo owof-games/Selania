@@ -43,7 +43,6 @@
     ~ frog_currentMission = LIST_RANDOM(frog_availableCommonMissions)
     ~ grimoire_franco += grimFrancoFirst
 
-
     ~ grimoire_firstChar += (grimFirstCharNine, grimFirstCharPresentation)
     ~ grimoire_secondChar += (grimSecondCharNine, grimSecondCharPresentation)
     ~ grimoire_thirdChar += (grimThirdCharSix, grimThirdCharPresentation)
@@ -65,7 +64,58 @@
     //E assegniamo anche il nome della strega
     ~ witch_actualName = LIST_RANDOM(witch_possibleNames)
 
+    ~ firstChar_aether = RANDOM(-9,9)
+    ~ firstChar_earth = RANDOM(-9,9)
+    ~ firstChar_air = RANDOM(-9,9)
+    ~ firstChar_water = RANDOM(-9,9)
+    ~ firstChar_fire= RANDOM(-9,9)
+    ~ firstChar_last_aether = RANDOM(-9,9)
+    ~ firstChar_last_earth = RANDOM(-9,9)
+    ~ firstChar_last_air = RANDOM(-9,9)
+    ~ firstChar_last_water = RANDOM(-9,9)
+    ~ firstChar_last_fire= RANDOM(-9,9)
 
+        ~  player_aether_first_char = firstChar_aether
+        ~  player_earth_first_char = firstChar_earth
+        ~  player_air_first_char = firstChar_air
+        ~  player_water_first_char = firstChar_water
+        ~  player_fire_first_char = firstChar_fire
+
+
+    ~ secondChar_aether = RANDOM(-9,9)
+    ~ secondChar_earth = RANDOM(-9,9)
+    ~ secondChar_air = RANDOM(-9,9)
+    ~ secondChar_water = RANDOM(-9,9)
+    ~ secondChar_fire= RANDOM(-9,9)
+    ~ secondChar_last_aether = RANDOM(-9,9)
+    ~ secondChar_last_earth = RANDOM(-9,9)
+    ~ secondChar_last_air = RANDOM(-9,9)
+    ~ secondChar_last_water = RANDOM(-9,9)
+    ~ secondChar_last_fire= RANDOM(-9,9)
+
+        ~  player_aether_second_char = secondChar_aether
+        ~  player_earth_second_char = secondChar_earth
+        ~  player_air_second_char = secondChar_air
+        ~  player_water_second_char = secondChar_water
+        ~  player_fire_second_char = secondChar_fire
+
+
+    ~ thirdChar_aether = RANDOM(-9,9)
+    ~ thirdChar_earth = RANDOM(-9,9)
+    ~ thirdChar_air = RANDOM(-9,9)
+    ~ thirdChar_water = RANDOM(-9,9)
+    ~ thirdChar_fire= RANDOM(-9,9)
+    ~ thirdChar_last_aether = RANDOM(-9,9)
+    ~ thirdChar_last_earth = RANDOM(-9,9)
+    ~ thirdChar_last_air = RANDOM(-9,9)
+    ~ thirdChar_last_water = RANDOM(-9,9)
+    ~ thirdChar_last_fire= RANDOM(-9,9)
+
+        ~  player_aether_third_char = thirdChar_aether
+        ~  player_earth_third_char = thirdChar_earth
+        ~  player_air_third_char = thirdChar_air
+        ~  player_water_third_char = thirdChar_water
+        ~  player_fire_third_char = thirdChar_fire
 
 === function debug_places_open()
 
