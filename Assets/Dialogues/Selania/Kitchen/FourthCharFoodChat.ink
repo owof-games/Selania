@@ -60,6 +60,7 @@
                 ~ kitchen_fourthCharCookingTogetherInvite = false
                 ~ kitchen_fourthCharCookingTogetherWaiting = 0
                 ~ move_entity(FourthCharacter, Pond)
+                ~ move_entity(FourthCharacterCucina, Safekeeping)
             -> main
 
 
@@ -708,6 +709,7 @@
     
 
                 ~ move_entity(FourthCharacter, Pond)
+                ~ move_entity(FourthCharacterCucina, Safekeeping)
                 ~ cooking_animations_off()
                 ~ kitchen_fourthCharCookingTogetherInvite = false
                 ~ kitchen_allChefs += FourthCharacter

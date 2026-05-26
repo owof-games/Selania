@@ -69,6 +69,7 @@
                 ~ kitchen_secondCharCookingTogetherInvite = false
                 ~ kitchen_secondCharCookingTogetherWaiting = 0
                 ~ move_entity(SecondCharacter, Pond)
+                ~ move_entity(SecondCharacterCucina, Safekeeping)
             -> main
 
     
@@ -1337,6 +1338,7 @@
     
             ~ cooking_animations_off()
             ~ move_entity(SecondCharacter, Pond)
+            ~ move_entity(SecondCharacterCucina, Safekeeping)
             ~ kitchen_secondCharCookingTogetherInvite = false
             ~ kitchen_allChefs += SecondCharacter
             ~ kitchen_kitchenOccupied = false

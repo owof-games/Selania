@@ -60,6 +60,7 @@
                 ~ kitchen_fifthCharCookingTogetherInvite = false
                 ~ kitchen_fifthCharCookingTogetherWaiting = 0
                 ~ move_entity(FifthCharacter, Pond)
+                ~ move_entity(FifthCharacterCucina, Safekeeping)
             -> main
 
 
@@ -707,6 +708,7 @@
     
 
                 ~ move_entity(FifthCharacter, Pond)
+                ~ move_entity(FifthCharacterCucina, Safekeeping)
                 ~ cooking_animations_off()
                 ~ kitchen_fifthCharCookingTogetherInvite = false
                 ~ kitchen_allChefs += FifthCharacter

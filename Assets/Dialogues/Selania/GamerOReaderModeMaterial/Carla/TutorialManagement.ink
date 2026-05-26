@@ -2,7 +2,7 @@ LIST tutorial_allCarlaTutorials = tutorialChoicesRelationship, tutorialRereading
 
 VAR tutorial_CarlaDiscoveredTutorials= ()
 
-VAR tutorial_ActivateTutorial = true
+VAR tutorial_ActivateTutorial = false
 VAR tutorial_CarlaRelationshipIndicator = 0
 
 
@@ -13,7 +13,6 @@ VAR tutorial_rereadingActive = false
 
 === on_movement_tutorial_steps ===
 //Prima di tutto vedo se attivare o meno le variabili legate al livello di rapporto con l3 PNG
-
     //Tutorial inchiostro
     {
         - (grimoire_firstChar has grimFirstCharThree) or (grimoire_secondChar has grimSecondCharFour) or (grimoire_thirdChar has grimThirdCharThree):

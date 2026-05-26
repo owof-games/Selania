@@ -8,6 +8,8 @@ VAR settings_gamerMode = false
     ~ settings_gamerMode = true
     //Attivo le notifiche da gamer
     ~ notification_gamerNotification = true
+    //Attivo il tutorial
+    ~ tutorial_ActivateTutorial = true
     //Sposto Carla alla fermata del treno
     ~ move_entity(Carla, TrainStop)
     

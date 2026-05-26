@@ -1093,7 +1093,8 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
 
         {
             - about_kitchen && grimoire_fifthChar hasnt grimKitchenMentor:
-                ~ grimoire_appendices += grimKitchenMentor                  
+                ~ grimoire_appendices += grimKitchenMentor    
+                ~ grimoire_fifthChar += grimKitchenMentor                 
         }
 
         {
