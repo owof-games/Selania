@@ -3,10 +3,6 @@
 //Da qui passano tutti i check narrativi per quando iniziamo a parlare con Franco
 {
     //Storylets speciali
-    //Prima presentazione
-    - are_two_entities_together(PG, Franco) && grimoire_franco hasnt grimFrancoFirst:
-        -> franco_intro
-    
     - are_two_entities_together(PG, Franco) && special_mission_one_contents && entity_location(PG) == Pond && grimoire_franco hasnt grimFrancoSpecialMissionOneFeedback:
         -> franco_feedback_mission_one_closed
 
@@ -17,7 +13,7 @@
     //Regalo da raccogliere
     - frog_suspended_gift == true && frog_giftability == true:
                 
-        {charTag(Franco, "party")}:                     Ehi girino!
+        {charTag(Franco, "party")}:                         Ehi girino!
         {shuffle:
                                                         - Hai ancora quel dono di prima da prendere!
                                                         - Devo ancora darti quel dono!

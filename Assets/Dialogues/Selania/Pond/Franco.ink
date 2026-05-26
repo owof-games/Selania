@@ -14,7 +14,10 @@
         ~ franco_giftsStateUpdater()
 
     //Facciamo passare dei commentini speciali
-    {
+    {   //Prima presentazione
+        - are_two_entities_together(PG, Franco) && grimoire_franco hasnt grimFrancoFirst:
+            -> franco_intro
+
         - not franco_open_kitchen && entity_location(PG) == Pond && player_accessiblePlaces has Kitchen:
             -> franco_open_kitchen ->
 
