@@ -86,38 +86,40 @@
 
 
 === function getCharactersInScene()
-TODO: nel caso di boccale seconda fase, mettere codice qua tipo:
-/*
-{ BoccaleSecondaFase:
-    ~ return ()
-}
-*/
 ~ temp characters = ()
-// calcola le personagge in scena in una variabile temporanea e la ritorna
-    {
-        - are_two_entities_together(PG, FirstCharacter):
-            ~ characters += FirstCharacter
-    }
-    {
-        - are_two_entities_together(PG, SecondCharacter):
-            ~ characters += SecondCharacter
-    }
-    {
-        - are_two_entities_together(PG, ThirdCharacter):
-            ~ characters += ThirdCharacter
-    }
-    {
-        - are_two_entities_together(PG, FourthCharacter):
-            ~ characters += FourthCharacter
-    }
-    {
-        - are_two_entities_together(PG, FifthCharacter):
-            ~ characters += FifthCharacter
-    }
-    {
-        - are_two_entities_together(PG, Mentor):
-            ~ characters += Mentor                    
-    }
+
+{   //Se la funzione viene chiamata durante le lettere di PNG3, è l'unico PNG ad essere aggiornato.
+    - ThirdCharacterLetters == true:
+        ~ characters += ThirdCharacter
+
+    - else:
+    // calcola le personagge in scena in una variabile temporanea e la ritorna
+        {
+            - are_two_entities_together(PG, FirstCharacter):
+                ~ characters += FirstCharacter
+        }
+        {
+            - are_two_entities_together(PG, SecondCharacter):
+                ~ characters += SecondCharacter
+        }
+        {
+            - are_two_entities_together(PG, ThirdCharacter):
+                ~ characters += ThirdCharacter
+        }
+        {
+            - are_two_entities_together(PG, FourthCharacter):
+                ~ characters += FourthCharacter
+        }
+        {
+            - are_two_entities_together(PG, FifthCharacter):
+                ~ characters += FifthCharacter
+        }
+        {
+            - are_two_entities_together(PG, Mentor):
+                ~ characters += Mentor                    
+        }
+}
+
 ~ return characters
 
 
@@ -469,31 +471,35 @@ TODO: nel caso di boccale seconda fase, mettere codice qua tipo:
         }
 
     - ThirdCharacter:
-        {reaction:
+        //Blocco le reazioni di PNG3 durante le lettere
+        {ThirdCharacterLetters == false:
 
-            - neutral:
-                {shuffle:
-                    - {charTag(ThirdCharacter, "neutral")}:        Ok.
-                    - {charTag(ThirdCharacter, "neutral")}:        Certo.
-                    - {charTag(ThirdCharacter, "neutral")}:        Mhm.
-                }
+            {reaction:
 
-            - positive:
-                {shuffle:
-                    - {charTag(ThirdCharacter, "neutral")}:          Uuuuh!
-                    - {charTag(ThirdCharacter, "neutral")}:          Oooh!
-                    - {charTag(ThirdCharacter, "neutral")}:          Wow!
-                    - {charTag(ThirdCharacter, "neutral")}:          Siii!
-                }
+                - neutral:
+                    {shuffle:
+                        - {charTag(ThirdCharacter, "neutral")}:        Ok.
+                        - {charTag(ThirdCharacter, "neutral")}:        Certo.
+                        - {charTag(ThirdCharacter, "neutral")}:        Mhm.
+                    }
 
-            - negative:
-                {shuffle:
-                    - {charTag(ThirdCharacter, "judgmental")}:         No?
-                    - {charTag(ThirdCharacter, "judgmental")}:         ???
-                    - {charTag(ThirdCharacter, "judgmental")}:         Ah.
-                    - {charTag(ThirdCharacter, "judgmental")}:         Uff.
-                }
+                - positive:
+                    {shuffle:
+                        - {charTag(ThirdCharacter, "neutral")}:          Uuuuh!
+                        - {charTag(ThirdCharacter, "neutral")}:          Oooh!
+                        - {charTag(ThirdCharacter, "neutral")}:          Wow!
+                        - {charTag(ThirdCharacter, "neutral")}:          Siii!
+                    }
 
+                - negative:
+                    {shuffle:
+                        - {charTag(ThirdCharacter, "neutral")}:         No?
+                        - {charTag(ThirdCharacter, "neutral")}:         ???
+                        - {charTag(ThirdCharacter, "neutral")}:         Ah.
+                        - {charTag(ThirdCharacter, "neutral")}:         Uff.
+                    }
+
+            }
 
         }
 

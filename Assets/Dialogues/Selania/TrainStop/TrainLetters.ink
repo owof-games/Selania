@@ -256,6 +256,8 @@
         {charTag(Documents, "writer_thirdChar")}:      {charNameThree}: Lettere random note da parte della personaggia <>
 
         Dopo che mi hai risposto questa cosa nella lettera precedente:
+
+        //Step uno: un feedback sulla lettera precedente
         {
             - third_char_letters_choices.one.air: 
                 Una cosa aria, mi sono sentito...
@@ -273,6 +275,35 @@
                 Una cosa acqua, mi sono sentito...
 
         }
+
+        //Step due: variazione della relazione e dei contatori. La faccio separatamente per evitare che si ripeta ogni volta che consulto la lettera nel grimorio.
+        {grimoire_thirdChar hasnt grimThirdCharLetterTwo:
+            //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
+            ~  ThirdCharacterLetters = true
+
+                //E poi procedo con gli effetti delle scelte
+                {
+                - third_char_letters_choices.one.air: 
+                    // -> glyph_choice_manager(false, airC)->
+
+                - third_char_letters_choices.one.fire: 
+                    // -> glyph_choice_manager(false, fireC)->
+
+                - third_char_letters_choices.one.earth: 
+                    Una cosa terra , mi sono sentito...
+
+                - third_char_letters_choices.one.aether: 
+                    Una cosa spirito, mi sono sentito...
+
+                - third_char_letters_choices.one.water: 
+                    Una cosa acqua, mi sono sentito...
+                }
+
+            //E disattivo la variabile che blocca le varie reazioni.
+           ~  ThirdCharacterLetters = false          
+
+        }
+
         
 
     

@@ -22,7 +22,7 @@
     //Apertura del nido
     {charTag(ThirdCharacter, "neutral")}:       Dialogo al nido.
         + [Scelta aria]
-             -> glyph_choice_manager(false, airC)->
+            -> glyph_choice_manager(false, airC)->
     
         + [Scelta fuoco]
             -> glyph_choice_manager(false, fireC)->

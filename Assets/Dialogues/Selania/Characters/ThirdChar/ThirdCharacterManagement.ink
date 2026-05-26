@@ -55,6 +55,10 @@
     //Moltiplicatore per la riscrittura
     VAR thirdChar_glyphVariation = 2
 
+    //Variabile per bloccare le reazioni dell3 altr3 PNG mentre rispondiamo alle lettere
+    VAR ThirdCharacterLetters = false
+
+
 //Tracciamento della relazione
     //Genere registrato dellx giocatricx.
     VAR thirdChar_recordedPlayerPronoun = ()
