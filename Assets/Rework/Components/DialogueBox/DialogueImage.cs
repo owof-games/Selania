@@ -16,7 +16,7 @@ namespace Selania.Rework.Components.DialogueBox
         private Image image = null!;
 
         [Tooltip("The aspect ratio component")] [SerializeField]
-        private AspectRatioFitter aspectRatioFitter;
+        private AspectRatioFitter aspectRatioFitter = null!;
 
         [Inject] internal ILogger<DialogueImage> Logger = null!;
 

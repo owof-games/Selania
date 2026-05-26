@@ -20,6 +20,8 @@ namespace Selania.Rework.Components.Grimoire
         [SerializeField] private RectTransform variableAnchoredPositionObject = null!;
         [SerializeField] private Vector2 alternativePosition = Vector2.zero;
 
+        private readonly ReplaySubject<Observable<bool>> _interactableObservable = new(1);
+
         private ReplaySubject<Vector2>? _anchoredPositionObjectSubject;
 
         /// <summary>
@@ -43,13 +45,9 @@ namespace Selania.Rework.Components.Grimoire
         /// </summary>
         private ReplaySubject<bool>? _pressedSubject;
 
-        /// <summary>
-        ///     Whether this button is logically disabled or not.
-        /// </summary>
-        /// <exception cref="InvalidOperationException">If this observable is accessed before Awake.</exception>
-        public Observable<bool> logicallyDisabled =>
-            _logicallyDisabledSubject?.DistinctUntilChanged() ??
-            throw new InvalidOperationException("Cannot request LogicallyDisabled until started");
+        public bool LogicallyDisabled { get; private set; }
+
+        public bool Interactable => GetComponent<Selectable>().interactable;
 
         private void Awake()
         {
@@ -68,8 +66,8 @@ namespace Selania.Rework.Components.Grimoire
             // update the target graphic sprite
             var interactableObservable = Observable.EveryUpdate()
                 .Select(_ => selectable.interactable);
+
             interactableObservable
-                .DistinctUntilChanged()
                 .CombineLatest(_overrideOriginalSpriteSubject!.Prepend((Sprite?)null).DistinctUntilChanged(),
                     (interactable, overriddenOriginalSprite) => interactable
                         ? overriddenOriginalSprite == null ? originalSprite : overriddenOriginalSprite
@@ -117,6 +115,7 @@ namespace Selania.Rework.Components.Grimoire
             if (_logicallyDisabledSubject == null)
                 throw new InvalidOperationException("Cannot set the logical disabled status before Awake");
 
+            LogicallyDisabled = isLogicallyDisabled;
             _logicallyDisabledSubject.OnNext(isLogicallyDisabled);
         }
 
