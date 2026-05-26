@@ -96,7 +96,7 @@
                                                                 E quali pronomi usi?
         {charTag(FifthCharacter, "neutral")}:                   Puoi usare un nome qualsiasi e i pronomi che preferisci: prendi questa occasione come un nuovo inizio.
             -> name_choice.top2 ->
-            -> gender.top ->
+            -> gender ->
         {charTag(FifthCharacter, "hurry")}:                     Piacere di conoscerti, {player_name}.
                                                                 E {player_pronoun has him:benvenuto|{player_pronoun has her:benvenuta|benvenutə}}.
                                                                 Con me usa pure i pronomi femminili.

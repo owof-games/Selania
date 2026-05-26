@@ -521,6 +521,12 @@ VAR letters_doggoPause = false
                 - kitchen_secondCharCookingTogetherWaiting < kitchen_secondCharCookingMAXTogetherWaiting:
                     ~ kitchen_secondCharCookingTogetherWaiting ++
                     {debug_kitchen: Riccio ci sta aspettando in cucina, kitchen_secondCharCookingTogetherWaiting è {kitchen_secondCharCookingTogetherWaiting}.}
+                    //Spostiamo l'asset corretto in cucina    
+                    {
+                        - contentsKitchen has SecondCharacter:
+                            ~ move_entity(SecondCharacterCucina, Kitchen)
+                            ~ move_entity(SecondCharacter, Safekeeping)
+                    }    
                 
                 - else:
                     ~ kitchen_secondCharCookingTogetherInvite = false
@@ -555,7 +561,7 @@ VAR letters_doggoPause = false
                 
                     - kitchen_firstCharCookingTime < kitchen_firstCharCookingMaxTime:
                         ~ kitchen_firstCharCookingTime ++
-                        {debug_kitchen: kitchen_firstCharCookingTime è {kitchen_firstCharCookingTime}.}
+                        {debug_kitchen: kitchen_firstCharCookingTime è {kitchen_firstCharCookingTime}.} 
                     
                     - else:
                        ~ kitchen_firstCharIsCooking = false
@@ -581,6 +587,12 @@ VAR letters_doggoPause = false
                 - kitchen_firstCharCookingTogetherWaiting < kitchen_firstCharCookingMAXTogetherWaiting:
                     ~ kitchen_firstCharCookingTogetherWaiting ++
                     {debug_kitchen: cucina ci aspetta in cucina da kitchen_firstCharCookingTogetherWaiting {kitchen_firstCharCookingTogetherWaiting}}
+                    //Spostiamo l'asset corretto in cucina    
+                    {
+                        - contentsKitchen has FirstCharacter:
+                            ~ move_entity(FirstCharacterCucina, Kitchen)
+                            ~ move_entity(FirstCharacter, Safekeeping)
+                    }  
                 
                 - else:
                    ~ kitchen_firstCharCookingTogetherInvite = false
@@ -617,6 +629,7 @@ VAR letters_doggoPause = false
                     - kitchen_thirdCharCookingTime < kitchen_thirdCharCookingMaxTime:
                         ~ kitchen_thirdCharCookingTime ++
                         {debug_kitchen: boccale cucina da solo da {kitchen_thirdCharCookingTime}.}
+                          
                     
                     - else:
                        ~ kitchen_thirdCharIsCooking = false
@@ -642,8 +655,14 @@ VAR letters_doggoPause = false
             {
                 - kitchen_thirdCharCookingTogetherWaiting < kitchen_thirdCharCookingMAXTogetherWaiting:
                     ~ kitchen_thirdCharCookingTogetherWaiting ++
-                     {debug_kitchen: boccale ci aspetta in cucina da {kitchen_thirdCharCookingTogetherWaiting}.}
-                
+                    {debug_kitchen: boccale ci aspetta in cucina da {kitchen_thirdCharCookingTogetherWaiting}.}
+
+                    //Spostiamo l'asset corretto in cucina    
+                        {
+                            - contentsKitchen has ThirdCharacter:
+                                ~ move_entity(ThirdCharacterCucina, Kitchen)
+                                ~ move_entity(ThirdCharacter, Safekeeping)
+                        } 
                 - else:
                    ~ kitchen_thirdCharCookingTogetherInvite = false
                    ~ kitchen_thirdCharCookingTogetherWaiting = 0
@@ -711,6 +730,13 @@ VAR letters_doggoPause = false
                 - kitchen_fourthCharCookingTogetherWaiting < kitchen_fourthCharCookingMAXTogetherWaiting:
                     ~ kitchen_fourthCharCookingTogetherWaiting ++
                      {debug_kitchen: Nonna ci aspetta in cucina da {kitchen_fourthCharCookingTogetherWaiting}.}
+                     //Spostiamo l'asset corretto in cucina    
+                    {
+                        - contentsKitchen has FourthCharacter:
+                            ~ move_entity(FourthCharacterCucina, Kitchen)
+                            ~ move_entity(FourthCharacter, Safekeeping)
+                    }    
+                
                 
                 - else:
                    ~ kitchen_fourthCharCookingTogetherInvite = false
@@ -778,6 +804,13 @@ VAR letters_doggoPause = false
                 - kitchen_fifthCharCookingTogetherWaiting < kitchen_fifthCharCookingMAXTogetherWaiting:
                     ~ kitchen_fifthCharCookingTogetherWaiting ++
                      {debug_kitchen: boccale ci aspetta in cucina da {kitchen_fifthCharCookingTogetherWaiting}.}
+                     //Spostiamo l'asset corretto in cucina    
+                    {
+                        - contentsKitchen has FifthCharacter:
+                            ~ move_entity(FifthCharacterCucina, Kitchen)
+                            ~ move_entity(FifthCharacter, Safekeeping)
+                    }    
+                
                 
                 - else:
                    ~ kitchen_fifthCharCookingTogetherInvite = false

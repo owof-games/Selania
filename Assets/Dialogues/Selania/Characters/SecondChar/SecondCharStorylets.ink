@@ -257,15 +257,8 @@
         {charTag(SecondCharacter, "energy")}:                   Ma me lo devi dire tu, no?
         {charTag(SecondCharacter, "neutral")}:                  Sennò è maleducato.
   
-        - (top)
-            * Prima dimmi il tuo.
-                {charTag(SecondCharacter, "angry")}:            Ti ho già detto che non me lo ricordo.
-                    -> top
-            + \ {charTag(PG, "neutral")}:                       {name_choice} Mi chiamo {player_name}.
-    	    + \ {charTag(PG, "neutral")}:                       Il mio nome è...
-    	        -> name_choice ->
-    	        -> gender ->
-            -
+            -> name_choice.top2 ->
+            -> gender ->
 
         {charTag(SecondCharacter, "energy")}:                   Io mi faccio chiamare {charNameTwo} qui.
                                                                 E i ricci mi piacciono.
@@ -357,8 +350,6 @@
         ~ temp charNameFive = translator(fifthChar_ActualName)
         
 
-        {charTag(SecondCharacter, "neutral")}:                  Mmm.
-                                                                Capito.
         {charTag(SecondCharacter, "emotional")}:                Anche io vorrei un pronome strano.
         {charTag(SecondCharacter, "melanchonic")}:              Ma poi mamma lo dice male, sicuro.
                                                                 Già oggi si è dimenticata del mio compleanno.

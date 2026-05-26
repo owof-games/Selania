@@ -61,6 +61,9 @@
 
     ~ player_pronoun = LIST_RANDOM(possibile_player_pronouns)
     ~ player_name = get_random_name()
+    
+    //E assegniamo anche il nome della strega
+    ~ witch_actualName = LIST_RANDOM(witch_possibleNames)
 
 
 
@@ -210,7 +213,7 @@
 
 ~ grimoire_witch += (grimWitchFirstDebrief, grimWitchSecondDebrief, grimWitchThirdDebrief, grimWitchFourthDebrief, grimWitchFifthDebrief, grimWitchIntro, grimWitchFrog, grimWitchMainOne, grimWitchMainTwo, grimWitchMainThree, grimWitchMainFour, grimWitchMainFive, grimWitchBook, grimWitchOpenDump, grimWitchAllSigilsOpened)
 
-     ~ witch_actualName = LIST_RANDOM(witch_possibleNames)
+    ~ witch_actualName = LIST_RANDOM(witch_possibleNames)
 
 ~ grimoire_appendices += (grimChoicesMentor, grimChoicesWitch, grimGreenhouseMentor, grimFirstOpenKitchen, grimInkMentor, grimRewritingMentor, grimThirdOpenNest, grimSigilsMentor, grimSigilsWitch)
 

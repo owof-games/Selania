@@ -54,10 +54,10 @@
         - are_two_entities_together(ThirdCharacter, PG) && grimoire_thirdChar has grimThirdCharTwo && contentsLibrary hasnt PG && contentsKitchen hasnt PG && player_accessiblePlaces hasnt Nest && player_accessiblePlaces has Library && openingPlacesPause <= 0:
             
                 {stopping:
-                - Ehi {player_name}! Troviamoci alla biblioteca. Ho una cosa che devi vedere!
-                - Uffa, prima c'era una cosa più importante ma ora dobbiamo assolutamente parlare alla biblioteca, vieni!
-                - Vieni alla biblioteca, che ti dico quella cosa importante, che non c'è mica una quarta volta vero?
-                - Mi arrendo. Vediamoci alla biblioteca, ho una cosa da farti vedere.
+                - {charTag(ThirdCharacter, "neutral")}:       Ehi {player_name}! Troviamoci alla biblioteca. Ho una cosa che devi vedere!
+                - {charTag(ThirdCharacter, "neutral")}:       Uffa, prima c'era una cosa più importante ma ora dobbiamo assolutamente parlare alla biblioteca, vieni!
+                - {charTag(ThirdCharacter, "neutral")}:       Vieni alla biblioteca, che ti dico quella cosa importante, che non c'è mica una quarta volta vero?
+                - {charTag(ThirdCharacter, "neutral")}:       Mi arrendo. Vediamoci alla biblioteca, ho una cosa da farti vedere.
             }
                     ~ move_entity(ThirdCharacter, Library)
                     ~ thirdChar_LibraryInvite = true

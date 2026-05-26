@@ -146,7 +146,7 @@
     
     //Apertura nido
     {
-        - grimoire_thirdChar has grimThirdOpenNest && (entity_location(FromLibraryToNest) == Safekeeping):
+        - grimoire_thirdChar has grimThirdPreOpenNest && (entity_location(FromLibraryToNest) == Safekeeping):
             ~ player_accessiblePlaces += Nest
             ~ move_entity(FromLibraryToNestBlocked, Safekeeping)
             ~ move_entity(FromLibraryToNest, Library)

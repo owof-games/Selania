@@ -13,8 +13,8 @@
         {
                 - thirdChar_recordedPlayerPronoun == ():
                 {charTag(ThirdCharacter, "neutral")}:       Immagino che si debba partire con le presentazioni, giusto? Chi sei?
-                        -> name_choice.top2 ->
-                        -> gender.top ->
+                                -> name_choice.top2 ->
+                                -> gender ->
                         ~ thirdChar_recordedPlayerPronoun += player_pronoun     
         }
 

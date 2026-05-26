@@ -120,30 +120,29 @@ UTILIZZI RIMASTI = {glyph_actualSigilUses}
 
 = witch
     {charTag(TheWitch, witch_state())}:              Il testing è in ink?
-            + \ {charTag(PG, "neutral")}:           <i>Sì.</i>
+            + {!debug_stochastic} \ {charTag(PG, "neutral")}:           <i>Sì.</i>
                 -> top2
             + \ {charTag(PG, "neutral")}:           <i>No.</i>
-                -> main
+                -> top3
 
     - (top2)
 
         {charTag(TheWitch, witch_state())}:         <i>Cosa serve?</i>
-            + \ {charTag(PG, "neutral")}:           <i>Voglio la modalità Gamer Mode.</i>
-                -> gamerMode_activation ->
+            
 
-            + \ {charTag(PG, "neutral")}:           <i>Voglio la modalità Reader Mode.</i>
-
-            + {!debug_stochastic} \ {charTag(PG, "neutral")}:           <i>Sono qui per testare il Grimorio.</i>
+            + \ {charTag(PG, "neutral")}:           <i>Sono qui per testare il Grimorio.</i>
                 -> debug_richGrimoire ->
             {charTag(TheWitch, witch_state())}:     <i>Ho riempito il grimorio come se tu avessi finito la prima parte di gioco, ma senza lo sbrocco di Mentore.</i>
                                                     <i>Hai inoltre sbloccato tutti i sigilli e le piante.</i>
 
-            + (riscrittura) {!debug_stochastic}\ {charTag(PG, "neutral")}:          <i>Impostami le prime 3 png come pronte per la riscrittura.
+            + (riscrittura) \ {charTag(PG, "neutral")}:          <i>Impostami le prime 3 png come pronte per la riscrittura.
                 ~ debugRewriting()
                                                     
 
-            + {!debug_stochastic} \ {charTag(PG, "neutral")}:          <i>Aprimi tutti i luoghi del gioco.
+            + \ {charTag(PG, "neutral")}:          <i>Aprimi tutti i luoghi del gioco.
                 ~ debug_places_open()
+
+            + \ {charTag(PG, "neutral")}:          <i>Non mi serve nulla.</i>  
                                    
             -
 
@@ -151,8 +150,16 @@ UTILIZZI RIMASTI = {glyph_actualSigilUses}
             + {!debug_stochastic}\ {charTag(PG, "neutral")}:           <i>Sì.
                 -> top2
             + \ {charTag(PG, "neutral")}:           <i>No.
-            -
+    
 
+
+    - (top3)
+        {charTag(TheWitch, witch_state())}:         Che modalità di gioco vuoi attivare?
+            + \ {charTag(PG, "neutral")}:           <i>Voglio la modalità Gamer Mode.</i>
+                -> gamerMode_activation ->
+
+            + \ {charTag(PG, "neutral")}:           <i>Voglio la modalità Reader Mode.</i>
+    -    
         {charTag(TheWitch, witch_state())}:         <i>Perfetto.
                                                     <i>Buon inizio di questo tuo viaggio.</i>
 

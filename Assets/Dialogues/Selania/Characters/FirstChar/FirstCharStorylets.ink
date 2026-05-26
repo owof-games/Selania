@@ -75,7 +75,7 @@
                                                                 Come ti chiami?
 
             -> name_choice.top2 ->
-            -> gender.top ->
+            -> gender ->
 
         {charTag(FirstCharacter, "neutral")}:                   {player_pronoun has her:Anche io uso i pronomi femminili!|Invece io uso i femminili.}
         {charTag(FirstCharacter, "annoyed")}:                   Anche se continuo a non chiamarmi {charNameOne}.
