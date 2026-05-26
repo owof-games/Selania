@@ -122,7 +122,7 @@ UTILIZZI RIMASTI = {glyph_actualSigilUses}
     {charTag(TheWitch, witch_state())}:              Il testing è in ink?
             + {!debug_stochastic} \ {charTag(PG, "neutral")}:           <i>Sì.</i>
                 -> top2
-            + \ {charTag(PG, "neutral")}:           <i>No.</i>
+            + (not_ink) \ {charTag(PG, "neutral")}:           <i>No.</i>
                 -> top3
 
     - (top2)
