@@ -122,6 +122,9 @@
     {charTag(Carla, "happy")}:              Uno: dice alla persona una cosa tipo "Ti va di rileggere la tua storia con me?".
     {charTag(Carla, "sad")}:                Due: prima della riscrittura, la persona le dirà quello che pensa di lei.
                                             Tra relazione e doni può ricevere da zero a quattro gocce di inchiostro.
+
+        @sprite:tutorial_carlaRereadingStorylet_1
+
     {charTag(Carla, "bored")}:              Non una di più, c'è scritto anche sul sito.
     {charTag(Carla, "neutral")}:            Tre: a quel punto lei avrà diritto al suo monologo per dimostrare alla persona che la conosce davvero bene.
                                             Più inchiostro ha accumulato, più cose potrà dire, facendo riferimento alle confidenze fatte da quella persona.
@@ -179,33 +182,54 @@
     {charTag(Carla, "neutral")}:            Uno: può utilizzare mouse, tastiera e controller, e passare da uno strumento all'altro.
                                             Col mouse basta passare sopra le cose che deve toccare, e cliccare.
                                             Idem con il controller.
+
+        @sprite:tutorial_carlaInterfaceStorylets_1
+
                                             Con la tastiera può anche usare i numeri per le scelte.
                                             Quali scelte?
     {charTag(Carla, "bored")}:              Per risponderle serve il documento 13/12 in doppia coppia e la marca da bollo.
                                             Seconda informazione: quello che può toccare ha un bordo nero.
+
+        @sprite:tutorial_carlaInterfaceStorylets_2
+
     {charTag(Carla, "happy")}:              Se sa parlare, si ferma quando lo sfiora.
                                             Se non sa parlare, si muove quando lo sfiora.
                                             E il cursore cambia.
+
+        @sprite:tutorial_carlaInterfaceStorylets_3
+
                                             Cos'è un cursore?
     {charTag(Carla, "bored")}:              Forse lo sanno all'ufficio accanto.
     {charTag(Carla, "neutral")}:            Terza informazione: in camera troverà un citofono.
                                             Lo può usare per modificare le impostazioni.
+
+        @sprite:tutorial_carlaInterfaceStorylets_4
+
                                             Più avanti le daranno un libro.
                                             Potrà trovare il citofono anche nel libro.
                                             Perché un citofono nel libro?
     {charTag(Carla, "bored")}:              Direttive dalla sede centrale.
                                             Quarta informazione: quello che fa viene salvato in automatico.
                                             Se vede questa icona, non deve fare niente.
+
+        @sprite:tutorial_carlaInterfaceStorylets_5
+
     {charTag(Carla, "angry")}:              Non è difficile.
                                             Quinta informazione: se qualcosa va storto <>
             {
                 - settings_gamerMode:
                 TODO: in realtà qui non sarà "gamerMode" ma il setting che abilita l'upload
                     {charTag(Carla, "happy")}:              può tornare indietro nel tempo cliccando questa icona.
+
+                        @sprite:tutorial_carlaInterfaceStorylets_6
+
                                                             Appena le daranno il libro.
 
                 - else:
                     {charTag(Carla, "happy")}:              trova questa icona nelle impostazioni.
+
+                        @sprite:tutorial_carlaInterfaceStorylets_6
+                        
                                                             La farà viaggiare nel tempo.
                                                             Come?
                     {charTag(Carla, "bored")}:              Sta parlando con una capra ed è questa la cosa che la perplime?!?!
@@ -249,6 +273,9 @@
     {charTag(Carla, "happy")}:              Che gentilmente potrebbe pagarmi di più.
     {charTag(Carla, "neutral")}:            Quando apre il grimorio vedrà due pagine.
                                             A destra troverà alcune informazioni utili per il suo lavoro, mentre a sinistra è presente l'indice.
+
+        @sprite:tutorial_carlaGrimoireStorylet_1
+
                                             L'indice serve per portarla ai vari capitoli del Grimorio, che di solito raccolgono informazioni su un luogo o una persona.
                                             Se c'è un bottone, può cliccarlo per andare al relativo capitolo.
                                             Se c'è un lucchetto, deve ancora scoprire quella voce.
@@ -256,8 +283,14 @@
                                             Perché un lucchetto?
     {charTag(Carla, "bored")}:              La risposta non è di mia competenza.
                                             Ai lati del Grimorio troverà delle etichette.
+
+        @sprite:tutorial_carlaGrimoireStorylet_2
+
                                             Servono per chiuderlo, per tornare verso l'indice, o per sfogliare le pagine.
     {charTag(Carla, "happy")}:              Infine, se vede questa icona, vuol dire che c'è una nuova informazione per lei.
+
+        @sprite:tutorial_carlaGrimoireStorylet_3
+
     {charTag(Carla, "bored")}:              Se qualcosa non torna, può contattare la sezione Lamentele Inevadibili, al 9° piano.
                                             Se lo dimentica in giro, non posso garantirle che non ne mangerò le pagine.
 
@@ -312,6 +345,9 @@
         }
     {charTag(Carla, "happy")}:              Per fare un dono basta dire alla persona: "Ehi, voglio donarti una cosa" o qualcosa del genere.
                                             A quel punto si aprirà il suo grimorio, e lei potrà scegliere quale pianta donare.
+
+        @sprite:tutorial_carlaGreenhouseGiftsInkStorylet_1
+
                                             Perché attraverso il grimorio?
     {charTag(Carla, "bored")}:              Ho aperto una pratica, le faremo sapere.
     {charTag(Carla, "neutral")}:            Tre: il dono genera inchiostro.
@@ -387,7 +423,10 @@
                                             Potrà rispondere non a parole, ma aggiungendo ingredienti.
                                             Non ha senso?
     {charTag(Carla, "bored")}:              Prenda un appuntamento con la sezione Disprezzi e Disservizi.
-    {charTag(Carla, "happy")}:              Cinque: opzionalmente potrà decidere di aggiungere come ingrediente una pianta coltivata in serra.
+    {charTag(Carla, "happy")}:              Cinque: opzionalmente potrà decidere di aggiungere come ingrediente una pianta coltivata in serra, sempre utilizzando il grimorio.
+
+        @sprite:tutorial_carlaKitchenStorylet_1
+
                                             Se la persona apprezzerà l'ingrediente, le dirà qualcosa di utile a capire meglio come ragiona.
     {charTag(Carla, "bored")}:              Non sono previsti rimborsi in caso di insuccesso.
     {charTag(Carla, "happy")}:              Non dovrei dirglielo, ma il signor Franco potrebbe aiutarla in caso di difficoltà.
@@ -438,14 +477,20 @@
                                             E considerata infine la durata limitata di utilizzo di un sigillo (tre utilizzi, non ripetibili né combinabili).
                                             Il Ministero, con l'obiettivo di facilitare il lavoro dellə Riscrittorə, ha istituito il Servizio di Indicazione Stato Sigillo Integrato (SISSI).
                                             Qualora un sigillo fosse attivo, la SISSI sarà presente a ogni livello del Libro Oscuro di Sapienza e Potere attraverso la caratteristica animazione.
+
+        @sprite:tutorial_carlaSigilsActivationStorylet_1
+
                                             La SISSI inoltre comparirà durante il dialogo con le persone che ne possono essere condizionate.
                                             Nel caso in cui un Sigillo fosse attivo e la SISSI non fosse presente durante il dialogo, questo significa che la persona non è in assoluto o in quel momento influenzabile dal potere del sigillo.
                                             Dopo l'aggiornamento 13.12c, la SISSI indica anche la quantità residua di utilizzi, costantemente aggiornata.
+
+        @sprite:tutorial_carlaSigilsActivationStorylet_2
+                                    
                                             Per sua natura invece il Libro Oscuro di Sapienza e Potere aggiornerà i descrittori del sigillo ad ogni utilizzo.
                                             La comprensione dei descrittori è fondamentale per ogni Riscrittorə per anticipare l'effetto e la portata dei sigilli.
                                             Altre informazioni non sono di nostra competenza."
     {charTag(Carla, "bored")}:              Questa conversazione poteva essere una mail.
-    {charTag(Carla, "happy")}:              Vado in pausa sigaretta, anche se non fumo dall'Ottantaquattro.
+    {charTag(Carla, "happy")}:              Vado in pausa sigaretta, anche se non fumo dall'ottantaquattro.
     {charTag(Carla, "bored")}:              Ora dovrei spiegarle come crearli, ma purtroppo il sistema è fuori uso.
     {charTag(Carla, "happy")}:              E io ho dimenticato tutto.
     {charTag(Carla, "neutral")}:            Sono solo una capra.
@@ -489,10 +534,15 @@
 
     - (top2)
     {charTag(Carla, "neutral")}:            Questi sassi sono qui per creare i Sigilli, che abbiamo già visto quando il suo caro amico {charNameThree} ha deciso di aprire questo posto.
-                                            Uno: un sigillo utilizzabile è sempre composta da tre glifi.
+                                            Uno: un sigillo utilizzabile è sempre composto da tre glifi.
     {charTag(Carla, "bored")}:              Non è sempre vero, ma il resto non è di mia competenza.
     {charTag(Carla, "happy")}:              Due: per creare un sigillo basta iniziare cliccando uno per volta i glifi a disposizione.
     {charTag(Carla, "sad")}:                Tre: un sigillo è composto da tre glifi diversi, per cui ogni volta che sceglierà un glifo, quello non sarà disponibile fino a nuova composizione.
+
+            @sprite:tutorial_carlaNestStorylet_1
+
+            @sprite:tutorial_carlaNestStorylet_2
+
     {charTag(Carla, "neutral")}:            Quattro: Grimorio e glifi comunicano, e per questo i glifi si disattiveranno in automatico se non ci saranno nuove composizioni disponibili.
                                             Cinque: il Ministero ha tracciato una quantità invereconda di glifi in giro per gli universi, e infiniti sigilli, ma per qualche motivo in questa zona ne funzionano solo.
     {charTag(Carla, "bored")}:              Uh, quanti erano?

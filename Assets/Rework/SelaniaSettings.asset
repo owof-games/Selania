@@ -45,6 +45,10 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 2f22d3fdb1289394f8f469686c207ef4, type: 3}
   - spriteName: museum2
     sprite: {fileID: 21300000, guid: 42647203d595c2444867c5fa0f82ae03, type: 3}
+  - spriteName: tutorial_carlaChoicesRelationshipStorylet_1
+    sprite: {fileID: 21300000, guid: 653080bda57a62d42bb12e7ffdca6e6a, type: 3}
+  - spriteName: tutorial_carlaRereadingStorylet_1
+    sprite: {fileID: 21300000, guid: 1bd31ca82fe2acf458620a93d0612fcd, type: 3}
   <choiceIndentationPercentage>k__BackingField: 8
   <defaultChoiceColor>k__BackingField: {r: 0.254539, g: 0.3228934, b: 0.9811321, a: 1}
   <selectedChoiceColor>k__BackingField: {r: 0.41037738, g: 0.5451931, b: 1, a: 1}
