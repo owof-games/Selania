@@ -67,6 +67,9 @@
     {charTag(Carla, "bored")}:              Lo chieda all'addetta alla discarica, se non è di nuovo in malattia.
     {charTag(Carla, "neutral")}:            Sono tenuta infine a ricordarle che ogni persona ragiona in modo diverso, per cui dovrà capire da sé cosa apprezza o meno chi ha davanti.
     {charTag(Carla, "happy")}:              Per facilitarle il lavoro, l'ufficio centrale ha inserito nel suo libro un riepilogo delle scelte fatte, con questo indicatore grafico.
+                                                        
+        @sprite:tutorial_carlaChoicesRelationshipStorylet_1
+
                                             Lo troverà sotto il ritratto di ogni personaggia con cui dovrà lavorare.
                                             Tiene traccia dell'ultima e penultima scelta fatte, così può monitorare da sé le variazioni, senza stressare me.
     {
