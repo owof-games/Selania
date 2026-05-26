@@ -44,6 +44,8 @@ VAR settings_gamerMode = false
     -
                                             @sprite:museum1
                                             Subito sopra c'è lo sprite 'museum1'
+                                            @sprite:museum2
+                                            Subito sopra c'è lo sprite 'museum2'
 ~ knowChitarra = true
 {charTag(FirstCharacter, "affectionate")}:  Qui sono sempre io, ma ora sai il mio nome.
 {charTag(Mentor, "hurry")}:                 Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo. Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo. Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo.
@@ -71,6 +73,9 @@ VAR settings_gamerMode = false
 // questa variabile invece è il nome realmente mostrato nell'interfaccia ("???" appena conosci la personaggia, "Chitarra" quando la conosci, ecc ecc)
 ~ temp actualCharacterName = charName(character)
 ~ temp prefix = ""
+{mood == "affectionate":
+    ~ mood = "morePositive"
+}
 {character:
     - FirstCharacter:
         ~ prefix = "Chitarra_"

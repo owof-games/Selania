@@ -1,1 +1,2009 @@
-﻿{"inkVersion":21,"root":[[{"->":"main"},["done",{"#f":5,"#n":"g-0"}],null],"done",{"main":[["^@interact","\n","ev",false,"/ev",{"VAR=":"knowChitarra","re":true},"ev",{"VAR?":"ink_empty"},"/ev",{"VAR=":"firstChar_InkLevel","re":true},"ev",{"VAR?":"FirstCharacter"},"str","^affectionate","/str",{"f()":"charTag"},"out","/ev","^:  Qui parla Chitarra, ma non sai ancora il nome.","\n","^Continuo a parlare, non sono serviti tag e mantengo lo stesso personaggio, immagine, ecc.","\n","^Ora ci sono quindici scelte:","\n",["ev",{"^->":"main.0.24.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-0","flg":2},{"s":["^ ","ev",{"VAR?":"FirstCharacter"},"str","^affectionate","/str",{"f()":"charTag"},"out","/ev","^: Prima scelta",{"->":"$r","var":true},null]}],["ev",{"^->":"main.0.25.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-1","flg":2},{"s":["^ ","ev",{"VAR?":"FirstCharacter"},"str","^affectionate","/str",{"f()":"charTag"},"out","/ev","^: Seconda scelta",{"->":"$r","var":true},null]}],["ev",{"^->":"main.0.26.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-2","flg":2},{"s":["^ ","ev",{"VAR?":"FirstCharacter"},"str","^affectionate","/str",{"f()":"charTag"},"out","/ev","^: Terza scelta",{"->":"$r","var":true},null]}],["ev",{"^->":"main.0.27.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-3","flg":2},{"s":["^ ","ev",{"VAR?":"FirstCharacter"},"str","^affectionate","/str",{"f()":"charTag"},"out","/ev","^: Quarta scelta",{"->":"$r","var":true},null]}],["ev",{"^->":"main.0.28.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-4","flg":2},{"s":["^ ","ev",{"VAR?":"FirstCharacter"},"str","^affectionate","/str",{"f()":"charTag"},"out","/ev","^: Quinta scelta",{"->":"$r","var":true},null]}],["ev",{"^->":"main.0.29.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-5","flg":2},{"s":["^ ","ev",{"VAR?":"FirstCharacter"},"str","^affectionate","/str",{"f()":"charTag"},"out","/ev","^: Sesta scelta",{"->":"$r","var":true},null]}],["ev",{"^->":"main.0.30.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-6","flg":2},{"s":["^ ","ev",{"VAR?":"FirstCharacter"},"str","^affectionate","/str",{"f()":"charTag"},"out","/ev","^: Settima scelta",{"->":"$r","var":true},null]}],["ev",{"^->":"main.0.31.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-7","flg":2},{"s":["^ ","ev",{"VAR?":"FirstCharacter"},"str","^affectionate","/str",{"f()":"charTag"},"out","/ev","^: Ottava scelta",{"->":"$r","var":true},null]}],["ev",{"^->":"main.0.32.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-8","flg":2},{"s":["^ ","ev",{"VAR?":"FirstCharacter"},"str","^affectionate","/str",{"f()":"charTag"},"out","/ev","^: Nona scelta",{"->":"$r","var":true},null]}],["ev",{"^->":"main.0.33.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-9","flg":2},{"s":["^ ","ev",{"VAR?":"FirstCharacter"},"str","^affectionate","/str",{"f()":"charTag"},"out","/ev","^: Decima scelta",{"->":"$r","var":true},null]}],["ev",{"^->":"main.0.34.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-10","flg":2},{"s":["^ ","ev",{"VAR?":"FirstCharacter"},"str","^affectionate","/str",{"f()":"charTag"},"out","/ev","^: Undicesima scelta",{"->":"$r","var":true},null]}],["ev",{"^->":"main.0.35.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-11","flg":2},{"s":["^ ","ev",{"VAR?":"FirstCharacter"},"str","^affectionate","/str",{"f()":"charTag"},"out","/ev","^: Dodicesima scelta",{"->":"$r","var":true},null]}],["ev",{"^->":"main.0.36.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-12","flg":2},{"s":["^ ","ev",{"VAR?":"FirstCharacter"},"str","^affectionate","/str",{"f()":"charTag"},"out","/ev","^: Tredicesima scelta",{"->":"$r","var":true},null]}],["ev",{"^->":"main.0.37.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-13","flg":2},{"s":["^ ","ev",{"VAR?":"FirstCharacter"},"str","^affectionate","/str",{"f()":"charTag"},"out","/ev","^: Quattordicesima scelta",{"->":"$r","var":true},null]}],["ev",{"^->":"main.0.38.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-14","flg":2},{"s":["^ ","ev",{"VAR?":"FirstCharacter"},"str","^affectionate","/str",{"f()":"charTag"},"out","/ev","^: Quindicesima scelta",{"->":"$r","var":true},null]}],["ev",{"^->":"main.0.39.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-15","flg":2},{"s":["^ ","ev",{"VAR?":"FirstCharacter"},"str","^affectionate","/str",{"f()":"charTag"},"out","/ev","^: Sedicesima scelta",{"->":"$r","var":true},null]}],{"c-0":["ev",{"^->":"main.0.c-0.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.24.s"},[{"#n":"$r2"}],"\n",{"->":".^.^.g-0"},{"#f":5}],"c-1":["ev",{"^->":"main.0.c-1.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.25.s"},[{"#n":"$r2"}],"\n",{"->":".^.^.g-0"},{"#f":5}],"c-2":["ev",{"^->":"main.0.c-2.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.26.s"},[{"#n":"$r2"}],"\n",{"->":".^.^.g-0"},{"#f":5}],"c-3":["ev",{"^->":"main.0.c-3.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.27.s"},[{"#n":"$r2"}],"\n",{"->":".^.^.g-0"},{"#f":5}],"c-4":["ev",{"^->":"main.0.c-4.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.28.s"},[{"#n":"$r2"}],"\n",{"->":".^.^.g-0"},{"#f":5}],"c-5":["ev",{"^->":"main.0.c-5.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.29.s"},[{"#n":"$r2"}],"\n",{"->":".^.^.g-0"},{"#f":5}],"c-6":["ev",{"^->":"main.0.c-6.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.30.s"},[{"#n":"$r2"}],"\n",{"->":".^.^.g-0"},{"#f":5}],"c-7":["ev",{"^->":"main.0.c-7.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.31.s"},[{"#n":"$r2"}],"\n",{"->":".^.^.g-0"},{"#f":5}],"c-8":["ev",{"^->":"main.0.c-8.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.32.s"},[{"#n":"$r2"}],"\n",{"->":".^.^.g-0"},{"#f":5}],"c-9":["ev",{"^->":"main.0.c-9.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.33.s"},[{"#n":"$r2"}],"\n",{"->":".^.^.g-0"},{"#f":5}],"c-10":["ev",{"^->":"main.0.c-10.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.34.s"},[{"#n":"$r2"}],"\n",{"->":".^.^.g-0"},{"#f":5}],"c-11":["ev",{"^->":"main.0.c-11.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.35.s"},[{"#n":"$r2"}],"\n",{"->":".^.^.g-0"},{"#f":5}],"c-12":["ev",{"^->":"main.0.c-12.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.36.s"},[{"#n":"$r2"}],"\n",{"->":".^.^.g-0"},{"#f":5}],"c-13":["ev",{"^->":"main.0.c-13.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.37.s"},[{"#n":"$r2"}],"\n",{"->":".^.^.g-0"},{"#f":5}],"c-14":["ev",{"^->":"main.0.c-14.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.38.s"},[{"#n":"$r2"}],"\n",{"->":".^.^.g-0"},{"#f":5}],"c-15":["ev",{"^->":"main.0.c-15.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.39.s"},[{"#n":"$r2"}],"\n",{"->":".^.^.g-0"},{"#f":5}],"g-0":["^@sprite:museum1","\n","^Subito sopra c'è lo sprite 'museum1'","\n","ev",true,"/ev",{"VAR=":"knowChitarra","re":true},"ev",{"VAR?":"FirstCharacter"},"str","^affectionate","/str",{"f()":"charTag"},"out","/ev","^:  Qui sono sempre io, ma ora sai il mio nome.","\n","ev",{"VAR?":"Mentor"},"str","^hurry","/str",{"f()":"charTag"},"out","/ev","^:                 Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo. Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo. Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo.","\n","ev",{"VAR?":"ink_normal"},"/ev",{"VAR=":"firstChar_InkLevel","re":true},"ev",{"VAR?":"FirstCharacter"},"str","^affectionate","/str",{"f()":"charTag"},"out","/ev","^:  Qui torna a parlare Chitarra, ma ora ha dell'inchiostro.","\n","ev",{"VAR?":"Mentor"},"str","^hurry","/str",{"f()":"charTag"},"out","/ev","^:                 Qua invece parla Mentore.","\n","^E ora c'è una scelta.","\n","ev",0,"/ev",{"temp=":"index"},["ev",{"^->":"main.0.g-0.58.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-16","flg":2},{"s":["^ ","ev",{"VAR?":"PG"},"str","^neutral","/str",{"f()":"charTag"},"out","/ev","^: Scelta 1",{"->":"$r","var":true},null]}],["ev",{"^->":"main.0.g-0.59.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-17","flg":2},{"s":["^ ","ev",{"VAR?":"PG"},"str","^neutral","/str",{"f()":"charTag"},"out","/ev","^: Scelta 2",{"->":"$r","var":true},null]}],["ev",{"^->":"main.0.g-0.60.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-18","flg":2},{"s":["^ ","ev",{"VAR?":"PG"},"str","^neutral","/str",{"f()":"charTag"},"out","/ev","^: Scelta 3",{"->":"$r","var":true},null]}],{"c-16":["ev",{"^->":"main.0.g-0.c-16.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.58.s"},[{"#n":"$r2"}],"\n","ev",1,"/ev",{"temp=":"index","re":true},{"->":"main.0.g-1"},{"#f":5}],"c-17":["ev",{"^->":"main.0.g-0.c-17.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.59.s"},[{"#n":"$r2"}],"\n","ev",2,"/ev",{"temp=":"index","re":true},{"->":"main.0.g-1"},{"#f":5}],"c-18":["ev",{"^->":"main.0.g-0.c-18.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.60.s"},[{"#n":"$r2"}],"\n","ev",3,"/ev",{"temp=":"index","re":true},{"->":"main.0.g-1"},{"#f":5}],"#f":5}],"g-1":["ev",{"VAR?":"FirstCharacter"},"str","^affectionate","/str",{"f()":"charTag"},"out","/ev","^:  Hai fatto la scelta ","ev",{"VAR?":"index"},"out","/ev","^!","\n",{"->":"main"},{"#f":5}]}],{"#f":1}],"charTag":[{"temp=":"mood"},{"temp=":"character"},"ev",{"VAR?":"character"},{"f()":"charName"},"/ev",{"temp=":"actualCharacterName"},"\n","ev","str","^","/str","/ev",{"temp=":"prefix"},"ev",{"VAR?":"character"},"/ev",["du","ev",{"VAR?":"FirstCharacter"},"==","/ev",{"->":".^.b","c":true},{"b":["pop","\n","ev","str","^Chitarra_","/str","/ev",{"temp=":"prefix","re":true},{"->":".^.^.^.20"},null]}],["du","ev",{"VAR?":"Mentor"},"==","/ev",{"->":".^.b","c":true},{"b":["pop","\n","ev","str","^Mentore_","/str","/ev",{"temp=":"prefix","re":true},{"->":".^.^.^.20"},null]}],"pop","nop","\n","ev","str","ev",{"VAR?":"character"},"out","/ev","^, ","ev",{"VAR?":"actualCharacterName"},"out","/ev","^, ","ev",{"VAR?":"prefix"},"out","/ev","ev",{"VAR?":"mood"},"out","/ev","/str","/ev","~ret",{"#f":1}],"charName":[{"temp=":"character"},"ev",{"VAR?":"character"},"/ev",["du","ev",{"VAR?":"PG"},"==","/ev",{"->":".^.b","c":true},{"b":["pop","\n","ev","str","^Marta","/str","/ev","~ret",{"->":".^.^.^.8"},null]}],["du","ev",{"VAR?":"FirstCharacter"},"==","/ev",{"->":".^.b","c":true},{"b":["pop","\n","ev",{"VAR?":"knowChitarra"},"/ev",[{"->":".^.b","c":true},{"b":["\n","ev","str","^Chitarra","/str","/ev","~ret",{"->":".^.^.^.7"},null]}],[{"->":".^.b"},{"b":["\n","ev","str","^???","/str","/ev","~ret",{"->":".^.^.^.7"},null]}],"nop","\n",{"->":".^.^.^.8"},null]}],["du","ev",{"VAR?":"Mentor"},"==","/ev",{"->":".^.b","c":true},{"b":["pop","\n","ev","str","^Mentore","/str","/ev","~ret",{"->":".^.^.^.8"},null]}],[{"->":".^.b"},{"b":["pop","\n","ev","str","^<unknown ","ev",{"VAR?":"character"},"out","/ev","^>","/str","/ev","~ret",{"->":".^.^.^.8"},null]}],"nop","\n",{"#f":1}],"global decl":["ev",{"list":{},"origins":["listCharacters"]},{"VAR=":"listCharacters"},{"list":{},"origins":["ink_possibileLevels"]},{"VAR=":"ink_possibileLevels"},{"VAR?":"ink_empty"},{"VAR=":"firstChar_InkLevel"},{"VAR?":"ink_empty"},{"VAR=":"secondChar_InkLevel"},{"VAR?":"ink_empty"},{"VAR=":"thirdChar_InkLevel"},{"VAR?":"ink_empty"},{"VAR=":"fourthChar_InkLevel"},{"VAR?":"ink_empty"},{"VAR=":"fifthChar_InkLevel"},{"list":{"listCharacters.PG":2}},{"VAR=":"contentsBedroom"},false,{"VAR=":"knowChitarra"},false,{"VAR=":"settings_gamerMode"},"/ev","end",null],"#f":1}],"listDefs":{"listCharacters":{"Mentor":1,"PG":2,"FirstCharacter":3,"SecondCharacter":4,"ThirdCharacter":5,"FourthCharacter":6,"TheFrog":7,"FifthCharacter":8,"TheKitchenFrog":9},"ink_possibileLevels":{"ink_empty":1,"ink_low":2,"ink_normal":3,"ink_medium":4,"ink_high":5}}}
+﻿{
+  "inkVersion": 21,
+  "root": [
+    [
+      {
+        "->": "main"
+      },
+      [
+        "done",
+        {
+          "#f": 5,
+          "#n": "g-0"
+        }
+      ],
+      null
+    ],
+    "done",
+    {
+      "main": [
+        [
+          "^@interact",
+          "\n",
+          "ev",
+          false,
+          "/ev",
+          {
+            "VAR=": "knowChitarra",
+            "re": true
+          },
+          "ev",
+          {
+            "VAR?": "ink_empty"
+          },
+          "/ev",
+          {
+            "VAR=": "firstChar_InkLevel",
+            "re": true
+          },
+          "ev",
+          {
+            "VAR?": "FirstCharacter"
+          },
+          "str",
+          "^affectionate",
+          "/str",
+          {
+            "f()": "charTag"
+          },
+          "out",
+          "/ev",
+          "^:  Qui parla Chitarra, ma non sai ancora il nome.",
+          "\n",
+          "^Continuo a parlare, non sono serviti tag e mantengo lo stesso personaggio, immagine, ecc.",
+          "\n",
+          "^Ora ci sono quindici scelte:",
+          "\n",
+          [
+            "ev",
+            {
+              "^->": "main.0.24.$r1"
+            },
+            {
+              "temp=": "$r"
+            },
+            "str",
+            {
+              "->": ".^.s"
+            },
+            [
+              {
+                "#n": "$r1"
+              }
+            ],
+            "/str",
+            "/ev",
+            {
+              "*": ".^.^.c-0",
+              "flg": 2
+            },
+            {
+              "s": [
+                "^ ",
+                "ev",
+                {
+                  "VAR?": "FirstCharacter"
+                },
+                "str",
+                "^affectionate",
+                "/str",
+                {
+                  "f()": "charTag"
+                },
+                "out",
+                "/ev",
+                "^: Prima scelta",
+                {
+                  "->": "$r",
+                  "var": true
+                },
+                null
+              ]
+            }
+          ],
+          [
+            "ev",
+            {
+              "^->": "main.0.25.$r1"
+            },
+            {
+              "temp=": "$r"
+            },
+            "str",
+            {
+              "->": ".^.s"
+            },
+            [
+              {
+                "#n": "$r1"
+              }
+            ],
+            "/str",
+            "/ev",
+            {
+              "*": ".^.^.c-1",
+              "flg": 2
+            },
+            {
+              "s": [
+                "^ ",
+                "ev",
+                {
+                  "VAR?": "FirstCharacter"
+                },
+                "str",
+                "^affectionate",
+                "/str",
+                {
+                  "f()": "charTag"
+                },
+                "out",
+                "/ev",
+                "^: Seconda scelta",
+                {
+                  "->": "$r",
+                  "var": true
+                },
+                null
+              ]
+            }
+          ],
+          [
+            "ev",
+            {
+              "^->": "main.0.26.$r1"
+            },
+            {
+              "temp=": "$r"
+            },
+            "str",
+            {
+              "->": ".^.s"
+            },
+            [
+              {
+                "#n": "$r1"
+              }
+            ],
+            "/str",
+            "/ev",
+            {
+              "*": ".^.^.c-2",
+              "flg": 2
+            },
+            {
+              "s": [
+                "^ ",
+                "ev",
+                {
+                  "VAR?": "FirstCharacter"
+                },
+                "str",
+                "^affectionate",
+                "/str",
+                {
+                  "f()": "charTag"
+                },
+                "out",
+                "/ev",
+                "^: Terza scelta",
+                {
+                  "->": "$r",
+                  "var": true
+                },
+                null
+              ]
+            }
+          ],
+          [
+            "ev",
+            {
+              "^->": "main.0.27.$r1"
+            },
+            {
+              "temp=": "$r"
+            },
+            "str",
+            {
+              "->": ".^.s"
+            },
+            [
+              {
+                "#n": "$r1"
+              }
+            ],
+            "/str",
+            "/ev",
+            {
+              "*": ".^.^.c-3",
+              "flg": 2
+            },
+            {
+              "s": [
+                "^ ",
+                "ev",
+                {
+                  "VAR?": "FirstCharacter"
+                },
+                "str",
+                "^affectionate",
+                "/str",
+                {
+                  "f()": "charTag"
+                },
+                "out",
+                "/ev",
+                "^: Quarta scelta",
+                {
+                  "->": "$r",
+                  "var": true
+                },
+                null
+              ]
+            }
+          ],
+          [
+            "ev",
+            {
+              "^->": "main.0.28.$r1"
+            },
+            {
+              "temp=": "$r"
+            },
+            "str",
+            {
+              "->": ".^.s"
+            },
+            [
+              {
+                "#n": "$r1"
+              }
+            ],
+            "/str",
+            "/ev",
+            {
+              "*": ".^.^.c-4",
+              "flg": 2
+            },
+            {
+              "s": [
+                "^ ",
+                "ev",
+                {
+                  "VAR?": "FirstCharacter"
+                },
+                "str",
+                "^affectionate",
+                "/str",
+                {
+                  "f()": "charTag"
+                },
+                "out",
+                "/ev",
+                "^: Quinta scelta",
+                {
+                  "->": "$r",
+                  "var": true
+                },
+                null
+              ]
+            }
+          ],
+          [
+            "ev",
+            {
+              "^->": "main.0.29.$r1"
+            },
+            {
+              "temp=": "$r"
+            },
+            "str",
+            {
+              "->": ".^.s"
+            },
+            [
+              {
+                "#n": "$r1"
+              }
+            ],
+            "/str",
+            "/ev",
+            {
+              "*": ".^.^.c-5",
+              "flg": 2
+            },
+            {
+              "s": [
+                "^ ",
+                "ev",
+                {
+                  "VAR?": "FirstCharacter"
+                },
+                "str",
+                "^affectionate",
+                "/str",
+                {
+                  "f()": "charTag"
+                },
+                "out",
+                "/ev",
+                "^: Sesta scelta",
+                {
+                  "->": "$r",
+                  "var": true
+                },
+                null
+              ]
+            }
+          ],
+          [
+            "ev",
+            {
+              "^->": "main.0.30.$r1"
+            },
+            {
+              "temp=": "$r"
+            },
+            "str",
+            {
+              "->": ".^.s"
+            },
+            [
+              {
+                "#n": "$r1"
+              }
+            ],
+            "/str",
+            "/ev",
+            {
+              "*": ".^.^.c-6",
+              "flg": 2
+            },
+            {
+              "s": [
+                "^ ",
+                "ev",
+                {
+                  "VAR?": "FirstCharacter"
+                },
+                "str",
+                "^affectionate",
+                "/str",
+                {
+                  "f()": "charTag"
+                },
+                "out",
+                "/ev",
+                "^: Settima scelta",
+                {
+                  "->": "$r",
+                  "var": true
+                },
+                null
+              ]
+            }
+          ],
+          [
+            "ev",
+            {
+              "^->": "main.0.31.$r1"
+            },
+            {
+              "temp=": "$r"
+            },
+            "str",
+            {
+              "->": ".^.s"
+            },
+            [
+              {
+                "#n": "$r1"
+              }
+            ],
+            "/str",
+            "/ev",
+            {
+              "*": ".^.^.c-7",
+              "flg": 2
+            },
+            {
+              "s": [
+                "^ ",
+                "ev",
+                {
+                  "VAR?": "FirstCharacter"
+                },
+                "str",
+                "^affectionate",
+                "/str",
+                {
+                  "f()": "charTag"
+                },
+                "out",
+                "/ev",
+                "^: Ottava scelta",
+                {
+                  "->": "$r",
+                  "var": true
+                },
+                null
+              ]
+            }
+          ],
+          [
+            "ev",
+            {
+              "^->": "main.0.32.$r1"
+            },
+            {
+              "temp=": "$r"
+            },
+            "str",
+            {
+              "->": ".^.s"
+            },
+            [
+              {
+                "#n": "$r1"
+              }
+            ],
+            "/str",
+            "/ev",
+            {
+              "*": ".^.^.c-8",
+              "flg": 2
+            },
+            {
+              "s": [
+                "^ ",
+                "ev",
+                {
+                  "VAR?": "FirstCharacter"
+                },
+                "str",
+                "^affectionate",
+                "/str",
+                {
+                  "f()": "charTag"
+                },
+                "out",
+                "/ev",
+                "^: Nona scelta",
+                {
+                  "->": "$r",
+                  "var": true
+                },
+                null
+              ]
+            }
+          ],
+          [
+            "ev",
+            {
+              "^->": "main.0.33.$r1"
+            },
+            {
+              "temp=": "$r"
+            },
+            "str",
+            {
+              "->": ".^.s"
+            },
+            [
+              {
+                "#n": "$r1"
+              }
+            ],
+            "/str",
+            "/ev",
+            {
+              "*": ".^.^.c-9",
+              "flg": 2
+            },
+            {
+              "s": [
+                "^ ",
+                "ev",
+                {
+                  "VAR?": "FirstCharacter"
+                },
+                "str",
+                "^affectionate",
+                "/str",
+                {
+                  "f()": "charTag"
+                },
+                "out",
+                "/ev",
+                "^: Decima scelta",
+                {
+                  "->": "$r",
+                  "var": true
+                },
+                null
+              ]
+            }
+          ],
+          [
+            "ev",
+            {
+              "^->": "main.0.34.$r1"
+            },
+            {
+              "temp=": "$r"
+            },
+            "str",
+            {
+              "->": ".^.s"
+            },
+            [
+              {
+                "#n": "$r1"
+              }
+            ],
+            "/str",
+            "/ev",
+            {
+              "*": ".^.^.c-10",
+              "flg": 2
+            },
+            {
+              "s": [
+                "^ ",
+                "ev",
+                {
+                  "VAR?": "FirstCharacter"
+                },
+                "str",
+                "^affectionate",
+                "/str",
+                {
+                  "f()": "charTag"
+                },
+                "out",
+                "/ev",
+                "^: Undicesima scelta",
+                {
+                  "->": "$r",
+                  "var": true
+                },
+                null
+              ]
+            }
+          ],
+          [
+            "ev",
+            {
+              "^->": "main.0.35.$r1"
+            },
+            {
+              "temp=": "$r"
+            },
+            "str",
+            {
+              "->": ".^.s"
+            },
+            [
+              {
+                "#n": "$r1"
+              }
+            ],
+            "/str",
+            "/ev",
+            {
+              "*": ".^.^.c-11",
+              "flg": 2
+            },
+            {
+              "s": [
+                "^ ",
+                "ev",
+                {
+                  "VAR?": "FirstCharacter"
+                },
+                "str",
+                "^affectionate",
+                "/str",
+                {
+                  "f()": "charTag"
+                },
+                "out",
+                "/ev",
+                "^: Dodicesima scelta",
+                {
+                  "->": "$r",
+                  "var": true
+                },
+                null
+              ]
+            }
+          ],
+          [
+            "ev",
+            {
+              "^->": "main.0.36.$r1"
+            },
+            {
+              "temp=": "$r"
+            },
+            "str",
+            {
+              "->": ".^.s"
+            },
+            [
+              {
+                "#n": "$r1"
+              }
+            ],
+            "/str",
+            "/ev",
+            {
+              "*": ".^.^.c-12",
+              "flg": 2
+            },
+            {
+              "s": [
+                "^ ",
+                "ev",
+                {
+                  "VAR?": "FirstCharacter"
+                },
+                "str",
+                "^affectionate",
+                "/str",
+                {
+                  "f()": "charTag"
+                },
+                "out",
+                "/ev",
+                "^: Tredicesima scelta",
+                {
+                  "->": "$r",
+                  "var": true
+                },
+                null
+              ]
+            }
+          ],
+          [
+            "ev",
+            {
+              "^->": "main.0.37.$r1"
+            },
+            {
+              "temp=": "$r"
+            },
+            "str",
+            {
+              "->": ".^.s"
+            },
+            [
+              {
+                "#n": "$r1"
+              }
+            ],
+            "/str",
+            "/ev",
+            {
+              "*": ".^.^.c-13",
+              "flg": 2
+            },
+            {
+              "s": [
+                "^ ",
+                "ev",
+                {
+                  "VAR?": "FirstCharacter"
+                },
+                "str",
+                "^affectionate",
+                "/str",
+                {
+                  "f()": "charTag"
+                },
+                "out",
+                "/ev",
+                "^: Quattordicesima scelta",
+                {
+                  "->": "$r",
+                  "var": true
+                },
+                null
+              ]
+            }
+          ],
+          [
+            "ev",
+            {
+              "^->": "main.0.38.$r1"
+            },
+            {
+              "temp=": "$r"
+            },
+            "str",
+            {
+              "->": ".^.s"
+            },
+            [
+              {
+                "#n": "$r1"
+              }
+            ],
+            "/str",
+            "/ev",
+            {
+              "*": ".^.^.c-14",
+              "flg": 2
+            },
+            {
+              "s": [
+                "^ ",
+                "ev",
+                {
+                  "VAR?": "FirstCharacter"
+                },
+                "str",
+                "^affectionate",
+                "/str",
+                {
+                  "f()": "charTag"
+                },
+                "out",
+                "/ev",
+                "^: Quindicesima scelta",
+                {
+                  "->": "$r",
+                  "var": true
+                },
+                null
+              ]
+            }
+          ],
+          [
+            "ev",
+            {
+              "^->": "main.0.39.$r1"
+            },
+            {
+              "temp=": "$r"
+            },
+            "str",
+            {
+              "->": ".^.s"
+            },
+            [
+              {
+                "#n": "$r1"
+              }
+            ],
+            "/str",
+            "/ev",
+            {
+              "*": ".^.^.c-15",
+              "flg": 2
+            },
+            {
+              "s": [
+                "^ ",
+                "ev",
+                {
+                  "VAR?": "FirstCharacter"
+                },
+                "str",
+                "^affectionate",
+                "/str",
+                {
+                  "f()": "charTag"
+                },
+                "out",
+                "/ev",
+                "^: Sedicesima scelta",
+                {
+                  "->": "$r",
+                  "var": true
+                },
+                null
+              ]
+            }
+          ],
+          {
+            "c-0": [
+              "ev",
+              {
+                "^->": "main.0.c-0.$r2"
+              },
+              "/ev",
+              {
+                "temp=": "$r"
+              },
+              {
+                "->": ".^.^.24.s"
+              },
+              [
+                {
+                  "#n": "$r2"
+                }
+              ],
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-1": [
+              "ev",
+              {
+                "^->": "main.0.c-1.$r2"
+              },
+              "/ev",
+              {
+                "temp=": "$r"
+              },
+              {
+                "->": ".^.^.25.s"
+              },
+              [
+                {
+                  "#n": "$r2"
+                }
+              ],
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-2": [
+              "ev",
+              {
+                "^->": "main.0.c-2.$r2"
+              },
+              "/ev",
+              {
+                "temp=": "$r"
+              },
+              {
+                "->": ".^.^.26.s"
+              },
+              [
+                {
+                  "#n": "$r2"
+                }
+              ],
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-3": [
+              "ev",
+              {
+                "^->": "main.0.c-3.$r2"
+              },
+              "/ev",
+              {
+                "temp=": "$r"
+              },
+              {
+                "->": ".^.^.27.s"
+              },
+              [
+                {
+                  "#n": "$r2"
+                }
+              ],
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-4": [
+              "ev",
+              {
+                "^->": "main.0.c-4.$r2"
+              },
+              "/ev",
+              {
+                "temp=": "$r"
+              },
+              {
+                "->": ".^.^.28.s"
+              },
+              [
+                {
+                  "#n": "$r2"
+                }
+              ],
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-5": [
+              "ev",
+              {
+                "^->": "main.0.c-5.$r2"
+              },
+              "/ev",
+              {
+                "temp=": "$r"
+              },
+              {
+                "->": ".^.^.29.s"
+              },
+              [
+                {
+                  "#n": "$r2"
+                }
+              ],
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-6": [
+              "ev",
+              {
+                "^->": "main.0.c-6.$r2"
+              },
+              "/ev",
+              {
+                "temp=": "$r"
+              },
+              {
+                "->": ".^.^.30.s"
+              },
+              [
+                {
+                  "#n": "$r2"
+                }
+              ],
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-7": [
+              "ev",
+              {
+                "^->": "main.0.c-7.$r2"
+              },
+              "/ev",
+              {
+                "temp=": "$r"
+              },
+              {
+                "->": ".^.^.31.s"
+              },
+              [
+                {
+                  "#n": "$r2"
+                }
+              ],
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-8": [
+              "ev",
+              {
+                "^->": "main.0.c-8.$r2"
+              },
+              "/ev",
+              {
+                "temp=": "$r"
+              },
+              {
+                "->": ".^.^.32.s"
+              },
+              [
+                {
+                  "#n": "$r2"
+                }
+              ],
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-9": [
+              "ev",
+              {
+                "^->": "main.0.c-9.$r2"
+              },
+              "/ev",
+              {
+                "temp=": "$r"
+              },
+              {
+                "->": ".^.^.33.s"
+              },
+              [
+                {
+                  "#n": "$r2"
+                }
+              ],
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-10": [
+              "ev",
+              {
+                "^->": "main.0.c-10.$r2"
+              },
+              "/ev",
+              {
+                "temp=": "$r"
+              },
+              {
+                "->": ".^.^.34.s"
+              },
+              [
+                {
+                  "#n": "$r2"
+                }
+              ],
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-11": [
+              "ev",
+              {
+                "^->": "main.0.c-11.$r2"
+              },
+              "/ev",
+              {
+                "temp=": "$r"
+              },
+              {
+                "->": ".^.^.35.s"
+              },
+              [
+                {
+                  "#n": "$r2"
+                }
+              ],
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-12": [
+              "ev",
+              {
+                "^->": "main.0.c-12.$r2"
+              },
+              "/ev",
+              {
+                "temp=": "$r"
+              },
+              {
+                "->": ".^.^.36.s"
+              },
+              [
+                {
+                  "#n": "$r2"
+                }
+              ],
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-13": [
+              "ev",
+              {
+                "^->": "main.0.c-13.$r2"
+              },
+              "/ev",
+              {
+                "temp=": "$r"
+              },
+              {
+                "->": ".^.^.37.s"
+              },
+              [
+                {
+                  "#n": "$r2"
+                }
+              ],
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-14": [
+              "ev",
+              {
+                "^->": "main.0.c-14.$r2"
+              },
+              "/ev",
+              {
+                "temp=": "$r"
+              },
+              {
+                "->": ".^.^.38.s"
+              },
+              [
+                {
+                  "#n": "$r2"
+                }
+              ],
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-15": [
+              "ev",
+              {
+                "^->": "main.0.c-15.$r2"
+              },
+              "/ev",
+              {
+                "temp=": "$r"
+              },
+              {
+                "->": ".^.^.39.s"
+              },
+              [
+                {
+                  "#n": "$r2"
+                }
+              ],
+              "\n",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "g-0": [
+              "^@sprite:museum1",
+              "\n",
+              "^Subito sopra c'è lo sprite 'museum1'",
+              "\n",
+              "^@sprite:museum2",
+              "\n",
+              "^Subito sopra c'è lo sprite 'museum2'",
+              "\n",
+              "ev",
+              true,
+              "/ev",
+              {
+                "VAR=": "knowChitarra",
+                "re": true
+              },
+              "ev",
+              {
+                "VAR?": "FirstCharacter"
+              },
+              "str",
+              "^affectionate",
+              "/str",
+              {
+                "f()": "charTag"
+              },
+              "out",
+              "/ev",
+              "^:  Qui sono sempre io, ma ora sai il mio nome.",
+              "\n",
+              "ev",
+              {
+                "VAR?": "Mentor"
+              },
+              "str",
+              "^hurry",
+              "/str",
+              {
+                "f()": "charTag"
+              },
+              "out",
+              "/ev",
+              "^:                 Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo. Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo. Questa è una scritta davvero molto lunga, e che ci metterà parecchio tempo per essere completata. È un'ottima occasione per verificare cosa succede in questi casi, visto che bisogna saltare alla fine del testo. Ora ripeterò un paio di volte tutto questo in modo da avere un testo ancora più lungo. Quindi. Dicevamo.",
+              "\n",
+              "ev",
+              {
+                "VAR?": "ink_normal"
+              },
+              "/ev",
+              {
+                "VAR=": "firstChar_InkLevel",
+                "re": true
+              },
+              "ev",
+              {
+                "VAR?": "FirstCharacter"
+              },
+              "str",
+              "^affectionate",
+              "/str",
+              {
+                "f()": "charTag"
+              },
+              "out",
+              "/ev",
+              "^:  Qui torna a parlare Chitarra, ma ora ha dell'inchiostro.",
+              "\n",
+              "ev",
+              {
+                "VAR?": "Mentor"
+              },
+              "str",
+              "^hurry",
+              "/str",
+              {
+                "f()": "charTag"
+              },
+              "out",
+              "/ev",
+              "^:                 Qua invece parla Mentore.",
+              "\n",
+              "^E ora c'è una scelta.",
+              "\n",
+              "ev",
+              0,
+              "/ev",
+              {
+                "temp=": "index"
+              },
+              [
+                "ev",
+                {
+                  "^->": "main.0.g-0.62.$r1"
+                },
+                {
+                  "temp=": "$r"
+                },
+                "str",
+                {
+                  "->": ".^.s"
+                },
+                [
+                  {
+                    "#n": "$r1"
+                  }
+                ],
+                "/str",
+                "/ev",
+                {
+                  "*": ".^.^.c-16",
+                  "flg": 2
+                },
+                {
+                  "s": [
+                    "^ ",
+                    "ev",
+                    {
+                      "VAR?": "PG"
+                    },
+                    "str",
+                    "^neutral",
+                    "/str",
+                    {
+                      "f()": "charTag"
+                    },
+                    "out",
+                    "/ev",
+                    "^: Scelta 1",
+                    {
+                      "->": "$r",
+                      "var": true
+                    },
+                    null
+                  ]
+                }
+              ],
+              [
+                "ev",
+                {
+                  "^->": "main.0.g-0.63.$r1"
+                },
+                {
+                  "temp=": "$r"
+                },
+                "str",
+                {
+                  "->": ".^.s"
+                },
+                [
+                  {
+                    "#n": "$r1"
+                  }
+                ],
+                "/str",
+                "/ev",
+                {
+                  "*": ".^.^.c-17",
+                  "flg": 2
+                },
+                {
+                  "s": [
+                    "^ ",
+                    "ev",
+                    {
+                      "VAR?": "PG"
+                    },
+                    "str",
+                    "^neutral",
+                    "/str",
+                    {
+                      "f()": "charTag"
+                    },
+                    "out",
+                    "/ev",
+                    "^: Scelta 2",
+                    {
+                      "->": "$r",
+                      "var": true
+                    },
+                    null
+                  ]
+                }
+              ],
+              [
+                "ev",
+                {
+                  "^->": "main.0.g-0.64.$r1"
+                },
+                {
+                  "temp=": "$r"
+                },
+                "str",
+                {
+                  "->": ".^.s"
+                },
+                [
+                  {
+                    "#n": "$r1"
+                  }
+                ],
+                "/str",
+                "/ev",
+                {
+                  "*": ".^.^.c-18",
+                  "flg": 2
+                },
+                {
+                  "s": [
+                    "^ ",
+                    "ev",
+                    {
+                      "VAR?": "PG"
+                    },
+                    "str",
+                    "^neutral",
+                    "/str",
+                    {
+                      "f()": "charTag"
+                    },
+                    "out",
+                    "/ev",
+                    "^: Scelta 3",
+                    {
+                      "->": "$r",
+                      "var": true
+                    },
+                    null
+                  ]
+                }
+              ],
+              {
+                "c-16": [
+                  "ev",
+                  {
+                    "^->": "main.0.g-0.c-16.$r2"
+                  },
+                  "/ev",
+                  {
+                    "temp=": "$r"
+                  },
+                  {
+                    "->": ".^.^.62.s"
+                  },
+                  [
+                    {
+                      "#n": "$r2"
+                    }
+                  ],
+                  "\n",
+                  "ev",
+                  1,
+                  "/ev",
+                  {
+                    "temp=": "index",
+                    "re": true
+                  },
+                  {
+                    "->": "main.0.g-1"
+                  },
+                  {
+                    "#f": 5
+                  }
+                ],
+                "c-17": [
+                  "ev",
+                  {
+                    "^->": "main.0.g-0.c-17.$r2"
+                  },
+                  "/ev",
+                  {
+                    "temp=": "$r"
+                  },
+                  {
+                    "->": ".^.^.63.s"
+                  },
+                  [
+                    {
+                      "#n": "$r2"
+                    }
+                  ],
+                  "\n",
+                  "ev",
+                  2,
+                  "/ev",
+                  {
+                    "temp=": "index",
+                    "re": true
+                  },
+                  {
+                    "->": "main.0.g-1"
+                  },
+                  {
+                    "#f": 5
+                  }
+                ],
+                "c-18": [
+                  "ev",
+                  {
+                    "^->": "main.0.g-0.c-18.$r2"
+                  },
+                  "/ev",
+                  {
+                    "temp=": "$r"
+                  },
+                  {
+                    "->": ".^.^.64.s"
+                  },
+                  [
+                    {
+                      "#n": "$r2"
+                    }
+                  ],
+                  "\n",
+                  "ev",
+                  3,
+                  "/ev",
+                  {
+                    "temp=": "index",
+                    "re": true
+                  },
+                  {
+                    "->": "main.0.g-1"
+                  },
+                  {
+                    "#f": 5
+                  }
+                ],
+                "#f": 5
+              }
+            ],
+            "g-1": [
+              "ev",
+              {
+                "VAR?": "FirstCharacter"
+              },
+              "str",
+              "^affectionate",
+              "/str",
+              {
+                "f()": "charTag"
+              },
+              "out",
+              "/ev",
+              "^:  Hai fatto la scelta ",
+              "ev",
+              {
+                "VAR?": "index"
+              },
+              "out",
+              "/ev",
+              "^!",
+              "\n",
+              {
+                "->": "main"
+              },
+              {
+                "#f": 5
+              }
+            ]
+          }
+        ],
+        {
+          "#f": 1
+        }
+      ],
+      "charTag": [
+        {
+          "temp=": "mood"
+        },
+        {
+          "temp=": "character"
+        },
+        "ev",
+        {
+          "VAR?": "character"
+        },
+        {
+          "f()": "charName"
+        },
+        "/ev",
+        {
+          "temp=": "actualCharacterName"
+        },
+        "\n",
+        "ev",
+        "str",
+        "^",
+        "/str",
+        "/ev",
+        {
+          "temp=": "prefix"
+        },
+        "ev",
+        {
+          "VAR?": "mood"
+        },
+        "str",
+        "^affectionate",
+        "/str",
+        "==",
+        "/ev",
+        [
+          {
+            "->": ".^.b",
+            "c": true
+          },
+          {
+            "b": [
+              "\n",
+              "ev",
+              "str",
+              "^morePositive",
+              "/str",
+              "/ev",
+              {
+                "temp=": "mood",
+                "re": true
+              },
+              {
+                "->": ".^.^.^.22"
+              },
+              null
+            ]
+          }
+        ],
+        "nop",
+        "\n",
+        "ev",
+        {
+          "VAR?": "character"
+        },
+        "/ev",
+        [
+          "du",
+          "ev",
+          {
+            "VAR?": "FirstCharacter"
+          },
+          "==",
+          "/ev",
+          {
+            "->": ".^.b",
+            "c": true
+          },
+          {
+            "b": [
+              "pop",
+              "\n",
+              "ev",
+              "str",
+              "^Chitarra_",
+              "/str",
+              "/ev",
+              {
+                "temp=": "prefix",
+                "re": true
+              },
+              {
+                "->": ".^.^.^.30"
+              },
+              null
+            ]
+          }
+        ],
+        [
+          "du",
+          "ev",
+          {
+            "VAR?": "Mentor"
+          },
+          "==",
+          "/ev",
+          {
+            "->": ".^.b",
+            "c": true
+          },
+          {
+            "b": [
+              "pop",
+              "\n",
+              "ev",
+              "str",
+              "^Mentore_",
+              "/str",
+              "/ev",
+              {
+                "temp=": "prefix",
+                "re": true
+              },
+              {
+                "->": ".^.^.^.30"
+              },
+              null
+            ]
+          }
+        ],
+        "pop",
+        "nop",
+        "\n",
+        "ev",
+        "str",
+        "ev",
+        {
+          "VAR?": "character"
+        },
+        "out",
+        "/ev",
+        "^, ",
+        "ev",
+        {
+          "VAR?": "actualCharacterName"
+        },
+        "out",
+        "/ev",
+        "^, ",
+        "ev",
+        {
+          "VAR?": "prefix"
+        },
+        "out",
+        "/ev",
+        "ev",
+        {
+          "VAR?": "mood"
+        },
+        "out",
+        "/ev",
+        "/str",
+        "/ev",
+        "~ret",
+        {
+          "#f": 1
+        }
+      ],
+      "charName": [
+        {
+          "temp=": "character"
+        },
+        "ev",
+        {
+          "VAR?": "character"
+        },
+        "/ev",
+        [
+          "du",
+          "ev",
+          {
+            "VAR?": "PG"
+          },
+          "==",
+          "/ev",
+          {
+            "->": ".^.b",
+            "c": true
+          },
+          {
+            "b": [
+              "pop",
+              "\n",
+              "ev",
+              "str",
+              "^Marta",
+              "/str",
+              "/ev",
+              "~ret",
+              {
+                "->": ".^.^.^.8"
+              },
+              null
+            ]
+          }
+        ],
+        [
+          "du",
+          "ev",
+          {
+            "VAR?": "FirstCharacter"
+          },
+          "==",
+          "/ev",
+          {
+            "->": ".^.b",
+            "c": true
+          },
+          {
+            "b": [
+              "pop",
+              "\n",
+              "ev",
+              {
+                "VAR?": "knowChitarra"
+              },
+              "/ev",
+              [
+                {
+                  "->": ".^.b",
+                  "c": true
+                },
+                {
+                  "b": [
+                    "\n",
+                    "ev",
+                    "str",
+                    "^Chitarra",
+                    "/str",
+                    "/ev",
+                    "~ret",
+                    {
+                      "->": ".^.^.^.7"
+                    },
+                    null
+                  ]
+                }
+              ],
+              [
+                {
+                  "->": ".^.b"
+                },
+                {
+                  "b": [
+                    "\n",
+                    "ev",
+                    "str",
+                    "^???",
+                    "/str",
+                    "/ev",
+                    "~ret",
+                    {
+                      "->": ".^.^.^.7"
+                    },
+                    null
+                  ]
+                }
+              ],
+              "nop",
+              "\n",
+              {
+                "->": ".^.^.^.8"
+              },
+              null
+            ]
+          }
+        ],
+        [
+          "du",
+          "ev",
+          {
+            "VAR?": "Mentor"
+          },
+          "==",
+          "/ev",
+          {
+            "->": ".^.b",
+            "c": true
+          },
+          {
+            "b": [
+              "pop",
+              "\n",
+              "ev",
+              "str",
+              "^Mentore",
+              "/str",
+              "/ev",
+              "~ret",
+              {
+                "->": ".^.^.^.8"
+              },
+              null
+            ]
+          }
+        ],
+        [
+          {
+            "->": ".^.b"
+          },
+          {
+            "b": [
+              "pop",
+              "\n",
+              "ev",
+              "str",
+              "^<unknown ",
+              "ev",
+              {
+                "VAR?": "character"
+              },
+              "out",
+              "/ev",
+              "^>",
+              "/str",
+              "/ev",
+              "~ret",
+              {
+                "->": ".^.^.^.8"
+              },
+              null
+            ]
+          }
+        ],
+        "nop",
+        "\n",
+        {
+          "#f": 1
+        }
+      ],
+      "global decl": [
+        "ev",
+        {
+          "list": {},
+          "origins": [
+            "listCharacters"
+          ]
+        },
+        {
+          "VAR=": "listCharacters"
+        },
+        {
+          "list": {},
+          "origins": [
+            "ink_possibileLevels"
+          ]
+        },
+        {
+          "VAR=": "ink_possibileLevels"
+        },
+        {
+          "VAR?": "ink_empty"
+        },
+        {
+          "VAR=": "firstChar_InkLevel"
+        },
+        {
+          "VAR?": "ink_empty"
+        },
+        {
+          "VAR=": "secondChar_InkLevel"
+        },
+        {
+          "VAR?": "ink_empty"
+        },
+        {
+          "VAR=": "thirdChar_InkLevel"
+        },
+        {
+          "VAR?": "ink_empty"
+        },
+        {
+          "VAR=": "fourthChar_InkLevel"
+        },
+        {
+          "VAR?": "ink_empty"
+        },
+        {
+          "VAR=": "fifthChar_InkLevel"
+        },
+        {
+          "list": {
+            "listCharacters.PG": 2
+          }
+        },
+        {
+          "VAR=": "contentsBedroom"
+        },
+        false,
+        {
+          "VAR=": "knowChitarra"
+        },
+        false,
+        {
+          "VAR=": "settings_gamerMode"
+        },
+        "/ev",
+        "end",
+        null
+      ],
+      "#f": 1
+    }
+  ],
+  "listDefs": {
+    "listCharacters": {
+      "Mentor": 1,
+      "PG": 2,
+      "FirstCharacter": 3,
+      "SecondCharacter": 4,
+      "ThirdCharacter": 5,
+      "FourthCharacter": 6,
+      "TheFrog": 7,
+      "FifthCharacter": 8,
+      "TheKitchenFrog": 9
+    },
+    "ink_possibileLevels": {
+      "ink_empty": 1,
+      "ink_low": 2,
+      "ink_normal": 3,
+      "ink_medium": 4,
+      "ink_high": 5
+    }
+  }
+}

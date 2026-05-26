@@ -38,7 +38,7 @@ namespace Selania.Rework.Components.DebuggingWindow
         private void UpdateStoryDebugSupport(string text)
         {
             // clear current choices (from the third child on)
-            for (var i = 2; i < buttonsRoot.childCount; i++) Destroy(buttonsRoot.GetChild(i));
+            for (var i = 2; i < buttonsRoot.childCount; i++) Destroy(buttonsRoot.GetChild(i).gameObject);
 
             // create the new choices
             var choices = StoryDebugSupport.GetDebugKnotChoices(text);
