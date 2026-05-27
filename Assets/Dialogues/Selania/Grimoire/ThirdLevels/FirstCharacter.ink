@@ -108,6 +108,10 @@
             ~ grimFirstCharMentor_text()
     }
 
+    {
+        - grimoire_firstChar has grimFirstCharMentorAboutThirdChar:
+            ~ grimFirstCharMentorAboutThirdChar_text()
+    }
 
     + [Index #bookmark:index]
         -> grimoire

@@ -124,14 +124,19 @@
 
     //Storylets condivisi
     {
-        - grimoire_firstChar has grimFirstCharMentor:
+        - grimoire_fifthChar has grimFirstCharMentor:
             ~ grimFirstCharMentor_text()
+    }
+
+    {
+        - grimoire_fifthChar has grimFirstCharMentorAboutThirdChar:
+            ~ grimFirstCharMentorAboutThirdChar_text()
     }
 
     {
         - grimoire_thirdChar has grimThirdCharMentor:
             ~ grimThirdCharMentor_text()
-    }  
+    } 
 
     //Secret endings delle personagge
     

@@ -9,6 +9,17 @@
     Dopo che {charNameOne} ha detto a {charNameFive} che la invidia perché la sua vita ha uno scopo chiaro, {charNameFive} le ha detto che anche lei ha uno scopo, deve solo scoprirlo. A quel punto si sono messe a discutere sul valore della felicità: per {charNameFive} è qualcosa da trovare nelle piccole cose, ma per {charNameOne} questa è una frase da persona privilegiata, che fa ciò che ama. Dopo l'intervento di {player_name}, {charNameOne} ha detto a {charNameFive} che per lo meno deve imparare a prendersi i commenti di stima e goderseli.
 
 
+=== function grimFirstCharMentorAboutThirdChar_text()
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
+
+    Discussione Mentore/Chitarra in merito a Boccale.
+
+
 
 === function grimFirstSecondChar_text()
     ~ temp charNameOne = translator(firstChar_ActualName)

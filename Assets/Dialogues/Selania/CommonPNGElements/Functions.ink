@@ -533,6 +533,12 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
         }
 
         {
+            - first_mentor_about_third_char && grimoire_firstChar hasnt grimFirstCharMentorAboutThirdChar:
+                ~ grimoire_firstChar += grimFirstCharMentorAboutThirdChar
+                ~ grimoire_fifthChar += grimFirstCharMentorAboutThirdChar
+        }
+
+        {
             - frog_and_first_char_chit_chat && grimoire_firstChar hasnt grimFirstCharFranco:
                 ~ grimoire_firstChar += grimFirstCharFranco
                 ~ grimoire_franco += grimFirstCharFranco

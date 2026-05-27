@@ -114,8 +114,12 @@
             -> food_gift_second_char        
         
         //Chiacchiere tra Chitarra e Mentore
+        //Su di loro
         - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(Mentor, PG) && grimoire_firstChar has grimFirstCharThree && grimoire_firstChar hasnt grimFirstCharMentor:
             -> first_mentor_chit_chat
+        //In merito a Boccale
+        - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(Mentor, PG) && grimoire_thirdChar has grimThirdCharThree && grimoire_firstChar hasnt grimFirstCharMentorAboutThirdChar:
+            -> first_mentor_about_third_char
         
         //Chiacchiere tra Franco e Mentore
         - are_two_entities_together(Mentor, PG) && grimoire_appendices has grimChoicesMentor && are_two_entities_together (Franco, PG) && grimoire_fifthChar hasnt grimMentorFranco && frog_commonStoryletsPause == 0:

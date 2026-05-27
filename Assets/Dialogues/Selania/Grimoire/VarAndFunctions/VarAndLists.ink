@@ -38,7 +38,7 @@ LIST grimoire_allElements =
     grimFrancoFirst, grimFrancoAllDocuments, grimFrancoSpecialMissionOneFeedback,
 
 //Common Storylets
-    grimFirstSecondChar, grimFirstThirdChar, grimFirstCharMentor, grimFirstCharFranco, grimSecondCharMentorOne, grimSecondCharMentorPeace, grimSecondThirdChar, grimSecondCharFranco, grimThirdCharFranco, grimThirdCharMentor, grimMentorFranco, grimMentorWitchOne, grimFourthFifthChar, grimFourthCharFranco, grimFifthCharFranco
+    grimFirstSecondChar, grimFirstThirdChar, grimFirstCharMentor, grimFirstCharMentorAboutThirdChar, grimFirstCharFranco, grimSecondCharMentorOne, grimSecondCharMentorPeace, grimSecondThirdChar, grimSecondCharFranco, grimThirdCharFranco, grimThirdCharMentor, grimMentorFranco, grimMentorWitchOne, grimFourthFifthChar, grimFourthCharFranco, grimFifthCharFranco
 
 VAR grimoire_firstChar = ()
 VAR grimoire_secondChar = ()

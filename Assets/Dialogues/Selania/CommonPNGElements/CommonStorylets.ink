@@ -273,6 +273,43 @@
         -> mentor_closing_storylet ->
         ->->
 
+
+=== first_mentor_about_third_char ===
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
+
+    Chiacchierata Chitarra e Mentore riguardo Boccale.
+    {
+        - fifthChar_slurDetector > 3:
+                Mentore incazzata sul discorso parolacce.
+    }
+
+            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+                    -> glyph_choice_manager(false, airC)->
+
+            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
+                    -> glyph_choice_manager(false, earthC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
+                    -> glyph_choice_manager(false, fireC)->
+                
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+                    -> glyph_choice_manager(false, waterC)->
+                    
+            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+                    -> glyph_choice_manager(false, aetherC)->
+    -
+        -> first_char_closing_storylet ->
+        -> mentor_closing_storylet ->
+        ->->
+
+
+
+
 === frog_and_mentor_chit_chat
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
