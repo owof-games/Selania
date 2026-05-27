@@ -355,6 +355,9 @@
                                                             Fa l'operaio nella stessa fabbrica dello Stracciamaroni, c'ha due figli con la testa sulle spalle, studiano tutti e due anche se non ricordo mai cosa, e per questo nel gruppetto lo rispettano tutti.
                                                             Anche se c'abbiamo due vite diverse ci capiamo, non so come mai.
                                                             Insomma, nessuno di noi è esattamente questo grande intellettuale.
+                                                            Siamo più gente con le mani sporche.
+                                                            A parte il Giova.
+                                                            Che è stupido e ha le mani pulite.
                                                             Però ce la caviamo bene.
                                                             Abbiamo sempre qualche collega loro o gente del bar che viene a fare due tiri.
                                                             E la serata così passa bene.
@@ -398,29 +401,95 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
         
-        {charTag(ThirdCharacter, "neutral")}:      Frase
+        {charTag(ThirdCharacter, "neutral")}:               Sembra che non me ne posso andare fino a quando non ho risolto il mio blocco, dice la zia.
+                                                            Quindi affrontiamo il grande blocco.
+                                                            Donatella.
+         {//Blocco per reazioni e commenti legati al genere.
+            - thirdChar_recordedPlayerPronoun == him:
+            {charTag(ThirdCharacter, "neutral")}:           La grandissima stronza.
+                                                
+            - else:
+            {charTag(ThirdCharacter, "neutral")}:           La mia ex.
+        }
+
+                                                            Mettiti sedut{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}} comod{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}}.
+                                                            E immagina.
+                                                            Lui: un tipo a posto, che lavora tanto.
+                                                            Che non urla mai contro la sua tipa.
+                                                            Che non l'ha mai tradita anche se fa un lavoro dove è facile incontrare ragazze.
+                                                            Lei: una che è cresciuta poveraccia e vuole scappare da quella situazione a tutti i costi.
+                                                            Che si è fatta il culo alla scuola di estetista e che a venticinque anni si apre lo studio insieme a una sua amica.
+                                                            E che è una gran bona.
+                                                            Due vite normali e una convivenza che va avanti da cinque anni e una cosa in arrivo che lui sogna da quando la conosce: il matrimonio.
+                                                            Il periodo attorno al matrimonio sembra perfetto: i genitori di lei che aiutano con le cose pratiche, la sorella di lui con l'organizzazione, col trovare il luogo.
+                                                            Unica nota dolente: quello sfigato del padre di lui che è contro il matrimonio, perché dice "quella ha in testa sogni più grandi di questo buco di periferia, se ne andrà"!
+                                                            Si parla anche di figli, lui ha già comprato in segreto un completino dell'Inter per quando arriverà il primo.
+                                                            Però lei si fa sempre più silenziosa.
+                                                            Lavora sempre di più.
+                                                            Una sera lui le fa trovare una cenetta romantica, una cosa semplice perché fa cagare a cucinare ma ci ha provato.
+                                                            E quando le chiede se va tutto bene, lei risponde di no.
+        {//Blocco per reazioni e commenti legati al genere.
+            - thirdChar_recordedPlayerPronoun == him:
+            {charTag(ThirdCharacter, "angry")}:             No.
+                                                
+            - else:
+            {charTag(ThirdCharacter, "melanchonic")}:       No.
+        }                                                                                  
+                                                            E lei lo riempie di cazzate.
+                                                            Dice che da quando vivono assieme è lei che deve fare tutto.
+                                                            E che lei non sa cosa vuole perché non ha mai avuto una vita sua perché è stato lui a crescerla, dice.
+                                                            Perché conosce il mondo solo attraverso di lui.
+                                                            Ma lei non vuole arrivare ai trent'anni senza sapere cosa vuole davvero, chi è davvero.
+                                                            Lui le risponde che può occuparsi di più della casa, che può sistemare quelle cose che dice sempre che sistemerà ma poi non lo fa.
+                                                            Lei gli prende le mani e gli dice "Ti voglio bene, davvero. Ma non posso sposarti solo perché è l'unico futuro che conosco".
+                                                            Lei se ne va da quella casa tre giorni dopo, e lui la aspetta.
+                                                            La aspetta per un anno.
+                                                            Prova a fare palestra.
+                                                            Prende più ore in birreria per avere più soldi.
+                                                            Le regala dei biglietti per New York, perché sa che è vero che hanno fatto tanti sacrifici, e che è giovane e vuole vedere il mondo.
+                                                            Dentro, una dedica e una frase: "Ti aspetterò all'aeroporto quando tornerai, per richiedere la tua mano".
+                                                            E lei gli scrive un messaggio per dirgli che non deve aspettarla, né all'aeroporto né a casa.
+                                                            Ma più.
+                                                            E lui capisce che lei non se ne è andata perché deve scoprire sé stessa o cazzate del genere.
+                                                            Ma perché lui sta invecchiando, non ha chissà quale giro di amici fighi, e non guadagna abbastanza.
+        {//Blocco per reazioni e commenti legati al genere.
+            - thirdChar_recordedPlayerPronoun == him:
+            {charTag(ThirdCharacter, "angry")}:             Alla fine lei stava solo cercando un nuovo cazzo, più giovane, più figo, più ricco.
+                                                
+            - else:
+            {charTag(ThirdCharacter, "melanchonic")}:       Uno sfigato.
+        } 
 
         
-            + \ {charTag(PG, "neutral")}:               Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+            + \ {charTag(PG, "neutral")}:                   Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
                 
                 
-            + \ {charTag(PG, "neutral")}:               Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+            + \ {charTag(PG, "neutral")}:                   Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                     -> glyph_choice_manager(false, aetherC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Cosa ti renderà più stabile? da quali fondamenta parti?
+            + \ {charTag(PG, "neutral")}:                   Cosa ti renderà più stabile? da quali fondamenta parti?
                     -> glyph_choice_manager(false, earthC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+            + \ {charTag(PG, "neutral")}:                   Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Cosa vuoi? Come puoi cambiare questa situazione?
+            + \ {charTag(PG, "neutral")}:                   Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)-> 
                 
-            - 
+            -
+        {
+            - are_two_entities_together(FirstCharacter, PG):
+                3. **Qui se c’è in giro Chitarra non si trattiene, e ci rinfaccia alcuni tipi di risposte che possiamo dare.**
+                4. Lui le risponde che è la sua storia, che in quel momento noi siamo lì per lui, e che non deve rompere le scatole, che lui non viene a fare commenti quando racconta delle sue paranoie sul lavoro o il moroso o Sborotalco.
+        }
+
+
+        {charTag(ThirdCharacter, "neutral")}:               Ora che hai sentito qual è la cosa che ancora mi fa incazzare, immagino saprai anche come farmi uscire di qui.
+
             -> third_char_closing_storylet ->
             -> options_third_character
 
@@ -431,31 +500,74 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
-        
+        {//Blocco per reazioni e commenti legati al genere.
+            - thirdChar_recordedPlayerPronoun == him:
+            {charTag(ThirdCharacter, "angry")}:             Da uomo a uomo: inizio a perdere la pazienza.
+                                                
+            - else:
+            {charTag(ThirdCharacter, "neutral")}:           Sto iniziando a perdere la pazienza {player_name}.
+        } 
 
-        {charTag(ThirdCharacter, "neutral")}:      Frase
+        {charTag(ThirdCharacter, "neutral")}:               {charNameFive} dice che posso andarmene solo se mi riscrivi.
+                                                            Che sono io a dirti che mi devi riscrivere.
+                                                            Ma non riesco a chiedertelo, e secondo lei è perché non ho preso un punto importante.
+                                                            Secondo me sono cazzate, ed è colpa di qualcosa qui?
+                                                            Mi avete drogato?
+                                                            {charNameFive} dice che spesso i problemi sono in famiglia.
+                                                            E magari c'ha pure ragione?
+        {charTag(ThirdCharacter, "jester")}:                Ora non ci crederai vedendo questo popo' di figo.
+        {//Blocco per reazioni e commenti legati al genere.
+            - thirdChar_recordedPlayerPronoun == him:
+            {charTag(ThirdCharacter, "jester")}:            E non pensare niente di gay!
+                                                
+            - else:
+            {charTag(ThirdCharacter, "neutral")}:           Figo e impegnato, te lo ricordo {player_name}.
+        }                                                    
+                                                            Ma la mia famiglia è abbastanza sfigatina.
+                                                            Mia mamma era una da dieci in realtà. ma è morta qualche anno fa.
+                                                            Mia sorella Marta invece è una con una testa da otto ma un cuore da tre.
+                                                            Un trattore.
+                                                            Ammetto che quando si è sposata mi ha sorpreso perché ero sicuro fosse lesbica.
+                                                            Anche se sta con uno che è abbastanza sottotono.
+                                                            Forse per questo stanno bene assieme.
+                                                            Le ho sempre voluto bene, e quando è nato Armando poche settimane fa, ho scoperto che i bambini non sono male.
+                                                            Anche se non dice niente e piange metà del tempo, a volte ti caccia dei sorrisoni che ti svoltano la giornata.
+                                                            Ora tutta la famiglia gira attorno a mia sorella.
+                                                            Anche la tipa di mio padre, che ha sempre un po' detestato Marta, sembra un'altra persona.
+                                                            Gira che ti rigira alla fine alle donne basta avere un figlio e zac, tutti le adorano.
+                                                            Papà la adorava già anche prima, ma papà è uno sfigato, detto tra noi.
+                                                            Uno che si è fatto sempre portare via tutto, il bar come la mamma.
+                                                            Con lui non ci parlo da due anni.
+                                                            Da quando mi ha detto di non sposare Donatella.
+                                                            Immagino che stia gongolando ora che le cose gli hanno dato ragione.
+                                                            A volte viene in birreria, ma lo faccio sempre servire da qualcun altro.
+                                                            
 
         
-            + \ {charTag(PG, "neutral")}:               Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+            + \ {charTag(PG, "neutral")}:                   Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
                 
                 
-            + \ {charTag(PG, "neutral")}:               Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+            + \ {charTag(PG, "neutral")}:                   Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                     -> glyph_choice_manager(false, aetherC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Cosa ti renderà più stabile? da quali fondamenta parti?
+            + \ {charTag(PG, "neutral")}:                   Cosa ti renderà più stabile? da quali fondamenta parti?
                     -> glyph_choice_manager(false, earthC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+            + \ {charTag(PG, "neutral")}:                   Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Cosa vuoi? Come puoi cambiare questa situazione?
+            + \ {charTag(PG, "neutral")}:                   Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)-> 
                 
             - 
+        {charTag(ThirdCharacter, "neutral")}:               Comunque la famiglia è una cosa strana, {player_name}.
+                                                            Io non ci credo che ci possa essere tutto questo amore con qualcuno con cui cresci.
+                                                            Vedi troppe brutte cose.
+
             -> third_char_closing_storylet ->
             -> options_third_character
     
@@ -468,7 +580,49 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
 
-        {charTag(ThirdCharacter, "neutral")}:      Frase
+        {charTag(ThirdCharacter, "neutral")}:               Forse col Poggi qui saprei cosa dire per andarmene.
+                                                            O per lo meno ci faremmo quattro risate in più.
+                                                            Lui è quel tipo di amico che...
+                                                            Uh.
+
+        {//Blocco per reazioni e commenti legati al genere.
+            - thirdChar_recordedPlayerPronoun == him:
+            {charTag(ThirdCharacter, "jester")}:            Quello con cui puoi parlare delle tipe ma anche fare un discorso serio, quel tipo di amico, hai presente?
+                                                
+            - else:
+            {charTag(ThirdCharacter, "neutral")}:           Ai ragazzi non piace parlare troppo dei cazzi propri.
+                                                            Però si può stare assieme e fare qualcosa tipo il calcio e magari nel mentre la dici anche la cosa seria.
+                                                            E lui è quello a cui puoi dire la cosa seria.
+                                                            E poi cazzeggiare.
+        } 
+        {charTag(ThirdCharacter, "neutral")}:               L'ho conosciuto alle medie, e all'inizio lo odiavo.
+                                                            Tutto pulitino e ordinato, un vero damerino.
+                                                            Sua mamma era una che pensava di vivere a Parigi, quando c'aveva la casa attaccata alla tangenziale.
+                                                            Con gli altri l'abbiamo menato un paio di volte, ma c'era qualcosa di orgoglioso in lui, e alla fine dopo il primo anno mi sono ritrovato a fare le pause con lui invece che con gli altri idioti con cui uscivo.
+                                                            Lui e io abbiamo fatto anche le altre scuole assieme, persino i primi due anni di Ingegneria.
+                                                            Anche se io volevo solo cazzeggiare.
+                                                            Diciamocelo: non posso essere <b>così</b> bono e pure intelligente.
+                                                            E lì la gente era troppo seria, non sai la rottura di balle.
+                                                            L'Amanda l'ha conosciuta lì, e lei è tipo l'opposto dell'ingegnere, ed è una che dà le paste a tutti.
+                                                            È lei l'uomo di casa, e quando è nata Olivia il Poggi è stato felice di smollare il lavoro e fare il mammo.
+                                                            Quelli del calcetto lo prendono in giro ancora, tranne Rocco, ma per me è una cosa proprio da Poggi.
+                                                            Lui se ne frega delle cose che pensano gli altri.
+                                                            Anche per questo potevo dirgli tutte le mie merde.
+                                                            Quando ho perso il lavoro, il lavoro figo, mi ha ascoltato per ore e questa cosa secondo me mi ha salvato.
+                                                            Salvato da brutti pensieri.
+                                                            Però ora che c'è l'Olivia, qualcosa si è raffreddato.
+                                                            Non so dire cosa, all'inizio mi ha anche fatto fare da padrino al battesimo.
+                                                            Forse gli pesa non avere un lavoro, raccontare solo della bambina.
+                                                            O forse un po' gli faccio pena.
+                                                            A volte me lo chiedo.
+                                                            A calcetto a volte me le fanno le battute, sul fatto che Donatella mi ha lasciato perché non mi tira abbastanza o perché faccio un lavoro da ragazzino.
+                                                            So che il Poggi non è uno che ragiona così.
+                                                            Però ha sempre trovato il tempo per fare cose assieme anche quando si è messo con l'Amanda, anche dopo il matrimonio.
+                                                            Anche i primi due anni dell'Olivia.
+                                                            Ma ora.
+                                                            Nulla.
+                                                            Anche quando è finita con Donatella, giusto un paio di bevute assieme e basta.
+                                                            E gli auguri per le feste e per il compleanno.
 
         
             + \ {charTag(PG, "neutral")}:               Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
@@ -490,7 +644,11 @@
             + \ {charTag(PG, "neutral")}:               Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)-> 
                 
-            - 
+            -
+        {charTag(ThirdCharacter, "neutral")}:               Comunque {player_name} io non ho altro da dirti.
+                                                            Ho una vita semplice, magari non perfetta ma felice.
+                                                            Per cui fai quella roba della riscrittura quando vuoi così posso tornare alla mia birra in frigo.
+                                                            Sempre che non se la sia rubata di nuovo lo Stracciamaroni.
             -> third_char_closing_storylet ->
             -> options_third_character
     
