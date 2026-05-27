@@ -27,6 +27,9 @@
         //Variabile per il tempo di attesa tra una lettera e l'altra
         VAR fifthChar_mailPause = 0
         VAR fifthChar_mailPauseDuration = 5
+    //Altre variabili ad hoc
+        //Tracciamento delle parolacce dette da Boccale
+        VAR fifthChar_slurDetector = 0    
 
 
 //Stato della PNG

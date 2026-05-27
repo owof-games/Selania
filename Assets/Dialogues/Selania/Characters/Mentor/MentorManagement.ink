@@ -83,3 +83,50 @@
 
 ->->
 
+
+
+
+=== function fifthChar_slurDetectorFunction ()
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
+{
+    - not are_two_entities_together(Mentor, PG):
+        ~ return
+}
+
+
+{fifthChar_slurDetector:
+
+    - 0:
+    {charTag(Mentor, "neutral")}:               {charNameThree}! 
+                                                Controlla il tuo linguaggio per favore, non sai chi potrebbe sentirti, o ripetere quello che hai detto.
+    {charTag(ThirdCharacter, "neutral")}:       Hai ragione zia, scusa.                                            
+
+    - 1:
+    {charTag(Mentor, "sorry")}:                 {charNameThree}! 
+                                                Non voglio risultare pesante, ma non è un posto adatto alle parolacce.
+    {charTag(ThirdCharacter, "neutral")}:       Giusto, me l'hai pure già detto.                                            
+
+    - 2:
+    {charTag(Mentor, "sad")}:                   Mi sembra di aver a che fare con un bambino.
+                                                {charNameThree}, basta parolacce.
+    {charTag(ThirdCharacter, "jester")}:        Ci sto provando, giuro!                                           
+
+    - 3:
+    {charTag(Mentor, "bored")}:                 Quelle cavolo di parolacce!
+    {charTag(Mentor, "sad")}:                   Scusa, ma mi danno sui nervi tantissimo {charNameThree}.
+    {charTag(ThirdCharacter, "jester")}:        Non so che farci, mi emoziono e dico parolacce, è più forte di me!
+    - 4:
+    {charTag(Mentor, "sad")}:                   Mi arrendo.
+                                                Mi arrendo.
+                                                ~ change_entity_place(Mentor)
+
+    - else:
+        //Da qui in avanti Mentore se ne andrà.
+        ~ change_entity_place(Mentor)
+
+}

@@ -1,9 +1,6 @@
 === third_char_main_storylets
 
 = one
-    //Non mettere cose TW qui
-    //Obiettivo: Presentare l’elemento delle bugie. Vengono dette cose sconfessate poi nella terza storia.
-    //Contenuto: Compleanno, giochi
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -120,7 +117,9 @@
         {//Blocco per reazioni e commenti legati al genere.
             - thirdChar_recordedPlayerPronoun == him:
             {charTag(ThirdCharacter, "neutral")}:               Quella grande stronza della mia ex.
-                                                        
+            //Check parolacce da parte di Mentore
+            ~ fifthChar_slurDetectorFunction()
+                                        
 
             - else:
             {charTag(ThirdCharacter, "neutral")}:               La mia ex.
@@ -185,7 +184,9 @@
         {//Blocco per reazioni e commenti legati al genere.
             - thirdChar_recordedPlayerPronoun == him:
             {charTag(ThirdCharacter, "neutral")}:               Sei un coglione, amico!
-                                                                Ma lo sono anche io, quindi top!
+            //Check parolacce da parte di Mentore
+            ~ fifthChar_slurDetectorFunction()
+                                                                Io sono un idiota, per cui siamo una grande squadra!
 
             - else:
             {charTag(ThirdCharacter, "neutral")}:               Ovviamente ti prendo in giro, non ti preoccupare.
@@ -197,7 +198,9 @@
             -
         {charTag(ThirdCharacter, "jester")}:                    Comunque lavoro in una birreria.
                                                                 Anzi: LA birreria.
-                                                                La migliore della zona.
+                                                                Che si chiama <i>Il baretto</i>, che è il nome che aveva quando era un bar.
+                                                                E l'aveva mio padre in gestione.
+                                                                Comunque è la migliore birreria della zona.
                                                                 Perché l'unica nella frazione sfigatissima in cui vivo.
                                                                 Pura periferia.
                                                                 Però non è così male, se ignori la distesa infinita di appartamenti.
@@ -248,6 +251,8 @@
                                                                 Mi capisce sempre.
                                                                 Quando quell'altra mi ha smollato dopo tredici anni...
                                                                 Cazzo.
+        //Check parolacce da parte di Mentore
+            ~ fifthChar_slurDetectorFunction()                                                        
                                                                 Tredici fottutissimi anni, di cui cinque di convivenza.
                                                                 Non pensavo mi sarei innamorato di nuovo.
                                                                 Ne ho avute di tipe, eh!
@@ -286,6 +291,8 @@
         }                                                    
         {charTag(ThirdCharacter, "jester")}:                    Su quelle app è pieno di ragazzi più giovani, che magari ne sanno meno del mondo, ma non è quello che si vuole da una relazione vero?
                                                                 Però con le clienti ogni tanto si riesce a scopare.
+        //Check parolacce da parte di Mentore
+            ~ fifthChar_slurDetectorFunction()                                                        
                                                                 Unica regola: solo le turiste.
                                                                 Perché se me ne faccio una della frazione poi so come va a finire.
                                                                 Un po' come tutte le cattive voci che hanno messo in giro quando Dona mi ha mollato.
@@ -299,6 +306,8 @@
                                                                 Non è che si deve far vedere proprio tutto quando si è con gli altri.
         }                                                      
                                                                 Le persone non si fanno mai i cazzi propri.
+        //Check parolacce da parte di Mentore
+            ~ fifthChar_slurDetectorFunction()                                                        
                                                                 Con le turiste non è così difficile, alla fine arrivano qui e vogliono solo sfasciarsi di birra, e a quel punto non gli importa di nulla.
                                                                 Però con Ava è diverso.
                                                                 Lei mi fa stare bene davvero, non mi giudica.
@@ -392,7 +401,7 @@
                                                                 Se la guardi bene da vicino non supera un sei, sei e mezzo se hai bevuto.
                                                 
             - else:
-            {charTag(ThirdCharacter, "neutral")}:               Anche perché sennò parla della sua cazzo di azienda edile e della fatica con le tasse e io vorrei solo menarlo.
+            {charTag(ThirdCharacter, "neutral")}:               Anche perché sennò parla della sua azienda edile e della fatica con le tasse e io vorrei solo menarlo.
                                                                 C'ha una casa più grande della mia, di quella di mia sorella e di quella di mio padre messe assieme, il maledetto.
         }  
                                                                 Poi il Giova, che si è sposato da poco ma è sempre fuori casa e la moglie è disperata.
@@ -466,7 +475,7 @@
         - are_two_entities_together(FirstCharacter, PG):
         {
         - grimoire_thirdChar has grimFirstThirdChar:
-        {charTag(FirstCharacter, "annoyed")}:                  Commento infastidito di Chitarra.
+        {charTag(FirstCharacter, "annoyed")}:                   Commento infastidito di Chitarra.
 
         - else:
         {charTag(FirstCharacter, "neutral")}:                   Commento neutro/positivo di Chitarra.    
@@ -491,6 +500,8 @@
          {//Blocco per reazioni e commenti legati al genere.
             - thirdChar_recordedPlayerPronoun == him:
             {charTag(ThirdCharacter, "neutral")}:               La grandissima stronza.
+            //Check parolacce da parte di Mentore
+            ~ fifthChar_slurDetectorFunction()
                                                 
             - else:
             {charTag(ThirdCharacter, "neutral")}:               La mia ex.
@@ -527,6 +538,8 @@
             {charTag(ThirdCharacter, "melanchonic")}:           No.
         }                                                                                  
                                                                 E lei lo riempie di cazzate.
+        //Check parolacce da parte di Mentore
+            ~ fifthChar_slurDetectorFunction()                                                        
                                                                 Dice che da quando vivono assieme è lei che deve fare tutto in casa e lui non muove un dito.
                                                                 E che lei non può sapere cosa vuole perché non ha mai avuto una vita sua perché è stato lui a crescerla, dice.
                                                                 Perché conosce il mondo solo attraverso di lui.
@@ -541,11 +554,13 @@
                                                                 Dentro, una dedica e una frase: "Ti aspetterò all'aeroporto quando tornerai, per chiederti di nuovo di sposarmi".
                                                                 E lei gli rimanda indietro i biglietti scrivendogli un messaggio per dirgli che non deve aspettarla, né all'aeroporto né a casa.
                                                                 Ma più.
-                                                                E lui capisce che lei non se ne è andata perché deve scoprire sé stessa o cazzate del genere.
+                                                                E lui capisce che lei non se ne è andata perché deve scoprire sé stessa o robe del genere.
                                                                 Ma perché lui sta invecchiando, non ha chissà quale giro di amici fighi, e non guadagna abbastanza.
         {//Blocco per reazioni e commenti legati al genere.
             - thirdChar_recordedPlayerPronoun == him:
             {charTag(ThirdCharacter, "angry")}:                 Alla fine lei stava solo cercando un nuovo cazzo, più giovane, più figo, più ricco.
+            //Check parolacce da parte di Mentore
+            ~ fifthChar_slurDetectorFunction()
                                                 
             - else:
             {charTag(ThirdCharacter, "melanchonic")}:           Finisce così la storia di uno sfigato.
@@ -578,6 +593,7 @@
                 4. Lui le risponde che è la sua storia, che in quel momento noi siamo lì per lui, e che non deve rompere le scatole, che lui non viene a fare commenti quando racconta delle sue paranoie sul lavoro o il moroso o Sborotalco.
         }
 
+        {charTag(ThirdCharacter, "neutral")}:                   C'è qualcosa in questo posto, un po' ti fa venire da piangere
         {charTag(ThirdCharacter, "neutral")}:                   Alla fine comunque lui ha trovato qualcuno che la ama.
                                                                 A volte le cose vanno in vacca solo per poter migliorare.
         {charTag(ThirdCharacter, "neutral")}:                   Ora che hai sentito qual è la cosa che ancora mi fa incazzare, immagino saprai anche come farmi uscire di qui.
@@ -604,7 +620,7 @@
         {charTag(ThirdCharacter, "neutral")}:                   {charNameFive} dice che io posso andarmene solo se mi riscrivi.
                                                                 Che sono io a dirti che mi devi riscrivere.
                                                                 Ma non riesco a chiedertelo, e secondo lei è perché non ho preso un punto importante.
-                                                                Secondo me sono cazzate, ed è colpa di qualcosa qui.
+                                                                Secondo me è colpa di qualcosa qui.
                                                                 Mi avete drogato?
                                                                 Vabbè, per ora reggiamo il gioco.
                                                                 {charNameFive} dice che spesso i problemi sono in famiglia.
@@ -714,7 +730,7 @@
             {charTag(ThirdCharacter, "jester")}:                Quello con cui puoi parlare delle tipe ma anche fare un discorso serio, quel tipo di amico, hai presente?
                                                 
             - else:
-            {charTag(ThirdCharacter, "neutral")}:               Ai ragazzi non piace parlare troppo dei cazzi propri.
+            {charTag(ThirdCharacter, "neutral")}:               Ai ragazzi non piace parlare troppo delle proprie faccende.
                                                                 Però si può stare assieme e fare qualcosa tipo il calcio e magari nel mentre la dici anche la cosa seria.
                                                                 E lui è quello a cui puoi dire la cosa seria.
                                                                 E poi cazzeggiare.
@@ -733,7 +749,7 @@
         }                                                          
                                                                 Con gli altri l'abbiamo menato un paio di volte, ma c'era qualcosa di orgoglioso in lui, e alla fine dopo il primo anno mi sono ritrovato a fare le pause con lui invece che con gli altri idioti con cui uscivo.
                                                                 Lui e io abbiamo fatto anche le altre scuole assieme, persino i primi due anni di Ingegneria.
-                                                                Anche se io volevo solo cazzeggiare.
+                                                                Anche se io volevo solo fare festa.
                                                                 Diciamocelo: non posso essere <b>così</b> bono e pure intelligente, sennò chi le ferma più le tipe?
                                                                 E lì la gente era troppo seria, non sai la rottura di balle.
                                                                 Amanda l'ha conosciuta lì, e lei è tipo l'opposto dell'ingegnere, divertente come poche, ed è una che dà le paste a tutti.
