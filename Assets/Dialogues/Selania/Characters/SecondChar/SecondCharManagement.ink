@@ -195,7 +195,7 @@
             - secondChar_InkLevel == ink_low:
                     {charTag(SecondCharacter, "melanchonic")}:              Che io non ho mica capito cosa pensi.
                                                                             Sei come quando guardo nel terrario e non capisco se c'è l'insetto stecco o sono solo rami.
-                                                                            Magari c'hai provato a capirmi ma boh, mica ci sei {player_pronoun has him:riuscito|{player_pronoun has her:riuscita|riuscitə}}.
+                                                                            Magari hai provato a capirmi ma boh, mica ci sei {player_pronoun has him:riuscito|{player_pronoun has her:riuscita|riuscitə}}.
             
             - secondChar_InkLevel == ink_normal:
                     {charTag(SecondCharacter, "melanchonic")}:              Che si vede che sei grande.

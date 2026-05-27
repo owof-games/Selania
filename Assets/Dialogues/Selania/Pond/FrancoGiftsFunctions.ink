@@ -230,7 +230,7 @@
 
             {charTag(Franco, "party")}:                                                             Girino!
             {stopping:
-                                                        -                                           Tu c'hai i superportieri!
+                                                        -                                           Tu hai i superportieri!
                                                                                                     Come zia Graaak, che sa sempre quando sto per respirare.
                                                             {charTag(Franco, "neutral")}:           La pianta che ti serve sta già crescendo in serra.
 

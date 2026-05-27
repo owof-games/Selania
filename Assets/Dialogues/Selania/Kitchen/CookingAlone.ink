@@ -186,7 +186,7 @@
             + \ {charTag(PG, "neutral")}:                       <i>Decoro con della granella di affetto.</i>
                     ~ kitchen_recipeComplement = "granella di affetto"
                 -> glyph_choice_manager(true, waterC)->    
-                {charTag(Franco, "party")}:                     Eh, ma si vede che tu c'ha il cuore grande.
+                {charTag(Franco, "party")}:                     Eh, ma si vede che tu hai il cuore grande.
                 {charTag(Franco, "neutral")}:                   Come zia Graaak.
                                                                 Per questo deve andare dal dottore.
                                                                 Una volta lei gli ha detto: "Ma ovvio dottore che c'ho il cuore grosso, con un nipote così scemo."

@@ -990,7 +990,7 @@
                                                                 C'è sia quella cosa di prima dell'acqua antica la storia blah blah blah.
         {charTag(FirstCharacter, "affectionate")}:              Ma è anche un ponte con la storia delle persone che ho conosciuto.
         {charTag(FirstCharacter, "neutral")}:                   Quelle legate alla musica, come mio padre o le compagne del conservatorio o le ragazze della band.
-                                                                E anche chi con la musica c'ha avuto poco a che fare, come Ennio o le colleghe di lavoro.
+                                                                E anche chi con la musica ha avuto poco a che fare, come Ennio o le colleghe di lavoro.
         {charTag(FirstCharacter, "curious")}:                   Creare secondo me significa immaginare nuovi collegamenti. 
                                                                 Anche tra persone che non si conoscono.
         {charTag(FirstCharacter, "affectionate")}:              E fare da testimone di queste storie.

@@ -318,7 +318,7 @@
     {charTag(FirstCharacter, "curious")}:                               In che senso, scusa?
     {charTag(Franco, "party")}:                                         {charNameOne}!
                                                                         Prima è passata zia Graaak e ti voleva parlare!
-    {charTag(Franco, "neutral")}:                                       Tullio dice che c'ha una cotta per te.
+    {charTag(Franco, "neutral")}:                                       Tullio dice che ha una cotta per te.
                                                                         Però non ho visto dove si è bruciata.
     {charTag(Franco, "question")}:                                      O se ti deve bruciare.
     {charTag(Franco, "neutral")}:                                       Non sarebbe molto gentile però, vero?

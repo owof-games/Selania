@@ -903,7 +903,7 @@
                     -> glyph_choice_manager(false, airC)->
             {charTag(SecondCharacter, "melanchonic")}:          Papà dice che è allergico.
             {charTag(SecondCharacter, "angry")}:                Ma secondo me non è vero.
-                                                                Solo non c'ha voglia di "altre rotture di maroni", come dice lui.
+                                                                Solo non ha voglia di "altre rotture di maroni", come dice lui.
             {charTag(SecondCharacter, "energy")}:               Ma mio fratello dice che appena sono più tranquilli coi soldi lui e il suo amico ne prenderanno uno!
 
             + \ {charTag(PG, "neutral")}:                       Hai mai provato a fare le cose che correggi nel mondo reale?

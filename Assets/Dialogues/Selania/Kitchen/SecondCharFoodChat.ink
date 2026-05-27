@@ -386,7 +386,7 @@
                 {charTag(SecondCharacter, "neutral")}:          Nonna dice che tutto migliora, sempre.
                                                                 Però a me interessa più che una cosa arriva da qualche parte.
                                                                 Mica puoi migliorare all'infinito.
-                                                                Non c'ha senso.
+                                                                Non ha senso.
     
             + (aether3)\ {charTag(PG, "neutral")}:              <i>Spalmo della confettura altalenante.</i>
                 ~ kitchen_recipeComplement = "confettura altalenante"
@@ -1224,7 +1224,7 @@
                         
                         -> kitchen_moon_feedback -> 
 
-                {charTag(SecondCharacter, "emotional")}:        Mi è piaciuto tanto tanto che c'hai messo {ingredientTranslator(kitchen_secondCharExtraIngredient)}.
+                {charTag(SecondCharacter, "emotional")}:        Mi è piaciuto tanto tanto che hai messo {ingredientTranslator(kitchen_secondCharExtraIngredient)}.
                 {
                     - kitchen_firstCharExtraIngredient == universalIngredient:
                     {charTag(SecondCharacter, "emotional")}:    Ha lo stesso sapore della torta di nonna.
@@ -1264,7 +1264,7 @@
                         
                         -> kitchen_moon_feedback -> 
 
-                {charTag(SecondCharacter, "neutral")}:          Mi è piaciuto che c'hai messo {ingredientTranslator(kitchen_secondCharExtraIngredient)}.
+                {charTag(SecondCharacter, "neutral")}:          Mi è piaciuto che hai messo {ingredientTranslator(kitchen_secondCharExtraIngredient)}.
                                                                 Non il mio preferito, ma quasi.
                                                                 Mi ha fatto pensare una cosa.
                 {charTag(SecondCharacter, "emotional")}:        Mi piacciono i cani.
