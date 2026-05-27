@@ -77,33 +77,33 @@
                         - {charTag(SecondCharacter, "energy")}:        {grimoire_witch has grimWitchIntro:Ho sentito che hai un'amica magica nella testa, woah!|A un anno sapevo già dire tuuuutto il pi greco!}
                         - {charTag(SecondCharacter, "energy")}:        {horizontalS_discoveredDocs != ():Tutti quei bigliettini che trovi sulla panchina, chissà chi te li manda!|Una volta ho salvato un bambino da un incendio e la sua mamma mi ha fatto una torta gigante.}
 
-                        - {charTag(SecondCharacter, "neutral")}:        Sai che so volare? Ma solo quando non mi vede nessuno. E quindi non mi credono.
+                        - {charTag(SecondCharacter, "neutral")}:            Sai che so volare? Ma solo quando non mi vede nessuno. E quindi non mi credono.
 
                         - {charTag(SecondCharacter, "melanchonic")}:        Una volta ho trovato un sasso maledetto e ora i grandi mi danno la colpa anche di tutto ma io non faccio mai niente!
 
-                        - {charTag(SecondCharacter, "neutral")}:        I grandi non lo sanno ma tutti gli scivoli sono elefanti che dormono.
+                        - {charTag(SecondCharacter, "neutral")}:            I grandi non lo sanno ma tutti gli scivoli sono elefanti che dormono.
 
-                        - {charTag(SecondCharacter, "neutral")}:        Mio papà è via sempre perché è un agente segreto, ma non dirlo a nessuno.
+                        - {charTag(SecondCharacter, "neutral")}:            Mio papà è via sempre perché è un agente segreto, ma non dirlo a nessuno.
 
-                        - {charTag(SecondCharacter, "energy")}:        Una volta ho sollevato un camion solo perché mi andava.
+                        - {charTag(SecondCharacter, "energy")}:             Una volta ho sollevato un camion solo perché mi andava.
 
-                        - {charTag(SecondCharacter, "neutral")}:        So andare in macchina. Ho anche fatto le gare del mondo per adulti.
+                        - {charTag(SecondCharacter, "neutral")}:            So andare in macchina. Ho anche fatto le gare del mondo per adulti.
 
-                        - {charTag(SecondCharacter, "energy")}:        Io non ho paura di nulla.
+                        - {charTag(SecondCharacter, "energy")}:             Io non ho paura di nulla.
 
-                        - {charTag(SecondCharacter, "neutral")}:        Ho letto tutti i libri della scuola e la maestra ora mi usa al posto del computer.
+                        - {charTag(SecondCharacter, "neutral")}:            Ho letto tutti i libri della scuola e la maestra ora mi usa al posto del computer.
 
-                        - {charTag(SecondCharacter, "neutral")}:        Percy Jackson racconta la mia storia. Ma papà non vuole farlo sapere e quindi fingo di essere un bambino normale.
+                        - {charTag(SecondCharacter, "neutral")}:            Percy Jackson racconta la mia storia. Ma papà non vuole farlo sapere e quindi fingo di essere un bambino normale.
 
-                        - {charTag(SecondCharacter, "neutral")}:        So già fare le equazioni, sono più bravo della maestra.
+                        - {charTag(SecondCharacter, "neutral")}:            So già fare le equazioni, sono più bravo della maestra.
 
-                        - {charTag(SecondCharacter, "neutral")}:        A scuola una volta ho fatto un salto altissimo e sono arrivato sul tetto.
+                        - {charTag(SecondCharacter, "neutral")}:            A scuola una volta ho fatto un salto altissimo e sono arrivato sul tetto.
 
-                        - {charTag(SecondCharacter, "neutral")}:        Una volta ho trovato un dinosauro scavando nel parco giochi, ma poi i cani si sono rubati gli ossi!
+                        - {charTag(SecondCharacter, "neutral")}:            Una volta ho trovato un dinosauro scavando nel parco giochi, ma poi i cani si sono rubati gli ossi!
 
-                        - {charTag(SecondCharacter, "neutral")}:        Mamma non ci crede ma una volta ho mangiato dieci gelati e non sono stato male ma non me li dà comunque, uffa!
+                        - {charTag(SecondCharacter, "neutral")}:            Mamma non ci crede ma una volta ho mangiato dieci gelati e non sono stato male ma non me li dà comunque, uffa!
 
-                        - {charTag(SecondCharacter, "emotional")}:       Ho fatto un tema così bello che la maestra l'ha mandato a tutte le mamme per far vedere che sono il bambino più bravo della scuola!
+                        - {charTag(SecondCharacter, "emotional")}:          Ho fatto un tema così bello che la maestra l'ha mandato a tutte le mamme per far vedere che sono il bambino più bravo della scuola!
                     }
                     -> main
 

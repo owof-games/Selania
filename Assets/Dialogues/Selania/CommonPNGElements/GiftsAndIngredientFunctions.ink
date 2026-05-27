@@ -109,19 +109,19 @@
                 {   
                     - object == universalIngredient:
                         {debug: oggetto è universalIngredient.}
-                            ~ kitchen_thirdCharExtraIngredientReaction = goodReaction
+                            ~ kitchen_thirdCharExtraIngredientReaction = badReaction
 
                     - thirdChar_favouritesGifts has object:
                         {debug: l'oggetto è in thirdChar_favouritesGifts.}
-                            ~ kitchen_thirdCharExtraIngredientReaction = goodReaction
+                            ~ kitchen_thirdCharExtraIngredientReaction = badReaction
 
                     - thirdChar_goodGifts has object:
                         {debug: l'oggetto è in thirdChar_goodGifts.}
-                            ~ kitchen_thirdCharExtraIngredientReaction = mehReaction
+                            ~ kitchen_thirdCharExtraIngredientReaction = badReaction
                             
                     - else:
                          {debug: a Riccio l'oggetto non interessa.}
-                            ~ kitchen_thirdCharExtraIngredientReaction = badReaction
+                            ~ kitchen_thirdCharExtraIngredientReaction = mehReaction
                             
                 }
             
@@ -129,19 +129,14 @@
                 {debug: passo dai valori dello zaino.}
                 
                 {   
-                    
-                    - thirdChar_favouritesGifts has object:
-                       {charTag(TheWitch, witch_state())}:   <i>{~{translator(thirdChar_ActualName)} abbraccia {player_name}, entusiasta.|Sulle guance di {translator(thirdChar_ActualName)} compare una lacrima.|{translator(thirdChar_ActualName)} è un concentrato di gioia.}</i>
-                        ~ thirdChar_InkLevel ++
-                        ~ thirdChar_InkLevel ++
+                
+                    - thirdChar_favouritesGifts has object or thirdChar_goodGifts has object or object == universalIngredient:
+                       {charTag(TheWitch, witch_state())}:    <i>{~{translator(thirdChar_ActualName)} nasconde a fatica un fremito di fastidio.|{translator(thirdChar_ActualName)} ignora l'oggetto.}</i>
+                
          
-                    //Presupponiamo che un po' ma non troppo le piaccia l'ingrediente universale
-                    - thirdChar_goodGifts has object or object == universalIngredient:
-                        {charTag(TheWitch, witch_state())}:   <i>{~{translator(thirdChar_ActualName)} prova ad assaggiare il dono, divertito.|Sulle guance di {translator(thirdChar_ActualName)} compare un grande sorriso.|{translator(thirdChar_ActualName)} saltella.}</i>
-                        ~ thirdChar_InkLevel ++
-                    
                     - else:
-                        {charTag(TheWitch, witch_state())}:   <i>{~{translator(thirdChar_ActualName)} insegue una lucertola con lo sguardo.|{translator(thirdChar_ActualName)} lascia scivolare il dono a terra.}</i>
+                        {charTag(TheWitch, witch_state())}:   <i>{~{translator(thirdChar_ActualName)} sembra divertito dal dono.|{translator(thirdChar_ActualName)} sorride e dice qualcosa su una doppietta del Beccalossi.}</i>
+                        ~ thirdChar_InkLevel ++
                 }
             
         }      

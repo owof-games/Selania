@@ -35,26 +35,37 @@
             {
                 - thirdChar_recordedPlayerPronoun == him:
                 {charTag(PG, "neutral")}:                   Prima ti hanno chiamato {player_name}, e ho sentito che sei un ragazzo!
-                                                            Te la posso dire una cosa?
+
+
+                - thirdChar_recordedPlayerPronoun == her:
+                {charTag(PG, "neutral")}:                   Prima ti hanno chiamato {player_name}, e ho sentito che sei un ragazza!
+
+
+                - thirdChar_recordedPlayerPronoun == they:
+                {charTag(PG, "neutral")}:                   Prima ti hanno chiamato {player_name}, e ho sentito che sei una persona non binaria.
+
+            }   
+        }   
+
+             {
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(PG, "neutral")}:                   Te la posso dire una cosa?
                                                             Meno male.
                                                             MENO MALE!
                                                             Perché tra {charNameOne} e {charNameFive} mi serviva qualcuno con cui parlare di calcio e non solo di "cose emotive".
 
                 - thirdChar_recordedPlayerPronoun == her:
-                {charTag(PG, "neutral")}:                   Prima ti hanno chiamato {player_name}, e ho sentito che sei un ragazza!
-                                                            Sono sicuro che {charNameOne} e quella di {charNameFive} sei felice che ci sia qualcuno con cui non devi parlare della posta del cuore.
+                {charTag(PG, "neutral")}:                   Sono sicuro che {charNameOne} e quella di {charNameFive} sei felice che ci sia qualcuno con cui non devi parlare della posta del cuore.
                                                             Non che ci sia qualcosa di male se ti piace!
                                                             Ma non è la mia roba.
                                                             Zero proprio!
 
                 - thirdChar_recordedPlayerPronoun == they:
-                {charTag(PG, "neutral")}:                   Prima ti hanno chiamato {player_name}, e ho sentito che sei una persona non binaria.
-                                                            Te lo dico già ora: supporto tantissimo.
+                {charTag(PG, "neutral")}:                   Te lo dico già ora: supporto tantissimo.
                                                             Ma mi confondo coi nomi, figurati coi pronomi.
                                                             Però ci provo, guarda: <b>amicə</b>.
                                                             È come cercare di dire una <i>a</i> e venire bloccati da un colpo di tosse.
-            }   
-        }
+            }
 
 
         {charTag(PG, "neutral")}:                           Io sono {charNameThree}.
@@ -64,7 +75,7 @@
                                                             Un po' ci sono rimasto male: tutte quelle ore spese in palestra, e nessuno le vedrà!
                                                             Detto tra noi, le ore sono state due.
                                                             Tre se contiamo il tempo dell'iscrizione.
-                                                            Però la mia pancetta da birra piace.
+                                                            Però la mia pancetta da birra alle tipe piace.
                                                             E ora sono una birra.
                                                             Ma birra o non birra, che si combina da queste parti?
 
@@ -363,23 +374,23 @@
                                                             E la serata così passa bene.
 
         
-            + \ {charTag(PG, "neutral")}:               Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+            + \ {charTag(PG, "neutral")}:                   Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
                 
                 
-            + \ {charTag(PG, "neutral")}:               Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+            + \ {charTag(PG, "neutral")}:                   Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                     -> glyph_choice_manager(false, aetherC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Cosa ti renderà più stabile? da quali fondamenta parti?
+            + \ {charTag(PG, "neutral")}:                   Cosa ti renderà più stabile? da quali fondamenta parti?
                     -> glyph_choice_manager(false, earthC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+            + \ {charTag(PG, "neutral")}:                   Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
                 
             
-            + \ {charTag(PG, "neutral")}:               Cosa vuoi? Come puoi cambiare questa situazione?
+            + \ {charTag(PG, "neutral")}:                   Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)-> 
                 
             - 
@@ -459,7 +470,7 @@
             - else:
             {charTag(ThirdCharacter, "melanchonic")}:       Uno sfigato.
         } 
-
+                                                            
         
             + \ {charTag(PG, "neutral")}:                   Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
@@ -487,7 +498,8 @@
                 4. Lui le risponde che è la sua storia, che in quel momento noi siamo lì per lui, e che non deve rompere le scatole, che lui non viene a fare commenti quando racconta delle sue paranoie sul lavoro o il moroso o Sborotalco.
         }
 
-
+        {charTag(ThirdCharacter, "neutral")}:               Alla fine comunque lui ha trovato qualcuno che la ama.
+                                                            A volte le cose vanno in vacca solo per poter migliorare.
         {charTag(ThirdCharacter, "neutral")}:               Ora che hai sentito qual è la cosa che ancora mi fa incazzare, immagino saprai anche come farmi uscire di qui.
 
             -> third_char_closing_storylet ->
@@ -527,6 +539,7 @@
                                                             Mia mamma era una da dieci in realtà. ma è morta qualche anno fa.
                                                             Mia sorella Marta invece è una con una testa da otto ma un cuore da tre.
                                                             Un trattore.
+                                                            Quando Donatella mi ha lasciato mi ha aiutato a modo suo: passando le serate a insultarla.
                                                             Ammetto che quando si è sposata mi ha sorpreso perché ero sicuro fosse lesbica.
                                                             Anche se sta con uno che è abbastanza sottotono.
                                                             Forse per questo stanno bene assieme.

@@ -52,13 +52,37 @@
             - thirdChar_justTalked == false:
             {shuffle:
 
-                - {charTag(ThirdCharacter, "neutral")}:         Frase
+                - {charTag(ThirdCharacter, "bored")}:           Una volta sono uscito con una tipa che era carina, per carità, però palesemente non è che voleva stare con me, sentiva solo l’orologio biologico che stava per scadere e voleva un figlio. Anche io voglio un figlio, ma non con una di quarant'anni.
 
-                - {charTag(ThirdCharacter, "neutral")}:         Frase
+                - {charTag(ThirdCharacter, "bored")}:           Sei lì sulle app ed è un incubo perché le donne matchano con tutti, hanno tutte le possibilità, mentre tu ti becchi solo quella tipa ogni milione d’anni e o te la fai andare bene o resti solo.
+
+                - {charTag(ThirdCharacter, "bored")}:           Tutte ormai c'hanno l'ex tossico. Sicuro che Donatella va in dire in giro che io sono tossico, sicuro. 
+                
+                - {charTag(ThirdCharacter, "bored")}:           Sono uscita con una che mi piaceva tanto ma lei zero, non ne vuole sapere, perché “tutti i maschi sono delle merde”. Ma se dici che le donne son tutte stronze, ti mangiano vivo.
+
+                - {charTag(ThirdCharacter, "jester")}:          Alla fine c’hanno quarant'anni, trenta, ma sono tutte delle bambine.
+
+                - {charTag(ThirdCharacter, "neutral")}:         Le donne si lamentano del patriarcato tutto il tempo ma poi le porti fuori a cena e si aspettano che paghi tu.
+
+                - {charTag(ThirdCharacter, "jester")}:          Dopo il divorzio, Dario era così umiliato che non gli veniva nemmeno duro. C'ha messo un anno per andare di nuovo con una tipa.
+
+                - {charTag(ThirdCharacter, "jester")}:          Questo posto non è malaccio, ma si vede che non c'è nessuno in giro capace di riparare le cose importanti.
 
             }
+                -> main
+            
+            - grimoire_thirdChar has grimThirdCharSix:
+            {shuffle:
 
-             -> main
+                - {charTag(ThirdCharacter, "neutral")}:         Quando si inizia questa riscrittura?
+
+                - {charTag(ThirdCharacter, "bored")}:           Ma la riscrittura?
+
+                - {charTag(ThirdCharacter, "jester")}:          Sei qui per la riscrittura?
+
+                - {charTag(ThirdCharacter, "angry")}:           Sto iniziando a innervosirmi, {player_name}: facciamo la riscrittura?
+
+            }
             - else:
                 ~ thirdChar_justTalked = false
                 -> main
@@ -77,36 +101,38 @@
 
         {
             - grimoire_thirdChar has grimThirdCharOne:
-                {charTag(ThirdCharacter, "neutral")}:         Vuoi chiedermi qualcosa {player_name}? 
+                {charTag(ThirdCharacter, "jester")}:            Vuoi chiedermi qualcosa {player_name}? 
 
             - else:
-                {charTag(ThirdCharacter, "neutral")}:         Sì? 
+                {charTag(ThirdCharacter, "jester")}:            Sì? 
         }
 
         ~ thirdChar_justTalked = false
 
         //Azioni legate alla riscrittura
             //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-            + {(grimoire_thirdChar has thirdChar_minStoryletsForRewriting) && grimoire_thirdChar hasnt grimThirdCharFirstProposal && grimoire_appendices hasnt grimRewritingMentor} \ {charTag(PG, "neutral")}:         Ehi {charNameThree}, ti va di rileggere assieme le cose in modo diverso?
-                    {charTag(ThirdCharacter, "neutral")}:         Mi sa che {charNameFive} vuole dirti qualcosa prima.
+            + {(grimoire_thirdChar has thirdChar_minStoryletsForRewriting) && grimoire_thirdChar hasnt grimThirdCharFirstProposal && grimoire_appendices hasnt grimRewritingMentor} \ {charTag(PG, "neutral")}:          {charNameThree}, facciamo la riscrittura?
+                    {charTag(ThirdCharacter, "jester")}:        Io ti direi anche subito di sì.
+                                                                Ma la zia prima vuole dirti due cosine.
+                                                                Chissà se l'hai fatta arrabbiare.
                    
                                 -> main
 
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
-            + {grimoire_thirdChar has thirdChar_minStoryletsForRewriting && grimoire_thirdChar hasnt grimThirdCharFirstProposal && grimoire_appendices has grimRewritingMentor} \ {charTag(PG, "neutral")}:         Ehi {charNameThree}, ti va di rileggere assieme le cose in modo diverso?
+            + {grimoire_thirdChar has thirdChar_minStoryletsForRewriting && grimoire_thirdChar hasnt grimThirdCharFirstProposal && grimoire_appendices has grimRewritingMentor} \ {charTag(PG, "neutral")}:             {charNameThree}, facciamo la riscrittura?
                     //Incremento le variazioni del libro della Riscrittora
 
                             -> rewriting_proposal_third_character
 
         //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo
-                + {grimoire_thirdChar has grimThirdCharFirstProposal} \ {charTag(PG, "neutral")}:         Iniziamo la riscrittura?
+                + {grimoire_thirdChar has grimThirdCharFirstProposal} \ {charTag(PG, "neutral")}:                   Iniziamo la riscrittura?
                         -> rewriting_proposal_third_character
 
 
         //Azioni legate alla costruzione della relazione
 
             //Offrire un dono
-                + {thirdChar_giftedObject == () && backpack_findedGifts != ()} \ {charTag(PG, "neutral")}:         Ti voglio dare questa cosa.
+                + {thirdChar_giftedObject == () && backpack_findedGifts != ()} \ {charTag(PG, "neutral")}:          Vorrei regalarti questa cosa.
                 //Prima accedo al grimorio
                 -> grimoire_greenhouse_gifts_and_ingredient ->
 
@@ -119,25 +145,23 @@
                 {
                     - thirdChar_giftedObject != ():
 
-                        ~ object_value_for_PNG(thirdChar_giftedObject, Backpack, ThirdCharacter)
+                    ~ object_value_for_PNG(thirdChar_giftedObject, Backpack, ThirdCharacter)
 
-                            {    
-                        
-                                - thirdChar_giftedObject has thirdChar_giftedObject:
-                                    {charTag(ThirdCharacter, "neutral")}:         Frase
+                    {    
+                
+                        - thirdChar_favouritesGifts has thirdChar_giftedObject or thirdChar_goodGifts has thirdChar_giftedObject:
+                            {charTag(ThirdCharacter, "bored")}:                 Come diceva la mia maestra alle medie: cinque per l'impegno.
+                                                                                Zero per l'esecuzione.
 
-                                - thirdChar_giftedObject has thirdChar_giftedObject:
-                                    {charTag(ThirdCharacter, "neutral")}:         Frase
+                        - else:
+                            {charTag(ThirdCharacter, "jester")}:                Non so mai cosa dire coi regali, non ne ricevo tanti.
+                                                                                Quindi la cosa giusta credo sia: grazie.
+                    }
 
-
-                                - else:
-                                    {charTag(ThirdCharacter, "neutral")}:         Frase
-                            }
-
-                        //Commento    
-                        {charTag(TheWitch, witch_state())}:   <i>Dopo il dono di {player_name} {inkTranslator(ThirdCharacter)}.</i>
-                        -> achievements_onGame_statusUpdate_GM ->    
-                        -> main    
+                    //Commento    
+                    {charTag(TheWitch, witch_state())}:                         <i>Dopo il dono di {player_name} {inkTranslator(ThirdCharacter)}.</i>
+                    -> achievements_onGame_statusUpdate_GM ->    
+                    -> main    
 
                 }
 
@@ -148,39 +172,39 @@
 
                 {
                     - kitchen_firstCharIsCooking:
-                        {charTag(ThirdCharacter, "neutral")}:         C'è già {charNameOne} che cucina qualcosa.
+                        {charTag(ThirdCharacter, "bored")}:                 Con {charNameOne} che già cucina? No grazie.
                             ->main
 
                     - kitchen_firstCharCookingTogetherInvite:
-                        {charTag(ThirdCharacter, "neutral")}:         C'è già {charNameOne} che ti sta aspettando.
+                        {charTag(ThirdCharacter, "bored")}:                 C'è {charNameOne} che ti sta aspettando. Spero tu sia pront{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}} per le sue pesate.
                             ->main
 
                     - kitchen_secondCharIsCooking:
-                        {charTag(ThirdCharacter, "neutral")}:         C'è già {charNameTwo} che cucina qualcosa.
+                        {charTag(ThirdCharacter, "jester")}:                Il piccoletto sta già cucinando qualcosa da solo, sai?
                             ->main
 
                     - kitchen_secondCharCookingTogetherInvite:
-                        {charTag(ThirdCharacter, "neutral")}:         C'è già {charNameTwo} che ti sta aspettando.
+                        {charTag(ThirdCharacter, "jester")}:                {charNameTwo} che ti sta aspettando. Sono curioso di vedere cosa combinerete assieme.
                             ->main        
 
                     - contentsKitchen has Franco:
-                        {charTag(ThirdCharacter, "neutral")}:         Ma la mia amica rana ti sta aspettando lì!
+                        {charTag(ThirdCharacter, "jester")}:                Quella sagoma di Franco è lì che ti aspetta da un po' {player_name}!
                             ->main
 
 
                     - kitchen_kitchenOccupied == true:
-                        {charTag(ThirdCharacter, "neutral")}:         Sai che ho visto il fumo salire prima? Per cui di sicuro c'è qualcuno!
+                        {charTag(ThirdCharacter, "neutral")}:               Dall'odore che si sente fino a qui secondo me c'è già qualcuno che sta cucinando.
                             ->main         
 
                     - kitchen_thirdCharCookingTogetherNumberInvite > 0:
                         {stopping:
-                            - {charTag(ThirdCharacter, "neutral")}:         Prima ti ho aspettato TANTISSIMO! Vado.
+                            - {charTag(ThirdCharacter, "bored")}:           Non farmi aspettare tanto quanto prima però.
 
-                            - {charTag(ThirdCharacter, "neutral")}:         Ancora? E poi non ti vedo? Vado.
+                            - {charTag(ThirdCharacter, "bored")}:           Non so se c'ho voglia di aspettarti di nuovo sei ore. Comunque vado.
 
-                            - {charTag(ThirdCharacter, "neutral")}:         Non mi piace quando mi trattano così, {player_name}. Ti aspetto per la penultima volta.
+                            - {charTag(ThirdCharacter, "jester")}:          Mi sa che è uno scherzo che mi sta sfuggendo, visto che è quanto, quattro volte che mi ci spedisci? Non farla una quarta.
 
-                            - {charTag(ThirdCharacter, "neutral")}:         Mmm. Vado.
+                            - {charTag(ThirdCharacter, "angry")}:           Ti odio. Ma vado.
                         }
                             ~ kitchen_thirdCharCookingTogetherInvite = true
                             ~ kitchen_thirdCharCookingTogetherNumberInvite ++
@@ -189,7 +213,7 @@
                                 ->main
 
                     - else:
-                        {charTag(ThirdCharacter, "neutral")}:         Yeah! Ci vediamo in cucina!
+                        {charTag(ThirdCharacter, "jester")}:                {charNameThree} a rapporto, pronto a bruciare o avvelenare qualcosa o qualcuno!
                             ~ move_entity(ThirdCharacter, Kitchen)
                             ~ kitchen_thirdCharCookingTogetherInvite = true
                             ~ kitchen_thirdCharCookingTogetherNumberInvite ++
