@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
+﻿using System.Diagnostics.CodeAnalysis;
 using Microsoft.Extensions.Logging;
 using R3;
 using Selania.Rework.Interfaces;
@@ -14,6 +12,9 @@ namespace Selania.Rework.Components.DialogueBox
     {
         [SerializeField] [Tooltip("The dialogue box that gets controlled by these bindings.")]
         private DialogueBox dialogueBox = null!;
+
+        [SerializeField] private int minRelationshipLevel = -9;
+        [SerializeField] private int maxRelationshipLevel = 9;
 
         /// <summary>
         ///     Who was the speaker of the last line (or <c>null</c> if there has been no line yet).
@@ -46,10 +47,15 @@ namespace Selania.Rework.Components.DialogueBox
         /// </summary>
         [Inject] internal IStoryLinear StoryLinear = null!;
 
+        [Inject] internal IStoryRelationshipInfo StoryRelationshipInfo = null!;
+
         private void Start()
         {
-            // register to events and save disposables to unregister
-            StoryLinear.currentTextObservable.Subscribe(CurrentTextChanged).AddTo(this);
+            var parsedTextInfoObservable = StoryLinear.currentTextObservable.Select(ParseCurrentTextInfo);
+
+            parsedTextInfoObservable.Subscribe(CurrentTextChanged).AddTo(this);
+
+            HandleRelationshipLevel(parsedTextInfoObservable);
 
             StoryLinear.conversationInProgressObservable.Subscribe(ConversationInProgress).AddTo(this);
 
@@ -59,13 +65,47 @@ namespace Selania.Rework.Components.DialogueBox
 
             dialogueBox.continueRequestsObservable.Subscribe(ContinueActionOnPerformed).AddTo(this);
 
-            StoryGamerMode.gamerMode.Subscribe(OnGamerModeChanged).AddTo(this);
-
             // hook to all ink variables, and update the ink only when it's the current speaker
             foreach (var c in SettingsDialogueBox.characterInkVariables)
             {
                 SubscribeToCharacterInk(c.Character, c.InkVariable);
             }
+        }
+
+        private void HandleRelationshipLevel(Observable<ParsedText> parsedTextInfoObservable)
+        {
+            // extract the relationship level with the latest character we're speaking with (or null if there's no relationship level tracked with that character)
+            var relationshipLevelObservable = parsedTextInfoObservable
+                .Select(data => data.Character)
+                .WhereNotNull()
+                .Select(character =>
+                    StoryRelationshipInfo.GetRelationshipLevelObservableFor(SettingsDialogueBox, character))
+                .Switch();
+
+            // update the relationship status to the correct level when there's a valid level
+            relationshipLevelObservable
+                .WhereNotNull()
+                .Subscribe(level =>
+                    dialogueBox.SetRelationshipStatusLevel(
+                        Mathf.InverseLerp(minRelationshipLevel, maxRelationshipLevel, level)))
+                .AddTo(this);
+
+            // show the relationship status when in gamer mode and there's a valid level
+            relationshipLevelObservable.Select(x => x.HasValue)
+                .CombineLatest(StoryGamerMode.gamerMode, (hasValidLevel, isGamerMode) => (hasValidLevel, isGamerMode))
+                .Subscribe(data =>
+                {
+                    var (hasValidLevel, isGamerMode) = data;
+                    if (hasValidLevel && isGamerMode)
+                    {
+                        dialogueBox.EnableRelationshipStatus();
+                    }
+                    else
+                    {
+                        dialogueBox.DisableRelationshipStatus();
+                    }
+                })
+                .AddTo(this);
         }
 
         private void SubscribeToCharacterInk(string character, string inkVariable)
@@ -118,29 +158,25 @@ namespace Selania.Rework.Components.DialogueBox
             if (StoryLinear.canContinue) StoryLinear.Continue();
         }
 
-        /// <summary>
-        ///     Given a set of tags in the form &lt;category&gt;:&lt;value&gt;, this method returns the value of the first tag
-        ///     found with the given category.
-        /// </summary>
-        /// <param name="tags">Set of tags to look in.</param>
-        /// <param name="category">Category to look for.</param>
-        /// <returns>The value of the first tag with the given category, or <c>null</c> if none has been found.</returns>
-        private static string? GetValue(ICollection<Tag> tags, string category)
+        private ParsedText ParseCurrentTextInfo(
+            IStoryLinear.CurrentTextInfo currentTextInfo)
         {
-            return tags.FirstOrDefault(t => t.category == category)?.value;
+            currentTextInfo.Deconstruct(out var currentText);
+
+            TryGetSpeakerAndPortraitWithNewSystem(currentText, out var character, out var displayName, out var mood,
+                out var actualText);
+
+            return new ParsedText(character, displayName, mood, actualText);
         }
 
         /// <summary>
         ///     Invoked whenever the current text changes.
         /// </summary>
-        /// <param name="currentTextInfo">Info about the current text.</param>
-        private void CurrentTextChanged(IStoryLinear.CurrentTextInfo currentTextInfo)
+        /// <param name="parsedText">The data about the current text line.</param>
+        private void CurrentTextChanged(ParsedText parsedText)
         {
-            // extract fields
-            currentTextInfo.Deconstruct(out var currentText);
+            var (character, displayName, mood, actualText) = parsedText;
 
-            TryGetSpeakerAndPortraitWithNewSystem(currentText, out var character, out var displayName, out var mood,
-                out var actualText);
             _lastSpeakingCharacter.Value = character;
 
             if (displayName != _lastSpeakingDisplayName && character != null && displayName != null)
@@ -244,9 +280,6 @@ namespace Selania.Rework.Components.DialogueBox
                 });
         }
 
-        private void OnGamerModeChanged(bool gamerMode)
-        {
-            // dialogueBox.
-        }
+        private record ParsedText(string? Character, string? DisplayName, string? Mood, string ActualText);
     }
 }

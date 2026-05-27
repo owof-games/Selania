@@ -24,7 +24,8 @@ namespace Selania.Rework.Components
     [CreateAssetMenu(fileName = "InkBridge", menuName = "Selania/Create Ink Bridge", order = 0)]
     public class InkBridge : ScriptableObjectSetupSupport, IStoryChangeRoomNotifier, IStoryChoicesSelector,
         IStoryLinear, IStoryChangeRoomContentsNotifier, IStoryStateSerializer, IStoryAudioSupport, IStoryGrimoire,
-        IStoryInkInfo, IStoryGamerMode, IStoryCharacterRelationshipStatus, IStoryVariableValues, IStoryDebugSupport
+        IStoryInkInfo, IStoryGamerMode, IStoryCharacterRelationshipStatus, IStoryVariableValues, IStoryDebugSupport,
+        IStoryRelationshipInfo
     {
         [Header("Ink Settings")] [SerializeField] [Tooltip("The JSON asset containing the story.")]
         private TextAsset? inkAssetJson;
@@ -65,6 +66,23 @@ namespace Selania.Rework.Components
 
         /// <inheritdoc />
         public Observable<bool> gamerMode => GetVariableObservable<bool>(gamerModeVariableName);
+
+        #endregion
+
+        #region
+
+        public Observable<int?> GetRelationshipLevelObservableFor(ISettingsDialogueBox settingsDialogueBox,
+            string characterName)
+        {
+            // find the relationship variable for this character 
+            var variable = settingsDialogueBox.characterRelationshipVariables
+                .FirstOrDefault(data => data.Character == characterName).RelationshipVariable;
+
+            // if no variable was found, or the variable is not set, return null, otherwise return the value from the ink story
+            return string.IsNullOrEmpty(variable)
+                ? Observable.Return((int?)null)
+                : GetVariableObservable<int>(variable).Select(x => (int?)x);
+        }
 
         #endregion
 

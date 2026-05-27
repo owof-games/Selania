@@ -213,6 +213,10 @@ namespace Selania.Rework.Components
             public string inkVariableName { get; private set; } = null!;
 
             [field: SerializeField]
+            [field: Tooltip("Name of the ink variable containing the relationship value.")]
+            public string relationshipVariableName { get; private set; } = null!;
+
+            [field: SerializeField]
             [field: Tooltip("Portrait used in the grimoire.")]
             public Sprite grimoirePortrait { get; private set; } = null!;
 
@@ -301,6 +305,10 @@ namespace Selania.Rework.Components
         /// <inheritdoc />
         public IEnumerable<(string, string)> characterInkVariables =>
             characterInfo.Select(c => (c.listName, c.inkVariableName));
+
+        /// <inheritdoc />
+        public IEnumerable<(string, string)> characterRelationshipVariables =>
+            characterInfo.Select(c => (c.listName, c.relationshipVariableName));
 
         #endregion
 

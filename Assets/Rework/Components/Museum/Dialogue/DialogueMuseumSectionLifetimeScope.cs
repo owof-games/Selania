@@ -16,7 +16,7 @@ namespace Selania.Rework.Components.Museum.Dialogue
             builder.RegisterSettings(settings);
             builder.RegisterLogger();
             builder.Register<EmptyStory>(Lifetime.Singleton).As<IStoryLinear>().As<IStoryChoicesSelector>()
-                .As<IStoryInkInfo>().As<IStoryGamerMode>();
+                .As<IStoryInkInfo>().As<IStoryGamerMode>().As<IStoryRelationshipInfo>();
             builder.Register<EmptyAudioSystem>(Lifetime.Singleton).As<IAudioSystem>();
         }
 
@@ -36,7 +36,8 @@ namespace Selania.Rework.Components.Museum.Dialogue
             }
         }
 
-        private class EmptyStory : IStoryLinear, IStoryChoicesSelector, IStoryInkInfo, IStoryGamerMode
+        private class EmptyStory : IStoryLinear, IStoryChoicesSelector, IStoryInkInfo, IStoryGamerMode,
+            IStoryRelationshipInfo
         {
             public Observable<IStoryChoicesSelector.ChoicesInfo> choicesObservable =>
                 Observable.Empty<IStoryChoicesSelector.ChoicesInfo>();
@@ -68,6 +69,17 @@ namespace Selania.Rework.Components.Museum.Dialogue
 
             public void Continue()
             {
+            }
+
+            public Observable<int?> GetRelationshipLevelObservableFor(ISettingsDialogueBox settingsDialogueBox,
+                string characterName)
+            {
+                return Observable.Return((int?)0).Concat(Observable.Never<int?>());
+            }
+
+            public int GetRelationshipWith(ISettingsDialogueBox settingsDialogueBox, string characterName)
+            {
+                return 0;
             }
         }
     }
