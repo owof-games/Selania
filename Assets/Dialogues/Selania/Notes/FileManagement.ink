@@ -10,3 +10,4 @@
 //{player_pronoun has him:o|{player_pronoun has her:a|ə}}
 //{player_pronoun has him:gli|{player_pronoun has her:le|lə}}
 // È 
+//{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}}.
