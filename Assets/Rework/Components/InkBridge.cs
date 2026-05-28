@@ -22,10 +22,21 @@ namespace Selania.Rework.Components
     ///     The object that wraps the Ink story and interprets its contents for the rest of the application.
     /// </summary>
     [CreateAssetMenu(fileName = "InkBridge", menuName = "Selania/Create Ink Bridge", order = 0)]
-    public class InkBridge : ScriptableObjectSetupSupport, IStoryChangeRoomNotifier, IStoryChoicesSelector,
-        IStoryLinear, IStoryChangeRoomContentsNotifier, IStoryStateSerializer, IStoryAudioSupport, IStoryGrimoire,
-        IStoryInkInfo, IStoryGamerMode, IStoryCharacterRelationshipStatus, IStoryVariableValues, IStoryDebugSupport,
-        IStoryRelationshipInfo
+    public class InkBridge : ScriptableObjectSetupSupport,
+        IStoryChangeRoomNotifier,
+        IStoryChoicesSelector,
+        IStoryLinear,
+        IStoryChangeRoomContentsNotifier,
+        IStoryStateSerializer,
+        IStoryAudioSupport,
+        IStoryGrimoire,
+        IStoryInkInfo,
+        IStoryGamerMode,
+        IStoryCharacterRelationshipStatus,
+        IStoryVariableValues,
+        IStoryDebugSupport,
+        IStoryRelationshipInfo,
+        IStorySigilSupport
     {
         [Header("Ink Settings")] [SerializeField] [Tooltip("The JSON asset containing the story.")]
         private TextAsset? inkAssetJson;
@@ -1349,51 +1360,7 @@ namespace Selania.Rework.Components
 
             if (currentSigil.Count >= 1)
             {
-                var sigilName = currentSigil.Keys.First().itemName;
-                var glyphs = new ISettingsSigils.GlyphType[3];
-                for (var i = 0; i < 3; i++)
-                {
-                    if (HasValueInCurrentPosition(fireSigilListsByPosition))
-                    {
-                        glyphs[i] = ISettingsSigils.GlyphType.Fire;
-                        continue;
-                    }
-
-                    if (HasValueInCurrentPosition(airSigilListsByPosition))
-                    {
-                        glyphs[i] = ISettingsSigils.GlyphType.Air;
-                        continue;
-                    }
-
-                    if (HasValueInCurrentPosition(waterSigilListsByPosition))
-                    {
-                        glyphs[i] = ISettingsSigils.GlyphType.Water;
-                        continue;
-                    }
-
-                    if (HasValueInCurrentPosition(earthSigilListsByPosition))
-                    {
-                        glyphs[i] = ISettingsSigils.GlyphType.Earth;
-                        continue;
-                    }
-
-                    if (HasValueInCurrentPosition(aetherSigilListsByPosition))
-                    {
-                        glyphs[i] = ISettingsSigils.GlyphType.Aether;
-                        continue;
-                    }
-
-                    logger.ZLogError(
-                        $"Could not find glyph {sigilName} in any of the sigils list, defaulting to 'fire'.");
-                    glyphs[i] = ISettingsSigils.GlyphType.Fire;
-
-                    continue;
-
-                    bool HasValueInCurrentPosition(string[] variableNames)
-                    {
-                        return ((InkList)story.variablesState[variableNames[i]]).ContainsItemNamed(sigilName);
-                    }
-                }
+                var glyphs = GetGlyphsFromSigilInkVariableValue(currentSigil, story);
 
                 var numUsages = (int)story.variablesState[numSigilUsagesVariableName];
                 if (numUsages is < 1 or > 3)
@@ -1446,6 +1413,57 @@ namespace Selania.Rework.Components
             // emit the signal
             _firstLevelGrimoirePageDescriptorsSubject!.OnNext(new IStoryGrimoire.FirstLevelGrimoirePageDescriptor(
                 isGamerMode, enabledLeftButtonNames, achievements, francoMission, sigilDescriptor));
+        }
+
+        private ISettingsSigils.GlyphType[] GetGlyphsFromSigilInkVariableValue(InkList currentSigil, Story story)
+        {
+            var sigilName = currentSigil.Keys.First().itemName;
+            var glyphs = new ISettingsSigils.GlyphType[3];
+            for (var i = 0; i < 3; i++)
+            {
+                if (HasValueInCurrentPosition(fireSigilListsByPosition))
+                {
+                    glyphs[i] = ISettingsSigils.GlyphType.Fire;
+                    continue;
+                }
+
+                if (HasValueInCurrentPosition(airSigilListsByPosition))
+                {
+                    glyphs[i] = ISettingsSigils.GlyphType.Air;
+                    continue;
+                }
+
+                if (HasValueInCurrentPosition(waterSigilListsByPosition))
+                {
+                    glyphs[i] = ISettingsSigils.GlyphType.Water;
+                    continue;
+                }
+
+                if (HasValueInCurrentPosition(earthSigilListsByPosition))
+                {
+                    glyphs[i] = ISettingsSigils.GlyphType.Earth;
+                    continue;
+                }
+
+                if (HasValueInCurrentPosition(aetherSigilListsByPosition))
+                {
+                    glyphs[i] = ISettingsSigils.GlyphType.Aether;
+                    continue;
+                }
+
+                logger.ZLogError(
+                    $"Could not find glyph {sigilName} in any of the sigils list, defaulting to 'fire'.");
+                glyphs[i] = ISettingsSigils.GlyphType.Fire;
+
+                continue;
+
+                bool HasValueInCurrentPosition(string[] variableNames)
+                {
+                    return ((InkList)story.variablesState[variableNames[i]]).ContainsItemNamed(sigilName);
+                }
+            }
+
+            return glyphs;
         }
 
         /// <summary>
@@ -2445,6 +2463,39 @@ namespace Selania.Rework.Components
         private static bool CheckDebugKnot(string debugKnot, Story story)
         {
             return story.KnotContainerWithName(debugKnot) != null;
+        }
+
+        #endregion
+
+        #region IStorySigilSupport
+
+        private readonly Subject<Observable<IStorySigilSupport.SigilDescriptor?>> _activeSigilSource = new();
+
+        /// <inheritdoc />
+        public Observable<IStorySigilSupport.SigilDescriptor?> ActiveSigil =>
+            _activeSigilSource.Prepend(Observable.Never<IStorySigilSupport.SigilDescriptor?>()).Switch();
+
+        private readonly Subject<Observable<int>> _activeSigilAvailableUsagesSource = new();
+
+        /// <inheritdoc />
+        public Observable<int> ActiveSigilAvailableUsages =>
+            _activeSigilAvailableUsagesSource
+                .Prepend(Observable.Never<int>())
+                .Switch()
+                .CombineLatest(ActiveSigil, (num, sigil) => sigil == null ? 0 : num);
+
+        private void OnStartSigilSupport()
+        {
+            _activeSigilSource.OnNext(GetVariableObservable<InkList>(currentSigilVariableName).Select(inkList =>
+            {
+                if (inkList.Count == 0)
+                    return null;
+                var story = GetStory();
+                var glyphs = GetGlyphsFromSigilInkVariableValue(inkList, story);
+                return new IStorySigilSupport.SigilDescriptor(glyphs[0], glyphs[1], glyphs[2]);
+            }));
+
+            _activeSigilAvailableUsagesSource.OnNext(GetVariableObservable<int>(numSigilUsagesVariableName));
         }
 
         #endregion
