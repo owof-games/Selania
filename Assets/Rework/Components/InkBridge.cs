@@ -160,6 +160,7 @@ namespace Selania.Rework.Components
             _story = new Story(inkAssetJson.text);
 
             OnStartDebugging();
+            OnStartSigilSupport();
 
             DisableDebugVariables();
         }
