@@ -376,34 +376,67 @@
                 -> glyph_choice_manager(false, waterC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "neutral")}:           Perché, tu no?        
-                                                        
+                {charTag(ThirdCharacter, "angry")}:             Non dovrei, scusa?                    
                 }     
+        {charTag(ThirdCharacter, "angry")}:                     Non è che <i>ci tengo molto</i>.
+        {charTag(ThirdCharacter, "bored")}:                     È che mi faccio il culo per esserlo.
+        {charTag(ThirdCharacter, "neutral")}:                   Sono gentile.
+                                                                Ascolto.
+                                                                Cerco sempre di mettere al centro la mia donna, anche quando sono stanco.
+                                                                E poi quella se ne va.
+        {charTag(ThirdCharacter, "bored")}:                     Che cazzo dovrei dire, che sono un mostro?
+                                                                Uno sfigato?
+
         + \ {charTag(PG, "neutral")}:                           Mi stai dicendo che ti porti a letto delle sconosciute ubriache?
                 -> glyph_choice_manager(false, aetherC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "neutral")}:                   
-                                                        
+                {charTag(ThirdCharacter, "jester")}:                   
+                                                                        Dai, non dirmi che non fai anche tu zio.
                 - else:
-                {charTag(ThirdCharacter, "jester")}:                    Questo sì che è un cambiamento!
-                } 
-                Sì.
-                No, lo facevo prima di Ava.
-                Ma se lo dici con quel tono mi fai sembrare un mostro.    
-        
+                {charTag(ThirdCharacter, "jester")}:                    Quando lavori in una birreria non è che ci trovi le sconosciute sobrie, {player_name}!
+                }
+        {charTag(ThirdCharacter, "angry")}:                     Mi stai facendo sentire una merda, dai!
+        {charTag(ThirdCharacter, "neutral")}:                   Non è che do una botta in testa a 'ste tipe e me le porto in macchina.
+        {charTag(ThirdCharacter, "jester")}:                    Anche perché la macchina non c'è l'ho.
+        {charTag(ThirdCharacter, "neutral")}:                   Però quando stacchi all'una è difficile che quelle che sono rimaste siano proprio sane.
+        {charTag(ThirdCharacter, "bored")}:                     Con questa logica dovrei appendere il cazzo al chiodo, non trovi?   
+                                                                //Check parolacce da parte di Mentore
+                                                                ~ fifthChar_slurDetectorFunction() 
+
         + \ {charTag(PG, "neutral")}:                           Se vuoi essere felice non dovrebbe importarti così tanto il giudizio degli altri.
                 -> glyph_choice_manager(false, earthC)->
-            
+        {charTag(ThirdCharacter, "bored")}:                     È arrivata Pollyanna.
+        {charTag(ThirdCharacter, "neutral")}:                   Non è che ci tengo o non ci tengo.
+                                                                È che quando stai in un posto con boh, cinquemila persone ad andare bene, il giudizio di quelle persone decide un sacco di cose.
+        {charTag(ThirdCharacter, "bored")}:                     Chi ti saluta e chi no.
+                                                                Come ti trattano quando vai a comprare qualcosa al negozio.
+                                                                Se ti guardano di merda o meno se ti fai un birrino alla festa del patrono.
+
         
         + \ {charTag(PG, "neutral")}:                           Vorrei capire un po' meglio: quindi tu e Ava avete una relazione aperta?
-                -> glyph_choice_manager(false, airC)->
-            //Ricorda fastidio per scelte intellettuali.
-        
+                -> glyph_choice_manager(false, airC)->     
+        {charTag(ThirdCharacter, "bored")}:                     Che parole grosse.
+                                                                Relazione aperta.
+        {charTag(ThirdCharacter, "neutral")}:                   Io e Ava.
+                                                                Io ho lei, lei ha me.
+                                                                Ma lei non mi può dare certe cose.
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(ThirdCharacter, "jester")}:                   E uno non può andare avanti a seghe tutta la vita, zio.
+                }
+        {charTag(ThirdCharacter, "neutral")}:                   A lei sta bene come cosa comunque.
+
         + \ {charTag(PG, "neutral")}:                           Invece tu non hai voglia di lasciare il posto dove sei nato e cresciuto?
                 -> glyph_choice_manager(false, fireC)-> 
-        Io non scappo.    
-        E poi dove vado'
+        {charTag(ThirdCharacter, "bored")}:                     Io non scappo come <i>lei</i> dalle situazioni, {player_name}.
+        {charTag(ThirdCharacter, "jester")}:                    Ma poi dove me ne vado secondo te?
+        {charTag(ThirdCharacter, "melanchonic")}:               A quarantaquattro anni, con il diploma di una vita fa e con un curriculum di merda?
+                                                                //Check parolacce da parte di Mentore
+                                                                ~ fifthChar_slurDetectorFunction() 
+        {charTag(ThirdCharacter, "neutral")}:                   E poi mi piacciono i miei giri, le mie cose.
+                                                                Vorrei solo che si facessero un po' tutti i cavoli propri.
+
         -
 
         {charTag(ThirdCharacter, "jester")}:                    Comunque basta parlare di Ava che poi mi diventi gelos{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}}.
@@ -414,9 +447,9 @@
                 {charTag(ThirdCharacter, "angry")}:                     Ma se provi a toccarla zio, allora vedi che divento una bestia.
                                                                 
                 - else:
-                {charTag(ThirdCharacter, "neutral")}:                   E poi sono uno fedele.
-                {charTag(ThirdCharacter, "jester")}:                    Un po' marpione, ma perché mi piace scherzare.
-                {charTag(ThirdCharacter, "neutral")}:                   Ma non la tradirei mai.
+                {charTag(ThirdCharacter, "neutral")}:                   Mo mi è venuto voglia di fumare.
+                {charTag(ThirdCharacter, "jester")}:                    Sono un po' marpione, ma perché mi piace scherzare.
+                {charTag(ThirdCharacter, "neutral")}:                   Ma so che sei qui per lavorare, non ci proverei mai.
                 }                                                    
                                                             
         {
