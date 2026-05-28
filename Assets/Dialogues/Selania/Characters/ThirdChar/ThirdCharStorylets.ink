@@ -329,7 +329,7 @@
         {charTag(ThirdCharacter, "jester")}:                    Tre mesi: sono o non sono un bravo ragazzo?
         {charTag(ThirdCharacter, "neutral")}:                   Ma è un incubo alla mia età uscire con le ragazze, {player_name}.
                                                                 Ho provato con le app da imbrocco.
-                                                                Mi sono fatto aiutare da Dania, la mia collega sveglia, e mi ha fatto mettere foto idiote e una col suo cane "Perché alle ragazze piacciono i cani", ha detto.
+                                                                Mi sono fatto aiutare da Petra, la mia collega sveglia, e mi ha fatto mettere foto idiote e una col suo cane "Perché alle ragazze piacciono i cani", ha detto.
                                                                 Lei è lesbica quindi pensavo le piacessero i gatti.
         {charTag(ThirdCharacter, "bored")}:                     Però abbiamo litigato perché ha detto che sono "sessista" perché ho scritto che non voglio una tipa che colleziona uomini come fossero figurine.
                 {//Blocco per reazioni e commenti legati al genere.
@@ -941,13 +941,13 @@
 
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "jester")}:                    Quello con cui puoi parlare delle tipe ma anche fare un discorso serio, quel tipo di amico, hai presente?
+                {charTag(ThirdCharacter, "jester")}:            Quello con cui puoi parlare delle tipe ma anche fare un discorso serio, quel tipo di amico, hai presente?
                                                 
                 - else:
-                {charTag(ThirdCharacter, "neutral")}:                   Ai ragazzi non piace parlare troppo delle proprie faccende.
-                                                                        Però si può stare assieme e fare qualcosa tipo il calcio e magari nel mentre la dici anche la cosa seria.
-                                                                        E lui è quello a cui puoi dire la cosa seria.
-                {charTag(ThirdCharacter, "jester")}:                    E poi cazzeggiare.
+                {charTag(ThirdCharacter, "neutral")}:           A noi ragazzi non piace parlare troppo delle proprie faccende.
+                                                                Però si può stare assieme e fare qualcosa tipo il calcio e magari nel mentre la dici anche la cosa seria.
+                                                                E lui è quello a cui puoi dire la cosa seria.
+                {charTag(ThirdCharacter, "jester")}:            E poi cazzeggiare.
                 } 
         {charTag(ThirdCharacter, "neutral")}:                   L'ho conosciuto alle medie, e all'inizio lo odiavo.
                                                                 Tutto pulitino e ordinato, un vero damerino.
@@ -955,11 +955,11 @@
         {charTag(ThirdCharacter, "jester")}:                    Un sei che si guarda così storta da convincersi di essere un nove.
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "jester")}:                    Anche se da piccoli andavamo tutti a casa loro d'estate a guardarcela mentre se ne stava stesa nel giardino in costume.
+                {charTag(ThirdCharacter, "jester")}:            Anche se da piccoli andavamo tutti a casa loro d'estate a guardarcela mentre se ne stava stesa nel giardino in costume.
                                                                 
                 - else:
-                {charTag(ThirdCharacter, "neutral")}:                   Suo padre invece era uno che lavorava tantissimo all'estero.
-                                                                        Ma in paese si diceva che in realtà aveva un'altra famiglia a Milano, e per quello lo si vedeva in giro quasi solo i fine settimana.
+                {charTag(ThirdCharacter, "neutral")}:           Suo padre invece era uno che lavorava tantissimo all'estero.
+                                                                Ma in paese si diceva che in realtà aveva un'altra famiglia a Milano, e per quello lo si vedeva in giro quasi solo i fine settimana.
                 }                                                          
         {charTag(ThirdCharacter, "neutral")}:                   Con gli altri l'abbiamo menato un paio di volte, ma c'era qualcosa di orgoglioso in lui, e alla fine dopo il primo anno mi sono ritrovato a fare le pause con lui invece che con gli altri idioti con cui uscivo.
                                                                 Lui e io abbiamo fatto anche le altre scuole assieme, persino i primi due anni di Ingegneria.
@@ -972,10 +972,10 @@
                                                                 Lui se ne frega delle cose che pensano gli altri.
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "melanchonic")}:               E di cattiverie gliene abbiamo dette tante negli anni, ma davvero tante.
+                {charTag(ThirdCharacter, "melanchonic")}:       E di cattiverie gliene abbiamo dette tante negli anni, ma davvero tante.
                                                                 
                 - else:
-                {charTag(ThirdCharacter, "bored")}:                     A me non è una cosa che viene così bene.
+                {charTag(ThirdCharacter, "bored")}:             A me non è una cosa che viene così bene.
                 }                                                          
         {charTag(ThirdCharacter, "neutral")}:                   A lui potevo dirgli tutte le mie merde.
                                                                 Quando ho perso il lavoro, il lavoro buono, mi ha ascoltato per ore e questa cosa secondo me mi ha salvato.
@@ -995,42 +995,69 @@
         {charTag(ThirdCharacter, "bored")}:                     E gli auguri per le feste e per il compleanno.
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "jester")}:                    Ma alla fine noi uomini facciamo amicizia così, no?
+                {charTag(ThirdCharacter, "jester")}:            Ma alla fine noi uomini facciamo amicizia così, no?
                                                                 
                 - else:
-                {charTag(ThirdCharacter, "neutral")}:                   Ma va bene così, no?
+                {charTag(ThirdCharacter, "neutral")}:           Ma va bene così, no?
                 }                                                          
 
         
-            + \ {charTag(PG, "neutral")}:                       Hai provato a dirgli che ti manca?
-                    -> glyph_choice_manager(false, waterC)->
-                        {//Blocco per reazioni e commenti legati al genere.
-                        - thirdChar_recordedPlayerPronoun == him:
-                        {charTag(ThirdCharacter, "neutral")}:                   
-                        } 
-                
-            + \ {charTag(PG, "neutral")}:                       Non è che devi continuare a scavarti questo tunnel della solitudine, {charNameThree}.
-                    -> glyph_choice_manager(false, aetherC)->
-                        {//Blocco per reazioni e commenti legati al genere.
-                        - thirdChar_recordedPlayerPronoun == him:
-                        {charTag(ThirdCharacter, "neutral")}:                   
-                        } 
-            
-            + \ {charTag(PG, "neutral")}:                       Quindi questa è un po' la vita che ti aspettavi con Donatella.
-                    -> glyph_choice_manager(false, earthC)->
-                
-            
-            + \ {charTag(PG, "neutral")}:                       <i>Resto in silenzio: nessuna domanda mi farebbe capire meglio la situazione.</i>
-                    -> glyph_choice_manager(false, airC)->
-                Ehi, non sei mai statx in silenzio, mi fai preoccupare!
-            
-            + \ {charTag(PG, "neutral")}:                       Proponigli di fare qualcosa assieme, tipo giocare a calcetto di nuovo! O fagli conoscere Ava!
-                    -> glyph_choice_manager(false, fireC)->
-                    {//Blocco per reazioni e commenti legati al genere.
-                - thirdChar_recordedPlayerPronoun != him:
-                {charTag(ThirdCharacter, "jester")}:                    Sicurx di non essere un uomo? XD
-
+        + \ {charTag(PG, "neutral")}:                           Hai provato a dirgli che ti manca?
+                -> glyph_choice_manager(false, waterC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:       
+                {charTag(ThirdCharacter, "jester")}:            E magari gli dico anche "Ti amo".
+                                                                Che amici c'hai tu?                
                 } 
+        {charTag(ThirdCharacter, "neutral")}:                   No, ma perché non serve.
+                                                                Lo sa che sono contento quando ci sentiamo.
+                                                                Non è che gli scrivo perché non so cosa fare.
+        {charTag(ThirdCharacter, "jester")}:                    Gli mando anche qualche meme.
+        {charTag(ThirdCharacter, "neutral")}:                   Non serve dirglielo, lo sa.
+
+        + \ {charTag(PG, "neutral")}:                           Non è che devi continuare a scavarti questo tunnel della solitudine, {charNameThree}.
+                -> glyph_choice_manager(false, aetherC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:        
+                {charTag(ThirdCharacter, "bored")}:             Dio.
+                                                                Che.
+                                                                Pesantezza.
+                {charTag(ThirdCharacter, "jester")}:            Sicuro tu e {charNameOne} migliori amiche proprio.         
+                } 
+        {charTag(ThirdCharacter, "neutral")}:                   Non mi scavo nessun tunnel.
+                                                                Ho i raga del calcetto, ricordi?
+                                                                E a lavoro passo le ore a scherzare con Petra.
+                                                                E ci sono i clienti.
+                                                                Quale solitudine e solitudine proprio, io boh.
+
+
+        + \ {charTag(PG, "neutral")}:                           Quindi questa è un po' la vita che ti aspettavi con Donatella.
+                -> glyph_choice_manager(false, earthC)->
+        {charTag(ThirdCharacter, "melanchonic")}:               Già.
+        {charTag(ThirdCharacter, "neutral")}:                   Il Poggi è così felice con Amanda e la piccoletta.
+                                                                Se non fossi stato con una stronza, a quest'ora ci beccheremmo il sabato pomeriggio per portarle al campetto.
+        {charTag(ThirdCharacter, "jester")}:                    Perché anche se mi nasce una femmina deve imparare ad amare l'Inter, punto.
+        
+        + \ {charTag(PG, "neutral")}:                           <i>Resto in silenzio: nessuna domanda mi farebbe capire meglio la situazione.</i>
+                -> glyph_choice_manager(false, airC)->
+        {charTag(ThirdCharacter, "neutral")}:                   Non sapevo che potevi stare zitt{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}}!
+        {charTag(ThirdCharacter, "jester")}:                    Mi devo preoccupare?
+        {charTag(ThirdCharacter, "bored")}:                     Ora finisco per chiedermi se ho detto delle cazzate.
+        {charTag(ThirdCharacter, "neutral")}:                   Non è morto nessuno comunque, non ti preoccupare.
+                                                                Ogni amicizia va a modo suo, no?
+        
+        + \ {charTag(PG, "neutral")}:                           Proponigli di fare qualcosa assieme, tipo giocare a calcetto di nuovo! O fagli conoscere Ava!
+                -> glyph_choice_manager(false, fireC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                {charTag(ThirdCharacter, "jester")}:            Sicur{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}} di non essere un uomo?
+                }
+        {charTag(ThirdCharacter, "neutral")}:                   Per un po' gli ho scritto del calcetto.
+                                                                All'inizio si inventava delle scuse, poi ha proprio smesso di rispondere.
+        {charTag(ThirdCharacter, "bored")}:                     Si è anche tolto dalla chat.
+        {charTag(ThirdCharacter, "neutral")}:                   Anche quella del fantacalcio.
+                                                                E no, niente Ava per ora.
+        {charTag(ThirdCharacter, "melanchonic")}:               Non credo che nemmeno lui approverebbe. 
                 
             -
         {charTag(ThirdCharacter, "neutral")}:                   Comunque {player_name} io non ho altro da dirti.
