@@ -7,39 +7,39 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
-        //Commento diverso a seconda che sia il primo storylet con noi, o se invece ha assistito ad altri storylets.
-        {
-        - thirdChar_recordedPlayerPronoun != ():
-        {charTag(PG, "neutral")}:                               Immagina: arrivo qui e la prima cosa che penso qual è?
-        {charTag(ThirdCharacter, "jester")}:                    <i>No, questo non è proprio il frigo.</i>
+                //Commento diverso a seconda che sia il primo storylet con noi, o se invece ha assistito ad altri storylets.
+                {
+                - thirdChar_recordedPlayerPronoun != ():
+                {charTag(PG, "neutral")}:                               Immagina: arrivo qui e la prima cosa che penso qual è?
+                {charTag(ThirdCharacter, "jester")}:                    <i>No, questo non è proprio il frigo.</i>
 
-        - else:  
-        {charTag(ThirdCharacter, "jester")}:                    No, questo non è il frigo.   
-        }
-                                                                Volevo prendermi una kölsch, giusto per rilassarmi.
-                                                                E invece eccomi qui.
-        {charTag(ThirdCharacter, "neutral")}:                   Però per lo meno non si sente il miagolio del gatto dello Stracciamaroni.
-        {charTag(ThirdCharacter, "bored")}:                     O il puzzo dello Stracciamaroni.
+                - else:  
+                {charTag(ThirdCharacter, "jester")}:                    No, questo non è il frigo.   
+                }
+                                                                        Volevo prendermi una kölsch, giusto per rilassarmi.
+                                                                        E invece eccomi qui.
+                {charTag(ThirdCharacter, "neutral")}:                   Però per lo meno non si sente il miagolio del gatto dello Stracciamaroni.
+                {charTag(ThirdCharacter, "bored")}:                     O il puzzo dello Stracciamaroni.
 
-        {
-        - thirdChar_recordedPlayerPronoun == ():
-        {charTag(ThirdCharacter, "jester")}:                    Ma partiamo con le presentazioni!
-            -> name_choice.top2 ->
-            -> gender ->
-            ~ thirdChar_recordedPlayerPronoun += player_pronoun
+                {
+                - thirdChar_recordedPlayerPronoun == ():
+                {charTag(ThirdCharacter, "jester")}:                    Ma partiamo con le presentazioni!
+                -> name_choice.top2 ->
+                -> gender ->
+                ~ thirdChar_recordedPlayerPronoun += player_pronoun
 
-        - else:
-        {
-        - thirdChar_recordedPlayerPronoun == him:
-        {charTag(ThirdCharacter, "neutral")}:                   Prima ti hanno chiamato {player_name}, e ho sentito che sei un ragazzo!
+                - else:
+                {
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(ThirdCharacter, "neutral")}:                   Prima ti hanno chiamato {player_name}, e ho sentito che sei un ragazzo!
 
-        - thirdChar_recordedPlayerPronoun == her:
-        {charTag(ThirdCharacter, "neutral")}:                   Prima ti hanno chiamato {player_name}, e ho sentito che sei un ragazza!
+                - thirdChar_recordedPlayerPronoun == her:
+                {charTag(ThirdCharacter, "neutral")}:                   Prima ti hanno chiamato {player_name}, e ho sentito che sei un ragazza!
 
-        - thirdChar_recordedPlayerPronoun == they:
-        {charTag(ThirdCharacter, "neutral")}:                   Prima ti hanno chiamato {player_name}, e ho sentito che sei una persona non binaria.
-        }
-        }   
+                - thirdChar_recordedPlayerPronoun == they:
+                {charTag(ThirdCharacter, "neutral")}:                   Prima ti hanno chiamato {player_name}, e ho sentito che sei una persona non binaria.
+                }
+                }   
         {
         - thirdChar_recordedPlayerPronoun == him:
         {charTag(ThirdCharacter, "neutral")}:                   Te la posso dire una cosa?
@@ -74,28 +74,56 @@
                                                                 Ma birra o non birra, che si combina da queste parti?
 
 
-        //Ogni suo commento rimette però il tuo lavoro al centro.    
+   
         + \ {charTag(PG, "neutral")}:                           Sto provando ad aiutarvi a stare meglio con voi stess3.
                 -> glyph_choice_manager(false, waterC)->
-            
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(ThirdCharacter, "jester")}:                    Zio, che cosa triste!
+                }     
+        {charTag(ThirdCharacter, "bored")}:                     Ma quindi sei una specie di prete?
+        {charTag(ThirdCharacter, "jester")}:                    Perché caschi male in quel caso!
+        {charTag(ThirdCharacter, "neutral")}:                   O una roba tipo psicologo?
+        {charTag(ThirdCharacter, "bored")}:                     Non me ne avere, ma non mi piace molto il discorso della terapia.
+        {charTag(ThirdCharacter, "jester")}:                    Ne ho aiutati di più io al bar ubriachi che qualsiasi strizzacervelli, poco ma sicuro.
             
         + \ {charTag(PG, "neutral")}:                           Ci conosciamo meglio, e ci godiamo le stranezze di questo posto.
                 -> glyph_choice_manager(false, aetherC)->
-            
-        
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(ThirdCharacter, "jester")}:                    Woah zio, che cosa da.
+                                                                        No, non lo dico va.     
+                } 
+        {charTag(ThirdCharacter, "jester")}:                    Ma quindi è tipo una comune hippie?
+                                                                Droghe e sesso?
+        {charTag(ThirdCharacter, "bored")}:                     Non sono a favore delle droghe, sappilo.
+        {charTag(ThirdCharacter, "jester")}:                    Ma per la seconda parte posso farci un pensierino.
+        {charTag(ThirdCharacter, "neutral")}:                   Anche se qui avete tutti un aspetto strano.
+
         + \ {charTag(PG, "neutral")}:                           {charNameOne} sta cercando nuove fondamenta per la sua vita. E del vino.
                 -> glyph_choice_manager(false, earthC)->
-            
+        {charTag(ThirdCharacter, "jester")}:                    Ci sto per il vino, anche se per me la birra batte tutto.
+        {charTag(ThirdCharacter, "neutral")}:                   Ti fa ragionare meglio, mentre il vino boh, ti fa sentire troppe cose.
+                                                                Però se ho capito bene {charNameOne} queste fondamenta le sta costruendo insieme a te.
+        {charTag(ThirdCharacter, "jester")}:                    E mi sa che ti smazzi tu anche le pareti, le scale e il tetto.
         
         + \ {charTag(PG, "neutral")}:                           {charNameTwo} cerca di capire ogni cosa di questo posto.
                 -> glyph_choice_manager(false, airC)->
-            
+        {charTag(ThirdCharacter, "jester")}:                    Ricciolino è una sagoma proprio.
+        {charTag(ThirdCharacter, "neutral")}:                   C'ha una fissa per gli animali che fa quasi paura.
+                                                                Ma se ho capito bene mentre lui impara le cose tu lo aiuti con i suoi casini.
+                                                                Che non è roba da poco.
+        {charTag(ThirdCharacter, "bored")}:                     In birreria vedi tanta di quella gente che non doveva proprio diventare genitore, ma zero.
+        {charTag(ThirdCharacter, "angry")}:                     E invece chi vorrebbe, zero.
         
         + \ {charTag(PG, "neutral")}:                           {charNameFive} passa il tempo a sistemare tutto quello che non funziona.
                 -> glyph_choice_manager(false, fireC)-> 
-                   
+        {charTag(ThirdCharacter, "jester")}:                    Quella c'ha una carica che manco un chihuahua sotto coca.
+        {charTag(ThirdCharacter, "neutral")}:                   Mi ricorda un po' la mia mamma, che anche lei non la frenavi mai.
+                                                                Mentre papà distruggeva tutto, lei ha tenuto in piedi la famiglia da sola.
+        {charTag(ThirdCharacter, "jester")}:                    Ma se ho ben capito alla fine {charNameFive} sistema le cose pratiche, mentre te ti fai il culo a sistemare noi.
+        {charTag(ThirdCharacter, "neutral")}:                   Che è peggio.
         -    
-
 
         {charTag(ThirdCharacter, "jester")}:                    Quindi gira che ti rigira, sei solo te a sgobbare qui mentre noi ce la prendiamo comoda?
                                                                 Che sfiga.
@@ -168,29 +196,46 @@
 
         + \ {charTag(PG, "neutral")}:                           Spero di non ferirti, ma cos'è questa cosa della ex?
                 -> glyph_choice_manager(false, waterC)->
-            
-            
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:       
+                {charTag(ThirdCharacter, "bored")}:                     <i>Spero di non ferirti.</i>
+                                                                        Ma che modo è di parlare zio?       
+                }
+        {charTag(ThirdCharacter, "neutral")}:                   La solita storia: le ragazze alla fine preferiscono sempre quello più stronzo.
+                                                                Punto.
+
         + \ {charTag(PG, "neutral")}:                           In verità sono più incuriosit{player_pronoun has him:o|{player_pronoun has her:a|ə}} dalla persona che sei che da quello che fai.
                 -> glyph_choice_manager(false, aetherC)->
-            
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:       
+                {charTag(ThirdCharacter, "jester")}:                    Giusto per chiarirci, come dicono i giovani: no omo, giusto?     
+                }                                               
+        {charTag(ThirdCharacter, "bored")}:                     Che devo dirti {player_name}?
+        {charTag(ThirdCharacter, "neutral")}:                   Lavoro quasi tutte le sere.
+                                                                Torno che sono stanco.
+                                                                C'ho le cose da fare in casa.
+                                                                O riposare un attimo.
+        {charTag(ThirdCharacter, "bored")}:                     Non è che c'ho tutto 'sto tempo per farmi altre seghe mentali.
         
         + \ {charTag(PG, "neutral")}:                           Ti ci vedo a occuparti di cibo e tenere compagnia alle persone.
                 -> glyph_choice_manager(false, earthC)->
-            
+        {charTag(ThirdCharacter, "jester")}:                    Perché non hai visto come cucino, a quel punto sarebbe reato!
+        {charTag(ThirdCharacter, "neutral")}:                   Però non ci sei andat{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}} molto lontan{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}}.
+        {charTag(ThirdCharacter, "jester")}:                    Non è che c'hai davvero i poteri vero?
         
         + \ {charTag(PG, "neutral")}:                           Se ho inteso la logica di questo luogo, dall'aspetto direi che sei un barista?
                 -> glyph_choice_manager(false, airC)->
-        {charTag(ThirdCharacter, "jester")}:                    "Dall'aspetto?!?".
+        {charTag(ThirdCharacter, "jester")}:                    <i>Dall'aspetto?!?</i>.
                                                                 Così si giudicano le persone nel terzo millennio?
         {charTag(ThirdCharacter, "neutral")}:                   Dov'è {charNameOne} con le sue cose femministe a difendermi?
-        {
-        - are_two_entities_together(FirstCharacter, PG):
-        {charTag(FirstCharacter, "annoyed")}:                   {charNameOne} sta rivalutando positivamente Valerie Solanas.
-        }
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:                   {charNameOne} più ti ascolta più sta rivalutando positivamente Valerie Solanas.
+                }
 
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "jester")}:                    Sei un coglione, amico!
+                {charTag(ThirdCharacter, "jester")}:                    Sei un coglione, zio!
                 //Check parolacce da parte di Mentore
                 ~ fifthChar_slurDetectorFunction()
                                                                         Io sono un idiota, per cui siamo una grande squadra!
@@ -199,9 +244,11 @@
                 {charTag(ThirdCharacter, "jester")}:                    Ovviamente ti prendo in giro, non ti preoccupare.
                 }  
             
-        + \ {charTag(PG, "neutral")}:                           Qualcosa a che fare con la responsabilità.
+        + \ {charTag(PG, "neutral")}:                           Sicuro qualcosa con tante responsabilità.
                 -> glyph_choice_manager(false, fireC)-> 
-                
+        {charTag(ThirdCharacter, "jester")}:                    Vedi che ce li hai davvero i superpoteri?
+        {charTag(ThirdCharacter, "bored")}:                     Anche se questa roba il gruppo del calcetto non lo capisce mica, coi lavori "grossi".
+        {charTag(ThirdCharacter, "neutral")}:                   Secondo me è più facile fare una fattura da trentamila che sedare una rissa tra due idioti ubriachi.
         -
 
 
@@ -268,7 +315,7 @@
                                                                 Ne ho avute di tipe, eh!
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "jester")}:                    Lo sai anche tu amico che dobbiamo scopare ogni tanto, giusto per starcene tranquilli.
+                {charTag(ThirdCharacter, "jester")}:                    Lo sai anche tu zio che dobbiamo scopare ogni tanto, giusto per starcene tranquilli.
                 //Check parolacce da parte di Mentore
                 ~ fifthChar_slurDetectorFunction()                                                  
                 - else:
@@ -327,12 +374,23 @@
         
         + \ {charTag(PG, "neutral")}:                           Mi sembra che ci tieni molto a questa cosa dell'essere un bravo ragazzo.
                 -> glyph_choice_manager(false, waterC)->
-            
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(ThirdCharacter, "neutral")}:           Perché, tu no?        
+                                                        
+                }     
         + \ {charTag(PG, "neutral")}:                           Mi stai dicendo che ti porti a letto delle sconosciute ubriache?
                 -> glyph_choice_manager(false, aetherC)->
-        Sì.
-        No, lo facevo prima di Ava.
-        Ma se lo dici con quel tono mi fai sembrare un mostro.    
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(ThirdCharacter, "neutral")}:                   
+                                                        
+                - else:
+                {charTag(ThirdCharacter, "jester")}:                    Questo sì che è un cambiamento!
+                } 
+                Sì.
+                No, lo facevo prima di Ava.
+                Ma se lo dici con quel tono mi fai sembrare un mostro.    
         
         + \ {charTag(PG, "neutral")}:                           Se vuoi essere felice non dovrebbe importarti così tanto il giudizio degli altri.
                 -> glyph_choice_manager(false, earthC)->
@@ -353,7 +411,7 @@
                 {//Blocco per reazioni e commenti legati al genere.
                 
                 - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "angry")}:                     Ma se provi a toccarla amico, allora vedi che divento una bestia.
+                {charTag(ThirdCharacter, "angry")}:                     Ma se provi a toccarla zio, allora vedi che divento una bestia.
                                                                 
                 - else:
                 {charTag(ThirdCharacter, "neutral")}:                   E poi sono uno fedele.
@@ -462,11 +520,17 @@
         
         + \ {charTag(PG, "neutral")}:                           Mi chiedevo: come mai parli sempre degli altri e quasi mai di te?
                 -> glyph_choice_manager(false, waterC)->
-            
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(ThirdCharacter, "neutral")}:               
+                } 
             
         + \ {charTag(PG, "neutral")}:                           Notavo che hai descritto tutti i tuoi amici in base al lavoro che fanno.
                 -> glyph_choice_manager(false, aetherC)->
-            
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(ThirdCharacter, "neutral")}:                   
+                } 
         
         + \ {charTag(PG, "neutral")}:                           Cosa significa "essere un boss"? è un discorso di soldi?
                 -> glyph_choice_manager(false, earthC)->
@@ -478,7 +542,10 @@
         
         + \ {charTag(PG, "neutral")}:                           Ma alla fine vincete mai?
                 -> glyph_choice_manager(false, fireC)-> 
-            
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                {charTag(ThirdCharacter, "neutral")}:                   
+                } 
         - 
         {charTag(ThirdCharacter, "jester")}:                    Come vedi comunque la zia c'ha torto.
         {charTag(ThirdCharacter, "neutral")}:                   Non ho problemi col lavoro.
@@ -590,11 +657,14 @@
             
             + \ {charTag(PG, "neutral")}:                       Sembra che a questo tizio importi tanto dei suoi soldi, dell'età, del tipo di amici che ha, vero?
                     -> glyph_choice_manager(false, earthC)->
-                
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                {charTag(ThirdCharacter, "neutral")}:                   
+                } 
             
-            + \ {charTag(PG, "neutral")}:                       E c'è una lezione dietro questa storia? Qualcosa da imparare?
+            + \ {charTag(PG, "neutral")}:                       E se fosse davvero una storiella, quale sarebbe la lezione che dovrei imparare?
                     -> glyph_choice_manager(false, airC)->
-                
+                Che comunque la metti la pigli sempre nel culo.
             
             + \ {charTag(PG, "neutral")}:                       Cosa ha fatto il tipo dopo tutto questo? Come ha cambiato la situazione?
                     -> glyph_choice_manager(false, fireC)-> 
@@ -686,6 +756,11 @@
         
             + \ {charTag(PG, "neutral")}:                       Cosa ti manca di più di tua madre?
                     -> glyph_choice_manager(false, waterC)->
+                        {//Blocco per reazioni e commenti legati al genere.
+                        - thirdChar_recordedPlayerPronoun == him:
+                        {charTag(ThirdCharacter, "neutral")}:                   
+
+                        } 
                 No, è una cosa da sfigati.
                 
             + \ {charTag(PG, "neutral")}:                       Tra la parte con Donatella e questa, mi sembra che hai bisogno di una famiglia, ma non sai come starci dentro.
@@ -702,7 +777,10 @@
             
             + \ {charTag(PG, "neutral")}:                       Non è più semplice affrontare tuo padre invece di evitarlo?
                     -> glyph_choice_manager(false, fireC)-> 
-                
+                        {//Blocco per reazioni e commenti legati al genere.
+                        - thirdChar_recordedPlayerPronoun != him:
+                        {charTag(ThirdCharacter, "neutral")}:                   
+                        } 
             - 
         {charTag(ThirdCharacter, "neutral")}:                   Comunque la famiglia è una cosa strana, {player_name}.
                                                                 Io non ci credo che ci possa essere tutto questo amore con qualcuno con cui cresci.
@@ -801,11 +879,17 @@
         
             + \ {charTag(PG, "neutral")}:                       Hai provato a dirgli che ti manca?
                     -> glyph_choice_manager(false, waterC)->
-                
+                        {//Blocco per reazioni e commenti legati al genere.
+                        - thirdChar_recordedPlayerPronoun == him:
+                        {charTag(ThirdCharacter, "neutral")}:                   
+                        } 
                 
             + \ {charTag(PG, "neutral")}:                       Non è che devi continuare a scavarti questo tunnel della solitudine, {charNameThree}.
                     -> glyph_choice_manager(false, aetherC)->
-                
+                        {//Blocco per reazioni e commenti legati al genere.
+                        - thirdChar_recordedPlayerPronoun == him:
+                        {charTag(ThirdCharacter, "neutral")}:                   
+                        } 
             
             + \ {charTag(PG, "neutral")}:                       Quindi questa è un po' la vita che ti aspettavi con Donatella.
                     -> glyph_choice_manager(false, earthC)->
@@ -813,10 +897,15 @@
             
             + \ {charTag(PG, "neutral")}:                       <i>Resto in silenzio: nessuna domanda mi farebbe capire meglio la situazione.</i>
                     -> glyph_choice_manager(false, airC)->
-                
+                Ehi, non sei mai statx in silenzio, mi fai preoccupare!
             
             + \ {charTag(PG, "neutral")}:                       Proponigli di fare qualcosa assieme, tipo giocare a calcetto di nuovo! O fagli conoscere Ava!
-                    -> glyph_choice_manager(false, fireC)-> 
+                    -> glyph_choice_manager(false, fireC)->
+                    {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                {charTag(ThirdCharacter, "jester")}:                    Sicurx di non essere un uomo? XD
+
+                } 
                 
             -
         {charTag(ThirdCharacter, "neutral")}:                   Comunque {player_name} io non ho altro da dirti.
