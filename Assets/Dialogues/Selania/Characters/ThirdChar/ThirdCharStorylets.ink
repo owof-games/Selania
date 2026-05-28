@@ -31,7 +31,7 @@
                 - else:
                 {
                 - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "neutral")}:           rima ti hanno chiamato {player_name}, e ho sentito che sei un ragazzo!
+                {charTag(ThirdCharacter, "neutral")}:           Prima ti hanno chiamato {player_name}, e ho sentito che sei un ragazzo!
 
                 - thirdChar_recordedPlayerPronoun == her:
                 {charTag(ThirdCharacter, "neutral")}:           Prima ti hanno chiamato {player_name}, e ho sentito che sei un ragazza!
@@ -47,6 +47,11 @@
                                                                 ME NO MA LE!
                                                                 Dieci su dieci.
         {charTag(ThirdCharacter, "neutral")}:                   Perché tra {charNameOne} e {charNameFive} mi serviva qualcuno con cui parlare di calcio e non solo di "cose emotive".
+
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:           Partiamo bene.
+                }
 
         - thirdChar_recordedPlayerPronoun == her:
         {charTag(ThirdCharacter, "jester")}:                    Io sono sicuro che con {charNameOne} e {charNameFive} sei felice che ci sia qualcuno con cui non devi parlare della posta del cuore.
@@ -65,7 +70,12 @@
         {charTag(ThirdCharacter, "neutral")}:                   Io sono {charNameThree}.
         {charTag(ThirdCharacter, "jester")}:                    Cioè, non sono davvero un {charNameThree}.
         {charTag(ThirdCharacter, "neutral")}:                   Ma prima {charNameTwo} mi ha detto: "Ehi, ma tu sembri un boccale di birra!"
-                                                                E allora ho cercato il mio riflesso.
+                {
+                - are_two_entities_together(SecondCharacter, PG):
+                {charTag(SecondCharacter, "energy")}:           Anche se non la conoscevo la parola <i>boccale</i> e l'ho chiamato bicchiere!
+                                                                Ora conosco una parola nuova!
+                }
+                                                                Ho cercato il mio riflesso.
         {charTag(ThirdCharacter, "bored")}:                     Un po' ci sono rimasto male: tutte quelle ore spese in palestra e nessuno le vedrà!
         {charTag(ThirdCharacter, "jester")}:                    Detto tra noi, le ore sono state due.
                                                                 Tre se contiamo il tempo dell'iscrizione.
@@ -84,6 +94,10 @@
         {charTag(ThirdCharacter, "bored")}:                     Ma quindi sei una specie di prete?
         {charTag(ThirdCharacter, "jester")}:                    Perché caschi male in quel caso!
         {charTag(ThirdCharacter, "neutral")}:                   O una roba tipo psicologo?
+                {
+                - are_two_entities_together(Mentor, PG):
+                {charTag(Mentor, "hurry")}:                     No, qualcosa di speciale!
+                }
         {charTag(ThirdCharacter, "bored")}:                     Non me ne avere, ma non mi piace molto il discorso della terapia.
         {charTag(ThirdCharacter, "jester")}:                    Ne ho aiutati di più io al bar ubriachi che qualsiasi strizzacervelli, poco ma sicuro.
             
@@ -106,6 +120,10 @@
         {charTag(ThirdCharacter, "neutral")}:                   Ti fa ragionare meglio, mentre il vino boh, ti fa sentire troppe cose.
                                                                 Però se ho capito bene {charNameOne} queste fondamenta le sta costruendo insieme a te.
         {charTag(ThirdCharacter, "jester")}:                    E mi sa che ti smazzi tu anche le pareti, le scale e il tetto.
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "neutral")}:           Accurato.
+                }
         
         + \ {charTag(PG, "neutral")}:                           {charNameTwo} cerca di capire ogni cosa di questo posto.
                 -> glyph_choice_manager(false, airC)->
@@ -119,8 +137,16 @@
         + \ {charTag(PG, "neutral")}:                           {charNameFive} passa il tempo a sistemare tutto quello che non funziona.
                 -> glyph_choice_manager(false, fireC)-> 
         {charTag(ThirdCharacter, "jester")}:                    Quella c'ha una carica che manco un chihuahua sotto coca.
+                {
+                - are_two_entities_together(Mentor, PG):
+                {charTag(FifthCharacter, "sad")}:               I chihuahua sono così carini!
+                }
         {charTag(ThirdCharacter, "neutral")}:                   Mi ricorda un po' la mia mamma, che anche lei non la frenavi mai.
-                                                                Mentre papà distruggeva tutto, lei ha tenuto in piedi la famiglia da sola.
+                {
+                - are_two_entities_together(Mentor, PG):
+                {charTag(FifthCharacter, "hurry")}:             Uh, che cosa tenera.
+                }
+        {charTag(ThirdCharacter, "neutral")}:                   Mentre papà distruggeva tutto, lei ha tenuto in piedi la famiglia da sola.
         {charTag(ThirdCharacter, "jester")}:                    Ma se ho ben capito alla fine {charNameFive} sistema le cose pratiche, mentre te ti fai il culo a sistemare noi.
         {charTag(ThirdCharacter, "neutral")}:                   Che è peggio.
         -    
@@ -143,9 +169,18 @@
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
                 {charTag(ThirdCharacter, "bored")}:             Quella grande stronza della mia ex.
-                //Check parolacce da parte di Mentore
-                ~ fifthChar_slurDetectorFunction()
-                                        
+                                                                //Check parolacce da parte di Mentore
+                                                                ~ fifthChar_slurDetectorFunction()
+                        {
+                        - are_two_entities_together(SecondCharacter, PG):
+                        {charTag(SecondCharacter, "energy")}:   Questa la conoscevo già!
+                                                                Ma fa ridere, perché è come la cacca.
+                                                                Stronza.
+                                {
+                                - are_two_entities_together(FifthCharacter, PG):
+                                {charTag(Mentor, "sad")}:       Per l'appunto.        
+                                }                                                        
+                        }                           
                 - else:
                 {charTag(ThirdCharacter, "bored")}:             La mia ex.
                 }       
@@ -169,7 +204,7 @@
         {charTag(ThirdCharacter, "neutral")}:                   Comunque butta bene che mi avete rapito nel giorno libero.
                 {
                 - are_two_entities_together(Mentor, PG):        
-                {charTag(Mentor, "sad")}:                       Nessuno ti ha rapito. {charNameThree}!
+                {charTag(FifthCharacter, "sad")}:               Nessuno ti ha rapito. {charNameThree}!
                                                                 Le persone arrivano qui perché ne hanno bisogno.
                 {charTag(ThirdCharacter, "jester")}:            Si fa per dire, zia!
                 }
@@ -178,16 +213,31 @@
         {charTag(ThirdCharacter, "bored")}:                     Di nuovo.
                                                                     
         {charTag(ThirdCharacter, "neutral")}:                   Sono uno che si fa il culo a lavoro io, {player_name}.
-                                                                In teoria dovrei farmi dalle cinque all'una, ma finisce sempre che mi chiamano anche durante il giorno.
+                                                                //Check parolacce da parte di Mentore
+                                                                ~ fifthChar_slurDetectorFunction()
+                        {
+                        - are_two_entities_together(SecondCharacter, PG):
+                        {charTag(SecondCharacter, "energy")}:   Cuuuloooooooooo!
+                                                                Chissà perché agli adulti piace dirlo?                                                      
+                        }                                                
+        {charTag(ThirdCharacter, "neutral")}:                   In teoria dovrei farmi dalle cinque all'una, ma finisce sempre che mi chiamano anche durante il giorno.
                                                                 Colleghi, fornitori, i tizi della spazzatura.
         {charTag(ThirdCharacter, "bored")}:                     Perché il mio capo è un idiota.
-         {charTag(ThirdCharacter, "neutral")}:                  Ma c'ha i soldi, per cui: rispetto.
+        {charTag(ThirdCharacter, "neutral")}:                   Ma c'ha i soldi, per cui: rispetto.
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
                 {charTag(ThirdCharacter, "jester")}:            E la sua tipa, oh amico mio.
                                                                 Non hai idea di quanto sia bona.
                 {charTag(ThirdCharacter, "neutral")}:           Incapace, ma bona!
                                                                 Un nove se lo prende tutto.
+                {
+                - are_two_entities_together(FirstCharacter, PG):        
+                {charTag(FirstCharacter, "annoyed")}:           Le pagelle alle ragazze.
+                                                                Mannaggia al gatto le pagelle alle ragazze!
+                {charTag(ThirdCharacter, "jester")}:            No, qui ti sbagli!
+                                                                Le do anche ai ragazzi.
+                                                                E ai calciatori dell'Inter!
+                }                                                
                 }                                                      
         {charTag(ThirdCharacter, "neutral")}:                   Ma visto che invece tu c'hai i superpoteri e porti la gente in posti incasinati con la sola forza del pensiero, indovina.
         {charTag(ThirdCharacter, "jester")}:                    Che lavoro faccio?
@@ -236,10 +286,14 @@
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
                 {charTag(ThirdCharacter, "jester")}:            Sei un coglione, zio!
-                //Check parolacce da parte di Mentore
-                ~ fifthChar_slurDetectorFunction()
+                                                                //Check parolacce da parte di Mentore
+                                                                ~ fifthChar_slurDetectorFunction()
                                                                 Io sono un idiota, per cui siamo una grande squadra!
-
+                        {
+                        - are_two_entities_together(SecondCharacter, PG):
+                        {charTag(SecondCharacter, "energy")}:   Coglione e Idiota!
+                                                                Tipo dei supereroi ma suuuuuper incapaci!                                                 
+                        }          
                 - else:
                 {charTag(ThirdCharacter, "jester")}:            Ovviamente ti prendo in giro, non ti preoccupare.
                 }  
@@ -285,6 +339,7 @@
     
 
         {charTag(ThirdCharacter, "bored")}:                     Certo che quando mi hai rapito potevi portare qui il mio cellulare.
+                                                                E le mie sigaretteeeeee.
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
                 {charTag(ThirdCharacter, "neutral")}:           Cioè, avrai anche tu una tipa a cui scrivere, no?
@@ -308,16 +363,22 @@
         {charTag(ThirdCharacter, "neutral")}:                   Mi capisce sempre.
         {charTag(ThirdCharacter, "bored")}:                     Quando quell'altra mi ha smollato dopo tredici anni...
                                                                 Cazzo.
-        //Check parolacce da parte di Mentore
-            ~ fifthChar_slurDetectorFunction()                                                        
+                                                                //Check parolacce da parte di Mentore
+                                                                ~ fifthChar_slurDetectorFunction()                                                        
         {charTag(ThirdCharacter, "melanchonic")}:               Tredici fottutissimi anni, di cui cinque di convivenza.
+                                                                //Check parolacce da parte di Mentore
+                                                                ~ fifthChar_slurDetectorFunction() 
         {charTag(ThirdCharacter, "neutral")}:                   Non pensavo mi sarei innamorato di nuovo.
                                                                 Ne ho avute di tipe, eh!
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
                 {charTag(ThirdCharacter, "jester")}:            Lo sai anche tu zio che dobbiamo scopare ogni tanto, giusto per starcene tranquilli.
-                //Check parolacce da parte di Mentore
-                ~ fifthChar_slurDetectorFunction()                                                  
+                                                                //Check parolacce da parte di Mentore
+                                                                ~ fifthChar_slurDetectorFunction()
+                        {
+                        - are_two_entities_together(SecondCharacter, PG):
+                        {charTag(SecondCharacter, "neutral")}:  Io odio quando la mamma mi chiede di pulire camera!
+                        }                                                                                               
                 - else:
                 {charTag(ThirdCharacter, "neutral")}:           Anche tentativi seri, giuro.
                                                                 Non sono sempre un buffone.
@@ -327,6 +388,11 @@
         {charTag(ThirdCharacter, "melanchonic")}:               Ero a pezzi.
         {charTag(ThirdCharacter, "neutral")}:                   Però dopo tre mesi avevo iniziato a vedere qualche ragazza.
         {charTag(ThirdCharacter, "jester")}:                    Tre mesi: sono o non sono un bravo ragazzo?
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:           Un eroe della patria proprio.
+                {charTag(ThirdCharacter, "jester")}:            Sapevo mi avresti capito!
+                } 
         {charTag(ThirdCharacter, "neutral")}:                   Ma è un incubo alla mia età uscire con le ragazze, {player_name}.
                                                                 Ho provato con le app da imbrocco.
                                                                 Mi sono fatto aiutare da Petra, la mia collega sveglia, e mi ha fatto mettere foto idiote e una col suo cane "Perché alle ragazze piacciono i cani", ha detto.
@@ -335,6 +401,12 @@
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
                 {charTag(ThirdCharacter, "neutral")}:           Io sono pro tutto per carità, ma a volte 'ste donne sono di un pesante, vero?
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:           Perché questa conversazione invece è leggera.
+                                                                E soprattutto profonda.
+                                                                Guarda, quasi annego!
+                } 
 
                 - else:
                 {charTag(ThirdCharacter, "neutral")}:           A me sembra una cosa buona però, una cosa rispettosa, non volere che una donna sia per forza una che va con tutti di questi tempi.
@@ -349,8 +421,8 @@
                 }                                                    
         {charTag(ThirdCharacter, "bored")}:                     Su quelle app è pieno di ragazzi più giovani, che magari ne sanno meno del mondo, ma non è quello che si vuole da una relazione vero?
         {charTag(ThirdCharacter, "neutral")}:                   Però con le clienti ogni tanto si riesce a scopare.
-        //Check parolacce da parte di Mentore
-            ~ fifthChar_slurDetectorFunction()                                                        
+                                                                //Check parolacce da parte di Mentore
+                                                                ~ fifthChar_slurDetectorFunction()                                                      
                                                                 Unica regola: solo le turiste.
         {charTag(ThirdCharacter, "bored")}:                     Perché se me ne faccio una della frazione poi so come va a finire.
                                                                 Quando nasci e cresci nello stesso posto tutta la tua vita di merda è sulla bocca di tutti.
@@ -365,8 +437,8 @@
                 {charTag(ThirdCharacter, "bored")}:             Non è che si deve far vedere proprio tutto quando si è con gli altri.
                 }                                                      
                                                                 Le persone non si fanno mai i cazzi propri.
-        //Check parolacce da parte di Mentore
-            ~ fifthChar_slurDetectorFunction()                                                        
+                                                                //Check parolacce da parte di Mentore
+                                                                ~ fifthChar_slurDetectorFunction()                                                        
         {charTag(ThirdCharacter, "neutral")}:                   Con le turiste non è così difficile, alla fine arrivano qui e vogliono solo sfasciarsi di birra, e a quel punto non gli importa di nulla.
                                                                 Però con Ava è diverso.
                                                                 Lei mi fa stare bene davvero, non mi giudica.
@@ -386,9 +458,19 @@
                                                                 E poi quella se ne va.
         {charTag(ThirdCharacter, "bored")}:                     Che cazzo dovrei dire, che sono un mostro?
                                                                 Uno sfigato?
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:           Un molestatore che si porta a letto delle sconosciute ubriache.
+                {charTag(ThirdCharacter, "angry")}:             Ringrazia Dio che sono un signore, {charNameOne}.
+                }                                                         
 
         + \ {charTag(PG, "neutral")}:                           Mi stai dicendo che ti porti a letto delle sconosciute ubriache?
                 -> glyph_choice_manager(false, aetherC)->
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "neutral")}:           Grazie grazie grazie per averglielo detto.
+                                                                Grazie!
+                } 
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
                 {charTag(ThirdCharacter, "jester")}:                   
@@ -402,7 +484,13 @@
         {charTag(ThirdCharacter, "neutral")}:                   Però quando stacchi all'una è difficile che quelle che sono rimaste siano proprio sane.
         {charTag(ThirdCharacter, "bored")}:                     Con questa logica dovrei appendere il cazzo al chiodo, non trovi?   
                                                                 //Check parolacce da parte di Mentore
-                                                                ~ fifthChar_slurDetectorFunction() 
+                                                                ~ fifthChar_slurDetectorFunction()
+                        {
+                        - are_two_entities_together(SecondCharacter, PG):
+                        {charTag(SecondCharacter, "energy")}:   Lo si può staccare?
+                        {charTag(ThirdCharacter, "jester")}:    A volte non sarebbe male Ricciolino!
+                                                                Ma no, è solo un modo di dire.                                                               
+                        }                                                  
 
         + \ {charTag(PG, "neutral")}:                           Se vuoi essere felice non dovrebbe importarti così tanto il giudizio degli altri.
                 -> glyph_choice_manager(false, earthC)->
@@ -415,7 +503,12 @@
 
         
         + \ {charTag(PG, "neutral")}:                           Vorrei capire un po' meglio: quindi tu e Ava avete una relazione aperta?
-                -> glyph_choice_manager(false, airC)->     
+                -> glyph_choice_manager(false, airC)->
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:           Ti sembra questa la cosa più importante {player_name}?!?
+                                                                Non che si porta a letto delle sconosciute ubriache?
+                }          
         {charTag(ThirdCharacter, "bored")}:                     Che parole grosse.
                                                                 Relazione aperta.
         {charTag(ThirdCharacter, "neutral")}:                   Io e Ava.
@@ -428,7 +521,12 @@
         {charTag(ThirdCharacter, "neutral")}:                   A lei sta bene come cosa comunque.
 
         + \ {charTag(PG, "neutral")}:                           Invece tu non hai voglia di lasciare il posto dove sei nato e cresciuto?
-                -> glyph_choice_manager(false, fireC)-> 
+                -> glyph_choice_manager(false, fireC)->
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:           Ti sembra questa la cosa più importante {player_name}?!?
+                                                                Non che si porta a letto delle sconosciute ubriache?
+                } 
         {charTag(ThirdCharacter, "bored")}:                     Io non scappo come <i>lei</i> dalle situazioni, {player_name}.
         {charTag(ThirdCharacter, "jester")}:                    Ma poi dove me ne vado secondo te?
         {charTag(ThirdCharacter, "melanchonic")}:               A quarantaquattro anni, con il diploma di una vita fa e con un curriculum di merda?
@@ -451,18 +549,7 @@
                 {charTag(ThirdCharacter, "jester")}:            Sono un po' marpione, ma perché mi piace scherzare.
                 {charTag(ThirdCharacter, "neutral")}:           Ma so che sei qui per lavorare, non ci proverei mai.
                 }                                                    
-                                                            
-        {
-        - are_two_entities_together(FirstCharacter, PG):
-        {
-        - grimoire_thirdChar has grimFirstThirdChar:
-                {charTag(FirstCharacter, "annoyed")}:           Commento infastidito di Chitarra.
-
-        - else:
-                {charTag(FirstCharacter, "neutral")}:           Commento neutro/positivo di Chitarra.    
-        }
-        }     
-
+                                                              
             -> third_char_closing_storylet ->
             -> options_third_character
 
@@ -616,17 +703,7 @@
                                                                 Nessun tormento con le tipe.
                                                                 I miei amici sono a posto.
         {charTag(ThirdCharacter, "jester")}:                    Questo {charNameThree} sta da dio!
-
-                {
-                - are_two_entities_together(FirstCharacter, PG):
-                {
-                - grimoire_thirdChar has grimFirstThirdChar:
-                {charTag(FirstCharacter, "annoyed")}:                   Commento infastidito di Chitarra.
-
-                - else:
-                {charTag(FirstCharacter, "neutral")}:                   Commento neutro/positivo di Chitarra.    
-                }
-                }                                                      
+                                                  
             -> third_char_closing_storylet ->
             -> options_third_character
             
@@ -646,8 +723,13 @@
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
                 {charTag(ThirdCharacter, "bored")}:             La grandissima stronza.
-                //Check parolacce da parte di Mentore
-                ~ fifthChar_slurDetectorFunction()
+                                                                //Check parolacce da parte di Mentore
+                                                                ~ fifthChar_slurDetectorFunction()
+                        {
+                        - are_two_entities_together(FirstCharacter, PG):
+                        {charTag(FirstCharacter, "annoyed")}:           Più ti ascolto più sarei curiosa di sentire la sua di versione della faccenda.
+                        {charTag(ThirdCharacter, "bored")}:             Certo, perché per quelle come te è sempre colpa del compagno, sempre.
+                        } 
                                                 
                 - else:
                 {charTag(ThirdCharacter, "bored")}:             La mia ex.
@@ -703,8 +785,13 @@
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
                 {charTag(ThirdCharacter, "angry")}:             Alla fine lei stava solo cercando un nuovo cazzo, più giovane, più figo, più ricco.
-                //Check parolacce da parte di Mentore
-                ~ fifthChar_slurDetectorFunction()
+                                                                //Check parolacce da parte di Mentore
+                                                                ~ fifthChar_slurDetectorFunction()
+                        {
+                        - are_two_entities_together(SecondCharacter, PG):
+                        {charTag(SecondCharacter, "melanchonic")}:Non mi piace questa energia, no.
+                                ~ change_entity_place(SecondCharacter)                           
+                        }                                           
                                                 
                 - else:
                 {charTag(ThirdCharacter, "melanchonic")}:       Finisce così la storia di uno sfigato.
@@ -748,6 +835,11 @@
         {charTag(ThirdCharacter, "melanchonic")}:               Che i bravi ragazzi alla fine la pigliano sempre nel culo.
                                                                         //Check parolacce da parte di Mentore
                                                                         ~ fifthChar_slurDetectorFunction()
+                        {
+                        - are_two_entities_together(SecondCharacter, PG):
+                        {charTag(SecondCharacter, "angry")}:    Sembrano le cose che dice papà, non mi piacciono.
+                                ~ change_entity_place(SecondCharacter)                           
+                        }                                                         
             
         + \ {charTag(PG, "neutral")}:                           Cosa ha fatto il tipo dopo tutto questo? Come ha cambiato la situazione?
                 -> glyph_choice_manager(false, fireC)-> 
@@ -758,16 +850,28 @@
                                                                 Sapendo che prima o poi lei se ne pentirà di questa cosa.
             -
         {
-            - are_two_entities_together(FirstCharacter, PG):
-                3. **Qui se c’è in giro Chitarra non si trattiene, e ci rinfaccia alcuni tipi di risposte che possiamo dare.**
-                4. Lui le risponde che è la sua storia, che in quel momento noi siamo lì per lui, e che non deve rompere le scatole, che lui non viene a fare commenti quando racconta delle sue paranoie sul lavoro o il moroso o Sborotalco.
-        }
-
+        - are_two_entities_together(FirstCharacter, PG):
+        {charTag(FirstCharacter, "annoyed")}:                   So che non sono cazzi miei, ma questa ragazza aveva tutto il diritto di andarsene.
+        {charTag(ThirdCharacter, "bored")}:                     Chi ti ha chiesto qualcosa a te, scusa?
+        {charTag(FirstCharacter, "neutral")}:                   Sei qui a raccontare la tua storia da vittima di 'sto cazzo davanti a tutti, per cui un po' diventano anche cazzi miei.
+        {charTag(ThirdCharacter, "bored")}:                     Quindi quando parlerai delle tue paranoie sul lavoro o il moroso o Sborotalco posso venire a romperti i coglioni a mia volta?
+        {charTag(FirstCharacter, "annoyed")}:                   Come se tu avessi qualcosa di più importante da portare di "Oh povero me ho groomato questa tipa per un decennio e poi mi ha lasciato, sob."
+        {charTag(ThirdCharacter, "bored")}:                     Cazzo vuol dire?
+        {charTag(FirstCharacter, "annoyed")}:                   Vuol dire che so fare i conti, {charNameThree}.
+                                                                E spero li sappia fare anche {player_name}.
+                                                                E ora vado a fare due passi o finisco per strozzare qualcuno.
+                ~ change_entity_place(FirstCharacter)                                                
+        {charTag(ThirdCharacter, "angry")}:                     Ma questa è pazza!
+                                                                Ma hai visto come mi ha attaccato?
+                                                                Io.
+                                                                Ho bisogno di scaricarmi un attimo.
+                ~ change_entity_place(ThirdCharacter)            
+        - else:
         {charTag(ThirdCharacter, "bored")}:                     C'è qualcosa in questo posto, un po' ti fa venire da piangere
         {charTag(ThirdCharacter, "jester")}:                    Alla fine comunque lui ha trovato qualcuno che la ama.
                                                                 A volte le cose vanno in vacca solo per poter migliorare.
         {charTag(ThirdCharacter, "neutral")}:                   Ora che hai sentito qual è la cosa che ancora mi fa incazzare, immagino saprai anche come farmi uscire di qui.
-
+        }
 
             -> third_char_closing_storylet ->
             -> options_third_character
@@ -790,8 +894,16 @@
         {charTag(ThirdCharacter, "neutral")}:                   {charNameFive} dice che io posso andarmene solo se mi riscrivi.
                                                                 Che sono io a dirti che mi devi riscrivere.
                                                                 Ma non riesco a chiedertelo, e secondo lei è perché non ho preso un punto importante.
+                {
+                - are_two_entities_together(FifthCharacter, PG):
+                {charTag(FifthCharacter, "neutral")}:           Esattamente.  
+                }                                                        
         {charTag(ThirdCharacter, "bored")}:                     Secondo me è colpa di qualcosa qui.
         {charTag(ThirdCharacter, "neutral")}:                   Mi avete drogato?
+                {
+                - are_two_entities_together(FifthCharacter, PG):
+                {charTag(FifthCharacter, "sad")}:               No no no cosa dici?  
+                }  
                                                                 Vabbè, per ora reggiamo il gioco.
                                                                 {charNameFive} dice che spesso i problemi sono in famiglia.
                                                                 E magari c'ha pure ragione.
@@ -826,7 +938,16 @@
         {charTag(ThirdCharacter, "bored")}:                     Ora tutta la famiglia gira attorno a mia sorella.
         {charTag(ThirdCharacter, "neutral")}:                   Anche la tipa di mio padre, che ha sempre un po' detestato Marta, sembra un'altra persona.
         {charTag(ThirdCharacter, "bored")}:                     Gira che ti rigira alla fine alle donne basta avere un figlio e zac, vita risolta.
-                                                                Papà la adorava già anche prima, ma papà è uno sfigato.
+                {
+                - are_two_entities_together(FifthCharacter, PG):
+                {charTag(FifthCharacter, "neutral")}:           Posso assicurarti che le cose sono molto più complicate di così.
+                                                                E si risolvono gran poche cose con un figlio.
+                }  
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:           Più ti sento più invidio chi non ti ha mai conosciuto.
+                }   
+        {charTag(ThirdCharacter, "bored")}:                     Papà la adorava già anche prima, ma papà è uno sfigato.
         {charTag(ThirdCharacter, "angry")}:                     Uno che si è fatto sempre portare via tutto: la vecchia casa, il bar, la mamma.
         {charTag(ThirdCharacter, "neutral")}:                   Con lui non ci parlo da due anni.
                                                                 Da quando mi ha detto di non sposare Dona.
@@ -864,6 +985,12 @@
                                                                 E che cazzo.
                                                                         //Check parolacce da parte di Mentore
                                                                         ~ fifthChar_slurDetectorFunction()
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "neutral")}:           Ci sono momenti in cui quasi mi dispiace per te.
+                {charTag(FirstCharacter, "annoyed")}:           Ma poi riesci a dire qualcosa che ti rende totalmente incagabile.
+                                                                Una roba da Nobel proprio.                                                       
+                }                                                         
 
         + \ {charTag(PG, "neutral")}:                           I trattori fanno un lavoro enorme per farci vivere e mangiare.
                 -> glyph_choice_manager(false, earthC)->
@@ -890,6 +1017,10 @@
         {charTag(ThirdCharacter, "neutral")}:                   La vita è crudele coi perdenti.
                                                                 Ti prende a calci sui denti e ti lascia lì, a terra.
                                                                 Solo.
+                {
+                - are_two_entities_together(FifthCharacter, PG):
+                {charTag(FifthCharacter, "sad")}:               Povera stellina.                  
+                }                                                 
             
         + \ {charTag(PG, "neutral")}:                           Non è più semplice affrontare tuo padre invece di evitarlo?
                 -> glyph_choice_manager(false, fireC)-> 
@@ -962,7 +1093,7 @@
                                                                 Ma in paese si diceva che in realtà aveva un'altra famiglia a Milano, e per quello lo si vedeva in giro quasi solo i fine settimana.
                 }                                                          
         {charTag(ThirdCharacter, "neutral")}:                   Con gli altri l'abbiamo menato un paio di volte, ma c'era qualcosa di orgoglioso in lui, e alla fine dopo il primo anno mi sono ritrovato a fare le pause con lui invece che con gli altri idioti con cui uscivo.
-                                                                Lui e io abbiamo fatto anche le altre scuole assieme, persino i primi due anni di Ingegneria.
+                                                                Abbiamo fatto anche le altre scuole assieme, persino i primi due anni di Ingegneria.
                                                                 Anche se io volevo solo fare festa.
         {charTag(ThirdCharacter, "jester")}:                    Diciamocelo: non posso essere <b>così</b> bono e pure intelligente, sennò chi le ferma più le tipe?
         {charTag(ThirdCharacter, "neutral")}:                   E lì la gente era troppo seria, non sai la rottura di balle.
@@ -1064,17 +1195,7 @@
                                                                 Ho una vita semplice, magari non perfetta ma felice.
         {charTag(ThirdCharacter, "jester")}:                    Per cui fai quella roba della riscrittura quando puoi così posso tornare alla mia birra in frigo.
         {charTag(ThirdCharacter, "bored")}:                     Sempre che non se la sia rubata di nuovo lo Stracciamaroni.
-        {
-        - are_two_entities_together(FirstCharacter, PG):
-        {
-        - grimoire_thirdChar has grimFirstThirdChar:
-        {charTag(FirstCharacter, "annoyed")}:                   Commento infastidito di Chitarra.
-
-        - else:
-        {charTag(FirstCharacter, "neutral")}:                   Commento neutro/positivo di Chitarra.    
-        }
-        }  
-
+ 
             -> third_char_closing_storylet ->
             -> options_third_character
     
