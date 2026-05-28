@@ -1042,17 +1042,6 @@
                                                                 Io non ci credo che ci possa essere tutto questo amore con qualcuno con cui cresci.
                                                                 Vedi troppe brutte cose.
 
-                {
-                - are_two_entities_together(FirstCharacter, PG):
-                {
-                - grimoire_thirdChar has grimFirstThirdChar:
-                {charTag(FirstCharacter, "annoyed")}:                   Commento infastidito di Chitarra.
-
-                - else:
-                {charTag(FirstCharacter, "neutral")}:                   Commento neutro/positivo di Chitarra.    
-                }
-                }  
-
             -> third_char_closing_storylet ->
             -> options_third_character
     

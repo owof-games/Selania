@@ -11,32 +11,32 @@
     //Main story
     {
         - grimoire_thirdChar has grimThirdCharOne:
-
+            {player_name} ha conosciuto {charNameThree}, che è sembrato molto incuriosito dalla sua forma temporanea. Ha raccontato a {player_name} di lavorare in una birreria, e di essere un grande lavoratore. È l'unica birreria della frazione in cui vive, e un tempo era in gestione a suo padre.
     }
 
     {
         - grimoire_thirdChar has grimThirdCharTwo:
-
+            {charNameThree} ha raccontato a {player_name} di Ava, la sua attuale ragazza; della sua ex, Donatella, con cui non è in buoni rapporti; e delle donne con cui è uscito dopo la fine della loro relazione, tra app di dating e turiste ubriache incontrate al bar.
     }
 
     {
         - grimoire_thirdChar has grimThirdCharThree:
-
+            {charNameThree} ha parlato degli amici con cui gioca a calcetto il lunedì sera: il Merlo, un uomo ricco. Il Giova, legato al mondo delle start up e a detta di {charNameThree}, non particolarmente brillante. Dario, che è nel gruppo solo perché esce con la cugina del Giova. E Rocco, un uomo egiziano con due figli con la testa sulle spalle e che {charNameThree} incontra anche fuori dalle partite. Queste serate sono state organizzate all'inizio dal Poggi, l'amico storico di {charNameThree}, per aiutarlo a superare un periodo complesso dopo il Covid, durante il quale {charNameThree} si è ritrovato senza un lavoro per lui prestigioso.
     }
 
     {
         - grimoire_thirdChar has grimThirdCharFour:
-
+            Su suggerimento di {charNameFive}, {charNameThree} ha raccontato a {player_name} della sua relazione con Donatella. Ha raccontato una lunga storia d'amore e convivenza che ha creato tensioni col padre di {charNameThree} quando {charNameThree} e Donatella hanno deciso di sposarsi. Ma i due non sono arrivati al matrimonio perché Donatella si è resa conto a ridosso dei trent'anni di non sapere davvero chi è. Sente di essere stata cresciuta da {charNameThree}, e per questo incapace di capire se sta per sposarsi perché lo vuole, o perché è l'unica cosa a cui sa pensare. Decide così di lasciare {charNameThree}, che per un anno la aspetta dedicandosi al suo corpo e al lavoro, fino a quando lei non gli dice che non deve più aspettarla, e {charNameThree}  amaro, legge la fine della relazione come un segno del suo invecchiamento, del non essere ricco, del non avere amici interessanti.
     } 
 
     {
         - grimoire_thirdChar has grimThirdCharFive:
-
+            {charNameThree} ha condiviso un po' di elementi sulla sua famiglia. In particolare ha parlato della madre, a cui era molto legata ma è morta da tempo, e della sorella Marta, che sembra stimare molto. Anche se ora Marta ha avuto un figlio, Armando, e {charNameThree} crede che la sorella sia al centro dell'attenzione del padre e della matrigna. Padre verso cui non sembra provare molta stima, e che se si presenta in birreria, ignora.
     } 
 
     {
         - grimoire_thirdChar has grimThirdCharSix:
-
+            {charNameThree} è tornato a parlare dell'amico storico, il Poggi. Ha raccontato di come si sono conosciuti alle medie, e di come sia passato dal bullizzarlo con un altro gruppo di ragazzini, fino a vederlo come il suo migliore amico. Hanno studiato assieme al liceo e per due anni di Ingegneria, fino a quando {charNameThree} non ha lasciato l'università, ma senza perdere l'amicizia per il Poggi. {charNameThree} è stato presente nella vita del Poggi anche mentre conosceva quella che poi è diventata la sua moglie ed ha avuto una bambina, Olivia, di cui {charNameThree} è padrino. Ma negli ultimi anni le cose si sono raffreddati e si sentono molto meno. {charNameThree} si chiede se faccia pena al suo amico, anche perché nel gruppo di calcetto le persone lo prendono in giro dicendo che Donatella l'ha lasciato per motivi secondo loro di non virilità. Dopo questa confidenza, {charNameThree} ha comunicato a {player_name} di essere pronto per la sua riscrittura. 
     }
 
     
