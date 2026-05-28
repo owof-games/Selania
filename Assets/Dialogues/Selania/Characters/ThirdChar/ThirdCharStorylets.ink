@@ -553,32 +553,63 @@
         
         + \ {charTag(PG, "neutral")}:                           Mi chiedevo: come mai parli sempre degli altri e quasi mai di te?
                 -> glyph_choice_manager(false, waterC)->
+
                 {//Blocco per reazioni e commenti legati al genere.
-                - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "neutral")}:               
-                } 
+                - thirdChar_recordedPlayerPronoun == him:       
+                {charTag(ThirdCharacter, "bored")}:                     Potresti anche non chiedertelo e risolvere il problema, {player_name}.     
+                }
+        {charTag(ThirdCharacter, "neutral")}:                   Ti ho parlato della mia ragazza, del lavoro, dei miei amici.
+                                                                Vuoi conoscere il mio numero di scarpe?
+                                                                Porto il quarantaquattro.
+                                                                La mia taglia?
+                                                                Una quarantaquattro.
+        {charTag(ThirdCharacter, "jester")}:                    Più due.
+        {charTag(ThirdCharacter, "neutral")}:                   L'altra taglia?
+        {charTag(ThirdCharacter, "jester")}:                    Il solito diviso due.                                                         
             
         + \ {charTag(PG, "neutral")}:                           Notavo che hai descritto tutti i tuoi amici in base al lavoro che fanno.
                 -> glyph_choice_manager(false, aetherC)->
+
+        {charTag(ThirdCharacter, "neutral")}:                   Di quello si parla quando siamo assieme, {player_name}.
+
                 {//Blocco per reazioni e commenti legati al genere.
-                - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "neutral")}:                   
+                - thirdChar_recordedPlayerPronoun == him:               
+                {charTag(ThirdCharacter, "neutral")}:                   Ho paura a sapere di cosa parli tu coi tuoi amici.
                 } 
-        
-        + \ {charTag(PG, "neutral")}:                           Cosa significa "essere un boss"? è un discorso di soldi?
+        {charTag(ThirdCharacter, "neutral")}:                   La vita è già incasinata di suo senza altre para.
+        {charTag(ThirdCharacter, "neutral")}:                   A parte il Giova.
+        {charTag(ThirdCharacter, "jester")}:                    Ma Giova non c'ha abbastanza neuroni per pensare, quindi anche lui non ha molto da dire.
+
+        + \ {charTag(PG, "neutral")}:                           Cosa significa "essere un boss"? È un discorso di soldi?
                 -> glyph_choice_manager(false, earthC)->
-            
+
+        {charTag(ThirdCharacter, "neutral")}:                   Un po', ma non solo.
+                                                                È una impostazione mentale.
+                                                                È sapere che puoi chiedere tutto perché tutti ti rispettano.
+                                                                È quando entri in una stanza e tutti ti vedono.
+                                                                E sanno che sei quello figo.
         
         + \ {charTag(PG, "neutral")}:                           Ma invece cosa fai quando sei libero e non becchi i tuoi amici?
                 -> glyph_choice_manager(false, airC)->
-            
+
+        {charTag(ThirdCharacter, "neutral")}:                   Un po' le solite cose.
+                                                                Cazzeggio sui social.
+                                                                Commento qualche notizia.
+        {charTag(ThirdCharacter, "jester")}:                    Vado a dare fastidio agli juventini.
+        {charTag(ThirdCharacter, "neutral")}:                   Mi guardo qualche video, tipo quelli del Mastrangelo.
+                                                                Con Rocco siamo andati alla sua festa per lo scudetto.
+                                                                Lui davvero un bomber proprio.
         
         + \ {charTag(PG, "neutral")}:                           Ma alla fine vincete mai?
                 -> glyph_choice_manager(false, fireC)-> 
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun != him:
-                {charTag(ThirdCharacter, "neutral")}:                   
-                } 
+                {charTag(ThirdCharacter, "jester")}:                    Ah ah anche se non sei un ragazzo, sai le cose che contano, grande!       
+                }
+        {charTag(ThirdCharacter, "neutral")}:                   Però non lo si fa tanto per la vittoria, è per stare assieme.
+                                                                Anche perché la squadra non è mai proprio la stessa.
+                                                                Però nel gruppo sono quello con più gol all'attivo.
+        {charTag(ThirdCharacter, "jester")}:                    Appena usciamo da qui ti faccio vedere che gambone che ancora mi ritrovo!
         - 
         {charTag(ThirdCharacter, "jester")}:                    Come vedi comunque la zia c'ha torto.
         {charTag(ThirdCharacter, "neutral")}:                   Non ho problemi col lavoro.
