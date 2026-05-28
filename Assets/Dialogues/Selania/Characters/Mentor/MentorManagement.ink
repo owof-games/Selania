@@ -127,6 +127,7 @@
 
     - else:
         //Da qui in avanti Mentore se ne andrà.
+        {charTag(Mentor, "bored")}:             {~ Di nuovo!|Un'altra parolaccia.|Non sopporto più questo modo di fare.|Che mancanza di rispetto proprio.}
         ~ change_entity_place(Mentor)
 
 }

@@ -713,26 +713,49 @@
         
             + \ {charTag(PG, "neutral")}:                       Forse a volte si può tenere a qualcuno, ma non reggere più la relazione.
                     -> glyph_choice_manager(false, waterC)->
-                
+        {charTag(ThirdCharacter, "angry")}:                     Cazzate.
+                                                                Se ami qualcuno ti fai il culo e ti adatti.
+                                                                        //Check parolacce da parte di Mentore
+                                                                        ~ fifthChar_slurDetectorFunction()
+        {charTag(ThirdCharacter, "bored")}:                     Perché sennò così finisce sempre che quando qualcosa non piace più si tira fuori una scusa tipo "Mi spiace ma non riesco a comunicare con te."
+                                                                O "Prendi tutto come se ti fosse dovuto, non ce la faccio più!"
+                                                                O "Devo trovare me stessa."
+        {charTag(ThirdCharacter, "neutral")}:                   E a quel punto la storia finisce e tu sei fregato.
                 
             + \ {charTag(PG, "neutral")}:                       Hai raccontato tutta questa storia come se ci fosse un buono e una cattiva.
                     -> glyph_choice_manager(false, aetherC)->
-                
+        {charTag(ThirdCharacter, "bored")}:                     Vuoi dirmi che non è così, scusa?
+        {charTag(ThirdCharacter, "neutral")}:                   Magari lui non è perfetto.
+                                                                Ma se l'è presa sotto la sua ala quando ancora sapeva di latte e l'ha aiutata a diventare una donna.
+                                                                Gli è stato vicino quando non era felice, quando litigava coi suoi genitori.
+        {charTag(ThirdCharacter, "angry")}:                     Le ha dato tutto.
+        {charTag(ThirdCharacter, "neutral")}:                   E lei l'ha abbandonato.
             
             + \ {charTag(PG, "neutral")}:                       Sembra che a questo tizio importi tanto dei suoi soldi, dell'età, del tipo di amici che ha, vero?
                     -> glyph_choice_manager(false, earthC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun != him:
-                {charTag(ThirdCharacter, "neutral")}:                   
-                } 
+                {charTag(ThirdCharacter, "neutral")}:                   No, è che quando hai amici maschi di quello si parla, tu non puoi capire.        
+                }
+        {charTag(ThirdCharacter, "neutral")}:                   Sono cose importanti alla fine, perché le persone quello guardano.
+        {charTag(ThirdCharacter, "bored")}:                     Non è che gliene frega a nessuno se sei un tipo sensibile o se ti piacciono, cazzo ne so, i tramonti.
+        {charTag(ThirdCharacter, "neutral")}:                   No, alla fine uno ti giudica per quello che possiedi, per la tipa che c'hai e i tipi con cui esci.
+                                                                Io non esco con degli sfigati, non è roba da poco.
+
             
             + \ {charTag(PG, "neutral")}:                       E se fosse davvero una storiella, quale sarebbe la lezione che dovrei imparare?
                     -> glyph_choice_manager(false, airC)->
-                Che comunque la metti la pigli sempre nel culo.
+        {charTag(ThirdCharacter, "melanchonic")}:               Che i bravi ragazzi alla fine la pigliano sempre nel culo.
+                                                                        //Check parolacce da parte di Mentore
+                                                                        ~ fifthChar_slurDetectorFunction()
             
             + \ {charTag(PG, "neutral")}:                       Cosa ha fatto il tipo dopo tutto questo? Come ha cambiato la situazione?
                     -> glyph_choice_manager(false, fireC)-> 
-                
+        {charTag(ThirdCharacter, "bored")}:                     E che doveva fare {player_name}?
+                                                                Rapirla?
+        {charTag(ThirdCharacter, "neutral")}:                   Ha continuato a lavorare.
+                                                                A marcire nel letto guardando la TV.
+                                                                Sapendo che prima o poi lei se ne pentirà di questa cosa.
             -
         {
             - are_two_entities_together(FirstCharacter, PG):
