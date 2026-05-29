@@ -642,9 +642,7 @@
         
         
             
-        {charTag(FirstCharacter, "neutral")}:            
-        
-                                                                Direi che sono pronta per andarmene, {player_name}.
+        {charTag(FirstCharacter, "neutral")}:                   Direi che sono pronta per andarmene, {player_name}.
                                                                 Abbiamo fatto un viaggio enorme assieme, ora è giunto il tempo per me di riprendere in mano la mia vita.
                                                                 Grazie di tutto, davvero.
                                                                 Grazie di tutto.
@@ -656,11 +654,21 @@
         }
         {
             - thirdChar_storyStatus == story_storyStarted:
-                                                                E persino {charNameThree}.
-                                                                Come sono magnanima.
+                {
+                - thirdChar_firstCharRage == true or grimoire_thirdChar has grimFirstThirdChar:
+
+                    {charTag(FirstCharacter, "neutral")}:       Ma non ti azzardare a salutarmi quell'idiota di {charNameThree}.
+                                                                O torno qui giusto per menarti, ama.                       
+    
+                - else:
+            
+                    {charTag(FirstCharacter, "neutral")}:       E persino {charNameThree}.
+                                                                Sono sorpresa dalla mia stessa bontà {player_name}!                                                        
+                }
 
         }
-            
+                                                                A presto e grazie ancora!
+                                                                
     -> first_char_closing_storylet ->
     -> endingPNGstory(FirstCharacter)
         

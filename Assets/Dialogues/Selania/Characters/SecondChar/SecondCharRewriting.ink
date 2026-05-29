@@ -665,6 +665,7 @@
                                                     E anche {charNameThree}.
 
         }
+                                                    Ciao ciao!
             
     -> second_char_closing_storylet ->    
     -> endingPNGstory(SecondCharacter)
