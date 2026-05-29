@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 347adc9fe8805054ab6b8006759dc15f
+guid: 67b423b1a7352ba42877c2c658ba5752
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7338140360275716100
-    second: boccale_judgmental_0
+      213: -2520810246587802722
+    second: boccale_bored_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boccale_judgmental_0
+      name: boccale_bored_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cf71fc1b830b92a90800000000000000
-      internalID: -7338140360275716100
+      spriteID: e9b18f1cf68440dd0800000000000000
+      internalID: -2520810246587802722
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      boccale_judgmental_0: -7338140360275716100
+      boccale_bored_0: -2520810246587802722
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
