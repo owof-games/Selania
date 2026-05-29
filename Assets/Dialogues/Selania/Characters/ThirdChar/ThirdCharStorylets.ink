@@ -113,6 +113,12 @@
         {charTag(ThirdCharacter, "bored")}:                     Non sono a favore delle droghe, sappilo.
         {charTag(ThirdCharacter, "jester")}:                    Ma per la seconda parte posso farci un pensierino.
         {charTag(ThirdCharacter, "neutral")}:                   Anche se qui avete tutti un aspetto strano.
+                {
+                - are_two_entities_together(Mentor, PG):
+                {charTag(Mentor, "neutral")}:                   {charNameThree}, il nostro aspetto qui rispecchia le persone che siamo.
+                {charTag(Mentor, "hurry")}:                     Come un fiore che è una stella, una guida.
+                                                                O un boccale di birra dissetante.
+                }
 
         + \ {charTag(PG, "neutral")}:                           {charNameOne} sta cercando nuove fondamenta per la sua vita. E del vino.
                 -> glyph_choice_manager(false, earthC)->
@@ -139,12 +145,13 @@
         {charTag(ThirdCharacter, "jester")}:                    Quella c'ha una carica che manco un chihuahua sotto coca.
                 {
                 - are_two_entities_together(Mentor, PG):
-                {charTag(FifthCharacter, "sad")}:               I chihuahua sono così carini!
+                {charTag(FifthCharacter, "sad")}:               I chihuahua sono sempre sottovalutati.
                 }
         {charTag(ThirdCharacter, "neutral")}:                   Mi ricorda un po' la mia mamma, che anche lei non la frenavi mai.
                 {
                 - are_two_entities_together(Mentor, PG):
-                {charTag(FifthCharacter, "hurry")}:             Uh, che cosa tenera.
+                {charTag(FifthCharacter, "hurry")}:             Uh, ma che cosa tenera {charNameThree}.
+                                                                Adorabile.
                 }
         {charTag(ThirdCharacter, "neutral")}:                   Mentre papà distruggeva tutto, lei ha tenuto in piedi la famiglia da sola.
         {charTag(ThirdCharacter, "jester")}:                    Ma se ho ben capito alla fine {charNameFive} sistema le cose pratiche, mentre te ti fai il culo a sistemare noi.
@@ -204,9 +211,10 @@
         {charTag(ThirdCharacter, "neutral")}:                   Comunque butta bene che mi avete rapito nel giorno libero.
                 {
                 - are_two_entities_together(Mentor, PG):        
-                {charTag(FifthCharacter, "sad")}:               Nessuno ti ha rapito. {charNameThree}!
+                {charTag(FifthCharacter, "sad")}:               Nessuno ti ha rapito, {charNameThree}!
                                                                 Le persone arrivano qui perché ne hanno bisogno.
                 {charTag(ThirdCharacter, "jester")}:            Si fa per dire, zia!
+                {charTag(FifthCharacter, "sorry")}:             Scusa, è che non voglio che pensi male di noi.     
                 }
                                                                 Anche se avrei preferito passare la giornata a sistemare la formazione del fantacalcio.
                                                                 Che Calhanoglu si è infortunato.
@@ -266,6 +274,10 @@
                                                                 C'ho le cose da fare in casa.
                                                                 O riposare un attimo.
         {charTag(ThirdCharacter, "bored")}:                     Non è che c'ho tutto 'sto tempo per farmi altre seghe mentali.
+                {
+                - are_two_entities_together(Mentor, PG):        
+                {charTag(FifthCharacter, "sad")}:               Povera stella.   
+                }
         
         + \ {charTag(PG, "neutral")}:                           Ti ci vedo a occuparti di cibo e tenere compagnia alle persone.
                 -> glyph_choice_manager(false, earthC)->
@@ -307,9 +319,8 @@
 
 
         {charTag(ThirdCharacter, "jester")}:                    Comunque lavoro in una birreria.
-        {charTag(ThirdCharacter, "neutral")}:                   Anzi: LA birreria.
                                                                 Che si chiama <i>Il baretto</i>, che è il nome che aveva quando era un bar.
-        {charTag(ThirdCharacter, "bored")}:                     E l'aveva mio padre in gestione.
+        {charTag(ThirdCharacter, "bored")}:                     Ed era di mio padre.
         {charTag(ThirdCharacter, "jester")}:                    Comunque è la migliore birreria della zona.
         {charTag(ThirdCharacter, "jester")}:                    Perché l'unica nella frazione sfigatissima in cui vivo.
                                                                 Puro nulla al confine con la città.
@@ -340,6 +351,11 @@
 
         {charTag(ThirdCharacter, "bored")}:                     Certo che quando mi hai rapito potevi portare qui il mio cellulare.
                                                                 E le mie sigaretteeeeee.
+                {
+                - are_two_entities_together(Mentor, PG):        
+                {charTag(FifthCharacter, "sad")}:               Non fa bene fumare, {charNameThree}.
+                {charTag(ThirdCharacter, "jester")}:            Non fa bene nemmeno vivere zia, ma dobbiamo pur sfangarcela in qualche modo no?
+                }                                                
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
                 {charTag(ThirdCharacter, "neutral")}:           Cioè, avrai anche tu una tipa a cui scrivere, no?
@@ -386,11 +402,15 @@
         {charTag(ThirdCharacter, "neutral")}:                   Ho aspettato un po' dopo Dona, perché speravo che alla fine avrebbe cambiato idea.
         {charTag(ThirdCharacter, "bored")}:                     Invece se ne è andata in Spagna dopo che mi ha umiliato urlandomi contro davanti ai suoi.
         {charTag(ThirdCharacter, "melanchonic")}:               Ero a pezzi.
+                {
+                - are_two_entities_together(Mentor, PG):        
+                {charTag(FifthCharacter, "sad")}:               Quanto mi spiace, povero tesoro.
+                }  
         {charTag(ThirdCharacter, "neutral")}:                   Però dopo tre mesi avevo iniziato a vedere qualche ragazza.
         {charTag(ThirdCharacter, "jester")}:                    Tre mesi: sono o non sono un bravo ragazzo?
                 {
                 - are_two_entities_together(FirstCharacter, PG):
-                {charTag(FirstCharacter, "annoyed")}:           Un eroe della patria proprio.
+                {charTag(FirstCharacter, "annoyed")}:           Un martire proprio.
                 {charTag(ThirdCharacter, "jester")}:            Sapevo mi avresti capito!
                 } 
         {charTag(ThirdCharacter, "neutral")}:                   Ma è un incubo alla mia età uscire con le ragazze, {player_name}.
@@ -418,6 +438,13 @@
                 - are_two_entities_together(FirstCharacter, PG):
                                                                 Vero, {charNameOne}?
                 {charTag(FirstCharacter, "annoyed")}:           Mi si è appena suicidata la vagina.             
+                }
+                {
+                - are_two_entities_together(Mentor, PG):
+                {charTag(ThirdCharacter, "jester")}:            Ma un'eccezione per la zia la faccio pure.       
+                {charTag(FifthCharacter, "hurry")}:             Sei un vero ruffiano, {charNameThree}.
+                                                                Terribile.
+                {charTag(ThirdCharacter, "jester")}:            Volevi dire <i>adorabile</i>.                                                
                 }                                                    
         {charTag(ThirdCharacter, "bored")}:                     Su quelle app è pieno di ragazzi più giovani, che magari ne sanno meno del mondo, ma non è quello che si vuole da una relazione vero?
         {charTag(ThirdCharacter, "neutral")}:                   Però con le clienti ogni tanto si riesce a scopare.
@@ -464,7 +491,7 @@
                 {charTag(ThirdCharacter, "angry")}:             Ringrazia Dio che sono un signore, {charNameOne}.
                 }                                                         
 
-        + (aether)\ {charTag(PG, "neutral")}:                           Mi stai dicendo che ti porti a letto delle sconosciute ubriache?
+        + (aether)\ {charTag(PG, "neutral")}:                   Mi stai dicendo che ti porti a letto delle sconosciute ubriache?
                 -> glyph_choice_manager(false, aetherC)->
                 {
                 - are_two_entities_together(FirstCharacter, PG):
@@ -473,8 +500,7 @@
                 } 
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "jester")}:                   
-                                                                Dai, non dirmi che non fai anche tu zio.
+                {charTag(ThirdCharacter, "jester")}:            Dai, non dirmi che non fai anche tu zio.
                 - else:
                 {charTag(ThirdCharacter, "jester")}:            Quando lavori in una birreria non è che ci trovi le sconosciute sobrie, {player_name}!
                 }
@@ -576,7 +602,11 @@
         {charTag(ThirdCharacter, "bored")}:                     Quello è stato un periodo di merda {player_name}, ma davvero di merda, manco un uno a quell'anno darei, solo le fiamme.
         {charTag(ThirdCharacter, "neutral")}:                   Ho perso il mio lavoro storico da un giorno all'altro, un lavoro da fighi, con soldi e viaggi.
         {charTag(ThirdCharacter, "melanchonic")}:               Ero un boss, e poi boom, a terra.
-        {charTag(ThirdCharacter, "neutral")}:                   E una sera il Poggi mi ha detto "Dai, ti tiro su una squadretta con gente a posto così ti distrai!"
+                {
+                - are_two_entities_together(Mentor, PG):     
+                {charTag(FifthCharacter, "sad")}:               Quanto mi spiace, {charNameThree}.                                           
+                }
+        {charTag(ThirdCharacter, "neutral")}:                   Una sera il Poggi mi ha detto "Dai, ti tiro su una squadretta con gente a posto così ti distrai!"
                                                                 Ora il Poggi non si vede da due anni, da quando è nata l'Olivia.
                 {//Blocco per reazioni e commenti legati al genere.
                 
@@ -727,8 +757,8 @@
                                                                 ~ fifthChar_slurDetectorFunction()
                         {
                         - are_two_entities_together(FirstCharacter, PG):
-                        {charTag(FirstCharacter, "annoyed")}:           Più ti ascolto più sarei curiosa di sentire la sua di versione della faccenda.
-                        {charTag(ThirdCharacter, "bored")}:             Certo, perché per quelle come te è sempre colpa del compagno, sempre.
+                        {charTag(FirstCharacter, "annoyed")}:   Più ti ascolto più sarei curiosa di sentire la sua di versione della faccenda.
+                        {charTag(ThirdCharacter, "bored")}:     Certo, perché per quelle come te è sempre colpa del compagno, sempre.
                         } 
                                                 
                 - else:
@@ -795,6 +825,10 @@
                                                 
                 - else:
                 {charTag(ThirdCharacter, "melanchonic")}:       Finisce così la storia di uno sfigato.
+                        {
+                - are_two_entities_together(Mentor, PG):     
+                {charTag(FifthCharacter, "sad")}:               Povero figliolo.                                         
+                }
                 } 
                                                             
         
@@ -867,7 +901,14 @@
                                                                 Ho bisogno di scaricarmi un attimo.
                 ~ change_entity_place(ThirdCharacter)
                 //Tracciamo questo sbrocco perché non è roba da poco.
-                ~ thirdChar_firstCharRage = true            
+                ~ thirdChar_firstCharRage = true
+
+                {
+                - are_two_entities_together(Mentor, PG):     
+                {charTag(FifthCharacter, "sad")}:               Forse {charNameOne} ha esagerato.
+                {charTag(FifthCharacter, "hurry")}:             Corro a vedere cosa posso fare.                                        
+                }
+
         - else:
         {charTag(ThirdCharacter, "bored")}:                     C'è qualcosa in questo posto, un po' ti fa venire da piangere
         {charTag(ThirdCharacter, "jester")}:                    Alla fine comunque lui ha trovato qualcuno che la ama.
@@ -1006,7 +1047,7 @@
                 {charTag(Franco, "question")}:                  E se invece dico "Cra"?
                 {charTag(ThirdCharacter, "jester")}:            Sono le stesse lettere, Franco.
                 {charTag(Franco, "question")}:                  La <i>c</i> di Cra è uguale alla <i>p</i> di Pio?
-                {charTag(ThirdCharacter, "neutral")}:           Lo stesso numero, non esattamente le stesse lettere.
+                {charTag(ThirdCharacter, "neutral")}:           Lo stesso numero, non proprio proprio le stesse lettere.
                 {charTag(Franco, "neutral")}:                   Devo dirlo a Euforbio, subito.
                 {charTag(Franco, "question")}:                  Chissà se la <i>v</i> è uguale alla <i>f</i>.
                                                                 Allora mi posso anche chiamare Vranco?                                                                                                                                           
@@ -1043,6 +1084,11 @@
         {charTag(ThirdCharacter, "neutral")}:                   Comunque la famiglia è una cosa strana, {player_name}.
                                                                 Io non ci credo che ci possa essere tutto questo amore con qualcuno con cui cresci.
                                                                 Vedi troppe brutte cose.
+                {
+                - are_two_entities_together(Mentor, PG):     
+                {charTag(FifthCharacter, "sad")}:               Ma si vedono anche quelle belle, {charNameThree}.
+                                                                E le piccole cose quotidiane che alimentano l'amore.                                   
+                }                                                
 
             -> third_char_closing_storylet ->
             -> options_third_character
@@ -1121,6 +1167,11 @@
                                                                 
                 - else:
                 {charTag(ThirdCharacter, "neutral")}:           Ma va bene così, no?
+                }
+                {
+                - are_two_entities_together(Mentor, PG):     
+                {charTag(FifthCharacter, "sad")}:               Povero ragazzo.
+                                                                Povero povero ragazzo.                                      
                 }                                                          
 
         
