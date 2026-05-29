@@ -234,6 +234,11 @@
     }
 
     {
+        - grimoire_thirdChar has grimThirdCharFirstRewriting:
+            {charNameThree} ha interrotto {player_name} prima che potesse usare l'epilogo e, pieno di rabbia, ha lasciato questo luogo.
+    }
+
+    {
         - grimoire_thirdChar has grimThirdCharSecondProposal:
             Prima della riscrittura, la seconda, {charNameThree} ha detto a {player_name} di.
     } 

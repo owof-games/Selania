@@ -5,7 +5,7 @@
             -> confession
             
         - else:
-            -> first_rewriting
+            -> third_char_first_rewriting
 
     }
     
@@ -21,11 +21,11 @@
         {charTag(ThirdCharacter, "melanchonic")}:               E che non so come andare avanti senza i tuoi consigli.
         {charTag(ThirdCharacter, "jester")}:                    Ma non è così.
         {charTag(ThirdCharacter, "neutral")}:                   Forse qui ci dovevo venire dopo il Covid.
-                                                                Anche se poi alla fine me ne sono venuto fuori.
+                                                                Ma poi me ne sono venuto fuori.
                                                                 Alla fine ora ho il mio lavoretto.
                                                                 La mia tipa.
                                                                 Il mio giro di amici.
-        {charTag(ThirdCharacter, "jester")}:                    E anche qui alla fine mi sono trovato bene con tutti.
+        {charTag(ThirdCharacter, "jester")}:                    E anche qui mi sono trovato bene con tutti.
         {charTag(ThirdCharacter, "neutral")}:                   La zia mi adora.
             {
             - are_two_entities_together(FifthCharacter, PG):
@@ -70,167 +70,225 @@
                 ~  rewriting_prep(ThirdCharacter)
 
         -> third_char_closing_storylet ->
+        -> third_char_first_rewriting
+        
 
+
+=== third_char_first_rewriting
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        {charTag(ThirdCharacter, "neutral")}:                   Ho una buona vita, non c'hai molto su cui lavorare, {player_name}.
+        {charTag(ThirdCharacter, "jester")}:                    Quindi: spara tutte le tue cartucce e facciamola finita.
+        
         + \ {charTag(PG, "neutral")}:                           Ti ho ascoltato, {charNameThree}, e posso aiutarti a riscrivere la tua storia.
-            -> first_rewriting
         
         + \ {charTag(PG, "neutral")}:                           Mi prendo un attimo prima di affrontare la riscrittura.
-        {charTag(ThirdCharacter, "bored")}:                     Che sia un attimo davvero, {player_name}!  
-            -> main
-
-
-=== first_rewriting
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
-
-    {charTag(ThirdCharacter, "jester")}:                        Spara tutte le tue cartucce!
-
-            //E poi a seconda dello stato di inchiostro, mi sposto sulla domanda prevista      
-                {
-                    - thirdChar_InkLevel == ink_empty:
-                        -> ending
-                    - else: 
-                        -> one
-                } 
-
-
-    = one
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
-    
-
-
-        {charTag(ThirdCharacter, "neutral")}:           Frase.
-        
-            {charTag(PG, "neutral")}:      Frase
-
-            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
-                -> glyph_choice_manager(false, fireC)->
-            {charTag(PG, "neutral")}:               Commento
-            
-            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
-                -> glyph_choice_manager(false, waterC)->
-            {charTag(PG, "neutral")}:               Commento    
-                    
-            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
-                -> glyph_choice_manager(false, earthC)->
-            {charTag(PG, "neutral")}:               Commento   
-                                
-            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
-                    -> glyph_choice_manager(false, airC)->
-            {charTag(PG, "neutral")}:               Commento      
-    
-            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
-                -> glyph_choice_manager(false, aetherC)->
-            {charTag(PG, "neutral")}:               Commento        
+        {charTag(ThirdCharacter, "bored")}:                     Non esiste.
+        {charTag(ThirdCharacter, "neutral")}:                   Mi sono fatto tutta la sbatta di raccontarti le mie cazzate, di ascoltare i tuoi commenti e quelli degli altri.
+                                                                Ora mi fai il favore di prenderti due minuti, dirmi due stronzate, e lasciarmi libero.                                                                                                                     
         -
-
-              
-        {charTag(ThirdCharacter, "neutral")}:           Frase.
-
-            //Riduco di uno il livello di inchiostro
-                ~ thirdChar_InkLevel --
-
-            //Check per commento strega
-            -> rewriting_witch_feedback(oneR) ->       
-
             {
-                - thirdChar_InkLevel == ink_empty:
-                    -> ending
-                - else: 
-                    -> two
-            }        
-        
-    
-    = two
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
-        
+            - are_two_entities_together(FirstCharacter, PG):
+            {charTag(FirstCharacter, "annoyed")}:               {player_name}, in bocca al lupo.
+                ~  change_entity_place(FirstCharacter)                          
+            }
+            {
+            - are_two_entities_together(SecondCharacter, PG):
+            {charTag(SecondCharacter, "energy")}:               Intanto vado a fare una cosa segretissima con le api!
+                ~  change_entity_place(SecondCharacter)                          
+            }
+            {
+            - are_two_entities_together(FifthCharacter, PG):
+            {charTag(Mentor, "sad")}:                           {charNameThree}, sono sicura che {player_name} abbia compreso ciò di cui hai davvero bisogno.
+                ~  change_entity_place(FifthCharacter)                          
+            }
+            {
+            - are_two_entities_together(Franco, PG):
+            {charTag(Franco, "reading")}:                       Ignoratemi pure.
+                                                                Finisco questo capitolo della bolletta del gas.
+                                                                Non ho ancora capito se l'assassino è il maggiordomo.
+                                                                E chi è questo PDR?                          
+            }
 
-        {charTag(PG, "neutral")}:      Frase
-
-            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
-                -> glyph_choice_manager(false, fireC)->
-            {charTag(PG, "neutral")}:               Commento
-            
-            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
-                -> glyph_choice_manager(false, waterC)->
-            {charTag(PG, "neutral")}:               Commento    
-                    
-            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
-                -> glyph_choice_manager(false, earthC)->
-            {charTag(PG, "neutral")}:               Commento   
-                                
-            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
-                    -> glyph_choice_manager(false, airC)->
-            {charTag(PG, "neutral")}:               Commento      
-    
-            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
-                -> glyph_choice_manager(false, aetherC)->
-            {charTag(PG, "neutral")}:               Commento        
-        -
-           
-        {charTag(ThirdCharacter, "neutral")}:           Frase.
-
-            //Riduco di uno il livello di inchiostro
-                ~ thirdChar_InkLevel --
-        
-            //Check per commento strega
-            -> rewriting_witch_feedback(twoR) ->           
-                 
-            //Andiamo al finale
+            //A prescindere dallo stato d'inchiostro, qui si va solo verso un gruppo di scelte.   
             -> ending
-
-
     
+
     = ending
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        //Blocco unico di scelte, ma con un check sullo stato inchiostro per far sì che alcune frasi dell'epilogo (come "E per questo ti dico") siano presenti dove necessario.
+        {
+            - thirdChar_InkLevel == ink_empty:
+            {charTag(PG, "neutral")}:                           Credo di aver compreso quale sia il tuo blocco, perché sei qui.
+        }    
+
+        {charTag(PG, "neutral")}:                               Dal tuo arrivo hai detto che la tua vita va bene.
+                                                                Che hai il tuo giro di amici, che hai Ava, il tuo lavoro.
+
+        {
+            - thirdChar_InkLevel == ink_empty:
+            {charTag(PG, "neutral")}:                           E per questo ti dico {charNameThree}:
+        }    
+
+                                                                
         
+        + \ {charTag(PG, "neutral")}:                           Per me ti sei arreso. L'unica cosa che ti appassiona è l'Inter.
+            -> glyph_choice_manager(false, fireC)->
+        {charTag(PG, "neutral")}:                               A lavoro ti sfruttano e non dici niente.
+                                                                Il tuo gruppo di calcetto ti dice cose terribili e non dici niente.
+                                                                Il tuo migliore amico ti ignora e non gli dici niente.
+                                                                Detesti il tuo coinquilino e non gli dici niente.
+                                                                E mi hai parlato molto più della tua ex che di Ava.
 
-        {charTag(PG, "neutral")}:      Credo di aver compreso quale sia il tuo blocco, perché sei qui.
+
+
+
+        + \ {charTag(PG, "neutral")}:                           Ho la sensazione che tu non sia per nulla in pace con la fine della storia con Donatella.
+            -> glyph_choice_manager(false, waterC)->
+        {charTag(PG, "neutral")}:                               Sicuramente sei innamorato di Ava.
+                                                                Ma nel frattempo mi hai parlato di più di Donatella che non di lei.
+        {
+            - third_char_main_storylets.six.earth:              Quando abbiamo parlato del Poggi, hai detto che se lei non ti avesse lasciato a quest'ora tu e lui stareste giocando assieme ai vostri figli.
+        }                                                        
+                                                                Sei ancora arrabbiato, forse ti manca, forse c'è qualcosa da chiarire, ma il rancore è vivo.
+
+        {
+        - third_char_main_storylets.two.aether:
+                                                                E la soluzione non è portarsi a letto delle turiste ubriache.
+        }         
+
+
+
+
+
+        + \ {charTag(PG, "neutral")}:                           A lavoro ti fai il mazzo, eppure non hai niente.
+            -> glyph_choice_manager(false, earthC)->
+        {charTag(PG, "neutral")}:                               Quando hai parlato del tuo capo l'hai descritto come un idiota incapace.
+                                                                E per questo finisce che fai il suo lavoro, che i fornitori ti chiamano mentre non sei in turno, così come i colleghi.
+        {
+        - third_char_main_storylets.one.aether2:
+                                                                Lavori quasi tutte le sere, torni che sei distrutto, che non hai tempo per te.
+        }                                                       
+                                                                Hai fatto un lavoro che ti faceva sentire figo, ma ora?
+                                                                I tuoi compagni di calcetto pensano che fai un lavoro da ragazzino.
+                                                                E nel mentre vivi con un coinquilino che detesti.
+                                                                
+
+
+
+
+        + \ {charTag(PG, "neutral")}:                           Sono curios{player_pronoun has him:o|{player_pronoun has her:a|ə}}: perché sei in competizione con tutto, inclusi gli affetti?
+                -> glyph_choice_manager(false, airC)->
+        {charTag(PG, "neutral")}:                               Quando mi hai parlato dei tuoi compagni di calcetto hai messo in evidenza tutto quello che loro non hanno, e tu sì: chi una compagna, chi dei figli, chi denaro o successo.
+                                                                Idem col Poggi.
+                                                                Mentre quando mi hai parlato di Dona, sembra quasi che l'amore sia il premio che si riceve se si fanno le cose giuste, come non urlare contro chi ami, o non tradirla.
+                                                                Mi hai sempre parlato di cose che accadono, di cose che fanno gli altri.
+                                                                E c'è sempre un sottotono di paragone.
+
+
+
+
+        + \ {charTag(PG, "neutral")}:                           C'è una grossa differenza tra un gruppo di conoscenti e uno di confidenti, e tu hai solo i primi.
+            -> glyph_choice_manager(false, aetherC)->
+        {charTag(PG, "neutral")}:                               Hai descritto Merlo come uno che se la sente e sei felice che non parli quando giocate.
+                                                                Giova sembra solo uno stupido che si è sposato con una donna che non ama.
+                                                                Dario è nel gruppo solo perché esce con la cugina di Giova.
+                                                                E con Rocco, sembra che ci sia la possibilità di dirvi qualcosa di più, ma comunque non accade.
+                                                                Hai perso il tuo principale confidente, il Poggi, e l'unica cosa che fai è aspettare, non tirare fuori il problema.
+                                                                Ma è evidente che ti manca.           
+        -
+
+                                                                Davvero è una buona vita questa {charNameThree}?                  
+
+            //Riduco di uno il livello di inchiostro nel caso in cui non fosse vuoto.
+            {
+                - thirdChar_InkLevel != ink_empty:
+                    ~ thirdChar_InkLevel --
+            }
             
-        //Check per commento strega
-        -> rewriting_witch_feedback(endR) ->     
+            -> close
 
-        {charTag(ThirdCharacter, "neutral")}:     No mi spiace non mi faccio riscrivere, fine.
-
-
-            
-        -> close
-        
     
     
-
-
     = close
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+        {
+            - thirdChar_InkLevel != ink_empty:
+            {charTag(PG, "neutral")}:                           E per questo ti dico {charNameThree}:
+        } 
         
-        
+
+        {charTag(ThirdCharacter, "neutral")}:                   Wow.
+                                                                Wow.
+                                                                Io.
+        {charTag(ThirdCharacter, "angry")}:                     Non credo di mai essere stato così incazzato in vita mia.
+                                                                Chi ti credi di essere per venirmi a dire cosa va o non va nella mia vita?
+                                                                Ma chi cazzo ti conosce a te?
+                                                                CHI
+                                                                CAZZO
+                                                                TI
+                                                                CONOSCE?!?
+        {charTag(ThirdCharacter, "neutral")}:                   Deve essere bella la tua vita, se hai così tanto tempo per sputare sentenze sugli altri.
+        {charTag(ThirdCharacter, "jester")}:                    O deve fare davvero cagare, se l'unica cosa che ti viene da fare quando incontri qualcuno che sta bene, è provare a buttarlo a terra.
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(ThirdCharacter, "neutral")}:           Che uomo piccolo che sei, {player_name}.
+                                                                Piccolo, meschino, schifoso.
+                                                                Infido.
+                                                                Scommetto che non hai amici, vero?
+                                                                Che tristezza che mi fai.
+                                                                Che tristezza.
+
+                - thirdChar_recordedPlayerPronoun == her:
+                {charTag(ThirdCharacter, "neutral")}:           Sicuro che sei frigida.
+                                                                Insoddisfatta.
+                                                                Magari c'hai anche un gatto vero?
+                                                                E la sera ti scofani di patatine guardando reality di merda.
+                                                                Sperando che qualcuno ti ami a te che sei acida.
+                                                                Nevrotica.
+                                                                Inchiavabile.
+                                                                Poveraccia.
+
+                - else:
+                {charTag(ThirdCharacter, "neutral")}:           State lì a rompere coi vostri pronomi di merda voi.
+                                                                Per poi sminchiare il cazzo a un povero cristiano che si fa i cazzi suoi.
+                                                                Che è qui e nemmeno ci voleva venire, qui.
+                                                                Ma invece di farlo tornare a casa.
+                                                                Alla sua birra.
+                                                                Al suo fantacalcio.
+                                                                No.
+                                                                Tu te lo sei tenuto qui, l'hai torturato con le tue cazzate.
+                                                                E poi l'hai insultato per bene.
+                {charTag(ThirdCharacter, "angry")}:             E ci scommetto che se ti dico quello che ho davvero in mente ora ci provi pure a cancellarmi, vero?
+                                                                Che merda frustrata che sei.                                                
+                }                                                                                                                                                                              
+        {charTag(ThirdCharacter, "neutral")}:                   Bene.
+                                                                Ho fatto quello che la zia mi ha chiesto di fare, per cui ora me ne posso andare.
+                                                                Fanculo te.
+                                                                Fanculo lei.
+                                                                Fanculo questo posto.
+        {charTag(ThirdCharacter, "jester")}:                    Spero di leggere presto da qualche parte che questa ciofeca è bruciata, così non vi mettete a torturare qualcun altro di nuovo.
+                                                                E ti saluto col dito medio più grosso che tu abbia mai visto.
+                                                                
         -> third_char_closing_storylet ->
         -> endingPNGstory(ThirdCharacter)
 
 
 
-
-
-=== second_rewriting
+=== third_char_second_rewriting
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -502,19 +560,19 @@
                                                 Ho riflettuto a lungo sulle cose che mi hai detto, sai, e in particolare <>
 
             {
-                - second_rewriting.ending.fire:
+                - third_char_second_rewriting.ending.fire:
                     {charTag(ThirdCharacter, "neutral")}:           Alla cosa fuoco.
                 
-                - second_rewriting.ending.aether:
+                - third_char_second_rewriting.ending.aether:
                     {charTag(ThirdCharacter, "neutral")}:           Alla cosa spirito.
                     
-                - second_rewriting.ending.earth:
+                - third_char_second_rewriting.ending.earth:
                     {charTag(ThirdCharacter, "neutral")}:           Alla cosa terra.
 
-                - second_rewriting.ending.water:
+                - third_char_second_rewriting.ending.water:
                     {charTag(ThirdCharacter, "neutral")}:           Alla cosa acqua.
 
-                - second_rewriting.ending.air:
+                - third_char_second_rewriting.ending.air:
                     {charTag(ThirdCharacter, "neutral")}:           Alla cosa aria.
                     
             }
@@ -535,7 +593,7 @@
 
             - thirdChar_ActualName has Guantone:
                     {
-                        - second_rewriting.ending.fire:
+                        - third_char_second_rewriting.ending.fire:
                             E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
@@ -545,7 +603,7 @@
             
             - thirdChar_ActualName has Canovaccio:
                     {
-                        - second_rewriting.ending.water:
+                        - third_char_second_rewriting.ending.water:
                             E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
@@ -555,7 +613,7 @@
 
             - thirdChar_ActualName has Sigaro:
                     {
-                        - second_rewriting.ending.earth:
+                        - third_char_second_rewriting.ending.earth:
                             E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
@@ -566,7 +624,7 @@
             
             - thirdChar_ActualName has Pallone:
                     {
-                        - second_rewriting.ending.aether:
+                        - third_char_second_rewriting.ending.aether:
                             E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
@@ -576,7 +634,7 @@
                     
             - thirdChar_ActualName has Forum:
                     {
-                        - second_rewriting.ending.air:
+                        - third_char_second_rewriting.ending.air:
                             E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.

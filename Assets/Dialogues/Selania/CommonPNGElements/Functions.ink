@@ -1022,6 +1022,10 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
         }
 
         {
+            - third_char_first_rewriting.close && grimoire_thirdChar has grimThirdCharFirstRewriting:
+        }       ~ grimoire_thirdChar += grimThirdCharFirstRewriting
+
+        {
             - third_character_notes.seven && grimoire_thirdChar hasnt grimThirdCharSecondProposal:
                     ~ grimoire_thirdChar += grimThirdCharSecondProposal
         }

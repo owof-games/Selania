@@ -254,7 +254,7 @@
         {charTag(ThirdCharacter, "neutral")}:                   La solita storia: le ragazze alla fine preferiscono sempre quello più stronzo.
                                                                 Punto.
 
-        + \ {charTag(PG, "neutral")}:                           In verità sono più incuriosit{player_pronoun has him:o|{player_pronoun has her:a|ə}} dalla persona che sei che da quello che fai.
+        + (aether2) \ {charTag(PG, "neutral")}:                           In verità sono più incuriosit{player_pronoun has him:o|{player_pronoun has her:a|ə}} dalla persona che sei che da quello che fai.
                 -> glyph_choice_manager(false, aetherC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:       
@@ -262,7 +262,7 @@
                 }                                               
         {charTag(ThirdCharacter, "bored")}:                     Che devo dirti {player_name}?
         {charTag(ThirdCharacter, "neutral")}:                   Lavoro quasi tutte le sere.
-                                                                Torno che sono stanco.
+                                                                Torno che sono distrutto.
                                                                 C'ho le cose da fare in casa.
                                                                 O riposare un attimo.
         {charTag(ThirdCharacter, "bored")}:                     Non è che c'ho tutto 'sto tempo per farmi altre seghe mentali.
@@ -464,7 +464,7 @@
                 {charTag(ThirdCharacter, "angry")}:             Ringrazia Dio che sono un signore, {charNameOne}.
                 }                                                         
 
-        + \ {charTag(PG, "neutral")}:                           Mi stai dicendo che ti porti a letto delle sconosciute ubriache?
+        + (aether)\ {charTag(PG, "neutral")}:                           Mi stai dicendo che ti porti a letto delle sconosciute ubriache?
                 -> glyph_choice_manager(false, aetherC)->
                 {
                 - are_two_entities_together(FirstCharacter, PG):
@@ -1153,7 +1153,7 @@
                                                                 Quale solitudine e solitudine proprio, io boh.
 
 
-        + \ {charTag(PG, "neutral")}:                           Quindi questa è un po' la vita che ti aspettavi con Donatella.
+        + (earth) \ {charTag(PG, "neutral")}:                   Quindi questa è un po' la vita che ti aspettavi con Donatella.
                 -> glyph_choice_manager(false, earthC)->
         {charTag(ThirdCharacter, "melanchonic")}:               Già.
         {charTag(ThirdCharacter, "neutral")}:                   Il Poggi è così felice con Amanda e la piccoletta.
@@ -1363,5 +1363,5 @@
         ~ temp charNameFive = translator(fifthChar_ActualName)
 
         //Seconda riscrittura
-        -> second_rewriting ->
+        -> third_char_second_rewriting ->
         ->->
