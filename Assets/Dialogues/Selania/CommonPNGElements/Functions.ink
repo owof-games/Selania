@@ -327,8 +327,8 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
             - thirdChar_ActualName == Guantone:
                 ~ return "Guantone"
 
-            - thirdChar_ActualName == Pallone:
-                ~ return "Pallone"                     
+            - thirdChar_ActualName == Cerchio:
+                ~ return "Cerchio"                     
         }
 
     - FourthCharacter:
@@ -458,8 +458,8 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
             - thirdChar_ActualName == Guantone:
                 ~ return "Guantone"
 
-            - thirdChar_ActualName == Pallone:
-                ~ return "Pallone"                     
+            - thirdChar_ActualName == Cerchio:
+                ~ return "Cerchio"                     
         }
 
     - FourthCharacter:

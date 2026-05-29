@@ -192,7 +192,7 @@
             - fireC:
                 ~ thirdChar_ActualName += Guantone
             - aetherC:
-                ~ thirdChar_ActualName += Pallone
+                ~ thirdChar_ActualName += Cerchio
             - else:
                 //Definire e assegnare il negativo
                 ~ thirdChar_ActualName += Guantone
@@ -287,8 +287,8 @@ Funzione di traduzione da variabile a stringa
             ~ return "Sigaro"
         - Guantone:
             ~ return "Guantone"
-        - Pallone:
-            ~ return "Pallone"                   
+        - Cerchio:
+            ~ return "Cerchio"                   
     
     //Personaggia Quattro        
         - NonnaMolotov:

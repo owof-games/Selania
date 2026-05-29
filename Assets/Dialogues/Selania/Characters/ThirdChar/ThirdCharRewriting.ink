@@ -622,7 +622,7 @@
             {charTag(ThirdCharacter, "neutral")}:     <b><i>{charNameThree}</b></i>.
                                
             
-            - thirdChar_ActualName has Pallone:
+            - thirdChar_ActualName has Cerchio:
                     {
                         - third_char_second_rewriting.ending.aether:
                             E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
