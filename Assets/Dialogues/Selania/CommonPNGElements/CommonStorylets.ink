@@ -83,17 +83,6 @@
     {charTag(FirstCharacter, "neutral")}:                       Bene, direi che abbiamo tutt3 qualcosa a cui pensare.
     {charTag(FirstCharacter, "affectionate")}:                  Tipo, dove schiacciarmi quel pisolino.
 
-        {
-                - are_two_entities_together(ThirdCharacter, PG):
-                {
-                - grimoire_thirdChar has grimFirstThirdChar:
-                        {charTag(ThirdCharacter, "angry")}:                     Commento infastidito di Boccale.
-
-                - else:
-                        {charTag(ThirdCharacter, "neutral")}:                   Commento neutro/positivo di Boccale.    
-                }
-        }    
- 
         -> second_char_closing_storylet ->
         -> first_char_closing_storylet ->
         ->->    
@@ -521,16 +510,14 @@
                                                                         Ti ho mai parlato degli studi al Conservatorio di Etelbero?
         {charTag(FirstCharacter, "annoyed")}:                           Uccidetemi.
 
-        {
+                {
                 - are_two_entities_together(ThirdCharacter, PG):
                 {
-                - grimoire_thirdChar has grimFirstThirdChar:
-                        {charTag(ThirdCharacter, "angry")}:                     Commento infastidito di Boccale.
-
-                - else:
-                        {charTag(ThirdCharacter, "neutral")}:                   Commento neutro/positivo di Boccale.    
+                - thirdChar_firstCharRage == true or grimoire_thirdChar has grimFirstThirdChar:
+                {charTag(ThirdCharacter, "jester")}:                    Io io!
+                                                                        Posso farlo io?                                 
                 }
-        }        
+                }    
         -
         -> first_char_closing_storylet ->
         ->->

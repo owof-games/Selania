@@ -123,14 +123,14 @@
     {charTag(FirstCharacter, "annoyed")}:                   Non ho un buon rapporto con la rabbia.
                                                             Le poche volte che l'ho lasciata uscire mi sono vista chiamare isterica, nevrotica, mestruata.
     {
-        - are_two_entities_together(ThirdCharacter, PG):
-        {
-        - grimoire_thirdChar has grimFirstThirdChar:
-                {charTag(ThirdCharacter, "angry")}:                     Commento infastidito di Boccale.
+    - are_two_entities_together(ThirdCharacter, PG):
+    {
+    - thirdChar_firstCharRage == true or grimoire_thirdChar has grimFirstThirdChar:
+    {charTag(ThirdCharacter, "jester")}:                    Se tratti tutti come tratti me non dovresti stupirti.
 
-        - else:
-                {charTag(ThirdCharacter, "neutral")}:                   Commento neutro/positivo di Boccale.    
-        }
+    - else:
+    {charTag(ThirdCharacter, "neutral")}:                   Il mondo è difficile {charNameOne}, bisogna imparare a farsi crescere il pelo sullo stomaco e fregarsene.
+    }
     }  
 
     {

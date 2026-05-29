@@ -314,16 +314,16 @@
         {charTag(FirstCharacter, "curious")}:                   Mi ha fatto fare cose piccole che mi hanno aperto la testa.
                                                                 Come quando ci siamo stes3 in piazza per vedere come le persone reagivano.
         {charTag(FirstCharacter, "affectionate")}:              O riempito di stickers le Tesla con scritto "NaziMachine".
-    {
+        {
         - are_two_entities_together(ThirdCharacter, PG):
         {
-        - grimoire_thirdChar has grimFirstThirdChar:
-                {charTag(ThirdCharacter, "angry")}:                     Commento infastidito di Boccale.
+        - thirdChar_firstCharRage == true or grimoire_thirdChar has grimFirstThirdChar:
+        {charTag(ThirdCharacter, "bored")}:                     Ovvio che fossi una di <i>quelle</i>.
 
         - else:
-                {charTag(ThirdCharacter, "neutral")}:                   Commento neutro/positivo di Boccale.    
+        {charTag(ThirdCharacter, "bored")}:                     Ma che c'entrano le macchine dei poveracci?    
         }
-    }          
+        }          
         {charTag(FirstCharacter, "neutral")}:                   O tutte le volte che davanti a una cosa ingiusta ha detto “no”!
                                                                 Mi ha fatto capire che per me è importante fare qualcosa di utile per il mondo.
                                                                 E che mi piace quando posso farlo con altre persone.
@@ -412,16 +412,17 @@
         {charTag(FirstCharacter, "sad")}:                       Poi mio padre ha perso il lavoro e mi ha detto: figlia, siamo nella merda.
         {charTag(FirstCharacter, "annoyed")}:                   E quindi: eccoci qui.
         {charTag(FirstCharacter, "neutral")}:                   Tengo sempre un orecchio alzato per qualche concertino.
-    {
+        {
         - are_two_entities_together(ThirdCharacter, PG):
         {
-        - grimoire_thirdChar has grimFirstThirdChar:
-                {charTag(ThirdCharacter, "angry")}:                     Commento infastidito di Boccale.
+        - thirdChar_firstCharRage == true or grimoire_thirdChar has grimFirstThirdChar:
+        {charTag(ThirdCharacter, "jester")}:                    Bene, ora so dove non andare se mai avrò un fine settimana libero.
 
         - else:
-                {charTag(ThirdCharacter, "neutral")}:                   Commento neutro/positivo di Boccale.    
+        {charTag(ThirdCharacter, "neutral")}:                   Potremmo organizzare qualcosa al Baretto!
+                                                                Ogni tanto chiamiamo qualche band, e i clienti lasciano un po' di mance.
         }
-    }          
+        }          
         {charTag(FirstCharacter, "annoyed")}:                   Ma per lo più sono di sera o nel fine settimana, quando figurati se mi danno il giorno libero dal ristorante.
         {charTag(FirstCharacter, "affectionate")}:              Per fortuna ci sono le prove con la band.
         {charTag(FirstCharacter, "sad")}:                       Quando ho le energie per farle.
@@ -583,14 +584,16 @@
                                                                 Ho risposto subito di sì, presa dalla botta dell'entusiasmo.
         {charTag(FirstCharacter, "sad")}:                       Ma non so se è davvero quello che voglio.
         {
-            - are_two_entities_together(ThirdCharacter, PG):
-            {
-            - grimoire_thirdChar has grimFirstThirdChar:
-                    {charTag(ThirdCharacter, "angry")}:                     Commento infastidito di Boccale.
-
-            - else:
-                    {charTag(ThirdCharacter, "neutral")}:                   Commento neutro/positivo di Boccale.    
-            }
+        - are_two_entities_together(ThirdCharacter, PG):
+        {
+        - thirdChar_firstCharRage == true or grimoire_thirdChar has grimFirstThirdChar:
+        {charTag(ThirdCharacter, "bored")}:                     Sei brava a giudicarmi mi sembra.
+                                                                Per poi trattare di merda il tuo moroso.
+                                                                
+        - else:
+        {charTag(ThirdCharacter, "angry")}:                     Eccone un'altra che non sa quello che vuole.
+        {charTag(ThirdCharacter, "melanchonic")}:               E un altro poveraccio che la pagherà per questo.                                   
+        }
         }          
         {
             - are_two_entities_together(SecondCharacter, PG):
@@ -824,16 +827,12 @@
         {charTag(FirstCharacter, "neutral")}:                   Ho lasciato il tavolo in silenzio, ho chiamato Ennio e l'ho raggiunto a casa sua.
                                                                 Abbiamo scopato senza preservativo, ma poi l'ho cacciato fuori di forza quando stava per venire.
         {charTag(FirstCharacter, "sad")}:                       Ho pianto tutta la notte.
-    {
-        - are_two_entities_together(ThirdCharacter, PG):
         {
-        - grimoire_thirdChar has grimFirstThirdChar:
-                {charTag(ThirdCharacter, "angry")}:                     Commento infastidito di Boccale.
-
-        - else:
-                {charTag(ThirdCharacter, "neutral")}:                   Commento neutro/positivo di Boccale.    
-        }
-    }          
+        - are_two_entities_together(ThirdCharacter, PG):
+        {charTag(ThirdCharacter, "bored")}:                     Se questa non è manipolazione bella e buona.
+                                                                Ma no, voi donne siete sempre pure e innocenti.
+                                                                                             
+        }         
         {charTag(FirstCharacter, "neutral")}:                   Un mese dopo Talco è partitə, e non ci siamo più sentite fino a qualche settimana fa, quando mi ha mandato una cartolina.
                                                                 Una foto dellə bimbə.
                                                                 “Ora siamo in due ad aspettare un tuo abbraccio.”
@@ -862,16 +861,17 @@
         {charTag(FirstCharacter, "affectionate")}:              Anna, che studiava jazz, ha tirato su assieme ad altre persone un festival locale che sta iniziando a ingranare.
                                                                 E Luigia, una ex di Valeria, ora si occupa di recupero e, come dice lei, "riterronizzazione" della storia del suo paesino sul Coghinas.
         {charTag(FirstCharacter, "annoyed")}:                   Altre, che qui facevano occupazioni e proteste e litigavano con la polizia ora sono sposate e raccontano vite che.
-    {
+        {
         - are_two_entities_together(ThirdCharacter, PG):
         {
-        - grimoire_thirdChar has grimFirstThirdChar:
-                {charTag(ThirdCharacter, "angry")}:                     Commento infastidito di Boccale.
-
+        - thirdChar_firstCharRage == true or grimoire_thirdChar has grimFirstThirdChar:
+        {charTag(ThirdCharacter, "bored")}:                     Magari a te ti stupisce, ma c'è chi è felice dell'idea di sposarsi.
+                                                                Per fortuna, che se sono tutte come te siamo estinti.
+                                                                
         - else:
-                {charTag(ThirdCharacter, "neutral")}:                   Commento neutro/positivo di Boccale.    
+        {charTag(ThirdCharacter, "neutral")}:                   Lo dici come se fosse un crimine.                                 
         }
-    }          
+        }   
         {charTag(FirstCharacter, "neutral")}:                   Io.
                                                                 Io.
                                                                 Merda.
@@ -1087,16 +1087,13 @@
         {charTag(FirstCharacter, "annoyed")}:               Per dargli più tempo non posso di certo smollare il lavoro, no?
                                                             E quindi c'è solo una cosa che posso togliere dalla mia vita.
         {charTag(FirstCharacter, "sad")}:                   E a quel punto, ripartirà mai il treno dalla mia stazione?
-    {
+        {
         - are_two_entities_together(ThirdCharacter, PG):
         {
-        - grimoire_thirdChar has grimFirstThirdChar:
-                {charTag(ThirdCharacter, "angry")}:                     Commento infastidito di Boccale.
-
-        - else:
-                {charTag(ThirdCharacter, "neutral")}:                   Commento neutro/positivo di Boccale.    
+        - thirdChar_firstCharRage == true or grimoire_thirdChar has grimFirstThirdChar:
+        {charTag(ThirdCharacter, "jester")}:                Se questo Ennio è abbastanza furbo, fa partire il treno e ti lascia giù.                              
         }
-    }          
+        }         
 
         + \ {charTag(PG, "neutral")}:                       E se Ennio fosse la tua stazione, il tuo arrivo?
                 -> glyph_choice_manager(false, waterC)->
@@ -1175,16 +1172,16 @@
                                                             Il senso di mancanza che si sente mentre parlano di persone che non vedono quasi più.
         {charTag(FirstCharacter, "annoyed")}:               Mi sembra che più si è grandi, più si finisce per essere soli.
                                                             E io non voglio stare sola.
-    {
+        {
         - are_two_entities_together(ThirdCharacter, PG):
         {
-        - grimoire_thirdChar has grimFirstThirdChar:
-                {charTag(ThirdCharacter, "angry")}:                     Commento infastidito di Boccale.
-
+        - thirdChar_firstCharRage == true or grimoire_thirdChar has grimFirstThirdChar:
+        {charTag(ThirdCharacter, "bored")}:                 C'è anche chi se lo merita.
+                                                                
         - else:
-                {charTag(ThirdCharacter, "neutral")}:                   Commento neutro/positivo di Boccale.    
+        {charTag(ThirdCharacter, "melanchonic")}:           Merda, mi spiace {charNameOne}.                                  
         }
-    }                                                              
+        }                                                         
         {charTag(FirstCharacter, "neutral")}:               Ha senso?
         {
             - are_two_entities_together(Mentor, PG):
@@ -1289,16 +1286,17 @@
                                                             Per un po' almeno.
         {charTag(FirstCharacter, "affectionate")}:          Provare un po' di pace, di sicurezza economica.
                                                             Forse anche di riconoscimento sociale.
-    {
+        {
         - are_two_entities_together(ThirdCharacter, PG):
         {
-        - grimoire_thirdChar has grimFirstThirdChar:
-            {charTag(ThirdCharacter, "angry")}:             Per una volta capisco cosa stai dicendo.
-
+        - thirdChar_firstCharRage == true or grimoire_thirdChar has grimFirstThirdChar:
+        {charTag(ThirdCharacter, "bored")}:                 Se la dico io una cosa del genere mi sei subito al collo.
+                                                                
         - else:
-            {charTag(ThirdCharacter, "neutral")}:           Commento neutro/positivo di Boccale.    
+        {charTag(ThirdCharacter, "neutral")}:               Stessa merda {charNameOne}.
+                                                            Stessa merda.                                   
         }
-    }                                                              
+        }                                                        
         {charTag(FirstCharacter, "annoyed")}:               Sono una merda, {player_name}, vero?
         {
             - are_two_entities_together(SecondCharacter, PG):

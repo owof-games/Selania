@@ -53,7 +53,12 @@
         {charTag(SecondCharacter, "energy")}:                   Io sono qui perché è il mio compleanno.
         {charTag(SecondCharacter, "emotional")}:                Mamma mi ha promesso qualcosa di FI-GHIS-SI-MOOOOOOOOOOOOO!
                                                                 L'anno scorso per Natale mi ha preso tutte tutte tutte le action figures dei miei videogiochi preferiti.
-        {charTag(SecondCharacter, "angry")}:                    Ma poi papà me le ha rubate. 
+        {charTag(SecondCharacter, "angry")}:                    Ma poi papà me le ha rubate.
+
+            {
+            - are_two_entities_together(ThirdCharacter, PG):
+            {charTag(ThirdCharacter, "angry")}:                 Si è guadagnato in automatico il premio "Padre di merda dell'anno"!
+            } 
 
         {
             - are_two_entities_together(Mentor, PG):
@@ -283,25 +288,29 @@
             
         {charTag(SecondCharacter, "emotional")}:                Comunque sono contento che sei un maschio.
                                                                 Le ragazze sono appiccicose.
-        {
-            - are_two_entities_together(FirstCharacter, PG):
-            {charTag(FirstCharacter, "annoyed")}:               Dio che fatica gli uomini.
-                                                                Anche quando hanno sei anni.
-            {charTag(SecondCharacter, "angry")}:                Non sono <i>così</i> piccolo!
-        }
-        {
-            -grimoire_appendices hasnt grimChoicesMentor:
-            {charTag(SecondCharacter, "neutral")}:              Il fiore parlante è appiccicoso.
-            - else:
-            {charTag(SecondCharacter, "neutral")}:              {charNameFive} è appiccicosa.
-        }
+            {
+            - are_two_entities_together(ThirdCharacter, PG):
+            {charTag(ThirdCharacter, "jester")}:                Aspetta ancora qualche anno e vorrai solo che ti si appiccicano addosso!
+            }                                                         
+            {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:               Dio che fatica gli uomini.
+                                                                    Anche quando hanno sei anni.
+                {charTag(SecondCharacter, "angry")}:                Non sono <i>così</i> piccolo!
+            }
+            {
+                -grimoire_appendices hasnt grimChoicesMentor:
+                {charTag(SecondCharacter, "neutral")}:              Il fiore parlante è appiccicoso.
+                - else:
+                {charTag(SecondCharacter, "neutral")}:              {charNameFive} è appiccicosa.
+            }
         {charTag(SecondCharacter, "angry")}:                    Vuole fare amicizia a tutti i costi.
         {charTag(SecondCharacter, "neutral")}:                  Che fatica.
-        {
-            - are_two_entities_together(Mentor, PG):
-                ~ change_entity_place(Mentor)
-            {charTag(SecondCharacter, "neutral")}:              Uh, se ne è andata.     
-        }
+            {
+                - are_two_entities_together(Mentor, PG):
+                    ~ change_entity_place(Mentor)
+                {charTag(SecondCharacter, "neutral")}:              Uh, se ne è andata.     
+            }
         {charTag(SecondCharacter, "melanchonic")}:              La mamma si è dimenticata di nuovo il mio compleanno.
                                                                 Ma non mi serve anche un'altra nonna.
         {charTag(SecondCharacter, "energy")}:                   A te piacciono le action figures?
@@ -326,11 +335,15 @@
         {charTag(SecondCharacter, "neutral")}:                  Ah.
                                                                 Sei una ragazza quindi.
                                                                 Non ci parlo mica molto con le ragazze, siete strane.
-        {
-            - are_two_entities_together(FirstCharacter, PG):
-            {charTag(FirstCharacter, "annoyed")}:               Disse quello che prima stava studiando le sue stesse caccole.
-            {charTag(SecondCharacter, "neutral")}:              Volevo capire se si possono usare come colla!
-        }            	  
+            {
+            - are_two_entities_together(ThirdCharacter, PG):
+            {charTag(ThirdCharacter, "jester")}:                Ma non è parlare quello che ci devi fare con loro, Ricciolino!
+            }                                                     
+            {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:               Disse quello che prima stava studiando le sue stesse caccole.
+                {charTag(SecondCharacter, "neutral")}:              Volevo capire se si possono usare come colla!
+            }            	  
         {charTag(SecondCharacter, "energy")}:                   Devo ancora capire se sei strana anche tu, {player_name}.
         {charTag(SecondCharacter, "neutral")}:                  Anche mamma è strana.
                                                                 Ma le voglio bene.
@@ -362,6 +375,10 @@
         {
             - are_two_entities_together(Mentor, PG):
             {charTag(FifthCharacter, "sad")}:                   Solo io sono abbastanza vecchia da ricordare come va a finire questa storia?
+                {
+                - are_two_entities_together(ThirdCharacter, PG):
+                {charTag(ThirdCharacter, "jester")}:            Siamo in due, zia!
+                } 
         }
             -> three_continue
        
@@ -446,12 +463,12 @@
             -
             {charTag(SecondCharacter, "energy")}:               Forse dietro quella serra allo stagno trovo qualche regalo!
                                                                 Devo solo capire come andarci.
-            {
-                - are_two_entities_together(Mentor, PG): 
-                {charTag(FifthCharacter, "hurry")}:             Ma perché non sistemi con me i vialetti?
-                                                                È molto meno pericoloso!
-                {charTag(SecondCharacter, "neutral")}:          Poi muoio di noia!
-            }
+                {
+                    - are_two_entities_together(Mentor, PG): 
+                    {charTag(FifthCharacter, "hurry")}:             Ma perché non sistemi con me i vialetti?
+                                                                    È molto meno pericoloso!
+                    {charTag(SecondCharacter, "neutral")}:          Poi muoio di noia!
+                }
 
             -> second_char_closing_storylet ->
             -> options_second_character
@@ -473,14 +490,14 @@
                                                                 Sapevi che gli uccelli vedono dieci colori?
                                                                 DIECI! Mica solo tre come noi!
                                                                 E che l'acso, atso, axotolottoto.
-        {
-            - are_two_entities_together(Franco, PG):
-            {charTag(Franco, "party")}:                         Botto!
-                                                                Risotto!
-                                                                Cucciolotto!
-            {charTag(SecondCharacter, "energy")}:               Franco!
-                                                                Così mi distraggo!
-        }
+            {
+                - are_two_entities_together(Franco, PG):
+                {charTag(Franco, "party")}:                         Botto!
+                                                                    Risotto!
+                                                                    Cucciolotto!
+                {charTag(SecondCharacter, "energy")}:               Franco!
+                                                                    Così mi distraggo!
+            }
 
         {charTag(SecondCharacter, "energy")}:                   Sapevi che l'axolotl si fa ricrescere le braccia?
 
@@ -489,20 +506,20 @@
             + \ {charTag(PG, "neutral")}:                       <i>Lo lascio continuare.</i>
             -
 
-        {
-            - second_char_main_storylets.one.rilassante:
-                {charTag(SecondCharacter, "neutral")}:          E tu prima hai detto che sei qui perché è un luogo rilassante.
-                                                                Ma a me mi rilassano le cose buffe!
-                {charTag(SecondCharacter, "energy")}:           Vuoi sapere una cosa buffissima?
+            {
+                - second_char_main_storylets.one.rilassante:
+                    {charTag(SecondCharacter, "neutral")}:          E tu prima hai detto che sei qui perché è un luogo rilassante.
+                                                                    Ma a me mi rilassano le cose buffe!
+                    {charTag(SecondCharacter, "energy")}:           Vuoi sapere una cosa buffissima?
 
-        }    
+            }    
         {charTag(SecondCharacter, "energy")}:                   Le capre hanno dei loro accenti!
                                                                 Non sono mica tutti dei beeeeeeeeee uguali!
-        {
-            - are_two_entities_together(Carla, PG):
-            {charTag(Carla, "neutral")}:                        Ogni capra deve avere un accento approvato dal Ministero delle Beeeeelle Arti.
-                                                                
-        }                                                        
+            {
+                - are_two_entities_together(Carla, PG):
+                {charTag(Carla, "neutral")}:                        Ogni capra deve avere un accento approvato dal Ministero delle Beeeeelle Arti.
+                                                                    
+            }                                                        
                                                                 Solo i colibrì sanno volare all'indietro!
         {charTag(SecondCharacter, "neutral")}:                  Tu sai camminare indietro? Secondo me no.
 
@@ -554,26 +571,30 @@
                                                                 quando
                                                                 i grandi
                                                                 mi toccano.
-            {
-                - are_two_entities_together(Mentor, PG):
-                    ~ change_entity_place(Mentor)  
-                {charTag(SecondCharacter, "neutral")}:          Se ne è andata.                                    
-            }                                            
-            
+                {
+                    - are_two_entities_together(Mentor, PG):
+                        ~ change_entity_place(Mentor)  
+                    {charTag(SecondCharacter, "neutral")}:          Se ne è andata.                                    
+                }                                            
+                
             + (stupido) \ {charTag(PG, "neutral")}:             Va bene difendersi, ma picchiare una vecchia è da stupidi.
-                    -> glyph_choice_manager(false, fireC)->
-            {
-                -are_two_entities_together(FirstCharacter, PG):
-            {charTag(FirstCharacter, "annoyed")}:               Quindi se menava me andava bene?    
-            }        
+                    -> glyph_choice_manager(false, fireC)->  
+                {
+                    -are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:               Quindi se menava me andava bene?    
+                }
+                {
+                - are_two_entities_together(ThirdCharacter, PG):
+                {charTag(ThirdCharacter, "jester")}:            Concordo.
+                }         
             {charTag(SecondCharacter, "angry")}:                Mi aveva preso il braccio!
                                                                 E continuava a dire che sono un bambino e che i bambini qui non ci devono stare.
                                                                 E che devo tornare a casa e io NON ci voglio tornare a casa.
-            {
-            - are_two_entities_together(Mentor, PG):
-                ~ change_entity_place(Mentor)  
-            {charTag(SecondCharacter, "neutral")}:              Se ne è andata.                                    
-            }                                            
+                {
+                - are_two_entities_together(Mentor, PG):
+                    ~ change_entity_place(Mentor)  
+                {charTag(SecondCharacter, "neutral")}:              Se ne è andata.                                    
+                }                                            
         
             {charTag(SecondCharacter, "melanchonic")}:          Non volevo picchiarla.
                                                                 Volevo solo spingerla via.
@@ -636,10 +657,10 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
-        {
-            - are_two_entities_together(Mentor, PG):
-                ~ change_entity_place(Mentor)                                    
-        }                                            
+            {
+                - are_two_entities_together(Mentor, PG):
+                    ~ change_entity_place(Mentor)                                    
+            }                                            
             
         {charTag(SecondCharacter, "angry")}:                    {charNameFive} si vuole comportare come la mia nonna.
         {charTag(SecondCharacter, "emotional")}:                Ma la mia nonna non mi tratta mai come un bambino.
@@ -650,11 +671,11 @@
         {charTag(SecondCharacter, "energy")}:                   Mi ha anche insegnato come barare a carte.
                                                                 E come aprire il cassetto dei dolci di mamma.
                                                                 E a sputare nel caffè di chi ti fa male.
-        {
-            - second_char_main_storylets.four.razionale:
-            {charTag(SecondCharacter, "angry")}:                E non mi dire di nuovo che devo essere più razionale, come prima!
-        
-        }
+            {
+                - second_char_main_storylets.four.razionale:
+                {charTag(SecondCharacter, "angry")}:                E non mi dire di nuovo che devo essere più razionale, come prima!
+            
+            }
         {charTag(SecondCharacter, "neutral")}:                  Quando mamma e papà ci lasciavano a casa da soli mangiavamo sempre cose buone.
                                                                 E guardavamo assieme la tele.
         {charTag(SecondCharacter, "energy")}:                   E potevo scegliere cosa guardare.
@@ -665,13 +686,13 @@
         {charTag(SecondCharacter, "neutral")}:                  Ma nonna dice che succede.
                                                                 Che i grandi fanno cose cattive senza saperlo.
                                                                 Mi spiace essere scappato di casa.
-        {
-            - are_two_entities_together(FirstCharacter, PG):
-            {charTag(FirstCharacter, "sad")}:                   Se solo potessi ti porterei alla Rifugia, piccoletto.
-                                                                Quello che racconti mi spezza il cuore.
-            {charTag(SecondCharacter, "energy")}:               Al rifugio si mangia?
-            {charTag(FirstCharacter, "affectionate")}:          C'è sempre un piatto di pasta per qualcuno.
-        }        
+            {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "sad")}:                   Se solo potessi ti porterei alla Rifugia, piccoletto.
+                                                                    Quello che racconti mi spezza il cuore.
+                {charTag(SecondCharacter, "energy")}:               Al rifugio si mangia?
+                {charTag(FirstCharacter, "affectionate")}:          C'è sempre un piatto di pasta per qualcuno.
+            }        
         {charTag(SecondCharacter, "emotional")}:                Sai {player_name}, vorrei nonna qui. 
                                                                 Sicuro le piace tantissimo questo posto.
         
@@ -724,29 +745,34 @@
             -
 
         {charTag(SecondCharacter, "melanchonic")}:              Mi spiace, {player_name}. 
-        {
-            - second_char_main_storylets.four.stupido:
-                {charTag(SecondCharacter, "angry")}:            Anche se mi hai chiamato stupido.
-        }
+            {
+                - second_char_main_storylets.four.stupido:
+                    {charTag(SecondCharacter, "angry")}:            Anche se mi hai chiamato stupido.
+            }
         {charTag(SecondCharacter, "melanchonic")}:              Prima ho detto delle bugie.
                                                                 Non è vero che mamma mi ha mandato qui.
                                                                 Ma volevo così tanto avere un bel compleanno.
                                                                 Uff.
-        {
-            - second_char_main_storylets.one.mamma:
-            {charTag(SecondCharacter, "emotional")}:            Però come ti dicevo prima, è sempre la mamma migliorissima del mondo!
-        }                                                      
-                                                                Ora capisco perché mi chiamate {charNameTwo}
+            {
+                - second_char_main_storylets.one.mamma:
+                {charTag(SecondCharacter, "emotional")}:            Però come ti dicevo prima, è sempre la mamma migliorissima del mondo!
+            }                                                      
+                                                                Ora capisco perché mi chiamate {charNameTwo}.
         {charTag(SecondCharacter, "emotional")}:                Però adoro stare qui!
                                                                 Questo posto è pieno di animali!
         {charTag(SecondCharacter, "neutral")}:                  E nessuno si arrabbia con me.
         {charTag(SecondCharacter, "angry")}:                    A parte {charNameFive}.
-        {
-            - second_char_main_storylets.four.male:
-        {charTag(SecondCharacter, "melanchonic")}:              Ma mi spiace che c'è rimasta male prima per la spinta.
-        }
+            {
+                - second_char_main_storylets.four.male:
+            {charTag(SecondCharacter, "melanchonic")}:              Ma mi spiace che c'è rimasta male prima per la spinta.
+            }
         {charTag(SecondCharacter, "neutral")}:                  Ti prometto che non dirò più bugie.
                                                                 Ora però lasciami solo.
+            {
+            - are_two_entities_together(ThirdCharacter, PG):
+            {charTag(ThirdCharacter, "jester")}:                Tu sei davvero strano, Ricciolino.
+                                                                Simpatico, ma strano.
+            } 
             -> second_char_closing_storylet ->
             -> options_second_character
     
@@ -760,47 +786,57 @@
     
         {charTag(SecondCharacter, "neutral")}:                  Prima, con {charNameFive}.
                                                                 Mi ha fatto male perché mi ha fatto pensare a scuola.
-        {
-            - are_two_entities_together(Mentor, PG):
-                    ~ change_entity_place(Mentor)
-                                                                Ma è andata via!
-        } 
+            {
+                - are_two_entities_together(Mentor, PG):
+                        ~ change_entity_place(Mentor)
+                                                                    Ma è andata via!
+            } 
         {charTag(SecondCharacter, "melanchonic")}:              Anche a scuola danno sempre la colpa a me. 
         {charTag(SecondCharacter, "neutral")}:                  Non mi piace mica tanto la scuola.
         {charTag(SecondCharacter, "melanchonic")}:              I ragazzi più grandi mi fanno male.
         {charTag(SecondCharacter, "neutral")}:                  Ma io non piango.
         {charTag(SecondCharacter, "angry")}:                    Non sono una femmina.
-        {
-            - second_char_main_storylets.five.paura:
-        {charTag(SecondCharacter, "energy")}:                   E sono grande e come ha detto papà i grandi non hanno paura!
-        }
+            {
+                - second_char_main_storylets.five.paura:
+            {charTag(SecondCharacter, "energy")}:                   E sono grande e come ha detto papà i grandi non hanno paura!
+            }
+            {
+            - are_two_entities_together(ThirdCharacter, PG):
+            {charTag(ThirdCharacter, "neutral")}:               Oooh, ecco un ragazzino davvero tosto!
+            } 
         {charTag(SecondCharacter, "neutral")}:                  E sono più forte di loro.
         {charTag(SecondCharacter, "melanchonic")}:              Ma non coi pugni.
+            {
+            - are_two_entities_together(ThirdCharacter, PG):
+            {charTag(ThirdCharacter, "neutral")}:               Quando usciamo di qui ti insegno due trucchetti che ti aiuteranno a fargli il culo.
+                                                                //Check parolacce da parte di Mentore
+                                                                ~ fifthChar_slurDetectorFunction()  
+            } 
         {charTag(SecondCharacter, "neutral")}:                  E le ragazze della mia età sono strane.
         {charTag(SecondCharacter, "melanchonic")}:              E mi dicono che. 
         {charTag(SecondCharacter, "neutral")}:                  No, non te lo dico mica.
-        {
-            - are_two_entities_together(FirstCharacter, PG):
-            {charTag(FirstCharacter, "annoyed")}:               Strane, non lo so. 
-                                                                Ma anche le bimbe possono essere crudeli, quello sì.
-        } 
+            {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:               Strane, non lo so. 
+                                                                    Ma anche le bimbe possono essere crudeli, quello sì.
+            } 
         {charTag(SecondCharacter, "angry")}:                    Le maestre mi mettono sempre in castigo.
                                                                 Se mi nascondo nell'armadio perché ho sonno.
                                                                 Se spingo gli altri per terra.
         {charTag(SecondCharacter, "melanchonic")}:              Se mi distraggo.
         {charTag(SecondCharacter, "emotional")}:                Una volta nonna, quando stava bene, è venuta e ha urlato a tutte le maestre.
-        {
-            - second_char_main_storylets.five.ciabatta:
-        {charTag(SecondCharacter, "energy")}:                   Ma senza ciabatta, come la volta con papà.
-        }
+            {
+                - second_char_main_storylets.five.ciabatta:
+            {charTag(SecondCharacter, "energy")}:                   Ma senza ciabatta, come la volta con papà.
+            }
         {charTag(SecondCharacter, "neutral")}:                  Ora sono un po' più gentili.
                                                                 Ma quella di matematica dice sempre che le dispiace per me.
         {charTag(SecondCharacter, "angry")}:                    E non mi piace quando fa così.
-        {
-            - second_char_main_storylets.five.barare:
-        {charTag(SecondCharacter, "angry")}:                    Mi fa sentire come se prendessi i voti belli barando.
-                                                                Ma a me piace barare solo quando gioco a carte.
-        }
+            {
+                - second_char_main_storylets.five.barare:
+            {charTag(SecondCharacter, "angry")}:                    Mi fa sentire come se prendessi i voti belli barando.
+                                                                    Ma a me piace barare solo quando gioco a carte.
+            }
             + (piangono) \ {charTag(PG, "neutral")}:            Sapevi che anche i maschi piangono? E anche gli orsi e gli elefanti.
                     -> glyph_choice_manager(false, airC)->
             {charTag(SecondCharacter, "neutral")}:              Gli orsi mi piacciono.
@@ -860,17 +896,17 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
-    {
-        - grimoire_fifthChar hasnt grimSecondCharMentorPeace && are_two_entities_together(Mentor, PG):
-            ~ change_entity_place(Mentor)
-    }     
+            {
+                - grimoire_fifthChar hasnt grimSecondCharMentorPeace && are_two_entities_together(Mentor, PG):
+                    ~ change_entity_place(Mentor)
+            }     
  
         {charTag(SecondCharacter, "energy")}:                   Franco prima mi ha detto che tu scrivi storie.
-        {
-            - are_two_entities_together(Franco, PG):
-            {charTag(Franco, "neutral")}:                       Anche Franco scrive storie.
-                                                                Storie in cui Franco sa nuotare!
-        }
+            {
+                - are_two_entities_together(Franco, PG):
+                {charTag(Franco, "neutral")}:                       Anche Franco scrive storie.
+                                                                    Storie in cui Franco sa nuotare!
+            }
         {charTag(SecondCharacter, "neutral")}:                  A me mi piacciono le storie.
                                                                 C'è una cosa che non dico mai a nessuno.
                                                                 Mamma è felice perché vado a letto presto.
@@ -879,10 +915,10 @@
         {charTag(SecondCharacter, "neutral")}:                  E correggere quelle che non mi piacciono.
         {charTag(SecondCharacter, "energy")}:                   Quando uno di quinta mi ha picchiato, la sera ho corretto tutto e l'ho picchiato io.
         {charTag(SecondCharacter, "emotional")}:                E i miei compagni poi erano miei amici così.
-        {
-            - are_two_entities_together(FirstCharacter, PG): 
-            {charTag(FirstCharacter, "sad")}:                   Mi si è appena rotto il cuore.
-        } 
+            {
+                - are_two_entities_together(FirstCharacter, PG): 
+                {charTag(FirstCharacter, "sad")}:                   Mi si è appena rotto il cuore.
+            } 
         {charTag(SecondCharacter, "neutral")}:                  Una volta ho preso un brutto voto e papà e mamma hanno litigato perché si davano la colpa.
                                                                 Ma allora ho corretto tutto e io non prendevo un brutto voto.
         {charTag(SecondCharacter, "energy")}:                   E andavamo a prendere un gelato.
@@ -892,12 +928,12 @@
         {charTag(SecondCharacter, "energy")}:                   Sai che i cani sentono suoni fino a duecento metri?
                                                                 Se li chiami e non vengono è perché non vogliono.
         {charTag(SecondCharacter, "neutral")}:                  Anche io faccio così.
-        {
-            - are_two_entities_together(Mentor, PG):
-            {charTag(FifthCharacter, "neutral")}:               Qui ogni tanto passa un cane con la posta.
-                                                                Forse potreste diventare amici!
-            {charTag(SecondCharacter, "energy")}:               Sarebbe fighissimooooooooooooooooooooooooooooooo!
-        }
+            {
+                - are_two_entities_together(Mentor, PG):
+                {charTag(FifthCharacter, "neutral")}:               Qui ogni tanto passa un cane con la posta.
+                                                                    Forse potreste diventare amici!
+                {charTag(SecondCharacter, "energy")}:               Sarebbe fighissimooooooooooooooooooooooooooooooo!
+            }
             
             + \ {charTag(PG, "neutral")}:                       Come mai non puoi avere un cane?
                     -> glyph_choice_manager(false, airC)->
@@ -986,18 +1022,23 @@
         {charTag(SecondCharacter, "neutral")}:                  E la macchina è di papà.
         {charTag(SecondCharacter, "melanchonic")}:              Che si arrabbia perché prima era nera, e lui l'ha colorata di giallo.
         {charTag(SecondCharacter, "emotional")}:                Mio fratello è super però.
-        {
-            - second_char_main_storylets.five.casa:
-        {charTag(SecondCharacter, "melanchonic")}:              Dopo che mi hai chiesto se volevo tornare a casa, sento che mi manca tanto.
-        }
+            {
+            - are_two_entities_together(ThirdCharacter, PG):
+            {charTag(ThirdCharacter, "neutral")}:               Sembra uno tosto!
+    
+            } 
+            {
+                - second_char_main_storylets.five.casa:
+            {charTag(SecondCharacter, "melanchonic")}:              Dopo che mi hai chiesto se volevo tornare a casa, sento che mi manca tanto.
+            }
         {charTag(SecondCharacter, "neutral")}:                  Lavora in una officina e nel tempo libero fa delle statue col saldatore e i pezzi rotti delle macchine.
                                                                 E vive in una casa piccola piccola assieme al suo amico.
         {charTag(SecondCharacter, "melanchonic")}:              Viene a trovarci quando non c'è papà perché non si piacciono.
         {charTag(SecondCharacter, "neutral")}:                  Ma se papà mi fa male allora lo cerca e gli urla addosso tantissime cose.
-        {
-            - second_char_main_storylets.six.lottare:
-        {charTag(SecondCharacter, "energy")}:                   Quella cosa che mi hai detto prima sullo stringere i denti e lottare, lui è sempre così.
-        }
+            {
+                - second_char_main_storylets.six.lottare:
+            {charTag(SecondCharacter, "energy")}:                   Quella cosa che mi hai detto prima sullo stringere i denti e lottare, lui è sempre così.
+            }
         {charTag(SecondCharacter, "emotional")}:                Mi ha promesso che mi porta a pescare una volta.
         {charTag(SecondCharacter, "neutral")}:                  Senza dirlo a mamma perché lei ha paura perché non so nuotare.
                                                                 Ma lui sa fare tutto.
@@ -1016,14 +1057,24 @@
             }                                              
         } 
         {charTag(SecondCharacter, "emotional")}:                Il suo amico invece fa dei dolci buonissimi.
+            {
+            - are_two_entities_together(ThirdCharacter, PG):
+            {charTag(ThirdCharacter, "neutral")}:               Aspetta, ma non è che tuo fratello è... come dire.
+            {charTag(ThirdCharacter, "jester")}:                No, è meglio che me ne sto zitto va!
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:           Woah, addirittura una scelta intelligente, {charNameThree}.
+                                                                Sono quasi commossa.                    
+                }                         
+            } 
                                                                 E anche lui non sa nuotare.
         {charTag(SecondCharacter, "neutral")}:                  Ma non mi sembra felice quando vado da loro e quindi ci vado poco.
-        {
-            - are_two_entities_together(Mentor, PG): 
-            {charTag(FifthCharacter, "hurry")}:                 Potrebbe essere carino se provaste a imparare assieme, no?
-            {charTag(SecondCharacter, "neutral")}:              E se poi mi vuole annegare?
-            {charTag(SecondCharacter, "neutral")}:              Poi la mamma mi risuscita solo per ammazzarmi di nuovo.
-        }
+            {
+                - are_two_entities_together(Mentor, PG): 
+                {charTag(FifthCharacter, "hurry")}:                 Potrebbe essere carino se provaste a imparare assieme, no?
+                {charTag(SecondCharacter, "neutral")}:              E se poi mi vuole annegare?
+                {charTag(SecondCharacter, "neutral")}:              Poi la mamma mi risuscita solo per ammazzarmi di nuovo.
+            }
             
             + \ {charTag(PG, "neutral")}:                       Come sono le statue di tuo fratello?
                     -> glyph_choice_manager(false, airC)->
@@ -1103,18 +1154,18 @@
             {charTag(SecondCharacter, "energy")}:               Figo!
                                                                 Quindi non sono l'unico che non ha ancora capito la situazione!
             {charTag(SecondCharacter, "neutral")}:              Quando chiedo le cose a {charNameFive} mi fa sentire stupido.
-            {
-                - are_two_entities_together(Mentor, PG): 
-                {charTag(FifthCharacter, "hurry")}:             Cerco solo di spiegartele per bene.
-                {charTag(SecondCharacter, "neutral")}:          Prima mi hai spiegato le cose separando tutte le parole.
-                                                                Mica sono un bambino!
-                {charTag(SecondCharacter, "angry")}:            So fare le frazioni!
-                
-                - else:
-                                                                "Bimbo, te le spiego lentamente le cose ora, vieni."
-                                                                Non mi deve spiegare lentamente le cose.
-                {charTag(SecondCharacter, "angry")}:            Io so fare le frazioni!
-            }
+                {
+                    - are_two_entities_together(Mentor, PG): 
+                    {charTag(FifthCharacter, "hurry")}:             Cerco solo di spiegartele per bene.
+                    {charTag(SecondCharacter, "neutral")}:          Prima mi hai spiegato le cose separando tutte le parole.
+                                                                    Mica sono un bambino!
+                    {charTag(SecondCharacter, "angry")}:            So fare le frazioni!
+                    
+                    - else:
+                                                                    "Bimbo, te le spiego lentamente le cose ora, vieni."
+                                                                    Non mi deve spiegare lentamente le cose.
+                    {charTag(SecondCharacter, "angry")}:            Io so fare le frazioni!
+                }
                     
             + \ {charTag(PG, "neutral")}:                       Mi piace tenermi impegnat{player_pronoun has him:o|{player_pronoun has her:a|ə}}, non mi importa molto il come.
                     -> glyph_choice_manager(false, earthC)->
@@ -1129,18 +1180,18 @@
             {charTag(SecondCharacter, "neutral")}:              Che fregatura.
             {charTag(SecondCharacter, "angry")}:                Nemmeno mamma mi paga per i lavoretti a casa.
             {charTag(SecondCharacter, "neutral")}:              Dice che è una cosa che devono fare tutti, grandi e piccoli, maschi e femmine.
-            {
-            - are_two_entities_together(FirstCharacter, PG): 
-            {charTag(FirstCharacter, "affectionate")}:          Donna saggia.
-            }          
+                {
+                - are_two_entities_together(FirstCharacter, PG): 
+                {charTag(FirstCharacter, "affectionate")}:          Donna saggia.
+                }          
             {charTag(SecondCharacter, "angry")}:                Ma papà non fa mai niente in casa.
 
             + \ {charTag(PG, "neutral")}:                       Mi è sempre piaciuto fare stare bene le persone.
                     -> glyph_choice_manager(false, waterC)->
-            {
-            - second_char_main_storylets.one.difficoltà:
-                {charTag(SecondCharacter, "neutral")}:          Lo dicevi anche quando ci siamo conosciuti.
-            }        
+                {
+                - second_char_main_storylets.one.difficoltà:
+                    {charTag(SecondCharacter, "neutral")}:          Lo dicevi anche quando ci siamo conosciuti.
+                }        
             {charTag(SecondCharacter, "emotional")}:            Questa è una cosa bella.
             {charTag(SecondCharacter, "melanchonic")}:          Ma difficile.
             {charTag(SecondCharacter, "neutral")}:              I grandi pensano sempre di sapere cosa fare.
@@ -1160,7 +1211,7 @@
             {charTag(SecondCharacter, "energy")}:               Ma fa muovere le cose grandi!
             {charTag(SecondCharacter, "melanchonic")}:          O bruciare i muri.
             -
-        {
+            {
             - cooking_with_second_char.third_theme.bugie_innocenti:
             {charTag(SecondCharacter, "neutral")}:              Chissà se mi hai risposto sinceramente.
             {charTag(SecondCharacter, "angry")}:                O se è una bugia innocente, visto quello che hai detto in cucina.
@@ -1180,29 +1231,32 @@
             - cooking_with_second_char.third_theme.bugie_omesse:
             {charTag(SecondCharacter, "neutral")}:              Chissà se mi hai risposto sinceramente.
             {charTag(SecondCharacter, "angry")}:                O se è c'è una omissione, visto quello che hai detto in cucina.
-
-        }    
+            }    
             
         {charTag(SecondCharacter, "neutral")}:                  I miei compagni fanno tantissime cose.
                                                                 Calcio. Basket. Pallavolo.
                                                                 Suonano il pianoforte o la chitarra o la batteria.
                                                                 Oppure imparano il cinese e l'inglese.
-                                                                O provano a vendere cose su Roblox.
-        {
-            - second_char_main_storylets.six.tortura:
-        {charTag(SecondCharacter, "neutral")}:                  E tu che dicevi che la scuola è una tortura!
-        }
-        {
-            - are_two_entities_together(FirstCharacter, PG):
-            {charTag(FirstCharacter, "annoyed")}:               Sono già stanca solo a sentire tutta questa roba.
-                                                                Non dovrebbero, che ne so, fare l3 bambin3 e bona?
-        }  
+                                                                O provano a vendere cose su Roblox.                                                    
+            {
+                - second_char_main_storylets.six.tortura:
+            {charTag(SecondCharacter, "neutral")}:                  E tu che dicevi che la scuola è una tortura!
+            }
+            {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:               Sono già stanca solo a sentire tutta questa roba.
+                                                                    Non dovrebbero, che ne so, fare l3 bambin3 e bona?
+                {
+                - are_two_entities_together(ThirdCharacter, PG):
+                {charTag(ThirdCharacter, "jester")}:                Ti stupirà, ma per una volta sono d'accordo con te.                     
+                }                                                    
+            }  
         {charTag(SecondCharacter, "neutral")}:                  Loro sanno già cosa vogliono fare come lavoro.
                                                                 A me mi piacciono solo gli animali.
-        {
-            - second_char_main_storylets.six.piangono:
-        {charTag(SecondCharacter, "energy")}:                   Ancora di più ora che mi hai detto che piangono!
-        }                                                    
+            {
+                - second_char_main_storylets.six.piangono:
+            {charTag(SecondCharacter, "energy")}:                   Ancora di più ora che mi hai detto che piangono!
+            }                                                    
         {charTag(SecondCharacter, "melanchonic")}:              Ma so anche le cose brutte degli animali.
                                                                 Che molti stanno sparendo per colpa degli uomini.
                                                                 Che gli oceani sono sempre più vuoti.
@@ -1266,13 +1320,13 @@
             {charTag(SecondCharacter, "neutral")}:              E io vorrei sempre fare quello che mi va.
             {charTag(SecondCharacter, "angry")}:                Il resto è una rottura.
             -
-            {
-                - are_two_entities_together(Mentor, PG):
-                {charTag(FifthCharacter, "neutral")}:           Nemmeno io chiederei a un bambino di decidere cosa diventare da grande.
-                                                                A questa età dovreste solo giocare.
-                {charTag(SecondCharacter, "energy")}:           Ma non nello stagno.
-                {charTag(FifthCharacter, "bored")}:             Già, non nello stagno.
-            }  
+                {
+                    - are_two_entities_together(Mentor, PG):
+                    {charTag(FifthCharacter, "neutral")}:           Nemmeno io chiederei a un bambino di decidere cosa diventare da grande.
+                                                                    A questa età dovreste solo giocare.
+                    {charTag(SecondCharacter, "energy")}:           Ma non nello stagno.
+                    {charTag(FifthCharacter, "bored")}:             Già, non nello stagno.
+                }  
         
         {charTag(SecondCharacter, "neutral")}:                  La maestra di matematica dice che ci sono tante associazioni che aiutano gli animali.
         {charTag(SecondCharacter, "emotional")}:                E che magari può fare venire una volontaria del canile.
@@ -1280,6 +1334,13 @@
                                                                 Ma io non so se bastano.
                                                                 Però una cosa è sicura.
         {charTag(SecondCharacter, "energy")}:                   Mi piacerebbe tanto fare il veterinario.
+            {
+            - are_two_entities_together(ThirdCharacter, PG):
+            {charTag(ThirdCharacter, "neutral")}:               Paga bene, soprattutto se apri nei quartieri della gente con i soldi.
+            {charTag(ThirdCharacter, "jester")}:                Quel coglione del Giova credo spende almeno diecimila all'anno per il suo sfigatissimo pomerania!
+                                                                //Check parolacce da parte di Mentore
+                                                                ~ fifthChar_slurDetectorFunction()                    
+            }
 
             -> second_char_closing_storylet ->
             -> options_second_character
@@ -1301,10 +1362,17 @@
         {charTag(SecondCharacter, "melanchonic")}:              Stavo ripensando a un bambino.
                                                                 Uno di seconda.
                                                                 L'ho picchiato perché mi andava.
-        {
+            {
+            - are_two_entities_together(ThirdCharacter, PG):
+            {charTag(ThirdCharacter, "jester")}:                Così si fa, Ricciolino!
+                                                                Ma non prendertela col vecchio {charNameThree}!
+
+            }                                                    
+    
+            {
             - second_char_main_storylets.six.lottare:
-        {charTag(SecondCharacter, "neutral")}:                  E non per quella cosa del lottare e dei denti che dicevi tu.
-        }                                                        
+            {charTag(SecondCharacter, "neutral")}:              E non per quella cosa del lottare e dei denti che dicevi tu, {player_name}.
+            }                                                        
         {charTag(SecondCharacter, "angry")}:                    Ero <b>DAVVERO</b> arrabbiato quel giorno.
         {charTag(SecondCharacter, "melanchonic")}:              E lui ha pianto e mi sono arrabbiato ancora di più.
         {charTag(SecondCharacter, "neutral")}:                  La maestra di matematica mi ha messo in castigo.
@@ -1316,19 +1384,19 @@
                                                                 E anche tra grandi.
         {charTag(SecondCharacter, "angry")}:                    Penso che i grandi facciano schifo.
         {charTag(SecondCharacter, "melanchonic")}:              Quando papà mi picchia dice che è colpa mia.
-        {
-            - second_char_main_storylets.eight.ragione:
-        {charTag(SecondCharacter, "neutral")}:                  Hai detto bene prima, non devo sempre dare ragione ai grandi.
-        }
+            {
+                - second_char_main_storylets.eight.ragione:
+            {charTag(SecondCharacter, "neutral")}:                  Hai detto bene prima, non devo sempre dare ragione ai grandi.
+            }
                                                                 Ma a me non piace farmi picchiare.
                                                                 O picchiare.
                                                                 Ma se sono arrabbiato non so cosa fare.
-        {
-        - are_two_entities_together(FirstCharacter, PG):
-            {charTag(FirstCharacter, "affectionate")}:          Mai provato a suonare la batteria?
-                                                                Una delle ragazze della band potrebbe darti qualche lezione di sicuro!
-            {charTag(SecondCharacter, "angry")}:                Poi papà ha un altro motivo per arrabbiarsi.
-        }        
+            {
+            - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "affectionate")}:          Mai provato a suonare la batteria?
+                                                                    Una delle ragazze della band potrebbe darti qualche lezione di sicuro!
+                {charTag(SecondCharacter, "angry")}:                Poi papà ha un altro motivo per arrabbiarsi.
+            }        
 
             + \ {charTag(PG, "neutral")}:                       E se provassi a studiare la tua rabbia un po' come fai con gli animali?
                     -> glyph_choice_manager(false, airC)->
@@ -1396,7 +1464,19 @@
         
         {charTag(SecondCharacter, "energy")}:                   Quando vado da mio fratello e non c'è il suo amico, mi lascia sperimentare con le sue cose.
         {charTag(SecondCharacter, "neutral")}:                  Il suo amico fa il pasticciere.
-                                                                E ha tantissime cose strane in cucina.
+            {
+            - are_two_entities_together(ThirdCharacter, PG):
+            {charTag(ThirdCharacter, "neutral")}:               Sì, tuo fratello è sicuramente dell'altra sponda.
+                                                                //Check parolacce da parte di Mentore
+                                                                ~ fifthChar_slurDetectorFunction()
+                {
+                - are_two_entities_together(Franco, PG):
+                {charTag(Franco, "neutral")}:                   Un po' come cugina Sputt, che si è trasferita sull'altra sponda dopo che ha perso il microfono del karaoke.
+                                                                Dice che la nostra zona non è sicura da quando ci vengono gli aironi.
+                                                                Ma lei è sempre stata di strette vedute.
+                }                                                               
+            }
+                                                                Ha tantissime cose strane in cucina.
                                                                 Mi piace provare le cose, capire.
         {charTag(SecondCharacter, "angry")}:                    Non mi piacciono le cose che non capisco.
         {charTag(SecondCharacter, "melanchonic")}:              Ma a volte faccio dei casini.
@@ -1404,21 +1484,21 @@
                                                                 Un giorno ho riempito il letto di mamma di sabbia e si è grattata per una settimana.
                                                                 E poi ho provato ad attaccare un mio robot al frullatore dell'amico di mio fratello.
         {charTag(SecondCharacter, "emotional")}:                E ha fatto una fiammata gigante e un pezzo di muro è diventato nero.
-        {
-            - are_two_entities_together(Mentor, PG): 
-            {charTag(FifthCharacter, "hurry")}:                 Sarei già morta d'infarto.
-            {charTag(SecondCharacter, "energy")}:               Anche mio fratello!
-        }
+            {
+                - are_two_entities_together(Mentor, PG): 
+                {charTag(FifthCharacter, "hurry")}:                 Sarei già morta d'infarto.
+                {charTag(SecondCharacter, "energy")}:               Anche mio fratello!
+            }
         {charTag(SecondCharacter, "energy")}:                   Lui si è spaventato tantissimo.
                                                                 Ma io ero contento perché non sapevo che ci sono dei fili nel muro.
                                                                 E ora so cosa è l'elettricità.
         {charTag(SecondCharacter, "neutral")}:                  Ma qui non c'è.
                                                                 Chissà se è Franco che fa accadere le cose.
                                                                 O la signora che ti parla in testa.
-        {
-            - are_two_entities_together(FirstCharacter, PG):
-                {charTag(FirstCharacter, "annoyed")}:           Ti ci vedrei benissimo con mio padre, a fare casini in garage e far spaventare mia madre! 
-        } 
+            {
+                - are_two_entities_together(FirstCharacter, PG):
+                    {charTag(FirstCharacter, "annoyed")}:           Ti ci vedrei benissimo con mio padre, a fare casini in garage e far spaventare mia madre! 
+            } 
         
             + \ {charTag(PG, "neutral")}:                       Se il ritratto della curiosità {charNameTwo}, vero?
                     -> glyph_choice_manager(false, airC)->
@@ -1475,14 +1555,14 @@
 
         {charTag(SecondCharacter, "energy")}:                   Comunque è una fortuna che qui c'è un bambino!
         {charTag(SecondCharacter, "neutral")}:                  Questo posto è pieno di cose e voi non vi fate le domande.
-        {
-            - second_char_main_storylets.one.capire:
-                {charTag(SecondCharacter, "angry")}:            Prima hai anche detto che sei qui per capire questo posto, ma non mi sembra mica.
-        }
-        {
-            - second_char_main_storylets.six.tortura:
-                {charTag(SecondCharacter, "energy")}:           Ma hai ragione, è più interessante che stare seduto per ore a scuola!
-        }
+            {
+                - second_char_main_storylets.one.capire:
+                    {charTag(SecondCharacter, "angry")}:            Prima hai anche detto che sei qui per capire questo posto, ma non mi sembra mica.
+            }
+            {
+                - second_char_main_storylets.six.tortura:
+                    {charTag(SecondCharacter, "energy")}:           Ma hai ragione, è più interessante che stare seduto per ore a scuola!
+            }
         {charTag(SecondCharacter, "energy")}:                   Tocca a me trovare le risposte!
                 
                 -> second_char_closing_storylet ->
@@ -1506,33 +1586,38 @@
         {charTag(SecondCharacter, "emotional")}:                Ci vado d'estate e mi diverto tantissimo e ci sono tantissimi libri.
                                                                 Lei mi prepara tutte le cose buone.
                                                                 E io le insegno tutte le cose più strane sugli animali.
-        {
-            - second_char_main_storylets.nine.storico:
-            {charTag(SecondCharacter, "emotional")}:            Devo dirglielo che mi hai detto di fare lo storico degli animali!
-        }                                                    
+            {
+                - second_char_main_storylets.nine.storico:
+                {charTag(SecondCharacter, "emotional")}:            Devo dirglielo che mi hai detto di fare lo storico degli animali!
+            }                                                    
         {charTag(SecondCharacter, "neutral")}:                  Mamma e papà non vengono mai.
         {charTag(SecondCharacter, "emotional")}:                Ma mio fratello e il suo amico sì.
         {charTag(SecondCharacter, "neutral")}:                  Una volta mi hanno portato a una festa sulla spiaggia.
                                                                 E mi hanno fatto cantare nel microfono.
         {charTag(SecondCharacter, "energy")}:                   E hanno riso tutti quando ho ruttato fortissimo.
-        {
-            - are_two_entities_together(Franco, PG):
-            {charTag(Franco, "party")}:                         Come alle serate karaoke di cugina Sputt!!
-            {charTag(SecondCharacter, "melanchonic")}:          Ci voglio venire!
-            {charTag(Franco, "party")}:                         La organizziamo presto, promesso!
-        }
+            {
+                - are_two_entities_together(Franco, PG):
+                {charTag(Franco, "party")}:                         Come alle serate karaoke di cugina Sputt!!
+                {charTag(SecondCharacter, "melanchonic")}:          Ci voglio venire!
+                {charTag(Franco, "party")}:                         La organizziamo presto, promesso!
+            }
         {charTag(SecondCharacter, "neutral")}:                  Da nonna mi addormento subito.
                                                                 Non devo correggere le giornate.
-        {
-            - are_two_entities_together(FirstCharacter, PG):
-            {charTag(FirstCharacter, "sad")}:                   Vedi tu se mi devo commuovere per questo piccoletto, mannaggia a me!
-        }
+            {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "sad")}:                   Vedi tu se mi devo commuovere per questo piccoletto, mannaggia a me!
+            }
         {charTag(SecondCharacter, "melanchonic")}:              Quando finiscono le vacanze però mi sento triste.
         {charTag(SecondCharacter, "angry")}:                    E arrabbiato.
         {charTag(SecondCharacter, "neutral")}:                  Ora che nonna è nella casa dei vecchi, vorrei vivere sempre con l'altra nonna.
                                                                 Tanto so studiare da solo.
         {charTag(SecondCharacter, "emotional")}:                Magari studio come si curano i pesci.
         {charTag(SecondCharacter, "melanchonic")}:              Anche se non ci puoi mica giocare con loro.
+            {
+            - are_two_entities_together(ThirdCharacter, PG):
+            {charTag(ThirdCharacter, "neutral")}:               Un ragazzetto della tua età non dovrebbe passare così tanto tempo con dei vecchi.
+            {charTag(ThirdCharacter, "jester")}:                Vai a tirare un pallone, o a spiare le ragazzette in spiaggia!               
+            }
             
             + \ {charTag(PG, "neutral")}:                       Che libri ci sono da tua nonna?
                     -> glyph_choice_manager(false, airC)->
