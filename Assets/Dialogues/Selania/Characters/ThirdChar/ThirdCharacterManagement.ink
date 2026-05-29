@@ -143,7 +143,7 @@
                 - thirdChar_recordedPlayerPronoun == him:
                 {charTag(ThirdCharacter, "bored")}:                 Ho avuto la sensazione che tu hai passato il tempo a giudicarmi.
                                                                     A farmi domande fastidiose.
-                                                                    Non me lo aspettavo da te, zio.
+                                                                    Non me lo aspettavo da te, vecio.
                                                                     Ho come l'impressione che ti senti meglio di me.
                 {charTag(ThirdCharacter, "angry")}:                 Vola basso, {player_name}.
                 {charTag(ThirdCharacter, "neutral")}:               Sono ancora più contento di levarmi da qui, guarda.
@@ -152,14 +152,14 @@
                 {charTag(ThirdCharacter, "neutral")}:               Non è scattata la scintilla, mi spiace.
                 {charTag(ThirdCharacter, "jester")}:                Per te il campionato finisce qui.
                 {charTag(ThirdCharacter, "neutral")}:               Scherzi a parte, non ci siamo mai capiti, ma non è che mi aspettavo di più.
-                                                                    Fossi stato uno zio, ci sarei rimasto male, ma così non tanto, dai.
+                                                                    Fossi stato un uomo, ci sarei rimasto male, ma così non tanto, dai.
                 } 
 
 
             - thirdChar_InkLevel == ink_low:
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "jester")}:                Sei un po' come una birra calda, zio.
+                {charTag(ThirdCharacter, "jester")}:                Sei un po' come una birra calda, vecio.
                 {charTag(ThirdCharacter, "neutral")}:               Una cosa che magari bevi perché non ti rimane niente in giro.
                                                                     Ma che non ti disseta.
                 {charTag(ThirdCharacter, "jester")}:                A stare qui in giro sto dicendo cose gay, aiuto!
@@ -182,7 +182,7 @@
             - thirdChar_InkLevel == ink_normal:
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "jester")}:                Noi ci capiamo zio, ma tanto anche.
+                {charTag(ThirdCharacter, "jester")}:                Noi ci capiamo vecio, ma tanto anche.
                                                                     Tipo fratelli separati alla nascita o quelle cose lì.
                 {charTag(ThirdCharacter, "neutral")}:               Non avrei mai pensato di dirlo, ma mi spiacerà un po' andarmene.
                 {charTag(ThirdCharacter, "jester")}:                Ma non farti strane idee!                                                                                
@@ -190,7 +190,7 @@
                 - else:
                 {charTag(ThirdCharacter, "neutral")}:               Non ti arrabbiare, ma non pensavo che mi sarei trovato così bene con {thirdChar_recordedPlayerPronoun == her: una donna|una persona non binaria}.
                 {charTag(ThirdCharacter, "jester")}:                {thirdChar_recordedPlayerPronoun == her: E senza il sesso di mezzo, woah!|Non abbiamo mai litigato per i pronomi, woah!}
-                {charTag(ThirdCharacter, "neutral")}:               Scherzi a parte, mi son divertito con te, come se tu fossi uno zio.
+                {charTag(ThirdCharacter, "neutral")}:               Scherzi a parte, mi son divertito con te, come se tu fossi un uomo.
                                                                     Che figata.
                                                                     Sono contento di andarmene, ma grazie a te stare qui è volata.
                 } 

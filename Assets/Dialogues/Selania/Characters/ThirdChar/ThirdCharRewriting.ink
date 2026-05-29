@@ -17,7 +17,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
 
-        {charTag(ThirdCharacter, "neutral")}:                   La zia diceva che questo è il momento in cui dovrei fare una confessione strappalacrime e stracciamaroni in cui ti dico che la mia vita è terribile.
+        {charTag(ThirdCharacter, "neutral")}:                   La vecia diceva che questo è il momento in cui dovrei fare una confessione strappalacrime e stracciamaroni in cui ti dico che la mia vita è terribile.
         {charTag(ThirdCharacter, "melanchonic")}:               E che non so come andare avanti senza i tuoi consigli.
         {charTag(ThirdCharacter, "jester")}:                    Ma non è così.
         {charTag(ThirdCharacter, "neutral")}:                   Forse qui ci dovevo venire dopo il Covid.
@@ -26,7 +26,7 @@
                                                                 La mia tipa.
                                                                 Il mio giro di amici.
         {charTag(ThirdCharacter, "jester")}:                    E anche qui mi sono trovato bene con tutti.
-        {charTag(ThirdCharacter, "neutral")}:                   La zia mi adora.
+        {charTag(ThirdCharacter, "neutral")}:                   La vecia mi adora.
             {
             - are_two_entities_together(FifthCharacter, PG):
             {charTag(Mentor, "hurry")}:                         Sei sfacciato, {charNameThree}!                        
@@ -276,7 +276,7 @@
                                                                 Che merda frustrata che sei.                                                
                 }                                                                                                                                                                              
         {charTag(ThirdCharacter, "neutral")}:                   Bene.
-                                                                Ho fatto quello che la zia mi ha chiesto di fare, per cui ora me ne posso andare.
+                                                                Ho fatto quello che la vecia mi ha chiesto di fare, per cui ora me ne posso andare.
                                                                 Fanculo te.
                                                                 Fanculo lei.
                                                                 Fanculo questo posto.

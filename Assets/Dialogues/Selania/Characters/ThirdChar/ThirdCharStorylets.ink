@@ -107,7 +107,7 @@
                 -> glyph_choice_manager(false, aetherC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "jester")}:            Woah zio, che cosa da.
+                {charTag(ThirdCharacter, "jester")}:            Woah vecio, che cosa da.
                                                                 No, non lo dico va.     
                 } 
         {charTag(ThirdCharacter, "jester")}:                    Ma quindi è tipo una comune hippie?
@@ -260,7 +260,7 @@
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:       
                 {charTag(ThirdCharacter, "bored")}:             <i>Spero di non ferirti.</i>
-                                                                Ma che modo è di parlare zio?       
+                                                                Ma che modo è di parlare vecio?       
                 }
         {charTag(ThirdCharacter, "neutral")}:                   La solita storia: le ragazze alla fine preferiscono sempre quello più stronzo.
                                                                 Punto.
@@ -300,7 +300,7 @@
 
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "jester")}:            Sei un coglione, zio!
+                {charTag(ThirdCharacter, "jester")}:            Sei un coglione, vecio!
                                                                 //Check parolacce da parte di Mentore
                                                                 ~ fifthChar_slurDetectorFunction()
                                                                 Io sono un idiota, per cui siamo una grande squadra!
@@ -392,7 +392,7 @@
                                                                 Ne ho avute di tipe, eh!
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "jester")}:            Lo sai anche tu zio che dobbiamo scopare ogni tanto, giusto per starcene tranquilli.
+                {charTag(ThirdCharacter, "jester")}:            Lo sai anche tu vecio che dobbiamo scopare ogni tanto, giusto per starcene tranquilli.
                                                                 //Check parolacce da parte di Mentore
                                                                 ~ fifthChar_slurDetectorFunction()
                         {
@@ -505,7 +505,7 @@
                 } 
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "jester")}:            Dai, non dirmi che non fai anche tu zio.
+                {charTag(ThirdCharacter, "jester")}:            Dai, non dirmi che non fai anche tu vecio.
                 - else:
                 {charTag(ThirdCharacter, "jester")}:            Quando lavori in una birreria non è che ci trovi le sconosciute sobrie, {player_name}!
                 }
@@ -547,7 +547,7 @@
                                                                 Ma lei non mi può dare certe cose.
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "jester")}:            E uno non può andare avanti a seghe tutta la vita, zio.
+                {charTag(ThirdCharacter, "jester")}:            E uno non può andare avanti a seghe tutta la vita, vecio.
                 }
         {charTag(ThirdCharacter, "neutral")}:                   A lei sta bene come cosa comunque.
 
@@ -573,7 +573,7 @@
                 {//Blocco per reazioni e commenti legati al genere.
                 
                 - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "angry")}:             Ma se provi a toccarla zio, allora vedi che divento una bestia.
+                {charTag(ThirdCharacter, "angry")}:             Ma se provi a toccarla vecio, allora vedi che divento una bestia.
                                                                 
                 - else:
                 {charTag(ThirdCharacter, "neutral")}:           Mo mi è venuto voglia di fumare.

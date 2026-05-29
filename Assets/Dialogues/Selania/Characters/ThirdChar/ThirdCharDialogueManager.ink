@@ -113,7 +113,7 @@
             //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
             + {(grimoire_thirdChar has thirdChar_minStoryletsForRewriting) && grimoire_thirdChar hasnt grimThirdCharFirstProposal && grimoire_appendices hasnt grimRewritingMentor} \ {charTag(PG, "neutral")}:          {charNameThree}, facciamo la riscrittura?
                     {charTag(ThirdCharacter, "neutral")}:                       Io ti direi anche subito di sì.
-                                                                                Ma la zia prima vuole dirti due cosine.
+                                                                                Ma la vecia prima vuole dirti due cosine.
                     {charTag(ThirdCharacter, "jester")}:                        Chissà se l'hai fatta arrabbiare.
                    
                     -> main

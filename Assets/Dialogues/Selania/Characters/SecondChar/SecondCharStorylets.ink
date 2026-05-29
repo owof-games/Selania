@@ -377,7 +377,7 @@
             {charTag(FifthCharacter, "sad")}:                   Solo io sono abbastanza vecchia da ricordare come va a finire questa storia?
                 {
                 - are_two_entities_together(ThirdCharacter, PG):
-                {charTag(ThirdCharacter, "jester")}:            Siamo in due, zia!
+                {charTag(ThirdCharacter, "jester")}:            Siamo in due, vecia!
                 } 
         }
             -> three_continue
