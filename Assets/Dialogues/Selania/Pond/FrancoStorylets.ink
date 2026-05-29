@@ -44,6 +44,10 @@
             - are_two_entities_together(FirstCharacter, PG):
                                                     {charTag(FirstCharacter, "affectionate")}:       Livello di confusione: sì.
         }
+        {
+        - are_two_entities_together(ThirdCharacter, PG):
+        {charTag(ThirdCharacter, "jester")}:        Rana: mi sento ubriaco e non ho manco bevuto!
+        }
 
     ~ grimoire_franco += grimFrancoFirst
     

@@ -100,20 +100,20 @@
         {charTag(FifthCharacter, "hurry")}:                     Piacere di conoscerti, {player_name}.
                                                                 E {player_pronoun has him:benvenuto|{player_pronoun has her:benvenuta|benvenutə}}.
                                                                 Con me usa pure i pronomi femminili.
-        {
-            - not waterChoice:
-        {charTag(FifthCharacter, "neutral")}:                   Ah, che sbadata. Mi chiamo <b><i>{charNameFive}</b></i>, e il mio obiettivo è farti stare bene.
-                ~ grimoire_fifthChar += grimMentorPresentation
-            - else:
-        {charTag(FifthCharacter, "neutral")}:                   Come mentore, il mio unico obiettivo è farti stare bene.
-        }
+            {
+                - not waterChoice:
+            {charTag(FifthCharacter, "neutral")}:                   Ah, che sbadata. Mi chiamo <b><i>{charNameFive}</b></i>, e il mio obiettivo è farti stare bene.
+                    ~ grimoire_fifthChar += grimMentorPresentation
+                - else:
+            {charTag(FifthCharacter, "neutral")}:                   Come mentore, il mio unico obiettivo è farti stare bene.
+            }
         - (selfName)
                                                                 Tra poco ti spiegherò anche il tuo lavoro, {player_name}.
-        {
-            - are_two_entities_together(FirstCharacter, PG) && grimoire_firstChar hasnt grimFirstCharTwo:
-            {charTag(FirstCharacter, "annoyed")}:               Cioè, {player_pronoun has him:uno|{player_pronoun has her:una|unə}} deve lavorare anche in una allucinazione?
-            {charTag(FifthCharacter, "neutral")}:               Allucinazione?
-        }
+            {
+                - are_two_entities_together(FirstCharacter, PG) && grimoire_firstChar hasnt grimFirstCharTwo:
+                {charTag(FirstCharacter, "annoyed")}:               Cioè, {player_pronoun has him:uno|{player_pronoun has her:una|unə}} deve lavorare anche in una allucinazione?
+                {charTag(FifthCharacter, "neutral")}:               Allucinazione?
+            }
         {charTag(FifthCharacter, "neutral")}:                   Prima però una cosa importante: qui avrai a che fare con cose viventi piene di storie.
                                                                 E ogni storia ha le sue complessità.
         {charTag(FifthCharacter, "sorry")}:                     Per questo potresti incontrare tematiche per te faticose.
@@ -211,12 +211,12 @@
         {charTag(FifthCharacter, "hurry")}:                     La cosa bella però è che le persone tendono sempre a reagire a ciò che diciamo.
         {charTag(FifthCharacter, "neutral")}:                   E capire le loro reazioni è la prima parte del tuo lavoro.
                                                                 Prima di riempirti di troppe informazioni, ti invito per un po' <>
-        {
-            - grimoire_firstChar != ():
-                                                                a continuare a parlare con le persone che incontrerai qui in giro, <>
-            - else:
-                                                                a parlare con le persone che incontrerai qui in giro, <>
-        }
+            {
+                - grimoire_firstChar != ():
+                                                                    a continuare a parlare con le persone che incontrerai qui in giro, <>
+                - else:
+                                                                    a parlare con le persone che incontrerai qui in giro, <>
+            }
                                                                 e a capire meglio come ragionano.
         {charTag(FifthCharacter, "hurry")}:                     Capire come ragionano ti aiuterà a conquistare la loro fiducia.
         {charTag(FifthCharacter, "neutral")}:                   Che è la parte davvero fondamentale per compiere il tuo lavoro.
@@ -259,7 +259,11 @@
                                                                 Questo non è solo un posto magnifico di per sé, {player_name}.
         {charTag(FifthCharacter, "hurry")}:                     È un luogo con uno scopo, uno scopo che riguarda soprattutto te.
         {charTag(FifthCharacter, "neutral")}:                   Le persone che incontrerai qui sono rimaste bloccate in qualcosa: rimpianti, rimorsi, vecchie ferite e quant'altro.
-                                                                E il tuo scopo, {player_name}, è aiutarle a riscrivere il modo in cui raccontano la loro storia, così che possano sbloccarsi.
+            {
+            - are_two_entities_together(ThirdCharacter, PG):
+            {charTag(ThirdCharacter, "jester")}:                La ricerca del birrozzo nel frigo.
+            }
+        {charTag(FifthCharacter, "neutral")}:                   Il tuo scopo, {player_name}, è aiutarle a riscrivere il modo in cui raccontano la loro storia, così che possano sbloccarsi.
         {charTag(FifthCharacter, "hurry")}:                     Perché tu {player_pronoun has him:amico mio|{player_pronoun has her:amica mia|amicə miə}} sei <b><i>{player_pronoun has him:un riscrittore|{player_pronoun has her:una riscrittora|unə riscrittorə}}</b></i>!
         {charTag(FifthCharacter, "neutral")}:                   E se farai bene il tuo lavoro, aiuterai moltissime persone a sbloccarsi, e a scegliere un nuovo nome, il segno di un nuovo inizio.
             {
@@ -351,11 +355,11 @@
 
         {charTag(FifthCharacter, "hurry")}:                     {player_name}!
                                                                 Credo sia giunto il momento di spiegarti le ultime cose importanti per il tuo lavoro di {player_pronoun has him:riscrittore|{player_pronoun has her:riscrittora|riscrittorə}}.
-        {
-            - are_two_entities_together(SecondCharacter, PG):
-            {charTag(SecondCharacter, "angry")}:                Uffa. Sembra di stare a scuola.
-        
-        }
+            {
+                - are_two_entities_together(SecondCharacter, PG):
+                {charTag(SecondCharacter, "angry")}:                Uffa. Sembra di stare a scuola.
+            
+            }
         {charTag(FifthCharacter, "hurry")}:                     Quando avrai parlato a sufficienza con una persona, sentirai di poterle proporre di rileggere assieme la sua storia.
         {charTag(FifthCharacter, "neutral")}:                   Se glielo proporrai la persona sarà finalmente capace di condividere con te come si legge, cosa la blocca qui.
                                                                 E a quel punto tu potrai proporre una riscrittura.
@@ -404,20 +408,24 @@
             + \ {charTag(PG, "neutral")}:                       Una persona bloccata potrebbe non aver voglia di cambiare, e a quel punto non potrei aiutarla.
                     -> glyph_choice_manager(Mentor, aetherC)->
 
-            {
-                - are_two_entities_together(FirstCharacter, PG):
-                {charTag(FirstCharacter, "annoyed")}:           Non mettermi ansie che non sapevo di avere, {player_name}!
-            }
+                    {
+                        - are_two_entities_together(FirstCharacter, PG):
+                        {charTag(FirstCharacter, "annoyed")}:           Non mettermi ansie che non sapevo di avere, {player_name}!
+                    }
+                    {
+                    - are_two_entities_together(ThirdCharacter, PG):
+                    {charTag(ThirdCharacter, "bored")}:                 O non ha niente da cambiare.
+                    }
                 {charTag(FifthCharacter, "bored")}:             IMPOSSIBILE!
                 {charTag(FifthCharacter, "sad")}:               Scusami, ma non è possibile.
                 {charTag(FifthCharacter, "neutral")}:           Questa cosa non è possibile.
                                                                 Se qualcuno arriva qui è perché ha bisogno di cambiare.
                                                                 E prima o poi tutti arrivano al cambiamento, anche se tu dovessi fare un lavoro mediocre.
-            {
-                - are_two_entities_together(FirstCharacter, PG):
-                {charTag(FirstCharacter, "annoyed")}:           Qualcuno ha dell'ansiolitico per {charNameFive}?
-                                                                Un'altra domanda di questo tipo da parte di {player_name} e mi muore di infarto.
-            }                                                    
+                    {
+                        - are_two_entities_together(FirstCharacter, PG):
+                        {charTag(FirstCharacter, "annoyed")}:           Qualcuno ha dell'ansiolitico per {charNameFive}?
+                                                                        Un'altra domanda di questo tipo da parte di {player_name} e mi muore di infarto.
+                    }                                                    
             -
 
         {charTag(FifthCharacter, "neutral")}:                   Ricorda {player_name}: sei una guida, ma sta alla persona decidere alla fine chi è, e di cosa ha bisogno.
@@ -444,11 +452,11 @@
         }
     {charTag(FifthCharacter, "neutral")}:                       Il dono giusto mostra comprensione, è la dimostrazione di aver ascoltato l'altra persona.
                                                                 So chi sei.
-    {
-        - are_two_entities_together(SecondCharacter, PG):
-            {charTag(SecondCharacter, "emotional")}:            Io so di essere una persona che vuole le caramelle.
-            
-    } 
+        {
+            - are_two_entities_together(SecondCharacter, PG):
+                {charTag(SecondCharacter, "emotional")}:            Io so di essere una persona che vuole le caramelle.
+                
+        } 
 
     {charTag(FifthCharacter, "neutral")}:                       Anche per questo esistono doni sbagliati.
     {charTag(FifthCharacter, "bored")}:                         O mediocri.
@@ -480,20 +488,20 @@
     {charTag(FifthCharacter, "neutral")}:                       Ma l'idea della cucina non è così cattiva in sé: cucinare assieme è un momento di intimità.
                                                                 E mangiare è uno spazio di bella condivisione.
                                                                 E magari puoi aggiungere anche l'ingrediente giusto, e far felice la persona con cui stai ai fornelli.
-    {
-        - are_two_entities_together(FirstCharacter, PG):
-        {charTag(FirstCharacter, "curious")}:                   Ci facciamo una pastasciutta assieme, {charNameFive}?
-        {charTag(FifthCharacter, "hurry")}:                     Magari più tardi?
-        {charTag(FifthCharacter, "sorry")}:                     Ho da pulire la cera delle candele.
-            
-    } 
+        {
+            - are_two_entities_together(FirstCharacter, PG):
+            {charTag(FirstCharacter, "curious")}:                   Ci facciamo una pastasciutta assieme, {charNameFive}?
+            {charTag(FifthCharacter, "hurry")}:                     Magari più tardi?
+            {charTag(FifthCharacter, "sorry")}:                     Ho da pulire la cera delle candele.
+                
+        } 
     {charTag(FifthCharacter, "neutral")}:                       Passare del tempo in cucina con qualcunə può essere un bel modo per conoscervi meglio.
                                                                 E per capire che piega stia prendendo la vostra relazione.
-    {
-        - are_two_entities_together(SecondCharacter, PG): 
-        {charTag(SecondCharacter, "energy")}:                   O per bruciare cose strane e vedere cosa succede!
-            
-    }
+        {
+            - are_two_entities_together(SecondCharacter, PG): 
+            {charTag(SecondCharacter, "energy")}:                   O per bruciare cose strane e vedere cosa succede!
+                
+        }
     
         -> mentor_closing_storylet ->
         -> main
@@ -506,8 +514,13 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     
     
-    {charTag(FifthCharacter, "neutral")}:                       Ho visto che {charNameThree} ha trovato il modo di sbloccarti l'accesso al Nido.
+    {charTag(FifthCharacter, "neutral")}:                       Ho visto che {charNameThree} ha trovato il modo di sbloccarti l'accesso al nido.
     {charTag(FifthCharacter, "hurry")}:                         Non posso certo dire che le persone qui non si diano da fare, ed è una bella cosa.
+            {
+            - are_two_entities_together(ThirdCharacter, PG):
+            {charTag(ThirdCharacter, "jester")}:                Sono o non sono il migliore, vecia?
+            {charTag(FifthCharacter, "hurry")}:                 Sicuramente sei il più sfacciato, {charNameThree}.
+            }
     {charTag(FifthCharacter, "neutral")}:                       Ho dei sentimenti contrastanti verso quello che si può fare su quella spiaggia.
     {charTag(FifthCharacter, "sad")}:                           Da una parte i Sigilli mi danno l'impressione di essere una forma di controllo.
     {charTag(FifthCharacter, "neutral")}:                       Ma la cosa che penso ogni volta che li vedo è che rendano la comunicazione più chiara.
@@ -552,6 +565,11 @@
                                                                 E alcuni di questi possono anche offrirti qualche strumento che, sinceramente, nemmeno avevo calcolato.
                                                                 Ma ricorda che non sono passaggi obbligatori per compiere il tuo lavoro.
     {charTag(FifthCharacter, "hurry")}:                         Fai sempre e solo quello di cui senti il bisogno.
+        {
+            - are_two_entities_together(ThirdCharacter, PG):
+            {charTag(ThirdCharacter, "jester")}:                Su, un po' di lavoro non ha mai ammazzato nessuno.
+            {charTag(FifthCharacter, "neutral")}:               Ma nemmeno un po' di riposo.
+            }
 
         -> mentor_closing_storylet ->
         -> main
@@ -607,7 +625,7 @@
     
     
         {charTag(FifthCharacter, "hurry")}:                     Sembra che {charNameThree} ti abbia scritto una lettera, {player_name}! 
-                                                                Che cosa dolce, vero?
+                                                                
         {
             - entity_location(PG) == TrainStop:
                                                                 L'ha con sé quella cagnolina!

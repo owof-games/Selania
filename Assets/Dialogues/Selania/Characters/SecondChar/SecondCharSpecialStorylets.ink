@@ -11,6 +11,10 @@
                                                                 MAI
                                                                 PIU'!
                                                                 Mi ha fatto male!
+                {
+                - are_two_entities_together(ThirdCharacter, PG):
+                {charTag(ThirdCharacter, "neutral")}:           La vecia? Cosa può aver mai fatto?     
+                }                                                 
         
         - else: 
         {stopping:
@@ -49,16 +53,20 @@
                                                                 Ma proprio taaaaaaaaaanto.
     {charTag(SecondCharacter, "energy")}:                       E ho cercato di capire cosa c'era dietro tutti quei legni.
                                                                 Perché {charNameFive} non me lo dice mica.
-    {
-        - second_char_main_storylets.eight.ragione:
-        {charTag(SecondCharacter, "emotional")}:                E tu mi hai detto di non dare sempre ragione ai grandi.
-    }                                                     
-    {
-        - are_two_entities_together(Mentor, PG):
-        {charTag(FifthCharacter, "sad")}:                       I posti chiusi sono posti pericolosi, {charNameTwo}.
-                                                                E nemmeno io so cosa c'è dietro.
-        {charTag(SecondCharacter, "angry")}:                    Va bene va bene va bene.
-    }
+        {
+            - second_char_main_storylets.eight.ragione:
+            {charTag(SecondCharacter, "emotional")}:                E tu mi hai detto di non dare sempre ragione ai grandi.
+        }                                                     
+        {
+            - are_two_entities_together(Mentor, PG):
+            {charTag(FifthCharacter, "sad")}:                       I posti chiusi sono posti pericolosi, {charNameTwo}.
+                                                                    E nemmeno io so cosa c'è dietro.
+            {charTag(SecondCharacter, "angry")}:                    Va bene va bene va bene.
+        }
+        {
+        - are_two_entities_together(ThirdCharacter, PG):
+        {charTag(ThirdCharacter, "jester")}:                    Ma abbiamo un ribelle qui tra noi!
+        }
     {charTag(SecondCharacter, "energy")}:                       C'è una cosa fighissima lì dietro.
                                                                 Prova a immaginare qual è la cosa più bella che puoi trovare.
 
@@ -72,6 +80,10 @@
     
         + \ {charTag(PG, "neutral")}:                           Un campetto da calcio!
                 -> glyph_choice_manager(false, fireC)->
+            {
+            - are_two_entities_together(ThirdCharacter, PG):
+            {charTag(ThirdCharacter, "neutral")}:               No dai sarebbe bellissimo!
+            }    
         {charTag(SecondCharacter, "angry")}:                    Ma mi hai ascoltato quando ho parlato?
                                                                 Ti sembro uno che gioca a calcio?!?
      
@@ -84,10 +96,10 @@
         + \ {charTag(PG, "neutral")}:                           Un posto dove dormire?//troppo vicino alla meditazione
                 -> glyph_choice_manager(false, earthC)->
         {charTag(SecondCharacter, "neutral")}:                  Tu e {charNameOne} siete uguali.
-        {
-        - are_two_entities_together(FirstCharacter, PG):
-            {charTag(FirstCharacter, "annoyed")}:               Non c'è vergogna nell'ammettere la propria stanchezza, piccoletto!
-        }           
+            {
+            - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:               Non c'è vergogna nell'ammettere la propria stanchezza, piccoletto!
+            }           
         {charTag(SecondCharacter, "neutral")}:                  No, è un posto interessante.
         {charTag(SecondCharacter, "energy")}:                   Ma c'è anche una poltrona!
             
@@ -98,19 +110,23 @@
         -
     {charTag(SecondCharacter, "energy")}:                       {player_name}: ho trovato una <b>biblioteca!</b>     
                                                                 Ed è bellissima!  
-    {
-        - are_two_entities_together(FirstCharacter, PG):
-        {charTag(FirstCharacter, "neutral")}:                   Tu sei un bambino davvero strano.
-        {charTag(FirstCharacter, "affectionate")}:              Adorabilmente strano.
-    } 
+        {
+            - are_two_entities_together(FirstCharacter, PG):
+            {charTag(FirstCharacter, "neutral")}:                   Tu sei un bambino davvero strano.
+            {charTag(FirstCharacter, "affectionate")}:              Adorabilmente strano.
+        } 
     {charTag(SecondCharacter, "neutral")}:                      Ci sono anche i librogame, credo.
                                                                 E ho già letto due racconti.
                                                                 Ora voglio vedere se ci sono delle matite così lascio anche le mie storie!
-    {
-        - are_two_entities_together(Mentor, PG):
-            {charTag(FifthCharacter, "neutral")}:               Mi raccomando, non macchiare nulla!
-    }
+        {
+            - are_two_entities_together(Mentor, PG):
+                {charTag(FifthCharacter, "neutral")}:               Mi raccomando, non macchiare nulla!
+        }
     {charTag(SecondCharacter, "energy")}:                       Ora sposto tutti quei legni così puoi andarci anche tu!
+        {
+        - are_two_entities_together(ThirdCharacter, PG):
+        {charTag(ThirdCharacter, "neutral")}:                   Guarda che ti aiuto, va!
+        }
                                                                 Chissà se ci sono anche i manga!
 
         -> second_char_closing_storylet ->
@@ -136,17 +152,17 @@
     {charTag(SecondCharacter, "neutral")}:                      E poi mica si ferma lì, ma aiuta altri sassolini.
     {charTag(SecondCharacter, "angry")}:                        E a una certa uno dice di tagliare la testa all'aragosta.
                                                                 Che non ha senso perché se era una cosa fatta dall'aragosta allora sarebbe uscita lei dalla vasca, no?
-    {
-        - second_char_main_storylets.six.imparato:
-        {charTag(SecondCharacter, "angry")}:                    È proprio come quando prima mi hai detto che i castighi non servono a niente!
-    }                                                     
+        {
+            - second_char_main_storylets.six.imparato:
+            {charTag(SecondCharacter, "angry")}:                    È proprio come quando prima mi hai detto che i castighi non servono a niente!
+        }                                                     
     {charTag(SecondCharacter, "neutral")}:                      Tu cosa fai se ti capita una cosa del genere?
         
-    {
-        - are_two_entities_together(FirstCharacter, PG): 
-        {charTag(FirstCharacter, "annoyed")}:                   Non dire che mangi l'aragosta, non dire che mangi l'aragosta, non dire che mangi l'aragosta. 
-            
-    }
+        {
+            - are_two_entities_together(FirstCharacter, PG): 
+            {charTag(FirstCharacter, "annoyed")}:                   Non dire che mangi l'aragosta, non dire che mangi l'aragosta, non dire che mangi l'aragosta. 
+                
+        }
 
     //Qui può essere un buon posto per mostrare le cinque nature dei sigilli, e dividere tra "capire cosa pensano, cosa vogliono, cosa provano" etc.
         + \ {charTag(PG, "neutral")}:                           Vorrei sapere cosa pensano, come ragionano, come vedono le cose.
@@ -159,6 +175,10 @@
 
         + \ {charTag(PG, "neutral")}:                           Indicherei loro un paio di case da distruggere.
             -> glyph_choice_manager(false, fireC)->
+            {
+            - are_two_entities_together(ThirdCharacter, PG):
+            {charTag(ThirdCharacter, "jester")}:                {player_name} ha scelto la violenza!
+            }
         {charTag(SecondCharacter, "energy")}:                   Uuuh, questa è cattiva!
                                                                 Ma mi piace.
                                                                 Anche io ne ho un po'!
@@ -178,10 +198,10 @@
         + \ {charTag(PG, "neutral")}:                           Li porterei in braccio dove devono andare, così fanno meno fatica!
             -> glyph_choice_manager(false, earthC)->
         {charTag(SecondCharacter, "energy")}:                   Così poi hanno più energia per rompere le finestre!                          
-        {
-        - are_two_entities_together(Mentor, PG): 
-        {charTag(FifthCharacter, "bored")}:                     {player_name}, non credo sia il caso di dare a {charNameTwo} altre idee bislacche.
-        }
+            {
+            - are_two_entities_together(Mentor, PG): 
+            {charTag(FifthCharacter, "bored")}:                     {player_name}, non credo sia il caso di dare a {charNameTwo} altre idee bislacche.
+            }
             
         + \ {charTag(PG, "neutral")}:                           Mi sarei pres{player_pronoun has him:o|{player_pronoun has her:a|ə}} cura dell'aragosta.
             -> glyph_choice_manager(false, waterC)->
@@ -194,13 +214,17 @@
                                                                 E se facciamo qualcosa che non gli piace, allora qualcuno ci vuole sempre legare a terra, come i sassi al pavimento.
                                                                 E c'è sempre qualcuno che vuole punirci.
     {charTag(SecondCharacter, "neutral")}:                      Ma perché secondo me i grandi non la vedono mica l'aragosta.
-    {
-    - are_two_entities_together(Franco, PG):
-    {charTag(Franco, "neutral")}:                               Spesso non vedono neanche le rane.
-                                                                O i girini.
-    {charTag(Franco, "question")}:                              O l'uomo lucertola.
-    }
+        {
+        - are_two_entities_together(Franco, PG):
+        {charTag(Franco, "neutral")}:                               Spesso non vedono neanche le rane.
+                                                                    O i girini.
+        {charTag(Franco, "question")}:                              O l'uomo lucertola.
+        }
     {charTag(SecondCharacter, "melanchonic")}:                  I grandi non vedono mai certi problemi.
+        {
+        - are_two_entities_together(ThirdCharacter, PG):
+        {charTag(ThirdCharacter, "neutral")}:                   Ma perché c'abbiamo già i nostri casini, Ricciolino.
+        }
     {charTag(SecondCharacter, "neutral")}:                      Mi sa che dopo mi leggo qualcosa di nuovo!
     
         -> second_char_closing_storylet ->

@@ -113,17 +113,21 @@
     {charTag(SecondCharacter, "neutral")}:                              I grandi chiedono sempre scusa per tutte le cose ma poi le rifanno.
                                                                         Poi piangono e chiedono scusa.
     {charTag(SecondCharacter, "angry")}:                                E poi le rifanno.
+        {
+        - are_two_entities_together(ThirdCharacter, PG):
+        {charTag(ThirdCharacter, "neutral")}:                           Ma guarda quanto è saggio questo Ricciolino.
+        }
     {charTag(FifthCharacter, "hurry")}:                                 Ma io ci credo davvero, {charNameTwo}!
                                                                         Non ti voglio più far del male.
     {charTag(SecondCharacter, "neutral")}:                              Ok.
                                                                         Però va bene così.
     {charTag(SecondCharacter, "neutral")}:                              Ora ho voglia solo di cercare qualcosa da mangiare.
             ~ change_entity_place(SecondCharacter)
-    {
-        - are_two_entities_together(FirstCharacter, PG):
-    {charTag(FirstCharacter, "sad")}:                                   Povero piccolo.
-    {charTag(FirstCharacter, "affectionate")}:                          Però è stato molto coraggioso, vero?
-    }
+        {
+                - are_two_entities_together(FirstCharacter, PG):
+        {charTag(FirstCharacter, "sad")}:                                   Povero piccolo.
+        {charTag(FirstCharacter, "affectionate")}:                          Però è stato molto coraggioso, vero?
+        }
     {charTag(FifthCharacter, "sad")}:                                   Non mi perdonerà mai, vero {player_name}?
 
 
@@ -133,10 +137,10 @@
                                                                         E questo significa che devo fare il doppio del lavoro per avere la sua  fiducia.
         {charTag(FifthCharacter, "hurry")}:                             Ma la avrò!
                                                                         E capirà che anche gli adulti sono persone di cui potersi fidare.                                               
-        {
-            - are_two_entities_together(FirstCharacter, PG):
-            {charTag(FirstCharacter, "neutral")}:                       Sai che non è una gara, vero?
-        }
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "neutral")}:                       Sai che non è una gara, vero?
+                }
 
         + \ {charTag(PG, "neutral")}:                                   Tu ti sei perdonata, per quello che hai fatto?
                 -> glyph_choice_manager(Mentor, aetherC)->
@@ -145,10 +149,10 @@
                                                                         Non credo di aver capito ancora fino in fondo cosa è successo.
                                                                         E sono troppo tesa ora per capire cosa mi passi per la testa.
                                                                         Sono una pessima {charNameFive}, vero?
-        {
-        - are_two_entities_together(FirstCharacter, PG):
-        {charTag(FirstCharacter, "affectionate")}:                      Al massimo sei umana, ama.
-        }
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "affectionate")}:                      Al massimo sei umana, ama.
+                }
         
         + \ {charTag(PG, "neutral")}:                                   Ha bisogno di spazio per sé, {charNameFive}.
                 -> glyph_choice_manager(Mentor, earthC)->
@@ -307,54 +311,59 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
 
-    {charTag(FifthCharacter, "neutral")}:                               Però non ti ho mai visto in giro.
-    {charTag(Franco, "neutral")}:                                       Però sono sempre stato cra!
-    {charTag(FifthCharacter, "neutral")}:                               Ma non ti ho mai mai visto in giro.
-                                                                        E ogni giorno vengo a sistemare il sentiero e pulire la serra.
-    {charTag(Franco, "neutral")}:                                       Forse allora non sei venuta ogni giorno.
-                                                                        O forse mi hai scambiato per Tullio? A volte succede.
-     {charTag(Franco, "question")}:                                     O forse non è che hai proprio proprio proprio tutto sotto il tuo controllo.
-                                                                        Un po' come zio Gracco e il suo problema con l'alcool.
-                                                                        E i combustibili in generale.
-    {charTag(FifthCharacter, "neutral")}:                               Impossibile.
-                                                                        Controllo tutto, è il mio lavoro.
-    {charTag(Franco, "neutral")}:                                       Eppure eccoci cra, con io che so dove sono stato, e tu mi dici che non ricordo bene.
-    {charTag(FifthCharacter, "sad")}:                                   Non ho detto che non ricordi bene.
-    {charTag(Franco, "neutral")}:                                       Ma dici che hai tutto sotto il tuo controllo e che non mi hai visto, quindi o non ricordo bene, o mento.
-                                                                        E io sono una rana e una rana non ha un collo e quindi non mento.
-    {charTag(FifthCharacter, "sorry")}:                                 Non mi permetterei mai di dirlo.
-    {charTag(Franco, "neutral")}:                                       Infatti non l'hai detto, l'hai implicato.
-    {charTag(Franco, "question")}:                                      Questa me l'ha insegnata stamani mio figlio Euforbo.
-    {charTag(Franco, "neutral")}:                                       Ma mi ha chiesto di non usare "stazampe" invece di stamani.
-    {charTag(FifthCharacter, "neutral")}:                               Non mi piace il tuo tono, rana.
-    {charTag(Franco, "neutral")}:                                       Ma non cambia il fatto che mi stai dando o del bugiardo o dello smemorato.
-    {charTag(FifthCharacter, "bored")}:                                 Io non l'ho detto!
-    {charTag(Franco, "neutral")}:                                       Ma l'hai implicato.
-                                                                        Che non è ampilato, perché i lati non sono ampi.
-     {charTag(Franco, "party")}:                                        Questo lo dice sempre Euforbo.
-    {charTag(FifthCharacter, "bored")}:                                 AAAAAAAARG!
-                                                                        SEI INSOPPORTABILE!
-        ~ change_entity_place(Mentor)
-    {charTag(Franco, "neutral")}:                                       No, sono Franco La Rana.
-                                                                        Non mi ha molto ascoltato.    
-     {charTag(Franco, "question")}:                                     E comunque io non me lo ricordo un Mentore da queste parti.
-                                                                        E neanche un Nasore o un Orecchiore se è per questo.
-    {
-    - are_two_entities_together(FirstCharacter, PG):
-    {charTag(FirstCharacter, "curious")}:                               In che senso, scusa?
-    {charTag(Franco, "party")}:                                         {charNameOne}!
-                                                                        Prima è passata zia Graaak e ti voleva parlare!
-    {charTag(Franco, "neutral")}:                                       Tullio dice che ha una cotta per te.
-                                                                        Però non ho visto dove si è bruciata.
-    {charTag(Franco, "question")}:                                      O se ti deve bruciare.
-    {charTag(Franco, "neutral")}:                                       Non sarebbe molto gentile però, vero?
-    {charTag(FirstCharacter, "neutral")}:                               Ooook
-    {charTag(FirstCharacter, "annoyed")}:                               No, non è vero: non ce la posso fare.
-            ~ change_entity_place(FirstCharacter)
-    }
-            -
-        -> mentor_closing_storylet ->
-        ->->
+        {charTag(FifthCharacter, "neutral")}:                               Però non ti ho mai visto in giro.
+        {charTag(Franco, "neutral")}:                                       Però sono sempre stato cra!
+        {charTag(FifthCharacter, "neutral")}:                               Ma non ti ho mai mai visto in giro.
+                                                                                E ogni giorno vengo a sistemare il sentiero e pulire la serra.
+        {charTag(Franco, "neutral")}:                                       Forse allora non sei venuta ogni giorno.
+                                                                                O forse mi hai scambiato per Tullio? A volte succede.
+        {charTag(Franco, "question")}:                                     O forse non è che hai proprio proprio proprio tutto sotto il tuo controllo.
+                                                                                Un po' come zio Gracco e il suo problema con l'alcool.
+                                                                                E i combustibili in generale.
+        {charTag(FifthCharacter, "neutral")}:                               Impossibile.
+                                                                                Controllo tutto, è il mio lavoro.
+        {charTag(Franco, "neutral")}:                                       Eppure eccoci cra, con io che so dove sono stato, e tu mi dici che non ricordo bene.
+        {charTag(FifthCharacter, "sad")}:                                   Non ho detto che non ricordi bene.
+        {charTag(Franco, "neutral")}:                                       Ma dici che hai tutto sotto il tuo controllo e che non mi hai visto, quindi o non ricordo bene, o mento.
+                                                                                E io sono una rana e una rana non ha un collo e quindi non mento.
+        {charTag(FifthCharacter, "sorry")}:                                 Non mi permetterei mai di dirlo.
+        {charTag(Franco, "neutral")}:                                       Infatti non l'hai detto, l'hai implicato.
+        {charTag(Franco, "question")}:                                      Questa me l'ha insegnata stamani mio figlio Euforbo.
+        {charTag(Franco, "neutral")}:                                       Ma mi ha chiesto di non usare "stazampe" invece di stamani.
+        {charTag(FifthCharacter, "neutral")}:                               Non mi piace il tuo tono, rana.
+        {charTag(Franco, "neutral")}:                                       Ma non cambia il fatto che mi stai dando o del bugiardo o dello smemorato.
+        {charTag(FifthCharacter, "bored")}:                                 Io non l'ho detto!
+        {charTag(Franco, "neutral")}:                                       Ma l'hai implicato.
+                                                                                Che non è ampilato, perché i lati non sono ampi.
+        {charTag(Franco, "party")}:                                        Questo lo dice sempre Euforbo.
+        {charTag(FifthCharacter, "bored")}:                                 AAAAAAAARG!
+                                                                                SEI INSOPPORTABILE!
+                ~ change_entity_place(Mentor)
+        {charTag(Franco, "neutral")}:                                       No, sono Franco La Rana.
+                                                                                Non mi ha molto ascoltato.
+                {
+                - are_two_entities_together(ThirdCharacter, PG):
+                {charTag(ThirdCharacter, "jester")}:                    Adoro questa rana, è completamente suonata.
+                                                                        Completamente!
+                }                                                                   
+        {charTag(Franco, "question")}:                                     E comunque io non me lo ricordo un Mentore da queste parti.
+                                                                                E neanche un Nasore o un Orecchiore se è per questo.
+        {
+        - are_two_entities_together(FirstCharacter, PG):
+        {charTag(FirstCharacter, "curious")}:                               In che senso, scusa?
+        {charTag(Franco, "party")}:                                         {charNameOne}!
+                                                                                Prima è passata zia Graaak e ti voleva parlare!
+        {charTag(Franco, "neutral")}:                                       Tullio dice che ha una cotta per te.
+                                                                                Però non ho visto dove si è bruciata.
+        {charTag(Franco, "question")}:                                      O se ti deve bruciare.
+        {charTag(Franco, "neutral")}:                                       Non sarebbe molto gentile però, vero?
+        {charTag(FirstCharacter, "neutral")}:                               Ooook
+        {charTag(FirstCharacter, "annoyed")}:                               No, non è vero: non ce la posso fare.
+                ~ change_entity_place(FirstCharacter)
+        }
+                -
+                -> mentor_closing_storylet ->
+                ->->
 
 
 === the_witch_and_the_mentor
@@ -440,7 +449,13 @@
     {charTag(Franco, "neutral")}:                                       Lo dice sempre anche Giulio.
     {charTag(FirstCharacter, "neutral")}:                               Che è tuo figlio.
     {charTag(Franco, "neutral")}:                                       No, che è uno dei miei mariti.
-                                                                        I miei figli sono Abaco, Aimone, Altobrando, Appasilarco, Azzolino, Borci, Clodoveo, Comunardo
+                {
+                - are_two_entities_together(ThirdCharacter, PG):
+                {charTag(ThirdCharacter, "jester")}:                    Ammazza Franco, non te ne bastava uno?
+                {charTag(Franco, "question")}:                          E perché?
+                                                                        E poi come li gestiamo tutti questi girini cra in due?
+                }
+    {charTag(Franco, "neutral")}:                                       I miei figli sono Abaco, Aimone, Altobrando, Appasilarco, Azzolino, Borci, Clodoveo, Comunardo
     {charTag(FirstCharacter, "neutral")}:                               No aspetta aspetta, ti avevo solo chiesto di.
     {charTag(Franco, "neutral")}:                                       Emerenzio, Etelbero, Euforbo, Fulco, Matteo.
     {charTag(FirstCharacter, "curious")}:                               Matteo?
@@ -538,10 +553,10 @@
     {charTag(SecondCharacter, "neutral")}:                              Sono basso.
     {charTag(Franco, "party")}:                                         Anche io.
     {charTag(SecondCharacter, "neutral")}:                              E vado a scuola.
-    {
-        - second_char_main_storylets.six.tortura:
-        {charTag(SecondCharacter, "neutral")}:                          Che {player_name} dice che è una tortura.
-    }   
+        {
+                - second_char_main_storylets.six.tortura:
+                {charTag(SecondCharacter, "neutral")}:                          Che {player_name} dice che è una tortura.
+        }   
     {charTag(Franco, "question")}:                                      Quello lo fanno i girini, non i bambini.
     {charTag(SecondCharacter, "neutral")}:                              E non sono un girino?
     {charTag(Franco, "neutral")}:                                       Hai delle braccia, i girini non le hanno.
@@ -808,6 +823,13 @@
                                                                         "Un riccio."
         {charTag(SecondCharacter, "melanchonic")}:                      Quindi mi stai prendendo in giro?
         {charTag(Carla, "happy")}:                                      Non ho forse recitato benissimo?
+                {
+                - are_two_entities_together(ThirdCharacter, PG):
+                {charTag(ThirdCharacter, "jester")}:                    Ricciolino, ti sei fatto proprio fregare da una capra!
+                {charTag(Carla, "bored")}:                              Le ricordo che sono io a sanzionarla quando romperà le regole di questo luogo.
+                {charTag(ThirdCharacter, "bored")}:                     Non ho rotto nessunissima regola!
+                {charTag(Carla, "bored")}:                              Non ancora.  
+                }
 
 
     -> second_char_closing_storylet ->

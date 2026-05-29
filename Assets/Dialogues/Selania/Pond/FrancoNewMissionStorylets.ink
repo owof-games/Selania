@@ -75,31 +75,31 @@
                                                         Ecco.
         {charTag(Franco, "party")}:                     Mi ha raccontato tante cose su {charNameFive}.
         {charTag(Franco, "question")}:                  Sapevi ad esempio che può respirare fino a due minuti sott'acqua?
-    {
-        - are_two_entities_together(Mentor, PG):
-            {charTag(FifthCharacter, "hurry")}:         Eh?
-    }
-        {
-            - are_two_entities_together(FirstCharacter, PG):
-            {charTag(FirstCharacter, "curious")}:       Questa me la voglio godere tutta. 
-        }
+            {
+                - are_two_entities_together(Mentor, PG):
+                    {charTag(FifthCharacter, "hurry")}:         Eh?
+            }
+            {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "curious")}:       Questa me la voglio godere tutta. 
+            }
         {charTag(Franco, "question")}:                  E che mangia solo pesce?
                                                         E che le piace giocare?
-        {
-        - are_two_entities_together(SecondCharacter, PG):
-        {charTag(SecondCharacter, "neutral")}:          IM-POS-SI-BI-LE!
-        {
-            - are_two_entities_together(Mentor, PG):
-        {charTag(FifthCharacter, "hurry")}:             Guarda che sono bravissima a burraco!
-        {charTag(SecondCharacter, "neutral")}:          Ma è una roba da vecchi!
-        }
-        }
+            {
+            - are_two_entities_together(SecondCharacter, PG):
+            {charTag(SecondCharacter, "neutral")}:          IM-POS-SI-BI-LE!
+            {
+                - are_two_entities_together(Mentor, PG):
+            {charTag(FifthCharacter, "hurry")}:             Guarda che sono bravissima a burraco!
+            {charTag(SecondCharacter, "neutral")}:          Ma è una roba da vecchi!
+            }
+            }
         {charTag(Franco, "question")}:                  E che ha una tasca sotto l'ascella dove conserva le pietre che usa per rompere i gusci?
-        {
-        - are_two_entities_together(Mentor, PG):
-        {charTag(FifthCharacter, "neutral")}:           A dire il vero ne ho anche una in testa, dove raccolgo le sciocchezze dette dalle rane.
-        {charTag(Franco, "neutral")}:                   Ma le rana sono molto sagge, quindi non hai molto da raccogliere.
-        }
+            {
+            - are_two_entities_together(Mentor, PG):
+            {charTag(FifthCharacter, "neutral")}:           A dire il vero ne ho anche una in testa, dove raccolgo le sciocchezze dette dalle rane.
+            {charTag(Franco, "neutral")}:                   Ma le rana sono molto sagge, quindi non hai molto da raccogliere.
+            }
         {charTag(Franco, "neutral")}:                   E.
                                                         Uh, una lettera di Euforbo.
                                                         "Papà Franco, quella è la lontra, non {charNameFive}."
@@ -115,17 +115,17 @@
         {charTag(Franco, "party")}:                     La farà felice.
                                                         Fallo.
                                                         E poi torna pure qui.
-        {
-        - are_two_entities_together(Mentor, PG):
-            {charTag(FifthCharacter, "hurry")}:         Fai cosa? Fai cosa, {player_name}?
-        }
+            {
+            - are_two_entities_together(Mentor, PG):
+                {charTag(FifthCharacter, "hurry")}:         Fai cosa? Fai cosa, {player_name}?
+            }
         {charTag(Franco, "question")}:                  Ma quindi non è {charNameOne} che fa il nido sugli alberi?
-        {
-        - are_two_entities_together(FirstCharacter, PG):
-        {charTag(FirstCharacter, "curious")}:           Esatto! 
-                                                        E poi ululo alla luna!
-        {charTag(Franco, "neutral")}:                   Devo subito avvisare Euforbo!
-        }
+            {
+            - are_two_entities_together(FirstCharacter, PG):
+            {charTag(FirstCharacter, "curious")}:           Esatto! 
+                                                            E poi ululo alla luna!
+            {charTag(Franco, "neutral")}:                   Devo subito avvisare Euforbo!
+            }
 
 
             @animation:RewriterBook    
@@ -200,16 +200,16 @@
         {charTag(Franco, "neutral")}:                   Pensavo comunque {player_name}: perché non provi a parlare con due persone quando sono assieme?
                                                         Sono abbastanza sicuro che succederà qualcosa di interessante.
                                                         E a volte, quando non c'è comprensione, una voce esterna può essere di grande aiuto.
-    {
-        - are_two_entities_together(SecondCharacter, PG):
-            {charTag(SecondCharacter, "energy")}:       Io parlo sempre di cose grandi!
-    }
+            {
+                - are_two_entities_together(SecondCharacter, PG):
+                    {charTag(SecondCharacter, "energy")}:       Io parlo sempre di cose grandi!
+            }
 
-    {
-        - are_two_entities_together(FirstCharacter, PG):
-            {charTag(FirstCharacter, "annoyed")}:       Cose metafisiche proprio.
-                
-    }
+            {
+                - are_two_entities_together(FirstCharacter, PG):
+                    {charTag(FirstCharacter, "annoyed")}:       Diremo cose metafisiche proprio.
+                        
+            }
         {charTag(Franco, "party")}:                     Magari anche loro si mettono a nuotare!
 
         @animation:RewriterBook    
@@ -241,25 +241,28 @@
                                                         E visto che alcune cose sono cambiate, perché non provi a parlarle direttamente?
         {charTag(Franco, "neutral")}:                   La trovi dalle parti della discarica.
                                                         Credo potrebbe farti del bene conoscerla direttamente.
-    {
-    - are_two_entities_together(SecondCharacter, PG):
-        {charTag(SecondCharacter, "emotional")}:        C'è qualcuno nella discarica?!
-                
-    }
+            {
+            - are_two_entities_together(SecondCharacter, PG):
+                {charTag(SecondCharacter, "emotional")}:        C'è qualcuno nella discarica?!
+                        
+            }
 
-    {
-    - are_two_entities_together(FirstCharacter, PG):
-        {charTag(FirstCharacter, "curious")}:           C'è un'altra persona qui in giro? 
-                
-    }
+            {
+            - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "curious")}:           C'è un'altra persona qui in giro? 
+                        
+            }
 
-    {
-    - are_two_entities_together(Mentor, PG):
-        {charTag(FifthCharacter, "bored")}:             C'è una discarica?!?
-                
-    }
-        {charTag(Franco, "neutral")}:                   Credo.
-                                                        Come dice sempre zia Graaak: "Chi va piano non arriva lontano."
+            {
+            - are_two_entities_together(Mentor, PG):
+                {charTag(FifthCharacter, "bored")}:             C'è una discarica?!?
+                        
+            }
+            {
+            - are_two_entities_together(ThirdCharacter, PG):
+            {charTag(ThirdCharacter, "jester")}:                Voi la chiamate discarica, ma da me quello è il parco giochi comunale.
+            }
+        {charTag(Franco, "neutral")}:                   Come dice sempre zia Graaak: "Chi va piano non arriva lontano."
         {charTag(Franco, "question")}:                  O era qualcosa sulla minestra?
         {charTag(Franco, "neutral")}:                   A dopo girino!
 

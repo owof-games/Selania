@@ -13,6 +13,11 @@
                 {charTag(FifthCharacter, "sad")}:                       {grimoire_appendices hasnt grimChoicesMentor: Ti prego|{player_name}}, almeno tu sii ragionevole. Non ho fatto male a nessuno.
                 {charTag(SecondCharacter, "angry")}:                    Bugiarda!
                                                                         Sei vecchia e cattiva e bugiarda!
+                    {
+                    - are_two_entities_together(ThirdCharacter, PG):
+                    {charTag(ThirdCharacter, "angry")}:                 Ehi!
+                                                                        Non si tratta così una signora!
+                    }                                                    
                         ~ change_entity_place(SecondCharacter)
             
             - else:
@@ -78,7 +83,7 @@
 
         {charTag(FifthCharacter, "sad")}:                               Mi spiace se si è spaventato.
         {charTag(FifthCharacter, "neutral")}:                           E mi fa tenerezza, sai?
-        {charTag(FifthCharacter, "hurry")}:                             Mi sembra un riccio.
+        {charTag(FifthCharacter, "hurry")}:                             Il riccio gli calza a pennello.
                                                                         Così carino, tenero.
         {charTag(FifthCharacter, "neutral")}:                           Quando è assorto nei suoi discorsi sugli animali o è incuriosito da qualcosa è adorabile.
         {charTag(FifthCharacter, "sad")}:                               Ma poi provi ad avvicinarti, a conoscerlo meglio, e ti fa male.
@@ -90,6 +95,11 @@
             {
                 - are_two_entities_together(FirstCharacter, PG):
                     {charTag(FirstCharacter, "annoyed")}:               Se allontanate {charNameTwo} io qui muoio di noia!
+                    {
+                    - are_two_entities_together(ThirdCharacter, PG):
+                    {charTag(ThirdCharacter, "jester")}:                Ma hai sempre me, {charNameOne}.
+                    {charTag(FirstCharacter, "annoyed")}:               Vado a bermi della varechina, va. 
+                    }
             }
 
             -> mentor_closing_storylet ->
@@ -164,6 +174,11 @@
             {charTag(FifthCharacter, "neutral")}:                       Sento il bisogno di.
                                                                         Non so.
             {charTag(FifthCharacter, "sorry")}:                         Di farmi rispettare.
+                 {
+                - are_two_entities_together(ThirdCharacter, PG):
+                {charTag(ThirdCharacter, "neutral")}:                   Un po' di severità serve a volte, non ti ci preoccupare troppo.
+                                                                        La prossima volta almeno ti ascolta.
+                }
                 {
                     - are_two_entities_together(PG, FirstCharacter):
                         {charTag(FirstCharacter, "neutral")}:           Questa roba vuoi non è rispetto ma paura.
@@ -197,7 +212,10 @@
             
         +\ {charTag(PG, "neutral")}:                                    Se sei davvero qui per proteggerci serve che affronti le tue difficoltà, {charNameFive}.
                 -> glyph_choice_manager(Mentor, aetherC)->
-
+                    {
+                    - are_two_entities_together(ThirdCharacter, PG):
+                    {charTag(ThirdCharacter, "bored")}:                 Non è che ha ucciso qualcuno, su.
+                    }
             {charTag(FifthCharacter, "sorry")}:                         Hai ragione, {player_name}.
             {charTag(FifthCharacter, "sad")}:                           La cosa peggiore è che non mi piace arrabbiarmi, ma mi fa sentire potente.
             {charTag(FifthCharacter, "neutral")}:                       Visibile.

@@ -108,8 +108,8 @@
 
     {
         - are_two_entities_together(FirstCharacter, PG):
-            {charTag(FirstCharacter, "neutral")}:         Se resto mi sembra di barare.
-            {charTag(FirstCharacter, "annoyed")}:   Anche se non ha senso, visto che lo stai facendo tu, {player_name}.
+            {charTag(FirstCharacter, "neutral")}:           Se resto mi sembra di barare.
+            {charTag(FirstCharacter, "annoyed")}:           Anche se non ha senso, visto che lo stai facendo tu, {player_name}.
             ~ move_entity(FirstCharacter, Forest)
     }
 
@@ -266,21 +266,21 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
 
-    {
+        {
         - are_two_entities_together(ThirdCharacter, PG):
-            Uh, Franco sa tantissime cose di me!
-                ~ move_entity(ThirdCharacter, Forest)
-    }
+            {charTag(ThirdCharacter, "neutral")}:               Vi lascio alle vostre chiacchiere, via.
+            {charTag(ThirdCharacter, "jester")}:                Ma se mi fischiano le orecchie vedete che penserò male di voi!
+                    ~ move_entity(ThirdCharacter, Forest)
+        }
 
-    {shuffle once:
-        - {charTag(Franco, "party")}:                     Mi piace {charNameTwo}! Mi ha insegnato tantissime cose!
-        - {charTag(Franco, "party")}:                     Sì! Voglio chiedere a {charNameTwo} se facciamo lezioni di nuoto assieme!
-        - {charTag(Franco, "party")}:                     {charNameTwo} mi sta tanto simpatico.
-                                                            Anche se non ho ancora capito quella cosa della elettricità.
-        - {charTag(Franco, "party")}:                     Ottimamente!                                   
-    }
+        {shuffle once:
+            - {charTag(Franco, "neutral")}:                     Uh, non ho ancora capito {charNameThree}, ma posso aiutarti lo stesso!
+            - {charTag(Franco, "neutral")}:                     Mi parla sempre del fantacalcio ma ancora non ho capito quando devo schierare i draghi.
+            - {charTag(Franco, "neutral")}:                     {charNameThree} mi dice sempre che sono una sagoma, non capisco.
+            - {charTag(Franco, "neutral")}:                     Perfetto!                                 
+        }
     
-    + {frog_thirdCharAchievableGifts has cultivableGift}  \ {charTag(PG, "neutral")}:         Cosa potrei regalargli?
+    + {frog_thirdCharAchievableGifts has cultivableGift}  \ {charTag(PG, "neutral")}:           Cosa potrei regalargli?
         -> franco_giftsPlants(ThirdCharacter, Pond)
     + {frog_thirdCharAchievableGifts has ingredientGift && player_accessiblePlaces has Kitchen}  \ {charTag(PG, "neutral")}:         Quale ingrediente potrei usare in cucina con lui?
         -> franco_giftsPlants(ThirdCharacter, Kitchen)

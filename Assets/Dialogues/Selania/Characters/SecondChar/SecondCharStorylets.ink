@@ -350,6 +350,10 @@
         {charTag(SecondCharacter, "melanchonic")}:              Anche se a volte si dimentica le cose.
         {charTag(SecondCharacter, "angry")}:                    Però se lo faccio io si arrabbia.
         {charTag(SecondCharacter, "melanchonic")}:              Il mese scorso mi sono dimenticato dell'anniversario suo e di papà e non mi ha parlato tutto il giorno.
+            {
+            - are_two_entities_together(ThirdCharacter, PG):
+            {charTag(ThirdCharacter, "bored")}:                 Tipico delle donne.
+            } 
         {charTag(SecondCharacter, "neutral")}:                  Pensava che non le voglio bene.
         {charTag(SecondCharacter, "melanchonic")}:              Ma poi lei oggi si è dimenticata il mio compleanno.
                                                                 Non so nemmeno se sa che sono qui.
@@ -396,7 +400,7 @@
                     -> glyph_choice_manager(false, airC)->
             {charTag(SecondCharacter, "energy")}:               Ci posso fare le storie!
                                                                 E le battaglie.
-            {charTag(SecondCharacter, "neutral")}:              Anche se molte cose devo inventarle perché mica ci posso giocare a quei videogiochi.                                                    
+            {charTag(SecondCharacter, "neutral")}:              Anche se molte cose devo inventarle perché mica ci posso giocare a quei videogiochi.                                               
             {charTag(SecondCharacter, "emotional")}:            Mio fratello però a volte me li racconta.
             {charTag(SecondCharacter, "angry")}:                Anche se mamma si arrabbia.
             {charTag(SecondCharacter, "energy")}:               Ma poi di nascosto guardo le persone che giocano sul cellulare, lei non sa mica che esistono queste cose!
@@ -683,6 +687,10 @@
         {charTag(SecondCharacter, "melanchonic")}:              Anche se a mamma mica piace la nonna.
         {charTag(SecondCharacter, "angry")}:                    E quando papà è tornato ha ripreso a trattarla male.
                                                                 Che rabbia.
+            {
+            - are_two_entities_together(ThirdCharacter, PG):
+            {charTag(ThirdCharacter, "angry")}:                 Tuo padre si merita una regolata, Ricciolino!
+            }                                                     
         {charTag(SecondCharacter, "neutral")}:                  Ma nonna dice che succede.
                                                                 Che i grandi fanno cose cattive senza saperlo.
                                                                 Mi spiace essere scappato di casa.
@@ -860,6 +868,10 @@
                     
             + (lottare)\ {charTag(PG, "neutral")}:              Per sopravvivere devi stringere i denti e lottare!
                     -> glyph_choice_manager(false, fireC)->
+                {
+                - are_two_entities_together(ThirdCharacter, PG):
+                {charTag(ThirdCharacter, "neutral")}:           Esatto vecio.
+                }     
             {charTag(SecondCharacter, "neutral")}:              Lo dice anche papà.
                                                                 Ma a me non mi interessa mica tanto.
             {charTag(SecondCharacter, "energy")}:               Voglio solo studiare gli animali.

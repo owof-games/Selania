@@ -539,13 +539,13 @@
 
                                                     {
                                                         - are_two_entities_together(FirstCharacter, PG):
-                                                            {charTag(FirstCharacter, "curious")}:       C'è un'altra persona qui in giro?
+                                                            {charTag(FirstCharacter, "curious")}:           C'è un'altra persona qui in giro?
                                                                 
                                                     }
 
                                                     {
                                                         - are_two_entities_together(ThirdCharacter, PG):
-                                                            {charTag(ThirdCharacter, "bored")}:  Questo posto è pieno di donne.
+                                                            {charTag(ThirdCharacter, "bored")}:             Questo posto è pieno di donne.
                                                                 
                                                     }
 
