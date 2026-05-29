@@ -2470,33 +2470,44 @@ namespace Selania.Rework.Components
 
         #region IStorySigilSupport
 
-        private readonly Subject<Observable<IStorySigilSupport.SigilDescriptor?>> _activeSigilSource = new();
+        private readonly Subject<Observable<IStorySigilSupport.SigilDescriptor?>> _activeSigilInfoSource = new();
+
+        private Observable<IStorySigilSupport.SigilDescriptor?>? _activeSigilInfoCache;
 
         /// <inheritdoc />
-        public Observable<IStorySigilSupport.SigilDescriptor?> ActiveSigil =>
-            _activeSigilSource.Prepend(Observable.Never<IStorySigilSupport.SigilDescriptor?>()).Switch();
+        public Observable<IStorySigilSupport.SigilDescriptor?> ActiveSigilInfo
+        {
+            get
+            {
+                _activeSigilInfoCache ??= CreateActiveSigilInfo();
+                return _activeSigilInfoCache;
+            }
+        }
 
-        private readonly Subject<Observable<int>> _activeSigilAvailableUsagesSource = new();
+        private Observable<IStorySigilSupport.SigilDescriptor?> CreateActiveSigilInfo()
+        {
+            var observable = _activeSigilInfoSource
+                .Prepend(Observable.Never<IStorySigilSupport.SigilDescriptor?>())
+                .Switch();
+            var publishedObservable = observable.Publish();
+            publishedObservable.Connect(); // will never get disposed?
+            return publishedObservable;
+        }
 
-        /// <inheritdoc />
-        public Observable<int> ActiveSigilAvailableUsages =>
-            _activeSigilAvailableUsagesSource
-                .Prepend(Observable.Never<int>())
-                .Switch()
-                .CombineLatest(ActiveSigil, (num, sigil) => sigil == null ? 0 : num);
 
         private void OnStartSigilSupport()
         {
-            _activeSigilSource.OnNext(GetVariableObservable<InkList>(currentSigilVariableName).Select(inkList =>
-            {
-                if (inkList.Count == 0)
-                    return null;
-                var story = GetStory();
-                var glyphs = GetGlyphsFromSigilInkVariableValue(inkList, story);
-                return new IStorySigilSupport.SigilDescriptor(glyphs[0], glyphs[1], glyphs[2]);
-            }));
-
-            _activeSigilAvailableUsagesSource.OnNext(GetVariableObservable<int>(numSigilUsagesVariableName));
+            _activeSigilInfoSource.OnNext(GetVariableObservable<InkList>(currentSigilVariableName)
+                .CombineLatest(GetVariableObservable<int>(numSigilUsagesVariableName), (i, j) => (i, j))
+                .Select(data =>
+                {
+                    var (inkList, numUsages) = data;
+                    if (inkList.Count == 0 || numUsages == 0)
+                        return null;
+                    var story = GetStory();
+                    var glyphs = GetGlyphsFromSigilInkVariableValue(inkList, story);
+                    return new IStorySigilSupport.SigilDescriptor(glyphs[0], glyphs[1], glyphs[2], numUsages);
+                }));
         }
 
         #endregion

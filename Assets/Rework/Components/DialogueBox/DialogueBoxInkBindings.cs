@@ -49,6 +49,8 @@ namespace Selania.Rework.Components.DialogueBox
 
         [Inject] internal IStoryRelationshipInfo StoryRelationshipInfo = null!;
 
+        [Inject] internal IStorySigilSupport StorySigilSupport = null!;
+
         private void Start()
         {
             var parsedTextInfoObservable = StoryLinear.currentTextObservable.Select(ParseCurrentTextInfo);
@@ -70,6 +72,17 @@ namespace Selania.Rework.Components.DialogueBox
             {
                 SubscribeToCharacterInk(c.Character, c.InkVariable);
             }
+
+            StorySigilSupport.ActiveSigilInfo
+                .Subscribe(descriptor =>
+                {
+                    if (descriptor == null)
+                        dialogueBox.HideSigil();
+                    else
+                        dialogueBox.SetSigil(descriptor.Glyph1, descriptor.Glyph2, descriptor.Glyph3,
+                            descriptor.numUsages);
+                })
+                .AddTo(this);
         }
 
         private void HandleRelationshipLevel(Observable<ParsedText> parsedTextInfoObservable)

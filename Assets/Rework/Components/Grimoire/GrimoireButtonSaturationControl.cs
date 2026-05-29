@@ -53,7 +53,7 @@ namespace Selania.Rework.Components.Grimoire
         ///     Set the saturation and color of the image.
         /// </summary>
         /// <param name="saturation">The new saturation (0..1).</param>
-        /// <para name="color">the new color</para>
+        /// <param name="color">the new color</param>
         public void SetSaturation(float saturation, Color color)
         {
             saturation = Mathf.Clamp(saturation, 0, 1);

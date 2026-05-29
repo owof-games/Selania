@@ -47,7 +47,8 @@ namespace Selania.Rework.Components
                 .As<IStoryCharacterRelationshipStatus>()
                 .As<IStoryVariableValues>()
                 .As<IStoryDebugSupport>()
-                .As<IStoryRelationshipInfo>();
+                .As<IStoryRelationshipInfo>()
+                .As<IStorySigilSupport>();
         }
 
         /// <summary>
