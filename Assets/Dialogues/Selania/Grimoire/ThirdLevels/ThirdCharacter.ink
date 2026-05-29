@@ -27,6 +27,10 @@
     {
         - grimoire_thirdChar has grimThirdCharFour:
             Su suggerimento di {charNameFive}, {charNameThree} ha raccontato a {player_name} della sua relazione con Donatella. Ha raccontato una lunga storia d'amore e convivenza che ha creato tensioni col padre di {charNameThree} quando {charNameThree} e Donatella hanno deciso di sposarsi. Ma i due non sono arrivati al matrimonio perché Donatella si è resa conto a ridosso dei trent'anni di non sapere davvero chi è. Sente di essere stata cresciuta da {charNameThree}, e per questo incapace di capire se sta per sposarsi perché lo vuole, o perché è l'unica cosa a cui sa pensare. Decide così di lasciare {charNameThree}, che per un anno la aspetta dedicandosi al suo corpo e al lavoro, fino a quando lei non gli dice che non deve più aspettarla, e {charNameThree}  amaro, legge la fine della relazione come un segno del suo invecchiamento, del non essere ricco, del non avere amici interessanti.
+            {
+                - thirdChar_firstCharRage == true:
+                    <> {charNameOne} era presente alla conversazione, e ha criticato {charNameThree}, dicendogli che Donatella aveva tutto il diritto di andarsene, che lui si è tratteggiato come vittima davanti a tutti e che ha <i>groomato</i> (noi non sappiamo cosa sia questa cosa) la ragazza per un decennio. Sia {charNameOne} che {charNameThree} se ne sono andat3 arrabbiat3.
+            }
     } 
 
     {
@@ -222,17 +226,22 @@
 
     {
         - grimoire_thirdChar has grimThirdCharFirstProposal:
-            Prima della riscrittura, {charNameThree} ha detto a {player_name} di.
+            Prima della riscrittura, {charNameThree} ha detto a {player_name} che non ha davvero bisogno del suo aiuto, che le cose vanno bene nella sua vita tra lavoro, amici e compagna. Ci ha tenuto a sottolineare che anche qui si è trovato bene con tutt3: dice che {charNameFive} lo adora, che per {charNameTwo} è come un secondo fratello, mentre {charNameOne} {thirdChar_firstCharRage == true or grimoire_thirdChar has grimFirstThirdChar: <i>ce l'ha con tutti gli uomini e quindi il problema non è lui, è lei.|è una brava ragazza, anche se {charNameThree} non crede di essere stato simpatico a {charNameOne}.}
     } 
     {
-        - thirdAffinityFeedback:
-            Il valore di inchiostro che {player_name} ha raggiunto con {charNameThree} prima della riscrittura è stato: <b>{fromInkToNumbers(ThirdCharacter)}</b>.<>
+        - thirdChar_inkFirstRewriting_updated == true:
+            Il valore di inchiostro che {player_name} ha raggiunto con {charNameThree} prima della riscrittura è stato: <b>{fromInkToNumbers(thirdChar_inkFirstRewriting)}</b>.<>
     }
 
     {
         - grimoire_thirdChar has grimThirdCharSecondProposal:
             Prima della riscrittura, la seconda, {charNameThree} ha detto a {player_name} di.
     } 
+
+    {
+        - thirdChar_inkFSecondRewriting_updated == true:
+            Il valore di inchiostro che {player_name} ha raggiunto con {charNameThree} prima della seconda riscrittura è stato: <b>{fromInkToNumbers(thirdChar_inkFirstRewriting)}</b>.<>
+    }
 
     {
         - grimoire_thirdChar has grimThirdCharNewName:

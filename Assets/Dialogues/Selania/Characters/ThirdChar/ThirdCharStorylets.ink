@@ -865,7 +865,9 @@
                                                                 Ma hai visto come mi ha attaccato?
                                                                 Io.
                                                                 Ho bisogno di scaricarmi un attimo.
-                ~ change_entity_place(ThirdCharacter)            
+                ~ change_entity_place(ThirdCharacter)
+                //Tracciamo questo sbrocco perché non è roba da poco.
+                ~ thirdChar_firstCharRage = true            
         - else:
         {charTag(ThirdCharacter, "bored")}:                     C'è qualcosa in questo posto, un po' ti fa venire da piangere
         {charTag(ThirdCharacter, "jester")}:                    Alla fine comunque lui ha trovato qualcuno che la ama.

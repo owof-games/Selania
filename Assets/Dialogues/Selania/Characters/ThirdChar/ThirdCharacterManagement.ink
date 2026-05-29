@@ -17,6 +17,11 @@
         VAR thirdChar_specialEvent = false
         //Conteggio totale delle scelte prese con la PNG
         VAR thirdChar_totalChoices = 0
+    //Eventi speciali
+        VAR thirdChar_firstCharRage = false
+        VAR thirdChar_inkFirstRewriting = 0
+        VAR thirdChar_inkFirstRewriting_updated = false
+        VAR thirdChar_inkFSecondRewriting_updated = false  
 
     //Ritmo della storia    
         //Variabili per mettere in pausa la conversazione
@@ -131,64 +136,65 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-
-    Prima però ci terrei a dirti come sono andate le cose tra noi, qui.
-            
-        {
-            -   are_two_entities_together(Mentor, PG):
-                {charTag(FifthCharacter, "neutral")}:               Vi lascio un po' di privacy. In bocca al lupo {player_name} e {charNameOne}.
-                    ~ change_entity_place(Mentor)
-        }
-        {
-            -   are_two_entities_together(FirstCharacter, PG):
-                {charTag(FirstCharacter, "neutral")}:               Mi levo dalle scatole.
-                    ~ change_entity_place(FirstCharacter)
-        }
-        {
-            -   are_two_entities_together(SecondCharacter, PG):
-                {charTag(ThirdCharacter, "affectionate")}:          {charNameTwo}, potresti lasciarci un po' da sol3?
-                {charTag(SecondCharacter, "emotional")}:            Certissimamente! A dopo!
-                    ~ change_entity_place(SecondCharacter)
-        }
-        {
-            - are_two_entities_together(Franco, PG):
-                {charTag(Franco, "neutral")}:                       Non fate caso a me, sto provando a raccogliere tutte le bolle in un unico posto, ma continuano a scappare.     
-        }
-
         
         {
             - thirdChar_InkLevel == ink_empty:
-                {charTag(ThirdCharacter, "annoyed")}:               Come direbbe la mia vecchia insegnate di piano: apprezzo lo sforzo, manca il risultato.
-                                                                    Ci sono stati momenti carini, ma ammetto che per lo più non mi sono sentita molto capita da te.
-                                                                    Scusa.
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(ThirdCharacter, "bored")}:                 Ho avuto la sensazione che tu hai passato il tempo a giudicarmi.
+                                                                    A farmi domande fastidiose.
+                                                                    Non me lo aspettavo da te, zio.
+                                                                    Ho come l'impressione che ti senti meglio di me.
+                {charTag(ThirdCharacter, "angry")}:                 Vola basso, {player_name}.
+                {charTag(ThirdCharacter, "neutral")}:               Sono ancora più contento di levarmi da qui, guarda.
+
+                - else:
+                {charTag(ThirdCharacter, "neutral")}:               Non è scattata la scintilla, mi spiace.
+                {charTag(ThirdCharacter, "jester")}:                Per te il campionato finisce qui.
+                {charTag(ThirdCharacter, "neutral")}:               Scherzi a parte, non ci siamo mai capiti, ma non è che mi aspettavo di più.
+                                                                    Fossi stato uno zio, ci sarei rimasto male, ma così non tanto, dai.
+                } 
+
 
             - thirdChar_InkLevel == ink_low:
-                {charTag(ThirdCharacter, "annoyed")}:               E, insomma.
-                                                                    Non è che ci capiamo molto noi due, sai?
-                                                                    È come se io suonassi Chopin e tu la lambada.
-                                                                    E la lambada è carina, ma non è roba mia.
-                                                                    Ha senso? 
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(ThirdCharacter, "jester")}:                Sei un po' come una birra calda, zio.
+                {charTag(ThirdCharacter, "neutral")}:               Una cosa che magari bevi perché non ti rimane niente in giro.
+                                                                    Ma che non ti disseta.
+                {charTag(ThirdCharacter, "jester")}:                A stare qui in giro sto dicendo cose gay, aiuto!
+                {charTag(ThirdCharacter, "neutral")}:               Però non sei così male alla fine.
+                                                                    Mettiamola così: ti inviterei per una partita a calcetto.
+                                                                    Ma non ti metterei mai come titolare.                                               
+                - else:
+                {charTag(ThirdCharacter, "neutral")}:               È andata meglio di quanto pensavo.
+                    {
+                    - thirdChar_recordedPlayerPronoun == her:
+                    {charTag(ThirdCharacter, "neutral")}:           Non una proposta di matrimonio, direi.
+                    {charTag(ThirdCharacter, "jester")}:            Sempre che te non ci stai, a quel punto ci faccio comunque un pensierino.
+                    - else:
+                    {charTag(ThirdCharacter, "neutral")}:           Tu non ti sei arrabbiat{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}} se ho sbagliato i tuoi pronomi.
+                    {charTag(ThirdCharacter, "jester")}:            E io ho ignorato le volte in cui mi hai fatto sentire un idiota.                                            
+                    }
+                {charTag(ThirdCharacter, "neutral")}:               Diciamo che sei passi al Baretto, una birra te la offro con piacere.                                                    
+                } 
                                                                 
             - thirdChar_InkLevel == ink_normal:
-                {charTag(ThirdCharacter, "neutral")}:               Ci sono stati beni momenti tra noi, sai?
-                                                                    Ma anche momenti no, in cui non mi sono sentita capita.
-                                                                    Non è un reato.
-                                                                    Ma, insomma, non riesco a fidarmi fino in fondo.
-                                                                    Scusa.
-            
-            
-            - thirdChar_InkLevel == ink_medium:
-                {charTag(ThirdCharacter, "affectionate")}:          E {player_name}: non pensavo avrei trovato una persona amica, qui.
-                                                                    Mi hai reso l'assenza di Talco, di Ennio, di Valeria moooolto più sopportabile.
-                                                                    Grazie.
-            
-            
-            - thirdChar_InkLevel == ink_high:
-                {charTag(ThirdCharacter, "affectionate")}:          E mi chiedevo: ma che ci hanno separat3 alla nascita?
-                                                                    Perché mi sento tipo come se avessimo un unico neurone.
-                                                                    Unit3 in tutto.
-                                                                    Ed è figa come cosa.
-                                                                    Talco continua a mancarmi, ma con te mi sento come se fossimo parte da sempre della stessa band.
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(ThirdCharacter, "jester")}:                Noi ci capiamo zio, ma tanto anche.
+                                                                    Tipo fratelli separati alla nascita o quelle cose lì.
+                {charTag(ThirdCharacter, "neutral")}:               Non avrei mai pensato di dirlo, ma mi spiacerà un po' andarmene.
+                {charTag(ThirdCharacter, "jester")}:                Ma non farti strane idee!                                                                                
+                                                                
+                - else:
+                {charTag(ThirdCharacter, "neutral")}:               Non ti arrabbiare, ma non pensavo che mi sarei trovato così bene con {thirdChar_recordedPlayerPronoun == her: una donna|una persona non binaria}.
+                {charTag(ThirdCharacter, "jester")}:                {thirdChar_recordedPlayerPronoun == her: E senza il sesso di mezzo, woah!|Non abbiamo mai litigato per i pronomi, woah!}
+                {charTag(ThirdCharacter, "neutral")}:               Scherzi a parte, mi son divertito con te, come se tu fossi uno zio.
+                                                                    Che figata.
+                                                                    Sono contento di andarmene, ma grazie a te stare qui è volata.
+                } 
+        
         }
 
 

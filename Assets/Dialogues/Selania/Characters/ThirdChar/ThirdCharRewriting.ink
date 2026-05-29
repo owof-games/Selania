@@ -17,15 +17,66 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
 
-        {charTag(ThirdCharacter, "neutral")}:           Non ho niente da dire, levami da questa situazione.
+        {charTag(ThirdCharacter, "neutral")}:                   La zia diceva che questo è il momento in cui dovrei fare una confessione strappalacrime e stracciamaroni in cui ti dico che la mia vita è terribile.
+        {charTag(ThirdCharacter, "melanchonic")}:               E che non so come andare avanti senza i tuoi consigli.
+        {charTag(ThirdCharacter, "jester")}:                    Ma non è così.
+        {charTag(ThirdCharacter, "neutral")}:                   Forse qui ci dovevo venire dopo il Covid.
+                                                                Anche se poi alla fine me ne sono venuto fuori.
+                                                                Alla fine ora ho il mio lavoretto.
+                                                                La mia tipa.
+                                                                Il mio giro di amici.
+        {charTag(ThirdCharacter, "jester")}:                    E anche qui alla fine mi sono trovato bene con tutti.
+        {charTag(ThirdCharacter, "neutral")}:                   La zia mi adora.
+            {
+            - are_two_entities_together(FifthCharacter, PG):
+            {charTag(Mentor, "hurry")}:                         Sei sfacciato, {charNameThree}!                        
+            }   
+        {charTag(ThirdCharacter, "neutral")}:                   Per {secondChar_storyStatus == story_storyStarted: Ricciolino|{charNameTwo}} sono come un secondo fratello.
+            {
+            - are_two_entities_together(SecondCharacter, PG):
+            {charTag(SecondCharacter, "neutral")}:              Uh.                          
+            }                                                          
+        {charTag(ThirdCharacter, "neutral")}:                   E per quanto riguarda {charNameOne}...
+        {
+        - thirdChar_firstCharRage == true or grimoire_thirdChar has grimFirstThirdChar:
+        {charTag(ThirdCharacter, "bored")}:                     Quella è pazza in culo.
+                                                                Palesemente ce l'ha con tutti gli uomini.
+        {charTag(ThirdCharacter, "jester")}:                    Quindi il problema è lei, non io.
+            {
+            - are_two_entities_together(FirstCharacter, PG):
+            {charTag(FirstCharacter, "annoyed")}:               Prendersi mezza responsabilità: abilità sconosciuta.                         
+            }
+        - else:
+        {charTag(ThirdCharacter, "neutral")}:                   Non credo di essergli stato tanto simpatico, ma va bene così.
+                                                                Secondo me è una brava ragazza.
+                                                                Si fa una botta di seghe mentali.
+        {charTag(ThirdCharacter, "jester")}:                    Se la smettesse di stare su internet e pensare cose sceme sicuro che è più felice.
+            {
+            - are_two_entities_together(FirstCharacter, PG):
+            {charTag(FirstCharacter, "annoyed")}:               Questa te la do come buona.                        
+            }                                                        
+        }
+        {
+        - are_two_entities_together(Franco, PG):
+        {charTag(Franco, "question")}:                          E Franco? Franco cosa pensa?
+        {charTag(ThirdCharacter, "jester")}:                    Zio, tu devi pensare meno.
+                                                                E farti trovare pronto con la squadra del fantacalcio quando abbiamo finito questa robaccia!
+
+        }
+        {charTag(ThirdCharacter, "neutral")}:                   E con te, {player_name}?
+                                                                Come sono andate le cose con te?                                                                                                        
+
+        //Funzione di preparazione alla riscrittura
+                ~  rewriting_prep(ThirdCharacter)
 
         -> third_char_closing_storylet ->
 
-            + \ {charTag(PG, "neutral")}:               Ti ho ascoltato, {charNameThree}, e posso aiutarti a riscrivere la tua storia.
-                -> first_rewriting
-            
-            + \ {charTag(PG, "neutral")}:               Capisco il tuo dolore, ma ho bisogno di riflettere un attimo.
-                -> main
+        + \ {charTag(PG, "neutral")}:                           Ti ho ascoltato, {charNameThree}, e posso aiutarti a riscrivere la tua storia.
+            -> first_rewriting
+        
+        + \ {charTag(PG, "neutral")}:                           Mi prendo un attimo prima di affrontare la riscrittura.
+        {charTag(ThirdCharacter, "bored")}:                     Che sia un attimo davvero, {player_name}!  
+            -> main
 
 
 === first_rewriting
@@ -35,11 +86,8 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
-            Va bene.
+    {charTag(ThirdCharacter, "jester")}:                        Spara tutte le tue cartucce!
 
-            //Funzione di preparazione alla riscrittura
-                ~  rewriting_prep(ThirdCharacter)
-            
             //E poi a seconda dello stato di inchiostro, mi sposto sulla domanda prevista      
                 {
                     - thirdChar_InkLevel == ink_empty:

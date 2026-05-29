@@ -26,10 +26,12 @@
                     - firstChar_relationshipStatus == negative:
                         {debug: il valore di relazione è 0, e quindi non aumento il valore dell'inchiostro. {firstChar_relationshipStatus}.}
                         
+                        
                     - firstChar_relationshipStatus == neutral:
                         ~ firstChar_InkLevel ++
                         {debug: il valore di relazione è 1, e quindi aumento il valore dell'inchiostro. {firstChar_relationshipStatus}.}
                         
+
                     - else:
                         ~ firstChar_InkLevel ++
                         ~ firstChar_InkLevel ++
@@ -57,16 +59,33 @@
                 {
                     - thirdChar_relationshipStatus == negative:
                         {debug: il valore di relazione è 0, e quindi non aumento il valore dell'inchiostro. {thirdChar_relationshipStatus}.}
-                        
+                        {
+                        - thirdChar_inkFirstRewriting_updated == false:
+                            ~ thirdChar_inkFirstRewriting_updated = true
+                        - else:
+                            ~ thirdChar_inkFSecondRewriting_updated = true    
+                        }    
                     - thirdChar_relationshipStatus == neutral:
                         ~ thirdChar_InkLevel ++
                         {debug: il valore di relazione è neutral, e quindi aumento il valore dell'inchiostro. {thirdChar_relationshipStatus}.}
-                        
+                        {
+                        - thirdChar_inkFirstRewriting_updated == false:
+                            ~ thirdChar_inkFirstRewriting_updated = true
+                            ~ thirdChar_inkFirstRewriting = 1
+                        - else:
+                            ~ thirdChar_inkFSecondRewriting_updated = true      
+                        }
                     - else:
                         ~ thirdChar_InkLevel ++
                         ~ thirdChar_InkLevel ++
                         {debug: il valore di relazione è 2, e quindi aumento il valore dell'inchiostro. {thirdChar_relationshipStatus}.}
-                        
+                        {
+                        - thirdChar_inkFirstRewriting_updated == false:
+                            ~ thirdChar_inkFirstRewriting_updated = true
+                            ~ thirdChar_inkFirstRewriting = 2
+                        - else:
+                            ~ thirdChar_inkFSecondRewriting_updated = true      
+                        }
                 }            
             
         - FourthCharacter:
@@ -416,6 +435,10 @@
     
         - ThirdCharacter:
             ~ ink_status = thirdChar_maximum_inkLevel
+
+            //Eccezione per il grimorio, così che ci sia una separazione tra prima e seconda riscrittura.
+            - thirdChar_inkFirstRewriting:
+                ~ ink_status = thirdChar_inkFirstRewriting    
         
         - FourthCharacter:
             ~ ink_status = fourthChar_maximum_inkLevel
