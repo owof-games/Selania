@@ -58,6 +58,8 @@
                                                                 Non che ci sia qualcosa di male se ti piace!
         {charTag(ThirdCharacter, "neutral")}:                   Ma non è la mia roba.
         {charTag(ThirdCharacter, "bored")}:                     Zero proprio!
+        {charTag(ThirdCharacter, "neutral")}:                   Però posso spaccarti un po' di legna se serve!
+        {charTag(ThirdCharacter, "jester")}:                    O difenderti dagli orsi!
 
         - thirdChar_recordedPlayerPronoun == they:
         {charTag(ThirdCharacter, "neutral")}:                   Te lo dico già ora: supporto tantissimo tutto e tutti.
@@ -170,6 +172,7 @@
                 {charTag(ThirdCharacter, "jester")}:            Questo sì che è un cambiamento!
                 {charTag(ThirdCharacter, "neutral")}:           Non averne a male, ma alla fine siamo sempre noi uomini a tirare avanti la baracca.
                                                                 E invece vedi un po'.
+                                                                Hai la mia approvazione {player_name}!
                 }                
         {charTag(ThirdCharacter, "neutral")}:                   Anche se Dona è, era una che sgobbava tantissimo, per dire.
 
@@ -308,6 +311,7 @@
                         }          
                 - else:
                 {charTag(ThirdCharacter, "jester")}:            Ovviamente ti prendo in giro, non ti preoccupare.
+                                                                A volte mi viene da fare il deficiente senza proprio pensarci.
                 }  
             
         + \ {charTag(PG, "neutral")}:                           Sicuro qualcosa con tante responsabilità.
@@ -374,7 +378,7 @@
                 {charTag(ThirdCharacter, "jester")}:            E a volte anche qualcosa di più piccantino.
 
                 - else:
-                {charTag(ThirdCharacter, "jester")}:            Ma niente cose zozze, promesso!
+                {charTag(ThirdCharacter, "jester")}:            Ma niente cose zozze, non ti allarmare.
                 }                                                      
         {charTag(ThirdCharacter, "neutral")}:                   Mi capisce sempre.
         {charTag(ThirdCharacter, "bored")}:                     Quando quell'altra mi ha smollato dopo tredici anni...
@@ -398,6 +402,7 @@
                 - else:
                 {charTag(ThirdCharacter, "neutral")}:           Anche tentativi seri, giuro.
                                                                 Non sono sempre un buffone.
+                                                                So anche essere tenero, se una se lo merita.
                 }                                                      
         {charTag(ThirdCharacter, "neutral")}:                   Ho aspettato un po' dopo Dona, perché speravo che alla fine avrebbe cambiato idea.
         {charTag(ThirdCharacter, "bored")}:                     Invece se ne è andata in Spagna dopo che mi ha umiliato urlandomi contro davanti ai suoi.
@@ -635,6 +640,7 @@
                                                 
                 - else:
                 {charTag(ThirdCharacter, "neutral")}:           Le relazioni sono strane, vero?
+                {charTag(ThirdCharacter, "jester")}:            E soprattutto siet{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}} stran{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}} voi.
                 }                                                     
                                                                 Il Giova va avanti a start up o robe del genere.
         {charTag(ThirdCharacter, "jester")}:                    Io non credo che nessuno abbia capito che diavolo faccia di lavoro, manco lui.
@@ -651,7 +657,8 @@
                                                                 ma è dalle scuole che lo chiamavamo Marocco e alla fine è finita che ora lo chiamiamo tutti Rocco.
                                                 
                 - else:
-                                                                ma lo sai anche tu come si è stupidi alle scuole vero? E alla fine gli è rimasto addosso questo nome.
+                                                                ma lo sai anche tu come si è stupidi alle scuole vero?
+                                                                E alla fine gli è rimasto addosso questo nome.
                 }                                                      
         {charTag(ThirdCharacter, "jester")}:                    Che poi è pure egiziano.
         {charTag(ThirdCharacter, "neutral")}:                   Rocco è l'unico che becco anche fuori a volte.
@@ -826,9 +833,9 @@
                 - else:
                 {charTag(ThirdCharacter, "melanchonic")}:       Finisce così la storia di uno sfigato.
                         {
-                - are_two_entities_together(Mentor, PG):     
-                {charTag(FifthCharacter, "sad")}:               Povero figliolo.                                         
-                }
+                        - are_two_entities_together(Mentor, PG):     
+                        {charTag(FifthCharacter, "sad")}:       Povero figliolo.                                         
+                        }
                 } 
                                                             
         
@@ -932,6 +939,7 @@
                                                 
                 - else:
                 {charTag(ThirdCharacter, "bored")}:             Sto iniziando a perdere la pazienza {player_name}.
+                {charTag(ThirdCharacter, "neutral")}:           Ma per te continuerò a comportarmi da signore.
                 } 
 
         {charTag(ThirdCharacter, "neutral")}:                   {charNameFive} dice che io posso andarmene solo se mi riscrivi.
@@ -956,7 +964,7 @@
                 {charTag(ThirdCharacter, "jester")}:            E non farti idee da frocio per favore!
                                                                                                                         
                 - else:
-                {charTag(ThirdCharacter, "jester")}:            Figo e impegnato, mi spiace per te {player_name}.
+                {charTag(ThirdCharacter, "jester")}:            Che ho visto che mi lanci le occhiatine quando pensi che non ti vedo, furbett{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}}!
                 }                                                    
         {charTag(ThirdCharacter, "neutral")}:                   Ma la mia famiglia è abbastanza sfigata.
                                                                 Mia mamma era un dieci in realtà. ma è morta qualche anno fa.
