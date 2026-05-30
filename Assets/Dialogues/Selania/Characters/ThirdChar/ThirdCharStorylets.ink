@@ -16,7 +16,7 @@
                 - else:  
                 {charTag(ThirdCharacter, "jester")}:            No, questo non è il frigo.   
                 }
-                                                                Volevo prendermi una kölsch, giusto per rilassarmi.
+                                                                Volevo prendermi una irish red, giusto per rilassarmi.
                                                                 E invece eccomi qui.
                 {charTag(ThirdCharacter, "neutral")}:           Però per lo meno non si sente il miagolio del gatto dello Stracciamaroni.
                 {charTag(ThirdCharacter, "bored")}:             O il puzzo dello Stracciamaroni.
