@@ -433,6 +433,14 @@ namespace Selania.Rework.Components.DialogueBox
             foreach (Transform content in textLinesContainer.transform) Destroy(content.gameObject);
         }
 
+        /// <summary>
+        ///     Show the animation of the sigil influence.
+        /// </summary>
+        public void ApplySigilInfluence()
+        {
+            animator.SetTrigger(ApplySigilInfluenceAnimatorHash);
+        }
+
         #region animator variable name hashes
 
         private static readonly int ShowAnimationCompletedAnimatorHash =
@@ -450,6 +458,7 @@ namespace Selania.Rework.Components.DialogueBox
         // private static readonly int WordVisibleSpeedAnimatorHash = Animator.StringToHash("WordVisibleSpeed");
         private static readonly int ShowPortrait1AnimatorHash = Animator.StringToHash("ShowPortrait1");
         private static readonly int ShowPortraitSpeedAnimatorHash = Animator.StringToHash("ShowPortraitSpeed");
+        private static readonly int ApplySigilInfluenceAnimatorHash = Animator.StringToHash("ApplySigilInfluence");
 
         #endregion
     }

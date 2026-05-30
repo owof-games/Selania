@@ -119,5 +119,10 @@ namespace Selania.Rework.Components.Museum.Dialogue
         {
             dialogueBox.HideSigil();
         }
+
+        public void ApplySigilInfluence()
+        {
+            dialogueBox.ApplySigilInfluence();
+        }
     }
 }

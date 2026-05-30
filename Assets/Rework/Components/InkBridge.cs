@@ -69,7 +69,7 @@ namespace Selania.Rework.Components
         ///     Property used to access <see cref="_logger" />, checking that the story has been correctly set up.
         /// </summary>
         /// <exception cref="InvalidOperationException"></exception>
-        private ILogger<InkBridge> logger =>
+        private ILogger<InkBridge> Logger =>
             _logger ?? throw new InvalidOperationException(
                 "Logger is not set, call SetUp before accessing the logger");
 
@@ -130,7 +130,7 @@ namespace Selania.Rework.Components
                             result = (T)(object)(float)intValue;
                             break;
                         default:
-                            logger.ZLogError(
+                            Logger.ZLogError(
                                 $"Expected values of {vName} to be of type {typeof(T).Name}, and instead is of type {value.GetType().Name}");
                             break;
                     }
@@ -183,11 +183,11 @@ namespace Selania.Rework.Components
                 }
 
                 if (disabledDebugVariables != null)
-                    logger.ZLogTrace($"Disabled log variables {disabledDebugVariables}");
+                    Logger.ZLogTrace($"Disabled log variables {disabledDebugVariables}");
             }
             else
             {
-                logger.ZLogWarning($"No debug words set.");
+                Logger.ZLogWarning($"No debug words set.");
             }
         }
 
@@ -196,7 +196,7 @@ namespace Selania.Rework.Components
         /// </summary>
         private void Continue()
         {
-            logger.ZLogTrace($"Continuing the story.");
+            Logger.ZLogTrace($"Continuing the story.");
             var story = GetStory();
             do
             {
@@ -212,13 +212,13 @@ namespace Selania.Rework.Components
         private void LogAndNotifyCurrentState()
         {
             var story = GetStory();
-            logger.ZLogInformation($"Story text: {story.currentText}");
+            Logger.ZLogInformation($"Story text: {story.currentText}");
             foreach (var choice in story.currentChoices)
             {
-                logger.ZLogInformation($"  Story choice: {choice.text}");
+                Logger.ZLogInformation($"  Story choice: {choice.text}");
                 foreach (var tag in choice.tags ?? new List<string>())
                 {
-                    logger.ZLogDebug($"    Tag: {tag}");
+                    Logger.ZLogDebug($"    Tag: {tag}");
                 }
             }
 
@@ -257,16 +257,24 @@ namespace Selania.Rework.Components
             SetupChoices();
             SetupAudio();
             SetupGrimoire();
+            SetupSigilSupport();
         }
 
         /// <inheritdoc />
         protected override void GlobalCleanup()
         {
+            CleanupSigilSupport();
             CleanupRoomContents();
             CleanupLinearProgression();
             CleanupChoices();
             CleanupAudio();
             CleanupGrimoire();
+        }
+
+        private static void DisposeAndSetToNull<T>(ref T? t) where T : class, IDisposable
+        {
+            t?.Dispose();
+            t = null;
         }
 
         #region room location / contents
@@ -338,7 +346,7 @@ namespace Selania.Rework.Components
                 where roomVariable.ContainsKey(_pgListItem.Value)
                 select GetRoomNameFromRoomVariableName(roomVariableName)
             ).SingleOrDefault();
-            logger.ZLogTrace($"Player moving from {_currentRoomName} to {roomName}");
+            Logger.ZLogTrace($"Player moving from {_currentRoomName} to {roomName}");
 
             // save the room
             _currentRoomName =
@@ -361,7 +369,7 @@ namespace Selania.Rework.Components
 
         private void RoomContentsVariableObserver(string variableName, object newValue)
         {
-            logger.ZLogTrace($"Room contents changed (from variable {variableName})");
+            Logger.ZLogTrace($"Room contents changed (from variable {variableName})");
 
             // update the room contents
             _roomContents = GetRoomContents(newValue);
@@ -545,6 +553,11 @@ namespace Selania.Rework.Components
                 UpdateSprite(currentText);
                 actionsAfterUpdate.@continue = true;
             }
+            else if (currentText.StartsWith("@sigilInfluence"))
+            {
+                EmitSigilInfluence();
+                actionsAfterUpdate.@continue = true;
+            }
             else
             {
                 // Lines starting with "@" have a special handling, and are never about dialogue
@@ -638,12 +651,12 @@ namespace Selania.Rework.Components
             if (choice == null)
             {
                 // could not find it
-                logger.ZLogError($"Could not find a choice with text {text}");
+                Logger.ZLogError($"Could not find a choice with text {text}");
             }
             else
             {
                 // found it: pick it!
-                logger.ZLogTrace($"Picking choice with text {text}");
+                Logger.ZLogTrace($"Picking choice with text {text}");
                 story.ChooseChoiceIndex(choice.index);
                 Continue();
             }
@@ -710,12 +723,12 @@ namespace Selania.Rework.Components
             // load the save file only if one is provided
             if (descriptor != null)
             {
-                logger.ZLogInformation($"Loading save file {descriptor}.");
+                Logger.ZLogInformation($"Loading save file {descriptor}.");
                 var jsonPath = GetInkStoryStateFileAbsolutePath(descriptor);
                 _minimumNextSaveTime = DateTime.UtcNow + _minimumTimeBetweenAutomaticSaves;
                 var json = await File.ReadAllTextAsync(jsonPath);
                 story.state.LoadJson(json);
-                logger.ZLogInformation($"Save file {descriptor} loaded.");
+                Logger.ZLogInformation($"Save file {descriptor} loaded.");
                 LogAndNotifyCurrentState();
             }
             else
@@ -723,11 +736,11 @@ namespace Selania.Rework.Components
                 // otherwise, just reset and continue to trigger a new story
                 story.ResetState();
                 _minimumNextSaveTime = DateTime.UtcNow; // will immediately produce a save file at the story start
-                logger.ZLogInformation($"New story started.");
+                Logger.ZLogInformation($"New story started.");
                 Continue();
             }
 
-            logger.ZLogTrace($"next automatic after {_minimumNextSaveTime}");
+            Logger.ZLogTrace($"next automatic after {_minimumNextSaveTime}");
         }
 
         /// <inheritdoc />
@@ -745,7 +758,7 @@ namespace Selania.Rework.Components
                 var saveData = JsonUtility.FromJson<SaveData>(json);
                 if (saveData == null)
                 {
-                    logger.ZLogError($"Error while parsing save data from file {jsonPath}");
+                    Logger.ZLogError($"Error while parsing save data from file {jsonPath}");
                     continue;
                 }
 
@@ -827,7 +840,7 @@ namespace Selania.Rework.Components
             var now = DateTime.UtcNow;
             if (now < _minimumNextSaveTime) return;
 
-            logger.ZLogInformation(
+            Logger.ZLogInformation(
                 $"Currently {now:G}, should not save before {_minimumNextSaveTime:G}, so we're saving.");
 
             // sanity checks and state updates
@@ -857,20 +870,20 @@ namespace Selania.Rework.Components
                 Directory.CreateDirectory(directoryName);
                 await File.WriteAllTextAsync(GetSaveFileAbsolutePath(descriptor), jsonSaveData);
                 await File.WriteAllTextAsync(GetInkStoryStateFileAbsolutePath(descriptor), jsonInkStoryState);
-                logger.ZLogInformation($"Save performed in {directoryName}.");
+                Logger.ZLogInformation($"Save performed in {directoryName}.");
             }
             catch (Exception)
             {
-                logger.ZLogError($"Save failed, trying to roll-back partial data if necessary.");
+                Logger.ZLogError($"Save failed, trying to roll-back partial data if necessary.");
                 try
                 {
                     // if something goes wrong, try to remove potential partial save data
                     if (Directory.Exists(directoryName)) Directory.Delete(directoryName, true);
-                    logger.ZLogInformation($"Partial data rollback succeeded.");
+                    Logger.ZLogInformation($"Partial data rollback succeeded.");
                 }
                 catch (Exception e)
                 {
-                    logger.ZLogError(e, $"Error while trying to recover from a failed save");
+                    Logger.ZLogError(e, $"Error while trying to recover from a failed save");
                 }
 
                 throw;
@@ -1296,7 +1309,7 @@ namespace Selania.Rework.Components
                     EmitThirdLevelTextNextPage(ref actionsAfterUpdate);
                     break;
                 default:
-                    logger.ZLogWarning($"Unknown grimoire tag {currentText}");
+                    Logger.ZLogWarning($"Unknown grimoire tag {currentText}");
                     break;
             }
         }
@@ -1329,21 +1342,21 @@ namespace Selania.Rework.Components
             {
                 if (tag.value == null)
                 {
-                    logger.ZLogWarning($"Found an achievement tag without arguments");
+                    Logger.ZLogWarning($"Found an achievement tag without arguments");
                     continue;
                 }
 
                 var parts = tag.value.Split(':');
                 if (parts.Length != 3)
-                    logger.ZLogWarning(
+                    Logger.ZLogWarning(
                         $"Achievement tags should have three parts (achievementName:currentValue:maxValue), but this one did not: '{tag.value}'");
 
                 if (!int.TryParse(parts[1], out var amount))
-                    logger.ZLogWarning(
+                    Logger.ZLogWarning(
                         $"Achievement value's second part should be the current value, an integer, but '{parts[1]}' was not.");
 
                 if (!int.TryParse(parts[2], out var max))
-                    logger.ZLogWarning(
+                    Logger.ZLogWarning(
                         $"Achievement value's third part should be the max value, an integer, but '{parts[2]}' was not.");
 
                 achievements.Add(new IStoryGrimoire.AchievementDescriptor(parts[0], amount, max));
@@ -1356,7 +1369,7 @@ namespace Selania.Rework.Components
             IStoryGrimoire.SigilDescriptor? sigilDescriptor = null;
             var currentSigil = (InkList)story.variablesState[currentSigilVariableName];
             if (currentSigil.Count > 1)
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Ink variable {currentSigilVariableName} should have at most one value, but it has {currentSigil.Count}: {currentSigil}");
 
             if (currentSigil.Count >= 1)
@@ -1365,7 +1378,7 @@ namespace Selania.Rework.Components
 
                 var numUsages = (int)story.variablesState[numSigilUsagesVariableName];
                 if (numUsages is < 1 or > 3)
-                    logger.ZLogError(
+                    Logger.ZLogError(
                         $"Number of usages found in variable {numSigilUsagesVariableName} is {numUsages}, whereas it should be 0, 1 or 2.");
 
                 sigilDescriptor = new IStoryGrimoire.SigilDescriptor(glyphs[0], glyphs[1], glyphs[2],
@@ -1383,31 +1396,31 @@ namespace Selania.Rework.Components
                 out var nextChoice, out var closeChoice);
             if (indexChoice != null)
             {
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"First level has a choice to get back to the first level ({indexChoice} #{bookmarkTagCategory}:{indexBookmarkTagValue}) that should not be present");
             }
 
             if (secondLevelChoice != null)
             {
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"First level has a choice to get back to the second level ({secondLevelChoice} #{bookmarkTagCategory}:{secondLevelBookmarkTagValue}) that should not be present");
             }
 
             if (previousChoice != null)
             {
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"First level has a choice to go to the previous page ({previousChoice} #{bookmarkTagCategory}:{backBookmarkTagValue}) that should not be present");
             }
 
             if (nextChoice != null)
             {
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"First level has a choice to go to the next page ({nextChoice} #{bookmarkTagCategory}:{forwardBookmarkTagValue}) that should not be present");
             }
 
             if (closeChoice != null)
             {
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"First level has a choice to close the grimoire ({closeChoice} #{bookmarkTagCategory}:{closeBookmarkTagValue}) that should not be present");
             }
 
@@ -1452,7 +1465,7 @@ namespace Selania.Rework.Components
                     continue;
                 }
 
-                logger.ZLogError(
+                Logger.ZLogError(
                     $"Could not find glyph {sigilName} in any of the sigils list, defaulting to 'fire'.");
                 glyphs[i] = ISettingsSigils.GlyphType.Fire;
 
@@ -1513,30 +1526,30 @@ namespace Selania.Rework.Components
                 out var nextChoice, out var closeChoice);
             if (indexChoice == null)
             {
-                logger.ZLogInformation($"Second level greenhouse has not a choice to get back to the first level.");
+                Logger.ZLogInformation($"Second level greenhouse has not a choice to get back to the first level.");
             }
 
             if (secondLevelChoice != null)
             {
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Second level greenhouse has a choice to get back to the second level ({secondLevelChoice} #{bookmarkTagCategory}:{secondLevelBookmarkTagValue}) that should not be present");
             }
 
             if (previousChoice != null)
             {
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Second level greenhouse has a choice to go to the previous page ({previousChoice} #{bookmarkTagCategory}:{backBookmarkTagValue}) that should not be present");
             }
 
             if (nextChoice != null)
             {
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Second level greenhouse has a choice to go to the next page ({nextChoice} #{bookmarkTagCategory}:{forwardBookmarkTagValue}) that should not be present");
             }
 
             if (closeChoice != null)
             {
-                logger.ZLogInformation(
+                Logger.ZLogInformation(
                     $"Second level greenhouse has a choice to close the grimoire ({closeChoice} #{bookmarkTagCategory}:{closeBookmarkTagValue}).");
             }
 
@@ -1569,24 +1582,24 @@ namespace Selania.Rework.Components
                 out var nextChoice, out var closeChoice);
             if (indexChoice == null)
             {
-                logger.ZLogError($"Second level sigils has not a choice to get back to the first level!");
+                Logger.ZLogError($"Second level sigils has not a choice to get back to the first level!");
                 return;
             }
 
             if (secondLevelChoice != null)
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Second level sigils has a choice to get back to the second level ({secondLevelChoice} #{bookmarkTagCategory}:{secondLevelBookmarkTagValue}) that should not be present");
 
             if (previousChoice != null)
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Second level sigils has a choice to go to the previous page ({previousChoice} #{bookmarkTagCategory}:{backBookmarkTagValue}) that should not be present");
 
             if (nextChoice != null)
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Second level sigils has a choice to go to the next page ({nextChoice} #{bookmarkTagCategory}:{forwardBookmarkTagValue}) that should not be present");
 
             if (closeChoice != null)
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Second level sigils has a choice to close the grimoire ({closeChoice} #{bookmarkTagCategory}:{closeBookmarkTagValue}) that should not be present");
 
             // emit the signal
@@ -1631,21 +1644,21 @@ namespace Selania.Rework.Components
             var inkName = tags.FirstOrDefault(tag => tag.category == "character")?.value;
             if (inkName == null)
             {
-                logger.ZLogError($"No tag #character: found for @grimoireCharacter");
+                Logger.ZLogError($"No tag #character: found for @grimoireCharacter");
                 inkName = "";
             }
 
             var characterName = tags.FirstOrDefault(tag => tag.category == "characterName")?.value;
             if (characterName == null)
             {
-                logger.ZLogError($"No tag #characterName: found for @grimoireCharacter");
+                Logger.ZLogError($"No tag #characterName: found for @grimoireCharacter");
                 characterName = "";
             }
 
             var description = tags.FirstOrDefault(tag => tag.category == "characterDescription")?.value;
             if (description == null)
             {
-                logger.ZLogError($"No tag #characterDescription: found for @grimoireCharacter");
+                Logger.ZLogError($"No tag #characterDescription: found for @grimoireCharacter");
                 description = "";
             }
 
@@ -1663,24 +1676,24 @@ namespace Selania.Rework.Components
                 out var nextChoice, out var closeChoice);
             if (indexChoice == null)
             {
-                logger.ZLogError($"Second level character has not a choice to get back to the first level!");
+                Logger.ZLogError($"Second level character has not a choice to get back to the first level!");
                 return;
             }
 
             if (secondLevelChoice != null)
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Second level character has a choice to get back to the second level ({secondLevelChoice} #{bookmarkTagCategory}:{secondLevelBookmarkTagValue}) that should not be present");
 
             if (previousChoice != null)
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Second level character has a choice to go to the previous page ({previousChoice} #{bookmarkTagCategory}:{backBookmarkTagValue}) that should not be present");
 
             if (nextChoice != null)
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Second level character has a choice to go to the next page ({nextChoice} #{bookmarkTagCategory}:{forwardBookmarkTagValue}) that should not be present");
 
             if (closeChoice != null)
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Second level character has a choice to close the grimoire ({closeChoice} #{bookmarkTagCategory}:{closeBookmarkTagValue}) that should not be present");
 
             // create the pentacle descriptor
@@ -1688,7 +1701,7 @@ namespace Selania.Rework.Components
             IStoryGrimoire.PentacleDescriptor pentacleDescriptor;
             if (myCharacterInfo == null)
             {
-                logger.ZLogError($"Cannot find a character info in the ink bridge with list name '{inkName}'.");
+                Logger.ZLogError($"Cannot find a character info in the ink bridge with list name '{inkName}'.");
                 pentacleDescriptor = new IStoryGrimoire.PentacleDescriptor(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
             }
             else
@@ -1713,7 +1726,7 @@ namespace Selania.Rework.Components
                                 value = floatValue;
                                 break;
                             default:
-                                logger.ZLogError(
+                                Logger.ZLogError(
                                     $"choices value variable '{variableName}' should be of type int or float, and instead is of type {GetVariableType(variableValue)}");
                                 value = 0;
                                 break;
@@ -1778,24 +1791,24 @@ namespace Selania.Rework.Components
                 out var nextChoice, out var closeChoice);
             if (indexChoice == null)
             {
-                logger.ZLogError($"Second level Franco page has not a choice to get back to the first level!");
+                Logger.ZLogError($"Second level Franco page has not a choice to get back to the first level!");
                 return;
             }
 
             if (secondLevelChoice != null)
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Second level Franco page has a choice to get back to the second level ({secondLevelChoice} #{bookmarkTagCategory}:{secondLevelBookmarkTagValue}) that should not be present");
 
             if (previousChoice != null)
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Second level Franco page has a choice to go to the previous page ({previousChoice} #{bookmarkTagCategory}:{backBookmarkTagValue}) that should not be present");
 
             if (nextChoice != null)
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Second level Franco page has a choice to go to the next page ({nextChoice} #{bookmarkTagCategory}:{forwardBookmarkTagValue}) that should not be present");
 
             if (closeChoice != null)
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Second level Franco page has a choice to close the grimoire ({closeChoice} #{bookmarkTagCategory}:{closeBookmarkTagValue}) that should not be present");
 
             // create the descriptor
@@ -1819,24 +1832,24 @@ namespace Selania.Rework.Components
                 out var nextChoice, out var closeChoice);
             if (indexChoice == null)
             {
-                logger.ZLogError($"Second level rules page has not a choice to get back to the first level!");
+                Logger.ZLogError($"Second level rules page has not a choice to get back to the first level!");
                 return;
             }
 
             if (secondLevelChoice != null)
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Second level rules page has a choice to get back to the second level ({secondLevelChoice} #{bookmarkTagCategory}:{secondLevelBookmarkTagValue}) that should not be present");
 
             if (previousChoice != null)
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Second level rules page has a choice to go to the previous page ({previousChoice} #{bookmarkTagCategory}:{backBookmarkTagValue}) that should not be present");
 
             if (nextChoice != null)
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Second level rules page has a choice to go to the next page ({nextChoice} #{bookmarkTagCategory}:{forwardBookmarkTagValue}) that should not be present");
 
             if (closeChoice != null)
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Second level rules page has a choice to close the grimoire ({closeChoice} #{bookmarkTagCategory}:{closeBookmarkTagValue}) that should not be present");
 
             // create descriptor
@@ -1860,24 +1873,24 @@ namespace Selania.Rework.Components
                 out var nextChoice, out var closeChoice);
             if (indexChoice == null)
             {
-                logger.ZLogError($"Second level appendix has not a choice to get back to the first level!");
+                Logger.ZLogError($"Second level appendix has not a choice to get back to the first level!");
                 return;
             }
 
             if (secondLevelChoice != null)
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Second level appendix has a choice to get back to the second level ({secondLevelChoice} #{bookmarkTagCategory}:{secondLevelBookmarkTagValue}) that should not be present");
 
             if (previousChoice != null)
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Second level appendix has a choice to go to the previous page ({previousChoice} #{bookmarkTagCategory}:{backBookmarkTagValue}) that should not be present");
 
             if (nextChoice != null)
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Second level appendix has a choice to go to the next page ({nextChoice} #{bookmarkTagCategory}:{forwardBookmarkTagValue}) that should not be present");
 
             if (closeChoice != null)
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Second level appendix has a choice to close the grimoire ({closeChoice} #{bookmarkTagCategory}:{closeBookmarkTagValue}) that should not be present");
 
             // produce descriptor
@@ -1911,11 +1924,11 @@ namespace Selania.Rework.Components
             var leftPageDescription =
                 mainTags.FirstOrDefault(t => t.category == leftPageDescriptionCategory)?.value ?? "";
             var leftGlyph1Name = mainTags.FirstOrDefault(t => t.category == leftPageGlyph1Category)?.value;
-            if (leftGlyph1Name == null) logger.ZLogError($"Missing {leftPageGlyph1Category} tag.");
+            if (leftGlyph1Name == null) Logger.ZLogError($"Missing {leftPageGlyph1Category} tag.");
             var leftGlyph1 =
                 GetGlyphFromName(leftGlyph1Name ?? "air");
             var leftGlyph2Name = mainTags.FirstOrDefault(t => t.category == leftPageGlyph2Category)?.value;
-            if (leftGlyph2Name == null) logger.ZLogError($"Missing {leftPageGlyph2Category} tag.");
+            if (leftGlyph2Name == null) Logger.ZLogError($"Missing {leftPageGlyph2Category} tag.");
             var leftGlyph2 =
                 GetGlyphFromName(leftGlyph2Name ?? "water");
             var leftHeader = new IStoryGrimoire.ThirdLevelSigilsGrimoirePageSideDescriptor(leftPageTitle == "",
@@ -1925,11 +1938,11 @@ namespace Selania.Rework.Components
             var rightPageDescription =
                 mainTags.FirstOrDefault(t => t.category == rightPageDescriptionCategory)?.value ?? "";
             var rightGlyph1Name = mainTags.FirstOrDefault(t => t.category == rightPageGlyph1Category)?.value;
-            if (rightGlyph1Name == null) logger.ZLogError($"Missing {rightPageGlyph1Category} tag.");
+            if (rightGlyph1Name == null) Logger.ZLogError($"Missing {rightPageGlyph1Category} tag.");
             var rightGlyph1 =
                 GetGlyphFromName(rightGlyph1Name ?? "air");
             var rightGlyph2Name = mainTags.FirstOrDefault(t => t.category == rightPageGlyph2Category)?.value;
-            if (rightGlyph2Name == null) logger.ZLogError($"Missing {rightPageGlyph2Category} tag.");
+            if (rightGlyph2Name == null) Logger.ZLogError($"Missing {rightPageGlyph2Category} tag.");
             var rightGlyph2 =
                 GetGlyphFromName(rightGlyph2Name ?? "water");
             var rightHeader = new IStoryGrimoire.ThirdLevelSigilsGrimoirePageSideDescriptor(rightPageTitle == "",
@@ -1972,7 +1985,7 @@ namespace Selania.Rework.Components
                     switch (sigils.Count)
                     {
                         case > 1:
-                            logger.ZLogError($"Found more than one sigil at position {position}");
+                            Logger.ZLogError($"Found more than one sigil at position {position}");
                             return sigils[0];
                         case 1:
                             return sigils[0];
@@ -1989,20 +2002,20 @@ namespace Selania.Rework.Components
                 out var nextChoice, out var closeChoice);
             if (indexChoice == null)
             {
-                logger.ZLogError($"Third level sigils has not a choice to get back to the first level!");
+                Logger.ZLogError($"Third level sigils has not a choice to get back to the first level!");
                 return;
             }
 
             if (secondLevelChoice == null)
             {
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Third level sigils has not a choice to get back to the second level!");
                 return;
             }
 
             if (closeChoice != null)
             {
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Third level sigils has a close choice!");
                 return;
             }
@@ -2063,7 +2076,7 @@ namespace Selania.Rework.Components
                             rightPageContents.Add((true, line));
                             break;
                         default:
-                            logger.ZLogWarning(
+                            Logger.ZLogWarning(
                                 $"Unknown tag {subTag.category} associated to a third level greenhouse content");
                             break;
                     }
@@ -2078,12 +2091,12 @@ namespace Selania.Rework.Components
                 out var nextChoice, out var closeChoice);
             if (indexChoice == null)
             {
-                logger.ZLogInformation($"Third level greenhouse has not a choice to get back to the first level.");
+                Logger.ZLogInformation($"Third level greenhouse has not a choice to get back to the first level.");
             }
 
             if (secondLevelChoice == null)
             {
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Third level greenhouse has not a choice to get back to the second level!");
                 return;
             }
@@ -2109,7 +2122,7 @@ namespace Selania.Rework.Components
                 string actualTitle;
                 if (title == null)
                 {
-                    logger.ZLogWarning($"Could not find tag {titleTag} for third level greenhouse page");
+                    Logger.ZLogWarning($"Could not find tag {titleTag} for third level greenhouse page");
                     actualTitle = "";
                 }
                 else
@@ -2122,7 +2135,7 @@ namespace Selania.Rework.Components
                 string actualPlant;
                 if (plant == null)
                 {
-                    logger.ZLogWarning($"Could not find tag {plantTag} for third level greenhouse page");
+                    Logger.ZLogWarning($"Could not find tag {plantTag} for third level greenhouse page");
                     actualPlant = "";
                 }
                 else
@@ -2136,7 +2149,7 @@ namespace Selania.Rework.Components
                 switch (status)
                 {
                     case null:
-                        logger.ZLogWarning($"Could not find tag {statusTag} for third level greenhouse page");
+                        Logger.ZLogWarning($"Could not find tag {statusTag} for third level greenhouse page");
                         actualStatus = IStoryGrimoire.ThirdLevelGreenhouseStatus.Hidden;
                         break;
                     case "hidden":
@@ -2155,7 +2168,7 @@ namespace Selania.Rework.Components
                         actualStatus = IStoryGrimoire.ThirdLevelGreenhouseStatus.Active;
                         break;
                     default:
-                        logger.ZLogWarning($"Could not recognize {statusTag} value {status}: forcing to 'hidden'");
+                        Logger.ZLogWarning($"Could not recognize {statusTag} value {status}: forcing to 'hidden'");
                         actualStatus = IStoryGrimoire.ThirdLevelGreenhouseStatus.Hidden;
                         break;
                 }
@@ -2204,27 +2217,27 @@ namespace Selania.Rework.Components
 
             if (indexChoice == null)
             {
-                logger.ZLogError($"Third level text has not a choice to get back to the first level!");
+                Logger.ZLogError($"Third level text has not a choice to get back to the first level!");
                 return;
             }
 
             if (previousChoice == null)
             {
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Third level text has not a choice to get to the previous page!");
                 return;
             }
 
             if (nextChoice == null)
             {
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Third level text has not a choice to get to the next page!");
                 return;
             }
 
             if (closeChoice != null)
             {
-                logger.ZLogWarning(
+                Logger.ZLogWarning(
                     $"Third level text has a close choice!");
                 return;
             }
@@ -2262,7 +2275,7 @@ namespace Selania.Rework.Components
                 var currentItem = inkList.Keys.First().itemName;
                 var index = inkVariableLevels.IndexOf(level => level == currentItem);
                 if (index >= 0) return index;
-                logger.ZLogWarning($"Unknown ink level ${currentItem} from variable ${inkVariableName}");
+                Logger.ZLogWarning($"Unknown ink level ${currentItem} from variable ${inkVariableName}");
                 return (int?)null;
             }).Where(i => i.HasValue).Select(i => i!.Value);
         }
@@ -2342,7 +2355,7 @@ namespace Selania.Rework.Components
             var parts = currentText.Split(':');
             if (parts is not { Length: 2 })
             {
-                logger.ZLogError(
+                Logger.ZLogError(
                     $"Tag @sprite expected to be in the form '@sprite:spriteName', but instead was {currentText}");
                 return;
             }
@@ -2404,6 +2417,7 @@ namespace Selania.Rework.Components
             return sb.ToString().Trim();
         }
 
+        /// <inheritdoc />
         public Observable<Unit> VariablesChanged { get; private set; } = null!;
 
         public IEnumerable<(string, string)> GetVariableValues()
@@ -2470,34 +2484,60 @@ namespace Selania.Rework.Components
 
         #region IStorySigilSupport
 
-        private readonly Subject<Observable<IStorySigilSupport.SigilDescriptor?>> _activeSigilInfoSource = new();
+        /// <inheritdoc />
+        public Observable<IStorySigilSupport.SigilDescriptor?> ActiveSigilInfo =>
+            _publishedActiveSigilInfo ?? throw new InvalidOperationException("InkBridge isn't set up");
 
-        private Observable<IStorySigilSupport.SigilDescriptor?>? _activeSigilInfoCache;
+        /// <summary>
+        ///     The subject behind <see cref="SigilInfluence" />.
+        /// </summary>
+        private Subject<Unit>? _activeSigilUsedSubject;
 
         /// <inheritdoc />
-        public Observable<IStorySigilSupport.SigilDescriptor?> ActiveSigilInfo
+        public Observable<Unit> SigilInfluence =>
+            _activeSigilUsedSubject?.AsObservable() ?? throw new InvalidOperationException("InkBridge isn't set up");
+
+        /// <summary>
+        ///     Emits a signal on the <see cref="_activeSigilUsedSubject" /> / <see cref="SigilInfluence" /> observables.
+        /// </summary>
+        /// <exception cref="InvalidOperationException">If the ink bridge hasn't been set-up.</exception>
+        private void EmitSigilInfluence()
         {
-            get
-            {
-                _activeSigilInfoCache ??= CreateActiveSigilInfo();
-                return _activeSigilInfoCache;
-            }
+            (_activeSigilUsedSubject ?? throw new InvalidOperationException("InkBridge isn't set up"))
+                .OnNext(Unit.Default);
         }
 
-        private Observable<IStorySigilSupport.SigilDescriptor?> CreateActiveSigilInfo()
-        {
-            var observable = _activeSigilInfoSource
-                .Prepend(Observable.Never<IStorySigilSupport.SigilDescriptor?>())
-                .Switch();
-            var publishedObservable = observable.Publish();
-            publishedObservable.Connect(); // will never get disposed?
-            return publishedObservable;
-        }
+        /// <summary>
+        ///     A stream of sigil descriptors; each time a new story is started, this subject receives a new stream.
+        /// </summary>
+        private Subject<Observable<IStorySigilSupport.SigilDescriptor?>>? _sigilInfoStreamsSubject;
 
+        /// <summary>
+        ///     A disposable to invoke for disconnecting the replay publishing on the sigil descriptors.
+        /// </summary>
+        private IDisposable? _publishedActiveSigilInfoConnection;
+
+        /// <summary>
+        ///     The actual observable that produces the current sigil info, and replays the last one on connection.
+        /// </summary>
+        private ConnectableObservable<IStorySigilSupport.SigilDescriptor?>? _publishedActiveSigilInfo;
+
+        private void SetupSigilSupport()
+        {
+            // set up the currently used sigil and its usages
+            _sigilInfoStreamsSubject = new Subject<Observable<IStorySigilSupport.SigilDescriptor?>>();
+            _publishedActiveSigilInfo = _sigilInfoStreamsSubject
+                .Switch()
+                .Replay(1);
+            _publishedActiveSigilInfoConnection = _publishedActiveSigilInfo.Connect();
+
+            // set up the application of the active sigil
+            _activeSigilUsedSubject = new Subject<Unit>();
+        }
 
         private void OnStartSigilSupport()
         {
-            _activeSigilInfoSource.OnNext(GetVariableObservable<InkList>(currentSigilVariableName)
+            _sigilInfoStreamsSubject!.OnNext(GetVariableObservable<InkList>(currentSigilVariableName)
                 .CombineLatest(GetVariableObservable<int>(numSigilUsagesVariableName), (i, j) => (i, j))
                 .Select(data =>
                 {
@@ -2508,6 +2548,14 @@ namespace Selania.Rework.Components
                     var glyphs = GetGlyphsFromSigilInkVariableValue(inkList, story);
                     return new IStorySigilSupport.SigilDescriptor(glyphs[0], glyphs[1], glyphs[2], numUsages);
                 }));
+        }
+
+        private void CleanupSigilSupport()
+        {
+            // cleanup all subjects and subscriptions
+            DisposeAndSetToNull(ref _activeSigilUsedSubject);
+            DisposeAndSetToNull(ref _publishedActiveSigilInfoConnection);
+            DisposeAndSetToNull(ref _sigilInfoStreamsSubject);
         }
 
         #endregion

@@ -58,11 +58,13 @@ namespace Selania.Rework.Components.DialogueBox
             // parse the lines that arrive from ink
             var parsedTextInfoObservable = StoryLinear.currentTextObservable.Select(ParseCurrentTextInfo);
 
-            // update the text whenever they change
+            // update the text whenever it changes, and enrich it with sigil information
             parsedTextInfoObservable
                 .CombineLatestWhenFirstChanged(StorySigilSupport.ActiveSigilInfo,
                     (parsedText, sigilDescriptor) => (parsedText, sigilDescriptor))
                 .Subscribe(CurrentTextChanged).AddTo(this);
+
+            StorySigilSupport.SigilInfluence.Subscribe(OnSigilInfluence).AddTo(this);
 
             // handle all the changes for the relationship level
             HandleRelationshipLevel(parsedTextInfoObservable);
@@ -241,7 +243,7 @@ namespace Selania.Rework.Components.DialogueBox
             {
                 Logger.ZLogTrace($"Received a descriptor {sigilDescriptor} from ActiveSigilInfo: show the sigil");
                 dialogueBox.SetSigil(sigilDescriptor.Glyph1, sigilDescriptor.Glyph2, sigilDescriptor.Glyph3,
-                    sigilDescriptor.numUsages);
+                    sigilDescriptor.NumUsages);
             }
         }
 
@@ -320,6 +322,11 @@ namespace Selania.Rework.Components.DialogueBox
                     Logger.ZLogTrace($"Choice index {index}");
                     StoryChoicesSelector.PickChoiceWithIndex(index);
                 });
+        }
+
+        private void OnSigilInfluence(Unit _)
+        {
+            dialogueBox.ApplySigilInfluence();
         }
 
         /// <summary>

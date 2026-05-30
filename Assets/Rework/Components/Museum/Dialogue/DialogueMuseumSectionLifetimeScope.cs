@@ -16,7 +16,7 @@ namespace Selania.Rework.Components.Museum.Dialogue
             builder.RegisterSettings(settings);
             builder.RegisterLogger();
             builder.Register<EmptyStory>(Lifetime.Singleton).As<IStoryLinear>().As<IStoryChoicesSelector>()
-                .As<IStoryInkInfo>().As<IStoryGamerMode>().As<IStoryRelationshipInfo>();
+                .As<IStoryInkInfo>().As<IStoryGamerMode>().As<IStoryRelationshipInfo>().As<IStorySigilSupport>();
             builder.Register<EmptyAudioSystem>(Lifetime.Singleton).As<IAudioSystem>();
         }
 
@@ -37,7 +37,7 @@ namespace Selania.Rework.Components.Museum.Dialogue
         }
 
         private class EmptyStory : IStoryLinear, IStoryChoicesSelector, IStoryInkInfo, IStoryGamerMode,
-            IStoryRelationshipInfo
+            IStoryRelationshipInfo, IStorySigilSupport
         {
             public Observable<IStoryChoicesSelector.ChoicesInfo> choicesObservable =>
                 Observable.Empty<IStoryChoicesSelector.ChoicesInfo>();
@@ -76,6 +76,11 @@ namespace Selania.Rework.Components.Museum.Dialogue
             {
                 return Observable.Return((int?)0).Concat(Observable.Never<int?>());
             }
+
+            public Observable<IStorySigilSupport.SigilDescriptor?> ActiveSigilInfo { get; } =
+                Observable.Never<IStorySigilSupport.SigilDescriptor?>();
+
+            public Observable<Unit> SigilInfluence { get; } = Observable.Never<Unit>();
 
             public int GetRelationshipWith(ISettingsDialogueBox settingsDialogueBox, string characterName)
             {
