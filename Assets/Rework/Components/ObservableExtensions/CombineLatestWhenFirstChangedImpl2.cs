@@ -8,8 +8,9 @@ namespace Selania.Rework.Components.ObservableExtensions
     /// </summary>
     /// <typeparam name="TDriver">Type of the "driver" observable.</typeparam>
     /// <typeparam name="T1">Type of the first source observable.</typeparam>
+    /// <typeparam name="T2">Type of the second source observable.</typeparam>
     /// <typeparam name="TResult">Type of the result.</typeparam>
-    public sealed class CombineLatestWhenFirstChangedImpl<TDriver, T1, TResult> : Observable<TResult>
+    public sealed class CombineLatestWhenFirstChangedImpl2<TDriver, T1, T2, TResult> : Observable<TResult>
     {
         /// <summary>
         ///     The driver observable.
@@ -19,26 +20,34 @@ namespace Selania.Rework.Components.ObservableExtensions
         /// <summary>
         ///     The function that maps the combined values to a result value.
         /// </summary>
-        private readonly Func<TDriver, T1, TResult> _resultSelector;
+        private readonly Func<TDriver, T1, T2, TResult> _resultSelector;
 
         /// <summary>
         ///     The first source observable.
         /// </summary>
         private readonly Observable<T1> _source1;
 
-        public CombineLatestWhenFirstChangedImpl(
+        /// <summary>
+        ///     The first source observable.
+        /// </summary>
+        private readonly Observable<T2> _source2;
+
+        public CombineLatestWhenFirstChangedImpl2(
             Observable<TDriver> driver,
             Observable<T1> source1,
-            Func<TDriver, T1, TResult> resultSelector)
+            Observable<T2> source2,
+            Func<TDriver, T1, T2, TResult> resultSelector)
         {
             _source1 = source1;
+            _source2 = source2;
             _driver = driver;
             _resultSelector = resultSelector;
         }
 
         protected override IDisposable SubscribeCore(Observer<TResult> observer)
         {
-            return new CombineLatestWhenFirstChangedSubscription(observer, _driver, _source1, _resultSelector).Run();
+            return new CombineLatestWhenFirstChangedSubscription(observer, _driver, _source1, _source2, _resultSelector)
+                .Run();
         }
 
         /// <summary>
@@ -47,7 +56,7 @@ namespace Selania.Rework.Components.ObservableExtensions
         private sealed class CombineLatestWhenFirstChangedSubscription : IDisposable
         {
             /// <summary>
-            ///     The driver observable (see <see cref="CombineLatestWhenFirstChangedImpl{TDriver, T1, TResult}._driver" />).
+            ///     The driver observable (see <see cref="CombineLatestWhenFirstChangedImpl2{TDriver,T1,T2,TResult}._driver" />).
             /// </summary>
             private readonly Observable<TDriver> _driver;
 
@@ -67,20 +76,32 @@ namespace Selania.Rework.Components.ObservableExtensions
             private readonly InnerObserver<T1> _observer1;
 
             /// <summary>
+            ///     The observer used to receive values from the first source observable.
+            /// </summary>
+            private readonly InnerObserver<T2> _observer2;
+
+            /// <summary>
             ///     The observer used to receive values from the driver observable.
             /// </summary>
             private readonly InnerObserver<TDriver> _observerDriver;
 
             /// <summary>
             ///     The function that maps the combined values to a result value (see
-            ///     <see cref="CombineLatestWhenFirstChangedImpl{TDriver, T1, TResult}._resultSelector" />).
+            ///     <see cref="CombineLatestWhenFirstChangedImpl2{TDriver,T1,T2,TResult}._resultSelector" />).
             /// </summary>
-            private readonly Func<TDriver, T1, TResult> _resultSelector;
+            private readonly Func<TDriver, T1, T2, TResult> _resultSelector;
 
             /// <summary>
-            ///     The first source observable (see <see cref="CombineLatestWhenFirstChangedImpl{TDriver, T1, TResult}._source1" />).
+            ///     The first source observable (see <see cref="CombineLatestWhenFirstChangedImpl2{TDriver,T1,T2,TResult}._source1" />
+            ///     ).
             /// </summary>
             private readonly Observable<T1> _source1;
+
+            /// <summary>
+            ///     The first source observable (see <see cref="CombineLatestWhenFirstChangedImpl2{TDriver,T1,T2,TResult}._source2" />
+            ///     ).
+            /// </summary>
+            private readonly Observable<T2> _source2;
 
             /// <summary>
             ///     The number of observables that have produced a value.
@@ -93,14 +114,16 @@ namespace Selania.Rework.Components.ObservableExtensions
             private bool _hasValueAll;
 
             public CombineLatestWhenFirstChangedSubscription(Observer<TResult> observer, Observable<TDriver> driver,
-                Observable<T1> source1, Func<TDriver, T1, TResult> resultSelector)
+                Observable<T1> source1, Observable<T2> source2, Func<TDriver, T1, T2, TResult> resultSelector)
             {
                 _observer = observer;
                 _driver = driver;
                 _source1 = source1;
+                _source2 = source2;
                 _resultSelector = resultSelector;
                 _observerDriver = new InnerObserver<TDriver>(this, true);
                 _observer1 = new InnerObserver<T1>(this, false);
+                _observer2 = new InnerObserver<T2>(this, false);
             }
 
             public void Dispose()
@@ -108,6 +131,7 @@ namespace Selania.Rework.Components.ObservableExtensions
                 // by disposing the observers, the subscriptions are disposed too
                 _observerDriver.Dispose();
                 _observer1.Dispose();
+                _observer2.Dispose();
             }
 
             public IDisposable Run()
@@ -117,6 +141,7 @@ namespace Selania.Rework.Components.ObservableExtensions
                     // subscribe to both observables with our special observers
                     _driver.Subscribe(_observerDriver);
                     _source1.Subscribe(_observer1);
+                    _source2.Subscribe(_observer2);
                 }
                 catch
                 {
@@ -133,13 +158,13 @@ namespace Selania.Rework.Components.ObservableExtensions
                 // check if all the observers have received a value
                 if (!_hasValueAll)
                 {
-                    if (!_observerDriver.HasValue || !_observer1.HasValue)
+                    if (!_observerDriver.HasValue || !_observer1.HasValue || !_observer2.HasValue)
                         return;
                     _hasValueAll = true;
                 }
 
                 // they did: invoke OnNext
-                _observer.OnNext(_resultSelector(_observerDriver.Value!, _observer1.Value!));
+                _observer.OnNext(_resultSelector(_observerDriver.Value!, _observer1.Value!, _observer2.Value!));
             }
 
             private void TryPublishOnCompleted(Result result, bool empty)
@@ -154,7 +179,7 @@ namespace Selania.Rework.Components.ObservableExtensions
                     // send the completion message only if both observables are complete, or if one completed when empty
                     // (in this case we will never be able to emit a value ever anyway!)
                     ++_completedCount;
-                    if (!empty && _completedCount != 2)
+                    if (!empty && _completedCount != 3)
                         return;
                     _observer.OnCompleted();
                 }

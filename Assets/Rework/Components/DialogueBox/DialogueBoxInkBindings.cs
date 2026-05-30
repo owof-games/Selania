@@ -61,8 +61,8 @@ namespace Selania.Rework.Components.DialogueBox
 
             // update the text whenever it changes, and enrich it with sigil information
             parsedTextInfoObservable
-                .CombineLatestWhenFirstChanged(StorySigilSupport.ActiveSigilInfo,
-                    (parsedText, sigilDescriptor) => (parsedText, sigilDescriptor))
+                .CombineLatestWhenFirstChanged(StorySigilSupport.ActiveSigilInfo, StoryGamerMode.gamerMode,
+                    (parsedText, sigilDescriptor, gamerMode) => (parsedText, sigilDescriptor, gamerMode))
                 .Subscribe(CurrentTextChanged).AddTo(this);
 
             StorySigilSupport.SigilInfluence.Subscribe(OnSigilInfluence).AddTo(this);
@@ -200,9 +200,9 @@ namespace Selania.Rework.Components.DialogueBox
         ///     Invoked whenever the current text changes.
         /// </summary>
         /// <param name="data">The data about the current text line.</param>
-        private void CurrentTextChanged((ParsedText, IStorySigilSupport.SigilDescriptor?) data)
+        private void CurrentTextChanged((ParsedText, IStorySigilSupport.SigilDescriptor?, bool gamerMode) data)
         {
-            var (parsedText, sigilDescriptor) = data;
+            var (parsedText, sigilDescriptor, gamerMode) = data;
 
             // extract the parts of the parsed text
             var (character, displayName, mood, actualText) = parsedText;
@@ -244,7 +244,7 @@ namespace Selania.Rework.Components.DialogueBox
             {
                 Logger.ZLogTrace($"Received a descriptor {sigilDescriptor} from ActiveSigilInfo: show the sigil");
                 dialogueBox.SetSigil(sigilDescriptor.Glyph1, sigilDescriptor.Glyph2, sigilDescriptor.Glyph3,
-                    sigilDescriptor.NumUsages);
+                    sigilDescriptor.NumUsages, gamerMode);
             }
         }
 

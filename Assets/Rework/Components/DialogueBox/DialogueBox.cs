@@ -326,17 +326,17 @@ namespace Selania.Rework.Components.DialogueBox
         }
 
         public void SetSigil(ISettingsSigils.GlyphType glyph1, ISettingsSigils.GlyphType glyph2,
-            ISettingsSigils.GlyphType glyph3, int numUsages)
+            ISettingsSigils.GlyphType glyph3, int numUsages, bool isGamerMode)
         {
             animator.SetFloat(WordVisibleSpeedAnimatorHash, 1 / Settings.slideInDuration);
             animator.SetBool(WordVisibleAnimatorHash, true);
             sigilTitle.text = "";
             glyph1Image.sprite = SettingsSigils.GetGlyphSprite(glyph1, 0);
-            glyph1Image.color = SettingsSigils.GetGlyphColor(glyph1);
+            glyph1Image.color = !isGamerMode ? Color.black : SettingsSigils.GetGlyphColor(glyph1);
             glyph2Image.sprite = SettingsSigils.GetGlyphSprite(glyph2, 1);
-            glyph2Image.color = SettingsSigils.GetGlyphColor(glyph2);
+            glyph2Image.color = !isGamerMode ? Color.black : SettingsSigils.GetGlyphColor(glyph2);
             glyph3Image.sprite = SettingsSigils.GetGlyphSprite(glyph3, 2);
-            glyph3Image.color = SettingsSigils.GetGlyphColor(glyph3);
+            glyph3Image.color = !isGamerMode ? Color.black : SettingsSigils.GetGlyphColor(glyph3);
             threeUsagesImage.enabled = numUsages >= 3;
             twoUsagesImage.enabled = numUsages >= 2;
             oneUsageImage.enabled = numUsages >= 1;

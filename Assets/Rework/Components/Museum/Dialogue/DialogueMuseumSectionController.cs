@@ -106,13 +106,13 @@ namespace Selania.Rework.Components.Museum.Dialogue
         public void SetSigil1()
         {
             dialogueBox.SetSigil(ISettingsSigils.GlyphType.Aether, ISettingsSigils.GlyphType.Air,
-                ISettingsSigils.GlyphType.Earth, 3);
+                ISettingsSigils.GlyphType.Earth, 3, true);
         }
 
         public void SetSigil2()
         {
             dialogueBox.SetSigil(ISettingsSigils.GlyphType.Fire, ISettingsSigils.GlyphType.Water,
-                ISettingsSigils.GlyphType.Aether, 1);
+                ISettingsSigils.GlyphType.Aether, 1, false);
         }
 
         public void HideSigil()
