@@ -571,7 +571,7 @@ MonoBehaviour:
     <minimumLogLevel>k__BackingField: 0
   _consoleProviderSettings:
     categorySettingsArray:
-    - <categoryPrefix>k__BackingField: Selania.Rework.Components.DebuggingWindow
+    - <categoryPrefix>k__BackingField: Selania.Rework.Components.DialogueBox.DialogueBoxInkBindings
       <minimumLogLevel>k__BackingField: 0
     <minimumLogLevel>k__BackingField: 2
   <CrossFadeAnimationDurationForEvolvingObjects>k__BackingField: 1

@@ -307,7 +307,7 @@ namespace Selania.Rework.Components.DialogueBox
         {
             animator.SetFloat(VisibleSpeedAnimatorHash, 1 / Settings.slideInDuration);
             animator.SetBool(VisibleAnimatorHash, true);
-            growingContainer.immediatelyCompleteSizeAnimation = false;
+            growingContainer.ImmediatelyCompleteSizeAnimation = false;
         }
 
         /// <summary>
@@ -427,7 +427,7 @@ namespace Selania.Rework.Components.DialogueBox
         public void HideAnimationCompleted()
         {
             // clear all the contents: portrait, ink and text
-            growingContainer.immediatelyCompleteSizeAnimation = true;
+            growingContainer.ImmediatelyCompleteSizeAnimation = true;
             portraitContainer.ClearImages();
             SetInkStatus(0, 0);
             foreach (Transform content in textLinesContainer.transform) Destroy(content.gameObject);

@@ -53,19 +53,28 @@ namespace Selania.Rework.Components.DialogueBox
 
         private void Start()
         {
+            /* INK => DIALOGUE BOX */
+
+            // parse the lines that arrive from ink
             var parsedTextInfoObservable = StoryLinear.currentTextObservable.Select(ParseCurrentTextInfo);
 
-            parsedTextInfoObservable.Subscribe(CurrentTextChanged).AddTo(this);
+            // update the text whenever they change
+            parsedTextInfoObservable
+                .CombineLatestWhenFirstChanged(StorySigilSupport.ActiveSigilInfo,
+                    (parsedText, sigilDescriptor) => (parsedText, sigilDescriptor))
+                .Subscribe(CurrentTextChanged).AddTo(this);
 
+            // handle all the changes for the relationship level
             HandleRelationshipLevel(parsedTextInfoObservable);
 
-            StoryLinear.conversationInProgressObservable.Subscribe(ConversationInProgress).AddTo(this);
+            // hide the dialogue box if there's no conversation
+            StoryLinear.conversationInProgressObservable.Subscribe(HideBoxIfNoConversationIsInProgress).AddTo(this);
 
+            // show an image if requested
             StoryLinear.imageObservable.Subscribe(OnImage).AddTo(this);
 
+            // show choices if requested
             StoryChoicesSelector.choicesObservable.Subscribe(ChoicesChanged).AddTo(this);
-
-            dialogueBox.continueRequestsObservable.Subscribe(ContinueActionOnPerformed).AddTo(this);
 
             // hook to all ink variables, and update the ink only when it's the current speaker
             foreach (var c in SettingsDialogueBox.characterInkVariables)
@@ -73,16 +82,13 @@ namespace Selania.Rework.Components.DialogueBox
                 SubscribeToCharacterInk(c.Character, c.InkVariable);
             }
 
-            StorySigilSupport.ActiveSigilInfo
-                .Subscribe(descriptor =>
-                {
-                    if (descriptor == null)
-                        dialogueBox.HideSigil();
-                    else
-                        dialogueBox.SetSigil(descriptor.Glyph1, descriptor.Glyph2, descriptor.Glyph3,
-                            descriptor.numUsages);
-                })
-                .AddTo(this);
+            /* DIALOGUE BOX => INK */
+
+            // continue the story if a continue input has been received
+            dialogueBox.continueRequestsObservable.Subscribe(ContinueActionOnPerformed).AddTo(this);
+
+            // choice selection should also be exposed as an observable on dialogueBox; instead, it's a callback in
+            // dialogueBox.AddChoices, which is not architecturally consistent
         }
 
         private void HandleRelationshipLevel(Observable<ParsedText> parsedTextInfoObservable)
@@ -143,7 +149,7 @@ namespace Selania.Rework.Components.DialogueBox
         ///     Invoked to inform whether there's a conversation going on or not.
         /// </summary>
         /// <param name="isInProgress"><c>true</c> if a conversation is in progress, <c>false</c> otherwise.</param>
-        private void ConversationInProgress(bool isInProgress)
+        private void HideBoxIfNoConversationIsInProgress(bool isInProgress)
         {
             if (isInProgress) return;
             dialogueBox.Hide();
@@ -171,6 +177,11 @@ namespace Selania.Rework.Components.DialogueBox
             if (StoryLinear.canContinue) StoryLinear.Continue();
         }
 
+        /// <summary>
+        ///     Extract all the possible information from a line of text in the form of a <see cref="ParsedText" />.
+        /// </summary>
+        /// <param name="currentTextInfo">Information about the current line.</param>
+        /// <returns>The corresponding parsed text.</returns>
         private ParsedText ParseCurrentTextInfo(
             IStoryLinear.CurrentTextInfo currentTextInfo)
         {
@@ -185,26 +196,31 @@ namespace Selania.Rework.Components.DialogueBox
         /// <summary>
         ///     Invoked whenever the current text changes.
         /// </summary>
-        /// <param name="parsedText">The data about the current text line.</param>
-        private void CurrentTextChanged(ParsedText parsedText)
+        /// <param name="data">The data about the current text line.</param>
+        private void CurrentTextChanged((ParsedText, IStorySigilSupport.SigilDescriptor?) data)
         {
+            var (parsedText, sigilDescriptor) = data;
+
+            // extract the parts of the parsed text
             var (character, displayName, mood, actualText) = parsedText;
 
+            // remember who was the last character speaking, and notify that to listeners
             _lastSpeakingCharacter.Value = character;
 
             if (displayName != _lastSpeakingDisplayName && character != null && displayName != null)
             {
+                // if the speaker changed in any way (display name or character), emit the line of text with the speaker header 
                 Logger.ZLogTrace($"Previous speaker was {_lastSpeakingCharacter}, new one is {character}.");
                 dialogueBox.AddTextLine((character, displayName), actualText);
                 _lastSpeakingDisplayName = displayName;
             }
             else
             {
-                // either the speaker was the same (do not print it), or no speaker was given (AKA it's implied it's
-                // the same as the previous line)
+                // otherwise, either the speaker was the same (do not print it), or no speaker was given (AKA it's implied it's// the same as the previous line)
                 dialogueBox.AddTextLine(null, actualText);
             }
 
+            // set the portrait if specified
             if (character != null && mood != null)
             {
                 Logger.ZLogTrace($"Setting portrait image {character} + {mood}.");
@@ -213,6 +229,19 @@ namespace Selania.Rework.Components.DialogueBox
             else
             {
                 Logger.ZLogTrace($"No portrait to set");
+            }
+
+            // handle the sigil descriptor
+            if (sigilDescriptor == null)
+            {
+                Logger.ZLogTrace($"Received a null descriptor from ActiveSigilInfo: hide the sigil");
+                dialogueBox.HideSigil();
+            }
+            else
+            {
+                Logger.ZLogTrace($"Received a descriptor {sigilDescriptor} from ActiveSigilInfo: show the sigil");
+                dialogueBox.SetSigil(sigilDescriptor.Glyph1, sigilDescriptor.Glyph2, sigilDescriptor.Glyph3,
+                    sigilDescriptor.numUsages);
             }
         }
 
@@ -293,6 +322,13 @@ namespace Selania.Rework.Components.DialogueBox
                 });
         }
 
+        /// <summary>
+        ///     A line of text, parsed according to the convention used for displaying information on the screen.
+        /// </summary>
+        /// <param name="Character">Name of the character, if present in the line.</param>
+        /// <param name="DisplayName">The display name to show for the character, if present in the line.</param>
+        /// <param name="Mood">The mood of the character, if present in the line.</param>
+        /// <param name="ActualText">The actual text to display.</param>
         private record ParsedText(string? Character, string? DisplayName, string? Mood, string ActualText);
     }
 }
