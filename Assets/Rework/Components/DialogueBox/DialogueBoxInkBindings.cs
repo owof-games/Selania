@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Microsoft.Extensions.Logging;
 using R3;
+using Selania.Rework.Components.ObservableExtensions;
 using Selania.Rework.Interfaces;
 using UnityEngine;
 using VContainer;
