@@ -245,7 +245,7 @@
         
 
 
-=== function letters_thirdCharLetters_two()
+===  letters_thirdCharLetters_two 
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -280,6 +280,7 @@
         {grimoire_thirdChar hasnt grimThirdCharLetterTwo:
             //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
             ~  ThirdCharacterLetters = true
+            Blah blah blah
 
                 //E poi procedo con gli effetti delle scelte
                 {
@@ -303,7 +304,7 @@
            ~  ThirdCharacterLetters = false          
 
         }
-
+->->
         
 
     

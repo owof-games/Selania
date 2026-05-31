@@ -70,20 +70,7 @@
     
         
         {charTag(FirstCharacter, "writer")}:            Ciao {player_name}, come stai?
-                                                        Viene chiamato il ricalcolo del feedback relazione e riceviamo un commento.
-                                                        Lo facciamo durante la lettera così si vede la variazione (se decidiamo di caricare l'indicatore di relazione sotto alla lettera)
-            ~ third_char_relationshipFromLiveToLetters()
-        {
-            - thirdChar_relationshipIndicator <= relationshipIndicatorNegativeValue:
-                Commento negativo
-
-            - thirdChar_relationshipIndicator >= relationshipIndicatorPositiveValue:
-                Commento positivo
-
-            - else:
-                Commento neutro
-        }
-
+                                                       
         ~ letters_firstCharLetters_one()
         -> first_char_closing_letters -> main
     
@@ -197,7 +184,8 @@
         -> third_char_closing_letters -> main
 
     = two
-        ~ letters_thirdCharLetters_two()
+
+        -> letters_thirdCharLetters_two ->
         -> third_char_letters_choices.two ->
         -> third_char_closing_letters -> main
     

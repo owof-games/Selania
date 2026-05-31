@@ -323,7 +323,7 @@
         - grimoire_thirdChar has grimThirdCharLetterTwo:
             <b>Seconda lettera</b>
             Saluto. <>
-                ~ letters_thirdCharLetters_two()
+            -> letters_thirdCharLetters_two ->
     }
 
     {
