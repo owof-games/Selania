@@ -597,72 +597,91 @@
 
 
 === function updateSecondCharacterRelation()
-// DA CREARE
-//Step uno: calcolo qual è il colore dominante.
-    {
-        - (secondChar_aether > secondChar_water) && (secondChar_aether > secondChar_fire) && (secondChar_aether > secondChar_air) && (secondChar_aether > secondChar_earth):
-                ~ secondChar_relationshipActualDominantGlyphValue = secondChar_aether
-                ~ secondChar_relationshipActualDominantGlyph  = aetherC
+
+~ temp max = MAX(secondChar_aether, MAX(secondChar_earth, MAX(secondChar_air, MAX(secondChar_water, secondChar_fire))))
+~ temp min = MIN(secondChar_aether, MIN(secondChar_earth, MIN(secondChar_air, MIN(secondChar_water, secondChar_fire))))
+~ temp sum = secondChar_aether + secondChar_earth + secondChar_air + secondChar_water + secondChar_fire
+
+// calcola il risultato
+~ temp result = 2 * (max - min) - sum
+
+// limitalo tra -9 e +9
+{
+	- result < relationship_indicator_minValue:
+		~ result = relationship_indicator_minValue
+	- result > relationship_indicator_maxValue:
+		~ result = relationship_indicator_maxValue
+}
+
+// ritorna il risultato
+~ secondChar_relationshipIndicator  = result
+
+// // DA CREARE
+// //Step uno: calcolo qual è il colore dominante.
+//     {
+//         - (secondChar_aether > secondChar_water) && (secondChar_aether > secondChar_fire) && (secondChar_aether > secondChar_air) && (secondChar_aether > secondChar_earth):
+//                 ~ secondChar_relationshipActualDominantGlyphValue = secondChar_aether
+//                 ~ secondChar_relationshipActualDominantGlyph  = aetherC
     
-        - (secondChar_water > secondChar_aether) && (secondChar_water > secondChar_fire) && (secondChar_water > secondChar_air) && (secondChar_water > secondChar_earth):
-                ~ secondChar_relationshipActualDominantGlyphValue = secondChar_water
-                ~ secondChar_relationshipActualDominantGlyph  = waterC
+//         - (secondChar_water > secondChar_aether) && (secondChar_water > secondChar_fire) && (secondChar_water > secondChar_air) && (secondChar_water > secondChar_earth):
+//                 ~ secondChar_relationshipActualDominantGlyphValue = secondChar_water
+//                 ~ secondChar_relationshipActualDominantGlyph  = waterC
            	
         
-        - (secondChar_fire > secondChar_water) && (secondChar_fire > secondChar_aether) && (secondChar_fire > secondChar_air) && (secondChar_fire > secondChar_earth):
-                ~ secondChar_relationshipActualDominantGlyphValue = secondChar_fire
-                ~ secondChar_relationshipActualDominantGlyph  = fireC
+//         - (secondChar_fire > secondChar_water) && (secondChar_fire > secondChar_aether) && (secondChar_fire > secondChar_air) && (secondChar_fire > secondChar_earth):
+//                 ~ secondChar_relationshipActualDominantGlyphValue = secondChar_fire
+//                 ~ secondChar_relationshipActualDominantGlyph  = fireC
          
         
-        - (secondChar_earth > secondChar_water) && (secondChar_earth > secondChar_aether) && (secondChar_earth > secondChar_air) && (secondChar_earth > secondChar_fire):
-                ~ secondChar_relationshipActualDominantGlyphValue = secondChar_earth
-                ~ secondChar_relationshipActualDominantGlyph  = earthC
+//         - (secondChar_earth > secondChar_water) && (secondChar_earth > secondChar_aether) && (secondChar_earth > secondChar_air) && (secondChar_earth > secondChar_fire):
+//                 ~ secondChar_relationshipActualDominantGlyphValue = secondChar_earth
+//                 ~ secondChar_relationshipActualDominantGlyph  = earthC
           
         
-        - (secondChar_air > secondChar_water) && (secondChar_air > secondChar_aether) && (secondChar_air > secondChar_earth) && (secondChar_air > secondChar_fire):
-                ~ secondChar_relationshipActualDominantGlyphValue = secondChar_air
-                ~ secondChar_relationshipActualDominantGlyph  = airC
+//         - (secondChar_air > secondChar_water) && (secondChar_air > secondChar_aether) && (secondChar_air > secondChar_earth) && (secondChar_air > secondChar_fire):
+//                 ~ secondChar_relationshipActualDominantGlyphValue = secondChar_air
+//                 ~ secondChar_relationshipActualDominantGlyph  = airC
 
-        - else:
-            //In caso di pareggio, per ora la soluzione è che comunque vada a registrare l'ultimo dominante e il suo valore come quello attuale. L'idea è che il pareggio debba essere per forza temporaneo: nessuna scelta genera un valore di incremento o decremento uguale per due glifi diversi, e quindi la volta successiva comunque riemergerà la "rottura" dell'equilibro.
-            //questa cosa crea due problemi: se faccio all'inizio cinque scelte diverse, se vado avanti a due colori dominanti.
-            ~ secondChar_relationshipLastDominantGlyphValue = secondChar_relationshipActualDominantGlyphValue
-                    ~ secondChar_relationshipLastDominantGlyph = secondChar_relationshipActualDominantGlyph
+//         - else:
+//             //In caso di pareggio problemi: se faccio all'inizio cinque scelte diverse, se vado avanti a due colori dominanti.
+//             ~ secondChar_relationshipLastDominantGlyphValue = secondChar_relationshipActualDominantGlyphValue
+//                     ~ secondChar_relationshipLastDominantGlyph = secondChar_relationshipActualDominantGlyph
               
-    }
+//     }
 
 
 
-//Step due: calcolo il risultato    
-    {
+// //Step due: calcolo il risultato    
+//     {
         
-        - secondChar_relationshipActualDominantGlyph == secondChar_relationshipLastDominantGlyph:
-            {
-                //Se non cambia glifo dominante ma aumenta il valore, cosa buona
-                -secondChar_relationshipActualDominantGlyphValue >= secondChar_relationshipLastDominantGlyphValue:
-                        ~ secondChar_relationshipIndicator ++
+//         - secondChar_relationshipActualDominantGlyph == secondChar_relationshipLastDominantGlyph:
+//             {
+//                 //Se non cambia glifo dominante ma aumenta il valore, cosa buona
+//                 -secondChar_relationshipActualDominantGlyphValue >= secondChar_relationshipLastDominantGlyphValue:
+//                         ~ secondChar_relationshipIndicator ++
                 
-                //Se non cambia glifo dominante ma diminuisce il valore, cosa cattiva
-                -secondChar_relationshipActualDominantGlyphValue < secondChar_relationshipLastDominantGlyphValue:
-                        ~ secondChar_relationshipIndicator --        
-            }
+//                 //Se non cambia glifo dominante ma diminuisce il valore, cosa cattiva
+//                 -secondChar_relationshipActualDominantGlyphValue < secondChar_relationshipLastDominantGlyphValue:
+//                         ~ secondChar_relationshipIndicator --        
+//             }
         
-        //Eccezione con la prima scelta
-        - secondChar_relationshipLastDominantGlyph == ():
-            ~ secondChar_relationshipIndicator = 0
+//         //Eccezione con la prima scelta
+//         - secondChar_relationshipLastDominantGlyph == ():
+//             ~ secondChar_relationshipIndicator = 0
         
-        //Se cambia glifo dominante, cosa brutta    
-        - secondChar_relationshipActualDominantGlyph != secondChar_relationshipLastDominantGlyph:
-            ~ secondChar_relationshipIndicator --
+//         //Se cambia glifo dominante, cosa brutta    
+//         - secondChar_relationshipActualDominantGlyph != secondChar_relationshipLastDominantGlyph:
+//             ~ secondChar_relationshipIndicator --
         
-        //Il resto è neutro        
+//         //Il resto è neutro        
 
-    }
+//     }
 
-    //Aggiorno i valori di tracciamento
-    ~ secondChar_relationshipLastDominantGlyphValue = secondChar_relationshipActualDominantGlyphValue
-    ~ secondChar_relationshipLastDominantGlyph = secondChar_relationshipActualDominantGlyph
-
+//     //Aggiorno i valori di tracciamento
+//     ~ secondChar_relationshipLastDominantGlyphValue = secondChar_relationshipActualDominantGlyphValue
+//     ~ secondChar_relationshipLastDominantGlyph = secondChar_relationshipActualDominantGlyph
+// , per ora la soluzione è che comunque vada a registrare l'ultimo dominante e il suo valore come quello attuale. L'idea è che il pareggio debba essere per forza temporaneo: nessuna scelta genera un valore di incremento o decremento uguale per due glifi diversi, e quindi la volta successiva comunque riemergerà la "rottura" dell'equilibro.
+//             //questa cosa crea due
 
 
 
