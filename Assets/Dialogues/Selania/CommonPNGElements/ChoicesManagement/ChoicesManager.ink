@@ -301,7 +301,7 @@
 
     - FifthCharacter:
         ~ fifthChar_totalChoices ++
-
+        
     - Mentor:
         ~ mentor_totalChoices ++             
 }
