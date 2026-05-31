@@ -10,6 +10,9 @@ VAR tutorial_CarlaRelationshipIndicator = 0
 VAR tutorial_inkActive = false
 VAR tutorial_rereadingActive = false
 
+//Gestione Carla
+VAR tutorial_CarlaRelationshipIndicator_enabled = false
+
 
 === on_movement_tutorial_steps ===
 //Prima di tutto vedo se attivare o meno le variabili legate al livello di rapporto con l3 PNG

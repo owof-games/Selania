@@ -36,6 +36,9 @@
                                             La risposta influenzerà il modo in cui quella persona la vede.
     {charTag(Carla, "neutral")}:            Facciamo una prova.
                                             Ora le racconto una cosa, e lei mi dà la sua opinione.
+
+        ~ tutorial_CarlaRelationshipIndicator_enabled  = true
+
                                             Mio figlio dice che a sessant'anni devo smetterla di farmi la cresta viola.
     {charTag(Carla, "neutral")}:            Gli ho risposto che ha quarant'anni e che ancora non sa lavarsi le mutande da solo.
     {charTag(Carla, "bored")}:              Questo fa di me una cattiva madre?
@@ -62,6 +65,9 @@
     {charTag(Carla, "neutral")}:            Come avrà notato, l'indicatore sotto il mio ritratto è cambiato.
     {charTag(Carla, "sad")}:                Se parla con una persona, e quella persona ha un indicatore sotto al ritratto, vuol dire che l'idea che quella persona si farà di lei è importante per il suo lavoro.
     {charTag(Carla, "bored")}:              Ora disattivo il mio, non voglio che veda quanto mi sta infastidendo.
+
+        ~ tutorial_CarlaRelationshipIndicator_enabled  = false
+        
                                             Le scelte saranno più complesse di quelle dell'esempio, e ogni scelta rappresenta una cosa diversa.
                                             Cosa?
     {charTag(Carla, "bored")}:              Lo chieda all'addetta alla discarica, se non è di nuovo in malattia.
