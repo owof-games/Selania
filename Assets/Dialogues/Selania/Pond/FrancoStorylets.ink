@@ -115,6 +115,19 @@
     {charTag(Franco, "neutral")}:                   Franco è triste per questa cosa, sai?
                                                     Perché vuole davvero aiutare tutti.
                                                     Ed è sicuro di aver dato a {player_name} il giusto consiglio.
+        {
+        - are_two_entities_together(ThirdCharacter, PG):
+        {charTag(ThirdCharacter, "jester")}:        Pensavi tu che mi leggevi con facilità, vero Franchì?
+        }                                            
+        {
+        - are_two_entities_together(FirstCharacter, PG):
+        {charTag(FirstCharacter, "annoyed")}:       Franco, non ti crucciare: per sapere di cosa ha bisogno, {charNameThree} dovrebbe farsi delle domande.
+                                                    E non credo sia il suo forte.
+            {
+            - are_two_entities_together(ThirdCharacter, PG):
+            {charTag(ThirdCharacter, "bored")}:     Almeno non sono la regina delle paranoie.
+            }                                          
+        }                                            
     {charTag(Franco, "question")}:                  Cosa è andato storto?
     {charTag(Franco, "neutral")}:                   A parte il naso di zia Graaak.
     {charTag(Franco, "reading")}:	                Franco indagherà su questa cosa, promesso.
@@ -122,7 +135,7 @@
                                                     Quella.
     {charTag(Franco, "question")}:                  Quale?                                                              
     {charTag(Franco, "party")}:                     Ma ciao girino!
-    
+
     ~ grimoire_franco += grimFrancoThirdIngredientFailure
 ->->
 
