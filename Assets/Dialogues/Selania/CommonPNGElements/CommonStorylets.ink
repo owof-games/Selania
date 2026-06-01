@@ -970,71 +970,72 @@
         {charTag(ThirdCharacter, "angry")}:                                     Dio quanto odio te e questo cazzo di posto!
                                                                                 Non ce la fai proprio a non farti i cazzi miei, vero?
                 {
-                - thirdChar_firstCharRage == true:                              Come quando prima stavo parlando a {player_name} di come mi ha trattato di merda Dona, e tu lì a farmi le pulci sull'età.
-                                                                                C: <i>Le pulci sull'età.</i>
-                                                                                C: Ci sei uscito che era minorenne, te ne rendi conto!?!
+                - thirdChar_firstCharRage == true:                              
+                {charTag(ThirdCharacter, "angry")}:                             Come quando prima stavo parlando a {player_name} di come mi ha trattato di merda Dona, e tu lì a farmi le pulci sull'età.
+                {charTag(FirstCharacter, "annoyed")}:                           <i>Le pulci sull'età.</i>
+                                                                                Ci sei uscito che era minorenne, te ne rendi conto!?!
                 }
-                                                                                C: E sono cazzi miei se vai in giro a dire stronzate che mi riguardano.
-                                                                                Ma cosa ti riguarda cosa?!? 
+        {charTag(FirstCharacter, "annoyed")}:                                   E sono cazzi miei se vai in giro a dire stronzate che mi riguardano.
+        {charTag(ThirdCharacter, "bored")}:                                     Ma cosa ti riguarda cosa, egocentrica del cazzo?
                                                                                 Stavo solo parlando con Ricciolino!
-                                                                                C: Sì, dicendogli sostanzialmente che tutte le donne sono delle, ah, non me lo far dire.
-                                                                                // C: E solo perché una ragazza ha deciso di lasciarti.
-                                                                                Non ho detto quello.
-                                                                                C: Ah no?
-                                                                                C: E allora tutto quel discorso sulle ragazze che ti smollano appena ne trovano un più bono o ricco o famoso?
-                                                                                Dimmi che non è vero.
-                                                                                C: Non è vero.
-                                                                                Dona ha letteralmente fatto così.
-                                                                                C: Dona ti ha lasciato perché aveva bisogno di capire chi fosse, non per andare con un altro tipo.
-                                                                                C: Non è la stessa cosa, punto.
-                                                                                Per te.
+        {charTag(FirstCharacter, "annoyed")}:                                   Sì, dicendogli sostanzialmente che tutte le donne sono delle, ah, non me lo far dire.
+        {charTag(ThirdCharacter, "neutral")}:                                   Non ho detto quello.
+        {charTag(FirstCharacter, "annoyed")}:                                   Ah no?
+                                                                                E allora tutto quel discorso sulle ragazze che ti smollano appena ne trovano un più bono o ricco o famoso?
+        {charTag(ThirdCharacter, "angry")}:                                     Dimmi che non è vero.
+        {charTag(FirstCharacter, "neutral")}:                                   Non è vero.
+        {charTag(ThirdCharacter, "bored")}:                                     Dona ha letteralmente fatto così.
+        {charTag(FirstCharacter, "neutral")}:                                   Da quello che hai raccontato, Dona ti ha lasciato perché aveva bisogno di capire chi fosse, non per andare con un altro tipo.
+                                                                                Non è la stessa cosa, punto.
+        {charTag(ThirdCharacter, "neutral")}:                                   Per te.
                                                                                 Per me lo è stato.
-                                                                                È sparita dopo una vita assieme.
-                                                                                Mi ha trattato come spazzatura!
-                                                                                C: E quindi?
-                                                                                C: Mettiamo pure che lei è stata stronza, non è che questo rende tutte le donne stronze.
-                                                                                Ma fate tutte così!
-                                                                                C: Tutte chi?
-                                                                                C: Io non l'ho fatto.
-                                                                                C: Mia madre non l'ha fatto.
-                                                                                C: Tua madre?
-                                                                                Lascia fuori mia madre da questa roba.
-                                                                                C: Ce l'hai portata te nel momento in cui hai detto "Tutte le donne sono troie", no?
-                                                                                E allora anche la roba di <i>Tutti gli uomini sono stupratori</i> che dite sempre voi, no?
+        {charTag(ThirdCharacter, "melanchonic")}:                               È sparita dopo una vita assieme.
+        {charTag(ThirdCharacter, "angry")}:                                     Mi ha trattato come spazzatura!
+        {charTag(FirstCharacter, "neutral")}:                                   E quindi?
+                                                                                Mettiamo pure che lei è stata stronza, non è che questo rende tutte le donne stronze.
+        {charTag(ThirdCharacter, "bored")}:                                     Ma fate tutte così!
+        {charTag(FirstCharacter, "bored")}:                                     Tutte chi?
+        {charTag(FirstCharacter, "neutral")}:                                   Io non l'ho fatto.
+                                                                                Mia madre non l'ha fatto.
+                                                                                Tua madre?
+        {charTag(ThirdCharacter, "angry")}:                                     Lascia fuori mia madre da questa roba.
+        {charTag(FirstCharacter, "neutral")}:                                   Ce l'hai portata te nel momento in cui hai detto "Tutte le donne sono troie", no?
+        {charTag(ThirdCharacter, "neutral")}:                                   E allora anche la roba di <i>Tutti gli uomini sono stupratori</i> che dite sempre voi, no?
                                                                                 Tuo padre è uno stupratore?
-                                                                                C: Che sappia, no.
-                                                                                C: Ma so anche che quando i suoi amici fanno battute di merda sulle donne, battute tipo "Tutte le donne sono troie", lui se ne sta zitto e non dice nulla.
-                                                                                C: E quindi magari mio padre non ha mai fatto male a una donna.
-                                                                                C: Ma ha lasciato che qualcuno pensasse che fosse normale definirle troie.
-                                                                                C: E quando una persona smette di essere una persona ma qualcosa da comprare, a quel punto diventa qualcosa da usare.
-                                                                                Io non ho mai trattato Dona come qualcosa da comprare.
-                                                                                C: Ma quando ha deciso che la vostra relazione non la faceva più stare bene, invece di accettare la cosa, ti sei solo incazzato.
-                                                                                C: Come quando c'è la partita e il telecomando smette di funzionare.
-                                                                                C: O come quando la macchina decide di non partire e sei in ritardo per il lavoro.
-                                                                                C: Come con un oggetto.
-                                                                                Sei un dito in culo, {charNameOne}.
+        {charTag(FirstCharacter, "neutral")}:                                   Che sappia, no.
+        {charTag(ThirdCharacter, "neutral")}:                                   Vedi che...
+        {charTag(FirstCharacter, "neutral")}:                                   Ma so anche che quando i suoi amici fanno battute di merda sulle donne, battute tipo "Tutte le donne sono troie", lui se ne sta zitto e non dice nulla.
+                                                                                E quindi magari mio padre non ha mai fatto male a una donna.
+                                                                                Ma ha lasciato che qualcuno pensasse che fosse normale definirle troie.
+                                                                                E quando una persona smette di essere una persona ma qualcosa da comprare, a quel punto diventa qualcosa da usare.
+        {charTag(ThirdCharacter, "neutral")}:                                   Io non ho mai trattato Dona come qualcosa da comprare.
+        {charTag(FirstCharacter, "neutral")}:                                   Ma quando ha deciso che la vostra relazione non la faceva più stare bene, invece di accettare la cosa, ti sei solo incazzato.
+                                                                                Come quando c'è la partita e il telecomando smette di funzionare.
+                                                                                O come quando la macchina decide di non partire e sei in ritardo per il lavoro.
+                                                                                Come con un oggetto.
+        {charTag(ThirdCharacter, "bored")}:                                     Sei un dito in culo, {charNameOne}.
                                                                                 Madonna se sei un dito in culo.
-                                                                                C: Ma non hai detto che ho torto.
+        {charTag(FirstCharacter, "curious")}:                                   Ma non hai detto che ho torto.
 
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
                 {charTag(ThirdCharacter, "jester")}:                            Vecio per favore, diglielo di lasciarmi in pace.
-                                                                                Diglielo che non siamo tutti come pensa lei.
+                {charTag(ThirdCharacter, "neutral")}:                           Diglielo che non siamo tutti come pensa lei.
 
                 - thirdChar_recordedPlayerPronoun == her:                       
-                                                                                {player_name} ti prego, falla ragionare.
+                {charTag(ThirdCharacter, "neutral")}:                           {player_name} ti prego, falla ragionare.
                                                                                 Diglielo che non siamo tutti dei mostri come pensa lei.
                                                                                 Che ci sono dei bravi ragazzi.
 
                 - else:
-                {charTag(ThirdCharacter, "jester")}:                            {player_name}, te che stai fuori da queste cose tra donne e uomini, falla ragionare!
+                {charTag(ThirdCharacter, "neutral")}:                            {player_name}, te che stai fuori da queste cose tra donne e uomini, falla ragionare!
                 }                                                                
                                                                                 Diglielo che sono un bravo ragazzo.
                                                                                 Un coglione magari, ma bravo.
 
         //In una delle risposte lui dice che "loro" però se ne possono andare e ricominciare, mentre gli uomini no.
 
-        + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+        + \ {charTag(PG, "neutral")}:                                           Qui dà ragione a Boccale in qualche modo.
                 -> glyph_choice_manager(false, airC)->
 
         + \ {charTag(PG, "neutral")}:                                           Cosa ti renderà più stabile? Da quali fondamenta parti?
@@ -1050,12 +1051,12 @@
                 -> glyph_choice_manager(false, aetherC)->
         -
 
-                                                                                C: {charNameThree}: io non metto in discussione che tu sia ferito, e che la fine della relazione con Donatella sia stata dolorosa.
-                                                                                C: Ma non serve trasformare un problema personale in un problema strutturale per meritare cura e supporto.
-                                                                                C: Hai tutto il diritto di chiederlo.
-                                                                                C: Non da me perché sinceramente fatico a sopportarti.
-                                                                                C: Ma chiedi aiuto.
-                                                                                C: Ne hai bisogno.
+        {charTag(FirstCharacter, "neutral")}:                                   {charNameThree}: io non metto in discussione che tu sia ferito, e che la fine della relazione con Donatella sia stata dolorosa.
+                                                                                Ma non serve trasformare un problema personale in un problema strutturale per meritare cura e supporto.
+                                                                                Hai tutto il diritto di chiederlo.
+        {charTag(FirstCharacter, "bored")}:                                     Non da me perché sinceramente fatico a sopportarti.
+        {charTag(FirstCharacter, "neutral")}:                                   Ma chiedi aiuto.
+                                                                                Ne hai bisogno.
 
     -> first_char_closing_storylet ->
     -> third_char_closing_storylet ->
