@@ -728,7 +728,7 @@
                                                                                 Mancavano sei mesi.
                                                                                 Mia sorella ci aveva già aiutati a trovare il fotografo.
                                                                                 Mio cognato c'aveva trovato uno sconto per i fiori con gente del teatro.
-                                                                                E mia suocera, la mia futura suocera, aveva aiutato Dona a trovarse il vestito.
+                                                                                E mia suocera, la mia futura suocera, aveva aiutato Dona a trovare il vestito.
                                                                                 Un vestito da principessa.
                                                                                 M: Devi starci ancora malissimo.
                                                                                 Già.
@@ -740,7 +740,7 @@
                                                                                 M: Hanno provato a metterti in guardia?
                                                                                 E che sono, i miei babysitter?
                                                                                 M: No, intendo che...
-                                                                                Sono stato uno stronzo io, a credere che una così poteva innamorarsi di me, che c'entrano loro, boh.
+                                                                                Sono stato uno stronzo io, a credere che una così poteva innamorarsi di me, che c'entrano loro, no?
                 {
                 - fifthChar_slurDetector > 3:
                                                                                 M: {charNameThree}, non serve che tu sia sempre così oppositivo, su.
@@ -754,16 +754,15 @@
                                                                                 Beh: sveglia.
                                                                                 Non vi è dovuto nulla!
                                                                                 M: {charNameThree}, respira un attimo.
-                                                                                Non mi dire cosa fare.
+                                                                                Non mi dire cosa fare, vecia!
                                                                                 M: BASTA!
-                                                                                M: Ti ho fatto questa domanda perché penso a altri momenti.
-                                                                                M: Momenti in cui le persone vicine mi hanno detto "Ma è ovvio che questa cosa ti stava facendo male" solo quando ho avuto il coraggio di venirne fuori da sola.
-                                                                                M: E volevo capire se i tuoi amici ci sono stati per te <i>prima</i> della fine della relazione con Dona, o solo quando la bomba è scoppiata.</i>
+                                                                                M: Ti ho fatto questa domanda perché ho vissuto omenti in cui le persone vicine mi hanno detto "Ma è ovvio che questa cosa ti stava facendo male" solo quando ho avuto il coraggio di venirne fuori da sola.
+                                                                                M: E volevo capire se i tuoi amici ci sono stati per te <i>prima</i> della fine della relazione con Dona, o solo quando la bomba è scoppiata.
                                                                                 M: Perché in quel caso ho imparato a mie spese che quella roba lì non è amicizia.
                                                                                 Questo vale per te, vecia.
                                                                                 Magari lo capisco anche il tuo punto di vista.
                                                                                 E mi spiace se mi sono incazzato.
-                                                                                Ma te lo dico a te e lo dico a {player_name} così come lo sanno anche i miei amici.
+                                                                                Ma te lo dico a te e lo dico a {player_name}.
                                                                                 Io esco con le persone per distrarmi, non per pensare alle cose che non vanno.
                                                                                 E se uno mi viene a giudicare cose sulla mia vita senza che gliel'abbia chiesto, quello non è un mio amico.
                                                                                 Punto.
@@ -775,7 +774,7 @@
         + \ {charTag(PG, "neutral")}:                                           Cosa ti renderà più stabile? Da quali fondamenta parti?
                 -> glyph_choice_manager(false, earthC)->
                 
-        + \ {charTag(PG, "neutral")}:                                           Preferisci fare che parlare, per questo il Poggi ha tirato su il gruppo di calcetto quando stavi male.
+        + \ {charTag(PG, "neutral")}:                                           Fare invece che parlare, come il Poggi che ha tirato su il gruppo di calcetto quando stavi male.
                 -> glyph_choice_manager(false, fireC)->
                                                                                 Esatto, {player_name}!
 
@@ -785,17 +784,21 @@
                                                                                 E poi la fiducia è una cosa esagerata.
                                                                                 Niente e nessuno c'è per sempre, e alla fine ognuno pensa ai cazzi propri.
                 
-        + \ {charTag(PG, "neutral")}:                                           xxx
+        + \ {charTag(PG, "neutral")}:                                           Diamogli fastidio.
                 -> glyph_choice_manager(false, aetherC)->
 -
+                                                                                M: Mi permetto però di dirti una cosa, {charNameFive}.
+                                                                                M: Le cose che proviamo esistono, a prescindere che le comunichiamo o meno.
+                                                                                M: E se non le tiriamo fuori volontariamente, troveranno il loro modo di uscire.
+                                                                                M: Spesso facendo o facendoci del gran male.
 {
         - are_two_entities_together(FirstCharacter, PG):
         {
         - grimoire_firstChar has grimFirstThirdChar:
-                {charTag(FirstCharacter, "annoyed")}:                   Commento infastidito di Chitarra.
+                {charTag(FirstCharacter, "annoyed")}:                           Commento infastidito di Chitarra.
 
         - else:
-                {charTag(FirstCharacter, "neutral")}:                   Commento empatico di Chitarra.    
+                {charTag(FirstCharacter, "neutral")}:                           Commento empatico di Chitarra.    
         }
 }   
 
