@@ -275,43 +275,49 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
         {charTag(FirstCharacter, "annoyed")}:                                   Dai, {thirdChar_storyStatus == story_storyRemote: sei stata|sei} sottona totale con lui.
-                                                                                M: Ma non è vero {charNameOne}.
-                                                                                M: Solo, mi spiace per lui.
-                                                                                Ti spiace per cosa?
-                                                                                {thirdChar_storyStatus == story_storyRemote: fosse|sia}
+        {charTag(Mentor, "sad")}:                                               Ma non è vero {charNameOne}.
+                                                                                Solo, mi spiace per lui.
+        {charTag(FirstCharacter, "annoyed")}:                                   Ti spiace per cosa?
                                                                                 Di quanto {thirdChar_storyStatus == story_storyRemote: fosse|sia} idiota?
-                                                                                M: No, c'è qualcosa...
-                                                                                M: Non ci sono cose del tuo passato che avresti voluto cambiare?
-                                                                                M: Ma non puoi più farlo?
-                                                                                A voglia.
-                                                                                Ma nessuna che ha abbia a che fare con un tizio che dice di stare bene a ruota e passa il tempo a parlare di merda della sua ex.
-        {
-        -thirdChar_storyStatus == story_storyRemote: 
-                                                                                E poi prende, sbrocca, e se ne va così.
-                                                                                Già.
-        }
-        {
-        - fifthChar_slurDetector > 3:
-                                                                                Certo, {thirdChar_storyStatus == story_storyRemote: mi avrebbe fatto piacere mi avesse ascoltato|mi farebbe piacere mi ascoltasse} quando gli {thirdChar_storyStatus == story_storyRemote: chiedevo|ho chiesto} di non dire parolacce.
+        {charTag(Mentor, "neutral")}:                                           No, c'è qualcosa...
+        {charTag(Mentor, "sad")}:                                               Non ci sono cose del tuo passato che avresti voluto cambiare?
+                                                                                Ma non puoi più farlo?
+        {charTag(FirstCharacter, "sad")}:                                       A voglia.
+        {charTag(FirstCharacter, "annoyed")}:                                   Ma nessuna che ha abbia a che fare con un quarantaquattrenne che dice di stare bene a ruota e {thirdChar_storyStatus == story_storyRemote: ha passato|passa} il tempo a parlare di merda della sua ex.
+                {
+                -thirdChar_storyStatus == story_storyRemote: 
+                {charTag(FirstCharacter, "annoyed")}:                           E poi prende, sbrocca, e se ne va così, fregandosene del lavoro tuo o di {player_name}.
+                {charTag(Mentor, "neutral")}:                                   Non tutti gli scatti di rabbia sono contro gli altri, {charNameOne}.
+                }
+                {
+                - fifthChar_slurDetector > 3:
+                {charTag(Mentor, "sad")}:                                       Certo, {thirdChar_storyStatus == story_storyRemote: mi avrebbe fatto piacere mi avesse ascoltato|mi farebbe piacere mi ascoltasse} quando gli {thirdChar_storyStatus == story_storyRemote: chiedevo|ho chiesto} di non dire parolacce.
                                                                                 Che {charNameTwo} {thirdChar_storyStatus == story_storyPostal: era|è} un pappagallo.
-        }                                                                        
-                                                                                M: Ma.
-                                                                                Ma?
-                                                                                M: A volte una persona dice o fa cose orribili perché ha conosciuto solo un tipo di mondo.
-                                                                                M: Un tipo di storie.
-                                                                                M: Anche per questo siamo qui, no?
-                                                                                M: Per guardare non solo la nostra, la vostra storia in modo diverso.
-                                                                                M: Ma anche il modo in cui guardate il mondo.
-                                                                                M: Le due cose forse non sono così diverse.
-                                                                                Strega: Concordiamo.
-                                                                                Ma questo significa alla fin della fiera che chi sta male per i comportamenti di questi figuri debba anche prendersi il carico di tenere a bada la propria rabbia e passare del tempo ad educarli?
-                                                                                Strega: Non educhiamo, mostriamo.
-                                                                                M: Non è quello che facciamo coi bambini?
-                                                                                M: Partire dalla nostra conoscenza ed esperienza e istruirli per far sì che non debbano ripetere gli stessi errori da capo?
+                        {
+                        - are_two_entities_together(SecondCharacter, PG):
+                        {charTag(SecondCharacter, "energy")}:                   Hanno una memoria supermegagigantissima!
+                        {charTag(FirstCharacter, "affectionate")}:              Non penso fosse quello il punto, piccoletto. 
+                        }
+                }                                                                        
+
+        {charTag(Mentor, "neutral")}:                                           A volte una persona dice o fa cose orribili perché ha conosciuto solo un tipo di mondo.
+                                                                                Un tipo di storie.
+                                                                                Anche per questo siamo qui, no?
+                                                                                Per guardare non solo la nostra, la vostra storia in modo diverso.
+                                                                                Ma anche il modo in cui guardate il mondo.
+        {charTag(Mentor, "sad")}:                                               Le due cose forse non sono così diverse.
+        {charTag(TheWitch, "{witch_state()}")}:                                 Concordiamo.
+        {charTag(FirstCharacter, "annoyed")}:                                   Ma questo significa alla fin della fiera che chi sta male per i comportamenti di questi figuri debba anche prendersi il carico di tenere a bada la propria rabbia e passare del tempo ad educarli?
+        {charTag(TheWitch, "{witch_state()}")}:                                 Non educare, mostrare.
+        {charTag(Mentor, "neutral")}:                                           Non è quello che facciamo coi bambini?
+                                                                                Partire dalla nostra conoscenza ed esperienza e istruirli per far sì che non debbano ripetere gli stessi errori da capo?
+        {charTag(FirstCharacter, "neutral")}:                                   {charNameFive}, giuro che ti voglio bene.                                                                        
                                                                                 Ma qui non si tratta di un bambino.
                                                                                 E se devo spendere le mie energie, preferisco farlo per chi sta male.
                                                                                 Per dare speranze ed energie a loro.
-                                                                                No, {player_name}.
+                                                                                No, {player_name}?
+        {charTag(FirstCharacter, "curious")}:                                   Dai, che è un po' che non vieni coinvolt{player_pronoun has him:o|{player_pronoun has her:a|ə}} in qualche battibecco, vero?
+                                                                                Tu che ne pensi di {charNameThree}, e di quello che dovremmo fare con lui?                                                                        
     
 
             + \ {charTag(PG, "neutral")}:                                       Vicinanza a Mentore.
@@ -323,10 +329,10 @@
             + \ {charTag(PG, "neutral")}:                                       Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
                 
-            + \ {charTag(PG, "neutral")}:                                       Vicinanza a Chitarra.
+            + \ {charTag(PG, "neutral")}:                                       Ti dispiace per lui.
                     -> glyph_choice_manager(false, waterC)->
                     
-            + \ {charTag(PG, "neutral")}:                                       Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+            + \ {charTag(PG, "neutral")}:                                       Vicinanza a Chitarra.
                     -> glyph_choice_manager(false, aetherC)->
     -
 
