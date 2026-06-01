@@ -680,7 +680,7 @@
                                                                         Dimmi che almeno tu te la godi un po' di sana competizione!
                                                                         
 
-    NOTA: una di queste scelte deve essere inutilmente e ridicolmente lunga.
+        NOTA: una di queste scelte deve essere inutilmente e ridicolmente lunga.
 
         + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                 -> glyph_choice_manager(false, airC)->
@@ -720,33 +720,84 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
-    Chiacchierata Mentore e PNG3
-
-            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
-                    -> glyph_choice_manager(false, airC)->
-
-            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
-                    -> glyph_choice_manager(false, earthC)->
-                    
-            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
-                    -> glyph_choice_manager(false, fireC)->
-                
-            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
-                    -> glyph_choice_manager(false, waterC)->
-                    
-            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
-                    -> glyph_choice_manager(false, aetherC)->
-        -
-        {
-                - are_two_entities_together(FirstCharacter, PG):
+                                                                                M: Oh povera stella!
+                                                                                M: Ma quindi ti ha lasciato all'altare?
+        {charTag(ThirdCharacter, "bored")}:                                     Sì.
+                                                                                Cioè, non proprio.
+                                                                                Quando stavamo ancora preparando il matrimonio.
+                                                                                Mancavano sei mesi.
+                                                                                Mia sorella ci aveva già aiutati a trovare il fotografo.
+                                                                                Mio cognato c'aveva trovato uno sconto per i fiori con gente del teatro.
+                                                                                E mia suocera, la mia futura suocera, aveva aiutato Dona a trovarse il vestito.
+                                                                                Un vestito da principessa.
+                                                                                M: Devi starci ancora malissimo.
+                                                                                Già.
+                                                                                Ma si va avanti, no?
+                                                                                Però è brutto: a volte certe cose non le vedi quando sei innamorato.
+                                                                                M: Ma i tuoi amici avevano notato qualcosa?
+                                                                                Su di lei dici?
+                                                                                M: Sì, cose che magari non andavano.
+                                                                                M: Hanno provato a metterti in guardia?
+                                                                                E che sono, i miei babysitter?
+                                                                                M: No, intendo che...
+                                                                                Sono stato uno stronzo io, a credere che una così poteva innamorarsi di me, che c'entrano loro, boh.
                 {
-                - grimoire_firstChar has grimFirstThirdChar:
-                        {charTag(FirstCharacter, "annoyed")}:                   Commento infastidito di Chitarra.
-
-                - else:
-                        {charTag(FirstCharacter, "neutral")}:                   Commento empatico di Chitarra.    
+                - fifthChar_slurDetector > 3:
+                                                                                M: {charNameThree}, non serve che tu sia sempre così oppositivo, su.
+                                                                                M: Sono qui solo per aiutare.
+                                                                                Come quando mi rompi i coglioni per due parolacce?
                 }
-        }   
+                                                                                Sai una cosa, {charNameFive}?
+                                                                                Forse ho capito il problema di questo posto, il tuo problema.
+                                                                                Vi sentite tutte ferite dal mondo.
+                                                                                Fate come se il mondo vi dovesse qualcosa.
+                                                                                Beh: sveglia.
+                                                                                Non vi è dovuto nulla!
+                                                                                M: {charNameThree}, respira un attimo.
+                                                                                Non mi dire cosa fare.
+                                                                                M: BASTA!
+                                                                                M: Ti ho fatto questa domanda perché penso a altri momenti.
+                                                                                M: Momenti in cui le persone vicine mi hanno detto "Ma è ovvio che questa cosa ti stava facendo male" solo quando ho avuto il coraggio di venirne fuori da sola.
+                                                                                M: E volevo capire se i tuoi amici ci sono stati per te <i>prima</i> della fine della relazione con Dona, o solo quando la bomba è scoppiata.</i>
+                                                                                M: Perché in quel caso ho imparato a mie spese che quella roba lì non è amicizia.
+                                                                                Questo vale per te, vecia.
+                                                                                Magari lo capisco anche il tuo punto di vista.
+                                                                                E mi spiace se mi sono incazzato.
+                                                                                Ma te lo dico a te e lo dico a {player_name} così come lo sanno anche i miei amici.
+                                                                                Io esco con le persone per distrarmi, non per pensare alle cose che non vanno.
+                                                                                E se uno mi viene a giudicare cose sulla mia vita senza che gliel'abbia chiesto, quello non è un mio amico.
+                                                                                Punto.
+
+
+        + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+                -> glyph_choice_manager(false, airC)->
+
+        + \ {charTag(PG, "neutral")}:                                           Cosa ti renderà più stabile? Da quali fondamenta parti?
+                -> glyph_choice_manager(false, earthC)->
+                
+        + \ {charTag(PG, "neutral")}:                                           Preferisci fare che parlare, per questo il Poggi ha tirato su il gruppo di calcetto quando stavi male.
+                -> glyph_choice_manager(false, fireC)->
+                                                                                Esatto, {player_name}!
+
+        + \ {charTag(PG, "neutral")}:                                           Se le persone care non ci dicono le cose scomode, su cosa si basa allora la fiducia che gli diamo?
+                -> glyph_choice_manager(false, waterC)->
+                                                                                Sull'esserci.
+                                                                                E poi la fiducia è una cosa esagerata.
+                                                                                Niente e nessuno c'è per sempre, e alla fine ognuno pensa ai cazzi propri.
+                
+        + \ {charTag(PG, "neutral")}:                                           xxx
+                -> glyph_choice_manager(false, aetherC)->
+-
+{
+        - are_two_entities_together(FirstCharacter, PG):
+        {
+        - grimoire_firstChar has grimFirstThirdChar:
+                {charTag(FirstCharacter, "annoyed")}:                   Commento infastidito di Chitarra.
+
+        - else:
+                {charTag(FirstCharacter, "neutral")}:                   Commento empatico di Chitarra.    
+        }
+}   
 
     -> mentor_closing_storylet ->
     -> third_char_closing_storylet ->
