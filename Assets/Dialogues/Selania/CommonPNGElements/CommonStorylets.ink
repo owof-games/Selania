@@ -873,78 +873,88 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
 
-    {charTag(ThirdCharacter, "bored")}:                                 No no credimi: Lautaro Martinez è uno dei migliori di sempre.
-                                                                        Altro che Ronaldo.
-                                                                        R: Mh mh.
-                                                                        Dai, tuo papà ti ci avrà portato allo stadio ogni tanto!
-                                                                        R: Ci andava coi suoi amici.
-                                                                        R: Ora sta a casa e si arrabbia con la tv.
-                                                                        E tuo fratello?
-                                                                        R: Non gli piace il calcio.
-                                                                        R: Però è bravissimo coi videogiochi.
-                                                                        Allora ti ci porto io quando usciamo da qui, che dici?
-                                                                        Ci viene anche il Franchì, così ci si fa una giornata tra ragazzi.
-                                                                        R: Mh mh.
-                                                                        Ma ce l'hai una fidanzatina, Ricciolino?
-                                                                        Alla tua età ero un latin lover, sai?
-                                                                        R: No.
-                                                                        Le ragazza fanno sempre le preziose, vero?
-                                                                        R: No, è che a me mi piacciono di più gli animali.
-                                                                        Quali? Gli orsi? I lupi? I leoni?
-                                                                        R: No, preferisco quelli strani, come l'ornitorinco o l'aye-aye o l'uacari.
-                                                                        R: Però il mio preferito l'ho inventato io, ed è il prociorso.
-                                                                        R: Ti protegge da un sacco di cose.
-                                                                        R: Sa camminare sulla luna.
-                                                                        R: Conosce tutti i numeri primi fino al milletrecentoventuno.
-                                                                        R: Ed è bello dormirci assieme.
-                                                                        Uh, immagino.
-                                                                        Ma non sei un po' grande per queste fantasie?
-                                                                        R: Uh.
-                                                                        {player_name}!
+        {charTag(ThirdCharacter, "neutral")}:                                   No no credimi: Lautaro Martinez è uno dei migliori di sempre.
+                                                                                Altro che Ronaldo.
+        {charTag(SecondCharacter, "neutral")}:                                  Mh mh.
+        {charTag(ThirdCharacter, "neutral")}:                                   Dai, tuo papà ti ci avrà portato allo stadio ogni tanto!
+        {charTag(SecondCharacter, "neutral")}:                                  Ci andava coi suoi amici.
+                                                                                Ora sta a casa e si arrabbia con la tv.
+        {charTag(ThirdCharacter, "neutral")}:                                   E tuo fratello?
+        {charTag(SecondCharacter, "neutral")}:                                  Non gli piace il calcio.
+        {charTag(SecondCharacter, "energy")}:                                   Però è bravissimo coi videogiochi.
+                                                                                A te piacciono i videogiochi?
+        {charTag(ThirdCharacter, "jester")}:                                    Allora ti ci porto io quando usciamo da qui, che dici?
+                                                                                Ci spariamo il derby!
+                                                                                Ci portiamo anche il Franchì, così ci si fa una giornata tra ragazzi.
+        {charTag(SecondCharacter, "neutral")}:                                  Mh mh.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma ce l'hai una fidanzatina, Ricciolino?
+        {charTag(ThirdCharacter, "jester")}:                                    Alla tua età ero un latin lover, sai?
+        {charTag(SecondCharacter, "neutral")}:                                  No.
+        {charTag(ThirdCharacter, "jester")}:                                    Le ragazza fanno sempre le preziose, vero?
+        {charTag(SecondCharacter, "neutral")}:                                  No, è che a me mi piacciono di più gli animali.
+        {charTag(ThirdCharacter, "neutral")}:                                   Quali? Gli orsi? I lupi? I leoni?
+        {charTag(SecondCharacter, "neutral")}:                                  No, preferisco quelli strani, come l'ornitorinco o l'aye-aye o l'uacari.
+        {charTag(ThirdCharacter, "neutral")}:                                   Uacari?
+        {charTag(SecondCharacter, "energy")}:                                   Ha la faccia tutta rossa.
+                                                                                Sembra sempre arrabbiato anche quando è tranquillo.
+                                                                                Un po' come te.
+        {charTag(ThirdCharacter, "jester")}:                                    Ehi, io non sono arrabbiato!                                                                       
+        {charTag(SecondCharacter, "energy")}:                                   Però il mio preferito l'ho inventato io, ed è il prociorso.
+                                                                                Ti protegge da un sacco di cose.
+                                                                                Sa camminare sulla luna.
+                                                                                Conosce tutti i numeri primi fino al milletrecentoventuno.
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "neutral")}:                           È una competenza molto specifica.
+                {charTag(SecondCharacter, "emotional")}:                        Gli servono per contare le stelle.
+                }  
+
+        {charTag(SecondCharacter, "emotional")}:                                Dormire col prociorso è bellissimo.
+        {charTag(ThirdCharacter, "neutral")}:                                   Uh, immagino.
+                                                                                Ma non sei un po' grande per queste fantasie?
+        {charTag(SecondCharacter, "neutral")}:                                  Uh.
+                                                                                {player_name}!
                                                                         
 
-        {//Blocco per reazioni e commenti legati al genere.
-        - thirdChar_recordedPlayerPronoun == him:
-        {charTag(ThirdCharacter, "neutral")}:                           L'uomo giusto al momento giusto!
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(ThirdCharacter, "jester")}:                            L'uomo giusto al momento giusto!
 
-        - thirdChar_recordedPlayerPronoun == her:
-        {charTag(ThirdCharacter, "neutral")}:                           Sentiamo l'opinione di una ragazza!
+                - thirdChar_recordedPlayerPronoun == her:
+                {charTag(ThirdCharacter, "jester")}:                            Sentiamo l'opinione di una ragazza!
 
-        - else:
-        {charTag(ThirdCharacter, "neutral")}:                           L'espertə in tutte quelle cose sul genere!
-        
-        }
+                - else:
+                {charTag(ThirdCharacter, "jester")}:                            L'espertə in tutte quelle cose sul genere!
+                
+                }
                                                                         
-                                                                        Come aiutiamo questo giovanotto a diventare un uomo?
+        {charTag(ThirdCharacter, "neutral")}:                                   Dimmi: come aiutiamo questo giovanotto a diventare un uomo?
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:                           Ma sei un meme?
+                                                                                Ti prego dimmi che sei un meme.
 
+                }
         
         
-        + \ {charTag(PG, "neutral")}:                                   Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+        + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                 -> glyph_choice_manager(false, airC)->
 
-        + \ {charTag(PG, "neutral")}:                                   Cosa ti renderà più stabile? Da quali fondamenta parti?
+        + \ {charTag(PG, "neutral")}:                                           Cosa ti renderà più stabile? Da quali fondamenta parti?
                 -> glyph_choice_manager(false, earthC)->
                 
-        + \ {charTag(PG, "neutral")}:                                   Cosa vuoi? Come puoi cambiare questa situazione?
+        + \ {charTag(PG, "neutral")}:                                           Cosa vuoi? Come puoi cambiare questa situazione?
                 -> glyph_choice_manager(false, fireC)->
         
-        + \ {charTag(PG, "neutral")}:                                   Non me ne avere, ma credo che partirei dal capire che è a disagio con questo discorso.
+        + \ {charTag(PG, "neutral")}:                                           Non me ne avere, ma credo che partirei dal capire che è a disagio con questo discorso.
                 -> glyph_choice_manager(false, waterC)->
-                
-        + \ {charTag(PG, "neutral")}:                                   Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+        {charTag(SecondCharacter, "emotional")}:                                Già.
+
+        + \ {charTag(PG, "neutral")}:                                           Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                 -> glyph_choice_manager(false, aetherC)->
 
         -
-        {
-                - are_two_entities_together(FirstCharacter, PG):
-                {
-                - grimoire_firstChar has grimFirstThirdChar:
-                        {charTag(FirstCharacter, "annoyed")}:                   Commento infastidito di Chitarra.
-
-                - else:
-                        {charTag(FirstCharacter, "neutral")}:                   Commento empatico di Chitarra.    
-                }
-        }
+        
     -> second_char_closing_storylet ->
     -> third_char_closing_storylet ->
     ->->
