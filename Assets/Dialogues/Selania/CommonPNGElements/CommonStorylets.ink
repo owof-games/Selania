@@ -703,31 +703,38 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
-    {charTag(ThirdCharacter, "bored")}:                                 No no no Franco, seguimi, mannaggia a te!
-                                                                        Prima cosa: ci si trova e si fa un'asta per comprare i giocatori.
-                                                                        Partiamo da un euro e andiamo a salire.
-                                                                        F: Quindi i soldi vanno al giocatore?
-                                                                        No, vanno alla cassa per il premio finale, te l'ho detto anche prima!
-                                                                        F: Mi piacciono i premi!
-                                                                        Anche a me, per questo se segui i miei consigli c'hai di sicuro una squadra vincente.
-                                                                        F: Ma se non vince che succede?
-                                                                        Che non fai punti e non sali in classifica, ovvio.
-                                                                        F: Quindi niente premi?
-                                                                        Vecio, ma l'hai mai fatta una gara a qualcosa?
-                                                                        F: No perché le gare fanno stare male chi perde.
-                                                                        Ma dai, è un gioco, non ci stai male.
-                                                                        F: Quindi a te va bene se perdi?
-                                                                        Io non perdo, Franchì, non ti preoccupare!
-                                                                        Anche se da quando c'è il Merlo, quello si compra i giocatori migliori.
-                                                                        L'anno scorso il merda ha speso un mese del mio stipendio per farsi la sua rosa.
-                                                                        F: Quindi non ti piace perdere.
-                                                                        F: Allora io non compro nessun giocatore e prendo una pizza per tutti.
-                                                                        F: Ma senza salumi o cose del genere, l'ho promesso alle formiche.
-                                                                        Ma che c'entrano la pizza e le formiche'
-                                                                        Dio mio Franchì, dio mio.
-                                                                        Ma sai che non ci si ragiona con te, ma proprio proprio zero?
-                                                                        {player_name}!
-                                                                        Dimmi che almeno tu te la godi un po' di sana competizione!
+        {charTag(ThirdCharacter, "bored")}:                                     No no no Franco, seguimi, mannaggia a te!
+        {charTag(ThirdCharacter, "neutral")}:                                   Prima cosa: ci si trova e si fa un'asta per comprare i giocatori.
+                                                                                Partiamo da un euro e andiamo a salire.
+        {charTag(Franco, "question")}:                                          Quindi i soldi vanno al giocatore?
+                                                                                Glieli mando con la carpa della sera?
+        {charTag(ThirdCharacter, "bored")}:                                     No, vanno alla cassa per il premio finale, te l'ho detto anche prima!
+        {charTag(Franco, "party")}:                                             Mi piacciono i premi!
+        {charTag(ThirdCharacter, "neutral")}:                                   Anche a me, per questo se segui i miei consigli c'hai di sicuro una squadra vincente.
+        {charTag(Franco, "question")}:                                          E se non vince?
+        {charTag(ThirdCharacter, "bored")}:                                     Se non vince perdi il premio.
+        {charTag(Franco, "question")}:                                          Quindi paghi per perdere?
+        {charTag(ThirdCharacter, "neutral")}:                                   No, paghi per giocare.
+        {charTag(Franco, "party")}:                                             E dare dei soldi ai tuoi amici.
+        {charTag(Franco, "question")}:                                          Ma non fai prima a darglieli direttamente se ne hanno bisogno?
+        {charTag(ThirdCharacter, "jester")}:                                    Vecio, ma l'hai mai fatta una gara a qualcosa?
+        {charTag(Franco, "neutral")}:                                           No perché le gare fanno stare male chi perde.
+        {charTag(ThirdCharacter, "jester")}:                                    Ma dai, è un gioco, non ci stai male.
+        {charTag(Franco, "question")}:                                          Quindi a te va bene se perdi?
+        {charTag(ThirdCharacter, "jester")}:                                    Io non perdo, Franchì, non ti preoccupare!
+        {charTag(ThirdCharacter, "bored")}:                                     Anche se da quando c'è il Merlo, quello si compra i giocatori migliori.
+                                                                                L'anno scorso quella merda ha speso un mese del mio stipendio per comprarsi il mondo.
+                                                                                C'aveva Lautaro Martinez e Douvikas, la merda.
+        {charTag(Franco, "neutral")}:                                           Quindi non ti piace perdere.
+        {charTag(Franco, "party")}:                                             Allora io non compro nessun giocatore e prendo una pizza per tutti.
+        {charTag(ThirdCharacter, "bored")}:                                     Ma che c'entra la pizza?
+        {charTag(Franco, "party")}:                                             La pizza fa felice tutti!
+        {charTag(Franco, "neutral")}:                                           Ma senza salumi o cose del genere, l'ho promesso alle formiche.
+        {charTag(ThirdCharacter, "bored")}:                                     Le formiche?
+                                                                                Dio mio Franchì, dio mio.
+                                                                                Ma sai che non ci si ragiona con te, ma proprio proprio zero?
+        {charTag(ThirdCharacter, "neutral")}:                                   {player_name}!
+                                                                                Dimmi che almeno tu te la godi un po' di sana competizione!
                                                                         
 
         NOTA: una di queste scelte deve essere inutilmente e ridicolmente lunga.
@@ -770,52 +777,54 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
-                                                                                M: Oh povera stella!
-                                                                                M: Ma quindi ti ha lasciato all'altare?
-        {charTag(ThirdCharacter, "bored")}:                                     Sì.
-                                                                                Cioè, non proprio.
+        {charTag(Mentor, "sad")}:                                               Oh povera stella!
+                                                                                Ma quindi ti ha lasciato all'altare?
+        {charTag(ThirdCharacter, "melanchonic")}:                               Sì.
+        {charTag(ThirdCharacter, "neutral")}:                                   Cioè, non proprio.
                                                                                 Quando stavamo ancora preparando il matrimonio.
                                                                                 Mancavano sei mesi.
                                                                                 Mia sorella ci aveva già aiutati a trovare il fotografo.
                                                                                 Mio cognato c'aveva trovato uno sconto per i fiori con gente del teatro.
                                                                                 E mia suocera, la mia futura suocera, aveva aiutato Dona a trovare il vestito.
-                                                                                Un vestito da principessa.
-                                                                                M: Devi starci ancora malissimo.
-                                                                                Già.
+        {charTag(ThirdCharacter, "melanchonic")}:                               Un vestito da principessa.
+        {charTag(Mentor, "sad")}:                                               Devi starci ancora malissimo.
+        {charTag(ThirdCharacter, "neutral")}:                                   Già.
                                                                                 Ma si va avanti, no?
                                                                                 Però è brutto: a volte certe cose non le vedi quando sei innamorato.
-                                                                                M: Ma i tuoi amici avevano notato qualcosa?
-                                                                                Su di lei dici?
-                                                                                M: Sì, cose che magari non andavano.
-                                                                                M: Hanno provato a metterti in guardia?
-                                                                                E che sono, i miei babysitter?
-                                                                                M: No, intendo che...
-                                                                                Sono stato uno stronzo io, a credere che una così poteva innamorarsi di me, che c'entrano loro, no?
+        {charTag(Mentor, "sorry")}:                                             Ma i tuoi amici avevano notato qualcosa?
+        {charTag(ThirdCharacter, "neutral")}:                                   Su di lei dici?
+        {charTag(Mentor, "neutral")}:                                           Sì, cose che magari non andavano.
+                                                                                Hanno provato a metterti in guardia?
+        {charTag(ThirdCharacter, "jester")}:                                    E che sono, i miei babysitter?
+        {charTag(Mentor, "sorry")}:                                             No, intendo che...
+        {charTag(ThirdCharacter, "bored")}:                                     Sono stato uno stronzo io, a credere che una così poteva innamorarsi di me, che c'entrano loro, no?
+                
                 {
                 - fifthChar_slurDetector > 3:
-                                                                                M: {charNameThree}, non serve che tu sia sempre così oppositivo, su.
-                                                                                M: Sono qui solo per aiutare.
-                                                                                Come quando mi rompi i coglioni per due parolacce?
+                {charTag(Mentor, "hurry")}:                                     {charNameThree}, non serve che tu sia sempre così oppositivo, su.
+                {charTag(Mentor, "neutral")}:                                   Sono qui solo per aiutare.
+                {charTag(ThirdCharacter, "bored")}:                             Come quando mi rompi i coglioni per due parolacce?
                 }
-                                                                                Sai una cosa, {charNameFive}?
+
+        {charTag(ThirdCharacter, "bored")}:                                     Sai una cosa, {charNameFive}?
                                                                                 Forse ho capito il problema di questo posto, il tuo problema.
-                                                                                Vi sentite tutte ferite dal mondo.
-                                                                                Fate come se il mondo vi dovesse qualcosa.
+        {charTag(ThirdCharacter, "neutral")}:                                   Vi sentite tutte ferite dal mondo.
+        {charTag(ThirdCharacter, "bored")}:                                     Fate come se il mondo vi dovesse qualcosa.
                                                                                 Beh: sveglia.
-                                                                                Non vi è dovuto nulla!
-                                                                                M: {charNameThree}, respira un attimo.
-                                                                                Non mi dire cosa fare, vecia!
-                                                                                M: BASTA!
-                                                                                M: Ti ho fatto questa domanda perché ho vissuto omenti in cui le persone vicine mi hanno detto "Ma è ovvio che questa cosa ti stava facendo male" solo quando ho avuto il coraggio di venirne fuori da sola.
-                                                                                M: E volevo capire se i tuoi amici ci sono stati per te <i>prima</i> della fine della relazione con Dona, o solo quando la bomba è scoppiata.
-                                                                                M: Perché in quel caso ho imparato a mie spese che quella roba lì non è amicizia.
-                                                                                Questo vale per te, vecia.
-                                                                                Magari lo capisco anche il tuo punto di vista.
+        {charTag(ThirdCharacter, "jester")}:                                    Non vi è dovuto nulla!
+        {charTag(Mentor, "neutral")}:                                           {charNameThree}, respira un attimo.
+        {charTag(ThirdCharacter, "angry")}:                                     Non mi dire cosa fare, vecia!
+        {charTag(Mentor, "bored")}:                                             BASTA!
+        {charTag(Mentor, "neutral")}:                                           Ti ho fatto questa domanda perché ho vissuto omenti in cui le persone vicine mi hanno detto "Ma è ovvio che questa cosa ti stava facendo male" solo quando ho avuto il coraggio di venirne fuori da sola.
+                                                                                E volevo capire se i tuoi amici ci sono stati per te <i>prima</i> della fine della relazione con Dona, o solo quando la bomba è scoppiata.
+                                                                                Perché in quel caso ho imparato a mie spese che quella roba lì non è amicizia.
+        {charTag(ThirdCharacter, "bored")}:                                     Questo vale per te, vecia.
+        {charTag(ThirdCharacter, "neutral")}:                                   Magari lo capisco anche il tuo punto di vista.
                                                                                 E mi spiace se mi sono incazzato.
                                                                                 Ma te lo dico a te e lo dico a {player_name}.
                                                                                 Io esco con le persone per distrarmi, non per pensare alle cose che non vanno.
                                                                                 E se uno mi viene a giudicare cose sulla mia vita senza che gliel'abbia chiesto, quello non è un mio amico.
-                                                                                Punto.
+        {charTag(Mentor, "bored")}:                                             Punto.
 
 
         + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
@@ -837,10 +846,10 @@
         + \ {charTag(PG, "neutral")}:                                           Diamogli fastidio.
                 -> glyph_choice_manager(false, aetherC)->
 -
-                                                                                M: Mi permetto però di dirti una cosa, {charNameFive}.
-                                                                                M: Le cose che proviamo esistono, a prescindere che le comunichiamo o meno.
-                                                                                M: E se non le tiriamo fuori volontariamente, troveranno il loro modo di uscire.
-                                                                                M: Spesso facendo o facendoci del gran male.
+        {charTag(Mentor, "neutral")}:                                           Mi permetto però di dirti una cosa, {charNameFive}.
+                                                                                Le cose che proviamo esistono, a prescindere che le comunichiamo o meno.
+                                                                                E se non le tiriamo fuori volontariamente, troveranno il loro modo di uscire.
+        {charTag(Mentor, "sad")}:                                               Spesso facendo o facendoci del gran male.
 {
         - are_two_entities_together(FirstCharacter, PG):
         {
