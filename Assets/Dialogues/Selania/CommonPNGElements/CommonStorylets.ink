@@ -898,23 +898,77 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
 
-    Chiacchierata Chitarra e PNG3
+        {charTag(ThirdCharacter, "angry")}:                                     Dio quanto odio te e questo cazzo di posto!
+                                                                                Non ce la fai proprio a non farti i cazzi miei, vero?
+                {
+                - thirdChar_firstCharRage == true:                              Come quando prima stavo parlando a {player_name} di come mi ha trattato di merda Dona, e tu lì a farmi le pulci sull'età.
+                                                                                C: <i>Le pulci sull'età.</i>
+                                                                                C: Ci sei uscito che era minorenne, porco il mondo!
+                }
+                                                                                C: E sono cazzi miei se vai in giro a dire stronzate che mi riguardano.
+                                                                                Ma cosa ti riguarda cosa?!? 
+                                                                                Stavo solo parlando con Ricciolino!
+                                                                                C: Sì, dicendogli sostanzialmente che tutte le donne sono delle, ah, non me lo far dire.
+                                                                                C: E solo perché una ragazza ha deciso di lasciarti.
+                                                                                Non è una roba che capita solo a me!
+                                                                                Fate tutte così: uno non è ricco o bello o non c'ha il capitale sociale e voi andate con un altro.
+                                                                                C: Non hai mai detto che Dona ti abbia lasciato per un altro, no?
+                                                                                Solo perché non lo so non vuole dire che non è successo.
+                                                                                Che ne so io chi è lei, dopo quello che mi ha fatto?
+                                                                                Magari passa il tempo a friggere rane vive per divertimento.
+                //commento franco se presente.
+                                                                                E poi dai, tu sei una di quelle da <i>Tutti gli uomini sono degli stupratori</i>, c'hai quella faccia lì.
+                                                                                Per cui io posso pure dire che tutte le donne alla fine sono delle puttane, no?
+                                                                                        //Check parolacce da parte di Mentore
+                                                                                        ~ fifthChar_slurDetectorFunction()
+                                                                                C: Ma <i>Tutti gli uomini sono degli stupratori</i> è un modo per parlare di un problema sistemico.
+                                                                                C: Perché venite educati con l'idea che le donne siano una vostra proprietà, tipo una macchina o l'ultimo iPhone.
+                                                                                C: Una cosa che vi serve giusto per tirarvela con i vostri amici e fare vedere quanto siete uomini.
+                                                                                C: E così come pretendete che il vostro iPhone non si rifiuti di fare una cosa, così vi aspettate che le donne che incontrate vi debbano del sesso.
+                                                                                Beh, voi vi aspettate che vi si debbano soldi, una casa, il controllo dei figli in caso di divorzio.
+                                                                                C: No, "noi" ci aspettiamo di poter compiere una scelta che non c'è, come quella di poter fare lo stesso lavoro di uomo e guadagnare gli stessi soldi.
+                                                                                C: Ed è solo la cosa più basilare e ovvia da chiedere.
+                                                                                Ma io mica sono contro queste cose, anzi.
+                                                                                Per me se le donne governassero tutto il mondo sarebbe un posto migliore.
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(ThirdCharacter, "jester")}:                            Basta idioti come me o {player_name} al potere, ne sono felice guarda.
+                                                                                Così mi vedo le mie partite in santa pace mentre voi fate la fatica.
 
-            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
-                    -> glyph_choice_manager(false, airC)->
+                - thirdChar_recordedPlayerPronoun == her:                       
+                                                                                Ecco, tirate su un partito di donne tu e {player_name}, e via.
 
-            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
-                    -> glyph_choice_manager(false, earthC)->
-                    
-            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
-                    -> glyph_choice_manager(false, fireC)->
+                - else:
+                {charTag(ThirdCharacter, "jester")}:                            O anche le persone non binarie, sicuro.
+                }                                                                
+                                                                                Ma tu invece continui a ignorare il male che ci fanno le donne.
+                                                                                C: Io.
+                                                                                C: {player_name}, hai qualcosa di utile da dire per chiudere questa conversazione?
+
+
+
+        + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+                -> glyph_choice_manager(false, airC)->
+
+        + \ {charTag(PG, "neutral")}:                                           Cosa ti renderà più stabile? Da quali fondamenta parti?
+                -> glyph_choice_manager(false, earthC)->
                 
-            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
-                    -> glyph_choice_manager(false, waterC)->
-                    
-            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
-                    -> glyph_choice_manager(false, aetherC)->
-    -
+        + \ {charTag(PG, "neutral")}:                                           Cosa vuoi? Come puoi cambiare questa situazione?
+                -> glyph_choice_manager(false, fireC)->
+        
+        + \ {charTag(PG, "neutral")}:                                           Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+                -> glyph_choice_manager(false, waterC)->
+                
+        + \ {charTag(PG, "neutral")}:                                           Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+                -> glyph_choice_manager(false, aetherC)->
+        -
+
+                                                                                C: {charNameThree}: io non metto in discussione che tu sia ferito, e che la fine della relazione con Donatella sia stata dolorosa.
+                                                                                C: E se vuoi sfogarti in merito a quel dolore, posso pure provare ad esserci, per quanto tu sia fastidioso.
+                                                                                C: Non serve trasformare un problema personale in un problema strutturale per meritare cura e supporto.
+                                                                                C: Hai tutto il diritto di chiederlo.
+                                                                                C: Ma non continuare a dire cose che vanno a danneggiare una comunità con molto molto molto meno potere del tuo.
+                                                                                
     -> first_char_closing_storylet ->
     -> third_char_closing_storylet ->
     ->->
