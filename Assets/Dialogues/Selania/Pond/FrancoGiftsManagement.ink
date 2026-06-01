@@ -280,11 +280,11 @@
             - {charTag(Franco, "neutral")}:                     Perfetto!                                 
         }
     
-    + {frog_thirdCharAchievableGifts has cultivableGift}  \ {charTag(PG, "neutral")}:           Cosa potrei regalargli?
+    + {frog_thirdCharAchievableGifts has cultivableGift}  \ {charTag(PG, "neutral")}:                                                   Cosa potrei regalargli?
         -> franco_giftsPlants(ThirdCharacter, Pond)
-    + {frog_thirdCharAchievableGifts has ingredientGift && player_accessiblePlaces has Kitchen}  \ {charTag(PG, "neutral")}:         Quale ingrediente potrei usare in cucina con lui?
+    + {frog_thirdCharAchievableGifts has ingredientGift && player_accessiblePlaces has Kitchen}  \ {charTag(PG, "neutral")}:            Quale ingrediente potrei usare in cucina con lui?
         -> franco_giftsPlants(ThirdCharacter, Kitchen)
-    + {frog_thirdCharAchievableGifts has bookGift && player_accessiblePlaces has Library}  \ {charTag(PG, "neutral")}:         Di quale racconto vorrebbe parlare?
+    + {frog_thirdCharAchievableGifts has bookGift && player_accessiblePlaces has Library}  \ {charTag(PG, "neutral")}:                  Di quale racconto vorrebbe parlare?
         -> book
     +  \ {charTag(PG, "neutral")}:         Ora che ci penso, potresti aiutarmi in modo diverso?
         -> franco_giftsManagement.top

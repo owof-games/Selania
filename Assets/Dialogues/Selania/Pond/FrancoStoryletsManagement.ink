@@ -9,11 +9,16 @@
     - are_two_entities_together(PG, Franco) && achievements_fullLore ==  Discovered && grimoire_franco hasnt grimFrancoAllDocuments:
         -> franco_allDocuments
 
+    //Discrepanza tra dono a Boccale e sua reazione
+    - are_two_entities_together(PG, Franco) && (frog_third_char_gift == thirdChar_giftedObject or frog_third_char_ingredient == kitchen_thirdCharExtraIngredient or frog_third_char_ingredient == universalIngredient) && grimoire_franco hasnt grimFrancoThirdIngredientFailure:
+        -> franco_third_ingredient_failure
+
+
     //Commenti speciali
     //Regalo da raccogliere
     - frog_suspended_gift == true && frog_giftability == true:
                 
-        {charTag(Franco, "party")}:                         Ehi girino!
+        {charTag(Franco, "party")}:                       Ehi girino!
         {shuffle:
                                                         - Hai ancora quel dono di prima da prendere!
                                                         - Devo ancora darti quel dono!

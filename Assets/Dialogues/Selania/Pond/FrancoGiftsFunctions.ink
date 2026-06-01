@@ -440,6 +440,7 @@
         - PNG == SecondCharacter:
             ~ frog_second_char_gift = frog_temp_char_gift
             ~ frog_second_temp_growing_gift = frog_temp_temp_growing_gift
+            ~ frog_second_char_ingredient = frog_temp_char_ingredient
             {
                 - Location == Kitchen:
                     ~ frog_secondCharAchievableGifts -= ingredientGift
@@ -450,6 +451,7 @@
         - PNG == ThirdCharacter:
             ~ frog_third_char_gift = frog_temp_char_gift
             ~ frog_third_temp_growing_gift = frog_temp_temp_growing_gift
+            ~ frog_third_char_ingredient = frog_temp_char_ingredient
             {
                 - Location == Kitchen:
                     ~ frog_thirdCharAchievableGifts -= ingredientGift
@@ -458,26 +460,28 @@
             }
     
 
-        // - PNG == FourthCharacter:
-        //     ~ frog_fourth_char_gift = frog_temp_char_gift
-        //     ~ frog_fourth_temp_growing_gift = frog_temp_temp_growing_gift
-            // {
-            //     - Location == Kitchen:
-            //         ~ frog_fourthCharAchievableGifts -= ingredientGift
-            //     - else:
-            //         ~ frog_fourthCharAchievableGifts -= cultivableGift
-            // }
+        - PNG == FourthCharacter:
+            ~ frog_fourth_char_gift = frog_temp_char_gift
+            ~ frog_fourth_temp_growing_gift = frog_temp_temp_growing_gift
+            ~ frog_fourth_char_ingredient = frog_temp_char_ingredient
+            {
+                - Location == Kitchen:
+                    ~ frog_fourthCharAchievableGifts -= ingredientGift
+                - else:
+                    ~ frog_fourthCharAchievableGifts -= cultivableGift
+            }
 
 
-        // - PNG == FifthCharacter:
-        //     ~ frog_fifth_char_gift = frog_temp_char_gift
-        //     ~ frog_fifth_temp_growing_gift = frog_temp_temp_growing_gift
-            // {
-            //     - Location == Kitchen:
-            //         ~ frog_fifthCharAchievableGifts -= ingredientGift
-            //     - else:
-            //         ~ frog_fifthCharAchievableGifts -= cultivableGift
-            // }
+        - PNG == FifthCharacter:
+            ~ frog_fifth_char_gift = frog_temp_char_gift
+            ~ frog_fifth_temp_growing_gift = frog_temp_temp_growing_gift
+            ~ frog_fifth_char_ingredient = frog_temp_char_ingredient
+            {
+                - Location == Kitchen:
+                    ~ frog_fifthCharAchievableGifts -= ingredientGift
+                - else:
+                    ~ frog_fifthCharAchievableGifts -= cultivableGift
+            }
                
 
     }
