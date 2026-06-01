@@ -30,28 +30,66 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     
 
-    //Apertura del nido
-    {charTag(ThirdCharacter, "neutral")}:       Dialogo al nido.
-        + [Scelta aria]
+    {charTag(ThirdCharacter, "neutral")}:                           Non è che amo proprio proprio la pioggia.
+                                                                    Ma.
+                                                                    C'è qualcosa di rilassante in questo posto, sotto questa tenda, vero?
+                                                                    Una volta da piccolo mio papà doveva venire a prendermi dopo un allenamento.
+                                                                    Avevo più o meno l'età di Ricciolino.
+                                                                    Ma pioveva così forte che ci ha messo una vita.
+                                                                    Così mi sono messo sotto agli spalti, fermo, ad ascoltare la tempesta.
+    {charTag(ThirdCharacter, "jester")}:                            Chissà quando sono diventato questo vecchio idiota, vero vecio?
+    {charTag(ThirdCharacter, "neutral")}:                           Papà si è scusato tantissimo quando è arrivato.
+    {charTag(ThirdCharacter, "bored")}:                             Tipico suo.
+    {charTag(ThirdCharacter, "neutral")}:                           Ma io quelle ore me le ricordo come il momento più bello della mia vita.
+                                                                    E quando ho visto quei sassi lì.
+                                                                    Boh.
+                                                                    Credo di averli già visti, forse proprio quel giorno.
+                                                                    Sai cos'è una cosa bella del mio lavoro?
+                                                                    Capire cosa dire alle persone quando stanno di merda.
+                                                                    Dirgli la cosa giusta, così che ci arrivano a soli a trovare le risposte.
+    {charTag(ThirdCharacter, "jester")}:                            Anche perché le mie sono tremende, vecio.
+    {charTag(ThirdCharacter, "neutral")}:                           E quei sassi lì mi ricordano la stessa sensazione, di quando stai per aprire la bocca e sai già che effetto farai sulle persone.
+                                                                    Non è male.
+                                                                    Comunque non credo che nessuno verrà a romperti {thirdChar_recordedPlayerPronoun has him:i coglioni|{thirdChar_recordedPlayerPronoun has her:le ovaie|i genitali}} in questo postaccio.
+    
+    {
+    - tutorial_ActivateTutorial == true:
+    {charTag(ThirdCharacter, "jester")}:                            A parte Carla ovviamente!                                                                                                                                                                                                                                        
+    }
+    {charTag(ThirdCharacter, "neutral")}:                           Quindi ti faccio la domanda peggiore del mondo.
+                                                                    Per me.
+                                                                    Che idea ti sei fatt{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}} di me?
+
+        + [Scelta aria] //Media
             -> glyph_choice_manager(false, airC)->
     
         + [Scelta fuoco]
             -> glyph_choice_manager(false, fireC)->
      
-        + [Scelta spirito]
+        + [Scelta spirito]//Negativa due (negativa come Non piace a lui, non che sia critica in assoluto)
             -> glyph_choice_manager(false, aetherC)->
     
         + [Scelta terra]
             -> glyph_choice_manager(false, earthC)->
             
-        + [Scelta acqua]
+        + [Scelta acqua] //Negativa uno
             -> glyph_choice_manager(false, waterC)->
         -    
-    {charTag(ThirdCharacter, "neutral")}:           E poi {charNameThree} se ne va.
+    
+    {charTag(ThirdCharacter, "neutral")}:                           Ti lascio al tuo nuovo giochino, {player_name}.
+                                                                    Magari così c'hai un buon ricordo di me quando me ne vado.
 
         -> third_char_closing_storylet ->
 
-    E {witch_actualName} ci dice che ci ha aggiunto tre sigilli random sul libro.
+    {charTag(TheWitch, "{witch_state()}")}:                         {player_name}.
+                                                                    Questo posto è potente.
+                                                                    E complesso.
+                                                                    Una parte di noi vorrebbe dire a {player_name} di andarsene subito.
+                                                                    Ma crediamo anche che l'esperienza sia la migliore maestra.
+                                                                    Abbiamo quindi deciso di donare a {player_name} tre <b>sigilli</b>.
+                                                                    Li troverà nel suo grimorio.
+                                                                    Sperando che {player_name} ricordi che non tutto quello che possediamo va utilizzato.
+                                                                    Se {player_name} vuole ancora parlarne con noi, ci trova come sempre alla discarica.       
 
         //Chiamiamo il primo, notifichiamo, ripetiamo  
         ~ png_random_sigils_opener ()
@@ -96,7 +134,6 @@
                 -> tutorial_carlaSigilsActivationStorylet
             - else:
                 ->->
-
         }
         
         
