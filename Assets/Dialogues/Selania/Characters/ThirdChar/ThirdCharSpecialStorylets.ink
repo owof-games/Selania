@@ -4,9 +4,20 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
 
-    {charTag(ThirdCharacter, "neutral")}:       Arriviamo in biblioteca e ci dice "Ora ti porto in un posto fighissimo!" e ci invita a seguirlo e viene aperto il nido.
+            {//Blocco per reazioni e commenti legati al genere.
+            - thirdChar_recordedPlayerPronoun == him:
+            {charTag(ThirdCharacter, "jester")}:                    Boss!
+                                                            
+            - else:
+            {charTag(ThirdCharacter, "jester")}:                    {player_name}!
+            }
+                                                                    Giuro che non lo faccio per farti dar di matto, ma ti chiedo di seguirmi ancora una volta.
+        {charTag(ThirdCharacter, "neutral")}:                       Lì, dietro la vecchia barca.
+                                                                    Questo vecio qui ti ha trovato qualcosa di 
+        {charTag(ThirdCharacter, "jester")}:                        SPA-ZIA-LE!
+
         
-    -> third_char_closing_storylet ->
+        -> third_char_closing_storylet ->
         ~ opening_places()
         ~ move_entity(ThirdCharacter, Nest)
 
