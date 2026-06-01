@@ -332,7 +332,7 @@
             Con classe e anche con palestra e presidenza, {player_name} ha infine aggiunto {ingredientTranslator(kitchen_fifthCharExtraIngredient)}, perché al girino piace rischiare. <>
 
         - else:
-            Con austerità (che è una cosa che mi ha insegnato Euforbio e ha a che fare con l'Australia) {player_name} ha deciso di non aggiungere altro. <>
+            Con austerità (che è una cosa che mi ha insegnato Euforbo e ha a che fare con l'Australia) {player_name} ha deciso di non aggiungere altro. <>
     }
     Entrambi i girini sono vivi, e consideriamo questa cosa un vero e proprio successo.
 

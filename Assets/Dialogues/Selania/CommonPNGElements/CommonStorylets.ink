@@ -717,7 +717,8 @@
         {charTag(ThirdCharacter, "neutral")}:                                   No, paghi per giocare.
         {charTag(Franco, "party")}:                                             E dare dei soldi ai tuoi amici.
         {charTag(Franco, "question")}:                                          Ma non fai prima a darglieli direttamente se ne hanno bisogno?
-        {charTag(ThirdCharacter, "jester")}:                                    Vecio, ma l'hai mai fatta una gara a qualcosa?
+        {charTag(ThirdCharacter, "jester")}:                                    Vecio, ma hai mai giocato a qualcosa?
+                                                                                Perché ogni gioco è gara, competizione!
         {charTag(Franco, "neutral")}:                                           No perché le gare fanno stare male chi perde.
         {charTag(ThirdCharacter, "jester")}:                                    Ma dai, è un gioco, non ci stai male.
         {charTag(Franco, "question")}:                                          Quindi a te va bene se perdi?
@@ -737,24 +738,54 @@
                                                                                 Dimmi che almeno tu te la godi un po' di sana competizione!
                                                                         
 
-        NOTA: una di queste scelte deve essere inutilmente e ridicolmente lunga.
-
-        + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+        + \ {charTag(PG, "neutral")}:                                           Quindi per te {charNameThree} un gioco è un gioco solo se c'è competizione?
                 -> glyph_choice_manager(false, airC)->
+        {charTag(ThirdCharacter, "neutral")}:                                   ESATTO!
+        {charTag(ThirdCharacter, "jester")}:                                    Un punto per {player_name}!
+        {charTag(ThirdCharacter, "neutral")}:                                   Che poi non è che è per forza contro gli altri.
+                                                                                A lavoro se non c'è gente mi ammazzo di sudoku.
+                                                                                La soddisfazione quando batto i miei record, {player_name}!
+        {charTag(ThirdCharacter, "jester")}:                                    Mentre a calcetto o col fantacalcio è divertente prendere in giro i perdenti!                                                                
 
-        + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
+
+        + \ {charTag(PG, "neutral")}:                                           Competizione sì, ma il Merlo si è comprato sostanzialmente la vittoria così.
                 -> glyph_choice_manager(false, earthC)->
-                
-        + \ {charTag(PG, "neutral")}:                                   Sì: ti dà la spinta a migliorarti!
-                -> glyph_choice_manager(false, fireC)->
-        
-        + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
-                -> glyph_choice_manager(false, waterC)->
-                
-        + \ {charTag(PG, "neutral")}:                                   Credo che il punto di Franco sia: se le regole fanno schifo, vanno cambiate.
-                -> glyph_choice_manager(false, aetherC)->
+        {charTag(ThirdCharacter, "bored")}:                                     Ma non sono io a doverti dire che la vita è ingiusta, vero {player_name}?
+        {charTag(Franco, "neutral")}:                                           Le regole sono ingiuste, non la vita.
+                                                                                E le onde.
+                                                                                Le onde sono ingiuste.
+                                                                                Mii fanno sempre bere l'acqua se provo a nuotare.
 
-    -
+        + \ {charTag(PG, "neutral")}:                                           Si gioca per vincere!
+                -> glyph_choice_manager(false, fireC)->
+        {charTag(Franco, "party")}:                                             E per la pizza.
+        {charTag(ThirdCharacter, "jester")}:                                    Franchì fa parte di un campionato tutto suo, {player_name}!
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma sono contento che noi due ci capiamo!
+        {
+        - thirdChar_recordedPlayerPronoun == him:
+        {charTag(ThirdCharacter, "jester")}:                                    Sintonia tra veci!
+        - thirdChar_recordedPlayerPronoun == her:
+        {charTag(ThirdCharacter, "jester")}:                                    E sei pure una ragazza, pensa te!
+        - else:
+        {charTag(ThirdCharacter, "jester")}:                                    Alla fine unə può essere non binariə ed essere competitiva!        
+        }                                                        
+        
+        + \ {charTag(PG, "neutral")}:                                           Sono più a mio agio con le situazioni in cui si collabora.
+                -> glyph_choice_manager(false, waterC)->
+        {charTag(ThirdCharacter, "neutral")}:                                   Allora ti piacerebbe la parte amministrativa, immagino.
+                                                                                Nella lega nostra ci sono tre persone che si aiutano per tenere l'app aggiornata e i vari punteggi.
+        {charTag(ThirdCharacter, "bored")}:                                     Ognuno apprezza quel che apprezza, immagino.
+
+
+        + \ {charTag(PG, "neutral")}:                                           Credo che il punto di Franco sia: se le regole danneggiano chi ha meno potere, vanno rotte.
+                -> glyph_choice_manager(false, aetherC)->
+        {charTag(Franco, "party")}:                                             Craaa!
+                                                                                Come mi capisci tu non mi capisce nessuno, {player_name}!
+                                                                                A parte i miei mariti.
+                                                                                E i gemelli.
+        {charTag(Franco, "neutral")}:                                           Quasi tutti.
+                                                                                Euforbo è spesso confuso.
+        -
         {
                 - are_two_entities_together(FirstCharacter, PG):
                 {

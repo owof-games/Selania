@@ -1056,7 +1056,7 @@
                 {charTag(ThirdCharacter, "jester")}:            Sono le stesse lettere, Franco.
                 {charTag(Franco, "question")}:                  La <i>c</i> di Cra è uguale alla <i>p</i> di Pio?
                 {charTag(ThirdCharacter, "neutral")}:           Lo stesso numero, non proprio proprio le stesse lettere.
-                {charTag(Franco, "neutral")}:                   Devo dirlo a Euforbio, subito.
+                {charTag(Franco, "neutral")}:                   Devo dirlo a Euforbo, subito.
                 {charTag(Franco, "question")}:                  Chissà se la <i>v</i> è uguale alla <i>f</i>.
                                                                 Allora mi posso anche chiamare Vranco?                                                                                                                                           
                 }                                                        
