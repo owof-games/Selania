@@ -827,10 +827,10 @@
         {charTag(Mentor, "bored")}:                                             Punto.
 
 
-        + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+        + \ {charTag(PG, "neutral")}:                                           Come hanno reagito i tuoi amici quando gli hai detto che era finita con Donatella?
                 -> glyph_choice_manager(false, airC)->
 
-        + \ {charTag(PG, "neutral")}:                                           Cosa ti renderà più stabile? Da quali fondamenta parti?
+        + \ {charTag(PG, "neutral")}:                                           Anche con le migliori intenzioni, ogni esperienza è personale, e ogni consiglio è un giudizio.
                 -> glyph_choice_manager(false, earthC)->
                 
         + \ {charTag(PG, "neutral")}:                                           Fare invece che parlare, come il Poggi che ha tirato su il gruppo di calcetto quando stavi male.
@@ -839,13 +839,20 @@
 
         + \ {charTag(PG, "neutral")}:                                           Se le persone care non ci dicono le cose scomode, su cosa si basa allora la fiducia che gli diamo?
                 -> glyph_choice_manager(false, waterC)->
-                                                                                Sull'esserci.
+        {charTag(ThirdCharacter, "neutral")}:                                   Sull'esserci.
                                                                                 E poi la fiducia è una cosa esagerata.
                                                                                 Niente e nessuno c'è per sempre, e alla fine ognuno pensa ai cazzi propri.
                 
-        + \ {charTag(PG, "neutral")}:                                           Diamogli fastidio.
+        + \ {charTag(PG, "neutral")}:                                           Se ci mostriamo vulnerabili, le relazioni ci accrescono. Altrimenti rimaniamo per sempre la solita cosa, mentre il mondo cambia.
                 -> glyph_choice_manager(false, aetherC)->
--
+        {charTag(ThirdCharacter, "bored")}:                                     In 'sto posto deve essere tutto un lavoro?
+                                                                                Anche l'amicizia?
+        {charTag(ThirdCharacter, "neutral")}:                                   Sul campo di calcetto si impara a lavorare di squadra.
+                                                                                A capire le intenzioni dell'altro senza una sola parola.
+                                                                                Ad ascoltare il proprio corpo.
+        {charTag(ThirdCharacter, "bored")}:                                     Si può crescere anche senza tirarsi i pipponi.
+        -
+
         {charTag(Mentor, "neutral")}:                                           Mi permetto però di dirti una cosa, {charNameFive}.
                                                                                 Le cose che proviamo esistono, a prescindere che le comunichiamo o meno.
                                                                                 E se non le tiriamo fuori volontariamente, troveranno il loro modo di uscire.
