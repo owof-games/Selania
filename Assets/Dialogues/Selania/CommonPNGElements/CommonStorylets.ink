@@ -320,21 +320,21 @@
                                                                                 Tu che ne pensi di {charNameThree}, e di quello che dovremmo fare con lui?                                                                        
     
 
-            + \ {charTag(PG, "neutral")}:                                       Vicinanza a Mentore.
-                    -> glyph_choice_manager(false, airC)->
+        + \ {charTag(PG, "neutral")}:                                           La curiosità è un'arma potente: potremmo portare {charNameThree} a farsi domande, invece di criticarlo?
+                -> glyph_choice_manager(false, airC)->
 
-            + \ {charTag(PG, "neutral")}:                                       Cosa ti renderà più stabile? Da quali fondamenta parti?
-                    -> glyph_choice_manager(false, earthC)->
-                    
-            + \ {charTag(PG, "neutral")}:                                       Cosa vuoi? Come puoi cambiare questa situazione?
-                    -> glyph_choice_manager(false, fireC)->
+        + \ {charTag(PG, "neutral")}:                                           Le nostre energie sono limitate, è importante scegliere verso cosa le indirizziamo.
+                -> glyph_choice_manager(false, earthC)->
                 
-            + \ {charTag(PG, "neutral")}:                                       Ti dispiace per lui.
-                    -> glyph_choice_manager(false, waterC)->
-                    
-            + \ {charTag(PG, "neutral")}:                                       Vicinanza a Chitarra.
-                    -> glyph_choice_manager(false, aetherC)->
-    -
+        + \ {charTag(PG, "neutral")}:                                           Le informazioni sono ovunque, sta a lui fare il lavoro, se vuole farlo.
+                -> glyph_choice_manager(false, fireC)->
+        
+        + \ {charTag(PG, "neutral")}:                                           Posso sia provare dispiacere per {charNameThree}, sia riconoscere che non ho le energie per aiutarlo.
+                -> glyph_choice_manager(false, waterC)->
+                
+        + \ {charTag(PG, "neutral")}:                                           Credo vadano aiutate tutte le persone, ma serve un lavoro di gruppo, non di una sola persona.
+                -> glyph_choice_manager(false, aetherC)->
+        -
 
                                                                                 Forse posso arrivare a una quadra con questa cosa, {charNameFive}.
                                                                                 Quando incontrerò un uomo come {charNameThree}, mi prenderò del tempo per spiegargli perché il suo comportamento è pericoloso.
