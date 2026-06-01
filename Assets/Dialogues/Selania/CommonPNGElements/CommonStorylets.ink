@@ -274,28 +274,72 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
-
-    Chiacchierata Chitarra e Mentore riguardo Boccale.
-    {
+        {charTag(FirstCharacter, "annoyed")}:                                   Dai, {thirdChar_storyStatus == story_storyRemote: sei stata|sei} sottona totale con lui.
+                                                                                M: Ma non è vero {charNameOne}.
+                                                                                M: Solo, mi spiace per lui.
+                                                                                Ti spiace per cosa?
+                                                                                {thirdChar_storyStatus == story_storyRemote: fosse|sia}
+                                                                                Di quanto {thirdChar_storyStatus == story_storyRemote: fosse|sia} idiota?
+                                                                                M: No, c'è qualcosa...
+                                                                                M: Non ci sono cose del tuo passato che avresti voluto cambiare?
+                                                                                M: Ma non puoi più farlo?
+                                                                                A voglia.
+                                                                                Ma nessuna che ha abbia a che fare con un tizio che dice di stare bene a ruota e passa il tempo a parlare di merda della sua ex.
+        {
+        -thirdChar_storyStatus == story_storyRemote: 
+                                                                                E poi prende, sbrocca, e se ne va così.
+                                                                                Già.
+        }
+        {
         - fifthChar_slurDetector > 3:
-                Mentore incazzata sul discorso parolacce.
-    }
+                                                                                Certo, {thirdChar_storyStatus == story_storyRemote: mi avrebbe fatto piacere mi avesse ascoltato|mi farebbe piacere mi ascoltasse} quando gli {thirdChar_storyStatus == story_storyRemote: chiedevo|ho chiesto} di non dire parolacce.
+                                                                                Che {charNameTwo} {thirdChar_storyStatus == story_storyPostal: era|è} un pappagallo.
+        }                                                                        
+                                                                                M: Ma.
+                                                                                Ma?
+                                                                                M: A volte una persona dice o fa cose orribili perché ha conosciuto solo un tipo di mondo.
+                                                                                M: Un tipo di storie.
+                                                                                M: Anche per questo siamo qui, no?
+                                                                                M: Per guardare non solo la nostra, la vostra storia in modo diverso.
+                                                                                M: Ma anche il modo in cui guardate il mondo.
+                                                                                M: Le due cose forse non sono così diverse.
+                                                                                Strega: Concordiamo.
+                                                                                Ma questo significa alla fin della fiera che chi sta male per i comportamenti di questi figuri debba anche prendersi il carico di tenere a bada la propria rabbia e passare del tempo ad educarli?
+                                                                                Strega: Non educhiamo, mostriamo.
+                                                                                M: Non è quello che facciamo coi bambini?
+                                                                                M: Partire dalla nostra conoscenza ed esperienza e istruirli per far sì che non debbano ripetere gli stessi errori da capo?
+                                                                                Ma qui non si tratta di un bambino.
+                                                                                E se devo spendere le mie energie, preferisco farlo per chi sta male.
+                                                                                Per dare speranze ed energie a loro.
+                                                                                No, {player_name}.
+    
 
-            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+            + \ {charTag(PG, "neutral")}:                                       Vicinanza a Mentore.
                     -> glyph_choice_manager(false, airC)->
 
-            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
+            + \ {charTag(PG, "neutral")}:                                       Cosa ti renderà più stabile? Da quali fondamenta parti?
                     -> glyph_choice_manager(false, earthC)->
                     
-            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
+            + \ {charTag(PG, "neutral")}:                                       Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
                 
-            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+            + \ {charTag(PG, "neutral")}:                                       Vicinanza a Chitarra.
                     -> glyph_choice_manager(false, waterC)->
                     
-            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+            + \ {charTag(PG, "neutral")}:                                       Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                     -> glyph_choice_manager(false, aetherC)->
     -
+
+                                                                                Forse posso arrivare a una quadra con questa cosa, {charNameFive}.
+                                                                                Quando incontrerò un uomo come {charNameThree}, mi prenderò del tempo per spiegargli perché il suo comportamento è pericoloso.
+                                                                                Una volta.
+                                                                                Se non mi ascolta.
+                                                                                Se accampa scuse.
+                                                                                Se dice: "Eh, ma voi".
+                                                                                A quel punto per me è finita, e fa parte dei nemici.
+                                                                                Bona.
+                                                                                M: Il mondo allora sarà pieno di nemici, {charNameOne}.
+                                                                                Ma saprò anche distinguere tra chi ha voglia davvero di cambiare, e chi no.
         -> first_char_closing_storylet ->
         -> mentor_closing_storylet ->
         ->->
