@@ -933,24 +933,23 @@
                 - are_two_entities_together(FirstCharacter, PG):
                 {charTag(FirstCharacter, "annoyed")}:                           Ma sei un meme?
                                                                                 Ti prego dimmi che sei un meme.
-
                 }
         
         
-        + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+        + \ {charTag(PG, "neutral")}:                                           Con l'immaginazione che ha per me è già sulla giusta strada, no?
                 -> glyph_choice_manager(false, airC)->
 
-        + \ {charTag(PG, "neutral")}:                                           Cosa ti renderà più stabile? Da quali fondamenta parti?
+        + \ {charTag(PG, "neutral")}:                                           Portandogli degli esempi solidi, modelli affidabili da cui partire.
                 -> glyph_choice_manager(false, earthC)->
                 
-        + \ {charTag(PG, "neutral")}:                                           Cosa vuoi? Come puoi cambiare questa situazione?
+        + \ {charTag(PG, "neutral")}:                                           Non deve <i>diventare un uomo</i>, ma sé stesso.
                 -> glyph_choice_manager(false, fireC)->
         
         + \ {charTag(PG, "neutral")}:                                           Non me ne avere, ma credo che partirei dal capire che è a disagio con questo discorso.
                 -> glyph_choice_manager(false, waterC)->
         {charTag(SecondCharacter, "emotional")}:                                Già.
 
-        + \ {charTag(PG, "neutral")}:                                           Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+        + \ {charTag(PG, "neutral")}:                                           Perché non mi dici cos'è un uomo per te, {charNameThree}?
                 -> glyph_choice_manager(false, aetherC)->
 
         -
@@ -985,7 +984,7 @@
         {charTag(ThirdCharacter, "angry")}:                                     Dimmi che non è vero.
         {charTag(FirstCharacter, "neutral")}:                                   Non è vero.
         {charTag(ThirdCharacter, "bored")}:                                     Dona ha letteralmente fatto così.
-        {charTag(FirstCharacter, "neutral")}:                                   Da quello che hai raccontato, Dona ti ha lasciato perché aveva bisogno di capire chi fosse, non per andare con un altro tipo.
+        {charTag(FirstCharacter, "neutral")}:                                   Da quello che hai raccontato, Donatella ti ha lasciato perché aveva bisogno di capire chi fosse, non per andare con un altro tipo.
                                                                                 Non è la stessa cosa, punto.
         {charTag(ThirdCharacter, "neutral")}:                                   Per te.
                                                                                 Per me lo è stato.
@@ -1006,8 +1005,10 @@
         {charTag(ThirdCharacter, "neutral")}:                                   Vedi che...
         {charTag(FirstCharacter, "neutral")}:                                   Ma so anche che quando i suoi amici fanno battute di merda sulle donne, battute tipo "Tutte le donne sono troie", lui se ne sta zitto e non dice nulla.
                                                                                 E quindi magari mio padre non ha mai fatto male a una donna.
-                                                                                Ma ha lasciato che qualcuno pensasse che fosse normale definirle troie.
-                                                                                E quando una persona smette di essere una persona ma qualcosa da comprare, a quel punto diventa qualcosa da usare.
+                                                                                Ma ha lasciato che qualcuno pensasse che fosse normale definirle <i>troie</i>.
+                                                                                Che essere <i>troie</i> sia un problema.
+                                                                                Un problema che rende una donna non più una persona ma una cosa da comperare.
+                                                                                Qualcosa da usare.
         {charTag(ThirdCharacter, "neutral")}:                                   Io non ho mai trattato Dona come qualcosa da comprare.
         {charTag(FirstCharacter, "neutral")}:                                   Ma quando ha deciso che la vostra relazione non la faceva più stare bene, invece di accettare la cosa, ti sei solo incazzato.
                                                                                 Come quando c'è la partita e il telecomando smette di funzionare.
@@ -1028,31 +1029,43 @@
                                                                                 Che ci sono dei bravi ragazzi.
 
                 - else:
-                {charTag(ThirdCharacter, "neutral")}:                            {player_name}, te che stai fuori da queste cose tra donne e uomini, falla ragionare!
+                {charTag(ThirdCharacter, "neutral")}:                           {player_name}, te che stai fuori da queste cose tra donne e uomini, falla ragionare!
                 }                                                                
                                                                                 Diglielo che sono un bravo ragazzo.
                                                                                 Un coglione magari, ma bravo.
 
         //In una delle risposte lui dice che "loro" però se ne possono andare e ricominciare, mentre gli uomini no.
 
-        + \ {charTag(PG, "neutral")}:                                           Qui dà ragione a Boccale in qualche modo.
+        + \ {charTag(PG, "neutral")}:                                           Qual è la cosa che capisci meno della scelta di Donatella?
                 -> glyph_choice_manager(false, airC)->
+        {charTag(FirstCharacter, "annoyed")}:                                   Questa è la cosa più importante, {player_name}?        
 
-        + \ {charTag(PG, "neutral")}:                                           Cosa ti renderà più stabile? Da quali fondamenta parti?
+        + \ {charTag(PG, "neutral")}:                                           In tutto questo ragionamento, la cosa per te importante è quindi essere un bravo ragazzo.
                 -> glyph_choice_manager(false, earthC)->
                 
-        + \ {charTag(PG, "neutral")}:                                           Cosa vuoi? Come puoi cambiare questa situazione?
-                -> glyph_choice_manager(false, fireC)->
+        + \ {charTag(PG, "neutral")}:                                           Ma una volta che ti dico che sei un bravo ragazzo, cosa cambia?
+                -> glyph_choice_manager(false, fireC)->                         
         
-        + \ {charTag(PG, "neutral")}:                                           Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+        + \ {charTag(PG, "neutral")}:                                           {charNameThree}: se il dolore che provi fosse solo tuo e non un problema universale, varrebbe meno?
                 -> glyph_choice_manager(false, waterC)->
+        {charTag(ThirdCharacter, "bored")}:                                     Ma perché non dovrebbe valere la stessa cosa per {charNameOne} e il suo odio verso gli uomini?
+                                                                                Non è solo un suo dolore, una sua sfiga, invece di farne un problema personale?
+        {charTag(FirstCharacter, "annoyed")}:                                   Porco il gatto!
+                                                                                Perché tutte le donne uccise, violentate o malmenate dai compagni non sono un <i>mio</i> dolore, ma un problema strutturale.
+                                                                                Lo sono i problemi sul lavoro, l'attacco ai diritti riproduttivi.
+                                                                                Non è difficile, santissimo il cielo!                                                                          
                 
-        + \ {charTag(PG, "neutral")}:                                           Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+        + (aether) \ {charTag(PG, "neutral")}:                                  Magari non te ne rendi conto {charNameThree}, ma stai ragionando da misogino.
                 -> glyph_choice_manager(false, aetherC)->
         -
 
         {charTag(FirstCharacter, "neutral")}:                                   {charNameThree}: io non metto in discussione che tu sia ferito, e che la fine della relazione con Donatella sia stata dolorosa.
-                                                                                Ma non serve trasformare un problema personale in un problema strutturale per meritare cura e supporto.
+                                                                                Ma.
+                {
+                        - aether:
+                                                                                E qui mi accodo a {player_name}.
+                }
+                                                                                Non serve trasformare un problema personale in un problema strutturale per meritare cura e supporto.
                                                                                 Hai tutto il diritto di chiederlo.
         {charTag(FirstCharacter, "bored")}:                                     Non da me perché sinceramente fatico a sopportarti.
         {charTag(FirstCharacter, "neutral")}:                                   Ma chiedi aiuto.
