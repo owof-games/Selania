@@ -903,49 +903,67 @@
                 {
                 - thirdChar_firstCharRage == true:                              Come quando prima stavo parlando a {player_name} di come mi ha trattato di merda Dona, e tu lì a farmi le pulci sull'età.
                                                                                 C: <i>Le pulci sull'età.</i>
-                                                                                C: Ci sei uscito che era minorenne, porco il mondo!
+                                                                                C: Ci sei uscito che era minorenne, te ne rendi conto!?!
                 }
                                                                                 C: E sono cazzi miei se vai in giro a dire stronzate che mi riguardano.
                                                                                 Ma cosa ti riguarda cosa?!? 
                                                                                 Stavo solo parlando con Ricciolino!
                                                                                 C: Sì, dicendogli sostanzialmente che tutte le donne sono delle, ah, non me lo far dire.
-                                                                                C: E solo perché una ragazza ha deciso di lasciarti.
-                                                                                Non è una roba che capita solo a me!
-                                                                                Fate tutte così: uno non è ricco o bello o non c'ha il capitale sociale e voi andate con un altro.
-                                                                                C: Non hai mai detto che Dona ti abbia lasciato per un altro, no?
-                                                                                Solo perché non lo so non vuole dire che non è successo.
-                                                                                Che ne so io chi è lei, dopo quello che mi ha fatto?
-                                                                                Magari passa il tempo a friggere rane vive per divertimento.
-                //commento franco se presente.
-                                                                                E poi dai, tu sei una di quelle da <i>Tutti gli uomini sono degli stupratori</i>, c'hai quella faccia lì.
-                                                                                Per cui io posso pure dire che tutte le donne alla fine sono delle puttane, no?
-                                                                                        //Check parolacce da parte di Mentore
-                                                                                        ~ fifthChar_slurDetectorFunction()
-                                                                                C: Ma <i>Tutti gli uomini sono degli stupratori</i> è un modo per parlare di un problema sistemico.
-                                                                                C: Perché venite educati con l'idea che le donne siano una vostra proprietà, tipo una macchina o l'ultimo iPhone.
-                                                                                C: Una cosa che vi serve giusto per tirarvela con i vostri amici e fare vedere quanto siete uomini.
-                                                                                C: E così come pretendete che il vostro iPhone non si rifiuti di fare una cosa, così vi aspettate che le donne che incontrate vi debbano del sesso.
-                                                                                Beh, voi vi aspettate che vi si debbano soldi, una casa, il controllo dei figli in caso di divorzio.
-                                                                                C: No, "noi" ci aspettiamo di poter compiere una scelta che non c'è, come quella di poter fare lo stesso lavoro di uomo e guadagnare gli stessi soldi.
-                                                                                C: Ed è solo la cosa più basilare e ovvia da chiedere.
-                                                                                Ma io mica sono contro queste cose, anzi.
-                                                                                Per me se le donne governassero tutto il mondo sarebbe un posto migliore.
+                                                                                // C: E solo perché una ragazza ha deciso di lasciarti.
+                                                                                Non ho detto quello.
+                                                                                C: Ah no?
+                                                                                C: E allora tutto quel discorso sulle ragazze che ti smollano appena ne trovano un più bono o ricco o famoso?
+                                                                                Dimmi che non è vero.
+                                                                                C: Non è vero.
+                                                                                Dona ha letteralmente fatto così.
+                                                                                C: Dona ti ha lasciato perché aveva bisogno di capire chi fosse, non per andare con un altro tipo.
+                                                                                C: Non è la stessa cosa, punto.
+                                                                                Per te.
+                                                                                Per me lo è stato.
+                                                                                È sparita dopo una vita assieme.
+                                                                                Mi ha trattato come spazzatura!
+                                                                                C: E quindi?
+                                                                                C: Mettiamo pure che lei è stata stronza, non è che questo rende tutte le donne stronze.
+                                                                                Ma fate tutte così!
+                                                                                C: Tutte chi?
+                                                                                C: Io non l'ho fatto.
+                                                                                C: Mia madre non l'ha fatto.
+                                                                                C: Tua madre?
+                                                                                Lascia fuori mia madre da questa roba.
+                                                                                C: Ce l'hai portata te nel momento in cui hai detto "Tutte le donne sono troie", no?
+                                                                                E allora anche la roba di <i>Tutti gli uomini sono stupratori</i> che dite sempre voi, no?
+                                                                                Tuo padre è uno stupratore?
+                                                                                C: Che sappia, no.
+                                                                                C: Ma so anche che quando i suoi amici fanno battute di merda sulle donne, battute tipo "Tutte le donne sono troie", lui se ne sta zitto e non dice nulla.
+                                                                                C: E quindi magari mio padre non ha mai fatto male a una donna.
+                                                                                C: Ma ha lasciato che qualcuno pensasse che fosse normale definirle troie.
+                                                                                C: E quando una persona smette di essere una persona ma qualcosa da comprare, a quel punto diventa qualcosa da usare.
+                                                                                Io non ho mai trattato Dona come qualcosa da comprare.
+                                                                                C: Ma quando ha deciso che la vostra relazione non la faceva più stare bene, invece di accettare la cosa, ti sei solo incazzato.
+                                                                                C: Come quando c'è la partita e il telecomando smette di funzionare.
+                                                                                C: O come quando la macchina decide di non partire e sei in ritardo per il lavoro.
+                                                                                C: Come con un oggetto.
+                                                                                Sei un dito in culo, {charNameOne}.
+                                                                                Madonna se sei un dito in culo.
+                                                                                C: Ma non hai detto che ho torto.
+
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "jester")}:                            Basta idioti come me o {player_name} al potere, ne sono felice guarda.
-                                                                                Così mi vedo le mie partite in santa pace mentre voi fate la fatica.
+                {charTag(ThirdCharacter, "jester")}:                            Vecio per favore, diglielo di lasciarmi in pace.
+                                                                                Diglielo che non siamo tutti come pensa lei.
 
                 - thirdChar_recordedPlayerPronoun == her:                       
-                                                                                Ecco, tirate su un partito di donne tu e {player_name}, e via.
+                                                                                {player_name} ti prego, falla ragionare.
+                                                                                Diglielo che non siamo tutti dei mostri come pensa lei.
+                                                                                Che ci sono dei bravi ragazzi.
 
                 - else:
-                {charTag(ThirdCharacter, "jester")}:                            O anche le persone non binarie, sicuro.
+                {charTag(ThirdCharacter, "jester")}:                            {player_name}, te che stai fuori da queste cose tra donne e uomini, falla ragionare!
                 }                                                                
-                                                                                Ma tu invece continui a ignorare il male che ci fanno le donne.
-                                                                                C: Io.
-                                                                                C: {player_name}, hai qualcosa di utile da dire per chiudere questa conversazione?
+                                                                                Diglielo che sono un bravo ragazzo.
+                                                                                Un coglione magari, ma bravo.
 
-
+        //In una delle risposte lui dice che "loro" però se ne possono andare e ricominciare, mentre gli uomini no.
 
         + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                 -> glyph_choice_manager(false, airC)->
@@ -964,11 +982,12 @@
         -
 
                                                                                 C: {charNameThree}: io non metto in discussione che tu sia ferito, e che la fine della relazione con Donatella sia stata dolorosa.
-                                                                                C: E se vuoi sfogarti in merito a quel dolore, posso pure provare ad esserci, per quanto tu sia fastidioso.
-                                                                                C: Non serve trasformare un problema personale in un problema strutturale per meritare cura e supporto.
+                                                                                C: Ma non serve trasformare un problema personale in un problema strutturale per meritare cura e supporto.
                                                                                 C: Hai tutto il diritto di chiederlo.
-                                                                                C: Ma non continuare a dire cose che vanno a danneggiare una comunità con molto molto molto meno potere del tuo.
-                                                                                
+                                                                                C: Non da me perché sinceramente fatico a sopportarti.
+                                                                                C: Ma chiedi aiuto.
+                                                                                C: Ne hai bisogno.
+
     -> first_char_closing_storylet ->
     -> third_char_closing_storylet ->
     ->->
