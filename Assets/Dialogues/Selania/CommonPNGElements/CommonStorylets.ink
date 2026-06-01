@@ -653,24 +653,49 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
+    {charTag(ThirdCharacter, "bored")}:                                 No no no Franco, seguimi, mannaggia a te!
+                                                                        Prima cosa: ci si trova e si fa un'asta per comprare i giocatori.
+                                                                        Partiamo da un euro e andiamo a salire.
+                                                                        F: Quindi i soldi vanno al giocatore?
+                                                                        No, vanno alla cassa per il premio finale, te l'ho detto anche prima!
+                                                                        F: Mi piacciono i premi!
+                                                                        Anche a me, per questo se segui i miei consigli c'hai di sicuro una squadra vincente.
+                                                                        F: Ma se non vince che succede?
+                                                                        Che non fai punti e non sali in classifica, ovvio.
+                                                                        F: Quindi niente premi?
+                                                                        Vecio, ma l'hai mai fatta una gara a qualcosa?
+                                                                        F: No perché le gare fanno stare male chi perde.
+                                                                        Ma dai, è un gioco, non ci stai male.
+                                                                        F: Quindi a te va bene se perdi?
+                                                                        Io non perdo, Franchì, non ti preoccupare!
+                                                                        Anche se da quando c'è il Merlo, quello si compra i giocatori migliori.
+                                                                        L'anno scorso il merda ha speso un mese del mio stipendio per farsi la sua rosa.
+                                                                        F: Quindi non ti piace perdere.
+                                                                        F: Allora io non compro nessun giocatore e prendo una pizza per tutti.
+                                                                        F: Ma senza salumi o cose del genere, l'ho promesso alle formiche.
+                                                                        Ma che c'entrano la pizza e le formiche'
+                                                                        Dio mio Franchì, dio mio.
+                                                                        Ma sai che non ci si ragiona con te, ma proprio proprio zero?
+                                                                        {player_name}!
+                                                                        Dimmi che almeno tu te la godi un po' di sana competizione!
+                                                                        
 
-    Chiacchierata Franco e PNG3
     NOTA: una di queste scelte deve essere inutilmente e ridicolmente lunga.
 
-            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
-                    -> glyph_choice_manager(false, airC)->
+        + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+                -> glyph_choice_manager(false, airC)->
 
-            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
-                    -> glyph_choice_manager(false, earthC)->
-                    
-            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
-                    -> glyph_choice_manager(false, fireC)->
+        + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
+                -> glyph_choice_manager(false, earthC)->
                 
-            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
-                    -> glyph_choice_manager(false, waterC)->
-                    
-            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
-                    -> glyph_choice_manager(false, aetherC)->
+        + \ {charTag(PG, "neutral")}:                                   Sì: ti dà la spinta a migliorarti!
+                -> glyph_choice_manager(false, fireC)->
+        
+        + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+                -> glyph_choice_manager(false, waterC)->
+                
+        + \ {charTag(PG, "neutral")}:                                   Credo che il punto di Franco sia: se le regole fanno schifo, vanno cambiate.
+                -> glyph_choice_manager(false, aetherC)->
 
     -
         {
@@ -735,22 +760,66 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
 
-    Chiacchierata Riccio e PNG3
-    
-            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
-                    -> glyph_choice_manager(false, airC)->
+    {charTag(ThirdCharacter, "bored")}:                                 No no credimi: Lautaro Martinez è uno dei migliori di sempre.
+                                                                        Altro che Ronaldo.
+                                                                        R: Mh mh.
+                                                                        Dai, tuo papà ti ci avrà portato allo stadio ogni tanto!
+                                                                        R: Ci andava coi suoi amici.
+                                                                        R: Ora sta a casa e si arrabbia con la tv.
+                                                                        E tuo fratello?
+                                                                        R: Non gli piace il calcio.
+                                                                        R: Però è bravissimo coi videogiochi.
+                                                                        Allora ti ci porto io quando usciamo da qui, che dici?
+                                                                        Ci viene anche il Franchì, così ci si fa una giornata tra ragazzi.
+                                                                        R: Mh mh.
+                                                                        Ma ce l'hai una fidanzatina, Ricciolino?
+                                                                        Alla tua età ero un latin lover, sai?
+                                                                        R: No.
+                                                                        Le ragazza fanno sempre le preziose, vero?
+                                                                        R: No, è che a me mi piacciono di più gli animali.
+                                                                        Quali? Gli orsi? I lupi? I leoni?
+                                                                        R: No, preferisco quelli strani, come l'ornitorinco o l'aye-aye o l'uacari.
+                                                                        R: Però il mio preferito l'ho inventato io, ed è il prociorso.
+                                                                        R: Ti protegge da un sacco di cose.
+                                                                        R: Sa camminare sulla luna.
+                                                                        R: Conosce tutti i numeri primi fino al milletrecentoventuno.
+                                                                        R: Ed è bello dormirci assieme.
+                                                                        Uh, immagino.
+                                                                        Ma non sei un po' grande per queste fantasie?
+                                                                        R: Uh.
+                                                                        {player_name}!
+                                                                        
 
-            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
-                    -> glyph_choice_manager(false, earthC)->
-                    
-            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
-                    -> glyph_choice_manager(false, fireC)->
+        {//Blocco per reazioni e commenti legati al genere.
+        - thirdChar_recordedPlayerPronoun == him:
+        {charTag(ThirdCharacter, "neutral")}:                           L'uomo giusto al momento giusto!
+
+        - thirdChar_recordedPlayerPronoun == her:
+        {charTag(ThirdCharacter, "neutral")}:                           Sentiamo l'opinione di una ragazza!
+
+        - else:
+        {charTag(ThirdCharacter, "neutral")}:                           L'espertə in tutte quelle cose sul genere!
+        
+        }
+                                                                        
+                                                                        Come aiutiamo questo giovanotto a diventare un uomo?
+
+        
+        
+        + \ {charTag(PG, "neutral")}:                                   Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+                -> glyph_choice_manager(false, airC)->
+
+        + \ {charTag(PG, "neutral")}:                                   Cosa ti renderà più stabile? Da quali fondamenta parti?
+                -> glyph_choice_manager(false, earthC)->
                 
-            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
-                    -> glyph_choice_manager(false, waterC)->
-                    
-            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
-                    -> glyph_choice_manager(false, aetherC)->
+        + \ {charTag(PG, "neutral")}:                                   Cosa vuoi? Come puoi cambiare questa situazione?
+                -> glyph_choice_manager(false, fireC)->
+        
+        + \ {charTag(PG, "neutral")}:                                   Non me ne avere, ma credo che partirei dal capire che è a disagio con questo discorso.
+                -> glyph_choice_manager(false, waterC)->
+                
+        + \ {charTag(PG, "neutral")}:                                   Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+                -> glyph_choice_manager(false, aetherC)->
 
         -
         {

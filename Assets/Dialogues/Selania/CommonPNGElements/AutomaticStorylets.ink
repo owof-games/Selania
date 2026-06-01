@@ -126,7 +126,7 @@
             -> frog_and_mentor_chit_chat
         
         //Chiacchiera tra PNG3 e Mentore
-        - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(Mentor, PG) && grimoire_thirdChar has grimFirstCharOne && grimoire_thirdChar hasnt grimThirdCharMentor:
+        - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(Mentor, PG) && grimoire_thirdChar has grimFirstCharFour && grimoire_thirdChar hasnt grimThirdCharMentor:
             -> third_mentor_chit_chat
 
     //Con PNG e Franco
