@@ -276,17 +276,17 @@
 
         {charTag(FirstCharacter, "annoyed")}:                                   Dai, {thirdChar_storyStatus == story_storyRemote: sei stata|sei} sottona totale con lui.
         {charTag(Mentor, "sad")}:                                               Ma non è vero {charNameOne}.
-                                                                                Solo, mi spiace per lui.
+                                                                                Solo, mi spiace per {charNameThree}.
         {charTag(FirstCharacter, "annoyed")}:                                   Ti spiace per cosa?
                                                                                 Di quanto {thirdChar_storyStatus == story_storyRemote: fosse|sia} idiota?
         {charTag(Mentor, "neutral")}:                                           No, c'è qualcosa...
         {charTag(Mentor, "sad")}:                                               Non ci sono cose del tuo passato che avresti voluto cambiare?
                                                                                 Ma non puoi più farlo?
         {charTag(FirstCharacter, "sad")}:                                       A voglia.
-        {charTag(FirstCharacter, "annoyed")}:                                   Ma nessuna che ha abbia a che fare con un quarantaquattrenne che dice di stare bene a ruota e {thirdChar_storyStatus == story_storyRemote: ha passato|passa} il tempo a parlare di merda della sua ex.
+        {charTag(FirstCharacter, "annoyed")}:                                   Ma nessuna che abbia a che fare con un quarantaquattrenne che {thirdChar_storyStatus == story_storyRemote: ha passato|passa} il tempo a parlarmi di merda della sua ex.
                 {
                 -thirdChar_storyStatus == story_storyRemote: 
-                {charTag(FirstCharacter, "annoyed")}:                           E poi prende, sbrocca, e se ne va così, fregandosene del lavoro tuo o di {player_name}.
+                {charTag(FirstCharacter, "annoyed")}:                           E poi prende, sbrocca, e se ne va così, fregandosene del lavoro tuo o di quello di {player_name}.
                 {charTag(Mentor, "neutral")}:                                   Non tutti gli scatti di rabbia sono contro gli altri, {charNameOne}.
                 }
                 {
@@ -304,36 +304,76 @@
                                                                                 Un tipo di storie.
                                                                                 Anche per questo siamo qui, no?
                                                                                 Per guardare non solo la nostra, la vostra storia in modo diverso.
-                                                                                Ma anche il modo in cui guardate il mondo.
+                                                                                Ma anche per proporvi un modo diverso di guardare il mondo.
         {charTag(Mentor, "sad")}:                                               Le due cose forse non sono così diverse.
-        {charTag(TheWitch, "{witch_state()}")}:                                 Concordiamo.
-        {charTag(FirstCharacter, "annoyed")}:                                   Ma questo significa alla fin della fiera che chi sta male per i comportamenti di questi figuri debba anche prendersi il carico di tenere a bada la propria rabbia e passare del tempo ad educarli?
-        {charTag(TheWitch, "{witch_state()}")}:                                 Non educare, mostrare.
+        {charTag(TheWitch, "{witch_state()}")}:                                 <i>Concordiamo.</i>
+        {charTag(FirstCharacter, "annoyed")}:                                   Col risultato che chi sta male per i comportamenti di questi figuri debba anche prendersi il carico di tenere a bada la propria rabbia e passare del tempo ad educarli?
+        {charTag(TheWitch, "{witch_state()}")}:                                 <i>Non educare ma mostrare.</i>
         {charTag(Mentor, "neutral")}:                                           Non è quello che facciamo coi bambini?
                                                                                 Partire dalla nostra conoscenza ed esperienza e istruirli per far sì che non debbano ripetere gli stessi errori da capo?
+                {
+                - are_two_entities_together(SecondCharacter, PG):
+                {charTag(SecondCharacter, "angry")}:                            E metterci in castigo quando non capiamo.        
+                }                                                                
         {charTag(FirstCharacter, "neutral")}:                                   {charNameFive}, giuro che ti voglio bene.                                                                        
                                                                                 Ma qui non si tratta di un bambino.
-                                                                                E se devo spendere le mie energie, preferisco farlo per chi sta male.
-                                                                                Per dare speranze ed energie a loro.
-                                                                                No, {player_name}?
-        {charTag(FirstCharacter, "curious")}:                                   Dai, che è un po' che non vieni coinvolt{player_pronoun has him:o|{player_pronoun has her:a|ə}} in qualche battibecco, vero?
-                                                                                Tu che ne pensi di {charNameThree}, e di quello che dovremmo fare con lui?                                                                        
+                                                                                E se devo spendere le mie energie, preferisco farlo con chi è vittima di questo sistema, non con chi ci guadagna.
+                                                                                Dare loro speranza, energie, possibilità di vivere una vita diversa.
+        {charTag(Mentor, "neutral")}:                                           E non pensi che {charNameThree} sia vittima di questo "sistema"?                                                                     
+        {charTag(FirstCharacter, "neutral")}:                                   {player_name}!
+        {charTag(FirstCharacter, "curious")}:                                   Visto che è un po' che non vieni coinvolt{player_pronoun has him:o|{player_pronoun has her:a|ə}} in qualche battibecco, dicci la tua.
+                                                                                Cosa dovremmo farne di {charNameThree}, e di quelli come lui?                                                                        
     
 
-        + \ {charTag(PG, "neutral")}:                                           La curiosità è un'arma potente: potremmo portare {charNameThree} a farsi domande, invece di criticarlo?
+        + \ {charTag(PG, "neutral")}:                                           La curiosità è un'alleata potente: perché non portare {charNameThree} a farsi domande, invece di criticarlo costantemente?
                 -> glyph_choice_manager(false, airC)->
-
+        {charTag(Mentor, "hurry")}:                                             Esatto!
+                                                                                Notavo che ad esempio ama il calcio, e sta provando da ore a spiegare il fantacalcio a Franco.
+                                                                                Magari puoi usare il fantacalcio per spiegargli le cose che ti stanno a cuore, {charNameOne}?
+                {
+                - are_two_entities_together(Franco, PG):
+                {charTag(Franco, "reading")}:                                   Franco sta studiando la sua formazione, ma è molto confuso.
+                {charTag(Franco, "question")}:                                  {charNameThree} mi ha suggerito di mettere delle ali veloci.
+                {charTag(Franco, "neutral")}:                                   Ma ora ho il terrore di dover chiamare di nuovo l'airone.
+                                                                                Zio Gracco ha ancora gli incubi.
+                }                                                                  
+        {charTag(FirstCharacter, "annoyed")}:                                   Dimmi che non sei seria.
+        {charTag(Mentor, "neutral")}:                                           Perché?
+        {charTag(FirstCharacter, "affectionate")}:                              Perché visto che questa idea magnifica è di {player_name}, sono sicura che sarà felice di farlo {player_pronoun has him:lui|{player_pronoun has her:lei|ləi}}!
+        {charTag(FirstCharacter, "neutral")}:                                   Io posso continuare a criticarlo, così lo aiutiamo su due fronti.
+        
         + \ {charTag(PG, "neutral")}:                                           Le nostre energie sono limitate, è importante scegliere verso cosa le indirizziamo.
                 -> glyph_choice_manager(false, earthC)->
+        {charTag(FirstCharacter, "neutral")}:                                   Esatto.
+                                                                                Anche se ora che lo dici mi sale un po' il senso di colpa.
+        {charTag(Mentor, "neutral")}:                                           Alla fine anche tu ci tieni a {charNameThree}.
+        {charTag(FirstCharacter, "annoyed")}:                                   Non esageriamo ora, ama!
+
                 
         + \ {charTag(PG, "neutral")}:                                           Le informazioni sono ovunque, sta a lui fare il lavoro, se vuole farlo.
                 -> glyph_choice_manager(false, fireC)->
-        
-        + \ {charTag(PG, "neutral")}:                                           Posso sia provare dispiacere per {charNameThree}, sia riconoscere che non ho le energie per aiutarlo.
+        {charTag(FirstCharacter, "neutral")}:                                   La parte stanca di me ti dà ragione, ama.
+                                                                                Ma non è una cosa per tutt3.
+                                                                                Devi sapere dove cercare, capire quali sono cazzate scritte da bot AI e quali risposte invece sono sensate.
+        {charTag(Mentor, "neutral")}:                                           Devi superare la paura di farti domande che possono capovolgere il tuo mondo.
+        {charTag(TheWitch, "{witch_state()}")}:                                 <i>E sapere che quella domanda esiste, visto che potrebbe non fare proprio parte del tuo mondo, del tuo quotidiano.</i>                                                                         
+
+        + \ {charTag(PG, "neutral")}:                                           Tutt3 meritano una vita felice, ma il lavoro va fatto assieme, non può essere responsabilità di un singolo.
                 -> glyph_choice_manager(false, waterC)->
-                
-        + \ {charTag(PG, "neutral")}:                                           Credo vadano aiutate tutte le persone, ma serve un lavoro di gruppo, non di una sola persona.
+        {charTag(FirstCharacter, "curious")}:                                   Ed è subito COLLETTIVO!
+        {charTag(FirstCharacter, "neutral")}:                                   Emotivamente ti do ragione ama.
+                                                                                Ma emotivamente c'è questa parte di me che continua a dirsi: perché mi devo prendere l'accollo di chi crea il problema, e dei problemi che ha creato?
+        {charTag(Mentor, "sad")}:                                               Perché non farlo vuol dire dimenticarci che non sono idee, ma persone.
+        {charTag(TheWitch, "{witch_state()}")}:                                 <i>Vicini di casa, colleghi, gente che condivide i nostri luoghi, le nostre paure, i nostri futuri.</i>                                                                                                                                             
+
+        + \ {charTag(PG, "neutral")}:                                           Capisco {charNameOne}, ma mi chiedo: se abbandoniamo una persona, non apriamo alla possibilità di abbandonare tutt3?
                 -> glyph_choice_manager(false, aetherC)->
+        {charTag(FirstCharacter, "affectionate")}:                              TI ODIO.
+                                                                                Ma con amore.
+                                                                                Ma capisco cosa intendi.
+        {charTag(Mentor, "neutral")}:                                           Grazie per la tua saggezza, {player_name}.
+                                                                                Mi rincuora.
+        {charTag(TheWitch, "{witch_state()}")}:                                 <i>Ci rincuora.</i>                                                                                                                                                             
         -
 
         {charTag(FirstCharacter, "neutral")}:                                   Forse posso arrivare a una quadra con questa cosa, {charNameFive}.
@@ -344,8 +384,8 @@
                                                                                 Se dice: "Eh, ma voi".
                                                                                 A quel punto per me è finita, e fa parte dei nemici.
                                                                                 Bona.
-        {charTag(Mentor, "sad")}:                                               Il mondo allora sarà pieno di nemici, {charNameOne}.
-        {charTag(FirstCharacter, "neutral")}:                                   Ma saprò anche distinguere tra chi ha voglia davvero di cambiare, e chi no.
+        {charTag(Mentor, "sad")}:                                               Il tuo mondo allora sarà pieno di nemici, {charNameOne}.
+        {charTag(FirstCharacter, "neutral")}:                                   Ma saprò anche distinguere tra chi ha voglia davvero di cambiare le cose e chi no.
 
         -> first_char_closing_storylet ->
         -> mentor_closing_storylet ->
